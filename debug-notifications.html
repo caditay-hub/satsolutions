@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Debug</title>
+</head>
+<body>
+    <h1>Browser Notification Debug</h1>
+    
+    <div>
+        <h2>Notification API Support</h2>
+        <p id="support">Checking...</p>
+    </div>
+    
+    <div>
+        <h2>Current Permission</h2>
+        <p id="permission">Checking...</p>
+    </div>
+    
+    <div>
+        <h2>Request Permission</h2>
+        <button id="requestBtn">Request Permission</button>
+        <p id="requestResult"></p>
+    </div>
+    
+    <div>
+        <h2>Test Notification</h2>
+        <button id="testBtn">Send Test Notification</button>
+        <p id="testResult"></p>
+    </div>
+    
+    <div>
+        <h2>Debug Info</h2>
+        <pre id="debug"></pre>
+    </div>
+
+    <script>
+        // Check support
+        const supportEl = document.getElementById('support');
+        const permissionEl = document.getElementById('permission');
+        const requestBtn = document.getElementById('requestBtn');
+        const requestResultEl = document.getElementById('requestResult');
+        const testBtn = document.getElementById('testBtn');
+        const testResultEl = document.getElementById('testResult');
+        const debugEl = document.getElementById('debug');
+        
+        function updateDebug() {
+            debugEl.textContent = JSON.stringify({
+                userAgent: navigator.userAgent,
+                notificationSupport: 'Notification' in window,
+                permission: typeof Notification !== 'undefined' ? Notification.permission : 'N/A',
+                isSecure: location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+            }, null, 2);
+        }
+        
+        if ('Notification' in window) {
+            supportEl.textContent = '✅ Supported';
+            permissionEl.textContent = Notification.permission;
+        } else {
+            supportEl.textContent = '❌ Not Supported';
+            permissionEl.textContent = 'N/A';
+        }
+        
+        requestBtn.addEventListener('click', async () => {
+            if (!('Notification' in window)) {
+                requestResultEl.textContent = '❌ Notification API not supported';
+                return;
+            }
+            
+            try {
+                const permission = await Notification.requestPermission();
+                permissionEl.textContent = permission;
+                requestResultEl.textContent = `✅ Permission: ${permission}`;
+            } catch (error) {
+                requestResultEl.textContent = `❌ Error: ${error.message}`;
+            }
+            updateDebug();
+        });
+        
+        testBtn.addEventListener('click', () => {
+            if (!('Notification' in window)) {
+                testResultEl.textContent = '❌ Notification API not supported';
+                return;
+            }
+            
+            if (Notification.permission !== 'granted') {
+                testResultEl.textContent = '❌ Permission not granted';
+                return;
+            }
+            
+            try {
+                const notification = new Notification('Test Notification', {
+                    body: 'This is a test notification from debug page',
+                    icon: '/favicon.ico',
+                    tag: 'test-notification'
+                });
+                
+                testResultEl.textContent = '✅ Notification sent successfully';
+                
+                notification.onclick = () => {
+                    notification.close();
+                    testResultEl.textContent = '✅ Notification clicked and closed';
+                };
+                
+                setTimeout(() => {
+                    notification.close();
+                }, 5000);
+            } catch (error) {
+                testResultEl.textContent = `❌ Error: ${error.message}`;
+            }
+        });
+        
+        updateDebug();
+        
+        // Listen for permission changes
+        if ('Notification' in window) {
+            Notification.requestPermission().then(permission => {
+                permissionEl.textContent = permission;
+                updateDebug();
+            });
+        }
+    </script>
+</body>
+</html>

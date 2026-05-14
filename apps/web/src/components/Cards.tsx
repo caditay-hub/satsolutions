@@ -1,0 +1,77 @@
+import Image from "next/image";
+import Link from "next/link";
+import type { PostDto, ProductDto } from "@/lib/api";
+import { resolveImageUrl } from "@/lib/image";
+import { AddToCartButton } from "@/components/AddToCartButton";
+
+export function ProductCard({ p, usdToUzs }: { p: ProductDto; usdToUzs?: number }) {
+  const img = resolveImageUrl(p.coverImageUrl);
+  const rate = typeof usdToUzs === "number" && Number.isFinite(usdToUzs) && usdToUzs > 0 ? usdToUzs : 1;
+  const priceUzs = (p as any).isUsd ? Number(p.price ?? 0) * rate : Number(p.price ?? 0);
+  return (
+    <Link
+      href={`/products/${p.slug}`}
+      className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-2xl overflow-hidden"
+    >
+      <div className="relative aspect-[16/11] w-full overflow-hidden bg-white">
+        {img ? (
+          <Image
+            alt={p.name}
+            src={img}
+            fill
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            className="object-contain p-4 transition-transform duration-700 ease-out group-hover:scale-110"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-slate-50 text-sm font-bold text-slate-400">Нет изображения</div>
+        )}
+      </div>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="text-xl font-bold text-slate-950 line-clamp-1">{p.name}</div>
+        {p.shortDescription ? <p className="mt-2 line-clamp-2 text-base font-semibold text-slate-700 leading-relaxed">{p.shortDescription}</p> : null}
+        <div className="mt-auto pt-5 flex items-center justify-between gap-3">
+          <div className="text-sm font-black text-brand-700 uppercase tracking-wider">Подробнее →</div>
+          <AddToCartButton
+            item={{
+              productId: p.id,
+              slug: p.slug,
+              name: p.name,
+              price: String(priceUzs),
+              coverImageUrl: p.coverImageUrl
+            }}
+          />
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+export function NewsCard({ n }: { n: PostDto }) {
+  const img = resolveImageUrl(n.coverImageUrl);
+  return (
+    <Link
+      href={`/news/${n.slug}`}
+      className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-2xl overflow-hidden"
+    >
+      <div className="relative aspect-[16/11] w-full overflow-hidden bg-slate-100">
+        {img ? (
+          <Image
+            alt={n.title}
+            src={img}
+            fill
+            sizes="(max-width: 1024px) 100vw, 33vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center bg-slate-200 text-sm font-bold text-slate-400">Нет изображения</div>
+        )}
+      </div>
+      <div className="p-6">
+        <div className="text-xl font-bold text-slate-950 line-clamp-2">{n.title}</div>
+        {n.excerpt ? <p className="mt-2 line-clamp-2 text-base font-semibold text-slate-700 leading-relaxed">{n.excerpt}</p> : null}
+        <div className="mt-5 text-sm font-black text-brand-700 uppercase tracking-wider">Читать →</div>
+      </div>
+    </Link>
+  );
+}
+

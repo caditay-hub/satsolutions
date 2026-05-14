@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .form-section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .form-group { margin: 15px 0; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .result { margin-top: 15px; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    </style>
+</head>
+<body>
+    <h1>Forms Notification Test</h1>
+    
+    <div class="form-section">
+        <h2>Feedback Form Test</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="feedbackName">Имя:</label>
+                <input type="text" id="feedbackName" name="name" placeholder="Тестовое имя">
+            </div>
+            <div class="form-group">
+                <label for="feedbackPhone">Телефон:</label>
+                <input type="tel" id="feedbackPhone" name="phone" placeholder="+998901234567">
+            </div>
+            <div class="form-group">
+                <label for="feedbackEmail">Email:</label>
+                <input type="email" id="feedbackEmail" name="email" placeholder="test@example.com">
+            </div>
+            <div class="form-group">
+                <label for="feedbackMessage">Сообщение:</label>
+                <textarea id="feedbackMessage" name="message" rows="4" placeholder="Тестовое сообщение для обратной связи..."></textarea>
+            </div>
+            <button type="submit">Отправить Feedback</button>
+        </form>
+        <div id="feedbackResult"></div>
+    </div>
+
+    <div class="form-section">
+        <h2>Service Request Form Test</h2>
+        <form id="serviceRequestForm">
+            <div class="form-group">
+                <label for="serviceName">Услуга:</label>
+                <input type="text" id="serviceName" name="serviceName" placeholder="Видеоаналитика с ИИ" value="Видеоаналитика с ИИ">
+            </div>
+            <div class="form-group">
+                <label for="servicePhone">Телефон:</label>
+                <input type="tel" id="servicePhone" name="phone" placeholder="+998901234567" required>
+            </div>
+            <div class="form-group">
+                <label for="serviceDescription">Описание:</label>
+                <textarea id="serviceDescription" name="description" rows="4" placeholder="Тестовое описание заявки..."></textarea>
+            </div>
+            <button type="submit">Подать заявку</button>
+        </form>
+        <div id="serviceRequestResult"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:4000';
+
+        // Feedback form handler
+        document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const resultDiv = document.getElementById('feedbackResult');
+            
+            const formData = {
+                name: document.getElementById('feedbackName').value,
+                phone: document.getElementById('feedbackPhone').value,
+                email: document.getElementById('feedbackEmail').value,
+                message: document.getElementById('feedbackMessage').value
+            };
+
+            try {
+                console.log('Sending feedback:', formData);
+                const response = await fetch(`${API_BASE}/feedback`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.text();
+                console.log('Feedback response:', response.status, result);
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `<div class="result success">✅ Feedback отправлен успешно! ID: ${result}</div>`;
+                    document.getElementById('feedbackForm').reset();
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">❌ Ошибка: ${response.status} - ${result}</div>`;
+                }
+            } catch (error) {
+                console.error('Feedback error:', error);
+                resultDiv.innerHTML = `<div class="result error">❌ Ошибка соединения: ${error.message}</div>`;
+            }
+        });
+
+        // Service request form handler
+        document.getElementById('serviceRequestForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const resultDiv = document.getElementById('serviceRequestResult');
+            
+            const formData = {
+                serviceName: document.getElementById('serviceName').value,
+                phone: document.getElementById('servicePhone').value,
+                description: document.getElementById('serviceDescription').value
+            };
+
+            try {
+                console.log('Sending service request:', formData);
+                const response = await fetch(`${API_BASE}/service-requests`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                console.log('Service request response:', response.status, result);
+
+                if (response.ok) {
+                    resultDiv.innerHTML = `<div class="result success">✅ Заявка отправлена успешно! ID: ${result.request?.id || 'N/A'}</div>`;
+                    document.getElementById('serviceRequestForm').reset();
+                } else {
+                    resultDiv.innerHTML = `<div class="result error">❌ Ошибка: ${response.status} - ${result.error || result.message}</div>`;
+                }
+            } catch (error) {
+                console.error('Service request error:', error);
+                resultDiv.innerHTML = `<div class="result error">❌ Ошибка соединения: ${error.message}</div>`;
+            }
+        });
+    </script>
+</body>
+</html>

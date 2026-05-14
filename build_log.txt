@@ -1,0 +1,12 @@
+﻿
+> build
+> npm run clean && next build
+
+
+> clean
+> node -e "try{require('fs').rmSync('.next',{recursive:true,force:true})}catch(e){}"
+
+   тЦ▓ Next.js 15.5.11
+   - Environments: .env
+
+   Creating an optimized production build ...

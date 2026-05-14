@@ -1,0 +1,19 @@
+{
+  "name": "satsolutions",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web,admin -c cyan,green,magenta \"npm run dev -w @satsolutions/api\" \"npm run dev -w @satsolutions/web\" \"npm run dev -w @satsolutions/admin\"",
+    "dev:api": "npm run dev -w @satsolutions/api",
+    "dev:web": "npm run dev -w @satsolutions/web",
+    "dev:admin": "npm run dev -w @satsolutions/admin",
+    "build": "npm run build -w @satsolutions/api && npm run build -w @satsolutions/web && npm run build -w @satsolutions/admin",
+    "lint": "npm run lint -w @satsolutions/web && npm run lint -w @satsolutions/admin",
+    "typecheck": "npm run typecheck -w @satsolutions/api && npm run typecheck -w @satsolutions/web && npm run typecheck -w @satsolutions/admin"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
