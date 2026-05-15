@@ -18,6 +18,7 @@ import { ChatConversation } from "./ChatConversation.js";
 import { ChatMessage } from "./ChatMessage.js";
 import { ServiceCategory } from "./ServiceCategory.js";
 import { ServiceRequest, initServiceRequest } from "./ServiceRequest.js";
+import { Certificate } from "./Certificate.js";
 import { sequelize } from "../db.js";
 
 export function initModels() {
@@ -86,7 +87,8 @@ export function initModels() {
     ChatMessage,
     ServiceRequest,
     KeyTechnology,
-    ServiceCategory
+    ServiceCategory,
+    Certificate
   };
 }
 
@@ -110,6 +112,7 @@ export {
   ChatMessage,
   ServiceRequest,
   KeyTechnology,
-  ServiceCategory
+  ServiceCategory,
+  Certificate
 };
 

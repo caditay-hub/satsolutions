@@ -17,6 +17,7 @@ const links = [
   { href: "/categories", label: "Категории товаров" },
   { href: "/brands", label: "Бренды" },
   { href: "/partners", label: "Партнеры" },
+  { href: "/certificates", label: "Сертификаты" },
   { href: "/products", label: "Продукты" },
   { href: "/orders", label: "Заказы" },
   { href: "/admin/service-requests", label: "Заявки" },

@@ -152,6 +152,21 @@ export type PortfolioDto = {
   updatedAt: string;
 };
 
+export type CertificateCategory = "certificate" | "dealer" | "award";
+
+export type CertificateDto = {
+  id: string;
+  name: string;
+  category: CertificateCategory;
+  imageUrl: string | null;
+  description: string | null;
+  issuedBy: string | null;
+  sortOrder: number;
+  published: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export type SitePageKey = "about" | "contact" | "site";
 
 export type SitePageDto = {
@@ -198,6 +213,10 @@ export async function getBrands() {
 
 export async function getPartners() {
   return apiFetch<{ partners: PartnerDto[] }>("/partners", { next: { revalidate: 300 } });
+}
+
+export async function getCertificates() {
+  return apiFetch<{ certificates: CertificateDto[] }>("/certificates", { next: { revalidate: 300 } });
 }
 
 export async function getProducts(

@@ -52,6 +52,21 @@ export type PartnerDto = {
   updatedAt: string;
 };
 
+export type CertificateCategory = "certificate" | "dealer" | "award";
+
+export type CertificateDto = {
+  id: string;
+  name: string;
+  category: CertificateCategory;
+  imageUrl: string | null;
+  description: string | null;
+  issuedBy: string | null;
+  sortOrder: number;
+  published: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
+
 export type ProductDto = {
   id: string;
   name: string;

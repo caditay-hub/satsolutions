@@ -14,6 +14,7 @@ import { AuditLog } from "../models/AuditLog.js";
 import { Category } from "../models/Category.js";
 import { Brand } from "../models/Brand.js";
 import { Partner } from "../models/Partner.js";
+import { Certificate } from "../models/Certificate.js";
 import { Service } from "../models/Service.js";
 import { KeyTechnology } from "../models/KeyTechnology.js";
 import { PortfolioProject } from "../models/PortfolioProject.js";
@@ -700,6 +701,112 @@ adminRouter.delete("/partners/:id", async (req, res) => {
     entityType: "CATEGORY",
     entityId: partner.id,
     meta: { kind: "PARTNER" }
+  });
+  res.status(204).send();
+});
+
+// Certificates
+adminRouter.get("/certificates", async (_req, res) => {
+  const certificates = await Certificate.findAll({ order: [["sortOrder", "ASC"], ["name", "ASC"]] });
+  res.json({ certificates });
+});
+
+adminRouter.post("/certificates", async (req, res) => {
+  const imageSchema = z
+    .string()
+    .max(1000)
+    .refine((v) => v.startsWith("/") || /^https?:\/\//i.test(v), "Invalid imageUrl")
+    .optional()
+    .nullable();
+
+  const schema = z.object({
+    name: z.string().min(1).max(300),
+    category: z.enum(["certificate", "dealer", "award"]).optional(),
+    imageUrl: imageSchema,
+    description: z.string().max(2000).optional().nullable(),
+    issuedBy: z.string().max(300).optional().nullable(),
+    sortOrder: z.number().int().optional(),
+    published: z.boolean().optional()
+  });
+
+  const parsed = schema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
+
+  const cert = await Certificate.create({
+    name: parsed.data.name,
+    category: parsed.data.category ?? "certificate",
+    imageUrl: parsed.data.imageUrl ?? null,
+    description: parsed.data.description ?? null,
+    issuedBy: parsed.data.issuedBy ?? null,
+    sortOrder: parsed.data.sortOrder ?? 0,
+    published: parsed.data.published ?? true
+  });
+
+  await writeAudit({
+    req,
+    actorUserId: (req as any).auth?.sub ?? null,
+    action: "CREATE",
+    entityType: "CATEGORY",
+    entityId: cert.id,
+    meta: { kind: "CERTIFICATE", name: cert.name }
+  });
+  res.status(201).json({ certificate: cert });
+});
+
+adminRouter.patch("/certificates/:id", async (req, res) => {
+  const imageSchema = z
+    .string()
+    .max(1000)
+    .refine((v) => v.startsWith("/") || /^https?:\/\//i.test(v), "Invalid imageUrl")
+    .optional()
+    .nullable();
+
+  const schema = z.object({
+    name: z.string().min(1).max(300).optional(),
+    category: z.enum(["certificate", "dealer", "award"]).optional(),
+    imageUrl: imageSchema,
+    description: z.string().max(2000).optional().nullable(),
+    issuedBy: z.string().max(300).optional().nullable(),
+    sortOrder: z.number().int().optional(),
+    published: z.boolean().optional()
+  });
+
+  const parsed = schema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
+
+  const cert = await Certificate.findByPk(req.params.id);
+  if (!cert) return res.status(404).json({ error: "Not found" });
+  if (parsed.data.name !== undefined) cert.name = parsed.data.name;
+  if (parsed.data.category !== undefined) (cert as any).category = parsed.data.category;
+  if (parsed.data.imageUrl !== undefined) (cert as any).imageUrl = parsed.data.imageUrl ?? null;
+  if (parsed.data.description !== undefined) (cert as any).description = parsed.data.description ?? null;
+  if (parsed.data.issuedBy !== undefined) (cert as any).issuedBy = parsed.data.issuedBy ?? null;
+  if (parsed.data.sortOrder !== undefined) (cert as any).sortOrder = parsed.data.sortOrder;
+  if (parsed.data.published !== undefined) (cert as any).published = parsed.data.published;
+  await cert.save();
+
+  await writeAudit({
+    req,
+    actorUserId: (req as any).auth?.sub ?? null,
+    action: "UPDATE",
+    entityType: "CATEGORY",
+    entityId: cert.id,
+    meta: { kind: "CERTIFICATE" }
+  });
+  res.json({ certificate: cert });
+});
+
+adminRouter.delete("/certificates/:id", async (req, res) => {
+  const cert = await Certificate.findByPk(req.params.id);
+  if (!cert) return res.status(404).json({ error: "Not found" });
+  await cert.destroy();
+  await writeAudit({
+    req,
+    actorUserId: (req as any).auth?.sub ?? null,
+    action: "DELETE",
+    entityType: "CATEGORY",
+    entityId: cert.id,
+    meta: { kind: "CERTIFICATE" }
   });
   res.status(204).send();
 });

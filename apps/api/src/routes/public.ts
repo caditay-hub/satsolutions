@@ -10,6 +10,7 @@ import { Service } from "../models/Service.js";
 import { PortfolioCategory } from "../models/PortfolioCategory.js";
 import { PortfolioProject } from "../models/PortfolioProject.js";
 import { Partner } from "../models/Partner.js";
+import { Certificate } from "../models/Certificate.js";
 import { ServiceRequest } from "../models/ServiceRequest.js";
 import { SitePage } from "../models/SitePage.js";
 import { FeedbackMessage } from "../models/FeedbackMessage.js";
@@ -48,6 +49,11 @@ publicRouter.get("/brands", async (_req, res) => {
 publicRouter.get("/partners", async (_req, res) => {
   const partners = await Partner.findAll({ where: { published: true }, order: [["sortOrder", "ASC"], ["name", "ASC"]] });
   res.json({ partners });
+});
+
+publicRouter.get("/certificates", async (_req, res) => {
+  const certificates = await Certificate.findAll({ where: { published: true }, order: [["sortOrder", "ASC"], ["name", "ASC"]] });
+  res.json({ certificates });
 });
 
 publicRouter.get("/products", async (req, res) => {
