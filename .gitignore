@@ -10,3 +10,6 @@ coverage
 .env.local
 .env.*.local
 
+
+# local deploy credentials
+deploy/.env.deploy

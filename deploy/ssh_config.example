@@ -1,0 +1,22 @@
+# SSH client config for SAT Solutions deployment.
+#
+# Copy the block below into your personal ~/.ssh/config (recommended),
+# or include this file from it:
+#
+#   echo "Include /path/to/satsolutions/deploy/ssh_config" >> ~/.ssh/config
+#
+# Then connect simply with:  ssh satsolutions-prod
+#
+# Replace the User and IdentityFile values with your own. Do NOT store
+# passwords here — use key-based auth.
+
+Host satsolutions-prod
+    HostName ahost.uz
+    # Alternatively use the IP directly:
+    # HostName 89.39.95.157
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
