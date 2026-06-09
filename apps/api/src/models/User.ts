@@ -1,15 +1,15 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type InferAttributes, type InferCreationAttributes, type CreationOptional } from "sequelize";
 import { sequelize } from "../db.js";
 
 export type UserRole = "ADMIN" | "EDITOR";
 
 export class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
-  declare id: string;
+  declare id: CreationOptional<string>;
   declare email: string;
   declare passwordHash: string;
   declare role: UserRole;
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 User.init(
@@ -32,7 +32,9 @@ User.init(
       type: DataTypes.ENUM("ADMIN", "EDITOR"),
       allowNull: false,
       defaultValue: "ADMIN"
-    }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     sequelize,

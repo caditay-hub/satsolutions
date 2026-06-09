@@ -1,15 +1,15 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type InferAttributes, type InferCreationAttributes, type CreationOptional } from "sequelize";
 import { sequelize } from "../db.js";
 
 export class RefreshToken extends Model<InferAttributes<RefreshToken>, InferCreationAttributes<RefreshToken>> {
-  declare id: string;
+  declare id: CreationOptional<string>;
   declare userId: string;
   declare tokenHash: string;
   declare expiresAt: Date;
   declare revokedAt: Date | null;
   declare replacedByTokenId: string | null;
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 RefreshToken.init(
@@ -39,7 +39,9 @@ RefreshToken.init(
     replacedByTokenId: {
       type: DataTypes.UUID,
       allowNull: true
-    }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   { sequelize, tableName: "refresh_tokens" }
 );

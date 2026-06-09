@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.createTable("refresh_tokens", {
     id: { type: DataTypes.UUID, allowNull: false, primaryKey: true },
     userId: {
@@ -45,11 +45,10 @@ export const up: MigrationFn = async ({ context: qi }) => {
   await qi.addIndex("audit_logs", ["entityType"]);
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.dropTable("audit_logs");
   await qi.dropTable("refresh_tokens");
   try {
-    // @ts-expect-error postgres only
     await qi.sequelize.query('DROP TYPE IF EXISTS "enum_audit_logs_entityType";');
   } catch {
     // ignore

@@ -1,8 +1,8 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type InferAttributes, type InferCreationAttributes, type CreationOptional } from "sequelize";
 import { sequelize } from "../db.js";
 
 export class Certificate extends Model<InferAttributes<Certificate>, InferCreationAttributes<Certificate>> {
-  declare id: string;
+  declare id: CreationOptional<string>;
   declare name: string;
   declare category: "certificate" | "dealer" | "award";
   declare imageUrl: string | null;
@@ -10,8 +10,8 @@ export class Certificate extends Model<InferAttributes<Certificate>, InferCreati
   declare issuedBy: string | null;
   declare sortOrder: number;
   declare published: boolean;
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 Certificate.init(
@@ -23,7 +23,9 @@ Certificate.init(
     description: { type: DataTypes.TEXT, allowNull: true },
     issuedBy: { type: DataTypes.STRING(300), allowNull: true },
     sortOrder: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
-    published: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true }
+    published: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: true },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   { sequelize, tableName: "certificates" }
 );

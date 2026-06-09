@@ -1,8 +1,8 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type InferAttributes, type InferCreationAttributes, type CreationOptional } from "sequelize";
 import { sequelize } from "../db.js";
 
 export class OrderItem extends Model<InferAttributes<OrderItem>, InferCreationAttributes<OrderItem>> {
-  declare id: string;
+  declare id: CreationOptional<string>;
   declare orderId: string;
   declare productId: string;
   declare productName: string;
@@ -11,8 +11,8 @@ export class OrderItem extends Model<InferAttributes<OrderItem>, InferCreationAt
   declare unitPrice: string; // DECIMAL comes as string
   declare quantity: number;
   declare lineTotal: string; // DECIMAL comes as string
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 OrderItem.init(
@@ -25,7 +25,9 @@ OrderItem.init(
     productCoverImageUrl: { type: DataTypes.STRING(1000), allowNull: true },
     unitPrice: { type: DataTypes.DECIMAL(12, 2), allowNull: false, defaultValue: 0 },
     quantity: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 1 },
-    lineTotal: { type: DataTypes.DECIMAL(12, 2), allowNull: false, defaultValue: 0 }
+    lineTotal: { type: DataTypes.DECIMAL(12, 2), allowNull: false, defaultValue: 0 },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   { sequelize, tableName: "order_items" }
 );

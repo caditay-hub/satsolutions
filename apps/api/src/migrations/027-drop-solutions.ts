@@ -1,6 +1,6 @@
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.sequelize.query('DROP TABLE IF EXISTS "solutions" CASCADE');
   await qi.sequelize.query('DROP TABLE IF EXISTS "solution_categories" CASCADE');
 };

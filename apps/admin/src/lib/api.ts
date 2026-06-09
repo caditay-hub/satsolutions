@@ -210,7 +210,7 @@ export async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> 
 export async function getServiceRequests(page = 1, limit = 20, status?: string) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
   if (status) qs.set("status", status);
-  return apiFetch<{ items: any[]; total: number; page: number; limit: number }>(`/admin/service-requests?${qs}`);
+  return apiFetch<{ items: any[]; total: number; page: number; limit: number; totalAll: number; totalPending: number; totalDone: number; pendingCount: number }>(`/admin/service-requests?${qs}`);
 }
 
 export async function updateServiceRequestStatus(id: number, status: 'pending' | 'done', statusReason?: string | null) {

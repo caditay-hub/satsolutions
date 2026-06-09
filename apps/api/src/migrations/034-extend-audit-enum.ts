@@ -1,6 +1,6 @@
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
     // Use try-catch to avoid error if enum value slightly already exists or if it's not applicable
     try {
         await qi.sequelize.query(`ALTER TYPE "enum_audit_logs_entityType" ADD VALUE 'KEY_TECHNOLOGY';`);
@@ -18,6 +18,6 @@ export const up: MigrationFn = async ({ context: qi }) => {
     }
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
     // Postgres doesn't support removing enum values easily. Usually we don't down this.
 };

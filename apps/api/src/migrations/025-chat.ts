@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.createTable("chat_conversations", {
     id: { type: DataTypes.UUID, allowNull: false, primaryKey: true },
     visitorId: { type: DataTypes.STRING(80), allowNull: false },
@@ -35,7 +35,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
   await qi.addIndex("chat_messages", ["createdAt"]);
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.dropTable("chat_messages");
   await qi.dropTable("chat_conversations");
 };

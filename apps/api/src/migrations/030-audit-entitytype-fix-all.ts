@@ -1,6 +1,6 @@
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
     const values = [
         "BRAND",
         "PARTNER",
@@ -14,7 +14,6 @@ export const up: MigrationFn = async ({ context: qi }) => {
     ];
 
     for (const val of values) {
-        // @ts-expect-error postgres only
         await qi.sequelize.query(`ALTER TYPE "enum_audit_logs_entityType" ADD VALUE IF NOT EXISTS '${val}';`);
     }
 };

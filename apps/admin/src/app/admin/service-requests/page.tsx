@@ -45,7 +45,6 @@ export default function ServiceRequestsPage() {
       setCurrentPage(response.page);
 
       // Update totals from backend
-      // @ts-ignore
       setTotals({
         all: response.totalAll || 0,
         pending: response.totalPending || 0,

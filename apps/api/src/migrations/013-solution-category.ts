@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.addColumn("solutions", "categoryId", {
     type: DataTypes.UUID,
     allowNull: true,
@@ -11,7 +11,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
   await qi.addIndex("solutions", ["categoryId"]);
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.removeIndex("solutions", ["categoryId"]);
   await qi.removeColumn("solutions", "categoryId");
 };

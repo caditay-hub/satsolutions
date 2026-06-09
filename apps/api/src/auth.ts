@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
+import jwt, { type SignOptions } from "jsonwebtoken";
 import { getEnv } from "./env.js";
 import type { User } from "./models/User.js";
 import { RefreshToken } from "./models/RefreshToken.js";
@@ -23,7 +23,7 @@ export type JwtPayload = {
 
 export function signAccessToken(user: Pick<User, "id" | "role" | "email">) {
   const payload: JwtPayload = { sub: user.id, role: user.role, email: user.email };
-  return jwt.sign(payload, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
+  return jwt.sign(payload, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN } as SignOptions);
 }
 
 export function verifyAccessToken(token: string) {

@@ -1,7 +1,7 @@
 import type { MigrationFn } from "umzug";
 import { DataTypes } from "sequelize";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
     await qi.addColumn("key_technologies", "secondaryDescription", {
         type: DataTypes.TEXT,
         allowNull: true
@@ -12,7 +12,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
     });
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
     await qi.removeColumn("key_technologies", "secondaryDescription");
     await qi.removeColumn("key_technologies", "secondaryImageUrl");
 };

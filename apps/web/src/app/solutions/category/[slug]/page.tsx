@@ -5,12 +5,13 @@ import { getServiceCategories, getServices } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 
 interface Props {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props) {
+    const { slug } = await params;
     const categories = await getServiceCategories();
-    const category = categories?.items.find((c) => c.slug === params.slug);
+    const category = categories?.items.find((c) => c.slug === slug);
 
     if (!category) return { title: "Решения" };
 
@@ -21,12 +22,13 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CategoryPage({ params }: Props) {
+    const { slug } = await params;
     const [categoriesData, servicesData] = await Promise.all([
         getServiceCategories(),
-        getServices(1, 100, { category: params.slug }),
+        getServices(1, 100, { category: slug }),
     ]);
 
-    const category = categoriesData?.items.find((c) => c.slug === params.slug);
+    const category = categoriesData?.items.find((c) => c.slug === slug);
     const solutions = servicesData?.items || [];
 
     if (!category) {
@@ -85,7 +87,7 @@ export default async function CategoryPage({ params }: Props) {
                 {/* Solutions Grid */}
                 <div className="mb-12 border-b border-slate-200 pb-4">
                     <h2 className="text-2xl font-black text-slate-900 uppercase tracking-tighter text-left">
-                        Решения в категории "{category.name}"
+                        Решения в категории &laquo;{category.name}&raquo;
                     </h2>
                 </div>
 

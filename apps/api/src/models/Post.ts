@@ -1,8 +1,8 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type InferAttributes, type InferCreationAttributes, type CreationOptional } from "sequelize";
 import { sequelize } from "../db.js";
 
 export class Post extends Model<InferAttributes<Post>, InferCreationAttributes<Post>> {
-  declare id: string;
+  declare id: CreationOptional<string>;
   declare title: string;
   declare slug: string;
   declare excerpt: string | null;
@@ -10,8 +10,8 @@ export class Post extends Model<InferAttributes<Post>, InferCreationAttributes<P
   declare coverImageUrl: string | null;
   declare published: boolean;
   declare publishedAt: Date | null;
-  declare createdAt: Date;
-  declare updatedAt: Date;
+  declare createdAt: CreationOptional<Date>;
+  declare updatedAt: CreationOptional<Date>;
 }
 
 Post.init(
@@ -50,7 +50,9 @@ Post.init(
     publishedAt: {
       type: DataTypes.DATE,
       allowNull: true
-    }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },
   {
     sequelize,

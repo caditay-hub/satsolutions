@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
     // Add parentId and overviewImageUrl to services
     await qi.addColumn("services", "parentId", {
         type: DataTypes.UUID,
@@ -35,7 +35,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
     await qi.addIndex("key_technologies", ["sortOrder"]);
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
     await qi.dropTable("key_technologies");
     await qi.removeColumn("services", "overviewImageUrl");
     await qi.removeColumn("services", "parentId");

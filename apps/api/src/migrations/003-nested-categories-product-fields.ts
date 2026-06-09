@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   // Nested categories
   await qi.addColumn("categories", "parentId", {
     type: DataTypes.UUID,
@@ -25,7 +25,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
   });
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.removeColumn("products", "characteristics");
   await qi.removeColumn("products", "price");
   await qi.removeColumn("categories", "parentId");

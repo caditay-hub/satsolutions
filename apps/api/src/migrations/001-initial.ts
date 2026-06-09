@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import type { MigrationFn } from "umzug";
 
-export const up: MigrationFn = async ({ context: qi }) => {
+export const up: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.createTable("users", {
     id: { type: DataTypes.UUID, allowNull: false, primaryKey: true },
     email: { type: DataTypes.STRING(320), allowNull: false, unique: true },
@@ -52,7 +52,7 @@ export const up: MigrationFn = async ({ context: qi }) => {
   });
 };
 
-export const down: MigrationFn = async ({ context: qi }) => {
+export const down: MigrationFn = async ({ context: qi }: { context: any }) => {
   await qi.dropTable("posts");
   await qi.dropTable("products");
   await qi.dropTable("categories");
@@ -61,7 +61,6 @@ export const down: MigrationFn = async ({ context: qi }) => {
   // Drop enum type created for users.role (dialect-specific name)
   // Sequelize typically names it: enum_users_role
   try {
-    // @ts-expect-error postgres only
     await qi.sequelize.query('DROP TYPE IF EXISTS "enum_users_role";');
   } catch {
     // ignore
