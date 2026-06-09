@@ -8,7 +8,8 @@
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\user\\\\Desktop\\\\Downloads\\\\satsolutions\" -Directory)",
       "Bash(Select-Object Name)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(cd /home/user/satsolutions; cp \"/root/.claude/uploads/f53a574b-c15a-5137-8ef9-e5687b9b1df0/ba63ec0e-DAHUA_PRICE_new.xlsx\" tools/dahua-fix/DAHUA_PRICE_new.xlsx; echo copied)"
     ]
   }
 }
