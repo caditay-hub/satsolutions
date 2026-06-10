@@ -1,25 +1,28 @@
 #!/usr/bin/env node
 /**
- * fix-dahua.mjs — исправляет фото (и опц. категории/названия) товаров Dahua в БД,
- * используя сопоставление код → правильное фото из прайс-листа.
+ * fix-dahua.mjs — приводит товары Dahua в порядок по данным прайс-листа:
+ *   • ФОТО      — ставит правильное фото (coverImageUrl) и кладёт файл в uploads;
+ *   • НАЗВАНИЯ  — чинит явно неверные названия (--names);
+ *   • КАТЕГОРИИ — раскладывает товары по СУЩЕСТВУЮЩИМ категориям из БД,
+ *                 создаёт отдельную «Дисплеи» для видеодисплеев (--categories).
  *
- * Источник данных: dahua_products.json + папка images/ (рядом с этим файлом).
- * Сопоставление с товарами в БД — по нормализованному коду (игнорируя префиксы DH-/DHI-).
+ * Сопоставление товаров — по нормализованному коду (без префикса DH-/DHI-).
+ * Категории берутся из таблицы categories той же БД — то же, что в левом меню сайта,
+ * поэтому синхронизация автоматическая.
  *
- * ЗАПУСК (из этой папки или указав пути через env):
- *   DATABASE_URL=postgres://user:pass@host:5432/db node fix-dahua.mjs            # dry-run, ничего не меняет
- *   DATABASE_URL=... node fix-dahua.mjs --apply                                  # залить фото и обновить coverImageUrl
- *   DATABASE_URL=... node fix-dahua.mjs --apply --categories                     # + проставить категорию (если найдётся в БД)
- *   DATABASE_URL=... node fix-dahua.mjs --apply --categories --names             # + переписать неверные названия
+ * ЗАПУСК на сервере (где есть БД и папка uploads):
+ *   # dry-run (ничего не меняет, печатает план) — DATABASE_URL берётся из env или apps/api/.env
+ *   UPLOADS_DIR=/path/to/site/uploads/images node tools/dahua-fix/fix-dahua.mjs
+ *   # применить всё:
+ *   UPLOADS_DIR=/path/to/site/uploads/images node tools/dahua-fix/fix-dahua.mjs --apply --categories --names
+ *   # применить только фото:
+ *   UPLOADS_DIR=... node tools/dahua-fix/fix-dahua.mjs --apply
  *
- * Доп. env:
- *   UPLOADS_DIR   — папка для картинок (по умолчанию ../../apps/api/uploads/images)
- *   PUBLIC_PREFIX — префикс URL (по умолчанию /uploads/images)
+ * ENV: DATABASE_URL, UPLOADS_DIR (папка файлов), PUBLIC_PREFIX (URL-префикс, по умолч. /uploads/images)
+ * Зависимость: пакет `pg` (есть в репозитории).
  *
- * Требуется пакет `pg` (есть в apps/api). Запускайте из apps/api или установите pg рядом.
- *
- * ВАЖНО: сначала всегда смотрите вывод dry-run. Схема боевой БД может отличаться —
- * скрипт намеренно консервативен и печатает все планируемые изменения.
+ * ВАЖНО: всегда смотрите вывод dry-run перед --apply. Изменения категорий/имён —
+ * только по флагам. Скрипт сам определяет имена колонок (camelCase/snake_case).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -28,138 +31,191 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const { Client } = require("pg");
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const ARGS = new Set(process.argv.slice(2));
 const APPLY = ARGS.has("--apply");
 const DO_CATS = ARGS.has("--categories");
 const DO_NAMES = ARGS.has("--names");
 
-const UPLOADS_DIR = process.env.UPLOADS_DIR
-  || path.resolve(__dirname, "../../apps/api/uploads/images");
 const PUBLIC_PREFIX = process.env.PUBLIC_PREFIX || "/uploads/images";
+
+// ---- DATABASE_URL: из env или из apps/api/.env проекта ----
+function findDatabaseUrl() {
+  if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
+  const candidates = [
+    path.resolve(__dirname, "../../apps/api/.env"),
+    path.resolve(__dirname, "../../.env"),
+  ];
+  for (const f of candidates) {
+    try {
+      const m = fs.readFileSync(f, "utf8").match(/^\s*DATABASE_URL\s*=\s*(.+)\s*$/m);
+      if (m) return m[1].trim().replace(/^["']|["']$/g, "");
+    } catch {}
+  }
+  return null;
+}
+// ---- UPLOADS_DIR: из env или авто-поиск ----
+function findUploadsDir() {
+  if (process.env.UPLOADS_DIR) return process.env.UPLOADS_DIR;
+  const guesses = [
+    path.resolve(__dirname, "../../apps/api/uploads/images"),
+  ];
+  for (const g of guesses) if (fs.existsSync(path.dirname(g))) return g;
+  return guesses[0];
+}
+
+const DATABASE_URL = findDatabaseUrl();
+const UPLOADS_DIR = findUploadsDir();
+if (!DATABASE_URL) { console.error("ERROR: не найден DATABASE_URL (env или apps/api/.env)"); process.exit(1); }
 
 const records = JSON.parse(fs.readFileSync(path.join(__dirname, "dahua_products.json"), "utf8"));
 
-// нормализация кода: убрать «dahua», ведущий DH-/DHI-, оставить [A-Z0-9]
-function norm(s) {
-  if (!s) return "";
-  let c = String(s).toUpperCase();
-  c = c.replace(/DAHUA/g, "");
-  c = c.replace(/^[^A-Z0-9]+/, "");
-  c = c.replace(/^DHI[-_ ]/, "").replace(/^DH[-_ ]/, "");
-  return c.replace(/[^A-Z0-9]/g, "");
-}
-// вытащить «кодовый» токен из названия (последний токен с цифрой/дефисом)
-function codeFromName(name) {
-  if (!name) return "";
-  const toks = String(name).split(/\s+/).filter(t => /[0-9]/.test(t) && /[-/]/.test(t));
+const norm = (s) => !s ? "" : String(s).toUpperCase().replace(/DAHUA/g, "")
+  .replace(/^[^A-Z0-9]+/, "").replace(/^DHI[-_ ]/, "").replace(/^DH[-_ ]/, "").replace(/[^A-Z0-9]/g, "");
+const codeFromName = (name) => {
+  const toks = String(name || "").split(/\s+/).filter(t => /[0-9]/.test(t) && /[-/]/.test(t));
   return toks.length ? norm(toks[toks.length - 1]) : "";
-}
+};
+const slugify = (s) => String(s).toLowerCase().trim()
+  .replace(/[^a-z0-9а-яё]+/gi, "-").replace(/^-+|-+$/g, "");
 
-function fail(msg) { console.error("ERROR:", msg); process.exit(1); }
+/**
+ * Правила категорий: [regex по описанию товара, regex по имени СУЩЕСТВУЮЩЕЙ категории].
+ * Берётся первая существующая в БД категория, имя которой совпадает. Порядок важен
+ * (специфичные — выше общих). Видеодисплеи обрабатываются отдельно (категория «Дисплеи»).
+ */
+const CATEGORY_RULES = [
+  [/металлоискат/i,                         /металлоискат/i],
+  [/вызывн(ая|ую) панель|дверная станция/i, /вызывн/i],
+  [/видеодомофон|домофон/i,                 /домофон/i],
+  [/внутренний (ip[- ]?)?монитор|монитор видеодомофона|ip-?монитор/i, /внутренн.*монитор|монитор/i],
+  [/металлодетектор|досмотр/i,              /досмотр|металл/i],
+  [/(xvr|видеорегистратор|видеомагнитофон|nvr)\b/i, /регистратор|nvr|xvr/i],
+  [/коммутатор|switch|порт(ов)? poe|оптический/i,  /сетев|коммутатор|передач/i],
+  [/датчик|извещател|сигнализац|контрольная панель/i, /сигнализац|датчик|охран/i],
+  [/считыватель|контроллер доступа|терминал доступа|учет(а)? рабочего|турникет|шлагбаум|замок/i, /доступ|скуд/i],
+  [/проектор/i,                             /проектор|диспле/i],
+  [/(ip[- ]?)?(видео)?камера|объектив/i,    /камер|видеонаблюд|hdcvi|сетев/i],
+];
+const isDisplay = (rec) =>
+  /видеодисплей|видеостен|видео-?панель|video ?wall|настенный видеодисплей/i.test(rec.description || "") ||
+  /LS\d+UCM/i.test(rec.code || "");
 
-if (!process.env.DATABASE_URL) fail("не задан DATABASE_URL");
-
-const db = new Client({ connectionString: process.env.DATABASE_URL });
+const q = (id) => `"${id}"`;
+const db = new Client({ connectionString: DATABASE_URL });
 
 async function colset(table) {
-  const r = await db.query(
-    `select column_name from information_schema.columns where table_name=$1`, [table]);
+  const r = await db.query(`select column_name from information_schema.columns where table_name=$1`, [table]);
   return new Set(r.rows.map(x => x.column_name));
 }
-const q = (id) => `"${id}"`;
 
 async function main() {
+  console.log(`БД: ${DATABASE_URL.replace(/:\/\/[^@]*@/, "://***@")}`);
+  console.log(`UPLOADS_DIR: ${UPLOADS_DIR}`);
   await db.connect();
 
-  // — определяем имена колонок (camelCase у Sequelize по умолчанию) —
-  const cols = await colset("products");
-  if (cols.size === 0) fail('таблица "products" не найдена — проверьте схему/БД');
+  const pc = await colset("products");
+  if (!pc.size) { console.error('ERROR: таблица "products" не найдена'); process.exit(1); }
   const C = {
-    cover: cols.has("coverImageUrl") ? "coverImageUrl" : (cols.has("cover_image_url") ? "cover_image_url" : null),
-    cat:   cols.has("categoryId") ? "categoryId" : (cols.has("category_id") ? "category_id" : null),
-    chars: cols.has("characteristics") ? "characteristics" : null,
-    brand: cols.has("brandId") ? "brandId" : (cols.has("brand_id") ? "brand_id" : null),
+    cover: pc.has("coverImageUrl") ? "coverImageUrl" : pc.has("cover_image_url") ? "cover_image_url" : null,
+    cat:   pc.has("categoryId") ? "categoryId" : pc.has("category_id") ? "category_id" : null,
+    chars: pc.has("characteristics") ? "characteristics" : null,
+    brand: pc.has("brandId") ? "brandId" : pc.has("brand_id") ? "brand_id" : null,
   };
-  if (!C.cover) fail("в products нет колонки coverImageUrl/cover_image_url");
+  if (!C.cover) { console.error("ERROR: нет колонки coverImageUrl"); process.exit(1); }
   console.log("Колонки products:", C);
 
-  // — грузим товары (по возможности только Dahua) —
-  const sel = ["id", "name", "slug", C.cover, C.cat, C.chars].filter(Boolean).map(q).join(",");
-  const { rows: products } = await db.query(`select ${sel} from products`);
+  const cc = (await colset("categories"));
+  const CAT = {
+    parent: cc.has("parentId") ? "parentId" : cc.has("parent_id") ? "parent_id" : null,
+    brand:  cc.has("brandId") ? "brandId" : cc.has("brand_id") ? "brand_id" : null,
+  };
+
+  // товары
+  const psel = ["id","name","slug",C.cover,C.cat,C.chars].filter(Boolean).map(q).join(",");
+  const { rows: products } = await db.query(`select ${psel} from products`);
   console.log(`Товаров в БД: ${products.length}`);
 
-  // — индекс по нормализованному коду —
+  // индекс по нормализованному коду
   const index = new Map();
-  const addKey = (k, p) => { if (k && !index.has(k)) index.set(k, p); };
+  const add = (k,p) => { if (k && !index.has(k)) index.set(k,p); };
   for (const p of products) {
-    addKey(norm(p.slug), p);
-    addKey(codeFromName(p.name), p);
+    add(norm(p.slug), p); add(codeFromName(p.name), p);
     if (C.chars && p[C.chars]) {
-      const ch = typeof p[C.chars] === "string" ? safeJson(p[C.chars]) : p[C.chars];
-      for (const v of Object.values(ch || {})) addKey(norm(v), p);
+      const ch = typeof p[C.chars] === "string" ? safe(p[C.chars]) : p[C.chars];
+      for (const v of Object.values(ch||{})) add(norm(v), p);
     }
   }
 
-  // — категории по имени (для --categories) —
-  let catByName = new Map();
-  if (DO_CATS && C.cat) {
-    try {
-      const { rows } = await db.query(`select id, name from categories`);
-      for (const c of rows) catByName.set(String(c.name).trim().toLowerCase(), c.id);
-    } catch { console.warn("Не удалось прочитать categories — категории пропущу."); }
+  // категории
+  let cats = [];
+  if (DO_CATS) {
+    const csel = ["id","name","slug",CAT.parent,CAT.brand].filter(Boolean).map(q).join(",");
+    cats = (await db.query(`select ${csel} from categories`)).rows;
+    console.log(`Категорий в БД: ${cats.length} -> ${cats.map(c=>c.name).join(" | ")}`);
+  }
+  const findCat = (re) => cats.find(c => re.test(String(c.name)));
+  async function ensureDisplays() {
+    let d = cats.find(c => /^дисплеи$/i.test(String(c.name)) || /видеодиспле/i.test(String(c.name)));
+    if (d) return d;
+    console.log('[КАТЕГ] категории «Дисплеи» нет — будет создана');
+    if (!APPLY) return { id: "(new)", name: "Дисплеи", __new: true };
+    const cols = ["name","slug"]; const vals = ["Дисплеи", slugify("Дисплеи")]; const ph = ["$1","$2"];
+    // brandId Dahua, если есть колонка
+    if (CAT.brand) {
+      const b = (await db.query(`select id from brands where name ilike 'dahua' limit 1`)).rows[0];
+      if (b) { cols.push(CAT.brand); vals.push(b.id); ph.push("$"+vals.length); }
+    }
+    const r = await db.query(`insert into categories (${cols.map(q).join(",")}) values (${ph.join(",")}) returning id,name`, vals);
+    d = r.rows[0]; cats.push(d); return d;
   }
 
   if (APPLY) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 
-  let matched = 0, missing = [], imgChanged = 0, catChanged = 0, nameChanged = 0;
+  let matched=0, miss=[], imgN=0, catN=0, nameN=0, catSkip=[];
   for (const rec of records) {
     const p = index.get(rec.code_norm);
-    if (!p) { missing.push(rec.code); continue; }
+    if (!p) { miss.push(rec.code); continue; }
     matched++;
 
-    // фото
+    // ---- ФОТО ----
     const src = path.join(__dirname, "images", rec.image_file);
-    const destName = `dahua-${rec.image_file}`;
-    const newCover = `${PUBLIC_PREFIX}/${destName}`;
-    const coverDiffers = (p[C.cover] || "") !== newCover;
-    if (coverDiffers) {
-      imgChanged++;
-      console.log(`[ФОТО] ${rec.code}  ->  ${rec.image_file}${rec.image_flag !== "ok" ? "  (флаг: " + rec.image_flag + ")" : ""}`);
-      if (APPLY) {
-        fs.copyFileSync(src, path.join(UPLOADS_DIR, destName));
-        await db.query(`update products set ${q(C.cover)}=$1 where id=$2`, [newCover, p.id]);
-      }
+    const dest = `dahua-${rec.image_file}`;
+    const newCover = `${PUBLIC_PREFIX}/${dest}`;
+    if ((p[C.cover]||"") !== newCover) {
+      imgN++;
+      console.log(`[ФОТО]  ${rec.code} -> ${rec.image_file}${rec.image_flag!=="ok"?` (${rec.image_flag})`:""}`);
+      if (APPLY) { fs.copyFileSync(src, path.join(UPLOADS_DIR, dest)); await db.query(`update products set ${q(C.cover)}=$1 where id=$2`,[newCover,p.id]); }
     }
 
-    // категория
+    // ---- КАТЕГОРИЯ ----
     if (DO_CATS && C.cat) {
-      const cid = catByName.get(rec.category_guess.toLowerCase());
-      if (cid && p[C.cat] !== cid) {
-        catChanged++;
-        console.log(`[КАТЕГ] ${rec.code}  ->  ${rec.category_guess}`);
-        if (APPLY) await db.query(`update products set ${q(C.cat)}=$1 where id=$2`, [cid, p.id]);
-      } else if (!cid) {
-        console.log(`[КАТЕГ?] ${rec.code}: категории «${rec.category_guess}» нет в БД — пропуск`);
-      }
+      let target = null;
+      if (isDisplay(rec)) target = await ensureDisplays();
+      else for (const [dre, nre] of CATEGORY_RULES) if (dre.test(rec.description||"")) { const c = findCat(nre); if (c) { target = c; break; } }
+      if (target && !target.__new && p[C.cat] !== target.id) {
+        catN++;
+        console.log(`[КАТЕГ] ${rec.code} -> ${target.name}`);
+        if (APPLY) await db.query(`update products set ${q(C.cat)}=$1 where id=$2`,[target.id,p.id]);
+      } else if (!target) catSkip.push(`${rec.code} (${rec.category_guess})`);
     }
 
-    // название
+    // ---- НАЗВАНИЕ ----
     if (DO_NAMES && p.name !== rec.suggested_name) {
-      nameChanged++;
-      console.log(`[ИМЯ]   "${p.name}"  ->  "${rec.suggested_name}"`);
-      if (APPLY) await db.query(`update products set "name"=$1 where id=$2`, [rec.suggested_name, p.id]);
+      nameN++;
+      console.log(`[ИМЯ]   "${p.name}" -> "${rec.suggested_name}"`);
+      if (APPLY) await db.query(`update products set "name"=$1 where id=$2`,[rec.suggested_name,p.id]);
     }
   }
 
   console.log("\n=== ИТОГ ===");
   console.log(`Сопоставлено: ${matched}/${records.length}`);
-  console.log(`Не найдено в БД (${missing.length}): ${missing.join(", ") || "—"}`);
-  console.log(`Будет/обновлено фото: ${imgChanged}, категорий: ${catChanged}, названий: ${nameChanged}`);
-  console.log(APPLY ? "\nРЕЖИМ: ПРИМЕНЕНО (--apply)" : "\nРЕЖИМ: DRY-RUN (изменений не внесено). Добавьте --apply, чтобы записать.");
-
+  console.log(`Не найдено в БД (${miss.length}): ${miss.join(", ")||"—"}`);
+  console.log(`Фото: ${imgN} | Категории: ${catN} | Названия: ${nameN}`);
+  if (DO_CATS && catSkip.length) console.log(`Категория не определена (${catSkip.length}): ${catSkip.join(", ")}`);
+  console.log(APPLY ? "\nРЕЖИМ: ПРИМЕНЕНО (--apply)" : "\nDRY-RUN: изменений нет. Добавьте --apply, чтобы записать.");
   await db.end();
 }
-function safeJson(s){ try { return JSON.parse(s); } catch { return {}; } }
+function safe(s){ try { return JSON.parse(s); } catch { return {}; } }
 main().catch(e => { console.error(e); process.exit(1); });
