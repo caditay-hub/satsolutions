@@ -31,8 +31,6 @@ export function initModels() {
   Brand.hasMany(Product, { foreignKey: "brandId", as: "products" });
   Product.belongsTo(Brand, { foreignKey: "brandId", as: "brand" });
 
-  Brand.hasMany(Category, { foreignKey: "brandId", as: "categories" });
-  Category.belongsTo(Brand, { foreignKey: "brandId", as: "brand" });
 
   Category.hasMany(Category, { foreignKey: "parentId", as: "children" });
   Category.belongsTo(Category, { foreignKey: "parentId", as: "parent" });

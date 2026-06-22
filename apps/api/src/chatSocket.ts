@@ -70,48 +70,106 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
         return;
       }
       socket.data.visitorId = visitorId;
-      socket.emit("chat:ready", { conversation: null, messages: [] });
+
+      const name = safeTrim(payload?.name, 200) || null;
+      const phone = safeTrim(payload?.phone, 32) || null;
+      const page = safeTrim(payload?.page, 300) || null;
+
+      // Restore existing conversation (and its history) for this visitor, regardless of status.
+      const conversation = await ChatConversation.findOne({ where: { visitorId } });
+      if (!conversation) {
+        socket.emit("chat:ready", { conversation: null, messages: [] });
+        return;
+      }
+
+      // Backfill profile fields if newly provided and not set yet; always refresh last-known page.
+      const patch: any = {};
+      if (name && !conversation.name) patch.name = name;
+      if (phone && !conversation.phone) patch.phone = phone;
+      if (page) patch.page = page;
+      if (Object.keys(patch).length) await conversation.update(patch);
+
+      socket.data.conversationId = conversation.id;
+      socket.join(convRoom(conversation.id));
+
+      const messages = await ChatMessage.findAll({
+        where: { conversationId: conversation.id },
+        order: [["createdAt", "ASC"]],
+        limit: 200
+      });
+      socket.emit("chat:ready", {
+        conversation: {
+          id: conversation.id,
+          visitorId: conversation.visitorId,
+          name: conversation.name,
+          phone: conversation.phone,
+          email: conversation.email,
+          status: conversation.status,
+          createdAt: conversation.createdAt
+        },
+        messages: messages.map((m) => ({
+          id: m.id,
+          conversationId: m.conversationId,
+          sender: m.sender,
+          text: m.text,
+          createdAt: m.createdAt
+        }))
+      });
     });
 
     socket.on("chat:send", async (payload: any) => {
       const conversationId = safeTrim(payload?.conversationId, 60);
       const visitorId = safeTrim(payload?.visitorId, 80) || (socket.data.visitorId as string);
       const text = safeTrim(payload?.text, 2000);
+      const name = safeTrim(payload?.name, 200) || null;
+      const phone = safeTrim(payload?.phone, 32) || null;
+      const page = safeTrim(payload?.page, 300) || null;
       if (!text) return;
 
       let conversation: InstanceType<typeof ChatConversation> | null = null;
       let isNewConversation = false;
+      let wasReopened = false;
 
       if (conversationId) {
         const bound = socket.data.conversationId;
         if (bound && bound !== conversationId) return;
         conversation = await ChatConversation.findByPk(conversationId);
+        // Reopen the same thread if it was closed — we keep history and continue.
+        if (conversation && conversation.status !== "OPEN") {
+          await conversation.update({ status: "OPEN" } as any);
+          wasReopened = true;
+        }
       } else if (visitorId && visitorId.length >= 10) {
         const result = await sequelize.transaction(async (t) => {
           const existing = await ChatConversation.findOne({ where: { visitorId }, transaction: t });
           if (existing) {
-            return { conversation: existing, isNew: false, resetNeeded: existing.status !== "OPEN" };
+            const reopened = existing.status !== "OPEN";
+            const patch: any = {};
+            if (reopened) patch.status = "OPEN";
+            if (name && !existing.name) patch.name = name;
+            if (phone && !existing.phone) patch.phone = phone;
+            if (page) patch.page = page;
+            if (Object.keys(patch).length) await existing.update(patch, { transaction: t });
+            return { conversation: existing, isNew: false, reopened };
           }
           const created = await ChatConversation.create(
             {
               visitorId,
-              name: null,
-              phone: null,
+              name,
+              phone,
               email: null,
+              page,
               status: "OPEN",
               lastMessageAt: null
             } as any,
             { transaction: t }
           );
-          return { conversation: created, isNew: true, resetNeeded: false };
+          return { conversation: created, isNew: true, reopened: false };
         });
-        const r = result as { conversation: InstanceType<typeof ChatConversation>; isNew: boolean; resetNeeded: boolean };
+        const r = result as { conversation: InstanceType<typeof ChatConversation>; isNew: boolean; reopened: boolean };
         conversation = r.conversation;
         isNewConversation = r.isNew;
-        if (r.resetNeeded) {
-          socket.emit("chat:reset", { conversationId: conversation.id });
-          return;
-        }
+        wasReopened = r.reopened;
       }
 
       if (!conversation || conversation.status !== "OPEN") return;
@@ -168,12 +226,18 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           name: conversation.name,
           phone: conversation.phone,
           email: conversation.email,
+          page: conversation.page,
           status: conversation.status,
           lastMessageAt: conversation.lastMessageAt,
           unreadCount: conversation.unreadCount,
           createdAt: conversation.createdAt,
           lastMessage: { id: created.id, sender: "USER", text: created.text, createdAt: created.createdAt }
         });
+      } else if (wasReopened) {
+        // Thread continued after being closed: tell admins it's open again, and the user widget.
+        adminNs.emit("admin:conversation_update", { id: conversation.id, status: "OPEN" });
+        io.to(convRoom(conversation.id)).emit("chat:status", { conversationId: conversation.id, status: "OPEN" });
+        adminNs.to(convRoom(conversation.id)).emit("chat:status", { conversationId: conversation.id, status: "OPEN" });
       }
 
       io.to(convRoom(cid)).emit("chat:message", dto);
@@ -283,25 +347,15 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const conv = await ChatConversation.findByPk(conversationId);
       if (!conv) return;
 
-      await sequelize.transaction(async (t) => {
-        if (status === "CLOSED") {
-          // Delete completely as requested: "диалог delete bo'lib ketishi kerak"
-          await ChatMessage.destroy({ where: { conversationId }, transaction: t });
-          await conv.destroy({ transaction: t });
-        } else {
-          await conv.update({ status } as any, { transaction: t });
-        }
-      });
+      // History is preserved: closing only flags the conversation. The client can write
+      // again later and the same thread reopens (see chat:send). Use "Очистить" / admin:reset
+      // for explicit deletion.
+      const nextStatus = status === "CLOSED" ? "CLOSED" : "OPEN";
+      await conv.update({ status: nextStatus } as any);
 
-      if (status === "CLOSED") {
-        // Emit reset to all admins to remove it from the list
-        adminNs.emit("admin:conversation_reset", { id: conv.id });
-        io.to(convRoom(conv.id)).emit("chat:ready", { conversation: null, messages: [] });
-      } else {
-        adminNs.emit("admin:conversation_update", { id: conv.id, status: conv.status, unreadCount: conv.unreadCount });
-        io.to(convRoom(conv.id)).emit("chat:status", { conversationId: conv.id, status: conv.status });
-        adminNs.to(convRoom(conv.id)).emit("chat:status", { conversationId: conv.id, status: conv.status });
-      }
+      adminNs.emit("admin:conversation_update", { id: conv.id, status: conv.status, unreadCount: conv.unreadCount });
+      io.to(convRoom(conv.id)).emit("chat:status", { conversationId: conv.id, status: conv.status });
+      adminNs.to(convRoom(conv.id)).emit("chat:status", { conversationId: conv.id, status: conv.status });
     });
 
     // Service request notifications

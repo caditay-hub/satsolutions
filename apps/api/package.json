@@ -9,6 +9,7 @@
     "start": "node dist/index.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "seed": "tsx src/seed.ts",
+    "seed:dahua": "tsx src/seed-dahua.ts",
     "migrate": "tsx src/migrate.ts"
   },
   "dependencies": {

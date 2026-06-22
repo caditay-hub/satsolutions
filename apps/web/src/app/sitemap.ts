@@ -1,49 +1,90 @@
 import { MetadataRoute } from "next";
-import { getCategories, getNews, getPortfolio, getProducts, getServices } from "@/lib/api";
+import { getBrands, getCategories, getPortfolio, getProducts, getServices } from "@/lib/api";
+import { ALL_SERVICES } from "@/lib/servicesData";
+import { typeSlug } from "@/lib/typeSlug";
+
+const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
+const DEFAULT_LOCALE = "ru";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
-    // Static routes
+    // hreflang-альтернаты для переводимых (интерфейсных) путей
+    function langAlternates(path: string) {
+        const languages: Record<string, string> = {};
+        for (const loc of LOCALES) {
+            const prefix = loc === DEFAULT_LOCALE ? "" : `/${loc}`;
+            languages[loc] = `${siteUrl}${prefix}${path}` || `${siteUrl}/`;
+        }
+        return languages;
+    }
+
+    // Static routes (переводимый интерфейс → с hreflang)
     const routes = [
         "",
         "/about",
         "/contact",
-        "/categories",
         "/products",
-        "/news",
         "/solutions",
         "/portfolio",
-        "/support"
+        "/catalog"
     ].map((route) => ({
         url: `${siteUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: "daily" as const,
         priority: route === "" ? 1 : 0.8,
+        alternates: { languages: langAlternates(route) },
     }));
 
     try {
         // Dynamic routes fetching
+        // Все товары: лимит API = 500/стр, поэтому листаем до конца
+        async function allProducts() {
+            const acc: any[] = [];
+            for (let page = 1; page <= 20; page++) {
+                const { items, total } = await getProducts(page, 500).catch(() => ({ items: [], total: 0 }));
+                acc.push(...items);
+                if (acc.length >= (total || 0) || items.length === 0) break;
+            }
+            return acc;
+        }
         const [
             { categories },
-            { items: products },
-            { items: news },
+            products,
+            { brands },
             { items: services },
             { items: portfolio }
         ] = await Promise.all([
             getCategories().catch(() => ({ categories: [] })),
-            getProducts(1, 1000).catch(() => ({ items: [] })),
-            getNews(1, 1000).catch(() => ({ items: [] })),
+            allProducts(),
+            getBrands().catch(() => ({ brands: [] })),
             getServices(1, 1000).catch(() => ({ items: [] })),
             getPortfolio(1, 1000).catch(() => ({ items: [] }))
         ]);
 
-        const categoryRoutes = categories.map((c) => ({
-            url: `${siteUrl}/products?category=${encodeURIComponent(c.slug)}`,
+        const brandRoutes = brands.map((b) => ({
+            url: `${siteUrl}/catalog/${b.slug}`,
             lastModified: new Date(),
             changeFrequency: "weekly" as const,
-            priority: 0.7,
+            priority: 0.8,
         }));
+
+        // Канонические страницы типов = чистые URL /products/type/<slug> (дедуп имён).
+        // Старые /products?type=<имя> 301-редиректят сюда; брендовые /categories/<slug> — 308 сюда.
+        const typeNames = Array.from(new Set(categories.map((c) => c.name).filter(Boolean)));
+        const categoryRoutes = [
+            { url: `${siteUrl}/categories`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7, alternates: { languages: langAlternates(`/categories`) } },
+            ...typeNames.map((name) => {
+                const path = `/products/type/${typeSlug(name)}`;
+                return {
+                    url: `${siteUrl}${path}`,
+                    lastModified: new Date(),
+                    changeFrequency: "weekly" as const,
+                    priority: 0.7,
+                    alternates: { languages: langAlternates(path) },
+                };
+            }),
+        ];
 
         const productRoutes = products.map((p) => ({
             url: `${siteUrl}/products/${p.slug}`,
@@ -52,18 +93,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.6,
         }));
 
-        const newsRoutes = news.map((n) => ({
-            url: `${siteUrl}/news/${n.slug}`,
-            lastModified: new Date(n.updatedAt),
-            changeFrequency: "monthly" as const,
-            priority: 0.5,
-        }));
-
-        const serviceRoutes = services.map((s) => ({
+const serviceRoutes = services.map((s) => ({
             url: `${siteUrl}/solutions/${s.slug}`,
             lastModified: new Date(s.updatedAt),
             changeFrequency: "monthly" as const,
             priority: 0.6,
+            alternates: { languages: langAlternates(`/solutions/${s.slug}`) },
         }));
 
         const portfolioRoutes = portfolio.map((p) => ({
@@ -71,14 +106,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lastModified: new Date(p.updatedAt),
             changeFrequency: "monthly" as const,
             priority: 0.5,
+            alternates: { languages: langAlternates(`/portfolio/${p.slug}`) },
+        }));
+
+        // 22 статичные страницы услуг/отраслей (cctv, access, fire, …) — раньше их не было в карте
+        const staticServiceRoutes = ALL_SERVICES.map((s) => ({
+            url: `${siteUrl}/solutions/${s.key}`,
+            lastModified: new Date(),
+            changeFrequency: "monthly" as const,
+            priority: 0.7,
+            alternates: { languages: langAlternates(`/solutions/${s.key}`) },
         }));
 
         return [
             ...routes,
+            ...brandRoutes,
             ...categoryRoutes,
             ...productRoutes,
-            ...newsRoutes,
             ...serviceRoutes,
+            ...staticServiceRoutes,
             ...portfolioRoutes
         ];
     } catch (error) {

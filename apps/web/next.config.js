@@ -1,3 +1,6 @@
+const createNextIntlPlugin = require('next-intl/plugin');
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
 // Force config reload - v2.2
 const nextConfig = {
   compiler: {
@@ -6,6 +9,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: true, // critical CSS inlining
     optimisticClientCache: true,
+    // Keep dynamic page segments in the client router cache so back-navigation
+    // (browser arrow + <GlobalBackButton/> router.back()) restores from cache
+    // instantly and the scroll position is preserved instead of jumping to top.
+    staleTimes: { dynamic: 30, static: 180 },
     optimizePackageImports: ['react-icons', 'lucide-react', '@headlessui/react', '@heroicons/react'],
   },
   poweredByHeader: false,
@@ -19,6 +26,21 @@ const nextConfig = {
       { protocol: "http", hostname: "localhost", port: "4000" },
       { protocol: "http", hostname: "127.0.0.1", port: "4000" }
     ]
+  },
+  async redirects() {
+    return [
+      { source: "/news", destination: "/", permanent: true },
+      { source: "/news/:slug*", destination: "/", permanent: true },
+      // Легаси-URL старой версии сайта (другая CMS) — в индексе Google, отдавали 404.
+      // 301 на новые разделы, чтобы вернуть вес и убрать массовые 404.
+      { source: "/category/:path*", destination: "/products", permanent: true },
+      { source: "/page/o-nas", destination: "/about", permanent: true },
+      { source: "/page/o-kompanii", destination: "/about", permanent: true },
+      { source: "/page/kontakty", destination: "/contact", permanent: true },
+      { source: "/page/kontakti", destination: "/contact", permanent: true },
+      { source: "/page/contacts", destination: "/contact", permanent: true },
+      { source: "/page/:slug*", destination: "/", permanent: true },
+    ];
   },
   async headers() {
     return [
@@ -82,5 +104,5 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);
 

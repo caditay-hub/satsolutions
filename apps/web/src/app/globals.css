@@ -22,6 +22,16 @@
   width: max-content;
 }
 
+/* Лента из 2 копий (одна — aria-hidden клон): меньше дублей в DOM для SEO */
+@keyframes scroll2 {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-scroll2 {
+  animation: scroll2 40s linear infinite;
+  width: max-content;
+}
+
 .hover\:pause:hover {
   animation-play-state: paused;
 }
@@ -94,7 +104,69 @@
   transform-origin: left;
 }
 
+/* ── SAT logo dot: pulses between brand blue and red ─────────────── */
+@keyframes sat-logo-dot-pulse {
+  0%, 45%   { background-color: #2dd4bf; box-shadow: 0 0 8px rgba(45,212,191,0.85); }
+  50%, 95%  { background-color: #ef4444; box-shadow: 0 0 8px rgba(239,68,68,0.85); }
+  100%      { background-color: #2dd4bf; box-shadow: 0 0 8px rgba(45,212,191,0.85); }
+}
+.sat-logo-dot {
+  background-color: #2dd4bf;
+  box-shadow: 0 0 8px rgba(45,212,191,0.85);
+  animation: sat-logo-dot-pulse 2.4s ease-in-out infinite;
+}
+
 ::selection {
   background: #E60012;
   color: white;
 }
+/* Анимированные схемы услуг: точки-сигналы между узлами */
+@keyframes schemeFlow {
+  0% { left: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { left: calc(100% - 6px); opacity: 0; }
+}
+@keyframes schemeFlowV {
+  0% { top: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: calc(100% - 6px); opacity: 0; }
+}
+.scheme-dot {
+  position: absolute;
+  top: -2.5px;
+  left: 0;
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  background: #328fa8;
+  animation: schemeFlow 1.6s linear infinite;
+}
+.scheme-dot-v {
+  position: absolute;
+  left: -2.5px;
+  top: 0;
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  background: #328fa8;
+  animation: schemeFlowV 1.6s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scheme-dot, .scheme-dot-v { animation: none; opacity: 0; }
+}
+
+/* ─── Китайский: Jura не содержит иероглифов → системный CJK-шрифт + умеренная жирность ─── */
+html[lang="zh"] {
+  --font-jura: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+/* ВАЖНО: Microsoft YaHei (Windows) имеет только Regular(400) и Bold(700);
+   по спецификации вес >=600 округляется до Bold => «жирно». Поэтому держим
+   ВСЕ веса для китайского <=500, чтобы рендерился Regular, а не Bold.
+   Иерархия заголовков сохраняется за счёт размера, а не толщины. */
+html[lang="zh"] body { font-weight: 400; }
+html[lang="zh"] .font-medium,
+html[lang="zh"] .font-semibold { font-weight: 400 !important; }
+html[lang="zh"] .font-bold,
+html[lang="zh"] .font-black { font-weight: 500 !important; }

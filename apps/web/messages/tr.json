@@ -1,0 +1,855 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "catalog": "Katalog",
+    "products": "Ürünler",
+    "portfolio": "Portföy",
+    "about": "Hakkımızda"
+  },
+  "common": {
+    "contacts": "İletişim",
+    "getQuote": "Teklif Al",
+    "search": "Ara...",
+    "menu": "Menü",
+    "close": "Kapat",
+    "more": "Daha fazla",
+    "allProjects": "Tüm projeler",
+    "language": "Dil",
+    "back": "Geri",
+    "securitySystems": "Güvenlik sistemleri",
+    "priceFrom": "{value} UZS'den",
+    "priceOnRequest": "Fiyat talep üzerine",
+    "noPhoto": "Fotoğraf yok",
+    "inStock": "Stokta"
+  },
+  "home": {
+    "heroTitle": "Güvenlik ve zayıf akım sistemleri",
+    "heroText": "Özbekistan genelinde CCTV, geçiş kontrolü, yangın alarmı ve BT altyapısı tedariki, tasarımı ve kurulumu",
+    "statsYears": "yıl piyasada",
+    "statsObjects": "tamamlanan proje",
+    "statsCameras": "kurulan kamera",
+    "statsBrands": "katalogda marka",
+    "whatWeDo": "Ne yapıyoruz",
+    "directionsTitle": "Hizmet alanları",
+    "directionsSubtitle": "Tasarımdan bakıma kadar zayıf akım sistemlerinin tam yelpazesi",
+    "catalogLabel": "Katalog",
+    "popularProducts": "Popüler ürünler",
+    "allProducts": "Tüm ürünler",
+    "readySolutions": "Hazır çözümler",
+    "allServices": "Tüm hizmetler",
+    "whyLabel": "Avantajlarımız",
+    "whyTitle": "Neden SAT Solutions",
+    "getConsult": "Danışmanlık alın",
+    "aboutCompany": "Hakkımızda",
+    "catalogTitle": "Ürün kataloğu",
+    "wholeCatalog": "Tüm katalog",
+    "portfolioLabel": "Projelerimiz",
+    "portfolioTitle": "Tamamlanan projeler",
+    "allProjects": "Tüm projeler",
+    "partnersTitle": "İş ortağı markalar",
+    "contactLabel": "İletişime geçin",
+    "contactTitle": "Talep bırakın",
+    "contactSubtitle": "Görevinizi anlatın — mühendisimiz sizinle iletişime geçip en uygun çözümü önerecek",
+    "more": "Daha fazla",
+    "dir": {
+      "cctv": [
+        "Video gözetim",
+        "IP ve HDCVI kameralar, NVR/DVR kayıt cihazları, bulut ve yerel 7/24 izleme"
+      ],
+      "access": [
+        "Geçiş kontrolü",
+        "Biyometrik terminaller, kart okuyucular, turnikeler, bariyerler ve ANPR"
+      ],
+      "fire": [
+        "Yangın alarmı",
+        "Otomatik yangın alarmı ve söndürme sistemlerinin tasarımı, tedariki ve kurulumu"
+      ],
+      "it": [
+        "BT altyapısı",
+        "Yapısal kablolama, PoE switch'ler, Wi-Fi, sunucu kabinleri ve UPS"
+      ],
+      "intercom": [
+        "İnterkom sistemleri",
+        "Konut ve ticari tesisler için Android ve IP görüntülü interkomlar, geçiş kontrolü entegrasyonu"
+      ],
+      "alarm": [
+        "Hırsız alarmı",
+        "Kablolu ve kablosuz alarm panelleri, PIR sensörler, sirenler, merkezi izleme entegrasyonu"
+      ]
+    },
+    "why": {
+      "integrator": [
+        "Yetkili entegratör",
+        "Özbekistan'da Dahua Technology resmi stratejik sistem entegratörü. Üreticiden doğrudan tedarik."
+      ],
+      "licensed": [
+        "Lisanslı şirket",
+        "Milli Muhafız (güvenlik) ve Acil Durumlar Bakanlığı (yangın) lisansları. Yasalara tam uyumlu."
+      ],
+      "fullcycle": [
+        "Tam iş döngüsü",
+        "Tasarım → tedarik → kurulum → devreye alma → bakım. Baştan sona tek yüklenici."
+      ],
+      "warranty": [
+        "Garanti ve servis",
+        "Tüm ekipmanda resmi garanti. Kendi servis merkezi, 24 saat içinde mühendis."
+      ]
+    },
+    "heroSlides": [
+      {
+        "title": "Anahtar teslim video gözetim",
+        "text": "Hikvision ve Dahua IP kameralar, NVR sunucular, video analitik ve 7/24 bulut izleme",
+        "buttons": [
+          "Kameralar",
+          "Çözümler"
+        ]
+      },
+      {
+        "title": "BT altyapısı ve sunucu odaları",
+        "text": "Yapısal kablolama, PoE switchler, UPS, soğutma ve kabinetler — tasarımdan devreye almaya tam döngü",
+        "buttons": [
+          "Çözümler",
+          "İletişim"
+        ]
+      },
+      {
+        "title": "Geçiş kontrol sistemleri",
+        "text": "Biyometrik terminaller, turnikeler, bariyerler ve ANPR — ofisler, fabrikalar ve konutlar için",
+        "buttons": [
+          "Çözüm bul",
+          "Hakkımızda"
+        ]
+      },
+      {
+        "title": "Yangın güvenliği",
+        "text": "Bolid ve Rubezh adresli sistemleri: Özbekistan genelinde tasarım, montaj ve bakım",
+        "buttons": [
+          "Katalog",
+          "İletişim"
+        ]
+      },
+      {
+        "title": "Kontrol merkezleri ve video duvarları",
+        "text": "İşletmeler ve belediyeler için kontrol merkezi tasarımı, video duvarı ve izleme sistemleri montajı",
+        "buttons": [
+          "Portföy",
+          "Ürünler"
+        ]
+      }
+    ],
+    "view": "Görüntüle →",
+    "noImage": "Görsel yok",
+    "distributorLabel": "Yetkili distribütör",
+    "officialBrands": "Resmi markalar ve ortaklar",
+    "phone": "Telefon",
+    "heroPrev": "Önceki",
+    "heroNext": "Sonraki",
+    "heroSlide": "Slayt"
+  },
+  "footer": {
+    "sections": "Bölümler",
+    "categories": "Kategoriler",
+    "partners": "Ortaklar",
+    "phone": "Telefon",
+    "address": "Adres",
+    "geo": "Konum",
+    "map": "Harita",
+    "loadMap": "Haritayı yüklemek için tıklayın",
+    "geoNotSet": "Konum yapılandırılmadı",
+    "rights": "Tüm hakları saklıdır",
+    "tagline": "Tüm Özbekistan'da güvenlik ve zayıf akım sistemlerinin tasarımı, kurulumu ve bakımı."
+  },
+  "services": {
+    "cctv": {
+      "title": "Video gözetim",
+      "desc": "Her ölçekte tesis için IP, analog ve bulut sistemleri.",
+      "intro": "Küçük bir ofisten onlarca kameralı, 7/24 izlenen dağıtık tesislere kadar her ölçekte video gözetim sistemleri tasarlar ve kurarız.",
+      "works": [
+        "Saha denetimi ve ihtiyaca göre kamera seçimi",
+        "Tasarım ve yerleşim şeması",
+        "Kamera, kayıt cihazı (NVR/DVR) ve kablolama montajı",
+        "Kayıt, uzaktan erişim ve analitik ayarları",
+        "Devreye alma, eğitim ve garanti hizmeti"
+      ]
+    },
+    "analytics": {
+      "title": "Video analitik & YZ",
+      "desc": "Yüz tanıma, insan sayımı, ısı haritaları, algılama.",
+      "intro": "Video gözetim üzerine akıllı modüller: yüz ve plaka tanıma, kişi sayımı, bölge ve çevre kontrolü, gerçek zamanlı olay algılama.",
+      "works": [
+        "Gerekli analitik için kamera ve sunucu seçimi",
+        "Yüz ve plaka tanıma kurulumu (ANPR)",
+        "Ziyaretçi sayımı, ısı haritaları, bölge kontrolü",
+        "Alarmların güvenlik ve geçiş kontrolü ile entegrasyonu",
+        "Operatör eğitimi ve destek"
+      ]
+    },
+    "anpr": {
+      "title": "Plaka tanıma",
+      "desc": "Giriş, otopark ve bariyer entegrasyonu için ANPR.",
+      "intro": "Giriş-çıkış kontrolü için ANPR sistemleri: otomatik plaka tanıma, yetkili araçlara bariyer açma, geçiş kayıtları ve otopark entegrasyonu.",
+      "works": [
+        "ANPR kameralarının seçimi ve montajı",
+        "Bariyer/kapı ve kontrolör montajı",
+        "Beyaz liste ve geçiş mantığı ayarı",
+        "Otopark ve geçiş kontrolü ile entegrasyon",
+        "Devreye alma ve bakım"
+      ]
+    },
+    "access": {
+      "title": "Geçiş kontrolü",
+      "desc": "Turnikeler, okuyucular, elektronik kilitler ve kontrol noktaları.",
+      "intro": "Tesise erişimi sınırlandırır ve kayıt altına alırız: turnikeler, elektronik kilitler, kart okuyucular ve biyometri, bölge ve zamana göre esnek erişim hakları.",
+      "works": [
+        "Geçiş noktaları ve bölgelerin tasarımı",
+        "Turnike, kilit ve okuyucu montajı",
+        "Yetki, program ve erişim seviyeleri ayarı",
+        "Gözetim ve zaman takibi ile entegrasyon",
+        "Devreye alma ve destek"
+      ]
+    },
+    "intercom": {
+      "title": "İnterkom",
+      "desc": "Evler, ofisler ve konutlar için sesli ve görüntülü interkomlar.",
+      "intro": "Apartman girişleri, ofisler ve özel evler için sesli ve görüntülü diyafon sistemleri — çağrı, görüntülü iletişim ve genel erişim sistemine entegrasyon ile.",
+      "works": [
+        "Çağrı paneli ve monitör seçimi",
+        "Diyafon ve iletişim hatları montajı",
+        "Elektronik kilit ve geçiş kontrolü entegrasyonu",
+        "Çok aboneli şema ayarı",
+        "Devreye alma ve servis"
+      ]
+    },
+    "attendance": {
+      "title": "Mesai takibi",
+      "desc": "Biyometri ve 1C/İK sistemlerine aktarımlı puantaj.",
+      "intro": "Çalışanların giriş-çıkışlarının biyometrik ve kartlı takibi — otomatik puantaj ve 1C ile İK sistemlerine aktarım ile.",
+      "works": [
+        "Biyometrik terminal ve okuyucu kurulumu",
+        "Program ve takip kurallarının ayarı",
+        "Puantaj ve rapor oluşturma",
+        "1C / İK / geçiş kontrolü entegrasyonu",
+        "Eğitim ve destek"
+      ]
+    },
+    "alarm": {
+      "title": "Hırsız alarmı",
+      "desc": "Tesis ve çevre koruması, panik butonu.",
+      "intro": "Tesisi izinsiz girişe karşı koruma: hareket, kapı açılma ve cam kırılma sensörleri, panik butonları, sinyalin güvenlik merkezine ve mobil uygulamaya iletilmesi.",
+      "works": [
+        "Güvenlik bölgelerinin tasarımı",
+        "Sensör, panel ve siren montajı",
+        "Senaryo ve panik butonu ayarı",
+        "Güvenlik merkezine ve uygulamaya aktarım",
+        "Devreye alma ve bakım"
+      ]
+    },
+    "fire": {
+      "title": "Yangın alarmı & tahliye",
+      "desc": "Erken algılama, uyarı ve tahliye yönetimi.",
+      "intro": "Otomatik yangın alarmı ile uyarı ve tahliye yönetim sistemleri — gerekli ruhsatlarla, standartlara uygun tasarım ve kurulum.",
+      "works": [
+        "Yürürlükteki normlara göre yangın alarmı ve tahliye projesi",
+        "Dedektör, panel ve siren montajı",
+        "Bölge ve tahliye senaryoları ayarı",
+        "Denetim kurumlarına teslim",
+        "Periyodik bakım"
+      ]
+    },
+    "network": {
+      "title": "Yapısal kablolama & LAN",
+      "desc": "Yapısal kablolama, Wi-Fi ve BT altyapısı.",
+      "intro": "Yapısal kablolama ve yerel ağlar — her zayıf akım sisteminin temeli: düzenli kablo altyapısı, anahtarlama ve Wi-Fi.",
+      "works": [
+        "Güzergah ve kablolama yapısının tasarımı",
+        "Yapısal kablolama, priz ve patch panel montajı",
+        "Switch ve Wi-Fi noktalarının kurulumu",
+        "Hatların etiketlenmesi ve testi",
+        "Dokümantasyon ve destek"
+      ]
+    },
+    "server": {
+      "title": "Sunucu odaları & veri merkezleri",
+      "desc": "Kabinet, UPS, soğutma ve ekipman izleme.",
+      "intro": "Sunucu odaları ve veri merkezleri donatırız: kabinetler, kesintisiz güç, soğutma ve mühendislik sistemlerinin izlenmesi.",
+      "works": [
+        "Sunucu odası veya veri merkezi projesi",
+        "Kabinet, kablolama ve güç montajı",
+        "UPS ve soğutma sistemleri kurulumu",
+        "İzleme ve geçiş kontrolü",
+        "Devreye alma ve servis"
+      ]
+    },
+    "videowall": {
+      "title": "Video duvarları",
+      "desc": "Kontrol odaları ve durum izleme merkezleri.",
+      "intro": "Kontrol odaları ve durum merkezleri için video duvarları: video ve verilerin tek büyük yüzeyde, esnek yerleşim yönetimiyle gösterimi.",
+      "works": [
+        "Panel ve video duvarı kontrolörü seçimi",
+        "Yapı tasarımı ve montajı",
+        "Yerleşim ve kaynak ayarı",
+        "Gözetim ile entegrasyon",
+        "Devreye alma ve destek"
+      ]
+    },
+    "pa": {
+      "title": "Anons sistemleri",
+      "desc": "Sesli uyarı ve tesis fon seslendirmesi.",
+      "intro": "Binalar, AVM’ler ve işletmeler için sesli anons ve fon ses sistemleri — bölgelere göre anons ve müzik yayını.",
+      "works": [
+        "Ses bölgeleri projesi",
+        "Hoparlör ve amplifikatör montajı",
+        "Bölge ve öncelik ayarı",
+        "Yangın tahliye sistemi ile entegrasyon",
+        "Devreye alma ve servis"
+      ]
+    },
+    "barrier": {
+      "title": "Bariyerler & otomasyon",
+      "desc": "Otomatik kapılar, bariyerler ve otopark kontrolü.",
+      "intro": "Giriş otomasyonu: bariyerler, sürgülü ve kanatlı kapılar, otopark kontrolü — kolay yönetim ve geçiş kontrol sistemine entegrasyon ile.",
+      "works": [
+        "Kapı veya bariyer için motor seçimi",
+        "Otomasyon ve güvenlik fotoseli montajı",
+        "Kontrol ve kumanda ayarı",
+        "ANPR ve geçiş kontrolü entegrasyonu",
+        "Devreye alma ve bakım"
+      ]
+    },
+    "perimeter": {
+      "title": "Çevre güvenliği",
+      "desc": "IR bariyerler, termal kameralar ve çevre koruması.",
+      "intro": "Tesis çevre koruması: çit boyunca gözetim, kızılötesi bariyerler ve saldırganı erken tespit için alarm sistemi.",
+      "works": [
+        "Çevre incelemesi ve proje",
+        "Kamera, kızılötesi bariyer ve sensör montajı",
+        "Bölge ve alarm ayarı",
+        "Güvenlik ve analitik ile entegrasyon",
+        "Devreye alma ve servis"
+      ]
+    },
+    "bus": {
+      "title": "Ulaşım · Akıllı Otobüs",
+      "desc": "Mobil CCTV, GPS izleme, yolcu sayımı.",
+      "intro": "Toplu taşıma için çözüm: araç içi gözetim, GPS izleme, yolcu sayımı ve 4G üzerinden merkeze veri aktarımı.",
+      "works": [
+        "Mobil kayıt cihazı ve kamera seçimi",
+        "Yolcu ve sürücü bölümüne montaj",
+        "GPS takip ve 4G/Wi-Fi bağlantı",
+        "Yolcu sayımı ve video analitik",
+        "Merkeze bağlantı"
+      ]
+    },
+    "city": {
+      "title": "Güvenli Şehir",
+      "desc": "Şehir geneli CCTV, veri merkezi ve akıllı analitik.",
+      "intro": "Kent güvenlik sistemleri: sokak gözetimi, yüz ve plaka tanıma, veri merkezi ve birleşik durum merkezi.",
+      "works": [
+        "Kent gözetim ağı projesi",
+        "Kamera ve iletişim hatları montajı",
+        "Veri merkezi ve video arşivi",
+        "Video analitik ve tanıma",
+        "Durum merkezi ve destek"
+      ]
+    },
+    "parking": {
+      "title": "Akıllı Otopark",
+      "desc": "ANPR, bariyerler ve giriş/çıkış otomasyonu.",
+      "intro": "Otopark otomasyonu: plaka tanıma (ANPR), bariyerler, boş yer takibi ve giriş-çıkış kaydı.",
+      "works": [
+        "Otopark sistemi projesi",
+        "ANPR kamera ve bariyer montajı",
+        "Yer sayımı ve ücretlendirme",
+        "Ödeme ve geçiş kontrolü entegrasyonu",
+        "Devreye alma ve servis"
+      ]
+    },
+    "retail": {
+      "title": "Perakende & pazarlar",
+      "desc": "Ziyaretçi sayımı, kasa kontrolü, hırsızlık koruması.",
+      "intro": "Mağaza ve pazar güvenliği: satış alanı ve kasaların gözetimi, ziyaretçi sayımı ve hırsızlığa karşı koruma.",
+      "works": [
+        "Satış alanı, kasa ve depo gözetimi",
+        "Ziyaretçi sayımı ve analitik",
+        "Kasa işlemleri kontrolü",
+        "Güvenlik ve hırsızlık önleme alarmı",
+        "Bakım"
+      ]
+    },
+    "bank": {
+      "title": "Bankalar & ofisler",
+      "desc": "Geçiş kontrolü, panik butonları, video izleme.",
+      "intro": "Bankalar ve ofisler için kapsamlı koruma: geçiş kontrolü, gözetim, panik butonları ve güvenlikle entegrasyon.",
+      "works": [
+        "Geçiş kontrolü ve kısıtlı bölgeler",
+        "Gözetim ve video analitik",
+        "Panik butonu ve alarm",
+        "Çalışma süresi takibi",
+        "Servis ve destek"
+      ]
+    },
+    "school": {
+      "title": "Eğitim",
+      "desc": "Okul ve üniversite güvenliği: geçiş, video, uyarı.",
+      "intro": "Okul ve üniversite güvenliği: girişte turnike ve geçiş kontrolü, gözetim, uyarılar ve çocuğun geçişine dair veli bilgilendirmesi.",
+      "works": [
+        "Giriş gruplarında turnike ve geçiş kontrolü",
+        "Alan ve koridor gözetimi",
+        "Uyarı ve yangın güvenliği",
+        "Veli bilgilendirmesi (kart/SMS)",
+        "Devreye alma ve servis"
+      ]
+    },
+    "industry": {
+      "title": "Sanayi & depolar",
+      "desc": "Çevre, termal görüntüleme ve süreç izleme.",
+      "intro": "Üretim tesisleri ve depolar için güvenlik: çevre koruma, atölye gözetimi, termal görüntüleme ve sahaya geçiş kontrolü.",
+      "works": [
+        "Çevre güvenliği ve gözetim",
+        "Termal izleme ve analitik",
+        "Geçiş ve kontrol noktalarında geçiş kontrolü",
+        "Güvenlik ile entegrasyon",
+        "Bakım"
+      ]
+    },
+    "residential": {
+      "title": "Konut siteleri",
+      "desc": "İnterkom, CCTV ve site bariyerleri.",
+      "intro": "Konut sitesi güvenliği: avlu ve giriş gözetimi, diyafon, bariyerler ve sakinler için geçiş kontrolü.",
+      "works": [
+        "Avlu, giriş ve otopark gözetimi",
+        "Diyafon ve geçiş kontrolü",
+        "Bariyer ve giriş otomasyonu",
+        "Sakinler için ANPR",
+        "Bakım hizmeti"
+      ]
+    }
+  },
+  "solutionsPage": {
+    "hero": "Anahtar teslim zayıf akım sistemleri",
+    "heroSub": "Özbekistan genelinde güvenlik ve zayıf akım sistemlerinin tasarımı, kurulumu ve bakımı.",
+    "whatWeCan": "Neler yapabiliriz",
+    "systemsLabel": "Sistemler & hizmetler",
+    "industriesLabel": "Hazır çözümler",
+    "industriesTitle": "Sektör çözümleri",
+    "howLabel": "Nasıl çalışıyoruz",
+    "howTitle": "Talepten servise — anahtar teslim",
+    "ctaLabel": "Projeye başlayalım",
+    "ctaTitle": "Projenizi görüşmeye hazır mısınız?",
+    "ctaText": "Göreviniz için ekipman seçip 30 dakika içinde teklif gönderelim.",
+    "whatInc": "Neler dahil",
+    "worksTitle": "İş kapsamı",
+    "scheme": "Çalışma prensibi",
+    "schemeTitle": "Sistem nasıl çalışır",
+    "examples": "Örnekler",
+    "gallery": "Galeri",
+    "steps": [
+      {
+        "title": "Talep & ziyaret",
+        "desc": "Ücretsiz mühendis ziyareti ve saha incelemesi."
+      },
+      {
+        "title": "Tasarım & teklif",
+        "desc": "Teknik çözüm, spesifikasyon ve teklif."
+      },
+      {
+        "title": "Tedarik",
+        "desc": "Sertifikalı Dahua, Hikvision ve diğer ekipman."
+      },
+      {
+        "title": "Kurulum & devreye alma",
+        "desc": "Profesyonel anahtar teslim kurulum."
+      },
+      {
+        "title": "Teslim & servis",
+        "desc": "Eğitim, garanti ve bakım."
+      }
+    ],
+    "home": "Ana sayfa",
+    "servicesCrumb": "Hizmetler",
+    "serviceTag": "Hizmet",
+    "industryTag": "Sektör çözümü",
+    "getQuote": "Teklif al",
+    "needTitle": "{name} mı lazım?",
+    "detailCtaText": "Tesisinize uygun ekipmanı seçer ve 30 dakika içinde teklif göndeririz."
+  },
+  "chat": {
+    "title": "Canlı sohbet",
+    "connecting": "Bağlanıyor...",
+    "online": "Operatör çevrimiçi",
+    "offline": "Çevrimdışı",
+    "greeting": "Merhaba! 👋 Ben SAT Solutions danışmanıyım. CCTV, geçiş kontrolü, alarm ve diğer sistemler konusunda yardımcı olabilirim. Nasıl yardımcı olabilirim?",
+    "intro": "Lütfen kendinizi tanıtın — operatör size hitap edip geri arayabilsin.",
+    "name": "Ad",
+    "yourName": "Adınız",
+    "phone": "Telefon",
+    "start": "Sohbeti başlat",
+    "placeholder": "Mesaj yazın...",
+    "send": "Mesaj gönder",
+    "close": "Kapat",
+    "closed": "Görüşme operatör tarafından kapatıldı. Tekrar yazın — aynı görüşmeye devam edelim.",
+    "open": "Sohbeti aç",
+    "errConnect": "Bağlantı hatası",
+    "errChat": "Sohbet hatası"
+  },
+  "search": {
+    "placeholder": "Ara: kamera, yangın…",
+    "aria": "Katalogda ara",
+    "nothing": "Sonuç bulunamadı",
+    "cats": "Kategoriler",
+    "brands": "Markalar",
+    "products": "Ürünler",
+    "showAll": "Tüm sonuçları göster"
+  },
+  "form": {
+    "feedbackTitle": "Geri bildirim",
+    "feedbackSub": "Mesaj bırakın — sizinle iletişime geçeceğiz.",
+    "name": "Ad",
+    "yourName": "Adınız",
+    "phone": "Telefon",
+    "phoneReq": "Telefon *",
+    "email": "E-posta",
+    "emailOpt": "E-posta (isteğe bağlı)",
+    "message": "Mesaj",
+    "msgPlaceholder": "Sorunuzu yazın...",
+    "comment": "Yorum: miktar, süre vb.",
+    "needPlaceholder": "İhtiyacınızı açıklayın...",
+    "send": "Gönder",
+    "sendRequest": "Talep gönder",
+    "sending": "Gönderiliyor...",
+    "sendingShort": "Gönderiliyor...",
+    "sent": "Mesaj gönderildi. Teşekkürler!",
+    "errSend": "Gönderme hatası",
+    "quoteTitle": "Teklif iste",
+    "srSuccess": "Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
+    "srError": "Talep gönderilirken hata oluştu. Lütfen tekrar deneyin.",
+    "quoteSent": "Talep gönderildi!",
+    "quoteSentSub": "Mesai saatlerinde 30 dakika içinde sizi arayacağız.",
+    "consent": "\"Gönder\"e tıklayarak kişisel verilerin işlenmesini kabul edersiniz",
+    "close": "Kapat",
+    "srTitle": "Talep gönder",
+    "service": "Hizmet",
+    "description": "Açıklama",
+    "cancel": "İptal"
+  },
+  "meta": {
+    "homeTitle": "SAT Solutions — Özbekistan'da güvenlik ve zayıf akım sistemleri",
+    "homeDesc": "Özbekistan'da CCTV, geçiş kontrolü, yangın alarmı ve BT altyapısı tedarik ve kurulumu. Yetkili Dahua ve Hikvision entegratörü.",
+    "solTitle": "Hizmetler — SAT Solutions",
+    "solDesc": "Özbekistan'da zayıf akım sistemleri ve güvenlik çözümleri: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, güvenli şehir ve daha fazlası."
+  },
+  "contact": {
+    "feedback": "İletişim",
+    "contactInfo": "İletişim bilgileri",
+    "social": "Sosyal medya",
+    "dataLater": "Bilgiler daha sonra eklenecek.",
+    "title": "İletişim",
+    "notReady": "Bu sayfa henüz hazır değil.",
+    "metaDesc": "Taşkent'te SAT Solutions iletişim: +998 99 554-69-69, sales@satsolutions.uz, Katta Darhon Cad. 5. Video gözetim, geçiş kontrolü, yangın alarmı — bizi arayın!"
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "licenses": "Lisanslar",
+    "certificates": "Sertifikalar ve yetkilendirmeler",
+    "partners": "Ortaklar",
+    "allPartners": "Tüm ortaklar →",
+    "location": "Bizi nerede bulabilirsiniz",
+    "viewDoc": "Belgeyi görüntüle",
+    "noPartners": "Henüz ortak yok.",
+    "mapTitle": "Harita",
+    "openMap": "Haritada aç →",
+    "notReady": "Bu sayfa henüz hazır değil.",
+    "openOriginal": "Orijinali aç",
+    "close": "Kapat",
+    "brandsNote": "Birlikte çalıştığımız resmi markalar ve ortaklar",
+    "lic": {
+      "lic-security": {
+        "title": "Güvenlik sistemleri lisansı",
+        "subtitle": "Onay No. 1554491 • Aktif",
+        "issuedBy": "Özbekistan Cumhuriyeti Milli Muhafızları",
+        "description": "Güvenlik teknik araçları ve sistemlerinin montajı, devreye alınması, onarımı ve bakımı"
+      },
+      "lic-fire": {
+        "title": "Yangın sistemleri lisansı",
+        "subtitle": "Onay No. 913518 • Aktif",
+        "issuedBy": "Özbekistan Acil Durumlar Bakanlığı",
+        "description": "Otomatik yangın söndürme ve yangın alarm sistemlerinin montajı, devreye alınması, onarımı ve bakımı"
+      }
+    },
+    "cert": {
+      "cert-dahua-integrator": {
+        "title": "Yetkili Stratejik Sistem Entegratörü",
+        "issuedBy": "Dahua Technology",
+        "description": "Özbekistan'da Authorized Strategic System Integrator. 1 Ocak – 31 Aralık 2026 arası geçerli."
+      },
+      "cert-dahua-partner": {
+        "title": "Güvenilir ortak tavsiye mektubu",
+        "issuedBy": "Dahua Technology (HK) Limited",
+        "description": "Resmi tavsiye mektubu. 2024'ten bu yana yüksek profesyonellik ve güvenilir iş birliğini onaylar."
+      },
+      "cert-ruijie": {
+        "title": "Silver Partner",
+        "issuedBy": "Ruijie Networks Co., Ltd",
+        "description": "Özbekistan'da yetkili Silver Partner — switch, router ve kablosuz ekipman satışı. 2025."
+      },
+      "cert-schneider": {
+        "title": "Select Partner · APC IT Solution Provider",
+        "issuedBy": "Schneider Electric",
+        "description": "Resmi Schneider Electric Select Partner (APC IT Solution Provider). Ekim 2024'ten beri."
+      },
+      "cert-pantum": {
+        "title": "Resmi ortak",
+        "issuedBy": "Pantum International Limited",
+        "description": "Özbekistan'da Pantum International Limited resmi ortağı. Yazıcı ve çok fonksiyonlu cihaz yetkili satışı."
+      }
+    }
+  },
+  "scheme": {
+    "cctv": [
+      {
+        "t": "Sahadaki kameralar",
+        "s": "4K'ya kadar, IR aydınlatma"
+      },
+      {
+        "t": "PoE switch",
+        "s": "güç ve veri"
+      },
+      {
+        "t": "Kayıt cihazı / sunucu",
+        "s": "kayıt ve arşiv"
+      },
+      {
+        "t": "İzleme",
+        "s": "monitör ve akıllı telefon"
+      }
+    ],
+    "analytics": [
+      {
+        "t": "Kameralar",
+        "s": "video akışı"
+      },
+      {
+        "t": "AI sunucu",
+        "s": "kare analizi"
+      },
+      {
+        "t": "Olaylar",
+        "s": "ihlal tespiti"
+      },
+      {
+        "t": "Operatör",
+        "s": "anında uyarılar"
+      }
+    ],
+    "anpr": [
+      {
+        "t": "LPR kamera",
+        "s": "plaka okuma"
+      },
+      {
+        "t": "Veritabanı kontrolü",
+        "s": "beyaz ve kara liste"
+      },
+      {
+        "t": "Bariyer",
+        "s": "otomatik açılma"
+      },
+      {
+        "t": "Kayıt",
+        "s": "tüm geçişlerin kaydı"
+      }
+    ],
+    "access": [
+      {
+        "t": "Tanımlayıcı",
+        "s": "kart, yüz, parmak"
+      },
+      {
+        "t": "Okuyucu"
+      },
+      {
+        "t": "Kontrolör",
+        "s": "yetki kontrolü"
+      },
+      {
+        "t": "Kilit + kayıt",
+        "s": "açma ve kayıt"
+      }
+    ],
+    "intercom": [
+      {
+        "t": "Çağrı paneli",
+        "s": "girişte"
+      },
+      {
+        "t": "Monitör / ahize",
+        "s": "daire veya ofiste"
+      },
+      {
+        "t": "Kilit",
+        "s": "uzaktan açma"
+      }
+    ],
+    "attendance": [
+      {
+        "t": "Terminal",
+        "s": "yüz veya parmak izi"
+      },
+      {
+        "t": "Takip sunucusu",
+        "s": "vardiya ve programlar"
+      },
+      {
+        "t": "Raporlar",
+        "s": "dönem puantajı"
+      }
+    ],
+    "alarm": [
+      {
+        "t": "Sensörler",
+        "s": "hareket, pencere, kapı"
+      },
+      {
+        "t": "Kontrol paneli",
+        "s": "alarm analizi"
+      },
+      {
+        "t": "Bildirim",
+        "s": "siren, SMS, arama"
+      }
+    ],
+    "fire": [
+      {
+        "t": "Dedektörler",
+        "s": "duman ve ısı"
+      },
+      {
+        "t": "Kontrol paneli",
+        "s": "yangın santralı"
+      },
+      {
+        "t": "Tahliye sistemi",
+        "s": "siren ve tabela"
+      },
+      {
+        "t": "Tahliye",
+        "s": "saha planına göre"
+      }
+    ],
+    "network": [
+      {
+        "t": "Çalışma noktaları",
+        "s": "kablolama prizleri"
+      },
+      {
+        "t": "Patch panel",
+        "s": "anahtarlama"
+      },
+      {
+        "t": "Switch"
+      },
+      {
+        "t": "Sunucu odası",
+        "s": "ağ çekirdeği"
+      }
+    ],
+    "server": [
+      {
+        "t": "Kabinet ve sunucular"
+      },
+      {
+        "t": "UPS",
+        "s": "yedek güç"
+      },
+      {
+        "t": "Soğutma",
+        "s": "iklim kontrolü"
+      },
+      {
+        "t": "İzleme",
+        "s": "7/24"
+      }
+    ],
+    "videowall": [
+      {
+        "t": "Kaynaklar",
+        "s": "kamera, PC, TV"
+      },
+      {
+        "t": "Kontrolör",
+        "s": "sahne ve yerleşimler"
+      },
+      {
+        "t": "Video duvarı",
+        "s": "7/24 çalışma"
+      }
+    ],
+    "pa": [
+      {
+        "t": "Kaynak",
+        "s": "mikrofon, oynatıcı"
+      },
+      {
+        "t": "Amplifikatörler",
+        "s": "bölgelere göre"
+      },
+      {
+        "t": "Hoparlörler",
+        "s": "dengeli ses"
+      }
+    ],
+    "barrier": [
+      {
+        "t": "Komut",
+        "s": "kumanda, etiket, buton"
+      },
+      {
+        "t": "Kontrol ünitesi"
+      },
+      {
+        "t": "Motor",
+        "s": "bariyer veya kapı"
+      }
+    ],
+    "perimeter": [
+      {
+        "t": "Dedektörler",
+        "s": "çevre boyunca"
+      },
+      {
+        "t": "Alarm paneli",
+        "s": "bölge tespiti"
+      },
+      {
+        "t": "Tepki",
+        "s": "kamera, ışık, siren"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portföy",
+    "subtitle": "Tamamlanan projeler: video gözetim, video duvarları ve entegre güvenlik sistemleri.",
+    "metaDesc": "SAT Solutions tamamlanan projeleri: video gözetim, video duvarları ve entegre güvenlik sistemleri.",
+    "all": "Tümü",
+    "noImage": "Görsel yok",
+    "view": "Görüntüle →",
+    "projectFallback": "Proje",
+    "client": "Müşteri",
+    "location": "Konum",
+    "completed": "Tamamlandı",
+    "category": "Kategori",
+    "clientTasks": "Müşteri hedefleri",
+    "about": "Proje hakkında",
+    "doneWorks": "Yapılan işler",
+    "workN": "İş #{n}",
+    "noDescription": "Açıklama yok.",
+    "extraImages": "Ek görseller",
+    "projectPhoto": "Proje fotoğrafı"
+  },
+  "partnersPage": {
+    "title": "Ortaklar",
+    "metaDesc": "Ortaklarımız",
+    "empty": "Henüz ortak yok."
+  }
+}

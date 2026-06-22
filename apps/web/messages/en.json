@@ -1,0 +1,855 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "catalog": "Catalog",
+    "products": "Products",
+    "portfolio": "Portfolio",
+    "about": "About"
+  },
+  "common": {
+    "contacts": "Contacts",
+    "getQuote": "Get a Quote",
+    "search": "Search...",
+    "menu": "Menu",
+    "close": "Close",
+    "more": "Learn more",
+    "allProjects": "All projects",
+    "language": "Language",
+    "back": "Back",
+    "securitySystems": "Security systems",
+    "priceFrom": "from {value} UZS",
+    "priceOnRequest": "Price on request",
+    "noPhoto": "No photo",
+    "inStock": "In stock"
+  },
+  "home": {
+    "heroTitle": "Security and low-voltage systems",
+    "heroText": "Supply, design and installation of CCTV, access control, fire alarm and IT infrastructure across Uzbekistan",
+    "statsYears": "years on the market",
+    "statsObjects": "completed projects",
+    "statsCameras": "cameras installed",
+    "statsBrands": "brands in catalog",
+    "whatWeDo": "What we do",
+    "directionsTitle": "Our services",
+    "directionsSubtitle": "A full range of low-voltage systems — from design to maintenance",
+    "catalogLabel": "Catalog",
+    "popularProducts": "Popular products",
+    "allProducts": "All products",
+    "readySolutions": "Ready solutions",
+    "allServices": "All services",
+    "whyLabel": "Our advantages",
+    "whyTitle": "Why choose SAT Solutions",
+    "getConsult": "Get a consultation",
+    "aboutCompany": "About us",
+    "catalogTitle": "Product catalog",
+    "wholeCatalog": "Full catalog",
+    "portfolioLabel": "Our projects",
+    "portfolioTitle": "Completed projects",
+    "allProjects": "All projects",
+    "partnersTitle": "Partner brands",
+    "contactLabel": "Get in touch",
+    "contactTitle": "Leave a request",
+    "contactSubtitle": "Tell us about your task — our engineer will contact you and suggest the best solution",
+    "more": "Learn more",
+    "dir": {
+      "cctv": [
+        "Video surveillance",
+        "IP and HDCVI cameras, NVR/DVR recorders, cloud and local 24/7 monitoring"
+      ],
+      "access": [
+        "Access control",
+        "Biometric terminals, card readers, turnstiles, barriers and ANPR"
+      ],
+      "fire": [
+        "Fire alarm",
+        "Design, supply and installation of automatic fire alarm and suppression systems"
+      ],
+      "it": [
+        "IT infrastructure",
+        "Structured cabling, PoE switches, Wi-Fi, server racks and UPS"
+      ],
+      "intercom": [
+        "Intercom systems",
+        "Android and IP video intercoms for residential and commercial sites, access control integration"
+      ],
+      "alarm": [
+        "Intruder alarm",
+        "Wired and wireless alarm panels, PIR sensors, sirens, central monitoring integration"
+      ]
+    },
+    "why": {
+      "integrator": [
+        "Authorized integrator",
+        "Official strategic system integrator of Dahua Technology in Uzbekistan. Direct supply from manufacturers."
+      ],
+      "licensed": [
+        "Licensed company",
+        "National Guard (security) and Emergency Ministry (fire safety) licenses. Fully compliant operations."
+      ],
+      "fullcycle": [
+        "Full work cycle",
+        "Design → supply → installation → commissioning → maintenance. One contractor from start to finish."
+      ],
+      "warranty": [
+        "Warranty and service",
+        "Official warranty on all equipment. In-house service center, engineer dispatch within 24 hours."
+      ]
+    },
+    "heroSlides": [
+      {
+        "title": "Turnkey video surveillance",
+        "text": "Hikvision and Dahua IP cameras, NVR servers, video analytics and 24/7 cloud monitoring",
+        "buttons": [
+          "Cameras",
+          "Solutions"
+        ]
+      },
+      {
+        "title": "IT infrastructure and server rooms",
+        "text": "Structured cabling, PoE switches, UPS, cooling and racks — full cycle from design to commissioning",
+        "buttons": [
+          "Solutions",
+          "Contact"
+        ]
+      },
+      {
+        "title": "Access control systems",
+        "text": "Biometric terminals, turnstiles, barriers and ANPR — for offices, factories and residential complexes",
+        "buttons": [
+          "Find a solution",
+          "About us"
+        ]
+      },
+      {
+        "title": "Fire safety",
+        "text": "Bolid and Rubezh addressable systems: design, installation and maintenance across Uzbekistan",
+        "buttons": [
+          "Catalog",
+          "Contact"
+        ]
+      },
+      {
+        "title": "Control rooms and video walls",
+        "text": "Design of control centers, installation of video walls and monitoring systems for enterprises and municipalities",
+        "buttons": [
+          "Portfolio",
+          "Products"
+        ]
+      }
+    ],
+    "view": "View →",
+    "noImage": "No image",
+    "distributorLabel": "Authorized distributor",
+    "officialBrands": "Official brands and partners",
+    "phone": "Phone",
+    "heroPrev": "Previous",
+    "heroNext": "Next",
+    "heroSlide": "Slide"
+  },
+  "footer": {
+    "sections": "Sections",
+    "categories": "Categories",
+    "partners": "Partners",
+    "phone": "Phone",
+    "address": "Address",
+    "geo": "Location",
+    "map": "Map",
+    "loadMap": "Click to load the map",
+    "geoNotSet": "Location not configured",
+    "rights": "All rights reserved",
+    "tagline": "Design, installation and maintenance of security and low-voltage systems across Uzbekistan."
+  },
+  "services": {
+    "cctv": {
+      "title": "Video surveillance",
+      "desc": "IP, analog and cloud systems for sites of any scale.",
+      "intro": "We design and install video surveillance systems of any scale — from a small office to distributed sites with dozens of cameras and round-the-clock monitoring.",
+      "works": [
+        "Site audit and camera selection for your needs",
+        "Design and camera placement layout",
+        "Installation of cameras, recorders (NVR/DVR) and cabling",
+        "Configuration of recording, remote access and analytics",
+        "Commissioning, training and warranty service"
+      ]
+    },
+    "analytics": {
+      "title": "Video analytics & AI",
+      "desc": "Face recognition, people counting, heat maps, detection.",
+      "intro": "Intelligent modules on top of video surveillance: face and license-plate recognition, people counting, zone and perimeter control, real-time event detection.",
+      "works": [
+        "Camera and server selection for the required analytics",
+        "Face and license-plate recognition setup (ANPR)",
+        "Visitor counting, heatmaps, zone control",
+        "Integrating alarms with security and access control",
+        "Operator training and support"
+      ]
+    },
+    "anpr": {
+      "title": "License plate recognition",
+      "desc": "ANPR for entrances, parking and barrier integration.",
+      "intro": "ANPR systems for entry and exit control: automatic license-plate recognition, barrier opening for authorized vehicles, passage logs and parking integration.",
+      "works": [
+        "Selection and installation of ANPR cameras",
+        "Mounting barriers/gates and controllers",
+        "Whitelist and passage-logic configuration",
+        "Integration with parking and access control",
+        "Commissioning and maintenance"
+      ]
+    },
+    "access": {
+      "title": "Access control",
+      "desc": "Turnstiles, readers, electronic locks and checkpoints.",
+      "intro": "We restrict and track access to a site: turnstiles, electronic locks, card readers and biometrics, flexible access rights by zone and time.",
+      "works": [
+        "Design of access points and zones",
+        "Installation of turnstiles, locks, readers",
+        "Configuring rights, schedules and access levels",
+        "Integration with surveillance and time tracking",
+        "Commissioning and support"
+      ]
+    },
+    "intercom": {
+      "title": "Intercom",
+      "desc": "Audio and video intercoms for homes, offices and residential complexes.",
+      "intro": "Audio and video intercom systems for entrances, offices and private homes — with calling, video communication and integration into the overall access system.",
+      "works": [
+        "Selection of call panels and monitors",
+        "Installation of intercom and communication lines",
+        "Integration with electronic locks and access control",
+        "Multi-tenant configuration",
+        "Commissioning and service"
+      ]
+    },
+    "attendance": {
+      "title": "Time & attendance",
+      "desc": "Biometrics and timesheets with export to 1C and HR systems.",
+      "intro": "Biometric and card-based tracking of employee arrivals and departures with automatic timesheets and export to 1C and HR systems.",
+      "works": [
+        "Installation of biometric terminals and readers",
+        "Configuring schedules and tracking rules",
+        "Generating timesheets and reports",
+        "Integration with 1C / HR / access control",
+        "Training and support"
+      ]
+    },
+    "alarm": {
+      "title": "Intruder alarm",
+      "desc": "Site and perimeter protection, panic button.",
+      "intro": "Protecting a site against intrusion: motion, door-opening and glass-break detectors, panic buttons, signal output to the security desk and a mobile app.",
+      "works": [
+        "Design of security zones",
+        "Installation of detectors, panels and sounders",
+        "Configuring scenarios and panic button",
+        "Output to security desk and mobile app",
+        "Commissioning and maintenance"
+      ]
+    },
+    "fire": {
+      "title": "Fire alarm & evacuation",
+      "desc": "Early detection, alerting and evacuation control.",
+      "intro": "Automatic fire alarms and evacuation warning and control systems — designed and installed to standards with the required licenses.",
+      "works": [
+        "Fire alarm and evacuation system design to standards",
+        "Installation of detectors, panels and sounders",
+        "Configuring zones and evacuation scenarios",
+        "Handover to supervisory authorities",
+        "Scheduled maintenance"
+      ]
+    },
+    "network": {
+      "title": "Structured cabling & LAN",
+      "desc": "Structured cabling, Wi-Fi and IT infrastructure.",
+      "intro": "Structured cabling and local networks — the foundation of any low-voltage system: tidy cable infrastructure, switching and Wi-Fi.",
+      "works": [
+        "Design of routes and cabling structure",
+        "Structured cabling, sockets and patch panels",
+        "Installation of switches and Wi-Fi access points",
+        "Labeling and testing of lines",
+        "Documentation and support"
+      ]
+    },
+    "server": {
+      "title": "Server rooms & data centers",
+      "desc": "Racks, UPS, cooling and equipment monitoring.",
+      "intro": "We equip server rooms and data centers: racks, uninterruptible power, cooling and monitoring of engineering systems.",
+      "works": [
+        "Server room or data center design",
+        "Installation of racks, cabling and power",
+        "UPS and cooling systems installation",
+        "Monitoring and access control",
+        "Commissioning and service"
+      ]
+    },
+    "videowall": {
+      "title": "Video walls",
+      "desc": "Control rooms and situational monitoring centers.",
+      "intro": "Video walls for control rooms and situation centers: video and data on a single large canvas with flexible layout management.",
+      "works": [
+        "Selection of panels and video-wall controller",
+        "Structure design and installation",
+        "Configuring layouts and sources",
+        "Integration with surveillance",
+        "Commissioning and support"
+      ]
+    },
+    "pa": {
+      "title": "Public address systems",
+      "desc": "Voice alerting and background audio for facilities.",
+      "intro": "Voice alarm and background audio systems for buildings, malls and enterprises — broadcasting announcements and music by zone.",
+      "works": [
+        "Design of audio zones",
+        "Installation of speakers and amplifiers",
+        "Configuring zones and priorities",
+        "Integration with fire evacuation system",
+        "Commissioning and service"
+      ]
+    },
+    "barrier": {
+      "title": "Barriers & automation",
+      "desc": "Automatic gates, barriers and parking control.",
+      "intro": "Entry automation: barriers, sliding and swing gates, parking control with convenient management and integration into the access-control system.",
+      "works": [
+        "Drive selection for gate or barrier",
+        "Installation of automation and safety photocells",
+        "Configuring control and remotes",
+        "Integration with ANPR and access control",
+        "Commissioning and maintenance"
+      ]
+    },
+    "perimeter": {
+      "title": "Perimeter security",
+      "desc": "IR beams, thermal cameras and perimeter protection.",
+      "intro": "Site perimeter protection: surveillance along the fence, IR barriers and intrusion alarms for early detection of an intruder.",
+      "works": [
+        "Perimeter survey and design",
+        "Installation of cameras, IR barriers and sensors",
+        "Configuring zones and alarms",
+        "Integration with security and analytics",
+        "Commissioning and service"
+      ]
+    },
+    "bus": {
+      "title": "Transport · Smart Bus",
+      "desc": "Mobile CCTV, GPS monitoring, passenger counting.",
+      "intro": "A package for public transport: in-cabin surveillance, GPS monitoring, passenger counting and data transmission to the dispatch center over 4G.",
+      "works": [
+        "Selection of mobile DVR and cameras",
+        "Installation in cabin and driver area",
+        "GPS tracking and 4G/Wi-Fi connectivity",
+        "Passenger counting and video analytics",
+        "Connection to dispatch center"
+      ]
+    },
+    "city": {
+      "title": "Safe City",
+      "desc": "City-wide CCTV, data centers and intelligent analytics.",
+      "intro": "Urban security systems: street surveillance, face and plate recognition, a data center and a unified situation center.",
+      "works": [
+        "City surveillance network design",
+        "Installation of cameras and communication links",
+        "Data center and video archive storage",
+        "Video analytics and recognition",
+        "Situation center and support"
+      ]
+    },
+    "parking": {
+      "title": "Smart Parking",
+      "desc": "ANPR, barriers and entry/exit automation.",
+      "intro": "Parking automation: license-plate recognition (ANPR), barriers, free-space monitoring and entry/exit accounting.",
+      "works": [
+        "Parking system design",
+        "Installation of ANPR cameras and barriers",
+        "Space counting and tariffing",
+        "Payment and access-control integration",
+        "Commissioning and service"
+      ]
+    },
+    "retail": {
+      "title": "Retail & markets",
+      "desc": "Visitor counting, POS monitoring, theft protection.",
+      "intro": "Retail and market security: surveillance of the sales floor and checkouts, visitor counting and theft protection.",
+      "works": [
+        "Surveillance of sales floor, checkouts and storage",
+        "Visitor counting and analytics",
+        "Checkout transaction monitoring",
+        "Security and anti-theft alarm",
+        "Maintenance"
+      ]
+    },
+    "bank": {
+      "title": "Banks & offices",
+      "desc": "Access control, panic buttons, video monitoring.",
+      "intro": "Comprehensive protection for banks and offices: access control, surveillance, panic buttons and integration with security.",
+      "works": [
+        "Access control and restricted zones",
+        "Surveillance and video analytics",
+        "Panic buttons and alarm",
+        "Working-time tracking",
+        "Service and support"
+      ]
+    },
+    "school": {
+      "title": "Education",
+      "desc": "Safety for schools and universities: access, video, alerting.",
+      "intro": "School and university security: turnstiles and access control at the entrance, surveillance, alerts and parent notifications about a child's passage.",
+      "works": [
+        "Turnstiles and access control at entrances",
+        "Surveillance of grounds and corridors",
+        "Notification and fire safety",
+        "Parent notifications (card/SMS)",
+        "Commissioning and service"
+      ]
+    },
+    "industry": {
+      "title": "Industry & warehouses",
+      "desc": "Perimeter, thermal imaging and process monitoring.",
+      "intro": "Security for production sites and warehouses: perimeter, workshop surveillance, thermal imaging and access control to the territory.",
+      "works": [
+        "Perimeter security and surveillance",
+        "Thermal monitoring and analytics",
+        "Access control at gates and checkpoints",
+        "Integration with security",
+        "Maintenance"
+      ]
+    },
+    "residential": {
+      "title": "Residential complexes",
+      "desc": "Intercom, CCTV and barriers for residential complexes.",
+      "intro": "Residential complex security: courtyard and entrance surveillance, intercom, barriers and access control for residents.",
+      "works": [
+        "Surveillance of courtyard, entrances and parking",
+        "Intercom and access control",
+        "Barriers and entry automation",
+        "ANPR for residents",
+        "Maintenance service"
+      ]
+    }
+  },
+  "solutionsPage": {
+    "hero": "Turnkey low-voltage systems",
+    "heroSub": "Design, installation and maintenance of security and low-voltage systems across Uzbekistan.",
+    "whatWeCan": "What we can do",
+    "systemsLabel": "Systems & services",
+    "industriesLabel": "Ready solutions",
+    "industriesTitle": "Industry solutions",
+    "howLabel": "How we work",
+    "howTitle": "From request to service — turnkey",
+    "ctaLabel": "Start a project",
+    "ctaTitle": "Ready to discuss your project?",
+    "ctaText": "We'll select equipment for your task and send a quote within 30 minutes.",
+    "whatInc": "What's included",
+    "worksTitle": "Scope of work",
+    "scheme": "How it works",
+    "schemeTitle": "How the system works",
+    "examples": "Examples",
+    "gallery": "Gallery",
+    "steps": [
+      {
+        "title": "Request & visit",
+        "desc": "Free engineer visit and site survey."
+      },
+      {
+        "title": "Design & quote",
+        "desc": "Technical solution, specification and quote."
+      },
+      {
+        "title": "Supply",
+        "desc": "Certified Dahua, Hikvision and other equipment."
+      },
+      {
+        "title": "Installation & commissioning",
+        "desc": "Professional turnkey installation and setup."
+      },
+      {
+        "title": "Handover & service",
+        "desc": "Training, warranty and maintenance."
+      }
+    ],
+    "home": "Home",
+    "servicesCrumb": "Services",
+    "serviceTag": "Service",
+    "industryTag": "Industry solution",
+    "getQuote": "Get a quote",
+    "needTitle": "Need {name}?",
+    "detailCtaText": "We'll select equipment for your site and send a quote within 30 minutes."
+  },
+  "chat": {
+    "title": "Online chat",
+    "connecting": "Connecting...",
+    "online": "Operator online",
+    "offline": "Offline",
+    "greeting": "Hello! 👋 I'm a SAT Solutions consultant. I can help with CCTV, access control, alarms and other systems. How can I help?",
+    "intro": "Please introduce yourself so the operator can address you and call back.",
+    "name": "Name",
+    "yourName": "Your name",
+    "phone": "Phone",
+    "start": "Start chat",
+    "placeholder": "Type a message...",
+    "send": "Send message",
+    "close": "Close",
+    "closed": "The dialog was closed by the operator. Write again — we'll continue the same conversation.",
+    "open": "Open chat",
+    "errConnect": "Connection error",
+    "errChat": "Chat error"
+  },
+  "search": {
+    "placeholder": "Search: camera, fire…",
+    "aria": "Search the catalog",
+    "nothing": "Nothing found",
+    "cats": "Categories",
+    "brands": "Brands",
+    "products": "Products",
+    "showAll": "Show all results"
+  },
+  "form": {
+    "feedbackTitle": "Feedback",
+    "feedbackSub": "Leave a message — we'll get back to you.",
+    "name": "Name",
+    "yourName": "Your name",
+    "phone": "Phone",
+    "phoneReq": "Phone *",
+    "email": "Email",
+    "emailOpt": "Email (optional)",
+    "message": "Message",
+    "msgPlaceholder": "Write your question...",
+    "comment": "Comment: quantity, timeline, etc.",
+    "needPlaceholder": "Describe your need...",
+    "send": "Send",
+    "sendRequest": "Send request",
+    "sending": "Sending...",
+    "sendingShort": "Sending...",
+    "sent": "Message sent. Thank you!",
+    "errSend": "Sending error",
+    "quoteTitle": "Request a quote",
+    "srSuccess": "Your request has been sent successfully! We'll contact you shortly.",
+    "srError": "An error occurred while sending the request. Please try again.",
+    "quoteSent": "Request sent!",
+    "quoteSentSub": "We'll call back within 30 minutes during business hours.",
+    "consent": "By clicking \"Send\", you agree to the processing of personal data",
+    "close": "Close",
+    "srTitle": "Submit a request",
+    "service": "Service",
+    "description": "Description",
+    "cancel": "Cancel"
+  },
+  "meta": {
+    "homeTitle": "SAT Solutions — security and low-voltage systems in Uzbekistan",
+    "homeDesc": "Supply and installation of CCTV, access control, fire alarm and IT infrastructure in Uzbekistan. Authorized Dahua and Hikvision integrator.",
+    "solTitle": "Services — SAT Solutions",
+    "solDesc": "Low-voltage systems and security solutions in Uzbekistan: CCTV, access control, fire alarm, structured cabling, safe city and more."
+  },
+  "contact": {
+    "feedback": "Contact us",
+    "contactInfo": "Contact information",
+    "social": "Social media",
+    "dataLater": "Details will be added later.",
+    "title": "Contacts",
+    "notReady": "This page is not set up yet.",
+    "metaDesc": "SAT Solutions contacts in Tashkent: +998 99 554-69-69, sales@satsolutions.uz, 5 Katta Darkhon St. Video surveillance, access control, fire alarms — call us!"
+  },
+  "about": {
+    "title": "About us",
+    "licenses": "Licenses",
+    "certificates": "Certificates and authorizations",
+    "partners": "Partners",
+    "allPartners": "All partners →",
+    "location": "Where to find us",
+    "viewDoc": "View document",
+    "noPartners": "No partners yet.",
+    "mapTitle": "Map",
+    "openMap": "Open in map →",
+    "notReady": "This page is not set up yet.",
+    "openOriginal": "Open original",
+    "close": "Close",
+    "brandsNote": "Official brands and partners we work with",
+    "lic": {
+      "lic-security": {
+        "title": "License for security systems",
+        "subtitle": "Confirmation No. 1554491 • Active",
+        "issuedBy": "National Guard of the Republic of Uzbekistan",
+        "description": "Installation, commissioning, repair and maintenance of security equipment and systems"
+      },
+      "lic-fire": {
+        "title": "License for fire safety systems",
+        "subtitle": "Confirmation No. 913518 • Active",
+        "issuedBy": "Ministry of Emergency Situations of Uzbekistan",
+        "description": "Installation, commissioning, repair and maintenance of automatic fire-suppression and fire-alarm systems"
+      }
+    },
+    "cert": {
+      "cert-dahua-integrator": {
+        "title": "Authorized Strategic System Integrator",
+        "issuedBy": "Dahua Technology",
+        "description": "Authorized Strategic System Integrator in Uzbekistan. Valid from 1 January to 31 December 2026."
+      },
+      "cert-dahua-partner": {
+        "title": "Reliable partner recommendation letter",
+        "issuedBy": "Dahua Technology (HK) Limited",
+        "description": "Official recommendation letter. Confirms high professionalism and reliable cooperation since 2024."
+      },
+      "cert-ruijie": {
+        "title": "Silver Partner",
+        "issuedBy": "Ruijie Networks Co., Ltd",
+        "description": "Authorized Silver Partner in Uzbekistan — sales of switches, routers and wireless equipment. 2025."
+      },
+      "cert-schneider": {
+        "title": "Select Partner · APC IT Solution Provider",
+        "issuedBy": "Schneider Electric",
+        "description": "Official Schneider Electric Select Partner (APC IT Solution Provider). Since October 2024."
+      },
+      "cert-pantum": {
+        "title": "Official partner",
+        "issuedBy": "Pantum International Limited",
+        "description": "Official partner of Pantum International Limited in Uzbekistan. Authorized sales of printers and MFPs."
+      }
+    }
+  },
+  "scheme": {
+    "cctv": [
+      {
+        "t": "On-site cameras",
+        "s": "up to 4K, IR illumination"
+      },
+      {
+        "t": "PoE switch",
+        "s": "power and data"
+      },
+      {
+        "t": "Recorder / server",
+        "s": "recording and archive"
+      },
+      {
+        "t": "Viewing",
+        "s": "monitor and smartphone"
+      }
+    ],
+    "analytics": [
+      {
+        "t": "Cameras",
+        "s": "video stream"
+      },
+      {
+        "t": "AI server",
+        "s": "frame analysis"
+      },
+      {
+        "t": "Events",
+        "s": "violation detection"
+      },
+      {
+        "t": "Operator",
+        "s": "instant alerts"
+      }
+    ],
+    "anpr": [
+      {
+        "t": "LPR camera",
+        "s": "plate reading"
+      },
+      {
+        "t": "Database match",
+        "s": "white and black lists"
+      },
+      {
+        "t": "Barrier",
+        "s": "auto-opening"
+      },
+      {
+        "t": "Log",
+        "s": "record of all passages"
+      }
+    ],
+    "access": [
+      {
+        "t": "Identifier",
+        "s": "card, face, finger"
+      },
+      {
+        "t": "Reader"
+      },
+      {
+        "t": "Controller",
+        "s": "rights check"
+      },
+      {
+        "t": "Lock + log",
+        "s": "opening and logging"
+      }
+    ],
+    "intercom": [
+      {
+        "t": "Call panel",
+        "s": "at the entrance"
+      },
+      {
+        "t": "Monitor / handset",
+        "s": "in the apartment or office"
+      },
+      {
+        "t": "Lock",
+        "s": "remote opening"
+      }
+    ],
+    "attendance": [
+      {
+        "t": "Terminal",
+        "s": "face or fingerprint"
+      },
+      {
+        "t": "Tracking server",
+        "s": "shifts and schedules"
+      },
+      {
+        "t": "Reports",
+        "s": "timesheet for the period"
+      }
+    ],
+    "alarm": [
+      {
+        "t": "Detectors",
+        "s": "motion, windows, doors"
+      },
+      {
+        "t": "Control panel",
+        "s": "alarm analysis"
+      },
+      {
+        "t": "Notification",
+        "s": "siren, SMS, call"
+      }
+    ],
+    "fire": [
+      {
+        "t": "Detectors",
+        "s": "smoke and heat"
+      },
+      {
+        "t": "Control panel",
+        "s": "fire control unit"
+      },
+      {
+        "t": "Evacuation system",
+        "s": "sirens and signs"
+      },
+      {
+        "t": "Evacuation",
+        "s": "per site plan"
+      }
+    ],
+    "network": [
+      {
+        "t": "Workstations",
+        "s": "cabling outlets"
+      },
+      {
+        "t": "Patch panel",
+        "s": "switching"
+      },
+      {
+        "t": "Switch"
+      },
+      {
+        "t": "Server room",
+        "s": "network core"
+      }
+    ],
+    "server": [
+      {
+        "t": "Racks and servers"
+      },
+      {
+        "t": "UPS",
+        "s": "backup power"
+      },
+      {
+        "t": "Cooling",
+        "s": "climate control"
+      },
+      {
+        "t": "Monitoring",
+        "s": "24/7"
+      }
+    ],
+    "videowall": [
+      {
+        "t": "Sources",
+        "s": "cameras, PC, TV"
+      },
+      {
+        "t": "Controller",
+        "s": "scenes and layouts"
+      },
+      {
+        "t": "Video wall",
+        "s": "24/7 operation"
+      }
+    ],
+    "pa": [
+      {
+        "t": "Source",
+        "s": "microphone, player"
+      },
+      {
+        "t": "Amplifiers",
+        "s": "by zone"
+      },
+      {
+        "t": "Speakers",
+        "s": "even sound"
+      }
+    ],
+    "barrier": [
+      {
+        "t": "Command",
+        "s": "fob, tag, button"
+      },
+      {
+        "t": "Control unit"
+      },
+      {
+        "t": "Drive",
+        "s": "barrier or gate"
+      }
+    ],
+    "perimeter": [
+      {
+        "t": "Detectors",
+        "s": "along the perimeter"
+      },
+      {
+        "t": "Alarm panel",
+        "s": "zone identification"
+      },
+      {
+        "t": "Response",
+        "s": "cameras, light, siren"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Completed projects: video surveillance, video walls and integrated security systems.",
+    "metaDesc": "SAT Solutions completed projects: video surveillance, video walls and integrated security systems.",
+    "all": "All",
+    "noImage": "No image",
+    "view": "View →",
+    "projectFallback": "Project",
+    "client": "Client",
+    "location": "Location",
+    "completed": "Completed",
+    "category": "Category",
+    "clientTasks": "Client objectives",
+    "about": "About the project",
+    "doneWorks": "Completed work",
+    "workN": "Work #{n}",
+    "noDescription": "No description.",
+    "extraImages": "Additional images",
+    "projectPhoto": "Project photo"
+  },
+  "partnersPage": {
+    "title": "Partners",
+    "metaDesc": "Our partners",
+    "empty": "No partners yet."
+  }
+}

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { createServiceRequest } from "@/lib/api";
+import { trackLead } from "@/lib/gtag";
 
 interface ServiceRequestModalProps {
   isOpen: boolean;
@@ -10,6 +12,7 @@ interface ServiceRequestModalProps {
 }
 
 export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceRequestModalProps) {
+  const t = useTranslations("form");
   const [formData, setFormData] = useState({
     serviceName,
     phoneRest: "",
@@ -48,18 +51,19 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
       console.log('Service request response:', data);
 
       if (data.success) {
-        setMessage("Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.");
+        trackLead();
+        setMessage(t("srSuccess"));
         setFormData({ serviceName, phoneRest: "", description: "" });
         setTimeout(() => {
           onClose();
           setMessage("");
         }, 3000);
       } else {
-        setMessage(data.message || "Произошла ошибка при отправке заявки.");
+        setMessage(data.message || t("srError"));
       }
     } catch (error) {
       console.error('Service request error:', error);
-      setMessage("Произошла ошибка при отправке заявки. Попробуйте еще раз.");
+      setMessage(t("srError"));
     } finally {
       setIsSubmitting(false);
     }
@@ -76,7 +80,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
       <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-xl font-semibold text-slate-900">Подать заявку</h2>
+          <h2 className="text-xl font-semibold text-slate-900">{t("srTitle")}</h2>
           <button
             onClick={onClose}
             className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"
@@ -88,7 +92,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
         </div>
 
         {message && (
-          <div className={`mb-4 rounded-lg p-3 ${message.includes("успешно")
+          <div className={`mb-4 rounded-lg p-3 ${message === t("srSuccess")
               ? "bg-green-50 text-green-800 border border-green-200"
               : "bg-red-50 text-red-800 border border-red-200"
             }`}>
@@ -99,7 +103,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
-              Услуга
+              {t("service")}
             </label>
             <input
               type="text"
@@ -114,7 +118,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
-              Телефон *
+              {t("phoneReq")}
             </label>
             <div className="flex overflow-hidden rounded-lg border border-slate-300">
               <div className="flex items-center bg-slate-50 px-3 text-sm font-semibold text-slate-700">+998</div>
@@ -133,14 +137,14 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
-              Описание
+              {t("description")}
             </label>
             <textarea
               name="description"
               value={formData.description}
               onChange={handleChange}
               rows={4}
-              placeholder="Опишите вашу потребность..."
+              placeholder={t("needPlaceholder")}
               className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
               style={{ borderColor: "rgb(50 143 168)" }}
             />
@@ -152,14 +156,14 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
               onClick={onClose}
               className="btn-secondary flex-1"
             >
-              Отмена
+              {t("cancel")}
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
               className="btn-primary flex-1"
             >
-              {isSubmitting ? "Отправка..." : "Отправить"}
+              {isSubmitting ? t("sending") : t("send")}
             </button>
           </div>
         </form>

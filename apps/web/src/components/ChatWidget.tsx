@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import type { Socket } from "socket.io-client";
 
 type Msg = {
@@ -44,6 +45,55 @@ function clearVisitorId() {
   }
 }
 
+type Profile = { name: string; phone: string };
+
+function getProfile(): Profile | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const name = window.localStorage.getItem("sat_chat_name") || "";
+    const phone = window.localStorage.getItem("sat_chat_phone") || "";
+    if (name.trim() && phone.trim()) return { name: name.trim(), phone: phone.trim() };
+  } catch {
+    // ignore
+  }
+  return null;
+}
+
+function saveProfile(p: Profile) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem("sat_chat_name", p.name);
+    window.localStorage.setItem("sat_chat_phone", p.phone);
+  } catch {
+    // ignore
+  }
+}
+
+function currentPage(): string {
+  if (typeof window === "undefined") return "";
+  try {
+    return window.location.pathname || "/";
+  } catch {
+    return "";
+  }
+}
+
+const GREETING =
+  "Здравствуйте! 👋 Я консультант SAT Solutions. Подскажу по видеонаблюдению, СКУД, сигнализации и другим системам. Чем помочь?";
+
+function digitsOnly(v: string) {
+  return v.replace(/\D+/g, "");
+}
+
+function formatUzRest(digits: string) {
+  const d = digitsOnly(digits).slice(0, 9);
+  const a = d.slice(0, 2);
+  const b = d.slice(2, 5);
+  const c = d.slice(5, 7);
+  const e = d.slice(7, 9);
+  return [a, b, c, e].filter(Boolean).join(" ");
+}
+
 function fmtTime(d: any) {
   try {
     const dt = d instanceof Date ? d : new Date(d);
@@ -54,6 +104,7 @@ function fmtTime(d: any) {
 }
 
 export function ChatWidget() {
+  const tw = useTranslations("chat");
   const [open, setOpen] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [connected, setConnected] = useState(false);
@@ -63,18 +114,26 @@ export function ChatWidget() {
   const [draft, setDraft] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [unreadCount, setUnreadCount] = useState(0);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [showGreeting, setShowGreeting] = useState(false);
+  const [formName, setFormName] = useState("");
+  const [formPhoneRest, setFormPhoneRest] = useState("");
+  const profileRef = useRef<Profile | null>(null);
+  profileRef.current = profile;
 
   const listRef = useRef<HTMLDivElement | null>(null);
   const socketRef = useRef<Socket | null>(null);
   const conversationIdRef = useRef<string | null>(null);
   const openRef = useRef(false);
   const originalTitleRef = useRef<string | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const chimePendingRef = useRef(false);
   openRef.current = open;
 
 
   const canSend = useMemo(() => {
-    return connected && conversationStatus === "OPEN" && draft.trim().length > 0 && draft.trim().length <= 2000;
-  }, [connected, conversationStatus, draft]);
+    return connected && !!profile && draft.trim().length > 0 && draft.trim().length <= 2000;
+  }, [connected, profile, draft]);
 
   function scrollToBottom() {
     const el = listRef.current;
@@ -90,6 +149,87 @@ export function ChatWidget() {
   useEffect(() => {
     conversationIdRef.current = conversationId;
   }, [conversationId]);
+
+  // Load saved visitor profile (name + phone) once on mount.
+  useEffect(() => {
+    setProfile(getProfile());
+  }, []);
+
+  // Soft two-note chime via Web Audio. Returns true if it actually played
+  // (audio is unlocked); false if the browser still blocks autoplay.
+  function tryChime(): boolean {
+    try {
+      const AC = (window.AudioContext || (window as any).webkitAudioContext) as typeof AudioContext | undefined;
+      if (!AC) return true; // no audio support — give up gracefully
+      if (!audioCtxRef.current) audioCtxRef.current = new AC();
+      const ctx = audioCtxRef.current;
+      if (ctx.state === "suspended") void ctx.resume().catch(() => {});
+      if (ctx.state !== "running") return false; // not unlocked yet — try on next gesture
+      const now = ctx.currentTime;
+      [{ f: 880, t: 0 }, { f: 1174.7, t: 0.12 }].forEach(({ f, t }) => {
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.type = "sine";
+        o.frequency.value = f;
+        g.gain.setValueAtTime(0.0001, now + t);
+        g.gain.exponentialRampToValueAtTime(0.05, now + t + 0.02); // мягкая громкость
+        g.gain.exponentialRampToValueAtTime(0.0001, now + t + 0.28);
+        o.connect(g);
+        g.connect(ctx.destination);
+        o.start(now + t);
+        o.stop(now + t + 0.32);
+      });
+      return true;
+    } catch {
+      return true;
+    }
+  }
+
+  // Auto-open the chat a few seconds after page load — но если посетитель уже
+  // закрыл чат в этой сессии, больше сами не открываемся (sessionStorage).
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (sessionStorage.getItem("sat_chat_dismissed") === "1") return;
+    const timer = window.setTimeout(() => setOpen(true), 4000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const closeChat = () => {
+    setOpen(false);
+    try { sessionStorage.setItem("sat_chat_dismissed", "1"); } catch {}
+  };
+
+  // Play the chime whenever the chat opens (auto or manual). If audio isn't unlocked yet,
+  // it stays pending and fires on the visitor's first real gesture (see the listener below).
+  useEffect(() => {
+    if (!open) return;
+    chimePendingRef.current = true;
+    if (tryChime()) chimePendingRef.current = false;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  // Greeting appears when the chat opens, then fades out after a few seconds.
+  useEffect(() => {
+    if (!open) {
+      setShowGreeting(false);
+      return;
+    }
+    setShowGreeting(true);
+    const t = window.setTimeout(() => setShowGreeting(false), 6000);
+    return () => window.clearTimeout(t);
+  }, [open]);
+
+  // Unlock audio + flush any pending chime on the first genuine user gesture.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onGesture = () => {
+      if (chimePendingRef.current && tryChime()) chimePendingRef.current = false;
+    };
+    const events: (keyof WindowEventMap)[] = ["pointerdown", "keydown", "touchstart", "click", "scroll"];
+    events.forEach((e) => window.addEventListener(e, onGesture, { passive: true }));
+    return () => events.forEach((e) => window.removeEventListener(e, onGesture));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Socket connects ONLY when the widget is opened to avoid blocking BFcache for regular visits.
   useEffect(() => {
@@ -127,7 +267,13 @@ export function ChatWidget() {
           setConnected(true);
           setConnecting(false);
           setError(null);
-          socket?.emit("chat:init", { visitorId: getVisitorId() });
+          const p = profileRef.current;
+          socket?.emit("chat:init", {
+            visitorId: getVisitorId(),
+            name: p?.name || null,
+            phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
+            page: currentPage()
+          });
         });
 
         socket.on("disconnect", () => {
@@ -186,7 +332,13 @@ export function ChatWidget() {
             originalTitleRef.current = null;
           }
           try {
-            socket?.emit("chat:init", { visitorId: getVisitorId() });
+            const p = profileRef.current;
+            socket?.emit("chat:init", {
+              visitorId: getVisitorId(),
+              name: p?.name || null,
+              phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
+              page: currentPage()
+            });
           } catch {
             // ignore
           }
@@ -293,89 +445,173 @@ export function ChatWidget() {
     setError(null);
     const socket = socketRef.current;
     if (!socket) return;
+    const p = profileRef.current;
+    const extra = {
+      name: p?.name || null,
+      phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
+      page: currentPage()
+    };
     if (conversationId) {
-      socket.emit("chat:send", { conversationId, text });
+      socket.emit("chat:send", { conversationId, text, ...extra });
     } else {
-      socket.emit("chat:send", { visitorId: getVisitorId(), text });
+      socket.emit("chat:send", { visitorId: getVisitorId(), text, ...extra });
+    }
+  }
+
+  function submitProfile() {
+    const name = formName.trim();
+    const phoneRest = digitsOnly(formPhoneRest);
+    if (name.length < 2 || phoneRest.length < 9) return;
+    const p: Profile = { name, phone: phoneRest };
+    saveProfile(p);
+    setProfile(p);
+    // Re-announce profile so an existing conversation gets the name/phone attached.
+    const socket = socketRef.current;
+    if (socket && connected) {
+      socket.emit("chat:init", {
+        visitorId: getVisitorId(),
+        name: p.name,
+        phone: `+998${p.phone}`,
+        page: currentPage()
+      });
     }
   }
 
   return (
     <div className="fixed z-[60] bottom-4 right-4 sm:bottom-[40px] sm:right-[40px]">
       {open ? (
-        <div className="w-[92vw] max-w-sm overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
-          <div className="flex items-center justify-between gap-3 border-b border-slate-200 bg-slate-50 px-4 py-3">
+        <div className="w-[92vw] max-w-sm overflow-hidden rounded-2xl border-2 border-brand-600 bg-white shadow-2xl ring-4 ring-brand-600/15">
+          <div className="flex items-center justify-between gap-3 bg-brand-600 px-4 py-3 text-white">
             <div className="min-w-0">
-              <div className="text-sm font-semibold text-slate-900">Онлайн чат</div>
-              <div className="text-xs text-slate-600">
-                {connecting ? "Подключение..." : connected ? "Оператор онлайн" : "Оффлайн"}
+              <div className="text-sm font-bold">{tw("title")}</div>
+              <div className="flex items-center gap-1.5 text-xs text-white/90">
+                <span className={`inline-block h-2 w-2 rounded-full ${connected ? "bg-emerald-300" : "bg-amber-300"}`} />
+                {connecting ? tw("connecting") : connected ? tw("online") : tw("offline")}
               </div>
             </div>
             <button
               type="button"
-              onClick={() => setOpen(false)}
-              className="rounded-lg border border-slate-300 bg-white px-2 py-1 text-sm font-semibold hover:bg-slate-50"
-              aria-label="Закрыть"
+              onClick={closeChat}
+              className="rounded-lg bg-white/15 px-2 py-1 text-sm font-semibold text-white hover:bg-white/25"
+              aria-label={tw("close")}
             >
               ✕
             </button>
           </div>
 
-          <div ref={listRef} className="max-h-[50vh] space-y-2 overflow-y-auto bg-white p-4">
-            {error ? <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-xs text-red-800">{error}</div> : null}
-            {conversationStatus === "CLOSED" ? (
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs text-slate-700">
-                Чат завершен администратором. Если нужно — отправьте заявку через «Обратная связь».
+          <div
+            className={`overflow-hidden bg-white px-4 transition-all duration-700 ease-in-out ${showGreeting ? "max-h-56 pt-4 opacity-100" : "max-h-0 pt-0 opacity-0"}`}
+          >
+            <div className="flex justify-start">
+              <div className="max-w-[90%] rounded-2xl bg-slate-100 px-3 py-2 text-sm text-slate-900">
+                {tw("greeting")}
               </div>
-            ) : null}
-            {messages.length === 0 ? (
-              <div className="text-sm text-slate-600">
-                Напишите сообщение — оператор ответит вам.
-              </div>
-            ) : null}
-            {messages.map((m) => {
-              const mine = m.sender === "USER";
-              return (
-                <div key={m.id} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
-                  <div
-                    className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${mine ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-900"
-                      }`}
-                  >
-                    <div className="whitespace-pre-wrap">{m.text}</div>
-                    <div className={`mt-1 text-[11px] ${mine ? "text-white/80" : "text-slate-500"}`}>{fmtTime(m.createdAt)}</div>
-                  </div>
-                </div>
-              );
-            })}
+            </div>
           </div>
 
-          <div className="border-t border-slate-200 bg-white p-3">
-            <div className="flex items-center gap-2">
-              <input
-                value={draft}
-                onChange={(e) => setDraft(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    void send();
-                  }
-                }}
-                className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
-                placeholder="Введите сообщение..."
-                disabled={conversationStatus !== "OPEN"}
-              />
+          {!profile ? (
+            <div className="space-y-3 bg-white p-4">
+              <div className="text-sm text-slate-700">
+                {tw("intro")}
+              </div>
+              <div>
+                <div className="text-xs font-bold text-slate-900">{tw("name")}</div>
+                <input
+                  type="text"
+                  name="name"
+                  autoComplete="name"
+                  value={formName}
+                  onChange={(e) => setFormName(e.target.value)}
+                  className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-600"
+                  placeholder={tw("yourName")}
+                />
+              </div>
+              <div>
+                <div className="text-xs font-bold text-slate-900">{tw("phone")}</div>
+                <div className="mt-1 flex overflow-hidden rounded-lg border border-slate-300 focus-within:border-brand-600">
+                  <div className="flex items-center bg-slate-100 px-3 text-sm font-bold text-slate-900">+998</div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    value={formatUzRest(formPhoneRest)}
+                    onChange={(e) => setFormPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        submitProfile();
+                      }
+                    }}
+                    className="w-full px-3 py-2 text-sm outline-none"
+                    placeholder="90 123 45 67"
+                  />
+                </div>
+              </div>
               <button
                 type="button"
-                onClick={() => void send()}
-                disabled={!canSend}
-                aria-label="Отправить сообщение"
-                className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                onClick={submitProfile}
+                disabled={formName.trim().length < 2 || digitsOnly(formPhoneRest).length < 9}
+                className="w-full rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
               >
-                Отправить
+                {tw("start")}
               </button>
             </div>
-            <div className="mt-1 text-xs text-slate-500">Чат работает в реальном времени.</div>
-          </div>
+          ) : (
+            <>
+              <div ref={listRef} className="max-h-[50vh] space-y-2 overflow-y-auto bg-white p-4">
+                {error ? <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-xs text-red-800">{error}</div> : null}
+                {conversationStatus === "CLOSED" ? (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 text-xs text-slate-700">
+                    {tw("closed")}
+                  </div>
+                ) : null}
+                {messages.map((m) => {
+                  const mine = m.sender === "USER";
+                  return (
+                    <div key={m.id} className={`flex ${mine ? "justify-end" : "justify-start"}`}>
+                      <div
+                        className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${mine ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-900"
+                          }`}
+                      >
+                        <div className="whitespace-pre-wrap">{m.text}</div>
+                        <div className={`mt-1 text-[11px] ${mine ? "text-white/80" : "text-slate-500"}`}>{fmtTime(m.createdAt)}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="border-t border-slate-200 bg-white p-3">
+                <div className="flex items-center gap-2">
+                  <input
+                    name="message"
+                    autoComplete="off"
+                    value={draft}
+                    onChange={(e) => setDraft(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        void send();
+                      }
+                    }}
+                    className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                    placeholder={tw("placeholder")}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => void send()}
+                    disabled={!canSend}
+                    aria-label={tw("send")}
+                    className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                  >
+                    Отправить
+                  </button>
+                </div>
+                <div className="mt-1 text-xs text-slate-500">Чат работает в реальном времени.</div>
+              </div>
+            </>
+          )}
         </div>
       ) : null}
 

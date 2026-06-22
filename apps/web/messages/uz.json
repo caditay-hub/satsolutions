@@ -1,0 +1,855 @@
+{
+  "nav": {
+    "home": "Asosiy",
+    "services": "Xizmatlar",
+    "catalog": "Katalog",
+    "products": "Mahsulotlar",
+    "portfolio": "Portfolio",
+    "about": "Kompaniya"
+  },
+  "common": {
+    "contacts": "Aloqa",
+    "getQuote": "Taklif olish",
+    "search": "Qidirish...",
+    "menu": "Menyu",
+    "close": "Yopish",
+    "more": "Batafsil",
+    "allProjects": "Barcha loyihalar",
+    "language": "Til",
+    "back": "Orqaga",
+    "securitySystems": "Xavfsizlik tizimlari",
+    "priceFrom": "{value} so‘mdan",
+    "priceOnRequest": "Narx so‘rov bo‘yicha",
+    "noPhoto": "Rasm yo‘q",
+    "inStock": "Mavjud"
+  },
+  "home": {
+    "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
+    "heroText": "O‘zbekiston bo‘ylab videokuzatuv, kirishni boshqarish, yong‘in signalizatsiyasi va IT-infratuzilmani yetkazib berish, loyihalash va o‘rnatish",
+    "statsYears": "yil bozorda",
+    "statsObjects": "bajarilgan obyekt",
+    "statsCameras": "o‘rnatilgan kamera",
+    "statsBrands": "katalogdagi brend",
+    "whatWeDo": "Biz nima qilamiz",
+    "directionsTitle": "Faoliyat yo‘nalishlari",
+    "directionsSubtitle": "Kuchsiz tok tizimlarining to‘liq spektri — loyihalashdan texnik xizmatgacha",
+    "catalogLabel": "Katalog",
+    "popularProducts": "Ommabop mahsulotlar",
+    "allProducts": "Barcha mahsulotlar",
+    "readySolutions": "Tayyor yechimlar",
+    "allServices": "Barcha xizmatlar",
+    "whyLabel": "Bizning afzalliklarimiz",
+    "whyTitle": "Nega SAT Solutions tanlashadi",
+    "getConsult": "Konsultatsiya olish",
+    "aboutCompany": "Kompaniya haqida",
+    "catalogTitle": "Mahsulotlar katalogi",
+    "wholeCatalog": "Butun katalog",
+    "portfolioLabel": "Bizning loyihalar",
+    "portfolioTitle": "Bajarilgan obyektlar",
+    "allProjects": "Barcha loyihalar",
+    "partnersTitle": "Hamkor brendlar",
+    "contactLabel": "Biz bilan bog‘laning",
+    "contactTitle": "Ariza qoldiring",
+    "contactSubtitle": "Vazifangiz haqida gapiring — muhandisimiz siz bilan bog‘lanib, optimal yechim taklif qiladi",
+    "more": "Batafsil",
+    "dir": {
+      "cctv": [
+        "Videokuzatuv",
+        "IP va HDCVI kameralar, NVR/DVR registratorlar, bulutli va lokal 24/7 monitoring"
+      ],
+      "access": [
+        "Kirishni boshqarish",
+        "Biometrik terminallar, karta o‘qigichlar, turniketlar, shlagbaumlar va ANPR"
+      ],
+      "fire": [
+        "Yong‘in signalizatsiyasi",
+        "Avtomatik yong‘in signalizatsiyasi va o‘t o‘chirish tizimlarini loyihalash, yetkazib berish va o‘rnatish"
+      ],
+      "it": [
+        "IT-infratuzilma",
+        "Strukturali kabel tizimlari, PoE-kommutatorlar, Wi-Fi, server stoykalari va UPS"
+      ],
+      "intercom": [
+        "Domofon tizimlari",
+        "Turar-joy va tijorat obyektlari uchun Android va IP videodomofonlar, SKUD bilan integratsiya"
+      ],
+      "alarm": [
+        "Qo‘riqlash signalizatsiyasi",
+        "Simli va simsiz qo‘riqlash panellari, PIR datchiklar, sirenalar, qo‘riqlash puljiga ulanish"
+      ]
+    },
+    "why": {
+      "integrator": [
+        "Vakolatli integrator",
+        "O‘zbekistonda Dahua Technology rasmiy strategik tizim integratori. Ishlab chiqaruvchidan to‘g‘ridan-to‘g‘ri yetkazib berish."
+      ],
+      "licensed": [
+        "Litsenziyalangan kompaniya",
+        "Milliy gvardiya (qo‘riqlash) va FVV (yong‘in xavfsizligi) litsenziyalari. Faoliyat qonun doirasida."
+      ],
+      "fullcycle": [
+        "To‘liq ish sikli",
+        "Loyihalash → yetkazib berish → o‘rnatish → sozlash → texnik xizmat. Boshidan oxirigacha bitta pudratchi."
+      ],
+      "warranty": [
+        "Kafolat va servis",
+        "Barcha jihozlarga rasmiy kafolat. O‘z servis markazi, 24 soat ichida muhandis chiqishi."
+      ]
+    },
+    "heroSlides": [
+      {
+        "title": "Biz tayyor video kuzatuvni ta'minlaymiz",
+        "text": "Hikvision va Dahua IP-kameralari, NVR-serverlar, videoanalitika va 24/7 bulutli monitoring",
+        "buttons": [
+          "Kameralar",
+          "Yechimlar"
+        ]
+      },
+      {
+        "title": "IT-infratuzilma va server xonalari",
+        "text": "SKS, PoE-kommutatorlar, UPS, konditsionerlash va stoykalar — loyihadan ishga tushirishgacha to‘liq sikl",
+        "buttons": [
+          "Yechimlar",
+          "Aloqa"
+        ]
+      },
+      {
+        "title": "Kirish nazorati va SKUD",
+        "text": "Biometrik terminallar, turniketlar, shlagbaumlar va ANPR — ofislar, zavodlar va turar-joy majmualari uchun",
+        "buttons": [
+          "Yechim tanlash",
+          "Kompaniya haqida"
+        ]
+      },
+      {
+        "title": "Yong‘in xavfsizligi",
+        "text": "Bolid va Rubej manzilli tizimlari: butun O‘zbekiston bo‘ylab loyihalash, montaj va texnik xizmat",
+        "buttons": [
+          "Katalog",
+          "Aloqa"
+        ]
+      },
+      {
+        "title": "Vaziyat markazlari va videodevorlar",
+        "text": "Korxonalar va munitsipalitetlar uchun dispetcher punktlarini loyihalash, videodevor va monitoring tizimlarini o‘rnatish",
+        "buttons": [
+          "Portfolio",
+          "Mahsulotlar"
+        ]
+      }
+    ],
+    "view": "Ko‘rish →",
+    "noImage": "Rasm yo‘q",
+    "distributorLabel": "Vakolatli distribyutor",
+    "officialBrands": "Rasmiy brendlar va hamkorlar",
+    "phone": "Telefon",
+    "heroPrev": "Oldingi",
+    "heroNext": "Keyingi",
+    "heroSlide": "Slayd"
+  },
+  "footer": {
+    "sections": "Bo‘limlar",
+    "categories": "Kategoriyalar",
+    "partners": "Hamkorlar",
+    "phone": "Telefon",
+    "address": "Manzil",
+    "geo": "Geolokatsiya",
+    "map": "Xarita",
+    "loadMap": "Xaritani yuklash uchun bosing",
+    "geoNotSet": "Geolokatsiya sozlanmagan",
+    "rights": "Barcha huquqlar himoyalangan",
+    "tagline": "Butun O‘zbekiston bo‘ylab xavfsizlik va past kuchlanishli tizimlarni loyihalash, o‘rnatish va xizmat ko‘rsatish."
+  },
+  "services": {
+    "cctv": {
+      "title": "Videokuzatuv",
+      "desc": "Har qanday miqyosdagi obyekt uchun IP, analog va bulutli tizimlar.",
+      "intro": "Har qanday miqyosdagi videokuzatuv tizimlarini loyihalashtiramiz va o‘rnatamiz — kichik ofisdan tortib o‘nlab kameralari va kunu-tun monitoringi bo‘lgan taqsimlangan obyektlargacha.",
+      "works": [
+        "Obyekt auditi va vazifaga mos kameralarni tanlash",
+        "Loyihalash va joylashtirish sxemasi",
+        "Kameralar, registratorlar (NVR/DVR) va kabel tarmog‘ini o‘rnatish",
+        "Yozib olish, masofaviy kirish va videoanalitikani sozlash",
+        "Ishga tushirish, o‘qitish va kafolat xizmati"
+      ]
+    },
+    "analytics": {
+      "title": "Videoanalitika va SI",
+      "desc": "Yuzni aniqlash, odamlarni sanash, issiqlik xaritalari, deteksiya.",
+      "intro": "Videokuzatuv ustidagi intellektual modullar: yuz va avtomobil raqamlarini aniqlash, odamlarni sanash, hududlar va perimetr nazorati, real vaqtda hodisalarni aniqlash.",
+      "works": [
+        "Kerakli analitika uchun kamera va serverlarni tanlash",
+        "Yuz va raqamlarni aniqlashni sozlash (ANPR)",
+        "Tashrifchilarni sanash, issiqlik xaritalari, zona nazorati",
+        "Trevogalarni qo‘riqlash va SKUD bilan integratsiya",
+        "Operatorlarni o‘qitish va qo‘llab-quvvatlash"
+      ]
+    },
+    "anpr": {
+      "title": "Avtoraqamlarni aniqlash",
+      "desc": "Kirish, avtoturargoh va shlagbaumlar bilan integratsiya uchun ANPR.",
+      "intro": "Kirish-chiqishni nazorat qilish uchun ANPR tizimlari: davlat raqamlarini avtomatik aniqlash, «o‘zlarga» shlagbaumni ochish, o‘tishlar jurnali va parkovka bilan integratsiya.",
+      "works": [
+        "ANPR-kameralarni tanlash va o‘rnatish",
+        "Shlagbaum/darvoza va kontrollerlarni montaj qilish",
+        "Oq ro‘yxat va o‘tish mantig‘ini sozlash",
+        "Parkovka va SKUD bilan integratsiya",
+        "Ishga tushirish va xizmat ko‘rsatish"
+      ]
+    },
+    "access": {
+      "title": "Kirishni boshqarish (SKUD)",
+      "desc": "Turniketlar, o‘qigichlar, elektron qulflar va o‘tish nuqtalari.",
+      "intro": "Obyektga kirishni cheklaymiz va hisobga olamiz: turniketlar, elektron qulflar, karta o‘qigichlar va biometriya, hududlar va vaqt bo‘yicha moslashuvchan kirish huquqlari.",
+      "works": [
+        "Kirish nuqtalari va zonalarni loyihalash",
+        "Turniket, qulf, o‘qigichlarni montaj qilish",
+        "Huquq, jadval va kirish darajalarini sozlash",
+        "Videokuzatuv va vaqt hisobi bilan integratsiya",
+        "Ishga tushirish va kuzatib borish"
+      ]
+    },
+    "intercom": {
+      "title": "Domofoniya",
+      "desc": "Uylar, ofislar va turar-joy majmualari uchun audio va videodomofonlar.",
+      "intro": "Pod‘ezdlar, ofislar va xususiy uylar uchun audio- va video-domofon tizimlari — chaqiruv, video-aloqa va umumiy kirish tizimiga integratsiya bilan.",
+      "works": [
+        "Chaqiruv panellari va monitorlarni tanlash",
+        "Domofon va aloqa liniyalarini montaj qilish",
+        "Elektron qulf va SKUD bilan integratsiya",
+        "Ko‘pabonentli sxemalarni sozlash",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "attendance": {
+      "title": "Ish vaqtini hisobga olish",
+      "desc": "Biometriya va tabel, 1C va HR tizimlariga eksport bilan.",
+      "intro": "Xodimlarning kelish-ketishini biometrik va karta orqali hisobga olish — avtomatik tabel va 1C hamda HR-tizimlarga eksport bilan.",
+      "works": [
+        "Biometrik terminal va o‘qigichlarni o‘rnatish",
+        "Jadval va hisob qoidalarini sozlash",
+        "Tabel va hisobotlarni shakllantirish",
+        "1C / HR / SKUD bilan integratsiya",
+        "O‘qitish va qo‘llab-quvvatlash"
+      ]
+    },
+    "alarm": {
+      "title": "Qo‘riqlash signalizatsiyasi",
+      "desc": "Obyekt va perimetr himoyasi, trevoga tugmasi.",
+      "intro": "Obyektni kirib kelishdan himoya qilish: harakat, ochilish va oyna sinishi datchiklari, trevoga tugmalari, signalni qo‘riqlash pultiga va mobil ilovaga uzatish.",
+      "works": [
+        "Qo‘riqlash zonalarini loyihalash",
+        "Datchik, panel va ogohlantirgichlarni montaj qilish",
+        "Senariy va trevoga tugmasini sozlash",
+        "Qo‘riqlash pulti va ilovaga chiqarish",
+        "Ishga tushirish va xizmat ko‘rsatish"
+      ]
+    },
+    "fire": {
+      "title": "Yong‘in signalizatsiyasi va SOUE",
+      "desc": "Erta aniqlash, ogohlantirish va evakuatsiyani boshqarish.",
+      "intro": "Avtomatik yong‘in signalizatsiyasi hamda ogohlantirish va evakuatsiyani boshqarish tizimlari — me’yorlar bo‘yicha, kerakli ruxsatnomalar bilan loyihalash va o‘rnatish.",
+      "works": [
+        "Amaldagi me’yorlar bo‘yicha AYS va SOUE loyihasi",
+        "Izveshchatel, panel va ogohlantirgichlarni montaj qilish",
+        "Zona va evakuatsiya senariylarini sozlash",
+        "Nazorat organlariga topshirish",
+        "Reglamentli xizmat ko‘rsatish"
+      ]
+    },
+    "network": {
+      "title": "SKS va LAN",
+      "desc": "Strukturali kabel tarmoqlari, Wi-Fi, IT-infratuzilma.",
+      "intro": "Strukturali kabel va lokal tarmoqlar — har qanday past kuchlanishli tizim asosi: tartibli kabel infratuzilmasi, kommutatsiya va Wi-Fi.",
+      "works": [
+        "Trassa va kabel tuzilmasini loyihalash",
+        "SKS yotqizish, rozetka va patch-panellarni montaj qilish",
+        "Kommutator va Wi-Fi nuqtalarini o‘rnatish",
+        "Liniyalarni markirovka qilish va sinash",
+        "Hujjatlashtirish va qo‘llab-quvvatlash"
+      ]
+    },
+    "server": {
+      "title": "Server xonalari va ma’lumot markazlari",
+      "desc": "Stoyka, UPS, sovutish va jihozlarni monitoring qilish.",
+      "intro": "Server xonalari va ma’lumotlar markazlarini jihozlaymiz: montaj stoykalari, uzluksiz quvvat, sovutish va muhandislik tizimlari monitoringi.",
+      "works": [
+        "Server xonasi yoki ma’lumotlar markazi loyihasi",
+        "Stoyka, kabel tarmog‘i va quvvatni montaj qilish",
+        "UPS va sovutish tizimlarini o‘rnatish",
+        "Monitoring va kirish nazorati",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "videowall": {
+      "title": "Videodevorlar",
+      "desc": "Dispetcherlik va vaziyat monitoringi markazlari.",
+      "intro": "Dispetcher va vaziyat markazlari uchun videodevorlar: video va ma’lumotlarni yagona katta ekranga chiqarish, moslashuvchan joylashuv boshqaruvi bilan.",
+      "works": [
+        "Videodevor panellari va kontrollerini tanlash",
+        "Konstruksiyani loyihalash va montaj qilish",
+        "Joylashuv va manbalarni sozlash",
+        "Videokuzatuv bilan integratsiya",
+        "Ishga tushirish va qo‘llab-quvvatlash"
+      ]
+    },
+    "pa": {
+      "title": "Ogohlantirish tizimlari",
+      "desc": "Nutqli ogohlantirish va fon ovoz tizimlari.",
+      "intro": "Binolar, savdo markazlari va korxonalar uchun ovozli ogohlantirish va fon ozvuchka tizimlari — xabarlar va musiqani hududlar bo‘yicha translatsiya qilish.",
+      "works": [
+        "Ozvuchka zonalari loyihasi",
+        "Karnay va kuchaytirgichlarni montaj qilish",
+        "Zona va prioritetlarni sozlash",
+        "Yong‘in SOUE bilan integratsiya",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "barrier": {
+      "title": "Shlagbaumlar va avtomatika",
+      "desc": "Avtomatik darvozalar, shlagbaumlar va parking nazorati.",
+      "intro": "Kirishni avtomatlashtirish: shlagbaumlar, suriladigan va ochiladigan darvozalar, parkovka nazorati — qulay boshqaruv va kirish nazorati tizimiga (SKUD) integratsiya bilan.",
+      "works": [
+        "Darvoza yoki shlagbaum uchun privod tanlash",
+        "Avtomatika va xavfsizlik fotoelementlarini montaj qilish",
+        "Boshqaruv va pultlarni sozlash",
+        "ANPR va SKUD bilan integratsiya",
+        "Ishga tushirish va xizmat ko‘rsatish"
+      ]
+    },
+    "perimeter": {
+      "title": "Perimetr qo‘riqlovi",
+      "desc": "IQ-to‘siqlar, termovizorlar va obyekt perimetri himoyasi.",
+      "intro": "Obyekt perimetri qo‘riqlovi: to‘siq bo‘ylab videokuzatuv, IQ-barerlar va buzg‘unchini erta aniqlash uchun trevoga signalizatsiyasi.",
+      "works": [
+        "Perimetrni tekshirish va loyiha",
+        "Kamera, IQ-barer va datchiklarni montaj qilish",
+        "Zona va trevogalarni sozlash",
+        "Qo‘riqlash va videoanalitika bilan integratsiya",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "bus": {
+      "title": "Transport · «Aqlli avtobus»",
+      "desc": "Mobil videokuzatuv, GPS-monitoring, yo‘lovchilarni sanash.",
+      "intro": "Jamoat transporti uchun majmua: salondagi videokuzatuv, GPS-monitoring, yo‘lovchilarni sanash va 4G orqali ma’lumotlarni dispetcherga uzatish.",
+      "works": [
+        "Mobil videoregistrator va kameralarni tanlash",
+        "Salon va haydovchi kabinasiga montaj qilish",
+        "GPS-treking va 4G/Wi-Fi aloqa",
+        "Yo‘lovchilarni sanash va videoanalitika",
+        "Dispetcher markaziga ulash"
+      ]
+    },
+    "city": {
+      "title": "Xavfsiz shahar",
+      "desc": "Shahar videokuzatuvi, ma’lumot markazi va aqlli analitika.",
+      "intro": "Shahar xavfsizlik tizimlari: ko‘chalardagi videokuzatuv, yuz va raqamlarni aniqlash, ma’lumotlar markazi va yagona vaziyat markazi.",
+      "works": [
+        "Shahar videokuzatuv tarmog‘i loyihasi",
+        "Kamera va aloqa kanallarini montaj qilish",
+        "Ma’lumotlar markazi va videoarxiv saqlash",
+        "Videoanalitika va aniqlash",
+        "Vaziyat markazi va kuzatib borish"
+      ]
+    },
+    "parking": {
+      "title": "Aqlli parking",
+      "desc": "ANPR, shlagbaumlar va kirish-chiqishni avtomatlashtirish.",
+      "intro": "Parkovkalarni avtomatlashtirish: raqamlarni aniqlash (ANPR), shlagbaumlar, bo‘sh joylar nazorati va kirish-chiqish hisobi.",
+      "works": [
+        "Parkovka tizimi loyihasi",
+        "ANPR-kamera va shlagbaumlarni montaj qilish",
+        "Joylar hisobi va tariflash",
+        "To‘lov va SKUD integratsiyasi",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "retail": {
+      "title": "Riteyl va bozorlar",
+      "desc": "Tashrif buyuruvchilarni sanash, kassa nazorati, o‘g‘irlikdan himoya.",
+      "intro": "Do‘kon va bozorlar xavfsizligi: savdo zali va kassalardagi videokuzatuv, tashrifchilarni sanash va o‘g‘irlikdan himoya.",
+      "works": [
+        "Zal, kassa va omborlar videokuzatuvi",
+        "Tashrifchilarni sanash va analitika",
+        "Kassa operatsiyalari nazorati",
+        "Qo‘riqlash va o‘g‘irlikka qarshi signalizatsiya",
+        "Xizmat ko‘rsatish"
+      ]
+    },
+    "bank": {
+      "title": "Banklar va ofislar",
+      "desc": "Kirishni boshqarish, trevoga tugmalari, videonazorat.",
+      "intro": "Banklar va ofislarni kompleks himoya qilish: kirish nazorati, videokuzatuv, trevoga tugmalari va qo‘riqlash bilan integratsiya.",
+      "works": [
+        "SKUD va cheklangan kirish zonalari",
+        "Videokuzatuv va videoanalitika",
+        "Trevoga tugmalari va signalizatsiya",
+        "Ish vaqti hisobi",
+        "Servis va qo‘llab-quvvatlash"
+      ]
+    },
+    "school": {
+      "title": "Ta’lim",
+      "desc": "Maktab va oliygohlar xavfsizligi: kirish, video, ogohlantirish.",
+      "intro": "Maktab va oliygohlar xavfsizligi: kirishda turniket va kirish nazorati (SKUD), videokuzatuv, ogohlantirish va bolaning o‘tgani haqida ota-onalarni xabardor qilish.",
+      "works": [
+        "Kirish guruhlarida turniket va SKUD",
+        "Hudud va koridorlar videokuzatuvi",
+        "Ogohlantirish va yong‘in xavfsizligi",
+        "Ota-onalarni xabardor qilish (karta/SMS)",
+        "Ishga tushirish va servis"
+      ]
+    },
+    "industry": {
+      "title": "Sanoat va omborlar",
+      "desc": "Perimetr, termovision va texnologik jarayonlar nazorati.",
+      "intro": "Ishlab chiqarish va omborlar xavfsizligi: perimetr, sexlar videokuzatuvi, termovizion va hududga kirish nazorati.",
+      "works": [
+        "Perimetral qo‘riqlash va videokuzatuv",
+        "Termovizion nazorat va analitika",
+        "O‘tish va KPPlarda SKUD",
+        "Qo‘riqlash bilan integratsiya",
+        "Xizmat ko‘rsatish"
+      ]
+    },
+    "residential": {
+      "title": "Turar-joy majmualari",
+      "desc": "Domofoniya, videokuzatuv va shlagbaumlar.",
+      "intro": "Turar-joy majmualari xavfsizligi: hovli va pod‘ezdlar videokuzatuvi, domofon, shlagbaumlar va yashovchilar uchun kirish nazorati.",
+      "works": [
+        "Hovli, pod‘ezd va parking videokuzatuvi",
+        "Domofon va kirish nazorati",
+        "Shlagbaum va kirish avtomatikasi",
+        "Yashovchilar uchun ANPR",
+        "Servis xizmati"
+      ]
+    }
+  },
+  "solutionsPage": {
+    "hero": "Kuchsiz tok tizimlari — kalit topshirish",
+    "heroSub": "O‘zbekiston bo‘ylab xavfsizlik va kuchsiz tok tizimlarini loyihalash, o‘rnatish va xizmat ko‘rsatish.",
+    "whatWeCan": "Biz nima qila olamiz",
+    "systemsLabel": "Tizimlar va xizmatlar",
+    "industriesLabel": "Tayyor yechimlar",
+    "industriesTitle": "Tarmoqlar uchun yechimlar",
+    "howLabel": "Biz qanday ishlaymiz",
+    "howTitle": "Arizadan xizmatgacha — kalit topshirish",
+    "ctaLabel": "Loyihani boshlaymiz",
+    "ctaTitle": "Loyihangizni muhokama qilishga tayyormisiz?",
+    "ctaText": "Vazifaga mos jihozni tanlaymiz va 30 daqiqada tijoriy taklif yuboramiz.",
+    "whatInc": "Nimalar kiradi",
+    "worksTitle": "Ishlar tarkibi",
+    "scheme": "Ishlash tamoyili",
+    "schemeTitle": "Tizim qanday ishlaydi",
+    "examples": "Namunalar",
+    "gallery": "Galereya",
+    "steps": [
+      {
+        "title": "Ariza va chiqish",
+        "desc": "Muhandisning bepul chiqishi va obyektni ko‘rikdan o‘tkazish."
+      },
+      {
+        "title": "Loyiha va hisob",
+        "desc": "Texnik yechim, spetsifikatsiya va tijoriy taklif."
+      },
+      {
+        "title": "Yetkazib berish",
+        "desc": "Dahua, Hikvision va boshqa sertifikatlangan jihozlar."
+      },
+      {
+        "title": "O‘rnatish va sozlash",
+        "desc": "Professional o‘rnatish va kalit topshirish sozlamasi."
+      },
+      {
+        "title": "Topshirish va servis",
+        "desc": "O‘qitish, kafolat va texnik xizmat."
+      }
+    ],
+    "home": "Bosh sahifa",
+    "servicesCrumb": "Xizmatlar",
+    "serviceTag": "Xizmat",
+    "industryTag": "Soha uchun yechim",
+    "getQuote": "Tijoriy taklif olish",
+    "needTitle": "«{name}» xizmati kerakmi?",
+    "detailCtaText": "Obyektga mos uskunani tanlaymiz va 30 daqiqa ichida tijoriy taklif yuboramiz."
+  },
+  "chat": {
+    "title": "Onlayn chat",
+    "connecting": "Ulanmoqda...",
+    "online": "Operator onlayn",
+    "offline": "Oflayn",
+    "greeting": "Assalomu alaykum! 👋 Men SAT Solutions konsultantiman. Videokuzatuv, SKUD, signalizatsiya va boshqa tizimlar bo‘yicha maslahat beraman. Qanday yordam bera olaman?",
+    "intro": "Iltimos, tanishtiring — operator sizga murojaat qilib, qo‘ng‘iroq qila oladi.",
+    "name": "Ism",
+    "yourName": "Ismingiz",
+    "phone": "Telefon",
+    "start": "Chatni boshlash",
+    "placeholder": "Xabar yozing...",
+    "send": "Xabar yuborish",
+    "close": "Yopish",
+    "closed": "Suhbat operator tomonidan yakunlandi. Yana yozing — shu suhbatni davom ettiramiz.",
+    "open": "Chatni ochish",
+    "errConnect": "Ulanish xatosi",
+    "errChat": "Chat xatosi"
+  },
+  "search": {
+    "placeholder": "Qidirish: kamera, yong‘in…",
+    "aria": "Katalog bo‘yicha qidirish",
+    "nothing": "Hech narsa topilmadi",
+    "cats": "Kategoriyalar",
+    "brands": "Brendlar",
+    "products": "Mahsulotlar",
+    "showAll": "Barcha natijalarni ko‘rsatish"
+  },
+  "form": {
+    "feedbackTitle": "Aloqa",
+    "feedbackSub": "Xabar qoldiring — biz siz bilan bog‘lanamiz.",
+    "name": "Ism",
+    "yourName": "Ismingiz",
+    "phone": "Telefon",
+    "phoneReq": "Telefon *",
+    "email": "Email",
+    "emailOpt": "Email (ixtiyoriy)",
+    "message": "Xabar",
+    "msgPlaceholder": "Savolingizni yozing...",
+    "comment": "Izoh: miqdor, muddat va h.k.",
+    "needPlaceholder": "Ehtiyojingizni yozing...",
+    "send": "Yuborish",
+    "sendRequest": "Ariza yuborish",
+    "sending": "Yuborilmoqda...",
+    "sendingShort": "Yuborilmoqda...",
+    "sent": "Xabar yuborildi. Rahmat!",
+    "errSend": "Yuborishda xatolik",
+    "quoteTitle": "Taklif so‘rash",
+    "srSuccess": "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bog‘lanamiz.",
+    "srError": "Ariza yuborishda xatolik yuz berdi. Qayta urinib ko‘ring.",
+    "quoteSent": "Ariza yuborildi!",
+    "quoteSentSub": "Ish vaqtida 30 daqiqada qo‘ng‘iroq qilamiz.",
+    "consent": "«Yuborish» tugmasini bosib, shaxsiy ma’lumotlarni qayta ishlashga rozilik bildirasiz",
+    "close": "Yopish",
+    "srTitle": "Ariza yuborish",
+    "service": "Xizmat",
+    "description": "Tavsif",
+    "cancel": "Bekor qilish"
+  },
+  "meta": {
+    "homeTitle": "SAT Solutions — O‘zbekistonda xavfsizlik va kuchsiz tok tizimlari",
+    "homeDesc": "O‘zbekistonda videokuzatuv, kirishni boshqarish, yong‘in signalizatsiyasi va IT-infratuzilmani yetkazib berish va o‘rnatish. Dahua, Hikvision vakolatli integratori.",
+    "solTitle": "Xizmatlar — SAT Solutions",
+    "solDesc": "O‘zbekistonda kuchsiz tok tizimlari va xavfsizlik yechimlari: videokuzatuv, SKUD, yong‘in signalizatsiyasi, SKS, xavfsiz shahar va boshqalar."
+  },
+  "contact": {
+    "feedback": "Aloqa",
+    "contactInfo": "Aloqa ma’lumotlari",
+    "social": "Ijtimoiy tarmoqlar",
+    "dataLater": "Ma’lumotlar keyinroq qo‘shiladi.",
+    "title": "Kontaktlar",
+    "notReady": "Sahifa hali sozlanmagan.",
+    "metaDesc": "Toshkentda SAT Solutions kontaktlari: +998 99 554-69-69, sales@satsolutions.uz, Katta Darxon ko‘chasi 5. Videokuzatuv, SKUD, yong‘in signalizatsiyasi — qo‘ng‘iroq qiling!"
+  },
+  "about": {
+    "title": "Kompaniya haqida",
+    "licenses": "Litsenziyalar",
+    "certificates": "Sertifikatlar va avtorizatsiyalar",
+    "partners": "Hamkorlar",
+    "allPartners": "Barcha hamkorlar →",
+    "location": "Biz qayerdamiz",
+    "viewDoc": "Hujjatni ko‘rish",
+    "noPartners": "Hozircha hamkorlar yo‘q.",
+    "mapTitle": "Xarita",
+    "openMap": "Xaritada ochish →",
+    "notReady": "Sahifa hali sozlanmagan.",
+    "openOriginal": "Aslini ochish",
+    "close": "Yopish",
+    "brandsNote": "Biz hamkorlik qiladigan rasmiy brendlar va hamkorlar",
+    "lic": {
+      "lic-security": {
+        "title": "Qo‘riqlash tizimlari litsenziyasi",
+        "subtitle": "Tasdiq №1554491 • Faol",
+        "issuedBy": "O‘zbekiston Respublikasi Milliy gvardiyasi",
+        "description": "Qo‘riqlash texnik vositalari va tizimlarini montaj qilish, sozlash, ta’mirlash va texnik xizmat ko‘rsatish"
+      },
+      "lic-fire": {
+        "title": "Yong‘in tizimlari litsenziyasi",
+        "subtitle": "Tasdiq №913518 • Faol",
+        "issuedBy": "O‘zbekiston Respublikasi Favqulodda vaziyatlar vazirligi",
+        "description": "Avtomatik yong‘in o‘chirish va yong‘in signalizatsiyasi tizimlarini montaj qilish, sozlash, ta’mirlash va texnik xizmat ko‘rsatish"
+      }
+    },
+    "cert": {
+      "cert-dahua-integrator": {
+        "title": "Vakolatli strategik tizim integratori",
+        "issuedBy": "Dahua Technology",
+        "description": "O‘zbekistonda Authorized Strategic System Integrator. 2026-yil 1-yanvardan 31-dekabrigacha amal qiladi."
+      },
+      "cert-dahua-partner": {
+        "title": "Ishonchli hamkorning tavsiyanomasi",
+        "issuedBy": "Dahua Technology (HK) Limited",
+        "description": "Rasmiy tavsiyanoma. 2024-yildan beri yuqori professionallik va hamkorlik ishonchliligini tasdiqlaydi."
+      },
+      "cert-ruijie": {
+        "title": "Silver Partner",
+        "issuedBy": "Ruijie Networks Co., Ltd",
+        "description": "O‘zbekistonda vakolatli Silver Partner — kommutator, marshrutizator va simsiz uskunalar sotuvi. 2025-yil."
+      },
+      "cert-schneider": {
+        "title": "Select Partner · APC IT Solution Provider",
+        "issuedBy": "Schneider Electric",
+        "description": "Schneider Electric rasmiy Select Partner (APC IT Solution Provider). 2024-yil oktyabridan."
+      },
+      "cert-pantum": {
+        "title": "Rasmiy hamkor",
+        "issuedBy": "Pantum International Limited",
+        "description": "O‘zbekistonda Pantum International Limited rasmiy hamkori. Printer va MFU vakolatli sotuvi."
+      }
+    }
+  },
+  "scheme": {
+    "cctv": [
+      {
+        "t": "Obyektdagi kameralar",
+        "s": "4K gacha, IQ-yoritish"
+      },
+      {
+        "t": "PoE-kommutator",
+        "s": "quvvat va ma’lumot"
+      },
+      {
+        "t": "Registrator / server",
+        "s": "yozish va arxiv"
+      },
+      {
+        "t": "Ko‘rish",
+        "s": "monitor va smartfon"
+      }
+    ],
+    "analytics": [
+      {
+        "t": "Kameralar",
+        "s": "videooqim"
+      },
+      {
+        "t": "AI-server",
+        "s": "kadrlarni tahlil qilish"
+      },
+      {
+        "t": "Hodisalar",
+        "s": "buzilishlarni aniqlash"
+      },
+      {
+        "t": "Operator",
+        "s": "tezkor ogohlantirishlar"
+      }
+    ],
+    "anpr": [
+      {
+        "t": "LPR-kamera",
+        "s": "raqamni o‘qish"
+      },
+      {
+        "t": "Baza bilan solishtirish",
+        "s": "oq va qora ro‘yxatlar"
+      },
+      {
+        "t": "Shlagbaum",
+        "s": "avto-ochilish"
+      },
+      {
+        "t": "Jurnal",
+        "s": "barcha o‘tishlar hisobi"
+      }
+    ],
+    "access": [
+      {
+        "t": "Identifikator",
+        "s": "karta, yuz, barmoq"
+      },
+      {
+        "t": "O‘qigich"
+      },
+      {
+        "t": "Kontroller",
+        "s": "huquqlarni tekshirish"
+      },
+      {
+        "t": "Qulf + jurnal",
+        "s": "ochish va hisob"
+      }
+    ],
+    "intercom": [
+      {
+        "t": "Chaqiruv paneli",
+        "s": "kirish oldida"
+      },
+      {
+        "t": "Monitor / trubka",
+        "s": "kvartira yoki ofisda"
+      },
+      {
+        "t": "Qulf",
+        "s": "masofadan ochish"
+      }
+    ],
+    "attendance": [
+      {
+        "t": "Terminal",
+        "s": "yuz yoki barmoq izi"
+      },
+      {
+        "t": "Hisob serveri",
+        "s": "smenalar va jadvallar"
+      },
+      {
+        "t": "Hisobotlar",
+        "s": "davr uchun tabel"
+      }
+    ],
+    "alarm": [
+      {
+        "t": "Datchiklar",
+        "s": "harakat, oyna, eshik"
+      },
+      {
+        "t": "Qabul paneli",
+        "s": "trevogalarni tahlil"
+      },
+      {
+        "t": "Ogohlantirish",
+        "s": "sirena, SMS, qo‘ng‘iroq"
+      }
+    ],
+    "fire": [
+      {
+        "t": "Izveshchatellar",
+        "s": "tutun va issiqlik"
+      },
+      {
+        "t": "Qabul-nazorat priboru",
+        "s": "markaziy panel"
+      },
+      {
+        "t": "SOUE",
+        "s": "sirena va tablolar"
+      },
+      {
+        "t": "Evakuatsiya",
+        "s": "obyekt rejasi bo‘yicha"
+      }
+    ],
+    "network": [
+      {
+        "t": "Ish joylari",
+        "s": "SKS rozetkalari"
+      },
+      {
+        "t": "Patch-panel",
+        "s": "kommutatsiya"
+      },
+      {
+        "t": "Kommutator"
+      },
+      {
+        "t": "Server xonasi",
+        "s": "tarmoq yadrosi"
+      }
+    ],
+    "server": [
+      {
+        "t": "Stoyka va serverlar"
+      },
+      {
+        "t": "UPS",
+        "s": "zaxira quvvat"
+      },
+      {
+        "t": "Sovutish",
+        "s": "iqlim nazorati"
+      },
+      {
+        "t": "Monitoring",
+        "s": "24/7"
+      }
+    ],
+    "videowall": [
+      {
+        "t": "Manbalar",
+        "s": "kamera, PK, TV"
+      },
+      {
+        "t": "Kontroller",
+        "s": "sahna va joylashuvlar"
+      },
+      {
+        "t": "Videodevor",
+        "s": "24/7 ishlash"
+      }
+    ],
+    "pa": [
+      {
+        "t": "Manba",
+        "s": "mikrofon, pleyer"
+      },
+      {
+        "t": "Kuchaytirgichlar",
+        "s": "zonalar bo‘yicha"
+      },
+      {
+        "t": "Karnaylar",
+        "s": "bir tekis ovoz"
+      }
+    ],
+    "barrier": [
+      {
+        "t": "Buyruq",
+        "s": "brelok, metka, tugma"
+      },
+      {
+        "t": "Boshqaruv bloki"
+      },
+      {
+        "t": "Privod",
+        "s": "shlagbaum yoki darvoza"
+      }
+    ],
+    "perimeter": [
+      {
+        "t": "Izveshchatellar",
+        "s": "perimetr bo‘ylab"
+      },
+      {
+        "t": "Trevoga paneli",
+        "s": "zonani aniqlash"
+      },
+      {
+        "t": "Reaksiya",
+        "s": "kamera, yorug‘lik, sirena"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Bajarilgan loyihalar: videokuzatuv, videodevorlar va kompleks xavfsizlik tizimlari.",
+    "metaDesc": "SAT Solutions bajargan loyihalar: videokuzatuv, videodevorlar va kompleks xavfsizlik tizimlari.",
+    "all": "Barchasi",
+    "noImage": "Rasm yo‘q",
+    "view": "Ko‘rish →",
+    "projectFallback": "Loyiha",
+    "client": "Mijoz",
+    "location": "Joylashuv",
+    "completed": "Yakunlangan",
+    "category": "Kategoriya",
+    "clientTasks": "Mijoz vazifalari",
+    "about": "Loyiha haqida",
+    "doneWorks": "Bajarilgan ishlar",
+    "workN": "Ish №{n}",
+    "noDescription": "Tavsif mavjud emas.",
+    "extraImages": "Qo‘shimcha rasmlar",
+    "projectPhoto": "Loyiha surati"
+  },
+  "partnersPage": {
+    "title": "Hamkorlar",
+    "metaDesc": "Bizning hamkorlar",
+    "empty": "Hozircha hamkorlar yo‘q."
+  }
+}

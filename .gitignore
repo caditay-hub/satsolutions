@@ -10,3 +10,6 @@ coverage
 .env.local
 .env.*.local
 
+# Медиа-загрузки (рантайм-данные, бэкапятся отдельно — не в историю git)
+apps/api/uploads/
+

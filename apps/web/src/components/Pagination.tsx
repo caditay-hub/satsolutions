@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 function toPositiveInt(v: unknown, fallback: number) {
   const n = typeof v === "number" ? v : typeof v === "string" ? Number(v) : NaN;

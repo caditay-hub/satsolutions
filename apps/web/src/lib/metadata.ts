@@ -3,6 +3,15 @@ import { site } from "./site";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+/** Обрезает текст до ~max символов по границе слова (без обрыва посреди слова). */
+export function clip(text: string, max = 160): string {
+    const t = (text || "").replace(/\s+/g, " ").trim();
+    if (t.length <= max) return t;
+    const cut = t.slice(0, max);
+    const lastSpace = cut.lastIndexOf(" ");
+    return (lastSpace > max * 0.5 ? cut.slice(0, lastSpace) : cut).replace(/[\s.,;:–—-]+$/, "") + "…";
+}
+
 export function createMetadata(overrides?: Partial<Metadata>): Metadata {
     const title = overrides?.title || {
         default: site.name,
@@ -37,12 +46,10 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
             address: false,
             telephone: false,
         },
-        alternates: overrides?.alternates || {
-            canonical: "/"
-        },
+        alternates: overrides?.alternates,
         openGraph: {
             type: "website",
-            locale: site.locale,
+            locale: (overrides?.openGraph as any)?.locale ?? site.locale,
             url: siteUrl,
             siteName: site.name,
             title: typeof overrides?.openGraph?.title === 'string' ? overrides.openGraph.title : site.name,
@@ -58,9 +65,14 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         },
         twitter: {
             card: "summary_large_image",
-            title: typeof overrides?.twitter?.title === 'string' ? overrides.twitter.title : site.name,
-            description: typeof overrides?.twitter?.description === 'string' ? overrides.twitter.description : site.description,
-            images: overrides?.twitter?.images || [site.defaultOgImagePath],
+            // twitter по умолчанию повторяет og (иначе при шере товара/категории в X — обезличенная карточка)
+            title: typeof overrides?.twitter?.title === 'string'
+                ? overrides.twitter.title
+                : (typeof overrides?.openGraph?.title === 'string' ? overrides.openGraph.title : site.name),
+            description: typeof overrides?.twitter?.description === 'string'
+                ? overrides.twitter.description
+                : (typeof overrides?.openGraph?.description === 'string' ? overrides.openGraph.description : site.description),
+            images: overrides?.twitter?.images || overrides?.openGraph?.images || [site.defaultOgImagePath],
         },
         robots: {
             index: true,

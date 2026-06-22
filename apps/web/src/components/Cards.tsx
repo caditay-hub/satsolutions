@@ -1,77 +1,47 @@
-import Image from "next/image";
-import Link from "next/link";
-import type { PostDto, ProductDto } from "@/lib/api";
-import { resolveImageUrl } from "@/lib/image";
-import { AddToCartButton } from "@/components/AddToCartButton";
+"use client";
 
-export function ProductCard({ p, usdToUzs }: { p: ProductDto; usdToUzs?: number }) {
+import Image from "next/image";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+import type { ProductDto } from "@/lib/api";
+import { resolveImageUrl } from "@/lib/image";
+import { priceInfo, productIcon } from "@/lib/product";
+
+export function ProductCard({ p }: { p: ProductDto; usdToUzs?: number }) {
+  const tc = useTranslations("common");
   const img = resolveImageUrl(p.coverImageUrl);
-  const rate = typeof usdToUzs === "number" && Number.isFinite(usdToUzs) && usdToUzs > 0 ? usdToUzs : 1;
-  const priceUzs = (p as any).isUsd ? Number(p.price ?? 0) * rate : Number(p.price ?? 0);
+  const info = priceInfo(p);
+  const price = info ? (info.kind === "value" ? tc("priceFrom", { value: info.value }) : tc("priceOnRequest")) : null;
   return (
     <Link
       href={`/products/${p.slug}`}
-      className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-2xl overflow-hidden"
+      className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-xl overflow-hidden"
     >
-      <div className="relative aspect-[16/11] w-full overflow-hidden bg-white">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
         {img ? (
           <Image
             alt={p.name}
             src={img}
             fill
-            sizes="(max-width: 1024px) 100vw, 33vw"
-            className="object-contain p-4 transition-transform duration-700 ease-out group-hover:scale-110"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+            loading="lazy"
+            unoptimized
+            className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-110"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-slate-50 text-sm font-bold text-slate-400">Нет изображения</div>
+          <div className="relative flex h-full w-full flex-col items-center justify-center gap-1.5 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-brand-50">
+            <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #0f2231 1.5px, transparent 1.5px)", backgroundSize: "18px 18px" }} aria-hidden />
+            <span className="relative text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
+            <span className="relative text-[10px] font-bold uppercase tracking-wider text-slate-400">{tc("noPhoto")}</span>
+          </div>
         )}
       </div>
-      <div className="flex flex-1 flex-col p-6">
-        <div className="text-xl font-bold text-slate-950 line-clamp-1">{p.name}</div>
-        {p.shortDescription ? <p className="mt-2 line-clamp-2 text-base font-semibold text-slate-700 leading-relaxed">{p.shortDescription}</p> : null}
-        <div className="mt-auto pt-5 flex items-center justify-between gap-3">
-          <div className="text-sm font-black text-brand-700 uppercase tracking-wider">Подробнее →</div>
-          <AddToCartButton
-            item={{
-              productId: p.id,
-              slug: p.slug,
-              name: p.name,
-              price: String(priceUzs),
-              coverImageUrl: p.coverImageUrl
-            }}
-          />
-        </div>
+      <div className="px-2.5 py-1.5 border-t border-slate-100 bg-white">
+        <div className="text-[13px] leading-snug font-bold text-slate-900 line-clamp-2 first-letter:uppercase">{p.name}</div>
+        {price ? <div className="mt-1 text-[13px] font-black text-brand-700">{price}</div> : null}
       </div>
     </Link>
   );
 }
 
-export function NewsCard({ n }: { n: PostDto }) {
-  const img = resolveImageUrl(n.coverImageUrl);
-  return (
-    <Link
-      href={`/news/${n.slug}`}
-      className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-2xl overflow-hidden"
-    >
-      <div className="relative aspect-[16/11] w-full overflow-hidden bg-slate-100">
-        {img ? (
-          <Image
-            alt={n.title}
-            src={img}
-            fill
-            sizes="(max-width: 1024px) 100vw, 33vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center bg-slate-200 text-sm font-bold text-slate-400">Нет изображения</div>
-        )}
-      </div>
-      <div className="p-6">
-        <div className="text-xl font-bold text-slate-950 line-clamp-2">{n.title}</div>
-        {n.excerpt ? <p className="mt-2 line-clamp-2 text-base font-semibold text-slate-700 leading-relaxed">{n.excerpt}</p> : null}
-        <div className="mt-5 text-sm font-black text-brand-700 uppercase tracking-wider">Читать →</div>
-      </div>
-    </Link>
-  );
-}
 

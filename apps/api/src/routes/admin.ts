@@ -322,8 +322,7 @@ adminRouter.post("/categories", async (req, res) => {
     name: z.string().min(2),
     slug: z.string().min(2).optional(),
     parentId: z.string().uuid().optional().nullable(),
-    coverImageUrl: coverSchema,
-    brandId: z.string().uuid().optional().nullable()
+    coverImageUrl: coverSchema
   });
   const parsed = schema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
@@ -334,8 +333,7 @@ adminRouter.post("/categories", async (req, res) => {
     name: parsed.data.name,
     slug,
     parentId: parsed.data.parentId ?? null,
-    coverImageUrl: parsed.data.coverImageUrl ?? null,
-    brandId: parsed.data.brandId ?? null
+    coverImageUrl: parsed.data.coverImageUrl ?? null
   } as any);
   await writeAudit({
     req,
@@ -343,7 +341,7 @@ adminRouter.post("/categories", async (req, res) => {
     action: "CREATE",
     entityType: "CATEGORY",
     entityId: category.id,
-    meta: { name: category.name, slug: category.slug, parentId: category.parentId, coverImageUrl: category.coverImageUrl, brandId: (category as any).brandId ?? null }
+    meta: { name: category.name, slug: category.slug, parentId: category.parentId, coverImageUrl: category.coverImageUrl }
   });
   res.status(201).json({ category });
 });
@@ -360,8 +358,7 @@ adminRouter.patch("/categories/:id", async (req, res) => {
     name: z.string().min(2).optional(),
     slug: z.string().min(2).optional(),
     parentId: z.string().uuid().optional().nullable(),
-    coverImageUrl: coverSchema,
-    brandId: z.string().uuid().optional().nullable()
+    coverImageUrl: coverSchema
   });
   const parsed = schema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
@@ -375,7 +372,6 @@ adminRouter.patch("/categories/:id", async (req, res) => {
   }
   if (parsed.data.parentId !== undefined) category.parentId = parsed.data.parentId ?? null;
   if (parsed.data.coverImageUrl !== undefined) category.coverImageUrl = parsed.data.coverImageUrl ?? null;
-  if (parsed.data.brandId !== undefined) (category as any).brandId = parsed.data.brandId ?? null;
   await category.save();
 
   await writeAudit({

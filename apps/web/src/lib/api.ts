@@ -53,10 +53,12 @@ export type ProductDto = {
   price: string;
   isUsd?: boolean;
   recommended?: boolean;
+  modelCode?: string | null;
   shortDescription: string | null;
   description: string | null;
   characteristics: Record<string, string> | null;
   coverImageUrl: string | null;
+  galleryImageUrls?: string[] | null;
   published: boolean;
   categoryId: string | null;
   brandId?: string | null;
@@ -180,8 +182,9 @@ async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalid
   return (await res.json()) as T;
 }
 
-export async function getCategories() {
-  return apiFetch<{ categories: CategoryDto[] }>("/categories", { next: { revalidate: 300 } });
+export async function getCategories(opts?: { brand?: string }) {
+  const qs = opts?.brand ? `?brand=${encodeURIComponent(opts.brand)}` : "";
+  return apiFetch<{ categories: CategoryDto[] }>(`/categories${qs}`, { next: { revalidate: 300 } });
 }
 
 export async function getPortfolioCategories() {
@@ -189,7 +192,7 @@ export async function getPortfolioCategories() {
 }
 
 export async function getServiceCategories() {
-  return apiFetch<{ items: ServiceCategoryDto[] }>("/service-categories", { next: { revalidate: 60 } });
+  return apiFetch<{ items: ServiceCategoryDto[] }>("/service-categories", { next: { revalidate: 300 } });
 }
 
 export async function getBrands() {
@@ -203,10 +206,11 @@ export async function getPartners() {
 export async function getProducts(
   page = 1,
   limit = 12,
-  opts?: { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string }
+  opts?: { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string; type?: string; chars?: Record<string, string[]>; priceMin?: number; priceMax?: number }
 ) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
   if (opts?.category) qs.set("category", opts.category);
+  if (opts?.type) qs.set("type", opts.type);
   if (opts?.brand) qs.set("brand", opts.brand);
   if (opts?.q) qs.set("q", opts.q);
   if (opts?.sort) qs.set("sort", opts.sort);
@@ -215,9 +219,24 @@ export async function getProducts(
   if (opts?.audio) qs.set("audio", opts.audio);
   if (opts?.technology) qs.set("technology", opts.technology);
   if (opts?.installationType) qs.set("installationType", opts.installationType);
+  if (opts?.chars && Object.keys(opts.chars).length) qs.set("chars", JSON.stringify(opts.chars));
+  if (opts?.priceMin) qs.set("priceMin", String(opts.priceMin));
+  if (opts?.priceMax) qs.set("priceMax", String(opts.priceMax));
+  // no-store: список товаров имеет неограниченное число комбинаций фильтров/сортировки/страниц,
+  // ISR-кэш этих запросов раздувал .next/cache/fetch-cache до десятков ГБ. Список всегда свежий.
   return apiFetch<{ items: ProductDto[]; total: number; page: number; limit: number }>(`/products?${qs}`, {
-    next: { revalidate: 60 }
+    cache: "no-store"
   });
+}
+
+export type ProductFacets = {
+  brands: Array<{ slug: string; name: string; count: number }>;
+  price: { min: number; max: number };
+  chars: Array<{ key: string; values: Array<{ value: string; count: number }> }>;
+};
+export async function getProductFacets(type: string) {
+  const qs = new URLSearchParams({ type });
+  return apiFetch<ProductFacets>(`/product-facets?${qs}`, { next: { revalidate: 300 } });
 }
 
 export async function createServiceRequest(data: {
@@ -251,23 +270,11 @@ export async function updateServiceRequestStatus(id: number, status: 'pending' |
 }
 
 export async function getProductBySlug(slug: string) {
-  return apiFetch<{ product: ProductDto }>(`/products/${encodeURIComponent(slug)}`, { next: { revalidate: 60 } });
+  // no-store: страница товара должна показывать актуальные фото/цены/название сразу после правок (не кэш)
+  return apiFetch<{ product: ProductDto }>(`/products/${encodeURIComponent(slug)}`, { cache: "no-store" });
 }
 
-export async function getNews(page = 1, limit = 10, opts?: { q?: string }) {
-  const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
-  if (opts?.q) qs.set("q", opts.q);
-  return apiFetch<{ items: PostDto[]; total: number; page: number; limit: number }>(`/news?${qs}`, {
-    next: { revalidate: 60 }
-  });
-}
 
-export async function getNewsBySlug(slug: string) {
-  // In development we want instant updates after saving in admin.
-  // In production we keep short caching for performance/SEO.
-  const isDev = process.env.NODE_ENV !== "production";
-  return apiFetch<{ post: PostDto }>(`/news/${encodeURIComponent(slug)}`, isDev ? { cache: "no-store" } : { next: { revalidate: 60 } });
-}
 
 export async function getServices(page = 1, limit = 12, opts?: { category?: string; topOnly?: boolean }) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
@@ -300,3 +307,32 @@ export async function getSitePage(key: SitePageKey) {
   return apiFetch<{ page: SitePageDto }>(`/site-pages/${encodeURIComponent(key)}`, isDev ? { cache: "no-store" } : { next: { revalidate: 300 } });
 }
 
+
+export type SmartSection = { name: string; slug: string; count: number };
+export type SmartSearchDto = {
+  mode: "direct" | "smart";
+  explain?: string;
+  sections?: SmartSection[];
+  total: number;
+  items: ProductDto[];
+};
+export async function getSmartSearch(q: string, limit = 60) {
+  return apiFetch<SmartSearchDto>(`/search-smart?q=${encodeURIComponent(q)}&limit=${limit}`, { cache: "no-store" } as any);
+}
+
+export type ProductTypeDto = { name: string; count: number };
+export async function getProductTypes(brand?: string) {
+  const qs = brand ? `?brand=${encodeURIComponent(brand)}` : "";
+  return apiFetch<{ types: ProductTypeDto[] }>(`/product-types${qs}`, { next: { revalidate: 300 } });
+}
+
+export type SuggestDto = {
+  products: { name: string; slug: string; coverImageUrl: string | null; price: string; chars_text?: string; brand_name?: string | null }[];
+  types: { name: string; count: number }[];
+  brands: { name: string; slug: string }[];
+};
+export async function getSearchSuggest(q: string): Promise<SuggestDto> {
+  const res = await fetch(`${apiBaseUrl()}/search-suggest?q=${encodeURIComponent(q)}`, { cache: "no-store" });
+  if (!res.ok) return { products: [], types: [], brands: [] };
+  return res.json();
+}

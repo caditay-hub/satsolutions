@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { Lightbox } from "@/components/Lightbox";
 import { useMemo, useState } from "react";
+import { useTranslations } from "next-intl";
 
 type WorkItem = {
   title: string;
@@ -75,16 +77,16 @@ export function PortfolioWorksAccordion({
   images: string[]; // resolved absolute/relative URLs
 }) {
   const [openIndices, setOpenIndices] = useState<number[]>([]);
+  const t = useTranslations("portfolio");
 
   const rows = useMemo(() => {
-    const n = works.length;
     return works.map((w, idx) => ({
       idx,
-      title: String(w?.title ?? "").trim() || `Работа #${idx + 1}`,
+      title: String(w?.title ?? "").trim() || t("workN", { n: idx + 1 }),
       blocks: getWorkBlocks(w),
       imageUrl: images[idx] ?? null
     }));
-  }, [works, images]);
+  }, [works, images, t]);
 
   const extraImages = useMemo(() => {
     if (images.length <= works.length) return [];
@@ -101,7 +103,7 @@ export function PortfolioWorksAccordion({
 
   return (
     <div className="mt-10">
-      <div className="text-xl font-semibold text-slate-900 sm:text-2xl text-center" style={{ color: "rgb(50 143 168 / var(--tw-bg-opacity, 1))" }}>Выполненные работы</div>
+      <div className="text-xl font-semibold text-slate-900 sm:text-2xl text-center" style={{ color: "rgb(50 143 168 / var(--tw-bg-opacity, 1))" }}>{t("doneWorks")}</div>
       <div className="mt-3 grid w-full grid-cols-1 items-start gap-2 sm:grid-cols-[1fr_1fr]">
         {rows.map((row) => {
           const open = openIndices.includes(row.idx);
@@ -148,7 +150,7 @@ export function PortfolioWorksAccordion({
                         ))}
                       </div>
                     ) : (
-                      <span className="text-slate-500 italic">Описание отсутствует.</span>
+                      <span className="text-slate-500 italic">{t("noDescription")}</span>
                     )}
                   </div>
                 </div>
@@ -160,16 +162,8 @@ export function PortfolioWorksAccordion({
 
       {extraImages.length ? (
         <div className="mt-8">
-          <div className="text-lg font-bold text-slate-900 mb-4">Дополнительные изображения</div>
-          <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {extraImages.map((u) => (
-              <div key={u} className="overflow-hidden rounded-2xl border-2 border-slate-200 bg-white hover:border-brand-500 transition-colors">
-                <div className="relative aspect-[4/3] w-full bg-slate-100">
-                  <Image alt="" aria-hidden="true" src={u} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="text-lg font-bold text-slate-900 mb-4">{t("extraImages")}</div>
+          <Lightbox images={extraImages} alt={t("projectPhoto")} gridClass="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" />
         </div>
       ) : null}
     </div>

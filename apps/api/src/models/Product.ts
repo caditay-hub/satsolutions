@@ -8,10 +8,12 @@ export class Product extends Model<InferAttributes<Product>, InferCreationAttrib
   declare price: string; // Sequelize DECIMAL comes as string
   declare isUsd: boolean;
   declare recommended: boolean;
+  declare modelCode: string | null;
   declare shortDescription: string | null;
   declare description: string | null;
   declare characteristics: Record<string, string> | null;
   declare coverImageUrl: string | null;
+  declare galleryImageUrls: string[] | null;
   declare published: boolean;
   declare categoryId: string | null;
   declare brandId: string | null;
@@ -50,6 +52,10 @@ Product.init(
       allowNull: false,
       defaultValue: false
     },
+    modelCode: {
+      type: DataTypes.STRING(160),
+      allowNull: true
+    },
     shortDescription: {
       type: DataTypes.STRING(500),
       allowNull: true
@@ -64,6 +70,10 @@ Product.init(
     },
     coverImageUrl: {
       type: DataTypes.STRING(1000),
+      allowNull: true
+    },
+    galleryImageUrls: {
+      type: DataTypes.JSONB,
       allowNull: true
     },
     published: {

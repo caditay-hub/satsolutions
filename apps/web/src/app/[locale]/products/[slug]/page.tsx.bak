@@ -1,0 +1,298 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories } from "@/lib/api";
+import Image from "next/image";
+import { resolveImageUrl } from "@/lib/image";
+import { formatPrice } from "@/lib/price";
+import { BackButton } from "@/components/BackButton";
+import { AddToCartButton } from "@/components/AddToCartButton";
+import { ProductCard } from "@/components/Cards";
+import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+
+function pickRate(data: any): number | null {
+  const v = data?.usdToUzs;
+  const n = typeof v === "number" ? v : typeof v === "string" ? Number(v) : NaN;
+  return Number.isFinite(n) && n > 0 ? n : null;
+}
+
+// Pick an emoji icon for a given characteristic key (best-effort)
+function iconFor(key: string): string {
+  const k = key.toLowerCase();
+  if (/(разрешен|пиксел|мп|мегапикс|mp$|\d\s*mp)/i.test(k)) return "📷";
+  if (/(угол|обзор|fov|360|панорам)/i.test(k)) return "📐";
+  if (/(защ|ip\d|ik\d|water|вода|пыль)/i.test(k)) return "🛡";
+  if (/(питан|вольт|вт|poe|power|вход)/i.test(k)) return "⚡";
+  if (/(аналитик|ии|ai|deep|нейр)/i.test(k)) return "🤖";
+  if (/(термо|темпера|°c)/i.test(k)) return "🌡";
+  if (/(ик|ir|подсвет|ноч)/i.test(k)) return "🌙";
+  if (/(аудио|микрофон|звук|sound)/i.test(k)) return "🔊";
+  if (/(кадр|fps|fr\.)/i.test(k)) return "🎬";
+  if (/(зум|zoom|объект|lens|фокус)/i.test(k)) return "🔍";
+  if (/(сенсор|matrix|cmos)/i.test(k)) return "📸";
+  if (/(установ|montag|места|внутр|снаруж)/i.test(k)) return "📍";
+  if (/(плат|unity|alta|onvif)/i.test(k)) return "🔗";
+  if (/(сд|sd|карта|пам|память|storage)/i.test(k)) return "💾";
+  if (/(гаран|warranty)/i.test(k)) return "✅";
+  if (/(статус|снят|eol)/i.test(k)) return "ℹ";
+  return "▸";
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  try {
+    const { product } = await getProductBySlug(slug);
+    const ogImage = resolveImageUrl(product.coverImageUrl) ?? undefined;
+    return {
+      title: product.name,
+      description: product.shortDescription ?? product.name,
+      alternates: { canonical: `/products/${product.slug}` },
+      openGraph: {
+        title: product.name,
+        description: product.shortDescription ?? product.name,
+        images: ogImage ? [{ url: ogImage }] : undefined
+      }
+    };
+  } catch {
+    return { title: "Продукт" };
+  }
+}
+
+export default async function ProductDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+
+  try {
+    const { product } = await getProductBySlug(slug);
+    let usdToUzs = 1;
+    try {
+      const { page } = await getSitePage("site");
+      usdToUzs = pickRate(page.data) ?? 1;
+    } catch {
+      // ignore
+    }
+
+    // Resolve brand + category for breadcrumbs and badge
+    let brandInfo: { slug: string; name: string } | null = null;
+    let categoryInfo: { slug: string; name: string } | null = null;
+    try {
+      const [{ brands }, { categories }] = await Promise.all([getBrands(), getCategories()]);
+      const b = brands.find((x: any) => x.id === (product as any).brandId);
+      if (b) brandInfo = { slug: b.slug, name: b.name };
+      const c = categories.find((x: any) => x.id === product.categoryId);
+      if (c) categoryInfo = { slug: c.slug, name: c.name };
+    } catch {
+      // ignore
+    }
+
+    const priceUzs = (product as any).isUsd ? Number(product.price ?? 0) * usdToUzs : Number(product.price ?? 0);
+    const characteristics = product.characteristics ?? {};
+    const charEntries = Object.entries(characteristics);
+    const highlights = charEntries.slice(0, 4);
+    const img = resolveImageUrl(product.coverImageUrl);
+    const modelCode = (product as any).modelCode as string | null;
+    const isEol = !!characteristics["Статус"]?.toString().toLowerCase().includes("снят");
+    const hasPrice = priceUzs > 0;
+
+    // Similar products from same category (excluding current)
+    let similarItems: any[] = [];
+    if (categoryInfo) {
+      try {
+        const similar = await getProducts(1, 12, { category: categoryInfo.slug, brand: brandInfo?.slug });
+        similarItems = similar.items.filter((p: any) => p.id !== product.id).slice(0, 6);
+      } catch {
+        // ignore
+      }
+    }
+
+    return (
+      <div className="container-page py-3 sm:py-4">
+        {/* Breadcrumbs */}
+        <nav className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
+          <Link href="/" className="hover:text-slate-900 transition-colors">Главная</Link>
+          <span className="text-slate-300">/</span>
+          <Link href="/catalog" className="hover:text-slate-900 transition-colors">Каталог</Link>
+          {brandInfo && (
+            <>
+              <span className="text-slate-300">/</span>
+              <Link href={`/catalog/${brandInfo.slug}`} className="hover:text-slate-900 transition-colors">
+                {brandInfo.name}
+              </Link>
+            </>
+          )}
+          {categoryInfo && (
+            <>
+              <span className="text-slate-300">/</span>
+              <Link href={`/categories/${categoryInfo.slug}`} className="hover:text-slate-900 transition-colors">
+                {categoryInfo.name}
+              </Link>
+            </>
+          )}
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-900 normal-case tracking-normal">{modelCode ?? product.slug}</span>
+        </nav>
+
+        <div className="grid gap-4 lg:gap-6 lg:grid-cols-[32%_1fr]">
+          {/* Left: image */}
+          <div>
+            {img ? (
+              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+                <Image
+                  alt={product.name}
+                  src={img}
+                  width={1200}
+                  height={900}
+                  sizes="(max-width: 1024px) 100vw, 32vw"
+                  className="h-auto w-full object-contain"
+                  priority
+                />
+              </div>
+            ) : (
+              <div className="flex w-full items-center justify-center rounded-xl border border-slate-200 bg-slate-50 py-12 text-sm text-slate-600">
+                Нет изображения
+              </div>
+            )}
+          </div>
+
+          {/* Right: meta + actions + specs */}
+          <div>
+            {/* Brand & status badges */}
+            <div className="flex flex-wrap items-center gap-2 mb-2">
+              {brandInfo && (
+                <Link
+                  href={`/catalog/${brandInfo.slug}`}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-md text-xs font-bold uppercase tracking-wide transition-colors"
+                >
+                  <span style={{ color: "#e02020" }}>●</span> {brandInfo.name}
+                </Link>
+              )}
+              {isEol ? (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
+                  ⚠ Снят с производства
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full" /> В наличии
+                </span>
+              )}
+              {(product as any).recommended && (
+                <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">ХИТ</span>
+              )}
+            </div>
+
+            {/* Title + model code */}
+            <h1 className="text-xl font-bold tracking-tight sm:text-2xl leading-tight">{product.name}</h1>
+            {modelCode ? (
+              <div className="mt-1 text-base font-mono font-semibold text-slate-600 tracking-wide">
+                {modelCode}
+              </div>
+            ) : null}
+            {product.shortDescription ? (
+              <p className="mt-2 text-sm text-slate-600">{product.shortDescription}</p>
+            ) : null}
+
+            {/* Action row */}
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <BackButton />
+              <AddToCartButton
+                className="rounded-lg bg-[#e02020] px-4 py-2 text-sm font-semibold text-white hover:opacity-90"
+                item={{
+                  productId: product.id,
+                  slug: product.slug,
+                  name: product.name,
+                  price: String(priceUzs),
+                  coverImageUrl: product.coverImageUrl
+                }}
+              />
+              <RequestQuoteButton
+                productName={`${product.name}${modelCode ? ` (${modelCode})` : ""}`}
+              />
+              <div className="inline-flex items-baseline gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-2 ml-auto">
+                {hasPrice ? (
+                  <>
+                    <span className="text-xs text-slate-500">Цена:</span>
+                    <span className="text-sm font-semibold text-slate-900">{formatPrice(priceUzs)} UZS</span>
+                  </>
+                ) : (
+                  <span className="text-xs font-semibold text-slate-700">Цена по запросу</span>
+                )}
+              </div>
+            </div>
+
+            {/* Key highlights (icons) */}
+            {highlights.length > 0 && (
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2 border border-slate-200 rounded-xl p-3 bg-gradient-to-br from-slate-50 to-white">
+                {highlights.map(([k, v]) => (
+                  <div key={k} className="text-center">
+                    <div className="text-xl">{iconFor(k)}</div>
+                    <div className="text-[11px] text-slate-500 mt-0.5 line-clamp-1" title={k}>{k}</div>
+                    <div className="text-sm font-bold line-clamp-2" title={String(v)}>{String(v)}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Full characteristics + description (no tabs since data is sparse) */}
+            {charEntries.length > 0 && (
+              <div className="mt-4 overflow-hidden rounded-xl border border-slate-200">
+                <div className="bg-slate-50 px-4 py-2 text-sm font-semibold">Характеристики</div>
+                <dl className="divide-y divide-slate-100 bg-white">
+                  {charEntries.map(([k, v]) => (
+                    <div key={k} className="grid grid-cols-1 gap-1 px-4 py-2 sm:grid-cols-3 sm:gap-4">
+                      <dt className="text-sm text-slate-500">{k}</dt>
+                      <dd className="text-sm font-semibold text-slate-800 sm:col-span-2">{String(v)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            {product.description && (
+              <div className="prose prose-sm prose-slate mt-4 max-w-none">
+                <p className="whitespace-pre-line">{product.description}</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Help banner — "Need help choosing?" */}
+        <div className="mt-8 rounded-xl bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 p-4 sm:p-6 flex flex-wrap items-center gap-4">
+          <div className="text-3xl">💬</div>
+          <div className="flex-1 min-w-[200px]">
+            <div className="font-bold text-base">Нужна помощь с выбором?</div>
+            <div className="text-xs sm:text-sm text-slate-600">Наш инженер подберёт оборудование под вашу задачу и пришлёт КП за 30 минут.</div>
+          </div>
+          <Link
+            href="/contact"
+            className="rounded-lg text-white px-5 py-2.5 font-bold text-sm hover:opacity-90"
+            style={{ backgroundColor: "#e02020" }}
+          >
+            Получить консультацию →
+          </Link>
+        </div>
+
+        {/* Similar items in same category */}
+        {similarItems.length > 0 && (
+          <div className="mt-8">
+            <div className="flex items-center justify-between mb-3">
+              <div className="text-lg font-bold tracking-tight">
+                {categoryInfo ? `Похожие: ${categoryInfo.name}` : "Похожие товары"}
+              </div>
+              {categoryInfo && (
+                <Link href={`/categories/${categoryInfo.slug}`} className="text-xs font-bold text-[#e02020] hover:underline">
+                  Вся категория →
+                </Link>
+              )}
+            </div>
+            <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+              {similarItems.map((p: any) => (
+                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  } catch {
+    notFound();
+  }
+}

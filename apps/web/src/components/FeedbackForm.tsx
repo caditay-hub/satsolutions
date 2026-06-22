@@ -1,10 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { trackLead } from "@/lib/gtag";
+import { useTranslations } from "next-intl";
 
 type Status = "idle" | "sending" | "ok" | "error";
 
 export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
+  const t = useTranslations("form");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -63,39 +66,46 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
         throw new Error(msg);
       }
       setStatus("ok");
+      trackLead();
       setName("");
       setPhoneRest("");
       setEmail("");
       setMessage("");
     } catch (e: any) {
       setStatus("error");
-      setError(e?.message ?? "Ошибка отправки");
+      setError(e?.message ?? t("errSend"));
     }
   }
 
   return (
-    <div className={`rounded-2xl ${hideHeader ? "" : "border border-slate-200 bg-white p-6"}`} data-aos="fade-up">
+    <div className={`rounded-2xl ${hideHeader ? "" : "border border-slate-200 bg-white p-6"}`}>
       {!hideHeader ? (
         <>
-          <div className="text-lg font-bold text-slate-950">Обратная связь</div>
-          <div className="mt-1 text-base font-semibold text-slate-800">Оставьте сообщение — мы свяжемся с вами.</div>
+          <div className="text-lg font-bold text-slate-950">{t("feedbackTitle")}</div>
+          <div className="mt-1 text-base font-semibold text-slate-800">{t("feedbackSub")}</div>
         </>
       ) : null}
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <label className="block">
-          <div className="text-sm font-bold text-slate-900">Имя</div>
+          <div className="text-sm font-bold text-slate-900">{t("name")}</div>
           <input
+            type="text"
+            name="name"
+            autoComplete="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="mt-1 w-full rounded-lg border-2 border-slate-300 px-4 py-3 text-base font-medium text-slate-950 focus:border-brand-600 outline-none transition-colors"
-            placeholder="Ваше имя"
+            placeholder={t("yourName")}
           />
         </label>
         <label className="block">
-          <div className="text-sm font-bold text-slate-900">Телефон</div>
+          <div className="text-sm font-bold text-slate-900">{t("phone")}</div>
           <div className="mt-1 flex overflow-hidden rounded-lg border-2 border-slate-300 focus-within:border-brand-600 transition-colors">
             <div className="flex items-center bg-slate-100 px-4 text-base font-bold text-slate-900">+998</div>
             <input
+              type="tel"
+              name="phone"
+              autoComplete="tel"
               inputMode="tel"
               value={formatUzRest(phoneRest)}
               onChange={(e) => setPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
@@ -107,6 +117,9 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
         <label className="block">
           <div className="text-sm font-bold text-slate-900">Email</div>
           <input
+            type="email"
+            name="email"
+            autoComplete="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="mt-1 w-full rounded-lg border-2 border-slate-300 px-4 py-3 text-base font-medium text-slate-950 focus:border-brand-600 outline-none transition-colors"
@@ -117,13 +130,14 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
       </div>
       <div className="mt-3">
         <label className="block">
-          <div className="text-sm font-bold text-slate-900">Сообщение</div>
+          <div className="text-sm font-bold text-slate-900">{t("message")}</div>
           <textarea
+            name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             className="mt-1 w-full rounded-lg border-2 border-slate-300 px-4 py-3 text-base font-medium text-slate-950 focus:border-brand-600 outline-none transition-colors"
             rows={5}
-            placeholder="Напишите ваш вопрос..."
+            placeholder={t("msgPlaceholder")}
           />
         </label>
       </div>
@@ -134,12 +148,12 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
           disabled={!canSend}
           className="btn-primary"
         >
-          {status === "sending" ? "Отправка..." : "Отправить"}
+          {status === "sending" ? t("sending") : t("send")}
         </button>
       </div>
       {status === "ok" ? (
         <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold text-emerald-800">
-          Сообщение отправлено. Спасибо!
+          {t("sent")}
         </div>
       ) : null}
       {status === "error" && error ? (

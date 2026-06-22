@@ -17,6 +17,7 @@ import { adminRouter } from "./routes/admin.js";
 import { authRouter } from "./routes/auth.js";
 import { healthRouter } from "./routes/health.js";
 import { publicRouter } from "./routes/public.js";
+import { smartSearchRouter } from "./routes/smartSearch.js";
 import { createSocketServer } from "./chatSocket.js";
 
 const env = getEnv();
@@ -59,6 +60,7 @@ async function main() {
   app.use(healthRouter);
   app.use(authRouter);
   app.use(publicRouter);
+  app.use(smartSearchRouter);
 
   // Public static files (images)
   app.use("/uploads", express.static(uploadsDir, { maxAge: "365d", immutable: true }));

@@ -3,16 +3,14 @@
 import { useEffect, useState } from "react";
 import { AdminNav } from "@/components/AdminNav";
 import { AuthGate } from "@/components/AuthGate";
-import { apiFetch, type BrandDto, type CategoryDto } from "@/lib/api";
+import { apiFetch, type CategoryDto } from "@/lib/api";
 import { uploadImage } from "@/lib/upload";
 import { ConfirmDialog } from "@/components/ConfirmDialog";
 
 export default function CategoriesPage() {
   const [items, setItems] = useState<CategoryDto[]>([]);
-  const [brands, setBrands] = useState<BrandDto[]>([]);
   const [name, setName] = useState("");
   const [parentId, setParentId] = useState<string>("");
-  const [brandId, setBrandId] = useState<string>("");
   const [coverImageUrl, setCoverImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -30,9 +28,6 @@ export default function CategoriesPage() {
 
   useEffect(() => {
     reload().catch(() => null);
-    apiFetch<{ brands: BrandDto[] }>("/admin/brands")
-      .then((r) => setBrands(r.brands ?? []))
-      .catch(() => setBrands([]));
   }, []);
 
   async function createCategory(e: React.FormEvent) {
@@ -44,13 +39,11 @@ export default function CategoriesPage() {
         body: JSON.stringify({
           name,
           parentId: parentId || null,
-          brandId: brandId || null,
           coverImageUrl: coverImageUrl || null
         })
       });
       setName("");
       setParentId("");
-      setBrandId("");
       setCoverImageUrl("");
       await reload();
     } finally {
@@ -125,7 +118,6 @@ export default function CategoriesPage() {
         body: JSON.stringify({
           name: editing.name,
           parentId: editing.parentId,
-          brandId: (editing as any).brandId ?? null,
           coverImageUrl: editing.coverImageUrl
         })
       });
@@ -175,21 +167,6 @@ export default function CategoriesPage() {
                     {c.name}
                   </option>
                 ))}
-              </select>
-              <select
-                value={brandId}
-                onChange={(e) => setBrandId(e.target.value)}
-                className="w-64 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm"
-              >
-                <option value="">(без бренда)</option>
-                {brands
-                  .slice()
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((b) => (
-                    <option key={b.id} value={b.id}>
-                      {b.name}
-                    </option>
-                  ))}
               </select>
               <input
                 value={coverImageUrl}
@@ -288,25 +265,6 @@ export default function CategoriesPage() {
                   onChange={(e) => setEditing({ ...editing, name: e.target.value })}
                   className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
                 />
-              </label>
-
-              <label className="block">
-                <div className="text-sm font-medium text-slate-700">Бренд (опционально)</div>
-                <select
-                  value={(editing as any).brandId ?? ""}
-                  onChange={(e) => setEditing({ ...(editing as any), brandId: e.target.value || null } as any)}
-                  className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm"
-                >
-                  <option value="">(без бренда)</option>
-                  {brands
-                    .slice()
-                    .sort((a, b) => a.name.localeCompare(b.name))
-                    .map((b) => (
-                      <option key={b.id} value={b.id}>
-                        {b.name}
-                      </option>
-                    ))}
-                </select>
               </label>
 
               <label className="block">

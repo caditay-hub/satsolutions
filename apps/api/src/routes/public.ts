@@ -17,6 +17,17 @@ import { ServiceCategory } from "../models/ServiceCategory.js";
 import { sequelize } from "../db.js";
 import { parseLimit, parsePositiveInt } from "../utils/pagination.js";
 
+// Нормализация значений характеристик: схлопывает регистр, пробелы, пробел между числом
+// и единицей («6 кВ»→«6кв») и транслитерирует кириллицу в латиницу — так «6 кВ» = «6KV» = «6kV».
+// Применяется в SQL (charNormSql) и в фасетах, и в chars-фильтре /products — должны совпадать.
+const CYR_FROM = "абвгдеёзийклмнопрстуфхцыэ";
+const CYR_TO = "abvgdeeziiklmnoprstufhcye";
+function charNormSql(expr: string): string {
+  const collapse = `regexp_replace(lower(btrim(${expr})), '\\s+', ' ', 'g')`;
+  const joinUnit = `regexp_replace(${collapse}, '([0-9]) ([a-zа-яё])', '\\1\\2', 'g')`;
+  return `translate(${joinUnit}, '${CYR_FROM}', '${CYR_TO}')`;
+}
+
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
   const n = typeof v === "number" ? v : typeof v === "string" ? Number(v) : NaN;
@@ -25,9 +36,50 @@ function pickRate(data: any): number | null {
 
 export const publicRouter = Router();
 
-publicRouter.get("/categories", async (_req, res) => {
-  const categories = await Category.findAll({ order: [["name", "ASC"]] });
-  res.json({ categories });
+publicRouter.get("/product-types", async (req, res) => {
+  const brandSlugs = (typeof req.query.brand === "string" ? req.query.brand : "")
+    .split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+  const rows = await sequelize.query<any>(
+    `SELECT c.name AS name, count(p.id)::int AS count
+     FROM products p
+     JOIN categories c ON c.id = p."categoryId"
+     ${brandSlugs.length ? 'JOIN brands b ON b.id = p."brandId"' : ''}
+     WHERE p.published = true ${brandSlugs.length ? 'AND LOWER(b.slug) IN (:brandSlugs)' : ''}
+     GROUP BY c.name
+     HAVING count(p.id) > 0
+     ORDER BY count DESC, c.name ASC`,
+    { type: "SELECT" as any, replacements: brandSlugs.length ? { brandSlugs } : {} }
+  );
+  res.json({ types: rows });
+});
+
+publicRouter.get("/categories", async (req, res) => {
+  const brandSlug = typeof req.query.brand === "string" ? req.query.brand.trim().toLowerCase() : "";
+  if (!brandSlug) {
+    const categories = await Category.findAll({ order: [["name", "ASC"]] });
+    return res.json({ categories });
+  }
+
+  // Categories that contain products of this brand + all their ancestors (so tree is connected)
+  const rows = await sequelize.query<any>(
+    `WITH RECURSIVE cwb AS (
+       SELECT DISTINCT c.*
+       FROM categories c
+       JOIN products p ON p."categoryId" = c.id
+       JOIN brands b ON p."brandId" = b.id
+       WHERE LOWER(b.slug) = :brandSlug
+       UNION
+       SELECT pc.*
+       FROM categories pc
+       JOIN cwb ON pc.id = cwb."parentId"
+     )
+     SELECT * FROM cwb ORDER BY name ASC`,
+    {
+      type: "SELECT" as any,
+      replacements: { brandSlug }
+    }
+  );
+  res.json({ categories: rows });
 });
 
 publicRouter.get("/portfolio-categories", async (_req, res) => {
@@ -52,27 +104,43 @@ publicRouter.get("/partners", async (_req, res) => {
 
 publicRouter.get("/products", async (req, res) => {
   const page = parsePositiveInt(req.query.page, 1);
-  const limit = parseLimit(req.query.limit, 12, 50);
+  const limit = parseLimit(req.query.limit, 12, 2000);
   const offset = (page - 1) * limit;
 
   const q = typeof req.query.q === "string" ? req.query.q.trim() : "";
   const category = typeof req.query.category === "string" ? req.query.category.trim() : "";
   const brand = typeof req.query.brand === "string" ? req.query.brand.trim() : "";
-  const sort = typeof req.query.sort === "string" ? req.query.sort : "new";
+  const sort = typeof req.query.sort === "string" ? req.query.sort : "default";
   const recommendedRaw = typeof req.query.recommended === "string" ? req.query.recommended.trim().toLowerCase() : "";
   const mp = typeof req.query.mp === "string" ? req.query.mp.trim() : "";
   const audio = typeof req.query.audio === "string" ? req.query.audio.trim() : "";
   const technology = typeof req.query.technology === "string" ? req.query.technology.trim() : "";
   const installationType = typeof req.query.installationType === "string" ? req.query.installationType.trim() : "";
+  const priceMin = Number(req.query.priceMin) || 0;
+  const priceMax = Number(req.query.priceMax) || 0;
+  // chars = JSON {"Ключ":"Значение", ...} — фасетный фильтр по characteristics
+  let charsFilter: Array<[string, string[]]> = [];
+  try {
+    const cj = typeof req.query.chars === "string" ? JSON.parse(req.query.chars) : null;
+    if (cj && typeof cj === "object") {
+      charsFilter = Object.entries(cj).map(([k, v]) => [String(k), (Array.isArray(v) ? v : [v]).map(String).filter(Boolean)] as [string, string[]]);
+    }
+  } catch { /* ignore bad chars */ }
 
   const where: any = { published: true };
   if (recommendedRaw === "1" || recommendedRaw === "true" || recommendedRaw === "yes") {
     where.recommended = true;
   }
   if (q) {
+    // Поиск по названию/модели/описанию товара + по названию КАТЕГОРИИ и БРЕНДА
+    // (чтобы запросы вида «оптика», «hikvision», «шкаф» гарантированно давали товары)
+    const ql = q.replace(/'/g, "''");
     where[Op.or] = [
       { name: { [Op.iLike]: `%${q}%` } },
-      { shortDescription: { [Op.iLike]: `%${q}%` } }
+      { modelCode: { [Op.iLike]: `%${q}%` } },
+      { shortDescription: { [Op.iLike]: `%${q}%` } },
+      sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${ql}%')`),
+      sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${ql}%')`),
     ];
   }
 
@@ -169,6 +237,19 @@ publicRouter.get("/products", async (req, res) => {
     ];
   }
 
+  // chars facet filter: значение-ячейка режется на токены по «,» и «/», товар проходит,
+  // если СОДЕРЖИТ хотя бы один из выбранных токенов (OR внутри параметра, AND между параметрами).
+  for (const [k, vals] of charsFilter) {
+    if (!vals.length) continue;
+    const ek = k.replace(/'/g, "''");
+    const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
+    const exists = `EXISTS (SELECT 1 FROM unnest(string_to_array(coalesce("Product"."characteristics"->>'${ek}', ''), ',')) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
+    where[Op.and] = [
+      ...(Array.isArray(where[Op.and]) ? where[Op.and] : []),
+      sequelize.literal(exists)
+    ];
+  }
+
   const isUuid = (v: string) => /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(v);
 
   let categoryId: string | null = null;
@@ -182,6 +263,21 @@ publicRouter.get("/products", async (req, res) => {
       if (bySlug) categoryId = bySlug.id;
     }
   }
+  // type = функциональный тип (имя категории), можно несколько через запятую
+  const typeNames = (typeof req.query.type === "string" ? req.query.type : "")
+    .split(",").map((s) => s.trim()).filter(Boolean);
+  if (typeNames.length && !categoryId) {
+    const cats = await sequelize.query<any>(
+      `WITH RECURSIVE base AS (
+         SELECT id FROM categories WHERE LOWER(name) IN (:names)
+         UNION
+         SELECT c.id FROM categories c JOIN base ON c."parentId" = base.id
+       ) SELECT id FROM base`,
+      { type: "SELECT" as any, replacements: { names: typeNames.map((n) => n.toLowerCase()) } }
+    );
+    const ids = cats.map((c: any) => c.id);
+    where.categoryId = { [Op.in]: ids.length ? ids : ["00000000-0000-0000-0000-000000000000"] };
+  }
   if (categoryId) {
     // if user clicks parent category, show products for it + its first-level children
     const children = await Category.findAll({ where: { parentId: categoryId }, attributes: ["id"] });
@@ -189,17 +285,20 @@ publicRouter.get("/products", async (req, res) => {
     where.categoryId = { [Op.in]: ids };
   }
 
-  let brandId: string | null = null;
-  if (brand) {
-    if (isUuid(brand)) {
-      const byId = await Brand.findByPk(brand, { attributes: ["id"] });
-      if (byId) brandId = byId.id;
-    } else {
-      const bySlug = await Brand.findOne({ where: { slug: brand, published: true }, attributes: ["id"] });
-      if (bySlug) brandId = bySlug.id;
-    }
+  const brandSlugs = brand.split(",").map((s) => s.trim()).filter(Boolean);
+  if (brandSlugs.length) {
+    const uuids = brandSlugs.filter((b) => isUuid(b));
+    const slugs = brandSlugs.filter((b) => !isUuid(b));
+    const found = await Brand.findAll({
+      where: { published: true, [Op.or]: [
+        ...(uuids.length ? [{ id: { [Op.in]: uuids } }] : []),
+        ...(slugs.length ? [{ slug: { [Op.in]: slugs } }] : []),
+      ] } as any,
+      attributes: ["id"],
+    });
+    const ids = found.map((b) => b.id);
+    where.brandId = { [Op.in]: ids.length ? ids : ["00000000-0000-0000-0000-000000000000"] };
   }
-  if (brandId) where.brandId = brandId;
 
   // Use site exchange rate so USD prices are converted to UZS for correct ordering
   let usdToUzs = 1;
@@ -215,6 +314,20 @@ publicRouter.get("/products", async (req, res) => {
     `CASE WHEN "Product"."isUsd" = true THEN "Product"."price" * ${usdToUzs} ELSE "Product"."price" END`
   );
 
+  // Price range filter (по сконвертированной в UZS цене)
+  const priceSql = `CASE WHEN "Product"."isUsd" = true THEN "Product"."price" * ${usdToUzs} ELSE "Product"."price" END`;
+  if (priceMin > 0 || priceMax > 0) {
+    const conds: any[] = [sequelize.literal(`"Product"."price" IS NOT NULL AND "Product"."price" > 0`)];
+    if (priceMin > 0) conds.push(sequelize.literal(`(${priceSql}) >= ${priceMin}`));
+    if (priceMax > 0) conds.push(sequelize.literal(`(${priceSql}) <= ${priceMax}`));
+    where[Op.and] = [...(Array.isArray(where[Op.and]) ? where[Op.and] : []), ...conds];
+  }
+
+  // Category lookup expression (for grouping products by category in default sort)
+  const categoryNameExpr = sequelize.literal(
+    `(SELECT name FROM categories WHERE id = "Product"."categoryId")`
+  );
+
   const order: any[] =
     sort === "price_asc"
       ? [[convertedPriceExpr, "ASC"]]
@@ -226,7 +339,10 @@ publicRouter.get("/products", async (req, res) => {
             ? [["name", "DESC"]]
             : sort === "old"
               ? [["updatedAt", "ASC"]]
-              : [["updatedAt", "DESC"]];
+              : sort === "new"
+                ? [["updatedAt", "DESC"]]
+                // default: by category, then by name — logical grouping
+                : [[categoryNameExpr, "ASC"], ["name", "ASC"]];
 
   const { rows, count } = await Product.findAndCountAll({
     where,
@@ -235,6 +351,88 @@ publicRouter.get("/products", async (req, res) => {
     offset
   });
   res.json({ items: rows, total: count, page, limit });
+});
+
+// Фасеты для страницы типа: бренды, диапазон цены, топ-характеристики (из characteristics)
+publicRouter.get("/product-facets", async (req, res) => {
+  const typeNames = (typeof req.query.type === "string" ? req.query.type : "")
+    .split(",").map((s) => s.trim()).filter(Boolean);
+  const q = typeof req.query.q === "string" ? req.query.q.trim() : "";
+
+  let catIds: string[] = [];
+  if (typeNames.length) {
+    const cats = await sequelize.query<any>(
+      `WITH RECURSIVE base AS (
+         SELECT id FROM categories WHERE LOWER(name) IN (:names)
+         UNION SELECT c.id FROM categories c JOIN base ON c."parentId" = base.id
+       ) SELECT id FROM base`,
+      { type: "SELECT" as any, replacements: { names: typeNames.map((n) => n.toLowerCase()) } }
+    );
+    catIds = cats.map((c: any) => c.id);
+  }
+  if (!catIds.length) return res.json({ brands: [], price: { min: 0, max: 0 }, chars: [] });
+
+  const repl: any = { catIds };
+  let cond = `p.published = true AND p."categoryId" IN (:catIds)`;
+  if (q) { repl.q = `%${q}%`; cond += ` AND (p.name ILIKE :q OR p."modelCode" ILIKE :q)`; }
+
+  let usdToUzs = 1;
+  try { const site = await SitePage.findOne({ where: { key: "site" } }); usdToUzs = pickRate(site?.data) ?? 1; } catch { /* ignore */ }
+  const priceSql = `CASE WHEN p."isUsd" = true THEN p.price * ${usdToUzs} ELSE p.price END`;
+
+  const brands = await sequelize.query<any>(
+    `SELECT b.slug, b.name, count(*)::int AS count
+     FROM products p JOIN brands b ON b.id = p."brandId"
+     WHERE ${cond} AND b.published = true
+     GROUP BY b.slug, b.name ORDER BY count DESC, b.name ASC`,
+    { type: "SELECT" as any, replacements: repl }
+  );
+  const priceRows = await sequelize.query<any>(
+    `SELECT floor(min(${priceSql}))::int AS min, ceil(max(${priceSql}))::int AS max
+     FROM products p WHERE ${cond} AND p.price IS NOT NULL AND p.price > 0`,
+    { type: "SELECT" as any, replacements: repl }
+  );
+  // Токенизация значений-списков («VLAN, LAG, QoS», «Radius/Tacacs+») по «,» и «/»:
+  // каждый токен — отдельное значение фильтра; считаем РАЗНЫЕ ТОВАРЫ на токен; кириллица/регистр
+  // схлопываются в GROUP BY (charNormSql), для показа берём самое частое исходное написание (mode).
+  // Перед токенизацией срезаем скобки «(...)» — они дают длинные хвосты и ломают
+  // разрез по запятой внутри «(F1.0, AGC ON)». Так значения короче (NAG-стиль) и дубли мержатся.
+  const charRows = await sequelize.query<any>(
+    `SELECT kv.key AS key,
+            mode() WITHIN GROUP (ORDER BY btrim(t.tok)) AS display,
+            count(DISTINCT p.id)::int AS count
+     FROM products p,
+          jsonb_each_text(p.characteristics) AS kv(key, value),
+          unnest(string_to_array(regexp_replace(kv.value, '\\s*\\([^)]*\\)', '', 'g'), ',')) AS t(tok)
+     WHERE ${cond} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
+       AND char_length(btrim(t.tok)) BETWEEN 2 AND 28
+     GROUP BY kv.key, ${charNormSql("t.tok")}`,
+    { type: "SELECT" as any, replacements: repl }
+  );
+  const RARE_MIN = 3; // прячем токены, что есть лишь у 1–2 товаров
+  const byKey: Record<string, Array<{ value: string; count: number }>> = {};
+  for (const r of charRows as any[]) {
+    const value = String(r.display || "").trim();
+    if (!value || r.count < RARE_MIN) continue;
+    (byKey[r.key] ||= []).push({ value, count: r.count });
+  }
+  const chars = Object.entries(byKey)
+    .map(([key, vals]) => {
+      const top = [...vals].sort((a, b) => b.count - a.count).slice(0, 20); // топ-20 по числу товаров
+      const total = top.reduce((a, v) => a + v.count, 0);
+      const values = top.sort((a, b) => a.value.localeCompare(b.value, "ru")); // показ по алфавиту
+      return { key, values, total };
+    })
+    .filter((c) => c.values.length >= 2) // годный фасет: ≥2 значения остались после чистки
+    .sort((a, b) => b.total - a.total)
+    .slice(0, 10)
+    .map((c) => ({ key: c.key, values: c.values }));
+
+  res.json({
+    brands,
+    price: priceRows[0] && (priceRows[0] as any).max ? { min: (priceRows[0] as any).min || 0, max: (priceRows[0] as any).max || 0 } : { min: 0, max: 0 },
+    chars
+  });
 });
 
 publicRouter.get("/products/:slug", async (req, res) => {
@@ -344,7 +542,7 @@ publicRouter.get("/services/:slug", async (req, res) => {
 
 publicRouter.get("/portfolio", async (req, res) => {
   const page = parsePositiveInt(req.query.page, 1);
-  const limit = parseLimit(req.query.limit, 12, 50);
+  const limit = parseLimit(req.query.limit, 12, 2000);
   const offset = (page - 1) * limit;
 
   const category = typeof req.query.category === "string" ? req.query.category.trim() : "";
@@ -403,7 +601,9 @@ publicRouter.get("/portfolio/:slug", async (req, res) => {
 
 publicRouter.get("/site-pages/:key", async (req, res) => {
   const key = req.params.key;
-  if (key !== "about" && key !== "contact" && key !== "site") return res.status(400).json({ error: "Invalid key" });
+  // Разрешённые ключи: статичные страницы + лонгриды категорий (category:<slug>)
+  const allowed = key === "about" || key === "contact" || key === "site" || /^category:[a-z0-9-]+$/.test(key);
+  if (!allowed) return res.status(400).json({ error: "Invalid key" });
   const page = await SitePage.findOne({ where: { key } });
   if (!page) return res.status(404).json({ error: "Not found" });
   res.json({ page });
@@ -462,6 +662,7 @@ publicRouter.post("/feedback", async (req, res) => {
         id: String(created.id), // UUID string, not number
         name: created.name,
         phone: created.phone,
+        email: created.email,
         message: created.message,
         createdAt: String(created.createdAt || new Date().toISOString())
       };

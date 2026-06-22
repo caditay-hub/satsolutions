@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { resolveImageUrl } from "@/lib/image";
 
 function GridCard({ href, imageSrc, imageAlt, label }: { href: string; imageSrc: string; imageAlt: string; label: string }) {

@@ -1,0 +1,113 @@
+"use client";
+
+import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { GroupIcon } from "@/components/GroupIcon";
+import { typeSlug } from "@/lib/typeSlug";
+
+function typeHref(name: string) {
+  return `/products/type/${typeSlug(name)}`;
+}
+
+/** DNS-стиль мега-меню «Каталог»: слева функциональные группы, справа их типы. */
+export function CatalogMega() {
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(0);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function show() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  }
+  function hideSoon() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpen(false), 140);
+  }
+  function go(href: string) {
+    setOpen(false);
+    router.push(href);
+  }
+
+  const group = CATALOG_GROUPS[active];
+
+  return (
+    <div className="relative" onMouseEnter={show} onMouseLeave={hideSoon}>
+      <button
+        type="button"
+        onClick={() => go("/categories")}
+        onFocus={show}
+        aria-expanded={open}
+        className="inline-flex items-center gap-1.5 whitespace-nowrap text-base xl:text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-brand-700"
+      >
+        Каталог
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className={`transition-transform ${open ? "rotate-180" : ""}`}>
+          <path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+        </svg>
+      </button>
+
+      {(
+        <div className={`absolute left-1/2 top-full z-[65] mt-3 w-[840px] max-w-[94vw] -translate-x-1/2 ${open ? "block" : "hidden"}`}>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
+            <div className="grid grid-cols-[230px_1fr]">
+              <div className="border-r border-slate-100 bg-slate-50/60 p-2">
+                {CATALOG_GROUPS.map((g, i) => {
+                  const on = i === active;
+                  return (
+                    <button
+                      key={g.title}
+                      type="button"
+                      onMouseEnter={() => setActive(i)}
+                      onClick={() => go(`/categories#cat-${i}`)}
+                      className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm transition-colors ${on ? "bg-white font-semibold text-brand-700 shadow-sm" : "text-slate-700 hover:bg-white/70"}`}
+                    >
+                      <GroupIcon name={g.icon} className={`h-[18px] w-[18px] shrink-0 ${on ? "text-brand-600" : "text-slate-400"}`} />
+                      <span className="flex-1 truncate">{g.title}</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" className="opacity-40"><path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" /></svg>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="p-4">
+                <div className="mb-2.5 flex items-center justify-between">
+                  <div className="text-[15px] font-semibold text-slate-900">{group.title}</div>
+                  <Link href={typeHref(group.types[0].n)} onClick={() => setOpen(false)} className="text-xs font-bold text-brand-700 hover:underline">
+                    Все товары раздела →
+                  </Link>
+                </div>
+                <div className="grid grid-cols-3 gap-x-4 gap-y-0.5">
+                  {group.types.map((t) => (
+                    <Link
+                      key={t.n}
+                      href={typeHref(t.n)}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-between gap-1.5 rounded-md px-2 py-1.5 text-[13px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
+                    >
+                      <span className="truncate">{t.n}</span>
+                      <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 border-t border-slate-100 bg-slate-50/60 px-4 py-2.5 text-sm">
+              <Link href="/catalog" onClick={() => setOpen(false)} className="font-semibold text-slate-700 hover:text-brand-700">
+                Все бренды
+              </Link>
+              <Link href="/categories" onClick={() => setOpen(false)} className="font-semibold text-slate-700 hover:text-brand-700">
+                Все категории
+              </Link>
+              <Link href="/products" onClick={() => setOpen(false)} className="ml-auto font-bold text-brand-700 hover:underline">
+                Весь каталог →
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

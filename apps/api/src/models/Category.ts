@@ -7,7 +7,6 @@ export class Category extends Model<InferAttributes<Category>, InferCreationAttr
   declare slug: string;
   declare parentId: string | null;
   declare coverImageUrl: string | null;
-  declare brandId: string | null;
   declare createdAt: Date;
   declare updatedAt: Date;
 }
@@ -35,10 +34,6 @@ Category.init(
     coverImageUrl: {
       type: DataTypes.STRING(1000),
       allowNull: true
-    },
-    brandId: {
-      type: DataTypes.UUID,
-      allowNull: true
     }
   },
   {
@@ -46,4 +41,3 @@ Category.init(
     tableName: "categories"
   }
 );
-

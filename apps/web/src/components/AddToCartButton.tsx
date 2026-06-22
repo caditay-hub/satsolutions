@@ -33,7 +33,7 @@ export function AddToCartButton({
       type="button"
       className={
         className ??
-        "btn-secondary !px-3 !py-2 !text-xs"
+        "btn-secondary !px-2 !py-1.5 !text-[11px] whitespace-nowrap"
       }
       onClick={(e) => {
         // If button is inside a <Link>, don't navigate.

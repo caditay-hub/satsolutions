@@ -1,18 +1,25 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { getSitePage } from "@/lib/api";
 import { SocialLinks } from "@/components/SocialLinks";
 import { resolveImageUrl } from "@/lib/image";
 import { contactGeo } from "@/lib/geo";
+import { SatLogo } from "@/components/SatLogo";
+import { localizeAddress } from "@/lib/contentI18n";
 
 function pick(data: any, key: string) {
   return typeof data?.[key] === "string" ? (data[key] as string) : null;
 }
 
 export function SiteFooter() {
+  const t = useTranslations("footer");
+  const tn = useTranslations("nav");
+  const tc = useTranslations("common");
+  const locale = useLocale();
   const [data, setData] = useState<{
     phone: string | null;
     email: string | null;
@@ -83,22 +90,10 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-slate-300 bg-white" id="site-footer">
       <div className="container-page py-5">
-        <div className="grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-4">
-            <div className="flex items-center gap-3">
-              {data.logoImg ? (
-                <span className="inline-flex h-[50px] w-[110px] items-center justify-center rounded-lg bg-white">
-                  <Image alt="Логотип" src={data.logoImg} width={110} height={50} className="h-full w-full rounded-lg object-contain" />
-                </span>
-              ) : (
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-600 text-sm font-semibold text-white">S</div>
-              )}
-              <div>
-                <div className="text-sm font-semibold text-slate-950" suppressHydrationWarning>SAT Solutions</div>
-                <div className="text-xs font-bold text-slate-700" suppressHydrationWarning>Системы видеонаблюдения и безопасности</div>
-              </div>
-            </div>
-            <p className="mt-4 max-w-prose text-sm font-medium text-slate-800">{data.tagline}</p>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
+          <div>
+            <SatLogo size="md" />
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">{t("tagline")}</p>
             <div className="mt-4">
               <SocialLinks
                 instagramUrl={data.instagramUrl}
@@ -108,29 +103,27 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <div className="text-sm font-bold text-slate-950">Разделы</div>
-            <ul className="mt-3 grid grid-cols-3 gap-x-6 gap-y-2 text-sm font-semibold text-slate-800 lg:grid-cols-2">
-              <li><Link href="/" className="hover:text-brand-700">Главная</Link></li>
-              <li><Link href="/categories" className="hover:text-brand-700">Категории</Link></li>
-              <li><Link href="/products" className="hover:text-brand-700">Продукты</Link></li>
-              <li><Link href="/solutions" className="hover:text-brand-700">Решения</Link></li>
-              <li><Link href="/portfolio" className="hover:text-brand-700">Портфолио</Link></li>
-              <li><Link href="/news" className="hover:text-brand-700">Новости</Link></li>
-              <li><Link href="/about" className="hover:text-brand-700">О компании</Link></li>
-              <li><Link href="/partners" className="hover:text-brand-700">Партнеры</Link></li>
-              <li><Link href="/contact" className="hover:text-brand-700">Контакты</Link></li>
-              <li><Link href="/cart" className="hover:text-brand-700">Корзина</Link></li>
+          <div>
+            <div className="text-sm font-bold text-slate-950">{t("sections")}</div>
+            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+              <li><Link href="/" className="hover:text-brand-700">{tn("home")}</Link></li>
+              <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
+              <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
+              <li><Link href="/products" className="hover:text-brand-700">{tn("products")}</Link></li>
+              <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
+              <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
+              <li><Link href="/partners" className="hover:text-brand-700">{t("partners")}</Link></li>
+              <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
-            <div className="text-sm font-bold text-slate-950">Контакты</div>
+          <div>
+            <div className="text-sm font-bold text-slate-950">{tc("contacts")}</div>
             <div className="mt-3 text-sm font-semibold text-slate-800">
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3 max-w-[700px] sm:max-w-full sm:flex sm:flex-col sm:space-y-3 sm:gap-0">
+              <div className="flex flex-col gap-y-3">
                 {data.phone ? (
                   <div>
-                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">Телефон</div>
+                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("phone")}</div>
                     <div className="mt-1 text-slate-950">{data.phone}</div>
                   </div>
                 ) : null}
@@ -142,16 +135,16 @@ export function SiteFooter() {
                 ) : null}
                 {data.address ? (
                   <div>
-                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">Адрес</div>
-                    <div className="mt-1 text-slate-700 leading-tight">{data.address}</div>
+                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("address")}</div>
+                    <div className="mt-1 text-slate-700 leading-tight">{localizeAddress(data.address, locale)}</div>
                   </div>
                 ) : null}
                 {data.geoUrl && data.geoHref ? (
                   <div>
-                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">Геолокация</div>
+                    <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("geo")}</div>
                     <div className="mt-1">
                       <a href={data.geoHref} target="_blank" rel="noopener noreferrer" className="font-bold text-brand-700 hover:underline">
-                        Открыть на карте →
+                        {tc("more")} →
                       </a>
                     </div>
                   </div>
@@ -160,19 +153,19 @@ export function SiteFooter() {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
-            <div className="text-sm font-semibold text-slate-900">Карта</div>
+          <div>
+            <div className="text-sm font-semibold text-slate-900">{t("map")}</div>
             <div className="mt-3 overflow-hidden rounded-2xl border border-slate-200 bg-white relative min-h-[140px] sm:min-h-[200px] flex items-center justify-center group">
               {data.geoWidgetSrc ? (
                 <>
                   {!showMap ? (
                     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-slate-50 p-4 text-center">
-                      <div className="mb-3 text-xs text-slate-700">Нажмите, чтобы загрузить карту (Яндекс.Карты могут использовать cookies)</div>
+                      <div className="mb-3 text-xs text-slate-700">{t("loadMap")}</div>
                       <button
                         onClick={() => setShowMap(true)}
                         className="btn-primary !bg-brand-700 hover:!bg-brand-800 !px-4 !py-2 !text-xs"
                       >
-                        Загрузить карту
+                        {t("map")}
                       </button>
                     </div>
                   ) : (
@@ -187,7 +180,7 @@ export function SiteFooter() {
                   )}
                 </>
               ) : (
-                <div className="p-4 text-sm text-slate-700">Геолокация не настроена.</div>
+                <div className="p-4 text-sm text-slate-700">{t("geoNotSet")}</div>
               )}
             </div>
           </div>
@@ -196,7 +189,7 @@ export function SiteFooter() {
 
       <div className="border-t border-slate-200 bg-slate-50">
         <div className="container-page flex flex-col items-center justify-center gap-1 py-5 text-center text-xs font-bold text-slate-700">
-          <div>© 2026 SAT Solutions. Все права защищены.</div>
+          <div>© 2026 SAT Solutions. {t("rights")}.</div>
           <div>ООО &quot;SUPPLY AND TRANSPORTATION&quot;</div>
         </div>
       </div>
