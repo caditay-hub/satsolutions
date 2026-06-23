@@ -33,6 +33,7 @@ export type BrandDto = {
   logoImageUrl: string | null;
   sortOrder: number;
   published: boolean;
+  productCount?: number;
 };
 
 export type PartnerDto = {

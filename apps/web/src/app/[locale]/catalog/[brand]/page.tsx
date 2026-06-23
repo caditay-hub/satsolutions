@@ -92,6 +92,86 @@ const BRAND_CONFIG: Record<string, { displayName: string; description: string }>
     description:
       "Pixietech — сетевая и телеком-инфраструктура: коммутаторы, SFP-модули, оптика и СКС, телекоммуникационные шкафы, ИБП, IP-телефония, серверное оборудование и инструменты.",
   },
+  snr: {
+    displayName: "SNR",
+    description:
+      "SNR — телеком и сетевое оборудование: управляемые коммутаторы, оптические кроссы и боксы, медиаконвертеры, CWDM-мультиплексоры, SFP-модули и источники питания.",
+  },
+  tuya: {
+    displayName: "Tuya",
+    description:
+      "Tuya — устройства умного дома с Wi-Fi: камеры, датчики, умные розетки и выключатели, замки, термостаты и системы сигнализации.",
+  },
+  cambium: {
+    displayName: "Cambium Networks",
+    description:
+      "Cambium Networks — операторские беспроводные решения: радиомосты ePMP/PMP, точки доступа и оборудование для сетей доступа.",
+  },
+  cisco: {
+    displayName: "Cisco",
+    description:
+      "Cisco — мировой лидер сетевого оборудования: коммутаторы, маршрутизаторы и IP-телефония корпоративного класса.",
+  },
+  vertiv: {
+    displayName: "Vertiv",
+    description:
+      "Vertiv — источники бесперебойного питания (ИБП), системы электропитания и охлаждения для ЦОД и телеком-инфраструктуры.",
+  },
+  teltonika: {
+    displayName: "Teltonika",
+    description:
+      "Teltonika Networks — промышленные сотовые маршрутизаторы и шлюзы (RUT/TRB), IoT и M2M решения для надёжной связи.",
+  },
+  fanvil: {
+    displayName: "Fanvil",
+    description:
+      "Fanvil — IP-телефоны, SIP-домофоны и интеркомы для офисов, гостиниц и систем связи.",
+  },
+  eltex: {
+    displayName: "Eltex",
+    description:
+      "Eltex — производитель телеком-оборудования: коммутаторы, маршрутизаторы, GPON/GEPON и абонентские устройства.",
+  },
+  finen: {
+    displayName: "FINEN",
+    description:
+      "FINEN — телекоммуникационные и серверные шкафы (напольные и настенные) и аксессуары для монтажа оборудования.",
+  },
+  siklu: {
+    displayName: "Siklu",
+    description:
+      "Siklu — радиорелейные системы миллиметрового диапазона (E-band/V-band) для высокоскоростных беспроводных каналов.",
+  },
+  "v-sol": {
+    displayName: "V-SOL",
+    description:
+      "V-SOL — оборудование оптического доступа GPON/EPON: станционные терминалы OLT и абонентские ONU/ONT.",
+  },
+  huawei: {
+    displayName: "Huawei",
+    description:
+      "Huawei — корпоративные коммутаторы, маршрутизаторы и сетевые решения операторского класса.",
+  },
+  bdcom: {
+    displayName: "BDCOM",
+    description:
+      "BDCOM — оборудование широкополосного доступа: станционные терминалы OLT GPON/EPON и абонентские ONU.",
+  },
+  "c-data": {
+    displayName: "C-Data",
+    description:
+      "C-Data — решения оптического доступа GPON/EPON: терминалы OLT и абонентские устройства ONU/ONT.",
+  },
+  h3c: {
+    displayName: "H3C",
+    description:
+      "H3C — корпоративные сети: управляемые коммутаторы, маршрутизаторы и решения для ЦОД.",
+  },
+  apc: {
+    displayName: "APC",
+    description:
+      "APC — источники бесперебойного питания (ИБП), сетевые фильтры и решения электропитания для ИТ-оборудования.",
+  },
 };
 
 // ─── metadata ─────────────────────────────────────────────────────────────────

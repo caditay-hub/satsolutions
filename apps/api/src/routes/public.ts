@@ -94,7 +94,16 @@ publicRouter.get("/service-categories", async (_req, res) => {
 
 publicRouter.get("/brands", async (_req, res) => {
   const brands = await Brand.findAll({ where: { published: true }, order: [["sortOrder", "ASC"], ["name", "ASC"]] });
-  res.json({ brands });
+  // счётчик опубликованных товаров на бренд
+  const counts = (await Product.findAll({
+    attributes: ["brandId", [sequelize.fn("COUNT", sequelize.col("id")), "cnt"]],
+    where: { published: true },
+    group: ["brandId"],
+    raw: true,
+  })) as unknown as Array<{ brandId: string; cnt: string }>;
+  const countMap = new Map(counts.map((c) => [c.brandId, Number(c.cnt)]));
+  const out = brands.map((b) => ({ ...b.toJSON(), productCount: countMap.get(b.id) ?? 0 }));
+  res.json({ brands: out });
 });
 
 publicRouter.get("/partners", async (_req, res) => {

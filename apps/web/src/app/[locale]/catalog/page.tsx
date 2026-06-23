@@ -60,14 +60,23 @@ export default async function CatalogIndexPage() {
             const brand = brands.find((b) => b.slug.toLowerCase() === slug);
             const logo = brand?.logoImageUrl ? resolveImageUrl(brand.logoImageUrl) : null;
             const name = brand?.name ?? fallbackName;
+            const count = brand?.productCount ?? 0;
 
             return (
               <Link
                 key={slug}
                 href={`/catalog/${slug}`}
-                className="group border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
+                className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
                 style={{ "--brand-color": color } as React.CSSProperties}
               >
+                {count > 0 && (
+                  <span
+                    className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
+                    title={`Товаров в каталоге: ${count}`}
+                  >
+                    {count} тов.
+                  </span>
+                )}
                 <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
                   {logo ? (
                     <div className="relative h-32 w-full">
