@@ -11,7 +11,9 @@
     "dev:admin": "npm run dev -w @satsolutions/admin",
     "build": "npm run build -w @satsolutions/api && npm run build -w @satsolutions/web && npm run build -w @satsolutions/admin",
     "lint": "npm run lint -w @satsolutions/web && npm run lint -w @satsolutions/admin",
-    "typecheck": "npm run typecheck -w @satsolutions/api && npm run typecheck -w @satsolutions/web && npm run typecheck -w @satsolutions/admin"
+    "typecheck": "npm run typecheck -w @satsolutions/api && npm run typecheck -w @satsolutions/web && npm run typecheck -w @satsolutions/admin",
+    "deploy": "ssh satweb-prod \"bash /root/deploy-satweb.sh\"",
+    "deploy:push-script": "scp scripts/deploy.sh satweb-prod:/root/deploy-satweb.sh"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
