@@ -23,7 +23,10 @@ export type JwtPayload = {
 
 export function signAccessToken(user: Pick<User, "id" | "role" | "email">) {
   const payload: JwtPayload = { sub: user.id, role: user.role, email: user.email };
-  return jwt.sign(payload, env.JWT_SECRET, { expiresIn: env.JWT_EXPIRES_IN });
+  // expiresIn в свежих @types/jsonwebtoken типизирован шаблонным литералом (StringValue),
+  // которому простой string не присваивается; env-значение валидно в рантайме — приводим тип.
+  const options: jwt.SignOptions = { expiresIn: env.JWT_EXPIRES_IN as jwt.SignOptions["expiresIn"] };
+  return jwt.sign(payload, env.JWT_SECRET, options);
 }
 
 export function verifyAccessToken(token: string) {

@@ -14,6 +14,10 @@
     "types": ["node"],
     "sourceMap": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  // Сид-скрипты — одноразовые утилиты, запускаются через tsx (npm run seed*),
+  // в серверный dist не входят; исключены из сборки, чтобы устаревший код сидов
+  // (напр. seed-dahua ссылается на удалённый Category.brandId) не ронял деплой.
+  "exclude": ["src/seed.ts", "src/seed-*.ts"]
 }
 
