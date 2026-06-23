@@ -19,3 +19,6 @@ coverage
 # Медиа-загрузки (рантайм-данные, бэкапятся отдельно — не в историю git)
 apps/api/uploads/
 
+# Персональные настройки Claude Code (машинно-специфичные пути, прокси Headroom) — не в git
+.claude/settings.local.json
+
