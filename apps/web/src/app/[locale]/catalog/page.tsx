@@ -5,6 +5,7 @@ import { getBrands } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { splitBrands, OTHER_BRANDS_SLUG, OTHER_BRANDS_NAME } from "@/lib/brandGroups";
 
 export const revalidate = 300;
 
@@ -30,14 +31,16 @@ const BRAND_COLORS: Record<string, string> = {
 export default async function CatalogIndexPage() {
   // Список брендов — динамический, из БД (published, по sortOrder).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
-  const BRANDS = dbBrands
-    .filter((b) => (b as any).published !== false)
-    .map((b) => ({
-      slug: b.slug.toLowerCase(),
-      fallbackName: b.name,
-      color: BRAND_COLORS[b.slug.toLowerCase()] ?? "#328fa8",
-    }));
-  const brands = dbBrands;
+  // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
+  const { main: mainBrands, small: smallBrands } = splitBrands(dbBrands);
+  const BRANDS = mainBrands.map((b) => ({
+    slug: b.slug.toLowerCase(),
+    fallbackName: b.name,
+    color: BRAND_COLORS[b.slug.toLowerCase()] ?? "#328fa8",
+  }));
+  const brands = mainBrands;
+  const smallTotal = smallBrands.reduce((s, b) => s + (b.productCount ?? 0), 0);
+  const smallNames = smallBrands.map((b) => b.name).join(", ");
 
   return (
     <div className="min-h-screen bg-white font-main">
@@ -114,6 +117,46 @@ export default async function CatalogIndexPage() {
               </Link>
             );
           })}
+
+          {/* Агрегирующая карточка: бренды с малым ассортиментом (1..20 товаров) собраны в одну ссылку */}
+          {smallBrands.length > 0 && (
+            <Link
+              href={`/catalog/${OTHER_BRANDS_SLUG}`}
+              className="group relative border-2 border-dashed border-slate-300 hover:border-solid hover:shadow-xl transition-all bg-slate-50/40 overflow-hidden flex flex-col"
+            >
+              <span
+                className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
+                title={`Товаров внутри: ${smallTotal}`}
+              >
+                {smallTotal} тов.
+              </span>
+              <div className="flex-1 flex flex-col items-center justify-center gap-2 p-4 min-h-[150px]">
+                <span className="text-xl font-black text-slate-900 text-center leading-tight">
+                  {OTHER_BRANDS_NAME}
+                </span>
+                <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
+                  {smallNames}
+                </span>
+              </div>
+              <div
+                className="px-5 py-3 flex items-center justify-between border-t border-slate-100"
+                style={{ backgroundColor: "#fafafa" }}
+              >
+                <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
+                  {smallBrands.length} брендов
+                </span>
+                <svg
+                  className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+          )}
         </div>
       </div>
     </div>
