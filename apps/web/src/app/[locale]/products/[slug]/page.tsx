@@ -95,8 +95,33 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ProductDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
+  // Фетч товара отдельно. 404 («Страница не найдена») — ТОЛЬКО если товар реально
+  // отсутствует (API вернул 404). При временном сбое (таймаут/5xx/сеть, частый при
+  // холодном рендере) — один ретрай, и при повторной ошибке бросаем (Next покажет
+  // ошибку/повторит), а НЕ превращаем в постоянный 404.
+  let product: Awaited<ReturnType<typeof getProductBySlug>>["product"] | undefined;
   try {
-    const { product } = await getProductBySlug(slug);
+    ({ product } = await getProductBySlug(slug));
+  } catch (e) {
+    const msg = String((e as any)?.message || e);
+    if (msg.includes("404")) {
+      const recovered = await recoverProductSlug(slug);
+      if (recovered) permanentRedirect(`/products/${recovered}`);
+      notFound();
+    }
+    try {
+      ({ product } = await getProductBySlug(slug)); // ретрай на временный сбой
+    } catch {
+      throw e; // не 404 — реальный сбой рендера
+    }
+  }
+  if (!product) {
+    const recovered = await recoverProductSlug(slug);
+    if (recovered) permanentRedirect(`/products/${recovered}`);
+    notFound();
+  }
+
+  try {
     let usdToUzs = 1;
     try {
       const { page } = await getSitePage("site");
@@ -378,9 +403,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         )}
       </div>
     );
-  } catch {
-    const recovered = await recoverProductSlug(slug);
-    if (recovered) permanentRedirect(`/products/${recovered}`);
-    notFound();
+  } catch (e) {
+    // Товар уже найден выше; ошибка здесь — это рендер/данные (или служебный
+    // throw от notFound/permanentRedirect) — пробрасываем, не делаем ложный 404.
+    throw e;
   }
 }
