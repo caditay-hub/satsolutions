@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getBrands } from "@/lib/api";
+import { getBrands, type BrandDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -28,17 +28,73 @@ const BRAND_COLORS: Record<string, string> = {
   ubiquiti: "#0f1113", mikrotik: "#293239", prochee: "#328fa8",
 };
 
+// Фиксированный порядок витрины: эти бренды всегда первыми (в этом порядке),
+// далее — все остальные по убыванию количества товаров, в самом конце —
+// «Другие бренды» и «Прочее оборудование».
+const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
+const PINNED_LAST = "prochee";
+
+// Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
+function BrandCard({ b }: { b: BrandDto }) {
+  const slug = b.slug.toLowerCase();
+  const logo = b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
+  const name = b.name;
+  const count = b.productCount ?? 0;
+  const color = BRAND_COLORS[slug] ?? "#328fa8";
+  return (
+    <Link
+      href={`/catalog/${slug}`}
+      className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
+      style={{ "--brand-color": color } as React.CSSProperties}
+    >
+      {count > 0 && (
+        <span
+          className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
+          title={`Товаров в каталоге: ${count}`}
+        >
+          {count} тов.
+        </span>
+      )}
+      <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
+        {logo ? (
+          <div className="relative h-32 w-full">
+            <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
+          </div>
+        ) : (
+          <span className="text-2xl sm:text-3xl font-black text-slate-900 text-center leading-tight">
+            {name}
+          </span>
+        )}
+      </div>
+      <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
+        <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
+          Смотреть каталог
+        </span>
+        <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+    </Link>
+  );
+}
+
 export default async function CatalogIndexPage() {
-  // Список брендов — динамический, из БД (published, по sortOrder).
+  // Список брендов — динамический, из БД (published).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
   // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
   const { main: mainBrands, small: smallBrands } = splitBrands(dbBrands);
-  const BRANDS = mainBrands.map((b) => ({
-    slug: b.slug.toLowerCase(),
-    fallbackName: b.name,
-    color: BRAND_COLORS[b.slug.toLowerCase()] ?? "#328fa8",
-  }));
-  const brands = mainBrands;
+
+  const slugOf = (b: BrandDto) => b.slug.toLowerCase();
+  const front = PINNED_FRONT
+    .map((s) => mainBrands.find((b) => slugOf(b) === s))
+    .filter((b): b is BrandDto => Boolean(b));
+  const procheeBrand = mainBrands.find((b) => slugOf(b) === PINNED_LAST) ?? null;
+  // Остальные — по убыванию количества товаров (Pixietech попадает сюда по своему числу).
+  const middle = mainBrands
+    .filter((b) => !PINNED_FRONT.includes(slugOf(b)) && slugOf(b) !== PINNED_LAST)
+    .sort((a, b) => (b.productCount ?? 0) - (a.productCount ?? 0));
+  const orderedBrands = [...front, ...middle];
+
   const smallTotal = smallBrands.reduce((s, b) => s + (b.productCount ?? 0), 0);
   const smallNames = smallBrands.map((b) => b.name).join(", ");
 
@@ -59,70 +115,16 @@ export default async function CatalogIndexPage() {
         <p className="mt-1 text-sm text-slate-500">Выберите производителя для просмотра полного каталога</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {BRANDS.map(({ slug, fallbackName, color }) => {
-            const brand = brands.find((b) => b.slug.toLowerCase() === slug);
-            const logo = brand?.logoImageUrl ? resolveImageUrl(brand.logoImageUrl) : null;
-            const name = brand?.name ?? fallbackName;
-            const count = brand?.productCount ?? 0;
+          {/* Фикс. фронт + остальные по убыванию количества */}
+          {orderedBrands.map((b) => (
+            <BrandCard key={b.slug.toLowerCase()} b={b} />
+          ))}
 
-            return (
-              <Link
-                key={slug}
-                href={`/catalog/${slug}`}
-                className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
-                style={{ "--brand-color": color } as React.CSSProperties}
-              >
-                {count > 0 && (
-                  <span
-                    className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
-                    title={`Товаров в каталоге: ${count}`}
-                  >
-                    {count} тов.
-                  </span>
-                )}
-                <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
-                  {logo ? (
-                    <div className="relative h-32 w-full">
-                      <Image
-                        src={logo}
-                        alt={name}
-                        fill
-                        className="object-contain"
-                        sizes="320px"
-                      />
-                    </div>
-                  ) : (
-                    <span className="text-xl font-black text-slate-900 text-center leading-tight">
-                      {name}
-                    </span>
-                  )}
-                </div>
-                <div
-                  className="px-5 py-3 flex items-center justify-between border-t border-slate-100"
-                  style={{ backgroundColor: "#fafafa" }}
-                >
-                  <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-                    Смотреть каталог
-                  </span>
-                  <svg
-                    className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            );
-          })}
-
-          {/* Агрегирующая карточка: бренды с малым ассортиментом (1..20 товаров) собраны в одну ссылку */}
+          {/* Предпоследняя: агрегат «Другие бренды» (1..20 товаров) — единый стиль карточки */}
           {smallBrands.length > 0 && (
             <Link
               href={`/catalog/${OTHER_BRANDS_SLUG}`}
-              className="group relative border-2 border-dashed border-slate-300 hover:border-solid hover:shadow-xl transition-all bg-slate-50/40 overflow-hidden flex flex-col"
+              className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
             >
               <span
                 className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
@@ -131,32 +133,26 @@ export default async function CatalogIndexPage() {
                 {smallTotal} тов.
               </span>
               <div className="flex-1 flex flex-col items-center justify-center gap-2 p-4 min-h-[150px]">
-                <span className="text-xl font-black text-slate-900 text-center leading-tight">
+                <span className="text-2xl sm:text-3xl font-black text-slate-900 text-center leading-tight">
                   {OTHER_BRANDS_NAME}
                 </span>
                 <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
                   {smallNames}
                 </span>
               </div>
-              <div
-                className="px-5 py-3 flex items-center justify-between border-t border-slate-100"
-                style={{ backgroundColor: "#fafafa" }}
-              >
+              <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
                 <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
                   {smallBrands.length} брендов
                 </span>
-                <svg
-                  className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
+                <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </div>
             </Link>
           )}
+
+          {/* Самая последняя: «Прочее оборудование» */}
+          {procheeBrand && <BrandCard b={procheeBrand} />}
         </div>
       </div>
     </div>
