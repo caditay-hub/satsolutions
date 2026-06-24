@@ -89,7 +89,9 @@ export async function CatalogView({ params, searchParams, brandLanding }: { para
   // scope = текущий выбор; список значений каждого мультивыбора «липкий» (см. /product-facets).
   let typeFacets: import("@/lib/api").ProductFacets | null = null;
   if (!smart) {
-    try { typeFacets = await getProductFacets({ type, brand, category, q }); } catch { typeFacets = null; }
+    // chars/price передаём для drill-down: счётчики фасетов учитывают активные фильтры
+    // (иначе «KANIHAD 7» при активном «Функции=ACL» вёл на пустую выдачу).
+    try { typeFacets = await getProductFacets({ type, brand, category, q, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }); } catch { typeFacets = null; }
   }
   // Какие группы показывать: на странице типа прячем «Тип», на странице бренда — «Бренд».
   const facetShow = { brands: !brandLanding, types: !isTypePage };

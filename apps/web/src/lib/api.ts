@@ -236,14 +236,18 @@ export type ProductFacets = {
   price: { min: number; max: number };
   chars: Array<{ key: string; values: Array<{ value: string; count: number }> }>;
 };
-// scope = любой набор {type, brand, category, q}. type="" допустим (общий список).
-export async function getProductFacets(scope: string | { type?: string; brand?: string; category?: string; q?: string }) {
+// scope = любой набор {type, brand, category, q, chars, priceMin, priceMax}. type="" допустим
+// (общий список). chars/price нужны для drill-down: счётчики фасетов учитывают активные фильтры.
+export async function getProductFacets(scope: string | { type?: string; brand?: string; category?: string; q?: string; chars?: string; priceMin?: string | number; priceMax?: string | number }) {
   const opts = typeof scope === "string" ? { type: scope } : scope;
   const qs = new URLSearchParams();
   if (opts.type) qs.set("type", opts.type);
   if (opts.brand) qs.set("brand", opts.brand);
   if (opts.category) qs.set("category", opts.category);
   if (opts.q) qs.set("q", opts.q);
+  if (opts.chars) qs.set("chars", String(opts.chars));
+  if (opts.priceMin) qs.set("priceMin", String(opts.priceMin));
+  if (opts.priceMax) qs.set("priceMax", String(opts.priceMax));
   return apiFetch<ProductFacets>(`/product-facets?${qs}`, { next: { revalidate: 300 } });
 }
 

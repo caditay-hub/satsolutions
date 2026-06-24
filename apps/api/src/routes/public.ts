@@ -401,22 +401,53 @@ publicRouter.get("/product-facets", async (req, res) => {
     return res.json({ brands: [], types: [], price: { min: 0, max: 0 }, chars: [] });
   }
 
+  // Активные характеристики и цена — нужны для корректных счётчиков (drill-down):
+  // счётчик каждого фасета учитывает ОСТАЛЬНЫЕ активные фильтры, чтобы не показывать
+  // «KANIHAD 7», который при активном «Функции=ACL» даёт 0 (у KANIHAD нет ACL-моделей).
+  let charsFilter: Array<[string, string[]]> = [];
+  try {
+    const cj = typeof req.query.chars === "string" ? JSON.parse(req.query.chars) : null;
+    if (cj && typeof cj === "object") {
+      charsFilter = Object.entries(cj).map(([k, v]) => [String(k), (Array.isArray(v) ? v : [v]).map(String).filter(Boolean)] as [string, string[]]).filter(([, v]) => v.length);
+    }
+  } catch { /* ignore bad chars */ }
+  const priceMin = Number(req.query.priceMin) || 0;
+  const priceMax = Number(req.query.priceMax) || 0;
+
   const repl: any = {};
   if (catIds.length) repl.catIds = catIds;
   if (brandSlugs.length) repl.brandSlugs = brandSlugs;
   if (q) repl.q = `%${q}%`;
-  // Сборка WHERE из активных фильтров. Каждый фасет вызывает с исключением своего измерения.
-  const cond = (opts?: { type?: boolean; brand?: boolean }) => {
-    const c = ["p.published = true"];
-    if (opts?.type !== false && catIds.length) c.push(`p."categoryId" IN (:catIds)`);
-    if (opts?.brand !== false && brandSlugs.length) c.push(`p."brandId" IN (SELECT id FROM brands WHERE published = true AND LOWER(slug) IN (:brandSlugs))`);
-    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q)`);
-    return c.join(" AND ");
-  };
 
   let usdToUzs = 1;
   try { const site = await SitePage.findOne({ where: { key: "site" } }); usdToUzs = pickRate(site?.data) ?? 1; } catch { /* ignore */ }
   const priceSql = `CASE WHEN p."isUsd" = true THEN p.price * ${usdToUzs} ELSE p.price END`;
+
+  // chars-условия (тот же токенизированный матч, что и в /products) и условия по цене.
+  const charsExists = () => charsFilter.map(([k, vals]) => {
+    const ek = k.replace(/'/g, "''");
+    const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
+    return `EXISTS (SELECT 1 FROM unnest(string_to_array(coalesce(p."characteristics"->>'${ek}', ''), ',')) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
+  });
+  const priceConds = () => {
+    const c: string[] = [];
+    if (priceMin > 0 || priceMax > 0) c.push(`p.price IS NOT NULL AND p.price > 0`);
+    if (priceMin > 0) c.push(`(${priceSql}) >= ${priceMin}`);
+    if (priceMax > 0) c.push(`(${priceSql}) <= ${priceMax}`);
+    return c;
+  };
+
+  // Сборка WHERE из активных фильтров. Каждый фасет вызывает с исключением СВОЕГО измерения
+  // (чтобы выбор не прятал остальные значения той же группы), но применяет все остальные.
+  const cond = (opts?: { type?: boolean; brand?: boolean; chars?: boolean; price?: boolean }) => {
+    const c = ["p.published = true"];
+    if (opts?.type !== false && catIds.length) c.push(`p."categoryId" IN (:catIds)`);
+    if (opts?.brand !== false && brandSlugs.length) c.push(`p."brandId" IN (SELECT id FROM brands WHERE published = true AND LOWER(slug) IN (:brandSlugs))`);
+    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q)`);
+    if (opts?.chars !== false) c.push(...charsExists());
+    if (opts?.price !== false) c.push(...priceConds());
+    return c.join(" AND ");
+  };
 
   // Бренды — без учёта выбранного бренда (липкий мультивыбор).
   const brands = await sequelize.query<any>(
@@ -437,7 +468,7 @@ publicRouter.get("/product-facets", async (req, res) => {
   );
   const priceRows = await sequelize.query<any>(
     `SELECT floor(min(${priceSql}))::int AS min, ceil(max(${priceSql}))::int AS max
-     FROM products p WHERE ${cond()} AND p.price IS NOT NULL AND p.price > 0`,
+     FROM products p WHERE ${cond({ price: false })} AND p.price IS NOT NULL AND p.price > 0`,
     { type: "SELECT" as any, replacements: repl }
   );
 
@@ -462,7 +493,7 @@ publicRouter.get("/product-facets", async (req, res) => {
      FROM products p,
           jsonb_each_text(p.characteristics) AS kv(key, value),
           unnest(string_to_array(regexp_replace(kv.value, '\\s*\\([^)]*\\)', '', 'g'), ',')) AS t(tok)
-     WHERE ${cond()} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
+     WHERE ${cond({ chars: false })} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
        AND char_length(btrim(t.tok)) BETWEEN 2 AND 28
      GROUP BY kv.key, ${charNormSql("t.tok")}`,
     { type: "SELECT" as any, replacements: repl }
