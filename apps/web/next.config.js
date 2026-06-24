@@ -40,6 +40,20 @@ const nextConfig = {
       { source: "/page/kontakti", destination: "/contact", permanent: true },
       { source: "/page/contacts", destination: "/contact", permanent: true },
       { source: "/page/:slug*", destination: "/", permanent: true },
+      // Легаси-URL старой CMS (массово в индексе Google, отдавали 404 — см. выгрузку GSC).
+      // Старый сайт использовал префиксы /ru и /en; /ru/* стрипается middleware и ловится
+      // беспрефиксными правилами, для /en нужны явные дубли. 301 на актуальные разделы.
+      { source: "/product/show/:path*", destination: "/products", permanent: true },
+      { source: "/en/product/show/:path*", destination: "/en/products", permanent: true },
+      { source: "/products/filter/:path*", destination: "/products", permanent: true },
+      { source: "/en/products/filter/:path*", destination: "/en/products", permanent: true },
+      { source: "/brand/:path*", destination: "/catalog", permanent: true },
+      { source: "/en/brand/:path*", destination: "/en/catalog", permanent: true },
+      { source: "/en/category/:path*", destination: "/en/products", permanent: true },
+      { source: "/en/news/:path*", destination: "/en", permanent: true },
+      // Старые слаги статичных решений → канонические ключи
+      { source: "/solutions/umniy-avtobus", destination: "/solutions/bus", permanent: true },
+      { source: "/solutions/parkovka", destination: "/solutions/parking", permanent: true },
     ];
   },
   async headers() {

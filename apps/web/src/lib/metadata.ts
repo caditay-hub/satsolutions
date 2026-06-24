@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "./site";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
 /** Обрезает текст до ~max символов по границе слова (без обрыва посреди слова). */
 export function clip(text: string, max = 160): string {

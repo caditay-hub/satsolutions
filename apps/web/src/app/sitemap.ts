@@ -6,8 +6,13 @@ import { typeSlug } from "@/lib/typeSlug";
 const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
 const DEFAULT_LOCALE = "ru";
 
+// Фиксируется один раз при старте процесса (деплое), а не на каждый запрос.
+// Вечно-«сейчашний» lastmod Google со временем игнорирует; для статич. роутов
+// нужна стабильная дата сборки. Динамические роуты используют реальный updatedAt.
+const GENERATED = new Date();
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
     // hreflang-альтернаты для переводимых (интерфейсных) путей
     function langAlternates(path: string) {
@@ -30,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "/catalog"
     ].map((route) => ({
         url: `${siteUrl}${route}`,
-        lastModified: new Date(),
+        lastModified: GENERATED,
         changeFrequency: "daily" as const,
         priority: route === "" ? 1 : 0.8,
         alternates: { languages: langAlternates(route) },
@@ -64,7 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         const brandRoutes = brands.map((b) => ({
             url: `${siteUrl}/catalog/${b.slug}`,
-            lastModified: new Date(),
+            lastModified: GENERATED,
             changeFrequency: "weekly" as const,
             priority: 0.8,
         }));
@@ -73,12 +78,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         // Старые /products?type=<имя> 301-редиректят сюда; брендовые /categories/<slug> — 308 сюда.
         const typeNames = Array.from(new Set(categories.map((c) => c.name).filter(Boolean)));
         const categoryRoutes = [
-            { url: `${siteUrl}/categories`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7, alternates: { languages: langAlternates(`/categories`) } },
+            { url: `${siteUrl}/categories`, lastModified: GENERATED, changeFrequency: "weekly" as const, priority: 0.7, alternates: { languages: langAlternates(`/categories`) } },
             ...typeNames.map((name) => {
                 const path = `/products/type/${typeSlug(name)}`;
                 return {
                     url: `${siteUrl}${path}`,
-                    lastModified: new Date(),
+                    lastModified: GENERATED,
                     changeFrequency: "weekly" as const,
                     priority: 0.7,
                     alternates: { languages: langAlternates(path) },
@@ -112,7 +117,7 @@ const serviceRoutes = services.map((s) => ({
         // 22 статичные страницы услуг/отраслей (cctv, access, fire, …) — раньше их не было в карте
         const staticServiceRoutes = ALL_SERVICES.map((s) => ({
             url: `${siteUrl}/solutions/${s.key}`,
-            lastModified: new Date(),
+            lastModified: GENERATED,
             changeFrequency: "monthly" as const,
             priority: 0.7,
             alternates: { languages: langAlternates(`/solutions/${s.key}`) },
