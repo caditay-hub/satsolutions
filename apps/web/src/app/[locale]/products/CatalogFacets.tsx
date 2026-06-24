@@ -40,15 +40,20 @@ function Group({ title, icon, defaultOpen = true, children }: { title: string; i
   );
 }
 
-function ValueList<T>({ items, render }: { items: T[]; render: (item: T) => React.ReactNode }) {
+function ValueList<T>({ items, render, selected }: { items: T[]; render: (item: T) => React.ReactNode; selected?: (item: T) => boolean }) {
   const [all, setAll] = useState(false);
-  const shown = all ? items : items.slice(0, VISIBLE);
+  // Выбранные значения за порогом VISIBLE подкалываем в видимую часть — иначе отмеченный
+  // пункт «прячется» под «Ещё N» и кажется, что выбор пропал.
+  const head = items.slice(0, VISIBLE);
+  const pinned = selected ? items.slice(VISIBLE).filter(selected) : [];
+  const shown = all ? items : [...head, ...pinned];
+  const hiddenCount = items.length - shown.length;
   return (
     <>
       <div className="flex flex-col gap-0.5">{shown.map(render)}</div>
-      {items.length > VISIBLE ? (
+      {(all ? items.length > VISIBLE : hiddenCount > 0) ? (
         <button type="button" onClick={() => setAll((a) => !a)} className="mt-1 pl-1.5 text-[12px] font-semibold text-brand-700 hover:underline">
-          {all ? "Скрыть" : `Ещё ${items.length - VISIBLE}`}
+          {all ? "Скрыть" : `Ещё ${hiddenCount}`}
         </button>
       ) : null}
     </>
@@ -63,9 +68,11 @@ type Show = { brands?: boolean; types?: boolean };
  *  - Тип товара (show.types) — мультивыбор ?type=Имя,Имя
  *  - Цена — диапазон ?priceMin/?priceMax
  *  - Характеристики — мультивыбор ?chars={"Ключ":["знач"]} (только для однородного scope)
- * На странице типа скрываем «Тип», на странице бренда — «Бренд» (контекст задан страницей).
+ * pathType/pathBrand — измерение, закодированное в ПУТИ чистого URL (/products/type/[slug],
+ * /catalog/[brand]). Оно не видно в query, поэтому передаём его явно: «Тип» показывает текущий
+ * тип отмеченным, а переключение типа уводит на унифицированный /products?... со всеми фильтрами.
  */
-export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: Show }) {
+export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: ProductFacets; show?: Show; pathType?: string; pathBrand?: string }) {
   const sp = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -73,7 +80,9 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
   const showTypes = show?.types !== false;
 
   const brands = (sp.get("brand") || "").split(",").filter(Boolean);
-  const types = (sp.get("type") || "").split(",").map((s) => s.trim()).filter(Boolean);
+  const queryTypes = (sp.get("type") || "").split(",").map((s) => s.trim()).filter(Boolean);
+  // Эффективно выбранные типы = тип из пути (если есть) + типы из query.
+  const types = pathType ? Array.from(new Set([pathType, ...queryTypes])) : queryTypes;
   let chars: Record<string, string[]> = {};
   try {
     const parsed = JSON.parse(sp.get("chars") || "{}");
@@ -95,11 +104,18 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
       if (list.length) p.set("brand", list.join(",")); else p.delete("brand");
     }));
   }
+  // Тип меняем ВСЕГДА на /products?... — на чистом /products/type/[slug] тип закодирован в пути,
+  // и query ?type там перезаписывается. Подсеваем закодированные в пути бренд/тип, чтобы не терять
+  // контекст (напр. со страницы бренда переключение типа сохраняет бренд).
   function toggleType(name: string) {
-    go(build((p) => {
-      const list = types.includes(name) ? types.filter((t) => t !== name) : [...types, name];
-      if (list.length) p.set("type", list.join(",")); else p.delete("type");
-    }));
+    const list = types.includes(name) ? types.filter((t) => t !== name) : [...types, name];
+    const p = new URLSearchParams(sp.toString());
+    p.delete("page");
+    if (pathBrand && !p.get("brand")) p.set("brand", pathBrand);
+    p.delete("type");
+    if (list.length) p.set("type", list.join(","));
+    const s = p.toString();
+    go(`/products${s ? "?" + s : ""}`);
   }
   function toggleChar(key: string, value: string) {
     go(build((p) => {
@@ -137,7 +153,8 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
 
   const brandList = showBrands ? facets.brands : [];
   const typeList = showTypes ? facets.types : [];
-  const hasActive = brands.length > 0 || types.length > 0 || Object.keys(chars).length > 0 || !!sp.get("priceMin") || !!sp.get("priceMax");
+  // «Сбросить» — по query-фильтрам (тип из ПУТИ чистого URL сбрасывается уходом со страницы, не кнопкой).
+  const hasActive = brands.length > 0 || queryTypes.length > 0 || Object.keys(chars).length > 0 || !!sp.get("priceMin") || !!sp.get("priceMax");
 
   return (
     <aside className="space-y-1.5 text-sm lg:sticky lg:top-4 lg:self-start">
@@ -159,43 +176,7 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
         ) : null}
       </div>
 
-      {/* Порядок групп: сначала Бренд, затем Тип товара, Цена и характеристики. */}
-      {brandList.length > 1 && (
-        <Group title="Бренд" icon={<IconBrand />}>
-          <ValueList
-            items={brandList}
-            render={(b) => {
-              const on = brands.includes(b.slug);
-              return (
-                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
-                  <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700">{b.name}</span>
-                  <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
-                </button>
-              );
-            }}
-          />
-        </Group>
-      )}
-
-      {typeList.length > 1 && (
-        <Group title="Тип товара" icon={<IconType />}>
-          <ValueList
-            items={typeList}
-            render={(t) => {
-              const on = types.includes(t.name);
-              return (
-                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
-                  <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{t.name}</span>
-                  <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
-                </button>
-              );
-            }}
-          />
-        </Group>
-      )}
-
+      {/* Порядок групп: сначала Цена, затем Бренд, Тип товара и характеристики. */}
       {bMax > 0 && (
         <Group title="Цена, сум" icon={<IconPrice />}>
           <div className="px-1.5 pb-1 pt-1">
@@ -215,10 +196,49 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
         </Group>
       )}
 
+      {brandList.length > 1 && (
+        <Group title="Бренд" icon={<IconBrand />}>
+          <ValueList
+            items={brandList}
+            selected={(b) => brands.includes(b.slug)}
+            render={(b) => {
+              const on = brands.includes(b.slug);
+              return (
+                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                  <Check on={on} />
+                  <span className="flex-1 truncate text-[13px] text-slate-700">{b.name}</span>
+                  <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
+                </button>
+              );
+            }}
+          />
+        </Group>
+      )}
+
+      {typeList.length > 1 && (
+        <Group title="Тип товара" icon={<IconType />}>
+          <ValueList
+            items={typeList}
+            selected={(t) => types.includes(t.name)}
+            render={(t) => {
+              const on = types.includes(t.name);
+              return (
+                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                  <Check on={on} />
+                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{t.name}</span>
+                  <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
+                </button>
+              );
+            }}
+          />
+        </Group>
+      )}
+
       {facets.chars.map((c) => (
         <Group key={c.key} title={c.key} icon={<IconSpec />} defaultOpen={false}>
           <ValueList
             items={c.values}
+            selected={(v) => (chars[c.key] || []).includes(v.value)}
             render={(v) => {
               const on = (chars[c.key] || []).includes(v.value);
               return (

@@ -46,5 +46,6 @@ export default async function ProductTypePage({ params, searchParams }: { params
   return CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, type: name, __clean: "1" }),
+    pathType: name, // тип закодирован в ПУТИ — отдаём фильтру, чтобы «Тип» был отмечен и работал
   } as any);
 }

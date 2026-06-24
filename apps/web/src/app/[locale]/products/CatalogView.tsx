@@ -23,7 +23,7 @@ export const PER_PAGE_OPTIONS = [20, 50, 100];
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; }) {
+export async function CatalogView({ params, searchParams, brandLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; pathType?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const view: "list" | "grid" = sp.view === "list" ? "list" : "grid";
@@ -93,8 +93,9 @@ export async function CatalogView({ params, searchParams, brandLanding }: { para
     // (иначе «KANIHAD 7» при активном «Функции=ACL» вёл на пустую выдачу).
     try { typeFacets = await getProductFacets({ type, brand, category, q, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }); } catch { typeFacets = null; }
   }
-  // Какие группы показывать: на странице типа прячем «Тип», на странице бренда — «Бренд».
-  const facetShow = { brands: !brandLanding, types: !isTypePage };
+  // «Бренд» прячем на странице бренда; «Тип» показываем ВЕЗДЕ (в т.ч. на странице типа — иначе
+  // после выбора типа группа «Тип» пропадала). Текущий тип отмечен, переключение — на /products?...
+  const facetShow = { brands: !brandLanding, types: true };
   const hasFacets = !!typeFacets && (
     (facetShow.brands && (typeFacets.brands?.length ?? 0) > 1) ||
     (facetShow.types && (typeFacets.types?.length ?? 0) > 1) ||
@@ -166,7 +167,7 @@ export async function CatalogView({ params, searchParams, brandLanding }: { para
       ) : null}
 
       <div className="mt-3 grid gap-6 lg:grid-cols-[260px_1fr]">
-        {hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} /> : <div />}
+        {hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} pathType={pathType} pathBrand={brandLanding ? brand : undefined} /> : <div />}
 
         <div>
           {/* Заголовок: по какому запросу выдан результат (только для поиска) */}
