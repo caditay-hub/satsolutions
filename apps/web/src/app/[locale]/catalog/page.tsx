@@ -34,10 +34,14 @@ const BRAND_COLORS: Record<string, string> = {
 const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
 const PINNED_LAST = "prochee";
 
+// Слаги, у которых вместо лого показываем крупное текст-название (по требованию витрины).
+const TEXT_LABEL_SLUGS = new Set(["pixietech", "prochee"]);
+
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
 function BrandCard({ b }: { b: BrandDto }) {
   const slug = b.slug.toLowerCase();
-  const logo = b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
+  const forceText = TEXT_LABEL_SLUGS.has(slug);
+  const logo = !forceText && b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
   const name = b.name;
   const count = b.productCount ?? 0;
   const color = BRAND_COLORS[slug] ?? "#328fa8";
@@ -61,7 +65,7 @@ function BrandCard({ b }: { b: BrandDto }) {
             <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
           </div>
         ) : (
-          <span className="text-2xl sm:text-3xl font-black text-slate-900 text-center leading-tight">
+          <span className="text-3xl sm:text-4xl font-black text-slate-900 text-center leading-tight">
             {name}
           </span>
         )}
@@ -133,7 +137,7 @@ export default async function CatalogIndexPage() {
                 {smallTotal} тов.
               </span>
               <div className="flex-1 flex flex-col items-center justify-center gap-2 p-4 min-h-[150px]">
-                <span className="text-2xl sm:text-3xl font-black text-slate-900 text-center leading-tight">
+                <span className="text-3xl sm:text-4xl font-black text-slate-900 text-center leading-tight">
                   {OTHER_BRANDS_NAME}
                 </span>
                 <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
