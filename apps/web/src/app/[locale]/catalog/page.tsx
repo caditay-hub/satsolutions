@@ -34,12 +34,48 @@ const BRAND_COLORS: Record<string, string> = {
 const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
 const PINNED_LAST = "prochee";
 
-// Слаги-сборники, у которых нет фирменного лого: показываем название текстом
-// + подпись «что внутри». У Pixietech есть своё лого — он сюда НЕ входит.
+// Слаги-сборники, у которых нет фирменного лого: показываем оформленную плашку
+// (цветной значок + название + подпись «что внутри»). Pixietech сюда НЕ входит — у него своё лого.
 const TEXT_LABEL_SLUGS = new Set(["prochee"]);
-const CATCHALL_SUBTITLE: Record<string, string> = {
-  prochee: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
+type CatchAll = { subtitle: string; color: string; icon: "grid" | "plus" };
+const CATCHALL: Record<string, CatchAll> = {
+  prochee: {
+    subtitle: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
+    color: "#328fa8",
+    icon: "grid",
+  },
 };
+
+// Иконки для плашек-сборников (Heroicons outline).
+function CatchAllIcon({ kind }: { kind: "grid" | "plus" }) {
+  const d =
+    kind === "plus"
+      ? "M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z"
+      : "M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25A2.25 2.25 0 0113.5 8.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z";
+  return (
+    <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <path strokeLinecap="round" strokeLinejoin="round" d={d} />
+    </svg>
+  );
+}
+
+// Оформленная плашка сборного раздела: цветной значок + имя + подпись.
+function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitle?: string; color: string; icon: "grid" | "plus" }) {
+  return (
+    <div className="flex-1 flex flex-col items-center justify-center gap-2 px-4 py-5 min-h-[150px] bg-gradient-to-b from-white to-slate-50">
+      <div
+        className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5"
+        style={{ backgroundColor: color }}
+      >
+        <CatchAllIcon kind={icon} />
+      </div>
+      <span className="text-base sm:text-lg font-black text-slate-900 text-center leading-tight tracking-tight">{name}</span>
+      {subtitle ? (
+        <span className="text-[11px] font-medium text-slate-500 text-center leading-snug line-clamp-2">{subtitle}</span>
+      ) : null}
+    </div>
+  );
+}
 
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
 function BrandCard({ b }: { b: BrandDto }) {
@@ -63,24 +99,19 @@ function BrandCard({ b }: { b: BrandDto }) {
           {count} тов.
         </span>
       )}
-      <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
-        {logo ? (
-          <div className="relative h-32 w-full">
-            <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
-          </div>
-        ) : (
-          <div className="flex flex-col items-center justify-center gap-1.5">
-            <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">
-              {name}
-            </span>
-            {CATCHALL_SUBTITLE[slug] && (
-              <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
-                {CATCHALL_SUBTITLE[slug]}
-              </span>
-            )}
-          </div>
-        )}
-      </div>
+      {forceText && CATCHALL[slug] ? (
+        <CatchAllVisual name={name} subtitle={CATCHALL[slug].subtitle} color={CATCHALL[slug].color} icon={CATCHALL[slug].icon} />
+      ) : (
+        <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
+          {logo ? (
+            <div className="relative h-32 w-full">
+              <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
+            </div>
+          ) : (
+            <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">{name}</span>
+          )}
+        </div>
+      )}
       <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
         <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
           Смотреть каталог
@@ -147,14 +178,7 @@ export default async function CatalogIndexPage() {
               >
                 {smallTotal} тов.
               </span>
-              <div className="flex-1 flex flex-col items-center justify-center gap-1.5 p-4 min-h-[150px]">
-                <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">
-                  {OTHER_BRANDS_NAME}
-                </span>
-                <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
-                  {smallNames}
-                </span>
-              </div>
+              <CatchAllVisual name={OTHER_BRANDS_NAME} subtitle={smallNames} color="#475569" icon="plus" />
               <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
                 <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
                   {smallBrands.length} брендов
