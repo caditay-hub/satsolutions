@@ -1,4 +1,19 @@
 {
+  "product": {
+    "titleBuy": "Taşkent'te satın alın",
+    "fallbackTitle": "Ürün",
+    "characteristics": "Özellikler",
+    "eol": "Üretimden kaldırıldı",
+    "hit": "POPÜLER",
+    "turnkey": "Anahtar teslim hizmet",
+    "designInstall": "tasarım ve kurulum",
+    "helpTitle": "Seçim için yardım mı lazım?",
+    "helpText": "Mühendisimiz göreviniz için uygun ekipmanı seçip 30 dakika içinde teklif gönderir.",
+    "getConsult": "Danışmanlık alın",
+    "similar": "Benzer",
+    "similarProducts": "Benzer ürünler",
+    "wholeCategory": "Tüm kategori"
+  },
   "nav": {
     "home": "Ana Sayfa",
     "services": "Hizmetler",

@@ -1,4 +1,19 @@
 {
+  "product": {
+    "titleBuy": "Toshkentda sotib olish",
+    "fallbackTitle": "Mahsulot",
+    "characteristics": "Xususiyatlari",
+    "eol": "Ishlab chiqarishdan olingan",
+    "hit": "XIT",
+    "turnkey": "Kalit topshirish xizmati",
+    "designInstall": "loyihalash va montaj",
+    "helpTitle": "Tanlashda yordam kerakmi?",
+    "helpText": "Muhandisimiz vazifangiz uchun mos uskunani tanlab, 30 daqiqada tijorat taklifini yuboradi.",
+    "getConsult": "Maslahat olish",
+    "similar": "O‘xshash",
+    "similarProducts": "O‘xshash mahsulotlar",
+    "wholeCategory": "Butun kategoriya"
+  },
   "nav": {
     "home": "Asosiy",
     "services": "Xizmatlar",

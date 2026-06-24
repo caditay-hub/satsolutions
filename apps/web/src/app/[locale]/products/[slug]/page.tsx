@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
+import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
@@ -72,13 +73,14 @@ function iconFor(key: string): string {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const t = await getTranslations({ locale });
   try {
     const { product } = await getProductBySlug(slug);
     const ogImage = resolveImageUrl(product.coverImageUrl) ?? undefined;
     const desc = clip(product.shortDescription ?? product.name, 160);
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
-      title: { absolute: `${product.name} — купить в Ташкенте | SAT Solutions` },
+      title: { absolute: `${product.name} — ${t("product.titleBuy")} | SAT Solutions` },
       description: desc,
       alternates: hreflangAlternates(`/products/${product.slug}`, locale),
       openGraph: {
@@ -88,12 +90,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       }
     });
   } catch {
-    return { title: "Продукт" };
+    return { title: t("product.fallbackTitle") };
   }
 }
 
-export default async function ProductDetailsPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function ProductDetailsPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale });
 
   // Фетч товара отдельно. 404 («Страница не найдена») — ТОЛЬКО если товар реально
   // отсутствует (API вернул 404). При временном сбое (таймаут/5xx/сеть, частый при
@@ -195,8 +198,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Главная", item: siteUrl },
-        { "@type": "ListItem", position: 2, name: "Каталог", item: `${siteUrl}/catalog` },
+        { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
+        { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
         ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: brandInfo.name, item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
         { "@type": "ListItem", position: brandInfo ? 4 : 3, name: product.name, item: `${siteUrl}/products/${product.slug}` },
       ],
@@ -223,9 +226,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
         {/* Breadcrumbs */}
         <nav className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
-          <Link href="/" className="hover:text-slate-900 transition-colors">Главная</Link>
+          <Link href="/" className="hover:text-slate-900 transition-colors">{t("nav.home")}</Link>
           <span className="text-slate-300">/</span>
-          <Link href="/catalog" className="hover:text-slate-900 transition-colors">Каталог</Link>
+          <Link href="/catalog" className="hover:text-slate-900 transition-colors">{t("nav.catalog")}</Link>
           {brandInfo && (
             <>
               <span className="text-slate-300">/</span>
@@ -258,7 +261,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               <div className="relative flex w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-xl border border-slate-200 bg-gradient-to-br from-slate-100 via-white to-brand-50 py-20">
                 <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #0f2231 1.5px, transparent 1.5px)", backgroundSize: "22px 22px" }} aria-hidden />
                 <span className="relative text-7xl opacity-50" aria-hidden>{productIcon(product.name)}</span>
-                <span className="relative rounded-full bg-white/80 px-4 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 shadow-sm">Нет фото</span>
+                <span className="relative rounded-full bg-white/80 px-4 py-1 text-xs font-bold uppercase tracking-wider text-slate-500 shadow-sm">{t("common.noPhoto")}</span>
               </div>
             )}
           </div>
@@ -277,15 +280,15 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               )}
               {isEol ? (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
-                  ⚠ Снят с производства
+                  ⚠ {t("product.eol")}
                 </span>
               ) : (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">
-                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full" /> В наличии
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full" /> {t("common.inStock")}
                 </span>
               )}
               {(product as any).recommended && (
-                <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">ХИТ</span>
+                <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">{t("product.hit")}</span>
               )}
             </div>
 
@@ -309,7 +312,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             <div className="mt-3 flex flex-wrap items-center gap-2">
               <BackButton />
               <RequestQuoteButton
-                label="Получить КП"
+                label={t("common.getQuote")}
                 variant="primary"
                 productName={`${product.name}${modelCode ? ` (${modelCode})` : ""}`}
               />
@@ -331,7 +334,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Full characteristics + description (no tabs since data is sparse) */}
             {charEntries.length > 0 && (
               <div className="mt-4 overflow-hidden rounded-xl border border-slate-200">
-                <div className="bg-slate-50 px-4 py-2 text-sm font-semibold">Характеристики</div>
+                <div className="bg-slate-50 px-4 py-2 text-sm font-semibold">{t("product.characteristics")}</div>
                 <dl className="divide-y divide-slate-100 bg-white">
                   {charEntries.map(([k, v]) => (
                     <div key={k} className="grid grid-cols-1 gap-1 px-4 py-2 sm:grid-cols-3 sm:gap-4">
@@ -355,8 +358,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
                   <span className="flex-1">
-                    <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">Услуга под ключ</span>
-                    <span className="block text-sm font-semibold text-slate-900">{relSvc.title} — проектирование и монтаж</span>
+                    <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">{t("product.turnkey")}</span>
+                    <span className="block text-sm font-semibold text-slate-900">{relSvc.title} — {t("product.designInstall")}</span>
                   </span>
                   <span className="shrink-0 font-bold text-brand-600">→</span>
                 </Link>
@@ -369,15 +372,15 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         <div className="mt-8 rounded-xl bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 p-4 sm:p-6 flex flex-wrap items-center gap-4">
           <div className="text-3xl">💬</div>
           <div className="flex-1 min-w-[200px]">
-            <div className="font-bold text-base">Нужна помощь с выбором?</div>
-            <div className="text-xs sm:text-sm text-slate-600">Наш инженер подберёт оборудование под вашу задачу и пришлёт КП за 30 минут.</div>
+            <div className="font-bold text-base">{t("product.helpTitle")}</div>
+            <div className="text-xs sm:text-sm text-slate-600">{t("product.helpText")}</div>
           </div>
           <Link
             href="/contact"
             className="rounded-lg text-white px-5 py-2.5 font-bold text-sm hover:opacity-90"
             style={{ backgroundColor: "#e02020" }}
           >
-            Получить консультацию →
+            {t("product.getConsult")} →
           </Link>
         </div>
 
@@ -386,11 +389,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
           <div className="mt-8">
             <div className="flex items-center justify-between mb-3">
               <div className="text-lg font-bold tracking-tight">
-                {categoryInfo ? `Похожие: ${categoryInfo.name}` : "Похожие товары"}
+                {categoryInfo ? `${t("product.similar")}: ${categoryInfo.name}` : t("product.similarProducts")}
               </div>
               {categoryInfo && (
                 <Link href={`/categories/${categoryInfo.slug}`} className="text-xs font-bold text-[#e02020] hover:underline">
-                  Вся категория →
+                  {t("product.wholeCategory")} →
                 </Link>
               )}
             </div>

@@ -1,4 +1,19 @@
 {
+  "product": {
+    "titleBuy": "buy in Tashkent",
+    "fallbackTitle": "Product",
+    "characteristics": "Specifications",
+    "eol": "Discontinued",
+    "hit": "TOP",
+    "turnkey": "Turnkey service",
+    "designInstall": "design and installation",
+    "helpTitle": "Need help choosing?",
+    "helpText": "Our engineer will pick the right equipment for your needs and send a quote within 30 minutes.",
+    "getConsult": "Get a consultation",
+    "similar": "Similar",
+    "similarProducts": "Similar products",
+    "wholeCategory": "Whole category"
+  },
   "nav": {
     "home": "Home",
     "services": "Services",

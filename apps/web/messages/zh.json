@@ -1,4 +1,19 @@
 {
+  "product": {
+    "titleBuy": "在塔什干购买",
+    "fallbackTitle": "产品",
+    "characteristics": "规格参数",
+    "eol": "已停产",
+    "hit": "热门",
+    "turnkey": "整体解决方案",
+    "designInstall": "设计与安装",
+    "helpTitle": "需要选型帮助吗？",
+    "helpText": "我们的工程师将根据您的需求选择设备，并在30分钟内发送报价。",
+    "getConsult": "获取咨询",
+    "similar": "相似",
+    "similarProducts": "相似产品",
+    "wholeCategory": "查看整个分类"
+  },
   "nav": {
     "home": "首页",
     "services": "服务",
