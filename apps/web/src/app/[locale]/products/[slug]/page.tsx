@@ -4,6 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
+import { localizeProduct } from "@/lib/productI18n";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -76,15 +77,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale });
   try {
     const { product } = await getProductBySlug(slug);
+    const loc = localizeProduct(product, locale);
     const ogImage = resolveImageUrl(product.coverImageUrl) ?? undefined;
-    const desc = clip(product.shortDescription ?? product.name, 160);
+    const desc = clip(loc.shortDescription || loc.name, 160);
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
-      title: { absolute: `${product.name} — ${t("product.titleBuy")} | SAT Solutions` },
+      title: { absolute: `${loc.name} — ${t("product.titleBuy")} | SAT Solutions` },
       description: desc,
       alternates: hreflangAlternates(`/products/${product.slug}`, locale),
       openGraph: {
-        title: product.name,
+        title: loc.name,
         description: desc,
         images: ogImage ? [{ url: ogImage }] : undefined
       }
@@ -125,6 +127,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
   }
 
   try {
+    // Локализованные name/shortDescription (uz/en/tr/zh), фолбэк на русский из БД
+    const loc = localizeProduct(product, locale);
+    const locName = loc.name;
+    const locShortDesc = loc.shortDescription;
+
     let usdToUzs = 1;
     try {
       const { page } = await getSitePage("site");
@@ -172,10 +179,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     const productLd = {
       "@context": "https://schema.org",
       "@type": "Product",
-      name: product.name,
+      name: locName,
       ...(modelCode ? { sku: modelCode, mpn: modelCode } : {}),
       ...(img ? { image: img } : {}),
-      description: product.shortDescription ?? product.name,
+      description: locShortDesc || locName,
       ...(brandInfo ? { brand: { "@type": "Brand", name: brandInfo.name } } : {}),
       ...(hasPrice
         ? {
@@ -201,7 +208,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
         { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
         ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: brandInfo.name, item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
-        { "@type": "ListItem", position: brandInfo ? 4 : 3, name: product.name, item: `${siteUrl}/products/${product.slug}` },
+        { "@type": "ListItem", position: brandInfo ? 4 : 3, name: locName, item: `${siteUrl}/products/${product.slug}` },
       ],
     };
     // FAQ-схема (FAQPage) из структурированного описания — для расширенных сниппетов Google
@@ -254,7 +261,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
           <div>
             {img ? (
               <ProductGallery
-                alt={product.name}
+                alt={locName}
                 images={[img, ...((product.galleryImageUrls ?? []).map((u) => resolveImageUrl(u)).filter(Boolean) as string[])]}
               />
             ) : (
@@ -293,14 +300,14 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             </div>
 
             {/* Title + model code (артикул не дублируем, если он уже есть в названии) */}
-            <h1 className="text-xl font-bold tracking-tight sm:text-2xl leading-tight">{product.name}</h1>
-            {modelCode && !product.name.toLowerCase().includes(modelCode.toLowerCase()) ? (
+            <h1 className="text-xl font-bold tracking-tight sm:text-2xl leading-tight">{locName}</h1>
+            {modelCode && !locName.toLowerCase().includes(modelCode.toLowerCase()) ? (
               <div className="mt-1 text-base font-mono font-semibold text-slate-600 tracking-wide">
                 {modelCode}
               </div>
             ) : null}
-            {product.shortDescription ? (
-              <p className="mt-2 text-sm text-slate-600">{product.shortDescription}</p>
+            {locShortDesc ? (
+              <p className="mt-2 text-sm text-slate-600">{locShortDesc}</p>
             ) : null}
 
             {/* Price (показываем только для товаров с ценой/«по запросу») */}
@@ -314,7 +321,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               <RequestQuoteButton
                 label={t("common.getQuote")}
                 variant="primary"
-                productName={`${product.name}${modelCode ? ` (${modelCode})` : ""}`}
+                productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
               />
             </div>
 
