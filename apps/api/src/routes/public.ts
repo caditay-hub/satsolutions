@@ -362,12 +362,20 @@ publicRouter.get("/products", async (req, res) => {
   res.json({ items: rows, total: count, page, limit });
 });
 
-// Фасеты для страницы типа: бренды, диапазон цены, топ-характеристики (из characteristics)
+// Фасеты каталога (страница типа / бренда / общий список): бренды, типы, цена, характеристики.
+// Поддерживает scope = любой набор {type, brand, category, q}. Фасеты «липкие»: список значений
+// каждого мультивыбора считается БЕЗ применения его собственного выбора (выбрав один бренд, не
+// прячем остальные) — поведение как на nag.ru. characteristics-фасеты — только для одного типа.
 publicRouter.get("/product-facets", async (req, res) => {
   const typeNames = (typeof req.query.type === "string" ? req.query.type : "")
     .split(",").map((s) => s.trim()).filter(Boolean);
+  const brandSlugs = (typeof req.query.brand === "string" ? req.query.brand : "")
+    .split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+  const categoryParam = typeof req.query.category === "string" ? req.query.category.trim() : "";
   const q = typeof req.query.q === "string" ? req.query.q.trim() : "";
+  const isUuid = (v: string) => /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(v);
 
+  // catIds для scope из type (имена категорий) или из category (slug/id) — рекурсивно с детьми.
   let catIds: string[] = [];
   if (typeNames.length) {
     const cats = await sequelize.query<any>(
@@ -378,29 +386,70 @@ publicRouter.get("/product-facets", async (req, res) => {
       { type: "SELECT" as any, replacements: { names: typeNames.map((n) => n.toLowerCase()) } }
     );
     catIds = cats.map((c: any) => c.id);
+  } else if (categoryParam) {
+    const cats = await sequelize.query<any>(
+      `WITH RECURSIVE base AS (
+         SELECT id FROM categories WHERE ${isUuid(categoryParam) ? "id = :cat" : "slug = :cat"}
+         UNION SELECT c.id FROM categories c JOIN base ON c."parentId" = base.id
+       ) SELECT id FROM base`,
+      { type: "SELECT" as any, replacements: { cat: categoryParam } }
+    );
+    catIds = cats.map((c: any) => c.id);
   }
-  if (!catIds.length) return res.json({ brands: [], price: { min: 0, max: 0 }, chars: [] });
+  // Тип/категорию запросили, но не нашли — пустые фасеты (некорректный scope).
+  if ((typeNames.length || categoryParam) && !catIds.length) {
+    return res.json({ brands: [], types: [], price: { min: 0, max: 0 }, chars: [] });
+  }
 
-  const repl: any = { catIds };
-  let cond = `p.published = true AND p."categoryId" IN (:catIds)`;
-  if (q) { repl.q = `%${q}%`; cond += ` AND (p.name ILIKE :q OR p."modelCode" ILIKE :q)`; }
+  const repl: any = {};
+  if (catIds.length) repl.catIds = catIds;
+  if (brandSlugs.length) repl.brandSlugs = brandSlugs;
+  if (q) repl.q = `%${q}%`;
+  // Сборка WHERE из активных фильтров. Каждый фасет вызывает с исключением своего измерения.
+  const cond = (opts?: { type?: boolean; brand?: boolean }) => {
+    const c = ["p.published = true"];
+    if (opts?.type !== false && catIds.length) c.push(`p."categoryId" IN (:catIds)`);
+    if (opts?.brand !== false && brandSlugs.length) c.push(`p."brandId" IN (SELECT id FROM brands WHERE published = true AND LOWER(slug) IN (:brandSlugs))`);
+    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q)`);
+    return c.join(" AND ");
+  };
 
   let usdToUzs = 1;
   try { const site = await SitePage.findOne({ where: { key: "site" } }); usdToUzs = pickRate(site?.data) ?? 1; } catch { /* ignore */ }
   const priceSql = `CASE WHEN p."isUsd" = true THEN p.price * ${usdToUzs} ELSE p.price END`;
 
+  // Бренды — без учёта выбранного бренда (липкий мультивыбор).
   const brands = await sequelize.query<any>(
     `SELECT b.slug, b.name, count(*)::int AS count
      FROM products p JOIN brands b ON b.id = p."brandId"
-     WHERE ${cond} AND b.published = true
+     WHERE ${cond({ brand: false })} AND b.published = true
      GROUP BY b.slug, b.name ORDER BY count DESC, b.name ASC`,
+    { type: "SELECT" as any, replacements: repl }
+  );
+  // Типы товара — без учёта выбранного типа (липкий мультивыбор). Для общего списка и страниц брендов.
+  const types = await sequelize.query<any>(
+    `SELECT c.name AS name, count(p.id)::int AS count
+     FROM products p JOIN categories c ON c.id = p."categoryId"
+     WHERE ${cond({ type: false })}
+     GROUP BY c.name HAVING count(p.id) > 0
+     ORDER BY count DESC, c.name ASC`,
     { type: "SELECT" as any, replacements: repl }
   );
   const priceRows = await sequelize.query<any>(
     `SELECT floor(min(${priceSql}))::int AS min, ceil(max(${priceSql}))::int AS max
-     FROM products p WHERE ${cond} AND p.price IS NOT NULL AND p.price > 0`,
+     FROM products p WHERE ${cond()} AND p.price IS NOT NULL AND p.price > 0`,
     { type: "SELECT" as any, replacements: repl }
   );
+
+  // characteristics-фасеты имеют смысл только в однородном scope (ровно один тип).
+  if (typeNames.length !== 1) {
+    return res.json({
+      brands,
+      types,
+      price: priceRows[0] && (priceRows[0] as any).max ? { min: (priceRows[0] as any).min || 0, max: (priceRows[0] as any).max || 0 } : { min: 0, max: 0 },
+      chars: []
+    });
+  }
   // Токенизация значений-списков («VLAN, LAG, QoS», «Radius/Tacacs+») по «,» и «/»:
   // каждый токен — отдельное значение фильтра; считаем РАЗНЫЕ ТОВАРЫ на токен; кириллица/регистр
   // схлопываются в GROUP BY (charNormSql), для показа берём самое частое исходное написание (mode).
@@ -413,7 +462,7 @@ publicRouter.get("/product-facets", async (req, res) => {
      FROM products p,
           jsonb_each_text(p.characteristics) AS kv(key, value),
           unnest(string_to_array(regexp_replace(kv.value, '\\s*\\([^)]*\\)', '', 'g'), ',')) AS t(tok)
-     WHERE ${cond} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
+     WHERE ${cond()} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
        AND char_length(btrim(t.tok)) BETWEEN 2 AND 28
      GROUP BY kv.key, ${charNormSql("t.tok")}`,
     { type: "SELECT" as any, replacements: repl }
@@ -439,6 +488,7 @@ publicRouter.get("/product-facets", async (req, res) => {
 
   res.json({
     brands,
+    types,
     price: priceRows[0] && (priceRows[0] as any).max ? { min: (priceRows[0] as any).min || 0, max: (priceRows[0] as any).max || 0 } : { min: 0, max: 0 },
     chars
   });

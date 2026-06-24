@@ -232,11 +232,18 @@ export async function getProducts(
 
 export type ProductFacets = {
   brands: Array<{ slug: string; name: string; count: number }>;
+  types: Array<{ name: string; count: number }>;
   price: { min: number; max: number };
   chars: Array<{ key: string; values: Array<{ value: string; count: number }> }>;
 };
-export async function getProductFacets(type: string) {
-  const qs = new URLSearchParams({ type });
+// scope = любой набор {type, brand, category, q}. type="" допустим (общий список).
+export async function getProductFacets(scope: string | { type?: string; brand?: string; category?: string; q?: string }) {
+  const opts = typeof scope === "string" ? { type: scope } : scope;
+  const qs = new URLSearchParams();
+  if (opts.type) qs.set("type", opts.type);
+  if (opts.brand) qs.set("brand", opts.brand);
+  if (opts.category) qs.set("category", opts.category);
+  if (opts.q) qs.set("q", opts.q);
   return apiFetch<ProductFacets>(`/product-facets?${qs}`, { next: { revalidate: 300 } });
 }
 

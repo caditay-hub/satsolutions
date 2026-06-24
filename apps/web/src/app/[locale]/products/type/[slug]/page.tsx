@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
-import ProductsPage from "../../page";
+import { CatalogView } from "../../CatalogView";
 
 export const revalidate = 300;
 
@@ -33,14 +33,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function ProductTypePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+export default async function ProductTypePage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const { locale, slug } = await params;
+  const sp = (await searchParams) ?? {};
   const name = await resolveTypeName(slug);
   if (!name) notFound();
   // Переиспользуем рендер каталога /products для type=<name>.
-  // __clean=1 — признак внутреннего вызова (чтобы /products НЕ делал 301 обратно сюда).
-  return ProductsPage({
+  // ВАЖНО: пробрасываем реальные query-параметры из URL (brand, chars, priceMin/Max,
+  // sort, perPage, view, page) — иначе фильтр-фасеты «не работают»: URL меняется, а
+  // сервер игнорирует фильтры и отдаёт нефильтрованный список.
+  // type и __clean задаём принудительно: type — из slug, __clean=1 глушит 301 обратно сюда.
+  return CatalogView({
     params: Promise.resolve({ locale }),
-    searchParams: Promise.resolve({ type: name, __clean: "1" }),
+    searchParams: Promise.resolve({ ...sp, type: name, __clean: "1" }),
   } as any);
 }

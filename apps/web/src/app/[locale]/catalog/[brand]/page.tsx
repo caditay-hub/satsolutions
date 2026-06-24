@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getCategories, getBrands, getProducts } from "@/lib/api";
-import { BrandCatalog } from "@/components/BrandCatalog";
+import { getBrands } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { CatalogView } from "../../products/CatalogView";
+
+export const revalidate = 300;
 
 // ─── supported brand slugs ────────────────────────────────────────────────────
 const BRAND_CONFIG: Record<string, { displayName: string; description: string }> = {
@@ -193,71 +195,28 @@ export async function generateMetadata({
 }
 
 // ─── page ─────────────────────────────────────────────────────────────────────
+// Страница бренда = тот же каталог /products с рабочим фильтром-сайдбаром, но scope
+// зафиксирован на бренде (группа «Бренд» скрыта, показан заголовок/лого бренда).
 export default async function BrandCatalogPage({
   params,
   searchParams,
 }: {
-  params: Promise<{ brand: string }>;
-  searchParams: Promise<{ cat?: string }>;
+  params: Promise<{ locale: string; brand: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const [{ brand }, sp] = await Promise.all([params, searchParams]);
+  const [{ locale, brand }, sp] = await Promise.all([params, (searchParams ?? Promise.resolve({}))]);
   const brandSlug = brand.toLowerCase();
   const cfg = BRAND_CONFIG[brandSlug];
   if (!cfg) notFound();
 
-  const [{ categories }, { brands }, productsPage] = await Promise.all([
-    getCategories({ brand: brandSlug }).catch(() => ({ categories: [] })),
-    getBrands().catch(() => ({ brands: [] })),
-    getProducts(1, 2000, { brand: brandSlug }).catch(() => ({ items: [] as any[] })),
-  ]);
-
-  // Map categoryId -> first product image of THIS brand (so covers stay on-brand)
-  const brandCoverByCategory: Record<string, string> = {};
-  for (const p of (productsPage.items ?? []) as any[]) {
-    if (p.categoryId && p.coverImageUrl && !brandCoverByCategory[p.categoryId]) {
-      brandCoverByCategory[p.categoryId] = p.coverImageUrl;
-    }
-  }
-
+  const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const brandInfo = brands.find((b) => b.slug.toLowerCase() === brandSlug);
   const logoUrl = brandInfo?.logoImageUrl ? resolveImageUrl(brandInfo.logoImageUrl) : null;
 
-  // Популярность = насыщенность категории товарами. Считаем товары по всему поддереву
-  // (товар → его топ-предок) и сортируем топ-категории по убыванию количества, а не по алфавиту.
-  const catById = new Map(categories.map((c) => [c.id, c] as const));
-  const topAncestorId = (catId?: string | null): string | null => {
-    let c = catId ? catById.get(catId) : undefined;
-    let guard = 0;
-    while (c && c.parentId && guard++ < 12) c = catById.get(c.parentId);
-    return c?.id ?? null;
-  };
-  const countByTop: Record<string, number> = {};
-  for (const p of (productsPage.items ?? []) as any[]) {
-    const tid = topAncestorId(p.categoryId);
-    if (tid) countByTop[tid] = (countByTop[tid] ?? 0) + 1;
-  }
-  const topCategories = categories
-    .filter((c) => !c.parentId)
-    .sort((a, b) => {
-      const d = (countByTop[b.id] ?? 0) - (countByTop[a.id] ?? 0);
-      return d !== 0 ? d : a.name.localeCompare(b.name, "ru");
-    });
-
-  // Начальная активная категория из URL (?cat=slug); без него — "Все товары"
-  const initialCat = sp.cat
-    ? (categories.find((c) => c.slug === sp.cat) ?? null)
-    : null;
-
-  return (
-    <BrandCatalog
-      topCategories={topCategories}
-      allCategories={categories}
-      brandName={cfg.displayName}
-      brandDescription={cfg.description}
-      brandSlug={brandSlug}
-      logoUrl={logoUrl}
-      initialCategoryId={initialCat?.id ?? null}
-      brandCoverByCategory={brandCoverByCategory}
-    />
-  );
+  // brand задаём принудительно (фикс. scope), __clean=1 — без 301-редиректа.
+  return CatalogView({
+    params: Promise.resolve({ locale }),
+    searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
+    brandLanding: { name: cfg.displayName, description: cfg.description, logoUrl },
+  } as any);
 }
