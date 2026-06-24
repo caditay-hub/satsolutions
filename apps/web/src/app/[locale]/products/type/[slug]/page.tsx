@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
@@ -21,10 +22,11 @@ async function resolveTypeName(slug: string): Promise<string | null> {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const t = await getTranslations({ locale });
   const name = await resolveTypeName(slug);
-  if (!name) return { title: "Продукция" };
-  const title = `${name} — купить в Ташкенте`;
-  const description = `${name}: каталог, цены, подбор и доставка по Ташкенту и Узбекистану. Официальная гарантия, монтаж и сервис от SAT Solutions.`;
+  if (!name) return { title: t("nav.products") };
+  const title = `${name} — ${t("product.titleBuy")}`;
+  const description = t("product.typeDesc", { type: name });
   return {
     title,
     description,

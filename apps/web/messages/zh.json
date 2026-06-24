@@ -12,7 +12,9 @@
     "getConsult": "获取咨询",
     "similar": "相似",
     "similarProducts": "相似产品",
-    "wholeCategory": "查看整个分类"
+    "wholeCategory": "查看整个分类",
+    "listDesc": "安防设备目录：摄像机、录像机、门禁、对讲、报警 — Dahua、Hikvision 及其他品牌。",
+    "typeDesc": "{type}：目录、价格、选型及塔什干和乌兹别克斯坦全境配送。SAT Solutions 提供官方保修、安装与服务。"
   },
   "nav": {
     "home": "首页",

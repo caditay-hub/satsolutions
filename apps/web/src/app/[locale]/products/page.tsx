@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
 import { getCategories } from "@/lib/api";
@@ -8,6 +9,7 @@ import { CatalogView } from "./CatalogView";
 // (иначе главная/чипы «Уточнить» распыляли бы вес на служебный /products?category=)
 export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale });
   const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
   const sp = await searchParams;
   const str = (v: string | string[] | undefined) => (typeof v === "string" && v ? v : undefined);
@@ -38,8 +40,8 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   const indexable = onlyType || isBare;
   const robots = indexable ? undefined : { index: false, follow: true };
   if (onlyType) {
-    const typeTitle = `${type} — купить в Ташкенте`;
-    const typeDesc = `${type}: каталог, цены, подбор и доставка по Ташкенту и Узбекистану. Официальная гарантия, монтаж и сервис от SAT Solutions.`;
+    const typeTitle = `${type} — ${t("product.titleBuy")}`;
+    const typeDesc = t("product.typeDesc", { type: type as string });
     return {
       title: typeTitle,
       description: typeDesc,
@@ -47,12 +49,13 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
       openGraph: { title: typeTitle, description: typeDesc }
     };
   }
-  const listDesc = "Каталог оборудования безопасности: камеры, видеорегистраторы, СКУД, домофония, сигнализация — Dahua, Hikvision и другие бренды.";
+  const listDesc = t("product.listDesc");
+  const listTitle = t("nav.products");
   return {
-    title: "Продукция",
+    title: listTitle,
     description: listDesc,
     alternates: { canonical: lp + canonical },
-    openGraph: { title: "Продукция — SAT Solutions", description: listDesc },
+    openGraph: { title: `${listTitle} — SAT Solutions`, description: listDesc },
     ...(robots ? { robots } : {})
   };
 }
