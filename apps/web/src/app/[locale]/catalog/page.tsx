@@ -34,8 +34,13 @@ const BRAND_COLORS: Record<string, string> = {
 const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
 const PINNED_LAST = "prochee";
 
-// Слаги, у которых вместо лого показываем крупное текст-название (по требованию витрины).
+// Слаги, у которых вместо лого показываем название текстом + подпись «что внутри»
+// (в стиле лого Pixietech: имя + описание категории).
 const TEXT_LABEL_SLUGS = new Set(["pixietech", "prochee"]);
+const CATCHALL_SUBTITLE: Record<string, string> = {
+  pixietech: "Сетевая и телеком-инфраструктура",
+  prochee: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
+};
 
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
 function BrandCard({ b }: { b: BrandDto }) {
@@ -65,9 +70,16 @@ function BrandCard({ b }: { b: BrandDto }) {
             <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
           </div>
         ) : (
-          <span className="text-3xl sm:text-4xl font-black text-slate-900 text-center leading-tight">
-            {name}
-          </span>
+          <div className="flex flex-col items-center justify-center gap-1.5">
+            <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">
+              {name}
+            </span>
+            {CATCHALL_SUBTITLE[slug] && (
+              <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
+                {CATCHALL_SUBTITLE[slug]}
+              </span>
+            )}
+          </div>
         )}
       </div>
       <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
@@ -136,8 +148,8 @@ export default async function CatalogIndexPage() {
               >
                 {smallTotal} тов.
               </span>
-              <div className="flex-1 flex flex-col items-center justify-center gap-2 p-4 min-h-[150px]">
-                <span className="text-3xl sm:text-4xl font-black text-slate-900 text-center leading-tight">
+              <div className="flex-1 flex flex-col items-center justify-center gap-1.5 p-4 min-h-[150px]">
+                <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">
                   {OTHER_BRANDS_NAME}
                 </span>
                 <span className="text-[11px] font-semibold text-slate-500 text-center leading-snug line-clamp-3">
