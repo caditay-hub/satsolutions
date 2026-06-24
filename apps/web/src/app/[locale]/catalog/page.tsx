@@ -34,11 +34,10 @@ const BRAND_COLORS: Record<string, string> = {
 const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
 const PINNED_LAST = "prochee";
 
-// Слаги, у которых вместо лого показываем название текстом + подпись «что внутри»
-// (в стиле лого Pixietech: имя + описание категории).
-const TEXT_LABEL_SLUGS = new Set(["pixietech", "prochee"]);
+// Слаги-сборники, у которых нет фирменного лого: показываем название текстом
+// + подпись «что внутри». У Pixietech есть своё лого — он сюда НЕ входит.
+const TEXT_LABEL_SLUGS = new Set(["prochee"]);
 const CATCHALL_SUBTITLE: Record<string, string> = {
-  pixietech: "Сетевая и телеком-инфраструктура",
   prochee: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
 };
 
