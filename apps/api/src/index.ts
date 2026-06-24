@@ -51,9 +51,15 @@ async function main() {
   app.use(
     rateLimit({
       windowMs: 60_000,
-      limit: 300,
+      limit: 600,
       standardHeaders: true,
-      legacyHeaders: false
+      legacyHeaders: false,
+      // Не лимитируем внутренний серверный рендеринг (web→api по localhost) — он идёт с
+      // одного IP и иначе исчерпывает лимит на весь сайт. Лимит остаётся для внешних клиентов.
+      skip: (req) => {
+        const ip = (req.ip || "").replace(/^::ffff:/, "");
+        return ip === "127.0.0.1" || ip === "::1";
+      }
     })
   );
 

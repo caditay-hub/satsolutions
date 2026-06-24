@@ -66,7 +66,14 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
     if (Number.isFinite(n) && n > 0) usdToUzs = n;
   } catch {}
 
-  let { items, total } = await getProducts(page, perPage, { category, brand, q, sort, mp, technology, installationType, type, chars, priceMin, priceMax });
+  // Устойчивость: единичный сбой API (таймаут/429) не должен ронять страницу в белый экран —
+  // деградируем до пустого списка. Основная защита от 429 — серверный рендер ходит в localhost.
+  let items: import("@/lib/api").ProductDto[] = [];
+  let total = 0;
+  try {
+    const r = await getProducts(page, perPage, { category, brand, q, sort, mp, technology, installationType, type, chars, priceMin, priceMax });
+    items = r.items; total = r.total;
+  } catch { items = []; total = 0; }
 
   // Умный поиск: если обычный нашёл мало — спрашиваем ИИ (с кешем на бэке)
   let smart: SmartSearchDto | null = null;

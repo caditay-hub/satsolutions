@@ -169,7 +169,13 @@ export type SitePageDto = {
 };
 
 function apiBaseUrl() {
-  return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
+  // На сервере (SSR/RSC) ходим НАПРЯМУЮ в локальный API — минуя nginx и его rate-limit.
+  // Иначе весь серверный рендеринг идёт через nginx с одного IP и упирается в лимит
+  // (300/мин) → API error: 429 → краш страницы. В браузере — публичный адрес.
+  if (typeof window === "undefined") {
+    return process.env.API_INTERNAL_URL ?? "http://localhost:4005";
+  }
+  return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4005";
 }
 
 async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalidate?: number } }): Promise<T> {
