@@ -131,23 +131,25 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   // цена
   const bMin = facets.price.min || 0;
   const bMax = facets.price.max || 0;
+  const clampP = (v: number) => Math.max(bMin, Math.min(v, bMax));
   const urlMin = num(sp.get("priceMin"));
   const urlMax = num(sp.get("priceMax"));
-  const [vMin, setVMin] = useState(urlMin || bMin);
-  const [vMax, setVMax] = useState(urlMax || bMax);
-  // Ползунок цены — клиентский useState, который инициализируется один раз. При навигации
-  // (смена типа/бренда/perPage/сортировки) границы диапазона и значения из URL меняются, а
-  // состояние «зависало» на старых числах (ползунок «слетал»). Ресинхроним при смене границ/URL.
+  const [vMin, setVMin] = useState(clampP(urlMin || bMin));
+  const [vMax, setVMax] = useState(clampP(urlMax || bMax));
+  // Ресинхрон + КЛЭМП в текущие границы. Границы диапазона зависят от других фильтров
+  // (drill-down: бренд/тип/характеристики их сужают). Значение из URL, заданное в более широком
+  // scope, могло вылезти за новый трек ползунка (бар/бегунок за пределами). Зажимаем в [bMin,bMax].
   useEffect(() => {
-    setVMin(urlMin || bMin);
-    setVMax(urlMax || bMax);
+    setVMin(clampP(urlMin || bMin));
+    setVMax(clampP(urlMax || bMax));
   }, [bMin, bMax, urlMin, urlMax]);
   const step = Math.max(1, Math.round((bMax - bMin) / 100));
-  const pct = (v: number) => (bMax > bMin ? ((v - bMin) / (bMax - bMin)) * 100 : 0);
+  const pct = (v: number) => (bMax > bMin ? ((clampP(v) - bMin) / (bMax - bMin)) * 100 : 0);
   function commitPrice(lo = vMin, hi = vMax) {
+    const clo = clampP(lo), chi = clampP(hi);
     go(build((p) => {
-      if (lo > bMin) p.set("priceMin", String(Math.round(lo))); else p.delete("priceMin");
-      if (hi < bMax) p.set("priceMax", String(Math.round(hi))); else p.delete("priceMax");
+      if (clo > bMin) p.set("priceMin", String(Math.round(clo))); else p.delete("priceMin");
+      if (chi < bMax) p.set("priceMax", String(Math.round(chi))); else p.delete("priceMax");
     }));
   }
 
