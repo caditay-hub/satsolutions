@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { ProductFacets } from "@/lib/api";
 
 const VISIBLE = 6; // сколько значений показываем до «Ещё N»
@@ -115,8 +115,17 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
   // цена
   const bMin = facets.price.min || 0;
   const bMax = facets.price.max || 0;
-  const [vMin, setVMin] = useState(num(sp.get("priceMin")) || bMin);
-  const [vMax, setVMax] = useState(num(sp.get("priceMax")) || bMax);
+  const urlMin = num(sp.get("priceMin"));
+  const urlMax = num(sp.get("priceMax"));
+  const [vMin, setVMin] = useState(urlMin || bMin);
+  const [vMax, setVMax] = useState(urlMax || bMax);
+  // Ползунок цены — клиентский useState, который инициализируется один раз. При навигации
+  // (смена типа/бренда/perPage/сортировки) границы диапазона и значения из URL меняются, а
+  // состояние «зависало» на старых числах (ползунок «слетал»). Ресинхроним при смене границ/URL.
+  useEffect(() => {
+    setVMin(urlMin || bMin);
+    setVMax(urlMax || bMax);
+  }, [bMin, bMax, urlMin, urlMax]);
   const step = Math.max(1, Math.round((bMax - bMin) / 100));
   const pct = (v: number) => (bMax > bMin ? ((v - bMin) / (bMax - bMin)) * 100 : 0);
   function commitPrice(lo = vMin, hi = vMax) {
