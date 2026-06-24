@@ -28,6 +28,14 @@ function charNormSql(expr: string): string {
   return `translate(${joinUnit}, '${CYR_FROM}', '${CYR_TO}')`;
 }
 
+// Источник токенов значения характеристики: срезаем скобки «(...)» и режем по запятой.
+// ВАЖНО: ровно так же токенизируются значения при генерации фасетов (charRows ниже) —
+// иначе счётчик фасета и реальная выдача /products расходятся (напр. «до 300m (PoE)»
+// попадал в фасет «до 300m», но фильтр его не находил). valueExpr — SQL-выражение значения.
+function charTokensSql(valueExpr: string): string {
+  return `string_to_array(regexp_replace(coalesce(${valueExpr}, ''), '\\s*\\([^)]*\\)', '', 'g'), ',')`;
+}
+
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
   const n = typeof v === "number" ? v : typeof v === "string" ? Number(v) : NaN;
@@ -252,7 +260,7 @@ publicRouter.get("/products", async (req, res) => {
     if (!vals.length) continue;
     const ek = k.replace(/'/g, "''");
     const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
-    const exists = `EXISTS (SELECT 1 FROM unnest(string_to_array(coalesce("Product"."characteristics"->>'${ek}', ''), ',')) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
+    const exists = `EXISTS (SELECT 1 FROM unnest(${charTokensSql(`"Product"."characteristics"->>'${ek}'`)}) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
     where[Op.and] = [
       ...(Array.isArray(where[Op.and]) ? where[Op.and] : []),
       sequelize.literal(exists)
@@ -427,7 +435,7 @@ publicRouter.get("/product-facets", async (req, res) => {
   const charsExists = () => charsFilter.map(([k, vals]) => {
     const ek = k.replace(/'/g, "''");
     const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
-    return `EXISTS (SELECT 1 FROM unnest(string_to_array(coalesce(p."characteristics"->>'${ek}', ''), ',')) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
+    return `EXISTS (SELECT 1 FROM unnest(${charTokensSql(`p."characteristics"->>'${ek}'`)}) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
   });
   const priceConds = () => {
     const c: string[] = [];
@@ -492,7 +500,7 @@ publicRouter.get("/product-facets", async (req, res) => {
             count(DISTINCT p.id)::int AS count
      FROM products p,
           jsonb_each_text(p.characteristics) AS kv(key, value),
-          unnest(string_to_array(regexp_replace(kv.value, '\\s*\\([^)]*\\)', '', 'g'), ',')) AS t(tok)
+          unnest(${charTokensSql("kv.value")}) AS t(tok)
      WHERE ${cond({ chars: false })} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
        AND char_length(btrim(t.tok)) BETWEEN 2 AND 28
      GROUP BY kv.key, ${charNormSql("t.tok")}`,
