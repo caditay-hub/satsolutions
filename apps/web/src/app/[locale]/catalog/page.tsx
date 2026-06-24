@@ -64,7 +64,7 @@ function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitl
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-2 px-4 py-5 min-h-[150px] bg-gradient-to-b from-white to-slate-50">
       <div
-        className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5"
+        className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105"
         style={{ backgroundColor: color }}
       >
         <CatchAllIcon kind={icon} />
