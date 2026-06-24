@@ -150,24 +150,7 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
         ) : null}
       </div>
 
-      {typeList.length > 1 && (
-        <Group title="Тип товара" icon={<IconType />}>
-          <ValueList
-            items={typeList}
-            render={(t) => {
-              const on = types.includes(t.name);
-              return (
-                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
-                  <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{t.name}</span>
-                  <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
-                </button>
-              );
-            }}
-          />
-        </Group>
-      )}
-
+      {/* Порядок групп: сначала Бренд, затем Тип товара, Цена и характеристики. */}
       {brandList.length > 1 && (
         <Group title="Бренд" icon={<IconBrand />}>
           <ValueList
@@ -179,6 +162,24 @@ export function CatalogFacets({ facets, show }: { facets: ProductFacets; show?: 
                   <Check on={on} />
                   <span className="flex-1 truncate text-[13px] text-slate-700">{b.name}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
+                </button>
+              );
+            }}
+          />
+        </Group>
+      )}
+
+      {typeList.length > 1 && (
+        <Group title="Тип товара" icon={<IconType />}>
+          <ValueList
+            items={typeList}
+            render={(t) => {
+              const on = types.includes(t.name);
+              return (
+                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                  <Check on={on} />
+                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{t.name}</span>
+                  <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
                 </button>
               );
             }}
