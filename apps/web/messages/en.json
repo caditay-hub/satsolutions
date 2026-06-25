@@ -897,6 +897,15 @@
     "byCategories": "Catalog by categories",
     "byCategoriesIntro": "Pick a category — the product catalog opens with a brand filter. {total} items in total.",
     "byBrands": "Catalog by brands",
-    "allProducts": "All products"
+    "allProducts": "All products",
+    "sortDefault": "Default",
+    "sortNameAsc": "Name A–Z",
+    "sortNameDesc": "Name Z–A",
+    "sortPriceAsc": "Cheapest first",
+    "sortPriceDesc": "Most expensive first",
+    "sortNew": "Newest first",
+    "sortAria": "Sort products",
+    "viewList": "List",
+    "viewGrid": "Grid"
   }
 }

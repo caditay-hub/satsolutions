@@ -897,6 +897,15 @@
     "byCategories": "Каталог по категориям",
     "byCategoriesIntro": "Выберите категорию — откроется каталог товаров с фильтром по брендам. Всего в каталоге {total} позиций.",
     "byBrands": "Каталог по брендам",
-    "allProducts": "Все товары"
+    "allProducts": "Все товары",
+    "sortDefault": "По умолчанию",
+    "sortNameAsc": "Название А–Я",
+    "sortNameDesc": "Название Я–А",
+    "sortPriceAsc": "Сначала дешевле",
+    "sortPriceDesc": "Сначала дороже",
+    "sortNew": "Сначала новые",
+    "sortAria": "Сортировка товаров",
+    "viewList": "Списком",
+    "viewGrid": "Плиткой"
   }
 }

@@ -897,6 +897,15 @@
     "byCategories": "按分类浏览目录",
     "byCategoriesIntro": "选择一个分类 — 将打开带品牌筛选的产品目录。目录中共有 {total} 件商品。",
     "byBrands": "按品牌浏览目录",
-    "allProducts": "全部产品"
+    "allProducts": "全部产品",
+    "sortDefault": "默认",
+    "sortNameAsc": "名称 A–Z",
+    "sortNameDesc": "名称 Z–A",
+    "sortPriceAsc": "价格从低到高",
+    "sortPriceDesc": "价格从高到低",
+    "sortNew": "最新优先",
+    "sortAria": "商品排序",
+    "viewList": "列表",
+    "viewGrid": "网格"
   }
 }

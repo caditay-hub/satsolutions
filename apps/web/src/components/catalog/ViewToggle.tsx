@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 // Переключатель список/плитка. По умолчанию список (view-параметр отсутствует),
 // плитка → ?view=grid.
@@ -8,6 +9,7 @@ export function ViewToggle({ view }: { view: "list" | "grid" }) {
   const sp = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const tc = useTranslations("catalog");
 
   function set(v: "list" | "grid") {
     const p = new URLSearchParams(sp.toString());
@@ -22,7 +24,7 @@ export function ViewToggle({ view }: { view: "list" | "grid" }) {
     <div className="inline-flex overflow-hidden rounded-lg border border-slate-300">
       <button
         type="button"
-        aria-label="Списком"
+        aria-label={tc("viewList")}
         onClick={() => set("list")}
         className={`px-2.5 py-1.5 transition-colors ${view === "list" ? "bg-brand-600 text-white" : "bg-white text-slate-500 hover:bg-slate-50"}`}
       >
@@ -35,7 +37,7 @@ export function ViewToggle({ view }: { view: "list" | "grid" }) {
       </button>
       <button
         type="button"
-        aria-label="Плиткой"
+        aria-label={tc("viewGrid")}
         onClick={() => set("grid")}
         className={`border-l border-slate-300 px-2.5 py-1.5 transition-colors ${view === "grid" ? "bg-brand-600 text-white" : "bg-white text-slate-500 hover:bg-slate-50"}`}
       >

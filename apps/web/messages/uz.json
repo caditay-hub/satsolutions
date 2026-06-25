@@ -897,6 +897,15 @@
     "byCategories": "Turkumlar bo'yicha katalog",
     "byCategoriesIntro": "Turkumni tanlang — brendlar bo'yicha filtr bilan mahsulotlar katalogi ochiladi. Katalogda jami {total} ta pozitsiya.",
     "byBrands": "Brendlar bo'yicha katalog",
-    "allProducts": "Barcha mahsulotlar"
+    "allProducts": "Barcha mahsulotlar",
+    "sortDefault": "Standart",
+    "sortNameAsc": "Nomi A–Z",
+    "sortNameDesc": "Nomi Z–A",
+    "sortPriceAsc": "Avval arzon",
+    "sortPriceDesc": "Avval qimmat",
+    "sortNew": "Avval yangi",
+    "sortAria": "Mahsulotlarni saralash",
+    "viewList": "Ro'yxat",
+    "viewGrid": "Plitka"
   }
 }

@@ -897,6 +897,15 @@
     "byCategories": "Kategorilere göre katalog",
     "byCategoriesIntro": "Bir kategori seçin — marka filtreli ürün kataloğu açılır. Toplam {total} ürün.",
     "byBrands": "Markalara göre katalog",
-    "allProducts": "Tüm ürünler"
+    "allProducts": "Tüm ürünler",
+    "sortDefault": "Varsayılan",
+    "sortNameAsc": "Ad A–Z",
+    "sortNameDesc": "Ad Z–A",
+    "sortPriceAsc": "Önce ucuz",
+    "sortPriceDesc": "Önce pahalı",
+    "sortNew": "Önce yeni",
+    "sortAria": "Ürünleri sırala",
+    "viewList": "Liste",
+    "viewGrid": "Izgara"
   }
 }

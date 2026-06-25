@@ -1,20 +1,22 @@
 "use client";
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
-const OPTIONS: Array<{ value: string; label: string }> = [
-  { value: "default", label: "По умолчанию" },
-  { value: "name_asc", label: "Название А–Я" },
-  { value: "name_desc", label: "Название Я–А" },
-  { value: "price_asc", label: "Сначала дешевле" },
-  { value: "price_desc", label: "Сначала дороже" },
-  { value: "new", label: "Сначала новые" },
+const OPTIONS: Array<{ value: string; key: string }> = [
+  { value: "default", key: "sortDefault" },
+  { value: "name_asc", key: "sortNameAsc" },
+  { value: "name_desc", key: "sortNameDesc" },
+  { value: "price_asc", key: "sortPriceAsc" },
+  { value: "price_desc", key: "sortPriceDesc" },
+  { value: "new", key: "sortNew" },
 ];
 
 export function SortSelect({ value }: { value: string }) {
   const sp = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const tc = useTranslations("catalog");
 
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const v = e.target.value;
@@ -30,11 +32,11 @@ export function SortSelect({ value }: { value: string }) {
     <select
       value={value || "default"}
       onChange={onChange}
-      aria-label="Сортировка товаров"
+      aria-label={tc("sortAria")}
       className="h-9 rounded-lg border border-slate-300 bg-white px-2.5 text-sm font-semibold text-slate-700 outline-none focus:border-brand-600"
     >
       {OPTIONS.map((o) => (
-        <option key={o.value} value={o.value}>{o.label}</option>
+        <option key={o.value} value={o.value}>{tc(o.key)}</option>
       ))}
     </select>
   );
