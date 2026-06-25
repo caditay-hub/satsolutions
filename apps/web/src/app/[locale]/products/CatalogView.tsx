@@ -7,6 +7,7 @@ import { getProducts, getProductFacets, getSitePage, getSmartSearch, type SmartS
 import { ProductCard } from "@/components/Cards";
 import { CatalogCard } from "@/components/CatalogCard";
 import { CatalogRow } from "@/components/CatalogRow";
+import { localizeProductName } from "@/lib/productI18n";
 import { ViewToggle } from "@/components/catalog/ViewToggle";
 import { SortSelect } from "@/components/catalog/SortSelect";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
@@ -223,19 +224,19 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
               {smart ? (
                 <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                   {items.map((p) => (
-                    <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} />
+                    <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">
                   {items.map((p) => (
-                    <CatalogRow key={p.id} p={p} usdToUzs={usdToUzs} />
+                    <CatalogRow key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               ) : (
                 <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                   {items.map((p) => (
-                    <CatalogCard key={p.id} p={p} usdToUzs={usdToUzs} />
+                    <CatalogCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               )}

@@ -13,6 +13,7 @@ import { Reveal } from "@/components/Reveal";
 import { AutoPlayVideo } from "@/components/AutoPlayVideo";
 import { INDUSTRIES } from "@/lib/servicesData";
 import { localizePortfolioProject } from "@/lib/contentI18n";
+import { localizeProductName } from "@/lib/productI18n";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -364,13 +365,13 @@ export default async function HomePage() {
               <div className="flex gap-4 sm:gap-5 w-max animate-scroll2 hover:[animation-play-state:paused]">
                 {productFeed.map((p, i) => (
                   <div key={`a-${p.id}-${i}`} className="shrink-0 w-[180px] sm:w-[220px] md:w-[240px]">
-                    <ProductCard p={p} />
+                    <ProductCard p={p} name={localizeProductName(p, locale)} />
                   </div>
                 ))}
                 <div className="contents" aria-hidden="true">
                 {productFeed.map((p, i) => (
                   <div key={`b-${p.id}-${i}`} className="shrink-0 w-[180px] sm:w-[220px] md:w-[240px]">
-                    <ProductCard p={p} />
+                    <ProductCard p={p} name={localizeProductName(p, locale)} />
                   </div>
                 ))}
                 </div>

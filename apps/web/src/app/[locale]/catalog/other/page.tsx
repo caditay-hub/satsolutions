@@ -4,6 +4,8 @@ import { getBrands, getProducts, type ProductDto } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { localizeProductName } from "@/lib/productI18n";
+import { getLocale } from "next-intl/server";
 import {
   splitBrands,
   OTHER_BRANDS_SLUG,
@@ -27,6 +29,7 @@ export async function generateMetadata({
 }
 
 export default async function OtherBrandsPage() {
+  const locale = await getLocale();
   const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const { small } = splitBrands(brands);
 
@@ -105,7 +108,7 @@ export default async function OtherBrandsPage() {
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
                   {items.map((p) => (
-                    <ProductCard key={p.id} p={p} />
+                    <ProductCard key={p.id} p={p} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               </section>

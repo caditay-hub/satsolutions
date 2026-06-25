@@ -12,8 +12,9 @@ const NOISE = new Set(["Артикул", "Артикул производите�
 
 // Строка списка в стиле NAG: фото слева, посередине артикул+название+ключевые
 // характеристики, справа наличие, цена и кнопка «Получить КП».
-export function CatalogRow({ p }: { p: ProductDto; usdToUzs?: number }) {
+export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
+  const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
   const info = priceInfo(p);
   const price = info ? (info.kind === "value" ? tc("priceFrom", { value: info.value }) : tc("priceOnRequest")) : null;
@@ -26,7 +27,7 @@ export function CatalogRow({ p }: { p: ProductDto; usdToUzs?: number }) {
     <div className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-400 sm:flex-row sm:items-center">
       <Link href={`/products/${p.slug}`} className="relative block h-24 w-24 shrink-0 self-center overflow-hidden rounded-lg bg-white sm:self-start">
         {img ? (
-          <Image alt={p.name} src={img} fill sizes="96px" loading="lazy" unoptimized className="object-contain p-1" />
+          <Image alt={displayName} src={img} fill sizes="96px" loading="lazy" unoptimized className="object-contain p-1" />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-brand-50">
             <span className="text-3xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
@@ -39,7 +40,7 @@ export function CatalogRow({ p }: { p: ProductDto; usdToUzs?: number }) {
           <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{p.modelCode}</div>
         ) : null}
         <Link href={`/products/${p.slug}`} className="block text-[15px] font-bold leading-snug text-slate-900 hover:text-brand-700 first-letter:uppercase">
-          {p.name}
+          {displayName}
         </Link>
         {specs.length > 0 ? (
           <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-[12px] text-slate-500">
@@ -56,7 +57,7 @@ export function CatalogRow({ p }: { p: ProductDto; usdToUzs?: number }) {
           {tc("inStock")}
         </div>
         {price ? <div className="text-[15px] font-black text-brand-700">{price}</div> : null}
-        <RequestQuoteButton productName={p.name} label="Получить КП" variant="brand" />
+        <RequestQuoteButton productName={displayName} label={tc("getQuote")} variant="brand" />
       </div>
     </div>
   );

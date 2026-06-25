@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
-import { localizeProduct } from "@/lib/productI18n";
+import { localizeProduct, localizeProductName } from "@/lib/productI18n";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -406,7 +406,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             </div>
             <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
               {similarItems.map((p: any) => (
-                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} />
+                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
               ))}
             </div>
           </div>

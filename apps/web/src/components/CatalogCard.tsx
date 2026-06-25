@@ -10,8 +10,9 @@ import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 
 // Карточка-плитка в стиле NAG: фото сверху, артикул, название, наличие,
 // крупная цена и кнопка «Получить КП» на всю ширину снизу.
-export function CatalogCard({ p }: { p: ProductDto; usdToUzs?: number }) {
+export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
+  const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
   const info = priceInfo(p);
   const price = info ? (info.kind === "value" ? tc("priceFrom", { value: info.value }) : tc("priceOnRequest")) : null;
@@ -23,7 +24,7 @@ export function CatalogCard({ p }: { p: ProductDto; usdToUzs?: number }) {
           <span className="absolute left-2 top-2 z-10 rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">Хит</span>
         ) : null}
         {img ? (
-          <Image alt={p.name} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" unoptimized className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />
+          <Image alt={displayName} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" unoptimized className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-brand-50">
             <span className="text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
@@ -37,7 +38,7 @@ export function CatalogCard({ p }: { p: ProductDto; usdToUzs?: number }) {
           <div className="truncate text-[11px] font-bold uppercase tracking-wide text-slate-500">{p.modelCode}</div>
         ) : null}
         <Link href={`/products/${p.slug}`} className="mt-0.5 line-clamp-3 text-[13px] font-bold leading-snug text-slate-900 hover:text-brand-700 first-letter:uppercase">
-          {p.name}
+          {displayName}
         </Link>
 
         <div className="mt-auto pt-2">
@@ -50,7 +51,7 @@ export function CatalogCard({ p }: { p: ProductDto; usdToUzs?: number }) {
       </div>
 
       <div className="px-3 pb-3">
-        <RequestQuoteButton productName={p.name} label="Получить КП" variant="brand" fullWidth />
+        <RequestQuoteButton productName={displayName} label={tc("getQuote")} variant="brand" fullWidth />
       </div>
     </div>
   );

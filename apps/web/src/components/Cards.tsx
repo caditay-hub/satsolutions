@@ -7,8 +7,11 @@ import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { priceInfo, productIcon } from "@/lib/product";
 
-export function ProductCard({ p }: { p: ProductDto; usdToUzs?: number }) {
+export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
+  // Локализованное имя приходит пропсом из серверного родителя (оверлей 2.8 МБ
+  // в client-бандл не тянем); фолбэк — имя из БД (русское).
+  const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
   const info = priceInfo(p);
   const price = info ? (info.kind === "value" ? tc("priceFrom", { value: info.value }) : tc("priceOnRequest")) : null;
@@ -20,7 +23,7 @@ export function ProductCard({ p }: { p: ProductDto; usdToUzs?: number }) {
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
         {img ? (
           <Image
-            alt={p.name}
+            alt={displayName}
             src={img}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
@@ -37,7 +40,7 @@ export function ProductCard({ p }: { p: ProductDto; usdToUzs?: number }) {
         )}
       </div>
       <div className="px-2.5 py-1.5 border-t border-slate-100 bg-white">
-        <div className="text-[13px] leading-snug font-bold text-slate-900 line-clamp-2 first-letter:uppercase">{p.name}</div>
+        <div className="text-[13px] leading-snug font-bold text-slate-900 line-clamp-2 first-letter:uppercase">{displayName}</div>
         {price ? <div className="mt-1 text-[13px] font-black text-brand-700">{price}</div> : null}
       </div>
     </Link>
