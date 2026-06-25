@@ -17,6 +17,7 @@ const SEND_TO = {
   call: LEAD,        // клик по tel:  (TODO: своя метка «Звонок»)
   whatsapp: LEAD,    // клик по wa.me (TODO: своя метка «WhatsApp»)
   telegram: LEAD,    // клик по t.me  (TODO: своя метка «Telegram»)
+  chat: LEAD,        // онлайн-чат: оставлен телефон (TODO: своя метка «Онлайн-чат»)
 } as const;
 
 type ConversionKey = keyof typeof SEND_TO;

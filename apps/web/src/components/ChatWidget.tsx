@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import type { Socket } from "socket.io-client";
+import { trackConversion } from "@/lib/gtag";
 
 type Msg = {
   id: string;
@@ -463,6 +464,9 @@ export function ChatWidget() {
     const phoneRest = digitsOnly(formPhoneRest);
     if (name.length < 2 || phoneRest.length < 9) return;
     const p: Profile = { name, phone: phoneRest };
+    // Лид из онлайн-чата: пользователь оставил имя+телефон — конверсия в Google Ads.
+    // Только при первом заполнении профиля (не на повторных правках), чтобы не задваивать.
+    if (!profileRef.current) trackConversion("chat");
     saveProfile(p);
     setProfile(p);
     // Re-announce profile so an existing conversation gets the name/phone attached.
