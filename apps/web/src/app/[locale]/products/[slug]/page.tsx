@@ -209,7 +209,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       itemListElement: [
         { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
         { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
-        ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: brandInfo.name, item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
+        ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: localizeCatName(brandInfo.name, locale), item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
         { "@type": "ListItem", position: brandInfo ? 4 : 3, name: locName, item: `${siteUrl}/products/${product.slug}` },
       ],
     };
