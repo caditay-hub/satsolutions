@@ -86,6 +86,8 @@ const CAT_NAMES: Record<string, Loc> = {
   "Инструменты": { uz: "Asboblar", en: "Tools", tr: "Araçlar", zh: "工具" },
   "Жёсткие диски": { uz: "Qattiq disklar", en: "Hard drives", tr: "Sabit diskler", zh: "硬盘" },
   "Аксессуары": { uz: "Aksessuarlar", en: "Accessories", tr: "Aksesuarlar", zh: "配件" },
+  "Медиаконвертеры": { uz: "Mediakonverterlar", en: "Media converters", tr: "Medya dönüştürücüler", zh: "媒体转换器" },
+  "Прочее оборудование": { uz: "Boshqa uskunalar", en: "Other equipment", tr: "Diğer ekipmanlar", zh: "其他设备" },
 };
 
 /** Локализованное имя категории/типа/группы (фолбэк на русское). */

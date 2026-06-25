@@ -5,6 +5,7 @@ import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, g
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
+import { localizeCatName } from "@/lib/catalogI18n";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -249,7 +250,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             <>
               <span className="text-slate-300">/</span>
               <Link href={`/categories/${categoryInfo.slug}`} className="hover:text-slate-900 transition-colors">
-                {categoryInfo.name}
+                {localizeCatName(categoryInfo.name, locale)}
               </Link>
             </>
           )}
@@ -283,7 +284,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   href={`/catalog/${brandInfo.slug}`}
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-md text-xs font-bold uppercase tracking-wide transition-colors"
                 >
-                  <span style={{ color: "#e02020" }}>●</span> {brandInfo.name}
+                  <span style={{ color: "#e02020" }}>●</span> {localizeCatName(brandInfo.name, locale)}
                 </Link>
               )}
               {isEol ? (
@@ -397,7 +398,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
           <div className="mt-8">
             <div className="flex items-center justify-between mb-3">
               <div className="text-lg font-bold tracking-tight">
-                {categoryInfo ? `${t("product.similar")}: ${categoryInfo.name}` : t("product.similarProducts")}
+                {categoryInfo ? `${t("product.similar")}: ${localizeCatName(categoryInfo.name, locale)}` : t("product.similarProducts")}
               </div>
               {categoryInfo && (
                 <Link href={`/categories/${categoryInfo.slug}`} className="text-xs font-bold text-[#e02020] hover:underline">
