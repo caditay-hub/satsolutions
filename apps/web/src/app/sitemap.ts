@@ -72,6 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lastModified: GENERATED,
             changeFrequency: "weekly" as const,
             priority: 0.8,
+            alternates: { languages: langAlternates(`/catalog/${b.slug}`) },
         }));
 
         // Канонические страницы типов = чистые URL /products/type/<slug> (дедуп имён).
@@ -96,6 +97,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             lastModified: new Date(p.updatedAt),
             changeFrequency: "weekly" as const,
             priority: 0.6,
+            alternates: { languages: langAlternates(`/products/${p.slug}`) },
         }));
 
 const serviceRoutes = services.map((s) => ({

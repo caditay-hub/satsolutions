@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { getBrands } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "../../products/CatalogView";
 
 export const revalidate = 300;
@@ -183,14 +185,15 @@ export async function generateMetadata({
   params: Promise<{ locale: string; brand: string }>;
 }): Promise<Metadata> {
   const { locale, brand } = await params;
+  const tc = await getTranslations({ locale, namespace: "catalog" });
   const cfg = BRAND_CONFIG[brand.toLowerCase()];
-  if (!cfg) return { title: "Каталог продукции" };
-  const title = `${cfg.displayName} — Каталог продукции`;
+  if (!cfg) return { title: tc("productCatalog") };
+  const title = `${cfg.displayName} — ${tc("productCatalog")}`;
   return {
     title,
     description: cfg.description,
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
-    openGraph: { title, description: cfg.description },
+    openGraph: { title, description: cfg.description, locale: ogLocale(locale) },
   };
 }
 

@@ -7,13 +7,18 @@ import { GroupIcon } from "@/components/GroupIcon";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { ogLocale } from "@/lib/ogLocale";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const tc = await getTranslations({ locale, namespace: "catalog" });
+  const title = tc("byCategories");
+  const description = tc("byCategoriesDesc");
   return {
-    title: "Каталог по категориям",
-    description: "Системы безопасности, видеонаблюдение, сети и СКС — весь каталог SAT Solutions по категориям. Доставка по Ташкенту и Узбекистану.",
-    alternates: hreflangAlternates("/categories", locale)
+    title,
+    description,
+    alternates: hreflangAlternates("/categories", locale),
+    openGraph: { title, description, locale: ogLocale(locale) },
   };
 }
 

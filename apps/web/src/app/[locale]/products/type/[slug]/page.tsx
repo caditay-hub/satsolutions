@@ -4,6 +4,8 @@ import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { localizeCatName } from "@/lib/catalogI18n";
+import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "../../CatalogView";
 
 export const revalidate = 300;
@@ -25,13 +27,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale });
   const name = await resolveTypeName(slug);
   if (!name) return { title: t("nav.products") };
-  const title = `${name} — ${t("product.titleBuy")}`;
-  const description = t("product.typeDesc", { type: name });
+  const locName = localizeCatName(name, locale);
+  const title = `${locName} — ${t("product.titleBuy")}`;
+  const description = t("product.typeDesc", { type: locName });
   return {
     title,
     description,
     alternates: hreflangAlternates(`/products/type/${slug}`, locale),
-    openGraph: { title, description },
+    openGraph: { title, description, locale: ogLocale(locale) },
   };
 }
 

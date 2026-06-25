@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { ogLocale } from "@/lib/ogLocale";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -89,6 +90,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       openGraph: {
         title: loc.name,
         description: desc,
+        locale: ogLocale(locale),
         images: ogImage ? [{ url: ogImage }] : undefined
       }
     });

@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { getBrands, type BrandDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 import { splitBrands, OTHER_BRANDS_SLUG, OTHER_BRANDS_NAME } from "@/lib/brandGroups";
 
 export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const tc = await getTranslations({ locale, namespace: "catalog" });
+  const title = tc("byBrands");
+  const description = tc("byCategoriesDesc");
   return {
-    title: "Каталог продукции",
+    title,
     alternates: hreflangAlternates("/catalog", locale),
-    description:
-      "Каталог продукции ведущих производителей: Dahua Technology, Hikvision и других. Системы видеонаблюдения, безопасности и IT-решения.",
+    description,
+    openGraph: { title, description, locale: ogLocale(locale) },
   };
 }
 
