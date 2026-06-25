@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
-import { localizeProduct, localizeProductName } from "@/lib/productI18n";
+import { localizeProduct, localizeProductName, localizeCharacteristics } from "@/lib/productI18n";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -153,7 +153,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       // ignore
     }
 
-    const characteristics = product.characteristics ?? {};
+    const characteristics = localizeCharacteristics(product.id, product.characteristics ?? {}, locale);
     // «Цена» в характеристиках — служебный маркер «по запросу», не показываем в таблице
     const charEntries = Object.entries(characteristics).filter(([k]) => k !== "Цена");
     const highlights = charEntries.slice(0, 4);
