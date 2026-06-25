@@ -6,13 +6,14 @@ import { Reveal } from "@/components/Reveal";
 import { SERVICES, INDUSTRIES } from "@/lib/servicesData";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: "meta" });
-  return { title: { absolute: tm("solTitle") }, description: tm("solDesc"), alternates: hreflangAlternates("/solutions", locale), openGraph: { title: tm("solTitle"), description: tm("solDesc") } };
+  return { title: { absolute: tm("solTitle") }, description: tm("solDesc"), alternates: hreflangAlternates("/solutions", locale), openGraph: { title: tm("solTitle"), description: tm("solDesc"), locale: ogLocale(locale) } };
 }
 
 /* ─────────────  Inline icon set  ───────────── */

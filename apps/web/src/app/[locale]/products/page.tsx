@@ -3,6 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
 import { getCategories } from "@/lib/api";
+import { hreflangAlternates } from "@/lib/hreflang";
+import { localizeCatName } from "@/lib/catalogI18n";
+import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "./CatalogView";
 
 // canonical: при активном ТОЛЬКО фильтре категории указываем на индексируемую /categories/[slug]
@@ -40,13 +43,14 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   const indexable = onlyType || isBare;
   const robots = indexable ? undefined : { index: false, follow: true };
   if (onlyType) {
-    const typeTitle = `${type} — ${t("product.titleBuy")}`;
-    const typeDesc = t("product.typeDesc", { type: type as string });
+    const locType = localizeCatName(type as string, locale);
+    const typeTitle = `${locType} — ${t("product.titleBuy")}`;
+    const typeDesc = t("product.typeDesc", { type: locType });
     return {
       title: typeTitle,
       description: typeDesc,
       alternates: { canonical: lp + canonical },
-      openGraph: { title: typeTitle, description: typeDesc }
+      openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale) }
     };
   }
   const listDesc = t("product.listDesc");
@@ -54,8 +58,9 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   return {
     title: listTitle,
     description: listDesc,
-    alternates: { canonical: lp + canonical },
-    openGraph: { title: `${listTitle} — SAT Solutions`, description: listDesc },
+    // Чистый /products индексируем → полные hreflang-альтернаты; фильтрованные (noindex) — только canonical.
+    alternates: isBare ? hreflangAlternates("/products", locale) : { canonical: lp + canonical },
+    openGraph: { title: `${listTitle} — SAT Solutions`, description: listDesc, locale: ogLocale(locale) },
     ...(robots ? { robots } : {})
   };
 }

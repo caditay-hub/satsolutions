@@ -6,6 +6,7 @@ import { getBrands, getCategories, getPartners, getPortfolio, getProducts, getSi
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 import { typeSlug } from "@/lib/typeSlug";
 import { HeroCarousel, type HeroSlide } from "@/components/HeroCarousel";
 import { ProductCard } from "@/components/Cards";
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: tm("homeTitle") },
     description: tm("homeDesc"),
     alternates: hreflangAlternates("/", locale),
-    openGraph: { title: tm("homeTitle"), description: tm("homeDesc"), images: [{ url: "/og.png", width: 1200, height: 630, alt: tm("homeTitle") }] },
+    openGraph: { title: tm("homeTitle"), description: tm("homeDesc"), locale: ogLocale(locale), images: [{ url: "/og.png", width: 1200, height: 630, alt: tm("homeTitle") }] },
     twitter: { card: "summary_large_image", title: tm("homeTitle"), description: tm("homeDesc"), images: ["/og.png"] }
   };
 }

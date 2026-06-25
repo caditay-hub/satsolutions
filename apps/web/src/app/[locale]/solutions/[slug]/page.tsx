@@ -12,6 +12,7 @@ import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -26,13 +27,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: { absolute: `${title} — SAT Solutions` },
       description: intro,
       alternates: hreflangAlternates(`/solutions/${svc.key}`, locale),
-      openGraph: { title, description: intro, images: [{ url: `${IMG_BASE}/${svc.key}.jpg` }] }
+      openGraph: { title, description: intro, locale: ogLocale(locale), images: [{ url: `${IMG_BASE}/${svc.key}.jpg` }] }
     };
   }
   try {
     const { item } = await getServiceBySlug(slug);
     const solDesc = item.excerpt?.trim() || `${item.title} — решения по безопасности и слаботочным системам от SAT Solutions в Ташкенте и по Узбекистану.`;
-    return { title: item.title, description: solDesc, alternates: hreflangAlternates(`/solutions/${item.slug}`, locale), openGraph: { title: item.title, description: solDesc } };
+    return { title: item.title, description: solDesc, alternates: hreflangAlternates(`/solutions/${item.slug}`, locale), openGraph: { title: item.title, description: solDesc, locale: ogLocale(locale) } };
   } catch {
     return { title: "Услуга" };
   }

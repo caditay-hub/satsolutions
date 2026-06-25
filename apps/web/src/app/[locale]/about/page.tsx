@@ -8,6 +8,7 @@ import { Reveal } from "@/components/Reveal";
 import { DocPreview } from "@/components/DocPreview";
 import { getTranslations, getLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { ogLocale } from "@/lib/ogLocale";
 import { localizeAboutContent, localizeAddress } from "@/lib/contentI18n";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("title"),
       description: desc || t("title"),
       alternates: hreflangAlternates("/about", locale),
-      openGraph: { title: t("title"), description: desc || t("title") }
+      openGraph: { title: t("title"), description: desc || t("title"), locale: ogLocale(locale) }
     };
   } catch {
     return { title: t("title") };
