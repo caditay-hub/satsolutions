@@ -7,9 +7,16 @@ declare global {
   }
 }
 
+// Метки действий-конверсий Google Ads (AW-18194158897).
+// call/whatsapp/telegram временно указывают на ту же метку «lead», чтобы клики по
+// контактам засчитывались СРАЗУ (это основной канал лидов в UZ). Когда в аккаунте
+// создадим отдельные действия (Звонок / WhatsApp / Telegram) — заменить метки здесь.
+const LEAD = "AW-18194158897/R9ZeCKrJ670cELGq0-ND";
 const SEND_TO = {
-  // Конверсия «Отправка формы для потенциальных клиентов»
-  lead: "AW-18194158897/R9ZeCKrJ670cELGq0-ND",
+  lead: LEAD,        // отправка формы КП/заявки
+  call: LEAD,        // клик по tel:  (TODO: своя метка «Звонок»)
+  whatsapp: LEAD,    // клик по wa.me (TODO: своя метка «WhatsApp»)
+  telegram: LEAD,    // клик по t.me  (TODO: своя метка «Telegram»)
 } as const;
 
 type ConversionKey = keyof typeof SEND_TO;

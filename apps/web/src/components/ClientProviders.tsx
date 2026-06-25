@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
+import { ContactConversionTracker } from "./ContactConversionTracker";
 
 const SiteFooter = dynamic(() => import("./SiteFooter").then(m => m.SiteFooter), { ssr: false });
 const AosInit = dynamic(() => import("./AosInit").then(m => m.AosInit), { ssr: false });
@@ -17,6 +18,7 @@ export function ClientProviders({ children }: { children: React.ReactNode }) {
     return (
         <>
             <AosInit />
+            <ContactConversionTracker />
             {children}
             {mounted && <SiteFooter />}
             {mounted && <ChatWidgetDynamic />}
