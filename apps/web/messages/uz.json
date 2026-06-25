@@ -868,5 +868,11 @@
     "title": "Hamkorlar",
     "metaDesc": "Bizning hamkorlar",
     "empty": "Hozircha hamkorlar yo‘q."
+  },
+  "catalogMega": {
+    "allSectionItems": "Bo'lim mahsulotlari",
+    "allBrands": "Barcha brendlar",
+    "allCategories": "Barcha turkumlar",
+    "wholeCatalog": "Butun katalog"
   }
 }

@@ -868,5 +868,11 @@
     "title": "Partners",
     "metaDesc": "Our partners",
     "empty": "No partners yet."
+  },
+  "catalogMega": {
+    "allSectionItems": "All section products",
+    "allBrands": "All brands",
+    "allCategories": "All categories",
+    "wholeCatalog": "Full catalog"
   }
 }

@@ -868,5 +868,11 @@
     "title": "Ortaklar",
     "metaDesc": "Ortaklarımız",
     "empty": "Henüz ortak yok."
+  },
+  "catalogMega": {
+    "allSectionItems": "Bölüm ürünleri",
+    "allBrands": "Tüm markalar",
+    "allCategories": "Tüm kategoriler",
+    "wholeCatalog": "Tüm katalog"
   }
 }

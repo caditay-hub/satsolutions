@@ -868,5 +868,11 @@
     "title": "合作伙伴",
     "metaDesc": "我们的合作伙伴",
     "empty": "暂无合作伙伴。"
+  },
+  "catalogMega": {
+    "allSectionItems": "本类全部产品",
+    "allBrands": "所有品牌",
+    "allCategories": "所有分类",
+    "wholeCatalog": "完整目录"
   }
 }

@@ -868,5 +868,11 @@
     "title": "Партнёры",
     "metaDesc": "Наши партнёры",
     "empty": "Партнёров пока нет."
+  },
+  "catalogMega": {
+    "allSectionItems": "Все товары раздела",
+    "allBrands": "Все бренды",
+    "allCategories": "Все категории",
+    "wholeCatalog": "Весь каталог"
   }
 }

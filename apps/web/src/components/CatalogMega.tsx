@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
@@ -14,6 +15,8 @@ function typeHref(name: string) {
 /** DNS-стиль мега-меню «Каталог»: слева функциональные группы, справа их типы. */
 export function CatalogMega() {
   const router = useRouter();
+  const t = useTranslations("nav");
+  const tm = useTranslations("catalogMega");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -42,7 +45,7 @@ export function CatalogMega() {
         aria-expanded={open}
         className="inline-flex items-center gap-1.5 whitespace-nowrap text-base xl:text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-brand-700"
       >
-        Каталог
+        {t("catalog")}
         <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className={`transition-transform ${open ? "rotate-180" : ""}`}>
           <path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
         </svg>
@@ -75,7 +78,7 @@ export function CatalogMega() {
                 <div className="mb-2.5 flex items-center justify-between">
                   <div className="text-[15px] font-semibold text-slate-900">{group.title}</div>
                   <Link href={typeHref(group.types[0].n)} onClick={() => setOpen(false)} className="text-xs font-bold text-brand-700 hover:underline">
-                    Все товары раздела →
+                    {tm("allSectionItems")} →
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 gap-x-4 gap-y-0.5">
@@ -96,13 +99,13 @@ export function CatalogMega() {
 
             <div className="flex items-center gap-4 border-t border-slate-100 bg-slate-50/60 px-4 py-2.5 text-sm">
               <Link href="/catalog" onClick={() => setOpen(false)} className="font-semibold text-slate-700 hover:text-brand-700">
-                Все бренды
+                {tm("allBrands")}
               </Link>
               <Link href="/categories" onClick={() => setOpen(false)} className="font-semibold text-slate-700 hover:text-brand-700">
-                Все категории
+                {tm("allCategories")}
               </Link>
               <Link href="/products" onClick={() => setOpen(false)} className="ml-auto font-bold text-brand-700 hover:underline">
-                Весь каталог →
+                {tm("wholeCatalog")} →
               </Link>
             </div>
           </div>
