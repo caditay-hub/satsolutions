@@ -5,6 +5,7 @@ import { getBrands } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { localizeBrandDesc } from "@/lib/brandI18n";
 import { CatalogView } from "../../products/CatalogView";
 
 export const revalidate = 300;
@@ -189,11 +190,12 @@ export async function generateMetadata({
   const cfg = BRAND_CONFIG[brand.toLowerCase()];
   if (!cfg) return { title: tc("productCatalog") };
   const title = `${cfg.displayName} — ${tc("productCatalog")}`;
+  const description = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   return {
     title,
-    description: cfg.description,
+    description,
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
-    openGraph: { title, description: cfg.description, locale: ogLocale(locale) },
+    openGraph: { title, description, locale: ogLocale(locale) },
   };
 }
 
@@ -220,6 +222,6 @@ export default async function BrandCatalogPage({
   return CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
-    brandLanding: { name: cfg.displayName, description: cfg.description, logoUrl },
+    brandLanding: { name: cfg.displayName, description: localizeBrandDesc(brandSlug, cfg.description, locale), logoUrl },
   } as any);
 }
