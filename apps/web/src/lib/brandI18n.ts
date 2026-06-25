@@ -213,3 +213,19 @@ export function localizeBrandDesc(slug: string | undefined, fallback: string, lo
   if (!e) return fallback;
   return (e as Record<string, string>)[locale]?.trim() || fallback;
 }
+
+// Имена брендов: переводим/транслитерируем только те, что по-русски (псевдобренд + рос. вендоры).
+// Настоящие бренды (Hikvision, Dahua, …) — имена собственные, возвращаем как есть.
+const BRAND_NAME: Record<string, Loc> = {
+  prochee: { uz: "Boshqa uskunalar", en: "Other equipment", tr: "Diğer ekipmanlar", zh: "其他设备" },
+  rubezh: { uz: "Rubezh", en: "Rubezh", tr: "Rubezh", zh: "Rubezh" },
+  bolid: { uz: "Bolid", en: "Bolid", tr: "Bolid", zh: "Bolid" },
+};
+
+/** Локализованное имя бренда (для названий с кириллицей; настоящие бренды — фолбэк без изменений). */
+export function localizeBrandName(slug: string | undefined, fallback: string, locale: string): string {
+  if (!slug || locale === routing.defaultLocale) return fallback;
+  const e = BRAND_NAME[slug.toLowerCase()];
+  if (!e) return fallback;
+  return (e as Record<string, string>)[locale]?.trim() || fallback;
+}

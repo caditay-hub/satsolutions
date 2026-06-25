@@ -5,7 +5,7 @@ import { getBrands } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { localizeBrandDesc } from "@/lib/brandI18n";
+import { localizeBrandDesc, localizeBrandName } from "@/lib/brandI18n";
 import { CatalogView } from "../../products/CatalogView";
 
 export const revalidate = 300;
@@ -189,7 +189,7 @@ export async function generateMetadata({
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const cfg = BRAND_CONFIG[brand.toLowerCase()];
   if (!cfg) return { title: tc("productCatalog") };
-  const title = `${cfg.displayName} — ${tc("productCatalog")}`;
+  const title = `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
   const description = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   return {
     title,
@@ -222,6 +222,6 @@ export default async function BrandCatalogPage({
   return CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
-    brandLanding: { name: cfg.displayName, description: localizeBrandDesc(brandSlug, cfg.description, locale), logoUrl },
+    brandLanding: { name: localizeBrandName(brandSlug, cfg.displayName, locale), description: localizeBrandDesc(brandSlug, cfg.description, locale), logoUrl },
   } as any);
 }
