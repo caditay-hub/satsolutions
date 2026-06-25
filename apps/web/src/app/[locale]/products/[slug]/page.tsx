@@ -4,7 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
-import { localizeProduct, localizeProductName, localizeCharacteristics } from "@/lib/productI18n";
+import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
@@ -131,6 +131,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     const loc = localizeProduct(product, locale);
     const locName = loc.name;
     const locShortDesc = loc.shortDescription;
+    const locDescription = localizeDescription(product.id, product.description, locale);
 
     let usdToUzs = 1;
     try {
@@ -212,7 +213,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       ],
     };
     // FAQ-схема (FAQPage) из структурированного описания — для расширенных сниппетов Google
-    const faqItems = parseRichDescription(product.description).faq;
+    const faqItems = parseRichDescription(locDescription).faq;
     const faqLd =
       faqItems.length > 0
         ? {
@@ -353,7 +354,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               </div>
             )}
 
-            <RichDescription text={product.description} />
+            <RichDescription text={locDescription} />
 
             {(() => {
               const relSvc = serviceForCategory(categoryInfo?.name);

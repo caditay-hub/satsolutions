@@ -6,7 +6,7 @@ import { routing } from "@/i18n/routing";
  * Источник = машинный перевод каталога (см. .seo-analysis/, генерится из БД).
  * Ключ = product.id. Базовый язык ru берётся из самого товара (БД).
  */
-type LocFields = { name?: string; shortDescription?: string; characteristics?: Record<string, string> };
+type LocFields = { name?: string; shortDescription?: string; description?: string; characteristics?: Record<string, string> };
 const MAP = overlay as Record<string, Record<string, LocFields>>;
 
 export interface LocalizableProduct {
@@ -37,6 +37,17 @@ export function localizeProduct(
 export function localizeProductName(product: LocalizableProduct, locale: string): string {
   if (!product.id || locale === routing.defaultLocale) return product.name ?? "";
   return MAP[product.id]?.[locale]?.name?.trim() || (product.name ?? "");
+}
+
+/** Возвращает переведённое полное описание (markdown) с фолбэком на русское из БД. */
+export function localizeDescription(
+  productId: string | undefined,
+  description: string | null | undefined,
+  locale: string
+): string {
+  const base = description ?? "";
+  if (!productId || locale === routing.defaultLocale) return base;
+  return MAP[productId]?.[locale]?.description?.trim() || base;
 }
 
 /** Возвращает переведённые характеристики (фолбэк на оригинальные из БД). */
