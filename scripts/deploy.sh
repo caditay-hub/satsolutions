@@ -7,12 +7,20 @@ set -euo pipefail
 cd /var/www/satweb
 echo "==> [satweb deploy] start $(date -u +%FT%TZ)"
 
-# 1) Бэкап прямых правок на сервере перед сбросом дерева
+# 1) Бэкап прямых правок на сервере перед сбросом дерева.
+#    ВАЖНО: tracked-файлы (напр. productI18n.json) правим ЛОКАЛЬНО через git, НЕ на сервере —
+#    иначе reset --hard ниже их откатит. Этот стеш — лишь страховочная сетка.
 if [ -n "$(git status --porcelain)" ]; then
   ts=$(date -u +%Y%m%dT%H%M%SZ)
   git stash push -u -m "auto-backup before deploy $ts"
   echo "    direct server edits backed up -> git stash: auto-backup before deploy $ts"
 fi
+
+# 1b) Подрезаем старые авто-бэкапы, чтобы стеши не копились бесконечно (оставляем 3 свежих)
+while [ "$(git stash list 2>/dev/null | grep -c 'auto-backup before deploy')" -gt 3 ]; do
+  idx=$(git stash list | grep 'auto-backup before deploy' | tail -1 | sed 's/^stash@{\([0-9]*\)}.*/\1/')
+  [ -n "$idx" ] && git stash drop "stash@{$idx}" >/dev/null 2>&1 || break
+done
 
 # 2) Точное соответствие GitHub main
 git fetch origin
