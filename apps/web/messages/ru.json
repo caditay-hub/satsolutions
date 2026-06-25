@@ -874,5 +874,29 @@
     "allBrands": "Все бренды",
     "allCategories": "Все категории",
     "wholeCatalog": "Весь каталог"
+  },
+  "catalog": {
+    "found": "Найдено",
+    "sort": "Сортировка",
+    "perPage": "Показывать по",
+    "nothingFound": "По заданным фильтрам ничего не найдено.",
+    "howToChoose": "Как выбрать и FAQ",
+    "guideSuffix": "гайд и частые вопросы",
+    "refine": "Уточнить",
+    "smartSearch": "Умный поиск",
+    "reset": "Сбросить",
+    "searchPrefix": "По запросу",
+    "searchFound": "найдено",
+    "filters": "Фильтры",
+    "price": "Цена, сум",
+    "priceRange": "Диапазон",
+    "brand": "Бренд",
+    "productType": "Тип товара",
+    "hide": "Скрыть",
+    "showMore": "Ещё",
+    "byCategories": "Каталог по категориям",
+    "byCategoriesIntro": "Выберите категорию — откроется каталог товаров с фильтром по брендам. Всего в каталоге {total} позиций.",
+    "byBrands": "Каталог по брендам",
+    "allProducts": "Все товары"
   }
 }

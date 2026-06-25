@@ -874,5 +874,29 @@
     "allBrands": "所有品牌",
     "allCategories": "所有分类",
     "wholeCatalog": "完整目录"
+  },
+  "catalog": {
+    "found": "找到",
+    "sort": "排序",
+    "perPage": "每页显示",
+    "nothingFound": "未找到符合所选筛选条件的商品。",
+    "howToChoose": "如何选择与常见问题",
+    "guideSuffix": "指南与常见问题",
+    "refine": "细化",
+    "smartSearch": "智能搜索",
+    "reset": "重置",
+    "searchPrefix": "搜索",
+    "searchFound": "找到",
+    "filters": "筛选",
+    "price": "价格，索姆",
+    "priceRange": "范围",
+    "brand": "品牌",
+    "productType": "产品类型",
+    "hide": "隐藏",
+    "showMore": "更多",
+    "byCategories": "按分类浏览目录",
+    "byCategoriesIntro": "选择一个分类 — 将打开带品牌筛选的产品目录。目录中共有 {total} 件商品。",
+    "byBrands": "按品牌浏览目录",
+    "allProducts": "全部产品"
   }
 }

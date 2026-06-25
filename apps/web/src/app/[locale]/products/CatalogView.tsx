@@ -1,7 +1,9 @@
 import { permanentRedirect } from "next/navigation";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
+import { localizeCatName } from "@/lib/catalogI18n";
 import { Link } from "@/i18n/navigation";
 import { getProducts, getProductFacets, getSitePage, getSmartSearch, type SmartSearchDto } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
@@ -27,6 +29,8 @@ export const PER_PAGE_OPTIONS = [20, 50, 100];
 export async function CatalogView({ params, searchParams, brandLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; pathType?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
+  const tc = await getTranslations({ locale, namespace: "catalog" });
+  const tnav = await getTranslations({ locale, namespace: "nav" });
   const view: "list" | "grid" = sp.view === "list" ? "list" : "grid";
   const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
   const perPage = PER_PAGE_OPTIONS.includes(Number(sp.perPage)) ? Number(sp.perPage) : 20;
@@ -135,18 +139,18 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
       {/* Хлебные крошки: страница типа (Главная › Каталог › Группа › Тип) или бренда */}
       {isTypePage ? (
         <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
-          <Link href="/" className="hover:text-brand-700">Главная</Link>
+          <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
           <span>›</span>
-          <Link href="/categories" className="hover:text-brand-700">Каталог</Link>
-          {typeGroup ? (<><span>›</span><Link href={`/categories#cat-${CATALOG_GROUPS.indexOf(typeGroup)}`} className="hover:text-brand-700">{typeGroup.title}</Link></>) : null}
+          <Link href="/categories" className="hover:text-brand-700">{tnav("catalog")}</Link>
+          {typeGroup ? (<><span>›</span><Link href={`/categories#cat-${CATALOG_GROUPS.indexOf(typeGroup)}`} className="hover:text-brand-700">{localizeCatName(typeGroup.title, locale)}</Link></>) : null}
           <span>›</span>
-          <span className="font-semibold text-slate-600">{type}</span>
+          <span className="font-semibold text-slate-600">{localizeCatName(type as string, locale)}</span>
         </nav>
       ) : brandLanding ? (
         <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
-          <Link href="/" className="hover:text-brand-700">Главная</Link>
+          <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
           <span>›</span>
-          <Link href="/catalog" className="hover:text-brand-700">Каталог</Link>
+          <Link href="/catalog" className="hover:text-brand-700">{tnav("catalog")}</Link>
           <span>›</span>
           <span className="font-semibold text-slate-600">{brandLanding.name}</span>
         </nav>
@@ -159,8 +163,8 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
             <Image src={brandLanding.logoUrl} alt={brandLanding.name} fill className="object-contain object-left" sizes="120px" />
           </span>
         ) : null}
-        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? (type as string) : brandLanding ? brandLanding.name : "Продукция"}</h1>
-        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">Найдено: {total}</span>
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : brandLanding ? brandLanding.name : tnav("products")}</h1>
+        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {total}</span>
       </div>
 
       {brandLanding?.description ? (
@@ -170,7 +174,7 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
       {onlyType && typeIntro ? (
         <div className="mb-4 text-[15px] leading-relaxed text-slate-600">
           {typeIntro}{" "}
-          <a href="#type-guide" className="whitespace-nowrap font-semibold text-brand-700 underline">Как выбрать и FAQ ↓</a>
+          <a href="#type-guide" className="whitespace-nowrap font-semibold text-brand-700 underline">{tc("howToChoose")} ↓</a>
         </div>
       ) : null}
 
@@ -182,18 +186,18 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
           {q ? (
             <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5">
               <span className="text-[15px] text-slate-700">
-                {smart ? <span className="font-bold text-brand-700">Умный поиск · </span> : null}
-                По запросу <span className="font-bold text-slate-900">«{q}»</span> — найдено <span className="font-bold text-slate-900">{total}</span>
+                {smart ? <span className="font-bold text-brand-700">{tc("smartSearch")} · </span> : null}
+                {tc("searchPrefix")} <span className="font-bold text-slate-900">«{q}»</span> — {tc("searchFound")} <span className="font-bold text-slate-900">{total}</span>
                 {smart?.explain ? <span className="text-slate-500"> · {smart.explain}</span> : null}
               </span>
               <Link href="/products" className="ml-auto text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">
-                Сбросить ✕
+                {tc("reset")} ✕
               </Link>
             </div>
           ) : null}
           {smart && smart.sections && smart.sections.length > 0 ? (
             <div className="mb-4 flex flex-wrap gap-2">
-              <span className="self-center text-xs font-bold uppercase tracking-wider text-slate-500">Уточнить:</span>
+              <span className="self-center text-xs font-bold uppercase tracking-wider text-slate-500">{tc("refine")}:</span>
               {smart.sections.map((s) => (
                 <Link
                   key={s.slug}
@@ -208,15 +212,15 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
           ) : null}
           {items.length === 0 ? (
             <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">
-              По заданным фильтрам ничего не найдено.
+              {tc("nothingFound")}
             </div>
           ) : (
             <>
               {!smart && (
                 <div className="mb-3 flex flex-wrap items-center justify-end gap-2">
-                  <span className="mr-auto text-xs font-bold uppercase tracking-wider text-slate-500">Сортировка</span>
+                  <span className="mr-auto text-xs font-bold uppercase tracking-wider text-slate-500">{tc("sort")}</span>
                   <SortSelect value={sort || "default"} />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Показывать по</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500">{tc("perPage")}</span>
                   <PerPageSelect current={perPage} options={PER_PAGE_OPTIONS} />
                   <ViewToggle view={view} />
                 </div>
@@ -249,7 +253,7 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
           {typeLongDesc && typeLongDesc.trim() ? (
             <section id="type-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
               {typeFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(typeFaqLd) }} />}
-              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{type} — гайд и частые вопросы</h2>
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{localizeCatName(type as string, locale)} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={typeLongDesc} />
               </div>

@@ -874,5 +874,29 @@
     "allBrands": "All brands",
     "allCategories": "All categories",
     "wholeCatalog": "Full catalog"
+  },
+  "catalog": {
+    "found": "Found",
+    "sort": "Sort",
+    "perPage": "Show",
+    "nothingFound": "Nothing found for the selected filters.",
+    "howToChoose": "How to choose & FAQ",
+    "guideSuffix": "guide & FAQ",
+    "refine": "Refine",
+    "smartSearch": "Smart search",
+    "reset": "Reset",
+    "searchPrefix": "For query",
+    "searchFound": "found",
+    "filters": "Filters",
+    "price": "Price, UZS",
+    "priceRange": "Range",
+    "brand": "Brand",
+    "productType": "Product type",
+    "hide": "Hide",
+    "showMore": "More",
+    "byCategories": "Catalog by categories",
+    "byCategoriesIntro": "Pick a category — the product catalog opens with a brand filter. {total} items in total.",
+    "byBrands": "Catalog by brands",
+    "allProducts": "All products"
   }
 }

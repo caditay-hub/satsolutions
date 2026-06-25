@@ -874,5 +874,29 @@
     "allBrands": "Tüm markalar",
     "allCategories": "Tüm kategoriler",
     "wholeCatalog": "Tüm katalog"
+  },
+  "catalog": {
+    "found": "Bulundu",
+    "sort": "Sıralama",
+    "perPage": "Göster",
+    "nothingFound": "Seçilen filtrelere göre hiçbir şey bulunamadı.",
+    "howToChoose": "Nasıl seçilir ve SSS",
+    "guideSuffix": "rehber ve SSS",
+    "refine": "Daralt",
+    "smartSearch": "Akıllı arama",
+    "reset": "Sıfırla",
+    "searchPrefix": "Sorgu için",
+    "searchFound": "bulundu",
+    "filters": "Filtreler",
+    "price": "Fiyat, UZS",
+    "priceRange": "Aralık",
+    "brand": "Marka",
+    "productType": "Ürün tipi",
+    "hide": "Gizle",
+    "showMore": "Daha fazla",
+    "byCategories": "Kategorilere göre katalog",
+    "byCategoriesIntro": "Bir kategori seçin — marka filtreli ürün kataloğu açılır. Toplam {total} ürün.",
+    "byBrands": "Markalara göre katalog",
+    "allProducts": "Tüm ürünler"
   }
 }

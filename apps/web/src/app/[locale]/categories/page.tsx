@@ -1,10 +1,12 @@
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
 import { BackButton } from "@/components/BackButton";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { localizeCatName } from "@/lib/catalogI18n";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -16,6 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function CategoriesPage() {
+  const locale = await getLocale();
+  const tc = await getTranslations({ locale, namespace: "catalog" });
   const groups = CATALOG_GROUPS.map((g, i) => ({
     idx: i,
     title: g.title,
@@ -28,9 +32,9 @@ export default async function CategoriesPage() {
   return (
     <div className="container-page py-6 sm:py-10">
       <div className="mb-4"><BackButton /></div>
-      <h1 className="text-3xl font-semibold tracking-tight text-slate-900">Каталог по категориям</h1>
+      <h1 className="text-3xl font-semibold tracking-tight text-slate-900">{tc("byCategories")}</h1>
       <p className="mt-2 max-w-prose text-sm text-slate-600">
-        Выберите категорию — откроется каталог товаров с фильтром по брендам. Всего в каталоге {total.toLocaleString("ru-RU")} позиций.
+        {tc("byCategoriesIntro", { total: total.toLocaleString(locale === "ru" ? "ru-RU" : locale) })}
       </p>
 
       <div className="mt-8 grid gap-x-8 gap-y-9 sm:grid-cols-2 lg:grid-cols-3">
@@ -38,7 +42,7 @@ export default async function CategoriesPage() {
           <section key={g.title} id={`cat-${g.idx}`} className="scroll-mt-24 break-inside-avoid">
             <div className="mb-2.5 flex items-center gap-2.5 border-b border-slate-200 pb-2">
               <GroupIcon name={g.icon} className="h-5 w-5 shrink-0 text-brand-600" />
-              <h2 className="text-[15px] font-semibold text-slate-900">{g.title}</h2>
+              <h2 className="text-[15px] font-semibold text-slate-900">{localizeCatName(g.title, locale)}</h2>
             </div>
             <ul className="flex flex-col">
               {g.types.map((t) => (
@@ -47,7 +51,7 @@ export default async function CategoriesPage() {
                     href={`/products/type/${typeSlug(t.n)}`}
                     className="flex items-center justify-between gap-2 rounded-md px-1.5 py-1.5 text-[13.5px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
                   >
-                    <span className="truncate">{t.n}</span>
+                    <span className="truncate">{localizeCatName(t.n, locale)}</span>
                     <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
                   </Link>
                 </li>
@@ -58,8 +62,8 @@ export default async function CategoriesPage() {
       </div>
 
       <div className="mt-10 flex flex-wrap gap-4 border-t border-slate-200 pt-6 text-sm">
-        <Link href="/catalog" className="font-semibold text-brand-700 hover:underline">Каталог по брендам →</Link>
-        <Link href="/products" className="font-semibold text-slate-600 hover:text-brand-700">Все товары →</Link>
+        <Link href="/catalog" className="font-semibold text-brand-700 hover:underline">{tc("byBrands")} →</Link>
+        <Link href="/products" className="font-semibold text-slate-600 hover:text-brand-700">{tc("allProducts")} →</Link>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
+import { localizeCatName } from "@/lib/catalogI18n";
 import type { ProductFacets } from "@/lib/api";
 
 const VISIBLE = 6; // сколько значений показываем до «Ещё N»
@@ -48,12 +50,13 @@ function ValueList<T>({ items, render, selected }: { items: T[]; render: (item: 
   const pinned = selected ? items.slice(VISIBLE).filter(selected) : [];
   const shown = all ? items : [...head, ...pinned];
   const hiddenCount = items.length - shown.length;
+  const tc = useTranslations("catalog");
   return (
     <>
       <div className="flex flex-col gap-0.5">{shown.map(render)}</div>
       {(all ? items.length > VISIBLE : hiddenCount > 0) ? (
         <button type="button" onClick={() => setAll((a) => !a)} className="mt-1 pl-1.5 text-[12px] font-semibold text-brand-700 hover:underline">
-          {all ? "Скрыть" : `Ещё ${hiddenCount}`}
+          {all ? tc("hide") : `${tc("showMore")} ${hiddenCount}`}
         </button>
       ) : null}
     </>
@@ -76,6 +79,8 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   const sp = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const tc = useTranslations("catalog");
+  const locale = useLocale();
   const showBrands = show?.brands !== false;
   const showTypes = show?.types !== false;
 
@@ -171,18 +176,18 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
       <div className="flex items-center justify-between px-1">
         <span className="flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-wider text-slate-500">
           <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M4.5 8h7M6.5 12h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
-          Фильтры
+          {tc("filters")}
         </span>
         {hasActive ? (
-          <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">Сбросить ✕</button>
+          <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
         ) : null}
       </div>
 
       {/* Порядок групп: сначала Цена, затем Бренд, Тип товара и характеристики. */}
       {bMax > 0 && (
-        <Group title="Цена, сум" icon={<IconPrice />}>
+        <Group title={tc("price")} icon={<IconPrice />}>
           <div className="px-1.5 pb-1 pt-1">
-            <div className="mb-2 text-[12px] text-slate-500">Диапазон ({fmt(bMin)} – {fmt(bMax)} сум)</div>
+            <div className="mb-2 text-[12px] text-slate-500">{tc("priceRange")} ({fmt(bMin)} – {fmt(bMax)})</div>
             <div className="relative mb-3 h-6">
               <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded bg-slate-200" />
               <div className="absolute top-1/2 h-1 -translate-y-1/2 rounded bg-brand-500" style={{ left: `${pct(vMin)}%`, right: `${100 - pct(vMax)}%` }} />
@@ -199,7 +204,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
       )}
 
       {brandList.length > 1 && (
-        <Group title="Бренд" icon={<IconBrand />}>
+        <Group title={tc("brand")} icon={<IconBrand />}>
           <ValueList
             items={brandList}
             selected={(b) => brands.includes(b.slug)}
@@ -218,7 +223,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
       )}
 
       {typeList.length > 1 && (
-        <Group title="Тип товара" icon={<IconType />}>
+        <Group title={tc("productType")} icon={<IconType />}>
           <ValueList
             items={typeList}
             selected={(t) => types.includes(t.name)}
@@ -227,7 +232,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
               return (
                 <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{t.name}</span>
+                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{localizeCatName(t.name, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
                 </button>
               );

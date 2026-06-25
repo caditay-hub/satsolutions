@@ -2,11 +2,12 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
 import { typeSlug } from "@/lib/typeSlug";
+import { localizeCatName } from "@/lib/catalogI18n";
 
 function typeHref(name: string) {
   return `/products/type/${typeSlug(name)}`;
@@ -17,6 +18,7 @@ export function CatalogMega() {
   const router = useRouter();
   const t = useTranslations("nav");
   const tm = useTranslations("catalogMega");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -67,7 +69,7 @@ export function CatalogMega() {
                       className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm transition-colors ${on ? "bg-white font-semibold text-brand-700 shadow-sm" : "text-slate-700 hover:bg-white/70"}`}
                     >
                       <GroupIcon name={g.icon} className={`h-[18px] w-[18px] shrink-0 ${on ? "text-brand-600" : "text-slate-400"}`} />
-                      <span className="flex-1 truncate">{g.title}</span>
+                      <span className="flex-1 truncate">{localizeCatName(g.title, locale)}</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" className="opacity-40"><path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" /></svg>
                     </button>
                   );
@@ -76,7 +78,7 @@ export function CatalogMega() {
 
               <div className="p-4">
                 <div className="mb-2.5 flex items-center justify-between">
-                  <div className="text-[15px] font-semibold text-slate-900">{group.title}</div>
+                  <div className="text-[15px] font-semibold text-slate-900">{localizeCatName(group.title, locale)}</div>
                   <Link href={typeHref(group.types[0].n)} onClick={() => setOpen(false)} className="text-xs font-bold text-brand-700 hover:underline">
                     {tm("allSectionItems")} →
                   </Link>
@@ -89,7 +91,7 @@ export function CatalogMega() {
                       onClick={() => setOpen(false)}
                       className="flex items-center justify-between gap-1.5 rounded-md px-2 py-1.5 text-[13px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
                     >
-                      <span className="truncate">{t.n}</span>
+                      <span className="truncate">{localizeCatName(t.n, locale)}</span>
                       <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
                     </Link>
                   ))}

@@ -874,5 +874,29 @@
     "allBrands": "Barcha brendlar",
     "allCategories": "Barcha turkumlar",
     "wholeCatalog": "Butun katalog"
+  },
+  "catalog": {
+    "found": "Topildi",
+    "sort": "Saralash",
+    "perPage": "Ko'rsatish",
+    "nothingFound": "Tanlangan filtrlar bo'yicha hech nima topilmadi.",
+    "howToChoose": "Qanday tanlash va FAQ",
+    "guideSuffix": "qo'llanma va tez-tez so'raladigan savollar",
+    "refine": "Aniqlashtirish",
+    "smartSearch": "Aqlli qidiruv",
+    "reset": "Tozalash",
+    "searchPrefix": "So'rov bo'yicha",
+    "searchFound": "topildi",
+    "filters": "Filtrlar",
+    "price": "Narx, so'm",
+    "priceRange": "Diapazon",
+    "brand": "Brend",
+    "productType": "Mahsulot turi",
+    "hide": "Yashirish",
+    "showMore": "Yana",
+    "byCategories": "Turkumlar bo'yicha katalog",
+    "byCategoriesIntro": "Turkumni tanlang — brendlar bo'yicha filtr bilan mahsulotlar katalogi ochiladi. Katalogda jami {total} ta pozitsiya.",
+    "byBrands": "Brendlar bo'yicha katalog",
+    "allProducts": "Barcha mahsulotlar"
   }
 }
