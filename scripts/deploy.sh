@@ -30,8 +30,17 @@ echo "    now at $(git rev-parse --short HEAD): $(git log -1 --pretty=%s)"
 # 3) Зависимости (с dev — нужны для сборки)
 npm install --include=dev --no-audit --no-fund
 
-# 4) Сборка api + web + admin
-npm run build
+# 4) Сборка api + web + admin — с таймаутом и одним ретраем.
+#    Сборка НЕ должна висеть вечно: timeout аварийно прервёт зависший билд
+#    (старый сайт продолжает работать — pm2 restart ниже только после успеха).
+#    Историческая причина зависаний: next/font тянул шрифты из Google на каждом
+#    билде; теперь шрифты self-hosted, но таймаут оставляем как страховку.
+build_once() { timeout 420 npm run build; }
+if ! build_once; then
+  echo "    !! сборка упала/зависла — повтор через 5с"
+  sleep 5
+  build_once
+fi
 
 # 5) Перезапуск ТОЛЬКО satweb-приложений (restart, не reload — в fork-режиме reload
 #    не перезапускал sat-web/sat-admin; CRM/боты не трогаем)

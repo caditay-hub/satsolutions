@@ -1,6 +1,8 @@
 import type { Viewport } from "next";
 import { Suspense } from "react";
-import { Caveat, Jura, Inter } from "next/font/google";
+import "@fontsource-variable/jura/wght.css";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/caveat/wght.css";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -17,29 +19,8 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-const jura = Jura({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-jura",
-  display: "swap",
-  preload: true,
-  weight: ["400", "500", "600", "700"],
-});
-
-// Тело и длинные тексты — Inter (читаемость). Заголовки/бренд остаются Jura.
-const inter = Inter({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-inter",
-  display: "swap",
-  preload: true,
-});
-
-const caveat = Caveat({
-  subsets: ["latin", "cyrillic"],
-  variable: "--font-caveat",
-  display: "swap",
-  preload: false,
-});
-
+// Шрифты self-hosted через @fontsource (выше): сборка НЕ ходит в Google Fonts.
+// Заголовки/бренд — Jura Variable; тело/UI — Inter Variable; акценты — Caveat Variable.
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const viewport: Viewport = {
@@ -106,14 +87,14 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} className={`${caveat.variable} ${jura.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <style dangerouslySetInnerHTML={{
           __html: `
           :root {
-            --font-jura: ${jura.style.fontFamily}, sans-serif;
-            --font-inter: ${inter.style.fontFamily}, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            --font-caveat: ${caveat.style.fontFamily}, cursive;
+            --font-jura: 'Jura Variable', sans-serif;
+            --font-inter: 'Inter Variable', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-caveat: 'Caveat Variable', cursive;
             --brand-700: #1d4ed8;
             font-size: 16px;
             font-display: swap;
