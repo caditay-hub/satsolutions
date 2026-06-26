@@ -28,3 +28,6 @@ apps/api/uploads/
 # Персональные настройки Claude Code (машинно-специфичные пути, прокси Headroom) — не в git
 .claude/settings.local.json
 
+
+# Локальные секреты (ключи API) — НИКОГДА не коммитить
+.secrets/

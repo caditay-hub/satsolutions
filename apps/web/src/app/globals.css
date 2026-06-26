@@ -170,3 +170,29 @@ html[lang="zh"] .font-medium,
 html[lang="zh"] .font-semibold { font-weight: 400 !important; }
 html[lang="zh"] .font-bold,
 html[lang="zh"] .font-black { font-weight: 500 !important; }
+
+/* ─── 3D-иконки категорий: «оживают» при наведении ───────────────────────
+   В покое статично. При наведении на плитку иконка плавно всплывает и парит
+   (подъём-покачивание + лёгкий зум), а под ней появляется мягкая тень. */
+@keyframes catIconFloat {
+  0%   { transform: translateY(0) scale(1.06); }
+  50%  { transform: translateY(-7px) scale(1.10); }
+  100% { transform: translateY(0) scale(1.06); }
+}
+@keyframes catShadowPulse {
+  0%,100% { transform: translateX(-50%) scaleX(1);   opacity: .18; }
+  50%     { transform: translateX(-50%) scaleX(.7);  opacity: .30; }
+}
+.cat3d-img { transition: transform .35s cubic-bezier(.34,1.56,.64,1); will-change: transform; }
+.cat3d-tile:hover .cat3d-img { animation: catIconFloat 1.6s ease-in-out infinite; }
+.cat3d-shadow {
+  position: absolute; left: 50%; bottom: 28%; width: 58px; height: 10px;
+  border-radius: 50%; background: #1d4ed8; opacity: 0;
+  transform: translateX(-50%) scaleX(1); filter: blur(4px);
+  transition: opacity .3s ease; pointer-events: none;
+}
+.cat3d-tile:hover .cat3d-shadow { animation: catShadowPulse 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .cat3d-tile:hover .cat3d-img { animation: none; transform: scale(1.08); }
+  .cat3d-tile:hover .cat3d-shadow { animation: none; opacity: 0; }
+}

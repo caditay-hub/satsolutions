@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
-import { getBrands, getCategories, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
+import { getBrands, getPartners, getPortfolio, getSitePage } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { typeSlug } from "@/lib/typeSlug";
 import { HeroCarousel, type HeroSlide } from "@/components/HeroCarousel";
-import { ProductCard } from "@/components/Cards";
 import { Reveal } from "@/components/Reveal";
 import { AutoPlayVideo } from "@/components/AutoPlayVideo";
 import { INDUSTRIES } from "@/lib/servicesData";
 import { localizePortfolioProject } from "@/lib/contentI18n";
-import { localizeProductName } from "@/lib/productI18n";
+import { localizeCatName } from "@/lib/catalogI18n";
+import { typeSlug } from "@/lib/typeSlug";
+import { SHOWCASE_TYPES } from "@/lib/catalogShowcase";
+import { CategoryShowcase, type ShowcaseTile } from "@/components/CategoryShowcase";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -177,31 +178,23 @@ export default async function HomePage() {
   const dir = t.raw("dir") as Record<string, [string, string]>;
   const why = t.raw("why") as Record<string, [string, string]>;
   const [
-    { categories },
     { items: rawPortfolio },
     { brands },
     { partners },
-    { items: recommended },
-    { items: latestProducts },
   ] = await Promise.all([
-    getCategories().catch(() => ({ categories: [] })),
     getPortfolio(1, 3).catch(() => ({ items: [], total: 0 })),
     getBrands().catch(() => ({ brands: [] })),
     getPartners().catch(() => ({ partners: [] })),
-    getProducts(1, 20, { recommended: true }).catch(() => ({ items: [], total: 0 })),
-    getProducts(1, 20).catch(() => ({ items: [], total: 0 })),
   ]);
-  // Merge recommended first, fill with latest, dedupe
-  const seenIds = new Set<string>();
-  const productFeed = [...recommended, ...latestProducts]
-    .filter((p) => {
-      if (seenIds.has(p.id)) return false;
-      seenIds.add(p.id);
-      return true;
-    })
-    .slice(0, 20);
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
+
+  // Витрина категорий: 3D-иконка (/cat-icons/<icon>.webp) + локализованное имя + ссылка на тип.
+  const showcaseTiles: ShowcaseTile[] = SHOWCASE_TYPES.map((it) => ({
+    name: localizeCatName(it.name, locale),
+    href: `/products/type/${typeSlug(it.name)}`,
+    img: `/cat-icons/${it.icon}.webp`,
+  }));
 
   let heroSlides: HeroSlide[] = [];
   let heroBgColor: string | null = null;
@@ -248,11 +241,6 @@ export default async function HomePage() {
       });
     }
   }
-
-  const topCats = categories
-    .filter((c) => !c.parentId)
-    .sort((a, b) => a.name.localeCompare(b.name, "ru"))
-    .slice(0, 20);
 
   const brandList = brands.length > 0 ? brands : [];
   // Не показываем партнёров, дублирующих бренд по названию (напр. Dahua и в брендах, и в партнёрах)
@@ -340,51 +328,35 @@ export default async function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          ПОПУЛЯРНАЯ ПРОДУКЦИЯ — горизонтальная лента
+          КАТЕГОРИИ КАТАЛОГА — витрина групп (плитки-ссылки)
       ══════════════════════════════════════════════════════ */}
-      {productFeed.length > 0 && (
-        <section className="py-10 sm:py-12">
-          <div className="container-page !py-0">
-            <div className="flex items-end justify-between gap-4 mb-6 sm:mb-8">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("catalogLabel")}</p>
-                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("popularProducts")}</h2>
-              </div>
-              <Link
-                href="/products"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold text-brand-700 ring-1 ring-brand-200 hover:ring-brand-400 hover:bg-brand-50 transition-all whitespace-nowrap"
-              >
-                {t("allProducts")}
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Авто-карусель (непрерывная лента, пауза при наведении) */}
-            <div className="-mx-3 sm:-mx-6 overflow-hidden py-1">
-              <div className="flex gap-4 sm:gap-5 w-max animate-scroll2 hover:[animation-play-state:paused]">
-                {productFeed.map((p, i) => (
-                  <div key={`a-${p.id}-${i}`} className="shrink-0 w-[180px] sm:w-[220px] md:w-[240px]">
-                    <ProductCard p={p} name={localizeProductName(p, locale)} />
-                  </div>
-                ))}
-                <div className="contents" aria-hidden="true">
-                {productFeed.map((p, i) => (
-                  <div key={`b-${p.id}-${i}`} className="shrink-0 w-[180px] sm:w-[220px] md:w-[240px]">
-                    <ProductCard p={p} name={localizeProductName(p, locale)} />
-                  </div>
-                ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-4 sm:hidden text-center">
-              <Link href="/products" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allProducts")} →</Link>
-            </div>
+      <section className="container-page py-12 sm:py-14">
+        <div className="flex items-end justify-between gap-4 mb-7 sm:mb-9">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("catalogLabel")}</p>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("catalogTitle")}</h2>
           </div>
-        </section>
-      )}
+          <Link
+            href="/categories"
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold text-brand-700 ring-1 ring-brand-200 hover:ring-brand-400 hover:bg-brand-50 transition-all whitespace-nowrap"
+          >
+            {t("wholeCatalog")}
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Витрина категорий: 8 видимых плиток с 3D-иконками, сами сменяются (CategoryShowcase).
+            Все ссылки в DOM для SEO. */}
+        <nav aria-label={t("catalogTitle")}>
+          <CategoryShowcase tiles={showcaseTiles} />
+        </nav>
+
+        <div className="mt-6 sm:hidden text-center">
+          <Link href="/categories" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("wholeCatalog")} →</Link>
+        </div>
+      </section>
 
       {/* ══════════════════════════════════════════════════════
           ГОТОВЫЕ РЕШЕНИЯ — лента
@@ -491,71 +463,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ══════════════════════════════════════════════════════
-          КАТАЛОГ ПРОДУКЦИИ (категории)
-      ══════════════════════════════════════════════════════ */}
-      {topCats.length > 0 && (
-        <section className="container-page py-14 sm:py-16">
-          <div className="flex items-end justify-between gap-4 mb-8">
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-1">{t("catalogLabel")}</p>
-              <h2 className="text-3xl font-black text-slate-900 tracking-tight">{t("catalogTitle")}</h2>
-            </div>
-            <Link href="/catalog" className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-600 transition-colors whitespace-nowrap">
-              {t("wholeCatalog")} →
-            </Link>
-          </div>
-
-          {/* Авто-карусель категорий (пауза при наведении) */}
-          <div className="-mx-3 sm:-mx-6 overflow-hidden py-1">
-            <div className="flex gap-3 w-max animate-scroll2 hover:[animation-play-state:paused]">
-              {[false, true].map((clone) => (
-              <div key={clone ? "clone" : "orig"} className="contents" aria-hidden={clone || undefined}>
-              {topCats.map((c) => {
-                const img = resolveImageUrl(c.coverImageUrl);
-                return (
-                  <Link
-                    key={`${clone ? "b" : "a"}-${c.id}`}
-                    href={`/products/type/${typeSlug(c.name)}`}
-                    className="shrink-0 w-[150px] sm:w-[180px] group flex flex-col items-center rounded-2xl border-2 border-slate-100 hover:border-brand-300 bg-white p-4 gap-3 transition-all hover:shadow-md"
-                    tabIndex={clone ? -1 : undefined}
-                  >
-                    <div className="relative h-16 w-full overflow-hidden rounded-xl bg-slate-50">
-                      {img ? (
-                        <Image
-                          alt={c.name}
-                          src={img}
-                          fill
-                          sizes="180px"
-                          unoptimized
-                          className="object-contain p-1 transition-transform duration-300 group-hover:scale-110"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center text-slate-300">
-                          <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10" />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                    <span className="text-xs font-bold text-slate-700 group-hover:text-brand-700 text-center leading-snug transition-colors line-clamp-2">
-                      {c.name}
-                    </span>
-                  </Link>
-                );
-              })}
-              </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mt-5 sm:hidden text-center">
-            <Link href="/catalog" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("wholeCatalog")} →</Link>
-          </div>
-        </section>
-      )}
-
 
       {/* ══════════════════════════════════════════════════════
           ПОРТФОЛИО
