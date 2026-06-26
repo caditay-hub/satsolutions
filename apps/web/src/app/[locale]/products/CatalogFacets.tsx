@@ -4,6 +4,7 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeCharKey } from "@/lib/charKeyI18n";
 import type { ProductFacets } from "@/lib/api";
 
 const VISIBLE = 6; // сколько значений показываем до «Ещё N»
@@ -242,7 +243,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
       )}
 
       {facets.chars.map((c) => (
-        <Group key={c.key} title={c.key} icon={<IconSpec />} defaultOpen={false}>
+        <Group key={c.key} title={localizeCharKey(c.key, locale)} icon={<IconSpec />} defaultOpen={false}>
           <ValueList
             items={c.values}
             selected={(v) => (chars[c.key] || []).includes(v.value)}
