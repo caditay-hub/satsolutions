@@ -30,6 +30,12 @@ const BRAND_DESC: Record<string, Loc> = {
     tr: "Bolid, ISO Orion entegre güvenlik sistemlerinin Rus üreticisidir: yangın ve hırsız alarmı, geçiş kontrolü, video gözetim ve anons.",
     zh: "Bolid 是俄罗斯 ISO Orion 集成安防系统制造商：消防和入侵报警、门禁、视频监控和广播。",
   },
+  "sibirskiy-arsenal": {
+    en: "Sibirsky Arsenal is a Russian manufacturer of fire and security alarm control panels: the Grand Magistr and Altai series, notification devices and automation.",
+    uz: "Sibirsky Arsenal — qo'riqlash-yong'in signalizatsiyasi qabul-nazorat qurilmalarining rossiyalik ishlab chiqaruvchisi: «Grand Magistr» va «Altai» seriyalari, ogohlantirish qurilmalari va avtomatika.",
+    tr: "Sibirsky Arsenal, yangın ve güvenlik alarmı kontrol panellerinin Rus üreticisidir: «Grand Magistr» ve «Altai» serileri, anons cihazları ve otomasyon.",
+    zh: "Sibirsky Arsenal 是俄罗斯的消防和安防报警控制设备制造商：Grand Magistr 和 Altai 系列、广播设备及自动化产品。",
+  },
   avigilon: {
     en: "Avigilon (Motorola Solutions) — premium high-resolution IP cameras with built-in AI video analytics and the Unity / Alta platform for cloud and on-premise management.",
     uz: "Avigilon (Motorola Solutions) — o'rnatilgan sun'iy intellekt videoanalitikasi va bulutli hamda lokal boshqaruv uchun Unity / Alta platformasiga ega yuqori aniqlikdagi premium IP kameralar.",
@@ -220,6 +226,7 @@ const BRAND_NAME: Record<string, Loc> = {
   prochee: { uz: "Boshqa uskunalar", en: "Other equipment", tr: "Diğer ekipmanlar", zh: "其他设备" },
   rubezh: { uz: "Rubezh", en: "Rubezh", tr: "Rubezh", zh: "Rubezh" },
   bolid: { uz: "Bolid", en: "Bolid", tr: "Bolid", zh: "Bolid" },
+  "sibirskiy-arsenal": { uz: "Sibirsky Arsenal", en: "Sibirsky Arsenal", tr: "Sibirsky Arsenal", zh: "Sibirsky Arsenal" },
 };
 
 /** Локализованное имя бренда (для названий с кириллицей; настоящие бренды — фолбэк без изменений). */
