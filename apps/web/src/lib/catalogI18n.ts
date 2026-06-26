@@ -34,6 +34,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "Видеорегистраторы (DVR)": { uz: "Videoregistratorlar (DVR)", en: "Video recorders (DVR)", tr: "Video kaydediciler (DVR)", zh: "录像机 (DVR)" },
   "HDCVI-регистраторы": { uz: "HDCVI registratorlar", en: "HDCVI recorders", tr: "HDCVI kaydediciler", zh: "HDCVI录像机" },
   "Купольные камеры": { uz: "Gumbazsimon kameralar", en: "Dome cameras", tr: "Dome kameralar", zh: "半球摄像机" },
+  "Аналоговые камеры": { uz: "Analog kameralar", en: "Analog cameras", tr: "Analog kameralar", zh: "模拟摄像机" },
   "HDCVI-камеры": { uz: "HDCVI kameralar", en: "HDCVI cameras", tr: "HDCVI kameralar", zh: "HDCVI摄像机" },
   "Цилиндрические и корпусные камеры": { uz: "Silindrik va korpusli kameralar", en: "Bullet & box cameras", tr: "Bullet ve box kameralar", zh: "筒型与盒式摄像机" },
   "Специальные камеры": { uz: "Maxsus kameralar", en: "Specialty cameras", tr: "Özel kameralar", zh: "特种摄像机" },

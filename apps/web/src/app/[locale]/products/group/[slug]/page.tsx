@@ -6,6 +6,7 @@ import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { ogLocale } from "@/lib/ogLocale";
+import { catalogRobots } from "@/lib/catalogRobots";
 import { CatalogView } from "../../CatalogView";
 
 export const revalidate = 300;
@@ -15,8 +16,9 @@ function resolveGroupIdx(slug: string): number {
   return CATALOG_GROUPS.findIndex((g) => typeSlug(g.title) === slug);
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const sp = (await searchParams) ?? {};
   const t = await getTranslations({ locale });
   const idx = resolveGroupIdx(slug);
   if (idx < 0) return { title: t("nav.products") };
@@ -28,6 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description,
     alternates: hreflangAlternates(`/products/group/${slug}`, locale),
     openGraph: { title, description, locale: ogLocale(locale) },
+    robots: catalogRobots(sp),
   };
 }
 

@@ -25,7 +25,10 @@ const CYR_TO = "abvgdeeziiklmnoprstufhcye";
 function charNormSql(expr: string): string {
   const collapse = `regexp_replace(lower(btrim(${expr})), '\\s+', ' ', 'g')`;
   const joinUnit = `regexp_replace(${collapse}, '([0-9]) ([a-zа-яё])', '\\1\\2', 'g')`;
-  return `translate(${joinUnit}, '${CYR_FROM}', '${CYR_TO}')`;
+  // Нормализация разделителей: дефис/тильда схлопываются, чтобы «RS-485»=«RS485»,
+  // «2.8-12»=«2.8~12». Слэш НЕ трогаем (ломает скорости вида 10/100/1000).
+  const stripSep = `regexp_replace(${joinUnit}, '[-~]', '', 'g')`;
+  return `translate(${stripSep}, '${CYR_FROM}', '${CYR_TO}')`;
 }
 
 // Источник токенов значения характеристики: срезаем скобки «(...)» и режем по запятой.
@@ -529,16 +532,26 @@ publicRouter.get("/product-facets", async (req, res) => {
     if (!value || r.count < RARE_MIN) continue;
     (byKey[r.key] ||= []).push({ value, count: r.count });
   }
+  // Best-practice фасетов: 3–6 групп на категорию, ~10 значений в группе (остальное «показать ещё»).
+  const MAX_GROUPS = 6;
+  const MAX_VALUES = 10;
   const chars = Object.entries(byKey)
     .map(([key, vals]) => {
-      const top = [...vals].sort((a, b) => b.count - a.count).slice(0, 20); // топ-20 по числу товаров
-      const total = top.reduce((a, v) => a + v.count, 0);
-      const values = top.sort((a, b) => a.value.localeCompare(b.value, "ru")); // показ по алфавиту
-      return { key, values, total };
+      const sorted = [...vals].sort((a, b) => b.count - a.count);
+      const distinct = sorted.length;
+      const total = sorted.reduce((a, v) => a + v.count, 0);
+      const avg = total / Math.max(distinct, 1);
+      // «Качество» фасета: высокое покрытие — хорошо; много разрозненных значений
+      // (un-normalized числовые поля «ИК-подсветка: 30,40,50,…») — плохо. Штрафуем кардинальность.
+      const score = total / Math.sqrt(distinct);
+      const values = sorted.slice(0, MAX_VALUES).sort((a, b) => a.value.localeCompare(b.value, "ru"));
+      return { key, values, distinct, avg, score };
     })
-    .filter((c) => c.values.length >= 2) // годный фасет: ≥2 значения остались после чистки
-    .sort((a, b) => b.total - a.total)
-    .slice(0, 10)
+    // Годный фасет: ≥2 значения; глушим высоко-кардинальный шум (>14 значений, или тонко
+    // размазанные >8 значений при среднем <1.6 товара на значение).
+    .filter((c) => c.values.length >= 2 && c.distinct <= 14 && !(c.distinct > 8 && c.avg < 1.6))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, MAX_GROUPS)
     .map((c) => ({ key: c.key, values: c.values }));
 
   res.json({

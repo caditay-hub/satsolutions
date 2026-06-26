@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
+import { catalogRobots } from "@/lib/catalogRobots";
+import { routing } from "@/i18n/routing";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "../../CatalogView";
@@ -22,8 +25,9 @@ async function resolveTypeName(slug: string): Promise<string | null> {
   }
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale, slug } = await params;
+  const sp = (await searchParams) ?? {};
   const t = await getTranslations({ locale });
   const name = await resolveTypeName(slug);
   if (!name) return { title: t("nav.products") };
@@ -35,12 +39,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description,
     alternates: hreflangAlternates(`/products/type/${slug}`, locale),
     openGraph: { title, description, locale: ogLocale(locale) },
+    robots: catalogRobots(sp),
   };
 }
 
 export default async function ProductTypePage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
   const { locale, slug } = await params;
   const sp = (await searchParams) ?? {};
+  // Слитый при укрупнении тип → 301 на новый канонический slug ДО резолва
+  // (надёжно даже если в БД осталась пустая категория-двойник). SEO, без 404.
+  const to = TYPE_REDIRECTS[slug];
+  if (to) {
+    const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+    permanentRedirect(`${lp}/products/type/${to}`);
+  }
   const name = await resolveTypeName(slug);
   if (!name) notFound();
   // Переиспользуем рендер каталога /products для type=<name>.
