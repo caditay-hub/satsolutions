@@ -29,7 +29,7 @@ const CATALOG_SHOW_ALL = 1000;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; pathType?: string; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -112,6 +112,11 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
     // (иначе «KANIHAD 7» при активном «Функции=ACL» вёл на пустую выдачу).
     try { typeFacets = await getProductFacets({ type, brand, category, q, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }); } catch { typeFacets = null; }
   }
+  // На странице группы фильтр «Тип товара» ограничиваем типами этой группы (а не всеми 69).
+  if (groupLanding && typeFacets?.types) {
+    const allow = new Set(groupLanding.types);
+    typeFacets = { ...typeFacets, types: typeFacets.types.filter((t: { name: string }) => allow.has(t.name)) };
+  }
   // «Бренд» прячем на странице бренда; «Тип» показываем ВЕЗДЕ (в т.ч. на странице типа — иначе
   // после выбора типа группа «Тип» пропадала). Текущий тип отмечен, переключение — на /products?...
   const facetShow = { brands: !brandLanding, types: true };
@@ -153,6 +158,14 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
           <span>›</span>
           <span className="font-semibold text-slate-600">{localizeCatName(type as string, locale)}</span>
         </nav>
+      ) : groupLanding ? (
+        <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
+          <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
+          <span>›</span>
+          <Link href="/categories" className="hover:text-brand-700">{tnav("catalog")}</Link>
+          <span>›</span>
+          <span className="font-semibold text-slate-600">{groupLanding.name}</span>
+        </nav>
       ) : brandLanding ? (
         <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
           <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
@@ -170,7 +183,7 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
             <Image src={brandLanding.logoUrl} alt={brandLanding.name} fill className="object-contain object-left" sizes="120px" />
           </span>
         ) : null}
-        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : brandLanding ? brandLanding.name : tnav("products")}</h1>
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : groupLanding ? groupLanding.name : brandLanding ? brandLanding.name : tnav("products")}</h1>
         <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {total}</span>
       </div>
 

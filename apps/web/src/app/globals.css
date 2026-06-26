@@ -190,7 +190,7 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
 .cat3d-img { transition: transform .35s cubic-bezier(.34,1.56,.64,1); will-change: transform; }
 .cat3d-tile:hover .cat3d-img { animation: catIconFloat 1.6s ease-in-out infinite; }
 .cat3d-shadow {
-  position: absolute; left: 50%; bottom: 28%; width: 58px; height: 10px;
+  position: absolute; left: 50%; bottom: 26%; width: 46px; height: 9px;
   border-radius: 50%; background: #1d4ed8; opacity: 0;
   transform: translateX(-50%) scaleX(1); filter: blur(4px);
   transition: opacity .3s ease; pointer-events: none;

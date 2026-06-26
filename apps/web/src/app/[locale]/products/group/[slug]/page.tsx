@@ -1,0 +1,49 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
+import { hreflangAlternates } from "@/lib/hreflang";
+import { typeSlug } from "@/lib/typeSlug";
+import { localizeCatName } from "@/lib/catalogI18n";
+import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { ogLocale } from "@/lib/ogLocale";
+import { CatalogView } from "../../CatalogView";
+
+export const revalidate = 300;
+
+/** slug → индекс укрупнённой группы каталога (по тому же typeSlug, что и в витрине/мегаменю). */
+function resolveGroupIdx(slug: string): number {
+  return CATALOG_GROUPS.findIndex((g) => typeSlug(g.title) === slug);
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale });
+  const idx = resolveGroupIdx(slug);
+  if (idx < 0) return { title: t("nav.products") };
+  const name = localizeCatName(CATALOG_GROUPS[idx].title, locale);
+  const title = `${name} — ${t("product.titleBuy")}`;
+  const description = t("product.typeDesc", { type: name });
+  return {
+    title,
+    description,
+    alternates: hreflangAlternates(`/products/group/${slug}`, locale),
+    openGraph: { title, description, locale: ogLocale(locale) },
+  };
+}
+
+export default async function ProductGroupPage({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
+  const { locale, slug } = await params;
+  const sp = (await searchParams) ?? {};
+  const idx = resolveGroupIdx(slug);
+  if (idx < 0) notFound();
+  const group = CATALOG_GROUPS[idx];
+  const types = group.types.map((t) => t.n);
+  // Раздел = вся группа: показываем товары ВСЕХ типов группы (мультитип type=A,B,C,...).
+  // __clean=1 глушит 301 на одиночный тип. Реальные query (brand/chars/price/sort/view/page)
+  // пробрасываем — фильтр-сайдбар работает (бренды Болид/Рубеж и т.д. подтянутся).
+  return CatalogView({
+    params: Promise.resolve({ locale }),
+    searchParams: Promise.resolve({ ...sp, type: types.join(","), __clean: "1" }),
+    groupLanding: { name: localizeCatName(group.title, locale), idx, types },
+  } as any);
+}

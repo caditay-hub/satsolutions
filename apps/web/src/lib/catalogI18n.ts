@@ -3,7 +3,9 @@
 // Используется в мега-меню, на /categories, в крошках, заголовках и фильтре по типу.
 import { routing } from "@/i18n/routing";
 
-type Loc = { uz: string; en: string; tr: string; zh: string };
+// ru — необязательный оверрайд отображаемого имени для русского (переименование типа
+// БЕЗ смены имени категории в БД и без смены slug/URL). Не задан — берётся имя из БД.
+type Loc = { ru?: string; uz: string; en: string; tr: string; zh: string };
 
 const CAT_NAMES: Record<string, Loc> = {
   // ── Группы ──────────────────────────────────────────────────────────────
@@ -46,7 +48,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "Контроллеры доступа": { uz: "Kirish kontrollerlari", en: "Access controllers", tr: "Geçiş kontrolörleri", zh: "门禁控制器" },
   "Металлодетекторы": { uz: "Metall detektorlar", en: "Metal detectors", tr: "Metal dedektörler", zh: "金属探测器" },
   "Пожарная безопасность": { uz: "Yong'in xavfsizligi", en: "Fire safety", tr: "Yangın güvenliği", zh: "消防安全" },
-  "Охранная сигнализация AX PRO": { uz: "AX PRO qo'riqlash signalizatsiyasi", en: "AX PRO security alarm", tr: "AX PRO güvenlik alarmı", zh: "AX PRO安防报警" },
+  "Охранная сигнализация AX PRO": { ru: "Беспроводная сигнализация Hikvision AX PRO", uz: "Hikvision AX PRO simsiz signalizatsiya", en: "Hikvision AX PRO wireless alarm", tr: "Hikvision AX PRO kablosuz alarm", zh: "海康威视 AX PRO 无线报警" },
   "Оборудование": { uz: "Uskunalar", en: "Equipment", tr: "Ekipman", zh: "设备" },
   "Оповещение": { uz: "Ogohlantirish", en: "Notification", tr: "Uyarı sistemleri", zh: "报警通知" },
   "Приборы и модули": { uz: "Asboblar va modullar", en: "Devices & modules", tr: "Cihazlar ve modüller", zh: "设备与模块" },
@@ -93,8 +95,9 @@ const CAT_NAMES: Record<string, Loc> = {
 /** Локализованное имя категории/типа/группы (фолбэк на русское). */
 export function localizeCatName(name: string | null | undefined, locale: string): string {
   const base = name ?? "";
-  if (!base || locale === routing.defaultLocale) return base;
+  if (!base) return base;
   const e = CAT_NAMES[base];
   if (!e) return base;
+  if (locale === routing.defaultLocale) return e.ru?.trim() || base;
   return (e as Record<string, string>)[locale]?.trim() || base;
 }

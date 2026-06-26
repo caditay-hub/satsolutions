@@ -14,8 +14,7 @@ import { INDUSTRIES } from "@/lib/servicesData";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { typeSlug } from "@/lib/typeSlug";
-import { SHOWCASE_TYPES } from "@/lib/catalogShowcase";
-import { CategoryShowcase, type ShowcaseTile } from "@/components/CategoryShowcase";
+import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -189,11 +188,26 @@ export default async function HomePage() {
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
 
-  // Витрина категорий: 3D-иконка (/cat-icons/<icon>.webp) + локализованное имя + ссылка на тип.
-  const showcaseTiles: ShowcaseTile[] = SHOWCASE_TYPES.map((it) => ({
-    name: localizeCatName(it.name, locale),
-    href: `/products/type/${typeSlug(it.name)}`,
-    img: `/cat-icons/${it.icon}.webp`,
+  // Витрина каталога: 12 укрупнённых ГРУПП. Клик → раздел всей группы (мультитип),
+  // /products/group/<slug>. Иконка — представитель группы (/cat-icons/<icon>.webp).
+  const GROUP_ICON: Record<string, string> = {
+    "Видеонаблюдение": "ip-camera",
+    "Контроль доступа": "access-terminal",
+    "Охранно-пожарная": "fire",
+    "Домофония": "intercom",
+    "IP-телефония": "ip-phone",
+    "Умный дом": "smart-home",
+    "Сетевое оборудование": "switch",
+    "Wi-Fi и беспроводное": "access-point",
+    "СКС, кабель, оптика": "twisted-pair",
+    "Питание и шкафы": "ups",
+    "Дисплеи": "monitor",
+    "Инструменты и аксессуары": "tool",
+  };
+  const groupTiles = CATALOG_GROUPS.map((g) => ({
+    name: localizeCatName(g.title, locale),
+    href: `/products/group/${typeSlug(g.title)}`,
+    img: `/cat-icons/${GROUP_ICON[g.title] ?? "switch"}.webp`,
   }));
 
   let heroSlides: HeroSlide[] = [];
@@ -347,10 +361,37 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        {/* Витрина категорий: 8 видимых плиток с 3D-иконками, сами сменяются (CategoryShowcase).
-            Все ссылки в DOM для SEO. */}
+        {/* Витрина каталога: 12 групп-плиток (компактно, как Citilink). Клик → раздел всей группы.
+            Иконка всплывает при наведении (CSS .cat3d-*). Все ссылки в DOM для SEO. */}
         <nav aria-label={t("catalogTitle")}>
-          <CategoryShowcase tiles={showcaseTiles} />
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-6">
+            {groupTiles.map((tile) => (
+              <li key={tile.href}>
+                <Link
+                  href={tile.href}
+                  className="cat3d-tile group flex h-full flex-col items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-3 py-4 text-center hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md"
+                >
+                  <span className="relative flex h-[84px] w-[84px] items-center justify-center">
+                    <span className="cat3d-shadow" aria-hidden="true" />
+                    <img
+                      src={`${tile.img}?v=2`}
+                      alt={tile.name}
+                      width={84}
+                      height={84}
+                      loading="lazy"
+                      className="cat3d-img h-[84px] w-[84px] object-contain"
+                    />
+                  </span>
+                  <span className="inline-flex items-center justify-center gap-1 text-[14px] font-bold leading-snug text-slate-900 transition-colors group-hover:text-brand-700">
+                    {tile.name}
+                    <svg className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         <div className="mt-6 sm:hidden text-center">
