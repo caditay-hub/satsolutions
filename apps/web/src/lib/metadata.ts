@@ -46,6 +46,13 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
             address: false,
             telephone: false,
         },
+        icons: {
+            icon: [
+                { url: "/icon.png", type: "image/png", sizes: "192x192" },
+                { url: "/favicon.ico", sizes: "any" },
+            ],
+            apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+        },
         alternates: overrides?.alternates,
         openGraph: {
             type: "website",

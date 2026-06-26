@@ -59,6 +59,8 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
 
+  const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
+
   const tm = await getTranslations({ locale, namespace: "meta" });
 
   const jsonLd = {
@@ -128,8 +130,8 @@ export default async function RootLayout({
           main { flex: 1 0 auto; }
           [suppressHydrationWarning] { visibility: visible !important; }
         `}} />
-        <link rel="dns-prefetch" href="http://localhost:4000" />
-        <link rel="preconnect" href="http://localhost:4000" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href={apiBase} />
+        <link rel="preconnect" href={apiBase} crossOrigin="anonymous" />
         <meta name="language" content={META_LANGUAGE[locale] ?? "Russian"} />
         <meta name="geo.region" content="UZ" />
         <meta name="geo.placename" content="Tashkent" />
