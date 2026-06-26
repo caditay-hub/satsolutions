@@ -314,19 +314,17 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               <p className="mt-2 text-sm text-slate-600">{locShortDesc}</p>
             ) : null}
 
-            {/* Price (показываем только для товаров с ценой/«по запросу») */}
-            {priceLabel(product) ? (
-              <div className="mt-3 text-2xl font-black text-brand-700">{priceLabel(product)}</div>
-            ) : null}
-
-            {/* Action row */}
-            <div className="mt-3 flex flex-wrap items-center gap-2">
-              <BackButton />
+            {/* Цена + CTA в одном ряду — компактнее, контент поднимается выше */}
+            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+              {priceLabel(product) ? (
+                <div className="text-2xl font-black text-brand-700">{priceLabel(product)}</div>
+              ) : null}
               <RequestQuoteButton
                 label={t("common.getQuote")}
                 variant="primary"
                 productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
               />
+              <BackButton />
             </div>
 
             {/* Key highlights (icons) */}
