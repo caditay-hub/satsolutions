@@ -204,7 +204,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
         </Group>
       )}
 
-      {brandList.length > 1 && (
+      {(brandList.length > 1 || (hasActive && brandList.length >= 1)) && (
         <Group title={tc("brand")} icon={<IconBrand />}>
           <ValueList
             items={brandList}
@@ -223,7 +223,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
         </Group>
       )}
 
-      {typeList.length > 1 && (
+      {(typeList.length > 1 || (hasActive && typeList.length >= 1)) && (
         <Group title={tc("productType")} icon={<IconType />}>
           <ValueList
             items={typeList}
