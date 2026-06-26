@@ -517,7 +517,12 @@ publicRouter.get("/product-facets", async (req, res) => {
      GROUP BY kv.key, ${charNormSql("t.tok")}`,
     { type: "SELECT" as any, replacements: repl }
   );
-  const RARE_MIN = 3; // прячем токены, что есть лишь у 1–2 товаров
+  // Порог «редких» токенов: в нефильтрованном виде типа прячем шум (значения у 1–2 товаров).
+  // Но как только пользователь сузил выбор (характеристика/бренд/цена), каждое оставшееся
+  // значение — это достижимое уточнение; прятать его нельзя, иначе валидная комбинация из
+  // 1–2 товаров становится недостижимой через фильтр. Тогда показываем всё с count ≥ 1.
+  const narrowed = charsFilter.length > 0 || brandSlugs.length > 0 || priceMin > 0 || priceMax > 0;
+  const RARE_MIN = narrowed ? 1 : 3;
   const byKey: Record<string, Array<{ value: string; count: number }>> = {};
   for (const r of charRows as any[]) {
     const value = String(r.display || "").trim();
