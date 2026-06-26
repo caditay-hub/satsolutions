@@ -1,6 +1,6 @@
 import type { Viewport } from "next";
 import { Suspense } from "react";
-import { Caveat, Jura } from "next/font/google";
+import { Caveat, Jura, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -23,6 +23,14 @@ const jura = Jura({
   display: "swap",
   preload: true,
   weight: ["400", "500", "600", "700"],
+});
+
+// Тело и длинные тексты — Inter (читаемость). Заголовки/бренд остаются Jura.
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 const caveat = Caveat({
@@ -98,27 +106,30 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} className={`${caveat.variable} ${jura.variable}`} suppressHydrationWarning>
+    <html lang={locale} className={`${caveat.variable} ${jura.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         <style dangerouslySetInnerHTML={{
           __html: `
-          :root { 
+          :root {
             --font-jura: ${jura.style.fontFamily}, sans-serif;
+            --font-inter: ${inter.style.fontFamily}, system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
             --font-caveat: ${caveat.style.fontFamily}, cursive;
             --brand-700: #1d4ed8;
-            font-size: 16px; 
-            font-display: swap; 
-            font-weight: 600; 
+            font-size: 16px;
+            font-display: swap;
+            font-weight: 400;
           }
           @media (min-width: 1024px) { :root { font-size: 18px; } }
           *,::before,::after{box-sizing:border-box;border:0 solid}
           html { -webkit-text-size-adjust:100%; background:#fff; }
           body {
-            margin:0; font-family: var(--font-jura); font-weight: 600;
-            line-height: 1.5; color: #000000; background:#fff;
+            margin:0; font-family: var(--font-inter); font-weight: 400;
+            line-height: 1.6; color: #000000; background:#fff;
             overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh;
           }
+          h1,h2,h3,h4,h5,h6 { font-family: var(--font-jura); }
           .font-main { font-family: var(--font-jura); }
+          .font-body { font-family: var(--font-inter); }
           .font-handwrite { font-family: var(--font-caveat); }
           .container-page { margin: 0 auto; width: 100%; max-width: 94vw; padding: 20px 1rem; }
           @media (min-width: 1024px) { .container-page { max-width: 92vw; } }
@@ -157,7 +168,7 @@ gtag('config', 'AW-18194158897');`
           }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-main bg-white text-slate-950 antialiased">
+      <body className="min-h-screen flex flex-col bg-white text-slate-950 antialiased">
         <NextIntlClientProvider>
           <ClientProviders>
             <Suspense fallback={null}>
