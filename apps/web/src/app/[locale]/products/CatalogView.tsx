@@ -15,13 +15,16 @@ import { SortSelect } from "@/components/catalog/SortSelect";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { BackButton } from "@/components/BackButton";
 import { Pagination } from "@/components/Pagination";
-import { PerPageSelect } from "./PerPageSelect";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { TYPE_LONGREAD_SLUG } from "@/lib/typeLongread";
 import { CatalogFacets } from "./CatalogFacets";
 
-export const PER_PAGE_OPTIONS = [20, 50, 100];
+// Размер «страницы» для голого каталога /products (тысячи позиций). На страницах
+// с выбранным разделом/фильтром (тип/бренд/категория/поиск/характеристики/цена)
+// показываем ВСЕ товары разом (CATALOG_SHOW_ALL) — без пагинации и без селектора.
+const CATALOG_PAGE_BARE = 120;
+const CATALOG_SHOW_ALL = 1000;
 
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
@@ -33,7 +36,6 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
   const tnav = await getTranslations({ locale, namespace: "nav" });
   const view: "list" | "grid" = sp.view === "list" ? "list" : "grid";
   const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
-  const perPage = PER_PAGE_OPTIONS.includes(Number(sp.perPage)) ? Number(sp.perPage) : 20;
   const category = typeof sp.category === "string" && sp.category ? sp.category : undefined;
   const type = typeof sp.type === "string" && sp.type ? sp.type : undefined;
   const brand = typeof sp.brand === "string" && sp.brand ? sp.brand : undefined;
@@ -52,6 +54,11 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
   } catch { chars = undefined; }
   const priceMin = Number(sp.priceMin) || undefined;
   const priceMax = Number(sp.priceMax) || undefined;
+
+  // В пределах выбранного раздела/фильтра показываем ВСЕ товары разом (без пагинации
+  // и без селектора «показывать по»). Голый каталог /products — постранично (тысячи позиций).
+  const scoped = !!(type || brand || category || q || (chars && Object.keys(chars).length) || priceMin !== undefined || priceMax !== undefined);
+  const perPage = scoped ? CATALOG_SHOW_ALL : CATALOG_PAGE_BARE;
 
   // 301: голая страница типа /products?type=<имя> → чистый URL /products/type/<slug>.
   // __clean=1 — внутренний вызов из /products/type/[slug] (без редиректа, иначе цикл).
@@ -220,8 +227,6 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
                 <div className="mb-3 flex flex-wrap items-center justify-end gap-2">
                   <span className="mr-auto text-xs font-bold uppercase tracking-wider text-slate-500">{tc("sort")}</span>
                   <SortSelect value={sort || "default"} />
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-500">{tc("perPage")}</span>
-                  <PerPageSelect current={perPage} options={PER_PAGE_OPTIONS} />
                   <ViewToggle view={view} />
                 </div>
               )}
@@ -247,7 +252,7 @@ export async function CatalogView({ params, searchParams, brandLanding, pathType
             </>
           )}
           {smart ? null : (
-            <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined, perPage: perPage === 20 ? undefined : String(perPage) }} />
+            <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} />
           )}
 
           {typeLongDesc && typeLongDesc.trim() ? (
