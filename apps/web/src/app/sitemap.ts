@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { getBrands, getCategories, getPortfolio, getProducts, getServices } from "@/lib/api";
 import { ALL_SERVICES } from "@/lib/servicesData";
 import { typeSlug } from "@/lib/typeSlug";
+import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 
 const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
 const DEFAULT_LOCALE = "ru";
@@ -92,6 +93,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             }),
         ];
 
+        // Разделы укрупнённых групп /products/group/<slug> — товары всей группы (мультитип).
+        const groupRoutes = CATALOG_GROUPS.map((g) => {
+            const path = `/products/group/${typeSlug(g.title)}`;
+            return {
+                url: `${siteUrl}${path}`,
+                lastModified: GENERATED,
+                changeFrequency: "weekly" as const,
+                priority: 0.8,
+                alternates: { languages: langAlternates(path) },
+            };
+        });
+
         const productRoutes = products.map((p) => ({
             url: `${siteUrl}/products/${p.slug}`,
             lastModified: new Date(p.updatedAt),
@@ -128,6 +141,7 @@ const serviceRoutes = services.map((s) => ({
         return [
             ...routes,
             ...brandRoutes,
+            ...groupRoutes,
             ...categoryRoutes,
             ...productRoutes,
             ...serviceRoutes,
