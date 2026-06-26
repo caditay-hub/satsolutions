@@ -5,6 +5,7 @@ export const TYPE_LONGREAD_SLUG: Record<string,string> = {
   "HDCVI-регистраторы": "hdcvi-recorders",
   "IP-видеорегистраторы (NVR)": "hik-nvr",
   "IP-камеры": "hik-ip-cameras",
+  "Аналоговые камеры": "hik-hd-cameras",
   "IP-телефония": "pxt-voip",
   "Mesh-системы": "mercusys-mesh",
   "PON-оборудование": "pxt-pon",
