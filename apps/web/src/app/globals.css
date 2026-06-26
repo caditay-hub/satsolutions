@@ -183,6 +183,10 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
   0%,100% { transform: translateX(-50%) scaleX(1);   opacity: .18; }
   50%     { transform: translateX(-50%) scaleX(.7);  opacity: .30; }
 }
+/* Плавная смена плиток: медленный кросс-фейд (opacity), но быстрый отклик на hover. */
+.cat3d-tile {
+  transition: opacity 1200ms ease-in-out, transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
 .cat3d-img { transition: transform .35s cubic-bezier(.34,1.56,.64,1); will-change: transform; }
 .cat3d-tile:hover .cat3d-img { animation: catIconFloat 1.6s ease-in-out infinite; }
 .cat3d-shadow {

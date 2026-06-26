@@ -164,7 +164,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   const hasActive = brands.length > 0 || queryTypes.length > 0 || Object.keys(chars).length > 0 || !!sp.get("priceMin") || !!sp.get("priceMax");
 
   return (
-    <aside className="space-y-1.5 text-sm lg:sticky lg:top-4 lg:self-start lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5">
+    <aside className="space-y-1.5 text-sm lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5">
       <style>{`
         .dual-range{ -webkit-appearance:none; appearance:none; background:transparent; pointer-events:none; position:absolute; left:0; right:0; width:100%; height:24px; margin:0; }
         .dual-range::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none; pointer-events:auto; height:24px; width:24px; border-radius:9999px; background:#fff; border:2px solid #328fa8; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.25); }

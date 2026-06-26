@@ -16,7 +16,7 @@ export type ShowcaseTile = { name: string; href: string; img: string };
 export function CategoryShowcase({
   tiles,
   slots = 8,
-  intervalMs = 3000,
+  intervalMs = 4200,
 }: {
   tiles: ShowcaseTile[];
   slots?: number;
@@ -63,7 +63,7 @@ export function CategoryShowcase({
                 href={tile.href}
                 aria-hidden={on ? undefined : true}
                 tabIndex={on ? undefined : -1}
-                className={`cat3d-tile group absolute inset-0 flex flex-col rounded-2xl border-2 border-slate-100 bg-white p-5 transition-all duration-700 ease-in-out hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md ${
+                className={`cat3d-tile group absolute inset-0 flex flex-col rounded-2xl border-2 border-slate-100 bg-white p-5 hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md ${
                   on ? "opacity-100" : "pointer-events-none opacity-0"
                 }`}
               >
