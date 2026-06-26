@@ -437,6 +437,17 @@ publicRouter.get("/product-facets", async (req, res) => {
     const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
     return `EXISTS (SELECT 1 FROM unnest(${charTokensSql(`p."characteristics"->>'${ek}'`)}) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
   });
+  // Для char-фасета — exclude-self: при подсчёте значений группы G применяем ВСЕ активные
+  // char-фильтры, КРОМЕ фильтра самой группы G. В запросе фасета доступен kv.key (группа текущей
+  // строки), поэтому условие «(kv.key = G) OR (товар матчит фильтр G)» отключает фильтр только
+  // для своей группы и оставляет остальные. Без этого счётчики игнорировали другие выбранные
+  // характеристики и показывали комбинации, дающие 0 товаров (H.265 + 2 MP + Bluetooth = 0).
+  const charsExclSelf = () => charsFilter.map(([k, vals]) => {
+    const ek = k.replace(/'/g, "''");
+    const inList = vals.map((v) => charNormSql(`'${v.replace(/'/g, "''")}'`)).join(", ");
+    const match = `EXISTS (SELECT 1 FROM unnest(${charTokensSql(`p."characteristics"->>'${ek}'`)}) AS _t(tok) WHERE ${charNormSql("_t.tok")} IN (${inList}))`;
+    return `(kv.key = '${ek}' OR ${match})`;
+  });
   const priceConds = () => {
     const c: string[] = [];
     if (priceMin > 0 || priceMax > 0) c.push(`p.price IS NOT NULL AND p.price > 0`);
@@ -501,7 +512,7 @@ publicRouter.get("/product-facets", async (req, res) => {
      FROM products p,
           jsonb_each_text(p.characteristics) AS kv(key, value),
           unnest(${charTokensSql("kv.value")}) AS t(tok)
-     WHERE ${cond({ chars: false })} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
+     WHERE ${cond({ chars: false })}${charsExclSelf().length ? " AND " + charsExclSelf().join(" AND ") : ""} AND kv.key NOT IN ('Артикул','Гарантия','Артикул производителя','Порты','Порты PoE','Дополнительные порты','Размеры','Размер','Габариты','Матрица','Чувствительность','Скорость затвора','Соотношение сигнал/шум','Баланс белого','Электронный затвор','Динамический диапазон','Описание','Комплектация')
        AND char_length(btrim(t.tok)) BETWEEN 2 AND 28
      GROUP BY kv.key, ${charNormSql("t.tok")}`,
     { type: "SELECT" as any, replacements: repl }
