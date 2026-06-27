@@ -374,7 +374,7 @@ export default async function HomePage() {
                   <span className="relative flex h-[84px] w-[84px] items-center justify-center">
                     <span className="cat3d-shadow" aria-hidden="true" />
                     <img
-                      src={`${tile.img}?v=2`}
+                      src={`${tile.img}?v=3`}
                       alt={tile.name}
                       width={84}
                       height={84}
