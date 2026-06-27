@@ -180,11 +180,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     // Цена для offers: только если есть валидное число и цена в сумах (UZS). Для «по запросу» — без offers.
     const priceNum = typeof product.price === "string" ? Number(product.price) : (product.price as unknown as number);
     const hasPrice = Number.isFinite(priceNum) && priceNum > 0 && !(product as any).isUsd;
-    // sku/mpn — только реальный артикул: убираем разметку/кавычки (< > ") и
-    // длинные значения. У части товаров modelCode = длинное описательное имя (Болид/Рубеж),
-    // которое Google отвергает как «недопустимое значение sku» — такие не выводим.
-    const skuClean = (modelCode ?? "").replace(/["<>]+/g, " ").replace(/\s+/g, " ").trim();
-    const skuVal = skuClean.length > 0 && skuClean.length <= 50 ? skuClean : null;
+    // sku/mpn — только настоящий артикул: один токен без пробелов, без разметки/кавычек,
+    // ≤50 симв. Описательные «коды» (Болид/Рубеж, «Tp-Link RackMount Kit-D226» и т.п.)
+    // Google отвергает как «недопустимое значение sku» — для них поля опускаем (необязательные).
+    const skuRaw = (modelCode ?? "").trim();
+    const skuVal = skuRaw.length > 0 && skuRaw.length <= 50 && !/[\s<>"]/.test(skuRaw) ? skuRaw : null;
     const productLd = {
       "@context": "https://schema.org",
       "@type": "Product",
