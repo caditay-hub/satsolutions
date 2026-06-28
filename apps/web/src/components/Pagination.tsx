@@ -28,13 +28,15 @@ export function Pagination({
   page,
   limit,
   total,
-  params
+  params,
+  className
 }: {
   basePath: string;
   page: number;
   limit: number;
   total: number;
   params?: Record<string, string | undefined | null>;
+  className?: string;
 }) {
   const cur = toPositiveInt(page, 1);
   const lim = toPositiveInt(limit, 12);
@@ -57,7 +59,7 @@ export function Pagination({
   if (pages > 1) items.push(pages);
 
   return (
-    <div className="mt-10 flex flex-wrap items-center justify-center gap-2">
+    <div className={`${className ?? "mt-10"} flex flex-wrap items-center justify-center gap-2`}>
       <Link
         href={buildHref(basePath, p, Math.max(1, current - 1))}
         aria-disabled={current === 1}

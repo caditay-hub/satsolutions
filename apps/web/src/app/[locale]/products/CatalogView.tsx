@@ -15,6 +15,7 @@ import { SortSelect } from "@/components/catalog/SortSelect";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { BackButton } from "@/components/BackButton";
 import { Pagination } from "@/components/Pagination";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { TYPE_LONGREAD_SLUG } from "@/lib/typeLongread";
@@ -243,6 +244,9 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                   <ViewToggle view={view} />
                 </div>
               )}
+              {!smart ? (
+                <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} className="mb-4" />
+              ) : null}
               {smart ? (
                 <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                   {items.map((p) => (
@@ -279,6 +283,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           ) : null}
         </div>
       </div>
+      <ScrollToTopButton label={({ ru: "Наверх", uz: "Yuqoriga", en: "To top", tr: "Yukarı", zh: "返回顶部" } as Record<string, string>)[locale] ?? "Наверх"} />
     </div>
   );
 }
