@@ -568,16 +568,18 @@ export default async function HomePage() {
               {brandList.map((b) => {
                 const logo = resolveImageUrl(b.logoImageUrl);
                 return (
-                  <div
+                  <Link
                     key={b.id}
+                    href={`/catalog/${b.slug}`}
+                    aria-label={b.name}
                     className="flex h-16 w-[140px] items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
                   >
                     {logo ? (
                       <Image alt={b.name} src={logo} width={120} height={48} className="h-10 w-auto object-contain" />
                     ) : (
-                      <span className="text-sm font-black text-slate-700">{b.name}</span>
+                      <span className="text-center text-sm font-black leading-tight text-slate-700">{b.name}</span>
                     )}
-                  </div>
+                  </Link>
                 );
               })}
               {partnerList.map((p) => {
