@@ -80,7 +80,7 @@ export function CatalogMega() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-[230px_1fr]">
+            <div className="grid grid-cols-[252px_1fr]">
               <div className="border-r border-slate-100 bg-slate-50/60 p-2">
                 {CATALOG_GROUPS.map((g, i) => {
                   const on = i === active;
@@ -91,11 +91,11 @@ export function CatalogMega() {
                       href={groupHref(g.title)}
                       onMouseEnter={() => setActive(i)}
                       onClick={() => setOpen(false)}
-                      className={`flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-left text-sm transition-colors ${on ? "bg-white font-semibold text-brand-700 shadow-sm" : "text-slate-700 hover:bg-white/70"}`}
+                      className={`flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition-colors ${on ? "bg-white font-semibold text-brand-700 shadow-sm" : "text-slate-700 hover:bg-white/70"}`}
                     >
                       <GroupIcon name={g.icon} className={`h-[18px] w-[18px] shrink-0 ${on ? "text-brand-600" : "text-slate-400"}`} />
-                      <span className="flex-1 truncate">{localizeCatName(g.title, locale)}</span>
-                      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" className="opacity-40"><path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" /></svg>
+                      <span className="flex-1 leading-tight">{localizeCatName(g.title, locale)}</span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" className="shrink-0 opacity-40"><path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" /></svg>
                     </Link>
                   );
                 })}
