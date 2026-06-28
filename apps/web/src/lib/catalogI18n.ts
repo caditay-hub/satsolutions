@@ -11,7 +11,7 @@ const CAT_NAMES: Record<string, Loc> = {
   // ── Группы ──────────────────────────────────────────────────────────────
   "Видеонаблюдение": { uz: "Videokuzatuv", en: "Video surveillance", tr: "Video gözetim", zh: "视频监控" },
   "Контроль доступа": { uz: "Kirishni nazorat qilish", en: "Access control", tr: "Geçiş kontrolü", zh: "门禁控制" },
-  "Охранно-пожарная": { uz: "Qo'riqlash va yong'in", en: "Security & fire", tr: "Güvenlik ve yangın", zh: "安防与消防" },
+  "Охранно-пожарная": { ru: "Охранно-пожарные системы", uz: "Qo'riqlash va yong'in tizimlari", en: "Security & fire systems", tr: "Güvenlik ve yangın sistemleri", zh: "安防与消防系统" },
   "Домофония": { uz: "Domofoniya", en: "Intercoms", tr: "İnterkom", zh: "楼宇对讲" },
   "IP-телефония": { uz: "IP-telefoniya", en: "IP telephony", tr: "IP telefon", zh: "IP电话" },
   "Умный дом": { uz: "Aqlli uy", en: "Smart home", tr: "Akıllı ev", zh: "智能家居" },
