@@ -60,7 +60,7 @@ export function CatalogMega() {
       </button>
 
       {(
-        <div className={`absolute left-1/2 top-full z-[65] mt-3 w-[840px] max-w-[94vw] -translate-x-1/2 ${open ? "block" : "hidden"}`}>
+        <div className={`absolute left-1/2 top-full z-[65] mt-3 w-[960px] max-w-[96vw] -translate-x-1/2 ${open ? "block" : "hidden"}`}>
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
             {/* Верхняя панель: быстрые переходы (стиль сайта) */}
             <div className="flex items-center gap-2 border-b border-slate-100 bg-slate-50/60 px-4 py-2.5">
@@ -80,7 +80,7 @@ export function CatalogMega() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-[252px_1fr]">
+            <div className="grid grid-cols-[336px_1fr]">
               <div className="border-r border-slate-100 bg-slate-50/60 p-2">
                 {CATALOG_GROUPS.map((g, i) => {
                   const on = i === active;
