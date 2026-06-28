@@ -203,6 +203,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               itemCondition: "https://schema.org/NewCondition",
               url: `${siteUrl}/products/${product.slug}`,
               seller: { "@type": "Organization", name: "SAT Solutions" },
+              hasMerchantReturnPolicy: {
+                "@type": "MerchantReturnPolicy",
+                applicableCountry: "UZ",
+                returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+              },
             },
           }
         : {}),
