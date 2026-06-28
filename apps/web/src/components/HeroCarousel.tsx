@@ -127,7 +127,6 @@ export function HeroCarousel({
                       priority={i === 0}
                       loading={i === 0 ? undefined : "lazy"}
                       sizes="100vw"
-                      unoptimized
                       className="object-cover object-center"
                     />
                   ) : null}
