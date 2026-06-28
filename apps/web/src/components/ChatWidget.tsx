@@ -466,7 +466,7 @@ export function ChatWidget() {
     const p: Profile = { name, phone: phoneRest };
     // Лид из онлайн-чата: пользователь оставил имя+телефон — конверсия в Google Ads.
     // Только при первом заполнении профиля (не на повторных правках), чтобы не задваивать.
-    if (!profileRef.current) trackConversion("chat");
+    if (!profileRef.current) trackConversion("chat", { user: { phone: `+998${phoneRest}` } });
     saveProfile(p);
     setProfile(p);
     // Re-announce profile so an existing conversation gets the name/phone attached.

@@ -38,7 +38,11 @@ export function RequestQuoteButton({
           message: `Запрос КП по товару: ${productName}\n${comment ? "\n" + comment : ""}`,
         }),
       });
-      if (r.ok) { setSent(true); trackLead(); }
+      if (r.ok) {
+        setSent(true);
+        const ph = phone ? (phone.startsWith("+") ? phone : `+998${phone.replace(/\D/g, "").slice(-9)}`) : null;
+        trackLead({ phone: ph, email: email || null });
+      }
     } catch {
       /* swallow */
     }

@@ -51,7 +51,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
       console.log('Service request response:', data);
 
       if (data.success) {
-        trackLead();
+        trackLead({ phone: formData.phoneRest.trim() ? `+998${digitsOnly(formData.phoneRest)}` : null });
         setMessage(t("srSuccess"));
         setFormData({ serviceName, phoneRest: "", description: "" });
         setTimeout(() => {

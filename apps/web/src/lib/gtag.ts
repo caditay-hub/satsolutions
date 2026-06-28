@@ -22,17 +22,34 @@ const SEND_TO = {
 
 type ConversionKey = keyof typeof SEND_TO;
 
+/** Данные посетителя для Enhanced Conversions (тег Google хэширует их перед отправкой). */
+export type LeadUserData = { phone?: string | null; email?: string | null };
+
+// Передаём данные посетителя для расширенного отслеживания конверсий (Enhanced
+// Conversions): телефон в E.164 (+998…) и/или email. Google-тег сам их хэширует —
+// повышает точность сопоставления лидов и снимает статус «Требуется действие».
+function setUserData(u?: LeadUserData) {
+  if (!u || typeof window === "undefined" || typeof window.gtag !== "function") return;
+  const data: Record<string, string> = {};
+  const phone = (u.phone || "").trim();
+  const email = (u.email || "").trim();
+  if (phone) data.phone_number = phone;
+  if (email) data.email = email;
+  if (Object.keys(data).length) window.gtag("set", "user_data", data);
+}
+
 /** Зафиксировать конверсию в Google Ads. Безопасно вызывать на сервере/без gtag. */
-export function trackConversion(key: ConversionKey, value = 1.0) {
+export function trackConversion(key: ConversionKey, opts?: { value?: number; user?: LeadUserData }) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  setUserData(opts?.user);
   window.gtag("event", "conversion", {
     send_to: SEND_TO[key],
-    value,
+    value: opts?.value ?? 1.0,
     currency: "USD",
   });
 }
 
 /** Заявка отправлена (любая форма КП / обратной связи / заявки на услугу). */
-export function trackLead() {
-  trackConversion("lead");
+export function trackLead(user?: LeadUserData) {
+  trackConversion("lead", { user });
 }

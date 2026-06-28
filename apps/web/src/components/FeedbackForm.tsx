@@ -66,7 +66,7 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
         throw new Error(msg);
       }
       setStatus("ok");
-      trackLead();
+      trackLead({ phone: phoneRest.trim() ? `+998${digitsOnly(phoneRest)}` : null, email: email.trim() || null });
       setName("");
       setPhoneRest("");
       setEmail("");
