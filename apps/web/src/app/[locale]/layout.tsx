@@ -140,14 +140,15 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Google tag (gtag.js) — Google Ads AW-18194158897 */}
+        {/* Google tag (gtag.js) — Google Ads AW-18194158897 + GA4 G-SHQYK1BS1S (один gtag.js на оба) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194158897" />
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'AW-18194158897');`
+gtag('config', 'AW-18194158897');
+gtag('config', 'G-SHQYK1BS1S');`
           }}
         />
       </head>
