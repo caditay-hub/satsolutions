@@ -16,7 +16,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "IP-телефония": { uz: "IP-telefoniya", en: "IP telephony", tr: "IP telefon", zh: "IP电话" },
   "Умный дом": { uz: "Aqlli uy", en: "Smart home", tr: "Akıllı ev", zh: "智能家居" },
   "Сетевое оборудование": { uz: "Tarmoq uskunalari", en: "Networking", tr: "Ağ ekipmanları", zh: "网络设备" },
-  "Wi-Fi и беспроводное": { uz: "Wi-Fi va simsiz", en: "Wi-Fi & wireless", tr: "Wi-Fi ve kablosuz", zh: "Wi-Fi与无线" },
+  "Wi-Fi и беспроводное": { ru: "Wi-Fi и беспроводное оборудование", uz: "Wi-Fi va simsiz uskunalar", en: "Wi-Fi & wireless equipment", tr: "Wi-Fi ve kablosuz ekipman", zh: "Wi-Fi与无线设备" },
   "СКС, кабель, оптика": { uz: "SKS, kabel, optika", en: "Cabling, cable, fiber", tr: "Kablolama, kablo, fiber", zh: "综合布线、线缆、光纤" },
   "Питание и шкафы": { uz: "Quvvat va shkaflar", en: "Power & cabinets", tr: "Güç ve kabinler", zh: "电源与机柜" },
   "Дисплеи": { uz: "Displeylar", en: "Displays", tr: "Ekranlar", zh: "显示屏" },
