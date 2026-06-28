@@ -200,7 +200,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
-    openGraph: { title, description, locale: ogLocale(locale) },
+    openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
 

@@ -13,7 +13,7 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: "meta" });
-  return { title: { absolute: tm("solTitle") }, description: tm("solDesc"), alternates: hreflangAlternates("/solutions", locale), openGraph: { title: tm("solTitle"), description: tm("solDesc"), locale: ogLocale(locale) } };
+  return { title: { absolute: tm("solTitle") }, description: tm("solDesc"), alternates: hreflangAlternates("/solutions", locale), openGraph: { title: tm("solTitle"), description: tm("solDesc"), locale: ogLocale(locale), images: ["/og.png"] } };
 }
 
 /* ─────────────  Inline icon set  ───────────── */

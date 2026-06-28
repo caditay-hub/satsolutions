@@ -50,7 +50,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
       title: typeTitle,
       description: typeDesc,
       alternates: { canonical: lp + canonical },
-      openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale) }
+      openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale), images: ["/og.png"] }
     };
   }
   const listDesc = t("product.listDesc");
@@ -60,7 +60,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
     description: listDesc,
     // Чистый /products индексируем → полные hreflang-альтернаты; фильтрованные (noindex) — только canonical.
     alternates: isBare ? hreflangAlternates("/products", locale) : { canonical: lp + canonical },
-    openGraph: { title: `${listTitle} — SAT Solutions`, description: listDesc, locale: ogLocale(locale) },
+    openGraph: { title: `${listTitle} — SAT Solutions`, description: listDesc, locale: ogLocale(locale), images: ["/og.png"] },
     ...(robots ? { robots } : {})
   };
 }

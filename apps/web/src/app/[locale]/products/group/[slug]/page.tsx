@@ -29,7 +29,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
     title,
     description,
     alternates: hreflangAlternates(`/products/group/${slug}`, locale),
-    openGraph: { title, description, locale: ogLocale(locale) },
+    openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     robots: catalogRobots(sp),
   };
 }

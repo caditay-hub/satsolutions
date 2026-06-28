@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t("title"),
       description: desc || t("title"),
       alternates: hreflangAlternates("/about", locale),
-      openGraph: { title: t("title"), description: desc || t("title"), locale: ogLocale(locale) }
+      openGraph: { title: t("title"), description: desc || t("title"), locale: ogLocale(locale), images: ["/og.png"] }
     };
   } catch {
     return { title: t("title") };

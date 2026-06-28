@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title,
     alternates: hreflangAlternates("/catalog", locale),
     description,
-    openGraph: { title, description, locale: ogLocale(locale) },
+    openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
 
