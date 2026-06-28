@@ -871,9 +871,9 @@
   },
   "catalogMega": {
     "allSectionItems": "Bo'lim mahsulotlari",
-    "allBrands": "Barcha brendlar",
+    "allBrands": "Brendlar",
     "allCategories": "Barcha turkumlar",
-    "wholeCatalog": "Butun katalog"
+    "wholeCatalog": "Barcha mahsulotlar"
   },
   "catalog": {
     "found": "Topildi",

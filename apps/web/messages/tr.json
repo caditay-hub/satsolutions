@@ -871,9 +871,9 @@
   },
   "catalogMega": {
     "allSectionItems": "Bölüm ürünleri",
-    "allBrands": "Tüm markalar",
+    "allBrands": "Markalar",
     "allCategories": "Tüm kategoriler",
-    "wholeCatalog": "Tüm katalog"
+    "wholeCatalog": "Tüm ürünler"
   },
   "catalog": {
     "found": "Bulundu",

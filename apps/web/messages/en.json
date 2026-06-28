@@ -871,9 +871,9 @@
   },
   "catalogMega": {
     "allSectionItems": "All section products",
-    "allBrands": "All brands",
+    "allBrands": "Brands",
     "allCategories": "All categories",
-    "wholeCatalog": "Full catalog"
+    "wholeCatalog": "All products"
   },
   "catalog": {
     "found": "Found",

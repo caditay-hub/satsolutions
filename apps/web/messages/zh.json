@@ -871,9 +871,9 @@
   },
   "catalogMega": {
     "allSectionItems": "本类全部产品",
-    "allBrands": "所有品牌",
+    "allBrands": "品牌",
     "allCategories": "所有分类",
-    "wholeCatalog": "完整目录"
+    "wholeCatalog": "全部产品"
   },
   "catalog": {
     "found": "找到",

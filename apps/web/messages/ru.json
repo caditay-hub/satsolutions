@@ -871,9 +871,9 @@
   },
   "catalogMega": {
     "allSectionItems": "Все товары раздела",
-    "allBrands": "Все бренды",
+    "allBrands": "Бренды",
     "allCategories": "Все категории",
-    "wholeCatalog": "Весь каталог"
+    "wholeCatalog": "Вся продукция"
   },
   "catalog": {
     "found": "Найдено",
