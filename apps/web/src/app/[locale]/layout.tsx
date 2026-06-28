@@ -93,9 +93,17 @@ export default async function RootLayout({
       <head>
         <style dangerouslySetInnerHTML={{
           __html: `
+          @font-face {
+            font-family: 'Inter Fallback';
+            src: local('Arial');
+            ascent-override: 90.44%;
+            descent-override: 22.52%;
+            line-gap-override: 0%;
+            size-adjust: 107.12%;
+          }
           :root {
             --font-jura: 'Jura Variable', sans-serif;
-            --font-inter: 'Inter Variable', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-inter: 'Inter Variable', 'Inter Fallback', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
             --font-caveat: 'Caveat Variable', cursive;
             --brand-700: #1d4ed8;
             font-size: 16px;
