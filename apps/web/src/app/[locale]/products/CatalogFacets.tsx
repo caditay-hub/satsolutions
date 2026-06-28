@@ -212,9 +212,9 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
             render={(b) => {
               const on = brands.includes(b.slug);
               return (
-                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700">{b.name}</span>
+                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{b.name}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
                 </button>
               );
@@ -231,9 +231,9 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
             render={(t) => {
               const on = types.includes(t.name);
               return (
-                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700 first-letter:uppercase">{localizeCatName(t.name, locale)}</span>
+                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700 first-letter:uppercase">{localizeCatName(t.name, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
                 </button>
               );
@@ -250,9 +250,9 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
             render={(v) => {
               const on = (chars[c.key] || []).includes(v.value);
               return (
-                <button key={v.value} type="button" onClick={() => toggleChar(c.key, v.value)} className="flex w-full items-center gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={v.value} type="button" onClick={() => toggleChar(c.key, v.value)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 truncate text-[13px] text-slate-700">{v.value}</span>
+                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{v.value}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{v.count}</span>
                 </button>
               );
