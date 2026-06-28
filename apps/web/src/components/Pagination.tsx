@@ -59,11 +59,11 @@ export function Pagination({
   if (pages > 1) items.push(pages);
 
   return (
-    <div className={`${className ?? "mt-10"} flex flex-wrap items-center justify-center gap-2.5`}>
+    <div className={`${className ?? "mt-10"} flex flex-wrap items-center justify-center gap-2`}>
       <Link
         href={buildHref(basePath, p, Math.max(1, current - 1))}
         aria-disabled={current === 1}
-        className={`min-w-[46px] rounded-lg border px-4 py-2.5 text-center text-[15px] font-semibold ${
+        className={`rounded-lg border px-3 py-2 text-sm font-semibold ${
           current === 1 ? "pointer-events-none border-slate-200 bg-slate-100 text-slate-400" : "border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
         }`}
       >
@@ -83,7 +83,7 @@ export function Pagination({
           <Link
             key={it}
             href={buildHref(basePath, p, it)}
-            className={`min-w-[46px] rounded-lg border px-4 py-2.5 text-center text-[15px] font-semibold ${
+            className={`rounded-lg border px-3 py-2 text-sm font-semibold ${
               active ? "border-brand-600 bg-brand-50 text-brand-700" : "border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
             }`}
           >
@@ -95,7 +95,7 @@ export function Pagination({
       <Link
         href={buildHref(basePath, p, Math.min(pages, current + 1))}
         aria-disabled={current === pages}
-        className={`min-w-[46px] rounded-lg border px-4 py-2.5 text-center text-[15px] font-semibold ${
+        className={`rounded-lg border px-3 py-2 text-sm font-semibold ${
           current === pages ? "pointer-events-none border-slate-200 bg-slate-100 text-slate-400" : "border-slate-300 bg-white text-slate-900 hover:bg-slate-50"
         }`}
       >
