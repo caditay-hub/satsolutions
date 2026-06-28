@@ -25,6 +25,37 @@ const CATEGORY: Record<string, Record<Loc, string>> = {
 
 // ─── Проекты портфолио (по slug) ──────────────────────────────────────────────
 const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
+  "uzum-videonablyudenie-skladov-i-punktov-vydachi": {
+    uz: {
+      title: "Uzum — omborlar va buyurtma topshirish punktlarida videokuzatuv",
+      location: "Toshkent",
+      clientTasks: "Omborlar va 100+ topshirish punktida videokuzatuv; Dahua jihozlari; montaj, SKS, ishga tushirish, masofaviy monitoring.",
+      excerpt: "Uzum marketpleysi uchun videokuzatuv tizimi: Toshkentdagi 1000 m²dan ortiq markaziy omborlar va butun O‘zbekiston bo‘ylab 100+ buyurtma topshirish punktlari tarmog‘i. Dahua jihozlari, kalit topshirish asosida — montaj, SKS, ishga tushirish va masofaviy monitoring.",
+      content: "O‘zbekistondagi eng yirik marketpleys Uzum ekotizimi uchun SAT Solutions mutaxassislari asosiy logistika obyektlarida videokuzatuv tizimini joriy etdi: Toshkentdagi 1000 m²dan ortiq markaziy omborlarda va butun O‘zbekiston bo‘ylab 100 dan ortiq buyurtma topshirish punktlari tarmog‘ida.\n\nLoyiha doirasida bajarildi:\n\nDahua jihozlarini tanlash va yetkazib berish;\nomborlarda IP-kameralarni montaj qilish — qabul qilish, saqlash va jo‘natish zonalarini nazorat qilish;\nmamlakat bo‘ylab shaharlardagi buyurtma topshirish punktlarini videokuzatuv bilan jihozlash;\nstrukturalashtirilgan kabel tarmoqlarini (SKS) yotqizish;\ntarmoq videoregistratorlari (NVR) va saqlash xotirasini o‘rnatish va sozlash;\ntizimni ishga tushirish, masofaviy kirish va monitoringni sozlash;\nxodimlarni tizim bilan ishlashga o‘rgatish.\n\nAmalga oshirilgan yechim omborlarda tovar saqlanishini, qabul va jo‘natish operatsiyalarini nazorat qilishni hamda butun topshirish punktlari tarmog‘ini 24/7 rejimda shaffof markazlashgan monitoringini ta’minladi."
+    },
+    en: {
+      title: "Uzum — video surveillance at warehouses and pickup points",
+      location: "Tashkent",
+      clientTasks: "Surveillance at warehouses and 100+ pickup points; Dahua equipment; installation, structured cabling, commissioning, remote monitoring.",
+      excerpt: "A surveillance system for the Uzum marketplace: central warehouses in Tashkent of over 1,000 m² and a network of 100+ order pickup points across Uzbekistan. Dahua equipment, turnkey delivery — installation, structured cabling, commissioning and remote monitoring.",
+      content: "For the ecosystem of Uzum — the largest marketplace in Uzbekistan — SAT Solutions specialists deployed a video surveillance system at the key logistics facilities: the central warehouses in Tashkent covering over 1,000 m² and a network of more than 100 order pickup points across the country.\n\nThe following work was carried out as part of the project:\n\nselection and supply of Dahua equipment;\ninstallation of IP cameras at the warehouses — control of the receiving, storage and dispatch zones;\nequipping order pickup points in cities across the country with surveillance;\nlaying of structured cabling systems (SCS);\ninstallation and configuration of network video recorders (NVR) and storage;\ncommissioning of the system and setup of remote access and monitoring;\nstaff training on working with the system.\n\nThe solution ensured the safety of goods in the warehouses, control over receiving and dispatch operations, and transparent centralized 24/7 monitoring of the entire pickup point network."
+    },
+    tr: {
+      title: "Uzum — depolarda ve teslim noktalarında video gözetim",
+      location: "Taşkent",
+      clientTasks: "Depolarda ve 100+ teslim noktasında gözetim; Dahua ekipmanı; kurulum, yapısal kablolama, devreye alma, uzaktan izleme.",
+      excerpt: "Uzum pazaryeri için gözetim sistemi: Taşkent'te 1.000 m²'den büyük merkezi depolar ve Özbekistan genelinde 100'den fazla sipariş teslim noktası ağı. Dahua ekipmanı, anahtar teslim — kurulum, yapısal kablolama, devreye alma ve uzaktan izleme.",
+      content: "Özbekistan'ın en büyük pazaryeri Uzum ekosistemi için SAT Solutions uzmanları, ana lojistik tesislerinde bir video gözetim sistemi kurdu: Taşkent'teki 1.000 m²'den büyük merkezi depolar ve ülke genelinde 100'den fazla sipariş teslim noktası ağı.\n\nProje kapsamında aşağıdaki işler yapıldı:\n\nDahua ekipmanının seçimi ve tedariki;\ndepolarda IP kameraların kurulumu — kabul, depolama ve sevkiyat bölgelerinin kontrolü;\nülke genelindeki şehirlerde sipariş teslim noktalarının gözetimle donatılması;\nyapısal kablolama sistemlerinin (SCS) döşenmesi;\nağ video kaydedicilerinin (NVR) ve depolamanın kurulumu ve yapılandırılması;\nsistemin devreye alınması, uzaktan erişim ve izlemenin yapılandırılması;\npersonelin sistem kullanımı konusunda eğitimi.\n\nUygulanan çözüm, depolardaki malların güvenliğini, kabul ve sevkiyat işlemlerinin kontrolünü ve tüm teslim noktası ağının şeffaf, merkezi 7/24 izlenmesini sağladı."
+    },
+    zh: {
+      title: "Uzum — 仓库与自提点视频监控",
+      location: "塔什干",
+      clientTasks: "仓库及100多个自提点的监控；大华设备；安装、综合布线、调试、远程监控。",
+      excerpt: "为 Uzum 电商平台部署的视频监控系统：塔什干1000多平方米的中央仓库，以及覆盖全乌兹别克斯坦的100多个订单自提点网络。采用大华（Dahua）设备，交钥匙工程——安装、综合布线、调试及远程监控。",
+      content: "SAT Solutions 的专家为乌兹别克斯坦最大的电商平台 Uzum 的生态系统，在关键物流设施部署了视频监控系统：塔什干1000多平方米的中央仓库，以及覆盖全国的100多个订单自提点网络。\n\n项目范围内完成了以下工作：\n\n大华（Dahua）设备的选型与供应；\n仓库内 IP 摄像机的安装——管控收货、存储和发货区域；\n为全国各城市的订单自提点配备视频监控；\n敷设综合布线系统（SCS）；\n网络录像机（NVR）及存储设备的安装与配置；\n系统调试以及远程访问和监控的设置；\n对员工进行系统操作培训。\n\n该方案确保了仓库货物的安全、收发货操作的管控，以及对整个自提点网络的透明集中式7×24监控。"
+    }
+  },
+
   "ucell-ustanovka-videosteny-dahua-v-situacionnom-centre": {
     uz: {
       title: "Ucell — Vaziyat markazida Dahua videodevorini o‘rnatish",
