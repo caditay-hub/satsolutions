@@ -173,7 +173,7 @@ export function HeroCarousel({
                           {sText}
                         </p>
 
-                        <div className="mt-6 sm:mt-8 hidden sm:flex flex-wrap items-center justify-center gap-3">
+                        <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3">
                           {sButtons.map((b, j) => {
                             const primary = j === 0;
                             const className = primary

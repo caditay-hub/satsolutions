@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const desc = clip(loc.shortDescription || loc.name, 160);
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
-      title: { absolute: `${loc.name} — ${t("product.titleBuy")} | SAT Solutions` },
+      title: { absolute: `${loc.name} — ${t("product.titleBuy")}` },
       description: desc,
       alternates: hreflangAlternates(`/products/${product.slug}`, locale),
       openGraph: {
