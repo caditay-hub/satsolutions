@@ -11,6 +11,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { ClientProviders } from "@/components/ClientProviders";
 import { GlobalBackButton } from "@/components/GlobalBackButton";
 import { ScrollManager } from "@/components/ScrollManager";
+import GaPageview from "@/components/GaPageview";
 import { createMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import { routing } from "@/i18n/routing";
@@ -165,6 +166,9 @@ gtag('config', 'G-SHQYK1BS1S');`
           <ClientProviders>
             <Suspense fallback={null}>
               <ScrollManager />
+            </Suspense>
+            <Suspense fallback={null}>
+              <GaPageview />
             </Suspense>
             <SiteHeader />
             <main className="flex-1">{children}</main>
