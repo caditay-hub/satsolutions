@@ -13,7 +13,8 @@
     "migrate": "tsx src/migrate.ts",
     "monitor": "tsx src/monitor/run.ts",
     "monitor:alerts": "tsx src/monitor/run.ts --alerts",
-    "monitor:dry": "tsx src/monitor/run.ts --dry"
+    "monitor:dry": "tsx src/monitor/run.ts --dry",
+    "monitor:bot": "tsx src/monitor/bot.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
