@@ -10,7 +10,10 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "seed": "tsx src/seed.ts",
     "seed:dahua": "tsx src/seed-dahua.ts",
-    "migrate": "tsx src/migrate.ts"
+    "migrate": "tsx src/migrate.ts",
+    "monitor": "tsx src/monitor/run.ts",
+    "monitor:alerts": "tsx src/monitor/run.ts --alerts",
+    "monitor:dry": "tsx src/monitor/run.ts --dry"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
