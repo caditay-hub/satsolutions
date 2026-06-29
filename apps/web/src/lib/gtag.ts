@@ -38,13 +38,27 @@ function setUserData(u?: LeadUserData) {
   if (Object.keys(data).length) window.gtag("set", "user_data", data);
 }
 
-/** Зафиксировать конверсию в Google Ads. Безопасно вызывать на сервере/без gtag. */
+// GA4 (измерение G-SHQYK1BS1S) — отдельный поток от Google Ads. Лиды дублируем
+// сюда событием generate_lead, чтобы конверсии были видны и в GA4/Analytics
+// (без него GA4 показывал 0 конверсий). На Ads не влияет — у него свой send_to.
+const GA4_ID = "G-SHQYK1BS1S";
+
+/** Зафиксировать конверсию в Google Ads + GA4. Безопасно вызывать на сервере/без gtag. */
 export function trackConversion(key: ConversionKey, opts?: { value?: number; user?: LeadUserData }) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
   setUserData(opts?.user);
+  const value = opts?.value ?? 1.0;
+  // Google Ads — отслеживание конверсии (метка из SEND_TO).
   window.gtag("event", "conversion", {
     send_to: SEND_TO[key],
-    value: opts?.value ?? 1.0,
+    value,
+    currency: "USD",
+  });
+  // GA4 — событие лида (пометить generate_lead как «ключевое событие» в GA4).
+  window.gtag("event", "generate_lead", {
+    send_to: GA4_ID,
+    method: key, // lead / call / whatsapp / telegram / chat
+    value,
     currency: "USD",
   });
 }
