@@ -6,12 +6,14 @@ import { config } from "./config.js";
 import type { GscReport, GscTotals } from "./sources/searchConsole.js";
 import type { Ga4Report } from "./sources/ga4.js";
 import type { PsiResult } from "./sources/psi.js";
+import type { GoogleAdsReport } from "./sources/googleAds.js";
 
 export type Snapshot = {
   ts: string; // ISO-время прогона
   gsc?: { report: GscReport; prev: GscTotals } | null;
   ga4?: Ga4Report | null;
   psi?: PsiResult[] | null;
+  ads?: GoogleAdsReport | null;
   errors: string[];
 };
 

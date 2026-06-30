@@ -132,6 +132,31 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
     L.push("", RULE, `📈 <b>Трафик</b> — ⚠️ данные недоступны`);
   }
 
+  // ── Реклама (Google Ads) ──────────────────────────────
+  if (snap.ads) {
+    const a = snap.ads;
+    const cur = a.current;
+    const prev = a.previous;
+    const cy = a.currency ? ` ${a.currency}` : "";
+    const impr = deltaPct(cur.impressions, prev.impressions);
+    const clk = deltaPct(cur.clicks, prev.clicks);
+    const cost = deltaPct(cur.cost, prev.cost, false); // рост расхода сам по себе не «хорошо»
+    const cpc = deltaPct(cur.avgCpc, prev.avgCpc, false); // рост CPC — плохо
+    const conv = deltaPct(cur.conversions, prev.conversions);
+    L.push("", RULE, `📣 <b>Реклама</b> · Google Ads`, `<i>${a.range.from} — ${a.range.to}</i>`);
+    L.push(
+      table([
+        { label: "Показы", value: fmt(cur.impressions), delta: impr.delta, icon: impr.icon },
+        { label: "Клики", value: fmt(cur.clicks), delta: clk.delta, icon: clk.icon },
+        { label: "CTR", value: `${fmt(cur.ctr * 100, 1)}%` },
+        { label: "Ср. CPC", value: `${fmt(cur.avgCpc, 2)}${cy}`, delta: cpc.delta, icon: cpc.icon },
+        { label: "Расход", value: `${fmt(cur.cost, 2)}${cy}`, delta: cost.delta, icon: cost.icon },
+        { label: "Конверсии", value: fmt(cur.conversions, 1), delta: conv.delta, icon: conv.icon },
+        { label: "Цена/конв.", value: cur.costPerConversion ? `${fmt(cur.costPerConversion, 2)}${cy}` : "—" },
+      ]),
+    );
+  }
+
   // ── Скорость (Core Web Vitals) ────────────────────────
   if (snap.psi?.length) {
     L.push("", RULE, `⚡ <b>Скорость</b> · CWV <i>(моб.)</i>`);

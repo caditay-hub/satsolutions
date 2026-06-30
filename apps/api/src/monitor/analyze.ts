@@ -61,6 +61,26 @@ export function detectAlerts(snap: Snapshot): Alert[] {
     }
   }
 
+  // --- Google Ads: рост CPC + расход без конверсий ---
+  if (snap.ads) {
+    const a = snap.ads;
+    const dCpc = pctChange(a.current.avgCpc, a.previous.avgCpc);
+    if (a.previous.avgCpc > 0 && dCpc >= t.cpcRisePct) {
+      alerts.push({
+        severity: "warning",
+        area: "Реклама",
+        text: `Средний CPC вырос на ${fmt(dCpc, 0)}% WoW (${fmt(a.previous.avgCpc, 2)} → ${fmt(a.current.avgCpc, 2)}).`,
+      });
+    }
+    if (a.current.cost > 0 && a.current.conversions === 0) {
+      alerts.push({
+        severity: "warning",
+        area: "Реклама",
+        text: `Расход ${fmt(a.current.cost, 2)} за окно при 0 конверсий — проверить кампании/трекинг.`,
+      });
+    }
+  }
+
   // --- PSI: Core Web Vitals ---
   for (const p of snap.psi ?? []) {
     const bad: string[] = [];
@@ -107,6 +127,16 @@ export function buildDigest(snap: Snapshot): string {
     if (g.channels.length) {
       lines.push("Каналы: " + g.channels.slice(0, 5).map((c) => `${c.channel} ${fmt(c.sessions)}с/${fmt(c.conversions)}к`).join(", "));
     }
+  }
+
+  if (snap.ads) {
+    const a = snap.ads;
+    const cy = a.currency ? ` ${a.currency}` : "";
+    lines.push(
+      `Реклама (Google Ads, ${a.range.from}…${a.range.to}): расход ${fmt(a.current.cost, 2)}${cy} (${sign(pctChange(a.current.cost, a.previous.cost))}${fmt(pctChange(a.current.cost, a.previous.cost), 0)}%), ` +
+        `клики ${fmt(a.current.clicks)}, CPC ${fmt(a.current.avgCpc, 2)}${cy}, конверсии ${fmt(a.current.conversions, 1)}, ` +
+        `цена/конв. ${a.current.costPerConversion ? fmt(a.current.costPerConversion, 2) + cy : "—"}.`,
+    );
   }
 
   if (snap.psi?.length) {

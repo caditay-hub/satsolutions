@@ -3,6 +3,9 @@
 import { fetchGscReport, fetchGscTotalsForPrevWindow } from "./sources/searchConsole.js";
 import { fetchGa4Report } from "./sources/ga4.js";
 import { fetchPsi } from "./sources/psi.js";
+import { fetchGoogleAdsReport } from "./sources/googleAds.js";
+import { config } from "./config.js";
+import { existsSync } from "node:fs";
 import { saveSnapshot, type Snapshot } from "./snapshot.js";
 import { detectAlerts, narrativeFromClaude, type Alert } from "./analyze.js";
 import { renderReport } from "./render.js";
@@ -27,16 +30,21 @@ export async function collect(): Promise<Snapshot> {
   const errors: string[] = [];
   const nowIso = new Date().toISOString();
 
-  const [gsc, ga4, psi] = await Promise.all([
+  // Google Ads подключаем только когда заданы оба секрета (developer token + OAuth),
+  // иначе пропускаем тихо — пока заявка на доступ к API не одобрена / токены не залиты.
+  const adsReady = !!config.googleAdsDeveloperToken && existsSync(config.googleAdsOAuthFile);
+
+  const [gsc, ga4, psi, ads] = await Promise.all([
     safe("GSC", async () => {
       const [report, prev] = await Promise.all([fetchGscReport(), fetchGscTotalsForPrevWindow()]);
       return { report, prev };
     }, errors),
     safe("GA4", () => fetchGa4Report(), errors),
     safe("PSI", () => fetchPsi(), errors),
+    adsReady ? safe("Google Ads", () => fetchGoogleAdsReport(), errors) : Promise.resolve(null),
   ]);
 
-  return { ts: nowIso, gsc, ga4, psi, errors };
+  return { ts: nowIso, gsc, ga4, psi, ads, errors };
 }
 
 /** Полный отчёт: собрать данные, прогнать через Claude, отрендерить, сохранить снапшот. */

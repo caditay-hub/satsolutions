@@ -32,6 +32,17 @@ export const config = {
   // PageSpeed Insights API key (необязателен, но снимает лимит анонимных запросов).
   psiApiKey: fromEnvOrFile("PSI_API_KEY", "/root/.psi_key"),
 
+  // --- Google Ads API (Phase 2) ---
+  // Developer token из API-центра MCC (745-369-4082). Файл /root/.gads_dev_token.
+  googleAdsDeveloperToken: fromEnvOrFile("GOOGLE_ADS_DEV_TOKEN", "/root/.gads_dev_token"),
+  // OAuth-креды (client_id/secret/refresh_token) JSON-файлом — /root/.gads_oauth.json
+  // (или env GOOGLE_ADS_CLIENT_ID/SECRET/REFRESH_TOKEN). Сервис-аккаунт тут НЕ годится.
+  googleAdsOAuthFile: process.env.GOOGLE_ADS_OAUTH_FILE ?? "/root/.gads_oauth.json",
+  // Управляющий аккаунт (MCC) — login-customer-id. Только цифры из 745-369-4082.
+  googleAdsLoginCustomerId: process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID ?? "7453694082",
+  // Рекламный аккаунт, по которому тянем метрики. Цифры из 670-045-0278.
+  googleAdsCustomerId: process.env.GOOGLE_ADS_CUSTOMER_ID ?? "6700450278",
+
   // Ключевые URL для замера Core Web Vitals (mobile). Главная + типовые шаблоны.
   psiUrls: (process.env.PSI_URLS?.split(",").map((s) => s.trim()).filter(Boolean)) ?? [
     "https://satsolutions.uz/ru",
@@ -71,6 +82,7 @@ export function configSummary(): string {
     `ga4=${config.ga4PropertyId || "(не задан)"}`,
     `sa=${have(existsSync(config.googleSaKeyFile) ? "x" : "")}`,
     `psiKey=${have(config.psiApiKey)}`,
+    `gads=${have(config.googleAdsDeveloperToken)}/${have(existsSync(config.googleAdsOAuthFile) ? "x" : "")}`,
     `tg=${have(config.telegramBotToken)}/${have(config.telegramChatId)}`,
     `claude=${have(config.anthropicApiKey)}`,
   ].join(" ");
