@@ -15,10 +15,10 @@
 import { readFileSync, existsSync } from "node:fs";
 import { config } from "../config.js";
 
-// Версия Google Ads API. Периодически устаревает — при ошибке "version ... is
-// not supported / deprecated" поднять до текущей (см. developers.google.com/google-ads/api).
-// Переопределяется env GOOGLE_ADS_API_VERSION без правки кода.
-const API_VERSION = process.env.GOOGLE_ADS_API_VERSION ?? "v18";
+// Версия Google Ads API. v21 подтверждена живым запросом (2026-06-30). Периодически
+// устаревает — при ошибке "version ... is not supported / deprecated" поднять до текущей
+// (см. developers.google.com/google-ads/api). Переопределяется env GOOGLE_ADS_API_VERSION.
+const API_VERSION = process.env.GOOGLE_ADS_API_VERSION ?? "v21";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 export type GoogleAdsTotals = {
@@ -129,7 +129,13 @@ async function queryWindow(from: string, to: string): Promise<{ totals: GoogleAd
   if (loginCustomerId) headers["login-customer-id"] = loginCustomerId;
 
   const res = await fetch(url, { method: "POST", headers, body: JSON.stringify({ query }) });
-  if (!res.ok) throw new Error(`Google Ads ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  if (!res.ok) {
+    const txt = await res.text();
+    // Заявка на Basic Access ещё не одобрена — не ошибка, а «пока не готово»:
+    // пробрасываем маркер, чтобы fetchGoogleAdsReport тихо вернул null (блок просто не покажется).
+    if (txt.includes("DEVELOPER_TOKEN_NOT_APPROVED")) throw new Error("GADS_PENDING_APPROVAL");
+    throw new Error(`Google Ads ${res.status}: ${txt.slice(0, 300)}`);
+  }
 
   // searchStream отдаёт JSON-массив чанков [{results:[...]}, ...].
   const chunks = (await res.json()) as any[];
@@ -156,21 +162,29 @@ async function queryWindow(from: string, to: string): Promise<{ totals: GoogleAd
  * Отчёт Google Ads за последние windowDays и предыдущее окно той же длины (WoW).
  * lag=1 — вчерашний день последний полный (как в GA4-источнике).
  */
-export async function fetchGoogleAdsReport(windowDays = 7): Promise<GoogleAdsReport> {
+export async function fetchGoogleAdsReport(windowDays = 7): Promise<GoogleAdsReport | null> {
   const lag = 1;
   const curTo = ymd(lag);
   const curFrom = ymd(lag + windowDays - 1);
   const prevTo = ymd(lag + windowDays);
   const prevFrom = ymd(lag + windowDays * 2 - 1);
 
-  // Последовательно (две лёгкие выборки; не нагружаем квоту параллелью).
-  const cur = await queryWindow(curFrom, curTo);
-  const prev = await queryWindow(prevFrom, prevTo);
-
-  return {
-    range: { from: curFrom, to: curTo },
-    currency: cur.currency || prev.currency || "",
-    current: cur.totals,
-    previous: prev.totals,
-  };
+  try {
+    // Последовательно (две лёгкие выборки; не нагружаем квоту параллелью).
+    const cur = await queryWindow(curFrom, curTo);
+    const prev = await queryWindow(prevFrom, prevTo);
+    return {
+      range: { from: curFrom, to: curTo },
+      currency: cur.currency || prev.currency || "",
+      current: cur.totals,
+      previous: prev.totals,
+    };
+  } catch (e) {
+    // Заявка на Basic Access ещё на рассмотрении — не шумим в отчёте, просто пропускаем блок.
+    if ((e as Error).message === "GADS_PENDING_APPROVAL") {
+      console.log("[gads] developer token ещё не одобрен (Basic Access) — блок Google Ads пропущен");
+      return null;
+    }
+    throw e;
+  }
 }
