@@ -101,8 +101,16 @@ export default async function RootLayout({
             line-gap-override: 0%;
             size-adjust: 107.12%;
           }
+          @font-face {
+            font-family: 'Jura Fallback';
+            src: local('Arial');
+            ascent-override: 90.47%;
+            descent-override: 20.44%;
+            line-gap-override: 0%;
+            size-adjust: 106.66%;
+          }
           :root {
-            --font-jura: 'Jura Variable', sans-serif;
+            --font-jura: 'Jura Variable', 'Jura Fallback', sans-serif;
             --font-inter: 'Inter Variable', 'Inter Fallback', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
             --font-caveat: 'Caveat Variable', cursive;
             --brand-700: #1d4ed8;
