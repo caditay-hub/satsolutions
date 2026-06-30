@@ -3,6 +3,7 @@ import { Op, QueryTypes } from "sequelize";
 import { sequelize } from "../db.js";
 import { Product } from "../models/Product.js";
 import { Brand } from "../models/Brand.js";
+import { matchI18nProductIds } from "../lib/productI18nIndex.js";
 
 export const smartSearchRouter = Router();
 
@@ -22,22 +23,27 @@ type Mapping = {
 
 async function directSearch(q: string, limit: number) {
   const like = `%${q}%`;
+  // id товаров, совпавших по ЛОКАЛИЗОВАННОМУ имени (uz/en/tr/zh) — БД хранит имена на RU
+  const i18nIds = matchI18nProductIds(q, 200);
+  const i18nSet = new Set(i18nIds);
+  const ids = i18nIds.length ? i18nIds : [""]; // sentinel: пустой IN не ломает запрос
   const rows = (await sequelize.query(
     `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text
      FROM products p
-     WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like)
+     WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.id IN (:ids))
      ORDER BY (CASE WHEN p.name ILIKE :like THEN 2 WHEN p."modelCode" ILIKE :like THEN 2 ELSE 0 END) DESC, p.name
      LIMIT :lim`,
-    { type: QueryTypes.SELECT, replacements: { like, lim: limit } },
+    { type: QueryTypes.SELECT, replacements: { like, ids, lim: limit } },
   )) as any[];
   // отдельно общий count для решения «достаточно ли»
   const cnt = (await sequelize.query(
-    `SELECT count(*)::int AS c FROM products p WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like)`,
-    { type: QueryTypes.SELECT, replacements: { like } },
+    `SELECT count(*)::int AS c FROM products p WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.id IN (:ids))`,
+    { type: QueryTypes.SELECT, replacements: { like, ids } },
   )) as any[];
-  // «сильных» совпадений (в имени/модели) — именно они определяют, нужен ли ИИ
-  const strong = rows.filter((r) => new RegExp(escapeRe(q), "i").test(`${r.name} ${r.modelCode || ""}`)).length;
+  // «сильных» совпадений (имя/модель RU ИЛИ локализованное имя) — они решают, нужен ли ИИ
+  const re = new RegExp(escapeRe(q), "i");
+  const strong = rows.filter((r) => i18nSet.has(r.id) || re.test(`${r.name} ${r.modelCode || ""}`)).length;
   return { rows, count: cnt[0]?.c ?? rows.length, strong };
 }
 
@@ -161,14 +167,17 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
     const q = norm(typeof req.query.q === "string" ? req.query.q : "");
     if (!q || q.length < 2) return res.json({ products: [], types: [], brands: [] });
     const like = `%${q}%`;
+    // совпадения по локализованному имени (uz/en/tr/zh) — БД хранит имена на RU
+    const i18nIds = matchI18nProductIds(q, 50);
+    const ids = i18nIds.length ? i18nIds : [""];
     const [products, types, brands] = await Promise.all([
       sequelize.query(
         `SELECT p.name, p.slug, p."coverImageUrl", p.price, p.characteristics::text AS chars_text, b.name AS brand_name
          FROM products p LEFT JOIN brands b ON b.id = p."brandId"
-         WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like)
+         WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.id IN (:ids))
          ORDER BY (CASE WHEN p.name ILIKE :start THEN 0 ELSE 1 END), length(p.name)
          LIMIT 6`,
-        { type: QueryTypes.SELECT, replacements: { like, start: `${q}%` } },
+        { type: QueryTypes.SELECT, replacements: { like, start: `${q}%`, ids } },
       ),
       sequelize.query(
         `SELECT c.name, count(p.id)::int AS count
