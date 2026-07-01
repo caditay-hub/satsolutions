@@ -12,6 +12,7 @@ export type PsiResult = {
   cls: CwvMetric; // unitless
   inp: CwvMetric; // мс
   performanceScore: number | null; // 0..100 (lab)
+  labCls?: number; // lab-CLS (Lighthouse) — есть всегда, даже при field-source; чтобы отличить лаг фикса от реальной поломки
 };
 
 function rate(value: number, good: number, poor: number): CwvMetric["rating"] {
@@ -27,6 +28,10 @@ async function fetchOne(url: string): Promise<PsiResult> {
   if (!res.ok) throw new Error(`PSI ${res.status} для ${url}: ${await res.text()}`);
   const data: any = await res.json();
 
+  // lab-CLS доступен в том же ответе (category=performance) — сохраняем всегда,
+  // чтобы отличить лаг field-фикса (lab уже ≈0) от реальной поломки (lab тоже плохой).
+  const labClsVal = data.lighthouseResult?.audits?.["cumulative-layout-shift"]?.numericValue as number | undefined;
+
   const field = data.loadingExperience?.metrics;
   if (field?.LARGEST_CONTENTFUL_PAINT_MS) {
     const lcp = field.LARGEST_CONTENTFUL_PAINT_MS.percentile as number;
@@ -39,6 +44,7 @@ async function fetchOne(url: string): Promise<PsiResult> {
       cls: { value: cls, rating: rate(cls, 0.1, 0.25) },
       inp: inp != null ? { value: inp, rating: rate(inp, 200, 500) } : { value: 0, rating: "na" },
       performanceScore: null,
+      labCls: labClsVal,
     };
   }
 
@@ -54,6 +60,7 @@ async function fetchOne(url: string): Promise<PsiResult> {
     cls: { value: labCls, rating: rate(labCls, 0.1, 0.25) },
     inp: { value: 0, rating: "na" },
     performanceScore: score != null ? Math.round(score * 100) : null,
+    labCls: labClsVal ?? labCls,
   };
 }
 

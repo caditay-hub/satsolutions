@@ -68,6 +68,9 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
   } else {
     L.push(`✅ <b>Критичных проблем нет</b>`);
   }
+  // Инфо-заметки (напр. лаг field-CWV после фикса) — тихо, не в «Проблемах».
+  const notes = alerts.filter((a) => a.severity === "info");
+  for (const a of notes) L.push(`🔵 <i>${esc(a.area)}: ${esc(a.text)}</i>`);
 
   // ── Поиск (Search Console) ────────────────────────────
   if (snap.gsc) {

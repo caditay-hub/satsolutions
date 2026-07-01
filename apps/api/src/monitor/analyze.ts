@@ -85,13 +85,21 @@ export function detectAlerts(snap: Snapshot): Alert[] {
   for (const p of snap.psi ?? []) {
     const bad: string[] = [];
     if (p.lcp.rating === "poor") bad.push(`LCP ${fmt(p.lcp.value)}мс`);
-    if (p.cls.rating === "poor") bad.push(`CLS ${fmt(p.cls.value, 2)}`);
+    // field-CLS плохой, но lab-CLS уже хороший (<0.1) = фикс задеплоен, CrUX (28д) лагает — это НЕ проблема.
+    const clsLagFixed = p.source === "field" && p.cls.rating === "poor" && p.labCls != null && p.labCls < 0.1;
+    if (p.cls.rating === "poor" && !clsLagFixed) bad.push(`CLS ${fmt(p.cls.value, 2)}`);
     if (p.inp.rating === "poor") bad.push(`INP ${fmt(p.inp.value)}мс`);
     if (bad.length) {
       alerts.push({
         severity: "warning",
         area: "Производительность",
         text: `${p.url}: плохие CWV — ${bad.join(", ")} (${p.source}).`,
+      });
+    } else if (clsLagFixed) {
+      alerts.push({
+        severity: "info",
+        area: "Производительность",
+        text: `${p.url}: field-CLS ${fmt(p.cls.value, 2)} ещё плохой, но lab-CLS ${fmt(p.labCls!, 3)} — фикс задеплоен, CrUX (28д) восстанавливается.`,
       });
     }
   }
@@ -152,6 +160,26 @@ export function buildDigest(snap: Snapshot): string {
 }
 
 /**
+ * Что УЖЕ реализовано на сайте — чтобы Claude не советовал сделанное как «новую проблему».
+ * Обновлять при внедрении новых крупных вещей (иначе отчёты будут дублировать готовое).
+ */
+const IMPLEMENTED_STATE = `УЖЕ РЕАЛИЗОВАНО (НЕ рекомендуй как новое, только если данные показывают регресс/поломку):
+- Трекинг конверсий: отправка форм, звонки (tel:), WhatsApp, Telegram, онлайн-чат → GA4 и Google Ads;
+  событие generate_lead помечено КЛЮЧЕВЫМ (с 2026-06-30, в старых окнах отчёта конверсии ещё 0 — это лаг, не поломка);
+  Enhanced Conversions включены.
+- i18n на 5 языков (ru/uz/en/tr/zh): UI-словари, ВСЕ описания товаров (3063), категорийные лонгриды (109),
+  названия категорий, описания брендов, страницы решений, страница 404.
+- hreflang самоссылочный + x-default, canonical самоссылочный, sitemap с hreflang-альтернатами — проверено, корректно.
+- Structured data: Product+Offer+Brand+BreadcrumbList+FAQPage на карточках товаров, Organization/LocalBusiness глобально.
+- SEO-гигиена: noindex на фасетных фильтрах, 301/308 на легаси и снятые URL, favicon icons в метаданных.
+- Google Ads: гео-таргетинг «Присутствие» (только Узбекистан), конверсии почищены (1 главное действие).
+- CLS исправлен шрифтовым fallback (Jura/Inter) — lab CLS ≈ 0.
+
+ВАЖНО про CWV field-данные (CrUX): это СКОЛЬЗЯЩЕЕ СРЕДНЕЕ за 28 дней, недавние фиксы (CLS/LCP) проявляются в них
+с задержкой ~2-4 недели. Если field-метрика (CLS/LCP/INP) плохая — сперва предположи ЛАГ уже задеплоенного фикса,
+а не новую проблему. Рекомендуй чинить CWV только если это явно новый регресс. По CLS фикс уже в проде — не советуй «чинить CLS».`;
+
+/**
  * Нарративный разбор через Claude: 3–6 приоритетных рекомендаций с учётом SEO-
  * правил проекта (slug/301, canonical+hreflang, sitemap, i18n 5 языков). Без
  * ключа/при ошибке возвращает пустую строку — отчёт всё равно уйдёт с цифрами.
@@ -164,8 +192,12 @@ export async function narrativeFromClaude(snap: Snapshot): Promise<string> {
 
 ${digest}
 
+${IMPLEMENTED_STATE}
+
 Дай НЕ БОЛЕЕ 6 конкретных приоритетных рекомендаций (маркированный список), отсортированных по влиянию×простоте.
 Для каждой: что сделать и ожидаемый эффект, кратко. Учитывай правила сайта: при изменении URL — slug+301, canonical+hreflang, sitemap, i18n на 5 языков.
+НЕ рекомендуй то, что в разделе «УЖЕ РЕАЛИЗОВАНО» — кроме случаев, когда данные показывают явный РЕГРЕСС/поломку (тогда назови это регрессом, а не новой задачей).
+Если хороших рекомендаций меньше 6 — дай меньше; лучше 2 точных, чем 6 с водой. Если всё в норме — так и напиши.
 Не повторяй цифры, не лей воду. Только actionable.`;
 
   try {
