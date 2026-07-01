@@ -232,6 +232,22 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               ))}
             </div>
           ) : null}
+          {/* Обычный поиск: категории найденного — чипами сверху (уточнить внутри запроса) */}
+          {!smart && q && typeFacets?.types && typeFacets.types.length > 1 ? (
+            <div className="mb-4 flex flex-wrap gap-2">
+              <span className="self-center text-xs font-bold uppercase tracking-wider text-slate-500">{tc("refine")}:</span>
+              {typeFacets.types.slice(0, 8).map((tp: { name: string; count: number }) => (
+                <Link
+                  key={tp.name}
+                  href={`/products?q=${encodeURIComponent(q)}&type=${encodeURIComponent(tp.name)}`}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-brand-300 bg-white px-3 py-1 text-xs font-bold text-brand-700 hover:bg-brand-600 hover:text-white transition-colors"
+                >
+                  {localizeCatName(tp.name, locale)}
+                  <span className="opacity-60">{tp.count}</span>
+                </Link>
+              ))}
+            </div>
+          ) : null}
           {items.length === 0 ? (
             <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">
               {tc("nothingFound")}
