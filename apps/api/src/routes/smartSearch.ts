@@ -14,6 +14,27 @@ const DIRECT_ENOUGH = 12; // если обычный поиск дал >= N — 
 const norm = (s: string) =>
   s.toLowerCase().trim().replace(/\s+/g, " ").slice(0, 120);
 
+// p.id — UUID: пустая строка '' в Iren(...) роняет каст (invalid uuid). Валидная nil-заглушка не матчит ничего.
+const NIL_UUID = "00000000-0000-0000-0000-000000000000";
+
+// Раскладка клавиатуры: пользователь не переключил язык (напр. "gj;fhrf" вместо "пожарка",
+// или бренд Hikvision в русской раскладке). Ищем ещё и по «перевёрнутому» варианту.
+const EN_KEYS = "`qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+const RU_KEYS = "ёйцукенгшщзхъфывапролджэячсмитьбю.";
+const FLIP = new Map<string, string>();
+for (let i = 0; i < EN_KEYS.length; i++) {
+  FLIP.set(EN_KEYS[i], RU_KEYS[i]); FLIP.set(RU_KEYS[i], EN_KEYS[i]);
+  FLIP.set(EN_KEYS[i].toUpperCase(), RU_KEYS[i].toUpperCase());
+  FLIP.set(RU_KEYS[i].toUpperCase(), EN_KEYS[i].toUpperCase());
+}
+/** Перевод строки в противоположную раскладку. "" если менять нечего (чтобы не искать дубль). */
+function flipLayout(s: string): string {
+  let out = "", changed = false;
+  for (const ch of s) { const f = FLIP.get(ch); if (f) { out += f; changed = true; } else out += ch; }
+  return changed ? out : "";
+}
+const NEVER = "%__NEVER_MATCH__%"; // never-match like (когда flip пустой)
+
 type Mapping = {
   category_slugs: string[];
   brand_slugs: string[];
@@ -23,27 +44,34 @@ type Mapping = {
 
 async function directSearch(q: string, limit: number) {
   const like = `%${q}%`;
+  const qf = flipLayout(q);
+  const likeF = qf ? `%${qf}%` : NEVER; // раскладка: ищем ещё и по «перевёрнутому» варианту
   // id товаров, совпавших по ЛОКАЛИЗОВАННОМУ имени (uz/en/tr/zh) — БД хранит имена на RU
   const i18nIds = matchI18nProductIds(q, 200);
   const i18nSet = new Set(i18nIds);
-  const ids = i18nIds.length ? i18nIds : [""]; // sentinel: пустой IN не ломает запрос
+  const ids = i18nIds.length ? i18nIds : [NIL_UUID]; // sentinel: валидный UUID (пустой '' роняет каст)
+  const where = `p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))`;
   const rows = (await sequelize.query(
     `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text
      FROM products p
-     WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.id IN (:ids))
-     ORDER BY (CASE WHEN p.name ILIKE :like THEN 2 WHEN p."modelCode" ILIKE :like THEN 2 ELSE 0 END) DESC, p.name
+     WHERE ${where}
+     ORDER BY (CASE WHEN p.name ILIKE :like OR p."modelCode" ILIKE :like THEN 2 WHEN p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF THEN 1 ELSE 0 END) DESC, p.name
      LIMIT :lim`,
-    { type: QueryTypes.SELECT, replacements: { like, ids, lim: limit } },
+    { type: QueryTypes.SELECT, replacements: { like, likeF, ids, lim: limit } },
   )) as any[];
   // отдельно общий count для решения «достаточно ли»
   const cnt = (await sequelize.query(
-    `SELECT count(*)::int AS c FROM products p WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.id IN (:ids))`,
-    { type: QueryTypes.SELECT, replacements: { like, ids } },
+    `SELECT count(*)::int AS c FROM products p WHERE ${where}`,
+    { type: QueryTypes.SELECT, replacements: { like, likeF, ids } },
   )) as any[];
-  // «сильных» совпадений (имя/модель RU ИЛИ локализованное имя) — они решают, нужен ли ИИ
-  const re = new RegExp(escapeRe(q), "i");
-  const strong = rows.filter((r) => i18nSet.has(r.id) || re.test(`${r.name} ${r.modelCode || ""}`)).length;
+  // «сильных» совпадений (имя/модель RU/локализ./раскладка) — решают, нужен ли ИИ
+  const reQ = new RegExp(escapeRe(q), "i");
+  const reF = qf ? new RegExp(escapeRe(qf), "i") : null;
+  const strong = rows.filter((r) => {
+    const hay = `${r.name} ${r.modelCode || ""}`;
+    return i18nSet.has(r.id) || reQ.test(hay) || (reF != null && reF.test(hay));
+  }).length;
   return { rows, count: cnt[0]?.c ?? rows.length, strong };
 }
 
@@ -101,7 +129,8 @@ ${cats.map((c) => `${c.name} | ${c.slug} | ${c.cnt}`).join("\n")}
         model: MODEL,
         max_tokens: 400,
         system,
-        messages: [{ role: "user", content: `Запрос: ${q}` }],
+        // даём и «перевёрнутую» раскладку — вдруг пользователь не переключил язык (gj;fhrf = пожарка)
+        messages: [{ role: "user", content: `Запрос: ${q}${(() => { const f = flipLayout(q); return f ? ` (та же строка в другой раскладке клавиатуры: ${f} — выбери осмысленный вариант)` : ""; })()}` }],
       }),
       signal: ctrl.signal,
     });
@@ -167,17 +196,19 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
     const q = norm(typeof req.query.q === "string" ? req.query.q : "");
     if (!q || q.length < 2) return res.json({ products: [], types: [], brands: [] });
     const like = `%${q}%`;
+    const qf = flipLayout(q);
+    const likeF = qf ? `%${qf}%` : NEVER; // раскладка клавиатуры
     // совпадения по локализованному имени (uz/en/tr/zh) — БД хранит имена на RU
     const i18nIds = matchI18nProductIds(q, 50);
-    const ids = i18nIds.length ? i18nIds : [""];
+    const ids = i18nIds.length ? i18nIds : [NIL_UUID];
     const [products, types, brands] = await Promise.all([
       sequelize.query(
         `SELECT p.name, p.slug, p."coverImageUrl", p.price, p.characteristics::text AS chars_text, b.name AS brand_name
          FROM products p LEFT JOIN brands b ON b.id = p."brandId"
-         WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.id IN (:ids))
+         WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))
          ORDER BY (CASE WHEN p.name ILIKE :start THEN 0 ELSE 1 END), length(p.name)
          LIMIT 6`,
-        { type: QueryTypes.SELECT, replacements: { like, start: `${q}%`, ids } },
+        { type: QueryTypes.SELECT, replacements: { like, likeF, start: `${q}%`, ids } },
       ),
       sequelize.query(
         `SELECT c.name, count(p.id)::int AS count
@@ -187,8 +218,8 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
         { type: QueryTypes.SELECT, replacements: { like } },
       ),
       sequelize.query(
-        `SELECT name, slug FROM brands WHERE published AND name ILIKE :like ORDER BY "sortOrder" LIMIT 3`,
-        { type: QueryTypes.SELECT, replacements: { like } },
+        `SELECT name, slug FROM brands WHERE published AND (name ILIKE :like OR name ILIKE :likeF) ORDER BY "sortOrder" LIMIT 3`,
+        { type: QueryTypes.SELECT, replacements: { like, likeF } },
       ),
     ]);
     res.json({ products, types, brands });
