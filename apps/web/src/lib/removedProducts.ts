@@ -3,6 +3,9 @@
 // чтобы очистить индекс, вернуть вес и не отдавать пользователю тупик. Снимок GSC от 2026-07-01.
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
+  // Удалены 2026-07-01 как непроверённые (нет фото, модель не гуглится, сомнит. цена) → бренд KANIHAD.
+  "knd-vi-mt227": "kanihad",
+  "knd-vi-hw10": "kanihad",
   "bolid-administrator-bazy-dannykh-orion-pro": "bolid",
   "bolid-arm-ptso-egida-3-100-avtomatizirovannoe-rabochee-mesto": "bolid",
   "bolid-arm-ptso-egida-3-2000-avtomatizirovannoe-rabochee-mesto-dlya-tsentralizovannoy-pultovoy-okhrany": "bolid",
