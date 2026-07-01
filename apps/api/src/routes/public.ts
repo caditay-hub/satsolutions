@@ -152,6 +152,7 @@ publicRouter.get("/products", async (req, res) => {
   if (recommendedRaw === "1" || recommendedRaw === "true" || recommendedRaw === "yes") {
     where.recommended = true;
   }
+  const qf = q ? flipLayout(q) : ""; // раскладка (флип) — нужна и в OR, и позже для corrected-подсказки
   if (q) {
     // Поиск по названию/модели товара + по названию КАТЕГОРИИ и БРЕНДА
     // (чтобы запросы вида «оптика», «hikvision», «шкаф» гарантированно давали товары).
@@ -165,7 +166,6 @@ publicRouter.get("/products", async (req, res) => {
       sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${ql}%')`),
     ];
     // раскладка клавиатуры: не переключил язык (напр. «ntcnth»=тестер, «вфргф»=dahua) — ищем и по флипу
-    const qf = flipLayout(q);
     if (qf) {
       const qfl = qf.replace(/'/g, "''");
       or.push(
