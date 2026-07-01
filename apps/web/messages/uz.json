@@ -38,7 +38,8 @@
     "priceFrom": "{value} so‘mdan",
     "priceOnRequest": "Narx so‘rov bo‘yicha",
     "noPhoto": "Rasm yo‘q",
-    "inStock": "Mavjud"
+    "inStock": "Mavjud",
+    "faqTitle": "Ko'p so'raladigan savollar"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",

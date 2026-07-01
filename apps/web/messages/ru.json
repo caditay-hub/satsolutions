@@ -38,7 +38,8 @@
     "priceFrom": "от {value} сум",
     "priceOnRequest": "Цена по запросу",
     "noPhoto": "Нет фото",
-    "inStock": "В наличии"
+    "inStock": "В наличии",
+    "faqTitle": "Частые вопросы"
   },
   "home": {
     "heroTitle": "Системы безопасности и слаботочные системы",

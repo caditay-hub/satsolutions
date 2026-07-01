@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { parseRichDescription } from "@/lib/richDescription";
 
 const LIST_SECTIONS = /преимущ|сфер|применен|комплект|особен|возможност/i;
@@ -7,6 +8,7 @@ const LIST_SECTIONS = /преимущ|сфер|применен|комплект
  * FAQ-аккордеон (нативные <details> — работает без JS, контент в DOM для SEO).
  */
 export function RichDescription({ text }: { text: string | null | undefined }) {
+  const t = useTranslations("common");
   const data = parseRichDescription(text);
   if (!text || !text.trim()) return null;
 
@@ -58,7 +60,7 @@ export function RichDescription({ text }: { text: string | null | undefined }) {
 
       {data.faq.length > 0 && (
         <section>
-          <h3 className="text-base font-bold text-slate-900">Частые вопросы</h3>
+          <h3 className="text-base font-bold text-slate-900">{t("faqTitle")}</h3>
           <div className="mt-2 divide-y divide-slate-100 overflow-hidden rounded-xl border border-slate-200">
             {data.faq.map((f, i) => (
               <details key={i} className="group">

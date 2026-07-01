@@ -38,7 +38,8 @@
     "priceFrom": "{value} 索姆起",
     "priceOnRequest": "价格面议",
     "noPhoto": "暂无照片",
-    "inStock": "有货"
+    "inStock": "有货",
+    "faqTitle": "常见问题"
   },
   "home": {
     "heroTitle": "安防与弱电系统",

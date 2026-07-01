@@ -38,7 +38,8 @@
     "priceFrom": "{value} UZS'den",
     "priceOnRequest": "Fiyat talep üzerine",
     "noPhoto": "Fotoğraf yok",
-    "inStock": "Stokta"
+    "inStock": "Stokta",
+    "faqTitle": "Sık sorulan sorular"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",

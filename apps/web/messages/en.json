@@ -38,7 +38,8 @@
     "priceFrom": "from {value} UZS",
     "priceOnRequest": "Price on request",
     "noPhoto": "No photo",
-    "inStock": "In stock"
+    "inStock": "In stock",
+    "faqTitle": "Frequently asked questions"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
