@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 
 export default async function ServiceSlugRedirectPage({
   params
@@ -6,5 +6,6 @@ export default async function ServiceSlugRedirectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  redirect(`/solutions/${encodeURIComponent(slug)}`);
+  // 308 permanent — легаси /services/<slug> → /solutions/<slug> (консолидация старых URL).
+  permanentRedirect(`/solutions/${encodeURIComponent(slug)}`);
 }
