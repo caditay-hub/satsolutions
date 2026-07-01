@@ -50,7 +50,8 @@ async function directSearch(q: string, limit: number) {
   const i18nIds = matchI18nProductIds(q, 200);
   const i18nSet = new Set(i18nIds);
   const ids = i18nIds.length ? i18nIds : [NIL_UUID]; // sentinel: валидный UUID (пустой '' роняет каст)
-  const where = `p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p."shortDescription" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))`;
+  // shortDescription НЕ матчим — шум (камеры с «PIR датчик» в описании и т.п.); семантику даёт Claude
+  const where = `p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))`;
   const rows = (await sequelize.query(
     `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text

@@ -152,13 +152,14 @@ publicRouter.get("/products", async (req, res) => {
     where.recommended = true;
   }
   if (q) {
-    // Поиск по названию/модели/описанию товара + по названию КАТЕГОРИИ и БРЕНДА
-    // (чтобы запросы вида «оптика», «hikvision», «шкаф» гарантированно давали товары)
+    // Поиск по названию/модели товара + по названию КАТЕГОРИИ и БРЕНДА
+    // (чтобы запросы вида «оптика», «hikvision», «шкаф» гарантированно давали товары).
+    // shortDescription НЕ матчим — это шум: «датчик» ловил камеры с «PIR датчик» в описании,
+    // ИБП, СКУД-контроллеры и т.п. Семантику (датчик→извещатели) даёт умный поиск /search-smart.
     const ql = q.replace(/'/g, "''");
     where[Op.or] = [
       { name: { [Op.iLike]: `%${q}%` } },
       { modelCode: { [Op.iLike]: `%${q}%` } },
-      { shortDescription: { [Op.iLike]: `%${q}%` } },
       sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${ql}%')`),
       sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${ql}%')`),
     ];
