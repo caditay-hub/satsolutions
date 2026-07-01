@@ -384,7 +384,26 @@ publicRouter.get("/products", async (req, res) => {
     limit,
     offset
   });
-  res.json({ items: rows, total: count, page, limit });
+
+  // Исправление раскладки: если по оригиналу товаров нет, а результаты есть (значит нашлись по флипу) —
+  // сообщаем фронту исправленный запрос → «Показаны результаты по запросу «X»» (как в Google).
+  let corrected: string | null = null;
+  if (q && qf && count > 0) {
+    const qOrig = q.replace(/'/g, "''");
+    const origCount = await Product.count({
+      where: {
+        published: true,
+        [Op.or]: [
+          { name: { [Op.iLike]: `%${q}%` } },
+          { modelCode: { [Op.iLike]: `%${q}%` } },
+          sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${qOrig}%')`),
+          sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${qOrig}%')`),
+        ],
+      },
+    });
+    if (origCount === 0) corrected = qf;
+  }
+  res.json({ items: rows, total: count, page, limit, corrected });
 });
 
 // Фасеты каталога (страница типа / бренда / общий список): бренды, типы, цена, характеристики.

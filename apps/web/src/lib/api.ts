@@ -231,7 +231,7 @@ export async function getProducts(
   if (opts?.priceMax) qs.set("priceMax", String(opts.priceMax));
   // no-store: список товаров имеет неограниченное число комбинаций фильтров/сортировки/страниц,
   // ISR-кэш этих запросов раздувал .next/cache/fetch-cache до десятков ГБ. Список всегда свежий.
-  return apiFetch<{ items: ProductDto[]; total: number; page: number; limit: number }>(`/products?${qs}`, {
+  return apiFetch<{ items: ProductDto[]; total: number; page: number; limit: number; corrected?: string | null }>(`/products?${qs}`, {
     cache: "no-store"
   });
 }

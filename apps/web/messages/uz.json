@@ -913,7 +913,8 @@
     "viewList": "Ro'yxat",
     "viewGrid": "Plitka",
     "byCategoriesDesc": "Xavfsizlik tizimlari, videokuzatuv, tarmoqlar va SKS — SAT Solutions katalogi turkumlar bo'yicha. Toshkent va O'zbekiston bo'ylab yetkazib berish.",
-    "productCatalog": "Mahsulotlar katalogi"
+    "productCatalog": "Mahsulotlar katalogi",
+    "showingFor": "So'rov bo'yicha natijalar"
   },
   "notFound": {
     "title": "Sahifa topilmadi",

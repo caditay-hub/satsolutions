@@ -84,9 +84,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   // деградируем до пустого списка. Основная защита от 429 — серверный рендер ходит в localhost.
   let items: import("@/lib/api").ProductDto[] = [];
   let total = 0;
+  let corrected: string | null = null;
   try {
     const r = await getProducts(page, perPage, { category, brand, q, sort, mp, technology, installationType, type, chars, priceMin, priceMax });
-    items = r.items; total = r.total;
+    items = r.items; total = r.total; corrected = r.corrected ?? null;
   } catch { items = []; total = 0; }
 
   // Умный поиск: если обычный нашёл мало — спрашиваем ИИ (с кешем на бэке)
@@ -210,6 +211,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <span className="text-[15px] text-slate-700">
                 {smart ? <span className="font-bold text-brand-700">{tc("smartSearch")} · </span> : null}
                 {tc("searchPrefix")} <span className="font-bold text-slate-900">«{q}»</span> — {tc("searchFound")} <span className="font-bold text-slate-900">{total}</span>
+                {corrected ? <span className="text-slate-500"> · {tc("showingFor")} <span className="font-semibold text-brand-700">«{corrected}»</span></span> : null}
                 {smart?.explain ? <span className="text-slate-500"> · {smart.explain}</span> : null}
               </span>
               <Link href="/products" className="ml-auto text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">

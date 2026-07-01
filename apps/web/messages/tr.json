@@ -913,7 +913,8 @@
     "viewList": "Liste",
     "viewGrid": "Izgara",
     "byCategoriesDesc": "Güvenlik sistemleri, video gözetim, ağ ve kablolama — kategorilere göre tüm SAT Solutions kataloğu. Taşkent ve Özbekistan geneline teslimat.",
-    "productCatalog": "Ürün kataloğu"
+    "productCatalog": "Ürün kataloğu",
+    "showingFor": "Şu sorgu için sonuçlar"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",

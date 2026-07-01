@@ -913,7 +913,8 @@
     "viewList": "List",
     "viewGrid": "Grid",
     "byCategoriesDesc": "Security systems, video surveillance, networking and cabling — the full SAT Solutions catalog by category. Delivery across Tashkent and Uzbekistan.",
-    "productCatalog": "Product catalog"
+    "productCatalog": "Product catalog",
+    "showingFor": "Showing results for"
   },
   "notFound": {
     "title": "Page not found",
