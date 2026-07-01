@@ -4,6 +4,7 @@ import { sequelize } from "../db.js";
 import { Product } from "../models/Product.js";
 import { Brand } from "../models/Brand.js";
 import { matchI18nProductIds } from "../lib/productI18nIndex.js";
+import { flipLayout } from "../lib/kbLayout.js";
 
 export const smartSearchRouter = Router();
 
@@ -17,22 +18,6 @@ const norm = (s: string) =>
 // p.id — UUID: пустая строка '' в Iren(...) роняет каст (invalid uuid). Валидная nil-заглушка не матчит ничего.
 const NIL_UUID = "00000000-0000-0000-0000-000000000000";
 
-// Раскладка клавиатуры: пользователь не переключил язык (напр. "gj;fhrf" вместо "пожарка",
-// или бренд Hikvision в русской раскладке). Ищем ещё и по «перевёрнутому» варианту.
-const EN_KEYS = "`qwertyuiop[]asdfghjkl;'zxcvbnm,./";
-const RU_KEYS = "ёйцукенгшщзхъфывапролджэячсмитьбю.";
-const FLIP = new Map<string, string>();
-for (let i = 0; i < EN_KEYS.length; i++) {
-  FLIP.set(EN_KEYS[i], RU_KEYS[i]); FLIP.set(RU_KEYS[i], EN_KEYS[i]);
-  FLIP.set(EN_KEYS[i].toUpperCase(), RU_KEYS[i].toUpperCase());
-  FLIP.set(RU_KEYS[i].toUpperCase(), EN_KEYS[i].toUpperCase());
-}
-/** Перевод строки в противоположную раскладку. "" если менять нечего (чтобы не искать дубль). */
-function flipLayout(s: string): string {
-  let out = "", changed = false;
-  for (const ch of s) { const f = FLIP.get(ch); if (f) { out += f; changed = true; } else out += ch; }
-  return changed ? out : "";
-}
 const NEVER = "%__NEVER_MATCH__%"; // never-match like (когда flip пустой)
 
 type Mapping = {

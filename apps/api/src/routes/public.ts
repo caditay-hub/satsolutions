@@ -15,6 +15,7 @@ import { SitePage } from "../models/SitePage.js";
 import { FeedbackMessage } from "../models/FeedbackMessage.js";
 import { ServiceCategory } from "../models/ServiceCategory.js";
 import { sequelize } from "../db.js";
+import { flipLayout } from "../lib/kbLayout.js";
 import { parseLimit, parsePositiveInt } from "../utils/pagination.js";
 
 // Нормализация значений характеристик: схлопывает регистр, пробелы, пробел между числом
@@ -157,12 +158,24 @@ publicRouter.get("/products", async (req, res) => {
     // shortDescription НЕ матчим — это шум: «датчик» ловил камеры с «PIR датчик» в описании,
     // ИБП, СКУД-контроллеры и т.п. Семантику (датчик→извещатели) даёт умный поиск /search-smart.
     const ql = q.replace(/'/g, "''");
-    where[Op.or] = [
+    const or: any[] = [
       { name: { [Op.iLike]: `%${q}%` } },
       { modelCode: { [Op.iLike]: `%${q}%` } },
       sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${ql}%')`),
       sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${ql}%')`),
     ];
+    // раскладка клавиатуры: не переключил язык (напр. «ntcnth»=тестер, «вфргф»=dahua) — ищем и по флипу
+    const qf = flipLayout(q);
+    if (qf) {
+      const qfl = qf.replace(/'/g, "''");
+      or.push(
+        { name: { [Op.iLike]: `%${qf}%` } },
+        { modelCode: { [Op.iLike]: `%${qf}%` } },
+        sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${qfl}%')`),
+        sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${qfl}%')`),
+      );
+    }
+    where[Op.or] = or;
   }
 
   // MP filter - filter by characteristics field (JSONB cast to text for ILIKE)
