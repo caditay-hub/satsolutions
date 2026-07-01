@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeLongread } from "@/lib/longreadI18n";
 import { Link } from "@/i18n/navigation";
 import { getProducts, getProductFacets, getSitePage, getSmartSearch, type SmartSearchDto } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
@@ -136,7 +137,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     if (slug) {
       try {
         const { page: lp } = await getSitePage(`category:${slug}` as any);
-        typeLongDesc = ((lp as any)?.content || "").toString();
+        typeLongDesc = localizeLongread(slug, ((lp as any)?.content || "").toString(), locale);
       } catch {}
     }
   }
