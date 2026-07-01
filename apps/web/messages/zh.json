@@ -39,7 +39,11 @@
     "priceOnRequest": "价格面议",
     "noPhoto": "暂无照片",
     "inStock": "有货",
-    "faqTitle": "常见问题"
+    "faqTitle": "常见问题",
+    "photo": "照片",
+    "openPhoto": "打开照片",
+    "imgPrev": "上一张",
+    "imgNext": "下一张"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -915,5 +919,23 @@
     "title": "页面未找到",
     "text": "链接可能有误，或页面已被删除。",
     "home": "返回首页"
+  },
+  "solutionDetail": {
+    "tabOverview": "概览",
+    "tabScenarios": "场景",
+    "tabDetails": "详情",
+    "tabTech": "技术",
+    "tabTopology": "架构",
+    "expertConsult": "专家咨询",
+    "overviewTitle": "解决方案概览",
+    "overviewFallback": "世界级安全的系统化方案。",
+    "industriesLabel": "行业解决方案",
+    "scenariosTitle": "使用场景",
+    "childFallback": "该解决方案及其对本行业优势的详细说明。",
+    "detailsTitle": "解决方案详情",
+    "techTitle": "核心技术",
+    "topologyTitle": "系统架构",
+    "topologySubtitle": "集中管理与实时容错数据传输。",
+    "learnMore": "了解更多"
   }
 }

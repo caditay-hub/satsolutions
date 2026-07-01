@@ -39,7 +39,11 @@
     "priceOnRequest": "Narx so‘rov bo‘yicha",
     "noPhoto": "Rasm yo‘q",
     "inStock": "Mavjud",
-    "faqTitle": "Ko'p so'raladigan savollar"
+    "faqTitle": "Ko'p so'raladigan savollar",
+    "photo": "rasm",
+    "openPhoto": "Rasmni ochish",
+    "imgPrev": "Oldingi",
+    "imgNext": "Keyingi"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -915,5 +919,23 @@
     "title": "Sahifa topilmadi",
     "text": "Havola noto'g'ri bo'lishi yoki sahifa o'chirilgan bo'lishi mumkin.",
     "home": "Bosh sahifaga"
+  },
+  "solutionDetail": {
+    "tabOverview": "Umumiy",
+    "tabScenarios": "Stsenariylar",
+    "tabDetails": "Tafsilotlar",
+    "tabTech": "Texnologiyalar",
+    "tabTopology": "Arxitektura",
+    "expertConsult": "Ekspert maslahati",
+    "overviewTitle": "Yechim sharhi",
+    "overviewFallback": "Jahon darajasidagi xavfsizlikka tizimli yondashuv.",
+    "industriesLabel": "Sohalar bo'yicha yechimlar",
+    "scenariosTitle": "Foydalanish stsenariylari",
+    "childFallback": "Yechim va uning ushbu soha uchun afzalliklari haqida batafsil ma'lumot.",
+    "detailsTitle": "Yechim tafsilotlari",
+    "techTitle": "Asosiy texnologiyalar",
+    "topologyTitle": "Tizim arxitekturasi",
+    "topologySubtitle": "Markazlashgan boshqaruv va real vaqtda uzluksiz ma'lumot uzatish.",
+    "learnMore": "Batafsil"
   }
 }

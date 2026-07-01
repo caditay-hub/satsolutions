@@ -39,7 +39,11 @@
     "priceOnRequest": "Fiyat talep üzerine",
     "noPhoto": "Fotoğraf yok",
     "inStock": "Stokta",
-    "faqTitle": "Sık sorulan sorular"
+    "faqTitle": "Sık sorulan sorular",
+    "photo": "fotoğraf",
+    "openPhoto": "Fotoğrafı aç",
+    "imgPrev": "Önceki",
+    "imgNext": "Sonraki"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -915,5 +919,23 @@
     "title": "Sayfa bulunamadı",
     "text": "Bağlantı yanlış olabilir veya sayfa kaldırılmış olabilir.",
     "home": "Ana sayfaya"
+  },
+  "solutionDetail": {
+    "tabOverview": "Genel Bakış",
+    "tabScenarios": "Senaryolar",
+    "tabDetails": "Detaylar",
+    "tabTech": "Teknolojiler",
+    "tabTopology": "Mimari",
+    "expertConsult": "Uzman danışmanlığı",
+    "overviewTitle": "Çözüme genel bakış",
+    "overviewFallback": "Dünya standartlarında güvenliğe sistematik yaklaşım.",
+    "industriesLabel": "Sektörlere göre çözümler",
+    "scenariosTitle": "Kullanım senaryoları",
+    "childFallback": "Çözümün ve bu sektör için avantajlarının ayrıntılı açıklaması.",
+    "detailsTitle": "Çözüm detayları",
+    "techTitle": "Temel teknolojiler",
+    "topologyTitle": "Sistem mimarisi",
+    "topologySubtitle": "Merkezi yönetim ve gerçek zamanlı hataya dayanıklı veri iletimi.",
+    "learnMore": "Daha fazla"
   }
 }

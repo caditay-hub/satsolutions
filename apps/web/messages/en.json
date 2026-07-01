@@ -39,7 +39,11 @@
     "priceOnRequest": "Price on request",
     "noPhoto": "No photo",
     "inStock": "In stock",
-    "faqTitle": "Frequently asked questions"
+    "faqTitle": "Frequently asked questions",
+    "photo": "photo",
+    "openPhoto": "Open photo",
+    "imgPrev": "Previous",
+    "imgNext": "Next"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -915,5 +919,23 @@
     "title": "Page not found",
     "text": "The link may be incorrect or the page may have been removed.",
     "home": "Go to homepage"
+  },
+  "solutionDetail": {
+    "tabOverview": "Overview",
+    "tabScenarios": "Scenarios",
+    "tabDetails": "Details",
+    "tabTech": "Technologies",
+    "tabTopology": "Architecture",
+    "expertConsult": "Expert consultation",
+    "overviewTitle": "Solution overview",
+    "overviewFallback": "A systematic approach to world-class security.",
+    "industriesLabel": "Solutions by industry",
+    "scenariosTitle": "Use cases",
+    "childFallback": "A detailed description of the solution and its benefits for this industry.",
+    "detailsTitle": "Solution details",
+    "techTitle": "Key technologies",
+    "topologyTitle": "System architecture",
+    "topologySubtitle": "Centralized management and fault-tolerant real-time data transmission.",
+    "learnMore": "Learn more"
   }
 }

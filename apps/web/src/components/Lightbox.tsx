@@ -2,10 +2,12 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 /* Галерея с лайтбоксом: миниатюры + просмотр поверх страницы.
    Закрытие: крестик, клик по фону, Esc, кнопка «Назад» на телефоне. Листание стрелками. */
 export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: string; gridClass?: string }) {
+  const t = useTranslations("common");
   const list = images.filter(Boolean);
   const [open, setOpen] = useState<number | null>(null);
 
@@ -51,11 +53,11 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
             type="button"
             onClick={() => show(i)}
             className="group relative block aspect-[4/3] overflow-hidden rounded-xl border border-slate-200 bg-slate-100"
-            aria-label={`Открыть фото ${i + 1}`}
+            aria-label={`${t("openPhoto")} ${i + 1}`}
           >
             <Image
               src={src}
-              alt={`${alt} — фото ${i + 1}`}
+              alt={`${alt} — ${t("photo")} ${i + 1}`}
               fill
               sizes="(max-width: 640px) 50vw, 25vw"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -75,7 +77,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
           <button
             type="button"
             onClick={handleClose}
-            aria-label="Закрыть"
+            aria-label={t("close")}
             className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-2xl text-white hover:bg-white/25"
           >
             ✕
@@ -85,7 +87,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); prev(); }}
-                aria-label="Предыдущее"
+                aria-label={t("imgPrev")}
                 className="absolute left-3 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-3xl text-white hover:bg-white/25"
               >
                 ‹
@@ -93,7 +95,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); next(); }}
-                aria-label="Следующее"
+                aria-label={t("imgNext")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-3xl text-white hover:bg-white/25"
               >
                 ›
@@ -102,7 +104,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
           )}
           <img
             src={list[open]}
-            alt={`${alt} — фото ${open + 1}`}
+            alt={`${alt} — ${t("photo")} ${open + 1}`}
             className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
             onClick={(e) => e.stopPropagation()}
           />

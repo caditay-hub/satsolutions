@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 
@@ -7,9 +8,10 @@ import { typeSlug } from "@/lib/typeSlug";
 // (/products?type=<имя> — там товары + лонгрид + FAQ). Родительские → индекс /categories.
 // 308 permanent — для консолидации старых URL в поиске.
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  return { title: "Категория", alternates: { canonical: `/categories/${slug}` } };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const t = await getTranslations({ locale, namespace: "nav" });
+  return { title: t("catalog"), alternates: { canonical: `/categories/${slug}` } };
 }
 
 export default async function CategoryRedirectPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import type { ServiceDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
@@ -13,6 +14,7 @@ interface SolutionDetailsClientProps {
 }
 
 export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
+  const t = useTranslations("solutionDetail");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("overview");
   const img = resolveImageUrl(item.coverImageUrl) || resolveImageUrl(item.category?.imageUrl);
@@ -20,11 +22,11 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
 
   // Sticky sub-nav mapping
   const sections = [
-    { id: "overview", label: "Обзор" },
-    { id: "scenarios", label: "Сценарии", show: !!item.children?.length },
-    { id: "details", label: "Детали", show: !!items.length },
-    { id: "tech", label: "Технологии", show: !!item.keyTechnologies?.length },
-    { id: "topology", label: "Архитектура", show: !!item.overviewImageUrl },
+    { id: "overview", label: t("tabOverview") },
+    { id: "scenarios", label: t("tabScenarios"), show: !!item.children?.length },
+    { id: "details", label: t("tabDetails"), show: !!items.length },
+    { id: "tech", label: t("tabTech"), show: !!item.keyTechnologies?.length },
+    { id: "topology", label: t("tabTopology"), show: !!item.overviewImageUrl },
   ].filter(s => s.show !== false);
 
   const scrollTo = (id: string) => {
@@ -83,7 +85,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
                 onClick={() => setIsModalOpen(true)}
                 className="group relative inline-flex items-center gap-4 bg-[#E60012] text-white px-12 py-5 font-black transition-all hover:bg-red-700 shadow-[0_0_40px_rgba(230,0,18,0.3)] uppercase tracking-widest text-xs italic"
               >
-                <span>Консультация эксперта</span>
+                <span>{t("expertConsult")}</span>
                 <svg className="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                   <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -123,9 +125,9 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
           <div className="container-page">
             <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
               <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-6">Overview / 01</h2>
-              <h3 className="text-4xl md:text-5xl font-black mb-12 text-slate-950 uppercase italic tracking-tighter">Обзор решения</h3>
+              <h3 className="text-4xl md:text-5xl font-black mb-12 text-slate-950 uppercase italic tracking-tighter">{t("overviewTitle")}</h3>
               <div className="prose prose-2xl max-w-none text-slate-500 leading-relaxed font-semibold whitespace-pre-line text-lg italic">
-                {item.content || "Системный подход к безопасности мирового уровня."}
+                {item.content || t("overviewFallback")}
               </div>
             </div>
           </div>
@@ -135,8 +137,8 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
         {(item.children ?? []).length > 0 && (
           <section id="scenarios" className="container-page scroll-mt-40">
             <div className="mb-16">
-              <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-4">Решения по отраслям</h2>
-              <h3 className="text-4xl font-black text-slate-900 uppercase italic tracking-tighter">Сценарии использования</h3>
+              <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-4">{t("industriesLabel")}</h2>
+              <h3 className="text-4xl font-black text-slate-900 uppercase italic tracking-tighter">{t("scenariosTitle")}</h3>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -159,7 +161,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
                       {child.title}
                     </h4>
                     <p className="text-slate-500 text-sm font-medium leading-relaxed mb-8 line-clamp-3">
-                      {child.excerpt || "Подробное описание решения и его преимуществ для данной отрасли."}
+                      {child.excerpt || t("childFallback")}
                     </p>
 
                     <div className="mt-auto">
@@ -167,7 +169,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
                         href={`/solutions/${child.slug}`}
                         className="inline-flex items-center justify-center bg-[#0055b3] text-white px-6 py-2.5 text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#004494]"
                       >
-                        Узнать больше
+                        {t("learnMore")}
                       </a>
                     </div>
                   </div>
@@ -184,7 +186,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
             <div className="container-page">
               <div className="text-center mb-24">
                 <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-4">Technical Details / 03</h2>
-                <h3 className="text-4xl md:text-6xl font-black text-slate-950 uppercase italic tracking-tighter">Подробности решения</h3>
+                <h3 className="text-4xl md:text-6xl font-black text-slate-950 uppercase italic tracking-tighter">{t("detailsTitle")}</h3>
               </div>
 
               <div className="grid gap-20">
@@ -229,7 +231,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
           <section id="tech" className="container-page scroll-mt-40">
             <div className="mb-32">
               <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-4">Core Innovation / 04</h2>
-              <h3 className="text-4xl md:text-6xl font-black text-slate-950 uppercase italic tracking-tighter leading-none">Ключевые технологии</h3>
+              <h3 className="text-4xl md:text-6xl font-black text-slate-950 uppercase italic tracking-tighter leading-none">{t("techTitle")}</h3>
             </div>
 
             <div className="space-y-40">
@@ -297,10 +299,10 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
               <div className="container-page relative z-10">
                 <div className="text-center mb-24 max-w-3xl mx-auto">
                   <h2 className="text-sm font-black text-[#E60012] uppercase tracking-[0.5em] mb-6">Network Structure / 05</h2>
-                  <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-8 leading-none">Архитектура системы</h3>
+                  <h3 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-8 leading-none">{t("topologyTitle")}</h3>
                   <div className="h-2 w-32 bg-[#E60012] mx-auto mb-10" />
                   <p className="text-white/40 font-black uppercase tracking-[0.2em] text-[10px]">
-                    Централизованное управление и отказоустойчивая передача данных в реальном времени.
+                    {t("topologySubtitle")}
                   </p>
                 </div>
 
@@ -310,7 +312,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
 
                   <img
                     src={resolveImageUrl(item.overviewImageUrl)!}
-                    alt="System Architecture"
+                    alt={t("topologyTitle")}
                     className="w-full h-auto object-contain mx-auto max-h-[1000px] filter brightness-110 drop-shadow-[0_0_50px_rgba(230,0,18,0.2)]"
                   />
                 </div>
