@@ -439,10 +439,12 @@ publicRouter.get("/product-facets", async (req, res) => {
   const priceMin = Number(req.query.priceMin) || 0;
   const priceMax = Number(req.query.priceMax) || 0;
 
+  const qf = flipLayout(q); // раскладка: фасеты должны совпадать с выдачей (напр. «ntcnth»=тестер)
   const repl: any = {};
   if (catIds.length) repl.catIds = catIds;
   if (brandSlugs.length) repl.brandSlugs = brandSlugs;
   if (q) repl.q = `%${q}%`;
+  if (qf) repl.qf = `%${qf}%`;
 
   let usdToUzs = 1;
   try { const site = await SitePage.findOne({ where: { key: "site" } }); usdToUzs = pickRate(site?.data) ?? 1; } catch { /* ignore */ }
@@ -479,7 +481,7 @@ publicRouter.get("/product-facets", async (req, res) => {
     const c = ["p.published = true"];
     if (opts?.type !== false && catIds.length) c.push(`p."categoryId" IN (:catIds)`);
     if (opts?.brand !== false && brandSlugs.length) c.push(`p."brandId" IN (SELECT id FROM brands WHERE published = true AND LOWER(slug) IN (:brandSlugs))`);
-    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q)`);
+    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q${qf ? ` OR p.name ILIKE :qf OR p."modelCode" ILIKE :qf` : ""})`);
     if (opts?.chars !== false) c.push(...charsExists());
     if (opts?.price !== false) c.push(...priceConds());
     return c.join(" AND ");
