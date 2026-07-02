@@ -44,6 +44,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const svc = serviceByKey[slug];
   const t = await getTranslations("solutionsPage");
   const ts = await getTranslations("services");
+  const tcm = await getTranslations("common");
 
   // Fallback: legacy API-backed service pages (linked from the home page)
   if (!svc) {
@@ -153,10 +154,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <div className="flex items-end justify-between gap-4">
               <div>
                 <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
-                <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">Реализованные проекты</h2>
+                <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("casesTitle")}</h2>
               </div>
               <Link href="/portfolio" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
-                Все проекты →
+                {t("allProjects")} →
               </Link>
             </div>
             <div className="mt-5 grid gap-4 sm:grid-cols-3">
@@ -180,8 +181,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* FAQ */}
         {faq.length > 0 && (
           <div className="mt-12">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">Вопросы и ответы</p>
-            <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">Частые вопросы</h2>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
+            <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
             <FaqAccordion items={faq} />
           </div>
         )}

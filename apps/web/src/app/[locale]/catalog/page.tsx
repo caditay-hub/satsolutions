@@ -7,7 +7,7 @@ import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { splitBrands, OTHER_BRANDS_SLUG, OTHER_BRANDS_NAME } from "@/lib/brandGroups";
+import { splitBrands, OTHER_BRANDS_SLUG } from "@/lib/brandGroups";
 
 export const revalidate = 300;
 
@@ -83,7 +83,8 @@ function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitl
 }
 
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
-function BrandCard({ b }: { b: BrandDto }) {
+async function BrandCard({ b }: { b: BrandDto }) {
+  const t = await getTranslations("catalog");
   const slug = b.slug.toLowerCase();
   const forceText = TEXT_LABEL_SLUGS.has(slug);
   const logo = !forceText && b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
@@ -99,13 +100,13 @@ function BrandCard({ b }: { b: BrandDto }) {
       {count > 0 && (
         <span
           className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
-          title={`Товаров в каталоге: ${count}`}
+          title={t("itemsInCatalog", { count })}
         >
-          {count} тов.
+          {t("itemsShort", { count })}
         </span>
       )}
       {forceText && CATCHALL[slug] ? (
-        <CatchAllVisual name={name} subtitle={CATCHALL[slug].subtitle} color={CATCHALL[slug].color} icon={CATCHALL[slug].icon} />
+        <CatchAllVisual name={name} subtitle={slug === "prochee" ? t("procheeSubtitle") : CATCHALL[slug].subtitle} color={CATCHALL[slug].color} icon={CATCHALL[slug].icon} />
       ) : (
         <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
           {logo ? (
@@ -119,7 +120,7 @@ function BrandCard({ b }: { b: BrandDto }) {
       )}
       <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
         <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-          Смотреть каталог
+          {t("viewCatalog")}
         </span>
         <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -130,6 +131,7 @@ function BrandCard({ b }: { b: BrandDto }) {
 }
 
 export default async function CatalogIndexPage() {
+  const t = await getTranslations("catalog");
   // Список брендов — динамический, из БД (published).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
   // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
@@ -156,14 +158,14 @@ export default async function CatalogIndexPage() {
         <div className="flex items-center gap-3 mb-3">
           <BackButton />
           <nav className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-            <Link href="/" className="hover:text-slate-900 transition-colors">Главная</Link>
+            <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
             <span className="text-slate-300">/</span>
-            <span className="text-slate-900">Каталог</span>
+            <span className="text-slate-900">{t("catalogCrumb")}</span>
           </nav>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Каталог продукции</h1>
-        <p className="mt-1 text-sm text-slate-500">Выберите производителя для просмотра полного каталога</p>
+        <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("productCatalog")}</h1>
+        <p className="mt-1 text-sm text-slate-500">{t("chooseBrand")}</p>
 
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* Фикс. фронт + остальные по убыванию количества */}
@@ -179,14 +181,14 @@ export default async function CatalogIndexPage() {
             >
               <span
                 className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
-                title={`Товаров внутри: ${smallTotal}`}
+                title={t("itemsInside", { count: smallTotal })}
               >
-                {smallTotal} тов.
+                {t("itemsShort", { count: smallTotal })}
               </span>
-              <CatchAllVisual name={OTHER_BRANDS_NAME} subtitle={smallNames} color="#475569" icon="plus" />
+              <CatchAllVisual name={t("otherBrands")} subtitle={smallNames} color="#475569" icon="plus" />
               <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
                 <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-                  {smallBrands.length} брендов
+                  {t("brandsCount", { count: smallBrands.length })}
                 </span>
                 <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

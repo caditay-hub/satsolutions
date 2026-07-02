@@ -466,6 +466,9 @@
     "schemeTitle": "How the system works",
     "examples": "Examples",
     "gallery": "Gallery",
+    "casesTitle": "Completed projects",
+    "allProjects": "All projects",
+    "faqLabel": "Questions & answers",
     "steps": [
       {
         "title": "Request & visit",
@@ -914,7 +917,21 @@
     "viewGrid": "Grid",
     "byCategoriesDesc": "Security systems, video surveillance, networking and cabling — the full SAT Solutions catalog by category. Delivery across Tashkent and Uzbekistan.",
     "productCatalog": "Product catalog",
-    "showingFor": "Showing results for"
+    "showingFor": "Showing results for",
+    "home": "Home",
+    "catalogCrumb": "Catalog",
+    "chooseBrand": "Choose a manufacturer to browse the full catalog",
+    "viewCatalog": "View catalog",
+    "itemsShort": "{count} items",
+    "itemsInCatalog": "Products in catalog: {count}",
+    "itemsInside": "Products inside: {count}",
+    "brandsCount": "{count} brands",
+    "otherBrands": "Other brands",
+    "otherBrandsTitle": "Other brands — product catalog",
+    "otherBrandsDesc": "Manufacturers with a smaller range, gathered in one section: networking and telecom equipment, UPS, IP telephony and optical access.",
+    "procheeSubtitle": "Components and accessories: cable, optics, cabinets, UPS, tools",
+    "noProductsYet": "No products yet.",
+    "wholeBrand": "Entire brand"
   },
   "notFound": {
     "title": "Page not found",

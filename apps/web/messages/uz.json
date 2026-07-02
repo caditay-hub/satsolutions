@@ -466,6 +466,9 @@
     "schemeTitle": "Tizim qanday ishlaydi",
     "examples": "Namunalar",
     "gallery": "Galereya",
+    "casesTitle": "Amalga oshirilgan loyihalar",
+    "allProjects": "Barcha loyihalar",
+    "faqLabel": "Savol-javoblar",
     "steps": [
       {
         "title": "Ariza va chiqish",
@@ -914,7 +917,21 @@
     "viewGrid": "Plitka",
     "byCategoriesDesc": "Xavfsizlik tizimlari, videokuzatuv, tarmoqlar va SKS — SAT Solutions katalogi turkumlar bo'yicha. Toshkent va O'zbekiston bo'ylab yetkazib berish.",
     "productCatalog": "Mahsulotlar katalogi",
-    "showingFor": "So'rov bo'yicha natijalar"
+    "showingFor": "So'rov bo'yicha natijalar",
+    "home": "Bosh sahifa",
+    "catalogCrumb": "Katalog",
+    "chooseBrand": "To'liq katalogni ko'rish uchun ishlab chiqaruvchini tanlang",
+    "viewCatalog": "Katalogni ko'rish",
+    "itemsShort": "{count} ta",
+    "itemsInCatalog": "Katalogdagi mahsulotlar: {count}",
+    "itemsInside": "Ichidagi mahsulotlar: {count}",
+    "brandsCount": "{count} ta brend",
+    "otherBrands": "Boshqa brendlar",
+    "otherBrandsTitle": "Boshqa brendlar — mahsulotlar katalogi",
+    "otherBrandsDesc": "Kichik assortimentli ishlab chiqaruvchilar bitta bo'limda: tarmoq va telekom uskunalari, UPS, IP-telefoniya va optik ulanish.",
+    "procheeSubtitle": "Butlovchi qismlar va aksessuarlar: kabel, optika, shkaflar, UPS, asboblar",
+    "noProductsYet": "Hozircha mahsulotlar yo'q.",
+    "wholeBrand": "Butun brend"
   },
   "notFound": {
     "title": "Sahifa topilmadi",

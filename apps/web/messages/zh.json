@@ -466,6 +466,9 @@
     "schemeTitle": "系统如何运作",
     "examples": "案例",
     "gallery": "图库",
+    "casesTitle": "已完成项目",
+    "allProjects": "所有项目",
+    "faqLabel": "问与答",
     "steps": [
       {
         "title": "申请与勘察",
@@ -914,7 +917,21 @@
     "viewGrid": "网格",
     "byCategoriesDesc": "安防系统、视频监控、网络和综合布线——按分类浏览的 SAT Solutions 完整目录。塔什干和乌兹别克斯坦全境配送。",
     "productCatalog": "产品目录",
-    "showingFor": "显示以下查询的结果"
+    "showingFor": "显示以下查询的结果",
+    "home": "首页",
+    "catalogCrumb": "产品目录",
+    "chooseBrand": "选择制造商以查看完整目录",
+    "viewCatalog": "查看目录",
+    "itemsShort": "{count} 件",
+    "itemsInCatalog": "目录内产品：{count}",
+    "itemsInside": "包含产品：{count}",
+    "brandsCount": "{count} 个品牌",
+    "otherBrands": "其他品牌",
+    "otherBrandsTitle": "其他品牌 — 产品目录",
+    "otherBrandsDesc": "产品数量较少的制造商集中在一个版块：网络与电信设备、UPS、IP电话和光纤接入。",
+    "procheeSubtitle": "配件与附件：线缆、光纤、机柜、UPS、工具",
+    "noProductsYet": "暂无产品。",
+    "wholeBrand": "查看全部"
   },
   "notFound": {
     "title": "页面未找到",

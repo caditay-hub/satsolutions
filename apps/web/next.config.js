@@ -57,6 +57,9 @@ const nextConfig = {
       // Товар MikroTik CRS320-8P-8B-4S+RM: старый slug содержал кириллическую «в» (был в sitemap, отдавал 404).
       // Slug исправлен на латиницу в БД; 301 со старого URL — на случай, если он попал в индекс Google.
       { source: "/products/mkt-crs320-8p-8в-4s-plusrm", destination: "/products/mkt-crs320-8p-8b-4s-plusrm", permanent: true },
+      // Частая опечатка/старые внешние ссылки: /contacts (мн. ч.) → /contact
+      { source: "/contacts", destination: "/contact", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/contacts", destination: "/:locale/contact", permanent: true },
     ];
   },
   async headers() {

@@ -5,13 +5,8 @@ import { ProductCard } from "@/components/Cards";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeProductName } from "@/lib/productI18n";
-import { getLocale } from "next-intl/server";
-import {
-  splitBrands,
-  OTHER_BRANDS_SLUG,
-  OTHER_BRANDS_NAME,
-  OTHER_BRANDS_DESCRIPTION,
-} from "@/lib/brandGroups";
+import { getLocale, getTranslations } from "next-intl/server";
+import { splitBrands, OTHER_BRANDS_SLUG } from "@/lib/brandGroups";
 
 export const revalidate = 300;
 
@@ -21,15 +16,17 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "catalog" });
   return {
-    title: `${OTHER_BRANDS_NAME} — Каталог продукции`,
-    description: OTHER_BRANDS_DESCRIPTION,
+    title: t("otherBrandsTitle"),
+    description: t("otherBrandsDesc"),
     alternates: hreflangAlternates(`/catalog/${OTHER_BRANDS_SLUG}`, locale),
   };
 }
 
 export default async function OtherBrandsPage() {
   const locale = await getLocale();
+  const t = await getTranslations("catalog");
   const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const { small } = splitBrands(brands);
 
@@ -56,28 +53,28 @@ export default async function OtherBrandsPage() {
         <div className="container-page !pt-2 !pb-3">
           <nav className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
             <Link href="/" className="hover:text-slate-900 transition-colors">
-              Главная
+              {t("home")}
             </Link>
             <span className="text-slate-300">/</span>
             <Link href="/catalog" className="hover:text-slate-900 transition-colors">
-              Каталог
+              {t("catalogCrumb")}
             </Link>
             <span className="text-slate-300">/</span>
-            <span className="text-slate-900">{OTHER_BRANDS_NAME}</span>
+            <span className="text-slate-900">{t("otherBrands")}</span>
           </nav>
 
           <div className="flex items-center gap-3">
             <BackButton />
             <div className="flex-1 min-w-0">
               <h1 className="text-lg sm:text-xl font-black text-slate-900 leading-tight">
-                {OTHER_BRANDS_NAME} — каталог продукции
+                {t("otherBrandsTitle")}
               </h1>
               <p className="text-xs sm:text-sm text-slate-600 leading-snug mt-0.5">
-                {OTHER_BRANDS_DESCRIPTION}
+                {t("otherBrandsDesc")}
               </p>
             </div>
             <span className="hidden sm:inline shrink-0 rounded-full bg-slate-900/85 px-2.5 py-1 text-[11px] font-bold leading-none text-white">
-              {total} тов. · {withItems.length} брендов
+              {t("itemsShort", { count: total })} · {t("brandsCount", { count: withItems.length })}
             </span>
           </div>
         </div>
@@ -86,7 +83,7 @@ export default async function OtherBrandsPage() {
       {/* ── Body: секция на каждый бренд ── */}
       <div className="container-page !pt-3 !pb-10">
         {withItems.length === 0 ? (
-          <div className="py-14 text-center text-sm text-slate-400">Товаров пока нет.</div>
+          <div className="py-14 text-center text-sm text-slate-400">{t("noProductsYet")}</div>
         ) : (
           <div className="space-y-7">
             {withItems.map(({ brand, slug, items }) => (
@@ -103,7 +100,7 @@ export default async function OtherBrandsPage() {
                     href={`/catalog/${slug}`}
                     className="ml-auto text-[11px] font-bold uppercase tracking-wider text-slate-400 hover:text-[#e02020] transition-colors"
                   >
-                    Весь бренд →
+                    {t("wholeBrand")} →
                   </Link>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">

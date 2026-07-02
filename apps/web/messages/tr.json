@@ -466,6 +466,9 @@
     "schemeTitle": "Sistem nasıl çalışır",
     "examples": "Örnekler",
     "gallery": "Galeri",
+    "casesTitle": "Tamamlanan projeler",
+    "allProjects": "Tüm projeler",
+    "faqLabel": "Soru-cevap",
     "steps": [
       {
         "title": "Talep & ziyaret",
@@ -914,7 +917,21 @@
     "viewGrid": "Izgara",
     "byCategoriesDesc": "Güvenlik sistemleri, video gözetim, ağ ve kablolama — kategorilere göre tüm SAT Solutions kataloğu. Taşkent ve Özbekistan geneline teslimat.",
     "productCatalog": "Ürün kataloğu",
-    "showingFor": "Şu sorgu için sonuçlar"
+    "showingFor": "Şu sorgu için sonuçlar",
+    "home": "Ana sayfa",
+    "catalogCrumb": "Katalog",
+    "chooseBrand": "Tam kataloğu görüntülemek için bir üretici seçin",
+    "viewCatalog": "Kataloğu görüntüle",
+    "itemsShort": "{count} ürün",
+    "itemsInCatalog": "Katalogdaki ürünler: {count}",
+    "itemsInside": "İçindeki ürünler: {count}",
+    "brandsCount": "{count} marka",
+    "otherBrands": "Diğer markalar",
+    "otherBrandsTitle": "Diğer markalar — ürün kataloğu",
+    "otherBrandsDesc": "Küçük ürün yelpazesine sahip üreticiler tek bölümde: ağ ve telekom ekipmanları, UPS, IP telefon ve optik erişim.",
+    "procheeSubtitle": "Bileşenler ve aksesuarlar: kablo, optik, kabinler, UPS, aletler",
+    "noProductsYet": "Henüz ürün yok.",
+    "wholeBrand": "Markanın tümü"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",
