@@ -87,11 +87,22 @@ export function detectAlerts(snap: Snapshot): Alert[] {
   }
 
   // --- PSI: Core Web Vitals ---
+  // Если field-CLS ИДЕНТИЧЕН у всех страниц — это origin-уровень CrUX (общая цифра на весь
+  // сайт, у страниц нет своих данных). Тогда «фикс задеплоен» достаточно доказать лучшим
+  // lab-замером ЛЮБОЙ страницы: одиночный флейк lab на одной из страниц (бывает, ресурс
+  // разово доехал медленно) не должен превращать общий CrUX-лаг в ложную «Проблему».
+  const psiField = (snap.psi ?? []).filter((p) => p.source === "field");
+  const originCls =
+    psiField.length > 1 && psiField.every((p) => p.cls.value === psiField[0].cls.value);
+  const labs = (snap.psi ?? []).map((p) => p.labCls).filter((v): v is number => v != null);
+  const minLab = labs.length ? Math.min(...labs) : null;
   for (const p of snap.psi ?? []) {
     const bad: string[] = [];
     if (p.lcp.rating === "poor") bad.push(`LCP ${fmt(p.lcp.value)}мс`);
     // field-CLS плохой, но lab-CLS уже хороший (<0.1) = фикс задеплоен, CrUX (28д) лагает — это НЕ проблема.
-    const clsLagFixed = p.source === "field" && p.cls.rating === "poor" && p.labCls != null && p.labCls < 0.1;
+    const labGood =
+      (p.labCls != null && p.labCls < 0.1) || (originCls && minLab != null && minLab < 0.1);
+    const clsLagFixed = p.source === "field" && p.cls.rating === "poor" && labGood;
     if (p.cls.rating === "poor" && !clsLagFixed) bad.push(`CLS ${fmt(p.cls.value, 2)}`);
     if (p.inp.rating === "poor") bad.push(`INP ${fmt(p.inp.value)}мс`);
     if (bad.length) {
@@ -101,10 +112,12 @@ export function detectAlerts(snap: Snapshot): Alert[] {
         text: `${p.url}: плохие CWV — ${bad.join(", ")} (${p.source}).`,
       });
     } else if (clsLagFixed) {
+      // Показываем лучший релевантный lab: свой (если хороший) или минимальный по сайту (origin-уровень).
+      const shownLab = p.labCls != null && p.labCls < 0.1 ? p.labCls : minLab!;
       alerts.push({
         severity: "info",
         area: "Производительность",
-        text: `${p.url}: field-CLS ${fmt(p.cls.value, 2)} ещё плохой, но lab-CLS ${fmt(p.labCls!, 3)} — фикс задеплоен, CrUX (28д) восстанавливается.`,
+        text: `${p.url}: field-CLS ${fmt(p.cls.value, 2)} ещё плохой, но lab-CLS ${fmt(shownLab, 3)} — фикс задеплоен, CrUX (28д) восстанавливается.`,
       });
     }
   }
