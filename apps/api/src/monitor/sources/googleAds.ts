@@ -99,6 +99,37 @@ function digits(id: string): string {
   return id.replace(/\D/g, "");
 }
 
+/**
+ * Универсальный searchStream-запрос (GAQL) — используется конфиг-аудитом (googleAdsConfig.ts).
+ * Возвращает плоский список rows. При неодобренном токене бросает GADS_PENDING_APPROVAL
+ * (вызывающий тихо пропускает блок), прочие ошибки — как есть.
+ */
+export async function gadsSearchRows(query: string): Promise<any[]> {
+  const devToken = config.googleAdsDeveloperToken;
+  if (!devToken) throw new Error("GOOGLE_ADS_DEV_TOKEN не задан (нет /root/.gads_dev_token)");
+  const customerId = digits(config.googleAdsCustomerId);
+  const loginCustomerId = digits(config.googleAdsLoginCustomerId);
+  if (!customerId) throw new Error("GOOGLE_ADS_CUSTOMER_ID не задан");
+
+  const token = await getAccessToken();
+  const url = `https://googleads.googleapis.com/${API_VERSION}/customers/${customerId}/googleAds:searchStream`;
+  const headers: Record<string, string> = {
+    Authorization: `Bearer ${token}`,
+    "developer-token": devToken,
+    "Content-Type": "application/json",
+  };
+  if (loginCustomerId) headers["login-customer-id"] = loginCustomerId;
+
+  const res = await fetch(url, { method: "POST", headers, body: JSON.stringify({ query }) });
+  if (!res.ok) {
+    const txt = await res.text();
+    if (txt.includes("DEVELOPER_TOKEN_NOT_APPROVED")) throw new Error("GADS_PENDING_APPROVAL");
+    throw new Error(`Google Ads ${res.status}: ${txt.slice(0, 300)}`);
+  }
+  const chunks = (await res.json()) as any[];
+  return chunks.flatMap((c) => c.results ?? []);
+}
+
 const ZERO: GoogleAdsTotals = {
   impressions: 0, clicks: 0, cost: 0, conversions: 0,
   conversionsValue: 0, avgCpc: 0, ctr: 0, costPerConversion: 0,

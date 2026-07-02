@@ -158,6 +158,15 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
         { label: "Цена/конв.", value: cur.costPerConversion ? `${fmt(cur.costPerConversion, 2)}${cy}` : "—" },
       ]),
     );
+    // Строка конфиг-аудита (детали замечаний — в блоке «Проблемы» выше).
+    if (snap.adsConfig) {
+      const warn = snap.adsConfig.filter((i) => i.severity === "warning").length;
+      L.push(
+        warn
+          ? `⚙️ Настройки: ⚠️ замечаний — ${warn}`
+          : `⚙️ Настройки: ✅ в порядке (гео, CPC-потолок, минус-слова, объявления, конверсии)`,
+      );
+    }
   }
 
   // ── Скорость (Core Web Vitals) ────────────────────────

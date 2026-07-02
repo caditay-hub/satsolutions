@@ -81,6 +81,11 @@ export function detectAlerts(snap: Snapshot): Alert[] {
     }
   }
 
+  // --- Google Ads: конфиг-аудит (настройки «съехали») ---
+  for (const i of snap.adsConfig ?? []) {
+    alerts.push({ severity: i.severity, area: "Реклама·настройки", text: i.text });
+  }
+
   // --- PSI: Core Web Vitals ---
   for (const p of snap.psi ?? []) {
     const bad: string[] = [];
@@ -172,7 +177,11 @@ const IMPLEMENTED_STATE = `УЖЕ РЕАЛИЗОВАНО (НЕ рекоменд�
 - hreflang самоссылочный + x-default, canonical самоссылочный, sitemap с hreflang-альтернатами — проверено, корректно.
 - Structured data: Product+Offer+Brand+BreadcrumbList+FAQPage на карточках товаров, Organization/LocalBusiness глобально.
 - SEO-гигиена: noindex на фасетных фильтрах, 301/308 на легаси и снятые URL, favicon icons в метаданных.
-- Google Ads: гео-таргетинг «Присутствие» (только Узбекистан), конверсии почищены (1 главное действие).
+- Google Ads (полный API-аудит и фиксы 2026-07-02): гео-таргетинг «Присутствие» (только Узбекистан) на ВСЕХ кампаниях;
+  общий список минус-слов (16 фраз) на всех кампаниях; потолок CPC 0.40 USD; кампания «СКУД» перестроена
+  (реальные СКУД-ключи + новое RSA, была дублем «Видеонаблюдения»); конверсии по каналам СОЗДАНЫ
+  (Звонок/WhatsApp/Telegram — основные, Онлайн-чат — наблюдение), форма считает ONE_PER_CLICK;
+  метки по каналам прописаны на сайте. Не советуй это заново; конфиг проверяется автоматически (adsConfig).
 - CLS исправлен шрифтовым fallback (Jura/Inter) — lab CLS ≈ 0.
 
 ВАЖНО про CWV field-данные (CrUX): это СКОЛЬЗЯЩЕЕ СРЕДНЕЕ за 28 дней, недавние фиксы (CLS/LCP) проявляются в них

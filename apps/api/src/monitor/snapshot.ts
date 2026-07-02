@@ -7,6 +7,7 @@ import type { GscReport, GscTotals } from "./sources/searchConsole.js";
 import type { Ga4Report } from "./sources/ga4.js";
 import type { PsiResult } from "./sources/psi.js";
 import type { GoogleAdsReport } from "./sources/googleAds.js";
+import type { GadsConfigIssue } from "./sources/googleAdsConfig.js";
 
 export type Snapshot = {
   ts: string; // ISO-время прогона
@@ -14,6 +15,7 @@ export type Snapshot = {
   ga4?: Ga4Report | null;
   psi?: PsiResult[] | null;
   ads?: GoogleAdsReport | null;
+  adsConfig?: GadsConfigIssue[] | null; // конфиг-аудит Ads ([] = всё в порядке)
   errors: string[];
 };
 
