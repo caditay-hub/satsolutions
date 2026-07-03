@@ -10,8 +10,10 @@ type ServiceAccount = { client_email: string; private_key: string };
 
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const SCOPES = [
-  "https://www.googleapis.com/auth/webmasters.readonly", // Search Console (чтение)
-  "https://www.googleapis.com/auth/analytics.readonly",  // GA4 Data API (чтение)
+  // Search Console: полный (не readonly) — нужен для переотправки sitemap (sitemapSubmit.ts,
+  // SA = «Владелец» с 03.07.2026); чтение (отчёты/URL Inspection) он включает.
+  "https://www.googleapis.com/auth/webmasters",
+  "https://www.googleapis.com/auth/analytics.readonly", // GA4 Data API (чтение)
 ].join(" ");
 
 let cached: { token: string; expiresAt: number } | null = null;
