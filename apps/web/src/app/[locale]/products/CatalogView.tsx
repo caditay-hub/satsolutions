@@ -31,7 +31,7 @@ const CATALOG_SHOW_ALL = 1000;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -142,6 +142,12 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       } catch {}
     }
   }
+  // SEO-блок бренда (лонгрид + FAQ) — только на «чистой» первой странице бренда без доп. фильтров
+  const onlyBrand = !!brandLanding && !type && !chars && !priceMin && !priceMax && !q && page === 1;
+  const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
+  const brandFaqLd = brandSeo && brandSeo.faq.length
+    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: brandSeo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
+    : null;
   const typeGroup = isTypePage ? CATALOG_GROUPS.find((g) => g.types.some((t) => t.n === type)) : undefined;
   const typeIntro = typeLongDesc ? ((typeLongDesc.split(/\n##\s/)[0] || "").trim().split(/\n\n/)[0] || "").trim() : "";
   const typeFaq = typeLongDesc ? parseRichDescription(typeLongDesc).faq : [];
@@ -297,6 +303,17 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{localizeCatName(type as string, locale)} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={typeLongDesc} />
+              </div>
+            </section>
+          ) : null}
+
+          {brandSeo ? (
+            <section id="brand-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
+              {brandFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandFaqLd) }} />}
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{brandLanding!.name} — {tc("guideSuffix")}</h2>
+              <div className="max-w-3xl">
+                {/* Q:/A:-пары RichDescription сам вынесет в FAQ-блок с локализованным заголовком */}
+                <RichDescription text={brandSeo.intro + (brandSeo.faq.length ? "\n\n" + brandSeo.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />
               </div>
             </section>
           ) : null}

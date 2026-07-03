@@ -6,7 +6,11 @@ import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeBrandDesc, localizeBrandName } from "@/lib/brandI18n";
+import { getBrandSeo } from "@/lib/brandSeo";
 import { CatalogView } from "../../products/CatalogView";
+
+const SITE = "https://satsolutions.uz";
+const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
 
 export const revalidate = 300;
 
@@ -194,7 +198,10 @@ export async function generateMetadata({
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const cfg = BRAND_CONFIG[brand.toLowerCase()];
   if (!cfg) return { title: tc("productCatalog") };
-  const title = `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
+  // SEO-title из brandSeoI18n («Рубеж в Ташкенте — пожарная сигнализация, купить, цена»),
+  // фолбэк — прежний шаблон «{Бренд} — Каталог продукции».
+  const seo = getBrandSeo(brand.toLowerCase(), locale);
+  const title = seo?.title || `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
   const description = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   return {
     title,
@@ -223,10 +230,34 @@ export default async function BrandCatalogPage({
   const brandInfo = brands.find((b) => b.slug.toLowerCase() === brandSlug);
   const logoUrl = brandInfo?.logoImageUrl ? resolveImageUrl(brandInfo.logoImageUrl) : null;
 
+  const brandName = localizeBrandName(brandSlug, cfg.displayName, locale);
+  const seo = getBrandSeo(brandSlug, locale);
+  const tc = await getTranslations({ locale, namespace: "catalog" });
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: tc("home"), item: locPath(locale, "/") },
+      { "@type": "ListItem", position: 2, name: tc("catalogCrumb"), item: locPath(locale, "/catalog") },
+      { "@type": "ListItem", position: 3, name: brandName, item: locPath(locale, `/catalog/${brandSlug}`) },
+    ],
+  };
+
   // brand задаём принудительно (фикс. scope), __clean=1 — без 301-редиректа.
-  return CatalogView({
+  const view = await CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
-    brandLanding: { name: localizeBrandName(brandSlug, cfg.displayName, locale), description: localizeBrandDesc(brandSlug, cfg.description, locale), logoUrl },
+    brandLanding: {
+      name: brandName,
+      description: localizeBrandDesc(brandSlug, cfg.description, locale),
+      logoUrl,
+      seo: seo ? { intro: seo.intro, faq: seo.faq } : null,
+    },
   } as any);
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      {view}
+    </>
+  );
 }
