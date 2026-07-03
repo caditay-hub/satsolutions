@@ -67,7 +67,7 @@ export async function runIndexCheck(notifyChatId?: string): Promise<string> {
     } catch (e) {
       results[u] = "error";
     }
-    await new Promise((s) => setTimeout(s, 300)); // бережём квоту 600/мин
+    await new Promise((s) => setTimeout(s, 120)); // квота 600/мин: ~120мс паузы + латентность API — с запасом
   }
 
   // дельта с прошлым прогоном
