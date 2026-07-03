@@ -15,7 +15,8 @@ const MENU =
   `🛰 <b>Монитор satsolutions.uz</b>\n` +
   `Отчёты выходят только по запросу. Нажми кнопку или команду:\n` +
   `• /report — полный отчёт сейчас\n` +
-  `• /alerts — быстрая проверка проблем`;
+  `• /alerts — быстрая проверка проблем\n` +
+  `• /index — индексация SEO-страниц в Google (~4 мин)`;
 
 /** Полный отчёт по запросу в указанный чат (с защитой от двойного запуска). */
 async function runReport(chatId: string | number): Promise<void> {
@@ -58,6 +59,24 @@ function isOwner(chatId: unknown): boolean {
   return String(chatId) === OWNER;
 }
 
+/** Индекс-чек SEO-страниц (URL Inspection API, ~4 мин; авто — cron Пн 09:00). */
+async function runIndex(chatId: string | number): Promise<void> {
+  if (busy) {
+    await sendTelegram("⏳ Уже выполняю другую проверку…", { chatId });
+    return;
+  }
+  busy = true;
+  try {
+    await sendTelegram("⏳ Проверяю индексацию SEO-страниц в Google (~4 мин)…", { chatId });
+    const { runIndexCheck } = await import("./indexCheck.js");
+    await runIndexCheck(String(chatId));
+  } catch (e) {
+    await sendTelegram(`⚠️ Ошибка индекс-чека: ${esc((e as Error).message)}`, { chatId });
+  } finally {
+    busy = false;
+  }
+}
+
 async function handleUpdate(u: any): Promise<void> {
   // Нажатие inline-кнопки.
   if (u.callback_query) {
@@ -82,6 +101,9 @@ async function handleUpdate(u: any): Promise<void> {
       break;
     case "/alerts":
       await runAlerts(chatId);
+      break;
+    case "/index":
+      await runIndex(chatId);
       break;
     case "/start":
     case "/menu":
