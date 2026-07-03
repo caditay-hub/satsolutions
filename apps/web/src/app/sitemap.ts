@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { getBrands, getCategories, getPortfolio, getProducts, getServices, getBrandTypePairs } from "@/lib/api";
 import { ALL_SERVICES } from "@/lib/servicesData";
 import { typeSlug } from "@/lib/typeSlug";
+import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 
 const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
@@ -92,7 +93,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         // Канонические страницы типов = чистые URL /products/type/<slug> (дедуп имён).
         // Старые /products?type=<имя> 301-редиректят сюда; брендовые /categories/<slug> — 308 сюда.
-        const typeNames = Array.from(new Set(categories.map((c) => c.name).filter(Boolean)));
+        // Исключаем слитые типы (их слаги 308-редиректят на канонические — редиректам не место в карте)
+        const typeNames = Array.from(new Set(categories.map((c) => c.name).filter(Boolean)))
+            .filter((name) => !TYPE_REDIRECTS[typeSlug(name)]);
         const categoryRoutes = [
             { url: `${siteUrl}/categories`, lastModified: GENERATED, changeFrequency: "weekly" as const, priority: 0.7, alternates: { languages: langAlternates(`/categories`) } },
             ...typeNames.map((name) => {
@@ -127,7 +130,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             alternates: { languages: langAlternates(`/products/${p.slug}`) },
         }));
 
-const serviceRoutes = services.map((s) => ({
+// umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking (next.config.js)
+const LEGACY_SERVICE_SLUGS = new Set(["umniy-avtobus", "parkovka"]);
+const serviceRoutes = services.filter((s) => !LEGACY_SERVICE_SLUGS.has(s.slug)).map((s) => ({
             url: `${siteUrl}/solutions/${s.slug}`,
             lastModified: new Date(s.updatedAt),
             changeFrequency: "monthly" as const,

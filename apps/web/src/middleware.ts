@@ -8,6 +8,9 @@ const intlMiddleware = createMiddleware(routing);
 // Префикс локали для URL (ru — дефолтная, без префикса): "uz|en|tr|zh"
 const localeAlt = routing.locales.filter((l) => l !== routing.defaultLocale).join("|");
 const REMOVED_RE = new RegExp(`^(?:/(${localeAlt}))?/products/([^/]+)/?$`);
+// URL движка старого сайта (до 2024): /product/show/*, /category/*, /brand/* — слаги не маппятся
+// на новые, поэтому ведём на ближайший живой раздел (GSC до сих пор их сканирует → 404).
+const OLDSITE_RE = new RegExp(`^(?:/(${localeAlt}|ru))?/(product/show|category|brand)(/.+)?$`);
 
 export default function middleware(req: NextRequest) {
   // Снятые с продажи товары (см. removedProducts.ts): старые URL в индексе Google отдавали 404.
@@ -20,6 +23,12 @@ export default function middleware(req: NextRequest) {
       const prefix = m[1] ? `/${m[1]}` : "";
       return NextResponse.redirect(new URL(`${prefix}/catalog/${brand}`, req.url), 308);
     }
+  }
+  const old = req.nextUrl.pathname.match(OLDSITE_RE);
+  if (old) {
+    const prefix = old[1] && old[1] !== "ru" ? `/${old[1]}` : "";
+    const target = old[2] === "product/show" ? "/products" : "/catalog";
+    return NextResponse.redirect(new URL(`${prefix}${target}`, req.url), 308);
   }
   return intlMiddleware(req);
 }
