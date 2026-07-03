@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getBrands, getCategories, getPortfolio, getProducts, getServices } from "@/lib/api";
+import { getBrands, getCategories, getPortfolio, getProducts, getServices, getBrandTypePairs } from "@/lib/api";
 import { ALL_SERVICES } from "@/lib/servicesData";
 import { typeSlug } from "@/lib/typeSlug";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
@@ -59,13 +59,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             products,
             { brands },
             { items: services },
-            { items: portfolio }
+            { items: portfolio },
+            { pairs }
         ] = await Promise.all([
             getCategories().catch(() => ({ categories: [] })),
             allProducts(),
             getBrands().catch(() => ({ brands: [] })),
             getServices(1, 1000).catch(() => ({ items: [] })),
-            getPortfolio(1, 1000).catch(() => ({ items: [] }))
+            getPortfolio(1, 1000).catch(() => ({ items: [] })),
+            getBrandTypePairs().catch(() => ({ pairs: [] }))
         ]);
 
         const brandRoutes = brands.map((b) => ({
@@ -75,6 +77,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 0.8,
             alternates: { languages: langAlternates(`/catalog/${b.slug}`) },
         }));
+
+        // SEO-страницы бренд×категория /catalog/<brand>/<typeSlug> (связки ≥3 товаров)
+        const pairRoutes = pairs.map((p) => {
+            const path = `/catalog/${p.brand}/${typeSlug(p.type)}`;
+            return {
+                url: `${siteUrl}${path}`,
+                lastModified: GENERATED,
+                changeFrequency: "weekly" as const,
+                priority: 0.75,
+                alternates: { languages: langAlternates(path) },
+            };
+        });
 
         // Канонические страницы типов = чистые URL /products/type/<slug> (дедуп имён).
         // Старые /products?type=<имя> 301-редиректят сюда; брендовые /categories/<slug> — 308 сюда.
@@ -141,6 +155,7 @@ const serviceRoutes = services.map((s) => ({
         return [
             ...routes,
             ...brandRoutes,
+            ...pairRoutes,
             ...groupRoutes,
             ...categoryRoutes,
             ...productRoutes,

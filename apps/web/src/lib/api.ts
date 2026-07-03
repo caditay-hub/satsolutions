@@ -194,6 +194,11 @@ export async function getCategories(opts?: { brand?: string }) {
   return apiFetch<{ categories: CategoryDto[] }>(`/categories${qs}`, { next: { revalidate: 300 } });
 }
 
+/** Связки бренд×тип (≥3 товаров) — SEO-страницы /catalog/[brand]/[type], sitemap. */
+export async function getBrandTypePairs() {
+  return apiFetch<{ pairs: { brand: string; type: string; count: number }[] }>("/brand-type-pairs", { next: { revalidate: 300 } });
+}
+
 export async function getPortfolioCategories() {
   return apiFetch<{ categories: PortfolioCategoryDto[] }>("/portfolio-categories", { next: { revalidate: 300 } });
 }

@@ -21,6 +21,7 @@ import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { TYPE_LONGREAD_SLUG } from "@/lib/typeLongread";
 import { CatalogFacets } from "./CatalogFacets";
+import { BRAND_CONFIG } from "@/lib/brandConfig";
 
 // Размер «страницы» для голого каталога /products (тысячи позиций). На страницах
 // с выбранным разделом/фильтром (тип/бренд/категория/поиск/характеристики/цена)
@@ -31,7 +32,7 @@ const CATALOG_SHOW_ALL = 1000;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -143,8 +144,14 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     }
   }
   // SEO-блок бренда (лонгрид + FAQ) — только на «чистой» первой странице бренда без доп. фильтров
-  const onlyBrand = !!brandLanding && !type && !chars && !priceMin && !priceMax && !q && page === 1;
+  const cleanScope = !chars && !priceMin && !priceMax && !q && page === 1;
+  const onlyBrand = !!brandLanding && !type && cleanScope;
   const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
+  // SEO-блок связки бренд×категория (страницы /catalog/[brand]/[type])
+  const pairBlock = pairSeo && cleanScope ? pairSeo : null;
+  const pairFaqLd = pairBlock && pairBlock.faq.length
+    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pairBlock.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
+    : null;
   const brandFaqLd = brandSeo && brandSeo.faq.length
     ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: brandSeo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
     : null;
@@ -198,6 +205,28 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
       {brandLanding?.description ? (
         <p className="mb-4 max-w-3xl text-[14px] leading-relaxed text-slate-500">{brandLanding.description}</p>
+      ) : null}
+
+      {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}
+      {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3).length ?? 0) > 0 ? (
+        <div className="mb-4 flex flex-wrap gap-1.5">
+          {typeFacets.types.filter((t) => t.count >= 3).slice(0, 14).map((t) => (
+            <Link key={t.name} href={`/catalog/${brand}/${typeSlug(t.name)}`}
+              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+              {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-400">({t.count})</span>
+            </Link>
+          ))}
+        </div>
+      ) : null}
+      {isTypePage && !brand && cleanScope && typeFacets && (typeFacets.brands?.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug?.toLowerCase?.() ?? ""]).length ?? 0) > 0 ? (
+        <div className="mb-4 flex flex-wrap gap-1.5">
+          {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()]).slice(0, 12).map((b) => (
+            <Link key={b.slug} href={`/catalog/${b.slug.toLowerCase()}/${typeSlug(type as string)}`}
+              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+              {localizeCatName(type as string, locale)} {b.name} <span className="text-slate-400">({b.count})</span>
+            </Link>
+          ))}
+        </div>
       ) : null}
 
       {onlyType && typeIntro ? (
@@ -314,6 +343,16 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <div className="max-w-3xl">
                 {/* Q:/A:-пары RichDescription сам вынесет в FAQ-блок с локализованным заголовком */}
                 <RichDescription text={brandSeo.intro + (brandSeo.faq.length ? "\n\n" + brandSeo.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />
+              </div>
+            </section>
+          ) : null}
+
+          {pairBlock ? (
+            <section id="pair-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
+              {pairFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pairFaqLd) }} />}
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{pairBlock.heading} — {tc("guideSuffix")}</h2>
+              <div className="max-w-3xl">
+                <RichDescription text={pairBlock.intro + (pairBlock.faq.length ? "\n\n" + pairBlock.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />
               </div>
             </section>
           ) : null}

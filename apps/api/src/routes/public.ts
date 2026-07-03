@@ -406,6 +406,23 @@ publicRouter.get("/products", async (req, res) => {
   res.json({ items: rows, total: count, page, limit, corrected });
 });
 
+// Связки бренд×тип с ≥3 опубликованных товаров — источник для SEO-страниц /catalog/[brand]/[type]:
+// generateStaticParams, sitemap и рантайм-белый список (страницы-пустышки не создаём).
+publicRouter.get("/brand-type-pairs", async (_req, res) => {
+  const [rows] = await sequelize.query(
+    `SELECT b.slug AS brand, c.name AS type, count(*)::int AS count
+     FROM products p
+     JOIN brands b ON b.id = p."brandId" AND b.published = true
+     JOIN categories c ON c.id = p."categoryId"
+     WHERE p.published = true
+     GROUP BY b.slug, c.name
+     HAVING count(*) >= 3
+     ORDER BY b.slug, count(*) DESC`,
+  );
+  res.set("Cache-Control", "public, max-age=300");
+  res.json({ pairs: rows });
+});
+
 // Фасеты каталога (страница типа / бренда / общий список): бренды, типы, цена, характеристики.
 // Поддерживает scope = любой набор {type, brand, category, q}. Фасеты «липкие»: список значений
 // каждого мультивыбора считается БЕЗ применения его собственного выбора (выбрав один бренд, не
