@@ -42,10 +42,12 @@ async function targetUrls(): Promise<string[]> {
 }
 
 async function inspect(token: string, url: string): Promise<{ verdict: string; coverage: string }> {
+  // таймаут обязателен: один зависший коннект без него вешал весь прогон (инциденты 03 и 05.07)
   const r = await fetch("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}`, "content-type": "application/json" },
     body: JSON.stringify({ inspectionUrl: url, siteUrl: SITE }),
+    signal: AbortSignal.timeout(20000),
   });
   if (!r.ok) return { verdict: `HTTP_${r.status}`, coverage: "" };
   const d = (await r.json()) as any;
