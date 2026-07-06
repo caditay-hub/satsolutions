@@ -174,7 +174,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "从免费现场勘察开始",
     ctaText: "发送您的需求或预约通话——我们将在一个工作日内回复。",
     ctaButton: "联系我们",
-    ctaCall: "WhatsApp / 电话: +998 99 554-69-69 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / 电话: +998 99 554-69-69 · 微信 WeChat: cadi2104 · sales@satsolutions.uz",
   },
 };
 
