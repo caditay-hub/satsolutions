@@ -23,7 +23,11 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
 
   const switchTo = (l: string) => {
     setOpen(false);
-    router.replace(pathname, { locale: l });
+    // Сохраняем query-параметры (фильтры каталога, поиск, пагинация) — иначе смена
+    // языка сбрасывает состояние страницы. window.location вместо useSearchParams,
+    // чтобы не оборачивать шапку в Suspense на статических страницах.
+    const qs = window.location.search;
+    router.replace(`${pathname}${qs}`, { locale: l });
   };
 
   return (
