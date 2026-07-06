@@ -40,6 +40,30 @@ function charTokensSql(valueExpr: string): string {
   return `string_to_array(regexp_replace(coalesce(${valueExpr}, ''), '\\s*\\([^)]*\\)', '', 'g'), ',')`;
 }
 
+// Естественная сортировка значений фасета: числовые значения по возрастанию с учётом
+// единиц (500GB < 1TB < 12TB; 2.5" < 3.5"; 30 м < 300 м), нечисловые — по алфавиту перед ними.
+// Без этого localeCompare даёт «12TB, 1TB, 2TB, 500GB».
+function facetNumeric(s: string): number | null {
+  const m = s.replace(",", ".").match(/(\d+(?:\.\d+)?)/);
+  if (!m) return null;
+  let n = parseFloat(m[1]);
+  const rest = s.slice((m.index ?? 0) + m[1].length).trimStart().toLowerCase();
+  if (/^(тб|tb)/.test(rest)) n *= 1e12;
+  else if (/^(гб|gb)/.test(rest)) n *= 1e9;
+  else if (/^(мб|mb)/.test(rest)) n *= 1e6;
+  else if (/^(кб|kb)/.test(rest)) n *= 1e3;
+  else if (/^(км)/.test(rest)) n *= 1e3; // метры как база для расстояний
+  return n;
+}
+function facetValueCmp(a: string, b: string): number {
+  const na = facetNumeric(a);
+  const nb = facetNumeric(b);
+  if (na !== null && nb !== null) return na - nb || a.localeCompare(b, "ru");
+  if (na !== null) return 1; // текстовые значения раньше числовых
+  if (nb !== null) return -1;
+  return a.localeCompare(b, "ru");
+}
+
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
   const n = typeof v === "number" ? v : typeof v === "string" ? Number(v) : NaN;
@@ -610,7 +634,7 @@ publicRouter.get("/product-facets", async (req, res) => {
       // «Качество» фасета: высокое покрытие — хорошо; много разрозненных значений
       // (un-normalized числовые поля «ИК-подсветка: 30,40,50,…») — плохо. Штрафуем кардинальность.
       const score = total / Math.sqrt(distinct);
-      const values = sorted.slice(0, MAX_VALUES).sort((a, b) => a.value.localeCompare(b.value, "ru"));
+      const values = sorted.slice(0, MAX_VALUES).sort((a, b) => facetValueCmp(a.value, b.value));
       return { key, values, distinct, avg, score };
     })
     // Годный фасет: ≥2 значения; глушим высоко-кардинальный шум (>14 значений, или тонко
