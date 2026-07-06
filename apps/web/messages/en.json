@@ -180,7 +180,8 @@
     "loadMap": "Click to load the map",
     "geoNotSet": "Location not configured",
     "rights": "All rights reserved",
-    "tagline": "Design, installation and maintenance of security and low-voltage systems across Uzbekistan."
+    "tagline": "Design, installation and maintenance of security and low-voltage systems across Uzbekistan.",
+    "returns": "Returns & Exchange"
   },
   "services": {
     "cctv": {

@@ -180,7 +180,8 @@
     "loadMap": "Xaritani yuklash uchun bosing",
     "geoNotSet": "Geolokatsiya sozlanmagan",
     "rights": "Barcha huquqlar himoyalangan",
-    "tagline": "Butun O‘zbekiston bo‘ylab xavfsizlik va past kuchlanishli tizimlarni loyihalash, o‘rnatish va xizmat ko‘rsatish."
+    "tagline": "Butun O‘zbekiston bo‘ylab xavfsizlik va past kuchlanishli tizimlarni loyihalash, o‘rnatish va xizmat ko‘rsatish.",
+    "returns": "Qaytarish va almashtirish"
   },
   "services": {
     "cctv": {

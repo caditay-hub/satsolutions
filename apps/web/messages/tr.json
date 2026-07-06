@@ -180,7 +180,8 @@
     "loadMap": "Haritayı yüklemek için tıklayın",
     "geoNotSet": "Konum yapılandırılmadı",
     "rights": "Tüm hakları saklıdır",
-    "tagline": "Tüm Özbekistan'da güvenlik ve zayıf akım sistemlerinin tasarımı, kurulumu ve bakımı."
+    "tagline": "Tüm Özbekistan'da güvenlik ve zayıf akım sistemlerinin tasarımı, kurulumu ve bakımı.",
+    "returns": "İade ve Değişim"
   },
   "services": {
     "cctv": {
