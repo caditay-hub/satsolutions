@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { WeChatBadge } from "./WeChatBadge";
 
 function IconLink({ href, label, children }: { href: string; label: string; children: ReactNode }) {
   return (
@@ -18,16 +19,19 @@ function IconLink({ href, label, children }: { href: string; label: string; chil
 export function SocialLinks({
   instagramUrl,
   telegramUrl,
-  facebookUrl
+  facebookUrl,
+  wechatId
 }: {
   instagramUrl?: string | null;
   telegramUrl?: string | null;
   facebookUrl?: string | null;
+  wechatId?: string | null;
 }) {
   const ig = instagramUrl?.trim();
   const tg = telegramUrl?.trim();
   const fb = facebookUrl?.trim();
-  if (!ig && !tg && !fb) return null;
+  const wc = wechatId?.trim();
+  if (!ig && !tg && !fb && !wc) return null;
 
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -61,6 +65,7 @@ export function SocialLinks({
           </svg>
         </IconLink>
       ) : null}
+      {wc ? <WeChatBadge id={wc} /> : null}
       {fb ? (
         <IconLink href={fb} label="Facebook">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">

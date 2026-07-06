@@ -99,6 +99,7 @@ export function SiteFooter() {
                 instagramUrl={data.instagramUrl}
                 telegramUrl={data.telegramUrl}
                 facebookUrl={data.facebookUrl}
+                wechatId="cadi2104"
               />
             </div>
           </div>
