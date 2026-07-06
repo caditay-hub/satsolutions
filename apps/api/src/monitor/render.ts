@@ -169,6 +169,26 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
     }
   }
 
+  // ── Яндекс (Метрика + Вебмастер) ──────────────────────
+  if (snap.yandex && (snap.yandex.metrika || snap.yandex.webmaster)) {
+    const y = snap.yandex;
+    L.push("", RULE, `🟥 <b>Яндекс</b> · Метрика + Вебмастер <i>(7 дн.)</i>`);
+    if (y.metrika) {
+      L.push(`Визиты: <b>${fmt(y.metrika.visits)}</b> · посетители: <b>${fmt(y.metrika.users)}</b>`);
+      if (y.metrika.sources.length) {
+        L.push(table(y.metrika.sources.slice(0, 4).map((s) => ({ label: clip(s.source, 18), value: `${fmt(s.visits)} виз.` }))));
+      }
+    }
+    if (y.webmaster) {
+      const w = y.webmaster;
+      L.push(`Страниц в поиске: <b>${w.searchablePages != null ? fmt(w.searchablePages) : "?"}</b>${w.sqi != null ? ` · ИКС: <b>${fmt(w.sqi)}</b>` : ""}`);
+      if (w.queries.length) {
+        L.push(`<i>Топ-запросы</i>`);
+        L.push(table(w.queries.slice(0, 5).map((q) => ({ label: clip(q.query, 22), value: `${fmt(q.shows)} пок.`, delta: `${fmt(q.clicks)} кл.` }))));
+      }
+    }
+  }
+
   // ── Скорость (Core Web Vitals) ────────────────────────
   if (snap.psi?.length) {
     L.push("", RULE, `⚡ <b>Скорость</b> · CWV <i>(моб.)</i>`);

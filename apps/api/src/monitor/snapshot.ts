@@ -8,6 +8,7 @@ import type { Ga4Report } from "./sources/ga4.js";
 import type { PsiResult } from "./sources/psi.js";
 import type { GoogleAdsReport } from "./sources/googleAds.js";
 import type { GadsConfigIssue } from "./sources/googleAdsConfig.js";
+import type { YandexReport } from "./sources/yandex.js";
 
 export type Snapshot = {
   ts: string; // ISO-время прогона
@@ -16,6 +17,7 @@ export type Snapshot = {
   psi?: PsiResult[] | null;
   ads?: GoogleAdsReport | null;
   adsConfig?: GadsConfigIssue[] | null; // конфиг-аудит Ads ([] = всё в порядке)
+  yandex?: YandexReport | null; // Метрика + Вебмастер (подключено 06.07.2026)
   errors: string[];
 };
 
