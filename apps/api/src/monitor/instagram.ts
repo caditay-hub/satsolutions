@@ -12,7 +12,8 @@ const execFileP = promisify(execFile);
 const API_BASE = `http://localhost:${process.env.PORT || 4005}`;
 const UPLOADS_PUBLIC = "https://api.satsolutions.uz/uploads/ig";
 const META_TOKEN_PATH = "/root/.meta_token";
-const GRAPH = "https://graph.facebook.com/v21.0";
+// Токен типа instagram_login (IGAA...) работает через graph.instagram.com
+const GRAPH = "https://graph.instagram.com/v21.0";
 
 export type IgProduct = {
   slug: string;
