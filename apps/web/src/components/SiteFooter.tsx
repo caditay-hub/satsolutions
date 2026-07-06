@@ -100,6 +100,7 @@ export function SiteFooter() {
                 telegramUrl={data.telegramUrl}
                 facebookUrl={data.facebookUrl}
                 wechatId="cadi2104"
+                linkedinUrl="https://www.linkedin.com/company/sat-solutions-uz"
               />
             </div>
           </div>

@@ -93,7 +93,7 @@ export default async function ContactPage() {
                         <span className="text-sm font-black uppercase tracking-widest text-slate-600">{t("social")}</span>
                       </div>
                       <div className="mt-1">
-                        <SocialLinks instagramUrl={instagramUrl} telegramUrl={telegramUrl} facebookUrl={facebookUrl} wechatId="cadi2104" />
+                        <SocialLinks instagramUrl={instagramUrl} telegramUrl={telegramUrl} facebookUrl={facebookUrl} wechatId="cadi2104" linkedinUrl="https://www.linkedin.com/company/sat-solutions-uz" />
                       </div>
                     </div>
                   </div>

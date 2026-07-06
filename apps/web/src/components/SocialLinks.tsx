@@ -20,18 +20,21 @@ export function SocialLinks({
   instagramUrl,
   telegramUrl,
   facebookUrl,
-  wechatId
+  wechatId,
+  linkedinUrl
 }: {
   instagramUrl?: string | null;
   telegramUrl?: string | null;
   facebookUrl?: string | null;
   wechatId?: string | null;
+  linkedinUrl?: string | null;
 }) {
   const ig = instagramUrl?.trim();
   const tg = telegramUrl?.trim();
   const fb = facebookUrl?.trim();
   const wc = wechatId?.trim();
-  if (!ig && !tg && !fb && !wc) return null;
+  const li = linkedinUrl?.trim();
+  if (!ig && !tg && !fb && !wc && !li) return null;
 
   return (
     <div className="flex flex-wrap items-center gap-2">
@@ -62,6 +65,13 @@ export function SocialLinks({
               strokeLinejoin="round"
             />
             <path d="M9 13.8 20.5 6.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </IconLink>
+      ) : null}
+      {li ? (
+        <IconLink href={li} label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M4.98 3.5A2.5 2.5 0 1 1 4.96 8.5 2.5 2.5 0 0 1 4.98 3.5ZM3 9.75h4v10.75H3V9.75Zm6.5 0h3.8v1.5h.05c.55-1 1.85-1.9 3.6-1.9 3.6 0 4.55 2.3 4.55 5.4v5.75h-4v-5.1c0-1.2 0-2.8-1.75-2.8s-2.05 1.35-2.05 2.7v5.2h-4V9.75Z" />
           </svg>
         </IconLink>
       ) : null}
