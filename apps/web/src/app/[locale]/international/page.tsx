@@ -17,7 +17,7 @@ type Dict = {
 
 const D: Record<string, Dict> = {
   en: {
-    metaTitle: "Security Systems Integrator in Tashkent, Uzbekistan — CCTV, Fire Alarm, Access Control | SAT Solutions",
+    metaTitle: "Security Systems Integrator in Tashkent, Uzbekistan — CCTV, Fire Alarm, Access Control",
     metaDesc: "Licensed security systems contractor in Tashkent for international companies: CCTV installation, fire alarm systems, access control and turnstiles. English-speaking team, contracts for foreign legal entities, projects across Uzbekistan.",
     h1: "Security systems for international companies in Uzbekistan",
     intro: "SAT Solutions is a licensed security systems integrator based in Tashkent. We help international companies entering Uzbekistan — factories, warehouses, offices, hotels and retail — design, install and maintain CCTV, fire alarm and access control systems that meet local regulations. One contractor, full cycle: survey, design, supply, installation, commissioning and service.",
@@ -49,7 +49,7 @@ const D: Record<string, Dict> = {
     ctaCall: "WhatsApp / Call: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   ru: {
-    metaTitle: "Системы безопасности для иностранных компаний в Узбекистане | SAT Solutions",
+    metaTitle: "Системы безопасности для иностранных компаний в Узбекистане",
     metaDesc: "Лицензированный интегратор систем безопасности в Ташкенте для иностранных компаний: видеонаблюдение, пожарная сигнализация, СКУД. Договоры с иностранными юрлицами, документы на английском, проекты по всему Узбекистану.",
     h1: "Системы безопасности для иностранных компаний в Узбекистане",
     intro: "SAT Solutions — лицензированный интегратор систем безопасности в Ташкенте. Помогаем иностранным компаниям, выходящим на рынок Узбекистана — заводам, складам, офисам, отелям и ритейлу — спроектировать, смонтировать и обслуживать видеонаблюдение, пожарную сигнализацию и СКУД в соответствии с местными нормами. Один подрядчик — полный цикл: обследование, проект, поставка, монтаж, пусконаладка, сервис.",
@@ -81,7 +81,7 @@ const D: Record<string, Dict> = {
     ctaCall: "WhatsApp / Телефон: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   uz: {
-    metaTitle: "O'zbekistondagi xorijiy kompaniyalar uchun xavfsizlik tizimlari | SAT Solutions",
+    metaTitle: "O'zbekistondagi xorijiy kompaniyalar uchun xavfsizlik tizimlari",
     metaDesc: "Toshkentdagi litsenziyalangan integrator: videokuzatuv, yong'in signalizatsiyasi, SKUD. Xorijiy yuridik shaxslar bilan shartnomalar, butun O'zbekiston bo'ylab loyihalar.",
     h1: "O'zbekistondagi xorijiy kompaniyalar uchun xavfsizlik tizimlari",
     intro: "SAT Solutions — Toshkentdagi litsenziyalangan xavfsizlik tizimlari integratori. O'zbekiston bozoriga kirayotgan xorijiy kompaniyalarga — zavodlar, omborlar, ofislar, mehmonxonalarga — mahalliy talablarga mos videokuzatuv, yong'in signalizatsiyasi va SKUD tizimlarini loyihalash, o'rnatish va xizmat ko'rsatishda yordam beramiz. Bitta pudratchi — to'liq sikl.",
@@ -113,7 +113,7 @@ const D: Record<string, Dict> = {
     ctaCall: "WhatsApp / Tel: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   tr: {
-    metaTitle: "Özbekistan'da Yabancı Şirketler için Güvenlik Sistemleri — Taşkent | SAT Solutions",
+    metaTitle: "Özbekistan'da Yabancı Şirketler için Güvenlik Sistemleri — Taşkent",
     metaDesc: "Taşkent'te lisanslı güvenlik sistemleri entegratörü: kamera sistemleri (CCTV), yangın alarm, geçiş kontrol ve turnikeler. Yabancı tüzel kişilerle sözleşme, tüm Özbekistan'da projeler.",
     h1: "Özbekistan'da yabancı şirketler için güvenlik sistemleri",
     intro: "SAT Solutions, Taşkent merkezli lisanslı bir güvenlik sistemleri entegratörüdür. Özbekistan pazarına giren yabancı şirketlere — fabrikalar, depolar, ofisler, oteller — yerel mevzuata uygun CCTV, yangın alarm ve geçiş kontrol sistemlerinin projelendirilmesi, kurulumu ve bakımında destek veriyoruz. Tek yüklenici, tam döngü: keşif, proje, tedarik, montaj, devreye alma ve servis.",
@@ -145,7 +145,7 @@ const D: Record<string, Dict> = {
     ctaCall: "WhatsApp / Tel: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   zh: {
-    metaTitle: "乌兹别克斯坦外资企业安防系统 — 塔什干 CCTV、消防报警、门禁 | SAT Solutions",
+    metaTitle: "乌兹别克斯坦外资企业安防系统 — 塔什干 CCTV、消防报警、门禁",
     metaDesc: "塔什干持牌安防系统集成商，服务进入乌兹别克斯坦的外资企业：视频监控安装、消防报警系统、门禁与闸机。可与外国法人签约，项目覆盖全乌兹别克斯坦。",
     h1: "为进入乌兹别克斯坦的外资企业提供安防系统",
     intro: "SAT Solutions 是一家位于塔什干的持牌安防系统集成商。我们帮助进入乌兹别克斯坦的外资企业——工厂、仓库、办公室、酒店和零售——设计、安装并维护符合当地法规的视频监控、消防报警和门禁系统。一个承包商，全流程服务：勘察、设计、供货、安装、调试和维保。",
