@@ -8,6 +8,10 @@ import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
 const DEFAULT_LOCALE = "ru";
 
+// Раз в час: иначе sitemap печётся на билде против ЕЩЁ СТАРОГО API (порядок деплоя:
+// build → restart api) и не видит новых товаров/категорий до следующего деплоя.
+export const revalidate = 3600;
+
 // Фиксируется один раз при старте процесса (деплое), а не на каждый запрос.
 // Вечно-«сейчашний» lastmod Google со временем игнорирует; для статич. роутов
 // нужна стабильная дата сборки. Динамические роуты используют реальный updatedAt.
