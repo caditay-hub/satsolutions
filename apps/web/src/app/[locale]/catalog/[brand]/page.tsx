@@ -9,6 +9,7 @@ import { localizeBrandDesc, localizeBrandName } from "@/lib/brandI18n";
 import { getBrandSeo } from "@/lib/brandSeo";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { CatalogView } from "../../products/CatalogView";
+import { catalogRobots } from "@/lib/catalogRobots";
 
 const SITE = "https://satsolutions.uz";
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
@@ -19,10 +20,12 @@ export const revalidate = 300;
 // ─── metadata ─────────────────────────────────────────────────────────────────
 export async function generateMetadata({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string; brand: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }): Promise<Metadata> {
-  const { locale, brand } = await params;
+  const [{ locale, brand }, sp] = await Promise.all([params, searchParams ?? Promise.resolve({})]);
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const cfg = BRAND_CONFIG[brand.toLowerCase()];
   if (!cfg) return { title: tc("productCatalog") };
@@ -36,6 +39,8 @@ export async function generateMetadata({
     description,
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
+    // Фасет-комбинации (chars/цена/сортировка/страница>1) — noindex,follow, как на type/group
+    robots: catalogRobots(sp),
   };
 }
 

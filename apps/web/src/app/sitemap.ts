@@ -95,8 +95,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         // Канонические страницы типов = чистые URL /products/type/<slug> (дедуп имён).
         // Старые /products?type=<имя> 301-редиректят сюда; брендовые /categories/<slug> — 308 сюда.
         // Исключаем слитые типы (их слаги 308-редиректят на канонические — редиректам не место в карте)
-        const typeNames = Array.from(new Set(categories.map((c) => c.name).filter(Boolean)))
-            .filter((name) => !TYPE_REDIRECTS[typeSlug(name)]);
+        // Дедуп по SLUG, не по имени: разные написания («SSD накопители»/«SSD-накопители»)
+        // дают один slug — в карте он должен быть один раз.
+        const typeBySlug = new Map<string, string>();
+        for (const c of categories) {
+            if (!c.name) continue;
+            const s = typeSlug(c.name);
+            if (!TYPE_REDIRECTS[s] && !typeBySlug.has(s)) typeBySlug.set(s, c.name);
+        }
+        const typeNames = Array.from(typeBySlug.values());
         const categoryRoutes = [
             { url: `${siteUrl}/categories`, lastModified: GENERATED, changeFrequency: "weekly" as const, priority: 0.7, alternates: { languages: langAlternates(`/categories`) } },
             ...typeNames.map((name) => {

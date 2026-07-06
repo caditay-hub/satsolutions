@@ -68,7 +68,21 @@ publicRouter.get("/product-types", async (req, res) => {
 publicRouter.get("/categories", async (req, res) => {
   const brandSlug = typeof req.query.brand === "string" ? req.query.brand.trim().toLowerCase() : "";
   if (!brandSlug) {
-    const categories = await Category.findAll({ order: [["name", "ASC"]] });
+    // Только категории с опубликованными товарами (+ предки для связности дерева):
+    // пустые записи-словарь старой таксономии не должны попадать в sitemap/резолв типов/фасеты.
+    const categories = await sequelize.query<any>(
+      `WITH RECURSIVE cwp AS (
+         SELECT DISTINCT c.*
+         FROM categories c
+         JOIN products p ON p."categoryId" = c.id AND p.published = true
+         UNION
+         SELECT pc.*
+         FROM categories pc
+         JOIN cwp ON pc.id = cwp."parentId"
+       )
+       SELECT * FROM cwp ORDER BY name ASC`,
+      { type: "SELECT" as any }
+    );
     return res.json({ categories });
   }
 
