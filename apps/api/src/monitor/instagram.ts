@@ -34,10 +34,9 @@ async function api<T>(path: string): Promise<T> {
 /** Товар по slug или случайный (published, с фото и ценой). */
 export async function pickProduct(slug?: string): Promise<IgProduct> {
   if (slug) {
-    const { items } = await api<{ items: any[] }>(`/products?limit=1&q=${encodeURIComponent(slug)}`);
-    const p = items.find((i) => i.slug === slug) ?? items[0];
-    if (!p) throw new Error(`товар «${slug}» не найден`);
-    return p;
+    const { item } = await api<{ item: any }>(`/products/${encodeURIComponent(slug)}`).catch(() => ({ item: null }));
+    if (!item) throw new Error(`товар «${slug}» не найден`);
+    return item;
   }
   const { total } = await api<{ total: number }>(`/products?limit=1`);
   for (let i = 0; i < 8; i++) {
