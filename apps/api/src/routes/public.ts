@@ -24,8 +24,10 @@ import { parseLimit, parsePositiveInt } from "../utils/pagination.js";
 const CYR_FROM = "абвгдеёзийклмнопрстуфхцыэ";
 const CYR_TO = "abvgdeeziiklmnoprstufhcye";
 function charNormSql(expr: string): string {
-  const collapse = `regexp_replace(lower(btrim(${expr})), '\\s+', ' ', 'g')`;
-  const joinUnit = `regexp_replace(${collapse}, '([0-9]) ([a-zа-яё])', '\\1\\2', 'g')`;
+  // Пробелы убираем ПОЛНОСТЬЮ: «Micro SD до 512 GB» = «microSD до 512GB» —
+  // разные написания с пробелами схлопываются в одно значение фасета (display = mode).
+  const collapse = `regexp_replace(lower(btrim(${expr})), '\\s+', '', 'g')`;
+  const joinUnit = collapse;
   // Нормализация разделителей: дефис/тильда схлопываются, чтобы «RS-485»=«RS485»,
   // «2.8-12»=«2.8~12». Слэш НЕ трогаем (ломает скорости вида 10/100/1000).
   const stripSep = `regexp_replace(${joinUnit}, '[-~]', '', 'g')`;
