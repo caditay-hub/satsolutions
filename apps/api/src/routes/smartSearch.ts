@@ -236,14 +236,28 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   )) as any[];
   if (cached.length) mapping = cached[0].mapping as Mapping;
 
-  // 3) спрашиваем ИИ
+  // 3) спрашиваем ИИ — но пользователь не ждёт дольше SMART_DEADLINE_MS:
+  // если Claude не успел, отдаём обычные результаты сразу, а маппинг доделывается
+  // в фоне и кэшируется — повторный такой же запрос получит умную выдачу мгновенно.
+  const SMART_DEADLINE_MS = 2500;
+  const cacheMapping = async (m: Mapping) => {
+    await sequelize.query(
+      `INSERT INTO smart_search_cache (query, mapping) VALUES (:q, :m) ON CONFLICT (query) DO NOTHING`,
+      { replacements: { q, m: JSON.stringify(m) } },
+    ).catch(() => {});
+  };
   if (!mapping) {
-    mapping = await askClaude(q);
+    const claudeP = askClaude(q);
+    mapping = await Promise.race([
+      claudeP,
+      new Promise<null>((r) => setTimeout(() => r(null), SMART_DEADLINE_MS)),
+    ]);
     if (mapping) {
-      await sequelize.query(
-        `INSERT INTO smart_search_cache (query, mapping) VALUES (:q, :m) ON CONFLICT (query) DO NOTHING`,
-        { replacements: { q, m: JSON.stringify(mapping) } },
-      );
+      await cacheMapping(mapping);
+    } else {
+      // дедлайн вышел: кэшируем в фоне, пользователю — быстрый direct
+      claudeP.then((m) => { if (m) cacheMapping(m); }).catch(() => {});
+      return res.json({ mode: "direct", total: direct.count, items: direct.rows });
     }
   }
 
