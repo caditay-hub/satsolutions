@@ -31,6 +31,8 @@ const nextConfig = {
     return [
       // Страница «Партнёры» удалена (06.07.2026) — 301 на «О компании» на всех локалях
       { source: "/partners", destination: "/about", permanent: true },
+      { source: "/partner", destination: "/about", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/partner", destination: "/:locale/about", permanent: true },
       { source: "/:locale(uz|en|tr|zh)/partners", destination: "/:locale/about", permanent: true },
       { source: "/news", destination: "/", permanent: true },
       { source: "/news/:slug*", destination: "/", permanent: true },
