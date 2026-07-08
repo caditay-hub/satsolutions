@@ -628,8 +628,34 @@
         "title": "Rasmiy hamkor",
         "issuedBy": "Pantum International Limited",
         "description": "O‘zbekistonda Pantum International Limited rasmiy hamkori. Printer va MFU vakolatli sotuvi."
+      },
+      "cert-h3c": {
+        "title": "Sertifikatlangan hamkor",
+        "issuedBy": "H3C Technologies",
+        "description": "O‘zbekistonda H3C Certified Partner — kommutatorlar, marshrutizatorlar va server yechimlari. 2027-yil 31-dekabrgacha amal qiladi."
+      },
+      "cert-lenovo": {
+        "title": "Lenovo 360 Authorized 2026",
+        "issuedBy": "Lenovo",
+        "description": "Lenovo 360 vakolatli hamkori — Intelligent Devices va Infrastructure Solutions. 2027-yil 31-martgacha amal qiladi."
+      },
+      "letter-uzauto": {
+        "title": "Tavsiya xati",
+        "issuedBy": "«UzAuto Motors» AJ",
+        "description": "2023–2025-yillardagi shartnomalar bo‘yicha server uskunalari va kameralar yetkazib berildi. UzAuto Motors kompaniyani ishonchli hamkor sifatida tavsiya etadi."
+      },
+      "letter-hokimiyat": {
+        "title": "Tavsiya xati",
+        "issuedBy": "Toshkent shahar hokimligi",
+        "description": "Kichik va yoshlar sanoat zonalarini boshqarish direksiyasi: bosh binoda videokuzatuv va 70 ish o‘rni uchun tarmoq ulandi."
+      },
+      "letter-ton": {
+        "title": "Tavsiya xati",
+        "issuedBy": "Transport Oqimi Nazorati",
+        "description": "Xavfsizlik tizimlari va videokuzatuv: barcha vazifalar o‘z vaqtida bajarildi, narx va sifat nisbati alohida qayd etilgan."
       }
-    }
+    },
+    "letters": "Tavsiya xatlari"
   },
   "scheme": {
     "cctv": [

@@ -628,8 +628,34 @@
         "title": "Resmi ortak",
         "issuedBy": "Pantum International Limited",
         "description": "Özbekistan'da Pantum International Limited resmi ortağı. Yazıcı ve çok fonksiyonlu cihaz yetkili satışı."
+      },
+      "cert-h3c": {
+        "title": "Sertifikalı İş Ortağı",
+        "issuedBy": "H3C Technologies",
+        "description": "Özbekistan'da H3C Certified Partner — anahtarlar, yönlendiriciler ve sunucu çözümleri. 31 Aralık 2027'ye kadar geçerlidir."
+      },
+      "cert-lenovo": {
+        "title": "Lenovo 360 Authorized 2026",
+        "issuedBy": "Lenovo",
+        "description": "Yetkili Lenovo 360 iş ortağı — Intelligent Devices ve Infrastructure Solutions. 31 Mart 2027'ye kadar geçerlidir."
+      },
+      "letter-uzauto": {
+        "title": "Referans mektubu",
+        "issuedBy": "UzAuto Motors AŞ",
+        "description": "2023–2025 sözleşmeleri kapsamında sunucu ekipmanı ve kamera tedariki. UzAuto Motors şirketi güvenilir bir iş ortağı olarak tavsiye ediyor."
+      },
+      "letter-hokimiyat": {
+        "title": "Referans mektubu",
+        "issuedBy": "Taşkent Şehir Yönetimi",
+        "description": "Küçük ve Genç Sanayi Bölgeleri Direktörlüğü: ana binada video gözetim ve 70 iş istasyonu için ağ kurulumu."
+      },
+      "letter-ton": {
+        "title": "Referans mektubu",
+        "issuedBy": "Transport Oqimi Nazorati",
+        "description": "Güvenlik sistemleri ve video gözetim: tüm işler zamanında teslim edildi, fiyat-kalite oranı özellikle vurgulandı."
       }
-    }
+    },
+    "letters": "Referans mektupları"
   },
   "scheme": {
     "cctv": [

@@ -628,8 +628,34 @@
         "title": "Official partner",
         "issuedBy": "Pantum International Limited",
         "description": "Official partner of Pantum International Limited in Uzbekistan. Authorized sales of printers and MFPs."
+      },
+      "cert-h3c": {
+        "title": "Certified Partner",
+        "issuedBy": "H3C Technologies",
+        "description": "H3C Certified Partner in Uzbekistan — switches, routers and server solutions. Valid until December 31, 2027."
+      },
+      "cert-lenovo": {
+        "title": "Lenovo 360 Authorized 2026",
+        "issuedBy": "Lenovo",
+        "description": "Authorized Lenovo 360 partner — Intelligent Devices and Infrastructure Solutions. Valid until March 31, 2027."
+      },
+      "letter-uzauto": {
+        "title": "Recommendation letter",
+        "issuedBy": "UzAuto Motors JSC",
+        "description": "Supply of server equipment and cameras under 2023–2025 contracts. UzAuto Motors recommends the company as a reliable and competent partner."
+      },
+      "letter-hokimiyat": {
+        "title": "Recommendation letter",
+        "issuedBy": "Tashkent City Administration",
+        "description": "Directorate of Small and Youth Industrial Zones: video surveillance and networking for 70 workstations in the main building."
+      },
+      "letter-ton": {
+        "title": "Recommendation letter",
+        "issuedBy": "Transport Oqimi Nazorati",
+        "description": "Security systems and video surveillance: all tasks delivered on time, with price-to-quality ratio specially noted."
       }
-    }
+    },
+    "letters": "Recommendation letters"
   },
   "scheme": {
     "cctv": [

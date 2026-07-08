@@ -628,8 +628,34 @@
         "title": "官方合作伙伴",
         "issuedBy": "Pantum International Limited",
         "description": "Pantum International Limited 乌兹别克斯坦官方合作伙伴。授权销售打印机与多功能一体机。"
+      },
+      "cert-h3c": {
+        "title": "认证合作伙伴",
+        "issuedBy": "H3C Technologies",
+        "description": "H3C乌兹别克斯坦认证合作伙伴——交换机、路由器和服务器解决方案。有效期至2027年12月31日。"
+      },
+      "cert-lenovo": {
+        "title": "Lenovo 360 Authorized 2026",
+        "issuedBy": "Lenovo",
+        "description": "联想360授权合作伙伴——智能设备与基础设施解决方案。有效期至2027年3月31日。"
+      },
+      "letter-uzauto": {
+        "title": "推荐信",
+        "issuedBy": "UzAuto Motors股份公司",
+        "description": "根据2023–2025年合同供应服务器设备和摄像机。UzAuto Motors推荐本公司为可靠且专业的合作伙伴。"
+      },
+      "letter-hokimiyat": {
+        "title": "推荐信",
+        "issuedBy": "塔什干市政府",
+        "description": "中小及青年工业园区管理局：主楼视频监控及70个工位的网络接入。"
+      },
+      "letter-ton": {
+        "title": "推荐信",
+        "issuedBy": "Transport Oqimi Nazorati",
+        "description": "安防系统与视频监控：所有任务按期完成，性价比获得特别好评。"
       }
-    }
+    },
+    "letters": "推荐信"
   },
   "scheme": {
     "cctv": [

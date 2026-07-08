@@ -77,13 +77,23 @@ const CERTIFICATES = [
     badgeColor: "red",
   },
   {
-    id: "cert-dahua-partner",
-    title: "Рекомендательное письмо надёжного партнёра",
-    issuedBy: "Dahua Technology (HK) Limited",
-    description: "Официальное рекомендательное письмо. Подтверждает высокий профессионализм и надёжность сотрудничества с 2024 г.",
-    logoText: "dahua",
-    logoUrl: `${DOC_BASE}/dahua-partner-thumb.jpg`,
-    pdfUrl: `${DOC_BASE}/dahua-partner.pdf`,
+    id: "cert-h3c",
+    title: "Сертифицированный партнёр",
+    issuedBy: "H3C Technologies",
+    description: "H3C Certified Partner в Узбекистане — коммутаторы, маршрутизаторы и серверные решения. Действует до 31 декабря 2027 г.",
+    logoText: "H3C",
+    logoUrl: `${DOC_BASE}/h3c-partner-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/h3c-partner.pdf`,
+    badgeColor: "red",
+  },
+  {
+    id: "cert-lenovo",
+    title: "Lenovo 360 Authorized 2026",
+    issuedBy: "Lenovo",
+    description: "Авторизованный партнёр Lenovo 360 — Intelligent Devices и Infrastructure Solutions. Действует до 31 марта 2027 г.",
+    logoText: "Lenovo",
+    logoUrl: `${DOC_BASE}/lenovo-360-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/lenovo-360.pdf`,
     badgeColor: "red",
   },
   {
@@ -114,6 +124,49 @@ const CERTIFICATES = [
     logoText: "PANTUM",
     logoUrl: `${DOC_BASE}/pantum-partner-thumb.jpg`,
     pdfUrl: `${DOC_BASE}/pantum-partner.pdf`,
+    badgeColor: "gray",
+  },
+];
+
+const LETTERS = [
+  {
+    id: "letter-uzauto",
+    title: "Рекомендательное письмо",
+    issuedBy: "АО «UzAuto Motors»",
+    description: "Поставка серверного оборудования и камер по договорам 2023–2025 гг. UzAuto Motors рекомендует компанию как надёжного и компетентного партнёра.",
+    logoText: "UzAuto",
+    logoUrl: `${DOC_BASE}/letter-uzauto-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/letter-uzauto.pdf`,
+    badgeColor: "blue",
+  },
+  {
+    id: "cert-dahua-partner",
+    title: "Рекомендательное письмо надёжного партнёра",
+    issuedBy: "Dahua Technology (HK) Limited",
+    description: "Официальное рекомендательное письмо. Подтверждает высокий профессионализм и надёжность сотрудничества с 2024 г.",
+    logoText: "dahua",
+    logoUrl: `${DOC_BASE}/dahua-partner-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/dahua-partner.pdf`,
+    badgeColor: "red",
+  },
+  {
+    id: "letter-hokimiyat",
+    title: "Рекомендательное письмо",
+    issuedBy: "Хокимият г. Ташкента",
+    description: "Дирекция по управлению малыми и молодёжными промышленными зонами: видеонаблюдение и подключение сети на 70 рабочих мест в главном здании.",
+    logoText: "Hokimiyat",
+    logoUrl: `${DOC_BASE}/letter-hokimiyat-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/letter-hokimiyat.pdf`,
+    badgeColor: "green",
+  },
+  {
+    id: "letter-ton",
+    title: "Рекомендательное письмо",
+    issuedBy: "Transport Oqimi Nazorati",
+    description: "Системы безопасности и видеонаблюдение: все задачи решены в срок, отдельно отмечено соотношение цены и качества.",
+    logoText: "TON",
+    logoUrl: `${DOC_BASE}/letter-ton-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/letter-ton.pdf`,
     badgeColor: "gray",
   },
 ];
@@ -289,6 +342,51 @@ export default async function AboutPage() {
                         {cert.logoText}
                       </span>
                     )}
+                  </div>
+                  <div>
+                    <div className={`mb-2 inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-bold ${BADGE_COLORS[cert.badgeColor]}`}>
+                      {t(`cert.${cert.id}.issuedBy`)}
+                    </div>
+                    <h3 className="text-sm font-bold leading-snug text-slate-900">{t(`cert.${cert.id}.title`)}</h3>
+                    <p className="mt-2 text-xs leading-relaxed text-slate-500">{t(`cert.${cert.id}.description`)}</p>
+                  </div>
+                  <span className="mt-auto inline-flex items-center gap-1.5 text-xs font-bold text-brand-700 group-hover:text-brand-800">
+                    <DownloadIcon className="w-3.5 h-3.5" />
+                    {t("viewDoc")}
+                  </span>
+                </div>
+                </DocPreview>
+                </Reveal>
+              ))}
+            </div>
+          </section>
+
+          {/* ── Рекомендательные письма ── */}
+          <section>
+            <Reveal>
+              <SectionHeading
+                title={t("letters")}
+                icon={
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <path d="M3.5 6.5 12 13l8.5-6.5" />
+                  </svg>
+                }
+              />
+            </Reveal>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {LETTERS.map((cert, i) => (
+                <Reveal key={cert.id} delay={(i % 4) * 90} className="h-full">
+                <DocPreview url={cert.pdfUrl} title={t(`cert.${cert.id}.title`)}>
+                <div className="flex h-full flex-col gap-3 rounded-2xl border-2 border-slate-100 bg-white p-5 transition-all group-hover:-translate-y-0.5 group-hover:border-brand-300 group-hover:shadow-lg">
+                  <div className="flex h-28 items-center justify-center rounded-lg bg-slate-50 p-2">
+                    <Image
+                      src={cert.logoUrl}
+                      alt={t(`cert.${cert.id}.title`)}
+                      width={200}
+                      height={112}
+                      className="max-h-full w-auto max-w-full rounded-md border border-slate-200 object-contain shadow-sm"
+                    />
                   </div>
                   <div>
                     <div className={`mb-2 inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-bold ${BADGE_COLORS[cert.badgeColor]}`}>

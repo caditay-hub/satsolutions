@@ -628,8 +628,34 @@
         "title": "Официальный партнёр",
         "issuedBy": "Pantum International Limited",
         "description": "Официальный партнёр Pantum International Limited в Узбекистане. Авторизованные продажи принтеров и МФУ."
+      },
+      "cert-h3c": {
+        "title": "Сертифицированный партнёр",
+        "issuedBy": "H3C Technologies",
+        "description": "H3C Certified Partner в Узбекистане — коммутаторы, маршрутизаторы и серверные решения. Действует до 31 декабря 2027 г."
+      },
+      "cert-lenovo": {
+        "title": "Lenovo 360 Authorized 2026",
+        "issuedBy": "Lenovo",
+        "description": "Авторизованный партнёр Lenovo 360 — Intelligent Devices и Infrastructure Solutions. Действует до 31 марта 2027 г."
+      },
+      "letter-uzauto": {
+        "title": "Рекомендательное письмо",
+        "issuedBy": "АО «UzAuto Motors»",
+        "description": "Поставка серверного оборудования и камер по договорам 2023–2025 гг. UzAuto Motors рекомендует компанию как надёжного и компетентного партнёра."
+      },
+      "letter-hokimiyat": {
+        "title": "Рекомендательное письмо",
+        "issuedBy": "Хокимият г. Ташкента",
+        "description": "Дирекция по управлению малыми и молодёжными промышленными зонами: видеонаблюдение и подключение сети на 70 рабочих мест в главном здании."
+      },
+      "letter-ton": {
+        "title": "Рекомендательное письмо",
+        "issuedBy": "Transport Oqimi Nazorati",
+        "description": "Системы безопасности и видеонаблюдение: все задачи решены в срок, отдельно отмечено соотношение цены и качества."
       }
-    }
+    },
+    "letters": "Рекомендательные письма"
   },
   "scheme": {
     "cctv": [
