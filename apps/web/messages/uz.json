@@ -653,6 +653,11 @@
         "title": "Tavsiya xati",
         "issuedBy": "Transport Oqimi Nazorati",
         "description": "Xavfsizlik tizimlari va videokuzatuv: barcha vazifalar o‘z vaqtida bajarildi, narx va sifat nisbati alohida qayd etilgan."
+      },
+      "cert-eltex": {
+        "title": "Vakolatli hamkor",
+        "issuedBy": "Eltex Alatau",
+        "description": "IT-qurilmalar va telekommunikatsiya uskunalari ishlab chiqaruvchisi «ElteksAlatau» MChJning vakolatli hamkori. 2026-yil 31-dekabrgacha amal qiladi."
       }
     },
     "letters": "Tavsiya xatlari"

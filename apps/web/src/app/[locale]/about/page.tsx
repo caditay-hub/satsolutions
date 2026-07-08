@@ -97,6 +97,16 @@ const CERTIFICATES = [
     badgeColor: "red",
   },
   {
+    id: "cert-eltex",
+    title: "Авторизованный партнёр",
+    issuedBy: "Eltex Alatau",
+    description: "Авторизованный партнёр ТОО «ЭлтексАлатау» — производителя IT-устройств и телекоммуникационного оборудования. Действует до 31 декабря 2026 г.",
+    logoText: "ELTEX",
+    logoUrl: `${DOC_BASE}/eltex-partner-thumb.jpg`,
+    pdfUrl: `${DOC_BASE}/eltex-partner.pdf`,
+    badgeColor: "blue",
+  },
+  {
     id: "cert-ruijie",
     title: "Silver Partner",
     issuedBy: "Ruijie Networks Co., Ltd",
