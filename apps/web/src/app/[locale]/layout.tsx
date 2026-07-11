@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const description = tm("homeDesc");
   return createMetadata({
     description,
-    openGraph: { description, locale: OG_LOCALE[locale] ?? "ru_RU" } as any,
+    openGraph: { description, siteName: "SAT Solutions", locale: OG_LOCALE[locale] ?? "ru_RU" } as any,
     twitter: { description } as any
   });
 }
@@ -67,6 +67,7 @@ export default async function RootLayout({
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
     name: site.name,
+    alternateName: ["SAT Solutions", "Sat Solutions", "satsolutions", "САТ Солюшнс"],
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     image: `${siteUrl}/logo.png`,
@@ -80,12 +81,35 @@ export default async function RootLayout({
       addressCountry: "UZ",
     },
     areaServed: { "@type": "Country", name: "Узбекистан" },
+    priceRange: "$$",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "10:00",
+        closes: "15:00",
+      },
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+998-99-554-69-69",
       email: "sales@satsolutions.uz",
       contactType: "customer service",
     },
+    // Профили компании — Google связывает их с сайтом (knowledge panel, бренд-выдача).
+    sameAs: [
+      "https://www.instagram.com/satsolutionsuz/",
+      "https://www.linkedin.com/company/sat-solutions-uz",
+      "https://t.me/satsolutionsuz",
+      "https://yandex.ru/maps/org/161031857568",
+      "https://maps.google.com/?cid=15605896518310441449",
+    ],
   };
 
   return (
