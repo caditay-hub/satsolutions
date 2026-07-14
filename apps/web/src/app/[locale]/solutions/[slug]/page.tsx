@@ -32,8 +32,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
   try {
     const { item } = await getServiceBySlug(slug);
-    const solDesc = item.excerpt?.trim() || `${item.title} — решения по безопасности и слаботочным системам от SAT Solutions в Ташкенте и по Узбекистану.`;
-    return { title: item.title, description: solDesc, alternates: hreflangAlternates(`/solutions/${item.slug}`, locale), openGraph: { title: item.title, description: solDesc, locale: ogLocale(locale) } };
+    // RU: приоритет seoTitle/seoDescription из БД (заточены под поисковые запросы)
+    const solTitle = (locale === "ru" && item.seoTitle) || item.title;
+    const solDesc = (locale === "ru" && item.seoDescription) || item.excerpt?.trim() || `${item.title} — решения по безопасности и слаботочным системам от SAT Solutions в Ташкенте и по Узбекистану.`;
+    return { title: solTitle, description: solDesc, alternates: hreflangAlternates(`/solutions/${item.slug}`, locale), openGraph: { title: solTitle, description: solDesc, locale: ogLocale(locale) } };
   } catch {
     return { title: "Услуга" };
   }
@@ -83,8 +85,35 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         }
       : null;
 
+  // JSON-LD: Service + BreadcrumbList — страницы «возможностей» должны попадать
+  // в расширенную выдачу по коммерческим запросам (шлагбаумы, скуд, видеостена…)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+  const lp = locale !== "ru" ? `/${locale}` : "";
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: title,
+    description: intro,
+    serviceType: title,
+    provider: { "@type": "Organization", name: "SAT Solutions", url: siteUrl, telephone: "+998-99-554-69-69" },
+    areaServed: { "@type": "Country", name: "Узбекистан" },
+    url: `${siteUrl}${lp}/solutions/${svc.key}`,
+    image: `${IMG_BASE}/${svc.key}.jpg`,
+  };
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: t("home"), item: `${siteUrl}${lp}/` },
+      { "@type": "ListItem", position: 2, name: t("servicesCrumb"), item: `${siteUrl}${lp}/solutions` },
+      { "@type": "ListItem", position: 3, name: title },
+    ],
+  };
+
   return (
     <div className="bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       <div className="container-page py-6 sm:py-10">
         {/* Breadcrumbs */}
         <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">

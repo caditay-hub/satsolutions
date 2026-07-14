@@ -62,10 +62,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   try {
     const { item: rawItem } = await getPortfolioBySlug(slug);
     const item = localizePortfolioProject(rawItem, locale);
+    // RU: приоритет seoTitle/seoDescription из БД (заточены под поисковые запросы);
+    // остальные локали — локализованный title/excerpt (переводы seo-полей нет).
+    const title = (locale === "ru" && rawItem.seoTitle) || item.title;
+    const description = (locale === "ru" && rawItem.seoDescription) || item.excerpt || item.title;
+    const img = resolveImageUrl(item.coverImageUrl);
     return {
-      title: item.title,
-      description: item.excerpt ?? item.title,
-      alternates: hreflangAlternates(`/portfolio/${item.slug}`, locale)
+      title,
+      description,
+      alternates: hreflangAlternates(`/portfolio/${item.slug}`, locale),
+      openGraph: { title, description, ...(img ? { images: [{ url: img }] } : {}) }
     };
   } catch {
     return { title: t("projectFallback") };
@@ -76,6 +82,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
   try {
     const { locale, slug } = await params;
     const t = await getTranslations("portfolio");
+    const tnav = await getTranslations("nav");
     const dateLocale = DATE_LOCALE[locale] ?? "ru-RU";
     const [{ item: rawItem }, { categories }] = await Promise.all([
       getPortfolioBySlug(slug),
@@ -99,8 +106,36 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
         : null,
       cat ? { label: t("category"), value: localizeCategoryName(cat.slug, cat.name, locale) } : null
     ].filter(Boolean) as { label: string; value: string }[];
+
+    // JSON-LD: Article (кейс) + BreadcrumbList — кейсы должны ранжироваться по
+    // запросам вида «бодикамеры», «установка видеостены», «монтаж серверной»
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+    const lp = locale !== "ru" ? `/${locale}` : "";
+    const articleLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: item.title,
+      description: item.excerpt ?? undefined,
+      image: img ?? undefined,
+      datePublished: item.publishedAt ?? item.createdAt,
+      dateModified: item.updatedAt,
+      author: { "@type": "Organization", name: "SAT Solutions", url: siteUrl },
+      publisher: { "@type": "Organization", name: "SAT Solutions", logo: { "@type": "ImageObject", url: `${siteUrl}/logo.png` } },
+      mainEntityOfPage: `${siteUrl}${lp}/portfolio/${item.slug}`,
+    };
+    const breadcrumbLd = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: tnav("home"), item: `${siteUrl}${lp}/` },
+        { "@type": "ListItem", position: 2, name: t("title"), item: `${siteUrl}${lp}/portfolio` },
+        { "@type": "ListItem", position: 3, name: item.title },
+      ],
+    };
     return (
       <div className="container-page py-6 sm:py-10">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
         <div className="mb-4">
           <BackButton />
         </div>

@@ -100,6 +100,8 @@ export type ServiceDto = {
   overviewImageUrl: string | null;
   parentId: string | null;
   serviceCategoryId: string | null;
+  seoTitle?: string | null;
+  seoDescription?: string | null;
   category?: ServiceCategoryDto | null;
   children?: ServiceDto[] | null;
   keyTechnologies?: KeyTechnologyDto[] | null;
@@ -148,6 +150,8 @@ export type PortfolioDto = {
   clientTasks: string | null;
   location: string | null;
   completedAt: string | null;
+  seoTitle?: string | null;
+  seoDescription?: string | null;
   sortOrder: number;
   published: boolean;
   publishedAt: string | null;
