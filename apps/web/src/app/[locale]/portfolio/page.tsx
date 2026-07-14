@@ -43,8 +43,28 @@ export default async function PortfolioPage({
   const items = rawItems.map((p) => localizePortfolioProject(p, locale));
   const categoryById = new Map(categories.map((c) => [c.id, c]));
 
+  // JSON-LD: список кейсов (CollectionPage + ItemList) — для выдачи по «кейсы/проекты»
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+  const lp = locale !== "ru" ? `/${locale}` : "";
+  const listLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: t("title"),
+    url: `${siteUrl}${lp}/portfolio`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((it, i) => ({
+        "@type": "ListItem",
+        position: (page - 1) * limit + i + 1,
+        name: it.title,
+        url: `${siteUrl}${lp}/portfolio/${it.slug}`,
+      })),
+    },
+  };
+
   return (
     <div className="container-page !pt-3 !pb-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }} />
       <h1 className="text-xl sm:text-2xl font-black tracking-tight">{t("title")}</h1>
       <p className="mt-1 text-sm font-semibold text-slate-600">
         {t("subtitle")}

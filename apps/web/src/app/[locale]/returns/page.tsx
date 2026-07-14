@@ -9,7 +9,7 @@ const D: Record<string, {
   sections: { h: string; items: string[] }[]; contact: string;
 }> = {
   ru: {
-    title: "Возврат и обмен товара — SAT Solutions",
+    title: "Возврат и обмен товара",
     metaDesc: "Правила возврата и обмена товаров SAT Solutions: 14 дней на возврат, обмен при браке, гарантийное обслуживание. Ташкент, Узбекистан.",
     h1: "Возврат и обмен товара",
     intro: "Мы работаем в соответствии с Законом Республики Узбекистан «О защите прав потребителей» и предоставляем следующие условия возврата и обмена.",
@@ -37,7 +37,7 @@ const D: Record<string, {
     contact: "Вопросы по возврату: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   uz: {
-    title: "Tovarni qaytarish va almashtirish — SAT Solutions",
+    title: "Tovarni qaytarish va almashtirish",
     metaDesc: "SAT Solutions tovarlarni qaytarish va almashtirish qoidalari: 14 kun ichida qaytarish, nuqsonli tovarni almashtirish, kafolat xizmati. Toshkent.",
     h1: "Tovarni qaytarish va almashtirish",
     intro: "Biz O'zbekiston Respublikasining «Iste'molchilarning huquqlarini himoya qilish to'g'risida»gi qonuniga muvofiq ishlaymiz va quyidagi qaytarish shartlarini taqdim etamiz.",
@@ -65,7 +65,7 @@ const D: Record<string, {
     contact: "Qaytarish bo'yicha savollar: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   en: {
-    title: "Returns & Exchange Policy — SAT Solutions",
+    title: "Returns & Exchange Policy",
     metaDesc: "SAT Solutions return and exchange policy: 14-day returns, defective item exchange, warranty service. Tashkent, Uzbekistan.",
     h1: "Returns & Exchange Policy",
     intro: "We operate in accordance with the Consumer Protection Law of the Republic of Uzbekistan and offer the following return and exchange terms.",
@@ -93,7 +93,7 @@ const D: Record<string, {
     contact: "Return enquiries: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   tr: {
-    title: "İade ve Değişim Koşulları — SAT Solutions",
+    title: "İade ve Değişim Koşulları",
     metaDesc: "SAT Solutions iade ve değişim koşulları: 14 gün içinde iade, kusurlu ürün değişimi, garanti servisi. Taşkent, Özbekistan.",
     h1: "İade ve Değişim Koşulları",
     intro: "Özbekistan Cumhuriyeti Tüketici Haklarını Koruma Kanunu'na uygun olarak çalışıyor ve aşağıdaki iade ve değişim koşullarını sunuyoruz.",
@@ -121,7 +121,7 @@ const D: Record<string, {
     contact: "İade soruları: +998 99 554-69-69 · sales@satsolutions.uz",
   },
   zh: {
-    title: "退换货政策 — SAT Solutions",
+    title: "退换货政策",
     metaDesc: "SAT Solutions 退换货政策：14天内退货，瑕疵产品换货，保修服务。乌兹别克斯坦塔什干。",
     h1: "退换货政策",
     intro: "我们依据乌兹别克斯坦共和国《消费者权益保护法》开展经营，并提供以下退换货条款。",

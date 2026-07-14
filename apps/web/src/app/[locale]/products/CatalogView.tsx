@@ -206,6 +206,21 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: brandSeo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
     : null;
   const typeGroup = isTypePage ? CATALOG_GROUPS.find((g) => g.types.some((t) => t.n === type)) : undefined;
+  // JSON-LD BreadcrumbList для страниц типа (в HTML крошки есть, разметки не было)
+  const siteUrlLd = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+  const lpLd = locale !== routing.defaultLocale ? `/${locale}` : "";
+  const typeBreadcrumbLd = isTypePage
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: tnav("home"), item: `${siteUrlLd}${lpLd}/` },
+          { "@type": "ListItem", position: 2, name: tnav("catalog"), item: `${siteUrlLd}${lpLd}/categories` },
+          ...(typeGroup ? [{ "@type": "ListItem", position: 3, name: localizeCatName(typeGroup.title, locale), item: `${siteUrlLd}${lpLd}/categories` }] : []),
+          { "@type": "ListItem", position: typeGroup ? 4 : 3, name: localizeCatName(type as string, locale) },
+        ],
+      }
+    : null;
   const typeIntro = typeLongDesc ? ((typeLongDesc.split(/\n##\s/)[0] || "").trim().split(/\n\n/)[0] || "").trim() : "";
   const typeFaq = typeLongDesc ? parseRichDescription(typeLongDesc).faq : [];
   const typeFaqLd = typeFaq.length
@@ -214,6 +229,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
   return (
     <div className="container-page !pt-3 !pb-10">
+      {typeBreadcrumbLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(typeBreadcrumbLd) }} />}
       {/* Хлебные крошки: страница типа (Главная › Каталог › Группа › Тип) или бренда */}
       {isTypePage ? (
         <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">

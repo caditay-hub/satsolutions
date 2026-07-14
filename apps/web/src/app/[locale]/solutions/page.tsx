@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { Reveal } from "@/components/Reveal";
-import { SERVICES, INDUSTRIES } from "@/lib/servicesData";
+import { SERVICES, INDUSTRIES, ALL_SERVICES } from "@/lib/servicesData";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -116,8 +116,26 @@ export default async function ServicesPage() {
   const ts = await getTranslations("services");
   const tc = await getTranslations("common");
   const steps = t.raw("steps") as { title: string; desc: string }[];
+  // JSON-LD: список всех решений/возможностей (ItemList)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+  const listLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: t("whatWeCan"),
+    url: `${siteUrl}/solutions`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: ALL_SERVICES.map((svc, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: ts(`${svc.key}.title`),
+        url: `${siteUrl}/solutions/${svc.key}`,
+      })),
+    },
+  };
   return (
     <div className="bg-white">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }} />
       {/* HERO */}
       <section className="relative overflow-hidden bg-slate-900 text-white">
         <video
