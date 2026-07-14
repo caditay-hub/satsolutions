@@ -43,7 +43,8 @@
     "photo": "photo",
     "openPhoto": "Open photo",
     "imgPrev": "Previous",
-    "imgNext": "Next"
+    "imgNext": "Next",
+    "loading": "Loading"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -526,7 +527,8 @@
     "cats": "Categories",
     "brands": "Brands",
     "products": "Products",
-    "showAll": "Show all results"
+    "showAll": "Show all results",
+    "searching": "Searching"
   },
   "form": {
     "feedbackTitle": "Feedback",

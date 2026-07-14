@@ -14,6 +14,7 @@ import { typeSlug } from "@/lib/typeSlug";
 import { priceLabel, productIcon } from "@/lib/product";
 import { CatalogMega } from "@/components/CatalogMega";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { LoadingDots } from "@/components/LoadingDots";
 
 const nav = [
   { href: "/", key: "home" },
@@ -35,8 +36,9 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
   // живые подсказки с дебаунсом
   useEffect(() => {
     const v = q.trim();
-    if (v.length < 2) { setSug({ products: [], types: [], brands: [] }); setOpen(false); return; }
+    if (v.length < 2) { setSug({ products: [], types: [], brands: [] }); setOpen(false); setLoading(false); return; }
     setLoading(true);
+    setOpen(true); // сразу открываем дропдаун — покажем индикатор «идёт поиск», не ждём ответа
     const t = setTimeout(async () => {
       try {
         const r = await getSearchSuggest(v);
@@ -92,6 +94,12 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
 
       {open && q.trim().length >= 2 && (
         <div className="absolute left-0 right-0 z-[70] mt-1 max-h-[70vh] overflow-y-auto rounded-xl border border-slate-200 bg-white p-1.5 shadow-2xl">
+          {loading && (
+            <div className="flex items-center gap-2 px-3 py-2.5 text-sm text-slate-500">
+              <LoadingDots className="text-brand-600" />
+              <span>{ts("searching")}…</span>
+            </div>
+          )}
           {!hasResults && !loading && (
             <div className="px-3 py-2 text-sm text-slate-400">{ts("nothing")}</div>
           )}

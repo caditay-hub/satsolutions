@@ -43,7 +43,8 @@
     "photo": "fotoğraf",
     "openPhoto": "Fotoğrafı aç",
     "imgPrev": "Önceki",
-    "imgNext": "Sonraki"
+    "imgNext": "Sonraki",
+    "loading": "Yükleniyor"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -526,7 +527,8 @@
     "cats": "Kategoriler",
     "brands": "Markalar",
     "products": "Ürünler",
-    "showAll": "Tüm sonuçları göster"
+    "showAll": "Tüm sonuçları göster",
+    "searching": "Aranıyor"
   },
   "form": {
     "feedbackTitle": "Geri bildirim",

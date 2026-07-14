@@ -43,7 +43,8 @@
     "photo": "rasm",
     "openPhoto": "Rasmni ochish",
     "imgPrev": "Oldingi",
-    "imgNext": "Keyingi"
+    "imgNext": "Keyingi",
+    "loading": "Yuklanmoqda"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -526,7 +527,8 @@
     "cats": "Kategoriyalar",
     "brands": "Brendlar",
     "products": "Mahsulotlar",
-    "showAll": "Barcha natijalarni ko‘rsatish"
+    "showAll": "Barcha natijalarni ko‘rsatish",
+    "searching": "Qidirilmoqda"
   },
   "form": {
     "feedbackTitle": "Aloqa",
