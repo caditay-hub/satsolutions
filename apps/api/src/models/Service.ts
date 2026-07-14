@@ -12,6 +12,8 @@ export class Service extends Model<InferAttributes<Service>, InferCreationAttrib
   declare serviceCategoryId: string | null;
   declare overviewImageUrl: string | null;
   declare items: unknown[] | null;
+  declare seoTitle: string | null;
+  declare seoDescription: string | null;
   declare sortOrder: number;
   declare published: boolean;
   declare publishedAt: Date | null;
@@ -31,6 +33,8 @@ Service.init(
     coverImageUrl: { type: DataTypes.STRING(1000), allowNull: true },
     overviewImageUrl: { type: DataTypes.STRING(1000), allowNull: true },
     items: { type: DataTypes.JSONB, allowNull: true },
+    seoTitle: { type: DataTypes.STRING(300), allowNull: true },
+    seoDescription: { type: DataTypes.STRING(600), allowNull: true },
     sortOrder: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
     published: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
     publishedAt: { type: DataTypes.DATE, allowNull: true },

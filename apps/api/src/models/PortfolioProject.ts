@@ -19,6 +19,8 @@ export class PortfolioProject extends Model<
   declare clientTasks: string | null;
   declare location: string | null;
   declare completedAt: Date | null;
+  declare seoTitle: string | null;
+  declare seoDescription: string | null;
   declare sortOrder: number;
   declare published: boolean;
   declare publishedAt: Date | null;
@@ -42,6 +44,8 @@ PortfolioProject.init(
     clientTasks: { type: DataTypes.TEXT, allowNull: true },
     location: { type: DataTypes.STRING(240), allowNull: true },
     completedAt: { type: DataTypes.DATE, allowNull: true },
+    seoTitle: { type: DataTypes.STRING(300), allowNull: true },
+    seoDescription: { type: DataTypes.STRING(600), allowNull: true },
     sortOrder: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },
     published: { type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false },
     publishedAt: { type: DataTypes.DATE, allowNull: true },
