@@ -109,18 +109,17 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
   // Smart-выдача: данные для клиентского фильтра-галочек (бренд/тип) — имена локализуем
   // на сервере, чтобы не тянуть i18n-оверлей в бандл. API отдаёт brand_name/category_name.
-  const smartItems: SmartItem[] = smart
-    ? items.map((p) => {
-        const raw = p as any;
-        return {
-          p,
-          name: localizeProductName(p, locale),
-          brand: raw.brand_name ?? null,
-          type: raw.category_name ?? null,
-          typeLabel: raw.category_name ? localizeCatName(raw.category_name, locale) : null,
-        };
-      })
-    : [];
+  const toSmartItem = (p: import("@/lib/api").ProductDto): SmartItem => {
+    const raw = p as any;
+    return {
+      p,
+      name: localizeProductName(p, locale),
+      brand: raw.brand_name ?? null,
+      type: raw.category_name ?? null,
+      typeLabel: raw.category_name ? localizeCatName(raw.category_name, locale) : null,
+    };
+  };
+  const smartItems: SmartItem[] = smart ? items.map(toSmartItem) : [];
 
   // Кейсы портфолио и решения по запросу: «бодикамера» — товаров нет, но есть кейс
   // (у StreetParking). Показываем блок с описанием при ЛЮБОМ поиске, особенно при 0 товаров.
@@ -382,7 +381,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                 <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} className="mb-4" />
               ) : null}
               {smart ? (
-                <SmartResultsView items={smartItems} usdToUzs={usdToUzs} />
+                <SmartResultsView items={smartItems} related={similar.map(toSmartItem)} usdToUzs={usdToUzs} />
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">
                   {items.map((p) => (
@@ -402,17 +401,8 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} />
           )}
 
-          {/* Похожие товары: продолжение тех же разделов, не вошедшее в smart-выдачу */}
-          {smart && similar.length > 0 ? (
-            <section className="mt-10 border-t border-slate-200 pt-6">
-              <h2 className="mb-4 text-lg font-black tracking-tight text-slate-900">{tc("similar")}</h2>
-              <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {similar.map((p) => (
-                  <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
-                ))}
-              </div>
-            </section>
-          ) : null}
+          {/* «Похожие товары» для smart-режима рендерятся внутри SmartResultsView —
+              там же общий фильтр-галочки по основной выдаче + похожим */}
 
           {typeLongDesc && typeLongDesc.trim() ? (
             <section id="type-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">

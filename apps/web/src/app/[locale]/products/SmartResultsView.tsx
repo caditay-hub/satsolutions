@@ -55,7 +55,7 @@ function FacetGroup({ title, options, selected, onToggle }: {
   );
 }
 
-export function SmartResultsView({ items, usdToUzs }: { items: SmartItem[]; usdToUzs: number }) {
+export function SmartResultsView({ items, related = [], usdToUzs }: { items: SmartItem[]; related?: SmartItem[]; usdToUzs: number }) {
   const tc = useTranslations("catalog");
   const [selBrands, setSelBrands] = useState<Set<string>>(new Set());
   const [selTypes, setSelTypes] = useState<Set<string>>(new Set());
@@ -67,13 +67,16 @@ export function SmartResultsView({ items, usdToUzs }: { items: SmartItem[]; usdT
     apply(next);
   };
 
-  // счётчики drill-down: бренды считаем при активных типах, типы — при активных брендах
-  const { brandOpts, typeOpts, filtered } = useMemo(() => {
+  // Фасеты строим по ВСЕМУ показанному (основная выдача + похожие): при точном
+  // запросе модели основная выдача = 1 товар, фильтр без related был бы пустым.
+  // Счётчики drill-down: бренды считаем при активных типах, типы — при активных брендах.
+  const { brandOpts, typeOpts, filtered, filteredRelated } = useMemo(() => {
+    const all = [...items, ...related];
     const byTypes = (it: SmartItem) => selTypes.size === 0 || (it.type != null && selTypes.has(it.type));
     const byBrands = (it: SmartItem) => selBrands.size === 0 || (it.brand != null && selBrands.has(it.brand));
     const bc = new Map<string, number>();
     const tcnt = new Map<string, { label: string; count: number }>();
-    for (const it of items) {
+    for (const it of all) {
       if (it.brand && byTypes(it)) bc.set(it.brand, (bc.get(it.brand) ?? 0) + 1);
       if (it.type && byBrands(it)) {
         const cur = tcnt.get(it.type) ?? { label: it.typeLabel ?? it.type, count: 0 };
@@ -84,8 +87,9 @@ export function SmartResultsView({ items, usdToUzs }: { items: SmartItem[]; usdT
       brandOpts: [...bc.entries()].map(([key, count]) => ({ key, label: key, count })).sort((a, b) => b.count - a.count),
       typeOpts: [...tcnt.entries()].map(([key, v]) => ({ key, label: v.label, count: v.count })).sort((a, b) => b.count - a.count),
       filtered: items.filter((it) => byTypes(it) && byBrands(it)),
+      filteredRelated: related.filter((it) => byTypes(it) && byBrands(it)),
     };
-  }, [items, selBrands, selTypes]);
+  }, [items, related, selBrands, selTypes]);
 
   const hasActive = selBrands.size > 0 || selTypes.size > 0;
   const reset = () => { setSelBrands(new Set()); setSelTypes(new Set()); };
@@ -124,19 +128,33 @@ export function SmartResultsView({ items, usdToUzs }: { items: SmartItem[]; usdT
       <div>
         {hasActive ? (
           <div className="mb-3 text-[13px] text-slate-500">
-            {tc("found")}: <span className="font-bold text-slate-900">{filtered.length}</span>
+            {tc("found")}: <span className="font-bold text-slate-900">{filtered.length + filteredRelated.length}</span>
           </div>
         ) : null}
-        {filtered.length === 0 ? (
+        {filtered.length === 0 && filteredRelated.length === 0 ? (
           <div className="rounded-xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-500">
             {tc("nothingFound")}
           </div>
         ) : (
-          <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-            {filtered.map((it) => (
-              <ProductCard key={it.p.id} p={it.p} usdToUzs={usdToUzs} name={it.name} />
-            ))}
-          </div>
+          <>
+            {filtered.length > 0 ? (
+              <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {filtered.map((it) => (
+                  <ProductCard key={it.p.id} p={it.p} usdToUzs={usdToUzs} name={it.name} />
+                ))}
+              </div>
+            ) : null}
+            {filteredRelated.length > 0 ? (
+              <section className={filtered.length > 0 ? "mt-8 border-t border-slate-200 pt-5" : undefined}>
+                <h2 className="mb-3 text-lg font-black tracking-tight text-slate-900">{tc("similar")}</h2>
+                <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                  {filteredRelated.map((it) => (
+                    <ProductCard key={it.p.id} p={it.p} usdToUzs={usdToUzs} name={it.name} />
+                  ))}
+                </div>
+              </section>
+            ) : null}
+          </>
         )}
       </div>
     </div>
