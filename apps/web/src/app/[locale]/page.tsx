@@ -308,7 +308,7 @@ export default async function HomePage() {
                 <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                   {d.video ? (
                     <AutoPlayVideo
-                      src={`${SOLUTIONS_IMG}/${d.video}.mp4?v=1`}
+                      src={`${SOLUTIONS_IMG}/${d.video}.mp4?v=2`}
                       poster={`${SOLUTIONS_IMG}/${d.poster}?v=9`}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
