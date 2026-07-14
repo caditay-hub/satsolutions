@@ -38,6 +38,17 @@ const nextConfig = {
       { source: "/news/:slug*", destination: "/", permanent: true },
       // Легаси-URL старой версии сайта (другая CMS) — в индексе Google, отдавали 404.
       // 301 на новые разделы, чтобы вернуть вес и убрать массовые 404.
+      // Точечные маппинги URL, которые ДО СИХ ПОР ранжируются (из GSC 14.07) — ВЫШЕ общих правил:
+      { source: "/category/sistemy_videonablyudeniya", destination: "/products/group/videonablyudenie", permanent: true },
+      { source: "/category/sistemy_hraneniya_dannyh", destination: "/products/type/servernoe-oborudovanie", permanent: true },
+      { source: "/en/product/show/:slug(kamera-videonabliudeniia-hikvision-ds-2cd1083g2-liu.*)", destination: "/products/hik-ds-2cd1083g2-liu-2-8mm", permanent: true },
+      { source: "/product/show/:slug(kamera-videonabliudeniia-hikvision-ds-2cd1083g2-liu.*)", destination: "/products/hik-ds-2cd1083g2-liu-2-8mm", permanent: true },
+      { source: "/public/en/product/show/:slug(videoregistrator-dhi-nvr1108hs-s3h.*)", destination: "/products/dahua-dhi-nvr1108hs-s3-h", permanent: true },
+      // /public/* — внутренний путь старого движка, тоже жил в индексе: общий свал на каталог
+      { source: "/public/en/product/show/:path*", destination: "/en/products", permanent: true },
+      { source: "/public/product/show/:path*", destination: "/products", permanent: true },
+      { source: "/public/en/category/:path*", destination: "/en/products", permanent: true },
+      { source: "/public/category/:path*", destination: "/products", permanent: true },
       { source: "/category/:path*", destination: "/products", permanent: true },
       { source: "/page/o-nas", destination: "/about", permanent: true },
       { source: "/page/o-kompanii", destination: "/about", permanent: true },
