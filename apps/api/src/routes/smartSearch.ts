@@ -319,7 +319,10 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   // 3) спрашиваем ИИ — но пользователь не ждёт дольше SMART_DEADLINE_MS:
   // если Claude не успел, отдаём обычные результаты сразу, а маппинг доделывается
   // в фоне и кэшируется — повторный такой же запрос получит умную выдачу мгновенно.
-  const SMART_DEADLINE_MS = 2500;
+  // 6с (было 2.5с): на холодном запросе с 1-3 результатами страница показывала
+  // вырожденный фильтр и без «похожих»; теперь на фронте скелет «Загрузка…»,
+  // ожидание терпимо, а тёплые запросы по-прежнему мгновенны из кэша.
+  const SMART_DEADLINE_MS = 6000;
   const cacheMapping = async (m: Mapping) => {
     await sequelize.query(
       `INSERT INTO smart_search_cache (query, mapping) VALUES (:q, :m) ON CONFLICT (query) DO NOTHING`,
