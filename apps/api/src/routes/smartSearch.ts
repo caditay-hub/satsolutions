@@ -70,10 +70,14 @@ function buildTokenMatch(q: string) {
 async function directSearch(q: string, limit: number) {
   const m = buildTokenMatch(q);
   // shortDescription НЕ матчим — шум (камеры с «PIR датчик» в описании и т.п.); семантику даёт Claude
+  // Цена/бренд/категория нужны фронту: карточки с ценой + клиентский фильтр-галочки в smart-выдаче.
   const rows = (await sequelize.query(
-    `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
-            p."shortDescription" AS short_description, p.characteristics::text AS chars_text
+    `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode", p.price, p."isUsd",
+            p."shortDescription" AS short_description, p.characteristics::text AS chars_text,
+            c.name AS category_name, c.slug AS category_slug, b.name AS brand_name, b.slug AS brand_slug
      FROM products p
+     LEFT JOIN categories c ON c.id = p."categoryId"
+     LEFT JOIN brands b ON b.id = p."brandId"
      WHERE ${m.where}
      ORDER BY ${m.rank} DESC, p.name
      LIMIT :lim`,
@@ -177,7 +181,7 @@ async function mappingSearch(map: Mapping, limit: number) {
        UNION ALL
        SELECT c.id FROM categories c JOIN sel s ON c."parentId" = s.id
      )
-     SELECT DISTINCT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
+     SELECT DISTINCT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode", p.price, p."isUsd",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text,
             c.name AS category_name, c.slug AS category_slug, b.name AS brand_name, b.slug AS brand_slug,
             ((CASE WHEN p."categoryId" IN (SELECT id FROM sel) THEN 3 ELSE 0 END) + ${kw.length ? kw.map((_, i) => `(CASE WHEN p.name ILIKE :kw${i} THEN 2 ELSE 0 END) + (CASE WHEN p."shortDescription" ILIKE :kw${i} THEN 1 ELSE 0 END)`).join(" + ") : "0"}) AS rank
@@ -314,12 +318,9 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   // 4) поиск по маппингу + прямые находки всегда сверху
   const mapped = await mappingSearch(mapping, limit);
   const directIds = new Set(direct.rows.map((r: any) => r.id));
+  // direct-строки теперь несут те же поля (цена/бренд/категория) — отдаём как есть
   let items = [
-    ...direct.rows.map((r: any) => ({
-      id: r.id, name: r.name, slug: r.slug, coverImageUrl: r.coverImageUrl, modelCode: r.modelCode,
-      short_description: (r as any).shortDescription, chars_text: JSON.stringify((r as any).characteristics ?? ""),
-      category_name: null, category_slug: null,
-    })),
+    ...direct.rows,
     ...mapped.filter((m: any) => !directIds.has(m.id)),
   ];
   // жёсткий фильтр по атрибуту «N Мп» из запроса: 5 Мп не должны попадать в «камера 4 мп»
@@ -332,12 +333,14 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
     if (filtered.length >= 3) items = filtered;
   }
   items = items.slice(0, limit);
-  // разделы для чипов: категории с количеством среди найденного
+  // разделы для чипов: категории с количеством среди найденного.
+  // Ключ — ИМЯ, не slug: подкатегории с одинаковым названием (у разных брендов)
+  // раньше давали дубли чипов «Wi-Fi точки доступа ×4».
   const secCount: Record<string, { name: string; slug: string; count: number }> = {};
   for (const it of items) {
-    if (!it.category_slug) continue;
-    secCount[it.category_slug] ??= { name: it.category_name, slug: it.category_slug, count: 0 };
-    secCount[it.category_slug].count++;
+    if (!it.category_slug || !it.category_name) continue;
+    secCount[it.category_name] ??= { name: it.category_name, slug: it.category_slug, count: 0 };
+    secCount[it.category_name].count++;
   }
   const sections = Object.values(secCount).sort((a, b) => b.count - a.count).slice(0, 8);
 

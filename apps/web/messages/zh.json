@@ -965,7 +965,8 @@
     "otherBrandsDesc": "产品数量较少的制造商集中在一个版块：网络与电信设备、UPS、IP电话和光纤接入。",
     "procheeSubtitle": "配件与附件：线缆、光纤、机柜、UPS、工具",
     "noProductsYet": "暂无产品。",
-    "wholeBrand": "查看全部"
+    "wholeBrand": "查看全部",
+    "similar": "相似商品"
   },
   "notFound": {
     "title": "页面未找到",

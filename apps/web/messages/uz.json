@@ -965,7 +965,8 @@
     "otherBrandsDesc": "Kichik assortimentli ishlab chiqaruvchilar bitta bo'limda: tarmoq va telekom uskunalari, UPS, IP-telefoniya va optik ulanish.",
     "procheeSubtitle": "Butlovchi qismlar va aksessuarlar: kabel, optika, shkaflar, UPS, asboblar",
     "noProductsYet": "Hozircha mahsulotlar yo'q.",
-    "wholeBrand": "Butun brend"
+    "wholeBrand": "Butun brend",
+    "similar": "Oʻxshash mahsulotlar"
   },
   "notFound": {
     "title": "Sahifa topilmadi",

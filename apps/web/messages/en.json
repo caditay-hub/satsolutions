@@ -965,7 +965,8 @@
     "otherBrandsDesc": "Manufacturers with a smaller range, gathered in one section: networking and telecom equipment, UPS, IP telephony and optical access.",
     "procheeSubtitle": "Components and accessories: cable, optics, cabinets, UPS, tools",
     "noProductsYet": "No products yet.",
-    "wholeBrand": "Entire brand"
+    "wholeBrand": "Entire brand",
+    "similar": "Similar products"
   },
   "notFound": {
     "title": "Page not found",

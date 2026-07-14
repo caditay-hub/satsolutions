@@ -965,7 +965,8 @@
     "otherBrandsDesc": "Küçük ürün yelpazesine sahip üreticiler tek bölümde: ağ ve telekom ekipmanları, UPS, IP telefon ve optik erişim.",
     "procheeSubtitle": "Bileşenler ve aksesuarlar: kablo, optik, kabinler, UPS, aletler",
     "noProductsYet": "Henüz ürün yok.",
-    "wholeBrand": "Markanın tümü"
+    "wholeBrand": "Markanın tümü",
+    "similar": "Benzer ürünler"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",

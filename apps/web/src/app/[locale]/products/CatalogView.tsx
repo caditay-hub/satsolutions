@@ -21,6 +21,7 @@ import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { TYPE_LONGREAD_SLUG } from "@/lib/typeLongread";
 import { CatalogFacets } from "./CatalogFacets";
+import { SmartResultsView, type SmartItem } from "./SmartResultsView";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
 
 // Размер «страницы» для голого каталога /products (тысячи позиций). На страницах
@@ -102,6 +103,37 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
         total = s.total;
       }
     } catch {}
+  }
+
+  // Smart-выдача: данные для клиентского фильтра-галочек (бренд/тип) — имена локализуем
+  // на сервере, чтобы не тянуть i18n-оверлей в бандл. API отдаёт brand_name/category_name.
+  const smartItems: SmartItem[] = smart
+    ? items.map((p) => {
+        const raw = p as any;
+        return {
+          p,
+          name: localizeProductName(p, locale),
+          brand: raw.brand_name ?? null,
+          type: raw.category_name ?? null,
+          typeLabel: raw.category_name ? localizeCatName(raw.category_name, locale) : null,
+        };
+      })
+    : [];
+
+  // «Похожие товары» под smart-выдачей: добираем из тех же разделов то, что не вошло в 60.
+  let similar: import("@/lib/api").ProductDto[] = [];
+  if (smart) {
+    const shown = new Set(items.map((i) => i.id));
+    for (const s of (smart.sections ?? []).slice(0, 2)) {
+      try {
+        const r = await getProducts(1, 24, { category: s.slug });
+        for (const p of r.items) {
+          if (!shown.has(p.id)) { similar.push(p); shown.add(p.id); }
+          if (similar.length >= 10) break;
+        }
+      } catch {}
+      if (similar.length >= 10) break;
+    }
   }
 
   // Страница типа: одиночный тип без других «осей» — заголовок/лонгрид/без группы «Тип».
@@ -237,9 +269,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       ) : null}
 
       <div className="mt-3 grid gap-6 lg:grid-cols-[260px_1fr]">
-        {hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} pathType={pathType} pathBrand={brandLanding ? brand : undefined} /> : <div />}
+        {/* smart-поиск несёт свой фильтр внутри SmartResultsView — колонку не занимаем */}
+        {smart ? null : hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} pathType={pathType} pathBrand={brandLanding ? brand : undefined} /> : <div />}
 
-        <div>
+        <div className={smart ? "lg:col-span-2" : undefined}>
           {/* Заголовок: по какому запросу выдан результат (только для поиска) */}
           {q ? (
             <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5">
@@ -302,11 +335,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                 <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} className="mb-4" />
               ) : null}
               {smart ? (
-                <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {items.map((p) => (
-                    <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
-                  ))}
-                </div>
+                <SmartResultsView items={smartItems} usdToUzs={usdToUzs} />
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">
                   {items.map((p) => (
@@ -325,6 +354,18 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           {smart ? null : (
             <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} />
           )}
+
+          {/* Похожие товары: продолжение тех же разделов, не вошедшее в smart-выдачу */}
+          {smart && similar.length > 0 ? (
+            <section className="mt-10 border-t border-slate-200 pt-6">
+              <h2 className="mb-4 text-lg font-black tracking-tight text-slate-900">{tc("similar")}</h2>
+              <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {similar.map((p) => (
+                  <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           {typeLongDesc && typeLongDesc.trim() ? (
             <section id="type-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
