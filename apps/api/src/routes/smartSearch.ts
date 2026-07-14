@@ -27,42 +27,73 @@ type Mapping = {
   explain: string;
 };
 
-async function directSearch(q: string, limit: number) {
+// разбиваем запрос на слова-токены (2+ символа, до 8 слов). Порядок неважен,
+// слова могут быть разделены другими словами: «Беспроводной замок GL300W»
+// найдёт «Беспроводной замок ZKTeco GL300W».
+function tokenize(s: string): string[] {
+  return Array.from(
+    new Set(s.split(/[\s,;/]+/).map((t) => t.trim()).filter((t) => t.length >= 2)),
+  ).slice(0, 8);
+}
+
+// Условие поиска: товар подходит, если ВСЕ токены запроса встречаются в имени
+// ИЛИ коде модели (в любом порядке), ИЛИ совпало локализованное имя (i18n),
+// ИЛИ всё то же в «перевёрнутой» раскладке клавиатуры (gj;fhrf = пожарка).
+function buildTokenMatch(q: string) {
   const like = `%${q}%`;
   const qf = flipLayout(q);
-  const likeF = qf ? `%${qf}%` : NEVER; // раскладка: ищем ещё и по «перевёрнутому» варианту
-  // id товаров, совпавших по ЛОКАЛИЗОВАННОМУ имени (uz/en/tr/zh) — БД хранит имена на RU
+  const likeF = qf ? `%${qf}%` : NEVER;
   const i18nIds = matchI18nProductIds(q, 200);
-  const i18nSet = new Set(i18nIds);
-  const ids = i18nIds.length ? i18nIds : [NIL_UUID]; // sentinel: валидный UUID (пустой '' роняет каст)
+  const ids = i18nIds.length ? i18nIds : [NIL_UUID]; // sentinel-UUID: пустой '' роняет каст
+  const tokens = tokenize(q);
+  const tokensF = qf ? tokenize(qf) : [];
+  const repl: Record<string, any> = { like, likeF, ids };
+  const allTokens = (toks: string[], prefix: string) =>
+    toks.length
+      ? "(" +
+        toks
+          .map((t, i) => {
+            repl[`${prefix}${i}`] = `%${t}%`;
+            return `(p.name ILIKE :${prefix}${i} OR p."modelCode" ILIKE :${prefix}${i})`;
+          })
+          .join(" AND ") +
+        ")"
+      : "false";
+  const tokCond = allTokens(tokens, "t"); // все токены присутствуют
+  const tokCondF = tokensF.length ? allTokens(tokensF, "tf") : "false";
+  const where = `p.published AND (${tokCond} OR ${tokCondF} OR p.id IN (:ids))`;
+  // ранг: точная фраза целиком > все токены > токены в другой раскладке > i18n
+  const rank = `(CASE WHEN p.name ILIKE :like OR p."modelCode" ILIKE :like THEN 3 WHEN ${tokCond} THEN 2 WHEN ${tokCondF} THEN 1 ELSE 0 END)`;
+  return { where, rank, repl, tokens, tokensF, i18nSet: new Set(i18nIds) };
+}
+
+async function directSearch(q: string, limit: number) {
+  const m = buildTokenMatch(q);
   // shortDescription НЕ матчим — шум (камеры с «PIR датчик» в описании и т.п.); семантику даёт Claude
-  const where = `p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))`;
   const rows = (await sequelize.query(
     `SELECT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text
      FROM products p
-     WHERE ${where}
-     ORDER BY (CASE WHEN p.name ILIKE :like OR p."modelCode" ILIKE :like THEN 2 WHEN p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF THEN 1 ELSE 0 END) DESC, p.name
+     WHERE ${m.where}
+     ORDER BY ${m.rank} DESC, p.name
      LIMIT :lim`,
-    { type: QueryTypes.SELECT, replacements: { like, likeF, ids, lim: limit } },
+    { type: QueryTypes.SELECT, replacements: { ...m.repl, lim: limit } },
   )) as any[];
   // отдельно общий count для решения «достаточно ли»
   const cnt = (await sequelize.query(
-    `SELECT count(*)::int AS c FROM products p WHERE ${where}`,
-    { type: QueryTypes.SELECT, replacements: { like, likeF, ids } },
+    `SELECT count(*)::int AS c FROM products p WHERE ${m.where}`,
+    { type: QueryTypes.SELECT, replacements: m.repl },
   )) as any[];
-  // «сильных» совпадений (имя/модель RU/локализ./раскладка) — решают, нужен ли ИИ
-  const reQ = new RegExp(escapeRe(q), "i");
-  const reF = qf ? new RegExp(escapeRe(qf), "i") : null;
+  // «сильное» совпадение — в имени/модели есть ВСЕ токены (или i18n / другая раскладка)
   const strong = rows.filter((r) => {
-    const hay = `${r.name} ${r.modelCode || ""}`;
-    return i18nSet.has(r.id) || reQ.test(hay) || (reF != null && reF.test(hay));
+    const hay = `${r.name} ${r.modelCode || ""}`.toLowerCase();
+    return (
+      m.i18nSet.has(r.id) ||
+      (m.tokens.length > 0 && m.tokens.every((t) => hay.includes(t))) ||
+      (m.tokensF.length > 0 && m.tokensF.every((t) => hay.includes(t)))
+    );
   }).length;
   return { rows, count: cnt[0]?.c ?? rows.length, strong };
-}
-
-function escapeRe(s: string) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 async function catalogContext() {
@@ -184,18 +215,17 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
     if (!q || q.length < 2) return res.json({ products: [], types: [], brands: [] });
     const like = `%${q}%`;
     const qf = flipLayout(q);
-    const likeF = qf ? `%${qf}%` : NEVER; // раскладка клавиатуры
-    // совпадения по локализованному имени (uz/en/tr/zh) — БД хранит имена на RU
-    const i18nIds = matchI18nProductIds(q, 50);
-    const ids = i18nIds.length ? i18nIds : [NIL_UUID];
+    const likeF = qf ? `%${qf}%` : NEVER; // раскладка клавиатуры (для типов/брендов)
+    // товары ищем по токенам (все слова в имени/модели, порядок неважен)
+    const pm = buildTokenMatch(q);
     const [products, types, brands] = await Promise.all([
       sequelize.query(
         `SELECT p.name, p.slug, p."coverImageUrl", p.price, p.characteristics::text AS chars_text, b.name AS brand_name
          FROM products p LEFT JOIN brands b ON b.id = p."brandId"
-         WHERE p.published AND (p.name ILIKE :like OR p."modelCode" ILIKE :like OR p.name ILIKE :likeF OR p."modelCode" ILIKE :likeF OR p.id IN (:ids))
+         WHERE ${pm.where}
          ORDER BY (CASE WHEN p.name ILIKE :start THEN 0 ELSE 1 END), length(p.name)
          LIMIT 6`,
-        { type: QueryTypes.SELECT, replacements: { like, likeF, start: `${q}%`, ids } },
+        { type: QueryTypes.SELECT, replacements: { ...pm.repl, start: `${q}%` } },
       ),
       sequelize.query(
         `SELECT c.name, count(p.id)::int AS count
