@@ -364,11 +364,19 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   // 4) поиск по маппингу + прямые находки всегда сверху
   const mapped = await mappingSearch(mapping, limit);
   const directIds = new Set(direct.rows.map((r: any) => r.id));
-  // direct-строки теперь несут те же поля (цена/бренд/категория) — отдаём как есть
-  let items = [
-    ...direct.rows,
-    ...mapped.filter((m: any) => !directIds.has(m.id)),
-  ];
+  const mappedFresh = mapped.filter((m: any) => !directIds.has(m.id));
+  // Точный запрос модели («GL300W», «Беспроводной замок GL300W»): в основной выдаче —
+  // ТОЛЬКО точные совпадения; ИИ-подборка из категорий уходит вниз как «похожие
+  // предложения» (related), а не смешивается с результатом.
+  let items: any[];
+  let related: any[] = [];
+  if (direct.strong > 0) {
+    items = direct.rows;
+    related = mappedFresh.slice(0, 20);
+  } else {
+    // точных совпадений нет — вся smart-подборка и есть результат
+    items = [...direct.rows, ...mappedFresh];
+  }
   // жёсткий фильтр по атрибуту «N Мп» из запроса: 5 Мп не должны попадать в «камера 4 мп»
   const mpQ = q.match(/(\d{1,2})\s*(?:мп|mp|мегапиксел)/i);
   if (mpQ) {
@@ -379,11 +387,11 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
     if (filtered.length >= 3) items = filtered;
   }
   items = items.slice(0, limit);
-  // разделы для чипов: категории с количеством среди найденного.
+  // разделы для чипов: категории с количеством среди найденного (вкл. related).
   // Ключ — ИМЯ, не slug: подкатегории с одинаковым названием (у разных брендов)
   // раньше давали дубли чипов «Wi-Fi точки доступа ×4».
   const secCount: Record<string, { name: string; slug: string; count: number }> = {};
-  for (const it of items) {
+  for (const it of [...items, ...related]) {
     if (!it.category_slug || !it.category_name) continue;
     secCount[it.category_name] ??= { name: it.category_name, slug: it.category_slug, count: 0 };
     secCount[it.category_name].count++;
@@ -398,6 +406,7 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
     directItems: direct.rows,
     total: items.length,
     items,
+    related, // «похожие предложения» под основной выдачей (при точном запросе модели)
   });
   } catch (e) {
     console.error("search-smart error", e);

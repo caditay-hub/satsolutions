@@ -134,19 +134,24 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     } catch {}
   }
 
-  // «Похожие товары» под smart-выдачей: добираем из тех же разделов то, что не вошло в 60.
+  // «Похожие товары» под smart-выдачей: при точном запросе модели API отдаёт
+  // related (ИИ-подборка из тех же разделов); иначе добираем из категорий выдачи.
   let similar: import("@/lib/api").ProductDto[] = [];
   if (smart) {
-    const shown = new Set(items.map((i) => i.id));
-    for (const s of (smart.sections ?? []).slice(0, 2)) {
-      try {
-        const r = await getProducts(1, 24, { category: s.slug });
-        for (const p of r.items) {
-          if (!shown.has(p.id)) { similar.push(p); shown.add(p.id); }
-          if (similar.length >= 10) break;
-        }
-      } catch {}
-      if (similar.length >= 10) break;
+    if (smart.related && smart.related.length > 0) {
+      similar = smart.related.slice(0, 15);
+    } else {
+      const shown = new Set(items.map((i) => i.id));
+      for (const s of (smart.sections ?? []).slice(0, 2)) {
+        try {
+          const r = await getProducts(1, 24, { category: s.slug });
+          for (const p of r.items) {
+            if (!shown.has(p.id)) { similar.push(p); shown.add(p.id); }
+            if (similar.length >= 10) break;
+          }
+        } catch {}
+        if (similar.length >= 10) break;
+      }
     }
   }
 

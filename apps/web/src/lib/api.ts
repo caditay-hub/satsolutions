@@ -342,6 +342,9 @@ export type SmartSearchDto = {
   sections?: SmartSection[];
   total: number;
   items: ProductDto[];
+  // при точном запросе модели: основная выдача = только точные совпадения,
+  // ИИ-подборка из категорий приходит отдельно как «похожие предложения»
+  related?: ProductDto[];
 };
 export async function getSmartSearch(q: string, limit = 60) {
   return apiFetch<SmartSearchDto>(`/search-smart?q=${encodeURIComponent(q)}&limit=${limit}`, { cache: "no-store" } as any);
