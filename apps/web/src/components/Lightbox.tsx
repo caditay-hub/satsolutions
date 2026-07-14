@@ -1,15 +1,20 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 /* Галерея с лайтбоксом: миниатюры + просмотр поверх страницы.
-   Закрытие: крестик, клик по фону, Esc, кнопка «Назад» на телефоне. Листание стрелками. */
+   Закрытие: крестик, клик по фону, Esc, кнопка «Назад» на телефоне. Листание стрелками.
+   Оверлей — через portal в body: внутри контента transform/opacity анимаций-обёрток
+   ломают fixed-позиционирование (лайтбокс «залипал» под шапкой и был полупрозрачным). */
 export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: string; gridClass?: string }) {
   const t = useTranslations("common");
   const list = images.filter(Boolean);
   const [open, setOpen] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
 
   const close = useCallback(() => setOpen(null), []);
   const show = (i: number) => setOpen(i);
@@ -52,7 +57,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
             key={src + i}
             type="button"
             onClick={() => show(i)}
-            className="group relative block aspect-[4/3] overflow-hidden rounded-xl border border-slate-200 bg-slate-100"
+            className="group relative block aspect-[4/3] overflow-hidden rounded-xl border border-slate-200 bg-white"
             aria-label={`${t("openPhoto")} ${i + 1}`}
           >
             <Image
@@ -60,14 +65,15 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
               alt={`${alt} — ${t("photo")} ${i + 1}`}
               fill
               sizes="(max-width: 640px) 50vw, 25vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              // contain, не cover: схемы и фото техники не должны обрезаться рамкой
+              className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
               unoptimized
             />
           </button>
         ))}
       </div>
 
-      {open !== null && (
+      {open !== null && mounted && createPortal(
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
           onClick={handleClose}
@@ -105,7 +111,7 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
           <img
             src={list[open]}
             alt={`${alt} — ${t("photo")} ${open + 1}`}
-            className="max-h-[90vh] max-w-[92vw] rounded-lg object-contain"
+            className="max-h-[90vh] max-w-[92vw] rounded-lg bg-white object-contain"
             onClick={(e) => e.stopPropagation()}
           />
           {list.length > 1 && (
@@ -113,7 +119,8 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
               {open + 1} / {list.length}
             </div>
           )}
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
