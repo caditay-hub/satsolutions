@@ -349,13 +349,26 @@ export async function getProductTypes(brand?: string) {
   return apiFetch<{ types: ProductTypeDto[] }>(`/product-types${qs}`, { next: { revalidate: 300 } });
 }
 
+// Кейсы портфолио + решения в поиске: «бодикамера» без товаров должна выдавать кейс
+export type CaseHitDto = {
+  title: string;
+  slug: string;
+  excerpt: string | null;
+  coverImageUrl: string | null;
+  kind: "portfolio" | "solution";
+};
+export async function getSearchCases(q: string) {
+  return apiFetch<{ cases: CaseHitDto[] }>(`/search-cases?q=${encodeURIComponent(q)}`, { cache: "no-store" } as any);
+}
+
 export type SuggestDto = {
   products: { name: string; slug: string; coverImageUrl: string | null; price: string; chars_text?: string; brand_name?: string | null }[];
   types: { name: string; count: number }[];
   brands: { name: string; slug: string }[];
+  cases?: CaseHitDto[];
 };
 export async function getSearchSuggest(q: string): Promise<SuggestDto> {
   const res = await fetch(`${apiBaseUrl()}/search-suggest?q=${encodeURIComponent(q)}`, { cache: "no-store" });
-  if (!res.ok) return { products: [], types: [], brands: [] };
+  if (!res.ok) return { products: [], types: [], brands: [], cases: [] };
   return res.json();
 }

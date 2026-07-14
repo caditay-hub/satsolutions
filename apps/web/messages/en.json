@@ -528,7 +528,8 @@
     "brands": "Brands",
     "products": "Products",
     "showAll": "Show all results",
-    "searching": "Searching"
+    "searching": "Searching",
+    "cases": "Case studies & solutions"
   },
   "form": {
     "feedbackTitle": "Feedback",
@@ -966,7 +967,10 @@
     "procheeSubtitle": "Components and accessories: cable, optics, cabinets, UPS, tools",
     "noProductsYet": "No products yet.",
     "wholeBrand": "Entire brand",
-    "similar": "Similar products"
+    "similar": "Similar products",
+    "casesTitle": "Case studies & solutions",
+    "caseBadge": "Case",
+    "solutionBadge": "Solution"
   },
   "notFound": {
     "title": "Page not found",

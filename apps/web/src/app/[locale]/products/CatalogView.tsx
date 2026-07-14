@@ -6,7 +6,9 @@ import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeLongread } from "@/lib/longreadI18n";
 import { Link } from "@/i18n/navigation";
-import { getProducts, getProductFacets, getSitePage, getSmartSearch, type SmartSearchDto } from "@/lib/api";
+import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
+import { resolveImageUrl } from "@/lib/image";
+import { localizePortfolioProject } from "@/lib/contentI18n";
 import { ProductCard } from "@/components/Cards";
 import { CatalogCard } from "@/components/CatalogCard";
 import { CatalogRow } from "@/components/CatalogRow";
@@ -119,6 +121,18 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
         };
       })
     : [];
+
+  // Кейсы портфолио и решения по запросу: «бодикамера» — товаров нет, но есть кейс
+  // (у StreetParking). Показываем блок с описанием при ЛЮБОМ поиске, особенно при 0 товаров.
+  let caseHits: CaseHitDto[] = [];
+  if (q) {
+    try {
+      const r = await getSearchCases(q);
+      caseHits = (r.cases ?? []).map((c) =>
+        c.kind === "portfolio" ? localizePortfolioProject(c as any, locale) as CaseHitDto : c
+      );
+    } catch {}
+  }
 
   // «Похожие товары» под smart-выдачей: добираем из тех же разделов то, что не вошло в 60.
   let similar: import("@/lib/api").ProductDto[] = [];
@@ -285,6 +299,34 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <Link href="/products" className="ml-auto text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">
                 {tc("reset")} ✕
               </Link>
+            </div>
+          ) : null}
+          {/* Кейсы и решения по запросу — особенно ценно, когда товаров 0 */}
+          {q && caseHits.length > 0 ? (
+            <div className="mb-5">
+              <div className="mb-2 text-xs font-bold uppercase tracking-wider text-slate-500">{tc("casesTitle")}</div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {caseHits.map((c) => {
+                  const cimg = resolveImageUrl(c.coverImageUrl);
+                  return (
+                    <Link key={`${c.kind}-${c.slug}`} href={c.kind === "portfolio" ? `/portfolio/${c.slug}` : `/solutions/${c.slug}`}
+                      className="group flex gap-3 rounded-xl border-2 border-slate-200 bg-white p-3 transition-colors hover:border-brand-500">
+                      {cimg ? (
+                        <span className="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg bg-slate-50">
+                          <Image src={cimg} alt="" fill className="object-cover" sizes="112px" unoptimized />
+                        </span>
+                      ) : null}
+                      <span className="min-w-0">
+                        <span className={`inline-block rounded px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wide ${c.kind === "portfolio" ? "bg-emerald-50 text-emerald-700" : "bg-brand-50 text-brand-700"}`}>
+                          {c.kind === "portfolio" ? tc("caseBadge") : tc("solutionBadge")}
+                        </span>
+                        <span className="mt-1 block text-[14px] font-bold leading-snug text-slate-900 line-clamp-2 group-hover:text-brand-700">{c.title}</span>
+                        {c.excerpt ? <span className="mt-1 block text-[12px] leading-snug text-slate-500 line-clamp-2">{c.excerpt}</span> : null}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           ) : null}
           {smart && smart.sections && smart.sections.length > 0 ? (

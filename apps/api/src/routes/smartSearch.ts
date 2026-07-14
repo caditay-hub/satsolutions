@@ -212,6 +212,51 @@ async function mappingSearch(map: Mapping, limit: number) {
 }
 
 
+// ── Кейсы портфолио + решения: токенный поиск по названию/описанию/контенту ──
+// Лёгкий стемминг русских окончаний: «бодикамеры» должно находить «бодикамерах»,
+// «серверное» — «серверной комнаты». Для кириллицы ≥6 симв. срезаем окончание.
+function stemRu(t: string): string {
+  if (t.length < 6 || !/[а-яё]/i.test(t)) return t;
+  return t.replace(/(ами|ями|ого|его|ому|ему|ыми|ими|ах|ях|ам|ям|ов|ев|ой|ей|ый|ий|ая|яя|ое|ее|ые|ие|ом|ем|у|ю|а|я|ы|и|е|о)$/i, "");
+}
+
+async function searchCases(qRaw: string, limit = 6) {
+  const q = norm(qRaw);
+  const tokens = tokenize(q).map(stemRu).filter((t) => t.length >= 2);
+  if (!tokens.length) return [];
+  const qf = flipLayout(q);
+  const tokensF = qf ? tokenize(qf).map(stemRu).filter((t) => t.length >= 2) : [];
+  const repl: Record<string, any> = { lim: limit };
+  const arr = (toks: string[], pfx: string) =>
+    toks.map((t, i) => { repl[`${pfx}${i}`] = `%${t}%`; return `:${pfx}${i}`; });
+  const pats = arr(tokens, "ct");
+  const patsF = tokensF.length ? arr(tokensF, "cf") : null;
+  const hay = `(title || ' ' || COALESCE(excerpt,'') || ' ' || COALESCE(content,''))`;
+  const cond = `(${hay} ILIKE ALL(ARRAY[${pats.join(",")}]::text[])${patsF ? ` OR ${hay} ILIKE ALL(ARRAY[${patsF.join(",")}]::text[])` : ""})`;
+  const rows = (await sequelize.query(
+    `SELECT * FROM (
+       SELECT title, slug, excerpt, "coverImageUrl", 'portfolio' AS kind
+       FROM portfolio_projects WHERE published AND ${cond}
+       UNION ALL
+       SELECT title, slug, excerpt, "coverImageUrl", 'solution' AS kind
+       FROM services WHERE published AND ${cond}
+     ) x ORDER BY kind LIMIT :lim`, // kind ASC: portfolio (кейсы) раньше solution
+    { type: QueryTypes.SELECT, replacements: repl },
+  )) as any[];
+  return rows;
+}
+
+smartSearchRouter.get("/search-cases", async (req, res) => {
+  try {
+    const q = typeof req.query.q === "string" ? req.query.q : "";
+    if (!q || q.trim().length < 2) return res.json({ cases: [] });
+    res.json({ cases: await searchCases(q) });
+  } catch (e) {
+    console.error("search-cases error", e);
+    res.json({ cases: [] });
+  }
+});
+
 // ── Автодополнение: товары + типы + бренды ──────────────────────────────────
 smartSearchRouter.get("/search-suggest", async (req, res) => {
   try {
@@ -222,7 +267,7 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
     const likeF = qf ? `%${qf}%` : NEVER; // раскладка клавиатуры (для типов/брендов)
     // товары ищем по токенам (все слова в имени/модели, порядок неважен)
     const pm = buildTokenMatch(q);
-    const [products, types, brands] = await Promise.all([
+    const [products, types, brands, cases] = await Promise.all([
       sequelize.query(
         `SELECT p.name, p.slug, p."coverImageUrl", p.price, p.characteristics::text AS chars_text, b.name AS brand_name
          FROM products p LEFT JOIN brands b ON b.id = p."brandId"
@@ -242,10 +287,11 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
         `SELECT name, slug FROM brands WHERE published AND (name ILIKE :like OR name ILIKE :likeF) ORDER BY "sortOrder" LIMIT 3`,
         { type: QueryTypes.SELECT, replacements: { like, likeF } },
       ),
+      searchCases(q, 2).catch(() => []),
     ]);
-    res.json({ products, types, brands });
+    res.json({ products, types, brands, cases });
   } catch (e) {
-    res.json({ products: [], types: [], brands: [] });
+    res.json({ products: [], types: [], brands: [], cases: [] });
   }
 });
 

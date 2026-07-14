@@ -528,7 +528,8 @@
     "brands": "Markalar",
     "products": "Ürünler",
     "showAll": "Tüm sonuçları göster",
-    "searching": "Aranıyor"
+    "searching": "Aranıyor",
+    "cases": "Projeler ve çözümler"
   },
   "form": {
     "feedbackTitle": "Geri bildirim",
@@ -966,7 +967,10 @@
     "procheeSubtitle": "Bileşenler ve aksesuarlar: kablo, optik, kabinler, UPS, aletler",
     "noProductsYet": "Henüz ürün yok.",
     "wholeBrand": "Markanın tümü",
-    "similar": "Benzer ürünler"
+    "similar": "Benzer ürünler",
+    "casesTitle": "Projeler ve çözümler",
+    "caseBadge": "Proje",
+    "solutionBadge": "Çözüm"
   },
   "notFound": {
     "title": "Sayfa bulunamadı",

@@ -528,7 +528,8 @@
     "brands": "Brendlar",
     "products": "Mahsulotlar",
     "showAll": "Barcha natijalarni ko‘rsatish",
-    "searching": "Qidirilmoqda"
+    "searching": "Qidirilmoqda",
+    "cases": "Keyslar va yechimlar"
   },
   "form": {
     "feedbackTitle": "Aloqa",
@@ -966,7 +967,10 @@
     "procheeSubtitle": "Butlovchi qismlar va aksessuarlar: kabel, optika, shkaflar, UPS, asboblar",
     "noProductsYet": "Hozircha mahsulotlar yo'q.",
     "wholeBrand": "Butun brend",
-    "similar": "Oʻxshash mahsulotlar"
+    "similar": "Oʻxshash mahsulotlar",
+    "casesTitle": "Keyslar va yechimlar",
+    "caseBadge": "Keys",
+    "solutionBadge": "Yechim"
   },
   "notFound": {
     "title": "Sahifa topilmadi",

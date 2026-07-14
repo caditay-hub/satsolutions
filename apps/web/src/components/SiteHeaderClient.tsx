@@ -28,7 +28,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
   const router = useRouter();
   const ts = useTranslations("search");
   const [q, setQ] = useState("");
-  const [sug, setSug] = useState<SuggestDto>({ products: [], types: [], brands: [] });
+  const [sug, setSug] = useState<SuggestDto>({ products: [], types: [], brands: [], cases: [] });
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -36,7 +36,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
   // живые подсказки с дебаунсом
   useEffect(() => {
     const v = q.trim();
-    if (v.length < 2) { setSug({ products: [], types: [], brands: [] }); setOpen(false); setLoading(false); return; }
+    if (v.length < 2) { setSug({ products: [], types: [], brands: [], cases: [] }); setOpen(false); setLoading(false); return; }
     setLoading(true);
     setOpen(true); // сразу открываем дропдаун — покажем индикатор «идёт поиск», не ждём ответа
     const t = setTimeout(async () => {
@@ -69,7 +69,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
     if (v) go(`/products?q=${encodeURIComponent(v)}`);
   }
 
-  const hasResults = sug.products.length || sug.types.length || sug.brands.length;
+  const hasResults = sug.products.length || sug.types.length || sug.brands.length || (sug.cases?.length ?? 0);
 
   return (
     <div ref={boxRef} className={`relative ${className}`}>
@@ -148,6 +148,23 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
                   </button>
                 );
               })}
+            </div>
+          )}
+
+          {(sug.cases?.length ?? 0) > 0 && (
+            <div className="border-t border-slate-100 pt-1">
+              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("cases")}</div>
+              {sug.cases!.map((c) => (
+                <button key={`${c.kind}-${c.slug}`} type="button"
+                  onClick={() => go(c.kind === "portfolio" ? `/portfolio/${c.slug}` : `/solutions/${c.slug}`)}
+                  className="flex w-full items-start gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-slate-50">
+                  <span className="mt-0.5 text-emerald-600">◆</span>
+                  <span className="min-w-0">
+                    <span className="block truncate text-[13px] font-semibold text-slate-800">{c.title}</span>
+                    {c.excerpt ? <span className="block truncate text-[11px] text-slate-400">{c.excerpt}</span> : null}
+                  </span>
+                </button>
+              ))}
             </div>
           )}
 
