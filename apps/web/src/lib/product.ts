@@ -7,8 +7,8 @@ export function priceLabel(p: Pick<ProductDto, "price" | "characteristics">): st
     const fmt = Math.round(n).toLocaleString("ru-RU").replace(/,/g, " ");
     return `от ${fmt} сум`;
   }
-  if (p.characteristics && (p.characteristics as any)["Цена"] === "по запросу") return "Цена по запросу";
-  return null;
+  // Нет цены — всегда «Цена по запросу» (карточка не должна быть без ценового блока)
+  return "Цена по запросу";
 }
 
 // i18n-вариант: возвращает структуру, а текст собирается через переводы (common.priceFrom/priceOnRequest).
@@ -19,8 +19,8 @@ export function priceInfo(p: Pick<ProductDto, "price" | "characteristics">): Pri
     const value = Math.round(n).toLocaleString("ru-RU").replace(/,/g, " ");
     return { kind: "value", value };
   }
-  if (p.characteristics && (p.characteristics as any)["Цена"] === "по запросу") return { kind: "onRequest" };
-  return null;
+  // Нет цены — всегда «Цена по запросу» (карточка не должна быть без ценового блока)
+  return { kind: "onRequest" };
 }
 
 // Эмодзи-иконка по типу товара (для карточек без фото)

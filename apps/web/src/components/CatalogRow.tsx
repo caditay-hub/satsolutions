@@ -56,7 +56,7 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
           <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
           {tc("inStock")}
         </div>
-        {price ? <div className="text-[15px] font-black text-brand-700">{price}</div> : null}
+        {price ? <div className="text-[15px] font-black text-[#e02020]">{price}</div> : null}
         <RequestQuoteButton productName={displayName} label={tc("getQuote")} variant="brand" />
       </div>
     </div>

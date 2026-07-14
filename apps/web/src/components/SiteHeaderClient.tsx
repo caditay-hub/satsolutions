@@ -143,7 +143,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[13px] font-semibold text-slate-800">{p.name}</span>
-                      {price ? <span className="block text-[11px] font-bold text-brand-700">{price}</span> : (p.brand_name ? <span className="block text-[11px] text-slate-400">{p.brand_name}</span> : null)}
+                      {price ? <span className="block text-[11px] font-bold text-[#e02020]">{price}</span> : (p.brand_name ? <span className="block text-[11px] text-slate-400">{p.brand_name}</span> : null)}
                     </span>
                   </button>
                 );

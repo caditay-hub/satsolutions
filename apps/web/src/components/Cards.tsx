@@ -41,7 +41,7 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
       </div>
       <div className="px-2.5 py-1.5 border-t border-slate-100 bg-white">
         <div className="text-[13px] leading-snug font-bold text-slate-900 line-clamp-2 first-letter:uppercase">{displayName}</div>
-        {price ? <div className="mt-1 text-[13px] font-black text-brand-700">{price}</div> : null}
+        {price ? <div className="mt-1 text-[13px] font-black text-[#e02020]">{price}</div> : null}
       </div>
     </Link>
   );

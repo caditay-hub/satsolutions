@@ -326,9 +326,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
             {/* Цена + CTA в одном ряду — компактнее, контент поднимается выше */}
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-              {priceLabel(product) ? (
-                <div className="text-2xl font-black text-brand-700">{priceLabel(product)}</div>
-              ) : null}
+              <div className="text-2xl font-black text-[#e02020]">{priceLabel(product)}</div>
               <RequestQuoteButton
                 label={t("common.getQuote")}
                 variant="primary"

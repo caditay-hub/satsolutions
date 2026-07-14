@@ -46,7 +46,7 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
             <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             {tc("inStock")}
           </div>
-          {price ? <div className="mt-0.5 text-[16px] font-black text-brand-700">{price}</div> : null}
+          {price ? <div className="mt-0.5 text-[16px] font-black text-[#e02020]">{price}</div> : null}
         </div>
       </div>
 
