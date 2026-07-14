@@ -22,7 +22,9 @@
     "catalog": "Katalog",
     "products": "Ürünler",
     "portfolio": "Portföy",
-    "about": "Hakkımızda"
+    "about": "Hakkımızda",
+    "allServices": "Tüm hizmetler",
+    "allProjects": "Tüm projeler"
   },
   "common": {
     "contacts": "İletişim",

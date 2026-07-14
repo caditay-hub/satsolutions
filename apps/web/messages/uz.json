@@ -22,7 +22,9 @@
     "catalog": "Katalog",
     "products": "Mahsulotlar",
     "portfolio": "Portfolio",
-    "about": "Kompaniya"
+    "about": "Kompaniya",
+    "allServices": "Barcha xizmatlar",
+    "allProjects": "Barcha loyihalar"
   },
   "common": {
     "contacts": "Aloqa",

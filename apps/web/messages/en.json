@@ -22,7 +22,9 @@
     "catalog": "Catalog",
     "products": "Products",
     "portfolio": "Portfolio",
-    "about": "About"
+    "about": "About",
+    "allServices": "All services",
+    "allProjects": "All projects"
   },
   "common": {
     "contacts": "Contacts",

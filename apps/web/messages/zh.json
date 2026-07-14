@@ -22,7 +22,9 @@
     "catalog": "产品目录",
     "products": "产品",
     "portfolio": "案例",
-    "about": "关于我们"
+    "about": "关于我们",
+    "allServices": "全部服务",
+    "allProjects": "全部项目"
   },
   "common": {
     "contacts": "联系我们",

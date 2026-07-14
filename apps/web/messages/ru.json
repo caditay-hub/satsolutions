@@ -22,7 +22,9 @@
     "catalog": "Каталог",
     "products": "Продукция",
     "portfolio": "Портфолио",
-    "about": "О компании"
+    "about": "О компании",
+    "allServices": "Все услуги",
+    "allProjects": "Все проекты"
   },
   "common": {
     "contacts": "Контакты",

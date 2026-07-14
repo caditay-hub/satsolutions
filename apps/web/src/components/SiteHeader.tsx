@@ -1,4 +1,6 @@
-import { getSitePage } from "@/lib/api";
+import { getSitePage, getPortfolio } from "@/lib/api";
+import { getLocale } from "next-intl/server";
+import { localizePortfolioProject } from "@/lib/contentI18n";
 // Refreshed component to fix hydration issues
 import { resolveImageUrl } from "@/lib/image";
 import dynamic from "next/dynamic";
@@ -18,8 +20,21 @@ export async function SiteHeader() {
     // ignore
   }
 
+  // Кейсы для выпадашки «Портфолио»: локализуем на сервере (оверлей в бандл не тянем)
+  let portfolioItems: { title: string; slug: string }[] = [];
+  try {
+    const locale = await getLocale();
+    const { items } = await getPortfolio(1, 8);
+    portfolioItems = items.map((p) => {
+      const l = localizePortfolioProject(p, locale);
+      return { title: l.title, slug: p.slug };
+    });
+  } catch {
+    // ignore
+  }
+
   const logoImg = logoImageUrl ? resolveImageUrl(logoImageUrl) : null;
 
-  return <SiteHeaderClient logoImageUrl={logoImg} />;
+  return <SiteHeaderClient logoImageUrl={logoImg} portfolioItems={portfolioItems} />;
 }
 

@@ -13,6 +13,8 @@ import { resolveImageUrl } from "@/lib/image";
 import { typeSlug } from "@/lib/typeSlug";
 import { priceLabel, productIcon } from "@/lib/product";
 import { CatalogMega } from "@/components/CatalogMega";
+import { NavDropdown, type NavDropGroup } from "@/components/NavDropdown";
+import { SERVICES, INDUSTRIES } from "@/lib/servicesData";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { LoadingDots } from "@/components/LoadingDots";
 
@@ -197,10 +199,21 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
-export function SiteHeaderClient({ logoImageUrl = null }: { logoImageUrl?: string | null }) {
+export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: { logoImageUrl?: string | null; portfolioItems?: { title: string; slug: string }[] }) {
   const pathname = usePathname();
   const t = useTranslations("nav");
   const tc = useTranslations("common");
+  const tsv = useTranslations("services");
+  const tsp = useTranslations("solutionsPage");
+
+  // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
+  const solutionGroups: NavDropGroup[] = [
+    { label: tsp("systemsLabel"), items: SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
+    { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
+  ];
+  const portfolioGroups: NavDropGroup[] = [
+    { items: portfolioItems.map((p) => ({ title: p.title, href: `/portfolio/${p.slug}` })) },
+  ];
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -237,6 +250,12 @@ export function SiteHeaderClient({ logoImageUrl = null }: { logoImageUrl?: strin
           {nav.map((item) => {
             if ((item as any).mega) {
               return <CatalogMega key={item.href} />;
+            }
+            if (item.key === "services") {
+              return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} />;
+            }
+            if (item.key === "portfolio" && portfolioItems.length > 0) {
+              return <NavDropdown key={item.href} label={t(item.key)} href="/portfolio" groups={portfolioGroups} allLabel={t("allProjects")} active={item.href === activeHref} width={380} />;
             }
             const active = item.href === activeHref;
             // Меню всегда по центру страницы (absolute + -translate-x-1/2): одинаково на всех языках. Крупный шрифт.
@@ -320,6 +339,37 @@ export function SiteHeaderClient({ logoImageUrl = null }: { logoImageUrl?: strin
                             ))}
                             <Link href="/categories" className="mt-1 block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">Все категории →</Link>
                             <Link href="/catalog" className="block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">Все бренды →</Link>
+                          </div>
+                        </details>
+                      );
+                    }
+                    if (item.key === "services") {
+                      return (
+                        <details key={item.href} className="rounded-xl border border-slate-200 bg-white">
+                          <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-slate-900">{t(item.key)}</summary>
+                          <div className="border-t border-slate-100 px-2 py-2">
+                            {solutionGroups.map((g, gi) => (
+                              <div key={gi} className="px-2 pb-1">
+                                {g.label ? <div className="py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{g.label}</div> : null}
+                                {g.items.map((it) => (
+                                  <Link key={it.href} href={it.href as any} className="block rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">{it.title}</Link>
+                                ))}
+                              </div>
+                            ))}
+                            <Link href="/solutions" className="mt-1 block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">{t("allServices")} →</Link>
+                          </div>
+                        </details>
+                      );
+                    }
+                    if (item.key === "portfolio" && portfolioItems.length > 0) {
+                      return (
+                        <details key={item.href} className="rounded-xl border border-slate-200 bg-white">
+                          <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-slate-900">{t(item.key)}</summary>
+                          <div className="border-t border-slate-100 px-2 py-2">
+                            {portfolioItems.map((pr) => (
+                              <Link key={pr.slug} href={`/portfolio/${pr.slug}` as any} className="block rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">{pr.title}</Link>
+                            ))}
+                            <Link href="/portfolio" className="mt-1 block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">{t("allProjects")} →</Link>
                           </div>
                         </details>
                       );
