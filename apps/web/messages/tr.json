@@ -294,7 +294,74 @@
         "Switch ve Wi-Fi noktalarının kurulumu",
         "Hatların etiketlenmesi ve testi",
         "Dokümantasyon ve destek"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik çözümler",
+        "pkgTitle": "Ne kuruyoruz: üç tipik konfigürasyon",
+        "pkgNote": "Her tesis ayrı hesaplanır: kat planını gönderin — bir gün içinde ayrıntılı teklif dönelim.",
+        "packages": [
+          {
+            "name": "30 çalışma yerine kadar ofis",
+            "for": "Küçük ofis, mağaza, klinik, derslik",
+            "items": [
+              "30–60 port Cat5e/Cat6, 6–12U duvar tipi kabinet",
+              "Gigabit PoE switch — kameralar ve IP telefonlar aynı kablodan beslenir",
+              "Router ve 2–4 Wi-Fi noktası, ayrı misafir ağı",
+              "Hat etiketleme, test, ağ şeması teslim edilir"
+            ],
+            "term": "Süre: 3–7 gün"
+          },
+          {
+            "name": "50–150 kişilik ofis veya iş merkezi katı",
+            "for": "Orta ölçekli ofis, banka, çağrı merkezi, IT şirketi",
+            "items": [
+              "100–300 port Cat6, kat patch panelleri, 19\" kabinet",
+              "Ağ çekirdeği ve erişim switchleri, VLAN: internet, kamera, telefon ayrı",
+              "Kontrollü kesintisiz Wi-Fi — kat içinde hareket ederken kopma yok",
+              "UPS, as-built dokümantasyon ve her hattın sertifikasyonu"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Bina, depo veya üretim tesisi",
+            "for": "Endüstriyel tesis, AVM, otel, lojistik merkezi",
+            "items": [
+              "Katlar, binalar ve atölyeler arası fiber omurgalar",
+              "Yedekli endüstriyel switchler — hat kopsa da ağ çalışır",
+              "Depo ve açık alanlarda Wi-Fi kapsaması, binalar arası telsiz köprüler",
+              "Sunucu düğümü: kabinetler, UPS; CCTV ve geçiş kontrol aynı ağda"
+            ],
+            "term": "Süre: 1 aydan itibaren, projeye göre"
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten teslime — 5 adım",
+        "stages": [
+          {
+            "t": "Keşif",
+            "s": "mühendis ziyareti, ölçümler, şartname — ücretsiz"
+          },
+          {
+            "t": "Proje",
+            "s": "güzergâhlar, ağ şeması, ekipman listesi"
+          },
+          {
+            "t": "Montaj",
+            "s": "kanal ve spiralde düzenli güzergâhlar, ofis çalışması durmadan"
+          },
+          {
+            "t": "Test",
+            "s": "her hat test edilir, portlar etiketlenir"
+          },
+          {
+            "t": "Teslim",
+            "s": "as-built dokümantasyon, garanti ve destek"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Ağ ekipmanları — kendi kataloğumuzdan",
+        "brandsText": "Switch, router ve Wi-Fi'yi göreve ve bütçeye göre seçiyoruz — tüm ekipmanı garantili olarak biz tedarik ediyoruz:"
+      }
     },
     "server": {
       "title": "Sunucu odaları & veri merkezleri",

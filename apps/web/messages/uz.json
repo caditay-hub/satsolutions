@@ -294,7 +294,74 @@
         "Kommutator va Wi-Fi nuqtalarini o‘rnatish",
         "Liniyalarni markirovka qilish va sinash",
         "Hujjatlashtirish va qo‘llab-quvvatlash"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Biz nima quramiz: uchta namunaviy konfiguratsiya",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: xona rejasini yuboring — bir kun ichida aniq smeta bilan tijorat taklifini qaytaramiz.",
+        "packages": [
+          {
+            "name": "30 tagacha ish o'rinli ofis",
+            "for": "Kichik ofis, do'kon, klinika, o'quv xonasi",
+            "items": [
+              "30–60 port Cat5e/Cat6, devorga o'rnatiladigan 6–12U shkaf",
+              "Gigabit PoE-kommutator — kameralar va IP-telefonlar shu kabel orqali quvvatlanadi",
+              "Router va 2–4 ta Wi-Fi nuqtasi, alohida mehmon tarmog'i",
+              "Liniyalarni markirovkalash, testlash, tarmoq sxemasi qo'lingizda"
+            ],
+            "term": "Muddat: 3–7 kun"
+          },
+          {
+            "name": "50–150 o'rinli ofis yoki biznes-markaz qavati",
+            "for": "O'rta ofis, bank, call-markaz, IT-kompaniya",
+            "items": [
+              "100–300 port Cat6, qavat patch-panellari, 19\" stoyka",
+              "Tarmoq yadrosi va kirish kommutatorlari, VLAN: internet, kameralar, telefoniya alohida",
+              "Kontrollerli uzluksiz Wi-Fi — qavat bo'ylab harakatda uzilishsiz",
+              "UPS, ijro hujjatlari va har bir liniya pasporti"
+            ],
+            "term": "Muddat: 2–4 hafta"
+          },
+          {
+            "name": "Bino, ombor yoki ishlab chiqarish",
+            "for": "Sanoat obyekti, savdo markazi, mehmonxona, logistika markazi",
+            "items": [
+              "Qavatlar, korpuslar va sexlar orasida optik magistrallar",
+              "Rezervlangan sanoat kommutatorlari — liniya uzilsa ham tarmoq ishlaydi",
+              "Omborlar va ochiq hududlarda Wi-Fi qamrovi, binolar orasida radioko'priklar",
+              "Server uzeli: stoykalar, UPS; videokuzatuv va SKUD shu tarmoqda ishlaydi"
+            ],
+            "term": "Muddat: 1 oydan, loyiha bo'yicha"
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan tarmoq topshirilishigacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tekshiruv",
+            "s": "muhandis tashrifi, o'lchovlar, texnik topshiriq — bepul"
+          },
+          {
+            "t": "Loyiha",
+            "s": "trassalar, tarmoq sxemasi, uskunalar spetsifikatsiyasi"
+          },
+          {
+            "t": "Montaj",
+            "s": "lotok va gofradagi ozoda trassalar, ofis ishini to'xtatmasdan ham mumkin"
+          },
+          {
+            "t": "Testlash",
+            "s": "har bir liniyani tekshirish, portlarni markirovkalash"
+          },
+          {
+            "t": "Topshirish",
+            "s": "ijro hujjatlari, kafolat va qo'llab-quvvatlash"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Tarmoq uskunalari — bizning katalogdan",
+        "brandsText": "Kommutator, router va Wi-Fi'ni vazifa va byudjetga qarab tanlaymiz — barcha uskunalarni o'zimiz kafolat bilan yetkazib beramiz:"
+      }
     },
     "server": {
       "title": "Server xonalari va ma’lumot markazlari",

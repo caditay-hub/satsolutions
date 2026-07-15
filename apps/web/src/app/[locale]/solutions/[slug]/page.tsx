@@ -9,6 +9,7 @@ import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ServiceScheme } from "@/components/ServiceScheme";
+import { NetworkDetails } from "@/components/NetworkDetails";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -166,6 +167,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             ))}
           </div>
         </div>
+
+        {/* СКС и ЛВС: типовые конфигурации, этапы, бренды каталога */}
+        {svc.key === "network" && <NetworkDetails />}
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} />

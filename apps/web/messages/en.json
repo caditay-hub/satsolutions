@@ -294,7 +294,74 @@
         "Installation of switches and Wi-Fi access points",
         "Labeling and testing of lines",
         "Documentation and support"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "What we build: three typical configurations",
+        "pkgNote": "Every site is quoted individually: send us a floor plan and we will return a detailed quote within one day.",
+        "packages": [
+          {
+            "name": "Office up to 30 workplaces",
+            "for": "Small office, shop, clinic, classroom",
+            "items": [
+              "30–60 Cat5e/Cat6 ports, 6–12U wall-mount cabinet",
+              "Gigabit PoE switch — cameras and IP phones powered over the same cable",
+              "Router and 2–4 Wi-Fi access points, separate guest network",
+              "Line labelling, testing, network diagram handed over"
+            ],
+            "term": "Lead time: 3–7 days"
+          },
+          {
+            "name": "Office 50–150 seats or a business-centre floor",
+            "for": "Mid-size office, bank, call centre, IT company",
+            "items": [
+              "100–300 Cat6 ports, floor patch panels, 19\" rack",
+              "Network core and access switches, VLANs: internet, cameras, telephony separated",
+              "Seamless controller-based Wi-Fi — no drops while moving around the floor",
+              "UPS, as-built documentation and certification of every line"
+            ],
+            "term": "Lead time: 2–4 weeks"
+          },
+          {
+            "name": "Building, warehouse or plant",
+            "for": "Industrial site, mall, hotel, logistics centre",
+            "items": [
+              "Fibre backbones between floors, buildings and shops",
+              "Industrial switches with redundancy — the network survives a line break",
+              "Wi-Fi coverage for warehouses and open areas, wireless bridges between buildings",
+              "Server node: racks, UPS; CCTV and access control run on the same network"
+            ],
+            "term": "Lead time: from 1 month, per project"
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to handover — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "engineer visit, measurements, requirements — free of charge"
+          },
+          {
+            "t": "Design",
+            "s": "cable routes, network diagram, equipment specification"
+          },
+          {
+            "t": "Installation",
+            "s": "neat routes in trays and conduit, no need to stop office work"
+          },
+          {
+            "t": "Testing",
+            "s": "every line tested, ports labelled"
+          },
+          {
+            "t": "Handover",
+            "s": "as-built documentation, warranty and support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Network equipment — from our own catalog",
+        "brandsText": "We match switches, routers and Wi-Fi to the task and budget — all equipment supplied by us with warranty:"
+      }
     },
     "server": {
       "title": "Server rooms & data centers",
