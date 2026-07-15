@@ -7,7 +7,9 @@ type Step = { t: string; s?: string };
 // Сами шаги (с переводами) лежат в messages → namespace "scheme".
 const SCHEME_KEYS = new Set([
   "cctv", "analytics", "anpr", "access", "intercom", "attendance",
-  "alarm", "fire", "network", "server", "videowall", "pa", "barrier", "perimeter"
+  "alarm", "fire", "network", "server", "videowall", "pa", "barrier", "perimeter",
+  "virtualization", "wifi", "fiber", "radiobridge", "mikrotik", "smarthome",
+  "turnstile", "locks", "gates", "telephony"
 ]);
 
 export async function ServiceScheme({ k }: { k: string }) {

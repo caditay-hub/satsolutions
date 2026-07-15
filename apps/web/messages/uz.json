@@ -191,7 +191,7 @@
     "cctv": {
       "title": "Videokuzatuv",
       "desc": "Har qanday miqyosdagi obyekt uchun IP, analog va bulutli tizimlar.",
-      "intro": "Har qanday miqyosdagi videokuzatuv tizimlarini loyihalashtiramiz va o‘rnatamiz — kichik ofisdan tortib o‘nlab kameralari va kunu-tun monitoringi bo‘lgan taqsimlangan obyektlargacha.",
+      "intro": "Videokuzatuv kameralarini kalitga tayyor o'rnatamiz: kichik ofisdan tortib o'nlab kamerali va kunu-tun monitoringli tarqoq obyektlargacha bo'lgan tizimlarni loyihalaymiz va montaj qilamiz.",
       "works": [
         "Obyekt auditi va vazifaga mos kameralarni tanlash",
         "Loyihalash va joylashtirish sxemasi",
@@ -366,7 +366,7 @@
     "server": {
       "title": "Server xonalari va ma’lumot markazlari",
       "desc": "Stoyka, UPS, sovutish va jihozlarni monitoring qilish.",
-      "intro": "Server xonalari va ma’lumotlar markazlarini jihozlaymiz: montaj stoykalari, uzluksiz quvvat, sovutish va muhandislik tizimlari monitoringi.",
+      "intro": "Server xonalari va ma'lumotlar markazlarini (data-markaz) kalitga tayyor quramiz: montaj stoykalari, uzluksiz ta'minot, sovutish va muhandislik tizimlari monitoringi.",
       "works": [
         "Server xonasi yoki ma’lumotlar markazi loyihasi",
         "Stoyka, kabel tarmog‘i va quvvatni montaj qilish",
@@ -517,6 +517,126 @@
         "Shlagbaum va kirish avtomatikasi",
         "Yashovchilar uchun ANPR",
         "Servis xizmati"
+      ]
+    },
+    "virtualization": {
+      "title": "H3C serverlari va virtualizatsiya",
+      "desc": "H3C hamkori: UniServer serverlari, CAS gipervizori, xususiy bulut.",
+      "intro": "SAT Solutions — O'zbekistonda H3C hamkori: H3C UniServer serverlarini yetkazib beramiz va H3C CAS platformasida virtualizatsiyani joriy qilamiz — 1C uchun yakka serverdan tortib ishonchli klaster va xususiy bulutgacha.",
+      "works": [
+        "Vazifalar tahlili va H3C UniServer konfiguratsiyasini tanlash",
+        "H3C server, SXD va tarmoq uskunalarini hamkorlik narxlarida yetkazib berish",
+        "H3C CAS gipervizorini o'rnatish va mavjud tizimlarni ko'chirish",
+        "Yuqori ishonchlilik klasterlari va biznes uchun xususiy bulut",
+        "Litsenziyalash, vendor qo'llab-quvvatlashi va xizmat ko'rsatish"
+      ]
+    },
+    "wifi": {
+      "title": "Wi-Fi tarmoqlari",
+      "desc": "Ofis, ombor va hududlarni uzluksiz qamrash — o'lik zonalarsiz.",
+      "intro": "Wi-Fi tarmoqlarini loyihalaymiz va o'rnatamiz: ofislar uchun uzluksiz rouming, omborlar va ochiq hududlarni qamrash, avtorizatsiyali mehmon tarmoqlari. Montajdan oldin va keyin radiotekshiruv — qamrovni o'lchovlar bilan tasdiqlaymiz.",
+      "works": [
+        "Radiotekshiruv va kirish nuqtalarini joylashtirish rejasi",
+        "Wi-Fi nuqtalari va PoE ta'minotini o'rnatish",
+        "Kontroller bilan uzluksiz rouming — harakatda uzilishsiz",
+        "Avtorizatsiya va tezlik cheklovli mehmon tarmog'i",
+        "Tarmoq monitoringi va qo'llab-quvvatlash"
+      ]
+    },
+    "fiber": {
+      "title": "Optik tolali liniyalar",
+      "desc": "Optika yotqizish va payvandlash: binolar va qavatlar orasidagi magistrallar.",
+      "intro": "Optik tolani yotqizamiz va payvandlaymiz: binolar, qavatlar va sexlar orasidagi magistrallar, ustunlar va fasadlar bo'ylab ko'cha trassalari, tolalarni payvandlash va reflektometr o'lchovlari protokollar bilan.",
+      "works": [
+        "Trassa loyihasi va kabel tanlash (ichki, tashqi, ADSS)",
+        "Kabel kanalizatsiyasida, ustunlar va fasadlar bo'ylab yotqizish",
+        "Tolalarni payvandlash va optik krosslarni o'rnatish",
+        "Reflektometr o'lchovlari va liniya protokollari",
+        "Shikastlangan optik liniyalarni ta'mirlash"
+      ]
+    },
+    "radiobridge": {
+      "title": "Radioko'priklar",
+      "desc": "Kabelsiz binolar orasida internet va tarmoq — 20+ km gacha.",
+      "intro": "Bino va maydonlarni radiokanal orqali bog'laymiz: Ubiquiti, MikroTik va Wi-Tek gigabit radioko'priklari — yuzlab metrdan o'nlab kilometrgacha, kabel yotqizish imkonsiz yoki qimmat bo'lganda.",
+      "works": [
+        "Trassani hisoblash va to'g'ri ko'rinishni tekshirish",
+        "Masofa va tezlikka mos uskuna tanlash",
+        "Antennalarni o'rnatish va sozlash",
+        "Kanal, shifrlash va rezervlashni sozlash",
+        "Aloqa monitoringi va qo'llab-quvvatlash"
+      ]
+    },
+    "mikrotik": {
+      "title": "MikroTik sozlash",
+      "desc": "Routerlar, VLAN, ikki provayder, VPN va Wi-Fi — sozlash va audit.",
+      "intro": "MikroTik'ni biznes vazifalariga sozlaymiz: ikki provayderni rezervlash, VLAN, filiallar orasida VPN, mehmon Wi-Fi, fayrvol va tezlik cheklash. «Internet yo'q» muammosini hal qilamiz va eski konfiguratsiyalarni tartibga solamiz.",
+      "works": [
+        "Joriy konfiguratsiya va xavfsizlik auditi",
+        "Kanallarni rezervlash: ikki va undan ortiq provayder",
+        "VLAN, ofislar orasida VPN, masofaviy kirish",
+        "Fayrvol, tezlik cheklash, mehmon tarmog'i",
+        "Monitoring va kuzatib borish"
+      ]
+    },
+    "smarthome": {
+      "title": "Aqlli uy",
+      "desc": "Tuya asosida yoritish, iqlim, pardalar va xavfsizlik — telefondan boshqarish.",
+      "intro": "Tuya platformasida kalitga tayyor aqlli uy: yoritish, iqlim, pardalar, datchiklar va kameralar bitta ilovada. Ssenariylarni loyihalaymiz, o'rnatamiz va sozlaymiz — katalogimizda 50 dan ortiq Tuya qurilmasi.",
+      "works": [
+        "Kvartira, uy yoki ofisga qurilmalar tanlash",
+        "Aqlli yoritish, kalitlar va rozetkalar",
+        "Iqlim: konditsionerlar, issiq pol, harorat datchiklari",
+        "Ssenariylarda pardalar, darvozalar va qo'riqlash datchiklari",
+        "Ilova, ssenariylar va ovozli boshqaruvni sozlash"
+      ]
+    },
+    "turnstile": {
+      "title": "Turniketlar va o'tish punktlari",
+      "desc": "Tripodlar, to'liq bo'yli va tezkor o'tish yo'laklari SKUD bilan integratsiyada.",
+      "intro": "O'tish punktlari uchun turniketlarni yetkazib beramiz va o'rnatamiz: tripodlar, eshikli va to'liq bo'yli, tezkor o'tish yo'laklari. SKUD, kartalar, biometriya va ish vaqti hisobi bilan integratsiya.",
+      "works": [
+        "Odamlar oqimi va xonaga mos turniket tanlash",
+        "O'rnatish va kirish nazorati tizimiga ulash",
+        "Identifikatsiya: kartalar, barmoq izlari, yuzni tanish",
+        "Ish vaqti hisobi va 1C bilan integratsiya",
+        "Turniketlarni ta'mirlash va texnik xizmat"
+      ]
+    },
+    "locks": {
+      "title": "Elektron va aqlli qulflar",
+      "desc": "Elektromagnit, elektromexanik va smart-qulflar: karta, kod, barmoq izi.",
+      "intro": "Elektron qulflarni o'rnatamiz: ofis va podyezdlar uchun elektromagnit va elektromexanik, kod, karta, barmoq izi va telefondan boshqariladigan aqlli qulflar.",
+      "works": [
+        "Eshik va ish rejimiga mos qulf tanlash",
+        "O'rnatish va domofon yoki SKUD'ga ulash",
+        "Kirishni sozlash: kodlar, kartalar, barmoq izlari, ilova",
+        "Avtonom va tarmoqli yechimlar, o'tishlar jurnali bilan",
+        "Texnik xizmat va qayta sozlash"
+      ]
+    },
+    "gates": {
+      "title": "Avtomatik darvozalar",
+      "desc": "Surma, tavaqali va seksiyali darvozalar avtomatika va kirish nazorati bilan.",
+      "intro": "Kirish yo'llarini avtomatlashtiramiz: surma, tavaqali va seksiyali darvozalar, privodlar, pultlar va GSM-modullar, domofon, SKUD va avtoraqamni tanish bilan integratsiya.",
+      "works": [
+        "Darvoza turi va og'irligiga mos avtomatika tanlash",
+        "Privodlar va xavfsizlik fotoelementlarini o'rnatish",
+        "Pultlar, GSM-modul, telefondan ochish",
+        "Domofon, SKUD va ANPR bilan integratsiya",
+        "Avtomatikani ta'mirlash va texnik xizmat"
+      ]
+    },
+    "telephony": {
+      "title": "Ofis uchun IP-telefoniya",
+      "desc": "IP-ATS, Fanvil SIP-telefonlari, suhbatlarni yozib olish va qo'ng'iroq ssenariylari.",
+      "intro": "Ofis IP-telefoniyasini yo'lga qo'yamiz: IP-ATS, Fanvil SIP-telefonlari, ko'p kanalli raqamlar, suhbatlarni yozib olish, ovozli menyu va yo'naltirish. Filiallar va masofaviy xodimlar — bitta telefon tarmog'ida.",
+      "works": [
+        "Ofis hajmiga mos IP-ATS va telefonlar tanlash",
+        "Shahar va ko'p kanalli SIP-raqamlarni ulash",
+        "Ovozli menyu, qo'ng'iroq navbatlari, suhbatlarni yozish",
+        "Filiallar va masofaviy xodimlarni birlashtirish",
+        "Sozlash, o'qitish va qo'llab-quvvatlash"
       ]
     }
   },
@@ -954,6 +1074,169 @@
       {
         "t": "Reaksiya",
         "s": "kamera, yorug‘lik, sirena"
+      }
+    ],
+    "virtualization": [
+      {
+        "t": "H3C UniServer serverlari",
+        "s": "uskuna"
+      },
+      {
+        "t": "H3C CAS gipervizori"
+      },
+      {
+        "t": "Virtual mashinalar",
+        "s": "1C, BD, ilovalar"
+      },
+      {
+        "t": "Yagona konsol",
+        "s": "boshqaruv va ishonchlilik"
+      }
+    ],
+    "wifi": [
+      {
+        "t": "Internet"
+      },
+      {
+        "t": "Kontroller",
+        "s": "nuqtalarni boshqarish"
+      },
+      {
+        "t": "Kirish nuqtalari"
+      },
+      {
+        "t": "Qurilmalar",
+        "s": "uzluksiz rouming"
+      }
+    ],
+    "fiber": [
+      {
+        "t": "A binosi",
+        "s": "optik kross"
+      },
+      {
+        "t": "Trassa",
+        "s": "kabel, muftalar"
+      },
+      {
+        "t": "Payvand ulanishlar"
+      },
+      {
+        "t": "B binosi",
+        "s": "kross, o'lchovlar"
+      }
+    ],
+    "radiobridge": [
+      {
+        "t": "A binosi",
+        "s": "antenna"
+      },
+      {
+        "t": "Radiokanal",
+        "s": "20+ km gacha"
+      },
+      {
+        "t": "B binosi",
+        "s": "antenna"
+      },
+      {
+        "t": "Lokal tarmoq"
+      }
+    ],
+    "mikrotik": [
+      {
+        "t": "Provayderlar",
+        "s": "asosiy + zaxira"
+      },
+      {
+        "t": "MikroTik",
+        "s": "failover, fayrvol"
+      },
+      {
+        "t": "VLAN va VPN"
+      },
+      {
+        "t": "Ofis va filiallar"
+      }
+    ],
+    "smarthome": [
+      {
+        "t": "Tuya qurilmalari",
+        "s": "yorug'lik, iqlim, datchiklar"
+      },
+      {
+        "t": "Hab va Wi-Fi"
+      },
+      {
+        "t": "Ilova",
+        "s": "ssenariylar"
+      },
+      {
+        "t": "Ovozli yordamchilar",
+        "s": "Alisa, Google"
+      }
+    ],
+    "turnstile": [
+      {
+        "t": "Identifikatsiya",
+        "s": "karta, yuz, barmoq izi"
+      },
+      {
+        "t": "SKUD kontrolleri"
+      },
+      {
+        "t": "Turniket"
+      },
+      {
+        "t": "Jurnal va vaqt hisobi"
+      }
+    ],
+    "locks": [
+      {
+        "t": "Identifikatsiya",
+        "s": "kod, karta, barmoq izi"
+      },
+      {
+        "t": "Kontroller"
+      },
+      {
+        "t": "Qulf",
+        "s": "magnit / mexanik"
+      },
+      {
+        "t": "Kirish jurnali"
+      }
+    ],
+    "gates": [
+      {
+        "t": "Buyruq",
+        "s": "pult, telefon, avto raqami"
+      },
+      {
+        "t": "Boshqaruv bloki"
+      },
+      {
+        "t": "Privod"
+      },
+      {
+        "t": "Darvoza",
+        "s": "xavfsizlik fotoelementlari"
+      }
+    ],
+    "telephony": [
+      {
+        "t": "SIP-provayder",
+        "s": "shahar raqamlari"
+      },
+      {
+        "t": "IP-ATS",
+        "s": "menyu, navbat, yozuv"
+      },
+      {
+        "t": "Fanvil telefonlari"
+      },
+      {
+        "t": "Filiallar va CRM"
       }
     ]
   },

@@ -191,7 +191,7 @@
     "cctv": {
       "title": "Video gözetim",
       "desc": "Her ölçekte tesis için IP, analog ve bulut sistemleri.",
-      "intro": "Küçük bir ofisten onlarca kameralı, 7/24 izlenen dağıtık tesislere kadar her ölçekte video gözetim sistemleri tasarlar ve kurarız.",
+      "intro": "Anahtar teslim güvenlik kamerası kurulumu: küçük ofisten onlarca kameralı ve 7/24 izlemeli dağıtık tesislere kadar her ölçekte sistem tasarlıyor ve kuruyoruz.",
       "works": [
         "Saha denetimi ve ihtiyaca göre kamera seçimi",
         "Tasarım ve yerleşim şeması",
@@ -366,7 +366,7 @@
     "server": {
       "title": "Sunucu odaları & veri merkezleri",
       "desc": "Kabinet, UPS, soğutma ve ekipman izleme.",
-      "intro": "Sunucu odaları ve veri merkezleri donatırız: kabinetler, kesintisiz güç, soğutma ve mühendislik sistemlerinin izlenmesi.",
+      "intro": "Sunucu odaları ve veri merkezlerini anahtar teslim kuruyoruz: kabinetler, kesintisiz güç, soğutma ve altyapı izleme.",
       "works": [
         "Sunucu odası veya veri merkezi projesi",
         "Kabinet, kablolama ve güç montajı",
@@ -517,6 +517,126 @@
         "Bariyer ve giriş otomasyonu",
         "Sakinler için ANPR",
         "Bakım hizmeti"
+      ]
+    },
+    "virtualization": {
+      "title": "H3C Sunucuları ve Sanallaştırma",
+      "desc": "H3C iş ortağı: UniServer sunucular, CAS hipervizör, özel bulut.",
+      "intro": "SAT Solutions, Özbekistan'da H3C iş ortağıdır: H3C UniServer sunucular tedarik ediyor ve H3C CAS platformunda sanallaştırma kuruyoruz — tek sunucudan yüksek erişilebilirlikli kümeye ve özel buluta kadar.",
+      "works": [
+        "İş yükü analizi ve H3C UniServer konfigürasyon seçimi",
+        "H3C sunucu, depolama ve ağ ekipmanlarının iş ortağı fiyatlarıyla tedariki",
+        "H3C CAS hipervizör kurulumu ve mevcut sistemlerin taşınması",
+        "Yüksek erişilebilirlik kümeleri ve işletmeler için özel bulut",
+        "Lisanslama, üretici desteği ve bakım"
+      ]
+    },
+    "wifi": {
+      "title": "Wi-Fi Ağları",
+      "desc": "Ofis, depo ve açık alanlarda kesintisiz kapsama — ölü bölge yok.",
+      "intro": "Wi-Fi ağları tasarlıyor ve kuruyoruz: ofisler için kesintisiz dolaşım, depo ve açık alan kapsaması, yetkilendirmeli misafir ağları. Montaj öncesi ve sonrası saha ölçümü — kapsama ölçümlerle doğrulanır.",
+      "works": [
+        "Saha ölçümü ve erişim noktası yerleşim planı",
+        "Wi-Fi noktaları ve PoE besleme montajı",
+        "Kontrollü kesintisiz dolaşım — hareket ederken kopma yok",
+        "Yetkilendirmeli ve hız sınırlı misafir ağı",
+        "Ağ izleme ve destek"
+      ]
+    },
+    "fiber": {
+      "title": "Fiber Optik Hatlar",
+      "desc": "Fiber döşeme ve ek: binalar ve katlar arası omurgalar.",
+      "intro": "Fiber optik döşüyor ve ekliyoruz: binalar, katlar ve atölyeler arası omurgalar, direk ve cephelerde dış güzergâhlar, füzyon ek ve OTDR ölçümleri raporlarla.",
+      "works": [
+        "Güzergâh projesi ve kablo seçimi (iç, dış, ADSS)",
+        "Kablo kanalında, direk ve cephelerde döşeme",
+        "Füzyon ek ve optik kros montajı",
+        "OTDR ölçümleri ve hat raporları",
+        "Hasarlı fiber hatların onarımı"
+      ]
+    },
+    "radiobridge": {
+      "title": "Telsiz Köprüler",
+      "desc": "Kablosuz binalar arası internet ve ağ — 20+ km'ye kadar.",
+      "intro": "Binaları ve sahaları telsizle bağlıyoruz: Ubiquiti, MikroTik ve Wi-Tek gigabit köprüler — yüzlerce metreden onlarca kilometreye, kablo imkânsız veya pahalı olduğunda.",
+      "works": [
+        "Güzergâh hesabı ve görüş hattı kontrolü",
+        "Mesafe ve hıza göre ekipman seçimi",
+        "Anten montajı ve hizalama",
+        "Kanal, şifreleme ve yedeklilik ayarı",
+        "Bağlantı izleme ve destek"
+      ]
+    },
+    "mikrotik": {
+      "title": "MikroTik Kurulumu",
+      "desc": "Router, VLAN, çift hat, VPN ve Wi-Fi — yapılandırma ve denetim.",
+      "intro": "MikroTik'i işletmeye göre yapılandırıyoruz: çift servis sağlayıcı yedekliliği, VLAN, şubeler arası VPN, misafir Wi-Fi, güvenlik duvarı ve hız sınırı. 'İnternet yok' sorunlarını çözüyor, devralınan yapılandırmaları düzeltiyoruz.",
+      "works": [
+        "Mevcut yapılandırma ve güvenlik denetimi",
+        "Hat yedekliliği: iki veya daha fazla sağlayıcı",
+        "VLAN, ofisler arası VPN, uzaktan erişim",
+        "Güvenlik duvarı, hız sınırı, misafir ağı",
+        "İzleme ve bakım"
+      ]
+    },
+    "smarthome": {
+      "title": "Akıllı Ev",
+      "desc": "Tuya ile aydınlatma, iklim, perde ve güvenlik — telefondan kontrol.",
+      "intro": "Tuya platformunda anahtar teslim akıllı ev: aydınlatma, iklim, perdeler, sensörler ve kameralar tek uygulamada. Senaryolar tasarlıyor, kuruyor ve ayarlıyoruz — kataloğumuzda 50+ Tuya cihazı.",
+      "works": [
+        "Daire, ev veya ofise cihaz seçimi",
+        "Akıllı aydınlatma, anahtar ve prizler",
+        "İklim: klima, yerden ısıtma, sıcaklık sensörleri",
+        "Senaryolarda perdeler, kapılar ve güvenlik sensörleri",
+        "Uygulama, senaryo ve sesli kontrol ayarı"
+      ]
+    },
+    "turnstile": {
+      "title": "Turnikeler ve Geçişler",
+      "desc": "Tripod, boy tipi ve hızlı geçişler — geçiş kontrol entegrasyonlu.",
+      "intro": "Turnike tedarik ediyor ve kuruyoruz: tripod, kanatlı ve boy tipi, hızlı geçişler. Geçiş kontrol, kart, biyometri ve mesai takibi entegrasyonu.",
+      "works": [
+        "İnsan akışına ve mekâna göre turnike seçimi",
+        "Montaj ve geçiş kontrol sistemine bağlantı",
+        "Kimlik doğrulama: kart, parmak izi, yüz tanıma",
+        "Mesai takibi ve ERP entegrasyonu",
+        "Turnike bakım ve onarımı"
+      ]
+    },
+    "locks": {
+      "title": "Elektronik ve Akıllı Kilitler",
+      "desc": "Elektromanyetik, elektromekanik ve akıllı kilitler: kart, kod, parmak izi.",
+      "intro": "Elektronik kilit kuruyoruz: ofis ve girişler için elektromanyetik ve elektromekanik, kod, kart, parmak izi ve telefon kontrollü akıllı kilitler.",
+      "works": [
+        "Kapıya ve çalışma düzenine göre kilit seçimi",
+        "Montaj ve diafon veya geçiş kontrole bağlantı",
+        "Erişim ayarı: kod, kart, parmak izi, uygulama",
+        "Geçiş kayıtlı bağımsız ve ağ bağlantılı çözümler",
+        "Bakım ve yeniden yapılandırma"
+      ]
+    },
+    "gates": {
+      "title": "Otomatik Kapılar",
+      "desc": "Yana kayar, çift kanat ve seksiyonel kapılar — otomasyon ve geçiş kontrollü.",
+      "intro": "Girişleri otomatikleştiriyoruz: yana kayar, çift kanat ve seksiyonel kapılar, motorlar, kumandalar ve GSM modüller, diafon, geçiş kontrol ve plaka tanıma entegrasyonu.",
+      "works": [
+        "Kapı tipine ve ağırlığına göre otomasyon seçimi",
+        "Motor ve güvenlik fotoseli montajı",
+        "Kumanda, GSM modül, telefondan açma",
+        "Diafon, geçiş kontrol ve ANPR entegrasyonu",
+        "Otomasyon bakım ve onarımı"
+      ]
+    },
+    "telephony": {
+      "title": "Ofis IP Telefonu",
+      "desc": "IP santral, Fanvil SIP telefonlar, görüşme kaydı ve çağrı senaryoları.",
+      "intro": "Ofis IP telefonu kuruyoruz: IP santral, Fanvil SIP telefonlar, çok kanallı numaralar, görüşme kaydı, sesli menü ve yönlendirme. Şubeler ve uzaktan çalışanlar tek telefon ağında.",
+      "works": [
+        "Ofis boyutuna göre IP santral ve telefon seçimi",
+        "Şehir ve çok kanallı SIP numaraların bağlanması",
+        "Sesli menü, çağrı kuyrukları, görüşme kaydı",
+        "Şubeleri ve uzak çalışanları birleştirme",
+        "Kurulum, eğitim ve destek"
       ]
     }
   },
@@ -954,6 +1074,169 @@
       {
         "t": "Tepki",
         "s": "kamera, ışık, siren"
+      }
+    ],
+    "virtualization": [
+      {
+        "t": "H3C UniServer sunucular",
+        "s": "donanım"
+      },
+      {
+        "t": "H3C CAS hipervizör"
+      },
+      {
+        "t": "Sanal makineler",
+        "s": "ERP, DB, uygulamalar"
+      },
+      {
+        "t": "Tek konsol",
+        "s": "yönetim ve HA"
+      }
+    ],
+    "wifi": [
+      {
+        "t": "İnternet"
+      },
+      {
+        "t": "Kontrolcü",
+        "s": "nokta yönetimi"
+      },
+      {
+        "t": "Erişim noktaları"
+      },
+      {
+        "t": "Cihazlar",
+        "s": "kesintisiz dolaşım"
+      }
+    ],
+    "fiber": [
+      {
+        "t": "Bina A",
+        "s": "optik kros"
+      },
+      {
+        "t": "Güzergâh",
+        "s": "kablo, ekler"
+      },
+      {
+        "t": "Füzyon ekler"
+      },
+      {
+        "t": "Bina B",
+        "s": "kros, ölçüm"
+      }
+    ],
+    "radiobridge": [
+      {
+        "t": "Bina A",
+        "s": "anten"
+      },
+      {
+        "t": "Telsiz hat",
+        "s": "20+ km'ye kadar"
+      },
+      {
+        "t": "Bina B",
+        "s": "anten"
+      },
+      {
+        "t": "Yerel ağ"
+      }
+    ],
+    "mikrotik": [
+      {
+        "t": "Sağlayıcılar",
+        "s": "ana + yedek"
+      },
+      {
+        "t": "MikroTik",
+        "s": "failover, güvenlik duvarı"
+      },
+      {
+        "t": "VLAN ve VPN"
+      },
+      {
+        "t": "Ofis ve şubeler"
+      }
+    ],
+    "smarthome": [
+      {
+        "t": "Tuya cihazları",
+        "s": "ışık, iklim, sensörler"
+      },
+      {
+        "t": "Hub ve Wi-Fi"
+      },
+      {
+        "t": "Uygulama",
+        "s": "senaryolar"
+      },
+      {
+        "t": "Sesli asistanlar",
+        "s": "Alexa, Google"
+      }
+    ],
+    "turnstile": [
+      {
+        "t": "Kimlik doğrulama",
+        "s": "kart, yüz, parmak izi"
+      },
+      {
+        "t": "Geçiş kontrolcüsü"
+      },
+      {
+        "t": "Turnike"
+      },
+      {
+        "t": "Kayıt ve mesai takibi"
+      }
+    ],
+    "locks": [
+      {
+        "t": "Kimlik doğrulama",
+        "s": "kod, kart, parmak izi"
+      },
+      {
+        "t": "Kontrolcü"
+      },
+      {
+        "t": "Kilit",
+        "s": "manyetik / mekanik"
+      },
+      {
+        "t": "Erişim kaydı"
+      }
+    ],
+    "gates": [
+      {
+        "t": "Komut",
+        "s": "kumanda, telefon, plaka"
+      },
+      {
+        "t": "Kontrol ünitesi"
+      },
+      {
+        "t": "Motor"
+      },
+      {
+        "t": "Kapı",
+        "s": "güvenlik fotoselleri"
+      }
+    ],
+    "telephony": [
+      {
+        "t": "SIP sağlayıcı",
+        "s": "şehir numaraları"
+      },
+      {
+        "t": "IP santral",
+        "s": "IVR, kuyruk, kayıt"
+      },
+      {
+        "t": "Fanvil telefonlar"
+      },
+      {
+        "t": "Şubeler ve CRM"
       }
     ]
   },

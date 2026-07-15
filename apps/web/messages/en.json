@@ -191,7 +191,7 @@
     "cctv": {
       "title": "Video surveillance",
       "desc": "IP, analog and cloud systems for sites of any scale.",
-      "intro": "We design and install video surveillance systems of any scale — from a small office to distributed sites with dozens of cameras and round-the-clock monitoring.",
+      "intro": "Turnkey CCTV camera installation: we design and install video surveillance of any scale — from a small office to distributed sites with dozens of cameras and 24/7 monitoring.",
       "works": [
         "Site audit and camera selection for your needs",
         "Design and camera placement layout",
@@ -366,7 +366,7 @@
     "server": {
       "title": "Server rooms & data centers",
       "desc": "Racks, UPS, cooling and equipment monitoring.",
-      "intro": "We equip server rooms and data centers: racks, uninterruptible power, cooling and monitoring of engineering systems.",
+      "intro": "We build server rooms and data centers turnkey: racks, uninterruptible power, cooling and monitoring of engineering systems.",
       "works": [
         "Server room or data center design",
         "Installation of racks, cabling and power",
@@ -517,6 +517,126 @@
         "Barriers and entry automation",
         "ANPR for residents",
         "Maintenance service"
+      ]
+    },
+    "virtualization": {
+      "title": "H3C Servers & Virtualization",
+      "desc": "H3C partner: UniServer servers, CAS hypervisor, private cloud.",
+      "intro": "SAT Solutions is an H3C partner in Uzbekistan: we supply H3C UniServer servers and deploy virtualization on the H3C CAS platform — from a single server for accounting systems to a high-availability cluster and private cloud.",
+      "works": [
+        "Workload audit and H3C UniServer configuration sizing",
+        "Supply of H3C servers, storage and networking at partner pricing",
+        "H3C CAS hypervisor deployment and migration of existing systems",
+        "High-availability clusters and private cloud for business",
+        "Licensing, vendor support and maintenance"
+      ]
+    },
+    "wifi": {
+      "title": "Wi-Fi Networks",
+      "desc": "Seamless coverage for offices, warehouses and outdoor areas — no dead zones.",
+      "intro": "We design and install Wi-Fi networks: seamless roaming for offices, coverage for warehouses and open areas, guest networks with authorization. Site surveys before and after installation — coverage confirmed by measurements.",
+      "works": [
+        "Site survey and access point placement plan",
+        "Installation of Wi-Fi access points and PoE power",
+        "Seamless controller-based roaming — no drops while moving",
+        "Guest network with authorization and speed limits",
+        "Network monitoring and support"
+      ]
+    },
+    "fiber": {
+      "title": "Fiber Optic Lines",
+      "desc": "Fiber laying and splicing: backbones between buildings and floors.",
+      "intro": "We lay and splice fiber optics: backbones between buildings, floors and shops, outdoor routes on poles and facades, fusion splicing and OTDR measurements with reports.",
+      "works": [
+        "Route design and cable selection (indoor, outdoor, ADSS)",
+        "Laying in cable ducts, on poles and facades",
+        "Fusion splicing and optical cross installation",
+        "OTDR measurements and line reports",
+        "Repair of damaged fiber lines"
+      ]
+    },
+    "radiobridge": {
+      "title": "Wireless Bridges",
+      "desc": "Internet and network between buildings without cable — up to 20+ km.",
+      "intro": "We connect buildings and sites over radio: gigabit wireless bridges by Ubiquiti, MikroTik and Wi-Tek for distances from hundreds of meters to tens of kilometers — when cable is impossible or too costly.",
+      "works": [
+        "Path calculation and line-of-sight check",
+        "Equipment selection for distance and speed",
+        "Antenna installation and alignment",
+        "Channel, encryption and redundancy setup",
+        "Link monitoring and support"
+      ]
+    },
+    "mikrotik": {
+      "title": "MikroTik Setup",
+      "desc": "Routers, VLAN, dual WAN, VPN and Wi-Fi — configuration and audit.",
+      "intro": "We configure MikroTik for business: dual-provider failover, VLANs, VPN between branches, guest Wi-Fi, firewall and bandwidth limits. We fix 'no internet' issues and clean up inherited configurations.",
+      "works": [
+        "Audit of current configuration and security",
+        "Channel redundancy: two or more providers",
+        "VLANs, VPN between offices, remote access",
+        "Firewall, bandwidth limits, guest network",
+        "Monitoring and ongoing support"
+      ]
+    },
+    "smarthome": {
+      "title": "Smart Home",
+      "desc": "Lighting, climate, curtains and security on Tuya — controlled from your phone.",
+      "intro": "Turnkey smart home on the Tuya platform: lighting, climate, curtains, sensors and cameras in one app. We design scenarios, install and configure — 50+ Tuya devices in our catalog.",
+      "works": [
+        "Device selection for apartment, house or office",
+        "Smart lighting, switches and sockets",
+        "Climate: air conditioning, floor heating, temperature sensors",
+        "Curtains, gates and security sensors in scenarios",
+        "App, scenario and voice control setup"
+      ]
+    },
+    "turnstile": {
+      "title": "Turnstiles & Entrances",
+      "desc": "Tripods, full-height and speed gates integrated with access control.",
+      "intro": "We supply and install turnstiles: tripods, flap and full-height, speed gates. Integration with access control, cards, biometrics and time attendance.",
+      "works": [
+        "Turnstile selection for people flow and premises",
+        "Installation and connection to access control",
+        "Identification: cards, fingerprints, face recognition",
+        "Integration with time attendance and ERP",
+        "Turnstile maintenance and repair"
+      ]
+    },
+    "locks": {
+      "title": "Electronic & Smart Locks",
+      "desc": "Electromagnetic, electromechanical and smart locks: card, code, fingerprint.",
+      "intro": "We install electronic locks: electromagnetic and electromechanical for offices and entrances, smart locks with code, card, fingerprint and phone control.",
+      "works": [
+        "Lock selection for the door and duty cycle",
+        "Installation and connection to intercom or access control",
+        "Access setup: codes, cards, fingerprints, app",
+        "Standalone and networked solutions with entry logs",
+        "Maintenance and reconfiguration"
+      ]
+    },
+    "gates": {
+      "title": "Automatic Gates",
+      "desc": "Sliding, swing and sectional gates with automation and access control.",
+      "intro": "We automate entrances: sliding, swing and sectional gates, drives, remotes and GSM modules, integration with intercom, access control and plate recognition.",
+      "works": [
+        "Automation selection for gate type and weight",
+        "Drive and safety photocell installation",
+        "Remotes, GSM module, opening from your phone",
+        "Integration with intercom, access control and ANPR",
+        "Automation maintenance and repair"
+      ]
+    },
+    "telephony": {
+      "title": "Office IP Telephony",
+      "desc": "IP PBX, Fanvil SIP phones, call recording and call scenarios.",
+      "intro": "We deploy office IP telephony: IP PBX, Fanvil SIP phones, multi-channel numbers, call recording, IVR menus and forwarding. Branches and remote staff — in one phone network.",
+      "works": [
+        "IP PBX and phone selection for office size",
+        "Connection of city and multi-channel SIP numbers",
+        "IVR, call queues, call recording",
+        "Uniting branches and remote employees",
+        "Setup, training and support"
       ]
     }
   },
@@ -954,6 +1074,169 @@
       {
         "t": "Response",
         "s": "cameras, light, siren"
+      }
+    ],
+    "virtualization": [
+      {
+        "t": "H3C UniServer servers",
+        "s": "hardware"
+      },
+      {
+        "t": "H3C CAS hypervisor"
+      },
+      {
+        "t": "Virtual machines",
+        "s": "ERP, DB, apps"
+      },
+      {
+        "t": "Single console",
+        "s": "management & HA"
+      }
+    ],
+    "wifi": [
+      {
+        "t": "Internet"
+      },
+      {
+        "t": "Controller",
+        "s": "AP management"
+      },
+      {
+        "t": "Access points"
+      },
+      {
+        "t": "Devices",
+        "s": "seamless roaming"
+      }
+    ],
+    "fiber": [
+      {
+        "t": "Building A",
+        "s": "optical cross"
+      },
+      {
+        "t": "Route",
+        "s": "cable, closures"
+      },
+      {
+        "t": "Fusion splices"
+      },
+      {
+        "t": "Building B",
+        "s": "cross, testing"
+      }
+    ],
+    "radiobridge": [
+      {
+        "t": "Building A",
+        "s": "antenna"
+      },
+      {
+        "t": "Radio link",
+        "s": "up to 20+ km"
+      },
+      {
+        "t": "Building B",
+        "s": "antenna"
+      },
+      {
+        "t": "Local network"
+      }
+    ],
+    "mikrotik": [
+      {
+        "t": "Providers",
+        "s": "primary + backup"
+      },
+      {
+        "t": "MikroTik",
+        "s": "failover, firewall"
+      },
+      {
+        "t": "VLAN & VPN"
+      },
+      {
+        "t": "Office & branches"
+      }
+    ],
+    "smarthome": [
+      {
+        "t": "Tuya devices",
+        "s": "light, climate, sensors"
+      },
+      {
+        "t": "Hub & Wi-Fi"
+      },
+      {
+        "t": "App",
+        "s": "scenarios"
+      },
+      {
+        "t": "Voice assistants",
+        "s": "Alexa, Google"
+      }
+    ],
+    "turnstile": [
+      {
+        "t": "Identification",
+        "s": "card, face, fingerprint"
+      },
+      {
+        "t": "Access controller"
+      },
+      {
+        "t": "Turnstile"
+      },
+      {
+        "t": "Log & time attendance"
+      }
+    ],
+    "locks": [
+      {
+        "t": "Identification",
+        "s": "code, card, fingerprint"
+      },
+      {
+        "t": "Controller"
+      },
+      {
+        "t": "Lock",
+        "s": "magnetic / mechanical"
+      },
+      {
+        "t": "Access log"
+      }
+    ],
+    "gates": [
+      {
+        "t": "Command",
+        "s": "remote, phone, plate"
+      },
+      {
+        "t": "Control unit"
+      },
+      {
+        "t": "Drive"
+      },
+      {
+        "t": "Gate",
+        "s": "safety photocells"
+      }
+    ],
+    "telephony": [
+      {
+        "t": "SIP provider",
+        "s": "city numbers"
+      },
+      {
+        "t": "IP PBX",
+        "s": "IVR, queues, recording"
+      },
+      {
+        "t": "Fanvil phones"
+      },
+      {
+        "t": "Branches & CRM"
       }
     ]
   },
