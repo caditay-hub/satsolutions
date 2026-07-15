@@ -125,13 +125,13 @@ export function SiteFooter() {
                 {data.phone ? (
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("phone")}</div>
-                    <div className="mt-1 text-slate-950">{data.phone}</div>
+                    <a href={`tel:${data.phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-bold text-slate-950 hover:text-brand-700">{data.phone}</a>
                   </div>
                 ) : null}
                 {data.email ? (
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">Email</div>
-                    <div className="mt-1 text-slate-950">{data.email}</div>
+                    <a href={`mailto:${data.email}`} className="mt-1 block text-slate-950 hover:text-brand-700">{data.email}</a>
                   </div>
                 ) : null}
                 {data.address ? (

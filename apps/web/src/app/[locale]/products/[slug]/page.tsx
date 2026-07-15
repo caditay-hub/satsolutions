@@ -41,6 +41,7 @@ async function recoverProductSlug(slug: string): Promise<string | null> {
 import Image from "next/image";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
+import { ContactButtons } from "@/components/ContactButtons";
 import { ProductCard } from "@/components/Cards";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ProductGallery } from "@/components/ProductGallery";
@@ -332,6 +333,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 variant="primary"
                 productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
               />
+              <ContactButtons compact />
               <BackButton />
             </div>
 

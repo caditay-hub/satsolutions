@@ -46,7 +46,8 @@
     "openPhoto": "Rasmni ochish",
     "imgPrev": "Oldingi",
     "imgNext": "Keyingi",
-    "loading": "Yuklanmoqda"
+    "loading": "Yuklanmoqda",
+    "call": "Qo'ng'iroq qilish"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",

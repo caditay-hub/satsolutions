@@ -7,6 +7,7 @@ import { getServiceBySlug, getPortfolio } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { ContactButtons } from "@/components/ContactButtons";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
@@ -145,6 +146,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
+              <ContactButtons />
             </div>
           </div>
         </div>
