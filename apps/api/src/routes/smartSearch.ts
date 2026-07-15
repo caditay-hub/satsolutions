@@ -173,8 +173,12 @@ ${cats.map((c) => `${c.name} | ${c.slug} | ${c.cnt}`).join("\n")}
   }
 }
 
-async function mappingSearch(map: Mapping, limit: number) {
+async function mappingSearch(map: Mapping, limit: number, qTokens: string[] = []) {
   const kw = map.keywords.filter(Boolean);
+  // Токены исходного запроса (≥3 симв.): совпадение с кодом модели весит больше
+  // категории+keywords, чтобы «охранная панель болид с2000м» поднимала товар
+  // с modelCode «С2000М» в топ, а не топила его в LIMIT среди всей категории.
+  const qt = qTokens.filter((t) => t.length >= 3).slice(0, 8);
   const rows = (await sequelize.query(
     `WITH RECURSIVE sel AS (
        SELECT id FROM categories WHERE slug IN (:catSlugs)
@@ -184,7 +188,7 @@ async function mappingSearch(map: Mapping, limit: number) {
      SELECT DISTINCT p.id, p.name, p.slug, p."coverImageUrl", p."modelCode", p.price, p."isUsd",
             p."shortDescription" AS short_description, p.characteristics::text AS chars_text,
             c.name AS category_name, c.slug AS category_slug, b.name AS brand_name, b.slug AS brand_slug,
-            ((CASE WHEN p."categoryId" IN (SELECT id FROM sel) THEN 3 ELSE 0 END) + ${kw.length ? kw.map((_, i) => `(CASE WHEN p.name ILIKE :kw${i} THEN 2 ELSE 0 END) + (CASE WHEN p."shortDescription" ILIKE :kw${i} THEN 1 ELSE 0 END)`).join(" + ") : "0"}) AS rank
+            ((CASE WHEN p."categoryId" IN (SELECT id FROM sel) THEN 3 ELSE 0 END) + ${kw.length ? kw.map((_, i) => `(CASE WHEN p.name ILIKE :kw${i} THEN 2 ELSE 0 END) + (CASE WHEN p."shortDescription" ILIKE :kw${i} THEN 1 ELSE 0 END)`).join(" + ") : "0"} + ${qt.length ? qt.map((_, i) => `(CASE WHEN p."modelCode" ILIKE :qt${i} THEN 6 WHEN p.name ILIKE :qt${i} THEN 1 ELSE 0 END)`).join(" + ") : "0"}) AS rank
      FROM products p
      LEFT JOIN categories c ON c.id = p."categoryId"
      LEFT JOIN brands b ON b.id = p."brandId"
@@ -205,6 +209,7 @@ async function mappingSearch(map: Mapping, limit: number) {
           lim: limit,
         },
         Object.fromEntries(kw.map((k, i) => [`kw${i}`, `%${k}%`])),
+        Object.fromEntries(qt.map((t, i) => [`qt${i}`, `%${t}%`])),
       ),
     },
   )) as any[];
@@ -365,7 +370,7 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   }
 
   // 4) поиск по маппингу + прямые находки всегда сверху
-  const mapped = await mappingSearch(mapping, limit);
+  const mapped = await mappingSearch(mapping, limit, tokenize(q));
   const directIds = new Set(direct.rows.map((r: any) => r.id));
   const mappedFresh = mapped.filter((m: any) => !directIds.has(m.id));
   // Точный запрос модели («GL300W», «Беспроводной замок GL300W»): в основной выдаче —
