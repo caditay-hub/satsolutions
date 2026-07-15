@@ -180,6 +180,37 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     }
   },
 
+  "virtualizaciya-h3c-cas-finansovaya-organizaciya": {
+    uz: {
+      title: "Moliyaviy tashkilot uchun H3C serverlarida virtualizatsiya",
+      location: "Toshkent",
+      clientTasks: "Serverlarni konsolidatsiya qilish, ishonchli klaster, tizimlarni to'xtatishsiz ko'chirish",
+      excerpt: "Ishonchli virtualizatsiya klasteri: ikkita H3C UniServer R4900 G6 serveri va H3C CAS Enterprise platformasi, ishlayotgan tizimlarni uzoq to'xtashlarsiz ko'chirish bilan.",
+      content: "Toshkentdagi moliyaviy tashkilot uchun SAT Solutions mutaxassislari H3C uskunalarida virtualizatsiya platformasini loyihaladi va joriy etdi — serverlarni yetkazib berishdan ishlayotgan tizimlarni ko'chirishgacha.\n\nVazifa: tarqoq fizik serverlarni konsolidatsiya qilish, muhim servislarning ishonchliligini ta'minlash va zaxira nusxalashni soddalashtirish — platformani almashtirmasdan o'sish zaxirasi bilan.\n\nLoyiha doirasida bajarildi:\n\nikkita H3C UniServer R4900 G6 serverini yetkazib berish — har birida ikkita 16 yadroli Intel Xeon protsessori, 512 GB DDR5 operativ xotira, sakkizta 7,68 TB SSD va 25GbE tarmoq interfeyslari;\nH3C CAS Cloud Virtualization Manager Enterprise platformasini o'rnatish;\nserverlarni virtual mashinalar avtomatik qayta ishga tushadigan ishonchli klasterga birlashtirish;\nmavjud tizimlarni H3C CAS Migration Tool yordamida virtual muhitga ko'chirish — qayta o'rnatishsiz va uzoq to'xtashlarsiz;\nzaxira nusxalashni sozlash va buyurtmachi administratorlarini o'qitish;\nH3C yillik vendor qo'llab-quvvatlashini ulash.\n\nNatija: muhim servislar yuqori ishonchlilik klasterida ishlaydi — bir uzel ishdan chiqsa, virtual mashinalar ikkinchisida avtomatik qayta ishga tushadi. Yangi serverlar endi haftalab uskuna sotib olish o'rniga daqiqalarda beriladi, butun infratuzilma yagona konsoldan boshqariladi.\n\nSAT Solutions — O'zbekistonda H3C hamkori: bunday loyihalarni kalit topshirish asosida bajaramiz — audit va spetsifikatsiyadan ko'chirish va qo'llab-quvvatlashgacha."
+    },
+    en: {
+      title: "Virtualization on H3C servers for a financial organization",
+      location: "Tashkent",
+      clientTasks: "Server consolidation, high-availability cluster, migration without downtime",
+      excerpt: "A high-availability virtualization cluster: two H3C UniServer R4900 G6 servers and the H3C CAS Enterprise platform, with migration of live systems without long downtime.",
+      content: "For a financial organization in Tashkent, SAT Solutions specialists designed and deployed a virtualization platform on H3C equipment — from server supply to migration of production systems.\n\nThe task: consolidate scattered physical servers, ensure fault tolerance of critical services and simplify backups — with room to grow without replacing the platform.\n\nThe following work was carried out:\n\nsupply of two H3C UniServer R4900 G6 servers — each with two 16-core Intel Xeon processors, 512 GB of DDR5 memory, eight 7.68 TB SSDs and 25GbE network interfaces;\ndeployment of the H3C CAS Cloud Virtualization Manager Enterprise platform;\nclustering of the servers with automatic restart of virtual machines on node failure;\nmigration of existing systems into the virtual environment with the native H3C CAS Migration Tool — without reinstallation or long downtime;\nbackup configuration and training of the customer's administrators;\na one-year H3C vendor support subscription.\n\nThe result: critical services run in a high-availability cluster — if one node fails, virtual machines automatically restart on the second. New servers are now provisioned in minutes instead of weeks of hardware procurement, and the whole infrastructure is managed from a single console.\n\nSAT Solutions is an H3C partner in Uzbekistan: we deliver such projects turnkey — from audit and specification to migration and support."
+    },
+    tr: {
+      title: "Bir finans kuruluşu için H3C sunucularında sanallaştırma",
+      location: "Taşkent",
+      clientTasks: "Sunucu konsolidasyonu, yüksek erişilebilirlik kümesi, kesintisiz taşıma",
+      excerpt: "Yüksek erişilebilirlikli sanallaştırma kümesi: iki H3C UniServer R4900 G6 sunucu ve H3C CAS Enterprise platformu, çalışan sistemlerin uzun kesinti olmadan taşınmasıyla.",
+      content: "Taşkent'teki bir finans kuruluşu için SAT Solutions uzmanları, H3C ekipmanı üzerinde sanallaştırma platformu tasarladı ve kurdu — sunucu tedarikinden canlı sistemlerin taşınmasına kadar.\n\nGörev: dağınık fiziksel sunucuları konsolide etmek, kritik servislerin hata toleransını sağlamak ve yedeklemeyi basitleştirmek — platform değişmeden büyüme payıyla.\n\nProje kapsamında yapılanlar:\n\niki H3C UniServer R4900 G6 sunucunun tedariki — her birinde iki adet 16 çekirdekli Intel Xeon işlemci, 512 GB DDR5 bellek, sekiz adet 7,68 TB SSD ve 25GbE ağ arabirimleri;\nH3C CAS Cloud Virtualization Manager Enterprise platformunun kurulumu;\nsunucuların, düğüm arızasında sanal makinelerin otomatik yeniden başlatıldığı bir kümede birleştirilmesi;\nmevcut sistemlerin H3C CAS Migration Tool ile sanal ortama taşınması — yeniden kurulum ve uzun kesinti olmadan;\nyedekleme yapılandırması ve müşteri yöneticilerinin eğitimi;\nbir yıllık H3C üretici desteğinin bağlanması.\n\nSonuç: kritik servisler yüksek erişilebilirlikli kümede çalışıyor — bir düğüm arızalanırsa sanal makineler ikincisinde otomatik başlıyor. Yeni sunucular artık haftalar süren donanım alımı yerine dakikalar içinde veriliyor, tüm altyapı tek konsoldan yönetiliyor.\n\nSAT Solutions, Özbekistan'da H3C iş ortağıdır: bu tür projeleri anahtar teslim yürütüyoruz — denetim ve şartnameden taşıma ve desteğe kadar."
+    },
+    zh: {
+      title: "为金融机构部署 H3C 服务器虚拟化",
+      location: "塔什干",
+      clientTasks: "服务器整合、高可用集群、业务系统无停机迁移",
+      excerpt: "高可用虚拟化集群：两台 H3C UniServer R4900 G6 服务器与 H3C CAS Enterprise 平台，业务系统迁移无长时间停机。",
+      content: "SAT Solutions 的专家为塔什干一家金融机构设计并部署了基于 H3C 设备的虚拟化平台——从服务器供货到生产系统迁移。\n\n任务：整合分散的物理服务器，保障关键业务的容错能力，简化备份——并预留扩展空间而无需更换平台。\n\n项目完成内容：\n\n供应两台 H3C UniServer R4900 G6 服务器——每台配备两颗16核 Intel Xeon 处理器、512 GB DDR5 内存、八块 7.68 TB SSD 及 25GbE 网络接口；\n部署 H3C CAS Cloud Virtualization Manager Enterprise 虚拟化平台；\n将服务器组成高可用集群，节点故障时虚拟机自动重启；\n使用 H3C CAS Migration Tool 将现有系统迁移至虚拟环境——无需重装、无长时间停机；\n配置备份并培训客户管理员；\n接入 H3C 一年期厂商支持。\n\n成果：关键业务运行在高可用集群中——一个节点故障时虚拟机自动切换到另一节点。新服务器的交付从数周的硬件采购缩短到几分钟，整套基础设施通过统一控制台管理。\n\nSAT Solutions 是 H3C 在乌兹别克斯坦的合作伙伴：此类项目我们提供一站式交付——从评估、选型到迁移与支持。"
+    }
+  },
+
   "skud-zavod-baltika": {
     uz: {
       title: "«Baltika» zavodida kirish nazorati",
