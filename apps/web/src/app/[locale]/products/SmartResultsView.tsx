@@ -34,14 +34,15 @@ function FacetGroup({ title, options, selected, onToggle }: {
       {/* flex-col, не grid: grid-трек тянется до min-content строки (nowrap-текст) и вылезает за карточку */}
       <div className="flex flex-col gap-1">
         {shown.map((o) => (
-          <label key={o.key} className="flex min-w-0 cursor-pointer items-center gap-2 rounded-md px-1 py-0.5 text-[13px] text-slate-700 hover:bg-slate-50">
+          <label key={o.key} className="flex min-w-0 cursor-pointer items-start gap-2 rounded-md px-1 py-0.5 text-[13px] text-slate-700 hover:bg-slate-50">
             <input
               type="checkbox"
               checked={selected.has(o.key)}
               onChange={() => onToggle(o.key)}
-              className="h-4 w-4 shrink-0 accent-brand-600"
+              className="mt-0.5 h-4 w-4 shrink-0 accent-brand-600"
             />
-            <span className="min-w-0 flex-1 truncate">{o.label}</span>
+            {/* названия переносим целиком (break-words), не обрезаем многоточием */}
+            <span className="min-w-0 flex-1 break-words leading-snug">{o.label}</span>
             <span className="shrink-0 text-[11px] text-slate-400">{o.count}</span>
           </label>
         ))}
@@ -114,7 +115,7 @@ export function SmartResultsView({ items, related = [], usdToUzs }: { items: Sma
   );
 
   return (
-    <div className={hasFacets ? "grid gap-6 lg:grid-cols-[240px_1fr]" : ""}>
+    <div className={hasFacets ? "grid gap-6 lg:grid-cols-[260px_1fr]" : ""}>
       {hasFacets ? (
         <aside>
           {/* мобильный: складной блок; десктоп: всегда виден, липкий */}
