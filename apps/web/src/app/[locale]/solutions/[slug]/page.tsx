@@ -12,6 +12,8 @@ import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
 import { SmartHomeDevices } from "@/components/SmartHomeDevices";
 import { H3cEquipment } from "@/components/H3cEquipment";
+import { DataCenterDetails } from "@/components/DataCenterDetails";
+import { RelatedServices } from "@/components/RelatedServices";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -62,7 +64,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     }
   }
 
-  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=9`);
+  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=10`);
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
   const works = ts.raw(`${svc.key}.works`) as string[];
@@ -132,7 +134,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
           <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[16/9]">
             <Image
-              src={`${IMG_BASE}/${svc.key}.jpg?v=9`}
+              src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
               alt={title}
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -179,8 +181,14 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Серверы H3C: перечень поставляемого оборудования (модельные линейки) */}
         {svc.key === "virtualization" && <H3cEquipment />}
 
+        {/* Серверные и ЦОД: типовые конфигурации, этапы, каталог */}
+        {svc.key === "server" && <DataCenterDetails />}
+
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} />
+
+        {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
+        <RelatedServices current={svc.key} />
 
         {/* Галерея */}
         {gallery.length > 0 && (

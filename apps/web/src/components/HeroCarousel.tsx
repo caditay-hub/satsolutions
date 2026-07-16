@@ -74,11 +74,14 @@ export function HeroCarousel({
     setIdx(0);
   }, [count]);
 
+  // Автопрокрутка: таймер перезапускается при КАЖДОЙ смене слайда (в т.ч. ручной) —
+  // иначе после клика стрелкой следующий слайд мог смениться почти сразу
+  // (старый интервал продолжал тикать), и карусель «крутилась по-разному».
   useEffect(() => {
     if (count <= 1) return;
-    const id = window.setInterval(() => setIdx((v) => (v + 1) % count), 6000);
-    return () => window.clearInterval(id);
-  }, [count]);
+    const id = window.setTimeout(() => setIdx((v) => (v + 1) % count), 6000);
+    return () => window.clearTimeout(id);
+  }, [count, idx]);
 
   return (
     <div className="group/hero relative overflow-hidden bg-slate-950 w-full">

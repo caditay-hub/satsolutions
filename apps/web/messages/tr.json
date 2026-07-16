@@ -162,6 +162,110 @@
           "Portföy",
           "Ürünler"
         ]
+      },
+      {
+        "title": "Yapısal kablolama ve LAN",
+        "text": "Bina kablo altyapısı: prizler, patch paneller, her hat test edilir.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Wi-Fi ağları",
+        "text": "Ofis, depo ve açık alanlarda kesintisiz kapsama.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Fiber optik hatlar",
+        "text": "Fiber döşeme ve ek: binalar arası omurgalar.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Telsiz köprüler",
+        "text": "Kablosuz binalar arası internet — 20+ km'ye kadar.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "MikroTik kurulumu",
+        "text": "Çift hat, VPN, VLAN — düşmeyen ağ.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Akıllı ev",
+        "text": "Tuya ile ışık, perde, iklim ve güvenlik — telefondan.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Turnikeler ve geçişler",
+        "text": "Hızlı geçişler, biyometri ve mesai takibi.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Elektronik ve akıllı kilitler",
+        "text": "Kart, kod, parmak izi — anahtarsız erişim.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Otomatik kapılar",
+        "text": "Yana kayar, çift kanat ve seksiyonel — telefondan açılır.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Ofis IP telefonu",
+        "text": "IP santral, görüşme kaydı, şubeler tek ağda.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "H3C sunucular ve sanallaştırma",
+        "text": "H3C iş ortağı: CAS kümeleri ve özel bulut.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Sunucu odaları ve veri merkezleri",
+        "text": "Anahtar teslim: güç, iklim, izleme.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
+      },
+      {
+        "title": "Sipariş üzerine sunucular",
+        "text": "Supermicro, Lenovo, H3C — görevinize göre yapılandırılır.",
+        "buttons": [
+          "Ayrıntılar",
+          "Teklif al"
+        ]
       }
     ],
     "view": "Görüntüle →",
@@ -373,7 +477,80 @@
         "UPS ve soğutma sistemleri kurulumu",
         "İzleme ve geçiş kontrolü",
         "Devreye alma ve servis"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik çözümler",
+        "pkgTitle": "Ne kuruyoruz: sunucu odasından mini veri merkezine",
+        "pkgNote": "Her tesis projeye göre hesaplanır: girdileri gönderin (kabinet sayısı, ekipman, oda) — keşif bedeli dönelim.",
+        "packages": [
+          {
+            "name": "Ofis için sunucu odası",
+            "for": "Ofis, banka şubesi, klinik, okul",
+            "items": [
+              "19\" 22–42U kabinet, güç ve topraklama düzeni",
+              "Yüklerinize göre boyutlandırılmış UPS",
+              "İklimlendirme ve havalandırma, sıcaklık kontrolü",
+              "Su kaçağı ve duman sensörleri, oda geçiş kontrolü"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Mini veri merkezi / sunucu düğümü",
+            "for": "Kritik servisler, ERP barındırma, video arşivleri",
+            "items": [
+              "Kabinet sırası, yedekli güç: iki besleme + UPS",
+              "Hassas soğutma, sıcak/soğuk koridor",
+              "Sıcaklık, nem ve güç izleme, uyarılarla",
+              "Sunucu odası için geçiş kontrol ve CCTV"
+            ],
+            "term": "Süre: 1–2 ay, projeye göre"
+          },
+          {
+            "name": "Mevcut sunucu odasının modernizasyonu",
+            "for": "Aşırı ısınma, kablo karmaşası, eski UPS",
+            "items": [
+              "Denetim: ısı rejimi, güç, kablo durumu",
+              "Kabloların yeniden düzenlenmesi ve etiketleme, dokümantasyon",
+              "UPS ve soğutmanın değişimi veya eklenmesi",
+              "Eski sunucuların yeni donanımda sanallaştırılması"
+            ],
+            "term": "Süre: 2 haftadan itibaren, kesintisiz aşamalı"
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Denetimden izlemeye — 5 adım",
+        "stages": [
+          {
+            "t": "Denetim ve şartname",
+            "s": "mühendis ziyareti, oda ölçümü — ücretsiz"
+          },
+          {
+            "t": "Proje",
+            "s": "ısı hesabı, güç, yerleşim planı"
+          },
+          {
+            "t": "Tedarik",
+            "s": "kabinetler, UPS, soğutma — stoktan ve siparişle"
+          },
+          {
+            "t": "Montaj",
+            "s": "kabinetler, güç, iklim, kablo yönetimi"
+          },
+          {
+            "t": "İzleme",
+            "s": "sensörler, uyarılar, servis sözleşmesi"
+          }
+        ],
+        "catLabel": "Katalog",
+        "catTitle": "Sunucu odası için her şey — kataloğumuzda",
+        "catText": "Kabinetler, UPS, sunucu donanımı ve optik stokta — tesisi ithalat beklemeden donatıyoruz:",
+        "cat": {
+          "racks": "Telekom kabinetleri",
+          "ups": "UPS ve güç",
+          "servers": "Sunucu donanımı",
+          "sfp": "SFP modülleri"
+        }
+      }
     },
     "videowall": {
       "title": "Video duvarları",
@@ -685,6 +862,18 @@
         "Şubeleri ve uzak çalışanları birleştirme",
         "Kurulum, eğitim ve destek"
       ]
+    },
+    "servers": {
+      "title": "Sipariş Üzerine Sunucular",
+      "desc": "Supermicro, Lenovo, H3C ve depolama: göreve uygun konfigürasyon, tedarik, devreye alma.",
+      "intro": "Sipariş üzerine sunucu tedarik ediyoruz: Supermicro, Lenovo ThinkSystem, H3C UniServer ve depolama sistemleri. ERP, veritabanı, sanallaştırma veya video arşivi için konfigürasyon hazırlıyoruz — montaj, kurulum ve üretici garantisiyle.",
+      "works": [
+        "Göreve uygun konfigürasyon seçimi: ERP, DB, sanallaştırma, video arşivi",
+        "Supermicro, Lenovo, H3C sunucu ve depolama tedariki",
+        "Kabinete montaj, RAID, işletim sistemi ve hipervizör kurulumu",
+        "Veri ve servislerin yeni donanıma taşınması",
+        "Üretici garantisi ve servis sözleşmeleri"
+      ]
     }
   },
   "solutionsPage": {
@@ -736,7 +925,9 @@
     "industryTag": "Sektör çözümü",
     "getQuote": "Teklif al",
     "needTitle": "{name} mı lazım?",
-    "detailCtaText": "Tesisinize uygun ekipmanı seçer ve 30 dakika içinde teklif göndeririz."
+    "detailCtaText": "Tesisinize uygun ekipmanı seçer ve 30 dakika içinde teklif göndeririz.",
+    "relatedLabel": "İlgili hizmetler",
+    "relatedTitle": "Ayrıca ihtiyacınız olabilir"
   },
   "chat": {
     "title": "Canlı sohbet",
@@ -1284,6 +1475,23 @@
       },
       {
         "t": "Şubeler ve CRM"
+      }
+    ],
+    "servers": [
+      {
+        "t": "Görev ve yük",
+        "s": "ERP, DB, sanallaştırma"
+      },
+      {
+        "t": "Konfigürasyon ve teklif"
+      },
+      {
+        "t": "Teslimat",
+        "s": "üretici deposundan"
+      },
+      {
+        "t": "Montaj ve başlatma",
+        "s": "RAID, OS, taşıma"
       }
     ]
   },

@@ -162,6 +162,110 @@
           "Portfolio",
           "Products"
         ]
+      },
+      {
+        "title": "Structured cabling & LAN",
+        "text": "Building cable infrastructure: sockets, patch panels, every line tested.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Wi-Fi networks",
+        "text": "Seamless coverage for offices, warehouses and outdoor areas.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Fiber optic lines",
+        "text": "Fiber laying and splicing: backbones between buildings.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Wireless bridges",
+        "text": "Internet between buildings without cable — up to 20+ km.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "MikroTik setup",
+        "text": "Dual WAN, VPN, VLAN — a network that never goes down.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Smart home",
+        "text": "Light, curtains, climate and security on Tuya — from your phone.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Turnstiles & entrances",
+        "text": "Speed gates, biometrics and time attendance.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Electronic & smart locks",
+        "text": "Card, code, fingerprint — keyless access.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Automatic gates",
+        "text": "Sliding, swing and sectional — opened from your phone.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Office IP telephony",
+        "text": "IP PBX, call recording, branches in one network.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "H3C servers & virtualization",
+        "text": "H3C partner: CAS clusters and private cloud.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Server rooms & data centers",
+        "text": "Turnkey: power, cooling, monitoring.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
+      },
+      {
+        "title": "Servers to order",
+        "text": "Supermicro, Lenovo, H3C — configured for your task.",
+        "buttons": [
+          "Learn more",
+          "Get a quote"
+        ]
       }
     ],
     "view": "View →",
@@ -373,7 +477,80 @@
         "UPS and cooling systems installation",
         "Monitoring and access control",
         "Commissioning and service"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "What we build: from a server room to a mini data center",
+        "pkgNote": "Every site is quoted per project: send the inputs (rack count, equipment, room) and we will return an estimate.",
+        "packages": [
+          {
+            "name": "Server room for an office",
+            "for": "Office, bank branch, clinic, school",
+            "items": [
+              "19\" 22–42U cabinet, power and grounding",
+              "UPS with runtime sized for your loads",
+              "Air conditioning and ventilation, temperature control",
+              "Leak and smoke sensors, room access control"
+            ],
+            "term": "Lead time: 2–4 weeks"
+          },
+          {
+            "name": "Mini data center / server node",
+            "for": "Critical services, ERP hosting, video archives",
+            "items": [
+              "Row of racks, redundant power: two feeds + UPS",
+              "Precision cooling, hot/cold aisle",
+              "Temperature, humidity and power monitoring with alerts",
+              "Access control and CCTV for the server room"
+            ],
+            "term": "Lead time: 1–2 months, per project"
+          },
+          {
+            "name": "Upgrade of an existing server room",
+            "for": "Overheating, cable chaos, aging UPS",
+            "items": [
+              "Audit: thermal conditions, power, cable state",
+              "Cable re-routing and labelling, documentation",
+              "Replacement or addition of UPS and cooling",
+              "Virtualization of legacy servers on new hardware"
+            ],
+            "term": "Lead time: from 2 weeks, in stages without downtime"
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From audit to monitoring — 5 steps",
+        "stages": [
+          {
+            "t": "Audit & spec",
+            "s": "engineer visit, room survey — free"
+          },
+          {
+            "t": "Design",
+            "s": "thermal calculation, power, layout plan"
+          },
+          {
+            "t": "Supply",
+            "s": "cabinets, UPS, cooling — from stock and to order"
+          },
+          {
+            "t": "Installation",
+            "s": "racks, power, climate, cable management"
+          },
+          {
+            "t": "Monitoring",
+            "s": "sensors, alerts, service contract"
+          }
+        ],
+        "catLabel": "Catalog",
+        "catTitle": "Everything for a server room — already in our catalog",
+        "catText": "Cabinets, UPS, server hardware and optics in stock — we equip the site without waiting for imports:",
+        "cat": {
+          "racks": "Telecom cabinets",
+          "ups": "UPS & power",
+          "servers": "Server hardware",
+          "sfp": "SFP modules"
+        }
+      }
     },
     "videowall": {
       "title": "Video walls",
@@ -685,6 +862,18 @@
         "Uniting branches and remote employees",
         "Setup, training and support"
       ]
+    },
+    "servers": {
+      "title": "Servers to Order",
+      "desc": "Supermicro, Lenovo, H3C and storage: configuration for the task, supply, launch.",
+      "intro": "We supply servers to order: Supermicro, Lenovo ThinkSystem, H3C UniServer and storage systems. We size the configuration for ERP, databases, virtualization or video archives — with installation, setup and vendor warranty.",
+      "works": [
+        "Configuration sizing for the task: ERP, DB, virtualization, video archive",
+        "Supply of Supermicro, Lenovo, H3C servers and storage",
+        "Rack installation, RAID setup, OS and hypervisor deployment",
+        "Migration of data and services to the new hardware",
+        "Vendor warranty and service contracts"
+      ]
     }
   },
   "solutionsPage": {
@@ -736,7 +925,9 @@
     "industryTag": "Industry solution",
     "getQuote": "Get a quote",
     "needTitle": "Need {name}?",
-    "detailCtaText": "We'll select equipment for your site and send a quote within 30 minutes."
+    "detailCtaText": "We'll select equipment for your site and send a quote within 30 minutes.",
+    "relatedLabel": "Related services",
+    "relatedTitle": "You may also need"
   },
   "chat": {
     "title": "Online chat",
@@ -1284,6 +1475,23 @@
       },
       {
         "t": "Branches & CRM"
+      }
+    ],
+    "servers": [
+      {
+        "t": "Task & workload",
+        "s": "ERP, DB, virtualization"
+      },
+      {
+        "t": "Configuration & quote"
+      },
+      {
+        "t": "Delivery",
+        "s": "from vendor stock"
+      },
+      {
+        "t": "Install & launch",
+        "s": "RAID, OS, migration"
       }
     ]
   },

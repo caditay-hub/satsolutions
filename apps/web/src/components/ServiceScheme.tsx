@@ -9,7 +9,7 @@ const SCHEME_KEYS = new Set([
   "cctv", "analytics", "anpr", "access", "intercom", "attendance",
   "alarm", "fire", "network", "server", "videowall", "pa", "barrier", "perimeter",
   "virtualization", "wifi", "fiber", "radiobridge", "mikrotik", "smarthome",
-  "turnstile", "locks", "gates", "telephony"
+  "turnstile", "locks", "gates", "telephony", "servers"
 ]);
 
 export async function ServiceScheme({ k }: { k: string }) {

@@ -162,6 +162,110 @@
           "Portfolio",
           "Mahsulotlar"
         ]
+      },
+      {
+        "title": "SKS va LVS",
+        "text": "Bino kabel infratuzilmasi: rozetkalar, patch-panellar, har bir liniyani testlash.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Wi-Fi tarmoqlari",
+        "text": "Ofis, ombor va hududlarni uzluksiz qamrash — o'lik zonalarsiz.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Optik tolali liniyalar",
+        "text": "Optika yotqizish va payvandlash: binolar orasidagi magistrallar.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Radioko'priklar",
+        "text": "Kabelsiz binolar orasida internet — 20+ km gacha.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "MikroTik sozlash",
+        "text": "Ikki provayder, VPN, VLAN — uzilmaydigan tarmoq.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Aqlli uy",
+        "text": "Tuya asosida yorug'lik, pardalar, iqlim va qo'riqlash — telefondan boshqarish.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Turniketlar va o'tish punktlari",
+        "text": "Tezkor o'tishlar, biometriya va ish vaqti hisobi.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Elektron va aqlli qulflar",
+        "text": "Karta, kod, barmoq izi — kalitsiz kirish.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Avtomatik darvozalar",
+        "text": "Surma, tavaqali va seksiyali — telefondan ochish bilan.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Ofis uchun IP-telefoniya",
+        "text": "IP-ATS, suhbatlar yozuvi, filiallar bitta tarmoqda.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "H3C serverlari va virtualizatsiya",
+        "text": "H3C hamkori: CAS klasterlari va xususiy bulut.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Server xonalari va data-markazlar",
+        "text": "Kalitga tayyor: ta'minot, iqlim, monitoring.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
+      },
+      {
+        "title": "Buyurtma asosida serverlar",
+        "text": "Supermicro, Lenovo, H3C — vazifangizga mos konfiguratsiya.",
+        "buttons": [
+          "Batafsil",
+          "Tijorat taklifi"
+        ]
       }
     ],
     "view": "Ko‘rish →",
@@ -373,7 +477,80 @@
         "UPS va sovutish tizimlarini o‘rnatish",
         "Monitoring va kirish nazorati",
         "Ishga tushirish va servis"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Biz nima quramiz: server xonasidan mini-data-markazgacha",
+        "pkgNote": "Har bir obyektni loyiha bo'yicha hisoblaymiz: ma'lumotlarni yuboring (stoykalar soni, uskunalar, xona) — smetani qaytaramiz.",
+        "packages": [
+          {
+            "name": "Ofis uchun server xonasi",
+            "for": "Ofis, bank filiali, klinika, o'quv muassasasi",
+            "items": [
+              "19\" 22–42U shkaf, ta'minot va yerga ulashni tashkil etish",
+              "Vazifangizga mos avtonomiyali UPS",
+              "Konditsionerlash va ventilyatsiya, haroratni nazorat qilish",
+              "Suv toshqini va tutun datchiklari, xonaga kirish nazorati"
+            ],
+            "term": "Muddat: 2–4 hafta"
+          },
+          {
+            "name": "Mini-data-markaz / server uzeli",
+            "for": "Muhim servislar, 1C hosting, videoarxivlar",
+            "items": [
+              "Stoykalar qatori, rezervlangan ta'minot: ikki kirish + UPS",
+              "Presizion konditsionerlash, issiq/sovuq koridor",
+              "Harorat, namlik va ta'minot monitoringi, xabarnomalar bilan",
+              "Server xonasining SKUD va videokuzatuvi"
+            ],
+            "term": "Muddat: 1–2 oy, loyiha bo'yicha"
+          },
+          {
+            "name": "Mavjud server xonasini modernizatsiya qilish",
+            "for": "Qizib ketish, kabel tartibsizligi, eskirgan UPS",
+            "items": [
+              "Audit: issiqlik rejimi, ta'minot, kabellar holati",
+              "Kabellarni qayta yotqizish va markirovkalash, hujjatlar",
+              "UPS va sovutishni almashtirish yoki qo'shish",
+              "Eskirgan serverlarni yangi uskunada virtualizatsiya qilish"
+            ],
+            "term": "Muddat: 2 haftadan, servislarni to'xtatmasdan bosqichma-bosqich"
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Auditdan monitoringgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Audit va TT",
+            "s": "muhandis tashrifi, xona o'lchovlari — bepul"
+          },
+          {
+            "t": "Loyiha",
+            "s": "issiqlik hisobi, ta'minot, joylashtirish rejasi"
+          },
+          {
+            "t": "Yetkazib berish",
+            "s": "shkaflar, UPS, konditsionerlar — ombordan va buyurtma bilan"
+          },
+          {
+            "t": "Montaj",
+            "s": "stoykalar, ta'minot, iqlim, kabel boshqaruvi"
+          },
+          {
+            "t": "Monitoring",
+            "s": "datchiklar, xabarnomalar, xizmat shartnomasi"
+          }
+        ],
+        "catLabel": "Katalog",
+        "catTitle": "Server xonasi uchun hamma narsa — katalogimizda",
+        "catText": "Shkaflar, UPS, server uskunalari va optika mavjud — obyektni yetkazib berishni kutmasdan butlaymiz:",
+        "cat": {
+          "racks": "Telekommunikatsiya shkaflari",
+          "ups": "UPS va elektr ta'minoti",
+          "servers": "Server uskunalari",
+          "sfp": "SFP-modullar"
+        }
+      }
     },
     "videowall": {
       "title": "Videodevorlar",
@@ -685,6 +862,18 @@
         "Filiallar va masofaviy xodimlarni birlashtirish",
         "Sozlash, o'qitish va qo'llab-quvvatlash"
       ]
+    },
+    "servers": {
+      "title": "Buyurtma asosida serverlar",
+      "desc": "Supermicro, Lenovo, H3C va SXD: vazifaga mos konfiguratsiya, yetkazib berish, ishga tushirish.",
+      "intro": "Serverlarni buyurtma asosida yetkazib beramiz: Supermicro, Lenovo ThinkSystem, H3C UniServer va ma'lumotlar saqlash tizimlari. 1C, ma'lumotlar bazasi, virtualizatsiya yoki videoarxiv uchun konfiguratsiya yig'amiz — montaj, sozlash va vendor kafolati bilan.",
+      "works": [
+        "Vazifaga mos konfiguratsiya tanlash: 1C, BD, virtualizatsiya, videoarxiv",
+        "Supermicro, Lenovo, H3C serverlari va SXD yetkazib berish",
+        "Stoykaga montaj, RAID sozlash, OT va gipervizor o'rnatish",
+        "Ma'lumotlar va servislarni yangi uskunaga ko'chirish",
+        "Vendor kafolati va servis shartnomalari"
+      ]
     }
   },
   "solutionsPage": {
@@ -736,7 +925,9 @@
     "industryTag": "Soha uchun yechim",
     "getQuote": "Tijoriy taklif olish",
     "needTitle": "«{name}» xizmati kerakmi?",
-    "detailCtaText": "Obyektga mos uskunani tanlaymiz va 30 daqiqa ichida tijoriy taklif yuboramiz."
+    "detailCtaText": "Obyektga mos uskunani tanlaymiz va 30 daqiqa ichida tijoriy taklif yuboramiz.",
+    "relatedLabel": "Turdosh xizmatlar",
+    "relatedTitle": "Sizga yana kerak bo'lishi mumkin"
   },
   "chat": {
     "title": "Onlayn chat",
@@ -1284,6 +1475,23 @@
       },
       {
         "t": "Filiallar va CRM"
+      }
+    ],
+    "servers": [
+      {
+        "t": "Vazifa va yuklama",
+        "s": "1C, BD, virtualizatsiya"
+      },
+      {
+        "t": "Konfiguratsiya va TT"
+      },
+      {
+        "t": "Yetkazib berish",
+        "s": "vendor omboridan"
+      },
+      {
+        "t": "Montaj va ishga tushirish",
+        "s": "RAID, OT, ko'chirish"
       }
     ]
   },
