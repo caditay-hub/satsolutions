@@ -37,10 +37,13 @@ export async function GET() {
       const price = Math.round(Number(p.price));
       const brand = p.brandId ? brandById.get(p.brandId) : null;
       const image = resolveImageUrl(p.coverImageUrl)!;
-      const desc = plain(p.shortDescription) || plain(p.description) || p.name;
-      // GTIN у товаров нет; при бренде+артикуле отдаём MPN, иначе honest identifier_exists=no
-      const ident = brand && p.modelCode
-        ? `<g:brand>${esc(brand)}</g:brand><g:mpn>${esc(p.modelCode)}</g:mpn>`
+      // Полное описание первым — MC ранжирует лучше при развёрнутом тексте («добавьте информацию»)
+      const desc = plain(p.description) || plain(p.shortDescription) || p.name;
+      // GTIN у товаров нет; MPN отдаём только «настоящий» артикул: один латинский токен ≤50
+      // (описательные коды с пробелами/кириллицей Google бракует) — иначе honest identifier_exists=no
+      const mpnOk = p.modelCode && /^[A-Za-z0-9][A-Za-z0-9\-_.+/]{0,49}$/.test(p.modelCode.trim());
+      const ident = brand && mpnOk
+        ? `<g:brand>${esc(brand)}</g:brand><g:mpn>${esc(p.modelCode!.trim())}</g:mpn>`
         : `${brand ? `<g:brand>${esc(brand)}</g:brand>` : ""}<g:identifier_exists>no</g:identifier_exists>`;
       return `<item>
 <g:id>${esc(p.slug)}</g:id>
