@@ -161,7 +161,19 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     const characteristics = localizeCharacteristics(product.id, product.characteristics ?? {}, locale);
     // «Цена» в характеристиках — служебный маркер «по запросу», не показываем в таблице
     const charEntries = Object.entries(characteristics).filter(([k]) => k !== "Цена");
-    const highlights = charEntries.slice(0, 4);
+    // Выжимка-плитки: потребительские параметры вперёд (объектив в мм важнее кодеков),
+    // технические маркеры (Кодеки/Статус/Гарантия) в плитки не берём — они остаются в таблице.
+    const HL_PRIORITY = ["объектив", "разрешение", "матрица", "ик-подсветка", "питание", "мощность", "длина", "порт", "скорость", "ёмкость", "емкость", "зоны", "количество шс", "дальность"];
+    const HL_SKIP = ["кодек", "статус", "гарантия", "артикул"];
+    const hlRank = (k: string) => {
+      const kl = k.toLowerCase();
+      const i = HL_PRIORITY.findIndex((p) => kl.includes(p));
+      return i === -1 ? HL_PRIORITY.length : i;
+    };
+    const highlights = charEntries
+      .filter(([k]) => !HL_SKIP.some((s) => k.toLowerCase().includes(s)))
+      .sort((a, b) => hlRank(a[0]) - hlRank(b[0]))
+      .slice(0, 4);
     const img = resolveImageUrl(product.coverImageUrl);
     const modelCode = (product as any).modelCode as string | null;
     const isEol = !!characteristics["Статус"]?.toString().toLowerCase().includes("снят");
