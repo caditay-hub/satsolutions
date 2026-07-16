@@ -76,8 +76,17 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   } catch {
     // ignore
   }
-  // FAQ показываем на ru (контент RU); пер. на остальные языки — в i18n-фазе
-  const faq = locale === "ru" ? SERVICE_FAQ[svc.key] ?? [] : [];
+  // FAQ: RU — из servicesData (источник), остальные локали — переводы из messages
+  // (services.<key>.faq). Нет перевода — блок просто не показывается.
+  let faq: { q: string; a: string }[] = [];
+  if (locale === "ru") {
+    faq = SERVICE_FAQ[svc.key] ?? [];
+  } else {
+    try {
+      const tr = ts.raw(`${svc.key}.faq`) as { q: string; a: string }[];
+      if (Array.isArray(tr)) faq = tr.filter((f) => f?.q && f?.a);
+    } catch { /* перевода нет */ }
+  }
   const faqLd =
     faq.length > 0
       ? {
