@@ -47,7 +47,8 @@
     "imgPrev": "上一张",
     "imgNext": "下一张",
     "loading": "加载中",
-    "call": "致电我们"
+    "call": "致电我们",
+    "order": "立即下单"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -289,7 +290,8 @@
     "geoNotSet": "未配置位置",
     "rights": "版权所有",
     "tagline": "在全乌兹别克斯坦提供安防与弱电系统的设计、安装与维护。",
-    "returns": "退换货政策"
+    "returns": "退换货政策",
+    "delivery": "配送与付款"
   },
   "services": {
     "cctv": {
@@ -1592,7 +1594,22 @@
     "srTitle": "提交申请",
     "service": "服务",
     "description": "描述",
-    "cancel": "取消"
+    "cancel": "取消",
+    "orderBtn": "立即下单",
+    "orderTitle": "提交订单",
+    "orderQty": "数量",
+    "orderTotal": "合计",
+    "orderPriceOnRequest": "价格面议",
+    "sum": "索姆",
+    "orderSubmit": "提交订单",
+    "orderAccepted": "订单已接收！",
+    "orderNumber": "订单号",
+    "orderNext": "我们的经理将在工作时间（周一至周六 9:00–18:00）与您联系确认。",
+    "orderPayment": "付款方式 — 银行转账（发票）或货到付款。塔什干及乌兹别克斯坦全境配送。",
+    "orderDeliveryLink": "配送与付款条款",
+    "orderComment": "备注：配送地址，如需发票或报价请注明",
+    "orderPhoneErr": "请输入完整的电话号码",
+    "orderPayShort": "无需预付"
   },
   "meta": {
     "homeTitle": "SAT Solutions — 乌兹别克斯坦安防与弱电系统",

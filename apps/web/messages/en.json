@@ -47,7 +47,8 @@
     "imgPrev": "Previous",
     "imgNext": "Next",
     "loading": "Loading",
-    "call": "Call us"
+    "call": "Call us",
+    "order": "Order now"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -289,7 +290,8 @@
     "geoNotSet": "Location not configured",
     "rights": "All rights reserved",
     "tagline": "Design, installation and maintenance of security and low-voltage systems across Uzbekistan.",
-    "returns": "Returns & Exchange"
+    "returns": "Returns & Exchange",
+    "delivery": "Delivery & payment"
   },
   "services": {
     "cctv": {
@@ -1592,7 +1594,22 @@
     "srTitle": "Submit a request",
     "service": "Service",
     "description": "Description",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "orderBtn": "Order now",
+    "orderTitle": "Place your order",
+    "orderQty": "Quantity",
+    "orderTotal": "Total",
+    "orderPriceOnRequest": "Price on request",
+    "sum": "UZS",
+    "orderSubmit": "Submit order",
+    "orderAccepted": "Order received!",
+    "orderNumber": "Order number",
+    "orderNext": "Our manager will contact you to confirm during business hours (Mon–Sat 9:00–18:00).",
+    "orderPayment": "Payment — by invoice (bank transfer) or cash on delivery. Delivery across Tashkent and all of Uzbekistan.",
+    "orderDeliveryLink": "Delivery & payment terms",
+    "orderComment": "Comment: delivery address, need an invoice or quote — let us know",
+    "orderPhoneErr": "Please enter the full phone number",
+    "orderPayShort": "No prepayment"
   },
   "meta": {
     "homeTitle": "SAT Solutions — security and low-voltage systems in Uzbekistan",

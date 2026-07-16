@@ -113,6 +113,7 @@ export function SiteFooter() {
               <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
               <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
+              <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
               <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>

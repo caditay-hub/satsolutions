@@ -47,7 +47,8 @@
     "imgPrev": "Önceki",
     "imgNext": "Sonraki",
     "loading": "Yükleniyor",
-    "call": "Bizi arayın"
+    "call": "Bizi arayın",
+    "order": "Sipariş ver"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -289,7 +290,8 @@
     "geoNotSet": "Konum yapılandırılmadı",
     "rights": "Tüm hakları saklıdır",
     "tagline": "Tüm Özbekistan'da güvenlik ve zayıf akım sistemlerinin tasarımı, kurulumu ve bakımı.",
-    "returns": "İade ve Değişim"
+    "returns": "İade ve Değişim",
+    "delivery": "Teslimat ve ödeme"
   },
   "services": {
     "cctv": {
@@ -1592,7 +1594,22 @@
     "srTitle": "Talep gönder",
     "service": "Hizmet",
     "description": "Açıklama",
-    "cancel": "İptal"
+    "cancel": "İptal",
+    "orderBtn": "Sipariş ver",
+    "orderTitle": "Sipariş oluştur",
+    "orderQty": "Adet",
+    "orderTotal": "Toplam",
+    "orderPriceOnRequest": "Fiyat talep üzerine",
+    "sum": "UZS",
+    "orderSubmit": "Siparişi gönder",
+    "orderAccepted": "Siparişiniz alındı!",
+    "orderNumber": "Sipariş numarası",
+    "orderNext": "Yöneticimiz çalışma saatleri içinde (Pzt–Cmt 9:00–18:00) onay için sizinle iletişime geçecek.",
+    "orderPayment": "Ödeme — fatura ile (havale) veya teslimatta nakit. Taşkent ve tüm Özbekistan'a teslimat.",
+    "orderDeliveryLink": "Teslimat ve ödeme koşulları",
+    "orderComment": "Not: teslimat adresi, fatura veya teklif gerekiyorsa yazın",
+    "orderPhoneErr": "Telefon numarasını eksiksiz girin",
+    "orderPayShort": "Ön ödemesiz"
   },
   "meta": {
     "homeTitle": "SAT Solutions — Özbekistan'da güvenlik ve zayıf akım sistemleri",

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { priceInfo, productIcon } from "@/lib/product";
-import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { OrderButton } from "@/components/OrderButton";
 
 // Карточка-плитка в стиле NAG: фото сверху, артикул, название, наличие,
 // крупная цена и кнопка «Получить КП» на всю ширину снизу.
@@ -51,7 +51,7 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
       </div>
 
       <div className="px-3 pb-3">
-        <RequestQuoteButton productName={displayName} label={tc("getQuote")} variant="brand" fullWidth />
+        <OrderButton productId={p.id} productName={displayName} price={p.price} label={tc("order")} variant="brand" fullWidth />
       </div>
     </div>
   );

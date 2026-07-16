@@ -43,7 +43,7 @@ import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ProductCard } from "@/components/Cards";
-import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { OrderButton } from "@/components/OrderButton";
 import { ProductGallery } from "@/components/ProductGallery";
 import { priceLabel, productIcon } from "@/lib/product";
 
@@ -204,10 +204,23 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               itemCondition: "https://schema.org/NewCondition",
               url: `${siteUrl}/products/${product.slug}`,
               seller: { "@type": "Organization", name: "SAT Solutions" },
+              // Согласовано со страницами /returns (14 дней) и /delivery — важно для Merchant Center
               hasMerchantReturnPolicy: {
                 "@type": "MerchantReturnPolicy",
                 applicableCountry: "UZ",
-                returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+                returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                merchantReturnDays: 14,
+                returnMethod: "https://schema.org/ReturnInStore",
+                returnFees: "https://schema.org/FreeReturn",
+              },
+              shippingDetails: {
+                "@type": "OfferShippingDetails",
+                shippingDestination: { "@type": "DefinedRegion", addressCountry: "UZ" },
+                deliveryTime: {
+                  "@type": "ShippingDeliveryTime",
+                  handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
+                  transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 5, unitCode: "DAY" },
+                },
               },
             },
           }
@@ -328,12 +341,15 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Цена + CTA в одном ряду — компактнее, контент поднимается выше */}
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
               <div className="text-2xl font-black text-[#e02020]">{priceLabel(product)}</div>
-              <RequestQuoteButton
-                label={t("common.getQuote")}
-                variant="primary"
+              <OrderButton
+                productId={product.id}
                 productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
+                price={product.price}
+                label={t("common.order")}
+                variant="primary"
               />
-              <ContactButtons compact />
+              {/* Одна линия: Заказать — Telegram — WhatsApp (без «Позвонить», номер есть в шапке) */}
+              <ContactButtons compact hideCall />
               <BackButton />
             </div>
 

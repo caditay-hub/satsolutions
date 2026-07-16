@@ -924,6 +924,8 @@ publicRouter.post("/feedback", async (req, res) => {
 publicRouter.post("/orders", async (req, res) => {
   const phone = typeof req.body?.phone === "string" ? req.body.phone.trim() : "";
   const items = Array.isArray(req.body?.items) ? req.body.items : [];
+  const custName = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 200) : "";
+  const comment = typeof req.body?.comment === "string" ? req.body.comment.trim().slice(0, 2000) : "";
 
   if (!phone || phone.length < 7 || phone.length > 32) return res.status(400).json({ error: "Invalid phone" });
   if (!/^[0-9+()\s-]+$/.test(phone)) return res.status(400).json({ error: "Invalid phone" });
@@ -986,7 +988,7 @@ publicRouter.post("/orders", async (req, res) => {
         status: "NEW",
         totalAmount: total,
         currency: "UZS",
-        meta: null
+        meta: custName || comment ? { name: custName || undefined, comment: comment || undefined } : null
       } as any,
       { transaction: t }
     );
@@ -1021,7 +1023,9 @@ publicRouter.post("/orders", async (req, res) => {
     // Send to admin namespace (like ChatWidget)
     const adminNs = io.of('/admin-chat');
     const eventData = {
-      id: Number(created.id),
+      id: String(created.id), // UUID
+      name: custName || '',
+      comment: comment || '',
       phone: String(created.phone || ''),
       status: String(created.status || ''),
       totalAmount: Number(created.totalAmount || 0),

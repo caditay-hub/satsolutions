@@ -47,7 +47,8 @@
     "imgPrev": "Oldingi",
     "imgNext": "Keyingi",
     "loading": "Yuklanmoqda",
-    "call": "Qo'ng'iroq qilish"
+    "call": "Qo'ng'iroq qilish",
+    "order": "Buyurtma berish"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -289,7 +290,8 @@
     "geoNotSet": "Geolokatsiya sozlanmagan",
     "rights": "Barcha huquqlar himoyalangan",
     "tagline": "Butun O‘zbekiston bo‘ylab xavfsizlik va past kuchlanishli tizimlarni loyihalash, o‘rnatish va xizmat ko‘rsatish.",
-    "returns": "Qaytarish va almashtirish"
+    "returns": "Qaytarish va almashtirish",
+    "delivery": "Yetkazib berish va to'lov"
   },
   "services": {
     "cctv": {
@@ -1592,7 +1594,22 @@
     "srTitle": "Ariza yuborish",
     "service": "Xizmat",
     "description": "Tavsif",
-    "cancel": "Bekor qilish"
+    "cancel": "Bekor qilish",
+    "orderBtn": "Buyurtma berish",
+    "orderTitle": "Buyurtmani rasmiylashtirish",
+    "orderQty": "Miqdori",
+    "orderTotal": "Jami",
+    "orderPriceOnRequest": "Narx so‘rov bo‘yicha",
+    "sum": "so‘m",
+    "orderSubmit": "Buyurtma yuborish",
+    "orderAccepted": "Buyurtma qabul qilindi!",
+    "orderNumber": "Buyurtma raqami",
+    "orderNext": "Menejer ish vaqtida (Du–Sha 9:00–18:00) tasdiqlash uchun siz bilan bog‘lanadi.",
+    "orderPayment": "To‘lov — hisob-faktura orqali (pul o‘tkazish) yoki qabul qilishda naqd. Toshkent va butun O‘zbekiston bo‘ylab yetkazib berish.",
+    "orderDeliveryLink": "Yetkazib berish va to‘lov shartlari",
+    "orderComment": "Izoh: yetkazib berish manzili, hisob yoki tijoriy taklif kerak bo‘lsa — yozing",
+    "orderPhoneErr": "Telefon raqamini to‘liq kiriting",
+    "orderPayShort": "Oldindan to‘lovsiz"
   },
   "meta": {
     "homeTitle": "SAT Solutions — O‘zbekistonda xavfsizlik va kuchsiz tok tizimlari",

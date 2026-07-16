@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { priceInfo, productIcon } from "@/lib/product";
-import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { OrderButton } from "@/components/OrderButton";
 
 const NOISE = new Set(["Артикул", "Артикул производителя", "Гарантия", "Цена"]);
 
@@ -57,7 +57,7 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
           {tc("inStock")}
         </div>
         {price ? <div className="text-[15px] font-black text-[#e02020]">{price}</div> : null}
-        <RequestQuoteButton productName={displayName} label={tc("getQuote")} variant="brand" />
+        <OrderButton productId={p.id} productName={displayName} price={p.price} label={tc("order")} variant="brand" />
       </div>
     </div>
   );
