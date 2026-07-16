@@ -31,9 +31,10 @@ function FacetGroup({ title, options, selected, onToggle }: {
   return (
     <div className="border-t border-slate-100 px-4 py-3 first:border-t-0">
       <div className="mb-2 text-[11px] font-bold uppercase tracking-wider text-slate-500">{title}</div>
-      <div className="grid gap-1">
+      {/* flex-col, не grid: grid-трек тянется до min-content строки (nowrap-текст) и вылезает за карточку */}
+      <div className="flex flex-col gap-1">
         {shown.map((o) => (
-          <label key={o.key} className="flex cursor-pointer items-center gap-2 rounded-md px-1 py-0.5 text-[13px] text-slate-700 hover:bg-slate-50">
+          <label key={o.key} className="flex min-w-0 cursor-pointer items-center gap-2 rounded-md px-1 py-0.5 text-[13px] text-slate-700 hover:bg-slate-50">
             <input
               type="checkbox"
               checked={selected.has(o.key)}
