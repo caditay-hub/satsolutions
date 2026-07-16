@@ -223,7 +223,7 @@ export function localizeBrandDesc(slug: string | undefined, fallback: string, lo
 // Имена брендов: переводим/транслитерируем только те, что по-русски (псевдобренд + рос. вендоры).
 // Настоящие бренды (Hikvision, Dahua, …) — имена собственные, возвращаем как есть.
 const BRAND_NAME: Record<string, Loc> = {
-  prochee: { uz: "Boshqa uskunalar", en: "Other equipment", tr: "Diğer ekipmanlar", zh: "其他设备" },
+  prochee: { uz: "Butlovchi qismlar va aksessuarlar", en: "Components & Accessories", tr: "Bileşenler ve Aksesuarlar", zh: "配件与辅材" },
   rubezh: { uz: "Rubezh", en: "Rubezh", tr: "Rubezh", zh: "Rubezh" },
   bolid: { uz: "Bolid", en: "Bolid", tr: "Bolid", zh: "Bolid" },
   "sibirskiy-arsenal": { uz: "Sibirsky Arsenal", en: "Sibirsky Arsenal", tr: "Sibirsky Arsenal", zh: "Sibirsky Arsenal" },

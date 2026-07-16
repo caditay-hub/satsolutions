@@ -5,6 +5,7 @@ import { getTranslations, getLocale } from "next-intl/server";
 import { getBrands, getBrandTypePairs, type BrandDto } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -87,10 +88,11 @@ function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitl
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
 async function BrandCard({ b }: { b: BrandDto }) {
   const t = await getTranslations("catalog");
+  const locale = await getLocale();
   const slug = b.slug.toLowerCase();
   const forceText = TEXT_LABEL_SLUGS.has(slug);
   const logo = !forceText && b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
-  const name = b.name;
+  const name = localizeBrandName(slug, b.name, locale);
   const count = b.productCount ?? 0;
   const color = BRAND_COLORS[slug] ?? "#328fa8";
   return (
@@ -148,12 +150,13 @@ async function ProcheeCard({ b }: { b: BrandDto }) {
   } catch { /* без чипов */ }
   if (!inside.length) return <BrandCard b={b} />;
 
+  const name = localizeBrandName("prochee", b.name, locale);
   const count = b.productCount ?? 0;
   const color = CATCHALL["prochee"]?.color ?? "#328fa8";
   return (
     <div className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col">
       {/* Вся карточка кликабельна (оверлей), чипы — поверх со своими ссылками */}
-      <Link href="/catalog/prochee" className="absolute inset-0 z-0" aria-label={b.name} />
+      <Link href="/catalog/prochee" className="absolute inset-0 z-0" aria-label={name} />
       {count > 0 && (
         <span className="pointer-events-none absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm">
           {t("itemsShort", { count })}
@@ -163,7 +166,7 @@ async function ProcheeCard({ b }: { b: BrandDto }) {
         <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5" style={{ backgroundColor: color }}>
           <CatchAllIcon kind="grid" />
         </div>
-        <span className="text-base sm:text-lg font-black text-slate-900 text-center leading-tight tracking-tight">{b.name}</span>
+        <span className="text-base sm:text-lg font-black text-slate-900 text-center leading-tight tracking-tight">{name}</span>
       </div>
       <div className="relative z-10 flex flex-wrap justify-center gap-1.5 px-3 pb-4">
         {inside.map((p) => (
