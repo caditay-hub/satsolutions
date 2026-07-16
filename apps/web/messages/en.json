@@ -1034,7 +1034,47 @@
           "q": "How much does an office Wi-Fi network cost?",
           "a": "Depends on area and number of access points. Send us your floor plan — we'll prepare an estimate and quote within a day."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical Wi-Fi networks",
+        "pkgNote": "The exact AP count comes from a site survey: send a floor plan and we will size it with no dead zones and no extra hardware.",
+        "packages": [
+          {
+            "name": "Office up to 50 seats",
+            "for": "Office, clinic, shop",
+            "items": [
+              "2–6 access points with PoE",
+              "Seamless roaming",
+              "Guest network with speed limits",
+              "Set up in 2–5 days"
+            ],
+            "term": "Lead time: 2–5 days"
+          },
+          {
+            "name": "Office 50–200 / BC floor",
+            "for": "Call center, bank, IT company",
+            "items": [
+              "Controller + Wi-Fi 6 APs",
+              "VLANs: work, guest, IoT separated",
+              "Site survey before and after",
+              "Monitoring and alerts"
+            ],
+            "term": "Lead time: 1–2 weeks"
+          },
+          {
+            "name": "Warehouse / outdoor area",
+            "for": "Logistics, plant, parking",
+            "items": [
+              "Industrial APs, outdoor build",
+              "Coverage between racks based on measurements",
+              "Wireless bridges to remote zones",
+              "Roaming for scanners and terminals"
+            ],
+            "term": "Lead time: per project"
+          }
+        ]
+      }
     },
     "fiber": {
       "title": "Fiber Optic Lines",
@@ -1162,7 +1202,45 @@
           "power": "Sockets and dimmers",
           "climate": "Climate and leak protection",
           "hubs": "Hubs, gateways and energy metering"
-        }
+        },
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three levels of a smart home",
+        "pkgNote": "Tuya lets you start small and expand without replacing hardware — all levels live in one app.",
+        "packages": [
+          {
+            "name": "Starter: lights and sockets",
+            "for": "Apartment, small office",
+            "items": [
+              "Smart switches and sockets",
+              "Scenarios: “away from home”, schedules",
+              "Phone and voice control",
+              "Installed in 1–2 days"
+            ],
+            "term": "Lead time: 1–2 days"
+          },
+          {
+            "name": "Turnkey apartment",
+            "for": "Apartment, townhouse",
+            "items": [
+              "Lights, curtains, climate and leak sensors",
+              "Smart lock and camera",
+              "Zigbee hub: scenarios work without internet",
+              "App setup for the whole family"
+            ],
+            "term": "Lead time: 3–7 days"
+          },
+          {
+            "name": "House / office premium",
+            "for": "Private house, company office",
+            "items": [
+              "Everything in “turnkey” + security sensors and siren",
+              "Cameras with recording, gates and intercom in scenarios",
+              "Zoned climate, energy metering",
+              "Voice control in every room"
+            ],
+            "term": "Lead time: per project"
+          }
+        ]
       },
       "faq": [
         {
@@ -1219,7 +1297,47 @@
           "q": "How much does a turnstile cost with installation?",
           "a": "The price depends on the type: a tripod turnstile is a budget-friendly solution, while a speed gate is a premium option. Send us your entrance specifications and we'll prepare a quote."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical entrance setups",
+        "pkgNote": "Sized for your people flow and premises: send the parameters and we will return a quote with a layout.",
+        "packages": [
+          {
+            "name": "Office entrance",
+            "for": "Office, warehouse, school",
+            "items": [
+              "Tripod turnstile with controller",
+              "Card access, integration with access control",
+              "Anti-panic mode on fire alarm",
+              "Entry log and basic time tracking"
+            ],
+            "term": "Lead time: 1–2 weeks"
+          },
+          {
+            "name": "Business center / premium",
+            "for": "BC, bank, IT company",
+            "items": [
+              "Speed gates with glass flaps",
+              "Face recognition + cards",
+              "Integration with time attendance and ERP",
+              "Throughput up to 60 people/min"
+            ],
+            "term": "Lead time: 2–4 weeks"
+          },
+          {
+            "name": "Plant / construction site",
+            "for": "Factory, construction, restricted site",
+            "items": [
+              "Full-height turnstiles",
+              "Biometrics: face or fingerprint",
+              "Timesheets in ERP, contractor control",
+              "Outdoor build, canopies"
+            ],
+            "term": "Lead time: per project"
+          }
+        ]
+      }
     },
     "locks": {
       "title": "Electronic & Smart Locks",

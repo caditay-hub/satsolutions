@@ -1034,7 +1034,47 @@
           "q": "Ofis için Wi-Fi ağı ne kadar tutar?",
           "a": "Alana ve nokta sayısına bağlıdır. Kat planını gönderin — bir gün içinde hesap ve teklif hazırlayalım."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik çözümler",
+        "pkgTitle": "Üç tipik Wi-Fi ağı",
+        "pkgNote": "Nokta sayısı saha ölçümüyle belirlenir: planı gönderin — ölü bölgesiz ve fazla donanımsız hesaplayalım.",
+        "packages": [
+          {
+            "name": "50 kişiye kadar ofis",
+            "for": "Ofis, klinik, mağaza",
+            "items": [
+              "PoE'li 2–6 erişim noktası",
+              "Kesintisiz dolaşım",
+              "Hız sınırlı misafir ağı",
+              "2–5 günde kurulum"
+            ],
+            "term": "Süre: 2–5 gün"
+          },
+          {
+            "name": "50–200 kişi / İM katı",
+            "for": "Çağrı merkezi, banka, IT şirketi",
+            "items": [
+              "Kontrolcü + Wi-Fi 6 noktaları",
+              "VLAN: iş, misafir, IoT ayrı",
+              "Öncesi ve sonrası saha ölçümü",
+              "İzleme ve uyarılar"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Depo / açık alan",
+            "for": "Lojistik, fabrika, otopark",
+            "items": [
+              "Endüstriyel noktalar, dış mekân yapısı",
+              "Ölçümlere göre raflar arası kapsama",
+              "Uzak bölgelere telsiz köprüler",
+              "Tarayıcı ve terminaller için dolaşım"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "fiber": {
       "title": "Fiber Optik Hatlar",
@@ -1162,7 +1202,45 @@
           "power": "Prizler ve dimmerlar",
           "climate": "İklim ve su kaçağı koruması",
           "hubs": "Hublar, ağ geçitleri ve enerji sayacı"
-        }
+        },
+        "pkgLabel": "Tipik çözümler",
+        "pkgTitle": "Akıllı evin üç seviyesi",
+        "pkgNote": "Tuya küçükten başlayıp donanım değiştirmeden genişletmeye imkân verir — tüm seviyeler tek uygulamada.",
+        "packages": [
+          {
+            "name": "Başlangıç: ışık ve prizler",
+            "for": "Daire, küçük ofis",
+            "items": [
+              "Akıllı anahtar ve prizler",
+              "Senaryolar: «evden çıktım», programlar",
+              "Telefon ve sesli kontrol",
+              "1–2 günde kurulum"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Anahtar teslim daire",
+            "for": "Daire, müstakil ev",
+            "items": [
+              "Işık, perde, iklim ve su kaçağı sensörleri",
+              "Akıllı kilit ve kamera",
+              "Zigbee hub: senaryolar internetsiz çalışır",
+              "Tüm aile için uygulama kurulumu"
+            ],
+            "term": "Süre: 3–7 gün"
+          },
+          {
+            "name": "Ev / ofis premium",
+            "for": "Müstakil ev, şirket ofisi",
+            "items": [
+              "«Anahtar teslim» + güvenlik sensörleri ve siren",
+              "Kayıtlı kameralar, senaryolarda kapı ve diafon",
+              "Bölgesel iklim, enerji sayacı",
+              "Her odada sesli kontrol"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
       },
       "faq": [
         {
@@ -1219,7 +1297,47 @@
           "q": "Kurulumla turnike ne kadar tutar?",
           "a": "Tipe bağlı: tripod ekonomik, hızlı geçiş premium çözümdür. Giriş parametrelerini gönderin — teklif hazırlayalım."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik çözümler",
+        "pkgTitle": "Üç tipik geçiş noktası",
+        "pkgNote": "İnsan akışınıza ve mekâna göre hesaplıyoruz: parametreleri gönderin — yerleşim şemasıyla teklif dönelim.",
+        "packages": [
+          {
+            "name": "Ofis girişi",
+            "for": "Ofis, depo, okul",
+            "items": [
+              "Kontrolörlü tripod turnike",
+              "Kartla geçiş, geçiş kontrol entegrasyonu",
+              "Yangın alarmında anti-panik modu",
+              "Geçiş kaydı ve temel mesai takibi"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "İş merkezi / premium",
+            "for": "İM, banka, IT şirketi",
+            "items": [
+              "Cam kanatlı hızlı geçişler",
+              "Yüz tanıma + kartlar",
+              "Mesai takibi ve ERP entegrasyonu",
+              "Dakikada 60 kişiye kadar kapasite"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Üretim / şantiye",
+            "for": "Fabrika, şantiye, kontrollü tesis",
+            "items": [
+              "Boy tipi turnikeler",
+              "Biyometri: yüz veya parmak izi",
+              "ERP'de puantaj, taşeron kontrolü",
+              "Dış mekân yapısı, sundurmalar"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "locks": {
       "title": "Elektronik ve Akıllı Kilitler",

@@ -1034,7 +1034,47 @@
           "q": "Ofis uchun Wi-Fi tarmog'i qancha turadi?",
           "a": "Bu maydon va nuqtalar soniga bog'liq. Xonaning rejasini yuboring — bir kun ichida hisob va taklif qildik."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Uchta namunaviy Wi-Fi tarmoq",
+        "pkgNote": "Nuqtalarning aniq soni — radiotekshiruv bo'yicha: reja yuboring, «o'lik zonalar»siz va ortiqcha uskunasiz hisoblaymiz.",
+        "packages": [
+          {
+            "name": "50 o'ringacha ofis",
+            "for": "Ofis, klinika, do'kon",
+            "items": [
+              "PoE bilan 2–6 kirish nuqtasi",
+              "Uzluksiz rouming",
+              "Tezlik cheklovli mehmon tarmog'i",
+              "2–5 kunda sozlash"
+            ],
+            "term": "Muddat: 2–5 kun"
+          },
+          {
+            "name": "50–200 o'rin / BM qavati",
+            "for": "Call-markaz, bank, IT-kompaniya",
+            "items": [
+              "Kontroller + Wi-Fi 6 nuqtalari",
+              "VLAN: ishchi, mehmon, IoT alohida",
+              "Oldin va keyin radiotekshiruv",
+              "Monitoring va ogohlantirishlar"
+            ],
+            "term": "Muddat: 1–2 hafta"
+          },
+          {
+            "name": "Ombor / hudud",
+            "for": "Logistika, ishlab chiqarish, turargoh",
+            "items": [
+              "Sanoat nuqtalari, ko'cha ijrosi",
+              "O'lchovlar bo'yicha stellajlar orasini qamrash",
+              "Uzoq zonalarga radioko'priklar",
+              "Skanerlar va terminallar uchun rouming"
+            ],
+            "term": "Muddat: loyiha bo'yicha"
+          }
+        ]
+      }
     },
     "fiber": {
       "title": "Optik tolali liniyalar",
@@ -1162,7 +1202,45 @@
           "power": "Rozetkalar va dimmerlar",
           "climate": "Iqlim va suv toshqinidan himoya",
           "hubs": "Hablar, shlyuzlar va energiya hisobi"
-        }
+        },
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Aqlli uyning uch darajasi",
+        "pkgNote": "Tuya kichikdan boshlab uskunani almashtirmasdan kengaytirish imkonini beradi — barcha darajalar bitta ilovada.",
+        "packages": [
+          {
+            "name": "Boshlang'ich: yorug'lik va rozetkalar",
+            "for": "Kvartira, kichik ofis",
+            "items": [
+              "Aqlli kalitlar va rozetkalar",
+              "Ssenariylar: «uydan chiqdim», jadvallar",
+              "Telefon va ovoz orqali boshqarish",
+              "1–2 kunda montaj"
+            ],
+            "term": "Muddat: 1–2 kun"
+          },
+          {
+            "name": "Kalitga tayyor kvartira",
+            "for": "Kvartira, taunxaus",
+            "items": [
+              "Yorug'lik, pardalar, iqlim va suv datchiklari",
+              "Aqlli qulf va kamera",
+              "Zigbee-hab: ssenariylar internetsiz ishlaydi",
+              "Butun oila uchun ilova sozlash"
+            ],
+            "term": "Muddat: 3–7 kun"
+          },
+          {
+            "name": "Uy / ofis premium",
+            "for": "Xususiy uy, kompaniya ofisi",
+            "items": [
+              "«Kalitga tayyor» + qo'riqlash datchiklari va sirena",
+              "Yozuvli kameralar, darvoza va domofon ssenariylarda",
+              "Zonalar bo'yicha iqlim, elektr hisobi",
+              "Barcha xonalarda ovozli boshqaruv"
+            ],
+            "term": "Muddat: loyiha bo'yicha"
+          }
+        ]
       },
       "faq": [
         {
@@ -1219,7 +1297,47 @@
           "q": "Turniket o'rnatish bilan qancha turadi?",
           "a": "Turni: tripod — budjet yechim, tezkor kiris — premium. Kirislik parametrlarini yuboring — KP hisoblab beramiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Uchta namunaviy o'tish punkti",
+        "pkgNote": "Oqim va xonangizga qarab hisoblaymiz: parametrlarni yuboring — joylashtirish sxemasi bilan taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Ofis o'tish punkti",
+            "for": "Ofis, ombor, o'quv muassasasi",
+            "items": [
+              "Kontrollerli tripod-turniket",
+              "Karta orqali kirish, SKUD bilan integratsiya",
+              "Yong'in signalida «antipanika» rejimi",
+              "O'tishlar jurnali va vaqt hisobi"
+            ],
+            "term": "Muddat: 1–2 hafta"
+          },
+          {
+            "name": "Biznes-markaz / premium",
+            "for": "BM, bank, IT-kompaniya",
+            "items": [
+              "Shisha eshikli tezkor o'tishlar",
+              "Yuzni tanish + kartalar",
+              "Ish vaqti hisobi va 1C bilan integratsiya",
+              "O'tkazuvchanlik: daqiqasiga 60 kishigacha"
+            ],
+            "term": "Muddat: 2–4 hafta"
+          },
+          {
+            "name": "Ishlab chiqarish / qurilish",
+            "for": "Zavod, qurilish, rejimli obyekt",
+            "items": [
+              "To'liq bo'yli turniketlar",
+              "Biometriya: yuz yoki barmoq izi",
+              "1C da tabel, pudratchilar nazorati",
+              "Ko'cha ijrosi, soyabonlar"
+            ],
+            "term": "Muddat: loyiha bo'yicha"
+          }
+        ]
+      }
     },
     "locks": {
       "title": "Elektron va aqlli qulflar",

@@ -14,6 +14,7 @@ import { SmartHomeDevices } from "@/components/SmartHomeDevices";
 import { H3cEquipment } from "@/components/H3cEquipment";
 import { DataCenterDetails } from "@/components/DataCenterDetails";
 import { RelatedServices } from "@/components/RelatedServices";
+import { ServicePackages } from "@/components/ServicePackages";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -192,6 +193,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Серверные и ЦОД: типовые конфигурации, этапы, каталог */}
         {svc.key === "server" && <DataCenterDetails />}
+
+        {/* Типовые конфигурации (универсальный блок: турникеты, Wi-Fi, умный дом…) */}
+        {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} />}
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} />
