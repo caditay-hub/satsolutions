@@ -529,7 +529,39 @@
         "H3C CAS hipervizör kurulumu ve mevcut sistemlerin taşınması",
         "Yüksek erişilebilirlik kümeleri ve işletmeler için özel bulut",
         "Lisanslama, üretici desteği ve bakım"
-      ]
+      ],
+      "details": {
+        "eqLabel": "Ekipman",
+        "eqTitle": "Tedarik ettiğimiz H3C ekipmanları",
+        "eqText": "H3C iş ortağı olarak tüm ürün gamını tedarik ediyoruz — sunucular, switchler, routerlar, güvenlik duvarları, Wi-Fi ve depolama — iş ortağı fiyatlarıyla, resmi garanti ve üretici desteğiyle.",
+        "eqNote": "Görevinize uygun şartname hazırlayıp kesin model ve teslim süreleriyle teklif gönderelim.",
+        "eq": {
+          "servers": {
+            "name": "H3C UniServer sunucular",
+            "desc": "Sanallaştırma, veritabanı ve ERP için 1U/2U/4U kabinet sunucular — Intel Xeon, DDR5, NVMe/SAS."
+          },
+          "switches": {
+            "name": "H3C switchler",
+            "desc": "Erişim, toplama ve çekirdek: gigabit ve 10G/25G, kamera ve AP'ler için PoE modeller."
+          },
+          "routers": {
+            "name": "H3C MSR routerlar",
+            "desc": "Ofis ve şubeler için routerlar: VPN, hat yedekliliği, dahili güvenlik duvarı."
+          },
+          "firewalls": {
+            "name": "SecPath güvenlik duvarları",
+            "desc": "Ağ çevresi koruması: NGFW filtreleme, VPN ağ geçitleri, uygulama kontrolü."
+          },
+          "wifi": {
+            "name": "Wi-Fi noktaları ve kontrolcüler",
+            "desc": "Kurumsal Wi-Fi 6: kesintisiz dolaşım, merkezi yönetim."
+          },
+          "storage": {
+            "name": "Depolama sistemleri",
+            "desc": "Sanallaştırma ve yedekleme için depolama — blok ve dosya erişimi."
+          }
+        }
+      }
     },
     "wifi": {
       "title": "Wi-Fi Ağları",
@@ -589,7 +621,22 @@
         "İklim: klima, yerden ısıtma, sıcaklık sensörleri",
         "Senaryolarda perdeler, kapılar ve güvenlik sensörleri",
         "Uygulama, senaryo ve sesli kontrol ayarı"
-      ]
+      ],
+      "details": {
+        "devicesLabel": "Cihazlar",
+        "devicesTitle": "Kurduğumuz cihazlar: kataloğumuzdan Tuya",
+        "devicesText": "Tüm ekipman stokta veya sipariş üzerine — kurulum, senaryolar ve garantiyle. Özellikler ve fiyat için cihaza tıklayın.",
+        "allDevices": "Tüm Tuya kataloğu",
+        "groups": {
+          "curtains": "Akıllı perdeler ve kornişler",
+          "locks": "Akıllı kapı kilitleri",
+          "cameras": "Wi-Fi kameralar ve gözetim",
+          "sensors": "Sensörler ve güvenlik",
+          "power": "Prizler ve dimmerlar",
+          "climate": "İklim ve su kaçağı koruması",
+          "hubs": "Hublar, ağ geçitleri ve enerji sayacı"
+        }
+      }
     },
     "turnstile": {
       "title": "Turnikeler ve Geçişler",

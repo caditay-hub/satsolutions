@@ -10,6 +10,8 @@ import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
+import { SmartHomeDevices } from "@/components/SmartHomeDevices";
+import { H3cEquipment } from "@/components/H3cEquipment";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -170,6 +172,12 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* СКС и ЛВС: типовые конфигурации, этапы, бренды каталога */}
         {svc.key === "network" && <NetworkDetails />}
+
+        {/* Умный дом: витрина устройств Tuya из каталога (фото + перелинковка) */}
+        {svc.key === "smarthome" && <SmartHomeDevices />}
+
+        {/* Серверы H3C: перечень поставляемого оборудования (модельные линейки) */}
+        {svc.key === "virtualization" && <H3cEquipment />}
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} />

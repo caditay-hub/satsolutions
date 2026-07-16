@@ -529,7 +529,39 @@
         "H3C CAS hypervisor deployment and migration of existing systems",
         "High-availability clusters and private cloud for business",
         "Licensing, vendor support and maintenance"
-      ]
+      ],
+      "details": {
+        "eqLabel": "Equipment",
+        "eqTitle": "H3C equipment we supply",
+        "eqText": "As an H3C partner we supply the full range — servers, switches, routers, firewalls, Wi-Fi and storage — at partner pricing, with official warranty and vendor support.",
+        "eqNote": "We will build a specification for your task and send a quote with exact models and lead times.",
+        "eq": {
+          "servers": {
+            "name": "H3C UniServer servers",
+            "desc": "1U/2U/4U rack servers for virtualization, databases and ERP — Intel Xeon CPUs, DDR5, NVMe/SAS."
+          },
+          "switches": {
+            "name": "H3C switches",
+            "desc": "Access, aggregation and core: gigabit and 10G/25G, PoE models for cameras and access points."
+          },
+          "routers": {
+            "name": "H3C MSR routers",
+            "desc": "Routers for offices and branches: VPN, link redundancy, built-in firewall."
+          },
+          "firewalls": {
+            "name": "SecPath firewalls",
+            "desc": "Network perimeter protection: NGFW filtering, VPN gateways, application control."
+          },
+          "wifi": {
+            "name": "Wi-Fi APs and controllers",
+            "desc": "Enterprise Wi-Fi 6: seamless roaming, centralized management."
+          },
+          "storage": {
+            "name": "Storage systems",
+            "desc": "Storage for virtualization and backups — block and file access."
+          }
+        }
+      }
     },
     "wifi": {
       "title": "Wi-Fi Networks",
@@ -589,7 +621,22 @@
         "Climate: air conditioning, floor heating, temperature sensors",
         "Curtains, gates and security sensors in scenarios",
         "App, scenario and voice control setup"
-      ]
+      ],
+      "details": {
+        "devicesLabel": "Devices",
+        "devicesTitle": "What we install: Tuya devices from our catalog",
+        "devicesText": "All equipment in stock or to order — with setup, scenarios and warranty. Click a device to see specs and price.",
+        "allDevices": "Full Tuya catalog",
+        "groups": {
+          "curtains": "Smart curtains and rails",
+          "locks": "Smart door locks",
+          "cameras": "Wi-Fi cameras and surveillance",
+          "sensors": "Sensors and security",
+          "power": "Sockets and dimmers",
+          "climate": "Climate and leak protection",
+          "hubs": "Hubs, gateways and energy metering"
+        }
+      }
     },
     "turnstile": {
       "title": "Turnstiles & Entrances",

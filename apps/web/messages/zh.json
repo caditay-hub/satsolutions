@@ -529,7 +529,39 @@
         "部署 H3C CAS 虚拟化平台并迁移现有系统",
         "高可用集群与企业私有云",
         "授权许可、厂商支持与维护"
-      ]
+      ],
+      "details": {
+        "eqLabel": "设备",
+        "eqTitle": "我们供应的 H3C 设备",
+        "eqText": "作为 H3C 合作伙伴，我们供应全线产品——服务器、交换机、路由器、防火墙、Wi-Fi 和存储——合作伙伴价格、官方质保与厂商支持。",
+        "eqNote": "我们将按您的需求编制设备清单，并提供含具体型号和交期的报价。",
+        "eq": {
+          "servers": {
+            "name": "H3C UniServer 服务器",
+            "desc": "1U/2U/4U 机架服务器，适用于虚拟化、数据库和 ERP——Intel Xeon、DDR5、NVMe/SAS。"
+          },
+          "switches": {
+            "name": "H3C 交换机",
+            "desc": "接入、汇聚与核心：千兆及 10G/25G，PoE 型号可为摄像机和 AP 供电。"
+          },
+          "routers": {
+            "name": "H3C MSR 路由器",
+            "desc": "办公室及分支机构路由器：VPN、线路冗余、内置防火墙。"
+          },
+          "firewalls": {
+            "name": "SecPath 防火墙",
+            "desc": "网络边界防护：NGFW 过滤、VPN 网关、应用控制。"
+          },
+          "wifi": {
+            "name": "Wi-Fi 接入点与控制器",
+            "desc": "企业级 Wi-Fi 6：无缝漫游、集中管理。"
+          },
+          "storage": {
+            "name": "存储系统",
+            "desc": "面向虚拟化与备份的存储——块与文件访问。"
+          }
+        }
+      }
     },
     "wifi": {
       "title": "Wi-Fi 网络",
@@ -589,7 +621,22 @@
         "空调、地暖、温度传感器",
         "场景中的窗帘、车库门与安防传感器",
         "应用、场景与语音控制配置"
-      ]
+      ],
+      "details": {
+        "devicesLabel": "设备",
+        "devicesTitle": "我们安装的设备：产品目录中的涂鸦（Tuya）",
+        "devicesText": "所有设备现货或订购——含安装调试、场景配置与质保。点击设备查看参数和价格。",
+        "allDevices": "全部 Tuya 产品",
+        "groups": {
+          "curtains": "智能窗帘与轨道",
+          "locks": "智能门锁",
+          "cameras": "Wi-Fi 摄像机与监控",
+          "sensors": "传感器与安防",
+          "power": "插座与调光器",
+          "climate": "温控与漏水保护",
+          "hubs": "网关与电量计量"
+        }
+      }
     },
     "turnstile": {
       "title": "闸机与通道",

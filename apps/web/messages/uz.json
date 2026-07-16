@@ -529,7 +529,39 @@
         "H3C CAS gipervizorini o'rnatish va mavjud tizimlarni ko'chirish",
         "Yuqori ishonchlilik klasterlari va biznes uchun xususiy bulut",
         "Litsenziyalash, vendor qo'llab-quvvatlashi va xizmat ko'rsatish"
-      ]
+      ],
+      "details": {
+        "eqLabel": "Uskunalar",
+        "eqTitle": "Biz yetkazib beradigan H3C uskunalari",
+        "eqText": "H3C hamkori sifatida butun liniyani yetkazib beramiz — serverlar, kommutatorlar, routerlar, tarmoq ekranlari, Wi-Fi va SXD — hamkorlik narxlarida, rasmiy kafolat va vendor qo'llab-quvvatlashi bilan.",
+        "eqNote": "Vazifangizga mos spetsifikatsiya tuzamiz va aniq modellari hamda muddatlari bilan tijorat taklifini yuboramiz.",
+        "eq": {
+          "servers": {
+            "name": "H3C UniServer serverlari",
+            "desc": "Virtualizatsiya, ma'lumotlar bazasi va 1C uchun 1U/2U/4U stoyka serverlari — Intel Xeon, DDR5, NVMe/SAS."
+          },
+          "switches": {
+            "name": "H3C kommutatorlari",
+            "desc": "Kirish, agregatsiya va yadro: gigabit va 10G/25G, kamera va nuqtalar uchun PoE modellari."
+          },
+          "routers": {
+            "name": "H3C MSR routerlari",
+            "desc": "Ofis va filiallar uchun routerlar: VPN, kanallarni rezervlash, o'rnatilgan fayrvol."
+          },
+          "firewalls": {
+            "name": "SecPath tarmoq ekranlari",
+            "desc": "Tarmoq perimetri himoyasi: NGFW filtrlash, VPN shlyuzlari, ilovalar nazorati."
+          },
+          "wifi": {
+            "name": "Wi-Fi nuqtalari va kontrollerlar",
+            "desc": "Korporativ Wi-Fi 6: uzluksiz rouming, markazlashgan boshqaruv."
+          },
+          "storage": {
+            "name": "Ma'lumotlar saqlash tizimlari",
+            "desc": "Virtualizatsiya va zaxira nusxalar uchun SXD — blokli va faylli kirish."
+          }
+        }
+      }
     },
     "wifi": {
       "title": "Wi-Fi tarmoqlari",
@@ -589,7 +621,22 @@
         "Iqlim: konditsionerlar, issiq pol, harorat datchiklari",
         "Ssenariylarda pardalar, darvozalar va qo'riqlash datchiklari",
         "Ilova, ssenariylar va ovozli boshqaruvni sozlash"
-      ]
+      ],
+      "details": {
+        "devicesLabel": "Qurilmalar",
+        "devicesTitle": "Biz o'rnatadigan qurilmalar: katalogimizdagi Tuya",
+        "devicesText": "Barcha uskunalar mavjud yoki buyurtma asosida — sozlash, ssenariylar va kafolat bilan. Xususiyatlar va narxni ko'rish uchun qurilmani bosing.",
+        "allDevices": "Butun Tuya katalogi",
+        "groups": {
+          "curtains": "Aqlli pardalar va karnizlar",
+          "locks": "Aqlli eshik qulflari",
+          "cameras": "Wi-Fi kameralar va videokuzatuv",
+          "sensors": "Datchiklar va qo'riqlash",
+          "power": "Rozetkalar va dimmerlar",
+          "climate": "Iqlim va suv toshqinidan himoya",
+          "hubs": "Hablar, shlyuzlar va energiya hisobi"
+        }
+      }
     },
     "turnstile": {
       "title": "Turniketlar va o'tish punktlari",
