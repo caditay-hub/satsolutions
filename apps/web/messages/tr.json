@@ -302,6 +302,28 @@
         "Kamera, kayıt cihazı (NVR/DVR) ve kablolama montajı",
         "Kayıt, uzaktan erişim ve analitik ayarları",
         "Devreye alma, eğitim ve garanti hizmeti"
+      ],
+      "faq": [
+        {
+          "q": "Güvenlik kamerası kurulumu ne kadar tutar?",
+          "a": "Maliyet kamera sayısına, ekipman tipine ve montaj zorluğuna bağlıdır. Tesise ücretsiz gelir, keşif yapar ve teklif hazırlarız."
+        },
+        {
+          "q": "IP kameralar analog kameralardan farkı nedir?",
+          "a": "IP kameralar daha yüksek çözünürlük, video analitiği ve ağ üzerinden esnek genişleme sunar; analog (HDCVI/TVI) kameralar daha uygun fiyatlıdır ve koaksiyel kabloyla çalışır. Bütçe ve göreve göre seçeriz."
+        },
+        {
+          "q": "Kameraları telefondan izleyebilir miyim?",
+          "a": "Evet, telefon ve bilgisayardan uzaktan erişim, bulut izleme ve bildirimleri ayarlıyoruz."
+        },
+        {
+          "q": "Kayıt arşivi ne kadar saklanır?",
+          "a": "Arşiv derinliği disk kapasitesine, kamera sayısına ve çözünürlüğe bağlıdır — genellikle 7 ila 30 gün. İhtiyacınıza göre hesaplarız."
+        },
+        {
+          "q": "Kurulumdan sonra sistemin bakımını yapıyor musunuz?",
+          "a": "Evet, garanti ve servis bakımı sağlıyor, tüm Özbekistan genelinde arıza tespiti ve onarım için yerinde hizmet veriyoruz."
+        }
       ]
     },
     "analytics": {
@@ -314,6 +336,20 @@
         "Ziyaretçi sayımı, ısı haritaları, bölge kontrolü",
         "Alarmların güvenlik ve geçiş kontrolü ile entegrasyonu",
         "Operatör eğitimi ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Video analitiği neler yapabilir?",
+          "a": "Yüz ve plaka tanıma, insan sayma, bölge ve çevre kontrolü, terk edilmiş nesne ve olağan dışı davranışların gerçek zamanlı tespiti."
+        },
+        {
+          "q": "Özel kameralar gerekli mi?",
+          "a": "Analitiğin bir kısmı kameraların üzerinde, bir kısmı sunucuda çalışır. Ekipmanı istenen senaryolara göre seçeriz."
+        },
+        {
+          "q": "Mevcut sistemle entegre edilebilir mi?",
+          "a": "Evet, çoğu durumda analitik, sunucu yazılımı aracılığıyla halihazırda kurulu kameralara eklenebilir."
+        }
       ]
     },
     "anpr": {
@@ -326,6 +362,20 @@
         "Beyaz liste ve geçiş mantığı ayarı",
         "Otopark ve geçiş kontrolü ile entegrasyon",
         "Devreye alma ve bakım"
+      ],
+      "faq": [
+        {
+          "q": "Plakalar ne kadar doğru tanınır?",
+          "a": "Modern ANPR kameralar, doğru montaj ve giriş bölgesi aydınlatmasıyla gece gündüz plakaları yüksek doğrulukla tanır."
+        },
+        {
+          "q": "Bariyer plakaya göre otomatik açılabilir mi?",
+          "a": "Evet, sistem bariyer ve geçiş kontrolüyle entegre çalışır: beyaz listedeki plakalara geçiş otomatik açılır."
+        },
+        {
+          "q": "Ücretli otoparklar için uygun mu?",
+          "a": "Evet, ANPR otoparklarda giriş/çıkış kaydı, ücretlendirme ve geçiş kontrolü için kullanılır."
+        }
       ]
     },
     "access": {
@@ -338,6 +388,24 @@
         "Yetki, program ve erişim seviyeleri ayarı",
         "Gözetim ve zaman takibi ile entegrasyon",
         "Devreye alma ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Geçiş kontrol sistemine (PDKS) neler dahildir?",
+          "a": "Kontrolörler, kart okuyucular veya biyometrik terminaller, elektromanyetik/elektromekanik kilitler, turnikeler ve erişim haklarını yöneten yazılım."
+        },
+        {
+          "q": "Mesai takibi yapılabilir mi?",
+          "a": "Evet, sistem çalışanların giriş/çıkışlarını kaydeder ve puantaj oluşturur; veriler ERP ve diğer sistemlere aktarılabilir."
+        },
+        {
+          "q": "Biyometri destekleniyor mu?",
+          "a": "Evet, yüz ve parmak izi tanıma terminalleri kuruyoruz — pratiktir ve kart devrini engeller."
+        },
+        {
+          "q": "Video gözetimle entegre edilebilir mi?",
+          "a": "Evet, geçiş olayları video kaydına bağlanır — tesis üzerinde tam kontrol sağlanır."
+        }
       ]
     },
     "intercom": {
@@ -350,6 +418,20 @@
         "Elektronik kilit ve geçiş kontrolü entegrasyonu",
         "Çok aboneli şema ayarı",
         "Devreye alma ve servis"
+      ],
+      "faq": [
+        {
+          "q": "IP diafon analogdan neden daha iyi?",
+          "a": "IP diafon yüksek görüntü kalitesi, her yerden telefonla görüntüleme, kayıt ve akıllı ev ile geçiş kontrol entegrasyonu sunar."
+        },
+        {
+          "q": "Çağrılara telefondan cevap verilebilir mi?",
+          "a": "Evet, panelden gelen çağrı akıllı telefona düşer — evde veya ofiste olmasanız bile kapıyı uzaktan açarsınız."
+        },
+        {
+          "q": "Apartmanlar için uygun mu?",
+          "a": "Evet, konut siteleri için çok aboneli diafon sistemleri tasarlıyoruz — kapı panelleri ve daire monitörleriyle."
+        }
       ]
     },
     "attendance": {
@@ -362,6 +444,20 @@
         "Puantaj ve rapor oluşturma",
         "1C / İK / geçiş kontrolü entegrasyonu",
         "Eğitim ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Mesai takibi nasıl çalışır?",
+          "a": "Çalışanlar terminalde kart, parmak izi veya yüzle giriş yapar; sistem çalışılan süreyi otomatik hesaplar ve raporlar oluşturur."
+        },
+        {
+          "q": "Veriler ERP'ye aktarılabilir mi?",
+          "a": "Evet, puantajın 1C ve diğer muhasebe sistemlerine aktarımını yapılandırıyoruz."
+        },
+        {
+          "q": "Çalışan giriş yapmayı unutursa ne olur?",
+          "a": "Yönetici yetkisiyle manuel düzeltme ve değişiklik günlüğü mevcuttur."
+        }
       ]
     },
     "alarm": {
@@ -374,6 +470,20 @@
         "Senaryo ve panik butonu ayarı",
         "Güvenlik merkezine ve uygulamaya aktarım",
         "Devreye alma ve bakım"
+      ],
+      "faq": [
+        {
+          "q": "Hırsız alarmı nasıl çalışır?",
+          "a": "Hareket, kapı açılma ve cam kırılma sensörleri izinsiz girişi tespit eder ve alarmı merkeze, telefona ve sirene iletir."
+        },
+        {
+          "q": "Alarm merkezine bağlanabilir mi?",
+          "a": "Evet, sistem hem güvenlik şirketinin merkezine hem de telefonunuza aynı anda bağlanabilir."
+        },
+        {
+          "q": "Elektrik kesildiğinde çalışır mı?",
+          "a": "Evet, cihazlar yedek aküyle donatılır ve şebeke kesintisinde çalışmaya devam eder."
+        }
       ]
     },
     "fire": {
@@ -386,6 +496,24 @@
         "Bölge ve tahliye senaryoları ayarı",
         "Denetim kurumlarına teslim",
         "Periyodik bakım"
+      ],
+      "faq": [
+        {
+          "q": "Yangın alarmı zorunlu mu?",
+          "a": "Çoğu ticari ve kamusal tesis için yangın alarmı ve anons sistemi mevzuat gereği zorunludur. Gereksinimlere uygun tasarlıyoruz."
+        },
+        {
+          "q": "Hangi ekipmanları kullanıyorsunuz?",
+          "a": "Bolid, Rubezh ve diğer üreticilerin adresli ve konvansiyonel sistemleri — tesisin tipine ve alanına göre seçiyoruz."
+        },
+        {
+          "q": "Proje ve teslim yapıyor musunuz?",
+          "a": "Evet, tasarım, montaj ve devreye almayı yapıyor, sistemin denetim kurumlarına teslimine yardımcı oluyoruz."
+        },
+        {
+          "q": "Periyodik bakım gerekli mi?",
+          "a": "Evet, yangın sistemleri düzenli bakım gerektirir — bakım sözleşmesi yapıyoruz."
+        }
       ]
     },
     "network": {
@@ -465,7 +593,33 @@
         "brandsLabel": "Ekipman",
         "brandsTitle": "Ağ ekipmanları — kendi kataloğumuzdan",
         "brandsText": "Switch, router ve Wi-Fi'yi göreve ve bütçeye göre seçiyoruz — tüm ekipmanı garantili olarak biz tedarik ediyoruz:"
-      }
+      },
+      "faq": [
+        {
+          "q": "Yapısal kablolama (SCS) montajına neler dahildir?",
+          "a": "Tasarım, kablo güzergâhlarının döşenmesi, priz, patch panel, switch ve sunucu kabinetlerinin montajı, hatların etiketlenmesi ve test edilmesi."
+        },
+        {
+          "q": "SCS montajı ne kadar tutar?",
+          "a": "Maliyet port sayısına, kablo kategorisine ve güzergâh zorluğuna bağlıdır. Kat planını gönderin — bir gün içinde kesin keşifli teklif dönelim; mühendis keşfi ücretsizdir."
+        },
+        {
+          "q": "Hangi kablo seçilmeli — Cat5e, Cat6 yoksa fiber mi?",
+          "a": "Cat5e gigabit'e kadar internet ve telefon için yeterlidir, Cat6 yeni ofisler için yıllarca yetecek standarttır, fiber ise katlar ve binalar arası omurgalar içindir. Gereksiz masraf olmadan göreve göre seçeriz."
+        },
+        {
+          "q": "Ağ montajı ne kadar sürer?",
+          "a": "30 çalışma yerine kadar ofis 3–7 gün, iş merkezi katı 2–4 hafta, bina veya fabrika projeye göre 1 aydan itibaren. Ofisin çalışmasını durdurmadan akşamları ve hafta sonları çalışabiliriz."
+        },
+        {
+          "q": "Wi-Fi kapsaması yapıyor musunuz?",
+          "a": "Evet, ofisler, depolar ve geniş alanlar için kesintisiz Wi-Fi kapsaması tasarlıyor ve kuruyoruz."
+        },
+        {
+          "q": "Ağ dokümantasyonu veriyor musunuz?",
+          "a": "Evet, as-built dokümantasyon, şemalar ve her kablo hattının test protokollerini teslim ediyoruz — ağ bizsiz de bakılabilir (ama bizimle daha kolay)."
+        }
+      ]
     },
     "server": {
       "title": "Sunucu odaları & veri merkezleri",
@@ -550,7 +704,33 @@
           "servers": "Sunucu donanımı",
           "sfp": "SFP modülleri"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Sunucu odası kurulumuna neler dahildir?",
+          "a": "Kabinet, UPS, soğutma ve havalandırma sistemleri, yapısal kablolama, geçiş kontrol ve izleme montajı — ekipmanın güvenilir çalışması için."
+        },
+        {
+          "q": "Anahtar teslim sunucu odası ne kadar tutar?",
+          "a": "Kabinet sayısına, güç ve soğutma gereksinimlerine bağlıdır. Ofis sunucu odası ile mini veri merkezi farklı bütçelerdir; girdileri gönderin — proje ve keşif hazırlayalım."
+        },
+        {
+          "q": "Yedek güç sağlıyor musunuz?",
+          "a": "Evet, görevlerinize uygun kapasitede ve çalışma süreli UPS seçip kuruyoruz."
+        },
+        {
+          "q": "İklim kontrolü yapıyor musunuz?",
+          "a": "Evet, sunucu odasında sabit sıcaklık için hassas iklimlendirme hesaplayıp monte ediyoruz."
+        },
+        {
+          "q": "Sunucu odası izlemesi var mı?",
+          "a": "Evet, Telegram ve merkeze bildirimli sıcaklık, nem, su kaçağı ve güç sensörleri kuruyoruz — sorunu servisler düşmeden önce öğrenirsiniz."
+        },
+        {
+          "q": "Sunucu odası kesintisiz modernize edilebilir mi?",
+          "a": "Evet, kablo düzenleme, UPS değişimi ve soğutma eklemeyi aşamalı planlıyoruz — kritik servisler çalışmaya devam eder."
+        }
+      ]
     },
     "videowall": {
       "title": "Video duvarları",
@@ -562,6 +742,20 @@
         "Yerleşim ve kaynak ayarı",
         "Gözetim ile entegrasyon",
         "Devreye alma ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Video duvarlar nerede kullanılır?",
+          "a": "Durum merkezleri, kontrol odaları, izleme merkezleri ve toplantı odalarında — çok kaynağın büyük ekrana verilmesi gereken her yerde."
+        },
+        {
+          "q": "Video duvar neyden oluşur?",
+          "a": "İnce çerçeveli LCD panellerden veya LED modüllerden ve görüntüyü ekranlara esnek dağıtan kontrolcüden."
+        },
+        {
+          "q": "Kameralar video duvara verilebilir mi?",
+          "a": "Evet, video duvarı gözetim sistemi ve diğer kaynaklarla entegre ediyoruz."
+        }
       ]
     },
     "pa": {
@@ -574,6 +768,20 @@
         "Bölge ve öncelik ayarı",
         "Yangın tahliye sistemi ile entegrasyon",
         "Devreye alma ve servis"
+      ],
+      "faq": [
+        {
+          "q": "Anons sistemi ne işe yarar?",
+          "a": "Sesli mesajların ve alarm sinyallerinin yayını, fon müziği ve tesiste bölgesel anons için."
+        },
+        {
+          "q": "Bina bölgelere ayrılabilir mi?",
+          "a": "Evet, bölgesel anons yapılandırıyoruz — mesajlar istenen odalara ayrı ayrı yayınlanır."
+        },
+        {
+          "q": "Yangın sistemiyle entegre mi?",
+          "a": "Evet, sesli tahliye sistemi yangın alarmıyla birlikte çalışır."
+        }
       ]
     },
     "barrier": {
@@ -586,6 +794,20 @@
         "Kontrol ve kumanda ayarı",
         "ANPR ve geçiş kontrolü entegrasyonu",
         "Devreye alma ve bakım"
+      ],
+      "faq": [
+        {
+          "q": "Hangi bariyerleri kuruyorsunuz?",
+          "a": "Otopark ve girişler için çeşitli kol uzunluklarında ve yoğunluk sınıflarında otomatik bariyerler — trafiğe göre seçiyoruz."
+        },
+        {
+          "q": "Plakaya göre açılabilir mi?",
+          "a": "Evet, plaka tanıma (ANPR) ve geçiş kontrolle entegre ederek otomatik geçiş sağlıyoruz."
+        },
+        {
+          "q": "Kumanda ve kontrol nasıl?",
+          "a": "Kumanda, kart, buton, mobil uygulama ve beyaz listeye göre otomatik kontrol mümkündür."
+        }
       ]
     },
     "perimeter": {
@@ -598,6 +820,20 @@
         "Bölge ve alarm ayarı",
         "Güvenlik ve analitik ile entegrasyon",
         "Devreye alma ve servis"
+      ],
+      "faq": [
+        {
+          "q": "Çevre güvenliği nedir?",
+          "a": "Tesis sınırı boyunca sensör, alarm dedektörü ve kameralardan oluşan, izinsiz giriş denemesini erken aşamada tespit eden sistem."
+        },
+        {
+          "q": "Hangi teknolojiler kullanılır?",
+          "a": "Kızılötesi bariyerler, titreşim ve kapasitif sensörler, termal ve analitik kameralar — araziye ve alana göre seçiyoruz."
+        },
+        {
+          "q": "Video gözetimle entegre mi?",
+          "a": "Evet, çevre alarmı ilgili bölgenin görüntüsünü operatöre otomatik getirir."
+        }
       ]
     },
     "bus": {
@@ -738,7 +974,33 @@
             "desc": "Sanallaştırma ve yedekleme için depolama — blok ve dosya erişimi."
           }
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Sanallaştırma nedir ve işletmeye ne kazandırır?",
+          "a": "Bir fiziksel sunucuda birkaç sanal sunucu çalışır: daha az donanım, daha düşük elektrik ve bakım gideri, hızlı yedekleme ve kurtarma. Bir modern H3C sunucu 5–10 eski makineyi değiştirir."
+        },
+        {
+          "q": "H3C CAS nedir?",
+          "a": "H3C'nin sanallaştırma platformu (VMware vSphere benzeri): hipervizör artı sanal makineleri, kümeleri ve taşımayı yöneten tek konsol. Batılı muadillerinden belirgin ucuz, resmi üretici destekli."
+        },
+        {
+          "q": "Resmi H3C iş ortağı mısınız?",
+          "a": "Evet, SAT Solutions H3C iş ortağıdır: iş ortağı fiyatlarıyla ekipman, resmi CAS lisansları ve üretici desteği."
+        },
+        {
+          "q": "Mevcut sunucularımız sanal ortama taşınabilir mi?",
+          "a": "Evet. H3C CAS Migration Tool fiziksel sunucuları ve sanal makineleri (VMware dahil) sistemleri yeniden kurmadan taşır — 100 host'a kadar taşıma lisansıyla."
+        },
+        {
+          "q": "ERP ve kritik sistemler için uygun mu?",
+          "a": "Evet: iki düğümlü küme hata toleransı sağlar — bir sunucu arızalanırsa sanal makineler ikincisinde otomatik başlar. Taşkent'te finans kuruluşları için uyguladık."
+        },
+        {
+          "q": "Sanallaştırmalı H3C sunucu ne kadar tutar?",
+          "a": "Konfigürasyona bağlı: ERP için tek sunucu ile CAS Enterprise'lı yüksek erişilebilirlik kümesi farklı bütçelerdir. Görevleri anlatın — bir gün içinde şartname ve teklif hazırlayalım."
+        }
+      ]
     },
     "wifi": {
       "title": "Wi-Fi Ağları",
@@ -750,6 +1012,28 @@
         "Kontrollü kesintisiz dolaşım — hareket ederken kopma yok",
         "Yetkilendirmeli ve hız sınırlı misafir ağı",
         "Ağ izleme ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Ofiste hareket ederken Wi-Fi neden kopuyor?",
+          "a": "Sıradan routerlar istemciyi birbirine devredemez. Kontrollü kesintisiz dolaşım cihazı noktalar arasında fark ettirmeden geçirir — görüşme veya video koparmaz."
+        },
+        {
+          "q": "Kaç erişim noktası gerekir?",
+          "a": "Alana, duvarlara ve cihaz sayısına bağlıdır. Saha ölçümü yapıyoruz: sinyali yerinde ölçüp tam gereken sayıda nokta koyuyoruz — ölü bölge ve gereksiz masraf olmadan."
+        },
+        {
+          "q": "Raflı bir depo kapsanabilir mi?",
+          "a": "Evet, depolar tipik işimizdir: metal raflar sinyali çok emer, bu yüzden noktalar göz kararı değil, ölçüm sonuçlarına göre seçilip yerleştirilir."
+        },
+        {
+          "q": "Misafir Wi-Fi nasıl yapılır?",
+          "a": "Yetkilendirmeli ve hız sınırlı ayrı misafir ağı kuruyoruz — misafirler iş ağını görmez ve iş trafiğini etkilemez."
+        },
+        {
+          "q": "Ofis için Wi-Fi ağı ne kadar tutar?",
+          "a": "Alana ve nokta sayısına bağlıdır. Kat planını gönderin — bir gün içinde hesap ve teklif hazırlayalım."
+        }
       ]
     },
     "fiber": {
@@ -762,6 +1046,28 @@
         "Füzyon ek ve optik kros montajı",
         "OTDR ölçümleri ve hat raporları",
         "Hasarlı fiber hatların onarımı"
+      ],
+      "faq": [
+        {
+          "q": "Ne zaman bakır yerine fiber gerekir?",
+          "a": "Bakır kablo 100 metreye kadar çalışır. Daha uzağı — binalar arası, büyük tesislerin katları, atölyeler — parazit ve yıldırımdan etkilenmeyen fiberle daha güvenilir ve hızlıdır."
+        },
+        {
+          "q": "Fiber ne kadar mesafeye döşenebilir?",
+          "a": "Tek modlu fiber onlarca kilometre boyunca yükselticisiz çalışır — şehir içi bina, şube ve saha bağlantılarında pratikte sınır yoktur."
+        },
+        {
+          "q": "Yerinde fiber ek (füzyon) yapıyor musunuz?",
+          "a": "Evet, ek cihazı ve OTDR ile geliyoruz: fiberleri ekliyor, kros ve ek kutularını monte ediyor, her hattın ölçüm protokolünü teslim ediyoruz."
+        },
+        {
+          "q": "Fiber kopmalarını onarıyor musunuz?",
+          "a": "Evet, hasar noktasını OTDR ile bulup hattı onarıyoruz — yerinde ek veya bölüm değişimi."
+        },
+        {
+          "q": "Fiber döşeme ne kadar tutar?",
+          "a": "Güzergâha bağlıdır: bina içi, direkler veya kanal. Görevi anlatın — keşif ve süre hesaplayalım."
+        }
       ]
     },
     "radiobridge": {
@@ -774,6 +1080,28 @@
         "Anten montajı ve hizalama",
         "Kanal, şifreleme ve yedeklilik ayarı",
         "Bağlantı izleme ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Telsiz köprünün gerçek hızı nedir?",
+          "a": "Modern köprüler 300 Mbit/sn'den 1-2 Gbit/sn'ye kadar gerçek bant genişliği verir — internet, video gözetim ve kurumsal ağ için yeterli."
+        },
+        {
+          "q": "Telsiz köprü ne mesafede çalışır?",
+          "a": "Görüş hattı varsa yüzlerce metreden 20+ kilometreye kadar. Antenleri güzergâha göre seçer, montajdan önce hesap yaparız."
+        },
+        {
+          "q": "Binalar arasında görüş hattı şart mı?",
+          "a": "Tercih edilir: 5 GHz frekansında engeller sinyali çok zayıflatır. Görüş yoksa — tekrarlayıcılı veya farklı güzergâhlı çözüm hesaplarız."
+        },
+        {
+          "q": "Hava durumu bağlantıyı etkiler mi?",
+          "a": "Yağmur ve kar sinyal payını az miktarda düşürür — doğru hesapla bağlantı yıl boyu stabil çalışır. Güç payı bırakıyoruz."
+        },
+        {
+          "q": "Telsiz köprü seti ne kadar tutar?",
+          "a": "Montaj ve ayar dahil iki antenli set — yüzlerce metre için ekonomik çözümlerden kilometreler için gigabit çözümlere. Mesafeyi söyleyin — fiyat verelim."
+        }
       ]
     },
     "mikrotik": {
@@ -786,6 +1114,28 @@
         "VLAN, ofisler arası VPN, uzaktan erişim",
         "Güvenlik duvarı, hız sınırı, misafir ağı",
         "İzleme ve bakım"
+      ],
+      "faq": [
+        {
+          "q": "MikroTik uzaktan yapılandırılabilir mi?",
+          "a": "Evet, çoğu işi uzaktan çözüyoruz: denetim, sağlayıcı yedekliliği, VPN, güvenlik duvarı. Yerinde müdahale yalnızca donanım değişimi veya fiziksel ağ sorunlarında gerekir."
+        },
+        {
+          "q": "İkinci sağlayıcıya otomatik geçiş nasıl yapılır?",
+          "a": "Failover kuruyoruz: ana hat düştüğünde MikroTik ofisi yedeğe geçirir, ana hat dönünce geri alır. İnternet kesilmez."
+        },
+        {
+          "q": "Ofisler VPN ile birleştirilebilir mi?",
+          "a": "Evet, şubeler arasında güvenli tüneller kuruyoruz: ortak kaynaklar, ERP ve telefon tek ağdaymış gibi çalışır."
+        },
+        {
+          "q": "İnternet neden ara ara kesiliyor?",
+          "a": "Sık nedenler: ağda döngüler, dolu kanal, hatalı güvenlik duvarı kuralları veya sorunlu sağlayıcı. Denetim yapıp nedeni log ve grafiklerden buluruz."
+        },
+        {
+          "q": "Bakım sözleşmesi yapıyor musunuz?",
+          "a": "Evet, ağı izliyor, yazılımları güncelliyor ve bakım sözleşmesi kapsamında olaylara müdahale ediyoruz."
+        }
       ]
     },
     "smarthome": {
@@ -813,7 +1163,29 @@
           "climate": "İklim ve su kaçağı koruması",
           "hubs": "Hublar, ağ geçitleri ve enerji sayacı"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Tuya akıllı ev neler yapabilir?",
+          "a": "Işık, prizler, perdeler, iklim, su kaçağı ve hareket sensörleri, kameralar ve kilitler — hepsi tek Smart Life uygulamasında senaryolarla: «evden çıktım» ışığı kapatır ve alarmı kurar."
+        },
+        {
+          "q": "Akıllı ev internetsiz çalışır mı?",
+          "a": "Hub üzerinden temel senaryolar yerel çalışır, ev dışından telefonla kontrol internet gerektirir. Gereksinimlerinize göre şema seçeriz."
+        },
+        {
+          "q": "Alexa ve Google Asistan destekleniyor mu?",
+          "a": "Evet, Tuya cihazları sesli asistanlarla entegre olur — sesli komutla yönetin."
+        },
+        {
+          "q": "Akıllı ev aşamalı kurulabilir mi?",
+          "a": "Evet, bu Tuya'nın avantajı: ışık ve prizlerle başlayın, sonra perde, iklim ve güvenliği ekleyin — hepsi aynı uygulamada."
+        },
+        {
+          "q": "Ofis için uygun mu?",
+          "a": "Evet: programlı akıllı aydınlatma, iklim, sensör takibi ve elektrik tasarrufu — aynı cihazlar ofislerde de çalışır."
+        }
+      ]
     },
     "turnstile": {
       "title": "Turnikeler ve Geçişler",
@@ -825,6 +1197,28 @@
         "Kimlik doğrulama: kart, parmak izi, yüz tanıma",
         "Mesai takibi ve ERP entegrasyonu",
         "Turnike bakım ve onarımı"
+      ],
+      "faq": [
+        {
+          "q": "Hangi turnike seçilmeli?",
+          "a": "Tripod — orta yoğunluklu ofis ve girişler için, kanatlı ve hızlı geçişler — iş merkezleri için, boy tipi — yüksek gereksinimli tesisler için. Yoğunluğa ve mekâna göre seçeriz."
+        },
+        {
+          "q": "Turnikenin geçiş kapasitesi nedir?",
+          "a": "Tripod dakikada 20-30 kişi, hızlı geçişler 60'a kadar geçirir. Sabah yoğunluğu için turnike sayısını personel mevcuduna göre hesaplarız."
+        },
+        {
+          "q": "Yangında ne olur?",
+          "a": "Yangın alarmı sinyaliyle turnikeler otomatik açılır (anti-panik modu) — tahliye yolu serbest kalır. Bu mevzuat gereğidir, mutlaka yapılandırırız."
+        },
+        {
+          "q": "Yüz tanımayla geçilebilir mi?",
+          "a": "Evet, ZKTeco ve Hikvision yüz tanıma terminalleri kuruyoruz — kartsız, mesai takibine bağlı."
+        },
+        {
+          "q": "Kurulumla turnike ne kadar tutar?",
+          "a": "Tipe bağlı: tripod ekonomik, hızlı geçiş premium çözümdür. Giriş parametrelerini gönderin — teklif hazırlayalım."
+        }
       ]
     },
     "locks": {
@@ -837,6 +1231,28 @@
         "Erişim ayarı: kod, kart, parmak izi, uygulama",
         "Geçiş kayıtlı bağımsız ve ağ bağlantılı çözümler",
         "Bakım ve yeniden yapılandırma"
+      ],
+      "faq": [
+        {
+          "q": "Elektromanyetik kilit elektromekanikten farkı nedir?",
+          "a": "Elektromanyetik kapıyı mıknatısla tutar ve sürekli güç ister — diafonlu ofis ve girişlerin standardı. Elektromekanik sürgüyle kilitler ve elektriksiz kilitli kalır."
+        },
+        {
+          "q": "Elektrik kesilince kilide ne olur?",
+          "a": "Elektromanyetik açılır (tahliye için güvenli), elektromekanik kilitli kalır. Kritik kapılara kesintisiz güç ünitesi koyuyoruz — kilit saatlerce şebekesiz çalışır."
+        },
+        {
+          "q": "Daire kapısına akıllı kilit takılabilir mi?",
+          "a": "Evet, akıllı kilitler kod, kart, parmak izi veya telefonla açılır, kayıt tutar ve misafirlere geçici kod verir. Kapınıza uygun model seçeriz."
+        },
+        {
+          "q": "Kilitler diafon ve geçiş kontrolle entegre olur mu?",
+          "a": "Evet, kilit diafona (daireden/ahizeden açma) ve geçiş kontrole bağlanır — geçiş kaydı ve zamana göre yetkilerle."
+        },
+        {
+          "q": "Kurulumla kilit ne kadar tutar?",
+          "a": "Basit elektromanyetikten biyometrik akıllı kilide — bütçeler farklı. Kapıyı ve görevi söyleyin — fiyat verelim."
+        }
       ]
     },
     "gates": {
@@ -849,6 +1265,28 @@
         "Kumanda, GSM modül, telefondan açma",
         "Diafon, geçiş kontrol ve ANPR entegrasyonu",
         "Otomasyon bakım ve onarımı"
+      ],
+      "faq": [
+        {
+          "q": "Yana kayar kapı için hangi otomasyon uygun?",
+          "a": "Motor, kanadın ağırlığı ve uzunluğuna göre seçilir: 500 kg'a kadar hafif, 1000 kg'a kadar orta, daha ağırı endüstriyel. Aşırı yük korumalı ve fotoselli otomasyon kuruyoruz."
+        },
+        {
+          "q": "Kapı telefondan açılabilir mi?",
+          "a": "Evet: GSM modül kapıyı aramayla (ücretsiz) veya uygulamayla açar; aileye ve çalışanlara erişim verilebilir, plaka tanımayla entegre edilebilir — kendi araçlar kendiliğinden girer."
+        },
+        {
+          "q": "Elektrik kesintisinde ne yapmalı?",
+          "a": "Tüm motorlarda anahtarla manuel çözme vardır — kapı elle açılır. Önemli girişler için yedek güç koyuyoruz."
+        },
+        {
+          "q": "Otomasyon çocuklar ve araçlar için güvenli mi?",
+          "a": "Evet: fotoseller engel belirdiğinde kapıyı durdurup açar, motor hassasiyeti standartlara göre ayarlanır."
+        },
+        {
+          "q": "Başkasının kurduğu otomasyonu onarıyor musunuz?",
+          "a": "Evet, çoğu üreticinin motorlarını teşhis edip onarıyor; kart, fotosel ve kumanda değiştiriyoruz."
+        }
       ]
     },
     "telephony": {
@@ -861,6 +1299,28 @@
         "Sesli menü, çağrı kuyrukları, görüşme kaydı",
         "Şubeleri ve uzak çalışanları birleştirme",
         "Kurulum, eğitim ve destek"
+      ],
+      "faq": [
+        {
+          "q": "IP telefon klasik telefondan neden daha iyi?",
+          "a": "Daha ucuz görüşme ve bakım, çok kanallılık, görüşme kaydı, sesli menü, istatistik — hepsi internet üzerinden çalışır: şubeler ve uzak çalışanlar kısa numaralarla tek ağda."
+        },
+        {
+          "q": "Şehir numaramız korunur mu?",
+          "a": "Evet, şehir numaraları SIP ile IP santrale bağlanır — müşterileriniz alışık oldukları numarayı aramaya devam eder."
+        },
+        {
+          "q": "Kaç hat olabilir?",
+          "a": "Çok kanallı numara aynı anda onlarca çağrı alır — kuyruk, temsilcilere dağıtım ve mobile yönlendirme senaryonuza göre ayarlanır."
+        },
+        {
+          "q": "Görüşmeler kaydedilebilir mi?",
+          "a": "Evet, tüm veya seçili görüşmelerin kaydını arşivde saklamayla açıyoruz — kalite kontrolü ve anlaşmazlıklar için kullanışlı."
+        },
+        {
+          "q": "Ofis için IP telefon ne kadar tutar?",
+          "a": "Çalışan sayısına ve senaryolara bağlı. Kaç çalışma yeri olduğunu söyleyin — santral, Fanvil telefonlar ve kurulumu hesaplayalım."
+        }
       ]
     },
     "servers": {
@@ -873,6 +1333,32 @@
         "Kabinete montaj, RAID, işletim sistemi ve hipervizör kurulumu",
         "Veri ve servislerin yeni donanıma taşınması",
         "Üretici garantisi ve servis sözleşmeleri"
+      ],
+      "faq": [
+        {
+          "q": "ERP (1C) için hangi sunucu gerekir?",
+          "a": "Kullanıcı sayısına ve veritabanı boyutuna bağlıdır: 20 kullanıcıya kadar giriş seviyesi bir sunucu yeterlidir, büyük veritabanları için hızlı NVMe diskli ve bellek payı olan konfigürasyon hazırlarız. Rakamlarınıza göre seçelim."
+        },
+        {
+          "q": "Hangi markaları tedarik ediyorsunuz?",
+          "a": "Supermicro, Lenovo ThinkSystem ve H3C UniServer (H3C iş ortağıyız), depolama sistemleri — talep üzerine diğer üreticiler de. Hepsi sıfır ve resmi garantili."
+        },
+        {
+          "q": "Sunucu teslimatı ne kadar sürer?",
+          "a": "Sunucular üretici deposunda konfigürasyona göre toplanır — kesin süre bileşenlere bağlıdır ve teklifte onaylanır. Yaygın konfigürasyonlar daha hızlı gelir."
+        },
+        {
+          "q": "Kurulum ve yapılandırmada yardımcı olur musunuz?",
+          "a": "Evet: kabinete montaj, RAID, işletim sistemi ve hipervizör kurulumu, eski sunucudan veri taşıma — çalışmaya hazır sistem teslim ediyoruz."
+        },
+        {
+          "q": "Kendi sunucum mu yoksa bulut mu daha avantajlı?",
+          "a": "Sabit yükte kendi sunucunuz 1,5–3 yılda kendini amorti eder ve veriler sizde kalır. Her iki seçeneği göreviniz için dürüstçe hesaplarız."
+        },
+        {
+          "q": "Garanti veriyor musunuz?",
+          "a": "Ekipmana üretici garantisi artı servis sözleşmelerimiz — danışmanlıktan yerinde tam bakıma kadar."
+        }
       ]
     }
   },

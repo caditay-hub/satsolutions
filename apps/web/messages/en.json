@@ -302,6 +302,28 @@
         "Installation of cameras, recorders (NVR/DVR) and cabling",
         "Configuration of recording, remote access and analytics",
         "Commissioning, training and warranty service"
+      ],
+      "faq": [
+        {
+          "q": "How much does it cost to install video surveillance?",
+          "a": "The cost depends on the number of cameras, equipment type, and installation complexity. We conduct free site surveys, prepare estimates, and provide commercial proposals."
+        },
+        {
+          "q": "What is the difference between IP cameras and analog cameras?",
+          "a": "IP cameras offer higher resolution, video analytics, and flexible network scaling; analog cameras (HDCVI/TVI) are more affordable and work over coaxial cable. We select the right solution based on your budget and requirements."
+        },
+        {
+          "q": "Can I view cameras from my phone?",
+          "a": "Yes, we set up remote access from your phone and computer, as well as cloud viewing and notifications."
+        },
+        {
+          "q": "How long is the recording archive stored?",
+          "a": "Archive depth depends on storage capacity, number of cameras, and resolution — typically 7 to 30 days. We calculate the retention period based on your specific needs."
+        },
+        {
+          "q": "Do you service the system after installation?",
+          "a": "Yes, we provide warranty and maintenance services, dispatch technicians for diagnostics and repairs throughout Uzbekistan."
+        }
       ]
     },
     "analytics": {
@@ -314,6 +336,20 @@
         "Visitor counting, heatmaps, zone control",
         "Integrating alarms with security and access control",
         "Operator training and support"
+      ],
+      "faq": [
+        {
+          "q": "What can video analytics do?",
+          "a": "Facial recognition and license plate recognition, people counting, zone and perimeter control, detection of abandoned objects and abnormal behavior in real time."
+        },
+        {
+          "q": "Do we need special cameras?",
+          "a": "Some analytics run on the cameras themselves, while others run on the server. We select the equipment based on your specific scenarios."
+        },
+        {
+          "q": "Can it be integrated with an existing system?",
+          "a": "Yes, in many cases analytics can be added to cameras you already have installed through server-based software."
+        }
       ]
     },
     "anpr": {
@@ -326,6 +362,20 @@
         "Whitelist and passage-logic configuration",
         "Integration with parking and access control",
         "Commissioning and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "How accurately are license plates recognized?",
+          "a": "Modern ANPR cameras recognize license plates with high accuracy both day and night when properly installed and the entry zone is adequately lit."
+        },
+        {
+          "q": "Can a barrier gate open automatically based on a license plate number?",
+          "a": "Yes, the system integrates with barrier gates and access control systems: access opens automatically for license plates on the whitelist."
+        },
+        {
+          "q": "Is it suitable for paid parking lots?",
+          "a": "Yes, ANPR is used in parking facilities for tracking vehicle entry/exit, rate calculation, and access control."
+        }
       ]
     },
     "access": {
@@ -338,6 +388,24 @@
         "Configuring rights, schedules and access levels",
         "Integration with surveillance and time tracking",
         "Commissioning and support"
+      ],
+      "faq": [
+        {
+          "q": "What is included in an access control system (СКУД)?",
+          "a": "Controllers, card readers or biometric terminals, electromagnetic/electromechanical locks, turnstiles, and software for managing access rights."
+        },
+        {
+          "q": "Can we track working hours?",
+          "a": "Yes, the access control system records employee entries and exits and generates timesheets; data can be exported to 1C and other systems."
+        },
+        {
+          "q": "Is biometrics supported?",
+          "a": "Yes, we install facial recognition and fingerprint terminals — convenient and eliminates the need to transfer cards between employees."
+        },
+        {
+          "q": "Can it be integrated with video surveillance?",
+          "a": "Yes, access events are linked to video recordings for complete control over your facility."
+        }
       ]
     },
     "intercom": {
@@ -350,6 +418,20 @@
         "Integration with electronic locks and access control",
         "Multi-tenant configuration",
         "Commissioning and service"
+      ],
+      "faq": [
+        {
+          "q": "What makes an IP intercom better than an analog one?",
+          "a": "IP intercoms deliver high-quality video, remote viewing from your phone from anywhere, recording capability, and seamless integration with smart home systems and access control."
+        },
+        {
+          "q": "Can I answer calls from my phone?",
+          "a": "Absolutely. When someone calls from the panel, the call comes to your smartphone — you can unlock the door remotely, even if you're away from home or the office."
+        },
+        {
+          "q": "Is it suitable for multi-apartment buildings?",
+          "a": "Yes, we design multi-unit intercom systems for residential complexes complete with call panels and individual monitors in each unit."
+        }
       ]
     },
     "attendance": {
@@ -362,6 +444,20 @@
         "Generating timesheets and reports",
         "Integration with 1C / HR / access control",
         "Training and support"
+      ],
+      "faq": [
+        {
+          "q": "How does work time tracking work?",
+          "a": "Employees check in using a card, fingerprint, or facial recognition at the terminal; the system automatically calculates hours worked and generates reports."
+        },
+        {
+          "q": "Can data be exported to 1C?",
+          "a": "Yes, we set up timesheet export to 1C and other accounting systems."
+        },
+        {
+          "q": "What if an employee forgets to check in?",
+          "a": "Manual adjustments are available with supervisor permissions, and all changes are logged in the audit trail."
+        }
       ]
     },
     "alarm": {
@@ -374,6 +470,20 @@
         "Configuring scenarios and panic button",
         "Output to security desk and mobile app",
         "Commissioning and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "How does security alarm system work?",
+          "a": "Motion sensors, door/window opening sensors, and glass break detectors detect intrusion and send alerts to the control panel, your phone, and the siren."
+        },
+        {
+          "q": "Can I connect it to a security monitoring station?",
+          "a": "Yes, you can send alerts simultaneously to a professional security monitoring station and to your phone at the same time."
+        },
+        {
+          "q": "Does it work if the power goes out?",
+          "a": "Yes, all devices are equipped with backup UPS battery and continue operating if the main power supply fails."
+        }
       ]
     },
     "fire": {
@@ -386,6 +496,24 @@
         "Configuring zones and evacuation scenarios",
         "Handover to supervisory authorities",
         "Scheduled maintenance"
+      ],
+      "faq": [
+        {
+          "q": "Is fire alarm system mandatory?",
+          "a": "For most commercial and public facilities, fire alarm and notification systems are required by regulations. We design in compliance with all applicable standards."
+        },
+        {
+          "q": "What equipment do you use?",
+          "a": "Addressable and conventional fire alarm systems from Bolid, Rubezh, and other leading manufacturers — we select the right solution based on your facility type and size."
+        },
+        {
+          "q": "Do you handle design and commissioning?",
+          "a": "Yes, we provide full service: design, installation, system commissioning, and assistance with regulatory inspections and approvals."
+        },
+        {
+          "q": "Is maintenance required?",
+          "a": "Yes, fire safety systems require regular maintenance. We offer service contracts to keep your system in optimal working condition."
+        }
       ]
     },
     "network": {
@@ -465,7 +593,33 @@
         "brandsLabel": "Equipment",
         "brandsTitle": "Network equipment — from our own catalog",
         "brandsText": "We match switches, routers and Wi-Fi to the task and budget — all equipment supplied by us with warranty:"
-      }
+      },
+      "faq": [
+        {
+          "q": "What is included in structured cabling and LAN installation?",
+          "a": "Design, cable route installation, outlet and patch panel mounting, switch and server rack installation, line marking and testing."
+        },
+        {
+          "q": "How much does structured cabling installation cost?",
+          "a": "The cost depends on the number of ports, cable category, and route complexity. Send us your floor plan — we'll deliver a detailed quote within a day, and our engineer's site survey is free."
+        },
+        {
+          "q": "Which cable should I choose — Cat5e, Cat6, or fiber optics?",
+          "a": "Cat5e is sufficient for internet and telephony up to gigabit speeds, Cat6 is the standard for new offices with headroom for years ahead, and fiber optics are needed for backbone runs between floors and buildings. We'll help you choose based on your needs without unnecessary spending."
+        },
+        {
+          "q": "How long does network installation take?",
+          "a": "Office up to 30 workstations — 3–7 days, business center floor — 2–4 weeks, building or industrial facility — from one month depending on the project. We can work evenings and weekends without disrupting your office operations."
+        },
+        {
+          "q": "Do you provide Wi-Fi coverage?",
+          "a": "Yes, we design and configure seamless Wi-Fi coverage for offices, warehouses, and large areas."
+        },
+        {
+          "q": "Do you provide network documentation?",
+          "a": "Yes, we deliver as-built documentation, diagrams, and test protocols for every cable line — your network can be maintained without us (but it's more convenient with us)."
+        }
+      ]
     },
     "server": {
       "title": "Server rooms & data centers",
@@ -550,7 +704,33 @@
           "servers": "Server hardware",
           "sfp": "SFP modules"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What does server room setup include?",
+          "a": "Rack installation, UPS systems, cooling and ventilation systems, structured cabling, access control, and monitoring to ensure reliable equipment operation."
+        },
+        {
+          "q": "How much does a turnkey server room cost?",
+          "a": "It depends on the number of racks, power and cooling requirements. A server room for an office and a mini data center have different budgets; send us your specifications — we'll calculate the project and provide an estimate."
+        },
+        {
+          "q": "Do you provide backup power?",
+          "a": "Yes, we select and install UPS systems with the appropriate capacity and autonomy time tailored to your needs."
+        },
+        {
+          "q": "Do you handle climate control?",
+          "a": "Yes, we calculate and install precision air conditioning to maintain stable temperature in your server room."
+        },
+        {
+          "q": "Is server room monitoring available?",
+          "a": "Yes, we install temperature, humidity, water leak, and power supply sensors with notifications via Telegram and to your operations center — you'll know about issues before your services go down."
+        },
+        {
+          "q": "Can we upgrade the server room without downtime?",
+          "a": "Yes, we plan cable rerouting, UPS replacement, and cooling upgrades in phases — critical services keep running while we work."
+        }
+      ]
     },
     "videowall": {
       "title": "Video walls",
@@ -562,6 +742,20 @@
         "Configuring layouts and sources",
         "Integration with surveillance",
         "Commissioning and support"
+      ],
+      "faq": [
+        {
+          "q": "Where are video walls used?",
+          "a": "In situation centers, control rooms, monitoring centers and meeting rooms — wherever many sources need to be displayed on one large screen."
+        },
+        {
+          "q": "What is a video wall made of?",
+          "a": "Seamless LCD panels or LED modules with a controller that flexibly distributes the image across the screens."
+        },
+        {
+          "q": "Can cameras be displayed on the video wall?",
+          "a": "Yes, we integrate the video wall with the video surveillance system and other sources."
+        }
       ]
     },
     "pa": {
@@ -574,6 +768,20 @@
         "Configuring zones and priorities",
         "Integration with fire evacuation system",
         "Commissioning and service"
+      ],
+      "faq": [
+        {
+          "q": "What is a public address system for?",
+          "a": "For broadcasting voice messages and alarm signals, background music and zoned announcements across the site."
+        },
+        {
+          "q": "Can the building be divided into zones?",
+          "a": "Yes, we configure zoned announcements — messages are broadcast to specific rooms separately."
+        },
+        {
+          "q": "Does it integrate with the fire system?",
+          "a": "Yes, the voice evacuation system works together with the fire alarm."
+        }
       ]
     },
     "barrier": {
@@ -586,6 +794,20 @@
         "Configuring control and remotes",
         "Integration with ANPR and access control",
         "Commissioning and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "What barrier gates do you install?",
+          "a": "Automatic barriers for parking lots and entrances with various boom lengths and duty cycles — selected to match your traffic."
+        },
+        {
+          "q": "Can it open by license plate?",
+          "a": "Yes, we integrate with plate recognition (ANPR) and access control for automatic entry."
+        },
+        {
+          "q": "What about controls and remotes?",
+          "a": "Control is available via remotes, cards, a button, a mobile app, and automatically via a whitelist."
+        }
       ]
     },
     "perimeter": {
@@ -598,6 +820,20 @@
         "Configuring zones and alarms",
         "Integration with security and analytics",
         "Commissioning and service"
+      ],
+      "faq": [
+        {
+          "q": "What is perimeter security?",
+          "a": "A set of sensors, alarm detectors and cameras along the site boundary that detects an intrusion attempt at an early stage."
+        },
+        {
+          "q": "What technologies are used?",
+          "a": "Infrared barriers, vibration and capacitive sensors, thermal and analytics cameras — selected for the terrain and area."
+        },
+        {
+          "q": "Does it integrate with video surveillance?",
+          "a": "Yes, a perimeter alarm automatically brings up video from the relevant zone for the operator."
+        }
       ]
     },
     "bus": {
@@ -738,7 +974,33 @@
             "desc": "Storage for virtualization and backups — block and file access."
           }
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What is virtualization and why does business need it?",
+          "a": "Several virtual servers run on one physical machine: less hardware, lower electricity and maintenance costs, fast backup and recovery. One modern H3C server replaces 5–10 aging machines."
+        },
+        {
+          "q": "What is H3C CAS?",
+          "a": "H3C's virtualization platform (an analogue of VMware vSphere): a hypervisor plus a single console for managing virtual machines, clusters and migration. Noticeably cheaper than Western alternatives, with official vendor support."
+        },
+        {
+          "q": "Are you an official H3C partner?",
+          "a": "Yes, SAT Solutions is an H3C partner: equipment at partner pricing, official CAS licenses and vendor support."
+        },
+        {
+          "q": "Can we move our current servers into a virtual environment?",
+          "a": "Yes. H3C CAS Migration Tool moves physical servers and virtual machines (including VMware) without reinstalling systems — with a migration license for up to 100 hosts."
+        },
+        {
+          "q": "Is it suitable for ERP and critical systems?",
+          "a": "Yes: a two-node cluster provides fault tolerance — if one server fails, virtual machines automatically restart on the second. We have deployed this for financial organizations in Tashkent."
+        },
+        {
+          "q": "How much does an H3C server with virtualization cost?",
+          "a": "It depends on the configuration: a single ERP server and a fault-tolerant cluster with CAS Enterprise are different budgets. Describe your tasks and we will prepare a specification and quote within a day."
+        }
+      ]
     },
     "wifi": {
       "title": "Wi-Fi Networks",
@@ -750,6 +1012,28 @@
         "Seamless controller-based roaming — no drops while moving",
         "Guest network with authorization and speed limits",
         "Network monitoring and support"
+      ],
+      "faq": [
+        {
+          "q": "Why does Wi-Fi drop when moving around the office?",
+          "a": "Standard routers can't hand off clients between access points. Seamless roaming with a controller switches your device between APs invisibly — calls and video conferencing stay connected."
+        },
+        {
+          "q": "How many access points do I need?",
+          "a": "It depends on area, walls, and number of devices. We conduct a site survey: measure signal strength on-site and deploy exactly as many APs as needed — no dead zones, no overspending."
+        },
+        {
+          "q": "Can we cover a warehouse with shelving units?",
+          "a": "Yes, warehouses are our standard application: metal shelving blocks signals significantly, so access points are selected and positioned based on actual measurements, not guesswork."
+        },
+        {
+          "q": "How do I set up guest Wi-Fi?",
+          "a": "We configure a separate guest network with authentication and speed limiting — guests can't see your corporate network and won't interfere with business traffic."
+        },
+        {
+          "q": "How much does an office Wi-Fi network cost?",
+          "a": "Depends on area and number of access points. Send us your floor plan — we'll prepare an estimate and quote within a day."
+        }
       ]
     },
     "fiber": {
@@ -762,6 +1046,28 @@
         "Fusion splicing and optical cross installation",
         "OTDR measurements and line reports",
         "Repair of damaged fiber lines"
+      ],
+      "faq": [
+        {
+          "q": "When do you need fiber optics instead of twisted pair?",
+          "a": "Twisted pair works up to 100 meters. Beyond that—between buildings, across floors of large facilities, through workshops—fiber optics is more reliable and faster. It's immune to electromagnetic interference and lightning strikes."
+        },
+        {
+          "q": "What distance can fiber optic cable cover?",
+          "a": "Single-mode fiber works for tens of kilometers without amplifiers, so connecting buildings, branches, and sites across the city has virtually no distance limitations."
+        },
+        {
+          "q": "Do you provide fiber splicing services with on-site visits?",
+          "a": "Yes, we come out with a fusion splicer and optical time-domain reflectometer: we splice fibers, install distribution frames and couplers, and provide measurement reports for each line."
+        },
+        {
+          "q": "Do you repair fiber optic breaks?",
+          "a": "Yes, we locate the damage point using an OTDR and restore the line—either by on-site splicing or replacing the damaged section."
+        },
+        {
+          "q": "How much does fiber optic installation cost?",
+          "a": "It depends on the route: inside a building, along poles, or through conduits. Describe your project and we'll prepare a quote and timeline."
+        }
       ]
     },
     "radiobridge": {
@@ -774,6 +1080,28 @@
         "Antenna installation and alignment",
         "Channel, encryption and redundancy setup",
         "Link monitoring and support"
+      ],
+      "faq": [
+        {
+          "q": "What is the actual speed of a radio bridge?",
+          "a": "Modern bridges deliver 300 Mbps to 1-2 Gbps of real throughput — more than enough for internet, video surveillance, and corporate networks."
+        },
+        {
+          "q": "What distance does a radio bridge cover?",
+          "a": "From hundreds of meters to 20+ kilometers with line of sight. We select antennas for your specific route and perform calculations before installation."
+        },
+        {
+          "q": "Is line of sight required between buildings?",
+          "a": "It's highly recommended: at 5 GHz frequencies, obstacles significantly attenuate the signal. If you don't have line of sight, we'll calculate a repeater option or alternative route."
+        },
+        {
+          "q": "Does weather affect the connection?",
+          "a": "Rain and snow slightly reduce signal margin — with proper design, the link operates reliably year-round. We include adequate power reserve in our calculations."
+        },
+        {
+          "q": "How much does a radio bridge kit cost?",
+          "a": "A two-antenna kit with installation and configuration starts from budget solutions for hundreds of meters to gigabit solutions for several kilometers. Tell us the distance — we'll quote you."
+        }
       ]
     },
     "mikrotik": {
@@ -786,6 +1114,28 @@
         "VLANs, VPN between offices, remote access",
         "Firewall, bandwidth limits, guest network",
         "Monitoring and ongoing support"
+      ],
+      "faq": [
+        {
+          "q": "Can I configure MikroTik remotely?",
+          "a": "Yes, we handle most tasks remotely: audits, provider redundancy setup, VPN, firewall configuration. On-site visits are needed only for hardware replacement or physical network issues."
+        },
+        {
+          "q": "How do I set up automatic failover to a backup provider?",
+          "a": "We configure failover: when your primary connection goes down, MikroTik automatically switches your office to the backup channel and switches back when the main one is restored. Your internet stays online."
+        },
+        {
+          "q": "Can I connect multiple office branches via VPN?",
+          "a": "Absolutely. We establish secure tunnels between branches so shared resources, 1C, and phone systems work as if they're on the same network."
+        },
+        {
+          "q": "Why does my internet drop periodically?",
+          "a": "Common culprits: network loops, congested bandwidth, misconfigured firewall rules, or provider-side issues. We run an audit and pinpoint the problem using logs and traffic graphs."
+        },
+        {
+          "q": "Do you offer managed services?",
+          "a": "Yes, we monitor your network, update firmware, and respond to incidents under a service agreement."
+        }
       ]
     },
     "smarthome": {
@@ -813,7 +1163,29 @@
           "climate": "Climate and leak protection",
           "hubs": "Hubs, gateways and energy metering"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "What can a smart home on Tuya do?",
+          "a": "Lighting, outlets, blinds, climate control, leak and motion sensors, cameras and smart locks — all in one Smart Life app with automation scenarios: «Away from home» turns off lights and activates security mode."
+        },
+        {
+          "q": "Does a smart home work without internet?",
+          "a": "Basic automation through the hub works locally, but controlling your home from your phone while away requires internet. We'll help you choose the right setup for your needs."
+        },
+        {
+          "q": "Does it support Alisa and Google Assistant?",
+          "a": "Yes, Tuya devices integrate with Yandex Alisa and Google Home — control everything by voice in Russian."
+        },
+        {
+          "q": "Can I build a smart home in stages?",
+          "a": "Absolutely, that's Tuya's biggest advantage: start with lighting and outlets, then add blinds, climate control and security — everything works in the same app."
+        },
+        {
+          "q": "Is it suitable for an office?",
+          "a": "Yes: intelligent lighting on schedule, climate control, sensor monitoring and energy savings — the same devices work perfectly in office environments."
+        }
+      ]
     },
     "turnstile": {
       "title": "Turnstiles & Entrances",
@@ -825,6 +1197,28 @@
         "Identification: cards, fingerprints, face recognition",
         "Integration with time attendance and ERP",
         "Turnstile maintenance and repair"
+      ],
+      "faq": [
+        {
+          "q": "Which turnstile should I choose?",
+          "a": "A tripod turnstile is ideal for offices and entrances with moderate traffic flow, swing gates and speed gates are perfect for business centers, and full-height turnstiles are designed for high-security facilities. We'll select the right solution based on your traffic volume and space requirements."
+        },
+        {
+          "q": "What is the throughput capacity of a turnstile?",
+          "a": "A tripod turnstile processes 20–30 people per minute, while speed gates handle up to 60. For morning rush hours at your entrance, we calculate the number of turnstiles needed based on your staff headcount."
+        },
+        {
+          "q": "What happens during a fire?",
+          "a": "When the fire alarm is triggered, turnstiles automatically unlock (anti-panic mode) — the evacuation route is clear. This is a mandatory safety requirement that we configure for all installations."
+        },
+        {
+          "q": "Can access be granted via facial recognition?",
+          "a": "Yes, we install facial recognition terminals from ZKTeco and Hikvision — no cards or badges required, with integration to time and attendance tracking."
+        },
+        {
+          "q": "How much does a turnstile cost with installation?",
+          "a": "The price depends on the type: a tripod turnstile is a budget-friendly solution, while a speed gate is a premium option. Send us your entrance specifications and we'll prepare a quote."
+        }
       ]
     },
     "locks": {
@@ -837,6 +1231,28 @@
         "Access setup: codes, cards, fingerprints, app",
         "Standalone and networked solutions with entry logs",
         "Maintenance and reconfiguration"
+      ],
+      "faq": [
+        {
+          "q": "What's the difference between an electromagnetic lock and an electromechanical lock?",
+          "a": "An electromagnetic lock holds the door with a magnet and requires constant power — standard for offices and entryways with video intercoms. An electromechanical lock secures with a bolt and stays locked without power."
+        },
+        {
+          "q": "What happens to the lock if the power goes out?",
+          "a": "An electromagnetic lock will release (safe for evacuation), an electromechanical lock will remain locked. For critical doors, we install a UPS — the lock works for hours without mains power."
+        },
+        {
+          "q": "Can I install a smart lock on my front door?",
+          "a": "Absolutely. Smart locks open with a code, card, fingerprint, or smartphone, maintain an access log, and let you issue temporary codes to guests. We'll select the model that fits your door perfectly."
+        },
+        {
+          "q": "Do locks integrate with video intercoms and access control systems?",
+          "a": "Yes, the lock connects to your video intercom (unlock from your apartment or handset) and to your access control system — with full access logs and time-based permissions."
+        },
+        {
+          "q": "How much does a lock cost with installation?",
+          "a": "It depends on what you need — from a basic electromagnetic lock to a biometric smart lock. Tell us about your door and requirements, and we'll give you a price."
+        }
       ]
     },
     "gates": {
@@ -849,6 +1265,28 @@
         "Remotes, GSM module, opening from your phone",
         "Integration with intercom, access control and ANPR",
         "Automation maintenance and repair"
+      ],
+      "faq": [
+        {
+          "q": "What automation is suitable for sliding gates?",
+          "a": "The drive is selected based on the weight and length of the gate leaf: light up to 500 kg, medium up to 1000 kg, industrial heavier. We install automation with overload protection and photocells."
+        },
+        {
+          "q": "Can you open gates from your phone?",
+          "a": "Yes: a GSM module opens gates with a call (free of charge) or through an app; you can grant access to family and employees, and also integrate it with license plate recognition — your vehicles enter automatically."
+        },
+        {
+          "q": "What to do if the power goes out?",
+          "a": "All drives have manual unlocking with a key — gates can be opened by hand. For critical entrances, we install backup power supply."
+        },
+        {
+          "q": "Is automation safe for children and vehicles?",
+          "a": "Yes: photocells stop and open the gates when an obstacle appears, and the drive sensitivity is adjusted according to standards."
+        },
+        {
+          "q": "Do you repair automation installed by others?",
+          "a": "Yes, we diagnose and repair drives from most manufacturers, replace boards, photocells, and remote controls."
+        }
       ]
     },
     "telephony": {
@@ -861,6 +1299,28 @@
         "IVR, call queues, call recording",
         "Uniting branches and remote employees",
         "Setup, training and support"
+      ],
+      "faq": [
+        {
+          "q": "How is IP telephony better than regular phone service?",
+          "a": "Lower call and maintenance costs, multichannel capabilities, call recording, voice menus, statistics — and everything works over the internet: branches and remote employees operate in a single network with short extension numbers."
+        },
+        {
+          "q": "Will we keep our city phone number?",
+          "a": "Yes, city numbers are connected to the IP-PBX via SIP — your clients will continue calling your familiar number."
+        },
+        {
+          "q": "How many lines can we have?",
+          "a": "A multichannel number handles dozens of simultaneous calls — queuing, agent distribution, and call forwarding to mobile phones are configured according to your workflow."
+        },
+        {
+          "q": "Can we record conversations?",
+          "a": "Yes, we enable recording of all or selected calls with archive storage — perfect for quality control and dispute resolution."
+        },
+        {
+          "q": "How much does IP telephony cost for an office?",
+          "a": "It depends on the number of employees and your use case. Tell us how many workstations you need — we'll calculate the PBX, Fanvil phones, and setup costs."
+        }
       ]
     },
     "servers": {
@@ -873,6 +1333,32 @@
         "Rack installation, RAID setup, OS and hypervisor deployment",
         "Migration of data and services to the new hardware",
         "Vendor warranty and service contracts"
+      ],
+      "faq": [
+        {
+          "q": "What server do I need for 1C?",
+          "a": "It depends on the number of users and database size: for up to 20 users, a basic-level server is sufficient; for larger databases, we'll configure a system with fast NVMe drives and extra RAM. We'll match it to your specific numbers."
+        },
+        {
+          "q": "What brands do you supply?",
+          "a": "Supermicro, Lenovo ThinkSystem, and H3C UniServer (we're an H3C partner), data storage systems — on request and other vendors. Everything is new with official warranty."
+        },
+        {
+          "q": "How long does server delivery take?",
+          "a": "Servers are assembled to order at the vendor's warehouse — exact timeframe depends on components and is confirmed in the quote. Popular configurations arrive faster."
+        },
+        {
+          "q": "Will you help with installation and setup?",
+          "a": "Absolutely: rack mounting, RAID configuration, OS and hypervisor installation, data migration from your old server — we deliver a ready-to-work system."
+        },
+        {
+          "q": "Is it better to buy your own server or use cloud?",
+          "a": "With steady workload, your own server pays for itself in 1.5–3 years and your data stays with you. We'll calculate both options honestly for your specific needs."
+        },
+        {
+          "q": "Do you provide warranty?",
+          "a": "Vendor warranty on equipment plus our service contracts — from consultations to full maintenance with on-site support."
+        }
       ]
     }
   },

@@ -302,6 +302,28 @@
         "Kameralar, registratorlar (NVR/DVR) va kabel tarmog‘ini o‘rnatish",
         "Yozib olish, masofaviy kirish va videoanalitikani sozlash",
         "Ishga tushirish, o‘qitish va kafolat xizmati"
+      ],
+      "faq": [
+        {
+          "q": "Videokuzatuv o'rnatish qancha turadi?",
+          "a": "Xarajat kameralar soniga, asbob-uskunaning turlatiga va o'rnatishning murakkabligiga bog'liq. Biz bepul ob'ektga chiqamiz, smeta hisoblaymiz va tijorat taklifini tayyorlaymiz."
+        },
+        {
+          "q": "IP-kameralar analogligidan qanday farq qiladi?",
+          "a": "IP-kameralar yuqori ruxsatnomani, video-analitikani va tarmoqda moslashuvchan masshtabni beradi; analogligiga (HDCVI/TVI) arzonroq va koaksial kabel bo'ylab ishlaydi. Byudjet va vazifangizga muvofiq tanlaydi beramiz."
+        },
+        {
+          "q": "Kameralarni telefondan ko'rish mumkinmi?",
+          "a": "Ha, telefondan va kompyuterdan uzoq dostupni, shuningdek bulutli ko'rinishni va bildirishnomalarni qo'llab-quvvatlaymiz."
+        },
+        {
+          "q": "Yozuv arxivi qanchalik saqlanadi?",
+          "a": "Arxiv chuqurligi saqlash qurilmasining sig'imiga, kameralar soniga va ruxsatnomaga bog'liq — odatda 7 dan 30 kunigacha. Sizning talablaringizga ko'ra hisoblaymiz."
+        },
+        {
+          "q": "Siz o'rnatgandan keyin sistemani xizmat ko'rsatasizmi?",
+          "a": "Ha, kafolat va xizmat ko'rsatishni taqdim etamiz, O'zbekiston bo'ylab diagnostika va ta'mirlash uchun chiqamiz."
+        }
       ]
     },
     "analytics": {
@@ -314,6 +336,20 @@
         "Tashrifchilarni sanash, issiqlik xaritalari, zona nazorati",
         "Trevogalarni qo‘riqlash va SKUD bilan integratsiya",
         "Operatorlarni o‘qitish va qo‘llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Video analitika nima qila oladi?",
+          "a": "Yuzlarni va avtomobil raqamlarini taniy oladi, odamlarni sanay oladi, zonalarni va perimetrni nazorat qiladi, tashlab ketilgan narsalarni va noo'rin xulqni real vaqt rejimida aniqlaydi."
+        },
+        {
+          "q": "Maxsus kameralar kerakmi?",
+          "a": "Ba'zi analitika kameralarning o'zida ishlaydi, ba'zi qismi esa servering'da. Biz kerakli stsenariylarga mos jihozni tanlab beramiz."
+        },
+        {
+          "q": "Mavjud sistemaga integratsiya qilish mumkinmi?",
+          "a": "Ha, ko'p hollarda analitikani server PO orqali allaqachon o'rnatilgan kameralarga qo'shish mumkin."
+        }
       ]
     },
     "anpr": {
@@ -326,6 +362,20 @@
         "Oq ro‘yxat va o‘tish mantig‘ini sozlash",
         "Parkovka va SKUD bilan integratsiya",
         "Ishga tushirish va xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Raqamlar qanchalik aniqlik bilan taniladi?",
+          "a": "Zamonaviy ANPR-kameralar raqamlarni yuqori aniqlik bilan kun va kuni oyna ostigida to'g'ri o'rnatish va kiritish zonasini yoritish sharoitida taniydi."
+        },
+        {
+          "q": "Shlagbaum avtomatik ravishda raqam bo'yicha ochilishi mumkinmi?",
+          "a": "Ha, tizim shlagbaum va СКУД bilan integratsiyalashgan: oq ro'yxatdagi raqamlar uchun kirish avtomatik ravishda ocholadi."
+        },
+        {
+          "q": "To'lov qilinuvchi avtomobil to'xtamalarida qo'llash mumkinmi?",
+          "a": "Ha, ANPR avtomobil to'xtamalarida kiritish/chiqarish hisobini olish, tarifikatsiya va kirish nazoratini amalga oshirish uchun qo'llaniladi."
+        }
       ]
     },
     "access": {
@@ -338,6 +388,24 @@
         "Huquq, jadval va kirish darajalarini sozlash",
         "Videokuzatuv va vaqt hisobi bilan integratsiya",
         "Ishga tushirish va kuzatib borish"
+      ],
+      "faq": [
+        {
+          "q": "SKUD (СКУД) tizimiga nima kiradi?",
+          "a": "Kontroller, karta o'qigichlar yoki biometrik terminallar, elektromagnit/elektromekanik qulflar, turniketlar va kirishga ruxsat berish huquqlarini boshqarish uchun dastur."
+        },
+        {
+          "q": "Ishchilar ish vaqtini hisoblab turish mumkinmi?",
+          "a": "Ha, SKUD xodimlarning kirish/chiqish vaqtlarini qayd etadi va tabellni shakllantiradi; ma'lumotlarni 1C va boshqa tizimlariga chiqarib olish mumkin."
+        },
+        {
+          "q": "Biometriya qo'llab-quvvatlanadi?",
+          "a": "Ha, biz yuzni va barmoq izini aniqlash uchun terminallarni o'rnatamiz — bu qulay va kartalarni uzatishni bartaraf etadi."
+        },
+        {
+          "q": "Video kuzatish tizimi bilan integratsiiya qilish mumkinmi?",
+          "a": "Ha, kirishga ruxsat berish voqealari video yozuviga bog'lanadi, bu sizga ob'yekt ustidan to'liq nazorat beradi."
+        }
       ]
     },
     "intercom": {
@@ -350,6 +418,20 @@
         "Elektron qulf va SKUD bilan integratsiya",
         "Ko‘pabonentli sxemalarni sozlash",
         "Ishga tushirish va servis"
+      ],
+      "faq": [
+        {
+          "q": "IP-domofon analogdan nima bilan yaxshi?",
+          "a": "IP-domofoniya yuqori sifatli video, telefoningizdan istalgan joydan ko'rish, yozib olish va aqlli uy hamda СКУД bilan integratsiyani taqdim etadi."
+        },
+        {
+          "q": "Telefoningizdan chaquvlarga javob berish mumkinmi?",
+          "a": "Ha, paneldan chaquv smartfoningizga keladi — siz uzoqdan eshikni ochishingiz mumkin, hatto uyingizdan yoki ofisdan tashqarida bo'lsangiz ham."
+        },
+        {
+          "q": "Ko'p qavatli binolar uchun mos keladimi?",
+          "a": "Ha, ko'p abonentli domofoniya tizimlari yaratamiz ko'p qavatli turar-joylashtiradigan komplekslar uchun chaqirish panellari va alohida monitorlar bilan."
+        }
       ]
     },
     "attendance": {
@@ -362,6 +444,20 @@
         "Tabel va hisobotlarni shakllantirish",
         "1C / HR / SKUD bilan integratsiya",
         "O‘qitish va qo‘llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Ish vaqtini hisoblab turish qanday ishlaydi?",
+          "a": "Xodimlar terminalda karta, barmoq izi yoki yuzi bo'yicha o'z-o'zini belgilaydi; sistema avtomatik ravishda ish vaqtini hisoblaydi va hisobotlarni tayyorlaydi."
+        },
+        {
+          "q": "Ma'lumotlarni 1C'ga yuklab olish mumkinmi?",
+          "a": "Ha, tabellani 1C va boshqa hisob-kitob tizimlarina eksport qilish uchun sozlaymiz."
+        },
+        {
+          "q": "Agar xodim o'z-o'zini belgilashni unutib qolsa, nima bo'ladi?",
+          "a": "Rahbar huquqlari bilan qo'lda tuzatish va o'zgarishlar jurnali mavjud."
+        }
       ]
     },
     "alarm": {
@@ -374,6 +470,20 @@
         "Senariy va trevoga tugmasini sozlash",
         "Qo‘riqlash pulti va ilovaga chiqarish",
         "Ishga tushirish va xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Xavfsizlik signalizatsiyasi qanday ishlaydi?",
+          "a": "Harakat, ochilish va shisha sinish datchiklari kirishni aniqlab, ogohlantirishni pult, telefon va sirenaiga uzatadi."
+        },
+        {
+          "q": "Xavfsizlik pultiga ulash mumkinmi?",
+          "a": "Ha, sistemani xavfsizlik xizmati pultiga va shu vaqtda sizning telefoningizga ham ulantirishingiz mumkin."
+        },
+        {
+          "q": "Elektr uzilganda ishlaydi?",
+          "a": "Ha, qurilmalar zaxira akkumulyator bilan jihozlantirilgan va tarmoq uzilganda ham ishlashni davom ettiradi."
+        }
       ]
     },
     "fire": {
@@ -386,6 +496,24 @@
         "Zona va evakuatsiya senariylarini sozlash",
         "Nazorat organlariga topshirish",
         "Reglamentli xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Yondaloq chiqindi signalizatsiyasi majburiyami?",
+          "a": "Ko'pchilik tijorat va ijtimoiy ob'ektlar uchun yondaloq signalizatsiyasi va ogohlantirishlar normalarga ko'ra majburiy. Biz talablarni hisobga olgan holda loyihalashtiraman."
+        },
+        {
+          "q": "Siz qanday uskunalardan foydalanasiz?",
+          "a": "Bolid, Rubezh va boshqa ishlab chiqaruvchilarning manzilli va boshbog'i tizimlari — ob'ekt turi va maydoni bo'yicha tanlab olamiz."
+        },
+        {
+          "q": "Loyiha va topshirish qilasizmi?",
+          "a": "Ha, biz loyihalashtirish, o'rnatish, ishga tushirish va tizimnni nadzor organlarining sertifikatsiyasiga yordam beramiz."
+        },
+        {
+          "q": "Texnik xizmat ko'rsatish kerakmi?",
+          "a": "Ha, yondaloq tizimlari muntazam texnik xizmat ko'rsatishni talab qiladi — biz xizmat ko'rsatish shartnomasi tuzamiz."
+        }
       ]
     },
     "network": {
@@ -465,7 +593,33 @@
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Tarmoq uskunalari — bizning katalogdan",
         "brandsText": "Kommutator, router va Wi-Fi'ni vazifa va byudjetga qarab tanlaymiz — barcha uskunalarni o'zimiz kafolat bilan yetkazib beramiz:"
-      }
+      },
+      "faq": [
+        {
+          "q": "Structured cabling system (SCUS) va LAN o'rnatishiga nima kiradi?",
+          "a": "Loyihalash, kabel yo'llarini o'tkazish, rozetka, patch-panellar, kommutatorlar va server shkaflari o'rnatish, chiziqlarni belgilash va sinab ko'rish."
+        },
+        {
+          "q": "SCUS o'rnatish qanchaga turadi?",
+          "a": "Narxi portlar soni, kabelning toifasi va yo'llarning murakkabligiga bog'liq. Xonaning rejasini yuboring — bir kun ichida aniq smetali komertsiya taklifini qaytaramiz, muhandisning tekshirish chiqishi bepul."
+        },
+        {
+          "q": "Qaysi kabel tanlash kerak — Cat5e, Cat6 yoki optik?",
+          "a": "Cat5e gigabit tezligigacha internet va telefoniya uchun etarli, Cat6 — yangi ofislar uchun standart va kelayotgan yillar uchun zaxira, optik magistrallar uchun etajlar va binolar o'rtasida kerak. Masraflarni ko'paytirib bermasdan, vazifaga muvofiq tanlaymiz."
+        },
+        {
+          "q": "Tarmoq o'rnatish qancha vaqt oladi?",
+          "a": "30 ta ish o'rni bo'lgan ofis — 3–7 kun, biznes-markazning etaji — 2–4 hafta, bino yoki ishlab chiqarish — loyihaga ko'ra bir oydan boshlanadi. Kechqurun va dam kunlarida ishlashimiz mumkin, ofisning ishi to'xtamasligidan."
+        },
+        {
+          "q": "Wi-Fi qoplamani qilasizmi?",
+          "a": "Ha, ofislar, omborlar va katta territoriyalar uchun bo'shliqsiz Wi-Fi qoplamani loyihalash va sozlash olamiz."
+        },
+        {
+          "q": "Tarmoq bo'yicha hujjatni bervasizmiz?",
+          "a": "Ha, ijroiy hujjatlar, sxemalari va har bir kabel chiziqning sinov protokollarini taqdim etamiz — tarmoqni bizsizsiz xizmat qilish mumkin (lekin bizimiz bilan qulayroq)."
+        }
+      ]
     },
     "server": {
       "title": "Server xonalari va ma’lumot markazlari",
@@ -550,7 +704,33 @@
           "servers": "Server uskunalari",
           "sfp": "SFP-modullar"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Serverlarni o'rnatish nima bilan bog'liq?",
+          "a": "Stoklarni o'rnatish, UPS, sovutish va ventillyasyon tizimlari, tarmoq infratuzilmasi, kirish nazorati va monitoringli ishchi uskunalar ishonchli ishlashini ta'minlash."
+        },
+        {
+          "q": "To'liq tayyorlangan serverlar xonasi qancha turadi?",
+          "a": "Stoklarning soni, elektr ta'minoti va sovutish talablari, ofis serverlariga va mini-ma'lumotlar markaziga qarab farq qiladi. Asos ma'lumotlarini yuboring — loyiha va smeta hisoblab beraman."
+        },
+        {
+          "q": "Zaxira elektr ta'minotini ta'minlaysizmi?",
+          "a": "Ha, sizning vazifalaringiz uchun zarur quvvatdagi va avtonomiya davomi bo'yicha UPS-ni tanlab o'rnatib beraman."
+        },
+        {
+          "q": "Iqlim nazorati qilasizmi?",
+          "a": "Ha, serverlar xonasida barqaror harorat uchun pretsizion konditsionerlashni hisoblaysiz va o'rnatib beraman."
+        },
+        {
+          "q": "Serverlar xonasi monitoringi bormi?",
+          "a": "Ha, harorat, namlik, sizib ketish va elektr ta'minoti nazorati uchun sensorlar o'rnatib, Telegram va pultga bildirishnomalar yuboresan — muammo paydo bo'lguncha xabar olasiz."
+        },
+        {
+          "q": "Serverlar xonasini to'xtatmasdan yangilab bo'lasizmi?",
+          "a": "Ha, kabel qo'yish, UPS almashtirish va sovutish qo'shishni bosqichma-bosqich rejalashtiraman — muhim xizmatlar ishlashda davom etadi."
+        }
+      ]
     },
     "videowall": {
       "title": "Videodevorlar",
@@ -562,6 +742,20 @@
         "Joylashuv va manbalarni sozlash",
         "Videokuzatuv bilan integratsiya",
         "Ishga tushirish va qo‘llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Videodivarlari qayerda qo'llaniladi?",
+          "a": "Vaziyat markazlarida, dispetcherlik xonalarida, monitoring markazlarida va muzokaralar xonasida — ko'p manbalarni katta ekranga chiqarish kerak bo'lgan joylarda."
+        },
+        {
+          "q": "Videodivari nimadan to'planadi?",
+          "a": "Seamless ЖК-panellaridan yoki LED-modullaridan kontroller bilan — u rasmni ekranlar bo'ylab moslashtirib taqsimlaydi."
+        },
+        {
+          "q": "Kameralarni videodivarga chiqarish mumkinmi?",
+          "a": "Ha, videodivari video kuzatuv sistemasi va boshqa manbalari bilan integrlashtiramiz."
+        }
       ]
     },
     "pa": {
@@ -574,6 +768,20 @@
         "Zona va prioritetlarni sozlash",
         "Yong‘in SOUE bilan integratsiya",
         "Ishga tushirish va servis"
+      ],
+      "faq": [
+        {
+          "q": "Ogohlantirish tizimi nima uchun kerak?",
+          "a": "Nutqli xabarlar va signal sirenlari, fon musiqa va ob'ekt bo'yicha zonali ogohlantirish tarqatish uchun."
+        },
+        {
+          "q": "Binoni zonalab bo'lish mumkinmi?",
+          "a": "Ha, zonali ogohlantirish sozlanadi — xabarlar faqat kerakli xonalarda alohida tarqatiladi."
+        },
+        {
+          "q": "Yangin signalizatsiya tizimi bilan integratsiya qilinadi?",
+          "a": "Ha, ogohlantirish va evakuatsiya boshqaruvi tizimi (SOUE) yangin signalizatsiyasi bilan birga ishlaydi."
+        }
       ]
     },
     "barrier": {
@@ -586,6 +794,20 @@
         "Boshqaruv va pultlarni sozlash",
         "ANPR va SKUD bilan integratsiya",
         "Ishga tushirish va xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Qaysi shlagbaumlarni o'rnataysiz?",
+          "a": "Avtomatik shlagbaumlar sayyohlik joy va kirishlari uchun turli uzunlikdagi strelalar va ish intensivligi bilan — oqim uchun tanlayemiz."
+        },
+        {
+          "q": "Avtomobil raqami bo'yicha ochish mumkinmi?",
+          "a": "Ha, avtonomberilish (ANPR) aniqlash tizimi va SKUD bilan integrasiya qilamiz avtomatik proezd uchun."
+        },
+        {
+          "q": "Boshqaruv va pultlar haqida nima?",
+          "a": "Boshqarish pultlardan, kortochka, tugma, ilova orqali va oq ro'yxat bo'yicha avtomatik ravishda mumkin."
+        }
       ]
     },
     "perimeter": {
@@ -598,6 +820,20 @@
         "Zona va trevogalarni sozlash",
         "Qo‘riqlash va videoanalitika bilan integratsiya",
         "Ishga tushirish va servis"
+      ],
+      "faq": [
+        {
+          "q": "Perimetr xavfsizligi nima?",
+          "a": "Bu ob'yekt chegarasida sensorlar, signalizatsiya datchiklari va kameralardan iborat kompleks bo'lib, burilgan chuqur bosqichida amalga oshiriladi."
+        },
+        {
+          "q": "Qanday texnologiyalar qo'llaniladi?",
+          "a": "Infraqizil to'siqdlar, vibration va sig'im datchiklari, termal kameralar va analitik kameralar — relyer va maydoniga moslashtirib tanlaymiz."
+        },
+        {
+          "q": "Videokuzatuv bilan integrasiyalashadi?",
+          "a": "Ha, perimetrdan kelgan signalizatsiya avtomatik ravishda operatorga kerakli zonaning videorolikini chiqaradi."
+        }
       ]
     },
     "bus": {
@@ -738,7 +974,33 @@
             "desc": "Virtualizatsiya va zaxira nusxalar uchun SXD — blokli va faylli kirish."
           }
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Virtualizatsiya nima va biznesga nima uchun kerak?",
+          "a": "Bir fizik serverde bir nechta virtual serverlar ishlaydi: kamroq hardware, elektr energiyasi va texnik xizmat xaraji kam, tez backup va tiklash. Bitta zamonaviy H3C serveri 5–10 ta eskirgan mashinani almashtiradi."
+        },
+        {
+          "q": "H3C CAS nima?",
+          "a": "H3C virtualizatsiya platformasi (VMware vSphere analogiy): gipervizor va virtual mashinalar, klasterlar va migratsiyani boshqarish uchun bitta konsol. G'arb analoglaridan ancha arzonroq, lekin rasmiy vendor yordami bilan."
+        },
+        {
+          "q": "Siz H3C rasmiy sherikmi?",
+          "a": "Ha, SAT Solutions — H3C sherik: sherik narxlari bo'yicha uskunani ta'minlash, rasmiy CAS litsenziyalar va vendor yordami."
+        },
+        {
+          "q": "Hozirgi serverlarni virtual muhitga o'tkazish mumkinmi?",
+          "a": "Ha. H3C CAS Migration Tool fizik serverlarni va virtual mashinalarni (VMware jumlasa) tizimni qayta o'rnatmasdan o'tkazadi — 100 ta host gacha migratsiya litsenziyasi bilan."
+        },
+        {
+          "q": "1S va tanqidiy tizimlar uchun mos keladi?",
+          "a": "Ha: ikki tugunli klaster ishonchliligini ta'minlaydi — bitta serverda nosoz bo'lsa, virtual mashinalar avtomatik ravishda ikkinchisida qayta ishga tushadi. Tashkent moliyaviy tashkilotlari uchun amalga oshirdik."
+        },
+        {
+          "q": "H3C serveri virtualizatsiya bilan qancha turadi?",
+          "a": "Konfiguratsiyaga bog'liq: bitta server 1S uchun va CAS Enterprise bilan ishonchli klaster — turli byuджetlar. Vazifalaringizni ta'riflab bering — kun ichida spetsifikatsiya va kometavoy qiymatni hisoblayotgan bo'lamiz."
+        }
+      ]
     },
     "wifi": {
       "title": "Wi-Fi tarmoqlari",
@@ -750,6 +1012,28 @@
         "Kontroller bilan uzluksiz rouming — harakatda uzilishsiz",
         "Avtorizatsiya va tezlik cheklovli mehmon tarmog'i",
         "Tarmoq monitoringi va qo'llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Nima uchun Wi-Fi ofisda harakatlanayotganda uziladi?",
+          "a": "Oddiy routerlar klientni bir-biriga o'tkazay olmaydi. Kontroller bilan muammosiz roaming qurilmani nuqtalar o'rtasida ko'rinmasdan almashtiradi — qo'ng'iroq yoki videoaloqa uzilmaydi."
+        },
+        {
+          "q": "Nechta kirish nuqtasi kerak?",
+          "a": "Bu maydon, devarlar va qurilmalar soniga bog'liq. Radiodizayn tekshirimini o'tkazamiz: ob'ektda signalni o'lchaymiz va aynan shuncha nuqta qo'yamiz, qancha kerak — o'lik zonalar va ortiqcha xarchlarsiz."
+        },
+        {
+          "q": "Stelajli omborni qoplash mumkinmi?",
+          "a": "Ha, omborlar — bizning tipik vazifamiz: metall stelajlar signalni kuchli siqadi, shuning uchun nuqtalar o'lchovlar asosida tanlanadi va joylashtiriladi, 'ko'z' bilan emas."
+        },
+        {
+          "q": "Mehmon Wi-Fini qanday qilish kerak?",
+          "a": "Alohida mehmon tarmog'ini avtorizatsiya va tezlik cheklash bilan o'rnatamiz — mehmonlar ish tarmog'ini ko'rmaydi va biznes-trafikga xalaqit bermaydi."
+        },
+        {
+          "q": "Ofis uchun Wi-Fi tarmog'i qancha turadi?",
+          "a": "Bu maydon va nuqtalar soniga bog'liq. Xonaning rejasini yuboring — bir kun ichida hisob va taklif qildik."
+        }
       ]
     },
     "fiber": {
@@ -762,6 +1046,28 @@
         "Tolalarni payvandlash va optik krosslarni o'rnatish",
         "Reflektometr o'lchovlari va liniya protokollari",
         "Shikastlangan optik liniyalarni ta'mirlash"
+      ],
+      "faq": [
+        {
+          "q": "Qachon bukilgan juftlik o'rniga optika kerak?",
+          "a": "Bukilgan juftlik 100 metrga qadar ishlaydi. Undan ko'praytirilgan masofa — binolar orasida, katta ob'ektlarning qavatlarida, tsikhlarida — fiber optika orqali ishonchli va tezroq bo'ladi, u shuningdek, o'rnatilgan signallardan va chaqmoqlardan qo'rqmaydi."
+        },
+        {
+          "q": "Optikani qanday masofaga o'tkazish mumkin?",
+          "a": "Bir rejimli optik tolali o'rta kuchaytirgichsiz o'nlarcha kilometr ishlaydi — binolar, filiallar va shahar maydonlari o'rtasida aloqa uchun amaliy cheklovlar yo'q."
+        },
+        {
+          "q": "Chiqib kelgan holda fiber splicing xizmatini ko'rsatasizmi?",
+          "a": "Ha, spleyser va reflektometr bilan chiqib kelamiz: tolalarni suvaylamiz, krosslarni va mufftalarni o'rnatamiz, har bir liniya uchun o'lchovlar protokollarini taqdim etamiz."
+        },
+        {
+          "q": "Optika uzilishlarini ta'mirlaysizmi?",
+          "a": "Ha, reflektometr bilan shikastlanish joyini topamiz va liniyani tiklayamiz — joy bo'yicha spleysingni yoki uzilgan qismni almashtiramiz."
+        },
+        {
+          "q": "Fiber optika o'tkazishining narxi nechcha?",
+          "a": "Trassa turiga bog'liq: binoning ichida, tayanch ustunlari bo'ylab yoki kanalizatsiya ichida. Vazifangizni tavsiflang — smetani va muddatlarni hisoblaymiz."
+        }
       ]
     },
     "radiobridge": {
@@ -774,6 +1080,28 @@
         "Antennalarni o'rnatish va sozlash",
         "Kanal, shifrlash va rezervlashni sozlash",
         "Aloqa monitoringi va qo'llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Radiomost haqidagi haqiqiy tezlik qanday?",
+          "a": "Zamonaviy mostlar 300 Mbit/s dan 1-2 Gbit/s gacha bo'lgan haqiqiy o'tkazuvchi qobiliyatini beradi — internet, video kuzatuv va korporativ tarmoq uchun etarli."
+        },
+        {
+          "q": "Radiomost qancha masofaga ishlaydi?",
+          "a": "To'g'ri ko'rinish shartida yuzlab metrdan 20+ kilometrgacha. Konkret xatti-harakati uchun antennaları tanlash va o'rnatishdan oldin hisoblash olamiz."
+        },
+        {
+          "q": "Binolar orasida to'g'ri ko'rinish kerak bo'ladimi?",
+          "a": "Afzaldir: 5 GGts chastotalarda to'siqlar signalni kuchli surishi mumkin. Agar ko'rinish bo'lmasa — retransliyatorli variant yoki boshqa xatti-harakat bilan hisoblab berамiz."
+        },
+        {
+          "q": "Ob-hava sharoit aloqaga ta'sir qiladimi?",
+          "a": "Yomg'ir va qor signalni ozgina qisitadi — to'g'ri hisoblash natijasida kanali yil davomida barqaror ishlaydi. Biz quvvat bo'yicha zaxira qo'yib qo'yamiz."
+        },
+        {
+          "q": "Radiomost to'plami qancha turadi?",
+          "a": "Ikkita antenna, o'rnatish va konfiguratsiya bilan — yuzlab metrli arzon echimlardan gacha gigabit kilometrli variantlargacha. Masofani aytib bering — narxni aytsak bo'ladi."
+        }
       ]
     },
     "mikrotik": {
@@ -786,6 +1114,28 @@
         "VLAN, ofislar orasida VPN, masofaviy kirish",
         "Fayrvol, tezlik cheklash, mehmon tarmog'i",
         "Monitoring va kuzatib borish"
+      ],
+      "faq": [
+        {
+          "q": "MikroTikni masofaviy ravishda konfiguratsiya qilish mumkinmi?",
+          "a": "Ha, aksariyat vazifalarni masofaviy ravishda hal qilamiz: audit, provayderlarning zaxirasini olish, VPN, firewall. Chiqish faqat hardware almashtirganda yoki tarmoq fizikasida muammo bo'lganda kerak."
+        },
+        {
+          "q": "Ikkinchi provayderga avtomatik o'tishni qanday qilish mumkin?",
+          "a": "Failover ni konfiguratsiya qilamiz: asosiy kanal tushganda MikroTik o'z-o'zidan ofisni zaxira shaxsiy kanalga o'tkazadi va asosiy kanal tiklanganda orqaga qaytadi. Internet uzilib qolmaydi."
+        },
+        {
+          "q": "Filiallarni VPN orqali birlashtirish mumkinmi?",
+          "a": "Ha, filiallar o'rtasida himoyalangan tunnellarni ochib beramiz: umumiy resurslar, 1C va telefoniya bir tarmoqda ishlaydi."
+        },
+        {
+          "q": "Nega vaqti-vaqti bilan internet uzilib qoladi?",
+          "a": "Tez-tez sabablar: tarmoqda halqalar, kanalni yuklanish, noto'g'ri firewall qoidalari yoki provayder bilan muammo. Audit qilamiz va loglar hamda grafiklar bo'yicha sababni topamiz."
+        },
+        {
+          "q": "Siz texnik xidmatni ko'rib chiqasizmi?",
+          "a": "Ha, tarmoqni kuzatib boramiz, firmware-larni yangilaymiz va xizmat-ko'rsatish shartnomasi bo'yicha insidentlarga javob beramiz."
+        }
       ]
     },
     "smarthome": {
@@ -813,7 +1163,29 @@
           "climate": "Iqlim va suv toshqinidan himoya",
           "hubs": "Hablar, shlyuzlar va energiya hisobi"
         }
-      }
+      },
+      "faq": [
+        {
+          "q": "Tuya orqali aqlli uy nima qila oladi?",
+          "a": "Yorug'lik, rozetka, parda, iqlim, oqish sensori va harakat sensori, kameralar va qulflar — hammasi bir Smart Life ilovasida stsenariylari bilan: «Uydan chiqtim» yorug'likni o'chiradi va qo'riqqa qo'yadi."
+        },
+        {
+          "q": "Aqlli uy Internetisiz ishlaydi?",
+          "a": "Asosiy stsenariylari hub orqali mahalliy ravishda ishlaydi, telefon orqali uydan tashqarida boshqarish Internetni talab qiladi. Sizning talab va imkoniyatlaringizga mos sxemani tanlayb beramiz."
+        },
+        {
+          "q": "Alisa va Google Assistent qo'llab-quvvatlanadi?",
+          "a": "Ha, Tuya qurilmalari Yandex Alisa va Google Home bilan integratsiyalashadi — rus tilida ovoz orqali boshqaring."
+        },
+        {
+          "q": "Aqlli uyni bosqichma-bosqich qura olamiz?",
+          "a": "Ha, bu Tuya ning afzalligi: yorug'lik va rozetka bilan boshlang, keyin parda, iqlim va qo'riqni qo'shing — hammasi bir ilovasida."
+        },
+        {
+          "q": "Ofis uchun mos?",
+          "a": "Ha: jadval bo'yicha aqlli yorug'lik, iqlim, sensorlarni nazorat qilish va elektr energiyasini tejash — bir xil qurilmalar ofislarda ham ishlaydi."
+        }
+      ]
     },
     "turnstile": {
       "title": "Turniketlar va o'tish punktlari",
@@ -825,6 +1197,28 @@
         "Identifikatsiya: kartalar, barmoq izlari, yuzni tanish",
         "Ish vaqti hisobi va 1C bilan integratsiya",
         "Turniketlarni ta'mirlash va texnik xizmat"
+      ],
+      "faq": [
+        {
+          "q": "Qaysi turnike'tni tanlash kerak?",
+          "a": "Tripod — ofislar va o'rta oqimli kirishlar uchun, shkafli va tezkor kirishlar — biznes-markazlar uchun, to'liq balandlikdagi — yuqori talablar bilan ob'ektlar uchun. Oqim va xona bo'yicha tanlab beramiz."
+        },
+        {
+          "q": "Turnike'tning o'tish quvvati qancha?",
+          "a": "Tripod minutiga 20-30 kishini o'tkazadi, tezkor kirishlar — 60 gacha. Ertalabki cho'qqisida kirishlik uchun turnikte'tlar sonini xodimlar soni bo'yicha hisoblaydi."
+        },
+        {
+          "q": "Yong'in bo'lsa nima bo'ladi?",
+          "a": "Yong'in signalizatsiyasining signali bo'ysa turnikte'tlar avtomatik blokdan chiqadi («antipanika» rejimi) — evakuatsiya yo'li ochiq bo'ladi. Bu meъyorlar talabi, albatta sozlashtiramiz."
+        },
+        {
+          "q": "Yuz tanishni o'tish orqali o'tish mumkinmi?",
+          "a": "Ha, ZKTeco va Hikvision yuz tan-olish terminallarini o'rnatamiz — kartalar va propusklar bez, ishchi vaqti hisobi bilan bog'lash."
+        },
+        {
+          "q": "Turniket o'rnatish bilan qancha turadi?",
+          "a": "Turni: tripod — budjet yechim, tezkor kiris — premium. Kirislik parametrlarini yuboring — KP hisoblab beramiz."
+        }
       ]
     },
     "locks": {
@@ -837,6 +1231,28 @@
         "Kirishni sozlash: kodlar, kartalar, barmoq izlari, ilova",
         "Avtonom va tarmoqli yechimlar, o'tishlar jurnali bilan",
         "Texnik xizmat va qayta sozlash"
+      ],
+      "faq": [
+        {
+          "q": "Elektromagnit qulf elektromexanik qulfdan qanday farq qiladi?",
+          "a": "Elektromagnit qulf magnit bilan eshikni tutadi va doimiy quvvat talab qiladi — ofislar va domofon bilan kirish eshiklari uchun standart. Elektromexanik qulf rigel bilan qulflanadi va quvvatsiz yopiq qoladi."
+        },
+        {
+          "q": "Qulfda yorug'lik o'chib ketsa nima bo'ladi?",
+          "a": "Elektromagnit qulf ochiladi (evakuatsiya uchun xavfsiz), elektromexanik qulf yopiq qoladi. Muhim eshiklar uchun biz UPS blokini o'rnatamiz — qulf tarmoqsiz soatlarca ishlaydi."
+        },
+        {
+          "q": "Kirish eshigiga smart qulf o'rnatish mumkinmi?",
+          "a": "Ha, smart qulflar kod, karta, barmoq izi yoki telefon orqali ochiladi, kirish jurnalini yuritadi va mehmonlar uchun vaqtli kodlarni tarqatadi. Eshiginiz uchun model tanlaymiz."
+        },
+        {
+          "q": "Qulflar domofon va SKUD bilan integrasiya qilinadimi?",
+          "a": "Ha, qulf domofonga ulanadi (kvartiradan yoki trubkadan ochish) va SKUD ga ulanadi — kirish jurnali va vaqt bo'yicha kirishga ruxsatlar bilan."
+        },
+        {
+          "q": "Qulf va o'rnatish qancha turadi?",
+          "a": "Oddiy elektromagnitli qulfdan biometrik smart-qulfgacha — byujetlar turlicha. Qaysi eshik va vazifa ekanligini ayting — narxni aytamiz."
+        }
       ]
     },
     "gates": {
@@ -849,6 +1265,28 @@
         "Pultlar, GSM-modul, telefondan ochish",
         "Domofon, SKUD va ANPR bilan integratsiya",
         "Avtomatikani ta'mirlash va texnik xizmat"
+      ],
+      "faq": [
+        {
+          "q": "Qaysi avtomatika otkatlı eshiklarga mos keladi?",
+          "a": "Привод tanlanadi og'irligi va polotanning uzunligiga qarab: yengil 500 kggacha, o'rtacha 1000 kggacha, sanoat — undan og'irroq. Overload himoyasi va fotoelemntlar bilan avtomatikani o'rnatamiz."
+        },
+        {
+          "q": "Eshiklari telefondan ochish mumkinmi?",
+          "a": "Ha: GSM-modul eshiklari qo'ng'iroq bilan ochadi (bepul) yoki mobil ilova orqali; oilangiz va xodimlaringizga kirish huquqini berishingiz mumkin, shuningdek, raqamlarni tanib olish bilan integratsiya qiling — o'z mashinalaringiz o'zlari kirib oladi."
+        },
+        {
+          "q": "Elektr ta'minoti to'xtasa nima qilish kerak?",
+          "a": "Barcha privdlarda kalit bilan qo'lda ochish imkonyatligi bor — eshiklari qo'lda ochiladi. Muhim kirishlar uchun zaxira quvvat ta'minoti o'rnatamiz."
+        },
+        {
+          "q": "Avtomatika bolalar va mashinalar uchun xavfsizmi?",
+          "a": "Ha: fotoelementlar to'siq paydo bo'lganda eshiklari to'xtatadi va ochadi, privod sezgirligini normalar bo'yicha sozlash mumkin."
+        },
+        {
+          "q": "O'rnatilgan bo'lmagan avtomatikani ta'mirlab berasizmi?",
+          "a": "Ha, aksariyat ishlab chiqaruvchilarning privdlarini diagnostika qilamiz va ta'mirlaydi, platalarni, fotoelemntlarni va pultlarni almashtiraymiz."
+        }
       ]
     },
     "telephony": {
@@ -861,6 +1299,28 @@
         "Ovozli menyu, qo'ng'iroq navbatlari, suhbatlarni yozish",
         "Filiallar va masofaviy xodimlarni birlashtirish",
         "Sozlash, o'qitish va qo'llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "IP-telefoniyaning oddiy telefoniyadан nima bilan yaxshiroq?",
+          "a": "Qo'ng'iroqlar va xizmat ko'rsatish arzonroq, ko'p kanallilik, suhbatlarni yozish, ovozli menyu, statistika — va hammasi internet orqali ishlaydi: filiallar va masofaviy xodimlar bitta tarmaqda qisqa raqamlari bilan."
+        },
+        {
+          "q": "Bizning shahar raqamimiz saqlanib qolarmikanligi?",
+          "a": "Ha, shahar raqamlari IP-ATS ga SIP orqali ulangan — mijozlar tanish raqamga qo'ng'iroq qilishda davom etadilar."
+        },
+        {
+          "q": "Nechta liniya bo'lishi mumkin?",
+          "a": "Ko'p kanalli raqam bir vaqtda o'nlab qo'ng'iroqni qabul qiladi — navbat, menejerlar bo'ylab taqsimlash va mobil telefonlarga qayta yo'naltirish sizning stsenariyingizga sozlanadi."
+        },
+        {
+          "q": "Suhbatlarni yozish mumkinmi?",
+          "a": "Ha, barcha yoki tanlangan suhbatlarni yozamiz arxivda saqlash bilan — sifatni nazorat qilish va munozaralar uchun qulay."
+        },
+        {
+          "q": "Ofis uchun IP-telefoniya qancha turadi?",
+          "a": "Xodimlar soni va stsenariylar miqdoridan bog'liq. Nechta ish joyingiz borligini ayting — ATS, Fanvil telefonlar va o'rnatishni hisoblab beramiz."
+        }
       ]
     },
     "servers": {
@@ -873,6 +1333,32 @@
         "Stoykaga montaj, RAID sozlash, OT va gipervizor o'rnatish",
         "Ma'lumotlar va servislarni yangi uskunaga ko'chirish",
         "Vendor kafolati va servis shartnomalari"
+      ],
+      "faq": [
+        {
+          "q": "1C uchun qanday server kerak?",
+          "a": "Foydalanuvchilar soni va bazalarning hajmiga bog'liq: 20 foydalanuvchigacha boshlang'ich darajadagi bitta server yetarli, katta bazalar uchun tez NVMe-disklar va xotira zapasi bilan konfiguratsiyani yig'amiz. Sizning raqamlaringizga qarab tanlaymiz."
+        },
+        {
+          "q": "Qanday brendlardan tovar yetkazilyaptisiz?",
+          "a": "Supermicro, Lenovo ThinkSystem va H3C UniServer (biz H3C hamkori), ma'lumotlar saqlanish tizimlari — so'rov bo'yicha va boshqa vendorlar. Hammasi yangi, rasmiy kafolat bilan."
+        },
+        {
+          "q": "Serverni yetkazishni qancha vaqt kutish kerak?",
+          "a": "Serverlar vendor omborida konfiguratsiya bo'yicha tayyorlanadi — aniq muddati komponentlarga va KPda tasdiqlashga bog'liq. Sof konfiguratsiyalar tezroq keladi."
+        },
+        {
+          "q": "O'rnatish va sozlashda yordam berasizmi?",
+          "a": "Ha: stellajga o'rnatish, RAID, operatsion tizim va gipervizor o'rnatish, eski serverdan ma'lumotlarni ko'chirish — ishlashga tayyor sistemani topshiramiz."
+        },
+        {
+          "q": "Qanday qulayroq — o'z serveri yoki bulut?",
+          "a": "Doimiy yuklanish paytida o'z serveri 1,5–3 yil ichida o'zini odam beraddi va ma'lumotlaringiz sizda qoladi. Ikkala variantni sizning vazifangizga sholod hisoblash uchun hisoblaymiz."
+        },
+        {
+          "q": "Kafolat berasizmi?",
+          "a": "Asboblariga vendor kafolatiga qo'shimcha o'z xizmatlar kontraktlarimiz — maslahatlashdan to'liq xizmatga tekshiruv bilan."
+        }
       ]
     }
   },
