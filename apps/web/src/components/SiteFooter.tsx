@@ -114,6 +114,7 @@ export function SiteFooter() {
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
               <li><Link href="/blog" className="hover:text-brand-700">{({ ru: "Блог", uz: "Blog", en: "Blog", tr: "Blog", zh: "博客" } as Record<string, string>)[locale] ?? "Блог"}</Link></li>
               <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
+              <li><Link href="/partners/h3c" className="hover:text-brand-700">{({ ru: "Партнёр H3C", uz: "H3C hamkori", en: "H3C partner", tr: "H3C ortağı", zh: "H3C 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр H3C"}</Link></li>
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
               <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>

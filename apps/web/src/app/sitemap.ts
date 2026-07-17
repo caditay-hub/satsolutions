@@ -42,7 +42,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         "/catalog",
         "/international",
         "/returns",
-        "/delivery"
+        "/delivery",
+        "/partners/h3c"
     ].map((route) => ({
         url: `${siteUrl}${route}`,
         lastModified: GENERATED,
