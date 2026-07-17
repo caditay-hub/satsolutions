@@ -74,6 +74,38 @@ const ru: Record<string, ServiceContent> = {
       "Используем оборудование Ubiquiti, MikroTik, TP-Link и других проверенных брендов, подбираем решение под площадь и число пользователей. Настраиваем Wi-Fi под ключ в Ташкенте и по всему Узбекистану — с гарантией и поддержкой.",
     ],
   },
+  gates: {
+    heading: "Установка и автоматизация ворот в Ташкенте",
+    paragraphs: [
+      "Автоматические ворота — это удобство и безопасность въезда: створки открываются с пульта, по телефону или автоматически при распознавании номера автомобиля. SAT Solutions устанавливает и автоматизирует откатные, распашные, секционные и роллетные ворота для частных домов, предприятий, складов и жилых комплексов.",
+      "Мы подбираем и монтируем приводы под вес и тип ворот, устанавливаем фотоэлементы безопасности, сигнальные лампы, пульты и кнопки, при необходимости подключаем распознавание автономеров (ANPR) и интеграцию со СКУД. Автоматику ставим как на новые, так и на уже установленные ворота.",
+      "Используем надёжные приводы проверенных производителей, настраиваем плавное открытие и защиту от защемления. Выполняем работы под ключ в Ташкенте и по всему Узбекистану — с гарантией и сервисным обслуживанием.",
+    ],
+  },
+  barrier: {
+    heading: "Установка автоматических шлагбаумов в Ташкенте",
+    paragraphs: [
+      "Шлагбаум ограничивает и упорядочивает въезд на территорию: стрела поднимается с пульта, по карте, по телефону или автоматически при распознавании автономера. SAT Solutions поставляет и устанавливает автоматические шлагбаумы для парковок, дворов, предприятий, бизнес-центров и жилых комплексов.",
+      "Мы подбираем шлагбаум под ширину проезда и интенсивность движения, монтируем тумбу и стрелу, устанавливаем фотоэлементы и петли безопасности, подключаем пульты, брелоки и распознавание номеров (ANPR) с белым списком. Шлагбаум интегрируется с системой парковки и СКУД.",
+      "Ставим оборудование, рассчитанное на интенсивную работу, настраиваем логику проезда и защиту от опускания на автомобиль. Монтируем под ключ в Ташкенте и по всему Узбекистану — с гарантией и обслуживанием.",
+    ],
+  },
+  smarthome: {
+    heading: "Установка систем умного дома в Ташкенте",
+    paragraphs: [
+      "Умный дом объединяет освещение, климат, шторы, видеонаблюдение, охрану и бытовые сценарии в одном приложении на смартфоне. SAT Solutions проектирует и устанавливает системы умного дома для квартир, коттеджей, офисов и апартаментов — от отдельных сценариев до полной автоматизации объекта.",
+      "Мы настраиваем управление светом и климатом, автоматические сценарии (утро, отъезд, ночь), датчики движения, протечки и дыма, умные розетки и выключатели, а также интеграцию с видеонаблюдением и охранной сигнализацией. Управлять домом можно голосом, со смартфона или по расписанию.",
+      "Подбираем оборудование под задачи и бюджет, работаем с проводными и беспроводными решениями. Устанавливаем умный дом под ключ в Ташкенте и по всему Узбекистану — с настройкой, обучением и гарантией.",
+    ],
+  },
+  attendance: {
+    heading: "Системы учёта рабочего времени в Ташкенте",
+    paragraphs: [
+      "Система учёта рабочего времени автоматически фиксирует приход и уход сотрудников по карте, отпечатку пальца или распознаванию лица и формирует точный табель без ручных подсчётов. SAT Solutions внедряет учёт рабочего времени для офисов, производств, магазинов и предприятий любого размера.",
+      "Мы устанавливаем биометрические терминалы и считыватели, настраиваем графики, смены, опоздания и переработки, а данные автоматически выгружаются в табель и 1С. Учёт времени объединяется со СКУД: один терминал и контролирует доступ, и считает отработанные часы.",
+      "Подбираем оборудование под численность персонала и задачи, настраиваем отчёты под вашу учётную политику. Внедряем под ключ в Ташкенте и по всему Узбекистану — с обучением, гарантией и поддержкой.",
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -139,6 +171,38 @@ const uz: Record<string, ServiceContent> = {
       "Ishonchli Wi-Fi — zamonaviy ofis, ombor, mehmonxona yoki ishlab chiqarish ishining majburiy sharti. SAT Solutions uzluksiz rouming bilan simsiz tarmoqlarni loyihalaydi va sozlaydi, shunda qurilmalar kirish nuqtalari o'rtasida uzilishlarsiz o'tadi, qamrov esa butun obyekt maydonida barqaror bo'ladi.",
       "Biz radio tekshiruvni bajaramiz, kirish nuqtalari soni va joylashuvini hisoblaymiz, uskunani montaj qilamiz va kontroller, mehmon tarmoqlari, tezlik cheklovi va avtorizatsiyani sozlaymiz. Korporativ Wi-Fi mehmon tarmog'idan ajratiladi, yuklama esa barqaror ish uchun nuqtalar o'rtasida taqsimlanadi.",
       "Ubiquiti, MikroTik, TP-Link va boshqa ishonchli brendlar uskunasidan foydalanamiz, yechimni maydon va foydalanuvchilar soniga qarab tanlaymiz. Wi-Fi ni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida sozlaymiz — kafolat va qo'llab-quvvatlash bilan.",
+    ],
+  },
+  gates: {
+    heading: "Toshkentda darvozalarni o'rnatish va avtomatlashtirish",
+    paragraphs: [
+      "Avtomatik darvozalar — kirishning qulayligi va xavfsizligi: tavaqalar pultdan, telefon orqali yoki avtomobil raqamini aniqlashda avtomatik ochiladi. SAT Solutions xususiy uylar, korxonalar, omborlar va turar-joy majmualari uchun suriladigan, ochiladigan, seksiyali va rolikli darvozalarni o'rnatadi va avtomatlashtiradi.",
+      "Biz privodlarni darvozaning og'irligi va turiga qarab tanlaymiz va montaj qilamiz, xavfsizlik fotoelementlari, signal chiroqlari, pultlar va tugmalarni o'rnatamiz, zarur bo'lganda avtoraqamni aniqlash (ANPR) va SKUD bilan integratsiyani ulaymiz. Avtomatikani ham yangi, ham allaqachon o'rnatilgan darvozalarga qo'yamiz.",
+      "Ishonchli ishlab chiqaruvchilarning privodlaridan foydalanamiz, silliq ochilish va qisilishdan himoyani sozlaymiz. Ishlarni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida bajaramiz — kafolat va servis xizmati bilan.",
+    ],
+  },
+  barrier: {
+    heading: "Toshkentda avtomatik shlagbaumlarni o'rnatish",
+    paragraphs: [
+      "Shlagbaum hududga kirishni cheklaydi va tartibga soladi: strela pultdan, karta orqali, telefon orqali yoki avtoraqamni aniqlashda avtomatik ko'tariladi. SAT Solutions avtoturargohlar, hovlilar, korxonalar, biznes-markazlar va turar-joy majmualari uchun avtomatik shlagbaumlarni yetkazib beradi va o'rnatadi.",
+      "Biz shlagbaumni o'tish kengligi va harakat intensivligiga qarab tanlaymiz, tumba va strelani montaj qilamiz, fotoelementlar va xavfsizlik halqalarini o'rnatamiz, pultlar, breloklar va oq ro'yxatli raqamni aniqlash (ANPR) ni ulaymiz. Shlagbaum avtoturargoh tizimi va SKUD bilan integratsiyalashadi.",
+      "Intensiv ishlash uchun mo'ljallangan uskunani o'rnatamiz, o'tish mantiqini va avtomobilga tushishdan himoyani sozlaymiz. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida montaj qilamiz — kafolat va xizmat bilan.",
+    ],
+  },
+  smarthome: {
+    heading: "Toshkentda aqlli uy tizimlarini o'rnatish",
+    paragraphs: [
+      "Aqlli uy yoritish, iqlim, pardalar, videokuzatuv, qo'riqlash va maishiy ssenariylarni smartfondagi bitta ilovada birlashtiradi. SAT Solutions kvartiralar, kottejlar, ofislar va apartamentlar uchun aqlli uy tizimlarini loyihalaydi va o'rnatadi — alohida ssenariylardan tortib obyektni to'liq avtomatlashtirishgacha.",
+      "Biz yorug'lik va iqlimni boshqarishni, avtomatik ssenariylarni (ertalab, ketish, tun), harakat, suv oqishi va tutun datchiklarini, aqlli rozetkalar va o'chirgichlarni, shuningdek videokuzatuv va qo'riqlash signalizatsiyasi bilan integratsiyani sozlaymiz. Uyni ovoz bilan, smartfondan yoki jadval bo'yicha boshqarish mumkin.",
+      "Uskunani vazifa va byudjetga qarab tanlaymiz, simli va simsiz yechimlar bilan ishlaymiz. Aqlli uyni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida o'rnatamiz — sozlash, o'qitish va kafolat bilan.",
+    ],
+  },
+  attendance: {
+    heading: "Toshkentda ish vaqtini hisobga olish tizimlari",
+    paragraphs: [
+      "Ish vaqtini hisobga olish tizimi xodimlarning kelishi va ketishini karta, barmoq izi yoki yuzni aniqlash orqali avtomatik qayd etadi va qo'lda hisoblashsiz aniq tabel shakllantiradi. SAT Solutions ofislar, ishlab chiqarish, do'konlar va har qanday o'lchamdagi korxonalar uchun ish vaqtini hisobga olishni joriy etadi.",
+      "Biz biometrik terminallar va o'quvchilarni o'rnatamiz, jadvallar, smenalar, kechikishlar va qo'shimcha ishlarni sozlaymiz, ma'lumotlar esa tabel va 1C ga avtomatik yuklanadi. Vaqtni hisobga olish SKUD bilan birlashadi: bitta terminal ham kirishni nazorat qiladi, ham ishlangan soatlarni hisoblaydi.",
+      "Uskunani xodimlar soni va vazifalarga qarab tanlaymiz, hisobotlarni sizning hisob siyosatingizga moslab sozlaymiz. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — o'qitish, kafolat va qo'llab-quvvatlash bilan.",
     ],
   },
 };
