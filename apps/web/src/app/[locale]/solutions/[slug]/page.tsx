@@ -17,6 +17,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { ServicePackages } from "@/components/ServicePackages";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
+import { getServiceSeo } from "@/lib/serviceSeo";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -30,11 +31,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const ts = await getTranslations({ locale, namespace: "services" });
     const title = ts(`${svc.key}.title`);
     const intro = ts(`${svc.key}.intro`);
+    // Гео-коммерческий SEO-оверлей (город + интент) — приоритет над генерик-title/intro
+    const seo = getServiceSeo(locale, svc.key);
+    const metaTitle = seo ? `${seo.title}` : `${title} — SAT Solutions`;
+    const metaDesc = seo?.desc ?? intro;
     return {
-      title: { absolute: `${title} — SAT Solutions` },
-      description: intro,
+      title: { absolute: metaTitle },
+      description: metaDesc,
       alternates: hreflangAlternates(`/solutions/${svc.key}`, locale),
-      openGraph: { title, description: intro, locale: ogLocale(locale), images: [{ url: `${IMG_BASE}/${svc.key}.jpg` }] }
+      openGraph: { title: seo?.h1 ?? title, description: metaDesc, locale: ogLocale(locale), images: [{ url: `${IMG_BASE}/${svc.key}.jpg` }] }
     };
   }
   try {
@@ -68,6 +73,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=10`);
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
+  // H1 — гео-коммерческий из SEO-оверлея (fallback на короткий title, который
+  // остаётся для хлебных крошек, CTA, alt и JSON-LD)
+  const h1 = getServiceSeo(locale, svc.key)?.h1 ?? title;
   const works = ts.raw(`${svc.key}.works`) as string[];
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
@@ -157,7 +165,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <p className="text-xs font-black uppercase tracking-widest text-brand-600">
               {svc.group === "industry" ? t("industryTag") : t("serviceTag")}
             </p>
-            <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{title}</h1>
+            <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{h1}</h1>
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
