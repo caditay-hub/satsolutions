@@ -187,9 +187,9 @@ export function SiteFooter() {
               )}
             </div>
             {/* Google review CTA — рычаг локального SEO: отзывы в GBP дают ⭐ в Картах/local pack.
-               CID-ссылка открывает карточку с кнопкой «Оставить отзыв». */}
+               g.page/r/…/review открывает сразу диалог написания отзыва (из GBP-дашборда). */}
             <a
-              href="https://maps.google.com/?cid=15605896518310441449"
+              href="https://g.page/r/CekxZiczSJPYEBM/review"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-3 flex items-center justify-center gap-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs font-bold text-amber-800 transition-colors hover:bg-amber-100"
