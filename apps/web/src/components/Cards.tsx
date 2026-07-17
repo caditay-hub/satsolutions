@@ -28,6 +28,7 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
             loading="lazy"
+            unoptimized
             className="object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-110"
           />
         ) : (

@@ -27,7 +27,7 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
     <div className="flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-400 sm:flex-row sm:items-center">
       <Link href={`/products/${p.slug}`} className="relative block h-24 w-24 shrink-0 self-center overflow-hidden rounded-lg bg-white sm:self-start">
         {img ? (
-          <Image alt={displayName} src={img} fill sizes="96px" loading="lazy" className="object-contain p-1" />
+          <Image alt={displayName} src={img} fill sizes="96px" loading="lazy" unoptimized className="object-contain p-1" />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-brand-50">
             <span className="text-3xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
