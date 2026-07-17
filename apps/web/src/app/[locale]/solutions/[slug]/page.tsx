@@ -20,6 +20,9 @@ import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
 import { ARTICLES } from "@/lib/articlesData";
+import { getReviews } from "@/lib/api";
+import { ReviewForm } from "@/components/ReviewForm";
+import { type Review } from "@/components/ReviewsSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -82,6 +85,15 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const content = getServiceContent(locale, svc.key);
   // Обратная перелинковка: инфо-статьи блога, связанные с этой услугой (только с переводом на локаль)
   const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 3);
+  // Отзывы, привязанные к этой услуге (одобренные); avg/count — компактный рейтинг под H1
+  const reviews = await getReviews(svc.key);
+  const reviewItems: Review[] = reviews.items.map((r) => ({
+    name: r.authorName?.trim() || "Клиент",
+    rating: r.rating,
+    date: new Date(r.createdAt).toLocaleDateString(locale === "ru" ? "ru-RU" : locale, { month: "long", year: "numeric" }),
+    text: r.text?.trim() || "",
+  }));
+  const reviewsLabel = locale === "uz" ? "Mijozlar sharhlari" : locale === "en" ? "Customer reviews" : "Отзывы клиентов";
   const works = ts.raw(`${svc.key}.works`) as string[];
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
@@ -172,6 +184,17 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               {svc.group === "industry" ? t("industryTag") : t("serviceTag")}
             </p>
             <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{h1}</h1>
+            {reviews.count > 0 && (
+              <div className="mt-2 flex items-center gap-2 text-sm font-bold text-slate-600">
+                <span className="inline-flex text-amber-400" aria-hidden>
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                  ))}
+                </span>
+                <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
+                <span className="text-slate-400">· {reviews.count}</span>
+              </div>
+            )}
             <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
@@ -296,6 +319,38 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             </div>
           </div>
         )}
+
+        {/* Оценка услуги + отзывы (привязка serviceKey=svc.key) */}
+        <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:items-start">
+          <div className="max-w-xl">
+            <ReviewForm locale={locale} serviceKey={svc.key} />
+          </div>
+          {reviewItems.length > 0 && (
+            <div className="rounded-2xl border border-slate-100 bg-slate-50/60 p-5">
+              <div className="mb-3 flex items-center gap-2 text-sm font-black text-slate-900">
+                {reviewsLabel}
+                <span className="text-amber-400">★</span>
+                <span className="tabular-nums text-slate-600">{reviews.avg.toFixed(1)}</span>
+              </div>
+              <div className="space-y-3">
+                {reviewItems.slice(0, 4).map((r, i) => (
+                  <div key={i} className="rounded-xl border border-slate-200 bg-white p-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-sm font-black text-slate-900">{r.name}</span>
+                      <span className="inline-flex text-amber-400">
+                        {[1, 2, 3, 4, 5].map((s) => (
+                          <svg key={s} viewBox="0 0 20 20" className={`h-3.5 w-3.5 ${s <= r.rating ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                        ))}
+                      </span>
+                    </div>
+                    {r.text && <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{r.text}</p>}
+                    <div className="mt-1.5 text-xs font-semibold text-slate-400">{r.date}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}

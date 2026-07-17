@@ -379,3 +379,13 @@ export async function getSearchSuggest(q: string): Promise<SuggestDto> {
   if (!res.ok) return { products: [], types: [], brands: [], cases: [] };
   return res.json();
 }
+
+export type ReviewDto = { id: string; rating: number; authorName: string | null; text: string | null; serviceKey: string | null; createdAt: string };
+export async function getReviews(serviceKey?: string): Promise<{ avg: number; count: number; items: ReviewDto[] }> {
+  const qs = serviceKey ? `?serviceKey=${encodeURIComponent(serviceKey)}` : "";
+  try {
+    return await apiFetch<{ avg: number; count: number; items: ReviewDto[] }>(`/reviews${qs}`, { next: { revalidate: 120 } });
+  } catch {
+    return { avg: 0, count: 0, items: [] };
+  }
+}
