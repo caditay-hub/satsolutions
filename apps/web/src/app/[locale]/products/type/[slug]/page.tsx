@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
@@ -9,6 +10,8 @@ import { catalogRobots } from "@/lib/catalogRobots";
 import { routing } from "@/i18n/routing";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
+import { serviceForCategory } from "@/lib/servicesData";
+import { getServiceSeo } from "@/lib/serviceSeo";
 import { CatalogView } from "../../CatalogView";
 
 export const revalidate = 300;
@@ -60,9 +63,37 @@ export default async function ProductTypePage({ params, searchParams }: { params
   // sort, perPage, view, page) — иначе фильтр-фасеты «не работают»: URL меняется, а
   // сервер игнорирует фильтры и отдаёт нефильтрованный список.
   // type и __clean задаём принудительно: type — из slug, __clean=1 глушит 301 обратно сюда.
-  return CatalogView({
+  const view = await CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, type: name, __clean: "1" }),
     pathType: name, // тип закодирован в ПУТИ — отдаём фильтру, чтобы «Тип» был отмечен и работал
   } as any);
+
+  // Перелинковка категория→услуга: живая внутренняя ссылка с проиндексированной
+  // type-страницы на профильную (часто ещё не в индексе) страницу услуги. Анкор —
+  // keyword-rich H1 услуги («Установка видеонаблюдения в Ташкенте») там, где есть
+  // SEO-оверлей (ru/uz/en), иначе локализованное название услуги (tr/zh).
+  const svc = serviceForCategory(name);
+  if (!svc) return view;
+  const t = await getTranslations({ locale });
+  const anchor = getServiceSeo(locale, svc.key)?.h1 ?? t(`services.${svc.key}.title`);
+
+  return (
+    <>
+      {view}
+      <div className="container-page pb-10">
+        <Link
+          href={`/solutions/${svc.key}`}
+          className="flex items-center gap-3 rounded-xl border border-brand-200 bg-brand-50/50 p-4 transition-colors hover:bg-brand-50"
+        >
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
+          <span className="flex-1">
+            <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">{t("product.turnkey")}</span>
+            <span className="block text-sm font-semibold text-slate-900">{anchor} — {t("product.designInstall")}</span>
+          </span>
+          <span className="shrink-0 font-bold text-brand-600">→</span>
+        </Link>
+      </div>
+    </>
+  );
 }
