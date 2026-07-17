@@ -106,6 +106,78 @@ const ru: Record<string, ServiceContent> = {
       "Подбираем оборудование под численность персонала и задачи, настраиваем отчёты под вашу учётную политику. Внедряем под ключ в Ташкенте и по всему Узбекистану — с обучением, гарантией и поддержкой.",
     ],
   },
+  analytics: {
+    heading: "Видеоаналитика и распознавание лиц в Ташкенте",
+    paragraphs: [
+      "Видеоаналитика превращает обычные камеры в интеллектуальную систему: распознавание лиц и автономеров, подсчёт посетителей, контроль периметра и зон, детекция оставленных предметов, скоплений и нестандартного поведения в реальном времени. SAT Solutions внедряет видеоаналитику для ритейла, бизнес-центров, производств и охраняемых объектов.",
+      "Часть алгоритмов работает прямо на камерах, часть — на сервере с ИИ-обработкой. Мы подбираем камеры и серверы под нужные сценарии, настраиваем распознавание лиц с базой доступа, ANPR со шлагбаумами, тепловые карты и подсчёт людей, а тревоги выводим оператору и в СКУД.",
+      "Аналитику можно добавить и к уже установленным камерам через серверное ПО. Внедряем под ключ в Ташкенте и по всему Узбекистану — с обучением операторов, гарантией и поддержкой.",
+    ],
+  },
+  anpr: {
+    heading: "Распознавание автономеров (ANPR) в Ташкенте",
+    paragraphs: [
+      "Системы ANPR автоматически распознают государственные номера автомобилей на въезде и выезде: шлагбаум или ворота открываются «своим» из белого списка, а каждый проезд фиксируется в журнале. SAT Solutions устанавливает распознавание номеров для парковок, жилых комплексов, предприятий и охраняемых территорий.",
+      "Мы подбираем и монтируем ANPR-камеры с учётом освещения и геометрии въезда, настраиваем белые и чёрные списки, логику проезда и интеграцию со шлагбаумами, воротами и СКУД. Для платных парковок настраиваем учёт въезда/выезда и тарификацию.",
+      "Современные камеры распознают номера с высокой точностью днём и ночью при корректной установке. Внедряем под ключ в Ташкенте и по всему Узбекистану — с гарантией и обслуживанием.",
+    ],
+  },
+  server: {
+    heading: "Проектирование и монтаж серверных и ЦОД в Ташкенте",
+    paragraphs: [
+      "Серверная комната и центр обработки данных (ЦОД) — сердце IT-инфраструктуры компании. SAT Solutions проектирует и строит серверные под ключ: от небольшой комнаты на пару стоек до отказоустойчивого ЦОД с резервированием питания и охлаждения для предприятий и дата-центров.",
+      "В состав работ входят монтаж серверных шкафов и стоек, структурированная кабельная система, источники бесперебойного питания (ИБП) и дизель-генераторы, прецизионное кондиционирование, системы газового пожаротушения, контроль доступа и мониторинг микроклимата.",
+      "Проектируем с учётом требований по надёжности (Tier), закладываем запас под рост и резервирование. Строим серверные и ЦОД под ключ в Ташкенте и по всему Узбекистану — с документацией, гарантией и сервисным сопровождением.",
+    ],
+  },
+  fiber: {
+    heading: "Прокладка и сварка оптоволокна (ВОЛС) в Ташкенте",
+    paragraphs: [
+      "Оптоволоконные линии связи (ВОЛС) обеспечивают быструю и стабильную передачу данных на большие расстояния — между зданиями, этажами и удалёнными объектами. SAT Solutions выполняет проектирование, прокладку и сварку оптоволокна для предприятий, кампусов, дата-центров и операторов связи.",
+      "Мы прокладываем оптический кабель в грунте, канализации, по воздуху и внутри зданий, выполняем сварку волокон, монтаж муфт и оптических кроссов, а качество каждой линии проверяем рефлектометром (OTDR) с протоколом измерений.",
+      "Используем качественный кабель и профессиональное сварочное оборудование, обеспечиваем низкие потери на линии. Работаем под ключ в Ташкенте и по всему Узбекистану — с гарантией и сервисом.",
+    ],
+  },
+  mikrotik: {
+    heading: "Настройка роутеров MikroTik в Ташкенте",
+    paragraphs: [
+      "MikroTik — гибкие и надёжные маршрутизаторы для офиса, провайдера и предприятия. SAT Solutions выполняет профессиональную настройку MikroTik: маршрутизация, VPN, файрвол, ограничение скорости, Hotspot с авторизацией и балансировка нескольких интернет-каналов.",
+      "Мы настраиваем безопасный удалённый доступ по VPN, разделение сетей и VLAN, приоритизацию трафика (QoS), резервирование каналов и защиту от атак. Проводим аудит существующей сети и приводим конфигурацию в порядок.",
+      "Берём сеть на аутсорсинг и удалённое сопровождение с гарантией стабильной работы. Настраиваем MikroTik с выездом в Ташкенте и по всему Узбекистану.",
+    ],
+  },
+  telephony: {
+    heading: "IP-телефония и офисная АТС в Ташкенте",
+    paragraphs: [
+      "IP-телефония заменяет устаревшие аналоговые линии современной связью через интернет: многоканальные номера, внутренние добавочные, голосовое меню (IVR) и запись разговоров. SAT Solutions внедряет офисную АТС для компаний любого размера — от нескольких сотрудников до колл-центров.",
+      "Мы разворачиваем облачную или локальную АТС (в том числе Asterisk), настраиваем сценарии приёма звонков, переадресацию, очереди, интеграцию с CRM и статистику по звонкам. Сотрудники могут звонить с телефона, компьютера и мобильного приложения.",
+      "Подбираем решение и IP-телефоны под задачи и бюджет, объединяем офисы в единую сеть связи. Внедряем под ключ в Ташкенте и по всему Узбекистану — с настройкой, обучением и поддержкой.",
+    ],
+  },
+  virtualization: {
+    heading: "Серверы H3C и виртуализация в Ташкенте",
+    paragraphs: [
+      "Виртуализация позволяет запускать десятки виртуальных серверов на нескольких физических машинах, экономя ресурсы и повышая отказоустойчивость. SAT Solutions — партнёр H3C — поставляет серверы и внедряет виртуализацию для предприятий, банков и дата-центров.",
+      "Мы подбираем и поставляем серверы H3C, проектируем кластеры с резервированием, настраиваем гипервизор, системы хранения данных (СХД), резервное копирование и миграцию нагрузок без простоя. Консолидируем разрозненные серверы в управляемую отказоустойчивую платформу.",
+      "Внедряем виртуализацию под ключ в Ташкенте и по всему Узбекистану — с проектированием, пусконаладкой, обучением и технической поддержкой.",
+    ],
+  },
+  locks: {
+    heading: "Электронные и умные замки в Ташкенте",
+    paragraphs: [
+      "Электронный замок открывается картой, кодом, отпечатком пальца, лицом или со смартфона — без обычного ключа. SAT Solutions устанавливает электронные и умные замки для квартир, домов, офисов, гостиниц и апартаментов, интегрируя их со СКУД и системой безопасности.",
+      "Мы подбираем врезные и накладные замки, гостиничные замки с картами, биометрические и Wi-Fi-модели с управлением из приложения. Настраиваем временные коды для гостей, журнал открытий и удалённую выдачу доступа.",
+      "Помогаем выбрать замок под тип двери и сценарий использования, устанавливаем под ключ в Ташкенте и по всему Узбекистану — с гарантией и обслуживанием.",
+    ],
+  },
+  videowall: {
+    heading: "Видеостены под ключ в Ташкенте",
+    paragraphs: [
+      "Видеостена объединяет несколько дисплеев в единый бесшовный экран для диспетчерских, ситуационных центров, переговорных и рекламных пространств. SAT Solutions проектирует и монтирует видеостены под задачи мониторинга, презентаций и цифровой рекламы.",
+      "Мы подбираем панели с узким швом или LED-модули, рассчитываем конфигурацию под помещение, монтируем крепёж, настраиваем контроллер и вывод источников — камер видеонаблюдения, компьютеров, ТВ и медиаплееров на любую раскладку экрана.",
+      "Обеспечиваем яркое изображение и надёжную работу в режиме 24/7. Устанавливаем видеостены под ключ в Ташкенте и по всему Узбекистану — с гарантией и сервисом.",
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -203,6 +275,78 @@ const uz: Record<string, ServiceContent> = {
       "Ish vaqtini hisobga olish tizimi xodimlarning kelishi va ketishini karta, barmoq izi yoki yuzni aniqlash orqali avtomatik qayd etadi va qo'lda hisoblashsiz aniq tabel shakllantiradi. SAT Solutions ofislar, ishlab chiqarish, do'konlar va har qanday o'lchamdagi korxonalar uchun ish vaqtini hisobga olishni joriy etadi.",
       "Biz biometrik terminallar va o'quvchilarni o'rnatamiz, jadvallar, smenalar, kechikishlar va qo'shimcha ishlarni sozlaymiz, ma'lumotlar esa tabel va 1C ga avtomatik yuklanadi. Vaqtni hisobga olish SKUD bilan birlashadi: bitta terminal ham kirishni nazorat qiladi, ham ishlangan soatlarni hisoblaydi.",
       "Uskunani xodimlar soni va vazifalarga qarab tanlaymiz, hisobotlarni sizning hisob siyosatingizga moslab sozlaymiz. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — o'qitish, kafolat va qo'llab-quvvatlash bilan.",
+    ],
+  },
+  analytics: {
+    heading: "Toshkentda videotahlil va yuzni aniqlash",
+    paragraphs: [
+      "Videotahlil oddiy kameralarni intellektual tizimga aylantiradi: yuz va avtoraqamlarni aniqlash, tashrifchilarni sanash, perimetr va zonalarni nazorat qilish, tashlab ketilgan buyumlar, to'planishlar va nostandart xatti-harakatlarni real vaqtda aniqlash. SAT Solutions riteyl, biznes-markazlar, ishlab chiqarish va qo'riqlanadigan obyektlar uchun videotahlilni joriy etadi.",
+      "Algoritmlarning bir qismi to'g'ridan-to'g'ri kameralarda, bir qismi esa AI bilan ishlaydigan serverda ishlaydi. Biz kameralar va serverlarni kerakli ssenariylarga qarab tanlaymiz, kirish bazasi bilan yuzni aniqlash, shlagbaumlar bilan ANPR, issiqlik xaritalari va odamlarni sanashni sozlaymiz, trevogalarni operatorga va SKUD ga chiqaramiz.",
+      "Tahlilni allaqachon o'rnatilgan kameralarga ham server dasturi orqali qo'shish mumkin. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — operatorlarni o'qitish, kafolat va qo'llab-quvvatlash bilan.",
+    ],
+  },
+  anpr: {
+    heading: "Toshkentda avtoraqamlarni aniqlash (ANPR)",
+    paragraphs: [
+      "ANPR tizimlari kirish va chiqishda avtomobillarning davlat raqamlarini avtomatik aniqlaydi: shlagbaum yoki darvoza oq ro'yxatdagi «o'zinikilar» uchun ochiladi, har bir o'tish esa jurnalda qayd etiladi. SAT Solutions avtoturargohlar, turar-joy majmualari, korxonalar va qo'riqlanadigan hududlar uchun raqamni aniqlashni o'rnatadi.",
+      "Biz ANPR-kameralarni yoritish va kirish geometriyasini hisobga olib tanlaymiz va montaj qilamiz, oq va qora ro'yxatlarni, o'tish mantiqini hamda shlagbaumlar, darvozalar va SKUD bilan integratsiyani sozlaymiz. Pullik avtoturargohlar uchun kirish/chiqish hisobi va tariflashni sozlaymiz.",
+      "Zamonaviy kameralar to'g'ri o'rnatishda kunduzi va kechasi raqamlarni yuqori aniqlik bilan taniydi. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — kafolat va xizmat bilan.",
+    ],
+  },
+  server: {
+    heading: "Toshkentda server xonalari va ma'lumot markazlarini loyihalash va montaji",
+    paragraphs: [
+      "Server xonasi va ma'lumotlarni qayta ishlash markazi (ЦОД) — kompaniya IT-infratuzilmasining yuragi. SAT Solutions server xonalarini kalit topshirish asosida loyihalaydi va quradi: bir necha stoykali kichik xonadan tortib korxonalar va data-markazlar uchun quvvat va sovitish zaxirasi bilan xatolarga chidamli ЦОД gacha.",
+      "Ishga server shkaflari va stoykalarini montaj qilish, strukturali kabel tizimi, uzluksiz quvvat manbalari (UPS) va dizel-generatorlar, aniq konditsionerlash, gazli yong'in o'chirish tizimlari, kirish nazorati va mikroiqlim monitoringi kiradi.",
+      "Ishonchlilik talablarini (Tier) hisobga olib loyihalaymiz, o'sish va zaxira uchun imkoniyat qoldiramiz. Server xonalari va ЦОД ni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida quramiz — hujjatlar, kafolat va servis bilan.",
+    ],
+  },
+  fiber: {
+    heading: "Toshkentda optik tolani yotqizish va payvandlash (VOLS)",
+    paragraphs: [
+      "Optik tolali aloqa liniyalari (VOLS) katta masofalarga — binolar, qavatlar va uzoq obyektlar o'rtasida — tez va barqaror ma'lumot uzatishni ta'minlaydi. SAT Solutions korxonalar, kampuslar, data-markazlar va aloqa operatorlari uchun optik tolani loyihalash, yotqizish va payvandlashni bajaradi.",
+      "Biz optik kabelni yerda, kanalizatsiyada, havo orqali va binolar ichida yotqizamiz, tolalarni payvandlaymiz, muftalar va optik krosslarni montaj qilamiz, har bir liniya sifatini reflektometr (OTDR) bilan o'lchov bayonnomasi bilan tekshiramiz.",
+      "Sifatli kabel va professional payvandlash uskunasidan foydalanamiz, liniyada past yo'qotishlarni ta'minlaymiz. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida ishlaymiz — kafolat va servis bilan.",
+    ],
+  },
+  mikrotik: {
+    heading: "Toshkentda MikroTik routerlarini sozlash",
+    paragraphs: [
+      "MikroTik — ofis, provayder va korxona uchun moslashuvchan va ishonchli marshrutizatorlar. SAT Solutions MikroTik ni professional sozlashni bajaradi: marshrutlash, VPN, firewall, tezlikni cheklash, avtorizatsiyali Hotspot va bir nechta internet kanallarini balanslash.",
+      "Biz VPN orqali xavfsiz masofaviy kirishni, tarmoqlar va VLAN ni ajratishni, trafik ustuvorligini (QoS), kanallarni zaxiralashni va hujumlardan himoyani sozlaymiz. Mavjud tarmoqni tekshiramiz va konfiguratsiyani tartibga solamiz.",
+      "Tarmoqni autsorsing va masofaviy qo'llab-quvvatlashga barqaror ish kafolati bilan olamiz. MikroTik ni Toshkentda va butun O'zbekiston bo'ylab chiqish bilan sozlaymiz.",
+    ],
+  },
+  telephony: {
+    heading: "Toshkentda IP-telefoniya va ofis ATS",
+    paragraphs: [
+      "IP-telefoniya eskirgan analog liniyalarni internet orqali zamonaviy aloqa bilan almashtiradi: ko'p kanalli raqamlar, ichki qo'shimchalar, ovozli menyu (IVR) va suhbatlarni yozib olish. SAT Solutions har qanday o'lchamdagi kompaniyalar uchun ofis ATS ni joriy etadi — bir necha xodimdan tortib kol-markazlargacha.",
+      "Biz bulutli yoki lokal ATS ni (jumladan Asterisk) o'rnatamiz, qo'ng'iroqlarni qabul qilish ssenariylarini, yo'naltirishni, navbatlarni, CRM bilan integratsiyani va qo'ng'iroqlar statistikasini sozlaymiz. Xodimlar telefon, kompyuter va mobil ilovadan qo'ng'iroq qilishlari mumkin.",
+      "Yechim va IP-telefonlarni vazifa hamda byudjetga qarab tanlaymiz, ofislarni yagona aloqa tarmog'iga birlashtiramiz. Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — sozlash, o'qitish va qo'llab-quvvatlash bilan.",
+    ],
+  },
+  virtualization: {
+    heading: "Toshkentda H3C serverlari va virtualizatsiya",
+    paragraphs: [
+      "Virtualizatsiya bir necha fizik mashinada o'nlab virtual serverlarni ishga tushirish imkonini beradi, resurslarni tejaydi va xatolarga chidamlilikni oshiradi. SAT Solutions — H3C hamkori — korxonalar, banklar va data-markazlar uchun serverlarni yetkazib beradi va virtualizatsiyani joriy etadi.",
+      "Biz H3C serverlarini tanlaymiz va yetkazamiz, zaxiralash bilan klasterlarni loyihalaymiz, gipervizor, ma'lumotlarni saqlash tizimlari (SXD), zaxira nusxa va yuklamalarni to'xtovsiz ko'chirishni sozlaymiz. Tarqoq serverlarni boshqariladigan, xatolarga chidamli platformaga birlashtiramiz.",
+      "Virtualizatsiyani Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida joriy etamiz — loyihalash, ishga tushirish, o'qitish va texnik qo'llab-quvvatlash bilan.",
+    ],
+  },
+  locks: {
+    heading: "Toshkentda elektron va aqlli qulflar",
+    paragraphs: [
+      "Elektron qulf karta, kod, barmoq izi, yuz yoki smartfon orqali ochiladi — oddiy kalitsiz. SAT Solutions kvartiralar, uylar, ofislar, mehmonxonalar va apartamentlar uchun elektron va aqlli qulflarni o'rnatadi, ularni SKUD va xavfsizlik tizimi bilan integratsiya qiladi.",
+      "Biz ichki va usti qulflar, kartali mehmonxona qulflari, biometrik va ilovadan boshqariladigan Wi-Fi modellarni tanlaymiz. Mehmonlar uchun vaqtinchalik kodlar, ochilishlar jurnali va masofaviy kirish berishni sozlaymiz.",
+      "Qulfni eshik turi va foydalanish ssenariysiga qarab tanlashga yordam beramiz, Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida o'rnatamiz — kafolat va xizmat bilan.",
+    ],
+  },
+  videowall: {
+    heading: "Toshkentda videostenalar kalit topshirish asosida",
+    paragraphs: [
+      "Videostena bir nechta displeyni dispecherlik, vaziyat markazlari, muzokaralar va reklama maydonlari uchun yagona uzluksiz ekranga birlashtiradi. SAT Solutions monitoring, taqdimotlar va raqamli reklama vazifalari uchun videostenalarni loyihalaydi va montaj qiladi.",
+      "Biz tor tikuvli panellar yoki LED-modullarni tanlaymiz, konfiguratsiyani xonaga moslab hisoblaymiz, mahkamlagichni montaj qilamiz, kontroller va manbalarni — videokuzatuv kameralari, kompyuterlar, TV va mediapleyerlarni istalgan ekran joylashuviga chiqarishni sozlaymiz.",
+      "Yorqin tasvir va 24/7 rejimda ishonchli ishlashni ta'minlaymiz. Videostenalarni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida o'rnatamiz — kafolat va servis bilan.",
     ],
   },
 };
