@@ -3,11 +3,6 @@ import { Suspense } from "react";
 import "@fontsource-variable/jura/wght.css";
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/caveat/wght.css";
-// Preload критичных сабсетов (заголовки Jura + тело Inter) — убирает CLS от
-// font-swap на медленных сетях: шрифт приходит до отрисовки, окно подмены исчезает.
-import juraCyrFont from "@fontsource-variable/jura/files/jura-cyrillic-wght-normal.woff2";
-import juraLatFont from "@fontsource-variable/jura/files/jura-latin-wght-normal.woff2";
-import interCyrFont from "@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -120,9 +115,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <link rel="preload" href={juraCyrFont} as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href={juraLatFont} as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href={interCyrFont} as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
           __html: `
           @font-face {

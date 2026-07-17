@@ -31,3 +31,5 @@ apps/api/uploads/
 
 # Локальные секреты (ключи API) — НИКОГДА не коммитить
 .secrets/
+# MCP-конфиг с ключами (Firecrawl и др.) — не в git/деплой
+.mcp.json
