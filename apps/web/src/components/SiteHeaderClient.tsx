@@ -5,7 +5,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { createPortal } from "react-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { SatLogo } from "@/components/SatLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { getSearchSuggest, type SuggestDto } from "@/lib/api";
@@ -205,10 +205,18 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
   const tc = useTranslations("common");
   const tsv = useTranslations("services");
   const tsp = useTranslations("solutionsPage");
+  const locale = useLocale();
+
+  // Пункт «H3C — серверы и виртуализация»: ведёт на партнёрскую страницу /partners/h3c
+  // (не /solutions/*), встаёт в конец группы «Системы и услуги» — как брендовый пункт.
+  const h3cItem = {
+    title: ({ ru: "H3C — серверы и виртуализация", uz: "H3C — serverlar va virtualizatsiya", en: "H3C — servers & virtualization", tr: "H3C — sunucular ve sanallaştırma", zh: "H3C — 服务器与虚拟化" } as Record<string, string>)[locale] ?? "H3C — серверы и виртуализация",
+    href: "/partners/h3c",
+  };
 
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
   const solutionGroups: NavDropGroup[] = [
-    { label: tsp("systemsLabel"), items: SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
+    { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
     { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
   ];
   const portfolioGroups: NavDropGroup[] = [
