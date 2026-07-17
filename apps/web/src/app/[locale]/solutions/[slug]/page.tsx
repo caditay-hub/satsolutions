@@ -18,6 +18,7 @@ import { ServicePackages } from "@/components/ServicePackages";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
+import { getServiceContent } from "@/lib/serviceContent";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -76,6 +77,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // H1 — гео-коммерческий из SEO-оверлея (fallback на короткий title, который
   // остаётся для хлебных крошек, CTA, alt и JSON-LD)
   const h1 = getServiceSeo(locale, svc.key)?.h1 ?? title;
+  // Содержательный SEO-текст под голые высокочастотники (RU-приоритет; нет — не рендерим)
+  const content = getServiceContent(locale, svc.key);
   const works = ts.raw(`${svc.key}.works`) as string[];
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
@@ -189,6 +192,18 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             ))}
           </div>
         </div>
+
+        {/* SEO-текст: глубина контента под голые высокочастотные запросы */}
+        {content && (
+          <section className="mt-12 max-w-3xl">
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{content.heading}</h2>
+            <div className="mt-4 space-y-4">
+              {content.paragraphs.map((p, i) => (
+                <p key={i} className="text-sm sm:text-base leading-relaxed text-slate-600">{p}</p>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* СКС и ЛВС: типовые конфигурации, этапы, бренды каталога */}
         {svc.key === "network" && <NetworkDetails />}
