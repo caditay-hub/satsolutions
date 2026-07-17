@@ -32,6 +32,32 @@ import { BRAND_CONFIG } from "@/lib/brandConfig";
 const CATALOG_PAGE_BARE = 120;
 const CATALOG_SHOW_ALL = 1000;
 
+// Карточка/строка — клиентские компоненты: весь ProductDto сериализуется в RSC-поток.
+// Карточке (сетка) нужны id/slug/name/price/cover/modelCode/recommended — тяжёлые поля
+// (description ~сотни символов, галерея, seo) вырезаем ДО передачи → RSC-поток ~×5 легче,
+// быстрее FCP на мобильном. Списку оставляем characteristics (чипы-спеки).
+function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): import("@/lib/api").ProductDto {
+  // Явный набор полей (не spread) — иначе description/gallery/createdAt протаскиваются в RSC.
+  return {
+    id: p.id,
+    name: p.name,
+    slug: p.slug,
+    price: p.price,
+    isUsd: p.isUsd,
+    recommended: p.recommended,
+    modelCode: p.modelCode ?? null,
+    coverImageUrl: p.coverImageUrl,
+    characteristics: keepChars ? p.characteristics : null, // строке нужны чипы-спеки
+    // обязательные по типу, но карточке не нужны — облегчаем
+    shortDescription: null,
+    description: null,
+    published: true,
+    categoryId: null,
+    createdAt: "",
+    updatedAt: "",
+  };
+}
+
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
@@ -401,13 +427,13 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">
                   {items.map((p) => (
-                    <CatalogRow key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+                    <CatalogRow key={p.id} p={slimProduct(p, true)} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               ) : (
                 <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
                   {items.map((p) => (
-                    <CatalogCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+                    <CatalogCard key={p.id} p={slimProduct(p, false)} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
                   ))}
                 </div>
               )}
