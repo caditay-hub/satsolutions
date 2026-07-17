@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getBrands, getCategories, getPortfolio, getProducts, getServices, getBrandTypePairs } from "@/lib/api";
 import { ALL_SERVICES } from "@/lib/servicesData";
+import { ARTICLES } from "@/lib/articlesData";
 import { typeSlug } from "@/lib/typeSlug";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
@@ -49,6 +50,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: route === "" ? 1 : 0.8,
         alternates: { languages: langAlternates(route) },
     }));
+
+    // Блог: контент только ru/uz → hreflang по фактически доступным локалям статьи.
+    // Канонический URL — ru (как в остальных routes), альтернаты — только те, где есть перевод.
+    function blogAlternates(path: string, locales: string[]) {
+        const languages: Record<string, string> = {};
+        for (const loc of locales) {
+            const prefix = loc === DEFAULT_LOCALE ? "" : `/${loc}`;
+            languages[loc] = `${siteUrl}${prefix}${path}` || `${siteUrl}/`;
+        }
+        return languages;
+    }
+    const BLOG_LOCALES = ["ru", "uz"];
+    const blogRoutes = [
+        { url: `${siteUrl}/blog`, lastModified: GENERATED, changeFrequency: "weekly" as const, priority: 0.6, alternates: { languages: blogAlternates("/blog", BLOG_LOCALES) } },
+        ...ARTICLES.map((a) => ({
+            url: `${siteUrl}/blog/${a.slug}`,
+            lastModified: new Date(a.date),
+            changeFrequency: "monthly" as const,
+            priority: 0.6,
+            alternates: { languages: blogAlternates(`/blog/${a.slug}`, Object.keys(a.loc)) },
+        })),
+    ];
 
     try {
         // Dynamic routes fetching
@@ -173,6 +196,7 @@ const serviceRoutes = services.filter((s) => !LEGACY_SERVICE_SLUGS.has(s.slug)).
 
         return [
             ...routes,
+            ...blogRoutes,
             ...brandRoutes,
             ...pairRoutes,
             ...groupRoutes,

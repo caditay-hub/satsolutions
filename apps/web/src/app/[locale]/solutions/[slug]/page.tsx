@@ -19,6 +19,7 @@ import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
+import { ARTICLES } from "@/lib/articlesData";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -79,6 +80,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const h1 = getServiceSeo(locale, svc.key)?.h1 ?? title;
   // Содержательный SEO-текст под голые высокочастотники (RU-приоритет; нет — не рендерим)
   const content = getServiceContent(locale, svc.key);
+  // Обратная перелинковка: инфо-статьи блога, связанные с этой услугой (только с переводом на локаль)
+  const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 3);
   const works = ts.raw(`${svc.key}.works`) as string[];
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
@@ -271,6 +274,26 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
             <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
             <FaqAccordion items={faq} />
+          </div>
+        )}
+
+        {/* Полезные статьи (услуга → блог) — обратная перелинковка */}
+        {relatedArticles.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
+              {locale === "uz" ? "Foydali maqolalar" : locale === "en" ? "Useful articles" : "Полезные статьи"}
+            </h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-3">
+              {relatedArticles.map((a) => {
+                const b = a.loc[locale]!;
+                return (
+                  <Link key={a.slug} href={`/blog/${a.slug}`} className="group rounded-xl border border-slate-200 p-4 transition-shadow hover:shadow-md">
+                    <div className="text-sm font-black leading-snug text-slate-900 group-hover:text-brand-700">{b.title}</div>
+                    <div className="mt-2 line-clamp-3 text-xs leading-relaxed text-slate-500">{b.excerpt}</div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>
