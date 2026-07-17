@@ -186,6 +186,17 @@ export function SiteFooter() {
                 <div className="p-4 text-sm text-slate-700">{t("geoNotSet")}</div>
               )}
             </div>
+            {/* Google review CTA — рычаг локального SEO: отзывы в GBP дают ⭐ в Картах/local pack.
+               CID-ссылка открывает карточку с кнопкой «Оставить отзыв». */}
+            <a
+              href="https://maps.google.com/?cid=15605896518310441449"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center justify-center gap-2 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-xs font-bold text-amber-800 transition-colors hover:bg-amber-100"
+            >
+              <span aria-hidden>⭐</span>
+              {({ ru: "Оценить нас на Google Картах", uz: "Google Xaritada baholang", en: "Rate us on Google Maps", tr: "Google Haritalar'da değerlendirin", zh: "在 Google 地图上评价我们" } as Record<string, string>)[locale] ?? "Оценить нас на Google Картах"}
+            </a>
           </div>
         </div>
       </div>
