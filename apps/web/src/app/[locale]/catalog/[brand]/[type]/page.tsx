@@ -13,6 +13,7 @@ import { localizeBrandName } from "@/lib/brandI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { getPairSeo } from "@/lib/pairSeo";
+import { CategoryServiceLink } from "@/components/CategoryServiceLink";
 import { CatalogView } from "../../../products/CatalogView";
 
 export const revalidate = 600;
@@ -112,6 +113,7 @@ export default async function BrandTypePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {view}
+      <CategoryServiceLink typeName={pair.typeName} locale={locale} />
     </>
   );
 }
