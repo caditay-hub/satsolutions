@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { getProducts } from "@/lib/api";
+import { resolveImageUrl } from "@/lib/image";
+import { localizeProductName } from "@/lib/productI18n";
 
 export const revalidate = 86400;
 
@@ -166,6 +169,17 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
   const d = D[locale] ?? D.en;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
+  // Витрина оборудования H3C — реальные товары бренда из каталога (фото + характеристики).
+  let h3cProducts: Awaited<ReturnType<typeof getProducts>>["items"] = [];
+  try {
+    const r = await getProducts(1, 24, { brand: "h3c" });
+    h3cProducts = r.items ?? [];
+  } catch {
+    /* API недоступен — секцию не рендерим */
+  }
+  const equipTitle = ({ ru: "Оборудование H3C — что мы поставляем", uz: "H3C uskunalari — biz yetkazib beradigan", en: "H3C equipment we supply", tr: "Sağladığımız H3C ekipmanları", zh: "我们供应的 H3C 设备" } as Record<string, string>)[locale] ?? "Оборудование H3C";
+  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
+
   const crumbHome = ({ ru: "Главная", uz: "Bosh sahifa", en: "Home", tr: "Ana sayfa", zh: "首页" } as Record<string, string>)[locale] ?? "Home";
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -206,6 +220,48 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
             </section>
           ))}
         </div>
+
+        {h3cProducts.length > 0 && (
+          <section className="mt-12">
+            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900">{equipTitle}</h2>
+            <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+              {h3cProducts.map((p) => {
+                const chars = p.characteristics ? Object.entries(p.characteristics).slice(0, 3) : [];
+                return (
+                  <Link
+                    key={p.id}
+                    href={`/products/${p.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow hover:shadow-md"
+                  >
+                    <div className="flex aspect-[4/3] items-center justify-center border-b border-slate-100 bg-white p-3">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={resolveImageUrl(p.coverImageUrl) ?? undefined}
+                        alt={localizeProductName(p, locale)}
+                        loading="lazy"
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col gap-1.5 p-3">
+                      <div className="text-[13px] font-semibold leading-snug text-slate-900 line-clamp-2 group-hover:text-brand-700">{localizeProductName(p, locale)}</div>
+                      {chars.length > 0 && (
+                        <ul className="mt-0.5 flex flex-col gap-0.5">
+                          {chars.map(([k, v]) => (
+                            <li key={k} className="text-[11px] leading-tight text-slate-500 line-clamp-1">{String(v)}</li>
+                          ))}
+                        </ul>
+                      )}
+                      <div className="mt-auto pt-1.5 text-[11px] font-bold text-brand-600">{priceOnReq} →</div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+            <div className="mt-5">
+              <Link href={`/catalog/h3c`} className="text-sm font-semibold text-brand-700 hover:underline">{d.catalog} →</Link>
+            </div>
+          </section>
+        )}
 
         <div className="mt-10 max-w-3xl">
           <div className="text-sm font-bold uppercase tracking-wider text-brand-600">{d.linksTitle}</div>
