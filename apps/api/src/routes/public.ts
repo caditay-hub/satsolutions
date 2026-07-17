@@ -6,6 +6,7 @@ import { Post } from "../models/Post.js";
 import { Product } from "../models/Product.js";
 import { Order } from "../models/Order.js";
 import { OrderItem } from "../models/OrderItem.js";
+import { Review } from "../models/Review.js";
 import { Service } from "../models/Service.js";
 import { PortfolioCategory } from "../models/PortfolioCategory.js";
 import { PortfolioProject } from "../models/PortfolioProject.js";
@@ -1067,6 +1068,52 @@ publicRouter.post("/orders", async (req, res) => {
       currency: created.currency,
       createdAt: created.createdAt
     }
+  });
+});
+
+// Reviews (public): приём отзыва → на модерацию (PENDING); выдача — только APPROVED.
+publicRouter.post("/reviews", async (req, res) => {
+  const ratingRaw = Number(req.body?.rating);
+  const rating = Number.isFinite(ratingRaw) ? Math.round(ratingRaw) : 0;
+  if (rating < 1 || rating > 5) return res.status(400).json({ error: "Invalid rating" });
+  const text = typeof req.body?.text === "string" ? req.body.text.trim().slice(0, 2000) : "";
+  const name = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 120) : "";
+  const serviceKey = typeof req.body?.serviceKey === "string" ? req.body.serviceKey.trim().slice(0, 40) : "";
+  const ip = ((req.headers["x-forwarded-for"] as string) || req.ip || "").split(",")[0].trim();
+
+  // Лёгкая защита от спама: не больше 3 отзывов с одного IP за сутки
+  if (ip) {
+    const since = new Date(Date.now() - 24 * 3600 * 1000);
+    const recent = await Review.count({ where: { createdAt: { [Op.gte]: since } } as any });
+    const fromIp = recent > 0 ? await Review.findAll({ where: { createdAt: { [Op.gte]: since } } as any, attributes: ["meta"], raw: true }) : [];
+    const cnt = (fromIp as any[]).filter((r) => (r.meta as any)?.ip === ip).length;
+    if (cnt >= 3) return res.status(429).json({ error: "Too many reviews, try later" });
+  }
+
+  await Review.create({
+    rating,
+    authorName: name || null,
+    text: text || null,
+    status: "PENDING",
+    serviceKey: serviceKey || null,
+    meta: { ip: ip || undefined, ua: ((req.headers["user-agent"] as string) || "").slice(0, 300) || undefined }
+  } as any);
+  res.status(201).json({ ok: true });
+});
+
+publicRouter.get("/reviews", async (req, res) => {
+  const serviceKey = typeof req.query.serviceKey === "string" ? req.query.serviceKey.slice(0, 40) : "";
+  const where: any = { status: "APPROVED" };
+  if (serviceKey) where.serviceKey = serviceKey;
+  const rows = await Review.findAll({ where, order: [["createdAt", "DESC"]], limit: 60 });
+  const count = rows.length;
+  const avg = count ? rows.reduce((s, r) => s + Number(r.rating), 0) / count : 0;
+  res.json({
+    avg: Math.round(avg * 10) / 10,
+    count,
+    items: rows.map((r) => ({
+      id: r.id, rating: r.rating, authorName: r.authorName, text: r.text, serviceKey: r.serviceKey, createdAt: r.createdAt
+    }))
   });
 });
 

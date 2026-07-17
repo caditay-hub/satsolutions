@@ -25,6 +25,7 @@ import { SitePage } from "../models/SitePage.js";
 import { User } from "../models/User.js";
 import { Order } from "../models/Order.js";
 import { OrderItem } from "../models/OrderItem.js";
+import { Review } from "../models/Review.js";
 import { FeedbackMessage } from "../models/FeedbackMessage.js";
 import { ChatConversation } from "../models/ChatConversation.js";
 import { ChatMessage } from "../models/ChatMessage.js";
@@ -302,6 +303,36 @@ adminRouter.patch("/orders/:id", async (req, res) => {
   await order.save();
   const full = await Order.findByPk(order.id, { include: [{ model: OrderItem, as: "items", required: false }] });
   res.json({ order: full ?? order });
+});
+
+// Reviews (модерация): список + смена статуса + удаление
+adminRouter.get("/reviews", async (req, res) => {
+  const page = parsePositiveInt(req.query.page, 1);
+  const limit = parseLimit(req.query.limit, 50, 200);
+  const offset = (page - 1) * limit;
+  const status = typeof req.query.status === "string" ? req.query.status.trim().toUpperCase() : "";
+  const where: any = {};
+  if (status) where.status = status;
+  const { rows, count } = await Review.findAndCountAll({ where, order: [["createdAt", "DESC"]], limit, offset });
+  res.json({ items: rows, total: count, page, limit });
+});
+
+adminRouter.patch("/reviews/:id", async (req, res) => {
+  const schema = z.object({ status: z.enum(["PENDING", "APPROVED", "HIDDEN"]) });
+  const parsed = schema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
+  const review = await Review.findByPk(req.params.id);
+  if (!review) return res.status(404).json({ error: "Not found" });
+  (review as any).status = parsed.data.status;
+  await review.save();
+  res.json({ review });
+});
+
+adminRouter.delete("/reviews/:id", requireRole(["ADMIN"]), async (req, res) => {
+  const review = await Review.findByPk(req.params.id);
+  if (!review) return res.status(404).json({ error: "Not found" });
+  await review.destroy();
+  res.json({ ok: true });
 });
 
 // Categories
