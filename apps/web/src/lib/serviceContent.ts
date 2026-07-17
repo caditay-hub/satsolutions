@@ -44,7 +44,42 @@ const ru: Record<string, ServiceContent> = {
   },
 };
 
-const BY_LOCALE: Record<string, Record<string, ServiceContent>> = { ru };
+const uz: Record<string, ServiceContent> = {
+  cctv: {
+    heading: "Toshkent va O'zbekiston bo'ylab kalit topshirish asosida videokuzatuv o'rnatish",
+    paragraphs: [
+      "SAT Solutions har qanday miqyosdagi obyektlar uchun videokuzatuv tizimlarini loyihalaydi va o'rnatadi — kvartira va kichik do'kondan tortib zavodlar, omborlar va filiallar tarmog'igacha. Biz IP va analog (HDCVI/TVI) kameralar bilan ishlaymiz, NVR va DVR videoregistratorlarini o'rnatamiz, lokal va bulutli arxivni hamda telefon va kompyuterdan masofaviy ko'rishni sozlaymiz.",
+      "Videokuzatuv kameralarini o'rnatish muhandisning obyektga bepul chiqishidan boshlanadi: ko'rish zonalari, ulanish nuqtalari va kameralarning maqbul sonini aniqlaymiz, so'ng smeta va tijorat taklifini tayyorlaymiz. Ishga kabel trassalarini yotqizish, uskunani montaj qilish, ishga tushirish, harakatni aniqlash va videotahlilni sozlash, xodimlarni o'qitish kiradi.",
+      "Videokuzatuv narxi kameralar soni, ularning ruxsati, arxiv chuqurligi va montaj murakkabligiga bog'liq — har bir vazifa va byudjet uchun alohida hisoblaymiz. Hikvision, Dahua, HiLook va boshqa ishonchli brendlar uskunasini rasmiy kafolat bilan yetkazamiz, ishlarga kafolat beramiz va tizimni butun O'zbekiston bo'ylab servis xizmatiga olamiz.",
+    ],
+  },
+  access: {
+    heading: "Toshkentda kirishni boshqarish tizimi (SKUD) kalit topshirish asosida",
+    paragraphs: [
+      "Kirishni boshqarish tizimi (SKUD) obyektga o'tishni cheklaydi va hisobga oladi: xodimlar va tashrifchilar ichkariga kartalar, breloklar, PIN-kod, barmoq izi yoki yuzni aniqlash orqali kiradi. SAT Solutions ofislar, biznes-markazlar, ishlab chiqarish, maktablar va turar-joy majmualari uchun SKUD loyihalaydi va o'rnatadi — bitta eshikdan yagona boshqaruvli yuzlab o'tish nuqtalarigacha.",
+      "Tizim tarkibiga kontrollerlar, o'quvchilar, elektromagnit va elektromexanik qulflar, turniketlar va kalitkalar, dovodchiklar va chiqish tugmalari, shuningdek zonalar va jadval bo'yicha kirish huquqlarini moslashuvchan sozlash uchun dastur kiradi. SKUD videokuzatuv va ish vaqtini hisobga olish bilan integratsiyalashadi: o'tish hodisalari videoyozuvga bog'lanadi, ishlangan soatlar esa tabel va 1C ga avtomatik yuklanadi.",
+      "Biz uskunani vazifa va byudjetga qarab tanlaymiz — arzon kartali tizimlardan ZKTeco va Hikvision biometrik terminallarigacha. SKUD ni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida o'rnatamiz, kafolat beramiz va tizimni servis xizmatiga olamiz.",
+    ],
+  },
+  fire: {
+    heading: "Toshkentda yong'in signalizatsiyasi va SOUE montaji",
+    paragraphs: [
+      "Avtomatik yong'in signalizatsiyasi (APS) yong'inni tutun, issiqlik yoki alanga bo'yicha erta bosqichda aniqlaydi va ogohlantirish hamda evakuatsiyani boshqarish tizimini (SOUE) ishga tushiradi. SAT Solutions ofislar, do'konlar, omborlar, ishlab chiqarish va jamoat binolari uchun yong'in signalizatsiyasini O'zbekiston yong'in xavfsizligi normalariga muvofiq loyihalash, yetkazib berish va montaj qilishni bajaradi.",
+      "Tizimga yong'in datchiklari (tutun, issiqlik, qo'l), qabul-nazorat qurilmalari, ovozli va yorug'lik ogohlantirgichlari, zarur bo'lganda esa tutunni chiqarish, yong'inni o'chirish va binoning muhandislik tizimlarini boshqarish avtomatikasi kiradi. Biz loyiha hujjatlarini tayyorlaymiz, kelishib olamiz va obyektni nazorat organlariga topshiramiz.",
+      "Yong'in signalizatsiyasi montajini kalit topshirish asosida olib boramiz: hisob-kitob va loyihadan ishga tushirish va foydalanishga topshirishgacha. Tizim doimo ishchi holatda bo'lishi uchun kafolat, reglament xizmat va butun O'zbekiston bo'ylab qo'llab-quvvatlash beramiz.",
+    ],
+  },
+  intercom: {
+    heading: "Toshkentda domofon o'rnatish: IP va video domofonlar",
+    paragraphs: [
+      "Domofon kirishni nazorat qilish va eshik ochilishidan oldin tashrifchi bilan aloqani ta'minlaydi. SAT Solutions xususiy uylar, kvartiralar, ofislar va turar-joy majmualari uchun audio va video domofonlarni o'rnatadi: bitta eshikka oddiy chaqiruv panelidan tortib har bir kvartirada alohida monitorli ko'p abonentli IP-tizimlargacha.",
+      "Zamonaviy IP va video domofonlar tashrifchining aniq tasvirini, hodisalar yozuvini va telefondan ko'rishni beradi — siz chaqiruvga javob berasiz va eshikni masofadan ochasiz, hatto uy yoki ofisdan tashqarida bo'lsangiz ham. Domofon SKUD, elektron qulflar va videokuzatuv bilan yagona xavfsizlik tizimiga integratsiyalashadi.",
+      "Hikvision, Dahua va boshqa brendlar domofonlarini obyektingiz va byudjetingizga mos tanlaymiz va montaj qilamiz. Toshkentda va O'zbekiston bo'ylab kalit topshirish asosida — masofaviy kirishni sozlash, kafolat va servis xizmati bilan o'rnatamiz.",
+    ],
+  },
+};
+
+const BY_LOCALE: Record<string, Record<string, ServiceContent>> = { ru, uz };
 
 export function getServiceContent(locale: string, key: string): ServiceContent | null {
   return BY_LOCALE[locale]?.[key] ?? null;
