@@ -42,6 +42,38 @@ const ru: Record<string, ServiceContent> = {
       "Подбираем и монтируем домофоны Hikvision, Dahua и других брендов под ваш объект и бюджет. Устанавливаем под ключ в Ташкенте и по Узбекистану — с настройкой удалённого доступа, гарантией и сервисным обслуживанием.",
     ],
   },
+  turnstile: {
+    heading: "Установка турникетов и проходных в Ташкенте",
+    paragraphs: [
+      "Турникеты организуют упорядоченный и контролируемый проход на объект: сотрудники и посетители проходят по картам, QR-кодам, отпечатку пальца или распознаванию лица, а система фиксирует каждый вход и выход. SAT Solutions поставляет и устанавливает турникеты для бизнес-центров, заводов, стадионов, школ, фитнес-клубов и проходных предприятий.",
+      "Мы работаем с турникетами-триподами, роторными и полноростовыми турникетами, скоростными проходами (speed gate) и калитками для маломобильных посетителей. Турникет объединяется со СКУД и учётом рабочего времени в единую систему: доступ настраивается по зонам и расписанию, а отработанные часы автоматически попадают в табель.",
+      "Подбираем модель под проходимость и дизайн объекта, монтируем под ключ в Ташкенте и по всему Узбекистану, интегрируем с существующей системой безопасности. Даём гарантию на оборудование и работы, берём проходную на сервисное обслуживание.",
+    ],
+  },
+  alarm: {
+    heading: "Установка охранной сигнализации в Ташкенте",
+    paragraphs: [
+      "Охранная сигнализация мгновенно оповещает о проникновении на объект: датчики движения, открытия дверей и окон, разбития стекла и тревожные кнопки передают сигнал на пульт охраны и на ваш смартфон. SAT Solutions проектирует и монтирует охранные системы для квартир, домов, офисов, магазинов и складов.",
+      "Мы устанавливаем проводные и беспроводные охранные панели, настраиваем разделы и сценарии постановки под охрану, подключаем сирены и оповещение. Систему можно объединить с видеонаблюдением и контролем доступа: тревога сопровождается видеозаписью, а управление ведётся из одного приложения.",
+      "Подбираем оборудование под объект и бюджет, устанавливаем под ключ в Ташкенте и по всему Узбекистану. При необходимости выводим сигнал на пульт вневедомственной охраны, даём гарантию и сервисное обслуживание.",
+    ],
+  },
+  network: {
+    heading: "Монтаж СКС и локальных сетей (ЛВС) в Ташкенте",
+    paragraphs: [
+      "Структурированная кабельная система (СКС) — это основа IT-инфраструктуры офиса и предприятия: единая кабельная сеть для компьютеров, телефонии, видеонаблюдения и Wi-Fi. SAT Solutions проектирует и монтирует СКС и локальные сети (ЛВС) для офисов, бизнес-центров, производств и распределённых объектов.",
+      "В работу входят прокладка медных и оптических кабельных трасс, установка серверных шкафов и стоек, монтаж патч-панелей, розеток и коммутаторов, организация серверной, маркировка и тестирование каждой линии. Мы сдаём кабельный журнал и исполнительную документацию.",
+      "Проектируем сеть с запасом под рост нагрузки, используем оборудование проверенных брендов и соблюдаем стандарты монтажа. Выполняем работы под ключ в Ташкенте и по всему Узбекистану — с гарантией и последующим сервисным сопровождением.",
+    ],
+  },
+  wifi: {
+    heading: "Настройка Wi-Fi сетей для офиса в Ташкенте",
+    paragraphs: [
+      "Надёжный Wi-Fi — обязательное условие работы современного офиса, склада, отеля или производства. SAT Solutions проектирует и настраивает беспроводные сети с бесшовным роумингом, чтобы устройства переключались между точками доступа без разрывов, а покрытие было стабильным на всей площади объекта.",
+      "Мы выполняем радиообследование, рассчитываем количество и расположение точек доступа, монтируем оборудование и настраиваем контроллер, гостевые сети, ограничение скорости и авторизацию. Корпоративный Wi-Fi отделяется от гостевого, а нагрузка распределяется между точками для стабильной работы.",
+      "Используем оборудование Ubiquiti, MikroTik, TP-Link и других проверенных брендов, подбираем решение под площадь и число пользователей. Настраиваем Wi-Fi под ключ в Ташкенте и по всему Узбекистану — с гарантией и поддержкой.",
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -75,6 +107,38 @@ const uz: Record<string, ServiceContent> = {
       "Domofon kirishni nazorat qilish va eshik ochilishidan oldin tashrifchi bilan aloqani ta'minlaydi. SAT Solutions xususiy uylar, kvartiralar, ofislar va turar-joy majmualari uchun audio va video domofonlarni o'rnatadi: bitta eshikka oddiy chaqiruv panelidan tortib har bir kvartirada alohida monitorli ko'p abonentli IP-tizimlargacha.",
       "Zamonaviy IP va video domofonlar tashrifchining aniq tasvirini, hodisalar yozuvini va telefondan ko'rishni beradi — siz chaqiruvga javob berasiz va eshikni masofadan ochasiz, hatto uy yoki ofisdan tashqarida bo'lsangiz ham. Domofon SKUD, elektron qulflar va videokuzatuv bilan yagona xavfsizlik tizimiga integratsiyalashadi.",
       "Hikvision, Dahua va boshqa brendlar domofonlarini obyektingiz va byudjetingizga mos tanlaymiz va montaj qilamiz. Toshkentda va O'zbekiston bo'ylab kalit topshirish asosida — masofaviy kirishni sozlash, kafolat va servis xizmati bilan o'rnatamiz.",
+    ],
+  },
+  turnstile: {
+    heading: "Toshkentda turniketlar va o'tish yo'laklarini o'rnatish",
+    paragraphs: [
+      "Turniketlar obyektga tartibli va nazorat qilinadigan o'tishni tashkil etadi: xodimlar va tashrifchilar kartalar, QR-kodlar, barmoq izi yoki yuzni aniqlash orqali o'tadi, tizim esa har bir kirish va chiqishni qayd etadi. SAT Solutions biznes-markazlar, zavodlar, stadionlar, maktablar, fitnes-klublar va korxona o'tish joylari uchun turniketlarni yetkazib beradi va o'rnatadi.",
+      "Biz tripod, rotorli va to'liq bo'yli turniketlar, tezkor o'tish yo'laklari (speed gate) va nogiron tashrifchilar uchun kalitkalar bilan ishlaymiz. Turniket SKUD va ish vaqtini hisobga olish bilan yagona tizimga birlashadi: kirish zonalar va jadval bo'yicha sozlanadi, ishlangan soatlar esa avtomatik tabelga tushadi.",
+      "Modelni obyektning o'tkazuvchanligi va dizayniga qarab tanlaymiz, Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida montaj qilamiz, mavjud xavfsizlik tizimi bilan integratsiya qilamiz. Uskuna va ishlarga kafolat beramiz, o'tish joyini servis xizmatiga olamiz.",
+    ],
+  },
+  alarm: {
+    heading: "Toshkentda qo'riqlash signalizatsiyasini o'rnatish",
+    paragraphs: [
+      "Qo'riqlash signalizatsiyasi obyektga kirishni bir zumda xabar beradi: harakat, eshik va deraza ochilishi, oyna sinishi datchiklari va trevoga tugmalari signalni qo'riqlash pultiga va smartfoningizga uzatadi. SAT Solutions kvartiralar, uylar, ofislar, do'konlar va omborlar uchun qo'riqlash tizimlarini loyihalaydi va montaj qiladi.",
+      "Biz simli va simsiz qo'riqlash panellarini o'rnatamiz, qo'riqlashga qo'yish bo'limlari va ssenariylarini sozlaymiz, sirenalar va ogohlantirishni ulaymiz. Tizimni videokuzatuv va kirishni boshqarish bilan birlashtirish mumkin: trevoga videoyozuv bilan hamroh bo'ladi, boshqaruv esa bitta ilovadan olib boriladi.",
+      "Uskunani obyekt va byudjetga qarab tanlaymiz, Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida o'rnatamiz. Zarur bo'lganda signalni idoraviy bo'lmagan qo'riqlash pultiga chiqaramiz, kafolat va servis xizmatini beramiz.",
+    ],
+  },
+  network: {
+    heading: "Toshkentda SKS va lokal tarmoqlar (LVS) montaji",
+    paragraphs: [
+      "Strukturali kabel tizimi (SKS) — ofis va korxona IT-infratuzilmasining asosi: kompyuterlar, telefoniya, videokuzatuv va Wi-Fi uchun yagona kabel tarmog'i. SAT Solutions ofislar, biznes-markazlar, ishlab chiqarish va taqsimlangan obyektlar uchun SKS va lokal tarmoqlarni (LVS) loyihalaydi va montaj qiladi.",
+      "Ishga mis va optik kabel trassalarini yotqizish, server shkaflari va stoykalarini o'rnatish, patch-panellar, rozetkalar va kommutatorlarni montaj qilish, server xonasini tashkil etish, har bir liniyani belgilash va sinovdan o'tkazish kiradi. Biz kabel jurnali va ijro hujjatlarini topshiramiz.",
+      "Tarmoqni yuklama o'sishi zaxirasi bilan loyihalaymiz, ishonchli brendlar uskunasidan foydalanamiz va montaj standartlariga rioya qilamiz. Ishlarni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida bajaramiz — kafolat va keyingi servis bilan.",
+    ],
+  },
+  wifi: {
+    heading: "Toshkentda ofis uchun Wi-Fi tarmoqlarini sozlash",
+    paragraphs: [
+      "Ishonchli Wi-Fi — zamonaviy ofis, ombor, mehmonxona yoki ishlab chiqarish ishining majburiy sharti. SAT Solutions uzluksiz rouming bilan simsiz tarmoqlarni loyihalaydi va sozlaydi, shunda qurilmalar kirish nuqtalari o'rtasida uzilishlarsiz o'tadi, qamrov esa butun obyekt maydonida barqaror bo'ladi.",
+      "Biz radio tekshiruvni bajaramiz, kirish nuqtalari soni va joylashuvini hisoblaymiz, uskunani montaj qilamiz va kontroller, mehmon tarmoqlari, tezlik cheklovi va avtorizatsiyani sozlaymiz. Korporativ Wi-Fi mehmon tarmog'idan ajratiladi, yuklama esa barqaror ish uchun nuqtalar o'rtasida taqsimlanadi.",
+      "Ubiquiti, MikroTik, TP-Link va boshqa ishonchli brendlar uskunasidan foydalanamiz, yechimni maydon va foydalanuvchilar soniga qarab tanlaymiz. Wi-Fi ni Toshkentda va butun O'zbekiston bo'ylab kalit topshirish asosida sozlaymiz — kafolat va qo'llab-quvvatlash bilan.",
     ],
   },
 };
