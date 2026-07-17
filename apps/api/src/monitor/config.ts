@@ -48,6 +48,9 @@ export const config = {
     "https://satsolutions.uz/ru",
     "https://satsolutions.uz/ru/catalog",
     "https://satsolutions.uz/ru/solutions",
+    // страница типа и карточка товара — самые нагруженные (много фото/JS); держим под контролем CWV
+    "https://satsolutions.uz/ru/products/type/ip-kamery",
+    "https://satsolutions.uz/ru/products/hik-ds-2cd1343g2-iuf-2-8mm",
   ],
 
   // Telegram-бот для отчётов и алертов (https://t.me/CRM_SAT_bot).

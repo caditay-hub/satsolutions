@@ -24,7 +24,7 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
           <span className="absolute left-2 top-2 z-10 rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">Хит</span>
         ) : null}
         {img ? (
-          <Image alt={displayName} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" unoptimized className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />
+          <Image alt={displayName} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-brand-50">
             <span className="text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>

@@ -21,7 +21,6 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
           sizes="(max-width: 1024px) 100vw, 32vw"
           className="h-auto w-full object-contain"
           priority
-          unoptimized
         />
       </div>
       {list.length > 1 ? (
@@ -36,7 +35,7 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
                 i === active ? "border-brand-500" : "border-slate-200 hover:border-brand-300"
               }`}
             >
-              <Image src={src} alt={`${alt} — фото ${i + 1}`} fill sizes="80px" className="object-contain" unoptimized />
+              <Image src={src} alt={`${alt} — фото ${i + 1}`} fill sizes="80px" className="object-contain" />
             </button>
           ))}
         </div>
