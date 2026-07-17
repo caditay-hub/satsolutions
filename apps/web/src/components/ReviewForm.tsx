@@ -52,7 +52,7 @@ function Star({ filled }: { filled: boolean }) {
   );
 }
 
-export function ReviewForm({ locale, serviceKey }: { locale: string; serviceKey?: string }) {
+export function ReviewForm({ locale, serviceKey, productId }: { locale: string; serviceKey?: string; productId?: string }) {
   const t = STRINGS[locale] ?? STRINGS.ru;
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
@@ -70,7 +70,7 @@ export function ReviewForm({ locale, serviceKey }: { locale: string; serviceKey?
       const r = await fetch(`${apiBaseUrl()}/reviews`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ rating, text: text.trim() || undefined, name: name.trim() || undefined, serviceKey }),
+        body: JSON.stringify({ rating, text: text.trim() || undefined, name: name.trim() || undefined, serviceKey, productId }),
       });
       if (!r.ok) throw new Error(String(r.status));
       setState("done");

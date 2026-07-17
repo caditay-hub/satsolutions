@@ -13,6 +13,7 @@ type ReviewDto = {
   text: string | null;
   status: ReviewStatus;
   serviceKey: string | null;
+  productId: string | null;
   createdAt: string;
   meta?: { ip?: string } | null;
 };
@@ -120,7 +121,8 @@ export default function ReviewsAdminPage() {
                 <div className="flex flex-wrap items-center gap-3">
                   <Stars n={r.rating} />
                   <span className="font-semibold text-slate-900">{r.authorName || "Аноним"}</span>
-                  {r.serviceKey && <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600">{r.serviceKey}</span>}
+                  {r.serviceKey && <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-600">услуга: {r.serviceKey}</span>}
+                  {r.productId && <span className="rounded-full bg-indigo-100 px-2 py-0.5 text-xs font-semibold text-indigo-700">товар</span>}
                   <span className={`rounded-full px-2 py-0.5 text-xs font-bold ${STATUS_BADGE[r.status]}`}>{STATUS_LABEL[r.status]}</span>
                   <span className="ml-auto text-xs text-slate-400">{new Date(r.createdAt).toLocaleString("ru-RU")}</span>
                 </div>

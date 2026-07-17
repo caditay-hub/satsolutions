@@ -10,6 +10,7 @@ export class Review extends Model<InferAttributes<Review>, InferCreationAttribut
   declare text: string | null;
   declare status: CreationOptional<ReviewStatus>;
   declare serviceKey: string | null;
+  declare productId: string | null;
   declare meta: unknown | null;
   declare createdAt: CreationOptional<Date>;
   declare updatedAt: CreationOptional<Date>;
@@ -23,6 +24,7 @@ Review.init(
     text: { type: DataTypes.TEXT, allowNull: true },
     status: { type: DataTypes.STRING(16), allowNull: false, defaultValue: "PENDING" },
     serviceKey: { type: DataTypes.STRING(40), allowNull: true },
+    productId: { type: DataTypes.UUID, allowNull: true },
     meta: { type: DataTypes.JSONB, allowNull: true },
     createdAt: { type: DataTypes.DATE, allowNull: false, defaultValue: DataTypes.NOW },
     updatedAt: { type: DataTypes.DATE, allowNull: false, defaultValue: DataTypes.NOW }

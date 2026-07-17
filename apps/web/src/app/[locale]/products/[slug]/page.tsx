@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest } from "@/lib/api";
+import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews } from "@/lib/api";
+import { ReviewForm } from "@/components/ReviewForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
@@ -130,6 +131,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     notFound();
   }
 
+  // Отзывы товара (одобренные) — рейтинг + AggregateRating в разметку (только если count>0)
+  const productReviews = await getProductReviews(product.id);
+
   try {
     // Локализованные name/shortDescription (uz/en/tr/zh), фолбэк на русский из БД
     const loc = localizeProduct(product, locale);
@@ -232,6 +236,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         : {}),
       ...(charEntries.length
         ? { additionalProperty: charEntries.slice(0, 12).map(([k, v]) => ({ "@type": "PropertyValue", name: k, value: String(v) })) }
+        : {}),
+      // AggregateRating — только при наличии реальных одобренных отзывов (Google требует реальные)
+      ...(productReviews.count > 0
+        ? { aggregateRating: { "@type": "AggregateRating", ratingValue: productReviews.avg, reviewCount: productReviews.count, bestRating: 5, worstRating: 1 } }
         : {}),
     };
     const breadcrumbLd = {
@@ -422,6 +430,48 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
           >
             {t("product.getConsult")} →
           </Link>
+        </div>
+
+        {/* Отзывы о товаре: оценка (productId) + список одобренных */}
+        <div className="mt-8">
+          <div className="flex items-center gap-3">
+            <h2 className="text-lg font-bold tracking-tight">
+              {locale === "uz" ? "Mahsulot sharhlari" : locale === "en" ? "Product reviews" : "Отзывы о товаре"}
+            </h2>
+            {productReviews.count > 0 && (
+              <span className="flex items-center gap-1.5 text-sm font-bold text-slate-600">
+                <span className="inline-flex text-amber-400">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(productReviews.avg) ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                  ))}
+                </span>
+                <span className="tabular-nums">{productReviews.avg.toFixed(1)}</span>
+                <span className="text-slate-400">· {productReviews.count}</span>
+              </span>
+            )}
+          </div>
+          <div className="mt-4 grid gap-6 lg:grid-cols-2 lg:items-start">
+            <div className="max-w-xl">
+              <ReviewForm locale={locale} productId={product.id} />
+            </div>
+            {productReviews.count > 0 && (
+              <div className="space-y-3">
+                {productReviews.items.slice(0, 4).map((r) => (
+                  <div key={r.id} className="rounded-xl border border-slate-200 bg-white p-4">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-sm font-black text-slate-900">{r.authorName?.trim() || "Клиент"}</span>
+                      <span className="inline-flex text-amber-400">
+                        {[1, 2, 3, 4, 5].map((s) => (
+                          <svg key={s} viewBox="0 0 20 20" className={`h-3.5 w-3.5 ${s <= r.rating ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                        ))}
+                      </span>
+                    </div>
+                    {r.text && <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{r.text}</p>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Similar items in same category */}

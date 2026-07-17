@@ -389,3 +389,11 @@ export async function getReviews(serviceKey?: string): Promise<{ avg: number; co
     return { avg: 0, count: 0, items: [] };
   }
 }
+
+export async function getProductReviews(productId: string): Promise<{ avg: number; count: number; items: ReviewDto[] }> {
+  try {
+    return await apiFetch<{ avg: number; count: number; items: ReviewDto[] }>(`/reviews?productId=${encodeURIComponent(productId)}`, { next: { revalidate: 120 } });
+  } catch {
+    return { avg: 0, count: 0, items: [] };
+  }
+}

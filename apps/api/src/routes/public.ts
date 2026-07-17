@@ -1079,6 +1079,8 @@ publicRouter.post("/reviews", async (req, res) => {
   const text = typeof req.body?.text === "string" ? req.body.text.trim().slice(0, 2000) : "";
   const name = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 120) : "";
   const serviceKey = typeof req.body?.serviceKey === "string" ? req.body.serviceKey.trim().slice(0, 40) : "";
+  const productIdRaw = typeof req.body?.productId === "string" ? req.body.productId.trim() : "";
+  const productId = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(productIdRaw) ? productIdRaw : "";
   const ip = ((req.headers["x-forwarded-for"] as string) || req.ip || "").split(",")[0].trim();
 
   // Лёгкая защита от спама: не больше 3 отзывов с одного IP за сутки
@@ -1096,6 +1098,7 @@ publicRouter.post("/reviews", async (req, res) => {
     text: text || null,
     status: "PENDING",
     serviceKey: serviceKey || null,
+    productId: productId || null,
     meta: { ip: ip || undefined, ua: ((req.headers["user-agent"] as string) || "").slice(0, 300) || undefined }
   } as any);
   res.status(201).json({ ok: true });
@@ -1103,8 +1106,10 @@ publicRouter.post("/reviews", async (req, res) => {
 
 publicRouter.get("/reviews", async (req, res) => {
   const serviceKey = typeof req.query.serviceKey === "string" ? req.query.serviceKey.slice(0, 40) : "";
+  const productId = typeof req.query.productId === "string" ? req.query.productId.slice(0, 40) : "";
   const where: any = { status: "APPROVED" };
-  if (serviceKey) where.serviceKey = serviceKey;
+  if (productId) where.productId = productId;
+  else if (serviceKey) where.serviceKey = serviceKey;
   const rows = await Review.findAll({ where, order: [["createdAt", "DESC"]], limit: 60 });
   const count = rows.length;
   const avg = count ? rows.reduce((s, r) => s + Number(r.rating), 0) / count : 0;
@@ -1112,7 +1117,7 @@ publicRouter.get("/reviews", async (req, res) => {
     avg: Math.round(avg * 10) / 10,
     count,
     items: rows.map((r) => ({
-      id: r.id, rating: r.rating, authorName: r.authorName, text: r.text, serviceKey: r.serviceKey, createdAt: r.createdAt
+      id: r.id, rating: r.rating, authorName: r.authorName, text: r.text, serviceKey: r.serviceKey, productId: r.productId, createdAt: r.createdAt
     }))
   });
 });
