@@ -70,6 +70,41 @@ const ru: Record<string, ServiceSeo> = {
     title: "Умный дом в Ташкенте — установка под ключ | SAT",
     desc: "Системы умного дома в Ташкенте: освещение, климат, шторы, видеонаблюдение и сценарии в одном приложении. Установка и настройка по всему Узбекистану.",
   },
+  anpr: {
+    h1: "Распознавание автономеров в Ташкенте",
+    title: "Распознавание номеров (ANPR) в Ташкенте — установка | SAT",
+    desc: "Системы распознавания автономеров (ANPR) в Ташкенте: автоматический въезд по номеру, шлагбаумы, белые списки, интеграция с парковкой и СКУД. Установка по всему Узбекистану.",
+  },
+  telephony: {
+    h1: "IP-телефония для офиса в Ташкенте",
+    title: "IP-телефония в Ташкенте — АТС для офиса под ключ | SAT",
+    desc: "Установка IP-телефонии и офисной АТС в Ташкенте: многоканальные номера, запись разговоров, интеграция с CRM. Настройка и поддержка по всему Узбекистану.",
+  },
+  mikrotik: {
+    h1: "Настройка MikroTik в Ташкенте",
+    title: "Настройка MikroTik в Ташкенте — роутеры и VPN | SAT",
+    desc: "Настройка роутеров MikroTik в Ташкенте: маршрутизация, VPN, балансировка каналов, файрвол и Hotspot. Выезд, аутсорсинг сети и поддержка по всему Узбекистану.",
+  },
+  fiber: {
+    h1: "Прокладка оптоволокна в Ташкенте",
+    title: "Оптоволокно в Ташкенте — прокладка и сварка ВОЛС | SAT",
+    desc: "Прокладка и сварка оптоволоконных линий (ВОЛС) в Ташкенте: монтаж кабеля, муфты, кроссы, измерения рефлектометром. Работы по всему Узбекистану.",
+  },
+  server: {
+    h1: "Серверные и ЦОД под ключ в Ташкенте",
+    title: "Серверная под ключ в Ташкенте — монтаж ЦОД | SAT",
+    desc: "Проектирование и монтаж серверных и ЦОД в Ташкенте: стойки, СКС, бесперебойное питание, охлаждение и контроль доступа. Сдача под ключ по всему Узбекистану.",
+  },
+  virtualization: {
+    h1: "Серверы H3C и виртуализация в Ташкенте",
+    title: "Серверы H3C и виртуализация в Ташкенте | SAT Solutions",
+    desc: "Поставка серверов H3C и внедрение виртуализации в Ташкенте: консолидация нагрузок, отказоустойчивость, резервное копирование. Проект и внедрение по всему Узбекистану.",
+  },
+  locks: {
+    h1: "Электронные и умные замки в Ташкенте",
+    title: "Электронные и умные замки в Ташкенте — установка | SAT",
+    desc: "Установка электронных и умных замков в Ташкенте: биометрия, карты, коды и приложение, интеграция со СКУД. Монтаж для дома и офиса по всему Узбекистану.",
+  },
 };
 
 const uz: Record<string, ServiceSeo> = {
@@ -133,6 +168,41 @@ const uz: Record<string, ServiceSeo> = {
     title: "Aqlli uy Toshkentda — kalit topshirish o'rnatish | SAT",
     desc: "Toshkentda aqlli uy tizimlari: yoritish, iqlim, pardalar, videokuzatuv va ssenariylar bitta ilovada. O'rnatish va sozlash butun O'zbekiston bo'ylab.",
   },
+  anpr: {
+    h1: "Toshkentda avtoraqamlarni aniqlash",
+    title: "Avtoraqamlarni aniqlash (ANPR) Toshkentda | SAT",
+    desc: "Toshkentda avtoraqamlarni aniqlash (ANPR) tizimlari: raqam bo'yicha avtomatik kirish, shlagbaumlar, oq ro'yxatlar, avtoturargoh va SKUD bilan integratsiya. O'zbekiston bo'ylab o'rnatish.",
+  },
+  telephony: {
+    h1: "Toshkentda ofis uchun IP-telefoniya",
+    title: "IP-telefoniya Toshkentda — ofis uchun ATS | SAT",
+    desc: "Toshkentda IP-telefoniya va ofis ATS o'rnatish: ko'p kanalli raqamlar, suhbatlarni yozib olish, CRM bilan integratsiya. Sozlash va qo'llab-quvvatlash O'zbekiston bo'ylab.",
+  },
+  mikrotik: {
+    h1: "Toshkentda MikroTik sozlash",
+    title: "MikroTik sozlash Toshkentda — routerlar va VPN | SAT",
+    desc: "Toshkentda MikroTik routerlarini sozlash: marshrutlash, VPN, kanallarni balanslash, firewall va Hotspot. Chiqish, tarmoq autsorsingi va qo'llab-quvvatlash O'zbekiston bo'ylab.",
+  },
+  fiber: {
+    h1: "Toshkentda optik tolani yotqizish",
+    title: "Optik tola Toshkentda — VOLS yotqizish va payvandlash | SAT",
+    desc: "Toshkentda optik tola liniyalarini (VOLS) yotqizish va payvandlash: kabel montaji, muftalar, kross, reflektometr o'lchovlari. Ishlar O'zbekiston bo'ylab.",
+  },
+  server: {
+    h1: "Toshkentda server xonasi va ma'lumot markazi",
+    title: "Server xonasi Toshkentda — kalit topshirish montaji | SAT",
+    desc: "Toshkentda server xonalari va ma'lumot markazlarini loyihalash va montaji: stoykalar, SKS, uzluksiz quvvat, sovitish va kirish nazorati. Kalit topshirish O'zbekiston bo'ylab.",
+  },
+  virtualization: {
+    h1: "Toshkentda H3C serverlari va virtualizatsiya",
+    title: "H3C serverlari va virtualizatsiya Toshkentda | SAT",
+    desc: "Toshkentda H3C serverlarini yetkazib berish va virtualizatsiyani joriy etish: yuklamalarni konsolidatsiya qilish, xatolarga chidamlilik, zaxira nusxa. Loyiha va joriy etish O'zbekiston bo'ylab.",
+  },
+  locks: {
+    h1: "Toshkentda elektron va aqlli qulflar",
+    title: "Elektron va aqlli qulflar Toshkentda — o'rnatish | SAT",
+    desc: "Toshkentda elektron va aqlli qulflarni o'rnatish: biometriya, kartalar, kodlar va ilova, SKUD bilan integratsiya. Uy va ofis uchun montaj O'zbekiston bo'ylab.",
+  },
 };
 
 const en: Record<string, ServiceSeo> = {
@@ -195,6 +265,41 @@ const en: Record<string, ServiceSeo> = {
     h1: "Smart Home in Tashkent — System Installation",
     title: "Smart Home in Tashkent — Turnkey Installation | SAT",
     desc: "Smart home systems in Tashkent: lighting, climate, blinds, CCTV and scenes in one app. Installation and setup across Uzbekistan.",
+  },
+  anpr: {
+    h1: "License Plate Recognition in Tashkent",
+    title: "License Plate Recognition (ANPR) in Tashkent | SAT",
+    desc: "License plate recognition (ANPR) systems in Tashkent: automatic entry by plate, barriers, whitelists, parking and access control integration. Installation across Uzbekistan.",
+  },
+  telephony: {
+    h1: "Office IP Telephony in Tashkent",
+    title: "IP Telephony in Tashkent — Office PBX | SAT",
+    desc: "IP telephony and office PBX setup in Tashkent: multi-channel numbers, call recording, CRM integration. Setup and support across Uzbekistan.",
+  },
+  mikrotik: {
+    h1: "MikroTik Configuration in Tashkent",
+    title: "MikroTik Setup in Tashkent — Routers & VPN | SAT",
+    desc: "MikroTik router configuration in Tashkent: routing, VPN, channel balancing, firewall and Hotspot. On-site, network outsourcing and support across Uzbekistan.",
+  },
+  fiber: {
+    h1: "Fiber Optic Cabling in Tashkent",
+    title: "Fiber Optics in Tashkent — Cabling & Splicing | SAT",
+    desc: "Fiber optic line (FOCL) laying and splicing in Tashkent: cable installation, splice closures, patch panels, OTDR measurements. Work across Uzbekistan.",
+  },
+  server: {
+    h1: "Server Rooms & Data Centers in Tashkent",
+    title: "Turnkey Server Room in Tashkent — Data Center | SAT",
+    desc: "Server room and data center design and installation in Tashkent: racks, cabling, UPS power, cooling and access control. Turnkey delivery across Uzbekistan.",
+  },
+  virtualization: {
+    h1: "H3C Servers & Virtualization in Tashkent",
+    title: "H3C Servers & Virtualization in Tashkent | SAT",
+    desc: "H3C server supply and virtualization in Tashkent: workload consolidation, fault tolerance, backups. Project and rollout across Uzbekistan.",
+  },
+  locks: {
+    h1: "Electronic & Smart Locks in Tashkent",
+    title: "Electronic & Smart Locks in Tashkent — Installation | SAT",
+    desc: "Electronic and smart lock installation in Tashkent: biometrics, cards, codes and app control, ACS integration. Home and office fitting across Uzbekistan.",
   },
 };
 
