@@ -1,6 +1,8 @@
 import type { Viewport } from "next";
 import { Suspense } from "react";
-import "@fontsource-variable/jura/wght.css";
+// Jura (заголовки) — self-hosted из /public/fonts + preload + font-display:optional
+// (см. @font-face ниже). Это убирает CLS 0.32 от font-swap: браузер не подменяет
+// шрифт после блок-периода, а preload грузит его до отрисовки. Inter/Caveat — как есть.
 import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/caveat/wght.css";
 import { notFound } from "next/navigation";
@@ -115,8 +117,29 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Preload Jura (заголовки) — грузим до отрисовки, чтобы display:optional успел показать шрифт без сдвига */}
+        <link rel="preload" href="/fonts/jura-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/jura-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
           __html: `
+          /* Jura Variable — self-hosted, preload + display:optional (фикс CLS от font-swap).
+             optional: нет swap-периода → нет сдвига; preload грузит до отрисовки. */
+          @font-face {
+            font-family: 'Jura Variable';
+            font-style: normal;
+            font-weight: 300 700;
+            font-display: optional;
+            src: url(/fonts/jura-cyrillic.woff2) format('woff2-variations');
+            unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+          }
+          @font-face {
+            font-family: 'Jura Variable';
+            font-style: normal;
+            font-weight: 300 700;
+            font-display: optional;
+            src: url(/fonts/jura-latin.woff2) format('woff2-variations');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+          }
           @font-face {
             font-family: 'Inter Fallback';
             src: local('Arial');
