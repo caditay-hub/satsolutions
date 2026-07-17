@@ -225,15 +225,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 returnMethod: "https://schema.org/ReturnInStore",
                 returnFees: "https://schema.org/FreeReturn",
               },
-              shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingDestination: { "@type": "DefinedRegion", addressCountry: "UZ" },
-                deliveryTime: {
-                  "@type": "ShippingDeliveryTime",
-                  handlingTime: { "@type": "QuantitativeValue", minValue: 0, maxValue: 1, unitCode: "DAY" },
-                  transitTime: { "@type": "QuantitativeValue", minValue: 1, maxValue: 5, unitCode: "DAY" },
-                },
-              },
+              // shippingDetails убран 17.07: Google требует в нём обязательный shippingRate,
+              // а стоимость доставки у нас договорная (зависит от габаритов/региона) — не выдумываем.
             },
           }
         : {}),
