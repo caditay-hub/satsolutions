@@ -7,11 +7,13 @@ import { ogLocale } from "@/lib/ogLocale";
 type ApiReview = { id: string; rating: number; authorName: string | null; text: string | null; serviceKey: string | null; createdAt: string };
 type ApiResp = { avg: number; count: number; items: ApiReview[] };
 
-const UI: Record<string, { title: string; subtitle: string; sectionTitle: string; empty: string; crumbHome: string }> = {
-  ru: { title: "Отзывы клиентов", subtitle: "Оцените нашу работу и почитайте, что говорят клиенты о SAT Solutions.", sectionTitle: "Что говорят клиенты", empty: "Пока нет отзывов — станьте первым, оценив нашу работу выше.", crumbHome: "Главная" },
-  uz: { title: "Mijozlar sharhlari", subtitle: "Ishimizni baholang va SAT Solutions haqida mijozlar nima deyishini o'qing.", sectionTitle: "Mijozlar nima deydi", empty: "Hozircha sharhlar yo'q — birinchi bo'lib ishimizni yuqorida baholang.", crumbHome: "Bosh sahifa" },
-  en: { title: "Customer reviews", subtitle: "Rate our work and see what clients say about SAT Solutions.", sectionTitle: "What clients say", empty: "No reviews yet — be the first by rating our work above.", crumbHome: "Home" },
+const UI: Record<string, { title: string; subtitle: string; sectionTitle: string; empty: string; crumbHome: string; googleCta: string }> = {
+  ru: { title: "Отзывы клиентов", subtitle: "Оцените нашу работу и почитайте, что говорят клиенты о SAT Solutions.", sectionTitle: "Что говорят клиенты", empty: "Пока нет отзывов — станьте первым, оценив нашу работу выше.", crumbHome: "Главная", googleCta: "Оценить нас на Google Картах" },
+  uz: { title: "Mijozlar sharhlari", subtitle: "Ishimizni baholang va SAT Solutions haqida mijozlar nima deyishini o'qing.", sectionTitle: "Mijozlar nima deydi", empty: "Hozircha sharhlar yo'q — birinchi bo'lib ishimizni yuqorida baholang.", crumbHome: "Bosh sahifa", googleCta: "Google Xaritada baholang" },
+  en: { title: "Customer reviews", subtitle: "Rate our work and see what clients say about SAT Solutions.", sectionTitle: "What clients say", empty: "No reviews yet — be the first by rating our work above.", crumbHome: "Home", googleCta: "Rate us on Google Maps" },
 };
+
+const GOOGLE_REVIEW_URL = "https://g.page/r/CekxZiczSJPYEBM/review";
 
 function apiBase() {
   if (typeof window === "undefined") return process.env.API_INTERNAL_URL ?? "http://localhost:4005";
@@ -65,6 +67,15 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
 
         <div className="mt-8 max-w-xl">
           <ReviewForm locale={locale} />
+          <a
+            href={GOOGLE_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center justify-center gap-2 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-800 transition-colors hover:bg-amber-100"
+          >
+            <span aria-hidden>⭐</span>
+            {ui.googleCta}
+          </a>
         </div>
       </div>
 
