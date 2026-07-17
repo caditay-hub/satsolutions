@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { resolveImageUrl } from "@/lib/image";
 
 export type HeroButton = {
@@ -24,11 +24,6 @@ export type HeroSlide = {
 function clamp(n: number, min: number, max: number) {
   return Math.max(min, Math.min(max, n));
 }
-
-const DEFAULT_BUTTONS: HeroButton[] = [
-  { label: "Продукция", href: "/products" },
-  { label: "Контакты", href: "/contact" }
-];
 
 function normalizeButtons(input: unknown): HeroButton[] {
   const arr = Array.isArray(input) ? input : [];
@@ -70,6 +65,26 @@ export function HeroCarousel({
   const [idx, setIdx] = useState(0);
   const count = items.length;
 
+  // Ручной свайп на мобильном: свайп влево/вправо листает слайд.
+  // swipedRef подавляет клик-навигацию по слайду, если это был свайп, а не тап.
+  const startXRef = useRef(0);
+  const swipedRef = useRef(false);
+  function onTouchStart(e: React.TouchEvent) {
+    startXRef.current = e.touches[0]?.clientX ?? 0;
+    swipedRef.current = false;
+  }
+  function onTouchEnd(e: React.TouchEvent) {
+    if (count <= 1) return;
+    const dx = (e.changedTouches[0]?.clientX ?? 0) - startXRef.current;
+    if (Math.abs(dx) > 40) {
+      swipedRef.current = true;
+      setIdx((v) => (dx < 0 ? (v + 1) % count : (v - 1 + count) % count));
+    }
+  }
+  function onSlideClick(e: React.MouseEvent) {
+    if (swipedRef.current) { e.preventDefault(); swipedRef.current = false; }
+  }
+
   useEffect(() => {
     setIdx(0);
   }, [count]);
@@ -94,6 +109,8 @@ export function HeroCarousel({
               width: `${count * 100}%`,
               transform: `translateX(-${idx * (100 / count)}%)`,
             }}
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
           >
             {items.map((slide, i) => {
               const sImg = resolveImageUrl(slide.imageUrl);
@@ -102,7 +119,11 @@ export function HeroCarousel({
               const sIsFallback = !slide.title?.trim();
               const sText = (slide.text ?? "").toString().trim() || fallbackText;
               const sBtns = normalizeButtons(slide.buttons);
-              const sButtons = sBtns.length ? sBtns : DEFAULT_BUTTONS;
+              // Тап по слайду ведёт на его услугу: первая внутренняя ссылка, не /contact
+              // (это «Подробнее»/страница услуги), иначе первая кнопка, иначе /products.
+              const detailBtn = sBtns.find((b) => !isExternalHref(b.href) && !/\/contact\b/i.test(b.href)) ?? sBtns[0];
+              const detailHref = detailBtn?.href || "/products";
+              const detailExternal = isExternalHref(detailHref);
               const isActive = i === idx;
               return (
                 <div
@@ -111,6 +132,12 @@ export function HeroCarousel({
                   style={{ width: `${100 / count}%` }}
                   aria-hidden={!isActive}
                 >
+                  {/* Тап по всему слайду → страница услуги (z-10: под стрелками/точками z-20) */}
+                  {detailExternal ? (
+                    <a href={detailHref} aria-label={sTitle} tabIndex={isActive ? 0 : -1} onClick={onSlideClick} rel="noopener noreferrer" className="absolute inset-0 z-10" />
+                  ) : (
+                    <Link href={detailHref} aria-label={sTitle} tabIndex={isActive ? 0 : -1} onClick={onSlideClick} className="absolute inset-0 z-10" />
+                  )}
                   {sVideo ? (
                     <video
                       src={sVideo}
@@ -175,28 +202,7 @@ export function HeroCarousel({
                           {sText}
                         </p>
 
-                        <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3">
-                          {sButtons.map((b, j) => {
-                            const primary = j === 0;
-                            const className = primary
-                              ? "inline-flex items-center gap-2 rounded-full bg-brand-500 hover:bg-brand-400 text-white font-bold px-7 py-3.5 text-sm shadow-lg shadow-brand-900/30 transition-all hover:shadow-xl hover:shadow-brand-900/40 hover:-translate-y-0.5"
-                              : "inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-7 py-3.5 text-sm ring-1 ring-inset ring-white/30 hover:ring-white/60 transition-all";
-                            const arrow = primary ? (
-                              <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                              </svg>
-                            ) : null;
-                            return isExternalHref(b.href) ? (
-                              <a key={`${b.href}-${j}`} href={b.href} className={`group ${className}`} rel="noopener noreferrer" tabIndex={isActive ? 0 : -1}>
-                                {b.label}{arrow}
-                              </a>
-                            ) : (
-                              <Link key={`${b.href}-${j}`} href={b.href} className={`group ${className}`} tabIndex={isActive ? 0 : -1}>
-                                {b.label}{arrow}
-                              </Link>
-                            );
-                          })}
-                        </div>
+                        {/* Кнопки убраны — весь слайд кликабелен (ссылка-оверлей ниже) */}
                       </div>
                     </div>
                   </div>

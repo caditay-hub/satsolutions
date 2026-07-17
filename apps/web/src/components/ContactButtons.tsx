@@ -9,11 +9,13 @@ const PHONE_HUMAN = "+998 99 554 69 69";
 const WHATSAPP = "https://wa.me/998995546969";
 const TELEGRAM = "https://t.me/SAT_zayavki_online_bot";
 
-export function ContactButtons({ compact = false, hideCall = false }: { compact?: boolean; hideCall?: boolean }) {
+export function ContactButtons({ compact = false, hideCall = false, full = false }: { compact?: boolean; hideCall?: boolean; full?: boolean }) {
   const t = useTranslations("common");
+  // full — кнопки на всю ширину ячейки (для ряда одинаковых кнопок grid grid-cols-3).
+  const layout = full ? "flex w-full justify-center items-center" : "inline-flex items-center";
   const base = compact
-    ? "inline-flex items-center gap-1.5 rounded-lg border px-3 py-2 text-[13px] font-bold transition-colors"
-    : "inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-bold transition-colors";
+    ? `${layout} gap-1.5 rounded-lg border px-3 py-2 text-[13px] font-bold transition-colors`
+    : `${layout} gap-2 rounded-xl border px-4 py-2.5 text-sm font-bold transition-colors`;
   return (
     <>
       {hideCall ? null : (

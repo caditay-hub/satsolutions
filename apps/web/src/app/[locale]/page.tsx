@@ -564,7 +564,10 @@ export default async function HomePage() {
             <p className="text-center text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("distributorLabel")}</p>
             <h2 className="text-center text-2xl font-black text-slate-900 tracking-tight mb-8">{t("officialBrands")}</h2>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            {/* Единая сетка равных ячеек: все логотипы одного стандартного размера,
+                object-contain по центру, крупнее и читаемо. Плейн <img> (не next/image),
+                чтобы избежать искажения фикс. width/height и lazy-квирков. */}
+            <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4 sm:gap-3 md:grid-cols-6">
               {brandList.map((b) => {
                 const logo = resolveImageUrl(b.logoImageUrl);
                 return (
@@ -572,12 +575,13 @@ export default async function HomePage() {
                     key={b.id}
                     href={`/catalog/${b.slug}`}
                     aria-label={b.name}
-                    className="flex h-16 w-[140px] items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
+                    className="flex h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
                   >
                     {logo ? (
-                      <Image alt={b.name} src={logo} width={120} height={48} className="h-10 w-auto object-contain" />
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img alt={b.name} src={logo} loading="lazy" className="max-h-12 max-w-full w-auto object-contain" />
                     ) : (
-                      <span className="text-center text-sm font-black leading-tight text-slate-700">{b.name}</span>
+                      <span className="text-center text-xs font-black leading-tight text-slate-700">{b.name}</span>
                     )}
                   </Link>
                 );
@@ -590,12 +594,14 @@ export default async function HomePage() {
                     href={p.websiteUrl || undefined}
                     target={p.websiteUrl ? "_blank" : undefined}
                     rel="noreferrer"
-                    className="flex h-16 w-[140px] items-center justify-center rounded-xl border border-slate-200 bg-white px-4 shadow-sm hover:shadow-md hover:border-brand-300 transition-all"
+                    aria-label={p.name}
+                    className="flex h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
                   >
                     {logo ? (
-                      <Image alt={p.name} src={logo} width={120} height={48} className="h-10 w-auto object-contain" />
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img alt={p.name} src={logo} loading="lazy" className="max-h-12 max-w-full w-auto object-contain" />
                     ) : (
-                      <span className="text-sm font-black text-slate-700">{p.name}</span>
+                      <span className="text-center text-xs font-black leading-tight text-slate-700">{p.name}</span>
                     )}
                   </a>
                 );

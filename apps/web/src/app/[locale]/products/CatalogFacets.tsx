@@ -81,6 +81,8 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   const router = useRouter();
   const pathname = usePathname();
   const tc = useTranslations("catalog");
+  const tSearch = useTranslations("search");
+  const [qInput, setQInput] = useState("");
   const locale = useLocale();
   const showBrands = show?.brands !== false;
   const showTypes = show?.types !== false;
@@ -183,6 +185,27 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
           <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
         ) : null}
       </div>
+
+      {/* Поиск по всему сайту — над фильтром цен. Переход на страницу результатов /products?q= */}
+      <form
+        role="search"
+        onSubmit={(e) => { e.preventDefault(); const v = qInput.trim(); if (v) router.push(`/products?q=${encodeURIComponent(v)}`); }}
+        className="px-1"
+      >
+        <div className="relative">
+          <svg className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.34-4.34M17 10.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" />
+          </svg>
+          <input
+            type="search"
+            value={qInput}
+            onChange={(e) => setQInput(e.target.value)}
+            placeholder={tSearch("placeholder")}
+            aria-label={tSearch("aria")}
+            className="h-9 w-full rounded-lg border border-slate-300 bg-white pl-9 pr-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-brand-600"
+          />
+        </div>
+      </form>
 
       {/* Порядок групп: сначала Цена, затем Бренд, Тип товара и характеристики. */}
       {bMax > 0 && (

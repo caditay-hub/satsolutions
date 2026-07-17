@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import type { Socket } from "socket.io-client";
+
+const PHONE_OPTIONAL: Record<string, string> = { ru: "необязательно", uz: "ixtiyoriy", en: "optional", tr: "isteğe bağlı", zh: "可选" };
 import { trackConversion } from "@/lib/gtag";
 
 type Msg = {
@@ -53,7 +55,8 @@ function getProfile(): Profile | null {
   try {
     const name = window.localStorage.getItem("sat_chat_name") || "";
     const phone = window.localStorage.getItem("sat_chat_phone") || "";
-    if (name.trim() && phone.trim()) return { name: name.trim(), phone: phone.trim() };
+    // Телефон необязателен: достаточно имени, чтобы начать чат.
+    if (name.trim()) return { name: name.trim(), phone: phone.trim() };
   } catch {
     // ignore
   }
@@ -106,6 +109,7 @@ function fmtTime(d: any) {
 
 export function ChatWidget() {
   const tw = useTranslations("chat");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [connecting, setConnecting] = useState(false);
   const [connected, setConnected] = useState(false);
@@ -462,11 +466,11 @@ export function ChatWidget() {
   function submitProfile() {
     const name = formName.trim();
     const phoneRest = digitsOnly(formPhoneRest);
-    if (name.length < 2 || phoneRest.length < 9) return;
+    // Телефон необязателен — достаточно имени. Если телефон есть (9 цифр) — прикладываем к конверсии.
+    if (name.length < 2) return;
     const p: Profile = { name, phone: phoneRest };
-    // Лид из онлайн-чата: пользователь оставил имя+телефон — конверсия в Google Ads.
-    // Только при первом заполнении профиля (не на повторных правках), чтобы не задваивать.
-    if (!profileRef.current) trackConversion("chat", { user: { phone: `+998${phoneRest}` } });
+    // Лид из онлайн-чата — конверсия в Google Ads (только при первом заполнении профиля).
+    if (!profileRef.current) trackConversion("chat", phoneRest.length >= 9 ? { user: { phone: `+998${phoneRest}` } } : undefined);
     saveProfile(p);
     setProfile(p);
     // Re-announce profile so an existing conversation gets the name/phone attached.
@@ -531,7 +535,7 @@ export function ChatWidget() {
                 />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-900">{tw("phone")}</div>
+                <div className="text-xs font-bold text-slate-900">{tw("phone")} <span className="font-normal text-slate-400">({PHONE_OPTIONAL[locale] ?? PHONE_OPTIONAL.ru})</span></div>
                 <div className="mt-1 flex overflow-hidden rounded-lg border border-slate-300 focus-within:border-brand-600">
                   <div className="flex items-center bg-slate-100 px-3 text-sm font-bold text-slate-900">+998</div>
                   <input
@@ -555,7 +559,7 @@ export function ChatWidget() {
               <button
                 type="button"
                 onClick={submitProfile}
-                disabled={formName.trim().length < 2 || digitsOnly(formPhoneRest).length < 9}
+                disabled={formName.trim().length < 2}
                 className="w-full rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
               >
                 {tw("start")}

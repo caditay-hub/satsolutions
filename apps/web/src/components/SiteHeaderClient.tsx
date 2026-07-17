@@ -288,6 +288,9 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
           <HeaderSearch className="hidden lg:block w-40 xl:w-48 2xl:w-56" />
           <LanguageSwitcher className="hidden lg:block" />
 
+          {/* Мобильный переключатель языков — в пустом месте между лого и «гамбургером» */}
+          <LanguageSwitcher className="lg:hidden" />
+
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -333,6 +336,8 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                             {t(item.key)}
                           </summary>
                           <div className="border-t border-slate-100 px-2 py-2">
+                            <Link href="/categories" className="block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">Все категории →</Link>
+                            <Link href="/catalog" className="mt-1 mb-2 block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">Все бренды →</Link>
                             {CATALOG_GROUPS.map((g) => (
                               <details key={g.title} className="px-2">
                                 <summary className="cursor-pointer list-none py-2 text-[13px] font-semibold text-slate-700">{g.title}</summary>
@@ -345,8 +350,6 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 </div>
                               </details>
                             ))}
-                            <Link href="/categories" className="mt-1 block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">Все категории →</Link>
-                            <Link href="/catalog" className="block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">Все бренды →</Link>
                           </div>
                         </details>
                       );
@@ -356,6 +359,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                         <details key={item.href} className="rounded-xl border border-slate-200 bg-white">
                           <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-slate-900">{t(item.key)}</summary>
                           <div className="border-t border-slate-100 px-2 py-2">
+                            <Link href="/solutions" className="mb-2 block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">{t("allServices")} →</Link>
                             {solutionGroups.map((g, gi) => (
                               <div key={gi} className="px-2 pb-1">
                                 {g.label ? <div className="py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{g.label}</div> : null}
@@ -364,7 +368,6 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 ))}
                               </div>
                             ))}
-                            <Link href="/solutions" className="mt-1 block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">{t("allServices")} →</Link>
                           </div>
                         </details>
                       );
@@ -394,10 +397,6 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                       </Link>
                     );
                   })}
-                </div>
-
-                <div className="mt-4">
-                  <LanguageSwitcher />
                 </div>
 
                 <div className="mt-6 grid gap-2">

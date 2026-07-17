@@ -352,18 +352,23 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             ) : null}
 
             {/* Цена + CTA в одном ряду — компактнее, контент поднимается выше */}
-            <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="mt-3">
               <div className="text-2xl font-black text-[#e02020]">{priceLabel(product)}</div>
-              <OrderButton
-                productId={product.id}
-                productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
-                price={product.price}
-                label={t("common.order")}
-                variant="primary"
-              />
-              {/* Одна линия: Заказать — Telegram — WhatsApp (без «Позвонить», номер есть в шапке) */}
-              <ContactButtons compact hideCall />
-              <BackButton />
+              {/* Заказать — Telegram — WhatsApp: три одинаковые кнопки в один ряд (моб. и десктоп) */}
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                <OrderButton
+                  productId={product.id}
+                  productName={`${locName}${modelCode ? ` (${modelCode})` : ""}`}
+                  price={product.price}
+                  label={t("common.order")}
+                  variant="primary"
+                  fullWidth
+                />
+                <ContactButtons compact hideCall full />
+              </div>
+              <div className="mt-2">
+                <BackButton />
+              </div>
             </div>
 
             {/* Key highlights (icons) */}
