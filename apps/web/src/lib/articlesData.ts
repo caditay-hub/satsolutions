@@ -445,6 +445,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "How to Choose an Intercom for a Home or Office",
+        excerpt: "Audio or video, analogue or IP, calls to your phone — how to choose an intercom for an apartment, house, office or residential complex.",
+        sections: [
+          { h: "Audio or video intercom", p: [
+            "An audio intercom gives only voice communication and door release — a budget option for an entrance hall. A video intercom shows the visitor on a monitor, which is noticeably safer and more convenient.",
+            "For private houses, offices and apartments today the choice is video intercoms.",
+          ] },
+          { h: "IP or analogue", p: [
+            "An analogue video intercom is simple and reliable for one or two points. An IP intercom delivers high-quality video, event recording, viewing from your phone anywhere and integration with access control and smart home.",
+            "For apartment buildings and residential complexes we design multi-tenant IP systems with entrance panels and individual monitors.",
+          ] },
+          { h: "Useful features", p: [
+            "Look for calls and door release from a smartphone, motion-triggered recording, night illumination of the panel and — outdoors — vandal and weather protection.",
+            "We will select and install an intercom for your site — with remote access setup and warranty.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Ev ve Ofis İçin Diafon Nasıl Seçilir",
+        excerpt: "Sesli mi görüntülü mü, analog mu IP mi, telefona arama — daire, ev, ofis veya site için diafon seçimi.",
+        sections: [
+          { h: "Sesli mi görüntülü mü", p: [
+            "Sesli diafon yalnızca konuşma ve kapı açma sağlar — apartman girişi için bütçe dostu seçenek. Görüntülü diafon ziyaretçiyi ekranda gösterir; bu belirgin şekilde daha güvenli ve pratiktir.",
+            "Müstakil ev, ofis ve daireler için bugün tercih görüntülü diafonlardan yanadır.",
+          ] },
+          { h: "IP mi analog mu", p: [
+            "Analog görüntülü diafon bir-iki nokta için basit ve güvenilirdir. IP diafon yüksek görüntü kalitesi, olay kaydı, her yerden telefonla izleme ve geçiş kontrolü ile akıllı ev entegrasyonu sunar.",
+            "Apartmanlar ve siteler için çağrı panelli, bağımsız monitörlü çok aboneli IP sistemler projelendirilir.",
+          ] },
+          { h: "Faydalı özellikler", p: [
+            "Akıllı telefondan arama ve kapı açma, harekete duyarlı kayıt, panelin gece aydınlatması, dış mekânda ise vandalizme ve hava koşullarına dayanıklılığa dikkat edin.",
+            "Sahanıza uygun diafonu seçer ve kurarız — uzaktan erişim ayarı ve garantiyle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "如何为住宅和办公室选择楼宇对讲",
+        excerpt: "语音还是可视、模拟还是IP、手机接听——如何为公寓、住宅、办公室或小区选择对讲系统。",
+        sections: [
+          { h: "语音对讲还是可视对讲", p: [
+            "语音对讲只提供通话和开门功能，是楼道的经济方案。可视对讲能在屏幕上看到访客，明显更安全、更方便。",
+            "如今私人住宅、办公室和公寓都首选可视对讲。",
+          ] },
+          { h: "IP还是模拟", p: [
+            "模拟可视对讲适合一两个点位，简单可靠。IP对讲提供高清视频、事件录像、随时随地手机查看，并可与门禁和智能家居集成。",
+            "对于多层住宅和小区，我们设计带门口机和户内分机的多户IP系统。",
+          ] },
+          { h: "实用功能", p: [
+            "关注手机呼叫与开门、移动侦测录像、面板夜间背光；室外面板还要防破坏、防风雨。",
+            "我们为您的项目选型并安装对讲系统——包含远程访问配置和质保。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -485,6 +539,60 @@ export const ARTICLES: Article[] = [
           { h: "Loyihaga nima kiradi", p: [
             "Narxga kontrollerlar, o'quvchilar, qulflar yoki turniketlar, chiqish tugmalari, quvvat bloki, kabel, montaj, kirish huquqlarini sozlash va xodimlarni o'qitish kiradi.",
             "Aniq smeta olish uchun muhandisning bepul chiqishini buyurtma qiling — obyektingiz uchun SKUD ni Toshkentda va butun O'zbekiston bo'ylab hisoblaymiz.",
+          ] },
+        ],
+      },
+      en: {
+        title: "How Much Does Access Control Cost: What Makes Up the Price",
+        excerpt: "Breaking down the cost of an access control system: entry points, identification type, locks and turnstiles — and where you can save.",
+        sections: [
+          { h: "What makes up the cost of ACS", p: [
+            "The price of an access control system depends on the number of entry points, the identification type (card, code, fingerprint, face), the locking devices (lock or turnstile) and the software. The more doors and the more complex the access logic, the higher the hardware and installation cost.",
+            "Integration is priced separately — with time attendance, CCTV or 1C. A basic single-door ACS is inexpensive; a checkpoint with turnstiles and biometrics costs more.",
+          ] },
+          { h: "From cards to biometrics", p: [
+            "The most budget-friendly option is card readers with an electromagnetic lock on one door. Biometric terminals (fingerprint, facial recognition) and turnstiles for high-traffic checkpoints cost more.",
+            "We balance price against the task: sometimes cards are enough, sometimes biometrics is needed, and at the checkpoint — a turnstile with time attendance.",
+          ] },
+          { h: "What the project includes", p: [
+            "The price covers controllers, readers, locks or turnstiles, exit buttons, power supply, cabling, installation, access rights configuration and staff training.",
+            "For an exact quote, book a free engineer visit — we will size an ACS for your site in Tashkent and across Uzbekistan.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Geçiş Kontrol Sistemi Kurulumu Ne Kadar Tutar: Fiyat Neye Bağlı",
+        excerpt: "Geçiş kontrol sisteminin maliyetini inceliyoruz: geçiş noktaları, kimlik doğrulama türü, kilitler ve turnikeler — ve nereden tasarruf edilebilir.",
+        sections: [
+          { h: "Maliyet neye bağlı", p: [
+            "Sistemin fiyatı geçiş noktası sayısına, kimlik doğrulama türüne (kart, kod, parmak izi, yüz), kilitleme cihazlarına (kilit veya turnike) ve yazılıma bağlıdır. Kapı sayısı ve erişim mantığı karmaşıklaştıkça donanım ve montaj maliyeti artar.",
+            "Entegrasyon ayrı hesaplanır — mesai takibi, CCTV veya 1C ile. Tek kapılık temel sistem ucuzdur; turnikeli ve biyometrik danışma girişi daha pahalıdır.",
+          ] },
+          { h: "Karttan biyometriye", p: [
+            "En ekonomik seçenek tek kapıya kartlı okuyucu ve elektromanyetik kilittir. Biyometrik terminaller (parmak izi, yüz tanıma) ve yoğun girişler için turnikeler daha pahalıdır.",
+            "Fiyat ile ihtiyacı dengeliyoruz: bazen kart yeterli, bazen biyometri gerekli; girişte ise mesai takibi yapan turnike.",
+          ] },
+          { h: "Projeye neler dahil", p: [
+            "Fiyata kontrolörler, okuyucular, kilitler veya turnikeler, çıkış butonları, güç kaynağı, kablolama, montaj, yetki yapılandırması ve personel eğitimi dahildir.",
+            "Kesin teklif için ücretsiz keşif talep edin — Taşkent'te ve tüm Özbekistan'da sahanıza uygun sistemi hesaplayalım.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "安装门禁系统要多少钱：价格由什么构成",
+        excerpt: "解析门禁系统的成本：通行点数量、识别方式、锁具和闸机——以及哪些地方可以节省。",
+        sections: [
+          { h: "门禁系统的成本构成", p: [
+            "门禁系统的价格取决于通行点数量、识别方式（卡片、密码、指纹、人脸）、锁闭装置（锁具或闸机）和软件。门越多、权限逻辑越复杂，设备和安装费用越高。",
+            "与考勤、视频监控或1C的集成单独计价。单门基础门禁很经济；带闸机和生物识别的出入口造价更高。",
+          ] },
+          { h: "从刷卡到生物识别", p: [
+            "最经济的方案是单门刷卡读卡器加电磁锁。生物识别终端（指纹、人脸识别）和大人流出入口的闸机价格更高。",
+            "我们在价格和需求之间取得平衡：有的场景刷卡足够，有的需要生物识别，出入口则配备带考勤功能的闸机。",
+          ] },
+          { h: "项目包含什么", p: [
+            "费用包含控制器、读卡器、锁具或闸机、出门按钮、电源、线缆、安装、权限配置和人员培训。",
+            "如需精确报价，请预约工程师免费上门——我们为您在塔什干及乌兹别克斯坦全境的项目做门禁测算。",
           ] },
         ],
       },
@@ -531,6 +639,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Time Attendance: How to Choose a System",
+        excerpt: "How automatic time attendance works, what to choose — card, fingerprint or face — and how to export the timesheet to 1C.",
+        sections: [
+          { h: "How time attendance works", p: [
+            "Employees clock in at a terminal with a card, fingerprint or face; the system automatically records arrivals and departures and counts hours worked. Manual timesheets and overtime disputes become a thing of the past.",
+            "Managers see the data in real time: who is on site, who is late, how many hours were worked per shift and per month.",
+          ] },
+          { h: "Card, fingerprint or face", p: [
+            "Cards are cheap but get passed around. Fingerprints are more reliable but require clean, dry hands. Facial recognition is the most convenient and contactless option — especially relevant after the pandemic.",
+            "We match the clock-in method to the site's discipline and budget; cards and biometrics are often combined.",
+          ] },
+          { h: "Integration and reports", p: [
+            "The system exports timesheets to 1C and other accounting software and builds reports on lateness and overtime. Time attendance merges with access control: one terminal both admits the employee and counts the hours.",
+            "We deploy turnkey in Tashkent and across Uzbekistan — with reports configured to your accounting policy, training and support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Personel Devam Kontrol (Mesai Takibi): Sistem Nasıl Seçilir",
+        excerpt: "Otomatik mesai takibi nasıl çalışır, kart mı parmak izi mi yüz mü seçmeli ve puantaj 1C'ye nasıl aktarılır.",
+        sections: [
+          { h: "Mesai takibi nasıl çalışır", p: [
+            "Çalışanlar terminalde kart, parmak izi veya yüzle kayıt olur; sistem geliş-gidişleri otomatik kaydeder ve çalışılan saatleri hesaplar. Elle puantaj ve fazla mesai tartışmaları geçmişte kalır.",
+            "Veriler yöneticiye gerçek zamanlı açıktır: kim yerinde, kim geç kaldı, vardiyada ve ayda kaç saat çalışıldı.",
+          ] },
+          { h: "Kart, parmak izi veya yüz", p: [
+            "Kart ucuzdur ama elden ele verilebilir. Parmak izi daha güvenilirdir ama temiz ve kuru el ister. Yüz tanıma en pratik ve temassız yöntemdir — pandemi sonrası özellikle günceldir.",
+            "Kayıt yöntemini sahadaki disipline ve bütçeye göre seçiyoruz; genellikle kart ve biyometri birlikte kullanılır.",
+          ] },
+          { h: "Entegrasyon ve raporlar", p: [
+            "Sistem puantajı 1C ve diğer muhasebe programlarına aktarır, geç kalma ve fazla mesai raporları oluşturur. Mesai takibi geçiş kontrolüyle birleşir: tek terminal hem kapıyı açar hem saatleri sayar.",
+            "Taşkent'te ve tüm Özbekistan'da anahtar teslim kuruyoruz — raporlar muhasebe politikanıza göre ayarlanır, eğitim ve destek dahildir.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "考勤系统：如何选择",
+        excerpt: "自动考勤如何运作，该选刷卡、指纹还是人脸，以及如何把考勤表导出到1C。",
+        sections: [
+          { h: "考勤系统如何运作", p: [
+            "员工在终端用卡片、指纹或人脸打卡；系统自动记录上下班并统计工时。手工考勤表和加班争议从此成为过去。",
+            "管理者可实时查看数据：谁在岗、谁迟到、每班次和每月工作了多少小时。",
+          ] },
+          { h: "刷卡、指纹还是人脸", p: [
+            "卡片便宜，但容易代打卡。指纹更可靠，但需要手指干净干燥。人脸识别最方便且无接触——疫情之后尤其实用。",
+            "我们根据现场管理要求和预算选择打卡方式；常见做法是卡片与生物识别结合。",
+          ] },
+          { h: "集成与报表", p: [
+            "系统可将考勤表导出到1C等财务软件，生成迟到和加班报表。考勤与门禁合二为一：同一台终端既放行员工又统计工时。",
+            "我们在塔什干及乌兹别克斯坦全境提供交钥匙部署——按您的核算制度配置报表，并提供培训和支持。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -571,6 +733,60 @@ export const ARTICLES: Article[] = [
           { h: "Montajda nima muhim", p: [
             "Alohida mehmon tarmog'i, barcha nuqtalarni boshqarish uchun yagona kontroller, nuqtalarni PoE orqali quvvatlash (bitta kabel — ma'lumot va quvvat) va o'zaro xalaqitlarga qarshi to'g'ri kanallar.",
             "Ubiquiti, MikroTik, TP-Link uskunasida Wi-Fi ni kalit topshirish asosida sozlaymiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va qo'llab-quvvatlash bilan.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Wi-Fi for Office and Warehouse: Building a Seamless Network",
+        excerpt: "Why one router is not enough, how many access points you need and what matters when installing corporate Wi-Fi.",
+        sections: [
+          { h: "Why one router is not enough", p: [
+            "A consumer router cannot cover an entire office or warehouse: the signal drops in far rooms and devices lose connection while moving. You need a network of access points with seamless roaming — devices switch between points without dropping.",
+            "For business this is critical: video calls, POS, warehouse operations and IP telephony must work reliably anywhere in the building.",
+          ] },
+          { h: "How many access points you need", p: [
+            "The number of points depends on the area, walls and user density. An open office needs roughly one point per 100–150 m²; a warehouse with tall racks and concrete demands denser placement.",
+            "An on-site radio survey gives the exact figure — we visit, measure coverage and design a network with no dead zones.",
+          ] },
+          { h: "What matters during installation", p: [
+            "A separate guest network, a single controller managing all points, PoE power (one cable for data and power) and correct channel planning against interference.",
+            "We deploy turnkey Wi-Fi on Ubiquiti, MikroTik and TP-Link equipment in Tashkent and across Uzbekistan — with warranty and support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Ofis ve Depo İçin Wi-Fi: Kesintisiz Ağ Nasıl Kurulur",
+        excerpt: "Neden tek router yetmez, kaç erişim noktası gerekir ve kurumsal Wi-Fi kurulumunda neler önemlidir.",
+        sections: [
+          { h: "Neden tek router yetmez", p: [
+            "Ev tipi router ofisi veya depoyu tamamen kapsayamaz: uzak odalarda sinyal düşer, hareket eden cihazlar bağlantıyı koparır. Kesintisiz dolaşımlı (roaming) erişim noktaları ağı gerekir — cihaz noktalar arasında kopmadan geçer.",
+            "İş için bu kritiktir: görüntülü görüşmeler, kasa, depo ve IP telefon binanın her yerinde istikrarlı çalışmalıdır.",
+          ] },
+          { h: "Kaç erişim noktası gerekir", p: [
+            "Nokta sayısı alana, duvarlara ve kullanıcı yoğunluğuna bağlıdır. Açık ofiste yaklaşık her 100–150 m²'ye bir nokta; yüksek raflı, betonarme depo daha sık yerleşim ister.",
+            "Kesin hesabı sahada radyo keşfi verir — gelir, kapsamayı ölçer ve ölü bölgesi olmayan bir ağ tasarlarız.",
+          ] },
+          { h: "Kurulumda neler önemli", p: [
+            "Ayrı misafir ağı, tüm noktaları yöneten tek kontrolör, PoE ile besleme (tek kablo — veri ve güç) ve parazite karşı doğru kanal planlaması.",
+            "Ubiquiti, MikroTik, TP-Link ekipmanıyla anahtar teslim Wi-Fi kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve destekle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "办公室和仓库Wi-Fi：如何打造无缝网络",
+        excerpt: "为什么一台路由器不够用，需要多少个接入点，企业级Wi-Fi施工要注意什么。",
+        sections: [
+          { h: "为什么一台路由器不够用", p: [
+            "家用路由器无法覆盖整个办公室或仓库：远端房间信号衰减，设备移动时连接中断。需要由多个接入点组成的无缝漫游网络——设备在接入点之间切换而不断线。",
+            "这对企业至关重要：视频会议、收银、仓储和IP电话必须在楼内任何位置稳定运行。",
+          ] },
+          { h: "需要多少个接入点", p: [
+            "接入点数量取决于面积、墙体和用户密度。开放式办公室约每100–150平方米一个接入点；高货架和混凝土结构的仓库需要更密集的布点。",
+            "精确数字来自现场无线勘测——我们上门测量覆盖，设计没有盲区的网络。",
+          ] },
+          { h: "施工中的要点", p: [
+            "独立的访客网络、统一管理所有接入点的控制器、PoE供电（一根网线同时传数据和供电）以及合理的信道规划以避免干扰。",
+            "我们使用Ubiquiti、MikroTik、TP-Link设备提供交钥匙Wi-Fi部署——覆盖塔什干及乌兹别克斯坦全境，含质保和支持。",
           ] },
         ],
       },
