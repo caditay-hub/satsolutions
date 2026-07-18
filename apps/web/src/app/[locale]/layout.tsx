@@ -114,6 +114,19 @@ export default async function RootLayout({
     ],
   };
 
+  // WebSite + SearchAction: сайт-поиск в выдаче Google (sitelinks searchbox) — поиск каталога ?q=
+  const webSiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "SAT Solutions",
+    url: siteUrl,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/products?q={search_term_string}` },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -202,6 +215,10 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteLd) }}
         />
         {/* Google tag (gtag.js) — Google Ads AW-18194158897 + GA4 G-SHQYK1BS1S (один gtag.js на оба) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194158897" />

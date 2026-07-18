@@ -13,6 +13,12 @@ const REMOVED_RE = new RegExp(`^(?:/(${localeAlt}))?/products/([^/]+)/?$`);
 // Вариант с /public/ (внутренний путь старого движка) тоже жил в индексе Google.
 const OLDSITE_RE = new RegExp(`^(?:/public)?(?:/(${localeAlt}|ru))?/(product/show|products/filter|category|brand)(/.+)?$`);
 
+// Дубли услуг из БД → 308 на каноническую (найдено техпрогоном 19.07: задвоение «Охранные системы»).
+const REMOVED_SERVICE_REDIRECTS: Record<string, string> = {
+  "ohrannye-sistemy-2": "ohrannye-sistemy",
+};
+const SVC_RE = new RegExp(`^(?:/(${localeAlt}))?/solutions/([^/]+)/?$`);
+
 // Точечные маппинги старых URL, которые ДО СИХ ПОР ранжируются в Google (из GSC):
 // ведём не на общий каталог, а на живой релевантный товар/раздел — сохраняем показы.
 const LEGACY_PRODUCT_REDIRECTS: Record<string, string> = {
@@ -34,6 +40,14 @@ export default function middleware(req: NextRequest) {
     if (brand) {
       const prefix = m[1] ? `/${m[1]}` : "";
       return NextResponse.redirect(new URL(`${prefix}/catalog/${brand}`, req.url), 308);
+    }
+  }
+  const sm = req.nextUrl.pathname.match(SVC_RE);
+  if (sm) {
+    const dest = REMOVED_SERVICE_REDIRECTS[decodeURIComponent(sm[2])];
+    if (dest) {
+      const prefix = sm[1] ? `/${sm[1]}` : "";
+      return NextResponse.redirect(new URL(`${prefix}/solutions/${dest}`, req.url), 308);
     }
   }
   const old = req.nextUrl.pathname.match(OLDSITE_RE);
