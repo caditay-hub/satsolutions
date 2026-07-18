@@ -188,8 +188,52 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       try {
         const similar = await getProducts(1, 12, { category: categoryInfo.slug, brand: brandInfo?.slug });
         similarItems = similar.items.filter((p: any) => p.id !== product.id).slice(0, 6);
+        // Фолбэк: если внутри бренда похожих мало — добираем по категории без бренда
+        if (similarItems.length < 3) {
+          const wide = await getProducts(1, 12, { category: categoryInfo.slug });
+          const seen = new Set([product.id, ...similarItems.map((p: any) => p.id)]);
+          for (const p of wide.items) {
+            if (!seen.has(p.id)) { seen.add(p.id); similarItems.push(p); }
+            if (similarItems.length >= 6) break;
+          }
+        }
       } catch {
         // ignore
+      }
+    }
+
+    // «С этим покупают»: сопутствующие из смежных категорий (кросс-селл + внутренние
+    // ссылки между ветками каталога — глубина обхода). Карта: категория → аксессуары.
+    const ACCESSORY_MAP: Array<[RegExp, string[]]> = [
+      [/регистратор|nvr|dvr/i, ["Жёсткие диски", "ИБП и электропитание"]],
+      [/камер|видеонаблюд/i, ["Кронштейны и аксессуары", "Жёсткие диски", "СКС (витая пара)"]],
+      [/коммутатор|маршрутизатор/i, ["SFP-модули и трансиверы", "СКС (витая пара)", "Телекоммуникационные шкафы"]],
+      [/wi-?fi|точк|радиомост|беспровод/i, ["СКС (витая пара)", "Кронштейны и аксессуары"]],
+      [/сервер/i, ["ИБП и электропитание", "Телекоммуникационные шкафы", "Жёсткие диски"]],
+      [/домофон/i, ["Терминалы и считыватели", "Кабель"]],
+      [/скуд|турникет|терминал|считыват|замок/i, ["Кабель", "ИБП и электропитание"]],
+      [/пожарн|извещател|сигнализац|оповещ/i, ["Кабель", "ИБП и электропитание"]],
+      [/pon|оптик|sfp/i, ["Оптика и аксессуары"]],
+      [/телефон/i, ["СКС (витая пара)", "Коммутаторы"]],
+    ];
+    let accessoryItems: any[] = [];
+    if (categoryInfo) {
+      const accCats = ACCESSORY_MAP.find(([re]) => re.test(categoryInfo.name))?.[1] ?? [];
+      if (accCats.length) {
+        try {
+          const lists = await Promise.all(
+            accCats.slice(0, 3).map((n) => getProducts(1, 3, { type: n }).catch(() => ({ items: [] as any[] })))
+          );
+          const seen = new Set<string>([product.id, ...similarItems.map((p: any) => p.id)]);
+          for (const l of lists) {
+            for (const p of l.items as any[]) {
+              if (!seen.has(p.id)) { seen.add(p.id); accessoryItems.push(p); }
+            }
+          }
+          accessoryItems = accessoryItems.slice(0, 6);
+        } catch {
+          // ignore
+        }
       }
     }
 
@@ -504,6 +548,18 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             </div>
             <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
               {similarItems.map((p: any) => (
+                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* «С этим покупают» — сопутствующие из смежных категорий (кросс-селл + перелинковка) */}
+        {accessoryItems.length > 0 && (
+          <div className="mt-8">
+            <div className="mb-3 text-lg font-bold tracking-tight">{t("product.boughtWith")}</div>
+            <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+              {accessoryItems.map((p: any) => (
                 <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
               ))}
             </div>
