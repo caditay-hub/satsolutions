@@ -567,7 +567,7 @@ export default async function HomePage() {
             {/* Единая сетка равных ячеек: все логотипы одного стандартного размера,
                 object-contain по центру, крупнее и читаемо. Плейн <img> (не next/image),
                 чтобы избежать искажения фикс. width/height и lazy-квирков. */}
-            <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4 sm:gap-3 md:grid-cols-6">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
               {brandList.map((b) => {
                 const logo = resolveImageUrl(b.logoImageUrl);
                 return (
@@ -575,13 +575,13 @@ export default async function HomePage() {
                     key={b.id}
                     href={`/catalog/${b.slug}`}
                     aria-label={b.name}
-                    className="flex h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
+                    className="flex h-[92px] items-center justify-center rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
                   >
                     {logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img alt={b.name} src={logo} loading="lazy" className="max-h-12 max-w-full w-auto object-contain" />
+                      <img alt={b.name} src={logo} loading="lazy" className="h-full w-full object-contain" />
                     ) : (
-                      <span className="text-center text-xs font-black leading-tight text-slate-700">{b.name}</span>
+                      <span className="text-center text-[13px] font-black leading-tight text-slate-800">{b.name}</span>
                     )}
                   </Link>
                 );
@@ -595,11 +595,11 @@ export default async function HomePage() {
                     target={p.websiteUrl ? "_blank" : undefined}
                     rel="noreferrer"
                     aria-label={p.name}
-                    className="flex h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
+                    className="flex h-[92px] items-center justify-center rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
                   >
                     {logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img alt={p.name} src={logo} loading="lazy" className="max-h-12 max-w-full w-auto object-contain" />
+                      <img alt={p.name} src={logo} loading="lazy" className="h-full w-full object-contain" />
                     ) : (
                       <span className="text-center text-xs font-black leading-tight text-slate-700">{p.name}</span>
                     )}
