@@ -1318,6 +1318,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Structured Cabling (SCS) and Office LAN Installation: Stages",
+        excerpt: "What a structured cabling system is, what stages installation involves and what matters for a reliable office network.",
+        sections: [
+          { h: "What SCS is and why you need it", p: [
+            "A structured cabling system (SCS) is the unified cable backbone of an office: one wiring plant for computers, telephony, Wi-Fi, CCTV and other systems. A well-built SCS eliminates cable chaos and makes connecting new devices easy.",
+            "It is the foundation of the IT infrastructure: the stability of the whole company network depends on cabling quality.",
+          ] },
+          { h: "Installation stages", p: [
+            "Design and workplace layout, cable route installation (trays, trunking), server cabinet and patch panels, outlet installation and switch connection, labelling and testing of every line, as-built documentation handover.",
+            "Precision matters at every stage — redoing a cable route costs more than doing it right the first time.",
+          ] },
+          { h: "What matters during installation", p: [
+            "Cable and components of proven categories (Cat5e/Cat6), spare ports for company growth, tidy cable management and a cable journal for maintenance.",
+            "We install SCS and office LANs turnkey in Tashkent and across Uzbekistan — with warranty and ongoing support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Yapısal Kablolama ve Ofis Yerel Ağı Kurulumu: Aşamalar",
+        excerpt: "Yapısal kablolama sistemi nedir, kurulum hangi aşamalardan oluşur ve güvenilir ofis ağı için neler önemlidir.",
+        sections: [
+          { h: "Yapısal kablolama nedir, neden gerekli", p: [
+            "Yapısal kablolama sistemi ofisin tek kablo altyapısıdır: bilgisayarlar, telefon, Wi-Fi, kamera ve diğer sistemler için tek tesisat. Doğru kurulmuş sistem kablo karmaşasını ortadan kaldırır ve yeni cihaz bağlamayı kolaylaştırır.",
+            "Bu, BT altyapısının temelidir: tüm şirket ağının istikrarı kablolama kalitesine bağlıdır.",
+          ] },
+          { h: "Kurulum aşamaları", p: [
+            "Projelendirme ve çalışma yerleri şeması, kablo güzergâhlarının döşenmesi (tavalar, kanallar), sunucu kabini ve patch panellerin kurulumu, priz montajı ve switch bağlantısı, her hattın etiketlenip test edilmesi, uygulama dokümantasyonunun teslimi.",
+            "Her aşamada titizlik önemlidir — kablo güzergâhını yeniden yapmak, baştan doğru yapmaktan pahalıdır.",
+          ] },
+          { h: "Kurulumda neler önemli", p: [
+            "Kanıtlanmış kategoride kablo ve bileşenler (Cat5e/Cat6), şirket büyümesi için yedek portlar, düzenli kablo yönetimi ve bakım için kablo defteri.",
+            "Yapısal kablolama ve yerel ağları anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve sonraki destekle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "办公室综合布线（SCS）与局域网施工：步骤",
+        excerpt: "什么是综合布线系统，施工分哪些阶段，可靠的办公网络要注意什么。",
+        sections: [
+          { h: "什么是综合布线，为什么需要", p: [
+            "综合布线系统（SCS）是办公室统一的线缆基础：一套布线同时服务电脑、电话、Wi-Fi、视频监控等系统。规范的布线消除了线缆混乱，接入新设备也更简单。",
+            "这是IT基础设施的地基：整个企业网络的稳定性取决于布线质量。",
+          ] },
+          { h: "施工步骤", p: [
+            "设计与工位图、敷设线缆路由（桥架、线槽）、安装机柜和配线架、安装面板并接入交换机、每条链路标记与测试、移交竣工文档。",
+            "每个环节都要精细——返工线缆路由比一次做对更昂贵。",
+          ] },
+          { h: "施工要点", p: [
+            "使用可靠等级的线缆和配件（Cat5e/Cat6）、为公司发展预留端口、整洁的理线以及便于维护的线缆台账。",
+            "我们在塔什干及乌兹别克斯坦全境提供综合布线和局域网交钥匙施工——含质保和后续支持。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -1358,6 +1412,60 @@ export const ARTICLES: Article[] = [
           { h: "Nimani sozlash mumkin", p: [
             "Qo'ng'iroqlarni qabul qilish ssenariylari, yo'naltirish, navbatlar, CRM bilan integratsiya (qo'ng'iroq mijoz kartasini ochadi), suhbatlarni yozib olish va qo'ng'iroqlar tahlili.",
             "IP-telefoniyani kalit topshirish asosida joriy etamiz — Toshkentda va butun O'zbekiston bo'ylab, sozlash, o'qitish va qo'llab-quvvatlash bilan.",
+          ] },
+        ],
+      },
+      en: {
+        title: "IP Telephony for the Office: How to Choose a PBX",
+        excerpt: "Why IP telephony beats legacy lines, cloud vs on-premise PBX, and what can be configured — CRM integration, recording, queues.",
+        sections: [
+          { h: "Why IP telephony beats legacy lines", p: [
+            "IP telephony works over the internet and replaces outdated analogue lines: multi-channel numbers, internal extensions, voice menus, call recording and statistics. Staff make calls from desk phones, computers and a mobile app.",
+            "One number serves the whole company, and call costs between offices and branches drop.",
+          ] },
+          { h: "Cloud or on-premise PBX", p: [
+            "A cloud PBX needs no hardware of your own and deploys quickly — convenient for small teams. An on-premise one (e.g. on Asterisk) gives full control and suits large offices and call centres.",
+            "We match the solution to company size and requirements for reliability and integrations.",
+          ] },
+          { h: "What can be configured", p: [
+            "Call routing scenarios, forwarding, queues, CRM integration (a call opens the client card), call recording and call analytics.",
+            "We deploy IP telephony turnkey in Tashkent and across Uzbekistan — with setup, training and support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Ofis İçin IP Telefon: Santral Nasıl Seçilir",
+        excerpt: "IP telefon klasik hatlardan neden iyidir, bulut mu yerel santral mi, neler yapılandırılabilir — CRM entegrasyonu, kayıt, kuyruklar.",
+        sections: [
+          { h: "IP telefon neden daha iyi", p: [
+            "IP telefon internet üzerinden çalışır ve eski analog hatların yerini alır: çok kanallı numaralar, dahili hatlar, sesli menü, görüşme kaydı ve istatistik. Çalışanlar masa telefonundan, bilgisayardan ve mobil uygulamadan arar.",
+            "Tek numara tüm şirkete hizmet eder; ofisler ve şubeler arası görüşme maliyeti düşer.",
+          ] },
+          { h: "Bulut mu yerel santral mi", p: [
+            "Bulut santral kendi donanımınızı gerektirmez ve hızla devreye girer — küçük ekipler için pratiktir. Yerel santral (örneğin Asterisk) tam kontrol sağlar; büyük ofisler ve çağrı merkezleri için uygundur.",
+            "Çözümü şirket büyüklüğüne, güvenilirlik ve entegrasyon gereksinimlerine göre seçiyoruz.",
+          ] },
+          { h: "Neler yapılandırılabilir", p: [
+            "Çağrı karşılama senaryoları, yönlendirme, kuyruklar, CRM entegrasyonu (arama müşteri kartını açar), görüşme kaydı ve çağrı analitiği.",
+            "IP telefonu anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, kurulum, eğitim ve destekle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "办公室IP电话：如何选择电话交换机（PBX）",
+        excerpt: "IP电话比传统电话强在哪里、云端还是本地PBX、可以配置什么——CRM集成、录音、排队。",
+        sections: [
+          { h: "IP电话强在哪里", p: [
+            "IP电话通过互联网运行，取代过时的模拟线路：多通道号码、内部分机、语音菜单、通话录音和统计。员工可用座机、电脑和手机App拨打电话。",
+            "一个号码服务全公司，办公室和分支机构之间的通话成本大幅下降。",
+          ] },
+          { h: "云端还是本地PBX", p: [
+            "云PBX无需自购设备，部署迅速——适合小团队。本地PBX（如基于Asterisk）提供完全控制，适合大型办公室和呼叫中心。",
+            "我们根据公司规模及对可靠性和集成的要求选择方案。",
+          ] },
+          { h: "可以配置什么", p: [
+            "来电处理场景、转接、排队、CRM集成（来电自动弹出客户卡片）、通话录音和通话分析。",
+            "我们在塔什干及乌兹别克斯坦全境提供IP电话交钥匙部署——含配置、培训和支持。",
           ] },
         ],
       },
@@ -1404,6 +1512,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Turnkey Server Room: What You Need",
+        excerpt: "What goes into a server room, why power and cooling come first, and how to design a server room with headroom for growth.",
+        sections: [
+          { h: "What goes into a server room", p: [
+            "The server room is the heart of the IT infrastructure. It includes server cabinets and racks, structured cabling, uninterruptible power (UPS) and, where needed, a diesel generator, air conditioning, gas fire suppression and access control.",
+            "All of it must work as a single complex — business continuity depends on it.",
+          ] },
+          { h: "Power and cooling come first", p: [
+            "Servers fear overheating and power interruptions. A UPS carries the load during an outage until the generator starts, while a precision air conditioner keeps temperature and humidity stable.",
+            "This is not where to economise — server downtime and data loss cost more than proper engineering.",
+          ] },
+          { h: "Designing for the task", p: [
+            "We build in power and space headroom for growth, redundancy of critical nodes, microclimate monitoring and remote status control.",
+            "We design and build server rooms and data centres turnkey in Tashkent and across Uzbekistan — with documentation and service support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Anahtar Teslim Sunucu Odası: Neler Gerekir",
+        excerpt: "Sunucu odasına neler girer, güç ve soğutma neden en önemlisi ve büyüme payıyla sunucu odası nasıl projelendirilir.",
+        sections: [
+          { h: "Sunucu odasına neler girer", p: [
+            "Sunucu odası BT altyapısının kalbidir. İçinde sunucu kabinleri ve raflar, yapısal kablolama, kesintisiz güç kaynağı (UPS) ve gerekirse dizel jeneratör, iklimlendirme, gazlı söndürme sistemi ve geçiş kontrolü bulunur.",
+            "Bunların hepsi tek bir kompleks olarak çalışmalıdır — işin sürekliliği buna bağlıdır.",
+          ] },
+          { h: "Güç ve soğutma en önemlisi", p: [
+            "Sunucular aşırı ısınmadan ve güç kesintisinden korkar. UPS, elektrik kesildiğinde jeneratör devreye girene kadar yükü taşır; hassas klima ise sıcaklık ve nemi sabit tutar.",
+            "Burada tasarruf edilmez — sunucu duruşu ve veri kaybı doğru mühendislikten pahalıdır.",
+          ] },
+          { h: "Göreve göre projelendirme", p: [
+            "Büyüme için güç ve alan payı, kritik düğümlerde yedeklilik, mikroklima izleme ve uzaktan durum kontrolü öngörüyoruz.",
+            "Sunucu odaları ve veri merkezlerini anahtar teslim projelendirip kuruyoruz — Taşkent'te ve tüm Özbekistan'da, dokümantasyon ve servis desteğiyle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "交钥匙机房建设：需要什么",
+        excerpt: "机房包含什么，为什么供电和制冷最关键，以及如何按需求设计并为发展预留余量。",
+        sections: [
+          { h: "机房包含什么", p: [
+            "机房是IT基础设施的心脏。它包括服务器机柜和机架、综合布线、不间断电源（UPS）、必要时的柴油发电机、空调、气体灭火系统和门禁。",
+            "这一切必须作为统一整体运行——业务的连续性取决于此。",
+          ] },
+          { h: "供电和制冷最关键", p: [
+            "服务器最怕过热和断电。UPS在停电时支撑负载直到发电机启动，精密空调保持温湿度稳定。",
+            "这方面不能省钱——服务器停机和数据丢失的损失远高于规范的工程投入。",
+          ] },
+          { h: "按需求设计", p: [
+            "我们为发展预留功率和空间余量，对关键节点做冗余，配备微环境监测和远程状态监控。",
+            "我们在塔什干及乌兹别克斯坦全境提供机房和数据中心的交钥匙设计与建设——含文档和维保服务。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -1444,6 +1606,60 @@ export const ARTICLES: Article[] = [
           { h: "Qanday joriy etish", p: [
             "Tahlilning bir qismi to'g'ridan-to'g'ri kameralarda, bir qismi AI bilan serverda ishlaydi. Tahlilni allaqachon o'rnatilgan kameralarga ham server dasturi orqali, tizimni to'liq almashtirmasdan qo'shish mumkin.",
             "Videotahlilni kalit topshirish asosida joriy etamiz — Toshkentda va butun O'zbekiston bo'ylab, operatorlarni o'qitish va qo'llab-quvvatlash bilan.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Video Analytics and Facial Recognition: What It Is and Why",
+        excerpt: "What video analytics can do, where it pays off — retail, business centres, parking — and how to add it to existing cameras.",
+        sections: [
+          { h: "What video analytics can do", p: [
+            "Video analytics turns ordinary cameras into a smart system: facial and licence plate recognition, visitor counting, perimeter and zone control, detection of abandoned objects and unusual behaviour — all in real time, without a full-time operator.",
+            "The system draws attention to an event itself instead of making someone watch monitors for hours.",
+          ] },
+          { h: "Where it pays off", p: [
+            "Retail counts shopper traffic and builds heat maps, business centres admit staff by face, car parks open the barrier by plate, security gets an alert when the perimeter is crossed.",
+            "Analytics turns CCTV from a “just-in-case archive” into a working tool for management and security.",
+          ] },
+          { h: "How to deploy it", p: [
+            "Some analytics run directly on the cameras, some on an AI server. Analytics can also be added to already-installed cameras via server software, without replacing the whole system.",
+            "We deploy video analytics turnkey in Tashkent and across Uzbekistan — with operator training and support.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Video Analitiği ve Yüz Tanıma: Nedir ve Ne İşe Yarar",
+        excerpt: "Video analitiği neler yapabilir, nerede fayda sağlar — perakende, iş merkezleri, otoparklar — ve mevcut kameralara nasıl eklenir.",
+        sections: [
+          { h: "Video analitiği neler yapabilir", p: [
+            "Video analitiği sıradan kameraları akıllı sisteme dönüştürür: yüz ve plaka tanıma, ziyaretçi sayma, çevre ve bölge kontrolü, bırakılan eşya ve olağan dışı davranış tespiti — hepsi gerçek zamanlı, sürekli operatör olmadan.",
+            "Sistem olaya dikkati kendisi çeker; saatlerce monitör izlemeye gerek kalmaz.",
+          ] },
+          { h: "Nerede fayda sağlar", p: [
+            "Perakende müşteri akışını sayar ve ısı haritaları çıkarır, iş merkezleri çalışanları yüzle içeri alır, otoparklar bariyeri plakayla açar, güvenlik çevre ihlalinde alarm alır.",
+            "Analitik, kamera sistemini “ne olur ne olmaz arşivi”nden yönetim ve güvenliğin çalışan aracına dönüştürür.",
+          ] },
+          { h: "Nasıl devreye alınır", p: [
+            "Analitiğin bir kısmı doğrudan kameralarda, bir kısmı yapay zekâlı sunucuda çalışır. Analitik, sistem tamamen değiştirilmeden, sunucu yazılımıyla mevcut kameralara da eklenebilir.",
+            "Video analitiğini anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, operatör eğitimi ve destekle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "视频分析与人脸识别：是什么、有什么用",
+        excerpt: "视频分析能做什么，在哪些场景创造价值——零售、商务中心、停车场——以及如何在现有摄像机上部署。",
+        sections: [
+          { h: "视频分析能做什么", p: [
+            "视频分析把普通摄像机变成智能系统：人脸和车牌识别、客流统计、周界和区域防范、遗留物和异常行为检测——全部实时进行，无需专人值守。",
+            "系统会主动提示事件，而不是让人盯着监视器看几个小时。",
+          ] },
+          { h: "在哪些场景创造价值", p: [
+            "零售统计客流并生成热力图，商务中心刷脸放行员工，停车场按车牌抬杆，周界被穿越时保安立即收到警报。",
+            "视频分析让监控从“备查档案”变成管理和安防的实用工具。",
+          ] },
+          { h: "如何部署", p: [
+            "一部分分析功能直接运行在摄像机上，另一部分运行在AI服务器上。通过服务器软件也可以为已安装的摄像机添加分析功能，无需整体更换系统。",
+            "我们在塔什干及乌兹别克斯坦全境提供视频分析交钥匙部署——含操作员培训和支持。",
           ] },
         ],
       },
