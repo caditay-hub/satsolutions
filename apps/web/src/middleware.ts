@@ -11,7 +11,7 @@ const REMOVED_RE = new RegExp(`^(?:/(${localeAlt}))?/products/([^/]+)/?$`);
 // URL движка старого сайта (до 2024): /product/show/*, /category/*, /brand/* — слаги не маппятся
 // на новые, поэтому ведём на ближайший живой раздел (GSC до сих пор их сканирует → 404).
 // Вариант с /public/ (внутренний путь старого движка) тоже жил в индексе Google.
-const OLDSITE_RE = new RegExp(`^(?:/public)?(?:/(${localeAlt}|ru))?/(product/show|category|brand)(/.+)?$`);
+const OLDSITE_RE = new RegExp(`^(?:/public)?(?:/(${localeAlt}|ru))?/(product/show|products/filter|category|brand)(/.+)?$`);
 
 // Точечные маппинги старых URL, которые ДО СИХ ПОР ранжируются в Google (из GSC):
 // ведём не на общий каталог, а на живой релевантный товар/раздел — сохраняем показы.
@@ -52,7 +52,7 @@ export default function middleware(req: NextRequest) {
       const dest = LEGACY_CATEGORY_REDIRECTS[tail.split("/")[0]];
       if (dest) return NextResponse.redirect(new URL(`${prefix}${dest}`, req.url), 308);
     }
-    const target = old[2] === "product/show" ? "/products" : "/catalog";
+    const target = old[2] === "product/show" || old[2] === "products/filter" ? "/products" : "/catalog";
     return NextResponse.redirect(new URL(`${prefix}${target}`, req.url), 308);
   }
   return intlMiddleware(req);
