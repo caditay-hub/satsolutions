@@ -833,6 +833,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Smart Home: Where to Start and What It Costs",
+        excerpt: "You don't have to automate everything at once — where to start a smart home, wired or wireless, and what can be automated.",
+        sections: [
+          { h: "Where to start", p: [
+            "You don't have to automate everything at once. Start with a basic scenario — scheduled lighting and climate, leak and smoke sensors, CCTV in one app. The system is easy to expand later as budget allows.",
+            "This step-by-step approach lowers the initial cost and shows which scenarios you actually need.",
+          ] },
+          { h: "Wired or wireless", p: [
+            "Wireless systems (Wi-Fi/Zigbee) are cheaper and install without renovation — a good fit for a finished apartment. Wired systems are more reliable and go in during construction or major renovation.",
+            "We match the solution to your site and renovation stage — from single scenarios to full automation of a house.",
+          ] },
+          { h: "What can be automated", p: [
+            "Lighting and scenes (morning, away, night), climate and curtains, smart sockets and locks, motion, leak and smoke sensors, integration with CCTV and intruder alarm. Control by voice, smartphone or schedule.",
+            "We install smart homes turnkey in Tashkent and across Uzbekistan — with setup, training and warranty.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Akıllı Ev: Nereden Başlamalı ve Ne Kadar Tutar",
+        excerpt: "Her şeyi bir anda otomatikleştirmek gerekmez — akıllı eve nereden başlanır, kablolu mu kablosuz mu ve neler otomatikleştirilebilir.",
+        sections: [
+          { h: "Nereden başlamalı", p: [
+            "Her şeyi bir anda otomatikleştirmek gerekmez. Temel senaryoyla başlayın — programlı ışık ve iklimlendirme, su kaçağı ve duman sensörleri, tek uygulamada kamera izleme. Sistem daha sonra bütçeye göre kolayca genişletilir.",
+            "Bu aşamalı yaklaşım başlangıç maliyetini düşürür ve hangi senaryolara gerçekten ihtiyacınız olduğunu gösterir.",
+          ] },
+          { h: "Kablolu mu kablosuz mu", p: [
+            "Kablosuz sistemler (Wi-Fi/Zigbee) daha ucuzdur ve tadilatsız kurulur — hazır daire için uygundur. Kablolu sistemler daha güvenilirdir ve inşaat veya kapsamlı tadilat aşamasında döşenir.",
+            "Çözümü sahanıza ve tadilat aşamasına göre seçiyoruz — tek senaryolardan villanın tam otomasyonuna kadar.",
+          ] },
+          { h: "Neler otomatikleştirilebilir", p: [
+            "Aydınlatma ve senaryolar (sabah, evden çıkış, gece), iklimlendirme ve perdeler, akıllı prizler ve kilitler, hareket, su kaçağı ve duman sensörleri, kamera ve alarm entegrasyonu. Kontrol sesle, telefonla veya programla yapılır.",
+            "Akıllı evi anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, kurulum, eğitim ve garantiyle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "智能家居：从哪里开始，需要多少钱",
+        excerpt: "不必一次把所有东西都自动化——智能家居从哪里入手、有线还是无线、可以自动化哪些场景。",
+        sections: [
+          { h: "从哪里开始", p: [
+            "不必一次把所有东西都自动化。从基础场景开始——灯光和空调按时间表运行、漏水和烟雾传感器、监控集中在一个App里。之后可以根据预算轻松扩展。",
+            "这种循序渐进的方式降低了起步成本，也能让您弄清真正需要哪些场景。",
+          ] },
+          { h: "有线还是无线", p: [
+            "无线系统（Wi-Fi/Zigbee）更便宜，无需装修即可安装，适合已装修好的住宅。有线系统更可靠，应在建造或大修阶段预埋。",
+            "我们根据您的房屋和装修阶段选择方案——从单个场景到别墅的全屋自动化。",
+          ] },
+          { h: "可以自动化哪些场景", p: [
+            "灯光与情景模式（清晨、离家、夜间）、空调与窗帘、智能插座与门锁、移动/漏水/烟雾传感器，以及与视频监控和防盗报警的联动。可通过语音、手机或时间表控制。",
+            "我们在塔什干及乌兹别克斯坦全境提供智能家居交钥匙安装——含调试、培训和质保。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -873,6 +927,60 @@ export const ARTICLES: Article[] = [
           { h: "Identifikatsiya va integratsiya", p: [
             "Turniket SKUD bilan birga ishlaydi: karta, barmoq izi yoki yuzni aniqlash orqali o'tish, ish vaqtini hisobga olish va videokuzatuv bilan integratsiya. Nogiron tashrifchilar uchun kalitka ko'zda tutamiz.",
             "Turniketlarni kalit topshirish asosida o'rnatamiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va servis xizmati bilan.",
+          ] },
+        ],
+      },
+      en: {
+        title: "How to Choose a Turnstile for a Checkpoint",
+        excerpt: "Turnstile types (tripod, full-height, speed gate), throughput and ACS integration — how to match one to your traffic and task.",
+        sections: [
+          { h: "Turnstile types", p: [
+            "Turnstiles come in three main types: tripods (the most affordable, for offices and small checkpoints), rotor and full-height (maximum security, for restricted facilities) and speed gates (for business centres and high-traffic areas).",
+            "The choice depends on the required level of control and the look: sometimes economy matters, sometimes prestige and high throughput.",
+          ] },
+          { h: "Throughput and traffic", p: [
+            "A tripod passes roughly 20–30 people per minute — enough for an office or a small enterprise. A factory gate or stadium at peak hours needs several lanes or speed gates.",
+            "We calculate the number of lanes for your real traffic so no queues build up at the entrance during peak hours.",
+          ] },
+          { h: "Identification and integration", p: [
+            "A turnstile works together with ACS: passage by card, fingerprint or facial recognition, integration with time attendance and CCTV. We include a gate for visitors with limited mobility.",
+            "We install turnstiles turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Giriş İçin Turnike Nasıl Seçilir",
+        excerpt: "Turnike türleri (tripod, boy turnike, hızlı geçiş), geçiş kapasitesi ve geçiş kontrol entegrasyonu — akışa ve göreve göre seçim.",
+        sections: [
+          { h: "Turnike türleri", p: [
+            "Turnikeler üç ana türdedir: tripodlar (en ekonomik, ofisler ve küçük girişler için), rotorlu ve boy turnikeleri (maksimum güvenlik, kontrollü tesisler için) ve hızlı geçiş kapıları speed gate (iş merkezleri ve yoğun akış için).",
+            "Seçim istenen kontrol düzeyine ve görünüme bağlıdır: bazen tasarruf, bazen prestij ve yüksek kapasite önemlidir.",
+          ] },
+          { h: "Geçiş kapasitesi ve akış", p: [
+            "Tripod dakikada yaklaşık 20–30 kişi geçirir — ofis veya küçük işletme için yeterli. Fabrika girişi veya stadyum için yoğun saatlerde birkaç şerit veya speed gate gerekir.",
+            "Yoğun saatlerde girişte kuyruk oluşmaması için şerit sayısını gerçek akışınıza göre hesaplıyoruz.",
+          ] },
+          { h: "Kimlik doğrulama ve entegrasyon", p: [
+            "Turnike geçiş kontrol sistemiyle birlikte çalışır: kart, parmak izi veya yüz tanımayla geçiş, mesai takibi ve CCTV entegrasyonu. Hareket kısıtlı ziyaretçiler için kapı öngörüyoruz.",
+            "Turnikeleri anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "如何为出入口选择闸机",
+        excerpt: "闸机类型（三辊闸、全高闸、速通门）、通行能力与门禁集成——如何按人流量和需求选型。",
+        sections: [
+          { h: "闸机类型", p: [
+            "闸机主要有三类：三辊闸（最经济，适合办公室和小型出入口）、转闸和全高闸（安全性最高，适合管制场所）、速通门（适合商务中心和大人流场所）。",
+            "选择取决于所需的管控级别和外观：有的场合讲究经济，有的场合讲究气派和高通行量。",
+          ] },
+          { h: "通行能力与人流", p: [
+            "三辊闸每分钟约通行20–30人——办公室或小型企业足够。工厂大门或体育场高峰时段需要多条通道或速通门。",
+            "我们按实际人流计算通道数量，确保高峰时段入口不排长队。",
+          ] },
+          { h: "识别方式与系统集成", p: [
+            "闸机与门禁系统联动：刷卡、指纹或人脸识别通行，并与考勤和视频监控集成。同时预留无障碍通道。",
+            "我们在塔什干及乌兹别克斯坦全境提供闸机交钥匙安装——含质保和维护服务。",
           ] },
         ],
       },
@@ -919,6 +1027,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Barrier Gate with Licence Plate Recognition: How It Works",
+        excerpt: "Automatic entry by car number: how an ANPR system works, what it includes and where it is used.",
+        sections: [
+          { h: "How automatic entry works", p: [
+            "An ANPR camera reads the licence plate of an approaching car and, if it is on the whitelist, the barrier opens by itself — no cards, fobs or guard. Every passage is logged with a photo and timestamp.",
+            "This removes entrance queues and the human factor: authorised cars pass in seconds.",
+          ] },
+          { h: "What the system includes", p: [
+            "A motorised barrier, a plate recognition camera, a controller, safety photocells (so the boom never drops onto a car), remotes for guests and software with white and black lists. Paid parking adds entry/exit tariffing.",
+            "The barrier integrates with ACS and the parking system into a single solution.",
+          ] },
+          { h: "Where it is used", p: [
+            "Residential complexes, business centres, car parks, enterprises and guarded territories — anywhere a controlled yet convenient entrance is needed.",
+            "We install ANPR barriers turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Plaka Tanımalı Bariyer: Nasıl Çalışır",
+        excerpt: "Araç plakasıyla otomatik giriş: ANPR sistemi nasıl kurulur, neleri içerir ve nerelerde kullanılır.",
+        sections: [
+          { h: "Otomatik giriş nasıl çalışır", p: [
+            "ANPR kamerası yaklaşan aracın plakasını okur; plaka beyaz listedeyse bariyer kendiliğinden açılır — kartsız, kumandasız ve görevlisiz. Her geçiş fotoğraf ve zamanla kayda alınır.",
+            "Bu, girişteki kuyrukları ve insan faktörünü ortadan kaldırır: kayıtlı araçlar saniyeler içinde geçer.",
+          ] },
+          { h: "Sistem neleri içerir", p: [
+            "Motorlu bariyer, plaka tanıma kamerası, kontrolör, güvenlik fotoselleri (kol araca inmesin diye), misafirler için kumandalar ve beyaz/kara listeli yazılım. Ücretli otoparklara giriş-çıkış tarifelendirmesi eklenir.",
+            "Bariyer, geçiş kontrolü ve otopark sistemiyle tek çözümde birleşir.",
+          ] },
+          { h: "Nerelerde kullanılır", p: [
+            "Siteler, iş merkezleri, otoparklar, işletmeler ve korunan alanlar — kontrollü ve pratik girişin gerektiği her yerde.",
+            "ANPR'li bariyerleri anahtar teslim monte ediyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "车牌识别道闸：工作原理",
+        excerpt: "按车牌自动放行：ANPR系统如何构成、包含什么、应用在哪些场景。",
+        sections: [
+          { h: "自动放行如何实现", p: [
+            "ANPR摄像机识别驶近车辆的车牌，若在白名单内，道闸自动抬杆——无需卡片、遥控器或保安。每次通行都带照片和时间记录在日志中。",
+            "这消除了入口排队和人为因素：授权车辆几秒内即可通过。",
+          ] },
+          { h: "系统包含什么", p: [
+            "电动道闸、车牌识别摄像机、控制器、安全光电（防止闸杆砸到车辆）、访客遥控器，以及带黑白名单的软件。收费停车场还可增加出入口计费。",
+            "道闸可与门禁和停车场系统集成为统一方案。",
+          ] },
+          { h: "应用场景", p: [
+            "住宅小区、商务中心、停车场、企业和封闭园区——任何需要既受控又便捷出入口的地方。",
+            "我们在塔什干及乌兹别克斯坦全境提供ANPR道闸交钥匙安装——含质保和维护。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -962,6 +1124,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "Intruder Alarm: How to Choose One for Home and Office",
+        excerpt: "How an intruder alarm works, wired or wireless, and how to route alerts to a monitoring station and your smartphone.",
+        sections: [
+          { h: "How an intruder alarm works", p: [
+            "Motion, door/window opening and glass-break sensors react to intrusion and send the signal to a monitoring station and to your smartphone. A panic button summons help instantly.",
+            "The system arms with one tap or on a schedule, and on alarm triggers the siren and notifications.",
+          ] },
+          { h: "Wired or wireless", p: [
+            "A wireless system installs without chasing walls and suits a finished space; wired is more reliable and goes in during renovation. For most apartments and offices a wireless system with backup power for outages is enough.",
+            "We select the sensor set for your layout: motion in corridors, opening at entrances, glass-break by shop windows.",
+          ] },
+          { h: "Monitoring station and integration", p: [
+            "The alarm can be routed to a state or private security company and combined with CCTV — each alert comes with video for verification.",
+            "We install intruder alarms turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Hırsız Alarmı: Ev ve Ofis İçin Nasıl Seçilir",
+        excerpt: "Hırsız alarmı nasıl çalışır, kablolu mu kablosuz mu, alarm merkezi ve telefona bildirim nasıl yönlendirilir.",
+        sections: [
+          { h: "Hırsız alarmı nasıl çalışır", p: [
+            "Hareket, kapı-pencere açılma ve cam kırılma sensörleri izinsiz girişe tepki verir; sinyal alarm merkezine ve telefonunuza iletilir. Panik butonu yardımı anında çağırır.",
+            "Sistem tek dokunuşla veya programla kurulur; alarm durumunda siren ve bildirimleri devreye alır.",
+          ] },
+          { h: "Kablolu mu kablosuz mu", p: [
+            "Kablosuz sistem duvar kırmadan kurulur ve hazır mekâna uygundur; kablolu daha güvenilirdir ve tadilatta döşenir. Çoğu daire ve ofis için elektrik kesintisine karşı yedek beslemeli kablosuz sistem yeterlidir.",
+            "Sensör setini plana göre seçiyoruz: koridorlarda hareket, girişlerde açılma, vitrinlerde cam kırılma.",
+          ] },
+          { h: "Alarm merkezi ve entegrasyon", p: [
+            "Alarm, resmi veya özel güvenlik şirketinin merkezine bağlanabilir ve CCTV ile birleştirilebilir — her alarm doğrulama için video kaydıyla gelir.",
+            "Hırsız alarmını anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "防盗报警：住宅和办公室如何选择",
+        excerpt: "防盗报警如何工作、有线还是无线、如何把警情推送到保安中心和手机。",
+        sections: [
+          { h: "防盗报警如何工作", p: [
+            "移动、门窗开启和玻璃破碎传感器对入侵作出反应，将信号发送到保安中心和您的手机。紧急按钮可立即呼叫援助。",
+            "系统可一键布防或按时间表布防，报警时启动警笛和通知。",
+          ] },
+          { h: "有线还是无线", p: [
+            "无线系统无需开槽即可安装，适合已装修空间；有线更可靠，应在装修时敷设。大多数公寓和办公室配备带停电备用电源的无线系统即可。",
+            "我们按户型配置传感器：走廊装移动侦测、入口装门磁、橱窗旁装玻璃破碎探测。",
+          ] },
+          { h: "接入保安中心与联动", p: [
+            "报警可接入国家或私人保安公司的接警中心，并与视频监控联动——每次报警都附带录像以便核实。",
+            "我们在塔什干及乌兹别克斯坦全境提供防盗报警交钥匙安装——含质保和维护。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -1002,6 +1218,60 @@ export const ARTICLES: Article[] = [
           { h: "Mavjud darvozalarni avtomatlashtirish", p: [
             "Avtomatikani allaqachon o'rnatilgan darvozalarga ham qo'yish mumkin. Silliq ochilish, qisilishdan himoya, SKUD va raqam aniqlash bilan integratsiyani sozlaymiz.",
             "Kalit topshirish asosida ishlaymiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va servis xizmati bilan.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Automatic Gates: How to Choose a Drive",
+        excerpt: "Gate types (sliding, swing, sectional) and drives, what matters when choosing and whether existing gates can be automated.",
+        sections: [
+          { h: "Gate and drive types", p: [
+            "Gates come as sliding, swing, sectional and roller — each type has its own drive. Sliding gates suit wide entrances, swing gates are the classic for yards, sectional doors save space in a garage.",
+            "The drive is matched to the leaf weight and opening frequency: the heavier and more frequent, the more powerful the mechanism must be.",
+          ] },
+          { h: "What matters when choosing", p: [
+            "Drive power matched to leaf weight, duty cycle (frequent entry needs a drive with headroom), safety photocells and a warning lamp, remotes and optional plate recognition.",
+            "Skimping on the drive leads to rapid wear — better to take a mechanism with a load margin.",
+          ] },
+          { h: "Automating existing gates", p: [
+            "Automation can be fitted to gates that are already installed. We configure smooth opening, anti-pinch protection and integration with ACS and plate recognition.",
+            "We work turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Otomatik Kapılar: Motor Nasıl Seçilir",
+        excerpt: "Kapı türleri (yana kayar, kanatlı, seksiyonel) ve motorlar, seçimde neler önemli ve mevcut kapılar otomatikleştirilebilir mi.",
+        sections: [
+          { h: "Kapı ve motor türleri", p: [
+            "Kapılar yana kayar, kanatlı, seksiyonel ve rulo tip olur — her türün kendi motoru vardır. Yana kayar geniş girişler için uygundur, kanatlı avlular için klasiktir, seksiyonel garajda yer kazandırır.",
+            "Motor, kanat ağırlığına ve açılma sıklığına göre seçilir: ne kadar ağır ve sıksa, mekanizma o kadar güçlü olmalıdır.",
+          ] },
+          { h: "Seçimde neler önemli", p: [
+            "Kanat ağırlığına uygun motor gücü, çalışma yoğunluğu (sık giriş için yedekli motor), güvenlik fotoselleri ve uyarı lambası, kumandalar ve plaka tanıma seçeneği.",
+            "Motordan tasarruf hızlı aşınmaya yol açar — yük payı olan mekanizma almak daha iyidir.",
+          ] },
+          { h: "Mevcut kapıların otomasyonu", p: [
+            "Otomasyon, halihazırda monte edilmiş kapılara da takılabilir. Yumuşak açılış, sıkışma koruması, geçiş kontrolü ve plaka tanıma entegrasyonunu ayarlıyoruz.",
+            "Anahtar teslim çalışıyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "自动大门：如何选择电机",
+        excerpt: "大门类型（平移门、平开门、翻板门）与电机，选择要点，以及现有大门能否加装自动化。",
+        sections: [
+          { h: "大门与电机类型", p: [
+            "大门分平移、平开、翻板和卷帘式——每种类型配相应的电机。平移门适合宽阔入口，平开门是庭院经典之选，翻板门节省车库空间。",
+            "电机按门扇重量和开启频率选择：门越重、开启越频繁，机构就需要越大功率。",
+          ] },
+          { h: "选择要点", p: [
+            "电机功率要匹配门扇重量、工作强度（频繁出入需要有余量的电机）、安全光电和警示灯、遥控器以及车牌识别选项。",
+            "在电机上省钱会导致快速磨损——最好选择负载有余量的机构。",
+          ] },
+          { h: "现有大门的自动化改造", p: [
+            "已安装的大门也可以加装自动化。我们调试平滑开启、防夹保护，并与门禁和车牌识别集成。",
+            "我们在塔什干及乌兹别克斯坦全境提供交钥匙服务——含质保和维护。",
           ] },
         ],
       },
