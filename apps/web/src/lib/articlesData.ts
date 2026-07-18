@@ -57,6 +57,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "How Much Does CCTV Cost: What Makes Up the Price",
+        excerpt: "Breaking down the cost of a video surveillance system: cameras, recorder, installation — and where you can save without losing quality.",
+        sections: [
+          { h: "What makes up the price", p: [
+            "The cost of CCTV consists of four parts: cameras, a recorder with storage, cabling and consumables, plus installation and setup work. The more cameras and the higher their resolution, the more both the equipment and the labor cost.",
+            "Archive depth is calculated separately: storing 30 days of footage instead of 7 requires a larger hard drive. Site conditions also affect the price — wall height, distance to the recorder, the need for wall chasing.",
+          ] },
+          { h: "How many cameras you need", p: [
+            "An apartment usually needs 1–2 cameras, a shop or office — 4–8, a warehouse, production floor or grounds — 8 and more. The exact number is determined during a site visit: entrances, checkouts, storage zones and blind corners must be covered.",
+            "More cameras is not always better. Sometimes one properly placed camera with a good lens covers a zone more effectively than two cheap ones.",
+          ] },
+          { h: "Where you can and cannot save", p: [
+            "It is reasonable to save on the recorder brand and on cloud subscriptions if local storage is enough. But do not save on camera quality in key zones (checkout, entrance) or on installation — redoing it costs more.",
+            "For an exact estimate, book a free engineer visit: we will spec equipment and work for your site and budget.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Kamera Sistemi Ne Kadar Tutar: Fiyat Nelerden Oluşur",
+        excerpt: "Video gözetim sisteminin maliyetini ayrıştırıyoruz: kameralar, kayıt cihazı, montaj — ve kaliteden ödün vermeden nerede tasarruf edilir.",
+        sections: [
+          { h: "Fiyat nelerden oluşur", p: [
+            "CCTV maliyeti dört kalemden oluşur: kameralar, depolamalı kayıt cihazı, kablo ve sarf malzemeleri, ayrıca montaj ve kurulum işçiliği. Kamera sayısı ve çözünürlük arttıkça hem ekipman hem işçilik pahalanır.",
+            "Arşiv derinliği ayrıca hesaplanır: 7 gün yerine 30 gün kayıt tutmak daha büyük disk gerektirir. Saha koşulları da fiyatı etkiler — duvar yüksekliği, kayıt cihazına mesafe, kanal açma gereksinimi.",
+          ] },
+          { h: "Kaç kamera gerekir", p: [
+            "Daire için genelde 1–2 kamera yeter, mağaza veya ofis için 4–8, depo, üretim veya açık alan için 8 ve üzeri. Kesin sayı keşifte belirlenir: girişler, kasalar, depolama alanları ve kör noktalar kapatılmalıdır.",
+            "Daha çok kamera her zaman daha iyi değildir. Bazen iyi lensli doğru konumlanmış tek kamera, iki ucuz kameradan daha etkilidir.",
+          ] },
+          { h: "Nereden tasarruf edilir, nereden edilmez", p: [
+            "Yerel arşiv yeterliyse kayıt cihazı markasından ve bulut aboneliklerinden tasarruf mantıklıdır. Ancak kilit bölgelerdeki (kasa, giriş) kamera kalitesinden ve montajdan tasarruf etmeyin — yeniden yapmak daha pahalıya gelir.",
+            "Kesin teklif için ücretsiz mühendis keşfi isteyin: ekipman ve işçiliği sahanıza ve bütçenize göre hesaplayalım.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "视频监控要花多少钱：价格由什么构成",
+        excerpt: "拆解视频监控系统的成本：摄像机、录像机、安装施工——以及在不牺牲质量的前提下哪里可以省钱。",
+        sections: [
+          { h: "价格由什么构成", p: [
+            "监控系统的成本由四部分构成：摄像机、带存储的录像机、线缆及辅材，以及安装调试的人工。摄像机越多、分辨率越高，设备和施工费用就越高。",
+            "存储时长单独计算：要保存30天而非7天的录像，需要更大容量的硬盘。现场条件也影响价格——墙体高度、到录像机的距离、是否需要开槽。",
+          ] },
+          { h: "需要多少台摄像机", p: [
+            "住宅通常1–2台足够，商店或办公室4–8台，仓库、厂区或园区则需8台以上。准确数量需现场勘察确定：入口、收银台、存储区和盲角必须覆盖。",
+            "并非越多越好。有时一台位置正确、镜头合适的摄像机，比两台便宜货更有效。",
+          ] },
+          { h: "哪里能省、哪里不能省", p: [
+            "如果本地存储够用，在录像机品牌和云订阅上省钱是合理的。但关键区域（收银台、入口）的摄像机质量和安装施工不能省——返工的代价更高。",
+            "想要精确报价，请预约工程师免费上门：我们按您的现场和预算核算设备与工程量。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -97,6 +151,60 @@ export const ARTICLES: Article[] = [
           { h: "Tungi suratga olish va sharoitlar", p: [
             "Qorong'i zonalar uchun IQ-yoritish va yaxshi yorug'lik sezuvchanligi muhim; ko'cha uchun — chang va namlikdan himoya (IP66/IP67) hamda ishchi harorat diapazoni. Qarshi yorug'lik uchun WDR bilan kameralarni tanlang.",
             "Biz kamerani aniq zona va vazifaga qarab — yoritish, masofa va byudjetni hisobga olib tanlashga yordam beramiz.",
+          ] },
+        ],
+      },
+      en: {
+        title: "How to Choose a CCTV Camera: IP or Analog",
+        excerpt: "IP or analog, resolution, lens, night vision — a simple guide to choosing a surveillance camera for your task.",
+        sections: [
+          { h: "IP or analog camera", p: [
+            "Analog cameras (HDCVI/TVI) are cheaper, run over coax cable and suit small systems with local recording. IP cameras offer higher resolution, video analytics and flexible network scaling — the choice for medium and large sites.",
+            "If the system is new and growth is planned — go IP. If you need to inexpensively extend an existing analog system — stay within its standard.",
+          ] },
+          { h: "Resolution and lens", p: [
+            "2 MP (Full HD) is enough for a room overview; 4–8 MP — when you need to distinguish faces and plates at a distance. But high resolution demands more storage and bandwidth.",
+            "The lens defines angle and reach: 2.8 mm gives a wide room view, 4–6 mm — a corridor or entrance, and a varifocal lens lets you tune the angle to a specific spot.",
+          ] },
+          { h: "Night vision and conditions", p: [
+            "For dark zones, IR illumination and good light sensitivity matter; outdoors — dust/moisture protection (IP66/IP67) and the right temperature range. Against backlight, choose cameras with WDR.",
+            "We will help you match a camera to a specific zone and task — considering lighting, distance and budget.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Güvenlik Kamerası Nasıl Seçilir: IP mi Analog mu",
+        excerpt: "IP veya analog, çözünürlük, lens, gece görüşü — görevinize uygun kamera seçimi için basit bir rehber.",
+        sections: [
+          { h: "IP mi analog kamera mı", p: [
+            "Analog kameralar (HDCVI/TVI) daha ucuzdur, koaksiyel kabloyla çalışır ve yerel kayıtlı küçük sistemlere uygundur. IP kameralar daha yüksek çözünürlük, video analitiği ve ağ üzerinden esnek ölçekleme sunar — orta ve büyük sahaların tercihi.",
+            "Sistem yeniyse ve büyüme planlanıyorsa — IP alın. Mevcut analog sistemi ucuza genişletmek gerekiyorsa — onun standardında kalın.",
+          ] },
+          { h: "Çözünürlük ve lens", p: [
+            "2 MP (Full HD) oda genel görünümü için yeterli; 4–8 MP — mesafeden yüz ve plaka ayırt etmek gerektiğinde. Ancak yüksek çözünürlük daha fazla arşiv ve bant genişliği ister.",
+            "Lens açıyı ve menzili belirler: 2.8 mm geniş oda görüşü verir, 4–6 mm koridor veya giriş içindir, varifokal lens ise açıyı belirli bir noktaya göre ayarlamayı sağlar.",
+          ] },
+          { h: "Gece görüşü ve koşullar", p: [
+            "Karanlık bölgeler için IR aydınlatma ve iyi ışık hassasiyeti önemlidir; dış mekân için toz/nem koruması (IP66/IP67) ve uygun sıcaklık aralığı. Ters ışığa karşı WDR'li kameraları seçin.",
+            "Aydınlatma, mesafe ve bütçeyi dikkate alarak belirli bölge ve göreve uygun kamerayı seçmenize yardımcı oluruz.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "如何选择监控摄像机：IP还是模拟",
+        excerpt: "IP还是模拟、分辨率、镜头、夜视——按任务选择监控摄像机的简明指南。",
+        sections: [
+          { h: "IP还是模拟摄像机", p: [
+            "模拟摄像机（HDCVI/TVI）更便宜，走同轴电缆，适合本地存储的小型系统。IP摄像机提供更高分辨率、视频分析和灵活的网络扩展——是中大型项目的选择。",
+            "如果是新系统且计划扩展——选IP。如果只需低成本补充现有模拟系统——留在原标准内。",
+          ] },
+          { h: "分辨率与镜头", p: [
+            "200万像素（Full HD）足以看清房间全貌；400–800万像素——用于远距离辨认人脸和车牌。但高分辨率需要更大的存储和带宽。",
+            "镜头决定视角和距离：2.8毫米适合房间广角，4–6毫米适合走廊或入口，变焦镜头则可按具体位置调整视角。",
+          ] },
+          { h: "夜视与环境条件", p: [
+            "暗区需要红外补光和良好的感光度；室外需要防尘防水（IP66/IP67）和合适的工作温度范围。逆光场景请选带WDR宽动态的摄像机。",
+            "我们会根据照明、距离和预算，帮您为具体区域和任务匹配合适的摄像机。",
           ] },
         ],
       },
@@ -143,6 +251,60 @@ export const ARTICLES: Article[] = [
           ] },
         ],
       },
+      en: {
+        title: "What Is Access Control (ACS) and How It Works",
+        excerpt: "In plain words: what an access control system is, what it consists of, how it tracks working hours and what it integrates with.",
+        sections: [
+          { h: "What ACS is", p: [
+            "An access control system (ACS) decides who may enter, where and when — and logs every passage. Instead of an ordinary key it uses cards, fobs, PIN codes, fingerprints or facial recognition.",
+            "ACS is needed wherever access must be restricted and accounted for: offices, factories, warehouses, schools, residential complexes.",
+          ] },
+          { h: "What the system consists of", p: [
+            "Core elements: a controller (the brain), a reader, a locking device (electromagnetic or electromechanical lock, turnstile), an exit button and software for managing rights. Rights are granted by zone and schedule.",
+            "You can start with a single door and scale to hundreds of entry points under one management console.",
+          ] },
+          { h: "Time attendance and integrations", p: [
+            "ACS automatically logs arrivals and departures and builds a timesheet that exports to 1C. This eliminates manual tracking and overtime disputes.",
+            "ACS integrates with CCTV (each passage is linked to video) and intruder alarms. We design and install turnkey access control for your site.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Geçiş Kontrol Sistemi (PDKS) Nedir ve Nasıl Çalışır",
+        excerpt: "Basit anlatım: geçiş kontrol sistemi nedir, nelerden oluşur, mesaiyi nasıl takip eder ve nelerle entegre olur.",
+        sections: [
+          { h: "Geçiş kontrolü nedir", p: [
+            "Geçiş kontrol sistemi kimin, nereye ve ne zaman girebileceğine karar verir ve her geçişi kaydeder. Sıradan anahtar yerine kart, anahtarlık, PIN, parmak izi veya yüz tanıma kullanılır.",
+            "Erişimin kısıtlanması ve kayıt altına alınması gereken her yerde gereklidir: ofisler, fabrikalar, depolar, okullar, konut siteleri.",
+          ] },
+          { h: "Sistem nelerden oluşur", p: [
+            "Temel öğeler: kontrolör (sistemin beyni), okuyucu, kilitleme cihazı (elektromanyetik/elektromekanik kilit, turnike), çıkış butonu ve yetki yönetim yazılımı. Yetkiler bölge ve takvime göre verilir.",
+            "Tek kapıyla başlayıp tek yönetim altında yüzlerce geçiş noktasına ölçeklenebilir.",
+          ] },
+          { h: "Mesai takibi ve entegrasyonlar", p: [
+            "Sistem giriş-çıkışları otomatik kaydeder ve 1C'ye aktarılan puantaj oluşturur. Bu, elle takibi ve fazla mesai tartışmalarını ortadan kaldırır.",
+            "CCTV (geçiş video kaydına bağlanır) ve alarm sistemleriyle entegre olur. Sahanız için anahtar teslim geçiş kontrolü tasarlar ve kurarız.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "什么是门禁系统（ACS）及其工作原理",
+        excerpt: "通俗解释：什么是门禁系统、由什么组成、如何统计考勤、能与哪些系统集成。",
+        sections: [
+          { h: "什么是门禁系统", p: [
+            "门禁系统决定谁、何时、可以进入哪里，并记录每一次通行。它用卡片、钥匙扣、PIN码、指纹或人脸识别取代普通钥匙。",
+            "凡是需要限制出入并留痕的场所都需要门禁：办公室、工厂、仓库、学校、住宅小区。",
+          ] },
+          { h: "系统由什么组成", p: [
+            "核心部件：控制器（系统大脑）、读卡器、锁具（电磁锁或电控锁、闸机）、出门按钮，以及权限管理软件。权限按区域和时间表分配。",
+            "可以从一扇门起步，在统一管理下扩展到数百个通行点。",
+          ] },
+          { h: "考勤与系统集成", p: [
+            "门禁自动记录上下班时间并生成可导出到1C的考勤表，消除了手工统计和加班争议。",
+            "门禁可与视频监控（通行记录关联录像）和防盗报警联动。我们为您的项目提供门禁系统的交钥匙设计与安装。",
+          ] },
+        ],
+      },
     },
   },
   {
@@ -183,6 +345,60 @@ export const ARTICLES: Article[] = [
           { h: "Nima kiradi va nima uchun loyiha kerak", p: [
             "Tizimga datchiklar (tutun, issiqlik, qo'l), qabul-nazorat qurilmasi, ogohlantirgichlar, zarur bo'lganda — tutunni chiqarish va yong'inni o'chirish avtomatikasi kiradi. Bularning barchasi loyihada hisoblanishi va kelishilishi kerak.",
             "Biz normalarga muvofiq loyiha tayyorlaymiz, montaj qilamiz va tizimni nazorat organlariga topshiramiz, xizmatga olamiz.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Fire Alarm Systems: Types, Components and What Matters",
+        excerpt: "Types of fire alarm systems, what an automatic fire alarm and evacuation system consist of, and why a code-compliant design matters.",
+        sections: [
+          { h: "Why you need a fire alarm", p: [
+            "An automatic fire alarm detects fire at an early stage — by smoke, heat or flame — and triggers notification and evacuation. For most commercial and public buildings this is a fire-safety code requirement.",
+            "Early detection saves lives and property and lets you call emergency services before the fire spreads.",
+          ] },
+          { h: "System types", p: [
+            "Conventional (non-addressable) systems are inexpensive and identify the triggered loop; they suit small sites. Addressable and analogue-addressable systems pinpoint the exact detector and monitor its health; they are required for large and critical buildings.",
+            "The choice depends on floor area, building purpose and design requirements.",
+          ] },
+          { h: "What is included and why a design project matters", p: [
+            "The system includes detectors (smoke, heat, manual call points), a control panel, sounders and — where required — smoke extraction and fire suppression automation. All of it must be calculated and approved in a design project.",
+            "We prepare code-compliant designs, install the system, hand it over to supervisory authorities and provide maintenance.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Yangın Alarm Sistemleri: Türleri, Bileşenleri ve Bilinmesi Gerekenler",
+        excerpt: "Yangın alarm sistemi türleri, otomatik alarm ve tahliye sisteminin bileşenleri ve yönetmeliğe uygun projenin önemi.",
+        sections: [
+          { h: "Yangın alarmı neden gerekli", p: [
+            "Otomatik yangın alarmı yangını erken aşamada — duman, ısı veya alevle — algılar ve uyarı ile tahliyeyi başlatır. Çoğu ticari ve kamu binası için bu, yangın güvenliği yönetmeliğinin gereğidir.",
+            "Erken algılama can ve mal kurtarır; yangın yayılmadan ekipleri çağırma imkânı verir.",
+          ] },
+          { h: "Sistem türleri", p: [
+            "Konvansiyonel (adressiz) sistemler ucuzdur ve tetiklenen hattı gösterir; küçük sahalara uygundur. Adresli ve adresli-analog sistemler tetiklenen dedektörü tam gösterir ve durumunu izler; büyük ve kritik binalar için gereklidir.",
+            "Seçim alana, bina işlevine ve proje gereksinimlerine bağlıdır.",
+          ] },
+          { h: "Neler dahil ve proje neden şart", p: [
+            "Sistem dedektörler (duman, ısı, buton), kontrol paneli, sirenler ve gerektiğinde duman tahliyesi ile söndürme otomasyonunu içerir. Hepsi projede hesaplanmalı ve onaylanmalıdır.",
+            "Yönetmeliğe uygun proje hazırlar, montajı yapar, sistemi denetim kurumlarına teslim eder ve bakımını üstleniriz.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "火灾报警系统：类型、组成与要点",
+        excerpt: "火灾报警系统有哪些类型，自动报警和疏散广播由什么组成，为什么合规设计如此重要。",
+        sections: [
+          { h: "为什么需要火灾报警", p: [
+            "自动火灾报警系统在早期阶段——通过烟雾、温度或火焰——发现火情，并启动警报与疏散广播。对大多数商业和公共建筑而言，这是消防规范的强制要求。",
+            "早期发现能挽救生命和财产，并在火势蔓延前呼叫救援。",
+          ] },
+          { h: "系统类型", p: [
+            "普通（非编址）系统价格低，只能定位触发的回路，适合小型场所。编址与模拟编址系统能精确定位触发的探测器并监测其状态，是大型和重要建筑的必选。",
+            "选择取决于建筑面积、用途和设计要求。",
+          ] },
+          { h: "系统包含什么、为何需要设计", p: [
+            "系统包括探测器（烟感、温感、手报）、报警主机、声光警报器，必要时还有排烟与灭火联动。所有内容都必须在设计中计算并获得批准。",
+            "我们按规范出设计、完成安装、向监管部门交验，并提供后续维保。",
           ] },
         ],
       },
