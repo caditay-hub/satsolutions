@@ -36,10 +36,12 @@ export default function middleware(req: NextRequest) {
   const m = req.nextUrl.pathname.match(REMOVED_RE);
   if (m) {
     const slug = decodeURIComponent(m[2]);
-    const brand = REMOVED_PRODUCT_REDIRECTS[slug];
-    if (brand) {
+    const target = REMOVED_PRODUCT_REDIRECTS[slug];
+    if (target) {
       const prefix = m[1] ? `/${m[1]}` : "";
-      return NextResponse.redirect(new URL(`${prefix}/catalog/${brand}`, req.url), 308);
+      // значение с «/» — готовый путь (дубли → карточка-оригинал), иначе — бренд-слаг → /catalog/<brand>
+      const dest = target.startsWith("/") ? target : `/catalog/${target}`;
+      return NextResponse.redirect(new URL(`${prefix}${dest}`, req.url), 308);
     }
   }
   const sm = req.nextUrl.pathname.match(SVC_RE);

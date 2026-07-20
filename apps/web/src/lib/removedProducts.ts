@@ -3,6 +3,28 @@
 // чтобы очистить индекс, вернуть вес и не отдавать пользователю тупик. Снимок GSC от 2026-07-01.
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
+  // Дубли-карточки, объединены аудитом каталога 2026-07-20 → 308 на карточку-оригинал.
+  "pro-dinamik-dlya-plity-dd80-35w-2": "/products/pro-dinamik-dlya-plity-dd80-35w",
+  "pro-dinamik-haitek-510a-2": "/products/pro-dinamik-haitek-510a",
+  "pro-dinamik-nastennyi-10w-zt-507-2": "/products/pro-dinamik-nastennyi-10w-zt-507",
+  "pro-dinamik-nastennyi-15w-ws-06-2": "/products/pro-dinamik-nastennyi-15w-ws-06",
+  "pro-dinamik-nastennyi-20w-chernyi-ws-314a-2": "/products/pro-dinamik-nastennyi-20w-chernyi-ws-314a",
+  "pro-dinamik-nastennyi-20w-ws-07-2": "/products/pro-dinamik-nastennyi-20w-ws-07",
+  "pro-dinamik-nastennyi-3-6w-zt-515-2": "/products/pro-dinamik-nastennyi-3-6w-zt-515",
+  "pro-dinamik-nastennyi-3-6w-zt-593-2": "/products/pro-dinamik-nastennyi-3-6w-zt-593",
+  "pro-dinamik-potolochnyi-3-6w-zt-503-2": "/products/pro-dinamik-potolochnyi-3-6w-zt-503",
+  "pro-dinamik-potolochnyi-548-10w-2": "/products/pro-dinamik-potolochnyi-548-10w",
+  "pro-dinamik-potolochnyi-dlya-girlyandy-3w-6w-2": "/products/pro-dinamik-potolochnyi-dlya-girlyandy-3w-6w",
+  "pro-dinamik-potolochnyi-mc-16-10-20w-premium-bez-ramki-2": "/products/pro-dinamik-potolochnyi-mc-16-10-20w-premium-bez-ramki",
+  "pro-dinamik-potolochnyi-mc-17-20-30w-premium-bez-ramki-2": "/products/pro-dinamik-potolochnyi-mc-17-20-30w-premium-bez-ramki",
+  "pro-ds-qae0203g1e-v-2": "/products/pro-ds-qae0203g1e-v",
+  "pro-kpcng-a-frls-1h2h0-5-2": "/products/pro-kpcng-a-frls-1h2h0-5",
+  "pro-kpcng-a-frls-1h2h0-75-2": "/products/pro-kpcng-a-frls-1h2h0-75",
+  "pro-mikrofon-cooma-2": "/products/pro-mikrofon-cooma",
+  "rje-rg-nbs6002-x": "/products/rje-rg-nbs6002",
+  "rje-rg-nbs6002-x-x": "/products/rje-rg-nbs6002",
+  "zkt-zkteco-speedface-v3l-qr-terminal-raspoznavaniya-lic": "/products/zkt-zkteco-speedface-v3l-terminal-raspoznavaniya-lic",
+  "zkt-zkteco-speedface-v3l-rfid-terminal-raspoznavaniya-lic": "/products/zkt-zkteco-speedface-v3l-terminal-raspoznavaniya-lic",
   // Удалены 2026-07-01 как непроверённые (нет фото, модель не гуглится, сомнит. цена) → бренд KANIHAD.
   "knd-vi-mt227": "kanihad",
   "knd-vi-hw10": "kanihad",
