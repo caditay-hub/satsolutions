@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews } from "@/lib/api";
+import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getBrandTypePairs } from "@/lib/api";
+import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
@@ -162,6 +163,23 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       // ignore
     }
 
+    // Ссылка крошки категории: пара бренд×категория (если есть в белом списке), иначе страница типа напрямую (без 308-хопа /categories)
+    let categoryHref: string | null = null;
+    if (categoryInfo) {
+      const tSlug = typeSlug(categoryInfo.name);
+      categoryHref = `/products/type/${tSlug}`;
+      if (brandInfo) {
+        try {
+          const { pairs } = await getBrandTypePairs();
+          if (pairs.some((p) => p.brand.toLowerCase() === brandInfo!.slug && typeSlug(p.type) === tSlug)) {
+            categoryHref = `/catalog/${brandInfo.slug}/${tSlug}`;
+          }
+        } catch {
+          // ignore
+        }
+      }
+    }
+
     const characteristics = localizeCharacteristics(product.id, product.characteristics ?? {}, locale);
     // «Цена» в характеристиках — служебный маркер «по запросу», не показываем в таблице
     const charEntries = Object.entries(characteristics).filter(([k]) => k !== "Цена");
@@ -303,7 +321,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
         { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
         ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: localizeCatName(brandInfo.name, locale), item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
-        { "@type": "ListItem", position: brandInfo ? 4 : 3, name: locName, item: `${siteUrl}/products/${product.slug}` },
+        ...(categoryInfo && categoryHref
+          ? [{ "@type": "ListItem", position: brandInfo ? 4 : 3, name: localizeCatName(categoryInfo.name, locale), item: `${siteUrl}${categoryHref}` }]
+          : []),
+        { "@type": "ListItem", position: (brandInfo ? 4 : 3) + (categoryInfo && categoryHref ? 1 : 0), name: locName, item: `${siteUrl}/products/${product.slug}` },
       ],
     };
     // FAQ-схема (FAQPage) из структурированного описания — для расширенных сниппетов Google
@@ -339,10 +360,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               </Link>
             </>
           )}
-          {categoryInfo && (
+          {categoryInfo && categoryHref && (
             <>
               <span className="text-slate-300">/</span>
-              <Link href={`/categories/${categoryInfo.slug}`} className="hover:text-slate-900 transition-colors">
+              <Link href={categoryHref} className="hover:text-slate-900 transition-colors">
                 {localizeCatName(categoryInfo.name, locale)}
               </Link>
             </>
@@ -540,8 +561,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               <div className="text-lg font-bold tracking-tight">
                 {categoryInfo ? `${t("product.similar")}: ${localizeCatName(categoryInfo.name, locale)}` : t("product.similarProducts")}
               </div>
-              {categoryInfo && (
-                <Link href={`/categories/${categoryInfo.slug}`} className="text-xs font-bold text-[#e02020] hover:underline">
+              {categoryInfo && categoryHref && (
+                <Link href={categoryHref} className="text-xs font-bold text-[#e02020] hover:underline">
                   {t("product.wholeCategory")} →
                 </Link>
               )}
