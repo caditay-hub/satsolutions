@@ -634,7 +634,6 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: t("phone"),
-                value: "+998 99 554-69-69",
                 href: "tel:+998995546969",
               },
               {
@@ -644,7 +643,6 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: "Telegram",
-                value: "@SAT_zayavki_online_bot",
                 href: "https://t.me/SAT_zayavki_online_bot",
               },
               {
@@ -654,7 +652,6 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: "Email",
-                value: "sales@satsolutions.uz",
                 href: "mailto:sales@satsolutions.uz",
               },
             ].map((c) => (
@@ -663,15 +660,12 @@ export default async function HomePage() {
                 href={c.href}
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4 hover:border-brand-300 hover:bg-brand-50 transition-all"
+                className="flex items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white p-4 hover:border-brand-300 hover:bg-brand-50 transition-all"
               >
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-brand-700">
                   {c.icon}
                 </span>
-                <div className="min-w-0">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{c.label}</div>
-                  <div className="text-sm font-bold text-slate-800 truncate">{c.value}</div>
-                </div>
+                <span className="text-sm font-bold text-slate-800">{c.label}</span>
               </a>
             ))}
           </div>
