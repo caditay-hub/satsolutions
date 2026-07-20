@@ -5,6 +5,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { getGroupSeo } from "@/lib/groupSeo";
 import { ogLocale } from "@/lib/ogLocale";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CatalogView } from "../../CatalogView";
@@ -23,8 +24,9 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   const idx = resolveGroupIdx(slug);
   if (idx < 0) return { title: t("nav.products") };
   const name = localizeCatName(CATALOG_GROUPS[idx].title, locale);
-  const title = `${name} — ${t("product.titleBuy")}`;
-  const description = t("product.typeDesc", { type: name });
+  const seo = getGroupSeo(locale, slug);
+  const title = seo?.title ?? `${name} — ${t("product.titleBuy")}`;
+  const description = seo?.desc ?? t("product.typeDesc", { type: name });
   return {
     title,
     description,
@@ -41,12 +43,18 @@ export default async function ProductGroupPage({ params, searchParams }: { param
   if (idx < 0) notFound();
   const group = CATALOG_GROUPS[idx];
   const types = group.types.map((t) => t.n);
+  const seo = getGroupSeo(locale, slug);
   // Раздел = вся группа: показываем товары ВСЕХ типов группы (мультитип type=A,B,C,...).
   // __clean=1 глушит 301 на одиночный тип. Реальные query (brand/chars/price/sort/view/page)
   // пробрасываем — фильтр-сайдбар работает (бренды Болид/Рубеж и т.д. подтянутся).
   return CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, type: types.join(","), __clean: "1" }),
-    groupLanding: { name: localizeCatName(group.title, locale), idx, types },
+    groupLanding: {
+      name: localizeCatName(group.title, locale),
+      idx,
+      types,
+      ...(seo ? { seoH1: seo.h1, intro: seo.intro, serviceHref: seo.serviceHref, serviceLabel: seo.serviceLabel } : {}),
+    },
   } as any);
 }

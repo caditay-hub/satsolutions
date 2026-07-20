@@ -61,7 +61,7 @@ function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): imp
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[] }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -291,12 +291,24 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             <Image src={brandLanding.logoUrl} alt={brandLanding.name} fill className="object-contain object-left" sizes="120px" />
           </span>
         ) : null}
-        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : groupLanding ? groupLanding.name : brandLanding ? brandLanding.name : tnav("products")}</h1>
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : brandLanding ? brandLanding.name : tnav("products")}</h1>
         <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {total}</span>
       </div>
 
       {brandLanding?.description ? (
         <p className="mb-4 max-w-3xl text-[14px] leading-relaxed text-slate-500">{brandLanding.description}</p>
+      ) : null}
+
+      {/* Интро hub-страницы группы + мост «купить ↔ установить» на профильную услугу (groupSeo) */}
+      {groupLanding?.intro ? (
+        <p className="mb-4 max-w-3xl text-[15px] leading-relaxed text-slate-600">
+          {groupLanding.intro}{" "}
+          {groupLanding.serviceHref && groupLanding.serviceLabel ? (
+            <Link href={groupLanding.serviceHref} className="whitespace-nowrap font-semibold text-brand-700 underline">
+              {groupLanding.serviceLabel}
+            </Link>
+          ) : null}
+        </p>
       ) : null}
 
       {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}

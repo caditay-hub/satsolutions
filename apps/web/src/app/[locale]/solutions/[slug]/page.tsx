@@ -19,6 +19,7 @@ import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
+import { SERVICE_TO_GROUP } from "@/lib/groupSeo";
 import { ARTICLES } from "@/lib/articlesData";
 import { getReviews } from "@/lib/api";
 import { ReviewForm } from "@/components/ReviewForm";
@@ -297,6 +298,18 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
             <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
             <FaqAccordion items={faq} />
+          </div>
+        )}
+
+        {/* Мост «установить ↔ купить»: keyword-ссылка на hub-страницу группы каталога (groupSeo) */}
+        {SERVICE_TO_GROUP[svc.key] && (
+          <div className="mt-10">
+            <Link
+              href={SERVICE_TO_GROUP[svc.key].href}
+              className="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm font-bold text-brand-800 hover:bg-brand-100 transition-colors"
+            >
+              {(SERVICE_TO_GROUP[svc.key].label[locale] ?? SERVICE_TO_GROUP[svc.key].label.ru)} →
+            </Link>
           </div>
         )}
 
