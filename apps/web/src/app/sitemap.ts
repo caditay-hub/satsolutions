@@ -102,7 +102,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             getBrandTypePairs().catch(() => ({ pairs: [] }))
         ]);
 
-        const brandRoutes = brands.map((b) => ({
+        // Бренды без опубликованных товаров (напр. Teltonika снят 27.07) в sitemap не включаем — пустая страница = soft-404.
+        const brandRoutes = brands.filter((b) => ((b as { productCount?: number }).productCount ?? 0) > 0).map((b) => ({
             url: `${siteUrl}/catalog/${b.slug}`,
             lastModified: GENERATED,
             changeFrequency: "weekly" as const,
