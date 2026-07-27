@@ -1,10 +1,9 @@
 import type { Viewport } from "next";
 import { Suspense } from "react";
-// Jura (заголовки) — self-hosted из /public/fonts + preload + font-display:optional
-// (см. @font-face ниже). Это убирает CLS 0.32 от font-swap: браузер не подменяет
-// шрифт после блок-периода, а preload грузит его до отрисовки. Inter/Caveat — как есть.
-import "@fontsource-variable/inter/wght.css";
-import "@fontsource-variable/caveat/wght.css";
+// ВСЕ шрифты (Jura, Inter, Caveat) — self-hosted из /public/fonts + font-display:optional
+// (см. @font-face ниже). optional = нет swap-периода → сдвиг вёрстки (CLS) невозможен;
+// preload критичных файлов грузит их до отрисовки. @fontsource-импорты убраны 27.07:
+// они собирались с font-display:swap и давали полевой CLS 0.33 (перескок всего текста).
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
@@ -21,7 +20,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-// Шрифты self-hosted через @fontsource (выше): сборка НЕ ходит в Google Fonts.
+// Шрифты self-hosted из public/fonts: сборка НЕ ходит в Google Fonts.
 // Заголовки/бренд — Jura Variable; тело/UI — Inter Variable; акценты — Caveat Variable.
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
@@ -130,9 +129,12 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        {/* Preload Jura (заголовки) — грузим до отрисовки, чтобы display:optional успел показать шрифт без сдвига */}
+        {/* Preload критичных шрифтов — грузим до отрисовки, чтобы display:optional успел показать их без сдвига.
+            Caveat и *-ext не прелоадим: optional гарантирует ноль CLS, а файлы догрузятся в кэш для следующих переходов. */}
         <link rel="preload" href="/fonts/jura-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/jura-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
           __html: `
           /* Jura Variable — self-hosted, preload + display:optional (фикс CLS от font-swap).
@@ -152,6 +154,72 @@ export default async function RootLayout({
             font-display: optional;
             src: url(/fonts/jura-latin.woff2) format('woff2-variations');
             unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+          }
+          /* Inter Variable (текст) и Caveat Variable (акценты) — self-hosted, display:optional
+             (были @fontsource со swap → полевой CLS 0.33; optional исключает сдвиг в принципе). */
+          @font-face {
+            font-family: 'Inter Variable';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: optional;
+            src: url(/fonts/inter-cyrillic.woff2) format('woff2-variations');
+            unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+          }
+          @font-face {
+            font-family: 'Inter Variable';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: optional;
+            src: url(/fonts/inter-cyrillic-ext.woff2) format('woff2-variations');
+            unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+          }
+          @font-face {
+            font-family: 'Inter Variable';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: optional;
+            src: url(/fonts/inter-latin.woff2) format('woff2-variations');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+          }
+          @font-face {
+            font-family: 'Inter Variable';
+            font-style: normal;
+            font-weight: 100 900;
+            font-display: optional;
+            src: url(/fonts/inter-latin-ext.woff2) format('woff2-variations');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+          }
+          @font-face {
+            font-family: 'Caveat Variable';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: optional;
+            src: url(/fonts/caveat-cyrillic.woff2) format('woff2-variations');
+            unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+          }
+          @font-face {
+            font-family: 'Caveat Variable';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: optional;
+            src: url(/fonts/caveat-cyrillic-ext.woff2) format('woff2-variations');
+            unicode-range: U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+          }
+          @font-face {
+            font-family: 'Caveat Variable';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: optional;
+            src: url(/fonts/caveat-latin.woff2) format('woff2-variations');
+            unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+          }
+          @font-face {
+            font-family: 'Caveat Variable';
+            font-style: normal;
+            font-weight: 400 700;
+            font-display: optional;
+            src: url(/fonts/caveat-latin-ext.woff2) format('woff2-variations');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
           }
           @font-face {
             font-family: 'Inter Fallback';
