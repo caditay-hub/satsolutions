@@ -73,10 +73,24 @@ function saveProfile(p: Profile) {
   }
 }
 
+// Первое касание: запоминаем UTM/gclid из URL входа, чтобы знать, какая реклама привела клиента
+function firstTouchUtm(): string {
+  try {
+    const sp = new URLSearchParams(window.location.search);
+    const keys = ["utm_source", "utm_medium", "utm_campaign", "gclid"];
+    const cur = keys.filter((k) => sp.get(k)).map((k) => `${k}=${sp.get(k)}`).join("&");
+    if (cur && !localStorage.getItem("first_utm")) localStorage.setItem("first_utm", cur.slice(0, 300));
+    return localStorage.getItem("first_utm") || "";
+  } catch {
+    return "";
+  }
+}
+
 function currentPage(): string {
   if (typeof window === "undefined") return "";
   try {
-    return window.location.pathname || "/";
+    const utm = firstTouchUtm();
+    return (window.location.pathname || "/") + (utm ? ` | ${utm}` : "");
   } catch {
     return "";
   }
