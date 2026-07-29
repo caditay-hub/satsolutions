@@ -77,7 +77,8 @@ function saveProfile(p: Profile) {
 function firstTouchUtm(): string {
   try {
     const sp = new URLSearchParams(window.location.search);
-    const keys = ["utm_source", "utm_medium", "utm_campaign", "gclid"];
+    // gad_campaignid/yclid — чтобы бот в теме менеджеров показывал кампанию/Яндекс по имени
+    const keys = ["utm_source", "utm_medium", "utm_campaign", "gclid", "gad_campaignid", "yclid"];
     const cur = keys.filter((k) => sp.get(k)).map((k) => `${k}=${sp.get(k)}`).join("&");
     if (cur && !localStorage.getItem("first_utm")) localStorage.setItem("first_utm", cur.slice(0, 300));
     return localStorage.getItem("first_utm") || "";
