@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { articlesForLocale } from "@/lib/articlesData";
+import { articlesForLocale, articleImg } from "@/lib/articlesData";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 
@@ -51,11 +51,22 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
                 <Link
                   key={a.slug}
                   href={`/blog/${a.slug}`}
-                  className="group flex flex-col rounded-2xl border border-slate-200 p-5 transition-shadow hover:shadow-md"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 transition-shadow hover:shadow-md"
                 >
-                  <h2 className="text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-brand-700">{b.title}</h2>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{b.excerpt}</p>
-                  <span className="mt-4 text-sm font-bold text-brand-600">{ui.read} →</span>
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                    {/* Обложки лежат в public/blog-img/<slug>.jpg; оптимизатор Next на сайте отключён — обычный img */}
+                    <img
+                      src={articleImg(a.slug)}
+                      alt={b.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-5">
+                    <h2 className="text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-brand-700">{b.title}</h2>
+                    <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{b.excerpt}</p>
+                    <span className="mt-4 text-sm font-bold text-brand-600">{ui.read} →</span>
+                  </div>
                 </Link>
               );
             })}
