@@ -76,6 +76,9 @@ const nextConfig = {
       // Частая опечатка/старые внешние ссылки: /contacts (мн. ч.) → /contact
       { source: "/contacts", destination: "/contact", permanent: true },
       { source: "/:locale(uz|en|tr|zh)/contacts", destination: "/:locale/contact", permanent: true },
+      // Кейс портфолио переименован (29.07.2026): «Балтика» → Damira Beverages (реальный клиент, dbe.uz)
+      { source: "/portfolio/skud-zavod-baltika", destination: "/portfolio/skud-zavod-damira-beverages", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/portfolio/skud-zavod-baltika", destination: "/:locale/portfolio/skud-zavod-damira-beverages", permanent: true },
     ];
   },
   async headers() {
