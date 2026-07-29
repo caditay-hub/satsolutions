@@ -11,6 +11,7 @@ import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { CatalogView } from "../../products/CatalogView";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
+import { serviceForCategory } from "@/lib/servicesData";
 
 const SITE = "https://satsolutions.uz";
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
@@ -92,14 +93,17 @@ export default async function BrandCatalogPage({
       seo: seo ? { intro: seo.intro, faq: seo.faq } : null,
     },
   } as any);
-  // Перелинковка бренд→услуга по доминирующей категории бренда (у типовых страниц она уже есть)
+  // Перелинковка бренд→услуга: крупнейший тип бренда, у которого ЕСТЬ профильная услуга
+  // (просто топ-тип не годится: у Рубеж/Болид это «Приборы и модули» без услуги → блок пропадал)
   let dominantType: string | null = null;
   try {
     const { pairs } = await getBrandTypePairs();
     dominantType =
       pairs
         .filter((p) => p.brand.toLowerCase() === brandSlug)
-        .sort((a, b) => b.count - a.count)[0]?.type ?? null;
+        .sort((a, b) => b.count - a.count)
+        .map((p) => p.type)
+        .find((t) => serviceForCategory(t)) ?? null;
   } catch {}
 
   return (
