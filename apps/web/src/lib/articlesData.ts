@@ -2340,6 +2340,393 @@ export const ARTICLES: Article[] = [
       },
     },
   },
+  {
+    slug: "kamera-dlya-doma",
+    date: "2026-07-29",
+    related: ["cctv"],
+    loc: {
+      ru: {
+        title: "Камера для дома и квартиры: как выбрать и что учесть",
+        excerpt: "Wi-Fi или проводная, внутренняя или уличная, с записью в облако или на карту — выбираем камеру для дома, квартиры и подъезда без переплаты.",
+        sections: [
+          { h: "С чего начать выбор", p: [
+            "Сначала определите задачу: присмотр за домом в отпуске, контроль няни или ремонта, двор и вход в частном доме, машина под окнами. От задачи зависит всё: тип камеры, место установки и способ записи.",
+            "Для одной комнаты достаточно поворотной Wi-Fi-камеры за небольшие деньги. Для периметра частного дома нужны уличные камеры с ИК-подсветкой и, как правило, регистратор.",
+          ] },
+          { h: "Wi-Fi или проводная", p: [
+            "Wi-Fi-камера ставится за пять минут: воткнули в розетку, привязали к приложению — готово. Минусы — зависимость от качества Wi-Fi и розетки рядом. Это выбор для квартиры и небольших задач.",
+            "Проводная IP-камера с питанием PoE работает стабильнее: один кабель даёт и сеть, и питание, никаких обрывов из-за перегруженного роутера. Для дома с двором и несколькими камерами — только провод.",
+          ] },
+          { h: "Внутренняя или уличная", p: [
+            "Уличная камера обязана иметь защиту от влаги и пыли (IP66/IP67) и рабочую температуру до −30…−40 °C — зимы в Узбекистане мягкие, но на солнце корпус нагревается до +60 °C, поэтому запас по температуре важен в обе стороны.",
+            "Внутренние камеры компактнее и часто умеют поворачиваться за движением. Ставить внутреннюю камеру на улицу нельзя — конденсат убьёт её за один сезон.",
+          ] },
+          { h: "Разрешение и ночная съёмка", p: [
+            "Для дома достаточно 2–4 Мп: этого хватает, чтобы узнать лицо на расстоянии нескольких метров. Гнаться за 8 Мп ради квартиры не нужно — вырастет только объём архива.",
+            "Ночью решает не количество мегапикселей, а подсветка: ИК-подсветка даёт чёрно-белую картинку, технологии типа ColorVu/Full-Color — цветную. Для двора цветная ночная съёмка заметно информативнее.",
+          ] },
+          { h: "Куда писать: карта, регистратор или облако", p: [
+            "Карта памяти в камере — самый простой вариант для 1–2 камер: недорого, но карту могут унести вместе с камерой. Облако решает эту проблему, но требует подписки. Регистратор с жёстким диском — правильный выбор от 3–4 камер: недели архива и никаких абонентских платежей.",
+            "Хорошая практика — комбинировать: запись на регистратор плюс важные события в облако.",
+          ] },
+          { h: "Типовые комплекты и цена вопроса", p: [
+            "Квартира: одна Wi-Fi-камера с картой памяти. Частный дом: 2–4 уличные камеры, PoE-регистратор, диск на месяц архива. Подъезд или двор многоквартирного дома — решается вместе с соседями и управляющей компанией, мы поможем с проектом.",
+            "В нашем каталоге камеры Hikvision, Dahua, EZVIZ и TP-Link Tapo в наличии в Ташкенте — подберём под бюджет, установим и настроим просмотр с телефона.",
+          ] },
+        ],
+        faq: [
+          { q: "Какую камеру поставить в квартиру, чтобы смотреть с телефона?", a: "Поворотную Wi-Fi-камеру 2–4 Мп с картой памяти: установка за пять минут, просмотр через приложение из любой точки мира. Из нашего каталога — EZVIZ или TP-Link Tapo." },
+          { q: "Нужен ли интернет для домашней камеры?", a: "Для записи — нет: камера пишет на карту или регистратор локально. Интернет нужен для просмотра с телефона и уведомлений." },
+          { q: "Сколько стоит видеонаблюдение для частного дома?", a: "Зависит от числа камер и монтажа. Типовой комплект «4 уличные камеры + регистратор + диск» с установкой — рассчитаем бесплатно после выезда инженера." },
+          { q: "Записывает ли камера звук?", a: "Большинство домашних камер — да, встроенный микрофон есть. У многих есть и динамик для двусторонней связи: можно говорить с посетителем через приложение." },
+        ],
+      },
+      uz: {
+        title: "Uy va kvartira uchun kamera: qanday tanlash va nimalarga e'tibor berish",
+        excerpt: "Wi-Fi yoki simli, ichki yoki tashqi, bulutga yoki kartaga yozish — uy, kvartira va podez uchun kamerani ortiqcha to'lovsiz tanlaymiz.",
+        sections: [
+          { h: "Tanlashni nimadan boshlash", p: [
+            "Avval vazifani aniqlang: ta'tilda uyni kuzatish, enaga yoki ta'mirni nazorat qilish, xususiy uyda hovli va kirish, deraza ostidagi mashina. Vazifadan hammasi bog'liq: kamera turi, o'rnatish joyi va yozish usuli.",
+            "Bitta xona uchun arzon aylanuvchi Wi-Fi kamera yetarli. Xususiy uy perimetri uchun IQ-yoritishli tashqi kameralar va odatda registrator kerak.",
+          ] },
+          { h: "Wi-Fi yoki simli", p: [
+            "Wi-Fi kamera besh daqiqada o'rnatiladi: rozetkaga ulading, ilovaga bog'lading — tayyor. Kamchiliklari — Wi-Fi sifatiga va yaqin atrofdagi rozetkaga bog'liqlik. Bu kvartira va kichik vazifalar uchun tanlov.",
+            "PoE quvvatli simli IP-kamera barqarorroq ishlaydi: bitta kabel ham tarmoq, ham quvvat beradi. Hovlili uy va bir nechta kamera uchun — faqat sim.",
+          ] },
+          { h: "Ichki yoki tashqi", p: [
+            "Tashqi kamera namlik va changdan himoyaga (IP66/IP67) hamda keng ish haroratiga ega bo'lishi shart — quyoshda korpus +60 °C gacha qiziydi, shuning uchun har ikki tomonga zaxira muhim.",
+            "Ichki kameralar ixchamroq va ko'pincha harakat ortidan burila oladi. Ichki kamerani ko'chaga o'rnatib bo'lmaydi — kondensat uni bir mavsumda ishdan chiqaradi.",
+          ] },
+          { h: "Aniqlik va tungi suratga olish", p: [
+            "Uy uchun 2–4 Mp yetarli: bir necha metr masofada yuzni tanish uchun shu kifoya. Kvartira uchun 8 Mp ketidan quvish shart emas — faqat arxiv hajmi o'sadi.",
+            "Kechasi megapiksel emas, yoritish hal qiladi: IQ-yoritish oq-qora tasvir beradi, ColorVu/Full-Color texnologiyalari — rangli. Hovli uchun rangli tungi surat ancha ma'lumotliroq.",
+          ] },
+          { h: "Qayerga yozish: karta, registrator yoki bulut", p: [
+            "Kameradagi xotira kartasi — 1–2 kamera uchun eng oddiy variant: arzon, lekin kartani kamera bilan birga olib ketishlari mumkin. Bulut bu muammoni hal qiladi, lekin obuna talab qiladi. Qattiq diskli registrator — 3–4 kameradan boshlab to'g'ri tanlov: haftalab arxiv va hech qanday abonent to'lovisiz.",
+            "Yaxshi amaliyot — kombinatsiya: registratorga yozish plyus muhim voqealarni bulutga.",
+          ] },
+          { h: "Odatiy to'plamlar va narx", p: [
+            "Kvartira: xotira kartali bitta Wi-Fi kamera. Xususiy uy: 2–4 tashqi kamera, PoE-registrator, bir oylik arxivga disk. Ko'p kvartirali uy podezi — qo'shnilar va boshqaruv kompaniyasi bilan birga hal qilinadi.",
+            "Katalogimizda Hikvision, Dahua, EZVIZ va TP-Link Tapo kameralari Toshkentda mavjud — byudjetga mos tanlab, o'rnatib, telefondan ko'rishni sozlab beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Telefondan ko'rish uchun kvartiraga qanday kamera qo'yish kerak?", a: "Xotira kartali 2–4 Mp aylanuvchi Wi-Fi kamera: besh daqiqada o'rnatiladi, dunyoning istalgan nuqtasidan ilova orqali ko'riladi." },
+          { q: "Uy kamerasi uchun internet kerakmi?", a: "Yozish uchun — yo'q: kamera kartaga yoki registratorga lokal yozadi. Internet telefondan ko'rish va bildirishnomalar uchun kerak." },
+          { q: "Xususiy uy uchun videokuzatuv qancha turadi?", a: "Kameralar soni va montajga bog'liq. «4 tashqi kamera + registrator + disk» odatiy to'plamini muhandis chiqishidan keyin bepul hisoblab beramiz." },
+          { q: "Kamera ovoz yozadimi?", a: "Ko'pchilik uy kameralari — ha, o'rnatilgan mikrofon bor. Ko'plarida ikki tomonlama aloqa uchun dinamik ham bor." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "videonablyudenie-bez-interneta",
+    date: "2026-07-29",
+    related: ["cctv"],
+    loc: {
+      ru: {
+        title: "Видеонаблюдение без интернета: дача, склад, стройка",
+        excerpt: "Как организовать камеры там, где нет проводного интернета и даже электричества: 4G-камеры, роутеры с SIM-картой, автономные решения на солнечных панелях.",
+        sections: [
+          { h: "Запись без интернета — это нормально", p: [
+            "Распространённый миф: без интернета камеры не работают. На деле интернет нужен только для удалённого просмотра — сама запись идёт локально, на карту памяти или регистратор. Система на объекте без сети полноценно пишет архив, который можно посмотреть на месте.",
+            "Вопрос обычно в другом: хочется видеть дачу или склад с телефона. Для этого есть три решения.",
+          ] },
+          { h: "Решение 1: 4G-роутер + обычные камеры", p: [
+            "Самый универсальный вариант: ставится роутер с SIM-картой, к нему подключаются обычные IP-камеры и регистратор. Мобильного интернета достаточно — для просмотра хватает 2–5 Мбит/с, а пуш-уведомления почти ничего не потребляют.",
+            "Плюс решения — масштабируемость: хоть одна камера, хоть восемь, и любые модели из каталога. Тариф с 10–20 ГБ в месяц покрывает регулярный просмотр.",
+          ] },
+          { h: "Решение 2: камеры со встроенной SIM-картой", p: [
+            "4G-камеры со слотом для SIM работают вообще без роутера: вставили карту — камера в сети. Идеально для одной-двух точек: ворота дачи, въезд на участок, стройплощадка.",
+            "Минус — каждая камера требует свою SIM и тариф, поэтому на 3+ камер выгоднее вернуться к схеме с роутером.",
+          ] },
+          { h: "Решение 3: полная автономия с солнечной панелью", p: [
+            "Там, где нет и электричества, работают комплекты «камера + аккумулятор + солнечная панель». Камера просыпается по датчику движения, пишет ролик и шлёт его через 4G. В экономном режиме такой комплект живёт без солнца до недели.",
+            "Это решение для удалённых объектов: полей, вагончиков, периметров строек — где тянуть кабель дороже, чем поставить автономную точку.",
+          ] },
+          { h: "Что учесть при выборе", p: [
+            "Проверьте покрытие сотовой сети на объекте заранее — от него зависит всё. На металлических ангарах и в низинах антенну роутера иногда выносят наружу. Для записи выбирайте детекцию движения — она в разы экономит и трафик, и место на карте.",
+            "И не экономьте на грозозащите: длинные кабельные трассы на открытых участках без неё выгорают в первый же сезон гроз.",
+          ] },
+          { h: "Итог", p: [
+            "Дача с электричеством — 4G-роутер и 2–4 камеры. Одна точка без хлопот — камера со встроенной SIM. Чистое поле — автономный комплект с солнечной панелью. Все варианты есть в нашем каталоге, поможем с подбором тарифа и настроим просмотр с телефона.",
+          ] },
+        ],
+        faq: [
+          { q: "Будет ли камера писать, если пропал интернет?", a: "Да. Запись идёт локально на карту или регистратор и не зависит от интернета — он нужен только для просмотра с телефона и уведомлений." },
+          { q: "Сколько мобильного трафика ест видеонаблюдение?", a: "Пуш-уведомления и превью — мегабайты в день. Регулярный живой просмотр — примерно 1 ГБ на каждые 2–3 часа. Тарифа 10–20 ГБ в месяц обычно достаточно." },
+          { q: "Работают ли 4G-камеры зимой?", a: "Уличные модели рассчитаны на −30 °C и ниже. У автономных комплектов зимой сокращается запас аккумулятора — панель и батарею берут с запасом." },
+          { q: "Можно ли поставить камеру на стройке на пару месяцев?", a: "Да, это типовая задача: автономная 4G-камера на мачте или контейнере, монтируется за час и переезжает на следующий объект." },
+        ],
+      },
+      uz: {
+        title: "Internetsiz videokuzatuv: dala hovli, ombor, qurilish",
+        excerpt: "Simli internet va hatto elektr bo'lmagan joyda kameralarni qanday tashkil qilish: 4G-kameralar, SIM-kartali routerlar, quyosh panelidagi avtonom yechimlar.",
+        sections: [
+          { h: "Internetsiz yozish — bu normal", p: [
+            "Keng tarqalgan afsona: internetsiz kameralar ishlamaydi. Aslida internet faqat masofadan ko'rish uchun kerak — yozuvning o'zi lokal boradi: xotira kartasiga yoki registratorga. Tarmoqsiz obyektdagi tizim arxivni to'liq yozadi.",
+            "Savol odatda boshqacha: dala hovli yoki omborni telefondan ko'rish istagi. Buning uchun uchta yechim bor.",
+          ] },
+          { h: "1-yechim: 4G-router + oddiy kameralar", p: [
+            "Eng universal variant: SIM-kartali router o'rnatiladi, unga oddiy IP-kameralar va registrator ulanadi. Mobil internet yetarli — ko'rish uchun 2–5 Mbit/s kifoya.",
+            "Yechimning plyusi — kengaytiriluvchanlik: xoh bitta kamera, xoh sakkizta. Oyiga 10–20 GB tarif muntazam ko'rishni qoplaydi.",
+          ] },
+          { h: "2-yechim: SIM-karta o'rnatilgan kameralar", p: [
+            "SIM sloti bor 4G-kameralar umuman routersiz ishlaydi: kartani soldingiz — kamera tarmoqda. Bir-ikki nuqta uchun ideal: dala hovli darvozasi, uchastkaga kirish, qurilish maydoni.",
+            "Kamchiligi — har bir kamera o'z SIM va tarifini talab qiladi, shuning uchun 3+ kamerada router sxemasiga qaytish foydaliroq.",
+          ] },
+          { h: "3-yechim: quyosh paneli bilan to'liq avtonomiya", p: [
+            "Elektr ham bo'lmagan joyda «kamera + akkumulyator + quyosh paneli» to'plamlari ishlaydi. Kamera harakat datchigidan uyg'onadi, rolik yozib, 4G orqali yuboradi. Tejamkor rejimda bunday to'plam quyoshsiz bir haftagacha yashaydi.",
+            "Bu uzoq obyektlar uchun yechim: dalalar, vagonchalar, qurilish perimetrlari — kabel tortish avtonom nuqta qo'yishdan qimmat bo'lgan joylar.",
+          ] },
+          { h: "Tanlashda nimani hisobga olish", p: [
+            "Obyektda uyali aloqa qamrovini oldindan tekshiring — hammasi unga bog'liq. Metall angarlarda router antennasini ba'zan tashqariga chiqaradilar. Yozish uchun harakat detektorini tanlang — u trafik va karta joyini bir necha barobar tejaydi.",
+            "Va momaqaldiroq himoyasidan tejamang: ochiq uchastkalardagi uzun kabel trassalari usiz birinchi mavsumdayoq kuyadi.",
+          ] },
+          { h: "Xulosa", p: [
+            "Elektrli dala hovli — 4G-router va 2–4 kamera. Tashvishsiz bitta nuqta — SIM o'rnatilgan kamera. Ochiq dala — quyosh panelli avtonom to'plam. Barcha variantlar katalogimizda bor, tarif tanlashda yordam beramiz va telefondan ko'rishni sozlaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Internet uzilsa kamera yozadimi?", a: "Ha. Yozuv kartaga yoki registratorga lokal boradi va internetga bog'liq emas — u faqat telefondan ko'rish va bildirishnomalar uchun kerak." },
+          { q: "Videokuzatuv qancha mobil trafik yeydi?", a: "Push-bildirishnomalar — kuniga megabaytlar. Muntazam jonli ko'rish — har 2–3 soatga taxminan 1 GB. Oyiga 10–20 GB tarif odatda yetarli." },
+          { q: "4G-kameralar qishda ishlaydimi?", a: "Tashqi modellar −30 °C va undan pastga mo'ljallangan. Avtonom to'plamlarda qishda akkumulyator zaxirasi kamayadi — panel va batareya zaxira bilan olinadi." },
+          { q: "Qurilishga bir necha oyga kamera qo'yish mumkinmi?", a: "Ha, bu odatiy vazifa: machta yoki konteynerdagi avtonom 4G-kamera bir soatda o'rnatiladi va keyingi obyektga ko'chadi." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ip-kvm-udlinitel",
+    date: "2026-07-29",
+    related: ["server", "network"],
+    loc: {
+      ru: {
+        title: "IP KVM удлинитель: как управлять компьютером на расстоянии",
+        excerpt: "Что такое KVM-удлинитель, чем HDMI-удлинитель отличается от KVM, и как вынести монитор, клавиатуру и мышь на десятки метров от системного блока или сервера.",
+        sections: [
+          { h: "Что такое KVM-удлинитель", p: [
+            "KVM расшифровывается как Keyboard, Video, Mouse. KVM-удлинитель переносит изображение с компьютера и управление (клавиатура + мышь) на расстояние — по обычной витой паре. Системный блок стоит в серверной или подсобке, а оператор работает за монитором в другом помещении.",
+            "Комплект состоит из передатчика у компьютера и приёмника у рабочего места: между ними один кабель UTP длиной до 60–120 метров в зависимости от модели.",
+          ] },
+          { h: "Чем KVM отличается от HDMI-удлинителя", p: [
+            "HDMI-удлинитель передаёт только картинку — он подходит, чтобы вынести телевизор или рекламный экран. KVM-удлинитель дополнительно передаёт USB: на стороне приёмника подключаются клавиатура и мышь, и вы полноценно управляете удалённым компьютером.",
+            "Если нужно просто показать изображение — достаточно HDMI Extender. Если нужно работать — берите KVM.",
+          ] },
+          { h: "Где это применяется", p: [
+            "Классика — пост охраны: регистратор видеонаблюдения заперт в серверной, а охранник листает камеры с монитора и мыши на посту. Также: операторские и диспетчерские, кассы и терминалы, промышленные компьютеры в цехах, шумные системные блоки, вынесенные из кабинета руководителя.",
+            "В серверных KVM-удлинители избавляют от «монитора на табуретке» рядом со стойкой.",
+          ] },
+          { h: "На что смотреть при выборе", p: [
+            "Дальность: типовые модели — 60 и 120 метров по cat5e/cat6. Разрешение: для офисных задач достаточно 1080p, для видеонаблюдения с мультиэкраном лучше 4K-модели. Задержка: у качественных удлинителей она незаметна для работы мышью.",
+            "Обратите внимание на количество USB-портов приёмника: кроме клавиатуры и мыши иногда нужно подключить флешку или сканер.",
+          ] },
+          { h: "Монтаж и типичные ошибки", p: [
+            "Кабель — цельная витая пара без скруток и переходов, обжатая по T568B. Прокладывайте трассу отдельно от силовых кабелей: наводки от 220 В дают артефакты на картинке. Питание передатчика и приёмника — от комплектных адаптеров.",
+            "Если картинка мигает или пропадает — почти всегда виноват кабель: скрутки, длина за пределами спецификации или дешёвый омеднённый алюминий вместо меди.",
+          ] },
+          { h: "Что есть в наличии", p: [
+            "В каталоге SAT Solutions — HDMI- и KVM-удлинители на 30, 60 и 120 метров в наличии в Ташкенте, с гарантией и доставкой по Узбекистану. Поможем выбрать под вашу задачу и проложим трассу под ключ.",
+          ] },
+        ],
+        faq: [
+          { q: "Какой кабель нужен для KVM-удлинителя?", a: "Цельная витая пара UTP cat5e или cat6, обжатая по стандарту T568B, без скруток и соединителей по трассе. Медь, не омеднённый алюминий." },
+          { q: "Есть ли задержка при управлении?", a: "У качественных удлинителей задержка незаметна: курсор двигается как на локальном компьютере. Заметный лаг — признак проблем с кабелем или дешёвого решения." },
+          { q: "Можно ли передать сигнал дальше 120 метров?", a: "Да: каскадом из двух удлинителей, по оптике с медиаконвертерами или решениями «KVM over IP» через локальную сеть — подберём под вашу дистанцию." },
+          { q: "Подойдёт ли KVM-удлинитель для видеорегистратора?", a: "Да, это самое частое применение: регистратор в серверной, монитор и мышь — на посту охраны. Управление регистратором полностью сохраняется." },
+        ],
+      },
+      uz: {
+        title: "IP KVM uzaytirgich: kompyuterni masofadan qanday boshqarish",
+        excerpt: "KVM-uzaytirgich nima, HDMI-uzaytirgich KVM'dan nimasi bilan farq qiladi va monitor, klaviatura va sichqonchani tizim blokidan o'nlab metrga qanday chiqarish mumkin.",
+        sections: [
+          { h: "KVM-uzaytirgich nima", p: [
+            "KVM — Keyboard, Video, Mouse degani. KVM-uzaytirgich kompyuterdan tasvir va boshqaruvni (klaviatura + sichqoncha) masofaga — oddiy vitaya para orqali uzatadi. Tizim bloki serverxonada turadi, operator esa boshqa xonadagi monitorda ishlaydi.",
+            "To'plam kompyuter yonidagi uzatuvchi va ish joyi yonidagi qabul qiluvchidan iborat: ular orasida modelga qarab 60–120 metrgacha bitta UTP kabel.",
+          ] },
+          { h: "KVM HDMI-uzaytirgichdan nimasi bilan farq qiladi", p: [
+            "HDMI-uzaytirgich faqat tasvirni uzatadi — televizor yoki reklama ekranini chiqarish uchun mos. KVM-uzaytirgich qo'shimcha USB uzatadi: qabul qiluvchi tomonda klaviatura va sichqoncha ulanadi va siz masofadagi kompyuterni to'liq boshqarasiz.",
+            "Faqat tasvir ko'rsatish kerak bo'lsa — HDMI Extender yetarli. Ishlash kerak bo'lsa — KVM oling.",
+          ] },
+          { h: "Qayerda qo'llaniladi", p: [
+            "Klassika — qo'riqlash posti: videokuzatuv registratori serverxonada qulflangan, qo'riqchi esa postdagi monitor va sichqoncha bilan kameralarni ko'radi. Shuningdek: operator va dispetcher xonalari, kassalar, sexlardagi sanoat kompyuterlari.",
+            "Serverxonalarda KVM-uzaytirgichlar stoyka yonidagi «kursidagi monitor»dan xalos qiladi.",
+          ] },
+          { h: "Tanlashda nimaga qarash kerak", p: [
+            "Masofa: odatiy modellar — cat5e/cat6 orqali 60 va 120 metr. Aniqlik: ofis vazifalari uchun 1080p yetarli, multiekranli videokuzatuv uchun 4K modellari yaxshiroq. Kechikish: sifatli uzaytirgichlarda u sichqoncha bilan ishlashda sezilmaydi.",
+            "Qabul qiluvchining USB-portlari soniga e'tibor bering: klaviatura va sichqonchadan tashqari ba'zan fleshka ulash kerak bo'ladi.",
+          ] },
+          { h: "Montaj va odatiy xatolar", p: [
+            "Kabel — trassada ulanish va o'ramlarsiz yaxlit vitaya para, T568B bo'yicha siqilgan. Trassani kuch kabellaridan alohida yotqizing: 220 V dan induksiya tasvirda artefaktlar beradi.",
+            "Tasvir miltillasa yoki yo'qolsa — deyarli har doim kabel aybdor: o'ramlar, spetsifikatsiyadan ortiq uzunlik yoki mis o'rniga arzon alyuminiy.",
+          ] },
+          { h: "Nima mavjud", p: [
+            "SAT Solutions katalogida — 30, 60 va 120 metrli HDMI- va KVM-uzaytirgichlar Toshkentda mavjud, kafolat va O'zbekiston bo'ylab yetkazib berish bilan. Vazifangizga mosini tanlashga yordam beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "KVM-uzaytirgich uchun qanday kabel kerak?", a: "T568B standarti bo'yicha siqilgan, trassada o'ram va ulagichlarsiz yaxlit UTP cat5e yoki cat6. Mis, alyuminiy emas." },
+          { q: "Boshqarishda kechikish bormi?", a: "Sifatli uzaytirgichlarda kechikish sezilmaydi: kursor lokal kompyuterdagidek harakatlanadi." },
+          { q: "Signalni 120 metrdan uzoqroqqa uzatish mumkinmi?", a: "Ha: ikkita uzaytirgich kaskadi, mediakonvertorli optika yoki lokal tarmoq orqali «KVM over IP» yechimlari bilan." },
+          { q: "KVM-uzaytirgich videoregistrator uchun mos keladimi?", a: "Ha, bu eng ko'p qo'llanish: registrator serverxonada, monitor va sichqoncha qo'riqlash postida. Boshqaruv to'liq saqlanadi." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "slabotochnye-sistemy",
+    date: "2026-07-29",
+    related: ["cctv", "fire", "network"],
+    loc: {
+      ru: {
+        title: "Слаботочные системы здания: что входит и как проектируют",
+        excerpt: "Видеонаблюдение, СКУД, пожарная сигнализация, сети и телефония — разбираем, из чего состоят слаботочные системы офиса или здания и почему их проектируют вместе.",
+        sections: [
+          { h: "Что такое «слаботочка»", p: [
+            "Слаботочными называют системы, работающие на малых токах: они передают информацию, а не питают оборудование. В современном здании это видеонаблюдение, контроль доступа, пожарная и охранная сигнализация, структурированные кабельные сети, Wi-Fi, телефония, домофония и оповещение.",
+            "Формально к слаботочным относят цепи до 24–48 В — но на практике под словом «слаботочка» понимают весь комплекс инженерных систем безопасности и связи.",
+          ] },
+          { h: "Состав типового проекта", p: [
+            "Офис или здание обычно включает: СКС (сетевые розетки и кабели до серверной), видеонаблюдение по периметру и в ключевых зонах, СКУД на входах и турникеты, пожарную сигнализацию с оповещением (обязательна по нормам), охранную сигнализацию и Wi-Fi.",
+            "Для бизнес-центров и производств добавляются переговорные с видеосвязью, IP-телефония, видеостены диспетчерских и системы парковки.",
+          ] },
+          { h: "Почему проектировать нужно вместе", p: [
+            "Все слаботочные системы делят общую инфраструктуру: кабельные трассы, лотки, серверную, питание и коммутаторы. Спроектированные по отдельности, они дублируют трассы и оборудование — это лишние деньги и хаос за фальшпотолком.",
+            "Единый проект экономит до трети бюджета: одна серверная стойка, общие лотки, один подрядчик и согласованные сроки с ремонтом.",
+          ] },
+          { h: "Этапы: от проекта до сдачи", p: [
+            "Порядок такой: обследование объекта и техзадание → проект с планами трасс и спецификацией → закладка кабелей на этапе черновой отделки → монтаж оборудования после чистовой → пусконаладка и обучение персонала.",
+            "Ключевой момент — успеть с кабелями до отделки: прокладка по готовому ремонту дороже и оставляет короба на стенах.",
+          ] },
+          { h: "Нормы и лицензии", p: [
+            "Пожарная сигнализация и оповещение проектируются по нормам пожарной безопасности и требуют лицензированного подрядчика — иначе объект не пройдёт проверку. СКУД на путях эвакуации обязан разблокироваться по пожарному сигналу — это тоже вопрос грамотного проекта.",
+            "SAT Solutions имеет государственные лицензии на проектирование и монтаж противопожарных систем.",
+          ] },
+          { h: "С чего начать", p: [
+            "Пришлите план помещения или пригласите инженера на объект: составим техзадание, спецификацию и смету по всем системам сразу — с этапностью под ваш ремонт и бюджет. Проект, монтаж, сервис — из одних рук, с гарантией.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли делать слаботочку после ремонта?", a: "Можно, но дороже и заметнее: кабели пойдут в коробах по стенам либо потребуется частичный демонтаж отделки. Правильно закладывать трассы на этапе черновых работ." },
+          { q: "Какие системы обязательны по закону?", a: "Пожарная сигнализация и система оповещения об эвакуации — для коммерческих и общественных зданий обязательны. Остальные системы — по задачам собственника." },
+          { q: "Сколько длится монтаж слаботочных систем офиса?", a: "Типовой офис 200–500 м²: кабельные трассы — одна-две недели на черновом этапе, монтаж и наладка оборудования — ещё одна-две недели после отделки." },
+          { q: "Вы работаете как субподрядчик у строителей?", a: "Да, регулярно выполняем слаботочный раздел в составе генподряда: со своим проектом, графиком и исполнительной документацией." },
+        ],
+      },
+      uz: {
+        title: "Binoning kuchsiz tok tizimlari: nimalar kiradi va qanday loyihalanadi",
+        excerpt: "Videokuzatuv, SKUD, yong'in signalizatsiyasi, tarmoqlar va telefoniya — ofis yoki binoning kuchsiz tok tizimlari nimadan iborat va nega ular birga loyihalanadi.",
+        sections: [
+          { h: "«Kuchsiz tok» nima", p: [
+            "Kuchsiz tok tizimlari — kichik toklarda ishlaydigan tizimlar: ular uskunani quvvatlamaydi, axborot uzatadi. Zamonaviy binoda bu videokuzatuv, kirishni nazorat qilish, yong'in va qo'riqlash signalizatsiyasi, strukturali kabel tarmoqlari, Wi-Fi, telefoniya, domofoniya va ogohlantirish.",
+            "Amalda «kuchsiz tok» so'zi ostida xavfsizlik va aloqa muhandislik tizimlarining butun kompleksi tushuniladi.",
+          ] },
+          { h: "Odatiy loyiha tarkibi", p: [
+            "Ofis yoki bino odatda quyidagilarni o'z ichiga oladi: SKS (tarmoq rozetkalari va serverxonagacha kabellar), perimetr va asosiy zonalarda videokuzatuv, kirishlarda SKUD va turniketlar, ogohlantirish bilan yong'in signalizatsiyasi (normalar bo'yicha majburiy), qo'riqlash signalizatsiyasi va Wi-Fi.",
+            "Biznes-markazlar va ishlab chiqarishlar uchun videoaloqa xonalari, IP-telefoniya, dispetcher videodevorlari qo'shiladi.",
+          ] },
+          { h: "Nega birga loyihalash kerak", p: [
+            "Barcha kuchsiz tok tizimlari umumiy infratuzilmani bo'lishadi: kabel trassalari, lotoklar, serverxona, quvvat va kommutatorlar. Alohida loyihalanganda ular trassalar va uskunani takrorlaydi — bu ortiqcha pul.",
+            "Yagona loyiha byudjetning uchdan birigacha tejaydi: bitta server stoykasi, umumiy lotoklar, bitta pudratchi.",
+          ] },
+          { h: "Bosqichlar: loyihadan topshirishgacha", p: [
+            "Tartib shunday: obyektni tekshirish va texnik topshiriq → trassalar rejasi va spetsifikatsiya bilan loyiha → qora pardozlash bosqichida kabellarni yotqizish → toza pardozdan keyin uskunani o'rnatish → ishga tushirish va xodimlarni o'qitish.",
+            "Asosiy moment — kabellarga pardozgacha ulgurish: tayyor ta'mir bo'ylab yotqizish qimmatroq.",
+          ] },
+          { h: "Normalar va litsenziyalar", p: [
+            "Yong'in signalizatsiyasi va ogohlantirish yong'in xavfsizligi normalari bo'yicha loyihalanadi va litsenziyali pudratchini talab qiladi — aks holda obyekt tekshiruvdan o'tmaydi. Evakuatsiya yo'llaridagi SKUD yong'in signali bo'yicha blokdan chiqishi shart.",
+            "SAT Solutions yong'inga qarshi tizimlarni loyihalash va montaj qilish uchun davlat litsenziyalariga ega.",
+          ] },
+          { h: "Nimadan boshlash", p: [
+            "Xona rejasini yuboring yoki muhandisni obyektga taklif qiling: barcha tizimlar bo'yicha birdaniga texnik topshiriq, spetsifikatsiya va smeta tuzamiz — ta'miringiz va byudjetingizga mos bosqichlar bilan. Loyiha, montaj, servis — bir qo'ldan, kafolat bilan.",
+          ] },
+        ],
+        faq: [
+          { q: "Ta'mirdan keyin kuchsiz tok qilish mumkinmi?", a: "Mumkin, lekin qimmatroq va ko'rinadi: kabellar devor bo'ylab korobkalarda boradi. To'g'risi — trassalarni qora ishlar bosqichida yotqizish." },
+          { q: "Qonun bo'yicha qaysi tizimlar majburiy?", a: "Yong'in signalizatsiyasi va evakuatsiya haqida ogohlantirish tizimi — tijorat va jamoat binolari uchun majburiy. Qolganlari — mulkdor vazifalari bo'yicha." },
+          { q: "Ofis kuchsiz tok montaji qancha davom etadi?", a: "200–500 m² odatiy ofis: kabel trassalari — qora bosqichda bir-ikki hafta, uskunani o'rnatish va sozlash — pardozdan keyin yana bir-ikki hafta." },
+          { q: "Quruvchilarda subpudratchi sifatida ishlaysizmi?", a: "Ha, muntazam ravishda genpudrat tarkibida kuchsiz tok bo'limini bajaramiz: o'z loyihamiz, jadvalimiz va ijro hujjatlari bilan." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "chto-takoe-poe",
+    date: "2026-07-29",
+    related: ["network", "cctv"],
+    loc: {
+      ru: {
+        title: "Что такое PoE: питание камер и точек доступа по витой паре",
+        excerpt: "PoE передаёт питание и данные по одному сетевому кабелю. Разбираем стандарты, бюджет мощности и то, как PoE упрощает монтаж камер, точек доступа и телефонов.",
+        sections: [
+          { h: "PoE простыми словами", p: [
+            "PoE (Power over Ethernet) — технология, которая передаёт электропитание по тому же кабелю витой пары, что и данные. Камера, точка доступа или IP-телефон подключаются одним кабелем — без розетки и блока питания рядом с устройством.",
+            "Питание подаёт PoE-коммутатор или инжектор, а устройство просто работает: согласование мощности происходит автоматически и безопасно для не-PoE устройств.",
+          ] },
+          { h: "Стандарты и мощность", p: [
+            "Три основных стандарта: 802.3af (до 15,4 Вт) — камеры и телефоны; 802.3at, он же PoE+ (до 30 Вт) — поворотные камеры и точки доступа Wi-Fi 6; 802.3bt, он же PoE++ (до 60–90 Вт) — PTZ-камеры с обогревом, видеотерминалы, мощные точки доступа.",
+            "Дальность любого стандарта — 100 метров по cat5e/cat6. Дальше — PoE-удлинители или оптика.",
+          ] },
+          { h: "Бюджет мощности коммутатора", p: [
+            "У каждого PoE-коммутатора два предела: мощность на порт и общий бюджет. Восьмипортовый коммутатор с бюджетом 65 Вт не вытянет восемь камер по 12 Вт — суммарно нужно 96 Вт. Это самая частая ошибка при самостоятельном подборе.",
+            "Правило: сложите паспортную мощность всех устройств и добавьте 25–30 % запаса — получите минимальный бюджет коммутатора.",
+          ] },
+          { h: "Зачем PoE видеонаблюдению", p: [
+            "Один кабель вместо двух трасс (сеть + 220 В) — вдвое меньше монтажа и точек отказа. Централизованное питание: один ИБП в стойке держит все камеры при отключении света. Удалённая перезагрузка зависшей камеры — отключением PoE-порта, без поездки на объект.",
+            "Поэтому современные системы видеонаблюдения строятся почти исключительно на PoE.",
+          ] },
+          { h: "Инжектор или коммутатор", p: [
+            "PoE-инжектор — «переходник» для одного устройства: дёшево, когда нужно запитать одну камеру от обычного коммутатора. От трёх-четырёх устройств выгоднее PoE-коммутатор: меньше коробок, общий мониторинг и управление портами.",
+            "Есть и обратные устройства — PoE-сплиттеры: выделяют питание из кабеля для устройств без поддержки PoE.",
+          ] },
+          { h: "Итог", p: [
+            "PoE — стандарт де-факто для камер, точек доступа и IP-телефонов: меньше кабелей, центральный ИБП, удалённое управление питанием. В каталоге SAT Solutions — PoE-коммутаторы на 4–48 портов, инжекторы и удлинители в наличии в Ташкенте; поможем посчитать бюджет мощности под ваш проект.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли подключить обычное устройство в PoE-порт?", a: "Да, это безопасно: коммутатор подаёт питание только после согласования с PoE-устройством. Обычный ноутбук или принтер получит только данные." },
+          { q: "На какое расстояние работает PoE?", a: "До 100 метров по витой паре cat5e/cat6 — как и сама сеть Ethernet. Дальше используют PoE-удлинители (ещё +100 м на каждый) или оптику с PoE-медиаконвертерами." },
+          { q: "Чем PoE+ отличается от обычного PoE?", a: "Мощностью: PoE (802.3af) отдаёт до 15,4 Вт, PoE+ (802.3at) — до 30 Вт. Поворотным камерам, Wi-Fi 6 точкам и камерам с обогревом нужен PoE+ и выше." },
+          { q: "Что будет, если мощности коммутатора не хватит?", a: "Коммутатор начнёт отключать порты по приоритету — камеры будут случайно «отваливаться». Поэтому бюджет мощности считают с запасом 25–30 %." },
+        ],
+      },
+      uz: {
+        title: "PoE nima: kamera va ulanish nuqtalarini vitaya para orqali quvvatlash",
+        excerpt: "PoE quvvat va ma'lumotni bitta tarmoq kabeli orqali uzatadi. Standartlar, quvvat byudjeti va PoE kameralar montajini qanday soddalashtirishini ko'rib chiqamiz.",
+        sections: [
+          { h: "PoE oddiy tilda", p: [
+            "PoE (Power over Ethernet) — elektr quvvatni ma'lumot bilan bir xil vitaya para kabeli orqali uzatadigan texnologiya. Kamera, ulanish nuqtasi yoki IP-telefon bitta kabel bilan ulanadi — qurilma yonida rozetka va quvvat blokisiz.",
+            "Quvvatni PoE-kommutator yoki injektor beradi: quvvat kelishuvi avtomatik va PoE bo'lmagan qurilmalar uchun xavfsiz.",
+          ] },
+          { h: "Standartlar va quvvat", p: [
+            "Uchta asosiy standart: 802.3af (15,4 Vt gacha) — kameralar va telefonlar; 802.3at yoki PoE+ (30 Vt gacha) — aylanuvchi kameralar va Wi-Fi 6 nuqtalari; 802.3bt yoki PoE++ (60–90 Vt gacha) — isitgichli PTZ-kameralar, videoterminallar.",
+            "Har qanday standart masofasi — cat5e/cat6 orqali 100 metr. Undan uzoqqa — PoE-uzaytirgichlar yoki optika.",
+          ] },
+          { h: "Kommutator quvvat byudjeti", p: [
+            "Har bir PoE-kommutatorda ikkita chegara bor: portga quvvat va umumiy byudjet. 65 Vt byudjetli sakkiz portli kommutator 12 Vt dan sakkizta kamerani tortmaydi — jami 96 Vt kerak. Bu mustaqil tanlashdagi eng ko'p uchraydigan xato.",
+            "Qoida: barcha qurilmalarning pasport quvvatini qo'shing va 25–30 % zaxira qo'shing.",
+          ] },
+          { h: "Videokuzatuvga PoE nima uchun kerak", p: [
+            "Ikki trassa (tarmoq + 220 V) o'rniga bitta kabel — montaj va nosozlik nuqtalari ikki baravar kam. Markazlashgan quvvat: stoykadagi bitta UPS svet o'chganda barcha kameralarni ushlab turadi. Qotib qolgan kamerani masofadan qayta yuklash — PoE-portni o'chirish bilan.",
+            "Shuning uchun zamonaviy videokuzatuv tizimlari deyarli faqat PoE asosida quriladi.",
+          ] },
+          { h: "Injektor yoki kommutator", p: [
+            "PoE-injektor — bitta qurilma uchun «o'tkazgich»: oddiy kommutatordan bitta kamerani quvvatlash kerak bo'lganda arzon. Uch-to'rt qurilmadan boshlab PoE-kommutator foydaliroq: kamroq qutilar, umumiy monitoring.",
+            "Teskari qurilmalar ham bor — PoE-splitterlar: PoE'ni qo'llamaydigan qurilmalar uchun kabeldan quvvatni ajratadi.",
+          ] },
+          { h: "Xulosa", p: [
+            "PoE — kameralar, ulanish nuqtalari va IP-telefonlar uchun de-fakto standart: kamroq kabel, markaziy UPS, quvvatni masofadan boshqarish. SAT Solutions katalogida — 4–48 portli PoE-kommutatorlar, injektorlar va uzaytirgichlar Toshkentda mavjud; loyihangiz uchun quvvat byudjetini hisoblashga yordam beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "PoE-portga oddiy qurilmani ulash mumkinmi?", a: "Ha, bu xavfsiz: kommutator quvvatni faqat PoE-qurilma bilan kelishuvdan keyin beradi. Oddiy noutbuk faqat ma'lumot oladi." },
+          { q: "PoE qancha masofaga ishlaydi?", a: "Cat5e/cat6 vitaya para orqali 100 metrgacha. Undan uzoqqa PoE-uzaytirgichlar (har biri +100 m) yoki PoE-mediakonvertorli optika ishlatiladi." },
+          { q: "PoE+ oddiy PoE'dan nimasi bilan farq qiladi?", a: "Quvvat bilan: PoE (802.3af) 15,4 Vt gacha, PoE+ (802.3at) 30 Vt gacha beradi. Aylanuvchi kameralar va Wi-Fi 6 nuqtalariga PoE+ va undan yuqori kerak." },
+          { q: "Kommutator quvvati yetmasa nima bo'ladi?", a: "Kommutator portlarni ustuvorlik bo'yicha o'chira boshlaydi — kameralar tasodifiy «uzilib» turadi. Shuning uchun quvvat byudjeti 25–30 % zaxira bilan hisoblanadi." },
+        ],
+      },
+    },
+  },
 ];
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
