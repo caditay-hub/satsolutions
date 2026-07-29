@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { getBrands } from "@/lib/api";
+import { getBrands, getBrandTypePairs } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -10,6 +10,7 @@ import { getBrandSeo } from "@/lib/brandSeo";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { CatalogView } from "../../products/CatalogView";
 import { catalogRobots } from "@/lib/catalogRobots";
+import { CategoryServiceLink } from "@/components/CategoryServiceLink";
 
 const SITE = "https://satsolutions.uz";
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
@@ -33,7 +34,11 @@ export async function generateMetadata({
   // фолбэк — прежний шаблон «{Бренд} — Каталог продукции».
   const seo = getBrandSeo(brand.toLowerCase(), locale);
   const title = seo?.title || `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
-  const description = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
+  // Сниппет с наличием и CTA впереди — дожим CTR на позициях 5–8 (страницы с показами в GSC)
+  const { brands } = await getBrands().catch(() => ({ brands: [] as Awaited<ReturnType<typeof getBrands>>["brands"] }));
+  const stockCount = brands.find((b) => b.slug.toLowerCase() === brand.toLowerCase())?.productCount ?? 0;
+  const baseDesc = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
+  const description = stockCount >= 5 ? `${tc("brandInStock", { count: stockCount })} ${baseDesc}` : baseDesc;
   return {
     title,
     description,
@@ -87,10 +92,21 @@ export default async function BrandCatalogPage({
       seo: seo ? { intro: seo.intro, faq: seo.faq } : null,
     },
   } as any);
+  // Перелинковка бренд→услуга по доминирующей категории бренда (у типовых страниц она уже есть)
+  let dominantType: string | null = null;
+  try {
+    const { pairs } = await getBrandTypePairs();
+    dominantType =
+      pairs
+        .filter((p) => p.brand.toLowerCase() === brandSlug)
+        .sort((a, b) => b.count - a.count)[0]?.type ?? null;
+  } catch {}
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {view}
+      <CategoryServiceLink typeName={dominantType} locale={locale} />
     </>
   );
 }

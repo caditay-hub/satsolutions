@@ -10,11 +10,13 @@
     "helpTitle": "Tanlashda yordam kerakmi?",
     "helpText": "Muhandisimiz vazifangiz uchun mos uskunani tanlab, 30 daqiqada tijorat taklifini yuboradi.",
     "getConsult": "Maslahat olish",
-    "similar": "O‘xshash", "boughtWith": "Bu bilan birga olinadi",
+    "similar": "O‘xshash",
+    "boughtWith": "Bu bilan birga olinadi",
     "similarProducts": "O‘xshash mahsulotlar",
     "wholeCategory": "Butun kategoriya",
     "listDesc": "Xavfsizlik uskunalari katalogi: kameralar, videoregistratorlar, kirish nazorati, domofoniya, signalizatsiya — Dahua, Hikvision va boshqa brendlar.",
-    "typeDesc": "{type}: katalog, narxlar, tanlash va Toshkent hamda O‘zbekiston bo‘ylab yetkazib berish. Rasmiy kafolat, montaj va servis — SAT Solutions."
+    "typeDesc": "{type}: katalog, narxlar, tanlash va Toshkent hamda O‘zbekiston bo‘ylab yetkazib berish. Rasmiy kafolat, montaj va servis — SAT Solutions.",
+    "inStockCount": "Toshkentda {count} ta model mavjud."
   },
   "nav": {
     "home": "Asosiy",
@@ -2199,7 +2201,8 @@
     "similar": "Oʻxshash mahsulotlar",
     "casesTitle": "Keyslar va yechimlar",
     "caseBadge": "Keys",
-    "solutionBadge": "Yechim"
+    "solutionBadge": "Yechim",
+    "brandInStock": "{count} ta model mavjud — narxlar so‘mda, kafolat, Toshkent va butun O‘zbekiston bo‘ylab yetkazib berish."
   },
   "notFound": {
     "title": "Sahifa topilmadi",

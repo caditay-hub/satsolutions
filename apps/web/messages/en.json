@@ -10,11 +10,13 @@
     "helpTitle": "Need help choosing?",
     "helpText": "Our engineer will pick the right equipment for your needs and send a quote within 30 minutes.",
     "getConsult": "Get a consultation",
-    "similar": "Similar", "boughtWith": "Frequently bought together",
+    "similar": "Similar",
+    "boughtWith": "Frequently bought together",
     "similarProducts": "Similar products",
     "wholeCategory": "Whole category",
     "listDesc": "Security equipment catalog: cameras, NVRs, access control, intercoms, alarms — Dahua, Hikvision and other brands.",
-    "typeDesc": "{type}: catalog, prices, selection and delivery across Tashkent and Uzbekistan. Official warranty, installation and service by SAT Solutions."
+    "typeDesc": "{type}: catalog, prices, selection and delivery across Tashkent and Uzbekistan. Official warranty, installation and service by SAT Solutions.",
+    "inStockCount": "{count} models in stock in Tashkent."
   },
   "nav": {
     "home": "Home",
@@ -2199,7 +2201,8 @@
     "similar": "Similar products",
     "casesTitle": "Case studies & solutions",
     "caseBadge": "Case",
-    "solutionBadge": "Solution"
+    "solutionBadge": "Solution",
+    "brandInStock": "{count} models in stock — prices in UZS, warranty, delivery across Tashkent and Uzbekistan."
   },
   "notFound": {
     "title": "Page not found",

@@ -67,10 +67,14 @@ export async function fetchGa4Report(windowDays = 7): Promise<Ga4Report> {
     }),
   ]);
 
-  // В отчёте с двумя dateRanges строки помечены dateRange ("date_range_0/1").
+  // В отчёте с двумя dateRanges строки помечены dateRange. При ИМЕНОВАННЫХ диапазонах GA4
+  // возвращает имя ("current"/"previous"), а не "date_range_N", и порядок строк НЕ гарантирован —
+  // матчим по имени (fallback на авто-имена). Старый поиск только "date_range_0" промахивался и
+  // брал rows[0], где лежал previous → отчёты меняли местами текущую и прошлую неделю.
   const rows: any[] = totalsReport.rows ?? [];
-  const curRow = rows.find((r) => r.dimensionValues?.[0]?.value === "date_range_0") ?? rows[0];
-  const prevRow = rows.find((r) => r.dimensionValues?.[0]?.value === "date_range_1") ?? rows[1];
+  const rangeName = (r: any) => r.dimensionValues?.[0]?.value;
+  const curRow = rows.find((r) => ["current", "date_range_0"].includes(rangeName(r))) ?? rows[0];
+  const prevRow = rows.find((r) => ["previous", "date_range_1"].includes(rangeName(r))) ?? rows[1];
   const pick = (row: any): Ga4Totals => {
     const v = (i: number) => Number(row?.metricValues?.[i]?.value ?? 0);
     return { sessions: v(0), activeUsers: v(1), conversions: v(2), engagementRate: v(3) };

@@ -51,7 +51,8 @@ export async function generateMetadata({
   const locType = localizeCatName(pair.typeName, locale);
   const seo = getPairSeo(brandSlug, type, locale);
   const title = seo?.title || `${locType} ${brandName} — ${t("product.titleBuy")}`;
-  const description = `${t("product.typeDesc", { type: `${locType} ${brandName}` })}`;
+  // «N моделей в наличии» впереди сниппета — дожим CTR (страницы с показами на поз. 5–8)
+  const description = `${t("product.inStockCount", { count: pair.count })} ${t("product.typeDesc", { type: `${locType} ${brandName}` })}`;
   return {
     title,
     description,
