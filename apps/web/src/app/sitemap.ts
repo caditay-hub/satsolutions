@@ -196,7 +196,7 @@ const serviceRoutes = services.filter((s) => !LEGACY_SERVICE_SLUGS.has(s.slug)).
             alternates: { languages: langAlternates(`/solutions/${s.key}`) },
         }));
 
-        return [
+        const all = [
             ...routes,
             ...blogRoutes,
             ...brandRoutes,
@@ -208,6 +208,14 @@ const serviceRoutes = services.filter((s) => !LEGACY_SERVICE_SLUGS.has(s.slug)).
             ...staticServiceRoutes,
             ...portfolioRoutes
         ];
+        // UZ/EN-версии отдельными <loc>-записями: hreflang-альтернатов Google для обнаружения
+        // не хватает (GSC у /uz/… страниц: «нет ссылающихся файлов Sitemap», UZ-индексация 27/124).
+        // tr/zh — EN-фолбэк контента, их не плодим (остаются в hreflang). Блог расширяется только
+        // на локали, где есть перевод (его alternates уже урезаны до фактических).
+        return all.flatMap((e) => {
+            const langs = (e.alternates?.languages ?? {}) as Record<string, string>;
+            return [e, ...["uz", "en"].filter((l) => langs[l]).map((l) => ({ ...e, url: langs[l] }))];
+        });
     } catch (error) {
         console.error("Sitemap generation error:", error);
         return routes;
