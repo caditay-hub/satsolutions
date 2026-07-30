@@ -76,6 +76,8 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     // языка сбрасывает состояние страницы. window.location вместо useSearchParams,
     // чтобы не оборачивать шапку в Suspense на статических страницах.
     const qs = window.location.search;
+    // Ручной выбор запоминаем на год — middleware не будет уводить на /uz по языку браузера
+    document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`;
     router.replace(`${pathname}${qs}`, { locale: l });
   };
 

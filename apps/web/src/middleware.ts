@@ -30,6 +30,32 @@ const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
   "sistemy_hraneniya_dannyh": "/products/type/servernoe-oborudovanie",
 };
 
+// ── Автоопределение узбекского (только оно; общий localeDetection выключен, см. routing.ts) ──
+// Живой посетитель с узбекским языком системы получает /uz-версию. Ботов НЕ трогаем (иначе
+// Googlebot начнёт видеть редиректы вместо русских канонических страниц), ручной выбор языка
+// (cookie NEXT_LOCALE от переключателя) всегда важнее автоопределения. Редирект 307 —
+// временный: канонические URL остаются русскими.
+const BOT_RE = /bot|crawler|spider|crawl|slurp|googlebot|bingbot|yandex|duckduck|baidu|facebookexternal|applebot|petal|ahrefs|semrush|lighthouse|headless|monitoring|preview|curl|wget|python|go-http/i;
+const LOCALE_PREFIX_RE = new RegExp(`^/(${localeAlt})(/|$)`);
+
+function prefersUz(req: NextRequest) {
+  // Берём только САМЫЙ приоритетный язык браузера: «uz» где-то в хвосте списка не считается.
+  const first = (req.headers.get("accept-language") || "").split(",")[0]?.trim().toLowerCase() ?? "";
+  return first.startsWith("uz");
+}
+
+function uzAutoRedirect(req: NextRequest) {
+  const p = req.nextUrl.pathname;
+  if (LOCALE_PREFIX_RE.test(p)) return null;                 // уже на нерусской версии
+  if (req.cookies.get("NEXT_LOCALE")) return null;           // язык выбран вручную — уважаем
+  if (BOT_RE.test(req.headers.get("user-agent") || "")) return null;
+  if (!prefersUz(req)) return null;
+  const url = new URL(`/uz${p === "/" ? "" : p}${req.nextUrl.search}`, req.url);
+  const res = NextResponse.redirect(url, 307);
+  res.headers.set("Vary", "Accept-Language, Cookie");        // корректное кэширование
+  return res;
+}
+
 export default function middleware(req: NextRequest) {
   // Снятые с продажи товары (см. removedProducts.ts): старые URL в индексе Google отдавали 404.
   // 308 на страницу бренда — очищает индекс, возвращает вес, убирает тупик для пользователя.
@@ -71,6 +97,8 @@ export default function middleware(req: NextRequest) {
     const target = old[2] === "product/show" || old[2] === "products/filter" ? "/products" : "/catalog";
     return NextResponse.redirect(new URL(`${prefix}${target}`, req.url), 308);
   }
+  const uz = uzAutoRedirect(req);
+  if (uz) return uz;
   return intlMiddleware(req);
 }
 
