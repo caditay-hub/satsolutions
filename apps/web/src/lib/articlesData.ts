@@ -2727,6 +2727,148 @@ export const ARTICLES: Article[] = [
       },
     },
   },
+  {
+    slug: "kamera-narxlari",
+    date: "2026-07-30",
+    related: ["cctv"],
+    loc: {
+      uz: {
+        title: "Kamera narxlari 2026: videokuzatuv qancha turadi",
+        excerpt: "Toshkentda videokuzatuv kameralari narxlari: mini kameradan professional IP-kameragacha, to'plam narxi, o'rnatish qiymati va nimaga pul to'lash arziydi.",
+        sections: [
+          { h: "Kamera narxi nimaga bog'liq", p: [
+            "Narxni to'rt narsa belgilaydi: aniqlik (2–8 Mp), korpus turi (ichki, ko'cha, aylanuvchi PTZ), tungi ko'rish texnologiyasi va brend. Xitoyning nomsiz modeli bilan Hikvision yoki Dahua o'rtasidagi farq — kafolat, dasturiy ta'minot sifati va bir necha yillik ishonchli ishlash.",
+            "Eng arzon Wi-Fi kameralar 300–500 ming so'mdan boshlanadi, sifatli ko'cha IP-kameralar 700 ming — 1,5 million so'm oralig'ida, aylanuvchi PTZ va maxsus modellar undan qimmatroq.",
+          ] },
+          { h: "Mini kameralar: nima uchun arzon", p: [
+            "«Mini kamera narxlari» so'rovi bo'yicha odatda kichik Wi-Fi kameralar topiladi — ular uy ichida, bolalar yoki xodimlarni kuzatish uchun qulay. Narxi past, lekin cheklovlari bor: kuchsiz tungi yoritish, xotira kartasiga bog'liqlik va Wi-Fi sifatiga sezgirlik.",
+            "Hovli, do'kon yoki ombor uchun mini kamera yaramaydi — u yerda ko'cha korpusi (IP66), IQ-yoritish va registratorga simli ulanish kerak.",
+          ] },
+          { h: "To'plam narxi: uy va do'kon uchun", p: [
+            "Amalda narx bitta kameraga emas, to'plamga qaraladi. Uy uchun tipik to'plam: 4 ta ko'cha kamerasi + PoE-registrator + qattiq disk + kabel va montaj. Do'kon uchun: 2–4 ta ichki kamera kassa va zal ustida, registrator va telefondan ko'rish sozlamasi.",
+            "To'plam narxiga uskunadan tashqari kabel, quvvat manbai, ishchi soatlar va sozlash kiradi — shuning uchun «faqat kamera narxi»ga qarab byudjet tuzish noto'g'ri.",
+          ] },
+          { h: "O'rnatish qancha turadi", p: [
+            "Montaj narxi kameralar soni, kabel uzunligi va obyekt murakkabligiga bog'liq: yangi qurilishda kabel yotqizish oson, tayyor ta'mirda esa gofra va korobkalar kerak bo'ladi. Muhandisning chiqishi va smeta hisob-kitobi bizda bepul.",
+            "Ba'zan tejash mumkin: agar kamera registratorga yaqin bo'lsa yoki tayyor kabel trassasi bo'lsa, ishlar arzonlashadi.",
+          ] },
+          { h: "Nimaga pul to'lash arziydi", p: [
+            "Uch narsaga tejamang: asosiy zonalardagi kamera sifati (kirish, kassa), registrator diski (videokuzatuv uchun maxsus seriya) va montaj. Qolganida kelishuv mumkin: brend, arxiv chuqurligi, qo'shimcha funksiyalar.",
+            "Katalogimizda 3000 dan ortiq tovar bor, kameralar Toshkentda mavjud, narxlar so'mda va kafolat bilan. Vazifangizni ayting — byudjetga mos to'plamni tanlab, aniq narxni hisoblab beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Eng arzon kamera qancha turadi?", a: "Oddiy ichki Wi-Fi kamera 300–500 ming so'mdan boshlanadi. Ko'cha uchun sifatli IP-kamera odatda 700 ming so'mdan yuqori." },
+          { q: "4 kameradan iborat to'plam qancha bo'ladi?", a: "Uskuna, registrator, disk, kabel va montaj bilan birga — obyektga bog'liq. Muhandis chiqib, bepul smeta tuzib beradi." },
+          { q: "Registrator shartmi?", a: "1–2 kamera uchun xotira kartasi yetarli. 3+ kamera va uzoq arxiv kerak bo'lsa — registrator arzonroq va ishonchliroq." },
+          { q: "Kafolat bormi?", a: "Ha, barcha uskunaga rasmiy kafolat va montaj ishlariga kafolat beramiz." },
+        ],
+      },
+      ru: {
+        title: "Цены на камеры видеонаблюдения в Ташкенте: от чего зависят",
+        excerpt: "Сколько стоят камеры видеонаблюдения в Ташкенте: мини-камеры, уличные IP-камеры, готовые комплекты и монтаж — и на чём не стоит экономить.",
+        sections: [
+          { h: "От чего зависит цена камеры", p: [
+            "Цену определяют четыре вещи: разрешение (2–8 Мп), тип корпуса (внутренняя, уличная, поворотная PTZ), технология ночной съёмки и бренд. Разница между безымянной моделью и Hikvision или Dahua — это гарантия, качество прошивки и годы стабильной работы.",
+            "Самые доступные Wi-Fi камеры начинаются от 300–500 тысяч сум, качественные уличные IP-камеры — в диапазоне 700 тысяч — 1,5 млн сум, поворотные PTZ и специальные модели дороже.",
+          ] },
+          { h: "Мини-камеры: почему дёшево", p: [
+            "Под «мини-камерами» обычно понимают компактные Wi-Fi модели для дома — присмотр за ребёнком, комнатой, персоналом. Цена низкая, но есть ограничения: слабая ночная подсветка, зависимость от карты памяти и качества Wi-Fi.",
+            "Для двора, магазина или склада мини-камера не подходит — там нужен уличный корпус (IP66), ИК-подсветка и проводное подключение к регистратору.",
+          ] },
+          { h: "Цена комплекта: дом и магазин", p: [
+            "На практике считают не одну камеру, а комплект. Для дома типовой набор: 4 уличные камеры + PoE-регистратор + жёсткий диск + кабель и монтаж. Для магазина: 2–4 внутренние камеры над кассой и залом, регистратор и настройка просмотра с телефона.",
+            "В стоимость комплекта кроме оборудования входят кабель, питание, работы и настройка — поэтому планировать бюджет только по «цене камеры» неверно.",
+          ] },
+          { h: "Сколько стоит установка", p: [
+            "Цена монтажа зависит от числа камер, длины трасс и сложности объекта: в новостройке проложить кабель просто, в готовом ремонте нужны гофра и короба. Выезд инженера и расчёт сметы у нас бесплатные.",
+            "Иногда можно сэкономить: если камеры рядом с регистратором или есть готовая кабельная трасса, работы обходятся дешевле.",
+          ] },
+          { h: "На чём не стоит экономить", p: [
+            "Три вещи, где экономия выходит боком: качество камер в ключевых зонах (вход, касса), жёсткий диск регистратора (специальная серия для видеонаблюдения) и монтаж. В остальном можно выбирать: бренд, глубину архива, дополнительные функции.",
+            "В нашем каталоге более 3000 товаров, камеры в наличии в Ташкенте, цены в сумах и с гарантией. Опишите задачу — подберём комплект под бюджет и посчитаем точную стоимость.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит самая недорогая камера?", a: "Простая внутренняя Wi-Fi камера — от 300–500 тысяч сум. Качественная уличная IP-камера обычно от 700 тысяч сум." },
+          { q: "Во сколько обойдётся комплект из 4 камер?", a: "Зависит от объекта: оборудование, регистратор, диск, кабель и монтаж. Инженер выезжает и составляет смету бесплатно." },
+          { q: "Обязателен ли регистратор?", a: "Для 1–2 камер достаточно карты памяти. От 3 камер и при необходимости длинного архива регистратор дешевле и надёжнее." },
+          { q: "Есть ли гарантия?", a: "Да, на всё оборудование — официальная гарантия, на монтажные работы — гарантия компании." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "videokuzatuv-ornatish-narxi",
+    date: "2026-07-30",
+    related: ["cctv"],
+    loc: {
+      uz: {
+        title: "Videokuzatuv o'rnatish: bosqichlar va narx (Toshkent)",
+        excerpt: "Kamera o'rnatish qanday boradi: obyektni ko'rish, kameralar sonini aniqlash, kabel yotqizish, sozlash va telefondan ko'rish. Narx nimalardan tashkil topadi.",
+        sections: [
+          { h: "Ishlar qanday boshlanadi", p: [
+            "Avval muhandis obyektga chiqadi (bepul): kirish joylari, kassa, ombor, hovli va «ko'r nuqtalar» belgilanadi. Shundan keyin kameralar soni, turi va kabel trassalari aniqlanadi — aynan shu bosqichda narx tug'iladi.",
+            "Yaxshi loyihada kameralar soni minimal, lekin qamrov to'liq: bitta to'g'ri joylashtirilgan kamera ikkita noto'g'ri o'rnatilganidan foydaliroq.",
+          ] },
+          { h: "Montaj bosqichlari", p: [
+            "Kabel yotqizish (gofra, lotok yoki devor ichida), kameralarni kronshteynga o'rnatish, registrator va quvvat manbaini shkafga yig'ish, tarmoqni sozlash, kameralarni fokuslash va yozuvni tekshirish. Yakunida telefonga ilova sozlanadi va xodimlarga ko'rsatiladi.",
+            "O'rtacha uy yoki do'kon obyekti bir kunda tugaydi, katta obyektlar — bir necha kun.",
+          ] },
+          { h: "Narx nimalardan tashkil topadi", p: [
+            "Uskuna (kameralar, registrator, disk), sarf materiallari (kabel, gofra, konnektorlar, quvvat bloklari) va ishchi soatlar. Tayyor ta'mirdagi obyektda montaj qimmatroq: trassalarni yashirish qiyin.",
+            "Alohida hisoblanadi: ustunga o'rnatish, uzun ko'cha trassalari, optik aloqa va ko'cha shkaflari — bular hovli va ishlab chiqarish obyektlarida uchraydi.",
+          ] },
+          { h: "Sozlash va telefondan ko'rish", p: [
+            "Montajdan keyin biz albatta sozlaymiz: harakat detektori zonalari, yozuv jadvali, arxiv chuqurligi, telefonda ilova va kirish huquqlari. Sizga tayyor ishlaydigan tizim topshiriladi, «keyin o'zingiz sozlarsiz» degan gap bo'lmaydi.",
+            "Telefondan ko'rish qanday ishlashini alohida maqolada yozganmiz — Hik-Connect, DMSS va boshqa ilovalar bo'yicha.",
+          ] },
+          { h: "Kafolat va servis", p: [
+            "Uskunaga rasmiy kafolat, montaj ishlariga kompaniya kafolati. Keyinchalik texnik xizmat ko'rsatish shartnomasini tuzish mumkin: profilaktika, kameralarni tozalash, disk holatini tekshirish.",
+            "O'lchov va smeta uchun qo'ng'iroq qiling yoki saytdagi chatga yozing — muhandis chiqib, aniq narxni hisoblab beradi.",
+          ] },
+        ],
+        faq: [
+          { q: "O'rnatish qancha vaqt oladi?", a: "Uy yoki do'kon uchun odatda bir kun. Katta obyekt (ombor, ishlab chiqarish, hovli) — bir necha kun, kabel hajmiga qarab." },
+          { q: "Smeta pulli emasmi?", a: "Yo'q, muhandisning chiqishi va smeta hisob-kitobi bepul." },
+          { q: "Tayyor ta'mirda kabel qanday yotqiziladi?", a: "Gofra yoki kabel-kanal orqali devor bo'ylab, imkon bo'lsa shift ostidan. Loyiha bosqichida qaysi yo'l chiroyliroq ekanini kelishamiz." },
+          { q: "Kameralarni o'zim sotib olsam bo'ladimi?", a: "Ha, faqat montaj xizmatini ham bajaramiz. Lekin bunda kafolat faqat ishlarimizga tegishli bo'ladi." },
+        ],
+      },
+      ru: {
+        title: "Установка видеонаблюдения: этапы работ и из чего складывается цена",
+        excerpt: "Как проходит установка камер: обследование объекта, подбор количества камер, прокладка кабеля, настройка и просмотр с телефона — и из чего складывается стоимость.",
+        sections: [
+          { h: "С чего начинаются работы", p: [
+            "Сначала инженер выезжает на объект (бесплатно): отмечаются входы, касса, склад, двор и «слепые зоны». После этого определяется количество камер, их тип и кабельные трассы — именно здесь и рождается цена.",
+            "В хорошем проекте камер минимум, а покрытие полное: одна правильно расположенная камера полезнее двух установленных наугад.",
+          ] },
+          { h: "Этапы монтажа", p: [
+            "Прокладка кабеля (гофра, лоток или в стене), установка камер на кронштейны, сборка регистратора и питания в шкафу, настройка сети, фокусировка камер и проверка записи. В конце настраивается приложение на телефоне и проводится обучение сотрудников.",
+            "Средний объект — дом или магазин — закрывается за один день, крупные объекты требуют нескольких дней.",
+          ] },
+          { h: "Из чего складывается цена", p: [
+            "Оборудование (камеры, регистратор, диск), расходные материалы (кабель, гофра, коннекторы, блоки питания) и работы. На объекте с готовым ремонтом монтаж дороже: трассы сложнее спрятать.",
+            "Отдельно считаются установка на столбы, длинные уличные трассы, оптика и уличные шкафы — это встречается на дворовых и производственных объектах.",
+          ] },
+          { h: "Настройка и просмотр с телефона", p: [
+            "После монтажа мы обязательно настраиваем: зоны детекции движения, расписание записи, глубину архива, приложение на телефоне и права доступа. Вы получаете готовую работающую систему, а не «дальше настроите сами».",
+            "Как устроен удалённый просмотр, мы подробно разобрали в отдельной статье — по приложениям Hik-Connect, DMSS и другим.",
+          ] },
+          { h: "Гарантия и сервис", p: [
+            "На оборудование — официальная гарантия, на монтажные работы — гарантия компании. В дальнейшем можно заключить договор на техобслуживание: профилактика, чистка камер, проверка состояния диска.",
+            "Для замера и сметы позвоните или напишите в чат на сайте — инженер выедет и посчитает точную стоимость.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько времени занимает установка?", a: "Для дома или магазина обычно один день. Крупный объект (склад, производство, двор) — несколько дней в зависимости от объёма кабельных работ." },
+          { q: "Смета платная?", a: "Нет, выезд инженера и расчёт сметы бесплатные." },
+          { q: "Как прокладывают кабель в готовом ремонте?", a: "В гофре или кабель-канале по стенам, где возможно — за подвесным потолком. На этапе проекта согласуем наиболее аккуратный вариант." },
+          { q: "Можно купить камеры самому?", a: "Да, выполняем и только монтаж. Но в этом случае гарантия распространяется лишь на наши работы." },
+        ],
+      },
+    },
+  },
 ];
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
