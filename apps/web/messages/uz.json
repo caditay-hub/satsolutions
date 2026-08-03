@@ -1482,6 +1482,66 @@
           "a": "Asboblariga vendor kafolatiga qo'shimcha o'z xizmatlar kontraktlarimiz — maslahatlashdan to'liq xizmatga tekshiruv bilan."
         }
       ]
+    },
+    "warehouse": {
+      "title": "Omborlar va logistika",
+      "desc": "Qabul va jo'natish zonalari videokuzatuvi, SKUD, transport nazorati.",
+      "intro": "Ombor va logistika markazlari xavfsizlik tizimlari: qabul va jo'natish zonalari videokuzatuvi, yuklashni nazorat qilish, xodimlar va transport uchun SKUD, darvozada avtoraqamlarni tanish.",
+      "works": [
+        "Ombor tartibiga mos tizim loyihasi",
+        "Qabul, jo'natish va stellajlar videokuzatuvi",
+        "Yuklash nazorati va ombor operatsiyalariga bog'lash",
+        "Xodimlar uchun SKUD va darvozada ANPR",
+        "Ishga tushirish, o'qitish va servis"
+      ]
+    },
+    "construction": {
+      "title": "Qurilish maydonlari",
+      "desc": "4G'li avtonom kameralar, texnika va materiallarni qo'riqlash, kirishda SKUD.",
+      "intro": "Qurilish obyektlarini qo'riqlash: 4G orqali avtonom videokuzatuv, texnika va materiallar nazorati, vagon va kirishda SKUD, perimetr signalizatsiyasi. Tizimni obyekt bilan birga ko'chiramiz.",
+      "works": [
+        "Maydonni qamrash sxemasi va kamera ustunlari",
+        "4G va zaxira quvvatli avtonom kameralar",
+        "Perimetr signalizatsiyasi va material ombori qo'riqlovi",
+        "Kirishda SKUD va brigadalar ish vaqti hisobi",
+        "Bosqich tugagach ko'chirish va demontaj"
+      ]
+    },
+    "medical": {
+      "title": "Klinika va shifoxonalar",
+      "desc": "Videokuzatuv, bo'limlarga SKUD, trevoga tugmalari, yong'in signalizatsiyasi.",
+      "intro": "Tibbiyot muassasalarini jihozlash: xoll va koridorlar videokuzatuvi, bo'lim, laboratoriya va dorixonaga SKUD, xodimlar uchun trevoga tugmalari, yong'in signalizatsiyasi va ogohlantirish.",
+      "works": [
+        "Tibbiyot talablarini hisobga olgan loyiha",
+        "Umumiy zonalar va qabulxona videokuzatuvi",
+        "Bo'lim, dorixona va serverxonaga SKUD",
+        "Trevoga tugmalari va qo'riqlash bilan aloqa",
+        "Yong'in signalizatsiyasi, ogohlantirish va servis"
+      ]
+    },
+    "hotel": {
+      "title": "Mehmonxona va apart-otellar",
+      "desc": "Xonalarga elektron qulflar, zonalar videokuzatuvi, yong'in xavfsizligi.",
+      "intro": "Mehmonxonalarni jihozlash: karta va telefon orqali ochiladigan elektron qulflar, umumiy zonalar videokuzatuvi, xizmat xonalari uchun SKUD, yong'in signalizatsiyasi va ogohlantirish.",
+      "works": [
+        "Xonalarga elektron qulflar va kartalar berish",
+        "Xoll, koridor va avtoturargoh videokuzatuvi",
+        "Xizmat zonalari va ombor uchun SKUD",
+        "Yong'in signalizatsiyasi va ogohlantirish",
+        "Mehmonxona boshqaruv tizimi bilan integratsiya"
+      ]
+    },
+    "fuel": {
+      "title": "Shaxobcha va neft bazalari",
+      "desc": "Kolonka va kassa videokuzatuvi, ANPR, perimetr, portlashdan himoya.",
+      "intro": "Yoqilg'i quyish shaxobchalari va neft bazalari xavfsizligi: kolonka, kassa va quyish videokuzatuvi, avtoraqamlarni tanish, perimetr qo'riqlash va portlashdan himoyalangan yong'in signalizatsiyasi.",
+      "works": [
+        "Portlash xavfli zonalarni hisobga olgan loyiha",
+        "Kolonka, kassa va quyish maydoni videokuzatuvi",
+        "Avtoraqamlarni tanish va kirishlar hisobi",
+        "Perimetr qo'riqlash va hudud nazorati",
+        "Yong'in signalizatsiyasi va xizmat ko'rsatish"
+      ]
     }
   },
   "solutionsPage": {

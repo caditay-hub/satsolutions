@@ -105,6 +105,72 @@ const ru: Record<string, ServiceSeo> = {
     title: "Электронные и умные замки в Ташкенте — установка | SAT",
     desc: "Установка электронных и умных замков в Ташкенте: биометрия, карты, коды и приложение, интеграция со СКУД. Монтаж для дома и офиса по всему Узбекистану.",
   },
+  // ── отрасли (B2B: крупные объекты, проекты под ключ) ──
+  industry: {
+    h1: "Системы безопасности для завода и производства",
+    title: "Видеонаблюдение и СКУД для завода в Ташкенте — проект под ключ | SAT",
+    desc: "Проектирование и монтаж систем безопасности на производстве: видеонаблюдение цехов и периметра, СКУД и учёт рабочего времени, пожарная сигнализация, СКС. Опыт на объектах от 500 камер, работаем по всему Узбекистану.",
+  },
+  warehouse: {
+    h1: "Видеонаблюдение и охрана склада",
+    title: "Видеонаблюдение для склада в Ташкенте — монтаж под ключ | SAT",
+    desc: "Системы безопасности складов и логистических комплексов: видеонаблюдение зон приёмки и отгрузки, контроль погрузки, СКУД для персонала и транспорта, ANPR на воротах. Проект, монтаж и сервис по Узбекистану.",
+  },
+  bank: {
+    h1: "Системы безопасности для банков и офисов",
+    title: "Видеонаблюдение и СКУД для банка в Ташкенте — под ключ | SAT",
+    desc: "Комплексная защита банков, филиалов и офисов: видеонаблюдение операционных зон и касс, СКУД и зоны ограниченного доступа, тревожные кнопки, интеграция с охраной. Проектирование и монтаж по всему Узбекистану.",
+  },
+  retail: {
+    h1: "Системы безопасности для магазинов и торговых сетей",
+    title: "Видеонаблюдение для магазина и сети в Ташкенте — под ключ | SAT",
+    desc: "Видеонаблюдение торговых залов, касс и складов, подсчёт посетителей, контроль кассовых операций и защита от краж. Единая система для сети магазинов с доступом из офиса. Монтаж и обслуживание по Узбекистану.",
+  },
+  residential: {
+    h1: "Системы безопасности для жилых комплексов",
+    title: "Видеонаблюдение и домофония для ЖК в Ташкенте — под ключ | SAT",
+    desc: "Комплексное оснащение жилых комплексов: видеонаблюдение территории и подъездов, IP-домофония с вызовом на смартфон, СКУД и шлагбаумы на въезде, распознавание автономеров. Проект, монтаж и обслуживание.",
+  },
+  school: {
+    h1: "Системы безопасности для школ и учебных заведений",
+    title: "Видеонаблюдение и турникеты для школы в Ташкенте | SAT",
+    desc: "Безопасность школ, колледжей и вузов: турникеты и СКУД на входе, видеонаблюдение территории и коридоров, оповещение и уведомление родителей о проходе ребёнка. Монтаж под ключ по всему Узбекистану.",
+  },
+  parking: {
+    h1: "Системы автоматизации парковок",
+    title: "Система парковки в Ташкенте — шлагбаумы и ANPR под ключ | SAT",
+    desc: "Автоматизация парковок и въездных групп: распознавание автономеров (ANPR), шлагбаумы и ворота, белые списки, учёт мест и тарификация, интеграция со СКУД. Проектирование и монтаж по Узбекистану.",
+  },
+  city: {
+    h1: "Городские системы видеонаблюдения «Безопасный город»",
+    title: "Безопасный город — проект городского видеонаблюдения | SAT",
+    desc: "Городские системы безопасности: сеть уличного видеонаблюдения, распознавание лиц и автономеров, каналы связи и ЦОД для видеоархива, ситуационный центр. Проектирование, монтаж и сопровождение.",
+  },
+  bus: {
+    h1: "Видеонаблюдение и мониторинг для транспорта",
+    title: "Видеонаблюдение в автобусе — мобильные системы и GPS | SAT",
+    desc: "Мобильное видеонаблюдение для автобусов и спецтехники: камеры в салоне и кабине, GPS-мониторинг, подсчёт пассажиров, передача видео в диспетчерскую по 4G. Оснащение автопарков под ключ.",
+  },
+  construction: {
+    h1: "Видеонаблюдение и охрана строительной площадки",
+    title: "Видеонаблюдение на стройке в Ташкенте — охрана объекта | SAT",
+    desc: "Охрана строительных площадок: автономные камеры на 4G, контроль техники и материалов, СКУД на бытовки и въезд, периметральная сигнализация, удалённый просмотр с телефона. Быстрый монтаж и перенос при переезде объекта.",
+  },
+  medical: {
+    h1: "Системы безопасности для клиник и больниц",
+    title: "Видеонаблюдение и СКУД для клиники в Ташкенте | SAT",
+    desc: "Оснащение медицинских учреждений: видеонаблюдение холлов и коридоров, СКУД в отделения и аптеку, тревожные кнопки, пожарная сигнализация и оповещение. Проектирование с учётом требований к медучреждениям.",
+  },
+  hotel: {
+    h1: "Системы безопасности для гостиниц",
+    title: "Видеонаблюдение и замки для отеля в Ташкенте — под ключ | SAT",
+    desc: "Оснащение гостиниц и апарт-отелей: электронные замки на номера с картами и телефоном, видеонаблюдение общих зон, СКУД служебных помещений, пожарная сигнализация и оповещение. Монтаж и обслуживание.",
+  },
+  fuel: {
+    h1: "Системы безопасности для АЗС и нефтебаз",
+    title: "Видеонаблюдение для АЗС в Ташкенте — монтаж под ключ | SAT",
+    desc: "Безопасность АЗС, газозаправок и нефтебаз: видеонаблюдение колонок и кассы, распознавание автономеров, периметральная охрана, взрывозащищённое исполнение, пожарная сигнализация. Проект и монтаж по Узбекистану.",
+  },
 };
 
 const uz: Record<string, ServiceSeo> = {
@@ -203,6 +269,72 @@ const uz: Record<string, ServiceSeo> = {
     title: "Elektron va aqlli qulflar Toshkentda — o'rnatish | SAT",
     desc: "Toshkentda elektron va aqlli qulflarni o'rnatish: biometriya, kartalar, kodlar va ilova, SKUD bilan integratsiya. Uy va ofis uchun montaj O'zbekiston bo'ylab.",
   },
+  // ── tarmoqlar (B2B) ──
+  industry: {
+    h1: "Zavod va ishlab chiqarish uchun xavfsizlik tizimlari",
+    title: "Zavod uchun videokuzatuv va SKUD — Toshkentda loyiha | SAT",
+    desc: "Ishlab chiqarish obyektlarida xavfsizlik tizimlari: sexlar va perimetr videokuzatuvi, SKUD va ish vaqti hisobi, yong'in signalizatsiyasi, SKS. 500 dan ortiq kameralik obyektlarda tajriba, butun O'zbekiston bo'ylab.",
+  },
+  warehouse: {
+    h1: "Ombor uchun videokuzatuv va xavfsizlik",
+    title: "Ombor uchun videokuzatuv — Toshkentda kalit topshirish | SAT",
+    desc: "Ombor va logistika markazlari xavfsizligi: qabul va jo'natish zonalari videokuzatuvi, yuklashni nazorat qilish, xodimlar va transport uchun SKUD, darvozada ANPR. Loyiha, montaj va servis.",
+  },
+  bank: {
+    h1: "Banklar va ofislar uchun xavfsizlik tizimlari",
+    title: "Bank uchun videokuzatuv va SKUD — Toshkentda | SAT",
+    desc: "Banklar, filiallar va ofislarni himoya qilish: operatsion zona va kassalar videokuzatuvi, SKUD va cheklangan kirish zonalari, trevoga tugmalari, qo'riqlash bilan integratsiya. Loyihalash va montaj.",
+  },
+  retail: {
+    h1: "Do'konlar va savdo tarmoqlari uchun xavfsizlik",
+    title: "Do'kon uchun videokuzatuv — Toshkentda montaj | SAT",
+    desc: "Savdo zali, kassa va omborlar videokuzatuvi, tashrifchilarni sanash, kassa operatsiyalari nazorati va o'g'irlikdan himoya. Butun tarmoq uchun yagona tizim va ofisdan kirish imkoni.",
+  },
+  residential: {
+    h1: "Turar-joy majmualari uchun xavfsizlik tizimlari",
+    title: "TJM uchun videokuzatuv va domofon — Toshkentda | SAT",
+    desc: "Turar-joy majmualarini jihozlash: hudud va podyezdlar videokuzatuvi, smartfonga qo'ng'iroqli IP-domofon, kirishda SKUD va shlagbaum, avtoraqamlarni tanish. Loyiha, montaj va xizmat ko'rsatish.",
+  },
+  school: {
+    h1: "Maktab va o'quv muassasalari uchun xavfsizlik",
+    title: "Maktab uchun videokuzatuv va turniketlar — Toshkentda | SAT",
+    desc: "Maktab, kollej va oliygohlar xavfsizligi: kirishda turniket va SKUD, hudud hamda koridorlar videokuzatuvi, ota-onalarga bolaning kirib-chiqishi haqida xabar. Kalit topshirish asosida montaj.",
+  },
+  parking: {
+    h1: "Avtoturargohlarni avtomatlashtirish tizimlari",
+    title: "Avtoturargoh tizimi — shlagbaum va ANPR Toshkentda | SAT",
+    desc: "Avtoturargoh va kirish guruhlarini avtomatlashtirish: avtoraqamlarni tanish (ANPR), shlagbaum va darvozalar, oq ro'yxatlar, joylar hisobi va tariflash, SKUD bilan integratsiya.",
+  },
+  city: {
+    h1: "«Xavfsiz shahar» shahar videokuzatuv tizimlari",
+    title: "Xavfsiz shahar — shahar videokuzatuv loyihasi | SAT",
+    desc: "Shahar xavfsizlik tizimlari: ko'cha videokuzatuv tarmog'i, yuz va avtoraqamlarni tanish, aloqa kanallari va videoarxiv uchun ma'lumot markazi, vaziyat markazi. Loyihalash va montaj.",
+  },
+  bus: {
+    h1: "Transport uchun videokuzatuv va monitoring",
+    title: "Avtobusda videokuzatuv — mobil tizimlar va GPS | SAT",
+    desc: "Avtobus va maxsus texnika uchun mobil videokuzatuv: salon va kabinada kameralar, GPS-monitoring, yo'lovchilarni sanash, 4G orqali dispetcherlik markaziga uzatish.",
+  },
+  construction: {
+    h1: "Qurilish maydoni uchun videokuzatuv va qo'riqlash",
+    title: "Qurilishda videokuzatuv — obyektni qo'riqlash Toshkentda | SAT",
+    desc: "Qurilish maydonlarini qo'riqlash: 4G'li avtonom kameralar, texnika va materiallar nazorati, vagon va kirishda SKUD, perimetr signalizatsiyasi, telefondan masofaviy ko'rish.",
+  },
+  medical: {
+    h1: "Klinika va shifoxonalar uchun xavfsizlik tizimlari",
+    title: "Klinika uchun videokuzatuv va SKUD — Toshkentda | SAT",
+    desc: "Tibbiyot muassasalarini jihozlash: xoll va koridorlar videokuzatuvi, bo'lim va dorixonaga SKUD, trevoga tugmalari, yong'in signalizatsiyasi va ogohlantirish tizimi.",
+  },
+  hotel: {
+    h1: "Mehmonxonalar uchun xavfsizlik tizimlari",
+    title: "Mehmonxona uchun videokuzatuv va qulflar — Toshkentda | SAT",
+    desc: "Mehmonxona va apart-otellarni jihozlash: karta va telefon bilan ochiladigan elektron qulflar, umumiy zonalar videokuzatuvi, xizmat xonalari uchun SKUD, yong'in signalizatsiyasi.",
+  },
+  fuel: {
+    h1: "Shaxobcha va neft bazalari uchun xavfsizlik",
+    title: "Shaxobcha uchun videokuzatuv — Toshkentda montaj | SAT",
+    desc: "Yoqilg'i quyish shaxobchalari va neft bazalari xavfsizligi: kolonka va kassa videokuzatuvi, avtoraqamlarni tanish, perimetr qo'riqlash, portlashdan himoyalangan ijro, yong'in signalizatsiyasi.",
+  },
 };
 
 const en: Record<string, ServiceSeo> = {
@@ -300,6 +432,72 @@ const en: Record<string, ServiceSeo> = {
     h1: "Electronic & Smart Locks in Tashkent",
     title: "Electronic & Smart Locks in Tashkent — Installation | SAT",
     desc: "Electronic and smart lock installation in Tashkent: biometrics, cards, codes and app control, ACS integration. Home and office fitting across Uzbekistan.",
+  },
+  // ── industries (B2B) ──
+  industry: {
+    h1: "Security systems for factories and manufacturing",
+    title: "Factory CCTV and access control in Tashkent — turnkey | SAT",
+    desc: "Design and installation of security systems for manufacturing: CCTV for workshops and perimeter, access control with time attendance, fire alarm, structured cabling. Experience on sites with 500+ cameras across Uzbekistan.",
+  },
+  warehouse: {
+    h1: "Warehouse CCTV and security systems",
+    title: "Warehouse CCTV in Tashkent — turnkey installation | SAT",
+    desc: "Security for warehouses and logistics centres: CCTV of receiving and dispatch areas, loading control, access control for staff and vehicles, ANPR at the gates. Design, installation and service across Uzbekistan.",
+  },
+  bank: {
+    h1: "Security systems for banks and offices",
+    title: "Bank CCTV and access control in Tashkent | SAT",
+    desc: "Complete protection for banks, branches and offices: CCTV of teller areas and cash desks, access control and restricted zones, panic buttons, integration with security services. Design and installation.",
+  },
+  retail: {
+    h1: "Security systems for shops and retail chains",
+    title: "Retail CCTV in Tashkent — turnkey installation | SAT",
+    desc: "CCTV for sales floors, checkouts and stockrooms, visitor counting, POS transaction control and loss prevention. One system for the whole chain with access from head office.",
+  },
+  residential: {
+    h1: "Security systems for residential complexes",
+    title: "CCTV and intercom for residential complexes in Tashkent | SAT",
+    desc: "Turnkey equipment for residential complexes: CCTV of grounds and entrances, IP intercom with calls to smartphone, access control and barriers at the entry, licence plate recognition.",
+  },
+  school: {
+    h1: "Security systems for schools and universities",
+    title: "School CCTV and turnstiles in Tashkent | SAT",
+    desc: "Safety for schools, colleges and universities: turnstiles and access control at the entrance, CCTV of grounds and corridors, public address and parent notifications about the child's entry.",
+  },
+  parking: {
+    h1: "Parking automation systems",
+    title: "Parking system in Tashkent — barriers and ANPR | SAT",
+    desc: "Automation of car parks and entry points: licence plate recognition (ANPR), barriers and gates, whitelists, space counting and tariffs, integration with access control.",
+  },
+  city: {
+    h1: "Safe City urban video surveillance",
+    title: "Safe City — urban video surveillance project | SAT",
+    desc: "Urban security systems: street CCTV network, face and licence plate recognition, transmission channels and a data centre for the video archive, situation centre. Design, installation and support.",
+  },
+  bus: {
+    h1: "CCTV and monitoring for public transport",
+    title: "Bus CCTV — mobile systems and GPS tracking | SAT",
+    desc: "Mobile CCTV for buses and special vehicles: cameras in the cabin and saloon, GPS monitoring, passenger counting, video streaming to the dispatch centre over 4G.",
+  },
+  construction: {
+    h1: "CCTV and security for construction sites",
+    title: "Construction site CCTV in Tashkent — site security | SAT",
+    desc: "Construction site protection: autonomous 4G cameras, control of machinery and materials, access control for site cabins and entry, perimeter alarm, remote viewing from a phone.",
+  },
+  medical: {
+    h1: "Security systems for clinics and hospitals",
+    title: "Clinic CCTV and access control in Tashkent | SAT",
+    desc: "Equipment for medical facilities: CCTV of halls and corridors, access control for wards and pharmacy, panic buttons, fire alarm and evacuation warning systems.",
+  },
+  hotel: {
+    h1: "Security systems for hotels",
+    title: "Hotel CCTV and electronic locks in Tashkent | SAT",
+    desc: "Equipment for hotels and apart-hotels: electronic room locks with cards and phone, CCTV of public areas, access control for service rooms, fire alarm and warning systems.",
+  },
+  fuel: {
+    h1: "Security systems for petrol stations and oil depots",
+    title: "Petrol station CCTV in Tashkent — turnkey | SAT",
+    desc: "Security for petrol and gas stations and oil depots: CCTV of pumps and cash desk, licence plate recognition, perimeter protection, explosion-proof equipment, fire alarm.",
   },
 };
 

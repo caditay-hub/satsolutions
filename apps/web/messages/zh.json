@@ -1482,6 +1482,66 @@
           "a": "设备享受厂商质保，加上我们的服务合同——从咨询到上门全面维保。"
         }
       ]
+    },
+    "warehouse": {
+      "title": "Warehouses and logistics",
+      "desc": "CCTV of receiving and dispatch areas, access control, vehicle control.",
+      "intro": "Security systems for warehouses and logistics centres: CCTV of receiving and dispatch areas, loading control, access control for staff and vehicles, licence plate recognition at the gates.",
+      "works": [
+        "System design based on the warehouse layout",
+        "CCTV of receiving, dispatch and racking areas",
+        "Loading control linked to warehouse operations",
+        "Access control for staff and ANPR at the gates",
+        "Commissioning, training and service"
+      ]
+    },
+    "construction": {
+      "title": "Construction sites",
+      "desc": "Autonomous 4G cameras, protection of machinery and materials, access control.",
+      "intro": "Protection of construction sites: autonomous 4G video surveillance, control of machinery and materials, access control for site cabins and entry, perimeter alarm. The system moves together with the site.",
+      "works": [
+        "Coverage plan and camera poles for the site",
+        "Autonomous cameras with 4G and backup power",
+        "Perimeter alarm and protection of the material store",
+        "Access control at the entry and crew time tracking",
+        "Relocation and dismantling when the stage ends"
+      ]
+    },
+    "medical": {
+      "title": "Clinics and hospitals",
+      "desc": "CCTV, access control for wards, panic buttons, fire alarm.",
+      "intro": "Equipment for medical facilities: CCTV of halls and corridors, access control for wards, laboratory and pharmacy, panic buttons for staff, fire alarm and evacuation warning.",
+      "works": [
+        "Design that follows healthcare requirements",
+        "CCTV of public areas and the reception",
+        "Access control for wards, pharmacy and server room",
+        "Panic buttons and link to the security desk",
+        "Fire alarm, warning system and service"
+      ]
+    },
+    "hotel": {
+      "title": "Hotels and apart-hotels",
+      "desc": "Electronic room locks, CCTV of public areas, fire safety.",
+      "intro": "Equipment for hotels: electronic room locks with cards and phone opening, CCTV of public areas, access control for service rooms, fire alarm and evacuation warning.",
+      "works": [
+        "Electronic room locks and card issuing",
+        "CCTV of the lobby, corridors and parking",
+        "Access control for service areas and stores",
+        "Fire alarm and evacuation warning",
+        "Integration with the hotel management system"
+      ]
+    },
+    "fuel": {
+      "title": "Petrol stations and oil depots",
+      "desc": "CCTV of pumps and cash desk, ANPR, perimeter, explosion-proof equipment.",
+      "intro": "Security for petrol and gas stations and oil depots: CCTV of pumps, cash desk and unloading area, licence plate recognition, perimeter protection and explosion-proof fire alarm systems.",
+      "works": [
+        "Design that accounts for hazardous zones",
+        "CCTV of pumps, cash desk and unloading area",
+        "Licence plate recognition and visit logging",
+        "Perimeter protection and site control",
+        "Fire alarm and maintenance"
+      ]
     }
   },
   "solutionsPage": {
