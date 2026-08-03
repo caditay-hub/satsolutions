@@ -15,11 +15,20 @@ const OBJECTS = ["factory", "warehouse", "office", "residential", "retail", "sch
 const SYSTEMS = ["cctv", "access", "fire", "network", "intercom", "barrier", "server", "videowall"] as const;
 const TERMS = ["urgent", "month", "quarter", "planning"] as const;
 
+// ключ отраслевой страницы → тип объекта в форме (совпадают не все: страница
+// «Промышленность» = factory, «Банки и офисы» = office, у остальных ключ тот же)
+const PAGE_TO_OBJECT: Record<string, string> = { industry: "factory", bank: "office" };
+
 export function ProjectQuoteForm({ industryKey, variant = "section" }: { industryKey?: string; variant?: "section" | "compact" }) {
   const t = useTranslations("projectForm");
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
-  const [object, setObject] = useState<string>(industryKey && (OBJECTS as readonly string[]).includes(industryKey) ? industryKey : "");
+  const initialObject = (() => {
+    if (!industryKey) return "";
+    const mapped = PAGE_TO_OBJECT[industryKey] ?? industryKey;
+    return (OBJECTS as readonly string[]).includes(mapped) ? mapped : "";
+  })();
+  const [object, setObject] = useState<string>(initialObject);
   const [systems, setSystems] = useState<string[]>([]);
   const [scale, setScale] = useState("");
   const [term, setTerm] = useState("");
