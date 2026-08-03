@@ -2336,6 +2336,12 @@
       "planning": "Byudjet rejalashtiryapmiz"
     }
   },
+  "industryStats": {
+    "s1": { "v": "67 km", "l": "bitta loyihadagi kabel trassalari" },
+    "s2": { "v": "54 ta kamera", "l": "buyurtmachining bitta obyektida" },
+    "s3": { "v": "3 yilgacha", "l": "ishlarga kafolat" },
+    "s4": { "v": "48 soat", "l": "kafolat bo'yicha yetib borish" }
+  },
   "trust": {
     "title": "Nega yirik obyektlar bizga ishonadi",
     "warrantyT": "1 yildan 3 yilgacha kafolat",

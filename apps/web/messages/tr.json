@@ -2336,6 +2336,12 @@
       "planning": "Planning the budget"
     }
   },
+  "industryStats": {
+    "s1": { "v": "67 km", "l": "tek projede kablo güzergâhı" },
+    "s2": { "v": "54 kamera", "l": "tek müşteri tesisinde" },
+    "s3": { "v": "3 yıla kadar", "l": "işçilik garantisi" },
+    "s4": { "v": "48 sa", "l": "garanti müdahale süresi" }
+  },
   "trust": {
     "title": "Why large sites trust us",
     "warrantyT": "Warranty from 1 to 3 years",

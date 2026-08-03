@@ -2336,6 +2336,12 @@
       "planning": "Planning the budget"
     }
   },
+  "industryStats": {
+    "s1": { "v": "67 km", "l": "of cable runs in a single project" },
+    "s2": { "v": "54 cameras", "l": "on a single customer site" },
+    "s3": { "v": "up to 3 years", "l": "workmanship warranty" },
+    "s4": { "v": "48 h", "l": "warranty response time" }
+  },
   "trust": {
     "title": "Why large sites trust us",
     "warrantyT": "Warranty from 1 to 3 years",

@@ -2336,6 +2336,12 @@
       "planning": "Planning the budget"
     }
   },
+  "industryStats": {
+    "s1": { "v": "67 公里", "l": "单个项目的布线总长" },
+    "s2": { "v": "54 台摄像机", "l": "单个客户项目" },
+    "s3": { "v": "最长 3 年", "l": "施工质保" },
+    "s4": { "v": "48 小时", "l": "质保响应时间" }
+  },
   "trust": {
     "title": "Why large sites trust us",
     "warrantyT": "Warranty from 1 to 3 years",

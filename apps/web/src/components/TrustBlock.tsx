@@ -40,7 +40,7 @@ export async function TrustBlock({ locale }: { locale: string }) {
     { Icon: Docs, title: t("docsT"), desc: t("docsD") },
   ];
   return (
-    <section className="mt-14">
+    <section>
       <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("title")}</h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map(({ Icon, title, desc }) => (

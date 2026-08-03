@@ -80,7 +80,13 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     }
   }
 
-  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=10`);
+  const isInd = svc.group === "industry";
+  // Отраслевые: первое фото галереи уходит в секцию «Специфика объекта» — в галерее не дублируем
+  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=10`).slice(isInd ? 1 : 0);
+  // Полоса цифр и цветная полоса формы — только на отраслевых (вариант А «журнальный ритм»)
+  const tst = isInd ? await getTranslations({ locale, namespace: "industryStats" }) : null;
+  const tpf = isInd ? await getTranslations({ locale, namespace: "projectForm" }) : null;
+  const ttr = isInd ? await getTranslations({ locale, namespace: "trust" }) : null;
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
   // H1 — гео-коммерческий из SEO-оверлея (fallback на короткий title, который
@@ -161,52 +167,115 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     <div className="bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <div className="container-page py-6 sm:py-10">
-        {/* Breadcrumbs */}
-        <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-          <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-900 normal-case tracking-normal">{title}</span>
-        </nav>
-
-        {/* Hero: cover + intro */}
-        <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
-          <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[16/9]">
-            <Image
-              src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
-              alt={title}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-              priority
-              unoptimized
-            />
-          </div>
-          <div className="flex flex-col justify-center">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">
-              {svc.group === "industry" ? t("industryTag") : t("serviceTag")}
-            </p>
-            <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{h1}</h1>
-            {reviews.count > 0 && (
-              <div className="mt-2 flex items-center gap-2 text-sm font-bold text-slate-600">
-                <span className="inline-flex text-amber-400" aria-hidden>
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
-                  ))}
-                </span>
-                <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
-                <span className="text-slate-400">· {reviews.count}</span>
-              </div>
-            )}
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
-              <ContactButtons />
+      {/* Отраслевые: тёмный hero с фото-подложкой + полоса цифр (вариант А) */}
+      {isInd && (
+        <>
+          <section className="relative overflow-hidden bg-[#031422] text-white">
+            <div className="absolute inset-0" aria-hidden>
+              <Image
+                src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
+                alt=""
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#031422] via-[#031422]/85 to-[#031422]/30" />
+              <div className="absolute inset-0 bg-[#031422]/45 lg:hidden" />
             </div>
-          </div>
-        </div>
+            <div className="container-page relative py-12 sm:py-16 lg:py-20">
+              <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+                <Link href="/" className="transition-colors hover:text-white">{t("home")}</Link>
+                <span className="text-slate-600">/</span>
+                <Link href="/solutions" className="transition-colors hover:text-white">{t("servicesCrumb")}</Link>
+                <span className="text-slate-600">/</span>
+                <span className="normal-case tracking-normal text-slate-200">{title}</span>
+              </nav>
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-300">{t("industryTag")}</p>
+              <h1 className="mt-2 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl">{h1}</h1>
+              {reviews.count > 0 && (
+                <div className="mt-3 flex items-center gap-2 text-sm font-bold text-slate-300">
+                  <span className="inline-flex" aria-hidden>
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-600"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                    ))}
+                  </span>
+                  <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
+                  <span className="text-slate-500">· {reviews.count}</span>
+                </div>
+              )}
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">{intro}</p>
+              <div className="mt-7 flex flex-wrap items-center gap-3">
+                <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
+                <ContactButtons />
+              </div>
+            </div>
+          </section>
+          <section className="border-t border-white/10 bg-[#031422] text-white">
+            <div className="container-page grid grid-cols-2 lg:grid-cols-4">
+              {(["s1", "s2", "s3", "s4"] as const).map((k, i) => (
+                <div
+                  key={k}
+                  className={`px-2 py-5 sm:px-5 ${i === 1 || i === 3 ? "border-l border-white/10" : ""} ${i >= 2 ? "border-t border-white/10 lg:border-t-0" : ""} ${i === 2 ? "lg:border-l lg:border-white/10" : ""}`}
+                >
+                  <div className="text-xl font-black text-cyan-300 sm:text-2xl">{tst!(`${k}.v`)}</div>
+                  <div className="mt-0.5 text-[11px] leading-snug text-slate-400 sm:text-xs">{tst!(`${k}.l`)}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      <div className="container-page py-6 sm:py-10">
+        {!isInd && (
+          <>
+            {/* Breadcrumbs */}
+            <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+              <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
+              <span className="text-slate-300">/</span>
+              <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
+              <span className="text-slate-300">/</span>
+              <span className="text-slate-900 normal-case tracking-normal">{title}</span>
+            </nav>
+
+            {/* Hero: cover + intro */}
+            <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[16/9]">
+                <Image
+                  src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
+                  alt={title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                  unoptimized
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("serviceTag")}</p>
+                <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{h1}</h1>
+                {reviews.count > 0 && (
+                  <div className="mt-2 flex items-center gap-2 text-sm font-bold text-slate-600">
+                    <span className="inline-flex text-amber-400" aria-hidden>
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                      ))}
+                    </span>
+                    <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
+                    <span className="text-slate-400">· {reviews.count}</span>
+                  </div>
+                )}
+                <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
+                  <ContactButtons />
+                </div>
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Состав работ */}
         <div className="mt-12">
@@ -257,23 +326,48 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} />
 
-        {/* Инженерный контент отрасли: специфика, ход проекта, сложности, FAQ */}
-        {svc.group === "industry" && <IndustryDetailsBlock locale={locale} industryKey={svc.key} />}
-
         {/* Перелинковка услуга → отрасли, где она применяется */}
         {svc.group === "service" && <ServiceIndustriesBlock locale={locale} serviceKey={svc.key} />}
+      </div>
 
-        {/* Расчёт проекта и доверие — на отраслевых страницах (крупные объекты) */}
-        {svc.group === "industry" && (
-          <>
-            <section className="mt-14">
-              <ProjectQuoteForm industryKey={svc.key} />
-            </section>
+      {/* Инженерный контент отрасли — полноширинные секции: специфика с фото,
+          этапы линией на сером, сложности на тёмном, FAQ узкой колонкой */}
+      {isInd && <IndustryDetailsBlock locale={locale} industryKey={svc.key} />}
+
+      {/* Расчёт проекта — полоса на брендовом градиенте: слева заголовок и
+          гарантии, справа белая карточка формы (визуальный финал истории) */}
+      {isInd && (
+        <section className="bg-gradient-to-br from-brand-700 to-[#134e5e] text-white">
+          <div className="container-page grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-200">{tpf!("badge")}</p>
+              <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">{tpf!("title")}</h2>
+              <p className="mt-3 text-sm leading-relaxed text-cyan-50/90 sm:text-[15px]">{tpf!("subtitle")}</p>
+              <ul className="mt-6 space-y-2.5 text-sm font-semibold">
+                {[ttr!("warrantyT"), ttr!("teamT"), ttr!("docsT")].map((x) => (
+                  <li key={x} className="flex items-center gap-2.5">
+                    <svg className="h-4 w-4 shrink-0 text-cyan-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {x}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <ProjectQuoteForm industryKey={svc.key} hideHeader />
+          </div>
+        </section>
+      )}
+
+      {/* Доверие и клиенты — светлая полоса */}
+      {isInd && (
+        <section className="bg-slate-50">
+          <div className="container-page py-12 sm:py-16">
             <TrustBlock locale={locale} />
             <ClientsStrip locale={locale} />
-          </>
-        )}
+          </div>
+        </section>
+      )}
 
+      <div className="container-page pb-6 sm:pb-10">
         {/* Галерея */}
         {gallery.length > 0 && (
           <div className="mt-12">

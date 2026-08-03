@@ -19,7 +19,7 @@ const TERMS = ["urgent", "month", "quarter", "planning"] as const;
 // «Промышленность» = factory, «Банки и офисы» = office, у остальных ключ тот же)
 const PAGE_TO_OBJECT: Record<string, string> = { industry: "factory", bank: "office" };
 
-export function ProjectQuoteForm({ industryKey, variant = "section" }: { industryKey?: string; variant?: "section" | "compact" }) {
+export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader = false }: { industryKey?: string; variant?: "section" | "compact"; hideHeader?: boolean }) {
   const t = useTranslations("projectForm");
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -95,11 +95,16 @@ export function ProjectQuoteForm({ industryKey, variant = "section" }: { industr
 
   return (
     <form onSubmit={submit} className={variant === "section" ? "rounded-2xl bg-white p-5 sm:p-7 shadow-lg ring-1 ring-slate-200" : ""}>
-      <div className="text-xs font-bold uppercase tracking-wider text-brand-600">{t("badge")}</div>
-      <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("title")}</h2>
-      <p className="mt-1.5 text-sm text-slate-600">{t("subtitle")}</p>
+      {/* hideHeader — заголовок выносится наружу (цветная полоса «Расчёт проекта») */}
+      {!hideHeader && (
+        <>
+          <div className="text-xs font-bold uppercase tracking-wider text-brand-600">{t("badge")}</div>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("title")}</h2>
+          <p className="mt-1.5 text-sm text-slate-600">{t("subtitle")}</p>
+        </>
+      )}
 
-      <div className="mt-5">
+      <div className={hideHeader ? "" : "mt-5"}>
         <div className="text-xs font-semibold text-slate-500 mb-2">{t("objectLabel")}</div>
         <div className="flex flex-wrap gap-2">
           {OBJECTS.map((o) => (
