@@ -12,7 +12,7 @@ const LOGO_BASE = "https://api.satsolutions.uz/uploads/clients";
 type Client = { key: string; name: string; note: string; href?: string; logo?: string };
 
 const CLIENTS: Client[] = [
-  { key: "uzum", name: "Uzum", note: "склады и 100+ пунктов выдачи", href: "/portfolio/uzum-videonablyudenie-skladov-i-punktov-vydachi" },
+  { key: "uzum", name: "Uzum", note: "склады и 100+ пунктов выдачи", href: "/portfolio/uzum-videonablyudenie-skladov-i-punktov-vydachi", logo: "uzum.png" },
   { key: "ucell", name: "Ucell", note: "видеостена ситуационного центра", href: "/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre", logo: "ucell.svg" },
   { key: "damira", name: "Damira Beverages", note: "завод: СКУД и 67 км трасс", href: "/portfolio/skud-zavod-damira-beverages" },
   { key: "towerup", name: "ЖК Tower Up", note: "безопасность жилого комплекса", href: "/portfolio/zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa" },
