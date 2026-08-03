@@ -1,6 +1,15 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+
+// Отметка «посетитель закрыл чат»: в localStorage — навсегда, sessionStorage —
+// запасной вариант, если хранилище недоступно (приватный режим).
+const DISMISS_KEY = "sat_chat_dismissed";
+function chatDismissed() {
+  try { if (localStorage.getItem(DISMISS_KEY) === "1") return true; } catch {}
+  try { if (sessionStorage.getItem(DISMISS_KEY) === "1") return true; } catch {}
+  return false;
+}
 import { useTranslations, useLocale } from "next-intl";
 import type { Socket } from "socket.io-client";
 
@@ -205,18 +214,23 @@ export function ChatWidget() {
     }
   }
 
-  // Auto-open the chat a few seconds after page load — но если посетитель уже
-  // закрыл чат в этой сессии, больше сами не открываемся (sessionStorage).
+  // Автооткрытие чата. Правила (решение руководства 03.08.2026):
+  // — даём посетителю прочитать страницу: 28 с на телефоне (там окно чата
+  //   занимает почти весь экран) и 12 с на компьютере;
+  // — если посетитель хоть раз закрыл чат, сами больше не открываемся никогда:
+  //   отметка живёт в localStorage и переживает перезагрузку и новый визит.
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (sessionStorage.getItem("sat_chat_dismissed") === "1") return;
-    const timer = window.setTimeout(() => setOpen(true), 4000);
+    if (chatDismissed()) return;
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const timer = window.setTimeout(() => setOpen(true), isMobile ? 28000 : 12000);
     return () => window.clearTimeout(timer);
   }, []);
 
   const closeChat = () => {
     setOpen(false);
-    try { sessionStorage.setItem("sat_chat_dismissed", "1"); } catch {}
+    try { localStorage.setItem(DISMISS_KEY, "1"); } catch {}
+    try { sessionStorage.setItem(DISMISS_KEY, "1"); } catch {}
   };
 
   // Play the chime whenever the chat opens (auto or manual). If audio isn't unlocked yet,
