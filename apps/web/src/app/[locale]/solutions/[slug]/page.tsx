@@ -7,6 +7,9 @@ import { getServiceBySlug, getPortfolio } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { ProjectQuoteForm } from "@/components/ProjectQuoteForm";
+import { TrustBlock } from "@/components/TrustBlock";
+import { ClientsStrip } from "@/components/ClientsStrip";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
@@ -252,6 +255,17 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} />
+
+        {/* Расчёт проекта и доверие — на отраслевых страницах (крупные объекты) */}
+        {svc.group === "industry" && (
+          <>
+            <section className="mt-14">
+              <ProjectQuoteForm industryKey={svc.key} />
+            </section>
+            <TrustBlock locale={locale} />
+            <ClientsStrip locale={locale} />
+          </>
+        )}
 
         {/* Галерея */}
         {gallery.length > 0 && (

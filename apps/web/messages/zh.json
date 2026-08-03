@@ -2286,5 +2286,69 @@
     "topologyTitle": "系统架构",
     "topologySubtitle": "集中管理与实时容错数据传输。",
     "learnMore": "了解更多"
+  },
+  "projectForm": {
+    "badge": "Project estimate",
+    "title": "We will design a system for your site",
+    "subtitle": "Takes a minute to fill in — our engineer prepares the system layout and a cost estimate. We reply within one business day.",
+    "objectLabel": "Type of site",
+    "systemsLabel": "Systems required",
+    "scaleLabel": "Size of the site",
+    "scalePlaceholder": "e.g. 3,500 m² / 40 cameras / 6 access points",
+    "termLabel": "Timeline",
+    "company": "Company",
+    "name": "Your name",
+    "phone": "Phone *",
+    "email": "Email",
+    "comment": "Your task, site specifics, what is already installed",
+    "submit": "Get a project estimate",
+    "sending": "Sending…",
+    "note": "We never share your contacts. A site visit by our engineer is free of charge.",
+    "sentTitle": "Request received",
+    "sentText": "Our engineer will contact you to clarify the details of the site. We usually reply within one business day.",
+    "objects": {
+      "factory": "Factory, manufacturing",
+      "warehouse": "Warehouse, logistics",
+      "office": "Business centre, office",
+      "residential": "Residential complex",
+      "retail": "Shop, retail chain",
+      "school": "School, university",
+      "medical": "Clinic, hospital",
+      "hotel": "Hotel",
+      "fuel": "Petrol station, oil depot",
+      "construction": "Construction site",
+      "other": "Other"
+    },
+    "systems": {
+      "cctv": "CCTV",
+      "access": "Access control, turnstiles",
+      "fire": "Fire alarm",
+      "network": "Structured cabling and network",
+      "intercom": "Intercom",
+      "barrier": "Barriers and gates",
+      "server": "Servers, data centre",
+      "videowall": "Video wall"
+    },
+    "terms": {
+      "urgent": "Urgent",
+      "month": "Within a month",
+      "quarter": "2–3 months",
+      "planning": "Planning the budget"
+    }
+  },
+  "trust": {
+    "title": "Why large sites trust us",
+    "warrantyT": "Warranty from 1 to 3 years",
+    "warrantyD": "The term depends on the equipment and contract terms. Warranty call-out within 48 hours.",
+    "partnersT": "Manufacturer partner",
+    "partnersD": "We work directly with H3C, Hikvision and Dahua: genuine equipment, stock in Tashkent, warranty replacement.",
+    "teamT": "Our own installation team",
+    "teamD": "Designers and installers are in-house, not subcontractors. We work across Uzbekistan.",
+    "docsT": "Documents for tenders",
+    "docsD": "We work with companies and public sector clients: contract, specification, acts, invoices, handover by project."
+  },
+  "clients": {
+    "title": "Among our clients",
+    "subtitle": "Companies and organisations we have designed and installed security systems for."
   }
 }

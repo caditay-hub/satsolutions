@@ -2286,5 +2286,69 @@
     "topologyTitle": "Tizim arxitekturasi",
     "topologySubtitle": "Markazlashgan boshqaruv va real vaqtda uzluksiz ma'lumot uzatish.",
     "learnMore": "Batafsil"
+  },
+  "projectForm": {
+    "badge": "Loyiha hisobi",
+    "title": "Obyektingiz uchun tizimni hisoblab beramiz",
+    "subtitle": "Bir daqiqada to'ldiring — muhandis tizim tarkibi va smetani tayyorlaydi. Ish kuni davomida javob beramiz.",
+    "objectLabel": "Obyekt turi",
+    "systemsLabel": "Qaysi tizimlar kerak",
+    "scaleLabel": "Obyekt hajmi",
+    "scalePlaceholder": "masalan: 3 500 m² / 40 kamera / 6 o'tish nuqtasi",
+    "termLabel": "Muddat",
+    "company": "Kompaniya",
+    "name": "Ismingiz",
+    "phone": "Telefon *",
+    "email": "Email",
+    "comment": "Vazifa, obyekt xususiyatlari, nima o'rnatilgan",
+    "submit": "Loyiha hisobini olish",
+    "sending": "Yuborilmoqda…",
+    "note": "Kontaktlaringizni uchinchi shaxslarga bermaymiz. Muhandisning obyektga chiqishi — bepul.",
+    "sentTitle": "Ariza qabul qilindi",
+    "sentText": "Muhandis siz bilan bog'lanib, obyekt tafsilotlarini aniqlaydi. Odatda ish kuni davomida javob beramiz.",
+    "objects": {
+      "factory": "Zavod, ishlab chiqarish",
+      "warehouse": "Ombor, logistika",
+      "office": "Biznes-markaz, ofis",
+      "residential": "Turar-joy majmuasi",
+      "retail": "Do'kon, tarmoq",
+      "school": "Maktab, oliygoh",
+      "medical": "Klinika, shifoxona",
+      "hotel": "Mehmonxona",
+      "fuel": "Shaxobcha, neft bazasi",
+      "construction": "Qurilish maydoni",
+      "other": "Boshqa"
+    },
+    "systems": {
+      "cctv": "Videokuzatuv",
+      "access": "SKUD, turniketlar",
+      "fire": "Yong'in signalizatsiyasi",
+      "network": "SKS va tarmoq",
+      "intercom": "Domofon",
+      "barrier": "Shlagbaum, darvoza",
+      "server": "Serverlar, ma'lumot markazi",
+      "videowall": "Videodevor"
+    },
+    "terms": {
+      "urgent": "Shoshilinch",
+      "month": "Bir oy ichida",
+      "quarter": "2–3 oy",
+      "planning": "Byudjet rejalashtiryapmiz"
+    }
+  },
+  "trust": {
+    "title": "Nega yirik obyektlar bizga ishonadi",
+    "warrantyT": "1 yildan 3 yilgacha kafolat",
+    "warrantyD": "Muddat uskuna va shartnoma shartlariga bog'liq. Kafolat bo'yicha chiqish — 48 soat ichida.",
+    "partnersT": "Ishlab chiqaruvchilar hamkori",
+    "partnersD": "H3C, Hikvision va Dahua bilan bevosita ishlaymiz: original uskuna, Toshkentda ombor, kafolat bo'yicha almashtirish.",
+    "teamT": "O'z montaj jamoamiz",
+    "teamD": "Loyihachi va montajchilar shtatda — pudratchi emas. Butun O'zbekiston bo'ylab ishlaymiz.",
+    "docsT": "Tender uchun hujjatlar",
+    "docsD": "Yuridik shaxslar va davlat buyurtmachilari bilan ishlaymiz: shartnoma, spetsifikatsiya, dalolatnoma, hisob-faktura."
+  },
+  "clients": {
+    "title": "Bizning buyurtmachilarimiz",
+    "subtitle": "Biz xavfsizlik tizimlarini loyihalab, o‘rnatgan kompaniya va tashkilotlar."
   }
 }
