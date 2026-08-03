@@ -33,7 +33,7 @@ export async function ClientsStrip({ locale }: { locale: string }) {
             <div className="flex h-full items-center gap-3 rounded-xl bg-white px-4 py-3.5 ring-1 ring-slate-200 transition-shadow hover:shadow-md">
               {c.logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <span className="flex h-9 w-[130px] shrink-0 items-center"><img src={`${LOGO_BASE}/${c.logo}`} alt={c.name} className="max-h-8 w-auto max-w-full object-contain object-left" /></span>
+                <span className="flex h-9 w-[130px] shrink-0 items-center"><img src={`${LOGO_BASE}/${c.logo}?v=2`} alt={c.name} className="max-h-8 w-auto max-w-full object-contain object-left" /></span>
               ) : (
                 <span className="text-base font-black text-slate-800">{c.name}</span>
               )}
