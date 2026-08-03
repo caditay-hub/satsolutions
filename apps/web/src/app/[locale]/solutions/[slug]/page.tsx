@@ -10,6 +10,7 @@ import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ProjectQuoteForm } from "@/components/ProjectQuoteForm";
 import { TrustBlock } from "@/components/TrustBlock";
 import { ClientsStrip } from "@/components/ClientsStrip";
+import { IndustryDetailsBlock, ServiceIndustriesBlock } from "@/components/IndustryDetailsBlock";
 import { ContactButtons } from "@/components/ContactButtons";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
@@ -255,6 +256,12 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} />
+
+        {/* Инженерный контент отрасли: специфика, ход проекта, сложности, FAQ */}
+        {svc.group === "industry" && <IndustryDetailsBlock locale={locale} industryKey={svc.key} />}
+
+        {/* Перелинковка услуга → отрасли, где она применяется */}
+        {svc.group === "service" && <ServiceIndustriesBlock locale={locale} serviceKey={svc.key} />}
 
         {/* Расчёт проекта и доверие — на отраслевых страницах (крупные объекты) */}
         {svc.group === "industry" && (
