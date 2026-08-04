@@ -4,6 +4,8 @@
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // Дубли-карточки, объединены аудитом каталога 2026-07-20 → 308 на карточку-оригинал.
+  // 2026-08-04: дубль HDMI-сплиттера 1×4, оставлена карточка с ценой из свежего прайса.
+  "pro-hdmi-splitter-4k-1-4": "/products/pro-hdmi-4k-1-4-1-vhod-4-vyhod",
   "pro-dinamik-dlya-plity-dd80-35w-2": "/products/pro-dinamik-dlya-plity-dd80-35w",
   "pro-dinamik-haitek-510a-2": "/products/pro-dinamik-haitek-510a",
   "pro-dinamik-nastennyi-10w-zt-507-2": "/products/pro-dinamik-nastennyi-10w-zt-507",
