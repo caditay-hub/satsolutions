@@ -437,6 +437,14 @@
         {
           "q": "Ko'p qavatli binolar uchun mos keladimi?",
           "a": "Ha, ko'p abonentli domofoniya tizimlari yaratamiz ko'p qavatli turar-joylashtiradigan komplekslar uchun chaqirish panellari va alohida monitorlar bilan."
+        },
+        {
+          "q": "Toshkentda domofon o'rnatish qancha turadi?",
+          "a": "Kvartira yoki xususiy uy uchun narx to'plamdan (chaqiruv paneli + monitor) va montajdan iborat: analog to'plam arzonroq, smartfondan ochiladigan IP-videodomofon qimmatroq. Pod'ezd uchun narx abonentlar soniga qarab hisoblanadi. Qisqa qo'ng'iroqdan keyin hisob-kitobni odatda o'sha kuniyoq yuboramiz."
+        },
+        {
+          "q": "Domofonni elektron qulf va SKUD bilan ulash mumkinmi?",
+          "a": "Ha, bu loyihalarimizning standart qismi: domofon elektromagnit yoki elektromexanik qulfni ochadi, kirish esa karta, kod yoki barmoq izi bo'yicha ishlaydi. Ofislar uchun domofoniyani SKUD bilan yagona tizimga birlashtiramiz."
         }
       ]
     },

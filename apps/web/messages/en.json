@@ -437,6 +437,14 @@
         {
           "q": "Is it suitable for multi-apartment buildings?",
           "a": "Yes, we design multi-unit intercom systems for residential complexes complete with call panels and individual monitors in each unit."
+        },
+        {
+          "q": "How much does intercom installation cost in Tashkent?",
+          "a": "For a flat or a private house the price is the kit (door station + monitor) plus installation: an analogue kit costs less, an IP video intercom with recording and smartphone unlock costs more. For an apartment entrance the price depends on the number of units. We usually send a quote the same day after a short call."
+        },
+        {
+          "q": "Can the intercom be connected to an electronic lock and access control?",
+          "a": "Yes, that is a standard part of our projects: the intercom releases an electromagnetic or electromechanical lock, while residents and staff use cards, codes or fingerprints. For offices we merge the intercom with the access control system into one setup with a shared entry log."
         }
       ]
     },
