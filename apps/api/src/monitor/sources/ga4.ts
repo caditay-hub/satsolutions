@@ -39,6 +39,15 @@ const METRICS = [
   { name: "engagementRate" },
 ];
 
+// Бот-фермы дата-центров исполняют JS и попадают в GA4 как «Direct» (04.08.2026:
+// 12k сессий из Сингапура, desktop, вовлечённость 1%, 6с). Наш рынок — Узбекистан,
+// поэтому такие страны исключаем из всех метрик монитора, иначе сводки врут в разы.
+const BOT_COUNTRY_FILTER = {
+  notExpression: {
+    filter: { fieldName: "country", inListFilter: { values: ["Singapore"] } },
+  },
+};
+
 /**
  * Отчёт GA4 за последние windowDays и за предыдущее окно той же длины
  * (GA4 поддерживает несколько dateRanges в одном запросе → одна дельта-выборка).
@@ -57,6 +66,7 @@ export async function fetchGa4Report(windowDays = 7): Promise<Ga4Report> {
         { startDate: prevFrom, endDate: prevTo, name: "previous" },
       ],
       metrics: METRICS,
+      dimensionFilter: BOT_COUNTRY_FILTER,
     }),
     runReport({
       dateRanges: [{ startDate: curFrom, endDate: curTo }],
@@ -64,6 +74,7 @@ export async function fetchGa4Report(windowDays = 7): Promise<Ga4Report> {
       metrics: [{ name: "sessions" }, { name: "conversions" }],
       orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
       limit: 12,
+      dimensionFilter: BOT_COUNTRY_FILTER,
     }),
   ]);
 
