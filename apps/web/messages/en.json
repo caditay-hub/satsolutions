@@ -42,6 +42,7 @@
     "back": "Back",
     "securitySystems": "Security systems",
     "priceFrom": "from {value} UZS",
+    "priceExact": "{value} UZS",
     "priceOnRequest": "Price on request",
     "noPhoto": "No photo",
     "inStock": "In stock",

@@ -42,6 +42,7 @@
     "back": "Назад",
     "securitySystems": "Системы безопасности",
     "priceFrom": "от {value} сум",
+    "priceExact": "{value} сум",
     "priceOnRequest": "Цена по запросу",
     "noPhoto": "Нет фото",
     "inStock": "В наличии",

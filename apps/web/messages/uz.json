@@ -42,6 +42,7 @@
     "back": "Orqaga",
     "securitySystems": "Xavfsizlik tizimlari",
     "priceFrom": "{value} so‘mdan",
+    "priceExact": "{value} so‘m",
     "priceOnRequest": "Narx so‘rov bo‘yicha",
     "noPhoto": "Rasm yo‘q",
     "inStock": "Mavjud",

@@ -42,6 +42,7 @@
     "back": "返回",
     "securitySystems": "安防系统",
     "priceFrom": "{value} 索姆起",
+    "priceExact": "{value} 索姆",
     "priceOnRequest": "价格面议",
     "noPhoto": "暂无照片",
     "inStock": "有货",

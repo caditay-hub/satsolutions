@@ -441,8 +441,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   <p className="mt-1 text-sm text-slate-600">{t("product.priceProjectNote")}</p>
                 </div>
               ) : (
+                // Точная цена без «от» — требование Merchant Center: цена на странице
+                // должна совпадать с фидом, «от» читается как «купить по этой цене нельзя»
                 <div className="text-2xl font-black text-[#e02020]">
-                  {t("common.priceFrom", { value: priceValue })}
+                  {t("common.priceExact", { value: priceValue })}
                 </div>
               )}
               {/* Заказать — Telegram — WhatsApp: три одинаковые кнопки в один ряд (моб. и десктоп) */}

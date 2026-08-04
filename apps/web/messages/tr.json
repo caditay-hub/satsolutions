@@ -42,6 +42,7 @@
     "back": "Geri",
     "securitySystems": "Güvenlik sistemleri",
     "priceFrom": "{value} UZS'den",
+    "priceExact": "{value} UZS",
     "priceOnRequest": "Fiyat talep üzerine",
     "noPhoto": "Fotoğraf yok",
     "inStock": "Stokta",
