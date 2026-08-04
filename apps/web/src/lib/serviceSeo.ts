@@ -18,7 +18,7 @@ const ru: Record<string, ServiceSeo> = {
   access: {
     h1: "Системы контроля доступа (СКУД) в Ташкенте",
     title: "СКУД в Ташкенте — установка систем контроля доступа | SAT",
-    desc: "Монтаж СКУД в Ташкенте под ключ: турникеты, электронные замки, считыватели карт и биометрия, учёт рабочего времени. Проектирование, установка и сервис по всему Узбекистану.",
+    desc: "Монтаж СКУД в Ташкенте под ключ: турникеты, электронные замки, считыватели карт, контроль доступа по лицу (Face ID) и биометрия, учёт рабочего времени. Проектирование, установка и сервис по всему Узбекистану.",
   },
   fire: {
     h1: "Монтаж пожарной сигнализации в Ташкенте",
@@ -38,7 +38,7 @@ const ru: Record<string, ServiceSeo> = {
   barrier: {
     h1: "Шлагбаумы в Ташкенте — установка и автоматика",
     title: "Шлагбаумы в Ташкенте — установка автоматических | SAT",
-    desc: "Автоматические шлагбаумы в Ташкенте: продажа, монтаж, пульты и распознавание номеров (ANPR). Установка на въезды, парковки и дворы по всему Узбекистану.",
+    desc: "Автоматические шлагбаумы в Ташкенте: цена с установкой, продажа, монтаж, пульты и распознавание номеров (ANPR). Установка на въезды, парковки и дворы по всему Узбекистану.",
   },
   alarm: {
     h1: "Охранная сигнализация в Ташкенте",
@@ -56,9 +56,14 @@ const ru: Record<string, ServiceSeo> = {
     desc: "Системы учёта рабочего времени в Ташкенте: биометрия и карты, автоматический табель, выгрузка в 1С. Установка и настройка по всему Узбекистану.",
   },
   network: {
-    h1: "Монтаж СКС и локальных сетей в Ташкенте",
-    title: "Монтаж СКС и ЛВС в Ташкенте — локальные сети | SAT",
-    desc: "Проектирование и монтаж СКС и локальных сетей (ЛВС) в Ташкенте: кабельные трассы, серверные шкафы, коммутаторы. Сдача документации по всему Узбекистану.",
+    h1: "Структурированные кабельные системы (СКС) в Ташкенте — монтаж под ключ",
+    title: "СКС в Ташкенте — монтаж структурированных кабельных систем | SAT",
+    desc: "Структурированные кабельные системы и сети (СКС, ЛВС) в Ташкенте: проектирование, монтаж кабельных трасс, серверные шкафы, коммутаторы, тестирование линий. Сдача документации по всему Узбекистану.",
+  },
+  videowall: {
+    h1: "Видеостены в Ташкенте — установка под ключ",
+    title: "Видеостена в Ташкенте — установка 2х2, 3х3 под ключ | SAT",
+    desc: "Установка видеостен в Ташкенте: конфигурации 2х2 и 3х3, панели 46–55\" с тонким швом, контроллеры, кронштейны, настройка. Диспетчерские и ситуационные центры под ключ по Узбекистану.",
   },
   wifi: {
     h1: "Настройка Wi-Fi сетей в Ташкенте",
@@ -222,7 +227,12 @@ const uz: Record<string, ServiceSeo> = {
   network: {
     h1: "Toshkentda SKS va lokal tarmoqlar montaji",
     title: "SKS va LVS montaji Toshkentda — lokal tarmoqlar | SAT",
-    desc: "Toshkentda SKS va lokal tarmoqlar (LVS) loyihalash hamda montaji: kabel trassalari, server shkaflari, kommutatorlar. Hujjatlarni topshirish O'zbekiston bo'ylab.",
+    desc: "Toshkentda strukturali kabel tizimlari (SKS) va lokal tarmoqlar (LVS) loyihalash hamda montaji: kabel trassalari, server shkaflari, kommutatorlar. Hujjatlarni topshirish O'zbekiston bo'ylab.",
+  },
+  videowall: {
+    h1: "Toshkentda videodevorlar — kalit topshirish asosida o'rnatish",
+    title: "Videodevor Toshkentda — 2x2, 3x3 o'rnatish | SAT",
+    desc: "Toshkentda videodevorlar o'rnatish: 2x2 va 3x3 konfiguratsiyalar, 46–55\" ingichka chokli panellar, kontrollerlar, sozlash. Dispetcherlik va situatsion markazlar O'zbekiston bo'ylab.",
   },
   wifi: {
     h1: "Toshkentda Wi-Fi tarmoqlarini sozlash",
@@ -387,6 +397,11 @@ const en: Record<string, ServiceSeo> = {
     h1: "Structured Cabling & LAN in Tashkent",
     title: "Structured Cabling & LAN in Tashkent — Networks | SAT",
     desc: "Structured cabling (SCS) and LAN design and installation in Tashkent: cable routes, server racks, switches. Documentation handover across Uzbekistan.",
+  },
+  videowall: {
+    h1: "Video Walls in Tashkent — Turnkey Installation",
+    title: "Video Wall in Tashkent — 2x2, 3x3 Installation | SAT",
+    desc: "Video wall installation in Tashkent: 2x2 and 3x3 configurations, 46–55\" slim-bezel panels, controllers, mounts and calibration. Dispatch and situation centers across Uzbekistan.",
   },
   wifi: {
     h1: "Wi-Fi Network Setup in Tashkent",
