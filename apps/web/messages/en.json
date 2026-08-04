@@ -16,7 +16,9 @@
     "wholeCategory": "Whole category",
     "listDesc": "Security equipment catalog: cameras, NVRs, access control, intercoms, alarms — Dahua, Hikvision and other brands.",
     "typeDesc": "{type}: catalog, prices, selection and delivery across Tashkent and Uzbekistan. Official warranty, installation and service by SAT Solutions.",
-    "inStockCount": "{count} models in stock in Tashkent."
+    "inStockCount": "{count} models in stock in Tashkent.",
+    "priceProject": "We will quote for your project",
+    "priceProjectNote": "This equipment is supplied per project: the price depends on configuration and volume. We will send a quote within one business day."
   },
   "nav": {
     "home": "Home",

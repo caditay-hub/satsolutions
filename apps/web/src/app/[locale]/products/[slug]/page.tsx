@@ -47,7 +47,7 @@ import { ContactButtons } from "@/components/ContactButtons";
 import { ProductCard } from "@/components/Cards";
 import { OrderButton } from "@/components/OrderButton";
 import { ProductGallery } from "@/components/ProductGallery";
-import { priceLabel, productIcon } from "@/lib/product";
+import { priceInfo, productIcon } from "@/lib/product";
 
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
@@ -198,6 +198,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       .slice(0, 4);
     const img = resolveImageUrl(product.coverImageUrl);
     const modelCode = (product as any).modelCode as string | null;
+    // Цена: с числом — «от X сум» через переводы; без числа — блок «под проект»
+    const pInfo = priceInfo(product);
+    const priceProject = pInfo?.kind !== "value";
+    const priceValue = pInfo?.kind === "value" ? pInfo.value : "";
     const isEol = !!characteristics["Статус"]?.toString().toLowerCase().includes("снят");
 
     // Similar products from same category (excluding current)
@@ -428,7 +432,19 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
             {/* Цена + CTA в одном ряду — компактнее, контент поднимается выше */}
             <div className="mt-3">
-              <div className="text-2xl font-black text-[#e02020]">{priceLabel(product)}</div>
+              {/* Есть цена — показываем «от X сум» (локализованно, а не хардкодом).
+                  Нет цены — это проектное оборудование (Avigilon, H3C, Eltex): вместо сухого
+                  «Цена по запросу» объясняем, почему цены нет и когда придёт расчёт. */}
+              {priceProject ? (
+                <div className="rounded-xl border border-brand-200 bg-brand-50/70 px-4 py-3">
+                  <div className="text-lg font-black text-brand-800">{t("product.priceProject")}</div>
+                  <p className="mt-1 text-sm text-slate-600">{t("product.priceProjectNote")}</p>
+                </div>
+              ) : (
+                <div className="text-2xl font-black text-[#e02020]">
+                  {t("common.priceFrom", { value: priceValue })}
+                </div>
+              )}
               {/* Заказать — Telegram — WhatsApp: три одинаковые кнопки в один ряд (моб. и десктоп) */}
               <div className="mt-3 grid grid-cols-3 gap-2">
                 <OrderButton

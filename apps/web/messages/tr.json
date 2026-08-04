@@ -16,7 +16,9 @@
     "wholeCategory": "Tüm kategori",
     "listDesc": "Güvenlik ekipmanları kataloğu: kameralar, NVR'ler, geçiş kontrolü, interkom, alarm — Dahua, Hikvision ve diğer markalar.",
     "typeDesc": "{type}: katalog, fiyatlar, seçim ve Taşkent ile Özbekistan genelinde teslimat. Resmi garanti, kurulum ve servis — SAT Solutions.",
-    "inStockCount": "Taşkent'te stokta {count} model."
+    "inStockCount": "Taşkent'te stokta {count} model.",
+    "priceProject": "Projeniz için fiyat verelim",
+    "priceProjectNote": "Bu ekipman proje bazında tedarik edilir: fiyat konfigürasyona ve hacme bağlıdır. Teklifi bir iş günü içinde göndeririz."
   },
   "nav": {
     "home": "Ana Sayfa",

@@ -16,7 +16,9 @@
     "wholeCategory": "Butun kategoriya",
     "listDesc": "Xavfsizlik uskunalari katalogi: kameralar, videoregistratorlar, kirish nazorati, domofoniya, signalizatsiya — Dahua, Hikvision va boshqa brendlar.",
     "typeDesc": "{type}: katalog, narxlar, tanlash va Toshkent hamda O‘zbekiston bo‘ylab yetkazib berish. Rasmiy kafolat, montaj va servis — SAT Solutions.",
-    "inStockCount": "Toshkentda {count} ta model mavjud."
+    "inStockCount": "Toshkentda {count} ta model mavjud.",
+    "priceProject": "Loyihangiz uchun hisoblab beramiz",
+    "priceProjectNote": "Bu uskuna loyiha bo‘yicha yetkazib beriladi: narx konfiguratsiya va hajmga bog‘liq. Hisob-kitobni bir ish kuni ichida yuboramiz."
   },
   "nav": {
     "home": "Asosiy",
