@@ -5,19 +5,19 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 
 // UI-строки блога (инлайн, чтобы не раздувать 5 message-файлов; контент статей — ru/uz)
-const UI: Record<string, { title: string; subtitle: string; read: string; empty: string; crumbHome: string }> = {
-  ru: { title: "Блог", subtitle: "Полезные статьи о видеонаблюдении, СКУД, пожарной сигнализации и безопасности — как выбрать, сколько стоит и на что смотреть.", read: "Читать", empty: "Материалы скоро появятся.", crumbHome: "Главная" },
-  uz: { title: "Blog", subtitle: "Videokuzatuv, SKUD, yong'in signalizatsiyasi va xavfsizlik haqida foydali maqolalar — qanday tanlash, qancha turadi va nimaga e'tibor berish kerak.", read: "O'qish", empty: "Materiallar tez orada paydo bo'ladi.", crumbHome: "Bosh sahifa" },
-  en: { title: "Blog", subtitle: "Useful articles on CCTV, access control, fire alarms and security — how to choose, how much it costs and what to look for.", read: "Read", empty: "Articles are coming soon.", crumbHome: "Home" },
-  tr: { title: "Blog", subtitle: "Güvenlik, kamera ve geçiş kontrolü hakkında faydalı makaleler.", read: "Oku", empty: "Makaleler yakında.", crumbHome: "Ana sayfa" },
-  zh: { title: "博客", subtitle: "关于视频监控、门禁和消防安全的实用文章。", read: "阅读", empty: "文章即将推出。", crumbHome: "首页" },
+const UI: Record<string, { title: string; h1: string; metaTitle: string; subtitle: string; read: string; empty: string; crumbHome: string }> = {
+  ru: { title: "Блог", h1: "Блог о видеонаблюдении, СКУД и пожарной безопасности", metaTitle: "Блог о видеонаблюдении, СКУД и пожарной сигнализации — статьи SAT Solutions", subtitle: "Полезные статьи о видеонаблюдении, СКУД, пожарной сигнализации и безопасности — как выбрать, сколько стоит и на что смотреть.", read: "Читать", empty: "Материалы скоро появятся.", crumbHome: "Главная" },
+  uz: { title: "Blog", h1: "Videokuzatuv, SKUD va yong'in xavfsizligi haqida blog", metaTitle: "Videokuzatuv, SKUD va yong'in signalizatsiyasi haqida blog — SAT Solutions maqolalari", subtitle: "Videokuzatuv, SKUD, yong'in signalizatsiyasi va xavfsizlik haqida foydali maqolalar — qanday tanlash, qancha turadi va nimaga e'tibor berish kerak.", read: "O'qish", empty: "Materiallar tez orada paydo bo'ladi.", crumbHome: "Bosh sahifa" },
+  en: { title: "Blog", h1: "Blog on CCTV, access control and fire safety", metaTitle: "Blog on CCTV, access control and fire alarms — SAT Solutions articles", subtitle: "Useful articles on CCTV, access control, fire alarms and security — how to choose, how much it costs and what to look for.", read: "Read", empty: "Articles are coming soon.", crumbHome: "Home" },
+  tr: { title: "Blog", h1: "Güvenlik, kamera ve geçiş kontrolü blogu", metaTitle: "Güvenlik, kamera ve geçiş kontrolü blogu — SAT Solutions", subtitle: "Güvenlik, kamera ve geçiş kontrolü hakkında faydalı makaleler.", read: "Oku", empty: "Makaleler yakında.", crumbHome: "Ana sayfa" },
+  zh: { title: "博客", h1: "视频监控、门禁与消防安全博客", metaTitle: "视频监控、门禁与消防安全博客 — SAT Solutions", subtitle: "关于视频监控、门禁和消防安全的实用文章。", read: "阅读", empty: "文章即将推出。", crumbHome: "首页" },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const ui = UI[locale] ?? UI.ru;
   return {
-    title: { absolute: `${ui.title} — SAT Solutions` },
+    title: { absolute: ui.metaTitle },
     description: ui.subtitle,
     alternates: hreflangAlternates("/blog", locale),
     openGraph: { title: ui.title, description: ui.subtitle, locale: ogLocale(locale), images: ["/og.png"] },
@@ -38,7 +38,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
           <span className="text-slate-900 normal-case tracking-normal">{ui.title}</span>
         </nav>
 
-        <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">{ui.title}</h1>
+        <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">{ui.h1}</h1>
         <p className="mt-3 max-w-2xl text-sm sm:text-base leading-relaxed text-slate-600">{ui.subtitle}</p>
 
         {articles.length === 0 ? (

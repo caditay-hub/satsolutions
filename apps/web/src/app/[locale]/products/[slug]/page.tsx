@@ -13,6 +13,16 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { serviceForCategory } from "@/lib/servicesData";
+import { articlesForService } from "@/lib/articlesData";
+
+// Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
+const ARTICLES_UI: Record<string, string> = {
+  ru: "Статьи по теме",
+  uz: "Mavzu bo'yicha maqolalar",
+  en: "Related articles",
+  tr: "İlgili makaleler",
+  zh: "相关文章",
+};
 
 /**
  * Восстановление товара по старому/битому slug (после пересборки каталога слаги сменились).
@@ -509,6 +519,27 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   </span>
                   <span className="shrink-0 font-bold text-brand-600">→</span>
                 </Link>
+              );
+            })()}
+
+            {/* Статьи по теме: товар → блог (перелинковка, краулинг статей) */}
+            {(() => {
+              const relSvc = serviceForCategory(categoryInfo?.name);
+              const arts = articlesForService(relSvc?.key, locale);
+              if (!arts.length) return null;
+              return (
+                <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50/60 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">{ARTICLES_UI[locale] ?? ARTICLES_UI.ru}</p>
+                  <ul className="mt-2 space-y-1.5">
+                    {arts.map((a) => (
+                      <li key={a.slug}>
+                        <Link href={`/blog/${a.slug}`} className="text-sm font-semibold text-brand-700 hover:underline">
+                          {a.loc[locale]!.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               );
             })()}
           </div>

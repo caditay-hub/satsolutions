@@ -15,6 +15,7 @@ import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { typeSlug } from "@/lib/typeSlug";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { articlesForLocale, articleImg } from "@/lib/articlesData";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -187,6 +188,18 @@ export default async function HomePage() {
   ]);
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
+
+  // Полезные статьи: 4 свежих из блога (ARTICLES упорядочены новые→старые) —
+  // перелинковка с главной ускоряет краулинг и индексацию статей.
+  const homeArticles = articlesForLocale(locale).slice(0, 4);
+  const ARTICLES_UI: Record<string, { label: string; title: string; all: string; read: string }> = {
+    ru: { label: "Блог", title: "Полезные статьи о безопасности", all: "Все статьи", read: "Читать" },
+    uz: { label: "Blog", title: "Xavfsizlik haqida foydali maqolalar", all: "Barcha maqolalar", read: "O'qish" },
+    en: { label: "Blog", title: "Useful security articles", all: "All articles", read: "Read" },
+    tr: { label: "Blog", title: "Güvenlik hakkında faydalı makaleler", all: "Tüm makaleler", read: "Oku" },
+    zh: { label: "博客", title: "安全领域实用文章", all: "全部文章", read: "阅读" },
+  };
+  const articlesUi = ARTICLES_UI[locale] ?? ARTICLES_UI.ru;
 
   // Витрина каталога: 12 укрупнённых ГРУПП. Клик → раздел всей группы (мультитип),
   // /products/group/<slug>. Иконка — представитель группы (/cat-icons/<icon>.webp).
@@ -604,6 +617,46 @@ export default async function HomePage() {
                       <span className="text-center text-xs font-black leading-tight text-slate-700">{p.name}</span>
                     )}
                   </a>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ══════════════════════════════════════════════════════
+          ПОЛЕЗНЫЕ СТАТЬИ (перелинковка главная → блог)
+      ══════════════════════════════════════════════════════ */}
+      {homeArticles.length > 0 && (
+        <section className="py-12 sm:py-14 bg-white">
+          <div className="container-page">
+            <div className="mb-6 flex items-end justify-between gap-4">
+              <div>
+                <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{articlesUi.label}</p>
+                <h2 className="text-2xl font-black text-slate-900 tracking-tight">{articlesUi.title}</h2>
+              </div>
+              <Link href="/blog" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
+                {articlesUi.all} →
+              </Link>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {homeArticles.map((a) => {
+                const b = a.loc[locale]!;
+                return (
+                  <Link
+                    key={a.slug}
+                    href={`/blog/${a.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 transition-shadow hover:shadow-md"
+                  >
+                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={articleImg(a.slug)} alt={b.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                    <div className="flex flex-1 flex-col p-4">
+                      <h3 className="text-[15px] font-black leading-snug tracking-tight text-slate-900 group-hover:text-brand-700">{b.title}</h3>
+                      <span className="mt-3 text-sm font-bold text-brand-600">{articlesUi.read} →</span>
+                    </div>
+                  </Link>
                 );
               })}
             </div>

@@ -3121,3 +3121,9 @@ export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLE
 export function articlesForLocale(locale: string): Article[] {
   return ARTICLES.filter((a) => a.loc[locale]);
 }
+
+// Статьи, привязанные к услуге (related) — перелинковка товар/услуга → блог.
+export function articlesForService(serviceKey: string | null | undefined, locale: string, limit = 3): Article[] {
+  if (!serviceKey) return [];
+  return ARTICLES.filter((a) => a.loc[locale] && a.related.includes(serviceKey)).slice(0, limit);
+}
