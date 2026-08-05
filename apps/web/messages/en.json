@@ -331,7 +331,74 @@
           "q": "Do you service the system after installation?",
           "a": "Yes, we provide warranty and maintenance services, dispatch technicians for diagnostics and repairs throughout Uzbekistan."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical CCTV systems",
+        "pkgNote": "Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "House or flat",
+            "for": "Private house, country home, flat, entrance",
+            "items": [
+              "2–4 cameras: yard, entrance, perimeter or hallway",
+              "Viewing from a phone anywhere, motion alerts",
+              "Archive recording for 2–4 weeks",
+              "Wi-Fi cameras where cable cannot be run"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "Office, shop, café",
+            "for": "Retail point, office, clinic, training centre",
+            "items": [
+              "4–16 IP cameras: entrances, tills, floor, storeroom",
+              "PoE power — one line per camera, no sockets",
+              "Recorder with 30+ days of archive, role-based access",
+              "Several branches in one app"
+            ],
+            "term": "Time: 1–3 days"
+          },
+          {
+            "name": "Warehouse, production, grounds",
+            "for": "Industrial site, logistics, construction, residential complex",
+            "items": [
+              "16–100+ cameras, fibre trunks between buildings",
+              "Video analytics: line crossing, crowding, helmet/vest",
+              "Licence plate recognition at gates, barrier integration",
+              "Redundant server recording, security desk output"
+            ],
+            "term": "Time: per project, from 2 weeks"
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to working cameras — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "site survey, camera points, coverage — free"
+          },
+          {
+            "t": "Selection & quote",
+            "s": "cameras, recorder, priced estimate — within a day"
+          },
+          {
+            "t": "Installation",
+            "s": "tidy runs, no mess or extra holes"
+          },
+          {
+            "t": "Setup",
+            "s": "phone viewing, alerts, access rights"
+          },
+          {
+            "t": "Handover & service",
+            "s": "training, warranty on hardware and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Cameras and recorders — from our Tashkent warehouse",
+        "brandsText": "Hikvision, Dahua, HiLook, TP-Link Tapo — matched to task and budget, supplied by us with warranty:"
+      }
     },
     "analytics": {
       "title": "Video analytics & AI",
@@ -413,7 +480,74 @@
           "q": "Can it be integrated with video surveillance?",
           "a": "Yes, access events are linked to video recordings for complete control over your facility."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Access control: from one door to a site perimeter",
+        "pkgNote": "We send a quote after a short site visit: readers, locks and turnstiles are matched to people flow and security regime.",
+        "packages": [
+          {
+            "name": "Office door",
+            "for": "Office entrance, director’s room, server room",
+            "items": [
+              "Electromagnetic or electromechanical lock",
+              "Access by card, code or fingerprint",
+              "Exit button, door closer, standalone controller",
+              "Entry log — who entered and when"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "Turnstile entrance",
+            "for": "Office building, business centre, school, gym",
+            "items": [
+              "Tripod or swing turnstile — Hikvision, ZKTeco",
+              "Face ID terminals: pass by face, no cards",
+              "Integration with time & attendance and 1C",
+              "Guest passes and scheduled permissions"
+            ],
+            "term": "Time: 2–5 days"
+          },
+          {
+            "name": "Site perimeter",
+            "for": "Plant, warehouse, logistics centre, residential complex",
+            "items": [
+              "Barriers with licence plate recognition",
+              "Multi-point access control: gates, shops, warehouses — one system",
+              "Integration with CCTV and fire alarm",
+              "Escape routes unlock on alarm — per code"
+            ],
+            "term": "Time: per project"
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From survey to a working entrance — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "access points, people flow, regime — free"
+          },
+          {
+            "t": "Selection & quote",
+            "s": "readers, locks, turnstiles — estimate in a day"
+          },
+          {
+            "t": "Installation",
+            "s": "mounting and wiring without stopping the site"
+          },
+          {
+            "t": "Setup",
+            "s": "access rights, time & attendance and 1C integration"
+          },
+          {
+            "t": "Handover & service",
+            "s": "admin training, warranty, support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Turnstiles, terminals and locks — from our Tashkent warehouse",
+        "brandsText": "Hikvision, ZKTeco, Dahua, KANIHAD — from a reader to a premium turnstile, supplied by us with warranty:"
+      }
     },
     "intercom": {
       "title": "Intercom",
@@ -529,7 +663,74 @@
           "q": "Is maintenance required?",
           "a": "Yes, fire safety systems require regular maintenance. We offer service contracts to keep your system in optimal working condition."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Fire alarm for three types of sites",
+        "pkgNote": "System composition is dictated by fire safety codes — after a free survey we will state exactly what your site needs and price it.",
+        "packages": [
+          {
+            "name": "Shop, office, café",
+            "for": "Premises up to ~300 m², rented format",
+            "items": [
+              "Conventional alarm: smoke and heat detectors, sounder",
+              "Rubezh or Altai panels — affordable and certified",
+              "EXIT signs, manual call points at exits",
+              "The site passes fire inspection"
+            ],
+            "term": "Time: 1–3 days"
+          },
+          {
+            "name": "Office building, school, clinic",
+            "for": "Multi-floor building with permanent staff",
+            "items": [
+              "Bolid or Rubezh addressable system — the panel sees every detector",
+              "Evacuation alerting: sounders, signs, escape route lights",
+              "Status output to the security desk",
+              "Design by licensed specialists + as-built documents"
+            ],
+            "term": "Time: 1–3 weeks"
+          },
+          {
+            "name": "Warehouse, production, mall",
+            "for": "Large areas, high ceilings, complex codes",
+            "items": [
+              "Analogue addressable system: beam and aspirating detectors",
+              "Voice evacuation: Rupor, zoned announcements",
+              "Smoke extraction and suppression control",
+              "Design, approvals, inspection handover — on us"
+            ],
+            "term": "Time: per project, from 1 month"
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From audit to inspection handover — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "site and code requirements audit — free"
+          },
+          {
+            "t": "Design",
+            "s": "alarm and evacuation sections, specification, licences"
+          },
+          {
+            "t": "Installation",
+            "s": "detectors, loops, sounders — per design"
+          },
+          {
+            "t": "Commissioning",
+            "s": "every detector tested, inspection handover"
+          },
+          {
+            "t": "Maintenance",
+            "s": "scheduled service — the system always ready"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Panels and detectors — from our Tashkent warehouse",
+        "brandsText": "Bolid and Rubezh — certified equipment with warranty, panels and detectors always in stock:"
+      }
     },
     "network": {
       "title": "Structured cabling & LAN",
@@ -2348,10 +2549,22 @@
     }
   },
   "industryStats": {
-    "s1": { "v": "67 km", "l": "of cable runs in a single project" },
-    "s2": { "v": "54 cameras", "l": "on a single customer site" },
-    "s3": { "v": "up to 3 years", "l": "workmanship warranty" },
-    "s4": { "v": "48 h", "l": "warranty response time" }
+    "s1": {
+      "v": "67 km",
+      "l": "of cable runs in a single project"
+    },
+    "s2": {
+      "v": "54 cameras",
+      "l": "on a single customer site"
+    },
+    "s3": {
+      "v": "up to 3 years",
+      "l": "workmanship warranty"
+    },
+    "s4": {
+      "v": "48 h",
+      "l": "warranty response time"
+    }
   },
   "trust": {
     "title": "Why large sites trust us",

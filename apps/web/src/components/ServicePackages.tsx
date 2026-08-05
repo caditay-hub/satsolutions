@@ -15,6 +15,16 @@ export async function ServicePackages({ k }: { k: string }) {
     if (Array.isArray(raw)) packages = raw.filter((p) => p?.name && Array.isArray(p.items));
   } catch { /* пакетов нет — блок не показываем */ }
   if (!packages.length) return null;
+  let stages: { t: string; s?: string }[] = [];
+  try {
+    const raw = ts.raw(`${k}.details.stages`) as { t: string; s?: string }[];
+    if (Array.isArray(raw)) stages = raw.filter((st) => st?.t);
+  } catch { /* этапов нет */ }
+  let brandsText = "";
+  try {
+    const raw = ts.raw(`${k}.details.brandsText`);
+    if (typeof raw === "string") brandsText = raw;
+  } catch { /* брендов нет */ }
 
   return (
     <div className="mt-12">
@@ -43,6 +53,32 @@ export async function ServicePackages({ k }: { k: string }) {
           </div>
         ))}
       </div>
+
+      {/* Этапы работы — рендерятся, если у услуги есть details.stages (как у network) */}
+      {stages.length > 0 && (
+        <div className="mt-12">
+          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.stagesLabel`)}</p>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.stagesTitle`)}</h2>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {stages.map((st, i) => (
+              <div key={st.t} className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-black text-white">{i + 1}</span>
+                <p className="mt-3 text-sm font-black text-slate-900">{st.t}</p>
+                {st.s ? <p className="mt-1 text-xs leading-snug text-slate-500">{st.s}</p> : null}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Бренды: текстовая подводка к каталогу, если задана */}
+      {brandsText ? (
+        <div className="mt-12">
+          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.brandsLabel`)}</p>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.brandsTitle`)}</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{brandsText}</p>
+        </div>
+      ) : null}
     </div>
   );
 }

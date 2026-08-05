@@ -331,7 +331,74 @@
           "q": "Siz o'rnatgandan keyin sistemani xizmat ko'rsatasizmi?",
           "a": "Ha, kafolat va xizmat ko'rsatishni taqdim etamiz, O'zbekiston bo'ylab diagnostika va ta'mirlash uchun chiqamiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Uchta namunaviy videokuzatuv tizimi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: xonani ta'riflab bering yoki rejani yuboring — bir kun ichida aniq smeta bilan KP qaytaramiz.",
+        "packages": [
+          {
+            "name": "Uy yoki kvartira",
+            "for": "Xususiy uy, dala hovli, kvartira, pod'ezd",
+            "items": [
+              "2–4 kamera: hovli, kirish, perimetr yoki dahliz",
+              "Telefondan istalgan joydan ko'rish, harakat haqida bildirishnoma",
+              "2–4 haftalik arxivga yozish",
+              "Kabel tortib bo'lmaydigan joyda — Wi-Fi kameralar"
+            ],
+            "term": "Muddat: 1 kun"
+          },
+          {
+            "name": "Ofis, doʻkon, kafe",
+            "for": "Savdo nuqtasi, ofis, klinika, o'quv markazi",
+            "items": [
+              "4–16 IP-kamera: kirishlar, kassa, zal, ombor",
+              "PoE quvvat — har kameraga bitta liniya, rozetkasiz",
+              "30 kundan arxivli registrator, rollar boʻyicha kirish",
+              "Bir ilovada bir nechta filialni koʻrish"
+            ],
+            "term": "Muddat: 1–3 kun"
+          },
+          {
+            "name": "Ombor, ishlab chiqarish, hudud",
+            "for": "Sanoat obyekti, logistika, qurilish maydonchasi, TJM",
+            "items": [
+              "16–100+ kamera, binolar orasida optik magistrallar",
+              "Videotahlil: chiziqni kesish, odamlar to'planishi, kaska/jilet",
+              "Kirishlarda avtoraqamlarni aniqlash, shlagbaum bilan integratsiya",
+              "Zaxiralangan server yozuvi, qoʻriqlash postiga chiqarish"
+            ],
+            "term": "Muddat: loyiha boʻyicha, 2 haftadan"
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan kameralargacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "obyektni ko'rish, o'rnatish nuqtalari — bepul"
+          },
+          {
+            "t": "Tanlash va KP",
+            "s": "kameralar, registrator, narxli smeta — bir kunda"
+          },
+          {
+            "t": "Montaj",
+            "s": "ozoda trassalar, iflos va ortiqcha teshiklarsiz"
+          },
+          {
+            "t": "Sozlash",
+            "s": "telefondan ko'rish, bildirishnomalar, kirish huquqlari"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "o'rgatish, uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskuna",
+        "brandsTitle": "Kameralar va registratorlar — Toshkent omboridan",
+        "brandsText": "Hikvision, Dahua, HiLook, TP-Link Tapo — vazifa va byudjetga qarab tanlaymiz, kafolat bilan yetkazamiz:"
+      }
     },
     "analytics": {
       "title": "Videoanalitika va SI",
@@ -413,7 +480,74 @@
           "q": "Video kuzatish tizimi bilan integratsiiya qilish mumkinmi?",
           "a": "Ha, kirishga ruxsat berish voqealari video yozuviga bog'lanadi, bu sizga ob'yekt ustidan to'liq nazorat beradi."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "SKUD: bitta eshikdan korxona perimetrigacha",
+        "pkgNote": "Qisqa ko'rikdan so'ng hisob-kitob yuboramiz: o'quvchilar, qulflar va turniketlarni odamlar oqimi va xavfsizlik rejimiga qarab tanlaymiz.",
+        "packages": [
+          {
+            "name": "Ofis eshigi",
+            "for": "Ofisga kirish, rahbar kabineti, serverxona",
+            "items": [
+              "Elektromagnit yoki elektromexanik qulf",
+              "Karta, kod yoki barmoq izi bo'yicha kirish",
+              "Chiqish tugmasi, dovodchik, avtonom kontroller",
+              "O'tishlar jurnali — kim va qachon kirgani ko'rinadi"
+            ],
+            "term": "Muddat: 1 kun"
+          },
+          {
+            "name": "Turniketli oʻtish joyi",
+            "for": "Ofis binosi, biznes-markaz, maktab, sportzal",
+            "items": [
+              "Tripod yoki tavaqali turniket — Hikvision, ZKTeco",
+              "Face ID terminallar: kartasiz yuz orqali oʻtish",
+              "Ish vaqti hisobi va 1C bilan integratsiya",
+              "Mehmon ruxsatnomalari va jadval boʻyicha huquqlar"
+            ],
+            "term": "Muddat: 2–5 kun"
+          },
+          {
+            "name": "Korxona perimetri",
+            "for": "Zavod, ombor, logistika markazi, TJM",
+            "items": [
+              "Avtoraqamlarni aniqlaydigan shlagbaumlar",
+              "Ko'p nuqtali SKUD: o'tish joylari, sexlar, omborlar — bitta tizim",
+              "Videokuzatuv va yong'in signalizatsiyasi bilan integratsiya",
+              "Trevoga paytida evakuatsiya yoʻllarini ochish — meʻyorlar boʻyicha"
+            ],
+            "term": "Muddat: loyiha boʻyicha"
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Ko'rikdan ishlaydigan o'tish joyigacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Ko'rik",
+            "s": "kirish nuqtalari, odamlar oqimi, rejim — bepul"
+          },
+          {
+            "t": "Tanlash va KP",
+            "s": "o'quvchilar, qulflar, turniketlar — smeta bir kunda"
+          },
+          {
+            "t": "Montaj",
+            "s": "obyekt ishini to'xtatmasdan o'rnatish va ulash"
+          },
+          {
+            "t": "Sozlash",
+            "s": "kirish huquqlari, ish vaqti hisobi va 1C bilan integratsiya"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "administratorni o'rgatish, kafolat, qo'llab-quvvatlash"
+          }
+        ],
+        "brandsLabel": "Uskuna",
+        "brandsTitle": "Turniketlar, terminallar va qulflar — Toshkent omboridan",
+        "brandsText": "Hikvision, ZKTeco, Dahua, KANIHAD — o'quvchidan premium turniketgacha, kafolat bilan yetkazamiz:"
+      }
     },
     "intercom": {
       "title": "Domofoniya",
@@ -529,7 +663,74 @@
           "q": "Texnik xizmat ko'rsatish kerakmi?",
           "a": "Ha, yondaloq tizimlari muntazam texnik xizmat ko'rsatishni talab qiladi — biz xizmat ko'rsatish shartnomasi tuzamiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Namunaviy yechimlar",
+        "pkgTitle": "Uch turdagi obyekt uchun yong'in signalizatsiyasi",
+        "pkgNote": "Tizim tarkibini yong'in xavfsizligi me'yorlari belgilaydi — bepul tekshiruvdan so'ng obyektingizga aynan nima kerakligini aytamiz va smeta hisoblaymiz.",
+        "packages": [
+          {
+            "name": "Do'kon, ofis, kafe",
+            "for": "~300 m² gacha xona, ijara formati",
+            "items": [
+              "Chegara signalizatsiyasi: tutun va issiqlik datchiklari, sirena",
+              "Rubej yoki Oltoy asboblari — arzon va sertifikatlangan",
+              "«Chiqish» tablosi, chiqishlar yonida qo'l izveshchatellari",
+              "Obyekt yong'in nazorati tekshiruvidan o'tadi"
+            ],
+            "term": "Muddat: 1–3 kun"
+          },
+          {
+            "name": "Ofis binosi, maktab, klinika",
+            "for": "Qavatli va doimiy xodimli bino",
+            "items": [
+              "Bolid yoki Rubej adresli tizimi — panel har datchikni ko'radi",
+              "SOUE ogohlantirishi: sirenalar, tablolar, evakuatsiya koʻrsatkichlari",
+              "Holatni qo'riqlash postiga chiqarish",
+              "Litsenziyali mutaxassislar loyihasi + ijro hujjatlari"
+            ],
+            "term": "Muddat: 1–3 hafta"
+          },
+          {
+            "name": "Ombor, ishlab chiqarish, savdo markazi",
+            "for": "Katta maydonlar, baland shiftlar, murakkab me'yorlar",
+            "items": [
+              "Adresli-analog tizim: chiziqli va aspiratsion izveshchatellar",
+              "Nutqiy ogohlantirish (SOUE 3–5): Rupor, zonali translyatsiya",
+              "Tutun chiqarish va o't o'chirishni boshqarish",
+              "Loyiha, kelishish, inspeksiyaga topshirish — o'zimiz"
+            ],
+            "term": "Muddat: loyiha boʻyicha, 1 oydan"
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Audit­dan inspeksiya topshiruvigacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tekshiruv",
+            "s": "obyekt va me'yor talablari auditi — bepul"
+          },
+          {
+            "t": "Loyiha",
+            "s": "APS va SOUE boʻlimlari, spetsifikatsiya, litsenziyalar"
+          },
+          {
+            "t": "Montaj",
+            "s": "datchiklar, shleyflar, ogohlantirgichlar — loyiha boʻyicha"
+          },
+          {
+            "t": "Ishga tushirish",
+            "s": "har izveshchatelni tekshirish, inspeksiyaga topshirish"
+          },
+          {
+            "t": "Xizmat koʻrsatish",
+            "s": "reglament TO — tizim doim ish holatida"
+          }
+        ],
+        "brandsLabel": "Uskuna",
+        "brandsTitle": "Asboblar va izveshchatellar — Toshkent omboridan",
+        "brandsText": "Bolid va Rubej — kafolatli sertifikatlangan uskuna, asboblar va datchiklar doim mavjud:"
+      }
     },
     "network": {
       "title": "SKS va LAN",
@@ -2348,10 +2549,22 @@
     }
   },
   "industryStats": {
-    "s1": { "v": "67 km", "l": "bitta loyihadagi kabel trassalari" },
-    "s2": { "v": "54 ta kamera", "l": "buyurtmachining bitta obyektida" },
-    "s3": { "v": "3 yilgacha", "l": "ishlarga kafolat" },
-    "s4": { "v": "48 soat", "l": "kafolat bo'yicha yetib borish" }
+    "s1": {
+      "v": "67 km",
+      "l": "bitta loyihadagi kabel trassalari"
+    },
+    "s2": {
+      "v": "54 ta kamera",
+      "l": "buyurtmachining bitta obyektida"
+    },
+    "s3": {
+      "v": "3 yilgacha",
+      "l": "ishlarga kafolat"
+    },
+    "s4": {
+      "v": "48 soat",
+      "l": "kafolat bo'yicha yetib borish"
+    }
   },
   "trust": {
     "title": "Nega yirik obyektlar bizga ishonadi",
