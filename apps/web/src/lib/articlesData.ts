@@ -22,6 +22,250 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "elektronnyj-zamok-na-dver-kak-vybrat",
+    date: "2026-08-05",
+    related: ["locks", "access", "intercom"],
+    loc: {
+      ru: {
+        title: "Электронный замок на дверь: магнитный, кодовый или smart — что выбрать",
+        excerpt: "Электромагнитный, электромеханический, кодовый или smart-замок: чем они отличаются, что подходит офису, квартире и калитке — и когда замок стоит подключать к домофону и СКУД.",
+        sections: [
+          { h: "Четыре типа электронных замков", p: [
+            "Электромагнитный замок держит дверь силой магнита — от 180 до 500 кг удержания. Он не имеет движущихся частей, потому практически вечен, но требует постоянного питания: пропало электричество — дверь открыта. Ставится на входные двери офисов и подъездов в паре с доводчиком.",
+            "Электромеханический замок, наоборот, заперт и без питания — ригель удерживает дверь механически, а электричество нужно только на открытие. Это выбор для калиток и дверей, которые должны оставаться запертыми при отключении света. Кодовый замок и smart-замок — это по сути способ управления: клавиатура с кодом, карта, отпечаток пальца или приложение на смартфоне.",
+          ] },
+          { h: "Что ставить на офис, квартиру и калитку", p: [
+            "Для двери офиса классика — электромагнитный замок со считывателем карт и кнопкой выхода: сотрудники проходят по карте или отпечатку, журнал фиксирует, кто и когда вошёл. Для серверной или кабинета руководителя добавляют второй фактор — код плюс карта.",
+            "В квартиру чаще ставят smart-замок: открытие с телефона, временные коды для гостей и уборщицы, уведомления о каждом открытии. На уличную калитку — электромеханический замок в погодозащищённом исполнении: он переживает дождь и пыль и не откроется при отключении электричества.",
+          ] },
+          { h: "Замок + домофон + СКУД: когда объединять", p: [
+            "Замок редко живёт один. В связке с видеодомофоном он открывается кнопкой с монитора или из приложения — гостя видно до того, как открыли. В офисной СКУД замки на всех дверях управляются одной системой: уволили сотрудника — доступ отозван одним кликом, а не сбором ключей.",
+            "Важный момент по нормам: на путях эвакуации электромагнитные замки обязаны разблокироваться при пожарной тревоге. Мы всегда подключаем замки к пожарной сигнализации, если она есть на объекте — это требование, а не опция.",
+          ] },
+        ],
+        faq: [
+          { q: "Что будет с замком при отключении света?", a: "Электромагнитный откроется (fail-open), электромеханический останется заперт (fail-secure). Для дверей, которые должны быть заперты всегда, ставят электромеханику или добавляют ИБП; для путей эвакуации разблокировка при пропадании питания — требование норм." },
+          { q: "Сколько стоит электронный замок с установкой?", a: "Бюджетный электромагнитный замок с кнопкой выхода и установкой — самый доступный вариант; smart-замок или биометрический считыватель дороже. Точную смету считаем после короткого осмотра двери — обычно в тот же день." },
+          { q: "Можно ли открывать замок с телефона?", a: "Да — smart-замки открываются из приложения, а замок в связке с IP-домофоном или СКУД открывается из их приложений, в том числе удалённо: например, впустить курьера, пока вы не в офисе." },
+        ],
+      },
+      uz: {
+        title: "Eshikka elektron qulf: magnit, kodli yoki smart — qaysi birini tanlash",
+        excerpt: "Elektromagnit, elektromexanik, kodli yoki smart-qulf: ular nimasi bilan farq qiladi, ofis, kvartira va kalitkaga nima mos keladi — va qulfni qachon domofon hamda SKUDga ulash kerak.",
+        sections: [
+          { h: "Elektron qulflarning to'rt turi", p: [
+            "Elektromagnit qulf eshikni magnit kuchi bilan ushlaydi — 180 dan 500 kg gacha. Harakatlanuvchi qismlari yo'q, shuning uchun deyarli abadiy, lekin doimiy quvvat talab qiladi: elektr o'chsa — eshik ochiq. Ofis va pod'ezd kirish eshiklariga dovodchik bilan juft qo'yiladi.",
+            "Elektromexanik qulf, aksincha, quvvatsiz ham yopiq — rigel eshikni mexanik ushlaydi, elektr faqat ochish uchun kerak. Bu svet o'chganda yopiq qolishi kerak bo'lgan kalitka va eshiklar uchun tanlov. Kodli va smart-qulf — bu aslida boshqarish usuli: kodli klaviatura, karta, barmoq izi yoki smartfondagi ilova.",
+          ] },
+          { h: "Ofis, kvartira va kalitkaga nima qo'yish kerak", p: [
+            "Ofis eshigi uchun klassika — karta o'quvchisi va chiqish tugmasi bilan elektromagnit qulf: xodimlar karta yoki barmoq izi bilan o'tadi, jurnal kim va qachon kirganini qayd etadi. Serverxona yoki rahbar kabinetiga ikkinchi omil qo'shiladi — kod plyus karta.",
+            "Kvartiraga ko'proq smart-qulf qo'yiladi: telefondan ochish, mehmonlar uchun vaqtinchalik kodlar, har ochilish haqida bildirishnoma. Ko'cha kalitkasiga — ob-havodan himoyalangan elektromexanik qulf: u yomg'ir va changga chidaydi, elektr o'chganda ochilib qolmaydi.",
+          ] },
+          { h: "Qulf + domofon + SKUD: qachon birlashtirish kerak", p: [
+            "Qulf kamdan-kam yolg'iz ishlaydi. Videodomofon bilan juftlikda u monitor tugmasi yoki ilovadan ochiladi — mehmonni ochishdan oldin ko'rasiz. Ofis SKUDida barcha eshiklardagi qulflar bitta tizimdan boshqariladi: xodim ishdan ketdi — kirish bir klik bilan bekor qilinadi.",
+            "Me'yorlar bo'yicha muhim jihat: evakuatsiya yo'llaridagi elektromagnit qulflar yong'in signalida ochilishi SHART. Obyektda yong'in signalizatsiyasi bo'lsa, qulflarni doim unga ulaymiz — bu talab, tanlov emas.",
+          ] },
+        ],
+        faq: [
+          { q: "Svet o'chganda qulf nima bo'ladi?", a: "Elektromagnit ochiladi (fail-open), elektromexanik yopiq qoladi (fail-secure). Doim yopiq bo'lishi kerak eshiklarga elektromexanika yoki UPS qo'yiladi; evakuatsiya yo'llarida quvvat yo'qolganda ochilish — me'yor talabi." },
+          { q: "Elektron qulf o'rnatish bilan qancha turadi?", a: "Chiqish tugmali byudjet elektromagnit qulf o'rnatish bilan — eng arzon variant; smart-qulf yoki biometrik o'quvchi qimmatroq. Aniq smetani eshikni qisqa ko'rikdan so'ng hisoblaymiz — odatda o'sha kuni." },
+          { q: "Qulfni telefondan ochish mumkinmi?", a: "Ha — smart-qulflar ilovadan ochiladi, IP-domofon yoki SKUD bilan bog'langan qulf esa ularning ilovalaridan, jumladan masofadan: masalan, ofisda bo'lmaganingizda kuryerni kiritish." },
+        ],
+      },
+      en: {
+        title: "Electronic door lock: magnetic, coded or smart — which to choose",
+        excerpt: "Electromagnetic, electromechanical, coded or smart lock: how they differ, what suits an office, a flat and a gate — and when a lock should be tied to an intercom and access control.",
+        sections: [
+          { h: "Four types of electronic locks", p: [
+            "An electromagnetic lock holds the door by magnet force — 180 to 500 kg. It has no moving parts, so it lasts practically forever, but it needs constant power: power gone — door open. It goes on office and entrance doors paired with a closer.",
+            "An electromechanical lock is the opposite: locked even without power — the bolt holds mechanically, electricity is only needed to open. That is the choice for gates and doors that must stay locked in a blackout. Coded and smart locks are essentially a control method: a keypad, a card, a fingerprint or a phone app.",
+          ] },
+          { h: "What to put on an office, a flat and a gate", p: [
+            "For an office door the classic is an electromagnetic lock with a card reader and an exit button: staff pass by card or fingerprint and the log records who entered and when. A server room or a director's office gets a second factor — code plus card.",
+            "A flat more often gets a smart lock: phone unlocking, temporary codes for guests, notifications on every opening. An outdoor gate takes a weatherproof electromechanical lock: it survives rain and dust and will not swing open in a blackout.",
+          ] },
+          { h: "Lock + intercom + access control: when to combine", p: [
+            "A lock rarely lives alone. Paired with a video intercom it opens from the monitor or the app — you see the guest before the door opens. In office access control every door lock is run by one system: an employee leaves — access is revoked in one click, not by collecting keys.",
+            "A code note: on escape routes electromagnetic locks must release on a fire alarm. We always wire locks to the fire alarm where one exists — that is a requirement, not an option.",
+          ] },
+        ],
+        faq: [
+          { q: "What happens to the lock in a power cut?", a: "An electromagnetic lock opens (fail-open), an electromechanical one stays locked (fail-secure). Doors that must always stay locked get electromechanics or a UPS; escape routes must unlock on power loss by code." },
+          { q: "How much does an electronic lock with installation cost?", a: "A budget electromagnetic lock with an exit button and installation is the most affordable option; a smart lock or biometric reader costs more. We quote after a short door survey — usually the same day." },
+          { q: "Can the lock be opened from a phone?", a: "Yes — smart locks open from an app, and a lock tied to an IP intercom or access control opens from their apps, including remotely: for instance letting a courier in while you are away." },
+        ],
+      },
+      tr: {
+        title: "Elektronik kapı kilidi: manyetik, şifreli veya akıllı — hangisi seçilmeli",
+        excerpt: "Elektromanyetik, elektromekanik, şifreli veya akıllı kilit: farkları neler, ofise, daireye ve bahçe kapısına ne uyar — kilit ne zaman interkom ve geçiş kontrolüne bağlanmalı.",
+        sections: [
+          { h: "Dört tip elektronik kilit", p: [
+            "Elektromanyetik kilit kapıyı mıknatıs gücüyle tutar — 180–500 kg. Hareketli parçası yoktur, bu yüzden neredeyse sonsuz ömürlüdür; ama sürekli güç ister: elektrik gitti — kapı açık. Ofis ve bina girişlerine kapı kapatıcıyla birlikte takılır.",
+            "Elektromekanik kilit tam tersidir: güç olmadan da kilitlidir — dil kapıyı mekanik tutar, elektrik yalnızca açmak için gerekir. Elektrik kesintisinde kilitli kalması gereken bahçe kapıları için seçimdir. Şifreli ve akıllı kilitler aslında kontrol yöntemidir: tuş takımı, kart, parmak izi veya telefon uygulaması.",
+          ] },
+          { h: "Ofise, daireye ve bahçe kapısına ne konur", p: [
+            "Ofis kapısı için klasik: kart okuyuculu ve çıkış butonlu elektromanyetik kilit — personel kartla veya parmak iziyle geçer, günlük kimin ne zaman girdiğini kaydeder. Sunucu odasına ikinci faktör eklenir — şifre artı kart.",
+            "Daireye daha çok akıllı kilit takılır: telefondan açma, misafirler için geçici şifreler, her açılışta bildirim. Dış bahçe kapısına hava koşullarına dayanıklı elektromekanik kilit uygundur.",
+          ] },
+          { h: "Kilit + interkom + geçiş kontrolü: ne zaman birleştirilir", p: [
+            "Kilit nadiren tek başına çalışır. Görüntülü interkomla monitörden veya uygulamadan açılır — misafiri kapıyı açmadan görürsünüz. Ofis geçiş kontrolünde tüm kapı kilitleri tek sistemden yönetilir: çalışan ayrıldı — erişim tek tıkla iptal.",
+            "Yönetmelik notu: kaçış yollarındaki elektromanyetik kilitler yangın alarmında açılmak ZORUNDADIR. Tesiste yangın alarmı varsa kilitleri her zaman ona bağlarız.",
+          ] },
+        ],
+        faq: [
+          { q: "Elektrik kesintisinde kilide ne olur?", a: "Elektromanyetik açılır (fail-open), elektromekanik kilitli kalır (fail-secure). Hep kilitli kalması gereken kapılara elektromekanik veya UPS konur; kaçış yolları yönetmelik gereği güç kesilince açılmalıdır." },
+          { q: "Montajla elektronik kilit ne kadar?", a: "Çıkış butonlu bütçe elektromanyetik kilit montajla en uygun seçenektir; akıllı kilit veya biyometrik okuyucu daha pahalıdır. Kısa bir kapı keşfinden sonra fiyat veririz — genelde aynı gün." },
+          { q: "Kilit telefondan açılabilir mi?", a: "Evet — akıllı kilitler uygulamadan açılır; IP interkom veya geçiş kontrolüne bağlı kilit de onların uygulamalarından, uzaktan dahil açılır." },
+        ],
+      },
+      zh: {
+        title: "电子门锁怎么选：磁力锁、密码锁还是智能锁",
+        excerpt: "电磁锁、电机械锁、密码锁与智能锁的区别，办公室、住宅与院门各适合哪种——以及何时应把门锁接入可视对讲与门禁系统。",
+        sections: [
+          { h: "电子锁的四种类型", p: [
+            "电磁锁靠磁力吸持门体——吸力 180 至 500 公斤。没有运动部件，几乎不会损坏，但需要持续供电：断电即开门。通常与闭门器配套装在办公室和单元门上。",
+            "电机械锁正相反：断电时仍然锁闭——锁舌机械保持，电力只用于开锁。适合停电时必须保持锁闭的院门。密码锁和智能锁本质上是控制方式：键盘输码、刷卡、指纹或手机 App。",
+          ] },
+          { h: "办公室、住宅、院门分别装什么", p: [
+            "办公室门的经典配置：电磁锁加读卡器加出门按钮——员工刷卡或指纹通行，日志记录每次进出。机房或经理室可加第二重验证——密码加卡。",
+            "住宅更常用智能锁：手机开锁、给访客的临时密码、每次开门推送通知。室外院门用防水防尘的电机械锁：耐雨淋灰尘，停电也不会自动打开。",
+          ] },
+          { h: "门锁与对讲、门禁何时联动", p: [
+            "门锁很少单独工作。与可视对讲联动后，可在室内机或 App 上开门——先看到访客再放行。办公门禁中所有门锁由一套系统管理：员工离职，一键撤权，无需收钥匙。",
+            "规范要点：疏散通道上的电磁锁在火警时必须自动释放。若现场有火灾报警系统，我们一律将门锁与其联动——这是强制要求。",
+          ] },
+        ],
+        faq: [
+          { q: "停电时门锁会怎样？", a: "电磁锁断电即开（fail-open），电机械锁保持锁闭（fail-secure）。必须常闭的门选电机械锁或配 UPS；疏散通道按规范必须断电即开。" },
+          { q: "电子锁连安装多少钱？", a: "带出门按钮的基础电磁锁连安装最经济；智能锁或生物识别读头更贵。简单查看门体后即可报价——通常当天完成。" },
+          { q: "能用手机开锁吗？", a: "可以——智能锁通过 App 开启；接入 IP 对讲或门禁的门锁也可在对应 App 中远程开门，例如人不在办公室时给快递员开门。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "pozharnaya-signalizatsiya-dlya-biznesa-trebovaniya",
+    date: "2026-08-05",
+    related: ["fire"],
+    loc: {
+      ru: {
+        title: "Пожарная сигнализация для бизнеса: что требует инспекция в Узбекистане",
+        excerpt: "Кому обязательна пожарная сигнализация, чем пороговая система отличается от адресной, что проверяет инспектор и как пройти проверку с первого раза.",
+        sections: [
+          { h: "Кому сигнализация обязательна", p: [
+            "Практически любому бизнес-помещению: магазину, офису, кафе, складу, учебному центру. Требования зависят от площади, этажности и числа людей: небольшому арендному помещению достаточно пороговой сигнализации с датчиками дыма и сиреной, зданию с этажами нужна адресная система и оповещение о эвакуации (СОУЭ).",
+            "Ответственность лежит на собственнике или арендаторе — как прописано в договоре. Отсутствие работающей сигнализации — это предписания и штрафы при проверке, а при происшествии — прямая ответственность.",
+          ] },
+          { h: "Пороговая или адресная: в чём разница", p: [
+            "Пороговая система — датчики на общем шлейфе: панель видит «тревога на линии 2», но не знает, какой именно датчик сработал. Это дёшево и достаточно для помещений до ~300 м². Приборы Рубеж и Алтай — типовой сертифицированный вариант.",
+            "Адресная система знает каждый датчик по имени: панель показывает конкретное помещение, следит за запылённостью камер и сама сообщает о неисправностях. Для зданий со множеством помещений это не роскошь, а требование норм — плюс кратно быстрее реакция и дешевле обслуживание.",
+          ] },
+          { h: "Что проверяет инспектор", p: [
+            "Проект и исполнительную документацию от лицензированной организации, сертификаты на оборудование, работоспособность каждого извещателя, звук и видимость оповещателей, таблички «Выход», журнал технического обслуживания. Система без договора на ТО формально считается неработающей.",
+            "Мы делаем весь цикл: обследование и проект по нормам, монтаж, пусконаладку с проверкой каждого датчика и сдачу инспекции, затем регламентное обслуживание. Объект проходит проверку с первого раза — это и есть критерий сдачи работ.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит пожарная сигнализация для магазина?", a: "Для помещения до 300 м² пороговая система с датчиками, сиреной и табло «Выход» — самый доступный вариант, монтаж занимает 1–3 дня. Точная смета — после бесплатного обследования: состав диктуют нормы, а не прайс." },
+          { q: "Можно ли поставить сигнализацию без проекта?", a: "Для простых небольших помещений допускается монтаж по акту обследования, но для зданий и объектов с массовым пребыванием людей проект от лицензированной организации обязателен — инспекция спросит его в первую очередь." },
+          { q: "Что такое СОУЭ и нужно ли оно мне?", a: "Это система оповещения и управления эвакуацией: сирены, световые табло, речевые сообщения. Тип (1–5) зависит от здания: магазину достаточно сирен и табло, торговому центру или школе требуется речевое оповещение по зонам." },
+        ],
+      },
+      uz: {
+        title: "Biznes uchun yong'in signalizatsiyasi: O'zbekistonda inspeksiya nimani talab qiladi",
+        excerpt: "Kimga yong'in signalizatsiyasi majburiy, chegara tizimi adreslisidan nimasi bilan farq qiladi, inspektor nimani tekshiradi va tekshiruvdan birinchi urinishda qanday o'tish mumkin.",
+        sections: [
+          { h: "Signalizatsiya kimga majburiy", p: [
+            "Deyarli har qanday biznes-xonaga: do'kon, ofis, kafe, ombor, o'quv markazi. Talablar maydon, qavatlilik va odamlar soniga bog'liq: kichik ijara xonasiga tutun datchiklari va sirenali chegara signalizatsiyasi yetarli, qavatli binoga adresli tizim va evakuatsiya ogohlantirishi (SOUE) kerak.",
+            "Javobgarlik mulkdor yoki ijarachida — shartnomada yozilganidek. Ishlaydigan signalizatsiya yo'qligi — tekshiruvda ko'rsatma va jarima, hodisa yuz berganda esa to'g'ridan-to'g'ri javobgarlik.",
+          ] },
+          { h: "Chegara yoki adresli: farqi nimada", p: [
+            "Chegara tizimi — umumiy shleyfdagi datchiklar: panel «2-liniyada trevoga»ni ko'radi, lekin aynan qaysi datchik ishlaganini bilmaydi. Bu arzon va ~300 m² gacha xonalar uchun yetarli. Rubej va Oltoy asboblari — namunaviy sertifikatlangan variant.",
+            "Adresli tizim har datchikni nomi bilan biladi: panel aniq xonani ko'rsatadi, kameralar changlanishini kuzatadi va nosozliklar haqida o'zi xabar beradi. Ko'p xonali binolar uchun bu hashamat emas, me'yor talabi — bundan tashqari reaksiya tezroq va xizmat arzonroq.",
+          ] },
+          { h: "Inspektor nimani tekshiradi", p: [
+            "Litsenziyali tashkilot loyihasi va ijro hujjatlarini, uskuna sertifikatlarini, har izveshchatelning ishlashini, ogohlantirgichlar ovozi va ko'rinishini, «Chiqish» tablolarini, texnik xizmat jurnalini. TO shartnomasisiz tizim rasman ishlamayotgan hisoblanadi.",
+            "Biz butun siklni qilamiz: me'yorlar bo'yicha tekshiruv va loyiha, montaj, har datchikni tekshirish bilan ishga tushirish va inspeksiyaga topshirish, so'ngra reglament xizmat. Obyekt tekshiruvdan birinchi urinishda o'tadi — ishlarni topshirish mezoni shu.",
+          ] },
+        ],
+        faq: [
+          { q: "Do'kon uchun yong'in signalizatsiyasi qancha turadi?", a: "300 m² gacha xona uchun datchiklar, sirena va «Chiqish» tablosi bilan chegara tizimi — eng arzon variant, montaj 1–3 kun. Aniq smeta — bepul tekshiruvdan keyin: tarkibni prays emas, me'yorlar belgilaydi." },
+          { q: "Loyihasiz signalizatsiya qo'yish mumkinmi?", a: "Oddiy kichik xonalar uchun tekshiruv akti bo'yicha montajga ruxsat beriladi, lekin binolar va odamlar ko'p obyektlar uchun litsenziyali tashkilot loyihasi majburiy — inspeksiya birinchi navbatda uni so'raydi." },
+          { q: "SOUE nima va u menga kerakmi?", a: "Bu ogohlantirish va evakuatsiyani boshqarish tizimi: sirenalar, yorug'lik tablolari, nutqiy xabarlar. Turi (1–5) binoga bog'liq: do'konga sirena va tablo yetarli, savdo markazi yoki maktabga zonalar bo'yicha nutqiy ogohlantirish kerak." },
+        ],
+      },
+      en: {
+        title: "Fire alarm for business: what inspection requires in Uzbekistan",
+        excerpt: "Who must have a fire alarm, how a conventional system differs from an addressable one, what the inspector checks and how to pass inspection first time.",
+        sections: [
+          { h: "Who must have an alarm", p: [
+            "Practically every business premises: a shop, an office, a café, a warehouse, a training centre. Requirements depend on area, floors and occupancy: a small rented unit needs a conventional alarm with smoke detectors and a sounder, a multi-floor building needs an addressable system and evacuation alerting.",
+            "Responsibility sits with the owner or the tenant — as written in the lease. A missing or dead alarm means orders and fines at inspection, and direct liability if something happens.",
+          ] },
+          { h: "Conventional or addressable: the difference", p: [
+            "A conventional system has detectors on a shared loop: the panel sees an alarm on line 2 but not which detector fired. It is cheap and sufficient up to ~300 m². Rubezh and Altai panels are the typical certified choice.",
+            "An addressable system knows every detector by name: the panel shows the exact room, watches chamber contamination and reports faults itself. For buildings with many rooms it is not a luxury but a code requirement — plus faster response and cheaper maintenance.",
+          ] },
+          { h: "What the inspector checks", p: [
+            "Design and as-built documents from a licensed organisation, equipment certificates, operation of every detector, sounder audibility, EXIT signs, the maintenance log. A system without a service contract formally counts as non-operational.",
+            "We do the full cycle: survey and code-compliant design, installation, commissioning with every detector tested, inspection handover and then scheduled maintenance. The site passes inspection first time — that is our acceptance criterion.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is a fire alarm for a shop?", a: "For premises up to 300 m² a conventional system with detectors, a sounder and EXIT signs is the most affordable option; installation takes 1–3 days. An exact estimate follows a free survey: codes, not a price list, dictate the composition." },
+          { q: "Can an alarm be installed without a design?", a: "Simple small premises may be fitted per a survey act, but buildings and high-occupancy sites require a design from a licensed organisation — it is the first thing inspection asks for." },
+          { q: "What is evacuation alerting and do I need it?", a: "It is the sounders, illuminated signs and voice messages that manage evacuation. The type (1–5) depends on the building: a shop needs sounders and signs, a mall or a school needs zoned voice alerting." },
+        ],
+      },
+      tr: {
+        title: "İşletmeler için yangın alarmı: Özbekistan'da denetim ne ister",
+        excerpt: "Kimde yangın alarmı zorunlu, konvansiyonel sistem adresliden nasıl ayrılır, müfettiş neyi kontrol eder ve denetimden ilk seferde nasıl geçilir.",
+        sections: [
+          { h: "Alarm kimde zorunlu", p: [
+            "Neredeyse her işletmede: dükkân, ofis, kafe, depo, eğitim merkezi. Gereksinimler alana, kat sayısına ve kişi sayısına bağlıdır: küçük kiralık birime duman dedektörlü ve sirenli konvansiyonel alarm yeter; çok katlı binaya adresli sistem ve tahliye uyarısı gerekir.",
+            "Sorumluluk sözleşmeye göre mal sahibinde veya kiracıdadır. Çalışmayan alarm denetimde ihtar ve ceza, olay hâlinde doğrudan sorumluluk demektir.",
+          ] },
+          { h: "Konvansiyonel mi adresli mi", p: [
+            "Konvansiyonel sistemde dedektörler ortak hattadır: panel «2. hatta alarm» der ama hangi dedektör olduğunu bilmez. Ucuzdur ve ~300 m²'ye kadar yeterlidir. Rubezh ve Altai panelleri tipik sertifikalı seçimdir.",
+            "Adresli sistem her dedektörü adıyla bilir: panel tam odayı gösterir, kirlenmeyi izler ve arızayı kendisi bildirir. Çok odalı binalarda bu lüks değil yönetmelik gereğidir.",
+          ] },
+          { h: "Müfettiş neyi kontrol eder", p: [
+            "Lisanslı kuruluşun projesi ve uygulama belgeleri, ekipman sertifikaları, her dedektörün çalışması, sirenlerin duyulurluğu, ÇIKIŞ levhaları, bakım defteri. Bakım sözleşmesi olmayan sistem resmen çalışmıyor sayılır.",
+            "Tüm döngüyü biz yaparız: keşif ve projeden montaja, her dedektörün testiyle devreye almaya, denetime teslimden periyodik bakıma. Tesis denetimden ilk seferde geçer — kabul ölçütümüz budur.",
+          ] },
+        ],
+        faq: [
+          { q: "Dükkân için yangın alarmı ne kadar?", a: "300 m²'ye kadar yerlerde dedektörlü, sirenli ve ÇIKIŞ levhalı konvansiyonel sistem en ekonomik seçenektir; montaj 1–3 gün sürer. Kesin fiyat ücretsiz keşiften sonra verilir." },
+          { q: "Projesiz alarm kurulabilir mi?", a: "Basit küçük yerlerde keşif tutanağıyla montaj mümkündür; ancak binalarda ve kalabalık tesislerde lisanslı kuruluş projesi zorunludur — denetim önce onu sorar." },
+          { q: "Tahliye uyarı sistemi nedir, bana gerekli mi?", a: "Sirenler, ışıklı levhalar ve sesli anonslardan oluşan sistemdir. Tipi (1–5) binaya bağlıdır: dükkâna siren ve levha yeter, AVM veya okula bölgesel sesli anons gerekir." },
+        ],
+      },
+      zh: {
+        title: "企业消防报警系统：乌兹别克斯坦消防检查要求什么",
+        excerpt: "哪些场所必须安装火灾报警，多线制与总线制系统的区别，检查人员查什么，以及如何一次通过验收。",
+        sections: [
+          { h: "哪些场所必须安装", p: [
+            "几乎所有经营场所：商店、办公室、咖啡馆、仓库、培训中心。要求取决于面积、层数与人员数量：小型租赁场所配感烟探测器加警笛的多线制系统即可，多层建筑则需要总线制系统与疏散广播。",
+            "责任由业主或租户承担——以合同约定为准。没有正常工作的报警系统，检查时会被责令整改并罚款，发生事故则承担直接责任。",
+          ] },
+          { h: "多线制与总线制的区别", p: [
+            "多线制系统的探测器共用回路：主机只知道「2 号回路报警」，不知道具体是哪只探测器。价格低，适合约 300 平米以内的场所。Rubezh 与 Altai 主机是典型的认证选择。",
+            "总线制系统认识每一只探测器：主机直接显示具体房间，监测探测器污染并自动上报故障。对多房间建筑而言这不是奢侈品而是规范要求——响应更快，维护更省。",
+          ] },
+          { h: "检查人员查什么", p: [
+            "持证单位的设计与竣工文件、设备证书、每只探测器的动作、警报器的声响与可见性、「安全出口」标志、维保记录。没有维保合同的系统在形式上视为不工作。",
+            "我们提供全流程：按规范勘察设计、安装、逐只探测器调试、协助通过消防验收，之后是定期维保。现场一次通过检查——这就是我们的交付标准。",
+          ] },
+        ],
+        faq: [
+          { q: "商店装一套火灾报警要多少钱？", a: "300 平米以内场所，配探测器、警笛与出口标志灯的多线制系统最经济，安装 1–3 天。准确报价在免费勘察之后——系统构成由规范决定，而非价目表。" },
+          { q: "不做设计能直接安装吗？", a: "简单的小场所可凭勘察记录安装，但建筑物及人员密集场所必须有持证单位的设计文件——检查首先要查它。" },
+          { q: "什么是疏散广播，我需要吗？", a: "即管理疏散的警笛、发光标志与语音播报系统。类型（1–5 类）取决于建筑：商店有警笛和标志即可，商场或学校则需要分区语音广播。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "skolko-stoit-videonablyudenie",
     date: "2026-07-17",
     related: ["cctv"],
