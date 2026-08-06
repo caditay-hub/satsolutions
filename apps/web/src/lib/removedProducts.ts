@@ -4,6 +4,16 @@
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // Дубли-карточки, объединены аудитом каталога 2026-07-20 → 308 на карточку-оригинал.
+  // 2026-08-06: дубли MikroTik, вскрыты сверкой цен с прайсом EKOM (по 2-3 карточки на модель).
+  "pxt-rbcapgi-5acd2nd": "/products/mkt-rbcapgi-5acd2nd",
+  "mkt-rbcapgi-5acd2nd-cap-ac-mikrotik-accesspoint": "/products/mkt-rbcapgi-5acd2nd",
+  "mkt-rbcapgi-5acd2nd-cap-xl-ac-mikrotik-accesspoint": "/products/mkt-rbcapgi-5acd2nd-xl",
+  "mkt-rbcapgi-5acd2nd-cap-ax-mikrotik-accesspoint": "/products/mkt-capgi-5haxd2haxd",
+  "mkt-rb760igs-mikrotik-router": "/products/pxt-rb760igs",
+  "mkt-ccr2116-12g-4s-mikrotik-router": "/products/pxt-ccr2116-12g-4s",
+  "pxt-rb952ui-5ac2nd": "/products/mkt-rb952ui-5ac2nd",
+  "mkt-hap-lite-rb952ui-5ac-2nd-mikrotik-router": "/products/mkt-rb952ui-5ac2nd",
+  "mkt-rb4011igs-rm-mikrotik-router": "/products/pxt-rb4011igs-rm",
   // 2026-08-04: дубль HDMI-сплиттера 1×4, оставлена карточка с ценой из свежего прайса.
   "pro-hdmi-splitter-4k-1-4": "/products/pro-hdmi-4k-1-4-1-vhod-4-vyhod",
   "pro-dinamik-dlya-plity-dd80-35w-2": "/products/pro-dinamik-dlya-plity-dd80-35w",
