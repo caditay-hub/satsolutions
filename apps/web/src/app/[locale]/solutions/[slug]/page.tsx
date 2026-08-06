@@ -148,7 +148,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     name: title,
     description: intro,
     serviceType: title,
-    provider: { "@type": "Organization", name: "SAT Solutions", url: siteUrl, telephone: "+998-99-554-69-69" },
+    provider: { "@type": "Organization", name: "SAT Solutions", url: siteUrl, telephone: "+998-97-862-66-99" },
     areaServed: { "@type": "Country", name: "Узбекистан" },
     url: `${siteUrl}${lp}/solutions/${svc.key}`,
     image: `${IMG_BASE}/${svc.key}.jpg`,

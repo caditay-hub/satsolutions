@@ -46,7 +46,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "Start with a free site survey",
     ctaText: "Send your requirements or request a call — we reply within one business day.",
     ctaButton: "Contact us",
-    ctaCall: "WhatsApp / Call: +998 99 554-69-69 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / Call: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   ru: {
     metaTitle: "Системы безопасности для иностранных компаний в Узбекистане",
@@ -78,7 +78,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "Начните с бесплатного обследования объекта",
     ctaText: "Отправьте требования или закажите звонок — ответим в течение рабочего дня.",
     ctaButton: "Связаться с нами",
-    ctaCall: "WhatsApp / Телефон: +998 99 554-69-69 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / Телефон: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   uz: {
     metaTitle: "O'zbekistondagi xorijiy kompaniyalar uchun xavfsizlik tizimlari",
@@ -110,7 +110,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "Bepul obyekt ko'rigidan boshlang",
     ctaText: "Talablaringizni yuboring yoki qo'ng'iroq buyurtma qiling.",
     ctaButton: "Bog'lanish",
-    ctaCall: "WhatsApp / Tel: +998 99 554-69-69 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / Tel: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   tr: {
     metaTitle: "Özbekistan'da Yabancı Şirketler için Güvenlik Sistemleri — Taşkent",
@@ -142,7 +142,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "Ücretsiz keşifle başlayın",
     ctaText: "Gereksinimlerinizi gönderin veya arama talep edin — bir iş günü içinde yanıt veriyoruz.",
     ctaButton: "İletişime geçin",
-    ctaCall: "WhatsApp / Tel: +998 99 554-69-69 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / Tel: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   zh: {
     metaTitle: "乌兹别克斯坦外资企业安防系统 — 塔什干 CCTV、消防报警、门禁",
@@ -174,7 +174,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "从免费现场勘察开始",
     ctaText: "发送您的需求或预约通话——我们将在一个工作日内回复。",
     ctaButton: "联系我们",
-    ctaCall: "WhatsApp / 电话: +998 99 554-69-69 · 微信 WeChat: cadi2104 · sales@satsolutions.uz",
+    ctaCall: "WhatsApp / 电话: +998 97 862-66-99 · 微信 WeChat: cadi2104 · sales@satsolutions.uz",
   },
 };
 
@@ -199,7 +199,7 @@ export default async function InternationalPage({ params }: { params: Promise<{ 
       {
         "@type": "Service",
         name: d.h1,
-        provider: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz", telephone: "+998-99-554-69-69", email: "sales@satsolutions.uz" },
+        provider: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz", telephone: "+998-97-862-66-99", email: "sales@satsolutions.uz" },
         areaServed: { "@type": "Country", name: "Uzbekistan" },
         serviceType: "Security systems integration: CCTV, fire alarm, access control",
       },

@@ -4,10 +4,10 @@ import { useTranslations } from "next-intl";
    Причина: 90% рекламных кликов — мобильные, а позвонить в один тап было негде
    (tel: существовал в одном месте сайта) — конверсии «Звонок»/«WhatsApp» были 0.
    Клики ловит глобальный ContactConversionTracker (tel: / wa.me / t.me). */
-const PHONE = "+998995546969";
-const PHONE_HUMAN = "+998 99 554 69 69";
-const WHATSAPP = "https://wa.me/998995546969";
-const TELEGRAM = "https://t.me/SAT_zayavki_online_bot";
+const PHONE = "+998978626699";
+const PHONE_HUMAN = "+998 97 862 66 99";
+const WHATSAPP = "https://wa.me/998978626699";
+const TELEGRAM = "https://t.me/sales_satsolutions";
 
 export function ContactButtons({ compact = false, hideCall = false, full = false }: { compact?: boolean; hideCall?: boolean; full?: boolean }) {
   const t = useTranslations("common");

@@ -687,7 +687,7 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: t("phone"),
-                href: "tel:+998995546969",
+                href: "tel:+998978626699",
               },
               {
                 icon: (
@@ -696,7 +696,7 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: "Telegram",
-                href: "https://t.me/SAT_zayavki_online_bot",
+                href: "https://t.me/sales_satsolutions",
               },
               {
                 icon: (

@@ -36,7 +36,7 @@ const D: Record<string, {
         "На всё оборудование действует гарантия производителя (12–24 месяца); условия возврата — на странице «Возврат и обмен».",
       ]},
     ],
-    contact: "Вопросы по доставке: +998 99 554-69-69 · sales@satsolutions.uz",
+    contact: "Вопросы по доставке: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   uz: {
     title: "Yetkazib berish va to'lov",
@@ -66,7 +66,7 @@ const D: Record<string, {
         "Barcha uskunalarga ishlab chiqaruvchi kafolati amal qiladi (12–24 oy); qaytarish shartlari — «Qaytarish va almashtirish» sahifasida.",
       ]},
     ],
-    contact: "Yetkazib berish bo'yicha savollar: +998 99 554-69-69 · sales@satsolutions.uz",
+    contact: "Yetkazib berish bo'yicha savollar: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   en: {
     title: "Delivery & Payment",
@@ -96,7 +96,7 @@ const D: Record<string, {
         "All equipment carries the manufacturer's warranty (12–24 months); return terms are on the Returns & Exchange page.",
       ]},
     ],
-    contact: "Delivery enquiries: +998 99 554-69-69 · sales@satsolutions.uz",
+    contact: "Delivery enquiries: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   tr: {
     title: "Teslimat ve Ödeme",
@@ -126,7 +126,7 @@ const D: Record<string, {
         "Tüm ekipmanlar üretici garantilidir (12–24 ay); iade koşulları İade ve Değişim sayfasındadır.",
       ]},
     ],
-    contact: "Teslimat soruları: +998 99 554-69-69 · sales@satsolutions.uz",
+    contact: "Teslimat soruları: +998 97 862-66-99 · sales@satsolutions.uz",
   },
   zh: {
     title: "配送与付款",
@@ -156,7 +156,7 @@ const D: Record<string, {
         "所有设备均享有制造商保修（12–24个月）；退货条款见“退换货政策”页面。",
       ]},
     ],
-    contact: "配送咨询：+998 99 554-69-69 · sales@satsolutions.uz",
+    contact: "配送咨询：+998 97 862-66-99 · sales@satsolutions.uz",
   },
 };
 

@@ -73,7 +73,7 @@ export default async function RootLayout({
     logo: `${siteUrl}/logo.png`,
     image: `${siteUrl}/logo.png`,
     description: tm("homeDesc"),
-    telephone: "+998-99-554-69-69",
+    telephone: "+998-97-862-66-99",
     email: "sales@satsolutions.uz",
     address: {
       "@type": "PostalAddress",
@@ -99,7 +99,7 @@ export default async function RootLayout({
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+998-99-554-69-69",
+      telephone: "+998-97-862-66-99",
       email: "sales@satsolutions.uz",
       contactType: "customer service",
     },

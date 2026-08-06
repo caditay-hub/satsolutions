@@ -80,7 +80,7 @@ export function buildCaption(p: IgProduct): string {
     `✅ Omborda mavjud / В наличии на складе в Ташкенте\n` +
     (chars ? `\n${chars}\n` : "") +
     `\n🚚 O'rnatish va kafolat / Монтаж и гарантия\n` +
-    `📞 +998 99 554-69-69 (WhatsApp / Telegram)\n` +
+    `📞 +998 97 862-66-99 (WhatsApp / Telegram)\n` +
     `🌐 satsolutions.uz\n` +
     `📍 Toshkent, Katta Darxon ko'chasi 5\n\n` +
     HASHTAGS + brandTag
