@@ -276,8 +276,20 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
       sequelize.query(
         `SELECT p.name, p.slug, p."coverImageUrl", p.price, p.characteristics::text AS chars_text, b.name AS brand_name
          FROM products p LEFT JOIN brands b ON b.id = p."brandId"
+         LEFT JOIN categories c ON c.id = p."categoryId"
          WHERE ${pm.where}
-         ORDER BY (CASE WHEN p.name ILIKE :start THEN 0 ELSE 1 END), length(p.name)
+         ORDER BY (CASE WHEN p.name ILIKE :start THEN 0 ELSE 1 END),
+           -- бренд-запросы: сначала ходовые категории (камеры, регистраторы, сеть), аксессуары/ИБП — вниз
+           (CASE
+              WHEN c.name ILIKE '%камер%' THEN 0
+              WHEN c.name ILIKE '%регистратор%' THEN 1
+              WHEN c.name ILIKE '%коммутатор%' OR c.name ILIKE '%точк%доступ%' OR c.name ILIKE '%маршрутизатор%' THEN 2
+              WHEN c.name ILIKE '%домофон%' OR c.name ILIKE '%терминал%' OR c.name ILIKE '%турникет%' THEN 3
+              WHEN c.name ILIKE '%аксессуар%' OR c.name ILIKE '%крепл%' OR c.name ILIKE '%кронштейн%'
+                OR c.name ILIKE '%ибп%' OR c.name ILIKE '%питани%' OR c.name ILIKE '%кабел%' THEN 8
+              ELSE 5
+            END),
+           length(p.name)
          LIMIT 6`,
         { type: QueryTypes.SELECT, replacements: { ...pm.repl, start: `${q}%` } },
       ),

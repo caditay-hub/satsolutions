@@ -5,6 +5,10 @@
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // Дубли-карточки, объединены аудитом каталога 2026-07-20 → 308 на карточку-оригинал.
   // 2026-08-06: дубли MikroTik, вскрыты сверкой цен с прайсом EKOM (по 2-3 карточки на модель).
+  // Дубли Ubiquiti (07.08.2026): канонические карточки выбраны по полноте описания и актуальной цене
+  "ubnt-u7-pro-ubiquiti-accesspoint": "/products/pxt-u7-pro",
+  "pxt-u6-lr": "/products/ubnt-u6-lr-ubiquiti-accesspoint",
+  "ubnt-litebeam-5ac-gen2-ubiquiti-wifi-bridge": "/products/pxt-lbe-5ac-gen2",
   "pxt-rbcapgi-5acd2nd": "/products/mkt-rbcapgi-5acd2nd",
   "mkt-rbcapgi-5acd2nd-cap-ac-mikrotik-accesspoint": "/products/mkt-rbcapgi-5acd2nd",
   "mkt-rbcapgi-5acd2nd-cap-xl-ac-mikrotik-accesspoint": "/products/mkt-rbcapgi-5acd2nd-xl",
