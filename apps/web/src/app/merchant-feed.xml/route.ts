@@ -45,8 +45,11 @@ export async function GET() {
       const ident = brand && mpnOk
         ? `<g:brand>${esc(brand)}</g:brand><g:mpn>${esc(p.modelCode!.trim())}</g:mpn>`
         : `${brand ? `<g:brand>${esc(brand)}</g:brand>` : ""}<g:identifier_exists>no</g:identifier_exists>`;
+      // custom_label_0: Shopping-кампания исключает мелочь (< 1 млн сум) — меньше микро-заказов
+      const label = price < 1_000_000 ? "lowprice" : "core";
       return `<item>
 <g:id>${esc(p.slug)}</g:id>
+<g:custom_label_0>${label}</g:custom_label_0>
 <g:title>${esc(p.name.slice(0, 150))}</g:title>
 <g:description>${esc(desc)}</g:description>
 <g:link>${SITE}/products/${esc(p.slug)}</g:link>
