@@ -92,6 +92,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale });
   try {
     const { product } = await getProductBySlug(slug);
+    // Нет товара → 404 уже на этапе метаданных: иначе Next успевает отдать статус 200
+    // до notFound() в теле страницы (стриминг), и GSC копит «ложные 404».
+    if (!product) {
+      const recovered = await recoverProductSlug(slug);
+      if (recovered) permanentRedirect(`/products/${recovered}`);
+      notFound();
+    }
     const loc = localizeProduct(product, locale);
     const ogImage = resolveImageUrl(product.coverImageUrl) ?? undefined;
     const desc = clip(loc.shortDescription || loc.name, 160);
@@ -107,7 +114,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         images: ogImage ? [{ url: ogImage }] : undefined
       }
     });
-  } catch {
+  } catch (e) {
+    // Служебные throw Next (notFound/permanentRedirect выше) — пробрасываем как есть
+    if (String((e as any)?.digest || "").startsWith("NEXT_")) throw e;
+    const msg = String((e as any)?.message || e);
+    if (msg.includes("404")) {
+      const recovered = await recoverProductSlug(slug);
+      if (recovered) permanentRedirect(`/products/${recovered}`);
+      notFound();
+    }
     return { title: t("product.fallbackTitle") };
   }
 }
