@@ -5,6 +5,8 @@
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // Дубли-карточки, объединены аудитом каталога 2026-07-20 → 308 на карточку-оригинал.
   // 2026-08-06: дубли MikroTik, вскрыты сверкой цен с прайсом EKOM (по 2-3 карточки на модель).
+  // Снято с продажи 11.08.2026 (нет в наличии) → 308 на ближайший аналог
+  "hik-ds-2cd2345g0p-i-1-68mm-o-std": "/products/hik-ds-2cd2543g2-i-2-8mm",
   // Дубли Ubiquiti (07.08.2026): канонические карточки выбраны по полноте описания и актуальной цене
   "ubnt-u7-pro-ubiquiti-accesspoint": "/products/pxt-u7-pro",
   "pxt-u6-lr": "/products/ubnt-u6-lr-ubiquiti-accesspoint",
