@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPortfolioBySlug, getPortfolioCategories } from "@/lib/api";
+import { getPortfolioBySlug, getPortfolioCategories, getProductBySlug, getSitePage } from "@/lib/api";
+import { ProductCard } from "@/components/Cards";
+import { portfolioLinks } from "@/lib/portfolioLinks";
+import { serviceByKey } from "@/lib/servicesData";
+import { getServiceSeo } from "@/lib/serviceSeo";
+import { localizeProductName } from "@/lib/productI18n";
 import Image from "next/image";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
@@ -11,6 +17,16 @@ import { localizePortfolioProject, localizeCategoryName } from "@/lib/contentI18
 
 const DATE_LOCALE: Record<string, string> = {
   ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN"
+};
+
+// Подписи блоков перелинковки (кейс → каталог и услуги). Отдельный словарь, а не
+// messages/*.json: строки нужны только здесь и в 5 локалях сразу.
+const LINK_UI: Record<string, { equipment: string; equipmentHint: string; services: string; all: string }> = {
+  ru: { equipment: "Оборудование на объекте", equipmentHint: "Позиции того же класса, что применялись на проекте — с актуальными ценами.", services: "Услуги по этому направлению", all: "Весь каталог" },
+  uz: { equipment: "Obyektdagi uskunalar", equipmentHint: "Loyihada qo‘llanilgan turdagi pozitsiyalar — dolzarb narxlar bilan.", services: "Ushbu yo‘nalish bo‘yicha xizmatlar", all: "Butun katalog" },
+  en: { equipment: "Equipment used on site", equipmentHint: "Same-class items as installed on this project, with current prices.", services: "Related services", all: "Full catalogue" },
+  tr: { equipment: "Sahada kullanılan ekipman", equipmentHint: "Projede kullanılanla aynı sınıftaki ürünler, güncel fiyatlarla.", services: "İlgili hizmetler", all: "Tüm katalog" },
+  zh: { equipment: "项目所用设备", equipmentHint: "与本项目同类的产品，价格为最新价。", services: "相关服务", all: "全部产品" },
 };
 
 type ContentBlock = { type: "p"; text: string } | { type: "ul"; items: string[] };
@@ -92,6 +108,32 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
     const img = resolveImageUrl(item.coverImageUrl);
     const works = item.items ?? [];
     const gallery = (item.galleryImageUrls ?? []).map((u) => resolveImageUrl(u)).filter(Boolean) as string[];
+
+    // Перелинковка кейса: оборудование того же класса + профильные услуги/отрасли.
+    // Кейсы — доверенные страницы, отсюда вес идёт на коммерческие разделы.
+    const links = portfolioLinks(slug);
+    const linkUi = LINK_UI[locale] ?? LINK_UI.ru;
+    let caseProducts: Awaited<ReturnType<typeof getProductBySlug>>["product"][] = [];
+    let usdToUzs = 1;
+    if (links?.products.length) {
+      const loaded = await Promise.all(
+        links.products.map((s) => getProductBySlug(s).then((r) => r.product).catch(() => null))
+      );
+      caseProducts = loaded.filter(Boolean) as typeof caseProducts;
+      if (caseProducts.some((p: any) => p?.isUsd)) {
+        try {
+          const { page } = await getSitePage("site");
+          const v = (page.data as any)?.usdToUzs;
+          const n = typeof v === "number" ? v : Number(v);
+          if (Number.isFinite(n) && n > 0) usdToUzs = n;
+        } catch {
+          // курс не критичен: карточка отрисуется по цене из БД
+        }
+      }
+    }
+    const caseServices = (links?.services ?? [])
+      .filter((k) => serviceByKey[k])
+      .map((k) => ({ key: k, label: getServiceSeo(locale, k)?.h1 ?? serviceByKey[k].title }));
     const cat = item.portfolioCategoryId
       ? categories.find((c) => c.id === item.portfolioCategoryId)
       : undefined;
@@ -194,6 +236,45 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
         ) : null}
 
         {works.length || gallery.length ? <PortfolioWorksAccordion works={works} images={gallery} /> : null}
+
+        {caseProducts.length > 0 && (
+          <section className="mt-12 border-t border-slate-200 pt-8">
+            <div className="flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h2 className="text-xl font-bold tracking-tight text-slate-950">{linkUi.equipment}</h2>
+                <p className="mt-1.5 max-w-2xl text-sm text-slate-600">{linkUi.equipmentHint}</p>
+              </div>
+              <Link
+                href="/products"
+                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
+              >
+                {linkUi.all} →
+              </Link>
+            </div>
+            <div className="mt-5 grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+              {caseProducts.map((p: any) => (
+                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {caseServices.length > 0 && (
+          <section className="mt-10 border-t border-slate-200 pt-6">
+            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{linkUi.services}</p>
+            <div className="mt-3 flex flex-wrap gap-2.5">
+              {caseServices.map((s) => (
+                <Link
+                  key={s.key}
+                  href={`/solutions/${s.key}`}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
+                >
+                  {s.label}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     );
   } catch {
