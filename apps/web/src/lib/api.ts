@@ -61,6 +61,8 @@ export type ProductDto = {
   coverImageUrl: string | null;
   galleryImageUrls?: string[] | null;
   published: boolean;
+  /** false → «под заказ»: карточка остаётся в каталоге и индексе, меняется бейдж и availability */
+  inStock?: boolean;
   categoryId: string | null;
   brandId?: string | null;
   createdAt: string;

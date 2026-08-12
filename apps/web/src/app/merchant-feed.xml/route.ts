@@ -54,7 +54,7 @@ export async function GET() {
 <g:description>${esc(desc)}</g:description>
 <g:link>${SITE}/products/${esc(p.slug)}</g:link>
 <g:image_link>${esc(image)}</g:image_link>
-<g:availability>in_stock</g:availability>
+<g:availability>${p.inStock === false ? "backorder" : "in_stock"}</g:availability>
 <g:condition>new</g:condition>
 <g:price>${price} UZS</g:price>
 ${ident}

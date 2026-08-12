@@ -228,6 +228,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     const priceProject = pInfo?.kind !== "value";
     const priceValue = pInfo?.kind === "value" ? pInfo.value : "";
     const isEol = !!characteristics["Статус"]?.toString().toLowerCase().includes("снят");
+    // inStock=false → «под заказ»: карточка живёт в каталоге и индексе, меняются
+    // бейдж, микроразметка (BackOrder) и availability в Merchant-фиде
+    const onOrder = (product as any).inStock === false;
 
     // Similar products from same category (excluding current)
     let similarItems: any[] = [];
@@ -307,7 +310,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               "@type": "Offer",
               price: Math.round(priceNum),
               priceCurrency: "UZS",
-              availability: "https://schema.org/InStock",
+              availability: (product as any).inStock === false
+                ? "https://schema.org/BackOrder"
+                : "https://schema.org/InStock",
               itemCondition: "https://schema.org/NewCondition",
               url: `${siteUrl}/products/${product.slug}`,
               seller: { "@type": "Organization", name: "SAT Solutions" },
@@ -433,6 +438,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               {isEol ? (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-orange-100 text-orange-700 text-xs font-bold rounded-full">
                   ⚠ {t("product.eol")}
+                </span>
+              ) : onOrder ? (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">
+                  <span className="w-1.5 h-1.5 bg-amber-500 rounded-full" /> {t("common.onOrder")}
                 </span>
               ) : (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-green-100 text-green-700 text-xs font-bold rounded-full">

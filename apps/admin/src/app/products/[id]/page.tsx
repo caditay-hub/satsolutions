@@ -96,6 +96,7 @@ export default function EditProductPage() {
           characteristics: Object.keys(characteristicsObj).length ? characteristicsObj : null,
           coverImageUrl: product.coverImageUrl,
           published: product.published,
+          inStock: (product as any).inStock ?? true,
           categoryId: product.categoryId,
           brandId: product.brandId ?? null
         })
@@ -308,6 +309,18 @@ export default function EditProductPage() {
                   />
                   Опубликован
                 </label>
+                <label className="flex items-center gap-2 text-sm">
+                  <input
+                    type="checkbox"
+                    checked={product.inStock ?? true}
+                    onChange={(e) => setProduct({ ...product, inStock: e.target.checked })}
+                  />
+                  В наличии
+                </label>
+                <div className="text-xs text-slate-500">
+                  Снимите галочку «В наличии» — товар останется в каталоге и поиске, но получит
+                  бейдж «Под заказ» (позиции в Google сохраняются).
+                </div>
               </div>
             </div>
 

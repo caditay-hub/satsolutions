@@ -64,6 +64,7 @@ export type ProductDto = {
   characteristics: Record<string, string> | null;
   coverImageUrl: string | null;
   published: boolean;
+  inStock?: boolean;
   categoryId: string | null;
   brandId?: string | null;
   createdAt: string;

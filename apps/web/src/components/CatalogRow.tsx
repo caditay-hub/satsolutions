@@ -52,10 +52,17 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
       </div>
 
       <div className="flex shrink-0 flex-row items-center justify-between gap-3 sm:w-48 sm:flex-col sm:items-end sm:justify-start sm:text-right">
-        <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-600">
-          <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          {tc("inStock")}
-        </div>
+        {(p as any).inStock === false ? (
+          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-amber-600">
+            <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+            {tc("onOrder")}
+          </div>
+        ) : (
+          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-600">
+            <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            {tc("inStock")}
+          </div>
+        )}
         {price ? <div className="text-[15px] font-black text-[#e02020]">{price}</div> : null}
         <OrderButton productId={p.id} productName={displayName} price={p.price} label={tc("order")} variant="brand" />
       </div>

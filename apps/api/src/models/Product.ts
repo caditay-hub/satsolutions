@@ -1,4 +1,4 @@
-import { DataTypes, Model, type InferAttributes, type InferCreationAttributes } from "sequelize";
+import { DataTypes, Model, type CreationOptional, type InferAttributes, type InferCreationAttributes } from "sequelize";
 import { sequelize } from "../db.js";
 
 export class Product extends Model<InferAttributes<Product>, InferCreationAttributes<Product>> {
@@ -15,6 +15,7 @@ export class Product extends Model<InferAttributes<Product>, InferCreationAttrib
   declare coverImageUrl: string | null;
   declare galleryImageUrls: string[] | null;
   declare published: boolean;
+  declare inStock: CreationOptional<boolean>;
   declare categoryId: string | null;
   declare brandId: string | null;
   declare createdAt: Date;
@@ -80,6 +81,14 @@ Product.init(
       type: DataTypes.BOOLEAN,
       allowNull: false,
       defaultValue: false
+    },
+    // false = «под заказ»: карточка остаётся в каталоге, поиске и sitemap
+    // (позиции в Google не теряются), но меняется бейдж, JSON-LD (BackOrder)
+    // и availability в Merchant-фиде. Полное снятие — published=false + removedProducts.ts
+    inStock: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
     },
     categoryId: {
       type: DataTypes.UUID,

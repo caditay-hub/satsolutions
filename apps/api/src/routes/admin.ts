@@ -767,6 +767,7 @@ adminRouter.post("/products", async (req, res) => {
     price: priceSchema.optional(),
     isUsd: z.boolean().optional(),
     recommended: z.boolean().optional(),
+    inStock: z.boolean().optional(),
     shortDescription: z.string().max(500).optional().nullable(),
     description: z.string().optional().nullable(),
     characteristics: z.record(z.string(), z.string()).optional().nullable(),
@@ -785,6 +786,7 @@ adminRouter.post("/products", async (req, res) => {
     price: String(parsed.data.price ?? 0),
     isUsd: parsed.data.isUsd ?? false,
     recommended: parsed.data.recommended ?? false,
+    inStock: parsed.data.inStock ?? true,
     brandId: parsed.data.brandId ?? null,
     characteristics: parsed.data.characteristics ?? null,
     slug
@@ -830,6 +832,7 @@ adminRouter.patch("/products/:id", async (req, res) => {
     price: priceSchema.optional(),
     isUsd: z.boolean().optional(),
     recommended: z.boolean().optional(),
+    inStock: z.boolean().optional(),
     shortDescription: z.string().max(500).optional().nullable(),
     description: z.string().optional().nullable(),
     characteristics: z.record(z.string(), z.string()).optional().nullable(),
@@ -854,6 +857,7 @@ adminRouter.patch("/products/:id", async (req, res) => {
   if (parsed.data.price !== undefined) product.price = String(parsed.data.price);
   if (parsed.data.isUsd !== undefined) (product as any).isUsd = parsed.data.isUsd;
   if (parsed.data.recommended !== undefined) (product as any).recommended = parsed.data.recommended;
+  if (parsed.data.inStock !== undefined) (product as any).inStock = parsed.data.inStock;
   if (parsed.data.characteristics !== undefined) product.characteristics = parsed.data.characteristics ?? null;
   if (parsed.data.coverImageUrl !== undefined) product.coverImageUrl = parsed.data.coverImageUrl ?? null;
   if (parsed.data.published !== undefined) product.published = parsed.data.published;
