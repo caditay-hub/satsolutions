@@ -3,6 +3,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
+import { deadCategoryTarget } from "@/lib/deadCategories";
 
 // Единый каталог: брендовые страницы категорий схлопнуты на страницу типа
 // (/products?type=<имя> — там товары + лонгрид + FAQ). Родительские → индекс /categories.
@@ -18,7 +19,14 @@ export default async function CategoryRedirectPage({ params }: { params: Promise
   const { slug } = await params;
   const { categories } = await getCategories();
   const current = categories.find((c) => c.slug === slug);
-  if (!current) notFound();
+  if (!current) {
+    // API отдаёт только категории С товарами, поэтому пустые разделы старой
+    // таксономии сюда не доходят. Раньше это был 404 (1145 штук в GSC) — теперь
+    // уводим на ближайшую живую страницу, чтобы не жечь краулинговый бюджет.
+    const target = deadCategoryTarget(slug);
+    if (target) permanentRedirect(target);
+    notFound();
+  }
 
   const hasChildren = categories.some((c) => c.parentId === current.id);
   if (hasChildren) {
