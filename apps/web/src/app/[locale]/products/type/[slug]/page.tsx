@@ -5,6 +5,7 @@ import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
+import { deadTypeTarget } from "@/lib/deadCategories";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { routing } from "@/i18n/routing";
 import { localizeCatName } from "@/lib/catalogI18n";
@@ -55,7 +56,17 @@ export default async function ProductTypePage({ params, searchParams }: { params
     permanentRedirect(`${lp}/products/type/${to}`);
   }
   const name = await resolveTypeName(slug);
-  if (!name) notFound();
+  if (!name) {
+    // Живого типа нет — но Google знает эти слаги по исчезнувшим разделам старой
+    // таксономии (70 адресов в логах). Проверяем ПОСЛЕ резолва: так рабочий тип
+    // не может случайно попасть под редирект.
+    const dead = deadTypeTarget(slug);
+    if (dead) {
+      const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+      permanentRedirect(`${lp}${dead}`);
+    }
+    notFound();
+  }
   // Переиспользуем рендер каталога /products для type=<name>.
   // ВАЖНО: пробрасываем реальные query-параметры из URL (brand, chars, priceMin/Max,
   // sort, perPage, view, page) — иначе фильтр-фасеты «не работают»: URL меняется, а

@@ -15,8 +15,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: t("catalog"), alternates: { canonical: `/categories/${slug}` } };
 }
 
-export default async function CategoryRedirectPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function CategoryRedirectPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  // permanentRedirect из next/navigation не знает про локаль — без префикса
+  // узбекский посетитель улетал на русскую страницу (ru — локаль по умолчанию,
+  // она без префикса).
+  const go = (path: string): never => permanentRedirect(locale === "ru" ? path : `/${locale}${path}`);
+
   const { categories } = await getCategories();
   const current = categories.find((c) => c.slug === slug);
   if (!current) {
@@ -24,13 +29,13 @@ export default async function CategoryRedirectPage({ params }: { params: Promise
     // таксономии сюда не доходят. Раньше это был 404 (1145 штук в GSC) — теперь
     // уводим на ближайшую живую страницу, чтобы не жечь краулинговый бюджет.
     const target = deadCategoryTarget(slug);
-    if (target) permanentRedirect(target);
+    if (target) go(target);
     notFound();
   }
 
   const hasChildren = categories.some((c) => c.parentId === current.id);
   if (hasChildren) {
-    permanentRedirect("/categories");
+    go("/categories");
   }
-  permanentRedirect(`/products/type/${typeSlug(current.name)}`);
+  go(`/products/type/${typeSlug(current.name)}`);
 }
