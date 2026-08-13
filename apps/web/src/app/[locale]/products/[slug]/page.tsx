@@ -13,6 +13,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { serviceForCategory } from "@/lib/servicesData";
+import { getServiceSeo } from "@/lib/serviceSeo";
 import { articlesForService } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
@@ -531,6 +532,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {(() => {
               const relSvc = serviceForCategory(categoryInfo?.name);
               if (!relSvc) return null;
+              // Анкор — keyword-rich H1 услуги («Установка видеонаблюдения в Ташкенте»),
+              // как на страницах каталога (CategoryServiceLink). Карточек товаров 3000+,
+              // и это самый массовый внутренний анкор на сайте: раньше стоял голый
+              // relSvc.title («Видеонаблюдение») — и он же был русским на всех локалях.
+              const anchor = getServiceSeo(locale, relSvc.key)?.h1 ?? t(`services.${relSvc.key}.title`);
               return (
                 <Link
                   href={`/solutions/${relSvc.key}`}
@@ -539,7 +545,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
                   <span className="flex-1">
                     <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">{t("product.turnkey")}</span>
-                    <span className="block text-sm font-semibold text-slate-900">{relSvc.title} — {t("product.designInstall")}</span>
+                    <span className="block text-sm font-semibold text-slate-900">{anchor} — {t("product.designInstall")}</span>
                   </span>
                   <span className="shrink-0 font-bold text-brand-600">→</span>
                 </Link>
