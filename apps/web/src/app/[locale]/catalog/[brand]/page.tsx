@@ -16,6 +16,16 @@ import { serviceForCategory } from "@/lib/servicesData";
 const SITE = "https://satsolutions.uz";
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
 
+// Гео-хвост к H1 бренда: кластер «<бренд> + страна» — самый спросовый и наименее
+// конкурентный (hikvision uzbekistan 260/мес), раньше H1 был просто «Hikvision».
+const BRAND_H1_GEO: Record<string, string> = {
+  ru: "в Узбекистане",
+  uz: "O‘zbekistonda",
+  en: "in Uzbekistan",
+  tr: "Özbekistan’da",
+  zh: "乌兹别克斯坦",
+};
+
 export const revalidate = 300;
 
 
@@ -88,6 +98,9 @@ export default async function BrandCatalogPage({
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
     brandLanding: {
       name: brandName,
+      // H1 с гео: спрос идёт как «<бренд> uzbekistan/узбекистан» (hikvision uzbekistan —
+      // 260/мес, низкая конкуренция), голый бренд в H1 этот кластер не ловил
+      seoH1: `${brandName} ${BRAND_H1_GEO[locale] ?? BRAND_H1_GEO.ru}`,
       description: localizeBrandDesc(brandSlug, cfg.description, locale),
       logoUrl,
       seo: seo ? { intro: seo.intro, faq: seo.faq } : null,
