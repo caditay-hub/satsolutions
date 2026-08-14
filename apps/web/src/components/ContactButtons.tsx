@@ -7,7 +7,10 @@ import { useTranslations } from "next-intl";
 const PHONE = "+998978626699";
 const PHONE_HUMAN = "+998 97 862 66 99";
 const WHATSAPP = "https://wa.me/998978626699";
-const TELEGRAM = "https://t.me/sales_satsolutions";
+// Бот, а не личный аккаунт: обращение из Telegram сразу заводит тему в группе
+// менеджеров и карточку в CRM. Раньше вело на @sales_satsolutions — переписка
+// оседала в личке одного человека, мимо CRM и мимо остальной команды.
+const TELEGRAM = "https://t.me/SAT_zayavki_online_bot";
 
 export function ContactButtons({ compact = false, hideCall = false, full = false }: { compact?: boolean; hideCall?: boolean; full?: boolean }) {
   const t = useTranslations("common");

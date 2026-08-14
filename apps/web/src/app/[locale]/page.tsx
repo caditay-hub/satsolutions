@@ -696,7 +696,10 @@ export default async function HomePage() {
                   </svg>
                 ),
                 label: "Telegram",
-                href: "https://t.me/sales_satsolutions",
+                // Бот, а не личный аккаунт: обращение заводит тему в группе менеджеров
+                // и карточку в CRM. Ссылка на @sales_satsolutions уводила переписку
+                // в личку одного человека — мимо CRM и мимо остальной команды.
+                href: "https://t.me/SAT_zayavki_online_bot",
               },
               {
                 icon: (
