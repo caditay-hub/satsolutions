@@ -65,10 +65,12 @@ export function NavDropdown({
 
       {open && (
         <div
-          className="absolute left-1/2 z-[75] mt-2 -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
+          // Список услуг длиннее экрана ноутбука. Прокручиваем только колонки:
+          // калькулятор и «Все услуги» остаются на виду, не уезжая за край.
+          className="absolute left-1/2 z-[75] mt-2 flex max-h-[80vh] -translate-x-1/2 flex-col rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
           style={{ width: cols ? width * 2 : width }}
         >
-          <div className={cols ? "grid grid-cols-2 gap-x-4" : ""}>
+          <div className={`min-h-0 flex-1 overflow-y-auto overscroll-contain ${cols ? "grid grid-cols-2 gap-x-4" : ""}`}>
             {groups.map((g, gi) => (
               <div key={gi} className="min-w-0">
                 {g.label ? (
@@ -87,15 +89,17 @@ export function NavDropdown({
                     </button>
                   ))}
                 </div>
+
               </div>
             ))}
           </div>
 
+          {/* Вне области прокрутки — иначе на невысоком экране уезжает за край */}
           {feature && (
             <button
               type="button"
               onClick={() => go(feature.href)}
-              className="mt-2 flex w-full items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 text-left transition-colors hover:bg-brand-100"
+              className="mt-3 flex w-full shrink-0 items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 text-left transition-colors hover:bg-brand-100"
             >
               {feature.icon && (
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-brand-700" aria-hidden>
@@ -112,7 +116,7 @@ export function NavDropdown({
           <Link
             href={href as any}
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-brand-50 px-3 py-2 text-center text-xs font-bold text-brand-700 hover:bg-brand-100"
+            className="mt-2 block shrink-0 rounded-lg bg-brand-50 px-3 py-2 text-center text-xs font-bold text-brand-700 hover:bg-brand-100"
           >
             {allLabel} →
           </Link>
