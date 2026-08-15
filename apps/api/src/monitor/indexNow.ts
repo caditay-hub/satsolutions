@@ -12,9 +12,33 @@ const HOST = "satsolutions.uz";
 const SITEMAP = "http://localhost:3000/sitemap.xml";
 const ENDPOINT = "https://yandex.com/indexnow"; // Яндекс шарит сабмиты с другими участниками IndexNow (Bing и др.)
 
+const locs = (xml: string) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+
+/**
+ * Собрать адреса страниц. /sitemap.xml — это sitemapindex: его <loc> ведут на
+ * дочерние карты, а не на страницы. Без раскрытия индекса в IndexNow улетали
+ * пять адресов самих карт, и ни одна новая страница о себе не сообщала.
+ */
+async function collectUrls(): Promise<string[]> {
+  const root = await (await fetch(SITEMAP)).text();
+  const top = locs(root);
+  if (!/<sitemapindex/i.test(root)) return top;
+
+  const out: string[] = [];
+  for (const child of top) {
+    // ходим по внутреннему порту: наружу тот же контент, но без лишнего хопа
+    const local = child.replace(/^https?:\/\/[^/]+/, "http://localhost:3000");
+    try {
+      out.push(...locs(await (await fetch(local)).text()));
+    } catch (e) {
+      console.error(`[indexnow] не прочитал ${child}: ${(e as Error).message}`);
+    }
+  }
+  return out;
+}
+
 async function main() {
-  const xml = await (await fetch(SITEMAP)).text();
-  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+  const urls = await collectUrls();
   if (!urls.length) throw new Error("sitemap пуст");
 
   const file = join(config.dataDir, "indexnow-sent.json");
@@ -22,6 +46,16 @@ async function main() {
   try { if (existsSync(file)) prev = JSON.parse(readFileSync(file, "utf8")).urls || []; } catch {}
   const prevSet = new Set(prev);
   const fresh = urls.filter((u) => !prevSet.has(u));
+
+  // Раньше состояние хранило адреса карт, а не страниц: если бы мы просто сочли
+  // всё «новым», первый же прогон отправил бы тысячи URL разом. Поэтому базу
+  // фиксируем молча, а диффы шлём со следующего раза.
+  if (prev.length && prev.every((u) => /\/sitemap[\w-]*\.xml$/.test(u))) {
+    mkdirSync(config.dataDir, { recursive: true });
+    writeFileSync(file, JSON.stringify({ ts: new Date().toISOString(), urls }, null, 1));
+    console.log(`[indexnow] база пересобрана по страницам (${urls.length} URL), отправка со следующего прогона`);
+    return;
+  }
 
   if (!fresh.length) { console.log("[indexnow] новых URL нет — пропуск"); return; }
   // квота протокола: до 10 000 URL за запрос
