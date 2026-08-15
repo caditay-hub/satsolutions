@@ -115,6 +115,7 @@ export default async function ServicesPage() {
   const t = await getTranslations("solutionsPage");
   const ts = await getTranslations("services");
   const tc = await getTranslations("common");
+  const tcalc = await getTranslations("calc");
   const steps = t.raw("steps") as { title: string; desc: string }[];
   // JSON-LD: список всех решений/возможностей (ItemList)
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
@@ -195,6 +196,21 @@ export default async function ServicesPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Калькулятор: со страницы «Услуги» логично уходить не только читать
+          описание системы, но и прикинуть, во сколько обойдётся монтаж */}
+      <section className="container-page pt-12 sm:pt-16">
+        <div className="rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+          <div className="max-w-xl">
+            <p className="text-base font-black text-slate-900 sm:text-lg">{tcalc("promoHead")}</p>
+            <p className="mt-1 text-sm leading-relaxed text-slate-600">{tcalc("promoText")}</p>
+          </div>
+          <Link href="/calculator"
+            className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500 sm:mt-0">
+            {tcalc("promoBtn")} →
+          </Link>
         </div>
       </section>
 
