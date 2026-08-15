@@ -10,6 +10,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import "../globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ClientProviders } from "@/components/ClientProviders";
+import { SiteFooter } from "@/components/SiteFooter";
 import { GlobalBackButton } from "@/components/GlobalBackButton";
 import { ScrollManager } from "@/components/ScrollManager";
 import { createMetadata } from "@/lib/metadata";
@@ -327,6 +328,8 @@ ym(98915892, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, 
             <main className="flex-1">{children}</main>
             <GlobalBackButton />
           </ClientProviders>
+          {/* подвал рендерится на сервере: его ссылки должны быть в HTML, а не появляться после гидратации */}
+          <SiteFooter />
         </NextIntlClientProvider>
       </body>
     </html>
