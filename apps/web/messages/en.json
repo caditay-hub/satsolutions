@@ -1891,8 +1891,8 @@
     "homeDesc": "Supply and installation of CCTV, access control, fire alarm and IT infrastructure in Uzbekistan. Authorized Dahua and Hikvision integrator.",
     "solTitle": "Services — SAT Solutions",
     "solDesc": "Low-voltage systems and security solutions in Uzbekistan: CCTV, access control, fire alarm, structured cabling, safe city and more.",
-    "calcTitle": "Installation cost calculator: CCTV, access control, fire alarm — Tashkent",
-    "calcDesc": "Estimate the cost of installing low-voltage systems in Tashkent: CCTV, access control, door entry, fire alarm, structured cabling and Wi-Fi. Labour rates from our standard price list, a site plan and a quote in a minute."
+    "calcTitle": "CCTV installation cost in Tashkent — calculator and rates",
+    "calcDesc": "What it costs to install CCTV, access control, fire alarm and structured cabling in Tashkent. Labour rates per point and per metre of cable, worked examples for a shop, an office and a house, an online estimate in a minute."
   },
   "contact": {
     "feedback": "Contact us",
@@ -2585,9 +2585,9 @@
     "subtitle": "Companies and organisations we have designed and installed security systems for."
   },
   "calc": {
-    "h1": "Low-voltage installation cost calculator",
+    "h1": "CCTV and low-voltage installation: what the work costs",
     "crumb": "Calculator",
-    "lead": "Tick the systems your site needs — the calculator lays out a floor plan, counts the points and metres of cable routes, and shows the approximate cost of installation work from our standard price list. It takes a minute and commits you to nothing.",
+    "lead": "Tick the systems your site needs — the calculator lays out a plan, counts the points and metres of cable routes and shows the labour cost from our standard price list. Below are worked examples for typical sites and the unit rates behind them. It takes a minute and commits you to nothing.",
     "step1": "Type of site",
     "step1sub": "Pick the type and set the floor area — route length depends on it.",
     "step2": "What we install",
@@ -2760,12 +2760,52 @@
       {
         "q": "Do you work with companies under contract?",
         "a": "Yes. We work under contract with completion certificates and a warranty, accept bank transfer and issue invoices. For larger projects we produce a full design and specification."
+      },
+      {
+        "q": "What does CCTV cost for a private house?",
+        "a": "A 250 m² house with six cameras and a video door entry runs about 3.6–4.5 million UZS for the labour. Most of that is not the cameras but the cable routes: in a house the cable runs around the perimeter and out to the gate. With ducts already in place the work is roughly a quarter cheaper."
+      },
+      {
+        "q": "How much is installing one camera?",
+        "a": "An indoor camera starts at 155,000 UZS, an outdoor one at 180,000, a PTZ at 310,000. On top of that come the point setup, commissioning and the cable run to the recorder. A single camera on its own is subject to our minimum order of 560,000 UZS."
+      },
+      {
+        "q": "What is the cable laying price per metre?",
+        "a": "Surface laying starts at 7,000 UZS per metre, pulling into an existing tray or conduit at 5,500. Where no routes exist, conduit and chasing are added — and we price those by route length, not per cable, so a bundle of ten cables does not cost ten times more."
       }
     ],
     "promoTitle": "Not sure what the installation will cost?",
     "promoText": "Set the number of points — the calculator lays out a site plan and shows the range from our standard price list. One minute, no phone calls.",
     "promoBtn": "Estimate the cost",
     "promoHead": "Installation works cost calculator",
-    "promoHint": "Priced from our standard rate card. Equipment is quoted separately."
+    "promoHint": "Priced from our standard rate card. Equipment is quoted separately.",
+    "casesTitle": "What installation costs: worked examples",
+    "casesNote": "These figures come from this same calculator — open it above and put in your own numbers. Labour only, equipment excluded.",
+    "cases": [
+      {
+        "name": "Shop, 200 m²",
+        "spec": "8 cameras, 2 access-controlled doors, routes from scratch",
+        "sum": "5 324 300 – 6 655 375"
+      },
+      {
+        "name": "Office, 300 m²",
+        "spec": "10 cameras, 4 access-controlled doors, 8 outlets and Wi-Fi",
+        "sum": "11 426 950 – 14 283 688"
+      },
+      {
+        "name": "House, 250 m²",
+        "spec": "6 cameras and a video door entry",
+        "sum": "3 597 200 – 4 496 500"
+      },
+      {
+        "name": "Warehouse, 1200 m²",
+        "spec": "14 cameras and a fire alarm with 40 detectors",
+        "sum": "27 523 467 – 34 404 334"
+      }
+    ],
+    "tableTitle": "Installation rates",
+    "tableNote": "Rates from our standard price list for low-voltage work. Equipment is bought separately — from our catalogue or supplied by you; it does not change the labour price.",
+    "colWork": "Work",
+    "colPrice": "Price"
   }
 }

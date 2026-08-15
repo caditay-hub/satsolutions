@@ -1883,8 +1883,8 @@
     "homeDesc": "Özbekistan'da CCTV, geçiş kontrolü, yangın alarmı ve BT altyapısı tedarik ve kurulumu. Yetkili Dahua ve Hikvision entegratörü.",
     "solTitle": "Hizmetler — SAT Solutions",
     "solDesc": "Özbekistan'da zayıf akım sistemleri ve güvenlik çözümleri: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, güvenli şehir ve daha fazlası.",
-    "calcTitle": "Montaj maliyeti hesaplayıcısı: kamera, geçiş kontrol, yangın alarmı — Taşkent",
-    "calcDesc": "Taşkent'te zayıf akım sistemlerinin montaj maliyetini hesaplayın: güvenlik kamerası, geçiş kontrol, diafon, yangın alarmı, yapısal kablolama ve Wi-Fi. Standart fiyat listesine göre işçilik, tesis planı ve bir dakikada teklif."
+    "calcTitle": "Kamera montaj fiyatı Taşkent — hesaplayıcı ve birim fiyatlar",
+    "calcDesc": "Taşkent'te güvenlik kamerası, geçiş kontrol, yangın alarmı ve yapısal kablolama montajı ne kadar tutar. Nokta ve metre başına işçilik fiyatları, mağaza, ofis ve ev için hazır hesaplar, bir dakikada çevrimiçi teklif."
   },
   "contact": {
     "feedback": "İletişim",
@@ -2577,9 +2577,9 @@
     "subtitle": "Companies and organisations we have designed and installed security systems for."
   },
   "calc": {
-    "h1": "Zayıf akım montaj maliyeti hesaplayıcısı",
+    "h1": "Kamera ve zayıf akım montajı: işçilik ne kadar tutar",
     "crumb": "Hesaplayıcı",
-    "lead": "Tesiste hangi sistemlerin gerektiğini işaretleyin — hesaplayıcı bir yerleşim planı çıkarır, nokta sayısını ve kablo güzergâhı metrelerini hesaplar ve standart fiyat listemize göre yaklaşık montaj maliyetini gösterir. Bir dakika sürer ve hiçbir yükümlülük doğurmaz.",
+    "lead": "Tesiste hangi sistemlerin gerektiğini işaretleyin — hesaplayıcı planı çıkarır, noktaları ve güzergâh metrelerini hesaplar ve standart fiyat listemize göre işçiliği gösterir. Aşağıda tipik tesisler için hazır hesaplar ve birim fiyatlar var. Bir dakika sürer, hiçbir yükümlülük doğurmaz.",
     "step1": "Tesis türü",
     "step1sub": "Türü seçin ve alanı belirtin — güzergâh uzunluğu buna bağlıdır.",
     "step2": "Ne monte ediyoruz",
@@ -2752,12 +2752,52 @@
       {
         "q": "Tüzel kişilerle sözleşmeli çalışıyor musunuz?",
         "a": "Evet. Hakediş ve garantiyle sözleşme üzerinden çalışır, havale ile ödeme alır ve fatura keseriz. Büyük projelerde tam proje ve şartname hazırlarız."
+      },
+      {
+        "q": "Müstakil evde kamera sistemi ne kadar tutar?",
+        "a": "250 m² bir ev, altı kamera ve görüntülü diafonla işçilik olarak yaklaşık 3,6–4,5 milyon UZS tutar. Tutarın büyük kısmı kameralar değil, güzergâh: müstakil evde kablo çevre boyunca ve bahçe kapısına kadar gider. Kanallar hazırsa işçilik yaklaşık dörtte bir ucuzlar."
+      },
+      {
+        "q": "Tek kamera montajı ne kadar?",
+        "a": "İç mekân kamerası 155.000 UZS'den, dış mekân 180.000'den, PTZ 310.000'den başlar. Buna nokta ayarı, devreye alma ve kayıt cihazına kadar kablo çekimi eklenir. Tek kamera için 560.000 UZS'lik asgari sipariş tutarı geçerlidir."
+      },
+      {
+        "q": "Metre başına kablo çekim fiyatı nedir?",
+        "a": "Açık çekim metrede 7.000 UZS'den, mevcut kanala ya da spiral boruya çekim 5.500'den başlar. Güzergâh yoksa boru ve kanal açma eklenir; bunları her kabale değil güzergâh uzunluğuna göre hesapladığımız için on kablodan oluşan demet on kat pahalıya gelmez."
       }
     ],
     "promoTitle": "Montajın ne tutacağını bilmiyor musunuz?",
     "promoText": "Nokta sayısını girin — hesaplayıcı tesis planını çıkarır ve standart fiyat listemize göre aralığı gösterir. Bir dakika, telefona gerek yok.",
     "promoBtn": "Maliyeti hesapla",
     "promoHead": "Montaj işleri maliyet hesaplayıcısı",
-    "promoHint": "Standart fiyat listemize göre. Ekipman ayrıca hesaplanır."
+    "promoHint": "Standart fiyat listemize göre. Ekipman ayrıca hesaplanır.",
+    "casesTitle": "Montaj ne kadar tutar: hazır hesaplar",
+    "casesNote": "Tutarlar aynı hesaplayıcıyla çıkarıldı — yukarıdan açıp kendi rakamlarınızı girebilirsiniz. Yalnızca işçilik, ekipman hariç.",
+    "cases": [
+      {
+        "name": "Mağaza, 200 m²",
+        "spec": "8 kamera, 2 geçiş kontrollü kapı, güzergâh sıfırdan",
+        "sum": "5 324 300 – 6 655 375"
+      },
+      {
+        "name": "Ofis, 300 m²",
+        "spec": "10 kamera, 4 geçiş kontrollü kapı, 8 priz ve Wi-Fi",
+        "sum": "11 426 950 – 14 283 688"
+      },
+      {
+        "name": "Müstakil ev, 250 m²",
+        "spec": "6 kamera ve görüntülü diafon",
+        "sum": "3 597 200 – 4 496 500"
+      },
+      {
+        "name": "Depo, 1200 m²",
+        "spec": "14 kamera ve 40 dedektörlü yangın alarmı",
+        "sum": "27 523 467 – 34 404 334"
+      }
+    ],
+    "tableTitle": "Montaj birim fiyatları",
+    "tableNote": "Zayıf akım işleri standart fiyat listemizden. Ekipman ayrı alınır — kataloğumuzdan ya da kendiniz temin edersiniz, işçilik fiyatı değişmez.",
+    "colWork": "İş",
+    "colPrice": "Fiyat"
   }
 }

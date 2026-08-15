@@ -37,6 +37,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
   const ui = UI[locale] ?? UI.ru;
   const ts = await getTranslations({ locale, namespace: "services" });
+  const tcalc = await getTranslations({ locale, namespace: "calc" });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
   const lp = locale !== "ru" ? `/${locale}` : "";
 
@@ -129,6 +130,19 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
               </div>
             </div>
           )}
+
+          {/* Читатель статьи про монтаж почти всегда прикидывает бюджет — даём
+              ему калькулятор здесь же, заодно это входящая ссылка на страницу. */}
+          <div className="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+            <div className="max-w-xl">
+              <p className="text-base font-black text-slate-900">{tcalc("promoHead")}</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-600">{tcalc("promoText")}</p>
+            </div>
+            <Link href="/calculator"
+              className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500 sm:mt-0">
+              {tcalc("promoBtn")} →
+            </Link>
+          </div>
 
           {related.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">

@@ -1891,8 +1891,8 @@
     "homeDesc": "O‘zbekistonda videokuzatuv, kirishni boshqarish, yong‘in signalizatsiyasi va IT-infratuzilmani yetkazib berish va o‘rnatish. Dahua, Hikvision vakolatli integratori.",
     "solTitle": "Xizmatlar — SAT Solutions",
     "solDesc": "O‘zbekistonda kuchsiz tok tizimlari va xavfsizlik yechimlari: videokuzatuv, SKUD, yong‘in signalizatsiyasi, SKS, xavfsiz shahar va boshqalar.",
-    "calcTitle": "Montaj narxi kalkulyatori: videokuzatuv, SKUD, yong'in signalizatsiyasi — Toshkent",
-    "calcDesc": "Toshkentda past tokli tizimlarni o'rnatish narxini hisoblang: videokuzatuv, SKUD, domofon, yong'in signalizatsiyasi, SKS va Wi-Fi. Yagona narxnoma bo'yicha ish narxlari, obyekt rejasi va bir daqiqada smeta."
+    "calcTitle": "Videokuzatuv o'rnatish: Toshkentda montaj narxi — kalkulyator",
+    "calcDesc": "Toshkentda videokuzatuv, SKUD, yong'in signalizatsiyasi va SKS o'rnatish qanchaga tushadi. Nuqta va kabel metri bo'yicha montaj narxlari, do'kon, ofis va uy uchun tayyor hisob-kitoblar, bir daqiqada onlayn smeta."
   },
   "contact": {
     "feedback": "Aloqa",
@@ -2585,9 +2585,9 @@
     "subtitle": "Biz xavfsizlik tizimlarini loyihalab, o‘rnatgan kompaniya va tashkilotlar."
   },
   "calc": {
-    "h1": "Past tokli tizimlarni o'rnatish narxi kalkulyatori",
+    "h1": "Videokuzatuv va past tokli tizimlarni o'rnatish: montaj qanchaga tushadi",
     "crumb": "Kalkulyator",
-    "lead": "Obyektda qanday tizimlar kerakligini belgilang — kalkulyator rejani tuzadi, nuqtalar sonini va trassa metrlarini hisoblaydi hamda yagona narxnomamiz bo'yicha montaj ishlarining taxminiy qiymatini ko'rsatadi. Hisob bir daqiqa vaqt oladi va hech qanday majburiyat yuklamaydi.",
+    "lead": "Obyektda qanday tizimlar kerakligini belgilang — kalkulyator rejani tuzadi, nuqtalar va trassa metrlarini hisoblaydi hamda yagona narxnomamiz bo'yicha montaj narxini ko'rsatadi. Quyida odatiy obyektlar uchun tayyor hisob-kitoblar va birlik ish narxlari keltirilgan. Hisob bir daqiqa vaqt oladi va hech qanday majburiyat yuklamaydi.",
     "step1": "Qanday obyekt",
     "step1sub": "Turini tanlang va maydonini ko'rsating — trassa uzunligi shunga bog'liq.",
     "step2": "Nima o'rnatamiz",
@@ -2760,12 +2760,52 @@
       {
         "q": "Yuridik shaxslar bilan shartnoma asosida ishlaysizmi?",
         "a": "Ha. Dalolatnoma va kafolat bilan shartnoma asosida ishlaymiz, pul o'tkazma orqali qabul qilamiz, hisob-faktura beramiz. Yirik loyihalar uchun to'liq loyiha va spetsifikatsiya tayyorlaymiz."
+      },
+      {
+        "q": "Xususiy uyda videokuzatuv o'rnatish qanchaga tushadi?",
+        "a": "250 m² uy, olti kamera va videodomofon bilan — ishlar uchun taxminan 3,6–4,5 mln so'm. Summaning asosiy qismi kameralar emas, trassa yotqizish: xususiy uyda kabel perimetr bo'ylab va darvozagacha boradi. Kanallar tayyor bo'lsa, ishlar chorak barobar arzon."
+      },
+      {
+        "q": "Bitta kamerani o'rnatish narxi qancha?",
+        "a": "Ichki kamera — 155 000 so'mdan, ko'cha kamerasi — 180 000 dan, aylanuvchi — 310 000 dan. Bunga nuqtani sozlash, ishga tushirish va registratorgacha kabel yotqizish qo'shiladi. Alohida bitta kamerani 560 000 so'mdan boshlanadigan minimal buyurtma bilan o'rnatamiz."
+      },
+      {
+        "q": "Kabel yotqizish bir metri qancha turadi?",
+        "a": "Ochiq yotqizish — metriga 7 000 so'mdan, tayyor lotok yoki gofraga tortish — 5 500 dan. Trassa bo'lmasa, gofra va shtroba qo'shiladi: ularni har bir kabelga emas, trassa uzunligiga hisoblaymiz, shuning uchun o'nta kabel dastasi ishni o'n barobar qimmatlashtirmaydi."
       }
     ],
     "promoTitle": "Montaj qanchaga tushishini bilmayapsizmi?",
     "promoText": "Nuqtalar sonini belgilang — kalkulyator obyekt rejasini tuzadi va yagona narxnomamiz bo'yicha oraliqni ko'rsatadi. Bir daqiqa, qo'ng'iroqsiz.",
     "promoBtn": "Narxni hisoblash",
     "promoHead": "Montaj ishlari narxi kalkulyatori",
-    "promoHint": "Yagona narxnoma bo'yicha hisoblaymiz. Uskuna — alohida."
+    "promoHint": "Yagona narxnoma bo'yicha hisoblaymiz. Uskuna — alohida.",
+    "casesTitle": "Montaj qanchaga tushadi: tayyor hisob-kitoblar",
+    "casesNote": "Summalar shu kalkulyatorning o'zi bilan hisoblangan — yuqorida oching va o'z raqamlaringizni kiriting. Faqat ishlar, uskuna narxisiz.",
+    "cases": [
+      {
+        "name": "Do'kon, 200 m²",
+        "spec": "8 kamera, 2 ta SKUD eshigi, trassa noldan",
+        "sum": "5 324 300 – 6 655 375"
+      },
+      {
+        "name": "Ofis, 300 m²",
+        "spec": "10 kamera, 4 ta SKUD eshigi, 8 rozetka va Wi-Fi",
+        "sum": "11 426 950 – 14 283 688"
+      },
+      {
+        "name": "Xususiy uy, 250 m²",
+        "spec": "6 kamera va videodomofon",
+        "sum": "3 597 200 – 4 496 500"
+      },
+      {
+        "name": "Ombor, 1200 m²",
+        "spec": "14 kamera va 40 datchikli yong'in signalizatsiyasi",
+        "sum": "27 523 467 – 34 404 334"
+      }
+    ],
+    "tableTitle": "Montaj ishlari narxi",
+    "tableNote": "Narxlar past tokli ishlar yagona narxnomasidan. Uskuna alohida sotib olinadi — bizning katalogimizdan olishingiz yoki o'zingiznikini berishingiz mumkin, montaj narxiga ta'sir qilmaydi.",
+    "colWork": "Ish",
+    "colPrice": "Narx"
   }
 }
