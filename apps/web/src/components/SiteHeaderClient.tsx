@@ -214,9 +214,16 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
     href: "/partners/h3c",
   };
 
+  // Калькулятор — первым в выпадашке: это вход для тех, кто ещё выбирает и хочет
+  // понять порядок цен, а не читать описание услуги.
+  const calcItem = {
+    title: ({ ru: "Калькулятор стоимости монтажа", uz: "Montaj narxi kalkulyatori", en: "Installation cost calculator", tr: "Montaj maliyeti hesaplayıcısı", zh: "安装费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости монтажа",
+    href: "/calculator",
+  };
+
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
   const solutionGroups: NavDropGroup[] = [
-    { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
+    { label: tsp("systemsLabel"), items: [calcItem, ...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
     { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
   ];
   const portfolioGroups: NavDropGroup[] = [
@@ -249,7 +256,9 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <div className="container-page relative flex h-16 items-center gap-6">
+      {/* gap-3 на узких экранах: с gap-6 логотип + язык + «гамбургер» не влезали
+          в 375 px и страница получала горизонтальный скролл */}
+      <div className="container-page relative flex h-16 items-center gap-3 sm:gap-6">
         <div className="flex shrink-0 items-center">
           <SatLogo size="md" />
         </div>

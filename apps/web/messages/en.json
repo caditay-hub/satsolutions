@@ -1890,7 +1890,9 @@
     "homeTitle": "SAT Solutions — security and low-voltage systems in Uzbekistan",
     "homeDesc": "Supply and installation of CCTV, access control, fire alarm and IT infrastructure in Uzbekistan. Authorized Dahua and Hikvision integrator.",
     "solTitle": "Services — SAT Solutions",
-    "solDesc": "Low-voltage systems and security solutions in Uzbekistan: CCTV, access control, fire alarm, structured cabling, safe city and more."
+    "solDesc": "Low-voltage systems and security solutions in Uzbekistan: CCTV, access control, fire alarm, structured cabling, safe city and more.",
+    "calcTitle": "Installation cost calculator: CCTV, access control, fire alarm — Tashkent",
+    "calcDesc": "Estimate the cost of installing low-voltage systems in Tashkent: CCTV, access control, door entry, fire alarm, structured cabling and Wi-Fi. Labour rates from our standard price list, a site plan and a quote in a minute."
   },
   "contact": {
     "feedback": "Contact us",
@@ -2581,5 +2583,187 @@
   "clients": {
     "title": "Among our clients",
     "subtitle": "Companies and organisations we have designed and installed security systems for."
+  },
+  "calc": {
+    "h1": "Low-voltage installation cost calculator",
+    "crumb": "Calculator",
+    "lead": "Tick the systems your site needs — the calculator lays out a floor plan, counts the points and metres of cable routes, and shows the approximate cost of installation work from our standard price list. It takes a minute and commits you to nothing.",
+    "step1": "Type of site",
+    "step1sub": "Pick the type and set the floor area — route length depends on it.",
+    "step2": "What we install",
+    "step2sub": "Tick the systems and set the number of points.",
+    "step3": "Site conditions",
+    "step3sub": "These drive the labour: in the price list they are surcharges on the work.",
+    "area": "Floor area",
+    "obj": {
+      "shop": "Shop",
+      "office": "Office",
+      "wh": "Warehouse",
+      "house": "House, villa",
+      "prod": "Production",
+      "resid": "Residential block"
+    },
+    "sys": {
+      "cctv": "CCTV",
+      "acs": "Access control",
+      "intr": "Door entry",
+      "fire": "Fire alarm",
+      "lan": "Network, structured cabling, Wi-Fi",
+      "perim": "Perimeter",
+      "route": "Cable routes and pulling",
+      "pull": "Pulling cable into existing routes"
+    },
+    "field": {
+      "cctv": {
+        "in": "Indoor cameras",
+        "out": "Outdoor cameras",
+        "ptz": "PTZ cameras"
+      },
+      "acs": {
+        "doors": "Access points (doors)",
+        "kind": "Identification"
+      },
+      "intr": {
+        "kind": "Type",
+        "mon": "Monitors, subscribers"
+      },
+      "fire": {
+        "auto": "Detectors by area",
+        "det": "Detectors"
+      },
+      "lan": {
+        "ports": "RJ-45 outlets",
+        "wifi": "Wi-Fi access points",
+        "sw": "Switch"
+      },
+      "perim": {
+        "len": "Perimeter length, m",
+        "kind": "Type"
+      }
+    },
+    "opt": {
+      "acs": {
+        "card": "Card",
+        "bio": "Biometrics"
+      },
+      "intr": {
+        "one": "Single-family",
+        "multi": "Multi-tenant"
+      },
+      "fire": {
+        "on": "Calculate",
+        "off": "I will set it"
+      },
+      "lan": {
+        "un": "Unmanaged",
+        "man": "Managed"
+      },
+      "perim": {
+        "ir": "IR beams",
+        "cable": "Vibration cable"
+      }
+    },
+    "traceLabel": "Cable routes",
+    "trace": {
+      "need": "To be installed",
+      "ready": "Already in place"
+    },
+    "highLabel": "Installation height",
+    "high": {
+      "no": "up to 3 m",
+      "mid": "3–4.5 m",
+      "hi": "above 4.5 m"
+    },
+    "plan": "Site plan",
+    "planMeta": "{points} points · {meters} m of routes",
+    "legend": {
+      "camIn": "indoor camera",
+      "camOut": "outdoor camera",
+      "door": "access point",
+      "det": "detector",
+      "wifi": "Wi-Fi point",
+      "perim": "perimeter"
+    },
+    "ratesTitle": "Rates for your scope",
+    "brkTitle": "By system, at your volume",
+    "totalLabel": "Site total, approximate",
+    "sum": "UZS",
+    "from": "from",
+    "unit": {
+      "pc": "UZS/pc",
+      "m": "UZS/m",
+      "set": "UZS/set"
+    },
+    "unitOf": {
+      "cctv": "cam.",
+      "acs": "doors",
+      "intr": "subs.",
+      "fire": "det.",
+      "lan": "ports",
+      "perim": "m",
+      "route": "m of cable",
+      "pull": "m"
+    },
+    "note": "Prices cover installation work only, per our standard price list. Equipment and materials are quoted separately. A firm quote follows a free site visit by our engineer.",
+    "empty": "Tick at least one system",
+    "rate": {
+      "camIn": "Indoor camera installation",
+      "camOut": "Outdoor camera installation",
+      "camPtz": "PTZ camera installation",
+      "reader": "Card reader",
+      "bio": "Biometric terminal",
+      "monitor": "Door entry monitor",
+      "smoke": "Smoke detector installation",
+      "outlet": "RJ-45 outlet, terminated",
+      "fenceCable": "Vibration cable on fence",
+      "irBarrier": "IR beam set on perimeter",
+      "cableOpen": "Cable laying",
+      "cableTray": "Pulling cable into route"
+    },
+    "ctaTitle": "Get a firm quote",
+    "ctaSub": "We will send a quote with your parameters. The site visit is free.",
+    "ctaBtn": "Send request",
+    "inclTitle": "What the price covers",
+    "incl": [
+      "On-site mounting: brackets, fixings, installation at the design point.",
+      "Cable laying, conduit and chasing where no routes exist yet.",
+      "Termination, configuration and commissioning of every point.",
+      "Setup of the recorder, controller or panel, including remote access from a phone.",
+      "System testing and a hand-over briefing for your staff."
+    ],
+    "depTitle": "What drives the price",
+    "dep": [
+      "The number of points — cameras, doors, detectors, outlets. This is the bulk of the quote.",
+      "Whether cable routes already exist. With trays and conduit in place the work is roughly a quarter cheaper.",
+      "Installation height. Above 4.5 metres lifts and fall protection are required — a 40% surcharge in the price list.",
+      "Type of site. Warehouses and production floors mean longer routes and harder access.",
+      "Identification type in access control: cards cost about half of biometrics."
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      {
+        "q": "How accurate is the calculator?",
+        "a": "It is a guide based on our standard price list for installation work: it shows the range a site with these parameters usually falls into. A firm quote follows a site visit, where the engineer checks the layout, the state of the routes and the ceiling height."
+      },
+      {
+        "q": "Does the figure include equipment?",
+        "a": "No. The calculator prices the work only: mounting, cable laying, termination and commissioning. Cameras, recorders, controllers and detectors can be bought from our catalogue or supplied by you — it does not change the installation price."
+      },
+      {
+        "q": "Is the site visit chargeable?",
+        "a": "No, the survey visit within Tashkent is free. The engineer comes at a time that suits you, takes measurements and confirms where the routes will run."
+      },
+      {
+        "q": "Why a range instead of a single figure?",
+        "a": "The range covers what cannot be seen remotely: the real length of the routes, wall construction, whether concrete has to be chased, and how hard access is. The lower bound is a straightforward site, the upper one carries a margin."
+      },
+      {
+        "q": "Do you work with companies under contract?",
+        "a": "Yes. We work under contract with completion certificates and a warranty, accept bank transfer and issue invoices. For larger projects we produce a full design and specification."
+      }
+    ],
+    "promoTitle": "Not sure what the installation will cost?",
+    "promoText": "Set the number of points — the calculator lays out a site plan and shows the range from our standard price list. One minute, no phone calls.",
+    "promoBtn": "Estimate the cost"
   }
 }

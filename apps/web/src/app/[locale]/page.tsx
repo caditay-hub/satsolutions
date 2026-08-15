@@ -175,6 +175,7 @@ export default async function HomePage() {
   const locale = await getLocale();
   const t = await getTranslations("home");
   const ts = await getTranslations("services");
+  const tcalc = await getTranslations("calc");
   const dir = t.raw("dir") as Record<string, [string, string]>;
   const why = t.raw("why") as Record<string, [string, string]>;
   const [
@@ -472,6 +473,18 @@ export default async function HomePage() {
 
             <div className="mt-4 sm:hidden text-center">
               <Link href="/solutions" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allServices")} →</Link>
+            </div>
+
+            {/* Калькулятор: вход для тех, кто ещё считает бюджет и не готов звонить */}
+            <div className="mt-8 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+              <div className="max-w-xl">
+                <p className="text-base font-black text-slate-900 sm:text-lg">{tcalc("promoTitle")}</p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">{tcalc("promoText")}</p>
+              </div>
+              <Link href="/calculator"
+                className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500 sm:mt-0">
+                {tcalc("promoBtn")} →
+              </Link>
             </div>
           </div>
         </section>

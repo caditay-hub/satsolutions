@@ -29,6 +29,9 @@ import { getReviews } from "@/lib/api";
 import { ReviewForm } from "@/components/ReviewForm";
 import { type Review } from "@/components/ReviewsSection";
 import { FaqAccordion } from "@/components/FaqAccordion";
+
+// Услуги, которые калькулятор умеет считать — только на них есть смысл вести
+const CALC_SERVICES = new Set(["cctv", "access", "fire", "network", "wifi", "intercom", "perimeter", "alarm", "turnstile", "locks", "attendance"]);
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 
@@ -87,6 +90,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const tst = isInd ? await getTranslations({ locale, namespace: "industryStats" }) : null;
   const tpf = isInd ? await getTranslations({ locale, namespace: "projectForm" }) : null;
   const ttr = isInd ? await getTranslations({ locale, namespace: "trust" }) : null;
+  const tcalc = await getTranslations({ locale, namespace: "calc" });
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
   // H1 — гео-коммерческий из SEO-оверлея (fallback на короткий title, который
@@ -404,6 +408,20 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                 );
               })}
             </div>
+          </div>
+        )}
+
+        {/* Калькулятор: показываем только там, где он реально считает эту систему */}
+        {CALC_SERVICES.has(svc.key) && (
+          <div className="mt-12 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
+            <div className="max-w-xl">
+              <p className="text-base font-black text-slate-900">{tcalc("promoTitle")}</p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-600">{tcalc("promoText")}</p>
+            </div>
+            <Link href="/calculator"
+              className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500 sm:mt-0">
+              {tcalc("promoBtn")} →
+            </Link>
           </div>
         )}
 

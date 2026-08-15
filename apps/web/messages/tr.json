@@ -1882,7 +1882,9 @@
     "homeTitle": "SAT Solutions — Özbekistan'da güvenlik ve zayıf akım sistemleri",
     "homeDesc": "Özbekistan'da CCTV, geçiş kontrolü, yangın alarmı ve BT altyapısı tedarik ve kurulumu. Yetkili Dahua ve Hikvision entegratörü.",
     "solTitle": "Hizmetler — SAT Solutions",
-    "solDesc": "Özbekistan'da zayıf akım sistemleri ve güvenlik çözümleri: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, güvenli şehir ve daha fazlası."
+    "solDesc": "Özbekistan'da zayıf akım sistemleri ve güvenlik çözümleri: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, güvenli şehir ve daha fazlası.",
+    "calcTitle": "Montaj maliyeti hesaplayıcısı: kamera, geçiş kontrol, yangın alarmı — Taşkent",
+    "calcDesc": "Taşkent'te zayıf akım sistemlerinin montaj maliyetini hesaplayın: güvenlik kamerası, geçiş kontrol, diafon, yangın alarmı, yapısal kablolama ve Wi-Fi. Standart fiyat listesine göre işçilik, tesis planı ve bir dakikada teklif."
   },
   "contact": {
     "feedback": "İletişim",
@@ -2573,5 +2575,187 @@
   "clients": {
     "title": "Among our clients",
     "subtitle": "Companies and organisations we have designed and installed security systems for."
+  },
+  "calc": {
+    "h1": "Zayıf akım montaj maliyeti hesaplayıcısı",
+    "crumb": "Hesaplayıcı",
+    "lead": "Tesiste hangi sistemlerin gerektiğini işaretleyin — hesaplayıcı bir yerleşim planı çıkarır, nokta sayısını ve kablo güzergâhı metrelerini hesaplar ve standart fiyat listemize göre yaklaşık montaj maliyetini gösterir. Bir dakika sürer ve hiçbir yükümlülük doğurmaz.",
+    "step1": "Tesis türü",
+    "step1sub": "Türü seçin ve alanı belirtin — güzergâh uzunluğu buna bağlıdır.",
+    "step2": "Ne monte ediyoruz",
+    "step2sub": "Sistemleri işaretleyin ve nokta sayısını belirtin.",
+    "step3": "Sahadaki koşullar",
+    "step3sub": "İşçiliği etkiler: fiyat listesinde bunlar işçiliğe ek olarak yansır.",
+    "area": "Tesis alanı",
+    "obj": {
+      "shop": "Mağaza",
+      "office": "Ofis",
+      "wh": "Depo",
+      "house": "Ev, villa",
+      "prod": "Üretim tesisi",
+      "resid": "Konut bloğu"
+    },
+    "sys": {
+      "cctv": "Güvenlik kamerası",
+      "acs": "Geçiş kontrol",
+      "intr": "Diafon",
+      "fire": "Yangın alarmı",
+      "lan": "Ağ, yapısal kablolama ve Wi-Fi",
+      "perim": "Çevre güvenliği",
+      "route": "Güzergâh ve kablo çekimi",
+      "pull": "Mevcut güzergâha kablo çekimi"
+    },
+    "field": {
+      "cctv": {
+        "in": "İç mekân kameraları",
+        "out": "Dış mekân kameraları",
+        "ptz": "Hareketli (PTZ)"
+      },
+      "acs": {
+        "doors": "Geçiş noktası (kapı)",
+        "kind": "Kimlik doğrulama"
+      },
+      "intr": {
+        "kind": "Tür",
+        "mon": "Monitör, abone"
+      },
+      "fire": {
+        "auto": "Dedektörler alana göre",
+        "det": "Dedektör sayısı"
+      },
+      "lan": {
+        "ports": "RJ-45 prizleri",
+        "wifi": "Wi-Fi noktaları",
+        "sw": "Switch"
+      },
+      "perim": {
+        "len": "Çevre uzunluğu, m",
+        "kind": "Tür"
+      }
+    },
+    "opt": {
+      "acs": {
+        "card": "Kart",
+        "bio": "Biyometri"
+      },
+      "intr": {
+        "one": "Bireysel",
+        "multi": "Çok aboneli"
+      },
+      "fire": {
+        "on": "Hesapla",
+        "off": "Kendim gireceğim"
+      },
+      "lan": {
+        "un": "Yönetilemeyen",
+        "man": "Yönetilebilir"
+      },
+      "perim": {
+        "ir": "IR bariyer",
+        "cable": "Titreşim kablosu"
+      }
+    },
+    "traceLabel": "Kablo güzergâhları",
+    "trace": {
+      "need": "Yeni çekilecek",
+      "ready": "Hazır"
+    },
+    "highLabel": "Montaj yüksekliği",
+    "high": {
+      "no": "3 m'ye kadar",
+      "mid": "3–4,5 m",
+      "hi": "4,5 m üzeri"
+    },
+    "plan": "Tesis planı",
+    "planMeta": "{points} nokta · {meters} m güzergâh",
+    "legend": {
+      "camIn": "iç mekân kamerası",
+      "camOut": "dış mekân kamerası",
+      "door": "geçiş noktası",
+      "det": "dedektör",
+      "wifi": "Wi-Fi noktası",
+      "perim": "çevre"
+    },
+    "ratesTitle": "İşleriniz için birim fiyatlar",
+    "brkTitle": "Sisteme göre, hacminizle",
+    "totalLabel": "Tesis toplamı, yaklaşık",
+    "sum": "UZS",
+    "from": "başlangıç",
+    "unit": {
+      "pc": "UZS/adet",
+      "m": "UZS/m",
+      "set": "UZS/takım"
+    },
+    "unitOf": {
+      "cctv": "kamera",
+      "acs": "kapı",
+      "intr": "abone",
+      "fire": "dedektör",
+      "lan": "port",
+      "perim": "m",
+      "route": "m kablo",
+      "pull": "m"
+    },
+    "note": "Fiyatlar yalnızca montaj işçiliğini kapsar, standart fiyat listemize göredir. Ekipman ve malzeme ayrıca hesaplanır. Kesin teklif, ücretsiz keşiften sonra verilir.",
+    "empty": "En az bir sistem işaretleyin",
+    "rate": {
+      "camIn": "İç mekân kamera montajı",
+      "camOut": "Dış mekân kamera montajı",
+      "camPtz": "PTZ kamera montajı",
+      "reader": "Kart okuyucu",
+      "bio": "Biyometrik terminal",
+      "monitor": "Diafon monitörü",
+      "smoke": "Duman dedektörü montajı",
+      "outlet": "RJ-45 prizi, sonlandırmalı",
+      "fenceCable": "Çite titreşim kablosu",
+      "irBarrier": "Çevrede IR bariyer",
+      "cableOpen": "Kablo çekimi",
+      "cableTray": "Güzergâha kablo çekimi"
+    },
+    "ctaTitle": "Kesin teklif alın",
+    "ctaSub": "Parametrelerinizle teklifi göndeririz. Keşif ücretsizdir.",
+    "ctaBtn": "Talep gönder",
+    "inclTitle": "Fiyata neler dahil",
+    "incl": [
+      "Sahada montaj: braket, bağlantı elemanları, projedeki noktaya kurulum.",
+      "Kablo çekimi, spiral boru ve güzergâh yoksa kanal açma.",
+      "Her noktanın sonlandırılması, ayarı ve devreye alınması.",
+      "Kayıt cihazı, kontrol paneli ve telefondan uzaktan erişim ayarları.",
+      "Sistem testi ve personelinize teslim eğitimi."
+    ],
+    "depTitle": "Fiyatı ne belirler",
+    "dep": [
+      "Nokta sayısı — kamera, kapı, dedektör, priz. Teklifin ana kalemi budur.",
+      "Kablo güzergâhlarının hazır olup olmaması. Kablo tavası ve boru mevcutsa işçilik yaklaşık dörtte bir ucuzlar.",
+      "Montaj yüksekliği. 4,5 metre üzerinde platform ve emniyet gerekir — fiyat listesinde %40 ek.",
+      "Tesis türü. Depo ve üretimde güzergâhlar uzun, erişim zordur.",
+      "Geçiş kontrolde kimlik türü: kart, biyometrinin yaklaşık yarısı kadardır."
+    ],
+    "faqTitle": "Sık sorulan sorular",
+    "faq": [
+      {
+        "q": "Hesaplayıcı ne kadar isabetli?",
+        "a": "Montaj işçiliğine dair standart fiyat listemize dayanan bir öngörüdür: bu parametrelere sahip bir tesisin genelde hangi aralığa düştüğünü gösterir. Kesin teklif, mühendisin yerleşimi, güzergâhların durumunu ve tavan yüksekliğini gördüğü keşiften sonra çıkar."
+      },
+      {
+        "q": "Tutara ekipman dahil mi?",
+        "a": "Hayır. Hesaplayıcı yalnızca işçiliği hesaplar: montaj, kablo çekimi, bağlantı ve devreye alma. Kamera, kayıt cihazı, kontrolcü ve dedektörleri kataloğumuzdan alabilir ya da kendiniz temin edebilirsiniz — montaj fiyatı değişmez."
+      },
+      {
+        "q": "Keşif ücretli mi?",
+        "a": "Hayır, Taşkent içinde ölçüm ve teklif için keşif ücretsizdir. Mühendis size uygun saatte gelir, ölçü alır ve güzergâhların nereden geçeceğini netleştirir."
+      },
+      {
+        "q": "Neden tek rakam değil de aralık?",
+        "a": "Aralık, uzaktan görülemeyecek olanları karşılar: güzergâhların gerçek uzunluğu, duvar yapısı, betonda kanal açma gereği, erişim zorluğu. Alt sınır sorunsuz bir tesis, üst sınır ise pay bırakılmış halidir."
+      },
+      {
+        "q": "Tüzel kişilerle sözleşmeli çalışıyor musunuz?",
+        "a": "Evet. Hakediş ve garantiyle sözleşme üzerinden çalışır, havale ile ödeme alır ve fatura keseriz. Büyük projelerde tam proje ve şartname hazırlarız."
+      }
+    ],
+    "promoTitle": "Montajın ne tutacağını bilmiyor musunuz?",
+    "promoText": "Nokta sayısını girin — hesaplayıcı tesis planını çıkarır ve standart fiyat listemize göre aralığı gösterir. Bir dakika, telefona gerek yok.",
+    "promoBtn": "Maliyeti hesapla"
   }
 }

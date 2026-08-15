@@ -1890,7 +1890,9 @@
     "homeTitle": "SAT Solutions — O‘zbekistonda xavfsizlik va kuchsiz tok tizimlari",
     "homeDesc": "O‘zbekistonda videokuzatuv, kirishni boshqarish, yong‘in signalizatsiyasi va IT-infratuzilmani yetkazib berish va o‘rnatish. Dahua, Hikvision vakolatli integratori.",
     "solTitle": "Xizmatlar — SAT Solutions",
-    "solDesc": "O‘zbekistonda kuchsiz tok tizimlari va xavfsizlik yechimlari: videokuzatuv, SKUD, yong‘in signalizatsiyasi, SKS, xavfsiz shahar va boshqalar."
+    "solDesc": "O‘zbekistonda kuchsiz tok tizimlari va xavfsizlik yechimlari: videokuzatuv, SKUD, yong‘in signalizatsiyasi, SKS, xavfsiz shahar va boshqalar.",
+    "calcTitle": "Montaj narxi kalkulyatori: videokuzatuv, SKUD, yong'in signalizatsiyasi — Toshkent",
+    "calcDesc": "Toshkentda past tokli tizimlarni o'rnatish narxini hisoblang: videokuzatuv, SKUD, domofon, yong'in signalizatsiyasi, SKS va Wi-Fi. Yagona narxnoma bo'yicha ish narxlari, obyekt rejasi va bir daqiqada smeta."
   },
   "contact": {
     "feedback": "Aloqa",
@@ -2581,5 +2583,187 @@
   "clients": {
     "title": "Bizning buyurtmachilarimiz",
     "subtitle": "Biz xavfsizlik tizimlarini loyihalab, o‘rnatgan kompaniya va tashkilotlar."
+  },
+  "calc": {
+    "h1": "Past tokli tizimlarni o'rnatish narxi kalkulyatori",
+    "crumb": "Kalkulyator",
+    "lead": "Obyektda qanday tizimlar kerakligini belgilang — kalkulyator rejani tuzadi, nuqtalar sonini va trassa metrlarini hisoblaydi hamda yagona narxnomamiz bo'yicha montaj ishlarining taxminiy qiymatini ko'rsatadi. Hisob bir daqiqa vaqt oladi va hech qanday majburiyat yuklamaydi.",
+    "step1": "Qanday obyekt",
+    "step1sub": "Turini tanlang va maydonini ko'rsating — trassa uzunligi shunga bog'liq.",
+    "step2": "Nima o'rnatamiz",
+    "step2sub": "Tizimlarni belgilang va nuqtalar sonini aniqlang.",
+    "step3": "Obyektdagi sharoit",
+    "step3sub": "Mehnat hajmiga ta'sir qiladi: narxnomada bu ishlarga ustama.",
+    "area": "Obyekt maydoni",
+    "obj": {
+      "shop": "Do'kon",
+      "office": "Ofis",
+      "wh": "Ombor",
+      "house": "Uy, kottej",
+      "prod": "Ishlab chiqarish",
+      "resid": "Turar-joy majmuasi"
+    },
+    "sys": {
+      "cctv": "Videokuzatuv",
+      "acs": "SKUD, kirishni nazorat qilish",
+      "intr": "Domofon",
+      "fire": "Yong'in signalizatsiyasi",
+      "lan": "Tarmoq, SKS va Wi-Fi",
+      "perim": "Perimetr",
+      "route": "Trassa va kabel yotqizish",
+      "pull": "Tayyor trassaga kabel tortish"
+    },
+    "field": {
+      "cctv": {
+        "in": "Ichki kameralar",
+        "out": "Ko'cha kameralari",
+        "ptz": "Aylanuvchi (PTZ)"
+      },
+      "acs": {
+        "doors": "O'tish nuqtalari (eshiklar)",
+        "kind": "Identifikatsiya"
+      },
+      "intr": {
+        "kind": "Turi",
+        "mon": "Monitorlar, abonentlar"
+      },
+      "fire": {
+        "auto": "Datchiklar maydon bo'yicha",
+        "det": "Datchiklar soni"
+      },
+      "lan": {
+        "ports": "RJ-45 rozetkalari",
+        "wifi": "Wi-Fi nuqtalari",
+        "sw": "Kommutator"
+      },
+      "perim": {
+        "len": "Perimetr uzunligi, m",
+        "kind": "Turi"
+      }
+    },
+    "opt": {
+      "acs": {
+        "card": "Karta",
+        "bio": "Biometriya"
+      },
+      "intr": {
+        "one": "Individual",
+        "multi": "Ko'p abonentli"
+      },
+      "fire": {
+        "on": "Hisoblansin",
+        "off": "O'zim kiritaman"
+      },
+      "lan": {
+        "un": "Oddiy",
+        "man": "Boshqariladigan"
+      },
+      "perim": {
+        "ir": "IQ-to'siqlar",
+        "cable": "Vibrokabel"
+      }
+    },
+    "traceLabel": "Kabel trassalari",
+    "trace": {
+      "need": "Yotqizamiz",
+      "ready": "Tayyor"
+    },
+    "highLabel": "O'rnatish balandligi",
+    "high": {
+      "no": "3 m gacha",
+      "mid": "3–4,5 m",
+      "hi": "4,5 m dan yuqori"
+    },
+    "plan": "Obyekt rejasi",
+    "planMeta": "{points} nuqta · {meters} m trassa",
+    "legend": {
+      "camIn": "ichki kamera",
+      "camOut": "ko'cha kamerasi",
+      "door": "o'tish nuqtasi",
+      "det": "datchik",
+      "wifi": "Wi-Fi nuqtasi",
+      "perim": "perimetr"
+    },
+    "ratesTitle": "Sizning ishlaringiz narxi",
+    "brkTitle": "Tizimlar bo'yicha, hajmni hisobga olib",
+    "totalLabel": "Obyekt bo'yicha jami, taxminan",
+    "sum": "so'm",
+    "from": "dan",
+    "unit": {
+      "pc": "so'm/dona",
+      "m": "so'm/m",
+      "set": "so'm/komplekt"
+    },
+    "unitOf": {
+      "cctv": "kamera",
+      "acs": "eshik",
+      "intr": "abonent",
+      "fire": "datchik",
+      "lan": "port",
+      "perim": "m",
+      "route": "m kabel",
+      "pull": "m"
+    },
+    "note": "Narxlar faqat montaj ishlari uchun, yagona narxnoma bo'yicha. Uskuna va materiallar alohida hisoblanadi. Aniq smeta — muhandis chiqqanidan keyin, chiqish bepul.",
+    "empty": "Kamida bitta tizimni belgilang",
+    "rate": {
+      "camIn": "Ichki kamera o'rnatish",
+      "camOut": "Ko'cha kamerasini o'rnatish",
+      "camPtz": "Aylanuvchi kamera o'rnatish",
+      "reader": "Karta o'quvchi",
+      "bio": "Biometrik terminal",
+      "monitor": "Videodomofon monitori",
+      "smoke": "Tutun datchigini o'rnatish",
+      "outlet": "RJ-45 rozetkasi, ulanishi bilan",
+      "fenceCable": "To'siqqa vibrokabel",
+      "irBarrier": "Perimetrda IQ-to'siq",
+      "cableOpen": "Kabel yotqizish",
+      "cableTray": "Trassaga kabel tortish"
+    },
+    "ctaTitle": "Aniq hisob-kitob olish",
+    "ctaSub": "Sizning parametrlaringiz bilan smeta yuboramiz. Muhandis chiqishi — bepul.",
+    "ctaBtn": "Ariza yuborish",
+    "inclTitle": "Ish narxiga nima kiradi",
+    "incl": [
+      "Uskunani joyida o'rnatish: kronshteynlar, mahkamlagichlar, loyihadagi nuqtaga o'rnatish.",
+      "Kabel yotqizish, gofra va trassa yo'q joyda shtroba qilish.",
+      "Har bir nuqtani ulash, sozlash va ishga tushirish.",
+      "Registrator, kontroller, asbobni va telefondan masofaviy kirishni sozlash.",
+      "Tizim ishini tekshirish va xodimlaringizni o'qitish."
+    ],
+    "depTitle": "Narx nimaga bog'liq",
+    "dep": [
+      "Nuqtalar soni — kameralar, eshiklar, datchiklar, rozetkalar. Bu smetaning asosiy qismi.",
+      "Tayyor kabel trassalari bor-yo'qligi. Lotok va gofra yotqizilgan bo'lsa, ishlar taxminan chorak barobar arzon.",
+      "O'rnatish balandligi. 4,5 metrdan yuqorida ko'targich va sug'urta kerak — narxnomada bu 40% ustama.",
+      "Obyekt turi. Ombor va ishlab chiqarishda trassalar uzunroq, kirish qiyinroq.",
+      "SKUDdagi identifikatsiya turi: karta biometriyadan taxminan ikki barobar arzon."
+    ],
+    "faqTitle": "Ko'p beriladigan savollar",
+    "faq": [
+      {
+        "q": "Kalkulyator hisobi qanchalik aniq?",
+        "a": "Bu montaj ishlari bo'yicha yagona narxnomamizga asoslangan mo'ljal: shunday parametrli obyekt odatda qaysi oraliqqa tushishini ko'rsatadi. Aniq smeta muhandis chiqqanidan keyin tuziladi — u rejani, trassalar holatini va shift balandligini ko'radi."
+      },
+      {
+        "q": "Summaga uskuna kiradimi?",
+        "a": "Yo'q. Kalkulyator faqat ishlarni hisoblaydi: montaj, kabel yotqizish, ulash va ishga tushirish. Kameralar, registratorlar, kontrollerlar va datchiklarni bizning katalogimizdan sotib olishingiz yoki o'zingiznikini berishingiz mumkin — montaj narxiga ta'sir qilmaydi."
+      },
+      {
+        "q": "Muhandis chiqishi pullikmi?",
+        "a": "Yo'q, Toshkent bo'ylab o'lchov olish va smeta tuzish uchun chiqish bepul. Muhandis qulay vaqtda keladi, o'lchamlarni oladi va trassalar qayerdan o'tishini aniqlaydi."
+      },
+      {
+        "q": "Nega bitta raqam emas, oraliq ko'rsatilgan?",
+        "a": "Oraliq masofadan ko'rib bo'lmaydigan narsalarni qoplaydi: trassalarning haqiqiy uzunligi, devor turi, betonni shtroba qilish zarurati, kirish murakkabligi. Quyi chegara — muammosiz odatiy obyekt, yuqorisi — zaxira bilan."
+      },
+      {
+        "q": "Yuridik shaxslar bilan shartnoma asosida ishlaysizmi?",
+        "a": "Ha. Dalolatnoma va kafolat bilan shartnoma asosida ishlaymiz, pul o'tkazma orqali qabul qilamiz, hisob-faktura beramiz. Yirik loyihalar uchun to'liq loyiha va spetsifikatsiya tayyorlaymiz."
+      }
+    ],
+    "promoTitle": "Montaj qanchaga tushishini bilmayapsizmi?",
+    "promoText": "Nuqtalar sonini belgilang — kalkulyator obyekt rejasini tuzadi va yagona narxnomamiz bo'yicha oraliqni ko'rsatadi. Bir daqiqa, qo'ng'iroqsiz.",
+    "promoBtn": "Narxni hisoblash"
   }
 }
