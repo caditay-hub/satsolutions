@@ -3,7 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { getServiceBySlug, getPortfolio } from "@/lib/api";
+import { getServiceBySlug, getPortfolio, getProducts } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
@@ -91,6 +91,29 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const tpf = isInd ? await getTranslations({ locale, namespace: "projectForm" }) : null;
   const ttr = isInd ? await getTranslations({ locale, namespace: "trust" }) : null;
   const tcalc = await getTranslations({ locale, namespace: "calc" });
+
+  // Оборудование под услугу — категории каталога. Список через запятую API не
+  // принимает, поэтому спрашиваем по одной и мешаем бренды между собой.
+  const EQUIP_CATS: Record<string, string[]> = {
+    turnstile: ["zkteco-turnstiles", "hik-turnstiles", "kanihad-turnstiles"],
+    barrier: ["zkteco-barriers", "hik-turnstiles"],
+    access: ["access-control", "access-controllers"],
+    locks: ["zkteco-locks", "kanihad-locks"],
+  };
+  let equipment: any[] = [];
+  const cats = EQUIP_CATS[svc.key];
+  if (cats) {
+    const chunks = await Promise.all(
+      cats.map((c) => getProducts(1, 4, { category: c }).then((r) => r.items ?? []).catch(() => []))
+    );
+    // перемешиваем по одному из каждой категории, чтобы витрина не была однобрендовой
+    const merged: any[] = [];
+    for (let i = 0; i < 4; i++) for (const ch of chunks) if (ch[i]) merged.push(ch[i]);
+    equipment = merged.filter((p) => p?.coverImageUrl).slice(0, 8);
+  }
+  const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz o'rnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
+  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
+
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
   // H1 — гео-коммерческий из SEO-оверлея (fallback на короткий title, который
@@ -431,6 +454,35 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
             <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
             <FaqAccordion items={faq} />
+          </div>
+        )}
+
+        {/* Витрина оборудования: по запросам «шлагбаум», «турникет» человек ищет
+            технику, а на странице услуги её не было — только описание работ. */}
+        {equipment.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-xl font-black tracking-tight text-slate-900 sm:text-2xl">{equipTitle}</h2>
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {equipment.map((p: any) => (
+                <Link key={p.id} href={`/products/${p.slug}`}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-300">
+                  <div className="flex h-32 items-center justify-center bg-white p-3">
+                    {resolveImageUrl(p.coverImageUrl) ? (
+                      <Image src={resolveImageUrl(p.coverImageUrl) as string} alt={p.name} width={160} height={116}
+                        className="max-h-[110px] w-auto object-contain" />
+                    ) : null}
+                  </div>
+                  <div className="border-t border-slate-100 p-3">
+                    <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{p.name}</div>
+                    <div className="mt-1 text-[12px] font-bold text-brand-700">
+                      {Number(p.price) > 0
+                        ? `${Math.round(Number(p.price)).toLocaleString("ru-RU")} ${locale === "ru" ? "сум" : "UZS"}`
+                        : priceOnReq}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
 

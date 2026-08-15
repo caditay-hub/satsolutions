@@ -44,6 +44,16 @@ export const SERVICE_TO_GROUP: Record<string, { href: string; label: Record<stri
       zh: "门禁设备——含价格目录",
     },
   },
+  barrier: {
+    href: "/products/group/kontrol-dostupa",
+    label: {
+      ru: "Шлагбаумы и оборудование въезда — каталог с ценами",
+      uz: "Shlagbaumlar va kirish uskunalari — narxlar bilan katalog",
+      en: "Barrier gates and entry equipment — catalogue with prices",
+      tr: "Bariyerler ve giriş ekipmanları — fiyatlı katalog",
+      zh: "道闸与出入口设备——含价格目录",
+    },
+  },
   turnstile: {
     href: "/products/group/kontrol-dostupa",
     label: {
