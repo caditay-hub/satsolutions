@@ -61,7 +61,7 @@ export function expandLocales(entries: SitemapEntry[]): SitemapEntry[] {
 const STATIC_ROUTES = [
   "", "/about", "/contact", "/products", "/solutions", "/portfolio",
   "/catalog", "/international", "/returns", "/delivery", "/partners/h3c",
-  "/calculator",
+  "/calculator", "/partners/zkteco",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking

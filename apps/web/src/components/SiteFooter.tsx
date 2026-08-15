@@ -52,6 +52,7 @@ export async function SiteFooter() {
   const blogLabel = ({ ru: "Блог", uz: "Blog", en: "Blog", tr: "Blog", zh: "博客" } as Record<string, string>)[locale] ?? "Блог";
   const calcLabel = ({ ru: "Калькулятор стоимости", uz: "Narx kalkulyatori", en: "Cost calculator", tr: "Maliyet hesaplayıcı", zh: "费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости";
   const h3cLabel = ({ ru: "Партнёр H3C", uz: "H3C hamkori", en: "H3C partner", tr: "H3C ortağı", zh: "H3C 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр H3C";
+  const zktecoLabel = ({ ru: "Партнёр ZKTeco", uz: "ZKTeco hamkori", en: "ZKTeco partner", tr: "ZKTeco ortağı", zh: "ZKTeco 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр ZKTeco";
   const reviewLabel = ({ ru: "Оценить нас на Google Картах", uz: "Google Xaritada baholang", en: "Rate us on Google Maps", tr: "Google Haritalar'da değerlendirin", zh: "在 Google 地图上评价我们" } as Record<string, string>)[locale] ?? "Оценить нас на Google Картах";
 
   return (
@@ -82,6 +83,7 @@ export async function SiteFooter() {
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
               <li><Link href="/blog" className="hover:text-brand-700">{blogLabel}</Link></li>
               <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
+              <li><Link href="/partners/zkteco" className="hover:text-brand-700">{zktecoLabel}</Link></li>
               <li><Link href="/partners/h3c" className="hover:text-brand-700">{h3cLabel}</Link></li>
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>

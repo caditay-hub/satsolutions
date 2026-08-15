@@ -213,6 +213,11 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
     title: ({ ru: "H3C — серверы и виртуализация", uz: "H3C — serverlar va virtualizatsiya", en: "H3C — servers & virtualization", tr: "H3C — sunucular ve sanallaştırma", zh: "H3C — 服务器与虚拟化" } as Record<string, string>)[locale] ?? "H3C — серверы и виртуализация",
     href: "/partners/h3c",
   };
+  // Брендовые пункты идут в конец списка систем — они про поставщика, не про услугу
+  const zktecoItem = {
+    title: ({ ru: "ZKTeco — СКУД, турникеты, шлагбаумы", uz: "ZKTeco — SKUD, turniket, shlagbaum", en: "ZKTeco — access control, turnstiles, barriers", tr: "ZKTeco — geçiş kontrol, turnike, bariyer", zh: "ZKTeco — 门禁、闸机、道闸" } as Record<string, string>)[locale] ?? "ZKTeco — СКУД, турникеты, шлагбаумы",
+    href: "/partners/zkteco",
+  };
 
   // Калькулятор — не услуга, а инструмент: отдельным пунктом под списками, со
   // значком, чтобы не терялся среди двух десятков названий систем.
@@ -230,7 +235,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
 
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
   const solutionGroups: NavDropGroup[] = [
-    { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
+    { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), zktecoItem, h3cItem] },
     { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
   ];
   const portfolioGroups: NavDropGroup[] = [
