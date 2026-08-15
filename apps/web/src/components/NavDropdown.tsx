@@ -6,6 +6,9 @@ import { Link } from "@/i18n/navigation";
 
 export type NavDropGroup = { label?: string; items: { title: string; href: string }[] };
 
+/** Выделенный пункт под списками: не услуга, а инструмент — поэтому со значком и отдельно. */
+export type NavDropFeature = { title: string; subtitle?: string; href: string; icon?: React.ReactNode };
+
 /** Выпадающее меню пункта шапки (как «Каталог», но проще): hover с задержкой закрытия,
     клик по заголовку — переход на корневую страницу раздела. */
 export function NavDropdown({
@@ -15,6 +18,7 @@ export function NavDropdown({
   allLabel,
   active = false,
   width = 340,
+  feature,
 }: {
   label: string;
   href: string;
@@ -22,6 +26,7 @@ export function NavDropdown({
   allLabel: string;
   active?: boolean;
   width?: number;
+  feature?: NavDropFeature;
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -85,6 +90,25 @@ export function NavDropdown({
               </div>
             ))}
           </div>
+
+          {feature && (
+            <button
+              type="button"
+              onClick={() => go(feature.href)}
+              className="mt-2 flex w-full items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 text-left transition-colors hover:bg-brand-100"
+            >
+              {feature.icon && (
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-brand-700" aria-hidden>
+                  {feature.icon}
+                </span>
+              )}
+              <span className="min-w-0">
+                <span className="block truncate text-[13px] font-bold text-brand-800">{feature.title}</span>
+                {feature.subtitle && <span className="block truncate text-[11px] text-brand-700/70">{feature.subtitle}</span>}
+              </span>
+            </button>
+          )}
+
           <Link
             href={href as any}
             onClick={() => setOpen(false)}

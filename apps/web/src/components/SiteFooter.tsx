@@ -110,6 +110,7 @@ export function SiteFooter() {
             <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/" className="hover:text-brand-700">{tn("home")}</Link></li>
               <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
+              <li><Link href="/calculator" className="hover:text-brand-700">{({ ru: "Калькулятор стоимости", uz: "Narx kalkulyatori", en: "Cost calculator", tr: "Maliyet hesaplayıcı", zh: "费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости"}</Link></li>
               <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
               <li><Link href="/blog" className="hover:text-brand-700">{({ ru: "Блог", uz: "Blog", en: "Blog", tr: "Blog", zh: "博客" } as Record<string, string>)[locale] ?? "Блог"}</Link></li>

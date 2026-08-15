@@ -13,7 +13,7 @@ import { resolveImageUrl } from "@/lib/image";
 import { typeSlug } from "@/lib/typeSlug";
 import { priceLabel, productIcon } from "@/lib/product";
 import { CatalogMega } from "@/components/CatalogMega";
-import { NavDropdown, type NavDropGroup } from "@/components/NavDropdown";
+import { NavDropdown, type NavDropGroup, type NavDropFeature } from "@/components/NavDropdown";
 import { SERVICES, INDUSTRIES } from "@/lib/servicesData";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { LoadingDots } from "@/components/LoadingDots";
@@ -214,16 +214,23 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
     href: "/partners/h3c",
   };
 
-  // Калькулятор — первым в выпадашке: это вход для тех, кто ещё выбирает и хочет
-  // понять порядок цен, а не читать описание услуги.
-  const calcItem = {
+  // Калькулятор — не услуга, а инструмент: отдельным пунктом под списками, со
+  // значком, чтобы не терялся среди двух десятков названий систем.
+  const calcFeature: NavDropFeature = {
     title: ({ ru: "Калькулятор стоимости монтажа", uz: "Montaj narxi kalkulyatori", en: "Installation cost calculator", tr: "Montaj maliyeti hesaplayıcısı", zh: "安装费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости монтажа",
+    subtitle: ({ ru: "Смета и план объекта за минуту", uz: "Bir daqiqada smeta va reja", en: "Estimate and site plan in a minute", tr: "Bir dakikada teklif ve plan", zh: "一分钟出预算与平面图" } as Record<string, string>)[locale] ?? "Смета и план объекта за минуту",
     href: "/calculator",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <rect x="4" y="2" width="16" height="20" rx="2" />
+        <path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M16 15v4" />
+      </svg>
+    ),
   };
 
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
   const solutionGroups: NavDropGroup[] = [
-    { label: tsp("systemsLabel"), items: [calcItem, ...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
+    { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), h3cItem] },
     { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
   ];
   const portfolioGroups: NavDropGroup[] = [
@@ -269,7 +276,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
               return <CatalogMega key={item.href} />;
             }
             if (item.key === "services") {
-              return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} />;
+              return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} feature={calcFeature} />;
             }
             if (item.key === "portfolio" && portfolioItems.length > 0) {
               return <NavDropdown key={item.href} label={t(item.key)} href="/portfolio" groups={portfolioGroups} allLabel={t("allProjects")} active={item.href === activeHref} width={380} />;
@@ -377,6 +384,14 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 ))}
                               </div>
                             ))}
+                            {/* калькулятор — отдельным блоком со значком, как в десктопной выпадашке */}
+                            <Link href="/calculator" className="mx-2 mt-2 flex items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 hover:bg-brand-100">
+                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-brand-700" aria-hidden>{calcFeature.icon}</span>
+                              <span className="min-w-0">
+                                <span className="block truncate text-[13px] font-bold text-brand-800">{calcFeature.title}</span>
+                                <span className="block truncate text-[11px] text-brand-700/70">{calcFeature.subtitle}</span>
+                              </span>
+                            </Link>
                           </div>
                         </details>
                       );

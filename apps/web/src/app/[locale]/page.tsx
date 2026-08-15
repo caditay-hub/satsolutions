@@ -298,6 +298,31 @@ export default async function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
+          КАЛЬКУЛЯТОР — полосой сразу под первым экраном: цена интересует
+          раньше, чем описание услуг, а звонить ради порядка сумм не хотят
+      ══════════════════════════════════════════════════════ */}
+      <section className="border-b border-brand-100 bg-gradient-to-r from-brand-600 to-brand-700">
+        <div className="container-page flex flex-wrap items-center justify-between gap-x-6 gap-y-3 py-4">
+          <div className="flex items-center gap-3">
+            <span className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-white sm:flex" aria-hidden>
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" />
+                <path d="M8 6h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M16 15v4" />
+              </svg>
+            </span>
+            <div className="min-w-0">
+              <p className="text-sm font-black text-white sm:text-base">{tcalc("promoTitle")}</p>
+              <p className="mt-0.5 hidden text-xs text-white/80 sm:block">{tcalc("promoText")}</p>
+            </div>
+          </div>
+          <Link href="/calculator"
+            className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-bold text-brand-700 transition-colors hover:bg-brand-50">
+            {tcalc("promoBtn")} →
+          </Link>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════
           НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ
       ══════════════════════════════════════════════════════ */}
       <section className="container-page py-14 sm:py-16">
