@@ -121,9 +121,78 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
           <span className="text-slate-700">{t("crumb")}</span>
         </nav>
 
-        <header className="mt-4 max-w-3xl">
-          <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">{t("h1")}</h1>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{t("lead")}</p>
+        <header className="mt-4 grid items-center gap-8 lg:grid-cols-[1.05fr_.95fr]">
+          <div className="max-w-3xl">
+            <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">{t("h1")}</h1>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{t("lead")}</p>
+          </div>
+
+          {/* Шапка была пустой справа. Инфографика объясняет суть страницы без слов:
+              план объекта с точками систем превращается в смету на калькуляторе. */}
+          <svg viewBox="0 0 440 300" className="w-full max-w-[440px] justify-self-center" role="img" aria-label={t("promoHead")}>
+            <defs>
+              <linearGradient id="hero-bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#eaf6f8" />
+                <stop offset="1" stopColor="#ffffff" />
+              </linearGradient>
+              <pattern id="hero-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+                <path d="M22 0H0V22" fill="none" stroke="#d6edf1" strokeWidth="1" />
+              </pattern>
+              <radialGradient id="hero-fov">
+                <stop offset="0" stopColor="#328fa8" stopOpacity=".3" />
+                <stop offset="1" stopColor="#328fa8" stopOpacity="0" />
+              </radialGradient>
+            </defs>
+
+            <rect width="440" height="300" rx="24" fill="url(#hero-bg)" />
+            <rect width="440" height="300" rx="24" fill="url(#hero-grid)" />
+
+            {/* план объекта */}
+            <g>
+              <rect x="34" y="52" width="196" height="150" rx="6" fill="#fff" fillOpacity=".85" stroke="#475569" strokeWidth="2.5" />
+              {/* сектора обзора и камеры */}
+              <path d="M74 66 l27.56 44.1 A52 52 0 0 1 46.44 110.1 Z" fill="url(#hero-fov)" />
+              <path d="M190 66 l27.56 44.1 A52 52 0 0 1 162.44 110.1 Z" fill="url(#hero-fov)" />
+              <path d="M74 188 l-27.56 -44.1 A52 52 0 0 1 101.56 143.9 Z" fill="url(#hero-fov)" />
+              <circle cx="74" cy="66" r="5.5" fill="#7fb9c8" stroke="#fff" strokeWidth="1.8" />
+              <circle cx="190" cy="66" r="5.5" fill="#328fa8" stroke="#fff" strokeWidth="1.8" />
+              <circle cx="74" cy="188" r="5.5" fill="#328fa8" stroke="#fff" strokeWidth="1.8" />
+              {/* дверь СКУД */}
+              <g transform="translate(150 202) rotate(180)">
+                <line x1="-14" y1="0" x2="14" y2="0" stroke="#fff" strokeWidth="7" />
+                <path d="M-13 20 Q13 20 13 0" fill="none" stroke="#6366f1" strokeWidth="1.2" opacity=".55" strokeDasharray="3 3" />
+                <line x1="-13" y1="0" x2="-13" y2="20" stroke="#6366f1" strokeWidth="3.2" strokeLinecap="round" />
+                <rect x="14" y="-4.5" width="8.5" height="12" rx="2.5" fill="#6366f1" />
+              </g>
+              {/* извещатель и Wi-Fi */}
+              <circle cx="132" cy="104" r="4.6" fill="#fff" />
+              <circle cx="132" cy="104" r="4.6" fill="none" stroke="#dc2626" strokeWidth="1.6" strokeDasharray="2.2 2" />
+              <g transform="translate(132 148)">
+                <path d="M-7 2a10 10 0 0 1 14 0M-4 5a6 6 0 0 1 8 0" fill="none" stroke="#059669" strokeWidth="1.8" strokeLinecap="round" />
+                <circle cy="8" r="1.9" fill="#059669" />
+              </g>
+              <text x="132" y="222" textAnchor="middle" fontSize="10" fill="#64748b" fontFamily="ui-monospace,Menlo,monospace">200 м²</text>
+            </g>
+
+            {/* стрелка: план → смета */}
+            <path d="M238 128 H274" stroke="#328fa8" strokeWidth="2" strokeDasharray="5 4" strokeLinecap="round" />
+            <path d="M270 122 l7 6 -7 6" fill="none" stroke="#328fa8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+
+            {/* калькулятор */}
+            <g>
+              <rect x="288" y="44" width="118" height="212" rx="16" fill="#fff" stroke="#328fa8" strokeWidth="2.5" />
+              <rect x="302" y="60" width="90" height="46" rx="8" fill="#eaf6f8" stroke="#addbe3" />
+              <text x="382" y="80" textAnchor="end" fontSize="11" fill="#94a3b8" fontFamily="ui-monospace,Menlo,monospace">итого</text>
+              <text x="382" y="98" textAnchor="end" fontSize="16" fontWeight="700" fill="#2a7b90" fontFamily="ui-monospace,Menlo,monospace">5 324 300</text>
+              {[122, 156, 190, 224].map((y) =>
+                [302, 332, 362].map((x) => (
+                  <rect key={`${x}-${y}`} x={x} y={y} width="24" height="24" rx="6"
+                    fill={x === 362 && y === 224 ? "#e02020" : "#eef2f6"} />
+                ))
+              )}
+              <path d="M368 233h12M368 240h12" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" />
+            </g>
+          </svg>
         </header>
 
         <div className="mt-8">

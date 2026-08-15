@@ -385,11 +385,12 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                               </div>
                             ))}
                             {/* калькулятор — отдельным блоком со значком, как в десктопной выпадашке */}
-                            <Link href="/calculator" className="mx-2 mt-2 flex items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 hover:bg-brand-100">
-                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-brand-700" aria-hidden>{calcFeature.icon}</span>
+                            <Link href="/calculator" style={{ backgroundColor: "#e02020" }}
+                              className="mx-2 mt-2 flex items-center gap-3 rounded-xl px-3 py-2.5 shadow-sm transition-opacity hover:opacity-90">
+                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>{calcFeature.icon}</span>
                               <span className="min-w-0">
-                                <span className="block truncate text-[13px] font-bold text-brand-800">{calcFeature.title}</span>
-                                <span className="block truncate text-[11px] text-brand-700/70">{calcFeature.subtitle}</span>
+                                <span className="block truncate text-[13px] font-bold text-white">{calcFeature.title}</span>
+                                <span className="block truncate text-[11px] text-white/80">{calcFeature.subtitle}</span>
                               </span>
                             </Link>
                           </div>

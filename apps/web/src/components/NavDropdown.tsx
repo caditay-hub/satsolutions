@@ -94,21 +94,24 @@ export function NavDropdown({
             ))}
           </div>
 
-          {/* Вне области прокрутки — иначе на невысоком экране уезжает за край */}
+          {/* Вне области прокрутки — иначе на невысоком экране уезжает за край.
+              Красный: в бирюзовом меню одноцветная плашка терялась среди пунктов
+              и сливалась с кнопкой «Все услуги». */}
           {feature && (
             <button
               type="button"
               onClick={() => go(feature.href)}
-              className="mt-3 flex w-full shrink-0 items-center gap-3 rounded-xl border border-brand-200 bg-brand-50 px-3 py-2.5 text-left transition-colors hover:bg-brand-100"
+              style={{ backgroundColor: "#e02020" }}
+              className="mt-3 flex w-full shrink-0 items-center gap-3 rounded-xl px-3 py-2.5 text-left shadow-sm transition-opacity hover:opacity-90"
             >
               {feature.icon && (
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white text-brand-700" aria-hidden>
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>
                   {feature.icon}
                 </span>
               )}
               <span className="min-w-0">
-                <span className="block truncate text-[13px] font-bold text-brand-800">{feature.title}</span>
-                {feature.subtitle && <span className="block truncate text-[11px] text-brand-700/70">{feature.subtitle}</span>}
+                <span className="block truncate text-[13px] font-bold text-white">{feature.title}</span>
+                {feature.subtitle && <span className="block truncate text-[11px] text-white/80">{feature.subtitle}</span>}
               </span>
             </button>
           )}
