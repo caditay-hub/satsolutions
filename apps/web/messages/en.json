@@ -2764,6 +2764,8 @@
     ],
     "promoTitle": "Not sure what the installation will cost?",
     "promoText": "Set the number of points — the calculator lays out a site plan and shows the range from our standard price list. One minute, no phone calls.",
-    "promoBtn": "Estimate the cost"
+    "promoBtn": "Estimate the cost",
+    "promoHead": "Installation works cost calculator",
+    "promoHint": "Priced from our standard rate card. Equipment is quoted separately."
   }
 }

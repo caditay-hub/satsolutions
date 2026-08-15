@@ -2756,6 +2756,8 @@
     ],
     "promoTitle": "Montajın ne tutacağını bilmiyor musunuz?",
     "promoText": "Nokta sayısını girin — hesaplayıcı tesis planını çıkarır ve standart fiyat listemize göre aralığı gösterir. Bir dakika, telefona gerek yok.",
-    "promoBtn": "Maliyeti hesapla"
+    "promoBtn": "Maliyeti hesapla",
+    "promoHead": "Montaj işleri maliyet hesaplayıcısı",
+    "promoHint": "Standart fiyat listemize göre. Ekipman ayrıca hesaplanır."
   }
 }

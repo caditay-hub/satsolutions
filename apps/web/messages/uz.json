@@ -2764,6 +2764,8 @@
     ],
     "promoTitle": "Montaj qanchaga tushishini bilmayapsizmi?",
     "promoText": "Nuqtalar sonini belgilang — kalkulyator obyekt rejasini tuzadi va yagona narxnomamiz bo'yicha oraliqni ko'rsatadi. Bir daqiqa, qo'ng'iroqsiz.",
-    "promoBtn": "Narxni hisoblash"
+    "promoBtn": "Narxni hisoblash",
+    "promoHead": "Montaj ishlari narxi kalkulyatori",
+    "promoHint": "Yagona narxnoma bo'yicha hisoblaymiz. Uskuna — alohida."
   }
 }
