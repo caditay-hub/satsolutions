@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { Op } from "sequelize";
+import { matchI18nProductIds } from "../lib/productI18nIndex.js";
 import { Category } from "../models/Category.js";
 import { Brand } from "../models/Brand.js";
 import { Post } from "../models/Post.js";
@@ -203,8 +204,9 @@ publicRouter.get("/products", async (req, res) => {
     const or: any[] = [
       { name: { [Op.iLike]: `%${q}%` } },
       { modelCode: { [Op.iLike]: `%${q}%` } },
-      sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${ql}%')`),
-      sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${ql}%')`),
+      // slug тоже: бренды/категории с кириллическими именами (Болид, Рубеж) ищут латиницей
+      sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${ql}%' OR slug ILIKE '%${ql}%')`),
+      sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND (name ILIKE '%${ql}%' OR slug ILIKE '%${ql}%'))`),
     ];
     // раскладка клавиатуры: не переключил язык (напр. «ntcnth»=тестер, «вфргф»=dahua) — ищем и по флипу
     if (qf) {
@@ -216,6 +218,10 @@ publicRouter.get("/products", async (req, res) => {
         sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${qfl}%')`),
       );
     }
+    // Локализованные имена (uz/en/tr/zh): «bolid» латиницей должен находить «Болид» —
+    // саджест это умеет через productI18nIndex, полная выдача обязана совпадать с ним
+    const i18nIds = matchI18nProductIds(q, 500);
+    if (i18nIds.length) or.push({ id: { [Op.in]: i18nIds } });
     where[Op.or] = or;
   }
 
