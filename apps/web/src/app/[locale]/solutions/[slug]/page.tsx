@@ -99,6 +99,12 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     barrier: ["zkteco-barriers", "hik-turnstiles"],
     access: ["access-control", "access-controllers"],
     locks: ["zkteco-locks", "kanihad-locks"],
+    // По этим услугам реклама получала «посадочная ниже среднего»: человек ищет
+    // технику/цену, а страница была только про работы. Витрина закрывает разрыв.
+    cctv: ["hik-ip-cameras", "network-cameras", "hik-wireless-cameras"],
+    intercom: ["hik-intercoms", "indoor-monitors"],
+    fire: ["prochee-fire"],
+    servers: ["pxt-server"],
   };
   let equipment: any[] = [];
   const cats = EQUIP_CATS[svc.key];
