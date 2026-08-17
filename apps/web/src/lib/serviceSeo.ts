@@ -11,9 +11,16 @@ export type ServiceSeo = { h1: string; title: string; desc: string };
 
 const ru: Record<string, ServiceSeo> = {
   cctv: {
-    h1: "Установка видеонаблюдения в Ташкенте",
-    title: "Видеонаблюдение в Ташкенте — установка камер под ключ | SAT",
-    desc: "Установка камер видеонаблюдения под ключ в Ташкенте и по Узбекистану: бесплатный выезд, проект, монтаж IP и аналоговых систем, настройка удалённого доступа с телефона. Гарантия и сервис.",
+    // «системы видеонаблюдения» — QS 1/10 в Ads: запрос обязан быть в H1/title (методика LT)
+    h1: "Системы видеонаблюдения в Ташкенте — установка под ключ",
+    title: "Системы видеонаблюдения в Ташкенте — установка камер | SAT",
+    desc: "Системы видеонаблюдения под ключ в Ташкенте и по Узбекистану: установка камер, бесплатный выезд, проект, монтаж IP и аналоговых систем, настройка удалённого доступа с телефона. Гарантия и сервис.",
+  },
+  servers: {
+    // «серверное оборудование» — QS 3/10: витрина /solutions/servers без гео-заголовка
+    h1: "Серверное оборудование в Ташкенте — серверы под заказ",
+    title: "Серверное оборудование в Ташкенте — серверы под заказ | SAT",
+    desc: "Серверное оборудование в Ташкенте: серверы под заказ для 1С, офиса и виртуализации, стойки, ИБП, сетевое оборудование. Подбор конфигурации, поставка и монтаж по всему Узбекистану.",
   },
   access: {
     h1: "Системы контроля доступа (СКУД) в Ташкенте",
@@ -179,6 +186,11 @@ const ru: Record<string, ServiceSeo> = {
 };
 
 const uz: Record<string, ServiceSeo> = {
+  servers: {
+    h1: "Server uskunalari Toshkentda — buyurtma asosida serverlar",
+    title: "Server uskunalari Toshkentda — serverlar | SAT",
+    desc: "Toshkentda server uskunalari: 1C, ofis va virtualizatsiya uchun buyurtma asosida serverlar, stoykalar, UPS, tarmoq uskunalari. Konfiguratsiya tanlash, yetkazib berish va montaj O'zbekiston bo'ylab.",
+  },
   cctv: {
     h1: "Toshkentda videokuzatuv o'rnatish",
     title: "Toshkentda videokuzatuv o'rnatish — kamera montaji | SAT",
@@ -348,6 +360,11 @@ const uz: Record<string, ServiceSeo> = {
 };
 
 const en: Record<string, ServiceSeo> = {
+  servers: {
+    h1: "Server Hardware in Tashkent — Custom-Built Servers",
+    title: "Server Hardware in Tashkent — Custom Servers | SAT",
+    desc: "Server hardware in Tashkent: custom-built servers for 1C, office and virtualization, racks, UPS and network equipment. Configuration, supply and installation across Uzbekistan.",
+  },
   cctv: {
     h1: "CCTV Installation in Tashkent",
     title: "CCTV Installation in Tashkent — Security Cameras | SAT",
