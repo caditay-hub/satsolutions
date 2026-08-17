@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { trackLead } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 import { useTranslations } from "next-intl";
 
 /**
@@ -64,6 +65,7 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
           phone,
           email: email || undefined,
           message: lines.join("\n"),
+          gclid: getGclid() || undefined,
         }),
       });
       if (r.ok) {

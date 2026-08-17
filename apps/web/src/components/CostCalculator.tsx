@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { trackConversion } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 import {
   OBJECTS, OBJECT_KEYS, SYSTEMS, applyDefaults, calc, initialState, unitRates,
   type CalcResult, type CalcState, type ObjectKey, type SystemKey,
@@ -329,6 +330,7 @@ export function CostCalculator() {
           name: name || "Гость",
           phone,
           message: `Заявка из калькулятора стоимости\n\n${summary()}`,
+          gclid: getGclid() || undefined,
         }),
       });
       if (!res.ok) throw new Error("bad status");

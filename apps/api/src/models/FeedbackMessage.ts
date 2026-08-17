@@ -10,6 +10,8 @@ export class FeedbackMessage extends Model<InferAttributes<FeedbackMessage>, Inf
   declare email: string | null;
   declare message: string;
   declare status: FeedbackStatus;
+  // Google Click ID: заявка пришла с рекламы → потом выгружаем сделку в Ads офлайн-конверсией
+  declare gclid: string | null;
   declare createdAt: Date;
   declare updatedAt: Date;
 }
@@ -21,7 +23,8 @@ FeedbackMessage.init(
     phone: { type: DataTypes.STRING(32), allowNull: true },
     email: { type: DataTypes.STRING(200), allowNull: true },
     message: { type: DataTypes.TEXT, allowNull: false },
-    status: { type: DataTypes.STRING(20), allowNull: false, defaultValue: "NEW" }
+    status: { type: DataTypes.STRING(20), allowNull: false, defaultValue: "NEW" },
+    gclid: { type: DataTypes.STRING(200), allowNull: true }
   },
   { sequelize, tableName: "feedback_messages" }
 );

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { trackLead } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 import { useTranslations } from "next-intl";
 
 export function RequestQuoteButton({
@@ -36,6 +37,7 @@ export function RequestQuoteButton({
           phone,
           email: email || undefined,
           message: `Запрос КП по товару: ${productName}\n${comment ? "\n" + comment : ""}`,
+          gclid: getGclid() || undefined,
         }),
       });
       if (r.ok) {

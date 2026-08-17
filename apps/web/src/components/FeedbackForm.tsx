@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { trackLead } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 import { useTranslations } from "next-intl";
 
 type Status = "idle" | "sending" | "ok" | "error";
@@ -51,7 +52,8 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
           name: name.trim() || null,
           phone: phoneRest.trim() ? `+998${digitsOnly(phoneRest)}` : null,
           email: email.trim() || null,
-          message: message.trim()
+          message: message.trim(),
+          gclid: getGclid() || undefined
         })
       });
       const text = await res.text();

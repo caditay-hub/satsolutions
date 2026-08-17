@@ -842,6 +842,9 @@ publicRouter.post("/feedback", async (req, res) => {
   const phone = typeof req.body?.phone === "string" ? req.body.phone.trim() : "";
   const email = typeof req.body?.email === "string" ? req.body.email.trim() : "";
   const message = typeof req.body?.message === "string" ? req.body.message.trim() : "";
+  // gclid — необязательный маркер клика из Google Ads; невалидный молча отбрасываем, заявку не роняем
+  const gclidRaw = typeof req.body?.gclid === "string" ? req.body.gclid.trim() : "";
+  const gclid = /^[\w.-]{10,200}$/.test(gclidRaw) ? gclidRaw : null;
 
   if (!message || message.length < 5 || message.length > 3000) return res.status(400).json({ error: "Invalid message" });
   if (name && name.length > 200) return res.status(400).json({ error: "Invalid name" });
@@ -854,7 +857,8 @@ publicRouter.post("/feedback", async (req, res) => {
       phone: phone || null,
       email: email || null,
       message,
-      status: "NEW"
+      status: "NEW",
+      gclid
     } as any
   );
 
