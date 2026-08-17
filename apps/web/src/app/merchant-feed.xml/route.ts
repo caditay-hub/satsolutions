@@ -31,8 +31,13 @@ export async function GET() {
 
   const brandById = new Map(brands.map((b: any) => [b.id, b.name]));
 
+  // Политики Google Shopping: детекторы скрытых камер/жучков считаются
+  // «hacking» (answer/6150005) — товар легален на сайте, но в фид нельзя,
+  // иначе копятся policy-отклонения на аккаунт.
+  const POLICY_BANNED = new Set(["pro-k68-detektor-skrytyh-kamer-i-zhuchkov"]);
+
   const items = products
-    .filter((p) => p.published && Number(p.price) > 0 && p.coverImageUrl)
+    .filter((p) => p.published && Number(p.price) > 0 && p.coverImageUrl && !POLICY_BANNED.has(p.slug))
     .map((p) => {
       const price = Math.round(Number(p.price));
       const brand = p.brandId ? brandById.get(p.brandId) : null;
