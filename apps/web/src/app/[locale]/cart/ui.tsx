@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { clearCart, loadCart, removeFromCart, updateCartQuantity, type CartItem } from "@/lib/cart";
 import { resolveImageUrl } from "@/lib/image";
+import { getGclid } from "@/lib/gclid";
 import { formatPrice } from "@/lib/price";
 
 type CreateOrderResponse = { order: { id: string; status: string; totalAmount: string; currency: string; createdAt: string } };
@@ -58,7 +59,8 @@ export function CartClient() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           phone: p,
-          items: items.map((x) => ({ productId: x.productId, quantity: x.quantity }))
+          items: items.map((x) => ({ productId: x.productId, quantity: x.quantity })),
+          gclid: getGclid() || undefined
         })
       });
       const text = await res.text();

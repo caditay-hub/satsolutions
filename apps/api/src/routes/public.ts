@@ -937,6 +937,8 @@ publicRouter.post("/orders", async (req, res) => {
   const items = Array.isArray(req.body?.items) ? req.body.items : [];
   const custName = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 200) : "";
   const comment = typeof req.body?.comment === "string" ? req.body.comment.trim().slice(0, 2000) : "";
+  const orderGclidRaw = typeof req.body?.gclid === "string" ? req.body.gclid.trim() : "";
+  const orderGclid = /^[\w.-]{10,200}$/.test(orderGclidRaw) ? orderGclidRaw : null;
 
   if (!phone || phone.length < 7 || phone.length > 32) return res.status(400).json({ error: "Invalid phone" });
   if (!/^[0-9+()\s-]+$/.test(phone)) return res.status(400).json({ error: "Invalid phone" });
@@ -999,7 +1001,8 @@ publicRouter.post("/orders", async (req, res) => {
         status: "NEW",
         totalAmount: total,
         currency: "UZS",
-        meta: custName || comment ? { name: custName || undefined, comment: comment || undefined } : null
+        meta: custName || comment ? { name: custName || undefined, comment: comment || undefined } : null,
+        gclid: orderGclid
       } as any,
       { transaction: t }
     );

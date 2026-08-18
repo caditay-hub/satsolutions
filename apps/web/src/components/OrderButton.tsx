@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { trackLead } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 
 // Быстрый заказ товара (одна позиция): кнопка «Заказать» → модалка с количеством
 // и контактами → POST /orders → подтверждение с номером заказа. Требование
@@ -65,6 +66,7 @@ export function OrderButton({
           name: name || undefined,
           comment: comment || undefined,
           items: [{ productId, quantity: qty }],
+          gclid: getGclid() || undefined,
         }),
       });
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
