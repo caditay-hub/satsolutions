@@ -15,10 +15,11 @@
 import { readFileSync, existsSync } from "node:fs";
 import { config } from "../config.js";
 
-// Версия Google Ads API. v21 подтверждена живым запросом (2026-06-30). Периодически
+// Версия Google Ads API. v22 — v21 начала отдавать 400 INVALID_ARGUMENT (18.08.2026),
+// рабочие скрипты /root/gads_*.cjs давно на v22. Периодически
 // устаревает — при ошибке "version ... is not supported / deprecated" поднять до текущей
 // (см. developers.google.com/google-ads/api). Переопределяется env GOOGLE_ADS_API_VERSION.
-const API_VERSION = process.env.GOOGLE_ADS_API_VERSION ?? "v21";
+const API_VERSION = process.env.GOOGLE_ADS_API_VERSION ?? "v22";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 
 export type GoogleAdsTotals = {
