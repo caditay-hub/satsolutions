@@ -2742,6 +2742,18 @@
     "faqTitle": "Ko'p beriladigan savollar",
     "faq": [
       {
+        "q": "Kalit topshirish asosida videokuzatuv qancha turadi?",
+        "a": "Narx ikki qismdan iborat: uskuna va ishlar. Yuqoridagi kalkulyator ishlarni bizning yagona praysimiz bo'yicha hisoblaydi, uskuna alohida hisoblanadi — kameralar, registrator, disklar, quvvat bloklari va PoE kommutatorlari. Uy uchun to'rt kameralik to'plam do'kon uchun o'n olti kameralik to'plamdan faqat kameralar soni bilan emas, registrator klassi, arxiv chuqurligi va kabel trassalari uzunligi bilan ham farq qiladi. Tipik obyektlar bo'yicha tayyor hisoblar shu sahifada yuqorida, aniq summani esa muhandis bepul chiqishdan keyin aytadi."
+      },
+      {
+        "q": "Yong'in signalizatsiyasi qancha turadi?",
+        "a": "Narx xonalarning maydoni va vazifasiga, izlagichlar va shleyflar soniga, qabul-nazorat qurilmasi turiga hamda ovozli xabardor qilish va evakuatsiyani boshqarish tizimi kerakligiga bog'liq. Alohida modda — loyiha va nazorat organlariga topshirish: nazorat qabul qiladigan obyektlarda hujjatsiz tizim qabul qilinmaydi va bu qism montaj praysiga kirmaydi. Ishlarni kalkulyator hisoblaydi, loyiha va uskunani — obyektni ko'rgandan keyin."
+      },
+      {
+        "q": "Uy va do'kon uchun videokuzatuv narxi farq qiladimi?",
+        "a": "Ha, va faqat kameralar soni bilan emas. Uyda bu odatda ikki-to'rt kamera, qisqa trassalar va bir-ikki haftalik arxiv. Do'konda kassalar, kirish va omborga kameralar qo'shiladi, xaridorlar bilan bahsli holatlar sababli arxiv uzoqroq saqlanadi, trassalar esa uzunroq. Kameralar soni teng bo'lganda kabel trassalari allaqachon yotqizilgan obyekt taxminan chorak arzonga tushadi."
+      },
+      {
         "q": "Kalkulyator hisobi qanchalik aniq?",
         "a": "Bu montaj ishlari bo'yicha yagona narxnomamizga asoslangan mo'ljal: shunday parametrli obyekt odatda qaysi oraliqqa tushishini ko'rsatadi. Aniq smeta muhandis chiqqanidan keyin tuziladi — u rejani, trassalar holatini va shift balandligini ko'radi."
       },
