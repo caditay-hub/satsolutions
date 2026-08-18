@@ -50,8 +50,11 @@ export async function GET() {
       const ident = brand && mpnOk
         ? `<g:brand>${esc(brand)}</g:brand><g:mpn>${esc(p.modelCode!.trim())}</g:mpn>`
         : `${brand ? `<g:brand>${esc(brand)}</g:brand>` : ""}<g:identifier_exists>no</g:identifier_exists>`;
-      // custom_label_0: Shopping-кампания исключает мелочь (< 1 млн сум) — меньше микро-заказов
-      const label = price < 1_000_000 ? "lowprice" : "core";
+      // custom_label_0: Shopping-кампания исключает мелочь — меньше микро-заказов.
+      // Порог 200 тыс (был 1 млн): анализ 18.08 показал, что зона 200 тыс–1 млн
+      // давала ~64 заявки/мес по $0.23–0.33 (камеры V380/Tapo, роутеры, инструмент) —
+      // её вернули; ниже 200 тыс — удлинители/фонарики, микро-заказы, остаются вне кампании.
+      const label = price < 200_000 ? "lowprice" : "core";
       return `<item>
 <g:id>${esc(p.slug)}</g:id>
 <g:custom_label_0>${label}</g:custom_label_0>
