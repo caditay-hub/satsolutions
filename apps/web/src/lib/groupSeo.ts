@@ -18,6 +18,11 @@ export type GroupSeo = {
   serviceHref: string;
   /** анкор ссылки на услугу */
   serviceLabel: string;
+  /** развёрнутый текст под каталогом: как выбрать и что считать кроме самих товаров.
+      Появился 19.08.2026: по данным Ads страница группы держала «посадочная ниже
+      среднего» по головным запросам («камеры видеонаблюдения» — 607 показов),
+      живя на одном интро-предложении. Нет поля — блок не рендерится. */
+  long?: string;
 };
 
 type LocaleMap = Record<string, Record<string, GroupSeo>>;
@@ -105,6 +110,8 @@ const SEO: LocaleMap = {
       intro: "IP, Wi-Fi, PTZ и аналоговые камеры, видеорегистраторы и комплекты Hikvision, Dahua, HiLook, Avigilon — в наличии в Ташкенте с доставкой по всему Узбекистану.",
       serviceHref: "/solutions/cctv",
       serviceLabel: "Установка видеонаблюдения под ключ →",
+      long:
+        "Каталог группы собран так, чтобы закрыть объект одним заказом: IP- и аналоговые камеры, беспроводные модели, поворотные PTZ, видеорегистраторы NVR и DVR, готовые комплекты на 4–16 камер, а также кабель, блоки питания и коммутаторы PoE. Бренды — Hikvision, Dahua, HiLook, Avigilon: по ним есть склад в Ташкенте, официальная гарантия и сервис.\n\nВыбор сводится к четырём параметрам. Разрешение: 2–4 Мп хватает для дома и небольшого офиса, 4–8 Мп берут там, где нужно различать лица и автомобильные номера. Работа в темноте: инфракрасная подсветка даёт чёрно-белую картинку, технологии вроде ColorVu — цветную при слабом свете. Место установки: для улицы нужен защищённый корпус и рабочий диапазон температур, для помещения важнее угол обзора. Способ подключения: IP-камеры питаются по тому же кабелю, что передаёт данные (PoE), аналоговые дешевле и работают по уже проложенному коаксиалу.\n\nК камерам обязательно считается остальное: регистратор с диском под нужную глубину архива, питание, кабель и коммутатор. Глубина архива — параметр, который чаще всего забывают: при большом числе камер и высоком разрешении диск переписывается быстрее, чем к записи успевают обратиться. Мы считаем комплект целиком и говорим заранее, сколько дней записи получится, а при необходимости берём и монтаж — с проектом, прокладкой трасс, настройкой удалённого доступа и гарантией на работы.",
     },
     "kontrol-dostupa": {
       title: "СКУД в Ташкенте — купить оборудование, цены",
@@ -139,6 +146,8 @@ const SEO: LocaleMap = {
       intro: "IP, Wi-Fi, PTZ va analog kameralar, videoregistratorlar hamda Hikvision, Dahua, HiLook, Avigilon to'plamlari — Toshkentda mavjud, butun O'zbekiston bo'ylab yetkazib beramiz.",
       serviceHref: "/solutions/cctv",
       serviceLabel: "Videokuzatuvni kalit topshirish asosida o'rnatish →",
+      long:
+        "Guruh katalogi obyektni bitta buyurtma bilan yopadigan qilib yig'ilgan: IP va analog kameralar, simsiz modellar, aylanuvchi PTZ, NVR va DVR registratorlar, 4–16 kameralik tayyor to'plamlar, shuningdek kabel, quvvat bloklari va PoE kommutatorlari. Brendlar — Hikvision, Dahua, HiLook, Avigilon: ular bo'yicha Toshkentda ombor, rasmiy kafolat va servis bor.\n\nTanlov to'rt parametrga keladi. Ruxsat: uy va kichik ofis uchun 2–4 Mp yetadi, yuz va avtomobil raqamlarini ajratish kerak bo'lganda 4–8 Mp olinadi. Qorong'ida ishlash: infraqizil yoritish oq-qora tasvir beradi, ColorVu kabi texnologiyalar — kam yorug'likda rangli. O'rnatish joyi: ko'cha uchun himoyalangan korpus va harorat diapazoni, xona uchun ko'rish burchagi muhimroq. Ulanish usuli: IP-kameralar ma'lumot uzatadigan o'sha kabel orqali quvvat oladi (PoE), analoglar arzonroq va allaqachon yotqizilgan koaksialda ishlaydi.\n\nKameralarga qolgan hamma narsa ham hisoblanadi: kerakli arxiv chuqurligiga mos diskli registrator, quvvat, kabel va kommutator. Arxiv chuqurligi — ko'pincha unutiladigan parametr: kameralar ko'p va ruxsat yuqori bo'lsa, disk yozuvga murojaat qilishga ulgurmasdan qayta yoziladi. Biz to'plamni butunlay hisoblaymiz va necha kunlik yozuv chiqishini oldindan aytamiz, kerak bo'lsa montajni ham olamiz — loyiha, trassalar, masofaviy kirishni sozlash va ishlarga kafolat bilan.",
     },
     "kontrol-dostupa": {
       title: "Toshkentda SKUD — uskunalar, narxlar",
@@ -173,6 +182,8 @@ const SEO: LocaleMap = {
       intro: "IP, Wi-Fi, PTZ and analogue cameras, video recorders and kits by Hikvision, Dahua, HiLook, Avigilon — in stock in Tashkent with delivery across Uzbekistan.",
       serviceHref: "/solutions/cctv",
       serviceLabel: "Turnkey CCTV installation →",
+      long:
+        "The group catalogue is assembled so that a single order covers the whole site: IP and analogue cameras, wireless models, PTZ units, NVR and DVR recorders, ready-made kits for four to sixteen cameras, plus cable, power supplies and PoE switches. The brands are Hikvision, Dahua, HiLook and Avigilon, held in stock in Tashkent with official warranty and service.\n\nThe choice comes down to four parameters. Resolution: 2–4 MP suits a home or small office, 4–8 MP is for places where faces and vehicle plates must be readable. Low light: infrared illumination gives a black-and-white image, technologies such as ColorVu keep colour in dim conditions. Location: outdoors needs a rated housing and a working temperature range, indoors the field of view matters more. Connection: IP cameras take power over the data cable (PoE), while analogue is cheaper and reuses existing coaxial runs.\n\nEverything around the cameras counts too: a recorder with a disk sized for the retention you need, power, cabling and a switch. Retention is the parameter most often forgotten — with many cameras at high resolution the disk overwrites itself before anyone gets to the footage. We price the full set, say in advance how many days of recording it will hold, and can take on the installation as well, with design, cable routes, remote access setup and a warranty on the work.",
     },
     "kontrol-dostupa": {
       title: "Access Control in Tashkent — Equipment, Prices",

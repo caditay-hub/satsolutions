@@ -2258,5 +2258,73 @@
         }
       ]
     }
+  },
+  "h3c": {
+    "ru": {
+      "title": "H3C в Узбекистане — коммутаторы, серверы, купить в Ташкенте",
+      "intro": "H3C — китайский производитель сетевого и серверного оборудования корпоративного класса. Компания выросла из совместного предприятия Huawei и 3Com и сегодня выпускает полную линейку для сети предприятия: коммутаторы доступа и агрегации, маршрутизаторы, точки Wi-Fi, серверы UniServer и системы хранения данных.\n\nЧаще всего в Узбекистане берут коммутаторы H3C: они закрывают тот же сценарий, что и оборудование более раскрученных вендоров, но обходятся дешевле при сопоставимых характеристиках — управляемые модели с PoE для камер и телефонии, стековые решения для ядра сети, компактные коммутаторы для этажных узлов. Вторая по популярности позиция — серверы UniServer под 1С, виртуализацию и видеоархив.\n\nSAT Solutions — партнёр H3C: мы не только продаём оборудование, но и проектируем сеть, настраиваем коммутацию и маршрутизацию, монтируем в стойку и берём инфраструктуру на обслуживание. Это важнее, чем кажется: сетевое оборудование корпоративного класса требует настройки, и коробка сама по себе задачу не решает.",
+      "faq": [
+        {
+          "q": "Чем H3C отличается от других вендоров?",
+          "a": "Оборудование корпоративного класса при более низкой цене за сопоставимые характеристики. По функциям управляемые коммутаторы H3C закрывают те же задачи — VLAN, агрегация каналов, PoE, стекирование, — а разница в цене на крупной сети становится заметной. Для проектов, где бюджет считают, это рабочая альтернатива."
+        },
+        {
+          "q": "Есть ли гарантия и поддержка в Узбекистане?",
+          "a": "Да. Мы поставляем оборудование с гарантией вендора и сами обслуживаем сеть: настройка, замена при отказе, консультации. SAT Solutions — партнёр H3C, поэтому вопросы по гарантии решаются через нас, а не перепиской с зарубежным поставщиком."
+        },
+        {
+          "q": "Для чего чаще всего берут коммутаторы H3C?",
+          "a": "Под сеть офиса, производства или объекта с видеонаблюдением: модели с PoE питают камеры и IP-телефоны по тому же кабелю, что передаёт данные. Для ядра сети берут стековые модели, для этажей — коммутаторы доступа. Конфигурацию подбираем под число портов, нагрузку и бюджет."
+        },
+        {
+          "q": "Поставляете ли серверы H3C?",
+          "a": "Да, серверы UniServer под 1С, виртуализацию, базы данных и видеоархив, а также системы хранения. Собираем конфигурацию под задачу, монтируем в стойку, настраиваем RAID и гипервизор и переносим данные со старого оборудования."
+        }
+      ]
+    },
+    "uz": {
+      "title": "H3C O'zbekistonda — kommutatorlar, serverlar, Toshkentda sotib olish",
+      "intro": "H3C — korporativ darajadagi tarmoq va server uskunalari ishlab chiqaruvchi xitoy kompaniyasi. U Huawei va 3Com qo'shma korxonasidan o'sib chiqqan va bugun korxona tarmog'i uchun to'liq liniyani chiqaradi: kirish va agregatsiya kommutatorlari, marshrutizatorlar, Wi-Fi nuqtalari, UniServer serverlari va ma'lumot saqlash tizimlari.\n\nO'zbekistonda ko'proq H3C kommutatorlari olinadi: ular mashhurroq vendorlar uskunasi bilan bir xil vazifani yopadi, lekin o'xshash xususiyatlarda arzonroq tushadi — kameralar va telefoniya uchun PoE li boshqariladigan modellar, tarmoq yadrosi uchun stek yechimlari, qavat tugunlari uchun ixcham kommutatorlar. Ikkinchi ommabop pozitsiya — 1C, virtualizatsiya va videoarxiv uchun UniServer serverlari.\n\nSAT Solutions — H3C hamkori: biz uskunani sotibgina qolmay, tarmoqni loyihalaymiz, kommutatsiya va marshrutizatsiyani sozlaymiz, stoykaga o'rnatamiz va infratuzilmani xizmat ko'rsatishga olamiz. Bu ko'ringanidan muhimroq: korporativ uskuna sozlashni talab qiladi va quti o'zi vazifani hal qilmaydi.",
+      "faq": [
+        {
+          "q": "H3C boshqa vendorlardan nimasi bilan farq qiladi?",
+          "a": "O'xshash xususiyatlarda arzonroq narxdagi korporativ darajadagi uskuna. Funksiyalar bo'yicha H3C boshqariladigan kommutatorlari xuddi shu vazifalarni yopadi — VLAN, kanallarni agregatsiya qilish, PoE, steklash, — narxdagi farq esa katta tarmoqda sezilarli bo'ladi."
+        },
+        {
+          "q": "O'zbekistonda kafolat va qo'llab-quvvatlash bormi?",
+          "a": "Ha. Uskunani vendor kafolati bilan yetkazamiz va tarmoqqa o'zimiz xizmat ko'rsatamiz: sozlash, ishdan chiqqanda almashtirish, maslahat. SAT Solutions H3C hamkori, shuning uchun kafolat masalalari chet ellik yetkazib beruvchi bilan yozishmalar orqali emas, biz orqali hal bo'ladi."
+        },
+        {
+          "q": "H3C kommutatorlari ko'proq nima uchun olinadi?",
+          "a": "Ofis, ishlab chiqarish yoki videokuzatuvli obyekt tarmog'i uchun: PoE li modellar kameralar va IP-telefonlarni ma'lumot uzatadigan o'sha kabel orqali quvvatlantiradi. Tarmoq yadrosi uchun stek modellar, qavatlar uchun kirish kommutatorlari olinadi."
+        },
+        {
+          "q": "H3C serverlarini yetkazasizmi?",
+          "a": "Ha, 1C, virtualizatsiya, ma'lumotlar bazasi va videoarxiv uchun UniServer serverlari hamda saqlash tizimlari. Konfiguratsiyani vazifaga moslab yig'amiz, stoykaga o'rnatamiz, RAID va gipervizorni sozlaymiz va ma'lumotni eski uskunadan ko'chiramiz."
+        }
+      ]
+    },
+    "en": {
+      "title": "H3C in Uzbekistan — switches and servers, buy in Tashkent",
+      "intro": "H3C is a Chinese manufacturer of enterprise-grade networking and server hardware. The company grew out of a Huawei and 3Com joint venture and now covers the full enterprise stack: access and aggregation switches, routers, Wi-Fi access points, UniServer servers and storage systems.\n\nIn Uzbekistan the switches are what customers usually come for: they cover the same scenarios as better-known vendors at a lower price for comparable specifications — managed models with PoE for cameras and IP telephony, stackable units for the network core, compact switches for floor closets. Servers are the second line: UniServer machines for databases, virtualisation and video archives.\n\nSAT Solutions is an H3C partner. We do not simply sell the hardware — we design the network, configure switching and routing, rack and commission the equipment and keep the infrastructure under maintenance. That matters more than it sounds: enterprise networking gear needs configuration, and the box alone solves nothing.",
+      "faq": [
+        {
+          "q": "How does H3C differ from other vendors?",
+          "a": "Enterprise-grade hardware at a lower price for comparable specifications. Managed H3C switches cover the same ground — VLANs, link aggregation, PoE, stacking — and on a large network the price difference becomes material."
+        },
+        {
+          "q": "Is there warranty and support in Uzbekistan?",
+          "a": "Yes. We supply with vendor warranty and maintain the network ourselves: configuration, replacement on failure, consulting. As an H3C partner we handle warranty matters directly rather than leaving you to correspond with an overseas supplier."
+        },
+        {
+          "q": "What are H3C switches usually bought for?",
+          "a": "Office, production or surveillance networks: PoE models power cameras and IP phones over the same cable that carries data. Stackable models go into the core, access switches onto the floors. We size the configuration by port count, load and budget."
+        },
+        {
+          "q": "Do you supply H3C servers?",
+          "a": "Yes — UniServer machines for databases, virtualisation and video archives, plus storage systems. We build the configuration for the workload, rack it, set up RAID and the hypervisor and migrate data from your existing hardware."
+        }
+      ]
+    }
   }
 }

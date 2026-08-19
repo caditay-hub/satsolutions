@@ -70,7 +70,7 @@ export default async function ProductGroupPage({ params, searchParams }: { param
           name: groupName,
           idx,
           types,
-          ...(seo ? { seoH1: seo.h1, intro: seo.intro, serviceHref: seo.serviceHref, serviceLabel: seo.serviceLabel } : {}),
+          ...(seo ? { seoH1: seo.h1, intro: seo.intro, long: seo.long, serviceHref: seo.serviceHref, serviceLabel: seo.serviceLabel } : {}),
         },
       } as any)}
     </>

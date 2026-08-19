@@ -61,7 +61,7 @@ function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): imp
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -479,6 +479,16 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             </section>
           ) : null}
 
+          {groupLanding?.long ? (
+            // Развёрнутый текст группы: страница «камеры видеонаблюдения» держала
+            // «посадочная ниже среднего» в Ads, имея под H1 одно предложение.
+            <section className="mt-10 border-t border-slate-200 pt-8">
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{groupLanding.seoH1 ?? groupLanding.name}</h2>
+              <div className="max-w-3xl">
+                <RichDescription text={groupLanding.long} />
+              </div>
+            </section>
+          ) : null}
           {pairBlock ? (
             <section id="pair-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
               {pairFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pairFaqLd) }} />}
