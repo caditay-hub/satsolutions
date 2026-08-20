@@ -3172,6 +3172,33 @@ export const ARTICLES: Article[] = [
           { q: "Yuridik shaxslar bilan ishlaysizmi?", a: "Ha: shartnoma, schyot-faktura, QQS bilan ishlash, aktlar bilan topshirish. Birja maydonchalarida xaridlarda qatnashamiz." },
         ],
       },
+      en: {
+        title: "Turnstile Price in Tashkent: Supply and Installation Costs",
+        excerpt: "Turnstile prices in 2026: tripod, swing, full-height and Face ID options. What a turnkey installation costs and where you can save.",
+        sections: [
+          { h: "Turnstile types and price ranges", p: [
+            "A tripod turnstile is the most affordable option for an office entrance: basic ZKTeco and Hikvision models start at roughly 4–6 million UZS. Speed gates with glass wings cost noticeably more — from 15–20 million UZS per lane. Full-height turnstiles for perimeters and stadiums sit at the top of the range.",
+            "Identification is almost always added: a card reader is inexpensive, while a facial-recognition terminal (Face ID) starts at 2.5–3 million UZS. The combination businesses in Tashkent need most is turnstile + Face ID + time attendance.",
+          ] },
+          { h: "What a turnkey price includes", p: [
+            "The final estimate is equipment + installation + commissioning: floor mounting, power supply, connection to the access control system and pass-scenario setup. For one tripod installed, budget from 6–8 million UZS.",
+            "If you need time attendance, a software part is added — terminal integration and timesheet export. We deliver it within the same project.",
+          ] },
+          { h: "Where you can save", p: [
+            "Do not overpay for speed gates where a tripod is enough — for an office under 100 staff that is tens of millions of extra cost. Do not save on biometrics though: cards get lost and shared, Face ID closes that gap for good.",
+            "The second saving is a correct design: plan the number of lanes and power reserve upfront. An engineer visit and estimate are free.",
+          ] },
+          { h: "Next step", p: [
+            "Browse turnstiles and barrier gates in our catalog — prices in UZS, stock in Tashkent. Describe your entrance (headcount, doorway width, attendance needs) and we will propose 2–3 options with an exact quote within one day.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is the cheapest turnstile?", a: "An entry-level tripod is about 4–6 million UZS for hardware, or 6–8 million UZS installed and configured." },
+          { q: "How much is a turnstile with face recognition?", a: "Add a biometric terminal to the turnstile price — from 2.5–3 million UZS per lane; two directions need two terminals." },
+          { q: "How long does installation take?", a: "One tripod connected to access control usually takes a day; multi-lane systems with attendance — 2–5 days." },
+          { q: "Do you work with companies and tenders?", a: "Yes: contract, VAT invoicing, handover with acts, and participation in exchange-platform procurement." },
+        ],
+      },
     },
   },
   {
@@ -3231,6 +3258,33 @@ export const ARTICLES: Article[] = [
           { q: "Qo'ng'iroqqa telefondan javob berish mumkinmi?", a: "Ha, buning uchun IP-domofon kerak (masalan, Hikvision): qo'ng'iroq ilovaga yo'naltiriladi, eshikni istalgan joydan ochasiz." },
           { q: "Hovlilarga domofon o'rnatasizmi?", a: "Ha: antivandal ko'cha paneli, uyda monitor, darvozaga elektromexanik qulf. Kabelni ozoda yotqizamiz, kalit topshirish sharti bilan." },
           { q: "O'rnatish qancha vaqt oladi?", a: "Kvartira yoki hovli — odatda 2–4 soat. Bir nechta monitorli ofis yoki podez — loyihaga qarab bir kundan." },
+        ],
+      },
+      en: {
+        title: "Intercom Price in Tashkent: Audio, Video and IP Systems",
+        excerpt: "Audio and video intercom prices in 2026 for apartments, houses and offices. Installation costs and what drives the estimate.",
+        sections: [
+          { h: "Intercom price ranges", p: [
+            "A simple audio intercom is the cheapest option, from a few hundred thousand UZS. A video intercom kit (door station + monitor) by Hikvision or Dahua starts at 1.2–1.5 million UZS. An IP video intercom that forwards calls to your smartphone runs from 2–4 million UZS depending on the panel and number of monitors.",
+            "For a private house, a vandal-proof outdoor panel plus an electromechanical lock adds another 0.7–1.5 million UZS to the estimate.",
+          ] },
+          { h: "Installation cost", p: [
+            "Labour depends on cable readiness: faster in new buildings with conduits, more careful routing in finished interiors. A working reference is 300–500 thousand UZS per point; the exact figure comes from a free engineer visit.",
+            "Office and apartment-building IP intercom systems are calculated as projects: more panels and monitors, a PoE switch, and access-control integration — opening by card, code or face.",
+          ] },
+          { h: "Analog or IP", p: [
+            "An analog video intercom is cheaper and fully covers see-and-open. IP costs more but calls reach your phone anywhere, the door opens remotely, and call history is stored.",
+            "If CCTV or access control is planned, choose IP right away — everything merges into one system and nothing needs replacing a year later.",
+          ] },
+          { h: "Next step", p: [
+            "Our catalog lists Hikvision intercoms and kits with UZS prices. Tell us where the intercom goes (apartment, house, office, building entrance) — we will pick an option and quote installation within a day.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is a video intercom for an apartment?", a: "A panel + monitor kit is 1.2–1.5 million UZS; installation adds roughly 300–500 thousand UZS." },
+          { q: "Can I answer calls from my phone?", a: "Yes — with an IP intercom (e.g. Hikvision) calls are forwarded to the app and you can open the door from anywhere." },
+          { q: "Do you install intercoms in private houses?", a: "Yes: vandal-proof outdoor panel, indoor monitor, electromechanical gate lock — turnkey with neat cabling." },
+          { q: "How long does installation take?", a: "An apartment or house — usually 2–4 hours. An office or building entrance with several monitors — from one day, per project." },
         ],
       },
     },
@@ -3294,6 +3348,33 @@ export const ARTICLES: Article[] = [
           { q: "Texnik xizmat ko'rsatasizmi?", a: "Ha, shartnoma bo'yicha oylik TX: xabar bergichlar, priborlar va ogohlantirishni jurnalga belgilagan holda tekshirish — me'yorlar talab qilganidek." },
         ],
       },
+      en: {
+        title: "Fire Alarm System Price in Tashkent: Turnkey Costs",
+        excerpt: "Fire alarm cost in 2026: per detector and per site, addressable vs conventional, design, installation and handover to fire authorities.",
+        sections: [
+          { h: "What drives the price", p: [
+            "The cost combines design, equipment (control panel, detectors, sounders, cable) and installation. Key multipliers are floor area, ceiling height and system type: conventional is cheaper and fits small premises; addressable (Rubezh, Bolid, Dahua) is the standard for offices, shops and warehouses where the exact alarm point matters.",
+            "A practical reference is the price per point (detector with cable and labour). A small office or shop usually starts from 5–10 million UZS turnkey; sites over 500 m² are quoted per design.",
+          ] },
+          { h: "Why a design is mandatory", p: [
+            "A fire alarm is not detectors on a ceiling but a system built to code: detector counts and spacing, notification zones, backup power. The design is also required for handover to the fire-safety inspection.",
+            "SAT Solutions holds a design-and-installation licence: we design, install, commission and hand over with full documentation — one responsible contractor for the whole cycle.",
+          ] },
+          { h: "Addressable or conventional", p: [
+            "A conventional system only shows the triggered loop — enough and cheaper for a couple of rooms. An addressable one identifies the exact detector, self-diagnoses and saves cable; from about 10 rooms it quickly pays back the price difference.",
+            "Tenants in malls and business centres often need to tie into the building system — we align protocols and equipment with the management company.",
+          ] },
+          { h: "Next step", p: [
+            "Send a floor plan, or just the area and purpose — within a day we will quote two options (addressable/conventional) with equipment in stock in Tashkent.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is a fire alarm for a small office?", a: "A small office or shop turnkey usually starts from 5–10 million UZS: design, equipment, installation and commissioning. A free estimate gives the exact figure." },
+          { q: "Is a licence required for installation?", a: "Yes, fire alarm design and installation are licensed activities. We hold the licence and hand over sites with a complete document package." },
+          { q: "Is an addressable system much more expensive?", a: "Hardware costs more but needs less cable and labour. From ~10 rooms the total difference is small while operation is far more convenient." },
+          { q: "Do you provide maintenance?", a: "Yes, monthly contract service: checking detectors, panels and notification with journal records, as regulations require." },
+        ],
+      },
     },
   },
   {
@@ -3353,6 +3434,33 @@ export const ARTICLES: Article[] = [
           { q: "Oddiy qattiq disk to'g'ri keladimi?", a: "Ishlaydi, lekin uzoq emas: videokuzatuv disklari (WD Purple, SkyHawk) kecha-kunduz yozishga mo'ljallangan va bir necha barobar uzoq xizmat qiladi." },
           { q: "NVR yoki DVR — qaysi birini tanlash?", a: "IP-kameralar uchun — faqat NVR. DVR analog kameralaringiz bo'lsa va faqat registratorni almashtirish kerak bo'lsa mantiqli." },
           { q: "Telefonni sozlab berasizmi?", a: "Ha: yozishni, telefondan kirishni (Hik-Connect, DMSS), bildirishnomalarni sozlaymiz va kerak bo'lsa eski registratordan sozlamalarni ko'chiramiz." },
+        ],
+      },
+      en: {
+        title: "NVR and DVR Price in Tashkent: Video Recorder Costs",
+        excerpt: "NVR and DVR prices in 2026: 4, 8 and 16 channels, with or without PoE, what the hard drive adds and how to match a recorder to your cameras.",
+        sections: [
+          { h: "Price ranges: NVR and DVR", p: [
+            "Network recorders (NVR) for IP cameras: 4-channel — roughly 0.8–1.5 million UZS, 8-channel — 1.5–3 million UZS, 16-channel — from 3 million UZS. Models with a built-in PoE switch cost more but remove the separate switch and PSUs — usually the better deal for 4–8 cameras.",
+            "A DVR for analog (Turbo HD/HDCVI) cameras is traditionally cheaper than an NVR of the same channel count — a solid choice if your cameras are already analog.",
+          ] },
+          { h: "Do not forget the drive", p: [
+            "Recorders ship without a hard drive. Surveillance needs purpose-built HDDs — WD Purple or Seagate SkyHawk: 1 TB from ~450–600 thousand UZS, 4 TB about 1.5–2 million UZS. A regular desktop drive lasts far less in a recorder.",
+            "Capacity depends on camera count, resolution and archive depth: four 4 MP cameras with a 14-day archive need about 4 TB. We calculate it for your case free of charge.",
+          ] },
+          { h: "Choosing the channel count", p: [
+            "Take at least 2 spare channels — cameras almost always get added. Check incoming bitrate and resolution support, not just channels: a cheap 8-channel unit may not handle eight 8 MP cameras.",
+            "For homes and small business, HiLook or entry Hikvision/Dahua series are enough; for warehouses and production with analytics — higher series with AcuSense/WizSense.",
+          ] },
+          { h: "Next step", p: [
+            "Our catalog lists Hikvision, Dahua and HiLook recorders with UZS prices and Tashkent stock. Tell us how many cameras and what archive you need — we will match a recorder and drive within a day.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is a recorder for 4 cameras?", a: "A 4-channel NVR from about 800 thousand UZS; with built-in PoE from 1.2–1.5 million UZS, plus a hard drive from ~500 thousand UZS." },
+          { q: "Will a regular hard drive work?", a: "It will, but not for long: surveillance drives (WD Purple, SkyHawk) are built for 24/7 recording and last several times longer." },
+          { q: "NVR or DVR — which one?", a: "For IP cameras — only NVR. A DVR makes sense when analog cameras are already installed and only the recorder needs replacing." },
+          { q: "Do you set up phone access?", a: "Yes: recording, mobile access (Hik-Connect, DMSS), notifications, and settings migration from an old recorder if needed." },
         ],
       },
     },
