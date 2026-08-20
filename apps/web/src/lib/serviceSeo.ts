@@ -130,7 +130,8 @@ const ru: Record<string, ServiceSeo> = {
   },
   bank: {
     h1: "Системы безопасности для банков и офисов",
-    title: "Видеонаблюдение и СКУД для банка в Ташкенте — под ключ | SAT",
+    // офисные ключи Ads ведут сюда же — слово «офис» обязано быть в title
+    title: "Видеонаблюдение и СКУД для офиса и банка — Ташкент | SAT",
     desc: "Комплексная защита банков, филиалов и офисов: видеонаблюдение операционных зон и касс, СКУД и зоны ограниченного доступа, тревожные кнопки, интеграция с охраной. Проектирование и монтаж по всему Узбекистану.",
   },
   retail: {
@@ -304,7 +305,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   bank: {
     h1: "Banklar va ofislar uchun xavfsizlik tizimlari",
-    title: "Bank uchun videokuzatuv va SKUD — Toshkentda | SAT",
+    title: "Ofis va bank uchun videokuzatuv va SKUD — Toshkent | SAT",
     desc: "Banklar, filiallar va ofislarni himoya qilish: operatsion zona va kassalar videokuzatuvi, SKUD va cheklangan kirish zonalari, trevoga tugmalari, qo'riqlash bilan integratsiya. Loyihalash va montaj.",
   },
   retail: {
@@ -478,7 +479,7 @@ const en: Record<string, ServiceSeo> = {
   },
   bank: {
     h1: "Security systems for banks and offices",
-    title: "Bank CCTV and access control in Tashkent | SAT",
+    title: "Office & Bank CCTV and Access Control in Tashkent | SAT",
     desc: "Complete protection for banks, branches and offices: CCTV of teller areas and cash desks, access control and restricted zones, panic buttons, integration with security services. Design and installation.",
   },
   retail: {
