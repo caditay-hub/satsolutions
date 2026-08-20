@@ -51,6 +51,7 @@ export async function SiteFooter() {
 
   const blogLabel = ({ ru: "Блог", uz: "Blog", en: "Blog", tr: "Blog", zh: "博客" } as Record<string, string>)[locale] ?? "Блог";
   const calcLabel = ({ ru: "Калькулятор стоимости", uz: "Narx kalkulyatori", en: "Cost calculator", tr: "Maliyet hesaplayıcı", zh: "费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости";
+  const kitsLabel = ({ ru: "Готовые комплекты", uz: "Tayyor to'plamlar", en: "Ready-made kits", tr: "Hazır setler", zh: "成品套装" } as Record<string, string>)[locale] ?? "Готовые комплекты";
   const h3cLabel = ({ ru: "Партнёр H3C", uz: "H3C hamkori", en: "H3C partner", tr: "H3C ortağı", zh: "H3C 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр H3C";
   const zktecoLabel = ({ ru: "Партнёр ZKTeco", uz: "ZKTeco hamkori", en: "ZKTeco partner", tr: "ZKTeco ortağı", zh: "ZKTeco 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр ZKTeco";
   const reviewLabel = ({ ru: "Оценить нас на Google Картах", uz: "Google Xaritada baholang", en: "Rate us on Google Maps", tr: "Google Haritalar'da değerlendirin", zh: "在 Google 地图上评价我们" } as Record<string, string>)[locale] ?? "Оценить нас на Google Картах";
@@ -79,6 +80,7 @@ export async function SiteFooter() {
               <li><Link href="/" className="hover:text-brand-700">{tn("home")}</Link></li>
               <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
               <li><Link href="/calculator" className="hover:text-brand-700">{calcLabel}</Link></li>
+              <li><Link href="/kits" className="hover:text-brand-700">{kitsLabel}</Link></li>
               <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
               <li><Link href="/blog" className="hover:text-brand-700">{blogLabel}</Link></li>

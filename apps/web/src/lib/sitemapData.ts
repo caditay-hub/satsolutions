@@ -61,7 +61,7 @@ export function expandLocales(entries: SitemapEntry[]): SitemapEntry[] {
 const STATIC_ROUTES = [
   "", "/about", "/contact", "/products", "/solutions", "/portfolio",
   "/catalog", "/international", "/returns", "/delivery", "/partners/h3c",
-  "/calculator", "/partners/zkteco",
+  "/calculator", "/partners/zkteco", "/kits",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking
@@ -95,7 +95,17 @@ export async function pagesEntries(): Promise<SitemapEntry[]> {
       alternates: { languages: langAlternates(`/solutions/${s.slug}`) },
     }));
 
-  return expandLocales([...staticRoutes, ...staticServiceRoutes, ...serviceRoutes]);
+  // Готовые комплекты (kitsData.ts) — контент на 5 локалях
+  const { KITS } = await import("./kitsData");
+  const kitRoutes: SitemapEntry[] = KITS.map((k) => ({
+    url: `${SITE_URL}/kits/${k.slug}`,
+    lastModified: GENERATED,
+    changeFrequency: "monthly",
+    priority: 0.7,
+    alternates: { languages: langAlternates(`/kits/${k.slug}`) },
+  }));
+
+  return expandLocales([...staticRoutes, ...staticServiceRoutes, ...serviceRoutes, ...kitRoutes]);
 }
 
 // ── 2. Каталог: бренды, бренд×тип, группы, типы ─────────────────────────────
