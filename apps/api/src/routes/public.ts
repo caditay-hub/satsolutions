@@ -8,6 +8,7 @@ import { Product } from "../models/Product.js";
 import { Order } from "../models/Order.js";
 import { OrderItem } from "../models/OrderItem.js";
 import { Review } from "../models/Review.js";
+import { ProductQuestion } from "../models/ProductQuestion.js";
 import { Service } from "../models/Service.js";
 import { PortfolioCategory } from "../models/PortfolioCategory.js";
 import { PortfolioProject } from "../models/PortfolioProject.js";
@@ -1085,6 +1086,50 @@ publicRouter.post("/orders", async (req, res) => {
 });
 
 // Reviews (public): приём отзыва → на модерацию (PENDING); выдача — только APPROVED.
+// Q&A на карточке товара: вопрос инженеру. Публикуются только отвеченные
+// и одобренные (status=APPROVED + answer) — модерация в админке.
+publicRouter.post("/product-questions", async (req, res) => {
+  const productIdRaw = typeof req.body?.productId === "string" ? req.body.productId.trim() : "";
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(productIdRaw))
+    return res.status(400).json({ error: "Invalid productId" });
+  const product = await Product.findByPk(productIdRaw, { attributes: ["id"] });
+  if (!product) return res.status(404).json({ error: "Product not found" });
+  const question = typeof req.body?.question === "string" ? req.body.question.trim().slice(0, 1500) : "";
+  if (question.length < 10) return res.status(400).json({ error: "Question too short" });
+  const name = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 120) : "";
+  const phone = typeof req.body?.phone === "string" ? req.body.phone.trim().slice(0, 32) : "";
+  const ip = ((req.headers["x-forwarded-for"] as string) || req.ip || "").split(",")[0].trim();
+
+  // Антиспам как у отзывов: не больше 3 вопросов с одного IP за сутки
+  if (ip) {
+    const since = new Date(Date.now() - 24 * 3600 * 1000);
+    const recent = await ProductQuestion.findAll({ where: { createdAt: { [Op.gte]: since } } as any, attributes: ["meta"], raw: true });
+    const cnt = (recent as any[]).filter((r) => (r.meta as any)?.ip === ip).length;
+    if (cnt >= 3) return res.status(429).json({ error: "Too many questions, try later" });
+  }
+
+  await ProductQuestion.create({
+    productId: productIdRaw,
+    name: name || null,
+    phone: phone || null,
+    question,
+    meta: { ip: ip || undefined, ua: ((req.headers["user-agent"] as string) || "").slice(0, 300) || undefined }
+  } as any);
+  res.status(201).json({ ok: true });
+});
+
+publicRouter.get("/product-questions", async (req, res) => {
+  const productId = typeof req.query.productId === "string" ? req.query.productId.slice(0, 40) : "";
+  if (!productId) return res.status(400).json({ error: "productId required" });
+  const rows = await ProductQuestion.findAll({
+    where: { productId, status: "APPROVED", answer: { [Op.ne]: null } } as any,
+    order: [["createdAt", "DESC"]],
+    limit: 20,
+    attributes: ["id", "name", "question", "answer", "createdAt"]
+  });
+  res.json({ items: rows, count: rows.length });
+});
+
 publicRouter.post("/reviews", async (req, res) => {
   const ratingRaw = Number(req.body?.rating);
   const rating = Number.isFinite(ratingRaw) ? Math.round(ratingRaw) : 0;

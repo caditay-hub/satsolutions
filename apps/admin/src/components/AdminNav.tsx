@@ -20,6 +20,7 @@ const links = [
   { href: "/products", label: "Продукты" },
   { href: "/orders", label: "Заказы" },
   { href: "/reviews", label: "Отзывы" },
+  { href: "/product-questions", label: "Вопросы" },
   { href: "/admin/service-requests", label: "Заявки" },
   { href: "/chat", label: "Чат" },
   { href: "/feedback", label: "Обратная связь" },

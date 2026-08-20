@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getBrandTypePairs } from "@/lib/api";
+import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
+import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
@@ -160,6 +161,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
   // Отзывы товара (одобренные) — рейтинг + AggregateRating в разметку (только если count>0)
   const productReviews = await getProductReviews(product.id);
+  const productQuestions = await getProductQuestions(product.id);
 
   try {
     // Локализованные name/shortDescription (uz/en/tr/zh), фолбэк на русский из БД
@@ -626,6 +628,48 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                       </span>
                     </div>
                     {r.text && <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{r.text}</p>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Q&A: вопрос инженеру + опубликованные ответы (FAQPage-схема при наличии) */}
+        <div className="mt-8">
+          {productQuestions.count > 0 && (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: productQuestions.items.map((q) => ({
+                    "@type": "Question",
+                    name: q.question,
+                    acceptedAnswer: { "@type": "Answer", text: q.answer ?? "" },
+                  })),
+                }),
+              }}
+            />
+          )}
+          <h2 className="text-lg font-bold tracking-tight">
+            {locale === "uz" ? "Savol-javob" : locale === "en" ? "Questions & answers" : locale === "tr" ? "Soru & cevap" : locale === "zh" ? "问答" : "Вопросы и ответы"}
+          </h2>
+          <div className="mt-4 grid gap-6 lg:grid-cols-2 lg:items-start">
+            <div className="max-w-xl">
+              <QuestionForm locale={locale} productId={product.id} />
+            </div>
+            {productQuestions.count > 0 && (
+              <div className="space-y-3">
+                {productQuestions.items.slice(0, 6).map((q) => (
+                  <div key={q.id} className="rounded-xl border border-slate-200 bg-white p-4">
+                    <p className="text-sm font-black text-slate-900">{q.name?.trim() || (locale === "uz" ? "Xaridor" : locale === "en" ? "Customer" : locale === "tr" ? "Müşteri" : locale === "zh" ? "买家" : "Покупатель")}: <span className="font-semibold text-slate-700">{q.question}</span></p>
+                    {q.answer && (
+                      <p className="mt-2 rounded-lg bg-slate-50 p-3 text-sm leading-relaxed text-slate-700">
+                        <span className="font-black text-brand-700">SAT: </span>{q.answer}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>

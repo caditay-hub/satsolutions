@@ -392,6 +392,16 @@ export async function getReviews(serviceKey?: string): Promise<{ avg: number; co
   }
 }
 
+
+export type ProductQuestionDto = { id: string; name: string | null; question: string; answer: string | null; createdAt: string };
+export async function getProductQuestions(productId: string): Promise<{ items: ProductQuestionDto[]; count: number }> {
+  try {
+    return await apiFetch<{ items: ProductQuestionDto[]; count: number }>(`/product-questions?productId=${encodeURIComponent(productId)}`, { next: { revalidate: 120 } });
+  } catch {
+    return { items: [], count: 0 };
+  }
+}
+
 export async function getProductReviews(productId: string): Promise<{ avg: number; count: number; items: ReviewDto[] }> {
   try {
     return await apiFetch<{ avg: number; count: number; items: ReviewDto[] }>(`/reviews?productId=${encodeURIComponent(productId)}`, { next: { revalidate: 120 } });

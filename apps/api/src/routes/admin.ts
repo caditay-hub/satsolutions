@@ -26,6 +26,7 @@ import { User } from "../models/User.js";
 import { Order } from "../models/Order.js";
 import { OrderItem } from "../models/OrderItem.js";
 import { Review } from "../models/Review.js";
+import { ProductQuestion } from "../models/ProductQuestion.js";
 import { FeedbackMessage } from "../models/FeedbackMessage.js";
 import { ChatConversation } from "../models/ChatConversation.js";
 import { ChatMessage } from "../models/ChatMessage.js";
@@ -332,6 +333,40 @@ adminRouter.delete("/reviews/:id", requireRole(["ADMIN"]), async (req, res) => {
   const review = await Review.findByPk(req.params.id);
   if (!review) return res.status(404).json({ error: "Not found" });
   await review.destroy();
+  res.json({ ok: true });
+});
+
+// Q&A товаров (модерация): список + ответ/смена статуса + удаление
+adminRouter.get("/product-questions", async (req, res) => {
+  const page = parsePositiveInt(req.query.page, 1);
+  const limit = parseLimit(req.query.limit, 50, 200);
+  const offset = (page - 1) * limit;
+  const status = typeof req.query.status === "string" ? req.query.status.trim().toUpperCase() : "";
+  const where: any = {};
+  if (status) where.status = status;
+  const { rows, count } = await ProductQuestion.findAndCountAll({ where, order: [["createdAt", "DESC"]], limit, offset });
+  res.json({ items: rows, total: count, page, limit });
+});
+
+adminRouter.patch("/product-questions/:id", async (req, res) => {
+  const schema = z.object({
+    status: z.enum(["PENDING", "APPROVED", "HIDDEN"]).optional(),
+    answer: z.string().max(3000).optional()
+  });
+  const parsed = schema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: parsed.error.issues[0]?.message ?? "Invalid body" });
+  const q = await ProductQuestion.findByPk(req.params.id);
+  if (!q) return res.status(404).json({ error: "Not found" });
+  if (parsed.data.answer !== undefined) (q as any).answer = parsed.data.answer.trim() || null;
+  if (parsed.data.status) (q as any).status = parsed.data.status;
+  await q.save();
+  res.json({ question: q });
+});
+
+adminRouter.delete("/product-questions/:id", requireRole(["ADMIN"]), async (req, res) => {
+  const q = await ProductQuestion.findByPk(req.params.id);
+  if (!q) return res.status(404).json({ error: "Not found" });
+  await q.destroy();
   res.json({ ok: true });
 });
 
