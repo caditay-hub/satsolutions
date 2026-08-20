@@ -2973,7 +2973,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: "kamera-narxlari",
-    date: "2026-07-30",
+    date: "2026-08-20",
     related: ["cctv"],
     loc: {
       uz: {
@@ -3001,7 +3001,7 @@ export const ARTICLES: Article[] = [
             "Katalogimizda 3000 dan ortiq tovar bor, kameralar Toshkentda mavjud, narxlar so'mda va kafolat bilan. Vazifangizni ayting — byudjetga mos to'plamni tanlab, aniq narxni hisoblab beramiz.",
           ] },
         ],
-        faq: [
+        faq: [{ q: "Kamera o'rnatish narxi qancha?", a: "O'rnatish kameralar soni va kabel uzunligiga bog'liq: bitta kamera montaji o'rtacha 150–300 ming so'm, 4 kamerali to'plam kalit topshirish bilan — smetaga qarab. Muhandis chiqishi va hisob-kitob bepul." },
           { q: "Eng arzon kamera qancha turadi?", a: "Oddiy ichki Wi-Fi kamera 300–500 ming so'mdan boshlanadi. Ko'cha uchun sifatli IP-kamera odatda 700 ming so'mdan yuqori." },
           { q: "4 kameradan iborat to'plam qancha bo'ladi?", a: "Uskuna, registrator, disk, kabel va montaj bilan birga — obyektga bog'liq. Muhandis chiqib, bepul smeta tuzib beradi." },
           { q: "Registrator shartmi?", a: "1–2 kamera uchun xotira kartasi yetarli. 3+ kamera va uzoq arxiv kerak bo'lsa — registrator arzonroq va ishonchliroq." },
@@ -3033,7 +3033,7 @@ export const ARTICLES: Article[] = [
             "В нашем каталоге более 3000 товаров, камеры в наличии в Ташкенте, цены в сумах и с гарантией. Опишите задачу — подберём комплект под бюджет и посчитаем точную стоимость.",
           ] },
         ],
-        faq: [
+        faq: [{ q: "Сколько стоит установка одной камеры?", a: "Монтаж зависит от числа камер и длины кабеля: одна камера — в среднем 150–300 тысяч сум, комплект из 4 камер под ключ — по смете. Выезд инженера и расчёт бесплатные." },
           { q: "Сколько стоит самая недорогая камера?", a: "Простая внутренняя Wi-Fi камера — от 300–500 тысяч сум. Качественная уличная IP-камера обычно от 700 тысяч сум." },
           { q: "Во сколько обойдётся комплект из 4 камер?", a: "Зависит от объекта: оборудование, регистратор, диск, кабель и монтаж. Инженер выезжает и составляет смету бесплатно." },
           { q: "Обязателен ли регистратор?", a: "Для 1–2 камер достаточно карты памяти. От 3 камер и при необходимости длинного архива регистратор дешевле и надёжнее." },
@@ -3109,6 +3109,250 @@ export const ARTICLES: Article[] = [
           { q: "Смета платная?", a: "Нет, выезд инженера и расчёт сметы бесплатные." },
           { q: "Как прокладывают кабель в готовом ремонте?", a: "В гофре или кабель-канале по стенам, где возможно — за подвесным потолком. На этапе проекта согласуем наиболее аккуратный вариант." },
           { q: "Можно купить камеры самому?", a: "Да, выполняем и только монтаж. Но в этом случае гарантия распространяется лишь на наши работы." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "turniket-narxi",
+    date: "2026-08-20",
+    related: ["turnstile", "access"],
+    loc: {
+      ru: {
+        title: "Сколько стоит турникет с установкой в Ташкенте",
+        excerpt: "Цены на турникеты в 2026 году: трипод, распашной, полноростовой и с Face ID. Из чего складывается стоимость под ключ и на чём можно сэкономить.",
+        sections: [
+          { h: "Типы турникетов и порядок цен", p: [
+            "Турникет-трипод — самый доступный вариант для офиса и проходной: базовые модели ZKTeco и Hikvision начинаются примерно от 4–6 млн сум. Распашные калитки для МГН и переносов грузов сопоставимы по цене, скоростные проходы (speed gate) со стеклянными створками — заметно дороже, от 15–20 млн сум за проход. Полноростовые турникеты для периметра и стадионов — верх диапазона.",
+            "К турникету почти всегда добавляется идентификация: считыватель карт — недорого, а биометрический терминал с распознаванием лиц (Face ID) — от 2,5–3 млн сум. Именно связка «турникет + Face ID + учёт рабочего времени» чаще всего и нужна бизнесу в Ташкенте.",
+          ] },
+          { h: "Из чего складывается цена под ключ", p: [
+            "Итоговая смета — это оборудование + монтаж + пусконаладка. Монтаж включает крепление к полу, подводку питания, подключение к СКУД и настройку сценариев прохода. Для одного трипода с установкой ориентируйтесь от 6–8 млн сум, точная цифра зависит от объекта.",
+            "Если нужен учёт рабочего времени, добавляется программная часть: интеграция терминалов с ПО и выгрузка табеля. Мы делаем это в том же проекте — отдельный подрядчик не нужен.",
+          ] },
+          { h: "На чём можно сэкономить", p: [
+            "Не переплачивайте за скоростные проходы там, где хватит трипода: для офиса до 100 сотрудников это лишние десятки миллионов. Экономить на биометрии наоборот не стоит — карты теряют и передают друг другу, Face ID закрывает эту дыру раз и навсегда.",
+            "Вторая экономия — правильный проект: если сразу заложить количество точек прохода и запас по питанию, не придётся переделывать. Выезд инженера и смета у нас бесплатные.",
+          ] },
+          { h: "Что дальше", p: [
+            "Посмотрите турникеты и шлагбаумы в каталоге — цены в сумах, наличие в Ташкенте. Опишите проходную (число сотрудников, ширина проёма, нужен ли учёт времени) — предложим 2–3 варианта с точной сметой за один день.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит самый недорогой турникет?", a: "Турникет-трипод начального уровня — примерно от 4–6 млн сум за оборудование. С установкой и настройкой — от 6–8 млн сум." },
+          { q: "Сколько стоит турникет с распознаванием лиц?", a: "К цене турникета добавьте биометрический терминал — от 2,5–3 млн сум за точку прохода. Для двух направлений нужны два терминала." },
+          { q: "Сколько времени занимает установка?", a: "Один трипод с подключением к СКУД — обычно 1 день. Комплекс из нескольких проходов с учётом времени — 2–5 дней." },
+          { q: "Работаете ли вы с юрлицами и тендерами?", a: "Да: договор, счёт-фактура, работа с НДС, сдача объекта с актами. Участвуем в закупках на биржевых площадках." },
+        ],
+      },
+      uz: {
+        title: "Turniket narxi qancha? Toshkentda o'rnatish bilan",
+        excerpt: "2026-yilda turniket narxlari: tripod, qanotli, to'liq bo'yli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
+        sections: [
+          { h: "Turniket turlari va narxlar tartibi", p: [
+            "Tripod turniket — ofis va o'tish punkti uchun eng arzon variant: ZKTeco va Hikvision bazaviy modellari taxminan 4–6 mln so'mdan boshlanadi. Shisha qanotli tezkor o'tishlar (speed gate) ancha qimmat — bir o'tish uchun 15–20 mln so'mdan. To'liq bo'yli turniketlar perimetr va stadionlar uchun — eng yuqori narx toifasida.",
+            "Turniketga deyarli har doim identifikatsiya qo'shiladi: karta o'qigich arzon, yuzni tanuvchi biometrik terminal (Face ID) esa 2,5–3 mln so'mdan. Toshkentda biznesga aynan «turniket + Face ID + ish vaqtini hisobga olish» kombinatsiyasi ko'proq kerak bo'ladi.",
+          ] },
+          { h: "«Kalit topshirish» narxi nimadan iborat", p: [
+            "Yakuniy smeta — uskuna + montaj + ishga tushirish. Montajga polga mahkamlash, elektr ta'minoti, SKUD tizimiga ulash va o'tish stsenariylarini sozlash kiradi. O'rnatish bilan bitta tripod uchun taxminan 6–8 mln so'mdan mo'ljallang.",
+            "Ish vaqtini hisobga olish kerak bo'lsa, dasturiy qism qo'shiladi: terminallarni dastur bilan integratsiya qilish va tabel yuklab olish. Buni ham o'sha loyihada bajaramiz.",
+          ] },
+          { h: "Qayerda tejash mumkin", p: [
+            "Tripod yetadigan joyda speed gate uchun ortiqcha to'lamang: 100 nafargacha xodimli ofis uchun bu o'nlab million ortiqcha xarajat. Biometriyada tejash esa kerak emas — kartalar yo'qoladi va birovga beriladi, Face ID bu muammoni butunlay yopadi.",
+            "Ikkinchi tejash — to'g'ri loyiha: o'tish nuqtalari soni va quvvat zaxirasi boshidan hisoblansa, keyin qayta ishlash kerak bo'lmaydi. Muhandis chiqishi va smeta bizda bepul.",
+          ] },
+          { h: "Keyingi qadam", p: [
+            "Katalogdagi turniket va shlagbaumlarni ko'ring — narxlar so'mda, Toshkentda mavjud. O'tish punktingizni tasvirlab bering (xodimlar soni, eshik kengligi, vaqt hisobi kerakmi) — bir kunda aniq smeta bilan 2–3 variant taklif qilamiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Eng arzon turniket qancha turadi?", a: "Boshlang'ich tripod turniket — uskuna uchun taxminan 4–6 mln so'mdan. O'rnatish va sozlash bilan — 6–8 mln so'mdan." },
+          { q: "Face ID bilan turniket qancha?", a: "Turniket narxiga biometrik terminal qo'shiladi — har bir o'tish nuqtasiga 2,5–3 mln so'mdan. Ikki yo'nalish uchun ikkita terminal kerak." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "SKUD'ga ulangan bitta tripod — odatda 1 kun. Bir nechta o'tishli komplekslar — 2–5 kun." },
+          { q: "Yuridik shaxslar bilan ishlaysizmi?", a: "Ha: shartnoma, schyot-faktura, QQS bilan ishlash, aktlar bilan topshirish. Birja maydonchalarida xaridlarda qatnashamiz." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "domofon-narxi",
+    date: "2026-08-20",
+    related: ["intercom", "locks"],
+    loc: {
+      ru: {
+        title: "Сколько стоит домофон с установкой в Ташкенте",
+        excerpt: "Цены на аудио- и видеодомофоны в 2026 году: квартира, частный дом, офис и многоквартирный дом. Стоимость установки и что влияет на смету.",
+        sections: [
+          { h: "Порядок цен на домофоны", p: [
+            "Простой аудиодомофон для квартиры — самый доступный вариант, от нескольких сотен тысяч сум. Видеодомофон с монитором (Hikvision, Dahua) — от 1,2–1,5 млн сум за комплект «вызывная панель + монитор». IP-видеодомофон с переадресацией звонка на смартфон — от 2–4 млн сум в зависимости от панели и числа мониторов.",
+            "Для частного дома чаще берут комплект с уличной антивандальной панелью и электромеханическим замком или защёлкой — это ещё плюс 700 тысяч — 1,5 млн сум к смете.",
+          ] },
+          { h: "Стоимость установки", p: [
+            "Монтаж зависит от готовности кабельных трасс: в новостройке с закладными — быстрее и дешевле, в готовом ремонте добавляется аккуратная прокладка кабеля. Ориентир по работам — от 300–500 тысяч сум за точку, точную цифру даёт смета после выезда инженера (выезд бесплатный).",
+            "IP-домофония для офиса или многоквартирного дома считается проектно: панелей и мониторов больше, добавляется коммутатор с PoE и интеграция со СКУД — открытие двери по карте, коду или лицу.",
+          ] },
+          { h: "Что выбрать: аналог или IP", p: [
+            "Аналоговый видеодомофон дешевле и полностью закрывает задачу «видеть и открывать». IP-домофон стоит дороже, но умеет главное для занятых людей: звонок приходит на телефон, где бы вы ни были, открыть дверь можно удалённо, а история вызовов сохраняется.",
+            "Если планируете видеонаблюдение или СКУД — берите IP сразу: всё объединяется в одну систему, и не придётся менять оборудование через год.",
+          ] },
+          { h: "Что дальше", p: [
+            "В каталоге — домофоны Hikvision и комплекты с ценами в сумах. Напишите, куда нужен домофон (квартира, дом, офис, подъезд) — подберём вариант и посчитаем установку за один день.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит видеодомофон для квартиры?", a: "Комплект «панель + монитор» — от 1,2–1,5 млн сум. С установкой — примерно плюс 300–500 тысяч сум." },
+          { q: "Можно ли отвечать на звонки с телефона?", a: "Да, для этого нужен IP-домофон (например, Hikvision): звонок переадресуется в приложение, дверь открывается из любой точки мира." },
+          { q: "Ставите ли домофоны в частные дома?", a: "Да: уличная антивандальная панель, монитор в доме, электромеханический замок на калитку. Кабель прокладываем аккуратно, под ключ." },
+          { q: "Сколько занимает установка?", a: "Квартира или дом — обычно 2–4 часа. Офис или подъезд с несколькими мониторами — от одного дня, по проекту." },
+        ],
+      },
+      uz: {
+        title: "Domofon narxi qancha? Toshkentda o'rnatish bilan",
+        excerpt: "2026-yilda audio va video domofonlar narxi: kvartira, hovli, ofis va ko'p qavatli uy uchun. O'rnatish qiymati va smetaga nima ta'sir qiladi.",
+        sections: [
+          { h: "Domofon narxlari tartibi", p: [
+            "Kvartira uchun oddiy audiodomofon — eng arzon variant, bir necha yuz ming so'mdan. Monitorli videodomofon (Hikvision, Dahua) — «chaqiruv paneli + monitor» to'plami 1,2–1,5 mln so'mdan. Qo'ng'iroqni smartfonga yo'naltiruvchi IP-videodomofon — panel va monitorlar soniga qarab 2–4 mln so'mdan.",
+            "Hovli uchun ko'pincha antivandal ko'cha paneli va elektromexanik qulf bilan to'plam olinadi — bu smetaga yana 700 ming — 1,5 mln so'm qo'shadi.",
+          ] },
+          { h: "O'rnatish qiymati", p: [
+            "Montaj kabel trassalarining tayyorligiga bog'liq: yangi binoda tezroq va arzonroq, tayyor ta'mirda ehtiyotkor kabel yotqizish qo'shiladi. Ishlar bo'yicha mo'ljal — har bir nuqta uchun 300–500 ming so'mdan; aniq raqamni muhandis chiqishidan keyin smeta beradi (chiqish bepul).",
+            "Ofis yoki ko'p qavatli uy uchun IP-domofoniya loyiha bo'yicha hisoblanadi: panellar ko'proq, PoE kommutator va SKUD bilan integratsiya qo'shiladi — eshikni karta, kod yoki yuz orqali ochish.",
+          ] },
+          { h: "Nimani tanlash: analog yoki IP", p: [
+            "Analog videodomofon arzonroq va «ko'rish va ochish» vazifasini to'liq bajaradi. IP-domofon qimmatroq, lekin asosiy afzalligi bor: qo'ng'iroq qayerda bo'lsangiz ham telefoningizga keladi, eshikni masofadan ochish mumkin, chaqiruvlar tarixi saqlanadi.",
+            "Videokuzatuv yoki SKUD rejalashtirilgan bo'lsa — darhol IP oling: hammasi bitta tizimga birlashadi va bir yildan keyin uskunani almashtirish kerak bo'lmaydi.",
+          ] },
+          { h: "Keyingi qadam", p: [
+            "Katalogda — Hikvision domofonlari va to'plamlar, narxlar so'mda. Domofon qayerga kerakligini yozing (kvartira, hovli, ofis, podez) — bir kunda variant tanlab, o'rnatishni hisoblaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Kvartira uchun videodomofon qancha turadi?", a: "«Panel + monitor» to'plami — 1,2–1,5 mln so'mdan. O'rnatish bilan — taxminan yana 300–500 ming so'm qo'shiladi." },
+          { q: "Qo'ng'iroqqa telefondan javob berish mumkinmi?", a: "Ha, buning uchun IP-domofon kerak (masalan, Hikvision): qo'ng'iroq ilovaga yo'naltiriladi, eshikni istalgan joydan ochasiz." },
+          { q: "Hovlilarga domofon o'rnatasizmi?", a: "Ha: antivandal ko'cha paneli, uyda monitor, darvozaga elektromexanik qulf. Kabelni ozoda yotqizamiz, kalit topshirish sharti bilan." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Kvartira yoki hovli — odatda 2–4 soat. Bir nechta monitorli ofis yoki podez — loyihaga qarab bir kundan." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "yongin-signalizatsiyasi-narxi",
+    date: "2026-08-20",
+    related: ["fire"],
+    loc: {
+      ru: {
+        title: "Сколько стоит пожарная сигнализация в Ташкенте",
+        excerpt: "Цена пожарной сигнализации под ключ в 2026 году: за точку и за объект, адресная и безадресная система, проект, монтаж и сдача МЧС.",
+        sections: [
+          { h: "От чего зависит цена", p: [
+            "Стоимость складывается из проекта, оборудования (приёмно-контрольный прибор, извещатели, оповещатели, кабель) и монтажа. Главные множители — площадь объекта, высота потолков и тип системы: безадресная дешевле и подходит небольшим помещениям, адресная (Рубеж, Болид, Dahua) — стандарт для офисов, магазинов и складов, где важно видеть точное место срабатывания.",
+            "Практичный ориентир — цена за точку (извещатель с кабелем и работами). Для небольшого офиса или магазина комплексная система под ключ обычно начинается от 5–10 млн сум, объекты от 500 м² считаются по проекту.",
+          ] },
+          { h: "Почему нельзя без проекта", p: [
+            "Пожарная сигнализация — не «датчики на потолке», а система по нормам: количество и расстановка извещателей, зоны оповещения, резервное питание. Проект нужен и для сдачи объекта инспекции МЧС — без него систему не примут.",
+            "У SAT Solutions есть лицензия на проектирование и монтаж: делаем проект, монтируем, пускаем и сдаём с актами — одна ответственная компания на весь цикл.",
+          ] },
+          { h: "Адресная или безадресная", p: [
+            "Безадресная система показывает только шлейф, где сработал датчик — для помещения из пары комнат этого достаточно и дешевле. Адресная показывает конкретный извещатель, самодиагностируется и экономит кабель — на объектах от 10 помещений она быстро окупает разницу в цене.",
+            "Для арендаторов в ТЦ и БЦ часто нужен стык с общей системой здания — согласуем протоколы и оборудование с управляющей компанией.",
+          ] },
+          { h: "Что дальше", p: [
+            "Пришлите план помещения или просто площадь и назначение — за один день посчитаем смету по двум вариантам (адресная/безадресная) с оборудованием в наличии в Ташкенте.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит пожарная сигнализация для маленького офиса?", a: "Небольшой офис или магазин под ключ — обычно от 5–10 млн сум: проект, оборудование, монтаж и пусконаладка. Точную цифру даёт бесплатная смета." },
+          { q: "Нужна ли лицензия для монтажа?", a: "Да, проектирование и монтаж пожарной сигнализации — лицензируемая деятельность. У нас лицензия есть, объект сдаём с полным пакетом документов." },
+          { q: "Адресная система сильно дороже?", a: "Оборудование дороже, но кабеля и работ меньше. На объектах от 10 помещений итоговая разница небольшая, а эксплуатация заметно удобнее." },
+          { q: "Делаете ли обслуживание?", a: "Да, ежемесячное ТО по договору: проверка извещателей, приборов и оповещения с отметками в журнале — как требуют нормы." },
+        ],
+      },
+      uz: {
+        title: "Yong'in signalizatsiyasi narxi qancha? Toshkentda",
+        excerpt: "2026-yilda yong'in signalizatsiyasining «kalit topshirish» narxi: nuqta va obyekt bo'yicha, manzilli va manzilsiz tizim, loyiha, montaj va FVV'ga topshirish.",
+        sections: [
+          { h: "Narx nimaga bog'liq", p: [
+            "Qiymat loyiha, uskuna (qabul-nazorat pribori, xabar bergichlar, ogohlantirgichlar, kabel) va montajdan iborat. Asosiy omillar — obyekt maydoni, ship balandligi va tizim turi: manzilsiz tizim arzonroq va kichik xonalarga mos, manzilli (Rubej, Bolid, Dahua) — ofis, do'kon va omborlar standarti, chunki qaysi datchik ishlaganini aniq ko'rsatadi.",
+            "Amaliy mo'ljal — nuqta narxi (xabar bergich + kabel + ishlar). Kichik ofis yoki do'kon uchun tizim «kalit topshirish» sharti bilan odatda 5–10 mln so'mdan boshlanadi, 500 m² dan katta obyektlar loyiha bo'yicha hisoblanadi.",
+          ] },
+          { h: "Nega loyihasiz bo'lmaydi", p: [
+            "Yong'in signalizatsiyasi — «shipdagi datchiklar» emas, balki me'yorlar bo'yicha tizim: xabar bergichlar soni va joylashuvi, ogohlantirish zonalari, zaxira quvvat. Loyiha FVV inspeksiyasiga topshirish uchun ham shart — usiz tizim qabul qilinmaydi.",
+            "SAT Solutions'da loyihalash va montaj litsenziyasi bor: loyiha qilamiz, o'rnatamiz, ishga tushiramiz va aktlar bilan topshiramiz — butun sikl uchun bitta mas'ul kompaniya.",
+          ] },
+          { h: "Manzilli yoki manzilsiz", p: [
+            "Manzilsiz tizim faqat qaysi shleyf ishlaganini ko'rsatadi — ikki-uch xonali joy uchun bu yetarli va arzonroq. Manzilli tizim aniq xabar bergichni ko'rsatadi, o'zini tekshiradi va kabelni tejaydi — 10 va undan ortiq xonali obyektlarda narx farqini tez qoplaydi.",
+            "Savdo va biznes markazlaridagi ijarachilar uchun ko'pincha binoning umumiy tizimiga ulanish kerak — protokol va uskunani boshqaruvchi kompaniya bilan kelishamiz.",
+          ] },
+          { h: "Keyingi qadam", p: [
+            "Xona rejasini yoki shunchaki maydon va vazifasini yuboring — bir kunda ikki variant bo'yicha smeta hisoblaymiz (manzilli/manzilsiz), uskunalar Toshkentda mavjud.",
+          ] },
+        ],
+        faq: [
+          { q: "Kichik ofis uchun yong'in signalizatsiyasi qancha turadi?", a: "Kichik ofis yoki do'kon «kalit topshirish» bilan — odatda 5–10 mln so'mdan: loyiha, uskuna, montaj va ishga tushirish. Aniq raqamni bepul smeta beradi." },
+          { q: "Montaj uchun litsenziya kerakmi?", a: "Ha, yong'in signalizatsiyasini loyihalash va montaj qilish litsenziyalanadigan faoliyat. Bizda litsenziya bor, obyektni to'liq hujjatlar bilan topshiramiz." },
+          { q: "Manzilli tizim ancha qimmatmi?", a: "Uskuna qimmatroq, lekin kabel va ish kamroq. 10+ xonali obyektlarda yakuniy farq katta emas, ekspluatatsiya esa ancha qulay." },
+          { q: "Texnik xizmat ko'rsatasizmi?", a: "Ha, shartnoma bo'yicha oylik TX: xabar bergichlar, priborlar va ogohlantirishni jurnalga belgilagan holda tekshirish — me'yorlar talab qilganidek." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "videoregistrator-narxi",
+    date: "2026-08-20",
+    related: ["cctv"],
+    loc: {
+      ru: {
+        title: "Сколько стоит видеорегистратор для камер в Ташкенте",
+        excerpt: "Цены на NVR и DVR в 2026 году: 4, 8 и 16 каналов, с PoE и без, сколько добавит жёсткий диск и как не ошибиться с выбором под свои камеры.",
+        sections: [
+          { h: "Порядок цен: NVR и DVR", p: [
+            "Сетевые регистраторы (NVR) для IP-камер: 4-канальные — примерно от 800 тысяч до 1,5 млн сум, 8-канальные — 1,5–3 млн сум, 16-канальные — от 3 млн сум. Модели со встроенным PoE-коммутатором дороже, но избавляют от отдельного свитча и блоков питания — для 4–8 камер это чаще всего выгоднее.",
+            "DVR для аналоговых (Turbo HD/HDCVI) камер традиционно дешевле NVR на ту же канальность — рабочий вариант, если камеры уже аналоговые и менять их пока не планируете.",
+          ] },
+          { h: "Не забудьте про диск", p: [
+            "Регистратор продаётся без жёсткого диска. Для видеонаблюдения нужны специализированные HDD — WD Purple или Seagate SkyHawk: 1 ТБ — от ~450–600 тысяч сум, 4 ТБ — 1,5–2 млн сум. Обычный «компьютерный» диск в регистраторе живёт заметно меньше.",
+            "Объём считается от числа камер, разрешения и глубины архива: 4 камеры по 4 Мп с архивом 14 дней — это примерно 4 ТБ. Посчитаем точно под вашу задачу — бесплатно.",
+          ] },
+          { h: "Как выбрать канальность", p: [
+            "Берите регистратор с запасом хотя бы на 2 канала: камеры почти всегда добавляются. Смотрите не только на число каналов, но и на входящий битрейт и поддержку разрешения — дешёвый 8-канальник может не «переварить» восемь камер по 8 Мп.",
+            "Для дома и малого бизнеса достаточно серии HiLook или базовых Hikvision/Dahua; для складов и производств с аналитикой — старшие серии с AcuSense/WizSense.",
+          ] },
+          { h: "Что дальше", p: [
+            "В каталоге — видеорегистраторы Hikvision, Dahua и HiLook с ценами в сумах и наличием в Ташкенте. Напишите, сколько у вас камер и какой нужен архив — подберём регистратор и диск за один день.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит регистратор на 4 камеры?", a: "4-канальный NVR — примерно от 800 тысяч сум, с встроенным PoE — от 1,2–1,5 млн сум. Плюс жёсткий диск от ~500 тысяч сум." },
+          { q: "Подойдёт ли обычный жёсткий диск?", a: "Работать будет, но недолго: диски видеонаблюдения (WD Purple, SkyHawk) рассчитаны на круглосуточную запись и живут в разы дольше." },
+          { q: "NVR или DVR — что выбрать?", a: "Для IP-камер — только NVR. DVR имеет смысл, если у вас уже стоят аналоговые камеры и задача — заменить только регистратор." },
+          { q: "Поможете перенести архив и настроить телефон?", a: "Да: настраиваем запись, доступ с телефона (Hik-Connect, DMSS), уведомления и при необходимости переносим настройки со старого регистратора." },
+        ],
+      },
+      uz: {
+        title: "Videoregistrator narxi qancha? NVR va DVR, Toshkent",
+        excerpt: "2026-yilda NVR va DVR narxlari: 4, 8 va 16 kanal, PoE bilan va usiz, qattiq disk qancha qo'shadi va kameralarga mos registratorni qanday tanlash.",
+        sections: [
+          { h: "Narxlar tartibi: NVR va DVR", p: [
+            "IP-kameralar uchun tarmoq registratorlari (NVR): 4 kanalli — taxminan 800 ming — 1,5 mln so'm, 8 kanalli — 1,5–3 mln so'm, 16 kanalli — 3 mln so'mdan. Ichki PoE kommutatorli modellar qimmatroq, lekin alohida switch va quvvat bloklarini talab qilmaydi — 4–8 kamera uchun ko'pincha shu foydali.",
+            "Analog (Turbo HD/HDCVI) kameralar uchun DVR odatda xuddi shu kanalli NVR'dan arzonroq — kameralaringiz analog bo'lsa va hozircha almashtirmoqchi bo'lmasangiz, ishchi variant.",
+          ] },
+          { h: "Diskni unutmang", p: [
+            "Registrator qattiq disksiz sotiladi. Videokuzatuv uchun maxsus HDD kerak — WD Purple yoki Seagate SkyHawk: 1 TB — ~450–600 ming so'mdan, 4 TB — 1,5–2 mln so'm. Oddiy «kompyuter» diski registratorda ancha kam yashaydi.",
+            "Hajm kameralar soni, aniqlik va arxiv chuqurligidan hisoblanadi: 4 Mp'li 4 kamera 14 kunlik arxiv bilan — taxminan 4 TB. Vazifangizga aniq hisoblab beramiz — bepul.",
+          ] },
+          { h: "Kanallar sonini qanday tanlash", p: [
+            "Kamida 2 kanal zaxira bilan oling: kameralar deyarli har doim qo'shiladi. Faqat kanallar soniga emas, kiruvchi bitreyt va aniqlik qo'llab-quvvatlashiga ham qarang — arzon 8 kanallik 8 Mp'li sakkiz kamerani «hazm qilmasligi» mumkin.",
+            "Uy va kichik biznes uchun HiLook yoki bazaviy Hikvision/Dahua yetarli; analitikali ombor va ishlab chiqarishlar uchun — AcuSense/WizSense'li katta seriyalar.",
+          ] },
+          { h: "Keyingi qadam", p: [
+            "Katalogda — Hikvision, Dahua va HiLook videoregistratorlari, narxlar so'mda, Toshkentda mavjud. Nechta kamera va qanday arxiv kerakligini yozing — bir kunda registrator va diskni tanlab beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "4 kamera uchun registrator qancha turadi?", a: "4 kanalli NVR — taxminan 800 ming so'mdan, ichki PoE bilan — 1,2–1,5 mln so'mdan. Qo'shimcha qattiq disk ~500 ming so'mdan." },
+          { q: "Oddiy qattiq disk to'g'ri keladimi?", a: "Ishlaydi, lekin uzoq emas: videokuzatuv disklari (WD Purple, SkyHawk) kecha-kunduz yozishga mo'ljallangan va bir necha barobar uzoq xizmat qiladi." },
+          { q: "NVR yoki DVR — qaysi birini tanlash?", a: "IP-kameralar uchun — faqat NVR. DVR analog kameralaringiz bo'lsa va faqat registratorni almashtirish kerak bo'lsa mantiqli." },
+          { q: "Telefonni sozlab berasizmi?", a: "Ha: yozishni, telefondan kirishni (Hik-Connect, DMSS), bildirishnomalarni sozlaymiz va kerak bo'lsa eski registratordan sozlamalarni ko'chiramiz." },
         ],
       },
     },
