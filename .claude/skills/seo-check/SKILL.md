@@ -13,7 +13,8 @@ description: Полная SEO-проверка satsolutions.uz. Использо
 
 ## 2. Техническая база (curl всегда с -A "Mozilla/5.0...")
 - Sitemap: `https://satsolutions.uz/sitemap.xml` — без редиректящих/404 URL.
-- Выборочно страницы: canonical, hreflang (ru/uz/en/tr/zh — tr/zh товары фолбэк на en, это норма), title/description, JSON-LD.
+- Выборочно страницы: canonical, hreflang (ru/uz/en/tr/zh — все пять локалей переведены полностью, фолбэка на en больше нет), title/description, JSON-LD.
+- Sitemap обязан содержать ВСЕ 5 локалей отдельными `<loc>`, а не только в hreflang-альтернатах (проверка: `sitemap-*.xml` → счётчик по первому сегменту пути должен быть равным для ru/uz/en/tr/zh).
 - 404-кандидаты: снятые товары должны отдавать 308 на /catalog/<brand> (removedProducts.ts + middleware, 470 записей). Новые 404 из GSC-экспортов → добавлять туда же.
 - Фильтровые URL — noindex; редиректы старого сайта (/product/show, /category, /brand) работают.
 
