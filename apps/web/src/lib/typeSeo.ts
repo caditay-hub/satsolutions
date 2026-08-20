@@ -10,9 +10,9 @@ type LocText = { ru: string; uz: string; en: string; tr?: string; zh?: string };
 export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   kommutatory: {
     title: {
-      ru: "Купить коммутатор в Ташкенте — PoE и управляемые, цены — SAT",
-      uz: "Kommutator (switch) narxlari Toshkentda — PoE switch sotib olish — SAT",
-      en: "Network Switches in Tashkent — PoE & Managed, Prices — SAT",
+      ru: "Купить коммутатор в Ташкенте — PoE и управляемые, цены",
+      uz: "Kommutator (switch) narxlari Toshkentda — PoE switch sotib olish",
+      en: "Network Switches in Tashkent — PoE & Managed, Prices",
     },
     desc: {
       ru: "Сетевые коммутаторы в наличии в Ташкенте: PoE-свитчи для камер, управляемые L2/L3, гигабитные и 10G. Hikvision, MikroTik, TP-Link, Ruijie, Wi-Tek. Цены, гарантия, доставка по Узбекистану.",
@@ -22,9 +22,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   marshrutizatory: {
     title: {
-      ru: "Купить роутер в Ташкенте — Wi-Fi и GPON маршрутизаторы — SAT",
-      uz: "Router narxlari Toshkentda — Wi-Fi va GPON marshrutizatorlar — SAT",
-      en: "Routers in Tashkent — Wi-Fi & GPON, MikroTik, Prices — SAT",
+      ru: "Купить роутер в Ташкенте — Wi-Fi и GPON маршрутизаторы",
+      uz: "Router narxlari Toshkentda — Wi-Fi va GPON marshrutizatorlar",
+      en: "Routers in Tashkent — Wi-Fi & GPON, MikroTik, Prices",
     },
     desc: {
       ru: "Маршрутизаторы в наличии: Wi-Fi роутеры для дома и офиса, GPON, MikroTik и Ruijie для бизнеса. Подбор, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
@@ -34,9 +34,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "turnikety-i-shlagbaumy": {
     title: {
-      ru: "Турникеты и шлагбаумы — купить с установкой в Ташкенте — SAT",
-      uz: "Turniket va shlagbaum narxlari — o'rnatish bilan, Toshkent — SAT",
-      en: "Turnstiles & Barrier Gates in Tashkent — Supply + Install — SAT",
+      ru: "Турникеты и шлагбаумы — купить с установкой в Ташкенте",
+      uz: "Turniket va shlagbaum narxlari — o'rnatish bilan, Toshkent",
+      en: "Turnstiles & Barrier Gates in Tashkent — Supply + Install",
     },
     desc: {
       ru: "Турникеты-триподы, распашные, полноростовые и автоматические шлагбаумы Hikvision, ZKTeco. Продажа с монтажом под ключ, интеграция со СКУД и Face ID. Цены, гарантия, сервис по Узбекистану.",
@@ -46,9 +46,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "pozharnaya-bezopasnost": {
     title: {
-      ru: "Огнетушители и пожарное оборудование — купить в Ташкенте — SAT",
-      uz: "O't o'chirgichlar va yong'in jihozlari — Toshkentda narxlari — SAT",
-      en: "Fire Extinguishers & Fire Safety Equipment in Tashkent — SAT",
+      ru: "Огнетушители и пожарное оборудование — купить в Ташкенте",
+      uz: "O't o'chirgichlar va yong'in jihozlari — Toshkentda narxlari",
+      en: "Fire Extinguishers & Fire Safety Equipment in Tashkent",
     },
     desc: {
       ru: "Огнетушители ОП/ОУ, пожарные шкафы, рукава и щиты в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации с лицензией. Цены, доставка по Узбекистану.",
@@ -58,9 +58,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "ibp-i-elektropitanie": {
     title: {
-      ru: "Купить ИБП и стабилизатор напряжения в Ташкенте — цены — SAT",
-      uz: "UPS va kuchlanish stabilizatori narxlari Toshkentda — SAT",
-      en: "UPS & Voltage Stabilizers in Tashkent — Prices — SAT",
+      ru: "Купить ИБП и стабилизатор напряжения в Ташкенте — цены",
+      uz: "UPS va kuchlanish stabilizatori narxlari Toshkentda",
+      en: "UPS & Voltage Stabilizers in Tashkent — Prices",
     },
     desc: {
       ru: "ИБП (UPS) для серверов, видеонаблюдения и офиса, стабилизаторы напряжения, аккумуляторы. Подбор по мощности, монтаж. Цены в Ташкенте, гарантия, доставка по Узбекистану.",
@@ -70,9 +70,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "ip-videoregistratory-nvr": {
     title: {
-      ru: "Купить видеорегистратор NVR в Ташкенте — Hikvision, цены — SAT",
-      uz: "Videoregistrator NVR narxlari Toshkentda — Hikvision — SAT",
-      en: "NVR Video Recorders in Tashkent — Hikvision, Prices — SAT",
+      ru: "Купить видеорегистратор NVR в Ташкенте — Hikvision, цены",
+      uz: "Videoregistrator NVR narxlari Toshkentda — Hikvision",
+      en: "NVR Video Recorders in Tashkent — Hikvision, Prices",
     },
     desc: {
       ru: "IP-видеорегистраторы NVR на 4–64 канала: Hikvision, Dahua, HiLook. Подбор под количество камер, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
@@ -82,9 +82,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "zhestkie-diski": {
     title: {
-      ru: "Купить HDD для видеонаблюдения в Ташкенте — WD Purple — SAT",
-      uz: "Videokuzatuv uchun HDD narxlari Toshkentda — WD Purple — SAT",
-      en: "Surveillance HDD in Tashkent — WD Purple, Prices — SAT",
+      ru: "Купить HDD для видеонаблюдения в Ташкенте — WD Purple",
+      uz: "Videokuzatuv uchun HDD narxlari Toshkentda — WD Purple",
+      en: "Surveillance HDD in Tashkent — WD Purple, Prices",
     },
     desc: {
       ru: "Жёсткие диски для видеорегистраторов и серверов: WD Purple, Seagate SkyHawk на 1–18 ТБ. Расчёт объёма архива под ваши камеры. Цены в Ташкенте, гарантия, доставка.",
@@ -94,9 +94,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "telekommunikacionnye-shkafy": {
     title: {
-      ru: "Купить серверный шкаф в Ташкенте — 19″ стойки, цены — SAT",
-      uz: "Server shkafi narxlari Toshkentda — 19″ stoykalar — SAT",
-      en: "Server Racks & Cabinets in Tashkent — 19″, Prices — SAT",
+      ru: "Купить серверный шкаф в Ташкенте — 19″ стойки, цены",
+      uz: "Server shkafi narxlari Toshkentda — 19″ stoykalar",
+      en: "Server Racks & Cabinets in Tashkent — 19″, Prices",
     },
     desc: {
       ru: "Телекоммуникационные и серверные шкафы 19″: настенные и напольные 4U–47U, стойки, аксессуары. Сборка и монтаж серверных под ключ. Цены в Ташкенте, доставка по Узбекистану.",
@@ -106,9 +106,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "wi-fi-tochki-dostupa": {
     title: {
-      ru: "Купить Wi-Fi точку доступа в Ташкенте — UniFi, TP-Link — SAT",
-      uz: "Wi-Fi ulanish nuqtasi narxlari Toshkentda — UniFi, TP-Link — SAT",
-      en: "Wi-Fi Access Points in Tashkent — UniFi, TP-Link — SAT",
+      ru: "Купить Wi-Fi точку доступа в Ташкенте — UniFi, TP-Link",
+      uz: "Wi-Fi ulanish nuqtasi narxlari Toshkentda — UniFi, TP-Link",
+      en: "Wi-Fi Access Points in Tashkent — UniFi, TP-Link",
     },
     desc: {
       ru: "Wi-Fi точки доступа для офиса, склада и гостиницы: TP-Link Omada, Ruijie, Hikvision. Бесшовный роуминг, проектирование покрытия, монтаж. Цены в Ташкенте, гарантия.",
@@ -118,9 +118,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "ip-kamery": {
     title: {
-      ru: "Купить IP-камеру в Ташкенте — Hikvision, Dahua, цены — SAT",
-      uz: "IP kamera narxlari Toshkentda — Hikvision, Dahua — SAT",
-      en: "IP Cameras in Tashkent — Hikvision, Dahua, Prices — SAT",
+      ru: "Купить IP-камеру в Ташкенте — Hikvision, Dahua, цены",
+      uz: "IP kamera narxlari Toshkentda — Hikvision, Dahua",
+      en: "IP Cameras in Tashkent — Hikvision, Dahua, Prices",
     },
     desc: {
       ru: "IP-камеры видеонаблюдения 2–8 Мп: Hikvision, Dahua, HiLook, Avigilon. Уличные и внутренние, ColorVu и AcuSense. Подбор, монтаж под ключ. Цены в Ташкенте, гарантия, доставка.",
