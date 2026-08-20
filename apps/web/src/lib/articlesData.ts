@@ -3199,6 +3199,60 @@ export const ARTICLES: Article[] = [
           { q: "Do you work with companies and tenders?", a: "Yes: contract, VAT invoicing, handover with acts, and participation in exchange-platform procurement." },
         ],
       },
+      tr: {
+        title: "Taşkent'te Turnike Fiyatları: Montaj Dahil Maliyetler",
+        excerpt: "2026 turnike fiyatları: tripod, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim kurulum neye mal olur, nereden tasarruf edilir.",
+        sections: [
+          { h: "Turnike türleri ve fiyat aralıkları", p: [
+            "Tripod turnike, ofis girişi için en ekonomik çözümdür: ZKTeco ve Hikvision'ın temel modelleri yaklaşık 4–6 milyon UZS'den başlar. Cam kanatlı hızlı geçişler (speed gate) belirgin şekilde daha pahalıdır — şerit başına 15–20 milyon UZS'den. Tam boy turnikeler fiyat aralığının üst sınırındadır.",
+            "Turnikeye neredeyse her zaman kimlik doğrulama eklenir: kart okuyucu ucuzdur, yüz tanıma terminali (Face ID) ise 2,5–3 milyon UZS'den başlar. Taşkent'te işletmelerin en çok ihtiyaç duyduğu kombinasyon: turnike + Face ID + mesai takibi.",
+          ] },
+          { h: "Anahtar teslim fiyata neler dahil", p: [
+            "Nihai teklif = ekipman + montaj + devreye alma: zemine sabitleme, güç beslemesi, geçiş kontrol sistemine bağlantı ve senaryo ayarları. Montajlı tek tripod için 6–8 milyon UZS'den bütçe ayırın.",
+            "Mesai takibi gerekiyorsa yazılım kısmı eklenir — terminal entegrasyonu ve puantaj çıktısı. Bunu aynı proje içinde teslim ediyoruz.",
+          ] },
+          { h: "Nereden tasarruf edilir", p: [
+            "Tripodun yeterli olduğu yerde speed gate için fazladan ödeme yapmayın. Biyometriden ise tasarruf etmeyin: kartlar kaybolur ve devredilir, Face ID bu açığı kalıcı olarak kapatır.",
+            "İkinci tasarruf doğru projedir: şerit sayısı ve güç rezervi baştan planlanırsa yeniden işçilik gerekmez. Mühendis keşfi ve teklif ücretsizdir.",
+          ] },
+          { h: "Sonraki adım", p: [
+            "Katalogdaki turnike ve bariyerlere göz atın — fiyatlar UZS cinsinden, stoklar Taşkent'te. Girişinizi tarif edin (personel sayısı, kapı genişliği, mesai takibi) — bir gün içinde net teklifle 2–3 seçenek sunalım.",
+          ] },
+        ],
+        faq: [
+          { q: "En uygun turnike ne kadar?", a: "Giriş seviyesi tripod, ekipman olarak yaklaşık 4–6 milyon UZS; montaj ve ayarlarla 6–8 milyon UZS'den." },
+          { q: "Yüz tanımalı turnike ne kadar?", a: "Turnike fiyatına şerit başına 2,5–3 milyon UZS biyometrik terminal ekleyin; iki yön için iki terminal gerekir." },
+          { q: "Montaj ne kadar sürer?", a: "Geçiş kontrolüne bağlı tek tripod genelde 1 gün; mesai takipli çok şeritli sistemler 2–5 gün." },
+          { q: "Kurumsal ve ihale çalışıyor musunuz?", a: "Evet: sözleşme, KDV faturası, tutanaklarla teslim ve ihale platformlarında katılım." },
+        ],
+      },
+      zh: {
+        title: "塔什干闸机价格：设备与安装费用指南",
+        excerpt: "2026年闸机价格：三辊闸、摆闸、全高闸及人脸识别方案。交钥匙安装的费用构成与省钱要点。",
+        sections: [
+          { h: "闸机类型与价格区间", p: [
+            "三辊闸是办公楼入口最经济的方案：ZKTeco和海康威视基础型号约400–600万苏姆起。玻璃翼闸（速通门）明显更贵——每通道1500–2000万苏姆起。全高旋转闸用于周界和体育场，价格位于区间顶端。",
+            "闸机几乎都要配识别设备：刷卡读头便宜，人脸识别终端（Face ID）每通道250–300万苏姆起。塔什干企业最常用的组合是：闸机＋人脸识别＋考勤。",
+          ] },
+          { h: "交钥匙价格包含什么", p: [
+            "最终报价＝设备＋安装＋调试：地面固定、供电、接入门禁系统及通行方案设置。单台三辊闸含安装约600–800万苏姆起。",
+            "如需考勤，还要加软件部分——终端对接与考勤表导出，我们在同一项目内交付。",
+          ] },
+          { h: "哪里可以省钱", p: [
+            "三辊闸够用的场合不必为速通门多花钱；但不要在生物识别上省——卡片会丢失、转借，人脸识别彻底堵住这个漏洞。",
+            "第二个省钱点是正确的方案设计：通道数量和电力冗余提前规划，就不用返工。工程师上门勘测与报价免费。",
+          ] },
+          { h: "下一步", p: [
+            "欢迎浏览产品目录中的闸机和道闸——苏姆计价，塔什干现货。告诉我们入口情况（人数、门洞宽度、是否需要考勤），一天内给出2–3套方案与准确报价。",
+          ] },
+        ],
+        faq: [
+          { q: "最便宜的闸机多少钱？", a: "入门级三辊闸设备约400–600万苏姆；含安装调试600–800万苏姆起。" },
+          { q: "人脸识别闸机多少钱？", a: "在闸机价格上加每通道250–300万苏姆的生物识别终端；双向通行需要两台终端。" },
+          { q: "安装需要多久？", a: "接入门禁的单台三辊闸通常1天；带考勤的多通道系统2–5天。" },
+          { q: "是否支持企业合作与招标？", a: "支持：签订合同、增值税发票、验收单据齐全，并参与交易所平台采购。" },
+        ],
+      },
     },
   },
   {
@@ -3285,6 +3339,60 @@ export const ARTICLES: Article[] = [
           { q: "Can I answer calls from my phone?", a: "Yes — with an IP intercom (e.g. Hikvision) calls are forwarded to the app and you can open the door from anywhere." },
           { q: "Do you install intercoms in private houses?", a: "Yes: vandal-proof outdoor panel, indoor monitor, electromechanical gate lock — turnkey with neat cabling." },
           { q: "How long does installation take?", a: "An apartment or house — usually 2–4 hours. An office or building entrance with several monitors — from one day, per project." },
+        ],
+      },
+      tr: {
+        title: "Taşkent'te İnterkom (Diafon) Fiyatları ve Montaj",
+        excerpt: "2026 sesli ve görüntülü diafon fiyatları: daire, müstakil ev ve ofis için. Montaj maliyeti ve teklifi neler etkiler.",
+        sections: [
+          { h: "Diafon fiyat aralıkları", p: [
+            "Basit sesli diafon en ucuz seçenektir, birkaç yüz bin UZS'den başlar. Hikvision/Dahua görüntülü set (kapı paneli + monitör) 1,2–1,5 milyon UZS'den. Aramayı akıllı telefona yönlendiren IP görüntülü diafon, panele ve monitör sayısına göre 2–4 milyon UZS'den başlar.",
+            "Müstakil ev için genelde darbeye dayanıklı dış panel ve elektromekanik kilitli set tercih edilir — teklife 0,7–1,5 milyon UZS daha ekler.",
+          ] },
+          { h: "Montaj maliyeti", p: [
+            "İşçilik kablo altyapısına bağlıdır: yeni binada daha hızlı ve ucuz, bitmiş dekorasyonda özenli kablo çekimi eklenir. Nokta başına 300–500 bin UZS referans alın; kesin rakamı ücretsiz mühendis keşfi verir.",
+            "Ofis ve apartman IP interkom sistemleri proje olarak hesaplanır: daha çok panel ve monitör, PoE switch ve geçiş kontrol entegrasyonu — kapıyı kart, şifre veya yüzle açma.",
+          ] },
+          { h: "Analog mu IP mi", p: [
+            "Analog görüntülü diafon daha ucuzdur ve 'gör ve aç' işini tam karşılar. IP daha pahalıdır ama arama nerede olursanız olun telefonunuza gelir, kapı uzaktan açılır, arama geçmişi saklanır.",
+            "Kamera veya geçiş kontrol planlanıyorsa baştan IP seçin — her şey tek sistemde birleşir.",
+          ] },
+          { h: "Sonraki adım", p: [
+            "Katalogda Hikvision diafonlar ve setler UZS fiyatlarıyla listelidir. Diafonun nereye gerektiğini yazın (daire, ev, ofis, apartman girişi) — bir günde seçenek belirleyip montajı fiyatlandıralım.",
+          ] },
+        ],
+        faq: [
+          { q: "Daire için görüntülü diafon ne kadar?", a: "Panel + monitör seti 1,2–1,5 milyon UZS; montaj yaklaşık 300–500 bin UZS ekler." },
+          { q: "Aramalara telefondan cevap verilir mi?", a: "Evet — IP diafonla (örn. Hikvision) arama uygulamaya yönlenir, kapıyı her yerden açarsınız." },
+          { q: "Müstakil eve diafon kuruyor musunuz?", a: "Evet: dış darbeye dayanıklı panel, içeride monitör, bahçe kapısına elektromekanik kilit — anahtar teslim." },
+          { q: "Montaj ne kadar sürer?", a: "Daire veya ev genelde 2–4 saat; birkaç monitörlü ofis veya apartman girişi projeye göre 1 günden itibaren." },
+        ],
+      },
+      zh: {
+        title: "塔什干可视对讲机价格：设备与安装",
+        excerpt: "2026年音频与可视对讲价格：公寓、别墅与办公室方案。安装费用及影响报价的因素。",
+        sections: [
+          { h: "对讲机价格区间", p: [
+            "公寓用普通音频对讲最便宜，几十万苏姆起。海康威视/大华可视对讲套装（门口机＋室内机）120–150万苏姆起。可将呼叫转到手机的IP可视对讲，视门口机与室内机数量200–400万苏姆起。",
+            "别墅常选防暴力室外门口机加电机锁的套装——报价再加70–150万苏姆。",
+          ] },
+          { h: "安装费用", p: [
+            "工费取决于布线条件：新楼有预埋管更快更省，精装房需要精细走线。参考价每点位30–50万苏姆；准确数字由免费上门勘测后的报价确定。",
+            "办公楼与住宅楼的IP对讲按项目核算：门口机和室内机更多，需要PoE交换机并与门禁联动——刷卡、密码或人脸开门。",
+          ] },
+          { h: "选模拟还是IP", p: [
+            "模拟可视对讲更便宜，完全满足\"看到并开门\"。IP更贵，但呼叫随时到手机、可远程开门、通话记录可查。",
+            "若计划上监控或门禁，直接选IP——全部并入一套系统，一年后无需换设备。",
+          ] },
+          { h: "下一步", p: [
+            "目录中有海康威视对讲机及套装，苏姆计价。告诉我们安装位置（公寓、别墅、办公室、单元门）——一天内选型并核算安装费。",
+          ] },
+        ],
+        faq: [
+          { q: "公寓可视对讲多少钱？", a: "门口机＋室内机套装120–150万苏姆；安装约再加30–50万苏姆。" },
+          { q: "能用手机接听吗？", a: "可以——IP对讲（如海康威视）呼叫转到App，在任何地方都能开门。" },
+          { q: "别墅能装吗？", a: "能：室外防暴力门口机、室内机、院门电机锁，走线整洁，交钥匙工程。" },
+          { q: "安装要多久？", a: "公寓或别墅通常2–4小时；多室内机的办公楼或单元门按项目1天起。" },
         ],
       },
     },
@@ -3375,6 +3483,60 @@ export const ARTICLES: Article[] = [
           { q: "Do you provide maintenance?", a: "Yes, monthly contract service: checking detectors, panels and notification with journal records, as regulations require." },
         ],
       },
+      tr: {
+        title: "Taşkent'te Yangın Alarm Sistemi Fiyatları",
+        excerpt: "2026 anahtar teslim yangın alarmı maliyeti: nokta ve tesis bazında, adresli/adressiz sistem, proje, montaj ve itfaiye teslimi.",
+        sections: [
+          { h: "Fiyatı ne belirler", p: [
+            "Maliyet; proje, ekipman (kontrol paneli, dedektörler, sirenler, kablo) ve montajdan oluşur. Ana çarpanlar: alan, tavan yüksekliği ve sistem tipi. Adressiz sistem küçük mekânlara uygun ve ucuzdur; adresli (Rubezh, Bolid, Dahua) ofis, mağaza ve depoların standardıdır — alarmın tam yerini gösterir.",
+            "Pratik referans nokta fiyatıdır (dedektör + kablo + işçilik). Küçük ofis/mağaza anahtar teslim genelde 5–10 milyon UZS'den başlar; 500 m² üzeri tesisler projeye göre fiyatlanır.",
+          ] },
+          { h: "Neden projesiz olmaz", p: [
+            "Yangın alarmı tavandaki dedektörler değil, standartlara göre kurulan bir sistemdir: dedektör sayısı ve yerleşimi, anons bölgeleri, yedek besleme. Proje, itfaiye denetimine teslim için de zorunludur.",
+            "SAT Solutions proje ve montaj lisansına sahiptir: projelendirir, kurar, devreye alır ve tam evrakla teslim ederiz — tüm süreçte tek sorumlu firma.",
+          ] },
+          { h: "Adresli mi adressiz mi", p: [
+            "Adressiz sistem sadece tetiklenen hattı gösterir — birkaç odalık yer için yeterli ve daha ucuz. Adresli sistem dedektörü tek tek tanır, kendini test eder ve kablodan tasarruf sağlar; 10+ odalı tesislerde fark hızla amorti olur.",
+            "AVM ve iş merkezlerindeki kiracılar için bina ana sistemiyle entegrasyon gerekir — protokolleri yönetimle koordine ederiz.",
+          ] },
+          { h: "Sonraki adım", p: [
+            "Kat planını veya sadece alan ve kullanım amacını gönderin — bir günde iki seçenekli (adresli/adressiz) teklif hazırlayalım; ekipman Taşkent'te stokta.",
+          ] },
+        ],
+        faq: [
+          { q: "Küçük ofis için yangın alarmı ne kadar?", a: "Küçük ofis/mağaza anahtar teslim genelde 5–10 milyon UZS'den: proje, ekipman, montaj, devreye alma. Kesin rakam ücretsiz keşifle." },
+          { q: "Montaj için lisans gerekli mi?", a: "Evet, yangın alarmı proje ve montajı lisanslı iştir. Lisansımız mevcut, tesisi tam evrak paketiyle teslim ederiz." },
+          { q: "Adresli sistem çok mu pahalı?", a: "Ekipman daha pahalı ama kablo ve işçilik daha az. 10+ odada toplam fark küçük, işletme ise çok daha rahat." },
+          { q: "Bakım yapıyor musunuz?", a: "Evet, sözleşmeli aylık bakım: dedektör, panel ve anons testleri kayıt defteriyle — mevzuatın istediği gibi." },
+        ],
+      },
+      zh: {
+        title: "塔什干火灾报警系统价格：交钥匙费用",
+        excerpt: "2026年火灾报警造价：按点位与项目计价，总线制与多线制对比，设计、施工及消防验收。",
+        sections: [
+          { h: "价格由什么决定", p: [
+            "费用由设计、设备（控制主机、探测器、声光报警器、线缆）和施工构成。关键因素是面积、层高和系统类型：多线制便宜、适合小场所；总线制（Rubezh、Bolid、大华）是办公、商铺和仓库的标准——能精确显示报警点位。",
+            "实用的参考是点位价（探测器＋线缆＋工费）。小型办公室或商铺交钥匙通常500–1000万苏姆起；500㎡以上按设计方案报价。",
+          ] },
+          { h: "为什么必须有设计", p: [
+            "火灾报警不是\"天花板上装探头\"，而是按规范建设的系统：探测器数量与布点、广播分区、备用电源。设计文件也是消防部门验收的必要条件。",
+            "SAT Solutions持有设计与施工资质：设计、安装、调试并出具全套文件验收——全流程一家负责。",
+          ] },
+          { h: "总线制还是多线制", p: [
+            "多线制只显示报警回路——两三个房间够用且便宜。总线制精确到探测器、可自检、省线缆；10个房间以上很快抵消差价。",
+            "商场写字楼的租户常需接入大楼总系统——我们与物业协调协议与设备。",
+          ] },
+          { h: "下一步", p: [
+            "发来平面图，或告知面积与用途——一天内给出总线/多线两套报价，设备塔什干现货。",
+          ] },
+        ],
+        faq: [
+          { q: "小办公室的火灾报警多少钱？", a: "小型办公或商铺交钥匙通常500–1000万苏姆起：含设计、设备、施工与调试。免费勘测出准确报价。" },
+          { q: "施工需要资质吗？", a: "需要，火灾报警设计与施工是许可经营项目。我们持有资质，验收文件齐全。" },
+          { q: "总线制贵很多吗？", a: "设备贵一些，但线缆和工费更少。10个房间以上总差价不大，使用体验好得多。" },
+          { q: "提供维保吗？", a: "提供：合同制月度维保，按规范测试探测器、主机与广播并记录台账。" },
+        ],
+      },
     },
   },
   {
@@ -3461,6 +3623,60 @@ export const ARTICLES: Article[] = [
           { q: "Will a regular hard drive work?", a: "It will, but not for long: surveillance drives (WD Purple, SkyHawk) are built for 24/7 recording and last several times longer." },
           { q: "NVR or DVR — which one?", a: "For IP cameras — only NVR. A DVR makes sense when analog cameras are already installed and only the recorder needs replacing." },
           { q: "Do you set up phone access?", a: "Yes: recording, mobile access (Hik-Connect, DMSS), notifications, and settings migration from an old recorder if needed." },
+        ],
+      },
+      tr: {
+        title: "Taşkent'te NVR ve DVR Kayıt Cihazı Fiyatları",
+        excerpt: "2026 NVR/DVR fiyatları: 4, 8 ve 16 kanal, PoE seçenekleri, hard diskin maliyeti ve kameralara uygun cihaz seçimi.",
+        sections: [
+          { h: "Fiyat aralıkları: NVR ve DVR", p: [
+            "IP kameralar için ağ kayıt cihazları (NVR): 4 kanal 0,8–1,5 milyon UZS, 8 kanal 1,5–3 milyon UZS, 16 kanal 3 milyon UZS'den. Dahili PoE'li modeller daha pahalıdır ama ayrı switch ve adaptörleri ortadan kaldırır — 4–8 kamera için çoğu zaman daha avantajlıdır.",
+            "Analog (Turbo HD/HDCVI) kameralar için DVR, aynı kanal sayısındaki NVR'dan geleneksel olarak ucuzdur.",
+          ] },
+          { h: "Diski unutmayın", p: [
+            "Kayıt cihazı disksiz satılır. Güvenlik kaydı için özel HDD gerekir — WD Purple veya Seagate SkyHawk: 1 TB ~450–600 bin UZS'den, 4 TB 1,5–2 milyon UZS. Normal bilgisayar diski kayıt cihazında çok daha kısa ömürlüdür.",
+            "Kapasite; kamera sayısı, çözünürlük ve arşiv derinliğine göre hesaplanır: 4 MP dört kamera, 14 günlük arşiv ≈ 4 TB. Sizin için ücretsiz hesaplarız.",
+          ] },
+          { h: "Kanal sayısı seçimi", p: [
+            "En az 2 kanal yedekle alın — kameralar hep eklenir. Sadece kanal sayısına değil, gelen bit hızına ve çözünürlük desteğine bakın: ucuz bir 8 kanallı, 8 MP sekiz kamerayı kaldıramayabilir.",
+            "Ev ve küçük işletmeye HiLook veya giriş seviyesi Hikvision/Dahua yeter; analitikli depo ve üretim için AcuSense/WizSense üst seriler.",
+          ] },
+          { h: "Sonraki adım", p: [
+            "Katalogda Hikvision, Dahua ve HiLook kayıt cihazları UZS fiyatları ve Taşkent stoklarıyla listeli. Kaç kameranız ve nasıl arşiv gerektiğini yazın — bir günde cihaz ve disk seçelim.",
+          ] },
+        ],
+        faq: [
+          { q: "4 kamera için kayıt cihazı ne kadar?", a: "4 kanallı NVR yaklaşık 800 bin UZS'den, dahili PoE'li 1,2–1,5 milyon UZS'den; artı ~500 bin UZS'den hard disk." },
+          { q: "Normal hard disk olur mu?", a: "Çalışır ama kısa ömürlü olur: güvenlik diskleri (WD Purple, SkyHawk) 7/24 kayda göre tasarlanmıştır ve kat kat uzun dayanır." },
+          { q: "NVR mi DVR mi?", a: "IP kameralarda yalnız NVR. DVR, mevcut analog kameralarda sadece kayıt cihazı değişecekse mantıklıdır." },
+          { q: "Telefon erişimini kuruyor musunuz?", a: "Evet: kayıt, mobil erişim (Hik-Connect, DMSS), bildirimler ve gerekirse eski cihazdan ayar aktarımı." },
+        ],
+      },
+      zh: {
+        title: "塔什干录像机价格：NVR与DVR选购指南",
+        excerpt: "2026年NVR/DVR价格：4路、8路、16路，带PoE与否，硬盘要加多少钱，以及如何按摄像机选型。",
+        sections: [
+          { h: "价格区间：NVR与DVR", p: [
+            "IP摄像机用网络录像机（NVR）：4路约80–150万苏姆，8路150–300万苏姆，16路300万苏姆起。内置PoE的型号更贵，但省去独立交换机和电源——4–8路摄像机通常更划算。",
+            "模拟（Turbo HD/HDCVI）摄像机用DVR，同路数一般比NVR便宜——若现有模拟摄像机暂不更换，是务实之选。",
+          ] },
+          { h: "别忘了硬盘", p: [
+            "录像机不含硬盘。监控需要专用盘——WD Purple或希捷SkyHawk：1TB约45–60万苏姆，4TB约150–200万苏姆。普通电脑硬盘在录像机里寿命短得多。",
+            "容量按摄像机数量、分辨率和存档天数计算：4台400万像素、存14天≈4TB。我们免费为您精确核算。",
+          ] },
+          { h: "如何选路数", p: [
+            "至少留2路余量——摄像机几乎总会加装。除路数外还要看接入码流与分辨率支持：便宜的8路机可能带不动8台800万像素。",
+            "家庭与小微企业选HiLook或海康/大华入门系列即可；带智能分析的仓库与工厂选AcuSense/WizSense高端系列。",
+          ] },
+          { h: "下一步", p: [
+            "目录中有海康威视、大华与HiLook录像机，苏姆计价、塔什干现货。告诉我们摄像机数量与存档需求——一天内选好录像机与硬盘。",
+          ] },
+        ],
+        faq: [
+          { q: "4路录像机多少钱？", a: "4路NVR约80万苏姆起，内置PoE的120–150万苏姆起；另加约50万苏姆起的硬盘。" },
+          { q: "普通硬盘能用吗？", a: "能用但不耐久：监控盘（WD Purple、SkyHawk）为7×24录像设计，寿命长数倍。" },
+          { q: "选NVR还是DVR？", a: "IP摄像机只能配NVR；已有模拟摄像机且只换录像机时选DVR。" },
+          { q: "帮忙设置手机观看吗？", a: "帮：配置录像、手机端（Hik-Connect、DMSS）、消息推送，需要时迁移旧机设置。" },
         ],
       },
     },
