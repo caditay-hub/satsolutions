@@ -2424,6 +2424,114 @@ export const ARTICLES: Article[] = [
           { q: "Kameralarni bir necha kishi ko'ra oladimi?", a: "Ha. Egasi ilovadan kirishni ulashadi — har kimga o'z huquqlari bilan: masalan, faqat jonli ko'rish." },
         ],
       },
+      en: {
+        title: "How to Watch CCTV Cameras Remotely from Your Phone",
+        excerpt: "How to set up smartphone viewing for your security cameras: what you need, which apps to use, and what to do when a camera shows up as offline from another city.",
+        sections: [
+          { h: "How it works", p: [
+            "Modern cameras and recorders connect to the manufacturer's cloud service via P2P: the device establishes the link to the server on its own, and the phone app finds it by serial number or QR code. No static IP, port forwarding or router configuration is required — an internet connection at the site is enough.",
+            "Latency with this kind of viewing is typically 1–3 seconds, and quality adapts automatically to your mobile connection speed: the app lets you switch between a smooth stream and full resolution.",
+          ] },
+          { h: "What you need for mobile viewing", p: [
+            "Three things: a camera or recorder with cloud support, internet at the site (wired, Wi-Fi or a 4G router) and the manufacturer's app on your smartphone. For one or two cameras, Wi-Fi models are enough; for a system of 4+ cameras it makes more sense to install a recorder — then your phone gets both live view and archive playback.",
+            "You don't need much bandwidth: 1–2 Mbps of upload is enough to watch one camera at medium quality. What matters is that the connection stays stable.",
+          ] },
+          { h: "Which apps to use", p: [
+            "Each manufacturer has its own app: Hik-Connect for Hikvision, DMSS for Dahua, EZVIZ for cameras of the same brand, V380 Pro for budget Wi-Fi models. All are free, run on Android and iOS, and let you watch several cameras at once, receive motion push notifications and browse recordings.",
+            "If the site mixes equipment from different brands, it's more convenient to route everything through a single recorder — and watch it all in one app instead of three.",
+          ] },
+          { h: "Setup in four steps", p: [
+            "Step one — connect the camera or recorder to the internet by cable or Wi-Fi. Step two — install the app and create an account. Step three — add the device by scanning the QR code on its housing or from the recorder's menu. Step four — set a strong password and verify remote viewing by disconnecting your phone from the site's Wi-Fi.",
+            "This is also the right moment to configure notifications: motion detection zones and a schedule, so your phone doesn't buzz for every passing car.",
+          ] },
+          { h: "Common problems and fixes", p: [
+            "\"Device offline\" — almost always the internet at the site: check the router and the cable to the camera. \"Video is laggy\" — switch to the sub-stream or lower the viewing resolution. \"No notifications\" — make sure the app is allowed to send push notifications and motion detection is enabled on the recorder.",
+            "If the camera is connected but you can't browse recordings, the recorder's hard drive is usually missing or full, or the camera's memory card has failed.",
+          ] },
+          { h: "Securing remote access", p: [
+            "Replace the factory password with a unique one and enable two-factor authentication on the cloud account if it's available. Don't hand the main account to staff — the apps let you share a camera with limited rights: live view only, no archive or settings access.",
+            "We set up remote viewing on every project turnkey: cameras, recorder, the app on your phones and access rights for family members or employees.",
+          ] },
+        ],
+        faq: [
+          { q: "Can I watch the cameras if the site has no internet?", a: "Remote viewing requires internet. If there's no wired connection, we install a 4G router with a SIM card — that's enough for live view and notifications." },
+          { q: "How many cameras can I add to the app?", a: "Dozens — there's no practical limit for typical sites. Cameras are grouped by site, and with a recorder they're all added at once as a single device." },
+          { q: "Is the cloud service paid?", a: "Basic P2P viewing is free with Hikvision, Dahua and EZVIZ. You only pay for cloud archive storage, and with a recorder that has a hard drive you don't need it." },
+          { q: "Can several people watch the cameras at the same time?", a: "Yes. The owner shares access from the app — each person gets their own permissions: for example, live view only, without archive or settings." },
+        ],
+      },
+      tr: {
+        title: "Telefondan Video İzleme: Kameralara Uzaktan Erişim",
+        excerpt: "Güvenlik kameralarını akıllı telefondan izleme nasıl kurulur: neler gerekir, hangi uygulamalar kullanılır ve kamera başka bir şehirden \"görünmüyorsa\" ne yapılır.",
+        sections: [
+          { h: "Nasıl çalışır", p: [
+            "Modern kameralar ve kayıt cihazları, üreticinin bulut servisine P2P teknolojisiyle bağlanır: cihaz sunucuyla bağlantıyı kendisi kurar, telefondaki uygulama ise onu seri numarası veya QR koduyla bulur. Statik IP, port yönlendirme veya router ayarı gerekmez — tesiste internet olması yeterlidir.",
+            "Bu tür izlemede gecikme genellikle 1–3 saniyedir ve görüntü kalitesi mobil internet hızına otomatik uyum sağlar: uygulamada akıcı yayın ile tam çözünürlük arasında geçiş yapabilirsiniz.",
+          ] },
+          { h: "Telefondan izlemek için ne gerekir", p: [
+            "Üç şey: bulut destekli bir kamera veya kayıt cihazı, tesiste internet (kablo, Wi-Fi veya 4G router) ve akıllı telefonda üreticinin uygulaması. Bir-iki kamera için Wi-Fi modeller yeterlidir; 4 ve üzeri kameralı bir sistemde ise kayıt cihazı kurmak daha doğrudur — böylece telefonda hem canlı izleme hem de arşiv olur.",
+            "Yüksek internet hızına gerek yoktur: bir kamerayı orta kalitede izlemek için 1–2 Mbit/s yükleme hızı yeterlidir. Önemli olan bağlantının stabil olmasıdır.",
+          ] },
+          { h: "Hangi uygulamalar kullanılır", p: [
+            "Her üreticinin kendi uygulaması vardır: Hikvision için Hik-Connect, Dahua için DMSS, aynı adlı kameralar için EZVIZ, bütçe dostu Wi-Fi modeller için V380 Pro. Hepsi ücretsizdir, Android ve iOS'ta çalışır; birden fazla kamerayı aynı anda izlemeye, hareket algılandığında push bildirim almaya ve arşivde gezinmeye imkân verir.",
+            "Tesiste farklı markaların ekipmanı varsa, hepsini tek bir kayıt cihazında toplamak daha pratiktir — üç ayrı uygulama yerine tek uygulamadan izlersiniz.",
+          ] },
+          { h: "Dört adımda kurulum", p: [
+            "Birinci adım — kamerayı veya kayıt cihazını kabloyla ya da Wi-Fi üzerinden internete bağlayın. İkinci adım — uygulamayı yükleyip hesap oluşturun. Üçüncü adım — cihazın gövdesindeki veya kayıt cihazı menüsündeki QR kodu okutarak cihazı ekleyin. Dördüncü adım — güçlü bir şifre belirleyin ve telefonu tesisin Wi-Fi ağından ayırarak izlemeyi test edin.",
+            "Aynı aşamada bildirimleri de ayarlamakta fayda var: hareket algılama bölgeleri ve zamanlama sayesinde telefon her geçen araçta çalmaz.",
+          ] },
+          { h: "Sık karşılaşılan sorunlar ve çözümleri", p: [
+            "\"Cihaz çevrimdışı\" — neredeyse her zaman tesisteki internettir: router'ı ve kameraya giden kabloyu kontrol edin. \"Görüntü takılıyor\" — alt akışa (sub-stream) geçin veya izleme çözünürlüğünü düşürün. \"Bildirim gelmiyor\" — uygulamaya push bildirim izni verildiğinden ve kayıt cihazında hareket algılamanın açık olduğundan emin olun.",
+            "Kamera bağlı ama arşivde gezinilemiyorsa — genellikle kayıt cihazında sabit disk takılı değildir ya da dolmuştur, veya kameradaki hafıza kartı arızalanmıştır.",
+          ] },
+          { h: "Uzaktan erişim güvenliği", p: [
+            "Fabrika şifresini benzersiz bir şifreyle değiştirin ve bulut hesabında varsa iki faktörlü doğrulamayı açın. Ana hesabı çalışanlara vermeyin — uygulamalar kamerayı sınırlı yetkilerle \"paylaşmaya\" izin verir: yalnızca canlı izleme, arşiv ve ayarlara erişim olmadan.",
+            "Her tesiste uzaktan izlemeyi anahtar teslim kuruyoruz: kameralar, kayıt cihazı, telefonlarınızda uygulama ve aile üyeleri ya da çalışanlar için erişim yetkileri.",
+          ] },
+        ],
+        faq: [
+          { q: "Tesiste internet olmadan kameralar izlenebilir mi?", a: "Uzaktan izleme için internet şarttır. Kablolu internet yoksa SIM kartlı bir 4G router kuruyoruz — izleme ve bildirimler için bu yeterlidir." },
+          { q: "Uygulamaya kaç kamera eklenebilir?", a: "Onlarca — sıradan tesisler için bir sınırlama yoktur. Kameralar tesislere göre gruplanır; kayıt cihazı üzerinden ise hepsi tek cihaz olarak bir seferde eklenir." },
+          { q: "Bulut servisi ücretli mi?", a: "Hikvision, Dahua ve EZVIZ'de temel P2P izleme ücretsizdir. Ücret yalnızca bulutta arşiv depolama için alınır; sabit diskli bir kayıt cihazı varsa buna gerek kalmaz." },
+          { q: "Kameraları aynı anda birden fazla kişi izleyebilir mi?", a: "Evet. Sahip, uygulama üzerinden erişimi paylaşır — herkese kendi yetkileriyle: örneğin arşiv ve ayarlar olmadan yalnızca canlı izleme." },
+        ],
+      },
+      zh: {
+        title: "手机远程查看监控摄像头的方法",
+        excerpt: "如何在智能手机上查看监控摄像头画面：需要哪些设备、用什么应用，以及从外地打开时摄像头显示离线该怎么办。",
+        sections: [
+          { h: "工作原理", p: [
+            "如今的摄像机和录像机通过 P2P 技术接入厂商的云服务：设备自行与服务器建立连接，手机应用则通过序列号或二维码找到它。无需公网 IP、端口映射或路由器配置——现场有网络即可。",
+            "这种方式的观看延迟通常为 1–3 秒，画质会根据移动网络速度自动调整：在应用中可以在流畅画面和全分辨率之间切换。",
+          ] },
+          { h: "手机观看需要什么", p: [
+            "三样东西：支持云服务的摄像机或录像机、现场的网络连接（有线、Wi-Fi 或 4G 路由器），以及手机上的厂商应用。一两台摄像机用 Wi-Fi 型号就够了；4 台以上的系统更适合配一台录像机——这样手机上既能实时观看，也能回放录像。",
+            "对网速要求不高：以中等画质观看一路摄像机，1–2 Mbps 的上行带宽就足够。关键是连接要稳定。",
+          ] },
+          { h: "该用哪些应用", p: [
+            "每个厂商都有自己的应用：Hikvision 用 Hik-Connect，Dahua 用 DMSS，EZVIZ 摄像机用同名应用，入门级 Wi-Fi 型号用 V380 Pro。它们全部免费，支持 Android 和 iOS，可同时观看多路画面、接收移动侦测推送并回放录像。",
+            "如果现场混用了不同品牌的设备，更方便的做法是全部接到一台录像机上——在一个应用里看完所有画面，而不是来回切换三个应用。",
+          ] },
+          { h: "四步完成设置", p: [
+            "第一步——用网线或 Wi-Fi 把摄像机或录像机接入互联网。第二步——安装应用并注册账号。第三步——扫描机身上或录像机菜单中的二维码添加设备。第四步——设置高强度密码，并让手机断开现场 Wi-Fi 来验证远程观看是否正常。",
+            "在这一步也建议顺便配置通知：设置移动侦测区域和时间计划，免得每辆路过的汽车都让手机响个不停。",
+          ] },
+          { h: "常见问题及解决办法", p: [
+            "\"设备离线\"——几乎总是现场网络的问题：检查路由器和通往摄像机的网线。\"画面卡顿\"——切换到子码流或降低观看分辨率。\"收不到通知\"——确认应用已获得推送权限，且录像机上已开启移动侦测。",
+            "如果摄像机在线但无法回放录像——通常是录像机没装硬盘或硬盘已满，或者摄像机内的存储卡已损坏。",
+          ] },
+          { h: "远程访问的安全性", p: [
+            "把出厂密码改成独一无二的密码，如果云账号支持双重验证，请务必开启。不要把主账号交给员工——应用支持以受限权限\"分享\"摄像头：仅限实时观看，不能查看录像或修改设置。",
+            "我们为每个项目提供远程观看的一站式部署：摄像机、录像机、您手机上的应用，以及为家人或员工分配的访问权限。",
+          ] },
+        ],
+        faq: [
+          { q: "现场没有网络能看摄像头吗？", a: "远程观看必须有网络。如果没有有线宽带，我们会安装带 SIM 卡的 4G 路由器——足以满足观看和推送通知的需求。" },
+          { q: "应用里能添加多少台摄像机？", a: "几十台——对普通项目来说没有实际限制。摄像机可按场所分组；通过录像机添加时，所有摄像机作为一台设备一次性接入。" },
+          { q: "云服务收费吗？", a: "Hikvision、Dahua 和 EZVIZ 的基础 P2P 观看是免费的。只有云端录像存储才收费，而配有硬盘的录像机并不需要它。" },
+          { q: "多个人能同时观看摄像头吗？", a: "可以。所有者在应用中分享访问权限——每个人拥有各自的权限：例如仅实时观看，不含录像回放和设置。" },
+        ],
+      },
     },
   },
   {
@@ -2501,6 +2609,114 @@ export const ARTICLES: Article[] = [
           { q: "Kamerani registratorsiz ulash mumkinmi?", a: "Ha: kamera xotira kartasiga va bulutga yozadi, ko'rish — Hik-Connect orqali. Registrator kameralar ko'p va uzoq lokal arxiv kerak bo'lganda zarur." },
           { q: "Nega SADP kamerani ko'rmayapti?", a: "Kompyuter va kamera bitta lokal tarmoqda ekanini tekshiring, VPN va brandmauerni o'chiring. Ko'pincha kamerani kompyuterga to'g'ridan-to'g'ri ulash yordam beradi." },
           { q: "Kamera parolini unutsam nima qilaman?", a: "Ko'p modellarda — Reset tugmasini uzoq bosish (zavod sozlamalariga qaytarish). Tugma bo'lmasa — SADP'dagi eksport kodi va Hikvision qo'llab-quvvatlashi orqali." },
+        ],
+      },
+      en: {
+        title: "How to Connect a Hikvision IP Camera: Step-by-Step Guide",
+        excerpt: "Setting up a Hikvision IP camera from scratch: power and cabling, activation via SADP, adding it to Hik-Connect and to a recorder, plus the mistakes beginners typically make.",
+        sections: [
+          { h: "What you'll need", p: [
+            "The camera itself, a twisted-pair cable (UTP cat5e or higher), a power source — a PoE switch, PoE injector or a 12 V adapter — and a computer or smartphone for setup. If you have several cameras, go straight for a PoE switch: power and data run over a single cable, with no power outlet needed at each camera.",
+            "For setup from a computer, download the free SADP utility from the Hikvision website — it discovers every camera on the network and shows their IP addresses.",
+          ] },
+          { h: "Step 1. Cable and power", p: [
+            "Terminate the twisted pair with RJ45 connectors using the T568B standard on both ends and connect the camera to a PoE port on the switch. The camera boots in 30–60 seconds — the link indicator on the connector starts blinking. The maximum cable run for PoE is 100 meters; for longer distances use PoE extenders or fiber.",
+            "If you're powering from a 12 V adapter, watch the polarity and the gauge of the power cable: on long runs the voltage sags, and the camera starts rebooting at night when the IR illumination kicks in.",
+          ] },
+          { h: "Step 2. Activation and password", p: [
+            "A new Hikvision camera ships inactive: on first power-up it requires you to set an administrator password. Launch SADP, find the camera in the list (status Inactive), select it and set a password — at least 8 characters with letters and digits. You can change the IP address to match your network in the same window.",
+            "Store the password somewhere safe: recovering a forgotten password on Hikvision cameras means either the Reset button or contacting support with a device export code — there's no quick way around it.",
+          ] },
+          { h: "Step 3. Adding it to your phone (Hik-Connect)", p: [
+            "In the camera's web interface (Network → Platform Access), enable the Hik-Connect cloud and set a verification code. Then in the Hik-Connect app on your smartphone, tap the plus button and scan the QR code on the camera housing. Live video appears within a minute — you can watch from anywhere in the world.",
+            "If the camera works with a recorder, add the recorder to the app rather than each camera individually — it's simpler and gives you archive access too.",
+          ] },
+          { h: "Step 4. Connecting to a recorder", p: [
+            "Hikvision cameras join their own NVR almost automatically: plug the camera into the recorder's PoE port — it activates the camera with its own password and brings up the picture. When connecting through an external switch, open the recorder menu Camera → Add, find the camera via search and enter its password.",
+            "A recorder from another brand works too — via the ONVIF protocol — but proprietary features (smart analytics, accurate detection) may not work in full.",
+          ] },
+          { h: "Typical mistakes", p: [
+            "The camera \"can't be found\" — most often it sits in a different subnet: the computer is on 192.168.1.x while the camera's factory address is 192.168.1.64, but the router hands out 192.168.0.x. The fix is changing the IP via SADP. The second most common mistake is a poorly crimped cable: the link comes and goes, and the camera keeps rebooting.",
+            "Most importantly: don't leave cameras exposed to the internet with factory settings and outdated firmware — those are exactly the devices that end up in botnets. If you'd rather not deal with any of this, we'll connect and configure everything turnkey, with an installation warranty.",
+          ] },
+        ],
+        faq: [
+          { q: "What cable does an IP camera need?", a: "Twisted pair, UTP cat5e or cat6. Outdoors — outdoor-rated cable or conduit; for runs over 100 m, a PoE extender or fiber with media converters." },
+          { q: "Can I connect a camera without a recorder?", a: "Yes: the camera records to a memory card and to the cloud, and you watch via Hik-Connect. A recorder is needed when you have several cameras and want a long local archive." },
+          { q: "Why doesn't SADP see the camera?", a: "Make sure the computer and the camera are on the same local network, disable VPN and firewall, and check the link indicator on the connector. Connecting the camera directly to the computer often helps." },
+          { q: "What if I forgot the camera password?", a: "On most models — a long press of the Reset button (factory reset). If there's no button, the password is reset through an export code in SADP and Hikvision support." },
+        ],
+      },
+      tr: {
+        title: "Hikvision IP Kamera Nasıl Bağlanır: Adım Adım Rehber",
+        excerpt: "Hikvision IP kamerayı sıfırdan kuruyoruz: güç ve kablolama, SADP ile aktivasyon, Hik-Connect'e ve kayıt cihazına ekleme, yeni başlayanların tipik hataları.",
+        sections: [
+          { h: "Neler gerekli", p: [
+            "Kameranın kendisi, çift bükümlü kablo (UTP cat5e veya üzeri), bir güç kaynağı — PoE switch, PoE enjektör veya 12 V adaptör — ve kurulum için bir bilgisayar ya da akıllı telefon. Birden fazla kamera varsa doğrudan PoE switch alın: güç ve veri tek kablodan gider, her kameranın yanında prize gerek kalmaz.",
+            "Bilgisayardan kurulum için Hikvision'un sitesinden ücretsiz SADP aracını indirin — ağdaki tüm kameraları bulur ve IP adreslerini gösterir.",
+          ] },
+          { h: "Adım 1. Kablo ve güç bağlantısı", p: [
+            "Çift bükümlü kabloyu her iki uçtan T568B standardına göre RJ45 konnektörlerle sıkın ve kamerayı switch'in PoE portuna bağlayın. Kamera 30–60 saniyede açılır — konnektördeki link göstergesi yanıp sönmeye başlar. PoE için maksimum kablo uzunluğu 100 metredir; daha uzun mesafelerde PoE uzatıcı veya fiber kullanılır.",
+            "12 V adaptörle besliyorsanız polariteye ve güç kablosunun kesitine dikkat edin: uzun hatlarda gerilim düşer ve IR aydınlatma devreye girdiğinde kamera geceleri yeniden başlamaya başlar.",
+          ] },
+          { h: "Adım 2. Aktivasyon ve şifre", p: [
+            "Yeni bir Hikvision kamera aktif değildir: ilk açılışta yönetici şifresi belirlemenizi ister. SADP'yi çalıştırın, listede kamerayı bulun (durumu Inactive), işaretleyin ve bir şifre belirleyin — harf ve rakam içeren en az 8 karakter. Aynı ekrandan IP adresini kendi ağınıza uygun şekilde değiştirebilirsiniz.",
+            "Şifreyi güvenli bir yere not edin: Hikvision kameralarda unutulan şifreyi sıfırlamak Reset düğmesiyle ya da cihaz koduyla servise başvurarak yapılan bir işlemdir — hızlıca geri almak mümkün değildir.",
+          ] },
+          { h: "Adım 3. Telefona ekleme (Hik-Connect)", p: [
+            "Kameranın web arayüzünde (Ağ → Platform Erişimi bölümü) Hik-Connect bulutunu etkinleştirin ve bir doğrulama kodu belirleyin. Ardından akıllı telefondaki Hik-Connect uygulamasında artı simgesine dokunun ve kameranın gövdesindeki QR kodu okutun. Bir dakika içinde canlı görüntü gelir — dünyanın her yerinden izleyebilirsiniz.",
+            "Kamera bir kayıt cihazıyla çalışıyorsa, uygulamaya her kamerayı ayrı ayrı değil kayıt cihazını ekleyin — hem daha kolaydır hem de arşive erişim sağlar.",
+          ] },
+          { h: "Adım 4. Kayıt cihazına bağlama", p: [
+            "Hikvision kameralar kendi NVR'ına neredeyse otomatik eklenir: kamerayı kayıt cihazının PoE portuna takın — cihaz kamerayı kendi şifresiyle aktive eder ve görüntüyü ekrana getirir. Harici switch üzerinden bağlantıda kayıt cihazının menüsünde Kamera → Ekle bölümüne girin, kamerayı aramayla bulun ve şifresini girin.",
+            "Başka marka kayıt cihazı da mümkündür — ONVIF protokolüyle; ancak markaya özel işlevler (akıllı analiz, hassas algılama) tam çalışmayabilir.",
+          ] },
+          { h: "Tipik hatalar", p: [
+            "Kamera \"bulunamıyor\" — çoğu zaman farklı bir alt ağdadır: bilgisayar 192.168.1.x'te, kameranın fabrika adresi 192.168.1.64, ama router 192.168.0.x dağıtıyordur. Çözüm, SADP ile IP değiştirmektir. İkinci en sık hata kötü sıkılmış kablodur: link bir gelir bir gider, kamera sürekli yeniden başlar.",
+            "Ve en önemlisi: kameraları fabrika ayarlarıyla ve güncellenmemiş yazılımla \"internete açık\" bırakmayın — botnet'lere düşen cihazlar tam da bunlardır. Uğraşmak istemiyorsanız — anahtar teslim bağlayıp kuruyoruz, montaj garantisiyle.",
+          ] },
+        ],
+        faq: [
+          { q: "IP kamera için hangi kablo gerekir?", a: "Çift bükümlü UTP cat5e veya cat6. Dış mekân için — dış ortam kablosu veya spiral boru içinde; 100 m'yi aşan hatlarda PoE uzatıcı ya da medya konvertörlü fiber." },
+          { q: "Kayıt cihazı olmadan kamera bağlanabilir mi?", a: "Evet: kamera hafıza kartına ve buluta kayıt yapar, izleme Hik-Connect üzerinden olur. Kayıt cihazı, kamera sayısı fazlaysa ve uzun yerel arşiv gerekiyorsa lazımdır." },
+          { q: "SADP kamerayı neden görmüyor?", a: "Bilgisayar ile kameranın aynı yerel ağda olduğundan emin olun, VPN'i ve güvenlik duvarını kapatın, konnektördeki link göstergesini kontrol edin. Kamerayı doğrudan bilgisayara bağlamak çoğu zaman işe yarar." },
+          { q: "Kameranın şifresini unuttuysam ne yapmalıyım?", a: "Çoğu modelde — Reset düğmesine uzun basmak (fabrika ayarlarına dönüş). Düğme yoksa şifre, SADP'deki dışa aktarma kodu ve Hikvision destek üzerinden sıfırlanır." },
+        ],
+      },
+      zh: {
+        title: "Hikvision 网络摄像机接入教程：手把手图解",
+        excerpt: "从零开始接入 Hikvision 网络摄像机：供电与布线、通过 SADP 激活、添加到 Hik-Connect 和录像机，以及新手常犯的错误。",
+        sections: [
+          { h: "需要准备什么", p: [
+            "摄像机本身、双绞线网线（UTP cat5e 或以上）、供电设备——PoE 交换机、PoE 供电器或 12 V 电源适配器——以及用于调试的电脑或手机。如果摄像机不止一台，建议直接选 PoE 交换机：供电和数据走同一根网线，无需在每台摄像机旁布置电源插座。",
+            "用电脑调试时，请从 Hikvision 官网下载免费的 SADP 工具——它能找到网络中的所有摄像机并显示其 IP 地址。",
+          ] },
+          { h: "第一步：接线和供电", p: [
+            "按 T568B 标准在网线两端压接 RJ45 水晶头，把摄像机接到交换机的 PoE 端口。30–60 秒后摄像机完成启动——接口上的链路指示灯开始闪烁。PoE 的最大传输距离为 100 米；更远的距离需要使用 PoE 延长器或光纤。",
+            "使用 12 V 电源供电时，注意极性和电源线的线径：线路过长会导致电压下降，夜间红外补光一开启，摄像机就会反复重启。",
+          ] },
+          { h: "第二步：激活并设置密码", p: [
+            "新的 Hikvision 摄像机处于未激活状态：首次通电时要求设置管理员密码。打开 SADP，在列表中找到该摄像机（状态为 Inactive），勾选后设置密码——至少 8 位，包含字母和数字。在同一界面还可以把 IP 地址改成您所在网络的地址。",
+            "请把密码记在可靠的地方：Hikvision 摄像机找回密码需要通过 Reset 按键，或凭设备码联系售后处理，无法快速恢复。",
+          ] },
+          { h: "第三步：添加到手机（Hik-Connect）", p: [
+            "在摄像机的网页管理界面（\"网络 → 平台接入\"）开启 Hik-Connect 云服务并设置验证码。然后在手机的 Hik-Connect 应用中点击\"加号\"，扫描机身上的二维码。约一分钟后即可看到实时画面——在世界任何地方都能查看。",
+            "如果摄像机配合录像机使用，应把录像机添加到应用，而不是逐台添加摄像机——这样更省事，也方便回放录像。",
+          ] },
+          { h: "第四步：接入录像机", p: [
+            "Hikvision 摄像机接入自家 NVR 几乎是全自动的：把摄像机插到录像机的 PoE 端口——录像机会用自己的密码激活它并显示画面。如果通过外部交换机连接，请进入录像机菜单\"摄像机 → 添加\"，搜索找到摄像机并输入其密码。",
+            "接入其他品牌的录像机也可行——通过 ONVIF 协议，但品牌专属功能（智能分析、精准侦测）可能无法完全发挥。",
+          ] },
+          { h: "常见错误", p: [
+            "\"找不到摄像机\"——多数情况是网段不一致：电脑在 192.168.1.x，摄像机的出厂地址是 192.168.1.64，而路由器分配的却是 192.168.0.x。用 SADP 修改 IP 即可解决。第二常见的错误是水晶头压接不良：链路时通时断，摄像机反复重启。",
+            "最重要的一点：不要让摄像机保持出厂设置、不更新固件就直接暴露在公网上——沦为僵尸网络肉鸡的正是这类设备。如果不想自己折腾——我们可以提供一站式接入和调试服务，并对施工提供质保。",
+          ] },
+        ],
+        faq: [
+          { q: "网络摄像机需要用什么网线？", a: "UTP cat5e 或 cat6 双绞线。室外使用需选室外级线材或穿波纹管；线路超过 100 米时，需使用 PoE 延长器或配光纤收发器的光纤线路。" },
+          { q: "没有录像机能接摄像机吗？", a: "可以：摄像机把录像存到存储卡和云端，通过 Hik-Connect 观看。当摄像机较多且需要较长的本地录像存档时，才需要录像机。" },
+          { q: "为什么 SADP 找不到摄像机？", a: "确认电脑和摄像机在同一局域网内，关闭 VPN 和防火墙，检查接口上的链路指示灯。把摄像机直接连到电脑上往往能解决问题。" },
+          { q: "忘记摄像机密码怎么办？", a: "大多数型号——长按 Reset 按键（恢复出厂设置）。如果没有按键，则通过 SADP 导出设备码并联系 Hikvision 售后来重置密码。" },
         ],
       },
     },
@@ -2582,6 +2798,114 @@ export const ARTICLES: Article[] = [
           { q: "Registrator uchun monitor kerakmi?", a: "Birinchi sozlash uchun qulay, lekin shart emas: registrator kompyuterdan veb-interfeys orqali sozlanadi, kundalik ko'rish telefondan bo'ladi." },
         ],
       },
+      en: {
+        title: "Choosing a Video Recorder: NVR vs DVR, Channels, Drives",
+        excerpt: "A practical guide to choosing a video recorder: how an NVR differs from a DVR, how many channels and which hard drive to get, why PoE ports matter, and which specs to check.",
+        sections: [
+          { h: "NVR or DVR: What's the Difference", p: [
+            "An NVR (network video recorder) works with IP cameras over twisted-pair cabling and understands their smart features — human and vehicle detection, line crossing. A DVR (hybrid/analog recorder) takes cameras over coaxial cable and is mainly needed where legacy analog wiring is still in place.",
+            "For new sites the standard choice today is an NVR with IP cameras: higher resolution, power over the same cable (PoE), and smart analytics instead of false alarms triggered by swaying leaves.",
+          ] },
+          { h: "How Many Channels Do You Need", p: [
+            "Channels define how many cameras the recorder can handle at once. The rule is simple: leave about a third in reserve. Installing 4 cameras? Get an 8-channel unit — adding a camera later is cheaper than replacing the recorder. Typical lineups come in 4, 8, 16 and 32 channels.",
+            "Look beyond the channel count at the incoming bandwidth (Mbps): a budget 8-channel recorder may choke on eight 8 MP cameras streaming at full bitrate.",
+          ] },
+          { h: "Resolution and Decoding", p: [
+            "The recorder should support your cameras' resolution with headroom: for 4 MP cameras, pick models rated up to 8 MP. The second figure to check is how many streams it can display on a monitor simultaneously: cheap models switch to sub-streams in a 4×4 layout, and the picture turns blurry.",
+            "A valuable feature is the H.265 codec: it halves archive size compared to H.264 with no loss in quality.",
+          ] },
+          { h: "Hard Drive and Archive Depth", p: [
+            "The drive is bought separately and must be a surveillance-grade series (WD Purple, Seagate SkyHawk) — regular desktop drives are not built for 24/7 recording and fail quickly. As a capacity benchmark: 4 cameras at 4 MP with H.265 fill about 1 TB in 8–10 days of continuous recording.",
+            "Motion-triggered recording extends archive depth by 2–4 times. For 30 days of footage from 8 cameras, 6–8 TB is usually enough.",
+          ] },
+          { h: "PoE Recorders: When They Make Sense", p: [
+            "An NVR with built-in PoE ports powers the cameras itself: plug in the cable and the camera is running — no separate switch required. It's the ideal option for a home or small office with 4–8 cameras: minimal hardware and setup.",
+            "On larger sites a layout with dedicated PoE switches is more flexible: cameras are grouped by floor, and a single trunk cable runs to the recorder.",
+          ] },
+          { h: "Bottom Line: How to Get It Right", p: [
+            "The selection formula: channels with a ×1.5 reserve, support for your cameras' resolution, H.265, a Purple/SkyHawk drive of the right capacity, and cloud access from your phone. Everything else comes down to the specifics of your site.",
+            "Send us your camera list or a site plan — we'll match a recorder and drive to the archive depth you need, install everything and set up mobile viewing.",
+          ] },
+        ],
+        faq: [
+          { q: "How many days of footage are stored?", a: "It depends on drive capacity, the number of cameras and the recording mode. A typical example: 8 cameras at 4 MP, H.265, motion-triggered recording, a 6 TB drive — about a month of archive." },
+          { q: "Which hard drive does a video recorder need?", a: "A surveillance-grade one: WD Purple or Seagate SkyHawk. They are designed for 24/7 recording and for RAID/multi-drive NVR operation." },
+          { q: "Will cameras from another brand work with my recorder?", a: "Yes — via the ONVIF protocol most IP cameras are compatible with any NVR. However, smart analytics and fine-grained settings work fully only when the camera and recorder come from the same brand." },
+          { q: "Do I need a monitor for the recorder?", a: "It's handy for initial setup but not required: the recorder can be configured through its web interface from a computer, while day-to-day viewing happens on your phone." },
+        ],
+      },
+      tr: {
+        title: "Kayıt Cihazı Seçimi: NVR mi DVR mi, Kanallar, Diskler",
+        excerpt: "Kayıt cihazı seçimini adım adım ele alıyoruz: NVR ile DVR arasındaki fark, kaç kanal ve hangi sabit disk alınmalı, PoE portları ne işe yarar ve teknik özelliklerde nelere bakılmalı.",
+        sections: [
+          { h: "NVR mi DVR mi: Fark Nedir", p: [
+            "NVR (ağ tabanlı kayıt cihazı) IP kameralarla twisted-pair kablo üzerinden çalışır ve kameraların akıllı özelliklerini destekler: insan ve araç algılama, çizgi geçişi tespiti. DVR (hibrit/analog kayıt cihazı) kameraları koaksiyel kablo üzerinden alır ve genellikle eski analog kablolamanın korunduğu yerlerde gerekir.",
+            "Yeni projelerde bugün tercih NVR ve IP kameralardan yanadır: daha yüksek çözünürlük, aynı kablo üzerinden besleme (PoE) ve yapraklardan kaynaklanan yanlış alarmlar yerine akıllı analitik.",
+          ] },
+          { h: "Kaç Kanal Almalı", p: [
+            "Kanal sayısı, cihazın aynı anda kaç kamerayı kabul edebileceğini gösterir. Kural basit: üçte bir oranında yedek payı bırakın. 4 kameranız mı var? 8 kanallı alın — sonradan kamera eklemek, cihazı değiştirmekten daha ucuzdur. Tipik seriler 4, 8, 16 ve 32 kanallıdır.",
+            "Yalnızca kanal sayısına değil, gelen bant genişliğine (Mbps) de bakın: bütçe dostu bir 8 kanallı cihaz, tam bit hızında yayın yapan sekiz adet 8 MP kamerayı kaldıramayabilir.",
+          ] },
+          { h: "Çözünürlük ve Kod Çözme", p: [
+            "Kayıt cihazı, kameralarınızın çözünürlüğünü pay bırakarak desteklemelidir: 4 MP kameralar için 8 MP'ye kadar destek sunan modelleri seçin. İkinci önemli değer, ekranda aynı anda kaç akışı gösterebildiğidir: ucuz modeller 4×4 düzeninde alt akışlara geçer ve görüntü bulanıklaşır.",
+            "H.265 codec'i çok faydalı bir özelliktir: kalite kaybı olmadan arşiv boyutunu H.264'e kıyasla yarıya indirir.",
+          ] },
+          { h: "Sabit Disk ve Arşiv Süresi", p: [
+            "Disk ayrıca satın alınır ve mutlaka video gözetim serisi olmalıdır (WD Purple, Seagate SkyHawk) — sıradan masaüstü diskleri 7/24 kayda göre tasarlanmamıştır ve hızla bozulur. Kapasite için referans: H.265 ile 4 adet 4 MP kamera, kesintisiz kayıtta 8–10 günde yaklaşık 1 TB doldurur.",
+            "Hareket algılamalı kayıt, arşiv süresini 2–4 kat uzatır. 8 kamera için 30 günlük arşive genellikle 6–8 TB yeterlidir.",
+          ] },
+          { h: "PoE'li Kayıt Cihazları: Ne Zaman Mantıklı", p: [
+            "Dahili PoE portlu bir NVR, kameraları kendisi besler: kabloyu taktığınız anda kamera çalışır, ayrıca switch gerekmez. Ev ve 4–8 kameralı küçük ofisler için ideal seçenektir: minimum ekipman ve kurulum.",
+            "Büyük tesislerde ayrı PoE switch'li mimari daha esnektir: kameralar katlara göre gruplanır ve kayıt cihazına tek bir ana hat kablosu çekilir.",
+          ] },
+          { h: "Özet: Hata Yapmamak İçin", p: [
+            "Seçim formülü: ×1,5 yedekli kanal sayısı, kameralarınızın çözünürlüğüne destek, H.265, uygun kapasitede Purple/SkyHawk disk ve telefondan bulut erişimi. Gerisi projenin kendine özgü detaylarıdır.",
+            "Kamera listenizi veya tesis planınızı gönderin — ihtiyacınız olan arşiv süresine uygun kayıt cihazı ve diski seçelim, kurulumu yapıp telefondan izlemeyi ayarlayalım.",
+          ] },
+        ],
+        faq: [
+          { q: "Kayıtlar kaç gün saklanır?", a: "Disk kapasitesine, kamera sayısına ve kayıt moduna bağlıdır. Tipik örnek: 8 adet 4 MP kamera, H.265, hareket algılamalı kayıt, 6 TB disk — yaklaşık bir aylık arşiv." },
+          { q: "Kayıt cihazı için hangi sabit disk gerekir?", a: "Video gözetime özel bir disk: WD Purple veya Seagate SkyHawk. Bu diskler 7/24 kayda ve RAID/çok diskli NVR çalışmasına göre tasarlanmıştır." },
+          { q: "Başka markanın kameraları kayıt cihazıyla uyumlu olur mu?", a: "Evet, ONVIF protokolü sayesinde çoğu IP kamera herhangi bir NVR ile uyumludur. Ancak akıllı analitik ve ince ayarlar, kamera ile kayıt cihazı aynı markadan olduğunda tam kapasite çalışır." },
+          { q: "Kayıt cihazı için monitör gerekli mi?", a: "İlk kurulumda kullanışlıdır ama zorunlu değildir: cihaz bilgisayardan web arayüzü üzerinden yapılandırılır, günlük izleme ise telefondan yapılır." },
+        ],
+      },
+      zh: {
+        title: "如何选择录像机：NVR还是DVR、通道数与硬盘",
+        excerpt: "详解录像机选购要点：NVR与DVR的区别、该选多少通道和哪种硬盘、PoE端口的作用，以及技术参数中需要关注的指标。",
+        sections: [
+          { h: "NVR还是DVR：区别在哪里", p: [
+            "NVR（网络录像机）通过双绞线连接IP摄像机，并支持其智能功能——人形和车辆检测、越线侦测。DVR（混合/模拟录像机）通过同轴电缆接入摄像机，主要用于保留旧模拟布线的场所。",
+            "如今新建项目普遍选择NVR加IP摄像机：分辨率更高，同一根网线即可供电（PoE），智能分析取代了因树叶晃动引起的误报。",
+          ] },
+          { h: "该选多少通道", p: [
+            "通道数决定录像机可同时接入多少台摄像机。规则很简单：留出约三分之一的余量。装4台摄像机就选8通道——日后加装摄像机比更换录像机便宜得多。常见产品线为4、8、16和32通道。",
+            "除了通道数，还要关注接入带宽（Mbps）：入门级8通道录像机在满码率下可能无法承载八台800万像素摄像机。",
+          ] },
+          { h: "分辨率与解码能力", p: [
+            "录像机对摄像机分辨率的支持应留有余量：400万像素摄像机应搭配支持800万像素的型号。第二个指标是可同时在显示器上解码的路数：廉价型号在4×4分屏时会切换到子码流，画面变得模糊。",
+            "H.265编码是非常实用的功能：与H.264相比，可在不损失画质的前提下将存储占用减少一半。",
+          ] },
+          { h: "硬盘与存储时长", p: [
+            "硬盘需单独购买，且必须选择监控专用系列（WD Purple、Seagate SkyHawk）——普通桌面硬盘不适合全天候录像，很快就会损坏。容量参考：4台400万像素摄像机采用H.265连续录像，约8–10天写满1 TB。",
+            "移动侦测录像可将存储时长延长2–4倍。8台摄像机存30天录像，通常6–8 TB即可。",
+          ] },
+          { h: "PoE录像机：什么场景更方便", p: [
+            "内置PoE端口的NVR可直接为摄像机供电：插上网线摄像机即可工作，无需单独的交换机。这是家庭和4–8台摄像机的小型办公室的理想方案：设备和配置都降到最少。",
+            "在大型项目中，采用独立PoE交换机的方案更灵活：摄像机按楼层分组，只需一条主干线缆连接到录像机。",
+          ] },
+          { h: "总结：如何避免选错", p: [
+            "选购公式：通道数按×1.5留余量、支持现有摄像机的分辨率、H.265、容量合适的Purple/SkyHawk硬盘，以及手机云端访问。其余都是具体项目的细节问题。",
+            "把摄像机清单或场地平面图发给我们——我们会按所需存储时长匹配录像机和硬盘，并完成安装和手机观看的调试。",
+          ] },
+        ],
+        faq: [
+          { q: "录像能保存多少天？", a: "取决于硬盘容量、摄像机数量和录像模式。典型示例：8台400万像素摄像机、H.265、移动侦测录像、6 TB硬盘——约可保存一个月。" },
+          { q: "录像机需要什么样的硬盘？", a: "监控专用硬盘：WD Purple或Seagate SkyHawk。它们专为全天候录像以及RAID/多盘位NVR环境设计。" },
+          { q: "其他品牌的摄像机能接入录像机吗？", a: "可以，借助ONVIF协议，大多数IP摄像机可兼容任意NVR。但智能分析和精细设置只有在摄像机与录像机同品牌搭配时才能完整发挥。" },
+          { q: "录像机需要配显示器吗？", a: "初次配置时有显示器更方便，但并非必需：录像机可通过电脑的网页界面进行设置，日常查看则用手机完成。" },
+        ],
+      },
     },
   },
   {
@@ -2661,6 +2985,114 @@ export const ARTICLES: Article[] = [
           { q: "Kamera ovoz yozadimi?", a: "Ko'pchilik uy kameralari — ha, o'rnatilgan mikrofon bor. Ko'plarida ikki tomonlama aloqa uchun dinamik ham bor." },
         ],
       },
+      en: {
+        title: "Home and Apartment Cameras: How to Choose the Right One",
+        excerpt: "Wi-Fi or wired, indoor or outdoor, cloud or memory-card recording — how to pick a camera for your home, apartment or building entrance without overpaying.",
+        sections: [
+          { h: "Where to Start", p: [
+            "First, define the task: keeping an eye on the house while on vacation, watching a nanny or a renovation crew, covering the yard and entrance of a private home, or a car parked under your windows. Everything follows from the task — camera type, mounting spot and recording method.",
+            "For a single room, an inexpensive pan-and-tilt Wi-Fi camera is enough. For the perimeter of a private house you'll need outdoor cameras with IR illumination and, in most cases, a recorder.",
+          ] },
+          { h: "Wi-Fi or Wired", p: [
+            "A Wi-Fi camera takes five minutes to set up: plug it into an outlet, pair it with the app — done. The downsides are dependence on Wi-Fi quality and the need for a nearby outlet. It's the right pick for an apartment and small-scale tasks.",
+            "A wired IP camera powered over PoE runs far more reliably: one cable carries both network and power, with no dropouts from an overloaded router. For a house with a yard and several cameras, wired is the only way to go.",
+          ] },
+          { h: "Indoor or Outdoor", p: [
+            "An outdoor camera must be dust- and water-proof (IP66/IP67) and rated down to −30…−40 °C. Winters in Uzbekistan are mild, but in direct sun the housing heats up to +60 °C, so temperature headroom matters in both directions.",
+            "Indoor cameras are more compact and often track motion by panning. Never mount an indoor camera outside — condensation will kill it within a single season.",
+          ] },
+          { h: "Resolution and Night Vision", p: [
+            "For a home, 2–4 MP is enough to recognize a face from several meters away. Chasing 8 MP for an apartment is pointless — it only inflates the archive size.",
+            "At night, what matters is not megapixels but illumination: IR gives a black-and-white picture, while technologies like ColorVu/Full-Color deliver color. For a yard, color night footage is noticeably more informative.",
+          ] },
+          { h: "Where to Record: Card, Recorder or Cloud", p: [
+            "A memory card inside the camera is the simplest option for 1–2 cameras: cheap, but the card can be carried off along with the camera. Cloud storage solves that, yet requires a subscription. A recorder with a hard drive is the right choice from 3–4 cameras up: weeks of archive and no monthly fees.",
+            "A good practice is to combine both: record to the recorder and push key events to the cloud.",
+          ] },
+          { h: "Typical Kits and What They Cost", p: [
+            "Apartment: one Wi-Fi camera with a memory card. Private house: 2–4 outdoor cameras, a PoE recorder and a drive sized for a month of archive. An entrance hall or courtyard of an apartment building is arranged together with neighbors and the building management — we'll help with the project.",
+            "Our catalog stocks Hikvision, Dahua, EZVIZ and TP-Link Tapo cameras in Tashkent — we'll match one to your budget, install it and set up viewing from your phone.",
+          ] },
+        ],
+        faq: [
+          { q: "Which camera should I put in my apartment to watch from my phone?", a: "A pan-and-tilt Wi-Fi camera at 2–4 MP with a memory card: five-minute setup, viewing through the app from anywhere in the world. From our catalog — EZVIZ or TP-Link Tapo." },
+          { q: "Does a home camera need the internet?", a: "Not for recording: the camera writes to a card or a recorder locally. The internet is needed for viewing from your phone and for notifications." },
+          { q: "How much does video surveillance for a private house cost?", a: "It depends on the number of cameras and the installation work. For a typical kit — 4 outdoor cameras, a recorder and a drive, installed — we'll calculate the price for free after an engineer's site visit." },
+          { q: "Does the camera record sound?", a: "Most home cameras do — a built-in microphone is standard. Many also have a speaker for two-way audio, so you can talk to a visitor through the app." },
+        ],
+      },
+      tr: {
+        title: "Ev ve Daire İçin Kamera: Nasıl Seçilir, Nelere Dikkat Edilir",
+        excerpt: "Wi-Fi mi kablolu mu, iç mekân mı dış mekân mı, buluta mı karta mı kayıt — ev, daire ve apartman girişi için fazla ödemeden doğru kamerayı seçiyoruz.",
+        sections: [
+          { h: "Seçime Nereden Başlamalı", p: [
+            "Önce ihtiyacı belirleyin: tatildeyken evi gözetmek, bakıcıyı veya tadilatı takip etmek, müstakil evin bahçesi ve girişi ya da pencere altındaki araba. Her şey bu ihtiyaca bağlıdır: kamera tipi, montaj yeri ve kayıt yöntemi.",
+            "Tek bir oda için uygun fiyatlı, döner başlıklı bir Wi-Fi kamera yeterlidir. Müstakil evin çevresi içinse IR aydınlatmalı dış mekân kameraları ve genellikle bir kayıt cihazı gerekir.",
+          ] },
+          { h: "Wi-Fi mi Kablolu mu", p: [
+            "Wi-Fi kamera beş dakikada kurulur: prize takın, uygulamaya bağlayın — hazır. Eksileri, Wi-Fi kalitesine bağımlılık ve yakında priz gereksinimidir. Daire ve küçük çaplı işler için doğru tercihtir.",
+            "PoE beslemeli kablolu IP kamera çok daha kararlı çalışır: tek kablo hem ağı hem beslemeyi taşır, aşırı yüklenen router yüzünden kopma yaşanmaz. Bahçeli ev ve birden fazla kamera için tek seçenek kablodur.",
+          ] },
+          { h: "İç Mekân mı Dış Mekân mı", p: [
+            "Dış mekân kamerası neme ve toza karşı korumalı (IP66/IP67) olmalı ve −30…−40 °C'ye kadar çalışabilmelidir. Özbekistan'da kışlar ılımandır, ancak güneş altında gövde +60 °C'ye kadar ısınır; bu yüzden sıcaklık payı her iki yönde de önemlidir.",
+            "İç mekân kameraları daha kompakttır ve çoğu harekete göre dönebilir. İç mekân kamerasını dışarıya takmak olmaz — yoğuşma onu bir sezonda bitirir.",
+          ] },
+          { h: "Çözünürlük ve Gece Çekimi", p: [
+            "Ev için 2–4 MP yeterlidir: birkaç metre mesafeden yüz tanımaya bu kadarı yeter. Daire için 8 MP peşinde koşmaya gerek yok — sadece arşiv boyutu büyür.",
+            "Gece belirleyici olan megapiksel sayısı değil aydınlatmadır: IR aydınlatma siyah-beyaz görüntü verir, ColorVu/Full-Color gibi teknolojiler ise renkli. Bahçe için renkli gece görüntüsü belirgin şekilde daha bilgilendiricidir.",
+          ] },
+          { h: "Kayıt Nereye: Kart, Kayıt Cihazı veya Bulut", p: [
+            "Kameradaki hafıza kartı 1–2 kamera için en basit çözümdür: ucuzdur, ama kartı kamerayla birlikte götürebilirler. Bulut bu sorunu çözer ancak abonelik ister. Sabit diskli kayıt cihazı, 3–4 kameradan itibaren doğru tercihtir: haftalarca arşiv ve hiçbir aylık ücret yok.",
+            "İyi bir uygulama ikisini birleştirmektir: kayıt cihazına kayıt, önemli olaylar ise buluta.",
+          ] },
+          { h: "Tipik Setler ve Maliyet", p: [
+            "Daire: hafıza kartlı bir Wi-Fi kamera. Müstakil ev: 2–4 dış mekân kamerası, PoE kayıt cihazı ve bir aylık arşive yetecek disk. Apartman girişi veya sitenin avlusu komşular ve site yönetimiyle birlikte çözülür — projede size yardımcı oluruz.",
+            "Kataloğumuzda Hikvision, Dahua, EZVIZ ve TP-Link Tapo kameralar Taşkent'te stoktan mevcut — bütçenize uygun modeli seçelim, kurulumu yapalım ve telefondan izlemeyi ayarlayalım.",
+          ] },
+        ],
+        faq: [
+          { q: "Telefondan izlemek için daireye hangi kamera kurulmalı?", a: "Hafıza kartlı, 2–4 MP döner başlıklı bir Wi-Fi kamera: beş dakikada kurulum, dünyanın her yerinden uygulama üzerinden izleme. Kataloğumuzdan — EZVIZ veya TP-Link Tapo." },
+          { q: "Ev kamerası için internet gerekli mi?", a: "Kayıt için gerekmez: kamera yerel olarak karta veya kayıt cihazına yazar. İnternet, telefondan izleme ve bildirimler için gereklidir." },
+          { q: "Müstakil ev için video gözetim sistemi ne kadar tutar?", a: "Kamera sayısına ve montaja bağlıdır. Tipik set olan «4 dış mekân kamerası + kayıt cihazı + disk» kurulum dahil — mühendis keşfinden sonra ücretsiz hesaplarız." },
+          { q: "Kamera ses kaydeder mi?", a: "Ev kameralarının çoğu kaydeder — dahili mikrofon vardır. Birçoğunda çift yönlü konuşma için hoparlör de bulunur: uygulama üzerinden ziyaretçiyle konuşabilirsiniz." },
+        ],
+      },
+      zh: {
+        title: "家用摄像机怎么选：住宅与公寓选购指南",
+        excerpt: "Wi-Fi还是有线、室内还是室外、云端还是存储卡录像——教你为住宅、公寓和楼道选择合适的摄像机，不花冤枉钱。",
+        sections: [
+          { h: "从哪里开始选择", p: [
+            "首先明确需求：度假时照看房屋、监督保姆或装修、私人住宅的院子和入口，还是窗下的汽车。摄像机类型、安装位置和录像方式全都取决于需求。",
+            "看护一个房间，一台价格不高的云台Wi-Fi摄像机就够了。私人住宅的周界则需要带红外补光的室外摄像机，通常还要配一台录像机。",
+          ] },
+          { h: "Wi-Fi还是有线", p: [
+            "Wi-Fi摄像机五分钟即可装好：插上电源、绑定App就能用。缺点是依赖Wi-Fi信号质量，且附近必须有插座。适合公寓和小规模场景。",
+            "采用PoE供电的有线IP摄像机运行更稳定：一根网线同时提供网络和供电，不会因路由器过载而断线。带院子、多台摄像机的住宅，只能选有线方案。",
+          ] },
+          { h: "室内还是室外", p: [
+            "室外摄像机必须具备防尘防水能力（IP66/IP67），工作温度需低至−30…−40 °C——乌兹别克斯坦的冬天虽然温和，但阳光直射下外壳会升到+60 °C，因此温度余量在两个方向上都很重要。",
+            "室内摄像机更小巧，且往往支持跟随移动转动。室内摄像机不能装到室外——冷凝水一个季度就会让它报废。",
+          ] },
+          { h: "分辨率与夜视", p: [
+            "家用场景200–400万像素就足够在几米外认清人脸。为公寓追求800万像素没有必要——只会让存储占用变大。",
+            "夜间起决定作用的不是像素，而是补光：红外补光输出黑白画面，ColorVu/Full-Color之类的技术则输出彩色画面。对院子来说，彩色夜视的信息量明显更高。",
+          ] },
+          { h: "录到哪里：存储卡、录像机还是云端", p: [
+            "摄像机内的存储卡是1–2台摄像机时最简单的方案：便宜，但卡可能连同摄像机一起被拿走。云端能解决这个问题，但需要订阅付费。配硬盘的录像机是3–4台摄像机起的正确选择：数周的录像存档且没有任何月费。",
+            "更好的做法是组合使用：录像存在录像机上，重要事件同时上传云端。",
+          ] },
+          { h: "典型配置与费用", p: [
+            "公寓：一台带存储卡的Wi-Fi摄像机。私人住宅：2–4台室外摄像机、PoE录像机和可存一个月录像的硬盘。多层住宅的楼道或院落需与邻居和物业公司共同商定——我们可以协助规划方案。",
+            "我们的目录中有Hikvision、Dahua、EZVIZ和TP-Link Tapo摄像机，塔什干现货供应——按预算选型、安装并调试手机观看。",
+          ] },
+        ],
+        faq: [
+          { q: "公寓装什么摄像机可以用手机查看？", a: "一台200–400万像素、带存储卡的云台Wi-Fi摄像机：五分钟装好，在世界任何地方通过App查看。可从我们目录中选择EZVIZ或TP-Link Tapo。" },
+          { q: "家用摄像机需要联网吗？", a: "录像本身不需要：摄像机会把录像写入存储卡或录像机本地。联网是为了手机远程查看和接收通知。" },
+          { q: "私人住宅的视频监控要多少钱？", a: "取决于摄像机数量和施工量。典型套装“4台室外摄像机+录像机+硬盘”含安装——工程师上门勘察后免费为您报价。" },
+          { q: "摄像机能录声音吗？", a: "大多数家用摄像机可以，均内置麦克风。许多型号还带扬声器支持双向对讲：可以通过App与来访者通话。" },
+        ],
+      },
     },
   },
   {
@@ -2736,6 +3168,111 @@ export const ARTICLES: Article[] = [
           { q: "Videokuzatuv qancha mobil trafik yeydi?", a: "Push-bildirishnomalar — kuniga megabaytlar. Muntazam jonli ko'rish — har 2–3 soatga taxminan 1 GB. Oyiga 10–20 GB tarif odatda yetarli." },
           { q: "4G-kameralar qishda ishlaydimi?", a: "Tashqi modellar −30 °C va undan pastga mo'ljallangan. Avtonom to'plamlarda qishda akkumulyator zaxirasi kamayadi — panel va batareya zaxira bilan olinadi." },
           { q: "Qurilishga bir necha oyga kamera qo'yish mumkinmi?", a: "Ha, bu odatiy vazifa: machta yoki konteynerdagi avtonom 4G-kamera bir soatda o'rnatiladi va keyingi obyektga ko'chadi." },
+        ],
+      },
+      en: {
+        title: "CCTV Without Internet: Cottage, Warehouse, Construction Site",
+        excerpt: "How to set up cameras where there is no wired internet or even electricity: 4G cameras, routers with a SIM card, and self-powered solar-panel solutions.",
+        sections: [
+          { h: "Recording without internet is perfectly normal", p: [
+            "A common myth says cameras stop working without internet. In reality, internet is only needed for remote viewing — recording itself happens locally, to a memory card or a recorder. A system on a site with no connectivity keeps a full archive that can be reviewed on the spot.",
+            "The real question is usually different: you want to check your cottage or warehouse from your phone. There are three ways to do that.",
+          ] },
+          { h: "Option 1: a 4G router + regular cameras", p: [
+            "The most versatile setup: install a router with a SIM card and connect regular IP cameras and a recorder to it. Mobile internet is enough — 2–5 Mbps covers live viewing, and push notifications consume almost nothing.",
+            "Its main advantage is scalability: one camera or eight, and any models from the catalog. A plan with 10–20 GB per month covers regular viewing.",
+          ] },
+          { h: "Option 2: cameras with a built-in SIM slot", p: [
+            "4G cameras with a SIM slot need no router at all: insert the card and the camera is online. Perfect for one or two spots: a cottage gate, a driveway entrance, a construction site.",
+            "The downside is that every camera needs its own SIM and data plan, so with 3+ cameras the router setup becomes more economical.",
+          ] },
+          { h: "Option 3: fully off-grid with a solar panel", p: [
+            "Where there is no electricity either, kits combining a camera, a battery and a solar panel do the job. The camera wakes up on motion detection, records a clip and sends it over 4G. In power-saving mode such a kit lasts up to a week without sun.",
+            "This is the solution for remote sites: fields, site cabins, construction perimeters — anywhere running a cable costs more than installing a self-contained unit.",
+          ] },
+          { h: "What to consider before you choose", p: [
+            "Check cellular coverage at the site in advance — everything depends on it. On metal hangars and in low-lying areas the router antenna is sometimes mounted outside. For recording, use motion detection — it cuts both data traffic and memory card usage many times over.",
+            "And do not skimp on surge protection: without it, long cable runs in open areas burn out in the very first thunderstorm season.",
+          ] },
+          { h: "Bottom line", p: [
+            "A cottage with power — a 4G router and 2–4 cameras. A single hassle-free spot — a camera with a built-in SIM. An open field — an off-grid kit with a solar panel. All options are in our catalog; we will help pick a data plan and set up viewing from your phone.",
+          ] },
+        ],
+        faq: [
+          { q: "Will the camera keep recording if the internet goes down?", a: "Yes. Recording happens locally to a memory card or a recorder and does not depend on the internet — it is only needed for viewing from your phone and for notifications." },
+          { q: "How much mobile data does video surveillance use?", a: "Push notifications and previews take megabytes per day. Regular live viewing uses roughly 1 GB per 2–3 hours. A 10–20 GB monthly plan is usually enough." },
+          { q: "Do 4G cameras work in winter?", a: "Outdoor models are rated for −30 °C and below. Off-grid kits lose some battery capacity in winter, so the panel and battery should be sized with a margin." },
+          { q: "Can I put a camera on a construction site for a couple of months?", a: "Yes, that is a typical job: a self-contained 4G camera on a mast or a container, installed within an hour and moved to the next site afterwards." },
+        ],
+      },
+      tr: {
+        title: "İnternetsiz Kamera Sistemi: Bağ Evi, Depo, Şantiye",
+        excerpt: "Kablolu internetin, hatta elektriğin bile olmadığı yerlerde kamera nasıl kurulur: 4G kameralar, SIM kartlı router'lar ve güneş panelli bağımsız çözümler.",
+        sections: [
+          { h: "İnternetsiz kayıt gayet normaldir", p: [
+            "Yaygın bir efsane: internet olmadan kameralar çalışmaz. Gerçekte internet yalnızca uzaktan izleme için gereklidir — kayıt işlemi yerel olarak hafıza kartına veya kayıt cihazına yapılır. Ağ bağlantısı olmayan bir tesisteki sistem, yerinde izlenebilecek eksiksiz bir arşiv tutar.",
+            "Asıl soru genellikle başkadır: bağ evini veya depoyu telefondan görmek istersiniz. Bunun için üç çözüm var.",
+          ] },
+          { h: "Çözüm 1: 4G router + standart kameralar", p: [
+            "En çok yönlü seçenek: SIM kartlı bir router kurulur, buna standart IP kameralar ve kayıt cihazı bağlanır. Mobil internet yeterlidir — izleme için 2–5 Mbps yeter, anlık bildirimler ise neredeyse hiç veri tüketmez.",
+            "Bu çözümün artısı ölçeklenebilirlik: ister bir kamera ister sekiz, katalogdaki her model kullanılabilir. Aylık 10–20 GB'lık bir tarife düzenli izlemeyi karşılar.",
+          ] },
+          { h: "Çözüm 2: dahili SIM kartlı kameralar", p: [
+            "SIM yuvalı 4G kameralar router olmadan çalışır: kartı takarsınız, kamera çevrimiçi olur. Bir-iki nokta için idealdir: bağ evi kapısı, arazi girişi, şantiye.",
+            "Eksisi, her kameranın kendi SIM kartına ve tarifesine ihtiyaç duymasıdır; bu yüzden 3 ve üzeri kamerada router'lı şemaya dönmek daha ekonomiktir.",
+          ] },
+          { h: "Çözüm 3: güneş paneliyle tam bağımsızlık", p: [
+            "Elektriğin bile olmadığı yerlerde «kamera + akü + güneş paneli» setleri iş görür. Kamera hareket sensörüyle uyanır, kısa bir video kaydeder ve 4G üzerinden gönderir. Tasarruf modunda böyle bir set güneşsiz bir haftaya kadar dayanır.",
+            "Bu, uzak tesisler için bir çözümdür: tarlalar, şantiye konteynerleri, inşaat çevre hatları — kablo çekmenin bağımsız bir nokta kurmaktan daha pahalı olduğu her yer.",
+          ] },
+          { h: "Seçerken nelere dikkat etmeli", p: [
+            "Tesisteki mobil şebeke kapsamasını önceden kontrol edin — her şey buna bağlıdır. Metal hangarlarda ve çukur arazilerde router anteni bazen dışarıya taşınır. Kayıt için hareket algılamayı seçin — hem trafiği hem kart alanını kat kat azaltır.",
+            "Yıldırım ve aşırı gerilim korumasından da tasarruf etmeyin: açık alanlardaki uzun kablo hatları onsuz ilk fırtına sezonunda yanar.",
+          ] },
+          { h: "Özet", p: [
+            "Elektrikli bağ evi — 4G router ve 2–4 kamera. Zahmetsiz tek nokta — dahili SIM'li kamera. Boş arazi — güneş panelli bağımsız set. Tüm seçenekler kataloğumuzda mevcut; tarife seçiminde yardımcı olur, telefondan izlemeyi de kurarız.",
+          ] },
+        ],
+        faq: [
+          { q: "İnternet kesilirse kamera kayda devam eder mi?", a: "Evet. Kayıt yerel olarak karta veya kayıt cihazına yapılır ve internete bağlı değildir — internet yalnızca telefondan izleme ve bildirimler için gereklidir." },
+          { q: "Video gözetim ne kadar mobil veri tüketir?", a: "Anlık bildirimler ve önizlemeler günde birkaç megabayt tutar. Düzenli canlı izleme yaklaşık her 2–3 saatte 1 GB harcar. Aylık 10–20 GB'lık tarife genellikle yeterlidir." },
+          { q: "4G kameralar kışın çalışır mı?", a: "Dış mekân modelleri −30 °C ve altına dayanıklıdır. Bağımsız setlerde kışın akü kapasitesi azalır — panel ve akü yedek payıyla seçilir." },
+          { q: "Şantiyeye birkaç aylığına kamera kurulabilir mi?", a: "Evet, bu tipik bir iştir: direğe veya konteynere monte edilen bağımsız 4G kamera bir saatte kurulur ve sonra bir sonraki tesise taşınır." },
+        ],
+      },
+      zh: {
+        title: "无网络视频监控：别墅、仓库与工地",
+        excerpt: "在没有有线网络甚至没有电的地方如何布置摄像机：4G 摄像机、插 SIM 卡的路由器，以及太阳能供电的独立方案。",
+        sections: [
+          { h: "没有网络也能正常录像", p: [
+            "一个常见的误区：没有网络摄像机就无法工作。实际上，网络只在远程查看时才需要——录像本身在本地进行，写入存储卡或录像机。现场没有网络的系统照样完整保存录像档案，可在现场随时调阅。",
+            "问题通常在别处：人们希望用手机随时查看别墅或仓库。为此有三种方案。",
+          ] },
+          { h: "方案一：4G 路由器 + 普通摄像机", p: [
+            "最通用的做法：安装一台插 SIM 卡的路由器，再接上普通 IP 摄像机和录像机。移动网络完全够用——观看只需 2–5 Mbps，推送通知几乎不耗流量。",
+            "这一方案的优点是可扩展：一台摄像机也行，八台也行，目录中任何型号都可用。每月 10–20 GB 的套餐足以支撑日常查看。",
+          ] },
+          { h: "方案二：内置 SIM 卡的摄像机", p: [
+            "带 SIM 卡槽的 4G 摄像机完全不需要路由器：插卡即联网。非常适合一两个点位：别墅大门、院区入口、施工现场。",
+            "缺点是每台摄像机都需要单独的 SIM 卡和套餐，因此 3 台以上时改用路由器方案更划算。",
+          ] },
+          { h: "方案三：太阳能板全自供电", p: [
+            "在连电都没有的地方，可以使用“摄像机 + 电池 + 太阳能板”套装。摄像机由移动侦测唤醒，录制短片并通过 4G 发送。省电模式下，这样的套装无日照也能坚持长达一周。",
+            "这是偏远场所的方案：农田、工地板房、施工围界——凡是拉线成本高于安装一个独立点位的地方。",
+          ] },
+          { h: "选型时要注意什么", p: [
+            "先在现场确认移动网络覆盖——一切都取决于它。在金属厂房和低洼地带，有时需要把路由器天线引到室外。录像建议启用移动侦测——它能成倍节省流量和存储卡空间。",
+            "另外不要在防雷防浪涌上省钱：露天长距离线路没有防护，第一个雷雨季就会烧毁。",
+          ] },
+          { h: "小结", p: [
+            "有电的别墅——4G 路由器加 2–4 台摄像机。省心的单点——内置 SIM 卡的摄像机。空旷野外——太阳能独立套装。所有方案我们目录中都有，可协助选择套餐并帮您设置手机查看。",
+          ] },
+        ],
+        faq: [
+          { q: "断网后摄像机还会录像吗？", a: "会。录像在本地写入存储卡或录像机，不依赖网络——网络只用于手机查看和推送通知。" },
+          { q: "视频监控要消耗多少移动流量？", a: "推送通知和预览每天只有几兆。经常性实时观看约每 2–3 小时消耗 1 GB。每月 10–20 GB 的套餐通常够用。" },
+          { q: "4G 摄像机冬天能用吗？", a: "户外型号可耐 −30 °C 及更低温度。独立供电套装冬季电池续航会缩短——太阳能板和电池要留出余量。" },
+          { q: "能在工地临时装几个月摄像机吗？", a: "可以，这是典型需求：独立供电的 4G 摄像机装在立杆或集装箱上，一小时装好，之后可搬到下一个工地。" },
         ],
       },
     },
@@ -2815,6 +3352,111 @@ export const ARTICLES: Article[] = [
           { q: "KVM-uzaytirgich videoregistrator uchun mos keladimi?", a: "Ha, bu eng ko'p qo'llanish: registrator serverxonada, monitor va sichqoncha qo'riqlash postida. Boshqaruv to'liq saqlanadi." },
         ],
       },
+      en: {
+        title: "IP KVM Extender: Control a Computer From a Distance",
+        excerpt: "What a KVM extender is, how it differs from an HDMI extender, and how to move your monitor, keyboard and mouse dozens of meters away from the PC or server.",
+        sections: [
+          { h: "What a KVM extender is", p: [
+            "KVM stands for Keyboard, Video, Mouse. A KVM extender carries the computer's video output and its controls (keyboard + mouse) over a distance — via ordinary twisted-pair cable. The PC sits in a server room or utility closet while the operator works at a monitor in another room.",
+            "The kit consists of a transmitter at the computer and a receiver at the workstation, connected by a single UTP cable up to 60–120 meters long depending on the model.",
+          ] },
+          { h: "How KVM differs from an HDMI extender", p: [
+            "An HDMI extender carries video only — good for moving a TV or a digital-signage screen. A KVM extender also carries USB: a keyboard and mouse plug into the receiver side, giving you full control of the remote computer.",
+            "If you just need to show a picture, an HDMI Extender is enough. If you need to work, get a KVM.",
+          ] },
+          { h: "Where it is used", p: [
+            "The classic case is a security post: the surveillance recorder is locked in a server room while the guard browses cameras with a monitor and mouse at the post. Also: control and dispatch rooms, cash desks and terminals, industrial PCs on factory floors, and noisy desktop towers moved out of an executive's office.",
+            "In server rooms, KVM extenders do away with the 'monitor on a stool' next to the rack.",
+          ] },
+          { h: "What to look at when choosing", p: [
+            "Range: typical models cover 60 and 120 meters over cat5e/cat6. Resolution: 1080p is enough for office work; for surveillance with multi-screen views, 4K models are the better choice. Latency: on quality extenders it is imperceptible when working with a mouse.",
+            "Also check the number of USB ports on the receiver: besides a keyboard and mouse, you may occasionally need to plug in a flash drive or a scanner.",
+          ] },
+          { h: "Installation and common mistakes", p: [
+            "Use a single continuous run of twisted pair with no splices or couplers, terminated to T568B. Route it away from power cables: interference from 220 V lines causes image artifacts. Power the transmitter and receiver from the adapters supplied in the kit.",
+            "If the picture flickers or drops out, the cable is almost always to blame: splices, a run beyond the spec, or cheap copper-clad aluminum instead of pure copper.",
+          ] },
+          { h: "What we have in stock", p: [
+            "The SAT Solutions catalog offers HDMI and KVM extenders for 30, 60 and 120 meters, in stock in Tashkent, with warranty and delivery across Uzbekistan. We will help you choose the right model for your task and install the cable run turnkey.",
+          ] },
+        ],
+        faq: [
+          { q: "What cable does a KVM extender need?", a: "A single continuous run of UTP cat5e or cat6, terminated to the T568B standard, with no splices or couplers along the route. Pure copper, not copper-clad aluminum." },
+          { q: "Is there any lag when controlling the computer?", a: "With quality extenders the latency is imperceptible: the cursor moves as if on a local machine. Noticeable lag points to cable problems or a cheap unit." },
+          { q: "Can the signal go farther than 120 meters?", a: "Yes: with two extenders in cascade, over fiber with media converters, or with KVM over IP solutions across a local network — we will match one to your distance." },
+          { q: "Will a KVM extender work with a video recorder?", a: "Yes, that is the most common use case: the recorder in a server room, the monitor and mouse at the security post. Full control of the recorder is preserved." },
+        ],
+      },
+      tr: {
+        title: "IP KVM Uzatıcı: Bilgisayarı Uzaktan Kontrol Etmek",
+        excerpt: "KVM uzatıcı nedir, HDMI uzatıcıdan farkı ne ve monitör, klavye ile fareyi kasadan veya sunucudan onlarca metre öteye nasıl taşırsınız.",
+        sections: [
+          { h: "KVM uzatıcı nedir", p: [
+            "KVM, Keyboard, Video, Mouse ifadesinin kısaltmasıdır. KVM uzatıcı, bilgisayarın görüntüsünü ve kontrolünü (klavye + fare) sıradan bir bükümlü çift kabloyla uzağa taşır. Kasa sunucu odasında veya depoda dururken operatör başka bir odadaki monitörde çalışır.",
+            "Set, bilgisayar tarafındaki vericiden ve çalışma yerindeki alıcıdan oluşur; aralarında modele göre 60–120 metreye kadar tek bir UTP kablo bulunur.",
+          ] },
+          { h: "KVM'in HDMI uzatıcıdan farkı", p: [
+            "HDMI uzatıcı yalnızca görüntüyü iletir — televizyonu veya reklam ekranını uzağa taşımak için uygundur. KVM uzatıcı buna ek olarak USB iletir: alıcı tarafına klavye ve fare bağlanır ve uzaktaki bilgisayarı eksiksiz yönetirsiniz.",
+            "Sadece görüntü göstermek gerekiyorsa HDMI Extender yeterlidir. Çalışmak gerekiyorsa KVM alın.",
+          ] },
+          { h: "Nerelerde kullanılır", p: [
+            "Klasik senaryo güvenlik noktasıdır: kayıt cihazı sunucu odasında kilitliyken güvenlik görevlisi kameraları noktadaki monitör ve fareyle gezer. Ayrıca: operatör ve dispeçer odaları, kasalar ve terminaller, atölyelerdeki endüstriyel bilgisayarlar, yönetici ofisinden dışarı alınan gürültülü kasalar.",
+            "Sunucu odalarında KVM uzatıcılar, kabinin yanındaki «tabure üstünde monitör» derdini ortadan kaldırır.",
+          ] },
+          { h: "Seçerken nelere bakmalı", p: [
+            "Mesafe: tipik modeller cat5e/cat6 üzerinden 60 ve 120 metredir. Çözünürlük: ofis işleri için 1080p yeterlidir; çoklu ekranlı video gözetim için 4K modeller daha iyidir. Gecikme: kaliteli uzatıcılarda fareyle çalışırken fark edilmez.",
+            "Alıcıdaki USB port sayısına da dikkat edin: klavye ve farenin yanı sıra bazen USB bellek veya tarayıcı bağlamak gerekir.",
+          ] },
+          { h: "Montaj ve tipik hatalar", p: [
+            "Kablo, ek yeri ve geçiş olmadan tek parça bükümlü çift olmalı ve T568B'ye göre sonlandırılmalıdır. Hattı güç kablolarından ayrı döşeyin: 220 V hatlarının paraziti görüntüde bozulmalara yol açar. Vericiyi ve alıcıyı setle gelen adaptörlerden besleyin.",
+            "Görüntü titriyor veya kayboluyorsa suçlu neredeyse her zaman kablodur: ek yerleri, spesifikasyon dışı uzunluk veya saf bakır yerine ucuz bakır kaplı alüminyum.",
+          ] },
+          { h: "Stokta neler var", p: [
+            "SAT Solutions kataloğunda 30, 60 ve 120 metrelik HDMI ve KVM uzatıcılar Taşkent'te stoktan sunulur; garanti ve Özbekistan geneline teslimat vardır. İşinize uygun modeli seçmenize yardımcı olur, hattı anahtar teslim döşeriz.",
+          ] },
+        ],
+        faq: [
+          { q: "KVM uzatıcı için hangi kablo gerekir?", a: "T568B standardına göre sonlandırılmış, hat boyunca ek yeri ve konnektör içermeyen tek parça UTP cat5e veya cat6. Saf bakır olmalı, bakır kaplı alüminyum değil." },
+          { q: "Kontrolde gecikme olur mu?", a: "Kaliteli uzatıcılarda gecikme fark edilmez: imleç yerel bilgisayardaki gibi hareket eder. Belirgin gecikme, kablo sorununun veya ucuz bir çözümün işaretidir." },
+          { q: "Sinyal 120 metreden öteye taşınabilir mi?", a: "Evet: iki uzatıcıyı kaskat bağlayarak, medya dönüştürücülü fiber üzerinden veya yerel ağ üzerinden «KVM over IP» çözümleriyle — mesafenize uygun olanı seçeriz." },
+          { q: "KVM uzatıcı video kayıt cihazına uygun mu?", a: "Evet, en yaygın kullanım budur: kayıt cihazı sunucu odasında, monitör ve fare güvenlik noktasında. Kayıt cihazının kontrolü tamamen korunur." },
+        ],
+      },
+      zh: {
+        title: "IP KVM 延长器：如何远距离操控电脑",
+        excerpt: "什么是 KVM 延长器，它与 HDMI 延长器有何区别，以及如何把显示器、键盘和鼠标从主机或服务器延伸出几十米。",
+        sections: [
+          { h: "什么是 KVM 延长器", p: [
+            "KVM 是 Keyboard、Video、Mouse 的缩写。KVM 延长器通过普通双绞线，把电脑画面和操作（键盘 + 鼠标）传输到远处。主机放在机房或杂物间，操作员则在另一间房的显示器前工作。",
+            "套装由电脑端的发射器和工作位端的接收器组成：两者之间只需一根 UTP 网线，长度依型号可达 60–120 米。",
+          ] },
+          { h: "KVM 与 HDMI 延长器的区别", p: [
+            "HDMI 延长器只传输画面——适合把电视或广告屏移到远处。KVM 延长器还传输 USB：在接收端接上键盘和鼠标，即可完整操控远端电脑。",
+            "只需显示画面，HDMI Extender 就够了；需要实际操作，就选 KVM。",
+          ] },
+          { h: "应用场景", p: [
+            "最经典的是保安值班室：监控录像机锁在机房里，保安在值班台用显示器和鼠标翻看摄像画面。此外还有：操作室和调度室、收银台和终端、车间里的工业电脑，以及从经理办公室移出去的高噪音主机。",
+            "在机房里，KVM 延长器让你告别机柜旁“放在凳子上的显示器”。",
+          ] },
+          { h: "选购要点", p: [
+            "距离：常见型号通过 cat5e/cat6 传输 60 米和 120 米。分辨率：办公用途 1080p 足够；多画面监控最好选 4K 型号。延迟：优质延长器的延迟在用鼠标操作时察觉不到。",
+            "还要注意接收器的 USB 接口数量：除键盘鼠标外，有时还需接 U 盘或扫描仪。",
+          ] },
+          { h: "安装与常见错误", p: [
+            "线缆须为整根双绞线，中途不得有接头和转接，按 T568B 标准压接。走线要与强电线路分开：220 V 线路的干扰会造成画面瑕疵。发射器和接收器请使用套装自带的电源适配器供电。",
+            "画面闪烁或时有时无，几乎总是线缆的问题：有接头、长度超标，或用了廉价的铜包铝线而不是纯铜线。",
+          ] },
+          { h: "现货供应", p: [
+            "SAT Solutions 目录中备有 30、60、120 米的 HDMI 和 KVM 延长器，塔什干现货，提供质保并配送至乌兹别克斯坦全境。我们可帮您按需求选型，并提供布线交钥匙服务。",
+          ] },
+        ],
+        faq: [
+          { q: "KVM 延长器需要什么线缆？", a: "整根 UTP cat5e 或 cat6 双绞线，按 T568B 标准压接，线路中不得有接头和转接件。要纯铜线，不要铜包铝。" },
+          { q: "操控时会有延迟吗？", a: "优质延长器的延迟察觉不到：光标移动与本地电脑无异。明显卡顿说明线缆有问题或设备过于廉价。" },
+          { q: "信号能传得比 120 米更远吗？", a: "可以：两台延长器级联、配光纤收发器走光缆，或通过局域网的 KVM over IP 方案——我们可按您的距离选配。" },
+          { q: "KVM 延长器适合接录像机吗？", a: "适合，这正是最常见的用法：录像机放机房，显示器和鼠标放保安值班台，对录像机的操控完全不受影响。" },
+        ],
+      },
     },
   },
   {
@@ -2890,6 +3532,111 @@ export const ARTICLES: Article[] = [
           { q: "Qonun bo'yicha qaysi tizimlar majburiy?", a: "Yong'in signalizatsiyasi va evakuatsiya haqida ogohlantirish tizimi — tijorat va jamoat binolari uchun majburiy. Qolganlari — mulkdor vazifalari bo'yicha." },
           { q: "Ofis kuchsiz tok montaji qancha davom etadi?", a: "200–500 m² odatiy ofis: kabel trassalari — qora bosqichda bir-ikki hafta, uskunani o'rnatish va sozlash — pardozdan keyin yana bir-ikki hafta." },
           { q: "Quruvchilarda subpudratchi sifatida ishlaysizmi?", a: "Ha, muntazam ravishda genpudrat tarkibida kuchsiz tok bo'limini bajaramiz: o'z loyihamiz, jadvalimiz va ijro hujjatlari bilan." },
+        ],
+      },
+      en: {
+        title: "Low-Voltage Building Systems: Scope and Design Approach",
+        excerpt: "CCTV, access control, fire alarm, networks and telephony — we break down what makes up the low-voltage systems of an office or building and why they should be designed together.",
+        sections: [
+          { h: "What low-voltage systems are", p: [
+            "Low-voltage (or low-current) systems are those that operate at small currents: they carry information rather than power equipment. In a modern building this covers video surveillance, access control, fire and intruder alarms, structured cabling networks, Wi-Fi, telephony, intercoms and public address.",
+            "Formally, the term covers circuits up to 24–48 V — but in practice \"low-voltage\" means the entire set of security and communication systems in a building.",
+          ] },
+          { h: "What a typical project includes", p: [
+            "An office or building usually gets: SCS (network outlets and cabling to the server room), CCTV around the perimeter and in key areas, access control at entrances plus turnstiles, a fire alarm with voice evacuation (mandatory by code), an intruder alarm and Wi-Fi.",
+            "Business centers and industrial sites add video-conference meeting rooms, IP telephony, control-room video walls and parking systems.",
+          ] },
+          { h: "Why they must be designed together", p: [
+            "All low-voltage systems share the same infrastructure: cable routes, trays, the server room, power and switches. Designed separately, they duplicate routes and equipment — wasted money and chaos above the suspended ceiling.",
+            "A unified design saves up to a third of the budget: one server rack, shared cable trays, a single contractor and a schedule coordinated with the fit-out.",
+          ] },
+          { h: "Stages: from design to handover", p: [
+            "The sequence is: site survey and requirements brief → design with route plans and a bill of materials → cable installation during the rough fit-out stage → equipment installation after finishing → commissioning and staff training.",
+            "The key point is to run the cables before the finishing work: installing them over a completed interior costs more and leaves surface trunking on the walls.",
+          ] },
+          { h: "Codes and licenses", p: [
+            "Fire alarm and evacuation systems are designed to fire-safety codes and require a licensed contractor — otherwise the site will fail inspection. Access control on escape routes must unlock on a fire signal, which is also a matter of proper design.",
+            "SAT Solutions holds state licenses for the design and installation of fire-protection systems.",
+          ] },
+          { h: "Where to start", p: [
+            "Send us a floor plan or invite an engineer to your site: we will prepare the requirements brief, a bill of materials and a cost estimate for all systems at once — phased to fit your renovation schedule and budget. Design, installation and service from a single provider, with a warranty.",
+          ] },
+        ],
+        faq: [
+          { q: "Can low-voltage systems be installed after renovation?", a: "Yes, but it costs more and is more visible: cables run in surface trunking along the walls, or parts of the finish have to be removed. The right way is to lay the routes during the rough construction stage." },
+          { q: "Which systems are required by law?", a: "A fire alarm and an evacuation notification system are mandatory for commercial and public buildings. All other systems depend on the owner's needs." },
+          { q: "How long does low-voltage installation take for an office?", a: "A typical 200–500 m² office: cable routes take one to two weeks at the rough stage, then equipment installation and commissioning take another one to two weeks after finishing." },
+          { q: "Do you work as a subcontractor for construction companies?", a: "Yes, we regularly deliver the low-voltage package within general contracts — with our own design, schedule and as-built documentation." },
+        ],
+      },
+      tr: {
+        title: "Binalarda Zayıf Akım Sistemleri: Kapsamı ve Projelendirilmesi",
+        excerpt: "Kamera sistemleri, geçiş kontrolü, yangın alarmı, ağ ve telefon altyapısı — bir ofis veya binanın zayıf akım sistemlerinin nelerden oluştuğunu ve neden birlikte projelendirilmesi gerektiğini anlatıyoruz.",
+        sections: [
+          { h: "Zayıf akım nedir", p: [
+            "Zayıf akım sistemleri, düşük akımlarla çalışan sistemlerdir: ekipmanı beslemek yerine bilgi taşırlar. Modern bir binada bu kapsama video gözetim, geçiş kontrolü, yangın ve hırsız alarmı, yapısal kablolama ağları, Wi-Fi, telefon, interkom ve anons sistemleri girer.",
+            "Resmî olarak 24–48 V'a kadar olan devreler zayıf akım sayılır — ancak pratikte \"zayıf akım\" denince binadaki tüm güvenlik ve iletişim sistemleri bütünü anlaşılır.",
+          ] },
+          { h: "Tipik bir projenin kapsamı", p: [
+            "Bir ofis veya bina genellikle şunları içerir: SCS (ağ prizleri ve sistem odasına giden kablolama), çevre ve kritik alanlarda kamera sistemi, girişlerde geçiş kontrolü ve turnikeler, sesli tahliye anonslu yangın alarmı (mevzuata göre zorunlu), hırsız alarmı ve Wi-Fi.",
+            "İş merkezleri ve üretim tesislerinde bunlara video konferanslı toplantı odaları, IP telefon, kontrol odası video duvarları ve otopark sistemleri eklenir.",
+          ] },
+          { h: "Neden birlikte projelendirilmeli", p: [
+            "Tüm zayıf akım sistemleri ortak altyapıyı paylaşır: kablo güzergâhları, tavalar, sistem odası, besleme ve anahtarlar (switch). Ayrı ayrı projelendirildiklerinde güzergâhlar ve ekipman mükerrer olur — bu, boşa harcanan para ve asma tavan arkasında kaos demektir.",
+            "Tek bir bütünleşik proje bütçenin üçte birine kadar tasarruf sağlar: tek sunucu kabini, ortak kablo tavaları, tek yüklenici ve tadilatla uyumlu bir takvim.",
+          ] },
+          { h: "Aşamalar: projeden teslime", p: [
+            "Sıra şöyledir: saha keşfi ve teknik şartname → güzergâh planları ve keşif listesiyle proje → kaba inşaat aşamasında kabloların döşenmesi → ince işlerden sonra ekipman montajı → devreye alma ve personel eğitimi.",
+            "Kritik nokta, kabloları ince işlerden önce yetiştirmektir: bitmiş bir mekânda kablo çekmek daha pahalıdır ve duvarlarda kablo kanalları bırakır.",
+          ] },
+          { h: "Mevzuat ve lisanslar", p: [
+            "Yangın alarmı ve tahliye anons sistemleri yangın güvenliği mevzuatına göre projelendirilir ve lisanslı bir yüklenici gerektirir — aksi hâlde tesis denetimden geçemez. Kaçış yollarındaki geçiş kontrol sistemleri yangın sinyaliyle otomatik açılmak zorundadır — bu da doğru projelendirme meselesidir.",
+            "SAT Solutions, yangın koruma sistemlerinin projelendirilmesi ve montajı için devlet lisanslarına sahiptir.",
+          ] },
+          { h: "Nereden başlamalı", p: [
+            "Bize kat planını gönderin veya mühendisimizi sahaya davet edin: tüm sistemler için teknik şartnameyi, keşif listesini ve maliyet tahminini tek seferde hazırlayalım — tadilat takviminize ve bütçenize uygun aşamalarla. Proje, montaj ve servis tek elden, garantili.",
+          ] },
+        ],
+        faq: [
+          { q: "Zayıf akım sistemleri tadilattan sonra yapılabilir mi?", a: "Yapılabilir ama daha pahalı ve daha görünür olur: kablolar duvarlarda kanal içinden gider ya da kaplamanın bir kısmının sökülmesi gerekir. Doğrusu, güzergâhları kaba inşaat aşamasında döşemektir." },
+          { q: "Hangi sistemler yasal olarak zorunlu?", a: "Yangın alarmı ve tahliye anons sistemi ticari ve kamusal binalar için zorunludur. Diğer sistemler mülk sahibinin ihtiyaçlarına göre belirlenir." },
+          { q: "Bir ofisin zayıf akım montajı ne kadar sürer?", a: "Tipik 200–500 m² bir ofiste: kablo güzergâhları kaba aşamada bir-iki hafta, ekipman montajı ve devreye alma ince işlerden sonra bir-iki hafta daha sürer." },
+          { q: "İnşaat firmalarına alt yüklenici olarak çalışıyor musunuz?", a: "Evet, ana yüklenicilik kapsamında zayıf akım bölümünü düzenli olarak üstleniyoruz: kendi projemiz, iş programımız ve as-built dokümantasyonumuzla." },
+        ],
+      },
+      zh: {
+        title: "楼宇弱电系统：包含哪些内容，如何设计",
+        excerpt: "视频监控、门禁、消防报警、网络与电话——本文解析办公楼或建筑的弱电系统由哪些部分组成，以及为什么应统一设计。",
+        sections: [
+          { h: "什么是弱电系统", p: [
+            "弱电系统是指以小电流运行的系统：它们传输信息，而不是为设备供电。在现代建筑中，这包括视频监控、门禁控制、消防与防盗报警、结构化布线网络、Wi-Fi、电话、可视对讲和广播系统。",
+            "严格来说，弱电指 24–48 V 以下的电路——但在实际工程中，\"弱电\"泛指建筑内全部安防与通信系统的总和。",
+          ] },
+          { h: "典型项目的组成", p: [
+            "办公楼或建筑通常包括：SCS 综合布线（网络插座及通往机房的线缆）、周界及重点区域的视频监控、出入口门禁和闸机、带疏散广播的消防报警系统（按规范强制配备）、防盗报警和 Wi-Fi。",
+            "商务中心和工业厂区还会增加视频会议室、IP 电话、调度室拼接大屏和停车场管理系统。",
+          ] },
+          { h: "为什么必须统一设计", p: [
+            "所有弱电系统共用同一套基础设施：线缆路由、桥架、机房、供电和交换机。如果各自单独设计，路由和设备就会重复——不仅浪费资金，吊顶内也会一片混乱。",
+            "统一设计可节省多达三分之一的预算：一个机柜、共用桥架、单一承包商，以及与装修同步的工期安排。",
+          ] },
+          { h: "实施阶段：从设计到交付", p: [
+            "流程如下：现场勘察与技术任务书 → 含路由图和设备清单的设计方案 → 在毛坯装修阶段敷设线缆 → 精装完成后安装设备 → 调试并培训人员。",
+            "关键在于赶在装修收尾前完成布线：在已完工的室内敷设线缆成本更高，还会在墙面留下明装线槽。",
+          ] },
+          { h: "规范与资质", p: [
+            "消防报警和疏散广播系统必须按消防安全规范设计，并由持证承包商施工——否则项目无法通过验收。疏散通道上的门禁必须在火警信号触发时自动解锁，这同样取决于设计是否专业。",
+            "SAT Solutions 持有消防系统设计与安装的国家资质。",
+          ] },
+          { h: "从哪里开始", p: [
+            "把平面图发给我们，或邀请工程师到现场：我们将一次性编制全部系统的技术任务书、设备清单和预算——并按您的装修进度和预算分阶段实施。设计、安装、售后服务一站式完成，提供质保。",
+          ] },
+        ],
+        faq: [
+          { q: "装修完成后还能做弱电吗？", a: "可以，但成本更高且更显眼：线缆只能沿墙走明装线槽，或需要局部拆除装修。正确的做法是在毛坯施工阶段预埋线路。" },
+          { q: "哪些系统是法律强制要求的？", a: "消防报警和疏散广播系统对商业及公共建筑是强制性的。其余系统由业主根据需求自行决定。" },
+          { q: "办公楼弱电系统安装需要多长时间？", a: "典型 200–500 平方米的办公室：毛坯阶段敷设线缆需一到两周，装修完成后的设备安装与调试还需一到两周。" },
+          { q: "你们承接建筑公司的分包业务吗？", a: "是的，我们经常在总承包框架内承担弱电专业分包：自带设计方案、施工进度计划和竣工资料。" },
         ],
       },
     },
@@ -2969,6 +3716,111 @@ export const ARTICLES: Article[] = [
           { q: "Kommutator quvvati yetmasa nima bo'ladi?", a: "Kommutator portlarni ustuvorlik bo'yicha o'chira boshlaydi — kameralar tasodifiy «uzilib» turadi. Shuning uchun quvvat byudjeti 25–30 % zaxira bilan hisoblanadi." },
         ],
       },
+      en: {
+        title: "What Is PoE: Powering Cameras and APs over One Cable",
+        excerpt: "PoE delivers power and data over a single network cable. We cover the standards, power budgets, and how PoE simplifies installing cameras, access points and phones.",
+        sections: [
+          { h: "PoE in plain terms", p: [
+            "PoE (Power over Ethernet) is a technology that delivers electrical power over the same twisted-pair cable as the data. A camera, access point or IP phone connects with a single cable — no power outlet or adapter needed next to the device.",
+            "Power comes from a PoE switch or injector, and the device simply works: power negotiation happens automatically and is safe for non-PoE devices.",
+          ] },
+          { h: "Standards and power levels", p: [
+            "There are three main standards: 802.3af (up to 15.4 W) — cameras and phones; 802.3at, also known as PoE+ (up to 30 W) — pan-tilt cameras and Wi-Fi 6 access points; 802.3bt, also known as PoE++ (up to 60–90 W) — PTZ cameras with heaters, video terminals, high-power access points.",
+            "Every standard reaches 100 meters over Cat5e/Cat6. Beyond that, use PoE extenders or fiber.",
+          ] },
+          { h: "The switch power budget", p: [
+            "Every PoE switch has two limits: per-port power and the total budget. An 8-port switch with a 65 W budget cannot power eight 12 W cameras — that requires 96 W in total. This is the most common mistake in DIY equipment selection.",
+            "The rule: add up the rated power of all devices and allow a 25–30% margin — that gives you the minimum switch budget.",
+          ] },
+          { h: "Why CCTV needs PoE", p: [
+            "One cable instead of two runs (network + 220 V mains) means half the installation work and half the points of failure. Centralized power: a single UPS in the rack keeps all cameras running through a blackout. And a frozen camera can be rebooted remotely by cycling its PoE port — no site visit required.",
+            "That is why modern video surveillance systems are built almost exclusively on PoE.",
+          ] },
+          { h: "Injector or switch", p: [
+            "A PoE injector is an \"adapter\" for a single device: a cheap way to power one camera from a regular switch. From three or four devices onward, a PoE switch pays off: fewer boxes, plus centralized monitoring and port management.",
+            "There are also devices that work the other way — PoE splitters, which extract power from the cable for devices without PoE support.",
+          ] },
+          { h: "Bottom line", p: [
+            "PoE is the de facto standard for cameras, access points and IP phones: fewer cables, a central UPS, remote power management. The SAT Solutions catalog offers 4–48 port PoE switches, injectors and extenders in stock in Tashkent; we will help you calculate the power budget for your project.",
+          ] },
+        ],
+        faq: [
+          { q: "Can I plug a regular device into a PoE port?", a: "Yes, it is safe: the switch supplies power only after negotiating with a PoE device. A regular laptop or printer will simply receive data." },
+          { q: "What is the maximum PoE distance?", a: "Up to 100 meters over Cat5e/Cat6 twisted pair — the same as Ethernet itself. For longer runs, use PoE extenders (+100 m each) or fiber with PoE media converters." },
+          { q: "How is PoE+ different from regular PoE?", a: "It is about power: PoE (802.3af) delivers up to 15.4 W, while PoE+ (802.3at) delivers up to 30 W. Pan-tilt cameras, Wi-Fi 6 access points and cameras with heaters need PoE+ or higher." },
+          { q: "What happens if the switch runs out of power?", a: "The switch starts shutting down ports by priority — cameras will randomly drop offline. That is why the power budget is always calculated with a 25–30% margin." },
+        ],
+      },
+      tr: {
+        title: "PoE Nedir: Kamera ve Erişim Noktalarını Ağ Kablosuyla Besleme",
+        excerpt: "PoE, güç ve veriyi tek bir ağ kablosuyla iletir. Standartları, güç bütçesini ve PoE'nin kamera, erişim noktası ve telefon montajını nasıl kolaylaştırdığını anlatıyoruz.",
+        sections: [
+          { h: "En basit haliyle PoE", p: [
+            "PoE (Power over Ethernet), elektrik beslemesini veriyle aynı bakır ağ kablosu (twisted pair) üzerinden ileten bir teknolojidir. Kamera, erişim noktası veya IP telefon tek kabloyla bağlanır — cihazın yanında prize ya da adaptöre gerek kalmaz.",
+            "Gücü bir PoE switch veya enjektör sağlar; cihaz doğrudan çalışır: güç uzlaşması otomatik gerçekleşir ve PoE desteklemeyen cihazlar için güvenlidir.",
+          ] },
+          { h: "Standartlar ve güç seviyeleri", p: [
+            "Üç temel standart vardır: 802.3af (15,4 W'a kadar) — kameralar ve telefonlar; PoE+ olarak da bilinen 802.3at (30 W'a kadar) — hareketli kameralar ve Wi-Fi 6 erişim noktaları; PoE++ olarak da bilinen 802.3bt (60–90 W'a kadar) — ısıtıcılı PTZ kameralar, görüntülü terminaller, yüksek güçlü erişim noktaları.",
+            "Tüm standartların menzili Cat5e/Cat6 üzerinden 100 metredir. Daha uzun mesafeler için PoE uzatıcılar veya fiber kullanılır.",
+          ] },
+          { h: "Switch'in güç bütçesi", p: [
+            "Her PoE switch'in iki sınırı vardır: port başına güç ve toplam bütçe. 65 W bütçeli 8 portlu bir switch, her biri 12 W çeken sekiz kamerayı besleyemez — toplamda 96 W gerekir. Bu, kendi başına ekipman seçerken yapılan en yaygın hatadır.",
+            "Kural şu: tüm cihazların etiket güçlerini toplayın ve %25–30 pay ekleyin — çıkan değer switch'in asgari güç bütçesidir.",
+          ] },
+          { h: "Video gözetimde PoE'nin önemi", p: [
+            "İki güzergâh (ağ + 220 V) yerine tek kablo — yarı yarıya daha az montaj ve arıza noktası. Merkezî besleme: kabindeki tek bir UPS, elektrik kesintisinde tüm kameraları ayakta tutar. Donan bir kamera, PoE portu kapatılıp açılarak uzaktan yeniden başlatılır — sahaya gitmeye gerek kalmaz.",
+            "Bu yüzden modern video gözetim sistemleri neredeyse tamamen PoE üzerine kurulur.",
+          ] },
+          { h: "Enjektör mü switch mi", p: [
+            "PoE enjektörü tek cihaz için bir \"ara aparattır\": sıradan bir switch'ten tek bir kamerayı beslemek gerektiğinde ucuz çözümdür. Üç-dört cihazdan itibaren PoE switch daha avantajlıdır: daha az kutu, merkezî izleme ve port yönetimi.",
+            "Tersine çalışan cihazlar da vardır — PoE splitter'lar: PoE desteklemeyen cihazlar için kablodaki gücü ayırır.",
+          ] },
+          { h: "Özet", p: [
+            "PoE; kameralar, erişim noktaları ve IP telefonlar için fiilî standarttır: daha az kablo, merkezî UPS, uzaktan güç yönetimi. SAT Solutions kataloğunda 4–48 portlu PoE switch'ler, enjektörler ve uzatıcılar Taşkent'te stoktan sunulur; projeniz için güç bütçesini hesaplamanıza yardımcı oluruz.",
+          ] },
+        ],
+        faq: [
+          { q: "PoE porta sıradan bir cihaz bağlanabilir mi?", a: "Evet, güvenlidir: switch, gücü yalnızca PoE cihazıyla uzlaştıktan sonra verir. Sıradan bir dizüstü ya da yazıcı sadece veri alır." },
+          { q: "PoE hangi mesafeye kadar çalışır?", a: "Cat5e/Cat6 kablo üzerinden 100 metreye kadar — Ethernet ağının kendisi gibi. Daha uzun mesafelerde PoE uzatıcılar (her biri +100 m) veya PoE medya dönüştürücülü fiber kullanılır." },
+          { q: "PoE+ ile standart PoE arasındaki fark nedir?", a: "Fark güçtedir: PoE (802.3af) 15,4 W'a, PoE+ (802.3at) 30 W'a kadar verir. Hareketli kameralar, Wi-Fi 6 erişim noktaları ve ısıtıcılı kameralar PoE+ ve üzerini gerektirir." },
+          { q: "Switch'in gücü yetmezse ne olur?", a: "Switch, portları öncelik sırasına göre kapatmaya başlar — kameralar rastgele devreden düşer. Bu yüzden güç bütçesi her zaman %25–30 payla hesaplanır." },
+        ],
+      },
+      zh: {
+        title: "什么是 PoE：通过网线为摄像机和 AP 供电",
+        excerpt: "PoE 通过一根网线同时传输电力和数据。本文介绍相关标准、功率预算，以及 PoE 如何简化摄像机、无线 AP 和话机的安装。",
+        sections: [
+          { h: "通俗理解 PoE", p: [
+            "PoE（Power over Ethernet，以太网供电）是一种通过传输数据的同一根双绞线网线供电的技术。摄像机、无线 AP 或 IP 话机只需一根网线即可接入——设备旁无需电源插座和电源适配器。",
+            "电力由 PoE 交换机或供电器（注入器）提供，设备即插即用：功率协商自动完成，对非 PoE 设备也完全安全。",
+          ] },
+          { h: "标准与功率", p: [
+            "三个主要标准：802.3af（最高 15.4 W）——摄像机和话机；802.3at，即 PoE+（最高 30 W）——云台摄像机和 Wi-Fi 6 无线 AP；802.3bt，即 PoE++（最高 60–90 W）——带加热器的 PTZ 摄像机、可视终端和大功率 AP。",
+            "任何标准在 Cat5e/Cat6 网线上的传输距离都是 100 米。更远的距离需要 PoE 延长器或光纤。",
+          ] },
+          { h: "交换机的功率预算", p: [
+            "每台 PoE 交换机都有两个限制：单端口功率和总功率预算。一台总预算 65 W 的 8 口交换机带不动八台 12 W 的摄像机——总共需要 96 W。这是自行选型时最常见的错误。",
+            "选型规则：把所有设备的标称功率相加，再留出 25–30% 的余量——得到的就是交换机的最低功率预算。",
+          ] },
+          { h: "视频监控为什么需要 PoE", p: [
+            "一根网线取代两条线路（网络 + 220 V 电源）——施工量和故障点都减少一半。集中供电：机柜里一台 UPS 就能在停电时维持所有摄像机运行。摄像机死机时可远程断开 PoE 端口重启，无需到现场。",
+            "因此，现代视频监控系统几乎全部基于 PoE 构建。",
+          ] },
+          { h: "供电器还是交换机", p: [
+            "PoE 供电器相当于单台设备的\"转接头\"：当只需从普通交换机给一台摄像机供电时，它是便宜的方案。设备达到三四台以上时，PoE 交换机更划算：盒子更少，还能集中监控和管理端口。",
+            "还有反向工作的设备——PoE 分离器：从网线中分出电力，供不支持 PoE 的设备使用。",
+          ] },
+          { h: "总结", p: [
+            "PoE 是摄像机、无线 AP 和 IP 话机的事实标准：线缆更少、集中 UPS 供电、远程电源管理。SAT Solutions 产品目录提供 4–48 口 PoE 交换机、供电器和延长器，塔什干现货；我们可协助您为项目计算功率预算。",
+          ] },
+        ],
+        faq: [
+          { q: "普通设备可以接到 PoE 端口上吗？", a: "可以，完全安全：交换机只有在与 PoE 设备完成功率协商后才会供电。普通笔记本电脑或打印机只会收到数据。" },
+          { q: "PoE 的传输距离是多少？", a: "在 Cat5e/Cat6 双绞线上最远 100 米——与以太网本身相同。更远的距离可使用 PoE 延长器（每个再延伸 100 米）或带 PoE 光电转换器的光纤。" },
+          { q: "PoE+ 与普通 PoE 有什么区别？", a: "区别在功率：PoE（802.3af）最高输出 15.4 W，PoE+（802.3at）最高 30 W。云台摄像机、Wi-Fi 6 无线 AP 和带加热器的摄像机需要 PoE+ 及以上标准。" },
+          { q: "如果交换机功率不够会怎样？", a: "交换机会按优先级逐个关闭端口——摄像机会随机掉线。因此功率预算必须留出 25–30% 的余量。" },
+        ],
+      },
     },
   },
   {
@@ -3040,6 +3892,105 @@ export const ARTICLES: Article[] = [
           { q: "Есть ли гарантия?", a: "Да, на всё оборудование — официальная гарантия, на монтажные работы — гарантия компании." },
         ],
       },
+      en: {
+        title: "CCTV Camera Prices in Tashkent: What Drives the Cost",
+        excerpt: "How much CCTV cameras cost in Tashkent: mini cameras, outdoor IP cameras, ready-made kits and installation — and where cutting corners backfires.",
+        sections: [
+          { h: "What determines the price of a camera", p: [
+            "Four factors set the price: resolution (2–8 MP), housing type (indoor, outdoor, PTZ), night-vision technology and the brand. The gap between a no-name model and Hikvision or Dahua comes down to warranty, firmware quality and years of trouble-free operation.",
+            "The most affordable Wi-Fi cameras start at 300,000–500,000 UZS, quality outdoor IP cameras run from 700,000 to 1.5 million UZS, while PTZ and specialty models cost more.",
+          ] },
+          { h: "Mini cameras: why they are cheap", p: [
+            "\"Mini cameras\" usually means compact Wi-Fi models for the home — keeping an eye on a child, a room or staff. The price is low, but so are the capabilities: weak night illumination, reliance on a memory card and on your Wi-Fi quality.",
+            "For a yard, a shop or a warehouse a mini camera is the wrong tool — those sites need a weatherproof housing (IP66), IR illumination and a wired connection to a recorder.",
+          ] },
+          { h: "Kit pricing: home and retail", p: [
+            "In practice you budget for a kit, not a single camera. A typical home setup: 4 outdoor cameras + a PoE NVR + a hard drive + cabling and installation. For a shop: 2–4 indoor cameras over the till and the sales floor, a recorder and mobile viewing set up on your phone.",
+            "Besides the hardware, a kit's price includes cable, power supplies, labour and configuration — so planning a budget around the \"camera price\" alone is a mistake.",
+          ] },
+          { h: "How much installation costs", p: [
+            "Installation pricing depends on the number of cameras, cable run lengths and site complexity: routing cable in a new build is easy, while a finished interior calls for conduit and trunking. Our engineer's site visit and cost estimate are free.",
+            "Sometimes you can save: if the cameras sit close to the recorder or an existing cable route is available, the labour costs less.",
+          ] },
+          { h: "Where not to cut corners", p: [
+            "Three places where saving money backfires: camera quality in key zones (entrance, till), the recorder's hard drive (use a surveillance-rated series) and the installation itself. Everything else is negotiable: brand, archive depth, extra features.",
+            "Our catalogue holds over 3,000 products, cameras are in stock in Tashkent, prices are in UZS and come with a warranty. Describe your task — we will match a kit to your budget and calculate the exact cost.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does installing one camera cost?", a: "Installation depends on the number of cameras and cable length: a single camera averages 150,000–300,000 UZS, a turnkey 4-camera kit is priced by estimate. The engineer's visit and calculation are free." },
+          { q: "How much is the cheapest camera?", a: "A basic indoor Wi-Fi camera starts at 300,000–500,000 UZS. A quality outdoor IP camera usually starts from 700,000 UZS." },
+          { q: "What will a 4-camera kit cost?", a: "It depends on the site: equipment, recorder, hard drive, cable and installation. An engineer visits and prepares the estimate free of charge." },
+          { q: "Is a recorder mandatory?", a: "For 1–2 cameras a memory card is enough. From 3 cameras up, or when you need long footage retention, a recorder is cheaper and more reliable." },
+          { q: "Is there a warranty?", a: "Yes — all equipment carries an official manufacturer warranty, and installation work is covered by our company warranty." },
+        ],
+      },
+      tr: {
+        title: "Taşkent'te Güvenlik Kamerası Fiyatları Neye Bağlı?",
+        excerpt: "Taşkent'te güvenlik kameraları ne kadar: mini kameralar, dış mekân IP kameralar, hazır setler ve montaj — ve nereden kısmamak gerektiği.",
+        sections: [
+          { h: "Kamera fiyatını ne belirler", p: [
+            "Fiyatı dört etken belirler: çözünürlük (2–8 MP), gövde tipi (iç mekân, dış mekân, PTZ), gece görüş teknolojisi ve marka. İsimsiz bir modelle Hikvision veya Dahua arasındaki fark garanti, yazılım kalitesi ve yıllarca sorunsuz çalışmadır.",
+            "En uygun Wi-Fi kameralar 300.000–500.000 UZS'den başlar; kaliteli dış mekân IP kameralar 700.000 ile 1,5 milyon UZS arasındadır; PTZ ve özel modeller daha pahalıdır.",
+          ] },
+          { h: "Mini kameralar: neden ucuz", p: [
+            "\"Mini kamera\" denince genellikle ev için kompakt Wi-Fi modeller anlaşılır — çocuğu, odayı veya personeli izlemek için. Fiyatı düşüktür ama sınırları vardır: zayıf gece aydınlatması, hafıza kartına ve Wi-Fi kalitesine bağımlılık.",
+            "Avlu, mağaza veya depo için mini kamera uygun değildir — buralarda dış mekân gövdesi (IP66), IR aydınlatma ve kayıt cihazına kablolu bağlantı gerekir.",
+          ] },
+          { h: "Set fiyatı: ev ve mağaza", p: [
+            "Pratikte tek kamera değil, set hesaplanır. Ev için tipik paket: 4 dış mekân kamera + PoE kayıt cihazı + sabit disk + kablo ve montaj. Mağaza için: kasa ve satış alanına 2–4 iç mekân kamera, kayıt cihazı ve telefondan izleme kurulumu.",
+            "Set fiyatına ekipmanın yanı sıra kablo, güç kaynağı, işçilik ve yapılandırma da girer — bu yüzden bütçeyi yalnızca \"kamera fiyatına\" göre planlamak yanlıştır.",
+          ] },
+          { h: "Montaj ne kadar tutar", p: [
+            "Montaj fiyatı kamera sayısına, kablo güzergâhlarının uzunluğuna ve mekânın zorluğuna bağlıdır: yeni binada kablo çekmek kolaydır, bitmiş dekorasyonda spiral boru ve kablo kanalı gerekir. Mühendisin keşif ziyareti ve fiyat hesabı bizde ücretsizdir.",
+            "Bazen tasarruf mümkündür: kameralar kayıt cihazına yakınsa veya hazır bir kablo güzergâhı varsa işçilik daha ucuza gelir.",
+          ] },
+          { h: "Nereden kısılmamalı", p: [
+            "Tasarrufun geri teptiği üç nokta: kritik bölgelerdeki (giriş, kasa) kamera kalitesi, kayıt cihazının sabit diski (güvenlik kamerası için özel seri) ve montaj. Gerisi tercihe kalmıştır: marka, arşiv süresi, ek özellikler.",
+            "Kataloğumuzda 3.000'den fazla ürün var; kameralar Taşkent'te stokta, fiyatlar UZS cinsinden ve garantilidir. İhtiyacınızı anlatın — bütçenize uygun seti seçip kesin fiyatı hesaplayalım.",
+          ] },
+        ],
+        faq: [
+          { q: "Bir kameranın montajı ne kadar?", a: "Montaj, kamera sayısına ve kablo uzunluğuna bağlıdır: tek kamera ortalama 150.000–300.000 UZS, 4 kameralık anahtar teslim set keşif sonrası fiyatlandırılır. Mühendis ziyareti ve hesaplama ücretsizdir." },
+          { q: "En ucuz kamera ne kadar?", a: "Basit bir iç mekân Wi-Fi kamera 300.000–500.000 UZS'den başlar. Kaliteli bir dış mekân IP kamera genellikle 700.000 UZS'den başlar." },
+          { q: "4 kameralık set kaça mal olur?", a: "Mekâna bağlıdır: ekipman, kayıt cihazı, disk, kablo ve montaj. Mühendis ücretsiz keşfe gelir ve fiyat teklifini hazırlar." },
+          { q: "Kayıt cihazı şart mı?", a: "1–2 kamera için hafıza kartı yeterlidir. 3 kameradan itibaren ve uzun arşiv gerektiğinde kayıt cihazı hem daha ucuz hem daha güvenilirdir." },
+          { q: "Garanti var mı?", a: "Evet, tüm ekipmanda resmi garanti, montaj işlerinde ise şirket garantisi vardır." },
+        ],
+      },
+      zh: {
+        title: "塔什干监控摄像头价格：由哪些因素决定",
+        excerpt: "塔什干监控摄像头多少钱：迷你摄像头、室外IP摄像头、成套方案与安装费用，以及哪些环节不该省钱。",
+        sections: [
+          { h: "摄像头价格由什么决定", p: [
+            "价格取决于四个因素：分辨率（2–8 MP）、外壳类型（室内、室外、PTZ云台）、夜视技术和品牌。杂牌产品与Hikvision、Dahua之间的差距，体现在质保、固件质量和多年稳定运行上。",
+            "最便宜的Wi-Fi摄像头约30万–50万苏姆起，优质室外IP摄像头在70万至150万苏姆之间，PTZ云台及特种型号价格更高。",
+          ] },
+          { h: "迷你摄像头为什么便宜", p: [
+            "所谓“迷你摄像头”，通常指家用的小型Wi-Fi机型——用来照看孩子、房间或店员。价格虽低，但局限明显：夜视补光弱，依赖存储卡，还受Wi-Fi信号质量影响。",
+            "院子、商店或仓库并不适合迷你摄像头——这些场景需要室外防护外壳（IP66）、红外补光，并通过有线方式接入录像机。",
+          ] },
+          { h: "成套方案价格：住宅与商铺", p: [
+            "实际预算按整套方案计算，而不是单个摄像头。住宅典型配置：4台室外摄像头 + PoE录像机 + 硬盘 + 线缆与安装。商铺配置：收银台和营业区上方2–4台室内摄像头，加录像机并配置手机远程查看。",
+            "成套价格除设备外，还包含线缆、电源、施工和调试——因此只按“摄像头单价”做预算是不准确的。",
+          ] },
+          { h: "安装费用是多少", p: [
+            "安装费取决于摄像头数量、布线长度和现场复杂度：毛坯新房布线简单，已装修的房间则需要波纹管和线槽。我们的工程师上门勘察和报价免费。",
+            "有时可以省钱：如果摄像头离录像机较近，或已有现成的走线通道，施工费用会更低。",
+          ] },
+          { h: "哪些环节不该省钱", p: [
+            "三个省钱容易吃亏的环节：关键区域（入口、收银台）的摄像头品质、录像机硬盘（应选监控专用系列）以及安装施工。其余方面可以灵活取舍：品牌、录像保存时长、附加功能。",
+            "我们的目录有3000多种商品，摄像头在塔什干有现货，以苏姆计价并提供质保。告诉我们您的需求——我们会按预算配好方案并核算准确报价。",
+          ] },
+        ],
+        faq: [
+          { q: "安装一台摄像头多少钱？", a: "安装费取决于摄像头数量和布线长度：单台摄像头平均15万–30万苏姆，4台摄像头的整套交钥匙方案按报价单计算。工程师上门与核算免费。" },
+          { q: "最便宜的摄像头多少钱？", a: "简单的室内Wi-Fi摄像头约30万–50万苏姆起。优质室外IP摄像头一般70万苏姆起。" },
+          { q: "4台摄像头的整套方案要多少钱？", a: "取决于现场情况：设备、录像机、硬盘、线缆和安装。工程师免费上门并出具报价单。" },
+          { q: "必须配录像机吗？", a: "1–2台摄像头用存储卡即可。3台以上或需要较长录像保存期时，录像机更划算也更可靠。" },
+          { q: "有质保吗？", a: "有。所有设备均提供官方质保，安装工程由公司提供质保。" },
+        ],
+      },
     },
   },
   {
@@ -3109,6 +4060,102 @@ export const ARTICLES: Article[] = [
           { q: "Смета платная?", a: "Нет, выезд инженера и расчёт сметы бесплатные." },
           { q: "Как прокладывают кабель в готовом ремонте?", a: "В гофре или кабель-канале по стенам, где возможно — за подвесным потолком. На этапе проекта согласуем наиболее аккуратный вариант." },
           { q: "Можно купить камеры самому?", a: "Да, выполняем и только монтаж. Но в этом случае гарантия распространяется лишь на наши работы." },
+        ],
+      },
+      en: {
+        title: "CCTV Installation Cost: Work Stages and Price Breakdown",
+        excerpt: "How camera installation works: site survey, choosing the number of cameras, cabling, configuration and mobile viewing — and what makes up the cost.",
+        sections: [
+          { h: "Where the work begins", p: [
+            "It starts with a free site visit by an engineer: entrances, the till, the warehouse, the yard and blind spots are mapped out. From there the number of cameras, their types and the cable routes are decided — and that is exactly where the price is born.",
+            "A good design uses the minimum number of cameras with full coverage: one well-placed camera beats two installed at random.",
+          ] },
+          { h: "Installation stages", p: [
+            "Cable routing (conduit, tray or in-wall), mounting cameras on brackets, assembling the recorder and power supplies in a cabinet, network setup, camera focusing and recording checks. Finally, the mobile app is configured and your staff are trained.",
+            "An average site — a house or a shop — is completed in a single day; large sites take several days.",
+          ] },
+          { h: "What makes up the price", p: [
+            "Equipment (cameras, recorder, hard drive), consumables (cable, conduit, connectors, power supplies) and labour. On a site with a finished interior, installation costs more: cable routes are harder to conceal.",
+            "Pole mounting, long outdoor runs, fibre optics and outdoor cabinets are priced separately — these come up on yards and industrial sites.",
+          ] },
+          { h: "Configuration and mobile viewing", p: [
+            "After installation we always configure the essentials: motion detection zones, the recording schedule, archive retention, the mobile app and access rights. You get a finished, working system — not a \"set the rest up yourself\".",
+            "How remote viewing works — through Hik-Connect, DMSS and other apps — we cover in detail in a separate article.",
+          ] },
+          { h: "Warranty and service", p: [
+            "Equipment carries an official manufacturer warranty; installation work is covered by our company warranty. Later you can sign a maintenance contract: preventive checks, camera cleaning and hard-drive health monitoring.",
+            "For a site survey and an estimate, call us or write in the website chat — an engineer will visit and calculate the exact cost.",
+          ] },
+        ],
+        faq: [
+          { q: "How long does installation take?", a: "For a house or a shop, usually one day. A large site (warehouse, factory, yard) takes several days, depending on the amount of cabling work." },
+          { q: "Is the estimate paid?", a: "No — the engineer's visit and the cost estimate are free." },
+          { q: "How is cable routed in a finished interior?", a: "In conduit or surface trunking along the walls, and above a suspended ceiling where possible. At the design stage we agree on the tidiest option." },
+          { q: "Can I buy the cameras myself?", a: "Yes, we also do installation-only jobs. In that case, however, our warranty covers only the work we performed." },
+        ],
+      },
+      tr: {
+        title: "Kamera Kurulum Fiyatı: Montaj Aşamaları ve Maliyet",
+        excerpt: "Kamera kurulumu nasıl ilerler: keşif, kamera sayısının belirlenmesi, kablo çekimi, yapılandırma ve telefondan izleme — fiyat nelerden oluşur.",
+        sections: [
+          { h: "İşler nereden başlar", p: [
+            "Önce mühendis mekâna gelir (ücretsiz): girişler, kasa, depo, avlu ve kör noktalar işaretlenir. Ardından kamera sayısı, tipleri ve kablo güzergâhları belirlenir — fiyat tam da burada ortaya çıkar.",
+            "İyi bir projede kamera sayısı minimum, kapsama alanı ise tamdır: doğru yerleştirilmiş tek kamera, rastgele takılmış iki kameradan daha faydalıdır.",
+          ] },
+          { h: "Montaj aşamaları", p: [
+            "Kablo çekimi (spiral boru, kablo tavası veya duvar içi), kameraların braketlere montajı, kayıt cihazı ve güç kaynaklarının panoya yerleştirilmesi, ağ ayarları, kameraların odaklanması ve kayıt kontrolü. Sonunda telefondaki uygulama kurulur ve personel eğitilir.",
+            "Ortalama bir mekân — ev veya mağaza — bir günde tamamlanır; büyük projeler birkaç gün sürer.",
+          ] },
+          { h: "Fiyat nelerden oluşur", p: [
+            "Ekipman (kameralar, kayıt cihazı, disk), sarf malzemeleri (kablo, spiral boru, konnektörler, güç kaynakları) ve işçilik. Dekorasyonu bitmiş mekânda montaj daha pahalıdır: güzergâhları gizlemek zorlaşır.",
+            "Direğe montaj, uzun dış mekân hatları, fiber optik ve dış mekân panoları ayrıca hesaplanır — bunlara avlu ve sanayi tesislerinde rastlanır.",
+          ] },
+          { h: "Yapılandırma ve telefondan izleme", p: [
+            "Montajdan sonra mutlaka şunları ayarlarız: hareket algılama bölgeleri, kayıt programı, arşiv süresi, telefon uygulaması ve erişim yetkileri. \"Gerisini kendiniz ayarlarsınız\" değil, çalışır durumda hazır bir sistem teslim alırsınız.",
+            "Uzaktan izlemenin nasıl çalıştığını — Hik-Connect, DMSS ve diğer uygulamalar üzerinden — ayrı bir yazıda ayrıntılı anlattık.",
+          ] },
+          { h: "Garanti ve servis", p: [
+            "Ekipmanda resmi garanti, montaj işlerinde şirket garantisi vardır. Sonrasında bakım sözleşmesi yapılabilir: periyodik kontrol, kamera temizliği, disk durumunun izlenmesi.",
+            "Keşif ve fiyat teklifi için bizi arayın veya sitedeki sohbete yazın — mühendis gelir ve kesin fiyatı hesaplar.",
+          ] },
+        ],
+        faq: [
+          { q: "Kurulum ne kadar sürer?", a: "Ev veya mağaza için genellikle bir gün. Büyük mekânlar (depo, üretim tesisi, avlu) kablo işlerinin hacmine göre birkaç gün sürer." },
+          { q: "Keşif ücretli mi?", a: "Hayır, mühendis ziyareti ve fiyat hesaplaması ücretsizdir." },
+          { q: "Bitmiş dekorasyonda kablo nasıl çekilir?", a: "Duvar boyunca spiral boru veya kablo kanalı içinde, mümkün olan yerlerde asma tavan üzerinden. Proje aşamasında en temiz çözümü birlikte belirleriz." },
+          { q: "Kameraları kendim alabilir miyim?", a: "Evet, yalnızca montaj hizmeti de veriyoruz. Ancak bu durumda garanti sadece yaptığımız işleri kapsar." },
+        ],
+      },
+      zh: {
+        title: "视频监控安装价格：施工流程与费用构成",
+        excerpt: "摄像头安装如何进行：现场勘察、确定摄像头数量、布线施工、系统调试与手机远程查看——以及费用由哪些部分构成。",
+        sections: [
+          { h: "工程从哪里开始", p: [
+            "首先由工程师免费上门勘察：标出入口、收银台、仓库、院子和监控盲区。随后确定摄像头数量、类型和布线路径——价格正是在这一步形成的。",
+            "好的方案用最少的摄像头实现全覆盖：一台位置正确的摄像头，胜过两台随意安装的。",
+          ] },
+          { h: "安装施工步骤", p: [
+            "布线（波纹管、桥架或墙内暗线）、支架安装摄像头、在机柜内组装录像机和电源、配置网络、调整摄像头焦距并测试录像。最后配置手机App并对员工进行使用培训。",
+            "普通项目——住宅或商铺——一天即可完工，大型项目需要数天。",
+          ] },
+          { h: "价格由哪些部分构成", p: [
+            "设备（摄像头、录像机、硬盘）、耗材（线缆、波纹管、接头、电源）和施工费。已装修完的场所安装费更高：走线更难隐藏。",
+            "立杆安装、室外长距离布线、光纤和室外机柜单独计价——这些常见于院区和工业场所。",
+          ] },
+          { h: "系统调试与手机查看", p: [
+            "安装完成后我们一定会做好调试：移动侦测区域、录像计划、录像保存时长、手机App和访问权限。您拿到的是一套可直接使用的完整系统，而不是“剩下的自己设置”。",
+            "远程查看如何实现——通过Hik-Connect、DMSS等App——我们在另一篇文章中做了详细讲解。",
+          ] },
+          { h: "质保与售后服务", p: [
+            "设备享受官方质保，安装工程由公司质保。之后还可签订维保合同：定期检查、清洁摄像头、检测硬盘状态。",
+            "如需上门测量和报价，请致电或在网站聊天窗口留言——工程师将上门核算准确费用。",
+          ] },
+        ],
+        faq: [
+          { q: "安装需要多长时间？", a: "住宅或商铺通常一天完成。大型场所（仓库、工厂、院区）视布线工程量需要数天。" },
+          { q: "报价收费吗？", a: "不收费，工程师上门勘察和报价均免费。" },
+          { q: "已装修的房间怎么布线？", a: "沿墙使用波纹管或线槽，可行时走吊顶内部。在方案阶段我们会与您确认最美观的走线方式。" },
+          { q: "可以自己购买摄像头吗？", a: "可以，我们也承接纯安装服务。但这种情况下质保仅覆盖我们的施工部分。" },
         ],
       },
     },
