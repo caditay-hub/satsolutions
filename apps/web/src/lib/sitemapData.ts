@@ -6,7 +6,7 @@
 // индексом, и в отчёте «Файлы Sitemap» видна статистика по каждому разделу отдельно.
 //
 // Логика формирования URL (hreflang-альтернаты, дедуп типов, отдельные записи для
-// uz/en) полностью сохранена — изменилась только «упаковка».
+// каждой локали) полностью сохранена — изменилась только «упаковка».
 import { getBrands, getCategories, getPortfolio, getProducts, getServices, getBrandTypePairs } from "@/lib/api";
 import { ALL_SERVICES } from "@/lib/servicesData";
 import { ARTICLES } from "@/lib/articlesData";
@@ -47,13 +47,16 @@ function localeAlternates(path: string, locales: string[]) {
   return languages;
 }
 
-// UZ/EN-версии отдельными записями: одних hreflang-альтернатов Google для обнаружения
-// не хватало (GSC у /uz/… — «нет ссылающихся файлов Sitemap»). tr/zh — фолбэк контента,
-// их не плодим, они остаются в hreflang.
+// Каждая локаль — отдельной записью: одних hreflang-альтернатов Google для обнаружения
+// не хватало (GSC у /uz/… — «нет ссылающихся файлов Sitemap»). tr/zh раньше были
+// фолбэком на английский и в карту не попадали; с августа 2026 они переведены целиком
+// (товары, услуги, блог, категорийные лонгриды), поэтому идут наравне с остальными.
+const EXPAND_LOCALES = ["uz", "en", "tr", "zh"];
+
 export function expandLocales(entries: SitemapEntry[]): SitemapEntry[] {
   return entries.flatMap((e) => {
     const langs = (e.alternates?.languages ?? {}) as Record<string, string>;
-    return [e, ...["uz", "en"].filter((l) => langs[l]).map((l) => ({ ...e, url: langs[l] }))];
+    return [e, ...EXPAND_LOCALES.filter((l) => langs[l]).map((l) => ({ ...e, url: langs[l] }))];
   });
 }
 
@@ -200,7 +203,8 @@ export async function productEntries(): Promise<SitemapEntry[]> {
 }
 
 // ── 4. Контент: блог + кейсы ────────────────────────────────────────────────
-const BLOG_LOCALES = ["ru", "uz"];
+// Индекс /blog: статьи переведены на все пять локалей (articlesData.loc).
+const BLOG_LOCALES = ["ru", "uz", "en", "tr", "zh"];
 
 export async function contentEntries(): Promise<SitemapEntry[]> {
   const blogRoutes: SitemapEntry[] = [
