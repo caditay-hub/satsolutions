@@ -86,7 +86,7 @@ export function QuestionForm({ locale, productId }: { locale: string; productId:
     }
     setState("sending");
     try {
-      const res = await fetch(`${apiBaseUrl()}/api/product-questions`, {
+      const res = await fetch(`${apiBaseUrl()}/product-questions`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({ productId, question: question.trim(), name: name.trim() || undefined, phone: phone.trim() || undefined }),
