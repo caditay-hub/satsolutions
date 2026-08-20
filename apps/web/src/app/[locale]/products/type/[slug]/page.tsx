@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { typeSeoFor } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { deadTypeTarget } from "@/lib/deadCategories";
 import { catalogRobots } from "@/lib/catalogRobots";
@@ -34,8 +35,10 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   const name = await resolveTypeName(slug);
   if (!name) return { title: t("nav.products") };
   const locName = localizeCatName(name, locale);
-  const title = `${locName} — ${t("product.titleBuy")}`;
-  const description = t("product.typeDesc", { type: locName });
+  // Приоритетные типы: кастомные title/description под реальные запросы (typeSeo.ts)
+  const custom = typeSeoFor(slug, locale);
+  const title = custom?.title ?? `${locName} — ${t("product.titleBuy")}`;
+  const description = custom?.description ?? t("product.typeDesc", { type: locName });
   return {
     title,
     description,
