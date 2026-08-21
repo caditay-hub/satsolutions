@@ -54,7 +54,16 @@
     "imgNext": "Next",
     "loading": "Loading",
     "call": "Call us",
-    "order": "Order now"
+    "order": "Order now",
+    "industryServices": "Specialist services for this industry",
+    "industrySolutions": "Solutions by industry",
+    "ourClients": "Our clients",
+    "clientsSubtitle": "Companies that trust us",
+    "allCategories": "All categories →",
+    "allBrands": "All brands →",
+    "cartEmpty": "Your cart is empty.",
+    "checkout": "Checkout",
+    "chatRealtime": "The chat works in real time."
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -1838,7 +1847,9 @@
     "products": "Products",
     "showAll": "Show all results",
     "searching": "Searching",
-    "cases": "Case studies & solutions"
+    "cases": "Case studies & solutions",
+    "priceFrom": "Price from, UZS",
+    "priceTo": "Price to, UZS"
   },
   "form": {
     "feedbackTitle": "Feedback",

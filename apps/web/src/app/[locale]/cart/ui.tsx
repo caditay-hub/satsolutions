@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -28,6 +30,7 @@ function formatUzRest(digits: string) {
 }
 
 export function CartClient() {
+  const tc = useTranslations("common");
   const [items, setItems] = useState<CartItem[]>([]);
   const [phoneRest, setPhoneRest] = useState(""); // 9 digits after +998
   const [submitting, setSubmitting] = useState(false);
@@ -128,12 +131,12 @@ export function CartClient() {
               </div>
             );
           })}
-          {items.length === 0 ? <div className="p-5 text-sm text-slate-600">Корзина пустая.</div> : null}
+          {items.length === 0 ? <div className="p-5 text-sm text-slate-600">{tc("cartEmpty")}</div> : null}
         </div>
       </div>
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5">
-        <div className="text-sm font-semibold text-slate-900">Оформление</div>
+        <div className="text-sm font-semibold text-slate-900">{tc("checkout")}</div>
         <label className="mt-4 block">
           <div className="text-sm font-medium text-slate-700">Телефон</div>
           <div className="mt-1 flex overflow-hidden rounded-lg border border-slate-300">

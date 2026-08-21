@@ -1,5 +1,7 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { resolveImageUrl } from "@/lib/image";
@@ -11,6 +13,7 @@ interface ClientLogosSliderProps {
 }
 
 export function ClientLogosSlider({ logos, className = "" }: ClientLogosSliderProps) {
+  const tc = useTranslations("common");
   /* Filter logos that have client logos and limit to 20 for performance */
   const logosWithImages = logos.filter(logo => logo.clientlogourl).slice(0, 20);
 
@@ -23,8 +26,8 @@ export function ClientLogosSlider({ logos, className = "" }: ClientLogosSliderPr
     <div className={`w-full py-8 ${className}`}>
       <div className="container-page">
         <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">Наши клиенты</h2>
-          <p className="mt-1 text-sm text-slate-600">Компании, которым мы доверяем</p>
+          <h2 className="text-xl sm:text-2xl font-semibold tracking-tight">{tc("ourClients")}</h2>
+          <p className="mt-1 text-sm text-slate-600">{tc("clientsSubtitle")}</p>
         </div>
 
         <div className="relative overflow-hidden group">

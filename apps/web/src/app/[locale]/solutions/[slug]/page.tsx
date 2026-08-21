@@ -138,7 +138,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     date: new Date(r.createdAt).toLocaleDateString(locale === "ru" ? "ru-RU" : locale, { month: "long", year: "numeric" }),
     text: r.text?.trim() || "",
   }));
-  const reviewsLabel = locale === "uz" ? "Mijozlar sharhlari" : locale === "en" ? "Customer reviews" : "Отзывы клиентов";
+  const reviewsLabel = locale === "uz" ? "Mijozlar sharhlari" : locale === "en" ? "Customer reviews" : locale === "tr" ? "Müşteri yorumları" : locale === "zh" ? "客户评价" : "Отзывы клиентов";
   const works = ts.raw(`${svc.key}.works`) as string[];
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
@@ -512,7 +512,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {relatedArticles.length > 0 && (
           <div className="mt-12">
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
-              {locale === "uz" ? "Foydali maqolalar" : locale === "en" ? "Useful articles" : "Полезные статьи"}
+              {locale === "uz" ? "Foydali maqolalar" : locale === "en" ? "Useful articles" : locale === "tr" ? "Faydalı makaleler" : locale === "zh" ? "实用文章" : "Полезные статьи"}
             </h2>
             <div className="mt-5 grid gap-4 sm:grid-cols-3">
               {relatedArticles.map((a) => {

@@ -1,5 +1,7 @@
 import overlay from "@/data/productI18n.json";
 import { routing } from "@/i18n/routing";
+import { localizeCharKey } from "./charKeyI18n";
+import { localizeCharValue } from "./charValueI18n";
 
 /**
  * Оверлей переводов контента товаров (name + shortDescription) на uz/en/tr/zh.
@@ -50,14 +52,25 @@ export function localizeDescription(
   return MAP[productId]?.[locale]?.description?.trim() || base;
 }
 
-/** Возвращает переведённые характеристики (фолбэк на оригинальные из БД). */
+/**
+ * Возвращает переведённые характеристики.
+ * Приоритет: поштучный перевод для товара (если задан в оверлее) → общие словари
+ * ключей и значений → исходная русская строка. Раньше был только первый шаг, поэтому
+ * характеристики 2860 товаров из 3256 показывались по-русски на всех языках.
+ */
 export function localizeCharacteristics(
   productId: string | undefined,
   characteristics: Record<string, unknown>,
   locale: string
 ): Record<string, unknown> {
-  if (!productId || locale === routing.defaultLocale) return characteristics;
-  const translated = MAP[productId]?.[locale]?.characteristics;
-  if (!translated) return characteristics;
-  return translated;
+  if (locale === routing.defaultLocale) return characteristics;
+  const perProduct = productId ? MAP[productId]?.[locale]?.characteristics : undefined;
+  if (perProduct) return perProduct;
+  if (!characteristics) return characteristics;
+  const out: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(characteristics)) {
+    const k = localizeCharKey(key, locale);
+    out[k] = typeof value === "string" ? localizeCharValue(value, locale) : value;
+  }
+  return out;
 }

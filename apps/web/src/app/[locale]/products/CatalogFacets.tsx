@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeCharKey } from "@/lib/charKeyI18n";
+import { localizeCharValue } from "@/lib/charValueI18n";
 import type { ProductFacets } from "@/lib/api";
 
 const VISIBLE = 6; // сколько значений показываем до «Ещё N»
@@ -215,13 +216,13 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
             <div className="relative mb-3 h-6">
               <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded bg-slate-200" />
               <div className="absolute top-1/2 h-1 -translate-y-1/2 rounded bg-brand-500" style={{ left: `${pct(vMin)}%`, right: `${100 - pct(vMax)}%` }} />
-              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMin} onChange={(e) => setVMin(Math.min(Number(e.target.value), vMax))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label="Цена от" />
-              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMax} onChange={(e) => setVMax(Math.max(Number(e.target.value), vMin))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label="Цена до" />
+              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMin} onChange={(e) => setVMin(Math.min(Number(e.target.value), vMax))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label={tSearch("priceFrom")} />
+              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMax} onChange={(e) => setVMax(Math.max(Number(e.target.value), vMin))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label={tSearch("priceTo")} />
             </div>
             <div className="flex items-center gap-1.5">
-              <input type="number" inputMode="numeric" aria-label="Цена от, сум" value={vMin} onChange={(e) => setVMin(Number(e.target.value) || bMin)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
+              <input type="number" inputMode="numeric" aria-label={tSearch("priceFrom")} value={vMin} onChange={(e) => setVMin(Number(e.target.value) || bMin)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
               <span className="text-slate-500">–</span>
-              <input type="number" inputMode="numeric" aria-label="Цена до, сум" value={vMax} onChange={(e) => setVMax(Number(e.target.value) || bMax)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
+              <input type="number" inputMode="numeric" aria-label={tSearch("priceTo")} value={vMax} onChange={(e) => setVMax(Number(e.target.value) || bMax)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
             </div>
           </div>
         </Group>
@@ -275,7 +276,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
               return (
                 <button key={v.value} type="button" onClick={() => toggleChar(c.key, v.value)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{v.value}</span>
+                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{localizeCharValue(v.value, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{v.count}</span>
                 </button>
               );

@@ -11,6 +11,8 @@ const UI: Record<string, { title: string; subtitle: string; sectionTitle: string
   ru: { title: "Отзывы клиентов", subtitle: "Оцените нашу работу и почитайте, что говорят клиенты о SAT Solutions.", sectionTitle: "Что говорят клиенты", empty: "Пока нет отзывов — станьте первым, оценив нашу работу выше.", crumbHome: "Главная", googleCta: "Оценить нас на Google Картах" },
   uz: { title: "Mijozlar sharhlari", subtitle: "Ishimizni baholang va SAT Solutions haqida mijozlar nima deyishini o'qing.", sectionTitle: "Mijozlar nima deydi", empty: "Hozircha sharhlar yo'q — birinchi bo'lib ishimizni yuqorida baholang.", crumbHome: "Bosh sahifa", googleCta: "Google Xaritada baholang" },
   en: { title: "Customer reviews", subtitle: "Rate our work and see what clients say about SAT Solutions.", sectionTitle: "What clients say", empty: "No reviews yet — be the first by rating our work above.", crumbHome: "Home", googleCta: "Rate us on Google Maps" },
+  tr: { title: "Müşteri yorumları", subtitle: "Çalışmamızı değerlendirin ve müşterilerin SAT Solutions hakkında ne söylediğini okuyun.", sectionTitle: "Müşteriler ne diyor", empty: "Henüz yorum yok — yukarıdan değerlendirerek ilk siz olun.", crumbHome: "Ana sayfa", googleCta: "Google Haritalar'da değerlendirin" },
+  zh: { title: "客户评价", subtitle: "为我们的服务打分，并看看客户如何评价 SAT Solutions。", sectionTitle: "客户怎么说", empty: "暂无评价 — 欢迎在上方成为第一位评价者。", crumbHome: "首页", googleCta: "在谷歌地图上评价我们" },
 };
 
 const GOOGLE_REVIEW_URL = "https://g.page/r/CekxZiczSJPYEBM/review";
@@ -20,11 +22,18 @@ function apiBase() {
   return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4005";
 }
 
-const MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
-function fmtDate(iso: string): string {
+const MONTHS: Record<string, string[]> = {
+  ru: ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"],
+  uz: ["yanvar","fevral","mart","aprel","may","iyun","iyul","avgust","sentabr","oktabr","noyabr","dekabr"],
+  en: ["January","February","March","April","May","June","July","August","September","October","November","December"],
+  tr: ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"],
+  zh: ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],
+};
+function fmtDate(iso: string, locale = "ru"): string {
   const d = new Date(iso);
   if (isNaN(d.getTime())) return "";
-  return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+  const m = (MONTHS[locale] ?? MONTHS.ru)[d.getMonth()];
+  return locale === "zh" ? `${d.getFullYear()}年${m}` : `${m} ${d.getFullYear()}`;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -55,7 +64,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
   const items: Review[] = data.items.map((r) => ({
     name: r.authorName?.trim() || "Клиент",
     rating: r.rating,
-    date: fmtDate(r.createdAt),
+    date: fmtDate(r.createdAt, locale),
     text: r.text?.trim() || "",
   }));
 

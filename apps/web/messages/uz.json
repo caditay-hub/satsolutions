@@ -54,7 +54,16 @@
     "imgNext": "Keyingi",
     "loading": "Yuklanmoqda",
     "call": "Qo'ng'iroq qilish",
-    "order": "Buyurtma berish"
+    "order": "Buyurtma berish",
+    "industryServices": "Ushbu tarmoq uchun ixtisoslashgan xizmatlar",
+    "industrySolutions": "Tarmoqlar uchun yechimlar",
+    "ourClients": "Mijozlarimiz",
+    "clientsSubtitle": "Biz ishonadigan kompaniyalar",
+    "allCategories": "Barcha toifalar →",
+    "allBrands": "Barcha brendlar →",
+    "cartEmpty": "Savat bo'sh.",
+    "checkout": "Rasmiylashtirish",
+    "chatRealtime": "Chat real vaqtda ishlaydi."
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -1838,7 +1847,9 @@
     "products": "Mahsulotlar",
     "showAll": "Barcha natijalarni ko‘rsatish",
     "searching": "Qidirilmoqda",
-    "cases": "Keyslar va yechimlar"
+    "cases": "Keyslar va yechimlar",
+    "priceFrom": "Narx, so'mdan",
+    "priceTo": "Narx, so'mgacha"
   },
   "form": {
     "feedbackTitle": "Aloqa",

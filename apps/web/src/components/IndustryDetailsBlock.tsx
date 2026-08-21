@@ -33,6 +33,7 @@ function WarnIcon() {
 export async function IndustryDetailsBlock({ locale, industryKey }: { locale: string; industryKey: string }) {
   const d = getIndustryDetails(locale, industryKey);
   const ts = await getTranslations({ locale, namespace: "services" });
+  const tc = await getTranslations({ locale, namespace: "common" });
   const services = INDUSTRY_SERVICES[industryKey] ?? [];
   if (!d && !services.length) return null;
 
@@ -148,7 +149,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
             {services.length > 0 && (
               <div className={d?.faq?.length ? "mt-12" : ""}>
                 <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
-                <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">Профильные услуги для этой отрасли</h2>
+                <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industryServices")}</h2>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {services.map((k) => (
                     <Link key={k} href={`/solutions/${k}`}
@@ -171,10 +172,11 @@ export async function ServiceIndustriesBlock({ locale, serviceKey }: { locale: s
   const industries = industriesForService(serviceKey);
   if (!industries.length) return null;
   const ts = await getTranslations({ locale, namespace: "services" });
+  const tc = await getTranslations({ locale, namespace: "common" });
   return (
     <section className="mt-12">
       <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
-      <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">Решения для отраслей</h2>
+      <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industrySolutions")}</h2>
       <div className="mt-4 flex flex-wrap gap-2">
         {industries.map((k) => (
           <Link key={k} href={`/solutions/${k}`}

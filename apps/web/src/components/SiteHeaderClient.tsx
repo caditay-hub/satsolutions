@@ -29,6 +29,7 @@ const nav = [
 function HeaderSearch({ className = "", onDone }: { className?: string; onDone?: () => void }) {
   const router = useRouter();
   const ts = useTranslations("search");
+  const tc = useTranslations("common");
   const [q, setQ] = useState("");
   const [sug, setSug] = useState<SuggestDto>({ products: [], types: [], brands: [], cases: [] });
   const [open, setOpen] = useState(false);
@@ -357,8 +358,8 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                             {t(item.key)}
                           </summary>
                           <div className="border-t border-slate-100 px-2 py-2">
-                            <Link href="/categories" className="block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">Все категории →</Link>
-                            <Link href="/catalog" className="mt-1 mb-2 block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">Все бренды →</Link>
+                            <Link href="/categories" className="block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">{tc("allCategories")}</Link>
+                            <Link href="/catalog" className="mt-1 mb-2 block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">{tc("allBrands")}</Link>
                             {CATALOG_GROUPS.map((g) => (
                               <details key={g.title} className="px-2">
                                 <summary className="cursor-pointer list-none py-2 text-[13px] font-semibold text-slate-700">{g.title}</summary>

@@ -60,6 +60,7 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     uz: {
       title: "Ucell — Vaziyat markazida Dahua videodevorini o‘rnatish",
       location: "Toshkent",
+      content: "Ucell aloqa operatorining vaziyat markazi uchun SAT Solutions mutaxassislari Dahua videodevorini montaj qilib, ishga tushirdi.\n\nYechim tarkibi:\n— 12 ta LC55UL panelidan iborat 3×4 videodevor, diagonali 55\", panellararo chok 1,8 mm\n— DVM X100-D8/8 videodevor kontrolleri: 8 ta HDMI kirish va 8 ta HDMI chiqish\n— to‘liq suriladigan kronshteynlarda tayyorlangan o‘yiqqa montaj — devorni buzmasdan panellarga xizmat ko‘rsatish imkoniyati\n— markaz operatorlarining ish o‘rinlaridan ma'lumotni kecha-kunduz chiqarish\n\nIshga tushirgandan so‘ng xodimlarni o‘qitdik va kontrollerni sozlash bo‘yicha maslahatlar berdik. Videodevor vaziyat markazida asosiy ko‘rsatish vositasi sifatida 24/7 ishlaydi.",
       excerpt: "3×4 (12 panel) LC55UL videodevori, diagonali 55\" va 1.8 mm panellararo chok bilan. Videodevor 8 ta HDMI chiqishi va 8 ta HDMI kirishiga ega DVM X100-D8/8 kontrolleri boshqaruvida ishlaydi. Kunu-tun rejimda videodevorga markaz operatorlarining ish joylaridan ma’lumot chiqariladi. Videodevor oldindan tayyorlangan devorga, to‘liq chiqadigan kronshteynlar yordamida nishga o‘rnatilgan. Montajdan so‘ng xodimlar o‘qitildi va videodevor kontrollerini sozlash bo‘yicha keyingi maslahatlar berildi.",
       items: [
         { title: "Dahua videodevori", subCards: [{ title: "LED/LCD videodevor 3×4 (12 panel)", header: "Dahua", description: "•\tProfessional LED/LCD videodevor 3×4 (12 panel) o‘rnatildi\n•\tMinimal panellararo chok\n•\tYuqori yorqinlik va kontrastlik\n•\t24/7 rejimda kuyib qolmasdan ishlash" }] },
@@ -70,6 +71,7 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     en: {
       title: "Ucell — Dahua video wall installation in a control room",
       location: "Tashkent",
+      content: "For the control room of the mobile operator Ucell, SAT Solutions specialists installed and commissioned a Dahua video wall.\n\nScope of the solution:\n— a 3×4 video wall of 12 LC55UL panels, 55\" diagonal, 1.8 mm inter-panel seam\n— DVM X100-D8/8 video wall controller: 8 HDMI inputs and 8 HDMI outputs\n— installation into a prepared recess on full-extension brackets — panels can be serviced without dismantling the wall\n— round-the-clock display of information from the operators' workstations\n\nAfter commissioning we trained the staff and advised on configuring the controller. The video wall runs 24/7 as the main display in the control room.",
       excerpt: "A 3×4 (12-panel) LC55UL video wall, 55\" diagonal with a 1.8 mm inter-panel seam. The wall runs on a DVM X100-D8/8 controller with 8 HDMI outputs and 8 HDMI inputs. Around the clock it displays information from the center operators' workstations. The wall was mounted into a niche on a pre-prepared wall using full-extension brackets. After installation, staff were trained and given follow-up consultations on configuring the video-wall controller.",
       items: [
         { title: "Dahua video wall", subCards: [{ title: "LED/LCD video wall 3×4 (12 panels)", header: "Dahua", description: "•\tProfessional LED/LCD video wall 3×4 (12 panels) installed\n•\tMinimal inter-panel seam\n•\tHigh brightness and contrast\n•\t24/7 operation without burn-in" }] },
@@ -80,6 +82,7 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     tr: {
       title: "Ucell — Durum merkezinde Dahua video duvarı kurulumu",
       location: "Taşkent",
+      content: "Ucell mobil operatörünün durum merkezi için SAT Solutions uzmanları Dahua video duvarını kurdu ve devreye aldı.\n\nÇözüm kapsamı:\n— 12 adet LC55UL panelden oluşan 3×4 video duvarı, 55\" köşegen, 1,8 mm panel arası ek yeri\n— DVM X100-D8/8 video duvarı denetleyicisi: 8 HDMI giriş ve 8 HDMI çıkış\n— hazırlanmış nişe tam çekmeli bağlantılarla montaj — panellere duvar sökülmeden bakım yapılabilir\n— merkez operatörlerinin çalışma istasyonlarından bilgilerin yedi gün yirmi dört saat görüntülenmesi\n\nDevreye almanın ardından personele eğitim verdik ve denetleyicinin yapılandırılması konusunda danışmanlık sağladık. Video duvarı, durum merkezinde ana görüntüleme aracı olarak 7/24 çalışmaktadır.",
       excerpt: "3×4 (12 panel) LC55UL video duvarı, 55\" köşegen ve 1,8 mm panel arası ek yeri ile. Duvar, 8 HDMI çıkışı ve 8 HDMI girişi olan DVM X100-D8/8 denetleyicisiyle çalışır. 7/24 merkez operatörlerinin iş istasyonlarından bilgi duvara aktarılır. Duvar, önceden hazırlanmış duvara tam açılır braketlerle bir nişe monte edildi. Kurulumdan sonra personel eğitildi ve video duvarı denetleyicisinin yapılandırması konusunda danışmanlık sağlandı.",
       items: [
         { title: "Dahua video duvarı", subCards: [{ title: "LED/LCD video duvarı 3×4 (12 panel)", header: "Dahua", description: "•\tProfesyonel LED/LCD video duvarı 3×4 (12 panel) kuruldu\n•\tMinimum panel arası ek\n•\tYüksek parlaklık ve kontrast\n•\tYanma olmadan 7/24 çalışma" }] },
@@ -90,6 +93,7 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     zh: {
       title: "Ucell — 在指挥中心安装大华视频墙",
       location: "塔什干",
+      content: "SAT Solutions 的专家为通信运营商 Ucell 的指挥中心安装并调试了大华视频墙。\n\n方案构成：\n— 由 12 块 LC55UL 拼接屏组成的 3×4 视频墙，55 英寸对角线，拼缝 1.8 毫米\n— DVM X100-D8/8 视频墙控制器：8 路 HDMI 输入与 8 路 HDMI 输出\n— 采用全抽出式支架安装于预留壁龛内 — 无需拆除墙体即可维护屏体\n— 七日二十四小时展示中心各坐席的画面信息\n\n调试完成后，我们为工作人员提供了培训，并就控制器配置提供咨询。视频墙作为指挥中心的主要显示设备 7×24 小时运行。",
       excerpt: "3×4（12块拼接屏）LC55UL视频墙，55英寸对角线，拼缝1.8毫米。视频墙由DVM X100-D8/8控制器驱动，配备8路HDMI输出和8路HDMI输入。全天候将中心操作员工作站的信息显示在墙上。视频墙采用全伸缩支架嵌入预先处理好的墙体凹槽中。安装后对员工进行了培训，并就视频墙控制器配置提供了后续咨询。",
       items: [
         { title: "大华视频墙", subCards: [{ title: "LED/LCD视频墙 3×4（12块）", header: "Dahua", description: "•\t安装专业LED/LCD视频墙 3×4（12块）\n•\t极小拼缝\n•\t高亮度高对比度\n•\t7×24运行不烧屏" }] },
@@ -211,30 +215,30 @@ const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
     }
   },
 
-  "skud-zavod-baltika": {
+  "skud-zavod-damira-beverages": {
     uz: {
-      title: "«Baltika» zavodida kirish nazorati",
+      title: "Damira Beverages zavodida SKUD va videokuzatuv",
       location: "Toshkent",
-      excerpt: "Toshkentdagi «Baltika» zavodining o‘tish punktlari va ishlab chiqarish zonalarida kirish nazorati tizimi: turniketlar, biometriya, ish vaqti hisobi va 1C bilan integratsiya.",
-      content: "SAT Solutions mutaxassislari Toshkentdagi «Baltika» zavodida kirish nazorati (SKUD) tizimini joriy etdi — o‘tish punktlarida va ishlab chiqarish zonalarida.\n\nIshlar tarkibi:\n— o‘tish punktlarida (KPP) turniket va kalitkalar\n— biometrik terminallar va karta o‘qigichlar\n— ishlab chiqarish va ombor zonalariga kirish nazorati\n— xodimlar ish vaqtini hisobga olish, avtomatik tabel va 1C ga eksport\n— huquqlarni hudud, smena va jadval bo‘yicha sozlash\n— videokuzatuv bilan integratsiya va yagona monitoring\n\nNatija — zavod hududiga xavfsiz o‘tish, aniq ish vaqti hisobi va kirishni markazlashgan boshqarish."
+      excerpt: "Toshkentdagi yangi Damira Beverages ichimliklar zavodining kompleks xavfsizlik tizimlari: turniketlar va Hikvisionning 112 ta kirish nazorati nuqtasi, yuzni tanish, ish vaqti hisobi, kirishlarda ANPR, Dahua videokuzatuvi va korxonaning 67 km kabel trassalari.",
+      content: "SAT Solutions mutaxassislari Toshkentdagi yangi Damira Beverages Enterprise (dbe.uz) ichimliklar zavodida kuchsiz tok tizimlari kompleksini bajardi — o‘tish joylaridan ishlab chiqarish sexlari va perimetrgacha.\n\nKirish nazorati (Hikvision):\n— o‘tish joylarida 8 ta DS-K3B501SX turniket seksiyasi va darvozachalar\n— 112 ta kirish nuqtasi: o‘qigichlar, elektromagnit qulflar, chiqish tugmalari\n— asosiy kirishlarda yuzni tanuvchi 12 ta terminal\n— 32 ta DS-K2604T tarmoq kirish kontrolleri, 130 ta eshik uchun HikCentral Professional dasturiy ta'minoti\n— ish vaqti hisobi moduli: xodimlarning avtomatik tabeli\n— kirishlarda avtoraqamlarni tanish (ANPR), shlagbaumlar va o‘tishni boshqarish\n\nVideokuzatuv:\n— sexlar, omborlar va hudud perimetrida Dahua IP-kameralari\n— sharhli buriluvchi PTZ-kameralar, ko‘p terabaytli arxivga ega videoregistratorlar\n\nZavodning tarmoq infratuzilmasi:\n— 67 km kabel trassasi, shundan 42 km 6-toifali o‘ralgan juftlik\n— taxminan 20 km optik magistral: payvandlash, krosslar, ko‘chada har qanday ob-havoga chidamli shkaflar\n— o‘nlab telekommunikatsiya shkaflari, patch-panellar, PoE-kommutatorlar\n\nNatijada zavod yagona xavfsizlik tizimiga ega bo‘ldi: karta va yuz bo‘yicha o‘tish, aniq ish vaqti tabeli, kirishlarda transport nazorati va ishlab chiqarishning to‘liq videoqamrovi."
     },
     en: {
-      title: "Access control at the Baltika factory",
+      title: "Access control and CCTV at the Damira Beverages plant",
       location: "Tashkent",
-      excerpt: "Access control system at the checkpoints and production areas of the Baltika factory in Tashkent: turnstiles, biometrics, time tracking and 1C integration.",
-      content: "SAT Solutions specialists deployed an access control (ACS) system at the Baltika factory in Tashkent — at the checkpoints and in the production areas.\n\nScope of work:\n— turnstiles and gates at the checkpoints\n— biometric terminals and card readers\n— access control to production and storage areas\n— employee working-time tracking with automatic timesheets and export to 1C\n— configuring rights by zone, shift and schedule\n— integration with surveillance and unified monitoring\n\nThe result is secure entry to the factory grounds, accurate working-time tracking and centralized access management."
+      excerpt: "A complete security package for the new Damira Beverages drinks plant in Tashkent: turnstiles and 112 Hikvision access points, face recognition, time attendance, ANPR at the entrances, Dahua CCTV and 67 km of cable routes across the site.",
+      content: "SAT Solutions specialists delivered the full low-voltage package at the new Damira Beverages Enterprise drinks plant (dbe.uz) in Tashkent — from the gatehouses to the production halls and the perimeter.\n\nAccess control (Hikvision):\n— 8 DS-K3B501SX turnstile sections and swing gates at the gatehouses\n— 112 access points: readers, electromagnetic locks, exit buttons\n— 12 face recognition terminals at key entrances\n— 32 DS-K2604T network access controllers, HikCentral Professional software for 130 doors\n— time attendance module: automatic staff timesheets\n— automatic number plate recognition (ANPR) at the entrances, barriers and traffic control\n\nCCTV:\n— Dahua IP cameras in the workshops, warehouses and around the perimeter\n— overview PTZ cameras, recorders with a multi-terabyte archive\n\nPlant network infrastructure:\n— 67 km of cable routes, including 42 km of category 6 twisted pair\n— around 20 km of fibre backbone: splicing, patch panels, all-weather outdoor cabinets\n— dozens of telecom cabinets, patch panels, PoE switches\n\nThe result: the plant has a single security system — entry by card and face, accurate time records, vehicle control at the entrances and full video coverage of production."
     },
     tr: {
-      title: "Baltika fabrikasında geçiş kontrolü",
+      title: "Damira Beverages fabrikasında geçiş kontrolü ve kamera sistemi",
       location: "Taşkent",
-      excerpt: "Taşkent'teki Baltika fabrikasının giriş noktaları ve üretim alanlarında geçiş kontrol sistemi: turnikeler, biyometri, mesai takibi ve 1C entegrasyonu.",
-      content: "SAT Solutions uzmanları Taşkent'teki Baltika fabrikasında geçiş kontrol (SKUD) sistemini hayata geçirdi — giriş noktalarında ve üretim alanlarında.\n\nİş kapsamı:\n— giriş noktalarında turnike ve kapılar\n— biyometrik terminaller ve kart okuyucular\n— üretim ve depo alanlarına geçiş kontrolü\n— çalışanların mesai takibi, otomatik puantaj ve 1C'ye aktarım\n— yetkilerin bölge, vardiya ve programa göre ayarlanması\n— gözetim ile entegrasyon ve birleşik izleme\n\nSonuç — fabrika sahasına güvenli giriş, doğru mesai takibi ve merkezi erişim yönetimi."
+      excerpt: "Taşkent'teki yeni Damira Beverages içecek fabrikası için komple güvenlik sistemleri: turnikeler ve 112 Hikvision geçiş noktası, yüz tanıma, mesai takibi, girişlerde ANPR, Dahua kamera sistemi ve tesis genelinde 67 km kablo güzergâhı.",
+      content: "SAT Solutions uzmanları, Taşkent'teki yeni Damira Beverages Enterprise (dbe.uz) içecek fabrikasında zayıf akım sistemlerinin tamamını hayata geçirdi — giriş kabinlerinden üretim salonlarına ve çevre hattına kadar.\n\nGeçiş kontrolü (Hikvision):\n— giriş kabinlerinde 8 adet DS-K3B501SX turnike bölümü ve kanatlı geçitler\n— 112 geçiş noktası: okuyucular, elektromanyetik kilitler, çıkış butonları\n— ana girişlerde 12 adet yüz tanıma terminali\n— 32 adet DS-K2604T ağ geçiş denetleyicisi, 130 kapı için HikCentral Professional yazılımı\n— mesai takip modülü: personelin otomatik puantajı\n— girişlerde otomatik plaka tanıma (ANPR), bariyerler ve geçiş yönetimi\n\nKamera sistemi:\n— atölyelerde, depolarda ve saha çevresinde Dahua IP kameralar\n— genel görüş PTZ kameraları, çok terabaytlı arşive sahip kayıt cihazları\n\nFabrikanın ağ altyapısı:\n— 67 km kablo güzergâhı, bunun 42 km'si kategori 6 burgulu çift\n— yaklaşık 20 km fiber omurga: ek yapımı, kroslar, dış mekân her hava koşuluna uygun kabinler\n— onlarca telekom kabini, patch panel, PoE anahtar\n\nSonuçta fabrika tek bir güvenlik sistemine kavuştu: kart ve yüzle geçiş, doğru mesai kaydı, girişlerde araç denetimi ve üretimin eksiksiz kamera kapsaması."
     },
     zh: {
-      title: "Baltika工厂门禁系统",
+      title: "Damira Beverages 工厂门禁与视频监控",
       location: "塔什干",
-      excerpt: "塔什干Baltika工厂出入口及生产区域的门禁系统：闸机、生物识别、考勤记录及1C集成。",
-      content: "SAT Solutions的专家在塔什干Baltika工厂部署了门禁（ACS）系统——位于各出入口及生产区域。\n\n工作内容：\n— 出入口（门卫）安装闸机与通道门\n— 生物识别终端与读卡器\n— 生产区与仓储区的门禁管控\n— 员工考勤，自动生成考勤表并导出至1C\n— 按区域、班次和时段配置权限\n— 与视频监控集成并统一监控\n\n成果——安全进入厂区、精确考勤，对门禁集中管理。"
+      excerpt: "为塔什干新建的 Damira Beverages 饮料厂提供的整套安防系统：闸机与 112 个 Hikvision 门禁点位、人脸识别、考勤管理、出入口车牌识别、Dahua 视频监控，以及厂区 67 公里线缆敷设。",
+      content: "SAT Solutions 的专家在塔什干新建的 Damira Beverages Enterprise 饮料厂（dbe.uz）完成了全部弱电系统工程——从门岗到生产车间及厂区周界。\n\n门禁系统（Hikvision）：\n— 门岗处 8 组 DS-K3B501SX 闸机与平开小门\n— 112 个门禁点位：读头、电磁锁、出门按钮\n— 主要出入口配置 12 台人脸识别终端\n— 32 台 DS-K2604T 网络门禁控制器，130 门规模的 HikCentral Professional 软件\n— 考勤模块：自动生成员工考勤表\n— 出入口车牌自动识别（ANPR）、道闸与车辆通行管理\n\n视频监控：\n— 车间、仓库及厂区周界部署 Dahua IP 摄像机\n— 全景球机，配多 TB 容量归档的录像机\n\n厂区网络基础设施：\n— 67 公里线缆敷设，其中 42 公里为六类双绞线\n— 约 20 公里光纤主干：熔接、配线架、室外全天候机柜\n— 数十个通信机柜、配线架与 PoE 交换机\n\n最终，工厂获得了统一的安防体系：刷卡与人脸通行、精确的考勤记录、出入口车辆管控，以及覆盖全部生产区域的视频监控。"
     }
   }
 };

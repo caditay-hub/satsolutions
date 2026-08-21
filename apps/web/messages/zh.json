@@ -54,7 +54,16 @@
     "imgNext": "下一张",
     "loading": "加载中",
     "call": "致电我们",
-    "order": "立即下单"
+    "order": "立即下单",
+    "industryServices": "面向该行业的专业服务",
+    "industrySolutions": "各行业解决方案",
+    "ourClients": "我们的客户",
+    "clientsSubtitle": "信赖我们的企业",
+    "allCategories": "全部分类 →",
+    "allBrands": "全部品牌 →",
+    "cartEmpty": "购物车是空的。",
+    "checkout": "去结算",
+    "chatRealtime": "客服聊天为实时响应。"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -1830,7 +1839,9 @@
     "products": "产品",
     "showAll": "显示全部结果",
     "searching": "搜索中",
-    "cases": "案例与解决方案"
+    "cases": "案例与解决方案",
+    "priceFrom": "价格下限（苏姆）",
+    "priceTo": "价格上限（苏姆）"
   },
   "form": {
     "feedbackTitle": "联系反馈",

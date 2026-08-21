@@ -42,6 +42,28 @@ const STRINGS: Record<string, UI> = {
     thanks: "Thank you! Your review was sent for moderation and will appear once approved.",
     err: "Could not send. Please try later.",
   },
+  tr: {
+    title: "Çalışmamızı değerlendirin",
+    hint: "Yıldızlara dokunun",
+    notes: ["", "Kötü", "İdare eder", "Normal", "İyi", "Mükemmel"],
+    comment: "Çalışma hakkında birkaç kelime — isteğe bağlı",
+    name: "İsim — isteğe bağlı",
+    send: "Gönder",
+    sending: "Gönderiliyor…",
+    thanks: "Teşekkürler! Yorumunuz incelemeye gönderildi, onaylandıktan sonra yayımlanacak.",
+    err: "Gönderilemedi. Lütfen daha sonra deneyin.",
+  },
+  zh: {
+    title: "为我们的服务打分",
+    hint: "点击星星",
+    notes: ["", "很差", "一般", "还行", "不错", "很好"],
+    comment: "简单说说您的评价 — 选填",
+    name: "称呼 — 选填",
+    send: "提交",
+    sending: "提交中…",
+    thanks: "感谢您的评价！内容已提交审核，通过后将显示。",
+    err: "提交失败，请稍后再试。",
+  },
 };
 
 function Star({ filled }: { filled: boolean }) {

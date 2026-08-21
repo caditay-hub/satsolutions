@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
@@ -98,7 +99,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     // до notFound() в теле страницы (стриминг), и GSC копит «ложные 404».
     if (!product) {
       const recovered = await recoverProductSlug(slug);
-      if (recovered) permanentRedirect(`/products/${recovered}`);
+      if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
       notFound();
     }
     const loc = localizeProduct(product, locale);
@@ -122,7 +123,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const msg = String((e as any)?.message || e);
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
-      if (recovered) permanentRedirect(`/products/${recovered}`);
+      if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
       notFound();
     }
     return { title: t("product.fallbackTitle") };
@@ -144,7 +145,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     const msg = String((e as any)?.message || e);
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
-      if (recovered) permanentRedirect(`/products/${recovered}`);
+      if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
       notFound();
     }
     try {
@@ -155,7 +156,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
   }
   if (!product) {
     const recovered = await recoverProductSlug(slug);
-    if (recovered) permanentRedirect(`/products/${recovered}`);
+    if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
     notFound();
   }
 
@@ -597,7 +598,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         <div className="mt-8">
           <div className="flex items-center gap-3">
             <h2 className="text-lg font-bold tracking-tight">
-              {locale === "uz" ? "Mahsulot sharhlari" : locale === "en" ? "Product reviews" : "Отзывы о товаре"}
+              {locale === "uz" ? "Mahsulot sharhlari" : locale === "en" ? "Product reviews" : locale === "tr" ? "Ürün yorumları" : locale === "zh" ? "产品评价" : "Отзывы о товаре"}
             </h2>
             {productReviews.count > 0 && (
               <span className="flex items-center gap-1.5 text-sm font-bold text-slate-600">

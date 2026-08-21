@@ -54,7 +54,16 @@
     "imgNext": "Sonraki",
     "loading": "Yükleniyor",
     "call": "Bizi arayın",
-    "order": "Sipariş ver"
+    "order": "Sipariş ver",
+    "industryServices": "Bu sektöre yönelik uzman hizmetler",
+    "industrySolutions": "Sektörlere göre çözümler",
+    "ourClients": "Müşterilerimiz",
+    "clientsSubtitle": "Bize güvenen şirketler",
+    "allCategories": "Tüm kategoriler →",
+    "allBrands": "Tüm markalar →",
+    "cartEmpty": "Sepetiniz boş.",
+    "checkout": "Siparişi tamamla",
+    "chatRealtime": "Sohbet gerçek zamanlı çalışır."
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -1830,7 +1839,9 @@
     "products": "Ürünler",
     "showAll": "Tüm sonuçları göster",
     "searching": "Aranıyor",
-    "cases": "Projeler ve çözümler"
+    "cases": "Projeler ve çözümler",
+    "priceFrom": "Fiyat, UZS itibaren",
+    "priceTo": "Fiyat, UZS kadar"
   },
   "form": {
     "feedbackTitle": "Geri bildirim",

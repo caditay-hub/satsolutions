@@ -133,6 +133,7 @@ function fmtTime(d: any) {
 
 export function ChatWidget() {
   const tw = useTranslations("chat");
+  const tcc = useTranslations("common");
   const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [connecting, setConnecting] = useState(false);
@@ -645,7 +646,7 @@ export function ChatWidget() {
                     Отправить
                   </button>
                 </div>
-                <div className="mt-1 text-xs text-slate-500">Чат работает в реальном времени.</div>
+                <div className="mt-1 text-xs text-slate-500">{tcc("chatRealtime")}</div>
               </div>
             </>
           )}
