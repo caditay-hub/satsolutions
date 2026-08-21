@@ -99,11 +99,25 @@ export function HeroCarousel({
   // Автопрокрутка: таймер перезапускается при КАЖДОЙ смене слайда (в т.ч. ручной) —
   // иначе после клика стрелкой следующий слайд мог смениться почти сразу
   // (старый интервал продолжал тикать), и карусель «крутилась по-разному».
+  // Первую прокрутку ждём до полной загрузки: на телефоне карусель иначе
+  // начинала двигаться прямо посреди загрузки — отнимала главный поток и
+  // уводила из вида самый крупный кадр, по которому считается LCP.
+  const [rolling, setRolling] = useState(false);
   useEffect(() => {
-    if (count <= 1) return;
+    if (document.readyState === "complete") {
+      setRolling(true);
+      return;
+    }
+    const on = () => setRolling(true);
+    window.addEventListener("load", on, { once: true });
+    return () => window.removeEventListener("load", on);
+  }, []);
+
+  useEffect(() => {
+    if (count <= 1 || !rolling) return;
     const id = window.setTimeout(() => setIdx((v) => (v + 1) % count), 6000);
     return () => window.clearTimeout(id);
-  }, [count, idx]);
+  }, [count, idx, rolling]);
 
   return (
     <div className="group/hero relative overflow-hidden bg-slate-950 w-full">
