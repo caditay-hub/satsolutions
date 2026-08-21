@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { resolveImageUrl } from "@/lib/image";
 import { optimizedImg } from "@/lib/imgProxy";
+import { useDecorativeVideo } from "@/lib/lightMedia";
 
 export type HeroButton = {
   label: string;
@@ -56,6 +57,10 @@ export function HeroCarousel({
   nextLabel?: string;
   slideLabel?: string;
 }) {
+  // Фон слайда: на телефоне и при экономии трафика вместо ролика остаётся
+  // его же кадр — иначе первый слайд качал больше мегабайта видео.
+  const allowVideo = useDecorativeVideo();
+
   const items = useMemo(() => {
     return (slides ?? [])
       .filter((s) => s && (s.published ?? true) && typeof s.imageUrl === "string" && s.imageUrl.trim())
@@ -139,14 +144,14 @@ export function HeroCarousel({
                   ) : (
                     <Link href={detailHref} aria-label={sTitle} tabIndex={isActive ? 0 : -1} onClick={onSlideClick} className="absolute inset-0 z-10" />
                   )}
-                  {sVideo ? (
+                  {sVideo && allowVideo ? (
                     <video
                       src={sVideo}
                       autoPlay={isActive}
                       muted
                       loop
                       playsInline
-                      preload={i === 0 ? "auto" : "none"}
+                      preload="none"
                       poster={sImg ? optimizedImg(sImg, 1080) : undefined}
                       className="absolute inset-0 h-full w-full object-cover"
                     />

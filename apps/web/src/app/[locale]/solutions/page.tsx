@@ -8,6 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { optimizedImg } from "@/lib/imgProxy";
+import { AutoPlayVideo } from "@/components/AutoPlayVideo";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -139,16 +140,11 @@ export default async function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }} />
       {/* HERO */}
       <section className="relative overflow-hidden bg-slate-900 text-white">
-        <video
+        {/* Фон-ролик: на телефоне и при экономии трафика остаётся постер. */}
+        <AutoPlayVideo
           className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40 motion-reduce:hidden"
           src={`${IMG_BASE}/hero-bg.mp4?v=1`}
           poster={optimizedImg(`${IMG_BASE}/hero-bg-poster.jpg?v=1`, 1080)}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-900/55 to-slate-900/25" />
         <div

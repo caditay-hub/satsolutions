@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { shouldPlayDecorativeVideo } from "@/lib/lightMedia";
 
 /* Видео-обложка: играет только пока блок в зоне видимости.
-   prefers-reduced-motion / ошибка загрузки → остаётся постер. */
+   Телефон, экономия трафика, медленная сеть, prefers-reduced-motion
+   и ошибка загрузки → остаётся постер, ролик не качается. */
 export function AutoPlayVideo({
   src,
   poster,
@@ -18,7 +20,7 @@ export function AutoPlayVideo({
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!shouldPlayDecorativeVideo()) return;
     if (!("IntersectionObserver" in window)) {
       v.play().catch(() => {});
       return;
