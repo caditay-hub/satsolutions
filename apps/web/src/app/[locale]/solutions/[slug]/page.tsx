@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { localizePortfolioProject } from "@/lib/contentI18n";
+import { localizeProductName } from "@/lib/productI18n";
 import { getServiceBySlug, getPortfolio, getProducts } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
@@ -117,7 +118,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     // перемешиваем по одному из каждой категории, чтобы витрина не была однобрендовой
     const merged: any[] = [];
     for (let i = 0; i < 4; i++) for (const ch of chunks) if (ch[i]) merged.push(ch[i]);
-    equipment = merged.filter((p) => p?.coverImageUrl).slice(0, 8);
+    // названия приходят из БД по-русски — прогоняем через оверлей productI18n
+    equipment = merged.filter((p) => p?.coverImageUrl).slice(0, 8).map((p) => ({ ...p, name: localizeProductName(p, locale) }));
   }
   const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz o'rnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
   const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";

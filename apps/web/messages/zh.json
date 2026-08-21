@@ -2811,5 +2811,16 @@
     "tableNote": "取自弱电施工统一工价表。设备另行采购——可在我们的目录选购或自备，均不影响施工报价。",
     "colWork": "工作项",
     "colPrice": "单价"
+  },
+  "clientNotes": {
+    "uzum": "仓库与 100 多个自提点",
+    "ucell": "指挥中心视频墙",
+    "damira": "工厂：门禁与 67 公里线缆",
+    "towerup": "住宅小区安防",
+    "streetparking": "执法记录仪监控",
+    "granit": "48 台大华摄像机与门禁",
+    "gov": "政府保障类项目",
+    "gov_name": "政府机构",
+    "towerup_name": "Tower Up 住宅区"
   }
 }

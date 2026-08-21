@@ -2819,5 +2819,16 @@
     "tableNote": "Rates from our standard price list for low-voltage work. Equipment is bought separately — from our catalogue or supplied by you; it does not change the labour price.",
     "colWork": "Work",
     "colPrice": "Price"
+  },
+  "clientNotes": {
+    "uzum": "warehouses and 100+ pickup points",
+    "ucell": "control room video wall",
+    "damira": "plant: access control and 67 km of cabling",
+    "towerup": "residential complex security",
+    "streetparking": "body-worn camera surveillance",
+    "granit": "48 Dahua cameras and access control",
+    "gov": "government-supply facilities",
+    "gov_name": "Government bodies",
+    "towerup_name": "Tower Up residential complex"
   }
 }

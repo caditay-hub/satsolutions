@@ -2811,5 +2811,16 @@
     "tableNote": "Zayıf akım işleri standart fiyat listemizden. Ekipman ayrı alınır — kataloğumuzdan ya da kendiniz temin edersiniz, işçilik fiyatı değişmez.",
     "colWork": "İş",
     "colPrice": "Fiyat"
+  },
+  "clientNotes": {
+    "uzum": "depolar ve 100+ teslim noktası",
+    "ucell": "durum merkezi video duvarı",
+    "damira": "fabrika: geçiş kontrolü ve 67 km kablo",
+    "towerup": "konut sitesi güvenliği",
+    "streetparking": "yaka kamerasıyla gözetim",
+    "granit": "48 Dahua kamera ve geçiş kontrolü",
+    "gov": "kamu tedarik tesisleri",
+    "gov_name": "Kamu kurumları",
+    "towerup_name": "Tower Up konut sitesi"
   }
 }

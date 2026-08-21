@@ -2831,5 +2831,16 @@
     "tableNote": "Narxlar past tokli ishlar yagona narxnomasidan. Uskuna alohida sotib olinadi — bizning katalogimizdan olishingiz yoki o'zingiznikini berishingiz mumkin, montaj narxiga ta'sir qilmaydi.",
     "colWork": "Ish",
     "colPrice": "Narx"
+  },
+  "clientNotes": {
+    "uzum": "omborlar va 100+ topshirish punkti",
+    "ucell": "vaziyat markazining videodevori",
+    "damira": "zavod: SKUD va 67 km trassa",
+    "towerup": "turar-joy majmuasi xavfsizligi",
+    "streetparking": "badan kameralarida videokuzatuv",
+    "granit": "48 ta Dahua kamerasi va SKUD",
+    "gov": "davlat ta'minoti obyektlari",
+    "gov_name": "Davlat tashkilotlari",
+    "towerup_name": "Tower Up turar-joy majmuasi"
   }
 }
