@@ -155,7 +155,7 @@ export async function SiteFooter() {
       <div className="border-t border-slate-200 bg-slate-50">
         <div className="container-page flex flex-col items-center justify-center gap-1 py-5 text-center text-xs font-bold text-slate-700">
           <div>© 2026 SAT Solutions. {t("rights")}.</div>
-          <div>ООО &quot;SUPPLY AND TRANSPORTATION&quot;</div>
+          <div>{tc("legalForm")} &quot;SUPPLY AND TRANSPORTATION&quot;</div>
         </div>
       </div>
     </footer>

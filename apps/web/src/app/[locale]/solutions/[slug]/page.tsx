@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { localizePortfolioProject } from "@/lib/contentI18n";
 import { getServiceBySlug, getPortfolio, getProducts } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
@@ -144,7 +145,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
   try {
     const { items } = await getPortfolio(1, 3);
-    cases = items.map((p) => ({ slug: p.slug, title: p.title, coverImageUrl: p.coverImageUrl }));
+    // названия кейсов приходят из БД по-русски — прогоняем через оверлей переводов
+    cases = items.map((p) => localizePortfolioProject(p as any, locale)).map((p: any) => ({ slug: p.slug, title: p.title, coverImageUrl: p.coverImageUrl }));
   } catch {
     // ignore
   }

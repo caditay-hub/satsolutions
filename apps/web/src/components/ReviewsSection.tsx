@@ -22,7 +22,7 @@ function Stars({ n, className = "" }: { n: number; className?: string }) {
   );
 }
 
-export function ReviewsSection({ title, avg, count, items }: { title: string; avg: number; count: number; items: Review[] }) {
+export function ReviewsSection({ title, avg, count, items, basedOn }: { title: string; avg: number; count: number; items: Review[]; basedOn?: string }) {
   return (
     <section className="bg-slate-50/70">
       <div className="container-page py-12 sm:py-16">
@@ -33,7 +33,7 @@ export function ReviewsSection({ title, avg, count, items }: { title: string; av
             <span className="text-4xl font-black tabular-nums text-slate-900">{avg.toFixed(1)}</span>
             <span className="flex flex-col">
               <Stars n={Math.round(avg)} />
-              <span className="mt-0.5 text-xs font-semibold text-slate-500">на основе {count} отзывов</span>
+              <span className="mt-0.5 text-xs font-semibold text-slate-500">{basedOn ?? `на основе ${count} отзывов`}</span>
             </span>
           </div>
         </div>

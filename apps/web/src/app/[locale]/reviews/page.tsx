@@ -15,6 +15,13 @@ const UI: Record<string, { title: string; subtitle: string; sectionTitle: string
   zh: { title: "客户评价", subtitle: "为我们的服务打分，并看看客户如何评价 SAT Solutions。", sectionTitle: "客户怎么说", empty: "暂无评价 — 欢迎在上方成为第一位评价者。", crumbHome: "首页", googleCta: "在谷歌地图上评价我们" },
 };
 
+const BASED_ON: Record<string, (n: number) => string> = {
+  ru: (n) => `на основе ${n} отзывов`,
+  uz: (n) => `${n} ta sharh asosida`,
+  en: (n) => `based on ${n} reviews`,
+  tr: (n) => `${n} yoruma göre`,
+  zh: (n) => `基于 ${n} 条评价`,
+};
 const GOOGLE_REVIEW_URL = "https://g.page/r/CekxZiczSJPYEBM/review";
 
 function apiBase() {
@@ -89,7 +96,7 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
       </div>
 
       {items.length > 0 ? (
-        <ReviewsSection title={ui.sectionTitle} avg={data.avg} count={data.count} items={items} />
+        <ReviewsSection title={ui.sectionTitle} avg={data.avg} count={data.count} items={items} basedOn={BASED_ON[locale]?.(data.count) ?? BASED_ON.ru(data.count)} />
       ) : (
         <div className="container-page pb-16">
           <p className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-6 text-slate-500">{ui.empty}</p>
