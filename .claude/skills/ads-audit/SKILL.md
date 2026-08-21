@@ -25,3 +25,23 @@ description: Аудит и управление рекламой — Google Ads 
 
 ## ПРАВИЛО (classifier-прецедент)
 Запуск/включение платных кампаний и повышение бюджетов — ТОЛЬКО после явного «запускай» от пользователя с озвученным бюджетом. Подготовить → показать → спросить.
+
+## Грабли GAQL (проверено 21.08.2026)
+Google Ads API на несовместимые поля отвечает НЕ ошибкой, а **пустым результатом** —
+запрос «успешен», строк ноль. Ловится только сравнением с урезанным запросом:
+- `metrics.search_budget_lost_impression_share` в `keyword_view` → 0 строк.
+  Потери по бюджету считаются только для кампаний и групп, не для ключей.
+- `ad_group_criterion.quality_info.*` вместе с `segments.date` → 0 строк.
+  Качество берётся отдельным запросом из `ad_group_criterion` (без дат) и
+  склеивается с метриками из `keyword_view` по `adGroupCriterion.resourceName`.
+- `metrics.cost_micros` вместе с `segments.conversion_action_name` → 0 строк.
+- `campaign_asset` + фильтр `campaign.status` → 0 строк; фильтровать по
+  `campaign_asset.status` и отсеивать паузы уже в коде.
+⚠️ Heredoc через `ssh satweb-prod "cat > file <<'EOF' ..."` обрезает длинные
+скрипты с кавычками (SyntaxError: Unexpected end of input) — писать файл
+локально и слать `scp`.
+
+Готовые отчёты в `/root/sat-analytics/`: `qs_report.cjs` (качество+позиции),
+`ads_report.cjs` (объявления+запросы), `lp_detail.cjs` (посадочные по ключам,
+релевантность), `psi_lp.cjs` (CWV посадочных), `groups.cjs` (ширина групп),
+`ext_conv.cjs` (расширения+конверсии), `rest_check.cjs` (устройства/часы/дни).
