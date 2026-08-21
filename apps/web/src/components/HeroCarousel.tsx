@@ -57,8 +57,9 @@ export function HeroCarousel({
   nextLabel?: string;
   slideLabel?: string;
 }) {
-  // Фон слайда: на телефоне и при экономии трафика вместо ролика остаётся
-  // его же кадр — иначе первый слайд качал больше мегабайта видео.
+  // На телефоне и при экономии трафика ролик не запускаем: сам элемент
+  // <video> остаётся (его постер — тот же кадр и кандидат в LCP),
+  // но без src сам файл не запрашивается.
   const allowVideo = useDecorativeVideo();
 
   const items = useMemo(() => {
@@ -144,9 +145,9 @@ export function HeroCarousel({
                   ) : (
                     <Link href={detailHref} aria-label={sTitle} tabIndex={isActive ? 0 : -1} onClick={onSlideClick} className="absolute inset-0 z-10" />
                   )}
-                  {sVideo && allowVideo ? (
+                  {sVideo ? (
                     <video
-                      src={sVideo}
+                      src={allowVideo ? sVideo : undefined}
                       autoPlay={isActive}
                       muted
                       loop
