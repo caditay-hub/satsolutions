@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { resolveImageUrl } from "@/lib/image";
+import { optimizedImg } from "@/lib/imgProxy";
 
 export type HeroButton = {
   label: string;
@@ -146,7 +147,7 @@ export function HeroCarousel({
                       loop
                       playsInline
                       preload={i === 0 ? "auto" : "none"}
-                      poster={sImg || undefined}
+                      poster={sImg ? optimizedImg(sImg, 1080) : undefined}
                       className="absolute inset-0 h-full w-full object-cover"
                     />
                   ) : sImg ? (

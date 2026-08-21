@@ -16,6 +16,7 @@ import { localizeCatName } from "@/lib/catalogI18n";
 import { typeSlug } from "@/lib/typeSlug";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { articlesForLocale, articleImg } from "@/lib/articlesData";
+import { optimizedImg } from "@/lib/imgProxy";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -323,7 +324,7 @@ export default async function HomePage() {
                   {d.video ? (
                     <AutoPlayVideo
                       src={`${SOLUTIONS_IMG}/${d.video}.mp4?v=3`}
-                      poster={`${SOLUTIONS_IMG}/${d.poster}?v=9`}
+                      poster={optimizedImg(`${SOLUTIONS_IMG}/${d.poster}?v=9`)}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
@@ -332,7 +333,6 @@ export default async function HomePage() {
                       alt={d.title}
                       fill
                       sizes="(max-width: 640px) 100vw, 33vw"
-                      unoptimized
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   )}
@@ -449,7 +449,6 @@ export default async function HomePage() {
                         src={`${SOLUTIONS_IMG}/${s.key}.jpg?v=9`}
                         fill
                         sizes="(max-width: 640px) 90vw, 380px"
-                        unoptimized
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

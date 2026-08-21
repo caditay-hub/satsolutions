@@ -7,6 +7,7 @@ import { SERVICES, INDUSTRIES, ALL_SERVICES } from "@/lib/servicesData";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { optimizedImg } from "@/lib/imgProxy";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -91,7 +92,6 @@ function SolutionCard({ k, title, desc, more }: { k: string; title: string; desc
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 25vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
-          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 to-transparent" />
         <div className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-lg bg-white/90 text-brand-700 shadow-sm backdrop-blur-sm">
@@ -142,7 +142,7 @@ export default async function ServicesPage() {
         <video
           className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40 motion-reduce:hidden"
           src={`${IMG_BASE}/hero-bg.mp4?v=1`}
-          poster={`${IMG_BASE}/hero-bg-poster.jpg?v=1`}
+          poster={optimizedImg(`${IMG_BASE}/hero-bg-poster.jpg?v=1`, 1080)}
           autoPlay
           muted
           loop
