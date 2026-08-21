@@ -36,6 +36,18 @@ export async function GET() {
   // иначе копятся policy-отклонения на аккаунт.
   const POLICY_BANNED = new Set(["pro-k68-detektor-skrytyh-kamer-i-zhuchkov"]);
 
+  // Товары «под заказ» (inStock=false) уходят как backorder, а для него Google требует
+  // дату ожидаемого поступления — без неё позиция отклоняется целиком (22 отклонения
+  // в Merchant Center на 21.08.2026, вся адресная пожарка Dahua). Типовой срок поставки
+  // проектного оборудования под заказ — около месяца; фид пересобирается раз в час,
+  // поэтому дата не устаревает. Таймзона Ташкента.
+  const BACKORDER_DAYS = 30;
+  const availabilityDate = (() => {
+    const d = new Date(Date.now() + BACKORDER_DAYS * 86_400_000);
+    const pad = (n: number) => String(n).padStart(2, "0");
+    return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}T00:00:00+05:00`;
+  })();
+
   const items = products
     .filter((p) => p.published && Number(p.price) > 0 && p.coverImageUrl && !POLICY_BANNED.has(p.slug))
     .map((p) => {
@@ -62,7 +74,8 @@ export async function GET() {
 <g:description>${esc(desc)}</g:description>
 <g:link>${SITE}/products/${esc(p.slug)}</g:link>
 <g:image_link>${esc(image)}</g:image_link>
-<g:availability>${p.inStock === false ? "backorder" : "in_stock"}</g:availability>
+${p.inStock === false ? `<g:availability>backorder</g:availability>
+<g:availability_date>${availabilityDate}</g:availability_date>` : "<g:availability>in_stock</g:availability>"}
 <g:condition>new</g:condition>
 <g:price>${price} UZS</g:price>
 ${ident}
