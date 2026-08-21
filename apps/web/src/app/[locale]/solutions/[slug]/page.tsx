@@ -19,6 +19,7 @@ import { H3cEquipment } from "@/components/H3cEquipment";
 import { DataCenterDetails } from "@/components/DataCenterDetails";
 import { RelatedServices } from "@/components/RelatedServices";
 import { ServicePackages } from "@/components/ServicePackages";
+import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
@@ -352,6 +353,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Типовые конфигурации (универсальный блок: турникеты, Wi-Fi, умный дом…) */}
         {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} />}
+
+        {/* Ценовой ориентир — для ключей «… цена / narxi», которые ведут на эту страницу */}
+        <ServicePriceHint k={svc.key} locale={locale} />
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} />
