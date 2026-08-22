@@ -2,16 +2,18 @@
 
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { priceInfo, productIcon } from "@/lib/product";
+import { displayModelCode } from "@/lib/modelCodeDisplay";
 import { OrderButton } from "@/components/OrderButton";
 
 // Карточка-плитка в стиле NAG: фото сверху, артикул, название, наличие,
 // крупная цена и кнопка «Получить КП» на всю ширину снизу.
 export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
+  const locale = useLocale();
   const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
   const info = priceInfo(p);
@@ -34,8 +36,8 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
       </Link>
 
       <div className="flex flex-1 flex-col border-t border-slate-100 p-3">
-        {p.modelCode ? (
-          <div className="truncate text-[11px] font-bold uppercase tracking-wide text-slate-500">{p.modelCode}</div>
+        {displayModelCode(p.modelCode, locale) ? (
+          <div className="truncate text-[11px] font-bold uppercase tracking-wide text-slate-500">{displayModelCode(p.modelCode, locale)}</div>
         ) : null}
         <Link href={`/products/${p.slug}`} className="mt-0.5 line-clamp-3 text-[13px] font-bold leading-snug text-slate-900 hover:text-brand-700 first-letter:uppercase">
           {displayName}

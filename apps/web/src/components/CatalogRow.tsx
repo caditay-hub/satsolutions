@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { priceInfo, productIcon } from "@/lib/product";
+import { displayModelCode } from "@/lib/modelCodeDisplay";
 import { OrderButton } from "@/components/OrderButton";
 
 const NOISE = new Set(["Артикул", "Артикул производителя", "Гарантия", "Цена"]);
@@ -14,6 +15,7 @@ const NOISE = new Set(["Артикул", "Артикул производите�
 // характеристики, справа наличие, цена и кнопка «Получить КП».
 export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
+  const locale = useLocale();
   const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
   const info = priceInfo(p);
@@ -36,8 +38,8 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
       </Link>
 
       <div className="min-w-0 flex-1">
-        {p.modelCode ? (
-          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{p.modelCode}</div>
+        {displayModelCode(p.modelCode, locale) ? (
+          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{displayModelCode(p.modelCode, locale)}</div>
         ) : null}
         <Link href={`/products/${p.slug}`} className="block text-[15px] font-bold leading-snug text-slate-900 hover:text-brand-700 first-letter:uppercase">
           {displayName}
