@@ -1,0 +1,32 @@
+{
+ "parkovka": {
+  "uz": {"title": "Avtoturargoh", "excerpt": "Yo‘llarda avtomobillar ko‘payib borayotgan sharoitda parkovka joylaridan samarali foydalanish va foydalanuvchi qulayligi masalasi alohida ahamiyat kasb etadi."},
+  "en": {"title": "Parking", "excerpt": "With the growing number of vehicles on the roads, the efficiency of parking spaces and the user experience become especially important."},
+  "tr": {"title": "Otopark", "excerpt": "Yollardaki araç sayısının artmasıyla birlikte park yerlerinin verimliliği ve kullanıcı deneyimi özel önem kazanıyor."},
+  "zh": {"title": "停车管理", "excerpt": "随着道路上车辆数量不断增加，停车位的使用效率和用户体验变得尤为重要。"}
+ },
+ "umniy-avtobus": {
+  "uz": {"title": "Aqlli avtobus", "excerpt": "Mobil videokuzatuv sohasida sun’iy intellekt texnologiyalari yangi davrni boshlamoqda. Xavfsizlik doimo asosiy ustuvorlik bo‘lgani uchun transport kompaniyalari yo‘l-transport hodisalarini kamaytirish va xizmat sifatini oshirishning innovatsion usullarini izlaydi."},
+  "en": {"title": "Smart bus", "excerpt": "AI technology is opening a new era for mobile video surveillance. Since safety always remains the top priority, transport companies keep looking for innovative ways to reduce accidents and improve service quality."},
+  "tr": {"title": "Akıllı otobüs", "excerpt": "Yapay zekâ teknolojisi mobil video gözetiminde yeni bir dönem açıyor. Güvenlik her zaman en öncelikli konu olduğundan, ulaşım şirketleri kazaları azaltmanın ve hizmet kalitesini artırmanın yenilikçi yollarını arıyor."},
+  "zh": {"title": "智能公交", "excerpt": "人工智能技术正在为移动视频监控开启新时代。由于安全始终是首要任务，运输企业不断寻找减少事故、提升服务质量的创新方式。"}
+ },
+ "intellektualnoe-upravlenie-parkingom": {
+  "uz": {"title": "Parkovkani intellektual boshqarish", "excerpt": "Avtoturargoh samaradorligini va haydovchilar uchun qulaylikni oshirishga qaratilgan innovatsiyalar."},
+  "en": {"title": "Intelligent parking management", "excerpt": "Innovations that improve parking efficiency and driver convenience."},
+  "tr": {"title": "Akıllı otopark yönetimi", "excerpt": "Otopark verimliliğini ve sürücü konforunu artıran yenilikler."},
+  "zh": {"title": "智能停车管理", "excerpt": "提升停车效率与驾驶者便利性的创新方案。"}
+ },
+ "ohrannye-sistemy": {
+  "uz": {"title": "Qo‘riqlash tizimlari", "excerpt": "Videokuzatuv, kirishni nazorat qilish va yong‘in signalizatsiyasi tizimlarini loyihalash va o‘rnatish."},
+  "en": {"title": "Security systems", "excerpt": "Design and installation of video surveillance, access control and fire alarm systems."},
+  "tr": {"title": "Güvenlik sistemleri", "excerpt": "Video gözetim, geçiş kontrolü ve yangın alarm sistemlerinin projelendirilmesi ve kurulumu."},
+  "zh": {"title": "安防系统", "excerpt": "视频监控、门禁与火灾报警系统的设计与安装。"}
+ },
+ "ohrannye-sistemy-2": {
+  "uz": {"title": "Qo‘riqlash tizimlari", "excerpt": "Videokuzatuv (IP-kameralar, analog), kirishni nazorat qilish, qo‘riqlash va yong‘in signalizatsiyasi."},
+  "en": {"title": "Security systems", "excerpt": "Video surveillance (IP and analogue cameras), access control, security and fire alarm."},
+  "tr": {"title": "Güvenlik sistemleri", "excerpt": "Video gözetim (IP ve analog kameralar), geçiş kontrolü, güvenlik ve yangın alarmı."},
+  "zh": {"title": "安防系统", "excerpt": "视频监控（IP 与模拟摄像机）、门禁、安防与消防报警。"}
+ }
+}

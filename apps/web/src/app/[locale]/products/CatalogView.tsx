@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeLongread } from "@/lib/longreadI18n";
+import { localizeServiceCase } from "@/lib/serviceCaseI18n";
 import { Link } from "@/i18n/navigation";
 import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
@@ -153,8 +154,14 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   if (q) {
     try {
       const r = await getSearchCases(q);
+      // Кейсы портфолио и решения переводятся разными оверлеями: портфолио —
+      // contentI18n по slug кейса, решения — serviceCaseI18n по slug услуги.
+      // Раньше решения проходили мимо перевода и на uz/en/tr/zh оставались
+      // русскими («Парковка», «Умный автобус») прямо в выдаче каталога.
       caseHits = (r.cases ?? []).map((c) =>
-        c.kind === "portfolio" ? localizePortfolioProject(c as any, locale) as CaseHitDto : c
+        c.kind === "portfolio"
+          ? (localizePortfolioProject(c as any, locale) as CaseHitDto)
+          : (localizeServiceCase(c as any, locale) as CaseHitDto)
       );
     } catch {}
   }
