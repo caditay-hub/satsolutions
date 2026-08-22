@@ -11,6 +11,7 @@ import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
+import { displayModelCode } from "@/lib/modelCodeDisplay";
 import { ogLocale } from "@/lib/ogLocale";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
@@ -408,7 +409,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             </>
           )}
           <span className="text-slate-300">/</span>
-          <span className="text-slate-900 normal-case tracking-normal">{modelCode ?? product.slug}</span>
+          <span className="text-slate-900 normal-case tracking-normal">{displayModelCode(modelCode, locale) ?? locName ?? product.slug}</span>
         </nav>
 
         <div className="grid gap-4 lg:gap-6 lg:grid-cols-[32%_1fr]">
@@ -437,7 +438,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   href={`/catalog/${brandInfo.slug}`}
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-md text-xs font-bold uppercase tracking-wide transition-colors"
                 >
-                  <span style={{ color: "#e02020" }}>●</span> {localizeCatName(brandInfo.name, locale)}
+                  <span style={{ color: "#e02020" }}>●</span> {localizeBrandName(brandInfo.slug, brandInfo.name, locale)}
                 </Link>
               )}
               {isEol ? (
