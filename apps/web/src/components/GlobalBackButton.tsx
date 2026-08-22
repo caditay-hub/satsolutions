@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 // Global, always-in-the-same-place "Back" button.
@@ -10,8 +10,9 @@ export function GlobalBackButton() {
   const router = useRouter();
   const t = useTranslations("common");
 
-  // Скрываем на главной — как для ru (/), так и для локалей (/en, /uz, ...)
-  if (pathname === "/" || /^\/(uz|en|tr|zh)\/?$/.test(pathname)) return null;
+  // usePathname из @/i18n/navigation отдаёт путь БЕЗ префикса локали,
+  // поэтому главная на любом языке — это просто "/".
+  if (pathname === "/") return null;
 
   function goBack() {
     if (typeof window !== "undefined" && window.history.length > 1) {
