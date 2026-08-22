@@ -13,6 +13,7 @@ import { AutoPlayVideo } from "@/components/AutoPlayVideo";
 import { INDUSTRIES } from "@/lib/servicesData";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import { typeSlug } from "@/lib/typeSlug";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { articlesForLocale, articleImg } from "@/lib/articlesData";
@@ -628,18 +629,21 @@ export default async function HomePage() {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6">
               {brandList.map((b) => {
                 const logo = resolveImageUrl(b.logoImageUrl);
+                // Псевдобренд «Комплектующие и аксессуары» (slug prochee) висел
+                // по-русски на 2236 страницах, хотя перевод в словаре уже был.
+                const brandName = localizeBrandName(b.slug, b.name, locale);
                 return (
                   <Link
                     key={b.id}
                     href={`/catalog/${b.slug}`}
-                    aria-label={b.name}
+                    aria-label={brandName}
                     className="flex h-[92px] items-center justify-center rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition-all hover:border-brand-300 hover:shadow-md"
                   >
                     {logo ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img alt={b.name} src={logo} loading="lazy" className="h-full w-full object-contain" />
+                      <img alt={brandName} src={logo} loading="lazy" className="h-full w-full object-contain" />
                     ) : (
-                      <span className="text-center text-[13px] font-black leading-tight text-slate-800">{b.name}</span>
+                      <span className="text-center text-[13px] font-black leading-tight text-slate-800">{brandName}</span>
                     )}
                   </Link>
                 );
