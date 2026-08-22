@@ -14,6 +14,7 @@ import { ProductCard } from "@/components/Cards";
 import { CatalogCard } from "@/components/CatalogCard";
 import { CatalogRow } from "@/components/CatalogRow";
 import { localizeProductName } from "@/lib/productI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import { ViewToggle } from "@/components/catalog/ViewToggle";
 import { SortSelect } from "@/components/catalog/SortSelect";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
@@ -334,7 +335,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()]).slice(0, 12).map((b) => (
             <Link key={b.slug} href={`/catalog/${b.slug.toLowerCase()}/${typeSlug(type as string)}`}
               className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
-              {localizeCatName(type as string, locale)} {b.name} <span className="text-slate-400">({b.count})</span>
+              {localizeCatName(type as string, locale)} {localizeBrandName(b.slug, b.name, locale)} <span className="text-slate-400">({b.count})</span>
             </Link>
           ))}
         </div>
