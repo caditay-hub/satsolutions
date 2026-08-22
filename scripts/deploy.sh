@@ -42,6 +42,24 @@ if ! build_once; then
   build_once
 fi
 
+# 4b) Проверка полноты сборки. Оборванный `next build` оставляет .next без
+#    prerender-manifest.json — сайт после рестарта уходит в 502, а до рестарта
+#    процесс живёт со старым билдом в памяти и раздаёт хеши файлов, которых на
+#    диске уже нет (авария 22.08.2026: 8,5 ч сайта без стилей при HTTP 200).
+W=/var/www/satweb/apps/web/.next
+for f in BUILD_ID prerender-manifest.json routes-manifest.json build-manifest.json; do
+  if [ ! -s "$W/$f" ]; then
+    echo "    !! СБОРКА НЕПОЛНАЯ: нет $W/$f"
+    echo "       Рестарт НЕ выполняется — старый сайт продолжает работать."
+    exit 1
+  fi
+done
+if ! ls "$W"/static/css/*.css >/dev/null 2>&1; then
+  echo "    !! СБОРКА НЕПОЛНАЯ: нет ни одного CSS в $W/static/css"
+  exit 1
+fi
+echo "    сборка полная (BUILD_ID $(cat "$W/BUILD_ID"))"
+
 # 5) Перезапуск ТОЛЬКО satweb-приложений (restart, не reload — в fork-режиме reload
 #    не перезапускал sat-web/sat-admin; CRM/боты не трогаем)
 pm2 restart sat-api sat-web sat-admin --update-env
@@ -66,5 +84,25 @@ if [ -d "$WEB_APP" ]; then
   done
   echo "    ISR-пререндеры каталога сброшены и прогреты"
 fi
+
+# 7) Контроль: живой сайт должен ссылаться на файлы, которые реально отдаются.
+#    Именно эта проверка ловит рассинхрон «процесс на старом билде, диск на новом».
+HTML=$(curl -s -m 30 -H 'Host: satsolutions.uz' http://localhost:3000/ || true)
+CSS=$(printf '%s' "$HTML" | grep -o '/_next/static/css/[a-z0-9]*\.css' | head -1)
+if [ -z "$CSS" ]; then
+  echo "    !! главная не отдала HTML со ссылкой на CSS — проверьте pm2 logs sat-web"
+  exit 1
+fi
+CODE=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -H 'Host: satsolutions.uz' "http://localhost:3000$CSS")
+if [ "$CODE" != "200" ]; then
+  echo "    !! КРИТИЧНО: главная ссылается на $CSS, а он отдаёт $CODE."
+  echo "       Процесс раздаёт не ту сборку, что лежит на диске — сайт будет без стилей."
+  exit 1
+fi
+echo "    живая сборка сходится: $CSS -> 200"
+
+# 8) Переотправить sitemap в Search Console (сервис-аккаунт «Владелец») — Google быстрее перечитает карту
+(cd /var/www/satweb/apps/api && npx tsx src/monitor/sitemapSubmit.ts) || echo "    (переотправка sitemap не удалась — не критично)"
+(cd /var/www/satweb/apps/api && npx tsx src/monitor/indexNow.ts) || echo "    (IndexNow не удался — не критично)"
 
 echo "==> [satweb deploy] DONE $(date -u +%FT%TZ)"
