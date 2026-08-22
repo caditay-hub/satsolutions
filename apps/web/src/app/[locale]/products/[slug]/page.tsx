@@ -461,9 +461,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
             {/* Title + model code (артикул не дублируем, если он уже есть в названии) */}
             <h1 className="text-xl font-bold tracking-tight sm:text-2xl leading-tight">{locName}</h1>
-            {modelCode && !locName.toLowerCase().includes(modelCode.toLowerCase()) ? (
+            {displayModelCode(modelCode, locale) && !locName.toLowerCase().includes(String(modelCode).toLowerCase()) ? (
               <div className="mt-1 text-base font-mono font-semibold text-slate-600 tracking-wide">
-                {modelCode}
+                {displayModelCode(modelCode, locale)}
               </div>
             ) : null}
             {locShortDesc ? (
