@@ -9,7 +9,8 @@ import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
-import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
@@ -358,7 +359,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       itemListElement: [
         { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
         { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
-        ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: localizeCatName(brandInfo.name, locale), item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
+        ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: localizeBrandName(brandInfo.slug, brandInfo.name, locale), item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
         ...(categoryInfo && categoryHref
           ? [{ "@type": "ListItem", position: brandInfo ? 4 : 3, name: localizeCatName(categoryInfo.name, locale), item: `${siteUrl}${categoryHref}` }]
           : []),
@@ -394,7 +395,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             <>
               <span className="text-slate-300">/</span>
               <Link href={`/catalog/${brandInfo.slug}`} className="hover:text-slate-900 transition-colors">
-                {brandInfo.name}
+                {localizeBrandName(brandInfo.slug, brandInfo.name, locale)}
               </Link>
             </>
           )}
