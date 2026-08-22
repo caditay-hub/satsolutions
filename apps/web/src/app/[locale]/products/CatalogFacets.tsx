@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeCharKey } from "@/lib/charKeyI18n";
 import { localizeCharValue } from "@/lib/charValueI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import type { ProductFacets } from "@/lib/api";
 
 const VISIBLE = 6; // сколько значений показываем до «Ещё N»
@@ -239,7 +240,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
               return (
                 <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
                   <Check on={on} />
-                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{b.name}</span>
+                  <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{localizeBrandName(b.slug, b.name, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
                 </button>
               );

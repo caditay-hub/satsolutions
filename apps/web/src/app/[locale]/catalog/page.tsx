@@ -193,6 +193,7 @@ async function ProcheeCard({ b }: { b: BrandDto }) {
 
 export default async function CatalogIndexPage() {
   const t = await getTranslations("catalog");
+  const locale = await getLocale();
   // Список брендов — динамический, из БД (published).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
   // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
@@ -210,7 +211,7 @@ export default async function CatalogIndexPage() {
   const orderedBrands = [...front, ...middle];
 
   const smallTotal = smallBrands.reduce((s, b) => s + (b.productCount ?? 0), 0);
-  const smallNames = smallBrands.map((b) => b.name).join(", ");
+  const smallNames = smallBrands.map((b) => localizeBrandName(b.slug, b.name, locale)).join(", ");
 
   return (
     <div className="min-h-screen bg-white font-main">
