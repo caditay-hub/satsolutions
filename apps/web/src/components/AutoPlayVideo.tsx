@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { shouldPlayDecorativeVideo } from "@/lib/lightMedia";
+import { decorativeVideoMode, videoSrcFor } from "@/lib/lightMedia";
 
 /* Видео-обложка: играет только пока блок в зоне видимости.
-   Телефон, экономия трафика, медленная сеть, prefers-reduced-motion
-   и ошибка загрузки → остаётся постер, ролик не качается. */
+   На телефоне подставляется облегчённая копия ролика, на компьютере — полная.
+   Экономия трафика, 2G, prefers-reduced-motion и ошибка загрузки → остаётся
+   постер, ролик не качается вовсе (src не проставляется). */
 export function AutoPlayVideo({
   src,
   poster,
@@ -20,30 +21,30 @@ export function AutoPlayVideo({
   useEffect(() => {
     const v = ref.current;
     if (!v) return;
-    if (!shouldPlayDecorativeVideo()) return;
+    const chosen = videoSrcFor(src, decorativeVideoMode());
+    if (!chosen) return;
+    v.src = chosen;
+
+    const start = () => v.play().catch(() => {});
     if (!("IntersectionObserver" in window)) {
-      v.play().catch(() => {});
+      start();
       return;
     }
     const io = new IntersectionObserver(
       (entries) => {
         const e = entries[0];
-        if (e.isIntersecting) {
-          ref.current?.play().catch(() => {});
-        } else {
-          ref.current?.pause();
-        }
+        if (e.isIntersecting) start();
+        else ref.current?.pause();
       },
       { threshold: 0.25 }
     );
     io.observe(v);
     return () => io.disconnect();
-  }, []);
+  }, [src]);
 
   return (
     <video
       ref={ref}
-      src={src}
       poster={poster}
       muted
       loop

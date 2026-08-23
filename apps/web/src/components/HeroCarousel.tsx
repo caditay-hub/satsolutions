@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { resolveImageUrl } from "@/lib/image";
 import { optimizedImg } from "@/lib/imgProxy";
-import { useDecorativeVideo } from "@/lib/lightMedia";
+import { useDecorativeVideoMode, videoSrcFor } from "@/lib/lightMedia";
 
 export type HeroButton = {
   label: string;
@@ -60,7 +60,7 @@ export function HeroCarousel({
   // На телефоне и при экономии трафика ролик не запускаем: сам элемент
   // <video> остаётся (его постер — тот же кадр и кандидат в LCP),
   // но без src сам файл не запрашивается.
-  const allowVideo = useDecorativeVideo();
+  const videoMode = useDecorativeVideoMode();
 
   const items = useMemo(() => {
     return (slides ?? [])
@@ -161,7 +161,7 @@ export function HeroCarousel({
                   )}
                   {sVideo ? (
                     <video
-                      src={allowVideo ? sVideo : undefined}
+                      src={videoSrcFor(sVideo, videoMode)}
                       autoPlay={isActive}
                       muted
                       loop
