@@ -62,6 +62,7 @@ export function HeroCarousel({
   // но без src сам файл не запрашивается.
   const videoMode = useDecorativeVideoMode();
 
+
   const items = useMemo(() => {
     return (slides ?? [])
       .filter((s) => s && (s.published ?? true) && typeof s.imageUrl === "string" && s.imageUrl.trim())
@@ -70,10 +71,25 @@ export function HeroCarousel({
   }, [slides]);
 
   const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    Object.entries(videoRefs.current).forEach(([i, v]) => {
+      if (!v) return;
+      if (Number(i) === idx && v.getAttribute("src")) {
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }, [idx, videoMode]);
   const count = items.length;
 
   // Ручной свайп на мобильном: свайп влево/вправо листает слайд.
   // swipedRef подавляет клик-навигацию по слайду, если это был свайп, а не тап.
+  // Ролик активного слайда запускаем явно: источник подставляется уже после
+  // первой отрисовки (режим известен только в браузере), а атрибут autoPlay
+  // срабатывает лишь при начальной загрузке — иначе кадр стоит на месте.
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
   const startXRef = useRef(0);
   const swipedRef = useRef(false);
   function onTouchStart(e: React.TouchEvent) {
@@ -161,6 +177,7 @@ export function HeroCarousel({
                   )}
                   {sVideo ? (
                     <video
+                      ref={(el) => { videoRefs.current[i] = el; }}
                       src={videoSrcFor(sVideo, videoMode)}
                       autoPlay={isActive}
                       muted
