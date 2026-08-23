@@ -325,12 +325,12 @@ export default async function HomePage() {
                   {d.video ? (
                     <AutoPlayVideo
                       src={`${SOLUTIONS_IMG}/${d.video}.mp4?v=3`}
-                      poster={optimizedImg(`${SOLUTIONS_IMG}/${d.poster}?v=9`)}
+                      poster={optimizedImg(`${SOLUTIONS_IMG}/${d.poster}?v=11`)}
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (
                     <Image
-                      src={`${SOLUTIONS_IMG}/${d.poster}?v=10`}
+                      src={`${SOLUTIONS_IMG}/${d.poster}?v=11`}
                       alt={d.title}
                       fill
                       sizes="(max-width: 640px) 100vw, 33vw"

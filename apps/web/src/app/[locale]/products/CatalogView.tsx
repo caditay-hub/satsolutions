@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { typeSlug } from "@/lib/typeSlug";
+import { formatNumber } from "@/lib/formatNumber";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeLongread } from "@/lib/longreadI18n";
 import { localizeServiceCase } from "@/lib/serviceCaseI18n";
@@ -300,7 +301,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           </span>
         ) : null}
         <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : brandLanding ? (brandLanding.seoH1 ?? brandLanding.name) : tnav("products")}</h1>
-        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {total}</span>
+        <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {formatNumber(total)}</span>
       </div>
 
       {brandLanding?.description ? (
@@ -358,7 +359,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5">
               <span className="text-[15px] text-slate-700">
                 {smart ? <span className="font-bold text-brand-700">{tc("smartSearch")} · </span> : null}
-                {tc("searchPrefix")} <span className="font-bold text-slate-900">«{q}»</span> — {tc("searchFound")} <span className="font-bold text-slate-900">{total}</span>
+                {tc("searchPrefix")} <span className="font-bold text-slate-900">«{q}»</span> — {tc("searchFound")} <span className="font-bold text-slate-900">{formatNumber(total)}</span>
                 {corrected ? <span className="text-slate-500"> · {tc("showingFor")} <span className="font-semibold text-brand-700">«{corrected}»</span></span> : null}
                 {smart?.explain ? <span className="text-slate-500"> · {smart.explain}</span> : null}
               </span>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getSitePage } from "@/lib/api";
+import { formatPhone } from "@/lib/formatPhone";
 import { resolveImageUrl } from "@/lib/image";
 import { SocialLinks } from "@/components/SocialLinks";
 import { FeedbackForm } from "@/components/FeedbackForm";
@@ -78,7 +79,7 @@ export default async function ContactPage() {
                         <span className="text-sm font-black uppercase tracking-widest text-slate-600">{t("contactInfo")}</span>
                       </div>
                       <div className="space-y-2 text-2xl font-bold text-slate-950">
-                        {phone ? <div className="hover:text-brand-600 transition-colors cursor-default">{phone}</div> : null}
+                        {phone ? <div className="hover:text-brand-600 transition-colors cursor-default">{formatPhone(phone)}</div> : null}
                         {email ? <div className="text-xl hover:text-brand-600 transition-colors cursor-default">{email}</div> : null}
                         {address ? <div className="text-base font-semibold text-slate-700">{address}</div> : null}
                         {!phone && !email && !address ? (

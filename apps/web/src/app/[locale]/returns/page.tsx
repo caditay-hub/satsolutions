@@ -30,11 +30,11 @@ const D: Record<string, {
         "Гарантийное и постгарантийное обслуживание выполняется нашим сервисным центром.",
       ]},
       { h: "Как оформить возврат", items: [
-        "Свяжитесь с нами по телефону +998 97 862-66-99 (звонок, Telegram, WhatsApp) или по почте sales@satsolutions.uz.",
+        "Свяжитесь с нами по телефону +998 97 862 66 99 (звонок, Telegram, WhatsApp) или по почте sales@satsolutions.uz.",
         "Привезите товар по адресу: г. Ташкент, ул. Катта Дархон, 5 (Пн–Сб 09:00–18:00) или согласуйте забор курьером.",
       ]},
     ],
-    contact: "Вопросы по возврату: +998 97 862-66-99 · sales@satsolutions.uz",
+    contact: "Вопросы по возврату: +998 97 862 66 99 · sales@satsolutions.uz",
   },
   uz: {
     title: "Tovarni qaytarish va almashtirish",
@@ -58,11 +58,11 @@ const D: Record<string, {
         "Kafolat va kafolatdan keyingi xizmat servis markazimizda bajariladi.",
       ]},
       { h: "Qaytarishni qanday rasmiylashtirish", items: [
-        "Biz bilan bog'laning: +998 97 862-66-99 (qo'ng'iroq, Telegram, WhatsApp) yoki sales@satsolutions.uz.",
+        "Biz bilan bog'laning: +998 97 862 66 99 (qo'ng'iroq, Telegram, WhatsApp) yoki sales@satsolutions.uz.",
         "Tovarni manzilga olib keling: Toshkent sh., Katta Darxon ko'chasi, 5 (Du–Sha 09:00–18:00) yoki kuryer olib ketishini kelishing.",
       ]},
     ],
-    contact: "Qaytarish bo'yicha savollar: +998 97 862-66-99 · sales@satsolutions.uz",
+    contact: "Qaytarish bo'yicha savollar: +998 97 862 66 99 · sales@satsolutions.uz",
   },
   en: {
     title: "Returns & Exchange Policy",
@@ -86,11 +86,11 @@ const D: Record<string, {
         "Warranty and post-warranty service is provided by our service centre.",
       ]},
       { h: "How to request a return", items: [
-        "Contact us at +998 97 862-66-99 (call, Telegram, WhatsApp) or sales@satsolutions.uz.",
+        "Contact us at +998 97 862 66 99 (call, Telegram, WhatsApp) or sales@satsolutions.uz.",
         "Bring the item to: 5 Katta Darxon street, Tashkent (Mon–Sat 9:00–18:00) or arrange courier pickup.",
       ]},
     ],
-    contact: "Return enquiries: +998 97 862-66-99 · sales@satsolutions.uz",
+    contact: "Return enquiries: +998 97 862 66 99 · sales@satsolutions.uz",
   },
   tr: {
     title: "İade ve Değişim Koşulları",
@@ -114,11 +114,11 @@ const D: Record<string, {
         "Garanti ve garanti sonrası servis, servis merkezimiz tarafından sağlanır.",
       ]},
       { h: "İade talebi nasıl yapılır", items: [
-        "Bize ulaşın: +998 97 862-66-99 (arama, Telegram, WhatsApp) veya sales@satsolutions.uz.",
+        "Bize ulaşın: +998 97 862 66 99 (arama, Telegram, WhatsApp) veya sales@satsolutions.uz.",
         "Ürünü adresimize getirin: Katta Darxon caddesi 5, Taşkent (Pzt–Cmt 09:00–18:00) veya kurye ile teslim alınmasını ayarlayın.",
       ]},
     ],
-    contact: "İade soruları: +998 97 862-66-99 · sales@satsolutions.uz",
+    contact: "İade soruları: +998 97 862 66 99 · sales@satsolutions.uz",
   },
   zh: {
     title: "退换货政策",
@@ -142,11 +142,11 @@ const D: Record<string, {
         "保修及保修后服务由我们的服务中心提供。",
       ]},
       { h: "如何申请退货", items: [
-        "请联系我们：+998 97 862-66-99（电话、Telegram、WhatsApp）或 sales@satsolutions.uz。",
+        "请联系我们：+998 97 862 66 99（电话、Telegram、WhatsApp）或 sales@satsolutions.uz。",
         "将商品送至：塔什干市 Katta Darxon 街5号（周一至周六 9:00–18:00），或安排快递取件。",
       ]},
     ],
-    contact: "退货咨询：+998 97 862-66-99 · sales@satsolutions.uz",
+    contact: "退货咨询：+998 97 862 66 99 · sales@satsolutions.uz",
   },
 };
 

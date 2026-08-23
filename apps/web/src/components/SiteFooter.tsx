@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations, getLocale } from "next-intl/server";
 import { getSitePage } from "@/lib/api";
+import { formatPhone } from "@/lib/formatPhone";
 import { SocialLinks } from "@/components/SocialLinks";
 import { contactGeo } from "@/lib/geo";
 import { SatLogo } from "@/components/SatLogo";
@@ -100,7 +101,7 @@ export async function SiteFooter() {
                 {phone ? (
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("phone")}</div>
-                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-bold text-slate-950 hover:text-brand-700">{phone}</a>
+                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-bold text-slate-950 hover:text-brand-700">{formatPhone(phone)}</a>
                   </div>
                 ) : null}
                 {email ? (
