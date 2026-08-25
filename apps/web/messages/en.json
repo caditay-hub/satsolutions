@@ -1732,7 +1732,74 @@
           "q": "How much does a lock cost with installation?",
           "a": "It depends on what you need — from a basic electromagnetic lock to a biometric smart lock. Tell us about your door and requirements, and we'll give you a price."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard electronic lock setups",
+        "pkgNote": "We price every site individually: send a photo of the door and the number of doors, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Apartment or private house",
+            "for": "Front door, gate, country home",
+            "term": "Timeline: 1 day",
+            "items": [
+              "Smart lock with fingerprint, code and card",
+              "Open from your phone, temporary codes for guests and tradespeople",
+              "A mechanical key stays as the fallback",
+              "Runs on batteries and warns you before they run out"
+            ]
+          },
+          {
+            "name": "Office and meeting rooms",
+            "for": "Office, clinic, training centre, coworking",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Electromagnetic or electromechanical locks on the doors",
+              "Staff cards with different rights for different rooms",
+              "Exit button, door closer, emergency release on fire alarm",
+              "Access log and timesheet export"
+            ]
+          },
+          {
+            "name": "Hotel and serviced apartments",
+            "for": "Hotel, hostel, apartment complex",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Guest-card locks tied to the length of stay",
+              "Master card for housekeeping and the front desk",
+              "Standalone operation — no wiring to every room",
+              "Report of who entered the room and when"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working lock — 5 steps",
+        "stages": [
+          {
+            "t": "Technician visit",
+            "s": "we look at the door, leaf thickness and frame — free of charge"
+          },
+          {
+            "t": "Selection and quote",
+            "s": "a lock that fits your door, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "square fitting, reinforcing the door where needed"
+          },
+          {
+            "t": "Setup",
+            "s": "fingerprints, codes, cards, access rights per room"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we show you how to grant access; warranty on lock and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Electronic locks — in stock in Tashkent",
+        "brandsText": "KANIHAD, Hikvision, ZKTeco — chosen for the door type and the access model, all equipment supplied by us with warranty:"
+      }
     },
     "gates": {
       "title": "Automatic Gates",
@@ -1838,7 +1905,74 @@
           "q": "Do you provide warranty?",
           "a": "Vendor warranty on equipment plus our service contracts — from consultations to full maintenance with on-site support."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard server configurations",
+        "pkgNote": "We size it to the job: describe the load — how many 1C users, how much data, whether you need it to run without downtime — and we return a quote the same day.",
+        "packages": [
+          {
+            "name": "Server for 1C and files",
+            "for": "Office of 10–50 people, trading company",
+            "term": "Timeline: supplied to order",
+            "items": [
+              "1U or 2U, single Xeon processor, 32–128 GB of memory",
+              "SSD for the database, separate drives for files and archive",
+              "Hot-swap RAID — a drive is replaced without stopping work",
+              "Windows Server or Linux; we handle migrating your current database"
+            ]
+          },
+          {
+            "name": "Server for video surveillance",
+            "for": "Sites from 32 cameras: warehouse, factory, residential complex",
+            "term": "Timeline: supplied to order",
+            "items": [
+              "Drive capacity calculated from retention depth and camera count",
+              "Separate network and controller for the video stream",
+              "Spare slots — cameras are added without replacing the server",
+              "Rack mounting, recording and access rights configured"
+            ]
+          },
+          {
+            "name": "Cluster and virtualisation",
+            "for": "Several systems, a requirement to run without downtime",
+            "term": "Timeline: by project",
+            "items": [
+              "Two or more nodes, shared storage, a node can fail without stopping work",
+              "1C, mail, files and video surveillance on the same hardware",
+              "Scheduled backups with restore testing",
+              "Server room design: power, cooling, UPS"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From the task to a working server — 5 steps",
+        "stages": [
+          {
+            "t": "Understanding the task",
+            "s": "load, number of users, data volume, downtime requirements"
+          },
+          {
+            "t": "Configuration and quote",
+            "s": "a build sized for the job with room to grow, itemised estimate"
+          },
+          {
+            "t": "Supply",
+            "s": "brought in to order; we state the lead time before you pay"
+          },
+          {
+            "t": "Installation and setup",
+            "s": "rack, OS, virtualisation, migration of your current systems"
+          },
+          {
+            "t": "Handover and service",
+            "s": "documentation, warranty, an engineer on call after launch"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Servers and storage — supplied to order",
+        "brandsText": "H3C UniServer, Supermicro, Lenovo ThinkSystem — we build the configuration around the task and the budget, supplied with warranty:"
+      }
     },
     "warehouse": {
       "title": "Warehouses and logistics",

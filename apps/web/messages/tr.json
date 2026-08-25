@@ -1724,7 +1724,74 @@
           "q": "Kurulumla kilit ne kadar tutar?",
           "a": "Basit elektromanyetikten biyometrik akıllı kilide — bütçeler farklı. Kapıyı ve görevi söyleyin — fiyat verelim."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart elektronik kilit şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kapının fotoğrafını ve nokta sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Daire veya müstakil ev",
+            "for": "Giriş kapısı, bahçe kapısı, yazlık",
+            "term": "Süre: 1 gün",
+            "items": [
+              "Parmak izi, şifre ve kartla çalışan akıllı kilit",
+              "Telefondan açma, misafir ve ustalar için geçici şifre",
+              "Mekanik anahtar yedek olarak kalır",
+              "Pille çalışır, bitmeden önce uyarır"
+            ]
+          },
+          {
+            "name": "Ofis ve toplantı odaları",
+            "for": "Ofis, klinik, eğitim merkezi, ortak çalışma alanı",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Kapılarda elektromanyetik veya elektromekanik kilitler",
+              "Personel kartları, odalara göre farklı yetkiler",
+              "Çıkış butonu, kapı kapatıcı, yangında acil açılma",
+              "Geçiş kaydı ve puantaj aktarımı"
+            ]
+          },
+          {
+            "name": "Otel ve apart daireler",
+            "for": "Otel, hostel, apart tesis",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Konaklama süresine bağlı misafir kartlı kilitler",
+              "Kat görevlisi ve resepsiyon için master kart",
+              "Her odaya kablo çekmeden bağımsız çalışma",
+              "Odaya kimin ne zaman girdiğine dair rapor"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan kilide — 5 adım",
+        "stages": [
+          {
+            "t": "Usta keşfi",
+            "s": "kapıyı, kanat kalınlığını ve kasayı görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Seçim ve teklif",
+            "s": "kapınıza uygun kilit, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "kaçıklık olmadan montaj, gerekirse kapı güçlendirme"
+          },
+          {
+            "t": "Ayar",
+            "s": "parmak izleri, şifreler, kartlar, odalara göre yetkiler"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "yetki vermeyi gösteriyoruz; kilit ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Elektronik kilitler — Taşkent’te stokta",
+        "brandsText": "KANIHAD, Hikvision, ZKTeco — kapı tipine ve erişim düzenine göre seçiyoruz, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
+      }
     },
     "gates": {
       "title": "Otomatik Kapılar",
@@ -1830,7 +1897,74 @@
           "q": "Garanti veriyor musunuz?",
           "a": "Ekipmana üretici garantisi artı servis sözleşmelerimiz — danışmanlıktan yerinde tam bakıma kadar."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart sunucu konfigürasyonu",
+        "pkgNote": "İşe göre hesaplıyoruz: yükü anlatın — 1C’de kaç kullanıcı, ne kadar veri, kesintisiz çalışma gerekiyor mu — aynı gün teklif dönelim.",
+        "packages": [
+          {
+            "name": "1C ve dosya sunucusu",
+            "for": "10–50 kişilik ofis, ticaret şirketi",
+            "term": "Süre: siparişe göre tedarik",
+            "items": [
+              "1U veya 2U, tek Xeon işlemci, 32–128 GB bellek",
+              "Veritabanı için SSD, dosya ve arşiv için ayrı diskler",
+              "Sıcak değiştirmeli RAID — disk, çalışma durmadan değişir",
+              "Windows Server veya Linux; mevcut veritabanı taşımasını biz üstleniyoruz"
+            ]
+          },
+          {
+            "name": "Kamera kayıt sunucusu",
+            "for": "32 kameradan büyük tesisler: depo, fabrika, site",
+            "term": "Süre: siparişe göre tedarik",
+            "items": [
+              "Arşiv süresine ve kamera sayısına göre disk hesabı",
+              "Video akışı için ayrı ağ ve denetleyici",
+              "Yedek yuvalar — kamera eklerken sunucu değişmez",
+              "Kabinete montaj, kayıt ve yetki ayarları"
+            ]
+          },
+          {
+            "name": "Küme ve sanallaştırma",
+            "for": "Birden çok sistem, kesintisiz çalışma şartı",
+            "term": "Süre: projeye göre",
+            "items": [
+              "İki veya daha fazla düğüm, ortak depolama, düğüm arızasında çalışma durmaz",
+              "1C, e-posta, dosyalar ve kamera kaydı aynı donanımda",
+              "Programlı yedekleme ve geri yükleme testi",
+              "Sistem odası projesi: besleme, soğutma, UPS"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan sunucuya — 5 adım",
+        "stages": [
+          {
+            "t": "İhtiyaç analizi",
+            "s": "yük, kullanıcı sayısı, veri hacmi, kesinti toleransı"
+          },
+          {
+            "t": "Konfigürasyon ve teklif",
+            "s": "büyümeye pay bırakan yapı, fiyatlı keşif"
+          },
+          {
+            "t": "Tedarik",
+            "s": "siparişe göre getiriyoruz; süreyi ödemeden önce söylüyoruz"
+          },
+          {
+            "t": "Montaj ve kurulum",
+            "s": "kabinet, işletim sistemi, sanallaştırma, mevcut sistemlerin taşınması"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "dokümantasyon, garanti, devreye alma sonrası mühendis desteği"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Sunucular ve depolama — siparişe göre tedarik",
+        "brandsText": "H3C UniServer, Supermicro, Lenovo ThinkSystem — işe ve bütçeye göre konfigürasyon kuruyoruz, garantiyle tedarik ediyoruz:"
+      }
     },
     "warehouse": {
       "title": "Warehouses and logistics",

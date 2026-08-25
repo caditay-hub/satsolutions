@@ -1732,7 +1732,74 @@
           "q": "Qulf va o'rnatish qancha turadi?",
           "a": "Oddiy elektromagnitli qulfdan biometrik smart-qulfgacha — byujetlar turlicha. Qaysi eshik va vazifa ekanligini ayting — narxni aytamiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Elektron qulflarning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: eshik fotosini va nuqtalar sonini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Xonadon yoki xususiy uy",
+            "for": "Kirish eshigi, darvoza, dala hovli",
+            "term": "Muddat: 1 kun",
+            "items": [
+              "Barmoq izi, kod va karta bilan aqlli qulf",
+              "Telefondan ochish, mehmon va ustalar uchun vaqtinchalik kod",
+              "Mexanik kalit zaxira variant sifatida qoladi",
+              "Batareyadan ishlaydi, quvvat tugashidan ogohlantiradi"
+            ]
+          },
+          {
+            "name": "Ofis va muzokara xonalari",
+            "for": "Ofis, klinika, o‘quv markazi, kovorking",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Eshiklarga elektromagnit yoki elektromexanik qulflar",
+              "Xodimlar kartalari, har xil xonaga har xil huquq",
+              "Chiqish tugmasi, dovodchik, yong‘inda avariya ochilishi",
+              "O‘tishlar jurnali va tabel yuklab olish"
+            ]
+          },
+          {
+            "name": "Mehmonxona va apartamentlar",
+            "for": "Mehmonxona, xostel, apart-majmua",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Mehmon kartasiga qulf, yashash muddatiga bog‘langan",
+              "Farrosh va administrator uchun master-karta",
+              "Har bir xonaga sim tortmasdan avtonom ishlash",
+              "Hisobot: kim va qachon xonaga kirgan"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan qulfgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Usta chiqishi",
+            "s": "eshikni, polotno qalinligini va qutini ko‘ramiz — bepul"
+          },
+          {
+            "t": "Tanlov va taklif",
+            "s": "eshigingizga mos qulf, narxli smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "qiyshaytirmasdan o‘rnatamiz, kerak bo‘lsa eshikni mustahkamlaymiz"
+          },
+          {
+            "t": "Sozlash",
+            "s": "barmoq izlari, kodlar, kartalar, xonalar bo‘yicha huquqlar"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "ruxsat berishni ko‘rsatamiz; qulf va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Elektron qulflar — Toshkentdagi omborda",
+        "brandsText": "KANIHAD, Hikvision, ZKTeco — eshik turi va kirish rejimiga qarab tanlaymiz, barcha uskunani o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "gates": {
       "title": "Avtomatik darvozalar",
@@ -1838,7 +1905,74 @@
           "q": "Kafolat berasizmi?",
           "a": "Asboblariga vendor kafolatiga qo'shimcha o'z xizmatlar kontraktlarimiz — maslahatlashdan to'liq xizmatga tekshiruv bilan."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Serverlarning uchta tipik konfiguratsiyasi",
+        "pkgNote": "Vazifaga qarab hisoblaymiz: yuklamani tasvirlab bering — 1C da nechta foydalanuvchi, ma’lumot hajmi, to‘xtovsiz ishlash kerakmi — kun davomida taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "1C va fayllar uchun server",
+            "for": "10–50 xodimli ofis, savdo kompaniyasi",
+            "term": "Muddat: buyurtma bo‘yicha yetkazish",
+            "items": [
+              "1U yoki 2U, bitta Xeon protsessor, 32–128 GB xotira",
+              "Baza uchun SSD, fayl va arxiv uchun alohida disklar",
+              "Issiq almashtiriladigan RAID — disk to‘xtatmasdan almashtiriladi",
+              "Windows Server yoki Linux, joriy bazani ko‘chirishni o‘z zimmamizga olamiz"
+            ]
+          },
+          {
+            "name": "Videokuzatuv uchun server",
+            "for": "32 kameradan ortiq obyekt: ombor, zavod, TJM",
+            "term": "Muddat: buyurtma bo‘yicha yetkazish",
+            "items": [
+              "Arxiv chuqurligi va kameralar soniga qarab disk hisobi",
+              "Videooqim uchun alohida tarmoq va kontroller",
+              "Slotlarda zaxira — kameralar serverni almashtirmasdan qo‘shiladi",
+              "Stoykaga o‘rnatish, yozuv va kirish huquqlarini sozlash"
+            ]
+          },
+          {
+            "name": "Klaster va virtualizatsiya",
+            "for": "Bir nechta tizim, to‘xtovsiz ishlash talabi",
+            "term": "Muddat: loyiha bo‘yicha",
+            "items": [
+              "Ikki va undan ortiq tugun, umumiy saqlash, tugun ishdan chiqsa ish to‘xtamaydi",
+              "1C, pochta, fayllar va videokuzatuv bitta jihozda",
+              "Jadval bo‘yicha zaxira nusxa, tiklashni tekshirish bilan",
+              "Server xonasi loyihasi: quvvat, sovutish, UPS"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Vazifadan ishlaydigan servergacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Vazifani tahlil qilish",
+            "s": "yuklama, foydalanuvchilar soni, ma’lumot hajmi, to‘xtash talablari"
+          },
+          {
+            "t": "Konfiguratsiya va taklif",
+            "s": "o‘sish zaxirasi bilan yig‘ish, narxli smeta"
+          },
+          {
+            "t": "Yetkazib berish",
+            "s": "buyurtma bo‘yicha olib kelamiz, muddatni to‘lovdan oldin aytamiz"
+          },
+          {
+            "t": "Montaj va sozlash",
+            "s": "stoyka, OT, virtualizatsiya, joriy tizimlarni ko‘chirish"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "hujjatlar, kafolat, ishga tushgandan keyin muhandis aloqada"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Serverlar va saqlash tizimlari — buyurtma bo‘yicha",
+        "brandsText": "H3C UniServer, Supermicro, Lenovo ThinkSystem — vazifa va byudjetga qarab konfiguratsiya yig‘amiz, kafolat bilan yetkazamiz:"
+      }
     },
     "warehouse": {
       "title": "Omborlar va logistika",
