@@ -592,7 +592,74 @@
           "q": "Domofonni elektron qulf va SKUD bilan ulash mumkinmi?",
           "a": "Ha, bu loyihalarimizning standart qismi: domofon elektromagnit yoki elektromexanik qulfni ochadi, kirish esa karta, kod yoki barmoq izi bo'yicha ishlaydi. Ofislar uchun domofoniyani SKUD bilan yagona tizimga birlashtiramiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Domofoniyaning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: kirish rejasini yoki xonadonlar sonini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Xususiy uy yoki xonadon",
+            "for": "Uy, dala hovli, xonadon, darvoza",
+            "term": "Muddat: 1 kun",
+            "items": [
+              "Darvoza yoki eshikka chaqiruv paneli, ichkarida monitor",
+              "Chaqiruvni telefonga yo‘naltirish — istalgan joydan ochasiz",
+              "Darvozaga elektromexanik qulf to‘plamda",
+              "Siz yo‘q paytingizda kim kelganining foto va videosi"
+            ]
+          },
+          {
+            "name": "Ofis yoki biznes-markaz",
+            "for": "Ofis, klinika, o‘quv markazi, salon",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Kirishda panel, resepshen va xonalarda monitorlar",
+              "Elektron qulf va SKUD bilan bog‘lash — hammasi bitta ruxsatnoma bilan",
+              "Administrator telefonidan ochish, stolda monitorsiz",
+              "Chaqiruv va ochishlar jurnali, vaqti bilan"
+            ]
+          },
+          {
+            "name": "Podyezd va turar-joy majmuasi",
+            "for": "Ko‘p xonadonli uy, TJM, quruvchi",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Podyezdga ko‘p abonentli panel, xonadonlarda trubka yoki monitor",
+              "Trubka o‘rniga yashovchi ilovasi bilan IP-domofoniya",
+              "Barcha yashovchilarga kalit yoki karta",
+              "Bir necha podyezdga yagona sxema, shartnoma bo‘yicha xizmat"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan domofongacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "kirish joyi, trassa uzunligi va quvvatni ko‘ramiz — bepul"
+          },
+          {
+            "t": "Tanlov va taklif",
+            "s": "panel, monitor, qulf, narxlar bilan smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "ozoda trassalar, faqat iloji bo‘lmaganda shtroblaymiz"
+          },
+          {
+            "t": "Sozlash",
+            "s": "telefonga chaqiruv, kirish kodlari, hammaga kalitlar"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "qanday ishlatishni ko‘rsatamiz; uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Domofon va qulflar — Toshkentdagi omborda",
+        "brandsText": "Hikvision va Tapo — vazifa va byudjetga qarab tanlaymiz, barcha uskunani o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "attendance": {
       "title": "Ish vaqtini hisobga olish",
@@ -1035,7 +1102,74 @@
           "q": "Boshqaruv va pultlar haqida nima?",
           "a": "Boshqarish pultlardan, kortochka, tugma, ilova orqali va oq ro'yxat bo'yicha avtomatik ravishda mumkin."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Kirishning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: yo‘lak kengligi va kuniga nechta mashina o‘tishini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Xususiy uy hovlisi",
+            "for": "Xususiy uy, dala hovli, kichik hudud",
+            "term": "Muddat: 1 kun",
+            "items": [
+              "3–4 metrli strelali shlagbaum yoki suriluvchi darvoza",
+              "To‘plamda ikkita pult, xohishga ko‘ra telefondan ochish",
+              "Fotoelementlar — strela mashina yoki odam ustiga tushmaydi",
+              "Svet o‘chganda akkumulyatordan ishlaydi"
+            ]
+          },
+          {
+            "name": "Ofis yoki TJM parkovkasi",
+            "for": "Biznes-markaz, turar-joy majmuasi, klinika",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "6 metrgacha strelali shlagbaum, antivandal ustun",
+              "Karta, brelok yoki telefondagi QR-kod bilan o‘tish",
+              "Avtoraqamlarni aniqlash — o‘zimiznikilar to‘xtamay kiradi",
+              "Kirishlar jurnali: kim, qachon va qaysi mashinada"
+            ]
+          },
+          {
+            "name": "Korxona nazorat-o‘tkazish punkti",
+            "for": "Zavod, ombor, logistika majmuasi",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Kirish va chiqishga shlagbaumlar, KPP SKUD bilan bog‘lanish",
+              "Videokuzatuv bilan integratsiya: har bir kirishda raqam va foto",
+              "Qorovul postidan va masofadan boshqarish",
+              "Yetkazib beruvchi va pudratchi transportini hisobga olish"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan shlagbaumgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "yo‘lak kengligini o‘lchaymiz, quvvat va tuproqni ko‘ramiz — bepul"
+          },
+          {
+            "t": "Tanlov va taklif",
+            "s": "shlagbaum, strela, o‘tish usuli, narxli smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "ustun uchun poydevor, gofrada kabel, quvvatga ulash"
+          },
+          {
+            "t": "Sozlash",
+            "s": "pultlar, kartalar, raqam aniqlash, o‘tish huquqlari"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "qorovulni o‘qitamiz; uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Shlagbaum va avtomatika — Toshkentdagi omborda",
+        "brandsText": "ZKTeco, Hikvision, Dahua — yo‘lak kengligi va yuklamaga qarab tanlaymiz, barcha uskunani o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "perimeter": {
       "title": "Perimetr qo‘riqlovi",

@@ -592,7 +592,74 @@
           "q": "Can the intercom be connected to an electronic lock and access control?",
           "a": "Yes, that is a standard part of our projects: the intercom releases an electromagnetic or electromechanical lock, while residents and staff use cards, codes or fingerprints. For offices we merge the intercom with the access control system into one setup with a shared entry log."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard intercom setups",
+        "pkgNote": "We price every site individually: send the entrance layout or the number of apartments and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "House or apartment",
+            "for": "House, country home, apartment, gate",
+            "term": "Timeline: 1 day",
+            "items": [
+              "Call panel at the gate or door, monitor inside",
+              "Call forwarding to your phone — open the door from anywhere",
+              "Electromechanical gate lock included",
+              "Photo and video of everyone who came while you were out"
+            ]
+          },
+          {
+            "name": "Office or business centre",
+            "for": "Office, clinic, training centre, salon",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Panel at the entrance, monitors at reception and in the rooms",
+              "Linked to electronic locks and access control — one pass for everything",
+              "Open from the administrator’s phone, no monitor on the desk",
+              "Log of calls and door openings with timestamps"
+            ]
+          },
+          {
+            "name": "Stairwell and residential complex",
+            "for": "Apartment block, residential complex, developer",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Multi-tenant panel at the entrance, handsets or monitors in the flats",
+              "IP intercom with a resident app instead of a handset",
+              "Key fobs or cards for every resident",
+              "One scheme across several entrances, service under contract"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working intercom — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we check the entrance, cable runs and power — free of charge"
+          },
+          {
+            "t": "Selection and quote",
+            "s": "panel, monitor, lock, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "tidy cable runs, chasing walls only where there is no other way"
+          },
+          {
+            "t": "Setup",
+            "s": "calls to your phone, access codes, keys for every resident"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we show you how to use it; warranty on equipment and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Intercoms and locks — in stock in Tashkent",
+        "brandsText": "Hikvision and Tapo — chosen to fit the task and the budget, all equipment supplied by us with warranty:"
+      }
     },
     "attendance": {
       "title": "Time & attendance",
@@ -1035,7 +1102,74 @@
           "q": "What about controls and remotes?",
           "a": "Control is available via remotes, cards, a button, a mobile app, and automatically via a whitelist."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard entrance setups",
+        "pkgNote": "We price every site individually: send the width of the driveway and how many cars pass per day, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Private house yard",
+            "for": "Private house, country home, small grounds",
+            "term": "Timeline: 1 day",
+            "items": [
+              "Barrier with a 3–4 metre boom, or a sliding gate",
+              "Two remotes included, phone opening if you want it",
+              "Photocells — the boom will not come down on a car or a person",
+              "Battery backup keeps it working during a power cut"
+            ]
+          },
+          {
+            "name": "Office or residential car park",
+            "for": "Business centre, residential complex, clinic",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Barrier with a boom up to 6 metres, vandal-resistant housing",
+              "Entry by card, fob or a QR code on the phone",
+              "Licence plate recognition — regulars drive in without stopping",
+              "Entry log: who came in, when and in which car"
+            ]
+          },
+          {
+            "name": "Industrial checkpoint",
+            "for": "Factory, warehouse, logistics complex",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Barriers on entry and exit, tied into the checkpoint access control",
+              "Integrated with CCTV: plate and photo for every entry",
+              "Control from the security post and remotely",
+              "Tracking of supplier and contractor vehicles"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working barrier — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we measure the driveway, check power and ground — free of charge"
+          },
+          {
+            "t": "Selection and quote",
+            "s": "barrier, boom, entry method, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "foundation for the housing, cable in conduit, power connection"
+          },
+          {
+            "t": "Setup",
+            "s": "remotes, cards, plate recognition, entry rights"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we train your security staff; warranty on equipment and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Barriers and automation — in stock in Tashkent",
+        "brandsText": "ZKTeco, Hikvision, Dahua — chosen to match the driveway width and the load, all equipment supplied by us with warranty:"
+      }
     },
     "perimeter": {
       "title": "Perimeter security",

@@ -584,7 +584,74 @@
           "q": "Apartmanlar için uygun mu?",
           "a": "Evet, konut siteleri için çok aboneli diafon sistemleri tasarlıyoruz — kapı panelleri ve daire monitörleriyle."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart diyafon şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: giriş planını veya daire sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Müstakil ev veya daire",
+            "for": "Ev, yazlık, daire, bahçe kapısı",
+            "term": "Süre: 1 gün",
+            "items": [
+              "Bahçe kapısına veya kapıya zil paneli, içeride monitör",
+              "Çağrının telefona yönlendirilmesi — kapıyı her yerden açarsınız",
+              "Bahçe kapısı için elektromekanik kilit dahil",
+              "Siz yokken gelenlerin fotoğrafı ve videosu"
+            ]
+          },
+          {
+            "name": "Ofis veya iş merkezi",
+            "for": "Ofis, klinik, eğitim merkezi, salon",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Girişte panel, resepsiyonda ve odalarda monitörler",
+              "Elektronik kilit ve geçiş kontrolüyle bağlantı — her şey tek kartla",
+              "Yönetici telefonundan açma, masada monitör olmadan",
+              "Çağrı ve kapı açma kayıtları, saat bilgisiyle"
+            ]
+          },
+          {
+            "name": "Apartman girişi ve site",
+            "for": "Apartman, konut sitesi, müteahhit",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Girişe çok aboneli panel, dairelerde ahize veya monitör",
+              "Ahize yerine sakin uygulamasıyla IP diyafon",
+              "Tüm sakinler için anahtarlık veya kart",
+              "Birkaç giriş için tek şema, sözleşmeli servis"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan diyafona — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "girişi, kablo güzergâhını ve beslemeyi görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Seçim ve teklif",
+            "s": "panel, monitör, kilit, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "düzgün güzergâhlar, yalnızca zorunlu yerlerde kırım"
+          },
+          {
+            "t": "Ayar",
+            "s": "telefona çağrı, giriş kodları, herkese anahtar"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "kullanımı gösteriyoruz; ekipman ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Diyafon ve kilitler — Taşkent’te stokta",
+        "brandsText": "Hikvision ve Tapo — işe ve bütçeye göre seçiyoruz, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
+      }
     },
     "attendance": {
       "title": "Mesai takibi",
@@ -1027,7 +1094,74 @@
           "q": "Kumanda ve kontrol nasıl?",
           "a": "Kumanda, kart, buton, mobil uygulama ve beyaz listeye göre otomatik kontrol mümkündür."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart giriş şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: geçiş genişliğini ve günde kaç araç geçtiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Müstakil ev bahçesi",
+            "for": "Müstakil ev, yazlık, küçük alan",
+            "term": "Süre: 1 gün",
+            "items": [
+              "3–4 metre kollu bariyer veya sürgülü kapı",
+              "İki kumanda dahil, istenirse telefondan açma",
+              "Fotosel — kol aracın veya kişinin üzerine inmez",
+              "Elektrik kesildiğinde aküyle çalışır"
+            ]
+          },
+          {
+            "name": "Ofis veya site otoparkı",
+            "for": "İş merkezi, konut sitesi, klinik",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "6 metreye kadar kollu bariyer, darbeye dayanıklı gövde",
+              "Kart, anahtarlık veya telefondaki QR kod ile geçiş",
+              "Plaka tanıma — düzenli araçlar durmadan girer",
+              "Giriş kaydı: kim, ne zaman ve hangi araçla"
+            ]
+          },
+          {
+            "name": "Fabrika giriş noktası",
+            "for": "Fabrika, depo, lojistik tesisi",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Giriş ve çıkışta bariyer, güvenlik noktası geçiş kontrolüne bağlı",
+              "Kamera sistemiyle entegre: her girişte plaka ve fotoğraf",
+              "Güvenlik noktasından ve uzaktan kontrol",
+              "Tedarikçi ve taşeron araçlarının takibi"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan bariyere — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "geçiş genişliğini ölçüyor, besleme ve zemini görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Seçim ve teklif",
+            "s": "bariyer, kol, geçiş yöntemi, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "gövde için temel, spiralde kablo, elektrik bağlantısı"
+          },
+          {
+            "t": "Ayar",
+            "s": "kumandalar, kartlar, plaka tanıma, geçiş yetkileri"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "güvenlik ekibini eğitiyoruz; ekipman ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Bariyer ve otomasyon — Taşkent’te stokta",
+        "brandsText": "ZKTeco, Hikvision, Dahua — geçiş genişliğine ve yüke göre seçiyoruz, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
+      }
     },
     "perimeter": {
       "title": "Çevre güvenliği",
