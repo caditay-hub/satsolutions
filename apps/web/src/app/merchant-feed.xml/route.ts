@@ -58,7 +58,7 @@ export async function GET() {
       // Merchant принимает до 10 additional_image_link.
       const gallery = (p.galleryImageUrls ?? [])
         .map((u: string) => resolveImageUrl(u))
-        .filter((u): u is string => Boolean(u) && u !== image)
+        .filter((u: string | null | undefined): u is string => Boolean(u) && u !== image)
         .slice(0, 10);
       // Полное описание первым — MC ранжирует лучше при развёрнутом тексте («добавьте информацию»)
       const desc = plain(p.description) || plain(p.shortDescription) || p.name;
@@ -80,7 +80,7 @@ export async function GET() {
 <g:description>${esc(desc)}</g:description>
 <g:link>${SITE}/products/${esc(p.slug)}</g:link>
 <g:image_link>${esc(image)}</g:image_link>
-${gallery.map((g) => `<g:additional_image_link>${esc(g)}</g:additional_image_link>`).join("\n")}
+${gallery.map((g: string) => `<g:additional_image_link>${esc(g)}</g:additional_image_link>`).join("\n")}
 ${p.inStock === false ? `<g:availability>backorder</g:availability>
 <g:availability_date>${availabilityDate}</g:availability_date>` : "<g:availability>in_stock</g:availability>"}
 <g:condition>new</g:condition>
