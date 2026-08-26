@@ -4728,6 +4728,226 @@ export const ARTICLES: Article[] = [
       },
     },
   },
+  {
+    slug: "yongin-xavfsizligi",
+    date: "2026-08-26",
+    related: ["fire", "pa"],
+    loc: {
+      uz: {
+        title: "Yong'in xavfsizligi: biznes uchun talablar, tizimlar va narxlar",
+        excerpt: "Obyekt uchun yong'in xavfsizligi nimadan iborat: signalizatsiya, ovozli ogohlantirish, o't o'chirgichlar. Tekshiruvga nima kerak va bularning barchasi qancha turadi.",
+        sections: [
+          { h: "Yong'in xavfsizligi tizimi nimadan iborat", p: [
+            "To'liq tizim to'rt qismdan tuziladi: yong'in signalizatsiyasi (tutun va harorat datchiklari, qabul-nazorat priborlari), ovozli ogohlantirish va evakuatsiya boshqaruvi (SOUE), birlamchi o't o'chirish vositalari — o't o'chirgichlar va yong'in shkaflari — hamda evakuatsiya yo'llarining belgilari va yoritilishi.",
+            "Kichik ofisga ko'pincha signalizatsiya va o't o'chirgichlar yetarli. Do'kon, ombor, sex yoki odam ko'p yig'iladigan joylarda SOUE ham talab qilinadi — bu tekshiruvda birinchi so'raladigan narsalardan biri.",
+          ] },
+          { h: "Biznes uchun qanday talablar bor", p: [
+            "Har qanday tijorat obyekti yong'in xavfsizligi talablariga javob berishi kerak: ishlaydigan signalizatsiya, muddati o'tmagan o't o'chirgichlar, bo'sh evakuatsiya yo'llari va mas'ul xodim. Tekshiruvchi hujjatlarni ham so'raydi: tizim loyihasi, xizmat ko'rsatish shartnomasi, o't o'chirgichlar jurnali.",
+            "Eng ko'p uchraydigan xatolar — muddati o'tgan o't o'chirgichlar, ishlamaydigan datchiklar va evakuatsiya chiqishi oldidagi omborga aylangan yo'laklar. Bularning barchasi jarima va faoliyatni to'xtatib qo'yishgacha olib borishi mumkin.",
+          ] },
+          { h: "Yong'in signalizatsiyasi qancha turadi", p: [
+            "Narx xonalar soni va maydonga bog'liq: datchiklar soni, kabel uzunligi va priborning turi shundan kelib chiqadi. Kichik ofis (3–5 xona) uchun to'plam o'rnatish bilan odatda bir necha million so'mdan boshlanadi; ombor va sexlarda maydon katta bo'lgani uchun smeta obyekt bo'yicha hisoblanadi.",
+            "Muhandisning chiqishi va smeta bizda bepul: obyektni ko'rib, datchiklarni rejalashtirib, aniq narxni bir kunda beramiz. Rubezh, Bolid va Hikvision uskunalari Toshkentdagi ombordan.",
+          ] },
+          { h: "O't o'chirgichlar: qaysi va qancha", p: [
+            "Ofis va do'kon uchun standart tanlov — kukunli OP-4/OP-5 o't o'chirgichlar, elektronika ko'p joyda uglekislotali OU ham qo'yiladi. Narxlar hajmga qarab bir necha yuz ming so'mdan boshlanadi, katta OP-25/OP-100 modellari qimmatroq.",
+            "Katalogimizda o't o'chirgichlar va yong'in xavfsizligi vositalari mavjud — narxlar so'mda, Toshkentda ombordan. Soni bo'yicha maslahat beramiz: maydon va xavf toifasiga qarab nechta va qayerga qo'yish kerakligini hisoblaymiz.",
+          ] },
+          { h: "Qanday buyurtma qilinadi", p: [
+            "Ish tartibi oddiy: muhandis chiqadi, obyektni o'lchaydi, loyiha va smeta tayyorlaydi. Montaj kichik obyektda 1–3 kun. Ishdan so'ng hujjatlar to'liq topshiriladi: aktlar, sxemalar, jurnal — tekshiruvga tayyor holda.",
+            "Yuridik shaxslar bilan shartnoma, hisob-faktura va NDS bilan ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati beriladi.",
+          ] },
+        ],
+        faq: [
+          { q: "Yong'in signalizatsiyasi narxi qancha?", a: "Kichik ofis uchun to'plam o'rnatish bilan bir necha million so'mdan boshlanadi. Aniq narx xonalar soni va maydonga bog'liq — muhandis chiqishi va smeta bepul." },
+          { q: "Tekshiruvga nima tayyorlash kerak?", a: "Ishlaydigan signalizatsiya, muddati o'tmagan o't o'chirgichlar, bo'sh evakuatsiya yo'llari va hujjatlar: loyiha, xizmat shartnomasi, o't o'chirgichlar jurnali. Yetishmayotganini bir chiqishda aniqlab beramiz." },
+          { q: "O't o'chirgich qancha turadi?", a: "Kukunli OP-4/OP-5 — bir necha yuz ming so'mdan. Katalogda mavjud, soni bo'yicha maydonga qarab maslahat beramiz." },
+          { q: "Montaj qancha vaqt oladi?", a: "Kichik ofis — 1–3 kun. Ombor va katta obyektlarda muddat loyihaga bog'liq, smetada aniq ko'rsatiladi." },
+          { q: "Hujjatlar bilan yordam berasizmi?", a: "Ha: loyiha, montaj aktlari, sxemalar va jurnal — to'liq topshiriladi. Yuridik shaxslar bilan NDS va shartnoma asosida ishlaymiz." },
+        ],
+      },
+      ru: {
+        title: "Пожарная безопасность объекта: системы, требования и цены",
+        excerpt: "Из чего состоит пожарная безопасность бизнеса: сигнализация, оповещение, огнетушители. Что спросят на проверке и сколько это стоит в Ташкенте.",
+        sections: [
+          { h: "Из чего состоит система пожарной безопасности", p: [
+            "Полная система складывается из четырёх частей: пожарная сигнализация (дымовые и тепловые датчики, приёмно-контрольный прибор), система оповещения и управления эвакуацией (СОУЭ), первичные средства пожаротушения — огнетушители и пожарные шкафы — и обозначенные, освещённые пути эвакуации.",
+            "Небольшому офису часто достаточно сигнализации и огнетушителей. В магазине, на складе, в цехе и везде, где собираются люди, требуется и СОУЭ — это одно из первого, что смотрят на проверке.",
+          ] },
+          { h: "Какие требования к бизнесу", p: [
+            "Любой коммерческий объект должен отвечать требованиям пожарной безопасности: работающая сигнализация, огнетушители с действующим сроком, свободные пути эвакуации и ответственный сотрудник. Проверяющий спросит и документы: проект системы, договор на обслуживание, журнал огнетушителей.",
+            "Самые частые нарушения — просроченные огнетушители, неработающие датчики и заставленные проходы к эвакуационным выходам. Всё это грозит штрафами вплоть до приостановки деятельности.",
+          ] },
+          { h: "Сколько стоит пожарная сигнализация", p: [
+            "Цена зависит от числа помещений и площади: от этого считаются датчики, кабель и тип прибора. Комплект для небольшого офиса (3–5 комнат) с установкой обычно начинается от нескольких миллионов сум; для складов и цехов смета считается по объекту.",
+            "Выезд инженера и смета у нас бесплатные: осмотрим объект, распланируем датчики и назовём точную цену за день. Оборудование Rubezh, Bolid и Hikvision — со склада в Ташкенте.",
+          ] },
+          { h: "Огнетушители: какие и почём", p: [
+            "Стандартный выбор для офиса и магазина — порошковые ОП-4/ОП-5, там, где много электроники, ставят и углекислотные ОУ. Цены начинаются от нескольких сотен тысяч сум в зависимости от объёма, крупные ОП-25/ОП-100 дороже.",
+            "Огнетушители и средства пожарной безопасности есть в нашем каталоге — цены в сумах, со склада в Ташкенте. Подскажем по количеству: посчитаем, сколько и куда ставить по площади и категории риска.",
+          ] },
+          { h: "Как заказать", p: [
+            "Порядок простой: инженер выезжает, обмеряет объект, готовит проект и смету. Монтаж на небольшом объекте — 1–3 дня. После работ передаём полный пакет документов: акты, схемы, журнал — в готовом для проверки виде.",
+            "С юрлицами работаем по договору, со счетами-фактурами и НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит пожарная сигнализация для офиса?", a: "Комплект для небольшого офиса с установкой — от нескольких миллионов сум. Точная цена зависит от числа помещений — выезд инженера и смета бесплатные." },
+          { q: "Что подготовить к проверке?", a: "Работающую сигнализацию, огнетушители с действующим сроком, свободные пути эвакуации и документы: проект, договор обслуживания, журнал огнетушителей. Чего не хватает — определим за один выезд." },
+          { q: "Сколько стоит огнетушитель?", a: "Порошковые ОП-4/ОП-5 — от нескольких сотен тысяч сум. Есть в каталоге, по количеству проконсультируем исходя из площади." },
+          { q: "Сколько занимает монтаж?", a: "Небольшой офис — 1–3 дня. На складах и крупных объектах срок зависит от проекта и указывается в смете." },
+          { q: "Помогаете с документами?", a: "Да: проект, акты монтажа, схемы и журнал передаются полным пакетом. С юрлицами работаем с НДС по договору." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "lokal-tarmoq-narxi",
+    date: "2026-08-26",
+    related: ["network", "wifi", "fiber"],
+    loc: {
+      uz: {
+        title: "Lokal tarmoq o'rnatish: ofis uchun narxi va bosqichlar",
+        excerpt: "Ofisda kompyuter tarmog'i (SKS) qancha turadi: kabel, rozetkalar, kommutator va Wi-Fi. Narx nimaga bog'liq va ish qanday bosqichlarda bajariladi.",
+        sections: [
+          { h: "Lokal tarmoq nimadan iborat", p: [
+            "Ofis tarmog'i — bu strukturali kabel tizimi (SKS): har bir ish o'rniga vitaya para kabeli, rozetkalar, patch-panel va server shkafi. Markazida kommutator turadi, internetni router taqsimlaydi, simsiz qurilmalar uchun Wi-Fi nuqtalari qo'shiladi.",
+            "To'g'ri qurilgan tarmoqda printer, kamera, IP-telefon va kompyuterlar bitta tizimda ishlaydi. Keyinchalik videokuzatuv yoki telefoniya qo'shish ham oson bo'ladi — kabel allaqachon bor.",
+          ] },
+          { h: "Narx nimaga bog'liq", p: [
+            "Uchta asosiy omil: ish o'rinlari soni, kabel trassalarining uzunligi va obyekt holati. Yangi qurilishda kabel yotqizish oson va arzon; ta'miri tugagan ofisda gofra, korobkalar va ehtiyotkor ish kerak — bu vaqtni oshiradi.",
+            "Kabel toifasi ham rol o'ynaydi: Cat5e ko'p ofislar uchun yetarli, Cat6 esa tezroq va kelajakka zaxira bilan. Server shkafi, kommutator darajasi va Wi-Fi qamrovi ham smetaga kiradi.",
+          ] },
+          { h: "O'rtacha narxlar", p: [
+            "Amalda hisob ish o'rni bo'yicha yuritiladi: bitta to'liq nuqta — kabel, rozetka, ulash va test bilan — o'rtacha bir necha yuz ming so'm. 10–15 ish o'rinli ofis tarmog'i kommutator va shkaf bilan birga — smetaga qarab, odatda bir necha million so'm.",
+            "Muhandisning chiqishi va smeta bepul: rejani ko'rib, trassalarni o'lchab, aniq narxni beramiz. Kabel, rozetkalar va kommutatorlar Toshkentdagi ombordan.",
+          ] },
+          { h: "Optika qachon kerak", p: [
+            "Ikki bino orasida, uzun koridorlarda yoki 90 metrdan uzoq masofalarda mis kabel yetmaydi — optik tola ishlatiladi. Optika chaqmoqdan himoyalangan, tezligi yuqori va masofani sezmaydi.",
+            "Biz optik kabelni yotqizamiz, payvandlaymiz va reflektometr bilan o'lchab, pasport bilan topshiramiz. Ofis ichidagi tarmoq va binolar orasidagi optika — bitta loyihada.",
+          ] },
+          { h: "Ish bosqichlari", p: [
+            "Birinchi bosqich — loyiha: ish o'rinlari, trassalar va shkaf joyi rejada belgilanadi. Keyin montaj: kabel yotqizish, rozetkalar, patch-panel va kommutatorni ulash. Oxirida har bir liniya testdan o'tkaziladi va sxemalar bilan topshiriladi.",
+            "Kichik ofis odatda 1–3 kunda tayyor bo'ladi. Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz, ishlarga kafolat beramiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Bitta ish o'rni qancha turadi?", a: "Kabel, rozetka, ulash va test bilan — o'rtacha bir necha yuz ming so'm. Aniq narx trassa uzunligi va obyekt holatiga bog'liq — smeta bepul." },
+          { q: "10 kishilik ofis tarmog'i qancha bo'ladi?", a: "Kabel, rozetkalar, kommutator va shkaf bilan — odatda bir necha million so'm. Muhandis chiqib, bir kunda aniq smeta beradi." },
+          { q: "Cat5e yoki Cat6 — qaysi birini tanlash kerak?", a: "Oddiy ofis uchun Cat5e yetarli. Katta fayllar, video va kelajakka zaxira kerak bo'lsa — Cat6 tavsiya qilamiz, farqi katta emas." },
+          { q: "Wi-Fi ham qo'shib berasizmi?", a: "Ha, tarmoq loyihasida Wi-Fi nuqtalarini qamrov bo'yicha rejalashtiramiz — ofisning har burchagida barqaror signal bo'ladi." },
+          { q: "Ish qancha vaqt oladi?", a: "Kichik ofis — 1–3 kun. Katta obyektlarda muddat loyihaga bog'liq va smetada ko'rsatiladi." },
+        ],
+      },
+      ru: {
+        title: "Монтаж локальной сети в офисе: цена и этапы",
+        excerpt: "Сколько стоит компьютерная сеть (СКС) в офисе: кабель, розетки, коммутатор и Wi-Fi. От чего зависит цена и как идёт работа по этапам.",
+        sections: [
+          { h: "Из чего состоит локальная сеть", p: [
+            "Офисная сеть — это структурированная кабельная система (СКС): витая пара к каждому рабочему месту, розетки, патч-панель и серверный шкаф. В центре — коммутатор, интернет раздаёт маршрутизатор, для беспроводных устройств добавляются точки Wi-Fi.",
+            "В правильно построенной сети принтер, камеры, IP-телефоны и компьютеры работают в одной системе. Позже легко добавить видеонаблюдение или телефонию — кабель уже проложен.",
+          ] },
+          { h: "От чего зависит цена", p: [
+            "Три главных фактора: число рабочих мест, длина кабельных трасс и состояние объекта. В новостройке прокладывать кабель просто и дёшево; в офисе с готовым ремонтом нужны гофра, короба и аккуратность — это увеличивает время.",
+            "Категория кабеля тоже играет роль: Cat5e достаточно большинству офисов, Cat6 быстрее и с запасом на будущее. Серверный шкаф, класс коммутатора и покрытие Wi-Fi также входят в смету.",
+          ] },
+          { h: "Средние цены", p: [
+            "На практике считают по рабочим местам: одна полная точка — кабель, розетка, подключение и тест — в среднем несколько сотен тысяч сум. Сеть офиса на 10–15 мест с коммутатором и шкафом — по смете, обычно несколько миллионов сум.",
+            "Выезд инженера и смета бесплатные: посмотрим план, промерим трассы и назовём точную цену. Кабель, розетки и коммутаторы — со склада в Ташкенте.",
+          ] },
+          { h: "Когда нужна оптика", p: [
+            "Между зданиями, в длинных коридорах и на расстояниях больше 90 метров медный кабель не работает — используется оптоволокно. Оптика защищена от гроз, быстра и не чувствительна к расстоянию.",
+            "Мы прокладываем и свариваем оптический кабель, измеряем рефлектометром и сдаём с паспортом. Сеть внутри офиса и оптика между зданиями — в одном проекте.",
+          ] },
+          { h: "Этапы работы", p: [
+            "Первый этап — проект: на плане отмечаются рабочие места, трассы и место шкафа. Затем монтаж: прокладка кабеля, розетки, патч-панель и подключение коммутатора. В конце каждая линия тестируется и сдаётся со схемами.",
+            "Небольшой офис обычно готов за 1–3 дня. С юрлицами работаем по договору с НДС, на работы даём гарантию.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит одно рабочее место?", a: "Кабель, розетка, подключение и тест — в среднем несколько сотен тысяч сум. Точная цена зависит от длины трасс и состояния объекта — смета бесплатная." },
+          { q: "Сколько стоит сеть на офис из 10 человек?", a: "С кабелем, розетками, коммутатором и шкафом — обычно несколько миллионов сум. Инженер выезжает и за день считает точную смету." },
+          { q: "Cat5e или Cat6 — что выбрать?", a: "Для обычного офиса достаточно Cat5e. Если гоняете большие файлы, видео и хотите запас на будущее — рекомендуем Cat6, разница в цене небольшая." },
+          { q: "Wi-Fi тоже сделаете?", a: "Да, в проекте сети планируем точки Wi-Fi по покрытию — стабильный сигнал в каждом углу офиса." },
+          { q: "Сколько времени занимает работа?", a: "Небольшой офис — 1–3 дня. На крупных объектах срок зависит от проекта и указывается в смете." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "eshik-qulfi-narxi",
+    date: "2026-08-26",
+    related: ["locks", "access", "intercom"],
+    loc: {
+      uz: {
+        title: "Eshik qulfi narxlari: elektron, kodli va aqlli qulflar",
+        excerpt: "Toshkentda eshik qulflari qancha turadi: elektromagnit, elektromexanik, kodli va aqlli (smart) qulflar. Kvartira, ofis va kalitka uchun nimani tanlash kerak.",
+        sections: [
+          { h: "Qulf turlari va narxlar tartibi", p: [
+            "Elektron qulflarning to'rt asosiy turi bor. Elektromagnit — eng arzoni, ofis va pod'ezd eshiklari uchun: narxi bir necha yuz ming so'mdan. Elektromexanik — kalitka va tashqi eshiklarga, svet o'chsa ham yopiq qoladi. Kodli qulf klaviatura bilan ochiladi, aqlli (smart) qulf esa telefon, barmoq izi yoki karta bilan.",
+            "Aqlli qulflar narxi funksiyaga qarab taxminan 1–3 mln so'm oralig'ida: barmoq izi, ilova, vaqtinchalik kodlar. Biometrik SKUD o'quvchilari bilan to'liq tizim qimmatroq chiqadi.",
+          ] },
+          { h: "Kvartira uchun: aqlli qulf", p: [
+            "Kvartiraga ko'pincha aqlli qulf qo'yiladi: kalit esdan chiqdi degan muammo yo'q — telefon yoki barmoq izi bilan ochiladi. Mehmon yoki farroshga vaqtinchalik kod berish, har ochilish haqida bildirishnoma olish mumkin.",
+            "Tanlashda eshik turiga e'tibor bering: har qulf har eshikka tushmaydi. Muhandisimiz eshikni ko'rib, mos modelni tavsiya qiladi — chiqish bepul.",
+          ] },
+          { h: "Ofis uchun: qulf + SKUD", p: [
+            "Ofisda qulf yolg'iz ishlamaydi — u kirish nazorati (SKUD) tizimiga ulanadi: xodimlar karta yoki barmoq izi bilan kiradi, jurnal kim qachon kelganini yozadi. Xodim ishdan ketsa, kirish bir klik bilan bekor qilinadi.",
+            "Domofon bilan juftlikda qulf monitor yoki ilovadan ochiladi — mehmonni ko'rib, keyin eshikni ochasiz. Yong'in signalizatsiyasi bo'lsa, evakuatsiya eshiklari signalda avtomatik ochilishi shart — buni doim sozlaymiz.",
+          ] },
+          { h: "O'rnatish qancha turadi", p: [
+            "Montaj narxi eshik va qulf turiga bog'liq: elektromagnit qulfni chiqish tugmasi bilan o'rnatish — eng oddiy ish, aqlli qulf yoki biometrika sozlash bilan biroz qimmatroq. O'rtacha montaj bir necha yuz ming so'mdan boshlanadi.",
+            "Muhandisning chiqishi va smeta bepul. Qulflar, o'quvchilar va SKUD uskunalari Toshkentdagi ombordan, rasmiy kafolat bilan.",
+          ] },
+          { h: "Qayerdan olish va qanday buyurtma qilish", p: [
+            "Katalogimizda elektromagnit va aqlli qulflar, SKUD o'quvchilari va aksessuarlar bor — narxlar so'mda. Vazifangizni ayting: kvartira, ofis yoki kalitka — mos variantlarni tanlab, o'rnatish bilan aniq narxni hisoblaymiz.",
+            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
+          ] },
+        ],
+        faq: [
+          { q: "Eng arzon elektron qulf qancha turadi?", a: "Elektromagnit qulf chiqish tugmasi bilan — bir necha yuz ming so'mdan. O'rnatish bilan birga narx eshik turiga bog'liq — smeta bepul." },
+          { q: "Aqlli qulf qancha turadi?", a: "Funksiyaga qarab taxminan 1–3 mln so'm: barmoq izi, telefon ilovasi, vaqtinchalik kodlar. Modelni eshikka qarab tavsiya qilamiz." },
+          { q: "Svet o'chsa qulf ochilib qoladimi?", a: "Elektromagnit ochiladi, elektromexanik yopiq qoladi. Doim yopiq turishi kerak eshiklarga elektromexanika yoki UPS qo'yiladi." },
+          { q: "Qulfni telefondan ochish mumkinmi?", a: "Ha — aqlli qulflar ilovadan, SKUD yoki domofonga ulangan qulflar esa ularning ilovalaridan ochiladi, masofadan ham." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Bitta qulf odatda bir necha soatda o'rnatiladi. SKUD bilan to'liq tizim — 1–2 kun." },
+        ],
+      },
+      ru: {
+        title: "Цены на дверные замки: электронные, кодовые и smart",
+        excerpt: "Сколько стоят дверные замки в Ташкенте: электромагнитные, электромеханические, кодовые и умные (smart). Что выбрать для квартиры, офиса и калитки.",
+        sections: [
+          { h: "Типы замков и порядок цен", p: [
+            "У электронных замков четыре основных типа. Электромагнитный — самый доступный, для офисных и подъездных дверей: цена от нескольких сотен тысяч сум. Электромеханический — для калиток и уличных дверей, остаётся запертым при отключении света. Кодовый открывается с клавиатуры, умный (smart) — телефоном, отпечатком или картой.",
+            "Умные замки стоят примерно 1–3 млн сум в зависимости от функций: отпечаток, приложение, временные коды. Полная система с биометрическими считывателями СКУД выходит дороже.",
+          ] },
+          { h: "Для квартиры: smart-замок", p: [
+            "В квартиру чаще ставят умный замок: проблема забытых ключей исчезает — открытие телефоном или отпечатком. Гостю или уборщице можно выдать временный код и получать уведомление о каждом открытии.",
+            "При выборе важен тип двери: не каждый замок подходит каждой двери. Наш инженер осмотрит дверь и порекомендует подходящую модель — выезд бесплатный.",
+          ] },
+          { h: "Для офиса: замок + СКУД", p: [
+            "В офисе замок не живёт один — он подключается к системе контроля доступа (СКУД): сотрудники входят по карте или отпечатку, журнал фиксирует, кто и когда пришёл. Уволился сотрудник — доступ отзывается одним кликом.",
+            "В паре с домофоном замок открывается с монитора или из приложения — сначала видите гостя, потом открываете. Если есть пожарная сигнализация, эвакуационные двери обязаны открываться по тревоге автоматически — мы всегда это настраиваем.",
+          ] },
+          { h: "Сколько стоит установка", p: [
+            "Цена монтажа зависит от двери и типа замка: электромагнитный с кнопкой выхода — самая простая работа, smart-замок или биометрия с настройкой немного дороже. В среднем монтаж начинается от нескольких сотен тысяч сум.",
+            "Выезд инженера и смета бесплатные. Замки, считыватели и оборудование СКУД — со склада в Ташкенте, с официальной гарантией.",
+          ] },
+          { h: "Где купить и как заказать", p: [
+            "В нашем каталоге — электромагнитные и умные замки, считыватели СКУД и аксессуары, цены в сумах. Опишите задачу: квартира, офис или калитка — подберём варианты и посчитаем точную цену с установкой.",
+            "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит самый недорогой электронный замок?", a: "Электромагнитный замок с кнопкой выхода — от нескольких сотен тысяч сум. Цена с установкой зависит от двери — смета бесплатная." },
+          { q: "Сколько стоит умный замок?", a: "Примерно 1–3 млн сум в зависимости от функций: отпечаток, приложение, временные коды. Модель порекомендуем под вашу дверь." },
+          { q: "Замок откроется при отключении света?", a: "Электромагнитный откроется, электромеханический останется заперт. На двери, которые должны быть заперты всегда, ставят электромеханику или ИБП." },
+          { q: "Можно ли открывать замок с телефона?", a: "Да — smart-замки открываются из приложения, а замки в связке со СКУД или домофоном — из их приложений, в том числе удалённо." },
+          { q: "Сколько занимает установка?", a: "Один замок обычно ставится за несколько часов. Полная система со СКУД — 1–2 дня." },
+        ],
+      },
+    },
+  },
+
 ];
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
