@@ -2326,5 +2326,341 @@
     }
    ]
   }
+ },
+ "v-sol": {
+  "ru": {
+   "title": "V-SOL в Узбекистане — GPON/EPON оборудование: OLT, ONU, цены в Ташкенте",
+   "intro": "V-SOL — специализированный производитель оптического абонентского оборудования GPON, EPON и XPON: станционные терминалы OLT, абонентские ONU и ONT, SFP-модули и аксессуары. Бренд выбирают операторы связи и интеграторы за предсказуемое качество и цену заметно ниже, чем у «большой тройки» телеком-вендоров.\n\nВ каталоге SAT Solutions — OLT V-SOL на 4, 8 и 16 портов PON, абонентские ONU с Wi-Fi и без, XPON-терминалы, совместимые и с GPON, и с EPON станциями. Оборудование в наличии на складе в Ташкенте, цены в сумах, официальная гарантия.\n\nV-SOL закрывает типовые задачи: сеть провайдера в махалле или посёлке, оптика до квартиры (FTTH) в жилом комплексе, распределённая сеть предприятия, видеонаблюдение по оптике на большие расстояния. Мы не просто продаём коробки — проектируем PON-сеть целиком: расчёт оптического бюджета, сплиттеры, сварка волокна, настройка OLT и привязка абонентов.\n\nЕсли вы сравниваете V-SOL с BDCOM, C-Data или Huawei — позвоните: подскажем, что реально подходит под вашу задачу и бюджет, и соберём спецификацию за один день.",
+   "faq": [
+    {
+     "q": "Чем V-SOL отличается от Huawei и ZTE?",
+     "a": "Ценой при сопоставимом функционале для типовых задач: OLT V-SOL на 8 портов стоит в разы дешевле операторских решений «большой тройки». Для сетей до нескольких тысяч абонентов разницы в надёжности на практике нет."
+    },
+    {
+     "q": "ONU V-SOL работают с чужими OLT?",
+     "a": "XPON-терминалы V-SOL совместимы с большинством GPON и EPON станций, включая Huawei и BDCOM. Подскажем совместимую модель под вашу станцию."
+    },
+    {
+     "q": "Есть ли оборудование в наличии?",
+     "a": "Да, ходовые OLT, ONU и SFP-модули — на складе в Ташкенте. Под проект привозим партии под заказ."
+    },
+    {
+     "q": "Поможете спроектировать PON-сеть?",
+     "a": "Да: считаем оптический бюджет, подбираем сплиттеры, вариант прокладки и сварку. Монтаж и настройка OLT — под ключ, с паспортом сети."
+    }
+   ]
+  },
+  "uz": {
+   "title": "V-SOL O'zbekistonda — GPON/EPON uskunalari: OLT, ONU, Toshkentda narxlar",
+   "intro": "V-SOL — GPON, EPON va XPON optik abonent uskunalarining ixtisoslashgan ishlab chiqaruvchisi: OLT stansiya terminallari, ONU va ONT abonent qurilmalari, SFP-modullar. Brendni aloqa operatorlari va integratorlar sifat va narx nisbati uchun tanlaydi.\n\nSAT Solutions katalogida — 4, 8 va 16 portli V-SOL OLT'lar, Wi-Fi'li va oddiy ONU'lar, GPON va EPON stansiyalarga mos XPON-terminallar. Uskunalar Toshkentdagi omborda, narxlar so'mda, rasmiy kafolat bilan.\n\nV-SOL tipik vazifalarni yechadi: mahalla yoki posyolkada provayder tarmog'i, turar-joy majmuasida kvartiragacha optika (FTTH), korxonaning tarqoq tarmog'i, uzoq masofaga optika orqali videokuzatuv. Biz shunchaki sotmaymiz — PON-tarmoqni to'liq loyihalaymiz: optik byudjet hisobi, splitterlar, tola payvandlash, OLT sozlash.\n\nV-SOL'ni BDCOM, C-Data yoki Huawei bilan solishtirayotgan bo'lsangiz — qo'ng'iroq qiling: vazifa va byudjetga mosini aytamiz, spetsifikatsiyani bir kunda tuzamiz.",
+   "faq": [
+    {
+     "q": "V-SOL Huawei'dan nimasi bilan farq qiladi?",
+     "a": "Narxi bilan: tipik vazifalar uchun 8 portli V-SOL OLT operator yechimlaridan bir necha barobar arzon. Bir necha ming abonentgacha tarmoqlarda ishonchlilikda amaliy farq yo'q."
+    },
+    {
+     "q": "V-SOL ONU boshqa OLT bilan ishlaydimi?",
+     "a": "XPON-terminallar aksariyat GPON va EPON stansiyalarga mos, jumladan Huawei va BDCOM. Stansiyangizga mos modelni aytamiz."
+    },
+    {
+     "q": "Uskunalar mavjudmi?",
+     "a": "Ha, yurimli OLT, ONU va SFP-modullar Toshkentdagi omborda. Loyiha uchun partiyalar buyurtma asosida."
+    },
+    {
+     "q": "PON-tarmoq loyihalashga yordam berasizmi?",
+     "a": "Ha: optik byudjet, splitterlar, yotqizish varianti va payvandlash. Montaj va OLT sozlash — kalit topshirish asosida."
+    }
+   ]
+  },
+  "en": {
+   "title": "V-SOL in Uzbekistan — GPON/EPON Equipment: OLT, ONU, Prices in Tashkent",
+   "intro": "V-SOL is a specialised manufacturer of GPON, EPON and XPON optical access equipment: OLT terminals, subscriber ONU/ONT units, SFP modules and accessories. ISPs and integrators choose the brand for predictable quality at a price well below the tier-one telecom vendors.\n\nThe SAT Solutions catalogue carries V-SOL OLTs with 4, 8 and 16 PON ports, ONUs with and without Wi-Fi, and XPON terminals compatible with both GPON and EPON head-ends. Equipment is in stock in Tashkent with UZS pricing and official warranty.\n\nV-SOL covers the typical jobs: an ISP network in a district, fibre-to-the-home in a residential complex, a distributed enterprise network, long-range CCTV over fibre. We do not just sell boxes — we design the PON network end to end: optical budget, splitters, fusion splicing, OLT configuration.\n\nComparing V-SOL with BDCOM, C-Data or Huawei? Call us — we will match the right option to your task and budget and prepare a specification within a day.",
+   "faq": [
+    {
+     "q": "How does V-SOL differ from Huawei or ZTE?",
+     "a": "Price, at comparable functionality for typical tasks: an 8-port V-SOL OLT costs a fraction of tier-one carrier gear. For networks up to a few thousand subscribers there is no practical reliability gap."
+    },
+    {
+     "q": "Do V-SOL ONUs work with other OLTs?",
+     "a": "XPON terminals are compatible with most GPON and EPON head-ends, including Huawei and BDCOM. We will suggest a compatible model for your OLT."
+    },
+    {
+     "q": "Is the equipment in stock?",
+     "a": "Yes — popular OLTs, ONUs and SFP modules are in stock in Tashkent. Project quantities are supplied to order."
+    },
+    {
+     "q": "Can you design the PON network?",
+     "a": "Yes: optical budget, splitter plan, cable routing and splicing. Turnkey installation and OLT setup with network passport."
+    }
+   ]
+  },
+  "tr": {
+   "title": "Özbekistan'da V-SOL — GPON/EPON Ekipmanları: OLT, ONU, Taşkent Fiyatları",
+   "intro": "V-SOL; GPON, EPON ve XPON optik erişim ekipmanlarında uzmanlaşmış bir üreticidir: OLT terminalleri, abone ONU/ONT cihazları, SFP modülleri. Operatörler ve entegratörler markayı öngörülebilir kalite ve birinci sınıf telekom üreticilerinin çok altındaki fiyatı için tercih eder.\n\nSAT Solutions kataloğunda 4, 8 ve 16 PON portlu V-SOL OLT’ler, Wi-Fi'li ve Wi-Fi'siz ONU'lar, hem GPON hem EPON santrallerle uyumlu XPON terminaller bulunur. Ekipman Taşkent'te stokta, fiyatlar UZS, resmi garantili.\n\nV-SOL tipik işleri karşılar: mahallede İSS ağı, konut sitesinde eve kadar fiber (FTTH), dağıtık kurumsal ağ, fiber üzerinden uzak mesafe kamera. Sadece kutu satmayız — PON ağını uçtan uca projelendiririz: optik bütçe, splitterlar, ek yeri, OLT yapılandırması.\n\nV-SOL'u BDCOM, C-Data veya Huawei ile mi karşılaştırıyorsunuz? Arayın — göreve ve bütçeye uygununu söyleyip şartnameyi bir günde hazırlayalım.",
+   "faq": [
+    {
+     "q": "V-SOL, Huawei ve ZTE’den nasıl ayrılır?",
+     "a": "Fiyatla: tipik işler için 8 portlu V-SOL OLT, birinci sınıf operatör ekipmanının çok altındadır. Birkaç bin aboneye kadar ağlarda pratikte güvenilirlik farkı yoktur."
+    },
+    {
+     "q": "V-SOL ONU başka OLT ile çalışır mı?",
+     "a": "XPON terminaller Huawei ve BDCOM dahil çoğu GPON/EPON santralle uyumludur. Santralinize uygun modeli öneririz."
+    },
+    {
+     "q": "Stokta var mı?",
+     "a": "Evet — yaygın OLT, ONU ve SFP modülleri Taşkent stokta. Proje adetleri siparişle gelir."
+    },
+    {
+     "q": "PON ağını projelendirir misiniz?",
+     "a": "Evet: optik bütçe, splitter planı, güzergâh ve ek. Anahtar teslim kurulum ve OLT ayarı."
+    }
+   ]
+  },
+  "zh": {
+   "title": "V-SOL 乌兹别克斯坦 — GPON/EPON 设备：OLT、ONU，塔什干价格",
+   "intro": "V-SOL 是专业的 GPON、EPON 和 XPON 光接入设备制造商：局端 OLT、用户端 ONU/ONT、SFP 模块及配件。运营商和集成商选择该品牌，是因为质量稳定且价格远低于一线电信厂商。\n\nSAT Solutions 目录提供 4、8、16 PON 口的 V-SOL OLT，带/不带 Wi-Fi 的 ONU，以及兼容 GPON 和 EPON 局端的 XPON 终端。塔什干现货，苏姆计价，官方保修。\n\nV-SOL 适用于典型场景：社区运营商网络、住宅小区光纤到户（FTTH）、企业分布式网络、远距离光纤监控。我们不只卖设备——端到端设计 PON 网络：光功率预算、分光器、熔接、OLT 配置。\n\n在比较 V-SOL 与 BDCOM、C-Data 或华为？来电咨询——按任务和预算推荐方案，一天内出配置清单。",
+   "faq": [
+    {
+     "q": "V-SOL 与华为、中兴有何区别？",
+     "a": "价格：典型场景下 8 口 V-SOL OLT 仅为一线运营商设备的几分之一。数千用户以内的网络在可靠性上无实际差异。"
+    },
+    {
+     "q": "V-SOL ONU 能配其他 OLT 吗？",
+     "a": "XPON 终端兼容包括华为和 BDCOM 在内的多数 GPON/EPON 局端。我们会按您的局端推荐兼容型号。"
+    },
+    {
+     "q": "有现货吗？",
+     "a": "有——常用 OLT、ONU 和 SFP 模块塔什干现货。项目批量按订单供货。"
+    },
+    {
+     "q": "能设计 PON 网络吗？",
+     "a": "能：光功率预算、分光方案、路由和熔接。交钥匙安装和 OLT 调试，附网络档案。"
+    }
+   ]
+  }
+ },
+ "bdcom": {
+  "ru": {
+   "title": "BDCOM в Узбекистане — OLT и коммутаторы для операторов, цены в Ташкенте",
+   "intro": "BDCOM — телеком-вендор с 30-летней историей, один из самых распространённых брендов OLT в сетях операторов СНГ. GPON и EPON станции BDCOM ценят за стабильную прошивку, привычный CLI в стиле Cisco и живучесть в жёстких условиях серверных провайдеров.\n\nУ SAT Solutions — OLT BDCOM на 4–16 портов, коммутаторы доступа и агрегации, SFP-модули. Поставка со склада в Ташкенте и под заказ, официальная гарантия, помощь с настройкой.\n\nBDCOM обычно выбирают провайдеры, которым нужна станция «поставил и забыл», и предприятия, строящие собственную оптическую сеть с расчётом на годы. Совместимость с абонентскими ONU V-SOL и C-Data проверена на десятках сетей.\n\nПоможем сравнить BDCOM с альтернативами под вашу задачу, посчитаем оптический бюджет и соберём спецификацию — бесплатно.",
+   "faq": [
+    {
+     "q": "Чем BDCOM отличается от V-SOL?",
+     "a": "BDCOM — станционное «железо» операторского класса со зрелой прошивкой и CLI; V-SOL сильнее в доступных абонентских устройствах. Классическая связка: OLT BDCOM + ONU V-SOL."
+    },
+    {
+     "q": "Какие ONU совместимы с OLT BDCOM?",
+     "a": "Большинство XPON ONU, включая V-SOL и C-Data. Подберём проверенные модели под вашу станцию."
+    },
+    {
+     "q": "Поможете с настройкой OLT?",
+     "a": "Да: базовая настройка, VLAN, профили абонентов, привязка ONU. Обучим вашего инженера работе с CLI."
+    },
+    {
+     "q": "Есть ли оборудование в наличии?",
+     "a": "Ходовые модели — на складе в Ташкенте, операторские партии — под заказ с коротким сроком."
+    }
+   ]
+  },
+  "uz": {
+   "title": "BDCOM O'zbekistonda — operatorlar uchun OLT va kommutatorlar",
+   "intro": "BDCOM — 30 yillik tarixga ega telekom-vendor, MDH operator tarmoqlarida eng keng tarqalgan OLT brendlaridan biri. BDCOM GPON va EPON stansiyalari barqaror proshivka va Cisco uslubidagi CLI uchun qadrlanadi.\n\nSAT Solutions'da — 4–16 portli BDCOM OLT'lar, kirish va agregatsiya kommutatorlari, SFP-modullar. Toshkentdagi ombordan va buyurtma asosida, rasmiy kafolat, sozlashda yordam.\n\nBDCOM'ni odatda «o'rnatdim — unutdim» stansiya kerak bo'lgan provayderlar va yillarga mo'ljallangan o'z optik tarmog'ini qurayotgan korxonalar tanlaydi. V-SOL va C-Data ONU'lari bilan mosligi o'nlab tarmoqlarda tekshirilgan.\n\nVazifangizga mos variantni solishtirishga yordam beramiz, optik byudjetni hisoblab, spetsifikatsiya tuzamiz — bepul.",
+   "faq": [
+    {
+     "q": "BDCOM V-SOL’dan nimasi bilan farq qiladi?",
+     "a": "BDCOM — operator darajasidagi stansiya uskunasi; V-SOL abonent qurilmalarida kuchli. Klassik juftlik: BDCOM OLT + V-SOL ONU."
+    },
+    {
+     "q": "Qaysi ONU’lar BDCOM bilan mos?",
+     "a": "Aksariyat XPON ONU'lar, jumladan V-SOL va C-Data. Stansiyangizga tekshirilgan modellarni tanlaymiz."
+    },
+    {
+     "q": "OLT sozlashda yordam berasizmi?",
+     "a": "Ha: bazaviy sozlash, VLAN, abonent profillari, ONU ulash. Muhandisingizni CLI bilan ishlashga o'rgatamiz."
+    },
+    {
+     "q": "Mavjudmi?",
+     "a": "Yurimli modellar Toshkentda omborda, operator partiyalari — qisqa muddatda buyurtma asosida."
+    }
+   ]
+  },
+  "en": {
+   "title": "BDCOM in Uzbekistan — Carrier-Grade OLTs and Switches, Tashkent Prices",
+   "intro": "BDCOM is a telecom vendor with a 30-year history and one of the most widespread OLT brands in CIS operator networks. BDCOM GPON and EPON head-ends are valued for mature firmware, a Cisco-style CLI and endurance in ISP server rooms.\n\nSAT Solutions supplies BDCOM OLTs with 4–16 ports, access and aggregation switches, and SFP modules — from Tashkent stock and to order, with official warranty and configuration support.\n\nBDCOM is the usual choice of ISPs who need a set-and-forget head-end and of enterprises building their own long-life fibre networks. Compatibility with V-SOL and C-Data ONUs is proven across dozens of networks.\n\nWe will help compare BDCOM with the alternatives for your task, calculate the optical budget and prepare a specification — free of charge.",
+   "faq": [
+    {
+     "q": "How does BDCOM differ from V-SOL?",
+     "a": "BDCOM is carrier-grade head-end hardware with mature firmware and CLI; V-SOL is stronger in affordable subscriber units. The classic pairing: BDCOM OLT + V-SOL ONUs."
+    },
+    {
+     "q": "Which ONUs work with BDCOM OLTs?",
+     "a": "Most XPON ONUs, including V-SOL and C-Data. We will pick proven models for your head-end."
+    },
+    {
+     "q": "Do you help with OLT configuration?",
+     "a": "Yes: base setup, VLANs, subscriber profiles, ONU provisioning. We also train your engineer on the CLI."
+    },
+    {
+     "q": "Is it in stock?",
+     "a": "Popular models are in stock in Tashkent; carrier quantities ship to order on short lead times."
+    }
+   ]
+  },
+  "tr": {
+   "title": "Özbekistan'da BDCOM — Operatör Sınıfı OLT ve Switchler",
+   "intro": "BDCOM, 30 yıllık geçmişe sahip bir telekom üreticisi ve BDT operatör ağlarındaki en yaygın OLT markalarından biridir. BDCOM GPON/EPON santralleri olgun yazılımı ve Cisco tarzı CLI'siyle değer görür.\n\nSAT Solutions 4–16 portlu BDCOM OLT’leri, erişim ve toplama switchlerini, SFP modüllerini Taşkent stoğundan ve siparişle sunar; resmi garanti ve yapılandırma desteğiyle.\n\nBDCOM'u genellikle «kur ve unut» santral isteyen İSS'ler ve yıllara dayanacak kendi fiber ağını kuran işletmeler seçer. V-SOL ve C-Data ONU'larla uyumu onlarca ağda kanıtlanmıştır.\n\nGöreviniz için alternatiflerle karşılaştırır, optik bütçeyi hesaplar, şartnameyi ücretsiz hazırlarız.",
+   "faq": [
+    {
+     "q": "BDCOM, V-SOL’dan nasıl ayrılır?",
+     "a": "BDCOM operatör sınıfı santral donanımıdır; V-SOL uygun fiyatlı abone cihazlarında güçlüdür. Klasik ikili: BDCOM OLT + V-SOL ONU."
+    },
+    {
+     "q": "Hangi ONU’lar BDCOM ile çalışır?",
+     "a": "V-SOL ve C-Data dahil çoğu XPON ONU. Santralinize kanıtlanmış modelleri seçeriz."
+    },
+    {
+     "q": "OLT ayarına yardım eder misiniz?",
+     "a": "Evet: temel ayar, VLAN, abone profilleri, ONU tanımlama. Mühendisinize CLI eğitimi de veririz."
+    },
+    {
+     "q": "Stokta var mı?",
+     "a": "Yaygın modeller Taşkent stokta; operatör adetleri kısa terminle siparişle gelir."
+    }
+   ]
+  },
+  "zh": {
+   "title": "BDCOM 乌兹别克斯坦 — 运营商级 OLT 与交换机",
+   "intro": "BDCOM 是拥有 30 年历史的电信厂商，是独联体运营商网络中最普及的 OLT 品牌之一。BDCOM 的 GPON/EPON 局端以成熟固件、Cisco 风格 CLI 和高耐用性著称。\n\nSAT Solutions 供应 4–16 口 BDCOM OLT、接入与汇聚交换机、SFP 模块——塔什干现货及订货，官方保修并提供配置支持。\n\nBDCOM 通常是需要「装完即忘」局端的运营商及自建长期光网络企业的选择。与 V-SOL、C-Data ONU 的兼容性已在数十个网络中验证。\n\n我们可帮您对比方案、核算光功率预算并免费出配置清单。",
+   "faq": [
+    {
+     "q": "BDCOM 与 V-SOL 有何区别？",
+     "a": "BDCOM 是运营商级局端设备，固件和 CLI 成熟；V-SOL 强在高性价比用户端。经典组合：BDCOM OLT + V-SOL ONU。"
+    },
+    {
+     "q": "哪些 ONU 兼容 BDCOM？",
+     "a": "多数 XPON ONU，包括 V-SOL 和 C-Data。我们按您的局端挑选经过验证的型号。"
+    },
+    {
+     "q": "提供 OLT 配置帮助吗？",
+     "a": "提供：基础配置、VLAN、用户模板、ONU 注册，并可培训您的工程师使用 CLI。"
+    },
+    {
+     "q": "有现货吗？",
+     "a": "常用型号塔什干现货；运营商批量短周期订货。"
+    }
+   ]
+  }
+ },
+ "c-data": {
+  "ru": {
+   "title": "C-Data в Узбекистане — GPON/EPON OLT и ONU, цены в Ташкенте",
+   "intro": "C-Data — производитель доступного PON-оборудования: станционные OLT, абонентские ONU, медиаконвертеры и SFP-модули. Бренд популярен у небольших провайдеров и интеграторов как самый бюджетный вход в GPON без потери базовой надёжности.\n\nВ каталоге SAT Solutions — OLT C-Data, XPON ONU и аксессуары со склада в Ташкенте. Совместимость с станциями BDCOM и Huawei и абонентскими устройствами V-SOL проверена на реальных сетях.\n\nТипичные применения: стартовая сеть провайдера, оптика в коттеджном посёлке, подключение удалённых зданий предприятия. Поможем выбрать между C-Data, V-SOL и BDCOM под ваш масштаб и бюджет, посчитаем спецификацию бесплатно.",
+   "faq": [
+    {
+     "q": "Чем C-Data отличается от V-SOL?",
+     "a": "Оба — доступный сегмент; C-Data чаще берут ради самых бюджетных OLT, V-SOL — ради широкой линейки ONU. В одной сети они спокойно работают вместе."
+    },
+    {
+     "q": "Подходит ли C-Data для сети провайдера?",
+     "a": "Да, для стартовых и средних сетей. Для крупных операторских узлов обычно рекомендуем BDCOM."
+    },
+    {
+     "q": "Есть ли в наличии?",
+     "a": "Ходовые OLT и ONU — на складе в Ташкенте, остальное — под заказ."
+    },
+    {
+     "q": "Поможете с запуском?",
+     "a": "Да: настройка OLT, профили, привязка ONU, обучение. Плюс проект и сварка оптики, если сеть строится с нуля."
+    }
+   ]
+  },
+  "uz": {
+   "title": "C-Data O'zbekistonda — GPON/EPON OLT va ONU, Toshkentda narxlar",
+   "intro": "C-Data — hamyonbop PON-uskunalar ishlab chiqaruvchisi: OLT stansiyalari, ONU abonent qurilmalari, mediakonverterlar va SFP-modullar. Brend kichik provayderlar orasida GPON'ga eng byudjet kirish sifatida mashhur.\n\nSAT Solutions katalogida — C-Data OLT'lar, XPON ONU'lar va aksessuarlar Toshkentdagi ombordan. BDCOM va Huawei stansiyalari hamda V-SOL abonent qurilmalari bilan mosligi real tarmoqlarda tekshirilgan.\n\nTipik qo'llanishlar: provayderning boshlang'ich tarmog'i, kottej posyolkasida optika, korxonaning uzoq binolarini ulash. C-Data, V-SOL va BDCOM orasidan masshtab va byudjetingizga mosini tanlashga yordam beramiz, spetsifikatsiyani bepul hisoblaymiz.",
+   "faq": [
+    {
+     "q": "C-Data V-SOL’dan nimasi bilan farq qiladi?",
+     "a": "Ikkalasi ham hamyonbop segment; C-Data eng arzon OLT uchun, V-SOL keng ONU qatori uchun olinadi. Bitta tarmoqda birga bemalol ishlaydi."
+    },
+    {
+     "q": "C-Data provayder tarmog'iga mosmi?",
+     "a": "Ha, boshlang'ich va o'rta tarmoqlar uchun. Yirik operator uzellariga odatda BDCOM tavsiya qilamiz."
+    },
+    {
+     "q": "Mavjudmi?",
+     "a": "Yurimli OLT va ONU'lar Toshkentda omborda, qolgani buyurtma asosida."
+    },
+    {
+     "q": "Ishga tushirishga yordam berasizmi?",
+     "a": "Ha: OLT sozlash, profillar, ONU ulash, o'qitish. Tarmoq noldan qurilsa — loyiha va optika payvandlash ham."
+    }
+   ]
+  },
+  "en": {
+   "title": "C-Data in Uzbekistan — GPON/EPON OLT and ONU, Tashkent Prices",
+   "intro": "C-Data manufactures affordable PON equipment: OLT head-ends, subscriber ONUs, media converters and SFP modules. The brand is popular with small ISPs and integrators as the most budget-friendly entry into GPON without losing core reliability.\n\nThe SAT Solutions catalogue carries C-Data OLTs, XPON ONUs and accessories from Tashkent stock. Compatibility with BDCOM and Huawei head-ends and with V-SOL subscriber units is proven on live networks.\n\nTypical uses: a starter ISP network, fibre in a cottage settlement, connecting remote buildings of an enterprise. We will help choose between C-Data, V-SOL and BDCOM for your scale and budget, and prepare a specification free of charge.",
+   "faq": [
+    {
+     "q": "How does C-Data differ from V-SOL?",
+     "a": "Both are the affordable segment; C-Data is picked for the cheapest OLTs, V-SOL for its wide ONU range. They work together happily in one network."
+    },
+    {
+     "q": "Is C-Data suitable for an ISP network?",
+     "a": "Yes, for starter and mid-size networks. For large carrier nodes we usually recommend BDCOM."
+    },
+    {
+     "q": "Is it in stock?",
+     "a": "Popular OLTs and ONUs are in stock in Tashkent; the rest ships to order."
+    },
+    {
+     "q": "Do you help with launch?",
+     "a": "Yes: OLT setup, profiles, ONU provisioning, training. Plus network design and fibre splicing when building from scratch."
+    }
+   ]
+  },
+  "tr": {
+   "title": "Özbekistan'da C-Data — GPON/EPON OLT ve ONU",
+   "intro": "C-Data uygun fiyatlı PON ekipmanı üretir: OLT santraller, abone ONU'ları, medya dönüştürücüler ve SFP modülleri. Marka, küçük İSS'ler arasında temel güvenilirlikten ödün vermeden GPON'a en bütçe dostu giriş olarak bilinir.\n\nSAT Solutions kataloğunda C-Data OLT’ler, XPON ONU'lar ve aksesuarlar Taşkent stoğundan sunulur. BDCOM ve Huawei santrallerle, V-SOL abone cihazlarıyla uyumu canlı ağlarda kanıtlanmıştır.\n\nTipik kullanımlar: başlangıç İSS ağı, yazlık sitede fiber, işletmenin uzak binalarını bağlama. Ölçeğinize ve bütçenize göre C-Data, V-SOL ve BDCOM arasından seçim yapmanıza yardım eder, şartnameyi ücretsiz hazırlarız.",
+   "faq": [
+    {
+     "q": "C-Data, V-SOL’dan nasıl ayrılır?",
+     "a": "İkisi de uygun segmenttir; C-Data en ucuz OLT’ler, V-SOL geniş ONU serisi için tercih edilir. Aynı ağda sorunsuz birlikte çalışırlar."
+    },
+    {
+     "q": "C-Data İSS ağına uygun mu?",
+     "a": "Evet, başlangıç ve orta ölçekli ağlara. Büyük operatör düğümlerine genellikle BDCOM öneririz."
+    },
+    {
+     "q": "Stokta var mı?",
+     "a": "Yaygın OLT ve ONU’lar Taşkent stokta; gerisi siparişle."
+    },
+    {
+     "q": "Devreye almada yardım eder misiniz?",
+     "a": "Evet: OLT ayarı, profiller, ONU tanımlama, eğitim. Sıfırdan kurulumda proje ve fiber ek dahil."
+    }
+   ]
+  },
+  "zh": {
+   "title": "C-Data 乌兹别克斯坦 — GPON/EPON OLT 与 ONU",
+   "intro": "C-Data 生产高性价比 PON 设备：OLT 局端、用户 ONU、光电转换器和 SFP 模块。该品牌在小型运营商中很受欢迎，是进入 GPON 的最低成本选择。\n\nSAT Solutions 目录提供 C-Data OLT、XPON ONU 及配件，塔什干现货。与 BDCOM、华为局端及 V-SOL 用户端的兼容性已在实际网络验证。\n\n典型应用：运营商起步网络、别墅区光纤、企业远端楼宇接入。我们帮您在 C-Data、V-SOL 和 BDCOM 之间按规模和预算选型，免费出配置清单。",
+   "faq": [
+    {
+     "q": "C-Data 与 V-SOL 有何区别？",
+     "a": "都属经济型；C-Data 胜在最便宜的 OLT，V-SOL 胜在丰富的 ONU 线。同一网络可混用。"
+    },
+    {
+     "q": "C-Data 适合运营商网络吗？",
+     "a": "适合起步和中型网络。大型运营商节点通常推荐 BDCOM。"
+    },
+    {
+     "q": "有现货吗？",
+     "a": "常用 OLT 和 ONU 塔什干现货，其余订货。"
+    },
+    {
+     "q": "协助开通吗？",
+     "a": "协助：OLT 配置、模板、ONU 注册、培训。从零建网还包括设计和熔接。"
+    }
+   ]
+  }
  }
 }

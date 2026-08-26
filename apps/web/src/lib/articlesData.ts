@@ -5875,6 +5875,179 @@ export const ARTICLES: Article[] = [
     },
   },
 
+  {
+    slug: "gpon-uzbekistan",
+    date: "2026-08-27",
+    related: ["fiber", "network"],
+    loc: {
+      ru: {
+        title: "GPON: как устроена оптическая сеть и сколько стоит её построить",
+        excerpt: "Что такое GPON и XPON, из чего состоит сеть — OLT, сплиттеры, ONU, — кому она нужна и сколько стоит оборудование и монтаж в Ташкенте.",
+        sections: [
+          { h: "Что такое GPON простыми словами", p: [
+            "GPON — технология пассивной оптической сети: от станции (OLT) одно волокно через сплиттеры разветвляется на десятки абонентов, у каждого из которых стоит терминал ONU. «Пассивная» значит, что между станцией и абонентом нет активного оборудования — только оптика и делители, которым не нужно питание.",
+            "Отсюда главные плюсы: дальность до 20 км, никакой грозозащиты и свитчей в подъездах, гигабитные скорости и почти нулевая деградация. EPON и XPON — родственные варианты: XPON-терминалы работают с обеими станциями.",
+          ] },
+          { h: "Кому нужна PON-сеть", p: [
+            "Классика — провайдер в махалле, посёлке или ЖК: одно волокно на 64–128 квартир вместо гирлянды коммутаторов. Вторая аудитория — предприятия: распределённые цеха, склады и КПП подключаются к серверной без активных узлов по территории.",
+            "Третье применение — видеонаблюдение по оптике: камеры на дальних точках (парковка, периметр, соседнее здание) подключаются через недорогие ONU без потери качества на расстоянии.",
+          ] },
+          { h: "Из чего состоит сеть: OLT, сплиттеры, ONU", p: [
+            "Станция OLT ставится в серверной — от 4 до 16 PON-портов, каждый обслуживает до 64–128 абонентов. Дальше пассивные сплиттеры 1:8–1:64 в боксах, оптический кабель и абонентские ONU — простые или с Wi-Fi-роутером.",
+            "Мы возим три проверенных бренда: V-SOL и C-Data — доступные OLT и ONU, BDCOM — станции операторского класса с CLI в стиле Cisco. Совместимость между ними проверена на живых сетях.",
+          ] },
+          { h: "Сколько стоит", p: [
+            "Абонентский ONU начинается от нескольких сотен тысяч сум, станционный OLT на 4–8 портов — от нескольких миллионов. Полный бюджет сети складывается из станции, кабеля, сплиттеров, боксов, сварки и настройки.",
+            "Смета бесплатная: считаем оптический бюджет по вашей схеме — сколько абонентов, какие расстояния — и даём спецификацию с ценами со склада в Ташкенте за один день.",
+          ] },
+          { h: "Монтаж и запуск под ключ", p: [
+            "Делаем сеть целиком: проект и расчёт оптического бюджета, прокладка кабеля, сварка волокна с измерениями рефлектометром, монтаж боксов и сплиттеров, настройка OLT, привязка ONU и обучение вашего инженера.",
+            "Сдаём с паспортом сети и схемами. Договор с юрлицом, НДС, гарантия на оборудование и работы.",
+          ] },
+        ],
+        faq: [
+          { q: "Чем GPON отличается от обычной сети на коммутаторах?", a: "Между станцией и абонентом нет активного оборудования — только волокно и пассивные делители. Дальность до 20 км, нет свитчей по подъездам и питания для них, гигабитные скорости." },
+          { q: "Что такое XPON?", a: "Универсальные абонентские терминалы, работающие и с GPON, и с EPON станциями. Удобно: один ONU подходит к любой станции." },
+          { q: "Сколько стоит ONU для абонента?", a: "Простые модели — от нескольких сотен тысяч сум, с Wi-Fi-роутером дороже. При партии для сети цена ниже — считаем в спецификации." },
+          { q: "Какой OLT выбрать: V-SOL, C-Data или BDCOM?", a: "Для старта и средних сетей — V-SOL или C-Data, для крупных операторских узлов — BDCOM. Поможем сравнить под ваш масштаб бесплатно." },
+          { q: "Делаете ли сварку и измерения?", a: "Да, свой штат со сварочными аппаратами и рефлектометром. Сдаём сеть с паспортом и измерениями каждой линии." },
+        ],
+      },
+      uz: {
+        title: "GPON: optik tarmoq qanday ishlaydi va uni qurish qancha turadi",
+        excerpt: "GPON va XPON nima, tarmoq nimadan iborat — OLT, splitterlar, ONU — kimga kerak va Toshkentda uskuna hamda montaj qancha turadi.",
+        sections: [
+          { h: "GPON oddiy tilda nima", p: [
+            "GPON — passiv optik tarmoq texnologiyasi: stansiyadan (OLT) bitta tola splitterlar orqali o'nlab abonentga tarqaladi, har birida ONU terminali turadi. «Passiv» degani — stansiya va abonent orasida faol uskuna yo'q, faqat optika va quvvat talab qilmaydigan bo'luvchilar.",
+            "Asosiy afzalliklar shundan: 20 km gacha masofa, pod'ezdlarda svitch va chaqmoq himoyasi keraksiz, gigabit tezliklar. EPON va XPON — qarindosh variantlar: XPON-terminallar ikkala stansiya bilan ham ishlaydi.",
+          ] },
+          { h: "PON-tarmoq kimga kerak", p: [
+            "Klassika — mahalla, posyolka yoki TJMda provayder: 64–128 kvartiraga kommutatorlar shodasi o'rniga bitta tola. Ikkinchi auditoriya — korxonalar: tarqoq sexlar, omborlar va KPPlar hududda faol uzellarsiz serverxonaga ulanadi.",
+            "Uchinchi qo'llanish — optika orqali videokuzatuv: uzoq nuqtalardagi kameralar (avtoturargoh, perimetr, qo'shni bino) arzon ONU orqali sifat yo'qotmasdan ulanadi.",
+          ] },
+          { h: "Tarmoq nimadan iborat: OLT, splitterlar, ONU", p: [
+            "OLT stansiyasi serverxonaga qo'yiladi — 4 dan 16 gacha PON-port, har biri 64–128 abonentga xizmat qiladi. Keyin bokslardagi 1:8–1:64 passiv splitterlar, optik kabel va abonent ONU'lari — oddiy yoki Wi-Fi routerli.",
+            "Biz uchta tekshirilgan brendni olib kelamiz: V-SOL va C-Data — hamyonbop OLT va ONU'lar, BDCOM — Cisco uslubidagi CLI'ga ega operator darajasidagi stansiyalar. O'zaro mosligi jonli tarmoqlarda tekshirilgan.",
+          ] },
+          { h: "Qancha turadi", p: [
+            "Abonent ONU bir necha yuz ming so'mdan boshlanadi, 4–8 portli OLT — bir necha milliondan. To'liq byudjet stansiya, kabel, splitterlar, bokslar, payvandlash va sozlashdan yig'iladi.",
+            "Smeta bepul: sxemangiz bo'yicha optik byudjetni hisoblaymiz — nechta abonent, qanday masofalar — va Toshkentdagi ombor narxlari bilan spetsifikatsiyani bir kunda beramiz.",
+          ] },
+          { h: "Kalit topshirish montaji", p: [
+            "Tarmoqni to'liq qilamiz: loyiha va optik byudjet hisobi, kabel yotqizish, reflektometr o'lchovlari bilan tola payvandlash, boks va splitterlar montaji, OLT sozlash, ONU ulash va muhandisingizni o'qitish.",
+            "Tarmoq pasporti va sxemalar bilan topshiramiz. Yuridik shaxs bilan shartnoma, NDS, uskuna va ishlarga kafolat.",
+          ] },
+        ],
+        faq: [
+          { q: "GPON oddiy kommutator tarmog'idan nimasi bilan farq qiladi?", a: "Stansiya va abonent orasida faol uskuna yo'q — faqat tola va passiv bo'luvchilar. 20 km gacha masofa, pod'ezdlarda svitch va ularga quvvat keraksiz, gigabit tezliklar." },
+          { q: "XPON nima?", a: "GPON va EPON stansiyalarining ikkalasi bilan ham ishlaydigan universal abonent terminallari. Qulay: bitta ONU istalgan stansiyaga tushadi." },
+          { q: "Abonent uchun ONU qancha turadi?", a: "Oddiy modellar — bir necha yuz ming so'mdan, Wi-Fi routerlisi qimmatroq. Tarmoq uchun partiyada narx pastroq — spetsifikatsiyada hisoblaymiz." },
+          { q: "Qaysi OLT'ni tanlash: V-SOL, C-Data yoki BDCOM?", a: "Boshlang'ich va o'rta tarmoqlarga — V-SOL yoki C-Data, yirik operator uzellariga — BDCOM. Masshtabingizga mosini bepul solishtiramiz." },
+          { q: "Payvandlash va o'lchovlarni qilasizmi?", a: "Ha, payvand apparatlari va reflektometrli o'z shtatimiz bor. Tarmoqni pasport va har bir liniya o'lchovlari bilan topshiramiz." },
+        ],
+      },
+      en: {
+        title: "GPON: How a Passive Optical Network Works and What It Costs",
+        excerpt: "What GPON and XPON are, what the network consists of — OLT, splitters, ONU — who needs it and what equipment and installation cost in Tashkent.",
+        sections: [
+          { h: "GPON in plain words", p: [
+            "GPON is passive optical network technology: from the head-end (OLT) a single fibre branches through splitters to dozens of subscribers, each with an ONU terminal. \"Passive\" means no active equipment between the station and the subscriber — only fibre and unpowered splitters.",
+            "Hence the key benefits: up to 20 km reach, no switches in stairwells and no power for them, gigabit speeds. EPON and XPON are sibling flavours: XPON terminals work with both head-end types.",
+          ] },
+          { h: "Who needs a PON network", p: [
+            "The classic case is an ISP in a district, settlement or residential complex: one fibre serves 64–128 flats instead of a chain of switches. The second audience is enterprises: remote workshops, warehouses and checkpoints connect to the server room with no active nodes across the site.",
+            "The third use is CCTV over fibre: cameras at distant points — car park, perimeter, a neighbouring building — connect through inexpensive ONUs with no quality loss over distance.",
+          ] },
+          { h: "What the network consists of: OLT, splitters, ONU", p: [
+            "The OLT sits in the server room — 4 to 16 PON ports, each serving up to 64–128 subscribers. Then passive 1:8–1:64 splitters in boxes, optical cable and subscriber ONUs — basic or with a Wi-Fi router.",
+            "We carry three proven brands: V-SOL and C-Data for affordable OLTs and ONUs, BDCOM for carrier-grade head-ends with a Cisco-style CLI. Cross-compatibility is proven on live networks.",
+          ] },
+          { h: "What it costs", p: [
+            "A subscriber ONU starts from a few hundred thousand UZS, a 4–8 port OLT from a few million. The full network budget adds cable, splitters, boxes, splicing and configuration.",
+            "The estimate is free: we calculate the optical budget for your layout — subscriber count, distances — and deliver a priced specification from Tashkent stock within a day.",
+          ] },
+          { h: "Turnkey installation", p: [
+            "We build the network end to end: design and optical budget, cable laying, fusion splicing with OTDR measurements, boxes and splitters, OLT configuration, ONU provisioning and training for your engineer.",
+            "Handover includes the network passport and diagrams. Contract with VAT, warranty on equipment and work.",
+          ] },
+        ],
+        faq: [
+          { q: "How does GPON differ from a switched network?", a: "No active equipment between head-end and subscriber — only fibre and passive splitters. Up to 20 km reach, no stairwell switches or power for them, gigabit speeds." },
+          { q: "What is XPON?", a: "Universal subscriber terminals that work with both GPON and EPON head-ends. Convenient: one ONU fits any station." },
+          { q: "What does a subscriber ONU cost?", a: "Basic models from a few hundred thousand UZS; Wi-Fi router models cost more. Volume pricing for networks is lower — we quote it in the specification." },
+          { q: "Which OLT to choose: V-SOL, C-Data or BDCOM?", a: "V-SOL or C-Data for starter and mid-size networks, BDCOM for large carrier nodes. We compare options for your scale free of charge." },
+          { q: "Do you splice and measure?", a: "Yes — our own crew with fusion splicers and an OTDR. The network is handed over with a passport and per-line measurements." },
+        ],
+      },
+      tr: {
+        title: "GPON: Pasif Optik Ağ Nasıl Çalışır ve Maliyeti Nedir",
+        excerpt: "GPON ve XPON nedir, ağ nelerden oluşur — OLT, splitterlar, ONU — kimin işine yarar, Taşkent'te ekipman ve montaj ne kadar tutar.",
+        sections: [
+          { h: "Sade dille GPON", p: [
+            "GPON pasif optik ağ teknolojisidir: santralden (OLT) tek fiber, splitterlar üzerinden onlarca aboneye dallanır; her abonede bir ONU bulunur. \"Pasif\", santral ile abone arasında aktif ekipman olmaması demektir — yalnızca fiber ve güç istemeyen bölücüler.",
+            "Başlıca avantajlar: 20 km'ye varan mesafe, merdivenlerde switch ve besleme derdi yok, gigabit hızlar. EPON ve XPON kardeş türlerdir: XPON terminaller iki santral tipiyle de çalışır.",
+          ] },
+          { h: "PON ağı kime lazım", p: [
+            "Klasik senaryo mahallede veya sitede İSS: switch zinciri yerine 64–128 daireye tek fiber. İkinci kitle işletmeler: uzak atölyeler, depolar ve girişler sahada aktif düğüm olmadan sunucu odasına bağlanır.",
+            "Üçüncü kullanım fiber üzerinden kamera: uzak noktalardaki kameralar (otopark, çevre, komşu bina) ucuz ONU'larla mesafe kaybı olmadan bağlanır.",
+          ] },
+          { h: "Ağ nelerden oluşur: OLT, splitter, ONU", p: [
+            "OLT sunucu odasına konur — 4–16 PON port, her biri 64–128 aboneye hizmet verir. Sonra kutularda 1:8–1:64 pasif splitterlar, optik kablo ve abone ONU'ları — temel veya Wi-Fi routerlı.",
+            "Üç kanıtlanmış marka taşıyoruz: uygun fiyatlı OLT ve ONU'larda V-SOL ile C-Data, Cisco tarzı CLI'ye sahip operatör sınıfı santrallerde BDCOM. Karşılıklı uyum canlı ağlarda kanıtlı.",
+          ] },
+          { h: "Ne kadar tutar", p: [
+            "Abone ONU'su birkaç yüz bin UZS'den, 4–8 portlu OLT birkaç milyondan başlar. Tam bütçeye kablo, splitterlar, kutular, ek ve yapılandırma eklenir.",
+            "Teklif ücretsiz: şemanıza göre optik bütçeyi hesaplar — abone sayısı, mesafeler — ve Taşkent stok fiyatlarıyla şartnameyi bir günde veririz.",
+          ] },
+          { h: "Anahtar teslim kurulum", p: [
+            "Ağı uçtan uca kurarız: proje ve optik bütçe, kablo serimi, OTDR ölçümlü fiber ek, kutular ve splitterlar, OLT ayarı, ONU tanımlama ve mühendisinize eğitim.",
+            "Teslimat ağ pasaportu ve şemalarla yapılır. KDV'li sözleşme, ekipman ve işçilik garantisi.",
+          ] },
+        ],
+        faq: [
+          { q: "GPON, switchli ağdan nasıl ayrılır?", a: "Santral ile abone arasında aktif ekipman yok — yalnız fiber ve pasif bölücüler. 20 km mesafe, merdiven switchleri ve beslemesi yok, gigabit hızlar." },
+          { q: "XPON nedir?", a: "Hem GPON hem EPON santrallerle çalışan evrensel abone terminalleri. Pratik: tek ONU her santrale uyar." },
+          { q: "Abone ONU'su ne kadar?", a: "Temel modeller birkaç yüz bin UZS'den; Wi-Fi routerlılar daha pahalı. Ağ adetlerinde fiyat düşer — şartnamede hesaplarız." },
+          { q: "Hangi OLT: V-SOL, C-Data, BDCOM?", a: "Başlangıç ve orta ağlara V-SOL veya C-Data, büyük operatör düğümlerine BDCOM. Ölçeğinize göre ücretsiz karşılaştırırız." },
+          { q: "Ek ve ölçüm yapıyor musunuz?", a: "Evet — ek cihazları ve OTDR'li kendi ekibimiz var. Ağ, pasaport ve hat ölçümleriyle teslim edilir." },
+        ],
+      },
+      zh: {
+        title: "GPON：无源光网络的原理与建设成本",
+        excerpt: "什么是 GPON 和 XPON，网络由什么组成——OLT、分光器、ONU——谁需要它，在塔什干设备和施工要多少钱。",
+        sections: [
+          { h: "通俗理解 GPON", p: [
+            "GPON 是无源光网络技术：从局端（OLT）出发的一根光纤经分光器分支到几十个用户，每户一台 ONU 终端。「无源」意味着局端与用户之间没有有源设备——只有光纤和无需供电的分光器。",
+            "由此带来核心优势：最远 20 公里、楼道无需交换机和供电、千兆速率。EPON 和 XPON 是同族技术：XPON 终端兼容两种局端。",
+          ] },
+          { h: "谁需要 PON 网络", p: [
+            "经典场景是社区或住宅区的运营商：一根光纤覆盖 64–128 户，替代成串的交换机。第二类是企业：分散的车间、仓库和门岗无需园区有源节点即可接入机房。",
+            "第三类是光纤监控：远端点位（停车场、围界、邻楼）通过廉价 ONU 接入，距离不损画质。",
+          ] },
+          { h: "网络组成：OLT、分光器、ONU", p: [
+            "OLT 置于机房——4 至 16 个 PON 口，每口带 64–128 户。其后是盒内 1:8–1:64 无源分光器、光缆和用户 ONU——基础款或带 Wi-Fi 路由。",
+            "我们供应三个经过验证的品牌：V-SOL 和 C-Data 主打高性价比 OLT 与 ONU，BDCOM 是带 Cisco 风格 CLI 的运营商级局端。互兼容性已在实网验证。",
+          ] },
+          { h: "价格", p: [
+            "用户 ONU 从几十万苏姆起，4–8 口 OLT 从几百万起。整网预算还包括光缆、分光器、接头盒、熔接与调试。",
+            "报价免费：按您的拓扑核算光功率预算——用户数、距离——一天内给出塔什干现货价格的配置清单。",
+          ] },
+          { h: "交钥匙施工", p: [
+            "整网承建：设计与光功率预算、敷缆、OTDR 测量熔接、盒体与分光器安装、OLT 配置、ONU 注册及工程师培训。",
+            "交付附网络档案和图纸。增值税合同，设备与施工保修。",
+          ] },
+        ],
+        faq: [
+          { q: "GPON 与交换机组网有何区别？", a: "局端与用户之间无有源设备——只有光纤和无源分光器。20 公里覆盖，无楼道交换机及其供电，千兆速率。" },
+          { q: "什么是 XPON？", a: "同时兼容 GPON 和 EPON 局端的通用用户终端。方便：一款 ONU 适配任意局端。" },
+          { q: "用户 ONU 多少钱？", a: "基础款几十万苏姆起，带 Wi-Fi 路由更贵。整网批量价更低——在配置清单中核算。" },
+          { q: "OLT 选哪家：V-SOL、C-Data 还是 BDCOM？", a: "起步和中型网络选 V-SOL 或 C-Data，大型运营商节点选 BDCOM。按您的规模免费对比。" },
+          { q: "提供熔接和测量吗？", a: "提供——自有熔接机和 OTDR 团队。交付附档案及每条链路的测量数据。" },
+        ],
+      },
+    },
+  },
+
 ];
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
