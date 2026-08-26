@@ -57,7 +57,7 @@ export async function GET() {
       // Доп. фото из галереи — метрика скоркарты «количество изображений на предложение».
       // Merchant принимает до 10 additional_image_link.
       const gallery = (p.galleryImageUrls ?? [])
-        .map((u) => resolveImageUrl(u))
+        .map((u: string) => resolveImageUrl(u))
         .filter((u): u is string => Boolean(u) && u !== image)
         .slice(0, 10);
       // Полное описание первым — MC ранжирует лучше при развёрнутом тексте («добавьте информацию»)
