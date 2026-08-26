@@ -5014,6 +5014,210 @@ export const ARTICLES: Article[] = [
     },
   },
 
+  {
+    slug: "davomat-tizimi",
+    date: "2026-08-26",
+    related: ["attendance", "access"],
+    loc: {
+      uz: {
+        title: "Davomat tizimi: maktab, ofis va zavod uchun narxi",
+        excerpt: "Biometrik davomat tizimi qancha turadi: Face ID terminallar, kartalar, avtomatik tabel va 1C ga yuklash. Maktab, ofis va ishlab chiqarish uchun yechimlar.",
+        sections: [
+          { h: "Davomat tizimi qanday ishlaydi", p: [
+            "Kirish joyiga terminal o'rnatiladi: xodim yoki o'quvchi yuz (Face ID), barmoq izi yoki karta bilan belgilanadi. Tizim kelish-ketish vaqtini avtomatik yozadi, kechikish va erta ketishlarni ko'rsatadi, tabelni o'zi tuzadi.",
+            "Qog'oz jurnal va qo'lda tabel yuritishga qaraganda farq katta: hech kim boshqasi uchun belgilana olmaydi (yuz va barmoq izi almashtirib bo'lmaydi), hisobot esa bir tugma bilan chiqadi.",
+          ] },
+          { h: "Maktab va o'quv markazlari uchun", p: [
+            "Maktablarda davomat tizimi ota-onalarga xabar yuborish bilan ulanadi: bola maktabga kirdi — telefonga bildirishnoma keladi. Bu xavfsizlik va ishonch masalasi, ko'p xususiy maktablar aynan shu funksiya uchun tizim o'rnatadi.",
+            "O'quv markazlarida tizim guruhlar bo'yicha davomatni yuritadi va to'lov bilan bog'lash mumkin: nechta dars qatnashgani avtomatik hisoblanadi.",
+          ] },
+          { h: "Ofis va ishlab chiqarish uchun", p: [
+            "Ofisda davomat tizimi ish vaqtini hisobga olish bilan birlashadi: kechikishlar, ortiqcha ishlagan soatlar, tabelning 1C ga yuklanishi. Turniket bilan birga qo'yilsa, kirish nazorati ham hal bo'ladi.",
+            "Zavod va ishlab chiqarishda smenali jadval, tungi smenalar va yuzlab xodimlar bilan ishlash muhim — terminallar bunga mo'ljallangan, ZKTeco va Hikvision uskunalari sekundiga bir necha kishini o'tkazadi.",
+          ] },
+          { h: "Narxi qancha", p: [
+            "Kichik ofis uchun bitta Face ID terminal va sozlash bilan tizim bir necha million so'mdan boshlanadi. Maktab yoki zavod uchun narx kirish nuqtalari va xodimlar soniga bog'liq — turniketlar qo'shilsa, smeta kattaroq bo'ladi.",
+            "Muhandisning chiqishi va smeta bepul. Terminallar Toshkentdagi ombordan, o'rnatish odatda 1 kun, 1C bilan integratsiya alohida sozlanadi.",
+          ] },
+          { h: "Qanday buyurtma qilinadi", p: [
+            "Vazifani ayting: nechta odam, nechta kirish, tabel qayerga yuklanadi. Mos terminallarni tanlab, o'rnatish bilan aniq narxni bir kunda hisoblaymiz.",
+            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, o'rnatishga kompaniya kafolati.",
+          ] },
+        ],
+        faq: [
+          { q: "Davomat tizimi narxi qancha?", a: "Bitta Face ID terminal va sozlash bilan — bir necha million so'mdan. Aniq narx kirish nuqtalari va xodimlar soniga bog'liq — smeta bepul." },
+          { q: "Maktab uchun ota-onalarga xabar yuborish bormi?", a: "Ha: bola belgilanganda ota-onaga bildirishnoma boradi. Bu maktablar uchun eng ko'p so'raladigan funksiya." },
+          { q: "1C bilan integratsiya qilasizmi?", a: "Ha, tabel 1C ga avtomatik yuklanadi. Zarplata hisobiga tayyor ma'lumot boradi." },
+          { q: "Terminal aldab bo'ladimi — boshqa odam belgilansa?", a: "Yuz va barmoq izi bilan — yo'q: biometriya boshqa odamni qabul qilmaydi. Aynan shuning uchun kartadan ko'ra biometrik terminal tavsiya qilamiz." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Bitta terminal — bir necha soat. Turniketlar bilan to'liq tizim — 1–2 kun." },
+        ],
+      },
+      ru: {
+        title: "Система учёта посещаемости: цены для школы, офиса и завода",
+        excerpt: "Сколько стоит биометрическая система учёта посещаемости: терминалы Face ID, карты, автоматический табель и выгрузка в 1С. Решения для школ, офисов и производств.",
+        sections: [
+          { h: "Как работает система учёта посещаемости", p: [
+            "На входе ставится терминал: сотрудник или ученик отмечается лицом (Face ID), отпечатком или картой. Система автоматически пишет время прихода и ухода, показывает опоздания и ранние уходы, сама формирует табель.",
+            "Разница с бумажным журналом и ручным табелем принципиальная: никто не отметится за другого (лицо и отпечаток не передашь), а отчёт выгружается одной кнопкой.",
+          ] },
+          { h: "Для школ и учебных центров", p: [
+            "В школах учёт посещаемости подключается к уведомлениям родителей: ребёнок вошёл в школу — на телефон приходит сообщение. Это вопрос безопасности и доверия — многие частные школы ставят систему именно ради этой функции.",
+            "В учебных центрах система ведёт посещаемость по группам, и её можно связать с оплатой: количество посещённых занятий считается автоматически.",
+          ] },
+          { h: "Для офиса и производства", p: [
+            "В офисе учёт посещаемости объединяется с учётом рабочего времени: опоздания, переработки, выгрузка табеля в 1С. В паре с турникетом закрывается и контроль доступа.",
+            "На заводе важны сменные графики, ночные смены и сотни сотрудников — терминалы на это рассчитаны: оборудование ZKTeco и Hikvision пропускает несколько человек в секунду.",
+          ] },
+          { h: "Сколько стоит", p: [
+            "Для небольшого офиса система с одним Face ID терминалом и настройкой начинается от нескольких миллионов сум. Для школы или завода цена зависит от числа входов и сотрудников; с турникетами смета больше.",
+            "Выезд инженера и смета бесплатные. Терминалы со склада в Ташкенте, установка обычно 1 день, интеграция с 1С настраивается отдельно.",
+          ] },
+          { h: "Как заказать", p: [
+            "Опишите задачу: сколько людей, сколько входов, куда выгружать табель. Подберём терминалы и за день посчитаем точную цену с установкой.",
+            "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит система учёта посещаемости?", a: "С одним Face ID терминалом и настройкой — от нескольких миллионов сум. Точная цена зависит от числа входов и сотрудников — смета бесплатная." },
+          { q: "Есть ли уведомления родителям для школ?", a: "Да: когда ребёнок отмечается, родителю приходит уведомление. Это самая востребованная функция у школ." },
+          { q: "Делаете интеграцию с 1С?", a: "Да, табель выгружается в 1С автоматически — готовые данные идут в расчёт зарплаты." },
+          { q: "Можно ли отметиться за другого?", a: "С лицом и отпечатком — нет: биометрия чужого не примет. Именно поэтому рекомендуем биометрические терминалы вместо карт." },
+          { q: "Сколько занимает установка?", a: "Один терминал — несколько часов. Полная система с турникетами — 1–2 дня." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "aqlli-uy-narxi",
+    date: "2026-08-26",
+    related: ["smarthome", "cctv", "locks"],
+    loc: {
+      uz: {
+        title: "Aqlli uy narxi: tizim qancha turadi va nimadan boshlash kerak",
+        excerpt: "Toshkentda aqlli uy tizimi narxlari: yoritish, pardalar, iqlim, videokuzatuv va aqlli qulflar bitta ilovada. Nimadan boshlash arzon va qanday kengaytirish mumkin.",
+        sections: [
+          { h: "Aqlli uy nimalardan iborat", p: [
+            "Aqlli uy — bu bitta ilovadan boshqariladigan qurilmalar to'plami: yoritish va rozetkalar, pardalar, konditsioner boshqaruvi, videokuzatuv, aqlli qulf va datchiklar (suv toshqini, tutun, harakat).",
+            "Hammasi birdan shart emas: tizim modulli. Ko'pchilik yoritish va pardalardan boshlaydi, keyin kamera, qulf va datchiklarni qo'shadi — bitta ekotizimda hammasi birga ishlaydi.",
+          ] },
+          { h: "Narxlar: nimadan boshlash arzon", p: [
+            "Boshlang'ich to'plam — aqlli rozetkalar, lampalar va bitta datchik — bir necha yuz ming so'mdan yig'iladi. O'rtacha kvartira uchun yoritish, pardalar va iqlim boshqaruvi bilan tizim bir necha million so'mga chiqadi.",
+            "To'liq loyiha — videokuzatuv, aqlli qulf, ovozli boshqaruv va ssenariylar bilan — kvartira maydoni va qurilmalar soniga bog'liq. Smeta bepul: xonalarni ko'rib, bosqichma-bosqich rejani taklif qilamiz.",
+          ] },
+          { h: "Xavfsizlik: kamera, qulf va datchiklar", p: [
+            "Aqlli uyning eng foydali qismi — xavfsizlik: eshikda aqlli qulf va kamera, uyda harakat va tutun datchiklari, suv toshqini datchigi oshxona va sanuzelda. Hammasi telefonga xabar yuboradi.",
+            "Uydan chiqqanda bitta ssenariy hammasi o'chiradi va qo'riqlashga qo'yadi; qaytganda yoritish va konditsioner o'zi yonadi. Tuya, Hikvision va boshqa ekotizimlar bilan ishlaymiz.",
+          ] },
+          { h: "Qanday buyurtma qilinadi", p: [
+            "Kvartira yoki hovli rejasini yuboring — qaysi xonada nima kerakligini aytamiz va ikki-uch variantda smeta beramiz: boshlang'ich, o'rtacha va to'liq. O'rnatish ta'mirga bog'liq: yangi ta'mirda simli yechimlar, tayyor uyda simsiz.",
+            "Uskunalar Toshkentdagi ombordan, o'rnatish va sozlash bizniki, ilovani telefonga o'rnatib, ishlatishni o'rgatamiz. Kafolat — rasmiy.",
+          ] },
+        ],
+        faq: [
+          { q: "Aqlli uy tizimi narxi qancha?", a: "Boshlang'ich to'plam — bir necha yuz ming so'mdan. Kvartira uchun yoritish, pardalar va iqlim bilan — bir necha million. Aniq narx reja bo'yicha, smeta bepul." },
+          { q: "Nimadan boshlash kerak?", a: "Eng ko'p foyda beradigan narsalardan: aqlli qulf, kamera va suv toshqini datchigi. Keyin yoritish va pardalarni qo'shish oson." },
+          { q: "Ta'mir tugagan uyga o'rnatish mumkinmi?", a: "Ha — simsiz qurilmalar devorni buzmasdan o'rnatiladi. Yangi ta'mirda simli yechimlar ishonchliroq bo'ladi." },
+          { q: "Hammasi bitta ilovada ishlaydimi?", a: "Ha, tizimni bitta ekotizimda yig'amiz — yoritish, pardalar, kamera va qulf bitta ilovadan boshqariladi." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Boshlang'ich to'plam — bir kun. To'liq loyiha — kvartira hajmiga qarab, smetada aniq ko'rsatiladi." },
+        ],
+      },
+      ru: {
+        title: "Сколько стоит умный дом: цены и с чего начать",
+        excerpt: "Цены на систему умного дома в Ташкенте: свет, шторы, климат, видеонаблюдение и умные замки в одном приложении. С чего дёшево начать и как расширять.",
+        sections: [
+          { h: "Из чего состоит умный дом", p: [
+            "Умный дом — это набор устройств, управляемых из одного приложения: свет и розетки, шторы, управление кондиционером, видеонаблюдение, умный замок и датчики (протечка, дым, движение).",
+            "Всё сразу не обязательно: система модульная. Большинство начинает со света и штор, потом добавляет камеры, замок и датчики — в одной экосистеме всё работает вместе.",
+          ] },
+          { h: "Цены: с чего начать недорого", p: [
+            "Стартовый набор — умные розетки, лампы и один датчик — собирается от нескольких сотен тысяч сум. Система для средней квартиры со светом, шторами и климатом выходит в несколько миллионов сум.",
+            "Полный проект — с видеонаблюдением, умным замком, голосовым управлением и сценариями — зависит от площади и числа устройств. Смета бесплатная: посмотрим комнаты и предложим поэтапный план.",
+          ] },
+          { h: "Безопасность: камеры, замок и датчики", p: [
+            "Самая полезная часть умного дома — безопасность: умный замок и камера на входе, датчики движения и дыма в доме, датчик протечки на кухне и в санузле. Всё шлёт уведомления на телефон.",
+            "При выходе из дома один сценарий всё выключает и ставит на охрану; по возвращении свет и кондиционер включаются сами. Работаем с Tuya, Hikvision и другими экосистемами.",
+          ] },
+          { h: "Как заказать", p: [
+            "Пришлите план квартиры или дома — скажем, что нужно в каждой комнате, и дадим смету в двух-трёх вариантах: стартовый, средний и полный. Монтаж зависит от ремонта: в новом — проводные решения, в готовом — беспроводные.",
+            "Оборудование со склада в Ташкенте, установка и настройка наши, приложение поставим и научим пользоваться. Гарантия официальная.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит система умного дома?", a: "Стартовый набор — от нескольких сотен тысяч сум. Для квартиры со светом, шторами и климатом — несколько миллионов. Точная цена по плану, смета бесплатная." },
+          { q: "С чего начать?", a: "С самого полезного: умный замок, камера и датчик протечки. Свет и шторы легко добавить позже." },
+          { q: "Можно ли поставить в квартиру с готовым ремонтом?", a: "Да — беспроводные устройства ставятся без штробления. В новом ремонте надёжнее проводные решения." },
+          { q: "Всё будет в одном приложении?", a: "Да, собираем систему в одной экосистеме — свет, шторы, камеры и замок управляются из одного приложения." },
+          { q: "Сколько занимает установка?", a: "Стартовый набор — один день. Полный проект — по объёму квартиры, срок указывается в смете." },
+        ],
+      },
+    },
+  },
+  {
+    slug: "avtomatik-darvoza-narxi",
+    date: "2026-08-26",
+    related: ["gates", "barrier", "anpr"],
+    loc: {
+      uz: {
+        title: "Avtomatik darvoza: privod narxi va o'rnatish",
+        excerpt: "Darvozani avtomatlashtirish qancha turadi: suriladigan va ochiladigan darvozalar uchun privodlar, pultlar, telefondan ochish. Mavjud darvozaga o'rnatish mumkinmi.",
+        sections: [
+          { h: "Qanday darvozalarni avtomatlashtirish mumkin", p: [
+            "Ikki asosiy tur: suriladigan (otkatnoy) va ochiladigan (raspashnoy) darvozalar. Har biriga o'z privodi bor: suriladigan darvozaga tishli reyka bilan bitta privod, ochiladiganga har tavaqaga bittadan.",
+            "Muhimi: avtomatikani mavjud darvozangizga o'rnatish mumkin — darvozani almashtirish shart emas. Muhandis og'irlik va o'lchamni ko'rib, mos quvvatdagi privodni tanlaydi.",
+          ] },
+          { h: "Privod narxi nimaga bog'liq", p: [
+            "Asosiy omil — darvoza og'irligi va ishlash intensivligi. Hovli uchun yengil privodlar bir necha million so'mdan boshlanadi; og'ir temir darvoza va tez-tez ochiladigan kirishlarga kuchliroq va qimmatroq privod kerak.",
+            "To'plamga privoddan tashqari pultlar, fotoelementlar (xavfsizlik), signal chiroq va o'rnatish kiradi. Telefondan ochish va SKUD bilan bog'lash — qo'shimcha imkoniyat.",
+          ] },
+          { h: "KPP va korxonalar uchun", p: [
+            "Korxona kirishida avtomatik darvoza shlagbaum va SKUD bilan birga ishlaydi: ruxsat etilgan transport ro'yxat bo'yicha kiradi, raqam aniqlash (ANPR) bilan qorovul tugma ham bosmaydi.",
+            "Intensiv kirishlarda sanoat darajasidagi privodlar qo'yiladi — ular kuniga yuzlab ochilishga mo'ljallangan va kafolat bilan xizmat qiladi.",
+          ] },
+          { h: "O'rnatish va buyurtma", p: [
+            "Standart o'rnatish 1 kun: privod montaji, fotoelementlar, pultlarni dasturlash va sozlash. Muhandisning chiqishi va smeta bepul — darvozani ko'rib, aniq narxni aytamiz.",
+            "Privodlar va avtomatika Toshkentdagi ombordan, rasmiy kafolat bilan. Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Darvozani avtomatlashtirish qancha turadi?", a: "Hovli darvozasi uchun privod to'plami o'rnatish bilan — bir necha million so'mdan. Aniq narx darvoza og'irligi va turiga bog'liq — smeta bepul." },
+          { q: "Mavjud darvozaga o'rnatish mumkinmi?", a: "Ha, ko'p hollarda darvozani almashtirish shart emas — privod mavjud darvozaga o'rnatiladi. Muhandis chiqib, mosligini tekshiradi." },
+          { q: "Telefondan ochish bo'ladimi?", a: "Ha: pultdan tashqari telefon ilovasi yoki qo'ng'iroq orqali ochishni sozlaymiz. SKUD va raqam aniqlash bilan ham bog'lash mumkin." },
+          { q: "Svet o'chsa darvoza ochiladimi?", a: "Privodlarda mexanik razblokirovka bor — kalit bilan ochib, darvozani qo'lda ochish mumkin. Zaxira quvvat (UPS) ham qo'yish mumkin." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Standart o'rnatish — 1 kun: montaj, fotoelementlar, sozlash va pultlarni dasturlash." },
+        ],
+      },
+      ru: {
+        title: "Автоматические ворота: цена привода и установка",
+        excerpt: "Сколько стоит автоматизация ворот: приводы для откатных и распашных ворот, пульты, открытие с телефона. Можно ли поставить автоматику на существующие ворота.",
+        sections: [
+          { h: "Какие ворота можно автоматизировать", p: [
+            "Два основных типа: откатные и распашные ворота. У каждого свой привод: откатным нужен один привод с зубчатой рейкой, распашным — по приводу на каждую створку.",
+            "Важно: автоматику можно поставить на ваши существующие ворота — менять их не нужно. Инженер оценивает вес и размеры и подбирает привод подходящей мощности.",
+          ] },
+          { h: "От чего зависит цена привода", p: [
+            "Главный фактор — вес ворот и интенсивность работы. Лёгкие приводы для двора начинаются от нескольких миллионов сум; тяжёлым железным воротам и часто открывающимся въездам нужен привод мощнее и дороже.",
+            "В комплект кроме привода входят пульты, фотоэлементы (безопасность), сигнальная лампа и установка. Открытие с телефона и связка со СКУД — дополнительная опция.",
+          ] },
+          { h: "Для КПП и предприятий", p: [
+            "На въезде предприятия автоматические ворота работают вместе со шлагбаумом и СКУД: разрешённый транспорт въезжает по списку, а с распознаванием номеров (ANPR) охранник даже не жмёт кнопку.",
+            "На интенсивных въездах ставятся приводы промышленного класса — они рассчитаны на сотни открытий в день и работают с гарантией.",
+          ] },
+          { h: "Установка и заказ", p: [
+            "Стандартная установка — 1 день: монтаж привода, фотоэлементы, программирование пультов и настройка. Выезд инженера и смета бесплатные — осмотрим ворота и назовём точную цену.",
+            "Приводы и автоматика со склада в Ташкенте, с официальной гарантией. С юрлицами работаем по договору с НДС.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит автоматизация ворот?", a: "Комплект привода для дворовых ворот с установкой — от нескольких миллионов сум. Точная цена зависит от веса и типа ворот — смета бесплатная." },
+          { q: "Можно ли поставить на существующие ворота?", a: "Да, в большинстве случаев менять ворота не нужно — привод ставится на существующие. Инженер выедет и проверит совместимость." },
+          { q: "Будет ли открытие с телефона?", a: "Да: кроме пульта настроим открытие из приложения или по звонку. Можно связать со СКУД и распознаванием номеров." },
+          { q: "Откроются ли ворота при отключении света?", a: "У приводов есть механическая разблокировка — ключом можно расцепить и открыть ворота вручную. Можно поставить и резервное питание (ИБП)." },
+          { q: "Сколько занимает установка?", a: "Стандартная установка — 1 день: монтаж, фотоэлементы, настройка и программирование пультов." },
+        ],
+      },
+    },
+  },
+
 ];
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));

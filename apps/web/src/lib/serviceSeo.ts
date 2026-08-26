@@ -233,8 +233,8 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda darvozalarni o'rnatish va avtomatlashtirish: suriladigan, ochiladigan, seksiyali darvozalar, privodlar va pultlar. Montaj va xizmat O'zbekiston bo'ylab.",
   },
   attendance: {
-    h1: "Toshkentda ish vaqtini hisobga olish",
-    title: "Ish vaqtini hisobga olish Toshkentda — SKUD tizimlari | SAT",
+    h1: "Davomat tizimi va ish vaqtini hisobga olish — Toshkent",
+    title: "Davomat tizimi Toshkentda — ish vaqtini hisobga olish | SAT",
     desc: "Toshkentda ish vaqtini hisobga olish tizimlari: biometriya va kartalar, avtomatik tabel, 1C ga yuklash. O'rnatish va sozlash butun O'zbekiston bo'ylab.",
   },
   network: {
