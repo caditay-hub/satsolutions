@@ -4799,6 +4799,105 @@ export const ARTICLES: Article[] = [
           { q: "Помогаете с документами?", a: "Да: проект, акты монтажа, схемы и журнал передаются полным пакетом. С юрлицами работаем с НДС по договору." },
         ],
       },
+      en: {
+        title: "Fire Safety for Business: Systems, Requirements and Prices",
+        excerpt: "What business fire safety consists of: alarm systems, voice evacuation, extinguishers. What inspectors check and what it all costs in Tashkent.",
+        sections: [
+          { h: "What a fire safety system consists of", p: [
+            "A complete system has four parts: a fire alarm (smoke and heat detectors, a control panel), a voice evacuation system, primary extinguishing means — extinguishers and fire cabinets — and marked, lit escape routes.",
+            "A small office often needs only an alarm and extinguishers. A shop, a warehouse, a workshop and any place where people gather also requires voice evacuation — one of the first things an inspection checks.",
+          ] },
+          { h: "What is required of a business", p: [
+            "Any commercial site must meet fire safety requirements: a working alarm, extinguishers within their service date, clear escape routes and a responsible employee. The inspector will also ask for documents: the system design, a maintenance contract, the extinguisher log.",
+            "The most common violations are expired extinguishers, dead detectors and escape exits blocked by storage. All of these carry fines up to suspension of operations.",
+          ] },
+          { h: "What a fire alarm costs", p: [
+            "The price depends on the number of rooms and the floor area: they determine the detectors, cable and panel type. A kit for a small office (3–5 rooms) with installation usually starts from a few million UZS; warehouses are quoted per site.",
+            "Our engineer's visit and the estimate are free: we survey the site, plan the detectors and give the exact price within a day. Rubezh, Bolid and Hikvision equipment from stock in Tashkent.",
+          ] },
+          { h: "Extinguishers: which and how much", p: [
+            "The standard choice for offices and shops is powder OP-4/OP-5 extinguishers; where there is a lot of electronics, CO2 units are added. Prices start from a few hundred thousand UZS depending on volume.",
+            "Extinguishers and fire safety equipment are in our catalogue — UZS prices, in stock in Tashkent. We will calculate how many you need and where to place them.",
+          ] },
+          { h: "How to order", p: [
+            "The process is simple: an engineer visits, measures the site, prepares the design and the estimate. Installation on a small site takes 1–3 days. After the work you receive the full document package, ready for inspection.",
+            "We work with legal entities under contract with VAT invoices. Equipment carries an official warranty, installation a company warranty.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does a fire alarm for an office cost?", a: "A kit for a small office with installation starts from a few million UZS. The exact price depends on the number of rooms — the engineer's visit and estimate are free." },
+          { q: "What should be ready for an inspection?", a: "A working alarm, in-date extinguishers, clear escape routes and documents: the design, a maintenance contract, the extinguisher log. One site visit identifies what is missing." },
+          { q: "How much does an extinguisher cost?", a: "Powder OP-4/OP-5 units start from a few hundred thousand UZS. They are in the catalogue; we advise on quantity by floor area." },
+          { q: "How long does installation take?", a: "A small office — 1–3 days. On warehouses and large sites the timeline follows the design and is stated in the estimate." },
+          { q: "Do you help with the paperwork?", a: "Yes: the design, installation acts, diagrams and the log are handed over as a full package. We work with legal entities with VAT under contract." },
+        ],
+      },
+      tr: {
+        title: "İşletmeler için Yangın Güvenliği: Sistemler, Şartlar ve Fiyatlar",
+        excerpt: "İşletme yangın güvenliği nelerden oluşur: alarm, sesli tahliye, yangın tüpleri. Denetimde neler sorulur ve Taşkent'te tüm bunlar ne kadar tutar.",
+        sections: [
+          { h: "Yangın güvenliği sistemi nelerden oluşur", p: [
+            "Tam bir sistem dört bölümden oluşur: yangın alarmı (duman ve ısı dedektörleri, kontrol paneli), sesli tahliye sistemi, birincil söndürme araçları — yangın tüpleri ve dolapları — ve işaretli, aydınlatılmış kaçış yolları.",
+            "Küçük bir ofise çoğu zaman alarm ve tüpler yeterlidir. Mağaza, depo, atölye ve insanların toplandığı her yerde sesli tahliye de gerekir — denetimde ilk bakılan şeylerden biri budur.",
+          ] },
+          { h: "İşletmelerden neler istenir", p: [
+            "Her ticari tesis yangın güvenliği şartlarını karşılamalıdır: çalışan alarm, süresi geçmemiş tüpler, açık kaçış yolları ve sorumlu personel. Denetçi belgeleri de sorar: sistem projesi, bakım sözleşmesi, tüp kayıt defteri.",
+            "En sık ihlaller: süresi geçmiş tüpler, çalışmayan dedektörler ve depoya dönüşmüş kaçış koridorları. Bunlar para cezasından faaliyet durdurmaya kadar gider.",
+          ] },
+          { h: "Yangın alarmı ne kadar tutar", p: [
+            "Fiyat oda sayısına ve alana bağlıdır: dedektör sayısı, kablo ve panel tipi buradan çıkar. Küçük ofis (3–5 oda) için montajlı set genellikle birkaç milyon UZS'den başlar; depolarda keşif sonrası fiyat verilir.",
+            "Mühendis keşfi ve fiyat teklifi ücretsizdir. Rubezh, Bolid ve Hikvision ekipmanları Taşkent'teki depodan.",
+          ] },
+          { h: "Yangın tüpleri: hangisi, ne kadar", p: [
+            "Ofis ve mağazalar için standart seçim toz tipi OP-4/OP-5 tüplerdir; elektroniğin yoğun olduğu yerlere CO2 tüpleri eklenir. Fiyatlar hacme göre birkaç yüz bin UZS'den başlar.",
+            "Tüpler ve yangın güvenliği ürünleri kataloğumuzda — UZS fiyatlı, Taşkent'te stokta. Alana göre kaç adet ve nereye konulacağını hesaplarız.",
+          ] },
+          { h: "Nasıl sipariş verilir", p: [
+            "Süreç basit: mühendis gelir, tesisi ölçer, proje ve teklifi hazırlar. Küçük tesiste montaj 1–3 gün sürer. İş bitince denetime hazır tam evrak paketi teslim edilir.",
+            "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi vardır.",
+          ] },
+        ],
+        faq: [
+          { q: "Ofis için yangın alarmı ne kadar?", a: "Küçük ofis için montajlı set birkaç milyon UZS'den başlar. Kesin fiyat oda sayısına bağlıdır — keşif ve teklif ücretsizdir." },
+          { q: "Denetime ne hazırlanmalı?", a: "Çalışan alarm, süresi geçmemiş tüpler, açık kaçış yolları ve belgeler: proje, bakım sözleşmesi, tüp defteri. Eksikleri tek keşifte belirleriz." },
+          { q: "Yangın tüpü ne kadar?", a: "Toz tipi OP-4/OP-5 — birkaç yüz bin UZS'den. Katalogda mevcut; alana göre adet öneririz." },
+          { q: "Montaj ne kadar sürer?", a: "Küçük ofis — 1–3 gün. Büyük tesislerde süre projeye bağlıdır ve teklifte belirtilir." },
+          { q: "Evraklarda yardım ediyor musunuz?", a: "Evet: proje, montaj tutanakları, şemalar ve defter tam paket halinde teslim edilir." },
+        ],
+      },
+      zh: {
+        title: "企业消防安全：系统、要求与价格",
+        excerpt: "企业消防安全包括什么：报警系统、语音疏散、灭火器。检查时会查什么，在塔什干这一切要花多少钱。",
+        sections: [
+          { h: "消防安全系统的组成", p: [
+            "完整系统由四部分组成：火灾报警（烟感和温感探测器、控制主机）、语音疏散系统、初级灭火器材（灭火器和消防柜）以及有标识和照明的疏散通道。",
+            "小型办公室通常只需报警系统和灭火器。商店、仓库、车间以及人员聚集场所还需要语音疏散系统——这是检查时首先要看的项目之一。",
+          ] },
+          { h: "对企业的要求", p: [
+            "任何商业场所都必须符合消防要求：报警系统正常工作、灭火器在有效期内、疏散通道畅通并有专责人员。检查人员还会查阅文件：系统设计、维保合同、灭火器台账。",
+            "最常见的违规是灭火器过期、探测器失效以及疏散出口被货物堵塞。这些都可能导致罚款甚至停业。",
+          ] },
+          { h: "火灾报警系统的价格", p: [
+            "价格取决于房间数量和面积：由此确定探测器数量、线缆和主机类型。小型办公室（3–5间）的整套系统含安装通常从几百万苏姆起；仓库按现场核算。",
+            "工程师上门和报价免费。Rubezh、Bolid 和 Hikvision 设备塔什干现货。",
+          ] },
+          { h: "灭火器：选哪种、多少钱", p: [
+            "办公室和商店的标准选择是 OP-4/OP-5 干粉灭火器；电子设备多的场所会加配二氧化碳灭火器。价格按容量从几十万苏姆起。",
+            "灭火器和消防器材在我们的目录中——苏姆计价，塔什干现货。我们会按面积计算所需数量和摆放位置。",
+          ] },
+          { h: "如何订购", p: [
+            "流程简单：工程师上门测量，出设计和报价。小型场所安装 1–3 天。完工后移交全套文件，可直接用于检查。",
+            "与法人单位按合同和增值税发票合作。设备享官方保修，安装享公司保修。",
+          ] },
+        ],
+        faq: [
+          { q: "办公室火灾报警系统多少钱？", a: "小型办公室整套含安装从几百万苏姆起。具体价格取决于房间数量——上门和报价免费。" },
+          { q: "检查前要准备什么？", a: "正常工作的报警系统、有效期内的灭火器、畅通的疏散通道及文件：设计、维保合同、灭火器台账。" },
+          { q: "灭火器多少钱？", a: "OP-4/OP-5 干粉灭火器从几十万苏姆起。目录有货，按面积建议数量。" },
+          { q: "安装需要多久？", a: "小型办公室 1–3 天。大型场所按设计定，报价中注明。" },
+          { q: "帮助办理文件吗？", a: "是：设计、安装记录、图纸和台账整套移交。与法人按增值税合同合作。" },
+        ],
+      },
     },
   },
   {
@@ -4870,6 +4969,105 @@ export const ARTICLES: Article[] = [
           { q: "Cat5e или Cat6 — что выбрать?", a: "Для обычного офиса достаточно Cat5e. Если гоняете большие файлы, видео и хотите запас на будущее — рекомендуем Cat6, разница в цене небольшая." },
           { q: "Wi-Fi тоже сделаете?", a: "Да, в проекте сети планируем точки Wi-Fi по покрытию — стабильный сигнал в каждом углу офиса." },
           { q: "Сколько времени занимает работа?", a: "Небольшой офис — 1–3 дня. На крупных объектах срок зависит от проекта и указывается в смете." },
+        ],
+      },
+      en: {
+        title: "Office Network Installation: Price and Stages",
+        excerpt: "What a structured cabling system (LAN) costs for an office: cable, sockets, switch and Wi-Fi. What drives the price and how the work proceeds.",
+        sections: [
+          { h: "What a local network consists of", p: [
+            "An office network is a structured cabling system: twisted-pair cable to every workplace, sockets, a patch panel and a server cabinet. A switch sits at the centre, a router distributes the internet, and Wi-Fi points cover wireless devices.",
+            "In a properly built network, printers, cameras, IP phones and computers work as one system. Adding CCTV or telephony later is easy — the cable is already in place.",
+          ] },
+          { h: "What drives the price", p: [
+            "Three main factors: the number of workplaces, cable run lengths and the state of the premises. A new build is easy to cable; a finished office needs conduit, trunking and careful work, which takes longer.",
+            "Cable category matters too: Cat5e is enough for most offices, Cat6 is faster with headroom. The server cabinet, switch class and Wi-Fi coverage also go into the estimate.",
+          ] },
+          { h: "Average prices", p: [
+            "In practice the count is per workplace: one complete point — cable, socket, termination and testing — averages a few hundred thousand UZS. A 10–15 seat office network with switch and cabinet usually comes to a few million UZS by estimate.",
+            "The engineer's visit and estimate are free. Cable, sockets and switches from stock in Tashkent.",
+          ] },
+          { h: "When fibre is needed", p: [
+            "Between buildings, along long corridors and beyond 90 metres copper does not work — optical fibre is used. Fibre resists lightning, is fast and indifferent to distance.",
+            "We lay and splice fibre, measure it with an OTDR and hand it over with a passport. The office LAN and inter-building fibre go in one project.",
+          ] },
+          { h: "Work stages", p: [
+            "First the design: workplaces, routes and the cabinet location on the plan. Then installation: cabling, sockets, patch panel and switch. Finally every line is tested and handed over with diagrams.",
+            "A small office is usually ready in 1–3 days. We work with legal entities under VAT contracts and warranty the work.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does one workplace cost?", a: "Cable, socket, termination and test — a few hundred thousand UZS on average. The exact price depends on run lengths — the estimate is free." },
+          { q: "What does a 10-person office network cost?", a: "With cable, sockets, switch and cabinet — usually a few million UZS. An engineer visits and produces the exact estimate within a day." },
+          { q: "Cat5e or Cat6?", a: "Cat5e is enough for a regular office. For heavy files, video and future headroom we recommend Cat6 — the price difference is small." },
+          { q: "Will you add Wi-Fi too?", a: "Yes, we plan Wi-Fi points for coverage within the network design — stable signal in every corner." },
+          { q: "How long does the work take?", a: "A small office — 1–3 days. Larger sites follow the design; the timeline is stated in the estimate." },
+        ],
+      },
+      tr: {
+        title: "Ofiste Yerel Ağ Kurulumu: Fiyat ve Aşamalar",
+        excerpt: "Ofiste bilgisayar ağı (SKS) ne kadar tutar: kablo, prizler, switch ve Wi-Fi. Fiyatı ne belirler, iş hangi aşamalarla ilerler.",
+        sections: [
+          { h: "Yerel ağ nelerden oluşur", p: [
+            "Ofis ağı yapısal kablolama sistemidir: her çalışma noktasına çift bükümlü kablo, prizler, patch panel ve sunucu kabini. Merkezde switch, interneti router dağıtır, kablosuz cihazlar için Wi-Fi noktaları eklenir.",
+            "Doğru kurulmuş ağda yazıcı, kameralar, IP telefonlar ve bilgisayarlar tek sistemde çalışır. Sonradan kamera veya telefon eklemek kolaydır — kablo zaten çekilmiştir.",
+          ] },
+          { h: "Fiyatı ne belirler", p: [
+            "Üç ana etken: çalışma noktası sayısı, kablo güzergâh uzunluğu ve mekânın durumu. Yeni binada kablo çekmek kolaydır; bitmiş ofiste kanal ve dikkatli işçilik gerekir, bu süreyi uzatır.",
+            "Kablo kategorisi de önemlidir: çoğu ofise Cat5e yeter, Cat6 daha hızlı ve geleceğe dönüktür. Kabin, switch sınıfı ve Wi-Fi kapsaması da teklife girer.",
+          ] },
+          { h: "Ortalama fiyatlar", p: [
+            "Pratikte hesap nokta başınadır: kablo, priz, sonlandırma ve test dahil tam bir nokta ortalama birkaç yüz bin UZS. Switch ve kabinli 10–15 kişilik ofis ağı genellikle birkaç milyon UZS tutar.",
+            "Keşif ve teklif ücretsizdir. Kablo, priz ve switchler Taşkent'te stoktan.",
+          ] },
+          { h: "Fiber ne zaman gerekir", p: [
+            "Binalar arasında, uzun koridorlarda ve 90 metreyi aşan mesafelerde bakır çalışmaz — fiber optik kullanılır. Fiber yıldırımdan etkilenmez, hızlıdır ve mesafeye duyarsızdır.",
+            "Fiberi döşer, ekleriz, OTDR ile ölçer ve pasaportuyla teslim ederiz. Ofis içi ağ ve binalar arası fiber tek projede.",
+          ] },
+          { h: "İş aşamaları", p: [
+            "Önce proje: planda çalışma noktaları, güzergâhlar ve kabin yeri. Sonra montaj: kablolama, prizler, patch panel ve switch bağlantısı. Sonda her hat test edilir, şemalarla teslim edilir.",
+            "Küçük ofis genelde 1–3 günde hazır olur. Tüzel kişilerle KDV'li sözleşmeyle çalışır, işe garanti veririz.",
+          ] },
+        ],
+        faq: [
+          { q: "Bir çalışma noktası ne kadar?", a: "Kablo, priz, bağlantı ve test — ortalama birkaç yüz bin UZS. Kesin fiyat güzergâh uzunluğuna bağlıdır — teklif ücretsizdir." },
+          { q: "10 kişilik ofis ağı ne kadar?", a: "Kablo, prizler, switch ve kabinle — genellikle birkaç milyon UZS. Mühendis keşfe gelir, bir günde kesin teklifi çıkarır." },
+          { q: "Cat5e mi Cat6 mı?", a: "Normal ofise Cat5e yeter. Büyük dosya, video ve gelecek payı için Cat6 öneririz — fiyat farkı azdır." },
+          { q: "Wi-Fi de yapıyor musunuz?", a: "Evet, ağ projesinde Wi-Fi noktalarını kapsamaya göre planlarız — her köşede stabil sinyal." },
+          { q: "İş ne kadar sürer?", a: "Küçük ofis — 1–3 gün. Büyük tesislerde süre projeye bağlıdır, teklifte belirtilir." },
+        ],
+      },
+      zh: {
+        title: "办公室局域网布线：价格与流程",
+        excerpt: "办公室综合布线（局域网）要花多少钱：线缆、插座、交换机和 Wi-Fi。价格由什么决定，施工分哪些阶段。",
+        sections: [
+          { h: "局域网的组成", p: [
+            "办公网络是一套综合布线系统：每个工位的双绞线、插座、配线架和机柜。核心是交换机，路由器分配互联网，无线设备由 Wi-Fi 热点覆盖。",
+            "正确搭建的网络中，打印机、摄像机、IP 电话和电脑在同一系统内工作。以后加装监控或电话也容易——线已到位。",
+          ] },
+          { h: "价格由什么决定", p: [
+            "三个主要因素：工位数量、线缆路由长度和场地状况。新建场所布线简单便宜；装修完的办公室需要线槽和精细施工，耗时更多。",
+            "线缆类别也有影响：Cat5e 满足多数办公室，Cat6 更快且有余量。机柜、交换机级别和 Wi-Fi 覆盖也计入报价。",
+          ] },
+          { h: "平均价格", p: [
+            "实际按工位计价：一个完整点位——线缆、插座、端接和测试——平均几十万苏姆。10–15 工位的办公网络含交换机和机柜通常几百万苏姆。",
+            "工程师上门和报价免费。线缆、插座和交换机塔什干现货。",
+          ] },
+          { h: "何时需要光纤", p: [
+            "楼宇之间、长走廊和超过 90 米的距离铜缆无法工作——需要光纤。光纤防雷、速度快、不受距离影响。",
+            "我们敷设并熔接光纤，用 OTDR 测量并附检测报告交付。室内网络和楼宇间光纤在同一项目内完成。",
+          ] },
+          { h: "施工阶段", p: [
+            "先设计：在图纸上标注工位、路由和机柜位置。然后施工：布线、插座、配线架和交换机。最后逐条链路测试并附图纸交付。",
+            "小型办公室通常 1–3 天完工。与法人单位按增值税合同合作，施工享保修。",
+          ] },
+        ],
+        faq: [
+          { q: "一个工位多少钱？", a: "线缆、插座、端接和测试——平均几十万苏姆。具体取决于路由长度——报价免费。" },
+          { q: "10 人办公室的网络多少钱？", a: "含线缆、插座、交换机和机柜——通常几百万苏姆。工程师上门一天内出准确报价。" },
+          { q: "选 Cat5e 还是 Cat6？", a: "普通办公室 Cat5e 足够。传大文件、视频或留余量建议 Cat6，差价不大。" },
+          { q: "也做 Wi-Fi 吗？", a: "是，网络设计中按覆盖规划 Wi-Fi 热点——每个角落信号稳定。" },
+          { q: "施工需要多久？", a: "小型办公室 1–3 天。大型场所按设计定，报价中注明。" },
         ],
       },
     },
@@ -4945,6 +5143,105 @@ export const ARTICLES: Article[] = [
           { q: "Сколько занимает установка?", a: "Один замок обычно ставится за несколько часов. Полная система со СКУД — 1–2 дня." },
         ],
       },
+      en: {
+        title: "Door Lock Prices: Electronic, Coded and Smart",
+        excerpt: "What door locks cost in Tashkent: electromagnetic, electromechanical, coded and smart. What to choose for a flat, an office and a gate.",
+        sections: [
+          { h: "Lock types and price ranges", p: [
+            "Electronic locks come in four main types. Electromagnetic — the most affordable, for office and entrance doors: from a few hundred thousand UZS. Electromechanical — for gates and outdoor doors, stays locked in a blackout. Coded opens from a keypad, smart — by phone, fingerprint or card.",
+            "Smart locks run roughly 1–3 million UZS depending on features: fingerprint, app, temporary codes. A full system with biometric access-control readers costs more.",
+          ] },
+          { h: "For a flat: a smart lock", p: [
+            "Flats usually get a smart lock: forgotten keys stop being a problem — you open by phone or fingerprint. Guests get temporary codes, and every opening sends a notification.",
+            "Door type matters: not every lock fits every door. Our engineer inspects the door and recommends a matching model — the visit is free.",
+          ] },
+          { h: "For an office: lock + access control", p: [
+            "In an office a lock connects to access control: staff enter by card or fingerprint, the log records who came and when. An employee leaves — access is revoked in one click.",
+            "Paired with an intercom the lock opens from the monitor or the app. Where a fire alarm exists, escape doors must release on alarm — we always configure this.",
+          ] },
+          { h: "What installation costs", p: [
+            "Installation depends on the door and lock type: an electromagnetic lock with an exit button is the simplest job; a smart lock or biometrics with setup costs a bit more. On average installation starts from a few hundred thousand UZS.",
+            "The engineer's visit and estimate are free. Locks, readers and access equipment from stock in Tashkent with official warranty.",
+          ] },
+          { h: "Where to buy and how to order", p: [
+            "Our catalogue holds electromagnetic and smart locks, readers and accessories with UZS prices. Describe the task — a flat, an office or a gate — and we will match options and quote the exact installed price.",
+            "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is the cheapest electronic lock?", a: "An electromagnetic lock with an exit button — from a few hundred thousand UZS. The installed price depends on the door — the estimate is free." },
+          { q: "How much is a smart lock?", a: "Roughly 1–3 million UZS depending on features: fingerprint, app, temporary codes. We recommend a model for your door." },
+          { q: "Will the lock open in a power cut?", a: "An electromagnetic one opens, an electromechanical one stays locked. Doors that must stay locked get electromechanics or a UPS." },
+          { q: "Can it be opened from a phone?", a: "Yes — smart locks open from an app, and locks tied to access control or an intercom open from their apps, remotely too." },
+          { q: "How long does installation take?", a: "One lock — a few hours. A full system with access control — 1–2 days." },
+        ],
+      },
+      tr: {
+        title: "Kapı Kilidi Fiyatları: Elektronik, Şifreli ve Akıllı",
+        excerpt: "Taşkent'te kapı kilitleri ne kadar: elektromanyetik, elektromekanik, şifreli ve akıllı. Daire, ofis ve bahçe kapısı için hangisi seçilmeli.",
+        sections: [
+          { h: "Kilit tipleri ve fiyat aralıkları", p: [
+            "Elektronik kilitler dört ana tiptedir. Elektromanyetik — en uygunu, ofis ve bina girişleri için: birkaç yüz bin UZS'den. Elektromekanik — bahçe kapıları ve dış kapılar için, elektrik kesilse de kilitli kalır. Şifreli tuş takımıyla, akıllı kilit telefon, parmak izi veya kartla açılır.",
+            "Akıllı kilitler özelliklere göre yaklaşık 1–3 milyon UZS'dir. Biyometrik okuyuculu tam sistem daha pahalıdır.",
+          ] },
+          { h: "Daire için: akıllı kilit", p: [
+            "Daireye çoğunlukla akıllı kilit takılır: unutulan anahtar sorunu biter — telefonla veya parmak iziyle açarsınız. Misafire geçici şifre verilir, her açılışta bildirim gelir.",
+            "Kapı tipi önemlidir: her kilit her kapıya uymaz. Mühendisimiz kapıyı inceleyip uygun modeli önerir — keşif ücretsizdir.",
+          ] },
+          { h: "Ofis için: kilit + geçiş kontrolü", p: [
+            "Ofiste kilit geçiş kontrolüne bağlanır: personel kart veya parmak iziyle girer, günlük kim ne zaman geldi kaydeder. Çalışan ayrılınca erişim tek tıkla iptal edilir.",
+            "İnterkomla birlikte kilit monitörden veya uygulamadan açılır. Yangın alarmı olan yerlerde kaçış kapıları alarmda açılmak zorundadır — bunu her zaman ayarlarız.",
+          ] },
+          { h: "Montaj ne kadar", p: [
+            "Montaj kapıya ve kilit tipine bağlıdır: çıkış butonlu elektromanyetik en basit iştir; akıllı kilit veya biyometri kurulumuyla biraz daha pahalıdır. Ortalama montaj birkaç yüz bin UZS'den başlar.",
+            "Keşif ve teklif ücretsizdir. Kilitler ve okuyucular Taşkent'te stoktan, resmi garantili.",
+          ] },
+          { h: "Nereden alınır, nasıl sipariş verilir", p: [
+            "Kataloğumuzda elektromanyetik ve akıllı kilitler, okuyucular ve aksesuarlar UZS fiyatlarıyla mevcut. İhtiyacı anlatın — daire, ofis veya bahçe kapısı — uygun seçenekleri bulup montajlı kesin fiyatı hesaplayalım.",
+            "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
+          ] },
+        ],
+        faq: [
+          { q: "En ucuz elektronik kilit ne kadar?", a: "Çıkış butonlu elektromanyetik kilit — birkaç yüz bin UZS'den. Montajlı fiyat kapıya bağlıdır — teklif ücretsizdir." },
+          { q: "Akıllı kilit ne kadar?", a: "Özelliklere göre yaklaşık 1–3 milyon UZS: parmak izi, uygulama, geçici şifreler. Kapınıza uygun modeli öneririz." },
+          { q: "Elektrik kesilince kilit açılır mı?", a: "Elektromanyetik açılır, elektromekanik kilitli kalır. Hep kilitli kalması gereken kapılara elektromekanik veya UPS konur." },
+          { q: "Telefondan açılabilir mi?", a: "Evet — akıllı kilitler uygulamadan; geçiş kontrolüne veya interkoma bağlı kilitler onların uygulamalarından, uzaktan da açılır." },
+          { q: "Montaj ne kadar sürer?", a: "Tek kilit — birkaç saat. Geçiş kontrollü tam sistem — 1–2 gün." },
+        ],
+      },
+      zh: {
+        title: "门锁价格：电子锁、密码锁与智能锁",
+        excerpt: "塔什干门锁价格：电磁锁、电机锁、密码锁和智能锁。公寓、办公室和院门该怎么选。",
+        sections: [
+          { h: "门锁类型与价格区间", p: [
+            "电子锁有四种主要类型。电磁锁最实惠，适合办公室和楼道门：几十万苏姆起。电机锁适合院门和室外门，断电时保持锁闭。密码锁用键盘开启，智能锁用手机、指纹或卡片。",
+            "智能锁按功能约 100–300 万苏姆：指纹、App、临时密码。带生物识别读头的整套门禁系统价格更高。",
+          ] },
+          { h: "公寓：智能锁", p: [
+            "公寓通常装智能锁：忘带钥匙不再是问题——手机或指纹开门。可给客人发临时密码，每次开门都有通知。",
+            "门的类型很重要：不是每把锁都适合每扇门。工程师上门查看并推荐匹配型号——上门免费。",
+          ] },
+          { h: "办公室：门锁 + 门禁", p: [
+            "办公室的锁接入门禁系统：员工刷卡或指纹进入，日志记录出入。员工离职——一键撤销权限。",
+            "与可视对讲配合，锁可从室内机或 App 开启。有火灾报警的场所，疏散门必须在报警时自动释放——我们始终会配置。",
+          ] },
+          { h: "安装费用", p: [
+            "安装取决于门和锁的类型：带出门按钮的电磁锁最简单；智能锁或生物识别含调试略贵。安装平均几十万苏姆起。",
+            "工程师上门和报价免费。锁具、读头和门禁设备塔什干现货，官方保修。",
+          ] },
+          { h: "在哪买、怎么订", p: [
+            "目录中有电磁锁、智能锁、读头和配件，苏姆计价。说明需求——公寓、办公室或院门——我们匹配方案并给出含安装的准确价格。",
+            "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
+          ] },
+        ],
+        faq: [
+          { q: "最便宜的电子锁多少钱？", a: "带出门按钮的电磁锁——几十万苏姆起。含安装价格取决于门——报价免费。" },
+          { q: "智能锁多少钱？", a: "按功能约 100–300 万苏姆：指纹、App、临时密码。按您的门推荐型号。" },
+          { q: "断电时锁会打开吗？", a: "电磁锁会打开，电机锁保持锁闭。须常闭的门装电机锁或配 UPS。" },
+          { q: "能用手机开锁吗？", a: "能——智能锁用 App 开启；接入门禁或对讲的锁可远程开启。" },
+          { q: "安装要多久？", a: "单把锁几小时。含门禁的整套系统 1–2 天。" },
+        ],
+      },
     },
   },
 
@@ -5009,6 +5306,93 @@ export const ARTICLES: Article[] = [
           { q: "Сколько занимает установка?", a: "Стандартная установка — 1 день: фундамент, монтаж привода, настройка. На сложных объектах срок указывается в смете." },
           { q: "Что делать, если потерялся пульт?", a: "Запрограммируем новый, потерянный удалим из системы. Можно настроить открытие с телефона — пульт вообще не понадобится." },
           { q: "Есть ли гарантия?", a: "Да: на оборудование — официальная гарантия, на монтаж — гарантия компании. Сервис и запчасти в Ташкенте." },
+        ],
+      },
+      en: {
+        title: "Barrier Gate Price in Tashkent: Supply and Installation",
+        excerpt: "Automatic barrier prices in Tashkent: boom length, remotes and plate recognition (ANPR). What installation costs and what to choose for a yard, a car park and a checkpoint.",
+        sections: [
+          { h: "What drives the barrier price", p: [
+            "Main factors: boom length (3 to 6 metres), duty cycle (a yard or a busy car park) and the brand. A basic automatic barrier for a yard with installation starts from a few million UZS; an intensive checkpoint needs a heavier drive and costs more.",
+            "The control method matters too: a remote is standard, card readers or phone opening cost extra, and plate recognition (ANPR) is the most convenient but pricier due to the camera and software.",
+          ] },
+          { h: "Yard, car park or checkpoint", p: [
+            "For a residential yard the typical setup is a 4–6 m boom, remotes and phone opening. A car park suits a ticket or plate-recognition system with automatic entry and accounting. At a company checkpoint the barrier ties into access control — only authorised vehicles enter.",
+            "With ANPR regular cars enter by whitelist — the guard presses nothing, guests enter on request. It is the most demanded configuration for yards and office centres.",
+          ] },
+          { h: "What installation costs", p: [
+            "The installation price covers the foundation, power feed, drive setup and safety sensors. A standard install takes about a day. The engineer's visit and estimate are free — we size the boom and the drive correctly on site.",
+            "The right way to save is a correct design from the start: an undersized drive on a busy entrance fails quickly and costs more.",
+          ] },
+          { h: "Where to buy", p: [
+            "Barriers, drives, remotes and ANPR cameras are in the catalogue — UZS prices, in stock in Tashkent. Describe the entrance and we will quote the exact installed price within a day.",
+            "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is the cheapest barrier?", a: "A basic automatic barrier for a yard with installation — from a few million UZS. The exact price depends on boom length and duty — the estimate is free." },
+          { q: "What does ANPR add?", a: "A camera and setup on top of the barrier price. Regular cars enter automatically by whitelist — the most convenient option for yards and offices." },
+          { q: "How long does installation take?", a: "A standard install — 1 day: foundation, drive, setup. Complex sites are stated in the estimate." },
+          { q: "What if a remote is lost?", a: "We program a new one and delete the lost one from the system. Phone opening can be set up so remotes are not needed at all." },
+          { q: "Is there a warranty?", a: "Yes: official warranty on equipment and company warranty on installation. Service and parts in Tashkent." },
+        ],
+      },
+      tr: {
+        title: "Taşkent'te Bariyer Fiyatları: Ürün ve Montaj",
+        excerpt: "Taşkent'te otomatik bariyer fiyatları: kol uzunluğu, kumandalar ve plaka tanıma (ANPR). Montaj ne kadar, avlu, otopark ve giriş için hangisi seçilmeli.",
+        sections: [
+          { h: "Bariyer fiyatını ne belirler", p: [
+            "Ana etkenler: kol uzunluğu (3–6 metre), kullanım yoğunluğu (avlu mu, yoğun otopark mı) ve marka. Avlu için temel otomatik bariyer montajla birkaç milyon UZS'den başlar; yoğun girişe daha güçlü ve pahalı motor gerekir.",
+            "Kontrol yöntemi de fiyata yansır: kumanda standarttır, kart okuyucu veya telefonla açma ek ücretlidir; plaka tanıma (ANPR) en konforlusudur ama kamera ve yazılım nedeniyle daha pahalıdır.",
+          ] },
+          { h: "Avlu, otopark ve giriş için seçim", p: [
+            "Site avlusu için tipik çözüm: 4–6 m kol, kumandalar ve telefonla açma. Otoparka biletli veya plaka tanımalı sistem uygundur. İşletme girişinde bariyer geçiş kontrolüne bağlanır — yalnızca izinli araçlar girer.",
+            "ANPR ile kayıtlı araçlar listeden otomatik girer, misafirler talep üzerine. Avlular ve ofis merkezlerinde en çok istenen konfigürasyon budur.",
+          ] },
+          { h: "Montaj ne kadar", p: [
+            "Montaj fiyatına temel, güç hattı, motor ayarı ve güvenlik sensörleri girer. Standart montaj yaklaşık bir gün sürer. Keşif ve teklif ücretsizdir — kol boyunu ve motor gücünü yerinde doğru seçeriz.",
+            "Doğru tasarruf baştan doğru projedir: yoğun girişte zayıf motor çabuk bozulur ve pahalıya patlar.",
+          ] },
+          { h: "Nereden alınır", p: [
+            "Bariyerler, motorlar, kumandalar ve ANPR kameraları katalogda — UZS fiyatlı, Taşkent'te stokta. Girişi anlatın, montajlı kesin fiyatı bir günde hesaplayalım.",
+            "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
+          ] },
+        ],
+        faq: [
+          { q: "En ucuz bariyer ne kadar?", a: "Avlu için temel otomatik bariyer montajla — birkaç milyon UZS'den. Kesin fiyat kol boyuna ve yoğunluğa bağlıdır — teklif ücretsizdir." },
+          { q: "Plaka tanıma ne ekler?", a: "Bariyer fiyatına ANPR kamerası ve kurulum eklenir. Kayıtlı araçlar listeden otomatik girer — avlular için en pratik çözüm." },
+          { q: "Montaj ne kadar sürer?", a: "Standart montaj — 1 gün: temel, motor, ayar. Karmaşık tesislerde süre teklifte belirtilir." },
+          { q: "Kumanda kaybolursa?", a: "Yenisini programlar, kaybolanı sistemden sileriz. Telefonla açma da ayarlanabilir — kumandaya hiç gerek kalmaz." },
+          { q: "Garanti var mı?", a: "Evet: ekipmanda resmi, montajda şirket garantisi. Servis ve yedek parça Taşkent'te." },
+        ],
+      },
+      zh: {
+        title: "塔什干道闸价格：设备与安装",
+        excerpt: "塔什干自动道闸价格：闸杆长度、遥控器和车牌识别（ANPR）。安装多少钱，院区、停车场和门岗该怎么选。",
+        sections: [
+          { h: "道闸价格由什么决定", p: [
+            "主要因素：闸杆长度（3–6 米）、使用强度（院区还是繁忙停车场）和品牌。院区基础自动道闸含安装从几百万苏姆起；高频门岗需要更强的电机，价格更高。",
+            "控制方式也影响价格：遥控器是标配，刷卡或手机开闸加价，车牌识别（ANPR）最方便，但因摄像机和软件而更贵。",
+          ] },
+          { h: "院区、停车场和门岗怎么选", p: [
+            "住宅院区的典型方案：4–6 米闸杆、遥控器和手机开闸。停车场适合取票或车牌识别系统，自动进出并记账。企业门岗的道闸接入门禁——只放行授权车辆。",
+            "有 ANPR 时常驻车辆按白名单自动进入——保安无需按键，访客按请求放行。这是院区和写字楼最受欢迎的配置。",
+          ] },
+          { h: "安装费用", p: [
+            "安装价格包含基础、供电、电机调试和安全传感器。标准安装约一天。工程师上门和报价免费——现场正确选定杆长和电机功率。",
+            "省钱的正确方式是一开始就做对设计：繁忙入口配弱电机很快损坏，反而更贵。",
+          ] },
+          { h: "在哪购买", p: [
+            "道闸、电机、遥控器和 ANPR 摄像机都在目录中——苏姆计价，塔什干现货。说明入口情况，一天内给出含安装的准确报价。",
+            "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
+          ] },
+        ],
+        faq: [
+          { q: "最便宜的道闸多少钱？", a: "院区基础自动道闸含安装——几百万苏姆起。具体取决于杆长和使用强度——报价免费。" },
+          { q: "加车牌识别贵多少？", a: "在道闸价格上加 ANPR 摄像机和调试。常驻车辆按白名单自动进入——院区最实用的方案。" },
+          { q: "安装要多久？", a: "标准安装 1 天：基础、电机、调试。复杂场所在报价中注明。" },
+          { q: "遥控器丢了怎么办？", a: "编程新遥控器并从系统删除丢失的。也可设置手机开闸——完全不需要遥控器。" },
+          { q: "有保修吗？", a: "有：设备官方保修，安装公司保修。塔什干本地服务和配件。" },
         ],
       },
     },
@@ -5085,6 +5469,105 @@ export const ARTICLES: Article[] = [
           { q: "Сколько занимает установка?", a: "Один терминал — несколько часов. Полная система с турникетами — 1–2 дня." },
         ],
       },
+      en: {
+        title: "Attendance System: Prices for Schools, Offices and Factories",
+        excerpt: "What a biometric attendance system costs: Face ID terminals, cards, automatic timesheets and 1C export. Solutions for schools, offices and manufacturing.",
+        sections: [
+          { h: "How an attendance system works", p: [
+            "A terminal goes at the entrance: an employee or pupil checks in by face (Face ID), fingerprint or card. The system logs arrival and departure times automatically, flags lateness and builds the timesheet itself.",
+            "The difference from a paper log is fundamental: nobody can check in for someone else — a face or a fingerprint cannot be handed over — and the report exports in one click.",
+          ] },
+          { h: "For schools and learning centres", p: [
+            "In schools attendance ties into parent notifications: the child enters the school — a message arrives on the parent's phone. Many private schools install the system for this feature alone.",
+            "Learning centres track attendance by group and can link it to payments: attended lessons are counted automatically.",
+          ] },
+          { h: "For offices and manufacturing", p: [
+            "In an office attendance merges with time tracking: lateness, overtime, timesheet export to 1C. Paired with a turnstile it also covers access control.",
+            "Factories need shift schedules, night shifts and hundreds of staff — ZKTeco and Hikvision terminals pass several people per second.",
+          ] },
+          { h: "What it costs", p: [
+            "A system with one Face ID terminal and setup starts from a few million UZS for a small office. For a school or a factory the price follows the number of entrances and people; turnstiles increase the estimate.",
+            "The engineer's visit and estimate are free. Terminals from stock in Tashkent; installation usually takes a day; 1C integration is configured separately.",
+          ] },
+          { h: "How to order", p: [
+            "Describe the task: how many people, how many entrances, where the timesheet goes. We match terminals and quote the exact installed price within a day.",
+            "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does an attendance system cost?", a: "With one Face ID terminal and setup — from a few million UZS. The exact price depends on entrances and headcount — the estimate is free." },
+          { q: "Are there parent notifications for schools?", a: "Yes: when the child checks in, the parent gets a notification. It is the most requested feature among schools." },
+          { q: "Do you integrate with 1C?", a: "Yes, the timesheet exports to 1C automatically — ready data goes straight into payroll." },
+          { q: "Can someone check in for a colleague?", a: "Not with a face or a fingerprint: biometrics rejects another person. That is why we recommend biometric terminals over cards." },
+          { q: "How long does installation take?", a: "One terminal — a few hours. A full system with turnstiles — 1–2 days." },
+        ],
+      },
+      tr: {
+        title: "Yoklama Sistemi: Okul, Ofis ve Fabrika İçin Fiyatlar",
+        excerpt: "Biyometrik yoklama sistemi ne kadar: Face ID terminaller, kartlar, otomatik puantaj ve 1C aktarımı. Okul, ofis ve üretim için çözümler.",
+        sections: [
+          { h: "Yoklama sistemi nasıl çalışır", p: [
+            "Girişe terminal konur: çalışan veya öğrenci yüz (Face ID), parmak izi veya kartla kaydolur. Sistem geliş-gidiş saatlerini otomatik yazar, gecikmeleri gösterir, puantajı kendisi oluşturur.",
+            "Kağıt defterden farkı temeldir: kimse başkası adına kaydolamaz — yüz ve parmak izi devredilemez — rapor tek tuşla alınır.",
+          ] },
+          { h: "Okullar ve kurslar için", p: [
+            "Okullarda yoklama veli bildirimlerine bağlanır: çocuk okula girdi — velinin telefonuna mesaj gider. Birçok özel okul sistemi sırf bu özellik için kurar.",
+            "Kurslarda yoklama grup bazında tutulur ve ödemeyle ilişkilendirilebilir: katılınan dersler otomatik sayılır.",
+          ] },
+          { h: "Ofis ve üretim için", p: [
+            "Ofiste yoklama mesai takibiyle birleşir: gecikmeler, fazla mesai, puantajın 1C'ye aktarımı. Turnikeyle birlikte geçiş kontrolü de çözülür.",
+            "Fabrikada vardiya düzeni, gece vardiyaları ve yüzlerce çalışan önemlidir — ZKTeco ve Hikvision terminalleri saniyede birkaç kişiyi geçirir.",
+          ] },
+          { h: "Ne kadar tutar", p: [
+            "Küçük ofis için tek Face ID terminalli sistem kurulumla birkaç milyon UZS'den başlar. Okul veya fabrikada fiyat giriş ve kişi sayısına bağlıdır; turnikeler teklifi büyütür.",
+            "Keşif ve teklif ücretsizdir. Terminaller Taşkent'te stokta; kurulum genelde bir gün; 1C entegrasyonu ayrıca yapılır.",
+          ] },
+          { h: "Nasıl sipariş verilir", p: [
+            "İhtiyacı anlatın: kaç kişi, kaç giriş, puantaj nereye aktarılacak. Uygun terminalleri seçip montajlı kesin fiyatı bir günde çıkaralım.",
+            "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
+          ] },
+        ],
+        faq: [
+          { q: "Yoklama sistemi ne kadar?", a: "Tek Face ID terminal ve kurulumla — birkaç milyon UZS'den. Kesin fiyat giriş ve kişi sayısına bağlıdır — teklif ücretsizdir." },
+          { q: "Okullar için veli bildirimi var mı?", a: "Evet: çocuk kaydolunca veliye bildirim gider. Okulların en çok istediği özellik budur." },
+          { q: "1C entegrasyonu yapıyor musunuz?", a: "Evet, puantaj 1C'ye otomatik aktarılır — hazır veri doğrudan maaş hesabına gider." },
+          { q: "Başkası adına kaydolunabilir mi?", a: "Yüz ve parmak iziyle hayır: biyometri başkasını kabul etmez. Bu yüzden kart yerine biyometrik terminal öneririz." },
+          { q: "Kurulum ne kadar sürer?", a: "Tek terminal — birkaç saat. Turnikeli tam sistem — 1–2 gün." },
+        ],
+      },
+      zh: {
+        title: "考勤系统：学校、办公室和工厂的价格",
+        excerpt: "生物识别考勤系统多少钱：Face ID 终端、刷卡、自动考勤表和 1C 导出。适用于学校、办公室和制造业的方案。",
+        sections: [
+          { h: "考勤系统如何工作", p: [
+            "入口安装终端：员工或学生刷脸（Face ID）、指纹或卡片签到。系统自动记录到离时间，标记迟到，自动生成考勤表。",
+            "与纸质登记的区别是本质性的：没人能替别人签到——脸和指纹无法转交——报表一键导出。",
+          ] },
+          { h: "学校与培训中心", p: [
+            "学校的考勤可接家长通知：孩子进校——家长手机收到消息。许多私立学校正是为这一功能安装系统。",
+            "培训中心按班级记录出勤，并可与缴费关联：已上课时自动统计。",
+          ] },
+          { h: "办公室与工厂", p: [
+            "办公室的考勤与工时统计合并：迟到、加班、考勤表导出到 1C。配合闸机还能解决门禁。",
+            "工厂需要排班、夜班和数百名员工——ZKTeco 和 Hikvision 终端每秒可通行数人。",
+          ] },
+          { h: "价格", p: [
+            "小型办公室配一台 Face ID 终端含调试从几百万苏姆起。学校或工厂按入口和人数定价；加闸机则报价更高。",
+            "工程师上门和报价免费。终端塔什干现货，安装通常一天，1C 集成另行配置。",
+          ] },
+          { h: "如何订购", p: [
+            "说明需求：多少人、几个入口、考勤表导到哪里。我们匹配终端，一天内给出含安装的准确报价。",
+            "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
+          ] },
+        ],
+        faq: [
+          { q: "考勤系统多少钱？", a: "一台 Face ID 终端含调试——几百万苏姆起。具体取决于入口和人数——报价免费。" },
+          { q: "有面向学校的家长通知吗？", a: "有：孩子签到时家长收到通知。这是学校最需要的功能。" },
+          { q: "能与 1C 集成吗？", a: "能，考勤表自动导出到 1C——数据直接进入工资核算。" },
+          { q: "能替同事签到吗？", a: "刷脸和指纹不行：生物识别不认别人。因此我们推荐生物识别终端而非刷卡。" },
+          { q: "安装要多久？", a: "单台终端几小时。含闸机的整套系统 1–2 天。" },
+        ],
+      },
     },
   },
   {
@@ -5150,6 +5633,93 @@ export const ARTICLES: Article[] = [
           { q: "Сколько занимает установка?", a: "Стартовый набор — один день. Полный проект — по объёму квартиры, срок указывается в смете." },
         ],
       },
+      en: {
+        title: "Smart Home Cost: Prices and Where to Start",
+        excerpt: "Smart home system prices in Tashkent: lighting, curtains, climate, CCTV and smart locks in one app. Where to start cheaply and how to expand.",
+        sections: [
+          { h: "What a smart home consists of", p: [
+            "A smart home is a set of devices run from one app: lighting and sockets, curtains, air-conditioner control, CCTV, a smart lock and sensors (leak, smoke, motion).",
+            "You do not need everything at once: the system is modular. Most people start with lighting and curtains, then add cameras, a lock and sensors — everything works together in one ecosystem.",
+          ] },
+          { h: "Prices: where to start cheaply", p: [
+            "A starter kit — smart sockets, bulbs and one sensor — assembles from a few hundred thousand UZS. A system for an average flat with lighting, curtains and climate comes to a few million UZS.",
+            "A full project — with CCTV, a smart lock, voice control and scenes — depends on the floor area and device count. The estimate is free: we survey the rooms and propose a staged plan.",
+          ] },
+          { h: "Security: cameras, lock and sensors", p: [
+            "The most useful part of a smart home is security: a smart lock and camera at the entrance, motion and smoke sensors inside, leak sensors in the kitchen and bathroom. Everything notifies your phone.",
+            "One scene switches everything off and arms the home when you leave; on return the lights and AC come on by themselves. We work with Tuya, Hikvision and other ecosystems.",
+          ] },
+          { h: "How to order", p: [
+            "Send the flat or house plan — we will say what belongs in each room and quote two or three tiers: starter, medium and full. Installation depends on the state of the interior: wired solutions for a fresh renovation, wireless for a finished home.",
+            "Equipment from stock in Tashkent, installation and setup are ours, we install the app and teach you to use it. Official warranty.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does a smart home system cost?", a: "A starter kit — from a few hundred thousand UZS. For a flat with lighting, curtains and climate — a few million. Exact price per plan, the estimate is free." },
+          { q: "Where to start?", a: "With what pays off most: a smart lock, a camera and a leak sensor. Lighting and curtains are easy to add later." },
+          { q: "Can it go into a finished renovation?", a: "Yes — wireless devices install without chasing walls. In a fresh renovation wired solutions are more reliable." },
+          { q: "Will everything work in one app?", a: "Yes, we build the system in one ecosystem — lighting, curtains, cameras and the lock are controlled from a single app." },
+          { q: "How long does installation take?", a: "A starter kit — one day. A full project depends on the flat and is stated in the estimate." },
+        ],
+      },
+      tr: {
+        title: "Akıllı Ev Ne Kadar Tutar: Fiyatlar ve Nereden Başlamalı",
+        excerpt: "Taşkent'te akıllı ev fiyatları: aydınlatma, perdeler, iklim, kameralar ve akıllı kilit tek uygulamada. Ucuza nereden başlanır, nasıl genişletilir.",
+        sections: [
+          { h: "Akıllı ev nelerden oluşur", p: [
+            "Akıllı ev tek uygulamadan yönetilen cihazlar bütünüdür: aydınlatma ve prizler, perdeler, klima kontrolü, kameralar, akıllı kilit ve sensörler (su kaçağı, duman, hareket).",
+            "Hepsi birden şart değil: sistem modülerdir. Çoğu kişi aydınlatma ve perdelerle başlar, sonra kamera, kilit ve sensör ekler — hepsi tek ekosistemde birlikte çalışır.",
+          ] },
+          { h: "Fiyatlar: ucuza nereden başlanır", p: [
+            "Başlangıç seti — akıllı prizler, ampuller ve bir sensör — birkaç yüz bin UZS'den kurulur. Orta bir daire için aydınlatma, perde ve iklimli sistem birkaç milyon UZS eder.",
+            "Tam proje — kamera, akıllı kilit, sesli kontrol ve senaryolarla — alana ve cihaz sayısına bağlıdır. Teklif ücretsizdir: odaları görür, kademeli plan öneririz.",
+          ] },
+          { h: "Güvenlik: kamera, kilit ve sensörler", p: [
+            "Akıllı evin en faydalı kısmı güvenliktir: girişte akıllı kilit ve kamera, içeride hareket ve duman sensörleri, mutfak ve banyoda su kaçağı sensörü. Hepsi telefona bildirim yollar.",
+            "Evden çıkarken tek senaryo her şeyi kapatır ve alarma alır; dönüşte ışıklar ve klima kendiliğinden açılır. Tuya, Hikvision ve diğer ekosistemlerle çalışırız.",
+          ] },
+          { h: "Nasıl sipariş verilir", p: [
+            "Daire veya ev planını gönderin — her odaya ne gerektiğini söyleyip iki-üç seçenekli teklif verelim: başlangıç, orta ve tam. Montaj tadilat durumuna bağlıdır: yeni tadilatta kablolu, bitmiş evde kablosuz çözümler.",
+            "Ekipman Taşkent'te stoktan; kurulum ve ayar bizden, uygulamayı kurar, kullanmayı öğretiriz. Resmi garanti.",
+          ] },
+        ],
+        faq: [
+          { q: "Akıllı ev sistemi ne kadar?", a: "Başlangıç seti — birkaç yüz bin UZS'den. Aydınlatma, perde ve iklimli daire için — birkaç milyon. Kesin fiyat plana göre, teklif ücretsiz." },
+          { q: "Nereden başlamalı?", a: "En çok işe yarayanlardan: akıllı kilit, kamera ve su kaçağı sensörü. Aydınlatma ve perdeler sonra kolayca eklenir." },
+          { q: "Bitmiş tadilata kurulur mu?", a: "Evet — kablosuz cihazlar duvar kırmadan kurulur. Yeni tadilatta kablolu çözümler daha güvenilirdir." },
+          { q: "Hepsi tek uygulamada mı çalışır?", a: "Evet, sistemi tek ekosistemde kurarız — aydınlatma, perdeler, kameralar ve kilit tek uygulamadan yönetilir." },
+          { q: "Kurulum ne kadar sürer?", a: "Başlangıç seti — bir gün. Tam proje daire büyüklüğüne göre, süre teklifte belirtilir." },
+        ],
+      },
+      zh: {
+        title: "智能家居多少钱：价格与入门指南",
+        excerpt: "塔什干智能家居系统价格：灯光、窗帘、空调、监控和智能锁集成在一个 App。从哪里开始最省钱，如何逐步扩展。",
+        sections: [
+          { h: "智能家居的组成", p: [
+            "智能家居是一套由一个 App 管理的设备：灯光和插座、窗帘、空调控制、监控、智能锁和传感器（漏水、烟雾、移动）。",
+            "不必一步到位：系统是模块化的。多数人从灯光和窗帘开始，再加摄像机、门锁和传感器——同一生态内协同工作。",
+          ] },
+          { h: "价格：从哪里开始最省", p: [
+            "入门套装——智能插座、灯泡和一个传感器——几十万苏姆即可组建。普通公寓配灯光、窗帘和空调控制约几百万苏姆。",
+            "完整项目——含监控、智能锁、语音控制和场景——取决于面积和设备数量。报价免费：查看房间后给出分阶段方案。",
+          ] },
+          { h: "安全：摄像机、门锁和传感器", p: [
+            "智能家居最实用的部分是安全：入口的智能锁和摄像机，屋内的移动和烟雾传感器，厨卫的漏水传感器。一切都推送到手机。",
+            "出门时一个场景关闭全部并布防；回家时灯光和空调自动开启。我们支持 Tuya、Hikvision 等生态。",
+          ] },
+          { h: "如何订购", p: [
+            "发来户型图——我们说明每个房间需要什么，并按入门、中配、全配三档报价。安装取决于装修：新装修用有线方案，已装修用无线。",
+            "设备塔什干现货，安装调试由我们完成，装好 App 并教会使用。官方保修。",
+          ] },
+        ],
+        faq: [
+          { q: "智能家居系统多少钱？", a: "入门套装几十万苏姆起。公寓配灯光、窗帘和空调——几百万。按户型报价，免费。" },
+          { q: "从哪里开始？", a: "从最实用的开始：智能锁、摄像机和漏水传感器。灯光和窗帘以后加装很容易。" },
+          { q: "已装修的房子能装吗？", a: "能——无线设备无需开槽。新装修用有线方案更可靠。" },
+          { q: "都在一个 App 里吗？", a: "是，系统建在同一生态——灯光、窗帘、摄像机和门锁一个 App 管理。" },
+          { q: "安装要多久？", a: "入门套装一天。完整项目按面积定，报价中注明。" },
+        ],
+      },
     },
   },
   {
@@ -5213,6 +5783,93 @@ export const ARTICLES: Article[] = [
           { q: "Будет ли открытие с телефона?", a: "Да: кроме пульта настроим открытие из приложения или по звонку. Можно связать со СКУД и распознаванием номеров." },
           { q: "Откроются ли ворота при отключении света?", a: "У приводов есть механическая разблокировка — ключом можно расцепить и открыть ворота вручную. Можно поставить и резервное питание (ИБП)." },
           { q: "Сколько занимает установка?", a: "Стандартная установка — 1 день: монтаж, фотоэлементы, настройка и программирование пультов." },
+        ],
+      },
+      en: {
+        title: "Automatic Gates: Drive Price and Installation",
+        excerpt: "What gate automation costs: drives for sliding and swing gates, remotes, phone opening. Can a drive go on your existing gates.",
+        sections: [
+          { h: "Which gates can be automated", p: [
+            "Two main types: sliding and swing gates. Each takes its own drive: a sliding gate needs one drive with a gear rack, swing gates take a drive per leaf.",
+            "Importantly, automation fits your existing gates — no replacement needed. An engineer checks the weight and dimensions and picks a drive of the right power.",
+          ] },
+          { h: "What drives the price", p: [
+            "The main factor is gate weight and duty cycle. Light drives for a yard start from a few million UZS; heavy steel gates and busy entrances need a stronger, pricier drive.",
+            "The kit includes remotes, photocells (safety), a signal lamp and installation besides the drive. Phone opening and access-control integration are options.",
+          ] },
+          { h: "For checkpoints and companies", p: [
+            "At a company entrance automatic gates work with a barrier and access control: authorised vehicles enter by whitelist, and with plate recognition (ANPR) the guard presses nothing.",
+            "Busy entrances take industrial-grade drives rated for hundreds of cycles a day, under warranty.",
+          ] },
+          { h: "Installation and ordering", p: [
+            "A standard install takes a day: drive mounting, photocells, remote programming and setup. The engineer's visit and estimate are free — we inspect the gates and quote the exact price.",
+            "Drives and automation from stock in Tashkent with official warranty. We work with legal entities under VAT contracts.",
+          ] },
+        ],
+        faq: [
+          { q: "What does gate automation cost?", a: "A drive kit for yard gates with installation — from a few million UZS. The exact price depends on gate weight and type — the estimate is free." },
+          { q: "Can it go on existing gates?", a: "Yes, in most cases no replacement is needed — the drive mounts on your gates. An engineer checks compatibility on site." },
+          { q: "Will there be phone opening?", a: "Yes: besides the remote we set up opening from an app or by call. Access control and plate recognition can be tied in." },
+          { q: "Will the gates open in a power cut?", a: "Drives have a mechanical release — a key disengages the drive so the gates open by hand. A UPS can also be added." },
+          { q: "How long does installation take?", a: "A standard install — 1 day: mounting, photocells, setup and remote programming." },
+        ],
+      },
+      tr: {
+        title: "Otomatik Kapılar: Motor Fiyatı ve Montaj",
+        excerpt: "Kapı otomasyonu ne kadar: yana kayar ve çift kanat kapılar için motorlar, kumandalar, telefonla açma. Mevcut kapıya motor takılır mı.",
+        sections: [
+          { h: "Hangi kapılar otomatikleştirilir", p: [
+            "İki ana tip: yana kayar ve çift kanat kapılar. Her birinin kendi motoru vardır: kayar kapıya kremayerli tek motor, çift kanada kanat başına birer motor.",
+            "Önemli: otomasyon mevcut kapınıza takılır — kapıyı değiştirmek gerekmez. Mühendis ağırlığı ve ölçüyü görür, uygun güçte motoru seçer.",
+          ] },
+          { h: "Fiyatı ne belirler", p: [
+            "Ana etken kapının ağırlığı ve kullanım yoğunluğudur. Avlu için hafif motorlar birkaç milyon UZS'den başlar; ağır demir kapılara ve yoğun girişlere daha güçlü, daha pahalı motor gerekir.",
+            "Sete motor dışında kumandalar, fotoseller (güvenlik), sinyal lambası ve montaj girer. Telefonla açma ve geçiş kontrolü bağlantısı ek seçenektir.",
+          ] },
+          { h: "Girişler ve işletmeler için", p: [
+            "İşletme girişinde otomatik kapılar bariyer ve geçiş kontrolüyle birlikte çalışır: izinli araçlar listeden girer, plaka tanımayla (ANPR) görevli tuşa bile basmaz.",
+            "Yoğun girişlere günde yüzlerce açılışa dayanıklı endüstriyel motorlar konur, garantilidir.",
+          ] },
+          { h: "Montaj ve sipariş", p: [
+            "Standart montaj bir gün sürer: motor, fotoseller, kumanda programlama ve ayar. Keşif ve teklif ücretsizdir — kapıyı görüp kesin fiyatı söyleriz.",
+            "Motorlar ve otomasyon Taşkent'te stoktan, resmi garantili. Tüzel kişilerle KDV'li sözleşmeyle çalışırız.",
+          ] },
+        ],
+        faq: [
+          { q: "Kapı otomasyonu ne kadar?", a: "Avlu kapısı için motor seti montajla — birkaç milyon UZS'den. Kesin fiyat kapının ağırlığına ve tipine bağlı — teklif ücretsiz." },
+          { q: "Mevcut kapıya takılır mı?", a: "Evet, çoğu durumda kapıyı değiştirmek gerekmez — motor mevcut kapıya takılır. Mühendis yerinde uyumu kontrol eder." },
+          { q: "Telefonla açma olur mu?", a: "Evet: kumandanın yanında uygulamadan veya aramayla açmayı da ayarlarız. Geçiş kontrolü ve plaka tanıma bağlanabilir." },
+          { q: "Elektrik kesilince kapı açılır mı?", a: "Motorlarda mekanik boşaltma vardır — anahtarla ayırıp kapıyı elle açabilirsiniz. UPS de eklenebilir." },
+          { q: "Montaj ne kadar sürer?", a: "Standart montaj — 1 gün: kurulum, fotoseller, ayar ve kumanda programlama." },
+        ],
+      },
+      zh: {
+        title: "自动大门：电机价格与安装",
+        excerpt: "大门自动化要花多少钱：平移门和对开门电机、遥控器、手机开门。现有大门能否加装电机。",
+        sections: [
+          { h: "哪些大门可以自动化", p: [
+            "两种主要类型：平移门和对开门。各配各的电机：平移门用一台带齿条的电机，对开门每扇一台。",
+            "重要的是：自动化可加装在您现有的大门上——无需换门。工程师评估重量和尺寸，选配合适功率的电机。",
+          ] },
+          { h: "价格由什么决定", p: [
+            "主要因素是门的重量和使用强度。院门轻型电机从几百万苏姆起；沉重的铁门和高频出入口需要更强、更贵的电机。",
+            "套装除电机外含遥控器、红外光电（安全）、警示灯和安装。手机开门和门禁联动为可选项。",
+          ] },
+          { h: "门岗与企业", p: [
+            "企业入口的自动大门与道闸、门禁协同工作：授权车辆按白名单进入，配车牌识别（ANPR）时保安无需按键。",
+            "高频出入口配工业级电机——按每天数百次开合设计，享保修。",
+          ] },
+          { h: "安装与订购", p: [
+            "标准安装一天：装电机、光电、遥控器编程和调试。工程师上门和报价免费——看门后给出准确价格。",
+            "电机和自动化设备塔什干现货，官方保修。与法人单位按增值税合同合作。",
+          ] },
+        ],
+        faq: [
+          { q: "大门自动化多少钱？", a: "院门电机套装含安装——几百万苏姆起。具体取决于门的重量和类型——报价免费。" },
+          { q: "能装在现有大门上吗？", a: "能，多数情况无需换门——电机装在现有门上。工程师现场确认兼容性。" },
+          { q: "能手机开门吗？", a: "能：除遥控器外可设置 App 或来电开门，还可联动门禁和车牌识别。" },
+          { q: "停电时门能开吗？", a: "电机有机械释放——用钥匙脱开后可手动开门。也可加装 UPS。" },
+          { q: "安装要多久？", a: "标准安装 1 天：装机、光电、调试和遥控器编程。" },
         ],
       },
     },
