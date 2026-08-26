@@ -198,13 +198,13 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkent va butun O'zbekiston bo'ylab videokuzatuv kameralarini kalit topshirish asosida o'rnatamiz: obyektga bepul chiqish, loyiha, IP va analog tizimlar montaji, telefondan masofaviy kirishni sozlash. Kafolat va servis.",
   },
   access: {
-    h1: "Toshkentda kirishni boshqarish tizimi (SKUD)",
-    title: "SKUD Toshkentda — kirishni boshqarish tizimini o'rnatish | SAT",
+    h1: "SKUD tizimi Toshkentda — kirishni boshqarish",
+    title: "SKUD tizimi Toshkentda — o'rnatish va narxi | SAT",
     desc: "Toshkentda SKUD montaji: turniketlar, elektron qulflar, karta o'quvchilar va biometriya, ish vaqtini hisobga olish. Loyihalash, o'rnatish va servis butun O'zbekiston bo'ylab.",
   },
   fire: {
-    h1: "Toshkentda yong'in signalizatsiyasi montaji",
-    title: "Yong'in signalizatsiyasi Toshkentda — APS va SOUE montaji | SAT",
+    h1: "Yong'in xavfsizligi tizimlari Toshkentda — montaj",
+    title: "Yong'in xavfsizligi va signalizatsiyasi Toshkentda | SAT",
     desc: "Toshkentda yong'in signalizatsiyasi (APS) va SOUE loyihalash hamda montaji: datchiklar, ogohlantirish, avtomatika. Loyihani topshirish, kafolat va xizmat ko'rsatish O'zbekiston bo'ylab.",
   },
   intercom: {
@@ -219,7 +219,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   barrier: {
     h1: "Toshkentda shlagbaumlar — o'rnatish va avtomatika",
-    title: "Shlagbaumlar Toshkentda — avtomatik shlagbaum o'rnatish | SAT",
+    title: "Shlagbaum narxi va o'rnatish Toshkentda — avtomatik | SAT",
     desc: "Toshkentda avtomatik shlagbaumlar: sotish, montaj, pultlar va avtoraqamni aniqlash (ANPR). Kirish yo'llari, avtoturargohlar va hovlilarga o'rnatish O'zbekiston bo'ylab.",
   },
   alarm: {
@@ -263,8 +263,8 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda avtoraqamlarni aniqlash (ANPR) tizimlari: raqam bo'yicha avtomatik kirish, shlagbaumlar, oq ro'yxatlar, avtoturargoh va SKUD bilan integratsiya. O'zbekiston bo'ylab o'rnatish.",
   },
   telephony: {
-    h1: "Toshkentda ofis uchun IP-telefoniya",
-    title: "IP-telefoniya Toshkentda — ofis uchun ATS | SAT",
+    h1: "IP telefoniya Toshkentda — ofis uchun ATS",
+    title: "IP telefoniya Toshkentda — ATS o'rnatish narxi | SAT",
     desc: "Toshkentda IP-telefoniya va ofis ATS o'rnatish: ko'p kanalli raqamlar, suhbatlarni yozib olish, CRM bilan integratsiya. Sozlash va qo'llab-quvvatlash O'zbekiston bo'ylab.",
   },
   mikrotik: {

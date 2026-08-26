@@ -3999,7 +3999,7 @@ export const ARTICLES: Article[] = [
     related: ["cctv"],
     loc: {
       uz: {
-        title: "Videokuzatuv o'rnatish: bosqichlar va narx (Toshkent)",
+        title: "Kamera ustanovka narxi: videokuzatuv o'rnatish bosqichlari (Toshkent)",
         excerpt: "Kamera o'rnatish qanday boradi: obyektni ko'rish, kameralar sonini aniqlash, kabel yotqizish, sozlash va telefondan ko'rish. Narx nimalardan tashkil topadi.",
         sections: [
           { h: "Ishlar qanday boshlanadi", p: [
@@ -4943,6 +4943,72 @@ export const ARTICLES: Article[] = [
           { q: "Замок откроется при отключении света?", a: "Электромагнитный откроется, электромеханический останется заперт. На двери, которые должны быть заперты всегда, ставят электромеханику или ИБП." },
           { q: "Можно ли открывать замок с телефона?", a: "Да — smart-замки открываются из приложения, а замки в связке со СКУД или домофоном — из их приложений, в том числе удалённо." },
           { q: "Сколько занимает установка?", a: "Один замок обычно ставится за несколько часов. Полная система со СКУД — 1–2 дня." },
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "shlagbaum-narxi",
+    date: "2026-08-26",
+    related: ["barrier", "gates", "anpr"],
+    loc: {
+      uz: {
+        title: "Shlagbaum narxi qancha? Toshkentda o'rnatish bilan",
+        excerpt: "Toshkentda avtomatik shlagbaum narxlari: strela uzunligi, pult va raqam aniqlash (ANPR) bilan. O'rnatish qancha turadi va hovli, avtoturargoh, KPP uchun nimani tanlash kerak.",
+        sections: [
+          { h: "Shlagbaum narxi nimaga bog'liq", p: [
+            "Asosiy omillar: strela uzunligi (3 dan 6 metrgacha), ishlash intensivligi (hovli yoki band avtoturargoh) va brend. Oddiy hovli uchun bazaviy avtomatik shlagbaum o'rnatish bilan bir necha million so'mdan boshlanadi; intensiv KPP uchun kuchliroq privod kerak va narx yuqoriroq bo'ladi.",
+            "Boshqaruv usuli ham narxga ta'sir qiladi: pult — standart, karta o'quvchi yoki telefon orqali ochish — qo'shimcha, avtoraqamni aniqlash (ANPR) bilan tizim eng qulay, lekin kamera va dasturiy ta'minot hisobiga qimmatroq.",
+          ] },
+          { h: "Hovli, avtoturargoh va KPP uchun tanlov", p: [
+            "TJM hovlisi uchun odatiy yechim — 4–6 metrli strela, pultlar va telefondan ochish. Avtoturargohga chiptali yoki raqam aniqlaydigan tizim mos: kirish avtomatik, hisob yuritiladi. Korxona KPPsida shlagbaum SKUD bilan bog'lanadi — faqat ruxsat etilgan transport kiradi.",
+            "Raqam aniqlash (ANPR) bilan doimiy mashinalar ro'yxat bo'yicha o'zi kiradi — qorovul tugma bosmaydi, mehmonlar esa qo'ng'iroq orqali. Bu hovli va ofis markazlarida eng ko'p so'raladigan konfiguratsiya.",
+          ] },
+          { h: "O'rnatish qancha turadi", p: [
+            "Montaj narxiga poydevor (fundament), elektr ta'minoti, privodni sozlash va xavfsizlik datchiklari kiradi. Standart o'rnatish odatda 1 kun oladi. Muhandisning chiqishi va smeta bepul — joyni ko'rib, strela uzunligi va privod kuchini to'g'ri tanlaymiz.",
+            "Tejashning to'g'ri yo'li — loyihani boshidan to'g'ri qilish: noto'g'ri tanlangan kuchsiz privod band kirishda tez ishdan chiqadi va qimmatga tushadi.",
+          ] },
+          { h: "Qayerdan olish", p: [
+            "Katalogimizda shlagbaumlar, privodlar, pultlar va ANPR kameralari bor — narxlar so'mda, Toshkentda ombordan. Kirish turini ayting (hovli, avtoturargoh, KPP) — mos variantni tanlab, o'rnatish bilan aniq narxni bir kunda hisoblaymiz.",
+            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
+          ] },
+        ],
+        faq: [
+          { q: "Eng arzon shlagbaum qancha turadi?", a: "Hovli uchun bazaviy avtomatik shlagbaum o'rnatish bilan — bir necha million so'mdan. Aniq narx strela uzunligi va intensivlikka bog'liq — smeta bepul." },
+          { q: "Raqam aniqlash (ANPR) bilan qancha bo'ladi?", a: "Shlagbaum narxiga ANPR kamerasi va sozlash qo'shiladi. Doimiy mashinalar ro'yxat bo'yicha avtomatik kiradi — hovli va ofislar uchun eng qulay yechim." },
+          { q: "O'rnatish qancha vaqt oladi?", a: "Standart o'rnatish — 1 kun: poydevor, privod montaji, sozlash. Murakkab obyektlarda muddat smetada ko'rsatiladi." },
+          { q: "Pult yo'qolsa nima qilamiz?", a: "Yangi pultni dasturlab beramiz, yo'qolganini tizimdan o'chiramiz. Telefon orqali ochishni ham sozlash mumkin — pult umuman kerak bo'lmaydi." },
+          { q: "Kafolat bormi?", a: "Ha: uskunaga rasmiy kafolat, montaj ishlariga kompaniya kafolati. Servis va ehtiyot qismlar Toshkentda." },
+        ],
+      },
+      ru: {
+        title: "Сколько стоит шлагбаум с установкой в Ташкенте",
+        excerpt: "Цены на автоматические шлагбаумы в Ташкенте: длина стрелы, пульты и распознавание номеров (ANPR). Сколько стоит установка и что выбрать для двора, парковки и КПП.",
+        sections: [
+          { h: "От чего зависит цена шлагбаума", p: [
+            "Главные факторы: длина стрелы (от 3 до 6 метров), интенсивность работы (двор или загруженная парковка) и бренд. Базовый автоматический шлагбаум для двора с установкой начинается от нескольких миллионов сум; для интенсивного КПП нужен более мощный привод — и цена выше.",
+            "Способ управления тоже влияет: пульт — стандарт, считыватель карт или открытие с телефона — доплата, а система с распознаванием номеров (ANPR) удобнее всего, но дороже за счёт камеры и софта.",
+          ] },
+          { h: "Что выбрать для двора, парковки и КПП", p: [
+            "Для двора ЖК типовое решение — стрела 4–6 метров, пульты и открытие с телефона. Парковке подходит система с билетами или распознаванием номеров: въезд автоматический, ведётся учёт. На КПП предприятия шлагбаум связывается со СКУД — заезжает только разрешённый транспорт.",
+            "С распознаванием номеров (ANPR) постоянные машины въезжают сами по списку — охранник не жмёт кнопку, гости въезжают по звонку. Это самая востребованная конфигурация для дворов и офисных центров.",
+          ] },
+          { h: "Сколько стоит установка", p: [
+            "В цену монтажа входят фундамент, подводка питания, настройка привода и датчики безопасности. Стандартная установка обычно занимает 1 день. Выезд инженера и смета бесплатные — осмотрим место и правильно подберём длину стрелы и мощность привода.",
+            "Правильная экономия — сразу верный проект: слабый привод на загруженном въезде быстро выходит из строя и обходится дороже.",
+          ] },
+          { h: "Где купить", p: [
+            "В каталоге — шлагбаумы, приводы, пульты и ANPR-камеры, цены в сумах, со склада в Ташкенте. Опишите въезд (двор, парковка, КПП) — подберём вариант и за день посчитаем точную цену с установкой.",
+            "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит самый недорогой шлагбаум?", a: "Базовый автоматический шлагбаум для двора с установкой — от нескольких миллионов сум. Точная цена зависит от длины стрелы и интенсивности — смета бесплатная." },
+          { q: "Сколько стоит шлагбаум с распознаванием номеров?", a: "К цене шлагбаума добавляются ANPR-камера и настройка. Постоянные машины въезжают автоматически по списку — самое удобное решение для дворов и офисов." },
+          { q: "Сколько занимает установка?", a: "Стандартная установка — 1 день: фундамент, монтаж привода, настройка. На сложных объектах срок указывается в смете." },
+          { q: "Что делать, если потерялся пульт?", a: "Запрограммируем новый, потерянный удалим из системы. Можно настроить открытие с телефона — пульт вообще не понадобится." },
+          { q: "Есть ли гарантия?", a: "Да: на оборудование — официальная гарантия, на монтаж — гарантия компании. Сервис и запчасти в Ташкенте." },
         ],
       },
     },
