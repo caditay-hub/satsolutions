@@ -461,7 +461,74 @@
           "q": "Is it suitable for paid parking lots?",
           "a": "Yes, ANPR is used in parking facilities for tracking vehicle entry/exit, rate calculation, and access control."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard plate recognition setups",
+        "pkgNote": "We price every site individually: send a photo of the entrance and how many cars pass per day, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Single entrance",
+            "for": "Office yard, warehouse, small grounds",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "One ANPR camera at the entrance, the barrier opens for known cars",
+              "Whitelist of vehicles — adding a plate takes a minute",
+              "Entry log with a photo of the car and the plate",
+              "Works at night and in rain — camera with infrared illumination"
+            ]
+          },
+          {
+            "name": "Entry and exit",
+            "for": "Residential complex, business centre, car park",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Two cameras: time spent inside is counted automatically",
+              "Visitor entries on a single-use permit",
+              "Tied into the parking system and payment",
+              "Reports on occupancy and on vehicles that overstayed"
+            ]
+          },
+          {
+            "name": "Industrial checkpoint",
+            "for": "Factory, depot, logistics complex",
+            "term": "Timeline: by project",
+            "items": [
+              "Supplier and contractor vehicles tracked by plate",
+              "Tied into the weighbridge and warehouse records",
+              "Alert when an unknown plate enters a restricted area",
+              "Log export for security and accounting"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working ANPR — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we check mounting angle, lighting and vehicle speed — free of charge"
+          },
+          {
+            "t": "Selection and quote",
+            "s": "camera, controller, entry logic, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "post or bracket, cabling, power, connection to the barrier"
+          },
+          {
+            "t": "Setup",
+            "s": "whitelists, recognition accuracy, logging, access rights"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we teach you to add vehicles; warranty on equipment and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "ANPR cameras — in stock in Tashkent",
+        "brandsText": "Hikvision and Dahua — plate recognition cameras and entry controllers, supplied by us with warranty:"
+      }
     },
     "access": {
       "title": "Access control",
@@ -685,7 +752,74 @@
           "q": "What if an employee forgets to check in?",
           "a": "Manual adjustments are available with supervisor permissions, and all changes are logged in the audit trail."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard time-tracking setups",
+        "pkgNote": "We size it to the job: tell us the headcount, the number of entrances and what the report must contain, and we return a quote the same day.",
+        "packages": [
+          {
+            "name": "Small office",
+            "for": "Up to 30 staff, office or shop",
+            "term": "Timeline: 1 day",
+            "items": [
+              "One terminal at the entrance: fingerprint, card or face recognition",
+              "An automatic timesheet instead of a paper logbook",
+              "Monthly report on late arrivals and overtime",
+              "Export to Excel for payroll"
+            ]
+          },
+          {
+            "name": "Several entrances",
+            "for": "Office, warehouse and production on one site",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "A terminal at every entrance, one shared staff database",
+              "Shift patterns: night, weekend and public holiday rules",
+              "Split by department, each with its own manager",
+              "Export to 1C — the timesheet feeds payroll directly"
+            ]
+          },
+          {
+            "name": "Checkpoint with a turnstile",
+            "for": "Factory, construction site, restricted facility",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Turnstile plus biometrics — nobody passes on someone else’s card",
+              "Tracking of contractors and temporary passes",
+              "Tied into CCTV: a photo for every passage",
+              "Report on hours actually worked on site"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working timesheet — 5 steps",
+        "stages": [
+          {
+            "t": "Understanding the task",
+            "s": "headcount and entrances, shift patterns, what the report must show"
+          },
+          {
+            "t": "Selection and quote",
+            "s": "terminals, identification method, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "terminals mounted, power and network, a turnstile where needed"
+          },
+          {
+            "t": "Setup",
+            "s": "staff records, shift patterns, lateness rules, export to 1C"
+          },
+          {
+            "t": "Handover and training",
+            "s": "we show HR how to pull the timesheet; warranty and support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Time-tracking terminals — in stock in Tashkent",
+        "brandsText": "ZKTeco and Hikvision — biometric terminals and card readers, supplied by us with warranty:"
+      }
     },
     "alarm": {
       "title": "Intruder alarm",
@@ -711,7 +845,74 @@
           "q": "Does it work if the power goes out?",
           "a": "Yes, all devices are equipped with backup UPS battery and continue operating if the main power supply fails."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard intruder alarm setups",
+        "pkgNote": "We price every site individually: send the floor plan and the number of entrances, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Apartment or private house",
+            "for": "House, country home, apartment, garage",
+            "term": "Timeline: 1 day",
+            "items": [
+              "Contact sensors on doors and windows, motion detector inside",
+              "Siren and a phone alert when the alarm trips",
+              "Wireless sensors — no chasing walls, no cabling",
+              "Arm and disarm from the app or with a key fob"
+            ]
+          },
+          {
+            "name": "Shop, office, warehouse",
+            "for": "Retail unit, office, warehouse, pharmacy",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Motion, contact and glass-break sensors around the perimeter",
+              "Panic button at the till and at workstations",
+              "Separate codes per employee — you can see who disarmed it",
+              "Signal relayed to a security company control room"
+            ]
+          },
+          {
+            "name": "Plant and grounds",
+            "for": "Factory, depot, logistics complex",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Split into zones: shop floor, warehouse, office, perimeter",
+              "Tied into CCTV — an alarm brings up the right camera",
+              "Tamper detection on cabinets and plant rooms",
+              "Log of alarms and arming with a report for any period"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a protected site — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we walk the site, entrances and blind spots — free of charge"
+          },
+          {
+            "t": "Zone design and quote",
+            "s": "sensors, panel, alarm scenarios, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "wireless sensors without chasing walls, wired ones in tidy runs"
+          },
+          {
+            "t": "Setup",
+            "s": "scenarios, staff codes, alerts to phone and to the control room"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we teach arming and disarming; warranty on equipment and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Intruder alarms — in stock in Tashkent",
+        "brandsText": "Hikvision AX PRO — wireless sensors and panels, all equipment supplied by us with warranty:"
+      }
     },
     "fire": {
       "title": "Fire alarm & evacuation",
@@ -1050,7 +1251,74 @@
           "q": "Can cameras be displayed on the video wall?",
           "a": "Yes, we integrate the video wall with the video surveillance system and other sources."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard video wall configurations",
+        "pkgNote": "We size it to the room: send the dimensions and the viewing distance, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Security post",
+            "for": "Site security, small control room",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "A 2×2 wall of 46–55 inch panels",
+              "Site cameras displayed with switchable layouts",
+              "Pull-out mounts — servicing without dismantling the wall",
+              "An alarm brings the relevant camera up full size"
+            ]
+          },
+          {
+            "name": "Control room",
+            "for": "Manufacturing, logistics, transport",
+            "term": "Timeline: by project, from 2 weeks",
+            "items": [
+              "A 3×3 wall or larger, controller with multiple sources",
+              "Cameras, charts and desktops shown side by side",
+              "Layouts driven from the operator console",
+              "Redundant power and controller"
+            ]
+          },
+          {
+            "name": "Situation centre",
+            "for": "Government client, large enterprise, data centre",
+            "term": "Timeline: by project",
+            "items": [
+              "Room design: viewing distance, mounting height, lighting",
+              "Source matrix: CCTV, analytics, external systems",
+              "Operator desks with their own monitors",
+              "Maintenance schedule and spare panels"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working video wall — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we measure the room, viewing distance and lighting — free of charge"
+          },
+          {
+            "t": "Design and quote",
+            "s": "panel count, controller, structure, itemised estimate"
+          },
+          {
+            "t": "Installation",
+            "s": "structure assembled, panels aligned into a single plane"
+          },
+          {
+            "t": "Setup",
+            "s": "sources, layouts, scenarios, operator rights"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we train the operators; warranty on panels and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Panels and controllers — supplied to order",
+        "brandsText": "Hikvision and Dahua — narrow-bezel panels and video wall controllers, supplied with warranty:"
+      }
     },
     "pa": {
       "title": "Public address systems",
@@ -1231,7 +1499,74 @@
         "Space counting and tariffing",
         "Payment and access-control integration",
         "Commissioning and service"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard car park setups",
+        "pkgNote": "We price every site individually: send the number of bays and how many cars enter per day, and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Residential or office yard",
+            "for": "Residential complex, business centre, clinic",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Barrier at the entrance with plate recognition for residents and staff",
+              "Whitelist — regulars drive in without stopping and without a remote",
+              "Visitor entry by calling security or with a single-use QR code",
+              "Log: who came in, when and in which car"
+            ]
+          },
+          {
+            "name": "Paid car park",
+            "for": "Shopping centre, market, business park",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Entry and exit by plate, parking time counted automatically",
+              "Payment at the desk or a terminal, exit opens after payment",
+              "Free-bay display at the entrance",
+              "Occupancy and revenue reports per shift and per month"
+            ]
+          },
+          {
+            "name": "Industrial checkpoint",
+            "for": "Factory, warehouse, logistics complex",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Supplier and contractor vehicles tracked by plate",
+              "Tied into checkpoint access control and the weighbridge",
+              "Photo of the car and the plate for every entry",
+              "Data export for security and accounting"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working car park — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we check the entrance, lighting and camera angles — free of charge"
+          },
+          {
+            "t": "Design and quote",
+            "s": "cameras, barrier, entry logic, itemised estimate — same day"
+          },
+          {
+            "t": "Installation",
+            "s": "posts, cameras, cable runs, power"
+          },
+          {
+            "t": "Setup",
+            "s": "whitelists, tariffs, entry rights, reports"
+          },
+          {
+            "t": "Handover and service",
+            "s": "we train security and the administrator; warranty on equipment and work"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Car park equipment — in stock in Tashkent",
+        "brandsText": "ZKTeco, Hikvision, Dahua — barriers, plate recognition cameras and controllers, supplied by us with warranty:"
+      }
     },
     "retail": {
       "title": "Retail & markets",
@@ -1469,7 +1804,74 @@
           "q": "How much does fiber optic installation cost?",
           "a": "It depends on the route: inside a building, along poles, or through conduits. Describe your project and we'll prepare a quote and timeline."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standard solutions",
+        "pkgTitle": "Three standard fibre jobs",
+        "pkgNote": "We price by the route: send the distance and what lies between the points — buildings, a road, poles — and we return a quote with an exact estimate the same day.",
+        "packages": [
+          {
+            "name": "Link between buildings",
+            "for": "Two blocks, office and warehouse, shop floor and admin building",
+            "term": "Timeline: 1–3 days",
+            "items": [
+              "Route along poles, the façade or through cable ducts",
+              "Outdoor or ADSS cable — depending on site conditions",
+              "Fibres spliced, optical patch panels fitted at both ends",
+              "OTDR test report handed over on completion"
+            ]
+          },
+          {
+            "name": "Backbone inside a building",
+            "for": "Multi-storey office, residential complex, shopping centre",
+            "term": "Timeline: by project, from 1 week",
+            "items": [
+              "Riser between floors, a patch panel on every floor",
+              "Spare fibres for future expansion",
+              "Labelling and a line diagram in the documentation",
+              "Route agreed against fire safety requirements"
+            ]
+          },
+          {
+            "name": "Repair of a damaged line",
+            "for": "A break after excavation work or an accident",
+            "term": "Timeline: we come out the same day",
+            "items": [
+              "We locate the break with an OTDR",
+              "Splicing on site and fitting of a closure",
+              "Verification measurements after the repair",
+              "Report with attenuation for every fibre"
+            ]
+          }
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a line with a test report — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer visit",
+            "s": "we walk the route, check distance and installation method — free of charge"
+          },
+          {
+            "t": "Design and quote",
+            "s": "cable type, fibre count, patch panels, itemised estimate — same day"
+          },
+          {
+            "t": "Laying",
+            "s": "along poles, the façade or through ducts, with fixings and slack"
+          },
+          {
+            "t": "Splicing and testing",
+            "s": "fibres spliced, panels fitted, OTDR trace on every fibre"
+          },
+          {
+            "t": "Handover",
+            "s": "test report and line diagram; warranty on the work"
+          }
+        ],
+        "brandsLabel": "Materials",
+        "brandsTitle": "Cable and optical patch panels",
+        "brandsText": "Indoor, outdoor and ADSS cable, patch panels, closures and pigtails — chosen for the route and supplied by us:"
+      }
     },
     "radiobridge": {
       "title": "Wireless Bridges",

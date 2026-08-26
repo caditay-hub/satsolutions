@@ -461,7 +461,74 @@
           "q": "To'lov qilinuvchi avtomobil to'xtamalarida qo'llash mumkinmi?",
           "a": "Ha, ANPR avtomobil to'xtamalarida kiritish/chiqarish hisobini olish, tarifikatsiya va kirish nazoratini amalga oshirish uchun qo'llaniladi."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Raqam aniqlashning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: kirish joyi fotosini va kuniga nechta mashina o‘tishini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Bitta kirish",
+            "for": "Ofis hovlisi, ombor, kichik hudud",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Kirishga bitta ANPR-kamera, shlagbaum o‘zimiznikilarga ochiladi",
+              "Mashinalar oq ro‘yxati, raqam qo‘shish bir daqiqa",
+              "Mashina va raqam fotosi bilan o‘tishlar jurnali",
+              "Kechasi va yomg‘irda ishlaydi — IQ yoritgichli kamera"
+            ]
+          },
+          {
+            "name": "Kirish va chiqish",
+            "for": "TJM, biznes-markaz, parkovka",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Ikkita kamera: ichkarida bo‘lgan vaqt avtomatik hisoblanadi",
+              "Mehmonlar uchun bir martalik ruxsat",
+              "Parkovka tizimi va to‘lov bilan bog‘lash",
+              "Bandlik va kechikkanlar bo‘yicha hisobot"
+            ]
+          },
+          {
+            "name": "Korxona nazorat punkti",
+            "for": "Zavod, baza, logistika majmuasi",
+            "term": "Muddat: loyiha bo‘yicha",
+            "items": [
+              "Yetkazib beruvchi va pudratchi transportini raqam bo‘yicha hisobga olish",
+              "Tarozi va ombor hisobi bilan bog‘lash",
+              "Yopiq hududga begona raqam kirsa — signal",
+              "Qorovul va buxgalteriya uchun jurnalni yuklab olish"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan ANPR gacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "o‘rnatish burchagi, yoritish va mashina tezligini ko‘ramiz — bepul"
+          },
+          {
+            "t": "Tanlov va taklif",
+            "s": "kamera, kontroller, o‘tish mantiqi, smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "ustun yoki kronshteyn, kabel, quvvat, shlagbaumga ulash"
+          },
+          {
+            "t": "Sozlash",
+            "s": "oq ro‘yxatlar, aniqlash aniqligi, jurnal, kirish huquqlari"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "mashina qo‘shishni o‘rgatamiz; uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "ANPR-kameralar — Toshkentdagi omborda",
+        "brandsText": "Hikvision va Dahua — raqam aniqlash kameralari va o‘tish kontrollerlari, o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "access": {
       "title": "Kirishni boshqarish (SKUD)",
@@ -685,7 +752,74 @@
           "q": "Agar xodim o'z-o'zini belgilashni unutib qolsa, nima bo'ladi?",
           "a": "Rahbar huquqlari bilan qo'lda tuzatish va o'zgarishlar jurnali mavjud."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Ish vaqti hisobining uchta tipik sxemasi",
+        "pkgNote": "Vazifaga qarab hisoblaymiz: xodimlar soni, kirish joylari va hisobotda nima kerakligini yozing — kun davomida taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Kichik ofis",
+            "for": "30 tagacha xodim, ofis yoki do‘kon",
+            "term": "Muddat: 1 kun",
+            "items": [
+              "Kirishda bitta terminal: barmoq izi, karta yoki yuzni aniqlash",
+              "Qog‘oz jurnal o‘rniga avtomatik tabel",
+              "Oy bo‘yicha kechikish va ortiqcha ishlash hisoboti",
+              "Ish haqi hisobi uchun Excelga yuklash"
+            ]
+          },
+          {
+            "name": "Bir necha kirish joyi",
+            "for": "Ofis, ombor va ishlab chiqarish bitta konturda",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Har bir kirishda terminal, xodimlarning yagona bazasi",
+              "Smena jadvallari: tungi, dam olish va bayram qoidalari",
+              "Bo‘limlarga ajratish, har birida o‘z rahbari",
+              "1C ga yuklash — tabel to‘g‘ridan-to‘g‘ri ish haqi hisobiga tushadi"
+            ]
+          },
+          {
+            "name": "Turniketli nazorat punkti",
+            "for": "Zavod, qurilish maydoni, rejimli obyekt",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Turniket va biometriya — birovning kartasi bilan o‘tib bo‘lmaydi",
+              "Pudratchilar va vaqtinchalik ruxsatnomalar hisobi",
+              "Videokuzatuv bilan bog‘lash: har o‘tishda foto",
+              "Obyektda amalda ishlangan soatlar hisoboti"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan tabelgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Vazifani tahlil qilish",
+            "s": "nechta odam va kirish joyi, qanday jadvallar va hisobotda nima kerak"
+          },
+          {
+            "t": "Tanlov va taklif",
+            "s": "terminallar, identifikatsiya usuli, smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "terminallarni o‘rnatish, quvvat va tarmoq, kerak bo‘lsa turniket"
+          },
+          {
+            "t": "Sozlash",
+            "s": "xodimlar, jadvallar, kechikish qoidalari, 1C ga yuklash"
+          },
+          {
+            "t": "Topshirish va o‘qitish",
+            "s": "kadrlar bo‘limiga tabel olishni ko‘rsatamiz; kafolat va qo‘llab-quvvatlash"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Hisob terminallari — Toshkentdagi omborda",
+        "brandsText": "ZKTeco va Hikvision — biometrik terminallar va karta o‘qigichlar, o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "alarm": {
       "title": "Qo‘riqlash signalizatsiyasi",
@@ -711,7 +845,74 @@
           "q": "Elektr uzilganda ishlaydi?",
           "a": "Ha, qurilmalar zaxira akkumulyator bilan jihozlantirilgan va tarmoq uzilganda ham ishlashni davom ettiradi."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Obyektni qo‘riqlashning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: xonalar rejasi va kirish joylari sonini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Xonadon yoki xususiy uy",
+            "for": "Uy, dala hovli, xonadon, garaj",
+            "term": "Muddat: 1 kun",
+            "items": [
+              "Eshik va derazalarga ochilish datchiklari, ichkarida harakat datchigi",
+              "Xavf-xatarda sirena va telefonga xabar",
+              "Simsiz datchiklar — shtroblash va simlarsiz",
+              "Ilova yoki brelokdan qo‘riqlashga qo‘yish va yechish"
+            ]
+          },
+          {
+            "name": "Do‘kon, ofis, ombor",
+            "for": "Savdo nuqtasi, ofis, ombor, dorixona",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Perimetr bo‘ylab harakat, ochilish va shisha sinishi datchiklari",
+              "Kassa va ish joylarida xavf tugmasi",
+              "Xodimlarga alohida kodlar — kim yechganini ko‘rasiz",
+              "Signalni qo‘riqlash korxonasi pultiga chiqarish"
+            ]
+          },
+          {
+            "name": "Korxona va hudud",
+            "for": "Zavod, baza, logistika majmuasi",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Zonalarga bo‘lish: sex, ombor, ofis, perimetr",
+              "Videokuzatuv bilan bog‘lash — signal kerakli kamerani chiqaradi",
+              "Shkaf va texnik xonalar ochilishini nazorat qilish",
+              "Signal va qo‘riqlash jurnali, davr bo‘yicha hisobot"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan qo‘riqlanadigan obyektgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "obyekt, kirish joylari va ko‘rinmas burchaklarni ko‘ramiz — bepul"
+          },
+          {
+            "t": "Zonalar loyihasi va taklif",
+            "s": "datchiklar, panel, signal stsenariylari, smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "simsiz datchiklar shtroblashsiz, simlilari ozoda trassalarda"
+          },
+          {
+            "t": "Sozlash",
+            "s": "stsenariylar, xodimlar kodlari, telefon va pultga xabar"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "qo‘yish va yechishni o‘rgatamiz; uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Qo‘riqlash signalizatsiyasi — Toshkentdagi omborda",
+        "brandsText": "Hikvision AX PRO — simsiz datchik va panellar, barcha uskunani o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "fire": {
       "title": "Yong‘in signalizatsiyasi va SOUE",
@@ -1050,7 +1251,74 @@
           "q": "Kameralarni videodivarga chiqarish mumkinmi?",
           "a": "Ha, videodivari video kuzatuv sistemasi va boshqa manbalari bilan integrlashtiramiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Videodevorlarning uchta tipik konfiguratsiyasi",
+        "pkgNote": "Zalga qarab hisoblaymiz: xona o‘lchamlari va operatorlargacha masofani yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Qorovul posti",
+            "for": "Obyekt qo‘riqlash, kichik dispetcherlik",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "46–55 dyuymli panellardan 2×2 videodevor",
+              "Obyekt kameralarini chiqarish, tartibni almashtirish bilan",
+              "Suriluvchi kronshteyn — devorni buzmasdan xizmat ko‘rsatish",
+              "Signal kerakli kamerani yirik planda chiqaradi"
+            ]
+          },
+          {
+            "name": "Dispetcherlik",
+            "for": "Ishlab chiqarish, logistika, transport",
+            "term": "Muddat: loyiha bo‘yicha, 2 haftadan",
+            "items": [
+              "3×3 va undan katta videodevor, bir necha manbali kontroller",
+              "Kameralar, grafiklar va ish stollarini bir vaqtda chiqarish",
+              "Operator pultidan tartiblarni boshqarish",
+              "Quvvat va kontrollerni zaxiralash"
+            ]
+          },
+          {
+            "name": "Vaziyat markazi",
+            "for": "Davlat buyurtmachisi, yirik korxona, ma’lumot markazi",
+            "term": "Muddat: loyiha bo‘yicha",
+            "items": [
+              "Zal loyihasi: ko‘rish masofasi, o‘rnatish balandligi, yoritish",
+              "Manbalar matritsasi: videokuzatuv, tahlil, tashqi tizimlar",
+              "Operatorlar ish joylari alohida monitorlar bilan",
+              "Xizmat ko‘rsatish tartibi va zaxira panellar"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan videodevorgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "zalni o‘lchaymiz, ko‘rish masofasi va yoritishni ko‘ramiz — bepul"
+          },
+          {
+            "t": "Loyiha va taklif",
+            "s": "panellar soni, kontroller, konstruksiya, narxli smeta"
+          },
+          {
+            "t": "Montaj",
+            "s": "konstruksiyani yig‘ish, panellarni bir tekislikka moslash"
+          },
+          {
+            "t": "Sozlash",
+            "s": "manbalar, tartiblar, stsenariylar, operator huquqlari"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "operatorlarni o‘qitamiz; panel va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Panellar va kontrollerlar — buyurtma bo‘yicha",
+        "brandsText": "Hikvision va Dahua — ingichka chokli panellar va videodevor kontrollerlari, kafolat bilan yetkazamiz:"
+      }
     },
     "pa": {
       "title": "Ogohlantirish tizimlari",
@@ -1231,7 +1499,74 @@
         "Joylar hisobi va tariflash",
         "To‘lov va SKUD integratsiyasi",
         "Ishga tushirish va servis"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Parkovkaning uchta tipik sxemasi",
+        "pkgNote": "Har bir obyektni alohida hisoblaymiz: joylar soni va kuniga nechta mashina kirishini yuboring — kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "TJM yoki ofis hovlisi",
+            "for": "Turar-joy majmuasi, biznes-markaz, klinika",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Kirishga shlagbaum va yashovchi hamda xodimlar raqamlarini aniqlash",
+              "Oq ro‘yxat — o‘zimiznikilar to‘xtamay va pultsiz kiradi",
+              "Mehmonlar qorovulga qo‘ng‘iroq yoki bir martalik QR-kod bilan",
+              "Jurnal: kim, qachon va qaysi mashinada kirgan"
+            ]
+          },
+          {
+            "name": "Pullik parkovka",
+            "for": "Savdo markazi, bozor, biznes-park",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Raqam bo‘yicha kirish va chiqish, turish vaqti avtomatik hisoblanadi",
+              "Kassa yoki terminalda to‘lov, to‘lovdan keyin chiqish",
+              "Kirishda bo‘sh joylar tablosi",
+              "Smena va oy bo‘yicha bandlik hamda tushum hisoboti"
+            ]
+          },
+          {
+            "name": "Korxona nazorat punkti",
+            "for": "Zavod, ombor, logistika majmuasi",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Yetkazib beruvchi va pudratchi transportini raqam bo‘yicha hisobga olish",
+              "KPP SKUD va tarozi bilan bog‘lash",
+              "Har bir kirishda mashina va raqam fotosi",
+              "Qorovul va buxgalteriya uchun ma’lumot yuklab olish"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan parkovkagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "kirish joyi, yoritilishi va kamera burchaklarini ko‘ramiz — bepul"
+          },
+          {
+            "t": "Loyiha va taklif",
+            "s": "kameralar, shlagbaum, o‘tish mantiqi, smeta — kun davomida"
+          },
+          {
+            "t": "Montaj",
+            "s": "ustunlar, kameralar, kabel trassalari, quvvat"
+          },
+          {
+            "t": "Sozlash",
+            "s": "oq ro‘yxatlar, tariflar, o‘tish huquqlari, hisobotlar"
+          },
+          {
+            "t": "Topshirish va xizmat",
+            "s": "qorovul va administratorni o‘qitamiz; uskuna va ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Parkovka uskunalari — Toshkentdagi omborda",
+        "brandsText": "ZKTeco, Hikvision, Dahua — shlagbaum, raqam aniqlash kameralari va kontrollerlar, o‘zimiz kafolat bilan yetkazamiz:"
+      }
     },
     "retail": {
       "title": "Riteyl va bozorlar",
@@ -1469,7 +1804,74 @@
           "q": "Fiber optika o'tkazishining narxi nechcha?",
           "a": "Trassa turiga bog'liq: binoning ichida, tayanch ustunlari bo'ylab yoki kanalizatsiya ichida. Vazifangizni tavsiflang — smetani va muddatlarni hisoblaymiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tipik yechimlar",
+        "pkgTitle": "Optika bo‘yicha uchta tipik vazifa",
+        "pkgNote": "Trassaga qarab hisoblaymiz: masofani va nuqtalar orasida nima borligini — bino, yo‘l, ustunlar — yuboring, kun davomida aniq smetali taklif qaytaramiz.",
+        "packages": [
+          {
+            "name": "Binolar orasidagi aloqa",
+            "for": "Ikki korpus, ofis va ombor, sex va ma’muriy bino",
+            "term": "Muddat: 1–3 kun",
+            "items": [
+              "Ustunlar, fasad yoki kabel kanalizatsiyasi bo‘ylab trassa",
+              "Ko‘cha yoki ADSS kabeli — obyekt sharoitiga qarab",
+              "Tolalarni payvandlash va ikki tomonda optik kross o‘rnatish",
+              "Topshirishda reflektometr o‘lchov bayonnomasi"
+            ]
+          },
+          {
+            "name": "Bino ichidagi magistral",
+            "for": "Ko‘p qavatli ofis, TJM, savdo markazi",
+            "term": "Muddat: loyiha bo‘yicha, 1 haftadan",
+            "items": [
+              "Qavatlar orasida stoyak, har qavatda krosslar",
+              "Kelajakdagi kengaytirish uchun zaxira tolalar",
+              "Hujjatlarda markirovka va liniyalar sxemasi",
+              "Trassa yong‘in talablariga muvofiqlashtirilgan"
+            ]
+          },
+          {
+            "name": "Shikastlangan liniyani ta’mirlash",
+            "for": "Yer ishlari yoki avariyadan keyingi uzilish",
+            "term": "Muddat: murojaat kuni chiqamiz",
+            "items": [
+              "Uzilish joyini reflektometr bilan topamiz",
+              "Joyida payvandlash va mufta o‘rnatish",
+              "Ta’mirdan keyin nazorat o‘lchovlari",
+              "Har bir tola bo‘yicha so‘nish bayonnomasi"
+            ]
+          }
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan bayonnomali liniyagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "trassa, masofa va yotqizish usulini ko‘ramiz — bepul"
+          },
+          {
+            "t": "Loyiha va taklif",
+            "s": "kabel turi, tolalar soni, krosslar, smeta — kun davomida"
+          },
+          {
+            "t": "Yotqizish",
+            "s": "ustunlar, fasad yoki kanalizatsiya bo‘ylab, mahkamlash va zaxira bilan"
+          },
+          {
+            "t": "Payvandlash va o‘lchash",
+            "s": "tolalarni payvandlash, krosslar, har bir tola bo‘yicha reflektometr"
+          },
+          {
+            "t": "Topshirish",
+            "s": "o‘lchov bayonnomasi va liniyalar sxemasi; ishlarga kafolat"
+          }
+        ],
+        "brandsLabel": "Materiallar",
+        "brandsTitle": "Kabel va optik krosslar",
+        "brandsText": "Ichki, ko‘cha va ADSS kabeli, krosslar, muftalar va pigteyllar — trassaga qarab tanlaymiz va o‘zimiz yetkazamiz:"
+      }
     },
     "radiobridge": {
       "title": "Radioko'priklar",

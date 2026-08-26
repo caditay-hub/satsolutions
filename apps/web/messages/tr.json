@@ -461,7 +461,74 @@
           "q": "Ücretli otoparklar için uygun mu?",
           "a": "Evet, ANPR otoparklarda giriş/çıkış kaydı, ücretlendirme ve geçiş kontrolü için kullanılır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart plaka tanıma şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: girişin fotoğrafını ve günde kaç araç geçtiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Tek giriş",
+            "for": "Ofis bahçesi, depo, küçük alan",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Girişte tek ANPR kamerası, bariyer tanınan araçlara açılır",
+              "Araç beyaz listesi — plaka eklemek bir dakika sürer",
+              "Araç ve plaka fotoğrafıyla geçiş kaydı",
+              "Gece ve yağmurda çalışır — kızılötesi aydınlatmalı kamera"
+            ]
+          },
+          {
+            "name": "Giriş ve çıkış",
+            "for": "Konut sitesi, iş merkezi, otopark",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "İki kamera: içeride geçirilen süre otomatik hesaplanır",
+              "Ziyaretçiler için tek kullanımlık izin",
+              "Otopark sistemi ve ödeme ile bağlantı",
+              "Doluluk ve süreyi aşan araçlar raporu"
+            ]
+          },
+          {
+            "name": "Fabrika giriş noktası",
+            "for": "Fabrika, depo sahası, lojistik tesisi",
+            "term": "Süre: projeye göre",
+            "items": [
+              "Tedarikçi ve taşeron araçlarının plakayla takibi",
+              "Kantar ve depo kayıtlarıyla bağlantı",
+              "Kısıtlı alana tanınmayan plaka girdiğinde uyarı",
+              "Güvenlik ve muhasebe için kayıt aktarımı"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan ANPR sistemine — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "montaj açısını, aydınlatmayı ve araç hızını görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Seçim ve teklif",
+            "s": "kamera, denetleyici, geçiş mantığı, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "direk veya konsol, kablo, besleme, bariyer bağlantısı"
+          },
+          {
+            "t": "Ayar",
+            "s": "beyaz listeler, tanıma doğruluğu, kayıt, erişim yetkileri"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "araç eklemeyi öğretiyoruz; ekipman ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "ANPR kameraları — Taşkent’te stokta",
+        "brandsText": "Hikvision ve Dahua — plaka tanıma kameraları ve geçiş kontrol üniteleri, garantiyle tedarik ediyoruz:"
+      }
     },
     "access": {
       "title": "Geçiş kontrolü",
@@ -677,7 +744,74 @@
           "q": "Çalışan giriş yapmayı unutursa ne olur?",
           "a": "Yönetici yetkisiyle manuel düzeltme ve değişiklik günlüğü mevcuttur."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart personel takip şeması",
+        "pkgNote": "İşe göre hesaplıyoruz: personel sayısını, giriş sayısını ve raporda ne olması gerektiğini yazın, aynı gün teklif dönelim.",
+        "packages": [
+          {
+            "name": "Küçük ofis",
+            "for": "30 kişiye kadar, ofis veya mağaza",
+            "term": "Süre: 1 gün",
+            "items": [
+              "Girişte tek terminal: parmak izi, kart veya yüz tanıma",
+              "Kâğıt defter yerine otomatik puantaj",
+              "Aylık geç kalma ve fazla mesai raporu",
+              "Bordro için Excel’e aktarım"
+            ]
+          },
+          {
+            "name": "Birden çok giriş",
+            "for": "Ofis, depo ve üretim aynı tesiste",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Her girişte terminal, tek ortak personel veritabanı",
+              "Vardiya düzenleri: gece, hafta sonu ve resmî tatil kuralları",
+              "Departmanlara ayrım, her birinin kendi yöneticisi",
+              "1C’ye aktarım — puantaj doğrudan bordroya girer"
+            ]
+          },
+          {
+            "name": "Turnikeli giriş noktası",
+            "for": "Fabrika, şantiye, kısıtlı erişimli tesis",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Turnike ve biyometri — başkasının kartıyla geçilemez",
+              "Taşeron ve geçici kart takibi",
+              "Kamera sistemiyle bağlantı: her geçişte fotoğraf",
+              "Sahada fiilen çalışılan saat raporu"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan puantaja — 5 adım",
+        "stages": [
+          {
+            "t": "İhtiyaç analizi",
+            "s": "kaç kişi ve giriş, hangi vardiyalar, raporda ne görünmeli"
+          },
+          {
+            "t": "Seçim ve teklif",
+            "s": "terminaller, tanıma yöntemi, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "terminal montajı, besleme ve ağ, gerekirse turnike"
+          },
+          {
+            "t": "Ayar",
+            "s": "personel kayıtları, vardiyalar, geç kalma kuralları, 1C aktarımı"
+          },
+          {
+            "t": "Teslim ve eğitim",
+            "s": "İK’ya puantaj almayı gösteriyoruz; garanti ve destek"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Personel takip terminalleri — Taşkent’te stokta",
+        "brandsText": "ZKTeco ve Hikvision — biyometrik terminaller ve kart okuyucular, garantiyle tedarik ediyoruz:"
+      }
     },
     "alarm": {
       "title": "Hırsız alarmı",
@@ -703,7 +837,74 @@
           "q": "Elektrik kesildiğinde çalışır mı?",
           "a": "Evet, cihazlar yedek aküyle donatılır ve şebeke kesintisinde çalışmaya devam eder."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart hırsız alarmı şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kat planını ve giriş sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Daire veya müstakil ev",
+            "for": "Ev, yazlık, daire, garaj",
+            "term": "Süre: 1 gün",
+            "items": [
+              "Kapı ve pencerelerde manyetik kontak, içeride hareket dedektörü",
+              "Alarm anında siren ve telefona bildirim",
+              "Kablosuz dedektörler — kırım ve kablo yok",
+              "Uygulamadan veya kumandayla kurma ve kapatma"
+            ]
+          },
+          {
+            "name": "Mağaza, ofis, depo",
+            "for": "Satış noktası, ofis, depo, eczane",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Çevrede hareket, kontak ve cam kırılma dedektörleri",
+              "Kasada ve çalışma noktalarında panik butonu",
+              "Personele ayrı şifreler — alarmı kimin kapattığı görülür",
+              "Sinyalin güvenlik şirketi merkezine iletilmesi"
+            ]
+          },
+          {
+            "name": "Tesis ve saha",
+            "for": "Fabrika, depo sahası, lojistik tesisi",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Bölgelere ayırma: üretim, depo, ofis, çevre",
+              "Kamera sistemiyle bağlantı — alarm ilgili kamerayı öne alır",
+              "Pano ve teknik hacimlerde sabotaj algılama",
+              "Alarm ve kurma kayıtları, dönemsel rapor"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten korunan tesise — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "tesisi, girişleri ve kör noktaları geziyoruz — ücretsiz"
+          },
+          {
+            "t": "Bölge projesi ve teklif",
+            "s": "dedektörler, panel, alarm senaryoları, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "kablosuz dedektörler kırım olmadan, kablolular düzgün güzergâhta"
+          },
+          {
+            "t": "Ayar",
+            "s": "senaryolar, personel şifreleri, telefona ve merkeze bildirim"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "kurma ve kapatmayı öğretiyoruz; ekipman ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Hırsız alarm sistemleri — Taşkent’te stokta",
+        "brandsText": "Hikvision AX PRO — kablosuz dedektör ve paneller, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
+      }
     },
     "fire": {
       "title": "Yangın alarmı & tahliye",
@@ -1042,7 +1243,74 @@
           "q": "Kameralar video duvara verilebilir mi?",
           "a": "Evet, video duvarı gözetim sistemi ve diğer kaynaklarla entegre ediyoruz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart video duvar konfigürasyonu",
+        "pkgNote": "Salona göre hesaplıyoruz: mekân ölçülerini ve izleme mesafesini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Güvenlik noktası",
+            "for": "Tesis güvenliği, küçük kontrol odası",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "46–55 inç panellerden 2×2 video duvar",
+              "Tesis kameralarının görüntülenmesi, düzen değiştirmeli",
+              "Sürgülü askı — duvarı sökmeden bakım",
+              "Alarm, ilgili kamerayı tam ekran öne alır"
+            ]
+          },
+          {
+            "name": "Kontrol odası",
+            "for": "Üretim, lojistik, ulaşım",
+            "term": "Süre: projeye göre, 2 haftadan itibaren",
+            "items": [
+              "3×3 ve üzeri duvar, çok kaynaklı denetleyici",
+              "Kameralar, grafikler ve masaüstleri aynı anda",
+              "Düzenlerin operatör konsolundan yönetimi",
+              "Besleme ve denetleyici yedekliliği"
+            ]
+          },
+          {
+            "name": "Durum merkezi",
+            "for": "Kamu kurumu, büyük işletme, veri merkezi",
+            "term": "Süre: projeye göre",
+            "items": [
+              "Salon projesi: izleme mesafesi, montaj yüksekliği, aydınlatma",
+              "Kaynak matrisi: kamera, analitik, dış sistemler",
+              "Operatörler için ayrı monitörlü çalışma masaları",
+              "Bakım planı ve yedek panel stoğu"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan video duvara — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "salonu ölçüyor, izleme mesafesi ve aydınlatmayı görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Proje ve teklif",
+            "s": "panel sayısı, denetleyici, konstrüksiyon, fiyatlı keşif"
+          },
+          {
+            "t": "Montaj",
+            "s": "konstrüksiyon kurulumu, panellerin tek düzleme hizalanması"
+          },
+          {
+            "t": "Ayar",
+            "s": "kaynaklar, düzenler, senaryolar, operatör yetkileri"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "operatörleri eğitiyoruz; panel ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Paneller ve denetleyiciler — siparişe göre tedarik",
+        "brandsText": "Hikvision ve Dahua — ince çerçeveli paneller ve video duvar denetleyicileri, garantiyle tedarik ediyoruz:"
+      }
     },
     "pa": {
       "title": "Anons sistemleri",
@@ -1223,7 +1491,74 @@
         "Yer sayımı ve ücretlendirme",
         "Ödeme ve geçiş kontrolü entegrasyonu",
         "Devreye alma ve servis"
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart otopark şeması",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: park yeri sayısını ve günde kaç araç girdiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Site veya ofis bahçesi",
+            "for": "Konut sitesi, iş merkezi, klinik",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Girişte bariyer ve sakin ile personel için plaka tanıma",
+              "Beyaz liste — düzenli araçlar durmadan, kumandasız girer",
+              "Ziyaretçi girişi güvenliği arayarak veya tek kullanımlık QR ile",
+              "Kayıt: kim, ne zaman ve hangi araçla girdi"
+            ]
+          },
+          {
+            "name": "Ücretli otopark",
+            "for": "Alışveriş merkezi, pazar, iş parkı",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Plakayla giriş çıkış, park süresi otomatik hesaplanır",
+              "Kasada veya kioskta ödeme, ödeme sonrası çıkış açılır",
+              "Girişte boş yer göstergesi",
+              "Vardiya ve ay bazında doluluk ve gelir raporları"
+            ]
+          },
+          {
+            "name": "Fabrika giriş noktası",
+            "for": "Fabrika, depo, lojistik tesisi",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Tedarikçi ve taşeron araçlarının plakayla takibi",
+              "Giriş noktası geçiş kontrolü ve kantar ile bağlantı",
+              "Her girişte araç ve plaka fotoğrafı",
+              "Güvenlik ve muhasebe için veri aktarımı"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan otoparka — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "girişi, aydınlatmayı ve kamera açılarını görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Proje ve teklif",
+            "s": "kameralar, bariyer, geçiş mantığı, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Montaj",
+            "s": "direkler, kameralar, kablo güzergâhları, besleme"
+          },
+          {
+            "t": "Ayar",
+            "s": "beyaz listeler, tarifeler, geçiş yetkileri, raporlar"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "güvenlik ve yöneticiyi eğitiyoruz; ekipman ve işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Otopark ekipmanı — Taşkent’te stokta",
+        "brandsText": "ZKTeco, Hikvision, Dahua — bariyer, plaka tanıma kameraları ve kontrol üniteleri, garantiyle tedarik ediyoruz:"
+      }
     },
     "retail": {
       "title": "Perakende & pazarlar",
@@ -1461,7 +1796,74 @@
           "q": "Fiber döşeme ne kadar tutar?",
           "a": "Güzergâha bağlıdır: bina içi, direkler veya kanal. Görevi anlatın — keşif ve süre hesaplayalım."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Standart çözümler",
+        "pkgTitle": "Üç standart fiber işi",
+        "pkgNote": "Güzergâha göre hesaplıyoruz: mesafeyi ve noktalar arasında ne olduğunu — bina, yol, direk — gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "packages": [
+          {
+            "name": "Binalar arası bağlantı",
+            "for": "İki blok, ofis ve depo, üretim ve idari bina",
+            "term": "Süre: 1–3 gün",
+            "items": [
+              "Direk, cephe veya kablo kanalı üzerinden güzergâh",
+              "Dış ortam veya ADSS kablo — saha koşullarına göre",
+              "Fiber ek yapımı ve iki uçta optik kroking montajı",
+              "Teslimde OTDR ölçüm raporu"
+            ]
+          },
+          {
+            "name": "Bina içi omurga",
+            "for": "Çok katlı ofis, konut sitesi, alışveriş merkezi",
+            "term": "Süre: projeye göre, 1 haftadan itibaren",
+            "items": [
+              "Katlar arası dikey hat, her katta kroking",
+              "İleride büyüme için yedek fiber",
+              "Etiketleme ve dokümantasyonda hat şeması",
+              "Güzergâhın yangın gerekliliklerine uygunluğu"
+            ]
+          },
+          {
+            "name": "Hasarlı hattın onarımı",
+            "for": "Kazı çalışması veya arıza sonrası kopma",
+            "term": "Süre: aynı gün çıkış",
+            "items": [
+              "Kopma noktasını OTDR ile buluyoruz",
+              "Yerinde ek yapımı ve ek kutusu montajı",
+              "Onarım sonrası kontrol ölçümleri",
+              "Her fiber için zayıflama raporu"
+            ]
+          }
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten raporlu hatta — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis keşfi",
+            "s": "güzergâhı, mesafeyi ve serim yöntemini görüyoruz — ücretsiz"
+          },
+          {
+            "t": "Proje ve teklif",
+            "s": "kablo tipi, fiber sayısı, krokingler, fiyatlı keşif — aynı gün"
+          },
+          {
+            "t": "Serim",
+            "s": "direk, cephe veya kanal üzerinden, sabitleme ve pay bırakarak"
+          },
+          {
+            "t": "Ek ve ölçüm",
+            "s": "fiber ekleri, kroking montajı, her fiberde OTDR ölçümü"
+          },
+          {
+            "t": "Teslim",
+            "s": "ölçüm raporu ve hat şeması; işçilik garantili"
+          }
+        ],
+        "brandsLabel": "Malzemeler",
+        "brandsTitle": "Kablo ve optik krokingler",
+        "brandsText": "İç mekân, dış mekân ve ADSS kablo, kroking, ek kutusu ve pigtail — güzergâha göre seçip kendimiz tedarik ediyoruz:"
+      }
     },
     "radiobridge": {
       "title": "Telsiz Köprüler",
