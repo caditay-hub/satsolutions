@@ -436,8 +436,8 @@ export default async function HomePage() {
           НОВИНКИ — тонкая бегущая лента-«пилюли» (автоматически по createdAt)
       ══════════════════════════════════════════════════════ */}
       {newSlim.length >= 4 && (
-        <section className="border-y border-slate-100 bg-slate-50/70">
-          <div className="container-page !py-2.5">
+        <section className="border-y border-[#f3d4d4] bg-gradient-to-b from-[#fdf1f1] to-[#fbe9e9]">
+          <div className="container-page !py-3">
             <NewArrivalsTicker
               items={newSlim.map((p) => ({
                 slug: p.slug,

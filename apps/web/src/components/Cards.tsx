@@ -116,8 +116,8 @@ export function NewArrivalsTicker({
   const doubled = [...items, ...items];
   return (
     <div className="newarr-tickwrap relative">
-      <div className="newarr-fade overflow-hidden py-2.5">
-        <div className="newarr-ticker flex w-max items-center gap-3 pr-3">
+      <div className="newarr-fade overflow-hidden py-3">
+        <div className="newarr-ticker flex w-max items-center gap-3.5 pr-3.5">
           {doubled.map((it, i) => {
             const dup = i >= items.length;
             return (
@@ -126,12 +126,12 @@ export function NewArrivalsTicker({
                 href={`/products/${it.slug}`}
                 aria-hidden={dup || undefined}
                 tabIndex={dup ? -1 : undefined}
-                className="flex flex-none items-center gap-2 whitespace-nowrap rounded-full border border-slate-200 bg-white py-1 pl-1.5 pr-3.5 text-[13px] shadow-sm transition-colors hover:border-slate-300"
+                className="flex flex-none items-center gap-2.5 whitespace-nowrap rounded-full border border-[#f0d6d6] bg-white py-1.5 pl-2 pr-4 text-[14.5px] shadow-[0_1px_5px_rgba(180,40,40,0.09)] transition-colors hover:border-[#e3b8b8]"
               >
                 {it.img ? (
-                  <img src={it.img} alt="" width={30} height={30} loading="lazy" className="h-[30px] w-[30px] rounded-full bg-white object-contain" />
+                  <img src={it.img} alt="" width={38} height={38} loading="lazy" className="h-[38px] w-[38px] rounded-full bg-white object-contain" />
                 ) : (
-                  <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-slate-100 text-sm" aria-hidden>📦</span>
+                  <span className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-slate-100 text-base" aria-hidden>📦</span>
                 )}
                 <span className="font-bold text-slate-900">{it.name}</span>
                 {it.price ? <span className="font-extrabold text-[#e02020]">{it.price}</span> : null}
