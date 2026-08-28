@@ -425,9 +425,11 @@ publicRouter.get("/products", async (req, res) => {
           : sort === "name_desc"
             ? [["name", "DESC"]]
             : sort === "old"
-              ? [["updatedAt", "ASC"]]
+              ? [["createdAt", "ASC"]]
               : sort === "new"
-                ? [["updatedAt", "DESC"]]
+                // по дате ДОБАВЛЕНИЯ: правка цены/описания (updatedAt) не должна
+                // поднимать старый товар в «Новинки»
+                ? [["createdAt", "DESC"]]
                 // default: by category, then by name — logical grouping
                 : [[categoryNameExpr, "ASC"], ["name", "ASC"]];
 
