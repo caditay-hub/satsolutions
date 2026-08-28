@@ -194,7 +194,7 @@ export default async function HomePage() {
     getBrands().catch(() => ({ brands: [] })),
     getPartners().catch(() => ({ partners: [] })),
     // Новинки каталога: 8 последних за 90 дней (блок после «Каталога продукции»)
-    getProducts(1, 8, { sort: "new", days: 90 }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
+    getProducts(1, 8, { sort: "new", days: 60 }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
   ]);
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));

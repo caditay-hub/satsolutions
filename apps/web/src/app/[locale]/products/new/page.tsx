@@ -12,7 +12,9 @@ export const revalidate = 300;
 // «Новинки»: товары за последние NEW_SECTION_DAYS дней (sort=new). Если свежих
 // мало (затишье в поставках) — страница не пустеет: показываем просто последние
 // поступления без ограничения по дате.
-const NEW_SECTION_DAYS = 90;
+// 60 дней — как у бейджа «Новинка» (NEW_BADGE_DAYS): раздел показывает ровно то,
+// что помечено бейджем. 90 дней захватывало первичную заливку каталога (июнь).
+const NEW_SECTION_DAYS = 60;
 const PER_PAGE = 24;
 const MIN_ITEMS = 12;
 
@@ -80,15 +82,19 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
 
       {pages > 1 && (
         <div className="mt-8 flex items-center justify-center gap-2">
-          {Array.from({ length: pages }, (_, i) => i + 1).map((n) => (
-            <Link
-              key={n}
-              href={n === 1 ? "/products/new" : (`/products/new?page=${n}` as any)}
-              className={`rounded-lg px-3.5 py-2 text-sm font-bold ${n === page ? "bg-brand-600 text-white" : "border border-slate-200 text-slate-700 hover:border-brand-400"}`}
-            >
-              {n}
-            </Link>
-          ))}
+          {Array.from({ length: pages }, (_, i) => i + 1)
+            .filter((n) => n === 1 || n === pages || Math.abs(n - page) <= 2)
+            .map((n, idx, arr) => (
+              <span key={n} className="flex items-center gap-2">
+                {idx > 0 && n - arr[idx - 1] > 1 ? <span className="text-slate-400">…</span> : null}
+                <Link
+                  href={n === 1 ? "/products/new" : (`/products/new?page=${n}` as any)}
+                  className={`rounded-lg px-3.5 py-2 text-sm font-bold ${n === page ? "bg-brand-600 text-white" : "border border-slate-200 text-slate-700 hover:border-brand-400"}`}
+                >
+                  {n}
+                </Link>
+              </span>
+            ))}
         </div>
       )}
       </div>
