@@ -200,3 +200,19 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
   .cat3d-tile:hover .cat3d-img { animation: none; transform: scale(1.08); }
   .cat3d-tile:hover .cat3d-shadow { animation: none; opacity: 0; }
 }
+
+/* Карусель «Новинки» на главной: бесконечная медленная лента, пауза при наведении */
+@keyframes newarr-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.newarr-track {
+  animation: newarr-scroll 60s linear infinite;
+  will-change: transform;
+}
+.newarr-viewport:hover .newarr-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .newarr-track { animation: none; }
+}

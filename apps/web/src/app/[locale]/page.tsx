@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
 import { getBrands, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
-import { NewArrivalCard } from "@/components/Cards";
+import { NewArrivalsCarousel } from "@/components/Cards";
 import { localizeProductName } from "@/lib/productI18n";
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
@@ -451,11 +451,9 @@ export default async function HomePage() {
                 </svg>
               </Link>
             </div>
-            <div className="mx-auto grid max-w-[1180px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-              {newSlim.map((p) => (
-                <NewArrivalCard key={p.id} p={p} name={p.localizedName} brandName={p.brandName} />
-              ))}
-            </div>
+            <NewArrivalsCarousel
+              items={newSlim.map((p) => ({ p, name: p.localizedName, brandName: p.brandName }))}
+            />
             <div className="mt-6 sm:hidden text-center">
               <Link href="/products/new" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("newArrivalsAll")} →</Link>
             </div>

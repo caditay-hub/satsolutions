@@ -101,3 +101,34 @@ export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: s
     </Link>
   );
 }
+
+/** Карусель новинок на главной: один ряд (4 карточки в кадре), лента из всех
+ *  товаров медленно и бесконечно плывёт влево; наведение ставит на паузу.
+ *  Список дублируется для бесшовного зацикливания (дубли скрыты от SEO/фокуса). */
+export function NewArrivalsCarousel({
+  items,
+}: {
+  items: Array<{ p: ProductDto; name: string; brandName: string | null }>;
+}) {
+  if (!items.length) return null;
+  const doubled = [...items, ...items];
+  return (
+    <div className="newarr-viewport mx-auto max-w-[1180px] overflow-hidden">
+      <div className="newarr-track flex w-max gap-4">
+        {doubled.map((it, i) => {
+          const dup = i >= items.length;
+          return (
+            <div
+              key={`${it.p.id}-${i}`}
+              className="w-[46vw] flex-none sm:w-[260px] lg:w-[283px]"
+              aria-hidden={dup || undefined}
+              {...(dup ? { inert: "" as never } : {})}
+            >
+              <NewArrivalCard p={it.p} name={it.name} brandName={it.brandName} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
