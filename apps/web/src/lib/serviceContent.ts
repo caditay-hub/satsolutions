@@ -274,6 +274,22 @@ const ru: Record<string, ServiceContent> = {
       "Мы проектируем и монтируем такие объекты целиком: видеонаблюдение, СКУД и учёт рабочего времени, пожарная сигнализация и пожаротушение по назначению помещений, СКС и промышленные сети, серверная для архива и систем управления. Работаем без остановки производства, поэтапно, и берём объект на сервисное обслуживание с регламентными выездами по Ташкенту и регионам.",
     ],
   },
+  perimeter: {
+    heading: "Периметральная охрана объекта: от забора до реакции",
+    paragraphs: [
+      "Периметральная охрана обнаруживает нарушителя до того, как он попал в здание: датчики и видеоаналитика контролируют забор, ворота и подходы к объекту. SAT Solutions проектирует и монтирует периметральные системы для складов, заводов, логистических баз, ферм и коттеджей: вибрационные кабели на ограждении, инфракрасные и радиолучевые барьеры, тепловизоры и камеры с аналитикой пересечения линии.",
+      "Технологию подбираем под объект и бюджет. Вибрационный кабель ловит перелаз и разрушение полотна забора; лучевые барьеры перекрывают открытые участки и въезды; видеоаналитика на IP-камерах даёт виртуальную линию с верификацией по картинке, а тепловизоры работают в полной темноте и туман. На протяжённых периметрах системы комбинируются: сработка датчика автоматически разворачивает поворотную камеру в точку тревоги.",
+      "Ложные тревоги — главный враг периметралки, поэтому половина работы — правильная настройка: зоны, чувствительность под ветер и животных, привязка сработок к видеозаписи. Систему связываем с охранной сигнализацией, оповещением поста и мобильными уведомлениями. Монтируем под ключ по Ташкенту и всему Узбекистану, даём гарантию и обслуживаем.",
+    ],
+  },
+  pa: {
+    heading: "Системы оповещения и трансляции (PA) под ключ",
+    paragraphs: [
+      "Система оповещения и музыкальной трансляции (Public Address) решает две задачи: в обычном режиме — фоновая музыка и объявления по зонам, при пожаре — автоматическое речевое оповещение и управление эвакуацией (СОУЭ). SAT Solutions проектирует и монтирует PA-системы для торговых центров, офисов, школ, производств, гостиниц и ресторанов.",
+      "В состав входят усилители и матричные контроллеры, потолочные и настенные громкоговорители, рупорные динамики для улицы и цехов, микрофонные пульты с выбором зон. Систему делим на зоны: в торговом зале — музыка и рекламные объявления, на складе — вызовы персонала, снаружи — тревожное оповещение. При интеграции с пожарной сигнализацией трансляция автоматически прерывается речевым сообщением эвакуации — как требуют нормы СОУЭ.",
+      "Мощность и число динамиков считаем от площади, высоты потолков и фонового шума: то, что слышно в офисе, потеряется в цехе. Поставляем проверенное оборудование трансляции, монтируем и настраиваем под ключ, сдаём СОУЭ вместе с пожарной сигнализацией по нормам Узбекистана. Гарантия и сервис — по всей стране.",
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -534,6 +550,22 @@ const uz: Record<string, ServiceContent> = {
       "Bunday obyektlarni butunlay loyihalaymiz va montaj qilamiz: videokuzatuv, SKUD va ish vaqti hisobi, xonalar vazifasiga qarab yong'in signalizatsiyasi va o'chirish, strukturali kabel tizimi va sanoat tarmoqlari, arxiv hamda boshqaruv tizimlari uchun server xonasi. Ishlab chiqarishni to'xtatmasdan, bosqichma-bosqich ishlaymiz va obyektni reglament chiqishlari bilan servis xizmatiga olamiz.",
     ],
   },
+  perimeter: {
+    heading: "Perimetr qo'riqlash: to'siqdan tezkor javobgacha",
+    paragraphs: [
+      "Perimetr qo'riqlash tizimi buzg'unchini binoga kirgunga qadar aniqlaydi: datchiklar va videoanalitika to'siq, darvoza va yo'laklarni nazorat qiladi. SAT Solutions omborlar, zavodlar, logistika bazalari va hovlilar uchun perimetr tizimlarini loyihalaydi va o'rnatadi: to'siqqa vibratsion kabel, infraqizil va radiotolqinli barierlar, teplovizorlar va chiziq kesishuvi analitikali kameralar.",
+      "Texnologiya obyekt va byudjetga qarab tanlanadi. Vibratsion kabel to'siqdan oshib o'tish va buzishni sezadi; nurli barierlar ochiq uchastkalar va kirishlarni yopadi; IP-kameralardagi videoanalitika tasvir bilan tasdiqlanadigan virtual chiziq beradi, teplovizorlar esa to'liq qorong'ida ham ishlaydi. Uzun perimetrlarda tizimlar birlashtiriladi: datchik ishlaganda aylanuvchi kamera avtomatik ravishda trevoga nuqtasiga buriladi.",
+      "Yolg'on trevogalar — perimetr tizimining asosiy dushmani, shuning uchun ishning yarmi to'g'ri sozlash: zonalar, shamol va hayvonlarga moslashgan sezgirlik, sabab bo'lgan hodisani videoyozuvga bog'lash. Tizimni qo'riqlash signalizatsiyasi, post ogohlantirishi va mobil xabarlar bilan bog'laymiz. Toshkent va butun O'zbekiston bo'ylab kalit topshirish sharti bilan o'rnatamiz, kafolat va servis beramiz.",
+    ],
+  },
+  pa: {
+    heading: "Ogohlantirish va translyatsiya (PA) tizimlari",
+    paragraphs: [
+      "Ovozli ogohlantirish va musiqiy translyatsiya (Public Address) tizimi ikki vazifani bajaradi: oddiy rejimda — zonalar bo'yicha fon musiqasi va e'lonlar, yong'inda — avtomatik nutqli ogohlantirish va evakuatsiyani boshqarish (SOUE). SAT Solutions savdo markazlari, ofislar, maktablar, ishlab chiqarish va mehmonxonalar uchun PA-tizimlarni loyihalaydi va o'rnatadi.",
+      "Tizim tarkibiga kuchaytirgichlar va matritsali kontrollerlar, shift va devor karnaylari, ko'cha va sexlar uchun rupor dinamiklar, zonalarni tanlaydigan mikrofon pultlari kiradi. Tizim zonalarga bo'linadi: savdo zalida — musiqa va reklama e'lonlari, omborda — xodimlarni chaqirish, tashqarida — trevoga ogohlantirishi. Yong'in signalizatsiyasi bilan integratsiyada translyatsiya avtomatik ravishda evakuatsiya haqidagi nutqli xabar bilan uziladi.",
+      "Quvvat va dinamiklar soni maydon, shift balandligi va fon shovqinidan hisoblanadi: ofisda eshitiladigan narsa sexda yo'qoladi. Ishonchli translyatsiya uskunalarini yetkazamiz, kalit topshirish sharti bilan o'rnatib sozlaymiz, SOUE ni yong'in signalizatsiyasi bilan birga O'zbekiston me'yorlari bo'yicha topshiramiz. Kafolat va servis — butun mamlakat bo'ylab.",
+    ],
+  },
 };
 
 // Английский блок появился 19.08.2026: до этого содержательного текста на
@@ -584,9 +616,63 @@ const en: Record<string, ServiceContent> = {
       "The call panel is only part of the kit. It needs an electromagnetic or electromechanical lock, a door closer, a power supply with battery backup and an exit button, and for shared entrances a vandal-resistant panel. We install Hikvision, Dahua and other proven equipment and link the intercom to access control, so residents and staff enter with a card or phone, guests are admitted by call, and every event is visible in one system alongside the video.",
     ],
   },
+  perimeter: {
+    heading: "Perimeter security: from the fence line to the response",
+    paragraphs: [
+      "Perimeter protection detects an intruder before they reach the building: sensors and video analytics watch the fence, gates and approaches. SAT Solutions designs and installs perimeter systems for warehouses, plants, logistics yards, farms and private estates: vibration cable on the fence fabric, infrared and microwave barriers, thermal imagers and IP cameras with line-crossing analytics.",
+      "The technology is chosen to fit the site and budget. Vibration cable senses climbing and cutting of the fence; beam barriers close open sections and entrances; camera analytics draw a virtual line verified by the picture, and thermal imagers keep working in full darkness and fog. On long perimeters the systems are combined: a sensor alarm automatically slews a PTZ camera to the alarm point.",
+      "False alarms are the main enemy of perimeter systems, so half of the work is proper tuning: zones, sensitivity margins for wind and animals, linking every event to video. We tie the system into the intruder alarm, guard-post notification and mobile alerts. Turnkey installation across Tashkent and all of Uzbekistan, with warranty and service.",
+    ],
+  },
+  pa: {
+    heading: "Public address and voice evacuation systems",
+    paragraphs: [
+      "A public address (PA) system does two jobs: in normal mode it plays background music and zone announcements, and in a fire it automatically switches to voice evacuation. SAT Solutions designs and installs PA systems for shopping centres, offices, schools, factories, hotels and restaurants.",
+      "The system consists of amplifiers and matrix controllers, ceiling and wall speakers, horn loudspeakers for outdoor areas and workshops, and microphone consoles with zone selection. Zoning is the point: music and promos on the sales floor, staff paging in the warehouse, alarm announcements outside. Integrated with the fire alarm, the broadcast is automatically interrupted by the evacuation message, as evacuation codes require.",
+      "Power and speaker count are calculated from floor area, ceiling height and background noise — what is audible in an office is lost on a shop floor. We supply proven PA equipment, install and tune it turnkey, and commission voice evacuation together with the fire alarm to Uzbekistan codes. Warranty and service nationwide.",
+    ],
+  },
 };
 
-const BY_LOCALE: Record<string, Record<string, ServiceContent>> = { ru, uz, en };
+const tr: Record<string, ServiceContent> = {
+  perimeter: {
+    heading: "Çevre güvenliği: çitten müdahaleye kadar",
+    paragraphs: [
+      "Çevre koruma sistemi, davetsiz misafiri binaya ulaşmadan tespit eder: sensörler ve video analitiği çiti, kapıları ve yaklaşma yollarını izler. SAT Solutions depolar, fabrikalar, lojistik sahaları, çiftlikler ve konutlar için çevre güvenlik sistemleri projelendirir ve kurar: çit üzerine titreşim kablosu, kızılötesi ve mikrodalga bariyerler, termal kameralar ve çizgi geçiş analitiği olan IP kameralar.",
+      "Teknoloji sahaya ve bütçeye göre seçilir. Titreşim kablosu çite tırmanmayı ve kesmeyi algılar; ışın bariyerleri açık bölümleri ve girişleri kapatır; kamera analitiği görüntüyle doğrulanan sanal bir çizgi çizer, termal kameralar tam karanlıkta ve siste çalışır. Uzun çevrelerde sistemler birleştirilir: sensör alarmı PTZ kamerayı otomatik olarak alarm noktasına çevirir.",
+      "Yanlış alarmlar çevre sistemlerinin baş düşmanıdır; bu yüzden işin yarısı doğru ayardır: bölgeler, rüzgâr ve hayvanlara göre hassasiyet, her olayın video kaydına bağlanması. Sistemi hırsız alarmı, güvenlik noktası bildirimi ve mobil uyarılarla entegre ederiz. Taşkent ve tüm Özbekistan genelinde anahtar teslim kurulum, garanti ve servis.",
+    ],
+  },
+  pa: {
+    heading: "Anons ve sesli tahliye (PA) sistemleri",
+    paragraphs: [
+      "Genel seslendirme (PA) sistemi iki iş yapar: normalde bölgelere göre fon müziği ve anonslar, yangında ise otomatik sesli tahliye yayını. SAT Solutions alışveriş merkezleri, ofisler, okullar, fabrikalar, oteller ve restoranlar için PA sistemleri projelendirir ve kurar.",
+      "Sistem; amplifikatörler ve matris kontrolörler, tavan ve duvar hoparlörleri, dış alan ve atölyeler için horn hoparlörler ile bölge seçmeli mikrofon konsollarından oluşur. Bölgeleme esastır: satış katında müzik ve duyurular, depoda personel çağrısı, dışarıda alarm anonsu. Yangın alarmıyla entegrasyonda yayın, tahliye mesajıyla otomatik kesilir.",
+      "Güç ve hoparlör sayısı alan, tavan yüksekliği ve fon gürültüsünden hesaplanır: ofiste duyulan ses atölyede kaybolur. Kanıtlanmış ekipman tedarik eder, anahtar teslim kurar ve sesli tahliyeyi yangın alarmıyla birlikte Özbekistan normlarına göre teslim ederiz. Ülke genelinde garanti ve servis.",
+    ],
+  },
+};
+
+const zh: Record<string, ServiceContent> = {
+  perimeter: {
+    heading: "周界安防：从围栏到响应",
+    paragraphs: [
+      "周界防护在入侵者接近建筑之前就将其发现：传感器与视频分析监控围栏、大门和通道。SAT Solutions为仓库、工厂、物流园区、农场和别墅设计并安装周界系统：围栏振动电缆、红外与微波对射、热成像仪以及带越线分析的IP摄像机。",
+      "技术方案按现场和预算选择。振动电缆感知攀爬和破坏围栏；对射光束封闭开阔地段和出入口；摄像机分析划出可用画面核实的虚拟警戒线，热成像仪在全黑和大雾中照常工作。长周界将多种系统组合：传感器报警时PTZ摄像机自动转向报警点。",
+      "误报是周界系统的头号敌人，因此一半的工作在于正确调试：分区、针对风和动物的灵敏度、把每次报警与录像关联。系统与防盗报警、值班岗通知和手机推送联动。塔什干及全乌兹别克斯坦交钥匙安装，提供保修与维保。",
+    ],
+  },
+  pa: {
+    heading: "公共广播与消防应急广播（PA）系统",
+    paragraphs: [
+      "公共广播（PA）系统承担两项任务：平时按分区播放背景音乐和通知，火灾时自动切换为语音疏散广播。SAT Solutions为商场、办公楼、学校、工厂、酒店和餐厅设计并安装PA系统。",
+      "系统由功放和矩阵控制器、吸顶与壁挂扬声器、室外和车间用号角扬声器、带分区选择的话筒站组成。分区是关键：营业厅播音乐和促销通知，仓库呼叫员工，室外播报警。与火灾报警联动时，广播会被疏散语音自动打断——这是疏散规范的要求。",
+      "功率和扬声器数量按面积、层高和背景噪声计算：办公室里听得清的音量在车间里会被淹没。我们供应可靠的广播设备，交钥匙安装调试，并按乌兹别克斯坦规范与火灾报警一起验收语音疏散。全国范围保修与服务。",
+    ],
+  },
+};
+
+const BY_LOCALE: Record<string, Record<string, ServiceContent>> = { ru, uz, en, tr, zh };
 
 export function getServiceContent(locale: string, key: string): ServiceContent | null {
   return BY_LOCALE[locale]?.[key] ?? null;

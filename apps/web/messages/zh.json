@@ -1,6 +1,7 @@
 {
   "product": {
     "titleBuy": "在塔什干购买",
+    "groupTitleBuy": "分类目录，塔什干价格",
     "fallbackTitle": "产品",
     "characteristics": "规格参数",
     "eol": "已停产",

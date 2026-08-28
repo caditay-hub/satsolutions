@@ -1,6 +1,7 @@
 {
   "product": {
     "titleBuy": "buy in Tashkent",
+    "groupTitleBuy": "category catalogue, Tashkent prices",
     "fallbackTitle": "Product",
     "characteristics": "Specifications",
     "eol": "Discontinued",

@@ -1,6 +1,7 @@
 {
   "product": {
     "titleBuy": "Toshkentda sotib olish",
+    "groupTitleBuy": "bo'lim katalogi, Toshkentda narxlar",
     "fallbackTitle": "Mahsulot",
     "characteristics": "Xususiyatlari",
     "eol": "Ishlab chiqarishdan olingan",

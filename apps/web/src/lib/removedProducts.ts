@@ -651,9 +651,11 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // Кириллическая «в» в слаге: middleware сравнивает ДЕКОДИРОВАННЫЙ slug, поэтому ключ
   // держим в декодированном виде (старый %-кодированный дубль выше никогда не матчился).
   "mkt-crs320-8p-8в-4s-plusrm": "mikrotik",
-  "pxt-91122": "prochee",
-  "pxt-pxt-ht-2008a": "prochee",
-  "pxt-pxt-vt30-bk": "prochee",
+  // pxt-91122 / pxt-pxt-ht-2008a / pxt-pxt-vt30-bk удалены из списка 29.08.2026:
+  // товары живы и published — редиректы прятали их карточки (аудит всех локалей).
+  // Дубль-карточки, склеены 29.08.2026 (unpublish + 308 на оригинал):
+  "dahua-sdt6c432-4p-gb-apv-0280-2": "/products/dahua-sdt6c432-4p-gb-apv-0280",
+  "pro-shlang-rukav-66-10-2": "/products/pro-shlang-rukav-66-10",
   "rubezh-bazovoe-osnovanie-w1-02-6324": "rubezh",
   "rubezh-exudp-1-r3-1-19736": "rubezh",
   "rubezh-ip-212-64-r3-bez-b-o-6072": "rubezh",

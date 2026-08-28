@@ -1,6 +1,7 @@
 {
   "product": {
     "titleBuy": "купить в Ташкенте",
+    "groupTitleBuy": "каталог раздела, цены в Ташкенте",
     "fallbackTitle": "Продукт",
     "characteristics": "Характеристики",
     "eol": "Снят с производства",

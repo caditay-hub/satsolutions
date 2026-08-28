@@ -25,7 +25,9 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   if (idx < 0) return { title: t("nav.products") };
   const name = localizeCatName(CATALOG_GROUPS[idx].title, locale);
   const seo = getGroupSeo(locale, slug);
-  const title = seo?.title ?? `${name} — ${t("product.titleBuy")}`;
+  // без своего SEO — шаблон, ОТЛИЧНЫЙ от тип-страницы: у групп и типов бывают
+  // одинаковые имена (IP-телефония, Умный дом) — иначе дубль title
+  const title = seo?.title ?? `${name} — ${t("product.groupTitleBuy")}`;
   const description = seo?.desc ?? t("product.typeDesc", { type: name });
   return {
     title,
