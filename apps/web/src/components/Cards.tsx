@@ -102,33 +102,51 @@ export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: s
   );
 }
 
-/** Карусель новинок на главной: один ряд (4 карточки в кадре), лента из всех
- *  товаров медленно и бесконечно плывёт влево; наведение ставит на паузу.
- *  Список дублируется для бесшовного зацикливания (дубли скрыты от SEO/фокуса). */
-export function NewArrivalsCarousel({
+/** Тонкая бегущая лента «Новинки» на главной (вариант «пилюли»):
+ *  круглое фото + название + цена, непрерывная медленная прокрутка,
+ *  пауза при наведении; справа статичная кнопка «Все новинки». */
+export function NewArrivalsTicker({
   items,
+  allLabel,
 }: {
-  items: Array<{ p: ProductDto; name: string; brandName: string | null }>;
+  items: Array<{ slug: string; name: string; price: string | null; img: string | null }>;
+  allLabel: string;
 }) {
   if (!items.length) return null;
   const doubled = [...items, ...items];
   return (
-    <div className="newarr-viewport mx-auto max-w-[1180px] overflow-hidden">
-      <div className="newarr-track flex w-max gap-4">
-        {doubled.map((it, i) => {
-          const dup = i >= items.length;
-          return (
-            <div
-              key={`${it.p.id}-${i}`}
-              className="w-[46vw] flex-none sm:w-[260px] lg:w-[283px]"
-              aria-hidden={dup || undefined}
-              {...(dup ? { inert: "" as never } : {})}
-            >
-              <NewArrivalCard p={it.p} name={it.name} brandName={it.brandName} />
-            </div>
-          );
-        })}
+    <div className="newarr-tickwrap relative">
+      <div className="newarr-fade overflow-hidden py-2.5">
+        <div className="newarr-ticker flex w-max items-center gap-3 pr-3">
+          {doubled.map((it, i) => {
+            const dup = i >= items.length;
+            return (
+              <Link
+                key={`${it.slug}-${i}`}
+                href={`/products/${it.slug}`}
+                aria-hidden={dup || undefined}
+                tabIndex={dup ? -1 : undefined}
+                className="flex flex-none items-center gap-2 whitespace-nowrap rounded-full border border-slate-200 bg-white py-1 pl-1.5 pr-3.5 text-[13px] shadow-sm transition-colors hover:border-slate-300"
+              >
+                {it.img ? (
+                  <img src={it.img} alt="" width={30} height={30} loading="lazy" className="h-[30px] w-[30px] rounded-full bg-white object-contain" />
+                ) : (
+                  <span className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-slate-100 text-sm" aria-hidden>📦</span>
+                )}
+                <span className="font-bold text-slate-900">{it.name}</span>
+                {it.price ? <span className="font-extrabold text-[#e02020]">{it.price}</span> : null}
+              </Link>
+            );
+          })}
+        </div>
       </div>
+      <Link
+        href="/products/new"
+        className="absolute right-0 top-1/2 z-[2] flex -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[12.5px] font-bold text-white shadow-md transition-opacity hover:opacity-90"
+        style={{ backgroundColor: "#e02020" }}
+      >
+        {allLabel} →
+      </Link>
     </div>
   );
 }

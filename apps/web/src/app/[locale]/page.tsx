@@ -3,8 +3,9 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
 import { getBrands, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
-import { NewArrivalsCarousel } from "@/components/Cards";
+import { NewArrivalsTicker } from "@/components/Cards";
 import { localizeProductName } from "@/lib/productI18n";
+import { priceInfo } from "@/lib/product";
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -178,6 +179,7 @@ const WHY_US = [
 export default async function HomePage() {
   const locale = await getLocale();
   const t = await getTranslations("home");
+  const tcm = await getTranslations("common");
   const ts = await getTranslations("services");
   const tcalc = await getTranslations("calc");
   const dir = t.raw("dir") as Record<string, [string, string]>;
@@ -431,32 +433,20 @@ export default async function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          НОВИНКИ КАТАЛОГА — свежие поступления (автоматически по createdAt)
+          НОВИНКИ — тонкая бегущая лента-«пилюли» (автоматически по createdAt)
       ══════════════════════════════════════════════════════ */}
-      {newArrivals.length >= 4 && (
-        <section className="bg-slate-50 py-12 sm:py-14 border-y border-slate-100">
-          <div className="container-page !py-0">
-            <div className="flex items-end justify-between gap-4 mb-6 sm:mb-8">
-              <div>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("newArrivalsLabel")}</p>
-                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("newArrivalsTitle")}</h2>
-              </div>
-              <Link
-                href="/products/new"
-                className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold text-brand-700 ring-1 ring-brand-200 hover:ring-brand-400 hover:bg-brand-50 transition-all whitespace-nowrap"
-              >
-                {t("newArrivalsAll")}
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </div>
-            <NewArrivalsCarousel
-              items={newSlim.map((p) => ({ p, name: p.localizedName, brandName: p.brandName }))}
+      {newSlim.length >= 4 && (
+        <section className="border-y border-slate-100 bg-slate-50/70">
+          <div className="container-page !py-2.5">
+            <NewArrivalsTicker
+              items={newSlim.map((p) => ({
+                slug: p.slug,
+                name: p.localizedName,
+                price: (() => { const pi = priceInfo(p); return pi && pi.kind === "value" ? tcm("priceSum", { value: pi.value }) : null; })(),
+                img: resolveImageUrl(p.coverImageUrl),
+              }))}
+              allLabel={t("newArrivalsAll")}
             />
-            <div className="mt-6 sm:hidden text-center">
-              <Link href="/products/new" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("newArrivalsAll")} →</Link>
-            </div>
           </div>
         </section>
       )}

@@ -201,18 +201,22 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
   .cat3d-tile:hover .cat3d-shadow { animation: none; opacity: 0; }
 }
 
-/* Карусель «Новинки» на главной: бесконечная медленная лента, пауза при наведении */
+/* Лента «Новинки» на главной: тонкая бегущая строка-пилюли, пауза при наведении */
 @keyframes newarr-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
-.newarr-track {
-  animation: newarr-scroll 60s linear infinite;
+.newarr-ticker {
+  animation: newarr-scroll 45s linear infinite;
   will-change: transform;
 }
-.newarr-viewport:hover .newarr-track {
+.newarr-tickwrap:hover .newarr-ticker {
   animation-play-state: paused;
 }
+.newarr-fade {
+  mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 150px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 32px, #000 calc(100% - 150px), transparent 100%);
+}
 @media (prefers-reduced-motion: reduce) {
-  .newarr-track { animation: none; }
+  .newarr-ticker { animation: none; }
 }
