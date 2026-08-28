@@ -64,7 +64,8 @@
     "cartEmpty": "Savat bo'sh.",
     "checkout": "Rasmiylashtirish",
     "chatRealtime": "Chat real vaqtda ishlaydi.",
-    "legalForm": "MChJ"
+    "legalForm": "MChJ",
+    "newBadge": "Yangi"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -292,7 +293,10 @@
     "phone": "Telefon",
     "heroPrev": "Oldingi",
     "heroNext": "Keyingi",
-    "heroSlide": "Slayd"
+    "heroSlide": "Slayd",
+    "newArrivalsLabel": "Yangi kelganlar",
+    "newArrivalsTitle": "Katalog yangiliklari",
+    "newArrivalsAll": "Barcha yangiliklar"
   },
   "footer": {
     "sections": "Bo‘limlar",
@@ -3104,7 +3108,8 @@
     "allSectionItems": "Bo'lim mahsulotlari",
     "allBrands": "Brendlar",
     "allCategories": "Barcha turkumlar",
-    "wholeCatalog": "Barcha mahsulotlar"
+    "wholeCatalog": "Barcha mahsulotlar",
+    "newArrivals": "Yangiliklar"
   },
   "catalog": {
     "found": "Topildi",
@@ -3512,5 +3517,11 @@
     "gov": "davlat ta'minoti obyektlari",
     "gov_name": "Davlat tashkilotlari",
     "towerup_name": "Tower Up turar-joy majmuasi"
+  },
+  "newPage": {
+    "title": "Yangiliklar — yangi kelgan uskunalar | SAT Solutions",
+    "desc": "SAT Solutions katalogining yangi mahsulotlari: kameralar, domofoniya, SKUD, tarmoq va optika. Eng yangilari — birinchi.",
+    "h1": "Yangiliklar",
+    "sub": "So‘nggi 90 kunda katalogga qo‘shilgan mahsulotlar — eng yangilari birinchi."
   }
 }

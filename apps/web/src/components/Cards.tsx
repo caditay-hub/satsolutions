@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
-import { priceInfo, productIcon } from "@/lib/product";
+import { priceInfo, productIcon, isNewProduct } from "@/lib/product";
 
 export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; name?: string }) {
   const tc = useTranslations("common");
@@ -21,6 +21,11 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
       className="card-interactive group flex flex-col border-2 border-slate-200 hover:border-brand-500 rounded-xl overflow-hidden"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
+        {isNewProduct(p) && (
+          <span className="absolute left-2 top-2 z-[2] rounded-md bg-green-600 px-2 py-0.5 text-[11px] font-extrabold text-white shadow-sm">
+            {tc("newBadge")}
+          </span>
+        )}
         {img ? (
           <Image
             alt={displayName}

@@ -195,6 +195,11 @@ publicRouter.get("/products", async (req, res) => {
   if (recommendedRaw === "1" || recommendedRaw === "true" || recommendedRaw === "yes") {
     where.recommended = true;
   }
+  // days=N — только товары, добавленные за последние N дней (раздел «Новинки»)
+  const days = Number(req.query.days) || 0;
+  if (days > 0 && days <= 366) {
+    where.createdAt = { [Op.gte]: new Date(Date.now() - days * 86400_000) };
+  }
   const qf = q ? flipLayout(q) : ""; // раскладка (флип) — нужна и в OR, и позже для corrected-подсказки
   if (q) {
     // Поиск по названию/модели товара + по названию КАТЕГОРИИ и БРЕНДА

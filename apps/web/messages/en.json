@@ -64,7 +64,8 @@
     "cartEmpty": "Your cart is empty.",
     "checkout": "Checkout",
     "chatRealtime": "The chat works in real time.",
-    "legalForm": "LLC"
+    "legalForm": "LLC",
+    "newBadge": "New"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -292,7 +293,10 @@
     "phone": "Phone",
     "heroPrev": "Previous",
     "heroNext": "Next",
-    "heroSlide": "Slide"
+    "heroSlide": "Slide",
+    "newArrivalsLabel": "Fresh arrivals",
+    "newArrivalsTitle": "New in catalog",
+    "newArrivalsAll": "All new arrivals"
   },
   "footer": {
     "sections": "Sections",
@@ -3104,7 +3108,8 @@
     "allSectionItems": "All section products",
     "allBrands": "Brands",
     "allCategories": "All categories",
-    "wholeCatalog": "All products"
+    "wholeCatalog": "All products",
+    "newArrivals": "New arrivals"
   },
   "catalog": {
     "found": "Found",
@@ -3500,5 +3505,11 @@
     "gov": "government-supply facilities",
     "gov_name": "Government bodies",
     "towerup_name": "Tower Up residential complex"
+  },
+  "newPage": {
+    "title": "New Arrivals — Latest Equipment | SAT Solutions",
+    "desc": "New products in the SAT Solutions catalog: cameras, intercoms, access control, networking and fiber optics. Newest first.",
+    "h1": "New arrivals",
+    "sub": "Products added to the catalog in the last 90 days — newest first."
   }
 }

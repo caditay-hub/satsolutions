@@ -64,7 +64,8 @@
     "cartEmpty": "购物车是空的。",
     "checkout": "去结算",
     "chatRealtime": "客服聊天为实时响应。",
-    "legalForm": "有限责任公司"
+    "legalForm": "有限责任公司",
+    "newBadge": "新品"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -292,7 +293,10 @@
     "phone": "电话",
     "heroPrev": "上一张",
     "heroNext": "下一张",
-    "heroSlide": "幻灯片"
+    "heroSlide": "幻灯片",
+    "newArrivalsLabel": "新到货",
+    "newArrivalsTitle": "目录新品",
+    "newArrivalsAll": "全部新品"
   },
   "footer": {
     "sections": "栏目",
@@ -3096,7 +3100,8 @@
     "allSectionItems": "本类全部产品",
     "allBrands": "品牌",
     "allCategories": "所有分类",
-    "wholeCatalog": "全部产品"
+    "wholeCatalog": "全部产品",
+    "newArrivals": "新品"
   },
   "catalog": {
     "found": "找到",
@@ -3492,5 +3497,11 @@
     "gov": "政府保障类项目",
     "gov_name": "政府机构",
     "towerup_name": "Tower Up 住宅区"
+  },
+  "newPage": {
+    "title": "新品上架 — 最新设备 | SAT Solutions",
+    "desc": "SAT Solutions 目录新品：摄像机、对讲、门禁、网络与光纤设备。最新商品优先展示。",
+    "h1": "新品上架",
+    "sub": "最近 90 天加入目录的商品——最新的排在前面。"
   }
 }

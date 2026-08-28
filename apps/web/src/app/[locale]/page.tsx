@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
-import { getBrands, getPartners, getPortfolio, getSitePage } from "@/lib/api";
+import { getBrands, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
+import { ProductCard } from "@/components/Cards";
+import { localizeProductName } from "@/lib/productI18n";
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -184,13 +186,25 @@ export default async function HomePage() {
     { items: rawPortfolio },
     { brands },
     { partners },
+    { items: newArrivals },
   ] = await Promise.all([
     getPortfolio(1, 3).catch(() => ({ items: [], total: 0 })),
     getBrands().catch(() => ({ brands: [] })),
     getPartners().catch(() => ({ partners: [] })),
+    // Новинки каталога: 8 последних за 90 дней (блок после «Каталога продукции»)
+    getProducts(1, 8, { sort: "new", days: 90 }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
   ]);
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
+
+  // Лёгкие карточки новинок: не тянем description/характеристики в RSC-пейлоад главной
+  const newSlim = newArrivals.map((p) => ({
+    id: p.id, name: p.name, slug: p.slug, price: p.price, isUsd: p.isUsd,
+    recommended: p.recommended, modelCode: p.modelCode ?? null, coverImageUrl: p.coverImageUrl,
+    characteristics: null, shortDescription: null, description: null, published: true,
+    categoryId: null, createdAt: p.createdAt, updatedAt: "",
+    localizedName: localizeProductName(p, locale),
+  }));
 
   // Полезные статьи: 4 свежих из блога (ARTICLES упорядочены новые→старые) —
   // перелинковка с главной ускоряет краулинг и индексацию статей.
@@ -413,6 +427,39 @@ export default async function HomePage() {
           <Link href="/categories" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("wholeCatalog")} →</Link>
         </div>
       </section>
+
+      {/* ══════════════════════════════════════════════════════
+          НОВИНКИ КАТАЛОГА — свежие поступления (автоматически по createdAt)
+      ══════════════════════════════════════════════════════ */}
+      {newArrivals.length >= 4 && (
+        <section className="bg-slate-50 py-12 sm:py-14 border-y border-slate-100">
+          <div className="container-page !py-0">
+            <div className="flex items-end justify-between gap-4 mb-6 sm:mb-8">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("newArrivalsLabel")}</p>
+                <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("newArrivalsTitle")}</h2>
+              </div>
+              <Link
+                href="/products/new"
+                className="hidden sm:inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-bold text-brand-700 ring-1 ring-brand-200 hover:ring-brand-400 hover:bg-brand-50 transition-all whitespace-nowrap"
+              >
+                {t("newArrivalsAll")}
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+              {newSlim.map((p) => (
+                <ProductCard key={p.id} p={p} name={p.localizedName} />
+              ))}
+            </div>
+            <div className="mt-6 sm:hidden text-center">
+              <Link href="/products/new" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("newArrivalsAll")} →</Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ══════════════════════════════════════════════════════
           ГОТОВЫЕ РЕШЕНИЯ — лента

@@ -9,7 +9,7 @@ import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
-import { localizeCatName } from "@/lib/catalogI18n";
+import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
 import { displayModelCode } from "@/lib/modelCodeDisplay";
 import { ogLocale } from "@/lib/ogLocale";
@@ -62,7 +62,7 @@ import { ContactButtons } from "@/components/ContactButtons";
 import { ProductCard } from "@/components/Cards";
 import { OrderButton } from "@/components/OrderButton";
 import { ProductGallery } from "@/components/ProductGallery";
-import { priceInfo, productIcon } from "@/lib/product";
+import { priceInfo, productIcon, isNewProduct } from "@/lib/product";
 
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
@@ -456,6 +456,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               )}
               {(product as any).recommended && (
                 <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">{t("product.hit")}</span>
+              )}
+              {isNewProduct(product) && (
+                <span className="px-2 py-0.5 bg-green-600 text-white text-xs font-extrabold rounded-full">{t("common.newBadge")}</span>
               )}
             </div>
 

@@ -56,7 +56,7 @@ function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): imp
     description: null,
     published: true,
     categoryId: null,
-    createdAt: "",
+    createdAt: p.createdAt, // нужен бейджу «Новинка» в карточках
     updatedAt: "",
   };
 }

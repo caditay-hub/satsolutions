@@ -224,9 +224,10 @@ export async function getPartners() {
 export async function getProducts(
   page = 1,
   limit = 12,
-  opts?: { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string; type?: string; chars?: Record<string, string[]>; priceMin?: number; priceMax?: number }
+  opts?: { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string; type?: string; chars?: Record<string, string[]>; priceMin?: number; priceMax?: number; days?: number }
 ) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
+  if (opts?.days) qs.set("days", String(opts.days));
   if (opts?.category) qs.set("category", opts.category);
   if (opts?.type) qs.set("type", opts.type);
   if (opts?.brand) qs.set("brand", opts.brand);

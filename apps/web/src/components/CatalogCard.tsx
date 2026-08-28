@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
-import { priceInfo, productIcon } from "@/lib/product";
+import { priceInfo, productIcon, isNewProduct } from "@/lib/product";
 import { displayModelCode } from "@/lib/modelCodeDisplay";
 import { OrderButton } from "@/components/OrderButton";
 
@@ -24,6 +24,8 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
       <Link href={`/products/${p.slug}`} className="relative block aspect-square w-full overflow-hidden bg-white">
         {p.recommended ? (
           <span className="absolute left-2 top-2 z-10 rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">Хит</span>
+        ) : isNewProduct(p) ? (
+          <span className="absolute left-2 top-2 z-10 rounded-md bg-green-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">{tc("newBadge")}</span>
         ) : null}
         {img ? (
           <Image alt={displayName} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" unoptimized className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />

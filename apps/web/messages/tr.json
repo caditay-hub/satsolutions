@@ -64,7 +64,8 @@
     "cartEmpty": "Sepetiniz boş.",
     "checkout": "Siparişi tamamla",
     "chatRealtime": "Sohbet gerçek zamanlı çalışır.",
-    "legalForm": "LLC"
+    "legalForm": "LLC",
+    "newBadge": "Yeni"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -292,7 +293,10 @@
     "phone": "Telefon",
     "heroPrev": "Önceki",
     "heroNext": "Sonraki",
-    "heroSlide": "Slayt"
+    "heroSlide": "Slayt",
+    "newArrivalsLabel": "Yeni gelenler",
+    "newArrivalsTitle": "Katalog yenilikleri",
+    "newArrivalsAll": "Tüm yenilikler"
   },
   "footer": {
     "sections": "Bölümler",
@@ -3096,7 +3100,8 @@
     "allSectionItems": "Bölüm ürünleri",
     "allBrands": "Markalar",
     "allCategories": "Tüm kategoriler",
-    "wholeCatalog": "Tüm ürünler"
+    "wholeCatalog": "Tüm ürünler",
+    "newArrivals": "Yenilikler"
   },
   "catalog": {
     "found": "Bulundu",
@@ -3492,5 +3497,11 @@
     "gov": "kamu tedarik tesisleri",
     "gov_name": "Kamu kurumları",
     "towerup_name": "Tower Up konut sitesi"
+  },
+  "newPage": {
+    "title": "Yenilikler — Yeni Gelen Ekipmanlar | SAT Solutions",
+    "desc": "SAT Solutions kataloğuna yeni eklenen ürünler: kameralar, interkom, geçiş kontrolü, ağ ve fiber optik. En yeniler önce.",
+    "h1": "Yenilikler",
+    "sub": "Son 90 günde kataloğa eklenen ürünler — en yeniler önce."
   }
 }

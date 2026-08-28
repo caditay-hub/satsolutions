@@ -63,6 +63,13 @@ export function CatalogMega() {
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
             {/* Верхняя панель: быстрые переходы (стиль сайта) */}
             <div className="flex items-center gap-2 border-b border-slate-100 bg-slate-50/60 px-4 py-2.5">
+              <Link
+                href="/products/new"
+                onClick={() => setOpen(false)}
+                className="rounded-full bg-green-600 px-4 py-1.5 text-sm font-bold text-white transition-colors hover:bg-green-700"
+              >
+                {tm("newArrivals")}
+              </Link>
               <Link href="/catalog" onClick={() => setOpen(false)} className={chipCls}>
                 {tm("allBrands")}
               </Link>

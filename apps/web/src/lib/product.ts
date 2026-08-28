@@ -42,3 +42,10 @@ export function productIcon(name: string): string {
   if (/(модуль|pon|onu|olt)/.test(n)) return "📶";
   return "📦";
 }
+
+// «Новинка»: товар моложе 60 дней с момента добавления. Бейдж в карточках и на странице товара.
+export const NEW_BADGE_DAYS = 60;
+export function isNewProduct(p: Pick<ProductDto, "createdAt">): boolean {
+  const t = Date.parse(p.createdAt ?? "");
+  return Number.isFinite(t) && Date.now() - t < NEW_BADGE_DAYS * 86400_000;
+}
