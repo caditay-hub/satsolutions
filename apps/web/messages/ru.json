@@ -65,7 +65,8 @@
     "checkout": "Оформление",
     "chatRealtime": "Чат работает в реальном времени.",
     "legalForm": "ООО",
-    "newBadge": "Новинка"
+    "newBadge": "Новинка",
+    "priceSum": "{value} сум"
   },
   "home": {
     "heroTitle": "Системы безопасности и слаботочные системы",

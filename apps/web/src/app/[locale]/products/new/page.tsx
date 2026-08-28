@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { getProducts } from "@/lib/api";
+import { getBrands, getProducts } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeProductName } from "@/lib/productI18n";
-import { CatalogCard } from "@/components/CatalogCard";
+import { NewArrivalCard } from "@/components/Cards";
 
 export const revalidate = 300;
 
@@ -41,6 +41,8 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
     data = await getProducts(page, PER_PAGE, { sort: "new" });
   }
   const { items, total } = data;
+  const { brands } = await getBrands().catch(() => ({ brands: [] as any[] }));
+  const brandNameById = new Map(brands.map((b: any) => [b.id, b.name]));
   const pages = Math.max(1, Math.ceil(total / PER_PAGE));
 
   // ItemList — свежая страница со ссылками на новые карточки ускоряет их обход
@@ -71,7 +73,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
 
       <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
         {items.map((p) => (
-          <CatalogCard key={p.id} p={p} name={localizeProductName(p, locale)} />
+          <NewArrivalCard key={p.id} p={p} name={localizeProductName(p, locale)} brandName={(p.brandId && brandNameById.get(p.brandId)) || null} />
         ))}
       </div>
 

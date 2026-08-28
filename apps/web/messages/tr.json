@@ -65,7 +65,8 @@
     "checkout": "Siparişi tamamla",
     "chatRealtime": "Sohbet gerçek zamanlı çalışır.",
     "legalForm": "LLC",
-    "newBadge": "Yeni"
+    "newBadge": "Yeni",
+    "priceSum": "{value} sum"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",

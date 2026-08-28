@@ -65,7 +65,8 @@
     "checkout": "Checkout",
     "chatRealtime": "The chat works in real time.",
     "legalForm": "LLC",
-    "newBadge": "New"
+    "newBadge": "New",
+    "priceSum": "{value} UZS"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",

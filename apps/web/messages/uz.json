@@ -65,7 +65,8 @@
     "checkout": "Rasmiylashtirish",
     "chatRealtime": "Chat real vaqtda ishlaydi.",
     "legalForm": "MChJ",
-    "newBadge": "Yangi"
+    "newBadge": "Yangi",
+    "priceSum": "{value} so‘m"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
 import { getBrands, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
-import { ProductCard } from "@/components/Cards";
+import { NewArrivalCard } from "@/components/Cards";
 import { localizeProductName } from "@/lib/productI18n";
 import { resolveImageUrl } from "@/lib/image";
 import { getTranslations, getLocale } from "next-intl/server";
@@ -198,12 +198,14 @@ export default async function HomePage() {
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
 
   // Лёгкие карточки новинок: не тянем description/характеристики в RSC-пейлоад главной
+  const brandNameById = new Map(brands.map((b: any) => [b.id, b.name]));
   const newSlim = newArrivals.map((p) => ({
     id: p.id, name: p.name, slug: p.slug, price: p.price, isUsd: p.isUsd,
     recommended: p.recommended, modelCode: p.modelCode ?? null, coverImageUrl: p.coverImageUrl,
     characteristics: null, shortDescription: null, description: null, published: true,
     categoryId: null, createdAt: p.createdAt, updatedAt: "",
     localizedName: localizeProductName(p, locale),
+    brandName: (p.brandId && brandNameById.get(p.brandId)) || null,
   }));
 
   // Полезные статьи: 4 свежих из блога (ARTICLES упорядочены новые→старые) —
@@ -451,7 +453,7 @@ export default async function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
               {newSlim.map((p) => (
-                <ProductCard key={p.id} p={p} name={p.localizedName} />
+                <NewArrivalCard key={p.id} p={p} name={p.localizedName} brandName={p.brandName} />
               ))}
             </div>
             <div className="mt-6 sm:hidden text-center">
