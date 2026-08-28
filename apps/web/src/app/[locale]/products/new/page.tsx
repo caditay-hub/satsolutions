@@ -75,8 +75,8 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
       <p className="mt-2 max-w-2xl text-sm text-slate-600">{t("sub")}</p>
 
       <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-        {items.map((p) => (
-          <NewArrivalCard key={p.id} p={p} name={localizeProductName(p, locale)} brandName={(p.brandId && brandNameById.get(p.brandId)) || null} />
+        {items.map((p, i) => (
+          <NewArrivalCard key={p.id} p={p} name={localizeProductName(p, locale)} brandName={(p.brandId && brandNameById.get(p.brandId)) || null} priority={i < 8} />
         ))}
       </div>
 

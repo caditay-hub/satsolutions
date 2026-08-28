@@ -56,7 +56,7 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
 
 /** Карточка блока «Новинки» — вид из утверждённого мокапа: зелёный бейдж,
  *  квадратное фото, бренд красным капсом, крупная цена, кнопка «Заказать». */
-export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: string; brandName?: string | null }) {
+export function NewArrivalCard({ p, name, brandName, priority }: { p: ProductDto; name?: string; brandName?: string | null; priority?: boolean }) {
   const tc = useTranslations("common");
   const displayName = name ?? p.name;
   const img = resolveImageUrl(p.coverImageUrl);
@@ -77,7 +77,8 @@ export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: s
             src={img}
             fill
             sizes="(max-width: 640px) 45vw, 220px"
-            loading="lazy"
+            loading={priority ? "eager" : "lazy"}
+            priority={priority}
             unoptimized
             className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105"
           />
