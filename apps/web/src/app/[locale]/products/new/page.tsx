@@ -60,6 +60,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
   return (
     <div className="container-page py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <div className="mx-auto max-w-[1180px]">
       <nav className="mb-4 text-[11px] font-bold uppercase tracking-wider text-slate-400">
         <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
         <span className="mx-1.5">/</span>
@@ -71,7 +72,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
       <h1 className="text-3xl font-black tracking-tight text-slate-900">{t("h1")}</h1>
       <p className="mt-2 max-w-2xl text-sm text-slate-600">{t("sub")}</p>
 
-      <div className="mt-7 grid max-w-[1180px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+      <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
         {items.map((p) => (
           <NewArrivalCard key={p.id} p={p} name={localizeProductName(p, locale)} brandName={(p.brandId && brandNameById.get(p.brandId)) || null} />
         ))}
@@ -90,6 +91,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
           ))}
         </div>
       )}
+      </div>
     </div>
   );
 }
