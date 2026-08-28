@@ -65,9 +65,9 @@ export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: s
   return (
     <Link
       href={`/products/${p.slug}`}
-      className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-3.5 transition-all hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-md"
+      className="group relative flex flex-col rounded-xl border border-slate-200 bg-white p-3 transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md"
     >
-      <span className="absolute left-3 top-3 z-[2] rounded-lg bg-green-600 px-2.5 py-1 text-[11px] font-extrabold text-white shadow-sm">
+      <span className="absolute left-2.5 top-2.5 z-[2] rounded-md bg-green-600 px-2 py-0.5 text-[10px] font-extrabold text-white shadow-sm">
         {tc("newBadge")}
       </span>
       <span className="relative block aspect-square w-full overflow-hidden bg-white">
@@ -76,26 +76,26 @@ export function NewArrivalCard({ p, name, brandName }: { p: ProductDto; name?: s
             alt={displayName}
             src={img}
             fill
-            sizes="(max-width: 640px) 50vw, 25vw"
+            sizes="(max-width: 640px) 45vw, 220px"
             loading="lazy"
             unoptimized
-            className="object-contain p-2 transition-transform duration-500 ease-out group-hover:scale-105"
+            className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105"
           />
         ) : (
-          <span className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-brand-50">
+          <span className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-slate-50">
             <span className="text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{tc("noPhoto")}</span>
           </span>
         )}
       </span>
       {brandName ? (
-        <span className="mt-2 text-[10.5px] font-extrabold uppercase tracking-wide text-brand-600">● {brandName}</span>
+        <span className="mt-1.5 text-[10px] font-extrabold uppercase tracking-wide text-[#e02020]">● {brandName}</span>
       ) : null}
-      <span className="mt-1 min-h-[54px] text-[13.5px] font-semibold leading-snug text-slate-900 line-clamp-3 first-letter:uppercase">
+      <span className="mt-1 min-h-[38px] text-[13px] font-semibold leading-snug text-slate-900 line-clamp-2 first-letter:uppercase">
         {displayName}
       </span>
-      {price ? <span className="mb-2.5 mt-2 text-base font-extrabold text-brand-600">{price}</span> : null}
-      <span className="mt-auto rounded-xl bg-brand-600 py-2.5 text-center text-[13.5px] font-bold text-white transition-colors group-hover:bg-brand-700">
+      {price ? <span className="mb-2 mt-1.5 text-[15px] font-extrabold text-[#e02020]">{price}</span> : null}
+      <span className="mt-auto rounded-lg py-2 text-center text-[13px] font-bold text-white transition-opacity group-hover:opacity-90" style={{ backgroundColor: "#e02020" }}>
         {tc("order")}
       </span>
     </Link>

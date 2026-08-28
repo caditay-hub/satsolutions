@@ -451,7 +451,7 @@ export default async function HomePage() {
                 </svg>
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+            <div className="mx-auto grid max-w-[1180px] grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
               {newSlim.map((p) => (
                 <NewArrivalCard key={p.id} p={p} name={p.localizedName} brandName={p.brandName} />
               ))}
