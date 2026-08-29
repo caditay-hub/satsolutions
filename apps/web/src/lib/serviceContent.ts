@@ -290,6 +290,22 @@ const ru: Record<string, ServiceContent> = {
       "Мощность и число динамиков считаем от площади, высоты потолков и фонового шума: то, что слышно в офисе, потеряется в цехе. Поставляем проверенное оборудование трансляции, монтируем и настраиваем под ключ, сдаём СОУЭ вместе с пожарной сигнализацией по нормам Узбекистана. Гарантия и сервис — по всей стране.",
     ],
   },
+  "ohrannye-sistemy": {
+    heading: "Охранная сигнализация для дома и бизнеса в Ташкенте",
+    paragraphs: [
+      "Охранная система строится вокруг задачи: что именно защищаем и как быстро нужна реакция. Для квартиры и небольшого магазина достаточно охранной панели с датчиками движения и открытия, сиреной и уведомлениями на телефон. Для склада, производства или загородного дома схема расширяется периметральным контуром: датчики на ограждении и лучевые барьеры обнаруживают нарушителя ещё на подходе к зданию.",
+      "Состав типовой системы: приёмно-контрольная панель (проводная или беспроводная — например, Hikvision AX PRO), датчики движения, открытия дверей и окон, разбития стекла, тревожная кнопка для персонала, внутренняя и уличная сирены. Управление — с брелока, клавиатуры или мобильного приложения; события приходят на телефон владельца и, при подключении, на пульт охранной компании. Сигнализацию мы связываем с видеонаблюдением и СКУД: сработка привязывается к видеозаписи, и вместо гадания «что случилось» вы видите картинку события.",
+      "Цена складывается из числа датчиков, типа панели и наличия периметрального контура: квартира или офис закрываются за один день, склад считаем после бесплатного выезда инженера. После сдачи даём гарантию на оборудование и работы, по договору обслуживания проверяем датчики, батареи и связь. Работаем по Ташкенту и всему Узбекистану.",
+    ],
+  },
+  "intellektualnoe-upravlenie-parkingom": {
+    heading: "Умный паркинг: ANPR, датчики мест и автоматизация оплаты",
+    paragraphs: [
+      "Базовый контур умного паркинга — автоматизация въезда: шлагбаумы, камеры распознавания номеров (ANPR), стойки выдачи билетов или проезд по спискам номеров без остановки. Внутри работают датчики занятости мест с индикаторами над каждым местом: зелёный — свободно, красный — занято. Табло на въезде и развилках показывают свободные места по этажам и ведут водителя кратчайшим путём.",
+      "Для коммерческих парковок добавляется расчётный контур: кассы самообслуживания, оплата по QR, тарифы по времени и типу транспорта, абонементы для арендаторов. Система различает разовых посетителей, сотрудников и VIP-списки: свои проезжают по номеру без остановки, гости получают билет, должники не выпускаются до оплаты.",
+      "Эффект измерим: время поиска места сокращается в разы, пропускная способность въезда растёт без расширения полос, потери от ручного сбора наличных исчезают, а загрузка видна владельцу в реальном времени по этажам и зонам. SAT Solutions проектирует и внедряет паркинг-системы Dahua и Hikvision под ключ: обследование, проект, монтаж, настройка тарифов и интеграция с бухгалтерией. Гарантия и сервис — по всему Узбекистану.",
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -566,6 +582,22 @@ const uz: Record<string, ServiceContent> = {
       "Quvvat va dinamiklar soni maydon, shift balandligi va fon shovqinidan hisoblanadi: ofisda eshitiladigan narsa sexda yo'qoladi. Ishonchli translyatsiya uskunalarini yetkazamiz, kalit topshirish sharti bilan o'rnatib sozlaymiz, SOUE ni yong'in signalizatsiyasi bilan birga O'zbekiston me'yorlari bo'yicha topshiramiz. Kafolat va servis — butun mamlakat bo'ylab.",
     ],
   },
+  "ohrannye-sistemy": {
+    heading: "Toshkentda uy va biznes uchun qo'riqlash signalizatsiyasi",
+    paragraphs: [
+      "Qo'riqlash tizimi vazifadan kelib chiqib quriladi: nimani himoya qilamiz va javob qanchalik tez kerak. Kvartira va kichik do'kon uchun harakat va ochilish datchiklari, sirena va telefonga xabarlar bilan panel yetarli. Ombor, ishlab chiqarish yoki hovli uchun sxema perimetr konturi bilan kengayadi: to'siqdagi datchiklar va nurli barierlar buzg'unchini binoga yetib kelmasidan aniqlaydi.",
+      "Tizim tarkibi: qabul-nazorat paneli (simli yoki simsiz — masalan, Hikvision AX PRO), harakat, eshik-deraza ochilishi va oyna sinishi datchiklari, xodimlar uchun trevoga tugmasi, ichki va tashqi sirenalar. Boshqaruv — brelok, klaviatura yoki mobil ilova orqali; hodisalar egasining telefoniga, ulanganda esa qo'riqlash pultiga boradi. Signalizatsiyani videokuzatuv va SKUD bilan bog'laymiz: har bir hodisa videoyozuv bilan tasdiqlanadi.",
+      "Narx datchiklar soni, panel turi va perimetr konturiga bog'liq: kvartira yoki ofis bir kunda yopiladi, omborni muhandisning bepul chiqishidan keyin hisoblaymiz. Topshirgach uskuna va ishlarga kafolat beramiz, servis shartnomasi bo'yicha datchiklar, batareyalar va aloqani tekshiramiz. Toshkent va butun O'zbekiston bo'ylab ishlaymiz.",
+    ],
+  },
+  "intellektualnoe-upravlenie-parkingom": {
+    heading: "Aqlli parking: ANPR, joy datchiklari va to'lovni avtomatlashtirish",
+    paragraphs: [
+      "Aqlli parkingning asosiy konturi — kirishni avtomatlashtirish: shlagbaumlar, raqam tanish kameralari (ANPR), chipta stoykalari yoki raqamlar ro'yxati bo'yicha to'xtamasdan o'tish. Ichkarida har bir joy ustida indikatorli bandlik datchiklari ishlaydi: yashil — bo'sh, qizil — band. Kirish va yo'l ayrilishlaridagi tablolar qavatlar bo'yicha bo'sh joylarni ko'rsatib, haydovchini eng qisqa yo'l bilan olib boradi.",
+      "Tijorat parkinglariga hisob-kitob konturi qo'shiladi: o'z-o'ziga xizmat kassalari, QR orqali to'lov, vaqt va transport turi bo'yicha tariflar, ijarachilar uchun abonementlar. Tizim bir martalik mehmonlar, xodimlar va VIP ro'yxatlarni ajratadi: o'zlari raqam bo'yicha to'xtamasdan o'tadi, mehmonlar chipta oladi, qarzdorlar to'lovgacha chiqarilmaydi.",
+      "Natija o'lchanadi: joy qidirish vaqti bir necha barobar qisqaradi, kirish o'tkazuvchanligi polosalarni kengaytirmasdan oshadi, naqd yig'imdagi yo'qotishlar yo'qoladi, bandlik esa egasiga real vaqtda ko'rinadi. SAT Solutions Dahua va Hikvision parking tizimlarini kalit topshirish sharti bilan joriy qiladi: tekshiruv, loyiha, montaj, tariflarni sozlash va buxgalteriya bilan integratsiya. Kafolat va servis — butun O'zbekiston bo'ylab.",
+    ],
+  },
 };
 
 // Английский блок появился 19.08.2026: до этого содержательного текста на
@@ -632,6 +664,22 @@ const en: Record<string, ServiceContent> = {
       "Power and speaker count are calculated from floor area, ceiling height and background noise — what is audible in an office is lost on a shop floor. We supply proven PA equipment, install and tune it turnkey, and commission voice evacuation together with the fire alarm to Uzbekistan codes. Warranty and service nationwide.",
     ],
   },
+  "ohrannye-sistemy": {
+    heading: "Intruder alarm systems for homes and business in Tashkent",
+    paragraphs: [
+      "An alarm system is built around the task: what exactly is protected and how fast a response is needed. For an apartment or a small shop, a panel with motion and door sensors, a siren and phone notifications is enough. For a warehouse, plant or country house the scheme grows a perimeter loop: fence sensors and beam barriers detect the intruder before they reach the building.",
+      "A typical system consists of a control panel (wired or wireless — for example Hikvision AX PRO), motion, door/window and glass-break sensors, a panic button for staff, and indoor and outdoor sirens. Control is from a fob, keypad or mobile app; events go to the owner's phone and, with monitoring, to a security company. We link the alarm with CCTV and access control: every event is tied to video, so instead of guessing you see the footage.",
+      "The price is driven by the number of sensors, panel type and whether a perimeter loop is needed: an apartment or office is done in a day, a warehouse is quoted after a free engineer visit. After handover we provide a warranty on equipment and work, and under a service contract we test sensors, batteries and communication. We work across Tashkent and all of Uzbekistan.",
+    ],
+  },
+  "intellektualnoe-upravlenie-parkingom": {
+    heading: "Smart parking: ANPR, bay sensors and automated payment",
+    paragraphs: [
+      "The core loop of smart parking is entrance automation: barriers, licence plate recognition (ANPR) cameras, ticket dispensers or free-flow entry by whitelisted plates. Inside, occupancy sensors with an indicator above every bay do the guiding: green — free, red — occupied. Displays at the entrance and junctions show free bays per floor and lead the driver by the shortest route.",
+      "Commercial car parks add a payment loop: self-service pay stations, QR payment, tariffs by time and vehicle type, subscriptions for tenants. The system tells one-off visitors, staff and VIP lists apart: registered cars pass by plate without stopping, guests take a ticket, debtors are not released until they pay.",
+      "The effect is measurable: bay-search time drops several-fold, entrance throughput grows without extra lanes, losses from manual cash collection disappear, and occupancy is visible to the owner in real time by floor and zone. SAT Solutions designs and delivers Dahua and Hikvision parking systems turnkey: survey, design, installation, tariff setup and accounting integration. Warranty and service across Uzbekistan.",
+    ],
+  },
 };
 
 const tr: Record<string, ServiceContent> = {
@@ -651,6 +699,22 @@ const tr: Record<string, ServiceContent> = {
       "Güç ve hoparlör sayısı alan, tavan yüksekliği ve fon gürültüsünden hesaplanır: ofiste duyulan ses atölyede kaybolur. Kanıtlanmış ekipman tedarik eder, anahtar teslim kurar ve sesli tahliyeyi yangın alarmıyla birlikte Özbekistan normlarına göre teslim ederiz. Ülke genelinde garanti ve servis.",
     ],
   },
+  "ohrannye-sistemy": {
+    heading: "Taşkent'te ev ve işletmeler için hırsız alarm sistemleri",
+    paragraphs: [
+      "Alarm sistemi göreve göre kurulur: tam olarak ne korunuyor ve ne kadar hızlı müdahale gerekiyor. Daire ve küçük mağaza için hareket ve kapı sensörlü panel, siren ve telefon bildirimleri yeterlidir. Depo, fabrika veya müstakil ev için şemaya çevre hattı eklenir: çit sensörleri ve ışın bariyerleri davetsiz misafiri binaya varmadan tespit eder.",
+      "Tipik sistem; kontrol paneli (kablolu veya kablosuz — örneğin Hikvision AX PRO), hareket, kapı-pencere ve cam kırılma sensörleri, personel için panik butonu, iç ve dış sirenlerden oluşur. Kontrol kumandadan, tuş takımından veya mobil uygulamadan yapılır; olaylar sahibinin telefonuna, izleme varsa güvenlik şirketine gider. Alarmı kamera ve geçiş kontrolüyle entegre ederiz: her olay video kaydına bağlanır.",
+      "Fiyat sensör sayısına, panel tipine ve çevre hattına bağlıdır: daire veya ofis bir günde biter, depo ücretsiz keşif sonrası fiyatlanır. Teslimden sonra ekipman ve işçilik garantisi verir, servis sözleşmesiyle sensörleri, pilleri ve haberleşmeyi test ederiz. Taşkent ve tüm Özbekistan'da çalışıyoruz.",
+    ],
+  },
+  "intellektualnoe-upravlenie-parkingom": {
+    heading: "Akıllı otopark: ANPR, doluluk sensörleri ve otomatik ödeme",
+    paragraphs: [
+      "Akıllı otoparkın çekirdeği giriş otomasyonudur: bariyerler, plaka tanıma (ANPR) kameraları, bilet üniteleri veya beyaz listeyle durmadan geçiş. İçeride her yerin üzerinde göstergeli doluluk sensörleri çalışır: yeşil — boş, kırmızı — dolu. Giriş ve kavşaklardaki panolar katlara göre boş yerleri gösterip sürücüyü en kısa yoldan yönlendirir.",
+      "Ticari otoparklara ödeme halkası eklenir: self-servis kasalar, QR ile ödeme, süre ve araç tipine göre tarifeler, kiracılara abonelik. Sistem tek seferlik ziyaretçiyi, personeli ve VIP listelerini ayırır: kayıtlı araçlar plakayla durmadan geçer, misafir bilet alır, borçlular ödemeden çıkamaz.",
+      "Etki ölçülebilir: yer arama süresi kat kat kısalır, giriş kapasitesi şerit eklemeden artar, elden nakit kayıpları biter ve doluluk kat ve bölge bazında gerçek zamanlı görülür. SAT Solutions, Dahua ve Hikvision otopark sistemlerini anahtar teslim kurar: keşif, proje, montaj, tarife ayarı ve muhasebe entegrasyonu. Tüm Özbekistan'da garanti ve servis.",
+    ],
+  },
 };
 
 const zh: Record<string, ServiceContent> = {
@@ -668,6 +732,22 @@ const zh: Record<string, ServiceContent> = {
       "公共广播（PA）系统承担两项任务：平时按分区播放背景音乐和通知，火灾时自动切换为语音疏散广播。SAT Solutions为商场、办公楼、学校、工厂、酒店和餐厅设计并安装PA系统。",
       "系统由功放和矩阵控制器、吸顶与壁挂扬声器、室外和车间用号角扬声器、带分区选择的话筒站组成。分区是关键：营业厅播音乐和促销通知，仓库呼叫员工，室外播报警。与火灾报警联动时，广播会被疏散语音自动打断——这是疏散规范的要求。",
       "功率和扬声器数量按面积、层高和背景噪声计算：办公室里听得清的音量在车间里会被淹没。我们供应可靠的广播设备，交钥匙安装调试，并按乌兹别克斯坦规范与火灾报警一起验收语音疏散。全国范围保修与服务。",
+    ],
+  },
+  "ohrannye-sistemy": {
+    heading: "塔什干住宅与企业防盗报警系统",
+    paragraphs: [
+      "报警系统围绕任务来搭建：保护什么、需要多快的响应。公寓和小商铺配一台带移动与开门探测器的主机、警笛和手机推送即可；仓库、工厂或独栋住宅则增加周界回路：围栏传感器和对射光束在入侵者接近建筑前就发现目标。",
+      "典型系统包括：报警主机（有线或无线，如海康威视AX PRO）、移动/门窗/玻璃破碎探测器、员工紧急按钮、室内外警笛。可用遥控、键盘或手机App操作；事件推送到业主手机，接入监控中心后由保安公司响应。我们把报警与视频监控和门禁联动：每次报警都关联录像，一看画面便知发生了什么。",
+      "价格取决于探测器数量、主机类型和是否需要周界回路：公寓或办公室一天完工，仓库在工程师免费勘查后报价。交付后提供设备和施工保修，维保合同内定期检测探测器、电池和通信。服务范围覆盖塔什干及全乌兹别克斯坦。",
+    ],
+  },
+  "intellektualnoe-upravlenie-parkingom": {
+    heading: "智慧停车场：车牌识别、车位探测与自动缴费",
+    paragraphs: [
+      "智慧停车的核心是入口自动化：道闸、车牌识别（ANPR）摄像机、取票机或白名单车辆不停车通行。场内每个车位上方装有带指示灯的占用探测器：绿色空闲、红色占用。入口和岔路口的引导屏按楼层显示空余车位，引导司机走最短路线。",
+      "商业停车场再加一层收费回路：自助缴费机、扫码支付、按时长和车型计费、租户月卡。系统区分临时访客、员工和VIP名单：登记车辆凭车牌免停通行，访客取票，欠费车辆缴清才放行。",
+      "效果可量化：找车位时间成倍缩短，入口通行能力无需拓宽车道即可提升，人工收现的漏洞消失，车位占用按楼层和分区实时呈现给业主。SAT Solutions交钥匙实施大华与海康威视停车系统：勘查、设计、安装、费率配置及财务集成。全乌兹别克斯坦保修与服务。",
     ],
   },
 };

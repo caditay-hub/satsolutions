@@ -2433,6 +2433,58 @@
         "Perimeter protection and site control",
         "Fire alarm and maintenance"
       ]
+    },
+    "ohrannye-sistemy": {
+      "title": "Hırsız Alarm Sistemleri",
+      "desc": "Ev ve işletmeler için alarm panelleri, sensörler ve panik butonları.",
+      "intro": "Anahtar teslim hırsız alarm sistemleri: paneller, hareket ve kapı sensörleri, panik butonları ve telefona bildirimler — daireler, ofisler, depolar ve tesisler için.",
+      "works": [
+        "Mühendis ziyareti ve keşif",
+        "Göreve uygun panel ve sensör seçimi",
+        "Kurulum ve bölge ayarı",
+        "Kamera ve geçiş kontrolü entegrasyonu",
+        "Garanti ve servis"
+      ],
+      "faq": [
+        {
+          "q": "Hırsız alarmı ne kadara mal olur?",
+          "a": "Sensör sayısına ve panel tipine bağlıdır: kablolu daha ucuz, kablosuz daha hızlı kurulur. Keşif ve teklif ücretsizdir."
+        },
+        {
+          "q": "Telefona bildirim gelir mi?",
+          "a": "Evet: alarmlar, kurma ve çözme mobil uygulamaya düşer; izleme merkezine bağlıysa güvenlik şirketi müdahale eder."
+        },
+        {
+          "q": "Alarm kameralara bağlanabilir mi?",
+          "a": "Evet, sensör olaylarını video kaydına bağlarız: her olayın görüntüsü olur, yanlış alarmlar azalır."
+        }
+      ]
+    },
+    "intellektualnoe-upravlenie-parkingom": {
+      "title": "Akıllı Otopark",
+      "desc": "ANPR, doluluk sensörleri, yönlendirme panoları ve otomatik ödeme.",
+      "intro": "Akıllı otopark yönetimi: plaka tanıma, doluluk sensörleri, yönlendirme panoları ve otomatik ödeme — AVM, iş merkezleri ve siteler için.",
+      "works": [
+        "Keşif ve otopark projesi",
+        "Bariyerler ve ANPR kameraları",
+        "Doluluk sensörleri ve panolar",
+        "Ödeme istasyonları ve tarifeler",
+        "Devreye alma, garanti, servis"
+      ],
+      "faq": [
+        {
+          "q": "Plaka tanıma (ANPR) ne sağlar?",
+          "a": "Kayıtlı araçlar durmadan ve biletsiz geçer, ziyaretçiler bileti otomatik alır, tüm giriş-çıkışlar fotoğrafla kaydedilir."
+        },
+        {
+          "q": "Doluluk sensörleri nasıl çalışır?",
+          "a": "Her yerin üzerinde göstergeli sensör: yeşil — boş, kırmızı — dolu. Girişteki pano katlara göre boş yerleri gösterir."
+        },
+        {
+          "q": "Ödeme otomatikleştirilebilir mi?",
+          "a": "Evet: self-servis kasalar, QR ile ödeme, süreye göre tarifeler ve kiracı abonelikleri — kasiyersiz ve nakitsiz."
+        }
+      ]
     }
   },
   "solutionsPage": {

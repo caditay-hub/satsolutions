@@ -2441,6 +2441,58 @@
         "Perimetr qo'riqlash va hudud nazorati",
         "Yong'in signalizatsiyasi va xizmat ko'rsatish"
       ]
+    },
+    "ohrannye-sistemy": {
+      "title": "Qo'riqlash tizimlari",
+      "desc": "Uy va biznes uchun qo'riqlash signalizatsiyasi, datchiklar va trevoga tugmalari.",
+      "intro": "Qo'riqlash tizimlari kalit topshirish sharti bilan: signalizatsiya, harakat va ochilish datchiklari, trevoga tugmalari va telefonga xabarlar — kvartiralar, ofislar, omborlar va ishlab chiqarish uchun.",
+      "works": [
+        "Muhandis chiqishi va obyektni tekshirish",
+        "Vazifaga mos panel va datchiklarni tanlash",
+        "Montaj va zonalarni sozlash",
+        "Videokuzatuv va SKUD bilan integratsiya",
+        "Kafolat va servis xizmati"
+      ],
+      "faq": [
+        {
+          "q": "Qo'riqlash signalizatsiyasi qancha turadi?",
+          "a": "Datchiklar soni va panel turiga bog'liq: simli arzonroq, simsiz tezroq o'rnatiladi. Muhandis chiqishi va smeta — bepul."
+        },
+        {
+          "q": "Telefonga xabar keladimi?",
+          "a": "Ha: ishga tushishlar, qo'riqlashga qo'yish va olish mobil ilovaga keladi; pultga ulanganda qo'riqlash kompaniyasi javob beradi."
+        },
+        {
+          "q": "Signalizatsiyani kameralar bilan bogʼlash mumkinmi?",
+          "a": "Ha, datchik ishga tushishini videoyozuvga bog'laymiz: har bir hodisada darhol tasvir ko'rinadi, yolg'on trevogalar kamayadi."
+        }
+      ]
+    },
+    "intellektualnoe-upravlenie-parkingom": {
+      "title": "Aqlli parking",
+      "desc": "ANPR, joy datchiklari, tablolar va parking to'lovini avtomatlashtirish.",
+      "intro": "Parkingni intellektual boshqarish: raqamlarni tanish, joy bandligi datchiklari, navigatsiya tablolari va to'lovni avtomatlashtirish — savdo markazlari, biznes-markazlar va turar-joy majmualari uchun.",
+      "works": [
+        "Parkingni tekshirish va loyihalash",
+        "Shlagbaumlar va ANPR kameralari",
+        "Joy datchiklari va navigatsiya tablolari",
+        "Kassalar, tariflar va to'lov integratsiyasi",
+        "Ishga tushirish, kafolat, servis"
+      ],
+      "faq": [
+        {
+          "q": "Raqam tanish (ANPR) nima beradi?",
+          "a": "O'z avtomobillari to'xtamasdan va chiptasiz o'tadi, mehmonlar chiptani avtomatik oladi, barcha kirish-chiqishlar foto bilan qayd etiladi."
+        },
+        {
+          "q": "Joy bandligi datchiklari qanday ishlaydi?",
+          "a": "Har bir joy ustida indikatorli datchik: yashil — bo'sh, qizil — band. Kirishdagi tablo qavatlar bo'yicha bo'sh joylarni ko'rsatadi."
+        },
+        {
+          "q": "To'lovni avtomatlashtirish mumkinmi?",
+          "a": "Ha: o'z-o'ziga xizmat kassalari, QR orqali to'lov, vaqt bo'yicha tariflar va ijarachilar uchun abonementlar — kassirsiz va naqdsiz."
+        }
+      ]
     }
   },
   "solutionsPage": {

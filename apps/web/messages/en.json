@@ -2441,6 +2441,58 @@
         "Perimeter protection and site control",
         "Fire alarm and maintenance"
       ]
+    },
+    "ohrannye-sistemy": {
+      "title": "Intruder Alarm Systems",
+      "desc": "Alarm panels, sensors and panic buttons for homes and business.",
+      "intro": "Turnkey intruder alarm systems: panels, motion and door sensors, panic buttons and phone notifications — for apartments, offices, warehouses and industrial sites.",
+      "works": [
+        "Engineer visit and site survey",
+        "Panel and sensor selection for the task",
+        "Installation and zone setup",
+        "Integration with CCTV and access control",
+        "Warranty and service"
+      ],
+      "faq": [
+        {
+          "q": "How much does an intruder alarm cost?",
+          "a": "It depends on the number of sensors and panel type: wired is cheaper, wireless is faster to install. The engineer visit and estimate are free."
+        },
+        {
+          "q": "Will I get phone notifications?",
+          "a": "Yes: alarms, arming and disarming arrive in the mobile app; with monitoring, a security company responds."
+        },
+        {
+          "q": "Can the alarm be linked to cameras?",
+          "a": "Yes, we link sensor events to video recording: every event comes with footage, and false alarms drop."
+        }
+      ]
+    },
+    "intellektualnoe-upravlenie-parkingom": {
+      "title": "Smart Parking",
+      "desc": "ANPR, bay sensors, guidance displays and automated parking payment.",
+      "intro": "Intelligent parking management: licence plate recognition, bay occupancy sensors, guidance displays and automated payment — for malls, business centres and residential complexes.",
+      "works": [
+        "Survey and parking design",
+        "Barriers and ANPR cameras",
+        "Bay sensors and guidance displays",
+        "Pay stations, tariffs and payment integration",
+        "Commissioning, warranty, service"
+      ],
+      "faq": [
+        {
+          "q": "What does plate recognition (ANPR) give?",
+          "a": "Registered cars pass without stopping or tickets, visitors get a ticket automatically, and every entry and exit is logged with a photo."
+        },
+        {
+          "q": "How do bay occupancy sensors work?",
+          "a": "A sensor with an indicator sits above each bay: green — free, red — occupied. The entrance display shows free bays per floor."
+        },
+        {
+          "q": "Can payment be automated?",
+          "a": "Yes: self-service pay stations, QR payment, time-based tariffs and tenant subscriptions — no cashier, no cash."
+        }
+      ]
     }
   },
   "solutionsPage": {
