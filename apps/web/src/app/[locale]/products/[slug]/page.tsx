@@ -384,7 +384,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
     return (
       <div className="container-page py-3 sm:py-4">
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} />
+        {/* Product-схема только при цене: без offers Google считает её критической
+            ошибкой («задайте offers/review/aggregateRating», письмо GSC 29.08.2026).
+            «Цена по запросу» → страница без Product LD (сниппета всё равно не будет). */}
+        {hasPrice ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productLd) }} /> : null}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
         {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
         {/* Breadcrumbs */}
