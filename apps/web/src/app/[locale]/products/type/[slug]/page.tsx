@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
-import { typeSeoFor } from "@/lib/typeSeo";
+import { typeSeoFor, typeLandingFor } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { deadTypeTarget } from "@/lib/deadCategories";
 import { catalogRobots } from "@/lib/catalogRobots";
@@ -75,10 +75,20 @@ export default async function ProductTypePage({ params, searchParams }: { params
   // sort, perPage, view, page) — иначе фильтр-фасеты «не работают»: URL меняется, а
   // сервер игнорирует фильтры и отдаёт нефильтрованный список.
   // type и __clean задаём принудительно: type — из slug, __clean=1 глушит 301 обратно сюда.
+  // Контент-лендинг приоритетных типов (SEO-план 31.08): интро+лонгрид+FAQ на 5 языках
+  // едет существующим каналом pairSeo → блок с FAQPage-схемой внизу листинга.
+  const landing = typeLandingFor(slug, locale);
   const view = await CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, type: name, __clean: "1" }),
     pathType: name, // тип закодирован в ПУТИ — отдаём фильтру, чтобы «Тип» был отмечен и работал
+    pairSeo: landing
+      ? {
+          heading: localizeCatName(name, locale),
+          intro: [landing.intro, ...landing.long].join("\n\n"),
+          faq: landing.faq.map(([q, a]) => ({ q, a })),
+        }
+      : undefined,
   } as any);
 
   // Перелинковка категория→услуга (см. CategoryServiceLink).
