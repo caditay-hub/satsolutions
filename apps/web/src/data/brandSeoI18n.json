@@ -2167,6 +2167,14 @@
         {
           "q": "Какая гарантия на устройства Tapo?",
           "a": "На камеры и устройства Tapo от TP-Link действует гарантия. Мы консультируем по выбору, помогаем с настройкой и обеспечиваем поддержку на весь срок эксплуатации."
+        },
+        {
+          "q": "Tapo или Hikvision — что выбрать для дома?",
+          "a": "Tapo — про простоту: камера ставится за пять минут и управляется с телефона, идеальна для квартиры и дачи. Hikvision — про системы: регистратор, архив на диске, десятки камер. Для одного-двух углов дома берите Tapo, для полноценного видеонаблюдения — Hikvision."
+        },
+        {
+          "q": "Работает ли камера Tapo без интернета?",
+          "a": "Пишет на карту памяти и без интернета, но просмотр с телефона и уведомления требуют подключения. Для мест без сети смотрите модели с 4G или локальный комплект с регистратором."
         }
       ]
     },
@@ -2189,6 +2197,14 @@
         {
           "q": "Tapo qurilmalariga qanday kafolat beriladi?",
           "a": "TP-Linkning Tapo kameralari va qurilmalariga kafolat amal qiladi. Tanlashda maslahat beramiz, sozlashda yordam beramiz va butun foydalanish davomida qoʻllab-quvvatlaymiz."
+        },
+        {
+          "q": "Tapo yoki Hikvision — uy uchun qaysi biri?",
+          "a": "Tapo — soddalik: kamera besh daqiqada o'rnatiladi va telefondan boshqariladi, kvartira va dala hovli uchun ideal. Hikvision — tizimlar: registrator, diskda arxiv, o'nlab kameralar."
+        },
+        {
+          "q": "Tapo kamerasi internetsiz ishlaydimi?",
+          "a": "Xotira kartasiga internetsiz ham yozadi, lekin telefondan ko'rish va xabarlar ulanishni talab qiladi. Tarmoqsiz joylarga 4G modellari yoki registratorli lokal to'plamga qarang."
         }
       ]
     },
@@ -2211,6 +2227,14 @@
         {
           "q": "What warranty applies to Tapo devices?",
           "a": "Tapo cameras and devices from TP-Link come with a warranty. We advise on selection, help with setup and provide support throughout the entire operating period."
+        },
+        {
+          "q": "Tapo or Hikvision for a home?",
+          "a": "Tapo is about simplicity: a camera goes up in five minutes and runs from the phone — ideal for an apartment or a dacha. Hikvision is about systems: an NVR, disk archive, dozens of cameras."
+        },
+        {
+          "q": "Does a Tapo camera work without internet?",
+          "a": "It records to the memory card offline, but phone viewing and notifications need a connection. For off-grid spots look at 4G models or a local NVR kit."
         }
       ]
     },
@@ -2233,6 +2257,14 @@
         {
           "q": "Tapo cihazlarına hangi garanti veriliyor?",
           "a": "TP-Link'in Tapo kameraları ve cihazları garantilidir. Seçimde danışmanlık yapar, kurulumda yardımcı olur ve kullanım süresi boyunca destek sağlarız."
+        },
+        {
+          "q": "Ev için Tapo mu Hikvision mı?",
+          "a": "Tapo sadeliktir: kamera beş dakikada kurulur, telefondan yönetilir — daire ve yazlık için ideal. Hikvision sistemdir: NVR, disk arşivi, onlarca kamera."
+        },
+        {
+          "q": "Tapo kamera internetsiz çalışır mı?",
+          "a": "Hafıza kartına çevrimdışı kaydeder, ancak telefondan izleme ve bildirimler bağlantı ister. Şebekesiz yerler için 4G modellere veya NVR'lı yerel sete bakın."
         }
       ]
     },
@@ -2255,6 +2287,14 @@
         {
           "q": "Tapo 设备有什么保修？",
           "a": "TP-Link 的 Tapo 摄像头和设备提供保修。我们提供选型咨询，协助配置，并在整个使用期间提供支持。"
+        },
+        {
+          "q": "家用选Tapo还是海康威视？",
+          "a": "Tapo主打简单：摄像机五分钟装好、手机管理——适合公寓和别墅个别点位。海康威视主打系统：录像机、硬盘存档、数十路摄像机。"
+        },
+        {
+          "q": "Tapo摄像机没有网络能用吗？",
+          "a": "离线也能录到存储卡，但手机查看和推送需要联网。无网场所可看4G型号或带录像机的本地套装。"
         }
       ]
     }
