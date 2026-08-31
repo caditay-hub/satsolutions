@@ -134,6 +134,8 @@ const SEO: LocaleMap = {
       desc: "Домофоны в Ташкенте: видеодомофоны, вызывные панели и мониторы Hikvision, Dahua — для квартиры, дома и офиса. Цены в каталоге, установка и настройка под ключ.",
       h1: "Домофоны в Ташкенте",
       intro: "Видеодомофоны, вызывные панели и внутренние мониторы Hikvision и Dahua — аудио- и IP-домофония для квартир, домов, офисов и жилых комплексов.",
+      long:
+        "Домофон выбирают по объекту. Квартире достаточно комплекта «вызывная панель + монитор»: аудио — бюджетно, видео — стандарт, IP-модель добавляет просмотр и открытие с телефона из любой точки. Частному дому берут панель на калитку с защитой от осадков и монитор внутри, часто с управлением замком и воротами. Для подъезда и жилого комплекса ставятся многоабонентские системы: одна антивандальная панель обслуживает десятки квартир, жильцы открывают дверь картой, ключом или со смартфона.\n\nIP-домофония — сегодняшний стандарт для новых объектов: вызов приходит в приложение, даже когда вас нет дома, видео пишется в архив, а сама система объединяется со СКУД и видеонаблюдением в один контур. Офисам домофон заменяет секретаря на входе: вызов уходит на пост охраны или сразу нескольким сотрудникам.\n\nВ каталоге — видеодомофоны, вызывные панели и мониторы Hikvision и Dahua со склада в Ташкенте. Подберём комплект под квартиру, дом или подъезд, установим под ключ, настроим приложение и возьмём на обслуживание — по всему Узбекистану.",
       serviceHref: "/solutions/intercom",
       serviceLabel: "Установка домофона под ключ →",
     },
@@ -170,6 +172,8 @@ const SEO: LocaleMap = {
       desc: "Toshkentda domofonlar: video domofonlar, chaqiruv panellari va monitorlar Hikvision, Dahua — kvartira, uy va ofis uchun. Katalogda narxlar, o'rnatish va sozlash.",
       h1: "Toshkentda domofonlar",
       intro: "Hikvision va Dahua video domofonlari, chaqiruv panellari va ichki monitorlari — kvartiralar, uylar, ofislar va turar-joy majmualari uchun audio va IP domofoniya.",
+      long:
+        "Domofon obyektga qarab tanlanadi. Kvartiraga «chaqiruv paneli + monitor» to'plami yetadi: audio — hamyonbop, video — standart, IP-model istalgan joydan telefon orqali ko'rish va ochishni qo'shadi. Hovlili uyga yog'ingarchilikdan himoyalangan kalitka paneli va ichkariga monitor olinadi, ko'pincha qulf va darvoza boshqaruvi bilan. Podezd va turar-joy majmuasiga ko'p abonentli tizimlar o'rnatiladi: bitta antivandal panel o'nlab kvartiraga xizmat qiladi.\n\nIP-domofoniya — yangi obyektlar uchun bugungi standart: chaqiruv uyda bo'lmaganingizda ham ilovaga keladi, video arxivga yoziladi, tizim esa SKUD va videokuzatuv bilan bitta konturga birlashadi. Ofislarga domofon kirishdagi kotibni almashtiradi.\n\nKatalogda — Toshkentdagi ombordan Hikvision va Dahua video domofonlari, chaqiruv panellari va monitorlari. Kvartira, uy yoki podezdga to'plamni tanlaymiz, kalit topshirish sharti bilan o'rnatamiz, ilovani sozlaymiz va xizmatga olamiz.",
       serviceHref: "/solutions/intercom",
       serviceLabel: "Domofonni kalit topshirish asosida o'rnatish →",
     },
@@ -206,6 +210,8 @@ const SEO: LocaleMap = {
       desc: "Intercoms in Tashkent: video intercoms, door stations and monitors by Hikvision, Dahua — for apartments, houses and offices. Catalogue prices, turnkey installation.",
       h1: "Intercoms in Tashkent",
       intro: "Video intercoms, door stations and indoor monitors by Hikvision and Dahua — audio and IP intercom systems for apartments, houses, offices and residential complexes.",
+      long:
+        "An intercom is chosen by the site. An apartment needs a door-station-plus-monitor kit: audio is the budget option, video the standard, and an IP model adds viewing and unlocking from the phone anywhere. A private house takes a weather-protected gate station and an indoor monitor, often controlling the lock and the gate. Apartment blocks get multi-tenant systems: one vandal-proof panel serves dozens of flats, residents open with a card, a fob or a smartphone.\n\nIP intercoms are today's standard for new sites: the call reaches the app even when you are away, video is archived, and the system merges with access control and CCTV into one loop. In offices the intercom replaces a receptionist at the door: the call lands on the guard post or several employees at once.\n\nThe catalogue holds Hikvision and Dahua video intercoms, door stations and monitors from Tashkent stock. We match a kit to an apartment, house or entrance, install turnkey, set up the app and service it across Uzbekistan.",
       serviceHref: "/solutions/intercom",
       serviceLabel: "Turnkey intercom installation →",
     },
@@ -240,6 +246,8 @@ const SEO: LocaleMap = {
       desc: "Taşkent'te diafonlar: görüntülü diafonlar, kapı panelleri ve monitörler — Hikvision, Dahua. Daire, ev ve ofisler için. Katalog fiyatları, kurulum ve ayar.",
       h1: "Taşkent'te Diafonlar",
       intro: "Hikvision ve Dahua görüntülü diafonları, kapı panelleri ve iç monitörleri — daireler, evler, ofisler ve siteler için sesli ve IP diafon sistemleri.",
+      long:
+        "Diafon sahaya göre seçilir. Daireye kapı paneli + monitör seti yeter: sesli olan bütçe, görüntülü olan standart, IP model her yerden telefonla izleme ve açma ekler. Müstakil eve hava korumalı bahçe paneli ve içeride monitör alınır; çoğu zaman kilit ve kapı kontrolüyle. Apartman ve sitelere çok aboneli sistemler kurulur: tek vandal korumalı panel onlarca daireye hizmet eder.\n\nIP diafon yeni sahaların bugünkü standardıdır: çağrı evde değilken bile uygulamaya düşer, görüntü arşivlenir, sistem geçiş kontrolü ve kameralarla tek halkada birleşir. Ofislerde diafon kapıdaki resepsiyonu ikame eder.\n\nKatalogda Taşkent stoğundan Hikvision ve Dahua görüntülü diafonlar, kapı panelleri ve monitörler var. Daireye, eve veya girişe seti seçer, anahtar teslim kurar, uygulamayı ayarlar ve tüm Özbekistan'da servis veririz.",
       serviceHref: "/solutions/intercom",
       serviceLabel: "Anahtar teslim diafon kurulumu →",
     },
@@ -274,6 +282,8 @@ const SEO: LocaleMap = {
       desc: "塔什干楼宇对讲：海康威视、大华可视对讲、门口机和室内机——适用于公寓、住宅和办公室。目录含价格，交钥匙安装调试。",
       h1: "塔什干楼宇对讲",
       intro: "海康威视和大华的可视对讲、门口机和室内机——面向公寓、住宅、办公室和小区的语音及IP对讲系统。",
+      long:
+        "楼宇对讲按场所选择。公寓配「门口机+室内机」套装即可：音频最省，视频是标准，IP机型可在任何地方用手机查看和开门。独栋住宅选防雨庭院门口机加室内机，常带门锁和大门控制。单元楼和小区装多户系统：一台防暴门口机服务几十户，住户用卡、钥匙扣或手机开门。\n\nIP对讲是新项目的当今标准：人不在家呼叫也到手机App，视频入档，系统与门禁和监控合成一个环路。办公室里对讲替代门口前台：呼叫转到保安岗或同时转给几名员工。\n\n目录内有塔什干现货的海康威视和大华可视对讲、门口机和室内机。按公寓、住宅或单元配套，交钥匙安装，配置App，全乌兹别克斯坦维保。",
       serviceHref: "/solutions/intercom",
       serviceLabel: "楼宇对讲交钥匙安装 →",
     },
