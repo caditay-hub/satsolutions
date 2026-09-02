@@ -126,6 +126,8 @@ const SEO: LocaleMap = {
       desc: "Оборудование пожарной и охранной сигнализации в Ташкенте: извещатели, приборы, оповещение — Болид, Рубеж, Hikvision AX PRO. Цены в каталоге, проект и монтаж по нормам.",
       h1: "Пожарная и охранная сигнализация в Ташкенте",
       intro: "Извещатели, приёмно-контрольные приборы и оповещение Болид, Рубеж, Hikvision AX PRO — оборудование в наличии, проектируем и сдаём по нормам Узбекистана.",
+      long:
+        "Охранно-пожарный контур объекта собирается из трёх слоёв. Пожарная сигнализация — обязательный: извещатели дыма и тепла, приёмно-контрольный прибор, оповещатели и, где требуется, речевое оповещение СОУЭ; проект и сдача — по нормам Узбекистана. Охранная сигнализация — датчики движения и открытия, тревожные кнопки для персонала (стационарные у кассы и носимые радиобрелоки), сирены и уведомления на телефон или пульт охраны. Третий слой — интеграция: сработки привязываются к видеозаписи, доступы — к СКУД, и объект виден в одной системе.\n\nОборудование в каталоге — адресные системы Болид и Рубеж, беспроводная охранная панель Hikvision AX PRO, извещатели, оповещатели, тревожные кнопки и источники питания. Для бизнеса важно, что мы закрываем цикл целиком: лицензированное проектирование, монтаж, пусконаладка, сдача надзору и регламентное обслуживание.\n\nНе знаете, с чего начать? Пришлите план помещения — посчитаем состав системы и смету бесплатно, подскажем, что требуется по нормам именно вашему типу объекта.",
       serviceHref: "/solutions/fire",
       serviceLabel: "Монтаж пожарной сигнализации под ключ →",
     },
@@ -164,6 +166,8 @@ const SEO: LocaleMap = {
       desc: "Toshkentda yong'in va qo'riqlash signalizatsiyasi uskunalari: datchiklar, priborlar, ogohlantirish — Bolid, Rubezh, Hikvision AX PRO. Loyiha va montaj me'yorlar bo'yicha.",
       h1: "Yong'in va qo'riqlash signalizatsiyasi — Toshkent",
       intro: "Bolid, Rubezh, Hikvision AX PRO datchiklari, qabul-nazorat priborlari va ogohlantirish tizimlari — loyihalaymiz va O'zbekiston me'yorlari bo'yicha topshiramiz.",
+      long:
+        "Obyektning qo'riqlash-yong'in konturi uch qatlamdan yig'iladi. Yong'in signalizatsiyasi — majburiy: tutun va issiqlik datchiklari, qabul-nazorat pribori, ogohlantirgichlar va kerak joyda SOUE nutqli ogohlantirishi; loyiha va topshirish O'zbekiston me'yorlari bo'yicha. Qo'riqlash signalizatsiyasi — harakat va ochilish datchiklari, xodimlar uchun trevoga tugmalari (kassa yonida statsionar va olib yuriladigan radiobreloklar), sirenalar va telefon yoki pultga xabarlar. Uchinchi qatlam — integratsiya: ishga tushishlar videoyozuvga, kirishlar SKUDga bog'lanadi.\n\nKatalogdagi uskunalar — Bolid va Rubezh adresli tizimlari, Hikvision AX PRO simsiz paneli, datchiklar, ogohlantirgichlar, trevoga tugmalari va quvvat manbalari. Biznes uchun muhimi: biz tsiklni to'liq yopamiz — litsenziyali loyihalash, montaj, ishga tushirish, nazoratga topshirish va reglament servisi.\n\nNimadan boshlashni bilmayapsizmi? Xona rejasini yuboring — tizim tarkibi va smetani bepul hisoblaymiz.",
       serviceHref: "/solutions/fire",
       serviceLabel: "Yong'in signalizatsiyasini o'rnatish →",
     },
@@ -202,6 +206,8 @@ const SEO: LocaleMap = {
       desc: "Fire and intruder alarm equipment in Tashkent: detectors, control panels, notification — Bolid, Rubezh, Hikvision AX PRO. Code-compliant design and installation.",
       h1: "Fire & Intruder Alarm Systems in Tashkent",
       intro: "Detectors, control panels and notification systems by Bolid, Rubezh, Hikvision AX PRO — we design and commission to Uzbekistan fire-safety codes.",
+      long:
+        "A site's security-and-fire loop is built in three layers. Fire alarm is mandatory: smoke and heat detectors, a control panel, sounders and, where required, voice evacuation; design and commissioning follow Uzbekistan codes. Intruder alarm adds motion and door sensors, panic buttons for staff (fixed at the till and wearable radio fobs), sirens and notifications to a phone or a monitoring station. The third layer is integration: alarm events tie to video, entries to access control, and the site lives in one system.\n\nThe catalogue holds Bolid and Rubezh addressable systems, the Hikvision AX PRO wireless panel, detectors, sounders, panic buttons and power supplies. For business the point is a closed cycle: licensed design, installation, commissioning, handover to the inspectorate and scheduled service.\n\nNot sure where to start? Send the floor plan — we will size the system and the estimate for free.",
       serviceHref: "/solutions/fire",
       serviceLabel: "Turnkey fire alarm installation →",
     },
@@ -238,6 +244,8 @@ const SEO: LocaleMap = {
       desc: "Taşkent'te yangın ve hırsız alarm ekipmanları: dedektörler, paneller, uyarı sistemleri — Bolid, Rubezh, Hikvision AX PRO. Yönetmeliğe uygun proje ve montaj.",
       h1: "Taşkent'te Yangın ve Hırsız Alarm Sistemleri",
       intro: "Bolid, Rubezh, Hikvision AX PRO dedektörleri, panelleri ve uyarı sistemleri — Özbekistan yangın yönetmeliklerine göre projelendirip teslim ediyoruz.",
+      long:
+        "Bir tesisin güvenlik-yangın halkası üç katmandan kurulur. Yangın alarmı zorunludur: duman ve ısı dedektörleri, kontrol paneli, sirenler ve gereken yerde sesli tahliye; proje ve teslim Özbekistan normlarına göredir. Hırsız alarmı hareket ve kapı sensörleri, personel için panik butonları (kasada sabit ve taşınabilir telsiz), sirenler ve telefona veya merkeze bildirim ekler. Üçüncü katman entegrasyondur: olaylar videoya, girişler geçiş kontrolüne bağlanır.\n\nKatalogda Bolid ve Rubezh adresli sistemleri, Hikvision AX PRO kablosuz paneli, dedektörler, sirenler, panik butonları ve güç kaynakları var. İş için önemli olan kapalı döngüdür: lisanslı proje, montaj, devreye alma, denetime teslim ve periyodik bakım.\n\nNereden başlayacağınızı bilmiyor musunuz? Planı gönderin — sistemi ve teklifi ücretsiz boyutlandıralım.",
       serviceHref: "/solutions/fire",
       serviceLabel: "Anahtar teslim yangın alarmı kurulumu →",
     },
@@ -274,6 +282,8 @@ const SEO: LocaleMap = {
       desc: "塔什干消防和防盗报警设备：探测器、主机、警报装置——Bolid、Rubezh、海康威视AX PRO。按规范设计与安装。",
       h1: "塔什干消防与防盗报警系统",
       intro: "Bolid、Rubezh、海康威视AX PRO的探测器、控制主机和警报系统——按乌兹别克斯坦消防规范设计并交验。",
+      long:
+        "场所的安防消防体系分三层。火灾报警是强制项：烟感与温感探测器、控制主机、声光警报器，必要处配语音疏散；设计与验收按乌兹别克斯坦规范。防盗报警增加移动与开门探测器、员工紧急按钮（收银台固定式和随身无线钮）、警笛及推送到手机或监控中心。第三层是集成：报警联动录像、出入联动门禁，全场所一套系统尽收眼底。\n\n目录内有Bolid和Rubezh总线制系统、海康威视AX PRO无线主机、探测器、警报器、紧急按钮和电源。对企业的关键是闭环服务：持证设计、安装、调试、消防验收和定期维保。\n\n不知从何入手？发来平面图——免费核算系统构成和造价。",
       serviceHref: "/solutions/fire",
       serviceLabel: "火灾报警交钥匙安装 →",
     },
