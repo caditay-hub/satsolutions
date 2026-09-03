@@ -49,6 +49,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "Контроллеры доступа": { uz: "Kirish kontrollerlari", en: "Access controllers", tr: "Geçiş kontrolörleri", zh: "门禁控制器" },
   "Металлодетекторы": { uz: "Metall detektorlar", en: "Metal detectors", tr: "Metal dedektörler", zh: "金属探测器" },
   "Пожарная безопасность": { uz: "Yong'in xavfsizligi", en: "Fire safety", tr: "Yangın güvenliği", zh: "消防安全" },
+  "Огнетушители": { uz: "O't o'chirgichlar", en: "Fire extinguishers", tr: "Yangın söndürücüler", zh: "灭火器" },
   "Охранная сигнализация AX PRO": { ru: "Беспроводная сигнализация Hikvision AX PRO", uz: "Hikvision AX PRO simsiz signalizatsiya", en: "Hikvision AX PRO wireless alarm", tr: "Hikvision AX PRO kablosuz alarm", zh: "海康威视 AX PRO 无线报警" },
   "Оборудование": { uz: "Uskunalar", en: "Equipment", tr: "Ekipman", zh: "设备" },
   "Оповещение": { uz: "Ogohlantirish", en: "Notification", tr: "Uyarı sistemleri", zh: "报警通知" },

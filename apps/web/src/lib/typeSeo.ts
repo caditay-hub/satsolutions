@@ -46,14 +46,26 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "pozharnaya-bezopasnost": {
     title: {
-      ru: "Огнетушители и пожарное оборудование — купить в Ташкенте",
-      uz: "O't o'chirgichlar va yong'in jihozlari — Toshkentda narxlari",
-      en: "Fire Extinguishers & Fire Safety Equipment in Tashkent",
+      ru: "Пожарное оборудование — шкафы, рукава, вентили | Ташкент",
+      uz: "Yong'in jihozlari — shkaflar, shlanglar, ventillar | Toshkent",
+      en: "Fire Safety Equipment — Cabinets, Hoses, Valves | Tashkent",
     },
     desc: {
-      ru: "Огнетушители ОП/ОУ, пожарные шкафы, рукава и щиты в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации с лицензией. Цены, доставка по Узбекистану.",
-      uz: "O't o'chirgichlar, yong'in shkaflari va jihozlari Toshkentda mavjud. Ob'ektlarni FVV talablariga muvofiq jihozlash, litsenziya bilan yong'in signalizatsiyasi montaji. Narxlar, yetkazib berish.",
-      en: "Fire extinguishers, fire cabinets, hoses and boards in stock in Tashkent. Site outfitting to fire-safety regulations, licensed fire alarm installation. Prices, delivery across Uzbekistan.",
+      ru: "Пожарные шкафы ПШ, рукава «Классик»/«Селект», вентили, спринклеры и знаки в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации с лицензией. Доставка по Узбекистану.",
+      uz: "PSh yong'in shkaflari, shlanglar, ventillar, sprinklerlar va belgilar Toshkentda mavjud. Ob'ektlarni FVV talablariga muvofiq jihozlash, litsenziya bilan yong'in signalizatsiyasi montaji. Yetkazib berish.",
+      en: "Fire cabinets, delivery hoses, valves, sprinklers and signage in stock in Tashkent. Site outfitting to fire-safety regulations, licensed fire alarm installation. Delivery across Uzbekistan.",
+    },
+  },
+  "ognetushiteli": {
+    title: {
+      ru: "Купить огнетушитель в Ташкенте — ОП и ОУ, цены | SAT Solutions",
+      uz: "O't o'chirgich narxlari Toshkentda — OP va OU | SAT Solutions",
+      en: "Buy Fire Extinguishers in Tashkent — Powder & CO2 Prices",
+    },
+    desc: {
+      ru: "Огнетушители порошковые ОП-4…ОП-100 и углекислотные ОУ-5 в наличии в Ташкенте, цены от 122 900 сум. Подбор по классу пожара и площади, перезарядка, счёт с НДС, доставка по Узбекистану.",
+      uz: "Kukunli OP-4…OP-100 va karbonat angidridli OU-5 o't o'chirgichlar Toshkentda mavjud, narxlar 122 900 so'mdan. Yong'in sinfi bo'yicha tanlash, qayta zaryadlash, QQS li hisob, yetkazib berish.",
+      en: "Powder OP-4…OP-100 and CO2 extinguishers in stock in Tashkent, prices from 122,900 UZS. Selection by fire class and area, recharging, VAT invoicing, delivery across Uzbekistan.",
     },
   },
   "ibp-i-elektropitanie": {
@@ -383,6 +395,33 @@ export const TYPE_LANDING: Record<string, Record<string, TypeLanding>> = {
       intro: "干粉与二氧化碳灭火器、消防箱、水带和标识——按消防要求为场所配齐，塔什干现货。",
       long: ["灭火器按火灾类别和面积选择：干粉型通用，覆盖A、B、C类及带电设备——办公室、商店和仓库的标准配置；二氧化碳型不留残迹，放在机房和配电箱旁。常用规格：室内4–5公斤，工业场所25–100公斤推车式。", "场所配置不止灭火器：还需带水带阀门的消防箱、疏散标识、平面图和台账。规范按面积和场所类别规定数量与位置——我们按您的场所计算配置，确保消防检查零整改。", "现货供应RIF灭火器（4–100公斤）、水带、阀门和标识；单位客户开增值税发票，全乌兹别克斯坦配送。另提供按规程再充装和持证消防报警安装——一支队伍交钥匙搞定。"],
       faq: [["办公室需要哪种灭火器？", "每50–100平方米至少一具4–5公斤干粉灭火器；机房和配电箱旁加配二氧化碳型。"], ["干粉和二氧化碳有何区别？", "干粉通用但会在设备上留粉；二氧化碳干净扑灭电子设备火灾，但更贵更重。"], ["灭火器多久充装一次？", "干粉每5年一次，二氧化碳每年称重检查；任何使用后立即充装。充装台账我们代管。"]],
+    },
+  },
+  "ognetushiteli": {
+    ru: {
+      intro: "Огнетушители порошковые ОП и углекислотные ОУ со склада в Ташкенте — от 122 900 сум. Подбор по классу пожара и площади, перезарядка, комплектация объектов под проверку МЧС.",
+      long: ["Выбор огнетушителя начинается с класса пожара. Порошковые ОП — универсалы: твёрдые материалы (A), жидкости (B), газы (C) и электроустановки до 1000 В — стандарт для офиса, магазина, склада и автомобиля. Углекислотные ОУ тушат без следа: CO2 испаряется, не повреждая технику, поэтому их место — серверные, электрощитовые и помещения с дорогой электроникой. Расчёт количества простой: минимум один ОП-4/ОП-5 на каждые 50–100 м², на этаж — не менее двух.", "В наличии полная линейка РИФ: ОП-4 (122 900 сум), ОП-5 и ОП-8 для помещений, ОП-10 и ОП-25 для производств, передвижные ОП-50 и ОП-100 для складов, АЗС и цехов, а также углекислотный ОУ-5 (543 900 сум) для электроустановок. К каждому — кронштейны, подставки и пожарные шкафы; знаки и журналы учёта для сдачи объекта.", "Огнетушитель — изделие с регламентом: порошковый перезаряжается раз в 5 лет, углекислотный контролируется по массе ежегодно, после любого срабатывания заряд восстанавливается сразу. Берём это на себя: считаем комплект под ваш объект по нормам, выставляем счёт с НДС, доставляем по Узбекистану и ведём график перезарядки — проверка МЧС проходит без замечаний."],
+      faq: [["Какой огнетушитель выбрать для офиса?", "Порошковый ОП-4 или ОП-5 — минимум один на 50–100 м² и не менее двух на этаж. Рядом с серверной и электрощитом добавьте углекислотный ОУ-5: он не испортит технику."], ["Сколько стоит огнетушитель?", "Порошковый ОП-4 — 122 900 сум, ОП-5 — 141 900, ОП-8 — 184 900, ОП-10 — 246 900; передвижной ОП-50 — 1 298 900; углекислотный ОУ-5 — 543 900 сум. Для организаций — счёт с НДС."], ["Можно ли тушить электрощит порошковым огнетушителем?", "Можно (до 1000 В), но порошок осядет на контактах и технике. Для щитовых и серверных правильнее углекислотный ОУ — он не оставляет следов."], ["Вы делаете перезарядку огнетушителей?", "Да: порошковые — раз в 5 лет, углекислотные — по ежегодному контролю массы, после срабатывания — сразу. Ведём график за вас и напоминаем о сроках."]],
+    },
+    uz: {
+      intro: "Kukunli OP va karbonat angidridli OU o't o'chirgichlar Toshkentdagi ombordan — 122 900 so'mdan. Yong'in sinfi va maydon bo'yicha tanlash, qayta zaryadlash, obyektlarni FVV tekshiruviga jihozlash.",
+      long: ["O't o'chirgich tanlash yong'in sinfidan boshlanadi. Kukunli OP — universal: qattiq materiallar (A), suyuqliklar (B), gazlar (C) va 1000 V gacha elektr qurilmalari — ofis, do'kon, ombor va avtomobil standarti. Karbonat angidridli OU izsiz o'chiradi: CO2 texnikaga zarar yetkazmasdan bug'lanadi, shuning uchun uning o'rni — server, elektr shchitxonalari va qimmat elektronikali xonalar. Miqdor hisobi oddiy: har 50–100 m² ga kamida bitta OP-4/OP-5, qavatga — kamida ikkitadan.", "Omborda to'liq RIF qatori: xonalar uchun OP-4 (122 900 so'm), OP-5 va OP-8, ishlab chiqarish uchun OP-10 va OP-25, ombor, AYOQSh va sexlar uchun g'ildirakli OP-50 va OP-100, hamda elektr qurilmalari uchun karbonat angidridli OU-5 (543 900 so'm). Har biriga — kronshteynlar, taglik va yong'in shkaflari; obyekt topshirish uchun belgilar va hisob jurnallari.", "O't o'chirgich — reglamentli buyum: kukunlisi 5 yilda bir qayta zaryadlanadi, karbonat angidridlisi har yili massa bo'yicha nazorat qilinadi, har ishlashdan keyin zaryad darhol tiklanadi. Buni o'z zimmamizga olamiz: to'plamni me'yorlar bo'yicha hisoblaymiz, QQS li hisob beramiz, O'zbekiston bo'ylab yetkazamiz va qayta zaryadlash grafigini yuritamiz."],
+      faq: [["Ofis uchun qanday o't o'chirgich tanlash kerak?", "Kukunli OP-4 yoki OP-5 — har 50–100 m² ga kamida bitta va qavatga kamida ikkita. Server va elektr shchiti yoniga OU-5 qo'shing: u texnikani buzmaydi."], ["O't o'chirgich qancha turadi?", "Kukunli OP-4 — 122 900 so'm, OP-5 — 141 900, OP-8 — 184 900, OP-10 — 246 900; g'ildirakli OP-50 — 1 298 900; karbonat angidridli OU-5 — 543 900 so'm. Tashkilotlarga QQS li hisob."], ["Elektr shchitni kukunli o't o'chirgich bilan o'chirish mumkinmi?", "Mumkin (1000 V gacha), lekin kukun kontakt va texnikaga o'tiradi. Shchitxona va serverlar uchun to'g'risi — izsiz OU."], ["Qayta zaryadlash qilasizlarmi?", "Ha: kukunlilar — 5 yilda bir, karbonat angidridlilar — yillik massa nazorati bo'yicha, ishlagandan keyin — darhol. Grafikni biz yuritamiz."]],
+    },
+    en: {
+      intro: "Powder (OP) and CO2 (OU) extinguishers from Tashkent stock — from 122,900 UZS. Selection by fire class and area, recharging, full site outfitting for fire inspections.",
+      long: ["Choosing an extinguisher starts with the fire class. Powder units are the universal choice: solids (A), liquids (B), gases (C) and live electrics up to 1000 V — the standard for offices, shops, warehouses and vehicles. CO2 units extinguish without residue: the gas evaporates without harming equipment, which makes them right for server rooms, switchboards and premises with expensive electronics. Sizing is simple: at least one 4–5 kg powder unit per 50–100 m², and no fewer than two per floor.", "The full RIF range is in stock: OP-4 (122,900 UZS), OP-5 and OP-8 for rooms, OP-10 and OP-25 for production areas, wheeled OP-50 and OP-100 for warehouses, fuel stations and workshops, plus the CO2 OU-5 (543,900 UZS) for electrical rooms. Brackets, stands and fire cabinets to match; signage and logbooks for site handover.", "An extinguisher lives by a schedule: powder units are recharged every 5 years, CO2 units pass an annual weight check, and any discharged unit is refilled immediately. We take that over: we calculate the set for your site to code, invoice with VAT, deliver across Uzbekistan and keep the recharge schedule — so the fire inspection passes without remarks."],
+      faq: [["Which extinguisher suits an office?", "A 4–5 kg powder unit — at least one per 50–100 m² and two per floor minimum. Add a CO2 unit near the server room and switchboards: it will not damage equipment."], ["How much does an extinguisher cost?", "Powder OP-4 — 122,900 UZS, OP-5 — 141,900, OP-8 — 184,900, OP-10 — 246,900; wheeled OP-50 — 1,298,900; CO2 OU-5 — 543,900 UZS. VAT invoicing for organisations."], ["Can a powder unit be used on a switchboard?", "Yes (up to 1000 V), but the powder settles on contacts and equipment. For switchboards and server rooms the CO2 type is the right call — no residue."], ["Do you recharge extinguishers?", "Yes: powder every 5 years, CO2 by annual weight check, and immediately after any use. We keep the schedule and remind you."]],
+    },
+    tr: {
+      intro: "Tozlu (OP) ve CO2 (OU) söndürücüler Taşkent stoğundan — 122.900 UZS'den. Yangın sınıfı ve alana göre seçim, dolum, tesisleri denetime hazırlama.",
+      long: ["Söndürücü seçimi yangın sınıfıyla başlar. Tozlu tipler evrenseldir: katılar (A), sıvılar (B), gazlar (C) ve 1000 V'a kadar elektrik — ofis, mağaza, depo ve araçların standardı. CO2 tipler kalıntısız söndürür: gaz, cihazlara zarar vermeden buharlaşır; yeri sunucu odaları, panolar ve pahalı elektronik bulunan mekânlardır. Hesap basit: her 50–100 m² için en az bir 4–5 kg tozlu tip, kat başına en az iki.", "Stokta tam RIF serisi: odalar için OP-4 (122.900 UZS), OP-5 ve OP-8, üretim için OP-10 ve OP-25, depo, akaryakıt istasyonu ve atölyeler için tekerlekli OP-50 ve OP-100, elektrik odaları için CO2 OU-5 (543.900 UZS). Yanında braketler, sehpalar ve yangın dolapları; teslim için levha ve defterler.", "Söndürücü takvimle yaşar: tozlu 5 yılda bir dolum, CO2 yıllık tartı kontrolü, kullanılan tüp hemen doldurulur. Bunu devralıyoruz: seti yönetmeliğe göre hesaplar, KDV'li fatura keser, tüm Özbekistan'a teslim eder ve dolum takvimini tutarız — denetim sorunsuz geçer."],
+      faq: [["Ofis için hangi söndürücü?", "4–5 kg tozlu tip — her 50–100 m² için en az bir, kat başına en az iki. Sunucu odası ve panoların yanına CO2 ekleyin: cihazlara zarar vermez."], ["Söndürücü ne kadar?", "Tozlu OP-4 — 122.900 UZS, OP-5 — 141.900, OP-8 — 184.900, OP-10 — 246.900; tekerlekli OP-50 — 1.298.900; CO2 OU-5 — 543.900 UZS. Kurumlara KDV'li fatura."], ["Pano tozlu tiple söndürülür mü?", "Söndürülür (1000 V'a kadar) ama toz kontaklara ve cihazlara oturur. Pano ve sunucu odası için doğrusu kalıntısız CO2'dir."], ["Dolum yapıyor musunuz?", "Evet: tozlular 5 yılda bir, CO2 yıllık tartıyla, kullanım sonrası hemen. Takvimi biz tutar, hatırlatırız."]],
+    },
+    zh: {
+      intro: "干粉（OP）与二氧化碳（OU）灭火器，塔什干现货——122,900 苏姆起。按火灾类别与面积选型，提供再充装与迎检配置。",
+      long: ["选灭火器先看火灾类别。干粉型是万能选手：固体（A）、液体（B）、气体（C）及 1000V 以内带电设备——办公室、商店、仓库和车辆的标准配置。二氧化碳型灭火无残留：气体挥发不损伤设备，适合机房、配电室和有贵重电子设备的场所。数量计算很简单：每 50–100 平方米至少一具 4–5 公斤干粉灭火器，每层不少于两具。", "RIF 全系现货：室内用 OP-4（122,900 苏姆）、OP-5 和 OP-8，生产区用 OP-10 和 OP-25，仓库、加油站和车间用推车式 OP-50 和 OP-100，电气房间用二氧化碳 OU-5（543,900 苏姆）。配套支架、底座和消防箱；交付所需的标识与台账一应俱全。", "灭火器有维护规程：干粉型每 5 年再充装，二氧化碳型每年称重检查，任何使用后立即补充。这些我们全包：按规范为场所计算配置、开增值税发票、全乌兹别克斯坦配送并代管充装台账——消防检查零整改通过。"],
+      faq: [["办公室选哪种灭火器？", "4–5 公斤干粉型——每 50–100 平方米至少一具，每层不少于两具。机房和配电箱旁加配二氧化碳型：不损伤设备。"], ["灭火器多少钱？", "干粉 OP-4 — 122,900 苏姆，OP-5 — 141,900，OP-8 — 184,900，OP-10 — 246,900；推车式 OP-50 — 1,298,900；二氧化碳 OU-5 — 543,900 苏姆。单位客户开增值税发票。"], ["配电箱能用干粉灭火器吗？", "能（1000V 以内），但粉末会覆盖触点和设备。配电室和机房更该用无残留的二氧化碳型。"], ["你们做再充装吗？", "做：干粉每 5 年一次，二氧化碳每年称重，使用后立即充装。台账我们代管并提醒到期。"]],
     },
   },
   "wi-fi-tochki-dostupa": {

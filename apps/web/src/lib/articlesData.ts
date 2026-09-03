@@ -22,6 +22,148 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "kak-vybrat-ognetushitel",
+    date: "2026-09-03",
+    related: ["fire"],
+    loc: {
+      ru: {
+        title: "Как выбрать огнетушитель: ОП или ОУ, расчёт количества, сроки перезарядки",
+        excerpt: "Порошковый или углекислотный, сколько огнетушителей нужно на офис и склад по нормам, что вешать у серверной и как не завалить проверку: практичный разбор с ценами.",
+        sections: [{
+            h: "Классы пожара решают всё",
+            p: ["Буквы на корпусе огнетушителя — не украшение. A — твёрдые материалы (дерево, бумага, ткань), B — жидкости (бензин, масла, растворители), C — газы, E — электроустановки под напряжением. Порошковый огнетушитель (ОП) закрывает A, B, C и электрику до 1000 В — поэтому он стал стандартом по умолчанию для офисов, магазинов, складов и автомобилей.", "Углекислотный (ОУ) работает по B, C и E, но его суперсила в другом: CO2 испаряется, не оставляя ни порошка, ни пены. Сработавший ОП в серверной означает чистку каждой платы, а часто — списание техники; ОУ просто испарится. Правило простое: где электроника дорогая — там углекислотный."]
+          }, {
+            h: "Считаем количество по нормам",
+            p: ["Ориентир для помещений: минимум один порошковый ОП-4 или ОП-5 на каждые 50–100 м² площади и не менее двух огнетушителей на этаж. Для производств и складов с горючими материалами нормы жёстче — там ставят ОП-10, ОП-25, а на большие площади — передвижные ОП-50 и ОП-100 на колёсах.", "К расчёту добавьте размещение: огнетушитель вешается на видном месте у выхода, на высоте до 1,5 м, зимой — не на морозе (порошок слёживается, баллон теряет давление). У серверной и электрощитовой — углекислотный ОУ-5 в дополнение к порошковым. Комплект завершают пожарный шкаф, знаки и журнал учёта — без них проверка находит замечания даже при исправных огнетушителях."]
+          }, {
+            h: "Цены и сроки службы",
+            p: ["Порошковые РИФ: ОП-4 — 122 900 сум, ОП-5 — 141 900, ОП-8 — 184 900, ОП-10 — 246 900, ОП-25 — 803 900, передвижные ОП-50 — 1 298 900 и ОП-100 — 2 474 900 сум. Углекислотный ОУ-5 — 543 900 сум. Для организаций — счёт с НДС, доставка по Узбекистану.", "Огнетушитель — не «купил и забыл»: порошковый перезаряжается раз в 5 лет, углекислотный ежегодно проходит контроль массы, а после любого срабатывания заряд восстанавливается немедленно. Заведите график — или отдайте его нам: посчитаем комплект под ваш объект, поставим со склада в Ташкенте и будем напоминать о перезарядке сами."]
+          }],
+        faq: [{
+            q: "Какой огнетушитель нужен в автомобиль?",
+            a: "Порошковый ОП-2 или ОП-4 (для грузовых и автобусов — от ОП-5). Главное — крепление в салоне, а не в глубине багажника: при возгорании счёт идёт на секунды."
+          }, {
+            q: "Что повесить рядом с серверной?",
+            a: "Углекислотный ОУ-5: он тушит электроустановки под напряжением и не оставляет следов на технике. Порошковый рядом тоже уместен — для остальных помещений."
+          }, {
+            q: "Огнетушитель просрочен — можно перезарядить или покупать новый?",
+            a: "Перезаряжать можно многократно, пока баллон проходит освидетельствование. Обычно выгоднее перезарядка; новый берут при повреждении корпуса или потере паспорта."
+          }, {
+            q: "Сколько огнетушителей требует проверка МЧС для офиса 200 м²?",
+            a: "Минимум два-четыре ОП-4/ОП-5 (по одному на 50–100 м², не менее двух на этаж) плюс знаки, кронштейны и журнал учёта. Посчитаем точный комплект под вашу планировку бесплатно."
+          }]
+      },
+      uz: {
+        title: "O't o'chirgichni qanday tanlash: OP yoki OU, miqdor hisobi, qayta zaryadlash muddatlari",
+        excerpt: "Kukunlimi yoki karbonat angidridlimi, ofis va omborga me'yor bo'yicha nechta kerak, server yoniga nima osish va tekshiruvdan qanday o'tish: narxlar bilan amaliy tahlil.",
+        sections: [{
+            h: "Yong'in sinflari hammasini hal qiladi",
+            p: ["O't o'chirgich korpusidagi harflar bezak emas. A — qattiq materiallar (yog'och, qog'oz, mato), B — suyuqliklar (benzin, moylar), C — gazlar, E — kuchlanish ostidagi elektr qurilmalari. Kukunli o't o'chirgich (OP) A, B, C va 1000 V gacha elektrni yopadi — shuning uchun u ofis, do'kon, ombor va avtomobillar uchun standart bo'ldi.", "Karbonat angidridli (OU) B, C va E bo'yicha ishlaydi, lekin uning kuchi boshqa narsada: CO2 na kukun, na ko'pik qoldirmasdan bug'lanadi. Serverda ishlagan OP har bir platani tozalashni, ko'pincha texnikani hisobdan chiqarishni anglatadi; OU shunchaki bug'lanadi. Qoida oddiy: elektronika qimmat joyda — karbonat angidridli."]
+          }, {
+            h: "Miqdorni me'yor bo'yicha hisoblaymiz",
+            p: ["Xonalar uchun mo'ljal: har 50–100 m² maydonga kamida bitta kukunli OP-4 yoki OP-5 va qavatga kamida ikkita o't o'chirgich. Yonuvchi materialli ishlab chiqarish va omborlarda me'yorlar qattiqroq — u yerda OP-10, OP-25, katta maydonlarga g'ildirakli OP-50 va OP-100 qo'yiladi.", "Hisobga joylashuvni qo'shing: o't o'chirgich chiqish yonidagi ko'rinadigan joyga, 1,5 m gacha balandlikka osiladi, qishda sovuqda emas (kukun zichlashadi, ballon bosim yo'qotadi). Server va elektr shchitxonasi yonida — kukunlilarga qo'shimcha karbonat angidridli OU-5. To'plamni yong'in shkafi, belgilar va hisob jurnali yakunlaydi — ularsiz tekshiruv soz o't o'chirgichlarda ham e'tiroz topadi."]
+          }, {
+            h: "Narxlar va xizmat muddatlari",
+            p: ["Kukunli RIF: OP-4 — 122 900 so'm, OP-5 — 141 900, OP-8 — 184 900, OP-10 — 246 900, OP-25 — 803 900, g'ildirakli OP-50 — 1 298 900 va OP-100 — 2 474 900 so'm. Karbonat angidridli OU-5 — 543 900 so'm. Tashkilotlarga QQS li hisob, O'zbekiston bo'ylab yetkazish.", "O't o'chirgich «oldim-unutdim» emas: kukunlisi 5 yilda bir qayta zaryadlanadi, karbonat angidridlisi har yili massa nazoratidan o'tadi, har ishlashdan keyin zaryad darhol tiklanadi. Grafik yuriting — yoki bizga topshiring: to'plamni obyektingizga hisoblaymiz, Toshkentdagi ombordan yetkazamiz va qayta zaryadlashni o'zimiz eslatamiz."]
+          }],
+        faq: [{
+            q: "Avtomobilga qanday o't o'chirgich kerak?",
+            a: "Kukunli OP-2 yoki OP-4 (yuk mashinasi va avtobuslarga OP-5 dan). Asosiysi — bagaj tubida emas, salonda mahkamlash: yong'inda soniyalar hal qiladi."
+          }, {
+            q: "Server yoniga nima osish kerak?",
+            a: "Karbonat angidridli OU-5: u kuchlanish ostidagi elektr qurilmalarini o'chiradi va texnikada iz qoldirmaydi. Yonida kukunli ham o'rinli — boshqa xonalar uchun."
+          }, {
+            q: "Muddati o'tgan o't o'chirgichni qayta zaryadlash mumkinmi?",
+            a: "Ballon guvohlantirishdan o'tar ekan, ko'p marta qayta zaryadlash mumkin. Odatda qayta zaryadlash foydali; korpus shikastlanganda yangisini olishadi."
+          }, {
+            q: "200 m² ofisga tekshiruv nechta o't o'chirgich talab qiladi?",
+            a: "Kamida ikki-to'rtta OP-4/OP-5 (har 50–100 m² ga bittadan, qavatga kamida ikkita) hamda belgilar, kronshteynlar va hisob jurnali. Aniq to'plamni rejangizga bepul hisoblaymiz."
+          }]
+      },
+      en: {
+        title: "Choosing a Fire Extinguisher: Powder vs CO2, Quantity Maths, Recharge Intervals",
+        excerpt: "Powder or CO2, how many extinguishers an office and a warehouse need by code, what to hang near the server room and how to pass inspection: a practical guide with prices.",
+        sections: [{
+            h: "Fire classes decide everything",
+            p: ["The letters on the cylinder are not decoration. A — solids (wood, paper, fabric), B — liquids (petrol, oils, solvents), C — gases, E — live electrical equipment. A powder extinguisher covers A, B, C and electrics up to 1000 V — which is why it became the default for offices, shops, warehouses and cars.", "A CO2 unit handles B, C and E, but its superpower is different: the gas evaporates leaving neither powder nor foam. A powder discharge in a server room means cleaning every board and often writing off equipment; CO2 simply evaporates. The rule is simple: where the electronics are expensive, go CO2."]
+          }, {
+            h: "Counting units by code",
+            p: ["The room guideline: at least one 4–5 kg powder unit per 50–100 m² and no fewer than two extinguishers per floor. Production areas and warehouses with combustibles demand more — 10 and 25 kg units, and wheeled 50–100 kg units for large floors.", "Add placement to the maths: an extinguisher hangs in plain sight near the exit, no higher than 1.5 m, and never in frost (powder cakes, cylinders lose pressure). Near server and switchboard rooms — a CO2 unit on top of the powder ones. Fire cabinets, signage and a logbook complete the set — without them an inspection finds faults even with healthy extinguishers."]
+          }, {
+            h: "Prices and service life",
+            p: ["RIF powder units: OP-4 — 122,900 UZS, OP-5 — 141,900, OP-8 — 184,900, OP-10 — 246,900, OP-25 — 803,900, wheeled OP-50 — 1,298,900 and OP-100 — 2,474,900 UZS. The CO2 OU-5 — 543,900 UZS. VAT invoicing for organisations, delivery across Uzbekistan.", "An extinguisher is not buy-and-forget: powder units are recharged every 5 years, CO2 units pass an annual weight check, and any discharged unit is refilled at once. Keep a schedule — or hand it to us: we calculate the set for your site, deliver from Tashkent stock and send the recharge reminders ourselves."]
+          }],
+        faq: [{
+            q: "Which extinguisher belongs in a car?",
+            a: "A 2–4 kg powder unit (5 kg and up for trucks and buses). What matters is mounting it in the cabin, not deep in the boot: a fire gives you seconds."
+          }, {
+            q: "What should hang near a server room?",
+            a: "A CO2 OU-5: it fights live electrical fires and leaves no residue on equipment. A powder unit nearby is fine too — for the other rooms."
+          }, {
+            q: "An extinguisher expired — recharge or replace?",
+            a: "Recharging works repeatedly as long as the cylinder passes certification. Recharge is usually cheaper; buy new when the body is damaged or the passport is lost."
+          }, {
+            q: "How many units does a 200 m² office need to pass inspection?",
+            a: "At least two to four 4–5 kg powder units (one per 50–100 m², minimum two per floor) plus signage, brackets and a logbook. We calculate the exact set for your layout for free."
+          }]
+      },
+      tr: {
+        title: "Yangın Söndürücü Nasıl Seçilir: Tozlu mu CO2 mi, Adet Hesabı, Dolum Aralıkları",
+        excerpt: "Tozlu mu karbondioksitli mi, ofis ve depoya yönetmelikçe kaç adet gerekir, sunucu odasının yanına ne asılır ve denetim nasıl geçilir: fiyatlarla pratik rehber.",
+        sections: [{
+            h: "Yangın sınıfları her şeyi belirler",
+            p: ["Tüpün üzerindeki harfler süs değildir. A — katılar (ahşap, kâğıt, kumaş), B — sıvılar (benzin, yağlar), C — gazlar, E — gerilim altındaki elektrik. Tozlu söndürücü A, B, C ve 1000 V'a kadar elektriği kapsar — bu yüzden ofis, mağaza, depo ve araçların varsayılanı oldu.", "CO2 tüpü B, C ve E'de çalışır ama asıl gücü başka: gaz, ne toz ne köpük bırakmadan buharlaşır. Sunucu odasında boşalan tozlu tüp her kartın temizliği, çoğu zaman cihazların hurdaya ayrılması demektir; CO2 sadece uçar. Kural basit: elektronik pahalıysa CO2."]
+          }, {
+            h: "Adedi yönetmeliğe göre sayalım",
+            p: ["Oda kılavuzu: her 50–100 m² için en az bir 4–5 kg tozlu tüp ve kat başına en az iki söndürücü. Yanıcı bulunan üretim ve depolarda daha fazlası gerekir — 10 ve 25 kg tüpler, büyük alanlara tekerlekli 50–100 kg.", "Hesaba yerleşimi ekleyin: söndürücü çıkışın yanına, göz önüne, en fazla 1,5 m yüksekliğe asılır ve asla ayazda durmaz (toz kekleşir, tüp basınç kaybeder). Sunucu ve pano odalarının yanına tozluların üstüne bir CO2. Seti yangın dolabı, levhalar ve kayıt defteri tamamlar — bunlar olmadan denetim, tüpler sağlam olsa bile eksik bulur."]
+          }, {
+            h: "Fiyatlar ve ömür",
+            p: ["RIF tozlu tüpler: OP-4 — 122.900 UZS, OP-5 — 141.900, OP-8 — 184.900, OP-10 — 246.900, OP-25 — 803.900, tekerlekli OP-50 — 1.298.900 ve OP-100 — 2.474.900 UZS. CO2 OU-5 — 543.900 UZS. Kurumlara KDV'li fatura, tüm Özbekistan'a teslimat.", "Söndürücü al-unut değildir: tozlu 5 yılda bir dolum ister, CO2 her yıl tartı kontrolünden geçer, boşalan tüp hemen doldurulur. Takvim tutun — ya da bize bırakın: seti tesisinize göre hesaplar, Taşkent stoğundan teslim eder, dolum hatırlatmalarını biz göndeririz."]
+          }],
+        faq: [{
+            q: "Araca hangi söndürücü konur?",
+            a: "2–4 kg tozlu tüp (kamyon ve otobüslere 5 kg ve üzeri). Önemli olan bagajın dibine değil kabine sabitlemek: yangında saniyeler sayılır."
+          }, {
+            q: "Sunucu odasının yanına ne asılmalı?",
+            a: "CO2 OU-5: gerilim altındaki elektrik yangınlarını söndürür ve cihazlarda kalıntı bırakmaz. Yanına diğer odalar için bir tozlu tüp de uygundur."
+          }, {
+            q: "Süresi geçen tüp doldurulur mu, yenisi mi alınır?",
+            a: "Tüp muayeneden geçtiği sürece defalarca doldurulur. Genelde dolum daha ekonomiktir; gövde hasarlıysa yenisi alınır."
+          }, {
+            q: "200 m² ofis denetim için kaç tüp ister?",
+            a: "En az iki-dört adet 4–5 kg tozlu (her 50–100 m² için bir, kat başına en az iki) artı levhalar, braketler ve kayıt defteri. Yerleşiminize göre tam seti ücretsiz hesaplarız."
+          }]
+      },
+      zh: {
+        title: "灭火器怎么选：干粉还是二氧化碳、数量怎么算、多久充装一次",
+        excerpt: "干粉还是二氧化碳，办公室和仓库按规范要配几具，机房旁挂什么，怎样顺利通过消防检查：附价格的实用指南。",
+        sections: [{
+            h: "火灾类别决定一切",
+            p: ["瓶身上的字母不是装饰。A——固体（木材、纸张、织物），B——液体（汽油、油类、溶剂），C——气体，E——带电设备。干粉灭火器覆盖 A、B、C 及 1000V 以内电气——因此它成了办公室、商店、仓库和车辆的默认选择。", "二氧化碳型适用 B、C、E，但它的绝活在别处：气体挥发后不留粉末与泡沫。干粉在机房喷洒意味着逐块清洗电路板、甚至设备报废；二氧化碳则直接挥发。规则很简单：电子设备贵重的地方，用二氧化碳。"]
+          }, {
+            h: "按规范计算数量",
+            p: ["房间参考值：每 50–100 平方米至少一具 4–5 公斤干粉灭火器，每层不少于两具。有可燃物的生产区和仓库要求更高——配 10 公斤、25 公斤，大面积用 50–100 公斤推车式。", "数量之外还有位置：灭火器挂在出口附近显眼处，高度不超过 1.5 米，冬季不可置于严寒中（干粉板结、瓶体失压）。机房和配电室旁在干粉之外再加一具二氧化碳。消防箱、标识和台账使配置完整——缺了它们，即使灭火器完好检查也会挑出问题。"]
+          }, {
+            h: "价格与使用年限",
+            p: ["RIF 干粉系列：OP-4——122,900 苏姆，OP-5——141,900，OP-8——184,900，OP-10——246,900，OP-25——803,900，推车式 OP-50——1,298,900，OP-100——2,474,900 苏姆。二氧化碳 OU-5——543,900 苏姆。单位客户开增值税发票，全乌兹别克斯坦配送。", "灭火器不是买完就忘：干粉每 5 年充装一次，二氧化碳每年称重检查，任何喷放后立即补充。自己记台账——或交给我们：按场所计算配置、塔什干现货发货、到期充装我们主动提醒。"]
+          }],
+        faq: [{
+            q: "车里放哪种灭火器？",
+            a: "2–4 公斤干粉型（货车和大巴用 5 公斤以上）。关键是固定在驾驶舱内而非后备箱深处：起火时以秒计算。"
+          }, {
+            q: "机房旁边挂什么？",
+            a: "二氧化碳 OU-5：可扑灭带电设备火灾且不损伤设备。旁边再放一具干粉型也合适——用于其他房间。"
+          }, {
+            q: "灭火器过期了，充装还是买新的？",
+            a: "只要钢瓶通过检验就能反复充装，通常更划算；瓶体损伤或证件遗失时才买新的。"
+          }, {
+            q: "200 平方米办公室过检查要几具？",
+            a: "至少两到四具 4–5 公斤干粉型（每 50–100 平方米一具，每层至少两具），另加标识、支架和台账。按您的平面图免费精确计算。"
+          }]
+      }
+    }
+  },
+  {
     slug: "kak-vybrat-stabilizator-napryazheniya",
     date: "2026-08-31",
     related: ["servers"],
