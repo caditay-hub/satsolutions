@@ -2,6 +2,20 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { getIndustryDetails, INDUSTRY_SERVICES, industriesForService } from "@/lib/industryDetails";
+import { ProjectCalcForm } from "@/components/ProjectCalcForm";
+
+/** Реальные проекты портфолио по отраслям (только существующие карточки, без выдуманных цифр). */
+const INDUSTRY_CASES: Record<string, Array<{ slug: string; title: string }>> = {
+  warehouse: [{ slug: "uzum-videonablyudenie-skladov-i-punktov-vydachi", title: "Uzum — видеонаблюдение складов и пунктов выдачи" }],
+  retail: [{ slug: "uzum-videonablyudenie-skladov-i-punktov-vydachi", title: "Uzum — видеонаблюдение складов и пунктов выдачи" }],
+  industry: [
+    { slug: "skud-zavod-damira-beverages", title: "СКУД и видеонаблюдение на заводе Damira Beverages" },
+    { slug: "montazh-servernoy-komnaty", title: "Монтаж серверной комнаты" },
+  ],
+  residential: [{ slug: "zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa", title: "ЖК Tower Up — интеллектуальная система безопасности" }],
+  bank: [{ slug: "virtualizaciya-h3c-cas-finansovaya-organizaciya", title: "Виртуализация на серверах H3C для финансовой организации" }],
+  city: [{ slug: "ucell-ustanovka-videosteny-dahua-v-situacionnom-centre", title: "Ucell — видеостена Dahua в ситуационном центре" }],
+};
 
 /**
  * Инженерный контент отраслевой страницы — «журнальный ритм» (вариант А, 03.08.2026):
@@ -160,9 +174,28 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
                 </div>
               </div>
             )}
+
+            {(INDUSTRY_CASES[industryKey] ?? []).length > 0 && (
+              <div className="mt-12">
+                <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
+                <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industryCases")}</h2>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {(INDUSTRY_CASES[industryKey] ?? []).map((c) => (
+                    <Link key={c.slug} href={`/portfolio/${c.slug}`}
+                      className="group rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand-500">
+                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-700">{c.title}</div>
+                      <div className="mt-1 text-xs font-semibold text-brand-600">{tc("caseMore")} →</div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
       ) : null}
+
+      {/* 05 · Инлайн-форма расчёта: дочитал страницу — форма уже перед глазами */}
+      {d && <ProjectCalcForm serviceName={`Расчёт проекта: ${d.specificsTitle}`} />}
     </>
   );
 }

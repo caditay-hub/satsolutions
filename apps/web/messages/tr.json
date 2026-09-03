@@ -67,7 +67,9 @@
     "chatRealtime": "Sohbet gerçek zamanlı çalışır.",
     "legalForm": "LLC",
     "newBadge": "Yeni",
-    "priceSum": "{value} sum"
+    "priceSum": "{value} sum",
+    "industryCases": "Tamamlanan projeler",
+    "caseMore": "Vakayı incele"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -2616,7 +2618,9 @@
     "orderDeliveryLink": "Teslimat ve ödeme koşulları",
     "orderComment": "Not: teslimat adresi, fatura veya teklif gerekiyorsa yazın",
     "orderPhoneErr": "Telefon numarasını eksiksiz girin",
-    "orderPayShort": "Ön ödemesiz"
+    "orderPayShort": "Ön ödemesiz",
+    "calcTitle": "Tesisiniz için proje hesabı alın",
+    "calcSub": "Telefonunuzu ve tesis hakkında birkaç kelime bırakın — mühendis ekipman listesini ve bütçeyi ücretsiz çıkarsın."
   },
   "meta": {
     "homeTitle": "SAT Solutions — Özbekistan'da güvenlik ve zayıf akım sistemleri",

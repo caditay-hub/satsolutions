@@ -67,7 +67,9 @@
     "chatRealtime": "客服聊天为实时响应。",
     "legalForm": "有限责任公司",
     "newBadge": "新品",
-    "priceSum": "{value} 苏姆"
+    "priceSum": "{value} 苏姆",
+    "industryCases": "已交付项目",
+    "caseMore": "查看案例"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -2616,7 +2618,9 @@
     "orderDeliveryLink": "配送与付款条款",
     "orderComment": "备注：配送地址，如需发票或报价请注明",
     "orderPhoneErr": "请输入完整的电话号码",
-    "orderPayShort": "无需预付"
+    "orderPayShort": "无需预付",
+    "calcTitle": "为您的场所计算项目方案",
+    "calcSub": "留下电话和场所简介——工程师将免费为您配置设备清单与预算。"
   },
   "meta": {
     "homeTitle": "SAT Solutions — 乌兹别克斯坦安防与弱电系统",

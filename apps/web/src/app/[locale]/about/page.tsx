@@ -473,6 +473,34 @@ export default async function AboutPage() {
             </div>
           </section>
 
+          {/* ── Нам доверяют: реальные клиенты с ссылками на кейсы портфолио ── */}
+          <section>
+            <Reveal>
+              <SectionHeading
+                title={({ ru: "Нам доверяют", uz: "Bizga ishonishadi", en: "Trusted by", tr: "Bize güvenenler", zh: "客户信任" } as Record<string, string>)[locale] ?? "Нам доверяют"}
+                icon={
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 21c-4.4-2.6-7.5-5.6-7.5-9.6C4.5 8.6 6.6 6.5 9 6.5c1.2 0 2.3.5 3 1.4.7-.9 1.8-1.4 3-1.4 2.4 0 4.5 2.1 4.5 4.9 0 4-3.1 7-7.5 9.6z" />
+                  </svg>
+                }
+              />
+            </Reveal>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { name: "Uzum", note: { ru: "видеонаблюдение складов и ПВЗ", uz: "omborlar videokuzatuvi", en: "warehouse & pickup CCTV", tr: "depo kamera sistemleri", zh: "仓储视频监控" }, href: "/portfolio/uzum-videonablyudenie-skladov-i-punktov-vydachi" },
+                { name: "Ucell", note: { ru: "видеостена ситуационного центра", uz: "vaziyat markazi videodevori", en: "situation-centre video wall", tr: "durum merkezi video duvarı", zh: "态势中心拼接屏" }, href: "/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre" },
+                { name: "Damira Beverages", note: { ru: "СКУД и видеонаблюдение завода", uz: "zavod SKUD va videokuzatuvi", en: "factory access control & CCTV", tr: "fabrika geçiş ve kamera", zh: "工厂门禁与监控" }, href: "/portfolio/skud-zavod-damira-beverages" },
+                { name: "ЖК Tower Up", note: { ru: "система безопасности комплекса", uz: "majmua xavfsizlik tizimi", en: "residential security system", tr: "site güvenlik sistemi", zh: "住宅安防系统" }, href: "/portfolio/zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa" },
+              ].map((c) => (
+                <Link key={c.name} href={c.href}
+                  className="group rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand-500">
+                  <div className="text-base font-black text-slate-900 group-hover:text-brand-700">{c.name}</div>
+                  <div className="mt-1 text-xs leading-relaxed text-slate-600">{(c.note as Record<string, string>)[locale] ?? c.note.ru}</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+
           {/* ── Где мы находимся ── */}
           {address || geo.widgetSrc || geo.href ? (
             <section>

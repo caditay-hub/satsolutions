@@ -67,7 +67,9 @@
     "chatRealtime": "Chat real vaqtda ishlaydi.",
     "legalForm": "MChJ",
     "newBadge": "Yangi",
-    "priceSum": "{value} so‘m"
+    "priceSum": "{value} so‘m",
+    "industryCases": "Amalga oshirilgan loyihalar",
+    "caseMore": "Keysni ko'rish"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -2624,7 +2626,9 @@
     "orderDeliveryLink": "Yetkazib berish va to‘lov shartlari",
     "orderComment": "Izoh: yetkazib berish manzili, hisob yoki tijoriy taklif kerak bo‘lsa — yozing",
     "orderPhoneErr": "Telefon raqamini to‘liq kiriting",
-    "orderPayShort": "Oldindan to‘lovsiz"
+    "orderPayShort": "Oldindan to‘lovsiz",
+    "calcTitle": "Obyektingiz uchun loyihani hisoblang",
+    "calcSub": "Telefon va obyekt haqida bir-ikki og'iz yozib qoldiring — muhandis uskunalar tarkibi va smetani bepul hisoblaydi."
   },
   "meta": {
     "homeTitle": "SAT Solutions — O‘zbekistonda xavfsizlik va kuchsiz tok tizimlari",

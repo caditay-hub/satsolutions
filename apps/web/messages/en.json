@@ -67,7 +67,9 @@
     "chatRealtime": "The chat works in real time.",
     "legalForm": "LLC",
     "newBadge": "New",
-    "priceSum": "{value} UZS"
+    "priceSum": "{value} UZS",
+    "industryCases": "Delivered projects",
+    "caseMore": "View case"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -2624,7 +2626,9 @@
     "orderDeliveryLink": "Delivery & payment terms",
     "orderComment": "Comment: delivery address, need an invoice or quote — let us know",
     "orderPhoneErr": "Please enter the full phone number",
-    "orderPayShort": "No prepayment"
+    "orderPayShort": "No prepayment",
+    "calcTitle": "Get a project estimate for your site",
+    "calcSub": "Leave your phone and a few words about the site — an engineer will spec the equipment and budget, free of charge."
   },
   "meta": {
     "homeTitle": "SAT Solutions — security and low-voltage systems in Uzbekistan",
