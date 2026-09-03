@@ -304,17 +304,21 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             return (product as any).isUsd ? n * usdToUzs : n;
           })();
           const fetchType = async (spec: string) => {
-            const [tn, qq] = spec.split("#");
-            const base = { type: tn, q: qq || undefined };
+            // «Тип#слово»: слово фильтруется по НАЗВАНИЮ товара на фронте — API-q нельзя
+            // (он матчит и имя категории: q=кронштейн возвращает весь тип «Кронштейны…»).
+            const [tn, word] = spec.split("#");
+            const lim = word ? 100 : 12;
+            const byName = (l: { items: any[] }) =>
+              word ? { items: l.items.filter((p: any) => String(p.name || "").toLowerCase().includes(word)) } : l;
             if (prodUzs > 0) {
-              const corridor = await getProducts(1, 12, {
-                ...base,
+              const corridor = byName(await getProducts(1, lim, {
+                type: tn,
                 priceMin: Math.max(1, Math.round(prodUzs * 0.03)),
                 priceMax: Math.round(prodUzs * 0.7),
-              }).catch(() => ({ items: [] as any[] }));
+              }).catch(() => ({ items: [] as any[] })));
               if (corridor.items.length >= 2) return corridor;
             }
-            return getProducts(1, 12, base).catch(() => ({ items: [] as any[] }));
+            return byName(await getProducts(1, lim, { type: tn }).catch(() => ({ items: [] as any[] })));
           };
           const lists = await Promise.all(accCats.slice(0, 3).map(fetchType));
           const seed = Array.from(String(product.id)).reduce((s, ch) => (s * 31 + ch.charCodeAt(0)) >>> 0, 7);
