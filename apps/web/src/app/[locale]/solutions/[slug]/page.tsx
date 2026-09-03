@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { localizePortfolioProject } from "@/lib/contentI18n";
-import { localizeProductName } from "@/lib/productI18n";
+import { localizeProduct, localizeProductName } from "@/lib/productI18n";
 import { getServiceBySlug, getPortfolio, getProducts } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
@@ -106,8 +106,31 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     // технику/цену, а страница была только про работы. Витрина закрывает разрыв.
     cctv: ["hik-ip-cameras", "network-cameras", "hik-wireless-cameras"],
     intercom: ["hik-intercoms", "indoor-monitors"],
-    fire: ["prochee-fire"],
+    fire: ["prochee-fire", "rubezh-detectors", "prochee-ognetushiteli"],
     servers: ["pxt-server"],
+    // 03.09: витрина на ВСЕ услуги, где в тексте описано оборудование (перелинковка
+    // услуга → товары каталога с фото/описанием/ценой).
+    alarm: ["hik-axpro", "bolid-detectors", "detectors"],
+    "ohrannye-sistemy": ["hik-axpro", "bolid-detectors", "detectors"],
+    pa: ["prochee-pa", "rubezh-sirens", "bolid-sirens"],
+    perimeter: ["thermal-cameras", "hik-ip-cameras", "hik-project"],
+    anpr: ["hik-ip-cameras", "zkteco-barriers"],
+    "intellektualnoe-upravlenie-parkingom": ["zkteco-barriers", "hik-turnstiles", "displei-hik"],
+    attendance: ["hik-access-terminals", "zkteco-terminals"],
+    gates: ["zkteco-barriers", "kanihad-turnstiles"],
+    analytics: ["hik-ip-cameras", "hik-nvr"],
+    videowall: ["displei-hik", "displei", "hik-nvr"],
+    network: ["pxt-scs", "pxt-switches", "pxt-racks"],
+    wifi: ["tplink-wifi", "hik-wifi", "witek-wifi"],
+    fiber: ["pxt-fiber", "pxt-tools", "pxt-pon"],
+    radiobridge: ["mikrotik-wireless", "witek-bridges", "ruijie-wireless"],
+    mikrotik: ["mikrotik-routers", "mikrotik-switches", "mikrotik-sfp"],
+    telephony: ["pxt-voip"],
+    server: ["pxt-server", "pxt-racks", "pxt-ups"],
+    "slabotochnye-sistemy": ["hik-ip-cameras", "prochee-fire", "hik-access-terminals"],
+    proektirovanie: ["rubezh-panels", "hik-ip-cameras", "access-controllers"],
+    obsluzhivanie: ["prochee-ognetushiteli", "bolid-detectors", "prochee-fire"],
+    "sistemnaya-integraciya": ["hik-nvr", "pxt-server", "hik-access-terminals"],
   };
   let equipment: any[] = [];
   const cats = EQUIP_CATS[svc.key];
@@ -119,7 +142,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     const merged: any[] = [];
     for (let i = 0; i < 4; i++) for (const ch of chunks) if (ch[i]) merged.push(ch[i]);
     // названия приходят из БД по-русски — прогоняем через оверлей productI18n
-    equipment = merged.filter((p) => p?.coverImageUrl).slice(0, 8).map((p) => ({ ...p, name: localizeProductName(p, locale) }));
+    equipment = merged.filter((p) => p?.coverImageUrl).slice(0, 8).map((p) => {
+      const loc = localizeProduct(p, locale);
+      return { ...p, name: loc.name, shortDescription: loc.shortDescription };
+    });
   }
   const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz o'rnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
   const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
@@ -488,6 +514,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                   </div>
                   <div className="border-t border-slate-100 p-3">
                     <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{p.name}</div>
+                    {p.shortDescription ? (
+                      <div className="mt-1 line-clamp-2 text-[11.5px] leading-snug text-slate-500">{p.shortDescription}</div>
+                    ) : null}
                     <div className="mt-1 text-[12px] font-bold text-brand-700">
                       {Number(p.price) > 0
                         ? `${Math.round(Number(p.price)).toLocaleString("ru-RU")} ${locale === "ru" ? "сум" : "UZS"}`
