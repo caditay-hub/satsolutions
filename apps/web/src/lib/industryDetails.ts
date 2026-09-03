@@ -404,10 +404,1110 @@ const ru: Record<string, IndustryDetails> = {
 
 };
 
-const uz: Record<string, IndustryDetails> = {};
-const en: Record<string, IndustryDetails> = {};
+const uz: Record<string, IndustryDetails> = {
+  industry: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Sexlarning agressiv muhiti", text: "Ishlab chiqarish xonalarida kameralar chang, bug'lanish va tebranishda ishlaydi, shuning uchun sexlarga IP66 dan past bo'lmagan korpuslar, yuvish va quyish uchastkalariga esa IK10 antivandal ijrodagi IP67 qo'yamiz. Kronshteynlarni tebranish ajratgichi bilan tanlaymiz: konveyer liniyalarida metallga qattiq mahkamlash bir oyda burilish uzelini buzadi." },
+      { title: "Perimetr va KPP — alohida kontur", text: "Zavod perimetri — uzun trassalar va −15 dan +45 °C gacha ko'cha harorati. Uzellarga optik tolali liniya tortamiz va isitish hamda UPS li ko'cha shkaflarini qo'yamiz, KPPda esa shlagbaum, raqam tanish va prohodnaya bilan aloqali alohida kontur ajratamiz." },
+      { title: "Smenalar bo'yicha ish vaqti hisobi", text: "Ishlab chiqarishda SKUD «keldi — ketdi»ni emas, smenalar, ortiqcha ishlash va sexlar orasidagi o'tishlarni hisoblaydi. Kirish zonalarini rollarga sozlaymiz, tabelni yuklaymiz va ma'lumotlarni 1C ga uzatamiz — kadrlar xizmati tizimni aynan shu uchun joriy qiladi." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Bosh muhandis bilan tekshiruv", text: "Obyektni planlar bilan sexma-sex aylanamiz: ko'rish zonalari, kabel marshrutlari, quvvat ulanish nuqtalari, portlash xavfli va nam uchastkalarni qayd etamiz. Alohida — qayerda shtroba qilib bo'lmasligi va montaj uchun texnologik oynalar qayerdaligini ko'ramiz." },
+      { title: "Loyiha va spetsifikatsiya", text: "Uskunalarni joylashtirish sxemasi, kabel jurnali, PoE kommutatorlarga yuk hisobi va arxiv chuqurligini tayyorlaymiz. Spetsifikatsiyada aniq modellar va artikullarni ko'rsatamiz — buyurtmachi narxlarni tekshirib byudjet qo'ya oladi." },
+      { title: "Ishlab chiqarishni to'xtatmasdan montaj", text: "Bosqichlar bo'yicha va kelishilgan grafikda ishlaymiz: shovqinli va changli ishlarni ta'mir oynalari va tungi smenalarga chiqaramiz. Har liniyani markirovka qilib kabel jurnaliga kiritamiz — bir yildan keyin kengaytirishda lotoklarni ko'r-ko'rona ochish kerak bo'lmaydi." },
+      { title: "Ishga tushirish va topshirish", text: "Detektsiya, analitika stsenariylari va kirish huquqlarini sozlaymiz, arxiv chuqurligini yuk ostida tekshiramiz, xavfsizlik xizmatini o'qitamiz va ijro hujjatlarini topshiramiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Uzoq uzellarda quvvat", text: "Katta hududlarda PoE yetmaydi: 100 m gacha mis bilan, undan nari mediakonvertorli optika va shkafda lokal quvvat qo'yamiz. Montajda qimmatroq, lekin abadiy quvvat tushishlari va kamera qayta yuklanishlarini yo'q qiladi." },
+      { title: "Arxiv va tarmoqqa yuk", text: "Doimiy yozuvli yigirmata 4 MP kamera — oyiga o'nlab terabayt. Videotrafik va texnologik tarmoqni VLAN bo'yicha ajratamiz, bitreytni real stsenariyga hisoblaymiz va bitta disk emas, RAID qo'yamiz." },
+      { title: "Obyektivlarda chang va kondensat", text: "Un va tsement uchastkalarida obyektiv haftalarda qoplanadi. Isitishli kameralar qo'yamiz va xizmat shartnomasiga reglamentli tozalashni kiritamiz — aks holda tizim «bor», lekin tasvir yo'q." },
+    ],
+  },
+  warehouse: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Baland stellajlar ko'rishni to'sadi", text: "Ombor — 12 m gacha stellajlar orasidagi tor koridorlar. Yo'lakdagi ship osti kamerasi faqat palletlarning ustini ko'radi, shuning uchun kameralarni koridorlar bo'ylab va qatorlar torsiga qo'yamiz, qabul va jo'natish zonalarini alohida yopamiz." },
+      { title: "Darvoza va rampalar — asosiy nuqtalar", text: "Bahsli holatlar deyarli doim qabul va jo'natishda chiqadi. Rampalarga mashina raqami va tushirish zonasi aniq o'qiladigan kameralar qo'yamiz, kirishga ANPR qo'shamiz va hodisani vaqt bo'yicha nakladnoyga bog'laymiz." },
+      { title: "Sovuq va harorat farqlari", text: "Sovuq zonalar va rampalarda kondensat oddiy kameralarni ishdan chiqaradi. Kengaytirilgan harorat diapazoni va germetik kirishli modellarni qo'llaymiz, quvvat bloklarini issiq zonaga chiqaramiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Ombor topologiyasiga sxema", text: "Stellajlar joylashuvi va saqlash zonalari bilan planirovkani olamiz, ko'rish to'silishlarini hisoblaymiz va fokus masofalarini koridor uzunligiga tanlaymiz — aks holda videoda pallet raqami o'qilmaydi." },
+      { title: "Zonalar bo'yicha montaj", text: "Natija darhol ko'rinishi uchun qabul va jo'natish zonalaridan boshlaymiz, keyin saqlash va perimetrga o'tamiz. Trassalarni yuklagichlarga xalaqit bermaslik uchun mavjud lotoklar bo'ylab olib boramiz." },
+      { title: "Ombor operatsiyalariga bog'lash", text: "Hodisa vaqti va darvoza bo'yicha qidiruvni sozlaymiz: xavfsizlik xodimi kerakli jo'natishni soatlab yozuv ko'rish o'rniga bir daqiqada topadi." },
+      { title: "O'qitish va reglament", text: "Omborchi va qo'riqchilarga yetkazib beruvchiga da'vo uchun fragmentni qanday yuklashni ko'rsatamiz va ish joyida qisqa yo'riqnoma qoldiramiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Yuklagichlar kamera va lotoklarni uradi", text: "Koridor burilishlarida texnika konstruktsiyalarga muntazam tegadi. Kameralarni machta ish zonasidan yuqoriga chiqaramiz va trassalarni 3 m gacha metallorukav bilan himoyalaymiz." },
+      { title: "Darvozadan yorug'lik urishi", text: "Ochiq darvoza kunduzi kontr yorug'lik beradi va proyomdagi odam siluetga aylanadi. Keng dinamik diapazonli kameralar qo'yamiz va burchakni quyosh matritsaga urmasligi uchun buramiz." },
+      { title: "TSD uchun Wi-Fi va videotrafik bitta tarmoqda", text: "Video kanalni to'ldiradi, omborchilarning terminallari uziladi. Tarmoqlarni ajratamiz, video uchun boshqariladigan kommutatorli alohida segment quramiz." },
+    ],
+  },
+  bank: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Yozuvni saqlash va unga kirish talablari", text: "Bankda kameralargina emas, reglament ham muhim: arxivga kim kiradi, yozuv so'rov bo'yicha qanday yuklanadi, qancha saqlanadi. Rollar modelini va operatorlar harakatlarini jurnallashni sozlaymiz." },
+      { title: "Kassa va o'z-o'ziga xizmat zonasi", text: "Kassalar, bankomatlar va sanash zonasi yuz va qo'ldagi pullar bir ma'noda o'qiladigan kadr talab qiladi. Har pozitsiyaga rakurs va fokus masofasini tanlaymiz, burchakka tipovoy kamera qo'ymaymiz." },
+      { title: "Trevoga tugmalari va qo'riqlash bilan aloqa", text: "Bo'limdagi trevoga signalizatsiyasi — rezervlangan alohida kontur. Signalning pultgacha o'tishini tekshiramiz va obyekt topshirishda sinov ishga tushirishlar qilamiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Bank xavfsizligi bilan kelishish", text: "Buyurtmachining ichki talablari bo'yicha ishlaymiz: trassa marshrutlari, pudratchining xonalarga kirishi, operatsion vaqtda ishlar tartibi." },
+      { title: "Zonalarni ajratgan loyiha", text: "Umumiy kirish zonalari, xizmat xonalari, serverxona va kassa uzelini ajratamiz — har birida o'z kirish huquqlari va arxiv chuqurligi." },
+      { title: "Ishlayotgan bo'limda montaj", text: "Ishlarni yopilgandan keyin yoki dam olish kunlari olib boramiz, shovqinli operatsiyalarni oldindan kelishamiz — bo'lim mijozlarga xizmatni to'xtatmasligi kerak." },
+      { title: "Stsenariylar tekshiruvli topshirish", text: "Stsenariylarni o'tkazamiz: trevoga, quvvat uzilishi, server bilan aloqa yo'qolishi, so'rov bo'yicha arxiv yuklash — va faqat shundan keyin akt imzolaymiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Zaxira quvvat", text: "Svet o'chishi bo'limni yozuvsiz va SKUDsiz qoldirmasligi kerak. Yukni hisoblaymiz va «ko'z bilan» emas, real zaxirali UPS qo'yamiz." },
+      { title: "Elektromagnit qulfli eshiklar va yong'in xavfsizligi", text: "Evakuatsiya yo'llaridagi qulflar yong'in signalizatsiyasi signali bo'yicha bo'shashi shart. SKUD va APSni bog'laymiz, topshirishda bo'shatishni tekshiramiz." },
+      { title: "Mavjud tizimlar bilan integratsiya", text: "Bo'limlarda ko'pincha turli yillardagi uskunalar turadi. ONVIF bo'yicha moslikni tekshiramiz va iloji boricha ishlayotgan kameralarni saqlab, faqat kritik pozitsiyalarni almashtiramiz." },
+    ],
+  },
+  retail: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Kassa — asosiy e'tibor zonasi", text: "Chakanadagi yo'qotishlarning katta qismi kassa operatsiyalariga bog'liq. Qo'llar va pul yashigi o'qiladigan planli kamera qo'yamiz va videoni cheklar bilan bog'laymiz: chek raqami bo'yicha darhol yozuv fragmenti ochiladi." },
+      { title: "Savdo zali va ko'r zonalar", text: "Stellajlar va reklama konstruksiyalari qimmat tovarli javonlar yonida o'lik zonalar yaratadi. Qamrovni ship simmetriyasi bo'yicha emas, planogramma bo'yicha loyihalaymiz." },
+      { title: "Do'konlar tarmog'i — yagona kirish", text: "Egasiga barcha nuqtalarga bitta kirish kerak. Ofisdan markazlashgan kirish quramiz va huquqlarni sozlaymiz: nuqta administratori faqat o'z do'konini ko'radi." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Nuqta uchun tipovoy yechim", text: "Do'kon formatiga tipovoy komplekt ishlab chiqamiz — yangi nuqta qaytadan loyihalanmasdan, tayyor sxema bo'yicha kunlarda ochiladi." },
+      { title: "Savdoni to'xtatmasdan montaj", text: "Tungi soatlarda yoki ochilishgacha ishlaymiz, kabel trassalarini mavjud korob va osma shipga yashiramiz." },
+      { title: "Tashrif hisobi va analitika", text: "Kirishlarga hisoblagichlar qo'yamiz, trafik va konversiya hisobotlarini sozlaymiz — ma'lumotlar faqat qo'riqlashga emas, marketingga ketadi." },
+      { title: "Tarmoqqa xizmat", text: "Yagona arizalar jurnali va reglamentli chiqishlarni yo'lga qo'yamiz — uzoq nuqtadagi nosozlik bir oydan keyin chiqib qolmasin." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Nuqtalarda turli provayderlar", text: "Do'konlar tarmog'ida aloqa kanallari sifati har xil. Lokal yozuvni keyingi sinxronlash bilan sozlaymiz — internet uzilishi arxivni yo'qotmaydi." },
+      { title: "Vitrina yoritilishi", text: "Yorqin vitrina podsvetkasi kadrni kuydiradi. Keng dinamik diapazonli kameralar ishlatamiz va ekspozitsiyani qiziqish zonasi bo'yicha to'g'rilaymiz." },
+      { title: "Xodimlar almashinuvi", text: "Har necha oyda smena tarkibi o'zgaradi. Oddiy rollar va qisqa yo'riqnomalar qilamiz — yangi administrator har yuklash uchun bizga qo'ng'iroq qilmasin." },
+    ],
+  },
+  residential: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Hovli, pod'ezdlar va parking — turli vazifalar", text: "Hovlini umumiy ko'rinish kameralari bilan olamiz, pod'ezdlarni — eshik oldida yuz o'qiladigan qilib, parkingni — kirishda raqam tanish bilan. Bitta universal kamera bu vazifalarning birortasini to'liq hal qilmaydi." },
+      { title: "Smartfonga chaqiruvli domofoniya", text: "Turg'unga kuryerga eshikni istalgan joydan ochish kerak. Ilovali IP-domofoniya qo'yamiz va odatiga ko'ra oddiy trubka bilan ishlash imkonini saqlaymiz." },
+      { title: "Boshqaruv kompaniyasi — operator", text: "Tizimni xavfsizlik xizmati emas, UK ekspluatatsiya qiladi. Interfeys va huquqlarni uning xodimlariga sozlaymiz va qisqa reglamentlar topshiramiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Qurilish bosqichiga qarab loyiha", text: "Yangi binoga pardozgacha kiramiz: trassalarni stoyaklar va kuchsiz tok nishalariga qo'yamiz. Tayyor uyda marshrutlarni mavjud koroblar bo'ylab loyihalaymiz." },
+      { title: "Kirish guruhi", text: "Shlagbaum, raqam tanish va turg'unlar oq ro'yxatini o'rnatamiz, mehmonlar va yetkazib berish xizmatlariga rejim sozlaymiz." },
+      { title: "Pod'ezdlar va parking", text: "Kirishlarga domofonlar, qulflar, dovodchiklar va kameralar qo'yamiz, parking va texnik xonalarni alohida yopamiz." },
+      { title: "UKga topshirish", text: "Xodimlarni o'qitamiz, sxemalar, parollar va turg'un arizasi bo'yicha yozuv berish tartibini qoldiramiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Pod'ezdlar oldida vandalizm", text: "Birinchi qavatlardagi panellar va kameralar muntazam shikastlanadi. IK10 antivandal korpuslar qo'yamiz va uskunani qo'l yetmas balandlikka chiqaramiz." },
+      { title: "Momaqaldiroq himoyasi va navodkalar", text: "Korpuslar orasidagi ko'cha liniyalari navodka oladi. Kirishlarga momaqaldiroq himoyasi va binolar orasiga optika qo'llaymiz." },
+      { title: "Turg'unlarning arxiv so'rovlari", text: "UK «yozuvni ko'rsating» iltimoslariga g'arq bo'ladi. Reglament sozlaymiz: kim, qanday shaklda va qancha muddatda fragment oladi — bu muhandisning qo'l mehnatiga aylanmasin." },
+    ],
+  },
+  school: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Kirishdagi eng yuqori oqim", text: "Ertalab maktab prohodnayasidan 20–30 daqiqada yuzlab o'quvchi o'tadi. O'tkazish qobiliyatini hisoblaymiz va eshik oldida olomon bo'lmasligi uchun kerakli sondagi turniket qo'yamiz — «hammaga bitta» emas." },
+      { title: "Ota-onalarga bildirishnomalar", text: "Bola o'tishi karta yoki yuz bilan qayd etiladi, ota-onalarga kirish-chiqish bildirishnomasi ketadi. Bu maktablarning bosh so'rovi va biz uni keyinroq emas, darhol sozlaymiz." },
+      { title: "Hudud va ko'r zonalar", text: "Hovli, sport maydonchasi va orqa kirishlar — hodisalarning ko'pi bo'ladigan zonalar. Qamrovni faqat fasad bo'yicha emas, o'quvchilarning real marshrutlari bo'yicha loyihalaymiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Tekshiruv va ma'muriyat bilan kelishish", text: "Dars jadvalini hisobga olamiz: o'quv vaqtida montaj cheklangan, ishlarning asosiy qismini ta'til va ikkinchi smenaga rejalashtiramiz." },
+      { title: "Kirish guruhi", text: "Turniketlar, kam harakatlanuvchilar va mehmonlar uchun kalitka, ota-onalarga videodomofon — kirish qo'riqlash posti bilan yagona uzel sifatida ishlaydi." },
+      { title: "Kameralar va ogohlantirish", text: "Koridorlar, kirishlar va hududni yopamiz, maktab ogohlantirishini o'rnatamiz va har qanotda eshitilishini tekshiramiz." },
+      { title: "Ishga tushirish va o'qitish", text: "Kartalar beramiz, o'quvchilar bazasini kiritamiz, qo'riqlash va zavuchni tizim bilan ishlash va yozuv yuklashga o'rgatamiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Yo'qolgan kartalar", text: "O'quvchilar kartalarni doim yo'qotadi. Postda dublikatni tez chiqarishni sozlaymiz va maktab rozi bo'lsa, zaxira o'tish usuli sifatida yuz tanishni qo'shamiz." },
+      { title: "Vandalizm", text: "Qo'l yetadigan uskuna birinchi jabr ko'radi. Antivandal korpuslar qo'yamiz, kameralarni ikki metrdan yuqoriga chiqaramiz, turniketlarni kuchaytirilgan ijroda olamiz." },
+      { title: "Evakuatsiya", text: "Turniketlar yong'in signali bo'yicha ochilishi shart. Prohodnayani APS bilan bog'laymiz va topshirishda evakuatsiya stsenariysini tekshiramiz — bu talab, opsiya emas." },
+    ],
+  },
+  medical: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Har xil kirish darajali zonalar", text: "Qabul bo'limi hammaga ochiq, operatsion, dorixona va preparatli postlar esa qattiq nazorat talab qiladi. SKUDni zonalar bo'yicha loyihalaymiz: har toifa xodimda o'z huquqlari va jadvali." },
+      { title: "Videokuzatuvning nozikligi", text: "Palatalar va kabinetlarda suratga olish mumkin emas, koridorlar va hollarda — zarur. Kameralarni bemorlar maxfiyligini buzmasdan harakatni nazorat qiladigan qilib joylashtiramiz." },
+      { title: "Xodimlarning trevoga tugmalari", text: "Registratura va qabulxona — nizolar zonasi. Qo'riqlash postiga chiqadigan va hodisani arxivda qayd etadigan yashirin trevoga tugmalarini qo'yamiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Tibbiy o'ziga xoslikni hisobga olgan loyiha", text: "Uskunalar joylashuvini bosh vrach va epidemiolog bilan kelishamiz: nam tozalashga chidamli materiallar, steril zonalardan tashqari trassalar." },
+      { title: "Qabulni to'xtatmasdan montaj", text: "Klinika ishlashda davom etadi: shovqinli ishlar — ish vaqtidan tashqari, bo'limlarni navbat bilan yopamiz, steril zonalar — alohida grafik bilan." },
+      { title: "SKUD va xodimlar hisobi", text: "Bo'limlar, dorixona va serverxonaga kirishni sozlaymiz, smena grafiklari uchun ish vaqti hisobini bog'laymiz." },
+      { title: "Yong'in xavfsizligi va topshirish", text: "APS va ogohlantirishni tibbiy muassasalar normalari bo'yicha o'rnatamiz, kam harakatlanuvchi bemorlar evakuatsiyasi stsenariylarini tekshiramiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Kecha-kunduz rejim", text: "Statsionar kechasi yopilmaydi. Ishlarni kichik uchastkalarga rejalashtiramiz va har bosqichda tizimlarni ishlagan holda saqlaymiz — o'tkazishlar soatlab emas, daqiqalarda." },
+      { title: "Uskunalarga halaqitlar", text: "Diagnostika uskunalari yonida trassalarni elektromagnit moslikni hisobga olib yotqizamiz va ekranlangan kabel ishlatamiz." },
+      { title: "So'rovlar bo'yicha yozuvga kirish", text: "Yozuvlarni bemorlar, sug'urta va politsiya so'raydi. Jurnallashli yuklash reglamentini sozlaymiz — klinika fragmentlarni qonuniy va tez bersin." },
+    ],
+  },
+  hotel: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Elektron qulflar — tizim yuragi", text: "Mehmon yashash muddatiga karta yoki mobil kalit oladi, chiqishda kirish avtomatik o'chadi. Qulflar oflayn ishlaydi va tarmoqqa bog'liq emas — aloqa uzilganda mehmonlar joylashishda davom etadi." },
+      { title: "Mehmonxona boshqaruv tizimi bilan integratsiya", text: "Kalitlar joylashishda PMS dan chiqariladi: administrator ikki dasturda ishlamaydi. Qulflarni sotib olishdan oldin mehmonxona tizimi bilan moslikni tekshiramiz." },
+      { title: "Xizmat zonalari va omborlar", text: "Oshxona, kir yuvish, minibar omborlari — moddiy javobgarlik zonalari. Rollar bo'yicha kirish va xodimlar o'tishlari jurnalini sozlaymiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Bitta qavatda pilot", text: "Bir necha xonaga qulf qo'yamiz, joylashish va tozalash stsenariylarini tekshiramiz, boshqaruvchi bilan kelishamiz — va faqat keyin butun fondga tirajlaymiz." },
+      { title: "Xonalarni chiqarmasdan qulf almashtirish", text: "Past yuklama soatlarida qavatma-qavat ishlaymiz: xona sotuvdan kunlarga emas, soatlarga chiqadi." },
+      { title: "Kameralar va yong'in xavfsizligi", text: "Holl, koridorlar, lift hollari va parkingni yopamiz, APS va ogohlantirishni mehmonxona normalari bo'yicha o'rnatamiz." },
+      { title: "Xodimlarni o'qitish", text: "Resepshnni kalit chiqarish va tipovoy holatlarni hal qilishga o'rgatamiz: yo'qolgan karta, erta kirish, uzaytirish — qo'llab-quvvatlashga qo'ng'iroqsiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Qulflarda batareya zaryadsizlanishi", text: "Batareykali qulflar zaryad nazoratini talab qiladi. Daraja monitoringini sozlaymiz va almashtirishni reglamentga kiritamiz — mehmon o'chgan qulf oldida turmasligi kerak." },
+      { title: "PMS bilan moslik", text: "Har mehmonxona boshqaruv tizimi ham istalgan qulf bilan chiqishavermaydi. Bog'lamni xariddan oldin kelishamiz va yuz eshik montajidan keyin emas, pilotda sinaymiz." },
+      { title: "Dizayn va shovqin", text: "Ishlayotgan mehmonxonada kunduzi chang chiqarib shovqin qilib bo'lmaydi. Ishlarni chiqish va kirish orasidagi oynalarda olib boramiz, qulf o'rnatishni eshik polotnosini himoyalab qilamiz." },
+    ],
+  },
+  fuel: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Portlash xavfli zonalar", text: "Kolonkalar ustida va rezervuarlar yonida portlashdan himoya talablari amal qiladi: u yerga oddiy kamerani osib bo'lmaydi. Joylashtirishni portlash xavfi klasslari zonalari bo'yicha loyihalaymiz va mos ijrodagi uskuna qo'llaymiz." },
+      { title: "Kassa va kolonkalar bitta hodisalar zanjirida", text: "AYoQShdagi bahsli holatlar — «quyib ketdi» va kassa farqlari. Kirishdagi raqam tanishni kolonka va kassa zonasi kameralari bilan bog'laymiz: intsident bir daqiqada hodisalar zanjiriga yig'iladi." },
+      { title: "Yoqilg'i qabul qilish", text: "Benzovozni qabul qilish — yo'qotish xavfi eng yuqori operatsiya. Quyish maydonchasini tsisterna raqami va operatsiya vaqtini qayd etib alohida yopamiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Portlash xavfi zonalari bo'yicha loyiha", text: "Stansiya zonalarini klassifikatsiya qilamiz, uskuna ijrosini va xavfli zonalardan tashqari trassa marshrutlarini tanlaymiz, loyihani AYoQSh tarmog'i ekspluatatsiyasi bilan kelishamiz." },
+      { title: "Sotuvni to'xtatmasdan montaj", text: "Stansiya yoqilg'i berishda davom etadi: kolonkalar ustidagi ishlar — minimal trafik soatlarida, quvvat ulanishlari — kelishilgan oynalarda." },
+      { title: "ANPR va kirishlar hisobi", text: "Raqam tanish, muammoli mashinalar stop-ro'yxatlari va smena hisobotlari bilan solishtirish uchun kirish hisobotlarini sozlaymiz." },
+      { title: "Tarmoqqa tiraj", text: "AYoQSh tarmoqlariga stansiyaning tipovoy loyihasini va barcha obyektlarni ofisdan markazlashgan monitoringini qilamiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Tebranish va navislar", text: "Navisdagi kameralar shamol va o'tayotgan furalardan tebranish oladi. Vibrogasitelli qattiq kronshteynlar ishlatamiz va ekspluatatsiyaning birinchi haftalaridan keyin aniqlikni tekshiramiz." },
+      { title: "Tungi yorug'lik urishi", text: "Yorqin navis va mashina faralari kadr kuyishini beradi. Keng dinamik diapazonli kameralar qo'yamiz va ekspozitsiyani o'rtacha kadr bo'yicha emas, kolonkalar zonasi bo'yicha sozlaymiz." },
+      { title: "Chang va reagentlar", text: "Moyka va qishki reagentlar kamera gumbazlarini tez iflos qiladi. Tozalashni xizmat reglamentiga kiritamiz — AYoQShda bu oylar emas, haftalar masalasi." },
+    ],
+  },
+  parking: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Real sharoitda tanish", text: "Iflos raqamlar, tun, yomg'ir va kontr yorug'lik — ANPR ish muhiti. Polosaga 30° gacha burchak ostida IK-yoritishli maxsus kameralar qo'yamiz va real trafikda 95% dan yuqori tanishga erishamiz." },
+      { title: "Polosalar mantiqi va stsenariylar", text: "Polosa — kamera, shlagbaum, halqa va svetofor bog'lami. Stsenariylarni ishlab chiqamiz: turg'un, mehmon, yetkazib berish, tanilmagan raqam — har biri operatorsiz ishlashi kerak." },
+      { title: "Tariflash va to'lov", text: "Tijorat parkinglar uchun tariflar, kassalar va to'lov terminallari, bo'sh joylar hisobi va tabloni sozlaymiz. Tizim shlagbaum ochganidek ishonchli pul hisoblashi kerak." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Joyida o'lchashlar", text: "Kirish geometriyasini ko'ramiz: radiuslar, nishablar, kameradan raqam o'qish nuqtasigacha masofa. Bu bosqichdagi xato — yomon tanishning bosh sababi." },
+      { title: "Polosalar montaji", text: "Shlagbaumlar, stoykalar, asfaltdagi halqalar, kameralar va svetoforlar — polosani butunligicha o'rnatamiz va darhol real mashinalarda tekshiramiz." },
+      { title: "Stsenariylarni sozlash", text: "Oq ro'yxatlar, mehmon rejimlari, tariflarni kiritamiz. Nostandart holatlarni o'tkazamiz: pritsep, mototsikl, tranzit raqam." },
+      { title: "Ishga tushirish va qo'llab-quvvatlash", text: "Birinchi haftalarda tanish foizini kuzatamiz va burchaklar hamda yoritishni to'g'rilaymiz — bu ishga tushirishning normal qismi, kamchilik emas." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Kirishdagi navbat", text: "Polosa mashinani 5–7 soniyadan uzoq qayta ishlasa, ertalab dum yig'iladi. Tsiklni optimallaymiz: raqam yaqinlashishda o'qiladi, shlagbaum mashina yetib kelgunga ochiladi." },
+      { title: "Strelalarga urilishlar", text: "Strelalar o'ylagandan tez-tez sinadi. Ajratgichli strelalar va shikastlanish paytini qayd etadigan kameralar qo'yamiz — ta'mirni obyekt byudjeti emas, aybdor to'laydi." },
+      { title: "Halqalar va qoplama ta'miri", text: "Induksion halqalar asfalt qayta yotqizilganda shikastlanadi. Ularning joylashuvini hujjatlaymiz va qoplama rejali almashtiriladigan joylarda radar datchiklar ishlatamiz." },
+    ],
+  },
+  city: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Masshtab va nosozlikka chidamlilik", text: "Shahar tizimi — yuzlab kameralar, kilometrlab magistrallar va doim ishlash talabi. Kanallar, quvvat va saqlagichlar rezervlashini loyihalaymiz: bitta uzel nosozligi segmentni o'chirmasin." },
+      { title: "Analitika — asos", text: "Minglab potokni ko'z bilan ko'rish mumkin emas. Yuz va raqam tanish, to'planish va intsident detektsiyasi operatorga faqat munosabat talab qiladigan hodisalarni chiqaradi." },
+      { title: "Ma'lumotlar markazi va saqlash", text: "Shahar videoarxivi — katta hajmdagi ma'lumotlar. Saqlash tizimli, kamera toifalari bo'yicha arxiv chuqurligi hisoblangan va idoralar kirish reglamentli DPM quramiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Konsepsiya va bosqichlilik", text: "Shaharni joriy etish navbatlariga bo'lamiz: avval chorrahalar va ijtimoiy obyektlar, keyin kvartallar. Har navbat — tugallangan ishlaydigan kontur." },
+      { title: "Magistral kanallar", text: "Zaxira marshrutli VOLS loyihalab quramiz, agregatsiya uzellarini kafolatli quvvatli himoyalangan xonalarga joylashtiramiz." },
+      { title: "Vaziyat markazi", text: "Videodevor, operatorlar ish o'rinlari va munosabat reglamentlarini yoyamiz — Ucell uchun qurgan markazimiz tajribasi bo'yicha." },
+      { title: "Tajriba ekspluatatsiyasi", text: "Birinchi oylarda buyurtmachi bilan birga ishlaymiz: analitikani kalibrlaymiz, yolg'on ishga tushishlarni kamaytiramiz, hisobotlarni sozlaymiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Kelishuvlar va tayanchlar", text: "Yoritish tayanchlari va fasadlarga joylashtirish infratuzilma egalari bilan kelishuvlarni talab qiladi. Bu ishni o'zimizga olamiz va muddatlarni grafikka halol kiritamiz." },
+      { title: "Analitika yolg'on ishga tushishlari", text: "Yomg'ir, soyalar va barglar yolg'on hodisalar yaratadi. Sahnalarni joyida kalibrlaymiz va qiziqish zonalarini sozlaymiz — analitika sifati sozlamadagi galochka bilan emas, qo'l bilan qilinadi." },
+      { title: "Turli idoralar — turli huquqlar", text: "Tizimga politsiya, kommunal xizmatlar va ma'muriyat murojaat qiladi. Rollar modeli va jurnallash quramiz: har kim o'zinikini ko'radi, har murojaat qayd etiladi." },
+    ],
+  },
+  bus: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Tebranish va bort quvvati", text: "Transport — doimiy silkinish va bort tarmog'i sakrashlari. Quvvat himoyali transport ijrosidagi videoregistrator va kameralar ishlatamiz: oddiy «statsionarka» avtobusda uzoq yashamaydi." },
+      { title: "Marshrutdan ma'lumot uzatish", text: "Video va telemetriya 4G orqali dispetcherlikka ketadi, to'liq arxiv parkda Wi-Fi orqali yuklanadi. Potoklarni ajratamiz — butun arxiv uchun mobil trafik to'lanmasin." },
+      { title: "Yo'lovchilar hisobi", text: "Eshiklardagi datchiklar kirish-chiqishni sanaydi — reys va bekatlar bo'yicha yo'lovchi oqimi ma'lumotlarini dispetcherlik va marshrut rejalashtirish oladi." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Bir necha mashinada pilot", text: "2–3 avtobusni jihozlaymiz, bir oy aloqa va tebranishga chidamlilik statistikasini yig'amiz, mahkamlagichlar va sozlamalarni to'g'rilaymiz — keyin parkka tiraj." },
+      { title: "Parkda montaj", text: "Mashinani jihozlash bir kun oladi: smenalararo oynalarda ishlaymiz, avtobus grafikdan chiqmaydi." },
+      { title: "Dispetcherlik", text: "Monitoring yoyamiz: joylashuv, so'rov bo'yicha video, haydovchidan trevoga hodisalari." },
+      { title: "Parkni kuzatib borish", text: "Mashina TOsida reglamentli tekshiruvlar: mahkamlagichlar, obyektivlar tozaligi, arxiv yuklash." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "O'chirilgan dvigatelda quvvat", text: "Registrator quvvatni boshqarmasa, tungi turish AKBni o'tiradi. To'g'ri uxlash va chuqur zaryadsizlanishdan himoyani sozlaymiz." },
+      { title: "4G qamrovsiz zonalar", text: "Shaharlararo yo'lda aloqa yo'qoladi. Ma'lumotlarni bortda buferlaymiz va tarmoq chiqqanda jo'natamiz — dispetcher trekni uzilishsiz ko'radi." },
+      { title: "Chang va moyka", text: "Kuzovdagi ko'cha kameralari bosim ostida moykani boshdan kechiradi. Yuqori himoya darajali ijro olamiz va reglamentlarda kirishlar germetikligini tekshiramiz." },
+    ],
+  },
+  construction: {
+    specificsTitle: "Obyekt xususiyati",
+    specifics: [
+      { title: "Infratuzilmasiz obyekt", text: "Qurilish boshida na tarmoq, na barqaror quvvat bor. Avtonom postlar qo'yamiz: kamera, 4G-router, zaxira akkumulyator — kuzatuv obyekt tarmoqlarga ulangandan keyin emas, birinchi kundan ishlaydi." },
+      { title: "Tizim qurilish bilan birga ko'chadi", text: "Kran o'rnatildi — ko'rish nuqtasi yo'qoldi, to'siq surildi — perimetr o'zgardi. Tizimni mobil loyihalaymiz: postlar noldan qayta montaj emas, soatlarda ko'chiriladi." },
+      { title: "Materiallar va texnika — asosiy yo'qotishlar", text: "Kabel, armatura va yoqilg'i qurilishdan kechasi ketadi. Materiallar ombori, texnika turargohi va kirishni tungi harakat analitikali alohida kontur bilan yopamiz." },
+    ],
+    workflowTitle: "Loyihani qanday olib boramiz",
+    workflow: [
+      { title: "Qurilish genplani bo'yicha sxema", text: "Postlarni qurilish bosqichlarini hisobga olib genplan bo'yicha joylashtiramiz: kran qayerda turadi, to'siq qayerga ko'chadi, doimiy quvvat qayerda paydo bo'ladi." },
+      { title: "Tez montaj", text: "Avtonom postlarni 1–2 kunda ishga tushiramiz. Tayanchlar — mavjud yoritish machtalar, bytovkalar, vaqtinchalik stoykalar." },
+      { title: "Kirish nazorati", text: "Bytovka va KPPga SKUD: ishchilar kartalar bo'yicha hisobi, kirish-chiqishda materialli mashinalarni qayd etish." },
+      { title: "Ko'chirish va demontaj", text: "Qurilish borishiga qarab postlarni ko'chiramiz, oxirida — demontaj qilamiz yoki tizimni tayyor bino doimiysiga o'tkazamiz." },
+    ],
+    pitfallsTitle: "Qiyinchiliklar va ularni qanday hal qilamiz",
+    pitfalls: [
+      { title: "Quvvat sakraydi yoki yo'qoladi", text: "Qurilishning vaqtinchalik tarmoqlari beqaror. Har post bir necha soatlik zaxira ko'taradi, kritik nuqtalar — sutkalik; quvvat yo'qolishi haqida bildirishnoma ketadi." },
+      { title: "Chang, beton va payvandlash", text: "Obyektivlar qurilish changi bilan bir haftada qoplanadi. Artishni haftalik reglamentga kiritamiz va to'g'ridan-to'g'ri changlanishdan kozyryok qo'yamiz." },
+      { title: "Kadrda pudratchilar", text: "Obyektda turli pudratchilarning o'nlab brigadalari. Kameralarga kirishni bosh pudratchi va buyurtmachiga alohida sozlaymiz — har kim o'z mas'uliyat zonasini ko'radi." },
+    ],
+  },
+};
+const en: Record<string, IndustryDetails> = {
+  industry: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Aggressive workshop environment", text: "In production areas cameras live in dust, fumes and vibration, so workshops get housings rated IP66 or better, and washing and bottling areas — IP67 with IK10 vandal-proof bodies. Brackets come with vibration decoupling: on conveyor lines a rigid mount to the steelwork wrecks the pan joint within a month." },
+      { title: "Perimeter and checkpoint as a separate loop", text: "A plant perimeter means long runs and outdoor temperatures from −15 to +45 °C. We lay fiber to the nodes and install heated outdoor cabinets with UPS, while the checkpoint gets its own loop with a barrier, plate recognition and a link to the entrance." },
+      { title: "Shift-based time attendance", text: "At a plant, access control counts not just in-and-out but shifts, overtime and movement between workshops. We configure access zones by role, export the timesheet and pass the data to 1C — the very thing HR deploys the system for." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Survey with the chief engineer", text: "We walk the site workshop by workshop with the plans: viewing zones, cable routes, power connection points, explosive and wet areas. Separately we note where chasing is forbidden and where the maintenance windows are." },
+      { title: "Design and specification", text: "We prepare the equipment layout, cable log, PoE switch load calculation and archive depth. The specification lists concrete models and part numbers — the client can verify prices and budget accordingly." },
+      { title: "Installation without stopping production", text: "We work in stages on an agreed schedule: noisy and dusty jobs go into maintenance windows and night shifts. Every line is labeled and logged — a year later, at expansion, nobody opens trays blindly." },
+      { title: "Commissioning and handover", text: "We tune detection, analytics scenarios and access rights, verify archive depth under load, train the security service and hand over as-built documentation." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Power at remote nodes", text: "On large territories PoE does not reach: up to 100 m we stay on copper, beyond that we run fiber with media converters and local power in a cabinet. It costs more at installation but removes the eternal brownouts and camera reboots." },
+      { title: "Archive and network load", text: "Twenty 4 MP cameras on continuous recording mean tens of terabytes a month. We split video and process networks by VLAN, size bitrate for the real scenario and provision RAID, not a single disk." },
+      { title: "Dust and condensate on lenses", text: "In flour and cement areas a lens fouls within weeks. We install cameras with heating and schedule cleaning in the service contract — otherwise the system 'exists' but the picture does not." },
+    ],
+  },
+  warehouse: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Tall racks block the view", text: "A warehouse is narrow aisles between racks up to 12 m tall. A ceiling camera in the aisle sees only the tops of pallets, so we place cameras along the aisles and at row ends, and cover receiving and dispatch zones separately." },
+      { title: "Gates and ramps are the key points", text: "Disputes almost always arise at receiving and dispatch. On the ramps we install cameras with a clear view of the truck plate and the unloading zone, add ANPR at the entrance and tie the event to the waybill by time." },
+      { title: "Cold and temperature swings", text: "In cold zones and on ramps condensate kills ordinary cameras. We use models with an extended temperature range and sealed glands, and move power supplies into the warm zone." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Layout for the warehouse topology", text: "We take the floor plan with rack placement and storage zones, calculate view overlaps and choose focal lengths for the aisle length — otherwise pallet labels are unreadable on video." },
+      { title: "Installation by zones", text: "We start with receiving and dispatch so the result shows immediately, then move to storage and the perimeter. Cables run along existing trays so as not to hinder forklifts." },
+      { title: "Binding to warehouse operations", text: "We configure search by event time and by gate: a security officer finds the needed dispatch in a minute instead of scrubbing hours of footage." },
+      { title: "Training and procedures", text: "We show storekeepers and guards how to export a clip for a supplier claim and leave a short instruction at the workplace." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Forklifts hit cameras and trays", text: "At aisle turns the machinery regularly clips structures. We lift cameras above the mast working zone and protect runs with metal conduit up to 3 m." },
+      { title: "Glare from the gates", text: "Open gates give backlight by day, and a person in the doorway becomes a silhouette. We use wide-dynamic-range cameras and turn the angle so the sun does not hit the sensor." },
+      { title: "Wi-Fi for scanners and video in one network", text: "Video floods the channel and storekeepers' data terminals drop. We split the networks and build a separate managed-switch segment for video." },
+    ],
+  },
+  bank: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Requirements for storage and access to footage", text: "In a bank the cameras matter as much as the procedure: who can access the archive, how footage is exported on request, how long it is kept. We configure a role model and operator action logging." },
+      { title: "Teller and self-service zones", text: "Tellers, ATMs and the counting room need a frame where the face and the banknotes in hand read unambiguously. We pick angles and focal lengths for each position instead of a generic corner camera." },
+      { title: "Panic buttons and the security link", text: "Branch alarm is a separate loop with redundancy. We verify the signal path to the monitoring station and run test triggers at handover." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Coordination with bank security", text: "We follow the client's internal requirements: cable routes, contractor access to rooms, work order during operating hours." },
+      { title: "Design with zone separation", text: "We separate public areas, staff rooms, the server room and the teller unit — each with its own access rights and archive depth." },
+      { title: "Installation in a working branch", text: "Work runs after closing or on weekends; noisy operations are agreed in advance — the branch must not stop serving clients." },
+      { title: "Handover with scenario testing", text: "We run the scenarios: alarm, power failure, loss of server link, archive export on request — and only then sign the act." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Backup power", text: "A blackout must not leave the branch without recording and access control. We calculate the load and install UPS with a real margin, not by eye." },
+      { title: "Magnetic locks vs fire safety", text: "Locks on evacuation routes must release on the fire alarm signal. We link access control with the fire alarm and verify the release at handover." },
+      { title: "Integration with existing systems", text: "Branches often run equipment of different years. We check ONVIF compatibility and, where possible, keep working cameras, replacing only the critical positions." },
+    ],
+  },
+  retail: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "The checkout is the main attention zone", text: "Most retail losses are tied to checkout operations. We install a camera with a readable view of hands and the cash drawer and link video to receipts: a receipt number opens the matching clip at once." },
+      { title: "Sales floor and blind spots", text: "Racks and promo structures create dead zones by shelves with expensive goods. We design coverage by the planogram, not by ceiling symmetry." },
+      { title: "A chain needs single access", text: "The owner needs one login for all sites. We build centralized access from the office and configure rights: a store administrator sees only their own store." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "A standard kit for a site", text: "We develop a standard kit for the store format, so a new site opens by a ready scheme in days rather than being designed from scratch." },
+      { title: "Installation without stopping trade", text: "We work at night or before opening; cable runs hide in existing ducts and the suspended ceiling." },
+      { title: "Visitor counting and analytics", text: "We install counters at the entrances and set up traffic and conversion reports — the data goes to marketing, not just security." },
+      { title: "Servicing the chain", text: "We keep a single request log and scheduled visits, so a fault at a distant site does not surface a month later." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Different providers at the sites", text: "In a chain the links vary in quality. We configure local recording with later synchronization, so an internet outage loses no archive." },
+      { title: "Shop-window lighting", text: "Bright display lighting burns out the frame. We use wide-dynamic-range cameras and correct exposure by the zone of interest." },
+      { title: "Staff turnover", text: "The shift roster changes every few months. We make simple roles and short instructions, so a new administrator does not call us for every export." },
+    ],
+  },
+  residential: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Courtyard, entrances and parking are different tasks", text: "The courtyard takes overview cameras, entrances need a readable face at the door, parking — plate recognition at the gate. One universal camera fully solves none of these tasks." },
+      { title: "Intercoms with calls to the smartphone", text: "A resident needs to open the door to a courier from anywhere. We install IP intercoms with an app and keep the ordinary handset for those who prefer it." },
+      { title: "The management company as the operator", text: "The system is run by the management company, not a security service. We tailor interfaces and rights to its staff and hand over short procedures." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Design by construction stage", text: "On a new build we enter before finishing: routes go into risers and low-current niches. On an existing building we design routes along existing ducts." },
+      { title: "The entrance group", text: "We install the barrier, plate recognition and resident whitelists, and configure the mode for guests and delivery services." },
+      { title: "Entrances and parking", text: "We fit intercoms, locks, closers and entrance cameras, and cover the parking and technical rooms separately." },
+      { title: "Handover to the management company", text: "We train the staff and leave diagrams, passwords and the procedure for releasing footage on a resident's request." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Vandalism at the entrances", text: "Panels and ground-floor cameras get damaged regularly. We use IK10 vandal-proof housings and lift equipment out of reach." },
+      { title: "Lightning protection and interference", text: "Outdoor lines between buildings pick up surges. We apply surge protection at entries and fiber between buildings." },
+      { title: "Residents' archive requests", text: "The management company drowns in 'show me the footage' requests. We set a procedure: who receives a clip, in what form and time frame, so it does not become an engineer's manual chore." },
+    ],
+  },
+  school: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Peak flow at the entrance", text: "In the morning hundreds of pupils pass the school entrance within 20–30 minutes. We calculate throughput and install as many turnstiles as needed to avoid a crowd at the door — not one for all." },
+      { title: "Parent notifications", text: "A child's passage is registered by card or face, and parents receive entry and exit notifications. It is the schools' main request, and we configure it from the start, not as an afterthought." },
+      { title: "Grounds and blind spots", text: "The yard, sports ground and rear entrances are where most incidents happen. We design coverage along pupils' real routes, not only the facade." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Survey and agreement with the administration", text: "We respect the timetable: installation during lessons is limited, so the bulk of the work is planned for holidays and the second shift." },
+      { title: "The entrance group", text: "Turnstiles, a gate for reduced-mobility visitors and guests, a video intercom for parents — the entrance works as a single node with the guard post." },
+      { title: "Cameras and announcements", text: "We cover corridors, entrances and the grounds, install the school PA and verify audibility in every wing." },
+      { title: "Launch and training", text: "We issue cards, load the pupil database, and train the guards and the deputy head to run the system and export footage." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Lost cards", text: "Pupils lose cards constantly. We set up quick duplicate issue at the post and, where the school agrees, add face recognition as a backup way through." },
+      { title: "Vandalism", text: "Equipment within reach suffers first. We use vandal-proof housings, mount cameras above two meters and take reinforced turnstiles." },
+      { title: "Evacuation", text: "Turnstiles must open on the fire signal. We link the entrance to the fire alarm and verify the evacuation scenario at handover — a requirement, not an option." },
+    ],
+  },
+  medical: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Zones with different access levels", text: "Admissions is open to everyone, while operating rooms, the pharmacy and medication posts demand strict control. We design access control by zone: each staff category gets its own rights and schedule." },
+      { title: "Tactful video surveillance", text: "Filming is unacceptable in wards and consulting rooms, and necessary in corridors and halls. We place cameras to control movement without violating patients' privacy." },
+      { title: "Staff panic buttons", text: "Reception and admissions are conflict zones. We install hidden panic buttons wired to the guard post with the event fixed in the archive." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Design with medical specifics in mind", text: "We agree equipment placement with the chief physician and the epidemiologist: materials that survive wet cleaning, routes outside sterile zones." },
+      { title: "Installation without stopping admissions", text: "The clinic keeps working: noisy jobs go into off-hours, departments close in turn, sterile zones follow a separate schedule." },
+      { title: "Access control and staff records", text: "We configure access to departments, the pharmacy and the server room, and attach time attendance for shift schedules." },
+      { title: "Fire safety and handover", text: "We install the fire alarm and announcements per healthcare norms and verify evacuation scenarios for reduced-mobility patients." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Round-the-clock operation", text: "The inpatient ward never closes for the night. We plan work in small sections and keep systems running at every stage — switchovers take minutes, not hours." },
+      { title: "Interference with equipment", text: "Near diagnostic machines we route cables with electromagnetic compatibility in mind and use shielded cable." },
+      { title: "Footage requests", text: "Patients, insurers and the police request footage. We set an export procedure with logging, so the clinic releases clips lawfully and quickly." },
+    ],
+  },
+  hotel: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Electronic locks are the heart of the system", text: "A guest receives a card or mobile key for the length of the stay; at check-out access expires automatically. The locks work offline and do not depend on the network — during an outage guests keep checking in." },
+      { title: "Integration with the hotel management system", text: "Keys are issued from the PMS at check-in: the administrator does not juggle two programs. We verify compatibility with the hotel's system before the locks are purchased." },
+      { title: "Service areas and storerooms", text: "The kitchen, laundry and minibar stores are zones of material responsibility. We configure role-based access and a staff passage log." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "A pilot on one floor", text: "We fit locks on a few rooms, test the check-in and housekeeping scenarios, agree with the manager — and only then roll out to the whole stock." },
+      { title: "Lock replacement without pulling rooms", text: "We work floor by floor during low-occupancy hours: a room drops out of sale for hours, not days." },
+      { title: "Cameras and fire safety", text: "We cover the lobby, corridors, elevator halls and parking, and install the fire alarm and announcements per hotel norms." },
+      { title: "Staff training", text: "We teach the front desk to issue keys and handle the routine cases: a lost card, early check-in, an extension — without calling support." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Battery drain in the locks", text: "Battery locks need charge control. We set up level monitoring and put replacement into the schedule — a guest must not stand at a door with a dead lock." },
+      { title: "PMS compatibility", text: "Not every hotel management system gets along with every lock. We agree the pairing before purchase and test it on the pilot, not after a hundred doors are fitted." },
+      { title: "Design and noise", text: "In a working hotel you cannot dust and hammer by day. We work in the windows between check-out and check-in, and mortise locks with the door leaf protected." },
+    ],
+  },
+  fuel: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Explosion-hazard zones", text: "Above the pumps and by the tanks explosion-protection rules apply: an ordinary camera cannot go there. We design placement by explosion-hazard zone classes and use suitably rated equipment." },
+      { title: "Checkout and pumps in one chain of events", text: "Fuel-station disputes are drive-offs and till discrepancies. We link entrance plate recognition with the pump and checkout cameras: an incident assembles into an event chain in a minute." },
+      { title: "Fuel delivery", text: "Receiving a tanker is the operation with the highest loss risk. We cover the offloading pad separately, recording the tanker's plate and the operation time." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Design by explosion-hazard zones", text: "We classify the station's zones, select equipment ratings and route cables outside the hazardous areas, and agree the design with the chain's operations team." },
+      { title: "Installation without stopping sales", text: "The station keeps dispensing fuel: work above the pumps goes into minimum-traffic hours, power tie-ins into agreed windows." },
+      { title: "ANPR and entry records", text: "We configure plate recognition, stop-lists of problem vehicles and entry reports for reconciliation with shift reports." },
+      { title: "Rollout to the chain", text: "For station chains we make a standard station design and centralized monitoring of all sites from the office." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Vibration and canopies", text: "Canopy cameras catch vibration from wind and passing trucks. We use rigid brackets with dampers and check focus after the first weeks of operation." },
+      { title: "Night glare", text: "The bright canopy and headlights overexpose the frame. We install wide-dynamic-range cameras and set exposure by the pump zone, not the frame average." },
+      { title: "Dust and de-icing agents", text: "The car wash and winter chemicals foul camera domes fast. We put cleaning into the service schedule — at a fuel station it is a matter of weeks, not months." },
+    ],
+  },
+  parking: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Recognition in real conditions", text: "Dirty plates, night, rain and backlight are ANPR's working environment. We install specialized cameras with IR at up to 30° to the lane and reach recognition above 95% on real traffic." },
+      { title: "Lane logic and scenarios", text: "A lane is a bundle of camera, barrier, loop and traffic light. We work through the scenarios: resident, guest, delivery, unrecognized plate — each must resolve without an operator." },
+      { title: "Tariffs and payment", text: "For commercial parking we configure tariffs, pay stations and terminals, free-space counting and displays. The system must count money as reliably as it lifts the barrier." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Measurements on site", text: "We study the entry geometry: radii, slopes, the distance from camera to the plate-reading point. A mistake here is the main cause of poor recognition." },
+      { title: "Lane installation", text: "Barriers, posts, loops in the asphalt, cameras and lights — we build the lane as a whole and test it on real cars at once." },
+      { title: "Scenario setup", text: "We load whitelists, guest modes and tariffs, then run the edge cases: a trailer, a motorcycle, a transit plate." },
+      { title: "Launch and support", text: "For the first weeks we monitor the recognition rate and adjust angles and lighting — a normal part of the launch, not a defect." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "A queue at the entrance", text: "If a lane takes more than 5–7 seconds per car, a tail forms by morning. We optimize the cycle: the plate reads on approach and the barrier opens by the time the car arrives." },
+      { title: "Rammed booms", text: "Booms break more often than expected. We fit break-away booms and cameras that record the moment of damage — the culprit pays for the repair, not the site budget." },
+      { title: "Loops and resurfacing", text: "Induction loops suffer when asphalt is relaid. We document their location and use radar sensors where resurfacing is planned." },
+    ],
+  },
+  city: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Scale and fault tolerance", text: "A city system is hundreds of cameras, kilometers of trunk lines and a demand to work always. We design redundancy of channels, power and storage: one node's failure must not black out a segment." },
+      { title: "Analytics as the foundation", text: "Watching thousands of streams by eye is impossible. Face and plate recognition, crowd and incident detection bring the operator only the events that need a response." },
+      { title: "Data center and storage", text: "A city's video archive is a large data volume. We build a data center with a storage system, archive depth calculated by camera category and an access procedure for the agencies." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Concept and phasing", text: "We divide the city into rollout phases: intersections and social facilities first, then the neighborhoods. Each phase is a complete working loop." },
+      { title: "Trunk channels", text: "We design and build fiber with redundant routes; aggregation nodes go into protected rooms with guaranteed power." },
+      { title: "The situation center", text: "We deploy the video wall, operator workstations and response procedures — drawing on the center we built for Ucell." },
+      { title: "Trial operation", text: "For the first months we work alongside the client: calibrating analytics, reducing false alarms, tuning the reporting." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Approvals and poles", text: "Mounting on lighting poles and facades requires approvals from infrastructure owners. We take this work on ourselves and put honest terms into the schedule." },
+      { title: "False analytics alarms", text: "Rain, shadows and foliage generate false events. We calibrate scenes on site and tune zones of interest — analytics quality is made by hand, not by a checkbox." },
+      { title: "Different agencies, different rights", text: "Police, utilities and the administration all use the system. We build a role model with logging: each sees their own, every access is recorded." },
+    ],
+  },
+  bus: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "Vibration and onboard power", text: "Transport means constant shaking and onboard voltage spikes. We use transport-rated recorders and cameras with power protection: ordinary stationary gear does not live long on a bus." },
+      { title: "Data transfer from the route", text: "Video and telemetry go to dispatch over 4G; the full archive uploads over Wi-Fi at the depot. We split the flows so the whole archive is not paid for as mobile traffic." },
+      { title: "Passenger counting", text: "Door sensors count boarding and alighting — dispatch and route planning receive passenger-flow data by trip and stop." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "A pilot on a few vehicles", text: "We equip 2–3 buses, collect a month of statistics on connectivity and vibration resistance, adjust mounts and settings — and only then roll out to the fleet." },
+      { title: "Installation at the depot", text: "Equipping a vehicle takes a day: we work in the inter-shift windows and the bus does not drop out of the schedule." },
+      { title: "The dispatch office", text: "We deploy monitoring: location, video on demand, alarm events from the driver." },
+      { title: "Fleet support", text: "Scheduled checks at vehicle maintenance: mounts, lens cleanliness, archive upload." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Power with the engine off", text: "Overnight parking drains the battery if the recorder does not manage power. We configure proper sleep and deep-discharge protection." },
+      { title: "Zones without 4G coverage", text: "On intercity routes the link drops. We buffer data on board and send it once the network returns — the dispatcher sees an unbroken track." },
+      { title: "Dust and washing", text: "Body-mounted cameras must survive pressure washing. We take high-ingress-protection models and check gland sealing at the scheduled services." },
+    ],
+  },
+  construction: {
+    specificsTitle: "Site specifics",
+    specifics: [
+      { title: "A site without infrastructure", text: "At the start of construction there is neither network nor stable power. We install autonomous posts: a camera, a 4G router, a backup battery — surveillance works from day one, not after the site is connected to utilities." },
+      { title: "The system moves with the build", text: "A crane goes up — a viewpoint disappears; the fence moves — the perimeter changes. We design the system mobile: posts relocate in hours instead of being refitted from scratch." },
+      { title: "Materials and machinery are the main losses", text: "Cable, rebar and fuel leave the site at night. We cover the materials store, the machinery yard and the entrance with a separate loop with night motion analytics." },
+    ],
+    workflowTitle: "How we run the project",
+    workflow: [
+      { title: "Layout by the construction master plan", text: "We place posts by the master plan with the build stages in mind: where the crane will stand, where the fence will move, where permanent power will appear." },
+      { title: "Fast installation", text: "Autonomous posts launch in 1–2 days. Supports are existing lighting masts, site cabins and temporary posts." },
+      { title: "Entry control", text: "Access control on the cabins and the checkpoint: workers counted by cards, vehicles with materials recorded at entry and exit." },
+      { title: "Relocation and dismantling", text: "As the build progresses we move the posts; at the end we dismantle the system or convert it into the finished building's permanent one." },
+    ],
+    pitfallsTitle: "Challenges and how we solve them",
+    pitfalls: [
+      { title: "Power jumps or disappears", text: "A site's temporary networks are unstable. Every post carries hours of reserve, critical points a day's worth; a power loss sends a notification." },
+      { title: "Dust, concrete and welding", text: "Lenses foul with construction dust within a week. We put wiping into the weekly schedule and fit hoods against direct dusting." },
+      { title: "Contractors in the frame", text: "Dozens of crews from different contractors work on site. We split camera access between the general contractor and the client — each sees their own zone of responsibility." },
+    ],
+  },
+};
 
-const BY_LOCALE: Record<string, Record<string, IndustryDetails>> = { ru, uz, en };
+const tr: Record<string, IndustryDetails> = {
+  industry: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Atölyelerin zorlu ortamı", text: "Üretim alanlarında kameralar toz, buhar ve titreşimde çalışır; bu yüzden atölyelere en az IP66 gövdeler, yıkama ve dolum bölümlerine IK10 darbe korumalı IP67 koyarız. Braketleri titreşim ayrıştırmalı seçeriz: konveyör hatlarında çeliğe sabit montaj, döner mafsalı bir ayda bitirir." },
+      { title: "Çevre ve giriş noktası ayrı bir devre", text: "Fabrika çevresi uzun hatlar ve −15 ile +45 °C arası dış sıcaklık demektir. Düğümlere fiber çeker, ısıtmalı ve UPS'li dış dolaplar koyarız; girişte ise bariyerli, plaka tanımalı ve danışmayla bağlantılı ayrı bir devre kurarız." },
+      { title: "Vardiya bazlı mesai takibi", text: "Fabrikada geçiş kontrolü girdi-çıktıyı değil vardiyaları, fazla mesaiyi ve atölyeler arası geçişleri sayar. Erişim bölgelerini rollere göre ayarlar, puantajı dışa aktarır ve verileri 1C'ye geçiririz — İK sistemi tam da bunun için kurar." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Baş mühendisle keşif", text: "Sahayı planlarla atölye atölye gezeriz: görüş alanları, kablo güzergâhları, güç bağlantı noktaları, patlayıcı ve nemli bölümler. Ayrıca nerede kanal açılamayacağını ve bakım pencerelerini not ederiz." },
+      { title: "Proje ve spesifikasyon", text: "Ekipman yerleşimini, kablo defterini, PoE switch yük hesabını ve arşiv derinliğini hazırlarız. Spesifikasyonda somut modeller ve ürün kodları yazar — müşteri fiyatları doğrulayıp bütçe koyabilir." },
+      { title: "Üretimi durdurmadan montaj", text: "Kademeli ve kararlaştırılmış takvimle çalışırız: gürültülü ve tozlu işler bakım pencerelerine ve gece vardiyalarına gider. Her hat etiketlenir ve deftere işlenir — bir yıl sonra genişletmede kanallar körlemesine açılmaz." },
+      { title: "Devreye alma ve teslim", text: "Algılamayı, analitik senaryoları ve erişim haklarını ayarlar, arşiv derinliğini yük altında doğrular, güvenlik ekibini eğitir ve uygulama dokümantasyonunu teslim ederiz." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Uzak düğümlerde besleme", text: "Büyük sahalarda PoE yetişmez: 100 m'ye kadar bakırda kalır, ötesinde medya çeviricili fiber ve dolapta yerel besleme koyarız. Montajda pahalıdır ama bitmeyen gerilim düşmelerini ve kamera resetlerini yok eder." },
+      { title: "Arşiv ve ağ yükü", text: "Sürekli kayıtta yirmi 4 MP kamera ayda onlarca terabayt demektir. Video ve süreç ağlarını VLAN ile ayırır, bit hızını gerçek senaryoya göre hesaplar ve tek disk değil RAID koyarız." },
+      { title: "Lenslerde toz ve yoğuşma", text: "Un ve çimento bölümlerinde lens haftalarda kaplanır. Isıtmalı kameralar koyar ve bakım sözleşmesine düzenli temizlik yazarız — yoksa sistem 'var' ama görüntü yok." },
+    ],
+  },
+  warehouse: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Yüksek raflar görüşü kapatır", text: "Depo, 12 m'ye varan raflar arasında dar koridorlardır. Koridordaki tavan kamerası yalnızca paletlerin üstünü görür; bu yüzden kameraları koridor boyunca ve sıra başlarına koyar, mal kabul ve sevkiyatı ayrıca kapatırız." },
+      { title: "Kapılar ve rampalar kilit noktalar", text: "İhtilaflar hemen hep mal kabul ve sevkiyatta doğar. Rampalara aracın plakasını ve boşaltma alanını net gösteren kameralar koyar, girişe ANPR ekler ve olayı zamana göre irsaliyeye bağlarız." },
+      { title: "Soğuk ve sıcaklık farkları", text: "Soğuk bölgelerde ve rampalarda yoğuşma sıradan kameraları bitirir. Geniş sıcaklık aralıklı, sızdırmaz girişli modeller kullanır, güç kaynaklarını sıcak bölgeye alırız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Depo topolojisine göre şema", text: "Raf yerleşimli ve depolama bölgeli planı alır, görüş kesişmelerini hesaplar ve odak uzaklıklarını koridor uzunluğuna göre seçeriz — yoksa videoda palet etiketi okunmaz." },
+      { title: "Bölge bölge montaj", text: "Sonuç hemen görünsün diye mal kabul ve sevkiyattan başlar, sonra depolama ve çevreye geçeriz. Hatları forkliftlere engel olmamak için mevcut kanallardan geçiririz." },
+      { title: "Depo operasyonlarına bağlama", text: "Olay zamanına ve kapıya göre aramayı ayarlarız: güvenlikçi saatlerce kayıt taramak yerine gereken sevkiyatı bir dakikada bulur." },
+      { title: "Eğitim ve prosedür", text: "Depoculara ve güvenliğe tedarikçi itirazı için görüntü aktarmayı gösterir, iş yerinde kısa talimat bırakırız." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Forkliftler kameralara ve kanallara çarpar", text: "Koridor dönüşlerinde makineler yapılara sürekli değer. Kameraları direk çalışma alanının üstüne alır, hatları 3 m'ye kadar metal spiralle koruruz." },
+      { title: "Kapılardan parlama", text: "Açık kapılar gündüz ters ışık verir; eşikteki insan silüete döner. Geniş dinamik aralıklı kameralar kullanır, açıyı güneş sensöre vurmayacak şekilde çeviririz." },
+      { title: "El terminali Wi-Fi'ı ve video aynı ağda", text: "Video kanalı doldurur, depocuların terminalleri düşer. Ağları ayırır, video için yönetilebilir switch'li ayrı segment kurarız." },
+    ],
+  },
+  bank: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Kayda erişim ve saklama gereksinimleri", text: "Bankada kameralar kadar prosedür de önemlidir: arşive kim erişir, kayıt talep üzerine nasıl verilir, ne kadar saklanır. Rol modeli ve operatör işlem kayıtlarını yapılandırırız." },
+      { title: "Vezne ve self servis bölgesi", text: "Vezneler, ATM'ler ve sayım odası, yüzün ve eldeki banknotların net okunduğu kadraj ister. Her konum için açı ve odak uzaklığı seçeriz; köşeye tip kamera asmayız." },
+      { title: "Panik butonları ve güvenlik bağlantısı", text: "Şubedeki alarm, yedekli ayrı bir devredir. Sinyalin merkeze ulaştığını doğrular, teslimde deneme tetiklemeleri yaparız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Banka güvenliğiyle koordinasyon", text: "Müşterinin iç kurallarına göre çalışırız: hat güzergâhları, yüklenicinin odalara erişimi, mesai saatlerinde iş düzeni." },
+      { title: "Bölge ayrımlı proje", text: "Halka açık alanları, servis odalarını, sistem odasını ve vezne ünitesini ayırırız — her birinin kendi erişim hakları ve arşiv derinliği vardır." },
+      { title: "Çalışan şubede montaj", text: "İşler kapanıştan sonra veya hafta sonu yürür; gürültülü işlemler önceden kararlaştırılır — şube müşteri hizmetini durdurmamalıdır." },
+      { title: "Senaryo testli teslim", text: "Senaryoları koşarız: alarm, güç kesintisi, sunucu bağlantısı kaybı, talep üzerine arşiv aktarımı — ancak ondan sonra tutanak imzalanır." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Yedek güç", text: "Elektrik kesintisi şubeyi kayıtsız ve geçiş kontrolsüz bırakmamalı. Yükü hesaplar ve göz kararı değil, gerçek paylı UPS koyarız." },
+      { title: "Manyetik kilitler ve yangın güvenliği", text: "Tahliye yollarındaki kilitler yangın alarmı sinyaliyle açılmak zorundadır. Geçiş kontrolüyle yangın alarmını bağlar, teslimde açılmayı doğrularız." },
+      { title: "Mevcut sistemlerle entegrasyon", text: "Şubelerde çoğu kez farklı yılların ekipmanı durur. ONVIF uyumunu kontrol eder ve mümkün olduğunda çalışan kameraları koruyup yalnızca kritik konumları değiştiririz." },
+    ],
+  },
+  retail: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Kasa — ana dikkat bölgesi", text: "Perakende kayıplarının çoğu kasa işlemlerine bağlıdır. Elleri ve para çekmecesini net gösteren kamera koyar, videoyu fişlere bağlarız: fiş numarasıyla ilgili kayıt anında açılır." },
+      { title: "Satış alanı ve kör noktalar", text: "Raflar ve reklam yapıları pahalı ürün raflarının yanında ölü bölgeler yaratır. Kapsamayı tavan simetrisine değil, planograma göre projelendiririz." },
+      { title: "Zincir mağazalar — tek erişim", text: "Sahibine tüm noktalara tek giriş gerekir. Ofisten merkezî erişim kurar, hakları ayarlarız: nokta yöneticisi yalnızca kendi mağazasını görür." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Nokta için tip çözüm", text: "Mağaza formatına tip set geliştiririz — yeni nokta yeniden projelendirilmeden, hazır şemayla günler içinde açılır." },
+      { title: "Ticareti durdurmadan montaj", text: "Gece saatlerinde veya açılıştan önce çalışır, kablo hatlarını mevcut kanallara ve asma tavana gizleriz." },
+      { title: "Ziyaretçi sayımı ve analitik", text: "Girişlere sayaçlar koyar, trafik ve dönüşüm raporlarını ayarlarız — veriler yalnızca güvenliğe değil, pazarlamaya gider." },
+      { title: "Zincire servis", text: "Tek talep defteri ve planlı ziyaretler kurarız — uzak noktadaki arıza bir ay sonra ortaya çıkmasın." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Noktalarda farklı sağlayıcılar", text: "Zincirde bağlantı kaliteleri farklıdır. Yerel kaydı sonradan eşitlemeyle ayarlarız — internet kopması arşiv kaybettirmez." },
+      { title: "Vitrin aydınlatması", text: "Parlak vitrin ışığı kadrajı yakar. Geniş dinamik aralıklı kameralar kullanır, pozlamayı ilgi bölgesine göre düzeltiriz." },
+      { title: "Personel devri", text: "Vardiya kadrosu birkaç ayda bir değişir. Basit roller ve kısa talimatlar yaparız — yeni yönetici her aktarım için bizi aramasın." },
+    ],
+  },
+  residential: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Avlu, girişler ve otopark ayrı görevler", text: "Avluyu genel bakış kameralarıyla, girişleri kapıda yüz okunur şekilde, otoparkı girişte plaka tanımayla alırız. Tek bir üniversal kamera bu görevlerin hiçbirini tam çözmez." },
+      { title: "Akıllı telefona çağrı düşen interkom", text: "Sakinin kuryeye kapıyı her yerden açması gerekir. Uygulamalı IP interkom kurar, alışkın olanlar için sıradan ahizeyle çalışmayı da koruruz." },
+      { title: "Operatör olarak site yönetimi", text: "Sistemi güvenlik birimi değil, site yönetimi işletir. Arayüzleri ve hakları onun personeline göre ayarlar, kısa prosedürler teslim ederiz." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "İnşaat aşamasına göre proje", text: "Yeni binada ince işlerden önce gireriz: hatları şaftlara ve zayıf akım nişlerine koyarız. Mevcut binada güzergâhları var olan kanallardan projelendiririz." },
+      { title: "Giriş grubu", text: "Bariyer, plaka tanıma ve sakin beyaz listelerini kurar, misafir ve kurye modunu ayarlarız." },
+      { title: "Girişler ve otopark", text: "Kapılara interkom, kilit, kapatıcı ve kameralar koyar, otoparkı ve teknik odaları ayrıca kapatırız." },
+      { title: "Yönetime devir", text: "Personeli eğitir; şemaları, şifreleri ve sakin dilekçesiyle kayıt verme düzenini bırakırız." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Girişlerde vandalizm", text: "Zemin kattaki paneller ve kameralar düzenli zarar görür. IK10 gövdeler koyar, ekipmanı erişilemeyecek yüksekliğe alırız." },
+      { title: "Yıldırım koruması ve parazitler", text: "Bloklar arası dış hatlar parazit toplar. Girişlerde parafudr, binalar arasında fiber kullanırız." },
+      { title: "Sakinlerin kayıt talepleri", text: "Yönetim 'kaydı gösterin' ricalarında boğulur. Prosedür kurarız: kim, hangi biçimde, hangi sürede görüntü alır — bu, mühendisin el işine dönmesin." },
+    ],
+  },
+  school: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Girişte zirve akışı", text: "Sabah okul girişinden 20–30 dakikada yüzlerce öğrenci geçer. Kapasiteyi hesaplar ve kapıda kalabalık olmasın diye gereken sayıda turnike koyarız — herkese tek değil." },
+      { title: "Veli bildirimleri", text: "Çocuğun geçişi kartla veya yüzle kaydedilir, veliye giriş-çıkış bildirimi gider. Bu, okulların baş talebidir ve biz onu sonradan ekleme olarak değil, baştan ayarlarız." },
+      { title: "Bahçe ve kör noktalar", text: "Avlu, spor sahası ve arka girişler olayların çoğunun yaşandığı yerlerdir. Kapsamayı yalnızca cepheye göre değil, öğrencilerin gerçek rotalarına göre projelendiririz." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Keşif ve idareyle mutabakat", text: "Ders programını gözetiriz: ders saatinde montaj sınırlıdır; işin ana kısmını tatillere ve ikinci vardiyaya planlarız." },
+      { title: "Giriş grubu", text: "Turnikeler, engelliler ve misafirler için kapı, veliler için görüntülü interkom — giriş, güvenlik noktasıyla tek düğüm olarak çalışır." },
+      { title: "Kameralar ve anons", text: "Koridorları, girişleri ve bahçeyi kapatır, okul anonsunu kurar ve her kanatta duyulurluğu test ederiz." },
+      { title: "Açılış ve eğitim", text: "Kartları dağıtır, öğrenci veritabanını yükler, güvenliği ve müdür yardımcısını sistemle çalışmaya ve kayıt aktarmaya alıştırırız." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Kayıp kartlar", text: "Öğrenciler kartları sürekli kaybeder. Noktada hızlı kopya basmayı ayarlar ve okul kabul ederse yedek geçiş yolu olarak yüz tanıma ekleriz." },
+      { title: "Vandalizm", text: "El erişimindeki ekipman ilk zarar görendir. Darbe korumalı gövdeler koyar, kameraları iki metrenin üstüne asar, turnikeleri güçlendirilmiş modelden seçeriz." },
+      { title: "Tahliye", text: "Turnikeler yangın sinyaliyle açılmak zorundadır. Girişi yangın alarmına bağlar ve teslimde tahliye senaryosunu test ederiz — bu bir gereklilik, seçenek değil." },
+    ],
+  },
+  medical: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Farklı erişim düzeyli bölgeler", text: "Kabul herkese açıktır; ameliyathaneler, eczane ve ilaçlı noktalar sıkı kontrol ister. Geçiş kontrolünü bölgelere göre projelendiririz: her personel kategorisinin kendi hakları ve programı vardır." },
+      { title: "Kameralarda incelik", text: "Odalarda ve muayenehanelerde çekim kabul edilemez; koridor ve hollerde gereklidir. Kameraları, hastaların mahremiyetini bozmadan hareketi izleyecek şekilde yerleştiririz." },
+      { title: "Personel panik butonları", text: "Danışma ve acil kabul, çatışma bölgeleridir. Güvenlik noktasına düşen ve olayı arşive işleyen gizli panik butonları koyarız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Tıbbi özellikleri gözeten proje", text: "Ekipman yerleşimini başhekim ve epidemiyologla kararlaştırırız: ıslak temizliğe dayanıklı malzemeler, steril bölgelerin dışından geçen hatlar." },
+      { title: "Kabulü durdurmadan montaj", text: "Klinik çalışmaya devam eder: gürültülü işler mesai dışına, bölümler sırayla kapanır, steril bölgeler ayrı programla." },
+      { title: "Geçiş kontrolü ve personel kayıtları", text: "Bölümlere, eczaneye ve sistem odasına erişimi ayarlar, vardiya çizelgeleri için mesai takibini bağlarız." },
+      { title: "Yangın güvenliği ve teslim", text: "Yangın alarmını ve anonsu sağlık kuruluşları normlarına göre kurar, hareket kısıtlı hastaların tahliye senaryolarını test ederiz." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Kesintisiz çalışma düzeni", text: "Yataklı servis geceleri kapanmaz. İşleri küçük bölümler hâlinde planlar ve her aşamada sistemleri çalışır tutarız — geçişler saat değil dakika sürer." },
+      { title: "Cihazlara parazit", text: "Tanı cihazlarının yakınında hatları elektromanyetik uyumu gözeterek çeker ve ekranlı kablo kullanırız." },
+      { title: "Talep üzerine kayıt erişimi", text: "Kayıtları hastalar, sigortalar ve polis ister. Kayıtlı aktarım prosedürü kurarız — klinik görüntüleri yasal ve hızlı versin." },
+    ],
+  },
+  hotel: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Elektronik kilitler sistemin kalbi", text: "Misafir, konaklama süresi için kart veya mobil anahtar alır; çıkışta erişim otomatik söner. Kilitler çevrimdışı çalışır ve ağa bağlı değildir — bağlantı koptuğunda misafir kabulü sürer." },
+      { title: "Otel yönetim sistemiyle entegrasyon", text: "Anahtarlar check-in'de PMS'ten basılır: resepsiyon iki programda çalışmaz. Kilitler satın alınmadan önce otelin sistemiyle uyumu doğrularız." },
+      { title: "Servis alanları ve depolar", text: "Mutfak, çamaşırhane, minibar depoları — mali sorumluluk bölgeleridir. Rol bazlı erişim ve personel geçiş kaydı ayarlarız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Tek katta pilot", text: "Birkaç odaya kilit takar, check-in ve kat hizmetleri senaryolarını test eder, müdürle mutabık kalırız — ancak ondan sonra tüm odalara yayarız." },
+      { title: "Odaları satıştan çekmeden kilit değişimi", text: "Düşük doluluk saatlerinde kat kat çalışırız: oda satıştan günlerce değil, saatlerce çıkar." },
+      { title: "Kameralar ve yangın güvenliği", text: "Lobiyi, koridorları, asansör hollerini ve otoparkı kapatır, yangın alarmını ve anonsu otel normlarına göre kurarız." },
+      { title: "Personel eğitimi", text: "Resepsiyona anahtar basmayı ve tipik durumları çözmeyi öğretiriz: kayıp kart, erken giriş, uzatma — desteği aramadan." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Kilitlerde pil bitmesi", text: "Pilli kilitler şarj takibi ister. Seviye izlemeyi kurar ve değişimi programa koyarız — misafir bitmiş kilidin önünde beklememeli." },
+      { title: "PMS uyumluluğu", text: "Her otel yönetim sistemi her kilitle anlaşmaz. Eşleşmeyi satın almadan önce kararlaştırır ve yüz kapı takıldıktan sonra değil, pilotta test ederiz." },
+      { title: "Dizayn ve gürültü", text: "Çalışan otelde gündüz toz ve gürültü olmaz. İşleri çıkış-giriş arası pencerelerde yürütür, kilit montajını kapı kanadını koruyarak yaparız." },
+    ],
+  },
+  fuel: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Patlama tehlikeli bölgeler", text: "Pompaların üstünde ve tankların yanında patlama koruması kuralları geçerlidir: oraya sıradan kamera asılamaz. Yerleşimi bölge sınıflarına göre projelendirir, uygun sınıfta ekipman kullanırız." },
+      { title: "Kasa ve pompalar tek olay zincirinde", text: "İstasyondaki ihtilaflar 'doldurup kaçma' ve kasa farklarıdır. Girişteki plaka tanımayı pompa ve kasa kameralarıyla bağlarız: olay bir dakikada olay zincirine dizilir." },
+      { title: "Yakıt boşaltma", text: "Tankerin kabulü, kayıp riski en yüksek operasyondur. Boşaltma sahasını, tanker plakasını ve işlem saatini kaydederek ayrıca kapatırız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Patlama bölgelerine göre proje", text: "İstasyonun bölgelerini sınıflandırır, ekipman sınıfını ve tehlikeli bölgelerin dışından geçen hatları seçer, projeyi zincirin işletmesiyle kararlaştırırız." },
+      { title: "Satışı durdurmadan montaj", text: "İstasyon yakıt vermeye devam eder: pompaların üstünde en az trafikli saatlerde çalışılır, güç bağlantıları kararlaştırılan pencerelerde yapılır." },
+      { title: "ANPR ve giriş kayıtları", text: "Plaka tanımayı, sorunlu araçların engel listelerini ve vardiya raporlarıyla karşılaştırma için giriş raporlarını ayarlarız." },
+      { title: "Zincire yayma", text: "İstasyon zincirlerine tip istasyon projesi ve tüm sahaların ofisten merkezî izlenmesini yaparız." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Titreşim ve saçaklar", text: "Saçaktaki kameralar rüzgârdan ve geçen tırlardan titreşim alır. Sönümleyicili sert braketler kullanır, ilk haftalardan sonra netliği kontrol ederiz." },
+      { title: "Gece parlaması", text: "Parlak saçak ve farlar pozlamayı bozar. Geniş dinamik aralıklı kameralar koyar, pozlamayı kadraj ortalamasına değil pompa bölgesine göre ayarlarız." },
+      { title: "Toz ve kimyasallar", text: "Yıkama ve kış kimyasalları kamera kubbelerini hızla kirletir. Temizliği bakım programına koyarız — istasyonda bu aylar değil, haftalar meselesidir." },
+    ],
+  },
+  parking: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Gerçek koşullarda tanıma", text: "Kirli plakalar, gece, yağmur ve ters ışık ANPR'nin çalışma ortamıdır. Şeride 30°'ye kadar açıyla IR aydınlatmalı özel kameralar koyar ve gerçek trafikte %95 üstü tanımaya ulaşırız." },
+      { title: "Şerit mantığı ve senaryolar", text: "Şerit; kamera, bariyer, halka ve lambanın birleşimidir. Senaryoları işleriz: sakin, misafir, kurye, tanınmayan plaka — her biri operatörsüz çözülmelidir." },
+      { title: "Tarifelendirme ve ödeme", text: "Ticari otoparklara tarifeleri, kasaları ve ödeme terminallerini, boş yer sayımını ve panoları kurarız. Sistem, bariyeri kaldırdığı kadar güvenilir para saymalıdır." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Yerinde ölçümler", text: "Giriş geometrisine bakarız: yarıçaplar, eğimler, kameradan plaka okuma noktasına mesafe. Bu aşamadaki hata, kötü tanımanın baş nedenidir." },
+      { title: "Şerit montajı", text: "Bariyerler, direkler, asfalttaki halkalar, kameralar ve lambalar — şeridi bütün olarak kurar ve hemen gerçek araçlarla test ederiz." },
+      { title: "Senaryo ayarları", text: "Beyaz listeleri, misafir modlarını, tarifeleri gireriz. Sıra dışı durumları koşarız: römork, motosiklet, transit plaka." },
+      { title: "Açılış ve destek", text: "İlk haftalar tanıma oranını izler, açıları ve aydınlatmayı düzeltiriz — bu, açılışın normal parçasıdır, kusur değil." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Girişte kuyruk", text: "Şerit aracı 5–7 saniyeden uzun işlerse sabah kuyruk oluşur. Döngüyü optimize ederiz: plaka yaklaşırken okunur, bariyer araç geldiğinde açılmış olur." },
+      { title: "Kollara çarpmalar", text: "Kollar sanıldığından sık kırılır. Kurtulmalı kollar ve hasar anını kaydeden kameralar koyarız — onarımı saha bütçesi değil, kusurlu öder." },
+      { title: "Halkalar ve kaplama yenileme", text: "Endüktif halkalar asfalt yenilenince zarar görür. Yerlerini belgeler, kaplaması planlı değişen yerlerde radar sensör kullanırız." },
+    ],
+  },
+  city: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Ölçek ve arıza dayanımı", text: "Şehir sistemi yüzlerce kamera, kilometrelerce omurga ve hep çalışma talebidir. Kanal, güç ve depolama yedekliliğini projelendiririz: bir düğümün arızası segmenti karartmamalı." },
+      { title: "Temel olarak analitik", text: "Binlerce akışı gözle izlemek imkânsızdır. Yüz ve plaka tanıma, kalabalık ve olay algılama operatöre yalnızca müdahale gereken olayları çıkarır." },
+      { title: "Veri merkezi ve depolama", text: "Şehrin video arşivi büyük veri hacmidir. Depolama sistemli, kamera kategorilerine göre arşiv derinliği hesaplanmış ve kurumların erişim düzeni tanımlı bir veri merkezi kurarız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Konsept ve etaplama", text: "Şehri devreye alma sıralarına böleriz: önce kavşaklar ve sosyal tesisler, sonra mahalleler. Her sıra, tamamlanmış çalışan bir devredir." },
+      { title: "Omurga kanalları", text: "Yedek güzergâhlı fiber projelendirip kurarız; toplama düğümleri garantili beslemeli korunaklı odalara gider." },
+      { title: "Durum merkezi", text: "Video duvarı, operatör masaları ve müdahale prosedürlerini kurarız — Ucell için yaptığımız merkezin deneyimiyle." },
+      { title: "Deneme işletmesi", text: "İlk aylar müşteriyle birlikte çalışırız: analitiği kalibre eder, yanlış alarmları azaltır, raporlamayı ayarlarız." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "İzinler ve direkler", text: "Aydınlatma direklerine ve cephelere montaj, altyapı sahiplerinin onayını ister. Bu işi üstlenir ve süreleri programa dürüstçe koyarız." },
+      { title: "Yanlış analitik alarmları", text: "Yağmur, gölgeler ve yapraklar sahte olay üretir. Sahneleri yerinde kalibre eder, ilgi bölgelerini ayarlarız — analitik kalitesi ayardaki kutucukla değil, elle yapılır." },
+      { title: "Farklı kurumlar, farklı haklar", text: "Sisteme polis, belediye hizmetleri ve idare başvurur. Kayıtlı rol modeli kurarız: herkes kendininkini görür, her erişim kaydedilir." },
+    ],
+  },
+  bus: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Titreşim ve araç içi güç", text: "Ulaşım, sürekli sarsıntı ve şebeke sıçramaları demektir. Güç korumalı, taşıt sınıfı kayıt cihazları ve kameralar kullanırız: sıradan sabit ekipman otobüste uzun yaşamaz." },
+      { title: "Hattan veri aktarımı", text: "Video ve telemetri 4G ile merkeze gider; tam arşiv garajda Wi-Fi ile aktarılır. Akışları ayırırız — tüm arşiv için mobil trafik ödenmesin." },
+      { title: "Yolcu sayımı", text: "Kapı sensörleri biniş ve inişi sayar — sefer ve durak bazlı yolcu akışı verisini merkez ve hat planlama alır." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Birkaç araçta pilot", text: "2–3 otobüsü donatır, bir ay bağlantı ve titreşim dayanımı istatistiği toplar, bağlantıları ve ayarları düzeltiriz — sonra filoya yayarız." },
+      { title: "Garajda montaj", text: "Bir aracın donatımı bir gün sürer: vardiyalar arası pencerelerde çalışırız, otobüs programdan düşmez." },
+      { title: "Merkez", text: "İzlemeyi kurarız: konum, talep üzerine video, sürücüden alarm olayları." },
+      { title: "Filo desteği", text: "Araç bakımlarında planlı kontroller: bağlantılar, lens temizliği, arşiv aktarımı." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Motor kapalıyken güç", text: "Kayıt cihazı gücü yönetmezse gece bekleme aküyü bitirir. Doğru uyku modunu ve derin deşarj korumasını ayarlarız." },
+      { title: "4G kapsaması olmayan bölgeler", text: "Şehirlerarası hatlarda bağlantı düşer. Veriyi araçta tamponlar, ağ dönünce göndeririz — merkez, kesintisiz bir iz görür." },
+      { title: "Toz ve yıkama", text: "Gövde üstü kameralar basınçlı yıkamadan sağ çıkmalıdır. Yüksek koruma sınıfı seçer, bakımlarda giriş sızdırmazlığını kontrol ederiz." },
+    ],
+  },
+  construction: {
+    specificsTitle: "Sahanın özellikleri",
+    specifics: [
+      { title: "Altyapısız saha", text: "İnşaatın başında ne ağ ne kararlı güç vardır. Otonom direkler koyarız: kamera, 4G router, yedek akü — izleme sahaya şebeke gelince değil, ilk günden çalışır." },
+      { title: "Sistem inşaatla birlikte taşınır", text: "Vinç kuruldu — bakış noktası yok oldu; çit taşındı — çevre değişti. Sistemi mobil projelendiririz: direkler sıfırdan sökülüp takılmaz, saatler içinde taşınır." },
+      { title: "Malzeme ve makine ana kayıplar", text: "Kablo, demir ve yakıt geceleri şantiyeden gider. Malzeme deposunu, makine parkını ve girişi gece hareket analitikli ayrı devreyle kapatırız." },
+    ],
+    workflowTitle: "Projeyi nasıl yürütüyoruz",
+    workflow: [
+      { title: "Şantiye genel planına göre şema", text: "Direkleri, yapım etaplarını gözeterek genel plana göre yerleştiririz: vinç nereye kurulacak, çit nereye taşınacak, kalıcı güç nerede doğacak." },
+      { title: "Hızlı montaj", text: "Otonom direkleri 1–2 günde açarız. Destekler — mevcut aydınlatma direkleri, barakalar, geçici sehpalar." },
+      { title: "Giriş kontrolü", text: "Barakalara ve girişe geçiş kontrolü: işçiler kartla sayılır, malzeme taşıyan araçlar giriş-çıkışta kaydedilir." },
+      { title: "Taşıma ve söküm", text: "İnşaat ilerledikçe direkleri taşırız; sonunda söker ya da sistemi biten binanın kalıcısına çeviririz." },
+    ],
+    pitfallsTitle: "Zorluklar ve çözümlerimiz",
+    pitfalls: [
+      { title: "Güç sıçrar veya kaybolur", text: "Şantiyenin geçici şebekeleri kararsızdır. Her direk birkaç saatlik yedek taşır, kritik noktalar bir günlük; güç kaybında bildirim gider." },
+      { title: "Toz, beton ve kaynak", text: "Lensler bir haftada inşaat tozuyla kaplanır. Silmeyi haftalık programa koyar, doğrudan tozlanmaya karşı siperlik takarız." },
+      { title: "Kadrajda taşeronlar", text: "Sahada farklı taşeronların onlarca ekibi çalışır. Kamera erişimini ana yüklenici ve işveren için ayrı ayarlarız — herkes kendi sorumluluk alanını görür." },
+    ],
+  },
+};
+
+const zh: Record<string, IndustryDetails> = {
+  industry: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "车间环境恶劣", text: "生产区的摄像机要在粉尘、蒸汽和振动中工作，所以车间用不低于IP66的外壳，清洗和灌装区用IK10防暴力的IP67。支架选带减振的：在流水线上把设备硬装到钢结构上，一个月就震坏云台。" },
+      { title: "周界和门岗是独立回路", text: "工厂周界意味着长线路和−15到+45°C的室外温度。我们把光纤拉到各节点，装带加热和UPS的室外机柜；门岗单独成环：道闸、车牌识别，并与人行门岗联动。" },
+      { title: "按班次的考勤", text: "工厂的门禁算的不是简单进出，而是班次、加班和车间之间的流动。我们按角色配置权限区、导出工时表并传入1C——人事部门上系统就是为了这个。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "与总工程师现场勘察", text: "拿着图纸逐车间走一遍：视野范围、线缆路由、电源接入点、防爆区和潮湿区。另外确认哪里不能开槽、检修窗口在什么时候。" },
+      { title: "设计与设备清单", text: "编制设备布置图、线缆台账、PoE交换机负载和存档深度计算。清单里写具体型号和货号——甲方可以核价、做预算。" },
+      { title: "不停产施工", text: "分阶段按商定进度干：吵闹多尘的工序放到检修窗口和夜班。每根线都做标记并记入台账——一年后扩容时不用盲拆桥架。" },
+      { title: "调试与交付", text: "配置侦测、分析场景和访问权限，在负载下核验存档深度，培训安保并移交竣工文档。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "远端节点的供电", text: "大厂区PoE够不着：100米内走铜缆，再远就上光纤加收发器、机柜内本地供电。施工时贵一点，却根治了常年的电压跌落和摄像机重启。" },
+      { title: "存档与网络负载", text: "二十路4MP连续录像意味着每月几十TB。我们用VLAN把视频流和工控网分开，按真实场景算码流，并配RAID而不是单盘。" },
+      { title: "镜头上的粉尘和冷凝", text: "在面粉和水泥车间镜头几周就糊死。我们装带加热的摄像机，并把定期清洁写进维保合同——否则系统“在”，画面没了。" },
+    ],
+  },
+  warehouse: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "高货架挡视线", text: "仓库是12米高货架间的窄巷。巷道顶上的摄像机只能看到托盘顶面，所以我们沿巷道和排端布点，收货和发货区单独覆盖。" },
+      { title: "大门和月台是关键点", text: "纠纷几乎都出在收发货。月台上装能看清车牌和卸货区的摄像机，入口加车牌识别，并按时间把事件和运单挂钩。" },
+      { title: "低温与温差", text: "冷区和月台的冷凝会弄坏普通摄像机。我们用宽温密封型号，电源移到暖区。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "按仓库布局出图", text: "拿到带货架和储区的平面图，算好视线遮挡，按巷道长度选焦距——否则录像里托盘标签读不出来。" },
+      { title: "分区施工", text: "先做收发货区让效果立刻可见，再做储区和周界。线缆走现有桥架，不妨碍叉车。" },
+      { title: "绑定仓库作业", text: "按事件时间和门位配置检索：安保人员一分钟找到目标发货，而不是刷几小时录像。" },
+      { title: "培训与规程", text: "教库管和保安导出片段用于向供应商索赔，并在工位留下简短说明。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "叉车撞坏设备", text: "巷道转弯处设备常被机械剐蹭。我们把摄像机抬到门架作业区之上，3米以下线路套金属软管。" },
+      { title: "大门逆光", text: "白天敞开的大门形成逆光，门口的人变成剪影。用宽动态摄像机，并调整角度避免阳光直射传感器。" },
+      { title: "扫描枪Wi-Fi和视频同网", text: "视频挤爆信道，库管的数据终端掉线。我们分网，为视频建独立的管理型交换机网段。" },
+    ],
+  },
+  bank: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "录像存取有硬性规程", text: "银行里摄像机和制度同样重要：谁能进存档、录像如何按申请导出、存多久。我们配置角色模型和操作员行为日志。" },
+      { title: "柜台与自助区", text: "柜台、ATM和清点室需要能明确辨认人脸和手中钞票的画面。每个点位单独选机位和焦距，而不是往角落装一台通用机。" },
+      { title: "紧急按钮与安保联动", text: "网点的报警是带冗余的独立回路。我们核验信号到接警中心的通路，交付时做实弹测试。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "与银行安保协调", text: "按甲方内部要求作业：线缆路线、承包方进入房间的许可、营业时间内的作业规程。" },
+      { title: "分区设计", text: "把公共区、办公区、机房和柜台区分开——各有各的权限和存档深度。" },
+      { title: "营业网点内施工", text: "闭店后或周末作业，吵闹工序提前商定——网点不能中断客户服务。" },
+      { title: "场景验证交付", text: "跑一遍场景：报警、断电、服务器失联、按申请导出存档——之后才签验收单。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "后备电源", text: "停电不能让网点既没录像又没门禁。我们按负载计算，配真实余量的UPS，不凭感觉。" },
+      { title: "磁力锁与消防", text: "疏散通道上的锁必须随火警信号解锁。我们联动门禁和火灾报警，并在交付时验证。" },
+      { title: "与在用系统整合", text: "网点里常有不同年代的设备。按ONVIF核对兼容性，能用的摄像机尽量保留，只换关键点位。" },
+    ],
+  },
+  retail: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "收银台是头号关注区", text: "零售的损耗大头出在收银操作。我们装能看清双手和钱箱的摄像机，并把视频和小票关联：凭小票号立刻调出对应片段。" },
+      { title: "卖场与盲区", text: "货架和促销堆头在高价商品附近制造死角。我们按商品陈列图设计覆盖，而不是按天花板对称布点。" },
+      { title: "连锁需要统一入口", text: "老板需要一个账号看所有门店。我们从总部搭集中访问并配好权限：店长只能看自己的店。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "门店标准方案", text: "按门店业态开发标准套装，新店照现成方案几天开出来，不用重新设计。" },
+      { title: "不停业施工", text: "夜间或开店前作业，线缆藏进现有线槽和吊顶。" },
+      { title: "客流统计与分析", text: "入口装计数器，配置客流和转化报表——数据给营销，不只是给安保。" },
+      { title: "连锁维保", text: "建统一报修台账和定期巡检，远端门店的故障不会拖一个月才浮出来。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "各店运营商不同", text: "连锁店的线路质量参差。我们配置本地录像加事后同步——断网不丢档。" },
+      { title: "橱窗灯光", text: "明亮的橱窗照明会烧白画面。用宽动态摄像机，按关注区修正曝光。" },
+      { title: "员工流动快", text: "班组几个月一换。我们做简单角色和简短说明书，新店长不用每次导出都打电话找我们。" },
+    ],
+  },
+  residential: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "庭院、单元门和停车场是三种任务", text: "庭院用全景机，单元门要在门口看清人脸，停车场入口上车牌识别。一台万能摄像机哪个任务都做不彻底。" },
+      { title: "可呼叫手机的对讲", text: "住户要能在任何地方给快递开门。我们装带App的IP对讲，同时给习惯老方式的住户保留普通话机。" },
+      { title: "物业是系统的操作者", text: "系统由物业运营而不是专业安保。界面和权限按物业人员的水平配置，并附上简短规程。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "按施工阶段设计", text: "新楼在精装前进场：线路预埋进竖井和弱电壁龛。已建成楼按现有线槽设计走线。" },
+      { title: "入口组", text: "装道闸、车牌识别和住户白名单，配置访客和快递模式。" },
+      { title: "单元门与停车场", text: "入口装对讲、门锁、闭门器和摄像机，停车场和设备间单独布防。" },
+      { title: "移交物业", text: "培训人员，留下图纸、密码和按住户申请调取录像的流程。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "单元门口的破坏", text: "一层的面板和摄像机经常被损坏。用IK10防暴外壳，设备装到够不着的高度。" },
+      { title: "防雷与感应", text: "楼栋之间的室外线路易受感应突波。入口加防雷器，楼宇之间走光纤。" },
+      { title: "住户调录像的请求", text: "物业被“给我看看录像”淹没。我们定好规程：谁、以什么形式、多长时限拿到片段——不让它变成工程师的手工活。" },
+    ],
+  },
+  school: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "入口的早高峰", text: "早晨20–30分钟内几百名学生通过校门。我们计算通行能力，装够数量的闸机避免门口拥堵——而不是“一台管全部”。" },
+      { title: "家长通知", text: "孩子刷卡或刷脸通过即被记录，家长收到进出通知。这是学校的头号需求，我们一开始就配好，不留到二期。" },
+      { title: "校园与盲区", text: "操场、运动场和后门是多数事件的发生地。我们按学生的真实动线设计覆盖，而不只是照顾正立面。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "勘察并与校方商定", text: "尊重课表：上课时间施工受限，主要工程放在假期和二部制的空档。" },
+      { title: "入口组", text: "闸机、无障碍和访客小门、家长可视对讲——入口和保安岗组成一个整体节点。" },
+      { title: "摄像机与广播", text: "覆盖走廊、出入口和校园，安装校园广播并逐翼测试可闻度。" },
+      { title: "启用与培训", text: "发卡、录入学生库，培训保安和教务主任使用系统和导出录像。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "卡丢失", text: "学生丢卡是常态。我们在门岗配置快速补卡，学校同意的话再加人脸识别作为备用通行方式。" },
+      { title: "人为破坏", text: "够得着的设备最先遭殃。用防暴外壳、摄像机装两米以上，闸机选加强型。" },
+      { title: "疏散", text: "闸机必须随火警信号放行。我们把门岗和火灾报警联动，交付时演练疏散场景——这是硬性要求，不是选配。" },
+    ],
+  },
+  medical: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "不同等级的区域", text: "挂号大厅对所有人开放，而手术室、药房和药品护士站需要严格管控。门禁按区域设计：每类人员有自己的权限和时间表。" },
+      { title: "有分寸的监控", text: "病房和诊室不容许摄录，走廊和大厅则必须覆盖。我们布点时既控制人员流动，又不侵犯患者隐私。" },
+      { title: "医护紧急按钮", text: "挂号处和急诊是冲突多发区。我们装隐蔽的紧急按钮，接到保安岗并在存档中记录事件。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "顾及医疗特殊性的设计", text: "设备位置与院长和院感专员商定：耐湿式清洁的材料、避开无菌区的走线。" },
+      { title: "不停诊施工", text: "医院照常运转：吵闹工序放到非工作时间，科室轮流关闭，无菌区单独排期。" },
+      { title: "门禁与人员管理", text: "配置科室、药房和机房的权限，接入按班次的考勤。" },
+      { title: "消防与交付", text: "按医疗机构规范安装火灾报警和广播，演练行动不便患者的疏散场景。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "全天候运转", text: "住院部夜里不关门。工程按小段推进，每个阶段系统都保持在线——切换用分钟计，不是小时。" },
+      { title: "对设备的干扰", text: "在诊断设备附近按电磁兼容要求走线，使用屏蔽线缆。" },
+      { title: "按申请调录像", text: "患者、保险公司和警方都会索要录像。我们建立带日志的导出规程，医院合法又快速地提供片段。" },
+    ],
+  },
+  hotel: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "电子门锁是系统的心脏", text: "客人拿到与住宿期限绑定的房卡或手机钥匙，退房时权限自动失效。门锁离线工作、不依赖网络——断网时照常办理入住。" },
+      { title: "与酒店管理系统对接", text: "钥匙在办理入住时从PMS签发：前台不用在两套软件间切换。买锁之前我们先验证与酒店系统的兼容性。" },
+      { title: "后勤区与库房", text: "厨房、洗衣房、迷你吧库房是物资责任区。我们配置按角色的权限和员工通行日志。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "先在一层做试点", text: "给几间客房装锁，跑通入住和保洁场景，与总经理确认——然后才推广到全部房量。" },
+      { title: "换锁不下架客房", text: "在低入住时段逐层作业：客房停售几小时，而不是几天。" },
+      { title: "监控与消防", text: "覆盖大堂、走廊、电梯厅和停车场，按酒店规范安装火灾报警和广播。" },
+      { title: "员工培训", text: "教会前台发卡和处理常见情况：丢卡、提前入住、续住——不用打电话找技术支持。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "锁的电池耗尽", text: "电池款门锁需要电量管理。我们配置电量监控并把换电池写进规程——客人不该站在没电的锁前。" },
+      { title: "与PMS的兼容", text: "不是每套酒店系统都能配任意门锁。我们在采购前确认组合、在试点上验证——而不是装完一百扇门再发现问题。" },
+      { title: "装修与噪音", text: "营业中的酒店白天不能扬尘敲打。我们利用退房与入住之间的窗口作业，开孔装锁时保护门扇。" },
+    ],
+  },
+  fuel: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "防爆区域", text: "油枪上方和储罐附近适用防爆要求：普通摄像机不能装在那里。我们按防爆区域等级设计布点，采用相应防护等级的设备。" },
+      { title: "收银和油枪串成一条事件链", text: "加油站的纠纷无非“加完就跑”和账实不符。我们把入口车牌识别与油枪、收银区摄像机关联：一分钟就能把事件串成完整链条。" },
+      { title: "卸油", text: "接卸油罐车是损耗风险最高的作业。卸油区单独布防，记录罐车牌照和作业时间。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "按防爆区域设计", text: "对站区分级，选择设备防护等级、让线路避开危险区，并与连锁运营方确认方案。" },
+      { title: "不停售施工", text: "油站照常售油：油枪上方在车流最少时作业，电气接入在商定的窗口完成。" },
+      { title: "车牌识别与进站台账", text: "配置车牌识别、问题车辆黑名单和进站报表，用于与班次报表核对。" },
+      { title: "推广到全网", text: "为连锁做标准站设计，总部集中监控所有站点。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "振动与雨棚", text: "雨棚上的摄像机受风和过路货车的振动。用带减振的刚性支架，运行头几周后复查清晰度。" },
+      { title: "夜间眩光", text: "明亮的雨棚和车灯导致过曝。用宽动态摄像机，按油枪区而不是画面平均值设定曝光。" },
+      { title: "粉尘与融雪剂", text: "洗车和冬季药剂让球罩很快挂脏。清洁写进维保规程——在油站这是几周就要做的事，不是几个月。" },
+    ],
+  },
+  parking: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "真实条件下的识别", text: "脏车牌、黑夜、雨天和逆光是车牌识别的日常。我们用带红外、与车道成30°以内夹角的专用相机，在真实车流上做到95%以上识别率。" },
+      { title: "车道逻辑与场景", text: "一条车道是相机、道闸、地感和信号灯的组合。我们把场景做全：住户、访客、快递、未识别车牌——每种都要无人值守跑通。" },
+      { title: "计费与支付", text: "商业停车场配置费率、收费亭和自助终端、余位统计和显示屏。系统数钱要和抬杆一样可靠。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "现场测量", text: "研究入口几何：转弯半径、坡度、相机到读牌点的距离。这一步出错是识别率差的头号原因。" },
+      { title: "整条车道施工", text: "道闸、立柱、切割地感线圈、相机和信号灯——整条车道一体安装，当场用真车测试。" },
+      { title: "场景配置", text: "录入白名单、访客模式、费率，再跑非常规情况：拖挂、摩托车、过境牌照。" },
+      { title: "上线与保障", text: "头几周盯识别率、微调角度和补光——这是上线的正常环节，不是返工。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "入口排队", text: "一辆车处理超过5–7秒，早高峰就排长龙。我们优化周期：车牌在驶近时读取，车到杆前闸已开。" },
+      { title: "撞杆", text: "闸杆比想象中更常被撞断。我们装脱离式闸杆和记录撞击瞬间的相机——修理费由肇事者出，不动项目预算。" },
+      { title: "地感与路面翻修", text: "重铺沥青时地感线圈遭殃。我们把线圈位置存档，在计划翻修的地方改用雷达检测器。" },
+    ],
+  },
+  city: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "规模与容错", text: "城市系统是数百路摄像机、数公里干线和永不停机的要求。我们设计信道、供电和存储的冗余：单节点故障不能拖垮一个片区。" },
+      { title: "以分析为基础", text: "靠人眼盯几千路画面不可能。人脸和车牌识别、聚集和事件侦测只把需要处置的事件推给值班员。" },
+      { title: "数据中心与存储", text: "城市的视频存档是海量数据。我们建数据中心：存储系统、按摄像机类别计算的存档深度、各部门的访问规程。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "概念与分期", text: "把城市划成实施批次：路口和社会设施先行，街区随后。每一期都是完整可用的闭环。" },
+      { title: "干线信道", text: "设计并建设带备用路由的光缆，汇聚节点放进有保障供电的受保护机房。" },
+      { title: "指挥中心", text: "部署视频墙、值班席位和处置规程——用我们为Ucell建指挥中心的经验。" },
+      { title: "试运行", text: "头几个月与甲方并肩工作：校准分析、压降误报、调好报表。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "审批与灯杆", text: "借用路灯杆和楼体立面需要基础设施产权方的批准。这项工作我们承担，并把周期如实写进计划。" },
+      { title: "分析误报", text: "雨、影子和树叶会造出假事件。我们逐点校准场景、划定关注区——分析的质量靠手调出来，不是勾一个选项。" },
+      { title: "多部门多权限", text: "警方、市政和政府都要用系统。我们建角色模型加日志：各看各的，每次调用都有记录。" },
+    ],
+  },
+  bus: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "振动与车载电源", text: "交通工具意味着持续颠簸和车载电网的浪涌。我们用车规级、带电源保护的录像机和摄像机：普通固定设备在公交车上活不长。" },
+      { title: "线路上的数据回传", text: "视频和遥测经4G传到调度台，完整存档回场后走Wi-Fi上传。分流是为了不给整个存档付移动流量的钱。" },
+      { title: "客流计数", text: "车门传感器统计上下客——调度台和线路规划拿到按班次和站点的客流数据。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "先在几台车上试点", text: "先装2–3台车，收集一个月的通信和抗振数据，修正支架和参数——然后再铺开到全车队。" },
+      { title: "在场站安装", text: "一台车装一天：利用班次间隙作业，车辆不脱班。" },
+      { title: "调度台", text: "部署监控：位置、按需视频、司机的报警事件。" },
+      { title: "车队伴随保障", text: "随车辆例保做定期检查：紧固件、镜头清洁、存档上传。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "熄火后的供电", text: "录像机不管理电源的话，夜间停车会把电瓶抽干。我们配置正确的休眠和过放保护。" },
+      { title: "4G盲区", text: "城际线路上信号会断。数据先在车上缓存，有网即补传——调度台看到的轨迹不断线。" },
+      { title: "粉尘与洗车", text: "车身上的室外摄像机要扛住高压水枪。我们选高防护等级的型号，并在例保时检查接口密封。" },
+    ],
+  },
+  construction: {
+    specificsTitle: "项目特点",
+    specifics: [
+      { title: "没有基础设施的现场", text: "开工时既没网络也没稳定电源。我们上自供电监控桩：摄像机、4G路由器、备用电池——监控从第一天就工作，不用等通水通电。" },
+      { title: "系统跟着工地搬家", text: "塔吊立起来——观察点没了；围挡挪了——周界变了。系统按可移动设计：监控桩几小时就能挪走，而不是从头重装。" },
+      { title: "材料和机械是主要损耗", text: "电缆、钢筋和柴油总在夜里离开工地。材料库、机械停放区和大门单独成环，配夜间移动侦测。" },
+    ],
+    workflowTitle: "我们如何推进项目",
+    workflow: [
+      { title: "按施工总平面图布点", text: "结合施工阶段按总图摆桩：塔吊立在哪、围挡挪到哪、永久电源何时出现。" },
+      { title: "快速安装", text: "自供电桩1–2天启用。依托现有照明杆、工棚和临时立柱。" },
+      { title: "进出管控", text: "工棚和大门上门禁：工人刷卡计数，运料车辆进出留档。" },
+      { title: "搬迁与拆除", text: "随施工进度挪桩，收尾时拆除，或把系统转为成品建筑的永久系统。" },
+    ],
+    pitfallsTitle: "难点与解决方案",
+    pitfalls: [
+      { title: "电压跳变或断电", text: "工地临时电不稳定。每个桩自带几小时后备，关键点位一昼夜；断电即推送通知。" },
+      { title: "粉尘、混凝土和焊接", text: "镜头一周就被工地粉尘糊住。擦拭列入每周规程，并加装防直灌粉尘的遮檐。" },
+      { title: "镜头里的分包商", text: "现场有几十个不同分包的班组。总包和甲方的摄像机权限分开配置——各看各的责任区。" },
+    ],
+  },
+};
+
+const BY_LOCALE: Record<string, Record<string, IndustryDetails>> = { ru, uz, en, tr, zh };
 
 export function getIndustryDetails(locale: string, key: string): IndustryDetails | null {
   return BY_LOCALE[locale]?.[key] ?? null;
