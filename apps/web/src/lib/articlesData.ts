@@ -2327,93 +2327,143 @@ export const ARTICLES: Article[] = [
     related: ["gates", "barrier"],
     loc: {
       ru: {
-        title: "Автоматические ворота: как выбрать привод",
-        excerpt: "Типы ворот (откатные, распашные, секционные) и приводов, что важно при выборе и можно ли автоматизировать существующие ворота.",
+        title: "Автоматические ворота: откатные, распашные или секционные",
+        excerpt: "Какой тип ворот выбрать под участок и гараж, как подобрать привод по весу и ветру, какая автоматика безопасности обязательна — и когда есть смысл автоматизировать уже стоящие ворота.",
         sections: [
-          { h: "Типы ворот и приводов", p: [
-            "Ворота бывают откатные, распашные, секционные и роллетные — под каждый тип свой привод. Откатные удобны для широких въездов, распашные — классика для дворов, секционные экономят место в гараже.",
-            "Привод подбирается под вес створки и частоту открывания: чем тяжелее и чаще, тем мощнее нужен механизм.",
+          { h: "Тип ворот диктует участок", p: [
+            "Откатные ворота уходят вдоль забора и не требуют места на распахивание — сугроб перед въездом им тоже не помеха. Расплата — нужен прямой участок забора в полторы ширины проёма под откат. Распашные проще и дешевле, но створкам нужно пространство, и зимой его придётся чистить.",
+            "Секционные ворота — гаражное решение: полотно уходит под потолок, не занимая места ни перед гаражом, ни внутри. Роллетные наматываются в компактный короб и выручают там, где нет ни места вдоль забора, ни высоты под направляющие. Мы честно говорим на выезде, какой тип встанет на ваш проём без компромиссов.",
           ] },
-          { h: "Что важно при выборе", p: [
-            "Мощность привода под вес створки, интенсивность работы (для частого въезда нужен привод с запасом), фотоэлементы безопасности и сигнальная лампа, пульты и возможность распознавания номеров.",
-            "Экономия на приводе оборачивается быстрым износом — лучше взять механизм с запасом по нагрузке.",
+          { h: "Привод: вес, ширина, ветер, интенсивность", p: [
+            "Привод подбирается с запасом, а не «впритык». Для откатных считается масса полотна; для распашных — длина створки и парусность: сплошной профнастил ловит ветер, как парус, и слабый привод на широкой створке живёт один сезон. Отдельный параметр — интенсивность: домашнему въезду хватает бытового привода, воротам ЖК или предприятия нужен интенсивный, рассчитанный на сотни циклов в день.",
+            "Зимний пакет — не маркетинг: плавный старт, чтобы автоматика не рвала примёрзшую створку, и смазка, работающая в мороз. Это настраивается при монтаже и продлевает жизнь механики на годы.",
           ] },
-          { h: "Автоматизация существующих ворот", p: [
-            "Автоматику можно поставить и на уже смонтированные ворота. Настраиваем плавное открытие, защиту от защемления, интеграцию со СКУД и распознаванием номеров.",
-            "Работаем под ключ в Ташкенте и по всему Узбекистану — с гарантией и сервисным обслуживанием.",
+          { h: "Безопасность и управление", p: [
+            "Обязательный минимум безопасности: фотоэлементы, останавливающие створку при препятствии, сигнальная лампа и регулировка усилия с реверсом — ворота не должны дожимать машину или человека. Ручная разблокировка на случай отключения света обязательна: вы откроете ворота ключом, не разбирая привод.",
+            "Управление — по вашему сценарию: пульты, GSM-модуль для открытия бесплатным звонком, приложение, кнопка у охраны. Для предприятия и ЖК подключаем распознавание номеров: свои машины заезжают без остановки, гости по звонку, каждый въезд пишется со снимком.",
           ] },
+          { h: "Автоматизация существующих ворот и цена", p: [
+            "Стоящие ворота чаще всего можно автоматизировать без замены: привод, фотоэлементы и лампа ставятся за один день. Условие — исправная механика: ролики, петли и геометрия. Если створку клинит вручную, привод не вылечит, а добьёт — и мы честно скажем, что сначала ремонтировать.",
+            "Цена складывается из типа ворот, класса привода и способа управления. Полный комплект с нуля дороже автоматизации готовых ворот в разы — но и живёт дольше при правильном подборе. Выезд и расчёт бесплатны; монтаж — один-три дня, гарантия на механику и работы, обслуживание по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли автоматизировать старые распашные ворота?", a: "В большинстве случаев да: линейные приводы ставятся на створки за день. Главное условие — исправные петли и геометрия: если ворота клинит рукой, сначала ремонт, потом автоматика." },
+          { q: "Что делать при отключении света?", a: "У каждого привода есть ручная разблокировка ключом — ворота открываются вручную. Для частого отключения ставим резервный аккумулятор: автоматика переживает несколько циклов без сети." },
+          { q: "Какой привод нужен на ворота из профнастила шириной 4 метра?", a: "Сплошное полотно парусит, поэтому привод берётся с запасом по усилию и с учётом ветровой нагрузки региона. Точную модель подбираем по месту — на выезде замеряем и считаем бесплатно." },
+          { q: "Ворота или шлагбаум — что выбрать для двора?", a: "Шлагбаум быстрее и дешевле, но закрывает только проезд машин. Ворота дают физическую защиту и приватность. Для ЖК часто ставят оба: шлагбаум днём, ворота на ночь." },
         ],
       },
       uz: {
-        title: "Avtomatik darvozalar: privodni qanday tanlash",
-        excerpt: "Darvoza turlari (suriladigan, ochiladigan, seksiyali) va privodlar, tanlashda nima muhim va mavjud darvozalarni avtomatlashtirish mumkinmi.",
+        title: "Avtomatik darvozalar: surma, tavaqali yoki seksiyali",
+        excerpt: "Uchastka va garajga qaysi darvoza turini tanlash, privodni og'irlik va shamolga qarab qanday olish, qanday xavfsizlik avtomatikasi majburiy — va turgan darvozani avtomatlashtirish qachon mantiqli.",
         sections: [
-          { h: "Darvoza va privod turlari", p: [
-            "Darvozalar suriladigan, ochiladigan, seksiyali va rolikli bo'ladi — har turga o'z privodi. Suriladigan keng kirishlar uchun qulay, ochiladigan — hovlilar uchun klassika, seksiyali garajda joy tejaydi.",
-            "Privod tavaqa og'irligi va ochilish chastotasiga qarab tanlanadi: qancha og'ir va tez-tez bo'lsa, mexanizm shuncha kuchli kerak.",
+          { h: "Darvoza turini uchastka belgilaydi", p: [
+            "Surma darvoza to'siq bo'ylab suriladi va ochilish joyini talab qilmaydi — kirish oldidagi qor uyumi ham unga to'siq emas. Evaziga — surilish uchun proyom kengligining bir yarmicha to'g'ri to'siq uchastkasi kerak. Tavaqalisi oddiyroq va arzonroq, lekin tavaqalarga joy kerak va qishda uni tozalashga to'g'ri keladi.",
+            "Seksiyali darvoza — garaj yechimi: polotno ship ostiga ketadi, garaj oldida ham, ichida ham joy olmaydi. Rolletlisi ixcham qutiga o'raladi va to'siq bo'ylab joy ham, yo'naltiruvchilarga balandlik ham yo'q joyda qutqaradi. Chiqishda proyomingizga qaysi tur kompromissiz turishini halol aytamiz.",
           ] },
-          { h: "Tanlashda nima muhim", p: [
-            "Privod quvvati tavaqa og'irligiga mos bo'lishi, ish intensivligi (tez-tez kirish uchun zaxirali privod kerak), xavfsizlik fotoelementlari va signal chirog'i, pultlar va raqam aniqlash imkoniyati.",
-            "Privodda tejash tez eskirishga olib keladi — yuklama bo'yicha zaxirali mexanizm olgan ma'qul.",
+          { h: "Privod: og'irlik, kenglik, shamol, intensivlik", p: [
+            "Privod «zo'rg'a» emas, zaxira bilan tanlanadi. Surma darvozaga polotno massasi hisoblanadi; tavaqaliga — tavaqa uzunligi va yelkanlik: yaxlit profnastil shamolni yelkandek tutadi, keng tavaqadagi kuchsiz privod bir mavsum yashaydi. Alohida parametr — intensivlik: uy kirishiga maishiy privod yetadi, TJM yoki korxona darvozasiga kuniga yuzlab siklga mo'ljallangan intensiv kerak.",
+            "Qishki paket — marketing emas: avtomatika yopishib qolgan tavaqani yulmasligi uchun silliq start va sovuqda ishlaydigan moy. Bu montajda sozlanadi va mexanika umrini yillarga uzaytiradi.",
           ] },
-          { h: "Mavjud darvozalarni avtomatlashtirish", p: [
-            "Avtomatikani allaqachon o'rnatilgan darvozalarga ham qo'yish mumkin. Silliq ochilish, qisilishdan himoya, SKUD va raqam aniqlash bilan integratsiyani sozlaymiz.",
-            "Kalit topshirish asosida ishlaymiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va servis xizmati bilan.",
+          { h: "Xavfsizlik va boshqaruv", p: [
+            "Xavfsizlikning majburiy minimumi: to'siq borida tavaqani to'xtatadigan fotoelementlar, signal chiroq va revers bilan kuch sozlamasi — darvoza mashina yoki odamni siqmasligi kerak. Svet o'chganda qo'lda ochish majburiy: privodni buzmasdan darvozani kalit bilan ochasiz.",
+            "Boshqaruv — sizning stsenariyingiz bo'yicha: pultlar, bepul qo'ng'iroq bilan ochadigan GSM-modul, ilova, qo'riqdagi tugma. Korxona va TJM ga raqam tanishni ulaymiz: o'z mashinalar to'xtamasdan kiradi, mehmonlar qo'ng'iroq bilan, har kirish surat bilan yoziladi.",
           ] },
+          { h: "Turgan darvozani avtomatlashtirish va narx", p: [
+            "Turgan darvozani ko'pincha almashtirmasdan avtomatlashtirsa bo'ladi: privod, fotoelementlar va chiroq bir kunda o'rnatiladi. Shart — soz mexanika: roliklar, oshiq-moshiqlar va geometriya. Tavaqa qo'lda qisilsa, privod davolamaydi, o'ldiradi — avval nimani ta'mirlashni halol aytamiz.",
+            "Narx darvoza turi, privod sinfi va boshqaruv usulidan yig'iladi. Noldan to'liq to'plam tayyor darvozani avtomatlashtirishdan bir necha barobar qimmat — lekin to'g'ri tanlovda uzoqroq ham yashaydi. Chiqish va hisob bepul; montaj — bir-uch kun, mexanika va ishlarga kafolat, xizmat butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "Eski tavaqali darvozani avtomatlashtirsa bo'ladimi?", a: "Ko'p hollarda ha: chiziqli privodlar tavaqalarga bir kunda o'rnatiladi. Bosh shart — soz oshiq-moshiq va geometriya: darvoza qo'lda qisilsa, avval ta'mir, keyin avtomatika." },
+          { q: "Svet o'chsa nima qilish kerak?", a: "Har privodda kalitli qo'lda ochish bor — darvoza qo'lda ochiladi. Tez-tez o'chadigan joyga zaxira akkumulyator qo'yamiz: avtomatika tarmoqsiz bir necha siklga chidaydi." },
+          { q: "4 metrli profnastil darvozaga qanday privod kerak?", a: "Yaxlit polotno yelkan bo'ladi, shuning uchun privod kuch zaxirasi va hudud shamol yuki bilan olinadi. Aniq modelni joyida tanlaymiz — chiqishda o'lchab bepul hisoblaymiz." },
+          { q: "Hovliga darvoza yoki shlagbaum — nimani tanlash?", a: "Shlagbaum tezroq va arzonroq, lekin faqat mashinalar o'tishini yopadi. Darvoza jismoniy himoya va maxfiylik beradi. TJM larda ko'pincha ikkalasi: kunduzi shlagbaum, kechasi darvoza." },
         ],
       },
       en: {
-        title: "Automatic Gates: How to Choose a Drive",
-        excerpt: "Gate types (sliding, swing, sectional) and drives, what matters when choosing and whether existing gates can be automated.",
+        title: "Automatic Gates: Sliding, Swing or Sectional",
+        excerpt: "Which gate type fits your plot and garage, how to size the drive for weight and wind, which safety automation is mandatory — and when it makes sense to automate the gates you already have.",
         sections: [
-          { h: "Gate and drive types", p: [
-            "Gates come as sliding, swing, sectional and roller — each type has its own drive. Sliding gates suit wide entrances, swing gates are the classic for yards, sectional doors save space in a garage.",
-            "The drive is matched to the leaf weight and opening frequency: the heavier and more frequent, the more powerful the mechanism must be.",
+          { h: "The plot dictates the gate type", p: [
+            "Sliding gates travel along the fence and need no swing clearance — a snowdrift before the entrance does not bother them either. The price: a straight fence run of about one and a half opening widths for the travel. Swing gates are simpler and cheaper, but the leaves need space, and in winter that space needs clearing.",
+            "Sectional doors are the garage answer: the panel goes up under the ceiling, taking no room in front or inside. Roller gates coil into a compact box and save the day where there is neither room along the fence nor height for tracks. At the survey we say honestly which type fits your opening without compromises.",
           ] },
-          { h: "What matters when choosing", p: [
-            "Drive power matched to leaf weight, duty cycle (frequent entry needs a drive with headroom), safety photocells and a warning lamp, remotes and optional plate recognition.",
-            "Skimping on the drive leads to rapid wear — better to take a mechanism with a load margin.",
+          { h: "The drive: weight, width, wind, duty", p: [
+            "The drive is sized with a margin, not \"just enough\". For sliding gates the panel mass matters; for swing gates, the leaf length and windage: solid profiled sheet catches wind like a sail, and a weak drive on a wide leaf lasts one season. Duty cycle is separate: a home entrance runs fine on a residential drive, while a housing estate or factory gate needs an intensive one rated for hundreds of cycles a day.",
+            "The winter package is not marketing: a soft start so the drive does not tear a frozen leaf, and grease that works in frost. It is configured at installation and adds years to the mechanics.",
           ] },
-          { h: "Automating existing gates", p: [
-            "Automation can be fitted to gates that are already installed. We configure smooth opening, anti-pinch protection and integration with ACS and plate recognition.",
-            "We work turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          { h: "Safety and control", p: [
+            "The mandatory safety minimum: photocells that stop the leaf at an obstacle, a warning lamp, and force adjustment with reverse — a gate must never squeeze a car or a person. Manual release for power cuts is obligatory: you open the gate with a key without dismantling the drive.",
+            "Control follows your scenario: remotes, a GSM module that opens with a free call, an app, a guard's button. For enterprises and residential complexes we add plate recognition: company cars enter without stopping, guests by call, and every entry is logged with a snapshot.",
           ] },
+          { h: "Automating existing gates, and the price", p: [
+            "Existing gates can usually be automated without replacement: the drive, photocells and lamp go on in a day. The condition is sound mechanics: rollers, hinges and geometry. If the leaf jams by hand, a drive will not cure it but finish it off — and we will say honestly what to repair first.",
+            "The price is built from the gate type, the drive class and the control method. A complete new set costs severalfold more than automating existing gates — and lasts longer when sized properly. The survey and quote are free; installation takes one to three days, with a warranty on mechanics and work, and service across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "Can old swing gates be automated?", a: "In most cases yes: linear drives mount on the leaves in a day. The key condition is sound hinges and geometry: if the gate jams by hand, repair first, automation second." },
+          { q: "What happens during a power cut?", a: "Every drive has a manual key release — the gate opens by hand. Where outages are frequent we add a backup battery: the automation survives several cycles without mains." },
+          { q: "What drive suits a 4-meter profiled sheet gate?", a: "A solid panel acts as a sail, so the drive is taken with force margin and the region's wind load in mind. We pick the exact model on site — measured and quoted for free." },
+          { q: "A gate or a barrier for a courtyard?", a: "A barrier is faster and cheaper but only controls vehicle passage. Gates give physical protection and privacy. Residential complexes often use both: the barrier by day, the gates at night." },
         ],
       },
       tr: {
-        title: "Otomatik Kapılar: Motor Nasıl Seçilir",
-        excerpt: "Kapı türleri (yana kayar, kanatlı, seksiyonel) ve motorlar, seçimde neler önemli ve mevcut kapılar otomatikleştirilebilir mi.",
+        title: "Otomatik Kapılar: Yana Kayar, Çift Kanat veya Seksiyonel",
+        excerpt: "Arsanıza ve garajınıza hangi kapı tipi uyar, motor ağırlığa ve rüzgâra göre nasıl seçilir, hangi güvenlik otomasyonu zorunludur — ve mevcut kapıyı otomatikleştirmek ne zaman mantıklıdır.",
         sections: [
-          { h: "Kapı ve motor türleri", p: [
-            "Kapılar yana kayar, kanatlı, seksiyonel ve rulo tip olur — her türün kendi motoru vardır. Yana kayar geniş girişler için uygundur, kanatlı avlular için klasiktir, seksiyonel garajda yer kazandırır.",
-            "Motor, kanat ağırlığına ve açılma sıklığına göre seçilir: ne kadar ağır ve sıksa, mekanizma o kadar güçlü olmalıdır.",
+          { h: "Kapı tipini arsa belirler", p: [
+            "Yana kayar kapı çit boyunca kayar, açılma boşluğu istemez — giriş önündeki kar da engel değildir. Bedeli: kayma için açıklığın bir buçuk katı düz çit hattı. Çift kanat daha basit ve ucuzdur, ama kanatlara alan gerekir ve kışın o alan küreklenir.",
+            "Seksiyonel kapı garaj çözümüdür: panel tavan altına toplanır, ne önde ne içeride yer kaplar. Rulo kapı kompakt kutuya sarılır; çit boyunca yer de ray için yükseklik de yoksa kurtarır. Keşifte açıklığınıza hangi tipin ödünsüz oturacağını dürüstçe söyleriz.",
           ] },
-          { h: "Seçimde neler önemli", p: [
-            "Kanat ağırlığına uygun motor gücü, çalışma yoğunluğu (sık giriş için yedekli motor), güvenlik fotoselleri ve uyarı lambası, kumandalar ve plaka tanıma seçeneği.",
-            "Motordan tasarruf hızlı aşınmaya yol açar — yük payı olan mekanizma almak daha iyidir.",
+          { h: "Motor: ağırlık, genişlik, rüzgâr, yoğunluk", p: [
+            "Motor «ucu ucuna» değil payla seçilir. Kayar kapıda panel kütlesi; çift kanatta kanat boyu ve yelken etkisi önemlidir: dolu trapez sac rüzgârı yelken gibi tutar, geniş kanatta zayıf motor bir sezon dayanır. Yoğunluk ayrı parametredir: ev girişine konut motoru yeter; site veya fabrika kapısına günde yüzlerce çevrimlik yoğun tip gerekir.",
+            "Kış paketi pazarlama değildir: donmuş kanadı koparmasın diye yumuşak kalkış ve ayazda çalışan gres. Montajda ayarlanır ve mekaniğe yıllar ekler.",
           ] },
-          { h: "Mevcut kapıların otomasyonu", p: [
-            "Otomasyon, halihazırda monte edilmiş kapılara da takılabilir. Yumuşak açılış, sıkışma koruması, geçiş kontrolü ve plaka tanıma entegrasyonunu ayarlıyoruz.",
-            "Anahtar teslim çalışıyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          { h: "Güvenlik ve kontrol", p: [
+            "Zorunlu güvenlik asgarisi: engelde kanadı durduran fotoseller, uyarı lambası ve geri dönüşlü kuvvet ayarı — kapı asla araca veya insana yüklenmemelidir. Kesinti için manuel kurtarma şarttır: motoru sökmeden kapıyı anahtarla açarsınız.",
+            "Kontrol sizin senaryonuza göre: kumandalar, ücretsiz aramayla açan GSM modülü, uygulama, güvenlikçi butonu. İşletme ve sitelere plaka tanıma ekleriz: kayıtlı araçlar durmadan girer, misafir aramayla; her giriş fotoğrafla kaydedilir.",
           ] },
+          { h: "Mevcut kapının otomasyonu ve fiyat", p: [
+            "Mevcut kapı çoğu kez değiştirilmeden otomatikleştirilir: motor, fotoseller ve lamba bir günde takılır. Şart, sağlam mekaniktir: makaralar, menteşeler ve geometri. Kanat elle zorlanıyorsa motor iyileştirmez, bitirir — önce neyin onarılacağını dürüstçe söyleriz.",
+            "Fiyat; kapı tipi, motor sınıfı ve kontrol yönteminden oluşur. Sıfırdan komple set, mevcut kapının otomasyonundan kat kat pahalıdır — ama doğru seçimde daha uzun yaşar. Keşif ve teklif ücretsiz; montaj bir-üç gün, mekanik ve işçilik garantili, tüm Özbekistan'da servis.",
+          ] },
+        ],
+        faq: [
+          { q: "Eski çift kanat kapı otomatikleştirilebilir mi?", a: "Çoğu durumda evet: lineer motorlar kanatlara bir günde takılır. Ana şart sağlam menteşe ve geometri: kapı elle zorlanıyorsa önce onarım, sonra otomasyon." },
+          { q: "Elektrik kesilince ne olur?", a: "Her motorda anahtarlı manuel kurtarma vardır — kapı elle açılır. Kesintinin sık olduğu yere yedek akü koyarız: otomasyon şebekesiz birkaç çevrim dayanır." },
+          { q: "4 metrelik trapez sac kapıya hangi motor?", a: "Dolu panel yelken yapar; motor bu yüzden kuvvet payıyla ve bölgenin rüzgâr yüküne göre alınır. Kesin modeli yerinde seçeriz — ölçer, ücretsiz hesaplarız." },
+          { q: "Avluya kapı mı bariyer mi?", a: "Bariyer hızlı ve ucuzdur ama yalnız araç geçişini kapatır. Kapı fiziksel koruma ve mahremiyet verir. Siteler çoğu kez ikisini kullanır: gündüz bariyer, gece kapı." },
         ],
       },
       zh: {
-        title: "自动大门：如何选择电机",
-        excerpt: "大门类型（平移门、平开门、翻板门）与电机，选择要点，以及现有大门能否加装自动化。",
+        title: "自动大门：平移、平开还是翻板",
+        excerpt: "按场地和车库选门型，按重量和风载选电机，哪些安全装置是必配——以及什么时候值得给现有大门加装电机。",
         sections: [
-          { h: "大门与电机类型", p: [
-            "大门分平移、平开、翻板和卷帘式——每种类型配相应的电机。平移门适合宽阔入口，平开门是庭院经典之选，翻板门节省车库空间。",
-            "电机按门扇重量和开启频率选择：门越重、开启越频繁，机构就需要越大功率。",
+          { h: "场地决定门型", p: [
+            "平移门沿围墙滑行、不占开启空间——门前积雪也不碍事。代价是：需要约一倍半门洞宽度的直线围墙供门体滑行。平开门更简单便宜，但门扇需要空间，冬天还得给这块空间铲雪。",
+            "翻板门是车库方案：门板收到顶棚下，门前门内都不占地。卷帘门卷进紧凑卷箱，在围墙边没空间、也没高度装轨道时是救星。勘测时我们会照实说哪种门型能不打折扣地装进您的门洞。",
           ] },
-          { h: "选择要点", p: [
-            "电机功率要匹配门扇重量、工作强度（频繁出入需要有余量的电机）、安全光电和警示灯、遥控器以及车牌识别选项。",
-            "在电机上省钱会导致快速磨损——最好选择负载有余量的机构。",
+          { h: "电机：重量、宽度、风载、强度", p: [
+            "电机要留余量选，不能「刚刚好」。平移门算门体质量；平开门看门扇长度和受风面：整片压型板像帆一样兜风，宽门扇配小电机一季就报废。使用强度是另一参数：家用入口普通电机够用，小区或工厂大门要每天数百次循环的重载型。",
+            "冬季套餐不是营销话术：缓启动让电机不去硬拽冻住的门扇，润滑脂要耐严寒。这些在安装时调好，能让机械多用好几年。",
           ] },
-          { h: "现有大门的自动化改造", p: [
-            "已安装的大门也可以加装自动化。我们调试平滑开启、防夹保护，并与门禁和车牌识别集成。",
-            "我们在塔什干及乌兹别克斯坦全境提供交钥匙服务——含质保和维护。",
+          { h: "安全与控制", p: [
+            "安全装置的强制下限：遇障碍立停的红外对射、警示灯、带反转的推力调节——大门绝不能压向汽车或行人。停电手动释放是必须的：不拆电机也能用钥匙打开大门。",
+            "控制按您的场景配：遥控器、免费来电开门的GSM模块、手机应用、门卫按钮。企业和小区可加车牌识别：自家车不停车进入，访客凭来电，每次进出连抓拍入档。",
           ] },
+          { h: "现有大门的自动化与价格", p: [
+            "现有大门大多不用换就能自动化：电机、红外对射和警示灯一天装好。前提是机械完好：滑轮、合页和门体几何。如果手推都卡，电机治不了病、只会送终——我们会照实说先修什么。",
+            "价格由门型、电机等级和控制方式构成。全新成套比给现有门装电机贵数倍——但选型得当也用得更久。勘测和报价免费；安装一到三天，机械和施工带质保，维保覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "旧的平开门能加装电机吗？", a: "多数情况可以：直臂电机一天装上门扇。关键前提是合页和几何完好：手推都卡的门要先修再自动化。" },
+          { q: "停电了怎么办？", a: "每台电机都有钥匙手动释放——大门可以手动打开。经常停电的地方我们加备用电池：断电后自动系统还能撑几个循环。" },
+          { q: "4米宽的压型板大门配什么电机？", a: "整片门板兜风，所以电机按推力余量并结合当地风载选型。具体型号现场确定——上门测量、免费核算。" },
+          { q: "院子装大门还是道闸？", a: "道闸更快更便宜，但只管车辆通行。大门提供物理防护和私密性。小区常常两样都装：白天用道闸，夜里关大门。" },
         ],
       },
     },
@@ -2424,93 +2474,143 @@ export const ARTICLES: Article[] = [
     related: ["network", "fiber", "wifi"],
     loc: {
       ru: {
-        title: "Монтаж СКС и локальной сети в офисе: этапы",
-        excerpt: "Что такое структурированная кабельная система, из каких этапов состоит монтаж и что важно для надёжной сети офиса.",
+        title: "Монтаж СКС: как строят сеть, которая не подведёт",
+        excerpt: "Что такое структурированная кабельная система, чем Cat5e отличается от Cat6, зачем нужны тестирование и кабельный журнал — и по каким признакам отличить профессиональный монтаж от «скруток за потолком».",
         sections: [
-          { h: "Что такое СКС и зачем она нужна", p: [
-            "Структурированная кабельная система (СКС) — это единая кабельная основа офиса: одна проводка для компьютеров, телефонии, Wi-Fi, видеонаблюдения и других систем. Грамотная СКС избавляет от хаоса проводов и упрощает подключение новых устройств.",
-            "Это фундамент IT-инфраструктуры: от качества кабельной системы зависит стабильность всей сети предприятия.",
+          { h: "Что такое СКС и зачем она бизнесу", p: [
+            "Структурированная кабельная система — это единая кабельная инфраструктура здания, по которой работают компьютеры, телефония, камеры, СКУД и Wi-Fi. «Структурированная» — значит построенная по стандарту: одинаковые розетки, патч-панели, маркировка, документация. Любой порт прослеживается от рабочего места до коммутатора за минуту.",
+            "Противоположность СКС — «историческая» сеть, которую годами доращивали разные люди: провода за потолком без подписей, свитчи по тумбочкам, никто не знает, что куда идёт. Работает — пока не перестанет; а диагностика любой проблемы превращается в археологию.",
           ] },
-          { h: "Этапы монтажа", p: [
-            "Проектирование и схема рабочих мест, прокладка кабельных трасс (лотки, короба), установка серверного шкафа и патч-панелей, монтаж розеток и подключение коммутаторов, маркировка и тестирование каждой линии, сдача исполнительной документации.",
-            "На каждом этапе важна аккуратность — переделка кабельной трассы обходится дороже, чем изначально сделать правильно.",
+          { h: "Категория кабеля: Cat5e, Cat6 или выше", p: [
+            "Cat5e держит гигабит на сто метров — этого хватает подавляющему большинству офисов, камерам и телефонии. Cat6 даёт запас: 10 гигабит на коротких дистанциях, жёстче требования к помехам — разумный выбор для серверных узлов и новых зданий «на вырост». Cat6A и оптика — уровень магистралей между этажами и корпусами.",
+            "Правило простое: горизонталка до рабочих мест — Cat5e или Cat6 по бюджету, магистрали — оптика. Переплачивать за Cat7 в обычном офисе незачем, а вот сэкономить на меди сомнительного происхождения — верный способ получить сеть с «плавающими» проблемами, которые не находит даже тестер.",
           ] },
-          { h: "Что важно при монтаже", p: [
-            "Кабель и компоненты проверенных категорий (Cat5e/Cat6), запас портов под рост компании, аккуратная организация кабельного хозяйства и кабельный журнал для обслуживания.",
-            "Выполняем монтаж СКС и локальных сетей под ключ в Ташкенте и по всему Узбекистану — с гарантией и последующим сопровождением.",
+          { h: "Признаки профессионального монтажа", p: [
+            "Кабель уложен в лотки и короба с соблюдением радиусов изгиба, слаботочка разнесена с силовыми линиями, каждая линия заведена на патч-панель и промаркирована с двух сторон. В шкафу — организаторы и аккуратные пучки, а не «борода» из проводов. Все розетки одного стандарта, запас портов заложен под рост.",
+            "И главное — документы: каждая линия протестирована кабельным анализатором, результаты сведены в протокол, заказчику передаются кабельный журнал и схема трасс. Через три года при переезде отдела или ремонте новый подрядчик разберётся в сети по бумагам, а не методом прозвона каждой жилы.",
           ] },
+          { h: "Как заказать и что по деньгам", p: [
+            "Стоимость СКС считается прозрачно: число портов, категория кабеля, сложность трасс, состав шкафов и активного оборудования. Мы выезжаем бесплатно, считаем по плану помещения и отдаём смету с позициями — не «цену за точку», за которой прячутся доплаты.",
+            "Монтируем офисы, склады и производства по Ташкенту и всему Узбекистану: новые объекты — на этапе отделки, действующие — без остановки работы, с переключением в нерабочие часы. Гарантия на линии и работы, дальше — сопровождение сети от замены патч-корда до дежурного администрирования.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько портов закладывать на рабочее место?", a: "Стандарт — две розетки на место: компьютер и телефон или запас. Плюс отдельные порты под принтеры, камеры, точки доступа и переговорки. Запас 20–30 % окупается при первом же росте штата." },
+          { q: "Можно ли проложить СКС в офисе с готовым ремонтом?", a: "Да: используются декоративные короба, пространство за фальшпотолком и фальшполом. Аккуратно, без штробления. Единственное отличие от стройки — чуть больше времени на трассы." },
+          { q: "Чем плоха сеть «на свитчах по тумбочкам»?", a: "Каскад бытовых свитчей — это петли, узкие места и невозможность диагностики: где-то тормозит, а где — не видно. СКС с нормальным ядром убирает каскады, и сеть становится наблюдаемой." },
+          { q: "Что такое тестирование линий и зачем оно мне?", a: "Кабельный анализатор проверяет каждую линию: схему разводки, длину, затухание, перекрёстные помехи. Протокол — ваша гарантия, что сеть держит заявленную скорость, и опора при любых будущих спорах с подрядчиками." },
         ],
       },
       uz: {
-        title: "Ofisda SKS va lokal tarmoq montaji: bosqichlar",
-        excerpt: "Strukturali kabel tizimi nima, montaj qanday bosqichlardan iborat va ofis tarmog'ining ishonchliligi uchun nima muhim.",
+        title: "SKS montaji: pand bermaydigan tarmoq qanday quriladi",
+        excerpt: "Strukturalangan kabel tizimi nima, Cat5e Cat6 dan nimasi bilan farq qiladi, testlash va kabel jurnali nega kerak — va professional montajni «ship ortidagi o'rashlar»dan qanday belgilar bo'yicha ajratish mumkin.",
         sections: [
-          { h: "SKS nima va nima uchun kerak", p: [
-            "Strukturali kabel tizimi (SKS) — ofisning yagona kabel asosi: kompyuterlar, telefoniya, Wi-Fi, videokuzatuv va boshqa tizimlar uchun bitta o'tkazish. To'g'ri SKS simlar tartibsizligini bartaraf etadi va yangi qurilmalarni ulashni osonlashtiradi.",
-            "Bu IT-infratuzilmaning poydevori: kabel tizimi sifatiga korxona butun tarmog'ining barqarorligi bog'liq.",
+          { h: "SKS nima va biznesga nega kerak", p: [
+            "Strukturalangan kabel tizimi — bino yagona kabel infratuzilmasi: unda kompyuterlar, telefoniya, kameralar, SKUD va Wi-Fi ishlaydi. «Strukturalangan» — standart bo'yicha qurilgan degani: bir xil rozetkalar, patch-panellar, markirovka, hujjatlar. Istalgan port ish o'rnidan kommutatorgacha bir daqiqada kuzatiladi.",
+            "SKS ning teskarisi — har xil odamlar yillab o'stirgan «tarixiy» tarmoq: ship ortida imzosiz simlar, tumbochkalardagi svitchlar, nima qayoqqa borishini hech kim bilmaydi. Ishlaydi — to'xtaguncha; istalgan muammo diagnostikasi esa arxeologiyaga aylanadi.",
           ] },
-          { h: "Montaj bosqichlari", p: [
-            "Loyihalash va ish o'rinlari sxemasi, kabel trassalarini yotqizish (lotoklar, koroblar), server shkafi va patch-panellarni o'rnatish, rozetkalar montaji va kommutatorlarni ulash, belgilash va har bir liniyani sinovdan o'tkazish, ijro hujjatlarini topshirish.",
-            "Har bir bosqichda aniqlik muhim — kabel trassasini qayta qilish darhol to'g'ri qilishdan qimmatroq.",
+          { h: "Kabel toifasi: Cat5e, Cat6 yoki yuqoriroq", p: [
+            "Cat5e yuz metrga gigabitni ushlaydi — bu ofislarning mutlaq ko'pchiligiga, kamera va telefoniyaga yetadi. Cat6 zaxira beradi: qisqa masofada 10 gigabit, xalaqitga qattiqroq talablar — server uzellari va «o'sishga» yangi binolar uchun oqilona tanlov. Cat6A va optika — qavatlar va korpuslar orasidagi magistrallar darajasi.",
+            "Qoida oddiy: ish o'rinlarigacha gorizontal — byudjetga qarab Cat5e yoki Cat6, magistrallar — optika. Oddiy ofisda Cat7 uchun ortiqcha to'lash keraksiz, shubhali kelib chiqishli misda tejash esa tester ham topolmaydigan «suzuvchi» muammoli tarmoq olishning aniq yo'li.",
           ] },
-          { h: "Montajda nima muhim", p: [
-            "Ishonchli kategoriyali kabel va komponentlar (Cat5e/Cat6), kompaniya o'sishi uchun portlar zaxirasi, kabel xo'jaligini toza tashkil etish va xizmat ko'rsatish uchun kabel jurnali.",
-            "SKS va lokal tarmoqlar montajini kalit topshirish asosida bajaramiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va keyingi qo'llab-quvvatlash bilan.",
+          { h: "Professional montaj belgilari", p: [
+            "Kabel egilish radiuslariga rioya qilib lotok va koroblarga yotqizilgan, kuchsiz tok kuch liniyalaridan ajratilgan, har liniya patch-panelga chiqarilgan va ikki tomondan markalangan. Shkafda — organayzerlar va ozoda bog'lamlar, simlardan «soqol» emas. Barcha rozetkalar bir standartda, o'sishga port zaxirasi qo'yilgan.",
+            "Eng muhimi — hujjatlar: har liniya kabel analizatori bilan testlangan, natijalar protokolga yig'ilgan, buyurtmachiga kabel jurnali va trassa sxemasi topshirilgan. Uch yildan keyin bo'lim ko'chishi yoki ta'mirda yangi pudratchi tarmoqni har tolani jiringlatib emas, qog'ozlar bo'yicha tushunadi.",
           ] },
+          { h: "Qanday buyurtma qilish va narxi qancha", p: [
+            "SKS narxi shaffof hisoblanadi: portlar soni, kabel toifasi, trassalar murakkabligi, shkaflar va aktiv uskuna tarkibi. Bepul chiqamiz, xona plani bo'yicha hisoblaymiz va moddali smeta beramiz — ortida qo'shimcha to'lovlar yashiringan «nuqta narxi» emas.",
+            "Toshkent va butun O'zbekiston bo'ylab ofis, ombor va ishlab chiqarishlarni montaj qilamiz: yangi obyektlar — pardozlash bosqichida, ishlayotganlar — ishni to'xtatmasdan, ishlanmaydigan soatlarda ulash bilan. Liniya va ishlarga kafolat, keyin — patch-kord almashtirishdan navbatchi administratorlikkacha tarmoq kuzatuvi.",
+          ] },
+        ],
+        faq: [
+          { q: "Ish o'rniga nechta port qo'yish kerak?", a: "Standart — o'ringa ikki rozetka: kompyuter va telefon yoki zaxira. Plyus printerlar, kameralar, ulanish nuqtalari va muzokara xonalariga alohida portlar. 20–30 % zaxira shtatning birinchi o'sishidayoq o'zini oqlaydi." },
+          { q: "Tayyor ta'mirli ofisda SKS o'tkazsa bo'ladimi?", a: "Ha: dekorativ koroblar, soxta ship va soxta pol orti ishlatiladi. Ozoda, shtroblashsiz. Qurilishdan yagona farq — trassalarga biroz ko'proq vaqt." },
+          { q: "«Tumbochkalardagi svitchlar» tarmog'i nimasi bilan yomon?", a: "Maishiy svitchlar kaskadi — bu halqalar, tor joylar va diagnostika imkonsizligi: qayerdadir tormozlaydi, qayerda — ko'rinmaydi. Normal yadroli SKS kaskadlarni olib tashlaydi va tarmoq kuzatiladigan bo'ladi." },
+          { q: "Liniyalarni testlash nima va menga nega kerak?", a: "Kabel analizatori har liniyani tekshiradi: ulanish sxemasi, uzunlik, so'nish, o'zaro xalaqitlar. Protokol — tarmoq e'lon qilingan tezlikni ushlashining kafolati va kelajakdagi pudratchilar bilan har qanday bahsda tayanchingiz." },
         ],
       },
       en: {
-        title: "Structured Cabling (SCS) and Office LAN Installation: Stages",
-        excerpt: "What a structured cabling system is, what stages installation involves and what matters for a reliable office network.",
+        title: "Structured Cabling Installation: Building a Network That Will Not Fail",
+        excerpt: "What structured cabling is, how Cat5e differs from Cat6, why testing and a cable journal matter — and how to tell professional installation from \"twists above the ceiling\".",
         sections: [
-          { h: "What SCS is and why you need it", p: [
-            "A structured cabling system (SCS) is the unified cable backbone of an office: one wiring plant for computers, telephony, Wi-Fi, CCTV and other systems. A well-built SCS eliminates cable chaos and makes connecting new devices easy.",
-            "It is the foundation of the IT infrastructure: the stability of the whole company network depends on cabling quality.",
+          { h: "What SCS is and why business needs it", p: [
+            "A structured cabling system is a building's unified cable infrastructure carrying computers, telephony, cameras, access control and Wi-Fi. \"Structured\" means built to a standard: identical outlets, patch panels, labeling, documentation. Any port traces from the workplace to the switch in a minute.",
+            "The opposite of SCS is the \"historical\" network grown over years by different hands: unlabeled wires above the ceiling, switches on bedside tables, nobody knows what goes where. It works — until it does not; and diagnosing any problem becomes archaeology.",
           ] },
-          { h: "Installation stages", p: [
-            "Design and workplace layout, cable route installation (trays, trunking), server cabinet and patch panels, outlet installation and switch connection, labelling and testing of every line, as-built documentation handover.",
-            "Precision matters at every stage — redoing a cable route costs more than doing it right the first time.",
+          { h: "Cable category: Cat5e, Cat6 or higher", p: [
+            "Cat5e carries gigabit over a hundred meters — enough for the vast majority of offices, cameras and telephony. Cat6 gives headroom: 10 gigabit over short runs and stricter noise margins — a sensible choice for server nodes and new buildings sized for growth. Cat6A and fiber are the league of backbones between floors and buildings.",
+            "The rule is simple: horizontal runs to workplaces — Cat5e or Cat6 by budget; backbones — fiber. Overpaying for Cat7 in a regular office is pointless, while saving on copper of dubious origin is a sure way to get a network with \"floating\" problems even a tester cannot pin down.",
           ] },
-          { h: "What matters during installation", p: [
-            "Cable and components of proven categories (Cat5e/Cat6), spare ports for company growth, tidy cable management and a cable journal for maintenance.",
-            "We install SCS and office LANs turnkey in Tashkent and across Uzbekistan — with warranty and ongoing support.",
+          { h: "Signs of professional installation", p: [
+            "Cable laid in trays and trunking with bend radii respected, low-voltage separated from power lines, every line landed on a patch panel and labeled at both ends. In the cabinet — organisers and neat bundles, not a \"beard\" of wires. All outlets to one standard, with port headroom for growth.",
+            "And above all — documents: every line tested with a cable analyzer, results in a report, and the customer receives a cable journal and route diagrams. Three years later, at an office move or renovation, a new contractor reads the network from paper instead of toning out every wire.",
           ] },
+          { h: "How to order and what it costs", p: [
+            "Structured cabling is priced transparently: port count, cable category, route complexity, cabinets and active equipment. We survey for free, calculate from the floor plan and hand over an itemised estimate — not a \"price per point\" with surcharges hiding behind it.",
+            "We build offices, warehouses and factories across Tashkent and Uzbekistan: new sites during fit-out, working ones without stopping the business, with cutover out of hours. Warranty on lines and work; afterwards, network support from patch cord replacement to standby administration.",
+          ] },
+        ],
+        faq: [
+          { q: "How many ports per workplace?", a: "The standard is two outlets per desk: computer and phone, or spare. Plus dedicated ports for printers, cameras, access points and meeting rooms. A 20–30 % reserve pays off at the first headcount growth." },
+          { q: "Can cabling be installed in an office with a finished interior?", a: "Yes: decorative trunking and the space above suspended ceilings and under raised floors are used. Neat, no chasing. The only difference from a construction-stage install is a little more time on the routes." },
+          { q: "What is wrong with a network of desktop switches?", a: "A cascade of household switches means loops, bottlenecks and no diagnostics: something is slow somewhere, but where is invisible. SCS with a proper core removes the cascades and makes the network observable." },
+          { q: "What is line testing and why do I need it?", a: "A cable analyzer verifies every line: wiring map, length, attenuation, crosstalk. The report is your guarantee the network holds its rated speed — and your evidence in any future dispute with contractors." },
         ],
       },
       tr: {
-        title: "Yapısal Kablolama ve Ofis Yerel Ağı Kurulumu: Aşamalar",
-        excerpt: "Yapısal kablolama sistemi nedir, kurulum hangi aşamalardan oluşur ve güvenilir ofis ağı için neler önemlidir.",
+        title: "Yapısal Kablolama Montajı: Yarı Yolda Bırakmayan Ağ Nasıl Kurulur",
+        excerpt: "Yapısal kablolama nedir, Cat5e Cat6'dan nasıl ayrılır, test ve kablo defteri neden önemlidir — ve profesyonel montaj «asma tavan üstü bükümlerden» hangi işaretlerle ayrılır.",
         sections: [
-          { h: "Yapısal kablolama nedir, neden gerekli", p: [
-            "Yapısal kablolama sistemi ofisin tek kablo altyapısıdır: bilgisayarlar, telefon, Wi-Fi, kamera ve diğer sistemler için tek tesisat. Doğru kurulmuş sistem kablo karmaşasını ortadan kaldırır ve yeni cihaz bağlamayı kolaylaştırır.",
-            "Bu, BT altyapısının temelidir: tüm şirket ağının istikrarı kablolama kalitesine bağlıdır.",
+          { h: "SKS nedir, işletmeye neden gerekir", p: [
+            "Yapısal kablolama, binanın tek kablo altyapısıdır: bilgisayarlar, telefon, kameralar, geçiş kontrolü ve Wi-Fi onun üzerinde çalışır. «Yapısal» demek standarda göre kurulmuş demektir: aynı prizler, patch paneller, etiketleme, dokümantasyon. Her port, çalışma yerinden switch'e bir dakikada izlenir.",
+            "SKS'nin zıttı, yıllarca farklı ellerce büyütülmüş «tarihî» ağdır: asma tavan üstünde imzasız kablolar, komodinlerde switch'ler; neyin nereye gittiğini kimse bilmez. Çalışır — çalışmayana dek; her sorunun teşhisi arkeolojiye döner.",
           ] },
-          { h: "Kurulum aşamaları", p: [
-            "Projelendirme ve çalışma yerleri şeması, kablo güzergâhlarının döşenmesi (tavalar, kanallar), sunucu kabini ve patch panellerin kurulumu, priz montajı ve switch bağlantısı, her hattın etiketlenip test edilmesi, uygulama dokümantasyonunun teslimi.",
-            "Her aşamada titizlik önemlidir — kablo güzergâhını yeniden yapmak, baştan doğru yapmaktan pahalıdır.",
+          { h: "Kablo kategorisi: Cat5e, Cat6 veya üstü", p: [
+            "Cat5e yüz metrede gigabit taşır — ofislerin büyük çoğunluğuna, kameralara ve telefona yeter. Cat6 pay verir: kısa mesafede 10 gigabit, daha sıkı parazit payları — sunucu düğümleri ve büyümeye göre yeni binalar için makul seçim. Cat6A ve fiber, katlar ve binalar arası omurgaların ligidir.",
+            "Kural basit: çalışma yerlerine yatay hatlar — bütçeye göre Cat5e veya Cat6; omurgalar — fiber. Sıradan ofiste Cat7'ye fazla ödemek anlamsız; menşei şüpheli bakırdan kısmak ise testerin bile bulamadığı «gezici» sorunlu ağ almanın garantili yoludur.",
           ] },
-          { h: "Kurulumda neler önemli", p: [
-            "Kanıtlanmış kategoride kablo ve bileşenler (Cat5e/Cat6), şirket büyümesi için yedek portlar, düzenli kablo yönetimi ve bakım için kablo defteri.",
-            "Yapısal kablolama ve yerel ağları anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve sonraki destekle.",
+          { h: "Profesyonel montajın işaretleri", p: [
+            "Kablo, bükülme yarıçaplarına uyularak tava ve kanallara döşenmiş; zayıf akım kuvvetli akımdan ayrılmış; her hat patch panele sonlandırılmış ve iki uçtan etiketlenmiştir. Kabinde organizerlar ve derli toplu demetler vardır — kablo «sakalı» değil. Tüm prizler tek standartta, büyüme için port payı konmuştur.",
+            "Ve en önemlisi belgeler: her hat kablo analizörüyle test edilmiş, sonuçlar rapora işlenmiş, müşteriye kablo defteri ve güzergâh şemaları teslim edilmiştir. Üç yıl sonra taşınmada veya tadilatta yeni yüklenici ağı her damarı çınlatarak değil, kâğıttan okur.",
           ] },
+          { h: "Nasıl sipariş edilir, maliyeti ne", p: [
+            "SKS şeffaf fiyatlanır: port sayısı, kablo kategorisi, güzergâh zorluğu, kabinler ve aktif ekipman. Ücretsiz keşfe gelir, kat planından hesaplar ve kalem kalem teklif veririz — arkasında ek ücret saklanan «nokta fiyatı» değil.",
+            "Taşkent ve tüm Özbekistan'da ofis, depo ve fabrika kurarız: yeni tesisler ince işte, çalışanlar iş durmadan, geçişler mesai dışında. Hatlara ve işçiliğe garanti; sonrasında patch kablo değişiminden nöbetçi yönetime kadar ağ desteği.",
+          ] },
+        ],
+        faq: [
+          { q: "Çalışma yeri başına kaç port konmalı?", a: "Standart, masa başına iki priz: bilgisayar ve telefon veya yedek. Artı yazıcılara, kameralara, erişim noktalarına ve toplantı odalarına ayrı portlar. %20–30 pay, ilk kadro büyümesinde kendini öder." },
+          { q: "Bitmiş tadilatlı ofiste kablolama yapılır mı?", a: "Evet: dekoratif kanallar, asma tavan üstü ve yükseltilmiş döşeme altı kullanılır. Temiz, kırımsız. İnşaat aşamasından tek fark, güzergâhlara biraz daha fazla zaman." },
+          { q: "Komodin switch'li ağın nesi kötü?", a: "Ev tipi switch kaskadı döngüler, dar boğazlar ve teşhissizlik demektir: bir yerde yavaşlık var ama nerede, görünmez. Düzgün omurgalı SKS kaskadları kaldırır ve ağ gözlemlenebilir olur." },
+          { q: "Hat testi nedir, bana neden lazım?", a: "Kablo analizörü her hattı doğrular: bağlantı şeması, uzunluk, zayıflama, karışma. Rapor, ağın beyan edilen hızı taşıdığının garantisi ve gelecekte yüklenicilerle her tartışmada dayanağınızdır." },
         ],
       },
       zh: {
-        title: "办公室综合布线（SCS）与局域网施工：步骤",
-        excerpt: "什么是综合布线系统，施工分哪些阶段，可靠的办公网络要注意什么。",
+        title: "综合布线施工：怎样建一张不掉链子的网络",
+        excerpt: "什么是综合布线，Cat5e和Cat6差在哪，测试和线缆台账为什么重要——以及怎么把专业施工和「吊顶上的绞接」区分开。",
         sections: [
-          { h: "什么是综合布线，为什么需要", p: [
-            "综合布线系统（SCS）是办公室统一的线缆基础：一套布线同时服务电脑、电话、Wi-Fi、视频监控等系统。规范的布线消除了线缆混乱，接入新设备也更简单。",
-            "这是IT基础设施的地基：整个企业网络的稳定性取决于布线质量。",
+          { h: "什么是综合布线，企业为什么需要", p: [
+            "综合布线是建筑统一的线缆基础设施：电脑、电话、摄像机、门禁和Wi-Fi都跑在上面。「综合（结构化）」意味着按标准建设：统一的面板、配线架、标识和文档。任何端口从工位到交换机一分钟就能追溯。",
+            "综合布线的反面是多年由不同人东拼西凑的「历史遗留」网络：吊顶上没有标记的线、床头柜上的交换机，谁也说不清哪根通哪里。它能用——直到不能用；而任何故障的排查都变成考古。",
           ] },
-          { h: "施工步骤", p: [
-            "设计与工位图、敷设线缆路由（桥架、线槽）、安装机柜和配线架、安装面板并接入交换机、每条链路标记与测试、移交竣工文档。",
-            "每个环节都要精细——返工线缆路由比一次做对更昂贵。",
+          { h: "线缆类别：Cat5e、Cat6还是更高", p: [
+            "Cat5e在一百米内跑千兆——绝大多数办公室、摄像机和电话足够。Cat6留有余量：短距离10千兆、抗干扰指标更严——适合服务器节点和「为增长而建」的新楼。Cat6A和光纤是楼层间、楼栋间骨干的量级。",
+            "规则很简单：到工位的水平布线按预算选Cat5e或Cat6，骨干走光纤。普通办公室为Cat7多花钱没有意义；而在来路不明的铜缆上省钱，则稳稳收获一张连测试仪都定位不了的「时好时坏」的网络。",
           ] },
-          { h: "施工要点", p: [
-            "使用可靠等级的线缆和配件（Cat5e/Cat6）、为公司发展预留端口、整洁的理线以及便于维护的线缆台账。",
-            "我们在塔什干及乌兹别克斯坦全境提供综合布线和局域网交钥匙施工——含质保和后续支持。",
+          { h: "专业施工的标志", p: [
+            "线缆按弯曲半径敷设在桥架和线槽里，弱电与强电分开走，每条链路端接到配线架并两端标记。机柜里是理线器和整齐的线束，而不是一把「胡子」。所有面板同一标准，端口为增长留有余量。",
+            "最重要的是文档：每条链路用测线仪测试过、结果汇成报告，客户拿到线缆台账和路由图。三年后部门搬迁或装修时，新承包商按图纸就能读懂网络，而不用逐芯寻线。",
           ] },
+          { h: "怎么下单，花多少钱", p: [
+            "综合布线报价透明：端口数、线缆类别、路由难度、机柜和有源设备构成。我们免费上门，按平面图核算，给出逐项预算——不是背后藏着加价的「每点单价」。",
+            "在塔什干及全乌兹别克斯坦施工办公室、仓库和工厂：新项目在装修阶段进场，在用场所不停业施工、割接安排在非工作时间。链路和施工带质保；之后提供网络运维——从换根跳线到值守管理。",
+          ] },
+        ],
+        faq: [
+          { q: "每个工位留几个端口？", a: "标准是每桌两个：电脑加电话，或留一个备用。打印机、摄像机、AP和会议室另配端口。20–30%的余量在第一次扩员时就回本。" },
+          { q: "已装修的办公室能布线吗？", a: "能：走装饰线槽、吊顶上方和架空地板下。干净利落、不开槽。与毛坯施工的唯一区别是路由上多花点时间。" },
+          { q: "「床头柜交换机」式网络差在哪？", a: "家用交换机层层级联意味着环路、瓶颈和无法诊断：明明卡顿，却看不到卡在哪。带像样核心的综合布线消灭级联，网络变得可观测。" },
+          { q: "链路测试是什么，对我有什么用？", a: "测线仪逐条验证：线序、长度、衰减、串扰。报告是网络达到标称速率的保证书，也是将来与任何承包商争议时的依据。" },
         ],
       },
     },
@@ -2521,93 +2621,143 @@ export const ARTICLES: Article[] = [
     related: ["telephony", "network"],
     loc: {
       ru: {
-        title: "IP-телефония для офиса: как выбрать АТС",
-        excerpt: "Чем IP-телефония лучше обычной, облачная или локальная АТС, и что можно настроить — интеграция с CRM, запись, очереди.",
+        title: "IP-телефония для офиса: зачем менять привычные линии",
+        excerpt: "Что меняется для клиентов и руководителя при переходе на IP-АТС: многоканальность, голосовое меню, запись и статистика звонков — и как выбрать между облачной и локальной станцией.",
         sections: [
-          { h: "Чем IP-телефония лучше обычной", p: [
-            "IP-телефония работает через интернет и заменяет устаревшие аналоговые линии: многоканальные номера, внутренние добавочные, голосовое меню, запись разговоров и статистика. Сотрудники звонят с телефона, компьютера и мобильного приложения.",
-            "Один номер обслуживает всю компанию, а расходы на связь между офисами и филиалами снижаются.",
+          { h: "Что слышит клиент", p: [
+            "Главное изменение для звонящего: «занято» исчезает. Многоканальный номер принимает все вызовы сразу, голосовое меню разводит их по отделам, а если менеджер не взял трубку — звонок уходит коллеге, на мобильный или в очередь с музыкой. Каждый пропущенный фиксируется с номером, и перезвонить можно всем.",
+            "Для компании это прямые деньги: пропущенный звонок в отдел продаж — это ушедший к конкуренту клиент. IP-АТС превращает поток звонков из чёрного ящика в управляемый процесс.",
+          ] },
+          { h: "Что видит руководитель", p: [
+            "Телефония становится измеримой. Статистика показывает, сколько звонков принято и упущено, кто сколько говорит и в какие часы пик нагрузки — смены и штат планируются по цифрам, а не по ощущениям. Запись разговоров снимает споры «кто что обещал» и становится инструментом обучения новичков.",
+            "Интеграция с CRM замыкает контур: при входящем звонке всплывает карточка клиента, разговор пишется в историю сделки, а пропущенные автоматически превращаются в задачи «перезвонить». Менеджер больше не «забывает» лида — система не даёт.",
           ] },
           { h: "Облачная или локальная АТС", p: [
-            "Облачная АТС не требует своего оборудования и быстро разворачивается — удобно для небольших команд. Локальная (например, на Asterisk) даёт полный контроль и подходит для крупных офисов и колл-центров.",
-            "Подбираем решение под размер компании и требования к надёжности и интеграциям.",
+            "Облачная станция запускается за день и не требует железа: помесячная плата, обслуживание на стороне провайдера. Это правильный старт для небольших команд и компаний без своего айтишника. Локальная АТС — в том числе на Asterisk — окупается на большом штате: никаких помесячных платежей, полный контроль, гибкие доработки под нестандартные сценарии и интеграции.",
+            "Гибрид тоже работает: локальная станция в офисе плюс облачные номера под рекламные кампании — каждый канал рекламы получает свой номер, и вы видите, откуда реально звонят.",
           ] },
-          { h: "Что можно настроить", p: [
-            "Сценарии приёма звонков, переадресацию, очереди, интеграцию с CRM (звонок открывает карточку клиента), запись разговоров и аналитику по звонкам.",
-            "Внедряем IP-телефонию под ключ в Ташкенте и по всему Узбекистану — с настройкой, обучением и поддержкой.",
+          { h: "Оборудование и внедрение", p: [
+            "Аппараты подбираются под роли: настольные IP-телефоны менеджерам, гарнитуры операторам колл-центра, DECT-трубки складу, программные телефоны на компьютерах — там, где физический аппарат не нужен. Сеть готовим правильно: телефония выделяется в свой VLAN с приоритетом, чтобы голос не «квакал» под нагрузкой.",
+            "Внедрение — от одного дня для облачной АТС до недели для колл-центра с интеграциями: переносим номера, настраиваем меню и очереди, обучаем сотрудников. Дальше сопровождаем по заявкам — изменения в сценариях не требуют «искать специалиста». Работаем по Ташкенту и всему Узбекистану.",
           ] },
+        ],
+        faq: [
+          { q: "Сохранится ли наш городской номер при переходе?", a: "Да, существующие номера переносятся или подключаются к IP-АТС через шлюз. Клиенты продолжают звонить на привычный номер — меняется только то, что происходит после гудка." },
+          { q: "Что будет со связью при отключении интернета?", a: "Настраивается переадресация на мобильные: звонки не теряются даже при полном обрыве канала. Для критичных офисов резервируем интернет вторым провайдером или LTE." },
+          { q: "Сколько стоит IP-телефония на офис из 10 человек?", a: "Облачный вариант — помесячная плата за номера и рабочие места плюс IP-телефоны или гарнитуры. Локальная АТС дороже на старте, но без абонентки. Считаем оба варианта бесплатно под ваш профиль звонков." },
+          { q: "Можно ли записывать разговоры и законно ли это?", a: "Запись — штатная функция АТС. Для законности сотрудники уведомляются под подпись, а клиенты — фразой в приветствии. Помогаем оформить это корректно." },
         ],
       },
       uz: {
-        title: "Ofis uchun IP-telefoniya: ATS ni qanday tanlash",
-        excerpt: "IP-telefoniya oddiy telefoniyadan nimasi bilan yaxshi, bulutli yoki lokal ATS, va nimani sozlash mumkin — CRM integratsiya, yozib olish, navbatlar.",
+        title: "Ofis uchun IP-telefoniya: odatiy liniyalarni nega almashtirish kerak",
+        excerpt: "IP-ATS ga o'tishda mijozlar va rahbar uchun nima o'zgaradi: ko'p kanallilik, ovozli menyu, qo'ng'iroqlar yozuvi va statistikasi — hamda bulutli va lokal stansiya orasida qanday tanlash.",
         sections: [
-          { h: "IP-telefoniya oddiy telefoniyadan nimasi bilan yaxshi", p: [
-            "IP-telefoniya internet orqali ishlaydi va eskirgan analog liniyalarni almashtiradi: ko'p kanalli raqamlar, ichki qo'shimchalar, ovozli menyu, suhbatlarni yozib olish va statistika. Xodimlar telefon, kompyuter va mobil ilovadan qo'ng'iroq qiladi.",
-            "Bitta raqam butun kompaniyaga xizmat qiladi, ofis va filiallar o'rtasidagi aloqa xarajatlari esa kamayadi.",
+          { h: "Mijoz nimani eshitadi", p: [
+            "Qo'ng'iroq qiluvchi uchun bosh o'zgarish: «band» yo'qoladi. Ko'p kanalli raqam barcha qo'ng'iroqlarni birdan qabul qiladi, ovozli menyu ularni bo'limlarga ajratadi, menejer go'shakni olmasa — qo'ng'iroq hamkasbga, mobil raqamga yoki musiqali navbatga ketadi. Har o'tkazib yuborilgan raqam bilan qayd etiladi, hammaga qayta qo'ng'iroq qilish mumkin.",
+            "Kompaniya uchun bu to'g'ridan-to'g'ri pul: savdo bo'limiga o'tkazib yuborilgan qo'ng'iroq — raqobatchiga ketgan mijoz. IP-ATS qo'ng'iroqlar oqimini qora qutidan boshqariladigan jarayonga aylantiradi.",
+          ] },
+          { h: "Rahbar nimani ko'radi", p: [
+            "Telefoniya o'lchanadigan bo'ladi. Statistika nechta qo'ng'iroq qabul qilingani va yo'qotilgani, kim qancha gaplashishi va qaysi soatlar eng band ekanini ko'rsatadi — smena va shtat his bilan emas, raqamlar bilan rejalashtiriladi. Suhbatlar yozuvi «kim nima va'da bergan» bahslarini yopadi va yangilarni o'qitish quroliga aylanadi.",
+            "CRM bilan integratsiya konturni yopadi: kiruvchi qo'ng'iroqda mijoz kartochkasi ochiladi, suhbat bitim tarixiga yoziladi, o'tkazib yuborilganlar avtomatik «qayta qo'ng'iroq qilish» vazifasiga aylanadi. Menejer endi lidni «unutmaydi» — tizim qo'ymaydi.",
           ] },
           { h: "Bulutli yoki lokal ATS", p: [
-            "Bulutli ATS o'z uskunasini talab qilmaydi va tez o'rnatiladi — kichik jamoalar uchun qulay. Lokal (masalan, Asterisk) to'liq nazorat beradi va yirik ofis hamda kol-markazlar uchun mos.",
-            "Yechimni kompaniya o'lchami va ishonchlilik hamda integratsiya talablariga qarab tanlaymiz.",
+            "Bulutli stansiya bir kunda ishga tushadi va temir talab qilmaydi: oylik to'lov, xizmat provayder tomonida. Bu kichik jamoalar va o'z aytishnikisiz kompaniyalar uchun to'g'ri start. Lokal ATS — jumladan Asterisk da — katta shtatda o'zini oqlaydi: oylik to'lovlar yo'q, to'liq nazorat, nostandart stsenariylar va integratsiyalarga moslashuvchan qayta ishlash.",
+            "Gibrid ham ishlaydi: ofisda lokal stansiya plyus reklama kampaniyalariga bulutli raqamlar — har reklama kanali o'z raqamini oladi va qayerdan real qo'ng'iroq qilishayotganini ko'rasiz.",
           ] },
-          { h: "Nimani sozlash mumkin", p: [
-            "Qo'ng'iroqlarni qabul qilish ssenariylari, yo'naltirish, navbatlar, CRM bilan integratsiya (qo'ng'iroq mijoz kartasini ochadi), suhbatlarni yozib olish va qo'ng'iroqlar tahlili.",
-            "IP-telefoniyani kalit topshirish asosida joriy etamiz — Toshkentda va butun O'zbekiston bo'ylab, sozlash, o'qitish va qo'llab-quvvatlash bilan.",
+          { h: "Uskuna va joriy etish", p: [
+            "Apparatlar rollarga tanlanadi: menejerlarga stol IP-telefonlari, call-markaz operatorlariga garnituralar, omborga DECT-go'shaklar, jismoniy apparat kerak bo'lmagan joyga kompyuterdagi dasturiy telefonlar. Tarmoqni to'g'ri tayyorlaymiz: telefoniya ustuvorlikli o'z VLAN iga ajratiladi, ovoz yuk ostida «vaqillamasligi» uchun.",
+            "Joriy etish — bulutli ATS ga bir kundan integratsiyali call-markazga bir haftagacha: raqamlarni ko'chiramiz, menyu va navbatlarni sozlaymiz, xodimlarni o'rgatamiz. Keyin arizalar bo'yicha kuzatib boramiz — stsenariy o'zgarishlari «mutaxassis qidirish»ni talab qilmaydi. Toshkent va butun O'zbekiston bo'ylab ishlaymiz.",
           ] },
+        ],
+        faq: [
+          { q: "O'tishda shahar raqamimiz saqlanadimi?", a: "Ha, mavjud raqamlar ko'chiriladi yoki shlyuz orqali IP-ATS ga ulanadi. Mijozlar odatiy raqamga qo'ng'iroq qilishda davom etadi — faqat gudokdan keyin nima bo'lishi o'zgaradi." },
+          { q: "Internet uzilsa aloqa nima bo'ladi?", a: "Mobil raqamlarga yo'naltirish sozlanadi: kanal to'liq uzilganda ham qo'ng'iroqlar yo'qolmaydi. Kritik ofislarga internetni ikkinchi provayder yoki LTE bilan zaxiralaymiz." },
+          { q: "10 kishilik ofisga IP-telefoniya qancha turadi?", a: "Bulutli variant — raqam va ish o'rinlari uchun oylik to'lov plyus IP-telefon yoki garnituralar. Lokal ATS startda qimmatroq, lekin abonent to'lovisiz. Qo'ng'iroqlar profilingizga ikkala variantni bepul hisoblaymiz." },
+          { q: "Suhbatlarni yozish mumkinmi va bu qonuniymi?", a: "Yozuv — ATS ning shtat funksiyasi. Qonuniylik uchun xodimlar imzo bilan xabardor qilinadi, mijozlar — salomlashuvdagi ibora bilan. Buni to'g'ri rasmiylashtirishga yordam beramiz." },
         ],
       },
       en: {
-        title: "IP Telephony for the Office: How to Choose a PBX",
-        excerpt: "Why IP telephony beats legacy lines, cloud vs on-premise PBX, and what can be configured — CRM integration, recording, queues.",
+        title: "Office IP Telephony: Why Replace the Familiar Lines",
+        excerpt: "What changes for clients and the owner with an IP PBX: multi-channel numbers, a voice menu, call recording and statistics — and how to choose between a cloud and an on-premise system.",
         sections: [
-          { h: "Why IP telephony beats legacy lines", p: [
-            "IP telephony works over the internet and replaces outdated analogue lines: multi-channel numbers, internal extensions, voice menus, call recording and statistics. Staff make calls from desk phones, computers and a mobile app.",
-            "One number serves the whole company, and call costs between offices and branches drop.",
+          { h: "What the client hears", p: [
+            "The main change for the caller: \"busy\" disappears. A multi-channel number takes all calls at once, the voice menu routes them to departments, and if a manager does not pick up, the call goes to a colleague, a mobile, or a queue with music. Every missed call is logged with the number — everyone gets called back.",
+            "For the company this is direct money: a missed call to sales is a client gone to a competitor. An IP PBX turns the call flow from a black box into a managed process.",
+          ] },
+          { h: "What the owner sees", p: [
+            "Telephony becomes measurable. Statistics show how many calls were taken and lost, who talks how much, and which hours peak — shifts and headcount are planned from numbers, not from gut feeling. Call recording ends the \"who promised what\" disputes and doubles as a training tool for newcomers.",
+            "CRM integration closes the loop: an incoming call pops the client card, the conversation lands in the deal history, and missed calls become \"call back\" tasks automatically. A manager can no longer \"forget\" a lead — the system does not let them.",
           ] },
           { h: "Cloud or on-premise PBX", p: [
-            "A cloud PBX needs no hardware of your own and deploys quickly — convenient for small teams. An on-premise one (e.g. on Asterisk) gives full control and suits large offices and call centres.",
-            "We match the solution to company size and requirements for reliability and integrations.",
+            "A cloud system launches in a day and needs no hardware: a monthly fee, with maintenance on the provider's side. The right start for small teams and companies without their own IT person. An on-premise PBX — Asterisk included — pays off at larger headcounts: no monthly fees, full control, flexible customisation for non-standard scenarios and integrations.",
+            "Hybrid works too: an on-premise system in the office plus cloud numbers for advertising campaigns — each ad channel gets its own number, and you see where calls really come from.",
           ] },
-          { h: "What can be configured", p: [
-            "Call routing scenarios, forwarding, queues, CRM integration (a call opens the client card), call recording and call analytics.",
-            "We deploy IP telephony turnkey in Tashkent and across Uzbekistan — with setup, training and support.",
+          { h: "Hardware and rollout", p: [
+            "Devices follow roles: desk IP phones for managers, headsets for call center operators, DECT handsets for the warehouse, softphones on computers where a physical device is unnecessary. The network is prepared properly: telephony gets its own prioritised VLAN so the voice does not croak under load.",
+            "Rollout takes from one day for a cloud PBX to a week for a call center with integrations: we port the numbers, configure menus and queues, and train the staff. Then we support by request — scenario changes do not require \"finding a specialist\". We work across Tashkent and all of Uzbekistan.",
           ] },
+        ],
+        faq: [
+          { q: "Do we keep our city number after the switch?", a: "Yes — existing numbers are ported or connected to the IP PBX through a gateway. Clients keep calling the familiar number; only what happens after the ring changes." },
+          { q: "What happens to calls if the internet goes down?", a: "Forwarding to mobiles is configured: calls are not lost even in a full outage. For critical offices we add a second ISP or an LTE backup." },
+          { q: "How much does IP telephony cost for a 10-person office?", a: "The cloud option is a monthly fee for numbers and seats plus IP phones or headsets. An on-premise PBX costs more upfront but has no subscription. We quote both options for free against your call profile." },
+          { q: "Can calls be recorded, and is it legal?", a: "Recording is a standard PBX feature. For legality, staff are notified in writing and clients hear a notice in the greeting. We help set this up correctly." },
         ],
       },
       tr: {
-        title: "Ofis İçin IP Telefon: Santral Nasıl Seçilir",
-        excerpt: "IP telefon klasik hatlardan neden iyidir, bulut mu yerel santral mi, neler yapılandırılabilir — CRM entegrasyonu, kayıt, kuyruklar.",
+        title: "Ofis için IP Telefon: Alışıldık Hatları Neden Değiştirmeli",
+        excerpt: "IP santrale geçişte müşteriler ve patron için ne değişir: çok kanallı numaralar, sesli menü, kayıt ve çağrı istatistiği — ve bulut ile yerinde santral arasında nasıl seçim yapılır.",
         sections: [
-          { h: "IP telefon neden daha iyi", p: [
-            "IP telefon internet üzerinden çalışır ve eski analog hatların yerini alır: çok kanallı numaralar, dahili hatlar, sesli menü, görüşme kaydı ve istatistik. Çalışanlar masa telefonundan, bilgisayardan ve mobil uygulamadan arar.",
-            "Tek numara tüm şirkete hizmet eder; ofisler ve şubeler arası görüşme maliyeti düşer.",
+          { h: "Müşteri ne duyar", p: [
+            "Arayan için ana değişiklik: «meşgul» kaybolur. Çok kanallı numara tüm aramaları aynı anda alır, sesli menü bölümlere dağıtır; yönetici açmazsa arama meslektaşa, cebe veya müzikli kuyruğa gider. Her cevapsız, numarasıyla kaydedilir — herkes geri aranır.",
+            "Şirket için bu doğrudan paradır: satışa gelen cevapsız arama, rakibe giden müşteridir. IP santral çağrı akışını kara kutudan yönetilen sürece çevirir.",
           ] },
-          { h: "Bulut mu yerel santral mi", p: [
-            "Bulut santral kendi donanımınızı gerektirmez ve hızla devreye girer — küçük ekipler için pratiktir. Yerel santral (örneğin Asterisk) tam kontrol sağlar; büyük ofisler ve çağrı merkezleri için uygundur.",
-            "Çözümü şirket büyüklüğüne, güvenilirlik ve entegrasyon gereksinimlerine göre seçiyoruz.",
+          { h: "Patron ne görür", p: [
+            "Telefon ölçülebilir olur. İstatistik kaç aramanın alındığını ve kaçırıldığını, kimin ne kadar konuştuğunu, yükün hangi saatte zirve yaptığını gösterir — vardiya ve kadro hisle değil rakamla planlanır. Kayıt, «kim ne söz verdi» tartışmalarını bitirir ve yeni başlayanların eğitim aracına dönüşür.",
+            "CRM entegrasyonu döngüyü kapatır: gelen aramada müşteri kartı açılır, görüşme fırsat geçmişine yazılır, cevapsızlar otomatik «geri ara» görevine dönüşür. Yönetici lead'i artık «unutamaz» — sistem izin vermez.",
           ] },
-          { h: "Neler yapılandırılabilir", p: [
-            "Çağrı karşılama senaryoları, yönlendirme, kuyruklar, CRM entegrasyonu (arama müşteri kartını açar), görüşme kaydı ve çağrı analitiği.",
-            "IP telefonu anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, kurulum, eğitim ve destekle.",
+          { h: "Bulut mu yerinde santral mi", p: [
+            "Bulut santral bir günde açılır, donanım istemez: aylık ücret, bakım sağlayıcıda. Küçük ekipler ve BT'cisi olmayan şirketler için doğru başlangıç. Yerinde santral — Asterisk dahil — kalabalık kadroda amorti eder: aylık ödeme yok, tam kontrol, standart dışı senaryolara ve entegrasyonlara esnek uyarlama.",
+            "Hibrit de çalışır: ofiste yerel santral artı reklam kampanyalarına bulut numaraları — her kanal kendi numarasını alır ve aramaların gerçekte nereden geldiğini görürsünüz.",
           ] },
+          { h: "Donanım ve kurulum", p: [
+            "Cihazlar role göre seçilir: yöneticilere masa IP telefonları, çağrı merkezi operatörlerine kulaklıklar, depoya DECT el cihazları, fiziksel cihaz gerekmeyen yere bilgisayarda softphone. Ağ doğru hazırlanır: telefon, öncelikli kendi VLAN'ına alınır — ses yük altında hırıldamasın.",
+            "Kurulum bulut santral için bir günden, entegrasyonlu çağrı merkezi için bir haftaya: numaraları taşır, menü ve kuyrukları kurar, personeli eğitiriz. Sonrası talep üzerine destek — senaryo değişikliği «uzman aramayı» gerektirmez. Taşkent ve tüm Özbekistan'da çalışıyoruz.",
+          ] },
+        ],
+        faq: [
+          { q: "Geçişte şehir numaramız kalır mı?", a: "Evet — mevcut numaralar taşınır veya ağ geçidiyle IP santrale bağlanır. Müşteriler bildikleri numarayı aramaya devam eder; yalnız zil sesinden sonrası değişir." },
+          { q: "İnternet kesilirse aramalara ne olur?", a: "Cebe yönlendirme kurulur: tam kesintide bile arama kaybolmaz. Kritik ofislere ikinci sağlayıcı veya LTE yedeği ekleriz." },
+          { q: "10 kişilik ofise IP telefon ne kadar tutar?", a: "Bulut seçeneği numara ve koltuk başına aylık ücret artı IP telefon veya kulaklıklar. Yerinde santral başlangıçta pahalı ama aboneliksizdir. Arama profilinize göre ikisini de ücretsiz hesaplarız." },
+          { q: "Görüşmeler kaydedilebilir mi, yasal mı?", a: "Kayıt santralin standart özelliğidir. Yasallık için personel imzayla bilgilendirilir, müşteri karşılamada duyuru duyar. Bunu doğru kurmaya yardım ederiz." },
         ],
       },
       zh: {
-        title: "办公室IP电话：如何选择电话交换机（PBX）",
-        excerpt: "IP电话比传统电话强在哪里、云端还是本地PBX、可以配置什么——CRM集成、录音、排队。",
+        title: "办公室IP电话：为什么要换掉习惯的线路",
+        excerpt: "换成IP电话系统后，客户和老板各会感受到什么：多通道号码、语音菜单、录音和通话报表——以及云端和本地部署怎么选。",
         sections: [
-          { h: "IP电话强在哪里", p: [
-            "IP电话通过互联网运行，取代过时的模拟线路：多通道号码、内部分机、语音菜单、通话录音和统计。员工可用座机、电脑和手机App拨打电话。",
-            "一个号码服务全公司，办公室和分支机构之间的通话成本大幅下降。",
+          { h: "客户听到什么", p: [
+            "对打电话的人，最大变化是：不再占线。多通道号码同时接起所有来电，语音菜单分流到各部门；经理没接，来电转给同事、转到手机或进入音乐等待队列。每个未接来电连号码入档——每一个都能回拨。",
+            "对公司这是真金白银：打给销售部的未接来电，就是流向对手的客户。IP电话系统把来电流从黑箱变成可管理的流程。",
           ] },
-          { h: "云端还是本地PBX", p: [
-            "云PBX无需自购设备，部署迅速——适合小团队。本地PBX（如基于Asterisk）提供完全控制，适合大型办公室和呼叫中心。",
-            "我们根据公司规模及对可靠性和集成的要求选择方案。",
+          { h: "老板看到什么", p: [
+            "电话变得可度量。报表显示接起和漏接的数量、谁通话多久、哪些时段最忙——排班和编制按数字规划，而不是凭感觉。通话录音终结「谁承诺过什么」的争论，还是新人培训的现成教材。",
+            "与CRM集成后闭环形成：来电弹出客户卡片，通话写入成交历史，未接来电自动生成「回拨」任务。经理再也「忘不掉」线索——系统不允许。",
           ] },
-          { h: "可以配置什么", p: [
-            "来电处理场景、转接、排队、CRM集成（来电自动弹出客户卡片）、通话录音和通话分析。",
-            "我们在塔什干及乌兹别克斯坦全境提供IP电话交钥匙部署——含配置、培训和支持。",
+          { h: "云端还是本地部署", p: [
+            "云端系统一天上线、无需硬件：按月付费，维护在服务商那边。这是小团队和没有专职IT的公司的正确起点。本地系统——包括Asterisk——在人数多时更划算：没有月费、完全掌控、可为非标场景和集成灵活定制。",
+            "混合方案同样可行：办公室放本地系统，广告投放用云端号码——每个广告渠道一个专属号码，谁在真正带来电话一目了然。",
           ] },
+          { h: "设备与实施", p: [
+            "话机按岗位配：经理用桌面IP话机，呼叫中心坐席用耳麦，仓库用DECT无绳手柄，不需要实体话机的岗位用电脑软电话。网络也要备好：语音单独划入高优先级VLAN，高负载下声音不卡顿。",
+            "实施周期：云端一天，带集成的呼叫中心一周：迁移号码、配置菜单和队列、培训员工。之后按需支持——改个场景不必「另请高明」。服务覆盖塔什干及全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "换系统后城市号码还能保留吗？", a: "能——现有号码可携转或通过网关接入IP系统。客户照旧拨打熟悉的号码；变的只是铃声之后发生的事。" },
+          { q: "断网了电话怎么办？", a: "预先配置转接到手机：即使线路全断，来电也不会丢。关键办公室再加第二家运营商或LTE备份。" },
+          { q: "10人办公室的IP电话要多少钱？", a: "云端方案是号码和坐席的月费，加上IP话机或耳麦。本地系统前期投入高但没有月费。按您的通话画像免费核算两种方案。" },
+          { q: "能录音吗，合法吗？", a: "录音是系统的标准功能。合规做法：员工签署知情确认，客户在欢迎语中听到提示。我们协助正确落地。" },
         ],
       },
     },
@@ -2618,93 +2768,143 @@ export const ARTICLES: Article[] = [
     related: ["server", "network", "virtualization"],
     loc: {
       ru: {
-        title: "Серверная комната под ключ: что нужно",
-        excerpt: "Что входит в серверную, почему питание и охлаждение — главное, и как спроектировать серверную под задачу с запасом на рост.",
+        title: "Серверная комната: требования, ошибки и как сделать правильно",
+        excerpt: "Каким должно быть помещение под серверную, как считать питание и охлаждение, зачем газовое пожаротушение и СКУД — и какие ошибки при обустройстве всплывают через полгода простоями.",
         sections: [
-          { h: "Что входит в серверную", p: [
-            "Серверная комната — это сердце IT-инфраструктуры. В неё входят серверные шкафы и стойки, структурированная кабельная система, бесперебойное питание (ИБП) и при необходимости дизель-генератор, кондиционирование, система газового пожаротушения и контроль доступа.",
-            "Всё это должно работать как единый комплекс — от этого зависит бесперебойность бизнеса.",
+          { h: "Помещение: где серверной не место", p: [
+            "Серверной не место под трубами водопровода и отопления, рядом с мокрыми зонами и на солнечной стороне без охлаждения. Классика жанра — сервер в бухгалтерии под полкой с архивом или в кладовке уборщицы: работает до первой протечки или первого лета. Правильное помещение — без окон или с заложенными окнами, с запасом по нагрузке на перекрытие и местом для обслуживания стоек спереди и сзади.",
+            "Минимальная площадь считается от числа шкафов: даже одному шкафу нужно пространство открыть двери на 120° и стоять техником с обеих сторон. Теснота — это невозможность обслуживания, а значит, простои там, где хватило бы получаса работы.",
           ] },
-          { h: "Питание и охлаждение — главное", p: [
-            "Серверы боятся перегрева и перебоев питания. ИБП держит нагрузку при отключении света до запуска генератора, а прецизионный кондиционер поддерживает стабильную температуру и влажность.",
-            "На этом экономить нельзя — простой сервера и потеря данных обходятся дороже, чем правильная инженерия.",
+          { h: "Питание: сколько минут вы переживёте", p: [
+            "Электрика серверной начинается с отдельного ввода и щита: серверы не должны сидеть на одной линии с чайником и кондиционерами офиса. ИБП подбирается по мощности и времени автономии, и правильная постановка вопроса — «сколько минут нам нужно»: типовой офисной серверной хватает 15–30 минут на корректное завершение работы, критичным сервисам нужны часы и дизель-генератор.",
+            "Аккумуляторы ИБП живут 3–5 лет и умирают тихо: узнают об этом в момент аварии, когда резерв держит секунды вместо минут. Замена батарей по регламенту — дешёвая страховка от самого обидного вида простоя.",
           ] },
-          { h: "Проектирование под задачу", p: [
-            "Закладываем запас по мощности и месту под рост, резервирование критичных узлов, мониторинг микроклимата и удалённый контроль состояния.",
-            "Проектируем и строим серверные и ЦОД под ключ в Ташкенте и по всему Узбекистану — с документацией и сервисным сопровождением.",
+          { h: "Охлаждение и пожаротушение", p: [
+            "Стойка серверов греет как несколько обогревателей — круглый год, включая зиму. Бытовой настенный кондиционер на такую работу не рассчитан: он не умеет работать на охлаждение в мороз и не имеет ротации. Ставят пару инверторных или прецизионных кондиционеров с автоматической ротацией и резервом, а температуру и протечки выводят в мониторинг с уведомлениями на телефон.",
+            "Тушить серверную водой или порошком — значит доломать то, что не сгорело. Правильный ответ — газовое пожаротушение: состав вытесняет кислород и не оставляет следов на оборудовании. Дополняется ранним обнаружением дыма и автоматическим отключением вентиляции.",
           ] },
+          { h: "Доступ, порядок и документация", p: [
+            "Дверь серверной закрывается СКУД с журналом: «кто и когда заходил к стойкам» — вопрос, на который у ИТ-директора должен быть ответ. Внутри — порядок, который экономит часы при каждой аварии: организация кабеля, маркировка линий, кабельные журналы, схема размещения.",
+            "Мы проектируем и строим серверные под ключ: помещение, электрика с ИБП, охлаждение, газовое пожаротушение, СКУД и мониторинг — и модернизируем действующие без остановки сервисов. Обследование бесплатно; работаем по Ташкенту и всему Узбекистану с гарантией и сервисным сопровождением.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли обойтись шкафом вместо отдельной комнаты?", a: "Для малого офиса — да: серверный шкаф с ИБП и вентиляцией в общем помещении. Граница проходит по теплу и шуму: от двух-трёх серверов и выше нужна отдельная комната с нормальным охлаждением." },
+          { q: "Какая температура должна быть в серверной?", a: "Рабочий диапазон — 20–25 °C при стабильной влажности. Важнее абсолютного значения стабильность: качели температуры убивают диски быстрее, чем постоянные 27." },
+          { q: "Почему нельзя поставить обычный кондиционер?", a: "Бытовой сплит не рассчитан на круглосуточную работу круглый год и отказывается охлаждать в мороз. Для серверной нужны модели с зимним комплектом и ротацией — иначе первое января система встретит перегревом." },
+          { q: "Что входит в мониторинг серверной?", a: "Минимум: температура в горячей и холодной зонах, влажность, протечка, состояние ИБП и открытие двери. Уведомления — на телефон дежурного. Это настраивается за день и снимает «узнали о проблеме от пользователей»." },
         ],
       },
       uz: {
-        title: "Server xonasi kalit topshirish asosida: nima kerak",
-        excerpt: "Server xonasiga nima kiradi, nima uchun quvvat va sovitish eng muhim, va o'sish zaxirasi bilan server xonasini qanday loyihalash.",
+        title: "Server xonasi: talablar, xatolar va to'g'ri qilish yo'li",
+        excerpt: "Server xonasi uchun xona qanday bo'lishi kerak, quvvat va sovutishni qanday hisoblash, gazli o't o'chirish va SKUD nega kerak — va jihozlashdagi qaysi xatolar yarim yildan keyin to'xtashlar bilan chiqadi.",
         sections: [
-          { h: "Server xonasiga nima kiradi", p: [
-            "Server xonasi — IT-infratuzilmaning yuragi. Unga server shkaflari va stoykalar, strukturali kabel tizimi, uzluksiz quvvat (UPS) va zarur bo'lganda dizel-generator, konditsionerlash, gazli yong'in o'chirish tizimi va kirish nazorati kiradi.",
-            "Bularning barchasi yagona majmua sifatida ishlashi kerak — biznesning uzluksizligi shunga bog'liq.",
+          { h: "Xona: server xonasiga qayer joy emas", p: [
+            "Server xonasiga vodoprovod va isitish quvurlari ostida, nam zonalar yonida va sovutishsiz quyosh tomonda joy yo'q. Janr klassikasi — buxgalteriyada arxiv tokchasi ostidagi yoki farrosh omborchasidagi server: birinchi oqish yoki birinchi yozgacha ishlaydi. To'g'ri xona — derazasiz yoki derazalari yopilgan, yopma yukiga zaxirali va stoykalarni oldi-orqasidan xizmatlash joyli.",
+            "Minimal maydon shkaflar sonidan hisoblanadi: bitta shkafga ham eshiklarni 120° ochish va texnik ikki tomondan turishi uchun joy kerak. Torlik — xizmatlash imkonsizligi, demak yarim soat ish yetadigan joyda to'xtashlar.",
           ] },
-          { h: "Quvvat va sovitish — eng muhimi", p: [
-            "Serverlar qizib ketish va quvvat uzilishidan qo'rqadi. UPS svet o'chganda generator ishga tushguncha yuklamani ushlab turadi, aniq konditsioner esa barqaror harorat va namlikni saqlaydi.",
-            "Bunga tejash mumkin emas — server to'xtashi va ma'lumot yo'qolishi to'g'ri muhandislikdan qimmatroq.",
+          { h: "Quvvat: necha daqiqa yashaysiz", p: [
+            "Server xonasi elektri alohida kirish va shchitdan boshlanadi: serverlar choynak va ofis konditsionerlari bilan bir liniyada o'tirmasligi kerak. UPS quvvat va avtonomiya vaqtiga tanlanadi, savolning to'g'ri qo'yilishi — «bizga necha daqiqa kerak»: tipik ofis server xonasiga ishni to'g'ri yakunlashga 15–30 daqiqa yetadi, kritik servislarga soatlar va dizel-generator kerak.",
+            "UPS akkumulyatorlari 3–5 yil yashaydi va jim o'ladi: bu haqda avariya paytida, zaxira daqiqalar o'rniga soniyalar ushlaganda bilishadi. Batareyalarni reglament bo'yicha almashtirish — eng alamli to'xtash turidan arzon sug'urta.",
           ] },
-          { h: "Vazifaga qarab loyihalash", p: [
-            "O'sish uchun quvvat va joy zaxirasi, muhim tugunlarni zaxiralash, mikroiqlim monitoringi va holatni masofaviy nazorat qilishni ko'zda tutamiz.",
-            "Server xonalari va ma'lumot markazlarini kalit topshirish asosida loyihalaymiz va quramiz — Toshkentda va butun O'zbekiston bo'ylab, hujjatlar va servis bilan.",
+          { h: "Sovutish va o't o'chirish", p: [
+            "Server stoykasi bir nechta isitgichdek isitadi — yil bo'yi, qish bilan birga. Maishiy devor konditsioneri bunday ishga mo'ljallanmagan: sovuqda sovutishni bilmaydi va rotatsiyasi yo'q. Avtomatik rotatsiya va zaxirali bir juft invertor yoki pretsizion konditsioner qo'yiladi, harorat va oqishlar telefonga xabarli monitoringga chiqariladi.",
+            "Server xonasini suv yoki kukun bilan o'chirish — yonmaganini ham sindirish degani. To'g'ri javob — gazli o't o'chirish: tarkib kislorodni siqib chiqaradi va uskunada iz qoldirmaydi. Tutunni erta aniqlash va ventilyatsiyani avtomatik o'chirish bilan to'ldiriladi.",
           ] },
+          { h: "Kirish, tartib va hujjatlar", p: [
+            "Server xonasi eshigi jurnalli SKUD bilan yopiladi: «stoykalarga kim va qachon kirgan» — IT-direktorda javobi bo'lishi kerak bo'lgan savol. Ichkarida — har avariyada soatlarni tejaydigan tartib: kabel tashkiloti, liniyalar markirovkasi, kabel jurnallari, joylashuv sxemasi.",
+            "Server xonalarini kalit topshirish sharti bilan loyihalaymiz va quramiz: xona, UPS li elektrika, sovutish, gazli o't o'chirish, SKUD va monitoring — ishlayotganlarni servislarni to'xtatmasdan modernizatsiya qilamiz. Tekshiruv bepul; Toshkent va butun O'zbekiston bo'ylab kafolat va servis kuzatuvi bilan ishlaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Alohida xona o'rniga shkaf bilan cheklansa bo'ladimi?", a: "Kichik ofisga — ha: umumiy xonada UPS va ventilyatsiyali server shkafi. Chegara issiqlik va shovqindan o'tadi: ikki-uch serverdan boshlab normal sovutishli alohida xona kerak." },
+          { q: "Server xonasida qanday harorat bo'lishi kerak?", a: "Ish diapazoni — barqaror namlikda 20–25 °C. Mutlaq qiymatdan barqarorlik muhimroq: harorat tebranishlari disklarni doimiy 27 dan tezroq o'ldiradi." },
+          { q: "Nega oddiy konditsioner qo'yib bo'lmaydi?", a: "Maishiy split yil bo'yi kecha-kunduz ishlashga mo'ljallanmagan va sovuqda sovutishdan bosh tortadi. Server xonasiga qishki to'plam va rotatsiyali modellar kerak — aks holda birinchi yanvarni tizim qizib kutib oladi." },
+          { q: "Server xonasi monitoringiga nima kiradi?", a: "Minimum: issiq va sovuq zonalar harorati, namlik, oqish, UPS holati va eshik ochilishi. Xabarlar — navbatchi telefoniga. Bu bir kunda sozlanadi va «muammoni foydalanuvchilardan bildik»ni olib tashlaydi." },
         ],
       },
       en: {
-        title: "Turnkey Server Room: What You Need",
-        excerpt: "What goes into a server room, why power and cooling come first, and how to design a server room with headroom for growth.",
+        title: "The Server Room: Requirements, Mistakes, and Doing It Right",
+        excerpt: "What the room itself must be, how to size power and cooling, why gas suppression and access control matter — and which setup mistakes surface six months later as downtime.",
         sections: [
-          { h: "What goes into a server room", p: [
-            "The server room is the heart of the IT infrastructure. It includes server cabinets and racks, structured cabling, uninterruptible power (UPS) and, where needed, a diesel generator, air conditioning, gas fire suppression and access control.",
-            "All of it must work as a single complex — business continuity depends on it.",
+          { h: "The room: where a server room does not belong", p: [
+            "A server room does not belong under water or heating pipes, next to wet areas, or on the sunny side without cooling. The classic of the genre is a server in the accounting office under an archive shelf, or in the cleaner's closet: it works until the first leak or the first summer. The right room has no windows (or bricked-up ones), floor load margin, and service space in front of and behind the racks.",
+            "The minimum area follows the cabinet count: even one cabinet needs its doors to open 120° and a technician to stand on both sides. Crampedness means no serviceability — and that means downtime where half an hour of work would have sufficed.",
           ] },
-          { h: "Power and cooling come first", p: [
-            "Servers fear overheating and power interruptions. A UPS carries the load during an outage until the generator starts, while a precision air conditioner keeps temperature and humidity stable.",
-            "This is not where to economise — server downtime and data loss cost more than proper engineering.",
+          { h: "Power: how many minutes will you survive", p: [
+            "Server room electrics start with a dedicated feed and panel: servers must not share a line with the kettle and the office air conditioners. The UPS is sized by capacity and runtime, and the right question is \"how many minutes do we need\": a typical office server room needs 15–30 minutes for a clean shutdown, while critical services need hours and a diesel generator.",
+            "UPS batteries live 3–5 years and die quietly: you find out during an outage, when the backup holds seconds instead of minutes. Scheduled battery replacement is cheap insurance against the most annoying kind of downtime.",
           ] },
-          { h: "Designing for the task", p: [
-            "We build in power and space headroom for growth, redundancy of critical nodes, microclimate monitoring and remote status control.",
-            "We design and build server rooms and data centres turnkey in Tashkent and across Uzbekistan — with documentation and service support.",
+          { h: "Cooling and fire suppression", p: [
+            "A rack of servers heats like several space heaters — all year round, winter included. A household wall split is not built for this: it cannot cool in frost and has no rotation. The answer is a pair of inverter or precision units with automatic rotation and standby, with temperature and leak sensors wired into monitoring with phone alerts.",
+            "Extinguishing a server room with water or powder means finishing off what did not burn. The right answer is gas suppression: the agent displaces oxygen and leaves no trace on the equipment. It is complemented by early smoke detection and automatic ventilation shutdown.",
           ] },
+          { h: "Access, order and documentation", p: [
+            "The server room door is closed with logged access control: \"who entered the racks and when\" is a question the IT director must be able to answer. Inside — the order that saves hours in every incident: cable management, line labeling, cable journals, a layout diagram.",
+            "We design and build server rooms turnkey: the room, electrics with UPS, cooling, gas suppression, access control and monitoring — and modernise live rooms without stopping services. The survey is free; we work across Tashkent and all of Uzbekistan with a warranty and service support.",
+          ] },
+        ],
+        faq: [
+          { q: "Can a cabinet replace a separate room?", a: "For a small office — yes: a server cabinet with a UPS and ventilation in a shared room. The boundary is heat and noise: from two or three servers up, you need a separate room with proper cooling." },
+          { q: "What temperature should a server room keep?", a: "The working range is 20–25 °C with stable humidity. Stability matters more than the absolute value: temperature swings kill disks faster than a constant 27 does." },
+          { q: "Why not install an ordinary air conditioner?", a: "A household split is not made for 24/7 year-round duty and refuses to cool in frost. A server room needs units with a winter kit and rotation — otherwise the system greets January 1st with overheating." },
+          { q: "What goes into server room monitoring?", a: "The minimum: temperature in the hot and cold zones, humidity, leaks, UPS status and door opening. Alerts go to the duty engineer's phone. It is set up in a day and ends \"we learned about the problem from the users\"." },
         ],
       },
       tr: {
-        title: "Anahtar Teslim Sunucu Odası: Neler Gerekir",
-        excerpt: "Sunucu odasına neler girer, güç ve soğutma neden en önemlisi ve büyüme payıyla sunucu odası nasıl projelendirilir.",
+        title: "Sistem Odası: Gereksinimler, Hatalar ve Doğrusu",
+        excerpt: "Sistem odası için mekân nasıl olmalı, güç ve soğutma nasıl hesaplanır, gazlı söndürme ve geçiş kontrolü neden önemli — ve kurulumdaki hangi hatalar altı ay sonra kesinti olarak geri döner.",
         sections: [
-          { h: "Sunucu odasına neler girer", p: [
-            "Sunucu odası BT altyapısının kalbidir. İçinde sunucu kabinleri ve raflar, yapısal kablolama, kesintisiz güç kaynağı (UPS) ve gerekirse dizel jeneratör, iklimlendirme, gazlı söndürme sistemi ve geçiş kontrolü bulunur.",
-            "Bunların hepsi tek bir kompleks olarak çalışmalıdır — işin sürekliliği buna bağlıdır.",
+          { h: "Mekân: sistem odasının yeri olmayan yerler", p: [
+            "Sistem odasının yeri su ve kalorifer borularının altı, ıslak hacimlerin yanı ve soğutmasız güneş cephesi değildir. Türün klasiği: muhasebede arşiv rafının altındaki veya temizlikçi dolabındaki sunucu — ilk kaçağa veya ilk yaza kadar çalışır. Doğru mekân penceresizdir (veya pencereleri kapatılmıştır), döşeme yükünde pay ve kabinlerin önünde-arkasında servis alanı vardır.",
+            "Asgari alan kabin sayısından hesaplanır: tek kabine bile kapıları 120° açacak ve iki yanında teknisyen duracak yer gerekir. Sıkışıklık bakım imkânsızlığıdır — yani yarım saatlik işin yeteceği yerde kesinti.",
           ] },
-          { h: "Güç ve soğutma en önemlisi", p: [
-            "Sunucular aşırı ısınmadan ve güç kesintisinden korkar. UPS, elektrik kesildiğinde jeneratör devreye girene kadar yükü taşır; hassas klima ise sıcaklık ve nemi sabit tutar.",
-            "Burada tasarruf edilmez — sunucu duruşu ve veri kaybı doğru mühendislikten pahalıdır.",
+          { h: "Güç: kaç dakika hayatta kalırsınız", p: [
+            "Sistem odası elektriği ayrı besleme ve panoyla başlar: sunucular; su ısıtıcısı ve ofis klimalarıyla aynı hatta oturmamalıdır. UPS kapasite ve süreye göre boyutlandırılır; doğru soru «bize kaç dakika lazım»dır: tipik ofis odasına düzgün kapanış için 15–30 dakika yeter, kritik servislere saatler ve dizel jeneratör gerekir.",
+            "UPS aküleri 3–5 yıl yaşar ve sessizce ölür: bunu kesinti anında, yedek dakikalar yerine saniyeler tutunca öğrenirsiniz. Planlı akü değişimi, kesintinin en can sıkıcı türüne karşı ucuz sigortadır.",
           ] },
-          { h: "Göreve göre projelendirme", p: [
-            "Büyüme için güç ve alan payı, kritik düğümlerde yedeklilik, mikroklima izleme ve uzaktan durum kontrolü öngörüyoruz.",
-            "Sunucu odaları ve veri merkezlerini anahtar teslim projelendirip kuruyoruz — Taşkent'te ve tüm Özbekistan'da, dokümantasyon ve servis desteğiyle.",
+          { h: "Soğutma ve yangın söndürme", p: [
+            "Sunucu kabini birkaç ısıtıcı gibi ısıtır — kış dahil bütün yıl. Ev tipi duvar split buna göre yapılmamıştır: ayazda soğutamaz, rotasyonu yoktur. Doğrusu, otomatik rotasyonlu ve yedekli bir çift inverter veya hassas klimadır; sıcaklık ve kaçak sensörleri telefona uyarılı izlemeye bağlanır.",
+            "Sistem odasını suyla veya tozla söndürmek, yanmayanı da bitirmek demektir. Doğru yanıt gazlı söndürmedir: gaz oksijeni iter ve ekipmanda iz bırakmaz. Erken duman algılama ve havalandırmanın otomatik kapanmasıyla tamamlanır.",
           ] },
+          { h: "Erişim, düzen ve dokümantasyon", p: [
+            "Sistem odasının kapısı kayıtlı geçiş kontrolüyle kapatılır: «kabinlere kim, ne zaman girdi» BT direktörünün yanıtlayabilmesi gereken sorudur. İçeride her arızada saat kazandıran düzen: kablo yönetimi, hat etiketleri, kablo defterleri, yerleşim şeması.",
+            "Sistem odalarını anahtar teslim tasarlar ve kurarız: mekân, UPS'li elektrik, soğutma, gazlı söndürme, geçiş kontrolü ve izleme — çalışan odaları da servisleri durdurmadan yenileriz. Keşif ücretsiz; Taşkent ve tüm Özbekistan'da garanti ve servis desteğiyle çalışırız.",
+          ] },
+        ],
+        faq: [
+          { q: "Ayrı oda yerine kabin yeter mi?", a: "Küçük ofise evet: ortak mekânda UPS'li ve havalandırmalı sunucu kabini. Sınır ısı ve gürültüden geçer: iki-üç sunucudan itibaren düzgün soğutmalı ayrı oda gerekir." },
+          { q: "Sistem odası kaç derece olmalı?", a: "Çalışma aralığı, kararlı nemle 20–25 °C. Mutlak değerden çok kararlılık önemlidir: sıcaklık salınımları diskleri sabit 27'den hızlı öldürür." },
+          { q: "Neden sıradan klima olmaz?", a: "Ev tipi split yıl boyu 7/24 çalışmaya göre değildir ve ayazda soğutmayı reddeder. Sistem odasına kış kitli ve rotasyonlu modeller gerekir — yoksa sistem 1 Ocak'ı aşırı ısınmayla karşılar." },
+          { q: "Sistem odası izlemesine ne girer?", a: "Asgari: sıcak ve soğuk bölge sıcaklıkları, nem, kaçak, UPS durumu ve kapı açılması. Uyarılar nöbetçinin telefonuna düşer. Bir günde kurulur ve «sorunu kullanıcılardan öğrendik»i bitirir." },
         ],
       },
       zh: {
-        title: "交钥匙机房建设：需要什么",
-        excerpt: "机房包含什么，为什么供电和制冷最关键，以及如何按需求设计并为发展预留余量。",
+        title: "机房建设：要求、常见错误与正确做法",
+        excerpt: "机房选址有什么要求，供电和制冷怎么核算，为什么要气体灭火和门禁——以及哪些建设失误会在半年后以停机的方式显形。",
         sections: [
-          { h: "机房包含什么", p: [
-            "机房是IT基础设施的心脏。它包括服务器机柜和机架、综合布线、不间断电源（UPS）、必要时的柴油发电机、空调、气体灭火系统和门禁。",
-            "这一切必须作为统一整体运行——业务的连续性取决于此。",
+          { h: "选址：哪里不配放机房", p: [
+            "机房不能放在水管暖气管下方、湿区旁边，也不能放在没有制冷的向阳面。经典反面案例：财务室档案架下的服务器，或保洁间里的服务器——撑到第一次漏水或第一个夏天。合格的房间无窗（或封窗）、楼板承重有余量、机柜前后留有维护空间。",
+            "最小面积按机柜数量核算：哪怕一个机柜也需要门能开到120°、技术员能站在两侧。局促意味着无法维护——也就意味着本来半小时能解决的事变成停机。",
           ] },
-          { h: "供电和制冷最关键", p: [
-            "服务器最怕过热和断电。UPS在停电时支撑负载直到发电机启动，精密空调保持温湿度稳定。",
-            "这方面不能省钱——服务器停机和数据丢失的损失远高于规范的工程投入。",
+          { h: "供电：你们能撑几分钟", p: [
+            "机房电气从专用进线和配电箱开始：服务器不能和烧水壶、办公空调挤一条线。UPS按容量和续航选型，正确的问题是「我们需要几分钟」：典型办公机房15–30分钟够体面关机，关键业务需要数小时外加柴油发电机。",
+            "UPS电池寿命3–5年，死得悄无声息：往往在断电那一刻才发现备电只撑几秒而不是几分钟。按计划换电池，是对最憋屈的一类停机的廉价保险。",
           ] },
-          { h: "按需求设计", p: [
-            "我们为发展预留功率和空间余量，对关键节点做冗余，配备微环境监测和远程状态监控。",
-            "我们在塔什干及乌兹别克斯坦全境提供机房和数据中心的交钥匙设计与建设——含文档和维保服务。",
+          { h: "制冷与灭火", p: [
+            "一柜服务器的发热相当于几台取暖器——全年如此，包括冬天。家用壁挂空调干不了这活：严寒时无法制冷、也没有轮换。正确做法是一对带自动轮换和互备的变频或精密空调，温度和漏水传感器接入监控、告警推送到手机。",
+            "用水或干粉扑救机房，等于把没烧掉的也毁掉。正确答案是气体灭火：药剂排挤氧气、不在设备上留痕。再配早期烟雾探测和通风自动联锁。",
           ] },
+          { h: "门禁、秩序与文档", p: [
+            "机房的门用带日志的门禁管住：「谁在什么时候进过机柜」——IT主管必须答得上来。屋里是每次故障都省下数小时的秩序：理线、线路标识、线缆台账、设备布置图。",
+            "我们一站式设计建设机房：房间、带UPS的电气、制冷、气体灭火、门禁和监控——在用机房的改造不停业务进行。勘测免费；服务覆盖塔什干及全乌兹别克斯坦，带质保和维保。",
+          ] },
+        ],
+        faq: [
+          { q: "能用一个机柜代替单独的机房吗？", a: "小办公室可以：公共空间里放一个带UPS和通风的服务器机柜。分界线在发热和噪音：两三台服务器起就需要带正经制冷的独立房间。" },
+          { q: "机房该保持多少度？", a: "工作区间是20–25 °C、湿度稳定。稳定比绝对值更重要：温度大幅波动比恒定27度更快弄坏硬盘。" },
+          { q: "为什么不能装普通空调？", a: "家用分体机不是为全年7×24设计的，严寒时拒绝制冷。机房要配冬季组件和轮换功能的机型——否则元旦那天系统就用过热迎接你。" },
+          { q: "机房监控都包括什么？", a: "最低配置：冷热区温度、湿度、漏水、UPS状态和门的开启。告警推送到值班手机。一天配好，从此告别「用户先发现问题」。" },
         ],
       },
     },
@@ -2715,93 +2915,143 @@ export const ARTICLES: Article[] = [
     related: ["analytics", "cctv", "anpr"],
     loc: {
       ru: {
-        title: "Видеоаналитика и распознавание лиц: что это и зачем",
-        excerpt: "Что умеет видеоаналитика, где она приносит пользу — ритейл, бизнес-центры, парковки — и как её внедрить на существующие камеры.",
+        title: "Видеоаналитика и распознавание лиц: что умеют умные камеры",
+        excerpt: "Как аналитика превращает камеры из архива в работающую систему: распознавание лиц и номеров, подсчёт посетителей, защита периметра — и что можно добавить к уже установленным камерам.",
         sections: [
-          { h: "Что умеет видеоаналитика", p: [
-            "Видеоаналитика превращает обычные камеры в умную систему: распознавание лиц и автономеров, подсчёт посетителей, контроль периметра и зон, детекция оставленных предметов и нестандартного поведения — всё в реальном времени, без постоянного оператора.",
-            "Система сама привлекает внимание к событию, а не заставляет часами смотреть в мониторы.",
+          { h: "Зачем камерам интеллект", p: [
+            "Обычное видеонаблюдение — это архив «на всякий случай»: события находят постфактум, листая записи. Аналитика меняет роль камер: система сама замечает пересечение линии, лицо из стоп-листа или машину не из белого списка — и поднимает тревогу в момент события, а не наутро.",
+            "Честный факт: оператор перестаёт замечать происходящее на мониторах уже через двадцать минут наблюдения. Алгоритмы не устают — они фильтруют поток и показывают человеку только то, что требует решения.",
           ] },
-          { h: "Где это приносит пользу", p: [
-            "Ритейл считает поток покупателей и строит тепловые карты, бизнес-центры пускают сотрудников по лицу, парковки открывают шлагбаум по номеру, охрана получает тревогу при пересечении периметра.",
-            "Аналитика превращает видеонаблюдение из «архива на всякий случай» в рабочий инструмент управления и безопасности.",
+          { h: "Распознавание лиц: доступ и списки", p: [
+            "В СКУД лицо работает бесконтактным пропуском: терминал отличает живое лицо от фотографии и пропускает сотрудника за доли секунды. В безопасности — фильтром по спискам: система сверяет лица с базами «нежелательных» и VIP и тихо уведомляет охрану или менеджера.",
+            "Для банков и ритейла это рабочий инструмент — от предотвращения мошенничества до персональной встречи важного клиента. Важно понимать техническую основу: терминалы хранят не фотографии, а математические шаблоны, по которым нельзя восстановить изображение.",
           ] },
-          { h: "Как внедрить", p: [
-            "Часть аналитики работает прямо на камерах, часть — на сервере с ИИ. Аналитику можно добавить и к уже установленным камерам через серверное ПО, без полной замены системы.",
-            "Внедряем видеоаналитику под ключ в Ташкенте и по всему Узбекистану — с обучением операторов и поддержкой.",
+          { h: "Аналитика для бизнеса и охраны", p: [
+            "Ритейлу аналитика даёт цифры, которых нет у кассы: подсчёт посетителей и конверсию в чек, тепловые карты зала — где покупатели задерживаются и какие полки обходят, — алерты про очередь на кассе, когда пора открывать вторую. Маркетинг получает данные для решений вместо ощущений.",
+            "Охране аналитика закрывает периметр: виртуальная линия на изображении заменяет километры сигнального кабеля, алгоритмы AcuSense отличают человека от собаки и качающейся ветки — ложных тревог на порядок меньше, чем у простой детекции движения. Детекция оставленных предметов и праздношатания дополняет картину в ТЦ и на вокзалах.",
           ] },
+          { h: "Камера или сервер — и как начать", p: [
+            "Базовые алгоритмы современные камеры Hikvision и Dahua несут «на борту» — периметру и детекции сервер не нужен. Распознавание по большим базам лиц, подсчёт в масштабе сети магазинов и сложные сценарии требуют серверной платформы с ИИ. Мы считаем оба варианта честно — и часто добавляем аналитику к уже установленным камерам без замены парка.",
+            "Начинаем со сценариев, а не с прайса: что должно происходить при тревоге, кому приходит уведомление, какие отчёты нужны руководителю. Затем пилот на одной-двух камерах и тираж. Внедряем под ключ по Ташкенту и всему Узбекистану — с обучением операторов, гарантией и поддержкой.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли добавить аналитику к нашим старым камерам?", a: "Чаще всего да: серверное ПО анализирует поток с любых камер приличного разрешения. Приезжаем, смотрим парк и говорим честно, что заработает, а где камеру лучше заменить." },
+          { q: "Сколько лиц может быть в базе распознавания?", a: "Терминалы держат тысячи шаблонов на борту, серверные платформы — сотни тысяч. Для проходной на 500 сотрудников хватает терминала; сети объектов и большие списки — задача сервера." },
+          { q: "Работает ли распознавание в маске или очках?", a: "Современные алгоритмы узнают лицо в обычных очках и с частичным перекрытием; медицинская маска снижает точность — для таких условий настраивается дополнительный фактор: карта или QR." },
+          { q: "Что с приватностью и законностью?", a: "Система хранит математические шаблоны, а не фото; доступ к базе ограничивается СКУД и журналируется. Помогаем оформить уведомления сотрудников и посетителей корректно." },
         ],
       },
       uz: {
-        title: "Videotahlil va yuzni aniqlash: bu nima va nima uchun",
-        excerpt: "Videotahlil nima qila oladi, u qayerda foyda keltiradi — riteyl, biznes-markazlar, avtoturargohlar — va uni mavjud kameralarga qanday joriy etish.",
+        title: "Videoanalitika va yuzni tanish: aqlli kameralar nimaga qodir",
+        excerpt: "Analitika kameralarni arxivdan ishlaydigan tizimga qanday aylantiradi: yuz va raqamlarni tanish, tashrif buyuruvchilar hisobi, perimetr himoyasi — va o'rnatilgan kameralarga nima qo'shish mumkin.",
         sections: [
-          { h: "Videotahlil nima qila oladi", p: [
-            "Videotahlil oddiy kameralarni aqlli tizimga aylantiradi: yuz va avtoraqamlarni aniqlash, tashrifchilarni sanash, perimetr va zonalarni nazorat qilish, tashlab ketilgan buyumlar va nostandart xatti-harakatni aniqlash — hammasi real vaqtda, doimiy operatorsiz.",
-            "Tizim hodisaga o'zi e'tibor qaratadi, monitorlarga soatlab qarashga majbur qilmaydi.",
+          { h: "Kameralarga intellekt nega kerak", p: [
+            "Oddiy videokuzatuv — «har ehtimolga qarshi» arxiv: hodisalar yozuvlarni varaqlab keyin topiladi. Analitika kameralar rolini o'zgartiradi: tizim chiziq kesilishini, stop-ro'yxatdagi yuzni yoki oq ro'yxatda bo'lmagan mashinani o'zi payqaydi — va trevogani ertalab emas, hodisa paytida ko'taradi.",
+            "Halol fakt: operator monitorlardagi bo'layotganni yigirma daqiqa kuzatuvdan keyin payqamay qo'yadi. Algoritmlar charchamaydi — ular oqimni filtrlaydi va odamga faqat qaror talab qiladiganini ko'rsatadi.",
           ] },
-          { h: "Bu qayerda foyda keltiradi", p: [
-            "Riteyl xaridorlar oqimini sanaydi va issiqlik xaritalari tuzadi, biznes-markazlar xodimlarni yuz bo'yicha kiritadi, avtoturargohlar raqam bo'yicha shlagbaumni ochadi, qo'riqlash perimetr kesib o'tilganda trevoga oladi.",
-            "Tahlil videokuzatuvni «har ehtimolga qarshi arxiv»dan boshqaruv va xavfsizlikning ishchi vositasiga aylantiradi.",
+          { h: "Yuzni tanish: kirish va ro'yxatlar", p: [
+            "SKUDda yuz kontaktsiz ruxsatnoma bo'lib ishlaydi: terminal tirik yuzni fotosuratdan farqlaydi va xodimni soniya ulushida o'tkazadi. Xavfsizlikda — ro'yxatlar filtri: tizim yuzlarni «nomaqbullar» va VIP bazalari bilan solishtiradi va qo'riq yoki menejerga jimgina xabar beradi.",
+            "Bank va riteyl uchun bu ish quroli — firibgarlikning oldini olishdan muhim mijozni shaxsan kutib olishgacha. Texnik asosni tushunish muhim: terminallar fotosurat emas, tasvirni tiklab bo'lmaydigan matematik shablonlar saqlaydi.",
           ] },
-          { h: "Qanday joriy etish", p: [
-            "Tahlilning bir qismi to'g'ridan-to'g'ri kameralarda, bir qismi AI bilan serverda ishlaydi. Tahlilni allaqachon o'rnatilgan kameralarga ham server dasturi orqali, tizimni to'liq almashtirmasdan qo'shish mumkin.",
-            "Videotahlilni kalit topshirish asosida joriy etamiz — Toshkentda va butun O'zbekiston bo'ylab, operatorlarni o'qitish va qo'llab-quvvatlash bilan.",
+          { h: "Biznes va qo'riq uchun analitika", p: [
+            "Riteylga analitika kassada yo'q raqamlarni beradi: tashrif hisobi va chekka konversiya, zal issiqlik xaritalari — xaridorlar qayerda to'xtaydi va qaysi peshtaxtalarni aylanib o'tadi, — kassadagi navbat alertlari, ikkinchisini ochish payti kelganda. Marketing his o'rniga qaror uchun ma'lumot oladi.",
+            "Qo'riqqa analitika perimetrni yopadi: tasvirdagi virtual chiziq kilometrlab signal kabelini almashtiradi, AcuSense algoritmlari odamni it va chayqalayotgan shoxdan farqlaydi — yolg'on trevogalar oddiy harakat detektsiyasidan o'n barobar kam. Qoldirilgan buyumlar va bekorchilik detektsiyasi savdo markazi va vokzallarda manzarani to'ldiradi.",
           ] },
+          { h: "Kamera yoki server — va qanday boshlash", p: [
+            "Bazaviy algoritmlarni zamonaviy Hikvision va Dahua kameralari «bortida» olib yuradi — perimetr va detektsiyaga server kerak emas. Katta yuz bazalari bo'yicha tanish, do'konlar tarmog'i ko'lamidagi hisob va murakkab stsenariylar sun'iy intellektli server platformasini talab qiladi. Ikkala variantni halol hisoblaymiz — va ko'pincha analitikani parkni almashtirmasdan o'rnatilgan kameralarga qo'shamiz.",
+            "Prays bilan emas, stsenariylar bilan boshlaymiz: trevogada nima bo'lishi kerak, xabar kimga keladi, rahbarga qanday hisobotlar kerak. Keyin bir-ikki kamerada pilot va tiraj. Toshkent va butun O'zbekiston bo'ylab kalit topshirish sharti bilan joriy etamiz — operatorlarni o'qitish, kafolat va qo'llab-quvvatlash bilan.",
+          ] },
+        ],
+        faq: [
+          { q: "Eski kameralarimizga analitika qo'shsa bo'ladimi?", a: "Ko'pincha ha: server dasturi munosib ruxsatli istalgan kamera oqimini tahlil qiladi. Kelamiz, parkni ko'ramiz va nima ishlashini, qayerda kamerani almashtirgan ma'qulligini halol aytamiz." },
+          { q: "Tanish bazasida nechta yuz bo'lishi mumkin?", a: "Terminallar bortda minglab shablon ushlaydi, server platformalari — yuz minglab. 500 xodimli prohodnayaga terminal yetadi; obyektlar tarmog'i va katta ro'yxatlar — server vazifasi." },
+          { q: "Niqob yoki ko'zoynakda tanish ishlaydimi?", a: "Zamonaviy algoritmlar oddiy ko'zoynakli va qisman yopilgan yuzni taniydi; tibbiy niqob aniqlikni pasaytiradi — bunday sharoitga qo'shimcha omil sozlanadi: karta yoki QR." },
+          { q: "Maxfiylik va qonuniylik bilan nima?", a: "Tizim foto emas, matematik shablonlar saqlaydi; bazaga kirish SKUD bilan cheklanadi va jurnalga yoziladi. Xodim va tashrif buyuruvchilarni xabardor qilishni to'g'ri rasmiylashtirishga yordam beramiz." },
         ],
       },
       en: {
-        title: "Video Analytics and Facial Recognition: What It Is and Why",
-        excerpt: "What video analytics can do, where it pays off — retail, business centres, parking — and how to add it to existing cameras.",
+        title: "Video Analytics and Facial Recognition: What Smart Cameras Can Do",
+        excerpt: "How analytics turns cameras from an archive into a working system: face and plate recognition, visitor counting, perimeter protection — and what can be added to cameras you already have.",
         sections: [
-          { h: "What video analytics can do", p: [
-            "Video analytics turns ordinary cameras into a smart system: facial and licence plate recognition, visitor counting, perimeter and zone control, detection of abandoned objects and unusual behaviour — all in real time, without a full-time operator.",
-            "The system draws attention to an event itself instead of making someone watch monitors for hours.",
+          { h: "Why cameras need intelligence", p: [
+            "Conventional CCTV is a \"just in case\" archive: events are found after the fact by scrolling through footage. Analytics changes the cameras' role: the system itself notices a crossed line, a face from a stop list or a car missing from the whitelist — and raises the alarm at the moment of the event, not the next morning.",
+            "An honest fact: an operator stops noticing what happens on the monitors after about twenty minutes of watching. Algorithms do not tire — they filter the stream and show a person only what needs a decision.",
           ] },
-          { h: "Where it pays off", p: [
-            "Retail counts shopper traffic and builds heat maps, business centres admit staff by face, car parks open the barrier by plate, security gets an alert when the perimeter is crossed.",
-            "Analytics turns CCTV from a “just-in-case archive” into a working tool for management and security.",
+          { h: "Facial recognition: access and lists", p: [
+            "In access control a face works as a contactless pass: the terminal tells a live face from a photo and passes an employee in a fraction of a second. In security it is a list filter: the system checks faces against \"unwanted\" and VIP databases and quietly notifies the guards or a manager.",
+            "For banks and retail it is a working tool — from fraud prevention to personally greeting an important client. The technical basis matters: terminals store not photographs but mathematical templates from which no image can be reconstructed.",
           ] },
-          { h: "How to deploy it", p: [
-            "Some analytics run directly on the cameras, some on an AI server. Analytics can also be added to already-installed cameras via server software, without replacing the whole system.",
-            "We deploy video analytics turnkey in Tashkent and across Uzbekistan — with operator training and support.",
+          { h: "Analytics for business and security", p: [
+            "Retail gets numbers the till does not have: visitor counting and conversion, floor heat maps — where shoppers linger and which shelves they bypass — and queue alerts when it is time to open another till. Marketing gets data for decisions instead of hunches.",
+            "For security, analytics closes the perimeter: a virtual line on the image replaces kilometers of sensor cable, and AcuSense-class algorithms tell a person from a dog or a swaying branch — an order of magnitude fewer false alarms than plain motion detection. Abandoned object and loitering detection completes the picture in malls and at stations.",
           ] },
+          { h: "Camera or server — and how to start", p: [
+            "Modern Hikvision and Dahua cameras carry the basic algorithms on board — perimeter and detection need no server. Recognition against large face databases, counting across a store chain and complex scenarios call for an AI server platform. We price both options honestly — and often add analytics to cameras already installed, with no fleet replacement.",
+            "We start with scenarios, not a price list: what must happen on an alarm, who gets the notification, which reports management needs. Then a pilot on one or two cameras, and rollout. Turnkey across Tashkent and all of Uzbekistan — with operator training, warranty and support.",
+          ] },
+        ],
+        faq: [
+          { q: "Can analytics be added to our old cameras?", a: "Usually yes: server software analyses the stream from any camera of decent resolution. We come, look at the fleet and say honestly what will work and where a camera is better replaced." },
+          { q: "How many faces can the recognition database hold?", a: "Terminals keep thousands of templates on board, server platforms hundreds of thousands. A 500-employee entrance runs fine on a terminal; site networks and big lists are a server's job." },
+          { q: "Does recognition work with a mask or glasses?", a: "Modern algorithms recognise a face in ordinary glasses and with partial occlusion; a medical mask reduces accuracy — for such conditions a second factor is configured: a card or a QR code." },
+          { q: "What about privacy and legality?", a: "The system stores mathematical templates, not photos; database access is restricted by access control and logged. We help draft employee and visitor notifications correctly." },
         ],
       },
       tr: {
-        title: "Video Analitiği ve Yüz Tanıma: Nedir ve Ne İşe Yarar",
-        excerpt: "Video analitiği neler yapabilir, nerede fayda sağlar — perakende, iş merkezleri, otoparklar — ve mevcut kameralara nasıl eklenir.",
+        title: "Video Analitik ve Yüz Tanıma: Akıllı Kameralar Ne Yapabilir",
+        excerpt: "Analitik kameraları arşivden çalışan sisteme nasıl çevirir: yüz ve plaka tanıma, ziyaretçi sayımı, çevre koruması — ve mevcut kameralara neler eklenebilir.",
         sections: [
-          { h: "Video analitiği neler yapabilir", p: [
-            "Video analitiği sıradan kameraları akıllı sisteme dönüştürür: yüz ve plaka tanıma, ziyaretçi sayma, çevre ve bölge kontrolü, bırakılan eşya ve olağan dışı davranış tespiti — hepsi gerçek zamanlı, sürekli operatör olmadan.",
-            "Sistem olaya dikkati kendisi çeker; saatlerce monitör izlemeye gerek kalmaz.",
+          { h: "Kameralara zekâ neden gerekir", p: [
+            "Klasik kamera sistemi «ne olur ne olmaz» arşividir: olaylar kayıtlar taranarak sonradan bulunur. Analitik, kameraların rolünü değiştirir: sistem aşılan çizgiyi, kara listedeki yüzü veya beyaz listede olmayan aracı kendisi fark eder — ve alarmı ertesi sabah değil, olay anında verir.",
+            "Dürüst gerçek: operatör yaklaşık yirmi dakika sonra ekranlarda olanı fark etmez olur. Algoritmalar yorulmaz — akışı süzer ve insana yalnız karar gerektireni gösterir.",
           ] },
-          { h: "Nerede fayda sağlar", p: [
-            "Perakende müşteri akışını sayar ve ısı haritaları çıkarır, iş merkezleri çalışanları yüzle içeri alır, otoparklar bariyeri plakayla açar, güvenlik çevre ihlalinde alarm alır.",
-            "Analitik, kamera sistemini “ne olur ne olmaz arşivi”nden yönetim ve güvenliğin çalışan aracına dönüştürür.",
+          { h: "Yüz tanıma: erişim ve listeler", p: [
+            "Geçiş kontrolünde yüz, temassız kart gibi çalışır: terminal canlı yüzü fotoğraftan ayırır ve çalışanı saniyenin kesrinde geçirir. Güvenlikte liste filtresidir: sistem yüzleri «istenmeyen» ve VIP veritabanlarıyla karşılaştırır, güvenliği veya yöneticiyi sessizce bilgilendirir.",
+            "Bankalar ve perakende için çalışan bir araçtır — dolandırıcılığı önlemekten önemli müşteriyi kişisel karşılamaya. Teknik temel önemlidir: terminaller fotoğraf değil, görüntüye geri çevrilemeyen matematiksel şablonlar saklar.",
           ] },
-          { h: "Nasıl devreye alınır", p: [
-            "Analitiğin bir kısmı doğrudan kameralarda, bir kısmı yapay zekâlı sunucuda çalışır. Analitik, sistem tamamen değiştirilmeden, sunucu yazılımıyla mevcut kameralara da eklenebilir.",
-            "Video analitiğini anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, operatör eğitimi ve destekle.",
+          { h: "İş ve güvenlik için analitik", p: [
+            "Perakende, kasada olmayan rakamları alır: ziyaretçi sayımı ve dönüşüm, kat ısı haritaları — müşteri nerede oyalanıyor, hangi rafları pas geçiyor — ve ikinci kasayı açma vakti gelince kuyruk uyarıları. Pazarlama, hisler yerine karar verisi alır.",
+            "Güvenlik için analitik çevreyi kapatır: görüntüdeki sanal çizgi kilometrelerce sensör kablosunun yerini alır; AcuSense sınıfı algoritmalar insanı köpekten ve sallanan daldan ayırır — yanlış alarm, düz hareket algılamadan kat kat azdır. Bırakılan eşya ve oyalanma algılama AVM ve garlarda tabloyu tamamlar.",
           ] },
+          { h: "Kamera mı sunucu mu — ve nasıl başlamalı", p: [
+            "Modern Hikvision ve Dahua kameralar temel algoritmaları üzerinde taşır — çevre ve algılama için sunucu gerekmez. Büyük yüz veritabanları, zincir ölçeğinde sayım ve karmaşık senaryolar yapay zekâlı sunucu platformu ister. İkisini de dürüstçe fiyatlandırırız — ve analitiği çoğu kez filo değiştirmeden kurulu kameralara ekleriz.",
+            "Fiyat listesiyle değil senaryolarla başlarız: alarmda ne olmalı, bildirim kime gitmeli, yönetime hangi raporlar gerekli. Sonra bir-iki kamerada pilot ve yaygınlaştırma. Taşkent ve tüm Özbekistan'da anahtar teslim — operatör eğitimi, garanti ve destekle.",
+          ] },
+        ],
+        faq: [
+          { q: "Eski kameralarımıza analitik eklenir mi?", a: "Çoğunlukla evet: sunucu yazılımı, makul çözünürlükteki her kameranın akışını analiz eder. Gelir, filoya bakar ve neyin çalışacağını, hangi kameranın değişmesinin daha iyi olduğunu dürüstçe söyleriz." },
+          { q: "Tanıma veritabanı kaç yüz alır?", a: "Terminaller binlerce şablonu üzerinde tutar, sunucu platformları yüz binlerce. 500 kişilik giriş terminalle yürür; tesis ağları ve büyük listeler sunucunun işidir." },
+          { q: "Maske veya gözlükle tanıma çalışır mı?", a: "Modern algoritmalar sıradan gözlüklü ve kısmen kapalı yüzü tanır; tıbbi maske doğruluğu düşürür — böyle koşullara ikinci faktör kurulur: kart veya QR." },
+          { q: "Mahremiyet ve yasallık ne durumda?", a: "Sistem fotoğraf değil matematiksel şablon saklar; veritabanı erişimi geçiş kontrolüyle kısıtlanır ve kayda geçer. Çalışan ve ziyaretçi bilgilendirmelerini doğru düzenlemeye yardım ederiz." },
         ],
       },
       zh: {
-        title: "视频分析与人脸识别：是什么、有什么用",
-        excerpt: "视频分析能做什么，在哪些场景创造价值——零售、商务中心、停车场——以及如何在现有摄像机上部署。",
+        title: "视频分析与人脸识别：智能摄像机能做什么",
+        excerpt: "分析算法如何把摄像机从录像库变成主动工作的系统：人脸和车牌识别、客流统计、周界防护——以及现有摄像机能叠加什么能力。",
         sections: [
-          { h: "视频分析能做什么", p: [
-            "视频分析把普通摄像机变成智能系统：人脸和车牌识别、客流统计、周界和区域防范、遗留物和异常行为检测——全部实时进行，无需专人值守。",
-            "系统会主动提示事件，而不是让人盯着监视器看几个小时。",
+          { h: "摄像机为什么需要智能", p: [
+            "普通监控是「备查」的档案库：事件靠事后翻录像才找到。分析改变了摄像机的角色：系统自己发现越线、命中布控名单的人脸、不在白名单的车辆——在事件发生的那一刻报警，而不是第二天早上。",
+            "一个诚实的事实：值班员盯屏约二十分钟后就开始漏看。算法不会疲劳——它过滤整条视频流，只把需要决策的事推给人。",
           ] },
-          { h: "在哪些场景创造价值", p: [
-            "零售统计客流并生成热力图，商务中心刷脸放行员工，停车场按车牌抬杆，周界被穿越时保安立即收到警报。",
-            "视频分析让监控从“备查档案”变成管理和安防的实用工具。",
+          { h: "人脸识别：门禁与名单", p: [
+            "在门禁里，人脸就是无接触通行证：终端区分真人和照片，瞬间放行员工。在安防里是名单过滤器：系统把人脸与「不受欢迎者」和VIP库比对，悄悄通知保安或经理。",
+            "对银行和零售这是实用工具——从防欺诈到贵宾进门即有人相迎。技术底层值得了解：终端存储的不是照片，而是无法还原成图像的数学模板。",
           ] },
-          { h: "如何部署", p: [
-            "一部分分析功能直接运行在摄像机上，另一部分运行在AI服务器上。通过服务器软件也可以为已安装的摄像机添加分析功能，无需整体更换系统。",
-            "我们在塔什干及乌兹别克斯坦全境提供视频分析交钥匙部署——含操作员培训和支持。",
+          { h: "面向经营与安防的分析", p: [
+            "零售拿到收银机给不出的数字：客流量和成交转化、卖场热力图——顾客在哪里停留、绕开哪些货架——以及该开第二个收银台时的排队提醒。市场部用数据而不是感觉做决策。",
+            "对安防，分析封住周界：画面上的虚拟警戒线替代成公里的传感电缆，AcuSense级算法把人和狗、摇晃的树枝区分开——误报比普通移动侦测少一个数量级。遗留物和徘徊检测在商场和车站补全防线。",
           ] },
+          { h: "算法放在哪、从哪开始", p: [
+            "现代海康威视和大华摄像机自带基础算法——周界和检测不需要服务器。基于大型人脸库的识别、连锁规模的客流统计和复杂场景才需要AI服务器平台。两种方案我们都如实核算——并常常在不更换现有摄像机的前提下叠加分析。",
+            "我们从场景出发而不是从价格表：报警时应发生什么、通知发给谁、管理层要什么报表。然后一两台摄像机试点、再铺开。塔什干及全乌兹别克斯坦一站式交付——含值班员培训、质保和支持。",
+          ] },
+        ],
+        faq: [
+          { q: "我们的旧摄像机能加分析吗？", a: "大多数能：服务器软件可分析任何分辨率过得去的摄像机码流。我们上门看设备，照实说哪些能用、哪台建议更换。" },
+          { q: "识别库能装多少张人脸？", a: "终端本机存数千个模板，服务器平台存数十万。500人的门岗一台终端就够；多站点网络和大名单是服务器的事。" },
+          { q: "戴口罩或眼镜还能识别吗？", a: "现代算法认得戴普通眼镜和部分遮挡的脸；医用口罩会降低准确率——这类场合配第二因子：刷卡或二维码。" },
+          { q: "隐私和合法性怎么办？", a: "系统存的是数学模板而非照片；识别库的访问受门禁限制并全程留痕。我们协助规范地做好员工和访客告知。" },
         ],
       },
     },
