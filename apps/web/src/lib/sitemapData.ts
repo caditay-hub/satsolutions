@@ -63,7 +63,7 @@ export function expandLocales(entries: SitemapEntry[]): SitemapEntry[] {
 // ── 1. Страницы: статика + услуги/отрасли ───────────────────────────────────
 const STATIC_ROUTES = [
   "", "/about", "/contact", "/products", "/products/new", "/solutions", "/portfolio",
-  "/catalog", "/international", "/returns", "/delivery", "/partners/h3c",
+  "/catalog", "/international", "/tenders", "/returns", "/delivery", "/partners/h3c",
   "/calculator", "/partners/zkteco", "/kits",
 ];
 

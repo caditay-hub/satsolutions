@@ -235,6 +235,24 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
           </div>
         ) : null}
 
+        {/* Состав решения — мини-спецификация кейса (equipmentSupply): то, что ЛПР
+            пересылает подрядчику. Многострочное поле → маркированный список. */}
+        {(item as any).equipmentSupply?.trim() ? (
+          <div className="mt-10 max-w-4xl rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h2 className="text-lg font-bold tracking-tight text-slate-950">
+              {({ ru: "Состав решения", uz: "Yechim tarkibi", en: "Solution stack", tr: "Çözüm bileşenleri", zh: "方案构成" } as Record<string, string>)[locale] ?? "Состав решения"}
+            </h2>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {String((item as any).equipmentSupply).split(/\n+/).map((l: string) => l.trim()).filter(Boolean).map((l: string) => (
+                <li key={l} className="flex items-start gap-2 text-sm text-slate-700">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" aria-hidden />
+                  {l}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+
         {works.length || gallery.length ? <PortfolioWorksAccordion works={works} images={gallery} /> : null}
 
         {caseProducts.length > 0 && (

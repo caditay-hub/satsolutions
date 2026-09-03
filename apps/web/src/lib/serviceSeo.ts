@@ -427,8 +427,8 @@ const en: Record<string, ServiceSeo> = {
     desc: "Server hardware in Tashkent: custom-built servers for 1C, office and virtualization, racks, UPS and network equipment. Configuration, supply and installation across Uzbekistan.",
   },
   cctv: {
-    h1: "CCTV Installation in Tashkent",
-    title: "CCTV Installation in Tashkent — Security Cameras | SAT",
+    h1: "CCTV Installation Company in Tashkent, Uzbekistan",
+    title: "CCTV Installation Company in Tashkent \u2014 Cameras & Service | SAT",
     desc: "Turnkey CCTV camera installation in Tashkent and across Uzbekistan: free site survey, design, IP and analog system setup, remote access from your phone. Warranty and service.",
   },
   access: {
@@ -437,8 +437,8 @@ const en: Record<string, ServiceSeo> = {
     desc: "Turnkey access control (ACS) in Tashkent: turnstiles, electronic locks, card readers and biometrics, time & attendance. Design, installation and service across Uzbekistan.",
   },
   fire: {
-    h1: "Fire Alarm Installation in Tashkent",
-    title: "Fire Alarm Systems in Tashkent — Installation | SAT",
+    h1: "Fire Alarm System Design & Installation in Uzbekistan",
+    title: "Fire Alarm Design & Installation in Tashkent, Uzbekistan | SAT",
     desc: "Fire alarm and voice evacuation (VES) design and installation in Tashkent: detectors, notification, automation. Project handover, warranty and maintenance across Uzbekistan.",
   },
   intercom: {
@@ -472,7 +472,7 @@ const en: Record<string, ServiceSeo> = {
     desc: "Time and attendance systems in Tashkent: biometrics and cards, automatic timesheets, export to 1C. Installation and setup across Uzbekistan.",
   },
   network: {
-    h1: "Structured Cabling & LAN in Tashkent",
+    h1: "Structured Cabling & LAN Installation in Tashkent, Uzbekistan",
     title: "Structured Cabling & LAN in Tashkent — Networks | SAT",
     desc: "Structured cabling (SCS) and LAN design and installation in Tashkent: cable routes, server racks, switches. Documentation handover across Uzbekistan.",
   },
