@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
+import { CrossSellClick } from "@/components/CrossSellClick";
 import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
@@ -260,18 +261,31 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
     // «С этим покупают»: сопутствующие из смежных категорий (кросс-селл + внутренние
     // ссылки между ветками каталога — глубина обхода). Карта: категория → аксессуары.
+    // Порядок правил важен: первое совпадение выигрывает (узкие правила выше общих).
     const ACCESSORY_MAP: Array<[RegExp, string[]]> = [
-      [/регистратор|nvr|dvr/i, ["Жёсткие диски", "ИБП и электропитание"]],
-      [/камер|видеонаблюд/i, ["Кронштейны и аксессуары", "Жёсткие диски", "СКС (витая пара)"]],
+      [/регистратор|nvr|dvr/i, ["Жёсткие диски", "ИБП и электропитание", "Дисплеи и мониторы"]],
+      [/камер|видеонаблюд|тепловизион/i, ["Кронштейны и аксессуары", "Жёсткие диски", "СКС (витая пара)"]],
       [/коммутатор|маршрутизатор/i, ["SFP-модули и трансиверы", "СКС (витая пара)", "Телекоммуникационные шкафы"]],
-      [/wi-?fi|точк|радиомост|беспровод/i, ["СКС (витая пара)", "Кронштейны и аксессуары"]],
+      [/wi-?fi|радиомост|беспровод|усилител/i, ["СКС (витая пара)", "Маршрутизаторы", "Кронштейны и аксессуары"]],
       [/сервер/i, ["ИБП и электропитание", "Телекоммуникационные шкафы", "Жёсткие диски"]],
-      [/домофон/i, ["Замки и СКУД", "Терминалы и считыватели", "Кабель"]],
-      [/скуд|турникет|терминал|считыват|замок/i, ["Кронштейны и аксессуары", "ИБП и электропитание", "Кабель"]],
+      [/домофон|вызывн|внутренние монитор/i, ["Замки и СКУД", "Терминалы и считыватели", "Кабель"]],
+      [/скуд|турникет|терминал|считыват|замок|доступ|металлодетект/i, ["Кронштейны и аксессуары", "ИБП и электропитание", "Кабель"]],
       [/огнетуш/i, ["Пожарная безопасность", "Извещатели"]],
-      [/пожарн|извещател|сигнализац|оповещ/i, ["Огнетушители", "Кабель", "ИБП и электропитание"]],
-      [/pon|оптик|sfp/i, ["Оптика и аксессуары", "Инструменты"]],
+      [/охранная сигнализац/i, ["ИБП и электропитание", "Замки и СКУД", "Кабель"]],
+      [/оповещ/i, ["Приборы и модули", "Кабель", "ИБП и электропитание"]],
+      [/пожарн|извещател|сигнализац|детектор/i, ["Огнетушители", "Кабель", "ИБП и электропитание"]],
+      [/приборы и модули/i, ["Извещатели", "Оповещение", "ИБП и электропитание"]],
+      [/pon|оптик|sfp|медиаконвертер/i, ["Оптика и аксессуары", "Инструменты"]],
       [/телефон/i, ["СКС (витая пара)", "Коммутаторы"]],
+      [/кронштейн|аксессуар/i, ["IP-камеры", "PTZ-камеры", "Беспроводные камеры"]],
+      [/скс|витая пара|кабель/i, ["Коммутаторы", "Инструменты", "Кронштейны и аксессуары"]],
+      [/шкаф/i, ["ИБП и электропитание", "Коммутаторы", "Кронштейны и аксессуары"]],
+      [/инструмент/i, ["Оптика и аксессуары", "СКС (витая пара)"]],
+      [/проектн/i, ["ИБП и электропитание", "Кабель", "Извещатели"]],
+      [/умный дом/i, ["Маршрутизаторы", "Wi-Fi точки доступа"]],
+      [/жёстк|жестк/i, ["IP-видеорегистраторы (NVR)", "Видеорегистраторы (DVR)"]],
+      [/дисплеи|монитор/i, ["IP-видеорегистраторы (NVR)", "Кронштейны и аксессуары", "Кабель"]],
+      [/ибп|электропитан/i, ["Телекоммуникационные шкафы", "Кабель"]],
     ];
     let accessoryItems: any[] = [];
     if (categoryInfo) {
@@ -279,15 +293,46 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       if (accCats.length) {
         try {
           const lists = await Promise.all(
-            accCats.slice(0, 3).map((n) => getProducts(1, 3, { type: n }).catch(() => ({ items: [] as any[] })))
+            accCats.slice(0, 3).map((n) => getProducts(1, 12, { type: n }).catch(() => ({ items: [] as any[] })))
           );
+          // Релевантность вместо «первых по алфавиту»: скоринг (ценовой коридор 3–70% от
+          // цены товара + родной бренд) и детерминированная ротация от id товара —
+          // разные карточки показывают разные аксессуары (шире сетка внутренних ссылок).
+          const prodUzs = (() => {
+            const n = Number(product.price);
+            if (!Number.isFinite(n) || n <= 0) return 0;
+            return (product as any).isUsd ? n * usdToUzs : n;
+          })();
+          const seed = Array.from(String(product.id)).reduce((s, ch) => (s * 31 + ch.charCodeAt(0)) >>> 0, 7);
           const seen = new Set<string>([product.id, ...similarItems.map((p: any) => p.id)]);
-          for (const l of lists) {
-            for (const p of l.items as any[]) {
-              if (!seen.has(p.id)) { seen.add(p.id); accessoryItems.push(p); }
+          const perType: any[][] = lists.map((l, ti) => {
+            const pool = (l.items as any[]).filter((p) => !seen.has(p.id));
+            const score = (p: any) => {
+              let s = 0;
+              const raw = Number(p.price);
+              const pu = Number.isFinite(raw) && raw > 0 ? (p.isUsd ? raw * usdToUzs : raw) : 0;
+              if (prodUzs > 0 && pu > 0 && pu >= prodUzs * 0.03 && pu <= prodUzs * 0.7) s += 2;
+              if (p.brandId && p.brandId === (product as any).brandId) s += 1;
+              return s;
+            };
+            const scored = pool.map((p) => [score(p), p] as const).sort((a, b) => b[0] - a[0]);
+            const topScore = scored[0]?.[0] ?? 0;
+            const top = scored.filter(([s]) => s === topScore).map(([, p]) => p);
+            const rest = scored.filter(([s]) => s !== topScore).map(([, p]) => p);
+            const off = top.length ? (seed + ti) % top.length : 0;
+            return [...top.slice(off), ...top.slice(0, off), ...rest];
+          });
+          // Round-robin по типам: смесь аксессуаров вместо трёх подряд из одного типа
+          for (let round = 0; accessoryItems.length < 6 && round < 12; round++) {
+            let took = false;
+            for (const pool of perType) {
+              const p = pool.shift();
+              if (!p || seen.has(p.id)) continue;
+              seen.add(p.id); accessoryItems.push(p); took = true;
+              if (accessoryItems.length >= 6) break;
             }
+            if (!took) break;
           }
-          accessoryItems = accessoryItems.slice(0, 6);
         } catch {
           // ignore
         }
@@ -712,11 +757,13 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         {accessoryItems.length > 0 && (
           <div className="mt-8">
             <div className="mb-3 text-lg font-bold tracking-tight">{t("product.boughtWith")}</div>
-            <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
-              {accessoryItems.map((p: any) => (
-                <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
-              ))}
-            </div>
+            <CrossSellClick>
+              <div className="grid gap-2.5 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6">
+                {accessoryItems.map((p: any) => (
+                  <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
+                ))}
+              </div>
+            </CrossSellClick>
           </div>
         )}
       </div>
