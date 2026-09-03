@@ -443,7 +443,47 @@
           "q": "Mevcut sistemle entegre edilebilir mi?",
           "a": "Evet, çoğu durumda analitik, sunucu yazılımı aracılığıyla halihazırda kurulu kameralara eklenebilir."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Video analitikte üç senaryo",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Kamera üstü analitik",
+            "for": "Mağaza, ofis, avlu",
+            "items": [
+              "Çizgi geçişi, bölgeye giriş",
+              "Filtre: insan/araç, kediden yanlış alarm yok",
+              "Telefona bildirimler",
+              "AcuSense/SMD kameralarda çalışır"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Yüz ve plaka tanıma",
+            "for": "Giriş noktası, otopark, AVM",
+            "items": [
+              "Yüzler: beyaz/kara listeler, fotoğrafla arama",
+              "Plakalar: beyaz listeyle otomatik giriş",
+              "Geçiş kontrolü ve bariyerle entegrasyon",
+              "Olay raporları"
+            ],
+            "term": "Süre: 3–7 gün"
+          },
+          {
+            "name": "Sunucu analitiği",
+            "for": "Zincir, üretim, şehir",
+            "items": [
+              "Ziyaretçi sayımı, ısı haritaları",
+              "Baret/yelek, kalabalık algılama",
+              "Tek sunucuya onlarca kamera",
+              "Yöneticiye panolar"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "anpr": {
       "title": "Plaka tanıma",
@@ -1344,7 +1384,47 @@
           "q": "Yangın sistemiyle entegre mi?",
           "a": "Evet, sesli tahliye sistemi yangın alarmıyla birlikte çalışır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üç tip anons sistemi",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Fon müziği ve anonslar",
+            "for": "Kafe, mağaza, showroom",
+            "items": [
+              "Bölge bölge tavan hoparlörleri",
+              "Anons mikrofonu",
+              "Kaynaklar: çalar, yayın, PC",
+              "Bölge bazlı ses ayarı"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Sesli tahliye (SOUE)",
+            "for": "Ofis, AVM, okul, klinik",
+            "items": [
+              "Normlara uygun sesli anons",
+              "Yangın alarmından otomatik başlama",
+              "Bölgeler ve mesaj öncelikleri",
+              "Proje ve makamlara teslim"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Çok bölgeli kompleks",
+            "for": "Fabrika, gar, stadyum",
+            "items": [
+              "Ayrı yönetilen onlarca bölge",
+              "Yayın, tahliye ve operatör anonsu",
+              "Yedekli amfiler ve hatlar",
+              "Hat bütünlüğü denetimi"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "barrier": {
       "title": "Bariyerler & otomasyon",
@@ -1463,7 +1543,47 @@
           "q": "Video gözetimle entegre mi?",
           "a": "Evet, çevre alarmı ilgili bölgenin görüntüsünü operatöre otomatik getirir."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Çevre korumada üç hat",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Çevre video analitiği",
+            "for": "Avlu, depo, otopark",
+            "items": [
+              "Sanal çizgili IP kameralar",
+              "İnsan/araç filtresi, yanlış alarmsız",
+              "Olayda siren ve projektör",
+              "Telefona kareli bildirimler"
+            ],
+            "term": "Süre: 2–5 gün"
+          },
+          {
+            "name": "Çitte sensörler",
+            "for": "Fabrika, depo sahası, çiftlik",
+            "items": [
+              "Çitte titreşim kablosu",
+              "Açık kesimlerde ışın bariyerleri",
+              "Tetiklenme PTZ kamerayı yönlendirir",
+              "Güvenlik noktası için haritalı bölgeler"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Kombine hat",
+            "for": "Havalimanı, santral, büyük saha",
+            "items": [
+              "Doğrulamalı iki bağımsız hat",
+              "Kritik yönlerde termal kameralar",
+              "Hırsız alarmıyla entegrasyon",
+              "Sözleşmeyle mevsimlik yeniden ayar"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "bus": {
       "title": "Ulaşım · Akıllı Otobüs",
@@ -1489,7 +1609,47 @@
           "q": "Yolcu sayımı ne kazandırır?",
           "a": "Sefer ve durak bazlı gerçek yolcu akışı: güzergâh ve aralık planlaması ile taşıma idaresine raporlama için veri."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Ulaşım için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Kabinde video kaydı",
+            "for": "Otobüs, minibüs, taksi filosu",
+            "items": [
+              "Taşıt sınıfı kabin ve yol kameraları",
+              "Güç korumalı kayıt cihazı",
+              "Vardiyalık yerel arşiv",
+              "Sürücünün panik butonu"
+            ],
+            "term": "Süre: araç başına 1 gün"
+          },
+          {
+            "name": "Filoyu çevrimiçi izleme",
+            "for": "Filo, taşıyıcı",
+            "items": [
+              "4G ile merkeze aktarım",
+              "Konum ve talep üzerine video",
+              "Garaj Wi-Fi'ıyla arşiv aktarımı",
+              "Kapsama dışı bölgelerde tamponlama"
+            ],
+            "term": "Süre: araç başına 2–3 gün"
+          },
+          {
+            "name": "Analitikli filo",
+            "for": "Şehir taşıyıcısı, lojistik",
+            "items": [
+              "Kapı bazlı yolcu sayımı",
+              "Sefer ve durak raporları",
+              "Sürücü yorgunluk takibi (DSM)",
+              "Yaygınlaştırmadan önce 2–3 araçlık pilot"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "city": {
       "title": "Güvenli Şehir",
@@ -1515,7 +1675,47 @@
           "q": "Şehre ne kadar arşiv derinliği gerekir?",
           "a": "Kamera kategorisine bağlıdır: kavşaklar ve sosyal tesisler — 30 gün ve fazlası, genel bakış noktaları — daha az. Depolama tek rakamla değil, kategorilere göre hesaplanır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Şehir sistemlerinde üç ölçek",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Pilot bölge",
+            "for": "Semt, mahalle, park",
+            "items": [
+              "Kameralı birkaç kavşak",
+              "Plaka ve olay analitiği",
+              "İletişim kanalı ve yerel depolama",
+              "Operatör çalışma yeri"
+            ],
+            "term": "Süre: 1–3 ay"
+          },
+          {
+            "name": "Durum merkezi",
+            "for": "Şehir, bölge, kurum",
+            "items": [
+              "Video duvarı ve çalışma yerleri",
+              "Müdahale prosedürleri",
+              "Kurumlar için rol modeli",
+              "Ucell merkezi deneyimi"
+            ],
+            "term": "Süre: projeye göre"
+          },
+          {
+            "name": "Şehir kamera ağı",
+            "for": "Güvenli Şehir",
+            "items": [
+              "Yedekli omurga fiber",
+              "Kategori bazlı depolamalı veri merkezi",
+              "Etaplama: sıra sıra",
+              "Kalibrasyonlu deneme işletmesi"
+            ],
+            "term": "Süre: kademeli"
+          }
+        ]
+      }
     },
     "parking": {
       "title": "Akıllı Otopark",
@@ -1634,7 +1834,47 @@
           "q": "Ziyaretçi sayımı ayrı bir sistem mi?",
           "a": "Hayır, sayaçlar aynı kamera sistemine dâhildir. Güvenlik görevlerine ek olarak pazarlama için trafik ve dönüşüm raporlarını ayarlarız."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Perakende için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Tek mağaza",
+            "for": "200 m²'ye kadar nokta",
+            "items": [
+              "4–8 kamera: kasa, salon, giriş, depo",
+              "Videonun fişlerle bağı",
+              "Telefondan izleme",
+              "Geceye hırsız alarmı"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Süpermarket veya AVM",
+            "for": "Büyük format",
+            "items": [
+              "Planograma göre tam salon kapsaması",
+              "Girişlerde ziyaretçi sayaçları",
+              "Servis bölgelerine geçiş kontrolü",
+              "Anonslu yangın alarmı"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Mağaza zinciri",
+            "for": "5 noktadan itibaren",
+            "items": [
+              "Yeni noktaya tip set",
+              "Ofisten merkezî erişim",
+              "Tek bakım sözleşmesi",
+              "Pazarlamaya trafik raporları"
+            ],
+            "term": "Süre: nokta 1–3 günde"
+          }
+        ]
+      }
     },
     "bank": {
       "title": "Bankalar & ofisler",
@@ -1660,7 +1900,47 @@
           "q": "Video arşivi ne kadar tutulur?",
           "a": "Arşiv derinliğini bankanın gereksinimlerine göre hesaplarız — 30 gün ve fazlası. RAID depolama koyar, devreye aldıktan sonra gerçek yük altında fiili derinliği kontrol ederiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Banka için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Banka şubesi",
+            "for": "Şube, mini ofis",
+            "items": [
+              "Vezne, salon ve ATM kameraları",
+              "Merkeze bağlı panik butonları",
+              "Servis odalarına geçiş kontrolü",
+              "Banka gereksinimlerine göre arşiv"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Vezne ünitesi ve kasa dairesi",
+            "for": "Genel müdürlük, nakit merkezi",
+            "items": [
+              "Banknot ve yüzlerin okunduğu açılar",
+              "Kasaya çok faktörlü erişim",
+              "Operatör işlem kayıtları",
+              "Yedekli besleme"
+            ],
+            "term": "Süre: projeye göre"
+          },
+          {
+            "name": "Şube ağı",
+            "for": "Şubeli banka",
+            "items": [
+              "Tip şube projesi",
+              "Merkezden toplu izleme",
+              "Arşive rol bazlı erişim",
+              "Tüm noktalara SLA'lı bakım"
+            ],
+            "term": "Süre: kademeli"
+          }
+        ]
+      }
     },
     "school": {
       "title": "Eğitim",
@@ -1686,7 +1966,47 @@
           "q": "Okulda montaj için en iyi zaman ne?",
           "a": "Ana işleri tatillere planlarız: 2–4 haftada giriş ve kameralar yetişir. Ders döneminde yalnızca anlaşmayla sessiz işler yapılabilir."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Okul için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Okul girişi",
+            "for": "Okul, lise, kolej",
+            "items": [
+              "Sabah akışına göre turnikeler",
+              "Kart veya yüz, veliye bildirim",
+              "Misafir ve engelliler için kapı",
+              "Yangın sinyaliyle açılma"
+            ],
+            "term": "Süre: 2–4 hafta (tatil)"
+          },
+          {
+            "name": "Kameralar ve bahçe",
+            "for": "Okul, anaokulu",
+            "items": [
+              "Koridorlar, girişler, avlu, spor sahası",
+              "Darbeye dayanıklı gövdeler",
+              "30 günden arşiv",
+              "İdare ve güvenliğe erişim"
+            ],
+            "term": "Süre: 2–3 hafta"
+          },
+          {
+            "name": "Güvenlik kompleksi",
+            "for": "Anahtar teslim kurum",
+            "items": [
+              "Giriş + kameralar + yangın + anons",
+              "Merkeze panik butonu",
+              "Kamu alımları için evrak",
+              "Sözleşmeyle bakım"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "industry": {
       "title": "Sanayi & depolar",
@@ -1712,7 +2032,47 @@
           "q": "Geçiş kontrolünü puantaj için 1C'ye bağlar mısınız?",
           "a": "Evet. Bölgeleri ve vardiyaları ayarlarız; geçiş olayları puantaja aktarılır ve 1C'ye gider — İK, çalışılan saat verilerini elle girmeden hazır alır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üretim için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Giriş noktası ve vardiya kaydı",
+            "for": "Fabrika, atölye, kombine",
+            "items": [
+              "Kartlı veya biyometrik turnikeler",
+              "Vardiya ve fazla mesai kaydı",
+              "Puantajın 1C'ye aktarımı",
+              "Geçişlerin foto kaydı"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Atölye ve çevre kameraları",
+            "for": "Üretim sahası",
+            "items": [
+              "IP66/IP67 endüstriyel kameralar",
+              "Gece analitikli çevre",
+              "Binalar arası fiber",
+              "RAID yedekli arşiv"
+            ],
+            "term": "Süre: 2–6 hafta"
+          },
+          {
+            "name": "Fabrika güvenlik kompleksi",
+            "for": "Büyük işletme",
+            "items": [
+              "Video + geçiş + yangın + ağ",
+              "ANPR'li kantar ve giriş",
+              "Video duvarlı tek nokta",
+              "SLA ile bakım"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "residential": {
       "title": "Konut siteleri",
@@ -1738,7 +2098,47 @@
           "q": "Teslimden sonra sistemi kim bakar?",
           "a": "Sistemi eğitim ve prosedürlerle site yönetimine devreder, servisi sözleşmeyle üstleniriz — taleplerden planlı turlara kadar."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Site için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Anahtar teslim bina girişi",
+            "for": "Site yönetimi",
+            "items": [
+              "Telefona çağrı düşen IP interkom",
+              "Kilit, kapatıcı, darbeye dayanıklı panel",
+              "Giriş içinde ve kapıda kamera",
+              "Sakinlerin ahizeleri korunur"
+            ],
+            "term": "Süre: giriş başına 1–3 gün"
+          },
+          {
+            "name": "Avlu ve giriş",
+            "for": "Site, mahalle, kasaba",
+            "items": [
+              "Plaka tanımalı bariyer",
+              "Sakin araçlarının beyaz listeleri",
+              "Avlu ve oyun alanı kameraları",
+              "Uygulamadan misafir modu"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Müteahhide anahtar teslim site",
+            "for": "Yeni proje",
+            "items": [
+              "İnce işlerden önce zayıf akım projesi",
+              "İnterkom, video, geçiş, otopark",
+              "Yönetime eğitimli devir",
+              "Teslimden sonra servis sözleşmesi"
+            ],
+            "term": "Süre: inşaat takvimine göre"
+          }
+        ]
+      }
     },
     "virtualization": {
       "title": "H3C Sunucuları ve Sanallaştırma",
@@ -1781,7 +2181,45 @@
             "name": "Depolama sistemleri",
             "desc": "Sanallaştırma ve yedekleme için depolama — blok ve dosya erişimi."
           }
-        }
+        },
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Sanallaştırmada üç senaryo",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Sunucu konsolidasyonu",
+            "for": "3–10 fiziksel sunuculu şirket",
+            "items": [
+              "Servislerin sanal makinelere taşınması",
+              "Beş eski sunucu yerine tek host",
+              "Anlık görüntüler ve hızlı geri alma",
+              "Donanım ve elektrikten tasarruf"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Arıza dayanımlı küme",
+            "for": "Banka, üretim, veri merkezi",
+            "items": [
+              "2+ düğümlü H3C CAS/UIS kümesi",
+              "Kesintisiz canlı VM taşıma",
+              "Yedekli ortak depolama",
+              "Düğüm arızasında VM otomatik başlar"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Özel bulut",
+            "for": "Holding, kamu, sağlayıcı",
+            "items": [
+              "Bölüm bazlı kotalı kaynak havuzu",
+              "BT için self servis portalı",
+              "Yedekleme ve replikasyon",
+              "Sertifikalı H3C iş ortağıyız"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
       },
       "faq": [
         {
@@ -2017,7 +2455,47 @@
           "q": "Telsiz köprü seti ne kadar tutar?",
           "a": "Montaj ve ayar dahil iki antenli set — yüzlerce metre için ekonomik çözümlerden kilometreler için gigabit çözümlere. Mesafeyi söyleyin — fiyat verelim."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üç tip telsiz köprü",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Yüzlerce metreye köprü",
+            "for": "Girişteki kamera, uzak depo",
+            "items": [
+              "5 GHz çift nokta, 100+ Mbps'e kadar",
+              "PoE besleme, direğe veya duvara montaj",
+              "Hizalama ve sinyal payı",
+              "Kanaldan kat kat ucuz"
+            ],
+            "term": "Süre: 1 gün"
+          },
+          {
+            "name": "Kilometrelere omurga",
+            "for": "Şube, yolun karşısındaki atölye, kasaba",
+            "items": [
+              "Yönlü antenler, 300+ Mbps'e kadar",
+              "Fresnel bölgesi ve askı yüksekliği hesabı",
+              "İki uçta parafudr",
+              "İstek üzerine yedek kanal"
+            ],
+            "term": "Süre: 1–3 gün"
+          },
+          {
+            "name": "Köprü ağı",
+            "for": "Tarım, ocak, dağınık saha",
+            "items": [
+              "Noktadan çok noktaya topoloji",
+              "Karşılıklı parazitsiz TDMA senkronu",
+              "Tek panelde link izleme",
+              "Arazi haritasına göre proje"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "mikrotik": {
       "title": "MikroTik Kurulumu",
@@ -2051,7 +2529,47 @@
           "q": "Bakım sözleşmesi yapıyor musunuz?",
           "a": "Evet, ağı izliyor, yazılımları güncelliyor ve bakım sözleşmesi kapsamında olaylara müdahale ediyoruz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "MikroTik'te üç tipik görev",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Anahtar teslim ofis yönlendiricisi",
+            "for": "50 kişiye kadar ofis",
+            "items": [
+              "hEX/RB5009 kurulumu: internet, VLAN, Wi-Fi",
+              "Misafir ağı iş ağından ayrı",
+              "Otomatik geçişli yedek kanal",
+              "Destek için uzak erişim"
+            ],
+            "term": "Süre: 1 gün"
+          },
+          {
+            "name": "Şubeli ağ",
+            "for": "Farklı semtlerde noktaları olan şirket",
+            "items": [
+              "Ofisler arası VPN tünelleri (WireGuard/IPsec)",
+              "Tek adresleme ve yönlendirme",
+              "Telefon için trafik önceliği (QoS)",
+              "Tüm cihazların izlenmesi"
+            ],
+            "term": "Süre: 2–5 gün"
+          },
+          {
+            "name": "Sağlayıcı düğümü",
+            "for": "Site, kasaba, mini ISS",
+            "items": [
+              "NAT oturum paylı CCR yönlendiriciler",
+              "Faturalama entegrasyonu, tarifeye göre hız",
+              "Düğüm yedekliliği",
+              "Yönetici eğitimi"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "smarthome": {
       "title": "Akıllı Ev",
@@ -2347,7 +2865,47 @@
           "q": "Başkasının kurduğu otomasyonu onarıyor musunuz?",
           "a": "Evet, çoğu üreticinin motorlarını teşhis edip onarıyor; kart, fotosel ve kumanda değiştiriyoruz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Kapı otomasyonunda üç tip set",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Yana kayar kapılar",
+            "for": "Müstakil ev, avlu, depo",
+            "items": [
+              "Kanat ağırlığına ve boyuna göre motor",
+              "Fotoseller ve sinyal lambası",
+              "Kumandalar, telefondan açma",
+              "Elektrik kesilince anahtarla boşa alma"
+            ],
+            "term": "Süre: 1 gün"
+          },
+          {
+            "name": "Çift kanatlı kapılar",
+            "for": "Villa, tesis sahası",
+            "items": [
+              "Çift lineer veya kollu motor",
+              "Ağır kanatlara ve rüzgâra ayar",
+              "Sağlam kilitleme için elektrikli kilit",
+              "İnterkomla entegrasyon"
+            ],
+            "term": "Süre: 1 gün"
+          },
+          {
+            "name": "Endüstriyel ve hızlı",
+            "for": "Depo, otopark, üretim",
+            "items": [
+              "Otomasyonlu seksiyonel ve sarmal kapılar",
+              "Geçişler için hızlı PVC kapılar",
+              "Halka dedektörleri ve radarlar",
+              "Geçiş kontrolü ve ANPR bağlantısı"
+            ],
+            "term": "Süre: 2–5 gün"
+          }
+        ]
+      }
     },
     "telephony": {
       "title": "Ofis IP Telefonu",
@@ -2381,7 +2939,47 @@
           "q": "Ofis için IP telefon ne kadar tutar?",
           "a": "Çalışan sayısına ve senaryolara bağlı. Kaç çalışma yeri olduğunu söyleyin — santral, Fanvil telefonlar ve kurulumu hesaplayalım."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "IP telefonda üç format",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Ofis santrali",
+            "for": "30 kişiye kadar ofis",
+            "items": [
+              "Sanal veya yerel santral",
+              "Dahili numaralar, yönlendirme, sesli posta",
+              "Görüşme kaydı",
+              "Mevcut numaraların taşınması"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Çağrı merkezi",
+            "for": "Satış, destek",
+            "items": [
+              "Çağrı kuyrukları ve IVR senaryoları",
+              "CRM entegrasyonu: aramada müşteri kartı açılır",
+              "İstatistik: kaçan çağrılar, yanıt süresi",
+              "Kulaklıklı çalışma yerleri"
+            ],
+            "term": "Süre: 3–7 gün"
+          },
+          {
+            "name": "Şube ağı telefonu",
+            "for": "Ülke genelinde noktaları olan şirket",
+            "items": [
+              "Tek numaralandırma planı",
+              "Ofisler arası ücretsiz aramalar",
+              "Şehre göre yönlendirme",
+              "Kanal yedekliliği"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "servers": {
       "title": "Sipariş Üzerine Sunucular",
@@ -2512,7 +3110,47 @@
           "q": "Soğuk depolarda durum ne?",
           "a": "Dondurucu bölgeler için genişletilmiş sıcaklık aralıklı ve ısıtmalı kameralar kullanır, güç kaynaklarını sıcak odalara taşırız. Bu standart bir çözümdür, egzotik değil."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Depo için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Mal kabul ve sevkiyat",
+            "for": "Depo, dağıtım merkezi",
+            "items": [
+              "Rampalarda plakası okunur kameralar",
+              "Girişte ANPR, irsaliyelerle bağ",
+              "Zamana ve kapıya göre arama",
+              "İtirazlar için görüntü aktarımı"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Tam depo kapsaması",
+            "for": "Lojistik kompleksi",
+            "items": [
+              "Koridor boyu ve sıra başı kameralar",
+              "Soğuk bölgelere ısıtmalı kameralar",
+              "Video için ayrı ağ",
+              "30 günden arşiv"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Depo + geçiş + kayıt",
+            "for": "3PL, e-ticaret, üretim",
+            "items": [
+              "Servis bölgelerine geçiş kontrolü",
+              "Vardiya mesai takibi",
+              "Panik butonları ve hırsız alarmı",
+              "Tek izleme noktası"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "construction": {
       "title": "Construction sites",
@@ -2538,7 +3176,47 @@
           "q": "Şantiye telefondan izlenebilir mi?",
           "a": "Evet, müşteri ve ana yüklenici kendi kameralarını uygulamada canlı görür; arşiv dâhil. Haklar sorumluluk alanlarına göre ayrı ayarlanır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Şantiye için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Otonom izleme direği",
+            "for": "Yeni başlayan saha",
+            "items": [
+              "Kamera + 4G + yedek akü",
+              "Ağsız ve elektriksiz 1–2 günde açılış",
+              "Müşteri telefondan izler",
+              "Direğin saatler içinde taşınması"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Kontrol altındaki saha",
+            "for": "Aktif inşaat",
+            "items": [
+              "Genel plana göre direkler",
+              "Malzeme deposuna gece analitiği",
+              "Giriş: işçi ve araç sayımı",
+              "Ana yüklenici ve işverene ayrı erişim"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Şantiye → kalıcı sistem",
+            "for": "Projenin bitişi",
+            "items": [
+              "Kameraların proje şemasına geçirilmesi",
+              "Kablo hatları ve kalıcı besleme",
+              "Biten binanın geçiş kontrolü ve interkomu",
+              "Uygulama dokümantasyonu"
+            ],
+            "term": "Süre: teslim takvimine göre"
+          }
+        ]
+      }
     },
     "medical": {
       "title": "Clinics and hospitals",
@@ -2564,7 +3242,47 @@
           "q": "Klinik için geçiş kontrolüne ne girer?",
           "a": "Bölümlere, eczaneye, laboratuvarlara ve sistem odasına kartlı giriş, personelin vardiya bazlı mesai takibi, noktalarda panik butonları ve güvenlikle bağlantı."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Klinik için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Özel klinik",
+            "for": "Diş, tıp merkezi",
+            "items": [
+              "Koridor ve girişlerde kameralar — muayenehanede değil",
+              "Danışmada panik butonları",
+              "Servis odalarına geçiş kontrolü",
+              "Verme prosedürlü arşiv"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Çok branşlı merkez",
+            "for": "Yataklı klinik",
+            "items": [
+              "Bölüm bazlı erişim bölgeleme",
+              "Personel mesai takibi",
+              "Sağlık normlarına göre yangın alarmı",
+              "Kabulü durdurmadan montaj"
+            ],
+            "term": "Süre: 3–6 hafta"
+          },
+          {
+            "name": "Eczane ve ilaç deposu",
+            "for": "Eczane zinciri, distribütör",
+            "items": [
+              "İlaçlara erişim kontrolü",
+              "Teslim bölgesi ve depo videosu",
+              "Buzdolabı sıcaklık izleme",
+              "Tüm olayların kaydı"
+            ],
+            "term": "Süre: 1–2 hafta"
+          }
+        ]
+      }
     },
     "hotel": {
       "title": "Hotels and apart-hotels",
@@ -2590,7 +3308,47 @@
           "q": "Montaj sırasında otel kapanmalı mı?",
           "a": "Hayır. Kilitleri düşük doluluk saatlerinde kat kat değiştiririz; oda birkaç saat satışa kapalı olur. Otel normal düzende çalışır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Otel için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Oda stoğuna kilitler",
+            "for": "Otel, apart",
+            "items": [
+              "PMS'ten basılan kartlı kilitler",
+              "Misafirlere mobil anahtarlar",
+              "Personele master kartlar",
+              "Oteli kapatmadan kat kat değişim"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Ortak alan güvenliği",
+            "for": "Otel, hostel",
+            "items": [
+              "Lobi, koridor, otopark kameraları",
+              "Servis alanları ve depolara geçiş kontrolü",
+              "Yangın alarmı ve anons",
+              "Ayrı segmentte misafir Wi-Fi'ı"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Anahtar teslim otel",
+            "for": "Yeni tesis, renovasyon",
+            "items": [
+              "Kilitler + video + yangın + ağ",
+              "Otel yönetim sistemiyle entegrasyon",
+              "Otoparkta bariyer ve ANPR",
+              "Personel eğitimi ve servis"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "fuel": {
       "title": "Petrol stations and oil depots",
@@ -2616,7 +3374,47 @@
           "q": "Zincirin birkaç istasyonu birleştirilebilir mi?",
           "a": "Evet, merkezî izleme kurarız: tüm istasyonlara zincir ofisinden erişilir, yerinde yerel arşiv kalır, giriş raporları tüm zincirden toplanır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Akaryakıt istasyonu için üç tip çözüm",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Tek istasyon",
+            "for": "Benzin veya CNG istasyonu",
+            "items": [
+              "Pompa, kasa, giriş kameraları",
+              "Fiş–araç bağlantılı ANPR",
+              "Patlama bölgesine göre ekipman",
+              "Satışı durdurmadan montaj"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "İstasyon + çevre",
+            "for": "Tank sahalı istasyon",
+            "items": [
+              "Yakıt boşaltma sahası kontrolü",
+              "Gece analitikli çevre",
+              "Servis odalarına geçiş kontrolü",
+              "Merkeze panik butonu"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "İstasyon zinciri",
+            "for": "Ülke çapında zincir",
+            "items": [
+              "Tip istasyon projesi",
+              "Ofisten merkezî izleme",
+              "Tüm zincirde giriş raporları",
+              "Tek bakım sözleşmesi"
+            ],
+            "term": "Süre: istasyon 1–2 haftada"
+          }
+        ]
+      }
     },
     "ohrannye-sistemy": {
       "title": "Hırsız Alarm Sistemleri",
@@ -2642,7 +3440,47 @@
           "q": "Alarm kameralara bağlanabilir mi?",
           "a": "Evet, sensör olaylarını video kaydına bağlarız: her olayın görüntüsü olur, yanlış alarmlar azalır."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üç tip alarm seti",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Daire veya ev",
+            "for": "Konut, yazlık",
+            "items": [
+              "Hareket ve açılma sensörleri",
+              "Kumandadan veya telefondan kurma",
+              "Alarmda siren ve bildirimler",
+              "Kanal açmadan kablosuz montaj"
+            ],
+            "term": "Süre: 1 gün"
+          },
+          {
+            "name": "Ofis veya mağaza",
+            "for": "Ticari mekân",
+            "items": [
+              "Hareket, cam kırılması, açılma sensörleri",
+              "Bölge bazlı ayrı kurma",
+              "Video bağı: kareli alarm",
+              "Güvenlik şirketi merkezine aktarım"
+            ],
+            "term": "Süre: 1–2 gün"
+          },
+          {
+            "name": "Çevreli saha",
+            "for": "Depo, üretim, tesis",
+            "items": [
+              "Çevre ve iç mekân koruması",
+              "Noktalarda panik butonları",
+              "Saatlerce yedek güç",
+              "Kurma-çözme kaydı"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "intellektualnoe-upravlenie-parkingom": {
       "title": "Akıllı Otopark",
@@ -2668,7 +3506,47 @@
           "q": "Ödeme otomatikleştirilebilir mi?",
           "a": "Evet: self-servis kasalar, QR ile ödeme, süreye göre tarifeler ve kiracı abonelikleri — kasiyersiz ve nakitsiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Akıllı otoparkta üç düzey",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Otomatik giriş",
+            "for": "Avlu, ofis otoparkı",
+            "items": [
+              "Bariyer + plaka tanıma",
+              "Kumandasız beyaz liste",
+              "Uygulamadan misafir geçişleri",
+              "Fotoğraflı giriş kaydı"
+            ],
+            "term": "Süre: 2–4 gün"
+          },
+          {
+            "name": "Ücretli otopark",
+            "for": "AVM, otel, şehir otoparkı",
+            "items": [
+              "Giriş/çıkış kuleleri, bilet veya QR",
+              "Kasalar ve ödeme terminalleri",
+              "Tarifeler: saat, abonman, indirim",
+              "Boş yer panosu"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Çok katlı otopark",
+            "for": "İş merkezi, havalimanı, site",
+            "items": [
+              "Yerlerin üstünde doluluk sensörleri",
+              "Boş yere yönlendirme",
+              "Plakayla araç bulma",
+              "ANPR ve geçiş kontrolüyle entegrasyon"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "slabotochnye-sistemy": {
       "title": "Zayıf Akım Sistemleri",
@@ -2698,7 +3576,47 @@
           "q": "İnşaat firmalarından taşeronluk alıyor musunuz?",
           "a": "Evet, şantiyelerde düzenli olarak zayıf akım taşeronu olarak çalışıyoruz: ana programa uyar, etapları tutanakla kapatır, resmî teslimlere eşlik ederiz."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Zayıf akımda üç sözleşme formatı",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Anahtar teslim tek sistem",
+            "for": "Ofis, mağaza, depo",
+            "items": [
+              "SCS, video, geçiş kontrolü veya yangın — seçime göre",
+              "Proje, montaj, devreye alma",
+              "Uygulama dokümantasyonu",
+              "Garanti ve bakım"
+            ],
+            "term": "Süre: 1–3 hafta"
+          },
+          {
+            "name": "Sahaya komple paket",
+            "for": "İş merkezi, klinik, üretim",
+            "items": [
+              "Tüm alt sistemler ortak hatlarda",
+              "Tek sunucu kabini ve besleme",
+              "Senaryolar: yangın ↔ geçiş ↔ video",
+              "Dokümantasyonla paket teslim"
+            ],
+            "term": "Süre: inşaat takvimine göre"
+          },
+          {
+            "name": "Zayıf akım ana yükleniciliği",
+            "for": "Müteahhit, ana yüklenici",
+            "items": [
+              "Tüm devreye tek proje mühendisi",
+              "Ana yüklenici takvimiyle iş, etap tutanakları",
+              "Sahayı durdurmadan kademeli teslim",
+              "Taşkent depomuzdan ekipman"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     },
     "proektirovanie": {
       "title": "Güvenlik Sistemleri Projelendirme",
@@ -2728,7 +3646,47 @@
           "q": "Projelendirme ne kadar sürer?",
           "a": "Tipik ofis veya mağaza 1–2 hafta; üretim binası veya iş merkezi alan ve alt sistem sayısına göre 3 haftadan itibaren. Süreler sözleşmede sabitlenir."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üç proje formatı",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Uygulama dokümantasyonu",
+            "for": "Ofis, mağaza, klinik",
+            "items": [
+              "Yerleşim planları, şemalar, kablo defterleri",
+              "Model ve ürün kodlu spesifikasyon",
+              "Keşif hesabı",
+              "Her firmanın montajı için hazır"
+            ],
+            "term": "Süre: 1–2 hafta"
+          },
+          {
+            "name": "Onaya sunulacak proje",
+            "for": "Yangın alarmı, sesli tahliye",
+            "items": [
+              "Özbekistan ŞNK normlarına göre hesaplar",
+              "Bilirkişi ve AFAD eşdeğeriyle onay",
+              "Onaya dek görüşlere yanıtlar",
+              "Teslim için uygulama dokümanları"
+            ],
+            "term": "Süre: 2–4 hafta"
+          },
+          {
+            "name": "Kapsamlı zayıf akım projesi",
+            "for": "İş merkezi, fabrika, site",
+            "items": [
+              "Tüm alt sistemler ortak hat ve kabinlerde",
+              "Sistemler arası entegrasyon senaryoları",
+              "İnşaat takvimine göre etaplama",
+              "Montajda müellif denetimi"
+            ],
+            "term": "Süre: 3 haftadan"
+          }
+        ]
+      }
     },
     "obsluzhivanie": {
       "title": "Bakım Sözleşmeleri",
@@ -2758,7 +3716,47 @@
           "q": "Acil müdahale süresi nedir?",
           "a": "Sözleşmeye göre: tipik SLA aynı iş günü içinde ziyarettir; kritik tesislerde saatlik yanıt kararlaştırılır. Telefon ve uzaktan tanı hemen başlar."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Üç bakım formatı",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "Temel program",
+            "for": "Ofis, mağaza, küçük saha",
+            "items": [
+              "Çeyrekte bir planlı ziyaret",
+              "Dedektör ve lens temizliği, arşiv kontrolü",
+              "Denetimler için bakım defteri",
+              "Mesai saatlerinde talepler"
+            ],
+            "term": "Sözleşme: 1 yıldan"
+          },
+          {
+            "name": "SLA'lı genişletilmiş",
+            "for": "İş merkezi, üretim, klinik",
+            "items": [
+              "Programlı aylık bakımlar",
+              "Arızaya kararlaştırılan saatlerde müdahale",
+              "Yedek ekipman havuzu",
+              "Ziyaretten önce uzaktan tanı"
+            ],
+            "term": "Sözleşme: 1 yıl, saat bazlı SLA"
+          },
+          {
+            "name": "Saha ağı",
+            "for": "Şubeler, mağaza zincirleri, site yönetimleri",
+            "items": [
+              "Tüm noktalara tek sözleşme",
+              "Tek takvim ve bina bazlı raporlama",
+              "Tüm sahalar için tek telefon",
+              "Yansıtma için bina bazlı raporlar"
+            ],
+            "term": "Sözleşme: bireysel"
+          }
+        ]
+      }
     },
     "sistemnaya-integraciya": {
       "title": "Sistem Entegrasyonu",
@@ -2788,7 +3786,47 @@
           "q": "Dayanıklılık ne durumda?",
           "a": "Kritik servisler sanallaştırılmış, yedekli sunucu platformunda (H3C) çalışır; güç UPS ile, arşivler RAID ile korunur. Birleşik sistem tek arıza noktası demek değildir."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Tip çözümler",
+        "pkgTitle": "Sistem entegrasyonunda üç düzey",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "packages": [
+          {
+            "name": "İki sistemi bağlama",
+            "for": "Ofis, mağaza, klinik",
+            "items": [
+              "Geçiş + video: her giriş kareyle doğrulanır",
+              "Yangın alarmı kapıları açar",
+              "Tek olay kaydı",
+              "Mevcut ekipmanda çalışır"
+            ],
+            "term": "Süre: 1 haftadan"
+          },
+          {
+            "name": "Tek güvenlik noktası",
+            "for": "İş merkezi, fabrika, lojistik",
+            "items": [
+              "Video, geçiş ve alarm tek arayüzde",
+              "Alarma müdahale senaryoları",
+              "Operatörler için rol modeli",
+              "Yaygınlaştırmadan önce pilot bölge"
+            ],
+            "term": "Süre: 3–6 hafta"
+          },
+          {
+            "name": "İş sistemleriyle entegrasyon",
+            "for": "Büyük saha, şube ağı",
+            "items": [
+              "Geçişler 1C'ye ve puantaja akar",
+              "Yedekli sunucu platformu",
+              "Şubeler arası tek raporlama",
+              "Başlamadan önce denetim ve sistem haritası"
+            ],
+            "term": "Süre: projeye göre"
+          }
+        ]
+      }
     }
   },
   "solutionsPage": {

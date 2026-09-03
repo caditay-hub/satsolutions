@@ -443,7 +443,47 @@
           "q": "Can it be integrated with an existing system?",
           "a": "Yes, in many cases analytics can be added to cameras you already have installed through server-based software."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three video analytics scenarios",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "On-camera analytics",
+            "for": "Store, office, courtyard",
+            "items": [
+              "Line crossing, zone intrusion",
+              "Filtering: person/vehicle, no false alarms from cats",
+              "Phone notifications",
+              "Runs on AcuSense/SMD cameras"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "Face and plate recognition",
+            "for": "Checkpoint, parking, mall",
+            "items": [
+              "Faces: white/black lists, search by photo",
+              "Plates: auto-entry by whitelist",
+              "Integration with access control and the barrier",
+              "Event reports"
+            ],
+            "term": "Time: 3–7 days"
+          },
+          {
+            "name": "Server-side analytics",
+            "for": "Chain, plant, city",
+            "items": [
+              "Visitor counting, heat maps",
+              "Helmet/vest, crowd detection",
+              "Dozens of cameras per server",
+              "Dashboards for the manager"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "anpr": {
       "title": "License plate recognition",
@@ -1352,7 +1392,47 @@
           "q": "Does it integrate with the fire system?",
           "a": "Yes, the voice evacuation system works together with the fire alarm."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical PA systems",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Background music and announcements",
+            "for": "Cafe, store, showroom",
+            "items": [
+              "Ceiling speakers by zone",
+              "A microphone for announcements",
+              "Sources: player, streaming, PC",
+              "Per-zone volume control"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "Voice evacuation (SOUE)",
+            "for": "Office, mall, school, clinic",
+            "items": [
+              "Voice notification per the codes",
+              "Auto-start from the fire alarm",
+              "Zones and message priorities",
+              "Design and handover to the authorities"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A multi-zone complex",
+            "for": "Plant, station, stadium",
+            "items": [
+              "Dozens of independently controlled zones",
+              "Broadcast, evacuation and dispatcher calls",
+              "Redundant amplifiers and lines",
+              "Line integrity monitoring"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "barrier": {
       "title": "Barriers & automation",
@@ -1471,7 +1551,47 @@
           "q": "Does it integrate with video surveillance?",
           "a": "Yes, a perimeter alarm automatically brings up video from the relevant zone for the operator."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three lines of perimeter protection",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Perimeter video analytics",
+            "for": "Courtyard, warehouse, parking lot",
+            "items": [
+              "IP cameras with a virtual line",
+              "Person/vehicle filtering, no false alarms",
+              "A siren and floodlight on event",
+              "Phone notifications with a frame"
+            ],
+            "term": "Time: 2–5 days"
+          },
+          {
+            "name": "Sensors on the fence",
+            "for": "Plant, depot, farm",
+            "items": [
+              "Vibration cable on the fence",
+              "Beam barriers on open stretches",
+              "A trigger slews the PTZ camera",
+              "Zones with a map for the guard post"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A combined line",
+            "for": "Airport, power plant, large site",
+            "items": [
+              "Two independent lines with confirmation",
+              "Thermal imagers on critical directions",
+              "Integration with the intrusion alarm",
+              "Seasonal re-tuning under contract"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "bus": {
       "title": "Transport · Smart Bus",
@@ -1497,7 +1617,47 @@
           "q": "What does passenger counting give?",
           "a": "Real passenger flow by route and stop: data for planning routes, intervals and reporting to the transport authority."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical transport solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Cabin video recording",
+            "for": "Bus, minibus, taxi fleet",
+            "items": [
+              "Transport-rated cabin and road cameras",
+              "A recorder with power protection",
+              "A local archive per shift",
+              "The driver's panic button"
+            ],
+            "term": "Time: 1 day per vehicle"
+          },
+          {
+            "name": "Online fleet monitoring",
+            "for": "Fleet, carrier",
+            "items": [
+              "4G transfer to the dispatch office",
+              "Location and video on demand",
+              "Archive upload over depot Wi-Fi",
+              "Buffering in no-coverage zones"
+            ],
+            "term": "Time: 2–3 days per vehicle"
+          },
+          {
+            "name": "A fleet with analytics",
+            "for": "City carrier, logistics",
+            "items": [
+              "Passenger counting by door",
+              "Reports by trip and stop",
+              "Driver fatigue monitoring (DSM)",
+              "A 2–3 vehicle pilot before rollout"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "city": {
       "title": "Safe City",
@@ -1523,7 +1683,47 @@
           "q": "What archive depth does a city need?",
           "a": "It depends on the camera category: intersections and social facilities — 30 days and more, overview points — less. Storage is sized by category, not by a single figure."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three scales of city systems",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A pilot zone",
+            "for": "District, mahalla, park",
+            "items": [
+              "Several intersections with cameras",
+              "Plate and incident analytics",
+              "A comms channel and local storage",
+              "An operator workstation"
+            ],
+            "term": "Time: 1–3 months"
+          },
+          {
+            "name": "A situation center",
+            "for": "City, region, agency",
+            "items": [
+              "A video wall and workstations",
+              "Response procedures",
+              "A role model for agencies",
+              "The experience of the Ucell center"
+            ],
+            "term": "Time: per design"
+          },
+          {
+            "name": "A city camera network",
+            "for": "Safe City",
+            "items": [
+              "Trunk fiber with redundancy",
+              "A data center with category-based storage",
+              "Phasing: wave after wave",
+              "Trial operation with calibration"
+            ],
+            "term": "Time: in stages"
+          }
+        ]
+      }
     },
     "parking": {
       "title": "Smart Parking",
@@ -1642,7 +1842,47 @@
           "q": "Is visitor counting a separate system?",
           "a": "No, the counters are part of the same CCTV system. We set up traffic and conversion reports for marketing on top of the security tasks."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical retail solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A single store",
+            "for": "A site up to 200 m²",
+            "items": [
+              "4–8 cameras: checkout, floor, entrance, stockroom",
+              "Video linked to receipts",
+              "Viewing from the phone",
+              "A night intrusion alarm"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "A supermarket or mall",
+            "for": "Large format",
+            "items": [
+              "Full floor coverage by planogram",
+              "Visitor counters at the entrances",
+              "Access control for service zones",
+              "A fire alarm with voice notification"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A store chain",
+            "for": "From 5 sites",
+            "items": [
+              "A standard kit for a new site",
+              "Centralized access from the office",
+              "A single service contract",
+              "Traffic reports for marketing"
+            ],
+            "term": "Time: a site in 1–3 days"
+          }
+        ]
+      }
     },
     "bank": {
       "title": "Banks & offices",
@@ -1668,7 +1908,47 @@
           "q": "How long is video kept?",
           "a": "Archive depth is sized to the bank's requirements — 30 days and more. We provision RAID storage and verify the actual depth after launch under real load."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical bank solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A bank branch",
+            "for": "Branch, mini-office",
+            "items": [
+              "Cameras for tellers, the hall and ATMs",
+              "Panic buttons wired to the station",
+              "Access control for staff rooms",
+              "An archive per the bank's requirements"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "Teller unit and vault",
+            "for": "Head office, cash center",
+            "items": [
+              "Angles with readable banknotes and faces",
+              "Multi-factor vault access",
+              "Operator action logging",
+              "Redundant power"
+            ],
+            "term": "Time: per design"
+          },
+          {
+            "name": "A branch network",
+            "for": "A bank with branches",
+            "items": [
+              "A standard branch design",
+              "Centralized monitoring from HQ",
+              "A role model for archive access",
+              "SLA maintenance for all sites"
+            ],
+            "term": "Time: in stages"
+          }
+        ]
+      }
     },
     "school": {
       "title": "Education",
@@ -1694,7 +1974,47 @@
           "q": "When is the best time to install at a school?",
           "a": "Main works are planned for the holidays: 2–4 weeks is enough to fit the entrance and cameras. During the school term only quiet works are possible, by agreement."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical school solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "The school entrance",
+            "for": "School, lyceum, college",
+            "items": [
+              "Turnstiles sized for the morning flow",
+              "Cards or faces, parent notifications",
+              "A gate for guests and reduced mobility",
+              "Release on the fire signal"
+            ],
+            "term": "Time: 2–4 weeks (holidays)"
+          },
+          {
+            "name": "Cameras and the grounds",
+            "for": "School, kindergarten",
+            "items": [
+              "Corridors, entrances, yard, sports ground",
+              "Vandal-proof housings",
+              "An archive from 30 days",
+              "Access for the administration and guards"
+            ],
+            "term": "Time: 2–3 weeks"
+          },
+          {
+            "name": "A security complex",
+            "for": "A turnkey institution",
+            "items": [
+              "Entrance + cameras + fire + announcements",
+              "A panic button to the station",
+              "Documents for public procurement",
+              "Maintenance under contract"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "industry": {
       "title": "Industry & warehouses",
@@ -1720,7 +2040,47 @@
           "q": "Will you link access control to 1C for timesheets?",
           "a": "Yes. We configure zones and shifts; entry events export to the timesheet and flow into 1C — HR receives ready worked-hours data without manual entry."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical solutions for manufacturing",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Checkpoint and shift records",
+            "for": "Plant, workshop, mill",
+            "items": [
+              "Turnstiles with cards or biometrics",
+              "Shift and overtime records",
+              "Timesheet export to 1C",
+              "Photo capture of entries"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "Workshop and perimeter CCTV",
+            "for": "A production site",
+            "items": [
+              "Industrial IP66/IP67 cameras",
+              "A perimeter with night analytics",
+              "Fiber between buildings",
+              "An archive with RAID redundancy"
+            ],
+            "term": "Time: 2–6 weeks"
+          },
+          {
+            "name": "A plant security complex",
+            "for": "A large enterprise",
+            "items": [
+              "Video + access + fire + network",
+              "A weighbridge and checkpoint with ANPR",
+              "A single post with a video wall",
+              "Maintenance under SLA"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "residential": {
       "title": "Residential complexes",
@@ -1746,7 +2106,47 @@
           "q": "Who maintains the system after handover?",
           "a": "We hand the system to the management company with training and procedures, and take the servicing ourselves under contract — from requests to scheduled rounds."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical residential solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A turnkey entrance",
+            "for": "HOA, management company",
+            "items": [
+              "An IP intercom with calls to the phone",
+              "A lock, closer and vandal-proof panel",
+              "A camera in the entrance and at the door",
+              "Residents keep their handsets"
+            ],
+            "term": "Time: 1–3 days per entrance"
+          },
+          {
+            "name": "Courtyard and entry",
+            "for": "Complex, mahalla, settlement",
+            "items": [
+              "A barrier with plate recognition",
+              "Whitelists of residents' cars",
+              "Overview cameras for the yard and playgrounds",
+              "A guest mode from the app"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A turnkey complex for a developer",
+            "for": "A new build",
+            "items": [
+              "A low-current design before finishing",
+              "Intercoms, video, access, parking",
+              "Handover to the MC with training",
+              "A service contract after delivery"
+            ],
+            "term": "Time: per construction schedule"
+          }
+        ]
+      }
     },
     "virtualization": {
       "title": "H3C Servers & Virtualization",
@@ -1789,7 +2189,45 @@
             "name": "Storage systems",
             "desc": "Storage for virtualization and backups — block and file access."
           }
-        }
+        },
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three virtualization scenarios",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Server consolidation",
+            "for": "A company with 3–10 physical servers",
+            "items": [
+              "Moving services into virtual machines",
+              "One host instead of five aging servers",
+              "Snapshots and fast rollback of changes",
+              "Savings on hardware and power"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A fault-tolerant cluster",
+            "for": "Bank, plant, data center",
+            "items": [
+              "An H3C CAS/UIS cluster of 2+ nodes",
+              "Live VM migration with no downtime",
+              "Shared storage with redundancy",
+              "VM auto-restart on node failure"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A private cloud",
+            "for": "Holding, public sector, provider",
+            "items": [
+              "A resource pool with per-department quotas",
+              "A self-service portal for IT",
+              "Backup and replication",
+              "We are a certified H3C partner"
+            ],
+            "term": "Time: per design"
+          }
+        ]
       },
       "faq": [
         {
@@ -2025,7 +2463,47 @@
           "q": "How much does a radio bridge kit cost?",
           "a": "A two-antenna kit with installation and configuration starts from budget solutions for hundreds of meters to gigabit solutions for several kilometers. Tell us the distance — we'll quote you."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical radio links",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A link over hundreds of meters",
+            "for": "An entrance camera, a distant warehouse",
+            "items": [
+              "A 5 GHz pair, up to 100+ Mbps",
+              "PoE power, mast or wall mounting",
+              "Alignment and signal margin",
+              "Times cheaper than a trench"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "A trunk over kilometers",
+            "for": "A branch, a workshop across the road, a settlement",
+            "items": [
+              "Directional antennas, up to 300+ Mbps",
+              "Fresnel zone and mounting height calculation",
+              "Surge protection on both ends",
+              "A backup channel on request"
+            ],
+            "term": "Time: 1–3 days"
+          },
+          {
+            "name": "A network of links",
+            "for": "Agriculture, a quarry, a distributed site",
+            "items": [
+              "Point-to-multipoint topology",
+              "TDMA sync without mutual interference",
+              "Link monitoring in one panel",
+              "A design from the terrain map"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "mikrotik": {
       "title": "MikroTik Setup",
@@ -2059,7 +2537,47 @@
           "q": "Do you offer managed services?",
           "a": "Yes, we monitor your network, update firmware, and respond to incidents under a service agreement."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical MikroTik tasks",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A turnkey office router",
+            "for": "An office up to 50 staff",
+            "items": [
+              "hEX/RB5009 setup: internet, VLAN, Wi-Fi",
+              "A guest network separate from the working one",
+              "A backup channel with auto-failover",
+              "Remote access for support"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "A network with branches",
+            "for": "A company with sites across districts",
+            "items": [
+              "VPN tunnels between offices (WireGuard/IPsec)",
+              "Unified addressing and routing",
+              "Traffic prioritization (QoS) for telephony",
+              "Monitoring of all devices"
+            ],
+            "term": "Time: 2–5 days"
+          },
+          {
+            "name": "A provider node",
+            "for": "A residential complex, settlement, mini-ISP",
+            "items": [
+              "CCR routers with NAT-session headroom",
+              "Billing integration, speed per tariff",
+              "Node redundancy",
+              "Administrator training"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "smarthome": {
       "title": "Smart Home",
@@ -2355,7 +2873,47 @@
           "q": "Do you repair automation installed by others?",
           "a": "Yes, we diagnose and repair drives from most manufacturers, replace boards, photocells, and remote controls."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical gate automation kits",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Sliding gates",
+            "for": "Private house, courtyard, warehouse",
+            "items": [
+              "A drive sized for the leaf weight and length",
+              "Photocells and a signal lamp",
+              "Remotes, opening from the phone",
+              "Key release during a power cut"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "Swing gates",
+            "for": "Cottage, company grounds",
+            "items": [
+              "A pair of linear or arm drives",
+              "Tuning for heavy leaves and wind",
+              "An electric lock for firm holding",
+              "Intercom integration"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "Industrial and high-speed",
+            "for": "Warehouse, parking, plant",
+            "items": [
+              "Sectional and roller doors with automation",
+              "High-speed PVC doors for passages",
+              "Loop detectors and radars",
+              "A link to access control and ANPR"
+            ],
+            "term": "Time: 2–5 days"
+          }
+        ]
+      }
     },
     "telephony": {
       "title": "Office IP Telephony",
@@ -2389,7 +2947,47 @@
           "q": "How much does IP telephony cost for an office?",
           "a": "It depends on the number of employees and your use case. Tell us how many workstations you need — we'll calculate the PBX, Fanvil phones, and setup costs."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three IP telephony formats",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "An office PBX",
+            "for": "An office up to 30 staff",
+            "items": [
+              "A virtual or local PBX",
+              "Extensions, forwarding, voicemail",
+              "Call recording",
+              "Porting of existing numbers"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "A call center",
+            "for": "Sales, support",
+            "items": [
+              "Call queues and IVR scenarios",
+              "CRM integration: the client card pops on a call",
+              "Statistics: missed calls, response time",
+              "Workplaces with headsets"
+            ],
+            "term": "Time: 3–7 days"
+          },
+          {
+            "name": "Branch network telephony",
+            "for": "A company with sites across the country",
+            "items": [
+              "A unified numbering plan",
+              "Free calls between offices",
+              "Routing by city",
+              "Channel redundancy"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "servers": {
       "title": "Servers to Order",
@@ -2520,7 +3118,47 @@
           "q": "What about cold warehouses?",
           "a": "For freezer zones we use cameras with an extended temperature range and heating, and move power supplies into warm rooms. It is a standard solution, not an exotic one."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical warehouse solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Receiving and dispatch",
+            "for": "Warehouse, distribution center",
+            "items": [
+              "Ramp cameras with a readable plate",
+              "ANPR at the entrance, tied to waybills",
+              "Search by time and gate",
+              "Clip export for claims"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "Full warehouse coverage",
+            "for": "A logistics complex",
+            "items": [
+              "Cameras along aisles and at row ends",
+              "Cold zones — heated cameras",
+              "A separate network for video",
+              "An archive from 30 days"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "Warehouse + access + records",
+            "for": "3PL, e-commerce, manufacturing",
+            "items": [
+              "Access control to service zones",
+              "Shift time attendance",
+              "Panic buttons and an intrusion alarm",
+              "A single monitoring post"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "construction": {
       "title": "Construction sites",
@@ -2546,7 +3184,47 @@
           "q": "Can the site be watched from a phone?",
           "a": "Yes, the client and the general contractor see their cameras in the app in real time, archive included. Rights are set separately by area of responsibility."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical construction solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "An autonomous surveillance post",
+            "for": "A starting site",
+            "items": [
+              "A camera + 4G + backup battery",
+              "Launch in 1–2 days with no network or power",
+              "The client watches from the phone",
+              "Post relocation in hours"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "A site under control",
+            "for": "Active construction",
+            "items": [
+              "Posts per the construction master plan",
+              "Night analytics for the materials store",
+              "A checkpoint: workers and vehicles counted",
+              "Separate access for the GC and the client"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "Construction → a permanent system",
+            "for": "Project completion",
+            "items": [
+              "Migrating cameras to the design scheme",
+              "Cable routes and regular power",
+              "Access control and intercoms of the finished building",
+              "As-built documentation"
+            ],
+            "term": "Time: per the handover schedule"
+          }
+        ]
+      }
     },
     "medical": {
       "title": "Clinics and hospitals",
@@ -2572,7 +3250,47 @@
           "q": "What does access control for a clinic include?",
           "a": "Card access to departments, the pharmacy, laboratories and the server room, staff time tracking by shifts, panic buttons at the posts and a link to security."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical clinic solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A private clinic",
+            "for": "Dentistry, medical center",
+            "items": [
+              "Cameras in corridors and entrances — not consulting rooms",
+              "Panic buttons at reception",
+              "Access control for staff rooms",
+              "An archive with a release procedure"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A multi-specialty center",
+            "for": "A clinic with an inpatient ward",
+            "items": [
+              "Access zoning by department",
+              "Staff time attendance",
+              "A fire alarm per healthcare norms",
+              "Installation without stopping admissions"
+            ],
+            "term": "Time: 3–6 weeks"
+          },
+          {
+            "name": "A pharmacy and drug store",
+            "for": "Pharmacy chain, distributor",
+            "items": [
+              "Access control for medications",
+              "Video of the dispensing zone and store",
+              "Temperature monitoring of refrigerators",
+              "Logging of every event"
+            ],
+            "term": "Time: 1–2 weeks"
+          }
+        ]
+      }
     },
     "hotel": {
       "title": "Hotels and apart-hotels",
@@ -2598,7 +3316,47 @@
           "q": "Does the hotel need to close during installation?",
           "a": "No. We replace locks floor by floor during low-occupancy hours; a room is unavailable for sale for a few hours. The hotel operates as usual."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical hotel solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Locks for the room stock",
+            "for": "Hotel, apartments",
+            "items": [
+              "Card locks issued from the PMS",
+              "Mobile keys for guests",
+              "Master cards for staff",
+              "Floor-by-floor replacement without closing"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "Common area security",
+            "for": "Hotel, hostel",
+            "items": [
+              "Cameras for the lobby, corridors, parking",
+              "Access control for service zones and stores",
+              "A fire alarm and voice notification",
+              "Guest Wi-Fi on a separate segment"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A turnkey hotel",
+            "for": "A new site, renovation",
+            "items": [
+              "Locks + video + fire + network",
+              "Integration with the hotel management system",
+              "A barrier and ANPR at the parking",
+              "Staff training and service"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "fuel": {
       "title": "Petrol stations and oil depots",
@@ -2624,7 +3382,47 @@
           "q": "Can several stations of a chain be united?",
           "a": "Yes, we build centralized monitoring: all stations are reachable from the head office, a local archive stays on site, and entry reports are collected across the chain."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical fuel station solutions",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "A single station",
+            "for": "Petrol or CNG station",
+            "items": [
+              "Cameras for pumps, checkout, entrance",
+              "ANPR with a receipt–car link",
+              "Equipment by explosion-hazard zone",
+              "Installation without stopping sales"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "Station + perimeter",
+            "for": "A station with a tank farm",
+            "items": [
+              "Control of the fuel offloading pad",
+              "A perimeter with night analytics",
+              "Access control for staff rooms",
+              "A panic button to the station"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A station chain",
+            "for": "A chain across the country",
+            "items": [
+              "A standard station design",
+              "Centralized monitoring from the office",
+              "Entry reports across the chain",
+              "A single service contract"
+            ],
+            "term": "Time: a station in 1–2 weeks"
+          }
+        ]
+      }
     },
     "ohrannye-sistemy": {
       "title": "Intruder Alarm Systems",
@@ -2650,7 +3448,47 @@
           "q": "Can the alarm be linked to cameras?",
           "a": "Yes, we link sensor events to video recording: every event comes with footage, and false alarms drop."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three typical alarm kits",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Apartment or house",
+            "for": "Home, dacha",
+            "items": [
+              "Motion and opening sensors",
+              "Arming from a fob or the phone",
+              "A siren and notifications on alarm",
+              "Wireless installation without chasing"
+            ],
+            "term": "Time: 1 day"
+          },
+          {
+            "name": "Office or store",
+            "for": "Commercial premises",
+            "items": [
+              "Motion, glass-break and opening sensors",
+              "Separate arming by zone",
+              "A video link: an alarm with a frame",
+              "Output to a security company's station"
+            ],
+            "term": "Time: 1–2 days"
+          },
+          {
+            "name": "A site with a perimeter",
+            "for": "Warehouse, plant, depot",
+            "items": [
+              "Perimeter and indoor protection",
+              "Panic buttons at the posts",
+              "Backup power for hours of operation",
+              "An arming and disarming log"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "intellektualnoe-upravlenie-parkingom": {
       "title": "Smart Parking",
@@ -2676,7 +3514,47 @@
           "q": "Can payment be automated?",
           "a": "Yes: self-service pay stations, QR payment, time-based tariffs and tenant subscriptions — no cashier, no cash."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three levels of smart parking",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Automatic entry",
+            "for": "Courtyard, office lot",
+            "items": [
+              "A barrier + plate recognition",
+              "A whitelist with no remotes",
+              "Guest passes from the app",
+              "An entry log with photos"
+            ],
+            "term": "Time: 2–4 days"
+          },
+          {
+            "name": "Paid parking",
+            "for": "Mall, hotel, city lot",
+            "items": [
+              "Entry/exit terminals, tickets or QR",
+              "Pay stations and terminals",
+              "Tariffs: hours, passes, discounts",
+              "A free-space display"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A multi-level garage",
+            "for": "Business center, airport, residential complex",
+            "items": [
+              "Occupancy sensors above the spaces",
+              "Navigation to a free space",
+              "Find-my-car by plate",
+              "Integration with ANPR and access control"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "slabotochnye-sistemy": {
       "title": "Low-Voltage Systems",
@@ -2706,7 +3584,47 @@
           "q": "Do you take subcontracts from construction companies?",
           "a": "Yes, we regularly act as the low-voltage subcontractor on construction sites: following the general schedule, closing stages with acts, and supporting the handover to the authorities."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three low-current contract formats",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "One turnkey system",
+            "for": "Office, store, warehouse",
+            "items": [
+              "SCS, video, access control or fire — your pick",
+              "Design, installation, commissioning",
+              "As-built documentation",
+              "Warranty and maintenance"
+            ],
+            "term": "Time: 1–3 weeks"
+          },
+          {
+            "name": "A complex for the site",
+            "for": "Business center, clinic, plant",
+            "items": [
+              "All subsystems in shared routes",
+              "A single server rack and power",
+              "Scenarios: fire ↔ access ↔ video",
+              "Handover as a package with documentation"
+            ],
+            "term": "Time: per construction schedule"
+          },
+          {
+            "name": "General low-current contractor",
+            "for": "Developer, general contractor",
+            "items": [
+              "One project engineer for the whole loop",
+              "Work to the GC schedule, staged acts",
+              "Staged handover without stopping the site",
+              "Equipment from our Tashkent warehouse"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     },
     "proektirovanie": {
       "title": "Security Systems Design",
@@ -2736,7 +3654,47 @@
           "q": "How long does design take?",
           "a": "A typical office or shop — 1–2 weeks; a production building or business centre — from 3 weeks depending on area and subsystems. Deadlines are fixed in the contract."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three design formats",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Working documentation",
+            "for": "Office, store, clinic",
+            "items": [
+              "Layout plans, diagrams, cable logs",
+              "A specification with models and part numbers",
+              "A cost estimate",
+              "Ready for installation by any company"
+            ],
+            "term": "Time: 1–2 weeks"
+          },
+          {
+            "name": "A design for expert review",
+            "for": "Fire alarm, voice evacuation",
+            "items": [
+              "Calculations per Uzbekistan's ShNK codes",
+              "Approval with the review board and MChS",
+              "Responses to remarks until approval",
+              "As-built documentation for handover"
+            ],
+            "term": "Time: 2–4 weeks"
+          },
+          {
+            "name": "A comprehensive low-current design",
+            "for": "Business center, plant, residential complex",
+            "items": [
+              "All subsystems in shared routes and racks",
+              "Cross-system integration scenarios",
+              "Phasing matched to the construction schedule",
+              "Designer supervision during installation"
+            ],
+            "term": "Time: from 3 weeks"
+          }
+        ]
+      }
     },
     "obsluzhivanie": {
       "title": "Maintenance Contracts",
@@ -2766,7 +3724,47 @@
           "q": "What is the emergency response time?",
           "a": "Per contract: the typical SLA is a same-business-day visit; for critical sites we agree response in hours. Phone and remote diagnostics start immediately."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three service formats",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Basic schedule",
+            "for": "Office, store, small site",
+            "items": [
+              "Scheduled visits once a quarter",
+              "Detector and lens cleaning, archive check",
+              "A maintenance log for inspections",
+              "Requests during working hours"
+            ],
+            "term": "Contract: from 1 year"
+          },
+          {
+            "name": "Extended with SLA",
+            "for": "Business center, plant, clinic",
+            "items": [
+              "Monthly scheduled maintenance",
+              "Emergency response within agreed hours",
+              "A pool of replacement equipment",
+              "Remote diagnostics before the visit"
+            ],
+            "term": "Contract: 1 year, SLA in hours"
+          },
+          {
+            "name": "A network of sites",
+            "for": "Branches, store chains, property managers",
+            "items": [
+              "One contract for all sites",
+              "A single schedule and per-building reporting",
+              "One phone number for every site",
+              "Per-building reports for cost recharging"
+            ],
+            "term": "Contract: individual"
+          }
+        ]
+      }
     },
     "sistemnaya-integraciya": {
       "title": "System Integration",
@@ -2796,7 +3794,47 @@
           "q": "What about resilience?",
           "a": "Critical services run on a virtualised, redundant server platform (H3C); power is protected by UPS, archives by RAID. A unified system does not mean a single point of failure."
         }
-      ]
+      ],
+      "details": {
+        "pkgLabel": "Typical solutions",
+        "pkgTitle": "Three levels of system integration",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "packages": [
+          {
+            "name": "Linking two systems",
+            "for": "Office, store, clinic",
+            "items": [
+              "Access + video: every entry confirmed by a frame",
+              "Fire alarm releases the doors",
+              "A single event log",
+              "Runs on existing equipment"
+            ],
+            "term": "Time: from 1 week"
+          },
+          {
+            "name": "A single guard post",
+            "for": "Business center, plant, logistics",
+            "items": [
+              "Video, access and alarm in one interface",
+              "Alarm response scenarios",
+              "A role model for operators",
+              "A pilot area before the rollout"
+            ],
+            "term": "Time: 3–6 weeks"
+          },
+          {
+            "name": "Integration with business systems",
+            "for": "Large site, branch network",
+            "items": [
+              "Entries flow into 1C and time attendance",
+              "A redundant server platform",
+              "Unified reporting across branches",
+              "An audit and system map before the start"
+            ],
+            "term": "Time: per design"
+          }
+        ]
+      }
     }
   },
   "solutionsPage": {
