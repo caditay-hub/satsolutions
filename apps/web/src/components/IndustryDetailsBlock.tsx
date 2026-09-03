@@ -85,7 +85,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
                 </div>
                 <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-slate-100">
                   <Image
-                    src={`${IMG_BASE}/${industryKey}-1.jpg?v=10`}
+                    src={`${IMG_BASE}/${industryKey}-1.jpg?v=11`}
                     alt={d.specificsTitle}
                     fill
                     sizes="(max-width: 1024px) 100vw, 45vw"

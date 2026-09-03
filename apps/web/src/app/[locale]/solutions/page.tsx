@@ -87,7 +87,7 @@ function SolutionCard({ k, title, desc, more }: { k: string; title: string; desc
     >
       <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
         <Image
-          src={`${IMG_BASE}/${k}.jpg?v=9`}
+          src={`${IMG_BASE}/${k}.jpg?v=11`}
           alt={title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1280px) 33vw, 25vw"

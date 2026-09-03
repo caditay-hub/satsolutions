@@ -88,7 +88,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
   const isInd = svc.group === "industry";
   // Отраслевые: первое фото галереи уходит в секцию «Специфика объекта» — в галерее не дублируем
-  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=10`).slice(isInd ? 1 : 0);
+  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=11`).slice(isInd ? 1 : 0);
   // Полоса цифр и цветная полоса формы — только на отраслевых (вариант А «журнальный ритм»)
   const tst = isInd ? await getTranslations({ locale, namespace: "industryStats" }) : null;
   const tpf = isInd ? await getTranslations({ locale, namespace: "projectForm" }) : null;
@@ -237,7 +237,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <section className="relative overflow-hidden bg-[#031422] text-white">
             <div className="absolute inset-0" aria-hidden>
               <Image
-                src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
+                src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
                 alt=""
                 fill
                 sizes="100vw"
@@ -308,7 +308,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
               <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[16/9]">
                 <Image
-                  src={`${IMG_BASE}/${svc.key}.jpg?v=10`}
+                  src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
                   alt={title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
