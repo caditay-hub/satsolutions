@@ -663,4 +663,8 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   "rubezh-ivepr-12-3-5-rs-r3-2kh7-br-k1-1913": "rubezh",
   "rubezh-iz-1-r3-1600": "rubezh",
   "rubezh-mpt-1-ikz-r3-14501": "rubezh",
+  // 2026-09-03: склейка дублей после партий новинок 02.09 —
+  // DS-K7P03 (дубль бесконтактной DS-K7P03A), pxt-UAP-AC-Pro (дубль ubnt-карточки).
+  "hik-ds-k7p03": "hikvision",
+  "pxt-uap-ac-pro": "ubiquiti",
 };
