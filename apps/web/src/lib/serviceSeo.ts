@@ -10,6 +10,26 @@
 export type ServiceSeo = { h1: string; title: string; desc: string };
 
 const ru: Record<string, ServiceSeo> = {
+  "sistemnaya-integraciya": {
+    h1: "Системная интеграция в Ташкенте — безопасность и ИТ в одном комплексе",
+    title: "Системный интегратор в Ташкенте — безопасность, сети, серверы | SAT",
+    desc: "Системная интеграция: видеонаблюдение, СКУД, сигнализация, сети и серверы в едином комплексе. Открытые протоколы, интеграция с 1С, серверы H3C, единый пост. Аудит бесплатно, Ташкент и регионы.",
+  },
+  "obsluzhivanie": {
+    h1: "Обслуживание пожарной сигнализации и систем безопасности — Ташкент",
+    title: "Техническое обслуживание пожарной сигнализации, видеонаблюдения | SAT",
+    desc: "Договор ТО в Ташкенте: регламентные проверки АПС и СОУЭ по нормам, обслуживание видеонаблюдения и СКУД, аварийные выезды, журнал для инспекции, подменный фонд. Чужой монтаж берём после аудита.",
+  },
+  "proektirovanie": {
+    h1: "Проектирование систем безопасности в Ташкенте — АПС, видео, СКУД",
+    title: "Проектирование пожарной сигнализации и систем безопасности | SAT",
+    desc: "Рабочие проекты по нормам РУз: пожарная сигнализация (ШНК), видеонаблюдение, СКУД, СКС. Планы, спецификации, сметы, сопровождение экспертизы, авторский надзор. Ташкент и регионы.",
+  },
+  "slabotochnye-sistemy": {
+    h1: "Слаботочные системы в Ташкенте — монтаж под ключ",
+    title: "Слаботочные системы в Ташкенте — проект и монтаж | SAT Solutions",
+    desc: "Монтаж слаботочных систем под ключ в Ташкенте: видеонаблюдение, СКУД, пожарная сигнализация, СКС, домофония. Проект, монтаж, сдача с документами. Субподряд для строек. Гарантия, вся страна.",
+  },
   cctv: {
     // «системы видеонаблюдения» — QS 1/10 в Ads: запрос обязан быть в H1/title (методика LT)
     h1: "Системы видеонаблюдения в Ташкенте — установка под ключ",
@@ -187,6 +207,26 @@ const ru: Record<string, ServiceSeo> = {
 };
 
 const uz: Record<string, ServiceSeo> = {
+  "sistemnaya-integraciya": {
+    h1: "Toshkentda tizimli integratsiya — xavfsizlik va IT yagona kompleksda",
+    title: "Toshkentda tizim integratori — xavfsizlik, tarmoq, serverlar | SAT",
+    desc: "Tizimli integratsiya: videokuzatuv, SKUD, signalizatsiya, tarmoq va serverlar yagona kompleksda. Ochiq protokollar, 1C bilan integratsiya, H3C serverlari. Audit bepul, Toshkent va viloyatlar.",
+  },
+  "obsluzhivanie": {
+    h1: "Yong'in signalizatsiyasi va xavfsizlik tizimlariga xizmat — Toshkent",
+    title: "Yong'in signalizatsiyasi va videokuzatuvga texnik xizmat | SAT",
+    desc: "Toshkentda TX shartnomasi: APS va SOUE reglament tekshiruvlari, videokuzatuv va SKUD xizmati, avariya chiqishlari, inspeksiya jurnali. Begona montajni audit'dan keyin olamiz.",
+  },
+  "proektirovanie": {
+    h1: "Toshkentda xavfsizlik tizimlarini loyihalash — APS, video, SKUD",
+    title: "Yong'in signalizatsiyasi va xavfsizlik tizimlarini loyihalash | SAT",
+    desc: "O'zR me'yorlari bo'yicha ishchi loyihalar: yong'in signalizatsiyasi (ShNQ), videokuzatuv, SKUD, SKS. Rejalar, spetsifikatsiyalar, smetalar, ekspertizani kuzatish. Toshkent va viloyatlar.",
+  },
+  "slabotochnye-sistemy": {
+    h1: "Toshkentda kuchsiz tok tizimlari — kalit topshirish montaji",
+    title: "Kuchsiz tok tizimlari Toshkentda — loyiha va montaj | SAT Solutions",
+    desc: "Toshkentda kuchsiz tok tizimlarini kalit topshirish sharti bilan montaj qilish: videokuzatuv, SKUD, yong'in signalizatsiyasi, SKS, domofoniya. Loyiha, montaj, hujjatlar bilan topshirish. Kafolat.",
+  },
   servers: {
     h1: "Server uskunalari Toshkentda — buyurtma asosida serverlar",
     title: "Server uskunalari Toshkentda — serverlar | SAT",
@@ -361,6 +401,26 @@ const uz: Record<string, ServiceSeo> = {
 };
 
 const en: Record<string, ServiceSeo> = {
+  "sistemnaya-integraciya": {
+    h1: "System Integration in Tashkent — Security and IT in One Complex",
+    title: "System Integrator in Tashkent — Security, Networks, Servers | SAT",
+    desc: "System integration: CCTV, access control, alarms, networks and servers in one complex. Open protocols, 1C integration, H3C servers, a single control post. Free audit, Tashkent and regions.",
+  },
+  "obsluzhivanie": {
+    h1: "Fire Alarm & Security Maintenance in Tashkent",
+    title: "Security & Fire Alarm Maintenance Contracts in Uzbekistan | SAT",
+    desc: "Maintenance contracts in Tashkent: scheduled fire alarm inspections to code, CCTV and access control service, emergency callouts, inspection logbooks, spare stock. Third-party systems accepted after audit.",
+  },
+  "proektirovanie": {
+    h1: "Security Systems Design in Tashkent — Fire Alarm, CCTV, ACS",
+    title: "Fire Alarm & Security Systems Design in Uzbekistan | SAT Solutions",
+    desc: "Working designs to Uzbekistan codes: fire alarm, CCTV, access control, structured cabling. Layouts, specifications, budgets, expert-review support, designer supervision. Tashkent and regions.",
+  },
+  "slabotochnye-sistemy": {
+    h1: "Low-Voltage Systems in Tashkent — Turnkey Installation",
+    title: "Low-Voltage Systems in Tashkent — Design & Installation | SAT Solutions",
+    desc: "Turnkey low-voltage installation in Tashkent: CCTV, access control, fire alarm, structured cabling, intercom. Design, installation, documented handover. Subcontracting for construction. Warranty.",
+  },
   servers: {
     h1: "Server Hardware in Tashkent — Custom-Built Servers",
     title: "Server Hardware in Tashkent — Custom Servers | SAT",
@@ -535,6 +595,26 @@ const en: Record<string, ServiceSeo> = {
 };
 
 const tr: Record<string, ServiceSeo> = {
+  "sistemnaya-integraciya": {
+    h1: "Taşkent'te Sistem Entegrasyonu — Güvenlik ve BT Tek Komplekste",
+    title: "Taşkent'te Sistem Entegratörü — Güvenlik, Ağ, Sunucu | SAT",
+    desc: "Sistem entegrasyonu: CCTV, geçiş, alarm, ağ ve sunucular tek komplekste. Açık protokoller, 1C entegrasyonu, H3C sunucuları, tek kontrol noktası. Ücretsiz denetim.",
+  },
+  "obsluzhivanie": {
+    h1: "Taşkent'te Yangın Alarmı ve Güvenlik Bakımı",
+    title: "Özbekistan'da Güvenlik ve Yangın Alarmı Bakım Sözleşmeleri | SAT",
+    desc: "Taşkent'te bakım sözleşmeleri: mevzuata uygun periyodik yangın alarmı kontrolleri, CCTV ve geçiş bakımı, acil müdahale, denetim defterleri. Üçüncü taraf sistemler denetim sonrası kabul edilir.",
+  },
+  "proektirovanie": {
+    h1: "Taşkent'te Güvenlik Sistemleri Projelendirme — Yangın, CCTV, Geçiş",
+    title: "Özbekistan'da Yangın Alarmı ve Güvenlik Projelendirme | SAT Solutions",
+    desc: "Özbekistan normlarına göre çalışma projeleri: yangın alarmı, CCTV, geçiş kontrolü, yapısal kablolama. Planlar, şartnameler, bütçeler, ekspertiz desteği. Taşkent ve bölgeler.",
+  },
+  "slabotochnye-sistemy": {
+    h1: "Taşkent'te Zayıf Akım Sistemleri — Anahtar Teslim Montaj",
+    title: "Taşkent'te Zayıf Akım Sistemleri — Proje ve Montaj | SAT Solutions",
+    desc: "Taşkent'te anahtar teslim zayıf akım montajı: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, interkom. Proje, montaj, evraklı teslim. İnşaatlara taşeronluk. Garanti.",
+  },
   cctv: {
     h1: "Taşkent'te güvenlik kamerası sistemi — anahtar teslim",
     title: "Taşkent'te Güvenlik Kamerası Sistemi Kurulumu | SAT",
@@ -708,6 +788,26 @@ const tr: Record<string, ServiceSeo> = {
 };
 
 const zh: Record<string, ServiceSeo> = {
+  "sistemnaya-integraciya": {
+    h1: "塔什干系统集成——安防与 IT 合为一体",
+    title: "塔什干系统集成商——安防、网络、服务器 | SAT",
+    desc: "系统集成：监控、门禁、报警、网络与服务器合为一体。开放协议、1C 集成、H3C 服务器、统一值班台。免费审计，覆盖塔什干及各州。",
+  },
+  "obsluzhivanie": {
+    h1: "塔什干消防报警与安防维保",
+    title: "乌兹别克斯坦安防与消防维保合同 | SAT Solutions",
+    desc: "塔什干维保合同：按规范定期检查消防报警，维护监控与门禁，应急上门，检查台账，备件库。第三方系统经审计后接管。",
+  },
+  "proektirovanie": {
+    h1: "塔什干安防系统设计——消防、监控、门禁",
+    title: "乌兹别克斯坦消防报警与安防系统设计 | SAT Solutions",
+    desc: "按乌兹别克斯坦规范出具施工图：消防报警、视频监控、门禁、综合布线。平面图、清单、预算、报审配合、设计者监督。覆盖塔什干及各州。",
+  },
+  "slabotochnye-sistemy": {
+    h1: "塔什干弱电系统——交钥匙安装",
+    title: "塔什干弱电系统——设计与安装 | SAT Solutions",
+    desc: "塔什干交钥匙弱电安装：视频监控、门禁、消防报警、综合布线、对讲。设计、施工、资料交付。承接建筑分包。提供保修。",
+  },
   cctv: {
     h1: "塔什干视频监控系统 — 整套安装服务",
     title: "塔什干视频监控系统 — 摄像头安装 | SAT",

@@ -2495,6 +2495,126 @@
           "a": "Ha: o'z-o'ziga xizmat kassalari, QR orqali to'lov, vaqt bo'yicha tariflar va ijarachilar uchun abonementlar — kassirsiz va naqdsiz."
         }
       ]
+    },
+    "slabotochnye-sistemy": {
+      "title": "Kuchsiz tok tizimlari",
+      "desc": "Obyektning butun kuchsiz tok konturi bitta pudratchi bilan — loyihadan topshirishgacha.",
+      "intro": "Binoning barcha kuchsiz tok tizimlarini loyihalaymiz va o'rnatamiz: videokuzatuv, SKUD, yong'in va qo'riqlash signalizatsiyasi, SKS, domofoniya va ogohlantirish — bitta jamoa, yagona loyiha bo'yicha.",
+      "works": [
+        "Obyektni tekshirish va barcha quyi tizimlar loyihasi",
+        "Yagona kabel infratuzilmasi (SKS, lotoklar, stoyaklar)",
+        "Videokuzatuv, SKUD, OPS, domofoniya, ogohlantirish montaji",
+        "Quyi tizimlarni integratsiya qilish va yagona postga chiqarish",
+        "Ijro hujjatlari bilan topshirish, kafolat va texnik xizmat"
+      ],
+      "faq": [
+        {
+          "q": "Kuchsiz tok tizimlariga nimalar kiradi?",
+          "a": "Kichik toklarda ishlaydigan hamma narsa: videokuzatuv, SKUD, yong'in va qo'riqlash signalizatsiyasi, ogohlantirish, domofoniya, SKS va LAN, telefoniya. Butun ro'yxatni bitta jamoa bilan yopamiz."
+        },
+        {
+          "q": "Nega butun kuchsiz tokka bitta pudratchi foydali?",
+          "a": "Mas'uliyat chegaralari yo'qoladi: beshta o'rniga bitta kabel trassasi, kelishilgan loyiha, bitta monitoring posti va istalgan muammoda bitta telefon. Smeta bo'yicha bu odatda alohida pudratlar yig'indisidan 10–20% arzon."
+        },
+        {
+          "q": "Buyurtmachining tayyor loyihasi bo'yicha ishlaysizlarmi?",
+          "a": "Ha — sizning ishchi hujjatlaringiz bo'yicha, ijro hujjatlarini yuritib o'rnatamiz. Loyiha bo'lmasa, loyihalash bo'limimiz uni O'zR me'yorlari bo'yicha tayyorlaydi."
+        },
+        {
+          "q": "Qurilish kompaniyalaridan subpudrat olasizlarmi?",
+          "a": "Ha, qurilishlarda doimiy ravishda kuchsiz tok subpudratchisi sifatida ishlaymiz: bosh pudrat grafigiga rioya qilamiz, bosqichlarni aktlar bilan topshiramiz, obyektni nazorat organlariga topshirishda qatnashamiz."
+        }
+      ]
+    },
+    "proektirovanie": {
+      "title": "Xavfsizlik tizimlarini loyihalash",
+      "desc": "O'zR me'yorlari bo'yicha APS, videokuzatuv, SKUD va SKS ishchi loyihalari.",
+      "intro": "Yong'in signalizatsiyasi, videokuzatuv, SKUD va SKS bo'yicha ishchi hujjatlarni ishlab chiqamiz: O'zbekiston me'yorlari bo'yicha rejalar, sxemalar, spetsifikatsiya va smetalar — kelishuvni kuzatib borish bilan.",
+      "works": [
+        "Obyektni tekshirish va texnik topshiriq",
+        "Ishchi hujjatlar: rejalar, sxemalar, kabel jurnallari",
+        "Uskunalar spetsifikatsiyasi va smeta hisobi",
+        "Kelishuv va ekspertizani kuzatib borish",
+        "Montajda mualliflik nazorati"
+      ],
+      "faq": [
+        {
+          "q": "Loyiha qonun bo'yicha qachon majburiy?",
+          "a": "Avtomatik yong'in signalizatsiyasi va ogohlantirish ShNQ me'yorlari bo'yicha loyihalanadi va topshiriladi — loyihasiz obyektni nazorat organlari qabul qilmaydi. Videokuzatuv va SKUD uchun loyiha yirik va rejimli obyektlarda majburiy, qolganlarida esa byudjet va qayta ishlashlarni tejaydi."
+        },
+        {
+          "q": "Ishchi loyiha tarkibiga nima kiradi?",
+          "a": "Tushuntirish xati, uskunalar joylashuvi rejalari, struktura va elektr sxemalari, kabel jurnallari, uskuna va materiallar spetsifikatsiyasi, smeta hisobi. So'rov bo'yicha — binoning boshqa tizimlari bilan integratsiya bo'limi."
+        },
+        {
+          "q": "Montajsiz faqat loyiha buyurtma qilish mumkinmi?",
+          "a": "Ha, loyiha — mustaqil xizmat: u bo'yicha montaj tashkilotlari orasida tender o'tkazishingiz mumkin. Montajni bizga ishonsangiz, loyihalash narxini ishlar smetasida hisobga olamiz."
+        },
+        {
+          "q": "Loyihalash qancha vaqt oladi?",
+          "a": "Odatiy ofis yoki do'kon — 1–2 hafta, ishlab chiqarish korpusi yoki biznes-markaz — maydon va quyi tizimlar soniga qarab 3 haftadan. Muddatlarni shartnomada belgilaymiz."
+        }
+      ]
+    },
+    "obsluzhivanie": {
+      "title": "Texnik xizmat ko'rsatish",
+      "desc": "TX shartnomasi: reglament tekshiruvlar, avariya chiqishlari, jurnal va ZIP.",
+      "intro": "Yong'in signalizatsiyasi, videokuzatuv, SKUD va tarmoqlarni xizmatga olamiz: grafik bo'yicha reglament tekshiruvlar, avariya chiqishlari, jurnallar yuritish va almashtirish fondi.",
+      "works": [
+        "Tizimlarni auditdan o'tkazib xizmatga olish (begona montaj ham)",
+        "Jurnalga belgilar bilan grafik bo'yicha reglament tekshiruvlar",
+        "Belgilangan javob vaqti bilan avariya chiqishlari",
+        "Almashtirish fondi va uskunalarni ta'mirlash",
+        "Nazorat organlari tekshiruvlari uchun hisobot"
+      ],
+      "faq": [
+        {
+          "q": "Yong'in signalizatsiyasiga xizmat ko'rsatish majburiymi?",
+          "a": "Ha, me'yorlar APS va SOUE ning jurnalga yozuvlar bilan muntazam reglament tekshiruvlarini talab qiladi — ularni inspeksiya so'raydi. Amaldagi TX shartnomasisiz obyekt ko'rsatmalar oladi."
+        },
+        {
+          "q": "Reglament tekshiruvga nima kiradi?",
+          "a": "Datchik va shleyflar tekshiruvi, ogohlantirish testi, AKB va quvvat bloklari holati, kameralarni tozalash va yozuv arxivi nazorati, proshivkalarni yangilash, jurnalga belgilar. Tarkib shartnomada tizimlaringizga moslab belgilanadi."
+        },
+        {
+          "q": "Sizlar o'rnatmagan tizimni olasizlarmi?",
+          "a": "Ha — bepul audit'dan keyin: holatini tekshiramiz, nuqson vedomostini tuzamiz va xizmatga olamiz. Begona montaj to'siq emas."
+        },
+        {
+          "q": "Avariyaga javob vaqti qancha?",
+          "a": "Shartnoma bo'yicha: odatiy SLA — ish kuni davomida chiqish, kritik obyektlarga soatlab javobni kelishamiz. Telefon va masofaviy kirish orqali diagnostikani darhol qilamiz."
+        }
+      ]
+    },
+    "sistemnaya-integraciya": {
+      "title": "Tizimli integratsiya",
+      "desc": "Xavfsizlik, tarmoq va serverlarni yagona boshqariladigan kompleksga birlashtiramiz.",
+      "intro": "Obyektning tarqoq tizimlarini — videokuzatuv, SKUD, signalizatsiya, tarmoqlar, serverlar — yagona boshqaruv posti va uzluksiz stsenariyli bitta kompleksga yig'amiz.",
+      "works": [
+        "Mavjud tizimlar auditi va integratsiya rejasi",
+        "Yagona server platformasi va virtualizatsiya (H3C)",
+        "Uzluksiz stsenariylar: trevoga → kamera → ogohlantirish",
+        "1C, ish vaqti hisobi, ERP bilan integratsiya",
+        "Yagona monitoring posti va operatorlarni o'qitish"
+      ],
+      "faq": [
+        {
+          "q": "Alohida tizimlarga nisbatan integratsiya nima beradi?",
+          "a": "Hodisa «yetim» bo'lmay qoladi: signalizatsiya trevogasi kerakli kamerani ko'taradi, karta bilan o'tish video bilan yoziladi, yong'in signali eshiklarni ochib ogohlantirishni ishga tushiradi. Operatorga beshta dastur o'rniga bitta ekran."
+        },
+        {
+          "q": "O'rnatilgan turli brendlarni birlashtirish mumkinmi?",
+          "a": "Ko'p hollarda ha: ochiq protokollar (ONVIF, OSDP, Modbus, API) turli ishlab chiqaruvchilar uskunalarini bog'lash imkonini beradi. Audit'dan keyin nima integratsiya bo'lishini, nimani almashtirish foydali ekanini halol aytamiz."
+        },
+        {
+          "q": "SKUD bilan ish vaqti hisobi va 1C ni integratsiya qilasizlarmi?",
+          "a": "Ha, bu odatiy vazifa: SKUD dan o'tishlar tabel va 1C ga yuklanadi, kechikish va ortiqcha ishlash avtomatik hisoblanadi."
+        },
+        {
+          "q": "Ishonchlilik bilan nima bo'ladi?",
+          "a": "Kritik servislarni virtualizatsiya va zaxiralashli server platformasida (H3C) joylashtiramiz, quvvatni UPS bilan, arxivlarni RAID bilan himoyalaymiz. Yagona tizim yagona nosozlik nuqtasini anglatmaydi."
+        }
+      ]
     }
   },
   "solutionsPage": {

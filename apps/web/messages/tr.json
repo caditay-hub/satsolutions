@@ -2487,6 +2487,126 @@
           "a": "Evet: self-servis kasalar, QR ile ödeme, süreye göre tarifeler ve kiracı abonelikleri — kasiyersiz ve nakitsiz."
         }
       ]
+    },
+    "slabotochnye-sistemy": {
+      "title": "Zayıf Akım Sistemleri",
+      "desc": "Binanın tüm zayıf akım kapsamı tek yüklenicide — projeden teslime.",
+      "intro": "Binanın tüm zayıf akım sistemlerini projelendirip kuruyoruz: CCTV, geçiş kontrolü, yangın ve hırsız alarmı, yapısal kablolama, interkom ve anons — tek ekip, tek koordineli proje.",
+      "works": [
+        "Saha etüdü ve tüm alt sistemlerin projesi",
+        "Ortak kablo altyapısı (SCS, tavalar, şaftlar)",
+        "CCTV, geçiş, alarm, interkom, anons montajı",
+        "Alt sistemlerin tek izleme noktasına entegrasyonu",
+        "As-built evrakla teslim, garanti ve bakım"
+      ],
+      "faq": [
+        {
+          "q": "Zayıf akım sistemlerine neler girer?",
+          "a": "Düşük akımla çalışan her şey: CCTV, geçiş kontrolü, yangın ve hırsız alarmı, anons, interkom, yapısal kablolama ve LAN, telefon. Tüm listeyi tek ekiple kapatıyoruz."
+        },
+        {
+          "q": "Tüm kapsam için tek yüklenici neden avantajlı?",
+          "a": "Sorumluluk boşlukları kalkar: beş yerine tek kablo güzergâhı, koordineli proje, tek izleme noktası ve her sorun için tek telefon. Bütçede genelde ayrı sözleşmeler toplamından %10–20 daha ucuzdur."
+        },
+        {
+          "q": "Müşterinin hazır projesiyle çalışır mısınız?",
+          "a": "Evet — çalışma projenize göre kurar, as-built kayıtları tutarız. Proje yoksa mühendislik birimimiz Özbekistan normlarına göre hazırlar."
+        },
+        {
+          "q": "İnşaat firmalarından taşeronluk alıyor musunuz?",
+          "a": "Evet, şantiyelerde düzenli olarak zayıf akım taşeronu olarak çalışıyoruz: ana programa uyar, etapları tutanakla kapatır, resmî teslimlere eşlik ederiz."
+        }
+      ]
+    },
+    "proektirovanie": {
+      "title": "Güvenlik Sistemleri Projelendirme",
+      "desc": "Özbekistan normlarına göre yangın alarmı, CCTV, geçiş ve kablolama projeleri.",
+      "intro": "Yangın alarmı, CCTV, geçiş kontrolü ve yapısal kablolama için çalışma projeleri hazırlıyoruz: Özbekistan normlarına göre planlar, şemalar, şartnameler ve bütçeler — onay sürecine destekle.",
+      "works": [
+        "Saha etüdü ve teknik şartname",
+        "Çalışma projeleri: planlar, şemalar, kablo çizelgeleri",
+        "Ekipman şartnamesi ve bütçe hesabı",
+        "Onay ve ekspertiz süreci desteği",
+        "Montajda proje müellifi denetimi"
+      ],
+      "faq": [
+        {
+          "q": "Proje yasal olarak ne zaman zorunlu?",
+          "a": "Otomatik yangın alarmı ve sesli tahliye ulusal normlara göre projelendirilir ve teslim edilir — projesiz tesisi resmî makamlar kabul etmez. CCTV ve geçiş kontrolünde proje büyük ve denetimli tesislerde zorunludur; diğerlerinde bütçe ve yeniden işçiliği kurtarır."
+        },
+        {
+          "q": "Çalışma projesi neleri içerir?",
+          "a": "Açıklama raporu, yerleşim planları, blok ve bağlantı şemaları, kablo çizelgeleri, ekipman-malzeme şartnamesi ve bütçe hesabı. Talep hâlinde bina sistemleriyle entegrasyon bölümü."
+        },
+        {
+          "q": "Montajsız yalnız proje sipariş edilebilir mi?",
+          "a": "Evet — proje bağımsız hizmettir; onunla montajcılar arasında ihale yapabilirsiniz. Montajı bize verirseniz proje bedeli iş bütçesinden düşülür."
+        },
+        {
+          "q": "Projelendirme ne kadar sürer?",
+          "a": "Tipik ofis veya mağaza 1–2 hafta; üretim binası veya iş merkezi alan ve alt sistem sayısına göre 3 haftadan itibaren. Süreler sözleşmede sabitlenir."
+        }
+      ]
+    },
+    "obsluzhivanie": {
+      "title": "Bakım Sözleşmeleri",
+      "desc": "Periyodik kontroller, acil müdahale, kayıt defteri ve yedek parça havuzu.",
+      "intro": "Yangın alarmı, CCTV, geçiş kontrolü ve ağların bakımını üstleniyoruz: programlı kontroller, anlaşmalı müdahale süreli acil çağrılar, kayıt defterleri ve yedek parça havuzu.",
+      "works": [
+        "Sistemlerin denetimle devralınması (üçüncü taraf kurulumlar dâhil)",
+        "Kayıt defterine işlenen programlı kontroller",
+        "Sabit müdahale süreli acil çağrılar",
+        "Yedek parça havuzu ve ekipman onarımı",
+        "Resmî denetimlere hazır raporlama"
+      ],
+      "faq": [
+        {
+          "q": "Yangın alarmı bakımı zorunlu mu?",
+          "a": "Evet — mevzuat, denetçilerin sorduğu kayıt defterli periyodik kontrolleri şart koşar. Geçerli bakım sözleşmesi olmayan tesis ihlal bildirimleri toplar."
+        },
+        {
+          "q": "Periyodik kontrole neler girer?",
+          "a": "Dedektör ve hat kontrolleri, tahliye testi, akü ve güç kaynağı durumu, kamera temizliği ve arşiv kontrolü, yazılım güncellemeleri, deftere kayıt. Kapsam sözleşmede sistemlerinize göre sabitlenir."
+        },
+        {
+          "q": "Başkasının kurduğu sistemi devralır mısınız?",
+          "a": "Evet — ücretsiz denetimden sonra: durumu değerlendirir, eksik listesi çıkarır ve bakıma alırız. Üçüncü taraf kurulum engel değildir."
+        },
+        {
+          "q": "Acil müdahale süresi nedir?",
+          "a": "Sözleşmeye göre: tipik SLA aynı iş günü içinde ziyarettir; kritik tesislerde saatlik yanıt kararlaştırılır. Telefon ve uzaktan tanı hemen başlar."
+        }
+      ]
+    },
+    "sistemnaya-integraciya": {
+      "title": "Sistem Entegrasyonu",
+      "desc": "Güvenlik, ağlar ve sunucular tek yönetilen komplekste.",
+      "intro": "Tesisin dağınık sistemlerini — CCTV, geçiş, alarm, ağlar, sunucular — tek kontrol noktası ve uçtan uca senaryolarla tek komplekse dikiyoruz.",
+      "works": [
+        "Mevcut sistemlerin denetimi ve entegrasyon planı",
+        "Birleşik sunucu platformu ve sanallaştırma (H3C)",
+        "Uçtan uca senaryolar: alarm → kamera → anons",
+        "1C, mesai takibi, ERP entegrasyonu",
+        "Tek izleme noktası ve operatör eğitimi"
+      ],
+      "faq": [
+        {
+          "q": "Entegrasyon ayrı sistemlere göre ne katar?",
+          "a": "Olaylar sahipsiz kalmaz: alarm doğru kamerayı açar, kartlı geçiş görüntüyle kaydedilir, yangın sinyali kapıları bırakıp anonsu başlatır. Operatöre beş uygulama yerine tek ekran."
+        },
+        {
+          "q": "Kurulu farklı markalar birleştirilebilir mi?",
+          "a": "Çoğunlukla evet: açık protokoller (ONVIF, OSDP, Modbus, üretici API’leri) farklı markaları bağlar. Denetimden sonra neyin olduğu gibi entegre olacağını, neyin değişmesinin ucuz olduğunu dürüstçe söyleriz."
+        },
+        {
+          "q": "Geçişi mesai takibi ve 1C ile bağlar mısınız?",
+          "a": "Evet, standart iştir: geçişler puantaja ve 1C’ye akar; geç kalma ve fazla mesai otomatik hesaplanır."
+        },
+        {
+          "q": "Dayanıklılık ne durumda?",
+          "a": "Kritik servisler sanallaştırılmış, yedekli sunucu platformunda (H3C) çalışır; güç UPS ile, arşivler RAID ile korunur. Birleşik sistem tek arıza noktası demek değildir."
+        }
+      ]
     }
   },
   "solutionsPage": {

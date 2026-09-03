@@ -10,6 +10,38 @@
 export type ServiceContent = { heading: string; paragraphs: string[] };
 
 const ru: Record<string, ServiceContent> = {
+  "sistemnaya-integraciya": {
+    heading: "Системная интеграция безопасности и ИТ-инфраструктуры в Ташкенте",
+    paragraphs: [
+      "Типичный взрослый объект живёт с зоопарком систем: видеонаблюдение одного подрядчика, СКУД другого, сигнализация третьего, сеть — своими силами. Каждая работает, но вместе они молчат: охранник смотрит в пять экранов, событие ищется по трём журналам, а при пожаре никто не гарантирует разблокировку дверей. Системная интеграция сшивает это в единый комплекс со сквозными сценариями.",
+      "SAT Solutions проектирует интеграцию на открытых протоколах (ONVIF, OSDP, Modbus, API производителей): тревоги подтверждаются видео, проходы пишутся в учёт рабочего времени и 1С, инженерные системы сообщают о авариях на общий пост. Серверную основу строим на платформе H3C с виртуализацией — мы сертифицированный партнёр H3C в Узбекистане, от поставки серверов до кластера с резервированием.",
+      "Начинаем с аудита: карта существующих систем, что интегрируется как есть, что требует шлюза, что дешевле заменить. Дальше — поэтапный план без остановки объекта, пилот на одном участке и тираж. Результат — один пост, одна отчётность и предсказуемое поведение всех систем в нештатной ситуации.",
+    ],
+  },
+  "obsluzhivanie": {
+    heading: "Обслуживание пожарной сигнализации и систем безопасности в Ташкенте",
+    paragraphs: [
+      "Система безопасности стареет незаметно: садятся аккумуляторы, пылятся извещатели и камеры, переполняется архив — а обнаруживается это в момент пожара, кражи или проверки. Договор технического обслуживания переводит риски в график: инженер приезжает по регламенту, проверяет извещатели, шлейфы, оповещение, питание и запись, ведёт журнал, который предъявляется инспекции.",
+      "Обслуживаем пожарную сигнализацию и СОУЭ (регламент по нормам РУз), видеонаблюдение, СКУД, домофонию и сети — свои и смонтированные другими подрядчиками. Аварийные заявки принимаем по телефону и в Telegram; типовое время реакции — в течение рабочего дня, для критичных объектов согласуем SLA в часах. Держим подменный фонд: неисправный блок заменяется сразу, ремонт идёт своим чередом.",
+      "Стоимость ТО зависит от состава систем и числа точек: считаем после бесплатного аудита, для сетей филиалов даём единый договор на все объекты по Узбекистану. Для юридических лиц — закрывающие документы, счёт с НДС и отчётность, готовая к проверкам.",
+    ],
+  },
+  "proektirovanie": {
+    heading: "Проектирование пожарной сигнализации, видеонаблюдения и СКУД в Ташкенте",
+    paragraphs: [
+      "Проект — это документ, который защищает бюджет: до закупки оборудования видно, сколько извещателей, камер и контроллеров нужно объекту, где пройдут трассы и как системы пройдут проверку. Проектируем автоматическую пожарную сигнализацию и оповещение по нормам ШНК Узбекистана, видеонаблюдение с расчётом зон обзора и хранением архива, СКУД со сценариями эвакуации, СКС с запасом на развитие.",
+      "В составе рабочей документации — пояснительная записка, планы, схемы, кабельные журналы, спецификация и смета. Документацию сопровождаем до результата: отвечаем на замечания экспертизы, вносим корректировки, при монтаже ведём авторский надзор. Проект выполняют инженеры с опытом сдачи объектов надзорным органам РУз — от офисов до производственных площадок.",
+      "Заказчику из строительной сферы предложим комплект «проект + монтаж + сдача»: одна команда отвечает за документацию и её реализацию, а стоимость проектирования зачитывается в смете монтажа. Выезд на обследование и предварительная оценка — бесплатно, по Ташкенту и регионам.",
+    ],
+  },
+  "slabotochnye-sistemy": {
+    heading: "Монтаж слаботочных систем в Ташкенте — под ключ",
+    paragraphs: [
+      "Слаботочные системы — это нервная система здания: видеонаблюдение, контроль доступа, пожарная и охранная сигнализация, оповещение, домофония, структурированная кабельная сеть. На новостройке их выгодно проектировать и монтировать одним пакетом: подсистемы делят кабельные трассы и серверную стойку, а извещатели, камеры и СКУД связываются в единый сценарий — от пожарной разблокировки дверей до видеоподтверждения тревог.",
+      "SAT Solutions выполняет полный цикл: обследование, проект по нормам Узбекистана, монтаж, пусконаладку и сдачу с исполнительной документацией. Работаем и как генеральный слаботочный подрядчик на строительстве бизнес-центров, жилых комплексов и производств, и по отдельным подсистемам на действующих объектах — без остановки работы предприятия. Оборудование поставляем со своего склада в Ташкенте: Hikvision, Dahua, Болид, Рубеж, ZKTeco, MikroTik — более 3000 позиций.",
+      "Смета формируется по проекту или ТЗ: выезд инженера и расчёт — бесплатно. По завершении даём гарантию на работы и оборудование, заключаем договор технического обслуживания с регламентными проверками. Работаем по Ташкенту и всем регионам Узбекистана, для юридических лиц — полный пакет документов и счёт с НДС.",
+    ],
+  },
   cctv: {
     heading: "Установка видеонаблюдения под ключ в Ташкенте и по Узбекистану",
     paragraphs: [
@@ -280,6 +312,8 @@ const ru: Record<string, ServiceContent> = {
       "Периметральная охрана обнаруживает нарушителя до того, как он попал в здание: датчики и видеоаналитика контролируют забор, ворота и подходы к объекту. SAT Solutions проектирует и монтирует периметральные системы для складов, заводов, логистических баз, ферм и коттеджей: вибрационные кабели на ограждении, инфракрасные и радиолучевые барьеры, тепловизоры и камеры с аналитикой пересечения линии.",
       "Технологию подбираем под объект и бюджет. Вибрационный кабель ловит перелаз и разрушение полотна забора; лучевые барьеры перекрывают открытые участки и въезды; видеоаналитика на IP-камерах даёт виртуальную линию с верификацией по картинке, а тепловизоры работают в полной темноте и туман. На протяжённых периметрах системы комбинируются: сработка датчика автоматически разворачивает поворотную камеру в точку тревоги.",
       "Ложные тревоги — главный враг периметралки, поэтому половина работы — правильная настройка: зоны, чувствительность под ветер и животных, привязка сработок к видеозаписи. Систему связываем с охранной сигнализацией, оповещением поста и мобильными уведомлениями. Монтируем под ключ по Ташкенту и всему Узбекистану, даём гарантию и обслуживаем.",
+          "Выбор технологии зависит от рубежа. Первый рубеж — ограждение: вибрационный чувствительный кабель на полотне ловит перелаз и перекус, датчики разрыва контролируют козырёк. Второй — полоса отчуждения: ИК- и радиолучевые барьеры перекрывают проёмы и прямые участки до сотен метров. Третий — подступы и территория: IP-камеры с аналитикой пересечения линии AcuSense отсеивают животных и птиц, а тепловизоры обнаруживают человека в полной темноте, тумане и задымлении на дистанции, недоступной обычной оптике.",
+      "Правильный периметр — это не только датчики, но и реакция: сработка автоматически наводит поворотную камеру на точку тревоги, включает прожектор или сирену-строб, отправляет кадр верификации на пост и в мобильное приложение. Ложные тревоги гасятся двойным подтверждением: тревога засчитывается, когда её видят два независимых рубежа. Мы проектируем зоны так, чтобы обход патруля и погодные события не будили охрану впустую — и сдаём систему с картой зон и инструкциями для операторов.",
     ],
   },
   pa: {
@@ -309,6 +343,38 @@ const ru: Record<string, ServiceContent> = {
 };
 
 const uz: Record<string, ServiceContent> = {
+  "sistemnaya-integraciya": {
+    heading: "Toshkentda xavfsizlik va IT-infratuzilmaning tizimli integratsiyasi",
+    paragraphs: [
+      "Odatiy yirik obyekt tizimlar «hayvonot bog'i» bilan yashaydi: videokuzatuv bir pudratchidan, SKUD boshqasidan, signalizatsiya uchinchisidan. Har biri ishlaydi, lekin birga jim: qo'riqchi beshta ekranga qaraydi, hodisa uchta jurnaldan qidiriladi, yong'inda esa eshiklar ochilishiga hech kim kafolat bermaydi. Tizimli integratsiya buni uzluksiz stsenariyli yagona kompleksga tikadi.",
+      "SAT Solutions integratsiyani ochiq protokollarda (ONVIF, OSDP, Modbus, ishlab chiqaruvchilar API) loyihalaydi: trevogalar video bilan tasdiqlanadi, o'tishlar ish vaqti hisobi va 1C ga yoziladi, muhandislik tizimlari avariyalar haqida umumiy postga xabar beradi. Server asosini virtualizatsiyali H3C platformasida quramiz — biz O'zbekistonda H3C ning sertifikatlangan hamkorimiz.",
+      "Audit'dan boshlaymiz: mavjud tizimlar xaritasi, nima shundayligicha integratsiya bo'ladi, nimaga shlyuz kerak, nimani almashtirish arzon. Keyin — obyektni to'xtatmasdan bosqichma-bosqich reja, bitta uchastkada pilot va tirajlash. Natija — bitta post, bitta hisobot va favqulodda holatda barcha tizimlarning bashorat qilinadigan xatti-harakati.",
+    ],
+  },
+  "obsluzhivanie": {
+    heading: "Toshkentda yong'in signalizatsiyasi va xavfsizlik tizimlariga xizmat",
+    paragraphs: [
+      "Xavfsizlik tizimi sezilmas qariydi: akkumulyatorlar o'tiradi, datchik va kameralar changlanadi, arxiv to'ladi — bu esa yong'in, o'g'irlik yoki tekshiruv paytida ma'lum bo'ladi. Texnik xizmat shartnomasi xavflarni grafikka o'tkazadi: muhandis reglament bo'yicha keladi, datchiklar, shleyflar, ogohlantirish, quvvat va yozuvni tekshiradi, inspeksiyaga ko'rsatiladigan jurnalni yuritadi.",
+      "Yong'in signalizatsiyasi va SOUE (O'zR me'yorlari bo'yicha reglament), videokuzatuv, SKUD, domofoniya va tarmoqlarga xizmat ko'rsatamiz — o'zimizniki va boshqa pudratchilar o'rnatganlariga ham. Avariya arizalarini telefon va Telegram orqali qabul qilamiz; odatiy javob — ish kuni davomida, kritik obyektlarga SLA ni soatlab kelishamiz. Almashtirish fondini saqlaymiz: nosoz blok darhol almashtiriladi.",
+      "TX narxi tizimlar tarkibi va nuqtalar soniga bog'liq: bepul audit'dan keyin hisoblaymiz, filiallar tarmog'iga O'zbekiston bo'ylab barcha obyektlarga yagona shartnoma beramiz. Yuridik shaxslarga — yopuvchi hujjatlar, QQS li hisob va tekshiruvlarga tayyor hisobot.",
+    ],
+  },
+  "proektirovanie": {
+    heading: "Toshkentda yong'in signalizatsiyasi, videokuzatuv va SKUD loyihalash",
+    paragraphs: [
+      "Loyiha — byudjetni himoya qiluvchi hujjat: uskuna xaridigacha obyektga nechta datchik, kamera va kontroller kerakligi, trassalar qayerdan o'tishi va tizimlar tekshiruvdan qanday o'tishi ko'rinadi. O'zbekiston ShNQ me'yorlari bo'yicha avtomatik yong'in signalizatsiyasi va ogohlantirishni, ko'rish zonalari va arxiv hisobi bilan videokuzatuvni, evakuatsiya stsenariyli SKUDni, rivojlanish zaxirali SKSni loyihalaymiz.",
+      "Ishchi hujjatlar tarkibida — tushuntirish xati, rejalar, sxemalar, kabel jurnallari, spetsifikatsiya va smeta. Hujjatlarni natijagacha kuzatamiz: ekspertiza e'tirozlariga javob beramiz, tuzatishlar kiritamiz, montajda mualliflik nazoratini yuritamiz. Loyihani O'zR nazorat organlariga obyekt topshirish tajribasiga ega muhandislar bajaradi.",
+      "Qurilish sohasidagi buyurtmachiga «loyiha + montaj + topshirish» to'plamini taklif qilamiz: bitta jamoa hujjatlar va ularning ijrosi uchun javob beradi, loyihalash narxi esa montaj smetasida hisobga olinadi. Tekshiruvga chiqish va dastlabki baholash — bepul, Toshkent va viloyatlar bo'ylab.",
+    ],
+  },
+  "slabotochnye-sistemy": {
+    heading: "Toshkentda kuchsiz tok tizimlari montaji — kalit topshirish sharti bilan",
+    paragraphs: [
+      "Kuchsiz tok tizimlari — binoning asab tizimi: videokuzatuv, kirish nazorati, yong'in va qo'riqlash signalizatsiyasi, ogohlantirish, domofoniya, strukturalangan kabel tarmog'i. Yangi qurilishda ularni bitta paket bilan loyihalash va o'rnatish foydali: quyi tizimlar kabel trassalari va server stoykasini bo'lishadi, datchik, kamera va SKUD esa yagona stsenariyga bog'lanadi — yong'inda eshiklarni blokdan chiqarishdan trevogalarni video bilan tasdiqlashgacha.",
+      "SAT Solutions to'liq tsiklni bajaradi: tekshirish, O'zbekiston me'yorlari bo'yicha loyiha, montaj, ishga tushirish va ijro hujjatlari bilan topshirish. Biznes-markazlar, turar-joy majmualari va ishlab chiqarishlar qurilishida bosh kuchsiz tok pudratchisi sifatida ham, ishlayotgan obyektlarda alohida quyi tizimlar bo'yicha ham ishlaymiz — korxona ishini to'xtatmasdan. Uskunalarni Toshkentdagi omborimizdan yetkazamiz: Hikvision, Dahua, Bolid, Rubej, ZKTeco, MikroTik — 3000 dan ortiq pozitsiya.",
+      "Smeta loyiha yoki TV bo'yicha tuziladi: muhandis chiqishi va hisob — bepul. Yakunida ish va uskunalarga kafolat beramiz, reglamentli tekshiruvlar bilan texnik xizmat shartnomasini tuzamiz. Toshkent va O'zbekistonning barcha viloyatlarida ishlaymiz, yuridik shaxslarga — to'liq hujjatlar paketi va QQS li hisob.",
+    ],
+  },
   cctv: {
     heading: "Toshkent va O'zbekiston bo'ylab kalit topshirish asosida videokuzatuv o'rnatish",
     paragraphs: [
@@ -572,6 +638,8 @@ const uz: Record<string, ServiceContent> = {
       "Perimetr qo'riqlash tizimi buzg'unchini binoga kirgunga qadar aniqlaydi: datchiklar va videoanalitika to'siq, darvoza va yo'laklarni nazorat qiladi. SAT Solutions omborlar, zavodlar, logistika bazalari va hovlilar uchun perimetr tizimlarini loyihalaydi va o'rnatadi: to'siqqa vibratsion kabel, infraqizil va radiotolqinli barierlar, teplovizorlar va chiziq kesishuvi analitikali kameralar.",
       "Texnologiya obyekt va byudjetga qarab tanlanadi. Vibratsion kabel to'siqdan oshib o'tish va buzishni sezadi; nurli barierlar ochiq uchastkalar va kirishlarni yopadi; IP-kameralardagi videoanalitika tasvir bilan tasdiqlanadigan virtual chiziq beradi, teplovizorlar esa to'liq qorong'ida ham ishlaydi. Uzun perimetrlarda tizimlar birlashtiriladi: datchik ishlaganda aylanuvchi kamera avtomatik ravishda trevoga nuqtasiga buriladi.",
       "Yolg'on trevogalar — perimetr tizimining asosiy dushmani, shuning uchun ishning yarmi to'g'ri sozlash: zonalar, shamol va hayvonlarga moslashgan sezgirlik, sabab bo'lgan hodisani videoyozuvga bog'lash. Tizimni qo'riqlash signalizatsiyasi, post ogohlantirishi va mobil xabarlar bilan bog'laymiz. Toshkent va butun O'zbekiston bo'ylab kalit topshirish sharti bilan o'rnatamiz, kafolat va servis beramiz.",
+          "Texnologiya tanlovi chegara chizig'iga bog'liq. Birinchi chiziq — to'siq: polotnodagi vibratsion sezgir kabel oshib o'tish va kesishni ushlaydi. Ikkinchi — ajratish polosasi: IK va radionurli barerlar proyom va to'g'ri uchastkalarni yuzlab metrgacha yopadi. Uchinchi — yaqinlashuv va hudud: AcuSense chiziq kesish tahlilli IP-kameralar hayvon va qushlarni saralaydi, teplovizorlar esa odamni to'liq qorong'ilik, tuman va tutunda oddiy optikaga yetib bo'lmas masofada aniqlaydi.",
+      "To'g'ri perimetr — bu datchiklargina emas, balki reaktsiya ham: ishlaganda aylanuvchi kamera avtomatik trevoga nuqtasiga qaraydi, projektor yoki strob-sirena yonadi, tasdiqlash kadri postga va mobil ilovaga boradi. Yolg'on trevogalar ikki tomonlama tasdiqlash bilan o'chiriladi: trevoga ikki mustaqil chiziq ko'rgandagina hisoblanadi. Zonalarni patrul aylanishi va ob-havo qo'riqchini bekorga uyg'otmasligi uchun loyihalaymiz.",
     ],
   },
   pa: {
@@ -606,6 +674,38 @@ const uz: Record<string, ServiceContent> = {
 // страниц, остальные ключи догоняем следующей партией — фолбэк на null
 // оставляет страницу без блока, а не с машинным переводом.
 const en: Record<string, ServiceContent> = {
+  "sistemnaya-integraciya": {
+    heading: "Security and IT system integration in Tashkent",
+    paragraphs: [
+      "A typical mature site lives with a zoo of systems: CCTV from one contractor, access control from another, alarms from a third. Each works, but together they are silent: the guard watches five screens, one event is traced through three logs, and nobody guarantees doors release in a fire. System integration stitches this into one complex with end-to-end scenarios.",
+      "SAT Solutions designs integration on open protocols (ONVIF, OSDP, Modbus, vendor APIs): alarms are video-verified, passes flow into attendance and 1C, engineering systems report faults to a common post. The server core runs on the H3C platform with virtualisation — we are a certified H3C partner in Uzbekistan, from server supply to redundant clusters.",
+      "We start with an audit: a map of existing systems — what integrates as is, what needs a gateway, what is cheaper to replace. Then a staged plan without stopping the site, a pilot on one section and roll-out. The result is one post, one reporting line and predictable behaviour of every system in an emergency.",
+    ],
+  },
+  "obsluzhivanie": {
+    heading: "Fire alarm and security systems maintenance in Tashkent",
+    paragraphs: [
+      "A security system ages quietly: batteries fade, detectors and cameras gather dust, the archive overflows — and it all surfaces during a fire, a theft or an inspection. A maintenance contract turns risk into a schedule: an engineer arrives per the plan, checks detectors, loops, evacuation, power and recording, and keeps the logbook that inspectors ask for.",
+      "We maintain fire alarm and evacuation systems (to Uzbekistan regulations), CCTV, access control, intercom and networks — our own installs and those built by other contractors. Emergency requests come by phone or Telegram; the typical response is within the business day, with hour-level SLAs for critical sites. A spare-parts pool means a faulty unit is swapped at once while repair takes its course.",
+      "The fee depends on the systems and number of points: we quote after a free audit, and branch networks get one contract covering all sites across Uzbekistan. Companies receive closing documents, VAT invoices and inspection-ready reporting.",
+    ],
+  },
+  "proektirovanie": {
+    heading: "Fire alarm, CCTV and access control design in Tashkent",
+    paragraphs: [
+      "A design is the document that protects the budget: before any purchase you can see how many detectors, cameras and controllers the site needs, where routes run and how the systems will pass inspection. We design automatic fire alarm and evacuation to Uzbekistan codes, CCTV with view-zone and storage calculations, access control with evacuation scenarios, and cabling with room to grow.",
+      "The working documentation includes an explanatory note, layouts, diagrams, cable schedules, a specification and a budget. We support it to the result: answering expert-review remarks, applying revisions and providing designer's supervision during installation. The designs are made by engineers with real handover experience to Uzbekistan authorities — from offices to industrial sites.",
+      "For construction clients we offer the design + installation + handover package: one team is responsible for the documents and their delivery, and the design fee is credited against the installation budget. A survey visit and preliminary estimate are free, across Tashkent and the regions.",
+    ],
+  },
+  "slabotochnye-sistemy": {
+    heading: "Low-voltage systems installation in Tashkent — turnkey",
+    paragraphs: [
+      "Low-voltage systems are a building's nervous system: CCTV, access control, fire and intruder alarms, PA, intercom and structured cabling. On a new build it pays to design and install them as one package: subsystems share cable routes and the server rack, while detectors, cameras and access control link into common scenarios — from fire-release of doors to video verification of alarms.",
+      "SAT Solutions delivers the full cycle: survey, design to Uzbekistan codes, installation, commissioning and handover with as-built documents. We work both as the general low-voltage contractor on business centres, residential complexes and plants, and on individual subsystems at operating sites — without stopping the business. Equipment ships from our Tashkent warehouse: Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik — 3,000+ items.",
+      "The budget is built from the design or the brief: an engineer visit and calculation are free. On completion we provide a warranty on work and equipment and sign a maintenance contract with scheduled checks. We work across Tashkent and all regions of Uzbekistan; companies get the full document package and VAT invoicing.",
+    ],
+  },
   cctv: {
     heading: "CCTV installation in Tashkent and across Uzbekistan",
     paragraphs: [
@@ -654,6 +754,8 @@ const en: Record<string, ServiceContent> = {
       "Perimeter protection detects an intruder before they reach the building: sensors and video analytics watch the fence, gates and approaches. SAT Solutions designs and installs perimeter systems for warehouses, plants, logistics yards, farms and private estates: vibration cable on the fence fabric, infrared and microwave barriers, thermal imagers and IP cameras with line-crossing analytics.",
       "The technology is chosen to fit the site and budget. Vibration cable senses climbing and cutting of the fence; beam barriers close open sections and entrances; camera analytics draw a virtual line verified by the picture, and thermal imagers keep working in full darkness and fog. On long perimeters the systems are combined: a sensor alarm automatically slews a PTZ camera to the alarm point.",
       "False alarms are the main enemy of perimeter systems, so half of the work is proper tuning: zones, sensitivity margins for wind and animals, linking every event to video. We tie the system into the intruder alarm, guard-post notification and mobile alerts. Turnkey installation across Tashkent and all of Uzbekistan, with warranty and service.",
+          "Technology follows the line of defence. First line — the fence: vibration-sensing cable on the fabric catches climbing and cutting. Second — the exclusion strip: IR and microwave barriers close gaps and straight runs up to hundreds of metres. Third — approaches and grounds: IP cameras with AcuSense line-crossing analytics filter out animals and birds, while thermal imagers detect a person in complete darkness, fog and smoke at ranges ordinary optics cannot reach.",
+      "A proper perimeter is reaction, not just sensors: an alarm slews the PTZ camera to the point, fires a floodlight or strobe siren, and sends a verification frame to the post and the mobile app. False alarms are suppressed by dual confirmation — an alarm counts when two independent lines see it. We design zones so patrol rounds and weather do not wake the guards in vain — and hand over the system with a zone map and operator instructions.",
     ],
   },
   pa: {
@@ -683,12 +785,46 @@ const en: Record<string, ServiceContent> = {
 };
 
 const tr: Record<string, ServiceContent> = {
+  "sistemnaya-integraciya": {
+    heading: "Taşkent'te güvenlik ve BT sistem entegrasyonu",
+    paragraphs: [
+      "Tipik olgun tesis bir sistem hayvanat bahçesiyle yaşar: CCTV bir yükleniciden, geçiş başka birinden, alarm üçüncüsünden. Her biri çalışır ama birlikte susarlar: görevli beş ekrana bakar, bir olay üç kayıtta aranır, yangında kapıların bırakılacağını kimse garanti etmez. Sistem entegrasyonu bunu uçtan uca senaryolu tek komplekse diker.",
+      "SAT Solutions entegrasyonu açık protokollerle (ONVIF, OSDP, Modbus, üretici API'leri) projelendirir: alarmlar görüntüyle doğrulanır, geçişler puantaja ve 1C'ye akar, mühendislik sistemleri arızayı ortak noktaya bildirir. Sunucu çekirdeği sanallaştırmalı H3C platformunda — Özbekistan'da sertifikalı H3C ortağıyız.",
+      "Denetimle başlarız: mevcut sistemlerin haritası — ne olduğu gibi entegre olur, neye geçit gerekir, neyi değiştirmek ucuzdur. Ardından tesisi durdurmadan aşamalı plan, bir bölümde pilot ve yaygınlaştırma. Sonuç: tek nokta, tek raporlama ve acil durumda tüm sistemlerin öngörülebilir davranışı.",
+    ],
+  },
+  "obsluzhivanie": {
+    heading: "Taşkent'te yangın alarmı ve güvenlik sistemleri bakımı",
+    paragraphs: [
+      "Güvenlik sistemi sessizce yaşlanır: aküler zayıflar, dedektör ve kameralar tozlanır, arşiv dolar — ve hepsi yangında, hırsızlıkta veya denetimde ortaya çıkar. Bakım sözleşmesi riski takvime çevirir: mühendis programa göre gelir; dedektörleri, hatları, tahliyeyi, beslemeyi ve kaydı kontrol eder, denetçilerin sorduğu defteri tutar.",
+      "Yangın alarmı ve tahliye (Özbekistan mevzuatına göre), CCTV, geçiş kontrolü, interkom ve ağların bakımını yapıyoruz — kendi kurduklarımızın da, başka yüklenicilerin kurduklarının da. Acil talepler telefon ve Telegram ile alınır; tipik yanıt aynı iş günüdür, kritik tesislere saatlik SLA verilir. Yedek parça havuzu sayesinde arızalı ünite anında değişir.",
+      "Ücret, sistemlere ve nokta sayısına bağlıdır: ücretsiz denetimden sonra teklif verilir; şube ağlarına tüm Özbekistan tesislerini kapsayan tek sözleşme yapılır. Kurumlara kapanış evrakı, KDV faturası ve denetime hazır raporlama.",
+    ],
+  },
+  "proektirovanie": {
+    heading: "Taşkent'te yangın alarmı, CCTV ve geçiş kontrolü projelendirme",
+    paragraphs: [
+      "Proje bütçeyi koruyan belgedir: satın almadan önce tesise kaç dedektör, kamera ve kontrolör gerektiği, güzergâhların nereden geçtiği ve sistemlerin denetimi nasıl geçeceği görülür. Özbekistan normlarına göre otomatik yangın alarmı ve tahliyeyi, görüş alanı ve arşiv hesabıyla CCTV’yi, tahliye senaryolu geçiş kontrolünü, büyümeye paylı kablolamayı projelendiriyoruz.",
+      "Çalışma dokümantasyonunda açıklama raporu, planlar, şemalar, kablo çizelgeleri, şartname ve bütçe yer alır. Belgeleri sonuca kadar taşırız: ekspertiz görüşlerini yanıtlar, revizyonları işler, montajda müellif denetimi yaparız. Projeleri, tesisleri Özbekistan makamlarına teslim etmiş mühendisler hazırlar.",
+      "İnşaat sektörüne proje + montaj + teslim paketini öneriyoruz: belgelerden ve uygulamasından tek ekip sorumludur; proje bedeli montaj bütçesinden düşülür. Keşif ve ön değerlendirme ücretsizdir — Taşkent ve bölgeler.",
+    ],
+  },
+  "slabotochnye-sistemy": {
+    heading: "Taşkent'te zayıf akım sistemleri montajı — anahtar teslim",
+    paragraphs: [
+      "Zayıf akım sistemleri binanın sinir sistemidir: CCTV, geçiş kontrolü, yangın ve hırsız alarmı, anons, interkom ve yapısal kablolama. Yeni yapıda bunları tek paket hâlinde projelendirip kurmak kazançlıdır: alt sistemler kablo güzergâhlarını ve sunucu kabinini paylaşır; dedektör, kamera ve geçiş kontrolü ortak senaryolara bağlanır — yangında kapı bırakmadan alarmların görüntüyle doğrulanmasına kadar.",
+      "SAT Solutions tam döngüyü üstlenir: etüt, Özbekistan normlarına göre proje, montaj, devreye alma ve as-built evrakla teslim. İş merkezleri, konut siteleri ve fabrikalarda genel zayıf akım yüklenicisi olarak da, işletmedeki tesislerde tekil alt sistemlerde de çalışırız — işi durdurmadan. Ekipman Taşkent'teki depomuzdan: Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik — 3.000+ kalem.",
+      "Bütçe proje veya şartnameye göre çıkarılır: mühendis keşfi ve hesap ücretsizdir. Teslimde işçilik ve ekipman garantisi verir, periyodik kontrollü bakım sözleşmesi yaparız. Taşkent ve tüm Özbekistan genelinde çalışıyoruz; kurumlara tam evrak ve KDV faturası.",
+    ],
+  },
   perimeter: {
     heading: "Çevre güvenliği: çitten müdahaleye kadar",
     paragraphs: [
       "Çevre koruma sistemi, davetsiz misafiri binaya ulaşmadan tespit eder: sensörler ve video analitiği çiti, kapıları ve yaklaşma yollarını izler. SAT Solutions depolar, fabrikalar, lojistik sahaları, çiftlikler ve konutlar için çevre güvenlik sistemleri projelendirir ve kurar: çit üzerine titreşim kablosu, kızılötesi ve mikrodalga bariyerler, termal kameralar ve çizgi geçiş analitiği olan IP kameralar.",
       "Teknoloji sahaya ve bütçeye göre seçilir. Titreşim kablosu çite tırmanmayı ve kesmeyi algılar; ışın bariyerleri açık bölümleri ve girişleri kapatır; kamera analitiği görüntüyle doğrulanan sanal bir çizgi çizer, termal kameralar tam karanlıkta ve siste çalışır. Uzun çevrelerde sistemler birleştirilir: sensör alarmı PTZ kamerayı otomatik olarak alarm noktasına çevirir.",
       "Yanlış alarmlar çevre sistemlerinin baş düşmanıdır; bu yüzden işin yarısı doğru ayardır: bölgeler, rüzgâr ve hayvanlara göre hassasiyet, her olayın video kaydına bağlanması. Sistemi hırsız alarmı, güvenlik noktası bildirimi ve mobil uyarılarla entegre ederiz. Taşkent ve tüm Özbekistan genelinde anahtar teslim kurulum, garanti ve servis.",
+          "Teknoloji savunma hattına göre seçilir. Birinci hat — çit: tel üzerindeki titreşim algılayıcı kablo tırmanma ve kesmeyi yakalar. İkinci — tampon şerit: IR ve mikrodalga bariyerler boşlukları ve düz hatları yüzlerce metreye kadar kapatır. Üçüncü — yaklaşma ve saha: AcuSense çizgi geçiş analizli IP kameralar hayvan ve kuşları eler; termal kameralar tam karanlıkta, siste ve dumanda insanı normal optiğin ulaşamayacağı mesafede tespit eder.",
+      "Doğru çevre güvenliği yalnız sensör değil tepkidir: alarm PTZ kamerayı noktaya döndürür, projektör veya flaşlı sireni çalıştırır, doğrulama karesini nöbet noktasına ve mobil uygulamaya yollar. Yanlış alarmlar çift doğrulamayla bastırılır — alarm, iki bağımsız hat gördüğünde sayılır. Bölgeleri devriye turları ve hava olayları nöbetçiyi boşuna uyandırmasın diye tasarlar, sistemi bölge haritası ve operatör talimatlarıyla teslim ederiz.",
     ],
   },
   pa: {
@@ -718,12 +854,46 @@ const tr: Record<string, ServiceContent> = {
 };
 
 const zh: Record<string, ServiceContent> = {
+  "sistemnaya-integraciya": {
+    heading: "塔什干安防与 IT 系统集成",
+    paragraphs: [
+      "成熟场所往往养着一个\"系统动物园\"：监控是一家装的，门禁是另一家，报警又是第三家。各自能用，合在一起却彼此沉默：保安盯五块屏幕，一件事要翻三本日志，火灾时没人保证门禁释放。系统集成把这一切缝合成带端到端联动的单一综合体。",
+      "SAT Solutions 基于开放协议（ONVIF、OSDP、Modbus、厂商 API）设计集成：报警经视频复核，通行数据流入考勤与 1C，机电系统的故障上报统一值班台。服务器核心构建于 H3C 虚拟化平台——我们是 H3C 在乌兹别克斯坦的认证合作伙伴，从服务器供货到冗余集群。",
+      "一切从审计开始：绘制现有系统地图——哪些可直接集成、哪些需要网关、哪些更换更省。随后是不停业的分阶段方案、单区域试点与推广。结果是一个值班台、一套报表，以及应急情况下所有系统可预期的行为。",
+    ],
+  },
+  "obsluzhivanie": {
+    heading: "塔什干消防报警与安防系统维保",
+    paragraphs: [
+      "安防系统在无声中老化：电池衰减、探测器与摄像机积尘、存储写满——而这一切总在火灾、失窃或检查时暴露。维保合同把风险变成计划：工程师按规程上门，检查探测器、回路、疏散、供电与录像，并维护检查人员要查的台账。",
+      "我们维保消防报警与疏散系统（按乌兹别克斯坦法规）、视频监控、门禁、对讲与网络——无论是我们安装的还是其他承包商建的。应急请求可经电话或 Telegram 提交；常规当个工作日响应，关键场所按小时定 SLA。备件池确保故障单元即换即用，维修另行进行。",
+      "维保费用取决于系统构成与点位数量：免费审计后报价；连锁企业可签一份覆盖全乌兹别克斯坦网点的合同。企业客户获得结算单据、增值税发票及可直接应检的报告。",
+    ],
+  },
+  "proektirovanie": {
+    heading: "塔什干消防报警、监控与门禁设计",
+    paragraphs: [
+      "设计文件是预算的保护伞：在采购之前就能看清场所需要多少探测器、摄像机与控制器，线路走向如何，系统如何通过验收。我们按乌兹别克斯坦规范设计自动消防报警与疏散广播、带视域与存储计算的视频监控、含疏散场景的门禁，以及预留扩容的综合布线。",
+      "施工图包含设计说明、平面图、系统图、线缆表、清单与预算。我们对文件负责到底：回复专家审查意见、落实修改、施工期间提供设计者监督。设计由具备向乌国主管部门交付经验的工程师完成——从办公楼到工业场地。",
+      "对建筑行业客户提供\"设计+施工+交付\"整包：一支团队对图纸及其落地负责，设计费在施工预算中抵扣。上门勘察与初步估算免费，覆盖塔什干及各州。",
+    ],
+  },
+  "slabotochnye-sistemy": {
+    heading: "塔什干弱电系统安装——交钥匙工程",
+    paragraphs: [
+      "弱电系统是建筑的神经系统：视频监控、门禁、消防与防盗报警、广播、对讲和综合布线。新建项目将其打包设计与施工最为划算：各子系统共享线缆路由与机柜，探测器、摄像机与门禁联动成统一场景——从火灾时释放门禁到报警视频复核。",
+      "SAT Solutions 提供全流程：勘察、按乌兹别克斯坦规范设计、安装、调试及竣工资料交付。既可在商务中心、住宅区和工厂建设中担任弱电总包，也可在运营场所做单项子系统——不停业施工。设备从塔什干自有仓库发货：海康威视、大华、Bolid、Rubezh、中控智慧、MikroTik——3000 余种。",
+      "预算依据设计或任务书编制：工程师上门与测算免费。交付后提供工程与设备保修，并签订定期巡检的维保合同。业务覆盖塔什干及乌兹别克斯坦全境，企业客户提供全套单据与增值税发票。",
+    ],
+  },
   perimeter: {
     heading: "周界安防：从围栏到响应",
     paragraphs: [
       "周界防护在入侵者接近建筑之前就将其发现：传感器与视频分析监控围栏、大门和通道。SAT Solutions为仓库、工厂、物流园区、农场和别墅设计并安装周界系统：围栏振动电缆、红外与微波对射、热成像仪以及带越线分析的IP摄像机。",
       "技术方案按现场和预算选择。振动电缆感知攀爬和破坏围栏；对射光束封闭开阔地段和出入口；摄像机分析划出可用画面核实的虚拟警戒线，热成像仪在全黑和大雾中照常工作。长周界将多种系统组合：传感器报警时PTZ摄像机自动转向报警点。",
       "误报是周界系统的头号敌人，因此一半的工作在于正确调试：分区、针对风和动物的灵敏度、把每次报警与录像关联。系统与防盗报警、值班岗通知和手机推送联动。塔什干及全乌兹别克斯坦交钥匙安装，提供保修与维保。",
+          "技术随防线而定。第一道防线是围栏：网面上的振动感应缆捕捉攀爬与剪切。第二道是隔离带：红外与微波对射封锁缺口和数百米直线段。第三道是接近区与场区：带 AcuSense 越线分析的 IP 摄像机过滤动物与飞鸟，热成像仪则在全黑、浓雾与烟尘中以普通光学无法企及的距离发现人员。",
+      "合格的周界不止传感器，更在于反应：报警自动引导云台摄像机指向警点，启动探照灯或声光警号，并将复核画面推送到值班台和手机。误报靠双重确认抑制——两道独立防线同时看到才算报警。我们把分区设计得让巡逻与天气不再空耗警力——交付时附分区图与操作员手册。",
     ],
   },
   pa: {

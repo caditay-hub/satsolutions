@@ -2495,6 +2495,126 @@
           "a": "Yes: self-service pay stations, QR payment, time-based tariffs and tenant subscriptions — no cashier, no cash."
         }
       ]
+    },
+    "slabotochnye-sistemy": {
+      "title": "Low-Voltage Systems",
+      "desc": "The building's entire low-voltage scope from one contractor — design to handover.",
+      "intro": "We design and install all low-voltage systems of a building: CCTV, access control, fire and intruder alarm, structured cabling, intercom and PA — one team, one coordinated design.",
+      "works": [
+        "Site survey and design of all subsystems",
+        "Unified cable infrastructure (SCS, trays, risers)",
+        "Installation of CCTV, ACS, alarms, intercom, PA",
+        "Subsystem integration into a single monitoring post",
+        "Handover with as-built documents, warranty and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "What counts as low-voltage systems?",
+          "a": "Everything running on low current: CCTV, access control, fire and intruder alarms, PA, intercom, structured cabling and LAN, telephony. We cover the whole list with one team."
+        },
+        {
+          "q": "Why is a single contractor cheaper for the whole scope?",
+          "a": "Handover gaps disappear: one cable route instead of five, a coordinated design, one monitoring post and one phone number for any issue. On the budget it is typically 10–20% below the sum of separate contracts."
+        },
+        {
+          "q": "Do you work to the client's existing design?",
+          "a": "Yes — we install to your working documentation and keep as-built records. If there is no design, our engineering department prepares one to Uzbekistan codes."
+        },
+        {
+          "q": "Do you take subcontracts from construction companies?",
+          "a": "Yes, we regularly act as the low-voltage subcontractor on construction sites: following the general schedule, closing stages with acts, and supporting the handover to the authorities."
+        }
+      ]
+    },
+    "proektirovanie": {
+      "title": "Security Systems Design",
+      "desc": "Working designs for fire alarm, CCTV, access control and cabling to Uzbekistan codes.",
+      "intro": "We produce working documentation for fire alarm, CCTV, access control and structured cabling: layouts, diagrams, specifications and budgets to Uzbekistan codes — with approval support.",
+      "works": [
+        "Site survey and terms of reference",
+        "Working documentation: layouts, diagrams, cable schedules",
+        "Equipment specification and budget estimate",
+        "Approval and expert-review support",
+        "Designer's supervision during installation"
+      ],
+      "faq": [
+        {
+          "q": "When is a design legally required?",
+          "a": "Automatic fire alarm and voice evacuation must be designed and handed over to national codes — without a design the authorities will not accept the site. For CCTV and access control a design is mandatory on large and regulated sites, and saves budget and rework everywhere else."
+        },
+        {
+          "q": "What does the working design include?",
+          "a": "An explanatory note, equipment layouts, block and wiring diagrams, cable schedules, an equipment and materials specification, and a budget estimate. On request — an integration section with other building systems."
+        },
+        {
+          "q": "Can we order the design only, without installation?",
+          "a": "Yes — the design is a standalone service you can tender to installers. If you entrust the installation to us, the design fee is credited against the works budget."
+        },
+        {
+          "q": "How long does design take?",
+          "a": "A typical office or shop — 1–2 weeks; a production building or business centre — from 3 weeks depending on area and subsystems. Deadlines are fixed in the contract."
+        }
+      ]
+    },
+    "obsluzhivanie": {
+      "title": "Maintenance Contracts",
+      "desc": "Scheduled inspections, emergency callouts, logbooks and spare stock.",
+      "intro": "We maintain fire alarm, CCTV, access control and networks: scheduled inspections, emergency callouts with agreed response times, logbooks and a spare-parts pool.",
+      "works": [
+        "Audit and takeover of systems (including third-party installs)",
+        "Scheduled inspections with logbook entries",
+        "Emergency callouts with fixed response times",
+        "Spare-parts pool and equipment repair",
+        "Reporting ready for authority inspections"
+      ],
+      "faq": [
+        {
+          "q": "Is fire alarm maintenance mandatory?",
+          "a": "Yes — regulations require regular scheduled checks of the fire alarm and evacuation systems with logbook records that inspectors ask for. Without an active contract the site collects violation notices."
+        },
+        {
+          "q": "What does a scheduled inspection include?",
+          "a": "Detector and loop checks, evacuation test, battery and PSU condition, camera cleaning and archive control, firmware updates, logbook entries. The scope is fixed in the contract for your systems."
+        },
+        {
+          "q": "Will you take over a system installed by others?",
+          "a": "Yes — after a free audit: we assess the condition, issue a defect list and take the system on. Third-party installation is not an obstacle."
+        },
+        {
+          "q": "What is the emergency response time?",
+          "a": "Per contract: the typical SLA is a same-business-day visit; for critical sites we agree response in hours. Phone and remote diagnostics start immediately."
+        }
+      ]
+    },
+    "sistemnaya-integraciya": {
+      "title": "System Integration",
+      "desc": "Security, networks and servers combined into one managed complex.",
+      "intro": "We stitch a site's scattered systems — CCTV, access control, alarms, networks, servers — into a single complex with one control post and end-to-end scenarios.",
+      "works": [
+        "Audit of existing systems and an integration plan",
+        "Unified server platform and virtualisation (H3C)",
+        "End-to-end scenarios: alarm → camera → announcement",
+        "Integration with 1C, time attendance, ERP",
+        "A single monitoring post and operator training"
+      ],
+      "faq": [
+        {
+          "q": "What does integration add over separate systems?",
+          "a": "Events stop being orphans: an alarm pulls up the right camera, a card pass is recorded with video, a fire signal releases doors and starts the announcement. The operator gets one screen instead of five applications."
+        },
+        {
+          "q": "Can different installed brands be combined?",
+          "a": "Usually yes: open protocols (ONVIF, OSDP, Modbus, vendor APIs) link equipment from different makers. After an audit we say honestly what integrates as is and what is cheaper to replace."
+        },
+        {
+          "q": "Do you link access control to time attendance and 1C?",
+          "a": "Yes, a standard task: passes flow into timesheets and 1C, lateness and overtime are computed automatically."
+        },
+        {
+          "q": "What about resilience?",
+          "a": "Critical services run on a virtualised, redundant server platform (H3C); power is protected by UPS, archives by RAID. A unified system does not mean a single point of failure."
+        }
+      ]
     }
   },
   "solutionsPage": {
