@@ -1740,7 +1740,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Transport-rated equipment",
-        "brandsText": "Transport recorders and cameras with power protection, passenger counting sensors, 4G modems — per design:"
+        "brandsText": "Transport recorders and cameras with power protection, passenger counting sensors, 4G modems — per design:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From pilot to an equipped fleet — 5 steps",
+        "stages": [
+          {
+            "t": "Vehicle and depot walkthrough",
+            "s": "vehicle types, inter-shift windows — free"
+          },
+          {
+            "t": "A 2–3 vehicle pilot",
+            "s": "a month of connectivity and vibration stats"
+          },
+          {
+            "t": "Kit adjustment",
+            "s": "mounts and settings from the pilot's results"
+          },
+          {
+            "t": "Fleet rollout",
+            "s": "a vehicle per day, no schedule drop-outs"
+          },
+          {
+            "t": "Dispatch and service",
+            "s": "monitoring, checks at maintenance"
+          }
+        ]
       }
     },
     "city": {
@@ -1809,7 +1833,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "City-scale equipment",
-        "brandsText": "Hikvision and Dahua cameras, H3C servers and storage, Dahua video walls, trunk network gear — per design:"
+        "brandsText": "Hikvision and Dahua cameras, H3C servers and storage, Dahua video walls, trunk network gear — per design:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From concept to a situation center — 5 steps",
+        "stages": [
+          {
+            "t": "Concept and a pilot zone",
+            "s": "intersections or a district with a full loop"
+          },
+          {
+            "t": "Phase design",
+            "s": "cameras, channels, the data center, procedures"
+          },
+          {
+            "t": "Trunk construction",
+            "s": "fiber with redundant routes"
+          },
+          {
+            "t": "The situation center",
+            "s": "a video wall, operator workstations"
+          },
+          {
+            "t": "Trial operation",
+            "s": "analytics calibrated together with the client"
+          }
+        ]
       }
     },
     "parking": {
@@ -1971,7 +2019,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for retail sites",
-        "brandsText": "Hikvision and Dahua cameras with POS linking, visitor counters, AX PRO alarm panels — from stock:"
+        "brandsText": "Hikvision and Dahua cameras with POS linking, visitor counters, AX PRO alarm panels — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a controlled store — 5 steps",
+        "stages": [
+          {
+            "t": "Site walkthrough",
+            "s": "checkout, floor, stockroom — free"
+          },
+          {
+            "t": "A quote or a standard kit",
+            "s": "for chains — a ready site scheme"
+          },
+          {
+            "t": "Installation before opening",
+            "s": "at night or before trading starts"
+          },
+          {
+            "t": "POS linking",
+            "s": "video + receipts, visitor counters"
+          },
+          {
+            "t": "Handover and service",
+            "s": "office access, one contract for the chain"
+          }
+        ]
       }
     },
     "bank": {
@@ -2040,7 +2112,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Bank-grade equipment",
-        "brandsText": "Hikvision and Dahua, ZKTeco access control with multi-factor access, redundant H3C servers — with warranty:"
+        "brandsText": "Hikvision and Dahua, ZKTeco access control with multi-factor access, redundant H3C servers — with warranty:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From clearance to a handed-over branch — 5 steps",
+        "stages": [
+          {
+            "t": "Clearance with security",
+            "s": "permits, routes, work order"
+          },
+          {
+            "t": "A zoned design",
+            "s": "tellers, hall, vault, server room"
+          },
+          {
+            "t": "Quote and contract",
+            "s": "per the bank's internal requirements"
+          },
+          {
+            "t": "Installation outside operating hours",
+            "s": "evenings and weekends"
+          },
+          {
+            "t": "Handover with scenarios",
+            "s": "alarm, power failure, archive export"
+          }
+        ]
       }
     },
     "school": {
@@ -2109,7 +2205,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for schools",
-        "brandsText": "ZKTeco turnstiles with parent notifications, vandal-proof Hikvision cameras, school PA — from stock:"
+        "brandsText": "ZKTeco turnstiles with parent notifications, vandal-proof Hikvision cameras, school PA — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a protected school — 5 steps",
+        "stages": [
+          {
+            "t": "Walkthrough with the administration",
+            "s": "entrance, grounds, timetable — free"
+          },
+          {
+            "t": "Quote and documents",
+            "s": "a pack for public procurement and tender"
+          },
+          {
+            "t": "A holiday schedule",
+            "s": "main works outside classes"
+          },
+          {
+            "t": "Installation and the pupil base",
+            "s": "cards, parent notifications"
+          },
+          {
+            "t": "Handover with an evacuation scenario",
+            "s": "release verified with the administration"
+          }
+        ]
       }
     },
     "industry": {
@@ -2178,7 +2298,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Industrial-grade equipment",
-        "brandsText": "Hikvision and Dahua in IP66/IK10 housings, ZKTeco access control, Bolid and Rubezh fire systems, MikroTik and H3C networks — from stock:"
+        "brandsText": "Hikvision and Dahua in IP66/IK10 housings, ZKTeco access control, Bolid and Rubezh fire systems, MikroTik and H3C networks — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a working plant — 5 steps",
+        "stages": [
+          {
+            "t": "A walk with the chief engineer",
+            "s": "workshops, perimeter, checkpoint — free"
+          },
+          {
+            "t": "A quote with a specification",
+            "s": "models and part numbers, prices verifiable"
+          },
+          {
+            "t": "Contract and schedule",
+            "s": "stages fitted to maintenance windows and shifts"
+          },
+          {
+            "t": "Installation without stopping",
+            "s": "workshop by workshop, as agreed"
+          },
+          {
+            "t": "Handover and SLA",
+            "s": "guard training, documentation, service"
+          }
+        ]
       }
     },
     "residential": {
@@ -2247,7 +2391,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for residential complexes",
-        "brandsText": "Hikvision IP intercoms, barriers with ANPR, vandal-proof cameras, locks and access control — from stock:"
+        "brandsText": "Hikvision IP intercoms, barriers with ANPR, vandal-proof cameras, locks and access control — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a handed-over complex — 5 steps",
+        "stages": [
+          {
+            "t": "Walkthrough or floor plans",
+            "s": "courtyard, entrances, parking — free"
+          },
+          {
+            "t": "A quote by entrance and yard",
+            "s": "staged, to spread the budget"
+          },
+          {
+            "t": "Agreement with the HOA/MC",
+            "s": "we help carry the residents' vote"
+          },
+          {
+            "t": "Floor-by-floor installation",
+            "s": "residents pass as usual"
+          },
+          {
+            "t": "Handover to the MC",
+            "s": "training, procedures, a service contract"
+          }
+        ]
       }
     },
     "virtualization": {
@@ -3478,7 +3646,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Cameras and networks for warehouse logistics",
-        "brandsText": "Hikvision and Dahua with WDR for ramps, ANPR cameras, MikroTik switches, ZKTeco access control — from stock:"
+        "brandsText": "Hikvision and Dahua with WDR for ramps, ANPR cameras, MikroTik switches, ZKTeco access control — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a controlled warehouse — 5 steps",
+        "stages": [
+          {
+            "t": "Warehouse walkthrough",
+            "s": "ramps, aisles, cold zones — free"
+          },
+          {
+            "t": "A quote by zone",
+            "s": "receiving and dispatch first"
+          },
+          {
+            "t": "Contract and work windows",
+            "s": "installation without stopping the warehouse"
+          },
+          {
+            "t": "Installation and binding",
+            "s": "search by time and gate"
+          },
+          {
+            "t": "Handover and training",
+            "s": "clip export for claims"
+          }
+        ]
       }
     },
     "construction": {
@@ -3547,7 +3739,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for construction sites",
-        "brandsText": "Autonomous 4G posts, Hikvision cameras in protected housings, checkpoint access control — from stock:"
+        "brandsText": "Autonomous 4G posts, Hikvision cameras in protected housings, checkpoint access control — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From machinery arrival to building handover — 5 steps",
+        "stages": [
+          {
+            "t": "A scheme by the master plan",
+            "s": "where the crane goes, where the fence moves — free"
+          },
+          {
+            "t": "Autonomous posts",
+            "s": "launched in 1–2 days, no network or power"
+          },
+          {
+            "t": "Checkpoint and records",
+            "s": "workers by cards, vehicles with materials"
+          },
+          {
+            "t": "Moves following the build",
+            "s": "posts relocate in hours"
+          },
+          {
+            "t": "Conversion to a permanent system",
+            "s": "or dismantling and moving to the next site"
+          }
+        ]
       }
     },
     "medical": {
@@ -3616,7 +3832,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for healthcare",
-        "brandsText": "Hikvision cameras, zoned ZKTeco access control, panic buttons, fire systems per healthcare norms — from stock:"
+        "brandsText": "Hikvision cameras, zoned ZKTeco access control, panic buttons, fire systems per healthcare norms — from stock:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a protected clinic — 5 steps",
+        "stages": [
+          {
+            "t": "Walkthrough with the chief physician",
+            "s": "access zones, privacy — free"
+          },
+          {
+            "t": "A quote by department",
+            "s": "cameras outside wards, zoned access"
+          },
+          {
+            "t": "A schedule without stopping admissions",
+            "s": "departments in turn"
+          },
+          {
+            "t": "Installation and setup",
+            "s": "panic buttons, staff records"
+          },
+          {
+            "t": "Handover and a release procedure",
+            "s": "footage on request — lawful and fast"
+          }
+        ]
       }
     },
     "hotel": {
@@ -3685,7 +3925,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Hotel-grade equipment",
-        "brandsText": "Hotel locks with cards and mobile keys, Hikvision cameras, guest Wi-Fi — with warranty:"
+        "brandsText": "Hotel locks with cards and mobile keys, Hikvision cameras, guest Wi-Fi — with warranty:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a hotel with keys — 5 steps",
+        "stages": [
+          {
+            "t": "Walkthrough with the manager",
+            "s": "room stock, PMS, common areas — free"
+          },
+          {
+            "t": "PMS pairing check",
+            "s": "before the locks are bought, not after"
+          },
+          {
+            "t": "A one-floor pilot",
+            "s": "check-in and housekeeping on live scenarios"
+          },
+          {
+            "t": "Floor-by-floor replacement",
+            "s": "in low-occupancy hours, the hotel runs"
+          },
+          {
+            "t": "Front-desk training",
+            "s": "keys, routine cases, service"
+          }
+        ]
       }
     },
     "fuel": {
@@ -3754,7 +4018,31 @@
         ],
         "brandsLabel": "Equipment",
         "brandsTitle": "Equipment for fuel sites",
-        "brandsText": "Explosion-proof cameras for hazardous zones, Hikvision/Dahua ANPR, fire systems — per design:"
+        "brandsText": "Explosion-proof cameras for hazardous zones, Hikvision/Dahua ANPR, fire systems — per design:",
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a controlled station — 5 steps",
+        "stages": [
+          {
+            "t": "Station walkthrough",
+            "s": "hazard zones, pumps, checkout — free"
+          },
+          {
+            "t": "A zoned design",
+            "s": "the zone class sets the equipment rating"
+          },
+          {
+            "t": "Agreement with the chain",
+            "s": "a work schedule with operations"
+          },
+          {
+            "t": "Installation without stopping sales",
+            "s": "minimum-traffic windows"
+          },
+          {
+            "t": "Handover and monitoring",
+            "s": "for chains — every station from the office"
+          }
+        ]
       }
     },
     "ohrannye-sistemy": {

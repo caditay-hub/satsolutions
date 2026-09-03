@@ -1,10 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
-import { INDUSTRY_SERVICES } from "@/lib/industryDetails";
 
 // Универсальный блок «Типовые решения» для страниц услуг: рендерится, если в
 // messages есть services.<k>.details.packages (name/for/items/term + кнопка КП).
 // У network/server свои расширенные блоки — этот для остальных услуг.
+// У отраслей stages — коммерческий путь заказчика (заявка → КП → монтаж → сдача);
+// инженерная методика живёт отдельно в IndustryDetailsBlock («Как ведём проект»).
 type Pkg = { name: string; for: string; items: string[]; term: string };
 
 export async function ServicePackages({ k }: { k: string }) {
@@ -16,16 +17,11 @@ export async function ServicePackages({ k }: { k: string }) {
     if (Array.isArray(raw)) packages = raw.filter((p) => p?.name && Array.isArray(p.items));
   } catch { /* пакетов нет — блок не показываем */ }
   if (!packages.length) return null;
-  // У отраслей шаги живут в IndustryDetailsBlock («Как ведём проект») —
-  // stages здесь не заполняются намеренно, зонд дал бы лишь шум MISSING_MESSAGE в логах.
-  const isIndustry = k in INDUSTRY_SERVICES;
   let stages: { t: string; s?: string }[] = [];
-  if (!isIndustry) {
-    try {
-      const raw = ts.raw(`${k}.details.stages`) as { t: string; s?: string }[];
-      if (Array.isArray(raw)) stages = raw.filter((st) => st?.t);
-    } catch { /* этапов нет */ }
-  }
+  try {
+    const raw = ts.raw(`${k}.details.stages`) as { t: string; s?: string }[];
+    if (Array.isArray(raw)) stages = raw.filter((st) => st?.t);
+  } catch { /* этапов нет */ }
   let brandsText = "";
   try {
     const raw = ts.raw(`${k}.details.brandsText`);

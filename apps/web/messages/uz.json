@@ -1740,7 +1740,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Transport ijrosidagi uskunalar",
-        "brandsText": "Quvvat himoyali transport registrator va kameralari, yo'lovchi hisoblash datchiklari, 4G-modemlar — loyihaga:"
+        "brandsText": "Quvvat himoyali transport registrator va kameralari, yo'lovchi hisoblash datchiklari, 4G-modemlar — loyihaga:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Pilotdan jihozlangan parkgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Mashina va parkni ko'rish",
+            "s": "texnika turlari, smenalararo oynalar — bepul"
+          },
+          {
+            "t": "2–3 mashinada pilot",
+            "s": "bir oy aloqa va tebranish statistikasi"
+          },
+          {
+            "t": "Komplektni to'g'rilash",
+            "s": "pilot yakunlari bo'yicha mahkamlagich va sozlamalar"
+          },
+          {
+            "t": "Parkka tiraj",
+            "s": "mashina bir kunda, grafikdan chiqmasdan"
+          },
+          {
+            "t": "Dispetcherlik va servis",
+            "s": "monitoring, TOda reglamentlar"
+          }
+        ]
       }
     },
     "city": {
@@ -1809,7 +1833,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Shahar masshtabidagi uskunalar",
-        "brandsText": "Hikvision va Dahua kameralari, H3C server va SXDlari, Dahua videodevorlari, magistral tarmoq uskunalari — loyihaga:"
+        "brandsText": "Hikvision va Dahua kameralari, H3C server va SXDlari, Dahua videodevorlari, magistral tarmoq uskunalari — loyihaga:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Konsepsiyadan vaziyat markazigacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Konsepsiya va pilot zona",
+            "s": "to'liq konturli chorrahalar yoki tuman"
+          },
+          {
+            "t": "Navbatlar loyihasi",
+            "s": "kameralar, kanallar, DPM, reglamentlar"
+          },
+          {
+            "t": "Magistrallar qurilishi",
+            "s": "zaxira marshrutli VOLS"
+          },
+          {
+            "t": "Vaziyat markazi",
+            "s": "videodevor, operatorlar o'rinlari"
+          },
+          {
+            "t": "Tajriba ekspluatatsiyasi",
+            "s": "buyurtmachi bilan analitika kalibrovkasi"
+          }
+        ]
       }
     },
     "parking": {
@@ -1971,7 +2019,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Savdo obyektlariga uskunalar",
-        "brandsText": "Kassalar bilan bog'lanadigan Hikvision va Dahua kameralari, tashrif hisoblagichlari, AX PRO qo'riqlash panellari — ombordan:"
+        "brandsText": "Kassalar bilan bog'lanadigan Hikvision va Dahua kameralari, tashrif hisoblagichlari, AX PRO qo'riqlash panellari — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan nazoratdagi do'kongacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Nuqtani ko'rish",
+            "s": "kassa, zal, ombor — bepul"
+          },
+          {
+            "t": "KP yoki tipovoy komplekt",
+            "s": "tarmoqlarga — nuqtaning tayyor sxemasi"
+          },
+          {
+            "t": "Ochilishgacha montaj",
+            "s": "kechasi yoki savdo boshlanishidan oldin"
+          },
+          {
+            "t": "Kassalar bilan bog'lash",
+            "s": "video + cheklar, tashrif hisoblagichlari"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "ofisdan kirish, tarmoqqa yagona shartnoma"
+          }
+        ]
       }
     },
     "bank": {
@@ -2040,7 +2112,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Bank darajasidagi uskunalar",
-        "brandsText": "Hikvision va Dahua, ko'p faktorli kirishli ZKTeco SKUD, rezervlangan H3C serverlar — kafolat bilan:"
+        "brandsText": "Hikvision va Dahua, ko'p faktorli kirishli ZKTeco SKUD, rezervlangan H3C serverlar — kafolat bilan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Kelishuvdan topshirilgan bo'limgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Xavfsizlik xizmati bilan kelishish",
+            "s": "ruxsatlar, marshrutlar, ishlar tartibi"
+          },
+          {
+            "t": "Zonalar bo'yicha loyiha",
+            "s": "kassa, zal, omborxona, serverxona"
+          },
+          {
+            "t": "KP va shartnoma",
+            "s": "bank ichki talablari bo'yicha"
+          },
+          {
+            "t": "Operatsion vaqtdan tashqari montaj",
+            "s": "kechqurun va dam olish kunlari"
+          },
+          {
+            "t": "Stsenariyli topshirish",
+            "s": "trevoga, quvvat uzilishi, arxiv yuklash"
+          }
+        ]
       }
     },
     "school": {
@@ -2109,7 +2205,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "O'quv muassasalariga uskunalar",
-        "brandsText": "Ota-onalarga bildirishnomali ZKTeco turniketlari, antivandal Hikvision kameralari, maktab ogohlantirishi — ombordan:"
+        "brandsText": "Ota-onalarga bildirishnomali ZKTeco turniketlari, antivandal Hikvision kameralari, maktab ogohlantirishi — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan himoyalangan maktabgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Ma'muriyat bilan ko'rish",
+            "s": "kirish, hudud, jadval — bepul"
+          },
+          {
+            "t": "KP va hujjatlar",
+            "s": "byudjet xaridlari va tender uchun paket"
+          },
+          {
+            "t": "Ta'tilga grafik",
+            "s": "asosiy ishlar — o'qishdan tashqari"
+          },
+          {
+            "t": "Montaj va o'quvchilar bazasi",
+            "s": "kartalar, ota-onalarga bildirishnomalar"
+          },
+          {
+            "t": "Evakuatsiya stsenariyli topshirish",
+            "s": "bo'shatishni ma'muriyat bilan tekshirish"
+          }
+        ]
       }
     },
     "industry": {
@@ -2178,7 +2298,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Sanoat ijrosidagi uskunalar",
-        "brandsText": "IP66/IK10 korpuslarda Hikvision va Dahua, ZKTeco SKUD, Bolid va Rubej yong'in tizimlari, MikroTik va H3C tarmoqlari — ombordan:"
+        "brandsText": "IP66/IK10 korpuslarda Hikvision va Dahua, ZKTeco SKUD, Bolid va Rubej yong'in tizimlari, MikroTik va H3C tarmoqlari — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan ishlaydigan zavodgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Bosh muhandis bilan aylanish",
+            "s": "sexlar, perimetr, KPP — bepul"
+          },
+          {
+            "t": "Spetsifikatsiyali KP",
+            "s": "model va artikullar, narxlarni tekshirish mumkin"
+          },
+          {
+            "t": "Shartnoma va grafik",
+            "s": "ta'mir oynalari va smenalarga bosqichlar"
+          },
+          {
+            "t": "To'xtatmasdan montaj",
+            "s": "sexma-sex, kelishuv bo'yicha"
+          },
+          {
+            "t": "Topshirish va SLA",
+            "s": "qo'riqlashni o'qitish, hujjatlar, servis"
+          }
+        ]
       }
     },
     "residential": {
@@ -2247,7 +2391,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Turar-joy majmualariga uskunalar",
-        "brandsText": "Hikvision IP-domofoniyasi, ANPR li shlagbaumlar, antivandal kameralar, qulflar va SKUD — ombordan:"
+        "brandsText": "Hikvision IP-domofoniyasi, ANPR li shlagbaumlar, antivandal kameralar, qulflar va SKUD — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan topshirilgan majmuagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Ko'rish yoki planirovkalar",
+            "s": "hovli, pod'ezdlar, parking — bepul"
+          },
+          {
+            "t": "Pod'ezd va hovli bo'yicha KP",
+            "s": "byudjetni taqsimlash uchun bosqichma-bosqich"
+          },
+          {
+            "t": "TSJ/UK bilan kelishish",
+            "s": "yig'ilish qarorini yig'ishga yordam beramiz"
+          },
+          {
+            "t": "Qavatma-qavat montaj",
+            "s": "turg'unlar odatdagidek o'tadi"
+          },
+          {
+            "t": "UKga topshirish",
+            "s": "o'qitish, reglamentlar, servis shartnomasi"
+          }
+        ]
       }
     },
     "virtualization": {
@@ -3478,7 +3646,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Ombor logistikasiga kamera va tarmoqlar",
-        "brandsText": "Rampalarga WDR li Hikvision va Dahua, ANPR-kameralar, MikroTik kommutatorlar, ZKTeco SKUD — ombordan:"
+        "brandsText": "Rampalarga WDR li Hikvision va Dahua, ANPR-kameralar, MikroTik kommutatorlar, ZKTeco SKUD — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan nazoratdagi omborgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Omborni ko'rish",
+            "s": "rampalar, koridorlar, sovuq zonalar — bepul"
+          },
+          {
+            "t": "Zonalar bo'yicha KP",
+            "s": "qabul va jo'natish birinchi"
+          },
+          {
+            "t": "Shartnoma va ish oynalari",
+            "s": "omborni to'xtatmasdan montaj"
+          },
+          {
+            "t": "Montaj va bog'lash",
+            "s": "vaqt va darvoza bo'yicha qidiruv"
+          },
+          {
+            "t": "Topshirish va o'qitish",
+            "s": "da'volar uchun fragment yuklash"
+          }
+        ]
       }
     },
     "construction": {
@@ -3547,7 +3739,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Qurilish maydonchalariga uskunalar",
-        "brandsText": "4G li avtonom postlar, himoyalangan korpuslarda Hikvision kameralari, KPP uchun SKUD — ombordan:"
+        "brandsText": "4G li avtonom postlar, himoyalangan korpuslarda Hikvision kameralari, KPP uchun SKUD — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Texnika kirishidan bino topshirishgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Genplan bo'yicha sxema",
+            "s": "kran qayerda, to'siq qayerga ko'chadi — bepul"
+          },
+          {
+            "t": "Avtonom postlar",
+            "s": "1–2 kunda ishga tushirish, tarmoq va quvvatsiz"
+          },
+          {
+            "t": "KPP va hisob",
+            "s": "ishchilar kartalar bo'yicha, materialli mashinalar"
+          },
+          {
+            "t": "Qurilish ortidan ko'chirishlar",
+            "s": "postlar soatlarda ko'chadi"
+          },
+          {
+            "t": "Doimiy tizimga o'tkazish",
+            "s": "yoki demontaj va keyingi obyektga ko'chish"
+          }
+        ]
       }
     },
     "medical": {
@@ -3616,7 +3832,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Tibbiyot muassasalariga uskunalar",
-        "brandsText": "Hikvision kameralari, zonalar bo'yicha ZKTeco SKUD, trevoga tugmalari, tib-normalar bo'yicha yong'in tizimlari — ombordan:"
+        "brandsText": "Hikvision kameralari, zonalar bo'yicha ZKTeco SKUD, trevoga tugmalari, tib-normalar bo'yicha yong'in tizimlari — ombordan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan himoyalangan klinikagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Bosh vrach bilan ko'rish",
+            "s": "kirish zonalari, maxfiylik — bepul"
+          },
+          {
+            "t": "Bo'limlar bo'yicha KP",
+            "s": "kameralar palatalardan tashqari, SKUD zonalar bo'yicha"
+          },
+          {
+            "t": "Qabulni to'xtatmaydigan grafik",
+            "s": "bo'limlar navbat bilan"
+          },
+          {
+            "t": "Montaj va sozlash",
+            "s": "trevoga tugmalari, xodimlar hisobi"
+          },
+          {
+            "t": "Topshirish va berish reglamenti",
+            "s": "so'rov bo'yicha yozuvlar — qonuniy va tez"
+          }
+        ]
       }
     },
     "hotel": {
@@ -3685,7 +3925,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Mehmonxona klassi uskunalari",
-        "brandsText": "Karta va mobil kalitli mehmonxona qulflari, Hikvision kameralari, mehmonlarga Wi-Fi — kafolat bilan:"
+        "brandsText": "Karta va mobil kalitli mehmonxona qulflari, Hikvision kameralari, mehmonlarga Wi-Fi — kafolat bilan:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan kalitli mehmonxonagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Boshqaruvchi bilan ko'rish",
+            "s": "nomer fondi, PMS, umumiy zonalar — bepul"
+          },
+          {
+            "t": "PMS bilan bog'lamni tekshirish",
+            "s": "qulflar xaridigacha, keyin emas"
+          },
+          {
+            "t": "Bitta qavatda pilot",
+            "s": "joylashish va tozalash jonli stsenariylarda"
+          },
+          {
+            "t": "Qavatma-qavat almashtirish",
+            "s": "past yuklama soatlarida, mehmonxona ishlaydi"
+          },
+          {
+            "t": "Resepshnni o'qitish",
+            "s": "kalitlar, tipovoy holatlar, servis"
+          }
+        ]
       }
     },
     "fuel": {
@@ -3754,7 +4018,31 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Yoqilg'i obyektlariga uskunalar",
-        "brandsText": "Xavfli zonalarga portlashdan himoyalangan kameralar, Hikvision/Dahua ANPR, yong'in tizimlari — loyihaga:"
+        "brandsText": "Xavfli zonalarga portlashdan himoyalangan kameralar, Hikvision/Dahua ANPR, yong'in tizimlari — loyihaga:",
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan nazoratdagi AYoQShgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Stansiyani ko'rish",
+            "s": "portlash xavfi zonalari, kolonkalar, kassa — bepul"
+          },
+          {
+            "t": "Zonalar bo'yicha loyiha",
+            "s": "uskuna ijrosini zona klassi belgilaydi"
+          },
+          {
+            "t": "Tarmoq bilan kelishish",
+            "s": "ekspluatatsiya bilan ishlar grafigi"
+          },
+          {
+            "t": "Sotuvni to'xtatmasdan montaj",
+            "s": "minimal trafik oynalari"
+          },
+          {
+            "t": "Topshirish va monitoring",
+            "s": "tarmoqlarga — barcha stansiyalar ofisdan"
+          }
+        ]
       }
     },
     "ohrannye-sistemy": {

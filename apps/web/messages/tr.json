@@ -1732,7 +1732,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Taşıt sınıfı ekipman",
-        "brandsText": "Güç korumalı taşıt kayıt cihazları ve kameraları, yolcu sayma sensörleri, 4G modemler — projeye göre:"
+        "brandsText": "Güç korumalı taşıt kayıt cihazları ve kameraları, yolcu sayma sensörleri, 4G modemler — projeye göre:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Pilottan donatılmış filoya — 5 adım",
+        "stages": [
+          {
+            "t": "Araç ve garaj turu",
+            "s": "araç tipleri, vardiya arası pencereler — ücretsiz"
+          },
+          {
+            "t": "2–3 araçlık pilot",
+            "s": "bir ay bağlantı ve titreşim istatistiği"
+          },
+          {
+            "t": "Set düzeltmesi",
+            "s": "pilot sonuçlarına göre bağlantı ve ayarlar"
+          },
+          {
+            "t": "Filoya yayma",
+            "s": "günde bir araç, programdan düşmeden"
+          },
+          {
+            "t": "Merkez ve servis",
+            "s": "izleme, bakımlarda kontroller"
+          }
+        ]
       }
     },
     "city": {
@@ -1801,7 +1825,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Şehir ölçeğinde ekipman",
-        "brandsText": "Hikvision ve Dahua kameralar, H3C sunucu ve depolama, Dahua video duvarları, omurga ağ ekipmanı — projeye göre:"
+        "brandsText": "Hikvision ve Dahua kameralar, H3C sunucu ve depolama, Dahua video duvarları, omurga ağ ekipmanı — projeye göre:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Konseptten durum merkezine — 5 adım",
+        "stages": [
+          {
+            "t": "Konsept ve pilot bölge",
+            "s": "tam devreli kavşaklar veya semt"
+          },
+          {
+            "t": "Etap projesi",
+            "s": "kameralar, kanallar, veri merkezi, prosedürler"
+          },
+          {
+            "t": "Omurga inşası",
+            "s": "yedek güzergâhlı fiber"
+          },
+          {
+            "t": "Durum merkezi",
+            "s": "video duvarı, operatör masaları"
+          },
+          {
+            "t": "Deneme işletmesi",
+            "s": "analitik müşteriyle kalibre edilir"
+          }
+        ]
       }
     },
     "parking": {
@@ -1963,7 +2011,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Perakende sahaları için ekipman",
-        "brandsText": "Kasa bağlantılı Hikvision ve Dahua kameralar, ziyaretçi sayaçları, AX PRO alarm panelleri — stoktan:"
+        "brandsText": "Kasa bağlantılı Hikvision ve Dahua kameralar, ziyaretçi sayaçları, AX PRO alarm panelleri — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten kontrollü mağazaya — 5 adım",
+        "stages": [
+          {
+            "t": "Nokta turu",
+            "s": "kasa, salon, depo — ücretsiz"
+          },
+          {
+            "t": "Teklif veya tip set",
+            "s": "zincirlere — hazır nokta şeması"
+          },
+          {
+            "t": "Açılıştan önce montaj",
+            "s": "gece veya satış başlamadan"
+          },
+          {
+            "t": "Kasa bağlantısı",
+            "s": "video + fişler, ziyaretçi sayaçları"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "ofisten erişim, zincire tek sözleşme"
+          }
+        ]
       }
     },
     "bank": {
@@ -2032,7 +2104,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Banka sınıfı ekipman",
-        "brandsText": "Hikvision ve Dahua, çok faktörlü ZKTeco geçiş kontrolü, yedekli H3C sunucular — garantili:"
+        "brandsText": "Hikvision ve Dahua, çok faktörlü ZKTeco geçiş kontrolü, yedekli H3C sunucular — garantili:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Onaydan teslim edilmiş şubeye — 5 adım",
+        "stages": [
+          {
+            "t": "Güvenlikle mutabakat",
+            "s": "izinler, güzergâhlar, iş düzeni"
+          },
+          {
+            "t": "Bölgeli proje",
+            "s": "vezne, salon, kasa dairesi, sistem odası"
+          },
+          {
+            "t": "Teklif ve sözleşme",
+            "s": "bankanın iç gereksinimlerine göre"
+          },
+          {
+            "t": "Mesai dışı montaj",
+            "s": "akşamlar ve hafta sonları"
+          },
+          {
+            "t": "Senaryolu teslim",
+            "s": "alarm, güç kesintisi, arşiv aktarımı"
+          }
+        ]
       }
     },
     "school": {
@@ -2101,7 +2197,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Okullar için ekipman",
-        "brandsText": "Veli bildirimli ZKTeco turnikeler, darbeye dayanıklı Hikvision kameralar, okul anonsu — stoktan:"
+        "brandsText": "Veli bildirimli ZKTeco turnikeler, darbeye dayanıklı Hikvision kameralar, okul anonsu — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten korunan okula — 5 adım",
+        "stages": [
+          {
+            "t": "İdareyle tur",
+            "s": "giriş, bahçe, ders programı — ücretsiz"
+          },
+          {
+            "t": "Teklif ve evrak",
+            "s": "kamu alımı ve ihale paketi"
+          },
+          {
+            "t": "Tatile göre takvim",
+            "s": "ana işler ders dışında"
+          },
+          {
+            "t": "Montaj ve öğrenci veritabanı",
+            "s": "kartlar, veli bildirimleri"
+          },
+          {
+            "t": "Tahliye senaryolu teslim",
+            "s": "açılma idareyle doğrulanır"
+          }
+        ]
       }
     },
     "industry": {
@@ -2170,7 +2290,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Endüstriyel sınıf ekipman",
-        "brandsText": "IP66/IK10 gövdeli Hikvision ve Dahua, ZKTeco geçiş kontrolü, Bolid ve Rubezh yangın sistemleri, MikroTik ve H3C ağları — stoktan:"
+        "brandsText": "IP66/IK10 gövdeli Hikvision ve Dahua, ZKTeco geçiş kontrolü, Bolid ve Rubezh yangın sistemleri, MikroTik ve H3C ağları — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten çalışan fabrikaya — 5 adım",
+        "stages": [
+          {
+            "t": "Baş mühendisle saha turu",
+            "s": "atölyeler, çevre, giriş — ücretsiz"
+          },
+          {
+            "t": "Spesifikasyonlu teklif",
+            "s": "modeller ve kodlar, fiyatlar doğrulanabilir"
+          },
+          {
+            "t": "Sözleşme ve takvim",
+            "s": "bakım pencerelerine ve vardiyalara göre etaplar"
+          },
+          {
+            "t": "Durdurmadan montaj",
+            "s": "atölye atölye, anlaşmayla"
+          },
+          {
+            "t": "Teslim ve SLA",
+            "s": "güvenlik eğitimi, dokümantasyon, servis"
+          }
+        ]
       }
     },
     "residential": {
@@ -2239,7 +2383,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Siteler için ekipman",
-        "brandsText": "Hikvision IP interkom, ANPR'li bariyerler, darbeye dayanıklı kameralar, kilitler ve geçiş kontrolü — stoktan:"
+        "brandsText": "Hikvision IP interkom, ANPR'li bariyerler, darbeye dayanıklı kameralar, kilitler ve geçiş kontrolü — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten teslim edilmiş siteye — 5 adım",
+        "stages": [
+          {
+            "t": "Tur veya kat planları",
+            "s": "avlu, girişler, otopark — ücretsiz"
+          },
+          {
+            "t": "Giriş ve avlu bazlı teklif",
+            "s": "bütçeyi yaymak için kademeli"
+          },
+          {
+            "t": "Yönetimle mutabakat",
+            "s": "kat malikleri kararına yardım ederiz"
+          },
+          {
+            "t": "Kat kat montaj",
+            "s": "sakinler her zamanki gibi geçer"
+          },
+          {
+            "t": "Yönetime devir",
+            "s": "eğitim, prosedürler, servis sözleşmesi"
+          }
+        ]
       }
     },
     "virtualization": {
@@ -3470,7 +3638,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Depo lojistiği için kamera ve ağlar",
-        "brandsText": "Rampalar için WDR'li Hikvision ve Dahua, ANPR kameralar, MikroTik switch'ler, ZKTeco geçiş kontrolü — stoktan:"
+        "brandsText": "Rampalar için WDR'li Hikvision ve Dahua, ANPR kameralar, MikroTik switch'ler, ZKTeco geçiş kontrolü — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten kontrollü depoya — 5 adım",
+        "stages": [
+          {
+            "t": "Depo turu",
+            "s": "rampalar, koridorlar, soğuk bölgeler — ücretsiz"
+          },
+          {
+            "t": "Bölge bazlı teklif",
+            "s": "önce mal kabul ve sevkiyat"
+          },
+          {
+            "t": "Sözleşme ve iş pencereleri",
+            "s": "depoyu durdurmadan montaj"
+          },
+          {
+            "t": "Montaj ve bağlama",
+            "s": "zamana ve kapıya göre arama"
+          },
+          {
+            "t": "Teslim ve eğitim",
+            "s": "itirazlar için görüntü aktarımı"
+          }
+        ]
       }
     },
     "construction": {
@@ -3539,7 +3731,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Şantiyeler için ekipman",
-        "brandsText": "4G'li otonom direkler, korumalı gövdeli Hikvision kameralar, giriş için geçiş kontrolü — stoktan:"
+        "brandsText": "4G'li otonom direkler, korumalı gövdeli Hikvision kameralar, giriş için geçiş kontrolü — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Makinelerin girişinden bina teslimine — 5 adım",
+        "stages": [
+          {
+            "t": "Genel plana göre şema",
+            "s": "vinç nerede, çit nereye taşınır — ücretsiz"
+          },
+          {
+            "t": "Otonom direkler",
+            "s": "1–2 günde açılış, ağsız ve elektriksiz"
+          },
+          {
+            "t": "Giriş ve kayıt",
+            "s": "işçiler kartla, malzemeli araçlar"
+          },
+          {
+            "t": "İnşaatı izleyen taşımalar",
+            "s": "direkler saatler içinde taşınır"
+          },
+          {
+            "t": "Kalıcı sisteme çevirme",
+            "s": "veya söküm ve sonraki sahaya taşınma"
+          }
+        ]
       }
     },
     "medical": {
@@ -3608,7 +3824,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Sağlık kuruluşları için ekipman",
-        "brandsText": "Hikvision kameralar, bölgeli ZKTeco geçiş kontrolü, panik butonları, sağlık normlarına göre yangın sistemleri — stoktan:"
+        "brandsText": "Hikvision kameralar, bölgeli ZKTeco geçiş kontrolü, panik butonları, sağlık normlarına göre yangın sistemleri — stoktan:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten korunan kliniğe — 5 adım",
+        "stages": [
+          {
+            "t": "Başhekimle tur",
+            "s": "erişim bölgeleri, mahremiyet — ücretsiz"
+          },
+          {
+            "t": "Bölüm bazlı teklif",
+            "s": "odalar dışında kameralar, bölgeli geçiş"
+          },
+          {
+            "t": "Kabulü durdurmayan takvim",
+            "s": "bölümler sırayla"
+          },
+          {
+            "t": "Montaj ve ayar",
+            "s": "panik butonları, personel kayıtları"
+          },
+          {
+            "t": "Teslim ve verme prosedürü",
+            "s": "talep üzerine kayıtlar — yasal ve hızlı"
+          }
+        ]
       }
     },
     "hotel": {
@@ -3677,7 +3917,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Otel sınıfı ekipman",
-        "brandsText": "Kartlı ve mobil anahtarlı otel kilitleri, Hikvision kameralar, misafir Wi-Fi'ı — garantili:"
+        "brandsText": "Kartlı ve mobil anahtarlı otel kilitleri, Hikvision kameralar, misafir Wi-Fi'ı — garantili:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten anahtarlı otele — 5 adım",
+        "stages": [
+          {
+            "t": "Müdürle tur",
+            "s": "oda stoğu, PMS, ortak alanlar — ücretsiz"
+          },
+          {
+            "t": "PMS eşleşme kontrolü",
+            "s": "kilitler alınmadan önce, sonra değil"
+          },
+          {
+            "t": "Tek katta pilot",
+            "s": "canlı senaryolarda check-in ve kat hizmeti"
+          },
+          {
+            "t": "Kat kat değişim",
+            "s": "düşük dolulukta, otel çalışır"
+          },
+          {
+            "t": "Resepsiyon eğitimi",
+            "s": "anahtarlar, tipik durumlar, servis"
+          }
+        ]
       }
     },
     "fuel": {
@@ -3746,7 +4010,31 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Yakıt tesisleri için ekipman",
-        "brandsText": "Tehlikeli bölgelere exproof kameralar, Hikvision/Dahua ANPR, yangın sistemleri — projeye göre:"
+        "brandsText": "Tehlikeli bölgelere exproof kameralar, Hikvision/Dahua ANPR, yangın sistemleri — projeye göre:",
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten kontrollü istasyona — 5 adım",
+        "stages": [
+          {
+            "t": "İstasyon turu",
+            "s": "tehlike bölgeleri, pompalar, kasa — ücretsiz"
+          },
+          {
+            "t": "Bölgeli proje",
+            "s": "bölge sınıfı ekipman sınıfını belirler"
+          },
+          {
+            "t": "Zincirle mutabakat",
+            "s": "işletmeyle iş takvimi"
+          },
+          {
+            "t": "Satışı durdurmadan montaj",
+            "s": "en az trafikli pencereler"
+          },
+          {
+            "t": "Teslim ve izleme",
+            "s": "zincirlere — tüm istasyonlar ofisten"
+          }
+        ]
       }
     },
     "ohrannye-sistemy": {
