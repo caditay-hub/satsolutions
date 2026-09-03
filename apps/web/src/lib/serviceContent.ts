@@ -386,6 +386,8 @@ const ru: Record<string, ServiceContent> = {
       "Ложные тревоги — главный враг периметралки, поэтому половина работы — правильная настройка: зоны, чувствительность под ветер и животных, привязка сработок к видеозаписи. Систему связываем с охранной сигнализацией, оповещением поста и мобильными уведомлениями. Монтируем под ключ по Ташкенту и всему Узбекистану, даём гарантию и обслуживаем.",
           "Выбор технологии зависит от рубежа. Первый рубеж — ограждение: вибрационный чувствительный кабель на полотне ловит перелаз и перекус, датчики разрыва контролируют козырёк. Второй — полоса отчуждения: ИК- и радиолучевые барьеры перекрывают проёмы и прямые участки до сотен метров. Третий — подступы и территория: IP-камеры с аналитикой пересечения линии AcuSense отсеивают животных и птиц, а тепловизоры обнаруживают человека в полной темноте, тумане и задымлении на дистанции, недоступной обычной оптике.",
       "Правильный периметр — это не только датчики, но и реакция: сработка автоматически наводит поворотную камеру на точку тревоги, включает прожектор или сирену-строб, отправляет кадр верификации на пост и в мобильное приложение. Ложные тревоги гасятся двойным подтверждением: тревога засчитывается, когда её видят два независимых рубежа. Мы проектируем зоны так, чтобы обход патруля и погодные события не будили охрану впустую — и сдаём систему с картой зон и инструкциями для операторов.",
+          "Стоимость периметральной системы определяется длиной рубежа и выбранной технологией: вибрационный кабель — самый доступный на погонный метр, лучевые барьеры дороже, но закрывают сотни метров парой блоков, тепловизоры — самая дорогая позиция, поэтому их ставят точечно на критичные направления. На цену влияют рельеф, состояние ограждения и наличие питания вдоль рубежа; выезд инженера на обследование и расчёт по Ташкенту — бесплатно.",
+      "Периметр — система сезонная: летом чувствительность душат трава и разросшиеся ветки, зимой — снег на кабеле и обледенение барьеров. Поэтому мы сдаём систему с картой зон и настройками под сезон, а по сервисному договору дважды в год перепроверяем чувствительность, юстировку лучей и чистоту оптики. Так система годами держит главный баланс: не пропускать человека и не будить охрану от каждой кошки.",
     ],
   },
   "pa": {
@@ -605,7 +607,7 @@ const uz: Record<string, ServiceContent> = {
     paragraphs: [
       "Aqlli uy yoritish, iqlim, pardalar, videokuzatuv, qo'riqlash va maishiy stsenariylarni smartfondagi bitta ilovada birlashtiradi. SAT Solutions kvartiralar, kottejlar, ofislar va apartamentlar uchun aqlli uy tizimlarini loyihalaydi va o'rnatadi — tayyor ta'mirdagi bir juft stsenariydan qurilish bosqichida yotqizilgan to'liq avtomatlashtirishgacha.",
       "Aqlli uyning foydasi lampochkani telefondan yoqishda emas, kundalik yumushni olib tashlaydigan stsenariylarda. «Tong»: pardalar ochiladi, chiroq asta yonadi, konditsioner tungi rejimdan chiqadi. «Ketdik»: butun chiroq o'chadi, dazmol va ploykali rozetkalar tokdan uziladi, qo'riqlash navbatchilikka turadi. «Ta'til»: uy kechqurunlari chiroq yoqib, borlikni imitatsiya qiladi. Bir marta sozlangan stsenariy tugma, jadval yoki geolokatsiya bo'yicha ishlaydi — bu turmushni istalgan gadjetdan kuchliroq o'zgartiradi.",
-      "Xavfsizlik — aqlli uyning eng tez o'zini oqlaydigan qismi. Suv oqishi datchigi elektrokran bilan suvni soniyalarda yopadi — qo'shnilarni bosishdan oldin; tutun datchigi kechasi uyg'otadi va uyda bo'lmasangiz ham xabar yuboradi; ochilish va harakat datchiklari sirena va telefonга trevogali qo'riqlash signalizatsiyasi bo'lib ishlaydi. Kameralar va videodomofon o'sha ilovaga qo'shiladi: eshik qo'ng'irog'i qayerda bo'lsangiz ham smartfonga keladi.",
+      "Xavfsizlik — aqlli uyning eng tez o'zini oqlaydigan qismi. Suv oqishi datchigi elektrokran bilan suvni soniyalarda yopadi — qo'shnilarni bosishdan oldin; tutun datchigi kechasi uyg'otadi va uyda bo'lmasangiz ham xabar yuboradi; ochilish va harakat datchiklari sirena va telefonga trevogali qo'riqlash signalizatsiyasi bo'lib ishlaydi. Kameralar va videodomofon o'sha ilovaga qo'shiladi: eshik qo'ng'irog'i qayerda bo'lsangiz ham smartfonga keladi.",
       "Simli yoki simsiz tizim — asosiy tanlov, va u ta'mir bosqichiga bog'liq. Zigbee va Wi-Fi dagi simsiz yechimlar (Tuya, Aqara) tayyor ta'mirga shtroblashsiz o'rnatiladi: rele podrozetniklarga yashirinadi, datchiklar yopishtiriladi va batareykadan yillab ishlaydi. Simli shina qurilish bosqichida yotqiziladi: u ishonchliroq, radioefirga bog'liq emas va katta uylarga mo'ljallangan. Qayerda simsiz yetishini halol aytamiz — bu kvartiralarning ko'pchiligi.",
       "Iqlimni his-tuyg'u bilan emas, datchiklar bo'yicha avtomatlashtiramiz: konditsionerlar, issiq pollar va namlagichlar xonalar bo'yicha berilgan harorat va namlikni ushlaydi, kechasi pasayadi va kelishingizga komfortga chiqadi. Ovozli boshqaruvni odatiy assistentga ulaymiz; yoritishni faqat lampalarga emas, aqlli vyklyuchatellarga quramiz — shunda devordagi oddiy klavisha telefon chiqargisi kelmaydigan har kim uchun ishlashda davom etadi.",
       "Mustaqil yig'ishning asosiy xavfi — mos kelmaydigan ilovalar hayvonot bog'i: lampalar birida, rozetkalar boshqasida, kameralar uchinchisida. Biz tizimni yagona platformada yig'amiz: barcha qurilmalar bir-birini ko'radi va umumiy stsenariylarda qatnashadi, oila esa tushunarli huquqli bitta ilovadan foydalanadi: bolalarga — o'z xonasidagi chiroq, kattalarga — hammasi.",
@@ -805,6 +807,8 @@ const uz: Record<string, ServiceContent> = {
       "Yolg'on trevogalar — perimetr tizimining asosiy dushmani, shuning uchun ishning yarmi to'g'ri sozlash: zonalar, shamol va hayvonlarga moslashgan sezgirlik, sabab bo'lgan hodisani videoyozuvga bog'lash. Tizimni qo'riqlash signalizatsiyasi, post ogohlantirishi va mobil xabarlar bilan bog'laymiz. Toshkent va butun O'zbekiston bo'ylab kalit topshirish sharti bilan o'rnatamiz, kafolat va servis beramiz.",
           "Texnologiya tanlovi chegara chizig'iga bog'liq. Birinchi chiziq — to'siq: polotnodagi vibratsion sezgir kabel oshib o'tish va kesishni ushlaydi. Ikkinchi — ajratish polosasi: IK va radionurli barerlar proyom va to'g'ri uchastkalarni yuzlab metrgacha yopadi. Uchinchi — yaqinlashuv va hudud: AcuSense chiziq kesish tahlilli IP-kameralar hayvon va qushlarni saralaydi, teplovizorlar esa odamni to'liq qorong'ilik, tuman va tutunda oddiy optikaga yetib bo'lmas masofada aniqlaydi.",
       "To'g'ri perimetr — bu datchiklargina emas, balki reaktsiya ham: ishlaganda aylanuvchi kamera avtomatik trevoga nuqtasiga qaraydi, projektor yoki strob-sirena yonadi, tasdiqlash kadri postga va mobil ilovaga boradi. Yolg'on trevogalar ikki tomonlama tasdiqlash bilan o'chiriladi: trevoga ikki mustaqil chiziq ko'rgandagina hisoblanadi. Zonalarni patrul aylanishi va ob-havo qo'riqchini bekorga uyg'otmasligi uchun loyihalaymiz.",
+          "Perimetr tizimining narxi chegara uzunligi va tanlangan texnologiya bilan belgilanadi: vibratsion kabel — pogon metrga eng arzoni, nurli barerlar qimmatroq, lekin bir juft blok bilan yuzlab metrni yopadi, teploviorlar — eng qimmat pozitsiya, shuning uchun ular kritik yo'nalishlarga nuqtali qo'yiladi. Narxga relyef, to'siq holati va chegara bo'ylab quvvat mavjudligi ta'sir qiladi; Toshkent bo'ylab muhandisning tekshiruvga chiqishi va hisob-kitob — bepul.",
+      "Perimetr — mavsumiy tizim: yozda sezgirlikni o't va o'sib ketgan shoxlar bo'g'adi, qishda — kabeldagi qor va barerlarning muzlashi. Shuning uchun biz tizimni zonalar xaritasi va mavsumga mos sozlamalar bilan topshiramiz, servis shartnomasi bo'yicha esa yiliga ikki marta sezgirlik, nurlar yustirovkasi va optika tozaligini qayta tekshiramiz. Shunday qilib tizim yillar davomida asosiy muvozanatni ushlaydi: odamni o'tkazib yubormaslik va har mushukdan qo'riqchini uyg'otmaslik.",
     ],
   },
   "pa": {
@@ -973,6 +977,8 @@ const en: Record<string, ServiceContent> = {
       "False alarms are the main enemy of perimeter systems, so half of the work is proper tuning: zones, sensitivity margins for wind and animals, linking every event to video. We tie the system into the intruder alarm, guard-post notification and mobile alerts. Turnkey installation across Tashkent and all of Uzbekistan, with warranty and service.",
           "Technology follows the line of defence. First line — the fence: vibration-sensing cable on the fabric catches climbing and cutting. Second — the exclusion strip: IR and microwave barriers close gaps and straight runs up to hundreds of metres. Third — approaches and grounds: IP cameras with AcuSense line-crossing analytics filter out animals and birds, while thermal imagers detect a person in complete darkness, fog and smoke at ranges ordinary optics cannot reach.",
       "A proper perimeter is reaction, not just sensors: an alarm slews the PTZ camera to the point, fires a floodlight or strobe siren, and sends a verification frame to the post and the mobile app. False alarms are suppressed by dual confirmation — an alarm counts when two independent lines see it. We design zones so patrol rounds and weather do not wake the guards in vain — and hand over the system with a zone map and operator instructions.",
+          "The cost of a perimeter system is set by the length of the line and the chosen technology: vibration cable is the most affordable per meter, beam barriers cost more but close hundreds of meters with a pair of units, and thermal imagers are the priciest item, so they go pointwise onto critical directions. Terrain, fence condition and the availability of power along the line also affect the price; an engineer's site survey and calculation in Tashkent are free.",
+      "A perimeter is a seasonal system: in summer sensitivity is smothered by grass and overgrown branches, in winter by snow on the cable and icing of the barriers. So we hand over the system with a zone map and per-season settings, and under a service contract we re-verify sensitivity, beam alignment and optics cleanliness twice a year. That is how the system holds its main balance for years: miss no intruder and wake no guard over every cat.",
     ],
   },
   "pa": {
@@ -1220,6 +1226,62 @@ const en: Record<string, ServiceContent> = {
       "Installation needs wall preparation and serviceability thought through: pop-out brackets for panel access without dismantling the array, ventilation, concealed cabling and backed-up power. The cost depends on the panel count and size, bezel width, controller type and installation complexity. We quote and build the entire structure, including commissioning and layout setup for the duty shift.",
     ],
   },
+  "hotel": {
+    heading: "Security systems for hotels in Tashkent",
+    paragraphs: [
+      "A hotel differs from an office in that strangers walk through it every day, and the system must let them exactly where they belong and exactly for the length of their stay. The core is hotel card locks tied to the check-in system: a card is issued at the desk, works until the check-out date and opens only its own room and shared zones such as the elevator, gym or parking. Staff carry service cards with separate rights, and management sees the log: who opened which door and when.",
+      "CCTV in a hotel goes into the lobby, corridors, elevators, entrances, parking and service areas — never into the rooms. A separate layer is fire safety: an automatic fire alarm and an evacuation announcement system are mandatory in accommodation facilities, and locks on evacuation routes must release on a signal from the fire automation. This goes into the design from the start, because reworking after commissioning costs more.",
+      "We deliver a hotel as a package: locks and access control, CCTV, fire alarm and voice evacuation, guest Wi-Fi on a separate network segment, a barrier with plate recognition at the entrance. We also work on operating hotels: installation goes floor by floor so the property never closes entirely. We design, supply, install and maintain across Tashkent and all of Uzbekistan.",
+    ],
+  },
+  "school": {
+    heading: "CCTV and access control for schools and kindergartens",
+    paragraphs: [
+      "In a school or kindergarten the task is stated simply: an outsider must not get in, and parents must know the child arrived and left. This is covered by access control at the entrance — a turnstile or gate with a card or face recognition — and CCTV on the entrance groups, corridors, grounds and the fence perimeter. The entry system keeps a log, and with notifications connected a parent receives an alert when the child enters or leaves.",
+      "The second mandatory layer is fire safety and a panic button. An automatic fire alarm with voice evacuation is compulsory in educational institutions and is handed over to the supervising authorities with a design and as-built documentation. The panic button goes to the guard post or a monitoring station, and evacuation exit doors are fitted so that a fire automation signal releases them.",
+      "We design and install such systems around the academic calendar: main works run during holidays so as not to disturb classes, and staged handover is agreed with the administration. Equipment is chosen with a reliability margin — school hardware lives in harsher conditions than office hardware. We work across Tashkent and all of Uzbekistan and prepare documents for public procurement and tenders.",
+    ],
+  },
+  "retail": {
+    heading: "CCTV and security for shops and shopping centers",
+    paragraphs: [
+      "In retail a camera works not only for security but for resolving disputes and for discipline. The key points are the checkout zone, entrance and exit, sales floor, receiving and warehouse. At the checkout what matters is not a general view but a readable one: the camera is placed to show hands, goods and the monitor, and with POS integration the recording is captioned with the receipt text — then a dispute over a return or an unscanned item is settled in a minute, not an hour of archive scrubbing.",
+      "The warehouse part is covered separately: cameras at receiving and in the aisles, card-based access to service areas so only authorized staff reach the storeroom and warehouse. A shopping center adds the perimeter, parking with a barrier and plate recognition, a fire alarm with zone-by-zone announcements and systems for tenants. Visitor counters and heat maps feed the marketing team with flow data when that task is on the table.",
+      "We size and install a shop or mall end to end, including an archive of the right depth: retail usually keeps recordings longer than an office, because claims arrive late. We work in an operating store without stopping trade — noisy work moves to night or off-hours. After handover we maintain the system: we watch the recorder disk and the picture quality at the checkouts, where it matters most.",
+    ],
+  },
+  "residential": {
+    heading: "Low-current systems for residential complexes and developers",
+    paragraphs: [
+      "A residential complex is several systems that must work as one: entrance intercoms with calls to the phone, CCTV in the courtyard, playgrounds, parking and along the perimeter, a barrier with plate recognition at the entrance, access control on gates and service rooms. For the resident it looks simple — a card or an app opens the gate, the entrance and the barrier — while behind it stands one system with a common event log.",
+      "For a developer it is cheaper to design the low-current layer during construction than after handover. At the design stage the routes, risers, equipment niches and power are laid in; after finishing, any rework means chasing walls through fresh decoration and negotiating with residents. We join at the design stage, size the system from the floor plans, install as floors become ready and hand the management company complete documentation and access.",
+      "Operation is a task of its own. We configure the system so the management company can itself issue and block resident cards, change per-apartment car limits and export events, while complex maintenance — recorders, servers, equipment replacement — stays with us under a service contract. We work with new builds and with existing complexes that need outdated coordinate intercoms replaced or CCTV added.",
+    ],
+  },
+  "construction": {
+    heading: "CCTV and control on a construction site",
+    paragraphs: [
+      "A construction site differs from a finished building in that it has neither proper power, nor a network, nor walls to mount equipment on — and the site itself changes every month. So autonomous and semi-autonomous solutions work here: cameras on masts and site cabins, power from temporary lines or solar panels, transmission over 4G, local storage right in the camera or recorder. We assemble the system so it can be moved when the construction front shifts.",
+      "The second request on a site is accounting: who drove in, who walked out, how many people worked the shift. Vehicle entry control with a barrier and plate recognition settles the question of dump trucks and materials, while a checkpoint with a turnstile and cards or biometrics produces a per-crew timesheet that exports to the accounting system. For contractors it is also the way to end arguments about hours worked.",
+      "We install temporary systems for the construction period and then migrate the site to a permanent scheme — with the same cameras, but per design, with cable routes and fixed power. That order is cheaper than paying guards for the site and then designing the finished building's security from scratch. We work across Tashkent and the regions and prepare documents for the general contractor.",
+    ],
+  },
+  "fuel": {
+    heading: "Security systems for fuel stations and terminals",
+    paragraphs: [
+      "At a fuel station CCTV solves three tasks at once: control of fuel dispensing at the pumps, checkout discipline in the station shop and capture of vehicle plates at entry and exit. Pump cameras are placed so the frame holds both the refueling car and its plate — that closes payment disputes and drive-offs. Plate recognition links the pump event to the receipt and to the entry recording.",
+      "Safety requirements on a fuel site are stricter than usual: equipment and its placement are chosen with the explosion-hazard zone in mind, cable routes and power follow the design, and the fire alarm with voice notification is designed for the site's purpose and handed to the supervising authorities. This is not a site where a system can be assembled 'as it goes' — the design defines the composition and rating of the equipment.",
+      "We build fuel stations end to end: CCTV by zone (pumps, checkout, tank farm, perimeter), access control to service rooms, fire alarm, operator communications and an archive of the right depth. For station networks we set up unified access: the manager sees all stations in one interface instead of logging into each. We maintain the system under contract across Uzbekistan.",
+    ],
+  },
+  "industry": {
+    heading: "Security systems for manufacturing and industrial sites",
+    paragraphs: [
+      "At a plant the perimeter and the checkpoint matter more than a pretty picture inside. The perimeter is covered by night-capable cameras and, where needed, thermal imagers and an intrusion alarm; the checkpoint — by turnstiles with cards or biometrics and time attendance that exports to the timesheet and to the accounting system. That settles two questions at once: who is on the territory right now, and how many hours the shift worked.",
+      "Inside the workshops the requirements are different: dust, moisture, temperature swings, vibration and electromagnetic interference. Industrial-grade equipment in protected housings goes here, and routes are laid with heavy electrical machinery nearby in mind. A separate task is the network between workshops and warehouses: fiber lines, industrial switches, redundant channels — so a network outage does not stop production.",
+      "We design and build such sites end to end: CCTV, access control and time attendance, fire alarm and suppression per room purpose, structured cabling and industrial networks, a server room for archives and management systems. We work without stopping production, in stages, and take the site into scheduled service maintenance across Tashkent and the regions.",
+    ],
+  },
 };
 
 const tr: Record<string, ServiceContent> = {
@@ -1279,6 +1341,8 @@ const tr: Record<string, ServiceContent> = {
       "Yanlış alarmlar çevre sistemlerinin baş düşmanıdır; bu yüzden işin yarısı doğru ayardır: bölgeler, rüzgâr ve hayvanlara göre hassasiyet, her olayın video kaydına bağlanması. Sistemi hırsız alarmı, güvenlik noktası bildirimi ve mobil uyarılarla entegre ederiz. Taşkent ve tüm Özbekistan genelinde anahtar teslim kurulum, garanti ve servis.",
           "Teknoloji savunma hattına göre seçilir. Birinci hat — çit: tel üzerindeki titreşim algılayıcı kablo tırmanma ve kesmeyi yakalar. İkinci — tampon şerit: IR ve mikrodalga bariyerler boşlukları ve düz hatları yüzlerce metreye kadar kapatır. Üçüncü — yaklaşma ve saha: AcuSense çizgi geçiş analizli IP kameralar hayvan ve kuşları eler; termal kameralar tam karanlıkta, siste ve dumanda insanı normal optiğin ulaşamayacağı mesafede tespit eder.",
       "Doğru çevre güvenliği yalnız sensör değil tepkidir: alarm PTZ kamerayı noktaya döndürür, projektör veya flaşlı sireni çalıştırır, doğrulama karesini nöbet noktasına ve mobil uygulamaya yollar. Yanlış alarmlar çift doğrulamayla bastırılır — alarm, iki bağımsız hat gördüğünde sayılır. Bölgeleri devriye turları ve hava olayları nöbetçiyi boşuna uyandırmasın diye tasarlar, sistemi bölge haritası ve operatör talimatlarıyla teslim ederiz.",
+          "Çevre sisteminin maliyetini hattın uzunluğu ve seçilen teknoloji belirler: titreşim kablosu metre başına en uygunudur; ışın bariyerleri daha pahalıdır ama bir çift ünite ile yüzlerce metreyi kapatır; termal kameralar en pahalı kalemdir, bu yüzden kritik yönlere noktasal konur. Arazi, çit durumu ve hat boyunca besleme olup olmaması da fiyatı etkiler; Taşkent'te mühendis keşfi ve hesap ücretsizdir.",
+      "Çevre mevsimlik bir sistemdir: yazın hassasiyeti ot ve uzayan dallar boğar, kışın kablodaki kar ve bariyerlerin buzlanması. Bu yüzden sistemi bölge haritası ve mevsime göre ayarlarla teslim ederiz; servis sözleşmesiyle yılda iki kez hassasiyeti, ışın hizasını ve optiğin temizliğini yeniden doğrularız. Sistem yıllarca ana dengeyi böyle tutar: insanı kaçırmamak ve her kediye nöbetçiyi uyandırmamak.",
     ],
   },
   "pa": {
@@ -1583,6 +1647,62 @@ const tr: Record<string, ServiceContent> = {
       "Maliyet; yapılandırmaya, garanti süresine ve mevcut sunuculardan taşıma gerekip gerekmediğine bağlıdır. İki-üç seçenek hazırlarız — asgari çalışan, optimal ve üç yıl paylı — ve yalnız fiyatla değil neyle ayrıştıklarını gösteririz. Hesaplama ücretsizdir: görevi, kullanıcı sayısını ve veri hacmini gönderin; yapılandırma, fiyat ve teslim süresiyle dönelim.",
     ],
   },
+  "hotel": {
+    heading: "Tashkent'te oteller için güvenlik sistemleri",
+    paragraphs: [
+      "Otel, ofisten şu yönden ayrılır: içinden her gün tanımadık insanlar geçer ve sistem onları tam olması gereken yere, tam konaklama süresi kadar sokmalıdır. Temel, check-in sistemine bağlı kartlı otel kilitleridir: kart resepsiyonda verilir, çıkış tarihine kadar çalışır ve yalnızca kendi odasını ve asansör, spor salonu veya otopark gibi ortak alanları açar. Personel ayrı yetkili servis kartları taşır; yönetim ise kaydı görür: kim, hangi kapıyı, ne zaman açtı.",
+      "Otelde kameralar lobiye, koridorlara, asansör önlerine, girişlere, otoparka ve servis alanlarına kurulur — odalara asla. Ayrı bir katman yangın güvenliğidir: konaklama tesislerinde otomatik yangın alarmı ve tahliye anons sistemi zorunludur; tahliye yollarındaki kilitler yangın otomasyonunun sinyaliyle açılmalıdır. Bu, en baştan projeye konur; teslimden sonra değiştirmek daha pahalıya gelir.",
+      "Oteli paket hâlinde teslim ediyoruz: kilitler ve geçiş kontrolü, kamera sistemi, yangın alarmı ve sesli tahliye, ayrı ağ segmentinde misafir Wi-Fi'ı, girişte plaka tanımalı bariyer. Faal otellerde de çalışıyoruz: montaj kat kat ilerler, otel hiçbir zaman tümüyle kapanmaz. Taşkent ve tüm Özbekistan'da projelendiriyor, tedarik ediyor, kuruyor ve bakımını üstleniyoruz.",
+    ],
+  },
+  "school": {
+    heading: "Okul ve anaokulları için kamera ve geçiş kontrolü",
+    paragraphs: [
+      "Okulda ve anaokulunda görev basitçe tanımlanır: yabancı içeri girmemeli, veliler çocuğun gelip gittiğini bilmelidir. Bunu girişteki geçiş kontrolü — kartlı ya da yüz tanımalı turnike veya kapı — ile giriş gruplarında, koridorlarda, bahçede ve çit çevresinde kameralar karşılar. Geçiş sistemi kayıt tutar; bildirimler bağlandığında veli, çocuğun giriş ve çıkışında uyarı alır.",
+      "İkinci zorunlu katman yangın güvenliği ve panik butonudur. Eğitim kurumlarında sesli tahliyeli otomatik yangın alarmı zorunludur ve proje ile uygulama dokümantasyonu eşliğinde denetim makamlarına teslim edilir. Panik butonu güvenlik noktasına veya merkeze bağlanır; tahliye kapıları yangın otomasyonu sinyaliyle açılacak şekilde donatılır.",
+      "Bu sistemleri ders takvimine göre kuruyoruz: ana işler tatillerde yürür, derslere engel olmaz; kademeli teslim idareyle kararlaştırılır. Ekipman güvenilirlik payıyla seçilir — okulda teknik donanım ofistekinden daha zorlu koşullarda yaşar. Taşkent ve tüm Özbekistan'da çalışıyor, kamu alımları ve ihaleler için evrak hazırlıyoruz.",
+    ],
+  },
+  "retail": {
+    heading: "Mağazalar ve AVM'ler için kamera ve güvenlik",
+    paragraphs: [
+      "Perakendede kamera yalnızca güvenlik için değil, ihtilafların çözümü ve disiplin için de çalışır. Kilit noktalar kasa bölgesi, giriş-çıkış, satış alanı, mal kabul ve depodur. Kasada önemli olan genel görüntü değil okunur görüntüdür: kamera elleri, ürünü ve ekranı görecek şekilde konur; POS entegrasyonuyla kayda fiş metni eklenir — iade veya okutulmamış ürün tartışması arşiv taramakla değil, bir dakikada biter.",
+      "Depo tarafı ayrıca kapatılır: mal kabulde ve koridorlarda kameralar, servis alanlarına kartlı geçiş — depoya yalnızca yetkili girer. AVM'de buna çevre güvenliği, plaka tanımalı bariyerli otopark, bölge bölge anonslu yangın alarmı ve kiracı sistemleri eklenir. Ziyaretçi sayaçları ve ısı haritaları, böyle bir görev varsa pazarlamaya akış verisi sağlar.",
+      "Mağazayı veya AVM'yi baştan sona hesaplayıp kuruyoruz; doğru derinlikte arşiv dâhil: perakendede kayıtlar ofistekinden uzun tutulur, çünkü şikâyetler geç gelir. Faal mağazada ticareti durdurmadan çalışırız — gürültülü işler geceye alınır. Teslimden sonra sistemi biz bakarız: kayıt cihazının diskini ve en kritik yer olan kasalardaki görüntü kalitesini izleriz.",
+    ],
+  },
+  "residential": {
+    heading: "Konut siteleri ve müteahhitler için zayıf akım sistemleri",
+    paragraphs: [
+      "Bir konut sitesi, tek gibi çalışması gereken birkaç sistemdir: telefona arama düşen bina interkomları; avluda, oyun alanlarında, otoparkta ve çevre boyunca kameralar; girişte plaka tanımalı bariyer; kapılarda ve servis odalarında geçiş kontrolü. Sakin için basit görünür — kart ya da uygulama kapıyı, girişi ve bariyeri açar — arkasında ise ortak olay kayıtlı tek sistem durur.",
+      "Müteahhit için zayıf akımı inşaat aşamasında planlamak, teslimden sonrasından ucuzdur. Proje aşamasında güzergâhlar, şaftlar, ekipman nişleri ve besleme konur; ince işlerden sonra her düzeltme, taze dekorasyonda kanal açmak ve sakinlerle pazarlık demektir. Biz proje aşamasında devreye gireriz, sistemi kat planlarından hesaplarız, katlar hazır oldukça kurar ve site yönetimine tam dokümantasyonla erişimleri teslim ederiz.",
+      "İşletme ayrı bir görevdir. Sistemi öyle kurarız ki yönetim şirketi sakin kartlarını kendisi verip bloke edebilir, daire başına araç limitini değiştirebilir ve olayları dışa aktarabilir; karmaşık bakım — kayıt cihazları, sunucular, ekipman değişimi — servis sözleşmesiyle bizde kalır. Yeni projelerle de, eski interkomları değiştirilecek veya kamera eklenecek mevcut sitelerle de çalışıyoruz.",
+    ],
+  },
+  "construction": {
+    heading: "Şantiyede kamera ve kontrol",
+    paragraphs: [
+      "Şantiye, bitmiş binadan şu yönden ayrılır: ne düzgün besleme, ne ağ, ne de ekipman asılacak duvar vardır — saha kendisi de her ay değişir. Bu yüzden burada otonom ve yarı otonom çözümler çalışır: direklere ve baraka üstlerine kameralar, geçici hatlardan veya güneş panellerinden besleme, 4G ile aktarım, kamerada ya da kayıt cihazında yerel arşiv. Sistemi, inşaat cephesi kaydığında taşınabilecek şekilde kurarız.",
+      "Sahadaki ikinci talep sayımdır: kim girdi, kim çıktı, vardiyada kaç kişi çalıştı. Plaka tanımalı bariyerli araç girişi kamyon ve malzeme konusunu kapatır; turnikeli, kartlı veya biyometrik giriş noktası ise muhasebe sistemine aktarılan ekip bazlı puantaj üretir. Taşeronlar için bu, çalışılan saat tartışmalarını bitirmenin de yoludur.",
+      "İnşaat dönemi için geçici sistemleri kurar, sonra sahayı kalıcı düzene geçiririz — aynı kameralarla ama projeye göre, kablo güzergâhları ve sabit beslemeyle. Bu sıra, sahaya bekçi tutup bitmiş binanın güvenliğini sıfırdan projelendirmekten ucuzdur. Taşkent ve bölgelerde çalışıyor, ana yüklenici için evrak hazırlıyoruz.",
+    ],
+  },
+  "fuel": {
+    heading: "Akaryakıt istasyonları için güvenlik sistemleri",
+    paragraphs: [
+      "Akaryakıt istasyonunda kamera üç işi birden görür: pompalarda yakıt verme kontrolü, istasyon marketinde kasa disiplini, giriş-çıkışta plaka tespiti. Pompa kameraları, kareye hem yakıt alan aracı hem plakasını alacak şekilde konur — bu, ödeme tartışmalarını ve ödemeden kaçışları kapatır. Plaka tanıma, pompadaki olayı fişe ve girişteki kayda bağlar.",
+      "Yakıt tesisinde güvenlik gereksinimleri sıradan tesisten serttir: ekipman ve yerleşimi patlayıcı ortam bölgesine göre seçilir, kablo güzergâhları ve besleme projeye göre yapılır, yangın alarmı ve anons sistemi tesisin amacına göre projelendirilip denetim makamlarına teslim edilir. Burası sistemin 'olduğu gibi' toplanacağı bir saha değildir — ekipmanın bileşimini ve sınıfını proje belirler.",
+      "İstasyonu uçtan uca yapıyoruz: bölge bölge kameralar (pompalar, kasa, tank sahası, çevre), servis odalarına geçiş kontrolü, yangın alarmı, operatör haberleşmesi ve doğru derinlikte arşiv. İstasyon zincirlerine tek erişim kuruyoruz: yönetici tüm istasyonları tek arayüzde görür, her birine ayrı girmez. Sistemi tüm Özbekistan'da sözleşmeyle bakıyoruz.",
+    ],
+  },
+  "industry": {
+    heading: "Üretim ve sanayi tesisleri için güvenlik sistemleri",
+    paragraphs: [
+      "Fabrikada çevre ve giriş noktası, içerideki güzel görüntüden önemlidir. Çevre gece görüşlü kameralarla, gerektiğinde termal kameralar ve hırsız alarmıyla kapatılır; giriş noktası — kartlı ya da biyometrik turnikeler ve puantaja ile muhasebe sistemine aktarılan mesai takibiyle. Bu, iki soruyu birden çözer: şu an sahada kim var ve vardiya kaç saat çalıştı.",
+      "Atölyelerin içinde gereksinimler farklıdır: toz, nem, sıcaklık farkları, titreşim ve elektromanyetik parazit. Buraya korumalı gövdeli endüstriyel ekipman girer; güzergâhlar, yakında güç ekipmanı çalıştığı hesaba katılarak döşenir. Ayrı bir görev, atölyeler ve depolar arası ağdır: fiber hatlar, endüstriyel switch'ler, yedekli kanallar — ağ kesintisi üretimi durdurmasın.",
+      "Bu tesisleri uçtan uca projelendirip kuruyoruz: kameralar, geçiş kontrolü ve mesai takibi, oda amacına göre yangın alarmı ve söndürme, yapısal kablolama ve endüstriyel ağlar, arşiv ve yönetim sistemleri için sistem odası. Üretimi durdurmadan, kademeli çalışıyor ve tesisi Taşkent ile bölgelerde planlı servis bakımına alıyoruz.",
+    ],
+  },
 };
 
 const zh: Record<string, ServiceContent> = {
@@ -1642,6 +1762,8 @@ const zh: Record<string, ServiceContent> = {
       "误报是周界系统的头号敌人，因此一半的工作在于正确调试：分区、针对风和动物的灵敏度、把每次报警与录像关联。系统与防盗报警、值班岗通知和手机推送联动。塔什干及全乌兹别克斯坦交钥匙安装，提供保修与维保。",
           "技术随防线而定。第一道防线是围栏：网面上的振动感应缆捕捉攀爬与剪切。第二道是隔离带：红外与微波对射封锁缺口和数百米直线段。第三道是接近区与场区：带 AcuSense 越线分析的 IP 摄像机过滤动物与飞鸟，热成像仪则在全黑、浓雾与烟尘中以普通光学无法企及的距离发现人员。",
       "合格的周界不止传感器，更在于反应：报警自动引导云台摄像机指向警点，启动探照灯或声光警号，并将复核画面推送到值班台和手机。误报靠双重确认抑制——两道独立防线同时看到才算报警。我们把分区设计得让巡逻与天气不再空耗警力——交付时附分区图与操作员手册。",
+          "周界系统的造价取决于防线长度和所选技术：振动电缆按米价最实惠；对射光栅更贵，但一对设备就能封锁几百米；热成像仪最贵，所以只点状部署在关键方向。地形、围栏状况和沿线供电条件也影响价格；塔什干范围内工程师踏勘和核算免费。",
+      "周界是个“看季节”的系统：夏天灵敏度被杂草和疯长的树枝闷住，冬天则是电缆积雪和光栅结冰。所以我们交付时附分区图和分季节参数，并按服务合同每年两次复核灵敏度、光束校准和光学面清洁。系统就这样常年守住核心平衡：不放过人，也不为每只猫吵醒保安。",
     ],
   },
   "pa": {
@@ -1944,6 +2066,62 @@ const zh: Record<string, ServiceContent> = {
       "交付不只是硬件。我们上架安装、配置RAID、装系统或虚拟化平台、从旧设备迁移数据和业务、登记原厂质保，需要时签订带响应时限的服务合同。全乌兹别克斯坦供货，常规采购和招投标的文件都能配齐。",
       "服务器需要一个家：机柜、不间断电源、制冷和布线。如果机房还没有，我们作为单独服务设计建设——机柜、UPS、精密空调、综合布线、门禁和温湿度监控。小办公室是一柜加UPS；企业则是供电制冷双冗余的机房。",
       "费用取决于配置、质保年限以及是否需要从现有服务器迁移。我们出两三个方案——最低可用、最优、三年余量——并说明它们除价格外的差别。测算免费：把任务、用户数和数据量发来，我们回复配置、价格和交期。",
+    ],
+  },
+  "hotel": {
+    heading: "塔什干酒店安防系统",
+    paragraphs: [
+      "酒店与办公楼的区别在于每天都有陌生人进出，系统必须让他们只去该去的地方、只在入住期限内通行。核心是与入住系统联动的酒店门锁：前台发卡，用到退房日期为止，只能打开自己的房间和电梯、健身房、停车场等公共区域。员工持有单独权限的工作卡，管理层可查看日志：谁在何时开了哪扇门。",
+      "酒店的监控装在大堂、走廊、电梯口、出入口、停车场和后勤区——客房内永远不装。另一层是消防安全：住宿场所必须配自动火灾报警和疏散广播系统，疏散通道上的门锁要能随消防自动信号解锁。这些从设计阶段就要落实，验收后返工代价更高。",
+      "我们整体交付酒店项目：门锁与门禁、视频监控、火灾报警与语音疏散、独立网段的客用Wi-Fi、入口车牌识别道闸。营业中的酒店也能做：逐层施工，酒店无需整体停业。设计、供货、安装、维保，覆盖塔什干及全乌兹别克斯坦。",
+    ],
+  },
+  "school": {
+    heading: "学校与幼儿园的监控与门禁",
+    paragraphs: [
+      "学校和幼儿园的任务很直白：外人不能进入，家长要知道孩子何时到校、何时离开。方案是入口门禁——刷卡或人脸识别的闸机或小门——加上出入口、走廊、校园和围墙沿线的监控。通行系统记录日志，接入通知后家长会在孩子进出时收到提醒。",
+      "第二个必备层是消防和一键报警。教育机构必须配备带语音疏散的自动火灾报警系统，并连同设计和竣工文件移交监管部门验收。报警按钮接到保安岗或接警中心，疏散出口的门要做到消防信号触发即解锁。",
+      "我们按教学日程设计施工：主要工程放在假期，不影响上课，分阶段验收与校方商定。设备按可靠性余量选型——校园里的设备比办公室经受更严酷的使用。业务覆盖塔什干及全乌兹别克斯坦，可为政府采购和招标准备文件。",
+    ],
+  },
+  "retail": {
+    heading: "商店与购物中心的监控与安防",
+    paragraphs: [
+      "在零售业，摄像机不只管安全，还负责厘清纠纷、维持规范。关键点位是收银区、出入口、卖场、收货区和仓库。收银台要的不是全景而是看得清的画面：机位要拍到手、商品和屏幕，接入收银系统后录像会叠加小票内容——退货或漏扫争议一分钟就能查清，而不是翻一小时录像。",
+      "仓库单独布防：收货区和通道装摄像机，后勤区域刷卡进入，只有授权员工能进库房。购物中心再加上周界、带车牌识别道闸的停车场、分区广播的火灾报警和租户系统。有需求时，客流计数器和热力图还能给营销部门提供数据。",
+      "我们整体核算并施工商店或商场，包括合适深度的录像存档：零售的录像通常要比办公室存更久，因为投诉往往滞后。营业中的门店不停业施工——吵闹的工序挪到夜间。交付后由我们维保：盯紧录像机硬盘和最要紧的收银画面质量。",
+    ],
+  },
+  "residential": {
+    heading: "住宅小区与开发商的弱电系统",
+    paragraphs: [
+      "住宅小区是几套必须协同如一的系统：可呼叫手机的单元门对讲、庭院/儿童游乐场/停车场及周界的监控、入口车牌识别道闸、小门和后勤用房的门禁。对住户来说很简单——一张卡或一个App就能开小门、单元门和道闸——背后则是一套共用事件日志的统一系统。",
+      "对开发商来说，弱电在施工阶段规划远比交房后便宜。设计阶段就预留线路、竖井、设备壁龛和供电；精装完成后任何补做都意味着在新装修上开槽、跟业主协商。我们从设计阶段介入，按户型图核算系统，随楼层进度施工，最后向物业移交完整文档和权限。",
+      "运维是单独的课题。我们把系统配置成物业可自行发卡停卡、调整每户车位限额、导出事件，而复杂维护——录像机、服务器、设备更换——由我们按服务合同承担。新楼盘和需要更换老式对讲或加装监控的现有小区都能做。",
+    ],
+  },
+  "construction": {
+    heading: "施工工地的监控与管控",
+    paragraphs: [
+      "工地与竣工建筑的区别在于：没有正规供电、没有网络、没有能挂设备的墙——而且现场每个月都在变。所以这里用自供电和半自供电方案：摄像机装在桅杆和工棚上，供电来自临时线路或太阳能板，数据走4G，录像就存在摄像机或录像机本地。系统按可搬迁设计——施工面推进了就挪过去。",
+      "工地的第二个需求是计量：谁的车进了场、谁出了门、这个班干了多少人。车牌识别道闸管住渣土车和材料进出；带闸机、刷卡或生物识别的人行通道生成按班组的工时表，可导入核算系统。对分包商来说，这也是终结工时纠纷的办法。",
+      "我们为施工期安装临时系统，之后把现场切换到永久方案——摄像机还是那些，但按图施工、走正规线槽、接固定电源。这个顺序比先雇保安看场地、再从零设计成品楼的安防更省钱。业务覆盖塔什干及各州，可为总包方准备文件。",
+    ],
+  },
+  "fuel": {
+    heading: "加油站与油品设施的安防系统",
+    paragraphs: [
+      "在加油站，监控一次解决三件事：油枪出油监管、站内便利店的收银规范、进出口车牌抓拍。油枪机位要同时拍到加油车辆和车牌——付款纠纷和加完就跑的情况就此了结。车牌识别把油枪事件与小票、入口录像串在一起。",
+      "油品场所的安全要求比普通场所严格：设备及其布置要考虑爆炸危险区域，线缆和供电按设计施工，火灾报警和广播按场所用途设计并交监管部门验收。这不是可以“凑合装”的场地——设备的构成和防护等级由设计说了算。",
+      "我们整站承建：分区监控（油枪、收银、油罐区、周界）、后勤用房门禁、火灾报警、与操作员的通话，以及合适深度的录像存档。连锁油站可做统一接入：管理者在一个界面看全部站点，不用逐站登录。全乌兹别克斯坦范围内签约维保。",
+    ],
+  },
+  "industry": {
+    heading: "工厂与工业设施的安防系统",
+    paragraphs: [
+      "在工厂，周界和门岗比厂房内漂亮的画面更重要。周界用夜视摄像机布防，必要处加热成像仪和入侵报警；门岗配刷卡或生物识别闸机及考勤系统，工时可导出到工时表和核算系统。两个问题一并解决：此刻谁在厂区、这个班干了多少小时。",
+      "车间内部要求不同：粉尘、潮湿、温差、振动和电磁干扰。这里要上防护外壳的工业级设备，走线时要考虑旁边就是动力设备。厂房与仓库之间的网络是单独课题：光纤线路、工业交换机、通道冗余——断网不能停产。",
+      "我们整厂设计施工：视频监控、门禁与考勤、按房间用途配置的火灾报警和灭火、综合布线与工业网络、存放录像和管理系统的机房。不停产、分阶段施工，之后按计划巡检承接维保，覆盖塔什干及各州。",
     ],
   },
 };
