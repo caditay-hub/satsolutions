@@ -68,6 +68,8 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   "pxt-rb952ui-5ac2nd": "/products/mkt-rb952ui-5ac2nd",
   "mkt-hap-lite-rb952ui-5ac-2nd-mikrotik-router": "/products/mkt-rb952ui-5ac2nd",
   "mkt-rb4011igs-rm-mikrotik-router": "/products/pxt-rb4011igs-rm",
+  // 2026-09-03: дубль CCR2004-16G-2S+PC (одинаковая цена и описание), мерж по решению владельца.
+  "mkt-ccr2004-16g-2s-mikrotik-router": "/products/mkt-ccr2004-16g-2s-pluspc",
   // 2026-08-04: дубль HDMI-сплиттера 1×4, оставлена карточка с ценой из свежего прайса.
   "pro-hdmi-splitter-4k-1-4": "/products/pro-hdmi-4k-1-4-1-vhod-4-vyhod",
   "pro-dinamik-dlya-plity-dd80-35w-2": "/products/pro-dinamik-dlya-plity-dd80-35w",
