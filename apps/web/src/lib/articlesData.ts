@@ -171,31 +171,51 @@ export const ARTICLES: Article[] = [
       ru: {
         title: "Как выбрать стабилизатор напряжения для дома, офиса и серверной",
         excerpt: "Релейный, сервоприводный или инверторный? Считаем мощность с запасом, разбираем однофазные и трёхфазные модели и решаем, когда стабилизатора мало и нужен ИБП.",
-        sections: [{ h: "Когда нужен стабилизатор, а когда — ИБП", p: ["Стабилизатор выравнивает напряжение: если в сети хронические 180 или 250 вольт, техника получает ровные 220. Но при отключении света он бессилен — на этот случай нужен ИБП с батареями. Классическая связка для серверной и видеонаблюдения: стабилизатор на входе принимает скачки, ИБП за ним держит систему во время пропаданий.", "Признаки, что стабилизатор нужен уже вчера: мигают лампы при включении чайника, гудят блоки питания, зимой напряжение проседает ниже 200 В, а холодильник или котёл уходят в ошибку. Для газовых котлов и насосов стабилизатор фактически обязателен — их электроника гибнет от скачков первой."] }, { h: "Типы стабилизаторов: релейный, сервоприводный, инверторный", p: ["Релейный — самый доступный: ступенчато переключает обмотки, точность ±8 %, для бытовой техники достаточно. Сервоприводный ведёт напряжение плавно и точно (±3 %), но имеет механику, которая изнашивается, и не любит мороз. Инверторный (двойного преобразования) — эталон: мгновенная реакция, точность ±2 %, тишина; за это платят самой высокой ценой.", "Для дома и офиса чаще всего берут релейные и инверторные; для медицинского и лабораторного оборудования — только инверторные. Смотрите и на диапазон входного напряжения: дешёвые модели работают от 140–160 В, при более глубоких просадках просто отключаются."] }, { h: "Считаем мощность правильно", p: ["Сложите мощность всех потребителей и добавьте запас 30 %. Внимание на пусковые токи: компрессор холодильника и насос при старте берут в 3–5 раз больше номинала — их считают по пусковой мощности. Стабилизатор на 5 кВА — стандарт квартиры; дом с котлом и насосами — 8–10 кВА; трёхфазный ввод требует либо трёхфазную модель, либо три однофазных.", "В сумах экономия на мощности выходит боком: перегруженный стабилизатор живёт недолго и отключается в самый неподходящий момент. Мы бесплатно считаем нагрузку по списку техники и подбираем модель со склада в Ташкенте — с установкой и гарантией."] }],
+        sections: [{ h: "Когда нужен стабилизатор, а когда — ИБП", p: ["Стабилизатор выравнивает напряжение: если в сети хронические 180 или 250 вольт, техника получает ровные 220. Но при отключении света он бессилен — на этот случай нужен ИБП с батареями. Классическая связка для серверной и видеонаблюдения: стабилизатор на входе принимает скачки, ИБП за ним держит систему во время пропаданий.", "Признаки, что стабилизатор нужен уже вчера: мигают лампы при включении чайника, гудят блоки питания, зимой напряжение проседает ниже 200 В, а холодильник или котёл уходят в ошибку. Для газовых котлов и насосов стабилизатор фактически обязателен — их электроника гибнет от скачков первой."] }, { h: "Типы стабилизаторов: релейный, сервоприводный, инверторный", p: ["Релейный — самый доступный: ступенчато переключает обмотки, точность ±8 %, для бытовой техники достаточно. Сервоприводный ведёт напряжение плавно и точно (±3 %), но имеет механику, которая изнашивается, и не любит мороз. Инверторный (двойного преобразования) — эталон: мгновенная реакция, точность ±2 %, тишина; за это платят самой высокой ценой.", "Для дома и офиса чаще всего берут релейные и инверторные; для медицинского и лабораторного оборудования — только инверторные. Смотрите и на диапазон входного напряжения: дешёвые модели работают от 140–160 В, при более глубоких просадках просто отключаются."] }, { h: "Считаем мощность правильно", p: ["Сложите мощность всех потребителей и добавьте запас 30 %. Внимание на пусковые токи: компрессор холодильника и насос при старте берут в 3–5 раз больше номинала — их считают по пусковой мощности. Стабилизатор на 5 кВА — стандарт квартиры; дом с котлом и насосами — 8–10 кВА; трёхфазный ввод требует либо трёхфазную модель, либо три однофазных.", "В сумах экономия на мощности выходит боком: перегруженный стабилизатор живёт недолго и отключается в самый неподходящий момент. Мы бесплатно считаем нагрузку по списку техники и подбираем модель со склада в Ташкенте — с установкой и гарантией."] }  { h: "Установка: место решает срок службы", p: [
+            "Стабилизатор — это трансформатор, и он греется: ему нужны вентиляция и запас пространства, а не глухая ниша за шкафом. Ставьте его до защищаемой техники, но после автомата защиты, и не на пол в сыром подвале — влага убивает контакты быстрее перегрузок.",
+            "Для сервисных работ полезен байпас: техника остаётся с питанием, пока стабилизатор обслуживается или меняется. Мы подбираем модель по реальной нагрузке с запасом, монтируем с байпасом и заземлением и даём гарантию — включая честный совет, когда стабилизатор не нужен вовсе.",
+          ] },
+        ],
         faq: [{ q: "Какой стабилизатор нужен для газового котла?", a: "Инверторный или качественный релейный на 500–1000 ВА с широким входным диапазоном. Котлу важна и правильная синусоида, и защита от скачков — дешёвые ступенчатые модели с этим справляются плохо." }, { q: "Стабилизатор или ИБП — что выбрать?", a: "Скачки и просадки — стабилизатор; отключения света — ИБП. Полная защита серверной — связка обоих: стабилизатор на входе, ИБП за ним." }, { q: "Можно ли ставить стабилизатор на всю квартиру?", a: "Да, модель на 5–10 кВА ставится на ввод после счётчика и защищает всё сразу. Монтаж занимает пару часов, для трёхфазного ввода нужна трёхфазная схема." }],
       },
       uz: {
         title: "Uy, ofis va server xonasi uchun kuchlanish stabilizatorini qanday tanlash",
         excerpt: "Releli, servoprivodli yoki invertorli? Quvvatni zaxira bilan hisoblaymiz, bir fazali va uch fazali modellarni ko'rib chiqamiz va qachon stabilizator kamlik qilib, UPS kerakligini hal qilamiz.",
-        sections: [{ h: "Qachon stabilizator, qachon UPS kerak", p: ["Stabilizator kuchlanishni tekislaydi: tarmoqda surunkali 180 yoki 250 volt bo'lsa, texnika tekis 220 oladi. Lekin svet o'chganda u ojiz — bunga batareyali UPS kerak. Server va videokuzatuv uchun klassik bog'lam: kirishdagi stabilizator sakrashlarni oladi, undan keyingi UPS o'chishlarda tizimni ushlaydi.", "Stabilizator kechagidan kerakligining belgilari: choynak yoqilganda lampalar miltillaydi, quvvat bloklari g'uvillaydi, qishda kuchlanish 200 V dan pastga tushadi, muzlatgich yoki qozon xatoga chiqadi. Gaz qozonlari va nasoslar uchun stabilizator amalda majburiy."] }, { h: "Stabilizator turlari: releli, servoprivodli, invertorli", p: ["Releli — eng hamyonbop: chulg'amlarni pog'onali almashtiradi, aniqlik ±8 %, maishiy texnikaga yetadi. Servoprivodli kuchlanishni silliq va aniq boshqaradi (±3 %), lekin yeyiladigan mexanikasi bor. Invertorli (ikki marta o'zgartirish) — etalon: bir zumda javob, ±2 % aniqlik, jimlik; buning uchun eng yuqori narx to'lanadi.", "Uy va ofisga ko'pincha releli va invertorlilar olinadi; tibbiy va laboratoriya uskunalariga — faqat invertorli. Kirish kuchlanishi diapazoniga ham qarang: arzon modellar 140–160 V dan ishlaydi, chuqurroq pasayishlarda shunchaki o'chadi."] }, { h: "Quvvatni to'g'ri hisoblaymiz", p: ["Barcha iste'molchilar quvvatini qo'shing va 30 % zaxira qo'shing. Ishga tushirish toklariga e'tibor: muzlatgich kompressori va nasos startda nominaldan 3–5 barobar ko'p oladi. 5 kVA stabilizator — kvartira standarti; qozon va nasosli uy — 8–10 kVA; uch fazali kirish uch fazali modelni yoki uchta bir fazalini talab qiladi.", "Quvvatda tejash qimmatga tushadi: ortiqcha yuklangan stabilizator uzoq yashamaydi. Biz texnika ro'yxati bo'yicha yuklamani bepul hisoblaymiz va Toshkentdagi ombordan modelni tanlaymiz — o'rnatish va kafolat bilan."] }],
+        sections: [{ h: "Qachon stabilizator, qachon UPS kerak", p: ["Stabilizator kuchlanishni tekislaydi: tarmoqda surunkali 180 yoki 250 volt bo'lsa, texnika tekis 220 oladi. Lekin svet o'chganda u ojiz — bunga batareyali UPS kerak. Server va videokuzatuv uchun klassik bog'lam: kirishdagi stabilizator sakrashlarni oladi, undan keyingi UPS o'chishlarda tizimni ushlaydi.", "Stabilizator kechagidan kerakligining belgilari: choynak yoqilganda lampalar miltillaydi, quvvat bloklari g'uvillaydi, qishda kuchlanish 200 V dan pastga tushadi, muzlatgich yoki qozon xatoga chiqadi. Gaz qozonlari va nasoslar uchun stabilizator amalda majburiy."] }, { h: "Stabilizator turlari: releli, servoprivodli, invertorli", p: ["Releli — eng hamyonbop: chulg'amlarni pog'onali almashtiradi, aniqlik ±8 %, maishiy texnikaga yetadi. Servoprivodli kuchlanishni silliq va aniq boshqaradi (±3 %), lekin yeyiladigan mexanikasi bor. Invertorli (ikki marta o'zgartirish) — etalon: bir zumda javob, ±2 % aniqlik, jimlik; buning uchun eng yuqori narx to'lanadi.", "Uy va ofisga ko'pincha releli va invertorlilar olinadi; tibbiy va laboratoriya uskunalariga — faqat invertorli. Kirish kuchlanishi diapazoniga ham qarang: arzon modellar 140–160 V dan ishlaydi, chuqurroq pasayishlarda shunchaki o'chadi."] }, { h: "Quvvatni to'g'ri hisoblaymiz", p: ["Barcha iste'molchilar quvvatini qo'shing va 30 % zaxira qo'shing. Ishga tushirish toklariga e'tibor: muzlatgich kompressori va nasos startda nominaldan 3–5 barobar ko'p oladi. 5 kVA stabilizator — kvartira standarti; qozon va nasosli uy — 8–10 kVA; uch fazali kirish uch fazali modelni yoki uchta bir fazalini talab qiladi.", "Quvvatda tejash qimmatga tushadi: ortiqcha yuklangan stabilizator uzoq yashamaydi. Biz texnika ro'yxati bo'yicha yuklamani bepul hisoblaymiz va Toshkentdagi ombordan modelni tanlaymiz — o'rnatish va kafolat bilan."] }  { h: "O'rnatish: joy xizmat muddatini hal qiladi", p: [
+            "Stabilizator — transformator, u qiziydi: unga ventilyatsiya va joy zaxirasi kerak, shkaf ortidagi berk tokcha emas. Uni himoyalanadigan texnikagacha, lekin himoya avtomatidan keyin qo'ying, nam yerto'lada polga emas — namlik kontaktlarni yuklamalardan tez o'ldiradi.",
+            "Servis ishlariga baypas foydali: stabilizator xizmatlanayotganda yoki almashtirilayotganda texnika quvvat bilan qoladi. Modelni real yukka zaxira bilan tanlaymiz, baypas va yerga ulash bilan montaj qilamiz va kafolat beramiz — stabilizator umuman kerak emasligini halol maslahat bilan birga.",
+          ] },
+        ],
         faq: [{ q: "Gaz qozoni uchun qanday stabilizator kerak?", a: "Keng kirish diapazonli 500–1000 VA invertorli yoki sifatli releli. Qozonga to'g'ri sinusoida ham, sakrashlardan himoya ham muhim." }, { q: "Stabilizator yoki UPS — qaysi birini tanlash?", a: "Sakrash va pasayishlar — stabilizator; svet o'chishi — UPS. Server xonasining to'liq himoyasi — ikkalasining bog'lami." }, { q: "Butun kvartiraga stabilizator qo'yish mumkinmi?", a: "Ha, 5–10 kVA model hisoblagichdan keyin kirishga o'rnatiladi va hammasini birdan himoya qiladi. Montaj bir necha soat oladi." }],
       },
       en: {
         title: "How to choose a voltage stabilizer for a home, office or server room",
         excerpt: "Relay, servo or inverter type? Sizing with headroom, single- vs three-phase, and when a stabilizer is not enough and you need a UPS.",
-        sections: [{ h: "When you need a stabilizer — and when a UPS", p: ["A stabilizer levels the voltage: with a grid stuck at 180 or 250 volts, your equipment still gets a clean 220. It is helpless during a blackout — that is what a battery UPS is for. The classic pairing for server rooms and CCTV: a stabilizer at the input absorbs the surges, a UPS behind it rides through the outages.", "Signs you needed one yesterday: lights flicker when the kettle starts, power supplies hum, winter voltage sags below 200 V, the boiler or fridge trips into error. For gas boilers and pumps a stabilizer is effectively mandatory — their electronics die from surges first."] }, { h: "Stabilizer types: relay, servo, inverter", p: ["Relay is the budget choice: it switches windings in steps, ±8 % accuracy, fine for household loads. Servo units track voltage smoothly (±3 %) but carry wearing mechanics and dislike frost. Inverter (double conversion) is the benchmark: instant response, ±2 %, silence — at the highest price.", "Homes and offices mostly take relay or inverter units; medical and lab equipment only inverter. Watch the input range too: cheap models work from 140–160 V and simply shut down on deeper sags."] }, { h: "Sizing it right", p: ["Add up all loads and put 30 % on top. Mind inrush: a fridge compressor or a pump draws 3–5 times its rating at start. 5 kVA is the apartment standard; a house with a boiler and pumps needs 8–10 kVA; a three-phase feed takes either a three-phase unit or three single-phase ones.", "Skimping on capacity backfires: an overloaded stabilizer lives short and trips at the worst moment. We calculate the load from your equipment list for free and match a model from Tashkent stock — installed and under warranty."] }],
+        sections: [{ h: "When you need a stabilizer — and when a UPS", p: ["A stabilizer levels the voltage: with a grid stuck at 180 or 250 volts, your equipment still gets a clean 220. It is helpless during a blackout — that is what a battery UPS is for. The classic pairing for server rooms and CCTV: a stabilizer at the input absorbs the surges, a UPS behind it rides through the outages.", "Signs you needed one yesterday: lights flicker when the kettle starts, power supplies hum, winter voltage sags below 200 V, the boiler or fridge trips into error. For gas boilers and pumps a stabilizer is effectively mandatory — their electronics die from surges first."] }, { h: "Stabilizer types: relay, servo, inverter", p: ["Relay is the budget choice: it switches windings in steps, ±8 % accuracy, fine for household loads. Servo units track voltage smoothly (±3 %) but carry wearing mechanics and dislike frost. Inverter (double conversion) is the benchmark: instant response, ±2 %, silence — at the highest price.", "Homes and offices mostly take relay or inverter units; medical and lab equipment only inverter. Watch the input range too: cheap models work from 140–160 V and simply shut down on deeper sags."] }, { h: "Sizing it right", p: ["Add up all loads and put 30 % on top. Mind inrush: a fridge compressor or a pump draws 3–5 times its rating at start. 5 kVA is the apartment standard; a house with a boiler and pumps needs 8–10 kVA; a three-phase feed takes either a three-phase unit or three single-phase ones.", "Skimping on capacity backfires: an overloaded stabilizer lives short and trips at the worst moment. We calculate the load from your equipment list for free and match a model from Tashkent stock — installed and under warranty."] }  { h: "Installation: the location decides the lifespan", p: [
+            "A stabilizer is a transformer, and it heats up: it needs ventilation and clearance, not a blind niche behind a cabinet. Install it upstream of the protected equipment but after the circuit breaker, and not on the floor of a damp basement — moisture kills contacts faster than overloads.",
+            "A bypass helps during service: the equipment keeps its power while the stabilizer is maintained or replaced. We size the model to the real load with margin, install it with a bypass and earthing, and back it with a warranty — including the honest advice when a stabilizer is not needed at all.",
+          ] },
+        ],
         faq: [{ q: "Which stabilizer suits a gas boiler?", a: "An inverter or a good relay unit of 500–1000 VA with a wide input range. A boiler needs both a clean sine wave and surge protection." }, { q: "Stabilizer or UPS?", a: "Surges and sags — stabilizer; blackouts — UPS. Full protection for a server room is both: stabilizer at the input, UPS behind it." }, { q: "Can one stabilizer cover the whole apartment?", a: "Yes — a 5–10 kVA unit at the incomer after the meter protects everything at once. Installation takes a couple of hours." }],
       },
       tr: {
         title: "Ev, ofis ve sunucu odası için voltaj regülatörü nasıl seçilir",
         excerpt: "Röleli, servo veya inverter tip? Payla boyutlandırma, monofaze/trifaze seçimi ve regülatörün yetmediği, UPS gereken durumlar.",
-        sections: [{ h: "Ne zaman regülatör, ne zaman UPS", p: ["Regülatör voltajı düzler: şebeke 180 veya 250 voltta takılı kalsa da ekipman temiz 220 alır. Kesintide ise çaresizdir — onun için akülü UPS gerekir. Sunucu odası ve kameralar için klasik ikili: girişteki regülatör dalgalanmaları emer, arkasındaki UPS kesintiyi taşır.", "Dünden gerekli olduğunun işaretleri: su ısıtıcısı çalışınca lambalar titrer, güç kaynakları uğuldar, kışın voltaj 200 V altına iner, kombi hataya düşer. Kombi ve pompalar için regülatör fiilen zorunludur."] }, { h: "Regülatör tipleri: röleli, servo, inverter", p: ["Röleli en ekonomik olandır: sargıları kademeli değiştirir, ±%8 hassasiyet, ev yükleri için yeterli. Servo tip voltajı yumuşak izler (±%3) ama aşınan mekaniği vardır. Inverter (çift çevrim) etalondur: anlık tepki, ±%2, sessizlik — en yüksek fiyata.", "Ev ve ofise çoğunlukla röleli veya inverter alınır; medikal ve laboratuvar cihazlarına yalnız inverter. Giriş aralığına da bakın: ucuz modeller 140–160 V'tan çalışır, daha derin çöküşte kapanır."] }, { h: "Gücü doğru hesaplamak", p: ["Tüm yükleri toplayın, %30 pay ekleyin. Kalkış akımına dikkat: buzdolabı kompresörü ve pompa kalkışta anma değerinin 3–5 katını çeker. 5 kVA daire standardı; kombili ve pompalı ev 8–10 kVA ister; trifaze giriş ya trifaze cihaz ya üç monofaze ister.", "Kapasiteden kısmak pahalıya patlar: aşırı yüklü regülatör kısa yaşar. Cihaz listenize göre yükü ücretsiz hesaplar, Taşkent stoğundan modeli kurulum ve garantiyle veririz."] }],
+        sections: [{ h: "Ne zaman regülatör, ne zaman UPS", p: ["Regülatör voltajı düzler: şebeke 180 veya 250 voltta takılı kalsa da ekipman temiz 220 alır. Kesintide ise çaresizdir — onun için akülü UPS gerekir. Sunucu odası ve kameralar için klasik ikili: girişteki regülatör dalgalanmaları emer, arkasındaki UPS kesintiyi taşır.", "Dünden gerekli olduğunun işaretleri: su ısıtıcısı çalışınca lambalar titrer, güç kaynakları uğuldar, kışın voltaj 200 V altına iner, kombi hataya düşer. Kombi ve pompalar için regülatör fiilen zorunludur."] }, { h: "Regülatör tipleri: röleli, servo, inverter", p: ["Röleli en ekonomik olandır: sargıları kademeli değiştirir, ±%8 hassasiyet, ev yükleri için yeterli. Servo tip voltajı yumuşak izler (±%3) ama aşınan mekaniği vardır. Inverter (çift çevrim) etalondur: anlık tepki, ±%2, sessizlik — en yüksek fiyata.", "Ev ve ofise çoğunlukla röleli veya inverter alınır; medikal ve laboratuvar cihazlarına yalnız inverter. Giriş aralığına da bakın: ucuz modeller 140–160 V'tan çalışır, daha derin çöküşte kapanır."] }, { h: "Gücü doğru hesaplamak", p: ["Tüm yükleri toplayın, %30 pay ekleyin. Kalkış akımına dikkat: buzdolabı kompresörü ve pompa kalkışta anma değerinin 3–5 katını çeker. 5 kVA daire standardı; kombili ve pompalı ev 8–10 kVA ister; trifaze giriş ya trifaze cihaz ya üç monofaze ister.", "Kapasiteden kısmak pahalıya patlar: aşırı yüklü regülatör kısa yaşar. Cihaz listenize göre yükü ücretsiz hesaplar, Taşkent stoğundan modeli kurulum ve garantiyle veririz."] }  { h: "Montaj: yer, ömrü belirler", p: [
+            "Stabilizatör bir trafodur ve ısınır: ona havalandırma ve boşluk gerekir, dolap arkasındaki kör niş değil. Onu korunan cihazlardan önce ama sigortadan sonra kurun; rutubetli bodrumda yere değil — nem kontakları aşırı yükten hızlı öldürür.",
+            "Servis işlerinde baypas işe yarar: stabilizatör bakılırken veya değişirken cihazlar beslemede kalır. Modeli gerçek yüke göre payla seçer, baypas ve topraklamayla kurar, garanti veririz — stabilizatörün hiç gerekmediği durumda dürüst tavsiye dahil.",
+          ] },
+        ],
         faq: [{ q: "Kombi için hangi regülatör?", a: "Geniş giriş aralıklı 500–1000 VA inverter veya kaliteli röleli tip. Kombiye temiz sinüs ve darbe koruması birlikte gerekir." }, { q: "Regülatör mü UPS mi?", a: "Dalgalanma ve çökme — regülatör; kesinti — UPS. Sunucu odasının tam koruması ikisinin birlikte kullanımıdır." }, { q: "Tek regülatör tüm daireyi korur mu?", a: "Evet — sayaç sonrası girişe konan 5–10 kVA'lık model her şeyi birden korur. Montaj birkaç saat sürer." }],
       },
       zh: {
         title: "家庭、办公室和机房如何选择稳压器",
         excerpt: "继电器式、伺服式还是逆变式？带余量计算功率、单相与三相的选择，以及什么时候光有稳压器不够、还需要UPS。",
-        sections: [{ h: "什么时候需要稳压器，什么时候需要UPS", p: ["稳压器整平电压：即使电网长期只有180或250伏，设备仍能得到平稳的220伏。但停电时它无能为力——那是带电池UPS的工作。机房和监控的经典组合：入口稳压器吸收冲击，其后的UPS撑过断电。", "早该装稳压器的信号：烧水壶一开灯就闪、电源嗡嗡响、冬天电压跌破200伏、锅炉或冰箱报错。燃气锅炉和水泵实际上必须配稳压器——它们的电子板最先被电压冲击损坏。"] }, { h: "稳压器类型：继电器式、伺服式、逆变式", p: ["继电器式最经济：分级切换绕组，精度±8%，家用足够。伺服式平滑跟踪电压（±3%），但有会磨损的机械结构，怕严寒。逆变式（双变换）是标杆：瞬时响应、±2%精度、安静——价格也最高。", "家庭和办公室多选继电器式或逆变式；医疗和实验设备只用逆变式。还要看输入范围：便宜型号从140–160伏起工作，更深的跌落直接停机。"] }, { h: "正确计算功率", p: ["把所有负载功率相加，再加30%余量。注意启动电流：冰箱压缩机和水泵启动时是额定值的3–5倍。5kVA是公寓标准；带锅炉和水泵的住宅要8–10kVA；三相进线要三相机型或三台单相。", "在容量上省钱会吃亏：过载的稳压器寿命短，且在最不巧的时刻跳停。我们按设备清单免费核算负载，从塔什干现货选型——含安装和保修。"] }],
+        sections: [{ h: "什么时候需要稳压器，什么时候需要UPS", p: ["稳压器整平电压：即使电网长期只有180或250伏，设备仍能得到平稳的220伏。但停电时它无能为力——那是带电池UPS的工作。机房和监控的经典组合：入口稳压器吸收冲击，其后的UPS撑过断电。", "早该装稳压器的信号：烧水壶一开灯就闪、电源嗡嗡响、冬天电压跌破200伏、锅炉或冰箱报错。燃气锅炉和水泵实际上必须配稳压器——它们的电子板最先被电压冲击损坏。"] }, { h: "稳压器类型：继电器式、伺服式、逆变式", p: ["继电器式最经济：分级切换绕组，精度±8%，家用足够。伺服式平滑跟踪电压（±3%），但有会磨损的机械结构，怕严寒。逆变式（双变换）是标杆：瞬时响应、±2%精度、安静——价格也最高。", "家庭和办公室多选继电器式或逆变式；医疗和实验设备只用逆变式。还要看输入范围：便宜型号从140–160伏起工作，更深的跌落直接停机。"] }, { h: "正确计算功率", p: ["把所有负载功率相加，再加30%余量。注意启动电流：冰箱压缩机和水泵启动时是额定值的3–5倍。5kVA是公寓标准；带锅炉和水泵的住宅要8–10kVA；三相进线要三相机型或三台单相。", "在容量上省钱会吃亏：过载的稳压器寿命短，且在最不巧的时刻跳停。我们按设备清单免费核算负载，从塔什干现货选型——含安装和保修。"] }  { h: "安装：位置决定寿命", p: [
+            "稳压器本质是变压器，它会发热：需要通风和空间余量，而不是柜子后面的闷龛。装在被保护设备的上游、断路器的下游；别放在潮湿地下室的地面上——潮气比过载更快弄坏触点。",
+            "旁路开关在检修时很有用：维护或更换稳压器时设备照常供电。我们按真实负载留余量选型、带旁路和接地安装并提供质保——包括当稳压器根本没必要时的诚实劝告。",
+          ] },
+        ],
         faq: [{ q: "燃气锅炉配哪种稳压器？", a: "宽输入范围的500–1000VA逆变式或优质继电器式。锅炉既要正弦波干净，也要防冲击。" }, { q: "选稳压器还是UPS？", a: "电压波动选稳压器；停电选UPS。机房完整保护是两者组合：稳压器在前，UPS在后。" }, { q: "一台稳压器能保护整套公寓吗？", a: "能——5–10kVA机型装在电表后进线上，一次保护全部。安装只需几小时。" }],
       },
     },
@@ -208,31 +228,51 @@ export const ARTICLES: Article[] = [
       ru: {
         title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена",
         excerpt: "Стрела на 3–6 метров, интенсивность, управление с пульта, телефона или по номеру машины: разбираем, какой шлагбаум подходит двору, офису и ТЦ, и что входит в честную смету.",
-        sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, гарантия и сервис. Пришлите фото и ширину проезда — вернём точную смету в тот же день."] }],
+        sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, гарантия и сервис. Пришлите фото и ширину проезда — вернём точную смету в тот же день."] }  { h: "Монтаж, зима и обслуживание", p: [
+            "Правильный монтаж — половина срока службы: фундамент или закладная под тумбу, фотоэлементы и петлевой детектор, чтобы стрела никогда не опустилась на автомобиль, заземление и аккуратная подводка питания. Для двора с постоянным потоком берите интенсивный привод: бытовой на тысячах циклов в день живёт один сезон.",
+            "Зимой шлагбаум сдаёт экзамен: плавный старт не даёт рвать примёрзшую стрелу, а сезонная смазка сохраняет механику. Мы настраиваем зимние режимы при установке и обслуживаем шлагбаумы по договору — смазка, регулировки, батарейки в пультах и фотоэлементах.",
+          ] },
+        ],
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
       uz: {
         title: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika va narx nimadan iborat",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini ko'rib chiqamiz.",
-        sections: [{ h: "Shlagbaumlar qanday bo'ladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli o'tish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga mo'ljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, to'rtburchak va LED yoritishli bo'ladi; uzun o'tish joylariga buklanadigan o'rnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yo'qoladi va begonalarga o'tadi. Telefon qo'ng'irog'i qulayroq: yashovchi raqami oq ro'yxatda, qo'ng'iroq bepul — shlagbaum ochildi. Qulaylik cho'qqisi — avtoraqamni tanish kamerasi (ANPR): o'z mashinalari to'xtamasdan o'tadi, mehmonlar qo'riqchi ruxsati bilan, har bir o'tish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda o'zini oqlaydi: kirishda navbatlar yo'qoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik o'tishlari bilan bitta tizimda ko'rinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qo'shing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini o'rnatamiz: bir-ikki kunda kalit topshirish, kafolat va servis. O'tish joyi fotosi va kengligini yuboring — o'sha kuni aniq smeta qaytaramiz."] }],
+        sections: [{ h: "Shlagbaumlar qanday bo'ladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli o'tish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga mo'ljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, to'rtburchak va LED yoritishli bo'ladi; uzun o'tish joylariga buklanadigan o'rnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yo'qoladi va begonalarga o'tadi. Telefon qo'ng'irog'i qulayroq: yashovchi raqami oq ro'yxatda, qo'ng'iroq bepul — shlagbaum ochildi. Qulaylik cho'qqisi — avtoraqamni tanish kamerasi (ANPR): o'z mashinalari to'xtamasdan o'tadi, mehmonlar qo'riqchi ruxsati bilan, har bir o'tish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda o'zini oqlaydi: kirishda navbatlar yo'qoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik o'tishlari bilan bitta tizimda ko'rinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qo'shing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini o'rnatamiz: bir-ikki kunda kalit topshirish, kafolat va servis. O'tish joyi fotosi va kengligini yuboring — o'sha kuni aniq smeta qaytaramiz."] }  { h: "Montaj, qish va xizmat", p: [
+            "To'g'ri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki zakladnoy, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va petlevoy detektor, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
+            "Qishda shlagbaum imtihon topshiradi: silliq start muzlagan strelani yulishga yo'l qo'ymaydi, mavsumiy moy mexanikani saqlaydi. O'rnatishda qishki rejimlarni sozlaymiz va shlagbaumlarni shartnoma bo'yicha xizmatlaymiz — moylash, sozlashlar, pult va fotoelement batareykalari.",
+          ] },
+        ],
         faq: [{ q: "Shlagbaum o'rnatish bilan qancha turadi?", a: "Strela uzunligi, privod intensivligi va boshqaruv usuliga bog'liq: hovli uchun bazaviy to'plam arzonroq, ANPR li intensiv qimmatroq. Muhandis chiqishi va smeta bepul." }, { q: "Svet o'chganda nima qilish kerak?", a: "Privodlarda qo'lda ochish bor — strela kalit bilan ko'tariladi. Yaxshisi kichik UPS qo'ying: shlagbaum o'chishlarni yashovchilar ishtirokisiz o'tkazadi." }, { q: "Hovlida shlagbaumni kelishish kerakmi?", a: "Ko'p kvartirali uy hovlisi uchun mulkdorlar qarori va tuman xizmatlari bilan kelishuv kerak — maxsus texnika o'tishi saqlanishi shart. Kelishuv uchun o'rnatish sxemasini tayyorlashda yordam beramiz." }],
       },
       en: {
         title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes",
         excerpt: "A 3–6 m boom, duty cycle, control by remote, phone or plate recognition: which barrier fits a yard, an office or a mall, and what belongs in an honest estimate.",
-        sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty and service. Send a photo and the opening width — you get an exact quote the same day."] }],
+        sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty and service. Send a photo and the opening width — you get an exact quote the same day."] }  { h: "Installation, winter and service", p: [
+            "Proper installation is half the lifespan: a foundation or embed under the cabinet, photocells and a loop detector so the boom never drops onto a car, earthing and neat power routing. For a yard with constant flow take an intensive drive: a domestic one at thousands of cycles a day lasts one season.",
+            "In winter the barrier sits its exam: a soft start keeps it from tearing a frozen boom, and seasonal grease preserves the mechanics. We configure winter modes at installation and service barriers under contract — lubrication, adjustments, batteries in remotes and photocells.",
+          ] },
+        ],
         faq: [{ q: "How much is a barrier with installation?", a: "It depends on boom length, drive duty and the control method: a base yard kit costs less, an intensive ANPR setup more. The engineer visit and the estimate are free." }, { q: "What happens during a power cut?", a: "Drives have a manual release — the boom lifts with a key. Better, add a small UPS so the barrier rides through outages on its own." }, { q: "Does a residential yard barrier need approvals?", a: "A block-of-flats yard needs an owners' decision and district approvals — emergency vehicle access must remain. We help prepare the installation scheme for approval." }],
       },
       tr: {
         title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir",
         excerpt: "3–6 m kol, kullanım yoğunluğu, kumanda, telefon veya plaka tanımayla kontrol: avluya, ofise ve AVM'ye hangi bariyer uyar, dürüst teklif neleri kapsar.",
-        sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garanti ve servisle. Fotoğraf ve açıklık genişliğini gönderin — aynı gün net teklif alın."] }],
+        sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garanti ve servisle. Fotoğraf ve açıklık genişliğini gönderin — aynı gün net teklif alın."] }  { h: "Montaj, kış ve bakım", p: [
+            "Doğru montaj ömrün yarısıdır: gövde altına temel veya ankraj, kolun asla araca inmemesi için fotoseller ve loop dedektörü, topraklama ve düzenli güç hattı. Sürekli akışlı avluya yoğun tip motor alın: günde binlerce çevrimde ev tipi bir sezon dayanır.",
+            "Kışın bariyer sınava girer: yumuşak kalkış donmuş kolu koparmayı önler, mevsimlik gres mekaniği korur. Kurulumda kış modlarını ayarlar, bariyerlere sözleşmeyle bakarız — yağlama, ayarlar, kumanda ve fotosel pilleri.",
+          ] },
+        ],
         faq: [{ q: "Kurulumla bariyer ne kadar?", a: "Kol uzunluğu, sürücü yoğunluğu ve kontrol yöntemine bağlıdır: avlu için taban set daha ucuz, ANPR'li yoğun set daha pahalıdır. Keşif ve teklif ücretsizdir." }, { q: "Elektrik kesilince ne olur?", a: "Sürücülerde manuel açma vardır — kol anahtarla kalkar. En iyisi küçük bir UPS eklemek: bariyer kesintileri kendi başına atlatır." }, { q: "Site avlusunda bariyer izin ister mi?", a: "Apartman avlusu için kat malikleri kararı ve ilçe onayları gerekir — acil araç geçişi korunmalıdır. Onay için kurulum şemasını hazırlamaya yardım ederiz." }],
       },
       zh: {
         title: "小区与停车场道闸：类型、自动化与价格构成",
         excerpt: "3–6米栏杆、使用强度、遥控/电话/车牌识别控制：哪种道闸适合小区、写字楼和商场，一份实在的报价应包含什么。",
-        sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修与维保。发来现场照片和通道宽度——当天回复精确报价。"] }],
+        sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修与维保。发来现场照片和通道宽度——当天回复精确报价。"] }  { h: "安装、过冬与维保", p: [
+            "正确的安装占寿命的一半：机箱下打基础或预埋，红外对射加地感线圈保证闸杆永不砸车，接地和规整的供电走线。车流不断的院区要选重载电机：家用型每天数千次循环只能撑一季。",
+            "冬天是道闸的考场：缓启动避免硬拽冻住的闸杆，换季润滑保护机械。我们安装时调好冬季模式，并按合同维保——润滑、调校、更换遥控器和对射的电池。",
+          ] },
+        ],
         faq: [{ q: "道闸带安装多少钱？", a: "取决于栏杆长度、机芯强度和控制方式：小区基础套装较便宜，带车牌识别的高强度套装较贵。勘查与报价免费。" }, { q: "停电了怎么办？", a: "机芯有手动释放——用钥匙即可抬杆。更好的做法是配小UPS，道闸自己撑过停电。" }, { q: "小区装道闸要审批吗？", a: "多层住宅小区需业主决议和区级部门核准——必须保留消防救护通道。我们协助准备报批安装方案。" }],
       },
     },
@@ -245,31 +285,51 @@ export const ARTICLES: Article[] = [
       ru: {
         title: "Как выбрать сетевой коммутатор (свитч): PoE, управляемость, L2 или L3",
         excerpt: "Управляемый или нет, сколько PoE-мощности нужно камерам, когда хватает L2 и зачем ядру сети L3: практичный разбор для офиса, видеонаблюдения и серверной.",
-        sections: [{ h: "Управляемый или неуправляемый", p: ["Неуправляемый свитч — «разветвитель»: воткнул и работает. Для дома или пары устройств в кабинете этого достаточно. Управляемый добавляет VLAN (изоляция камер от офисной сети), приоритизацию трафика, мониторинг портов и защиту от петель — в офисной сети и системах видеонаблюдения он быстро окупает разницу в цене первым же разобранным инцидентом.", "Правило простое: если устройств больше десятка или в сети есть камеры и телефония — берите управляемый."] }, { h: "PoE: питание камер по витой паре", p: ["PoE-коммутатор питает камеры, точки доступа и IP-телефоны по тому же кабелю, что передаёт данные, — розетки у камеры не нужны. Считайте бюджет мощности: обычная камера берёт 6–8 Вт, купол с ИК — до 12 Вт, поворотная PTZ — до 25 Вт, а точка доступа Wi-Fi 6 — до 20 Вт. У 8-портового свитча бюджет обычно 60–120 Вт — на восемь PTZ его не хватит.", "Смотрите и стандарт: 802.3af даёт до 15 Вт на порт, 802.3at (PoE+) — до 30 Вт, bt — до 60–90 Вт для тяжёлых потребителей. Запас 20–30 % по мощности обязателен — зимой подогрев камер добавляет нагрузку."] }, { h: "L2, L3 и аплинки", p: ["L2-коммутатор работает внутри одной сети — это уровень доступа: этаж, кабинет, стойка с камерами. L3 умеет маршрутизировать между подсетями и становится ядром сети предприятия: отделы изолированы, трафик между ними контролируется. В малом офисе L3 не нужен — хватает L2 с гигабитным аплинком к роутеру.", "Аплинк — узкое место: если к свитчу подключены 24 гигабитных порта, разумно иметь SFP+ аплинк на 10G к ядру или серверу. Мы подбираем коммутаторы Hikvision, MikroTik, TP-Link, Ruijie и H3C под задачу, преднастраиваем VLAN и даём партнёрские цены H3C на проекты."] }],
+        sections: [{ h: "Управляемый или неуправляемый", p: ["Неуправляемый свитч — «разветвитель»: воткнул и работает. Для дома или пары устройств в кабинете этого достаточно. Управляемый добавляет VLAN (изоляция камер от офисной сети), приоритизацию трафика, мониторинг портов и защиту от петель — в офисной сети и системах видеонаблюдения он быстро окупает разницу в цене первым же разобранным инцидентом.", "Правило простое: если устройств больше десятка или в сети есть камеры и телефония — берите управляемый."] }, { h: "PoE: питание камер по витой паре", p: ["PoE-коммутатор питает камеры, точки доступа и IP-телефоны по тому же кабелю, что передаёт данные, — розетки у камеры не нужны. Считайте бюджет мощности: обычная камера берёт 6–8 Вт, купол с ИК — до 12 Вт, поворотная PTZ — до 25 Вт, а точка доступа Wi-Fi 6 — до 20 Вт. У 8-портового свитча бюджет обычно 60–120 Вт — на восемь PTZ его не хватит.", "Смотрите и стандарт: 802.3af даёт до 15 Вт на порт, 802.3at (PoE+) — до 30 Вт, bt — до 60–90 Вт для тяжёлых потребителей. Запас 20–30 % по мощности обязателен — зимой подогрев камер добавляет нагрузку."] }, { h: "L2, L3 и аплинки", p: ["L2-коммутатор работает внутри одной сети — это уровень доступа: этаж, кабинет, стойка с камерами. L3 умеет маршрутизировать между подсетями и становится ядром сети предприятия: отделы изолированы, трафик между ними контролируется. В малом офисе L3 не нужен — хватает L2 с гигабитным аплинком к роутеру.", "Аплинк — узкое место: если к свитчу подключены 24 гигабитных порта, разумно иметь SFP+ аплинк на 10G к ядру или серверу. Мы подбираем коммутаторы Hikvision, MikroTik, TP-Link, Ruijie и H3C под задачу, преднастраиваем VLAN и даём партнёрские цены H3C на проекты."] }  { h: "Три ошибки, которые всплывают потом", p: [
+            "Первая — PoE-бюджет «впритык»: камеры с зимним подогревом удваивают потребление, и в мороз дальние порты начинают отваливаться. Вторая — каскады бытовых свитчей: петли, узкие места и сеть, которую невозможно диагностировать. Третья — ноунейм в серьёзной системе: под нагрузкой из десятка потоков он зависает, и камеры «моргают» без видимой причины.",
+            "Рецепт скучный, но рабочий: бюджет мощности с запасом 30 %, нормальное ядро вместо каскадов и бренд с управлением там, где есть камеры и кассы. Мы преднастраиваем коммутаторы при поставке — VLAN и мониторинг включены с первого дня.",
+          ] },
+        ],
         faq: [{ q: "Какой коммутатор нужен для 8 камер видеонаблюдения?", a: "8-портовый PoE с бюджетом от 90 Вт и двумя аплинками — под регистратор и сеть. Для камер с подогревом и PTZ считайте мощность отдельно." }, { q: "Чем свитч отличается от роутера?", a: "Роутер соединяет сеть с интернетом и раздаёт адреса; свитч множит порты внутри сети. В типовом офисе они работают в паре: роутер на входе, свитчи — на этажах." }, { q: "Что такое VLAN и зачем он мне?", a: "VLAN делит один физический свитч на изолированные сети: камеры не видят бухгалтерию, гостевой Wi-Fi не видит серверы. Настраивается один раз на управляемом коммутаторе." }],
       },
       uz: {
         title: "Tarmoq kommutatorini (switch) qanday tanlash: PoE, boshqaruv, L2 yoki L3",
         excerpt: "Boshqariladiganmi yoki yo'qmi, kameralarga qancha PoE quvvat kerak, qachon L2 yetadi va tarmoq yadrosiga nega L3 kerak: ofis, videokuzatuv va server xonasi uchun amaliy tahlil.",
-        sections: [{ h: "Boshqariladigan yoki oddiy", p: ["Oddiy switch — «taqsimlagich»: ulading — ishlaydi. Uy yoki kabinetdagi bir juft qurilmaga shu yetadi. Boshqariladigani VLAN (kameralarni ofis tarmog'idan ajratish), trafik prioriteti, port monitoringi va halqalardan himoya qo'shadi — ofis tarmog'i va videokuzatuvda narx farqini birinchi hal qilingan hodisayoq oqlaydi.", "Qoida oddiy: qurilmalar o'ntadan ko'p bo'lsa yoki tarmoqda kamera va telefoniya bo'lsa — boshqariladiganini oling."] }, { h: "PoE: kameralarni vitaya para orqali quvvatlash", p: ["PoE kommutator kamera, ulanish nuqtalari va IP-telefonlarni ma'lumot kabeli orqali quvvatlaydi — kamera yonida rozetka kerak emas. Quvvat byudjetini hisoblang: oddiy kamera 6–8 Vt, IK li gumbaz 12 Vt gacha, PTZ 25 Vt gacha, Wi-Fi 6 nuqtasi 20 Vt gacha oladi. 8 portli switch byudjeti odatda 60–120 Vt.", "Standartga ham qarang: 802.3af portga 15 Vt gacha, 802.3at (PoE+) 30 Vt gacha, bt — og'ir iste'molchilarga 60–90 Vt. Quvvatda 20–30 % zaxira majburiy — qishda kamera isitish yuk qo'shadi."] }, { h: "L2, L3 va aplinklar", p: ["L2 kommutator bitta tarmoq ichida ishlaydi — kirish darajasi: qavat, kabinet, kamerali stoyka. L3 quyi tarmoqlar orasida marshrutlaydi va korxona tarmog'i yadrosiga aylanadi. Kichik ofisda L3 kerak emas — routerga gigabit aplinkli L2 yetadi.", "Aplink — tor joy: switchga 24 gigabit port ulangan bo'lsa, yadro yoki serverga 10G SFP+ aplink oqilona. Hikvision, MikroTik, TP-Link, Ruijie va H3C kommutatorlarini vazifaga tanlaymiz, VLAN'ni oldindan sozlaymiz, loyihalarga H3C hamkorlik narxlarini beramiz."] }],
+        sections: [{ h: "Boshqariladigan yoki oddiy", p: ["Oddiy switch — «taqsimlagich»: ulading — ishlaydi. Uy yoki kabinetdagi bir juft qurilmaga shu yetadi. Boshqariladigani VLAN (kameralarni ofis tarmog'idan ajratish), trafik prioriteti, port monitoringi va halqalardan himoya qo'shadi — ofis tarmog'i va videokuzatuvda narx farqini birinchi hal qilingan hodisayoq oqlaydi.", "Qoida oddiy: qurilmalar o'ntadan ko'p bo'lsa yoki tarmoqda kamera va telefoniya bo'lsa — boshqariladiganini oling."] }, { h: "PoE: kameralarni vitaya para orqali quvvatlash", p: ["PoE kommutator kamera, ulanish nuqtalari va IP-telefonlarni ma'lumot kabeli orqali quvvatlaydi — kamera yonida rozetka kerak emas. Quvvat byudjetini hisoblang: oddiy kamera 6–8 Vt, IK li gumbaz 12 Vt gacha, PTZ 25 Vt gacha, Wi-Fi 6 nuqtasi 20 Vt gacha oladi. 8 portli switch byudjeti odatda 60–120 Vt.", "Standartga ham qarang: 802.3af portga 15 Vt gacha, 802.3at (PoE+) 30 Vt gacha, bt — og'ir iste'molchilarga 60–90 Vt. Quvvatda 20–30 % zaxira majburiy — qishda kamera isitish yuk qo'shadi."] }, { h: "L2, L3 va aplinklar", p: ["L2 kommutator bitta tarmoq ichida ishlaydi — kirish darajasi: qavat, kabinet, kamerali stoyka. L3 quyi tarmoqlar orasida marshrutlaydi va korxona tarmog'i yadrosiga aylanadi. Kichik ofisda L3 kerak emas — routerga gigabit aplinkli L2 yetadi.", "Aplink — tor joy: switchga 24 gigabit port ulangan bo'lsa, yadro yoki serverga 10G SFP+ aplink oqilona. Hikvision, MikroTik, TP-Link, Ruijie va H3C kommutatorlarini vazifaga tanlaymiz, VLAN'ni oldindan sozlaymiz, loyihalarga H3C hamkorlik narxlarini beramiz."] }  { h: "Keyin chiqadigan uch xato", p: [
+            "Birinchisi — «zo'rg'a» PoE-byudjet: qishki isitgichli kameralar iste'molni ikki barobar oshiradi, sovuqda uzoq portlar uzila boshlaydi. Ikkinchisi — maishiy svitchlar kaskadi: halqalar, tor joylar va diagnostika qilib bo'lmaydigan tarmoq. Uchinchisi — jiddiy tizimda noneym: o'nlab oqim yukida u osilib qoladi, kameralar sababsiz «miltillaydi».",
+            "Retsept zerikarli, lekin ishlaydi: 30 % zaxirali quvvat byudjeti, kaskadlar o'rniga normal yadro va kamera hamda kassalar bor joyda boshqaruvli brend. Kommutatorlarni yetkazishda oldindan sozlaymiz — VLAN va monitoring birinchi kundan yoqilgan.",
+          ] },
+        ],
         faq: [{ q: "8 ta kamera uchun qanday kommutator kerak?", a: "90 Vt dan byudjetli va ikkita aplinkli 8 portli PoE — registrator va tarmoq uchun. Isitiladigan va PTZ kameralarga quvvatni alohida hisoblang." }, { q: "Switch routerdan nimasi bilan farq qiladi?", a: "Router tarmoqni internetga ulaydi va manzillar beradi; switch tarmoq ichida portlarni ko'paytiradi. Odatiy ofisda ular juft ishlaydi." }, { q: "VLAN nima va u menga nimaga kerak?", a: "VLAN bitta jismoniy switchni izolyatsiyalangan tarmoqlarga bo'ladi: kameralar buxgalteriyani ko'rmaydi, mehmon Wi-Fi serverlarni ko'rmaydi." }],
       },
       en: {
         title: "How to choose a network switch: PoE, management, L2 vs L3",
         excerpt: "Managed or unmanaged, how much PoE power cameras really need, when L2 is enough and why a network core wants L3 — a practical guide for offices, CCTV and server rooms.",
-        sections: [{ h: "Managed or unmanaged", p: ["An unmanaged switch is a splitter: plug in and it works — fine for a home or a couple of devices. A managed one adds VLANs (isolating cameras from the office LAN), QoS, port monitoring and loop protection; in an office network it repays the price difference with the first incident you actually diagnose.", "The rule of thumb: more than a dozen devices, or cameras and telephony on the network — go managed."] }, { h: "PoE: powering cameras over the data cable", p: ["A PoE switch powers cameras, access points and IP phones over the data cable — no sockets at the camera. Count the power budget: a regular camera draws 6–8 W, an IR dome up to 12 W, a PTZ up to 25 W, a Wi-Fi 6 AP up to 20 W. A typical 8-port switch carries 60–120 W — not enough for eight PTZs.", "Watch the standard too: 802.3af gives up to 15 W per port, 802.3at (PoE+) up to 30 W, bt up to 60–90 W. Keep 20–30 % headroom — winter camera heating adds load."] }, { h: "L2, L3 and uplinks", p: ["An L2 switch lives inside one network — the access layer: a floor, a room, a camera rack. L3 routes between subnets and becomes the enterprise core: departments are isolated, inter-VLAN traffic is controlled. A small office does not need L3 — L2 with a gigabit uplink to the router is enough.", "The uplink is the bottleneck: with 24 gigabit ports in use, a 10G SFP+ uplink to the core or server is the sane choice. We match Hikvision, MikroTik, TP-Link, Ruijie and H3C switches to the task, preconfigure VLANs and offer H3C partner pricing on projects."] }],
+        sections: [{ h: "Managed or unmanaged", p: ["An unmanaged switch is a splitter: plug in and it works — fine for a home or a couple of devices. A managed one adds VLANs (isolating cameras from the office LAN), QoS, port monitoring and loop protection; in an office network it repays the price difference with the first incident you actually diagnose.", "The rule of thumb: more than a dozen devices, or cameras and telephony on the network — go managed."] }, { h: "PoE: powering cameras over the data cable", p: ["A PoE switch powers cameras, access points and IP phones over the data cable — no sockets at the camera. Count the power budget: a regular camera draws 6–8 W, an IR dome up to 12 W, a PTZ up to 25 W, a Wi-Fi 6 AP up to 20 W. A typical 8-port switch carries 60–120 W — not enough for eight PTZs.", "Watch the standard too: 802.3af gives up to 15 W per port, 802.3at (PoE+) up to 30 W, bt up to 60–90 W. Keep 20–30 % headroom — winter camera heating adds load."] }, { h: "L2, L3 and uplinks", p: ["An L2 switch lives inside one network — the access layer: a floor, a room, a camera rack. L3 routes between subnets and becomes the enterprise core: departments are isolated, inter-VLAN traffic is controlled. A small office does not need L3 — L2 with a gigabit uplink to the router is enough.", "The uplink is the bottleneck: with 24 gigabit ports in use, a 10G SFP+ uplink to the core or server is the sane choice. We match Hikvision, MikroTik, TP-Link, Ruijie and H3C switches to the task, preconfigure VLANs and offer H3C partner pricing on projects."] }  { h: "Three mistakes that surface later", p: [
+            "First — a PoE budget \"just enough\": cameras with winter heating double their draw, and in frost the far ports start dropping. Second — cascades of household switches: loops, bottlenecks and a network impossible to diagnose. Third — a no-name in a serious system: under a dozen streams it hangs, and cameras \"blink\" for no visible reason.",
+            "The recipe is boring but works: a power budget with 30 % margin, a proper core instead of cascades, and a managed brand wherever cameras and tills live. We preconfigure switches at delivery — VLANs and monitoring enabled from day one.",
+          ] },
+        ],
         faq: [{ q: "Which switch fits 8 CCTV cameras?", a: "An 8-port PoE unit with a 90 W+ budget and two uplinks — for the NVR and the LAN. Heated and PTZ cameras need their power counted separately." }, { q: "How is a switch different from a router?", a: "The router connects the network to the internet and hands out addresses; the switch multiplies ports inside the network. A typical office runs both." }, { q: "What is a VLAN for?", a: "A VLAN splits one physical switch into isolated networks: cameras cannot see accounting, guest Wi-Fi cannot see servers. Configured once on a managed switch." }],
       },
       tr: {
         title: "Ağ switchi nasıl seçilir: PoE, yönetim, L2 mi L3 mü",
         excerpt: "Yönetilebilir mi değil mi, kameralara gerçekte ne kadar PoE gücü gerekir, L2 ne zaman yeter ve çekirdek neden L3 ister — ofis, kamera sistemi ve sunucu odası için pratik rehber.",
-        sections: [{ h: "Yönetilebilir mi, değil mi", p: ["Yönetilemeyen switch bir çoklayıcıdır: tak ve çalışsın — ev veya birkaç cihaz için yeterli. Yönetilebilir olan VLAN (kameraları ofis ağından yalıtma), QoS, port izleme ve döngü koruması ekler; ofis ağında fiyat farkını çözülen ilk arıza öder.", "Kural basit: cihaz sayısı onu geçiyorsa ya da ağda kamera ve telefon varsa — yönetilebilir alın."] }, { h: "PoE: kameraları veri kablosundan beslemek", p: ["PoE switch kamera, erişim noktası ve IP telefonları veri kablosundan besler — kamerada priz gerekmez. Güç bütçesini sayın: normal kamera 6–8 W, IR dome 12 W'a, PTZ 25 W'a, Wi-Fi 6 AP 20 W'a kadar çeker. Tipik 8 portlu 60–120 W taşır.", "Standarda da bakın: 802.3af port başına 15 W, 802.3at (PoE+) 30 W, bt 60–90 W verir. %20–30 pay şarttır — kışın kamera ısıtması yük ekler."] }, { h: "L2, L3 ve uplinkler", p: ["L2 tek ağ içinde yaşar — erişim katmanı: kat, oda, kamera kabini. L3 alt ağlar arasında yönlendirir ve kurumsal çekirdek olur. Küçük ofise L3 gerekmez — routera gigabit uplinkli L2 yeter.", "Uplink dar boğazdır: 24 gigabit port doluysa çekirdeğe 10G SFP+ uplink akıllıca olur. Hikvision, MikroTik, TP-Link, Ruijie ve H3C switchlerini göreve göre seçer, VLAN'ları önceden kurar, projelere H3C partner fiyatı veririz."] }],
+        sections: [{ h: "Yönetilebilir mi, değil mi", p: ["Yönetilemeyen switch bir çoklayıcıdır: tak ve çalışsın — ev veya birkaç cihaz için yeterli. Yönetilebilir olan VLAN (kameraları ofis ağından yalıtma), QoS, port izleme ve döngü koruması ekler; ofis ağında fiyat farkını çözülen ilk arıza öder.", "Kural basit: cihaz sayısı onu geçiyorsa ya da ağda kamera ve telefon varsa — yönetilebilir alın."] }, { h: "PoE: kameraları veri kablosundan beslemek", p: ["PoE switch kamera, erişim noktası ve IP telefonları veri kablosundan besler — kamerada priz gerekmez. Güç bütçesini sayın: normal kamera 6–8 W, IR dome 12 W'a, PTZ 25 W'a, Wi-Fi 6 AP 20 W'a kadar çeker. Tipik 8 portlu 60–120 W taşır.", "Standarda da bakın: 802.3af port başına 15 W, 802.3at (PoE+) 30 W, bt 60–90 W verir. %20–30 pay şarttır — kışın kamera ısıtması yük ekler."] }, { h: "L2, L3 ve uplinkler", p: ["L2 tek ağ içinde yaşar — erişim katmanı: kat, oda, kamera kabini. L3 alt ağlar arasında yönlendirir ve kurumsal çekirdek olur. Küçük ofise L3 gerekmez — routera gigabit uplinkli L2 yeter.", "Uplink dar boğazdır: 24 gigabit port doluysa çekirdeğe 10G SFP+ uplink akıllıca olur. Hikvision, MikroTik, TP-Link, Ruijie ve H3C switchlerini göreve göre seçer, VLAN'ları önceden kurar, projelere H3C partner fiyatı veririz."] }  { h: "Sonradan ortaya çıkan üç hata", p: [
+            "Birincisi «ucu ucuna» PoE bütçesi: kış ısıtmalı kameralar tüketimi ikiye katlar, ayazda uzak portlar düşmeye başlar. İkincisi ev tipi switch kaskadları: döngüler, dar boğazlar ve teşhis edilemeyen ağ. Üçüncüsü ciddi sistemde markasız cihaz: onlarca akış yükünde donar, kameralar görünür sebepsiz «göz kırpar».",
+            "Reçete sıkıcı ama işe yarar: %30 paylı güç bütçesi, kaskad yerine düzgün çekirdek ve kameralarla kasaların olduğu yerde yönetilebilir marka. Switch'leri teslimatta ön-ayarlarız — VLAN ve izleme ilk günden açık.",
+          ] },
+        ],
         faq: [{ q: "8 kamera için hangi switch?", a: "90 W+ bütçeli, iki uplinkli 8 portlu PoE — NVR ve ağ için. Isıtmalı ve PTZ kameraların gücü ayrı sayılır." }, { q: "Switch ile router farkı?", a: "Router ağı internete bağlar ve adres dağıtır; switch ağ içinde portları çoğaltır. Tipik ofiste ikisi birlikte çalışır." }, { q: "VLAN ne işe yarar?", a: "VLAN tek fiziksel switchi yalıtılmış ağlara böler: kameralar muhasebeyi, misafir Wi-Fi sunucuları görmez." }],
       },
       zh: {
         title: "如何选择网络交换机：PoE、可管理性、L2还是L3",
         excerpt: "选可管理还是非管理、摄像机到底需要多少PoE功率、L2什么时候够用、网络核心为何要L3——面向办公室、监控和机房的实用指南。",
-        sections: [{ h: "可管理还是非管理", p: ["非管理交换机就是「分线器」：插上就能用——家里或几台设备够了。可管理型增加VLAN（把摄像机与办公网隔离）、QoS、端口监控和环路保护；在办公网络里，第一次排查故障就能赚回差价。", "经验法则：设备超过十台，或网络里有摄像机和电话——选可管理型。"] }, { h: "PoE：用网线为摄像机供电", p: ["PoE交换机通过数据线为摄像机、AP和IP话机供电——摄像机旁不需要插座。算好功率预算：普通摄像机6–8W，红外半球最高12W，球机最高25W，Wi-Fi 6 AP最高20W。典型8口机型总预算60–120W——带八台球机是不够的。", "还要看标准：802.3af每口最高15W，802.3at（PoE+）30W，bt可达60–90W。留20–30%余量——冬季摄像机加热会增加负载。"] }, { h: "L2、L3与上联", p: ["L2交换机在单个网络内工作——接入层：楼层、房间、摄像机机柜。L3在子网间路由，充当企业核心：部门相互隔离，跨网流量可控。小办公室不需要L3——千兆上联到路由器的L2就够。", "上联是瓶颈：24个千兆口都在用时，到核心或服务器应配10G SFP+上联。我们按需求选配海康威视、MikroTik、TP-Link、锐捷和新华三交换机，预配VLAN，项目享新华三合作伙伴价。"] }],
+        sections: [{ h: "可管理还是非管理", p: ["非管理交换机就是「分线器」：插上就能用——家里或几台设备够了。可管理型增加VLAN（把摄像机与办公网隔离）、QoS、端口监控和环路保护；在办公网络里，第一次排查故障就能赚回差价。", "经验法则：设备超过十台，或网络里有摄像机和电话——选可管理型。"] }, { h: "PoE：用网线为摄像机供电", p: ["PoE交换机通过数据线为摄像机、AP和IP话机供电——摄像机旁不需要插座。算好功率预算：普通摄像机6–8W，红外半球最高12W，球机最高25W，Wi-Fi 6 AP最高20W。典型8口机型总预算60–120W——带八台球机是不够的。", "还要看标准：802.3af每口最高15W，802.3at（PoE+）30W，bt可达60–90W。留20–30%余量——冬季摄像机加热会增加负载。"] }, { h: "L2、L3与上联", p: ["L2交换机在单个网络内工作——接入层：楼层、房间、摄像机机柜。L3在子网间路由，充当企业核心：部门相互隔离，跨网流量可控。小办公室不需要L3——千兆上联到路由器的L2就够。", "上联是瓶颈：24个千兆口都在用时，到核心或服务器应配10G SFP+上联。我们按需求选配海康威视、MikroTik、TP-Link、锐捷和新华三交换机，预配VLAN，项目享新华三合作伙伴价。"] }  { h: "三个日后才显形的错误", p: [
+            "其一，PoE预算「刚刚好」：带冬季加热的摄像机功耗翻倍，严寒里远端端口开始掉线。其二，家用交换机层层级联：环路、瓶颈、一张无法诊断的网。其三，正经系统里用杂牌：十几路码流的负载下它就死机，摄像机无缘无故「眨眼」。",
+            "药方乏味但管用：功率预算留30%余量、用像样的核心替代级联、有摄像机和收银的地方用可管理的品牌。我们发货前预配置——VLAN和监控第一天就开着。",
+          ] },
+        ],
         faq: [{ q: "8台监控摄像机配哪种交换机？", a: "8口PoE、功率预算90W以上、带两个上联口——接录像机和网络。加热型和球机功率单独计算。" }, { q: "交换机和路由器有何区别？", a: "路由器连接互联网并分配地址；交换机在网内扩展端口。典型办公室两者配合使用。" }, { q: "VLAN有什么用？", a: "VLAN把一台物理交换机分成隔离网络：摄像机看不到财务，访客Wi-Fi看不到服务器。可管理交换机上配置一次即可。" }],
       },
     },
@@ -334,6 +394,10 @@ export const ARTICLES: Article[] = [
             "Замок редко живёт один. В связке с видеодомофоном он открывается кнопкой с монитора или из приложения — гостя видно до того, как открыли. В офисной СКУД замки на всех дверях управляются одной системой: уволили сотрудника — доступ отозван одним кликом, а не сбором ключей.",
             "Важный момент по нормам: на путях эвакуации электромагнитные замки обязаны разблокироваться при пожарной тревоге. Мы всегда подключаем замки к пожарной сигнализации, если она есть на объекте — это требование, а не опция.",
           ] },
+          { h: "Питание и пожарная безопасность", p: [
+            "Электронный замок жив, пока есть питание, поэтому блок питания с резервным аккумулятором — не опция, а часть замка: без него первое отключение света оставит дверь нараспашку или наглухо закрытой, смотря по типу. Магнитный замок при пропадании питания открывается — его место на путях эвакуации; электромеханический остаётся закрытым — он для входных дверей.",
+            "Вторая обязательная связка — с пожарной сигнализацией: по тревоге замки на путях эвакуации должны разблокироваться автоматически. Это требование норм закладывается в проект при монтаже — мы делаем это штатно в каждой установке.",
+          ] },
         ],
         faq: [
           { q: "Что будет с замком при отключении света?", a: "Электромагнитный откроется (fail-open), электромеханический останется заперт (fail-secure). Для дверей, которые должны быть заперты всегда, ставят электромеханику или добавляют ИБП; для путей эвакуации разблокировка при пропадании питания — требование норм." },
@@ -356,6 +420,10 @@ export const ARTICLES: Article[] = [
           { h: "Qulf + domofon + SKUD: qachon birlashtirish kerak", p: [
             "Qulf kamdan-kam yolg'iz ishlaydi. Videodomofon bilan juftlikda u monitor tugmasi yoki ilovadan ochiladi — mehmonni ochishdan oldin ko'rasiz. Ofis SKUDida barcha eshiklardagi qulflar bitta tizimdan boshqariladi: xodim ishdan ketdi — kirish bir klik bilan bekor qilinadi.",
             "Me'yorlar bo'yicha muhim jihat: evakuatsiya yo'llaridagi elektromagnit qulflar yong'in signalida ochilishi SHART. Obyektda yong'in signalizatsiyasi bo'lsa, qulflarni doim unga ulaymiz — bu talab, tanlov emas.",
+          ] },
+          { h: "Quvvat va yong'in xavfsizligi", p: [
+            "Elektron qulf quvvat borida tirik, shuning uchun zaxira akkumulyatorli quvvat bloki opsiya emas, qulfning qismi: usiz birinchi svet o'chishi eshikni turiga qarab lang ochiq yoki butunlay yopiq qoldiradi. Magnit qulf quvvat yo'qolganda ochiladi — uning joyi evakuatsiya yo'llarida; elektromexanik yopiq qoladi — u kirish eshiklariga.",
+            "Ikkinchi majburiy bog'lam — yong'in signalizatsiyasi bilan: trevoga bo'yicha evakuatsiya yo'llaridagi qulflar avtomatik ochilishi kerak. Bu me'yor talabi montajda loyihaga kiritiladi — buni har o'rnatishda shtatniy qilamiz.",
           ] },
         ],
         faq: [
@@ -380,6 +448,10 @@ export const ARTICLES: Article[] = [
             "A lock rarely lives alone. Paired with a video intercom it opens from the monitor or the app — you see the guest before the door opens. In office access control every door lock is run by one system: an employee leaves — access is revoked in one click, not by collecting keys.",
             "A code note: on escape routes electromagnetic locks must release on a fire alarm. We always wire locks to the fire alarm where one exists — that is a requirement, not an option.",
           ] },
+          { h: "Power and fire safety", p: [
+            "An electronic lock lives while power lives, so a supply with a backup battery is not an option but part of the lock: without it the first outage leaves the door either wide open or shut tight, depending on the type. A magnetic lock opens when power fails — its place is on evacuation routes; an electromechanical one stays locked — it belongs on entrance doors.",
+            "The second mandatory link is with the fire alarm: on alarm, locks on evacuation routes must release automatically. This code requirement goes into the design at installation — we do it as standard on every job.",
+          ] },
         ],
         faq: [
           { q: "What happens to the lock in a power cut?", a: "An electromagnetic lock opens (fail-open), an electromechanical one stays locked (fail-secure). Doors that must always stay locked get electromechanics or a UPS; escape routes must unlock on power loss by code." },
@@ -403,6 +475,10 @@ export const ARTICLES: Article[] = [
             "Kilit nadiren tek başına çalışır. Görüntülü interkomla monitörden veya uygulamadan açılır — misafiri kapıyı açmadan görürsünüz. Ofis geçiş kontrolünde tüm kapı kilitleri tek sistemden yönetilir: çalışan ayrıldı — erişim tek tıkla iptal.",
             "Yönetmelik notu: kaçış yollarındaki elektromanyetik kilitler yangın alarmında açılmak ZORUNDADIR. Tesiste yangın alarmı varsa kilitleri her zaman ona bağlarız.",
           ] },
+          { h: "Güç ve yangın güvenliği", p: [
+            "Elektronik kilit güç varken yaşar; bu yüzden yedek akülü besleme bir seçenek değil kilidin parçasıdır: onsuz ilk kesinti kapıyı tipine göre ya ardına dek açık ya da sımsıkı kapalı bırakır. Manyetik kilit güç gidince açılır — yeri kaçış yollarıdır; elektromekanik kilitli kalır — giriş kapılarına aittir.",
+            "İkinci zorunlu bağ yangın alarmıyladır: alarmda kaçış yollarındaki kilitler otomatik açılmalıdır. Bu norm gereği montajda projeye konur — her kurulumda bunu standart yaparız.",
+          ] },
         ],
         faq: [
           { q: "Elektrik kesintisinde kilide ne olur?", a: "Elektromanyetik açılır (fail-open), elektromekanik kilitli kalır (fail-secure). Hep kilitli kalması gereken kapılara elektromekanik veya UPS konur; kaçış yolları yönetmelik gereği güç kesilince açılmalıdır." },
@@ -425,6 +501,10 @@ export const ARTICLES: Article[] = [
           { h: "门锁与对讲、门禁何时联动", p: [
             "门锁很少单独工作。与可视对讲联动后，可在室内机或 App 上开门——先看到访客再放行。办公门禁中所有门锁由一套系统管理：员工离职，一键撤权，无需收钥匙。",
             "规范要点：疏散通道上的电磁锁在火警时必须自动释放。若现场有火灾报警系统，我们一律将门锁与其联动——这是强制要求。",
+          ] },
+          { h: "供电与消防安全", p: [
+            "电子锁有电才活着，所以带备用电池的电源不是选配而是锁的一部分：没有它，第一次停电就会让门要么大敞要么死锁，取决于锁型。磁力锁断电即开——它属于疏散通道；电机锁断电保持锁闭——它属于入户门。",
+            "第二个强制联动是与火灾报警：报警时疏散通道上的锁必须自动释放。这条规范要求在安装时写进方案——我们每单都标准执行。",
           ] },
         ],
         faq: [
@@ -456,6 +536,10 @@ export const ARTICLES: Article[] = [
             "Проект и исполнительную документацию от лицензированной организации, сертификаты на оборудование, работоспособность каждого извещателя, звук и видимость оповещателей, таблички «Выход», журнал технического обслуживания. Система без договора на ТО формально считается неработающей.",
             "Мы делаем весь цикл: обследование и проект по нормам, монтаж, пусконаладку с проверкой каждого датчика и сдачу инспекции, затем регламентное обслуживание. Объект проходит проверку с первого раза — это и есть критерий сдачи работ.",
           ] },
+          { h: "Стоимость и жизнь после сдачи", p: [
+            "Бюджет складывается из площади и категорий помещений, числа извещателей и шлейфов, типа прибора и состава оповещения. Маленький магазин закрывается пороговой системой за скромные деньги; офисному зданию нужна адресная — дороже на старте, но дешевле в эксплуатации за счёт точной диагностики. Честную смету даёт только выезд: мы считаем бесплатно по вашей планировке.",
+            "После сдачи начинается регламент: проверки извещателей по графику, замена аккумуляторов, записи в журнале ТО — именно журнал инспектор открывает первым. Мы берём объекты на обслуживание с выездами по графику: система остаётся рабочей, а проверки проходят без замечаний и штрафов.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит пожарная сигнализация для магазина?", a: "Для помещения до 300 м² пороговая система с датчиками, сиреной и табло «Выход» — самый доступный вариант, монтаж занимает 1–3 дня. Точная смета — после бесплатного обследования: состав диктуют нормы, а не прайс." },
@@ -478,6 +562,10 @@ export const ARTICLES: Article[] = [
           { h: "Inspektor nimani tekshiradi", p: [
             "Litsenziyali tashkilot loyihasi va ijro hujjatlarini, uskuna sertifikatlarini, har izveshchatelning ishlashini, ogohlantirgichlar ovozi va ko'rinishini, «Chiqish» tablolarini, texnik xizmat jurnalini. TO shartnomasisiz tizim rasman ishlamayotgan hisoblanadi.",
             "Biz butun siklni qilamiz: me'yorlar bo'yicha tekshiruv va loyiha, montaj, har datchikni tekshirish bilan ishga tushirish va inspeksiyaga topshirish, so'ngra reglament xizmat. Obyekt tekshiruvdan birinchi urinishda o'tadi — ishlarni topshirish mezoni shu.",
+          ] },
+          { h: "Narx va topshirilgandan keyingi hayot", p: [
+            "Byudjet xonalar maydoni va kategoriyalari, xabar beruvchi va shleyflar soni, prib turi va ogohlantirish tarkibidan yig'iladi. Kichik do'kon chegaraviy tizim bilan kamtar pulga yopiladi; ofis binosiga manzilli kerak — startda qimmatroq, lekin aniq diagnostika hisobiga ekspluatatsiyada arzonroq. Halol smetani faqat chiqish beradi: rejangiz bo'yicha bepul hisoblaymiz.",
+            "Topshirilgandan keyin reglament boshlanadi: jadval bo'yicha xabar beruvchilarni tekshirish, akkumulyatorlarni almashtirish, TX jurnaliga yozuvlar — inspektor birinchi bo'lib aynan jurnalni ochadi. Obyektlarni jadvalli chiqishlar bilan xizmatga olamiz: tizim ishchi qoladi, tekshiruvlar e'tiroz va jarimalarsiz o'tadi.",
           ] },
         ],
         faq: [
@@ -502,6 +590,10 @@ export const ARTICLES: Article[] = [
             "Design and as-built documents from a licensed organisation, equipment certificates, operation of every detector, sounder audibility, EXIT signs, the maintenance log. A system without a service contract formally counts as non-operational.",
             "We do the full cycle: survey and code-compliant design, installation, commissioning with every detector tested, inspection handover and then scheduled maintenance. The site passes inspection first time — that is our acceptance criterion.",
           ] },
+          { h: "The cost, and life after handover", p: [
+            "The budget is built from the area and category of the rooms, the number of detectors and loops, the panel type and the evacuation setup. A small shop is covered by a conventional system for modest money; an office building needs an addressable one — pricier upfront but cheaper to run thanks to precise diagnostics. Only a site visit yields an honest estimate: we calculate free of charge from your floor plan.",
+            "After handover the schedule begins: detector checks on a calendar, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. We take sites onto scheduled service: the system stays operational, and inspections pass without findings or fines.",
+          ] },
         ],
         faq: [
           { q: "How much is a fire alarm for a shop?", a: "For premises up to 300 m² a conventional system with detectors, a sounder and EXIT signs is the most affordable option; installation takes 1–3 days. An exact estimate follows a free survey: codes, not a price list, dictate the composition." },
@@ -525,6 +617,10 @@ export const ARTICLES: Article[] = [
             "Lisanslı kuruluşun projesi ve uygulama belgeleri, ekipman sertifikaları, her dedektörün çalışması, sirenlerin duyulurluğu, ÇIKIŞ levhaları, bakım defteri. Bakım sözleşmesi olmayan sistem resmen çalışmıyor sayılır.",
             "Tüm döngüyü biz yaparız: keşif ve projeden montaja, her dedektörün testiyle devreye almaya, denetime teslimden periyodik bakıma. Tesis denetimden ilk seferde geçer — kabul ölçütümüz budur.",
           ] },
+          { h: "Maliyet ve teslimden sonraki hayat", p: [
+            "Bütçe; alanların büyüklüğü ve kategorisi, dedektör ve zon sayısı, panel tipi ve tahliye düzeninden oluşur. Küçük mağaza mütevazı paraya konvansiyonel sistemle kapanır; ofis binasına adresli gerekir — başta pahalı ama hassas teşhis sayesinde işletmede ucuzdur. Dürüst teklifi yalnız keşif verir: kat planınıza göre ücretsiz hesaplarız.",
+            "Teslimden sonra takvim başlar: programlı dedektör kontrolleri, akü değişimi, bakım defterine kayıtlar — müfettişin ilk açtığı şey o defterdir. Tesisleri programlı servise alırız: sistem çalışır kalır, denetimler bulgusuz ve cezasız geçer.",
+          ] },
         ],
         faq: [
           { q: "Dükkân için yangın alarmı ne kadar?", a: "300 m²'ye kadar yerlerde dedektörlü, sirenli ve ÇIKIŞ levhalı konvansiyonel sistem en ekonomik seçenektir; montaj 1–3 gün sürer. Kesin fiyat ücretsiz keşiften sonra verilir." },
@@ -547,6 +643,10 @@ export const ARTICLES: Article[] = [
           { h: "检查人员查什么", p: [
             "持证单位的设计与竣工文件、设备证书、每只探测器的动作、警报器的声响与可见性、「安全出口」标志、维保记录。没有维保合同的系统在形式上视为不工作。",
             "我们提供全流程：按规范勘察设计、安装、逐只探测器调试、协助通过消防验收，之后是定期维保。现场一次通过检查——这就是我们的交付标准。",
+          ] },
+          { h: "造价，以及交付之后的日子", p: [
+            "预算由房间面积和类别、探测器和回路数量、主机类型及广播构成。小商店用总线制系统花不了多少钱；办公楼需要编址系统——前期贵些，但凭精确诊断在使用中更省。诚实的报价只能来自现场勘测：按您的平面图免费核算。",
+            "交付之后规程开始运转：按计划检查探测器、更换电池、登记维保台账——检查员第一个翻的就是台账。我们按计划上门维保：系统始终在岗，检查零整改、零罚款。",
           ] },
         ],
         faq: [
@@ -3196,6 +3296,10 @@ export const ARTICLES: Article[] = [
           { h: "Вывод", p: [
             "Технология — не религия, а инструмент под бюджет и состояние объекта. Мы монтируем и то и другое: пришлите фото объекта или план — посчитаем оба варианта, и вы сравните не абстракции, а конкретные сметы.",
           ] },
+          { h: "Гибрид на практике: как объекты переходят на IP", p: [
+            "Реальные объекты редко бывают «чистыми»: типичный магазин живёт с аналоговыми камерами по коаксиалу и хочет добавить пару IP с распознаванием на вход. Это штатная схема — гибридный регистратор принимает оба типа, и апгрейд идёт поэтапно, без остановки записи и замены всей проводки.",
+            "Планируя переход, начните с зон, где важна детализация: вход, касса, периметр. Старый аналог остаётся в подсобках и коридорах до конца своего ресурса. Мы считаем такие миграции регулярно — приезжайте с планом объекта или зовите инженера, маршрут перехода будет бесплатным.",
+          ] },
         ],
       },
       uz: {
@@ -3215,6 +3319,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Xulosa", p: [
             "Texnologiya — din emas, byudjet va obyekt holatiga mos vosita. Biz ikkalasini ham o'rnatamiz: obyekt suratini yoki rejasini yuboring — ikkala variantni hisoblaymiz, siz esa mavhumlikni emas, aniq smetalarni taqqoslaysiz.",
+          ] },
+          { h: "Amaliyotda gibrid: obyektlar IP ga qanday o'tadi", p: [
+            "Real obyektlar kamdan-kam «toza» bo'ladi: tipik do'kon koaksialdagi analog kameralar bilan yashaydi va kirishga tanishli bir juft IP qo'shmoqchi. Bu shtatniy sxema — gibrid registrator ikkala turni qabul qiladi, apgreyd yozuvni to'xtatmasdan va butun simlarni almashtirmasdan bosqichma-bosqich boradi.",
+            "O'tishni rejalashtirganda detalizatsiya muhim zonalardan boshlang: kirish, kassa, perimetr. Eski analog resursi tugaguncha yordamchi xona va koridorlarda qoladi. Bunday migratsiyalarni muntazam hisoblaymiz — obyekt plani bilan keling yoki muhandisni chaqiring, o'tish marshruti bepul bo'ladi.",
           ] },
         ],
       },
@@ -3236,6 +3344,10 @@ export const ARTICLES: Article[] = [
           { h: "Conclusion", p: [
             "Technology is not a religion — it is a tool matched to your budget and the state of the site. We install both: send a photo or plan of your site and we will price both options, so you compare real estimates, not abstractions.",
           ] },
+          { h: "Hybrid in practice: how sites move to IP", p: [
+            "Real sites are rarely \"pure\": a typical shop lives with analog cameras over coax and wants to add a couple of IP units with recognition at the entrance. That is a standard scheme — a hybrid recorder accepts both types, and the upgrade goes in stages without stopping recording or replacing all the wiring.",
+            "When planning the move, start with the zones where detail matters: the entrance, the till, the perimeter. The old analog stays in back rooms and corridors until the end of its life. We calculate such migrations regularly — come with a site plan or call an engineer; the migration route is free.",
+          ] },
         ],
       },
       tr: {
@@ -3256,6 +3368,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonuç", p: [
             "Teknoloji din değil, bütçeye ve sahanın durumuna göre seçilen bir araçtır. İkisini de kuruyoruz: sahanızın fotoğrafını veya planını gönderin, iki seçeneği de fiyatlandıralım — soyutlamaları değil somut teklifleri karşılaştırın.",
           ] },
+          { h: "Pratikte hibrit: tesisler IP'ye nasıl geçer", p: [
+            "Gerçek tesisler nadiren «saf» olur: tipik mağaza koaksiyeldeki analog kameralarla yaşar ve girişe tanımalı birkaç IP eklemek ister. Bu standart şemadır — hibrit kayıt cihazı iki tipi de kabul eder; yükseltme, kaydı durdurmadan ve tüm kabloyu değiştirmeden aşamalı gider.",
+            "Geçişi planlarken detayın önemli olduğu bölgelerden başlayın: giriş, kasa, çevre. Eski analog, ömrü bitene dek arka odalarda ve koridorlarda kalır. Bu tür geçişleri düzenli hesaplıyoruz — tesis planıyla gelin veya mühendis çağırın; geçiş rotası ücretsizdir.",
+          ] },
         ],
       },
       zh: {
@@ -3275,6 +3391,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "结论", p: [
             "技术不是信仰，而是匹配预算和现场条件的工具。两种我们都安装：把现场照片或平面图发给我们，两个方案都报价——您比较的将是具体预算，而非抽象概念。",
+          ] },
+          { h: "混合方案的实践：现场怎样过渡到IP", p: [
+            "真实的现场很少「纯粹」：典型的商店用同轴模拟摄像机过日子，又想在入口加两台带识别的IP机。这是标准方案——混合录像机两种都收，升级分阶段进行，录像不中断、线路不必全换。",
+            "规划过渡时，从需要细节的区域开始：入口、收银台、周界。老的模拟机留在后仓和走廊，用到寿终正寝。这类迁移我们经常核算——带着平面图来，或叫工程师上门，过渡路线图免费。",
           ] },
         ],
       },
@@ -3302,6 +3422,10 @@ export const ARTICLES: Article[] = [
           { h: "Вывод", p: [
             "ZKTeco — про биометрию и учёт времени за разумные деньги, Hikvision — про единую экосистему безопасности. Мы внедряем обе марки, включая интеграцию с 1С и зарплатными модулями: расскажите, какие отчёты и сценарии прохода вам нужны — предложим конфигурацию в двух вариантах с ценами.",
           ] },
+          { h: "Цены и наш практический выбор", p: [
+            "По бюджету ZKTeco выигрывает в классике «дверь + учёт времени»: терминалы дешевле при сопоставимой точности, и для проходной на 50–500 человек это самый частый выбор. Hikvision берёт своё там, где биометрия — часть большой системы: единая платформа с камерами, домофонами и турникетами, один журнал и один интерфейс для охраны.",
+            "Наша практика: офисы и производства чаще получают ZKTeco по соотношению цена/функции, объекты с развитым видеонаблюдением Hikvision — терминалы того же вендора. Оба варианта со склада в Ташкенте; привозим на объект, показываем скорость распознавания вживую и считаем комплект бесплатно.",
+          ] },
         ],
       },
       uz: {
@@ -3320,6 +3444,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Xulosa", p: [
             "ZKTeco — oqilona pulga biometriya va vaqt hisobi haqida, Hikvision — yagona xavfsizlik ekotizimi haqida. Biz ikkala markani, shu jumladan 1C va ish haqi modullari bilan integratsiyani joriy etamiz: qanday hisobot va o'tish stsenariylari kerakligini ayting — narxlari bilan ikki variantda konfiguratsiya taklif qilamiz.",
+          ] },
+          { h: "Narxlar va bizning amaliy tanlovimiz", p: [
+            "Byudjet bo'yicha ZKTeco «eshik + vaqt hisobi» klassikasida yutadi: terminallar taqqoslanadigan aniqlikda arzonroq, 50–500 kishilik prohodnayaga bu eng ko'p tanlov. Hikvision biometriya katta tizimning qismi bo'lgan joyda o'zinikini oladi: kameralar, domofonlar va turniketlar bilan yagona platforma, qo'riq uchun bitta jurnal va bitta interfeys.",
+            "Amaliyotimiz: ofis va ishlab chiqarishlar narx/funksiya nisbatida ko'proq ZKTeco oladi, rivojlangan Hikvision videokuzatuvli obyektlar — o'sha vendor terminallarini. Ikkala variant Toshkentdagi ombordan; obyektga olib kelamiz, tanish tezligini jonli ko'rsatamiz va to'plamni bepul hisoblaymiz.",
           ] },
         ],
       },
@@ -3340,6 +3468,10 @@ export const ARTICLES: Article[] = [
           { h: "Conclusion", p: [
             "ZKTeco is about biometrics and time tracking for sensible money; Hikvision is about a unified security ecosystem. We deploy both, including 1C and payroll integration: tell us which reports and entry scenarios you need — we will propose two configurations with prices.",
           ] },
+          { h: "Prices and our practical pick", p: [
+            "On budget, ZKTeco wins the classic \"door + time attendance\" case: terminals are cheaper at comparable accuracy, and for a 50–500 person entrance it is the most frequent choice. Hikvision takes over where biometrics is part of a bigger system: one platform with cameras, intercoms and turnstiles, one log and one interface for security.",
+            "Our practice: offices and factories more often get ZKTeco for price/features, while sites with an established Hikvision CCTV setup get the same vendor's terminals. Both are in Tashkent stock; we bring them to your site, demonstrate recognition speed live and quote the kit for free.",
+          ] },
         ],
       },
       tr: {
@@ -3359,6 +3491,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonuç", p: [
             "ZKTeco makul paraya biyometri ve mesai takibi; Hikvision bütünleşik güvenlik ekosistemi demektir. İkisini de kuruyoruz, 1C ve bordro entegrasyonu dahil: hangi raporlara ve geçiş senaryolarına ihtiyacınız olduğunu söyleyin — fiyatlarıyla iki konfigürasyon önerelim.",
           ] },
+          { h: "Fiyatlar ve pratikte bizim seçimimiz", p: [
+            "Bütçede ZKTeco, klasik «kapı + mesai» senaryosunu kazanır: terminaller benzer doğrulukta daha ucuzdur ve 50–500 kişilik giriş için en sık seçimdir. Hikvision, biyometrinin büyük sistemin parçası olduğu yerde öne geçer: kameralar, diafonlar ve turnikelerle tek platform, güvenlik için tek kayıt ve tek arayüz.",
+            "Pratiğimiz: ofisler ve fabrikalar fiyat/özellik oranıyla çoğunlukla ZKTeco alır; oturmuş Hikvision kamera altyapısı olan tesisler aynı üreticinin terminallerini seçer. İkisi de Taşkent stoğunda; tesise getirir, tanıma hızını canlı gösterir ve seti ücretsiz hesaplarız.",
+          ] },
         ],
       },
       zh: {
@@ -3377,6 +3513,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "结论", p: [
             "ZKTeco代表花合理的钱做生物识别和考勤；海康威视代表统一的安防生态。两个品牌我们都做，包括1C和工资模块对接：告诉我们您需要哪些报表和通行场景——我们给出两套带价格的配置方案。",
+          ] },
+          { h: "价格与我们的实战选择", p: [
+            "论预算，ZKTeco赢在「门禁＋考勤」的经典场景：精度相当、终端更便宜，50–500人的门岗它是最常见的选择。当生物识别是大系统的一环时，海康威视占优：与摄像机、对讲和闸机同平台，保安只看一个日志、一个界面。",
+            "我们的实践：办公室和工厂按性价比多选ZKTeco；已有成熟海康威视监控的场所选同厂终端。两种都是塔什干现货；带到现场实测识别速度，套件免费核算。",
           ] },
         ],
       },
@@ -5164,6 +5304,10 @@ export const ARTICLES: Article[] = [
             "Uskunaga rasmiy kafolat, montaj ishlariga kompaniya kafolati. Keyinchalik texnik xizmat ko'rsatish shartnomasini tuzish mumkin: profilaktika, kameralarni tozalash, disk holatini tekshirish.",
             "O'lchov va smeta uchun qo'ng'iroq qiling yoki saytdagi chatga yozing — muhandis chiqib, aniq narxni hisoblab beradi.",
           ] },
+          { h: "Buyurtmachilar qayerda pul yo'qotadi", p: [
+            "Uch eng qimmat xato: maxsus disk o'rniga kompyuter diski (kecha-kunduz yozuvdan birinchi bo'lib o'ladi), detalizatsiya kerak kassaga arzon kamera va quvvat zaxirasisiz «qanday bo'lsa» kabel — qishda uzoq kameralar qayta yuklana boshlaydi. Bu tejashlarning har biri narx farqidan qimmatga tushadi.",
+            "To'g'ri tartib boshqa: avval bepul chiqish va zonalar vazifalariga hisob, keyin to'liq smeta — kameralar, registrator, disk, kabel, montaj va yashirin to'lovlarsiz telefonlarni sozlash. Shunda tizim birinchi qishgacha emas, yillab ishlaydi.",
+          ] },
         ],
         faq: [
           { q: "O'rnatish qancha vaqt oladi?", a: "Uy yoki do'kon uchun odatda bir kun. Katta obyekt (ombor, ishlab chiqarish, hovli) — bir necha kun, kabel hajmiga qarab." },
@@ -5195,6 +5339,10 @@ export const ARTICLES: Article[] = [
           { h: "Гарантия и сервис", p: [
             "На оборудование — официальная гарантия, на монтажные работы — гарантия компании. В дальнейшем можно заключить договор на техобслуживание: профилактика, чистка камер, проверка состояния диска.",
             "Для замера и сметы позвоните или напишите в чат на сайте — инженер выедет и посчитает точную стоимость.",
+          ] },
+          { h: "На чём заказчики теряют деньги", p: [
+            "Три самые дорогие ошибки: компьютерный диск вместо специализированного (умирает от круглосуточной записи первым), дешёвая камера на кассе, где нужна детализация, и кабель «какой был» без запаса по питанию — зимой дальние камеры начинают перезагружаться. Каждая из этих экономий стоит дороже разницы в цене.",
+            "Правильный порядок другой: сначала бесплатный выезд и расчёт под задачи зон, затем смета целиком — камеры, регистратор, диск, кабель, монтаж и настройка телефонов без скрытых доплат. Так система работает годами, а не до первой зимы.",
           ] },
         ],
         faq: [
@@ -5228,6 +5376,10 @@ export const ARTICLES: Article[] = [
             "Equipment carries an official manufacturer warranty; installation work is covered by our company warranty. Later you can sign a maintenance contract: preventive checks, camera cleaning and hard-drive health monitoring.",
             "For a site survey and an estimate, call us or write in the website chat — an engineer will visit and calculate the exact cost.",
           ] },
+          { h: "Where customers lose money", p: [
+            "The three costliest mistakes: a desktop disk instead of a surveillance-rated one (it dies first from round-the-clock recording), a cheap camera at the till where detail matters, and \"whatever cable was around\" without power margin — in winter the far cameras start rebooting. Each of these savings costs more than the price difference.",
+            "The right order is different: first a free survey and a calculation per zone task, then a complete estimate — cameras, recorder, disk, cable, installation and phone setup with no hidden charges. That way the system works for years, not until the first winter.",
+          ] },
         ],
         faq: [
           { q: "How long does installation take?", a: "For a house or a shop, usually one day. A large site (warehouse, factory, yard) takes several days, depending on the amount of cabling work." },
@@ -5260,6 +5412,10 @@ export const ARTICLES: Article[] = [
             "Ekipmanda resmi garanti, montaj işlerinde şirket garantisi vardır. Sonrasında bakım sözleşmesi yapılabilir: periyodik kontrol, kamera temizliği, disk durumunun izlenmesi.",
             "Keşif ve fiyat teklifi için bizi arayın veya sitedeki sohbete yazın — mühendis gelir ve kesin fiyatı hesaplar.",
           ] },
+          { h: "Müşteriler nerede para kaybeder", p: [
+            "En pahalı üç hata: gözetim sınıfı yerine masaüstü disk (7/24 kayıttan önce o ölür), detayın önemli olduğu kasada ucuz kamera ve güç payı olmayan «eldeki» kablo — kışın uzak kameralar yeniden başlamaya başlar. Bu tasarrufların her biri fiyat farkından pahalıya oturur.",
+            "Doğru sıra farklıdır: önce ücretsiz keşif ve bölge görevlerine göre hesap, sonra komple teklif — kameralar, kayıt cihazı, disk, kablo, montaj ve gizli ücretsiz telefon kurulumu. Böylece sistem ilk kışa kadar değil, yıllarca çalışır.",
+          ] },
         ],
         faq: [
           { q: "Kurulum ne kadar sürer?", a: "Ev veya mağaza için genellikle bir gün. Büyük mekânlar (depo, üretim tesisi, avlu) kablo işlerinin hacmine göre birkaç gün sürer." },
@@ -5291,6 +5447,10 @@ export const ARTICLES: Article[] = [
           { h: "质保与售后服务", p: [
             "设备享受官方质保，安装工程由公司质保。之后还可签订维保合同：定期检查、清洁摄像头、检测硬盘状态。",
             "如需上门测量和报价，请致电或在网站聊天窗口留言——工程师将上门核算准确费用。",
+          ] },
+          { h: "客户最容易在哪里赔钱", p: [
+            "三个最贵的错误：用电脑硬盘代替监控盘（7×24录像最先累死的就是它）、在需要细节的收银台装便宜摄像机、用「手头现有」的线缆不留供电余量——到了冬天远端摄像机开始反复重启。每一项省钱都比差价更贵。",
+            "正确的顺序是另一种：先免费勘测、按各区任务核算，然后整套报价——摄像机、录像机、硬盘、线缆、施工和手机配置，没有隐藏加价。这样系统才能用上几年，而不是撑到第一个冬天。",
           ] },
         ],
         faq: [
@@ -5326,6 +5486,10 @@ export const ARTICLES: Article[] = [
           { h: "Что дальше", p: [
             "Посмотрите турникеты и шлагбаумы в каталоге — цены в сумах, наличие в Ташкенте. Опишите проходную (число сотрудников, ширина проёма, нужен ли учёт времени) — предложим 2–3 варианта с точной сметой за один день.",
           ] },
+          { h: "Монтаж и связки, которые делают проходную", p: [
+            "Турникет без окружения — просто механика: рабочей проходную делают анкеровка в пол, ограждения, калитка для маломобильных и грузов, резервированное питание и связка со СКУД. По сигналу пожарной тревоги планки складываются, а калитки открываются — эта связка обязательна по нормам и закладывается в проект.",
+            "Интеграция с учётом времени превращает проходную в источник табеля для 1С, а привязка проходов к видеозаписи закрывает споры. Монтируем проходные за один-два дня, обучаем охрану и администратора, обслуживаем по договору.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит самый недорогой турникет?", a: "Турникет-трипод начального уровня — примерно от 4–6 млн сум за оборудование. С установкой и настройкой — от 6–8 млн сум." },
@@ -5352,6 +5516,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Keyingi qadam", p: [
             "Katalogdagi turniket va shlagbaumlarni ko'ring — narxlar so'mda, Toshkentda mavjud. O'tish punktingizni tasvirlab bering (xodimlar soni, eshik kengligi, vaqt hisobi kerakmi) — bir kunda aniq smeta bilan 2–3 variant taklif qilamiz.",
+          ] },
+          { h: "Prohodnayani yaratadigan montaj va bog'lamlar", p: [
+            "Atrofisiz turniket — shunchaki mexanika: prohodnayani ishchi qiladigan narsalar — polga ankerlash, to'siqlar, imkoniyati cheklanganlar va yuklar uchun kalitka, zaxiralangan quvvat va SKUD bilan bog'lam. Yong'in trevogasi signali bo'yicha plankalar yig'iladi, kalitkalar ochiladi — bu bog'lam me'yorlar bo'yicha majburiy va loyihaga kiritiladi.",
+            "Vaqt hisobi bilan integratsiya prohodnayani 1C uchun tabel manbaiga aylantiradi, o'tishlarni videoyozuvga bog'lash bahslarni yopadi. Prohodnayalarni bir-ikki kunda montaj qilamiz, qo'riq va administratorni o'rgatamiz, shartnoma bo'yicha xizmatlaymiz.",
           ] },
         ],
         faq: [
@@ -5380,6 +5548,10 @@ export const ARTICLES: Article[] = [
           { h: "Next step", p: [
             "Browse turnstiles and barrier gates in our catalog — prices in UZS, stock in Tashkent. Describe your entrance (headcount, doorway width, attendance needs) and we will propose 2–3 options with an exact quote within one day.",
           ] },
+          { h: "The installation and links that make an entrance", p: [
+            "A turnstile without its surroundings is just mechanics: what makes the entrance work is floor anchoring, railings, a gate for wheelchair users and loads, redundant power and the access control link. On a fire alarm the arms drop and the gates open — this link is mandatory by code and goes into the design.",
+            "Integration with time attendance turns the entrance into a timesheet source for the ERP, and tying passages to video closes disputes. We install entrances in one or two days, train the guards and the administrator, and service under contract.",
+          ] },
         ],
         faq: [
           { q: "How much is the cheapest turnstile?", a: "An entry-level tripod is about 4–6 million UZS for hardware, or 6–8 million UZS installed and configured." },
@@ -5407,6 +5579,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonraki adım", p: [
             "Katalogdaki turnike ve bariyerlere göz atın — fiyatlar UZS cinsinden, stoklar Taşkent'te. Girişinizi tarif edin (personel sayısı, kapı genişliği, mesai takibi) — bir gün içinde net teklifle 2–3 seçenek sunalım.",
           ] },
+          { h: "Girişi giriş yapan montaj ve bağlar", p: [
+            "Çevresi olmayan turnike yalnız mekaniktir: girişi çalışır kılan şeyler zemine ankraj, korkuluklar, engelliler ve yükler için kapı, yedekli besleme ve geçiş kontrolü bağıdır. Yangın alarmında kollar düşer, kapılar açılır — bu bağ normlarca zorunludur ve projeye konur.",
+            "Mesai entegrasyonu girişi ERP için puantaj kaynağına çevirir; geçişleri videoya bağlamak tartışmaları kapatır. Girişleri bir-iki günde kurar, güvenliği ve yöneticiyi eğitir, sözleşmeyle bakarız.",
+          ] },
         ],
         faq: [
           { q: "En uygun turnike ne kadar?", a: "Giriş seviyesi tripod, ekipman olarak yaklaşık 4–6 milyon UZS; montaj ve ayarlarla 6–8 milyon UZS'den." },
@@ -5433,6 +5609,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "下一步", p: [
             "欢迎浏览产品目录中的闸机和道闸——苏姆计价，塔什干现货。告诉我们入口情况（人数、门洞宽度、是否需要考勤），一天内给出2–3套方案与准确报价。",
+          ] },
+          { h: "让门岗成为门岗的安装与联动", p: [
+            "光秃秃的闸机只是机械：让门岗真正运转的是地面锚固、护栏、供轮椅和货物的边门、冗余供电和与门禁的联动。火灾报警时落杆、边门放开——这一联动是规范强制项，要写进设计。",
+            "接入考勤后门岗变成1C考勤表的数据源，通行绑定录像让争议无处遁形。门岗一到两天装好，培训保安和管理员，按合同维保。",
           ] },
         ],
         faq: [
@@ -5468,6 +5648,10 @@ export const ARTICLES: Article[] = [
           { h: "Что дальше", p: [
             "В каталоге — домофоны Hikvision и комплекты с ценами в сумах. Напишите, куда нужен домофон (квартира, дом, офис, подъезд) — подберём вариант и посчитаем установку за один день.",
           ] },
+          { h: "Что входит в комплект кроме панели", p: [
+            "Вызывная панель — только видимая часть: для работающей двери нужны электромеханический или магнитный замок, доводчик, блок питания с резервным аккумулятором и кнопка выхода. Для подъезда добавляется антивандальное исполнение. Экономия на доводчике заканчивается хлопающей дверью и разбитым замком за полгода.",
+            "IP-домофоны окупают разницу удобством: вызов приходит на смартфон, где бы вы ни были, а связка со СКУД пускает своих по карте. Считаем комплект целиком под вашу дверь или подъезд — выезд и смета бесплатны.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит видеодомофон для квартиры?", a: "Комплект «панель + монитор» — от 1,2–1,5 млн сум. С установкой — примерно плюс 300–500 тысяч сум." },
@@ -5494,6 +5678,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Keyingi qadam", p: [
             "Katalogda — Hikvision domofonlari va to'plamlar, narxlar so'mda. Domofon qayerga kerakligini yozing (kvartira, hovli, ofis, podez) — bir kunda variant tanlab, o'rnatishni hisoblaymiz.",
+          ] },
+          { h: "Panel dan tashqari to'plamga nima kiradi", p: [
+            "Chaqiruv paneli — faqat ko'rinadigan qism: ishlaydigan eshikka elektromexanik yoki magnit qulf, dovodchik, zaxira akkumulyatorli quvvat bloki va chiqish tugmasi kerak. Podyezdga antivandal bajarilish qo'shiladi. Dovodchikda tejash yarim yilda taraqlaydigan eshik va singan qulf bilan tugaydi.",
+            "IP-domofonlar farqni qulaylik bilan oqlaydi: chaqiruv qayerda bo'lsangiz ham smartfonga keladi, SKUD bilan bog'lam o'zinikilarni karta bilan kiritadi. To'plamni eshigingiz yoki podyezdingiz uchun to'liq hisoblaymiz — chiqish va smeta bepul.",
           ] },
         ],
         faq: [
@@ -5522,6 +5710,10 @@ export const ARTICLES: Article[] = [
           { h: "Next step", p: [
             "Our catalog lists Hikvision intercoms and kits with UZS prices. Tell us where the intercom goes (apartment, house, office, building entrance) — we will pick an option and quote installation within a day.",
           ] },
+          { h: "What the kit includes besides the panel", p: [
+            "The door panel is only the visible part: a working door needs an electromechanical or magnetic lock, a closer, a power supply with a backup battery and an exit button. An entrance block adds a vandal-proof build. Saving on the closer ends with a slamming door and a broken lock within half a year.",
+            "IP intercoms repay the difference in convenience: the call reaches your smartphone wherever you are, and the access control link lets residents in by card. We quote the complete kit for your door or entrance — the visit and the estimate are free.",
+          ] },
         ],
         faq: [
           { q: "How much is a video intercom for an apartment?", a: "A panel + monitor kit is 1.2–1.5 million UZS; installation adds roughly 300–500 thousand UZS." },
@@ -5549,6 +5741,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonraki adım", p: [
             "Katalogda Hikvision diafonlar ve setler UZS fiyatlarıyla listelidir. Diafonun nereye gerektiğini yazın (daire, ev, ofis, apartman girişi) — bir günde seçenek belirleyip montajı fiyatlandıralım.",
           ] },
+          { h: "Panel dışında sete ne girer", p: [
+            "Zil paneli yalnız görünen kısımdır: çalışan kapıya elektromekanik veya manyetik kilit, kapı kapatıcı, yedek akülü güç kaynağı ve çıkış butonu gerekir. Apartman girişine vandala dayanıklı yapı eklenir. Kapatıcıdan kısmak, yarım yılda çarpan kapı ve kırık kilitle biter.",
+            "IP diafonlar farkı konforla öder: çağrı nerede olursanız olun telefonunuza gelir, geçiş kontrolü bağı sakinleri kartla içeri alır. Seti kapınız veya girişiniz için komple hesaplarız — keşif ve teklif ücretsizdir.",
+          ] },
         ],
         faq: [
           { q: "Daire için görüntülü diafon ne kadar?", a: "Panel + monitör seti 1,2–1,5 milyon UZS; montaj yaklaşık 300–500 bin UZS ekler." },
@@ -5575,6 +5771,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "下一步", p: [
             "目录中有海康威视对讲机及套装，苏姆计价。告诉我们安装位置（公寓、别墅、办公室、单元门）——一天内选型并核算安装费。",
+          ] },
+          { h: "套件里除了门口机还有什么", p: [
+            "门口机只是看得见的部分：一扇能用的门还需要电机锁或磁力锁、闭门器、带备用电池的电源和出门按钮。单元门再加防破坏外壳。省掉闭门器的结局：半年后门砰砰作响、锁被砸坏。",
+            "IP对讲用便利偿还差价：无论身在何处呼叫都到手机，联动门禁后住户刷卡即入。按您的门或单元整套核算——上门和报价免费。",
           ] },
         ],
         faq: [
@@ -5610,6 +5810,10 @@ export const ARTICLES: Article[] = [
           { h: "Что дальше", p: [
             "Пришлите план помещения или просто площадь и назначение — за один день посчитаем смету по двум вариантам (адресная/безадресная) с оборудованием в наличии в Ташкенте.",
           ] },
+          { h: "Обслуживание: без него система не считается", p: [
+            "Смонтированная сигнализация без обслуживания — это просроченный огнетушитель на стене: формально есть, фактически нет. Нормы требуют регламентных проверок с записями в журнале, и именно журнал ТО инспектор открывает первым. Пыль в камерах извещателей — главный источник ложных тревог, которые отучают персонал реагировать.",
+            "Мы берём системы на регламент: чистка и проверка извещателей, тест оповещения, замена аккумуляторов, ведение журнала. Обслуживаем и системы, смонтированные другими подрядчиками, — после бесплатного аудита с честной дефектной ведомостью.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит пожарная сигнализация для маленького офиса?", a: "Небольшой офис или магазин под ключ — обычно от 5–10 млн сум: проект, оборудование, монтаж и пусконаладка. Точную цифру даёт бесплатная смета." },
@@ -5636,6 +5840,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Keyingi qadam", p: [
             "Xona rejasini yoki shunchaki maydon va vazifasini yuboring — bir kunda ikki variant bo'yicha smeta hisoblaymiz (manzilli/manzilsiz), uskunalar Toshkentda mavjud.",
+          ] },
+          { h: "Xizmat: usiz tizim hisobga o'tmaydi", p: [
+            "Xizmatsiz montaj qilingan signalizatsiya — devordagi muddati o'tgan o't o'chirgich: rasman bor, amalda yo'q. Me'yorlar jurnalga yozuvli reglament tekshiruvlarni talab qiladi, inspektor birinchi bo'lib aynan TX jurnalini ochadi. Xabar beruvchi kameralaridagi chang — xodimlarni javob berishdan bezdiradigan yolg'on trevogalarning bosh manbai.",
+            "Tizimlarni reglamentga olamiz: xabar beruvchilarni tozalash va tekshirish, ogohlantirish testi, akkumulyatorlarni almashtirish, jurnal yuritish. Boshqa pudratchilar montaj qilgan tizimlarga ham xizmat ko'rsatamiz — halol nuqson vedomostli bepul auditdan keyin.",
           ] },
         ],
         faq: [
@@ -5664,6 +5872,10 @@ export const ARTICLES: Article[] = [
           { h: "Next step", p: [
             "Send a floor plan, or just the area and purpose — within a day we will quote two options (addressable/conventional) with equipment in stock in Tashkent.",
           ] },
+          { h: "Maintenance: without it the system does not count", p: [
+            "An installed alarm without maintenance is an expired extinguisher on the wall: formally present, practically absent. The codes require scheduled checks with log entries, and the maintenance log is the first thing an inspector opens. Dust in detector chambers is the main source of false alarms that teach the staff to ignore the system.",
+            "We take systems onto a schedule: cleaning and testing detectors, checking the sounders, replacing batteries, keeping the log. We also service systems installed by other contractors — after a free audit with an honest defect list.",
+          ] },
         ],
         faq: [
           { q: "How much is a fire alarm for a small office?", a: "A small office or shop turnkey usually starts from 5–10 million UZS: design, equipment, installation and commissioning. A free estimate gives the exact figure." },
@@ -5691,6 +5903,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonraki adım", p: [
             "Kat planını veya sadece alan ve kullanım amacını gönderin — bir günde iki seçenekli (adresli/adressiz) teklif hazırlayalım; ekipman Taşkent'te stokta.",
           ] },
+          { h: "Bakım: onsuz sistem sayılmaz", p: [
+            "Bakımı olmayan kurulu alarm, duvardaki süresi geçmiş söndürücü gibidir: resmen var, fiilen yok. Normlar deftere işlenen programlı kontrolleri ister; müfettişin ilk açtığı şey bakım defteridir. Dedektör haznelerindeki toz, personeli tepki vermemeye alıştıran yanlış alarmların baş kaynağıdır.",
+            "Sistemleri programa alırız: dedektör temizliği ve testi, anons denemesi, akü değişimi, defter tutma. Başka yüklenicilerin kurduğu sistemlere de bakarız — dürüst kusur listesiyle ücretsiz denetimden sonra.",
+          ] },
         ],
         faq: [
           { q: "Küçük ofis için yangın alarmı ne kadar?", a: "Küçük ofis/mağaza anahtar teslim genelde 5–10 milyon UZS'den: proje, ekipman, montaj, devreye alma. Kesin rakam ücretsiz keşifle." },
@@ -5717,6 +5933,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "下一步", p: [
             "发来平面图，或告知面积与用途——一天内给出总线/多线两套报价，设备塔什干现货。",
+          ] },
+          { h: "维保：没有它系统等于没装", p: [
+            "装好却不维保的报警系统，就像墙上过期的灭火器：形式上有，实际上没有。规范要求按计划检查并记入台账，检查员第一个翻的就是维保台账。探测器暗室里的灰尘是误报的头号来源——而误报会教会员工对警报无动于衷。",
+            "我们承接定期规程：清洁和测试探测器、试验广播、更换电池、登记台账。别的承包商装的系统也接——先做免费审计，出一份诚实的缺陷清单。",
           ] },
         ],
         faq: [
@@ -5752,6 +5972,10 @@ export const ARTICLES: Article[] = [
           { h: "Что дальше", p: [
             "В каталоге — видеорегистраторы Hikvision, Dahua и HiLook с ценами в сумах и наличием в Ташкенте. Напишите, сколько у вас камер и какой нужен архив — подберём регистратор и диск за один день.",
           ] },
+          { h: "Настройка, которая продлевает архив", p: [
+            "Правильно настроенная детекция движения удлиняет архив в разы: регистратор пишет постоянно только кассу и вход, остальные зоны — по событию. Модели с AcuSense фильтруют ложные срабатывания от веток и животных, и уведомления на телефон снова начинают что-то значить.",
+            "Вторая настройка, о которой забывают, — двойной поток: основной в архив, лёгкий для просмотра с телефона. Без него мобильное приложение «жуёт» трафик и тормозит. Мы настраиваем оба потока, детекцию и доступ с телефонов при каждом монтаже — это входит в цену.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит регистратор на 4 камеры?", a: "4-канальный NVR — примерно от 800 тысяч сум, с встроенным PoE — от 1,2–1,5 млн сум. Плюс жёсткий диск от ~500 тысяч сум." },
@@ -5778,6 +6002,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Keyingi qadam", p: [
             "Katalogda — Hikvision, Dahua va HiLook videoregistratorlari, narxlar so'mda, Toshkentda mavjud. Nechta kamera va qanday arxiv kerakligini yozing — bir kunda registrator va diskni tanlab beramiz.",
+          ] },
+          { h: "Arxivni uzaytiradigan sozlash", p: [
+            "To'g'ri sozlangan harakat detektsiyasi arxivni bir necha barobar uzaytiradi: registrator faqat kassa va kirishni doimiy yozadi, qolgan zonalar — hodisa bo'yicha. AcuSense li modellar shox va hayvonlardan yolg'on ishga tushishlarni filtrlaydi, telefonga bildirishnomalar yana nimanidir anglata boshlaydi.",
+            "Unutiladigan ikkinchi sozlash — ikkilangan oqim: asosiysi arxivga, yengili telefondan ko'rishga. Usiz mobil ilova trafik «chaynaydi» va tormozlaydi. Har montajda ikkala oqim, detektsiya va telefonlardan kirishni sozlaymiz — bu narxga kiradi.",
           ] },
         ],
         faq: [
@@ -5806,6 +6034,10 @@ export const ARTICLES: Article[] = [
           { h: "Next step", p: [
             "Our catalog lists Hikvision, Dahua and HiLook recorders with UZS prices and Tashkent stock. Tell us how many cameras and what archive you need — we will match a recorder and drive within a day.",
           ] },
+          { h: "The configuration that stretches the archive", p: [
+            "Properly configured motion detection stretches the archive severalfold: the recorder writes continuously only for the till and the entrance, the rest by event. AcuSense models filter false triggers from branches and animals — and phone notifications start meaning something again.",
+            "The second forgotten setting is the dual stream: the main one for the archive, a light one for phone viewing. Without it the mobile app chews traffic and lags. We configure both streams, detection and phone access at every installation — it is included in the price.",
+          ] },
         ],
         faq: [
           { q: "How much is a recorder for 4 cameras?", a: "A 4-channel NVR from about 800 thousand UZS; with built-in PoE from 1.2–1.5 million UZS, plus a hard drive from ~500 thousand UZS." },
@@ -5833,6 +6065,10 @@ export const ARTICLES: Article[] = [
           { h: "Sonraki adım", p: [
             "Katalogda Hikvision, Dahua ve HiLook kayıt cihazları UZS fiyatları ve Taşkent stoklarıyla listeli. Kaç kameranız ve nasıl arşiv gerektiğini yazın — bir günde cihaz ve disk seçelim.",
           ] },
+          { h: "Arşivi uzatan yapılandırma", p: [
+            "Doğru kurulan hareket algılama arşivi kat kat uzatır: kayıt cihazı yalnız kasayı ve girişi sürekli yazar, kalan bölgeleri olaya göre. AcuSense modeller dallardan ve hayvanlardan gelen yanlış tetiklemeleri süzer — telefon bildirimleri yeniden anlam kazanır.",
+            "Unutulan ikinci ayar çift akıştır: ana akış arşive, hafif akış telefondan izlemeye. Onsuz mobil uygulama trafiği yer ve takılır. Her montajda iki akışı, algılamayı ve telefon erişimini kurarız — fiyata dahildir.",
+          ] },
         ],
         faq: [
           { q: "4 kamera için kayıt cihazı ne kadar?", a: "4 kanallı NVR yaklaşık 800 bin UZS'den, dahili PoE'li 1,2–1,5 milyon UZS'den; artı ~500 bin UZS'den hard disk." },
@@ -5859,6 +6095,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "下一步", p: [
             "目录中有海康威视、大华与HiLook录像机，苏姆计价、塔什干现货。告诉我们摄像机数量与存档需求——一天内选好录像机与硬盘。",
+          ] },
+          { h: "让存储更耐用的配置", p: [
+            "调好移动侦测能让存储时长翻几倍：录像机只对收银台和入口连续录像，其余区域按事件触发。带AcuSense的型号过滤树枝和动物的误触发——手机推送重新变得有意义。",
+            "第二个常被遗忘的设置是双码流：主码流进存储，轻码流供手机观看。没有它，手机应用既费流量又卡顿。我们每次施工都配好双码流、侦测和手机访问——包含在价格里。",
           ] },
         ],
         faq: [
@@ -6412,6 +6652,10 @@ export const ARTICLES: Article[] = [
             "Katalogimizda shlagbaumlar, privodlar, pultlar va ANPR kameralari bor — narxlar so'mda, Toshkentda ombordan. Kirish turini ayting (hovli, avtoturargoh, KPP) — mos variantni tanlab, o'rnatish bilan aniq narxni bir kunda hisoblaymiz.",
             "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
           ] },
+          { h: "Yashirin xarajat moddalari", p: [
+            "Kirish smetasida shlagbaumdan tashqari montajda eslanadigan pozitsiyalar yashaydi: poydevor yoki zakladnoy, quvvat kirishi, strela kapotga yotmasligi uchun fotoelementlar va petlevoy detektor. TJMga mehmonlar uchun chaqiruv paneli va ANPR-kamera qo'shing — ularsiz qo'riq «domofonga qo'ng'iroq» bilan ishlashda davom etadi.",
+            "Boshqaruv usulida tejash oqilona (pultlar ANPR dan arzon), lekin privod sinfida emas: intensiv kirishdagi maishiy shlagbaum — mavsumdan keyin almashtirish degani. Kirish guruhini to'liq hisoblaymiz va ishlar boshlanishidan oldin to'liq narxni aytamiz.",
+          ] },
         ],
         faq: [
           { q: "Eng arzon shlagbaum qancha turadi?", a: "Hovli uchun bazaviy avtomatik shlagbaum o'rnatish bilan — bir necha million so'mdan. Aniq narx strela uzunligi va intensivlikka bog'liq — smeta bepul." },
@@ -6440,6 +6684,10 @@ export const ARTICLES: Article[] = [
           { h: "Где купить", p: [
             "В каталоге — шлагбаумы, приводы, пульты и ANPR-камеры, цены в сумах, со склада в Ташкенте. Опишите въезд (двор, парковка, КПП) — подберём вариант и за день посчитаем точную цену с установкой.",
             "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+          { h: "Скрытые статьи расходов", p: [
+            "В смете въезда кроме шлагбаума живут позиции, о которых вспоминают на монтаже: фундамент или закладная, подвод питания, фотоэлементы и петлевой детектор, чтобы стрела не легла на капот. Для ЖК прибавьте вызывную панель для гостей и ANPR-камеру — без них охрана продолжит работать «звонком в домофон».",
+            "Экономить разумно на способе управления (пульты дешевле ANPR), но не на классе привода: бытовой шлагбаум на интенсивном въезде — это замена через сезон. Считаем въездную группу целиком и называем полную цену до начала работ.",
           ] },
         ],
         faq: [
@@ -6470,6 +6718,10 @@ export const ARTICLES: Article[] = [
             "Barriers, drives, remotes and ANPR cameras are in the catalogue — UZS prices, in stock in Tashkent. Describe the entrance and we will quote the exact installed price within a day.",
             "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
           ] },
+          { h: "The hidden cost lines", p: [
+            "Besides the barrier, the entrance estimate holds items remembered only at installation: a foundation or embed, power supply, photocells and a loop detector so the boom never lands on a hood. For a residential complex add a guest call panel and an ANPR camera — without them the guards keep working \"by intercom call\".",
+            "It is reasonable to save on the control method (remotes are cheaper than ANPR) but not on the drive class: a domestic barrier at an intensive entrance means replacement within a season. We quote the entrance as a whole and name the full price before work begins.",
+          ] },
         ],
         faq: [
           { q: "How much is the cheapest barrier?", a: "A basic automatic barrier for a yard with installation — from a few million UZS. The exact price depends on boom length and duty — the estimate is free." },
@@ -6499,6 +6751,10 @@ export const ARTICLES: Article[] = [
             "Bariyerler, motorlar, kumandalar ve ANPR kameraları katalogda — UZS fiyatlı, Taşkent'te stokta. Girişi anlatın, montajlı kesin fiyatı bir günde hesaplayalım.",
             "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
           ] },
+          { h: "Gizli masraf kalemleri", p: [
+            "Giriş teklifinde bariyerin yanında ancak montajda hatırlanan kalemler yaşar: temel veya ankraj, güç beslemesi, kolun kaputa inmemesi için fotoseller ve loop dedektörü. Siteye misafir zil paneli ve ANPR kamera ekleyin — onlarsız güvenlik «diafonu arayarak» çalışmaya devam eder.",
+            "Kontrol yönteminden kısmak mantıklıdır (kumanda ANPR'den ucuz) ama motor sınıfından değil: yoğun girişteki ev tipi bariyer bir sezonda değişim demektir. Girişi bütün olarak hesaplar, işe başlamadan tam fiyatı söyleriz.",
+          ] },
         ],
         faq: [
           { q: "En ucuz bariyer ne kadar?", a: "Avlu için temel otomatik bariyer montajla — birkaç milyon UZS'den. Kesin fiyat kol boyuna ve yoğunluğa bağlıdır — teklif ücretsizdir." },
@@ -6527,6 +6783,10 @@ export const ARTICLES: Article[] = [
           { h: "在哪购买", p: [
             "道闸、电机、遥控器和 ANPR 摄像机都在目录中——苏姆计价，塔什干现货。说明入口情况，一天内给出含安装的准确报价。",
             "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
+          ] },
+          { h: "隐藏的费用项", p: [
+            "入口预算里除了道闸，还有那些到施工时才想起的项目：基础或预埋、供电、防止闸杆压上引擎盖的红外对射和地感线圈。小区还要加访客对讲面板和ANPR摄像机——没有它们，保安还得靠「打对讲电话」干活。",
+            "在控制方式上省钱是合理的（遥控比车牌识别便宜），但电机等级不能省：高强度入口装家用道闸等于一季后重买。我们把入口整组核算，开工前就报出全价。",
           ] },
         ],
         faq: [
@@ -6569,6 +6829,10 @@ export const ARTICLES: Article[] = [
             "Vazifani ayting: nechta odam, nechta kirish, tabel qayerga yuklanadi. Mos terminallarni tanlab, o'rnatish bilan aniq narxni bir kunda hisoblaymiz.",
             "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, o'rnatishga kompaniya kafolati.",
           ] },
+          { h: "Ma'lumotlar yo'li: terminaldan ish haqigacha", p: [
+            "Hisob qiymati ma'lumotlar hisob-kitobgacha yetganda ochiladi: tabelni 1C ga yuklash qo'l ko'chirish va xatolarni olib tashlaydi, bo'limlar bo'yicha hisobotlar istalgan davr uchun kechikish va qayta ishlashlarni ko'rsatadi. Rahbar kun manzarasini oy oxirida emas, real vaqtda ko'radi.",
+            "Qoidalarni siyosatingizga sozlaymiz — grafiklar, smenalar, kechikish ruxsatlari — va administratorni yangi xodimlarni mustaqil kiritishga o'rgatamiz. Joriy etish bir-ikki kun oladi va ishni to'xtatmaydi.",
+          ] },
         ],
         faq: [
           { q: "Davomat tizimi narxi qancha?", a: "Bitta Face ID terminal va sozlash bilan — bir necha million so'mdan. Aniq narx kirish nuqtalari va xodimlar soniga bog'liq — smeta bepul." },
@@ -6601,6 +6865,10 @@ export const ARTICLES: Article[] = [
           { h: "Как заказать", p: [
             "Опишите задачу: сколько людей, сколько входов, куда выгружать табель. Подберём терминалы и за день посчитаем точную цену с установкой.",
             "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
+          ] },
+          { h: "Дорога данных: из терминала в зарплату", p: [
+            "Ценность учёта раскрывается, когда данные доезжают до расчёта: выгрузка табеля в 1С убирает ручной перенос и ошибки, отчёты по подразделениям показывают опоздания и переработки за любой период. Руководитель видит картину дня в реальном времени, а не в конце месяца.",
+            "Мы настраиваем правила под вашу политику — графики, смены, допуски на опоздание — и обучаем администратора заводить новых сотрудников самостоятельно. Внедрение занимает пару дней и не останавливает работу.",
           ] },
         ],
         faq: [
@@ -6635,6 +6903,10 @@ export const ARTICLES: Article[] = [
             "Describe the task: how many people, how many entrances, where the timesheet goes. We match terminals and quote the exact installed price within a day.",
             "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
           ] },
+          { h: "The data's route: from terminal to payroll", p: [
+            "Attendance shows its value when data reaches payroll: timesheet export to the ERP removes manual transfer and errors, and per-department reports show lateness and overtime for any period. The manager sees the day in real time, not at month end.",
+            "We configure the rules to your policy — schedules, shifts, lateness allowances — and train the administrator to enroll new employees independently. Deployment takes a couple of days and does not stop the business.",
+          ] },
         ],
         faq: [
           { q: "How much does an attendance system cost?", a: "With one Face ID terminal and setup — from a few million UZS. The exact price depends on entrances and headcount — the estimate is free." },
@@ -6668,6 +6940,10 @@ export const ARTICLES: Article[] = [
             "İhtiyacı anlatın: kaç kişi, kaç giriş, puantaj nereye aktarılacak. Uygun terminalleri seçip montajlı kesin fiyatı bir günde çıkaralım.",
             "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
           ] },
+          { h: "Verinin yolu: terminalden bordroya", p: [
+            "Takibin değeri veri bordroya ulaşınca ortaya çıkar: puantajın ERP'ye aktarımı elle taşımayı ve hataları kaldırır; departman raporları her dönem için gecikme ve fazla mesaiyi gösterir. Yönetici günü ay sonunda değil, gerçek zamanlı görür.",
+            "Kuralları politikanıza göre kurarız — çizelgeler, vardiyalar, gecikme payları — ve yöneticiye yeni çalışanları kendi başına eklemeyi öğretiriz. Kurulum birkaç gün sürer ve işi durdurmaz.",
+          ] },
         ],
         faq: [
           { q: "Yoklama sistemi ne kadar?", a: "Tek Face ID terminal ve kurulumla — birkaç milyon UZS'den. Kesin fiyat giriş ve kişi sayısına bağlıdır — teklif ücretsizdir." },
@@ -6700,6 +6976,10 @@ export const ARTICLES: Article[] = [
           { h: "如何订购", p: [
             "说明需求：多少人、几个入口、考勤表导到哪里。我们匹配终端，一天内给出含安装的准确报价。",
             "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
+          ] },
+          { h: "数据之路：从终端到工资单", p: [
+            "当数据抵达工资核算，考勤的价值才兑现：考勤表导入1C省去手工誊抄和差错，部门报表随时呈现任意期间的迟到与加班。管理者实时掌握当天，而不是等到月底。",
+            "我们按您的制度配置规则——排班、班次、迟到宽限——并教会管理员自行录入新员工。部署只需两三天，业务照常运转。",
           ] },
         ],
         faq: [
@@ -6737,6 +7017,10 @@ export const ARTICLES: Article[] = [
             "Kvartira yoki hovli rejasini yuboring — qaysi xonada nima kerakligini aytamiz va ikki-uch variantda smeta beramiz: boshlang'ich, o'rtacha va to'liq. O'rnatish ta'mirga bog'liq: yangi ta'mirda simli yechimlar, tayyor uyda simsiz.",
             "Uskunalar Toshkentdagi ombordan, o'rnatish va sozlash bizniki, ilovani telefonga o'rnatib, ishlatishni o'rgatamiz. Kafolat — rasmiy.",
           ] },
+          { h: "Aqlli uyni qadrsizlantiradigan xatolar", p: [
+            "Eng qimmat xato — ilovalar hayvonot bog'i: lampalar birida, rozetkalar boshqasida, kameralar uchinchisida — «uydan ketdik» stsenariysini yig'ishga hech narsa yo'q. Ikkinchisi — yorug'lik faqat aqlli lampalarda: devordagi vyklyuchatel ishlamay qo'yadi va qo'lida smartfonli oila avtomatlashtirishga tez sovuqlashadi.",
+            "Tizimni stsenariyli yagona platformada yig'amiz, yorug'likni esa aqlli vyklyuchatellarga quramiz — odatiy klavisha hamma uchun ishlaydi. Tekshiruv va stsenariylar loyihasi bepul: qaysi uchta yumushni olib tashlamoqchi ekaningizni ayting — ularga mos tarkib va narx taklif qilamiz.",
+          ] },
         ],
         faq: [
           { q: "Aqlli uy tizimi narxi qancha?", a: "Boshlang'ich to'plam — bir necha yuz ming so'mdan. Kvartira uchun yoritish, pardalar va iqlim bilan — bir necha million. Aniq narx reja bo'yicha, smeta bepul." },
@@ -6765,6 +7049,10 @@ export const ARTICLES: Article[] = [
           { h: "Как заказать", p: [
             "Пришлите план квартиры или дома — скажем, что нужно в каждой комнате, и дадим смету в двух-трёх вариантах: стартовый, средний и полный. Монтаж зависит от ремонта: в новом — проводные решения, в готовом — беспроводные.",
             "Оборудование со склада в Ташкенте, установка и настройка наши, приложение поставим и научим пользоваться. Гарантия официальная.",
+          ] },
+          { h: "Ошибки, которые обесценивают умный дом", p: [
+            "Самая дорогая ошибка — зоопарк приложений: лампы в одном, розетки в другом, камеры в третьем, и сценарий «ушли из дома» собрать не из чего. Вторая — свет только на умных лампах: выключатель на стене перестаёт работать, и семья со смартфоном в руках быстро охладевает к автоматизации.",
+            "Мы собираем систему на единой платформе со сценариями, а свет строим на умных выключателях — привычная клавиша работает для всех. Обследование и проект сценариев бесплатны: расскажите, какие три рутины хотите убрать, — предложим состав и цену под них.",
           ] },
         ],
         faq: [
@@ -6795,6 +7083,10 @@ export const ARTICLES: Article[] = [
             "Send the flat or house plan — we will say what belongs in each room and quote two or three tiers: starter, medium and full. Installation depends on the state of the interior: wired solutions for a fresh renovation, wireless for a finished home.",
             "Equipment from stock in Tashkent, installation and setup are ours, we install the app and teach you to use it. Official warranty.",
           ] },
+          { h: "The mistakes that devalue a smart home", p: [
+            "The costliest mistake is a zoo of apps: bulbs in one, sockets in another, cameras in a third — and there is nothing to build the \"left home\" scenario from. The second is lighting on smart bulbs alone: the wall switch stops working, and a family holding smartphones quickly cools to automation.",
+            "We build the system on a single platform with scenarios, and construct lighting on smart switches — the familiar key keeps working for everyone. The survey and scenario design are free: name the three routines you want gone, and we will propose the setup and the price for them.",
+          ] },
         ],
         faq: [
           { q: "How much does a smart home system cost?", a: "A starter kit — from a few hundred thousand UZS. For a flat with lighting, curtains and climate — a few million. Exact price per plan, the estimate is free." },
@@ -6824,6 +7116,10 @@ export const ARTICLES: Article[] = [
             "Daire veya ev planını gönderin — her odaya ne gerektiğini söyleyip iki-üç seçenekli teklif verelim: başlangıç, orta ve tam. Montaj tadilat durumuna bağlıdır: yeni tadilatta kablolu, bitmiş evde kablosuz çözümler.",
             "Ekipman Taşkent'te stoktan; kurulum ve ayar bizden, uygulamayı kurar, kullanmayı öğretiriz. Resmi garanti.",
           ] },
+          { h: "Akıllı evi değersizleştiren hatalar", p: [
+            "En pahalı hata uygulama hayvanat bahçesidir: ampuller birinde, prizler diğerinde, kameralar üçüncüsünde — «evden çıktık» senaryosunu kuracak malzeme yoktur. İkincisi, aydınlatmanın yalnız akıllı ampullerde olmasıdır: duvardaki anahtar çalışmaz olur ve elinde telefonla dolaşan aile otomasyona hızla soğur.",
+            "Sistemi senaryolu tek platformda kurar, aydınlatmayı akıllı anahtarlara inşa ederiz — alışıldık tuş herkes için çalışır. Keşif ve senaryo tasarımı ücretsizdir: kaldırmak istediğiniz üç rutini söyleyin, onlara göre yapı ve fiyat önerelim.",
+          ] },
         ],
         faq: [
           { q: "Akıllı ev sistemi ne kadar?", a: "Başlangıç seti — birkaç yüz bin UZS'den. Aydınlatma, perde ve iklimli daire için — birkaç milyon. Kesin fiyat plana göre, teklif ücretsiz." },
@@ -6852,6 +7148,10 @@ export const ARTICLES: Article[] = [
           { h: "如何订购", p: [
             "发来户型图——我们说明每个房间需要什么，并按入门、中配、全配三档报价。安装取决于装修：新装修用有线方案，已装修用无线。",
             "设备塔什干现货，安装调试由我们完成，装好 App 并教会使用。官方保修。",
+          ] },
+          { h: "让智能家居贬值的错误", p: [
+            "最昂贵的错误是应用「动物园」：灯在一个App、插座在另一个、摄像机在第三个——「离家模式」根本无从拼起。第二是照明只靠智能灯泡：墙上的开关失灵，举着手机开灯的家人很快就对自动化失去热情。",
+            "我们把系统建在带场景的统一平台上，照明建在智能开关上——熟悉的按键对所有人有效。勘测和场景设计免费：说出您想消灭的三件日常琐事，我们按它们给出配置和价格。",
           ] },
         ],
         faq: [
@@ -6889,6 +7189,10 @@ export const ARTICLES: Article[] = [
             "Standart o'rnatish 1 kun: privod montaji, fotoelementlar, pultlarni dasturlash va sozlash. Muhandisning chiqishi va smeta bepul — darvozani ko'rib, aniq narxni aytamiz.",
             "Privodlar va avtomatika Toshkentdagi ombordan, rasmiy kafolat bilan. Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz.",
           ] },
+          { h: "Avtomatika buyurtmasidagi tez-tez xatolar", p: [
+            "Bosh xato — tavaqa og'irligi va kengligi bo'yicha «zo'rg'a» privod: yaxlit polotno shamolda yelkan bo'ladi, keng tavaqadagi kuchsiz motor bir mavsum yashaydi. Ikkinchisi — xavfsizlikda tejash: fotoelementlar va kuch sozlamasisiz darvoza bir kuni mashina yoki odamni qisadi, «keyin qo'yamiz» degan signal chiroqni esa hech qachon qo'yishmaydi.",
+            "Uchinchi xato — qishni unutish: silliq startsiz avtomatika muzlab qolgan tavaqani yulqiydi, mavsumga mos bo'lmagan moy quyuqlashadi. Biz privodni zaxira bilan tanlaymiz, har to'plamga to'liq xavfsizlik konturini kiritamiz va montajda qishki rejimlarni sozlaymiz — shuning uchun darvozalarimiz yillab ishlaydi.",
+          ] },
         ],
         faq: [
           { q: "Darvozani avtomatlashtirish qancha turadi?", a: "Hovli darvozasi uchun privod to'plami o'rnatish bilan — bir necha million so'mdan. Aniq narx darvoza og'irligi va turiga bog'liq — smeta bepul." },
@@ -6917,6 +7221,10 @@ export const ARTICLES: Article[] = [
           { h: "Установка и заказ", p: [
             "Стандартная установка — 1 день: монтаж привода, фотоэлементы, программирование пультов и настройка. Выезд инженера и смета бесплатные — осмотрим ворота и назовём точную цену.",
             "Приводы и автоматика со склада в Ташкенте, с официальной гарантией. С юрлицами работаем по договору с НДС.",
+          ] },
+          { h: "Частые ошибки при заказе автоматики", p: [
+            "Главная ошибка — привод «впритык» по весу и ширине створки: сплошное полотно парусит на ветру, и слабый мотор на широкой створке живёт один сезон. Вторая — экономия на безопасности: без фотоэлементов и регулировки усилия ворота однажды прижмут машину или человека, а сигнальную лампу «поставим потом» не ставят никогда.",
+            "Третья ошибка — забыть про зиму: без плавного старта автоматика рвёт примёрзшую створку, а смазка не по сезону густеет. Мы подбираем привод с запасом, включаем полный контур безопасности в каждый комплект и настраиваем зимние режимы при монтаже — поэтому наши ворота работают годами.",
           ] },
         ],
         faq: [
@@ -6947,6 +7255,10 @@ export const ARTICLES: Article[] = [
             "A standard install takes a day: drive mounting, photocells, remote programming and setup. The engineer's visit and estimate are free — we inspect the gates and quote the exact price.",
             "Drives and automation from stock in Tashkent with official warranty. We work with legal entities under VAT contracts.",
           ] },
+          { h: "Common mistakes when ordering gate automation", p: [
+            "The main mistake is a drive sized \"just enough\" for the leaf's weight and width: a solid panel sails in the wind, and a weak motor on a wide leaf lasts one season. The second is saving on safety: without photocells and force adjustment the gate will one day press on a car or a person, and the warning lamp promised \"for later\" never gets installed.",
+            "The third mistake is forgetting about winter: without a soft start the drive tears at a frozen leaf, and off-season grease thickens. We size the drive with a margin, include the full safety loop in every kit and configure winter modes at installation — which is why our gates run for years.",
+          ] },
         ],
         faq: [
           { q: "What does gate automation cost?", a: "A drive kit for yard gates with installation — from a few million UZS. The exact price depends on gate weight and type — the estimate is free." },
@@ -6976,6 +7288,10 @@ export const ARTICLES: Article[] = [
             "Standart montaj bir gün sürer: motor, fotoseller, kumanda programlama ve ayar. Keşif ve teklif ücretsizdir — kapıyı görüp kesin fiyatı söyleriz.",
             "Motorlar ve otomasyon Taşkent'te stoktan, resmi garantili. Tüzel kişilerle KDV'li sözleşmeyle çalışırız.",
           ] },
+          { h: "Kapı otomasyonu siparişinde sık hatalar", p: [
+            "Ana hata, kanadın ağırlığına ve genişliğine «ucu ucuna» motor seçmektir: dolu panel rüzgârda yelken olur, geniş kanatta zayıf motor bir sezon dayanır. İkincisi güvenlikten kısmaktır: fotoseller ve kuvvet ayarı olmadan kapı bir gün araca veya insana yüklenir; «sonra takarız» denen flaşör asla takılmaz.",
+            "Üçüncü hata kışı unutmaktır: yumuşak kalkış yoksa motor donmuş kanadı yolar, mevsime uymayan gres katılaşır. Motoru payla seçer, her sete tam güvenlik devresini koyar ve montajda kış modlarını ayarlarız — kapılarımız bu yüzden yıllarca çalışır.",
+          ] },
         ],
         faq: [
           { q: "Kapı otomasyonu ne kadar?", a: "Avlu kapısı için motor seti montajla — birkaç milyon UZS'den. Kesin fiyat kapının ağırlığına ve tipine bağlı — teklif ücretsiz." },
@@ -7004,6 +7320,10 @@ export const ARTICLES: Article[] = [
           { h: "安装与订购", p: [
             "标准安装一天：装电机、光电、遥控器编程和调试。工程师上门和报价免费——看门后给出准确价格。",
             "电机和自动化设备塔什干现货，官方保修。与法人单位按增值税合同合作。",
+          ] },
+          { h: "订购大门自动化时的常见错误", p: [
+            "头号错误是电机按门扇重量和宽度「刚刚好」选：实心门板兜风，宽门扇配小电机一季就报废。第二是省掉安全装置：没有红外对射和推力调节，大门早晚会压到车或人，而说好「以后装」的警示灯永远不会装。",
+            "第三个错误是忘了冬天：没有缓启动，电机硬拽冻住的门扇；润滑脂不对季节就会变稠。我们按余量选电机、每套标配完整安全回路、安装时调好冬季模式——所以我们装的大门能用很多年。",
           ] },
         ],
         faq: [
