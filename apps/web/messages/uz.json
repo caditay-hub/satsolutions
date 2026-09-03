@@ -482,7 +482,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Vazifadan ishlaydigan analitikagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Vazifa qo'yish",
+            "s": "qaysi hodisalarni tutamiz, nimani sanaymiz"
+          },
+          {
+            "t": "Yechim tanlash",
+            "s": "analitika kameralarda yoki serverda"
+          },
+          {
+            "t": "Sahnalarni sozlash",
+            "s": "har kameraga zonalar, chiziqlar, filtrlar"
+          },
+          {
+            "t": "Kalibrlash",
+            "s": "yolg'on ishga tushishlarni joyida o'chiramiz"
+          },
+          {
+            "t": "Hisobot va servis",
+            "s": "dashbordlar, bildirishnomalar, kuzatib borish"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Sinalgan platformalarda analitika",
+        "brandsText": "Hikvision AcuSense/DeepinMind, Dahua WizSense — analitika kamera va serverlarini o'zimiz yetkazamiz:"
       }
     },
     "anpr": {
@@ -1431,7 +1458,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Plandan har zonada eshitilishgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Akustik hisob",
+            "s": "zonalar, quvvat, dinamiklar soni"
+          },
+          {
+            "t": "Loyiha",
+            "s": "SOUE uchun — normalar bo'yicha, kelishuv bilan"
+          },
+          {
+            "t": "Montaj",
+            "s": "dinamiklar, kuchaytirgichlar, liniyalar"
+          },
+          {
+            "t": "Sozlash",
+            "s": "zonalar bo'yicha ovoz, prioritetlar"
+          },
+          {
+            "t": "Tekshiruv",
+            "s": "har xonada eshitilish, topshirish"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Yong'inda eshitiladigan ovoz",
+        "brandsText": "Sinalgan ishlab chiqaruvchilarning translyatsion kuchaytirgich, dinamik va ogohlantirish modullari — ombordan:"
       }
     },
     "barrier": {
@@ -1590,7 +1644,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Chegara tekshiruvidan ishga tushishgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tekshiruv",
+            "s": "uzunlik, relyef, to'siq holati"
+          },
+          {
+            "t": "Texnologiya tanlash",
+            "s": "kabel, barerlar, analitika, teploviorlar"
+          },
+          {
+            "t": "Chegaralar montaji",
+            "s": "datchiklar, kameralar, liniya bo'ylab quvvat"
+          },
+          {
+            "t": "Zonalarni sozlash",
+            "s": "shamol va hayvonlarga sezgirlik"
+          },
+          {
+            "t": "Topshirish va mavsumiy TX",
+            "s": "zonalar xaritasi, yiliga ikki marta qayta tekshiruv"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Istalgan chegaraga datchik va kameralar",
+        "brandsText": "Hikvision AcuSense va teploviorlar, vibratsion tizimlar va nurli barerlar — obyektga tanlaymiz:"
       }
     },
     "bus": {
@@ -1656,7 +1737,10 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Transport ijrosidagi uskunalar",
+        "brandsText": "Quvvat himoyali transport registrator va kameralari, yo'lovchi hisoblash datchiklari, 4G-modemlar — loyihaga:"
       }
     },
     "city": {
@@ -1722,7 +1806,10 @@
             ],
             "term": "Muddat: bosqichma-bosqich"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Shahar masshtabidagi uskunalar",
+        "brandsText": "Hikvision va Dahua kameralari, H3C server va SXDlari, Dahua videodevorlari, magistral tarmoq uskunalari — loyihaga:"
       }
     },
     "parking": {
@@ -1881,7 +1968,10 @@
             ],
             "term": "Muddat: nuqta 1–3 kunda"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Savdo obyektlariga uskunalar",
+        "brandsText": "Kassalar bilan bog'lanadigan Hikvision va Dahua kameralari, tashrif hisoblagichlari, AX PRO qo'riqlash panellari — ombordan:"
       }
     },
     "bank": {
@@ -1947,7 +2037,10 @@
             ],
             "term": "Muddat: bosqichma-bosqich"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Bank darajasidagi uskunalar",
+        "brandsText": "Hikvision va Dahua, ko'p faktorli kirishli ZKTeco SKUD, rezervlangan H3C serverlar — kafolat bilan:"
       }
     },
     "school": {
@@ -2013,7 +2106,10 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "O'quv muassasalariga uskunalar",
+        "brandsText": "Ota-onalarga bildirishnomali ZKTeco turniketlari, antivandal Hikvision kameralari, maktab ogohlantirishi — ombordan:"
       }
     },
     "industry": {
@@ -2079,7 +2175,10 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Sanoat ijrosidagi uskunalar",
+        "brandsText": "IP66/IK10 korpuslarda Hikvision va Dahua, ZKTeco SKUD, Bolid va Rubej yong'in tizimlari, MikroTik va H3C tarmoqlari — ombordan:"
       }
     },
     "residential": {
@@ -2145,7 +2244,10 @@
             ],
             "term": "Muddat: qurilish grafigi bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Turar-joy majmualariga uskunalar",
+        "brandsText": "Hikvision IP-domofoniyasi, ANPR li shlagbaumlar, antivandal kameralar, qulflar va SKUD — ombordan:"
       }
     },
     "virtualization": {
@@ -2227,7 +2329,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Auditdan klastergacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Serverlar auditi",
+            "s": "yuk, servislar, nosozlik nuqtalari"
+          },
+          {
+            "t": "Arxitektura",
+            "s": "xostlar, saqlagich, tarmoq, litsenziyalar"
+          },
+          {
+            "t": "Pilot migratsiya",
+            "s": "avval nokritik servislar"
+          },
+          {
+            "t": "Jangovar tizimlarni ko'chirish",
+            "s": "kelishilgan oynalarda, qaytish bilan"
+          },
+          {
+            "t": "Topshirish va kuzatib borish",
+            "s": "hujjatlar, monitoring, qo'llab-quvvatlash"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "H3C serverlari — sertifikatlangan hamkordan",
+        "brandsText": "H3C server va SXDlari, CAS/UIS virtualizatsiyasi — biz O'zbekistonda H3C sertifikatlangan hamkorimiz:"
       },
       "faq": [
         {
@@ -2327,7 +2456,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Radiotekshiruvdan qamrovgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Radiotekshiruv",
+            "s": "xonalar plani, halaqitlar, qo'shni tarmoqlar"
+          },
+          {
+            "t": "Nuqtalar sxemasi",
+            "s": "kanallar, quvvat, qamrov zonalari"
+          },
+          {
+            "t": "Montaj",
+            "s": "nuqtalar, PoE quvvat, kontroller"
+          },
+          {
+            "t": "Sozlash",
+            "s": "rouming, mehmon tarmog'i, cheklovlar"
+          },
+          {
+            "t": "O'lchov va topshirish",
+            "s": "har zonada signal darajasi"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Korporativ klass kirish nuqtalari",
+        "brandsText": "TP-Link Omada, MikroTik kirish nuqtalari va Wi-Fi 6 yechimlar — zichlik va maydonga tanlaymiz:"
       }
     },
     "fiber": {
@@ -2502,7 +2658,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Xaritadagi nuqtalardan linkgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Trassa hisobi",
+            "s": "to'g'ri ko'rinish, Frenel zonasi, balandliklar"
+          },
+          {
+            "t": "Juft tanlash",
+            "s": "masofaga diapazon va antennalar"
+          },
+          {
+            "t": "Montaj",
+            "s": "machtalar, kronshteynlar, momaqaldiroq himoyasi"
+          },
+          {
+            "t": "Yustirovka",
+            "s": "signalni zaxira bilan qo'yamiz"
+          },
+          {
+            "t": "Tekshiruv va servis",
+            "s": "o'tkazuvchanlik testi, monitoring"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Yillar davomida link ushlaydigan mostlar",
+        "brandsText": "Ubiquiti airMAX/airFiber, MikroTik Wireless Wire — komplektlar ombordan kafolat bilan:"
       }
     },
     "mikrotik": {
@@ -2576,7 +2759,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Vazifadan barqaror tarmoqgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Vazifani tahlil",
+            "s": "trafik, qurilmalar soni, kanallar"
+          },
+          {
+            "t": "Model tanlash",
+            "s": "hEX dan CCR gacha — ortiqcha to'lovsiz"
+          },
+          {
+            "t": "Sozlash",
+            "s": "VLAN, VPN, QoS, firewall"
+          },
+          {
+            "t": "Rezervlash",
+            "s": "ikkinchi kanal, avtoo'tish"
+          },
+          {
+            "t": "Topshirish va qo'llab-quvvatlash",
+            "s": "hujjatlar, monitoring, kuzatib borish"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "MikroTik — Toshkentdagi ombordan",
+        "brandsText": "Marshrutizatorlar, CRS kommutatorlar, cAP/wAP nuqtalar, SFP-modullar — butun qator mavjud:"
       }
     },
     "smarthome": {
@@ -2641,7 +2851,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Stsenariylardan aqlli uygacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Oila stsenariylari",
+            "s": "nimani avtomatlashtiramiz: yorug'lik, iqlim, pardalar"
+          },
+          {
+            "t": "Qurilmalar tanlash",
+            "s": "iloji boricha simlarni almashtirmasdan"
+          },
+          {
+            "t": "Montaj",
+            "s": "rele, datchiklar, vyklyuchatellar, xab"
+          },
+          {
+            "t": "Sozlash",
+            "s": "ilova, ovoz, avtomatizatsiyalar"
+          },
+          {
+            "t": "O'qitish",
+            "s": "oila o'zi boshqaradi, qo'llab-quvvatlash — bizdan"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Tuya ekotizimi va mos qurilmalar",
+        "brandsText": "Tuya ekotizimining rele, datchik, termostat va kameralari — bitta ilovada ishlaydi:"
       },
       "faq": [
         {
@@ -2737,7 +2974,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Odamlar oqimidan prohodnayagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Oqim hisobi",
+            "s": "cho'qqiga nechta turniket kerak"
+          },
+          {
+            "t": "Model tanlash",
+            "s": "tripodlar, tavaqalar, to'liq bo'yli"
+          },
+          {
+            "t": "Montaj",
+            "s": "turniketlar, o'quvchilar, kalitka"
+          },
+          {
+            "t": "Integratsiya",
+            "s": "SKUD, vaqt hisobi, yong'in bo'shatish"
+          },
+          {
+            "t": "Ishga tushirish",
+            "s": "kartalar chiqarish, qo'riqlashni o'qitish"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Oqimga chidaydigan turniketlar",
+        "brandsText": "ZKTeco va sinalgan ishlab chiqaruvchilar: tripodlar, tezkor tavaqalar, to'liq bo'yli — ombordan:"
       }
     },
     "locks": {
@@ -2912,7 +3176,34 @@
             ],
             "term": "Muddat: 2–5 kun"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "O'lchovdan ochilgan darvozagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Joyida o'lchov",
+            "s": "og'irlik, kenglik, polotno holati"
+          },
+          {
+            "t": "Privod tanlash",
+            "s": "tsikl va shamolga zaxira bilan"
+          },
+          {
+            "t": "Montaj",
+            "s": "avtomatika, fotoelementlar, chiroq"
+          },
+          {
+            "t": "Sozlash",
+            "s": "kuch, kontsviklar, pultlar, telefon"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "o'qitish, kafolat, xizmat"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Darvozalarimizga mo'ljallangan avtomatika",
+        "brandsText": "Surma, tavaqali va seksiyali darvozalarga yetakchi ishlab chiqaruvchilarning privod va avtomatikasi — ombordan:"
       }
     },
     "telephony": {
@@ -2986,7 +3277,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Raqamdan ishlaydigan ATSgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Aloqa auditi",
+            "s": "raqamlar, operatorlar, qo'ng'iroq stsenariylari"
+          },
+          {
+            "t": "ATS sxemasi",
+            "s": "ichki raqamlar, IVR, navbatlar"
+          },
+          {
+            "t": "Yoyish",
+            "s": "server yoki bulut, telefonlar, garnituralar"
+          },
+          {
+            "t": "Integratsiyalar",
+            "s": "CRM, suhbat yozuvi, statistika"
+          },
+          {
+            "t": "Ishga tushirish va qo'llab-quvvatlash",
+            "s": "aloqani to'xtatmasdan raqamlarni ko'chirish"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Telefon va shlyuzlar — ombordan",
+        "brandsText": "Sinalgan ishlab chiqaruvchilarning IP-telefon va shlyuzlari, Asterisk/3CX dagi ATS — vazifaga tanlaymiz:"
       }
     },
     "servers": {
@@ -3157,7 +3475,10 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Ombor logistikasiga kamera va tarmoqlar",
+        "brandsText": "Rampalarga WDR li Hikvision va Dahua, ANPR-kameralar, MikroTik kommutatorlar, ZKTeco SKUD — ombordan:"
       }
     },
     "construction": {
@@ -3223,7 +3544,10 @@
             ],
             "term": "Muddat: topshirish grafigi bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Qurilish maydonchalariga uskunalar",
+        "brandsText": "4G li avtonom postlar, himoyalangan korpuslarda Hikvision kameralari, KPP uchun SKUD — ombordan:"
       }
     },
     "medical": {
@@ -3289,7 +3613,10 @@
             ],
             "term": "Muddat: 1–2 hafta"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Tibbiyot muassasalariga uskunalar",
+        "brandsText": "Hikvision kameralari, zonalar bo'yicha ZKTeco SKUD, trevoga tugmalari, tib-normalar bo'yicha yong'in tizimlari — ombordan:"
       }
     },
     "hotel": {
@@ -3355,7 +3682,10 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Mehmonxona klassi uskunalari",
+        "brandsText": "Karta va mobil kalitli mehmonxona qulflari, Hikvision kameralari, mehmonlarga Wi-Fi — kafolat bilan:"
       }
     },
     "fuel": {
@@ -3421,7 +3751,10 @@
             ],
             "term": "Muddat: stansiya 1–2 haftada"
           }
-        ]
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Yoqilg'i obyektlariga uskunalar",
+        "brandsText": "Xavfli zonalarga portlashdan himoyalangan kameralar, Hikvision/Dahua ANPR, yong'in tizimlari — loyihaga:"
       }
     },
     "ohrannye-sistemy": {
@@ -3487,7 +3820,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Arizadan qo'riqlanadigan obyektgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Muhandis chiqishi",
+            "s": "kirish zonalari, datchik nuqtalari — bepul"
+          },
+          {
+            "t": "Komplekt tanlash",
+            "s": "simli yoki simsiz, smeta"
+          },
+          {
+            "t": "Montaj",
+            "s": "datchiklar, panel, sirena — bir kunda"
+          },
+          {
+            "t": "Sozlash",
+            "s": "ilova, zonalar, foydalanuvchilar"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "ishga tushish testi, kafolat, TX"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Ishonadigan panellar va datchiklar",
+        "brandsText": "Hikvision AX PRO — simsiz qo'riqlash; yirik obyektlarga simli tizimlar — ombordan:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {
@@ -3553,7 +3913,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Kirish geometriyasidan ishlaydigan polosalargacha — 5 qadam",
+        "stages": [
+          {
+            "t": "O'lchovlar",
+            "s": "radiuslar, nishablar, raqam o'qish nuqtasi"
+          },
+          {
+            "t": "Polosalar loyihasi",
+            "s": "kameralar, shlagbaumlar, halqalar, svetoforlar"
+          },
+          {
+            "t": "Montaj",
+            "s": "polosa butunligicha, mashinalarda tekshiruv"
+          },
+          {
+            "t": "Stsenariylar",
+            "s": "turg'un, mehmon, yetkazib berish, tariflar"
+          },
+          {
+            "t": "Ishga tushirish",
+            "s": "birinchi haftalarda tanish monitoringi"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Uxlamaydigan ANPR va avtomatika",
+        "brandsText": "Hikvision/Dahua tanish kameralari, intensiv seriya shlagbaumlar, stoyka va terminallar — ombordan:"
       }
     },
     "slabotochnye-sistemy": {
@@ -3623,7 +4010,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Loyihadan obyekt topshirishgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tekshiruv",
+            "s": "yoki loyihangiz bo'yicha hisob — bepul"
+          },
+          {
+            "t": "Yagona loyiha",
+            "s": "barcha kichik tizimlar umumiy trassalarda"
+          },
+          {
+            "t": "Bosqichma-bosqich montaj",
+            "s": "qurilish grafigi bo'yicha yoki ofisni to'xtatmasdan"
+          },
+          {
+            "t": "Ishga tushirish",
+            "s": "tizimlararo stsenariylar chek-list bo'yicha"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "ijro hujjatlari, kafolat, TX"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Toshkentdagi omborda uch ming pozitsiya",
+        "brandsText": "Hikvision, Dahua, Bolid, Rubej, ZKTeco, MikroTik, TP-Link, H3C — kabel, shkaflar va uskunalar mavjud:"
       }
     },
     "proektirovanie": {
@@ -3693,7 +4107,34 @@
             ],
             "term": "Muddat: 3 haftadan"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Tekshiruvdan kelishilgan loyihagacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tekshiruv",
+            "s": "muhandis chiqishi va baholash — bepul"
+          },
+          {
+            "t": "Texnik topshiriq",
+            "s": "vazifalar, normalar, byudjet doiralari"
+          },
+          {
+            "t": "Loyiha",
+            "s": "planlar, sxemalar, spetsifikatsiya, smeta"
+          },
+          {
+            "t": "Kelishish",
+            "s": "ekspertiza, e'tirozlarga javoblar"
+          },
+          {
+            "t": "Kuzatib borish",
+            "s": "montajda mualliflik nazorati"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Real uskunadagi spetsifikatsiyalar",
+        "brandsText": "Bolid, Rubej, Hikvision, Dahua, ZKTeco, MikroTik, H3C — omborda va yetkazib berishda bor pozitsiyalarni kiritamiz:"
       }
     },
     "obsluzhivanie": {
@@ -3763,7 +4204,34 @@
             ],
             "term": "Shartnoma: individual"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Auditdan reglamentgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Bepul audit",
+            "s": "tizimlar holati, nuqson vedomosti"
+          },
+          {
+            "t": "Shartnoma va grafik",
+            "s": "ishlar tarkibi, davriylik, SLA"
+          },
+          {
+            "t": "Birinchi reglament",
+            "s": "tozalash, tekshiruvlar, sarflanuvchilarni almashtirish"
+          },
+          {
+            "t": "Avariya xizmati",
+            "s": "telefon va Telegram orqali arizalar"
+          },
+          {
+            "t": "Hisobot",
+            "s": "tekshiruvlarda savol tug'dirmaydigan jurnal"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Ehtiyot qismlar va zaxira fond — ombordan",
+        "brandsText": "Bolid, Rubej, Hikvision, Dahua, ZKTeco, MikroTik — yurimli blok va datchiklarni Toshkentdagi omborda ushlaymiz:"
       }
     },
     "sistemnaya-integraciya": {
@@ -3833,7 +4301,34 @@
             ],
             "term": "Muddat: loyiha bo'yicha"
           }
-        ]
+        ],
+        "stagesLabel": "Qanday ishlaymiz",
+        "stagesTitle": "Auditdan yagona postgacha — 5 qadam",
+        "stages": [
+          {
+            "t": "Tizimlar auditi",
+            "s": "mavjudlarning xaritasi — bepul"
+          },
+          {
+            "t": "Integratsiya rejasi",
+            "s": "nima to'g'ridan-to'g'ri, nima shlyuz orqali bog'lanadi"
+          },
+          {
+            "t": "Uchastkada pilot",
+            "s": "stsenariylar jonli sinovdan o'tadi"
+          },
+          {
+            "t": "Obyektga tiraj",
+            "s": "ishlayotgan tizimlarni to'xtatmasdan"
+          },
+          {
+            "t": "Topshirish va servis",
+            "s": "operator reglamentlari, o'qitish, qo'llab-quvvatlash"
+          }
+        ],
+        "brandsLabel": "Uskunalar",
+        "brandsTitle": "Ochiq protokollar va sinalgan platformalar",
+        "brandsText": "Hikvision, Dahua, ZKTeco, Bolid, MikroTik, H3C — ONVIF, OSDP va ishlab chiqaruvchilar API si orqali bog'laymiz, uskunani o'zimiz yetkazamiz:"
       }
     }
   },

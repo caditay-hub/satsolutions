@@ -482,7 +482,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Görevden çalışan analitiğe — 5 adım",
+        "stages": [
+          {
+            "t": "Görev tanımı",
+            "s": "hangi olaylar yakalanacak, ne sayılacak"
+          },
+          {
+            "t": "Çözüm seçimi",
+            "s": "analitik kamerada mı sunucuda mı"
+          },
+          {
+            "t": "Sahne ayarı",
+            "s": "her kameraya bölgeler, çizgiler, filtreler"
+          },
+          {
+            "t": "Kalibrasyon",
+            "s": "yanlış tetiklemeler yerinde bastırılır"
+          },
+          {
+            "t": "Raporlar ve servis",
+            "s": "panolar, bildirimler, destek"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Kanıtlanmış platformlarda analitik",
+        "brandsText": "Hikvision AcuSense/DeepinMind, Dahua WizSense — analitik kamera ve sunucuları biz tedarik ederiz:"
       }
     },
     "anpr": {
@@ -1423,7 +1450,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Plandan her bölgede duyulurluğa — 5 adım",
+        "stages": [
+          {
+            "t": "Akustik hesap",
+            "s": "bölgeler, güç, hoparlör sayısı"
+          },
+          {
+            "t": "Proje",
+            "s": "sesli tahliye için — normlara göre, onaylı"
+          },
+          {
+            "t": "Montaj",
+            "s": "hoparlörler, amfiler, hatlar"
+          },
+          {
+            "t": "Ayar",
+            "s": "bölge bazlı ses, öncelikler"
+          },
+          {
+            "t": "Doğrulama",
+            "s": "her odada duyulurluk, teslim"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Yangında duyulan ses",
+        "brandsText": "Kanıtlanmış üreticilerin yayın amfileri, hoparlörleri ve anons modülleri — stoktan:"
       }
     },
     "barrier": {
@@ -1582,7 +1636,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Hat keşfinden tetiklemeye — 5 adım",
+        "stages": [
+          {
+            "t": "Keşif",
+            "s": "uzunluk, arazi, çit durumu"
+          },
+          {
+            "t": "Teknoloji seçimi",
+            "s": "kablo, bariyerler, analitik, termal"
+          },
+          {
+            "t": "Hat montajı",
+            "s": "sensörler, kameralar, hat boyu besleme"
+          },
+          {
+            "t": "Bölge ayarı",
+            "s": "rüzgâra ve hayvanlara hassasiyet"
+          },
+          {
+            "t": "Teslim ve mevsimlik bakım",
+            "s": "bölge haritası, yılda iki kontrol"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Her hat için sensör ve kameralar",
+        "brandsText": "Hikvision AcuSense ve termal kameralar, titreşim sistemleri ve ışın bariyerleri — sahaya göre seçilir:"
       }
     },
     "bus": {
@@ -1648,7 +1729,10 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Taşıt sınıfı ekipman",
+        "brandsText": "Güç korumalı taşıt kayıt cihazları ve kameraları, yolcu sayma sensörleri, 4G modemler — projeye göre:"
       }
     },
     "city": {
@@ -1714,7 +1798,10 @@
             ],
             "term": "Süre: kademeli"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Şehir ölçeğinde ekipman",
+        "brandsText": "Hikvision ve Dahua kameralar, H3C sunucu ve depolama, Dahua video duvarları, omurga ağ ekipmanı — projeye göre:"
       }
     },
     "parking": {
@@ -1873,7 +1960,10 @@
             ],
             "term": "Süre: nokta 1–3 günde"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Perakende sahaları için ekipman",
+        "brandsText": "Kasa bağlantılı Hikvision ve Dahua kameralar, ziyaretçi sayaçları, AX PRO alarm panelleri — stoktan:"
       }
     },
     "bank": {
@@ -1939,7 +2029,10 @@
             ],
             "term": "Süre: kademeli"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Banka sınıfı ekipman",
+        "brandsText": "Hikvision ve Dahua, çok faktörlü ZKTeco geçiş kontrolü, yedekli H3C sunucular — garantili:"
       }
     },
     "school": {
@@ -2005,7 +2098,10 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Okullar için ekipman",
+        "brandsText": "Veli bildirimli ZKTeco turnikeler, darbeye dayanıklı Hikvision kameralar, okul anonsu — stoktan:"
       }
     },
     "industry": {
@@ -2071,7 +2167,10 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Endüstriyel sınıf ekipman",
+        "brandsText": "IP66/IK10 gövdeli Hikvision ve Dahua, ZKTeco geçiş kontrolü, Bolid ve Rubezh yangın sistemleri, MikroTik ve H3C ağları — stoktan:"
       }
     },
     "residential": {
@@ -2137,7 +2236,10 @@
             ],
             "term": "Süre: inşaat takvimine göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Siteler için ekipman",
+        "brandsText": "Hikvision IP interkom, ANPR'li bariyerler, darbeye dayanıklı kameralar, kilitler ve geçiş kontrolü — stoktan:"
       }
     },
     "virtualization": {
@@ -2219,7 +2321,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Denetimden kümeye — 5 adım",
+        "stages": [
+          {
+            "t": "Sunucu denetimi",
+            "s": "yük, servisler, arıza noktaları"
+          },
+          {
+            "t": "Mimari",
+            "s": "hostlar, depolama, ağ, lisanslar"
+          },
+          {
+            "t": "Pilot taşıma",
+            "s": "önce kritik olmayan servisler"
+          },
+          {
+            "t": "Canlı sistemlerin taşınması",
+            "s": "kararlaştırılan pencerelerde, geri dönüşlü"
+          },
+          {
+            "t": "Devir ve bakım",
+            "s": "dokümantasyon, izleme, destek"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "H3C sunucuları — sertifikalı iş ortağından",
+        "brandsText": "H3C sunucu ve depolama, CAS/UIS sanallaştırma — Özbekistan'da sertifikalı H3C iş ortağıyız:"
       },
       "faq": [
         {
@@ -2319,7 +2448,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Radyo keşfinden kapsamaya — 5 adım",
+        "stages": [
+          {
+            "t": "Radyo keşfi",
+            "s": "kat planı, parazitler, komşu ağlar"
+          },
+          {
+            "t": "Nokta şeması",
+            "s": "kanallar, güç, kapsama bölgeleri"
+          },
+          {
+            "t": "Montaj",
+            "s": "noktalar, PoE besleme, kontrolcü"
+          },
+          {
+            "t": "Ayar",
+            "s": "dolaşım, misafir ağı, sınırlar"
+          },
+          {
+            "t": "Ölçüm ve teslim",
+            "s": "her bölgede sinyal düzeyi"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Kurumsal sınıf erişim noktaları",
+        "brandsText": "TP-Link Omada, MikroTik erişim noktaları ve Wi-Fi 6 çözümleri — yoğunluğa ve alana göre seçilir:"
       }
     },
     "fiber": {
@@ -2494,7 +2650,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Haritadaki noktalardan linke — 5 adım",
+        "stages": [
+          {
+            "t": "Hat hesabı",
+            "s": "görüş hattı, Fresnel bölgesi, yükseklikler"
+          },
+          {
+            "t": "Çift seçimi",
+            "s": "mesafeye göre bant ve antenler"
+          },
+          {
+            "t": "Montaj",
+            "s": "direkler, braketler, parafudr"
+          },
+          {
+            "t": "Hizalama",
+            "s": "sinyal payla ayarlanır"
+          },
+          {
+            "t": "Test ve servis",
+            "s": "kapasite testi, izleme"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Yıllarca link tutan köprüler",
+        "brandsText": "Ubiquiti airMAX/airFiber, MikroTik Wireless Wire — setler stoktan garantili:"
       }
     },
     "mikrotik": {
@@ -2568,7 +2751,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Görevden kararlı ağa — 5 adım",
+        "stages": [
+          {
+            "t": "Görev analizi",
+            "s": "trafik, cihaz sayısı, kanallar"
+          },
+          {
+            "t": "Model seçimi",
+            "s": "hEX'ten CCR'a — fazla ödemeden"
+          },
+          {
+            "t": "Yapılandırma",
+            "s": "VLAN, VPN, QoS, firewall"
+          },
+          {
+            "t": "Yedeklilik",
+            "s": "ikinci kanal, otomatik geçiş"
+          },
+          {
+            "t": "Devir ve destek",
+            "s": "dokümantasyon, izleme, bakım"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "MikroTik — Taşkent stoğumuzdan",
+        "brandsText": "Yönlendiriciler, CRS switch'ler, cAP/wAP noktaları, SFP modülleri — tüm seri stokta:"
       }
     },
     "smarthome": {
@@ -2633,7 +2843,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Senaryolardan akıllı eve — 5 adım",
+        "stages": [
+          {
+            "t": "Ailenin senaryoları",
+            "s": "ne otomatikleşecek: ışık, iklim, perdeler"
+          },
+          {
+            "t": "Cihaz seçimi",
+            "s": "mümkünse kablo değişmeden"
+          },
+          {
+            "t": "Montaj",
+            "s": "röleler, sensörler, anahtarlar, hub"
+          },
+          {
+            "t": "Ayar",
+            "s": "uygulama, ses, otomasyonlar"
+          },
+          {
+            "t": "Eğitim",
+            "s": "aile kendisi yönetir, destek bizden"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Tuya ekosistemi ve uyumlu cihazlar",
+        "brandsText": "Tuya ekosisteminin röle, sensör, termostat ve kameraları — tek uygulamada:"
       },
       "faq": [
         {
@@ -2729,7 +2966,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "İnsan akışından giriş noktasına — 5 adım",
+        "stages": [
+          {
+            "t": "Akış hesabı",
+            "s": "zirveye kaç turnike gerek"
+          },
+          {
+            "t": "Model seçimi",
+            "s": "tripodlar, hızlı kanatlar, tam boy"
+          },
+          {
+            "t": "Montaj",
+            "s": "turnikeler, okuyucular, kapı"
+          },
+          {
+            "t": "Entegrasyon",
+            "s": "geçiş kontrolü, mesai, yangında açılma"
+          },
+          {
+            "t": "Açılış",
+            "s": "kart basımı, güvenlik eğitimi"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Akışa dayanan turnikeler",
+        "brandsText": "ZKTeco ve kanıtlanmış üreticiler: tripodlar, hızlı kanatlar, tam boy turnikeler — stoktan:"
       }
     },
     "locks": {
@@ -2904,7 +3168,34 @@
             ],
             "term": "Süre: 2–5 gün"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Ölçüden açılan kapıya — 5 adım",
+        "stages": [
+          {
+            "t": "Yerinde ölçü",
+            "s": "ağırlık, genişlik, kanat durumu"
+          },
+          {
+            "t": "Motor seçimi",
+            "s": "çevrim ve rüzgâr payıyla"
+          },
+          {
+            "t": "Montaj",
+            "s": "otomasyon, fotoseller, lamba"
+          },
+          {
+            "t": "Ayar",
+            "s": "kuvvet, limitler, kumandalar, telefon"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "eğitim, garanti, bakım"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Gerçek kapılara göre otomasyon",
+        "brandsText": "Kayar, çift kanatlı ve seksiyonel kapılara önde gelen üreticilerin motor ve otomasyonu — stoktan:"
       }
     },
     "telephony": {
@@ -2978,7 +3269,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Numaradan çalışan santrale — 5 adım",
+        "stages": [
+          {
+            "t": "İletişim denetimi",
+            "s": "numaralar, operatörler, çağrı senaryoları"
+          },
+          {
+            "t": "Santral şeması",
+            "s": "dahililer, IVR, kuyruklar"
+          },
+          {
+            "t": "Kurulum",
+            "s": "sunucu veya bulut, telefonlar, kulaklıklar"
+          },
+          {
+            "t": "Entegrasyonlar",
+            "s": "CRM, görüşme kaydı, istatistik"
+          },
+          {
+            "t": "Açılış ve destek",
+            "s": "kesintisiz numara taşıma"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Telefonlar ve geçitler — stoktan",
+        "brandsText": "Kanıtlanmış üreticilerin IP telefonları ve geçitleri, Asterisk/3CX santralleri — göreve göre seçilir:"
       }
     },
     "servers": {
@@ -3149,7 +3467,10 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Depo lojistiği için kamera ve ağlar",
+        "brandsText": "Rampalar için WDR'li Hikvision ve Dahua, ANPR kameralar, MikroTik switch'ler, ZKTeco geçiş kontrolü — stoktan:"
       }
     },
     "construction": {
@@ -3215,7 +3536,10 @@
             ],
             "term": "Süre: teslim takvimine göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Şantiyeler için ekipman",
+        "brandsText": "4G'li otonom direkler, korumalı gövdeli Hikvision kameralar, giriş için geçiş kontrolü — stoktan:"
       }
     },
     "medical": {
@@ -3281,7 +3605,10 @@
             ],
             "term": "Süre: 1–2 hafta"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Sağlık kuruluşları için ekipman",
+        "brandsText": "Hikvision kameralar, bölgeli ZKTeco geçiş kontrolü, panik butonları, sağlık normlarına göre yangın sistemleri — stoktan:"
       }
     },
     "hotel": {
@@ -3347,7 +3674,10 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Otel sınıfı ekipman",
+        "brandsText": "Kartlı ve mobil anahtarlı otel kilitleri, Hikvision kameralar, misafir Wi-Fi'ı — garantili:"
       }
     },
     "fuel": {
@@ -3413,7 +3743,10 @@
             ],
             "term": "Süre: istasyon 1–2 haftada"
           }
-        ]
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Yakıt tesisleri için ekipman",
+        "brandsText": "Tehlikeli bölgelere exproof kameralar, Hikvision/Dahua ANPR, yangın sistemleri — projeye göre:"
       }
     },
     "ohrannye-sistemy": {
@@ -3479,7 +3812,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Talepten korunan sahaya — 5 adım",
+        "stages": [
+          {
+            "t": "Mühendis ziyareti",
+            "s": "giriş bölgeleri, sensör noktaları — ücretsiz"
+          },
+          {
+            "t": "Set seçimi",
+            "s": "kablolu veya kablosuz, keşif"
+          },
+          {
+            "t": "Montaj",
+            "s": "sensörler, panel, siren — bir günde"
+          },
+          {
+            "t": "Ayar",
+            "s": "uygulama, bölgeler, kullanıcılar"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "tetikleme testleri, garanti, bakım"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Güvendiğimiz paneller ve sensörler",
+        "brandsText": "Kablosuz koruma için Hikvision AX PRO; büyük sahalara kablolu sistemler — stoktan:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {
@@ -3545,7 +3905,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Giriş geometrisinden çalışan şeritlere — 5 adım",
+        "stages": [
+          {
+            "t": "Ölçümler",
+            "s": "yarıçaplar, eğimler, plaka okuma noktası"
+          },
+          {
+            "t": "Şerit projesi",
+            "s": "kameralar, bariyerler, halkalar, lambalar"
+          },
+          {
+            "t": "Montaj",
+            "s": "şerit bütün olarak, araçlarla test"
+          },
+          {
+            "t": "Senaryolar",
+            "s": "sakin, misafir, kurye, tarifeler"
+          },
+          {
+            "t": "Açılış",
+            "s": "ilk haftalarda tanıma izleme"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Uyumayan ANPR ve otomasyon",
+        "brandsText": "Hikvision/Dahua tanıma kameraları, yoğun seri bariyerler, kule ve terminaller — stoktan:"
       }
     },
     "slabotochnye-sistemy": {
@@ -3615,7 +4002,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Projeden saha teslimine — 5 adım",
+        "stages": [
+          {
+            "t": "Keşif",
+            "s": "veya projenizden hesap — ücretsiz"
+          },
+          {
+            "t": "Tek proje",
+            "s": "tüm alt sistemler ortak hatlarda"
+          },
+          {
+            "t": "Kademeli montaj",
+            "s": "inşaat takvimiyle veya ofisi durdurmadan"
+          },
+          {
+            "t": "Devreye alma",
+            "s": "sistemler arası senaryolar kontrol listesiyle"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "uygulama dokümanları, garanti, bakım"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Taşkent depomuzda üç bin kalem",
+        "brandsText": "Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik, TP-Link, H3C — kablo, kabin ve ekipman stokta:"
       }
     },
     "proektirovanie": {
@@ -3685,7 +4099,34 @@
             ],
             "term": "Süre: 3 haftadan"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Keşiften onaylı projeye — 5 adım",
+        "stages": [
+          {
+            "t": "Keşif",
+            "s": "mühendis ziyareti ve değerlendirme — ücretsiz"
+          },
+          {
+            "t": "Teknik şartname",
+            "s": "görevler, normlar, bütçe çerçevesi"
+          },
+          {
+            "t": "Proje",
+            "s": "planlar, şemalar, spesifikasyon, keşif"
+          },
+          {
+            "t": "Onay",
+            "s": "bilirkişi incelemesi, görüşlere yanıtlar"
+          },
+          {
+            "t": "Refakat",
+            "s": "montajda müellif denetimi"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Gerçek ekipmana dayalı spesifikasyonlar",
+        "brandsText": "Bolid, Rubezh, Hikvision, Dahua, ZKTeco, MikroTik, H3C — stokta ve tedarikte olan kalemleri yazarız:"
       }
     },
     "obsluzhivanie": {
@@ -3755,7 +4196,34 @@
             ],
             "term": "Sözleşme: bireysel"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Denetimden programa — 5 adım",
+        "stages": [
+          {
+            "t": "Ücretsiz denetim",
+            "s": "sistem durumu, kusur listesi"
+          },
+          {
+            "t": "Sözleşme ve takvim",
+            "s": "kapsam, sıklık, SLA"
+          },
+          {
+            "t": "İlk bakım",
+            "s": "temizlik, kontroller, sarf değişimi"
+          },
+          {
+            "t": "Arıza servisi",
+            "s": "telefon ve Telegram'dan talepler"
+          },
+          {
+            "t": "Raporlama",
+            "s": "hiçbir denetimin sorgulamayacağı defter"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Yedekler ve değişim havuzu — stoktan",
+        "brandsText": "Bolid, Rubezh, Hikvision, Dahua, ZKTeco, MikroTik — yaygın ünite ve dedektörler Taşkent depomuzda:"
       }
     },
     "sistemnaya-integraciya": {
@@ -3825,7 +4293,34 @@
             ],
             "term": "Süre: projeye göre"
           }
-        ]
+        ],
+        "stagesLabel": "Nasıl çalışıyoruz",
+        "stagesTitle": "Denetimden tek noktaya — 5 adım",
+        "stages": [
+          {
+            "t": "Sistem denetimi",
+            "s": "kurulu olanın haritası — ücretsiz"
+          },
+          {
+            "t": "Entegrasyon planı",
+            "s": "ne doğrudan, ne geçitle bağlanır"
+          },
+          {
+            "t": "Pilot bölge",
+            "s": "senaryolar canlı denenir"
+          },
+          {
+            "t": "Sahaya yayma",
+            "s": "çalışan sistemleri durdurmadan"
+          },
+          {
+            "t": "Teslim ve servis",
+            "s": "operatör prosedürleri, eğitim, destek"
+          }
+        ],
+        "brandsLabel": "Ekipman",
+        "brandsTitle": "Açık protokoller ve kanıtlanmış platformlar",
+        "brandsText": "Hikvision, Dahua, ZKTeco, Bolid, MikroTik, H3C — ONVIF, OSDP ve üretici API'larıyla bağlarız; ekipmanı biz tedarik ederiz:"
       }
     }
   },

@@ -482,7 +482,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From task to working analytics — 5 steps",
+        "stages": [
+          {
+            "t": "Defining the task",
+            "s": "which events to catch, what to count"
+          },
+          {
+            "t": "Choosing the solution",
+            "s": "analytics on cameras or a server"
+          },
+          {
+            "t": "Scene setup",
+            "s": "zones, lines, filters per camera"
+          },
+          {
+            "t": "Calibration",
+            "s": "false triggers damped on site"
+          },
+          {
+            "t": "Reports and service",
+            "s": "dashboards, notifications, support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Analytics on proven platforms",
+        "brandsText": "Hikvision AcuSense/DeepinMind, Dahua WizSense — analytics cameras and servers supplied by us:"
       }
     },
     "anpr": {
@@ -1431,7 +1458,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From plan to audibility in every zone — 5 steps",
+        "stages": [
+          {
+            "t": "Acoustic calculation",
+            "s": "zones, power, speaker count"
+          },
+          {
+            "t": "Design",
+            "s": "for voice evacuation — per codes, with approval"
+          },
+          {
+            "t": "Installation",
+            "s": "speakers, amplifiers, lines"
+          },
+          {
+            "t": "Setup",
+            "s": "per-zone volume, priorities"
+          },
+          {
+            "t": "Verification",
+            "s": "audibility in every room, handover"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Sound that is heard in a fire",
+        "brandsText": "Broadcast amplifiers, speakers and notification modules by proven makers — from stock:"
       }
     },
     "barrier": {
@@ -1590,7 +1644,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From line survey to a trigger — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "length, terrain, fence condition"
+          },
+          {
+            "t": "Choosing the technology",
+            "s": "cable, barriers, analytics, thermal"
+          },
+          {
+            "t": "Line installation",
+            "s": "sensors, cameras, power along the line"
+          },
+          {
+            "t": "Zone tuning",
+            "s": "sensitivity for wind and animals"
+          },
+          {
+            "t": "Handover and seasonal care",
+            "s": "a zone map, re-checks twice a year"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Sensors and cameras for any line",
+        "brandsText": "Hikvision AcuSense and thermal imagers, vibration systems and beam barriers — matched to the site:"
       }
     },
     "bus": {
@@ -1656,7 +1737,10 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Transport-rated equipment",
+        "brandsText": "Transport recorders and cameras with power protection, passenger counting sensors, 4G modems — per design:"
       }
     },
     "city": {
@@ -1722,7 +1806,10 @@
             ],
             "term": "Time: in stages"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "City-scale equipment",
+        "brandsText": "Hikvision and Dahua cameras, H3C servers and storage, Dahua video walls, trunk network gear — per design:"
       }
     },
     "parking": {
@@ -1881,7 +1968,10 @@
             ],
             "term": "Time: a site in 1–3 days"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for retail sites",
+        "brandsText": "Hikvision and Dahua cameras with POS linking, visitor counters, AX PRO alarm panels — from stock:"
       }
     },
     "bank": {
@@ -1947,7 +2037,10 @@
             ],
             "term": "Time: in stages"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Bank-grade equipment",
+        "brandsText": "Hikvision and Dahua, ZKTeco access control with multi-factor access, redundant H3C servers — with warranty:"
       }
     },
     "school": {
@@ -2013,7 +2106,10 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for schools",
+        "brandsText": "ZKTeco turnstiles with parent notifications, vandal-proof Hikvision cameras, school PA — from stock:"
       }
     },
     "industry": {
@@ -2079,7 +2175,10 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Industrial-grade equipment",
+        "brandsText": "Hikvision and Dahua in IP66/IK10 housings, ZKTeco access control, Bolid and Rubezh fire systems, MikroTik and H3C networks — from stock:"
       }
     },
     "residential": {
@@ -2145,7 +2244,10 @@
             ],
             "term": "Time: per construction schedule"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for residential complexes",
+        "brandsText": "Hikvision IP intercoms, barriers with ANPR, vandal-proof cameras, locks and access control — from stock:"
       }
     },
     "virtualization": {
@@ -2227,7 +2329,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From audit to a cluster — 5 steps",
+        "stages": [
+          {
+            "t": "Server audit",
+            "s": "load, services, failure points"
+          },
+          {
+            "t": "Architecture",
+            "s": "hosts, storage, network, licenses"
+          },
+          {
+            "t": "A pilot migration",
+            "s": "non-critical services first"
+          },
+          {
+            "t": "Moving production",
+            "s": "in agreed windows, with rollback"
+          },
+          {
+            "t": "Handover and care",
+            "s": "documentation, monitoring, support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "H3C servers — from a certified partner",
+        "brandsText": "H3C servers and storage, CAS/UIS virtualization — we are a certified H3C partner in Uzbekistan:"
       },
       "faq": [
         {
@@ -2327,7 +2456,34 @@
             ],
             "term": "Lead time: per project"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From radio survey to coverage — 5 steps",
+        "stages": [
+          {
+            "t": "Radio survey",
+            "s": "floor plan, interference, neighbor networks"
+          },
+          {
+            "t": "AP layout",
+            "s": "channels, power, coverage zones"
+          },
+          {
+            "t": "Installation",
+            "s": "APs, PoE power, a controller"
+          },
+          {
+            "t": "Setup",
+            "s": "roaming, a guest network, limits"
+          },
+          {
+            "t": "Measurement and handover",
+            "s": "signal level in every zone"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Enterprise-class access points",
+        "brandsText": "TP-Link Omada, MikroTik access points and Wi-Fi 6 solutions — matched to density and area:"
       }
     },
     "fiber": {
@@ -2502,7 +2658,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From points on a map to a link — 5 steps",
+        "stages": [
+          {
+            "t": "Path calculation",
+            "s": "line of sight, Fresnel zone, heights"
+          },
+          {
+            "t": "Choosing the pair",
+            "s": "band and antennas for the distance"
+          },
+          {
+            "t": "Installation",
+            "s": "masts, brackets, surge protection"
+          },
+          {
+            "t": "Alignment",
+            "s": "signal set with a margin"
+          },
+          {
+            "t": "Testing and service",
+            "s": "throughput test, monitoring"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Links that hold for years",
+        "brandsText": "Ubiquiti airMAX/airFiber, MikroTik Wireless Wire — kits from stock with warranty:"
       }
     },
     "mikrotik": {
@@ -2576,7 +2759,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From task to a stable network — 5 steps",
+        "stages": [
+          {
+            "t": "Analyzing the task",
+            "s": "traffic, device count, channels"
+          },
+          {
+            "t": "Choosing the model",
+            "s": "from hEX to CCR — no overpaying"
+          },
+          {
+            "t": "Configuration",
+            "s": "VLAN, VPN, QoS, firewall"
+          },
+          {
+            "t": "Redundancy",
+            "s": "a second channel, auto-failover"
+          },
+          {
+            "t": "Handover and support",
+            "s": "documentation, monitoring, care"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "MikroTik — from our Tashkent stock",
+        "brandsText": "Routers, CRS switches, cAP/wAP access points, SFP modules — the full range in stock:"
       }
     },
     "smarthome": {
@@ -2641,7 +2851,34 @@
             ],
             "term": "Lead time: per project"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From scenarios to a smart home — 5 steps",
+        "stages": [
+          {
+            "t": "The family's scenarios",
+            "s": "what to automate: light, climate, curtains"
+          },
+          {
+            "t": "Choosing devices",
+            "s": "without rewiring where possible"
+          },
+          {
+            "t": "Installation",
+            "s": "relays, sensors, switches, a hub"
+          },
+          {
+            "t": "Setup",
+            "s": "the app, voice, automations"
+          },
+          {
+            "t": "Training",
+            "s": "the family runs it, we support it"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "The Tuya ecosystem and compatible devices",
+        "brandsText": "Tuya relays, sensors, thermostats and cameras — all in one app:"
       },
       "faq": [
         {
@@ -2737,7 +2974,34 @@
             ],
             "term": "Lead time: per project"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From people flow to a checkpoint — 5 steps",
+        "stages": [
+          {
+            "t": "Flow calculation",
+            "s": "how many turnstiles the peak needs"
+          },
+          {
+            "t": "Choosing models",
+            "s": "tripods, speed gates, full-height"
+          },
+          {
+            "t": "Installation",
+            "s": "turnstiles, readers, a gate"
+          },
+          {
+            "t": "Integration",
+            "s": "access control, time attendance, fire release"
+          },
+          {
+            "t": "Launch",
+            "s": "card issue, guard training"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Turnstiles that survive the flow",
+        "brandsText": "ZKTeco and proven makers: tripods, speed gates, full-height units — from stock:"
       }
     },
     "locks": {
@@ -2912,7 +3176,34 @@
             ],
             "term": "Time: 2–5 days"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From measurement to opening gates — 5 steps",
+        "stages": [
+          {
+            "t": "On-site measurement",
+            "s": "weight, width, leaf condition"
+          },
+          {
+            "t": "Choosing the drive",
+            "s": "with a margin for cycles and wind"
+          },
+          {
+            "t": "Installation",
+            "s": "automation, photocells, lamp"
+          },
+          {
+            "t": "Setup",
+            "s": "force, limit switches, remotes, phone"
+          },
+          {
+            "t": "Handover and service",
+            "s": "training, warranty, maintenance"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Automation sized for real gates",
+        "brandsText": "Drives and automation by leading makers for sliding, swing and sectional gates — from stock:"
       }
     },
     "telephony": {
@@ -2986,7 +3277,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From a number to a working PBX — 5 steps",
+        "stages": [
+          {
+            "t": "Comms audit",
+            "s": "numbers, operators, call scenarios"
+          },
+          {
+            "t": "PBX scheme",
+            "s": "extensions, IVR, queues"
+          },
+          {
+            "t": "Deployment",
+            "s": "server or cloud, phones, headsets"
+          },
+          {
+            "t": "Integrations",
+            "s": "CRM, call recording, statistics"
+          },
+          {
+            "t": "Launch and support",
+            "s": "number porting with no downtime"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Phones and gateways — from stock",
+        "brandsText": "IP phones and gateways by proven makers, PBX on Asterisk/3CX — matched to the task:"
       }
     },
     "servers": {
@@ -3157,7 +3475,10 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Cameras and networks for warehouse logistics",
+        "brandsText": "Hikvision and Dahua with WDR for ramps, ANPR cameras, MikroTik switches, ZKTeco access control — from stock:"
       }
     },
     "construction": {
@@ -3223,7 +3544,10 @@
             ],
             "term": "Time: per the handover schedule"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for construction sites",
+        "brandsText": "Autonomous 4G posts, Hikvision cameras in protected housings, checkpoint access control — from stock:"
       }
     },
     "medical": {
@@ -3289,7 +3613,10 @@
             ],
             "term": "Time: 1–2 weeks"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for healthcare",
+        "brandsText": "Hikvision cameras, zoned ZKTeco access control, panic buttons, fire systems per healthcare norms — from stock:"
       }
     },
     "hotel": {
@@ -3355,7 +3682,10 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Hotel-grade equipment",
+        "brandsText": "Hotel locks with cards and mobile keys, Hikvision cameras, guest Wi-Fi — with warranty:"
       }
     },
     "fuel": {
@@ -3421,7 +3751,10 @@
             ],
             "term": "Time: a station in 1–2 weeks"
           }
-        ]
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Equipment for fuel sites",
+        "brandsText": "Explosion-proof cameras for hazardous zones, Hikvision/Dahua ANPR, fire systems — per design:"
       }
     },
     "ohrannye-sistemy": {
@@ -3487,7 +3820,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From request to a protected site — 5 steps",
+        "stages": [
+          {
+            "t": "Engineer's visit",
+            "s": "intrusion zones, sensor points — free"
+          },
+          {
+            "t": "Choosing the kit",
+            "s": "wired or wireless, an estimate"
+          },
+          {
+            "t": "Installation",
+            "s": "sensors, panel, siren — in a day"
+          },
+          {
+            "t": "Setup",
+            "s": "the app, zones, users"
+          },
+          {
+            "t": "Handover and service",
+            "s": "trigger tests, warranty, maintenance"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Panels and sensors we trust",
+        "brandsText": "Hikvision AX PRO for wireless protection; wired systems for large sites — from stock:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {
@@ -3553,7 +3913,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From entry geometry to working lanes — 5 steps",
+        "stages": [
+          {
+            "t": "Measurements",
+            "s": "radii, slopes, the plate-reading point"
+          },
+          {
+            "t": "Lane design",
+            "s": "cameras, barriers, loops, lights"
+          },
+          {
+            "t": "Installation",
+            "s": "the lane as a whole, tested on cars"
+          },
+          {
+            "t": "Scenarios",
+            "s": "resident, guest, delivery, tariffs"
+          },
+          {
+            "t": "Launch",
+            "s": "recognition monitoring in the first weeks"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "ANPR and automation that never sleep",
+        "brandsText": "Hikvision/Dahua recognition cameras, heavy-duty barriers, terminals and pay stations — from stock:"
       }
     },
     "slabotochnye-sistemy": {
@@ -3623,7 +4010,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From design to site handover — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "or a calculation from your design — free"
+          },
+          {
+            "t": "A unified design",
+            "s": "all subsystems in shared routes"
+          },
+          {
+            "t": "Staged installation",
+            "s": "to the construction schedule or without stopping the office"
+          },
+          {
+            "t": "Commissioning",
+            "s": "cross-system scenarios by checklist"
+          },
+          {
+            "t": "Handover and service",
+            "s": "as-built documentation, warranty, maintenance"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Three thousand items in our Tashkent warehouse",
+        "brandsText": "Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik, TP-Link, H3C — cable, cabinets and equipment in stock:"
       }
     },
     "proektirovanie": {
@@ -3693,7 +4107,34 @@
             ],
             "term": "Time: from 3 weeks"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From survey to an approved design — 5 steps",
+        "stages": [
+          {
+            "t": "Survey",
+            "s": "an engineer's visit and assessment — free"
+          },
+          {
+            "t": "Terms of reference",
+            "s": "tasks, codes, budget frames fixed"
+          },
+          {
+            "t": "Design",
+            "s": "plans, diagrams, specification, estimate"
+          },
+          {
+            "t": "Approval",
+            "s": "expert review, responses to remarks"
+          },
+          {
+            "t": "Support",
+            "s": "designer supervision during installation"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Specifications built on real equipment",
+        "brandsText": "Bolid, Rubezh, Hikvision, Dahua, ZKTeco, MikroTik, H3C — we specify items that are in stock and in supply:"
       }
     },
     "obsluzhivanie": {
@@ -3763,7 +4204,34 @@
             ],
             "term": "Contract: individual"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From audit to a schedule — 5 steps",
+        "stages": [
+          {
+            "t": "A free audit",
+            "s": "system condition, a defect list"
+          },
+          {
+            "t": "Contract and schedule",
+            "s": "scope, frequency, SLA"
+          },
+          {
+            "t": "The first maintenance",
+            "s": "cleaning, checks, consumable replacement"
+          },
+          {
+            "t": "Emergency service",
+            "s": "requests by phone and Telegram"
+          },
+          {
+            "t": "Reporting",
+            "s": "a log no inspection will question"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Spares and a replacement pool — from stock",
+        "brandsText": "Bolid, Rubezh, Hikvision, Dahua, ZKTeco, MikroTik — popular units and detectors kept in our Tashkent warehouse:"
       }
     },
     "sistemnaya-integraciya": {
@@ -3833,7 +4301,34 @@
             ],
             "term": "Time: per design"
           }
-        ]
+        ],
+        "stagesLabel": "How we work",
+        "stagesTitle": "From audit to a single post — 5 steps",
+        "stages": [
+          {
+            "t": "System audit",
+            "s": "a map of what is already installed — free"
+          },
+          {
+            "t": "Integration plan",
+            "s": "what links directly and what via a gateway"
+          },
+          {
+            "t": "A pilot area",
+            "s": "scenarios proven live"
+          },
+          {
+            "t": "Site-wide rollout",
+            "s": "without stopping working systems"
+          },
+          {
+            "t": "Handover and service",
+            "s": "operator procedures, training, support"
+          }
+        ],
+        "brandsLabel": "Equipment",
+        "brandsTitle": "Open protocols and proven platforms",
+        "brandsText": "Hikvision, Dahua, ZKTeco, Bolid, MikroTik, H3C — linked via ONVIF, OSDP and vendor APIs, with equipment supplied by us:"
       }
     }
   },
