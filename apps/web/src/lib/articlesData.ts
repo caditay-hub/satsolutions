@@ -1739,93 +1739,143 @@ export const ARTICLES: Article[] = [
     related: ["smarthome"],
     loc: {
       ru: {
-        title: "Умный дом: с чего начать и сколько стоит",
-        excerpt: "Не обязательно автоматизировать всё сразу — рассказываем, с чего начать умный дом, проводной или беспроводной, и что можно автоматизировать.",
+        title: "Умный дом: с чего начать и на чём не обжечься",
+        excerpt: "Первые шаги в автоматизации без переделки ремонта: какие сценарии дают эффект с первого дня, чем проводная система отличается от беспроводной, и почему главный враг умного дома — зоопарк приложений.",
         sections: [
-          { h: "С чего начать умный дом", p: [
-            "Не обязательно автоматизировать всё сразу. Начните с базового сценария — свет и климат по расписанию, датчики протечки и дыма, видеонаблюдение в одном приложении. Дальше систему легко расширять по мере бюджета.",
-            "Такой поэтапный подход снижает стартовые затраты и позволяет понять, какие сценарии реально нужны именно вам.",
+          { h: "Начните со сценариев, а не с гаджетов", p: [
+            "Умный дом покупают не ради лампочки с телефона — ради сценариев, которые убирают рутину. «Утро»: шторы открываются, свет плавно разгорается, кондиционер выходит из ночного режима. «Ушли»: гаснет весь свет, обесточиваются розетки с утюгом, встаёт охрана. «Отпуск»: дом вечерами включает свет, имитируя присутствие. Один раз настроенный сценарий срабатывает по кнопке, расписанию или геолокации.",
+            "Практичный первый шаг — выбрать три сценария, которые нужны именно вам, и собрать систему под них. Расширяться проще, чем переделывать: платформа остаётся, устройства добавляются.",
           ] },
-          { h: "Проводной или беспроводной", p: [
-            "Беспроводные системы (Wi-Fi/Zigbee) дешевле и ставятся без ремонта — подходят для готовой квартиры. Проводные надёжнее и закладываются на этапе строительства или капитального ремонта.",
-            "Подбираем решение под ваш объект и стадию ремонта — от отдельных сценариев до полной автоматизации коттеджа.",
+          { h: "Безопасность окупается первой", p: [
+            "Самые рациональные вложения в умный дом — защитные. Датчик протечки с электрокраном перекрывает воду за секунды, пока не затоплены соседи; датчик дыма будит ночью и шлёт уведомление, даже когда вас нет; датчики открытия и движения превращаются в охранную сигнализацию с сиреной и тревогой на телефон.",
+            "Сюда же — камеры и видеодомофон в том же приложении: звонок в дверь приходит на смартфон, где бы вы ни были. Этот контур окупается первым же предотвращённым потопом — а потоп случается чаще пожара и кражи вместе взятых.",
           ] },
-          { h: "Что можно автоматизировать", p: [
-            "Освещение и сценарии (утро, отъезд, ночь), климат и шторы, умные розетки и замки, датчики движения, протечки и дыма, интеграцию с видеонаблюдением и охранной сигнализацией. Управлять можно голосом, со смартфона или по расписанию.",
-            "Устанавливаем умный дом под ключ в Ташкенте и по всему Узбекистану — с настройкой, обучением и гарантией.",
+          { h: "Проводная или беспроводная", p: [
+            "Развилка зависит от стадии ремонта. Беспроводные решения на Zigbee и Wi-Fi (Tuya, Aqara) ставятся на готовый ремонт без штробления: реле прячутся в подрозетники, датчики клеятся и живут от батареек годами. Проводную шину закладывают на этапе стройки: она надёжнее, не зависит от радиоэфира и рассчитана на большие дома со сложной автоматикой.",
+            "Честный ответ для большинства квартир — беспроводной системы достаточно. Свет стройте на умных выключателях, а не только лампах: обычная клавиша на стене продолжает работать для всех, кто не хочет доставать телефон, — это спасает от главной семейной претензии к умному дому.",
           ] },
+          { h: "Главная ошибка самостоятельной сборки", p: [
+            "Зоопарк приложений: лампы в одном, розетки в другом, камеры в третьем, и ничто ни с чем не дружит. Сценарий «ушли» в таком доме невозможен — некому выключить всё разом. Мы собираем систему на единой платформе: устройства видят друг друга, сценарии общие, семья пользуется одним приложением с понятными правами.",
+            "Обследование и проект сценариев — бесплатно; стартовый комплект на квартиру — неделя от заявки до работающих сценариев. Оборудование со склада в Ташкенте, гарантия, поддержка и расширение системы по мере запросов — по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли сделать умный дом в квартире с готовым ремонтом?", a: "Да, беспроводные системы ставятся без штробления: реле в подрозетники, датчики на клейкой основе. Ремонт не страдает, монтаж занимает день-два." },
+          { q: "Что поставить в первую очередь при ограниченном бюджете?", a: "Защитный контур: датчики протечки с электрокраном, дым, открытие дверей. Затем свет по сценариям и климат. Развлечения — голосовые колонки и шторы — добавляются потом на ту же платформу." },
+          { q: "Будет ли система работать без интернета?", a: "Локальные сценарии на Zigbee-хабе работают и без интернета: свет, датчики, автоматизации. Интернет нужен для управления извне дома и уведомлений." },
+          { q: "Умный дом — это дорого?", a: "Стартовый комплект на квартиру сопоставим со стоимостью среднего смартфона. Дальше система растёт по мере желания — платформа остаётся, докупаются только устройства." },
         ],
       },
       uz: {
-        title: "Aqlli uy: nimadan boshlash va qancha turadi",
-        excerpt: "Hammasini birdan avtomatlashtirish shart emas — aqlli uyni nimadan boshlash, simli yoki simsiz, va nimani avtomatlashtirish mumkinligini aytamiz.",
+        title: "Aqlli uy: nimadan boshlash va nimada kuymaslik",
+        excerpt: "Ta'mirni buzmasdan avtomatlashtirishdagi birinchi qadamlar: qaysi stsenariylar birinchi kundan samara beradi, simli tizim simsizdan nimasi bilan farq qiladi va nega aqlli uyning bosh dushmani — ilovalar hayvonot bog'i.",
         sections: [
-          { h: "Aqlli uyni nimadan boshlash", p: [
-            "Hammasini birdan avtomatlashtirish shart emas. Asosiy ssenariydan boshlang — yorug'lik va iqlim jadval bo'yicha, suv oqishi va tutun datchiklari, videokuzatuv bitta ilovada. Keyin tizimni byudjetga qarab oson kengaytirasiz.",
-            "Bunday bosqichma-bosqich yondashuv boshlang'ich xarajatlarni kamaytiradi va qaysi ssenariylar sizga haqiqatan kerakligini tushunishga yordam beradi.",
+          { h: "Gadjetlardan emas, stsenariylardan boshlang", p: [
+            "Aqlli uyni telefondagi lampochka uchun emas, kundalik yumushni olib tashlaydigan stsenariylar uchun olishadi. «Tong»: pardalar ochiladi, chiroq asta yonadi, konditsioner tungi rejimdan chiqadi. «Ketdik»: butun chiroq o'chadi, dazmolli rozetkalar tokdan uziladi, qo'riqlash turadi. «Ta'til»: uy kechqurunlari chiroq yoqib, borlikni imitatsiya qiladi. Bir marta sozlangan stsenariy tugma, jadval yoki geolokatsiya bo'yicha ishlaydi.",
+            "Amaliy birinchi qadam — aynan sizga kerak uchta stsenariyni tanlab, tizimni ular ostida yig'ish. Kengayish qayta qilishdan oson: platforma qoladi, qurilmalar qo'shiladi.",
+          ] },
+          { h: "Xavfsizlik birinchi bo'lib o'zini oqlaydi", p: [
+            "Aqlli uyga eng oqilona sarmoya — himoya. Elektrokranli suv oqishi datchigi qo'shnilar bosilmasdan suvni soniyalarda yopadi; tutun datchigi kechasi uyg'otadi va uyda bo'lmasangiz ham xabar yuboradi; ochilish va harakat datchiklari sirena va telefonga trevogali qo'riqlash signalizatsiyasiga aylanadi.",
+            "Shu yerga — o'sha ilovadagi kameralar va videodomofon: eshik qo'ng'irog'i qayerda bo'lsangiz ham smartfonga keladi. Bu kontur birinchi oldini olingan suv toshqinidayoq o'zini oqlaydi — toshqin esa yong'in va o'g'irlik qo'shilganidan ko'ra tez-tez bo'ladi.",
           ] },
           { h: "Simli yoki simsiz", p: [
-            "Simsiz tizimlar (Wi-Fi/Zigbee) arzonroq va ta'mirsiz o'rnatiladi — tayyor kvartira uchun mos. Simli tizimlar ishonchliroq va qurilish yoki kapital ta'mir bosqichida qo'yiladi.",
-            "Yechimni obyektingiz va ta'mir bosqichiga qarab tanlaymiz — alohida ssenariylardan tortib kottejni to'liq avtomatlashtirishgacha.",
+            "Tanlov ta'mir bosqichiga bog'liq. Zigbee va Wi-Fi dagi simsiz yechimlar (Tuya, Aqara) tayyor ta'mirga shtroblashsiz o'rnatiladi: rele podrozetnikka yashirinadi, datchiklar yopishtiriladi va batareyadan yillab yashaydi. Simli shina qurilish bosqichida yotqiziladi: ishonchliroq, radioefirga bog'liq emas va murakkab avtomatikali katta uylarga mo'ljallangan.",
+            "Ko'pchilik kvartiralar uchun halol javob — simsiz tizim yetarli. Yoritishni faqat lampalarga emas, aqlli vyklyuchatellarga quring: devordagi oddiy klavisha telefon chiqargisi kelmaydiganlar uchun ishlashda davom etadi — bu aqlli uyga bosh oilaviy e'tirozdan qutqaradi.",
           ] },
-          { h: "Nimani avtomatlashtirish mumkin", p: [
-            "Yoritish va ssenariylar (ertalab, ketish, tun), iqlim va pardalar, aqlli rozetkalar va qulflar, harakat, suv oqishi va tutun datchiklari, videokuzatuv va qo'riqlash signalizatsiyasi bilan integratsiya. Ovoz, smartfon yoki jadval bilan boshqarish mumkin.",
-            "Aqlli uyni kalit topshirish asosida o'rnatamiz — Toshkentda va butun O'zbekiston bo'ylab, sozlash, o'qitish va kafolat bilan.",
+          { h: "Mustaqil yig'ishning bosh xatosi", p: [
+            "Ilovalar hayvonot bog'i: lampalar birida, rozetkalar boshqasida, kameralar uchinchisida — hech narsa hech narsa bilan do'st emas. Bunday uyda «ketdik» stsenariysi mumkin emas — hammasini birdan o'chiradigan yo'q. Tizimni yagona platformada yig'amiz: qurilmalar bir-birini ko'radi, stsenariylar umumiy, oila tushunarli huquqli bitta ilovadan foydalanadi.",
+            "Tekshiruv va stsenariylar loyihasi — bepul; kvartiraga start to'plami — arizadan ishlaydigan stsenariylargacha bir hafta. Uskuna Toshkentdagi ombordan, kafolat, qo'llab-quvvatlash va tizimni so'rov bo'yicha kengaytirish — butun O'zbekiston bo'ylab.",
           ] },
+        ],
+        faq: [
+          { q: "Tayyor ta'mirli kvartirada aqlli uy qilsa bo'ladimi?", a: "Ha, simsiz tizimlar shtroblashsiz o'rnatiladi: rele podrozetnikka, datchiklar yelimli asosga. Ta'mir zarar ko'rmaydi, montaj bir-ikki kun oladi." },
+          { q: "Cheklangan byudjetda birinchi navbatda nima qo'yish kerak?", a: "Himoya konturi: elektrokranli suv oqishi datchiklari, tutun, eshik ochilishi. Keyin stsenariyli yoritish va iqlim. Ko'ngilochar — ovozli kolonkalar va pardalar — keyin o'sha platformaga qo'shiladi." },
+          { q: "Tizim internetsiz ishlaydimi?", a: "Zigbee-xabdagi lokal stsenariylar internetsiz ham ishlaydi: yoritish, datchiklar, avtomatlashtirishlar. Internet uydan tashqaridan boshqarish va xabarlar uchun kerak." },
+          { q: "Aqlli uy qimmatmi?", a: "Kvartiraga start to'plami o'rtacha smartfon narxi bilan taqqoslanadi. Keyin tizim xohishga qarab o'sadi — platforma qoladi, faqat qurilmalar sotib olinadi." },
         ],
       },
       en: {
-        title: "Smart Home: Where to Start and What It Costs",
-        excerpt: "You don't have to automate everything at once — where to start a smart home, wired or wireless, and what can be automated.",
+        title: "Smart Home: Where to Start and What Not to Get Burned By",
+        excerpt: "First steps in automation without redoing the renovation: which scenarios pay off from day one, how wired differs from wireless, and why the smart home's worst enemy is a zoo of apps.",
         sections: [
-          { h: "Where to start", p: [
-            "You don't have to automate everything at once. Start with a basic scenario — scheduled lighting and climate, leak and smoke sensors, CCTV in one app. The system is easy to expand later as budget allows.",
-            "This step-by-step approach lowers the initial cost and shows which scenarios you actually need.",
+          { h: "Start with scenarios, not gadgets", p: [
+            "A smart home is bought not for a phone-controlled bulb but for scenarios that remove routine. \"Morning\": curtains open, light fades in, the air conditioner leaves night mode. \"Away\": all lights off, the iron's socket de-energised, security armed. \"Vacation\": the house switches lights on in the evenings, simulating presence. A scenario configured once fires by button, schedule or geofence.",
+            "The practical first step is choosing the three scenarios you personally need and building the system around them. Expanding is easier than redoing: the platform stays, devices get added.",
+          ] },
+          { h: "Safety pays off first", p: [
+            "The most rational smart home investments are protective. A leak sensor with a motorised valve shuts the water in seconds, before the neighbours below are flooded; a smoke sensor wakes you at night and sends an alert even when you are away; contact and motion sensors become a burglar alarm with a siren and phone notifications.",
+            "Add cameras and a video intercom in the same app: the doorbell rings on your smartphone wherever you are. This circuit pays for itself with the first prevented flood — and floods happen more often than fires and burglaries combined.",
           ] },
           { h: "Wired or wireless", p: [
-            "Wireless systems (Wi-Fi/Zigbee) are cheaper and install without renovation — a good fit for a finished apartment. Wired systems are more reliable and go in during construction or major renovation.",
-            "We match the solution to your site and renovation stage — from single scenarios to full automation of a house.",
+            "The fork depends on the renovation stage. Wireless solutions on Zigbee and Wi-Fi (Tuya, Aqara) install onto a finished interior with no chasing: relays hide in wall boxes, sensors stick on and run on batteries for years. A wired bus is laid during construction: more robust, independent of the radio environment, made for large houses with complex automation.",
+            "The honest answer for most apartments: wireless is enough. Build lighting on smart switches, not just smart bulbs: the ordinary wall key keeps working for everyone who does not want to reach for a phone — which saves you from the family's number one complaint about smart homes.",
           ] },
-          { h: "What can be automated", p: [
-            "Lighting and scenes (morning, away, night), climate and curtains, smart sockets and locks, motion, leak and smoke sensors, integration with CCTV and intruder alarm. Control by voice, smartphone or schedule.",
-            "We install smart homes turnkey in Tashkent and across Uzbekistan — with setup, training and warranty.",
+          { h: "The main DIY mistake", p: [
+            "A zoo of apps: bulbs in one, sockets in another, cameras in a third — and nothing talks to anything. The \"away\" scenario is impossible in such a home: there is nobody to switch everything off at once. We build on a single platform: devices see each other, scenarios are shared, and the family uses one app with sensible permissions.",
+            "The survey and scenario design are free; a starter apartment kit takes a week from request to working scenarios. Equipment from Tashkent stock, warranty, support and system growth on demand — across Uzbekistan.",
           ] },
+        ],
+        faq: [
+          { q: "Can a smart home be added to a finished apartment?", a: "Yes — wireless systems install without chasing: relays go into wall boxes, sensors are adhesive. The renovation is untouched; installation takes a day or two." },
+          { q: "What to install first on a limited budget?", a: "The protective circuit: leak sensors with a motorised valve, smoke, door contacts. Then scenario lighting and climate. Entertainment — speakers and curtains — joins the same platform later." },
+          { q: "Does the system work without internet?", a: "Local scenarios on a Zigbee hub work offline: lighting, sensors, automations. Internet is needed for control from outside the home and for notifications." },
+          { q: "Is a smart home expensive?", a: "A starter apartment kit is comparable to a mid-range smartphone. The system then grows at your pace — the platform stays, you only add devices." },
         ],
       },
       tr: {
-        title: "Akıllı Ev: Nereden Başlamalı ve Ne Kadar Tutar",
-        excerpt: "Her şeyi bir anda otomatikleştirmek gerekmez — akıllı eve nereden başlanır, kablolu mu kablosuz mu ve neler otomatikleştirilebilir.",
+        title: "Akıllı Ev: Nereden Başlamalı, Nerede Yanmamalı",
+        excerpt: "Tadilatı bozmadan otomasyona ilk adımlar: hangi senaryolar ilk günden işe yarar, kablolu kablosuzdan nasıl ayrılır ve akıllı evin baş düşmanı neden uygulama hayvanat bahçesidir.",
         sections: [
-          { h: "Nereden başlamalı", p: [
-            "Her şeyi bir anda otomatikleştirmek gerekmez. Temel senaryoyla başlayın — programlı ışık ve iklimlendirme, su kaçağı ve duman sensörleri, tek uygulamada kamera izleme. Sistem daha sonra bütçeye göre kolayca genişletilir.",
-            "Bu aşamalı yaklaşım başlangıç maliyetini düşürür ve hangi senaryolara gerçekten ihtiyacınız olduğunu gösterir.",
+          { h: "Cihazlarla değil senaryolarla başlayın", p: [
+            "Akıllı ev telefondan yanan ampul için değil, rutini kaldıran senaryolar için alınır. «Sabah»: perdeler açılır, ışık yumuşakça artar, klima gece modundan çıkar. «Çıktık»: tüm ışıklar söner, ütünün prizi kesilir, alarm kurulur. «Tatil»: ev akşamları ışık yakıp varlık taklidi yapar. Bir kez kurulan senaryo düğme, program veya konumla tetiklenir.",
+            "Pratik ilk adım: size gerçekten gereken üç senaryoyu seçip sistemi onlara göre kurmak. Genişlemek yeniden yapmaktan kolaydır: platform kalır, cihaz eklenir.",
+          ] },
+          { h: "Önce güvenlik amorti eder", p: [
+            "Akıllı eve en akılcı yatırım koruyucu olandır. Motorlu vanalı su kaçağı sensörü, alt komşu su basmadan suyu saniyelerde keser; duman sensörü gece uyandırır ve evde değilken bile bildirim yollar; kontak ve hareket sensörleri sirenli, telefona alarmlı hırsız alarmına dönüşür.",
+            "Buna aynı uygulamadaki kameralar ve görüntülü diafon eklenir: kapı zili nerede olursanız olun telefonda çalar. Bu devre ilk önlenen su baskınıyla kendini öder — baskın ise yangın ve hırsızlığın toplamından sık olur.",
           ] },
           { h: "Kablolu mu kablosuz mu", p: [
-            "Kablosuz sistemler (Wi-Fi/Zigbee) daha ucuzdur ve tadilatsız kurulur — hazır daire için uygundur. Kablolu sistemler daha güvenilirdir ve inşaat veya kapsamlı tadilat aşamasında döşenir.",
-            "Çözümü sahanıza ve tadilat aşamasına göre seçiyoruz — tek senaryolardan villanın tam otomasyonuna kadar.",
+            "Yol ayrımı tadilat aşamasına bağlıdır. Zigbee ve Wi-Fi tabanlı kablosuz çözümler (Tuya, Aqara) bitmiş tadilata kırım olmadan kurulur: röleler kasalara saklanır, sensörler yapıştırılır ve pille yıllarca çalışır. Kablolu bara inşaatta döşenir: daha sağlam, radyo ortamından bağımsız, karmaşık otomasyonlu büyük evler için.",
+            "Çoğu daire için dürüst yanıt: kablosuz yeter. Aydınlatmayı yalnız ampullere değil akıllı anahtarlara kurun: duvardaki tuş, telefon çıkarmak istemeyen herkes için çalışmayı sürdürür — bu, ailenin akıllı eve bir numaralı itirazından kurtarır.",
           ] },
-          { h: "Neler otomatikleştirilebilir", p: [
-            "Aydınlatma ve senaryolar (sabah, evden çıkış, gece), iklimlendirme ve perdeler, akıllı prizler ve kilitler, hareket, su kaçağı ve duman sensörleri, kamera ve alarm entegrasyonu. Kontrol sesle, telefonla veya programla yapılır.",
-            "Akıllı evi anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, kurulum, eğitim ve garantiyle.",
+          { h: "Kendin-yap kurulumun ana hatası", p: [
+            "Uygulama hayvanat bahçesi: ampuller birinde, prizler diğerinde, kameralar üçüncüsünde — hiçbiri diğeriyle konuşmaz. Böyle evde «çıktık» senaryosu imkânsızdır: her şeyi bir anda kapatacak kimse yoktur. Tek platformda kurarız: cihazlar birbirini görür, senaryolar ortak, aile mantıklı yetkili tek uygulama kullanır.",
+            "Keşif ve senaryo tasarımı ücretsizdir; daireye başlangıç seti talepten çalışan senaryolara bir hafta sürer. Ekipman Taşkent stoğundan; garanti, destek ve talebe göre büyüme — tüm Özbekistan'da.",
           ] },
+        ],
+        faq: [
+          { q: "Bitmiş tadilatlı daireye akıllı ev kurulur mu?", a: "Evet — kablosuz sistemler kırımsız kurulur: röleler kasalara, sensörler yapışkanla. Tadilat zarar görmez; kurulum bir-iki gün." },
+          { q: "Kısıtlı bütçeyle önce ne alınmalı?", a: "Koruma devresi: motorlu vanalı kaçak sensörleri, duman, kapı kontakları. Sonra senaryolu ışık ve iklim. Eğlence — hoparlör ve perdeler — sonra aynı platforma eklenir." },
+          { q: "Sistem internetsiz çalışır mı?", a: "Zigbee hub'daki yerel senaryolar çevrimdışı da çalışır: ışık, sensörler, otomasyonlar. İnternet, ev dışından kontrol ve bildirimler için gerekir." },
+          { q: "Akıllı ev pahalı mı?", a: "Daire başlangıç seti orta sınıf telefon fiyatıyla kıyaslanır. Sistem sonra sizin hızınızda büyür — platform kalır, yalnız cihaz eklenir." },
         ],
       },
       zh: {
-        title: "智能家居：从哪里开始，需要多少钱",
-        excerpt: "不必一次把所有东西都自动化——智能家居从哪里入手、有线还是无线、可以自动化哪些场景。",
+        title: "智能家居：从哪开始、别在哪踩坑",
+        excerpt: "不动装修的自动化第一步：哪些场景从第一天就见效，有线与无线系统怎么选，以及为什么智能家居的头号敌人是应用「动物园」。",
         sections: [
-          { h: "从哪里开始", p: [
-            "不必一次把所有东西都自动化。从基础场景开始——灯光和空调按时间表运行、漏水和烟雾传感器、监控集中在一个App里。之后可以根据预算轻松扩展。",
-            "这种循序渐进的方式降低了起步成本，也能让您弄清真正需要哪些场景。",
+          { h: "从场景开始，而不是从设备开始", p: [
+            "买智能家居不是为了用手机开灯，而是为了消灭琐事的场景。「早晨」：窗帘打开、灯光渐亮、空调退出夜间模式。「离家」：全屋灯灭、熨斗插座断电、安防布防。「度假」：傍晚自动开灯模拟有人在家。场景配置一次，即可按按钮、时间表或地理围栏触发。",
+            "务实的第一步：选出您真正需要的三个场景，围绕它们搭系统。扩展比推倒重来容易：平台不变，设备往上加。",
+          ] },
+          { h: "安全类投入最先回本", p: [
+            "智能家居里最理性的投入是保护类。漏水传感器配电动阀几秒关水，赶在淹到楼下之前；烟雾传感器夜里叫醒您，人不在家也推送警报；门磁和移动传感器组成带警笛和手机报警的防盗系统。",
+            "再加上同一应用里的摄像机和可视门铃：无论身在何处，门铃都响在手机上。这个保护环第一次拦住水患就回本了——而水患比火灾加盗窃加起来还常见。",
           ] },
           { h: "有线还是无线", p: [
-            "无线系统（Wi-Fi/Zigbee）更便宜，无需装修即可安装，适合已装修好的住宅。有线系统更可靠，应在建造或大修阶段预埋。",
-            "我们根据您的房屋和装修阶段选择方案——从单个场景到别墅的全屋自动化。",
+            "分岔取决于装修阶段。Zigbee和Wi-Fi的无线方案（Tuya、Aqara）不开槽就能装进成品房：继电器藏进底盒，传感器贴上即可，电池能用数年。有线总线在建造阶段敷设：更可靠、不受无线环境影响，适合自动化复杂的大宅。",
+            "对大多数公寓的诚实答案：无线足够。照明要建在智能开关上，而不只是智能灯泡：墙上的普通按键对不想掏手机的家人照常工作——这能免去家人对智能家居的头号抱怨。",
           ] },
-          { h: "可以自动化哪些场景", p: [
-            "灯光与情景模式（清晨、离家、夜间）、空调与窗帘、智能插座与门锁、移动/漏水/烟雾传感器，以及与视频监控和防盗报警的联动。可通过语音、手机或时间表控制。",
-            "我们在塔什干及乌兹别克斯坦全境提供智能家居交钥匙安装——含调试、培训和质保。",
+          { h: "自己攒设备的最大错误", p: [
+            "应用「动物园」：灯在一个App、插座在另一个、摄像机在第三个——谁也不认识谁。这样的家里「离家」场景无法实现：没有谁能一键关掉一切。我们把系统建在统一平台上：设备互通、场景共享，全家用一个应用、权限清晰。",
+            "勘测和场景设计免费；公寓入门套装从下单到场景可用约一周。设备塔什干现货，质保、支持和按需扩展——覆盖全乌兹别克斯坦。",
           ] },
+        ],
+        faq: [
+          { q: "已装修的公寓能做智能家居吗？", a: "能——无线系统无需开槽：继电器进底盒，传感器背胶粘贴。装修毫发无损，安装一到两天。" },
+          { q: "预算有限先装什么？", a: "保护环：漏水传感器加电动阀、烟感、门磁。然后是场景照明和空调。娱乐类——音箱和窗帘——之后加到同一平台。" },
+          { q: "断网了系统还能用吗？", a: "Zigbee网关上的本地场景离线照常工作：照明、传感器、自动化。互联网只在外出遥控和接收推送时需要。" },
+          { q: "智能家居贵吗？", a: "公寓入门套装与一部中端手机相当。之后按您的节奏成长——平台不变，只添设备。" },
         ],
       },
     },
@@ -1836,93 +1886,143 @@ export const ARTICLES: Article[] = [
     related: ["turnstile", "access", "attendance"],
     loc: {
       ru: {
-        title: "Как выбрать турникет для проходной",
-        excerpt: "Виды турникетов (трипод, роторный, speed gate), пропускная способность и интеграция со СКУД — как подобрать под поток и задачу.",
+        title: "Как выбрать турникет: трипод, роторный или спидгейт",
+        excerpt: "Разбираем типы турникетов под задачи: где хватит трипода, когда нужен полноростовый роторный, зачем бизнес-центрам спидгейты — и из чего на самом деле складывается стоимость проходной.",
         sections: [
-          { h: "Виды турникетов", p: [
-            "Турникеты бывают трёх основных типов: триподы (самые доступные, для офисов и небольших проходных), роторные и полноростовые (максимальная защита, для режимных объектов) и скоростные проходы speed gate (для бизнес-центров и мест с большим потоком).",
-            "Выбор зависит от требуемого уровня контроля и внешнего вида: где-то важна экономия, где-то — представительность и высокая пропускная способность.",
+          { h: "Тип турникета — от того, что он должен предотвратить", p: [
+            "Трипод — три вращающиеся штанги — самый распространённый и доступный турникет для офисов и проходных небольших предприятий. Он дисциплинирует поток «по одному» и хорошо считает проходы, но перепрыгнуть его физически возможно — трипод работает там, где рядом охрана или консьерж.",
+            "Полноростовый роторный турникет исключает проход физически: конструкция в рост человека, перелезть невозможно. Его место — периметры заводов, стройплощадки, стадионы, удалённые проходные без постоянной охраны. Спидгейты — скоростные калитки со стеклянными створками — выбирают бизнес-центры и приёмные: красиво, быстро, поток до 30 человек в минуту на полосу.",
           ] },
-          { h: "Пропускная способность и поток", p: [
-            "Трипод пропускает примерно 20–30 человек в минуту — достаточно для офиса или небольшого предприятия. Для проходной завода или стадиона в час пик нужны несколько линий или speed gate.",
-            "Мы считаем число линий под ваш реальный поток, чтобы на входе не собирались очереди в пиковые часы.",
+          { h: "Идентификация и пропускная способность", p: [
+            "Способ идентификации диктуется потоком. Карты и брелоки дёшевы и привычны, но утренняя волна упирается в «достань карту из сумки». Распознавание лица пропускает на ходу — терминал узнаёт сотрудника за доли секунды, руки свободны. QR-коды удобны разовым посетителям: пропуск приходит на телефон ещё до визита.",
+            "Считайте пиковую нагрузку честно: если смена в 500 человек заходит за 20 минут, нужны несколько полос или быстрая биометрия, иначе очередь на улице гарантирована. Мы моделируем поток при подборе и говорим прямо, сколько полос нужно вашей проходной.",
           ] },
-          { h: "Идентификация и интеграция", p: [
-            "Турникет работает в связке со СКУД: проход по карте, отпечатку или распознаванию лица, интеграция с учётом рабочего времени и видеонаблюдением. Предусматриваем калитку для маломобильных посетителей.",
-            "Устанавливаем турникеты под ключ в Ташкенте и по всему Узбекистану — с гарантией и сервисным обслуживанием.",
+          { h: "Что кроме турникета входит в проходную", p: [
+            "Сам турникет — половина сметы. К нему нужны считыватели с двух сторон, контроллер СКУД, блок питания с резервом, ограждения, формирующие коридор, и обязательная распашная калитка — для маломобильных посетителей, габаритных грузов и эвакуации. При пожарной тревоге турникеты должны разблокироваться автоматически — это требование норм, и связка с пожарной сигнализацией закладывается в проект.",
+            "Интеграции превращают проходную в источник данных: связка с учётом рабочего времени отдаёт табель в 1С, с видеонаблюдением — привязывает каждый проход к записи, антипассбэк не пускает второго человека по тому же пропуску.",
           ] },
+          { h: "Стоимость и внедрение", p: [
+            "Бюджет зависит от типа: трипод — самый доступный, спидгейт — в разы дороже за счёт механики и стекла, роторный — между ними в зависимости от исполнения. Прибавьте монтаж с анкеровкой в пол, пусконаладку и настройку прав. Уличное исполнение с подогревом — отдельная строка для КПП без павильона.",
+            "Мы ставим турникеты ZKTeco и Hikvision со склада в Ташкенте: выезд, подбор под поток и дизайн, монтаж за один-два дня, интеграция со СКУД и учётом времени, гарантия и обслуживание по всему Узбекистану. Расчёт проходной — бесплатно.",
+          ] },
+        ],
+        faq: [
+          { q: "Какой турникет поставить в офис на 50 сотрудников?", a: "Обычно хватает одного трипода с распознаванием лица или картами плюс калитка. Такой комплект держит утренний поток без очередей и закрывает учёт времени." },
+          { q: "Что делать с посетителями и курьерами?", a: "Разовые QR-пропуска на телефон, кнопка вызова на ресепшен или проход через калитку под контролем охраны. Гостевые сценарии настраиваются в СКУД без раздачи «лишних» карт." },
+          { q: "Можно ли обойти трипод и как с этим бороться?", a: "Перепрыгнуть трипод физически можно. Там, где это критично, ставят датчики перелаза с тревогой, камеру на проходную или полноростовый роторный турникет — он исключает обход конструктивно." },
+          { q: "Как проходная работает при пожаре?", a: "По сигналу пожарной сигнализации турникеты разблокируются, штанги триподов складываются (антипаника), калитки открываются. Эта связка обязательна и проверяется при сдаче объекта." },
         ],
       },
       uz: {
-        title: "O'tish joyi uchun turniketni qanday tanlash",
-        excerpt: "Turniket turlari (tripod, rotorli, speed gate), o'tkazuvchanlik va SKUD bilan integratsiya — oqim va vazifaga qarab qanday tanlash.",
+        title: "Turniketni qanday tanlash: tripod, rotorli yoki spidgeyt",
+        excerpt: "Turniket turlarini vazifalarga qarab ko'rib chiqamiz: qayerda tripod yetadi, qachon to'liq bo'yli rotorli kerak, biznes-markazlarga spidgeytlar nega — va prohodnaya narxi aslida nimadan yig'iladi.",
         sections: [
-          { h: "Turniket turlari", p: [
-            "Turniketlar uch asosiy turda bo'ladi: tripodlar (eng arzon, ofis va kichik o'tish joylari uchun), rotorli va to'liq bo'yli (maksimal himoya, rejimli obyektlar uchun) va tezkor o'tish yo'laklari speed gate (biznes-markazlar va katta oqim uchun).",
-            "Tanlov kerakli nazorat darajasi va tashqi ko'rinishga bog'liq: qayerdadir tejash muhim, qayerdadir — ko'rkamlik va yuqori o'tkazuvchanlik.",
+          { h: "Turniket turi — u nimaning oldini olishi kerakligidan", p: [
+            "Tripod — uch aylanadigan shtanga — ofislar va kichik korxonalar prohodnayalari uchun eng keng tarqalgan va arzon turniket. U oqimni «bittadan» intizomga soladi va o'tishlarni yaxshi sanaydi, lekin ustidan sakrash jismonan mumkin — tripod yonida qo'riq yoki konserj bor joyda ishlaydi.",
+            "To'liq bo'yli rotorli turniket o'tishni jismonan istisno qiladi: konstruksiya odam bo'yi, oshib o'tib bo'lmaydi. Uning joyi — zavod perimetrlari, qurilish maydonchalari, stadionlar, doimiy qo'riqsiz uzoq prohodnayalar. Spidgeytlar — shisha tavaqali tezkor kalitkalar — biznes-markazlar va qabulxonalar tanlovi: chiroyli, tez, polosaga daqiqasiga 30 kishigacha oqim.",
           ] },
-          { h: "O'tkazuvchanlik va oqim", p: [
-            "Tripod daqiqasiga taxminan 20–30 kishini o'tkazadi — ofis yoki kichik korxona uchun yetarli. Zavod yoki stadion o'tish joyi uchun cho'qqi soatlarida bir necha liniya yoki speed gate kerak.",
-            "Cho'qqi soatlarda kirishda navbat bo'lmasligi uchun haqiqiy oqimingizga qarab liniyalar sonini hisoblaymiz.",
+          { h: "Identifikatsiya va o'tkazish qobiliyati", p: [
+            "Identifikatsiya usulini oqim belgilaydi. Karta va breloklar arzon va odatiy, lekin ertalabki to'lqin «kartani sumkadan ol»ga qadaladi. Yuzni tanish yurib ketayotganda o'tkazadi — terminal xodimni soniya ulushida taniydi, qo'llar bo'sh. QR-kodlar bir martalik mehmonlarga qulay: ruxsatnoma tashrifdan oldin telefonga keladi.",
+            "Cho'qqi yukni halol hisoblang: 500 kishilik smena 20 daqiqada kirsa, bir necha polosa yoki tez biometriya kerak, aks holda ko'chada navbat kafolatlangan. Tanlovda oqimni modellashtiramiz va prohodnayangizga nechta polosa kerakligini to'g'ri aytamiz.",
           ] },
-          { h: "Identifikatsiya va integratsiya", p: [
-            "Turniket SKUD bilan birga ishlaydi: karta, barmoq izi yoki yuzni aniqlash orqali o'tish, ish vaqtini hisobga olish va videokuzatuv bilan integratsiya. Nogiron tashrifchilar uchun kalitka ko'zda tutamiz.",
-            "Turniketlarni kalit topshirish asosida o'rnatamiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va servis xizmati bilan.",
+          { h: "Prohodnayaga turniketdan tashqari nima kiradi", p: [
+            "Turniketning o'zi — smetaning yarmi. Unga ikki tomondan o'qigichlar, SKUD kontrolleri, zaxirali quvvat bloki, koridor hosil qiluvchi to'siqlar va majburiy tavaqali kalitka kerak — imkoniyati cheklanganlar, katta yuklar va evakuatsiya uchun. Yong'in trevogasida turniketlar avtomatik ochilishi shart — bu me'yor talabi, yong'in signalizatsiyasi bilan bog'lanish loyihaga kiritiladi.",
+            "Integratsiyalar prohodnayani ma'lumot manbaiga aylantiradi: ish vaqti hisobi bilan bog'lanish tabelni 1C ga beradi, videokuzatuv bilan — har o'tishni yozuvga bog'laydi, antipassbek o'sha ruxsatnoma bilan ikkinchi odamni kiritmaydi.",
           ] },
+          { h: "Narx va joriy etish", p: [
+            "Byudjet turga bog'liq: tripod — eng arzon, spidgeyt mexanika va shisha hisobiga bir necha barobar qimmat, rotorli — bajarilishiga qarab ular orasida. Polga ankerlash bilan montaj, ishga tushirish va huquqlarni sozlashni qo'shing. Isitishli ko'cha bajarilishi — pavilonsiz KPP uchun alohida qator.",
+            "Toshkentdagi ombordan ZKTeco va Hikvision turniketlarini o'rnatamiz: chiqish, oqim va dizaynga tanlash, bir-ikki kunda montaj, SKUD va vaqt hisobi bilan integratsiya, kafolat va xizmat butun O'zbekiston bo'ylab. Prohodnaya hisobi — bepul.",
+          ] },
+        ],
+        faq: [
+          { q: "50 xodimli ofisga qanday turniket qo'yish kerak?", a: "Odatda yuzni tanish yoki kartali bitta tripod plyus kalitka yetadi. Bunday to'plam ertalabki oqimni navbatsiz ushlaydi va vaqt hisobini yopadi." },
+          { q: "Mehmonlar va kuryerlar bilan nima qilish kerak?", a: "Telefonga bir martalik QR-ruxsatnomalar, resepshenga chaqiruv tugmasi yoki qo'riq nazoratida kalitkadan o'tish. Mehmon stsenariylari «ortiqcha» kartalar tarqatmasdan SKUDda sozlanadi." },
+          { q: "Tripodni aylanib o'tish mumkinmi va bunga qarshi nima qilish kerak?", a: "Tripod ustidan sakrash jismonan mumkin. Bu kritik joylarda trevogali oshib o'tish datchiklari, prohodnayaga kamera yoki to'liq bo'yli rotorli turniket qo'yiladi — u aylanib o'tishni konstruktiv istisno qiladi." },
+          { q: "Yong'inda prohodnaya qanday ishlaydi?", a: "Yong'in signalizatsiyasi signali bo'yicha turniketlar ochiladi, tripod shtangalari yig'iladi (antipanika), kalitkalar ochiladi. Bu bog'lanish majburiy va obyekt topshirishda tekshiriladi." },
         ],
       },
       en: {
-        title: "How to Choose a Turnstile for a Checkpoint",
-        excerpt: "Turnstile types (tripod, full-height, speed gate), throughput and ACS integration — how to match one to your traffic and task.",
+        title: "How to Choose a Turnstile: Tripod, Full-Height or Speed Gate",
+        excerpt: "Turnstile types by task: where a tripod suffices, when a full-height rotor is needed, why business centers pick speed gates — and what the entrance actually costs beyond the turnstile itself.",
         sections: [
-          { h: "Turnstile types", p: [
-            "Turnstiles come in three main types: tripods (the most affordable, for offices and small checkpoints), rotor and full-height (maximum security, for restricted facilities) and speed gates (for business centres and high-traffic areas).",
-            "The choice depends on the required level of control and the look: sometimes economy matters, sometimes prestige and high throughput.",
+          { h: "The type follows what it must prevent", p: [
+            "The tripod — three rotating arms — is the most common and affordable turnstile for offices and small factory entrances. It disciplines the flow to one-by-one and counts passages well, but jumping over it is physically possible — a tripod works where a guard or a concierge is nearby.",
+            "A full-height rotor turnstile rules passage out physically: a person-height structure that cannot be climbed. Its place is factory perimeters, construction sites, stadiums and remote checkpoints without permanent guards. Speed gates — fast lanes with glass wings — are the choice of business centers and lobbies: elegant, quick, up to 30 people per minute per lane.",
           ] },
-          { h: "Throughput and traffic", p: [
-            "A tripod passes roughly 20–30 people per minute — enough for an office or a small enterprise. A factory gate or stadium at peak hours needs several lanes or speed gates.",
-            "We calculate the number of lanes for your real traffic so no queues build up at the entrance during peak hours.",
+          { h: "Identification and throughput", p: [
+            "The flow dictates the identification method. Cards and fobs are cheap and familiar, but the morning wave stalls on \"dig the card out of the bag\". Facial recognition passes people on the move — the terminal recognises an employee in a fraction of a second, hands free. QR codes suit one-time visitors: the pass arrives on the phone before the visit.",
+            "Count the peak honestly: if a 500-person shift enters in 20 minutes, you need several lanes or fast biometrics, otherwise a queue outside is guaranteed. We model the flow during selection and say plainly how many lanes your entrance needs.",
           ] },
-          { h: "Identification and integration", p: [
-            "A turnstile works together with ACS: passage by card, fingerprint or facial recognition, integration with time attendance and CCTV. We include a gate for visitors with limited mobility.",
-            "We install turnstiles turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          { h: "What the entrance includes beyond the turnstile", p: [
+            "The turnstile itself is half the estimate. It needs readers on both sides, an access controller, backed-up power, railings to form the corridor, and a mandatory swing gate — for wheelchair users, bulky loads and evacuation. On a fire alarm the turnstiles must unlock automatically — a code requirement, so the link to the fire alarm goes into the design.",
+            "Integrations turn the entrance into a data source: the attendance link sends the timesheet to the ERP, the CCTV link ties every passage to footage, and anti-passback stops a second person on the same pass.",
           ] },
+          { h: "Cost and rollout", p: [
+            "The budget depends on the type: a tripod is the most affordable; a speed gate costs severalfold more for its mechanics and glass; a rotor sits between, depending on the build. Add installation with floor anchoring, commissioning and rights configuration. An outdoor version with heating is a separate line for gate posts without a pavilion.",
+            "We install ZKTeco and Hikvision turnstiles from Tashkent stock: survey, selection for flow and design, installation in one or two days, integration with access control and attendance, warranty and service across Uzbekistan. The entrance calculation is free.",
+          ] },
+        ],
+        faq: [
+          { q: "Which turnstile for a 50-person office?", a: "Usually one tripod with facial recognition or cards plus a gate. That kit holds the morning flow without queues and covers time tracking." },
+          { q: "What about visitors and couriers?", a: "One-time QR passes to the phone, a call button to reception, or passage through the gate under the guard's control. Guest scenarios are configured in the access system without handing out spare cards." },
+          { q: "Can a tripod be bypassed, and what helps?", a: "Jumping a tripod is physically possible. Where that matters, climb-over sensors with an alarm, a camera on the entrance, or a full-height rotor turnstile — which rules out bypass by design — solve it." },
+          { q: "How does the entrance behave in a fire?", a: "On the fire alarm signal turnstiles unlock, tripod arms drop (anti-panic), gates open. This link is mandatory and is checked at handover." },
         ],
       },
       tr: {
-        title: "Giriş İçin Turnike Nasıl Seçilir",
-        excerpt: "Turnike türleri (tripod, boy turnike, hızlı geçiş), geçiş kapasitesi ve geçiş kontrol entegrasyonu — akışa ve göreve göre seçim.",
+        title: "Turnike Nasıl Seçilir: Tripod, Boy Turnikesi veya Speed Gate",
+        excerpt: "Görevlere göre turnike türleri: tripod nerede yeter, boy turnikesi ne zaman gerekir, iş merkezleri neden speed gate seçer — ve girişin gerçek maliyeti turnikenin ötesinde nelerden oluşur.",
         sections: [
-          { h: "Turnike türleri", p: [
-            "Turnikeler üç ana türdedir: tripodlar (en ekonomik, ofisler ve küçük girişler için), rotorlu ve boy turnikeleri (maksimum güvenlik, kontrollü tesisler için) ve hızlı geçiş kapıları speed gate (iş merkezleri ve yoğun akış için).",
-            "Seçim istenen kontrol düzeyine ve görünüme bağlıdır: bazen tasarruf, bazen prestij ve yüksek kapasite önemlidir.",
+          { h: "Tür, neyi önleyeceğine göre seçilir", p: [
+            "Tripod — üç döner kol — ofisler ve küçük fabrika girişleri için en yaygın ve ekonomik turnikedir. Akışı teker teker düzenler ve geçişleri iyi sayar, ama üzerinden atlamak fiziken mümkündür — tripod, yakında güvenlik veya danışma olan yerde çalışır.",
+            "Boy turnikesi geçişi fiziken dışlar: insan boyunda yapı, üzerinden aşılamaz. Yeri fabrika çevreleri, şantiyeler, stadyumlar ve sürekli görevlisi olmayan uzak girişlerdir. Speed gate'ler — cam kanatlı hızlı geçitler — iş merkezleri ve lobilerin seçimidir: şık, hızlı, şerit başına dakikada 30 kişiye kadar.",
           ] },
-          { h: "Geçiş kapasitesi ve akış", p: [
-            "Tripod dakikada yaklaşık 20–30 kişi geçirir — ofis veya küçük işletme için yeterli. Fabrika girişi veya stadyum için yoğun saatlerde birkaç şerit veya speed gate gerekir.",
-            "Yoğun saatlerde girişte kuyruk oluşmaması için şerit sayısını gerçek akışınıza göre hesaplıyoruz.",
+          { h: "Kimlik doğrulama ve geçiş kapasitesi", p: [
+            "Yöntemi akış belirler. Kart ve anahtarlık ucuz ve alışıldıktır ama sabah dalgası «kartı çantadan çıkar»da tıkanır. Yüz tanıma yürürken geçirir — terminal çalışanı saniyenin kesrinde tanır, eller serbest. QR kod tek seferlik ziyaretçiye uygundur: kart, ziyaretten önce telefona gelir.",
+            "Zirveyi dürüst sayın: 500 kişilik vardiya 20 dakikada giriyorsa birkaç şerit veya hızlı biyometri gerekir; yoksa dışarıda kuyruk garantidir. Seçimde akışı modeller ve girişinize kaç şerit gerektiğini açıkça söyleriz.",
           ] },
-          { h: "Kimlik doğrulama ve entegrasyon", p: [
-            "Turnike geçiş kontrol sistemiyle birlikte çalışır: kart, parmak izi veya yüz tanımayla geçiş, mesai takibi ve CCTV entegrasyonu. Hareket kısıtlı ziyaretçiler için kapı öngörüyoruz.",
-            "Turnikeleri anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          { h: "Girişte turnikeden başka ne var", p: [
+            "Turnikenin kendisi teklifin yarısıdır. İki yönde okuyucular, geçiş kontrolörü, yedekli güç, koridoru oluşturan korkuluklar ve zorunlu çarpma kapısı gerekir — tekerlekli sandalye, hacimli yük ve tahliye için. Yangın alarmında turnikeler otomatik açılmalıdır — norm gereğidir; yangın alarmı bağlantısı projeye konur.",
+            "Entegrasyonlar girişi veri kaynağına çevirir: mesai bağlantısı puantajı ERP'ye yollar, kamera bağlantısı her geçişi görüntüye bağlar, anti-passback aynı kartla ikinci kişiyi durdurur.",
           ] },
+          { h: "Maliyet ve kurulum", p: [
+            "Bütçe türe bağlıdır: tripod en ekonomik; speed gate mekanik ve cam nedeniyle kat kat pahalı; rotor yapıya göre arada. Zemine ankrajlı montajı, devreye almayı ve yetki ayarını ekleyin. Isıtmalı dış mekân modeli, kulübesiz kontrol noktaları için ayrı kalemdir.",
+            "Taşkent stoğundan ZKTeco ve Hikvision turnikeleri kurarız: keşif, akışa ve tasarıma göre seçim, bir-iki günde montaj, geçiş kontrolü ve mesaiyle entegrasyon, tüm Özbekistan'da garanti ve servis. Giriş hesabı ücretsizdir.",
+          ] },
+        ],
+        faq: [
+          { q: "50 kişilik ofise hangi turnike?", a: "Genelde yüz tanımalı veya kartlı tek tripod artı kapı yeter. Bu set sabah akışını kuyruksuz taşır ve mesai takibini kapatır." },
+          { q: "Ziyaretçiler ve kuryeler ne olacak?", a: "Telefona tek seferlik QR kart, resepsiyona çağrı butonu veya güvenlik gözetiminde kapıdan geçiş. Misafir senaryoları fazladan kart dağıtmadan sistemde kurulur." },
+          { q: "Tripod atlanabilir mi, çare ne?", a: "Tripodu atlamak fiziken mümkün. Kritikse alarmlı tırmanma sensörleri, girişe kamera veya boy turnikesi konur — o, atlatmayı yapısal olarak dışlar." },
+          { q: "Yangında giriş nasıl davranır?", a: "Yangın alarmı sinyaliyle turnikeler açılır, tripod kolları düşer (anti-panik), kapılar açılır. Bu bağlantı zorunludur ve teslimde denetlenir." },
         ],
       },
       zh: {
-        title: "如何为出入口选择闸机",
-        excerpt: "闸机类型（三辊闸、全高闸、速通门）、通行能力与门禁集成——如何按人流量和需求选型。",
+        title: "怎么选闸机：三辊闸、全高转闸还是速通门",
+        excerpt: "按任务拆解闸机类型：哪里三辊闸就够，什么时候需要全高转闸，商务中心为什么选速通门——以及通道的真实造价除了闸机还有什么。",
         sections: [
-          { h: "闸机类型", p: [
-            "闸机主要有三类：三辊闸（最经济，适合办公室和小型出入口）、转闸和全高闸（安全性最高，适合管制场所）、速通门（适合商务中心和大人流场所）。",
-            "选择取决于所需的管控级别和外观：有的场合讲究经济，有的场合讲究气派和高通行量。",
+          { h: "类型取决于要防住什么", p: [
+            "三辊闸——三根旋转杆——是办公室和小型厂区门岗最常见、最实惠的闸机。它把人流约束成一人一杆并准确计数，但翻越在物理上可行——三辊闸适合旁边有保安或前台的场合。",
+            "全高转闸从物理上杜绝通行：一人高的笼式结构，翻不过去。它的位置是工厂周界、工地、体育场和无人常驻的远端门岗。速通门——玻璃摆翼的快速通道——是商务中心和大堂的选择：美观、快速，单通道每分钟最多30人。",
           ] },
-          { h: "通行能力与人流", p: [
-            "三辊闸每分钟约通行20–30人——办公室或小型企业足够。工厂大门或体育场高峰时段需要多条通道或速通门。",
-            "我们按实际人流计算通道数量，确保高峰时段入口不排长队。",
+          { h: "识别方式与通行能力", p: [
+            "识别方式由人流决定。卡和钥匙扣便宜又熟悉，但早高峰会卡在「从包里掏卡」上。人脸识别边走边过——终端瞬间认出员工，双手空闲。二维码适合一次性访客：通行证在到访前就发到手机。",
+            "峰值要诚实计算：500人的班次要在20分钟内进场，就需要多条通道或快速生物识别，否则门外排队是必然。选型时我们会做人流模拟，直接告诉您的门岗需要几条通道。",
           ] },
-          { h: "识别方式与系统集成", p: [
-            "闸机与门禁系统联动：刷卡、指纹或人脸识别通行，并与考勤和视频监控集成。同时预留无障碍通道。",
-            "我们在塔什干及乌兹别克斯坦全境提供闸机交钥匙安装——含质保和维护服务。",
+          { h: "通道里除了闸机还有什么", p: [
+            "闸机本身只占预算一半。还需要两侧读卡器、门禁控制器、带备份的电源、构成通道的护栏，以及必配的平开边门——供轮椅、大件货物和疏散使用。火灾报警时闸机必须自动释放——这是规范要求，与火灾报警的联动要写进设计。",
+            "联动让门岗变成数据来源：接考勤后考勤表进入ERP，接视频后每次通行绑定录像，防尾随功能拦住用同一凭证的第二个人。",
           ] },
+          { h: "费用与实施", p: [
+            "预算取决于类型：三辊闸最实惠；速通门因机械结构和玻璃贵出数倍；全高转闸按配置介于两者之间。再加地面锚固安装、调试和权限配置。带加热的室外型是无岗亭卡口的单列项目。",
+            "我们安装塔什干现货的中控智慧（ZKTeco）和海康威视闸机：勘测、按人流和装修风格选型、一至两天安装、对接门禁和考勤，质保和维保覆盖全乌兹别克斯坦。通道方案免费测算。",
+          ] },
+        ],
+        faq: [
+          { q: "50人的办公室装什么闸机？", a: "通常一台人脸或刷卡的三辊闸加一扇边门即可。这套配置扛得住早高峰不排队，还顺带解决考勤。" },
+          { q: "访客和快递怎么办？", a: "发到手机的一次性二维码、呼叫前台的按钮，或在保安监督下走边门。访客场景在门禁系统里配置，无需散发多余卡片。" },
+          { q: "三辊闸能被绕过吗，怎么防？", a: "翻越三辊闸物理上可行。在意这一点的场合装带报警的翻越探测、通道摄像机，或直接上全高转闸——它从结构上杜绝绕行。" },
+          { q: "火灾时通道怎么工作？", a: "收到火灾报警信号后闸机释放，三辊闸落杆（防恐慌），边门打开。这一联动是强制项，交付验收时会检查。" },
         ],
       },
     },
@@ -1933,93 +2033,143 @@ export const ARTICLES: Article[] = [
     related: ["barrier", "anpr", "gates"],
     loc: {
       ru: {
-        title: "Шлагбаум с распознаванием номеров: как работает",
-        excerpt: "Автоматический въезд по номеру автомобиля: как устроена система ANPR, что в неё входит и где применяется.",
+        title: "Шлагбаум с распознаванием номеров: как это работает",
+        excerpt: "Как ANPR-камера открывает шлагбаум своим и не пускает чужих, из чего состоит комплект въезда, что настроить для жильцов и гостей — и почему точность распознавания решается монтажом, а не ценой камеры.",
         sections: [
-          { h: "Как работает автоматический въезд", p: [
-            "Камера ANPR распознаёт госномер подъезжающего автомобиля и, если он в белом списке, шлагбаум открывается сам — без карт, брелоков и охранника. Каждый проезд фиксируется в журнале с фото и временем.",
-            "Это убирает очереди на въезде и человеческий фактор: «свои» машины проезжают за секунды.",
+          { h: "Как устроен автоматический въезд", p: [
+            "Схема проста: ANPR-камера читает номер подъезжающей машины, контроллер сверяет его со списками и, если номер в белом списке, открывает шлагбаум — водитель проезжает, не открывая окна и не доставая пульт. Проезд фиксируется в журнале со снимком: кто, когда, на какой машине.",
+            "Пульты и брелоки при этом никуда не деваются — они остаются резервным способом на случай грязного номера или гостевой машины. Но основной поток идёт «по номеру», и очередь на въезде исчезает: машина не останавливается вовсе.",
           ] },
-          { h: "Что входит в систему", p: [
-            "Шлагбаум с приводом, камера распознавания номеров, контроллер, фотоэлементы безопасности (чтобы стрела не опускалась на машину), пульты для гостей и ПО с белыми и чёрными списками. Для платных парковок добавляется тарификация въезда и выезда.",
-            "Шлагбаум интегрируется со СКУД и системой парковки в единое решение.",
+          { h: "Состав комплекта", p: [
+            "Минимальный въезд: шлагбаум с интенсивным приводом, ANPR-камера, контроллер со списками, фотоэлементы и петлевой детектор — чтобы стрела не опустилась на автомобиль. Для двора жилого дома этого достаточно. Дальше комплект растёт по задачам: вызывная панель для гостей, светофор на узком проезде, вторая камера на выезд, если журнал должен видеть обе стороны.",
+            "Шлагбаум подбирается по ширине проезда и интенсивности: для ЖК и бизнес-центра нужен привод, рассчитанный на тысячи циклов в сутки и работу в мороз и жару. Бытовая модель на интенсивном въезде живёт один сезон — это самая частая ошибка экономии.",
           ] },
-          { h: "Где применяется", p: [
-            "Жилые комплексы, бизнес-центры, паркинги, предприятия и охраняемые территории — везде, где нужен контролируемый и удобный въезд.",
-            "Монтируем шлагбаумы с ANPR под ключ в Ташкенте и по всему Узбекистану — с гарантией и обслуживанием.",
+          { h: "Списки и сценарии: жильцы, гости, должники", p: [
+            "Белый список открывает шлагбаум своим автоматически. Для ЖК настраиваются лимиты машин на квартиру и гостевые часы; для бизнес-центра — зоны арендаторов; для предприятия — окна для грузовиков поставщиков. Гость заезжает по звонку охране, разовой заявке из приложения или QR-коду.",
+            "Чёрный список работает наоборот: нежелательная машина не проедет, а охрана получит уведомление. Для платных парковок добавляется тарификация: время въезда фиксировано, должник не выедет, пока не оплатит — касса самообслуживания или QR-оплата закрывают вопрос без кассира.",
           ] },
+          { h: "Точность распознавания — вопрос монтажа", p: [
+            "Камера с честными 99 % распознавания легко превращается в 80 % кривым монтажом: слишком острый угол к полосе, встречный свет фар, номер перекрывается соседней машиной. Мы ставим камеру под правильным углом и на правильной высоте, с ИК-подсветкой для ночи — и проверяем на реальном потоке, включая грязные и транзитные номера.",
+            "Комплекты Hikvision и Dahua со склада в Ташкенте, монтаж въезда за один-два дня, настройка списков и обучение охраны: добавлять и удалять номера вы будете сами. Гарантия и обслуживание по всему Узбекистану; выезд и расчёт бесплатны.",
+          ] },
+        ],
+        faq: [
+          { q: "Что будет, если номер грязный или не читается?", a: "Работают резервные способы: пульт, звонок охране, вызывная панель. Хорошо смонтированная система читает и загрязнённые номера — критичен угол установки и подсветка." },
+          { q: "Можно ли добавить ANPR к уже стоящему шлагбауму?", a: "Да, чаще всего достаточно камеры и контроллера: существующий привод остаётся. Приезжаем, смотрим модель шлагбаума и геометрию въезда, называем состав и цену." },
+          { q: "Как заезжают гости и такси?", a: "По звонку охране, по разовой заявке жильца из приложения или QR-коду. Для ЖК настраиваются гостевые часы и лимиты — правила определяет управляющая компания." },
+          { q: "Пишется ли журнал въездов и где он хранится?", a: "Каждый проезд фиксируется со снимком, датой и номером. Журнал хранится локально на регистраторе или сервере объекта; глубина архива настраивается под ваши требования." },
         ],
       },
       uz: {
-        title: "Avtoraqamni aniqlaydigan shlagbaum: qanday ishlaydi",
-        excerpt: "Avtomobil raqami bo'yicha avtomatik kirish: ANPR tizimi qanday tuzilgan, unga nima kiradi va qayerda qo'llaniladi.",
+        title: "Raqam taniydigan shlagbaum: bu qanday ishlaydi",
+        excerpt: "ANPR-kamera shlagbaumni o'zinikilarga qanday ochadi va begonalarni kiritmaydi, kirish to'plami nimadan iborat, aholi va mehmonlar uchun nimani sozlash kerak — va nega tanish aniqligi kamera narxi bilan emas, montaj bilan hal bo'ladi.",
         sections: [
-          { h: "Avtomatik kirish qanday ishlaydi", p: [
-            "ANPR kamerasi yaqinlashayotgan avtomobil davlat raqamini aniqlaydi va agar u oq ro'yxatda bo'lsa, shlagbaum o'zi ochiladi — kartasiz, breloksiz va qorovulsiz. Har bir o'tish rasm va vaqt bilan jurnalda qayd etiladi.",
-            "Bu kirishdagi navbat va inson omilini bartaraf etadi: «o'z» mashinalar bir necha soniyada o'tadi.",
+          { h: "Avtomatik kirish qanday tuzilgan", p: [
+            "Sxema oddiy: ANPR-kamera yaqinlashayotgan mashina raqamini o'qiydi, kontroller uni ro'yxatlar bilan solishtiradi va raqam oq ro'yxatda bo'lsa shlagbaumni ochadi — haydovchi oynani ochmasdan va pult olmasdan o'tadi. O'tish surat bilan jurnalga yoziladi: kim, qachon, qaysi mashinada.",
+            "Pult va breloklar hech qayerga ketmaydi — ular iflos raqam yoki mehmon mashinasi uchun zaxira usul bo'lib qoladi. Lekin asosiy oqim «raqam bo'yicha» boradi va kirishdagi navbat yo'qoladi: mashina umuman to'xtamaydi.",
           ] },
-          { h: "Tizimga nima kiradi", p: [
-            "Privodli shlagbaum, raqam aniqlash kamerasi, kontroller, xavfsizlik fotoelementlari (strela mashinaga tushmasligi uchun), mehmonlar uchun pultlar va oq hamda qora ro'yxatli dastur. Pullik avtoturargohlar uchun kirish/chiqish tariflashi qo'shiladi.",
-            "Shlagbaum SKUD va avtoturargoh tizimi bilan yagona yechimga integratsiyalashadi.",
+          { h: "To'plam tarkibi", p: [
+            "Minimal kirish: intensiv privodli shlagbaum, ANPR-kamera, ro'yxatli kontroller, fotoelementlar va petlevoy detektor — strela mashinaga tushmasligi uchun. Turar-joy hovlisiga shu yetadi. Keyin to'plam vazifalarga qarab o'sadi: mehmonlarga chaqiruv paneli, tor o'tish joyiga svetofor, jurnal ikki tomonni ko'rishi kerak bo'lsa chiqishga ikkinchi kamera.",
+            "Shlagbaum o'tish kengligi va intensivligiga tanlanadi: TJM va biznes-markazga kuniga minglab siklga hamda sovuq va issiqda ishlashga mo'ljallangan privod kerak. Intensiv kirishdagi maishiy model bir mavsum yashaydi — bu tejashning eng ko'p uchraydigan xatosi.",
           ] },
-          { h: "Qayerda qo'llaniladi", p: [
-            "Turar-joy majmualari, biznes-markazlar, avtoturargohlar, korxonalar va qo'riqlanadigan hududlar — nazorat qilinadigan va qulay kirish kerak bo'lgan hamma joyda.",
-            "ANPR bilan shlagbaumlarni kalit topshirish asosida montaj qilamiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va xizmat bilan.",
+          { h: "Ro'yxatlar va stsenariylar: aholi, mehmonlar, qarzdorlar", p: [
+            "Oq ro'yxat shlagbaumni o'zinikilarga avtomatik ochadi. TJM uchun kvartiraga mashina limitlari va mehmon soatlari sozlanadi; biznes-markazga — ijarachi zonalari; korxonaga — yetkazuvchi yuk mashinalari oynalari. Mehmon qo'riqqa qo'ng'iroq, ilovadan bir martalik ariza yoki QR-kod bilan kiradi.",
+            "Qora ro'yxat teskari ishlaydi: nomaqbul mashina o'tmaydi, qo'riq xabar oladi. Pullik parkinglarga tarifikatsiya qo'shiladi: kirish vaqti qayd etilgan, qarzdor to'lamaguncha chiqmaydi — o'z-o'ziga xizmat kassasi yoki QR-to'lov masalani kassirsiz yopadi.",
           ] },
+          { h: "Tanish aniqligi — montaj masalasi", p: [
+            "Halol 99 % taniydigan kamera qiyshiq montaj bilan osongina 80 % ga aylanadi: polosaga o'ta o'tkir burchak, qarshi fara nuri, raqamni qo'shni mashina to'sib qo'yishi. Kamerani to'g'ri burchak va balandlikka, kecha uchun IK-yoritish bilan o'rnatamiz — va real oqimda tekshiramiz, iflos va tranzit raqamlar bilan birga.",
+            "Toshkentdagi ombordan Hikvision va Dahua to'plamlari, kirish montaji bir-ikki kun, ro'yxatlarni sozlash va qo'riqni o'rgatish: raqam qo'shish va o'chirishni o'zingiz qilasiz. Kafolat va xizmat butun O'zbekiston bo'ylab; chiqish va hisob bepul.",
+          ] },
+        ],
+        faq: [
+          { q: "Raqam iflos yoki o'qilmasa nima bo'ladi?", a: "Zaxira usullar ishlaydi: pult, qo'riqqa qo'ng'iroq, chaqiruv paneli. Yaxshi montaj qilingan tizim iflos raqamlarni ham o'qiydi — o'rnatish burchagi va yoritish kritik." },
+          { q: "Turgan shlagbaumga ANPR qo'shsa bo'ladimi?", a: "Ha, ko'pincha kamera va kontroller yetadi: mavjud privod qoladi. Kelamiz, shlagbaum modeli va kirish geometriyasini ko'ramiz, tarkib va narxni aytamiz." },
+          { q: "Mehmonlar va taksi qanday kiradi?", a: "Qo'riqqa qo'ng'iroq, aholining ilovadan bir martalik arizasi yoki QR-kod bilan. TJM uchun mehmon soatlari va limitlar sozlanadi — qoidalarni boshqaruvchi kompaniya belgilaydi." },
+          { q: "Kirishlar jurnali yoziladimi va qayerda saqlanadi?", a: "Har o'tish surat, sana va raqam bilan qayd etiladi. Jurnal obyekt registratori yoki serverida lokal saqlanadi; arxiv chuqurligi talablaringizga sozlanadi." },
         ],
       },
       en: {
-        title: "Barrier Gate with Licence Plate Recognition: How It Works",
-        excerpt: "Automatic entry by car number: how an ANPR system works, what it includes and where it is used.",
+        title: "A Barrier with Plate Recognition: How It Works",
+        excerpt: "How an ANPR camera opens the barrier for residents and keeps strangers out, what an entrance kit consists of, what to configure for residents and guests — and why recognition accuracy is decided by installation, not camera price.",
         sections: [
-          { h: "How automatic entry works", p: [
-            "An ANPR camera reads the licence plate of an approaching car and, if it is on the whitelist, the barrier opens by itself — no cards, fobs or guard. Every passage is logged with a photo and timestamp.",
-            "This removes entrance queues and the human factor: authorised cars pass in seconds.",
+          { h: "How an automatic entrance works", p: [
+            "The scheme is simple: an ANPR camera reads the plate of the approaching car, the controller checks it against the lists, and if the plate is whitelisted, the barrier opens — the driver passes without opening a window or reaching for a remote. The passage is logged with a snapshot: who, when, in which car.",
+            "Remotes and fobs do not disappear — they remain the backup for a dirty plate or a guest car. But the main flow goes \"by plate\", and the entrance queue vanishes: cars simply do not stop.",
           ] },
-          { h: "What the system includes", p: [
-            "A motorised barrier, a plate recognition camera, a controller, safety photocells (so the boom never drops onto a car), remotes for guests and software with white and black lists. Paid parking adds entry/exit tariffing.",
-            "The barrier integrates with ACS and the parking system into a single solution.",
+          { h: "What the kit consists of", p: [
+            "A minimal entrance: a barrier with an intensive-duty drive, an ANPR camera, a controller with the lists, photocells and a loop detector — so the boom never drops onto a car. For a residential courtyard that is enough. The kit then grows by task: a call panel for guests, a traffic light on a narrow lane, a second camera on the exit if the log must see both directions.",
+            "The barrier is chosen by lane width and duty: a residential complex or business center needs a drive rated for thousands of cycles a day and for frost and heat. A domestic model at an intensive entrance lives one season — the most common false economy.",
           ] },
-          { h: "Where it is used", p: [
-            "Residential complexes, business centres, car parks, enterprises and guarded territories — anywhere a controlled yet convenient entrance is needed.",
-            "We install ANPR barriers turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          { h: "Lists and scenarios: residents, guests, debtors", p: [
+            "The whitelist opens the barrier for residents automatically. Residential complexes get per-apartment car limits and guest hours; business centers get tenant zones; factories get delivery truck windows. A guest enters by a call to the guard, a one-time request from the app, or a QR code.",
+            "The blacklist works in reverse: an unwanted car does not pass and the guard is notified. Paid parking adds tariffs: the entry time is fixed, and a debtor does not leave until payment — a self-service pay station or QR payment closes the matter without a cashier.",
           ] },
+          { h: "Accuracy is an installation question", p: [
+            "A camera with an honest 99 % recognition rate easily becomes 80 % through poor installation: too sharp an angle to the lane, oncoming headlights, a plate blocked by the next car. We mount the camera at the right angle and height, with IR for the night — and test on real traffic, dirty and transit plates included.",
+            "Hikvision and Dahua kits from Tashkent stock, entrance installation in one or two days, list setup and guard training: you will add and remove plates yourself. Warranty and service across Uzbekistan; the survey and quote are free.",
+          ] },
+        ],
+        faq: [
+          { q: "What if the plate is dirty or unreadable?", a: "The backups work: a remote, a call to the guard, the call panel. A well-installed system reads even dirty plates — the mounting angle and illumination are what matter." },
+          { q: "Can ANPR be added to an existing barrier?", a: "Yes — usually a camera and a controller are enough, the existing drive stays. We come, check the barrier model and entrance geometry, and name the configuration and price." },
+          { q: "How do guests and taxis get in?", a: "By a call to the guard, a resident's one-time request from the app, or a QR code. Residential complexes configure guest hours and limits — the rules are set by the management company." },
+          { q: "Is there an entry log and where is it stored?", a: "Every passage is recorded with a snapshot, date and plate. The log is stored locally on the site's recorder or server; archive depth is configured to your requirements." },
         ],
       },
       tr: {
         title: "Plaka Tanımalı Bariyer: Nasıl Çalışır",
-        excerpt: "Araç plakasıyla otomatik giriş: ANPR sistemi nasıl kurulur, neleri içerir ve nerelerde kullanılır.",
+        excerpt: "ANPR kamera bariyeri sakinlere nasıl açar ve yabancıları nasıl durdurur, giriş seti nelerden oluşur, sakinler ve misafirler için ne ayarlanır — ve tanıma doğruluğu neden kamera fiyatıyla değil montajla belirlenir.",
         sections: [
-          { h: "Otomatik giriş nasıl çalışır", p: [
-            "ANPR kamerası yaklaşan aracın plakasını okur; plaka beyaz listedeyse bariyer kendiliğinden açılır — kartsız, kumandasız ve görevlisiz. Her geçiş fotoğraf ve zamanla kayda alınır.",
-            "Bu, girişteki kuyrukları ve insan faktörünü ortadan kaldırır: kayıtlı araçlar saniyeler içinde geçer.",
+          { h: "Otomatik giriş nasıl kurulu", p: [
+            "Şema basittir: ANPR kamera yaklaşan aracın plakasını okur, kontrolör listelerle karşılaştırır ve plaka beyaz listedeyse bariyer açılır — sürücü cam açmadan, kumandaya uzanmadan geçer. Geçiş fotoğrafla kayda girer: kim, ne zaman, hangi araçla.",
+            "Kumandalar ve anahtarlıklar yok olmaz — kirli plaka veya misafir aracı için yedek yöntem olarak kalır. Ama ana akış «plakayla» gider ve giriş kuyruğu kaybolur: araç hiç durmaz.",
           ] },
-          { h: "Sistem neleri içerir", p: [
-            "Motorlu bariyer, plaka tanıma kamerası, kontrolör, güvenlik fotoselleri (kol araca inmesin diye), misafirler için kumandalar ve beyaz/kara listeli yazılım. Ücretli otoparklara giriş-çıkış tarifelendirmesi eklenir.",
-            "Bariyer, geçiş kontrolü ve otopark sistemiyle tek çözümde birleşir.",
+          { h: "Set nelerden oluşur", p: [
+            "Asgari giriş: yoğun kullanımlı motorlu bariyer, ANPR kamera, listeli kontrolör, fotoseller ve loop dedektörü — kol araca inmesin diye. Konut avlusuna bu yeter. Sonra set göreve göre büyür: misafirlere zil paneli, dar geçide trafik ışığı, kayıt iki yönü de görmeliyse çıkışa ikinci kamera.",
+            "Bariyer, şerit genişliğine ve yoğunluğa göre seçilir: site ve iş merkezine günde binlerce çevrime, dona ve sıcağa dayanan motor gerekir. Yoğun girişteki ev tipi model bir sezon yaşar — en yaygın yanlış tasarruf budur.",
           ] },
-          { h: "Nerelerde kullanılır", p: [
-            "Siteler, iş merkezleri, otoparklar, işletmeler ve korunan alanlar — kontrollü ve pratik girişin gerektiği her yerde.",
-            "ANPR'li bariyerleri anahtar teslim monte ediyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          { h: "Listeler ve senaryolar: sakinler, misafirler, borçlular", p: [
+            "Beyaz liste bariyeri sakinlere otomatik açar. Sitelerde daire başına araç limiti ve misafir saatleri; iş merkezlerinde kiracı bölgeleri; fabrikalarda tedarikçi kamyonu pencereleri ayarlanır. Misafir; güvenliği arayarak, uygulamadan tek seferlik taleple veya QR kodla girer.",
+            "Kara liste tersine çalışır: istenmeyen araç geçmez, güvenlik bildirim alır. Ücretli otoparka tarife eklenir: giriş saati kayıtlıdır, borçlu ödemeden çıkamaz — self-servis kasa veya QR ödeme konuyu kasiyersiz kapatır.",
           ] },
+          { h: "Doğruluk bir montaj sorusudur", p: [
+            "Dürüst %99 tanıyan kamera, kötü montajla kolayca %80'e düşer: şeride fazla keskin açı, karşı far ışığı, yandaki araçça kapatılan plaka. Kamerayı doğru açı ve yüksekliğe, gece için IR ile monte eder ve gerçek trafikte test ederiz — kirli ve transit plakalar dahil.",
+            "Taşkent stoğundan Hikvision ve Dahua setleri, giriş montajı bir-iki gün, liste ayarları ve güvenlik eğitimi: plakaları kendiniz ekleyip sileceksiniz. Tüm Özbekistan'da garanti ve servis; keşif ve teklif ücretsiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Plaka kirliyse veya okunmuyorsa ne olur?", a: "Yedekler devrede: kumanda, güvenliği arama, zil paneli. İyi monte edilmiş sistem kirli plakayı da okur — montaj açısı ve aydınlatma belirleyicidir." },
+          { q: "Mevcut bariyere ANPR eklenir mi?", a: "Evet — çoğu kez kamera ve kontrolör yeter, mevcut motor kalır. Gelir, bariyer modeline ve giriş geometrisine bakar, yapı ve fiyatı söyleriz." },
+          { q: "Misafirler ve taksiler nasıl girer?", a: "Güvenliği arayarak, sakinin uygulamadan tek seferlik talebiyle veya QR kodla. Sitelerde misafir saatleri ve limitler ayarlanır — kuralları yönetim belirler." },
+          { q: "Giriş kaydı tutulur mu, nerede saklanır?", a: "Her geçiş fotoğraf, tarih ve plakayla kaydedilir. Kayıt tesisin kayıt cihazında veya sunucusunda yerel tutulur; arşiv derinliği ihtiyacınıza göre ayarlanır." },
         ],
       },
       zh: {
-        title: "车牌识别道闸：工作原理",
-        excerpt: "按车牌自动放行：ANPR系统如何构成、包含什么、应用在哪些场景。",
+        title: "带车牌识别的道闸：它如何工作",
+        excerpt: "ANPR摄像机如何为业主抬杆、把陌生车辆拦在外面，入口套件由什么组成，业主和访客要配置什么——以及为什么识别率取决于安装而不是摄像机的价格。",
         sections: [
-          { h: "自动放行如何实现", p: [
-            "ANPR摄像机识别驶近车辆的车牌，若在白名单内，道闸自动抬杆——无需卡片、遥控器或保安。每次通行都带照片和时间记录在日志中。",
-            "这消除了入口排队和人为因素：授权车辆几秒内即可通过。",
+          { h: "自动入口的工作原理", p: [
+            "原理很简单：ANPR摄像机读取驶近车辆的号牌，控制器与名单比对，号牌在白名单里就抬杆——司机不开窗、不掏遥控器直接通过。通行连同抓拍记入日志：谁、何时、开哪辆车。",
+            "遥控器和钥匙扣并不会被淘汰——它们仍是号牌脏污或访客车辆时的备用方式。但主流量走「凭号牌」，入口排队就此消失：车辆根本无需停下。",
           ] },
-          { h: "系统包含什么", p: [
-            "电动道闸、车牌识别摄像机、控制器、安全光电（防止闸杆砸到车辆）、访客遥控器，以及带黑白名单的软件。收费停车场还可增加出入口计费。",
-            "道闸可与门禁和停车场系统集成为统一方案。",
+          { h: "套件构成", p: [
+            "最小配置：重载电机的道闸、ANPR摄像机、带名单的控制器、红外对射和地感线圈——闸杆永不砸车。住宅院落这些就够了。之后按需求扩展：给访客的对讲面板、窄车道的信号灯、需要记录双向时在出口加第二台摄像机。",
+            "道闸按车道宽度和使用强度选型：小区和商务中心需要每天数千次循环、耐寒耐热的电机。家用型放在高强度入口只能撑一季——这是最常见的省错钱。",
           ] },
-          { h: "应用场景", p: [
-            "住宅小区、商务中心、停车场、企业和封闭园区——任何需要既受控又便捷出入口的地方。",
-            "我们在塔什干及乌兹别克斯坦全境提供ANPR道闸交钥匙安装——含质保和维护。",
+          { h: "名单与场景：业主、访客、欠费者", p: [
+            "白名单自动为业主抬杆。小区可设每户车位限额和访客时段；商务中心分租户区域；工厂为供应商货车设通行时间窗。访客通过呼叫门卫、业主在应用里的一次性申请或二维码进入。",
+            "黑名单反向工作：不受欢迎的车过不去，门卫同时收到提醒。收费停车场再加计费：入场时间已记录，欠费者缴清才能离场——自助缴费机或扫码支付无人值守解决。",
           ] },
+          { h: "识别率是安装问题", p: [
+            "标称99%识别率的摄像机，安装不当轻松跌到80%：对车道角度太斜、逆着车灯、号牌被邻车遮挡。我们把摄像机装在正确的角度和高度、配夜间红外——并用真实车流验证，包括脏污和外地号牌。",
+            "海康威视和大华套件塔什干现货，入口一至两天装完，配置名单并培训门卫：添加、删除号牌您自己就能做。质保和维保覆盖全乌兹别克斯坦；勘测和报价免费。",
+          ] },
+        ],
+        faq: [
+          { q: "号牌脏了或读不出来怎么办？", a: "备用方式顶上：遥控器、呼叫门卫、对讲面板。安装到位的系统连脏号牌也能读——关键在安装角度和补光。" },
+          { q: "已有的道闸能加装车牌识别吗？", a: "能——通常加一台摄像机和一个控制器就够，原有电机保留。我们上门看道闸型号和入口条件，给出配置和价格。" },
+          { q: "访客和出租车怎么进？", a: "呼叫门卫、业主在应用里发一次性申请，或扫二维码。小区可配置访客时段和限额——规则由物业决定。" },
+          { q: "有进出记录吗，存在哪里？", a: "每次通行都带抓拍、日期和号牌入档。日志存放在现场的录像机或服务器上；保存时长按您的要求配置。" },
         ],
       },
     },
@@ -2030,93 +2180,143 @@ export const ARTICLES: Article[] = [
     related: ["alarm", "cctv"],
     loc: {
       ru: {
-        title: "Охранная сигнализация: как выбрать для дома и офиса",
-        excerpt: "Как работает охранная сигнализация, проводная или беспроводная, и как вывести тревогу на пульт охраны и смартфон.",
+        title: "Как выбрать охранную сигнализацию: проводная или беспроводная",
+        excerpt: "Из чего состоит охранная система, когда беспроводная панель лучше проводной, какие датчики нужны квартире, магазину и складу — и что даёт вывод на пульт охраны против уведомлений на телефон.",
         sections: [
-          { h: "Как работает охранная сигнализация", p: [
-            "Датчики движения, открытия дверей и окон, разбития стекла реагируют на проникновение и передают сигнал на пульт охраны и на ваш смартфон. Тревожная кнопка вызывает помощь мгновенно.",
-            "Система ставится под охрану одним нажатием или по расписанию, а при тревоге включает сирену и оповещение.",
+          { h: "Из чего состоит система", p: [
+            "Ядро — приёмно-контрольная панель: она принимает сигналы датчиков, включает сирену и рассылает тревоги. Вокруг неё — датчики движения, открытия дверей и окон, разбития стекла, тревожная кнопка для персонала и сирены, внутренняя и уличная. Управление — с брелока, клавиатуры, карты или из приложения.",
+            "Датчики подбираются под сценарий проникновения. Датчик открытия ловит дверь в момент взлома, объёмник контролирует комнату целиком, акустический реагирует на звон стекла до того, как кто-то влез. Для дома с котом или собакой берутся иммунные датчики — ложные тревоги отучают пользоваться системой быстрее всего.",
           ] },
           { h: "Проводная или беспроводная", p: [
-            "Беспроводная система ставится без штробления и подходит для готового помещения; проводная надёжнее и закладывается при ремонте. Для большинства квартир и офисов достаточно беспроводной с резервным питанием на случай отключения света.",
-            "Подбираем состав датчиков под планировку: движение в коридорах, открытие на входах, разбитие стекла у витрин.",
+            "Беспроводная панель — например, Hikvision AX PRO — ставится за один день без штробления: датчики на защищённом радиоканале живут от батареек годами и сами сообщают о разряде. Для квартир, готовых офисов и магазинов это стандартный выбор.",
+            "Проводную систему закладывают на этапе стройки или ремонта: кабель в стенах надёжнее радиоканала, датчики не требуют батареек, а стоимость точки ниже. На больших складах и производствах чаще собирают гибрид: проводная база плюс радиодатчики там, куда кабель тянуть дорого.",
           ] },
-          { h: "Вывод на пульт и интеграция", p: [
-            "Сигнализацию можно вывести на пульт вневедомственной или частной охраны и объединить с видеонаблюдением — тревога сопровождается видеозаписью для проверки.",
-            "Устанавливаем охранную сигнализацию под ключ в Ташкенте и по всему Узбекистану — с гарантией и обслуживанием.",
+          { h: "Телефон или пульт охраны", p: [
+            "Уведомления на телефон бесплатны и мгновенны: постановка, снятие, тревога, разряд батареи. Но телефон может быть в беззвучном, а вы — в самолёте. Вывод на пульт охранного предприятия добавляет физическую реакцию: экипаж выезжает по тревоге круглосуточно, независимо от того, видели вы уведомление или нет.",
+            "Рабочая схема для бизнеса — обе линии сразу: тревога уходит и владельцу, и на пульт. Мы настраиваем цепочку уведомлений по нарастающей — пуш, SMS, звонок, — чтобы тревога не потерялась в ночи.",
           ] },
+          { h: "Что выбрать под ваш объект", p: [
+            "Квартира: беспроводная панель, датчики на входную дверь и окна первого-последнего этажей, объёмник в коридоре. Магазин: плюс тревожная кнопка у кассы и акустические датчики на витрины. Склад и производство: гибридная система с периметральным контуром — датчики на ограждении и лучевые барьеры ловят нарушителя до подхода к зданию.",
+            "Сигнализацию связываем с видеонаблюдением: сработка привязывается к записи, и вы видите картинку события ещё до звонка охране. Монтаж квартиры — день, магазина — один-два, склад считаем после бесплатного выезда. Оборудование со склада в Ташкенте, гарантия и обслуживание по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Сработает ли беспроводная система при отключении света?", a: "Да: панель держит встроенный аккумулятор, датчики работают от батареек, тревога уходит по GSM-каналу даже при обрыве интернета. Резерв питания — обязательная часть комплекта." },
+          { q: "Как избежать ложных тревог из-за кота?", a: "Ставятся pet-иммунные датчики движения, игнорирующие животных до определённого веса, и правильно выбирается их высота и зона. Это решённая задача — ложных тревог быть не должно." },
+          { q: "Можно ли поставить сигнализацию только на время отпуска?", a: "Система ставится постоянно, а используется по необходимости: уехали — поставили на охрану со смартфона. Беспроводной комплект при переезде снимается и переносится в новое жильё." },
+          { q: "Что лучше для магазина — сигнализация или камеры?", a: "Это разные задачи: сигнализация мгновенно поднимает тревогу, камеры дают картину и доказательства. В связке сработка привязывается к видео — мы почти всегда рекомендуем обе системы, начиная с приоритетной по бюджету." },
         ],
       },
       uz: {
-        title: "Qo'riqlash signalizatsiyasi: uy va ofis uchun qanday tanlash",
-        excerpt: "Qo'riqlash signalizatsiyasi qanday ishlaydi, simli yoki simsiz, va trevogani qo'riqlash pulti hamda smartfonga qanday chiqarish.",
+        title: "Qo'riqlash signalizatsiyasini qanday tanlash: simli yoki simsiz",
+        excerpt: "Qo'riqlash tizimi nimadan iborat, simsiz panel qachon simlidan yaxshi, kvartira, do'kon va omborga qanday datchiklar kerak — va qo'riq pultiga ulanish telefon xabarlariga nisbatan nima beradi.",
         sections: [
-          { h: "Qo'riqlash signalizatsiyasi qanday ishlaydi", p: [
-            "Harakat, eshik va deraza ochilishi, oyna sinishi datchiklari kirishga javob beradi va signalni qo'riqlash pultiga hamda smartfoningizga uzatadi. Trevoga tugmasi yordamni bir zumda chaqiradi.",
-            "Tizim bir marta bosish yoki jadval bo'yicha qo'riqlashga qo'yiladi, trevogada esa sirena va ogohlantirishni yoqadi.",
+          { h: "Tizim nimadan iborat", p: [
+            "Yadro — qabul-nazorat paneli: u datchik signallarini qabul qiladi, sirenani yoqadi va trevogalarni tarqatadi. Uning atrofida — harakat, eshik-deraza ochilishi, oyna sinishi datchiklari, xodimlar uchun trevoga tugmasi hamda ichki va ko'cha sirenalari. Boshqaruv — brelok, klaviatura, karta yoki ilovadan.",
+            "Datchiklar kirish stsenariysiga tanlanadi. Ochilish datchigi eshikni buzish paytida ushlaydi, hajmiy datchik xonani to'liq nazorat qiladi, akustik kimdir kirmasdan oldin oyna jarangiga javob beradi. Mushuk yoki itli uyga immun datchiklar olinadi — yolg'on trevogalar tizimdan foydalanishdan hammadan tez bezdiradi.",
           ] },
           { h: "Simli yoki simsiz", p: [
-            "Simsiz tizim shtroblashsiz o'rnatiladi va tayyor xonaga mos; simli ishonchliroq va ta'mir vaqtida qo'yiladi. Ko'pchilik kvartira va ofislar uchun svet o'chganda ishlashi uchun zaxira quvvatli simsiz tizim yetarli.",
-            "Datchiklar tarkibini rejaga qarab tanlaymiz: koridorlarda harakat, kirishlarda ochilish, vitrinalar oldida oyna sinishi.",
+            "Simsiz panel — masalan, Hikvision AX PRO — shtroblashsiz bir kunda o'rnatiladi: himoyalangan radiokanaldagi datchiklar batareyadan yillab yashaydi va zaryad tugashini o'zi aytadi. Kvartira, tayyor ofis va do'konlarga bu standart tanlov.",
+            "Simli tizim qurilish yoki ta'mir bosqichida yotqiziladi: devordagi kabel radiokanaldan ishonchliroq, datchiklar batareyka talab qilmaydi, nuqta narxi pastroq. Katta ombor va ishlab chiqarishda ko'proq gibrid yig'iladi: simli baza plyus kabel tortish qimmat joylarga radiodatchiklar.",
           ] },
-          { h: "Pultga chiqarish va integratsiya", p: [
-            "Signalizatsiyani idoraviy yoki xususiy qo'riqlash pultiga chiqarish va videokuzatuv bilan birlashtirish mumkin — trevoga tekshirish uchun videoyozuv bilan hamroh bo'ladi.",
-            "Qo'riqlash signalizatsiyasini kalit topshirish asosida o'rnatamiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va xizmat bilan.",
+          { h: "Telefon yoki qo'riq pulti", p: [
+            "Telefonga xabarlar bepul va bir zumda: qo'yish, olish, trevoga, batareya zaryadi. Lekin telefon ovozsizda, siz esa samolyotda bo'lishingiz mumkin. Qo'riqlash korxonasi pultiga ulanish jismoniy javob qo'shadi: ekipaj xabarni ko'rgan-ko'rmaganingizdan qat'i nazar kecha-kunduz trevoga bo'yicha chiqadi.",
+            "Biznes uchun ishlaydigan sxema — ikkala liniya birdan: trevoga ham egaga, ham pultga ketadi. Xabarlar zanjirini kuchayib boradigan qilib sozlaymiz — push, SMS, qo'ng'iroq — trevoga tunda yo'qolib qolmasligi uchun.",
           ] },
+          { h: "Obyektingizga nimani tanlash", p: [
+            "Kvartira: simsiz panel, kirish eshigi va birinchi-oxirgi qavat derazalariga datchiklar, koridorga hajmiy datchik. Do'kon: plyus kassa yonida trevoga tugmasi va vitrinalarga akustik datchiklar. Ombor va ishlab chiqarish: perimetr konturli gibrid tizim — to'siqdagi datchiklar va nurli barerlar buzg'unchini binoga yetmasdan ushlaydi.",
+            "Signalizatsiyani videokuzatuv bilan bog'laymiz: ishga tushish yozuvga bog'lanadi va hodisa tasvirini qo'riqqa qo'ng'iroqdan oldin ko'rasiz. Kvartira montaji — bir kun, do'kon — bir-ikki, omborni bepul chiqishdan keyin hisoblaymiz. Uskuna Toshkentdagi ombordan, kafolat va xizmat butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "Svet o'chganda simsiz tizim ishlaydimi?", a: "Ha: panel ichki akkumulyator ushlaydi, datchiklar batareyadan ishlaydi, trevoga internet uzilganda ham GSM-kanal orqali ketadi. Quvvat zaxirasi — to'plamning majburiy qismi." },
+          { q: "Mushuk tufayli yolg'on trevogalardan qanday qochish mumkin?", a: "Ma'lum vazngacha hayvonlarni e'tiborsiz qoldiradigan pet-immun harakat datchiklari qo'yiladi, balandlik va zona to'g'ri tanlanadi. Bu yechilgan masala — yolg'on trevoga bo'lmasligi kerak." },
+          { q: "Signalizatsiyani faqat ta'til vaqtiga qo'ysa bo'ladimi?", a: "Tizim doimiy o'rnatiladi, kerak bo'lganda ishlatiladi: ketdingiz — smartfondan qo'riqlashga qo'ydingiz. Simsiz to'plam ko'chishda yechib olinib, yangi uyga ko'chiriladi." },
+          { q: "Do'konga nima yaxshi — signalizatsiya yoki kameralar?", a: "Bular har xil vazifalar: signalizatsiya bir zumda trevoga ko'taradi, kameralar manzara va dalil beradi. Bog'lamda ishga tushish videoga bog'lanadi — deyarli doim ikkala tizimni tavsiya qilamiz, byudjet bo'yicha ustuvoridan boshlab." },
         ],
       },
       en: {
-        title: "Intruder Alarm: How to Choose One for Home and Office",
-        excerpt: "How an intruder alarm works, wired or wireless, and how to route alerts to a monitoring station and your smartphone.",
+        title: "How to Choose a Burglar Alarm: Wired or Wireless",
+        excerpt: "What a security system consists of, when a wireless panel beats a wired one, which sensors an apartment, a shop and a warehouse need — and what central monitoring adds over phone notifications.",
         sections: [
-          { h: "How an intruder alarm works", p: [
-            "Motion, door/window opening and glass-break sensors react to intrusion and send the signal to a monitoring station and to your smartphone. A panic button summons help instantly.",
-            "The system arms with one tap or on a schedule, and on alarm triggers the siren and notifications.",
+          { h: "What the system consists of", p: [
+            "The core is the control panel: it receives sensor signals, sounds the siren and sends out alarms. Around it are motion sensors, door and window contacts, glass-break detectors, a panic button for staff, and indoor and outdoor sirens. Control is by fob, keypad, card or app.",
+            "Sensors are chosen for the intrusion scenario. A contact catches the door at the moment of forcing, a motion detector covers the whole room, an acoustic sensor reacts to breaking glass before anyone climbs in. Homes with a cat or dog get pet-immune detectors — false alarms turn people off a system faster than anything.",
           ] },
           { h: "Wired or wireless", p: [
-            "A wireless system installs without chasing walls and suits a finished space; wired is more reliable and goes in during renovation. For most apartments and offices a wireless system with backup power for outages is enough.",
-            "We select the sensor set for your layout: motion in corridors, opening at entrances, glass-break by shop windows.",
+            "A wireless panel — Hikvision AX PRO, for example — installs in a day with no chasing: sensors on an encrypted radio link run on batteries for years and report low charge themselves. For apartments, finished offices and shops this is the standard choice.",
+            "A wired system is laid during construction or renovation: cable in the walls is more robust than radio, sensors need no batteries, and the per-point cost is lower. Large warehouses and factories more often get a hybrid: a wired base plus radio sensors where pulling cable is expensive.",
           ] },
-          { h: "Monitoring station and integration", p: [
-            "The alarm can be routed to a state or private security company and combined with CCTV — each alert comes with video for verification.",
-            "We install intruder alarms turnkey in Tashkent and across Uzbekistan — with warranty and service.",
+          { h: "Phone or monitoring station", p: [
+            "Phone notifications are free and instant: arming, disarming, alarm, low battery. But the phone may be on silent and you may be on a plane. A monitoring company connection adds physical response: a crew rolls out on alarm around the clock, whether you saw the notification or not.",
+            "The working scheme for a business is both lines at once: the alarm goes to the owner and to the station. We chain notifications in escalation — push, SMS, call — so an alarm cannot get lost in the night.",
           ] },
+          { h: "What fits your site", p: [
+            "An apartment: a wireless panel, contacts on the entrance door and the windows of the first and top floors, a motion detector in the hallway. A shop: plus a panic button at the till and acoustic sensors on the display windows. A warehouse or factory: a hybrid system with a perimeter loop — fence sensors and beam barriers catch the intruder before he reaches the building.",
+            "We link the alarm to CCTV: an activation ties to footage, and you see the event before calling security. An apartment takes a day to install, a shop one or two; a warehouse is quoted after a free survey. Equipment from Tashkent stock, warranty and service across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "Does a wireless system work during a power cut?", a: "Yes: the panel has a built-in battery, sensors run on their own batteries, and the alarm goes out over GSM even if the internet is down. Backup power is a mandatory part of the kit." },
+          { q: "How do we avoid false alarms from the cat?", a: "Pet-immune motion detectors ignore animals up to a set weight, and mounting height and zones are chosen properly. This is a solved problem — there should be no false alarms." },
+          { q: "Can the alarm be used only during vacations?", a: "The system is installed permanently and used as needed: leaving — arm it from the smartphone. A wireless kit can be taken down and moved to a new home." },
+          { q: "What is better for a shop — an alarm or cameras?", a: "Different jobs: the alarm raises the alert instantly, cameras give the picture and the evidence. Linked, an activation ties to video — we almost always recommend both, starting with whichever the budget prioritises." },
         ],
       },
       tr: {
-        title: "Hırsız Alarmı: Ev ve Ofis İçin Nasıl Seçilir",
-        excerpt: "Hırsız alarmı nasıl çalışır, kablolu mu kablosuz mu, alarm merkezi ve telefona bildirim nasıl yönlendirilir.",
+        title: "Hırsız Alarmı Nasıl Seçilir: Kablolu mu Kablosuz mu",
+        excerpt: "Alarm sistemi nelerden oluşur, kablosuz panel kabloludan ne zaman iyidir, daireye, mağazaya ve depoya hangi sensörler gerekir — ve izleme merkezi bağlantısı telefon bildirimine göre ne katar.",
         sections: [
-          { h: "Hırsız alarmı nasıl çalışır", p: [
-            "Hareket, kapı-pencere açılma ve cam kırılma sensörleri izinsiz girişe tepki verir; sinyal alarm merkezine ve telefonunuza iletilir. Panik butonu yardımı anında çağırır.",
-            "Sistem tek dokunuşla veya programla kurulur; alarm durumunda siren ve bildirimleri devreye alır.",
+          { h: "Sistem nelerden oluşur", p: [
+            "Çekirdek, kontrol panelidir: sensör sinyallerini alır, sireni çalar ve alarmları dağıtır. Çevresinde hareket sensörleri, kapı-pencere kontakları, cam kırılma dedektörleri, personel için panik butonu ile iç ve dış sirenler vardır. Kontrol kumanda, tuş takımı, kart veya uygulamayladır.",
+            "Sensörler giriş senaryosuna göre seçilir. Kontak, kapıyı zorlanma anında yakalar; hareket dedektörü odanın tamamını kapsar; akustik sensör biri içeri girmeden cam sesine tepki verir. Kedili köpekli evlere evcil hayvan bağışık dedektörler alınır — yanlış alarm, insanı sistemden her şeyden hızlı soğutur.",
           ] },
           { h: "Kablolu mu kablosuz mu", p: [
-            "Kablosuz sistem duvar kırmadan kurulur ve hazır mekâna uygundur; kablolu daha güvenilirdir ve tadilatta döşenir. Çoğu daire ve ofis için elektrik kesintisine karşı yedek beslemeli kablosuz sistem yeterlidir.",
-            "Sensör setini plana göre seçiyoruz: koridorlarda hareket, girişlerde açılma, vitrinlerde cam kırılma.",
+            "Kablosuz panel — örneğin Hikvision AX PRO — kırım olmadan bir günde kurulur: şifreli radyo bağlantısındaki sensörler pille yıllarca çalışır ve düşük şarjı kendileri bildirir. Daireler, bitmiş ofisler ve mağazalar için standart seçim budur.",
+            "Kablolu sistem inşaat veya tadilatta döşenir: duvardaki kablo radyodan sağlamdır, sensörler pil istemez, nokta maliyeti düşüktür. Büyük depo ve fabrikalarda daha çok hibrit kurulur: kablolu taban artı kablo çekmenin pahalı olduğu yerlere telsiz sensörler.",
           ] },
-          { h: "Alarm merkezi ve entegrasyon", p: [
-            "Alarm, resmi veya özel güvenlik şirketinin merkezine bağlanabilir ve CCTV ile birleştirilebilir — her alarm doğrulama için video kaydıyla gelir.",
-            "Hırsız alarmını anahtar teslim kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve servisle.",
+          { h: "Telefon mu izleme merkezi mi", p: [
+            "Telefon bildirimleri ücretsiz ve anlıktır: kurma, çözme, alarm, düşük pil. Ama telefon sessizde, siz uçakta olabilirsiniz. İzleme merkezi bağlantısı fiziksel müdahale ekler: bildirimi görseniz de görmeseniz de ekip 7/24 alarma çıkar.",
+            "İşletme için çalışan şema ikisidir: alarm hem sahibine hem merkeze gider. Bildirimleri tırmanan zincirle kurarız — push, SMS, arama — alarm gecede kaybolmasın diye.",
           ] },
+          { h: "Tesisinize ne uyar", p: [
+            "Daire: kablosuz panel, giriş kapısına ve ilk-son kat pencerelerine kontaklar, koridora hareket dedektörü. Mağaza: artı kasada panik butonu ve vitrinlere akustik sensörler. Depo ve fabrika: çevre halkalı hibrit sistem — çit sensörleri ve ışın bariyerleri davetsizi binaya varmadan yakalar.",
+            "Alarmı kameralara bağlarız: tetikleme görüntüye bağlanır, olayı güvenliği aramadan görürsünüz. Daire kurulumu bir gün, mağaza bir-iki; depo ücretsiz keşiften sonra fiyatlanır. Ekipman Taşkent stoğundan; tüm Özbekistan'da garanti ve servis.",
+          ] },
+        ],
+        faq: [
+          { q: "Elektrik kesintisinde kablosuz sistem çalışır mı?", a: "Evet: panelde dahili akü vardır, sensörler kendi pilleriyle çalışır, alarm internet kesik olsa da GSM üzerinden gider. Yedek güç setin zorunlu parçasıdır." },
+          { q: "Kedi yüzünden yanlış alarm nasıl önlenir?", a: "Belirli ağırlığa dek hayvanı yok sayan bağışık dedektörler konur; yükseklik ve bölgeler doğru seçilir. Bu çözülmüş bir sorundur — yanlış alarm olmamalıdır." },
+          { q: "Alarm yalnız tatilde kullanılabilir mi?", a: "Sistem kalıcı kurulur, gerektiğinde kullanılır: çıktınız — telefondan kurdunuz. Kablosuz set taşınırken sökülüp yeni eve taşınabilir." },
+          { q: "Mağazaya hangisi iyi — alarm mı kameralar mı?", a: "Farklı işler: alarm anında haber verir, kameralar tabloyu ve kanıtı sunar. Bağlandığında tetikleme videoya bağlanır — neredeyse hep ikisini öneririz, bütçenin önceliklediğinden başlayarak." },
         ],
       },
       zh: {
-        title: "防盗报警：住宅和办公室如何选择",
-        excerpt: "防盗报警如何工作、有线还是无线、如何把警情推送到保安中心和手机。",
+        title: "防盗报警怎么选：有线还是无线",
+        excerpt: "报警系统由什么组成，无线主机什么时候优于有线，公寓、商店和仓库各需要哪些传感器——以及接入联网中心比手机推送多了什么。",
         sections: [
-          { h: "防盗报警如何工作", p: [
-            "移动、门窗开启和玻璃破碎传感器对入侵作出反应，将信号发送到保安中心和您的手机。紧急按钮可立即呼叫援助。",
-            "系统可一键布防或按时间表布防，报警时启动警笛和通知。",
+          { h: "系统由什么组成", p: [
+            "核心是报警主机：接收传感器信号、鸣响警笛、分发警情。围绕它的是移动传感器、门窗磁、玻璃破碎探测器、供员工用的紧急按钮，以及室内外警笛。控制方式有遥控、键盘、刷卡或手机应用。",
+            "传感器按入侵场景选择。门磁在撬门瞬间报警，红外探测器覆盖整个房间，声学探测器在有人爬进来之前就对玻璃碎裂作出反应。养猫狗的家庭用防宠物探测器——误报比什么都更快让人弃用系统。",
           ] },
           { h: "有线还是无线", p: [
-            "无线系统无需开槽即可安装，适合已装修空间；有线更可靠，应在装修时敷设。大多数公寓和办公室配备带停电备用电源的无线系统即可。",
-            "我们按户型配置传感器：走廊装移动侦测、入口装门磁、橱窗旁装玻璃破碎探测。",
+            "无线主机——例如海康威视 AX PRO——一天装好、无需开槽：加密无线信道上的传感器用电池能撑数年，电量不足自动上报。公寓、已装修办公室和商店的标准选择就是它。",
+            "有线系统在建造或装修阶段敷设：墙里的线缆比无线更可靠，传感器不用换电池，单点成本更低。大型仓库和工厂更多用混合方案：有线为主，拉线太贵的位置用无线传感器。",
           ] },
-          { h: "接入保安中心与联动", p: [
-            "报警可接入国家或私人保安公司的接警中心，并与视频监控联动——每次报警都附带录像以便核实。",
-            "我们在塔什干及乌兹别克斯坦全境提供防盗报警交钥匙安装——含质保和维护。",
+          { h: "手机推送还是联网中心", p: [
+            "手机通知免费且即时：布防、撤防、报警、低电量。但手机可能静音，您可能在飞机上。接入保安公司联网中心增加了实体处置：无论您是否看到通知，巡逻队全天候按警情出动。",
+            "对企业行之有效的方案是两条线并用：警情同时发给业主和联网中心。我们把通知配成逐级升级的链条——推送、短信、电话——警报不会消失在深夜里。",
           ] },
+          { h: "按您的场所怎么配", p: [
+            "公寓：无线主机、入户门和首层顶层窗户装门磁、走廊装红外。商店：再加收银台紧急按钮和橱窗的声学探测器。仓库和工厂：带周界防线的混合系统——围栏传感器和对射光栅在入侵者接近建筑之前就发现他。",
+            "报警与视频监控联动：触发即绑定录像，打电话给保安之前就能看到现场。公寓一天装完，商店一到两天，仓库免费勘测后报价。设备塔什干现货，质保和维保覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "停电时无线系统还能用吗？", a: "能：主机内置电池，传感器用自己的电池，断网时警情通过GSM通道照发。备用电源是套件的必备部分。" },
+          { q: "怎么避免猫引起的误报？", a: "使用能忽略一定体重以下动物的防宠物探测器，并选对安装高度和探测区。这是已解决的问题——不应该有误报。" },
+          { q: "能只在度假时用报警吗？", a: "系统常装常备，按需使用：出门时用手机一键布防。无线套装搬家时可拆下带到新居。" },
+          { q: "商店装报警还是装摄像机好？", a: "两者任务不同：报警即时示警，摄像机提供画面和证据。联动后触发绑定录像——我们几乎总是建议两套都上，按预算先装优先级高的。" },
         ],
       },
     },
