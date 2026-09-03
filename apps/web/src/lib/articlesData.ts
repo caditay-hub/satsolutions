@@ -3178,10 +3178,19 @@ export const ARTICLES: Article[] = [
             "Дом или небольшой офис: решает бюджет — смотрите HiLook/Imou либо младшие серии, разницы в надёжности практически нет. Магазин, склад, производство: берите серии с аналитикой (AcuSense/WizSense) — фильтрация ложных срабатываний экономит часы просмотра архива. Крупный объект с интеграцией СКУД и домофонии: выбирайте бренд, в экосистеме которого будет вся система, и закладывайте это в проект.",
             "Смешивать бренды можно — камеры работают по ONVIF с чужими регистраторами, — но умная аналитика полноценно раскрывается только в родной экосистеме. Поэтому наш совет: один объект — один бренд.",
           ] },
+          { h: "Сервис и прошивки в Узбекистане", p: [
+            "Оба бренда официально представлены в регионе, но зрелость сервиса отличается по конкретным линейкам: перед покупкой стоит проверить не «бренд вообще», а доступность запчастей и сроки гарантийного ремонта именно вашей модели. Мы держим на складе ходовые камеры и регистраторы обеих марок, поэтому замена по гарантии занимает дни, а не недели ожидания поставки.",
+            "Отдельный пункт — прошивки: у Hikvision и Dahua региональные версии ПО различаются, и камера с «серого» рынка может не обновляться или не активироваться в облаке. Покупайте у поставщика, который отвечает за происхождение устройства — это дешевле, чем разбираться с заблокированной партией камер на смонтированном объекте.",
+          ] },
           { h: "Вывод", p: [
             "Неправильного выбора здесь нет: и Hikvision, и Dahua — надёжные рабочие лошадки. Правильный вопрос — не «какой бренд лучше», а «какая модель решает вашу задачу за ваш бюджет». Пришлите план объекта — подберём конфигурацию в обеих марках и покажете разницу в цифрах: и по цене, и по функциям.",
           ] },
         ],
+          faq: [
+            { q: "Можно ли смешивать камеры Hikvision и Dahua в одной системе?", a: "Да, по стандарту ONVIF камеры обеих марок подключаются к любому регистратору, но фирменная аналитика и умный поиск работают полноценно только в родной экосистеме. Для новых объектов мы советуем один бренд." },
+            { q: "Какой бренд дешевле при равных характеристиках?", a: "Разница в цене на сопоставимых моделях обычно в пределах 5–15% и меняется от партии к партии. Решает не прайс, а задача: аналитика, интеграция с СКУД, требования заказчика." },
+            { q: "Что с санкционными ограничениями этих брендов?", a: "Ограничения США на госзакупки не действуют в Узбекистане: для коммерческих и частных объектов обе марки продаются и обслуживаются официально." },
+          ],
       },
       uz: {
         title: "Hikvision yoki Dahua: videokuzatuv uchun qaysi birini tanlash",
@@ -3200,10 +3209,19 @@ export const ARTICLES: Article[] = [
             "Uy yoki kichik ofis: byudjet hal qiladi — HiLook/Imou yoki kichik seriyalarni ko'ring. Do'kon, ombor, ishlab chiqarish: analitikali seriyalarni oling (AcuSense/WizSense) — yolg'on signallarni filtrlash arxivni ko'rish soatlarini tejaydi. SKUD va domofon bilan integratsiyalangan yirik obyekt: butun tizim bo'ladigan ekotizim brendini tanlang.",
             "Brendlarni aralashtirish mumkin — kameralar ONVIF orqali begona registratorlar bilan ishlaydi, — lekin aqlli analitika faqat o'z ekotizimida to'liq ochiladi. Shuning uchun maslahatimiz: bitta obyekt — bitta brend.",
           ] },
+          { h: "O'zbekistonda servis va proshivkalar", p: [
+            "Ikkala brend ham mintaqada rasmiy mavjud, lekin servis yetukligi liniyalarga qarab farq qiladi: xariddan oldin «brendni umuman» emas, aynan sizning modelingiz uchun ehtiyot qismlar va kafolat ta'miri muddatlarini tekshirish kerak. Biz omborda ikkala markaning yurimli kamera va registratorlarini saqlaymiz, shuning uchun kafolat bo'yicha almashtirish haftalab kutish emas, kunlar masalasi.",
+            "Alohida band — proshivkalar: Hikvision va Dahua da dasturiy ta'minotning mintaqaviy versiyalari farq qiladi, «kulrang» bozordan kelgan kamera yangilanmasligi yoki bulutda faollashmasligi mumkin. Qurilma kelib chiqishiga javob beradigan yetkazib beruvchidan oling — bu montaj qilingan obyektda bloklangan kamera partiyasi bilan ovora bo'lishdan arzonroq.",
+          ] },
           { h: "Xulosa", p: [
             "Bu yerda noto'g'ri tanlov yo'q: Hikvision ham, Dahua ham ishonchli. To'g'ri savol — «qaysi brend yaxshiroq» emas, «qaysi model sizning vazifangizni sizning byudjetingizda hal qiladi». Obyekt rejasini yuboring — ikkala markada konfiguratsiya tanlab, farqni raqamlarda ko'rsatamiz.",
           ] },
         ],
+          faq: [
+            { q: "Bitta tizimda Hikvision va Dahua kameralarini aralashtirish mumkinmi?", a: "Ha, ONVIF standarti bo'yicha ikkala marka kameralari istalgan registratorga ulanadi, lekin firmaviy analitika va aqlli qidiruv faqat o'z ekotizimida to'liq ishlaydi. Yangi obyektlarga bitta brendni tavsiya qilamiz." },
+            { q: "Teng xususiyatlarda qaysi brend arzonroq?", a: "Solishtirma modellarda narx farqi odatda 5–15% ichida va partiyadan partiyaga o'zgaradi. Praysning o'zi emas, vazifa hal qiladi: analitika, SKUD bilan integratsiya, buyurtmachi talablari." },
+            { q: "Bu brendlarning sanksiya cheklovlari bilan nima gap?", a: "AQShning davlat xaridlariga cheklovlari O'zbekistonda amal qilmaydi: tijorat va xususiy obyektlar uchun ikkala marka rasmiy sotiladi va xizmat ko'rsatiladi." },
+          ],
       },
       en: {
         title: "Hikvision vs Dahua: Which to Choose for Video Surveillance",
@@ -3222,10 +3240,19 @@ export const ARTICLES: Article[] = [
             "Home or small office: budget decides — look at HiLook/Imou or junior series; reliability is practically identical. Shop, warehouse, production: take analytics series (AcuSense/WizSense) — false-alarm filtering saves hours of archive review. Large site with access control and intercom integration: pick the brand whose ecosystem will host the whole system.",
             "Mixing brands is possible — cameras work with third-party recorders via ONVIF — but smart analytics only unfolds fully inside its native ecosystem. Our advice: one site — one brand.",
           ] },
+          { h: "Service and firmware in Uzbekistan", p: [
+            "Both brands are officially present in the region, yet service maturity differs by product line: before buying, check not the brand in general but parts availability and warranty turnaround for your specific model. We stock popular cameras and recorders of both makes, so a warranty swap takes days rather than weeks of waiting for a shipment.",
+            "Firmware is a separate point: Hikvision and Dahua ship regional software builds, and a grey-market camera may refuse updates or cloud activation. Buy from a supplier who answers for the device's origin — that is cheaper than untangling a blocked batch of cameras on an already-installed site.",
+          ] },
           { h: "Conclusion", p: [
             "There is no wrong choice here: both Hikvision and Dahua are reliable workhorses. The right question is not \"which brand is better\" but \"which model solves your task within your budget\". Send us your site plan — we will spec both brands and show you the difference in numbers.",
           ] },
         ],
+          faq: [
+            { q: "Can Hikvision and Dahua cameras be mixed in one system?", a: "Yes, via the ONVIF standard cameras of both makes connect to any recorder, but native analytics and smart search work fully only inside their own ecosystem. For new sites we advise a single brand." },
+            { q: "Which brand is cheaper at equal specs?", a: "The price gap on comparable models is usually within 5–15% and shifts from batch to batch. The task decides, not the price list: analytics, access-control integration, the client's requirements." },
+            { q: "What about sanctions on these brands?", a: "US government-procurement restrictions do not apply in Uzbekistan: for commercial and private sites both makes are sold and serviced officially." },
+          ],
       },
       tr: {
         title: "Hikvision mi Dahua mı: Video Gözetim İçin Hangisi",
@@ -3244,10 +3271,19 @@ export const ARTICLES: Article[] = [
             "Ev veya küçük ofis: bütçe belirler — HiLook/Imou veya alt serilere bakın. Mağaza, depo, üretim: analitikli serileri alın — yanlış alarm filtreleme arşiv incelemede saatler kazandırır. Geçiş kontrolü ve interkom entegrasyonlu büyük saha: tüm sistemin çalışacağı ekosistemin markasını seçin.",
             "Markaları karıştırmak mümkün — kameralar ONVIF ile üçüncü taraf kayıt cihazlarıyla çalışır — ancak akıllı analitik yalnızca kendi ekosisteminde tam açılır. Önerimiz: bir saha — bir marka.",
           ] },
+          { h: "Özbekistan'da servis ve yazılımlar", p: [
+            "İki marka da bölgede resmî olarak var, ancak servis olgunluğu ürün serisine göre değişir: satın almadan önce genel markayı değil, tam olarak modelinizin yedek parça bulunurluğunu ve garanti onarım süresini kontrol edin. İki markanın da yaygın kamera ve kayıt cihazlarını stokta tutuyoruz; garanti değişimi haftalarca sevkiyat beklemek yerine günler sürer.",
+            "Yazılım ayrı bir konu: Hikvision ve Dahua bölgesel yazılım sürümleri kullanır; gri pazardan gelen kamera güncellenmeyebilir veya bulutta etkinleşmeyebilir. Cihazın menşeinden sorumlu bir tedarikçiden alın — kurulu sahada bloke olmuş kamera partisiyle uğraşmaktan ucuzdur.",
+          ] },
           { h: "Sonuç", p: [
             "Burada yanlış seçim yok: Hikvision da Dahua da güvenilirdir. Doğru soru \"hangi marka daha iyi\" değil, \"hangi model görevi bütçenizde çözer\". Saha planınızı gönderin — iki markada da konfigürasyon çıkarıp farkı rakamlarla gösterelim.",
           ] },
         ],
+          faq: [
+            { q: "Hikvision ve Dahua kameralar tek sistemde karışabilir mi?", a: "Evet, ONVIF standardıyla iki markanın kameraları her kayıt cihazına bağlanır; ancak markaya özel analitik ve akıllı arama yalnızca kendi ekosisteminde tam çalışır. Yeni sahalar için tek marka öneriyoruz." },
+            { q: "Eşit özelliklerde hangi marka daha ucuz?", a: "Karşılaştırılabilir modellerde fark genelde %5–15 içindedir ve partiden partiye değişir. Fiyat listesi değil, görev belirler: analitik, geçiş kontrolü entegrasyonu, müşteri gereksinimleri." },
+            { q: "Bu markaların yaptırım kısıtlamaları ne durumda?", a: "ABD'nin kamu alımı kısıtlamaları Özbekistan'da geçerli değildir: ticari ve özel sahalarda iki marka da resmî satılır ve servis görür." },
+          ],
       },
       zh: {
         title: "海康威视还是大华：视频监控该选哪个品牌",
@@ -3266,10 +3302,19 @@ export const ARTICLES: Article[] = [
             "家庭或小型办公室：预算决定——看 HiLook/Imou 或入门系列即可。商店、仓库、工厂：选带智能分析的系列——误报过滤能节省大量查录像时间。需要门禁和对讲集成的大型项目：选择整个系统所在生态的品牌。",
             "混用品牌可行——摄像机可通过 ONVIF 接入第三方录像机——但智能分析只有在原生生态中才能完全发挥。我们的建议：一个项目——一个品牌。",
           ] },
+          { h: "乌兹别克斯坦的服务与固件", p: [
+            "两个品牌在本地区都有官方渠道，但服务成熟度因产品线而异：购买前要核实的不是“品牌整体”，而是您那款型号的备件供应和保修周期。我们库存两家的热门摄像机和录像机，保修更换以天计，而不是等货数周。",
+            "固件是另一个要点：海康和大华的软件分区域版本，水货摄像机可能无法升级或无法云激活。请从对设备来源负责的供应商处购买——这比在已装好的项目上处理被锁定的一批摄像机便宜得多。",
+          ] },
           { h: "结论", p: [
             "这里没有错误的选择：海康威视和大华都是可靠的主力。正确的问题不是“哪个品牌更好”，而是“哪个型号在您的预算内解决您的任务”。把项目平面图发给我们——我们按两个品牌分别配置，用数字给您看差异。",
           ] },
         ],
+          faq: [
+            { q: "海康和大华的摄像机能混用在一套系统里吗？", a: "可以，通过ONVIF标准两家的摄像机都能接任意录像机，但原厂智能分析和智能检索只有在自家生态里才完整可用。新项目我们建议只选一个品牌。" },
+            { q: "同等规格下哪家更便宜？", a: "可比型号的差价通常在5–15%以内，且随批次波动。决定因素是需求而非报价单：智能分析、门禁联动、甲方要求。" },
+            { q: "这两个品牌的制裁限制影响吗？", a: "美国的政府采购限制在乌兹别克斯坦不适用：商业和民用项目上两家都正常销售并提供官方服务。" },
+          ],
       },
     },
   },
@@ -3293,14 +3338,19 @@ export const ARTICLES: Article[] = [
           { h: "Когда что выбирать", p: [
             "Новый объект с нуля — почти всегда IP: прокладываете витую пару, ставите PoE-коммутатор, получаете запас на годы и полноценную аналитику. Модернизация старой аналоговой системы — HDCVI: меняете камеры и регистратор, кабели остаются, бюджет в 1,5–2 раза ниже. Смешанный случай — гибридный XVR-регистратор: принимает и аналоговые, и IP-камеры, позволяя переходить на цифру поэтапно.",
           ] },
-          { h: "Вывод", p: [
-            "Технология — не религия, а инструмент под бюджет и состояние объекта. Мы монтируем и то и другое: пришлите фото объекта или план — посчитаем оба варианта, и вы сравните не абстракции, а конкретные сметы.",
-          ] },
           { h: "Гибрид на практике: как объекты переходят на IP", p: [
             "Реальные объекты редко бывают «чистыми»: типичный магазин живёт с аналоговыми камерами по коаксиалу и хочет добавить пару IP с распознаванием на вход. Это штатная схема — гибридный регистратор принимает оба типа, и апгрейд идёт поэтапно, без остановки записи и замены всей проводки.",
             "Планируя переход, начните с зон, где важна детализация: вход, касса, периметр. Старый аналог остаётся в подсобках и коридорах до конца своего ресурса. Мы считаем такие миграции регулярно — приезжайте с планом объекта или зовите инженера, маршрут перехода будет бесплатным.",
           ] },
+          { h: "Вывод", p: [
+            "Технология — не религия, а инструмент под бюджет и состояние объекта. Мы монтируем и то и другое: пришлите фото объекта или план — посчитаем оба варианта, и вы сравните не абстракции, а конкретные сметы.",
+          ] },
         ],
+          faq: [
+            { q: "Можно ли подключить старые аналоговые камеры к новой IP-системе?", a: "Да, через гибридный регистратор (XVR): он принимает и аналоговые, и IP-каналы. Так объект переходит на IP поэтапно, не выбрасывая работающие камеры." },
+            { q: "Правда ли, что аналоговая камера надёжнее в простых условиях?", a: "Она проще: нет сетевых настроек, прошивок и IP-адресов, картинка идёт по коаксиалу напрямую. Но и возможностей минимум — ни аналитики, ни удалённого доступа без регистратора." },
+            { q: "Какая разница в цене на систему из 4 камер?", a: "Аналоговый комплект обойдётся примерно на 20–30% дешевле, но разрыв сокращается: массовые IP-камеры подешевели, а выигрыш в детализации и аналитике окупает разницу уже на первом инциденте." },
+          ],
       },
       uz: {
         title: "IP yoki analog kamera (HDCVI): nimani tanlash",
@@ -3317,14 +3367,19 @@ export const ARTICLES: Article[] = [
           { h: "Qachon nimani tanlash", p: [
             "Noldan yangi obyekt — deyarli har doim IP: o'ralgan juftlik yotqizasiz, PoE-kommutator qo'yasiz, yillarga zaxira va to'liq analitika olasiz. Eski analog tizimni yangilash — HDCVI: kamera va registratorni almashtirasiz, kabellar qoladi, byudjet 1,5–2 barobar past. Aralash holat — gibrid XVR-registrator: ham analog, ham IP-kameralarni qabul qiladi.",
           ] },
-          { h: "Xulosa", p: [
-            "Texnologiya — din emas, byudjet va obyekt holatiga mos vosita. Biz ikkalasini ham o'rnatamiz: obyekt suratini yoki rejasini yuboring — ikkala variantni hisoblaymiz, siz esa mavhumlikni emas, aniq smetalarni taqqoslaysiz.",
-          ] },
           { h: "Amaliyotda gibrid: obyektlar IP ga qanday o'tadi", p: [
             "Real obyektlar kamdan-kam «toza» bo'ladi: tipik do'kon koaksialdagi analog kameralar bilan yashaydi va kirishga tanishli bir juft IP qo'shmoqchi. Bu shtatniy sxema — gibrid registrator ikkala turni qabul qiladi, apgreyd yozuvni to'xtatmasdan va butun simlarni almashtirmasdan bosqichma-bosqich boradi.",
             "O'tishni rejalashtirganda detalizatsiya muhim zonalardan boshlang: kirish, kassa, perimetr. Eski analog resursi tugaguncha yordamchi xona va koridorlarda qoladi. Bunday migratsiyalarni muntazam hisoblaymiz — obyekt plani bilan keling yoki muhandisni chaqiring, o'tish marshruti bepul bo'ladi.",
           ] },
+          { h: "Xulosa", p: [
+            "Texnologiya — din emas, byudjet va obyekt holatiga mos vosita. Biz ikkalasini ham o'rnatamiz: obyekt suratini yoki rejasini yuboring — ikkala variantni hisoblaymiz, siz esa mavhumlikni emas, aniq smetalarni taqqoslaysiz.",
+          ] },
         ],
+          faq: [
+            { q: "Eski analog kameralarni yangi IP-tizimga ulash mumkinmi?", a: "Ha, gibrid registrator (XVR) orqali: u analog kanallarni ham, IP-kanallarni ham qabul qiladi. Shunday qilib obyekt ishlayotgan kameralarni tashlamasdan IP ga bosqichma-bosqich o'tadi." },
+            { q: "Analog kamera oddiy sharoitda ishonchliroq degani rostmi?", a: "U soddaroq: tarmoq sozlamalari, proshivkalar va IP-manzillar yo'q, tasvir koaksial orqali to'g'ridan-to'g'ri boradi. Lekin imkoniyatlar ham minimal — na analitika, na registratorsiz masofaviy kirish." },
+            { q: "4 kamerali tizimda narx farqi qancha?", a: "Analog komplekt taxminan 20–30% arzonroq chiqadi, lekin farq qisqaryapti: ommaviy IP-kameralar arzonlashdi, detallashtirish va analitikadagi yutuq esa farqni birinchi hodisadayoq oqlaydi." },
+          ],
       },
       en: {
         title: "IP or Analog (HDCVI) Camera: Which to Choose",
@@ -3341,14 +3396,19 @@ export const ARTICLES: Article[] = [
           { h: "When to choose which", p: [
             "A brand-new site — almost always IP: lay twisted pair, install a PoE switch, and you get headroom for years plus full analytics. Upgrading an old analog system — HDCVI: replace cameras and the recorder, keep the cabling, and the budget is 1.5–2× lower. Mixed case — a hybrid XVR recorder accepts both analog and IP cameras, letting you migrate gradually.",
           ] },
-          { h: "Conclusion", p: [
-            "Technology is not a religion — it is a tool matched to your budget and the state of the site. We install both: send a photo or plan of your site and we will price both options, so you compare real estimates, not abstractions.",
-          ] },
           { h: "Hybrid in practice: how sites move to IP", p: [
             "Real sites are rarely \"pure\": a typical shop lives with analog cameras over coax and wants to add a couple of IP units with recognition at the entrance. That is a standard scheme — a hybrid recorder accepts both types, and the upgrade goes in stages without stopping recording or replacing all the wiring.",
             "When planning the move, start with the zones where detail matters: the entrance, the till, the perimeter. The old analog stays in back rooms and corridors until the end of its life. We calculate such migrations regularly — come with a site plan or call an engineer; the migration route is free.",
           ] },
+          { h: "Conclusion", p: [
+            "Technology is not a religion — it is a tool matched to your budget and the state of the site. We install both: send a photo or plan of your site and we will price both options, so you compare real estimates, not abstractions.",
+          ] },
         ],
+          faq: [
+            { q: "Can old analog cameras join a new IP system?", a: "Yes, via a hybrid recorder (XVR): it accepts both analog and IP channels. That way a site migrates to IP in stages without discarding working cameras." },
+            { q: "Is an analog camera really more reliable in simple setups?", a: "It is simpler: no network settings, firmware or IP addresses, the picture runs straight over coax. But capabilities are minimal too — no analytics, no remote access without a recorder." },
+            { q: "What is the price gap for a 4-camera system?", a: "An analog kit comes out roughly 20–30% cheaper, but the gap is closing: mainstream IP cameras got cheaper, and the gain in detail and analytics pays the difference back at the first incident." },
+          ],
       },
       tr: {
         title: "IP mi Analog (HDCVI) Kamera mı: Hangisini Seçmeli",
@@ -3365,14 +3425,19 @@ export const ARTICLES: Article[] = [
           { h: "Ne zaman hangisi", p: [
             "Sıfırdan yeni saha — neredeyse her zaman IP: bükümlü çift çekin, PoE switch koyun, yıllarca yedek kapasite ve tam analitik kazanın. Eski analog sistemi yenileme — HDCVI: kamera ve kayıt cihazını değiştirin, kablolar kalsın; bütçe 1,5–2 kat düşer. Karma durum — hibrit XVR hem analog hem IP kameraları kabul eder, kademeli geçiş sağlar.",
           ] },
-          { h: "Sonuç", p: [
-            "Teknoloji din değil, bütçeye ve sahanın durumuna göre seçilen bir araçtır. İkisini de kuruyoruz: sahanızın fotoğrafını veya planını gönderin, iki seçeneği de fiyatlandıralım — soyutlamaları değil somut teklifleri karşılaştırın.",
-          ] },
           { h: "Pratikte hibrit: tesisler IP'ye nasıl geçer", p: [
             "Gerçek tesisler nadiren «saf» olur: tipik mağaza koaksiyeldeki analog kameralarla yaşar ve girişe tanımalı birkaç IP eklemek ister. Bu standart şemadır — hibrit kayıt cihazı iki tipi de kabul eder; yükseltme, kaydı durdurmadan ve tüm kabloyu değiştirmeden aşamalı gider.",
             "Geçişi planlarken detayın önemli olduğu bölgelerden başlayın: giriş, kasa, çevre. Eski analog, ömrü bitene dek arka odalarda ve koridorlarda kalır. Bu tür geçişleri düzenli hesaplıyoruz — tesis planıyla gelin veya mühendis çağırın; geçiş rotası ücretsizdir.",
           ] },
+          { h: "Sonuç", p: [
+            "Teknoloji din değil, bütçeye ve sahanın durumuna göre seçilen bir araçtır. İkisini de kuruyoruz: sahanızın fotoğrafını veya planını gönderin, iki seçeneği de fiyatlandıralım — soyutlamaları değil somut teklifleri karşılaştırın.",
+          ] },
         ],
+          faq: [
+            { q: "Eski analog kameralar yeni IP sisteme bağlanır mı?", a: "Evet, hibrit kayıt cihazı (XVR) ile: hem analog hem IP kanalları kabul eder. Böylece saha, çalışan kameraları atmadan IP'ye kademeli geçer." },
+            { q: "Basit koşullarda analog kamera gerçekten daha mı güvenilir?", a: "Daha basittir: ağ ayarı, yazılım ve IP adresi yoktur; görüntü koaksiyelden doğrudan gider. Ama yetenekler de asgaridir — ne analitik ne de kayıt cihazsız uzaktan erişim." },
+            { q: "4 kameralı sistemde fiyat farkı ne kadar?", a: "Analog set yaklaşık %20–30 ucuza çıkar, ama makas kapanıyor: yaygın IP kameralar ucuzladı; detay ve analitik kazancı, farkı ilk olayda geri öder." },
+          ],
       },
       zh: {
         title: "IP摄像机还是模拟（HDCVI）摄像机：如何选择",
@@ -3389,14 +3454,19 @@ export const ARTICLES: Article[] = [
           { h: "什么场景选什么", p: [
             "全新项目——几乎总是IP：布网线、装PoE交换机，获得多年余量和完整分析功能。旧模拟系统改造——HDCVI：只换摄像机和录像机，线缆保留，预算低1.5–2倍。混合场景——XVR混合录像机同时接模拟和IP摄像机，可分步过渡。",
           ] },
-          { h: "结论", p: [
-            "技术不是信仰，而是匹配预算和现场条件的工具。两种我们都安装：把现场照片或平面图发给我们，两个方案都报价——您比较的将是具体预算，而非抽象概念。",
-          ] },
           { h: "混合方案的实践：现场怎样过渡到IP", p: [
             "真实的现场很少「纯粹」：典型的商店用同轴模拟摄像机过日子，又想在入口加两台带识别的IP机。这是标准方案——混合录像机两种都收，升级分阶段进行，录像不中断、线路不必全换。",
             "规划过渡时，从需要细节的区域开始：入口、收银台、周界。老的模拟机留在后仓和走廊，用到寿终正寝。这类迁移我们经常核算——带着平面图来，或叫工程师上门，过渡路线图免费。",
           ] },
+          { h: "结论", p: [
+            "技术不是信仰，而是匹配预算和现场条件的工具。两种我们都安装：把现场照片或平面图发给我们，两个方案都报价——您比较的将是具体预算，而非抽象概念。",
+          ] },
         ],
+          faq: [
+            { q: "旧的模拟摄像机能接进新的IP系统吗？", a: "能，用混合录像机（XVR）：它同时接模拟通道和IP通道。这样项目可以分阶段迁移到IP，不必扔掉还能用的摄像机。" },
+            { q: "简单场景下模拟摄像机真的更可靠吗？", a: "它更简单：没有网络配置、固件和IP地址，图像走同轴线直达。但功能也是最低限度——没有智能分析，离开录像机就没有远程访问。" },
+            { q: "4路系统的价差有多大？", a: "模拟套装大约便宜20–30%，但差距在缩小：主流IP摄像机降价了，而清晰度和智能分析的优势在第一次事件时就能赚回差价。" },
+          ],
       },
     },
   },
@@ -3419,14 +3489,19 @@ export const ARTICLES: Article[] = [
             "Нужен учёт рабочего времени и недорогая проходная — ZKTeco: дешевле, быстрее внедряется, отчёты для бухгалтерии сразу. Нужна единая система безопасности с видео, СКУД и домофонией — Hikvision: дороже на старте, но один подрядчик, одна платформа и меньше «зоопарка» в обслуживании.",
             "Важный практический момент — интеграция с 1С и кадровыми системами: обе марки интегрируются, но состав работ отличается, поэтому требования к отчётам стоит зафиксировать до выбора железа, а не после.",
           ] },
-          { h: "Вывод", p: [
-            "ZKTeco — про биометрию и учёт времени за разумные деньги, Hikvision — про единую экосистему безопасности. Мы внедряем обе марки, включая интеграцию с 1С и зарплатными модулями: расскажите, какие отчёты и сценарии прохода вам нужны — предложим конфигурацию в двух вариантах с ценами.",
-          ] },
           { h: "Цены и наш практический выбор", p: [
             "По бюджету ZKTeco выигрывает в классике «дверь + учёт времени»: терминалы дешевле при сопоставимой точности, и для проходной на 50–500 человек это самый частый выбор. Hikvision берёт своё там, где биометрия — часть большой системы: единая платформа с камерами, домофонами и турникетами, один журнал и один интерфейс для охраны.",
             "Наша практика: офисы и производства чаще получают ZKTeco по соотношению цена/функции, объекты с развитым видеонаблюдением Hikvision — терминалы того же вендора. Оба варианта со склада в Ташкенте; привозим на объект, показываем скорость распознавания вживую и считаем комплект бесплатно.",
           ] },
+          { h: "Вывод", p: [
+            "ZKTeco — про биометрию и учёт времени за разумные деньги, Hikvision — про единую экосистему безопасности. Мы внедряем обе марки, включая интеграцию с 1С и зарплатными модулями: расскажите, какие отчёты и сценарии прохода вам нужны — предложим конфигурацию в двух вариантах с ценами.",
+          ] },
         ],
+          faq: [
+            { q: "Работают ли терминалы ZKTeco и Hikvision с 1С и зарплатными системами?", a: "Да, у обоих есть SDK и выгрузка событий; данные учёта рабочего времени передаются в 1С или кадровую систему. Мы делаем такие интеграции — уточните вашу конфигурацию." },
+            { q: "Распознавание лиц работает в темноте и в маске?", a: "Современные терминалы обеих марок используют ИК-подсветку и распознают лицо в темноте; с медицинской маской работают старшие модели, но точность ниже — надёжнее комбинировать лицо с картой или отпечатком." },
+            { q: "Сколько сотрудников выдерживает один терминал?", a: "Базовые модели хранят 500–3000 шаблонов лиц, старшие — десятки тысяч. Для проходной на сотни человек важнее скорость распознавания: терминал должен пропускать поток без очереди, это мы проверяем при подборе." },
+          ],
       },
       uz: {
         title: "ZKTeco yoki Hikvision: SKUD va ish vaqtini hisobga olish uchun biometriya",
@@ -3442,14 +3517,19 @@ export const ARTICLES: Article[] = [
             "Ish vaqtini hisobga olish va arzon o'tish joyi kerak — ZKTeco: arzonroq, tezroq joriy etiladi, buxgalteriya uchun hisobotlar darhol. Video, SKUD va domofoniya bilan yagona xavfsizlik tizimi kerak — Hikvision: boshida qimmatroq, lekin bitta pudratchi, bitta platforma.",
             "Muhim amaliy jihat — 1C va kadr tizimlari bilan integratsiya: ikkala marka ham integratsiyalanadi, lekin ishlar tarkibi farq qiladi, shuning uchun hisobot talablarini uskuna tanlashdan OLDIN belgilash kerak.",
           ] },
-          { h: "Xulosa", p: [
-            "ZKTeco — oqilona pulga biometriya va vaqt hisobi haqida, Hikvision — yagona xavfsizlik ekotizimi haqida. Biz ikkala markani, shu jumladan 1C va ish haqi modullari bilan integratsiyani joriy etamiz: qanday hisobot va o'tish stsenariylari kerakligini ayting — narxlari bilan ikki variantda konfiguratsiya taklif qilamiz.",
-          ] },
           { h: "Narxlar va bizning amaliy tanlovimiz", p: [
             "Byudjet bo'yicha ZKTeco «eshik + vaqt hisobi» klassikasida yutadi: terminallar taqqoslanadigan aniqlikda arzonroq, 50–500 kishilik prohodnayaga bu eng ko'p tanlov. Hikvision biometriya katta tizimning qismi bo'lgan joyda o'zinikini oladi: kameralar, domofonlar va turniketlar bilan yagona platforma, qo'riq uchun bitta jurnal va bitta interfeys.",
             "Amaliyotimiz: ofis va ishlab chiqarishlar narx/funksiya nisbatida ko'proq ZKTeco oladi, rivojlangan Hikvision videokuzatuvli obyektlar — o'sha vendor terminallarini. Ikkala variant Toshkentdagi ombordan; obyektga olib kelamiz, tanish tezligini jonli ko'rsatamiz va to'plamni bepul hisoblaymiz.",
           ] },
+          { h: "Xulosa", p: [
+            "ZKTeco — oqilona pulga biometriya va vaqt hisobi haqida, Hikvision — yagona xavfsizlik ekotizimi haqida. Biz ikkala markani, shu jumladan 1C va ish haqi modullari bilan integratsiyani joriy etamiz: qanday hisobot va o'tish stsenariylari kerakligini ayting — narxlari bilan ikki variantda konfiguratsiya taklif qilamiz.",
+          ] },
         ],
+          faq: [
+            { q: "ZKTeco va Hikvision terminallari 1C va oylik tizimlari bilan ishlaydimi?", a: "Ha, ikkalasida ham SDK va hodisalarni yuklash bor; ish vaqti hisobi ma'lumotlari 1C yoki kadrlar tizimiga uzatiladi. Biz bunday integratsiyalarni qilamiz — konfiguratsiyangizni aniqlashtiring." },
+            { q: "Yuzni tanish qorong'ida va niqobda ishlaydimi?", a: "Ikkala markaning zamonaviy terminallari IK-yoritishdan foydalanadi va yuzni qorong'ida taniydi; tibbiy niqob bilan katta modellar ishlaydi, lekin aniqlik pastroq — yuzni karta yoki barmoq izi bilan birlashtirish ishonchliroq." },
+            { q: "Bitta terminal nechta xodimni ko'taradi?", a: "Bazaviy modellar 500–3000 yuz shablonini saqlaydi, kattalari — o'n minglab. Yuzlab odamlik prohodnoyda tanish tezligi muhimroq: terminal oqimni navbatsiz o'tkazishi kerak, buni tanlashda tekshiramiz." },
+          ],
       },
       en: {
         title: "ZKTeco or Hikvision: Biometrics for Access Control and Time Attendance",
@@ -3465,14 +3545,19 @@ export const ARTICLES: Article[] = [
             "Need time attendance and an affordable entrance — ZKTeco: cheaper, faster to deploy, accounting-ready reports immediately. Need a unified security system with video, access control and intercoms — Hikvision: pricier at the start, but one contractor, one platform and less of a \"zoo\" to maintain.",
             "One practical point — integration with 1C and HR systems: both brands integrate, but the scope of work differs, so lock down your reporting requirements before choosing hardware, not after.",
           ] },
-          { h: "Conclusion", p: [
-            "ZKTeco is about biometrics and time tracking for sensible money; Hikvision is about a unified security ecosystem. We deploy both, including 1C and payroll integration: tell us which reports and entry scenarios you need — we will propose two configurations with prices.",
-          ] },
           { h: "Prices and our practical pick", p: [
             "On budget, ZKTeco wins the classic \"door + time attendance\" case: terminals are cheaper at comparable accuracy, and for a 50–500 person entrance it is the most frequent choice. Hikvision takes over where biometrics is part of a bigger system: one platform with cameras, intercoms and turnstiles, one log and one interface for security.",
             "Our practice: offices and factories more often get ZKTeco for price/features, while sites with an established Hikvision CCTV setup get the same vendor's terminals. Both are in Tashkent stock; we bring them to your site, demonstrate recognition speed live and quote the kit for free.",
           ] },
+          { h: "Conclusion", p: [
+            "ZKTeco is about biometrics and time tracking for sensible money; Hikvision is about a unified security ecosystem. We deploy both, including 1C and payroll integration: tell us which reports and entry scenarios you need — we will propose two configurations with prices.",
+          ] },
         ],
+          faq: [
+            { q: "Do ZKTeco and Hikvision terminals work with 1C and payroll systems?", a: "Yes, both offer SDKs and event export; time-attendance data flows into 1C or an HR system. We build such integrations — tell us your configuration." },
+            { q: "Does face recognition work in the dark and with a mask?", a: "Modern terminals of both makes use IR illumination and recognize faces in the dark; higher-end models handle medical masks, though accuracy drops — combining face with a card or fingerprint is more reliable." },
+            { q: "How many employees can one terminal handle?", a: "Entry models store 500–3,000 face templates, senior ones — tens of thousands. For a checkpoint with hundreds of people recognition speed matters more: the terminal must pass the flow without queues, which we verify during selection." },
+          ],
       },
       tr: {
         title: "ZKTeco mu Hikvision mı: Geçiş Kontrolü ve Mesai Takibi İçin Biyometri",
@@ -3488,14 +3573,19 @@ export const ARTICLES: Article[] = [
             "Mesai takibi ve uygun fiyatlı giriş gerekiyorsa — ZKTeco: daha ucuz, daha hızlı devreye alınır, muhasebe raporları hazırdır. Video, geçiş kontrolü ve interkomlu bütünleşik güvenlik sistemi gerekiyorsa — Hikvision: başlangıçta daha pahalı ama tek yüklenici, tek platform.",
             "Pratik bir nokta — 1C ve İK sistemleriyle entegrasyon: iki marka da entegre olur ancak iş kapsamı farklıdır; rapor gereksinimlerini donanım seçiminden ÖNCE netleştirin.",
           ] },
-          { h: "Sonuç", p: [
-            "ZKTeco makul paraya biyometri ve mesai takibi; Hikvision bütünleşik güvenlik ekosistemi demektir. İkisini de kuruyoruz, 1C ve bordro entegrasyonu dahil: hangi raporlara ve geçiş senaryolarına ihtiyacınız olduğunu söyleyin — fiyatlarıyla iki konfigürasyon önerelim.",
-          ] },
           { h: "Fiyatlar ve pratikte bizim seçimimiz", p: [
             "Bütçede ZKTeco, klasik «kapı + mesai» senaryosunu kazanır: terminaller benzer doğrulukta daha ucuzdur ve 50–500 kişilik giriş için en sık seçimdir. Hikvision, biyometrinin büyük sistemin parçası olduğu yerde öne geçer: kameralar, diafonlar ve turnikelerle tek platform, güvenlik için tek kayıt ve tek arayüz.",
             "Pratiğimiz: ofisler ve fabrikalar fiyat/özellik oranıyla çoğunlukla ZKTeco alır; oturmuş Hikvision kamera altyapısı olan tesisler aynı üreticinin terminallerini seçer. İkisi de Taşkent stoğunda; tesise getirir, tanıma hızını canlı gösterir ve seti ücretsiz hesaplarız.",
           ] },
+          { h: "Sonuç", p: [
+            "ZKTeco makul paraya biyometri ve mesai takibi; Hikvision bütünleşik güvenlik ekosistemi demektir. İkisini de kuruyoruz, 1C ve bordro entegrasyonu dahil: hangi raporlara ve geçiş senaryolarına ihtiyacınız olduğunu söyleyin — fiyatlarıyla iki konfigürasyon önerelim.",
+          ] },
         ],
+          faq: [
+            { q: "ZKTeco ve Hikvision terminalleri 1C ve bordro sistemleriyle çalışır mı?", a: "Evet, ikisinde de SDK ve olay aktarımı var; mesai verileri 1C'ye veya İK sistemine akar. Bu entegrasyonları yapıyoruz — konfigürasyonunuzu iletin." },
+            { q: "Yüz tanıma karanlıkta ve maskeyle çalışır mı?", a: "İki markanın güncel terminalleri IR aydınlatma kullanır ve karanlıkta yüzü tanır; üst modeller tıbbi maskeyle çalışır ama doğruluk düşer — yüzü kart ya da parmak iziyle birleştirmek daha güvenilirdir." },
+            { q: "Bir terminal kaç çalışanı kaldırır?", a: "Giriş modelleri 500–3000 yüz şablonu tutar, üst modeller on binlerce. Yüzlerce kişilik girişte tanıma hızı daha önemlidir: terminal akışı kuyruksuz geçirmeli; seçimde bunu doğruluyoruz." },
+          ],
       },
       zh: {
         title: "中控智慧还是海康威视：门禁与考勤的生物识别方案",
@@ -3511,14 +3601,19 @@ export const ARTICLES: Article[] = [
             "需要考勤和经济型通道——选ZKTeco：更便宜、部署更快、财务报表即刻可用。需要视频、门禁、对讲一体的统一安防系统——选海康威视：起步贵一些，但只有一个承包商、一个平台，维护更省心。",
             "一个实用要点——与1C及人事系统的集成：两家都能对接，但工作量不同，因此报表需求要在选硬件之前敲定，而不是之后。",
           ] },
-          { h: "结论", p: [
-            "ZKTeco代表花合理的钱做生物识别和考勤；海康威视代表统一的安防生态。两个品牌我们都做，包括1C和工资模块对接：告诉我们您需要哪些报表和通行场景——我们给出两套带价格的配置方案。",
-          ] },
           { h: "价格与我们的实战选择", p: [
             "论预算，ZKTeco赢在「门禁＋考勤」的经典场景：精度相当、终端更便宜，50–500人的门岗它是最常见的选择。当生物识别是大系统的一环时，海康威视占优：与摄像机、对讲和闸机同平台，保安只看一个日志、一个界面。",
             "我们的实践：办公室和工厂按性价比多选ZKTeco；已有成熟海康威视监控的场所选同厂终端。两种都是塔什干现货；带到现场实测识别速度，套件免费核算。",
           ] },
+          { h: "结论", p: [
+            "ZKTeco代表花合理的钱做生物识别和考勤；海康威视代表统一的安防生态。两个品牌我们都做，包括1C和工资模块对接：告诉我们您需要哪些报表和通行场景——我们给出两套带价格的配置方案。",
+          ] },
         ],
+          faq: [
+            { q: "ZKTeco和海康的终端能对接1C和薪资系统吗？", a: "能，两家都提供SDK和事件导出；考勤数据可传入1C或人事系统。这类集成我们来做——告诉我们您的配置即可。" },
+            { q: "人脸识别在黑暗中、戴口罩时好用吗？", a: "两家的现代终端都带红外补光，黑暗中可识别人脸；高端型号支持医用口罩但精度下降——人脸加刷卡或指纹组合更稳妥。" },
+            { q: "一台终端能承载多少员工？", a: "入门型号存500–3000个人脸模板，高端型号数万。对几百人的门岗更关键的是识别速度：终端必须让人流不排队通过，选型时我们会实测。" },
+          ],
       },
     },
   },
@@ -3542,10 +3637,19 @@ export const ARTICLES: Article[] = [
             "Вариант с БП: 8 блоков питания, 8 розеток (монтаж!), простой коммутатор, ИБП поставить практически некуда. Вариант с PoE: один PoE-коммутатор на 8+ портов, один ИБП в шкафу, ноль дополнительных розеток. По деньгам разница на старте небольшая, а по стоимости владения PoE выигрывает: меньше точек отказа, резервирование в одном месте, удалённое управление.",
             "Единственное, что важно посчитать заранее, — бюджет мощности PoE: сумма потребления всех камер (обычные — 5–7 Вт, PTZ и с подогревом — 15–25 Вт) должна укладываться в бюджет коммутатора с запасом 20–30%.",
           ] },
+          { h: "Типичные ошибки при выборе питания", p: [
+            "Главная ошибка — считать порты, а не ватты: коммутатор «8 портов PoE» с бюджетом 65 Вт не вытянет восемь камер с ИК-подсветкой и обогревом по 12–15 Вт каждая. Всегда складывайте максимальное потребление всех камер и оставляйте запас 20–30% — зимой подсветка и обогрев работают одновременно.",
+            "Вторая ошибка — пассивный PoE вместо стандарта: дешёвые «PoE-инжекторы» подают напряжение без согласования и способны сжечь порт камеры, рассчитанной на 802.3af/at. Третья — длина: за пределами 100 метров по меди нужен либо удлинитель PoE, либо оптика с медиаконвертером, а не «авось дотянет».",
+          ] },
           { h: "Вывод", p: [
             "До 2–3 камер на готовых розетках — блоки питания допустимы. От 3–4 камер и в любой системе, которая должна работать при отключении света, — PoE без вариантов. Поможем подобрать PoE-коммутатор под ваше количество камер и посчитать бюджет мощности — напишите нам в чат или Telegram.",
           ] },
         ],
+          faq: [
+            { q: "Можно ли питать по PoE не только камеры?", a: "Да: точки Wi-Fi, IP-телефоны, домофонные панели и контроллеры СКУД тоже питаются по стандартному PoE — одна инфраструктура закрывает всю слаботочку." },
+            { q: "Что будет, если мощности коммутатора не хватит?", a: "Коммутатор отключит порты с наименьшим приоритетом или камеры начнут перезагружаться ночью при включении ИК-подсветки — плавающая неисправность, которую сложно диагностировать." },
+            { q: "PoE-коммутатор нужно заземлять?", a: "Да, как и любое активное оборудование: заземление и грозозащита на уличных линиях защищают и коммутатор, и камеры — особенно на длинных трассах между зданиями." },
+          ],
       },
       uz: {
         title: "PoE-kommutator yoki quvvat bloklari: kameralar uchun nima amaliyroq",
@@ -3562,10 +3666,19 @@ export const ARTICLES: Article[] = [
             "Bloklar bilan: 8 quvvat bloki, 8 rozetka (montaj!), oddiy kommutator, UPS qo'yishga deyarli joy yo'q. PoE bilan: 8+ portli bitta PoE-kommutator, shkafda bitta UPS, nol qo'shimcha rozetka. Boshida puldagi farq katta emas, egalik qiymati bo'yicha PoE yutadi: nosozlik nuqtalari kamroq, zaxiralash bir joyda.",
             "Oldindan hisoblash muhim bo'lgan yagona narsa — PoE quvvat byudjeti: barcha kameralar iste'moli yig'indisi (oddiylari — 5–7 Vt, PTZ va isitgichlilari — 15–25 Vt) kommutator byudjetiga 20–30% zaxira bilan sig'ishi kerak.",
           ] },
+          { h: "Quvvatlashni tanlashdagi tipik xatolar", p: [
+            "Asosiy xato — vatt emas, portlarni sanash: 65 Vt byudjetli «8 port PoE» kommutator har biri 12–15 Vt bo'lgan IK-yoritish va isitishli sakkiz kamerani tortmaydi. Doim barcha kameralarning maksimal iste'molini qo'shing va 20–30% zaxira qoldiring — qishda yoritish va isitish bir vaqtda ishlaydi.",
+            "Ikkinchi xato — standart o'rniga passiv PoE: arzon «PoE-injektorlar» kuchlanishni kelishuvsiz beradi va 802.3af/at ga mo'ljallangan kamera portini kuydirishi mumkin. Uchinchisi — uzunlik: mis orqali 100 metrdan nariga PoE uzaytirgich yoki mediakonvertorli optika kerak, «yetib borar» emas.",
+          ] },
           { h: "Xulosa", p: [
             "Tayyor rozetkalarda 2–3 kameragacha — quvvat bloklari joiz. 3–4 kameradan boshlab va svet o'chganda ishlashi kerak bo'lgan har qanday tizimda — variantsiz PoE. Kameralaringiz soniga mos PoE-kommutator tanlash va quvvat byudjetini hisoblashda yordam beramiz — chat yoki Telegram orqali yozing.",
           ] },
         ],
+          faq: [
+            { q: "PoE orqali faqat kameralarni quvvatlash mumkinmi?", a: "Yo'q, boshqalarni ham: Wi-Fi nuqtalari, IP-telefonlar, domofon panellari va SKUD kontrollerlari ham standart PoE bilan ishlaydi — bitta infratuzilma butun kuchsiz tok tizimini yopadi." },
+            { q: "Kommutator quvvati yetmasa nima bo'ladi?", a: "Kommutator eng past prioritetli portlarni o'chiradi yoki kameralar kechasi IK-yoritish yonganda qayta yuklana boshlaydi — tashxis qo'yish qiyin bo'lgan suzuvchi nosozlik." },
+            { q: "PoE-kommutatorni yerga ulash kerakmi?", a: "Ha, har qanday faol uskuna kabi: yerga ulash va ko'cha liniyalarida momaqaldiroq himoyasi kommutatorni ham, kameralarni ham asraydi — ayniqsa binolar orasidagi uzun trassalarda." },
+          ],
       },
       en: {
         title: "PoE Switch or Power Supplies for Cameras: What Works Better",
@@ -3582,10 +3695,19 @@ export const ARTICLES: Article[] = [
             "With supplies: 8 PSUs, 8 outlets (installation!), a basic switch, and almost nowhere to fit a UPS. With PoE: one 8+ port PoE switch, one UPS in the cabinet, zero extra outlets. Upfront cost is similar; total cost of ownership favors PoE: fewer failure points, backup in one place, remote management.",
             "The one thing to calculate in advance is the PoE power budget: the sum of all cameras' consumption (regular — 5–7 W, PTZ and heated — 15–25 W) must fit the switch's budget with 20–30% headroom.",
           ] },
+          { h: "Typical power-selection mistakes", p: [
+            "The main mistake is counting ports instead of watts: an '8-port PoE' switch with a 65 W budget will not carry eight cameras with IR and heaters at 12–15 W each. Always sum the maximum draw of every camera and keep 20–30% headroom — in winter illumination and heating run at the same time.",
+            "The second mistake is passive PoE instead of the standard: cheap 'PoE injectors' push voltage without negotiation and can burn the port of a camera built for 802.3af/at. The third is length: beyond 100 meters of copper you need a PoE extender or fiber with a media converter, not wishful thinking.",
+          ] },
           { h: "Conclusion", p: [
             "Up to 2–3 cameras with outlets already in place — power supplies are acceptable. From 3–4 cameras, and in any system that must survive blackouts, — PoE, no question. We will help you pick a PoE switch for your camera count and calculate the power budget — message us in chat or Telegram.",
           ] },
         ],
+          faq: [
+            { q: "Can PoE power more than cameras?", a: "Yes: Wi-Fi access points, IP phones, intercom panels and access controllers also run on standard PoE — one infrastructure covers the whole low-current stack." },
+            { q: "What happens if the switch runs out of power?", a: "The switch drops the lowest-priority ports, or cameras start rebooting at night when IR turns on — a floating fault that is hard to diagnose." },
+            { q: "Does a PoE switch need grounding?", a: "Yes, like any active gear: grounding and surge protection on outdoor lines protect both the switch and the cameras — especially on long runs between buildings." },
+          ],
       },
       tr: {
         title: "PoE Switch mü Adaptör mü: Kameralar İçin Hangisi Pratik",
@@ -3602,10 +3724,19 @@ export const ARTICLES: Article[] = [
             "Adaptörlerle: 8 adaptör, 8 priz (montaj!), basit switch, UPS'e neredeyse yer yok. PoE ile: 8+ portlu tek PoE switch, kabinde tek UPS, sıfır ek priz. Başlangıç maliyeti benzer; sahip olma maliyetinde PoE kazanır: daha az arıza noktası, tek yerde yedekleme, uzaktan yönetim.",
             "Önceden hesaplanması gereken tek şey PoE güç bütçesidir: tüm kameraların toplam tüketimi (normal — 5–7 W, PTZ ve ısıtmalı — 15–25 W) switch bütçesine %20–30 payla sığmalıdır.",
           ] },
+          { h: "Güç seçiminde tipik hatalar", p: [
+            "Ana hata watt yerine port saymaktır: 65 W bütçeli '8 port PoE' switch, her biri 12–15 W çeken IR aydınlatmalı ve ısıtıcılı sekiz kamerayı taşımaz. Her kameranın azami tüketimini toplayın ve %20–30 pay bırakın — kışın aydınlatma ve ısıtma aynı anda çalışır.",
+            "İkinci hata standart yerine pasif PoE: ucuz 'PoE enjektörleri' gerilimi anlaşmasız basar ve 802.3af/at için yapılmış kameranın portunu yakabilir. Üçüncüsü mesafe: bakırda 100 metrenin ötesinde PoE genişletici ya da medya çeviricili fiber gerekir, şansa bırakmak değil.",
+          ] },
           { h: "Sonuç", p: [
             "Hazır prizli 2–3 kameraya kadar adaptörler kabul edilebilir. 3–4 kameradan itibaren ve kesintide çalışması gereken her sistemde — tartışmasız PoE. Kamera sayınıza uygun PoE switch seçimi ve güç bütçesi hesabında yardımcı olalım — chat veya Telegram'dan yazın.",
           ] },
         ],
+          faq: [
+            { q: "PoE ile kameradan başka ne beslenir?", a: "Wi-Fi erişim noktaları, IP telefonlar, interkom panelleri ve geçiş kontrolcüleri de standart PoE ile çalışır — tek altyapı tüm zayıf akımı kapatır." },
+            { q: "Switch'in gücü yetmezse ne olur?", a: "Switch en düşük öncelikli portları düşürür ya da kameralar gece IR açılınca yeniden başlar — teşhisi zor, gezici bir arıza." },
+            { q: "PoE switch topraklanmalı mı?", a: "Evet, her aktif cihaz gibi: topraklama ve dış hatlarda parafudr hem switch'i hem kameraları korur — özellikle binalar arası uzun hatlarda." },
+          ],
       },
       zh: {
         title: "PoE交换机还是独立电源：摄像机供电哪种更实用",
@@ -3622,10 +3753,19 @@ export const ARTICLES: Article[] = [
             "独立电源方案：8个电源、8个插座（要施工！）、普通交换机，UPS几乎没地方装。PoE方案：一台8口以上PoE交换机、机柜里一台UPS、零额外插座。初期成本相近，总拥有成本PoE胜出：故障点更少、备份集中、可远程管理。",
             "唯一需要提前计算的是PoE功率预算：所有摄像机功耗之和（普通款5–7瓦，云台和加热款15–25瓦）应在交换机预算内留出20–30%余量。",
           ] },
+          { h: "选电源的典型错误", p: [
+            "最大的错误是数端口而不算瓦数：功率预算65W的“8口PoE”交换机带不动八台各吃12–15W的带红外和加热的摄像机。永远把所有摄像机的最大功耗加总，并留20–30%余量——冬天红外和加热是同时工作的。",
+            "第二个错误是用无源PoE替代标准PoE：廉价“PoE供电器”不经协商直接送电，可能烧毁按802.3af/at设计的摄像机端口。第三是距离：铜缆超过100米就要上PoE延长器或光纤加收发器，不能指望“凑合能到”。",
+          ] },
           { h: "结论", p: [
             "已有现成插座且不超过2–3台——独立电源可以接受。3–4台以上、以及任何要求停电不停机的系统——毫无疑问选PoE。我们可按您的摄像机数量选型PoE交换机并计算功率预算——欢迎通过在线聊天或Telegram联系。",
           ] },
         ],
+          faq: [
+            { q: "PoE只能给摄像机供电吗？", a: "不止：Wi-Fi接入点、IP话机、对讲面板和门禁控制器都吃标准PoE——一套基础设施覆盖整个弱电系统。" },
+            { q: "交换机功率不够会怎样？", a: "交换机会掐掉优先级最低的端口，或者摄像机夜里红外一开就反复重启——一种很难排查的漂移故障。" },
+            { q: "PoE交换机要接地吗？", a: "要，和所有有源设备一样：接地加室外线路防雷，既保交换机也保摄像机——楼宇间的长线路尤其如此。" },
+          ],
       },
     },
   },
@@ -4406,6 +4546,10 @@ export const ARTICLES: Article[] = [
             "Проверьте покрытие сотовой сети на объекте заранее — от него зависит всё. На металлических ангарах и в низинах антенну роутера иногда выносят наружу. Для записи выбирайте детекцию движения — она в разы экономит и трафик, и место на карте.",
             "И не экономьте на грозозащите: длинные кабельные трассы на открытых участках без неё выгорают в первый же сезон гроз.",
           ] },
+          { h: "Сколько это стоит", p: [
+            "Самый доступный вариант — 4G-роутер с обычными камерами: к смете стандартной системы добавляются роутер, антенна и SIM-карта с пакетом трафика. Камеры со встроенной SIM дороже обычных примерно в полтора-два раза, зато не требуют роутера вовсе — выгодно для одной-двух точек. Автономный комплект с солнечной панелью и аккумулятором — самое дорогое решение, его берут там, где нет и электричества.",
+            "Ежемесячные расходы определяет трафик: просмотр по событиям расходует гигабайты, постоянная трансляция — десятки гигабайт. Мы настраиваем запись на карту памяти или регистратор, а в сеть отдаём только тревожные события и просмотр по запросу — так пакета в 20–30 ГБ хватает даже на несколько камер.",
+          ] },
           { h: "Итог", p: [
             "Дача с электричеством — 4G-роутер и 2–4 камеры. Одна точка без хлопот — камера со встроенной SIM. Чистое поле — автономный комплект с солнечной панелью. Все варианты есть в нашем каталоге, поможем с подбором тарифа и настроим просмотр с телефона.",
           ] },
@@ -4440,6 +4584,10 @@ export const ARTICLES: Article[] = [
           { h: "Tanlashda nimani hisobga olish", p: [
             "Obyektda uyali aloqa qamrovini oldindan tekshiring — hammasi unga bog'liq. Metall angarlarda router antennasini ba'zan tashqariga chiqaradilar. Yozish uchun harakat detektorini tanlang — u trafik va karta joyini bir necha barobar tejaydi.",
             "Va momaqaldiroq himoyasidan tejamang: ochiq uchastkalardagi uzun kabel trassalari usiz birinchi mavsumdayoq kuyadi.",
+          ] },
+          { h: "Bu qancha turadi", p: [
+            "Eng arzon variant — oddiy kameralar bilan 4G-router: standart tizim smetasiga router, antenna va trafik paketli SIM-karta qo'shiladi. Ichki SIM li kameralar oddiylaridan bir yarim-ikki baravar qimmat, lekin routerni umuman talab qilmaydi — bir-ikki nuqta uchun foydali. Quyosh paneli va akkumulyatorli avtonom komplekt — eng qimmat yechim, uni elektr ham yo'q joylarda olishadi.",
+            "Oylik xarajatlarni trafik belgilaydi: hodisalar bo'yicha ko'rish gigabaytlarni, doimiy translyatsiya o'nlab gigabaytlarni sarflaydi. Biz yozuvni xotira kartasi yoki registratorga sozlaymiz, tarmoqqa faqat trevoga hodisalari va so'rov bo'yicha ko'rishni beramiz — shunda 20–30 GB paket bir necha kameraga ham yetadi.",
           ] },
           { h: "Xulosa", p: [
             "Elektrli dala hovli — 4G-router va 2–4 kamera. Tashvishsiz bitta nuqta — SIM o'rnatilgan kamera. Ochiq dala — quyosh panelli avtonom to'plam. Barcha variantlar katalogimizda bor, tarif tanlashda yordam beramiz va telefondan ko'rishni sozlaymiz.",
@@ -4476,6 +4624,10 @@ export const ARTICLES: Article[] = [
             "Check cellular coverage at the site in advance — everything depends on it. On metal hangars and in low-lying areas the router antenna is sometimes mounted outside. For recording, use motion detection — it cuts both data traffic and memory card usage many times over.",
             "And do not skimp on surge protection: without it, long cable runs in open areas burn out in the very first thunderstorm season.",
           ] },
+          { h: "What it costs", p: [
+            "The most affordable option is a 4G router with regular cameras: the standard system estimate gains a router, an antenna and a SIM with a data plan. Cameras with a built-in SIM cost roughly one and a half to two times more but need no router at all — worthwhile for one or two points. An autonomous kit with a solar panel and battery is the priciest and is chosen where there is no electricity either.",
+            "Monthly costs come down to traffic: event-based viewing burns gigabytes, continuous streaming — tens of them. We configure recording to an SD card or a recorder and send only alarm events and on-demand viewing over the network, so a 20–30 GB plan covers even several cameras.",
+          ] },
           { h: "Bottom line", p: [
             "A cottage with power — a 4G router and 2–4 cameras. A single hassle-free spot — a camera with a built-in SIM. An open field — an off-grid kit with a solar panel. All options are in our catalog; we will help pick a data plan and set up viewing from your phone.",
           ] },
@@ -4511,6 +4663,10 @@ export const ARTICLES: Article[] = [
             "Tesisteki mobil şebeke kapsamasını önceden kontrol edin — her şey buna bağlıdır. Metal hangarlarda ve çukur arazilerde router anteni bazen dışarıya taşınır. Kayıt için hareket algılamayı seçin — hem trafiği hem kart alanını kat kat azaltır.",
             "Yıldırım ve aşırı gerilim korumasından da tasarruf etmeyin: açık alanlardaki uzun kablo hatları onsuz ilk fırtına sezonunda yanar.",
           ] },
+          { h: "Maliyeti ne kadar", p: [
+            "En uygun seçenek sıradan kameralarla 4G router: standart sistem keşfine router, anten ve tarifeli SIM eklenir. Dahili SIM'li kameralar sıradanından bir buçuk-iki kat pahalıdır ama router hiç istemez — bir-iki nokta için mantıklıdır. Güneş panelli ve aküllü otonom set en pahalısıdır; elektriğin de olmadığı yerlerde tercih edilir.",
+            "Aylık gideri trafik belirler: olay bazlı izleme gigabaytlar, sürekli yayın onlarca gigabayt yakar. Kaydı SD karta veya kayıt cihazına alır, ağa yalnızca alarm olaylarını ve talep üzerine izlemeyi veririz — böylece 20–30 GB'lık paket birkaç kameraya bile yeter.",
+          ] },
           { h: "Özet", p: [
             "Elektrikli bağ evi — 4G router ve 2–4 kamera. Zahmetsiz tek nokta — dahili SIM'li kamera. Boş arazi — güneş panelli bağımsız set. Tüm seçenekler kataloğumuzda mevcut; tarife seçiminde yardımcı olur, telefondan izlemeyi de kurarız.",
           ] },
@@ -4545,6 +4701,10 @@ export const ARTICLES: Article[] = [
           { h: "选型时要注意什么", p: [
             "先在现场确认移动网络覆盖——一切都取决于它。在金属厂房和低洼地带，有时需要把路由器天线引到室外。录像建议启用移动侦测——它能成倍节省流量和存储卡空间。",
             "另外不要在防雷防浪涌上省钱：露天长距离线路没有防护，第一个雷雨季就会烧毁。",
+          ] },
+          { h: "要花多少钱", p: [
+            "最省的方案是4G路由器配普通摄像机：在标准系统预算上加一台路由器、天线和带流量套餐的SIM卡。内置SIM的摄像机比普通款贵约一倍半到两倍，但完全不需要路由器——一两个点位很划算。带太阳能板和电池的自供电套装最贵，用在连电都没有的地方。",
+            "月度开销取决于流量：按事件查看耗费几个GB，持续直播则是几十GB。我们把录像存到存储卡或录像机，网络上只传报警事件和按需查看——这样20–30GB的套餐带几台摄像机都够用。",
           ] },
           { h: "小结", p: [
             "有电的别墅——4G 路由器加 2–4 台摄像机。省心的单点——内置 SIM 卡的摄像机。空旷野外——太阳能独立套装。所有方案我们目录中都有，可协助选择套餐并帮您设置手机查看。",
@@ -4588,6 +4748,10 @@ export const ARTICLES: Article[] = [
             "Кабель — цельная витая пара без скруток и переходов, обжатая по T568B. Прокладывайте трассу отдельно от силовых кабелей: наводки от 220 В дают артефакты на картинке. Питание передатчика и приёмника — от комплектных адаптеров.",
             "Если картинка мигает или пропадает — почти всегда виноват кабель: скрутки, длина за пределами спецификации или дешёвый омеднённый алюминий вместо меди.",
           ] },
+          { h: "KVM по IP-сети и матричные системы", p: [
+            "Классическая пара «передатчик — приёмник» соединяет одно рабочее место с одним компьютером. Когда машин и операторов много, выгоднее KVM-over-IP: передатчики и приёмники включаются в обычный гигабитный коммутатор, и любой оператор переключается на любой компьютер горячей клавишей. Так строятся диспетчерские, посты охраны и серверные с десятками машин.",
+            "Матричный режим добавляет видеостены: один источник выводится на несколько экранов или несколько источников — на одну стену. Важно закладывать под KVM-over-IP отдельный VLAN или физически выделенный коммутатор: несжатый видеопоток загружает сеть, и соседство с офисным трафиком портит и картинку, и работу сети.",
+          ] },
           { h: "Что есть в наличии", p: [
             "В каталоге SAT Solutions — HDMI- и KVM-удлинители на 30, 60 и 120 метров в наличии в Ташкенте, с гарантией и доставкой по Узбекистану. Поможем выбрать под вашу задачу и проложим трассу под ключ.",
           ] },
@@ -4622,6 +4786,10 @@ export const ARTICLES: Article[] = [
           { h: "Montaj va odatiy xatolar", p: [
             "Kabel — trassada ulanish va o'ramlarsiz yaxlit vitaya para, T568B bo'yicha siqilgan. Trassani kuch kabellaridan alohida yotqizing: 220 V dan induksiya tasvirda artefaktlar beradi.",
             "Tasvir miltillasa yoki yo'qolsa — deyarli har doim kabel aybdor: o'ramlar, spetsifikatsiyadan ortiq uzunlik yoki mis o'rniga arzon alyuminiy.",
+          ] },
+          { h: "IP-tarmoq orqali KVM va matritsali tizimlar", p: [
+            "Klassik «uzatgich — qabul qilgich» jufti bitta ish o'rnini bitta kompyuter bilan bog'laydi. Mashinalar va operatorlar ko'p bo'lsa, KVM-over-IP foydaliroq: uzatgich va qabul qilgichlar oddiy gigabit kommutatorga ulanadi, istalgan operator istalgan kompyuterga tezkor tugma bilan o'tadi. Dispetcherlik, qo'riqlash postlari va o'nlab mashinali serverxonalar shunday quriladi.",
+            "Matritsali rejim videodevorlarni qo'shadi: bitta manba bir nechta ekranga yoki bir nechta manba bitta devorga chiqariladi. KVM-over-IP uchun alohida VLAN yoki jismonan ajratilgan kommutator rejalashtirish muhim: siqilmagan videopotok tarmoqni yuklaydi, ofis trafigi bilan qo'shnichilik ham tasvirni, ham tarmoq ishini buzadi.",
           ] },
           { h: "Nima mavjud", p: [
             "SAT Solutions katalogida — 30, 60 va 120 metrli HDMI- va KVM-uzaytirgichlar Toshkentda mavjud, kafolat va O'zbekiston bo'ylab yetkazib berish bilan. Vazifangizga mosini tanlashga yordam beramiz.",
@@ -4658,6 +4826,10 @@ export const ARTICLES: Article[] = [
             "Use a single continuous run of twisted pair with no splices or couplers, terminated to T568B. Route it away from power cables: interference from 220 V lines causes image artifacts. Power the transmitter and receiver from the adapters supplied in the kit.",
             "If the picture flickers or drops out, the cable is almost always to blame: splices, a run beyond the spec, or cheap copper-clad aluminum instead of pure copper.",
           ] },
+          { h: "KVM over IP and matrix systems", p: [
+            "The classic transmitter–receiver pair links one workplace to one computer. With many machines and operators, KVM-over-IP pays off: transmitters and receivers plug into an ordinary gigabit switch, and any operator hot-keys to any computer. That is how control rooms, guard posts and server rooms with dozens of machines are built.",
+            "Matrix mode adds video walls: one source goes to several screens, or several sources to one wall. Plan a dedicated VLAN or a physically separate switch for KVM-over-IP: the uncompressed video stream loads the network, and sharing it with office traffic spoils both the picture and the network.",
+          ] },
           { h: "What we have in stock", p: [
             "The SAT Solutions catalog offers HDMI and KVM extenders for 30, 60 and 120 meters, in stock in Tashkent, with warranty and delivery across Uzbekistan. We will help you choose the right model for your task and install the cable run turnkey.",
           ] },
@@ -4693,6 +4865,10 @@ export const ARTICLES: Article[] = [
             "Kablo, ek yeri ve geçiş olmadan tek parça bükümlü çift olmalı ve T568B'ye göre sonlandırılmalıdır. Hattı güç kablolarından ayrı döşeyin: 220 V hatlarının paraziti görüntüde bozulmalara yol açar. Vericiyi ve alıcıyı setle gelen adaptörlerden besleyin.",
             "Görüntü titriyor veya kayboluyorsa suçlu neredeyse her zaman kablodur: ek yerleri, spesifikasyon dışı uzunluk veya saf bakır yerine ucuz bakır kaplı alüminyum.",
           ] },
+          { h: "IP üzerinden KVM ve matris sistemler", p: [
+            "Klasik verici–alıcı çifti bir çalışma yerini bir bilgisayara bağlar. Makine ve operatör sayısı arttığında KVM-over-IP kazandırır: verici ve alıcılar sıradan gigabit switch'e takılır, her operatör kısayol tuşuyla istediği bilgisayara geçer. Kumanda odaları, güvenlik noktaları ve onlarca makineli sistem odaları böyle kurulur.",
+            "Matris modu video duvarları ekler: bir kaynak birden çok ekrana, ya da birden çok kaynak tek duvara verilir. KVM-over-IP için ayrı VLAN veya fiziksel ayrık switch planlayın: sıkıştırılmamış video akışı ağı yükler; ofis trafiğiyle komşuluk hem görüntüyü hem ağı bozar.",
+          ] },
           { h: "Stokta neler var", p: [
             "SAT Solutions kataloğunda 30, 60 ve 120 metrelik HDMI ve KVM uzatıcılar Taşkent'te stoktan sunulur; garanti ve Özbekistan geneline teslimat vardır. İşinize uygun modeli seçmenize yardımcı olur, hattı anahtar teslim döşeriz.",
           ] },
@@ -4727,6 +4903,10 @@ export const ARTICLES: Article[] = [
           { h: "安装与常见错误", p: [
             "线缆须为整根双绞线，中途不得有接头和转接，按 T568B 标准压接。走线要与强电线路分开：220 V 线路的干扰会造成画面瑕疵。发射器和接收器请使用套装自带的电源适配器供电。",
             "画面闪烁或时有时无，几乎总是线缆的问题：有接头、长度超标，或用了廉价的铜包铝线而不是纯铜线。",
+          ] },
+          { h: "IP网络KVM与矩阵系统", p: [
+            "经典的发射端—接收端一对一连接一个工位和一台电脑。机器和操作员多时，KVM-over-IP更合算：收发器都接进普通千兆交换机，任何操作员按热键即可切到任何电脑。调度室、安保岗和几十台机器的机房都是这样搭的。",
+            "矩阵模式还能做视频墙：一个信号源上多块屏，或多个源上一面墙。KVM-over-IP务必规划独立VLAN或物理独立的交换机：无压缩视频流很吃带宽，和办公流量混跑既毁画面也拖垮网络。",
           ] },
           { h: "现货供应", p: [
             "SAT Solutions 目录中备有 30、60、120 米的 HDMI 和 KVM 延长器，塔什干现货，提供质保并配送至乌兹别克斯坦全境。我们可帮您按需求选型，并提供布线交钥匙服务。",
@@ -4770,6 +4950,10 @@ export const ARTICLES: Article[] = [
             "Пожарная сигнализация и оповещение проектируются по нормам пожарной безопасности и требуют лицензированного подрядчика — иначе объект не пройдёт проверку. СКУД на путях эвакуации обязан разблокироваться по пожарному сигналу — это тоже вопрос грамотного проекта.",
             "SAT Solutions имеет государственные лицензии на проектирование и монтаж противопожарных систем.",
           ] },
+          { h: "Сколько стоит слаботочка", p: [
+            "В бюджете стройки слаботочные системы обычно занимают 3–7% — на порядок меньше отделки, но именно они определяют, будет ли здание работать: связь, безопасность, контроль доступа. Цена складывается из проекта, кабельной инфраструктуры, оборудования и пусконаладки; кабель и монтаж часто составляют до половины сметы, поэтому объединение систем в общие трассы даёт заметную экономию.",
+            "Ориентиры для оценки: офис на 20–30 рабочих мест со СКС, видеонаблюдением, СКУД и пожарной сигнализацией — от нескольких сотен миллионов сумов; точную цифру даёт только проект. Мы считаем смету бесплатно по планировке объекта — с разбивкой по системам, чтобы заказчик видел, из чего складывается сумма, и мог поэтапно распределить бюджет.",
+          ] },
           { h: "С чего начать", p: [
             "Пришлите план помещения или пригласите инженера на объект: составим техзадание, спецификацию и смету по всем системам сразу — с этапностью под ваш ремонт и бюджет. Проект, монтаж, сервис — из одних рук, с гарантией.",
           ] },
@@ -4804,6 +4988,10 @@ export const ARTICLES: Article[] = [
           { h: "Normalar va litsenziyalar", p: [
             "Yong'in signalizatsiyasi va ogohlantirish yong'in xavfsizligi normalari bo'yicha loyihalanadi va litsenziyali pudratchini talab qiladi — aks holda obyekt tekshiruvdan o'tmaydi. Evakuatsiya yo'llaridagi SKUD yong'in signali bo'yicha blokdan chiqishi shart.",
             "SAT Solutions yong'inga qarshi tizimlarni loyihalash va montaj qilish uchun davlat litsenziyalariga ega.",
+          ] },
+          { h: "Kuchsiz tok tizimlari qancha turadi", p: [
+            "Qurilish byudjetida kuchsiz tok tizimlari odatda 3–7% ni egallaydi — pardozdan ancha kam, lekin bino ishlashini aynan ular belgilaydi: aloqa, xavfsizlik, kirish nazorati. Narx loyiha, kabel infratuzilmasi, uskuna va ishga tushirishdan yig'iladi; kabel va montaj ko'pincha smetaning yarmigacha boradi, shuning uchun tizimlarni umumiy trassalarga birlashtirish sezilarli tejash beradi.",
+            "Baholash uchun mo'ljallar: SKS, videokuzatuv, SKUD va yong'in signalizatsiyali 20–30 ish o'rinli ofis — bir necha yuz million so'mdan; aniq raqamni faqat loyiha beradi. Biz smetani obyekt planirovkasi bo'yicha bepul hisoblaymiz — tizimlar bo'yicha taqsimlab, buyurtmachi summa nimadan yig'ilishini ko'rsin va byudjetni bosqichma-bosqich taqsimlay olsin.",
           ] },
           { h: "Nimadan boshlash", p: [
             "Xona rejasini yuboring yoki muhandisni obyektga taklif qiling: barcha tizimlar bo'yicha birdaniga texnik topshiriq, spetsifikatsiya va smeta tuzamiz — ta'miringiz va byudjetingizga mos bosqichlar bilan. Loyiha, montaj, servis — bir qo'ldan, kafolat bilan.",
@@ -4840,6 +5028,10 @@ export const ARTICLES: Article[] = [
             "Fire alarm and evacuation systems are designed to fire-safety codes and require a licensed contractor — otherwise the site will fail inspection. Access control on escape routes must unlock on a fire signal, which is also a matter of proper design.",
             "SAT Solutions holds state licenses for the design and installation of fire-protection systems.",
           ] },
+          { h: "What low-current systems cost", p: [
+            "In a construction budget, low-current systems usually take 3–7% — far less than finishing, yet they decide whether the building works: communications, security, access control. The price is made of design, cable infrastructure, equipment and commissioning; cable and installation often reach half the estimate, so merging systems into shared routes brings real savings.",
+            "Reference points: an office for 20–30 workplaces with SCS, CCTV, access control and a fire alarm starts from several hundred million UZS; only a design gives the exact figure. We calculate the estimate free of charge from the floor plan — broken down by system, so the client sees what the sum is made of and can phase the budget.",
+          ] },
           { h: "Where to start", p: [
             "Send us a floor plan or invite an engineer to your site: we will prepare the requirements brief, a bill of materials and a cost estimate for all systems at once — phased to fit your renovation schedule and budget. Design, installation and service from a single provider, with a warranty.",
           ] },
@@ -4875,6 +5067,10 @@ export const ARTICLES: Article[] = [
             "Yangın alarmı ve tahliye anons sistemleri yangın güvenliği mevzuatına göre projelendirilir ve lisanslı bir yüklenici gerektirir — aksi hâlde tesis denetimden geçemez. Kaçış yollarındaki geçiş kontrol sistemleri yangın sinyaliyle otomatik açılmak zorundadır — bu da doğru projelendirme meselesidir.",
             "SAT Solutions, yangın koruma sistemlerinin projelendirilmesi ve montajı için devlet lisanslarına sahiptir.",
           ] },
+          { h: "Zayıf akım ne kadar tutar", p: [
+            "İnşaat bütçesinde zayıf akım sistemleri genelde %3–7 yer tutar — ince işlerden kat kat az; ama binanın çalışıp çalışmayacağını onlar belirler: iletişim, güvenlik, geçiş kontrolü. Fiyat proje, kablo altyapısı, ekipman ve devreye almadan oluşur; kablo ve montaj çoğu kez keşfin yarısına ulaşır, bu yüzden sistemleri ortak güzergâhlarda birleştirmek ciddi tasarruf sağlar.",
+            "Değerlendirme için referans: SCS, kamera, geçiş kontrolü ve yangın alarmı olan 20–30 kişilik ofis birkaç yüz milyon UZS'den başlar; kesin rakamı yalnızca proje verir. Keşfi kat planına göre ücretsiz çıkarırız — sistem sistem ayrılmış hâlde; müşteri tutarın neyden oluştuğunu görür ve bütçeyi aşamalara bölebilir.",
+          ] },
           { h: "Nereden başlamalı", p: [
             "Bize kat planını gönderin veya mühendisimizi sahaya davet edin: tüm sistemler için teknik şartnameyi, keşif listesini ve maliyet tahminini tek seferde hazırlayalım — tadilat takviminize ve bütçenize uygun aşamalarla. Proje, montaj ve servis tek elden, garantili.",
           ] },
@@ -4909,6 +5105,10 @@ export const ARTICLES: Article[] = [
           { h: "规范与资质", p: [
             "消防报警和疏散广播系统必须按消防安全规范设计，并由持证承包商施工——否则项目无法通过验收。疏散通道上的门禁必须在火警信号触发时自动解锁，这同样取决于设计是否专业。",
             "SAT Solutions 持有消防系统设计与安装的国家资质。",
+          ] },
+          { h: "弱电系统要花多少钱", p: [
+            "在建筑预算里弱电系统通常占3–7%——远低于装修，但楼宇能否运转恰恰由它决定：通信、安防、门禁。费用由设计、线缆基础设施、设备和调试构成；线缆和施工常占预算一半，因此把各系统合并进公共线槽能省下可观的钱。",
+            "估算参考：一个20–30个工位、含综合布线、监控、门禁和火灾报警的办公室，从数亿苏姆起步；准确数字只有设计能给出。我们按平面图免费出预算——按系统拆分，让甲方看清钱花在哪，并可分期安排。",
           ] },
           { h: "从哪里开始", p: [
             "把平面图发给我们，或邀请工程师到现场：我们将一次性编制全部系统的技术任务书、设备清单和预算——并按您的装修进度和预算分阶段实施。设计、安装、售后服务一站式完成，提供质保。",
@@ -4952,6 +5152,10 @@ export const ARTICLES: Article[] = [
             "PoE-инжектор — «переходник» для одного устройства: дёшево, когда нужно запитать одну камеру от обычного коммутатора. От трёх-четырёх устройств выгоднее PoE-коммутатор: меньше коробок, общий мониторинг и управление портами.",
             "Есть и обратные устройства — PoE-сплиттеры: выделяют питание из кабеля для устройств без поддержки PoE.",
           ] },
+          { h: "Пассивный PoE и совместимость", p: [
+            "Кроме стандартов 802.3af/at/bt существует пассивный PoE: напряжение подаётся в кабель без согласования с устройством. Так питается часть оборудования MikroTik и Ubiquiti — но подключать к пассивному инжектору камеру, рассчитанную на стандарт, опасно: она может получить 24 В вместо ожидаемых 48 В и не заработать или выйти из строя.",
+            "Правило совместимости простое: стандартный PoE-коммутатор безопасен для любых устройств — перед подачей питания он опрашивает потребителя и ничего не подаст в неподдерживающий порт. Пассивное питание допустимо только в паре «инжектор и устройство одного производителя с одинаковым напряжением». Сомневаетесь — пришлите модели, проверим по спецификациям.",
+          ] },
           { h: "Итог", p: [
             "PoE — стандарт де-факто для камер, точек доступа и IP-телефонов: меньше кабелей, центральный ИБП, удалённое управление питанием. В каталоге SAT Solutions — PoE-коммутаторы на 4–48 портов, инжекторы и удлинители в наличии в Ташкенте; поможем посчитать бюджет мощности под ваш проект.",
           ] },
@@ -4986,6 +5190,10 @@ export const ARTICLES: Article[] = [
           { h: "Injektor yoki kommutator", p: [
             "PoE-injektor — bitta qurilma uchun «o'tkazgich»: oddiy kommutatordan bitta kamerani quvvatlash kerak bo'lganda arzon. Uch-to'rt qurilmadan boshlab PoE-kommutator foydaliroq: kamroq qutilar, umumiy monitoring.",
             "Teskari qurilmalar ham bor — PoE-splitterlar: PoE'ni qo'llamaydigan qurilmalar uchun kabeldan quvvatni ajratadi.",
+          ] },
+          { h: "Passiv PoE va moslik", p: [
+            "802.3af/at/bt standartlaridan tashqari passiv PoE mavjud: kuchlanish kabelga qurilma bilan kelishuvsiz beriladi. MikroTik va Ubiquiti uskunalarining bir qismi shunday quvvatlanadi — lekin standartga mo'ljallangan kamerani passiv injektorga ulash xavfli: u kutilgan 48 V o'rniga 24 V olishi va ishlamasligi yoki buzilishi mumkin.",
+            "Moslik qoidasi oddiy: standart PoE-kommutator istalgan qurilma uchun xavfsiz — quvvat berishdan oldin u iste'molchini so'raydi va qo'llamaydigan portga hech narsa bermaydi. Passiv quvvatlash faqat «bir ishlab chiqaruvchining bir xil kuchlanishli injektori va qurilmasi» juftida joiz. Shubhalansangiz — modellarni yuboring, spetsifikatsiyalar bo'yicha tekshiramiz.",
           ] },
           { h: "Xulosa", p: [
             "PoE — kameralar, ulanish nuqtalari va IP-telefonlar uchun de-fakto standart: kamroq kabel, markaziy UPS, quvvatni masofadan boshqarish. SAT Solutions katalogida — 4–48 portli PoE-kommutatorlar, injektorlar va uzaytirgichlar Toshkentda mavjud; loyihangiz uchun quvvat byudjetini hisoblashga yordam beramiz.",
@@ -5022,6 +5230,10 @@ export const ARTICLES: Article[] = [
             "A PoE injector is an \"adapter\" for a single device: a cheap way to power one camera from a regular switch. From three or four devices onward, a PoE switch pays off: fewer boxes, plus centralized monitoring and port management.",
             "There are also devices that work the other way — PoE splitters, which extract power from the cable for devices without PoE support.",
           ] },
+          { h: "Passive PoE and compatibility", p: [
+            "Besides the 802.3af/at/bt standards there is passive PoE: voltage goes into the cable with no negotiation with the device. Part of MikroTik and Ubiquiti gear is powered this way — but plugging a standards-based camera into a passive injector is risky: it may receive 24 V instead of the expected 48 V and fail to start or break.",
+            "The compatibility rule is simple: a standard PoE switch is safe for any device — before powering it interrogates the consumer and feeds nothing into a non-supporting port. Passive power is acceptable only as a pair of injector and device from one vendor at one voltage. In doubt — send us the models, we will check the specs.",
+          ] },
           { h: "Bottom line", p: [
             "PoE is the de facto standard for cameras, access points and IP phones: fewer cables, a central UPS, remote power management. The SAT Solutions catalog offers 4–48 port PoE switches, injectors and extenders in stock in Tashkent; we will help you calculate the power budget for your project.",
           ] },
@@ -5057,6 +5269,10 @@ export const ARTICLES: Article[] = [
             "PoE enjektörü tek cihaz için bir \"ara aparattır\": sıradan bir switch'ten tek bir kamerayı beslemek gerektiğinde ucuz çözümdür. Üç-dört cihazdan itibaren PoE switch daha avantajlıdır: daha az kutu, merkezî izleme ve port yönetimi.",
             "Tersine çalışan cihazlar da vardır — PoE splitter'lar: PoE desteklemeyen cihazlar için kablodaki gücü ayırır.",
           ] },
+          { h: "Pasif PoE ve uyumluluk", p: [
+            "802.3af/at/bt standartlarının yanında pasif PoE vardır: gerilim, cihazla anlaşma olmadan kabloya verilir. MikroTik ve Ubiquiti ekipmanının bir kısmı böyle beslenir — ama standarda göre yapılmış kamerayı pasif enjektöre takmak risklidir: beklediği 48 V yerine 24 V alabilir, çalışmaz ya da bozulur.",
+            "Uyumluluk kuralı basit: standart PoE switch her cihaz için güvenlidir — güç vermeden önce tüketiciyi sorgular ve desteklemeyen porta hiçbir şey basmaz. Pasif besleme yalnızca aynı üreticinin aynı gerilimli enjektör-cihaz çiftinde kabul edilir. Emin değilseniz modelleri gönderin, spesifikasyonlardan kontrol edelim.",
+          ] },
           { h: "Özet", p: [
             "PoE; kameralar, erişim noktaları ve IP telefonlar için fiilî standarttır: daha az kablo, merkezî UPS, uzaktan güç yönetimi. SAT Solutions kataloğunda 4–48 portlu PoE switch'ler, enjektörler ve uzatıcılar Taşkent'te stoktan sunulur; projeniz için güç bütçesini hesaplamanıza yardımcı oluruz.",
           ] },
@@ -5091,6 +5307,10 @@ export const ARTICLES: Article[] = [
           { h: "供电器还是交换机", p: [
             "PoE 供电器相当于单台设备的\"转接头\"：当只需从普通交换机给一台摄像机供电时，它是便宜的方案。设备达到三四台以上时，PoE 交换机更划算：盒子更少，还能集中监控和管理端口。",
             "还有反向工作的设备——PoE 分离器：从网线中分出电力，供不支持 PoE 的设备使用。",
+          ] },
+          { h: "无源PoE与兼容性", p: [
+            "在802.3af/at/bt标准之外还有无源PoE：电压不经协商直接进线。MikroTik和Ubiquiti的部分设备就是这样供电的——但把按标准设计的摄像机接到无源供电器上有风险：它可能收到24V而不是预期的48V，轻则不启动，重则损坏。",
+            "兼容规则很简单：标准PoE交换机对任何设备都安全——供电前会先询问受电端，不支持的端口一点电也不给。无源供电只允许“同一厂商、同一电压的供电器配设备”成对使用。拿不准就把型号发给我们，按规格书帮您核对。",
           ] },
           { h: "总结", p: [
             "PoE 是摄像机、无线 AP 和 IP 话机的事实标准：线缆更少、集中 UPS 供电、远程电源管理。SAT Solutions 产品目录提供 4–48 口 PoE 交换机、供电器和延长器，塔什干现货；我们可协助您为项目计算功率预算。",
@@ -6135,6 +6355,10 @@ export const ARTICLES: Article[] = [
             "Ofis va do'kon uchun standart tanlov — kukunli OP-4/OP-5 o't o'chirgichlar, elektronika ko'p joyda uglekislotali OU ham qo'yiladi. Narxlar hajmga qarab bir necha yuz ming so'mdan boshlanadi, katta OP-25/OP-100 modellari qimmatroq.",
             "Katalogimizda o't o'chirgichlar va yong'in xavfsizligi vositalari mavjud — narxlar so'mda, Toshkentda ombordan. Soni bo'yicha maslahat beramiz: maydon va xavf toifasiga qarab nechta va qayerga qo'yish kerakligini hisoblaymiz.",
           ] },
+          { h: "Xizmat ko'rsatish: tizim yashashi kerak", p: [
+            "Tizimni o'rnatish — ishning yarmi: yong'in signalizatsiyasi muntazam texnik xizmatni talab qiladi. Har oy priborlar va datchiklarning ishlashi tekshiriladi, yiliga bir marta o't o'chirgichlar ko'rikdan o'tkaziladi va reglament bo'yicha qayta zaryadlanadi, nosozliklar esa «qachondir» emas, darhol bartaraf etiladi — tekshiruvda inspektor xizmat jurnalini ham ko'radi.",
+            "Datchiklar vaqt o'tishi bilan changlanadi va yo jim qoladi, yo yolg'on trevoga beradi — ikkalasi ham xavfli: birinchisi yong'inni o'tkazib yuboradi, ikkinchisi xodimlarni sirenani e'tiborsiz qoldirishga o'rgatadi. Biz o'rnatilgan tizimlarga xizmat shartnomalarini tuzamiz: rejali tashriflar, datchiklarni tozalash, hujjat yuritish va nosozlikda yetib borish.",
+          ] },
           { h: "Qanday buyurtma qilinadi", p: [
             "Ish tartibi oddiy: muhandis chiqadi, obyektni o'lchaydi, loyiha va smeta tayyorlaydi. Montaj kichik obyektda 1–3 kun. Ishdan so'ng hujjatlar to'liq topshiriladi: aktlar, sxemalar, jurnal — tekshiruvga tayyor holda.",
             "Yuridik shaxslar bilan shartnoma, hisob-faktura va NDS bilan ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati beriladi.",
@@ -6167,6 +6391,10 @@ export const ARTICLES: Article[] = [
           { h: "Огнетушители: какие и почём", p: [
             "Стандартный выбор для офиса и магазина — порошковые ОП-4/ОП-5, там, где много электроники, ставят и углекислотные ОУ. Цены начинаются от нескольких сотен тысяч сум в зависимости от объёма, крупные ОП-25/ОП-100 дороже.",
             "Огнетушители и средства пожарной безопасности есть в нашем каталоге — цены в сумах, со склада в Ташкенте. Подскажем по количеству: посчитаем, сколько и куда ставить по площади и категории риска.",
+          ] },
+          { h: "Обслуживание: система должна жить", p: [
+            "Смонтировать систему — половина дела: пожарная сигнализация требует регулярного технического обслуживания. Ежемесячно проверяется работоспособность приборов и датчиков, раз в год огнетушители осматриваются и по регламенту перезаряжаются, а неисправности устраняются не «когда-нибудь», а сразу — на проверке инспектор смотрит и журнал обслуживания.",
+            "Датчики со временем пылятся и начинают либо молчать, либо давать ложные тревоги — обе ситуации опасны: первая пропустит пожар, вторая приучит персонал игнорировать сирену. Мы заключаем договоры на обслуживание смонтированных систем: плановые визиты, чистка датчиков, ведение документации и выезд при неисправности.",
           ] },
           { h: "Как заказать", p: [
             "Порядок простой: инженер выезжает, обмеряет объект, готовит проект и смету. Монтаж на небольшом объекте — 1–3 дня. После работ передаём полный пакет документов: акты, схемы, журнал — в готовом для проверки виде.",
@@ -6201,6 +6429,10 @@ export const ARTICLES: Article[] = [
             "The standard choice for offices and shops is powder OP-4/OP-5 extinguishers; where there is a lot of electronics, CO2 units are added. Prices start from a few hundred thousand UZS depending on volume.",
             "Extinguishers and fire safety equipment are in our catalogue — UZS prices, in stock in Tashkent. We will calculate how many you need and where to place them.",
           ] },
+          { h: "Maintenance: the system must stay alive", p: [
+            "Installing the system is half the job: a fire alarm needs regular maintenance. Devices and detectors are checked monthly, extinguishers are inspected yearly and recharged per schedule, and faults are fixed immediately, not 'someday' — during an inspection the officer also reads the maintenance log.",
+            "Detectors gather dust over time and either go silent or raise false alarms — both are dangerous: the first misses a fire, the second teaches staff to ignore the siren. We sign maintenance contracts for installed systems: scheduled visits, detector cleaning, documentation and call-outs on failure.",
+          ] },
           { h: "How to order", p: [
             "The process is simple: an engineer visits, measures the site, prepares the design and the estimate. Installation on a small site takes 1–3 days. After the work you receive the full document package, ready for inspection.",
             "We work with legal entities under contract with VAT invoices. Equipment carries an official warranty, installation a company warranty.",
@@ -6234,6 +6466,10 @@ export const ARTICLES: Article[] = [
             "Ofis ve mağazalar için standart seçim toz tipi OP-4/OP-5 tüplerdir; elektroniğin yoğun olduğu yerlere CO2 tüpleri eklenir. Fiyatlar hacme göre birkaç yüz bin UZS'den başlar.",
             "Tüpler ve yangın güvenliği ürünleri kataloğumuzda — UZS fiyatlı, Taşkent'te stokta. Alana göre kaç adet ve nereye konulacağını hesaplarız.",
           ] },
+          { h: "Bakım: sistem yaşamalı", p: [
+            "Sistemi kurmak işin yarısı: yangın alarmı düzenli bakım ister. Cihazlar ve dedektörler her ay kontrol edilir, tüpler yılda bir gözden geçirilip programa göre yeniden doldurulur; arızalar 'bir ara' değil hemen giderilir — denetimde müfettiş bakım defterine de bakar.",
+            "Dedektörler zamanla tozlanır ve ya susar ya yanlış alarm verir — ikisi de tehlikelidir: ilki yangını kaçırır, ikincisi personeli sireni umursamamaya alıştırır. Kurduğumuz sistemlere bakım sözleşmesi yapıyoruz: planlı ziyaretler, dedektör temizliği, evrak takibi ve arızada müdahale.",
+          ] },
           { h: "Nasıl sipariş verilir", p: [
             "Süreç basit: mühendis gelir, tesisi ölçer, proje ve teklifi hazırlar. Küçük tesiste montaj 1–3 gün sürer. İş bitince denetime hazır tam evrak paketi teslim edilir.",
             "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi vardır.",
@@ -6266,6 +6502,10 @@ export const ARTICLES: Article[] = [
           { h: "灭火器：选哪种、多少钱", p: [
             "办公室和商店的标准选择是 OP-4/OP-5 干粉灭火器；电子设备多的场所会加配二氧化碳灭火器。价格按容量从几十万苏姆起。",
             "灭火器和消防器材在我们的目录中——苏姆计价，塔什干现货。我们会按面积计算所需数量和摆放位置。",
+          ] },
+          { h: "维保：系统必须一直活着", p: [
+            "装好系统只是一半：火灾报警需要定期维保。每月检查主机和探测器是否正常，灭火器每年检视并按规程再充装，故障要立刻处理而不是“改天”——消防检查时检查员也会翻维保记录。",
+            "探测器日久积尘，要么失灵沉默，要么频繁误报——两种都危险：前者漏掉火情，后者让员工习惯性无视警报。我们为已装系统签维保合同：计划巡检、探测器清洁、台账记录、故障上门。",
           ] },
           { h: "如何订购", p: [
             "流程简单：工程师上门测量，出设计和报价。小型场所安装 1–3 天。完工后移交全套文件，可直接用于检查。",
@@ -6307,6 +6547,10 @@ export const ARTICLES: Article[] = [
             "Ikki bino orasida, uzun koridorlarda yoki 90 metrdan uzoq masofalarda mis kabel yetmaydi — optik tola ishlatiladi. Optika chaqmoqdan himoyalangan, tezligi yuqori va masofani sezmaydi.",
             "Biz optik kabelni yotqizamiz, payvandlaymiz va reflektometr bilan o'lchab, pasport bilan topshiramiz. Ofis ichidagi tarmoq va binolar orasidagi optika — bitta loyihada.",
           ] },
+          { h: "Kelajak uchun zaxira: kabel toifasi va PoE", p: [
+            "Kabel o'n yil va undan ko'proqqa yotqiziladi, shuning uchun toifada tejash foydasiz: Cat5e gigabitni yopadi, lekin Cat6 narxdagi 10–15% farq bilan qisqa liniyalarda 10G gacha zaxira beradi. Kabelning o'zi smetaning kichik qismi, ta'mirdan keyin qayta yotqizish esa butun dastlabki tarmoqdan qimmatga tushadi.",
+            "Ikkinchi zaxira — kabel orqali quvvat: oddiy o'rniga PoE-kommutator keyinroq elektriksiz va yangi rozetkalarsiz kamera, Wi-Fi nuqtalari va IP-telefonlar qo'shish imkonini beradi. Bo'sh portlarni ham rejalashtiring: amaliyot ko'rsatadiki, bir-ikki yilda ofis +30–50% ulanishga o'sadi — rozetka va patch-panelni boshidanoq zaxira bilan qo'ygan ma'qul.",
+          ] },
           { h: "Ish bosqichlari", p: [
             "Birinchi bosqich — loyiha: ish o'rinlari, trassalar va shkaf joyi rejada belgilanadi. Keyin montaj: kabel yotqizish, rozetkalar, patch-panel va kommutatorni ulash. Oxirida har bir liniya testdan o'tkaziladi va sxemalar bilan topshiriladi.",
             "Kichik ofis odatda 1–3 kunda tayyor bo'ladi. Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz, ishlarga kafolat beramiz.",
@@ -6339,6 +6583,10 @@ export const ARTICLES: Article[] = [
           { h: "Когда нужна оптика", p: [
             "Между зданиями, в длинных коридорах и на расстояниях больше 90 метров медный кабель не работает — используется оптоволокно. Оптика защищена от гроз, быстра и не чувствительна к расстоянию.",
             "Мы прокладываем и свариваем оптический кабель, измеряем рефлектометром и сдаём с паспортом. Сеть внутри офиса и оптика между зданиями — в одном проекте.",
+          ] },
+          { h: "Запас на будущее: категория кабеля и PoE", p: [
+            "Кабель прокладывается на десять и более лет, поэтому экономить на категории невыгодно: Cat5e закрывает гигабит, но Cat6 при разнице в цене 10–15% даёт запас до 10G на коротких линиях. Стоимость самого кабеля — малая часть сметы, а перекладка после ремонта обойдётся дороже всей исходной сети.",
+            "Второй запас — питание по кабелю: PoE-коммутатор вместо обычного позволяет позже добавить камеры, точки Wi-Fi и IP-телефоны без электрика и новых розеток. Планируйте и свободные порты: практика показывает, что за пару лет офис дорастает до +30–50% подключений — розетки и патч-панель лучше заложить с запасом сразу.",
           ] },
           { h: "Этапы работы", p: [
             "Первый этап — проект: на плане отмечаются рабочие места, трассы и место шкафа. Затем монтаж: прокладка кабеля, розетки, патч-панель и подключение коммутатора. В конце каждая линия тестируется и сдаётся со схемами.",
@@ -6373,6 +6621,10 @@ export const ARTICLES: Article[] = [
             "Between buildings, along long corridors and beyond 90 metres copper does not work — optical fibre is used. Fibre resists lightning, is fast and indifferent to distance.",
             "We lay and splice fibre, measure it with an OTDR and hand it over with a passport. The office LAN and inter-building fibre go in one project.",
           ] },
+          { h: "Headroom for the future: cable category and PoE", p: [
+            "Cabling goes in for ten years or more, so saving on category does not pay: Cat5e covers gigabit, but Cat6 at a 10–15% price difference gives headroom up to 10G on short runs. The cable itself is a small share of the estimate, while re-laying it after renovation costs more than the whole original network.",
+            "The second reserve is power over the cable: a PoE switch instead of a plain one lets you add cameras, Wi-Fi points and IP phones later without an electrician or new outlets. Plan spare ports too: in practice an office grows by 30–50% of connections within a couple of years — put in outlets and patch panel capacity from the start.",
+          ] },
           { h: "Work stages", p: [
             "First the design: workplaces, routes and the cabinet location on the plan. Then installation: cabling, sockets, patch panel and switch. Finally every line is tested and handed over with diagrams.",
             "A small office is usually ready in 1–3 days. We work with legal entities under VAT contracts and warranty the work.",
@@ -6406,6 +6658,10 @@ export const ARTICLES: Article[] = [
             "Binalar arasında, uzun koridorlarda ve 90 metreyi aşan mesafelerde bakır çalışmaz — fiber optik kullanılır. Fiber yıldırımdan etkilenmez, hızlıdır ve mesafeye duyarsızdır.",
             "Fiberi döşer, ekleriz, OTDR ile ölçer ve pasaportuyla teslim ederiz. Ofis içi ağ ve binalar arası fiber tek projede.",
           ] },
+          { h: "Gelecek payı: kablo kategorisi ve PoE", p: [
+            "Kablo on yıl ve fazlası için döşenir; kategoriden kısmak kazandırmaz: Cat5e gigabiti karşılar ama Cat6, %10–15 fiyat farkıyla kısa hatlarda 10G'ye kadar pay bırakır. Kablonun kendisi keşfin küçük bir kısmıdır; tadilattan sonra yeniden döşemekse ilk ağın tamamından pahalıya gelir.",
+            "İkinci pay kablodan güç: sıradan yerine PoE switch, sonradan elektrikçisiz ve yeni prizsiz kamera, Wi-Fi noktası ve IP telefon eklemeyi sağlar. Boş port da planlayın: pratikte ofis birkaç yılda bağlantıların %30–50'si kadar büyür — priz ve patch panel kapasitesini baştan geniş tutun.",
+          ] },
           { h: "İş aşamaları", p: [
             "Önce proje: planda çalışma noktaları, güzergâhlar ve kabin yeri. Sonra montaj: kablolama, prizler, patch panel ve switch bağlantısı. Sonda her hat test edilir, şemalarla teslim edilir.",
             "Küçük ofis genelde 1–3 günde hazır olur. Tüzel kişilerle KDV'li sözleşmeyle çalışır, işe garanti veririz.",
@@ -6438,6 +6694,10 @@ export const ARTICLES: Article[] = [
           { h: "何时需要光纤", p: [
             "楼宇之间、长走廊和超过 90 米的距离铜缆无法工作——需要光纤。光纤防雷、速度快、不受距离影响。",
             "我们敷设并熔接光纤，用 OTDR 测量并附检测报告交付。室内网络和楼宇间光纤在同一项目内完成。",
+          ] },
+          { h: "为未来留余量：线缆类别与PoE", p: [
+            "布线一装就是十年以上，在类别上省钱不划算：Cat5e够跑千兆，而Cat6只贵10–15%，短链路上留出了10G的余量。线缆本身只占预算一小部分，装修后重新布线却比整个原始网络还贵。",
+            "第二个余量是网线供电：用PoE交换机替代普通款，日后加摄像机、Wi-Fi点和IP话机不必找电工、不必新增电源插座。也要规划空余端口：经验上办公室两三年内接入量会涨30–50%——插座和配线架一开始就留足。",
           ] },
           { h: "施工阶段", p: [
             "先设计：在图纸上标注工位、路由和机柜位置。然后施工：布线、插座、配线架和交换机。最后逐条链路测试并附图纸交付。",
@@ -6479,6 +6739,10 @@ export const ARTICLES: Article[] = [
             "Montaj narxi eshik va qulf turiga bog'liq: elektromagnit qulfni chiqish tugmasi bilan o'rnatish — eng oddiy ish, aqlli qulf yoki biometrika sozlash bilan biroz qimmatroq. O'rtacha montaj bir necha yuz ming so'mdan boshlanadi.",
             "Muhandisning chiqishi va smeta bepul. Qulflar, o'quvchilar va SKUD uskunalari Toshkentdagi ombordan, rasmiy kafolat bilan.",
           ] },
+          { h: "Quvvat va svet o'chsa nima bo'ladi", p: [
+            "Elektron qulfga bosh savol — elektr yo'g'ida o'zini tutishi. Elektromagnit qulf quvvat yo'qolganda ochiladi: evakuatsiya uchun bu plyus, himoya uchun minus, shuning uchun u akkumulyatorli zaxira quvvat bloki bilan juft qo'yiladi. Elektromexanik esa aksincha yopiq qoladi — va mexanik kalit bilan ochiladi.",
+            "Batareykali aqlli qulflarning o'z reglamenti bor: komplekt yarim yil-bir yilga yetadi, zaryadsizlanish haqida qulf oldindan ogohlantiradi, eng oxirgi holat uchun avariya kaliti yoki «krona» batareykasiga tashqi razyom bor. Biz qulfni faqat narx va ko'rinishga emas, svet o'chish stsenariysini hisobga olib tanlaymiz.",
+          ] },
           { h: "Qayerdan olish va qanday buyurtma qilish", p: [
             "Katalogimizda elektromagnit va aqlli qulflar, SKUD o'quvchilari va aksessuarlar bor — narxlar so'mda. Vazifangizni ayting: kvartira, ofis yoki kalitka — mos variantlarni tanlab, o'rnatish bilan aniq narxni hisoblaymiz.",
             "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
@@ -6511,6 +6775,10 @@ export const ARTICLES: Article[] = [
           { h: "Сколько стоит установка", p: [
             "Цена монтажа зависит от двери и типа замка: электромагнитный с кнопкой выхода — самая простая работа, smart-замок или биометрия с настройкой немного дороже. В среднем монтаж начинается от нескольких сотен тысяч сум.",
             "Выезд инженера и смета бесплатные. Замки, считыватели и оборудование СКУД — со склада в Ташкенте, с официальной гарантией.",
+          ] },
+          { h: "Питание и что будет при отключении света", p: [
+            "Главный вопрос к электронному замку — поведение без электричества. Электромагнитный при пропадании питания открывается: для эвакуации это плюс, для защиты — минус, поэтому его ставят в паре с резервным блоком питания с аккумулятором. Электромеханический, наоборот, остаётся заперт — и открывается механическим ключом.",
+            "У smart-замков на батарейках свой регламент: комплекта хватает на полгода-год, о разряде замок предупреждает заранее, а на крайний случай есть аварийный ключ или внешний разъём для батарейки-«кроны». Мы подбираем замок с учётом сценария отключения — а не только по цене и внешнему виду.",
           ] },
           { h: "Где купить и как заказать", p: [
             "В нашем каталоге — электромагнитные и умные замки, считыватели СКУД и аксессуары, цены в сумах. Опишите задачу: квартира, офис или калитка — подберём варианты и посчитаем точную цену с установкой.",
@@ -6545,6 +6813,10 @@ export const ARTICLES: Article[] = [
             "Installation depends on the door and lock type: an electromagnetic lock with an exit button is the simplest job; a smart lock or biometrics with setup costs a bit more. On average installation starts from a few hundred thousand UZS.",
             "The engineer's visit and estimate are free. Locks, readers and access equipment from stock in Tashkent with official warranty.",
           ] },
+          { h: "Power, and what happens in a blackout", p: [
+            "The key question for an electronic lock is its behavior without electricity. A magnetic lock opens when power drops: good for evacuation, bad for protection — so it is paired with a backup power unit with a battery. An electromechanical lock, on the contrary, stays locked — and opens with a mechanical key.",
+            "Battery-powered smart locks have their own routine: a set lasts six months to a year, the lock warns of low charge in advance, and for the worst case there is an emergency key or an external 9V battery contact. We pick a lock for the blackout scenario — not just for price and looks.",
+          ] },
           { h: "Where to buy and how to order", p: [
             "Our catalogue holds electromagnetic and smart locks, readers and accessories with UZS prices. Describe the task — a flat, an office or a gate — and we will match options and quote the exact installed price.",
             "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
@@ -6578,6 +6850,10 @@ export const ARTICLES: Article[] = [
             "Montaj kapıya ve kilit tipine bağlıdır: çıkış butonlu elektromanyetik en basit iştir; akıllı kilit veya biyometri kurulumuyla biraz daha pahalıdır. Ortalama montaj birkaç yüz bin UZS'den başlar.",
             "Keşif ve teklif ücretsizdir. Kilitler ve okuyucular Taşkent'te stoktan, resmi garantili.",
           ] },
+          { h: "Güç ve elektrik kesilince ne olur", p: [
+            "Elektronik kilide baş soru elektriksiz davranışıdır. Manyetik kilit güç gidince açılır: tahliye için artı, koruma için eksidir — bu yüzden aküllü yedek güç kaynağıyla birlikte kurulur. Elektromekanik ise tersine kilitli kalır — ve mekanik anahtarla açılır.",
+            "Pilli akıllı kilitlerin kendi düzeni var: bir takım pil altı ay-bir yıl gider, kilit azalmayı önceden bildirir; en kötü ihtimal için acil anahtar ya da harici 9V pil teması vardır. Kilidi yalnızca fiyata ve görünüşe değil, kesinti senaryosuna göre seçiyoruz.",
+          ] },
           { h: "Nereden alınır, nasıl sipariş verilir", p: [
             "Kataloğumuzda elektromanyetik ve akıllı kilitler, okuyucular ve aksesuarlar UZS fiyatlarıyla mevcut. İhtiyacı anlatın — daire, ofis veya bahçe kapısı — uygun seçenekleri bulup montajlı kesin fiyatı hesaplayalım.",
             "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
@@ -6610,6 +6886,10 @@ export const ARTICLES: Article[] = [
           { h: "安装费用", p: [
             "安装取决于门和锁的类型：带出门按钮的电磁锁最简单；智能锁或生物识别含调试略贵。安装平均几十万苏姆起。",
             "工程师上门和报价免费。锁具、读头和门禁设备塔什干现货，官方保修。",
+          ] },
+          { h: "供电问题：停电了怎么办", p: [
+            "对电子锁的头号问题是断电后的表现。磁力锁断电即开：利于疏散，不利于防护——所以要配带电池的后备电源使用。电机锁则相反，断电保持上锁——用机械钥匙开启。",
+            "电池款智能锁有自己的节奏：一组电池用半年到一年，电量不足会提前提醒，最坏情况还有应急钥匙或外接9V电池触点。我们选锁时把停电场景算进去——而不只是看价格和外观。",
           ] },
           { h: "在哪买、怎么订", p: [
             "目录中有电磁锁、智能锁、读头和配件，苏姆计价。说明需求——公寓、办公室或院门——我们匹配方案并给出含安装的准确价格。",
@@ -7362,6 +7642,10 @@ export const ARTICLES: Article[] = [
             "Абонентский ONU начинается от нескольких сотен тысяч сум, станционный OLT на 4–8 портов — от нескольких миллионов. Полный бюджет сети складывается из станции, кабеля, сплиттеров, боксов, сварки и настройки.",
             "Смета бесплатная: считаем оптический бюджет по вашей схеме — сколько абонентов, какие расстояния — и даём спецификацию с ценами со склада в Ташкенте за один день.",
           ] },
+          { h: "GPON или классический Ethernet", p: [
+            "Медный Ethernet ограничен сотней метров до коммутатора — в жилом комплексе или посёлке это означает активные узлы в каждом подъезде: шкафы, питание, обслуживание. GPON покрывает до 20 километров пассивной оптикой: между станцией и абонентом только волокно и сплиттеры, которым не нужны ни электричество, ни кондиционер.",
+            "Поэтому на сотнях абонентов PON выигрывает по стоимости владения: меньше активного железа — меньше точек отказа и счетов за электричество. Ethernet остаётся выбором внутри здания и там, где каждому абоненту нужен гарантированный симметричный канал — например, в офисном центре с арендаторами-компаниями. Часто оптимальна связка: GPON до здания, Ethernet внутри.",
+          ] },
           { h: "Монтаж и запуск под ключ", p: [
             "Делаем сеть целиком: проект и расчёт оптического бюджета, прокладка кабеля, сварка волокна с измерениями рефлектометром, монтаж боксов и сплиттеров, настройка OLT, привязка ONU и обучение вашего инженера.",
             "Сдаём с паспортом сети и схемами. Договор с юрлицом, НДС, гарантия на оборудование и работы.",
@@ -7394,6 +7678,10 @@ export const ARTICLES: Article[] = [
           { h: "Qancha turadi", p: [
             "Abonent ONU bir necha yuz ming so'mdan boshlanadi, 4–8 portli OLT — bir necha milliondan. To'liq byudjet stansiya, kabel, splitterlar, bokslar, payvandlash va sozlashdan yig'iladi.",
             "Smeta bepul: sxemangiz bo'yicha optik byudjetni hisoblaymiz — nechta abonent, qanday masofalar — va Toshkentdagi ombor narxlari bilan spetsifikatsiyani bir kunda beramiz.",
+          ] },
+          { h: "GPON yoki klassik Ethernet", p: [
+            "Mis Ethernet kommutatorgacha yuz metr bilan cheklangan — turar-joy majmuasi yoki posyolkada bu har pod'ezdda faol uzellar degani: shkaflar, quvvat, xizmat. GPON passiv optika bilan 20 kilometrgacha qamraydi: stansiya va abonent orasida faqat tola va splitterlar — ularga elektr ham, konditsioner ham kerak emas.",
+            "Shuning uchun yuzlab abonentda PON egalik qiymati bo'yicha yutadi: faol temir kam — nosozlik nuqtalari va elektr hisoblari kam. Ethernet bino ichida va har abonentga kafolatlangan simmetrik kanal kerak joylarda tanlov bo'lib qoladi — masalan, kompaniya-ijarachilar bilan ofis markazida. Ko'pincha bog'lam optimal: binogacha GPON, ichkarida Ethernet.",
           ] },
           { h: "Kalit topshirish montaji", p: [
             "Tarmoqni to'liq qilamiz: loyiha va optik byudjet hisobi, kabel yotqizish, reflektometr o'lchovlari bilan tola payvandlash, boks va splitterlar montaji, OLT sozlash, ONU ulash va muhandisingizni o'qitish.",
@@ -7428,6 +7716,10 @@ export const ARTICLES: Article[] = [
             "A subscriber ONU starts from a few hundred thousand UZS, a 4–8 port OLT from a few million. The full network budget adds cable, splitters, boxes, splicing and configuration.",
             "The estimate is free: we calculate the optical budget for your layout — subscriber count, distances — and deliver a priced specification from Tashkent stock within a day.",
           ] },
+          { h: "GPON or classic Ethernet", p: [
+            "Copper Ethernet is capped at a hundred meters to the switch — in a residential complex or settlement that means active nodes in every entrance: cabinets, power, maintenance. GPON covers up to 20 kilometers with passive optics: between the station and the subscriber there are only fiber and splitters, which need neither electricity nor cooling.",
+            "That is why at hundreds of subscribers PON wins on cost of ownership: less active hardware means fewer failure points and power bills. Ethernet remains the pick inside a building and where every subscriber needs a guaranteed symmetric channel — say, an office center with corporate tenants. The combo is often optimal: GPON to the building, Ethernet inside.",
+          ] },
           { h: "Turnkey installation", p: [
             "We build the network end to end: design and optical budget, cable laying, fusion splicing with OTDR measurements, boxes and splitters, OLT configuration, ONU provisioning and training for your engineer.",
             "Handover includes the network passport and diagrams. Contract with VAT, warranty on equipment and work.",
@@ -7461,6 +7753,10 @@ export const ARTICLES: Article[] = [
             "Abone ONU'su birkaç yüz bin UZS'den, 4–8 portlu OLT birkaç milyondan başlar. Tam bütçeye kablo, splitterlar, kutular, ek ve yapılandırma eklenir.",
             "Teklif ücretsiz: şemanıza göre optik bütçeyi hesaplar — abone sayısı, mesafeler — ve Taşkent stok fiyatlarıyla şartnameyi bir günde veririz.",
           ] },
+          { h: "GPON mu klasik Ethernet mi", p: [
+            "Bakır Ethernet switch'e yüz metreyle sınırlıdır — sitede veya kasabada bu her girişte aktif düğüm demektir: kabinler, güç, bakım. GPON pasif optikle 20 kilometreye kadar ulaşır: santralle abone arasında yalnızca fiber ve splitter vardır; ne elektrik ne soğutma ister.",
+            "Bu yüzden yüzlerce abonede PON, sahip olma maliyetinde kazanır: az aktif donanım, az arıza noktası ve az elektrik faturası demektir. Ethernet bina içinde ve her aboneye garantili simetrik kanal gereken yerlerde tercihtir — örneğin kurumsal kiracılı ofis merkezinde. Çoğu kez ikili en iyisidir: binaya kadar GPON, içeride Ethernet.",
+          ] },
           { h: "Anahtar teslim kurulum", p: [
             "Ağı uçtan uca kurarız: proje ve optik bütçe, kablo serimi, OTDR ölçümlü fiber ek, kutular ve splitterlar, OLT ayarı, ONU tanımlama ve mühendisinize eğitim.",
             "Teslimat ağ pasaportu ve şemalarla yapılır. KDV'li sözleşme, ekipman ve işçilik garantisi.",
@@ -7493,6 +7789,10 @@ export const ARTICLES: Article[] = [
           { h: "价格", p: [
             "用户 ONU 从几十万苏姆起，4–8 口 OLT 从几百万起。整网预算还包括光缆、分光器、接头盒、熔接与调试。",
             "报价免费：按您的拓扑核算光功率预算——用户数、距离——一天内给出塔什干现货价格的配置清单。",
+          ] },
+          { h: "选GPON还是传统以太网", p: [
+            "铜缆以太网到交换机只有一百米——在住宅区或村镇意味着每个单元都要设有源节点：机柜、供电、维护。GPON用无源光网络覆盖最远20公里：局端到用户之间只有光纤和分光器，不用电也不用空调。",
+            "因此几百户规模上PON的持有成本更优：有源设备少，故障点和电费就少。以太网仍是楼内以及每个用户都要保证对称带宽场景的选择——比如企业租户的写字楼。常见的最优解是组合：GPON到楼，楼内以太网。",
           ] },
           { h: "交钥匙施工", p: [
             "整网承建：设计与光功率预算、敷缆、OTDR 测量熔接、盒体与分光器安装、OLT 配置、ONU 注册及工程师培训。",
