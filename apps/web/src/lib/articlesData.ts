@@ -1151,93 +1151,143 @@ export const ARTICLES: Article[] = [
     related: ["intercom", "access"],
     loc: {
       ru: {
-        title: "Как выбрать домофон для дома и офиса",
-        excerpt: "Аудио или видео, аналоговый или IP, вызов на телефон — как выбрать домофон под квартиру, дом, офис или жилой комплекс.",
+        title: "Как выбрать домофон: аудио, видео или IP",
+        excerpt: "Разбираем типы домофонов для квартиры, дома и офиса: чем IP отличается от аналогового, что даёт вызов на смартфон, какой комплект нужен на калитку частного дома — и что учесть при замене старой системы.",
         sections: [
-          { h: "Аудио или видеодомофон", p: [
-            "Аудиодомофон обеспечивает только голосовую связь и открытие двери — это бюджетный вариант для подъезда. Видеодомофон показывает посетителя на мониторе, что заметно безопаснее и удобнее.",
-            "Для частного дома, офиса и квартиры сегодня выбирают именно видеодомофоны.",
+          { h: "Аудио, видео или IP — три уровня", p: [
+            "Аудиодомофон — минимальный уровень: слышно гостя, кнопка открывает дверь. Для подъезда со сложившимися привычками и для служебных входов этого хватает. Видеодомофон добавляет главное — вы видите, кто пришёл, прежде чем открыть: монитор в прихожей показывает картинку с вызывной панели, а многие модели пишут посетителей в память.",
+            "IP-домофон — современный стандарт: вызов идёт по сети, и кроме монитора его принимает смартфон, где бы вы ни были. Курьер у калитки, а вы на работе — отвечаете с телефона и открываете дверь удалённо. IP-модели Hikvision и Dahua интегрируются с камерами и СКУД: домофон становится частью общей системы безопасности, а не отдельной коробкой.",
           ] },
-          { h: "IP или аналоговый", p: [
-            "Аналоговый видеодомофон прост и надёжен для одной-двух точек. IP-домофон даёт высокое качество видео, запись событий, просмотр с телефона из любой точки и интеграцию со СКУД и умным домом.",
-            "Для многоквартирных домов и ЖК проектируют многоабонентские IP-системы с вызывными панелями и индивидуальными мониторами.",
+          { h: "Что нужно для частного дома", p: [
+            "Комплект на калитку — это не только панель и монитор. Понадобится электромеханический замок (он остаётся закрытым при отключении света — для уличной калитки это правильный выбор), блок питания, а при желании — считыватель, чтобы свои входили по карте или брелоку без звонка. Панель берите антивандальную и с ИК-подсветкой: гость приходит и в темноте.",
+            "Кабель до калитки — то, о чём вспоминают поздно: трасса под панель и замок закладывается заранее, лучше на этапе забора или дорожек. Если копать уже нечего, выручают беспроводные комплекты и IP-панели по Wi-Fi, но проводное решение всегда стабильнее — особенно зимой.",
           ] },
-          { h: "Полезные функции", p: [
-            "Обратите внимание на вызов и открытие двери со смартфона, запись по движению, ночную подсветку панели, а для улицы — защиту панели от вандализма и погоды.",
-            "Мы подберём и установим домофон под ваш объект — с настройкой удалённого доступа и гарантией.",
+          { h: "Квартира и подъезд: что менять и на что", p: [
+            "В квартире с координатным подъездным домофоном трубку можно заменить на монитор с адаптером — увидите гостя у подъездной панели без переделки всей системы. Полный апгрейд подъезда на IP — решение для ЖК и ТСЖ: каждый житель получает вызов на монитор и смартфон, ключи-таблетки меняются на карты или приложение, а журнал событий видит управляющая компания.",
+            "Для офиса логика другая: вызывная панель на входе со связью на ресепшен или пост охраны, открытие из приложения или со стационарного монитора, интеграция со СКУД — сотрудники проходят по карте, гости по звонку. Такой комплект ставится за день.",
           ] },
+          { h: "На что смотреть при выборе", p: [
+            "Разрешение панели: старые аналоговые дают мыльную картинку, современные IP — Full HD, на которой видно лицо, а не силуэт. Угол обзора панели 90–120° показывает не только лицо, но и пространство рядом — важно, если гость пришёл не один. Память на события, детекция движения у панели, работа замка при отключении света — вопросы, которые стоит задать до покупки, а не после.",
+            "Мы подбираем и устанавливаем домофоны Hikvision, Dahua и других брендов под ключ: панель, замок, монитор, настройка смартфонов и обучение. Выезд и расчёт бесплатны, оборудование со склада в Ташкенте, гарантия и сервис по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли подключить домофон к телефону?", a: "Да, IP-домофоны переводят вызов на смартфон через приложение: видите гостя и открываете дверь из любой точки. Для аналоговых моделей есть IP-конвертеры, но нативный IP работает стабильнее." },
+          { q: "Какой замок ставить на калитку — магнитный или электромеханический?", a: "На улицу — электромеханический: при отключении света он остаётся закрытым. Электромагнитный при пропадании питания открывается, поэтому его место — на путях эвакуации внутри зданий." },
+          { q: "Заменит ли домофон видеонаблюдение у входа?", a: "Частично: панель видит гостя в момент звонка, а камера пишет всё происходящее постоянно. Лучшее решение — связка: домофон для связи и открытия, камера для записи. В IP-системах они работают вместе." },
+          { q: "Сколько стоит установка видеодомофона в частный дом?", a: "Комплект «панель + монитор + электромеханический замок + монтаж» — от бюджетных аналоговых до IP с вызовом на смартфон. Точная цена зависит от длины трассы до калитки — считаем бесплатно после выезда." },
         ],
       },
       uz: {
-        title: "Uy va ofis uchun domofonni qanday tanlash",
-        excerpt: "Audio yoki video, analog yoki IP, telefonga qo'ng'iroq — kvartira, uy, ofis yoki turar-joy majmuasi uchun domofonni qanday tanlash.",
+        title: "Domofonni qanday tanlash: audio, video yoki IP",
+        excerpt: "Kvartira, uy va ofis uchun domofon turlarini ko'rib chiqamiz: IP analogdan nimasi bilan farq qiladi, smartfonga chaqiruv nima beradi, xususiy uy kalitkasiga qanday to'plam kerak — va eski tizimni almashtirishda nimani hisobga olish.",
         sections: [
-          { h: "Audio yoki video domofon", p: [
-            "Audio domofon faqat ovozli aloqa va eshik ochishni ta'minlaydi — bu podez uchun byudjet variant. Video domofon tashrifchini monitorda ko'rsatadi, bu sezilarli darajada xavfsizroq va qulayroq.",
-            "Xususiy uy, ofis va kvartira uchun bugun aynan video domofonlar tanlanadi.",
+          { h: "Audio, video yoki IP — uch daraja", p: [
+            "Audiodomofon — minimal daraja: mehmon eshitiladi, tugma eshikni ochadi. Odatlari shakllangan podyezd va xizmat kirishlariga shu yetadi. Videodomofon asosiysini qo'shadi — ochishdan oldin kim kelganini ko'rasiz: yo'lakdagi monitor chaqiruv paneli tasvirini ko'rsatadi, ko'p modellar tashrif buyuruvchilarni xotiraga yozadi.",
+            "IP-domofon — zamonaviy standart: chaqiruv tarmoq orqali boradi va monitordan tashqari uni qayerda bo'lsangiz ham smartfon qabul qiladi. Kuryer kalitka yonida, siz ishdasiz — telefondan javob berib eshikni masofadan ochasiz. Hikvision va Dahua IP-modellari kameralar va SKUD bilan integratsiya bo'ladi: domofon alohida quti emas, umumiy xavfsizlik tizimining qismiga aylanadi.",
           ] },
-          { h: "IP yoki analog", p: [
-            "Analog video domofon bir-ikki nuqta uchun oddiy va ishonchli. IP-domofon yuqori sifatli video, hodisalar yozuvi, istalgan joydan telefondan ko'rish va SKUD hamda aqlli uy bilan integratsiyani beradi.",
-            "Ko'p kvartirali uylar va TJM lar uchun chaqiruv panellari va alohida monitorli ko'p abonentli IP-tizimlar loyihalanadi.",
+          { h: "Xususiy uyga nima kerak", p: [
+            "Kalitka to'plami — bu faqat panel va monitor emas. Elektromexanik qulf kerak bo'ladi (svet o'chganda u yopiq qoladi — ko'cha kalitkasi uchun to'g'ri tanlov), quvvat bloki, xohlasangiz — o'zinikilar qo'ng'iroqsiz karta yoki brelok bilan kirishi uchun o'qigich. Panelni antivandal va IK-yoritishli oling: mehmon qorong'ida ham keladi.",
+            "Kalitkagacha kabel — kech eslanadigan narsa: panel va qulf trassasi oldindan, yaxshisi to'siq yoki yo'lakchalar bosqichida yotqiziladi. Kavlashga joy qolmagan bo'lsa, simsiz to'plamlar va Wi-Fi orqali IP-panellar qutqaradi, lekin simli yechim doim barqarorroq — ayniqsa qishda.",
           ] },
-          { h: "Foydali funksiyalar", p: [
-            "Smartfondan qo'ng'iroq va eshik ochish, harakat bo'yicha yozib olish, panelning tungi yoritilishi, ko'cha uchun esa panelni vandalizm va ob-havodan himoyaga e'tibor bering.",
-            "Biz domofonni obyektingizga mos tanlaymiz va o'rnatamiz — masofaviy kirishni sozlash va kafolat bilan.",
+          { h: "Kvartira va podyezd: nimani nimaga almashtirish", p: [
+            "Koordinatali podyezd domofonli kvartirada trubkani adapterli monitorga almashtirish mumkin — butun tizimni qayta qilmasdan podyezd panelidagi mehmonni ko'rasiz. Podyezdni IP ga to'liq yangilash — TJM va ShKlar yechimi: har turar joy egasi monitor va smartfonga chaqiruv oladi, tabletka-kalitlar karta yoki ilovaga almashadi, hodisalar jurnalini boshqaruvchi kompaniya ko'radi.",
+            "Ofis uchun mantiq boshqa: kirishdagi chaqiruv paneli resepshen yoki qo'riq posti bilan bog'lanadi, ilova yoki statsionar monitordan ochiladi, SKUD bilan integratsiya — xodimlar karta bilan, mehmonlar qo'ng'iroq bilan o'tadi. Bunday to'plam bir kunda o'rnatiladi.",
           ] },
+          { h: "Tanlashda nimaga qarash", p: [
+            "Panel ruxsati: eski analoglar loyqa tasvir beradi, zamonaviy IP — yuz ko'rinadigan Full HD. Panelning 90–120° ko'rish burchagi faqat yuzni emas, yonidagi makonni ham ko'rsatadi — mehmon yolg'iz kelmagan bo'lsa muhim. Hodisalar xotirasi, panel yonidagi harakat detektsiyasi, svet o'chganda qulf ishlashi — xariddan keyin emas, oldin beriladigan savollar.",
+            "Hikvision, Dahua va boshqa brendlar domofonlarini kalit topshirish sharti bilan tanlaymiz va o'rnatamiz: panel, qulf, monitor, smartfonlarni sozlash va o'rgatish. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va servis butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "Domofonni telefonga ulash mumkinmi?", a: "Ha, IP-domofonlar chaqiruvni ilova orqali smartfonga o'tkazadi: istalgan nuqtadan mehmonni ko'rib eshikni ochasiz. Analog modellarga IP-konverterlar bor, lekin sof IP barqarorroq ishlaydi." },
+          { q: "Kalitkaga qanday qulf qo'yish — magnitmi yoki elektromexanik?", a: "Ko'chaga — elektromexanik: svet o'chganda yopiq qoladi. Elektromagnit quvvat yo'qolganda ochiladi, shuning uchun uning joyi — binolar ichidagi evakuatsiya yo'llarida." },
+          { q: "Domofon kirishdagi videokuzatuv o'rnini bosadimi?", a: "Qisman: panel mehmonni qo'ng'iroq paytida ko'radi, kamera esa bo'layotganning hammasini doimiy yozadi. Eng yaxshisi — bog'lam: aloqa va ochish uchun domofon, yozuv uchun kamera. IP-tizimlarda ular birga ishlaydi." },
+          { q: "Xususiy uyga videodomofon o'rnatish qancha turadi?", a: "«Panel + monitor + elektromexanik qulf + montaj» to'plami — byudjet analoglardan smartfonga chaqiruvli IP gacha. Aniq narx kalitkagacha trassa uzunligiga bog'liq — chiqishdan keyin bepul hisoblaymiz." },
         ],
       },
       en: {
-        title: "How to Choose an Intercom for a Home or Office",
-        excerpt: "Audio or video, analogue or IP, calls to your phone — how to choose an intercom for an apartment, house, office or residential complex.",
+        title: "How to Choose an Intercom: Audio, Video or IP",
+        excerpt: "Intercom types for an apartment, a house and an office: how IP differs from analog, what smartphone calling gives you, what a private house gate kit includes — and what to consider when replacing an old system.",
         sections: [
-          { h: "Audio or video intercom", p: [
-            "An audio intercom gives only voice communication and door release — a budget option for an entrance hall. A video intercom shows the visitor on a monitor, which is noticeably safer and more convenient.",
-            "For private houses, offices and apartments today the choice is video intercoms.",
+          { h: "Audio, video or IP — three levels", p: [
+            "An audio intercom is the minimum: you hear the guest, a button opens the door. For an apartment entrance with settled habits and for service doors it is enough. A video intercom adds the main thing — you see who came before you open: the hallway monitor shows the door panel's picture, and many models record visitors to memory.",
+            "An IP intercom is the modern standard: the call travels over the network, and besides the monitor it reaches your smartphone wherever you are. A courier at the gate while you are at work — you answer from the phone and open remotely. Hikvision and Dahua IP models integrate with cameras and access control: the intercom becomes part of the overall security system rather than a separate box.",
           ] },
-          { h: "IP or analogue", p: [
-            "An analogue video intercom is simple and reliable for one or two points. An IP intercom delivers high-quality video, event recording, viewing from your phone anywhere and integration with access control and smart home.",
-            "For apartment buildings and residential complexes we design multi-tenant IP systems with entrance panels and individual monitors.",
+          { h: "What a private house needs", p: [
+            "A gate kit is more than a panel and a monitor. You need an electromechanical lock (it stays locked during power cuts — the right choice for a street gate), a power supply, and optionally a reader so family members enter by card or fob without ringing. Take a vandal-proof panel with IR illumination: guests arrive after dark too.",
+            "The cable to the gate is what people remember too late: the run for the panel and the lock should be laid in advance, ideally when the fence or the paths are built. If there is nothing left to dig, wireless kits and Wi-Fi IP panels help out — but a wired solution is always more stable, especially in winter.",
           ] },
-          { h: "Useful features", p: [
-            "Look for calls and door release from a smartphone, motion-triggered recording, night illumination of the panel and — outdoors — vandal and weather protection.",
-            "We will select and install an intercom for your site — with remote access setup and warranty.",
+          { h: "Apartment and entrance: what to replace with what", p: [
+            "In an apartment served by an old coordinate entrance intercom, the handset can be swapped for a monitor with an adapter — you will see the guest at the entrance panel without rebuilding the whole system. A full entrance upgrade to IP suits residential complexes and homeowner associations: every resident gets calls on a monitor and a smartphone, iButton keys give way to cards or an app, and the management company sees the event log.",
+            "An office follows a different logic: a door panel at the entrance linked to reception or the security desk, opening from an app or a desk monitor, integration with access control — staff pass by card, guests by call. Such a kit is installed in a day.",
           ] },
+          { h: "What to look at when choosing", p: [
+            "Panel resolution: old analog panels give a soapy picture, modern IP delivers Full HD where you see a face, not a silhouette. A 90–120° viewing angle shows not just the face but the space beside it — important if the guest did not come alone. Event memory, motion detection at the panel, lock behavior during outages — questions to ask before buying, not after.",
+            "We select and install Hikvision, Dahua and other brands turnkey: panel, lock, monitor, smartphone setup and training. The survey and calculation are free, equipment comes from Tashkent stock, with warranty and service across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "Can an intercom ring my phone?", a: "Yes — IP intercoms forward the call to a smartphone via an app: you see the guest and open the door from anywhere. Analog models can use IP converters, but native IP works more reliably." },
+          { q: "Which lock for a gate — magnetic or electromechanical?", a: "Outdoors — electromechanical: it stays locked during a power cut. A magnetic lock opens when power fails, so its place is on evacuation routes inside buildings." },
+          { q: "Does an intercom replace a camera at the entrance?", a: "Partially: the panel sees the guest at the moment of the call, while a camera records continuously. The best answer is both: the intercom for talking and opening, the camera for recording. In IP systems they work together." },
+          { q: "How much does a video intercom for a house cost?", a: "The \"panel + monitor + electromechanical lock + installation\" kit ranges from budget analog to IP with smartphone calls. The exact price depends on the cable run to the gate — we quote for free after a visit." },
         ],
       },
       tr: {
-        title: "Ev ve Ofis İçin Diafon Nasıl Seçilir",
-        excerpt: "Sesli mi görüntülü mü, analog mu IP mi, telefona arama — daire, ev, ofis veya site için diafon seçimi.",
+        title: "Diafon Nasıl Seçilir: Sesli, Görüntülü veya IP",
+        excerpt: "Daire, ev ve ofis için diafon türleri: IP analogdan nasıl ayrılır, telefona çağrı ne kazandırır, müstakil ev kapısına hangi set gerekir — ve eski sistemi değiştirirken nelere bakılır.",
         sections: [
-          { h: "Sesli mi görüntülü mü", p: [
-            "Sesli diafon yalnızca konuşma ve kapı açma sağlar — apartman girişi için bütçe dostu seçenek. Görüntülü diafon ziyaretçiyi ekranda gösterir; bu belirgin şekilde daha güvenli ve pratiktir.",
-            "Müstakil ev, ofis ve daireler için bugün tercih görüntülü diafonlardan yanadır.",
+          { h: "Sesli, görüntülü veya IP — üç seviye", p: [
+            "Sesli diafon asgari seviyedir: misafir duyulur, düğme kapıyı açar. Alışkanlıkları oturmuş apartman girişi ve servis kapıları için yeter. Görüntülü diafon asıl olanı ekler — açmadan önce kimin geldiğini görürsünüz: antredeki monitör kapı panelinin görüntüsünü verir, çoğu model ziyaretçileri hafızaya yazar.",
+            "IP diafon modern standarttır: çağrı ağ üzerinden gider ve monitörün yanı sıra nerede olursanız olun telefonunuza düşer. Kurye kapıda, siz iştesiniz — telefondan yanıtlar, kapıyı uzaktan açarsınız. Hikvision ve Dahua IP modelleri kameralar ve geçiş kontrolüyle entegre olur: diafon ayrı bir kutu değil, genel güvenlik sisteminin parçası olur.",
           ] },
-          { h: "IP mi analog mu", p: [
-            "Analog görüntülü diafon bir-iki nokta için basit ve güvenilirdir. IP diafon yüksek görüntü kalitesi, olay kaydı, her yerden telefonla izleme ve geçiş kontrolü ile akıllı ev entegrasyonu sunar.",
-            "Apartmanlar ve siteler için çağrı panelli, bağımsız monitörlü çok aboneli IP sistemler projelendirilir.",
+          { h: "Müstakil eve ne gerekir", p: [
+            "Bahçe kapısı seti panel ve monitörden ibaret değildir. Elektromekanik kilit gerekir (elektrik kesilince kilitli kalır — sokak kapısı için doğru seçim), güç kaynağı ve istenirse ev halkı zile basmadan kart veya anahtarlıkla girsin diye okuyucu. Paneli vandala dayanıklı ve IR aydınlatmalı alın: misafir karanlıkta da gelir.",
+            "Kapıya giden kablo, geç hatırlanan şeydir: panel ve kilit hattı önceden, en iyisi çit veya yollar yapılırken döşenir. Kazacak yer kalmadıysa kablosuz setler ve Wi-Fi IP paneller kurtarır; ama kablolu çözüm her zaman daha kararlıdır — özellikle kışın.",
           ] },
-          { h: "Faydalı özellikler", p: [
-            "Akıllı telefondan arama ve kapı açma, harekete duyarlı kayıt, panelin gece aydınlatması, dış mekânda ise vandalizme ve hava koşullarına dayanıklılığa dikkat edin.",
-            "Sahanıza uygun diafonu seçer ve kurarız — uzaktan erişim ayarı ve garantiyle.",
+          { h: "Daire ve apartman girişi: neyi neyle değiştirmeli", p: [
+            "Eski koordinat tipli apartman diafonu olan dairede ahize, adaptörlü monitörle değiştirilebilir — tüm sistemi elden geçirmeden giriş panelindeki misafiri görürsünüz. Girişin komple IP'ye geçişi siteler ve yönetimler için çözümdür: her sakin monitöre ve telefona çağrı alır, düğme anahtarlar karta veya uygulamaya döner, olay kaydını yönetim görür.",
+            "Ofiste mantık farklıdır: girişteki panel resepsiyona veya güvenlik masasına bağlanır, uygulamadan veya masaüstü monitörden açılır, geçiş kontrolüyle entegre edilir — personel kartla, misafir çağrıyla geçer. Böyle bir set bir günde kurulur.",
           ] },
+          { h: "Seçerken neye bakmalı", p: [
+            "Panel çözünürlüğü: eski analoglar bulanık görüntü verir; modern IP, yüzün silüet değil yüz olarak göründüğü Full HD sunar. Panelin 90–120° görüş açısı yalnız yüzü değil yanındaki alanı da gösterir — misafir yalnız gelmediyse önemlidir. Olay hafızası, panelde hareket algılama, kesintide kilidin davranışı — satın almadan önce sorulacak sorulardır.",
+            "Hikvision, Dahua ve diğer markaları anahtar teslim seçip kurarız: panel, kilit, monitör, telefon kurulumu ve eğitim. Keşif ve hesap ücretsiz; ekipman Taşkent stoğundan, garanti ve servis tüm Özbekistan'da.",
+          ] },
+        ],
+        faq: [
+          { q: "Diafon telefonu arayabilir mi?", a: "Evet — IP diafonlar çağrıyı uygulama üzerinden telefona yönlendirir: misafiri görür, kapıyı her yerden açarsınız. Analoglara IP çevirici takılabilir ama yerli IP daha kararlı çalışır." },
+          { q: "Bahçe kapısına hangi kilit — manyetik mi elektromekanik mi?", a: "Dış mekâna elektromekanik: elektrik kesilince kilitli kalır. Manyetik kilit güç gidince açılır; onun yeri bina içindeki kaçış yollarıdır." },
+          { q: "Diafon girişteki kameranın yerini tutar mı?", a: "Kısmen: panel misafiri çağrı anında görür, kamera ise sürekli kaydeder. En iyisi ikisi birlikte: konuşup açmak için diafon, kayıt için kamera. IP sistemlerde birlikte çalışırlar." },
+          { q: "Müstakil eve görüntülü diafon ne kadar tutar?", a: "«Panel + monitör + elektromekanik kilit + montaj» seti, ekonomik analogdan telefona çağrılı IP'ye kadar değişir. Kesin fiyat kapıya giden hattın uzunluğuna bağlıdır — keşiften sonra ücretsiz hesaplarız." },
         ],
       },
       zh: {
-        title: "如何为住宅和办公室选择楼宇对讲",
-        excerpt: "语音还是可视、模拟还是IP、手机接听——如何为公寓、住宅、办公室或小区选择对讲系统。",
+        title: "怎么选门口对讲：音频、可视还是IP",
+        excerpt: "公寓、私宅和办公室的对讲类型详解：IP与模拟的区别、呼叫转手机有什么用、私宅院门套装包含什么——以及更换旧系统要注意的事。",
         sections: [
-          { h: "语音对讲还是可视对讲", p: [
-            "语音对讲只提供通话和开门功能，是楼道的经济方案。可视对讲能在屏幕上看到访客，明显更安全、更方便。",
-            "如今私人住宅、办公室和公寓都首选可视对讲。",
+          { h: "音频、可视、IP——三个层级", p: [
+            "音频对讲是最低配置：听得见访客，按键开门。对习惯已成的单元门和后勤通道足够。可视对讲补上关键一环——开门之前先看到来人：玄关的室内机显示门口机画面，多数型号还把访客存入记录。",
+            "IP对讲是现代标准：呼叫走网络，除了室内机，无论您在哪里手机都能接。快递员在院门口、您在上班——用手机应答并远程开门。海康威视和大华的IP型号可与摄像机和门禁集成：对讲成为整套安防的一部分，而不是一只孤立的盒子。",
           ] },
-          { h: "IP还是模拟", p: [
-            "模拟可视对讲适合一两个点位，简单可靠。IP对讲提供高清视频、事件录像、随时随地手机查看，并可与门禁和智能家居集成。",
-            "对于多层住宅和小区，我们设计带门口机和户内分机的多户IP系统。",
+          { h: "私宅需要什么", p: [
+            "院门套装不只是门口机加室内机。还需要电机锁（停电时保持锁闭——街门的正确选择）、电源，愿意的话再加读卡器——家人刷卡或钥匙扣进门，不用按铃。门口机要选防破坏外壳带红外补光的：客人天黑也会来。",
+            "通往院门的线缆是最容易想起来太晚的事：门口机和锁的线路要提前埋，最好在砌围墙或铺路时。实在没法开挖时，无线套装和Wi-Fi的IP门口机能救急——但有线方案永远更稳定，冬天尤其如此。",
           ] },
-          { h: "实用功能", p: [
-            "关注手机呼叫与开门、移动侦测录像、面板夜间背光；室外面板还要防破坏、防风雨。",
-            "我们为您的项目选型并安装对讲系统——包含远程访问配置和质保。",
+          { h: "公寓和单元门：旧换新怎么换", p: [
+            "老式模拟单元对讲的住户，可以把话机换成带适配器的室内屏——不动整个系统就能看到单元门口的访客。单元门整体升级到IP适合小区和业委会：每户在室内机和手机上接听，纽扣钥匙换成卡或应用，物业还能查看事件日志。",
+            "办公室的逻辑不同：入口门口机接到前台或保安台，从应用或桌面室内机开门，与门禁集成——员工刷卡、访客按铃。这样一套一天装完。",
           ] },
+          { h: "选购时看什么", p: [
+            "门口机分辨率：老式模拟机画面模糊，现代IP是全高清——看到的是脸，不是轮廓。90–120°的视角不仅拍到脸，还能看到旁边的空间——如果访客不是一个人来，这很重要。事件存储、门口机移动侦测、停电时锁的行为——这些问题要在买之前问，不是之后。",
+            "我们一站式选配安装海康威视、大华等品牌：门口机、锁、室内机、手机配置和使用培训。勘测和报价免费，设备塔什干现货，质保和服务覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "对讲能接到手机上吗？", a: "能——IP对讲通过应用把呼叫转到手机：随时随地看到访客并开门。模拟型号可加IP转换器，但原生IP更稳定。" },
+          { q: "院门装什么锁——磁力锁还是电机锁？", a: "室外用电机锁：停电时保持锁闭。磁力锁断电即开，它的位置是建筑内部的疏散通道。" },
+          { q: "对讲能替代入口的监控摄像机吗？", a: "只能部分替代：门口机在按铃那一刻看到访客，摄像机则全程连续录像。最佳答案是组合：对讲负责通话开门，摄像机负责记录。IP系统里两者协同工作。" },
+          { q: "私宅装可视对讲多少钱？", a: "「门口机＋室内机＋电机锁＋安装」的套装，从经济型模拟到可呼叫手机的IP不等。确切价格取决于到院门的布线长度——上门后免费核算。" },
         ],
       },
     },
@@ -1248,93 +1298,143 @@ export const ARTICLES: Article[] = [
     related: ["access", "turnstile", "attendance"],
     loc: {
       ru: {
-        title: "Сколько стоит установка СКУД: из чего складывается цена",
-        excerpt: "Разбираем стоимость системы контроля доступа: точки прохода, тип идентификации, замки и турникеты — и на чём можно сэкономить.",
+        title: "Сколько стоит СКУД: цена системы контроля доступа",
+        excerpt: "Из чего складывается цена СКУД: считаем комплект на одну дверь, офис и проходную с турникетом. Чем отличаются бюджеты карточной и биометрической систем — и где спрятаны расходы, о которых забывают.",
         sections: [
-          { h: "Из чего складывается стоимость СКУД", p: [
-            "Цена системы контроля доступа зависит от числа точек прохода, типа идентификации (карта, код, отпечаток, лицо), запорных устройств (замок или турникет) и ПО. Чем больше дверей и сложнее логика доступа, тем выше стоимость оборудования и монтажа.",
-            "Отдельно считается интеграция — с учётом рабочего времени, видеонаблюдением или 1С. Базовая СКУД на одну дверь обходится недорого; проходная с турникетами и биометрией — дороже.",
+          { h: "Считаем на примере одной двери", p: [
+            "Минимальный комплект на дверь: контроллер, считыватель, электромагнитный или электромеханический замок, кнопка выхода, доводчик и блок питания с аккумулятором. По оборудованию это самый доступный уровень СКУД; монтаж двери «под ключ» занимает один день. Карты докупаются пачками по мере надобности и стоят копейки.",
+            "Цена растёт от способа идентификации: кодовая клавиатура и карты — базовый бюджет, биометрический терминал с отпечатком — средний, распознавание лица — верхний. Терминал Face ID стоит заметно дороже считывателя карт, но убирает сами карты, их выдачу, потери и передачу «отметься за меня».",
           ] },
-          { h: "От карты до биометрии", p: [
-            "Самый бюджетный вариант — карточные считыватели и электромагнитный замок на одну дверь. Дороже — биометрические терминалы (отпечаток, распознавание лица) и турникеты для проходных с большим потоком людей.",
-            "Мы подбираем баланс цены и задачи: где-то достаточно карт, где-то нужна биометрия, а на проходной — турникет с учётом рабочего времени.",
+          { h: "Офис, проходная, предприятие", p: [
+            "Офис на 3–5 дверей — это уже сетевая система: контроллеры объединяются в одну базу, права раздаются по группам из одного окна. Бюджет растёт не линейно: ПО и сервер общие, а каждая новая дверь добавляет только свой комплект железа. Проходная с турникетом — отдельная лига: сам турникет-трипод, считыватели с двух сторон, контроллер и врезка в учёт рабочего времени.",
+            "На предприятии добавляются позиции, о которых редко думают заранее: антипассбэк, шлюзы на режимные зоны, резервированное питание, интеграция с пожарной сигнализацией для разблокировки эвакуационных дверей — она обязательна по нормам. Именно поэтому смету предприятия считают по проекту, а не «по прайсу за дверь».",
           ] },
-          { h: "Что входит в проект", p: [
-            "В стоимость входят контроллеры, считыватели, замки или турникеты, кнопки выхода, блок питания, кабель, монтаж, настройка прав доступа и обучение персонала.",
-            "Чтобы получить точную смету, закажите бесплатный выезд инженера — посчитаем СКУД под ваш объект в Ташкенте и по всему Узбекистану.",
+          { h: "Скрытые расходы, о которых забывают", p: [
+            "Первое — двери. СКУД ставится на дверь, и если само полотно кривое, петли просели, а коробка гуляет, электроника не поможет: замок будет закусывать, доводчик — хлопать. Иногда в смете появляется строка «привести дверь в порядок», и это честнее, чем сдать неработающую систему.",
+            "Второе — администрирование. Кто будет заводить новых сотрудников и блокировать уволенных? Мы настраиваем систему так, чтобы это делал ваш администратор за минуты, и обучаем его. Третье — обслуживание: аккумуляторы в блоках питания живут 2–3 года, и их замена по регламенту дешевле, чем открытая дверь в час пик из-за севшего резерва.",
           ] },
+          { h: "Как сэкономить без потери качества", p: [
+            "Рабочие способы: карты вместо биометрии на второстепенных дверях, автономные контроллеры для помещений без требований к журналу, поэтапное внедрение — сначала проходная и серверная, потом кабинеты. Оборудование ZKTeco даёт лучшую цену за функциональность, Hikvision — глубокую интеграцию с видео.",
+            "Не работают: экономия на блоке питания без аккумулятора (дверь встаёт при каждом мигании света), дешёвые замки на тяжёлых дверях, «пока без доводчика». Мы считаем смету после бесплатного выезда: состав под задачу и бюджет, оборудование со склада в Ташкенте, гарантия и обслуживание по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит СКУД на одну дверь офиса?", a: "Комплект «контроллер + считыватель + замок + кнопка + питание» с монтажом за один день — базовый бюджет системы. С картами дешевле, с Face ID дороже. Точную цену считаем бесплатно по вашей двери." },
+          { q: "Что выгоднее — карты или биометрия?", a: "По железу карты дешевле. Но биометрия убирает выдачу и потери карт и исключает «отметься за меня» — на дисциплине и учёте времени она окупается за месяцы. Часто комбинируют: биометрия на входе, карты внутри." },
+          { q: "Нужен ли для СКУД отдельный сервер?", a: "Малым системам — нет: хватает контроллеров и ПО на обычном рабочем компьютере. Сервер появляется на десятках дверей, при интеграции с 1С и видеонаблюдением." },
+          { q: "Во сколько обходится обслуживание СКУД?", a: "Регламент — проверка замков, доводчиков, питания и БД — по договору с выездами по графику. Это дешевле разовых аварийных вызовов: большинство отказов СКУД — севшие аккумуляторы и разболтавшиеся доводчики." },
         ],
       },
       uz: {
-        title: "SKUD o'rnatish qancha turadi: narx nimalardan tashkil topadi",
-        excerpt: "Kirishni boshqarish tizimi narxini ko'rib chiqamiz: o'tish nuqtalari, identifikatsiya turi, qulflar va turniketlar — hamda qanday tejash mumkin.",
+        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi",
+        excerpt: "SKUD narxi nimadan yig'iladi: bitta eshik, ofis va turniketli prohodnaya to'plamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
         sections: [
-          { h: "Narx nimalardan tashkil topadi", p: [
-            "Kirishni boshqarish tizimi narxi o'tish nuqtalari soni, identifikatsiya turi (karta, kod, barmoq izi, yuz), qulflash qurilmalari (qulf yoki turniket) va dasturga bog'liq. Eshiklar qancha ko'p va kirish mantig'i qancha murakkab bo'lsa, uskuna va montaj shuncha qimmat.",
-            "Integratsiya alohida hisoblanadi — ish vaqtini hisobga olish, videokuzatuv yoki 1C bilan. Bitta eshikka bazaviy SKUD arzon; turniket va biometriyali o'tish joyi — qimmatroq.",
+          { h: "Bitta eshik misolida hisoblaymiz", p: [
+            "Eshikka minimal to'plam: kontroller, o'qigich, elektromagnit yoki elektromexanik qulf, chiqish tugmasi, dovodchik va akkumulyatorli quvvat bloki. Uskuna bo'yicha bu SKUDning eng arzon darajasi; eshikni «kalit topshirish» montaji bir kun oladi. Kartalar kerak bo'lganda pachka-pachka olinadi va arzimagan pul turadi.",
+            "Narx identifikatsiya usulidan o'sadi: kodli klaviatura va kartalar — bazaviy byudjet, barmoq izli biometrik terminal — o'rta, yuzni tanish — yuqori. Face ID terminali karta o'qigichdan sezilarli qimmat, lekin kartalarning o'zini, berilishini, yo'qolishini va «men uchun belgilab qo'y»ni olib tashlaydi.",
           ] },
-          { h: "Kartadan biometriyagacha", p: [
-            "Eng arzon variant — bitta eshikka kartali o'quvchi va elektromagnit qulf. Qimmatroq — biometrik terminallar (barmoq izi, yuzni aniqlash) va katta oqim uchun turniketlar.",
-            "Biz narx va vazifa muvozanatini tanlaymiz: qayerdadir kartalar yetarli, qayerdadir biometriya, o'tish joyida esa ish vaqtini hisobga oluvchi turniket kerak.",
+          { h: "Ofis, prohodnaya, korxona", p: [
+            "3–5 eshikli ofis — bu allaqachon tarmoq tizimi: kontrollerlar bitta bazaga birlashadi, huquqlar bir oynadan guruhlar bo'yicha beriladi. Byudjet chiziqli o'smaydi: dastur va server umumiy, har yangi eshik faqat o'z temir to'plamini qo'shadi. Turniketli prohodnaya — alohida liga: tripod-turniketning o'zi, ikki tomondan o'qigichlar, kontroller va ish vaqti hisobiga ulanish.",
+            "Korxonada oldindan kam o'ylanadigan pozitsiyalar qo'shiladi: antipassbek, rejimli zonalarga shlyuzlar, zaxiralangan quvvat, evakuatsiya eshiklarini ochish uchun yong'in signalizatsiyasi bilan integratsiya — u me'yorlar bo'yicha majburiy. Aynan shuning uchun korxona smetasi «eshik uchun prays» bo'yicha emas, loyiha bo'yicha hisoblanadi.",
           ] },
-          { h: "Loyihaga nima kiradi", p: [
-            "Narxga kontrollerlar, o'quvchilar, qulflar yoki turniketlar, chiqish tugmalari, quvvat bloki, kabel, montaj, kirish huquqlarini sozlash va xodimlarni o'qitish kiradi.",
-            "Aniq smeta olish uchun muhandisning bepul chiqishini buyurtma qiling — obyektingiz uchun SKUD ni Toshkentda va butun O'zbekiston bo'ylab hisoblaymiz.",
+          { h: "Unutiladigan yashirin xarajatlar", p: [
+            "Birinchisi — eshiklar. SKUD eshikka qo'yiladi, agar polotno qiyshiq, oshiq-moshiqlar cho'kkan, quti yursa — elektronika yordam bermaydi: qulf tishlaydi, dovodchik taraqlaydi. Ba'zan smetada «eshikni tartibga keltirish» qatori paydo bo'ladi — bu ishlamaydigan tizimni topshirishdan halolroq.",
+            "Ikkinchisi — administratorlik. Yangi xodimlarni kim kiritadi, ketganlarni kim bloklaydi? Tizimni sizning administratoringiz buni daqiqalarda qiladigan qilib sozlaymiz va uni o'rgatamiz. Uchinchisi — xizmat: quvvat bloklaridagi akkumulyatorlar 2–3 yil yashaydi, ularni reglament bo'yicha almashtirish o'tirib qolgan zaxira tufayli eng band soatda ochiq qolgan eshikdan arzon.",
           ] },
+          { h: "Sifatni yo'qotmasdan qanday tejash", p: [
+            "Ishlaydigan usullar: ikkinchi darajali eshiklarga biometriya o'rniga kartalar, jurnal talab qilinmaydigan xonalarga avtonom kontrollerlar, bosqichma-bosqich joriy etish — avval prohodnaya va serverxona, keyin kabinetlar. ZKTeco uskunasi funksionallik uchun eng yaxshi narxni, Hikvision video bilan chuqur integratsiyani beradi.",
+            "Ishlamaydiganlari: akkumulyatorsiz quvvat blokida tejash (har svet miltillashida eshik to'xtaydi), og'ir eshiklarga arzon qulflar, «hozircha dovodchiksiz». Smetani bepul chiqishdan keyin hisoblaymiz: vazifa va byudjetga mos tarkib, uskuna Toshkentdagi ombordan, kafolat va xizmat butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "Ofisning bitta eshigiga SKUD qancha turadi?", a: "«Kontroller + o'qigich + qulf + tugma + quvvat» to'plami bir kunlik montaj bilan — tizimning bazaviy byudjeti. Kartalar bilan arzonroq, Face ID bilan qimmatroq. Aniq narxni eshigingiz bo'yicha bepul hisoblaymiz." },
+          { q: "Nima foydali — kartalar yoki biometriya?", a: "Temir bo'yicha kartalar arzon. Lekin biometriya karta berish va yo'qotishlarni olib tashlaydi, «men uchun belgila»ni istisno qiladi — intizom va vaqt hisobida u oylarda o'zini oqlaydi. Ko'pincha birlashtiriladi: kirishda biometriya, ichkarida kartalar." },
+          { q: "SKUD uchun alohida server kerakmi?", a: "Kichik tizimlarga — yo'q: kontrollerlar va oddiy ish kompyuteridagi dastur yetadi. Server o'nlab eshiklarda, 1C va videokuzatuv bilan integratsiyada paydo bo'ladi." },
+          { q: "SKUD xizmati qanchaga tushadi?", a: "Reglament — qulflar, dovodchiklar, quvvat va bazani tekshirish — jadvalli chiqishlar bilan shartnoma bo'yicha. Bu bir martalik avariya chaqiruvlaridan arzon: SKUD nosozliklarining ko'pi — o'tirgan akkumulyatorlar va bo'shagan dovodchiklar." },
         ],
       },
       en: {
-        title: "How Much Does Access Control Cost: What Makes Up the Price",
-        excerpt: "Breaking down the cost of an access control system: entry points, identification type, locks and turnstiles — and where you can save.",
+        title: "How Much Does Access Control Cost",
+        excerpt: "What builds the price of an access control system: a single door, an office, and a turnstile entrance. How card and biometric budgets differ — and where the forgotten costs hide.",
         sections: [
-          { h: "What makes up the cost of ACS", p: [
-            "The price of an access control system depends on the number of entry points, the identification type (card, code, fingerprint, face), the locking devices (lock or turnstile) and the software. The more doors and the more complex the access logic, the higher the hardware and installation cost.",
-            "Integration is priced separately — with time attendance, CCTV or 1C. A basic single-door ACS is inexpensive; a checkpoint with turnstiles and biometrics costs more.",
+          { h: "Starting with one door", p: [
+            "The minimum kit for a door: a controller, a reader, an electromagnetic or electromechanical lock, an exit button, a closer and a battery-backed power supply. Hardware-wise this is the entry level of access control; a turnkey door install takes one day. Cards are bought in packs as needed and cost pennies.",
+            "The price climbs with the identification method: a keypad and cards are the base budget, a fingerprint terminal the middle, facial recognition the top. A Face ID terminal costs noticeably more than a card reader, but it removes the cards themselves — their issuing, losses and the \"clock in for me\" trick.",
           ] },
-          { h: "From cards to biometrics", p: [
-            "The most budget-friendly option is card readers with an electromagnetic lock on one door. Biometric terminals (fingerprint, facial recognition) and turnstiles for high-traffic checkpoints cost more.",
-            "We balance price against the task: sometimes cards are enough, sometimes biometrics is needed, and at the checkpoint — a turnstile with time attendance.",
+          { h: "Office, entrance, enterprise", p: [
+            "An office with 3–5 doors is already a networked system: controllers join one database, rights are assigned by group from one window. The budget does not grow linearly: the software and server are shared, and each new door adds only its own hardware kit. A turnstile entrance is a different league: the tripod turnstile itself, readers on both sides, a controller and a tie-in to time attendance.",
+            "An enterprise adds items rarely thought of in advance: anti-passback, mantraps for restricted zones, redundant power, and integration with the fire alarm to unlock evacuation doors — mandatory by code. That is why an enterprise estimate is calculated from a design, not from a \"price per door\".",
           ] },
-          { h: "What the project includes", p: [
-            "The price covers controllers, readers, locks or turnstiles, exit buttons, power supply, cabling, installation, access rights configuration and staff training.",
-            "For an exact quote, book a free engineer visit — we will size an ACS for your site in Tashkent and across Uzbekistan.",
+          { h: "The hidden costs people forget", p: [
+            "First — the doors themselves. Access control mounts onto a door, and if the leaf is warped, the hinges sagged and the frame moves, electronics will not help: the lock will bind and the closer will slam. Sometimes the estimate gains a line called \"bring the door into order\" — more honest than handing over a system that does not work.",
+            "Second — administration. Who will enroll new staff and block leavers? We configure the system so your administrator does it in minutes, and we train them. Third — maintenance: batteries in power supplies live 2–3 years, and scheduled replacement is cheaper than a door stuck open at rush hour because the backup died.",
           ] },
+          { h: "How to save without losing quality", p: [
+            "What works: cards instead of biometrics on secondary doors, autonomous controllers for rooms with no logging requirements, phased rollout — the entrance and the server room first, offices later. ZKTeco gives the best price for functionality; Hikvision offers deep integration with video.",
+            "What does not: skipping the battery in the power supply (the door stops at every power flicker), cheap locks on heavy doors, \"no closer for now\". We quote after a free survey: a configuration for the task and budget, equipment from Tashkent stock, warranty and service across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "How much is access control for one office door?", a: "The \"controller + reader + lock + button + power\" kit with a one-day install is the system's base budget. Cards are cheaper, Face ID costs more. We quote your specific door for free." },
+          { q: "Which is more economical — cards or biometrics?", a: "Cards are cheaper in hardware. But biometrics removes card issuing and losses and rules out \"clock in for me\" — on discipline and time tracking it pays back within months. A common mix: biometrics at the entrance, cards inside." },
+          { q: "Does access control need a dedicated server?", a: "Small systems — no: controllers plus software on an ordinary office PC suffice. A server appears at dozens of doors and with ERP or CCTV integration." },
+          { q: "What does access control maintenance cost?", a: "Scheduled checks of locks, closers, power and the database run under a contract with planned visits. Cheaper than one-off emergency calls: most access control failures are dead batteries and loosened closers." },
         ],
       },
       tr: {
-        title: "Geçiş Kontrol Sistemi Kurulumu Ne Kadar Tutar: Fiyat Neye Bağlı",
-        excerpt: "Geçiş kontrol sisteminin maliyetini inceliyoruz: geçiş noktaları, kimlik doğrulama türü, kilitler ve turnikeler — ve nereden tasarruf edilebilir.",
+        title: "Geçiş Kontrol Sistemi Ne Kadar Tutar",
+        excerpt: "PDKS fiyatını ne oluşturur: tek kapı, ofis ve turnikeli giriş hesabı. Kartlı ve biyometrik bütçeler nasıl ayrışır — ve unutulan masraflar nerede saklanır.",
         sections: [
-          { h: "Maliyet neye bağlı", p: [
-            "Sistemin fiyatı geçiş noktası sayısına, kimlik doğrulama türüne (kart, kod, parmak izi, yüz), kilitleme cihazlarına (kilit veya turnike) ve yazılıma bağlıdır. Kapı sayısı ve erişim mantığı karmaşıklaştıkça donanım ve montaj maliyeti artar.",
-            "Entegrasyon ayrı hesaplanır — mesai takibi, CCTV veya 1C ile. Tek kapılık temel sistem ucuzdur; turnikeli ve biyometrik danışma girişi daha pahalıdır.",
+          { h: "Tek kapıyla başlayalım", p: [
+            "Kapı için asgari set: kontrolör, okuyucu, elektromanyetik veya elektromekanik kilit, çıkış butonu, kapı kapatıcı ve aküyle desteklenmiş güç kaynağı. Donanım olarak bu, geçiş kontrolünün giriş seviyesidir; anahtar teslim kapı kurulumu bir gün sürer. Kartlar gerektikçe paketle alınır ve yok pahasınadır.",
+            "Fiyat kimlik doğrulama yöntemiyle tırmanır: tuş takımı ve kartlar taban bütçe, parmak izi terminali orta, yüz tanıma üst seviyedir. Face ID terminali kart okuyucudan belirgin pahalıdır ama kartların kendisini — dağıtımını, kayıplarını ve «benim yerime bas» numarasını — ortadan kaldırır.",
           ] },
-          { h: "Karttan biyometriye", p: [
-            "En ekonomik seçenek tek kapıya kartlı okuyucu ve elektromanyetik kilittir. Biyometrik terminaller (parmak izi, yüz tanıma) ve yoğun girişler için turnikeler daha pahalıdır.",
-            "Fiyat ile ihtiyacı dengeliyoruz: bazen kart yeterli, bazen biyometri gerekli; girişte ise mesai takibi yapan turnike.",
+          { h: "Ofis, giriş, işletme", p: [
+            "3–5 kapılı ofis artık ağ sistemidir: kontrolörler tek veritabanında birleşir, yetkiler tek ekrandan gruplara dağıtılır. Bütçe doğrusal büyümez: yazılım ve sunucu ortaktır, her yeni kapı yalnız kendi donanım setini ekler. Turnikeli giriş ayrı liga: tripod turnikenin kendisi, iki yönde okuyucular, kontrolör ve mesai takibine bağlantı.",
+            "İşletmede önceden az düşünülen kalemler eklenir: anti-passback, kısıtlı bölgelere mantrap, yedekli güç ve kaçış kapılarını açmak için yangın alarmı entegrasyonu — normlarca zorunludur. Bu yüzden işletme teklifi «kapı başı fiyattan» değil projeden hesaplanır.",
           ] },
-          { h: "Projeye neler dahil", p: [
-            "Fiyata kontrolörler, okuyucular, kilitler veya turnikeler, çıkış butonları, güç kaynağı, kablolama, montaj, yetki yapılandırması ve personel eğitimi dahildir.",
-            "Kesin teklif için ücretsiz keşif talep edin — Taşkent'te ve tüm Özbekistan'da sahanıza uygun sistemi hesaplayalım.",
+          { h: "Unutulan gizli masraflar", p: [
+            "Birincisi — kapıların kendisi. PDKS kapıya monte edilir; kanat eğri, menteşeler çökmüş, kasa oynuyorsa elektronik çare olmaz: kilit sıkışır, kapatıcı çarpar. Bazen teklife «kapıyı düzene sok» kalemi girer — çalışmayan sistem teslim etmekten dürüsttür.",
+            "İkincisi — yönetim. Yeni personeli kim tanıtacak, ayrılanları kim bloke edecek? Sistemi, yöneticiniz bunu dakikalar içinde yapacak şekilde kurar ve onu eğitiriz. Üçüncüsü — bakım: güç kaynaklarındaki aküler 2–3 yıl yaşar; planlı değişim, biten yedek yüzünden mesai saatinde açık kalan kapıdan ucuzdur.",
           ] },
+          { h: "Kaliteden ödün vermeden tasarruf", p: [
+            "İşe yarayanlar: ikincil kapılarda biyometri yerine kart, kayıt gereksinimi olmayan odalara bağımsız kontrolör, aşamalı kurulum — önce giriş ve sistem odası, sonra ofisler. ZKTeco işlevsellik başına en iyi fiyatı, Hikvision videoyla derin entegrasyonu verir.",
+            "İşe yaramayanlar: aküsüz güç kaynağıyla tasarruf (her voltaj oynamasında kapı durur), ağır kapılara ucuz kilit, «şimdilik kapatıcısız». Teklifi ücretsiz keşiften sonra veririz: göreve ve bütçeye göre yapı, Taşkent stoğundan ekipman, tüm Özbekistan'da garanti ve servis.",
+          ] },
+        ],
+        faq: [
+          { q: "Bir ofis kapısına PDKS ne kadar?", a: "«Kontrolör + okuyucu + kilit + buton + güç» seti bir günlük montajla sistemin taban bütçesidir. Kartla daha ucuz, Face ID ile daha pahalı. Kapınıza özel teklifi ücretsiz hesaplarız." },
+          { q: "Hangisi ekonomik — kart mı biyometri mi?", a: "Donanımda kart ucuzdur. Ama biyometri kart dağıtımını ve kayıplarını kaldırır, «yerime bas»ı imkânsız kılar — disiplin ve mesaide aylar içinde amorti eder. Yaygın karışım: girişte biyometri, içeride kart." },
+          { q: "PDKS için ayrı sunucu gerekir mi?", a: "Küçük sistemlere hayır: kontrolörler ve sıradan ofis bilgisayarındaki yazılım yeter. Sunucu onlarca kapıda, ERP ve kamera entegrasyonunda devreye girer." },
+          { q: "PDKS bakımı neye mal olur?", a: "Kilitlerin, kapatıcıların, gücün ve veritabanının planlı kontrolü, programlı ziyaretli sözleşmeyle yürür. Tek seferlik acil çağrılardan ucuzdur: arızaların çoğu biten aküler ve gevşeyen kapatıcılardır." },
         ],
       },
       zh: {
-        title: "安装门禁系统要多少钱：价格由什么构成",
-        excerpt: "解析门禁系统的成本：通行点数量、识别方式、锁具和闸机——以及哪些地方可以节省。",
+        title: "门禁系统要多少钱",
+        excerpt: "门禁系统的价格由什么构成：单扇门、办公室和带闸机的门岗各怎么算。刷卡与生物识别的预算差在哪——以及常被遗忘的开销藏在何处。",
         sections: [
-          { h: "门禁系统的成本构成", p: [
-            "门禁系统的价格取决于通行点数量、识别方式（卡片、密码、指纹、人脸）、锁闭装置（锁具或闸机）和软件。门越多、权限逻辑越复杂，设备和安装费用越高。",
-            "与考勤、视频监控或1C的集成单独计价。单门基础门禁很经济；带闸机和生物识别的出入口造价更高。",
+          { h: "从一扇门算起", p: [
+            "单扇门的最小套件：控制器、读卡器、磁力锁或电机锁、出门按钮、闭门器和带电池的电源。就设备而言这是门禁的入门级；一扇门一站式安装一天完成。卡片按需成包购买，价格便宜。",
+            "价格随识别方式攀升：密码键盘和刷卡是基础预算，指纹终端居中，人脸识别最高。人脸终端比读卡器贵得多，但省掉了卡片本身——发卡、丢卡，以及「替我打卡」的把戏。",
           ] },
-          { h: "从刷卡到生物识别", p: [
-            "最经济的方案是单门刷卡读卡器加电磁锁。生物识别终端（指纹、人脸识别）和大人流出入口的闸机价格更高。",
-            "我们在价格和需求之间取得平衡：有的场景刷卡足够，有的需要生物识别，出入口则配备带考勤功能的闸机。",
+          { h: "办公室、门岗、企业", p: [
+            "3–5扇门的办公室已是联网系统：控制器并入同一数据库，权限在一个界面按组分配。预算并非线性增长：软件和服务器共用，每扇新门只增加自己那套硬件。带闸机的门岗是另一个量级：三辊闸本体、两侧读卡器、控制器，还要接入考勤。",
+            "企业级会冒出很少提前想到的项目：防尾随、涉密区互锁通道、冗余供电、与火灾报警联动解锁疏散门——这是规范强制项。所以企业的预算按设计方案核算，而不是按「每扇门单价」。",
           ] },
-          { h: "项目包含什么", p: [
-            "费用包含控制器、读卡器、锁具或闸机、出门按钮、电源、线缆、安装、权限配置和人员培训。",
-            "如需精确报价，请预约工程师免费上门——我们为您在塔什干及乌兹别克斯坦全境的项目做门禁测算。",
+          { h: "常被遗忘的隐藏开销", p: [
+            "第一是门本身。门禁装在门上，门扇变形、合页下沉、门框晃动，电子设备无能为力：锁会卡涩、闭门器会砰砰作响。有时预算里会出现「修整门体」一行——这比交付一套不好用的系统诚实。",
+            "第二是日常管理。谁来录入新员工、注销离职者？我们把系统配置到您的管理员几分钟就能搞定，并做好培训。第三是维保：电源里的电池寿命2–3年，按计划更换比高峰期因备电耗尽而敞开的大门便宜得多。",
           ] },
+          { h: "怎么省钱而不失品质", p: [
+            "行得通的：次要的门用卡代替生物识别，无日志要求的房间用独立控制器，分期部署——先门岗和机房，再各办公室。中控智慧（ZKTeco）性价比最好，海康威视则与视频深度集成。",
+            "行不通的：电源省掉电池（每次电压波动门就罢工）、重门配便宜锁、「闭门器以后再说」。免费勘测后出预算：按任务和预算配型，设备塔什干现货，质保和维保覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "办公室一扇门的门禁多少钱？", a: "「控制器＋读卡器＋锁＋按钮＋电源」套件加一天安装，是系统的基础预算。刷卡便宜些，人脸贵些。按您的具体门型免费报价。" },
+          { q: "刷卡和生物识别哪个更划算？", a: "硬件上刷卡便宜。但生物识别省去发卡和补卡，杜绝「替我打卡」——在纪律和考勤上几个月就回本。常见组合：入口用生物识别，内部用卡。" },
+          { q: "门禁需要专门的服务器吗？", a: "小系统不需要：控制器加普通办公电脑上的软件就够。几十扇门、要对接ERP和视频监控时才需要服务器。" },
+          { q: "门禁的维保费用如何？", a: "按合同定期检查锁具、闭门器、电源和数据库。比临时抢修便宜：门禁的大多数故障就是电池耗尽和闭门器松动。" },
         ],
       },
     },
@@ -1345,93 +1445,143 @@ export const ARTICLES: Article[] = [
     related: ["attendance", "access"],
     loc: {
       ru: {
-        title: "Учёт рабочего времени: как выбрать систему",
-        excerpt: "Как работает автоматический учёт рабочего времени, что выбрать — карту, отпечаток или лицо, и как выгрузить табель в 1С.",
+        title: "Учёт рабочего времени: биометрия против бумажного табеля",
+        excerpt: "Почему ручной табель всегда врёт, как биометрический терминал закрывает вопрос доверия, что настроить кроме «пришёл-ушёл» — и как данные попадают в зарплату без участия кадровика.",
         sections: [
-          { h: "Как работает учёт рабочего времени", p: [
-            "Сотрудники отмечаются на терминале картой, отпечатком или по лицу; система автоматически фиксирует приход и уход и считает отработанные часы. Ручной табель и споры о переработках уходят в прошлое.",
-            "Данные доступны руководителю в реальном времени: кто на месте, кто опоздал, сколько отработано за смену и месяц.",
+          { h: "Почему бумажный табель врёт", p: [
+            "Ручной табель не выдерживает встречи с реальностью: «9:00» ставится всем, кто пришёл до десяти, вечерние переработки не записывает никто, а «отметь меня, я опоздаю» — часть корпоративной культуры. В конце месяца кадровик тратит дни на сведение и споры, и проигрывают обе стороны: компания платит за неотработанные часы, добросовестные сотрудники не получают за переработки.",
+            "Автоматический учёт убирает не людей, а почву для споров: время фиксируется в момент прохода терминалом, которому всё равно, кто чей друг. Табель собирается сам и в любой момент готов к проверке — трудовой инспекции или собственному аудиту.",
           ] },
-          { h: "Карта, отпечаток или лицо", p: [
-            "Карты — дёшево, но их передают друг другу. Отпечаток надёжнее, но требует чистых сухих рук. Распознавание лица — самое удобное и бесконтактное, особенно актуально после пандемии.",
-            "Подбираем способ отметки под дисциплину на объекте и бюджет; часто комбинируют карту и биометрию.",
+          { h: "Терминал вместо журнала", p: [
+            "Биометрический терминал узнаёт сотрудника по лицу или отпечатку — отметиться за коллегу невозможно физически. Распознавание лица работает на ходу и с гигиеной без вопросов; отпечаток дешевле, но капризен на производстве с грязными руками. Для офисов с невысокими требованиями остаются карты, для выездных бригад — отметка в мобильном приложении с геопривязкой.",
+            "Терминал ZKTeco или Hikvision совмещает учёт со СКУД: одно устройство открывает дверь и пишет время. Отдельная «вертушка для табеля» не нужна — и это сразу минус одна позиция в смете.",
           ] },
-          { h: "Интеграция и отчёты", p: [
-            "Система выгружает табель в 1С и другие учётные программы, строит отчёты по опозданиям и переработкам. Учёт времени объединяется со СКУД: один терминал и пускает сотрудника, и считает часы.",
-            "Внедряем под ключ в Ташкенте и по всему Узбекистану — с настройкой отчётов под вашу учётную политику, обучением и поддержкой.",
+          { h: "Правила, которые делают систему полезной", p: [
+            "Ценность системы — в настройке под вашу учётную политику. Графики и смены, включая ночные и скользящие; допуск на опоздание — 5 минут или ноль, решаете вы; обед фиксированный или плавающий; командировки и отпуска. Система сама считает опоздания, ранние уходы, переработки и ночные часы — по правилам, которые вы задали один раз.",
+            "Руководитель получает картину дня в реальном времени: кто на месте, кто опоздал, кого нет вообще. Не отчёт в конце месяца, а инструмент оперативного управления: видно, что смена в цехе недоукомплектована, ещё утром, а не по итогам недели.",
           ] },
+          { h: "Дорога данных в зарплату", p: [
+            "Учёт ради учёта бессмысленен — данные должны доехать до расчёта зарплаты. Мы настраиваем выгрузку табеля в 1С и учётные системы: отработанные часы, переработки и ночные попадают в расчёт без ручного переноса и ошибок «человеческого фактора». Отчёты — по подразделениям, объектам и проектам.",
+            "Внедрение не останавливает работу: терминалы на проходной — день монтажа, заведение сотрудников — ещё день (на больших штатах импортируем список из 1С или Excel). Обучаем кадровика и администратора, дальше система живёт своими силами. Выезд и расчёт бесплатны, оборудование со склада в Ташкенте, гарантия и поддержка по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько времени занимает внедрение учёта рабочего времени?", a: "Типовой офис или цех: день на монтаж терминалов, день на заведение сотрудников и настройку графиков. С понедельника система уже считает." },
+          { q: "Что делать с выездными сотрудниками и стройплощадками?", a: "Мобильная отметка с геопривязкой: сотрудник отмечается с телефона, система проверяет, что он действительно на объекте. Для временных площадок есть переносные терминалы." },
+          { q: "Сотрудники против биометрии — что делать?", a: "Терминалы хранят не фото, а математический шаблон, по которому нельзя восстановить изображение. Обычно достаточно объяснить это плюс показать, что честным сотрудникам система выгодна: переработки перестают теряться." },
+          { q: "Можно ли связать учёт времени с уже стоящей СКУД?", a: "Чаще всего да: если контроллеры и считыватели поддерживаются, учёт настраивается поверх существующих проходов. Приезжаем, смотрим оборудование и говорим честно — что переиспользуем, что придётся заменить." },
         ],
       },
       uz: {
-        title: "Ish vaqtini hisobga olish: tizimni qanday tanlash",
-        excerpt: "Avtomatik ish vaqti hisobi qanday ishlaydi, nimani tanlash kerak — karta, barmoq izi yoki yuz, va tabelni 1C ga qanday yuklash.",
+        title: "Ish vaqtini hisobga olish: biometriya qog'oz tabelga qarshi",
+        excerpt: "Nega qo'l tabeli doim aldaydi, biometrik terminal ishonch masalasini qanday yopadi, «keldi-ketdi»dan tashqari nimani sozlash kerak — va ma'lumotlar kadrchisiz ish haqiga qanday yetib boradi.",
         sections: [
-          { h: "Ish vaqtini hisobga olish qanday ishlaydi", p: [
-            "Xodimlar terminalda karta, barmoq izi yoki yuz bilan belgilanadi; tizim kelish va ketishni avtomatik qayd etadi va ishlangan soatlarni hisoblaydi. Qo'lda tabel va qo'shimcha ishlar bo'yicha nizolar o'tmishda qoladi.",
-            "Ma'lumotlar rahbarga real vaqtda ochiq: kim joyida, kim kechikdi, smena va oyda qancha ishlangan.",
+          { h: "Nega qog'oz tabel aldaydi", p: [
+            "Qo'l tabeli haqiqat bilan uchrashuvga chidamaydi: «9:00» o'ngacha kelganlarning hammasiga qo'yiladi, kechki qayta ishlashlarni hech kim yozmaydi, «meni belgilab qo'y, kechikaman» esa korporativ madaniyatning qismi. Oy oxirida kadrchi kunlarni solishtirish va bahslarga sarflaydi, ikkala tomon ham yutqazadi: kompaniya ishlanmagan soatlarga to'laydi, halol xodimlar qayta ishlash uchun olmaydi.",
+            "Avtomatik hisob odamlarni emas, bahs uchun zaminni olib tashlaydi: vaqt kimning kim bilan do'stligi baribir bo'lgan terminal orqali o'tish paytida qayd etiladi. Tabel o'zi yig'iladi va istalgan paytda tekshiruvga tayyor — mehnat inspeksiyasiga ham, o'z auditingizga ham.",
           ] },
-          { h: "Karta, barmoq izi yoki yuz", p: [
-            "Kartalar arzon, lekin ularni bir-biriga beradi. Barmoq izi ishonchliroq, lekin toza quruq qo'l talab qiladi. Yuzni aniqlash — eng qulay va kontaktsiz, pandemiyadan keyin ayniqsa dolzarb.",
-            "Belgilash usulini obyektdagi intizom va byudjetga qarab tanlaymiz; ko'pincha karta va biometriyani birlashtiradilar.",
+          { h: "Jurnal o'rniga terminal", p: [
+            "Biometrik terminal xodimni yuz yoki barmoq izidan taniydi — hamkasb o'rniga belgilanish jismonan mumkin emas. Yuzni tanish yurib ketayotganda ishlaydi va gigiyena bo'yicha savolsiz; barmoq izi arzonroq, lekin qo'li kir ishlab chiqarishda injiq. Talablari baland bo'lmagan ofislarga kartalar, sayyor brigadalarga — geolokatsiyali mobil ilovada belgilanish qoladi.",
+            "ZKTeco yoki Hikvision terminali hisobni SKUD bilan birlashtiradi: bitta qurilma eshikni ochadi va vaqtni yozadi. Alohida «tabel uchun aylanma» kerak emas — bu smetada darhol bitta pozitsiya kam degani.",
           ] },
-          { h: "Integratsiya va hisobotlar", p: [
-            "Tizim tabelni 1C va boshqa dasturlarga yuklaydi, kechikish va qo'shimcha ishlar bo'yicha hisobotlar tuzadi. Vaqtni hisobga olish SKUD bilan birlashadi: bitta terminal ham xodimni kiritadi, ham soatlarni sanaydi.",
-            "Kalit topshirish asosida joriy etamiz — Toshkentda va butun O'zbekiston bo'ylab, hisobotlarni sizning hisob siyosatingizga moslab, o'qitish va qo'llab-quvvatlash bilan.",
+          { h: "Tizimni foydali qiladigan qoidalar", p: [
+            "Tizim qiymati — sizning hisob siyosatingizga sozlashda. Grafik va smenalar, jumladan tungi va suriluvchi; kechikish ruxsati — 5 daqiqa yoki nol, siz hal qilasiz; tushlik qat'iy yoki suzuvchi; xizmat safarlari va ta'tillar. Tizim kechikish, erta ketish, qayta ishlash va tungi soatlarni o'zi sanaydi — bir marta bergan qoidalaringiz bo'yicha.",
+            "Rahbar kun manzarasini real vaqtda oladi: kim joyida, kim kechikdi, kim umuman yo'q. Oy oxiridagi hisobot emas, operativ boshqaruv quroli: sexdagi smena to'liq emasligi hafta yakunida emas, ertalaboq ko'rinadi.",
           ] },
+          { h: "Ma'lumotlarning ish haqiga yo'li", p: [
+            "Hisob uchun hisob ma'nosiz — ma'lumotlar ish haqi hisobigacha yetib borishi kerak. Tabelni 1C va hisob tizimlariga yuklashni sozlaymiz: ishlangan soatlar, qayta ishlash va tungilar qo'l ko'chirishsiz va «inson omili» xatolarisiz hisobga tushadi. Hisobotlar — bo'lim, obyekt va loyihalar bo'yicha.",
+            "Joriy etish ishni to'xtatmaydi: prohodnayadagi terminallar — bir kun montaj, xodimlarni kiritish — yana bir kun (katta shtatlarda ro'yxatni 1C yoki Excel dan import qilamiz). Kadrchi va administratorni o'rgatamiz, keyin tizim o'z kuchi bilan yashaydi. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va qo'llab-quvvatlash butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "Ish vaqti hisobini joriy etish qancha vaqt oladi?", a: "Tipik ofis yoki sex: terminallar montajiga bir kun, xodimlarni kiritish va grafiklarni sozlashga yana bir kun. Dushanbadan tizim allaqachon sanaydi." },
+          { q: "Sayyor xodimlar va qurilish maydonchalari bilan nima qilish kerak?", a: "Geolokatsiyali mobil belgilanish: xodim telefondan belgilanadi, tizim uning haqiqatan obyektda ekanini tekshiradi. Vaqtinchalik maydonchalarga ko'chma terminallar bor." },
+          { q: "Xodimlar biometriyaga qarshi — nima qilish kerak?", a: "Terminallar foto emas, tasvirni tiklab bo'lmaydigan matematik shablon saqlaydi. Odatda buni tushuntirish va halol xodimlarga tizim foydali ekanini ko'rsatish yetadi: qayta ishlashlar yo'qolmay qo'yadi." },
+          { q: "Vaqt hisobini turgan SKUD bilan bog'lasa bo'ladimi?", a: "Ko'pincha ha: kontroller va o'qigichlar qo'llab-quvvatlansa, hisob mavjud o'tishlar ustidan sozlanadi. Kelamiz, uskunani ko'ramiz va halol aytamiz — nimani qayta ishlatamiz, nimani almashtirish kerak." },
         ],
       },
       en: {
-        title: "Time Attendance: How to Choose a System",
-        excerpt: "How automatic time attendance works, what to choose — card, fingerprint or face — and how to export the timesheet to 1C.",
+        title: "Time Attendance: Biometrics vs the Paper Timesheet",
+        excerpt: "Why a manual timesheet always lies, how a biometric terminal closes the trust question, what to configure beyond \"in and out\" — and how the data reaches payroll without HR's manual work.",
         sections: [
-          { h: "How time attendance works", p: [
-            "Employees clock in at a terminal with a card, fingerprint or face; the system automatically records arrivals and departures and counts hours worked. Manual timesheets and overtime disputes become a thing of the past.",
-            "Managers see the data in real time: who is on site, who is late, how many hours were worked per shift and per month.",
+          { h: "Why the paper timesheet lies", p: [
+            "A manual timesheet does not survive contact with reality: \"9:00\" gets written for everyone who arrived before ten, evening overtime goes unrecorded, and \"clock me in, I'm running late\" is part of the office culture. At month end HR spends days reconciling, and both sides lose: the company pays for hours not worked, and honest employees are not paid for overtime.",
+            "Automated tracking removes not people but the grounds for argument: time is captured at the moment of passage by a terminal that does not care who is whose friend. The timesheet assembles itself and is ready for any audit at any moment — a labor inspection or your own.",
           ] },
-          { h: "Card, fingerprint or face", p: [
-            "Cards are cheap but get passed around. Fingerprints are more reliable but require clean, dry hands. Facial recognition is the most convenient and contactless option — especially relevant after the pandemic.",
-            "We match the clock-in method to the site's discipline and budget; cards and biometrics are often combined.",
+          { h: "A terminal instead of a logbook", p: [
+            "A biometric terminal recognises an employee by face or fingerprint — clocking in for a colleague is physically impossible. Facial recognition works on the move with no hygiene questions; fingerprints are cheaper but fussy in production with dirty hands. Offices with lighter requirements can stay on cards; field crews check in through a mobile app with geolocation.",
+            "A ZKTeco or Hikvision terminal combines attendance with access control: one device opens the door and logs the time. No separate \"timesheet turnstile\" needed — one line item fewer in the estimate.",
           ] },
-          { h: "Integration and reports", p: [
-            "The system exports timesheets to 1C and other accounting software and builds reports on lateness and overtime. Time attendance merges with access control: one terminal both admits the employee and counts the hours.",
-            "We deploy turnkey in Tashkent and across Uzbekistan — with reports configured to your accounting policy, training and support.",
+          { h: "The rules that make the system useful", p: [
+            "The system's value is in tuning it to your policy. Schedules and shifts, including night and rotating ones; a lateness allowance of 5 minutes or zero — your call; fixed or floating lunch; business trips and vacations. The system itself counts lateness, early departures, overtime and night hours — by rules you set once.",
+            "A manager gets the day's picture in real time: who is in, who is late, who is absent. Not a month-end report but an operational tool: an understaffed shift in the workshop is visible in the morning, not in the weekly summary.",
           ] },
+          { h: "The data's road to payroll", p: [
+            "Tracking for its own sake is pointless — the data must reach payroll. We configure timesheet export to 1C and other ERP systems: worked hours, overtime and night shifts land in the calculation without manual transfer or human-factor errors. Reports come by department, site and project.",
+            "Deployment does not stop the business: terminals at the entrance take a day to install, enrolling staff another day (for large headcounts we import the list from 1C or Excel). We train HR and the administrator, and the system then runs on its own. The survey and quote are free, equipment from Tashkent stock, warranty and support across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "How long does deployment take?", a: "A typical office or workshop: a day for terminal installation, a day for enrolling staff and configuring schedules. By Monday the system is already counting." },
+          { q: "What about field staff and construction sites?", a: "Mobile check-in with geolocation: the employee checks in from a phone, and the system verifies they are actually on site. Portable terminals exist for temporary sites." },
+          { q: "Employees object to biometrics — what then?", a: "Terminals store not photos but a mathematical template from which no image can be reconstructed. Explaining that, plus showing that honest staff benefit — overtime stops getting lost — usually settles it." },
+          { q: "Can attendance connect to an existing access control system?", a: "Usually yes: if the controllers and readers are supported, attendance is configured on top of existing passages. We come, inspect the hardware and say honestly what can be reused and what needs replacing." },
         ],
       },
       tr: {
-        title: "Personel Devam Kontrol (Mesai Takibi): Sistem Nasıl Seçilir",
-        excerpt: "Otomatik mesai takibi nasıl çalışır, kart mı parmak izi mi yüz mü seçmeli ve puantaj 1C'ye nasıl aktarılır.",
+        title: "Mesai Takibi: Biyometri Kâğıt Puantaja Karşı",
+        excerpt: "Elle tutulan puantaj neden hep yalan söyler, biyometrik terminal güven sorununu nasıl kapatır, «geldi-gitti»nin ötesinde ne ayarlanır — ve veri İK'nın el emeği olmadan bordroya nasıl ulaşır.",
         sections: [
-          { h: "Mesai takibi nasıl çalışır", p: [
-            "Çalışanlar terminalde kart, parmak izi veya yüzle kayıt olur; sistem geliş-gidişleri otomatik kaydeder ve çalışılan saatleri hesaplar. Elle puantaj ve fazla mesai tartışmaları geçmişte kalır.",
-            "Veriler yöneticiye gerçek zamanlı açıktır: kim yerinde, kim geç kaldı, vardiyada ve ayda kaç saat çalışıldı.",
+          { h: "Kâğıt puantaj neden yalan söyler", p: [
+            "Elle puantaj gerçekle karşılaşmaya dayanmaz: ondan önce gelen herkese «9:00» yazılır, akşam mesailerini kimse kaydetmez, «girişimi bas, geç kalıyorum» kurum kültürünün parçasıdır. Ay sonunda İK günlerce mutabakat yapar ve iki taraf da kaybeder: şirket çalışılmayan saate öder, dürüst çalışan fazla mesaisini alamaz.",
+            "Otomatik takip insanları değil tartışma zeminini kaldırır: süre, kimin kimin arkadaşı olduğu umurunda olmayan terminalce geçiş anında kaydedilir. Puantaj kendiliğinden oluşur ve her an denetime hazırdır — iş müfettişine de kendi denetiminize de.",
           ] },
-          { h: "Kart, parmak izi veya yüz", p: [
-            "Kart ucuzdur ama elden ele verilebilir. Parmak izi daha güvenilirdir ama temiz ve kuru el ister. Yüz tanıma en pratik ve temassız yöntemdir — pandemi sonrası özellikle günceldir.",
-            "Kayıt yöntemini sahadaki disipline ve bütçeye göre seçiyoruz; genellikle kart ve biyometri birlikte kullanılır.",
+          { h: "Defter yerine terminal", p: [
+            "Biyometrik terminal çalışanı yüzden veya parmak izinden tanır — arkadaşın yerine giriş basmak fiziken imkânsızdır. Yüz tanıma yürürken çalışır, hijyen sorusu yoktur; parmak izi ucuzdur ama kirli elli üretimde nazlıdır. Beklentisi hafif ofisler kartla kalabilir; saha ekipleri konum doğrulamalı mobil uygulamayla giriş yapar.",
+            "ZKTeco veya Hikvision terminali mesaiyi geçiş kontrolüyle birleştirir: tek cihaz kapıyı açar ve süreyi yazar. Ayrı «puantaj turnikesi» gerekmez — teklifte bir kalem eksik demektir.",
           ] },
-          { h: "Entegrasyon ve raporlar", p: [
-            "Sistem puantajı 1C ve diğer muhasebe programlarına aktarır, geç kalma ve fazla mesai raporları oluşturur. Mesai takibi geçiş kontrolüyle birleşir: tek terminal hem kapıyı açar hem saatleri sayar.",
-            "Taşkent'te ve tüm Özbekistan'da anahtar teslim kuruyoruz — raporlar muhasebe politikanıza göre ayarlanır, eğitim ve destek dahildir.",
+          { h: "Sistemi faydalı kılan kurallar", p: [
+            "Sistemin değeri, sizin politikanıza göre ayarlanmasındadır. Gece ve dönüşümlü dahil çizelgeler ve vardiyalar; 5 dakikalık veya sıfır gecikme payı — karar sizin; sabit veya esnek öğle arası; seyahatler ve izinler. Sistem gecikmeleri, erken çıkışları, fazla mesaiyi ve gece saatlerini bir kez koyduğunuz kurallara göre kendisi sayar.",
+            "Yönetici günün resmini gerçek zamanlı alır: kim içeride, kim geç, kim hiç yok. Ay sonu raporu değil, operasyon aracı: atölyedeki eksik vardiya hafta özetinde değil, daha sabah görünür.",
           ] },
+          { h: "Verinin bordroya yolu", p: [
+            "Takip için takip anlamsızdır — veri bordroya ulaşmalıdır. Puantajın 1C ve ERP sistemlerine aktarımını kurarız: çalışılan saatler, fazla mesai ve gece vardiyaları elle taşınmadan, insan hatasız hesaba düşer. Raporlar departman, lokasyon ve proje bazındadır.",
+            "Kurulum işi durdurmaz: girişteki terminaller bir günde monte edilir, personelin tanıtımı bir gün daha sürer (kalabalık kadroda listeyi 1C veya Excel'den alırız). İK'yı ve yöneticiyi eğitiriz; sistem sonra kendi başına yaşar. Keşif ve teklif ücretsiz, ekipman Taşkent stoğundan, garanti ve destek tüm Özbekistan'da.",
+          ] },
+        ],
+        faq: [
+          { q: "Kurulum ne kadar sürer?", a: "Tipik ofis veya atölye: terminallere bir gün, personel tanıtımı ve çizelge ayarına bir gün. Pazartesi sistem saymaya başlamıştır." },
+          { q: "Saha personeli ve şantiyeler ne olacak?", a: "Konum doğrulamalı mobil giriş: çalışan telefondan giriş yapar, sistem gerçekten sahada olduğunu doğrular. Geçici sahalar için taşınabilir terminaller vardır." },
+          { q: "Çalışanlar biyometriye karşıysa?", a: "Terminaller fotoğraf değil, görüntüye geri çevrilemeyen matematiksel şablon saklar. Bunu anlatmak ve dürüst çalışanın kazandığını göstermek — fazla mesai artık kaybolmuyor — genelde yeter." },
+          { q: "Mesai takibi mevcut PDKS'ye bağlanır mı?", a: "Çoğunlukla evet: kontrolör ve okuyucular destekleniyorsa takip mevcut geçişlerin üstüne kurulur. Gelir, donanıma bakar ve dürüstçe söyleriz — ne kullanılır, ne değişmeli." },
         ],
       },
       zh: {
-        title: "考勤系统：如何选择",
-        excerpt: "自动考勤如何运作，该选刷卡、指纹还是人脸，以及如何把考勤表导出到1C。",
+        title: "考勤管理：生物识别对阵纸质考勤表",
+        excerpt: "为什么手工考勤表永远不准，生物识别终端如何终结信任问题，除了「上下班打卡」还要配置什么——以及数据如何不经人事手工就进入工资核算。",
         sections: [
-          { h: "考勤系统如何运作", p: [
-            "员工在终端用卡片、指纹或人脸打卡；系统自动记录上下班并统计工时。手工考勤表和加班争议从此成为过去。",
-            "管理者可实时查看数据：谁在岗、谁迟到、每班次和每月工作了多少小时。",
+          { h: "纸质考勤表为什么不准", p: [
+            "手工考勤表经不起现实检验：十点前到的都写「9:00」，晚上的加班没人登记，「帮我打个卡，我要迟到了」是企业文化的一部分。月底人事花好几天对账吵架，两边都输：公司为没上的班付钱，老实人加了班却拿不到钱。",
+            "自动考勤去掉的不是人，而是争吵的土壤：时间在通过终端的那一刻被记录，终端不管谁跟谁是朋友。考勤表自动生成，随时经得起核查——无论是劳动监察还是自家审计。",
           ] },
-          { h: "刷卡、指纹还是人脸", p: [
-            "卡片便宜，但容易代打卡。指纹更可靠，但需要手指干净干燥。人脸识别最方便且无接触——疫情之后尤其实用。",
-            "我们根据现场管理要求和预算选择打卡方式；常见做法是卡片与生物识别结合。",
+          { h: "终端取代登记本", p: [
+            "生物识别终端凭人脸或指纹认人——替同事打卡在物理上不可能。人脸识别边走边过、卫生无虞；指纹更便宜，但在手脏的车间不好用。要求不高的办公室可以继续用卡，外勤班组用带定位校验的手机打卡。",
+            "中控智慧（ZKTeco）或海康威视的终端把考勤和门禁合二为一：一台设备既开门又记时。不需要单独的「考勤闸机」——预算里直接少一项。",
           ] },
-          { h: "集成与报表", p: [
-            "系统可将考勤表导出到1C等财务软件，生成迟到和加班报表。考勤与门禁合二为一：同一台终端既放行员工又统计工时。",
-            "我们在塔什干及乌兹别克斯坦全境提供交钥匙部署——按您的核算制度配置报表，并提供培训和支持。",
+          { h: "让系统真正有用的规则", p: [
+            "系统的价值在于按您的考勤制度调校。班次和排班（含夜班和轮班）；迟到宽限5分钟还是零容忍——您说了算；午休固定还是弹性；出差和休假。迟到、早退、加班和夜班工时由系统按您定好的规则自动计算。",
+            "管理者实时掌握当天全貌：谁在岗、谁迟到、谁压根没来。这不是月底的报表，而是即时管理工具：车间班组缺员早上就能看到，而不是等到周报。",
           ] },
+          { h: "数据通往工资的路", p: [
+            "为考勤而考勤没有意义——数据必须抵达工资核算。我们配置考勤表导出到1C等管理系统：工时、加班和夜班直接进入核算，没有手工誊抄，没有「人为因素」出错。报表按部门、场所和项目出。",
+            "部署不停工：门口终端一天装好，录入员工再一天（人多时从1C或Excel导入名单）。培训人事和管理员，之后系统自己运转。勘测和报价免费，设备塔什干现货，质保和支持覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "部署考勤系统要多久？", a: "典型办公室或车间：装终端一天，录员工、配排班再一天。到周一系统就已经在计数了。" },
+          { q: "外勤员工和工地怎么办？", a: "带定位的手机打卡：员工用手机签到，系统校验他确实在现场。临时工地还有便携终端。" },
+          { q: "员工反对生物识别怎么办？", a: "终端存的不是照片，而是无法还原成图像的数学模板。解释清楚这一点，再让大家看到老实人受益——加班不再被漏记——通常就够了。" },
+          { q: "考勤能接入已有的门禁系统吗？", a: "多数情况可以：只要控制器和读卡器受支持，考勤就架在现有通行点之上。我们上门看设备，实话实说——哪些能复用，哪些得换。" },
         ],
       },
     },
@@ -1442,93 +1592,143 @@ export const ARTICLES: Article[] = [
     related: ["wifi", "network"],
     loc: {
       ru: {
-        title: "Wi-Fi для офиса и склада: как сделать бесшовную сеть",
-        excerpt: "Почему один роутер не справляется, сколько точек доступа нужно и что важно при монтаже корпоративного Wi-Fi.",
+        title: "Wi-Fi для офиса: почему домашний роутер не справляется",
+        excerpt: "Разбираем, чем корпоративный Wi-Fi отличается от домашнего: ёмкость вместо «радиуса», бесшовный роуминг, гостевая сеть с авторизацией — и как спроектировать сеть, которая не тормозит в час пик.",
         sections: [
-          { h: "Почему один роутер не справляется", p: [
-            "Бытовой роутер не покрывает офис или склад целиком: в дальних кабинетах сигнал падает, а устройства при перемещении рвут соединение. Нужна сеть из точек доступа с бесшовным роумингом — устройство переключается между точками без разрыва.",
-            "Для бизнеса это критично: видеозвонки, касса, склад и IP-телефония должны работать стабильно в любой точке здания.",
+          { h: "Дело не в радиусе, а в ёмкости", p: [
+            "Домашний роутер в офисе — самая частая причина жалоб «интернет тормозит». Он рассчитан на десяток устройств, а офис на двадцать человек несёт полсотни: ноутбуки, телефоны, принтеры, телевизор в переговорке, кассы. Проблема не в «слабом сигнале» — антенны видно из любого угла, — а в ёмкости: чипу роутера не хватает ресурсов обслуживать всех одновременно.",
+            "Корпоративная точка доступа держит десятки активных клиентов, а несколько точек управляются центральным контроллером и балансируют нагрузку между собой. Сеть не деградирует, когда все вышли в видеозвонки, — именно этим и отличается офисное решение от бытового, а не ценником на коробке.",
           ] },
-          { h: "Сколько точек доступа нужно", p: [
-            "Число точек зависит от площади, стен и плотности пользователей. Открытый офис — примерно одна точка на 100–150 м²; склад с высокими стеллажами и бетоном требует более плотной установки.",
-            "Точный расчёт даёт радиообследование на объекте — мы приезжаем, замеряем покрытие и проектируем сеть без мёртвых зон.",
+          { h: "Роуминг: чтобы звонок не рвался", p: [
+            "Вторая офисная болезнь — «мёртвые зоны» и обрывы при переходе между кабинетами. Телефон цепляется за дальнюю точку до последнего, звонок квакает и рвётся. Лечится это бесшовным роумингом: точки с поддержкой стандартов 802.11k/v/r мягко передают клиента друг другу, и Zoom-звонок переживает прогулку по всему этажу.",
+            "Для этого сеть нужно проектировать: радиообследование, план размещения точек с правильным перекрытием сот, настройка мощности — слишком громкая точка мешает роумингу не меньше, чем слабая. «Повесим побольше роутеров» без плана даёт эфир, забитый взаимными помехами.",
           ] },
-          { h: "Что важно при монтаже", p: [
-            "Отдельная гостевая сеть, единый контроллер для управления всеми точками, питание точек по PoE (один кабель — данные и питание) и правильные каналы против взаимных помех.",
-            "Настраиваем Wi-Fi под ключ на оборудовании Ubiquiti, MikroTik, TP-Link в Ташкенте и по всему Узбекистану — с гарантией и поддержкой.",
+          { h: "Гостевая сеть и безопасность", p: [
+            "Раздавать гостям пароль от рабочего Wi-Fi — значит пускать чужие устройства в сеть, где живут серверы, принтеры и бухгалтерия. Правильная схема: корпоративный сегмент и гостевой изолированы VLAN-ами и файрволом, гости получают интернет через портал с авторизацией по коду или клику и с ограничением скорости.",
+            "Отдельные сегменты выделяются камерам, кассам и IoT-устройствам: взломанная «умная колонка» не должна видеть файловый сервер. Это не паранойя, а базовая гигиена, которая настраивается один раз и не мешает никому работать.",
           ] },
+          { h: "Что мы делаем и что вы получаете", p: [
+            "Проектируем сеть по плану помещения с учётом стен и помех, прокладываем СКС и ставим PoE-коммутаторы — точки питаются по тому же кабелю, что несёт данные, розетки под потолком не нужны. Работаем с Ubiquiti UniFi, MikroTik, TP-Link Omada и Ruijie со склада в Ташкенте: платформу подбираем под масштаб и бюджет.",
+            "На выходе — сеть с понятной схемой, доступами к контроллеру и инструкцией по гостевым кодам. Даём гарантию, берём Wi-Fi на сопровождение: мониторинг, обновления, разбор «у нас тормозит» по графикам контроллера, а не гаданием. Выезд и расчёт бесплатны, работаем по Ташкенту и всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько точек доступа нужно офису на 30 человек?", a: "Обычно две-четыре: зависит от планировки, стен и переговорок. Точный ответ даёт радиообследование — мы делаем его бесплатно при расчёте проекта." },
+          { q: "Можно ли оставить провайдерский роутер?", a: "Да, как шлюз в интернет: за ним ставится своя сеть с точками доступа и коммутатором. Раздачу Wi-Fi провайдерской коробке лучше не доверять — она и есть узкое место." },
+          { q: "Что такое бесшовный роуминг и правда ли он бесшовный?", a: "Стандарты 802.11k/v/r помогают устройству переключаться между точками за миллисекунды — звонок не замечает перехода. Работает при грамотном проектировании перекрытия сот; просто «много точек» роуминга не дают." },
+          { q: "Как закрыть Wi-Fi склад с металлическими стеллажами?", a: "Металл экранирует сигнал, поэтому склад проектируется с запасом перекрытия и направленными антеннами вдоль проходов. Терминалы сбора данных чувствительны к роумингу — это учитывается в плане размещения точек." },
         ],
       },
       uz: {
-        title: "Ofis va ombor uchun Wi-Fi: uzluksiz tarmoqni qanday qilish",
-        excerpt: "Nega bitta router yetarli emas, nechta kirish nuqtasi kerak va korporativ Wi-Fi montajida nima muhim.",
+        title: "Ofis uchun Wi-Fi: nega uy routeri uddalay olmaydi",
+        excerpt: "Korporativ Wi-Fi uynikidan nimasi bilan farq qilishini ko'rib chiqamiz: «radius» o'rniga sig'im, uzluksiz rouming, avtorizatsiyali mehmon tarmog'i — va eng band soatda tormozlamaydigan tarmoqni qanday loyihalash.",
         sections: [
-          { h: "Nega bitta router yetarli emas", p: [
-            "Maishiy router ofis yoki omborni to'liq qoplamaydi: uzoq xonalarda signal tushadi, qurilmalar harakatlanganda aloqani uzadi. Uzluksiz rouming bilan kirish nuqtalari tarmog'i kerak — qurilma nuqtalar o'rtasida uzilishlarsiz o'tadi.",
-            "Biznes uchun bu muhim: videoqo'ng'iroqlar, kassa, ombor va IP-telefoniya binoning istalgan joyida barqaror ishlashi kerak.",
+          { h: "Gap radiusda emas, sig'imda", p: [
+            "Ofisdagi uy routeri — «internet tormozlayapti» shikoyatlarining eng ko'p sababi. U o'nta qurilmaga mo'ljallangan, yigirma kishilik ofis esa elliktasini olib yuradi: noutbuklar, telefonlar, printerlar, muzokara xonasidagi televizor, kassalar. Muammo «kuchsiz signal»da emas — antennalar har burchakdan ko'rinadi, — sig'imda: router chipiga hammani birdan xizmatlashga resurs yetmaydi.",
+            "Korporativ ulanish nuqtasi o'nlab faol mijozni ushlaydi, bir nechta nuqta markaziy kontroller orqali boshqariladi va yukni o'zaro taqsimlaydi. Hamma videoqo'ng'iroqqa chiqqanda tarmoq cho'kmaydi — ofis yechimi maishiydan qutidagi narx bilan emas, aynan shu bilan farq qiladi.",
           ] },
-          { h: "Nechta kirish nuqtasi kerak", p: [
-            "Nuqtalar soni maydon, devorlar va foydalanuvchilar zichligiga bog'liq. Ochiq ofis — taxminan har 100–150 m² ga bitta nuqta; baland stellajli va betonli ombor zichroq o'rnatishni talab qiladi.",
-            "Aniq hisobni obyektda radio tekshiruv beradi — kelamiz, qamrovni o'lchaymiz va o'lik zonalarsiz tarmoq loyihalaymiz.",
+          { h: "Rouming: qo'ng'iroq uzilmasligi uchun", p: [
+            "Ikkinchi ofis kasali — «o'lik zonalar» va kabinetlar orasida o'tishda uzilishlar. Telefon oxirigacha uzoq nuqtaga yopishadi, qo'ng'iroq vaqillaydi va uziladi. Buni uzluksiz rouming davolaydi: 802.11k/v/r standartlarini qo'llaydigan nuqtalar mijozni bir-biriga yumshoq uzatadi, Zoom-qo'ng'iroq butun qavat bo'ylab sayrga chidaydi.",
+            "Buning uchun tarmoqni loyihalash kerak: radiotekshiruv, sotalarning to'g'ri qoplanishi bilan nuqtalar joylashuv plani, quvvat sozlash — haddan baland nuqta roumingga kuchsizidan kam xalaqit bermaydi. Rejasiz «ko'proq router osamiz» o'zaro xalaqitga to'la efir beradi.",
           ] },
-          { h: "Montajda nima muhim", p: [
-            "Alohida mehmon tarmog'i, barcha nuqtalarni boshqarish uchun yagona kontroller, nuqtalarni PoE orqali quvvatlash (bitta kabel — ma'lumot va quvvat) va o'zaro xalaqitlarga qarshi to'g'ri kanallar.",
-            "Ubiquiti, MikroTik, TP-Link uskunasida Wi-Fi ni kalit topshirish asosida sozlaymiz — Toshkentda va butun O'zbekiston bo'ylab, kafolat va qo'llab-quvvatlash bilan.",
+          { h: "Mehmon tarmog'i va xavfsizlik", p: [
+            "Mehmonlarga ish Wi-Fi parolini tarqatish — server, printer va buxgalteriya yashaydigan tarmoqqa begona qurilmalarni kiritish degani. To'g'ri sxema: korporativ va mehmon segmentlari VLAN va fayrvol bilan izolyatsiya qilinadi, mehmonlar internetni kod yoki klik avtorizatsiyali portal orqali tezlik cheklovi bilan oladi.",
+            "Kamera, kassa va IoT-qurilmalarga alohida segmentlar ajratiladi: buzilgan «aqlli kolonka» fayl serverni ko'rmasligi kerak. Bu paranoyya emas, bir marta sozlanadigan va hech kimga ishlashga xalaqit bermaydigan bazaviy gigiyena.",
           ] },
+          { h: "Biz nima qilamiz va siz nima olasiz", p: [
+            "Tarmoqni xona plani bo'yicha devor va xalaqitlarni hisobga olib loyihalaymiz, SKS o'tkazamiz va PoE-kommutatorlar qo'yamiz — nuqtalar ma'lumot olib boradigan o'sha kabeldan quvvatlanadi, ship ostida rozetka kerak emas. Toshkentdagi ombordan Ubiquiti UniFi, MikroTik, TP-Link Omada va Ruijie bilan ishlaymiz: platformani ko'lam va byudjetga tanlaymiz.",
+            "Natijada — tushunarli sxemali tarmoq, kontrollerga kirishlar va mehmon kodlari yo'riqnomasi. Kafolat beramiz, Wi-Fi ni kuzatuvga olamiz: monitoring, yangilanishlar, «tormozlayapti»ni taxmin bilan emas, kontroller grafiklari bo'yicha tahlil. Chiqish va hisob bepul, Toshkent va butun O'zbekiston bo'ylab ishlaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "30 kishilik ofisga nechta ulanish nuqtasi kerak?", a: "Odatda ikki-to'rtta: planirovka, devorlar va muzokara xonalariga bog'liq. Aniq javobni radiotekshiruv beradi — loyiha hisobida uni bepul qilamiz." },
+          { q: "Provayder routerini qoldirsa bo'ladimi?", a: "Ha, internetga shlyuz sifatida: uning ortiga ulanish nuqtalari va kommutatorli o'z tarmog'ingiz quriladi. Wi-Fi tarqatishni provayder qutisiga ishonmagan ma'qul — tor joy aynan o'sha." },
+          { q: "Uzluksiz rouming nima va u rostdan uzluksizmi?", a: "802.11k/v/r standartlari qurilmaga nuqtalar orasida millisekundlarda o'tishga yordam beradi — qo'ng'iroq o'tishni sezmaydi. Sotalar qoplanishi to'g'ri loyihalanganda ishlaydi; shunchaki «ko'p nuqta» rouming bermaydi." },
+          { q: "Metall stellajli omborni Wi-Fi bilan qanday yopish mumkin?", a: "Metall signalni ekranlaydi, shuning uchun ombor qoplanish zaxirasi va yo'laklar bo'ylab yo'naltirilgan antennalar bilan loyihalanadi. Ma'lumot yig'ish terminallari roumingga sezgir — bu nuqtalar joylashuv planida hisobga olinadi." },
         ],
       },
       en: {
-        title: "Wi-Fi for Office and Warehouse: Building a Seamless Network",
-        excerpt: "Why one router is not enough, how many access points you need and what matters when installing corporate Wi-Fi.",
+        title: "Office Wi-Fi: Why a Home Router Cannot Cope",
+        excerpt: "How corporate Wi-Fi differs from home Wi-Fi: capacity instead of \"range\", seamless roaming, a guest network with authorization — and how to design a network that does not choke at peak hours.",
         sections: [
-          { h: "Why one router is not enough", p: [
-            "A consumer router cannot cover an entire office or warehouse: the signal drops in far rooms and devices lose connection while moving. You need a network of access points with seamless roaming — devices switch between points without dropping.",
-            "For business this is critical: video calls, POS, warehouse operations and IP telephony must work reliably anywhere in the building.",
+          { h: "It is capacity, not range", p: [
+            "A home router in an office is the most common cause of \"the internet is slow\" complaints. It is built for a dozen devices, while a twenty-person office carries fifty: laptops, phones, printers, the meeting room TV, POS terminals. The problem is not \"weak signal\" — the antennas are visible from every corner — but capacity: the router's chip lacks the resources to serve everyone at once.",
+            "An enterprise access point holds dozens of active clients, and several points are managed by a central controller and balance the load between themselves. The network does not degrade when everyone joins video calls — that, not the price on the box, is what separates an office solution from a household one.",
           ] },
-          { h: "How many access points you need", p: [
-            "The number of points depends on the area, walls and user density. An open office needs roughly one point per 100–150 m²; a warehouse with tall racks and concrete demands denser placement.",
-            "An on-site radio survey gives the exact figure — we visit, measure coverage and design a network with no dead zones.",
+          { h: "Roaming: so the call does not drop", p: [
+            "The second office disease is dead zones and drops when walking between rooms. The phone clings to the far access point until the last moment; the call croaks and dies. The cure is seamless roaming: points supporting 802.11k/v/r hand the client to each other smoothly, and a Zoom call survives a walk across the whole floor.",
+            "This requires design: a site survey, a placement plan with correct cell overlap, power tuning — a too-loud point hurts roaming as much as a weak one. \"Just hang more routers\" without a plan produces an airspace jammed with mutual interference.",
           ] },
-          { h: "What matters during installation", p: [
-            "A separate guest network, a single controller managing all points, PoE power (one cable for data and power) and correct channel planning against interference.",
-            "We deploy turnkey Wi-Fi on Ubiquiti, MikroTik and TP-Link equipment in Tashkent and across Uzbekistan — with warranty and support.",
+          { h: "Guest network and security", p: [
+            "Sharing the office Wi-Fi password with guests means letting strangers' devices into the network where servers, printers and accounting live. The proper scheme: the corporate and guest segments are isolated with VLANs and a firewall, and guests get internet through a captive portal with code or one-click authorization and a speed cap.",
+            "Separate segments go to cameras, POS and IoT devices: a hacked \"smart speaker\" must not see the file server. This is not paranoia but basic hygiene — configured once, invisible to everyone's daily work.",
           ] },
+          { h: "What we do and what you get", p: [
+            "We design the network from the floor plan accounting for walls and interference, run structured cabling and install PoE switches — access points take power over the same cable that carries data, no ceiling outlets needed. We work with Ubiquiti UniFi, MikroTik, TP-Link Omada and Ruijie from Tashkent stock, choosing the platform for your scale and budget.",
+            "The result is a network with a clear diagram, controller credentials and guest code instructions. We provide a warranty and ongoing support: monitoring, updates, and \"it's slow\" investigated with controller graphs rather than guesswork. The survey and quote are free; we work across Tashkent and all of Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "How many access points does a 30-person office need?", a: "Usually two to four, depending on the layout, walls and meeting rooms. The exact answer comes from a site survey — free as part of our project calculation." },
+          { q: "Can we keep the ISP's router?", a: "Yes, as the internet gateway: your own network with access points and a switch goes behind it. Just do not trust the ISP box with Wi-Fi distribution — it is the bottleneck." },
+          { q: "What is seamless roaming and is it really seamless?", a: "The 802.11k/v/r standards help a device switch between points in milliseconds — a call does not notice the handover. It works when cell overlap is engineered properly; merely \"many points\" gives no roaming." },
+          { q: "How do you cover a warehouse with metal racking?", a: "Metal shields the signal, so a warehouse is designed with overlap margin and directional antennas along the aisles. Barcode terminals are roaming-sensitive — that is factored into the placement plan." },
         ],
       },
       tr: {
-        title: "Ofis ve Depo İçin Wi-Fi: Kesintisiz Ağ Nasıl Kurulur",
-        excerpt: "Neden tek router yetmez, kaç erişim noktası gerekir ve kurumsal Wi-Fi kurulumunda neler önemlidir.",
+        title: "Ofis için Wi-Fi: Ev Tipi Router Neden Yetmez",
+        excerpt: "Kurumsal Wi-Fi ev tipinden nasıl ayrılır: «menzil» yerine kapasite, kesintisiz dolaşım, yetkilendirmeli misafir ağı — ve yoğun saatte boğulmayan ağ nasıl tasarlanır.",
         sections: [
-          { h: "Neden tek router yetmez", p: [
-            "Ev tipi router ofisi veya depoyu tamamen kapsayamaz: uzak odalarda sinyal düşer, hareket eden cihazlar bağlantıyı koparır. Kesintisiz dolaşımlı (roaming) erişim noktaları ağı gerekir — cihaz noktalar arasında kopmadan geçer.",
-            "İş için bu kritiktir: görüntülü görüşmeler, kasa, depo ve IP telefon binanın her yerinde istikrarlı çalışmalıdır.",
+          { h: "Mesele menzil değil kapasite", p: [
+            "Ofisteki ev tipi router, «internet yavaş» şikâyetlerinin en yaygın nedenidir. Bir düzine cihaz için tasarlanmıştır; yirmi kişilik ofis elli cihaz taşır: dizüstüler, telefonlar, yazıcılar, toplantı odasındaki TV, kasalar. Sorun «zayıf sinyal» değil — antenler her köşeden görünür — kapasitedir: router çipinin herkese aynı anda hizmet edecek gücü yoktur.",
+            "Kurumsal erişim noktası onlarca aktif istemciyi taşır; birkaç nokta merkezi kontrolcüyle yönetilir ve yükü aralarında dengeler. Herkes görüntülü aramaya girince ağ çökmez — ofis çözümünü ev tipinden ayıran, kutudaki fiyat değil budur.",
           ] },
-          { h: "Kaç erişim noktası gerekir", p: [
-            "Nokta sayısı alana, duvarlara ve kullanıcı yoğunluğuna bağlıdır. Açık ofiste yaklaşık her 100–150 m²'ye bir nokta; yüksek raflı, betonarme depo daha sık yerleşim ister.",
-            "Kesin hesabı sahada radyo keşfi verir — gelir, kapsamayı ölçer ve ölü bölgesi olmayan bir ağ tasarlarız.",
+          { h: "Dolaşım: görüşme kopmasın diye", p: [
+            "İkinci ofis hastalığı ölü bölgeler ve odalar arası geçişte kopmalardır. Telefon son âna dek uzaktaki noktaya yapışır; görüşme hırıldar ve düşer. Çare kesintisiz dolaşımdır: 802.11k/v/r destekli noktalar istemciyi birbirine yumuşakça devreder, Zoom görüşmesi kat boyu yürüyüşe dayanır.",
+            "Bunun için ağ tasarlanmalıdır: saha etüdü, doğru hücre örtüşmeli yerleşim planı, güç ayarı — fazla gür nokta dolaşıma zayıfı kadar zarar verir. Plansız «daha çok router asalım», karşılıklı parazitle dolu bir hava sahası üretir.",
           ] },
-          { h: "Kurulumda neler önemli", p: [
-            "Ayrı misafir ağı, tüm noktaları yöneten tek kontrolör, PoE ile besleme (tek kablo — veri ve güç) ve parazite karşı doğru kanal planlaması.",
-            "Ubiquiti, MikroTik, TP-Link ekipmanıyla anahtar teslim Wi-Fi kuruyoruz — Taşkent'te ve tüm Özbekistan'da, garanti ve destekle.",
+          { h: "Misafir ağı ve güvenlik", p: [
+            "Misafire iş Wi-Fi şifresini vermek; sunucuların, yazıcıların ve muhasebenin yaşadığı ağa yabancı cihazları sokmak demektir. Doğru şema: kurumsal ve misafir segmentleri VLAN ve güvenlik duvarıyla yalıtılır; misafir interneti kod veya tıkla-onayla portalından, hız sınırıyla alır.",
+            "Kameralara, kasalara ve IoT cihazlarına ayrı segmentler verilir: ele geçirilen «akıllı hoparlör» dosya sunucusunu görmemelidir. Bu paranoya değil, bir kez kurulan ve kimsenin işine karışmayan temel hijyendir.",
           ] },
+          { h: "Ne yapıyoruz, ne alıyorsunuz", p: [
+            "Ağı kat planından, duvarları ve parazitleri hesaba katarak tasarlar, yapısal kablolama çeker ve PoE switch kurarız — noktalar veriyi taşıyan kablodan beslenir, tavan altına priz gerekmez. Taşkent stoğundan Ubiquiti UniFi, MikroTik, TP-Link Omada ve Ruijie ile çalışır, platformu ölçeğe ve bütçeye göre seçeriz.",
+            "Sonuç: net şemalı ağ, kontrolcü erişimleri ve misafir kodu talimatı. Garanti verir, Wi-Fi'ı izleriz: takip, güncellemeler ve «yavaş» şikâyetinin tahminle değil kontrolcü grafikleriyle çözümü. Keşif ve teklif ücretsiz; Taşkent ve tüm Özbekistan'da çalışıyoruz.",
+          ] },
+        ],
+        faq: [
+          { q: "30 kişilik ofise kaç erişim noktası gerekir?", a: "Genelde iki-dört: plana, duvarlara ve toplantı odalarına bağlı. Kesin yanıtı saha etüdü verir — proje hesabında ücretsizdir." },
+          { q: "Sağlayıcının routerı kalabilir mi?", a: "Evet, internet geçidi olarak: arkasına erişim noktalı ve switch'li kendi ağınız kurulur. Wi-Fi dağıtımını sağlayıcı kutusuna emanet etmeyin — dar boğaz tam da odur." },
+          { q: "Kesintisiz dolaşım nedir, gerçekten kesintisiz mi?", a: "802.11k/v/r standartları cihazın noktalar arasında milisaniyelerde geçmesini sağlar — görüşme devri fark etmez. Hücre örtüşmesi doğru tasarlanınca çalışır; yalnızca «çok nokta» dolaşım vermez." },
+          { q: "Metal raflı depo nasıl kapsanır?", a: "Metal sinyali perdeler; depo bu yüzden örtüşme payıyla ve koridorlar boyunca yönlü antenlerle tasarlanır. El terminalleri dolaşıma duyarlıdır — yerleşim planında gözetilir." },
         ],
       },
       zh: {
-        title: "办公室和仓库Wi-Fi：如何打造无缝网络",
-        excerpt: "为什么一台路由器不够用，需要多少个接入点，企业级Wi-Fi施工要注意什么。",
+        title: "办公室Wi-Fi：家用路由器为什么撑不住",
+        excerpt: "企业级Wi-Fi与家用的区别：容量而非「覆盖半径」、无缝漫游、带认证的访客网络——以及如何设计一张高峰期不卡顿的网络。",
         sections: [
-          { h: "为什么一台路由器不够用", p: [
-            "家用路由器无法覆盖整个办公室或仓库：远端房间信号衰减，设备移动时连接中断。需要由多个接入点组成的无缝漫游网络——设备在接入点之间切换而不断线。",
-            "这对企业至关重要：视频会议、收银、仓储和IP电话必须在楼内任何位置稳定运行。",
+          { h: "关键不是半径，是容量", p: [
+            "办公室用家用路由器，是「网卡了」投诉的头号来源。它为十来台设备设计，二十人的办公室却挂着五十台：笔记本、手机、打印机、会议室电视、收银机。问题不在「信号弱」——天线哪个角落都看得见——而在容量：路由器芯片没有资源同时伺候所有人。",
+            "企业级接入点单台承载数十个活跃客户端，多台由中央控制器统一管理并互相分担负载。所有人同时开视频会议网络也不垮——办公方案与家用的区别正在这里，而不是包装盒上的价格。",
           ] },
-          { h: "需要多少个接入点", p: [
-            "接入点数量取决于面积、墙体和用户密度。开放式办公室约每100–150平方米一个接入点；高货架和混凝土结构的仓库需要更密集的布点。",
-            "精确数字来自现场无线勘测——我们上门测量覆盖，设计没有盲区的网络。",
+          { h: "漫游：让通话不掉线", p: [
+            "办公室第二种通病是「死区」和走动时掉线。手机死抱着远处的接入点不放，通话卡顿然后中断。治法是无缝漫游：支持802.11k/v/r标准的接入点把客户端平滑地互相移交，Zoom通话能撑过穿越整层楼的散步。",
+            "这需要设计：现场勘测、带正确蜂窝重叠的点位规划、功率调校——信号过强的接入点对漫游的伤害不亚于信号弱的。没有规划的「多挂几个路由器」，得到的是一片互相干扰的频谱。",
           ] },
-          { h: "施工中的要点", p: [
-            "独立的访客网络、统一管理所有接入点的控制器、PoE供电（一根网线同时传数据和供电）以及合理的信道规划以避免干扰。",
-            "我们使用Ubiquiti、MikroTik、TP-Link设备提供交钥匙Wi-Fi部署——覆盖塔什干及乌兹别克斯坦全境，含质保和支持。",
+          { h: "访客网络与安全", p: [
+            "把办公Wi-Fi密码发给客人，等于把陌生设备放进服务器、打印机和财务所在的网络。正确做法：办公段和访客段用VLAN和防火墙隔离，访客通过认证门户上网——凭码或一键连接，并限速。",
+            "摄像机、收银机和物联网设备再分独立网段：被入侵的「智能音箱」不应看得见文件服务器。这不是多疑，是配置一次、不妨碍任何人干活的基本卫生。",
           ] },
+          { h: "我们做什么、您得到什么", p: [
+            "按平面图设计网络，考虑墙体和干扰源；敷设综合布线并安装PoE交换机——接入点由传数据的同一根线供电，吊顶下不需要插座。设备用塔什干现货的Ubiquiti UniFi、MikroTik、TP-Link Omada和锐捷：平台按规模和预算选。",
+            "交付的是一张有清晰图纸的网络：控制器账号、访客码发放说明。提供质保并持续运维：监控、升级，「网慢了」用控制器图表诊断而不是猜。勘测和报价免费，服务覆盖塔什干及全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "30人的办公室需要几个接入点？", a: "通常两到四个，取决于布局、墙体和会议室数量。准确答案来自现场勘测——它包含在我们的免费方案测算里。" },
+          { q: "运营商的路由器能留着吗？", a: "能，当互联网网关用：它后面架设您自己的接入点和交换机网络。别把Wi-Fi分发交给运营商的盒子——瓶颈就是它。" },
+          { q: "无缝漫游是什么，真的无缝吗？", a: "802.11k/v/r标准让设备在毫秒级完成接入点切换——通话察觉不到移交。前提是蜂窝重叠设计得当；单纯「多装几个点」不产生漫游。" },
+          { q: "金属货架的仓库怎么覆盖？", a: "金属屏蔽信号，所以仓库要按加倍的重叠余量设计，并沿通道使用定向天线。手持终端对漫游敏感——点位规划时都会考虑。" },
         ],
       },
     },
