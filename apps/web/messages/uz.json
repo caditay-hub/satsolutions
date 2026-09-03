@@ -1483,6 +1483,20 @@
         "GPS-treking va 4G/Wi-Fi aloqa",
         "Yo‘lovchilarni sanash va videoanalitika",
         "Dispetcher markaziga ulash"
+      ],
+      "faq": [
+        {
+          "q": "Bitta avtobusni jihozlash qancha vaqt oladi?",
+          "a": "Smenalararo oynada bir ish kuni: mashina tashish grafigidan chiqmaydi. 50 mashinalik parkni ekspluatatsiya bilan parallel 2–3 oyda jihozlaymiz."
+        },
+        {
+          "q": "Dispetcher videoni real vaqtda ko'radimi?",
+          "a": "Ha, 4G orqali so'rov bo'yicha: joylashuv, salon kameralari, haydovchining trevoga tugmasi. To'liq arxiv mobil trafik uchun to'lamaslik uchun parkda Wi-Fi orqali yuklanadi."
+        },
+        {
+          "q": "Yo'lovchilarni sanash nima beradi?",
+          "a": "Reyslar va bekatlar bo'yicha real yo'lovchi oqimi: marshrutlar, intervallar rejalashtirish va tashish buyurtmachisi oldida hisobot uchun ma'lumotlar."
+        }
       ]
     },
     "city": {
@@ -1495,6 +1509,20 @@
         "Ma’lumotlar markazi va videoarxiv saqlash",
         "Videoanalitika va aniqlash",
         "Vaziyat markazi va kuzatib borish"
+      ],
+      "faq": [
+        {
+          "q": "«Xavfsiz shahar» loyihasi nimadan boshlanadi?",
+          "a": "Konsepsiya va pilot zonadan: to'liq konturli bir necha chorraha yoki tuman — kameralar, kanallar, analitika, vaziyat markazi. Yechimlar tirajdan oldin pilotda sinovdan o'tadi."
+        },
+        {
+          "q": "Kameralarga kim kirish oladi?",
+          "a": "Rollar va huquqlarni buyurtmachi belgilaydi: politsiya, ma'muriyat, kommunal xizmatlar o'z segmentlarini ko'radi. Arxivga har bir murojaat jurnalga yoziladi."
+        },
+        {
+          "q": "Shaharga qanday arxiv chuqurligi kerak?",
+          "a": "Kameralar toifasiga bog'liq: chorrahalar va ijtimoiy obyektlar — 30 sutka va undan ko'p, umumiy ko'rinish nuqtalari — kamroq. Saqlagichni yagona raqam bilan emas, toifalar bo'yicha hisoblaymiz."
+        }
       ]
     },
     "parking": {
@@ -1574,7 +1602,21 @@
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Parkovka uskunalari — Toshkentdagi omborda",
         "brandsText": "ZKTeco, Hikvision, Dahua — shlagbaum, raqam aniqlash kameralari va kontrollerlar, o‘zimiz kafolat bilan yetkazamiz:"
-      }
+      },
+      "faq": [
+        {
+          "q": "Raqamlarni tanishning qanday foizi erishiladi?",
+          "a": "To'g'ri loyihalangan polosada — real trafikda 95% dan yuqori, kecha va yog'ingarchilikni ham qo'shganda. Ishga tushirilgandan keyingi birinchi haftalarda burchak va yoritish sozlamalari bilan yetkazamiz."
+        },
+        {
+          "q": "Aholi shlagbaum ochilishini kutadimi?",
+          "a": "Yo'q: raqam yaqinlashganda o'qiladi va oq ro'yxatdagi mashinalar uchun shlagbaum yetib kelgunga ochiladi. O'tish tsikli — bir necha soniya."
+        },
+        {
+          "q": "Mehmonlar va yetkazib berish bilan nima qilinadi?",
+          "a": "Mehmon stsenariylarini sozlaymiz: aholi ilovasidan bir martalik ruxsatnoma, dispetcherga qo'ng'iroq yoki vaqtinchalik ro'yxat. Har bir holat qo'lda ochmasdan ishlaydi."
+        }
+      ]
     },
     "retail": {
       "title": "Riteyl va bozorlar",
@@ -1586,6 +1628,20 @@
         "Kassa operatsiyalari nazorati",
         "Qo‘riqlash va o‘g‘irlikka qarshi signalizatsiya",
         "Xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Videoni kassa cheklari bilan bog'lash mumkinmi?",
+          "a": "Ha, bu chakana savdo uchun asosiy funksiya: chek raqami bo'yicha kassa yozuvining fragmenti ochiladi. Kamomad va bahsli qaytarishlarni daqiqalarda hal qilishga yordam beradi."
+        },
+        {
+          "q": "Bizda turli shaharlarda 15 do'kondan iborat tarmoq bor — eplaysizmi?",
+          "a": "Ha, butun O'zbekiston bo'ylab 100+ nuqtali tarmoq tajribamiz bor (Uzum topshirish punktlari). Ofisdan markazlashgan kirish quramiz, yangi nuqtalar uchun tipovoy komplekt qilamiz."
+        },
+        {
+          "q": "Tashrif buyuruvchilarni sanash — alohida tizimmi?",
+          "a": "Yo'q, hisoblagichlar o'sha videokuzatuv tizimiga kiradi. Trafik va konversiya hisobotlarini qo'riqlash vazifalariga qo'shimcha marketing uchun sozlaymiz."
+        }
       ]
     },
     "bank": {
@@ -1598,6 +1654,20 @@
         "Trevoga tugmalari va signalizatsiya",
         "Ish vaqti hisobi",
         "Servis va qo‘llab-quvvatlash"
+      ],
+      "faq": [
+        {
+          "q": "Bankning ichki reglamentlari bo'yicha ishlaysizmi?",
+          "a": "Ha: ruxsatnomalar, marshrutlar, ish vaqtidan tashqari ishlar, harakatlarni jurnallash — hammasini boshlashdan oldin xavfsizlik xizmati bilan kelishamiz. Moliyaviy tashkilotlar bilan tajriba bor, jumladan server infratuzilmasini virtualizatsiya qilish."
+        },
+        {
+          "q": "Evakuatsiya eshiklaridagi qulflar — bu qonuniymi?",
+          "a": "Ha, to'g'ri sxemada: elektromagnit qulflar yong'in signalizatsiyasi signali bo'yicha bo'shashi shart. Biz SKUDni APS bilan bog'laymiz va topshirishda bo'shatishni tekshiramiz."
+        },
+        {
+          "q": "Videoarxiv qancha saqlanadi?",
+          "a": "Arxiv chuqurligini bank talablariga moslab hisoblaymiz — 30 sutka va undan ko'p. RAID-saqlagich qo'yamiz va ishga tushirilgandan keyin real yuk ostida haqiqiy chuqurlikni nazorat qilamiz."
+        }
       ]
     },
     "school": {
@@ -1610,6 +1680,20 @@
         "Ogohlantirish va yong‘in xavfsizligi",
         "Ota-onalarni xabardor qilish (karta/SMS)",
         "Ishga tushirish va servis"
+      ],
+      "faq": [
+        {
+          "q": "Ota-onalar bola o'tishi haqida bildirishnoma oladimi?",
+          "a": "Ha, turniket orqali har kirish va chiqishda ota-onaga bildirishnoma keladi. Bu tizimning bazaviy sozlamasiga kiradi, funksiya uchun qo'shimcha to'lov yo'q."
+        },
+        {
+          "q": "Yong'in trevogasida nima bo'ladi?",
+          "a": "Turniketlar yong'in signalizatsiyasi signali bo'yicha avtomatik bo'shaydi, evakuatsiya yo'llaridagi eshiklar ochiladi. Stsenariyni obyekt topshirishda ma'muriyat bilan birga tekshiramiz."
+        },
+        {
+          "q": "Maktabda montajni qachon qilgan ma'qul?",
+          "a": "Asosiy ishlarni ta'tillarga rejalashtiramiz: 2–4 haftada prohodnaya va kameralarni ulgurib o'rnatamiz. O'quv vaqtida faqat kelishuv bo'yicha jim ishlar mumkin."
+        }
       ]
     },
     "industry": {
@@ -1622,6 +1706,20 @@
         "O‘tish va KPPlarda SKUD",
         "Qo‘riqlash bilan integratsiya",
         "Xizmat ko‘rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Tizimni ishlab chiqarishni to'xtatmasdan o'rnatish mumkinmi?",
+          "a": "Ha, biz ko'pincha shunday ishlaymiz: shovqinli va changli operatsiyalarni ta'mir oynalari va tungi smenalarga chiqaramiz, montajni sex bo'yicha bosqichma-bosqich olib boramiz. Grafikni ishlar boshlanishidan oldin bosh muhandis bilan kelishamiz."
+        },
+        {
+          "q": "100–500 kamerali zavod loyihasi qancha vaqt oladi?",
+          "a": "Tekshiruv va loyiha — 1–2 hafta, montaj — trassalar tayyorligi va sexlarga kirish rejimiga qarab 1 dan 3 oygacha. Aniq grafikni tekshiruvdan keyin spetsifikatsiya bilan birga beramiz."
+        },
+        {
+          "q": "SKUDni tabel uchun 1C bilan bog'laysizmi?",
+          "a": "Ha. Zonalar va smenalarni sozlaymiz, o'tish hodisalari tabelga yuklanadi va 1C ga uzatiladi — kadrlar bo'limi ishlangan vaqt bo'yicha tayyor ma'lumotlarni qo'lda kiritmasdan oladi."
+        }
       ]
     },
     "residential": {
@@ -1634,6 +1732,20 @@
         "Shlagbaum va kirish avtomatikasi",
         "Yashovchilar uchun ANPR",
         "Servis xizmati"
+      ],
+      "faq": [
+        {
+          "q": "Aholi eshikni smartfondan ocha oladimi?",
+          "a": "Ha, ilovali IP-domofoniya qo'yamiz: chaqiruv telefonga keladi, eshik istalgan joydan ochiladi. Smartfoni yo'q aholi uchun oddiy trubkalarni saqlaymiz."
+        },
+        {
+          "q": "Aholi va mehmonlar uchun kirish qanday tashkil qilinadi?",
+          "a": "Raqamlarni taniydigan shlagbaum: oq ro'yxatdagi aholi mashinalari avtomatik o'tadi, mehmonlar va yetkazib berishni dispetcher yoki ilovadan turgan aholi o'tkazadi."
+        },
+        {
+          "q": "Topshirilgandan keyin tizimga kim xizmat ko'rsatadi?",
+          "a": "Tizimni boshqaruv kompaniyasiga o'qitish va reglamentlar bilan topshiramiz, servisni esa shartnoma bo'yicha o'zimiz olamiz — arizalardan reglamentli aylanib chiqishlargacha."
+        }
       ]
     },
     "virtualization": {
@@ -2394,6 +2506,20 @@
         "Yuklash nazorati va ombor operatsiyalariga bog'lash",
         "Xodimlar uchun SKUD va darvozada ANPR",
         "Ishga tushirish, o'qitish va servis"
+      ],
+      "faq": [
+        {
+          "q": "Kameralar yetkazib beruvchilar va mijozlar bilan bahslarda yordam beradimi?",
+          "a": "Ha, agar rampalar to'g'ri yopilgan bo'lsa: mashina va tushirish zonasi o'qiladigan planli kameralar qo'yamiz va xodimlarni nakladnoy vaqti bo'yicha fragmentni bir daqiqada yuklashga o'rgatamiz — bu loyiha topshirishning standart qismi."
+        },
+        {
+          "q": "Ombor kecha-kunduz ishlaydi — montaj qanday o'tadi?",
+          "a": "Zonalar bo'yicha va kelishilgan oynalarda ishlaymiz, trassalarni mavjud lotoklar bo'ylab olib boramiz. Omborni to'xtatish talab qilinmaydi."
+        },
+        {
+          "q": "Sovuq omborlar bilan nima qilasiz?",
+          "a": "Muzlatish zonalari uchun kengaytirilgan harorat diapazonli va isitishli kameralar qo'llaymiz, quvvat bloklarini issiq xonalarga chiqaramiz. Bu shtatniy yechim, ekzotika emas."
+        }
       ]
     },
     "construction": {
@@ -2406,6 +2532,20 @@
         "Perimetr signalizatsiyasi va material ombori qo'riqlovi",
         "Kirishda SKUD va brigadalar ish vaqti hisobi",
         "Bosqich tugagach ko'chirish va demontaj"
+      ],
+      "faq": [
+        {
+          "q": "Yangi maydonchada kuzatuvni qancha tez ishga tushirish mumkin?",
+          "a": "4G dagi avtonom postlarni kirgandan 1–2 kunda ishga tushiramiz: tarmoq va doimiy quvvat talab qilinmaydi, o'rnatish joyi va mobil tarmoq qamrovi yetarli."
+        },
+        {
+          "q": "Qurilish tugagach tizim bilan nima bo'ladi?",
+          "a": "Buyurtmachi tanloviga ko'ra: demontaj qilib keyingi obyektga ko'chiramiz yoki tayyor bino doimiy tizimiga o'tkazamiz — trassalar va nuqtalarni buni hisobga olib oldindan qo'yamiz."
+        },
+        {
+          "q": "Qurilishni telefondan ko'rish mumkinmi?",
+          "a": "Ha, buyurtmachi va bosh pudratchi o'z kameralarini ilovada real vaqtda ko'radi, arxiv ham kiradi. Huquqlarni mas'uliyat zonalari bo'yicha alohida sozlaymiz."
+        }
       ]
     },
     "medical": {
@@ -2418,6 +2558,20 @@
         "Bo'lim, dorixona va serverxonaga SKUD",
         "Trevoga tugmalari va qo'riqlash bilan aloqa",
         "Yong'in signalizatsiyasi, ogohlantirish va servis"
+      ],
+      "faq": [
+        {
+          "q": "Palatalarga kamera qo'yish mumkinmi?",
+          "a": "Yo'q, palatalar va qabul xonalarida suratga olish olib borilmaydi. Kameralarni koridorlar, hollar, kirishlar va hududga joylashtiramiz — bu maxfiylikni buzmasdan xavfsizlik uchun yetarli."
+        },
+        {
+          "q": "Klinika kecha-kunduz ishlaydi — montaj qanday o'tadi?",
+          "a": "Qabulni to'xtatmasdan kichik uchastkalarda ishlaymiz: bo'limlar navbat bilan bir necha soatga yopiladi, statsionarga kechasi tegmaymiz. Grafikni bosh vrach bilan kelishamiz."
+        },
+        {
+          "q": "Klinika uchun SKUDga nima kiradi?",
+          "a": "Bo'limlar, dorixona, laboratoriyalar va serverxonaga kartali kirish, xodimlarning smenalar bo'yicha ish vaqti hisobi, postlardagi trevoga tugmalari va qo'riqlash bilan aloqa."
+        }
       ]
     },
     "hotel": {
@@ -2430,6 +2584,20 @@
         "Xizmat zonalari va ombor uchun SKUD",
         "Yong'in signalizatsiyasi va ogohlantirish",
         "Mehmonxona boshqaruv tizimi bilan integratsiya"
+      ],
+      "faq": [
+        {
+          "q": "Mehmonlar xonani telefon bilan ocha oladimi?",
+          "a": "Ha, kartalardan tashqari mobil kalitlar qo'llanadi: mehmon joylashishda ilovada kalit oladi, chiqishda u avtomatik o'chadi."
+        },
+        {
+          "q": "Tarmoq yoki svet o'chsa nima bo'ladi?",
+          "a": "Qulflar avtonom va batareyalardan ishlashda davom etadi, berilgan kalitlar amal qiladi. Yangi mehmonlarni servis kartalari orqali joylashtirish mumkin."
+        },
+        {
+          "q": "Montaj vaqtida mehmonxonani yopish kerakmi?",
+          "a": "Yo'q. Qulflarni past yuklama soatlarida qavatma-qavat almashtiramiz, xona bir necha soat sotuvga yopiq bo'ladi. Mehmonxona odatdagi rejimda ishlaydi."
+        }
       ]
     },
     "fuel": {
@@ -2442,6 +2610,20 @@
         "Avtoraqamlarni tanish va kirishlar hisobi",
         "Perimetr qo'riqlash va hudud nazorati",
         "Yong'in signalizatsiyasi va xizmat ko'rsatish"
+      ],
+      "faq": [
+        {
+          "q": "Montaj vaqtida AYoQShni to'xtatish kerakmi?",
+          "a": "Yo'q, stansiya ishlaydi: kolonkalar ustida minimal trafik soatlarida ishlaymiz, elektr ulanishlarini qisqa kelishilgan oynalarda qilamiz."
+        },
+        {
+          "q": "Portlashdan himoya masalasi qanday hal qilinadi?",
+          "a": "Loyihani portlash xavfi zonalari klasslari bo'yicha bo'lamiz: xavfli zonalarda — portlashdan himoyalangan uskuna, qolganini ular chegarasidan tashqariga chiqaramiz. Bu loyihaga kiritiladi, joyida hal qilinmaydi."
+        },
+        {
+          "q": "Tarmoqning bir necha stansiyasini birlashtirish mumkinmi?",
+          "a": "Ha, markazlashgan monitoring quramiz: barcha stansiyalar tarmoq ofisidan ochiladi, joyida lokal arxiv qoladi, kirishlar hisobotlari butun tarmoq bo'yicha yig'iladi."
+        }
       ]
     },
     "ohrannye-sistemy": {

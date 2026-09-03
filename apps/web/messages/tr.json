@@ -1475,6 +1475,20 @@
         "GPS takip ve 4G/Wi-Fi bağlantı",
         "Yolcu sayımı ve video analitik",
         "Merkeze bağlantı"
+      ],
+      "faq": [
+        {
+          "q": "Bir otobüsü donatmak ne kadar sürer?",
+          "a": "Vardiyalar arası pencerede bir iş günü: araç sefer programından düşmez. 50 araçlık filo, işletmeyle paralel 2–3 ayda donatılır."
+        },
+        {
+          "q": "Dispečer canlı video görür mü?",
+          "a": "Evet, 4G üzerinden talep hâlinde: konum, kabin kameraları, sürücünün panik butonu. Tam arşiv, mobil trafiğe ödememek için garajda Wi-Fi ile aktarılır."
+        },
+        {
+          "q": "Yolcu sayımı ne kazandırır?",
+          "a": "Sefer ve durak bazlı gerçek yolcu akışı: güzergâh ve aralık planlaması ile taşıma idaresine raporlama için veri."
+        }
       ]
     },
     "city": {
@@ -1487,6 +1501,20 @@
         "Veri merkezi ve video arşivi",
         "Video analitik ve tanıma",
         "Durum merkezi ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Güvenli Şehir projesi nereden başlar?",
+          "a": "Konsept ve pilot bölgeden: tam devreli birkaç kavşak veya bir semt — kameralar, kanallar, analitik, durum merkezi. Çözümler yaygınlaştırmadan önce pilotta kanıtlanır."
+        },
+        {
+          "q": "Kameralara kim erişir?",
+          "a": "Rolleri ve hakları müşteri belirler: polis, idare ve altyapı kurumları kendi segmentlerini görür. Arşive her erişim kayda geçer."
+        },
+        {
+          "q": "Şehre ne kadar arşiv derinliği gerekir?",
+          "a": "Kamera kategorisine bağlıdır: kavşaklar ve sosyal tesisler — 30 gün ve fazlası, genel bakış noktaları — daha az. Depolama tek rakamla değil, kategorilere göre hesaplanır."
+        }
       ]
     },
     "parking": {
@@ -1566,7 +1594,21 @@
         "brandsLabel": "Ekipman",
         "brandsTitle": "Otopark ekipmanı — Taşkent’te stokta",
         "brandsText": "ZKTeco, Hikvision, Dahua — bariyer, plaka tanıma kameraları ve kontrol üniteleri, garantiyle tedarik ediyoruz:"
-      }
+      },
+      "faq": [
+        {
+          "q": "Plaka tanımada hangi oran ulaşılabilir?",
+          "a": "Doğru projelenmiş şeritte — gece ve yağış dâhil gerçek trafikte %95'in üzeri. Devreye aldıktan sonraki ilk haftalarda açı ve aydınlatma ayarlarıyla tamamlarız."
+        },
+        {
+          "q": "Sakinler bariyerin açılmasını bekler mi?",
+          "a": "Hayır: plaka yaklaşırken okunur ve beyaz listedeki araçlar için bariyer varışa kadar açılır. Geçiş döngüsü birkaç saniyedir."
+        },
+        {
+          "q": "Misafir ve kurye ne olacak?",
+          "a": "Misafir senaryoları ayarlarız: sakin uygulamasından tek seferlik geçiş, dispečere çağrı ya da geçici liste. Her durum elle açmadan işler."
+        }
+      ]
     },
     "retail": {
       "title": "Perakende & pazarlar",
@@ -1578,6 +1620,20 @@
         "Kasa işlemleri kontrolü",
         "Güvenlik ve hırsızlık önleme alarmı",
         "Bakım"
+      ],
+      "faq": [
+        {
+          "q": "Video, kasa fişleriyle bağlanabilir mi?",
+          "a": "Evet, perakendenin kilit özelliği budur: fiş numarasıyla ilgili kasa görüntüsü açılır. Açıkları ve tartışmalı iadeleri dakikalar içinde çözmeye yardım eder."
+        },
+        {
+          "q": "Farklı şehirlerde 15 mağazalık zincirimiz var — kaldırır mısınız?",
+          "a": "Evet, tüm Özbekistan'da 100+ noktalık ağ deneyimimiz var (Uzum teslim noktaları). Ofisten merkezî erişim kurar, yeni noktalar için tip set hazırlarız."
+        },
+        {
+          "q": "Ziyaretçi sayımı ayrı bir sistem mi?",
+          "a": "Hayır, sayaçlar aynı kamera sistemine dâhildir. Güvenlik görevlerine ek olarak pazarlama için trafik ve dönüşüm raporlarını ayarlarız."
+        }
       ]
     },
     "bank": {
@@ -1590,6 +1646,20 @@
         "Panik butonu ve alarm",
         "Çalışma süresi takibi",
         "Servis ve destek"
+      ],
+      "faq": [
+        {
+          "q": "Bankanın iç mevzuatına göre çalışır mısınız?",
+          "a": "Evet: izinler, güzergâhlar, mesai dışı işler, işlem kayıtları — hepsi başlamadan önce güvenlik birimiyle kararlaştırılır. Finans kuruluşlarıyla deneyimimiz var; sunucu altyapısı sanallaştırması dâhil."
+        },
+        {
+          "q": "Tahliye kapılarında kilit — yasal mı?",
+          "a": "Evet, doğru şemayla: manyetik kilitler yangın alarmı sinyaliyle açılmak zorundadır. Geçiş kontrolünü yangın alarmına bağlar, teslimde açılmayı doğrularız."
+        },
+        {
+          "q": "Video arşivi ne kadar tutulur?",
+          "a": "Arşiv derinliğini bankanın gereksinimlerine göre hesaplarız — 30 gün ve fazlası. RAID depolama koyar, devreye aldıktan sonra gerçek yük altında fiili derinliği kontrol ederiz."
+        }
       ]
     },
     "school": {
@@ -1602,6 +1672,20 @@
         "Uyarı ve yangın güvenliği",
         "Veli bilgilendirmesi (kart/SMS)",
         "Devreye alma ve servis"
+      ],
+      "faq": [
+        {
+          "q": "Veliler çocuğun geçişinde bildirim alır mı?",
+          "a": "Evet, turnikeden her giriş ve çıkışta veliye bildirim gider. Bu, temel kurulumun parçasıdır; özellik için ek ücret yoktur."
+        },
+        {
+          "q": "Yangın alarmında ne olur?",
+          "a": "Turnikeler yangın alarmı sinyaliyle otomatik açılır, tahliye yollarındaki kapılar açılır. Senaryoyu teslimde idareyle birlikte doğrularız."
+        },
+        {
+          "q": "Okulda montaj için en iyi zaman ne?",
+          "a": "Ana işleri tatillere planlarız: 2–4 haftada giriş ve kameralar yetişir. Ders döneminde yalnızca anlaşmayla sessiz işler yapılabilir."
+        }
       ]
     },
     "industry": {
@@ -1614,6 +1698,20 @@
         "Geçiş ve kontrol noktalarında geçiş kontrolü",
         "Güvenlik ile entegrasyon",
         "Bakım"
+      ],
+      "faq": [
+        {
+          "q": "Sistem üretimi durdurmadan kurulabilir mi?",
+          "a": "Evet, çoğunlukla böyle çalışıyoruz: gürültülü ve tozlu işleri bakım pencerelerine ve gece vardiyalarına alır, montajı atölye atölye kademeli yürütürüz. Takvim, işe başlamadan önce baş mühendisle kararlaştırılır."
+        },
+        {
+          "q": "100–500 kameralı bir fabrika projesi ne kadar sürer?",
+          "a": "Keşif ve proje — 1–2 hafta; montaj — güzergâh hazırlığına ve atölyelere giriş düzenine göre 1 ila 3 ay. Kesin takvimi keşiften sonra spesifikasyonla birlikte veririz."
+        },
+        {
+          "q": "Geçiş kontrolünü puantaj için 1C'ye bağlar mısınız?",
+          "a": "Evet. Bölgeleri ve vardiyaları ayarlarız; geçiş olayları puantaja aktarılır ve 1C'ye gider — İK, çalışılan saat verilerini elle girmeden hazır alır."
+        }
       ]
     },
     "residential": {
@@ -1626,6 +1724,20 @@
         "Bariyer ve giriş otomasyonu",
         "Sakinler için ANPR",
         "Bakım hizmeti"
+      ],
+      "faq": [
+        {
+          "q": "Sakinler kapıyı akıllı telefondan açabilir mi?",
+          "a": "Evet, uygulamalı IP interkom kurarız: çağrı telefona düşer, kapı her yerden açılır. Akıllı telefonu olmayan sakinler için sıradan ahizeler kalır."
+        },
+        {
+          "q": "Sakinler ve misafirler için giriş nasıl düzenlenir?",
+          "a": "Plaka tanımalı bariyer: beyaz listedeki sakin araçları otomatik geçer; misafirleri ve kuryeyi dispečer ya da sakin uygulamadan içeri alır."
+        },
+        {
+          "q": "Teslimden sonra sistemi kim bakar?",
+          "a": "Sistemi eğitim ve prosedürlerle site yönetimine devreder, servisi sözleşmeyle üstleniriz — taleplerden planlı turlara kadar."
+        }
       ]
     },
     "virtualization": {
@@ -2386,6 +2498,20 @@
         "Loading control linked to warehouse operations",
         "Access control for staff and ANPR at the gates",
         "Commissioning, training and service"
+      ],
+      "faq": [
+        {
+          "q": "Kameralar tedarikçi ve müşteri ihtilaflarında yardımcı olur mu?",
+          "a": "Evet, rampalar doğru kapatılmışsa: aracı ve boşaltma bölgesini okunur gösteren kameralar kurar, personele irsaliye saatine göre görüntüyü bir dakikada dışa aktarmayı öğretiriz — proje tesliminin standart parçasıdır."
+        },
+        {
+          "q": "Depo 7/24 çalışıyor — montaj nasıl geçer?",
+          "a": "Bölge bölge ve kararlaştırılan pencerelerde çalışır, hatları mevcut kanallardan geçiririz. Deponun durması gerekmez."
+        },
+        {
+          "q": "Soğuk depolarda durum ne?",
+          "a": "Dondurucu bölgeler için genişletilmiş sıcaklık aralıklı ve ısıtmalı kameralar kullanır, güç kaynaklarını sıcak odalara taşırız. Bu standart bir çözümdür, egzotik değil."
+        }
       ]
     },
     "construction": {
@@ -2398,6 +2524,20 @@
         "Perimeter alarm and protection of the material store",
         "Access control at the entry and crew time tracking",
         "Relocation and dismantling when the stage ends"
+      ],
+      "faq": [
+        {
+          "q": "Yeni sahada izleme ne kadar hızlı başlar?",
+          "a": "4G'li otonom direkleri girişten 1–2 gün içinde devreye alırız: ağ ve kalıcı besleme gerekmez; kurulum yeri ve mobil kapsama yeterlidir."
+        },
+        {
+          "q": "İnşaat bitince sistem ne olur?",
+          "a": "Müşterinin seçimine göre: söküp bir sonraki sahaya taşırız ya da biten binanın kalıcı sistemine çeviririz — hatlar ve noktalar bunu hesaba katarak önceden planlanır."
+        },
+        {
+          "q": "Şantiye telefondan izlenebilir mi?",
+          "a": "Evet, müşteri ve ana yüklenici kendi kameralarını uygulamada canlı görür; arşiv dâhil. Haklar sorumluluk alanlarına göre ayrı ayarlanır."
+        }
       ]
     },
     "medical": {
@@ -2410,6 +2550,20 @@
         "Access control for wards, pharmacy and server room",
         "Panic buttons and link to the security desk",
         "Fire alarm, warning system and service"
+      ],
+      "faq": [
+        {
+          "q": "Hasta odalarına kamera konabilir mi?",
+          "a": "Hayır, odalarda ve muayene kabinlerinde çekim yapılmaz. Kameralar koridorlara, hollere, girişlere ve bahçeye konur — mahremiyeti bozmadan güvenlik için yeterlidir."
+        },
+        {
+          "q": "Klinik 7/24 çalışıyor — montaj nasıl geçer?",
+          "a": "Kabulü durdurmadan küçük bölümler hâlinde çalışırız: bölümler sırayla birkaç saat kapanır, yatan hasta katına gece dokunulmaz. Takvim başhekimle kararlaştırılır."
+        },
+        {
+          "q": "Klinik için geçiş kontrolüne ne girer?",
+          "a": "Bölümlere, eczaneye, laboratuvarlara ve sistem odasına kartlı giriş, personelin vardiya bazlı mesai takibi, noktalarda panik butonları ve güvenlikle bağlantı."
+        }
       ]
     },
     "hotel": {
@@ -2422,6 +2576,20 @@
         "Access control for service areas and stores",
         "Fire alarm and evacuation warning",
         "Integration with the hotel management system"
+      ],
+      "faq": [
+        {
+          "q": "Misafirler odayı telefonla açabilir mi?",
+          "a": "Evet, kartların yanında mobil anahtarlar desteklenir: misafir check-in'de anahtarı uygulamada alır, check-out'ta otomatik söner."
+        },
+        {
+          "q": "Ağ veya elektrik kesilirse ne olur?",
+          "a": "Kilitler otonomdur, pillerle çalışmaya devam eder; verilmiş anahtarlar geçerli kalır. Yeni misafirler servis kartlarıyla yerleştirilebilir."
+        },
+        {
+          "q": "Montaj sırasında otel kapanmalı mı?",
+          "a": "Hayır. Kilitleri düşük doluluk saatlerinde kat kat değiştiririz; oda birkaç saat satışa kapalı olur. Otel normal düzende çalışır."
+        }
       ]
     },
     "fuel": {
@@ -2434,6 +2602,20 @@
         "Licence plate recognition and visit logging",
         "Perimeter protection and site control",
         "Fire alarm and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "Montaj sırasında istasyonu durdurmak gerekir mi?",
+          "a": "Hayır, istasyon çalışır: pompaların üzerinde en az trafikli saatlerde çalışır, elektrik bağlantılarını kısa kararlaştırılmış pencerelerde yaparız."
+        },
+        {
+          "q": "Patlama koruması nasıl çözülür?",
+          "a": "Projeyi patlama tehlikesi bölge sınıflarına göre böleriz: tehlikeli bölgelere exproof ekipman, kalanı sınırların dışına taşınır. Bu projeye konur, yerinde doğaçlanmaz."
+        },
+        {
+          "q": "Zincirin birkaç istasyonu birleştirilebilir mi?",
+          "a": "Evet, merkezî izleme kurarız: tüm istasyonlara zincir ofisinden erişilir, yerinde yerel arşiv kalır, giriş raporları tüm zincirden toplanır."
+        }
       ]
     },
     "ohrannye-sistemy": {

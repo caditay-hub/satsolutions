@@ -1483,6 +1483,20 @@
         "GPS tracking and 4G/Wi-Fi connectivity",
         "Passenger counting and video analytics",
         "Connection to dispatch center"
+      ],
+      "faq": [
+        {
+          "q": "How long does it take to equip one bus?",
+          "a": "One working day in the inter-shift window: the vehicle does not drop out of the schedule. A fleet of 50 is equipped in 2–3 months in parallel with operation."
+        },
+        {
+          "q": "Does the dispatcher see live video?",
+          "a": "Yes, on demand over 4G: location, cabin cameras, the driver's panic button. The full archive uploads over Wi-Fi at the depot to avoid paying for mobile traffic."
+        },
+        {
+          "q": "What does passenger counting give?",
+          "a": "Real passenger flow by route and stop: data for planning routes, intervals and reporting to the transport authority."
+        }
       ]
     },
     "city": {
@@ -1495,6 +1509,20 @@
         "Data center and video archive storage",
         "Video analytics and recognition",
         "Situation center and support"
+      ],
+      "faq": [
+        {
+          "q": "Where does a Safe City project start?",
+          "a": "With a concept and a pilot zone: several intersections or a district with the full loop — cameras, channels, analytics, a situation center. Solutions are proven on the pilot before scaling."
+        },
+        {
+          "q": "Who gets access to the cameras?",
+          "a": "Roles and rights are defined by the client: police, administration and utilities see their own segments. Every archive access is logged."
+        },
+        {
+          "q": "What archive depth does a city need?",
+          "a": "It depends on the camera category: intersections and social facilities — 30 days and more, overview points — less. Storage is sized by category, not by a single figure."
+        }
       ]
     },
     "parking": {
@@ -1574,7 +1602,21 @@
         "brandsLabel": "Equipment",
         "brandsTitle": "Car park equipment — in stock in Tashkent",
         "brandsText": "ZKTeco, Hikvision, Dahua — barriers, plate recognition cameras and controllers, supplied by us with warranty:"
-      }
+      },
+      "faq": [
+        {
+          "q": "What plate recognition rate is achievable?",
+          "a": "On a properly designed lane — above 95% on real traffic, night and precipitation included. In the first weeks after launch we tune angles and lighting to get there."
+        },
+        {
+          "q": "Will residents wait for the barrier to open?",
+          "a": "No: the plate is read on approach, and for whitelisted cars the barrier opens by the time they arrive. The passage cycle is a few seconds."
+        },
+        {
+          "q": "What about guests and deliveries?",
+          "a": "We configure guest scenarios: a one-time pass from the resident's app, a call to the dispatcher or a temporary list. Every case works without manual opening."
+        }
+      ]
     },
     "retail": {
       "title": "Retail & markets",
@@ -1586,6 +1628,20 @@
         "Checkout transaction monitoring",
         "Security and anti-theft alarm",
         "Maintenance"
+      ],
+      "faq": [
+        {
+          "q": "Can video be linked to POS receipts?",
+          "a": "Yes, that is the key retail feature: a receipt number opens the matching checkout footage. It helps resolve shortages and disputed returns in minutes."
+        },
+        {
+          "q": "We have a chain of 15 stores in different cities — can you handle it?",
+          "a": "Yes, we have run a network of 100+ sites across Uzbekistan (Uzum pickup points). We build centralized access from the office and a standard kit for new locations."
+        },
+        {
+          "q": "Is visitor counting a separate system?",
+          "a": "No, the counters are part of the same CCTV system. We set up traffic and conversion reports for marketing on top of the security tasks."
+        }
       ]
     },
     "bank": {
@@ -1598,6 +1654,20 @@
         "Panic buttons and alarm",
         "Working-time tracking",
         "Service and support"
+      ],
+      "faq": [
+        {
+          "q": "Do you work under the bank's internal regulations?",
+          "a": "Yes: clearances, escorted routes, after-hours work, action logging — everything is agreed with the security service before the start. We have experience with financial organizations, including server infrastructure virtualization."
+        },
+        {
+          "q": "Locks on evacuation doors — is that legal?",
+          "a": "Yes, with the right scheme: magnetic locks must release on a fire alarm signal. We link access control to the fire alarm and verify the release at handover."
+        },
+        {
+          "q": "How long is video kept?",
+          "a": "Archive depth is sized to the bank's requirements — 30 days and more. We provision RAID storage and verify the actual depth after launch under real load."
+        }
       ]
     },
     "school": {
@@ -1610,6 +1680,20 @@
         "Notification and fire safety",
         "Parent notifications (card/SMS)",
         "Commissioning and service"
+      ],
+      "faq": [
+        {
+          "q": "Do parents get notifications when the child passes through?",
+          "a": "Yes, on every entry and exit through the turnstile the parent receives a notification. It is part of the basic setup, with no extra charge for the feature."
+        },
+        {
+          "q": "What happens on a fire alarm?",
+          "a": "Turnstiles release automatically on the fire alarm signal, and doors on evacuation routes open. We verify the scenario at handover together with the administration."
+        },
+        {
+          "q": "When is the best time to install at a school?",
+          "a": "Main works are planned for the holidays: 2–4 weeks is enough to fit the entrance and cameras. During the school term only quiet works are possible, by agreement."
+        }
       ]
     },
     "industry": {
@@ -1622,6 +1706,20 @@
         "Access control at gates and checkpoints",
         "Integration with security",
         "Maintenance"
+      ],
+      "faq": [
+        {
+          "q": "Can the system be installed without stopping production?",
+          "a": "Yes, that is how we work most often: noisy and dusty operations go into maintenance windows and night shifts, installation proceeds workshop by workshop. The schedule is agreed with the chief engineer before work starts."
+        },
+        {
+          "q": "How long does a project for a plant with 100–500 cameras take?",
+          "a": "Survey and design — 1–2 weeks; installation — 1 to 3 months depending on route readiness and workshop access rules. We give the exact schedule after the survey together with the specification."
+        },
+        {
+          "q": "Will you link access control to 1C for timesheets?",
+          "a": "Yes. We configure zones and shifts; entry events export to the timesheet and flow into 1C — HR receives ready worked-hours data without manual entry."
+        }
       ]
     },
     "residential": {
@@ -1634,6 +1732,20 @@
         "Barriers and entry automation",
         "ANPR for residents",
         "Maintenance service"
+      ],
+      "faq": [
+        {
+          "q": "Will residents open the door from a smartphone?",
+          "a": "Yes, we install IP intercoms with an app: the call reaches the phone and the door opens from anywhere. Residents without smartphones keep regular handsets."
+        },
+        {
+          "q": "How is entry organized for residents and guests?",
+          "a": "A barrier with plate recognition: whitelisted residents' cars pass automatically, while guests and deliveries are admitted by the dispatcher or by a resident from the app."
+        },
+        {
+          "q": "Who maintains the system after handover?",
+          "a": "We hand the system to the management company with training and procedures, and take the servicing ourselves under contract — from requests to scheduled rounds."
+        }
       ]
     },
     "virtualization": {
@@ -2394,6 +2506,20 @@
         "Loading control linked to warehouse operations",
         "Access control for staff and ANPR at the gates",
         "Commissioning, training and service"
+      ],
+      "faq": [
+        {
+          "q": "Will cameras help in disputes with suppliers and clients?",
+          "a": "Yes, if the ramps are covered properly: we install cameras with a readable view of the truck and the unloading zone and teach staff to export a clip by waybill time in a minute — a standard part of project handover."
+        },
+        {
+          "q": "The warehouse runs around the clock — how will installation go?",
+          "a": "We work zone by zone in agreed windows, routing cables along existing trays. No warehouse shutdown is required."
+        },
+        {
+          "q": "What about cold warehouses?",
+          "a": "For freezer zones we use cameras with an extended temperature range and heating, and move power supplies into warm rooms. It is a standard solution, not an exotic one."
+        }
       ]
     },
     "construction": {
@@ -2406,6 +2532,20 @@
         "Perimeter alarm and protection of the material store",
         "Access control at the entry and crew time tracking",
         "Relocation and dismantling when the stage ends"
+      ],
+      "faq": [
+        {
+          "q": "How fast can surveillance start on a new site?",
+          "a": "Autonomous 4G posts launch within 1–2 days of arrival: no network or permanent power needed — just a mounting spot and mobile coverage."
+        },
+        {
+          "q": "What happens to the system when construction ends?",
+          "a": "The client chooses: we dismantle and move it to the next site, or convert it into the finished building's permanent system — routes and points are planned for that in advance."
+        },
+        {
+          "q": "Can the site be watched from a phone?",
+          "a": "Yes, the client and the general contractor see their cameras in the app in real time, archive included. Rights are set separately by area of responsibility."
+        }
       ]
     },
     "medical": {
@@ -2418,6 +2558,20 @@
         "Access control for wards, pharmacy and server room",
         "Panic buttons and link to the security desk",
         "Fire alarm, warning system and service"
+      ],
+      "faq": [
+        {
+          "q": "Can cameras be placed in wards?",
+          "a": "No, wards and consultation rooms are never filmed. Cameras go into corridors, halls, entrances and the grounds — enough for security without violating privacy."
+        },
+        {
+          "q": "The clinic runs around the clock — how will installation go?",
+          "a": "We work in small sections without stopping admissions: departments close in turn for a few hours, and the inpatient ward is untouched at night. The schedule is agreed with the chief physician."
+        },
+        {
+          "q": "What does access control for a clinic include?",
+          "a": "Card access to departments, the pharmacy, laboratories and the server room, staff time tracking by shifts, panic buttons at the posts and a link to security."
+        }
       ]
     },
     "hotel": {
@@ -2430,6 +2584,20 @@
         "Access control for service areas and stores",
         "Fire alarm and evacuation warning",
         "Integration with the hotel management system"
+      ],
+      "faq": [
+        {
+          "q": "Will guests open the room with a phone?",
+          "a": "Yes, mobile keys are supported alongside cards: the guest receives a key in the app at check-in, and it expires automatically at check-out."
+        },
+        {
+          "q": "What happens if the network or power goes down?",
+          "a": "The locks are autonomous and keep running on batteries; issued keys remain valid. New guests can be checked in with service cards."
+        },
+        {
+          "q": "Does the hotel need to close during installation?",
+          "a": "No. We replace locks floor by floor during low-occupancy hours; a room is unavailable for sale for a few hours. The hotel operates as usual."
+        }
       ]
     },
     "fuel": {
@@ -2442,6 +2610,20 @@
         "Licence plate recognition and visit logging",
         "Perimeter protection and site control",
         "Fire alarm and maintenance"
+      ],
+      "faq": [
+        {
+          "q": "Does the station have to stop during installation?",
+          "a": "No, the station keeps working: above the pumps we work during minimum-traffic hours, and electrical connections are done in short agreed windows."
+        },
+        {
+          "q": "How is explosion protection handled?",
+          "a": "The design is split by explosion-hazard zone classes: hazardous zones get explosion-proof equipment, the rest is moved outside their boundaries. This goes into the design, not improvised on site."
+        },
+        {
+          "q": "Can several stations of a chain be united?",
+          "a": "Yes, we build centralized monitoring: all stations are reachable from the head office, a local archive stays on site, and entry reports are collected across the chain."
+        }
       ]
     },
     "ohrannye-sistemy": {
