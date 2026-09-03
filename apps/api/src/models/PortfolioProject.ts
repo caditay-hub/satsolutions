@@ -17,6 +17,7 @@ export class PortfolioProject extends Model<
   declare clientName: string | null;
   declare clientlogourl: string | null;
   declare clientTasks: string | null;
+  declare equipmentSupply: string | null;
   declare location: string | null;
   declare completedAt: Date | null;
   declare seoTitle: string | null;
@@ -42,6 +43,7 @@ PortfolioProject.init(
     clientName: { type: DataTypes.STRING(240), allowNull: true },
     clientlogourl: { type: DataTypes.STRING(1000), allowNull: true },
     clientTasks: { type: DataTypes.TEXT, allowNull: true },
+    equipmentSupply: { type: DataTypes.TEXT, allowNull: true },
     location: { type: DataTypes.STRING(240), allowNull: true },
     completedAt: { type: DataTypes.DATE, allowNull: true },
     seoTitle: { type: DataTypes.STRING(300), allowNull: true },
