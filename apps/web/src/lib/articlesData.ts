@@ -564,92 +564,142 @@ export const ARTICLES: Article[] = [
     loc: {
       ru: {
         title: "Сколько стоит видеонаблюдение: из чего складывается цена",
-        excerpt: "Разбираем, из чего складывается стоимость системы видеонаблюдения: камеры, регистратор, монтаж — и на чём можно сэкономить без потери качества.",
+        excerpt: "Разбираем стоимость системы видеонаблюдения по частям: камеры, регистратор, диск, кабель и монтаж. Ориентиры цен для квартиры, магазина и склада — и на чём можно сэкономить без потери качества.",
         sections: [
           { h: "Из чего складывается цена", p: [
-            "Стоимость видеонаблюдения складывается из четырёх частей: камеры, регистратор с накопителем, кабель и расходники, а также работа по монтажу и настройке. Чем больше камер и выше их разрешение, тем дороже и оборудование, и объём работ.",
-            "Отдельно считается глубина архива: чтобы хранить запись 30 суток вместо 7, нужен более ёмкий жёсткий диск. На цену влияют и условия объекта — высота стен, расстояние до регистратора, необходимость штробления.",
+            "Стоимость видеонаблюдения складывается из четырёх частей: камеры, регистратор с жёстким диском, кабель с расходниками и работа по монтажу и настройке. В типовой смете на оборудование приходится 60–70 %, на монтаж — остальное. Чем больше камер и выше их разрешение, тем дороже и железо, и объём работ: каждая камера — это трасса кабеля, крепёж и точка настройки.",
+            "Отдельная строка — глубина архива. Чтобы хранить запись 30 суток вместо 7, нужен диск в разы ёмче: восемь камер по 2 Мп при постоянной записи занимают порядка терабайта в неделю. Влияют и условия объекта: высота потолков, расстояние до регистратора, необходимость штробления или, наоборот, возможность пройти кабель-каналом по готовому ремонту.",
           ] },
-          { h: "Сколько камер нужно", p: [
-            "Для квартиры обычно достаточно 1–2 камер, для магазина или офиса — 4–8, для склада, производства или территории — от 8 и больше. Точное число определяется на выезде: важно закрыть входы, кассы, зоны хранения и слепые углы.",
-            "Не всегда больше камер — лучше. Иногда одна правильно расположенная камера с хорошим объективом закрывает зону эффективнее двух дешёвых.",
+          { h: "Ориентиры по бюджету", p: [
+            "Квартира или небольшой дом на 2 камеры с регистратором и диском — самый доступный уровень: базовые IP-камеры 2 Мп стоят от 150–300 тысяч сум за штуку, простые регистраторы — от полумиллиона. Магазин или офис на 4–8 камер — средний сегмент: здесь уже нужны PoE-коммутатор, нормальный диск на 4–6 ТБ и день-два монтажа.",
+            "Склад, производство или территория от 8–16 камер считаются только по проекту: появляются уличные камеры с ИК-подсветкой на 30–80 метров, оптика или радиомосты до дальних углов, шкаф с ИБП. Смета двух одинаковых по числу камер объектов может отличаться вдвое из-за трасс и условий — поэтому честный ответ на «сколько стоит» начинается с выезда инженера, у нас он бесплатный.",
+          ] },
+          { h: "Сколько камер нужно на самом деле", p: [
+            "Для квартиры обычно достаточно 1–2 камер, для магазина или офиса — 4–8, для склада и территории — от 8. Точное число определяется задачами: закрыть входы, кассу, зоны хранения и слепые углы. Камеры общего обзора смотрят «что происходит», камеры идентификации — «кто это»: для лица на входе нужна камера ближе и с большим разрешением, чем для общего плана зала.",
+            "Больше камер — не всегда лучше. Одна правильно расположенная камера 4 Мп с подходящим объективом закрывает зону эффективнее двух дешёвых, поставленных «для количества». Деньги, сэкономленные на лишних точках, разумнее вложить в качество камер на ключевых направлениях и в глубину архива.",
           ] },
           { h: "На чём можно и нельзя экономить", p: [
-            "Экономить разумно на бренде регистратора и на облачных подписках, если достаточно локального архива. А вот на качестве камер в ключевых зонах (касса, вход) и на монтаже экономить не стоит — переделка обходится дороже.",
-            "Чтобы получить точную смету, закажите бесплатный выезд инженера: мы посчитаем оборудование и работы под ваш объект и бюджет.",
+            "Разумная экономия: взять HiLook вместо старших линеек Hikvision на второстепенные зоны, отказаться от облачных подписок при достаточном локальном архиве, не переплачивать за 4K там, где хватает 2–4 Мп. Аналоговые комплекты HDCVI до сих пор выигрывают по цене при модернизации, где уже проложен коаксиал.",
+            "Экономить нельзя на трёх вещах: камерах в ключевых зонах (касса, вход, приёмка), жёстком диске — обычный компьютерный диск не рассчитан на круглосуточную запись и умирает первым — и на монтаже. Скрутки вместо коннекторов, кабель без запаса по сечению питания и «настройка по умолчанию» всплывают через полгода, а переделка стоит дороже разницы.",
           ] },
+        ],
+        faq: [
+          { q: "Сколько стоит видеонаблюдение для магазина на 4 камеры?", a: "Базовый IP-комплект: 4 камеры 2 Мп, регистратор, диск 2–4 ТБ, PoE-коммутатор, кабель и монтаж за один день. Точную смету считаем после бесплатного выезда — на цену влияют длины трасс и условия прокладки." },
+          { q: "Что дороже — IP или аналоговая система?", a: "IP дороже по оборудованию, но даёт выше разрешение, питание по одному кабелю (PoE) и аналитику. Аналог HDCVI выгоден при модернизации, где коаксиал уже проложен. На новых объектах мы почти всегда считаем IP." },
+          { q: "Входит ли настройка просмотра с телефона в стоимость?", a: "Да. Настройка приложений, удалённого доступа и уведомлений входит в монтаж — доплат за «настройку телефона» у нас нет." },
+          { q: "Можно ли поставить систему поэтапно?", a: "Да, это частая практика: сначала критичные зоны — вход и касса, затем расширение. Важно сразу взять регистратор с запасом каналов, чтобы не менять его на втором этапе." },
         ],
       },
       uz: {
         title: "Videokuzatuv qancha turadi: narx nimalardan tashkil topadi",
-        excerpt: "Videokuzatuv tizimi narxi nimalardan tashkil topishini ko'rib chiqamiz: kameralar, registrator, montaj — va sifatni yo'qotmasdan qanday tejash mumkin.",
+        excerpt: "Videokuzatuv tizimi narxini qismlarga ajratamiz: kameralar, registrator, disk, kabel va montaj. Kvartira, do'kon va ombor uchun narx mo'ljallari — hamda sifatni yo'qotmasdan qayerda tejash mumkin.",
         sections: [
           { h: "Narx nimalardan tashkil topadi", p: [
-            "Videokuzatuv narxi to'rt qismdan iborat: kameralar, накопитель bilan registrator, kabel va sarf materiallari, hamda montaj va sozlash ishlari. Kameralar qancha ko'p va ularning ruxsati qancha yuqori bo'lsa, uskuna ham, ishlar hajmi ham shuncha qimmat.",
-            "Arxiv chuqurligi alohida hisoblanadi: 7 kun o'rniga 30 kun yozuvni saqlash uchun sig'imi kattaroq qattiq disk kerak. Narxga obyekt sharoitlari ham ta'sir qiladi — devor balandligi, registratorgacha masofa, shtroblash zarurati.",
+            "Videokuzatuv narxi to'rt qismdan iborat: kameralar, qattiq diskli registrator, kabel va sarf materiallari hamda montaj va sozlash ishlari. Tipik smetada uskunaga 60–70 % to'g'ri keladi, qolgani — montajga. Kameralar qancha ko'p va ruxsati yuqori bo'lsa, temir ham, ish hajmi ham shuncha qimmat: har kamera — bu kabel trassasi, mahkamlash va sozlash nuqtasi.",
+            "Alohida qator — arxiv chuqurligi. Yozuvni 7 kun o'rniga 30 kun saqlash uchun bir necha barobar sig'imli disk kerak: doimiy yozuvda 2 Mp li sakkiz kamera haftasiga taxminan bir terabayt egallaydi. Obyekt sharoitlari ham ta'sir qiladi: ship balandligi, registratorgacha masofa, shtroblash zarurati yoki aksincha, tayyor ta'mirda kabel-kanal bilan o'tish imkoni.",
           ] },
-          { h: "Nechta kamera kerak", p: [
-            "Kvartira uchun odatda 1–2 kamera yetarli, do'kon yoki ofis uchun — 4–8, ombor, ishlab chiqarish yoki hudud uchun — 8 va undan ko'p. Aniq son obyektga chiqishda aniqlanadi: kirishlar, kassalar, saqlash zonalari va ko'r burchaklarni yopish muhim.",
-            "Har doim ko'p kamera yaxshi emas. Ba'zan yaxshi obyektiv bilan to'g'ri joylashtirilgan bitta kamera zonani ikkita arzon kameradan samaraliroq yopadi.",
+          { h: "Byudjet bo'yicha mo'ljallar", p: [
+            "Registrator va diskli 2 kamerali kvartira yoki kichik uy — eng arzon daraja: bazaviy 2 Mp IP-kameralar donasi 150–300 ming so'mdan, oddiy registratorlar yarim milliondan boshlanadi. 4–8 kamerali do'kon yoki ofis — o'rta segment: bu yerda PoE-kommutator, 4–6 TB normal disk va bir-ikki kun montaj kerak bo'ladi.",
+            "8–16 kameradan boshlanadigan ombor, ishlab chiqarish yoki hudud faqat loyiha bo'yicha hisoblanadi: 30–80 metrga IK-yoritishli ko'cha kameralari, uzoq burchaklargacha optika yoki radioko'priklar, UPS li shkaf paydo bo'ladi. Kamera soni bir xil ikki obyekt smetasi trassalar va sharoitlar tufayli ikki barobar farq qilishi mumkin — shuning uchun «qancha turadi»ga halol javob muhandis chiqishidan boshlanadi, bizda u bepul.",
           ] },
-          { h: "Nimadan tejash mumkin va mumkin emas", p: [
-            "Registrator brendida va bulutli obunalarda oqilona tejash mumkin, agar lokal arxiv yetarli bo'lsa. Ammo asosiy zonalardagi (kassa, kirish) kameralar sifatida va montajda tejash tavsiya etilmaydi — qayta qilish qimmatroqqa tushadi.",
-            "Aniq smeta olish uchun muhandisning bepul chiqishini buyurtma qiling: uskuna va ishlarni obyektingiz va byudjetingizga qarab hisoblaymiz.",
+          { h: "Aslida nechta kamera kerak", p: [
+            "Kvartiraga odatda 1–2 kamera yetadi, do'kon yoki ofisga — 4–8, ombor va hududga — 8 dan. Aniq son vazifalardan kelib chiqadi: kirishlar, kassa, saqlash zonalari va ko'r burchaklarni yopish. Umumiy ko'rinish kameralari «nima bo'layotganini» ko'radi, identifikatsiya kameralari — «bu kim»: kirishdagi yuz uchun zal umumiy planidan ko'ra yaqinroq va yuqori ruxsatli kamera kerak.",
+            "Ko'proq kamera — har doim ham yaxshi emas. Mos obyektivli, to'g'ri joylashtirilgan bitta 4 Mp kamera zonani «son uchun» qo'yilgan ikkita arzon kameradan samaraliroq yopadi. Ortiqcha nuqtalarda tejalgan pulni asosiy yo'nalishlardagi kameralar sifatiga va arxiv chuqurligiga qo'ygan oqilona.",
           ] },
+          { h: "Qayerda tejash mumkin va mumkin emas", p: [
+            "Oqilona tejash: ikkinchi darajali zonalarga Hikvision katta liniyalari o'rniga HiLook olish, lokal arxiv yetarli bo'lsa bulutli obunalardan voz kechish, 2–4 Mp yetadigan joyda 4K uchun ortiqcha to'lamaslik. Koaksial allaqachon yotqizilgan modernizatsiyada HDCVI analog to'plamlari hamon narxda yutadi.",
+            "Uch narsada tejash mumkin emas: asosiy zonalardagi kameralar (kassa, kirish, qabul), qattiq disk — oddiy kompyuter diski kecha-kunduz yozuvga mo'ljallanmagan va birinchi bo'lib o'ladi — va montaj. Konnektor o'rniga o'rashlar, quvvat kesimi zaxirasisiz kabel va «standart sozlash» yarim yildan keyin chiqadi, qayta qilish esa farqdan qimmat turadi.",
+          ] },
+        ],
+        faq: [
+          { q: "4 kamerali do'kon uchun videokuzatuv qancha turadi?", a: "Bazaviy IP-to'plam: 4 ta 2 Mp kamera, registrator, 2–4 TB disk, PoE-kommutator, kabel va bir kunlik montaj. Aniq smetani bepul chiqishdan keyin hisoblaymiz — narxga trassa uzunliklari va yotqizish sharoitlari ta'sir qiladi." },
+          { q: "Qaysi biri qimmat — IP yoki analog tizim?", a: "IP uskuna bo'yicha qimmatroq, lekin yuqori ruxsat, bitta kabeldan quvvat (PoE) va analitika beradi. Koaksial yotqizilgan modernizatsiyada HDCVI analog foydali. Yangi obyektlarda deyarli doim IP hisoblaymiz." },
+          { q: "Telefondan ko'rishni sozlash narxga kiradimi?", a: "Ha. Ilovalar, masofaviy kirish va bildirishnomalarni sozlash montajga kiradi — bizda «telefon sozlash» uchun qo'shimcha to'lov yo'q." },
+          { q: "Tizimni bosqichma-bosqich o'rnatsa bo'ladimi?", a: "Ha, bu keng tarqalgan amaliyot: avval kritik zonalar — kirish va kassa, keyin kengaytirish. Ikkinchi bosqichda almashtirmaslik uchun registratorni darhol kanallar zaxirasi bilan olish muhim." },
         ],
       },
       en: {
         title: "How Much Does CCTV Cost: What Makes Up the Price",
-        excerpt: "Breaking down the cost of a video surveillance system: cameras, recorder, installation — and where you can save without losing quality.",
+        excerpt: "Breaking the cost of a surveillance system into parts: cameras, recorder, disk, cabling and installation. Budget guides for an apartment, a shop and a warehouse — and where to save without losing quality.",
         sections: [
           { h: "What makes up the price", p: [
-            "The cost of CCTV consists of four parts: cameras, a recorder with storage, cabling and consumables, plus installation and setup work. The more cameras and the higher their resolution, the more both the equipment and the labor cost.",
-            "Archive depth is calculated separately: storing 30 days of footage instead of 7 requires a larger hard drive. Site conditions also affect the price — wall height, distance to the recorder, the need for wall chasing.",
+            "The cost of CCTV consists of four parts: cameras, a recorder with a hard drive, cabling with consumables, and installation with setup. In a typical estimate, hardware takes 60–70 % and labor the rest. More cameras and higher resolution mean more of both: every camera is a cable run, mounting hardware and a point to configure.",
+            "Archive depth is its own line. Storing 30 days instead of 7 needs a drive several times larger: eight 2 MP cameras recording continuously fill roughly a terabyte a week. Site conditions matter too: ceiling height, distance to the recorder, wall chasing — or, conversely, the option to run trunking over a finished interior.",
           ] },
-          { h: "How many cameras you need", p: [
-            "An apartment usually needs 1–2 cameras, a shop or office — 4–8, a warehouse, production floor or grounds — 8 and more. The exact number is determined during a site visit: entrances, checkouts, storage zones and blind corners must be covered.",
-            "More cameras is not always better. Sometimes one properly placed camera with a good lens covers a zone more effectively than two cheap ones.",
+          { h: "Budget reference points", p: [
+            "An apartment or small house with 2 cameras, a recorder and a disk is the entry level: basic 2 MP IP cameras start at 150–300 thousand UZS apiece, simple recorders from half a million. A shop or office with 4–8 cameras is the middle segment: it adds a PoE switch, a proper 4–6 TB drive and a day or two of installation.",
+            "A warehouse, factory or grounds from 8–16 cameras is quoted only from a design: outdoor cameras with 30–80 m IR, fiber or radio links to far corners, and a cabinet with a UPS enter the picture. Two sites with equal camera counts can differ twofold because of cable runs and conditions — so an honest answer to \"how much\" starts with an engineer's visit, which is free with us.",
+          ] },
+          { h: "How many cameras you actually need", p: [
+            "An apartment usually needs 1–2 cameras, a shop or office 4–8, a warehouse or grounds 8 and up. The exact number follows the tasks: cover the entrances, the till, storage zones and blind corners. Overview cameras answer \"what is happening\"; identification cameras answer \"who is it\": a face at the entrance needs a closer camera with more resolution than a general view of the floor.",
+            "More cameras is not always better. One well-placed 4 MP camera with the right lens covers a zone more effectively than two cheap ones installed \"for the count\". Money saved on redundant points is better invested in camera quality on key directions and in archive depth.",
           ] },
           { h: "Where you can and cannot save", p: [
-            "It is reasonable to save on the recorder brand and on cloud subscriptions if local storage is enough. But do not save on camera quality in key zones (checkout, entrance) or on installation — redoing it costs more.",
-            "For an exact estimate, book a free engineer visit: we will spec equipment and work for your site and budget.",
+            "Reasonable savings: HiLook instead of higher Hikvision lines for secondary zones, no cloud subscriptions when a local archive suffices, no 4K premium where 2–4 MP does the job. Analog HDCVI kits still win on price when upgrading sites with coax already in the walls.",
+            "Never save on three things: cameras in key zones (till, entrance, goods-in), the hard drive — a desktop drive is not built for 24/7 recording and dies first — and the installation. Twisted joints instead of connectors, undersized power runs and \"default settings\" surface six months later, and redoing costs more than the difference.",
           ] },
+        ],
+        faq: [
+          { q: "How much does CCTV for a 4-camera shop cost?", a: "A basic IP kit: four 2 MP cameras, a recorder, a 2–4 TB drive, a PoE switch, cabling and one day of installation. We give an exact quote after a free site visit — cable runs and conditions drive the price." },
+          { q: "Which is more expensive — IP or analog?", a: "IP costs more in hardware but gives higher resolution, single-cable power (PoE) and analytics. Analog HDCVI pays off when upgrading sites with existing coax. For new sites we almost always quote IP." },
+          { q: "Is phone viewing setup included in the price?", a: "Yes. App setup, remote access and notifications are part of the installation — we charge nothing extra for \"phone setup\"." },
+          { q: "Can the system be installed in stages?", a: "Yes, and it is common: critical zones first — entrance and till — then expansion. Just pick a recorder with spare channels from the start so it does not need replacing at stage two." },
         ],
       },
       tr: {
-        title: "Kamera Sistemi Ne Kadar Tutar: Fiyat Nelerden Oluşur",
-        excerpt: "Video gözetim sisteminin maliyetini ayrıştırıyoruz: kameralar, kayıt cihazı, montaj — ve kaliteden ödün vermeden nerede tasarruf edilir.",
+        title: "Kamera Sistemi Ne Kadar Tutar: Fiyat Neyden Oluşur",
+        excerpt: "Güvenlik kamerası sisteminin maliyetini parçalara ayırıyoruz: kameralar, kayıt cihazı, disk, kablo ve montaj. Daire, mağaza ve depo için bütçe rehberi — ve kaliteden ödün vermeden nerede tasarruf edilir.",
         sections: [
-          { h: "Fiyat nelerden oluşur", p: [
-            "CCTV maliyeti dört kalemden oluşur: kameralar, depolamalı kayıt cihazı, kablo ve sarf malzemeleri, ayrıca montaj ve kurulum işçiliği. Kamera sayısı ve çözünürlük arttıkça hem ekipman hem işçilik pahalanır.",
-            "Arşiv derinliği ayrıca hesaplanır: 7 gün yerine 30 gün kayıt tutmak daha büyük disk gerektirir. Saha koşulları da fiyatı etkiler — duvar yüksekliği, kayıt cihazına mesafe, kanal açma gereksinimi.",
+          { h: "Fiyat neyden oluşur", p: [
+            "Kamera sisteminin maliyeti dört parçadan oluşur: kameralar, diskli kayıt cihazı, kablo ve sarf malzemeleri, montaj ve ayar işçiliği. Tipik teklifte donanım %60–70, işçilik kalanını alır. Kamera sayısı ve çözünürlük arttıkça ikisi de büyür: her kamera bir kablo güzergâhı, montaj malzemesi ve ayar noktasıdır.",
+            "Arşiv derinliği ayrı kalemdir. 7 yerine 30 gün kayıt, kat kat büyük disk ister: sürekli kayıtta sekiz 2 MP kamera haftada yaklaşık bir terabayt doldurur. Saha koşulları da etkiler: tavan yüksekliği, kayıt cihazına mesafe, kırım gereği — veya tersine, bitmiş tadilatta kanalla geçme imkânı.",
           ] },
-          { h: "Kaç kamera gerekir", p: [
-            "Daire için genelde 1–2 kamera yeter, mağaza veya ofis için 4–8, depo, üretim veya açık alan için 8 ve üzeri. Kesin sayı keşifte belirlenir: girişler, kasalar, depolama alanları ve kör noktalar kapatılmalıdır.",
-            "Daha çok kamera her zaman daha iyi değildir. Bazen iyi lensli doğru konumlanmış tek kamera, iki ucuz kameradan daha etkilidir.",
+          { h: "Bütçe için referanslar", p: [
+            "Kayıt cihazı ve diskli 2 kameralı daire veya küçük ev giriş seviyesidir: temel 2 MP IP kameralar adet 150–300 bin somdan, basit kayıt cihazları yarım milyondan başlar. 4–8 kameralı mağaza veya ofis orta segmenttir: PoE switch, düzgün 4–6 TB disk ve bir-iki gün montaj eklenir.",
+            "8–16 kameradan başlayan depo, fabrika veya açık alan yalnızca projeyle fiyatlanır: 30–80 m IR'li dış kameralar, uzak köşelere fiber veya telsiz köprüler, UPS'li kabin devreye girer. Kamera sayısı aynı iki tesis, güzergâhlar ve koşullar yüzünden iki kat farklı çıkabilir — bu yüzden «ne kadar»ın dürüst yanıtı mühendis keşfiyle başlar; bizde ücretsizdir.",
           ] },
-          { h: "Nereden tasarruf edilir, nereden edilmez", p: [
-            "Yerel arşiv yeterliyse kayıt cihazı markasından ve bulut aboneliklerinden tasarruf mantıklıdır. Ancak kilit bölgelerdeki (kasa, giriş) kamera kalitesinden ve montajdan tasarruf etmeyin — yeniden yapmak daha pahalıya gelir.",
-            "Kesin teklif için ücretsiz mühendis keşfi isteyin: ekipman ve işçiliği sahanıza ve bütçenize göre hesaplayalım.",
+          { h: "Gerçekte kaç kamera gerekir", p: [
+            "Daireye genelde 1–2 kamera yeter, mağaza veya ofise 4–8, depo ve açık alana 8 ve üzeri. Kesin sayı görevlerden çıkar: girişleri, kasayı, depolama bölgelerini ve kör noktaları kapatmak. Genel bakış kameraları «ne oluyor»u, kimlik kameraları «kim»i yanıtlar: girişteki yüz için, salonun genel planından daha yakın ve yüksek çözünürlüklü kamera gerekir.",
+            "Daha çok kamera her zaman daha iyi değildir. Doğru lensli, iyi konumlanmış tek 4 MP kamera, «sayı olsun» diye takılan iki ucuz kameradan etkilidir. Gereksiz noktalardan artan para, kilit yönlerdeki kamera kalitesine ve arşiv derinliğine yatırılmalıdır.",
           ] },
+          { h: "Nerede tasarruf edilir, nerede edilmez", p: [
+            "Makul tasarruf: ikincil bölgelere üst Hikvision serileri yerine HiLook, yerel arşiv yetiyorsa bulut aboneliği yok, 2–4 MP'nin yettiği yerde 4K primi yok. Koaksiyelin döşeli olduğu yenilemelerde analog HDCVI setleri hâlâ fiyatta kazanır.",
+            "Üç şeyden tasarruf edilmez: kilit bölgelerdeki kameralar (kasa, giriş, mal kabul), disk — masaüstü disk 7/24 kayda göre değildir ve önce o ölür — ve montaj. Konnektör yerine büküm, kesiti yetersiz besleme hattı ve «varsayılan ayarlar» altı ay sonra ortaya çıkar; yeniden yapmak aradaki farktan pahalıdır.",
+          ] },
+        ],
+        faq: [
+          { q: "4 kameralı mağaza için sistem ne kadar tutar?", a: "Temel IP set: dört 2 MP kamera, kayıt cihazı, 2–4 TB disk, PoE switch, kablo ve bir günlük montaj. Kesin teklifi ücretsiz keşiften sonra veririz — fiyatı güzergâh uzunlukları ve koşullar belirler." },
+          { q: "Hangisi pahalı — IP mi analog mu?", a: "IP donanımda daha pahalıdır ama yüksek çözünürlük, tek kablodan güç (PoE) ve analitik verir. Koaksiyel hazırsa analog HDCVI yenilemede kârlıdır. Yeni tesislerde neredeyse hep IP hesaplarız." },
+          { q: "Telefondan izleme ayarı fiyata dahil mi?", a: "Evet. Uygulama, uzaktan erişim ve bildirim ayarları montaja dahildir — «telefon kurulumu» için ek ücret almayız." },
+          { q: "Sistem aşamalı kurulabilir mi?", a: "Evet, yaygın bir uygulamadır: önce kritik bölgeler — giriş ve kasa — sonra genişleme. İkinci aşamada değiştirmemek için kayıt cihazını baştan kanal yedeğiyle seçmek önemlidir." },
         ],
       },
       zh: {
         title: "视频监控要花多少钱：价格由什么构成",
-        excerpt: "拆解视频监控系统的成本：摄像机、录像机、安装施工——以及在不牺牲质量的前提下哪里可以省钱。",
+        excerpt: "把监控系统的费用拆开看：摄像机、录像机、硬盘、线缆和施工。公寓、商店和仓库的预算参考——以及哪里可以省钱而不牺牲质量。",
         sections: [
           { h: "价格由什么构成", p: [
-            "监控系统的成本由四部分构成：摄像机、带存储的录像机、线缆及辅材，以及安装调试的人工。摄像机越多、分辨率越高，设备和施工费用就越高。",
-            "存储时长单独计算：要保存30天而非7天的录像，需要更大容量的硬盘。现场条件也影响价格——墙体高度、到录像机的距离、是否需要开槽。",
+            "视频监控的费用由四部分组成：摄像机、带硬盘的录像机、线缆和辅材、安装调试的人工。典型预算里设备占60–70%，其余是施工。摄像机越多、分辨率越高，两者都水涨船高：每台摄像机都意味着一条线缆路由、一套支架和一个调试点。",
+            "存储时长是单独一项。要把录像从7天延长到30天，硬盘容量要翻几倍：八台2MP摄像机连续录像每周约占一个TB。现场条件同样影响价格：层高、到录像机的距离、要不要开槽——或者反过来，已装修房能否走线槽。",
           ] },
-          { h: "需要多少台摄像机", p: [
-            "住宅通常1–2台足够，商店或办公室4–8台，仓库、厂区或园区则需8台以上。准确数量需现场勘察确定：入口、收银台、存储区和盲角必须覆盖。",
-            "并非越多越好。有时一台位置正确、镜头合适的摄像机，比两台便宜货更有效。",
+          { h: "预算参考", p: [
+            "公寓或小型住宅配2台摄像机加录像机和硬盘是入门级：基础2MP IP摄像机每台15–30万苏姆起，简单录像机50万起。4–8台摄像机的商店或办公室是中间档：要加PoE交换机、4–6TB的像样硬盘和一两天施工。",
+            "8–16台起的仓库、工厂或场区只按方案报价：会出现30–80米红外的室外机、通向远端的光纤或无线网桥、带UPS的机柜。摄像机数量相同的两个项目，因路由和条件不同，造价可能差一倍——所以「多少钱」的诚实回答从工程师勘测开始，我们的勘测免费。",
+          ] },
+          { h: "到底需要几台摄像机", p: [
+            "公寓通常1–2台就够，商店或办公室4–8台，仓库和场区8台起。确切数量由任务决定：盖住出入口、收银台、存储区和视觉死角。全景摄像机回答「发生了什么」，识别摄像机回答「是谁」：拍清入口人脸需要的机位和分辨率，远高于卖场的全景。",
+            "摄像机不是越多越好。一台位置正确、镜头合适的4MP摄像机，比两台「凑数」的便宜货更能盖住一个区域。省下冗余点位的钱，更该投到关键方向的摄像机品质和存储时长上。",
           ] },
           { h: "哪里能省、哪里不能省", p: [
-            "如果本地存储够用，在录像机品牌和云订阅上省钱是合理的。但关键区域（收银台、入口）的摄像机质量和安装施工不能省——返工的代价更高。",
-            "想要精确报价，请预约工程师免费上门：我们按您的现场和预算核算设备与工程量。",
+            "合理的节省：次要区域用HiLook替代海康威视高端线，本地存储够用就不订云服务，2–4MP够用的地方不为4K多花钱。已有同轴线的改造项目，模拟HDCVI套装至今在价格上占优。",
+            "三样东西不能省：关键区域的摄像机（收银台、入口、收货区）、硬盘——普通电脑硬盘不是为7×24录像设计的，最先坏的就是它——还有施工。用绞接代替接头、供电线径不留余量、「默认设置」交付，半年后全会暴露，返工比差价贵得多。",
           ] },
+        ],
+        faq: [
+          { q: "4台摄像机的商店监控要多少钱？", a: "基础IP套装：四台2MP摄像机、录像机、2–4TB硬盘、PoE交换机、线缆加一天施工。免费勘测后给出精确报价——路由长度和施工条件决定价格。" },
+          { q: "IP和模拟哪个更贵？", a: "IP设备更贵，但分辨率更高、一线供电（PoE）、支持智能分析。已有同轴线的改造用模拟HDCVI划算。新项目我们几乎都按IP核算。" },
+          { q: "手机看监控的配置包含在价格里吗？", a: "包含。应用、远程访问和推送的配置属于施工内容——我们不收「调手机」的额外费用。" },
+          { q: "系统能分期安装吗？", a: "可以，这很常见：先装关键区域——入口和收银台，之后扩展。关键是录像机一开始就选带余量通道的，免得第二期换机。" },
         ],
       },
     },
@@ -660,93 +710,143 @@ export const ARTICLES: Article[] = [
     related: ["cctv"],
     loc: {
       ru: {
-        title: "Как выбрать камеру видеонаблюдения: IP или аналоговая",
-        excerpt: "IP или аналоговая, разрешение, объектив, ночная съёмка — простое руководство, как выбрать камеру видеонаблюдения под вашу задачу.",
+        title: "Как выбрать камеру видеонаблюдения: разрешение, объектив, ночная съёмка",
+        excerpt: "Практичный разбор характеристик камеры: сколько мегапикселей нужно на самом деле, как выбрать фокусное расстояние, что важно для ночной съёмки и улицы — без маркетинговой шелухи.",
         sections: [
-          { h: "IP или аналоговая камера", p: [
-            "Аналоговые камеры (HDCVI/TVI) дешевле, работают по коаксиальному кабелю и подходят для небольших систем с локальной записью. IP-камеры дают более высокое разрешение, видеоаналитику и гибкое масштабирование по сети — их выбирают для средних и крупных объектов.",
-            "Если система новая и планируется рост — берите IP. Если нужно недорого дополнить существующую аналоговую систему — оставайтесь в её стандарте.",
+          { h: "Разрешение: сколько мегапикселей нужно", p: [
+            "Мегапиксели — первое, чем продают камеру, и первое, в чём переплачивают. Для общего наблюдения за комнатой или двором достаточно 2 Мп (Full HD): видно, что происходит, кто вошёл и куда пошёл. Чтобы уверенно узнавать лица на входе или читать ценники у кассы, берут 4 Мп. Разрешение 8 Мп (4K) оправдано на широких планах, из которых нужно вырезать детали: парковка, периметр, торговый зал целиком.",
+            "Важно помнить: выше разрешение — больше архив и нагрузка на сеть. Камера 8 Мп занимает на диске вчетверо больше 2 Мп, а на слабом регистраторе четыре таких камеры просто не потянут запись. Разрешение подбирается под задачу зоны, а не «побольше про запас».",
           ] },
-          { h: "Разрешение и объектив", p: [
-            "Разрешение 2 Мп (Full HD) достаточно для обзора помещения, 4–8 Мп — когда нужно различать лица и номера на расстоянии. Но высокое разрешение требует большего архива и канала связи.",
-            "Объектив определяет угол и дальность: 2.8 мм даёт широкий обзор комнаты, 4–6 мм — коридор или въезд, а вариофокальный объектив позволяет настроить угол под конкретное место.",
+          { h: "Объектив и угол обзора", p: [
+            "Фокусное расстояние определяет, что увидит камера. Стандартные 2,8 мм дают широкий угол около 100° — это выбор для комнат, входных групп и небольших дворов: всё видно, но лица различимы только вблизи. Объектив 4 мм сужает угол и «приближает» картинку — им закрывают коридоры и подходы. 6–12 мм смотрят далеко и узко: въезд, касса с расстояния, номер машины на воротах.",
+            "Есть простое правило: одна камера — одна задача. Попытка одной камерой «видеть всё и читать лица» заканчивается тем, что она не делает ни того, ни другого. Для гибкости существуют вариофокальные модели с настраиваемым фокусным и моторизованные, которые можно перенастраивать удалённо.",
           ] },
-          { h: "Ночная съёмка и условия", p: [
-            "Для тёмных зон важна ИК-подсветка и хорошая светочувствительность; для улицы — защита от пыли и влаги (IP66/IP67) и рабочий температурный диапазон. Для контрового света выбирайте камеры с WDR.",
-            "Мы поможем подобрать камеру под конкретную зону и задачу — с учётом освещения, дистанции и бюджета.",
+          { h: "Ночная съёмка и улица", p: [
+            "Ночью камера работает с ИК-подсветкой: в паспорте пишут дальность 20, 30, 50 или 80 метров, и это честный предел различимости, а не «что-то видно». Для двора хватает 30 метров, для периметра склада берут 50–80. Технология ColorVu (Hikvision) и её аналоги дают цветную ночную картинку — цвет одежды и машины ночью часто важнее лишних мегапикселей.",
+            "Для улицы смотрите класс защиты: IP66/IP67 против пыли и ливня, рабочая температура до −40° для нашей зимы, антивандальный корпус IK10 там, где до камеры можно дотянуться. Уличная камера без подогрева объектива в мороз запотевает изнутри — на этом экономят чаще всего, и зря.",
           ] },
+          { h: "IP или аналог, и что ещё учесть", p: [
+            "IP-камера передаёт цифровую картинку по сети и питается по тому же кабелю (PoE), поддерживает аналитику — детекцию людей и машин, пересечение линий. Аналоговая HDCVI/TVI дешевле и работает по коаксиалу — разумный выбор при модернизации старой системы. В новых проектах мы почти всегда ставим IP: разница в цене окупается возможностями.",
+            "Из «мелочей», которые оказываются важными: микрофон, если нужен звук; слот microSD для локальной записи на случай обрыва сети; аналитика на борту (AcuSense у Hikvision, SMD у Dahua), которая отличает человека от собаки и ветки — без неё уведомления с уличной камеры превращаются в спам. Мы подбираем камеры под задачи объекта и бесплатно считаем комплект — со склада в Ташкенте, с гарантией.",
+          ] },
+        ],
+        faq: [
+          { q: "Какая камера нужна, чтобы узнавать лица на входе?", a: "4 Мп с объективом, при котором на лицо приходится достаточно пикселей на дистанции входа: обычно 4 мм на 3–5 метрах. Ставится на уровне лица, а не под потолком «сверху вниз»." },
+          { q: "Что такое ColorVu и стоит ли переплачивать?", a: "Это цветная ночная съёмка на светосильной матрице с мягкой подсветкой. Для дворов, парковок и касс — да, стоит: цвет машины и одежды ночью даёт больше, чем пара лишних мегапикселей." },
+          { q: "Купольная или цилиндрическая — какая лучше?", a: "Дело не в форме, а в месте: купольные аккуратнее в помещениях и антивандальнее, цилиндрические с большой ИК-подсветкой лучше на улице и периметре. Характеристики важнее корпуса." },
+          { q: "Можно ли поставить одну поворотную PTZ вместо трёх обычных?", a: "PTZ смотрит в одну сторону в каждый момент времени: пока она повёрнута к воротам, двор не пишется. PTZ хороша как дополнение к стационарным камерам под живое наблюдение, а не вместо них." },
         ],
       },
       uz: {
-        title: "Videokuzatuv kamerasini qanday tanlash: IP yoki analog",
-        excerpt: "IP yoki analog, ruxsat, obyektiv, tungi suratga olish — videokuzatuv kamerasini vazifangizga qarab qanday tanlash bo'yicha oddiy qo'llanma.",
+        title: "Videokuzatuv kamerasini qanday tanlash: ruxsat, obyektiv, tungi suratga olish",
+        excerpt: "Kamera xususiyatlarining amaliy tahlili: aslida nechta megapiksel kerak, fokus masofasini qanday tanlash, tungi va ko'cha suratga olishda nima muhim — marketing po'chog'isiz.",
         sections: [
-          { h: "IP yoki analog kamera", p: [
-            "Analog kameralar (HDCVI/TVI) arzonroq, koaksial kabel orqali ishlaydi va lokal yozuvli kichik tizimlar uchun mos. IP-kameralar yuqoriroq ruxsat, videotahlil va tarmoq bo'yicha moslashuvchan kengaytirishni beradi — ular o'rta va yirik obyektlar uchun tanlanadi.",
-            "Agar tizim yangi bo'lsa va o'sish rejalashtirilsa — IP oling. Agar mavjud analog tizimni arzon to'ldirish kerak bo'lsa — uning standartida qoling.",
+          { h: "Ruxsat: nechta megapiksel kerak", p: [
+            "Megapiksellar — kamerani sotishda birinchi ko'rsatiladigan va ko'pincha ortiqcha to'lanadigan narsa. Xona yoki hovlini umumiy kuzatishga 2 Mp (Full HD) yetadi: nima bo'layotgani, kim kirib qayoqqa ketgani ko'rinadi. Kirishda yuzlarni ishonchli tanish yoki kassa yonida narxlarni o'qish uchun 4 Mp olinadi. 8 Mp (4K) detallar kesib olinadigan keng planlarda o'zini oqlaydi: parking, perimetr, butun savdo zali.",
+            "Esda tuting: ruxsat yuqori — arxiv katta va tarmoqqa yuk ko'p. 8 Mp kamera diskda 2 Mp dan to'rt barobar ko'p joy oladi, kuchsiz registratorda to'rtta bunday kamera yozuvni tortmaydi. Ruxsat «zaxiraga kattaroq» emas, zona vazifasiga qarab tanlanadi.",
           ] },
-          { h: "Ruxsat va obyektiv", p: [
-            "2 Mp (Full HD) ruxsat xonani ko'rish uchun yetarli, 4–8 Mp — masofada yuz va raqamlarni ajratish kerak bo'lganda. Lekin yuqori ruxsat kattaroq arxiv va aloqa kanalini talab qiladi.",
-            "Obyektiv burchak va masofani belgilaydi: 2.8 mm xonaning keng ko'rinishini beradi, 4–6 mm — koridor yoki kirish, variofokal obyektiv esa burchakni aniq joyga moslashga imkon beradi.",
+          { h: "Obyektiv va ko'rish burchagi", p: [
+            "Fokus masofasi kamera nimani ko'rishini belgilaydi. Standart 2,8 mm taxminan 100° keng burchak beradi — xonalar, kirish guruhlari va kichik hovlilar tanlovi: hammasi ko'rinadi, lekin yuzlar faqat yaqindan farqlanadi. 4 mm obyektiv burchakni toraytirib tasvirni «yaqinlashtiradi» — u bilan koridor va yo'laklar yopiladi. 6–12 mm uzoqqa va tor qaraydi: kirish, masofadagi kassa, darvozadagi mashina raqami.",
+            "Oddiy qoida bor: bitta kamera — bitta vazifa. Bitta kamera bilan «hammasini ko'rish va yuzlarni o'qish»ga urinish u na unisini, na bunisini qilmasligi bilan tugaydi. Moslashuvchanlik uchun sozlanadigan fokusli variofokal va masofadan qayta sozlanadigan motorli modellar bor.",
           ] },
-          { h: "Tungi suratga olish va sharoitlar", p: [
-            "Qorong'i zonalar uchun IQ-yoritish va yaxshi yorug'lik sezuvchanligi muhim; ko'cha uchun — chang va namlikdan himoya (IP66/IP67) hamda ishchi harorat diapazoni. Qarshi yorug'lik uchun WDR bilan kameralarni tanlang.",
-            "Biz kamerani aniq zona va vazifaga qarab — yoritish, masofa va byudjetni hisobga olib tanlashga yordam beramiz.",
+          { h: "Tungi suratga olish va ko'cha", p: [
+            "Kechasi kamera IK-yoritish bilan ishlaydi: pasportda 20, 30, 50 yoki 80 metr masofa yoziladi — bu «nimadir ko'rinadi» emas, halol farqlash chegarasi. Hovliga 30 metr yetadi, ombor perimetriga 50–80 olinadi. ColorVu (Hikvision) texnologiyasi va uning o'xshashlari rangli tungi tasvir beradi — kechasi kiyim va mashina rangi ko'pincha ortiqcha megapiksellardan muhimroq.",
+            "Ko'cha uchun himoya sinfiga qarang: chang va jalaga qarshi IP66/IP67, bizning qish uchun −40° gacha ish harorati, kameraga qo'l yetadigan joyda IK10 antivandal korpus. Obyektiv isitgichisiz ko'cha kamerasi sovuqda ichidan terlaydi — eng ko'p shunda tejashadi, va bekorga.",
           ] },
+          { h: "IP yoki analog, va yana nimani hisobga olish", p: [
+            "IP-kamera raqamli tasvirni tarmoq orqali uzatadi va o'sha kabeldan quvvatlanadi (PoE), analitikani qo'llaydi — odam va mashina detektsiyasi, chiziq kesish. Analog HDCVI/TVI arzonroq va koaksialda ishlaydi — eski tizimni modernizatsiya qilishda oqilona tanlov. Yangi loyihalarda deyarli doim IP qo'yamiz: narx farqi imkoniyatlar bilan qoplanadi.",
+            "Muhim bo'lib chiqadigan «mayda-chuydalar»: ovoz kerak bo'lsa mikrofon; tarmoq uzilganda lokal yozuv uchun microSD sloti; bortdagi analitika (Hikvision da AcuSense, Dahua da SMD) — odamni it va shoxdan farqlaydi, usiz ko'cha kamerasidan bildirishnomalar spamga aylanadi. Kameralarni obyekt vazifalariga tanlaymiz va to'plamni bepul hisoblaymiz — Toshkentdagi ombordan, kafolat bilan.",
+          ] },
+        ],
+        faq: [
+          { q: "Kirishda yuzlarni tanish uchun qanday kamera kerak?", a: "Kirish masofasida yuzga yetarli piksel to'g'ri keladigan obyektivli 4 Mp: odatda 3–5 metrda 4 mm. Ship ostidan «tepadan pastga» emas, yuz darajasida o'rnatiladi." },
+          { q: "ColorVu nima va ortiqcha to'lashga arziydimi?", a: "Bu yorug' sezgir matritsa va yumshoq yoritishli rangli tungi surat. Hovli, parking va kassalarga — ha, arziydi: kechasi mashina va kiyim rangi bir juft ortiqcha megapikseldan ko'proq beradi." },
+          { q: "Gumbazli yoki silindrli — qaysi biri yaxshi?", a: "Gap shaklda emas, joyda: gumbazlilar xonalarda ozodaroq va antivandalroq, katta IK-yoritishli silindrlilar ko'cha va perimetrda yaxshiroq. Xususiyatlar korpusdan muhim." },
+          { q: "Uchta oddiy kamera o'rniga bitta burma PTZ qo'ysa bo'ladimi?", a: "PTZ har lahzada bir tomonga qaraydi: u darvozaga burilganda hovli yozilmaydi. PTZ statsionar kameralarga jonli kuzatuv uchun qo'shimcha sifatida yaxshi, ular o'rniga emas." },
         ],
       },
       en: {
-        title: "How to Choose a CCTV Camera: IP or Analog",
-        excerpt: "IP or analog, resolution, lens, night vision — a simple guide to choosing a surveillance camera for your task.",
+        title: "How to Choose a CCTV Camera: Resolution, Lens, Night Vision",
+        excerpt: "A practical guide to camera specs: how many megapixels you really need, how to pick the focal length, what matters for night and outdoor use — without the marketing fluff.",
         sections: [
-          { h: "IP or analog camera", p: [
-            "Analog cameras (HDCVI/TVI) are cheaper, run over coax cable and suit small systems with local recording. IP cameras offer higher resolution, video analytics and flexible network scaling — the choice for medium and large sites.",
-            "If the system is new and growth is planned — go IP. If you need to inexpensively extend an existing analog system — stay within its standard.",
+          { h: "Resolution: how many megapixels you need", p: [
+            "Megapixels are the first thing cameras are sold on and the first thing people overpay for. For general observation of a room or a yard, 2 MP (Full HD) is enough: you see what happens, who came in and where they went. To reliably recognise faces at an entrance or read price tags at a till, take 4 MP. 8 MP (4K) earns its price on wide views you need to crop details from: a parking lot, a perimeter, a whole sales floor.",
+            "Remember: more resolution means more archive and network load. An 8 MP camera fills a disk four times faster than a 2 MP one, and a weak recorder simply cannot record four of them. Resolution follows the zone's task, not \"more, just in case\".",
           ] },
-          { h: "Resolution and lens", p: [
-            "2 MP (Full HD) is enough for a room overview; 4–8 MP — when you need to distinguish faces and plates at a distance. But high resolution demands more storage and bandwidth.",
-            "The lens defines angle and reach: 2.8 mm gives a wide room view, 4–6 mm — a corridor or entrance, and a varifocal lens lets you tune the angle to a specific spot.",
+          { h: "Lens and field of view", p: [
+            "Focal length defines what the camera sees. The standard 2.8 mm gives a wide angle of about 100° — the choice for rooms, entrances and small yards: everything is visible, but faces are distinguishable only up close. A 4 mm lens narrows the angle and \"zooms in\" — it covers corridors and approaches. 6–12 mm looks far and narrow: a driveway, a till from a distance, a plate at the gate.",
+            "A simple rule: one camera — one task. Trying to make a single camera \"see everything and read faces\" ends with it doing neither. For flexibility there are varifocal models with adjustable focal length and motorized ones you can retune remotely.",
           ] },
-          { h: "Night vision and conditions", p: [
-            "For dark zones, IR illumination and good light sensitivity matter; outdoors — dust/moisture protection (IP66/IP67) and the right temperature range. Against backlight, choose cameras with WDR.",
-            "We will help you match a camera to a specific zone and task — considering lighting, distance and budget.",
+          { h: "Night vision and outdoor duty", p: [
+            "At night a camera works with IR illumination: the datasheet states 20, 30, 50 or 80 meters, and that is the honest limit of distinguishability, not \"something visible\". A yard needs 30 meters; a warehouse perimeter takes 50–80. ColorVu (Hikvision) and its analogues deliver a color night picture — the color of clothes and cars at night often matters more than extra megapixels.",
+            "For outdoor use check the protection class: IP66/IP67 against dust and rain, operating temperature down to −40° for our winters, an IK10 vandal-proof body wherever the camera is within reach. An outdoor camera without lens heating fogs up from inside in frost — the most common place to cut corners, and the wrong one.",
           ] },
+          { h: "IP or analog, and what else to check", p: [
+            "An IP camera sends a digital picture over the network and takes power over the same cable (PoE), and supports analytics — person and vehicle detection, line crossing. Analog HDCVI/TVI is cheaper and runs over coax — a sensible choice when upgrading an old system. In new projects we almost always install IP: the price difference pays for itself in capability.",
+            "Small things that turn out to matter: a microphone if you need audio; a microSD slot for local recording when the network drops; on-board analytics (Hikvision AcuSense, Dahua SMD) that tells a person from a dog or a branch — without it, notifications from an outdoor camera become spam. We match cameras to the site's tasks and quote the kit for free — from Tashkent stock, under warranty.",
+          ] },
+        ],
+        faq: [
+          { q: "What camera do I need to recognise faces at the entrance?", a: "A 4 MP with a lens that puts enough pixels on a face at the entrance distance: usually 4 mm at 3–5 meters. Mounted at face level, not under the ceiling looking down." },
+          { q: "What is ColorVu and is it worth the premium?", a: "Color night vision on a high-sensitivity sensor with soft illumination. For yards, parking lots and tills — yes: the color of a car or clothing at night gives more than a couple of extra megapixels." },
+          { q: "Dome or bullet — which is better?", a: "It is not the shape but the place: domes are neater indoors and more vandal-resistant, bullets with long-range IR do better outdoors and on perimeters. Specs matter more than the body." },
+          { q: "Can one PTZ replace three fixed cameras?", a: "A PTZ looks one way at a time: while it is turned to the gate, the yard is not being recorded. PTZ works well as an addition to fixed cameras for live monitoring, not instead of them." },
         ],
       },
       tr: {
-        title: "Güvenlik Kamerası Nasıl Seçilir: IP mi Analog mu",
-        excerpt: "IP veya analog, çözünürlük, lens, gece görüşü — görevinize uygun kamera seçimi için basit bir rehber.",
+        title: "Güvenlik Kamerası Nasıl Seçilir: Çözünürlük, Lens, Gece Görüşü",
+        excerpt: "Kamera özelliklerinin pratik rehberi: gerçekte kaç megapiksel gerekir, odak uzaklığı nasıl seçilir, gece ve dış mekân için ne önemlidir — pazarlama cilası olmadan.",
         sections: [
-          { h: "IP mi analog kamera mı", p: [
-            "Analog kameralar (HDCVI/TVI) daha ucuzdur, koaksiyel kabloyla çalışır ve yerel kayıtlı küçük sistemlere uygundur. IP kameralar daha yüksek çözünürlük, video analitiği ve ağ üzerinden esnek ölçekleme sunar — orta ve büyük sahaların tercihi.",
-            "Sistem yeniyse ve büyüme planlanıyorsa — IP alın. Mevcut analog sistemi ucuza genişletmek gerekiyorsa — onun standardında kalın.",
+          { h: "Çözünürlük: kaç megapiksel gerekir", p: [
+            "Megapiksel, kameranın satışında öne çıkarılan ve en çok fazla ödenen şeydir. Oda veya avlunun genel gözetimi için 2 MP (Full HD) yeter: ne olduğu, kimin girip nereye gittiği görülür. Girişte yüzleri güvenle tanımak veya kasada etiket okumak için 4 MP alınır. 8 MP (4K), detay kesilecek geniş planlarda hak eder: otopark, çevre hattı, satış katının tamamı.",
+            "Unutmayın: çözünürlük arttıkça arşiv ve ağ yükü büyür. 8 MP kamera diski 2 MP'den dört kat hızlı doldurur; zayıf kayıt cihazı dört böyle kamerayı kaydedemez. Çözünürlük «fazlası yedek olsun» değil, bölgenin görevine göre seçilir.",
           ] },
-          { h: "Çözünürlük ve lens", p: [
-            "2 MP (Full HD) oda genel görünümü için yeterli; 4–8 MP — mesafeden yüz ve plaka ayırt etmek gerektiğinde. Ancak yüksek çözünürlük daha fazla arşiv ve bant genişliği ister.",
-            "Lens açıyı ve menzili belirler: 2.8 mm geniş oda görüşü verir, 4–6 mm koridor veya giriş içindir, varifokal lens ise açıyı belirli bir noktaya göre ayarlamayı sağlar.",
+          { h: "Lens ve görüş açısı", p: [
+            "Odak uzaklığı kameranın ne göreceğini belirler. Standart 2,8 mm yaklaşık 100° geniş açı verir — odalar, girişler ve küçük avlular için: her şey görünür ama yüzler yalnız yakından seçilir. 4 mm açıyı daraltır ve görüntüyü «yaklaştırır» — koridorlar ve yaklaşma yolları onunla kapatılır. 6–12 mm uzağa ve dar bakar: araç girişi, uzaktan kasa, kapıdaki plaka.",
+            "Basit kural: bir kamera — bir görev. Tek kamerayla «her şeyi görüp yüz okumaya» çalışmak, ikisini de yapamamasıyla biter. Esneklik için ayarlanabilir odaklı varifokal ve uzaktan ayarlanan motorlu modeller vardır.",
           ] },
-          { h: "Gece görüşü ve koşullar", p: [
-            "Karanlık bölgeler için IR aydınlatma ve iyi ışık hassasiyeti önemlidir; dış mekân için toz/nem koruması (IP66/IP67) ve uygun sıcaklık aralığı. Ters ışığa karşı WDR'li kameraları seçin.",
-            "Aydınlatma, mesafe ve bütçeyi dikkate alarak belirli bölge ve göreve uygun kamerayı seçmenize yardımcı oluruz.",
+          { h: "Gece görüşü ve dış mekân", p: [
+            "Gece kamera IR aydınlatmayla çalışır: katalogda 20, 30, 50 veya 80 metre yazar — bu «bir şeyler görünür» değil, dürüst seçilebilirlik sınırıdır. Avluya 30 metre yeter; depo çevresine 50–80 alınır. ColorVu (Hikvision) ve benzerleri renkli gece görüntüsü verir — gece kıyafet ve araba rengi çoğu kez fazladan megapikselden önemlidir.",
+            "Dış mekân için koruma sınıfına bakın: toza ve sağanağa IP66/IP67, kışımız için −40°'ye çalışma sıcaklığı, kameraya el uzanan yerde IK10 vandal korumalı gövde. Lens ısıtıcısı olmayan dış kamera ayazda içeriden buğulanır — en çok burada kısılır ve boşuna.",
           ] },
+          { h: "IP mi analog mu, başka neye bakılır", p: [
+            "IP kamera dijital görüntüyü ağdan iletir, gücü aynı kablodan alır (PoE) ve analitik destekler — insan/araç algılama, çizgi geçişi. Analog HDCVI/TVI daha ucuzdur ve koaksiyelde çalışır — eski sistemi yenilerken mantıklı seçim. Yeni projelerde neredeyse hep IP koyarız: fiyat farkı yetenekle geri döner.",
+            "Önemli çıkan «ayrıntılar»: ses gerekiyorsa mikrofon; ağ koptuğunda yerel kayıt için microSD yuvası; insanı köpekten ve daldan ayıran yerleşik analitik (Hikvision AcuSense, Dahua SMD) — onsuz dış kameranın bildirimleri spama döner. Kameraları tesisin görevlerine göre seçer, seti ücretsiz fiyatlandırırız — Taşkent stoğundan, garantiyle.",
+          ] },
+        ],
+        faq: [
+          { q: "Girişte yüz tanımak için hangi kamera gerekir?", a: "Giriş mesafesinde yüze yeterli piksel düşüren lensli 4 MP: genelde 3–5 metrede 4 mm. Tavan altından «yukarıdan aşağı» değil, yüz hizasında monte edilir." },
+          { q: "ColorVu nedir, fazladan ödemeye değer mi?", a: "Yüksek hassasiyetli sensörde yumuşak aydınlatmalı renkli gece görüşü. Avlu, otopark ve kasalar için — evet: gece araç ve kıyafet rengi birkaç fazla megapikselden çok şey verir." },
+          { q: "Dome mu bullet mı — hangisi iyi?", a: "Mesele şekil değil yerdir: dome içeride daha derli toplu ve vandala dayanıklı, uzun IR'li bullet dışarıda ve çevre hattında iyidir. Özellikler gövdeden önemlidir." },
+          { q: "Üç sabit kamera yerine bir PTZ konabilir mi?", a: "PTZ her an tek yöne bakar: kapıya dönükken avlu kaydedilmez. PTZ, canlı izleme için sabit kameralara ek olarak iyidir; onların yerine değil." },
         ],
       },
       zh: {
-        title: "如何选择监控摄像机：IP还是模拟",
-        excerpt: "IP还是模拟、分辨率、镜头、夜视——按任务选择监控摄像机的简明指南。",
+        title: "如何选监控摄像机：分辨率、镜头、夜视",
+        excerpt: "摄像机参数的实用指南：到底需要几百万像素、焦距怎么选、夜视和室外使用看什么——不讲营销话术。",
         sections: [
-          { h: "IP还是模拟摄像机", p: [
-            "模拟摄像机（HDCVI/TVI）更便宜，走同轴电缆，适合本地存储的小型系统。IP摄像机提供更高分辨率、视频分析和灵活的网络扩展——是中大型项目的选择。",
-            "如果是新系统且计划扩展——选IP。如果只需低成本补充现有模拟系统——留在原标准内。",
+          { h: "分辨率：到底需要多少像素", p: [
+            "像素是卖摄像机时最先吹的参数，也是最容易多花钱的地方。看看房间或院子里发生了什么，2MP（全高清）足够：谁进来了、去了哪里都看得清。要在入口可靠认出人脸或看清收银台的价签，选4MP。8MP（4K）在需要从大画面里抠细节的场景才值：停车场、周界、整个卖场。",
+            "记住：分辨率越高，存储和网络负载越大。8MP摄像机占用的硬盘是2MP的四倍，性能弱的录像机根本录不动四台。分辨率跟着区域任务走，而不是「大点儿备用」。",
           ] },
-          { h: "分辨率与镜头", p: [
-            "200万像素（Full HD）足以看清房间全貌；400–800万像素——用于远距离辨认人脸和车牌。但高分辨率需要更大的存储和带宽。",
-            "镜头决定视角和距离：2.8毫米适合房间广角，4–6毫米适合走廊或入口，变焦镜头则可按具体位置调整视角。",
+          { h: "镜头与视场角", p: [
+            "焦距决定摄像机看到什么。标准2.8mm给出约100°的广角——适合房间、入口和小院：什么都看得见，但人脸只有凑近才认得出。4mm收窄视角、把画面「拉近」——用来盖走廊和通道。6–12mm看得远而窄：车道入口、远处的收银台、大门口的车牌。",
+            "有条简单规则：一台摄像机只干一件事。想让一台机器「既看全景又认人脸」，结局是两样都做不好。需要灵活性时有可调焦距的变焦型号，以及能远程调整的电动变焦款。",
           ] },
-          { h: "夜视与环境条件", p: [
-            "暗区需要红外补光和良好的感光度；室外需要防尘防水（IP66/IP67）和合适的工作温度范围。逆光场景请选带WDR宽动态的摄像机。",
-            "我们会根据照明、距离和预算，帮您为具体区域和任务匹配合适的摄像机。",
+          { h: "夜视与室外", p: [
+            "夜间摄像机靠红外补光工作：规格书标20、30、50或80米——那是能分辨清楚的诚实极限，不是「隐约可见」。院子30米够用，仓库周界选50–80米。ColorVu（海康威视）及同类技术提供彩色夜视——夜里衣服和车的颜色往往比多几百万像素更有用。",
+            "室外要看防护等级：IP66/IP67防尘防暴雨，工作温度低至−40°应对我们的冬天，够得着的位置选IK10防暴力外壳。没有镜头加热的室外机在严寒中会从里面起雾——这是最常被省掉的配置，省错了地方。",
           ] },
+          { h: "IP还是模拟，还要注意什么", p: [
+            "IP摄像机通过网络传输数字画面并由同一根线供电（PoE），支持智能分析——人车检测、越线报警。模拟HDCVI/TVI更便宜、走同轴线——老系统改造时是理性选择。新项目我们几乎都装IP：差价被能力补回来。",
+            "那些后来才发现重要的「小事」：需要声音就选带麦克风的；配microSD卡槽，断网时本地续录；机内分析（海康威视AcuSense、大华SMD）能把人和狗、树枝区分开——没有它，室外机的推送就成了垃圾信息。我们按现场任务选型并免费核算整套——塔什干现货，带质保。",
+          ] },
+        ],
+        faq: [
+          { q: "入口认人脸需要什么样的摄像机？", a: "4MP并配上在入口距离能给人脸足够像素的镜头：通常3–5米配4mm。装在接近人脸的高度，而不是吊顶下俯拍。" },
+          { q: "ColorVu是什么，值得加钱吗？", a: "基于高感光传感器加柔和补光的彩色夜视。院子、停车场和收银台——值得：夜里车和衣服的颜色比多几百万像素有用。" },
+          { q: "半球机和枪机哪个好？", a: "关键不在外形在位置：半球机在室内更整洁、更防破坏；带远距离红外的枪机在室外和周界表现更好。参数比外壳重要。" },
+          { q: "能用一台球机（PTZ）代替三台固定摄像机吗？", a: "球机每一刻只看一个方向：它转向大门时，院子就没在录。球机适合作为固定摄像机之外的人工追踪补充，不能取而代之。" },
         ],
       },
     },
@@ -757,93 +857,143 @@ export const ARTICLES: Article[] = [
     related: ["access", "turnstile", "attendance"],
     loc: {
       ru: {
-        title: "Что такое СКУД и как работает система контроля доступа",
-        excerpt: "Простыми словами: что такое СКУД, из чего состоит система контроля доступа, как она учитывает рабочее время и с чем интегрируется.",
+        title: "Что такое СКУД: как работает система контроля доступа",
+        excerpt: "Объясняем простыми словами, из чего состоит система контроля и управления доступом, какие бывают способы идентификации, что она умеет в связке с учётом времени и видео — и с чего начать внедрение.",
         sections: [
-          { h: "Что такое СКУД", p: [
-            "СКУД — система контроля и управления доступом. Она решает, кто, куда и когда может пройти на объект, и фиксирует каждый проход. Вместо обычного ключа используются карты, брелоки, PIN-код, отпечаток пальца или распознавание лица.",
-            "СКУД нужна там, где важно ограничить доступ и вести учёт: офисы, производства, склады, школы, жилые комплексы.",
+          { h: "Как это работает", p: [
+            "СКУД — система контроля и управления доступом — решает, кого и куда пускать. Сотрудник прикладывает карту, палец или показывает лицо; контроллер сверяет идентификатор с базой и открывает замок или турникет. Каждое событие — проход, отказ, дверь, оставленная открытой, — записывается в журнал с точным временем.",
+            "Главная ценность не в «двери с картой», а в управляемости: доступ настраивается по зонам и расписанию. Бухгалтерия открыта своим с 8 до 20, склад — только кладовщикам, серверная — двум админам. Уволился сотрудник — его пропуск блокируется одной кнопкой, и не нужно менять замки, как в мире механических ключей.",
           ] },
           { h: "Из чего состоит система", p: [
-            "Базовые элементы: контроллер (мозг системы), считыватель, запорное устройство (электромагнитный или электромеханический замок, турникет), кнопка выхода и ПО для настройки прав. Права выдаются по зонам и расписанию.",
-            "Систему можно начать с одной двери и расширять до сотен точек прохода под единым управлением.",
+            "Минимальный состав на одну дверь: контроллер (мозг системы), считыватель у двери, электромагнитный или электромеханический замок, кнопка выхода, доводчик и блок питания с резервным аккумулятором — чтобы дверь работала и при отключении света. На проходной вместо замка встаёт турникет, на въезде — шлагбаум.",
+            "Дальше система растёт без замены ядра: сетевые контроллеры объединяют десятки дверей в одну базу с общим журналом, ПО раздаёт права по группам, а гостям выписываются временные пропуска. Для дома или маленького офиса бывает достаточно автономного комплекта без компьютера вовсе.",
           ] },
-          { h: "Учёт времени и интеграции", p: [
-            "СКУД автоматически фиксирует приходы и уходы и формирует табель рабочего времени, который выгружается в 1С. Это исключает ручной учёт и споры о переработках.",
-            "СКУД интегрируется с видеонаблюдением (проход привязывается к видеозаписи) и охранной сигнализацией. Мы проектируем и устанавливаем СКУД под ключ под ваш объект.",
+          { h: "Карта, палец или лицо", p: [
+            "Карты и брелоки — самый дешёвый и привычный способ, но карту можно забыть, потерять или передать коллеге, чтобы тот «отметился». Отпечаток пальца передать нельзя, зато он плохо читается на производстве с грязными или сухими руками. Распознавание лица снимает оба ограничения: терминал пропускает за доли секунды, ничего не нужно прикладывать, а фотографией современный терминал не обмануть — он проверяет объём лица.",
+            "На практике способы комбинируют: сотрудники ходят по лицу или карте, в серверную — карта плюс PIN, гости получают QR-код на один визит. Оборудование ZKTeco и Hikvision позволяет собрать любой сценарий в одной системе.",
           ] },
+          { h: "Связки, которые окупают систему", p: [
+            "СКУД редко живёт одна. В связке с учётом рабочего времени тот же терминал считает часы и опоздания, а табель уходит в 1С без кадровика. С видеонаблюдением каждый проход привязывается к записи — спор «кто заходил» решается за минуту. С пожарной сигнализацией связка обязательна: при тревоге двери на путях эвакуации разблокируются автоматически.",
+            "Начать проще, чем кажется: одна дверь с контроллером и считывателем ставится за день. Мы бесплатно выезжаем на объект, считаем точки прохода и предлагаем состав под бюджет — от одной двери офиса до проходной завода с турникетами. Оборудование со склада в Ташкенте, гарантия и обслуживание по всему Узбекистану.",
+          ] },
+        ],
+        faq: [
+          { q: "Чем СКУД отличается от домофона?", a: "Домофон решает задачу «поговорить и открыть гостю». СКУД управляет доступом постоянных людей: права по зонам и времени, журнал проходов, интеграция с учётом времени. На практике они объединяются в одну систему." },
+          { q: "Что будет с дверями при отключении электричества?", a: "Электромагнитные замки открываются (поэтому их ставят на пути эвакуации), электромеханические остаются закрытыми и открываются ключом. Блок питания с аккумулятором держит систему часами — это обязательная часть комплекта." },
+          { q: "Можно ли поставить СКУД на одну дверь, а потом расширять?", a: "Да, это типовой путь: автономный или сетевой контроллер на одну дверь, затем добавление точек в ту же систему. Важно сразу выбрать расширяемую платформу — мы это учитываем в подборе." },
+          { q: "Сколько стоит СКУД на офис?", a: "Дверь с картами — базовый бюджет: контроллер, считыватель, замок, кнопка, питание. Face ID-терминал дороже, но убирает карты и даёт учёт времени. Точный расчёт — после бесплатного выезда инженера." },
         ],
       },
       uz: {
-        title: "SKUD nima va kirishni boshqarish tizimi qanday ishlaydi",
-        excerpt: "Oddiy so'zlar bilan: SKUD nima, kirishni boshqarish tizimi nimalardan iborat, u ish vaqtini qanday hisoblaydi va nima bilan integratsiyalashadi.",
+        title: "SKUD nima: kirishni nazorat qilish tizimi qanday ishlaydi",
+        excerpt: "Oddiy so'zlar bilan tushuntiramiz: kirishni nazorat qilish tizimi nimalardan iborat, qanday identifikatsiya usullari bor, vaqt hisobi va video bilan bog'lanishda nimalarga qodir — va joriy etishni nimadan boshlash kerak.",
         sections: [
-          { h: "SKUD nima", p: [
-            "SKUD — kirishni nazorat qilish va boshqarish tizimi. U kim, qayerga va qachon obyektga o'ta olishini hal qiladi va har bir o'tishni qayd etadi. Oddiy kalit o'rniga kartalar, breloklar, PIN-kod, barmoq izi yoki yuzni aniqlash ishlatiladi.",
-            "SKUD kirishni cheklash va hisob yuritish muhim bo'lgan joylarda kerak: ofislar, ishlab chiqarish, omborlar, maktablar, turar-joy majmualari.",
+          { h: "Bu qanday ishlaydi", p: [
+            "SKUD — kirishni nazorat qilish va boshqarish tizimi — kimni qayerga qo'yishni hal qiladi. Xodim karta yoki barmog'ini qo'yadi yoki yuzini ko'rsatadi; kontroller identifikatorni baza bilan solishtirib, qulf yoki turniketni ochadi. Har hodisa — o'tish, rad, ochiq qoldirilgan eshik — aniq vaqt bilan jurnalga yoziladi.",
+            "Asosiy qiymat «kartali eshik»da emas, boshqariluvchanlikda: kirish zonalar va jadval bo'yicha sozlanadi. Buxgalteriya o'zinikilarga 8 dan 20 gacha ochiq, ombor — faqat omborchilarga, serverxona — ikki adminga. Xodim ketdi — ruxsatnomasi bir tugma bilan bloklanadi, mexanik kalitlar dunyosidagidek qulflarni almashtirish shart emas.",
           ] },
           { h: "Tizim nimalardan iborat", p: [
-            "Asosiy elementlar: kontroller (tizim miyasi), o'quvchi, qulflash qurilmasi (elektromagnit yoki elektromexanik qulf, turniket), chiqish tugmasi va huquqlarni sozlash uchun dastur. Huquqlar zonalar va jadval bo'yicha beriladi.",
-            "Tizimni bitta eshikdan boshlab yagona boshqaruvli yuzlab o'tish nuqtalarigacha kengaytirish mumkin.",
+            "Bitta eshikka minimal tarkib: kontroller (tizim miyasi), eshik yonidagi o'qigich, elektromagnit yoki elektromexanik qulf, chiqish tugmasi, dovodchik va zaxira akkumulyatorli quvvat bloki — eshik svet o'chganda ham ishlashi uchun. Prohodnayada qulf o'rniga turniket, kirishda shlagbaum turadi.",
+            "Keyin tizim yadroni almashtirmasdan o'sadi: tarmoq kontrollerlari o'nlab eshiklarni umumiy jurnalli bitta bazaga birlashtiradi, dastur huquqlarni guruhlar bo'yicha beradi, mehmonlarga vaqtinchalik ruxsatnomalar yoziladi. Uy yoki kichik ofisga umuman kompyutersiz avtonom to'plam yetarli bo'lishi mumkin.",
           ] },
-          { h: "Vaqt hisobi va integratsiyalar", p: [
-            "SKUD kelish va ketishlarni avtomatik qayd etadi va 1C ga yuklanadigan ish vaqti tabelini shakllantiradi. Bu qo'lda hisoblash va qo'shimcha ishlar bo'yicha nizolarni bartaraf etadi.",
-            "SKUD videokuzatuv (o'tish videoyozuvga bog'lanadi) va qo'riqlash signalizatsiyasi bilan integratsiyalashadi. Biz SKUD ni obyektingizga mos kalit topshirish asosida loyihalaymiz va o'rnatamiz.",
+          { h: "Karta, barmoq yoki yuz", p: [
+            "Karta va breloklar — eng arzon va odatiy usul, lekin kartani unutish, yo'qotish yoki «belgilanib qo'yish» uchun hamkasbga berish mumkin. Barmoq izini berib bo'lmaydi, ammo qo'li kir yoki quruq ishlab chiqarishda yomon o'qiladi. Yuzni tanish ikkala cheklovni olib tashlaydi: terminal soniya ulushida o'tkazadi, hech narsa qo'yish kerak emas, zamonaviy terminalni fotosurat bilan aldab bo'lmaydi — u yuz hajmini tekshiradi.",
+            "Amalda usullar birlashtiriladi: xodimlar yuz yoki karta bilan yuradi, serverxonaga — karta plyus PIN, mehmonlar bir tashrifga QR-kod oladi. ZKTeco va Hikvision uskunalari istalgan stsenariyni bitta tizimda yig'ish imkonini beradi.",
           ] },
+          { h: "Tizimni oqlaydigan bog'lanishlar", p: [
+            "SKUD kamdan-kam yolg'iz yashaydi. Ish vaqti hisobi bilan bog'lanishda o'sha terminal soat va kechikishlarni sanaydi, tabel kadrchisiz 1C ga ketadi. Videokuzatuv bilan har o'tish yozuvga bog'lanadi — «kim kirgan» bahsi bir daqiqada hal bo'ladi. Yong'in signalizatsiyasi bilan bog'lanish majburiy: trevogada evakuatsiya yo'llaridagi eshiklar avtomatik ochiladi.",
+            "Boshlash o'ylagandan oson: kontroller va o'qigichli bitta eshik bir kunda o'rnatiladi. Obyektga bepul chiqamiz, o'tish nuqtalarini hisoblaymiz va byudjetga mos tarkibni taklif qilamiz — ofisning bitta eshigidan turniketli zavod prohodnayasigacha. Uskuna Toshkentdagi ombordan, kafolat va xizmat butun O'zbekiston bo'ylab.",
+          ] },
+        ],
+        faq: [
+          { q: "SKUD domofondan nimasi bilan farq qiladi?", a: "Domofon «gaplashish va mehmonga ochish» vazifasini hal qiladi. SKUD doimiy odamlar kirishini boshqaradi: zona va vaqt bo'yicha huquqlar, o'tishlar jurnali, vaqt hisobi bilan integratsiya. Amalda ular bitta tizimga birlashadi." },
+          { q: "Svet o'chganda eshiklar nima bo'ladi?", a: "Elektromagnit qulflar ochiladi (shuning uchun ular evakuatsiya yo'llariga qo'yiladi), elektromexaniklar yopiq qoladi va kalit bilan ochiladi. Akkumulyatorli quvvat bloki tizimni soatlab ushlaydi — bu to'plamning majburiy qismi." },
+          { q: "SKUDni bitta eshikka qo'yib, keyin kengaytirsa bo'ladimi?", a: "Ha, bu tipik yo'l: bitta eshikka avtonom yoki tarmoq kontrolleri, keyin o'sha tizimga nuqtalar qo'shish. Boshidanoq kengayadigan platformani tanlash muhim — buni tanlovda hisobga olamiz." },
+          { q: "Ofisga SKUD qancha turadi?", a: "Kartali eshik — bazaviy byudjet: kontroller, o'qigich, qulf, tugma, quvvat. Face ID terminal qimmatroq, lekin kartalarni olib tashlaydi va vaqt hisobini beradi. Aniq hisob — muhandisning bepul chiqishidan keyin." },
         ],
       },
       en: {
-        title: "What Is Access Control (ACS) and How It Works",
-        excerpt: "In plain words: what an access control system is, what it consists of, how it tracks working hours and what it integrates with.",
+        title: "What Is an Access Control System and How It Works",
+        excerpt: "In plain words: what an access control system consists of, which identification methods exist, what it can do together with time attendance and CCTV — and how to start.",
         sections: [
-          { h: "What ACS is", p: [
-            "An access control system (ACS) decides who may enter, where and when — and logs every passage. Instead of an ordinary key it uses cards, fobs, PIN codes, fingerprints or facial recognition.",
-            "ACS is needed wherever access must be restricted and accounted for: offices, factories, warehouses, schools, residential complexes.",
+          { h: "How it works", p: [
+            "An access control system decides who gets in and where. An employee presents a card, a finger or a face; the controller checks the identifier against the database and opens the lock or the turnstile. Every event — a pass, a denial, a door left open — is logged with an exact timestamp.",
+            "The real value is not \"a door with a card\" but manageability: access is configured by zone and schedule. Accounting is open to its staff from 8 to 20, the warehouse only to storekeepers, the server room to two admins. When someone leaves the company, their pass is blocked with one click — no changing locks as in the world of mechanical keys.",
           ] },
           { h: "What the system consists of", p: [
-            "Core elements: a controller (the brain), a reader, a locking device (electromagnetic or electromechanical lock, turnstile), an exit button and software for managing rights. Rights are granted by zone and schedule.",
-            "You can start with a single door and scale to hundreds of entry points under one management console.",
+            "The minimum for one door: a controller (the brain), a reader by the door, an electromagnetic or electromechanical lock, an exit button, a closer and a power supply with a backup battery — so the door works during outages. At a staffed entrance a turnstile replaces the lock; at a vehicle gate, a barrier.",
+            "From there the system grows without replacing the core: networked controllers join dozens of doors into one database with a common log, software assigns rights by group, and guests get temporary passes. A home or a small office can even run on an autonomous kit with no computer at all.",
           ] },
-          { h: "Time attendance and integrations", p: [
-            "ACS automatically logs arrivals and departures and builds a timesheet that exports to 1C. This eliminates manual tracking and overtime disputes.",
-            "ACS integrates with CCTV (each passage is linked to video) and intruder alarms. We design and install turnkey access control for your site.",
+          { h: "Card, finger or face", p: [
+            "Cards and fobs are the cheapest and most familiar, but a card can be forgotten, lost or handed to a colleague to \"clock in\". A fingerprint cannot be lent, but reads poorly in production with dirty or dry hands. Facial recognition removes both limits: the terminal passes a person in a fraction of a second, nothing needs presenting, and a photo cannot fool a modern terminal — it checks the face in 3D.",
+            "In practice the methods are combined: staff pass by face or card, the server room takes card plus PIN, guests get a QR code for one visit. ZKTeco and Hikvision equipment lets any scenario run in a single system.",
           ] },
+          { h: "The integrations that pay for the system", p: [
+            "Access control rarely lives alone. Linked with time attendance, the same terminal counts hours and lateness, and the timesheet goes to the ERP without HR. Linked with CCTV, every pass ties to footage — the \"who entered\" dispute takes a minute. The link with the fire alarm is mandatory: on alarm, doors on evacuation routes unlock automatically.",
+            "Starting is easier than it seems: one door with a controller and a reader takes a day. We survey the site for free, count the access points and propose a configuration for the budget — from a single office door to a factory entrance with turnstiles. Equipment from Tashkent stock, warranty and service across Uzbekistan.",
+          ] },
+        ],
+        faq: [
+          { q: "How is access control different from an intercom?", a: "An intercom answers \"talk to a guest and open the door\". Access control manages regular people: rights by zone and time, a pass log, attendance integration. In practice both merge into one system." },
+          { q: "What happens to the doors during a power outage?", a: "Electromagnetic locks open (which is why they go on evacuation routes); electromechanical locks stay shut and open with a key. A battery-backed power supply keeps the system running for hours — a mandatory part of the kit." },
+          { q: "Can I start with one door and expand later?", a: "Yes, that is the typical path: an autonomous or networked controller for one door, then more points in the same system. The key is choosing an expandable platform from the start — we factor that into the selection." },
+          { q: "How much does office access control cost?", a: "A card door is the base budget: controller, reader, lock, button, power. A Face ID terminal costs more but removes cards and adds time tracking. An exact quote follows a free site survey." },
         ],
       },
       tr: {
         title: "Geçiş Kontrol Sistemi (PDKS) Nedir ve Nasıl Çalışır",
-        excerpt: "Basit anlatım: geçiş kontrol sistemi nedir, nelerden oluşur, mesaiyi nasıl takip eder ve nelerle entegre olur.",
+        excerpt: "Sade bir dille: geçiş kontrol sistemi nelerden oluşur, hangi kimlik doğrulama yöntemleri vardır, mesai takibi ve kameralarla birlikte neler yapar — ve nereden başlanır.",
         sections: [
-          { h: "Geçiş kontrolü nedir", p: [
-            "Geçiş kontrol sistemi kimin, nereye ve ne zaman girebileceğine karar verir ve her geçişi kaydeder. Sıradan anahtar yerine kart, anahtarlık, PIN, parmak izi veya yüz tanıma kullanılır.",
-            "Erişimin kısıtlanması ve kayıt altına alınması gereken her yerde gereklidir: ofisler, fabrikalar, depolar, okullar, konut siteleri.",
+          { h: "Nasıl çalışır", p: [
+            "Geçiş kontrol sistemi kimin nereye gireceğine karar verir. Çalışan kart, parmak veya yüz gösterir; kontrolör kimliği veritabanıyla karşılaştırır ve kilidi veya turnikeyi açar. Her olay — geçiş, ret, açık bırakılan kapı — tam zaman damgasıyla kayda geçer.",
+            "Asıl değer «kartlı kapı» değil, yönetilebilirliktir: erişim bölge ve programa göre ayarlanır. Muhasebe kendi ekibine 8–20 arası açık, depo yalnız depoculara, sistem odası iki yöneticiye. Biri işten ayrılınca kartı tek tıkla bloke edilir — mekanik anahtar dünyasındaki gibi kilit değiştirmek gerekmez.",
           ] },
           { h: "Sistem nelerden oluşur", p: [
-            "Temel öğeler: kontrolör (sistemin beyni), okuyucu, kilitleme cihazı (elektromanyetik/elektromekanik kilit, turnike), çıkış butonu ve yetki yönetim yazılımı. Yetkiler bölge ve takvime göre verilir.",
-            "Tek kapıyla başlayıp tek yönetim altında yüzlerce geçiş noktasına ölçeklenebilir.",
+            "Tek kapı için asgari set: kontrolör (beyin), kapı yanında okuyucu, elektromanyetik veya elektromekanik kilit, çıkış butonu, kapı kapatıcı ve yedek akülü güç kaynağı — kapı elektrik kesintisinde de çalışsın. Personel girişinde kilidin yerini turnike, araç girişinde bariyer alır.",
+            "Sistem çekirdeği değiştirmeden büyür: ağ kontrolörleri onlarca kapıyı ortak kayıtlı tek veritabanında birleştirir, yazılım yetkileri gruplara dağıtır, misafirlere süreli kart verilir. Ev veya küçük ofis, bilgisayarsız bağımsız setle bile idare edebilir.",
           ] },
-          { h: "Mesai takibi ve entegrasyonlar", p: [
-            "Sistem giriş-çıkışları otomatik kaydeder ve 1C'ye aktarılan puantaj oluşturur. Bu, elle takibi ve fazla mesai tartışmalarını ortadan kaldırır.",
-            "CCTV (geçiş video kaydına bağlanır) ve alarm sistemleriyle entegre olur. Sahanız için anahtar teslim geçiş kontrolü tasarlar ve kurarız.",
+          { h: "Kart, parmak veya yüz", p: [
+            "Kart ve anahtarlık en ucuz ve alışıldık yöntemdir; ama kart unutulur, kaybolur veya «giriş bassın» diye meslektaşa verilir. Parmak izi devredilemez ama elleri kirli veya kuru üretimde zayıf okur. Yüz tanıma iki sınırı da kaldırır: terminal saniyenin kesrinde geçirir, bir şey göstermek gerekmez, modern terminal fotoğrafla kandırılmaz — yüzü üç boyutlu doğrular.",
+            "Uygulamada yöntemler birleştirilir: personel yüz veya kartla geçer, sistem odasına kart artı PIN, misafire tek ziyaretlik QR verilir. ZKTeco ve Hikvision ekipmanı her senaryoyu tek sistemde çalıştırır.",
           ] },
+          { h: "Sistemi amorti eden entegrasyonlar", p: [
+            "Geçiş kontrolü nadiren yalnız yaşar. Mesai takibiyle aynı terminal saatleri ve gecikmeleri sayar, puantaj İK olmadan ERP'ye gider. Kameralarla her geçiş görüntüye bağlanır — «kim girdi» tartışması bir dakika sürer. Yangın alarmıyla bağlantı zorunludur: alarmda kaçış yollarındaki kapılar otomatik açılır.",
+            "Başlamak sanıldığından kolaydır: kontrolör ve okuyuculu tek kapı bir günde kurulur. Tesisi ücretsiz keşfeder, geçiş noktalarını sayar ve bütçeye göre yapı öneririz — tek ofis kapısından turnikeli fabrika girişine kadar. Ekipman Taşkent stoğundan; garanti ve servis tüm Özbekistan'da.",
+          ] },
+        ],
+        faq: [
+          { q: "PDKS diafondan nasıl ayrılır?", a: "Diafon «misafirle konuş ve kapıyı aç» işini çözer. PDKS sürekli girenleri yönetir: bölge ve zamana göre yetki, geçiş kaydı, mesai entegrasyonu. Uygulamada ikisi tek sistemde birleşir." },
+          { q: "Elektrik kesilince kapılara ne olur?", a: "Elektromanyetik kilitler açılır (bu yüzden kaçış yollarına konur); elektromekanikler kilitli kalır ve anahtarla açılır. Akülü güç kaynağı sistemi saatlerce taşır — setin zorunlu parçasıdır." },
+          { q: "Tek kapıyla başlayıp sonra genişletebilir miyim?", a: "Evet, tipik yol budur: tek kapıya bağımsız veya ağ kontrolörü, sonra aynı sisteme yeni noktalar. Önemli olan baştan genişleyebilir platform seçmektir — seçimde bunu gözetiriz." },
+          { q: "Ofis için PDKS ne kadar tutar?", a: "Kartlı kapı taban bütçedir: kontrolör, okuyucu, kilit, buton, güç. Face ID terminali daha pahalıdır ama kartları kaldırır ve mesai takibi ekler. Kesin teklif ücretsiz keşiften sonra." },
         ],
       },
       zh: {
-        title: "什么是门禁系统（ACS）及其工作原理",
-        excerpt: "通俗解释：什么是门禁系统、由什么组成、如何统计考勤、能与哪些系统集成。",
+        title: "什么是门禁系统：它如何工作",
+        excerpt: "用大白话讲清楚：门禁系统由什么组成、有哪些识别方式、与考勤和视频联动能做什么——以及从哪里开始部署。",
         sections: [
-          { h: "什么是门禁系统", p: [
-            "门禁系统决定谁、何时、可以进入哪里，并记录每一次通行。它用卡片、钥匙扣、PIN码、指纹或人脸识别取代普通钥匙。",
-            "凡是需要限制出入并留痕的场所都需要门禁：办公室、工厂、仓库、学校、住宅小区。",
+          { h: "它如何工作", p: [
+            "门禁系统决定谁能进、能进哪里。员工刷卡、按指纹或刷脸；控制器把凭证与数据库比对，然后开锁或放行闸机。每个事件——通行、拒绝、门未关好——都带精确时间戳记入日志。",
+            "真正的价值不在「带卡的门」，而在可管理性：权限按区域和时间表配置。财务室对本部门8点到20点开放，仓库只对库管员开放，机房只对两位管理员开放。员工离职，一键注销通行证——不必像机械钥匙时代那样换锁。",
           ] },
           { h: "系统由什么组成", p: [
-            "核心部件：控制器（系统大脑）、读卡器、锁具（电磁锁或电控锁、闸机）、出门按钮，以及权限管理软件。权限按区域和时间表分配。",
-            "可以从一扇门起步，在统一管理下扩展到数百个通行点。",
+            "单扇门的最小配置：控制器（系统大脑）、门旁读卡器、磁力锁或电机锁、出门按钮、闭门器和带备用电池的电源——停电时门照常工作。有人值守的入口用闸机代替锁，车辆入口用道闸。",
+            "之后系统无需换核心即可生长：联网控制器把几十扇门并入共享日志的同一数据库，软件按组分配权限，访客发放临时通行证。住宅或小办公室甚至可以用不接电脑的独立套件。",
           ] },
-          { h: "考勤与系统集成", p: [
-            "门禁自动记录上下班时间并生成可导出到1C的考勤表，消除了手工统计和加班争议。",
-            "门禁可与视频监控（通行记录关联录像）和防盗报警联动。我们为您的项目提供门禁系统的交钥匙设计与安装。",
+          { h: "刷卡、指纹还是人脸", p: [
+            "卡和钥匙扣最便宜也最常见，但卡会忘带、会丢，还能借给同事「代打卡」。指纹借不出去，可在手部易脏或干燥的车间识别率低。人脸识别解决这两个问题：终端瞬间放行、无需出示任何东西，现代终端做立体检测、照片骗不过。",
+            "实践中多种方式组合使用：员工刷脸或刷卡，机房用卡加密码，访客拿一次性二维码。中控智慧（ZKTeco）和海康威视的设备能把任意场景装进同一套系统。",
           ] },
+          { h: "让系统回本的联动", p: [
+            "门禁很少单干。与考勤联动后，同一台终端统计工时和迟到，考勤表不经人事直接进入管理系统。与视频联动后，每次通行绑定录像——「谁进来过」的争论一分钟解决。与火灾报警的联动是强制要求：报警时疏散通道的门自动解锁。",
+            "起步比想象容易：一扇门配控制器和读卡器，一天装好。我们免费上门勘测、清点通行点，并按预算给出配置——从办公室的一扇门到带闸机的工厂门岗。设备塔什干现货，质保和维保覆盖全乌兹别克斯坦。",
+          ] },
+        ],
+        faq: [
+          { q: "门禁和楼宇对讲有什么区别？", a: "对讲解决「跟访客说话并开门」。门禁管理常驻人员：按区域和时间授权、通行日志、考勤集成。实践中两者会合并进一套系统。" },
+          { q: "停电时门会怎样？", a: "磁力锁断电即开（所以装在疏散通道上）；电机锁保持锁闭，可用钥匙打开。带电池的电源能撑数小时——是套件的必备部分。" },
+          { q: "能先装一扇门以后再扩展吗？", a: "可以，这是典型路径：先给一扇门装独立或联网控制器，之后往同一系统加点位。关键是一开始就选可扩展的平台——我们在选型时会考虑。" },
+          { q: "办公室装门禁要多少钱？", a: "刷卡门是基础预算：控制器、读卡器、锁、按钮、电源。人脸终端更贵，但省掉卡片还自带考勤。精确报价在工程师免费勘测之后。" },
         ],
       },
     },
@@ -854,93 +1004,143 @@ export const ARTICLES: Article[] = [
     related: ["fire", "pa"],
     loc: {
       ru: {
-        title: "Пожарная сигнализация: виды, состав и что важно знать",
-        excerpt: "Какие бывают системы пожарной сигнализации, из чего состоит АПС и СОУЭ, и почему важен проект по нормам пожарной безопасности.",
+        title: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая",
+        excerpt: "Чем отличаются пороговые, адресные и адресно-аналоговые системы, какие извещатели бывают и куда их ставят, что требует закон — и какую систему выбрать для офиса, магазина и склада.",
         sections: [
-          { h: "Зачем нужна пожарная сигнализация", p: [
-            "Автоматическая пожарная сигнализация (АПС) обнаруживает возгорание на ранней стадии — по дыму, теплу или пламени — и запускает оповещение и эвакуацию (СОУЭ). Для большинства коммерческих и общественных зданий это требование норм пожарной безопасности.",
-            "Раннее обнаружение спасает жизни и имущество и позволяет вызвать службы до того, как огонь распространится.",
+          { h: "Три типа систем — в чём разница", p: [
+            "Пороговая (неадресная) сигнализация — самая простая и дешёвая: извещатели собраны в шлейфы, и при срабатывании прибор показывает только номер шлейфа. «Тревога во втором шлейфе» означает поиск по всему этажу. Для маленького магазина или офиса из пары комнат этого достаточно; для объекта побольше поиск источника тревоги превращается в проблему.",
+            "Адресная система знает каждый извещатель по имени: прибор показывает не шлейф, а конкретную точку — «дым, кабинет 214». Адресно-аналоговая идёт дальше: извещатель постоянно передаёт уровень задымлённости, прибор сам отличает запылённость от возгорания и сообщает о загрязнении датчика заранее. Меньше ложных тревог, выше живучесть линии — стандарт для средних и крупных объектов.",
           ] },
-          { h: "Виды систем", p: [
-            "Пороговые (безадресные) системы — недорогие, определяют сработавший шлейф; подходят для небольших объектов. Адресные и адресно-аналоговые точно указывают сработавший извещатель и отслеживают его состояние; нужны для крупных и ответственных зданий.",
-            "Выбор зависит от площади, назначения здания и требований проекта.",
+          { h: "Какие бывают извещатели", p: [
+            "Дымовые оптические — основной тип для офисов, гостиниц и магазинов: реагируют на ранней стадии тления. Тепловые ставят там, где дым и пар в порядке вещей, — кухни, парилки, некоторые цеха: они срабатывают на температуру или скорость её роста. Извещатели пламени ловят открытый огонь за секунды и работают в высоких цехах и на складах ГСМ, где дым до потолка дойдёт слишком поздно.",
+            "Ручные извещатели — красные кнопки у выходов — обязательны на путях эвакуации: человек, увидевший огонь, поднимает тревогу раньше любого датчика. Дополняют картину линейные извещатели для протяжённых пространств и аспирационные системы для ЦОД и музеев, где важно поймать самую раннюю стадию.",
           ] },
-          { h: "Что входит и почему нужен проект", p: [
-            "В систему входят извещатели (дымовые, тепловые, ручные), приёмно-контрольный прибор, оповещатели, а при необходимости — автоматика дымоудаления и пожаротушения. Всё это должно быть рассчитано и согласовано в проекте.",
-            "Мы готовим проект по нормам, монтируем и сдаём систему надзорным органам, берём на обслуживание.",
+          { h: "Что требует закон", p: [
+            "Автоматическая пожарная сигнализация и система оповещения (СОУЭ) в Узбекистане обязательны для офисных и торговых зданий, складов, производств, школ и гостиниц — тип системы и состав оповещения зависят от площади, этажности и назначения объекта. Проект по нормам ШНК проходит согласование, а объект сдаётся инспекции с исполнительной документацией.",
+            "Сигнализация не работает в одиночку: по её сигналу запускается оповещение, разблокируются двери на путях эвакуации, останавливается вентиляция и включается дымоудаление. Эти связки — не опция, а требование норм, и закладывать их надо в проект, а не после замечаний инспектора.",
           ] },
+          { h: "Как выбрать под свой объект", p: [
+            "Практичное правило: до 10–15 помещений на одном этаже — пороговая система оправдана бюджетом; офисное здание, гостиница, школа — адресная; объект со сложной планировкой, запылённое производство, большой склад — адресно-аналоговая с её устойчивостью к ложным срабатываниям. Мы работаем с оборудованием Rubezh, Bolid и «Сибирский арсенал» со склада в Ташкенте.",
+            "Начинается всё с бесплатного выезда: считаем помещения и категории, предлагаем тип системы и смету, проектируем по нормам, монтируем и сдаём инспекции. После сдачи берём систему на регламентное обслуживание — без журнала ТО претензии у проверки будут даже к исправной системе.",
+          ] },
+        ],
+        faq: [
+          { q: "Какая сигнализация нужна небольшому магазину?", a: "Обычно достаточно пороговой: прибор на 2–4 шлейфа, дымовые извещатели, ручник у выхода и сирена. Это самый доступный по бюджету вариант, отвечающий нормам." },
+          { q: "Чем адресная система лучше пороговой?", a: "Она показывает точное место тревоги — не «шлейф 2», а конкретное помещение. Плюс контроль исправности каждого извещателя: обрыв или снятый датчик виден сразу." },
+          { q: "Почему сигнализация «ложно» срабатывает и как это лечится?", a: "Частые причины — пыль в камере извещателя, пар, насекомые. Лечится регламентной чисткой и правильным подбором типа датчика; адресно-аналоговые системы предупреждают о загрязнении заранее." },
+          { q: "Обязательно ли обслуживать сигнализацию после монтажа?", a: "Да, регламентные проверки с записями в журнале требуют нормы — именно журнал первым смотрит инспектор. Мы обслуживаем системы по договору с выездами по графику." },
         ],
       },
       uz: {
-        title: "Yong'in signalizatsiyasi: turlari, tarkibi va bilish muhim narsalar",
-        excerpt: "Qanday yong'in signalizatsiyasi tizimlari bo'ladi, APS va SOUE nimalardan iborat va nima uchun normalar bo'yicha loyiha muhim.",
+        title: "Yong'in signalizatsiyasi turlari: chegaraviy, manzilli, manzilli-analog",
+        excerpt: "Chegaraviy, manzilli va manzilli-analog tizimlar nimasi bilan farq qiladi, qanday xabar beruvchilar bor va ular qayerga qo'yiladi, qonun nimani talab qiladi — ofis, do'kon va omborga qaysi tizimni tanlash.",
         sections: [
-          { h: "Yong'in signalizatsiyasi nima uchun kerak", p: [
-            "Avtomatik yong'in signalizatsiyasi (APS) yong'inni erta bosqichda — tutun, issiqlik yoki alanga bo'yicha — aniqlaydi va ogohlantirish hamda evakuatsiyani (SOUE) ishga tushiradi. Ko'pchilik tijorat va jamoat binolari uchun bu yong'in xavfsizligi normalari talabidir.",
-            "Erta aniqlash hayot va mol-mulkni saqlaydi va olov tarqalgunga qadar xizmatlarni chaqirish imkonini beradi.",
+          { h: "Uch xil tizim — farqi nimada", p: [
+            "Chegaraviy (manzilsiz) signalizatsiya — eng oddiy va arzon: xabar beruvchilar shleyflarga yig'ilgan, ishga tushganda prib faqat shleyf raqamini ko'rsatadi. «Ikkinchi shleyfda trevoga» butun qavat bo'ylab qidiruvni anglatadi. Kichik do'kon yoki bir juft xonali ofisga bu yetarli; kattaroq obyektda trevoga manbasini topish muammoga aylanadi.",
+            "Manzilli tizim har xabar beruvchini nomma-nom biladi: prib shleyfni emas, aniq nuqtani ko'rsatadi — «tutun, 214-xona». Manzilli-analog undan nariga boradi: xabar beruvchi tutun darajasini doimiy uzatadi, prib changni yong'indan o'zi farqlaydi va datchik ifloslanishini oldindan aytadi. Yolg'on trevogalar kam, liniya yashovchanligi yuqori — o'rta va yirik obyektlar standarti.",
           ] },
-          { h: "Tizim turlari", p: [
-            "Chegaraviy (manzilsiz) tizimlar — arzon, ishga tushgan shleyfni aniqlaydi; kichik obyektlar uchun mos. Manzilli va manzilli-analog ishga tushgan datchikni aniq ko'rsatadi va uning holatini kuzatadi; yirik va mas'uliyatli binolar uchun kerak.",
-            "Tanlov maydon, bino vazifasi va loyiha talablariga bog'liq.",
+          { h: "Xabar beruvchilar qanday bo'ladi", p: [
+            "Optik tutun datchiklari — ofis, mehmonxona va do'konlarning asosiy turi: bijg'ishning erta bosqichida javob beradi. Issiqlik datchiklari tutun va bug' odatiy joylarga qo'yiladi — oshxonalar, bug'xonalar, ayrim sexlar: ular haroratga yoki uning o'sish tezligiga ishlaydi. Alanga datchiklari ochiq olovni soniyalarda ushlaydi va tutun shipga juda kech yetadigan baland sexlar va YoQM omborlarida ishlaydi.",
+            "Qo'l datchiklari — chiqishlar yonidagi qizil tugmalar — evakuatsiya yo'llarida majburiy: olovni ko'rgan odam istalgan datchikdan oldin trevoga ko'taradi. Manzarani cho'zilgan makonlar uchun chiziqli datchiklar va eng erta bosqichni tutish muhim bo'lgan DPM va muzeylar uchun aspiratsion tizimlar to'ldiradi.",
           ] },
-          { h: "Nima kiradi va nima uchun loyiha kerak", p: [
-            "Tizimga datchiklar (tutun, issiqlik, qo'l), qabul-nazorat qurilmasi, ogohlantirgichlar, zarur bo'lganda — tutunni chiqarish va yong'inni o'chirish avtomatikasi kiradi. Bularning barchasi loyihada hisoblanishi va kelishilishi kerak.",
-            "Biz normalarga muvofiq loyiha tayyorlaymiz, montaj qilamiz va tizimni nazorat organlariga topshiramiz, xizmatga olamiz.",
+          { h: "Qonun nimani talab qiladi", p: [
+            "O'zbekistonda avtomatik yong'in signalizatsiyasi va ogohlantirish tizimi (SOUE) ofis va savdo binolari, omborlar, ishlab chiqarish, maktab va mehmonxonalar uchun majburiy — tizim turi va ogohlantirish tarkibi maydon, qavatlilik va obyekt maqsadiga bog'liq. Loyiha ShNQ me'yorlari bo'yicha kelishuvdan o'tadi, obyekt ijro hujjatlari bilan inspeksiyaga topshiriladi.",
+            "Signalizatsiya yolg'iz ishlamaydi: uning signali bo'yicha ogohlantirish ishga tushadi, evakuatsiya yo'llaridagi eshiklar ochiladi, ventilyatsiya to'xtaydi va tutun chiqarish yoqiladi. Bu bog'lanishlar opsiya emas, me'yor talabi — ularni inspektor e'tirozidan keyin emas, loyihaga kiritish kerak.",
           ] },
+          { h: "O'z obyektingizga qanday tanlash", p: [
+            "Amaliy qoida: bir qavatda 10–15 tagacha xona — chegaraviy tizim byudjet bilan oqlanadi; ofis binosi, mehmonxona, maktab — manzilli; murakkab planirovkali obyekt, changli ishlab chiqarish, katta ombor — yolg'on ishga chidamli manzilli-analog. Toshkentdagi ombordan Rubezh, Bolid va «Sibirskiy arsenal» uskunalari bilan ishlaymiz.",
+            "Hammasi bepul chiqishdan boshlanadi: xona va kategoriyalarni hisoblaymiz, tizim turi va smetani taklif qilamiz, me'yorlar bo'yicha loyihalaymiz, montaj qilamiz va inspeksiyaga topshiramiz. Topshirgach tizimni reglament xizmatiga olamiz — TX jurnalisiz tekshiruv soz tizimga ham e'tiroz bildiradi.",
+          ] },
+        ],
+        faq: [
+          { q: "Kichik do'konga qanday signalizatsiya kerak?", a: "Odatda chegaraviy yetadi: 2–4 shleyfli prib, tutun datchiklari, chiqish yonida qo'l tugmasi va sirena. Bu me'yorlarga javob beradigan eng arzon variant." },
+          { q: "Manzilli tizim chegaraviydan nimasi bilan yaxshi?", a: "U trevoganing aniq joyini ko'rsatadi — «2-shleyf» emas, aniq xona. Qo'shimcha har datchik sozligini nazorat qiladi: uzilish yoki olib qo'yilgan datchik darhol ko'rinadi." },
+          { q: "Signalizatsiya nega «yolg'on» ishlaydi va buni qanday davolash mumkin?", a: "Tez-tez sabablari — datchik kamerasidagi chang, bug', hasharotlar. Reglament tozalash va datchik turini to'g'ri tanlash bilan davolanadi; manzilli-analog tizimlar ifloslanish haqida oldindan ogohlantiradi." },
+          { q: "Montajdan keyin signalizatsiyaga xizmat ko'rsatish majburiymi?", a: "Ha, jurnalga yozuvli reglament tekshiruvlarini me'yorlar talab qiladi — inspektor birinchi bo'lib jurnalni ko'radi. Tizimlarga jadval bo'yicha chiqishli shartnoma asosida xizmat ko'rsatamiz." },
         ],
       },
       en: {
-        title: "Fire Alarm Systems: Types, Components and What Matters",
-        excerpt: "Types of fire alarm systems, what an automatic fire alarm and evacuation system consist of, and why a code-compliant design matters.",
+        title: "Types of Fire Alarm Systems: Conventional, Addressable, Analogue Addressable",
+        excerpt: "How conventional, addressable and analogue addressable systems differ, which detectors exist and where they go, what the law requires — and which system fits an office, a shop and a warehouse.",
         sections: [
-          { h: "Why you need a fire alarm", p: [
-            "An automatic fire alarm detects fire at an early stage — by smoke, heat or flame — and triggers notification and evacuation. For most commercial and public buildings this is a fire-safety code requirement.",
-            "Early detection saves lives and property and lets you call emergency services before the fire spreads.",
+          { h: "Three system types — the difference", p: [
+            "A conventional (non-addressable) alarm is the simplest and cheapest: detectors are grouped into loops, and on activation the panel shows only the loop number. \"Alarm in loop two\" means searching the whole floor. For a small shop or a two-room office that is fine; on anything bigger, locating the alarm source becomes a problem.",
+            "An addressable system knows every detector by name: the panel shows not a loop but the exact point — \"smoke, room 214\". Analogue addressable goes further: the detector continuously reports the smoke level, the panel itself tells dust from fire and warns about a dirty detector in advance. Fewer false alarms, higher line survivability — the standard for medium and large sites.",
           ] },
-          { h: "System types", p: [
-            "Conventional (non-addressable) systems are inexpensive and identify the triggered loop; they suit small sites. Addressable and analogue-addressable systems pinpoint the exact detector and monitor its health; they are required for large and critical buildings.",
-            "The choice depends on floor area, building purpose and design requirements.",
+          { h: "Detector types", p: [
+            "Optical smoke detectors are the workhorse for offices, hotels and shops: they react at the early smoldering stage. Heat detectors go where smoke and steam are normal — kitchens, steam rooms, some workshops: they respond to temperature or its rate of rise. Flame detectors catch open fire within seconds and serve tall workshops and fuel warehouses, where smoke would reach the ceiling too late.",
+            "Manual call points — the red boxes by the exits — are mandatory on evacuation routes: a person who sees fire raises the alarm before any sensor. Beam detectors cover long spaces, and aspirating systems serve data centers and museums where the earliest possible detection matters.",
           ] },
-          { h: "What is included and why a design project matters", p: [
-            "The system includes detectors (smoke, heat, manual call points), a control panel, sounders and — where required — smoke extraction and fire suppression automation. All of it must be calculated and approved in a design project.",
-            "We prepare code-compliant designs, install the system, hand it over to supervisory authorities and provide maintenance.",
+          { h: "What the law requires", p: [
+            "In Uzbekistan an automatic fire alarm and a voice evacuation system are mandatory for office and retail buildings, warehouses, factories, schools and hotels — the system type and the evacuation setup depend on the area, the number of floors and the building's purpose. The design is approved under the national codes, and the site is handed to the inspectorate with as-built documentation.",
+            "The alarm does not work alone: its signal starts the evacuation announcement, unlocks doors on escape routes, stops ventilation and starts smoke extraction. These links are not options but code requirements — they belong in the design, not in fixes after an inspector's remarks.",
           ] },
+          { h: "Choosing for your site", p: [
+            "A practical rule: up to 10–15 rooms on one floor — a conventional system is justified by budget; an office building, hotel or school — addressable; a complex layout, a dusty factory or a large warehouse — analogue addressable with its resistance to false alarms. We work with Rubezh, Bolid and Sibirsky Arsenal equipment from Tashkent stock.",
+            "It all starts with a free survey: we count the rooms and categories, propose the system type and an estimate, design to code, install and hand over to the inspectorate. After handover we take the system onto scheduled maintenance — without a service log, inspectors will fault even a working system.",
+          ] },
+        ],
+        faq: [
+          { q: "What alarm does a small shop need?", a: "Usually a conventional one: a 2–4 loop panel, smoke detectors, a call point by the exit and a sounder. The most affordable option that meets the codes." },
+          { q: "Why is addressable better than conventional?", a: "It shows the exact alarm location — a specific room, not \"loop 2\". Plus each detector's health is supervised: a break or a removed detector is visible immediately." },
+          { q: "Why do alarms trigger falsely and what is the cure?", a: "Common causes are dust in the detector chamber, steam and insects. The cure is scheduled cleaning and the right detector type; analogue addressable systems warn about contamination in advance." },
+          { q: "Is maintenance mandatory after installation?", a: "Yes — the codes require scheduled checks with log entries, and the log is the first thing an inspector opens. We service systems under contract with scheduled visits." },
         ],
       },
       tr: {
-        title: "Yangın Alarm Sistemleri: Türleri, Bileşenleri ve Bilinmesi Gerekenler",
-        excerpt: "Yangın alarm sistemi türleri, otomatik alarm ve tahliye sisteminin bileşenleri ve yönetmeliğe uygun projenin önemi.",
+        title: "Yangın Alarm Sistemi Türleri: Konvansiyonel, Adresli, Analog Adresli",
+        excerpt: "Konvansiyonel, adresli ve analog adresli sistemler nasıl ayrışır, hangi dedektörler vardır ve nereye konur, yasa ne ister — ofis, mağaza ve depoya hangi sistem uyar.",
         sections: [
-          { h: "Yangın alarmı neden gerekli", p: [
-            "Otomatik yangın alarmı yangını erken aşamada — duman, ısı veya alevle — algılar ve uyarı ile tahliyeyi başlatır. Çoğu ticari ve kamu binası için bu, yangın güvenliği yönetmeliğinin gereğidir.",
-            "Erken algılama can ve mal kurtarır; yangın yayılmadan ekipleri çağırma imkânı verir.",
+          { h: "Üç sistem türü — fark nerede", p: [
+            "Konvansiyonel (adressiz) alarm en basit ve en ucuzdur: dedektörler zonlara toplanır, tetiklenince panel yalnız zon numarasını gösterir. «İkinci zonda alarm», bütün katı aramak demektir. Küçük mağaza veya iki odalı ofise yeter; daha büyüğünde alarm kaynağını bulmak soruna dönüşür.",
+            "Adresli sistem her dedektörü adıyla bilir: panel zonu değil noktayı gösterir — «duman, oda 214». Analog adresli daha ileri gider: dedektör duman düzeyini sürekli iletir, panel tozu yangından kendisi ayırır ve kirlenen dedektörü önceden haber verir. Daha az yanlış alarm, daha dayanıklı hat — orta ve büyük tesislerin standardı.",
           ] },
-          { h: "Sistem türleri", p: [
-            "Konvansiyonel (adressiz) sistemler ucuzdur ve tetiklenen hattı gösterir; küçük sahalara uygundur. Adresli ve adresli-analog sistemler tetiklenen dedektörü tam gösterir ve durumunu izler; büyük ve kritik binalar için gereklidir.",
-            "Seçim alana, bina işlevine ve proje gereksinimlerine bağlıdır.",
+          { h: "Dedektör türleri", p: [
+            "Optik duman dedektörleri ofis, otel ve mağazaların ana tipidir: için için yanmanın erken evresinde tepki verir. Isı dedektörleri duman ve buharın olağan olduğu yerlere konur — mutfaklar, buhar odaları, bazı atölyeler: sıcaklığa veya artış hızına çalışır. Alev dedektörleri açık ateşi saniyeler içinde yakalar; dumanın tavana çok geç ulaşacağı yüksek atölyeler ve akaryakıt depoları içindir.",
+            "Buton (manuel ihbar) — çıkışlardaki kırmızı kutular — kaçış yollarında zorunludur: yangını gören insan her sensörden önce alarm verir. Uzun hacimleri ışın (beam) dedektörleri, en erken evrenin önemli olduğu veri merkezleri ve müzeleri hava örneklemeli sistemler tamamlar.",
           ] },
-          { h: "Neler dahil ve proje neden şart", p: [
-            "Sistem dedektörler (duman, ısı, buton), kontrol paneli, sirenler ve gerektiğinde duman tahliyesi ile söndürme otomasyonunu içerir. Hepsi projede hesaplanmalı ve onaylanmalıdır.",
-            "Yönetmeliğe uygun proje hazırlar, montajı yapar, sistemi denetim kurumlarına teslim eder ve bakımını üstleniriz.",
+          { h: "Yasa ne istiyor", p: [
+            "Özbekistan'da otomatik yangın alarmı ve sesli tahliye sistemi ofis ve ticaret binaları, depolar, fabrikalar, okullar ve oteller için zorunludur — sistem tipi ve tahliye düzeni alana, kat sayısına ve binanın amacına bağlıdır. Proje ulusal normlara göre onaylanır, tesis as-built dokümantasyonla denetime teslim edilir.",
+            "Alarm yalnız çalışmaz: sinyaliyle anons başlar, kaçış yollarındaki kapılar açılır, havalandırma durur ve duman tahliyesi devreye girer. Bu bağlantılar seçenek değil norm gereğidir — müfettiş uyarısından sonra değil, projede yer alır.",
           ] },
+          { h: "Tesisinize göre seçim", p: [
+            "Pratik kural: tek katta 10–15 odaya kadar — konvansiyonel bütçeyle haklıdır; ofis binası, otel, okul — adresli; karmaşık plan, tozlu üretim, büyük depo — yanlış alarma dirençli analog adresli. Taşkent stoğundan Rubezh, Bolid ve Sibirsky Arsenal ekipmanıyla çalışırız.",
+            "Her şey ücretsiz keşifle başlar: odaları ve kategorileri sayar, sistem tipi ve teklif önerir, norma göre projelendirir, kurar ve denetime teslim ederiz. Teslimden sonra sistemi periyodik bakıma alırız — bakım defteri olmadan denetim, çalışan sisteme bile kusur bulur.",
+          ] },
+        ],
+        faq: [
+          { q: "Küçük mağazaya hangi alarm gerekir?", a: "Genelde konvansiyonel yeter: 2–4 zonlu panel, duman dedektörleri, çıkışta buton ve siren. Normlara uyan en ekonomik seçenek." },
+          { q: "Adresli sistem konvansiyonelden neden iyidir?", a: "Alarmın tam yerini gösterir — «zon 2» değil, belirli oda. Ayrıca her dedektörün sağlığı izlenir: kopukluk veya sökülen dedektör anında görünür." },
+          { q: "Alarm neden «yanlış» çalar ve çaresi nedir?", a: "Sık nedenler dedektör haznesindeki toz, buhar ve böceklerdir. Çare periyodik temizlik ve doğru dedektör tipidir; analog adresli sistemler kirlenmeyi önceden bildirir." },
+          { q: "Montajdan sonra bakım zorunlu mu?", a: "Evet — normlar deftere işlenen periyodik kontrolleri ister; müfettişin ilk açtığı şey o defterdir. Sistemlere programlı ziyaretli sözleşmeyle bakarız." },
         ],
       },
       zh: {
-        title: "火灾报警系统：类型、组成与要点",
-        excerpt: "火灾报警系统有哪些类型，自动报警和疏散广播由什么组成，为什么合规设计如此重要。",
+        title: "火灾报警系统的类型：总线制、编址式、模拟量编址式",
+        excerpt: "总线制、编址式和模拟量编址式系统有何区别，探测器有哪些、装在哪里，法规要求什么——办公室、商店和仓库各该选哪种。",
         sections: [
-          { h: "为什么需要火灾报警", p: [
-            "自动火灾报警系统在早期阶段——通过烟雾、温度或火焰——发现火情，并启动警报与疏散广播。对大多数商业和公共建筑而言，这是消防规范的强制要求。",
-            "早期发现能挽救生命和财产，并在火势蔓延前呼叫救援。",
+          { h: "三种系统的区别", p: [
+            "总线制（非编址）报警最简单便宜：探测器串成回路，触发时主机只显示回路号。「二号回路报警」意味着要找遍整层楼。对小商店或两间房的办公室够用；再大一点的场所，定位警源就成了难题。",
+            "编址系统认识每一个探测器：主机显示的不是回路而是具体点位——「烟感，214室」。模拟量编址更进一步：探测器持续上报烟雾浓度，主机自己区分灰尘和火情，并提前提示探测器脏污。误报更少、线路存活性更高——是中大型场所的标准。",
           ] },
-          { h: "系统类型", p: [
-            "普通（非编址）系统价格低，只能定位触发的回路，适合小型场所。编址与模拟编址系统能精确定位触发的探测器并监测其状态，是大型和重要建筑的必选。",
-            "选择取决于建筑面积、用途和设计要求。",
+          { h: "探测器有哪些", p: [
+            "光电感烟探测器是办公室、酒店和商店的主力：在阴燃早期就有反应。感温探测器装在烟和蒸汽属于常态的地方——厨房、蒸汽间、某些车间：它们对温度或升温速率起爆。火焰探测器几秒内捕捉明火，适合高大车间和油料仓库——那里烟升到天花板就太迟了。",
+            "手动报警按钮——出口旁的红色小盒——在疏散通道上是强制项：看见火的人比任何传感器更早报警。线型光束探测器覆盖狭长空间，吸气式系统服务数据中心和博物馆——那里最早期的探测最重要。",
           ] },
-          { h: "系统包含什么、为何需要设计", p: [
-            "系统包括探测器（烟感、温感、手报）、报警主机、声光警报器，必要时还有排烟与灭火联动。所有内容都必须在设计中计算并获得批准。",
-            "我们按规范出设计、完成安装、向监管部门交验，并提供后续维保。",
+          { h: "法规要求什么", p: [
+            "在乌兹别克斯坦，自动火灾报警和疏散广播系统对办公、商业建筑、仓库、工厂、学校和酒店是强制性的——系统类型和广播构成取决于面积、层数和建筑用途。设计按国家规范审批，项目连同竣工文档向监管部门交付。",
+            "报警系统不是单打独斗：它的信号启动疏散广播、解锁疏散通道的门、停止通风并开启排烟。这些联动不是选配而是规范要求——要写进设计方案，而不是等检查员提意见后补。",
           ] },
+          { h: "怎么按场所选择", p: [
+            "实用规则：单层10–15个房间以内——总线制在预算上合理；办公楼、酒店、学校——编址式；布局复杂的场所、多尘车间、大型仓库——抗误报的模拟量编址式。我们经营塔什干现货的Rubezh、Bolid和「西伯利亚兵工厂」设备。",
+            "一切从免费勘测开始：清点房间和类别、给出系统类型和预算、按规范设计、施工并交付验收。交付后承接定期维保——没有维保记录，检查机构连正常工作的系统也会挑毛病。",
+          ] },
+        ],
+        faq: [
+          { q: "小商店需要什么样的报警系统？", a: "通常总线制就够：2–4回路主机、感烟探测器、出口旁的手报和警笛。这是符合规范的最经济方案。" },
+          { q: "编址式比总线制好在哪？", a: "它显示报警的精确位置——不是「回路2」而是具体房间。而且每个探测器的健康状态受监控：断线或被摘下的探测器立即可见。" },
+          { q: "报警为什么会误报，怎么治？", a: "常见原因是探测器暗室积灰、蒸汽和昆虫。对策是定期清洁和选对探测器类型；模拟量编址系统会提前预警脏污。" },
+          { q: "装完以后必须维保吗？", a: "必须——规范要求按计划检查并记入台账，检查员第一个翻的就是台账。我们按合同定期上门维保。" },
         ],
       },
     },
