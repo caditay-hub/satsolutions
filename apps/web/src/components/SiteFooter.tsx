@@ -89,6 +89,7 @@ export async function SiteFooter() {
               <li><Link href="/partners/zkteco" className="hover:text-brand-700">{zktecoLabel}</Link></li>
               <li><Link href="/partners/h3c" className="hover:text-brand-700">{h3cLabel}</Link></li>
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
+              <li><Link href="/faq" className="hover:text-brand-700">{t("faq")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
               <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>

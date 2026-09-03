@@ -315,7 +315,8 @@
     "rights": "Barcha huquqlar himoyalangan",
     "tagline": "Butun O‘zbekiston bo‘ylab xavfsizlik va past kuchlanishli tizimlarni loyihalash, o‘rnatish va xizmat ko‘rsatish.",
     "returns": "Qaytarish va almashtirish",
-    "delivery": "Yetkazib berish va to'lov"
+    "delivery": "Yetkazib berish va to'lov",
+    "faq": "Tez-tez so'raladigan savollar"
   },
   "services": {
     "cctv": {

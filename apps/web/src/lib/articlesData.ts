@@ -17,14 +17,950 @@ export type Article = {
   slug: string;
   date: string;              // ISO — дата публикации
   related: string[];         // ключи услуг для перелинковки (serviceByKey)
+  hubs?: string[];           // слаги товарных хабов /products/type/<slug> — «Каталог по теме»
   loc: Record<string, ArticleBody>;
 };
 
 export const ARTICLES: Article[] = [
   {
+    slug: "router-sozlash",
+    date: "2026-09-03",
+    related: ["network", "wifi"],
+    hubs: ["marshrutizatory", "wi-fi-tochki-dostupa"],
+    loc: {
+      ru: {
+        title: "Как настроить роутер правильно: чек-лист из семи шагов",
+        excerpt: "Настройка домашнего или офисного роутера без «оставим как было»: пароли, Wi-Fi, гостевая сеть, обновления, проброс для камер. Семь шагов, после которых сеть работает и защищена.",
+        sections: [
+          { h: "Шаг 1: смените оба пароля", p: [
+            "У роутера два пароля, и путают их постоянно: пароль Wi-Fi (для подключения к сети) и пароль администратора (для входа в настройки). Заводской админ-пароль вроде admin/admin известен всем ботам интернета — меняйте оба при первом включении.",
+            "Хороший пароль Wi-Fi — длинная фраза, а не восемь символов с заглавной буквой. Взлом идёт перебором, и длина бьёт сложность: три несвязанных слова надёжнее, чем «Qwerty1!».",
+          ] },
+          { h: "Шаг 2: обновите прошивку", p: [
+            "Роутеры взламывают не «хакеры в капюшонах», а автоматические сети, сканирующие интернет на старые дыры. Обновление прошивки закрывает известные уязвимости — это пять минут в меню «Обновление» или в мобильном приложении производителя.",
+            "Там же проверьте, что удалённый доступ к настройкам из интернета выключен, если вы им осознанно не пользуетесь. Это самая частая дверь для чужих рук в вашей сети.",
+          ] },
+          { h: "Шаг 3: выберите диапазон и канал с умом", p: [
+            "Современный роутер вещает на 2,4 и 5 ГГц. Правило простое: всё, что умеет 5 ГГц и стоит недалеко — туда (быстро и свободно); датчики умного дома и дальние устройства — на 2,4 (дальнобойность).",
+            "Каналы в многоэтажке лучше задать вручную: для 2,4 ГГц — 1, 6 или 11 по результатам анализатора. Автовыбор у дешёвых роутеров часто «прилипает» к загруженному каналу.",
+          ] },
+          { h: "Шаг 4: заведите гостевую сеть", p: [
+            "Гостевая сеть — отдельный Wi-Fi для гостей и «умных» устройств: у них нет доступа к вашим компьютерам, дискам и камерам. Взломанная китайская лампочка из гостевой сети никуда дальше не пролезет.",
+            "В офисе это не опция, а норма: гости и личные телефоны сотрудников — в гостевом сегменте, рабочие машины и принтеры — в основном. На нормальном оборудовании это делается VLAN-ами.",
+          ] },
+          { h: "Шаг 5: DHCP и резервирование адресов", p: [
+            "Устройствам, к которым вы обращаетесь — принтеру, камере, регистратору, NAS — закрепите постоянные IP-адреса через резервирование DHCP. Иначе адрес однажды поменяется, и «пропавший» принтер будут искать всем офисом.",
+            "Диапазон DHCP оставьте с запасом: типичная ошибка — пул на 50 адресов в офисе, где полсотни телефонов плюс ноутбуки, и новые устройства перестают подключаться в разгар дня.",
+          ] },
+          { h: "Шаг 6: доступ к камерам снаружи — без проброса портов", p: [
+            "Классический проброс портов наружу — способ из прошлого десятилетия: открытый порт регистратора наружу находят сканерами за часы. Правильные пути: облачный P2P-доступ производителя (Hik-Connect и аналоги) или VPN до роутера.",
+            "VPN — самый надёжный вариант для бизнеса: снаружи не открыто ничего, а вы из любой точки попадаете в сеть как из офиса. Современные роутеры поднимают WireGuard за вечер.",
+          ] },
+          { h: "Шаг 7: проверьте скорость и запишите настройки", p: [
+            "После настройки замерьте скорость по кабелю и по Wi-Fi рядом с роутером: так вы узнаете реальный потолок и не будете грешить на провайдера в дальней комнате. И запишите админ-пароль в надёжное место — сброс роутера из-за забытого пароля означает настройку заново.",
+            "Если после всех шагов сеть всё равно тормозит или не добивает — дело уже не в настройках, а в покрытии или железе. Мы настраиваем и строим сети любого масштаба — от квартиры до офиса: приедем, разберёмся, сделаем.",
+          ] },
+        ],
+        faq: [
+          { q: "Нужно ли перезагружать роутер «для профилактики»?", a: "Исправный роутер работает месяцами без перезагрузок. Если помогает только ежедневный ресет — устройство перегревается, не тянет нагрузку или ловит проблему в прошивке; это повод обновиться или заменить его, а не ритуал." },
+          { q: "Роутер провайдера — оставить или поставить свой?", a: "Провайдерский обычно справляется с базой. Свой роутер ставят ради нормального Wi-Fi, VPN, гостевых сетей и VLAN. Часто лучший вариант — перевести провайдерский в режим моста и отдать всё своему." },
+          { q: "Сколько устройств выдержит домашний роутер?", a: "Бюджетные модели честно тянут 15–25 активных клиентов, дальше начинаются обрывы. Дом с умными устройствами легко набирает полсотни — тогда смотрите на роутеры классом выше или связку роутер + точки доступа." },
+        ],
+      },
+      uz: {
+        title: "Routerni to'g'ri sozlash: yetti qadamlik chek-list",
+        excerpt: "Uy yoki ofis routerini «qanday bo'lsa shunday qolsin»siz sozlash: parollar, Wi-Fi, mehmon tarmog'i, yangilanishlar, kameralarga kirish. Yetti qadam — tarmoq ishlaydi va himoyalangan.",
+        sections: [
+          { h: "1-qadam: ikkala parolni almashtiring", p: [
+            "Routerda ikkita parol bor va ularni doim adashtirishadi: Wi-Fi paroli (tarmoqqa ulanish uchun) va administrator paroli (sozlamalarga kirish uchun). admin/admin kabi zavod admin-paroli internetning barcha botlariga ma'lum — birinchi yoqishda ikkalasini ham almashtiring.",
+            "Yaxshi Wi-Fi parol — sakkiz belgi emas, uzun ibora. Buzish terib chiqish bilan boradi va uzunlik murakkablikni yengadi: uchta bog'lanmagan so'z «Qwerty1!» dan ishonchliroq.",
+          ] },
+          { h: "2-qadam: proshivkani yangilang", p: [
+            "Routerlarni «kapyushonli xakerlar» emas, internetni eski teshiklarga skanerlaydigan avtomatik tarmoqlar buzadi. Proshivka yangilanishi ma'lum zaifliklarni yopadi — bu «Yangilash» menyusida yoki ishlab chiqaruvchi ilovasida besh daqiqa.",
+            "O'sha yerda internetdan sozlamalarga masofaviy kirish o'chirilganini tekshiring — agar undan ongli foydalanmasangiz. Bu tarmog'ingizga begona qo'llar uchun eng ko'p uchraydigan eshik.",
+          ] },
+          { h: "3-qadam: diapazon va kanalni aql bilan tanlang", p: [
+            "Zamonaviy router 2,4 va 5 GGts da ishlaydi. Qoida oddiy: 5 GGts ni biladigan va uzoq turmaydigan hamma narsa — o'sha yoqqa (tez va bo'sh); aqlli uy datchiklari va uzoq qurilmalar — 2,4 ga (uzoqqa uradi).",
+            "Ko'p qavatlida kanallarni qo'lda qo'ygan yaxshi: 2,4 GGts uchun analizator natijasi bo'yicha 1, 6 yoki 11. Arzon routerlarda avtotanlash ko'pincha band kanalga «yopishib» qoladi.",
+          ] },
+          { h: "4-qadam: mehmon tarmog'ini oching", p: [
+            "Mehmon tarmog'i — mehmonlar va «aqlli» qurilmalar uchun alohida Wi-Fi: ular kompyuterlaringiz, disklar va kameralarga kira olmaydi. Mehmon tarmog'idagi buzilgan xitoy lampochkasi boshqa hech qayoqqa o'tolmaydi.",
+            "Ofisda bu opsiya emas, norma: mehmonlar va xodimlarning shaxsiy telefonlari — mehmon segmentida, ish mashinalari va printerlar — asosiysida. Normal uskunada bu VLANlar bilan qilinadi.",
+          ] },
+          { h: "5-qadam: DHCP va manzillarni band qilish", p: [
+            "Murojaat qiladigan qurilmalarga — printer, kamera, registrator, NAS — DHCP rezervlash orqali doimiy IP biriktiring. Aks holda manzil bir kun o'zgaradi va «yo'qolgan» printerni butun ofis qidiradi.",
+            "DHCP diapazonini zaxira bilan qoldiring: tipik xato — ellikta telefon plus noutbuklar bo'lgan ofisda 50 talik pul, va kun qizig'ida yangi qurilmalar ulanmay qoladi.",
+          ] },
+          { h: "6-qadam: kameralarga tashqaridan kirish — portlarni ochmasdan", p: [
+            "Portlarni tashqariga klassik ochish — o'tgan o'n yillik usuli: registratorning ochiq portini skanerlashda soatlarda topishadi. To'g'ri yo'llar: ishlab chiqaruvchining bulutli P2P kirishi (Hik-Connect va o'xshashlari) yoki routergacha VPN.",
+            "VPN — biznes uchun eng ishonchli variant: tashqarida hech narsa ochiq emas, siz esa istalgan joydan tarmoqqa ofisdagidek kirasiz. Zamonaviy routerlar WireGuard ni bir kechada ko'taradi.",
+          ] },
+          { h: "7-qadam: tezlikni o'lchang va sozlamalarni yozib qo'ying", p: [
+            "Sozlashdan keyin kabel va router yonida Wi-Fi orqali tezlikni o'lchang: real shipni bilasiz va uzoq xonada provayderni ayblamaysiz. Admin-parolni ishonchli joyga yozib qo'ying — unutilgan parol tufayli router tashlash hammasini qaytadan sozlash degani.",
+            "Barcha qadamlardan keyin tarmoq baribir tormozlansa yoki yetmasa — gap endi sozlamalarda emas, qamrov yoki temirda. Biz istalgan masshtabdagi tarmoqni sozlaymiz va quramiz — kvartiradan ofisgacha: kelamiz, aniqlaymiz, qilamiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Routerni «profilaktika uchun» qayta yuklash kerakmi?", a: "Soz router oylab qayta yuklashsiz ishlaydi. Faqat har kungi reset yordam bersa — qurilma qizib ketyapti, yukni tortmayapti yoki proshivkada muammo bor; bu ritual emas, yangilash yoki almashtirish sababi." },
+          { q: "Provayder routeri — qoldirishmi yoki o'zimniki?", a: "Provaydernikiga baza yetadi. O'z routerini normal Wi-Fi, VPN, mehmon tarmoqlari va VLAN uchun qo'yishadi. Ko'pincha eng yaxshisi — provaydernikini ko'prik rejimiga o'tkazib, hammasini o'znikiga berish." },
+          { q: "Uy routeri nechta qurilmani ko'taradi?", a: "Byudjet modellar halol 15–25 faol mijozni tortadi, keyin uzilishlar boshlanadi. Aqlli qurilmali uy ellikni oson yig'adi — unda yuqoriroq klass routerga yoki router + kirish nuqtalari bog'lamiga qarang." },
+        ],
+      },
+      en: {
+        title: "How to set up a router properly: a seven-step checklist",
+        excerpt: "Setting up a home or office router without 'leave it as is': passwords, Wi-Fi, a guest network, updates, camera access. Seven steps after which the network works and stays protected.",
+        sections: [
+          { h: "Step 1: change both passwords", p: [
+            "A router has two passwords, and people mix them up constantly: the Wi-Fi password (to join the network) and the admin password (to enter the settings). A factory admin password like admin/admin is known to every bot on the internet — change both at first power-on.",
+            "A good Wi-Fi password is a long phrase, not eight characters with a capital letter. Cracking is brute force, and length beats complexity: three unrelated words are stronger than 'Qwerty1!'.",
+          ] },
+          { h: "Step 2: update the firmware", p: [
+            "Routers are broken not by 'hackers in hoodies' but by automated networks scanning the internet for old holes. A firmware update closes the known vulnerabilities — five minutes in the Update menu or the vendor's mobile app.",
+            "While there, check that remote access to the settings from the internet is off unless you use it deliberately. It is the most common door for strangers into your network.",
+          ] },
+          { h: "Step 3: pick the band and channel wisely", p: [
+            "A modern router broadcasts on 2.4 and 5 GHz. The rule is simple: everything that supports 5 GHz and sits nearby goes there (fast and clear); smart-home sensors and distant devices stay on 2.4 (longer reach).",
+            "In an apartment block set the channels manually: for 2.4 GHz — 1, 6 or 11, guided by an analyzer app. Cheap routers' auto-select often sticks to a congested channel.",
+          ] },
+          { h: "Step 4: create a guest network", p: [
+            "A guest network is a separate Wi-Fi for visitors and smart devices: they get no access to your computers, drives and cameras. A hacked smart bulb in the guest network cannot crawl any further.",
+            "In an office it is not an option but the norm: guests and personal phones in the guest segment, work machines and printers in the main one. On decent equipment this is done with VLANs.",
+          ] },
+          { h: "Step 5: DHCP and address reservation", p: [
+            "Give fixed IP addresses via DHCP reservation to the devices you address — the printer, camera, recorder, NAS. Otherwise the address changes one day and the whole office hunts for the 'missing' printer.",
+            "Leave the DHCP range with headroom: a typical mistake is a 50-address pool in an office with fifty phones plus laptops, and new devices stop connecting at midday.",
+          ] },
+          { h: "Step 6: outside access to cameras — without port forwarding", p: [
+            "Classic port forwarding is a method from the last decade: an open recorder port is found by scanners within hours. The right ways: the vendor's cloud P2P access (Hik-Connect and the like) or a VPN to the router.",
+            "A VPN is the most reliable option for business: nothing is open to the outside, and from anywhere you enter the network as if from the office. Modern routers bring up WireGuard in an evening.",
+          ] },
+          { h: "Step 7: measure the speed and write the settings down", p: [
+            "After the setup, measure the speed over cable and over Wi-Fi next to the router: you learn the real ceiling and stop blaming the ISP in the far room. And write the admin password somewhere safe — resetting a router over a forgotten password means configuring everything again.",
+            "If after all the steps the network still lags or falls short, the problem is no longer settings but coverage or hardware. We configure and build networks of any scale — from an apartment to an office: we come, figure it out and do it.",
+          ] },
+        ],
+        faq: [
+          { q: "Should I reboot the router 'preventively'?", a: "A healthy router runs for months without reboots. If only a daily reset helps, the device overheats, cannot carry the load or hits a firmware bug; that is a reason to update or replace it, not a ritual." },
+          { q: "The ISP's router — keep it or install my own?", a: "The ISP's box usually covers the basics. People install their own for proper Wi-Fi, VPN, guest networks and VLANs. Often the best option is bridging the ISP router and letting your own do everything." },
+          { q: "How many devices can a home router carry?", a: "Budget models honestly carry 15–25 active clients, then drops begin. A smart home easily reaches fifty — then look at a higher class of router or a router-plus-access-points combination." },
+        ],
+      },
+      tr: {
+        title: "Router doğru nasıl kurulur: yedi adımlık kontrol listesi",
+        excerpt: "Ev veya ofis router'ını 'olduğu gibi kalsın' demeden kurmak: şifreler, Wi-Fi, misafir ağı, güncellemeler, kameralara erişim. Yedi adım — ağ çalışır ve korunur.",
+        sections: [
+          { h: "Adım 1: iki şifreyi de değiştirin", p: [
+            "Router'da iki şifre vardır ve sürekli karıştırılır: Wi-Fi şifresi (ağa bağlanmak için) ve yönetici şifresi (ayarlara girmek için). admin/admin gibi fabrika şifresini internetin bütün botları bilir — ilk açılışta ikisini de değiştirin.",
+            "İyi bir Wi-Fi şifresi sekiz karakter değil, uzun bir ifadedir. Kırma denemeyle gider ve uzunluk karmaşıklığı yener: üç alakasız kelime 'Qwerty1!'den sağlamdır.",
+          ] },
+          { h: "Adım 2: yazılımı güncelleyin", p: [
+            "Router'ları 'kapüşonlu hackerlar' değil, interneti eski açıklar için tarayan otomatik ağlar kırar. Yazılım güncellemesi bilinen açıkları kapatır — Güncelleme menüsünde veya üreticinin uygulamasında beş dakika.",
+            "Oradayken, bilerek kullanmıyorsanız ayarlara internetten uzak erişimin kapalı olduğunu kontrol edin. Ağınıza yabancı eller için en yaygın kapı budur.",
+          ] },
+          { h: "Adım 3: bant ve kanalı akıllıca seçin", p: [
+            "Güncel router 2,4 ve 5 GHz yayınlar. Kural basit: 5 GHz bilen ve yakında duran her şey oraya (hızlı ve boş); akıllı ev sensörleri ve uzak cihazlar 2,4'te kalır (uzun menzil).",
+            "Apartmanda kanalları elle ayarlayın: 2,4 GHz için analiz uygulamasına göre 1, 6 veya 11. Ucuz router'ların otomatiği çoğu kez dolu kanala yapışır.",
+          ] },
+          { h: "Adım 4: misafir ağı açın", p: [
+            "Misafir ağı, konuklar ve akıllı cihazlar için ayrı Wi-Fi'dır: bilgisayarlarınıza, disklere ve kameralara erişemezler. Misafir ağındaki kırılmış akıllı ampul daha öteye geçemez.",
+            "Ofiste bu seçenek değil normdur: misafirler ve kişisel telefonlar misafir segmentinde, iş makineleri ve yazıcılar ana ağda. Düzgün ekipmanda bu VLAN'larla yapılır.",
+          ] },
+          { h: "Adım 5: DHCP ve adres rezervasyonu", p: [
+            "Başvurduğunuz cihazlara — yazıcı, kamera, kayıt cihazı, NAS — DHCP rezervasyonuyla sabit IP verin. Yoksa adres bir gün değişir ve 'kaybolan' yazıcıyı bütün ofis arar.",
+            "DHCP aralığını paylı bırakın: tipik hata, elli telefon artı dizüstülerin olduğu ofiste 50 adreslik havuzdur — gün ortasında yeni cihazlar bağlanamaz olur.",
+          ] },
+          { h: "Adım 6: kameralara dışarıdan erişim — port açmadan", p: [
+            "Klasik port yönlendirme geçen on yılın yöntemidir: dışarı açık kayıt cihazı portunu tarayıcılar saatler içinde bulur. Doğru yollar: üreticinin bulut P2P erişimi (Hik-Connect ve benzerleri) veya router'a VPN.",
+            "VPN iş için en güvenilir seçenektir: dışarıya hiçbir şey açık değildir ve her yerden ağa ofisteymiş gibi girersiniz. Güncel router'lar WireGuard'ı bir akşamda kaldırır.",
+          ] },
+          { h: "Adım 7: hızı ölçün ve ayarları not edin", p: [
+            "Kurulumdan sonra hızı kabloyla ve router'ın yanında Wi-Fi ile ölçün: gerçek tavanı öğrenir, uzak odada suçu servis sağlayıcıya atmazsınız. Yönetici şifresini güvenli bir yere yazın — unutulan şifre yüzünden sıfırlama, her şeyi yeniden kurmak demektir.",
+            "Tüm adımlardan sonra ağ hâlâ yavaşsa veya yetmiyorsa, sorun artık ayarlarda değil kapsama veya donanımdadır. Her ölçekte ağ kuruyor ve yapılandırıyoruz — daireden ofise: gelir, çözer, yaparız.",
+          ] },
+        ],
+        faq: [
+          { q: "Router'ı 'önlem olarak' yeniden başlatmalı mıyım?", a: "Sağlıklı router aylarca yeniden başlatılmadan çalışır. Yalnızca günlük reset yardım ediyorsa cihaz ısınıyor, yükü taşıyamıyor veya yazılım hatasına takılıyordur; bu ritüel değil, güncelleme ya da değiştirme nedenidir." },
+          { q: "Sağlayıcının router'ı — kalsın mı, kendiminkini mi kurayım?", a: "Sağlayıcınınki temeli genelde karşılar. Kendi router'ı düzgün Wi-Fi, VPN, misafir ağları ve VLAN için kurulur. Çoğu kez en iyisi, sağlayıcınınkini köprü moduna alıp her şeyi kendininkine bırakmaktır." },
+          { q: "Ev router'ı kaç cihaz taşır?", a: "Bütçe modeller dürüstçe 15–25 aktif istemci taşır, sonra kopmalar başlar. Akıllı cihazlı ev kolayca elliye ulaşır — o zaman üst sınıf router'a veya router artı erişim noktalarına bakın." },
+        ],
+      },
+      zh: {
+        title: "路由器正确设置指南：七步清单",
+        excerpt: "家用或办公路由器不能“开箱就用”：密码、Wi-Fi、访客网络、固件、摄像机远程访问。做完这七步，网络既好用又安全。",
+        sections: [
+          { h: "第一步：两个密码都要改", p: [
+            "路由器有两个密码，总被搞混：Wi-Fi密码（连网用）和管理员密码（进设置用）。admin/admin这类出厂管理密码全网的机器人都知道——首次开机就把两个都改掉。",
+            "好的Wi-Fi密码是一句长口令，不是八位加个大写字母。破解靠穷举，长度胜过复杂度：三个不相关的词比“Qwerty1!”结实。",
+          ] },
+          { h: "第二步：升级固件", p: [
+            "攻破路由器的不是“连帽衫黑客”，而是满网扫描旧漏洞的自动化网络。升级固件即可堵住已知漏洞——在“升级”菜单或厂商App里五分钟搞定。",
+            "顺手确认：如果不是刻意使用，就关掉从互联网远程管理设置的功能。这是外人进入您网络最常见的门。",
+          ] },
+          { h: "第三步：明智选择频段和信道", p: [
+            "现代路由器同时发2.4和5GHz。规则简单：支持5GHz且离得近的设备都放5GHz（快而空）；智能家居传感器和远处设备留在2.4GHz（穿透远）。",
+            "居民楼里信道最好手动指定：2.4GHz按分析App结果选1、6或11。廉价路由器的自动选择常“粘”在拥挤信道上。",
+          ] },
+          { h: "第四步：开访客网络", p: [
+            "访客网络是给客人和智能设备的独立Wi-Fi：它们碰不到您的电脑、硬盘和摄像机。被攻破的智能灯泡困在访客网络里，再也爬不进来。",
+            "办公室里这不是选项而是规范：访客和员工私人手机进访客段，办公电脑和打印机在主网。像样的设备上用VLAN实现。",
+          ] },
+          { h: "第五步：DHCP与地址保留", p: [
+            "常被访问的设备——打印机、摄像机、录像机、NAS——用DHCP保留固定IP。否则哪天地址一变，全办公室找“消失”的打印机。",
+            "DHCP地址池要留余量：典型错误是五十部手机加笔记本的办公室只设50个地址，中午新设备就连不上了。",
+          ] },
+          { h: "第六步：外网看摄像机——不开端口映射", p: [
+            "传统端口映射是上个十年的做法：暴露在外的录像机端口几小时就被扫描到。正确途径：厂商云P2P（Hik-Connect之类）或到路由器的VPN。",
+            "VPN是商用最稳的选择：对外什么都不开放，而您在任何地方都像在办公室一样进内网。现代路由器一个晚上就能架好WireGuard。",
+          ] },
+          { h: "第七步：测速并记下设置", p: [
+            "设置完后分别用网线和路由器旁的Wi-Fi测速：知道真实上限，就不会在远房间错怪运营商。管理员密码记到可靠的地方——忘密码重置路由器等于一切重来。",
+            "七步做完网络仍卡或覆盖不够——问题已不在设置，而在覆盖或硬件。任何规模的网络我们都能搭——从住宅到办公室：上门、诊断、干活。",
+          ] },
+        ],
+        faq: [
+          { q: "需要“定期重启”路由器吗？", a: "健康的路由器几个月不重启也正常。若只有每天重启才救得了——设备过热、带不动负载或固件有病；这是升级或换机的理由，不是仪式。" },
+          { q: "运营商的路由器留着还是换自己的？", a: "运营商的盒子应付基础够用。换自己的是为了像样的Wi-Fi、VPN、访客网络和VLAN。常见最优解：运营商设备改桥接，一切交给自己的路由器。" },
+          { q: "家用路由器带得动多少设备？", a: "入门型号老老实实带15–25个活跃终端，再多就开始掉线。智能设备多的家轻松过五十——那就看更高档的路由器，或路由器加接入点的组合。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "kamera-ploho-pokazyvaet",
+    date: "2026-09-03",
+    related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    loc: {
+      ru: {
+        title: "Камера видеонаблюдения плохо показывает: причины и лечение",
+        excerpt: "Мутная картинка, засветка ночью, рябь и подтормаживание — разбираем типовые причины плохого изображения с камер и что с каждой делать: от протирки объектива до настроек битрейта.",
+        sections: [
+          { h: "Мутное или размытое изображение", p: [
+            "Первая и самая частая причина банальна: грязный объектив. Пыль, дождевые разводы, паутина за пару месяцев превращают картинку в туман — протрите купол или стекло мягкой салфеткой, и «сломанная» камера чинится за минуту.",
+            "Если после протирки мутность осталась — проверьте фокус. У вариофокальных камер он сбивается от вибраций; подстройка делается кольцом на объективе или моторизованно из меню. Третья причина — конденсат внутри купола: значит, нарушена герметичность, и камере нужен сервис до того, как влага убьёт плату.",
+          ] },
+          { h: "Ночью всё в засветке или темноте", p: [
+            "Классика ночных проблем — ИК-подсветка бьёт в препятствие: козырёк, стену, ветку или паутину прямо перед объективом. Отражённый свет превращает кадр в белое молоко. Лечится переносом камеры или зачисткой поля обзора.",
+            "Если ночью просто темно — проверьте, включается ли ИК (красное свечение диодов), и не выставлен ли в настройках принудительный дневной режим. Для больших дворов штатной подсветки может не хватать: решается ИК-прожектором или камерой с большей дальностью подсветки.",
+          ] },
+          { h: "Картинка дёргается или рассыпается", p: [
+            "Рябь, артефакты и рассыпание — почти всегда сеть или питание. По витой паре больше 100 метров сигнал деградирует; плохие обжимы и скрутки дают потери пакетов. Проверьте кабель тестером и переобожмите коннекторы.",
+            "Если камер много и все подтормаживают — смотрите на коммутатор: суммарный поток камер мог упереться в его возможности, а PoE-бюджет — в потолок. Симптом PoE-голодания: камеры перезагружаются ночью, когда включается подсветка.",
+          ] },
+          { h: "Изображение есть, но качество «мыльное» в записи", p: [
+            "Живая картинка нормальная, а архив мутный — это настройки записи: занижен битрейт или разрешение записи меньше, чем у камеры. Регистратор так экономит место на диске — ценой читаемости номеров и лиц.",
+            "Поднимите битрейт и разрешение записи для важных камер и пересчитайте глубину архива: возможно, понадобится диск побольше. Лучше 20 суток читаемого архива, чем 60 суток мыла.",
+          ] },
+          { h: "Камера «слепнет» днём от солнца", p: [
+            "Контровый свет — солнце или яркое окно в кадре — превращает людей в силуэты. Полностью убирает проблему только правильный ракурс при монтаже, частично — режим WDR (широкий динамический диапазон) в настройках.",
+            "Если камера смотрит на въезд против солнца, а перевесить нельзя — помогает камера с честным аппаратным WDR от 120 дБ. Это тот случай, когда замена одной камеры дешевле, чем ежедневные слепые часы.",
+          ] },
+          { h: "Когда звать специалистов", p: [
+            "Зовите, если: мутность не уходит после чистки, конденсат внутри, картинка рассыпается на нескольких камерах сразу, или система в принципе не давала читаемой картинки с монтажа — вероятно, ошибки проекта: не те фокусные, не те ракурсы.",
+            "Мы диагностируем системы любых брендов: приезжаем, проверяем камеры, сеть, питание и настройки, даём дефектную ведомость. Дальше вы решаете — чинить точечно или модернизировать. Выезд по Ташкенту бесплатный.",
+          ] },
+        ],
+        faq: [
+          { q: "Почему камера показывает чёрно-белым днём?", a: "Камера застряла в ночном режиме: чаще всего залип ИК-фильтр (слышны щелчки при переключении) или в настройках принудительно включён ночной режим. Перезагрузите камеру; если не помогло — фильтру нужен сервис." },
+          { q: "Помогут ли настройки «резкости» в меню?", a: "Чуть-чуть: цифровая резкость подчёркивает контуры, но не возвращает детали. Мутность лечится чисткой, фокусом и битрейтом, а не ползунком Sharpness." },
+          { q: "Сколько стоит диагностика?", a: "По Ташкенту выезд и осмотр бесплатны: проверим камеры, сеть и настройки, назовём причину и цену устранения до начала работ." },
+        ],
+      },
+      uz: {
+        title: "Videokuzatuv kamerasi yomon ko'rsatyapti: sabablar va davosi",
+        excerpt: "Xira tasvir, kechasi yorug'lik urishi, shovqin va tormozlanish — kameralardan yomon tasvirning tipik sabablarini va har biri bilan nima qilishni ko'rib chiqamiz: obyektivni artishdan bitreyt sozlamalarigacha.",
+        sections: [
+          { h: "Xira yoki loyqa tasvir", p: [
+            "Birinchi va eng ko'p uchraydigan sabab oddiy: iflos obyektiv. Chang, yomg'ir izlari, o'rgimchak to'ri bir-ikki oyda tasvirni tumanga aylantiradi — gumbaz yoki oynani yumshoq salfetka bilan arting, «buzilgan» kamera bir daqiqada tuzaladi.",
+            "Artishdan keyin xiralik qolsa — fokusni tekshiring. Variofokal kameralarda u tebranishdan buziladi; obyektivdagi halqa bilan yoki menyudan motorli sozlanadi. Uchinchi sabab — gumbaz ichidagi kondensat: demak germetiklik buzilgan va namlik platani o'ldirishidan oldin kameraga servis kerak.",
+          ] },
+          { h: "Kechasi hammasi yorug'likda yoki qorong'ida", p: [
+            "Tungi muammolar klassikasi — IK-yoritish to'siqqa uradi: kozyryok, devor, shox yoki obyektiv oldidagi o'rgimchak to'ri. Qaytgan yorug'lik kadrni oq sutga aylantiradi. Kamerani ko'chirish yoki ko'rish maydonini tozalash bilan davolanadi.",
+            "Kechasi shunchaki qorong'i bo'lsa — IK yonayotganini tekshiring (diodlarning qizil nuri) va sozlamalarda majburiy kunduzgi rejim qo'yilmaganmi. Katta hovlilarga shtatniy yoritish yetmasligi mumkin: IK-projektor yoki yoritish masofasi kattaroq kamera bilan hal qilinadi.",
+          ] },
+          { h: "Tasvir titraydi yoki sochiladi", p: [
+            "Shovqin, artefaktlar va sochilish — deyarli doim tarmoq yoki quvvat. Vitaya para bo'ylab 100 metrdan ortiqda signal buziladi; yomon objimlar va skrutkalar paket yo'qotishlarini beradi. Kabelni tester bilan tekshiring va konnektorlarni qayta objimlang.",
+            "Kameralar ko'p va hammasi tormozlansa — kommutatorga qarang: kameralarning umumiy oqimi uning imkoniyatlariga, PoE-byudjet esa shipga tiralgan bo'lishi mumkin. PoE-ochligining simptomi: kechasi yoritish yonganda kameralar qayta yuklanadi.",
+          ] },
+          { h: "Tasvir bor, lekin yozuvda sifat «sovunli»", p: [
+            "Jonli tasvir normal, arxiv esa xira — bu yozuv sozlamalari: bitreyt pasaytirilgan yoki yozuv ruxsati kameranikidan kichik. Registrator diskda joy tejaydi — raqam va yuzlar o'qilishi hisobiga.",
+            "Muhim kameralarga yozuv bitreyti va ruxsatini ko'taring va arxiv chuqurligini qayta hisoblang: kattaroq disk kerak bo'lishi mumkin. 60 sutka sovundan 20 sutka o'qiladigan arxiv yaxshi.",
+          ] },
+          { h: "Kamera kunduzi quyoshdan «ko'r bo'ladi»", p: [
+            "Kontr yorug'lik — kadrda quyosh yoki yorqin deraza — odamlarni siluetga aylantiradi. Muammoni to'liq faqat montajdagi to'g'ri rakurs yo'q qiladi, qisman — sozlamalardagi WDR (keng dinamik diapazon) rejimi.",
+            "Kamera quyoshga qarshi kirishga qarasa va ko'chirib bo'lmasa — 120 dB dan halol apparat WDR li kamera yordam beradi. Bu bitta kamerani almashtirish har kungi ko'r soatlardan arzon bo'lgan holat.",
+          ] },
+          { h: "Qachon mutaxassislarni chaqirish kerak", p: [
+            "Chaqiring, agar: xiralik tozalashdan keyin ketmasa, ichida kondensat bo'lsa, tasvir bir nechta kamerada birdan sochilsa, yoki tizim montajdan beri umuman o'qiladigan tasvir bermagan bo'lsa — ehtimol loyiha xatolari: fokuslar va rakurslar noto'g'ri.",
+            "Biz istalgan brend tizimlarini diagnostika qilamiz: kelamiz, kamera, tarmoq, quvvat va sozlamalarni tekshiramiz, nuqson vedomostini beramiz. Keyin siz hal qilasiz — nuqtali tuzatish yoki modernizatsiya. Toshkent bo'ylab chiqish bepul.",
+          ] },
+        ],
+        faq: [
+          { q: "Nega kamera kunduzi oq-qora ko'rsatadi?", a: "Kamera tungi rejimda qotib qolgan: ko'pincha IK-filtr yopishgan (almashishda chiqillash eshitiladi) yoki sozlamalarda tungi rejim majburiy yoqilgan. Kamerani qayta yuklang; yordam bermasa — filtrga servis kerak." },
+          { q: "Menyudagi «keskinlik» sozlamalari yordam beradimi?", a: "Ozgina: raqamli keskinlik konturlarni bo'rttiradi, lekin detallarni qaytarmaydi. Xiralik tozalash, fokus va bitreyt bilan davolanadi, Sharpness polzunogi bilan emas." },
+          { q: "Diagnostika qancha turadi?", a: "Toshkent bo'ylab chiqish va ko'rik bepul: kamera, tarmoq va sozlamalarni tekshiramiz, sabab va bartaraf etish narxini ishlar boshlanishidan oldin aytamiz." },
+        ],
+      },
+      en: {
+        title: "A CCTV camera shows a poor picture: causes and cures",
+        excerpt: "A blurry image, night glare, noise and stutter — the typical causes of a bad camera picture and what to do about each: from wiping the lens to bitrate settings.",
+        sections: [
+          { h: "A hazy or blurred image", p: [
+            "The first and most common cause is banal: a dirty lens. Dust, rain streaks and cobwebs turn the picture into fog within a couple of months — wipe the dome or glass with a soft cloth and the 'broken' camera is fixed in a minute.",
+            "If the haze stays after cleaning, check the focus. On varifocal cameras it drifts with vibration; it is adjusted by the lens ring or motorized from the menu. The third cause is condensation inside the dome: the seal has failed, and the camera needs service before moisture kills the board.",
+          ] },
+          { h: "At night everything glares or goes dark", p: [
+            "The classic night problem: IR illumination hitting an obstacle — a hood, a wall, a branch or a cobweb right in front of the lens. The reflected light turns the frame into white milk. Cured by moving the camera or clearing its field of view.",
+            "If the night is simply dark, check that the IR turns on (a red glow of the diodes) and that a forced day mode is not set. For large yards the built-in illumination may not be enough: an IR floodlight or a camera with longer IR range solves it.",
+          ] },
+          { h: "The picture stutters or breaks apart", p: [
+            "Noise, artifacts and break-up are almost always the network or the power. Beyond 100 meters of twisted pair the signal degrades; bad crimps and twisted joints lose packets. Test the cable and re-crimp the connectors.",
+            "If there are many cameras and all of them stutter, look at the switch: the combined stream may have hit its limits, and the PoE budget its ceiling. The PoE-starvation symptom: cameras reboot at night when the IR turns on.",
+          ] },
+          { h: "Live view is fine, but recordings are 'soapy'", p: [
+            "A normal live picture with a muddy archive means recording settings: the bitrate is lowered or the recording resolution is below the camera's. The recorder saves disk space — at the cost of readable plates and faces.",
+            "Raise the recording bitrate and resolution for the important cameras and recount the archive depth: a bigger disk may be needed. Twenty days of readable archive beat sixty days of soap.",
+          ] },
+          { h: "The camera goes blind in daytime sun", p: [
+            "Backlight — the sun or a bright window in the frame — turns people into silhouettes. Only the right mounting angle removes the problem fully; WDR (wide dynamic range) in the settings helps partially.",
+            "If the camera faces an entrance against the sun and cannot be moved, a camera with true hardware WDR of 120 dB or more helps. That is the case where replacing one camera is cheaper than daily blind hours.",
+          ] },
+          { h: "When to call the specialists", p: [
+            "Call if: the haze survives cleaning, there is condensation inside, the picture breaks up on several cameras at once, or the system never produced a readable image since installation — likely design mistakes: wrong focal lengths, wrong angles.",
+            "We diagnose systems of any brand: we come, check the cameras, network, power and settings, and hand over a defect list. Then you decide — fix pointwise or modernize. The visit is free in Tashkent.",
+          ] },
+        ],
+        faq: [
+          { q: "Why does the camera show black and white in daytime?", a: "It is stuck in night mode: usually a jammed IR-cut filter (you can hear clicking when it switches) or a forced night mode in the settings. Reboot the camera; if that does not help, the filter needs service." },
+          { q: "Will the 'sharpness' settings help?", a: "A little: digital sharpness emphasizes contours but does not bring back detail. Haze is cured by cleaning, focus and bitrate, not by the Sharpness slider." },
+          { q: "What does diagnostics cost?", a: "In Tashkent the visit and inspection are free: we check the cameras, network and settings, and name the cause and the repair price before any work starts." },
+        ],
+      },
+      tr: {
+        title: "Güvenlik kamerası kötü gösteriyor: nedenler ve çözümler",
+        excerpt: "Bulanık görüntü, gece parlaması, parazit ve takılma — kameralardan kötü görüntünün tipik nedenleri ve her biriyle ne yapılacağı: lens silmekten bit hızı ayarlarına.",
+        sections: [
+          { h: "Bulanık veya flu görüntü", p: [
+            "İlk ve en yaygın neden basit: kirli lens. Toz, yağmur izleri ve örümcek ağı birkaç ayda görüntüyü sise çevirir — kubbeyi veya camı yumuşak bezle silin, 'bozuk' kamera bir dakikada düzelir.",
+            "Silmeden sonra bulanıklık kalıyorsa odağı kontrol edin. Varifokal kameralarda titreşimle kayar; lens halkasıyla veya menüden motorlu ayarlanır. Üçüncü neden kubbe içindeki yoğuşmadır: sızdırmazlık bozulmuştur ve nem kartı öldürmeden kameraya servis gerekir.",
+          ] },
+          { h: "Gece her yer parlıyor veya karanlık", p: [
+            "Gece sorunlarının klasiği: IR aydınlatmanın bir engele vurması — siperlik, duvar, dal veya lensin hemen önündeki ağ. Yansıyan ışık kareyi beyaz süte çevirir. Kamerayı taşımak veya görüş alanını temizlemekle geçer.",
+            "Gece sadece karanlıksa IR'nin yandığını (diyotların kızıl parıltısı) ve ayarlarda zorunlu gündüz modu olmadığını kontrol edin. Büyük avlulara dahili aydınlatma yetmeyebilir: IR projektör veya daha uzun menzilli kamera çözer.",
+          ] },
+          { h: "Görüntü takılıyor veya dağılıyor", p: [
+            "Parazit, artefakt ve dağılma hemen hep ağ veya güçtür. 100 metreyi aşan bakırda sinyal bozulur; kötü sıkmalar ve ekler paket kaybettirir. Kabloyu test edin, konnektörleri yeniden sıkın.",
+            "Kamera çoksa ve hepsi takılıyorsa switch'e bakın: toplam akış sınırına, PoE bütçesi tavanına dayanmış olabilir. PoE açlığının belirtisi: geceleri IR yanınca kameraların yeniden başlaması.",
+          ] },
+          { h: "Canlı görüntü iyi, kayıt 'sabunlu'", p: [
+            "Canlı normal, arşiv bulanıksa bu kayıt ayarlarıdır: bit hızı düşürülmüş veya kayıt çözünürlüğü kameranınkinden düşük. Kayıt cihazı disk yerinden tasarruf eder — plaka ve yüz okunurluğu pahasına.",
+            "Önemli kameralarda kayıt bit hızını ve çözünürlüğünü yükseltin, arşiv derinliğini yeniden hesaplayın: daha büyük disk gerekebilir. Altmış gün sabundansa yirmi gün okunur arşiv iyidir.",
+          ] },
+          { h: "Kamera gündüz güneşten kör oluyor", p: [
+            "Ters ışık — karede güneş veya parlak pencere — insanları silüete çevirir. Sorunu tam olarak yalnızca montajdaki doğru açı giderir; ayarlardaki WDR (geniş dinamik aralık) kısmen yardım eder.",
+            "Kamera güneşe karşı girişe bakıyorsa ve taşınamıyorsa, 120 dB ve üzeri gerçek donanım WDR'li kamera yardım eder. Bu, tek kamerayı değiştirmenin günlük kör saatlerden ucuz olduğu durumdur.",
+          ] },
+          { h: "Uzmanlar ne zaman çağrılır", p: [
+            "Şu durumlarda çağırın: bulanıklık temizlikten sonra geçmiyor, içeride yoğuşma var, görüntü birkaç kamerada birden dağılıyor veya sistem montajdan beri okunur görüntü hiç vermedi — muhtemelen proje hataları: yanlış odaklar, yanlış açılar.",
+            "Her markanın sistemine bakıyoruz: gelir, kameraları, ağı, gücü ve ayarları kontrol eder, kusur listesi veririz. Sonra siz karar verirsiniz — noktasal onarım mı modernizasyon mu. Taşkent'te ziyaret ücretsiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Kamera gündüz neden siyah-beyaz gösteriyor?", a: "Gece modunda takılı kalmış: çoğu kez IR-cut filtresi sıkışmıştır (geçişte tıkırtı duyulur) veya ayarlarda gece modu zorlanmıştır. Kamerayı yeniden başlatın; geçmezse filtreye servis gerekir." },
+          { q: "Menüdeki 'keskinlik' ayarı yardım eder mi?", a: "Birazcık: dijital keskinlik konturları vurgular ama ayrıntıyı geri getirmez. Bulanıklık temizlik, odak ve bit hızıyla geçer, Sharpness kaydırıcısıyla değil." },
+          { q: "Teşhis kaça mal olur?", a: "Taşkent'te ziyaret ve inceleme ücretsiz: kameraları, ağı ve ayarları kontrol eder, nedeni ve giderme fiyatını iş başlamadan söyleriz." },
+        ],
+      },
+      zh: {
+        title: "监控摄像机画面差：原因与对策",
+        excerpt: "画面模糊、夜间泛白、雪花和卡顿——逐一拆解摄像机画质差的典型原因及处理办法：从擦镜头到码流设置。",
+        sections: [
+          { h: "画面发雾或模糊", p: [
+            "第一大原因很平常：镜头脏了。灰尘、雨痕、蛛网几个月就把画面糊成雾——用软布擦净球罩或玻璃，“坏了”的摄像机一分钟修好。",
+            "擦完仍模糊就查对焦。变焦摄像机的焦点会被振动带偏；用镜头调节环或菜单里电动调整。第三个原因是罩内结露：说明密封失效，趁潮气毁掉主板之前送修。",
+          ] },
+          { h: "夜里一片白或一片黑", p: [
+            "夜间问题的经典：红外补光打在障碍物上——遮檐、墙面、树枝或镜头前的蛛网。反射光把画面变成白雾。挪机位或清理视场即可。",
+            "如果夜里只是黑——检查红外是否点亮（灯珠泛红光）、设置里是否强制了白天模式。大院子自带补光可能不够：加红外射灯或换补光距离更远的机型。",
+          ] },
+          { h: "画面抖动或碎裂", p: [
+            "雪花、马赛克和碎裂几乎都是网络或供电问题。网线超过100米信号劣化；水晶头压接差、有接头会丢包。用测线仪查线、重新压接。",
+            "如果多台摄像机同时卡顿——看交换机：总码流可能顶到了背板上限，PoE预算也可能见顶。PoE不足的典型症状：夜里红外一开摄像机就重启。",
+          ] },
+          { h: "实时画面正常，回放却“糊”", p: [
+            "实时清晰、录像模糊——是录像参数：码流被压低或录像分辨率低于摄像机本身。录像机在省硬盘——代价是车牌和人脸读不出来。",
+            "把重点摄像机的录像码流和分辨率提上去，重新核算存档天数：可能需要更大的硬盘。20天能看清的录像胜过60天的糊片。",
+          ] },
+          { h: "白天被太阳晃瞎", p: [
+            "逆光——画面里有太阳或亮窗——把人拍成剪影。彻底解决只有安装时选对机位；设置里的宽动态（WDR）能缓解一部分。",
+            "如果摄像机只能逆光对着入口，换不了机位——上真硬件宽动态120dB以上的机型。这种情况换一台摄像机比每天几个小时的盲区便宜。",
+          ] },
+          { h: "什么时候请专业人员", p: [
+            "这些情况请人：清洁后仍发雾、罩内结露、多台同时花屏，或系统从装好起就没出过能看清的画面——多半是设计错误：焦距不对、机位不对。",
+            "任何品牌的系统我们都能诊断：上门检查摄像机、网络、供电和设置，出具缺陷清单。之后由您决定——逐点修还是升级。塔什干范围上门免费。",
+          ] },
+        ],
+        faq: [
+          { q: "摄像机白天为什么是黑白的？", a: "卡在夜间模式了：多半是红外滤片卡住（切换时能听到咔哒声）或设置里强制了夜间模式。重启摄像机；无效则滤片需要检修。" },
+          { q: "菜单里的“锐度”有用吗？", a: "作用有限：数字锐化只描边，不还原细节。模糊要靠清洁、对焦和码流解决，不靠Sharpness滑块。" },
+          { q: "诊断多少钱？", a: "塔什干范围上门检查免费：查摄像机、网络和设置，开工前告知原因和修复价格。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "signalizatsiya-narxi",
+    date: "2026-09-03",
+    related: ["alarm", "cctv"],
+    loc: {
+      ru: {
+        title: "Сколько стоит охранная сигнализация для дома и магазина",
+        excerpt: "Из чего складывается цена охранной сигнализации в Ташкенте: датчики, панель, монтаж, пультовая охрана. Ориентиры по типам объектов и на чём можно сэкономить без потери защиты.",
+        sections: [
+          { h: "Из чего складывается цена", p: [
+            "Смета охранной сигнализации — это четыре части: контрольная панель (мозг системы), датчики (движение, открытие, разбитие стекла), оповещение (сирена, приложение, при желании пульт охраны) и монтаж. Панель и датчики — основная часть стоимости оборудования.",
+            "Главная развилка — проводная или беспроводная система. Беспроводная дороже по железу, но монтируется за полдня без штробления: для готового ремонта почти всегда выгоднее. Проводная дешевле в оборудовании и вечна по батарейкам, но требует прокладки кабеля — её закладывают на этапе ремонта.",
+          ] },
+          { h: "Квартира и дом", p: [
+            "Базовый набор для квартиры: панель, два-три датчика движения, датчики открытия на входную дверь, сирена. Управление — с брелока или из приложения, уведомления о тревоге приходят на телефон.",
+            "Для частного дома добавляются уличный периметр: датчики открытия на все двери и окна первого этажа, уличная сирена, при желании — уличные датчики движения с защитой от животных. Дом дороже квартиры в полтора-два раза за счёт числа зон.",
+          ] },
+          { h: "Магазин и офис", p: [
+            "В коммерческом объекте сигнализация решает две задачи: ночная охрана помещения и тревожная кнопка на случай конфликта днём. Датчики движения в зале и подсобке, датчики открытия и разбития на витринах, раздельная постановка зон — склад под охраной, пока зал работает.",
+            "Практически всегда сигнализацию здесь связывают с видеонаблюдением: тревога приходит с кадром, и вы за секунды понимаете — это грабитель или кошка задела коробку. Такая связка почти полностью убирает ложные выезды.",
+          ] },
+          { h: "Пультовая охрана: подключать или нет", p: [
+            "Сигнализация с уведомлением в телефон дешевле, но ночью в три часа реагировать на тревогу придётся вам. Подключение к пульту охранной компании добавляет ежемесячную плату, зато на объект едет экипаж.",
+            "Разумный компромисс для многих объектов: свои уведомления с видеоподтверждением плюс тревожная кнопка на пульт. Мы монтируем системы под любой сценарий и помогаем с подключением к пультовым компаниям.",
+          ] },
+          { h: "На чём можно и нельзя экономить", p: [
+            "Можно: не ставить датчики в каждом помещении — грамотная расстановка перекрывает пути движения нарушителя меньшим числом зон; взять панель без лишних модулей расширения; совместить сигнализацию с уже существующими камерами.",
+            "Нельзя: на резервном питании (отключение света не должно снимать объект с охраны), на датчиках дешёвых марок с ложными срабатываниями и на монтаже «своими силами» — криво поставленный датчик либо молчит, либо будит вас каждую ночь.",
+          ] },
+          { h: "Как узнать точную цену", p: [
+            "Точная смета появляется после осмотра: число зон, длина трасс, проводная или беспроводная схема. По Ташкенту выезд инженера и расчёт бесплатны — приедем, посчитаем и предложим два-три варианта под бюджет.",
+            "Работаем с проверенным оборудованием — беспроводные комплекты Hikvision AX PRO и проводные системы для крупных объектов, всё со склада с гарантией и обслуживанием.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько служат батарейки в беспроводных датчиках?", a: "Обычно два-четыре года в зависимости от датчика и частоты срабатываний. Система сама предупреждает о разряде заранее — замена занимает минуты." },
+          { q: "Можно ли поставить сигнализацию в съёмную квартиру?", a: "Да, беспроводной комплект ставится без сверления и переезжает вместе с вами: панель и датчики крепятся на двусторонний скотч и демонтируются без следов." },
+          { q: "Что лучше: сигнализация или камеры?", a: "Это разные задачи: камеры фиксируют и показывают, сигнализация — мгновенно поднимает тревогу. Лучший результат даёт связка: тревога с видеоподтверждением без ложных вызовов." },
+        ],
+      },
+      uz: {
+        title: "Uy va do'kon uchun qo'riqlash signalizatsiyasi qancha turadi",
+        excerpt: "Toshkentda qo'riqlash signalizatsiyasi narxi nimadan yig'iladi: datchiklar, panel, montaj, pult qo'riqlovi. Obyekt turlari bo'yicha mo'ljallar va himoyani yo'qotmasdan nimada tejash mumkin.",
+        sections: [
+          { h: "Narx nimadan yig'iladi", p: [
+            "Qo'riqlash signalizatsiyasi smetasi — to'rt qism: nazorat paneli (tizim miyasi), datchiklar (harakat, ochilish, oyna sinishi), ogohlantirish (sirena, ilova, xohishga qarab qo'riqlash pulti) va montaj. Panel va datchiklar — uskuna narxining asosiy qismi.",
+            "Bosh tanlov — simli yoki simsiz tizim. Simsiz temir bo'yicha qimmatroq, lekin shtrobsiz yarim kunda o'rnatiladi: tayyor ta'mir uchun deyarli doim foydaliroq. Simli uskunada arzonroq va batareykalar bo'yicha abadiy, lekin kabel yotqizishni talab qiladi — uni ta'mir bosqichida qo'yishadi.",
+          ] },
+          { h: "Kvartira va uy", p: [
+            "Kvartira uchun bazaviy to'plam: panel, ikki-uchta harakat datchigi, kirish eshigiga ochilish datchiklari, sirena. Boshqaruv — brelokdan yoki ilovadan, trevoga bildirishnomalari telefonga keladi.",
+            "Xususiy uyga ko'cha perimetri qo'shiladi: birinchi qavatning barcha eshik va derazalariga ochilish datchiklari, ko'cha sirenasi, xohishga qarab — hayvonlardan himoyali ko'cha harakat datchiklari. Uy zonalar soni hisobiga kvartiradan bir yarim-ikki baravar qimmat.",
+          ] },
+          { h: "Do'kon va ofis", p: [
+            "Tijorat obyektida signalizatsiya ikki vazifani hal qiladi: xonani tungi qo'riqlash va kunduzgi nizo holatiga trevoga tugmasi. Zal va podsobkada harakat datchiklari, vitrinalarda ochilish va sinish datchiklari, zonalarni alohida qo'yish — zal ishlayotganda ombor qo'riqlovda.",
+            "Bu yerda signalizatsiyani deyarli doim videokuzatuv bilan bog'lashadi: trevoga kadr bilan keladi va soniyalarda tushunasiz — bu o'g'rimi yoki mushuk qutini turtdimi. Bunday bog'lam yolg'on chiqishlarni deyarli butunlay yo'q qiladi.",
+          ] },
+          { h: "Pult qo'riqlovi: ulash kerakmi", p: [
+            "Telefonga bildirishnomali signalizatsiya arzonroq, lekin kechasi soat uchda trevogaga o'zingiz javob berasiz. Qo'riqlash kompaniyasi pultiga ulanish oylik to'lov qo'shadi, evaziga obyektga ekipaj boradi.",
+            "Ko'p obyektlar uchun oqilona kelishuv: video tasdiqli o'z bildirishnomalaringiz plus pultga trevoga tugmasi. Biz istalgan stsenariyga tizim o'rnatamiz va pult kompaniyalariga ulanishga yordam beramiz.",
+          ] },
+          { h: "Nimada tejash mumkin va mumkin emas", p: [
+            "Mumkin: har xonaga datchik qo'ymaslik — savodli joylashtirish buzg'unchi harakat yo'llarini kamroq zona bilan yopadi; ortiqcha kengaytirish modullarisiz panel olish; signalizatsiyani mavjud kameralar bilan birlashtirish.",
+            "Mumkin emas: zaxira quvvatda (svet o'chishi obyektni qo'riqlovdan olmasligi kerak), yolg'on ishlaydigan arzon marka datchiklarida va «o'z kuchi bilan» montajda — qiyshiq qo'yilgan datchik yo jim turadi, yo har kecha uyg'otadi.",
+          ] },
+          { h: "Aniq narxni qanday bilish mumkin", p: [
+            "Aniq smeta ko'rikdan keyin chiqadi: zonalar soni, trassalar uzunligi, simli yoki simsiz sxema. Toshkent bo'ylab muhandis chiqishi va hisob bepul — kelamiz, hisoblaymiz va byudjetga ikki-uch variant taklif qilamiz.",
+            "Sinalgan uskuna bilan ishlaymiz — Hikvision AX PRO simsiz komplektlari va yirik obyektlarga simli tizimlar, hammasi ombordan kafolat va xizmat bilan.",
+          ] },
+        ],
+        faq: [
+          { q: "Simsiz datchiklarda batareyka qancha ishlaydi?", a: "Odatda datchik va ishga tushishlar chastotasiga qarab ikki-to'rt yil. Tizim zaryadsizlanish haqida oldindan o'zi ogohlantiradi — almashtirish daqiqalar ishi." },
+          { q: "Ijara kvartiraga signalizatsiya qo'yish mumkinmi?", a: "Ha, simsiz komplekt teshmasdan o'rnatiladi va siz bilan ko'chadi: panel va datchiklar ikki tomonlama skotchga yopishtiriladi va izsiz yechiladi." },
+          { q: "Nima yaxshi: signalizatsiya yoki kameralar?", a: "Bu turli vazifalar: kameralar qayd etadi va ko'rsatadi, signalizatsiya — bir zumda trevoga ko'taradi. Eng yaxshi natijani bog'lam beradi: yolg'on chaqiriqlarsiz video tasdiqli trevoga." },
+        ],
+      },
+      en: {
+        title: "What a burglar alarm costs for a home or a store",
+        excerpt: "What makes up the price of an intrusion alarm in Tashkent: sensors, panel, installation, central monitoring. Reference points by site type and where you can save without losing protection.",
+        sections: [
+          { h: "What the price is made of", p: [
+            "An alarm estimate has four parts: the control panel (the system's brain), the sensors (motion, opening, glass break), the notification path (siren, app, optionally a monitoring station) and the installation. The panel and sensors carry most of the hardware cost.",
+            "The main fork is wired versus wireless. Wireless costs more in hardware but installs in half a day with no chasing: for a finished renovation it almost always wins. Wired is cheaper in hardware and never needs batteries, but requires cabling — it is planned at renovation stage.",
+          ] },
+          { h: "Apartment and house", p: [
+            "The base kit for an apartment: a panel, two or three motion sensors, opening sensors on the entrance door, a siren. Control from a fob or the app, alarm notifications on the phone.",
+            "A private house adds an outdoor perimeter: opening sensors on every ground-floor door and window, an outdoor siren, optionally pet-immune outdoor motion sensors. A house costs one and a half to two times more than an apartment because of the zone count.",
+          ] },
+          { h: "Store and office", p: [
+            "In a commercial site the alarm solves two tasks: guarding the premises at night and a panic button for daytime conflicts. Motion sensors in the hall and back room, opening and glass-break sensors on the storefront, separate arming by zone — the stockroom stays armed while the floor works.",
+            "Here the alarm is almost always linked to CCTV: the alert arrives with a frame, and in seconds you know whether it is a burglar or a cat knocking over a box. That link removes almost all false call-outs.",
+          ] },
+          { h: "Central monitoring: to connect or not", p: [
+            "An app-notification alarm is cheaper, but at three in the morning the one reacting is you. A monitoring company adds a monthly fee, and in exchange a patrol drives to the site.",
+            "A sensible compromise for many sites: your own notifications with video confirmation plus a panic button wired to the station. We build systems for any scenario and help connect to monitoring companies.",
+          ] },
+          { h: "Where you can and cannot save", p: [
+            "You can: skip a sensor in every room — smart placement covers the intruder's paths with fewer zones; take a panel without unused expansion modules; pair the alarm with cameras you already have.",
+            "You cannot: on backup power (a blackout must not disarm the site), on cheap-brand sensors with false alarms, and on DIY installation — a badly placed sensor either stays silent or wakes you every night.",
+          ] },
+          { h: "How to get the exact price", p: [
+            "The exact estimate appears after a survey: zone count, cable runs, wired or wireless scheme. In Tashkent the engineer's visit and the calculation are free — we come, count and offer two or three options for the budget.",
+            "We work with proven equipment — Hikvision AX PRO wireless kits and wired systems for large sites, all from stock with warranty and service.",
+          ] },
+        ],
+        faq: [
+          { q: "How long do wireless sensor batteries last?", a: "Usually two to four years depending on the sensor and trigger frequency. The system warns about low charge in advance — replacement takes minutes." },
+          { q: "Can I install an alarm in a rented apartment?", a: "Yes, a wireless kit installs without drilling and moves with you: the panel and sensors mount on tape and come off without a trace." },
+          { q: "Which is better: an alarm or cameras?", a: "Different jobs: cameras record and show, an alarm raises the alert instantly. The best result is the pair: an alert with video confirmation and no false call-outs." },
+        ],
+      },
+      tr: {
+        title: "Ev ve mağaza için hırsız alarmı ne kadar tutar",
+        excerpt: "Taşkent'te hırsız alarmı fiyatı neyden oluşur: sensörler, panel, montaj, merkez bağlantısı. Saha türüne göre referanslar ve korumadan ödün vermeden nerede tasarruf edilir.",
+        sections: [
+          { h: "Fiyat neyden oluşur", p: [
+            "Alarm keşfi dört parçadır: kontrol paneli (sistemin beyni), sensörler (hareket, açılma, cam kırılması), bildirim yolu (siren, uygulama, istenirse merkez) ve montaj. Donanım maliyetinin çoğu panel ve sensörlerdedir.",
+            "Ana yol ayrımı kablolu mu kablosuz mu. Kablosuz donanımda pahalıdır ama kanal açmadan yarım günde kurulur: bitmiş tadilatta neredeyse hep kazanır. Kablolu donanımda ucuzdur ve pil derdi yoktur, ama kablolama ister — tadilat aşamasında planlanır.",
+          ] },
+          { h: "Daire ve ev", p: [
+            "Daire için temel set: panel, iki-üç hareket sensörü, giriş kapısına açılma sensörleri, siren. Kumandadan veya uygulamadan yönetim, alarm bildirimleri telefona düşer.",
+            "Müstakil ev dış çevre ekler: zemin kattaki tüm kapı ve pencerelere açılma sensörleri, dış siren, istenirse hayvana duyarsız dış hareket sensörleri. Bölge sayısı yüzünden ev, daireden bir buçuk-iki kat pahalıdır.",
+          ] },
+          { h: "Mağaza ve ofis", p: [
+            "Ticari sahada alarm iki iş görür: geceleri mekân koruması ve gündüz çatışmalarına panik butonu. Salonda ve arka odada hareket sensörleri, vitrinlerde açılma ve cam kırılması sensörleri, bölge bazlı ayrı kurma — salon çalışırken depo korumada kalır.",
+            "Burada alarm hemen hep kameralarla bağlanır: uyarı kareyle gelir ve saniyeler içinde hırsız mı, kutuyu deviren kedi mi anlarsınız. Bu bağ, yanlış çağrıları neredeyse tamamen kaldırır.",
+          ] },
+          { h: "Merkez bağlantısı: bağlanmalı mı", p: [
+            "Uygulama bildirimli alarm ucuzdur ama gece üçte tepki verecek olan sizsiniz. Güvenlik şirketi merkezi aylık ücret ekler; karşılığında sahaya ekip gider.",
+            "Birçok saha için makul orta yol: video doğrulamalı kendi bildirimleriniz artı merkeze bağlı panik butonu. Her senaryoya sistem kurar, merkez şirketlerine bağlanmada yardım ederiz.",
+          ] },
+          { h: "Nerede tasarruf edilir, nerede edilmez", p: [
+            "Edilir: her odaya sensör koymamak — akıllı yerleşim, davetsizin yollarını daha az bölgeyle kapatır; kullanılmayacak genişletme modülsüz panel almak; alarmı mevcut kameralarla eşlemek.",
+            "Edilmez: yedek güçte (elektrik kesintisi sahayı korumadan düşürmemeli), yanlış alarm veren ucuz marka sensörlerde ve 'kendin yap' montajda — kötü yerleştirilen sensör ya susar ya her gece uyandırır.",
+          ] },
+          { h: "Kesin fiyat nasıl öğrenilir", p: [
+            "Kesin keşif, saha turundan sonra çıkar: bölge sayısı, hat uzunlukları, kablolu veya kablosuz şema. Taşkent'te mühendis ziyareti ve hesap ücretsiz — gelir, sayar ve bütçeye iki-üç seçenek sunarız.",
+            "Kanıtlanmış ekipmanla çalışıyoruz — Hikvision AX PRO kablosuz setleri ve büyük sahalara kablolu sistemler; hepsi stoktan, garantili ve servisli.",
+          ] },
+        ],
+        faq: [
+          { q: "Kablosuz sensör pilleri ne kadar gider?", a: "Sensöre ve tetiklenme sıklığına göre genelde iki-dört yıl. Sistem azalmayı önceden bildirir — değişim dakikalar sürer." },
+          { q: "Kiralık daireye alarm kurulur mu?", a: "Evet, kablosuz set delmeden kurulur ve sizinle taşınır: panel ve sensörler bantla yapışır, iz bırakmadan sökülür." },
+          { q: "Hangisi iyi: alarm mı kameralar mı?", a: "Farklı işler: kameralar kaydeder ve gösterir, alarm anında uyarır. En iyi sonucu ikili verir: yanlış çağrısız, video doğrulamalı uyarı." },
+        ],
+      },
+      zh: {
+        title: "家庭和商铺防盗报警系统要多少钱",
+        excerpt: "塔什干防盗报警的价格构成：探测器、主机、安装、联网接警。按场所类型给出参考，以及哪些地方能省钱而不牺牲防护。",
+        sections: [
+          { h: "价格由什么构成", p: [
+            "报警系统的预算分四块：主机（系统大脑）、探测器（移动、门磁、玻璃破碎）、通知渠道（警笛、App，可选接警中心）和安装费。设备成本主要在主机和探测器上。",
+            "最大的分岔是有线还是无线。无线设备贵一些，但半天装完、不开槽：装修好的房子几乎总是选它。有线设备便宜、不用换电池，但要布线——在装修阶段规划。",
+          ] },
+          { h: "公寓与住宅", p: [
+            "公寓基础套装：主机、两三个移动探测器、入户门门磁、警笛。遥控或App操作，报警推送到手机。",
+            "独栋住宅要加室外周界：一层所有门窗装门磁、室外警笛，可选防宠物误报的室外移动探测器。因为防区多，住宅比公寓贵一倍半到两倍。",
+          ] },
+          { h: "商铺与办公室", p: [
+            "商业场所的报警干两件事：夜间守护房屋、白天冲突时一键报警。卖场和后仓装移动探测器，橱窗装门磁和玻破，防区分开布防——卖场营业时仓库照样设防。",
+            "这里几乎都会把报警和监控联动：警报带着画面推送，几秒就能分清是窃贼还是猫碰倒了箱子。这种联动基本消灭了误出警。",
+          ] },
+          { h: "要不要接联网接警", p: [
+            "只推送手机的报警更便宜，但凌晨三点响铃时得您自己处理。接入保安公司的接警中心要交月费，换来的是出警车组。",
+            "对很多场所合理的折中：自己收带视频确认的推送，另配一键报警接中心。任何方案我们都能施工，并协助对接接警公司。",
+          ] },
+          { h: "哪里能省、哪里不能省", p: [
+            "能省：不必每间房都装探测器——合理布点用更少防区封住入侵路线；主机不买用不上的扩展模块；报警与已有摄像机联动。",
+            "不能省：后备电源（停电不能让场所撤防）、爱误报的杂牌探测器、以及“自己动手”安装——装歪的探测器要么不响，要么每晚吵醒您。",
+          ] },
+          { h: "怎么拿到准确报价", p: [
+            "准确预算要等勘察之后：防区数量、线路长度、有线或无线方案。塔什干范围内工程师上门和核算免费——上门测算，按预算给两三个方案。",
+            "设备用经过验证的——无线选海康AX PRO套装，大型场所用有线系统，全部现货、含保修和维保。",
+          ] },
+        ],
+        faq: [
+          { q: "无线探测器的电池能用多久？", a: "视探测器和触发频率，通常两到四年。系统会提前提示电量不足——换电池只要几分钟。" },
+          { q: "租的房子能装报警吗？", a: "能，无线套装免打孔安装，搬家可带走：主机和探测器用双面胶固定，拆下不留痕。" },
+          { q: "报警和摄像机哪个更好？", a: "各司其职：摄像机负责记录和查看，报警负责即时示警。最好的效果是联动：带视频确认的警报，没有误出警。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "sbros-parolya-hikvision",
+    date: "2026-09-03",
+    related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    loc: {
+      ru: {
+        title: "Забыли пароль от камеры или регистратора Hikvision: что делать",
+        excerpt: "Штатные способы восстановить доступ к своей камере или NVR Hikvision: SADP, код на почту, файл запроса в поддержку. Без «волшебных» кнопок и с честным ответом, когда поможет только сервис.",
+        sections: [
+          { h: "Сразу о главном", p: [
+            "У современных устройств Hikvision нет кнопки, которая просто сбрасывает пароль: это сделано намеренно, чтобы чужой человек не получил доступ к вашим камерам за минуту. Восстановление всегда идёт через подтверждение, что устройство ваше.",
+            "Все способы ниже — штатные, от производителя, и работают только при физическом доступе к устройству в одной сети с компьютером. Речь про ваше оборудование: доступ к чужим камерам — уголовная статья, и таких вопросов мы не решаем.",
+          ] },
+          { h: "Способ 1: код на привязанную почту", p: [
+            "Если при активации устройства вы указали e-mail для восстановления — задача на пять минут. В веб-интерфейсе или в SADP нажмите «Forgot password»: устройство предложит отправить код подтверждения на привязанную почту.",
+            "Вводите код — задаёте новый пароль. Это самый быстрый путь, и именно поэтому мы всегда привязываем почту при монтаже: проверьте, возможно ваш монтажник сделал так же.",
+          ] },
+          { h: "Способ 2: файл запроса через SADP", p: [
+            "Скачайте утилиту SADP с сайта Hikvision, подключите компьютер в одну сеть с устройством. SADP найдёт его и покажет кнопку «Forgot password»: устройство сформирует файл запроса (XML) или QR-код.",
+            "Этот файл отправляется в поддержку Hikvision или официальному дистрибьютору вместе с фото наклейки устройства и подтверждением покупки. В ответ приходит файл сброса — импортируете его в SADP и задаёте новый пароль. Обычно занимает от нескольких часов до пары дней.",
+          ] },
+          { h: "Способ 3: секретные вопросы и GUID-файл", p: [
+            "При активации регистратора Hikvision предлагает настроить секретные вопросы и выгрузить GUID-файл на флешку. Если это было сделано — сброс делается локально с монитора регистратора: отвечаете на вопросы или подставляете файл.",
+            "Мораль на будущее: эти три минуты при настройке экономят дни при восстановлении. Настраивая систему, всегда заполняйте и почту, и вопросы, и держите GUID-файл в надёжном месте.",
+          ] },
+          { h: "Чего делать не нужно", p: [
+            "Не прошивайте устройство «сбросными» прошивками с форумов: ими часто окирпичивают камеры, а иногда вместе с прошивкой приезжает чужой бэкдор. Не покупайте «услуги сброса» у анонимов в мессенджерах — им придётся дать полный доступ к вашей сети.",
+            "Кнопка Reset на корпусе камеры у большинства моделей сбрасывает настройки сети, но не пароль администратора — а на старых прошивках после неё устройство может вовсе перестать активироваться без поддержки.",
+          ] },
+          { h: "Если ничего не помогло", p: [
+            "Останется путь через сервис: подтверждение владения и сброс силами дистрибьютора или сервисного центра. Мы делаем это для клиентов регулярно — привозите устройство или зовите инженера на объект.",
+            "И системный вывод: пароли системы видеонаблюдения должны храниться не в голове монтажника, а в паспорте системы у владельца. При сдаче объектов мы передаём заказчику документацию со всеми доступами — спросите свою у подрядчика.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько стоит сброс пароля в сервисе?", a: "Зависит от устройства и способа подтверждения владения; уточняйте у нас или дистрибьютора. Дешевле всего — не терять доступы: привязанная почта делает сброс бесплатным и мгновенным." },
+          { q: "Поможет ли перепрошивка?", a: "Нет: обновление прошивки не сбрасывает пароль администратора, а «специальные» прошивки с форумов опасны. Пользуйтесь только штатными способами." },
+          { q: "У меня камера Dahua/другого бренда — логика та же?", a: "Похожая: у Dahua тоже есть привязка почты и файл запроса через ConfigTool. Принцип одинаков — производители не оставляют лазеек, восстановление идёт через подтверждение владения." },
+        ],
+      },
+      uz: {
+        title: "Hikvision kamera yoki registrator parolini unutdingizmi: nima qilish kerak",
+        excerpt: "O'z Hikvision kamera yoki NVR ga kirishni tiklashning shtatniy usullari: SADP, pochtaga kod, qo'llab-quvvatlashga so'rov fayli. «Sehrli» tugmalarsiz va faqat servis yordam beradigan holatlar haqida halol javob bilan.",
+        sections: [
+          { h: "Avvalo asosiysi", p: [
+            "Zamonaviy Hikvision qurilmalarida parolni shunchaki tashlaydigan tugma yo'q: bu ataylab qilingan — begona odam bir daqiqada kameralaringizga kirmasligi uchun. Tiklash doim qurilma sizniki ekanini tasdiqlash orqali boradi.",
+            "Quyidagi barcha usullar shtatniy, ishlab chiqaruvchidan va faqat qurilmaga jismoniy kirish hamda kompyuter bilan bitta tarmoqda ishlaydi. Gap o'z uskunangiz haqida: begona kameralarga kirish — jinoiy modda, bunday savollarni biz hal qilmaymiz.",
+          ] },
+          { h: "1-usul: bog'langan pochtaga kod", p: [
+            "Agar qurilmani faollashtirishda tiklash uchun e-mail ko'rsatgan bo'lsangiz — vazifa besh daqiqalik. Veb-interfeys yoki SADP da «Forgot password» ni bosing: qurilma bog'langan pochtaga tasdiqlash kodini yuborishni taklif qiladi.",
+            "Kodni kiritasiz — yangi parol qo'yasiz. Bu eng tez yo'l, shuning uchun biz montajda doim pochtani bog'laymiz: tekshiring, balki montajchingiz ham shunday qilgandir.",
+          ] },
+          { h: "2-usul: SADP orqali so'rov fayli", p: [
+            "Hikvision saytidan SADP utilitasini yuklab oling, kompyuterni qurilma bilan bitta tarmoqqa ulang. SADP uni topadi va «Forgot password» tugmasini ko'rsatadi: qurilma so'rov faylini (XML) yoki QR-kod yaratadi.",
+            "Bu fayl qurilma naklekasining fotosi va xarid tasdig'i bilan Hikvision qo'llab-quvvatlashiga yoki rasmiy distribyutorga yuboriladi. Javobga tashlash fayli keladi — uni SADP ga import qilib yangi parol qo'yasiz. Odatda bir necha soatdan bir-ikki kungacha.",
+          ] },
+          { h: "3-usul: maxfiy savollar va GUID-fayl", p: [
+            "Registratorni faollashtirishda Hikvision maxfiy savollarni sozlash va GUID-faylni fleshkaga chiqarishni taklif qiladi. Agar bu qilingan bo'lsa — tashlash registrator monitoridan lokal qilinadi: savollarga javob berasiz yoki faylni qo'yasiz.",
+            "Kelajak uchun xulosa: sozlashdagi shu uch daqiqa tiklashda kunlarni tejaydi. Tizimni sozlashda doim pochtani ham, savollarni ham to'ldiring, GUID-faylni ishonchli joyda saqlang.",
+          ] },
+          { h: "Nima qilmaslik kerak", p: [
+            "Forumlardagi «tashlash» proshivkalarini quymang: ular bilan kameralar tez-tez g'ishtga aylanadi, ba'zan proshivka bilan birga begona bekdor ham keladi. Messenjerlardagi anonimlardan «tashlash xizmatini» sotib olmang — ularga tarmog'ingizga to'liq kirish berish kerak bo'ladi.",
+            "Kamera korpusidagi Reset tugmasi ko'p modellarda tarmoq sozlamalarini tashlaydi, administrator parolini emas — eski proshivkalarda esa undan keyin qurilma qo'llab-quvvatlashsiz umuman faollashmay qolishi mumkin.",
+          ] },
+          { h: "Hech narsa yordam bermasa", p: [
+            "Servis orqali yo'l qoladi: egalikni tasdiqlash va distribyutor yoki servis markazi kuchi bilan tashlash. Biz buni mijozlar uchun muntazam qilamiz — qurilmani olib keling yoki muhandisni obyektga chaqiring.",
+            "Tizimli xulosa: videokuzatuv tizimi parollari montajchi xotirasida emas, egadagi tizim pasportida saqlanishi kerak. Obyekt topshirishda biz buyurtmachiga barcha kirishlar bilan hujjatlarni beramiz — o'zingiznikini pudratchidan so'rang.",
+          ] },
+        ],
+        faq: [
+          { q: "Servisda parol tashlash qancha turadi?", a: "Qurilma va egalikni tasdiqlash usuliga bog'liq; bizdan yoki distribyutordan aniqlang. Eng arzoni — kirishlarni yo'qotmaslik: bog'langan pochta tashlashni bepul va oniy qiladi." },
+          { q: "Qayta proshivka yordam beradimi?", a: "Yo'q: proshivka yangilash administrator parolini tashlamaydi, forumlardagi «maxsus» proshivkalar esa xavfli. Faqat shtatniy usullardan foydalaning." },
+          { q: "Menda Dahua/boshqa brend kamera — mantiq bir xilmi?", a: "O'xshash: Dahua da ham pochta bog'lash va ConfigTool orqali so'rov fayli bor. Printsip bir — ishlab chiqaruvchilar teshik qoldirmaydi, tiklash egalikni tasdiqlash orqali boradi." },
+        ],
+      },
+      en: {
+        title: "Forgot the password to a Hikvision camera or recorder: what to do",
+        excerpt: "The official ways to recover access to your own Hikvision camera or NVR: SADP, an email code, a request file to support. No magic buttons — and an honest answer about when only service can help.",
+        sections: [
+          { h: "The main thing first", p: [
+            "Modern Hikvision devices have no button that simply resets the password: that is deliberate, so a stranger cannot take over your cameras in a minute. Recovery always goes through proving the device is yours.",
+            "Every method below is official, from the manufacturer, and works only with physical access to the device on the same network as your computer. This is about your own equipment: accessing someone else's cameras is a criminal offense, and we do not help with that.",
+          ] },
+          { h: "Method 1: a code to the linked email", p: [
+            "If you entered a recovery e-mail when activating the device, this is a five-minute task. In the web interface or SADP click 'Forgot password': the device offers to send a verification code to the linked email.",
+            "Enter the code — set a new password. It is the fastest path, which is why we always link an email during installation: check, your installer may have done the same.",
+          ] },
+          { h: "Method 2: a request file via SADP", p: [
+            "Download the SADP utility from the Hikvision site and put your computer on the same network as the device. SADP finds it and shows a 'Forgot password' button: the device generates a request file (XML) or a QR code.",
+            "That file goes to Hikvision support or the official distributor together with a photo of the device label and proof of purchase. A reset file comes back — import it in SADP and set a new password. Usually takes from a few hours to a couple of days.",
+          ] },
+          { h: "Method 3: security questions and the GUID file", p: [
+            "When activating a recorder, Hikvision offers to set security questions and export a GUID file to a flash drive. If that was done, the reset happens locally from the recorder's monitor: answer the questions or supply the file.",
+            "The moral for the future: those three minutes at setup save days at recovery. When configuring a system, always fill in the email and the questions, and keep the GUID file somewhere safe.",
+          ] },
+          { h: "What not to do", p: [
+            "Do not flash 'reset' firmware from forums: it regularly bricks cameras, and sometimes a stranger's backdoor arrives with it. Do not buy 'reset services' from anonymous accounts in messengers — they will need full access to your network.",
+            "The Reset button on the camera body resets network settings on most models, not the admin password — and on old firmware the device may stop activating at all afterwards without support.",
+          ] },
+          { h: "If nothing helped", p: [
+            "The service path remains: proof of ownership and a reset by the distributor or a service center. We do this for clients regularly — bring the device in or call an engineer to the site.",
+            "And the systemic conclusion: CCTV passwords belong in the owner's system passport, not in the installer's head. At handover we give the client documentation with all credentials — ask your contractor for yours.",
+          ] },
+        ],
+        faq: [
+          { q: "How much does a service reset cost?", a: "It depends on the device and the way ownership is proven; ask us or the distributor. The cheapest option is not losing access: a linked email makes the reset free and instant." },
+          { q: "Will reflashing help?", a: "No: a firmware update does not reset the admin password, and 'special' firmware from forums is dangerous. Use only the official methods." },
+          { q: "I have a Dahua or another brand — same logic?", a: "Similar: Dahua also offers email linking and a request file via ConfigTool. The principle is the same — manufacturers leave no loopholes, recovery goes through proof of ownership." },
+        ],
+      },
+      tr: {
+        title: "Hikvision kamera veya kayıt cihazının şifresini unuttunuz: ne yapmalı",
+        excerpt: "Kendi Hikvision kameranıza veya NVR'ınıza erişimi kurtarmanın resmî yolları: SADP, e-postaya kod, desteğe istek dosyası. Sihirli düğmeler yok — yalnızca servisin yardım edebileceği durumlar hakkında dürüst yanıt var.",
+        sections: [
+          { h: "Önce en önemlisi", p: [
+            "Modern Hikvision cihazlarında şifreyi öylece sıfırlayan bir düğme yok: bu kasıtlı — bir yabancı kameralarınızı bir dakikada ele geçirmesin diye. Kurtarma her zaman cihazın size ait olduğunu kanıtlamaktan geçer.",
+            "Aşağıdaki tüm yöntemler resmîdir, üreticidendir ve yalnızca cihaza fiziksel erişimle, bilgisayarla aynı ağda çalışır. Konu kendi ekipmanınız: başkasının kameralarına erişim suçtur ve bu tür sorulara yardım etmeyiz.",
+          ] },
+          { h: "Yöntem 1: bağlı e-postaya kod", p: [
+            "Cihazı etkinleştirirken kurtarma e-postası girdiyseniz iş beş dakikalıktır. Web arayüzünde veya SADP'de 'Forgot password'a basın: cihaz bağlı e-postaya doğrulama kodu göndermeyi önerir.",
+            "Kodu girer, yeni şifre koyarsınız. En hızlı yol budur; bu yüzden montajda e-postayı hep bağlarız — kontrol edin, montajcınız da yapmış olabilir.",
+          ] },
+          { h: "Yöntem 2: SADP ile istek dosyası", p: [
+            "Hikvision sitesinden SADP aracını indirin, bilgisayarı cihazla aynı ağa alın. SADP cihazı bulur ve 'Forgot password' düğmesini gösterir: cihaz bir istek dosyası (XML) veya QR kod üretir.",
+            "Bu dosya, cihaz etiketinin fotoğrafı ve satın alma kanıtıyla Hikvision desteğine veya resmî distribütöre gönderilir. Yanıt olarak sıfırlama dosyası gelir — SADP'ye aktarır ve yeni şifre koyarsınız. Genelde birkaç saatle birkaç gün arasında.",
+          ] },
+          { h: "Yöntem 3: güvenlik soruları ve GUID dosyası", p: [
+            "Kayıt cihazını etkinleştirirken Hikvision güvenlik soruları kurmayı ve GUID dosyasını flaş belleğe aktarmayı önerir. Bu yapıldıysa sıfırlama, kayıt cihazının ekranından yerel yapılır: soruları yanıtlar veya dosyayı verirsiniz.",
+            "Geleceğe ders: kurulumdaki o üç dakika, kurtarmada günler kazandırır. Sistemi kurarken e-postayı da soruları da doldurun, GUID dosyasını güvenli yerde saklayın.",
+          ] },
+          { h: "Ne yapılmamalı", p: [
+            "Forumlardaki 'sıfırlama' yazılımlarını yüklemeyin: kameralar sık sık tuğlaya döner, bazen yazılımla birlikte yabancı bir arka kapı da gelir. Mesajlaşma uygulamalarındaki anonimlerden 'sıfırlama hizmeti' satın almayın — ağınıza tam erişim vermeniz gerekir.",
+            "Kamera gövdesindeki Reset düğmesi çoğu modelde ağ ayarlarını sıfırlar, yönetici şifresini değil — eski yazılımlarda ise sonrasında cihaz destek olmadan hiç etkinleşmeyebilir.",
+          ] },
+          { h: "Hiçbiri işe yaramadıysa", p: [
+            "Servis yolu kalır: sahiplik kanıtı ve distribütör veya servis merkezi eliyle sıfırlama. Bunu müşteriler için düzenli yapıyoruz — cihazı getirin ya da mühendisi sahaya çağırın.",
+            "Sistemli sonuç: kamera sistemi şifreleri montajcının aklında değil, sahibin sistem pasaportunda durmalı. Teslimde müşteriye tüm erişimlerle dokümantasyon veriyoruz — sizinkini yükleniciden isteyin.",
+          ] },
+        ],
+        faq: [
+          { q: "Serviste şifre sıfırlama kaça mal olur?", a: "Cihaza ve sahiplik kanıtı yöntemine bağlı; bize veya distribütöre sorun. En ucuzu erişimi kaybetmemek: bağlı e-posta sıfırlamayı ücretsiz ve anlık yapar." },
+          { q: "Yeniden yazılım yüklemek yardım eder mi?", a: "Hayır: yazılım güncellemesi yönetici şifresini sıfırlamaz; forumlardaki 'özel' yazılımlar tehlikelidir. Yalnızca resmî yöntemleri kullanın." },
+          { q: "Dahua veya başka marka kameram var — mantık aynı mı?", a: "Benzer: Dahua'da da e-posta bağlama ve ConfigTool ile istek dosyası var. İlke aynı — üreticiler açık kapı bırakmaz, kurtarma sahiplik kanıtından geçer." },
+        ],
+      },
+      zh: {
+        title: "忘记海康摄像机或录像机密码怎么办",
+        excerpt: "找回自己海康设备访问权限的官方途径：SADP、邮箱验证码、向售后提交请求文件。没有“神奇按钮”——并诚实说明哪些情况只能靠服务网点。",
+        sections: [
+          { h: "先说重点", p: [
+            "现代海康设备没有一键清除密码的按钮：这是有意为之，防止陌生人一分钟内接管您的摄像机。找回流程始终要证明设备属于您。",
+            "下面的方法全部是官方方案，且都要求物理接触设备、与电脑同网段。这里说的是您自己的设备：入侵他人摄像机是刑事犯罪，此类问题我们不做。",
+          ] },
+          { h: "方法一：绑定邮箱收验证码", p: [
+            "如果激活设备时填过找回邮箱，这就是五分钟的事。在网页界面或SADP点“Forgot password”，设备会向绑定邮箱发送验证码。",
+            "输入验证码、设置新密码即可。这是最快的路，所以我们施工时总会绑定邮箱——查一下，您的安装方可能也这么做了。",
+          ] },
+          { h: "方法二：SADP导出请求文件", p: [
+            "到海康官网下载SADP工具，电脑与设备接入同一网络。SADP找到设备后会显示“Forgot password”：设备生成请求文件（XML）或二维码。",
+            "把该文件连同设备标签照片和购买凭证发给海康售后或官方经销商，对方回传重置文件——导入SADP设置新密码。通常几小时到一两天。",
+          ] },
+          { h: "方法三：密保问题与GUID文件", p: [
+            "激活录像机时海康会建议设置密保问题并把GUID文件导出到U盘。如果当时做了，就能在录像机本机屏幕上重置：答题或插入文件即可。",
+            "给未来的教训：配置时的三分钟能省下找回时的好几天。装系统时邮箱、密保都填上，GUID文件放妥当。",
+          ] },
+          { h: "千万别做的事", p: [
+            "别刷论坛上的“解密固件”：经常把设备刷成砖，有时固件里还捆着别人的后门。别在聊天软件上向匿名者购买“解锁服务”——那要交出整个网络的访问权。",
+            "机身上的Reset键在多数型号上只复位网络设置，不清管理员密码——老固件甚至可能按完之后没有售后就无法再激活。",
+          ] },
+          { h: "都不行的话", p: [
+            "只剩服务网点这条路：证明所有权，由经销商或服务中心重置。我们常年为客户办理——送修设备或请工程师上门都行。",
+            "系统性的结论：监控系统的密码应写进业主手里的系统档案，而不是装在安装工脑子里。我们交付项目时会把全部访问信息连文档移交甲方——向您的承包商索要您的那份。",
+          ] },
+        ],
+        faq: [
+          { q: "到服务网点重置要多少钱？", a: "取决于设备和所有权证明方式；向我们或经销商询价。最便宜的是别丢访问权：绑好邮箱，重置免费且即时。" },
+          { q: "重刷固件行吗？", a: "不行：升级固件不会清除管理员密码，论坛上的“特制固件”还很危险。只用官方途径。" },
+          { q: "我的是大华或其他品牌——逻辑一样吗？", a: "类似：大华也有邮箱绑定和通过ConfigTool的请求文件。原则相同——厂商不留后门，找回都要证明所有权。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "wifi-signalini-kuchaytirish",
+    date: "2026-09-03",
+    related: ["wifi", "network"],
+    hubs: ["wi-fi-tochki-dostupa", "marshrutizatory"],
+    loc: {
+      ru: {
+        title: "Как усилить сигнал Wi-Fi дома и в офисе",
+        excerpt: "Почему Wi-Fi не добивает до дальних комнат и что реально помогает: место роутера, каналы, mesh, точки доступа. Разбор без мифов — что работает, а что пустая трата денег.",
+        sections: [
+          { h: "Почему сигнал слабый", p: [
+            "Wi-Fi — это радио, и ему мешает всё, из чего построен дом: бетонные стены с арматурой съедают сигнал сильнее всего, за ними — зеркала, металлические двери и тёплые полы. Через две бетонные стены уверенно проходит редкий роутер, а через три — практически никакой.",
+            "Вторая причина — соседи. В многоквартирном доме на частоте 2,4 ГГц одновременно работают десятки сетей, и они делят между собой одни и те же каналы. Скорость падает не потому, что сигнал слабый, а потому что эфир занят.",
+          ] },
+          { h: "Что попробовать бесплатно", p: [
+            "Сначала — место: роутер должен стоять по центру квартиры, на высоте, не в шкафу и не за телевизором. Каждый метр от центра к углу — минус зона покрытия в противоположном углу.",
+            "Затем — канал: в настройках роутера смените автоматический выбор канала на конкретный свободный (для 2,4 ГГц это 1, 6 или 11). Посмотреть занятость каналов можно бесплатным приложением-анализатором. И проверьте диапазон: если устройства поддерживают 5 ГГц — переводите их туда, этот диапазон быстрее и свободнее.",
+          ] },
+          { h: "Репитер: когда помогает, а когда вредит", p: [
+            "Репитер (повторитель) ловит сигнал роутера и передаёт дальше — но делит скорость пополам и добавляет задержку. Для телевизора или камеры в дальней комнате сгодится, для работы и игр — раздражает.",
+            "Главная ошибка — ставить репитер там, где сигнал уже плохой: он усилит и ретранслирует плохой сигнал. Ставить нужно на полпути, где сигнал роутера ещё уверенный.",
+          ] },
+          { h: "Правильное решение — точка доступа по кабелю", p: [
+            "Кардинально вопрос решает не усиление, а вторая точка раздачи: к дальней части дома прокладывается сетевой кабель, на нём ставится точка доступа. Кабель не теряет скорость на препятствиях, а точка раздаёт полноценный Wi-Fi в своей зоне.",
+            "В офисах это единственный правильный путь: точки доступа с PoE-питанием по потолку, одна сеть с бесшовным роумингом — телефон сам переключается на ближайшую точку, звонок не рвётся при переходе между кабинетами.",
+          ] },
+          { h: "Mesh-системы: за что вы платите", p: [
+            "Mesh — это несколько узлов, которые сами строят единую сеть и ведут устройство от узла к узлу. Ставится за вечер без кабелей, выглядит аккуратно, работает заметно лучше репитера — узлы связаны выделенным радиоканалом.",
+            "Честная оговорка: mesh по радио всё равно уступает точкам по кабелю. Идеальная схема — mesh-узлы, соединённые кабелем (Ethernet backhaul): и простота mesh, и скорость проводов.",
+          ] },
+          { h: "Что выбрать под вашу ситуацию", p: [
+            "Квартира до трёх комнат — правильно расположенный современный роутер, при необходимости один mesh-узел. Большая квартира или дом — mesh из 2–3 узлов, лучше с кабельной связкой между этажами. Офис — точки доступа по кабелю с PoE и контроллером, посчитанные по плану помещения.",
+            "Мы делаем радиообследование, считаем количество и расположение точек и монтируем под ключ — от квартиры до офиса на сотню сотрудников. Оборудование TP-Link Omada и MikroTik со склада в Ташкенте.",
+          ] },
+        ],
+        faq: [
+          { q: "Поможет ли роутер помощнее?", a: "Мощность передачи ограничена законом, и флагманский роутер бетонную стену не пробьёт. Он поможет за счёт лучших антенн и 5/6 ГГц рядом с ним, но дальние комнаты решаются только второй точкой раздачи." },
+          { q: "Wi-Fi 6 стоит того?", a: "Да, если устройств много: Wi-Fi 6 эффективнее делит эфир между десятками клиентов. Для двух ноутбуков и телевизора заметной разницы со свежим Wi-Fi 5 роутером не будет." },
+          { q: "Сколько стоит сделать Wi-Fi в офисе нормально?", a: "Зависит от площади и числа сотрудников: считаем по плану помещения бесплатно — с радиообследованием, схемой точек и сметой." },
+        ],
+      },
+      uz: {
+        title: "Uyda va ofisda Wi-Fi signalini qanday kuchaytirish mumkin",
+        excerpt: "Nega Wi-Fi uzoq xonalarga yetib bormaydi va nima real yordam beradi: router joyi, kanallar, mesh, kirish nuqtalari. Afsonalarsiz tahlil — nima ishlaydi, nima pulni bekor sarflash.",
+        sections: [
+          { h: "Nega signal kuchsiz", p: [
+            "Wi-Fi — bu radio, unga uy qurilgan hamma narsa xalaqit beradi: armaturali beton devorlar signalni eng ko'p yeydi, keyin oynalar, metall eshiklar va issiq pollar. Ikkita beton devordan kamdan-kam router ishonchli o'tadi, uchtadan — deyarli hech qaysi.",
+            "Ikkinchi sabab — qo'shnilar. Ko'p qavatli uyda 2,4 GGts chastotada bir vaqtda o'nlab tarmoq ishlaydi va ular bir xil kanallarni bo'lishadi. Tezlik signal kuchsizligidan emas, efir bandligidan tushadi.",
+          ] },
+          { h: "Bepul nimani sinab ko'rish mumkin", p: [
+            "Avvalo — joy: router kvartira markazida, balandda turishi kerak, shkafda yoki televizor ortida emas. Markazdan burchakka har metr — qarama-qarshi burchakda qamrov zonasidan minus.",
+            "Keyin — kanal: router sozlamalarida avtomatik kanal tanlashni aniq bo'sh kanalga almashtiring (2,4 GGts uchun bu 1, 6 yoki 11). Kanallar bandligini bepul analizator-ilova bilan ko'rish mumkin. Diapazonni ham tekshiring: qurilmalar 5 GGts ni qo'llasa — ularni o'sha yoqqa o'tkazing, bu diapazon tezroq va bo'shroq.",
+          ] },
+          { h: "Repiter: qachon yordam beradi, qachon zarar", p: [
+            "Repiter (takrorlagich) router signalini tutib uzatadi — lekin tezlikni ikkiga bo'ladi va kechikish qo'shadi. Uzoq xonadagi televizor yoki kameraga yaraydi, ish va o'yinlarga — asabga tegadi.",
+            "Bosh xato — repiterni signal allaqachon yomon joyga qo'yish: u yomon signalni kuchaytirib uzatadi. Yarim yo'lda, router signali hali ishonchli joyda qo'yish kerak.",
+          ] },
+          { h: "To'g'ri yechim — kabel orqali kirish nuqtasi", p: [
+            "Masalani kuchaytirish emas, ikkinchi tarqatish nuqtasi tubdan hal qiladi: uyning uzoq qismiga tarmoq kabeli yotqiziladi, unga kirish nuqtasi qo'yiladi. Kabel to'siqlarda tezlik yo'qotmaydi, nuqta esa o'z zonasida to'laqonli Wi-Fi tarqatadi.",
+            "Ofislarda bu yagona to'g'ri yo'l: ship bo'ylab PoE quvvatli kirish nuqtalari, uzluksiz roumingli bitta tarmoq — telefon o'zi eng yaqin nuqtaga o'tadi, xonalar orasida qo'ng'iroq uzilmaydi.",
+          ] },
+          { h: "Mesh-tizimlar: nimaga pul to'laysiz", p: [
+            "Mesh — bu o'zlari yagona tarmoq quradigan va qurilmani uzeldan uzelga olib boradigan bir necha uzel. Kabelsiz bir kechada o'rnatiladi, chiroyli ko'rinadi, repiterdan sezilarli yaxshi ishlaydi — uzellar ajratilgan radiokanal bilan bog'langan.",
+            "Halol izoh: radio orqali mesh baribir kabelli nuqtalardan past. Ideal sxema — kabel bilan bog'langan mesh-uzellar (Ethernet backhaul): mesh soddaligi ham, sim tezligi ham.",
+          ] },
+          { h: "Vaziyatingizga nimani tanlash", p: [
+            "Uch xonagacha kvartira — to'g'ri joylashtirilgan zamonaviy router, kerak bo'lsa bitta mesh-uzel. Katta kvartira yoki uy — 2–3 uzelli mesh, qavatlar orasi kabel bog'lamli bo'lsa yaxshi. Ofis — xona plani bo'yicha hisoblangan PoE va kontrollerli kabelli kirish nuqtalari.",
+            "Biz radiotekshiruv qilamiz, nuqtalar soni va joyini hisoblaymiz va kalit topshirish bilan o'rnatamiz — kvartiradan yuz xodimli ofisgacha. TP-Link Omada va MikroTik uskunalari Toshkentdagi ombordan.",
+          ] },
+        ],
+        faq: [
+          { q: "Kuchliroq router yordam beradimi?", a: "Uzatish quvvati qonun bilan cheklangan, flagman router ham beton devorni teshmaydi. U yaxshi antennalar va yonidagi 5/6 GGts hisobiga yordam beradi, lekin uzoq xonalarni faqat ikkinchi tarqatish nuqtasi hal qiladi." },
+          { q: "Wi-Fi 6 arziydimi?", a: "Ha, qurilmalar ko'p bo'lsa: Wi-Fi 6 efirni o'nlab mijozlar orasida samaraliroq bo'ladi. Ikkita noutbuk va televizorga yangi Wi-Fi 5 routerdan sezilarli farq bo'lmaydi." },
+          { q: "Ofisda Wi-Fi ni normal qilish qancha turadi?", a: "Maydon va xodimlar soniga bog'liq: xona plani bo'yicha bepul hisoblaymiz — radiotekshiruv, nuqtalar sxemasi va smeta bilan." },
+        ],
+      },
+      en: {
+        title: "How to boost Wi-Fi signal at home and in the office",
+        excerpt: "Why Wi-Fi does not reach the far rooms and what actually helps: router placement, channels, mesh, access points. A no-myth breakdown — what works and what wastes money.",
+        sections: [
+          { h: "Why the signal is weak", p: [
+            "Wi-Fi is radio, and everything a building is made of interferes: reinforced concrete walls eat the signal most, followed by mirrors, metal doors and heated floors. Few routers push confidently through two concrete walls, and practically none through three.",
+            "The second reason is the neighbors. In an apartment block, dozens of networks share the same 2.4 GHz channels at once. Speed drops not because the signal is weak, but because the air is busy.",
+          ] },
+          { h: "What to try for free", p: [
+            "Placement first: the router belongs in the center of the home, up high, not in a cabinet or behind the TV. Every meter from the center toward a corner costs coverage in the opposite corner.",
+            "Then the channel: switch automatic channel selection to a specific free one (1, 6 or 11 for 2.4 GHz). A free analyzer app shows channel congestion. And check the band: if your devices support 5 GHz, move them there — it is faster and less crowded.",
+          ] },
+          { h: "Repeaters: when they help and when they hurt", p: [
+            "A repeater catches the router's signal and passes it on — but halves the speed and adds latency. Fine for a TV or a camera in a far room; annoying for work and games.",
+            "The classic mistake is placing the repeater where the signal is already poor: it amplifies and relays a poor signal. It belongs halfway, where the router's signal is still solid.",
+          ] },
+          { h: "The right solution — a wired access point", p: [
+            "What solves the problem radically is not amplification but a second distribution point: a network cable runs to the far part of the building and an access point sits on it. Cable loses no speed to obstacles, and the AP serves full Wi-Fi in its zone.",
+            "In offices this is the only right way: PoE-powered ceiling access points, one network with seamless roaming — the phone switches to the nearest AP by itself, and a call survives the walk between rooms.",
+          ] },
+          { h: "Mesh systems: what you pay for", p: [
+            "Mesh is several nodes that build one network themselves and hand devices from node to node. It installs in an evening without cables, looks neat and clearly beats a repeater — the nodes talk over a dedicated radio link.",
+            "An honest caveat: radio mesh still trails wired access points. The ideal scheme is mesh nodes linked by cable (Ethernet backhaul): mesh simplicity plus wire speed.",
+          ] },
+          { h: "What to choose for your case", p: [
+            "An apartment up to three rooms — a well-placed modern router, one mesh node if needed. A large apartment or house — a 2–3 node mesh, ideally cabled between floors. An office — wired PoE access points with a controller, calculated from the floor plan.",
+            "We run a radio survey, calculate the number and placement of points and install turnkey — from an apartment to an office of a hundred staff. TP-Link Omada and MikroTik equipment from our Tashkent warehouse.",
+          ] },
+        ],
+        faq: [
+          { q: "Will a more powerful router help?", a: "Transmit power is capped by law, and a flagship router will not pierce a concrete wall. It helps through better antennas and 5/6 GHz near it, but far rooms are only solved by a second distribution point." },
+          { q: "Is Wi-Fi 6 worth it?", a: "Yes, with many devices: Wi-Fi 6 shares the air between dozens of clients more efficiently. For two laptops and a TV, you will not notice a difference from a recent Wi-Fi 5 router." },
+          { q: "What does proper office Wi-Fi cost?", a: "It depends on the area and headcount: we calculate from the floor plan free of charge — with a radio survey, an AP layout and an estimate." },
+        ],
+      },
+      tr: {
+        title: "Evde ve ofiste Wi-Fi sinyali nasıl güçlendirilir",
+        excerpt: "Wi-Fi uzak odalara neden ulaşmaz ve gerçekten ne işe yarar: router yeri, kanallar, mesh, erişim noktaları. Efsanesiz bir analiz — ne çalışır, ne para israfıdır.",
+        sections: [
+          { h: "Sinyal neden zayıf", p: [
+            "Wi-Fi bir radyodur ve binanın yapıldığı her şey ona engeldir: demirli beton duvarlar sinyali en çok yer; ardından aynalar, metal kapılar ve yerden ısıtma gelir. İki beton duvarı az router güvenle geçer, üçünü neredeyse hiçbiri.",
+            "İkinci neden komşulardır. Apartmanda 2,4 GHz bandında aynı anda onlarca ağ aynı kanalları paylaşır. Hız, sinyal zayıf olduğundan değil, hava meşgul olduğundan düşer.",
+          ] },
+          { h: "Ücretsiz neler denenir", p: [
+            "Önce yer: router evin ortasında, yüksekte durmalı; dolapta veya televizyonun arkasında değil. Merkezden köşeye her metre, karşı köşedeki kapsamadan eksilir.",
+            "Sonra kanal: otomatik kanal seçimini belirli boş bir kanala çevirin (2,4 GHz için 1, 6 veya 11). Kanal doluluğunu ücretsiz analiz uygulaması gösterir. Bandı da kontrol edin: cihazlar 5 GHz destekliyorsa oraya taşıyın — daha hızlı ve boş.",
+          ] },
+          { h: "Repeater: ne zaman yardım eder, ne zaman zarar", p: [
+            "Repeater router sinyalini yakalayıp iletir — ama hızı yarıya böler ve gecikme ekler. Uzak odadaki televizyon veya kameraya uyar; iş ve oyun için sinir bozucudur.",
+            "Klasik hata, repeater'ı sinyalin zaten kötü olduğu yere koymaktır: kötü sinyali güçlendirip aktarır. Yeri, router sinyalinin hâlâ sağlam olduğu yarı yoldur.",
+          ] },
+          { h: "Doğru çözüm — kablolu erişim noktası", p: [
+            "Sorunu kökten çözen güçlendirme değil, ikinci dağıtım noktasıdır: binanın uzak kısmına ağ kablosu çekilir, ucuna erişim noktası konur. Kablo engellerde hız kaybetmez; nokta kendi bölgesinde tam Wi-Fi dağıtır.",
+            "Ofislerde tek doğru yol budur: tavanda PoE beslemeli erişim noktaları, kesintisiz dolaşımlı tek ağ — telefon en yakın noktaya kendisi geçer, odalar arası yürürken görüşme kopmaz.",
+          ] },
+          { h: "Mesh sistemleri: neye para veriyorsunuz", p: [
+            "Mesh, tek ağı kendileri kuran ve cihazı düğümden düğüme taşıyan birkaç düğümdür. Kablosuz bir akşamda kurulur, düzgün görünür, repeater'dan belirgin iyidir — düğümler ayrılmış radyo hattıyla konuşur.",
+            "Dürüst not: radyo mesh, kablolu noktaların yine de gerisindedir. İdeal şema kabloyla bağlı mesh düğümleridir (Ethernet backhaul): mesh kolaylığı artı kablo hızı.",
+          ] },
+          { h: "Durumunuza göre ne seçmeli", p: [
+            "Üç odaya kadar daire — doğru yerleştirilmiş güncel router, gerekirse bir mesh düğümü. Büyük daire veya ev — katlar arası tercihen kablolu 2–3 düğümlü mesh. Ofis — kat planından hesaplanan, kontrollü ve PoE'li kablolu erişim noktaları.",
+            "Radyo keşfi yapıyor, nokta sayısını ve yerini hesaplıyor ve anahtar teslim kuruyoruz — daireden yüz kişilik ofise kadar. TP-Link Omada ve MikroTik ekipmanı Taşkent depomuzdan.",
+          ] },
+        ],
+        faq: [
+          { q: "Daha güçlü router yardım eder mi?", a: "Verici gücü yasayla sınırlıdır; amiral gemisi router da beton duvarı delmez. Yakınında daha iyi antenler ve 5/6 GHz ile yardım eder, ama uzak odaları yalnızca ikinci dağıtım noktası çözer." },
+          { q: "Wi-Fi 6 değer mi?", a: "Cihaz çoksa evet: Wi-Fi 6 havayı onlarca istemci arasında daha verimli paylaşır. İki dizüstü ve bir televizyon için yeni bir Wi-Fi 5 router'dan fark hissetmezsiniz." },
+          { q: "Ofiste düzgün Wi-Fi kaça mal olur?", a: "Alana ve kişi sayısına bağlı: kat planından ücretsiz hesaplıyoruz — radyo keşfi, nokta şeması ve keşifle birlikte." },
+        ],
+      },
+      zh: {
+        title: "家里和办公室Wi-Fi信号增强指南",
+        excerpt: "为什么Wi-Fi到不了远处的房间、什么才真正有用：路由器位置、信道、mesh、接入点。破除迷思——哪些有效，哪些纯属浪费钱。",
+        sections: [
+          { h: "信号为什么弱", p: [
+            "Wi-Fi是无线电，房子的建材都在跟它作对：带钢筋的混凝土墙吃信号最狠，其次是镜子、金属门和地暖。能稳定穿透两堵混凝土墙的路由器很少，三堵墙几乎没有。",
+            "第二个原因是邻居。居民楼里2.4GHz频段同时挤着几十个网络，共享同样的信道。速度下降不是因为信号弱，而是因为空口太挤。",
+          ] },
+          { h: "先试试免费的办法", p: [
+            "首先是位置：路由器应放在户型中央、放高处，不要塞柜子里或电视后面。离中心每远一米，对角房间的覆盖就少一分。",
+            "然后是信道：把自动选择改成具体的空闲信道（2.4GHz选1、6或11）。信道占用可用免费的分析App查看。还有频段：设备支持5GHz就切过去——更快也更空。",
+          ] },
+          { h: "中继器：何时有用、何时帮倒忙", p: [
+            "中继器接收路由器信号再转发——但速度减半、延迟增加。给远房间的电视或摄像头凑合能用，办公和游戏会抓狂。",
+            "最常见的错误是把中继器放在信号已经很差的地方：它放大并转发的还是差信号。正确位置在半路上，即路由器信号仍然稳定的地方。",
+          ] },
+          { h: "正解——有线接入点", p: [
+            "根治问题的不是放大，而是第二个发射点：往远端拉一根网线，接一台接入点。网线不怕障碍物，接入点在自己区域内发射满血Wi-Fi。",
+            "办公室只有这一条正路：吊顶PoE供电接入点、支持无缝漫游的统一网络——手机自动切换到最近的点，走动中通话不断。",
+          ] },
+          { h: "Mesh系统：钱花在哪", p: [
+            "Mesh是几个自组网的节点，设备在节点间自动切换。一个晚上无线装完、外观清爽、明显强于中继器——节点之间走专用无线回程。",
+            "诚实地说：无线mesh仍然不如有线接入点。理想方案是节点之间拉网线（有线回程）：既有mesh的省事，又有网线的速度。",
+          ] },
+          { h: "按场景怎么选", p: [
+            "三居以内的公寓——摆对位置的新款路由器，必要时加一个mesh节点。大户型或别墅——2–3节点mesh，层间最好走网线。办公室——按平面图核算的有线PoE接入点加控制器。",
+            "我们做无线勘测、核算点位数量和位置、交钥匙施工——从住宅到百人办公室。TP-Link Omada和MikroTik设备塔什干现货。",
+          ] },
+        ],
+        faq: [
+          { q: "换更强的路由器行吗？", a: "发射功率受法规限制，旗舰路由器也穿不透混凝土墙。它靠更好的天线和近距离的5/6GHz有些提升，但远房间只能靠第二个发射点解决。" },
+          { q: "Wi-Fi 6值得上吗？", a: "设备多就值：Wi-Fi 6在几十个终端间分配空口更高效。只有两台笔记本加电视的话，与较新的Wi-Fi 5路由器差别不大。" },
+          { q: "办公室Wi-Fi做规范要多少钱？", a: "取决于面积和人数：按平面图免费核算——含无线勘测、点位方案和预算。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "kak-vybrat-ognetushitel",
     date: "2026-09-03",
     related: ["fire"],
+    hubs: ["ognetushiteli", "pozharnaya-bezopasnost"],
     loc: {
       ru: {
         title: "Как выбрать огнетушитель: ОП или ОУ, расчёт количества, сроки перезарядки",
@@ -167,6 +1103,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-vybrat-stabilizator-napryazheniya",
     date: "2026-08-31",
     related: ["servers"],
+    hubs: ["ibp-i-elektropitanie"],
     loc: {
       ru: {
         title: "Как выбрать стабилизатор напряжения для дома, офиса и серверной",
@@ -224,6 +1161,7 @@ export const ARTICLES: Article[] = [
     slug: "shlagbaum-dlya-dvora-i-parkovki",
     date: "2026-08-31",
     related: ["barrier", "parking"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена",
@@ -281,6 +1219,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-vybrat-kommutator-switch",
     date: "2026-08-31",
     related: ["network"],
+    hubs: ["kommutatory"],
     loc: {
       ru: {
         title: "Как выбрать сетевой коммутатор (свитч): PoE, управляемость, L2 или L3",
@@ -339,6 +1278,7 @@ export const ARTICLES: Article[] = [
     slug: "ivms-4200-skachat-nastroit",
     date: "2026-08-31",
     related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
         title: "iVMS-4200: как скачать и настроить программу Hikvision для просмотра камер",
@@ -519,6 +1459,7 @@ export const ARTICLES: Article[] = [
     slug: "pozharnaya-signalizatsiya-dlya-biznesa-trebovaniya",
     date: "2026-08-05",
     related: ["fire"],
+    hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       ru: {
         title: "Пожарная сигнализация для бизнеса: что требует инспекция в Узбекистане",
@@ -661,6 +1602,7 @@ export const ARTICLES: Article[] = [
     slug: "skolko-stoit-videonablyudenie",
     date: "2026-07-17",
     related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
         title: "Сколько стоит видеонаблюдение: из чего складывается цена",
@@ -808,6 +1750,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-vybrat-kameru-videonablyudeniya",
     date: "2026-07-17",
     related: ["cctv"],
+    hubs: ["ip-kamery"],
     loc: {
       ru: {
         title: "Как выбрать камеру видеонаблюдения: разрешение, объектив, ночная съёмка",
@@ -955,6 +1898,7 @@ export const ARTICLES: Article[] = [
     slug: "chto-takoe-skud",
     date: "2026-07-17",
     related: ["access", "turnstile", "attendance"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Что такое СКУД: как работает система контроля доступа",
@@ -1102,6 +2046,7 @@ export const ARTICLES: Article[] = [
     slug: "pozharnaya-signalizatsiya-vidy",
     date: "2026-07-17",
     related: ["fire", "pa"],
+    hubs: ["pozharnaya-bezopasnost"],
     loc: {
       ru: {
         title: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая",
@@ -1396,6 +2341,7 @@ export const ARTICLES: Article[] = [
     slug: "skolko-stoit-skud",
     date: "2026-07-17",
     related: ["access", "turnstile", "attendance"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Сколько стоит СКУД: цена системы контроля доступа",
@@ -1543,6 +2489,7 @@ export const ARTICLES: Article[] = [
     slug: "uchet-rabochego-vremeni",
     date: "2026-07-17",
     related: ["attendance", "access"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Учёт рабочего времени: биометрия против бумажного табеля",
@@ -1690,6 +2637,7 @@ export const ARTICLES: Article[] = [
     slug: "wifi-dlya-ofisa",
     date: "2026-07-17",
     related: ["wifi", "network"],
+    hubs: ["wi-fi-tochki-dostupa", "marshrutizatory"],
     loc: {
       ru: {
         title: "Wi-Fi для офиса: почему домашний роутер не справляется",
@@ -1984,6 +2932,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-vybrat-turniket",
     date: "2026-07-17",
     related: ["turnstile", "access", "attendance"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Как выбрать турникет: трипод, роторный или спидгейт",
@@ -2131,6 +3080,7 @@ export const ARTICLES: Article[] = [
     slug: "shlagbaum-anpr",
     date: "2026-07-17",
     related: ["barrier", "anpr", "gates"],
+    hubs: ["turnikety-i-shlagbaumy", "ip-kamery"],
     loc: {
       ru: {
         title: "Шлагбаум с распознаванием номеров: как это работает",
@@ -2425,6 +3375,7 @@ export const ARTICLES: Article[] = [
     slug: "avtomaticheskie-vorota-kak-vybrat",
     date: "2026-07-17",
     related: ["gates", "barrier"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Автоматические ворота: откатные, распашные или секционные",
@@ -2572,6 +3523,7 @@ export const ARTICLES: Article[] = [
     slug: "montazh-sks",
     date: "2026-07-17",
     related: ["network", "fiber", "wifi"],
+    hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
       ru: {
         title: "Монтаж СКС: как строят сеть, которая не подведёт",
@@ -2719,6 +3671,7 @@ export const ARTICLES: Article[] = [
     slug: "ip-telefoniya-dlya-ofisa",
     date: "2026-07-17",
     related: ["telephony", "network"],
+    hubs: ["kommutatory", "marshrutizatory"],
     loc: {
       ru: {
         title: "IP-телефония для офиса: зачем менять привычные линии",
@@ -2866,6 +3819,7 @@ export const ARTICLES: Article[] = [
     slug: "servernaya-komnata",
     date: "2026-07-17",
     related: ["server", "network", "virtualization"],
+    hubs: ["telekommunikacionnye-shkafy", "ibp-i-elektropitanie"],
     loc: {
       ru: {
         title: "Серверная комната: требования, ошибки и как сделать правильно",
@@ -3013,6 +3967,7 @@ export const ARTICLES: Article[] = [
     slug: "videoanalitika-raspoznavanie-lic",
     date: "2026-07-17",
     related: ["analytics", "cctv", "anpr"],
+    hubs: ["ip-kamery"],
     loc: {
       ru: {
         title: "Видеоаналитика и распознавание лиц: что умеют умные камеры",
@@ -3160,6 +4115,7 @@ export const ARTICLES: Article[] = [
     slug: "hikvision-vs-dahua",
     date: "2026-07-19",
     related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
         title: "Hikvision или Dahua: что выбрать для видеонаблюдения",
@@ -3322,6 +4278,7 @@ export const ARTICLES: Article[] = [
     slug: "ip-ili-analogovaya-kamera",
     date: "2026-07-19",
     related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
         title: "IP или аналоговая камера (HDCVI): что выбрать",
@@ -3474,6 +4431,7 @@ export const ARTICLES: Article[] = [
     slug: "zkteco-vs-hikvision-biometriya",
     date: "2026-07-19",
     related: ["access", "attendance"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "ZKTeco или Hikvision: биометрия для СКУД и учёта времени",
@@ -3621,6 +4579,7 @@ export const ARTICLES: Article[] = [
     slug: "poe-kommutator-ili-bloki-pitaniya",
     date: "2026-07-19",
     related: ["cctv", "network"],
+    hubs: ["kommutatory", "ibp-i-elektropitanie"],
     loc: {
       ru: {
         title: "PoE-коммутатор или блоки питания для камер: что практичнее",
@@ -3773,6 +4732,7 @@ export const ARTICLES: Article[] = [
     slug: "videonablyudenie-cherez-telefon",
     date: "2026-07-29",
     related: ["cctv"],
+    hubs: ["ip-kamery"],
     loc: {
       ru: {
         title: "Видеонаблюдение через телефон: как смотреть камеры удалённо",
@@ -3960,6 +4920,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-podklyuchit-ip-kameru-hikvision",
     date: "2026-07-29",
     related: ["cctv", "network"],
+    hubs: ["ip-kamery", "kommutatory"],
     loc: {
       ru: {
         title: "Как подключить IP-камеру Hikvision: пошаговая инструкция",
@@ -4147,6 +5108,7 @@ export const ARTICLES: Article[] = [
     slug: "kak-vybrat-videoregistrator",
     date: "2026-07-29",
     related: ["cctv"],
+    hubs: ["ip-videoregistratory-nvr", "zhestkie-diski"],
     loc: {
       ru: {
         title: "Как выбрать видеорегистратор: NVR или DVR, каналы, диски",
@@ -4334,6 +5296,7 @@ export const ARTICLES: Article[] = [
     slug: "kamera-dlya-doma",
     date: "2026-07-29",
     related: ["cctv"],
+    hubs: ["ip-kamery"],
     loc: {
       ru: {
         title: "Камера для дома и квартиры: как выбрать и что учесть",
@@ -4521,6 +5484,7 @@ export const ARTICLES: Article[] = [
     slug: "videonablyudenie-bez-interneta",
     date: "2026-07-29",
     related: ["cctv"],
+    hubs: ["ip-kamery", "marshrutizatory"],
     loc: {
       ru: {
         title: "Видеонаблюдение без интернета: дача, склад, стройка",
@@ -4723,6 +5687,7 @@ export const ARTICLES: Article[] = [
     slug: "ip-kvm-udlinitel",
     date: "2026-07-29",
     related: ["server", "network"],
+    hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
       ru: {
         title: "IP KVM удлинитель: как управлять компьютером на расстоянии",
@@ -4925,6 +5890,7 @@ export const ARTICLES: Article[] = [
     slug: "slabotochnye-sistemy",
     date: "2026-07-29",
     related: ["cctv", "fire", "network"],
+    hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
       ru: {
         title: "Слаботочные системы здания: что входит и как проектируют",
@@ -5127,6 +6093,7 @@ export const ARTICLES: Article[] = [
     slug: "chto-takoe-poe",
     date: "2026-07-29",
     related: ["network", "cctv"],
+    hubs: ["kommutatory"],
     loc: {
       ru: {
         title: "Что такое PoE: питание камер и точек доступа по витой паре",
@@ -5329,6 +6296,7 @@ export const ARTICLES: Article[] = [
     slug: "kamera-narxlari",
     date: "2026-08-20",
     related: ["cctv"],
+    hubs: ["ip-kamery"],
     loc: {
       uz: {
         title: "Kamera narxlari 2026: videokuzatuv qancha turadi",
@@ -5499,6 +6467,7 @@ export const ARTICLES: Article[] = [
     slug: "videokuzatuv-ornatish-narxi",
     date: "2026-07-30",
     related: ["cctv"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       uz: {
         title: "Kamera ustanovka narxi: videokuzatuv o'rnatish bosqichlari (Toshkent)",
@@ -5686,6 +6655,7 @@ export const ARTICLES: Article[] = [
     slug: "turniket-narxi",
     date: "2026-08-20",
     related: ["turnstile", "access"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Сколько стоит турникет с установкой в Ташкенте",
@@ -6010,6 +6980,7 @@ export const ARTICLES: Article[] = [
     slug: "yongin-signalizatsiyasi-narxi",
     date: "2026-08-20",
     related: ["fire"],
+    hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       ru: {
         title: "Сколько стоит пожарная сигнализация в Ташкенте",
@@ -6172,6 +7143,7 @@ export const ARTICLES: Article[] = [
     slug: "videoregistrator-narxi",
     date: "2026-08-20",
     related: ["cctv"],
+    hubs: ["ip-videoregistratory-nvr", "zhestkie-diski"],
     loc: {
       ru: {
         title: "Сколько стоит видеорегистратор для камер в Ташкенте",
@@ -6334,6 +7306,7 @@ export const ARTICLES: Article[] = [
     slug: "yongin-xavfsizligi",
     date: "2026-08-26",
     related: ["fire", "pa"],
+    hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       uz: {
         title: "Yong'in xavfsizligi: biznes uchun talablar, tizimlar va narxlar",
@@ -6526,6 +7499,7 @@ export const ARTICLES: Article[] = [
     slug: "lokal-tarmoq-narxi",
     date: "2026-08-26",
     related: ["network", "wifi", "fiber"],
+    hubs: ["kommutatory", "wi-fi-tochki-dostupa"],
     loc: {
       uz: {
         title: "Lokal tarmoq o'rnatish: ofis uchun narxi va bosqichlar",
@@ -6911,6 +7885,7 @@ export const ARTICLES: Article[] = [
     slug: "shlagbaum-narxi",
     date: "2026-08-26",
     related: ["barrier", "gates", "anpr"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       uz: {
         title: "Shlagbaum narxi qancha? Toshkentda o'rnatish bilan",
@@ -7084,6 +8059,7 @@ export const ARTICLES: Article[] = [
     slug: "davomat-tizimi",
     date: "2026-08-26",
     related: ["attendance", "access"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       uz: {
         title: "Davomat tizimi: maktab, ofis va zavod uchun narxi",
@@ -7448,6 +8424,7 @@ export const ARTICLES: Article[] = [
     slug: "avtomatik-darvoza-narxi",
     date: "2026-08-26",
     related: ["gates", "barrier", "anpr"],
+    hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       uz: {
         title: "Avtomatik darvoza: privod narxi va o'rnatish",
@@ -7621,6 +8598,7 @@ export const ARTICLES: Article[] = [
     slug: "gpon-uzbekistan",
     date: "2026-08-27",
     related: ["fiber", "network"],
+    hubs: ["pon-oborudovanie", "optika-i-aksessuary"],
     loc: {
       ru: {
         title: "GPON: как устроена оптическая сеть и сколько стоит её построить",

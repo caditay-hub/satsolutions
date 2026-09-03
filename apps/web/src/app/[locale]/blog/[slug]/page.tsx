@@ -8,12 +8,29 @@ import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 
-const UI: Record<string, { blog: string; home: string; related: string; ctaTitle: string; ctaBtn: string; faq: string }> = {
-  ru: { blog: "Блог", home: "Главная", related: "Смежные услуги", ctaTitle: "Нужна консультация или расчёт?", ctaBtn: "Получить КП", faq: "Частые вопросы" },
-  uz: { blog: "Blog", home: "Bosh sahifa", related: "Aloqador xizmatlar", ctaTitle: "Maslahat yoki hisob-kitob kerakmi?", ctaBtn: "Taklif olish", faq: "Ko'p so'raladigan savollar" },
-  en: { blog: "Blog", home: "Home", related: "Related services", ctaTitle: "Need advice or a quote?", ctaBtn: "Get a quote", faq: "FAQ" },
-  tr: { blog: "Blog", home: "Ana sayfa", related: "İlgili hizmetler", ctaTitle: "Danışmanlık veya teklif?", ctaBtn: "Teklif al", faq: "SSS" },
-  zh: { blog: "博客", home: "首页", related: "相关服务", ctaTitle: "需要咨询或报价？", ctaBtn: "获取报价", faq: "常见问题" },
+const UI: Record<string, { blog: string; home: string; related: string; hubsLabel: string; ctaTitle: string; ctaBtn: string; faq: string }> = {
+  ru: { blog: "Блог", home: "Главная", related: "Смежные услуги", hubsLabel: "Каталог по теме", ctaTitle: "Нужна консультация или расчёт?", ctaBtn: "Получить КП", faq: "Частые вопросы" },
+  uz: { blog: "Blog", home: "Bosh sahifa", related: "Aloqador xizmatlar", hubsLabel: "Mavzu bo'yicha katalog", ctaTitle: "Maslahat yoki hisob-kitob kerakmi?", ctaBtn: "Taklif olish", faq: "Ko'p so'raladigan savollar" },
+  en: { blog: "Blog", home: "Home", related: "Related services", hubsLabel: "Catalog on the topic", ctaTitle: "Need advice or a quote?", ctaBtn: "Get a quote", faq: "FAQ" },
+  tr: { blog: "Blog", home: "Ana sayfa", related: "İlgili hizmetler", hubsLabel: "Konuya göre katalog", ctaTitle: "Danışmanlık veya teklif?", ctaBtn: "Teklif al", faq: "SSS" },
+  zh: { blog: "博客", home: "首页", related: "相关服务", hubsLabel: "相关产品目录", ctaTitle: "需要咨询或报价？", ctaBtn: "获取报价", faq: "常见问题" },
+};
+
+// Названия товарных хабов для чипов «Каталог по теме» (слаг = /products/type/<slug>)
+const HUB_LABELS: Record<string, Record<string, string>> = {
+  "ip-kamery": { ru: "IP-камеры", uz: "IP-kameralar", en: "IP cameras", tr: "IP kameralar", zh: "IP摄像机" },
+  "ip-videoregistratory-nvr": { ru: "IP-видеорегистраторы (NVR)", uz: "IP-videoregistratorlar (NVR)", en: "Network video recorders (NVR)", tr: "Kayıt cihazları (NVR)", zh: "网络录像机（NVR）" },
+  "turnikety-i-shlagbaumy": { ru: "Турникеты и шлагбаумы", uz: "Turniket va shlagbaumlar", en: "Turnstiles and barriers", tr: "Turnikeler ve bariyerler", zh: "闸机与道闸" },
+  "kommutatory": { ru: "Коммутаторы", uz: "Kommutatorlar", en: "Switches", tr: "Switch'ler", zh: "交换机" },
+  "marshrutizatory": { ru: "Маршрутизаторы", uz: "Marshrutizatorlar", en: "Routers", tr: "Yönlendiriciler", zh: "路由器" },
+  "wi-fi-tochki-dostupa": { ru: "Wi-Fi точки доступа", uz: "Wi-Fi kirish nuqtalari", en: "Wi-Fi access points", tr: "Wi-Fi erişim noktaları", zh: "Wi-Fi接入点" },
+  "ibp-i-elektropitanie": { ru: "ИБП и электропитание", uz: "UPS va elektr ta'minoti", en: "UPS and power", tr: "UPS ve güç", zh: "UPS与电源" },
+  "pozharnaya-bezopasnost": { ru: "Пожарная безопасность", uz: "Yong'in xavfsizligi", en: "Fire safety", tr: "Yangın güvenliği", zh: "消防安全" },
+  "ognetushiteli": { ru: "Огнетушители", uz: "O't o'chirgichlar", en: "Fire extinguishers", tr: "Yangın tüpleri", zh: "灭火器" },
+  "pon-oborudovanie": { ru: "PON-оборудование", uz: "PON uskunalari", en: "PON equipment", tr: "PON ekipmanı", zh: "PON设备" },
+  "optika-i-aksessuary": { ru: "Оптика и аксессуары", uz: "Optika va aksessuarlar", en: "Optics and accessories", tr: "Optik ve aksesuarlar", zh: "光纤与配件" },
+  "telekommunikacionnye-shkafy": { ru: "Телекоммуникационные шкафы", uz: "Telekommunikatsiya shkaflari", en: "Network cabinets", tr: "Kabinetler", zh: "网络机柜" },
+  "zhestkie-diski": { ru: "Жёсткие диски", uz: "Qattiq disklar", en: "Hard drives", tr: "Sabit diskler", zh: "硬盘" },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
@@ -45,6 +62,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
   const related = article.related
     .filter((k) => serviceByKey[k])
     .map((k) => ({ key: k, label: getServiceSeo(locale, k)?.h1 ?? ts(`${k}.title`) }));
+
+  // Товарные хабы «Каталог по теме» — вторая нога перелинковки: статья → /products/type/<slug>
+  const hubs = (article.hubs ?? [])
+    .filter((h) => HUB_LABELS[h])
+    .map((h) => ({ slug: h, label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru }));
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -155,6 +177,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                     className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
                   >
                     {r.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hubs.length > 0 && (
+            <div className="mt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ui.hubsLabel}</p>
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                {hubs.map((h) => (
+                  <Link
+                    key={h.slug}
+                    href={`/products/type/${h.slug}`}
+                    className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
+                  >
+                    {h.label}
                   </Link>
                 ))}
               </div>
