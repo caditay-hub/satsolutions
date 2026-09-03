@@ -313,12 +313,15 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             if (prodUzs > 0) {
               const corridor = byName(await getProducts(1, lim, {
                 type: tn,
+                // name_desc при #слове: кириллица сортируется после латиницы, ASC-лимит
+                // съедали HDMI/4G — в DESC русские «Кронштейн…» идут в начале выборки
+                sort: word ? "name_desc" : undefined,
                 priceMin: Math.max(1, Math.round(prodUzs * 0.03)),
                 priceMax: Math.round(prodUzs * 0.7),
               }).catch(() => ({ items: [] as any[] })));
               if (corridor.items.length >= 2) return corridor;
             }
-            return byName(await getProducts(1, lim, { type: tn }).catch(() => ({ items: [] as any[] })));
+            return byName(await getProducts(1, lim, { type: tn, sort: word ? "name_desc" : undefined }).catch(() => ({ items: [] as any[] })));
           };
           const lists = await Promise.all(accCats.slice(0, 3).map(fetchType));
           const seed = Array.from(String(product.id)).reduce((s, ch) => (s * 31 + ch.charCodeAt(0)) >>> 0, 7);
