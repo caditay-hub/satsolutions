@@ -472,8 +472,12 @@ export default async function HomePage() {
               </Link>
             </div>
 
-            {/* Horizontal scroll rail — отраслевые решения */}
-            <div className="-mx-3 sm:-mx-6 px-3 sm:px-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {/* Horizontal scroll rail — отраслевые решения.
+                Без scroll-smooth: в связке со snap-mandatory первичный ре-снап выполнялся
+                анимированным скроллом ДО первой отрисовки, Chromium считал его скроллом
+                страницы и переставал регистрировать LCP-кандидатов вовсе — PSI/Lighthouse
+                падал с NO_LCP на всей главной (сам scroll-behavior юзер-скроллу не нужен). */}
+            <div className="-mx-3 sm:-mx-6 px-3 sm:px-6 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               <div className="flex gap-4 sm:gap-5 pb-4">
                 {INDUSTRIES.map((s) => (
                   <Link
