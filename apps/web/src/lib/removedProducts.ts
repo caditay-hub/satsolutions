@@ -669,4 +669,7 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // DS-K7P03 (дубль бесконтактной DS-K7P03A), pxt-UAP-AC-Pro (дубль ubnt-карточки).
   "hik-ds-k7p03": "hikvision",
   "pxt-uap-ac-pro": "ubiquiti",
+  // 2026-09-04: снят по решению владельца — OEM-адаптер MOSO X30-T1670R360-060P0-Q,
+  // фотографии нет ни у Hikvision (позиция не публикуется), ни у дистрибьюторов CIS.
+  "hik-ds-x30-t1670r360-060p0-q-36v1-67a-60w-36": "hikvision",
 };
