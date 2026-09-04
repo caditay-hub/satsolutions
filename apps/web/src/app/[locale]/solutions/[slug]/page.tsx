@@ -23,7 +23,8 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { Lightbox } from "@/components/Lightbox";
-import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
+import { serviceByKey, SERVICE_FAQ, INDUSTRIES } from "@/lib/servicesData";
+import { FeedbackForm } from "@/components/FeedbackForm";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
 import { SERVICE_TO_GROUP } from "@/lib/groupSeo";
@@ -595,6 +596,42 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       </div>
 
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
+
+      {/* Отраслевые страницы: встроенная форма запроса расчёта (B2B-план) — инлайн
+          конвертирует лучше кнопки-модалки; сама форма локализована (namespace form),
+          лид уходит тем же каналом с gclid. */}
+      {INDUSTRIES.some((i) => i.key === svc.key) && (
+        <section className="bg-slate-50 border-y border-slate-200">
+          <div className="container-page grid gap-8 py-12 sm:py-14 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-600">
+                {({ ru: "Бесплатный расчёт", uz: "Bepul hisob-kitob", en: "Free estimate", tr: "Ücretsiz keşif", zh: "免费测算" } as Record<string, string>)[locale] ?? "Бесплатный расчёт"}
+              </p>
+              <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
+                {({
+                  ru: "Получите расчёт под ваш объект",
+                  uz: "Obyektingiz uchun hisob-kitob oling",
+                  en: "Get an estimate for your site",
+                  tr: "Sahanız için keşif alın",
+                  zh: "获取您项目的方案测算",
+                } as Record<string, string>)[locale] ?? "Получите расчёт под ваш объект"}
+              </h2>
+              <p className="mt-3 max-w-md text-sm text-slate-600 sm:text-base">
+                {({
+                  ru: "Опишите задачу или пришлите план помещения — инженер подготовит схему, спецификацию и смету. Выезд на объект по Ташкенту бесплатный.",
+                  uz: "Vazifani ta'riflang yoki xona planini yuboring — muhandis sxema, spetsifikatsiya va smeta tayyorlaydi. Toshkent bo'ylab obyektga chiqish bepul.",
+                  en: "Describe the task or send a floor plan — an engineer prepares the layout, specification and estimate. Site visits in Tashkent are free.",
+                  tr: "İşi anlatın veya kat planını gönderin — mühendis şema, şartname ve keşif hazırlar. Taşkent'te saha ziyareti ücretsizdir.",
+                  zh: "描述需求或发来平面图——工程师将准备布点方案、清单和预算。塔什干范围内免费上门勘察。",
+                } as Record<string, string>)[locale] ?? ""}
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+              <FeedbackForm hideHeader />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="bg-slate-900 text-white">

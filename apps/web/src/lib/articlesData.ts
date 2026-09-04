@@ -23,6 +23,921 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "trubka-domofona-zamena",
+    date: "2026-09-04",
+    related: ["intercom"],
+    hubs: ["videodomofony"],
+    loc: {
+      ru: {
+        title: "Трубка домофона: как подобрать совместимую и заменить самому",
+        excerpt: "Почему трубки домофона не взаимозаменяемы: координатные и цифровые системы, как определить свою по подъездному блоку, полярность и перемычки номера, апгрейд трубки до видеомонитора.",
+        sections: [
+          { h: "Почему «любая трубка» не подойдёт", p: [
+            "Трубка домофона выглядит одинаково у всех, но внутри подъездные системы делятся на два несовместимых мира: координатные и цифровые. В координатных каждая квартира подключена своей парой контактов на этажном коммутаторе, в цифровых все квартиры сидят на общей двухпроводной шине, и трубка сама «знает» свой номер.",
+            "Поэтому трубка от цифровой системы в координатном подъезде просто промолчит, и наоборот. Первое, что нужно узнать перед покупкой, — тип вашей системы, а не бренд трубки: внутри каждого типа совместимость между производителями как раз неплохая.",
+          ] },
+          { h: "Как определить свою систему", p: [
+            "Самый надёжный способ — посмотреть на старую трубку: на плате координатной модели два винтовых контакта и никаких переключателей, у цифровой — ряд перемычек или DIP-переключателей для набора номера квартиры. Если трубки нет, загляните в паспорт домофона или спросите обслуживающую организацию.",
+            "Косвенные признаки тоже работают: координатные системы — это классические подъездные домофоны массовых серий (Cyfral, Vizit, Metakom и похожие), цифровые чаще встречаются в новых домах. Стопроцентной гарантии бренд панели не даёт — у многих производителей есть обе линейки, поэтому плата трубки надёжнее логотипа.",
+          ] },
+          { h: "Замена координатной трубки", p: [
+            "В координатной системе трубка подключается двумя проводами, и главный подводный камень — полярность: перепутаете плюс с минусом, и трубка будет звонить, но не откроет дверь, или замолчит вовсе. Пометьте провода перед снятием старой трубки — это сэкономит перебор вариантов.",
+            "Порядок работы простой: снять старую трубку с кронштейна, отвернуть две клеммы, подключить новую с соблюдением полярности, повесить и проверить весь цикл — вызов, разговор, открытие. Если после замены звонок есть, а дверь не открывается, в 9 случаях из 10 достаточно поменять провода местами.",
+          ] },
+          { h: "Замена цифровой трубки", p: [
+            "В цифровой системе полярность тоже важна, но добавляется главный шаг — набор номера квартиры перемычками или DIP-переключателями на плате. Номер набирается в двоичном виде: сумма значений замкнутых перемычек (1, 2, 4, 8, 16…) должна дать номер вашей квартиры.",
+            "Например, квартира 21 — это перемычки 16 + 4 + 1. Ошибётесь — звонки начнут приходить соседям или не будут приходить никому. После набора номера цикл проверки тот же: вызов с панели, разговор, открытие двери.",
+          ] },
+          { h: "Апгрейд: из трубки — в видеомонитор", p: [
+            "Аудиотрубку в квартире можно заменить не только на такую же, но и на видеомонитор: для координатных подъездных систем выпускаются мониторы со встроенным модулем сопряжения — они звонят от подъездной панели и показывают гостя, если в подъезде видеопанель.",
+            "Это самый доступный путь к видеодомофону в квартире без переделки подъездной системы. А если хочется звонков на смартфон и своей панели у двери — это уже IP-домофон, о нём у нас отдельная статья.",
+          ] },
+          { h: "Если возиться некогда", p: [
+            "Подберём совместимую трубку или видеомонитор под вашу подъездную систему и заменим за один визит: мастер определит тип системы на месте, подключит с правильной полярностью и настроит номер. Заодно проверим линию и кнопку открытия — часто «виновата» не трубка.",
+            "Выезд по Ташкенту бесплатный. Если задача шире замены трубки — модернизация домофона в частном доме или офисе, видеонаблюдение у входа — посчитаем варианты на месте.",
+          ] },
+        ],
+        faq: [
+          { q: "Подойдёт ли трубка другого бренда?", a: "Внутри одного типа системы — обычно да: координатные трубки разных марок взаимозаменяемы, как и цифровые между собой. Не подойдёт трубка другого ТИПА: координатная в цифровой подъезд и наоборот." },
+          { q: "Поменял трубку — звонит, но дверь не открывает. Что не так?", a: "Классика координатных систем: перепутана полярность. Поменяйте два провода местами на клеммах трубки — в подавляющем большинстве случаев этого достаточно." },
+          { q: "Можно ли поставить трубку с регулировкой громкости и отключением звука?", a: "Да, такие модели есть в обеих системах: переключатель громкости или рычажок «не беспокоить» стоит прямо на корпусе. При подборе скажите, что нужна эта функция — по подключению такие трубки не отличаются от обычных." },
+        ],
+      },
+      uz: {
+        title: "Domofon trubkasi: mosini qanday tanlash va o'zingiz almashtirish",
+        excerpt: "Nega domofon trubkalari o'zaro almashinmaydi: koordinatali va raqamli tizimlar, o'zingiznikini qanday aniqlash, qutb va raqam peremychkalari, trubkani videomonitorga yangilash.",
+        sections: [
+          { h: "Nega «istalgan trubka» to'g'ri kelmaydi", p: [
+            "Domofon trubkasi hammada bir xil ko'rinadi, lekin ichkarida podezd tizimlari ikki nomuvofiq olamga bo'linadi: koordinatali va raqamli. Koordinatalida har kvartira qavat kommutatorida o'z kontakt jufti bilan ulangan, raqamlida hamma kvartiralar umumiy ikki simli shinada o'tiradi va trubka o'z raqamini o'zi «biladi».",
+            "Shuning uchun raqamli tizim trubkasi koordinatali podezdda shunchaki jim turadi, aksincha ham. Xariddan oldin bilish kerak bo'lgan birinchi narsa — trubka brendi emas, tizimingiz turi: har tur ichida ishlab chiqaruvchilar orasidagi moslik yaxshi.",
+          ] },
+          { h: "O'z tizimingizni qanday aniqlash", p: [
+            "Eng ishonchli yo'l — eski trubkaga qarash: koordinatali model platasida ikkita vintli kontakt bor va hech qanday o'tkazgichlar yo'q, raqamlida — kvartira raqamini teradigan peremychkalar yoki DIP-o'tkazgichlar qatori. Trubka bo'lmasa, domofon pasportiga qarang yoki xizmat tashkilotidan so'rang.",
+            "Bilvosita belgilar ham ishlaydi: koordinatali tizimlar — ommaviy seriyalarning klassik podezd domofonlari (Cyfral, Vizit, Metakom va o'xshashlari), raqamlilar yangi uylarda ko'proq uchraydi. Panel brendi yuz foiz kafolat bermaydi — ko'p ishlab chiqaruvchilarda ikkala liniya ham bor, shuning uchun trubka platasi logotipdan ishonchliroq.",
+          ] },
+          { h: "Koordinatali trubkani almashtirish", p: [
+            "Koordinatali tizimda trubka ikki sim bilan ulanadi va bosh tuzoq — qutb: plyus bilan minusni adashtir sangiz, trubka jiringlaydi-yu eshikni ochmaydi, yoki butunlay jim bo'ladi. Eski trubkani olishdan oldin simlarni belgilab oling — variantlarni terib chiqishdan qutqaradi.",
+            "Ish tartibi oddiy: eski trubkani kronshteyndan olish, ikkita klemmani bo'shatish, yangisini qutbga rioya qilib ulash, osish va butun tsiklni tekshirish — chaqiruv, suhbat, ochish. Almashtirishdan keyin qo'ng'iroq bor-u eshik ochilmasa, o'ntadan to'qqiz holatda simlarning o'rnini almashtirish kifoya.",
+          ] },
+          { h: "Raqamli trubkani almashtirish", p: [
+            "Raqamli tizimda ham qutb muhim, lekin bosh qadam qo'shiladi — platadagi peremychkalar yoki DIP-o'tkazgichlar bilan kvartira raqamini terish. Raqam ikkilik ko'rinishda teriladi: yopiq peremychkalar qiymatlari yig'indisi (1, 2, 4, 8, 16…) kvartirangiz raqamini berishi kerak.",
+            "Masalan, 21-kvartira — bu 16 + 4 + 1 peremychkalari. Adashsangiz — qo'ng'iroqlar qo'shnilarga bora boshlaydi yoki hech kimga bormaydi. Raqam terilgach, tekshirish tsikli o'sha: paneldan chaqiruv, suhbat, eshikni ochish.",
+          ] },
+          { h: "Yangilash: trubkadan videomonitorga", p: [
+            "Kvartiradagi audiotrubkani xuddi shundayiga emas, videomonitorga ham almashtirish mumkin: koordinatali podezd tizimlari uchun moslash moduli o'rnatilgan monitorlar chiqariladi — ular podezd panelidan jiringlaydi va podezdda videopanel bo'lsa, mehmonni ko'rsatadi.",
+            "Bu podezd tizimini qayta qurmasdan kvartirada videodomofonga eng arzon yo'l. Smartfonga qo'ng'iroq va eshik yonida o'z panelingiz kerak bo'lsa — bu endi IP-domofon, u haqda alohida maqolamiz bor.",
+          ] },
+          { h: "Ovora bo'lishga vaqt bo'lmasa", p: [
+            "Podezd tizimingizga mos trubka yoki videomonitor tanlab, bir tashrifda almashtiramiz: usta tizim turini joyida aniqlaydi, to'g'ri qutb bilan ulaydi va raqamni sozlaydi. Yo'l-yo'lakay liniya va ochish tugmasini tekshiramiz — ko'pincha «aybdor» trubka emas.",
+            "Toshkent bo'ylab chiqish bepul. Vazifa trubka almashtirishdan keng bo'lsa — xususiy uy yoki ofisda domofonni modernizatsiya qilish, kirishda videokuzatuv — variantlarni joyida hisoblaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Boshqa brend trubkasi to'g'ri keladimi?", a: "Bitta tizim turi ichida — odatda ha: turli marka koordinatali trubkalari o'zaro almashinadi, raqamlilar ham o'zaro. Boshqa TURdagi trubka to'g'ri kelmaydi: koordinatali raqamli podezdga va aksincha." },
+          { q: "Trubkani almashtirdim — jiringlaydi, lekin eshikni ochmaydi. Nima bo'ldi?", a: "Koordinatali tizimlar klassikasi: qutb adashgan. Trubka klemmalaridagi ikki simning o'rnini almashtiring — aksariyat hollarda shu kifoya." },
+          { q: "Ovoz regulyatori va ovozni o'chirishli trubka qo'ysa bo'ladimi?", a: "Ha, bunday modellar ikkala tizimda ham bor: ovoz o'tkazgichi yoki «bezovta qilmang» richagi korpusning o'zida. Tanlashda shu funksiya kerakligini ayting — ulanish bo'yicha ular oddiylardan farq qilmaydi." },
+        ],
+      },
+      en: {
+        title: "Intercom handset: choosing a compatible one and replacing it yourself",
+        excerpt: "Why intercom handsets are not interchangeable: coordinate and digital systems, how to identify yours, polarity and apartment number jumpers, and upgrading a handset to a video monitor.",
+        sections: [
+          { h: "Why 'any handset' will not do", p: [
+            "Intercom handsets all look alike, but inside, building systems split into two incompatible worlds: coordinate and digital. In coordinate systems every apartment hangs on its own contact pair at the floor switch; in digital ones all apartments share a two-wire bus and the handset itself 'knows' its number.",
+            "So a digital-system handset in a coordinate building simply stays silent, and vice versa. The first thing to find out before buying is your system type, not the handset brand: within each type, cross-vendor compatibility is actually decent.",
+          ] },
+          { h: "How to identify your system", p: [
+            "The most reliable way is to look at the old handset: a coordinate model's board has two screw terminals and no switches, a digital one carries a row of jumpers or DIP switches for the apartment number. Without a handset, check the intercom passport or ask the service company.",
+            "Indirect signs work too: coordinate systems are the classic mass-market building intercoms (Cyfral, Vizit, Metakom and the like), digital ones are more common in newer buildings. The panel brand is not a guarantee — many vendors make both lines, so the handset's board tells more than the logo.",
+          ] },
+          { h: "Replacing a coordinate handset", p: [
+            "In a coordinate system the handset connects with two wires, and the main trap is polarity: swap plus and minus and the handset will ring but not open the door — or go silent. Label the wires before removing the old handset and you skip the guesswork.",
+            "The procedure is simple: take the old handset off its bracket, free the two terminals, connect the new one observing polarity, hang it and test the full cycle — call, talk, door release. If after replacement it rings but the door will not open, nine times out of ten swapping the two wires fixes it.",
+          ] },
+          { h: "Replacing a digital handset", p: [
+            "In a digital system polarity matters too, but the key extra step is setting the apartment number with jumpers or DIP switches on the board. The number is set in binary: the sum of closed jumper values (1, 2, 4, 8, 16…) must equal your apartment number.",
+            "Apartment 21, for example, is jumpers 16 + 4 + 1. Get it wrong and the calls go to a neighbor — or to no one. After setting the number the test cycle is the same: call from the panel, talk, open the door.",
+          ] },
+          { h: "The upgrade: from a handset to a video monitor", p: [
+            "An audio handset can be replaced not only like-for-like but with a video monitor: for coordinate building systems there are monitors with a built-in adapter module — they ring from the building panel and show the visitor when the entrance has a video station.",
+            "This is the cheapest path to video intercom in an apartment without touching the building system. If you want smartphone calls and your own door station, that is an IP intercom — we have a separate article about it.",
+          ] },
+          { h: "If you would rather not tinker", p: [
+            "We will match a compatible handset or video monitor to your building system and replace it in one visit: the technician identifies the system type on site, connects with correct polarity and sets the number. We also check the line and the release button — often the handset is not the culprit at all.",
+            "Visits are free in Tashkent. If the task is bigger than a handset — upgrading the intercom of a house or office, adding a camera at the entrance — we price the options on the spot.",
+          ] },
+        ],
+        faq: [
+          { q: "Will a handset of another brand fit?", a: "Within one system type — usually yes: coordinate handsets of different makes interchange, and so do digital ones among themselves. What will not fit is a handset of the other TYPE: coordinate into a digital building or vice versa." },
+          { q: "I replaced the handset — it rings but will not open the door. What is wrong?", a: "The coordinate-system classic: reversed polarity. Swap the two wires on the handset terminals — in the vast majority of cases that is all it takes." },
+          { q: "Are there handsets with volume control and a mute switch?", a: "Yes, both systems have such models: the volume switch or a 'do not disturb' lever sits right on the body. Mention the feature when choosing — wiring-wise these handsets are no different from regular ones." },
+        ],
+      },
+      tr: {
+        title: "Diafon ahizesi: uyumlusunu seçmek ve kendiniz değiştirmek",
+        excerpt: "Diafon ahizeleri neden birbirinin yerine geçmez: koordinat ve dijital sistemler, kendi sisteminizi tanıma, kutup ve daire numarası atlamaları, ahizeyi görüntülü monitöre yükseltme.",
+        sections: [
+          { h: "Neden 'herhangi bir ahize' olmaz", p: [
+            "Diafon ahizeleri dışarıdan aynı görünür ama bina sistemleri içeride iki uyumsuz dünyaya ayrılır: koordinat ve dijital. Koordinat sistemde her daire kat santralinde kendi kontak çiftine bağlıdır; dijitalde tüm daireler ortak iki telli veriyolundadır ve ahize numarasını kendisi 'bilir'.",
+            "Bu yüzden dijital sistemin ahizesi koordinat binada sessiz kalır, tersi de öyle. Satın almadan önce öğrenilecek ilk şey ahize markası değil, sisteminizin türüdür: her tür içinde üreticiler arası uyumluluk gayet iyidir.",
+          ] },
+          { h: "Sisteminizi nasıl tanırsınız", p: [
+            "En güvenilir yol eski ahizeye bakmaktır: koordinat modelin kartında iki vidalı klemens vardır, hiç anahtar yoktur; dijitalde daire numarası için atlama teli veya DIP anahtar dizisi bulunur. Ahize yoksa diafonun kılavuzuna bakın ya da servis firmasına sorun.",
+            "Dolaylı işaretler de çalışır: koordinat sistemler kitlesel serilerin klasik bina diafonlarıdır (Cyfral, Vizit, Metakom ve benzerleri), dijitaller yeni binalarda daha yaygındır. Panel markası garanti vermez — çoğu üreticinin iki serisi de vardır; ahize kartı logodan daha güvenilirdir.",
+          ] },
+          { h: "Koordinat ahizeyi değiştirmek", p: [
+            "Koordinat sistemde ahize iki telle bağlanır ve baş tuzak kutuptur: artıyla eksiyi karıştırırsanız ahize çalar ama kapıyı açmaz, ya da tamamen susar. Eski ahizeyi sökmeden önce telleri işaretleyin — deneme yanılmadan kurtarır.",
+            "İşlem basit: eski ahizeyi askıdan alın, iki klemensi çözün, yenisini kutba uyarak bağlayın, asın ve tam döngüyü test edin — arama, konuşma, kapı açma. Değişimden sonra zil çalıyor ama kapı açılmıyorsa, onda dokuz iki teli yer değiştirmek yeter.",
+          ] },
+          { h: "Dijital ahizeyi değiştirmek", p: [
+            "Dijital sistemde de kutup önemlidir ama asıl ek adım, karttaki atlama telleri veya DIP anahtarlarla daire numarasını ayarlamaktır. Numara ikilik düzende girilir: kapalı atlamaların değer toplamı (1, 2, 4, 8, 16…) daire numaranızı vermelidir.",
+            "Örneğin daire 21 = 16 + 4 + 1 atlamaları. Yanılırsanız aramalar komşuya gider — ya da kimseye gitmez. Numara ayarlandıktan sonra test aynı: panelden arama, konuşma, kapıyı açma.",
+          ] },
+          { h: "Yükseltme: ahizeden görüntülü monitöre", p: [
+            "Dairedeki sesli ahize yalnız aynısıyla değil, görüntülü monitörle de değiştirilebilir: koordinat bina sistemleri için uyum modülü yerleşik monitörler üretiliyor — bina panelinden çalar ve girişte görüntülü panel varsa konuğu gösterir.",
+            "Bu, bina sistemine dokunmadan dairede görüntülü diafona giden en ucuz yoldur. Akıllı telefona arama ve kendi kapı paneliniz isteniyorsa o artık IP diafondur — onun için ayrı yazımız var.",
+          ] },
+          { h: "Uğraşacak vaktiniz yoksa", p: [
+            "Bina sisteminize uyumlu ahize veya görüntülü monitörü seçip tek ziyarette değiştiririz: usta sistem türünü yerinde belirler, doğru kutupla bağlar ve numarayı ayarlar. Hattı ve açma butonunu da kontrol ederiz — çoğu kez 'suçlu' ahize değildir.",
+            "Taşkent'te ziyaret ücretsiz. İş ahize değişiminden büyükse — evde veya ofiste diafon yenileme, girişe kamera — seçenekleri yerinde fiyatlandırırız.",
+          ] },
+        ],
+        faq: [
+          { q: "Başka markanın ahizesi uyar mı?", a: "Aynı sistem türü içinde genelde evet: farklı markaların koordinat ahizeleri birbirinin yerine geçer, dijitaller de kendi aralarında. Uymayan, diğer TÜRÜN ahizesidir: dijital binaya koordinat ya da tersi." },
+          { q: "Ahizeyi değiştirdim — çalıyor ama kapıyı açmıyor. Sorun ne?", a: "Koordinat sistemlerin klasiği: ters kutup. Ahize klemensindeki iki teli yer değiştirin — vakaların büyük çoğunluğunda bu yeterlidir." },
+          { q: "Ses ayarı ve sessize alma olan ahize var mı?", a: "Evet, iki sistemde de var: ses anahtarı veya 'rahatsız etmeyin' kolu gövdenin üstündedir. Seçerken bu özelliği söyleyin — bağlantı olarak sıradan ahizelerden farkı yoktur." },
+        ],
+      },
+      zh: {
+        title: "楼宇对讲听筒：如何选对型号并自己更换",
+        excerpt: "为什么对讲听筒不能随便换：模拟总线制与数字制的区别、如何判断自家系统、极性与房号跳线、把听筒升级成可视分机。",
+        sections: [
+          { h: "为什么「随便一个听筒」装不上", p: [
+            "对讲听筒外表都差不多，但楼宇系统内部分成互不兼容的两个世界：模拟总线制（坐标制）和数字制。坐标制里每户在层间分配器上有自己的一对触点；数字制里全楼共用两芯总线，听筒自己「记得」房号。",
+            "所以数字制的听筒装进坐标制单元只会沉默，反之亦然。买前要先弄清的是系统类型，而不是听筒品牌：同一类型内部，各厂家之间兼容性其实不错。",
+          ] },
+          { h: "如何判断自家的系统", p: [
+            "最可靠的办法是看旧听筒：坐标制的电路板上只有两个螺丝接线端、没有任何开关；数字制的板上有一排设房号的跳线或拨码开关。没有旧听筒，就查对讲说明书或问维保单位。",
+            "间接特征也有用：坐标制是大批量老系统的经典楼宇对讲（Cyfral、Vizit、Metakom等），数字制多见于新楼。面板品牌不能打包票——许多厂家两条产品线都有，所以听筒电路板比商标更可信。",
+          ] },
+          { h: "更换坐标制听筒", p: [
+            "坐标制听筒只接两根线，最大的坑是极性：正负接反，听筒会响铃却开不了门，或者干脆不响。拆旧听筒前给两根线做好记号——省得来回试。",
+            "步骤很简单：把旧听筒从挂架取下、松开两个端子、按极性接上新听筒、挂好并测完整流程——呼叫、通话、开门。换完能响铃但开不了门的，十有八九对调两根线即可。",
+          ] },
+          { h: "更换数字制听筒", p: [
+            "数字制同样讲极性，但多了关键一步——用板上的跳线或拨码设定房号。房号按二进制设：闭合跳线的数值之和（1、2、4、8、16……）要等于您的房号。",
+            "比如21号房＝16+4+1三个跳线。设错了，铃声会跑到邻居家——或者谁也收不到。设好房号后测试流程一样：门口机呼叫、通话、开门。",
+          ] },
+          { h: "升级：把听筒换成可视分机", p: [
+            "户内的语音听筒不仅能换同款，还能换成可视分机：市面上有内置协议适配模块的坐标制分机——它接楼宇门口机的呼叫，若单元门装了摄像门口机还能看到访客。",
+            "这是不动楼宇系统、让家里用上可视对讲的最省钱路径。若想要手机接听和自家门口机——那就是IP对讲了，我们有专文介绍。",
+          ] },
+          { h: "不想折腾的话", p: [
+            "我们按您的楼宇系统选好兼容听筒或可视分机，一次上门换好：师傅现场判断系统类型、按正确极性接线并设好房号。顺带检查线路和开门按键——「元凶」常常不是听筒。",
+            "塔什干范围上门免费。若需求不止换听筒——独栋或办公室对讲改造、入口加装摄像机——现场就能算出方案。",
+          ] },
+        ],
+        faq: [
+          { q: "别的牌子的听筒能用吗？", a: "同一系统类型内通常可以：各品牌坐标制听筒互换，数字制之间也互换。不能用的是另一类型的听筒：坐标制装进数字制单元，或者反过来。" },
+          { q: "换了听筒——响铃但开不了门，怎么回事？", a: "坐标制的经典问题：极性接反。把听筒端子上的两根线对调——绝大多数情况到此解决。" },
+          { q: "有带音量调节和静音的听筒吗？", a: "有，两种系统都有这类型号：音量拨轮或「免打扰」拨杆就在机身上。选购时说明需要此功能——接线方式与普通听筒无异。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "domofon-ne-rabotaet",
+    date: "2026-09-04",
+    related: ["intercom"],
+    hubs: ["videodomofony"],
+    loc: {
+      ru: {
+        title: "Домофон не работает или не звонит: причины и что делать",
+        excerpt: "Разбираем типовые поломки домофона: трубка молчит, звук в одну сторону, дверь не открывается, нет изображения, IP-домофон не шлёт звонок на телефон. Что проверить самому и когда звать мастера.",
+        sections: [
+          { h: "Трубка молчит совсем", p: [
+            "Если при вызове квартиры панель даже не пикает — начинайте с самого простого: трубка снята с рычага или он подклинил. Дальше по цепочке: провод трубки часто перетирается у входа в корпус — от ежедневных снятий он страдает первым, и обрыв внутри изоляции глазом не виден.",
+            "Когда молчит весь подъезд, дело не в квартире, а в блоке питания или коммутаторе домофонной системы — это зона ответственности обслуживающей организации. Проверить просто: если у соседей домофон тоже мёртв, звоните оператору, а не разбирайте трубку.",
+          ] },
+          { h: "Звук есть, но в одну сторону", p: [
+            "Односторонняя слышимость — почти всегда сама трубка: динамик или микрофон. У гостя на панели вас слышно, а вы его нет — под подозрением динамик; наоборот — микрофон. Замена трубки решает вопрос быстрее, чем ремонт: механика копеечная, а паять выгоревший микрофон дороже новой трубки.",
+            "Вторая причина — регулятор громкости, который есть у многих трубок сбоку или снизу: его случайно сдвигают в ноль при уборке. Банально, но с этого стоит начать — как и с плотности вставки штекеров, если трубка разборная.",
+          ] },
+          { h: "Дверь не открывается с трубки", p: [
+            "Если разговор работает, а кнопка открытия — нет, смотрите по порядку: кнопка в трубке (изнашивается от нажатий), затем замок. Электромагнитный замок при усталости «держит слабее» — дверь открывается рывком; электромеханический — щёлкает, но язычок не убирает из-за перекоса двери или износа механизма.",
+            "Частый виновник — доводчик: дверь «не дожимается», замок не встаёт в рабочее положение, и электроника тут ни при чём. Проверьте, закрывается ли дверь до конца сама — регулировка доводчика решает половину «поломок замка».",
+          ] },
+          { h: "Видеодомофон: нет картинки или помехи", p: [
+            "Чёрный экран при работающем звуке — питание камеры панели или видеожила кабеля. Рябь, полосы и «плывущее» изображение — классика наводок: видеосигнал проложен рядом с силовым кабелем или соединён скрутками. Лечится переобжимом соединений и разносом трасс, в упорных случаях — заменой кабеля на экранированный.",
+            "Если картинка пропадает только ночью — посмотрите на ИК-подсветку панели: диоды выгорают, и камера «слепнет» в темноте. А изображение «в молоке» днём — обычно просто грязное или поцарапанное стекло панели: начните с протирки, прежде чем грешить на электронику.",
+          ] },
+          { h: "IP-домофон: не приходит звонок на телефон", p: [
+            "У IP-домофонов своя специфика: локально всё работает, а звонок на смартфон не приходит. В девяти случаях из десяти виновата экономия батареи на Android, усыпляющая приложение — уберите его из оптимизации и разрешите фон. Остальное — сеть: панель отвалилась от Wi-Fi после смены роутера или пароля.",
+            "Подробный разбор настройки звонка на телефон, порядка вызова и прав доступа мы сделали в отдельной статье про IP-домофон Hikvision и Hik-Connect — если у вас именно этот случай, начните с неё.",
+          ] },
+          { h: "Когда чинить, а когда менять", p: [
+            "Чинить имеет смысл точечно: трубку, кнопку, блок питания, доводчик. Менять систему стоит, когда отказы стали регулярными, запчастей на модель больше нет или хочется современных функций — видео, звонка на телефон, ключей в смартфоне. Модернизация часто дешевле ожиданий: кабельная разводка остаётся, меняются панель и трубки.",
+            "Мы диагностируем и ремонтируем домофонию любых брендов: приедем, найдём причину — трубка, панель, замок, кабель или настройки, назовём цену до начала работ. Выезд по Ташкенту бесплатный; на складе — трубки, мониторы и панели для замены.",
+          ] },
+        ],
+        faq: [
+          { q: "Домофон хрипит и трещит — что это?", a: "Чаще всего изношенный провод трубки или окислившиеся контакты: сигнал «шуршит» на изломе. Реже — динамик с надорванной мембраной. И то и другое лечится заменой — провод и трубка стоят недорого." },
+          { q: "Могу ли я сам заменить трубку в квартире?", a: "Технически это две клеммы, но есть нюанс: в координатных системах важна полярность, а в цифровых — перемычки номера квартиры. Поставите «не так» — не будет звонка или открытия. Если сомневаетесь, мастер сделает это за один визит." },
+          { q: "Сколько стоит диагностика домофона?", a: "По Ташкенту выезд и осмотр бесплатны: проверим трубку, панель, замок и линию, назовём причину и стоимость ремонта до начала работ." },
+        ],
+      },
+      uz: {
+        title: "Domofon ishlamayapti yoki jiringlamayapti: sabablar va nima qilish kerak",
+        excerpt: "Domofonning tipik nosozliklarini ko'rib chiqamiz: trubka jim, ovoz bir tomonlama, eshik ochilmaydi, tasvir yo'q, IP-domofon telefonga qo'ng'iroq yubormaydi. Nimani o'zingiz tekshirish va qachon usta chaqirish kerak.",
+        sections: [
+          { h: "Trubka butunlay jim", p: [
+            "Kvartira chaqirilganda panel hatto piq etmasa — eng oddiysidan boshlang: trubka richagdan olingan yoki richag tiqilib qolgan. Keyin zanjir bo'ylab: trubka simi ko'pincha korpusga kirishda yeyiladi — kundalik ko'tarishlardan birinchi bo'lib u shikastlanadi, izolyatsiya ichidagi uzilish ko'zga ko'rinmaydi.",
+            "Butun podezd jim bo'lsa, gap kvartirada emas, domofon tizimining quvvat bloki yoki kommutatorida — bu xizmat ko'rsatuvchi tashkilot zonasi. Tekshirish oson: qo'shnilarda ham domofon o'lik bo'lsa, trubkani ochmasdan operatorga qo'ng'iroq qiling.",
+          ] },
+          { h: "Ovoz bor, lekin bir tomonlama", p: [
+            "Bir tomonlama eshitish — deyarli doim trubkaning o'zi: dinamik yoki mikrofon. Paneldagi mehmon sizni eshitadi, siz uni yo'q — dinamik gumon ostida; aksincha bo'lsa — mikrofon. Trubkani almashtirish ta'mirdan tez hal qiladi: kuygan mikrofonni kavsharlash yangi trubkadan qimmat.",
+            "Ikkinchi sabab — ko'p trubkalarning yon yoki pastidagi ovoz regulyatori: tozalashda uni tasodifan nolga surib qo'yishadi. Oddiy gap, lekin shundan boshlash kerak — trubka yig'ma bo'lsa, shtekerlar zich o'tirganini ham tekshiring.",
+          ] },
+          { h: "Eshik trubkadan ochilmaydi", p: [
+            "Suhbat ishlasa-yu ochish tugmasi ishlamasa, tartib bilan qarang: trubkadagi tugma (bosishlardan yeyiladi), keyin qulf. Elektromagnit qulf charchaganda «kuchsizroq ushlaydi» — eshik siltab ochiladi; elektromexanik — chiqillaydi, lekin eshik qiyshiqligi yoki mexanizm yeyilishi tufayli tilchani tortmaydi.",
+            "Tez-tez aybdor — dovodchik: eshik «oxirigacha yopilmaydi», qulf ish holatiga tushmaydi, elektronikaning esa aybi yo'q. Eshik o'zi to'liq yopilishini tekshiring — dovodchikni sozlash «qulf buzilishlarining» yarmini hal qiladi.",
+          ] },
+          { h: "Videodomofon: tasvir yo'q yoki shovqinlar", p: [
+            "Ovoz ishlab, ekran qora bo'lsa — panel kamerasining quvvati yoki kabelning video simi. Shovqin, chiziqlar va «suzuvchi» tasvir — navodkalar klassikasi: videosignal kuch kabeli yonidan o'tgan yoki skrutkalar bilan ulangan. Ulanishlarni qayta o'rnatish va trassalarni ajratish bilan davolanadi, qaysar holatlarda — ekranli kabelga almashtirish.",
+            "Tasvir faqat kechasi yo'qolsa — panelning IK-yoritishiga qarang: diodlar kuyadi va kamera qorong'ida «ko'r bo'ladi». Kunduzi «sutdagi» tasvir — odatda shunchaki iflos yoki tirnalgan panel oynasi: elektronikani ayblashdan oldin artishdan boshlang.",
+          ] },
+          { h: "IP-domofon: telefonga qo'ng'iroq kelmayapti", p: [
+            "IP-domofonlarning o'z xususiyati bor: lokal hammasi ishlaydi, smartfonga qo'ng'iroq esa kelmaydi. O'ntadan to'qqiz holatda aybdor — ilovani uxlatadigan Android batareya tejash: uni optimizatsiyadan chiqarib, fonga ruxsat bering. Qolgani — tarmoq: router yoki parol almashgandan keyin panel Wi-Fi dan uzilgan.",
+            "Telefonga qo'ng'iroq sozlash, chaqiruv tartibi va kirish huquqlarining batafsil tahlilini Hikvision IP-domofoni va Hik-Connect haqidagi alohida maqolada qilganmiz — sizda aynan shu holat bo'lsa, undan boshlang.",
+          ] },
+          { h: "Qachon ta'mirlash, qachon almashtirish", p: [
+            "Nuqtali ta'mirlash mantiqli: trubka, tugma, quvvat bloki, dovodchik. Tizimni almashtirish esa nosozliklar muntazam bo'lganda, modelga ehtiyot qismlar qolmaganda yoki zamonaviy funksiyalar — video, telefonga qo'ng'iroq, smartfondagi kalitlar — kerak bo'lganda arziydi. Modernizatsiya kutilgandan arzon chiqadi: kabel razvodkasi qoladi, panel va trubkalar almashadi.",
+            "Istalgan brend domofoniyasini diagnostika qilamiz va tuzatamiz: kelamiz, sababni topamiz — trubka, panel, qulf, kabel yoki sozlamalar, ish boshlanishidan oldin narxni aytamiz. Toshkent bo'ylab chiqish bepul; omborda — almashtirish uchun trubkalar, monitorlar va panellar.",
+          ] },
+        ],
+        faq: [
+          { q: "Domofon xirillaydi va chirillaydi — bu nima?", a: "Ko'pincha yeyilgan trubka simi yoki oksidlangan kontaktlar: signal sinish joyida «shitirlaydi». Kamroq — membranasi yirtilgan dinamik. Ikkalasi ham almashtirish bilan davolanadi — sim va trubka arzon turadi." },
+          { q: "Kvartiradagi trubkani o'zim almashtira olamanmi?", a: "Texnik jihatdan bu ikkita klemma, lekin nozik joyi bor: koordinatali tizimlarda qutb muhim, raqamlilarda — kvartira raqami peremychkalari. «Noto'g'ri» qo'ysangiz — qo'ng'iroq yoki ochilish bo'lmaydi. Ikkilansangiz, usta buni bir tashrifda qiladi." },
+          { q: "Domofon diagnostikasi qancha turadi?", a: "Toshkent bo'ylab chiqish va ko'rik bepul: trubka, panel, qulf va liniyani tekshiramiz, ish boshlanishidan oldin sabab va ta'mir narxini aytamiz." },
+        ],
+      },
+      en: {
+        title: "The intercom does not work or does not ring: causes and fixes",
+        excerpt: "Typical intercom failures explained: a silent handset, one-way audio, the door not releasing, no picture, an IP intercom that never rings the phone. What to check yourself and when to call a technician.",
+        sections: [
+          { h: "The handset is completely silent", p: [
+            "If calling the apartment gets no reaction at all, start with the simplest: the handset is off the hook or the hook switch is stuck. Next down the chain: the handset cord frays where it enters the body — daily lifting wears it first, and a break inside the insulation is invisible to the eye.",
+            "When the whole building is silent, the problem is not in your apartment but in the system's power supply or switching unit — the service company's territory. The test is simple: if the neighbors' intercoms are dead too, call the operator instead of dismantling your handset.",
+          ] },
+          { h: "There is sound, but only one way", p: [
+            "One-way audio is almost always the handset itself: the speaker or the microphone. The visitor hears you but you hear nothing — suspect the speaker; the reverse — the microphone. Replacing the handset settles it faster than repair: soldering a burnt microphone costs more than a new handset.",
+            "The second cause is the volume slider that many handsets carry on the side or bottom: it gets nudged to zero during cleaning. Trivial, but start there — and check the plugs are seated firmly if the handset is modular.",
+          ] },
+          { h: "The door does not release from the handset", p: [
+            "If the conversation works but the open button does not, check in order: the button in the handset (it wears out from presses), then the lock. A tired magnetic lock 'holds weaker' — the door opens with a jerk; an electromechanical one clicks but does not pull the latch because the door sagged or the mechanism wore out.",
+            "A frequent culprit is the door closer: the door does not press home, the lock never reaches its working position, and the electronics are innocent. Check whether the door fully closes by itself — adjusting the closer resolves half of all 'broken lock' calls.",
+          ] },
+          { h: "Video intercom: no picture or interference", p: [
+            "A black screen with working audio points to the station camera's power or the video core of the cable. Ripple, stripes and a 'floating' image are classic induced noise: the video signal runs next to a power cable or is joined with twisted splices. The cure is redone connections and separated runs; stubborn cases take shielded cable.",
+            "If the picture disappears only at night, look at the station's IR LEDs: they burn out and the camera goes blind in the dark. A 'milky' image in daytime is usually just a dirty or scratched panel window: start with a wipe before blaming electronics.",
+          ] },
+          { h: "IP intercom: no call on the phone", p: [
+            "IP intercoms fail in their own way: everything works locally, but the smartphone never rings. Nine times out of ten the culprit is Android battery saving putting the app to sleep — exclude it from optimization and allow background work. The rest is the network: the station dropped off Wi-Fi after a router or password change.",
+            "We covered phone call setup, ringing order and access rights in detail in the separate article on the Hikvision IP intercom and Hik-Connect — if that is your case, start there.",
+          ] },
+          { h: "When to repair and when to replace", p: [
+            "Point repairs make sense: the handset, the button, the power supply, the closer. Replacing the system pays when failures become regular, spares for the model are gone, or you want modern features — video, calls to the phone, keys in the smartphone. Upgrades cost less than people expect: the cabling stays, the station and handsets change.",
+            "We diagnose and repair intercoms of any brand: we come, find the cause — handset, station, lock, cable or settings — and name the price before work starts. Visits are free in Tashkent; handsets, monitors and stations for replacement are in stock.",
+          ] },
+        ],
+        faq: [
+          { q: "The intercom crackles and rasps — what is it?", a: "Most often a worn handset cord or oxidized contacts: the signal 'rustles' at the break. Less often, a speaker with a torn membrane. Both are cured by replacement — the cord and the handset cost little." },
+          { q: "Can I replace the apartment handset myself?", a: "Technically it is two terminals, with a catch: coordinate systems care about polarity, digital ones about the apartment number jumpers. Get it wrong and the ring or the door release disappears. If unsure, a technician does it in one visit." },
+          { q: "What does intercom diagnostics cost?", a: "In Tashkent the visit and inspection are free: we check the handset, station, lock and line, and name the cause and repair price before any work starts." },
+        ],
+      },
+      tr: {
+        title: "Diafon çalışmıyor veya çalmıyor: nedenler ve çözümler",
+        excerpt: "Diafonun tipik arızaları: ahize suskun, ses tek yönlü, kapı açılmıyor, görüntü yok, IP diafon telefona aramıyor. Neyi kendiniz kontrol edersiniz, ne zaman usta çağırırsınız.",
+        sections: [
+          { h: "Ahize tamamen suskun", p: [
+            "Daire arandığında panel hiç tepki vermiyorsa en basitinden başlayın: ahize yerinde değil veya çatal anahtarı sıkışmış. Zincirde sıradaki: ahize kablosu gövdeye girişte yıpranır — günlük kaldırmalardan ilk o çeker ve izolasyon içindeki kopukluk gözle görülmez.",
+            "Bütün bina suskunsa sorun dairede değil, sistemin güç kaynağında veya santral bloğundadır — bu, servis firmasının alanı. Test basit: komşuların diafonu da ölüyse ahizeyi sökmek yerine operatörü arayın.",
+          ] },
+          { h: "Ses var ama tek yönlü", p: [
+            "Tek yönlü ses neredeyse her zaman ahizenin kendisidir: hoparlör ya da mikrofon. Konuk sizi duyuyor, siz onu duymuyorsanız hoparlörden şüphelenin; tersiyse mikrofondan. Ahizeyi değiştirmek onarımdan hızlı çözer: yanmış mikrofonu lehimlemek yeni ahizeden pahalıdır.",
+            "İkinci neden, çoğu ahizenin yanında veya altında duran ses ayarıdır: temizlik sırasında istemeden sıfıra itilir. Basit ama oradan başlayın — ahize modüler ise fişlerin tam oturduğunu da kontrol edin.",
+          ] },
+          { h: "Kapı ahizeden açılmıyor", p: [
+            "Konuşma çalışıyor ama açma butonu çalışmıyorsa sırayla bakın: ahizedeki buton (basmaktan yıpranır), sonra kilit. Yorulan manyetik kilit 'daha zayıf tutar' — kapı silkelemeyle açılır; elektromekanik olanı tıklar ama kapı sarkması veya mekanizma aşınması yüzünden dili çekmez.",
+            "Sık suçlu kapı kapatıcıdır: kapı sonuna kadar bastırılmaz, kilit çalışma konumuna oturmaz ve elektroniğin suçu yoktur. Kapının kendi kendine tam kapandığını kontrol edin — kapatıcı ayarı 'kilit bozuk' çağrılarının yarısını çözer.",
+          ] },
+          { h: "Görüntülü diafon: görüntü yok veya parazit", p: [
+            "Ses çalışırken siyah ekran, panel kamerasının beslemesini veya kablonun video damarını gösterir. Karlanma, çizgiler ve 'yüzen' görüntü klasik indüksiyondur: video sinyali güç kablosunun yanından geçiyor ya da büküm eklerle bağlanmıştır. Çare, bağlantıları yenilemek ve hatları ayırmaktır; inatçı vakalar ekranlı kablo ister.",
+            "Görüntü yalnızca gece kayboluyorsa panelin IR LED'lerine bakın: diyotlar söner ve kamera karanlıkta körleşir. Gündüz 'süt içindeki' görüntü çoğu kez kirli veya çizik panel camıdır: elektroniği suçlamadan önce silmekle başlayın.",
+          ] },
+          { h: "IP diafon: telefona arama düşmüyor", p: [
+            "IP diafonların kendine özgü derdi var: yerelde her şey çalışır ama akıllı telefon çalmaz. Onda dokuzunda suçlu, uygulamayı uyutan Android pil tasarrufudur — optimizasyondan çıkarın, arka plana izin verin. Kalanı ağdır: router veya şifre değişince panel Wi-Fi'dan düşmüştür.",
+            "Telefona arama kurulumunu, çalma sırasını ve yetkileri Hikvision IP diafon ve Hik-Connect yazısında ayrıntısıyla ele aldık — durumunuz buysa oradan başlayın.",
+          ] },
+          { h: "Ne zaman onarım, ne zaman değişim", p: [
+            "Noktasal onarım mantıklıdır: ahize, buton, güç kaynağı, kapatıcı. Arızalar düzenli hâle geldiyse, modelin yedeği kalmadıysa veya modern özellikler — görüntü, telefona arama, telefonda anahtar — isteniyorsa sistemi değiştirmek öder. Yenileme beklenenden ucuzdur: kablolama kalır, panel ve ahizeler değişir.",
+            "Her markanın diafonunu teşhis eder ve onarırız: gelir, nedeni buluruz — ahize, panel, kilit, kablo veya ayarlar — ve işe başlamadan fiyatı söyleriz. Taşkent'te ziyaret ücretsiz; stokta değişim için ahize, monitör ve paneller var.",
+          ] },
+        ],
+        faq: [
+          { q: "Diafon hırıldıyor ve çatırdıyor — bu ne?", a: "Çoğu kez yıpranmış ahize kablosu veya oksitlenmiş kontaklar: sinyal kırıkta 'hışırdar'. Daha az, zarı yırtık hoparlör. İkisi de değişimle geçer — kablo ve ahize ucuzdur." },
+          { q: "Dairedeki ahizeyi kendim değiştirebilir miyim?", a: "Teknik olarak iki klemenstir, ama incelik var: koordinat sistemlerinde kutup, dijitallerde daire numarası atlamaları önemlidir. Yanlış bağlarsanız zil veya açma gider. Emin değilseniz usta tek ziyarette halleder." },
+          { q: "Diafon teşhisi kaça mal olur?", a: "Taşkent'te ziyaret ve inceleme ücretsiz: ahizeyi, paneli, kilidi ve hattı kontrol eder, işe başlamadan neden ve onarım fiyatını söyleriz." },
+        ],
+      },
+      zh: {
+        title: "对讲机不响或不工作：原因与处理",
+        excerpt: "拆解对讲机的典型故障：听筒无声、单向通话、门打不开、没有图像、IP对讲不往手机推呼叫。哪些能自查、何时该请师傅。",
+        sections: [
+          { h: "听筒完全无声", p: [
+            "呼叫房号时门口机毫无反应——先从最简单的查起：听筒没挂好或叉簧卡住。顺着链路往下：听筒线在入壳处最易磨损——天天拿起放下先坏的就是它，而绝缘皮里的断芯肉眼看不出。",
+            "整个单元都无声时，问题不在您家，而在系统电源或层间分配器——那是维保单位的职责范围。判断很简单：邻居家的对讲也死了，就打电话给运营方，别拆自家听筒。",
+          ] },
+          { h: "有声音但只通一头", p: [
+            "单向通话几乎总是听筒本身：喇叭或话筒。门口的客人听得到您、您听不到他——怀疑喇叭；反过来——怀疑话筒。换听筒比修更快：焊一只烧掉的话筒比买新听筒还贵。",
+            "第二个原因是许多听筒侧面或底部的音量拨轮：打扫时被无意推到零。虽然不起眼，但该从它查起——如果听筒是插接式的，顺便确认插头插紧了。",
+          ] },
+          { h: "听筒开不了门", p: [
+            "通话正常、开门键失灵，按顺序查：听筒里的按键（按多了会磨损），然后是锁。电磁锁老化后「吸力变弱」——门要使劲拽才开；电控机械锁咔哒响却不缩舌——多半是门下垂或机构磨损。",
+            "常见的真凶是闭门器：门「压不到位」，锁进不了工作位置，电子部分其实无辜。看看门能否自己完全关严——调一次闭门器能解决一半的「锁坏了」报修。",
+          ] },
+          { h: "可视对讲：没画面或有干扰", p: [
+            "声音正常屏幕黑——查门口机摄像头供电或线缆的视频芯。雪花、横纹、画面「漂移」是典型感应干扰：视频线挨着电力线走，或用绞接头连接。重做接头、分开走线可治；顽固病例换屏蔽线。",
+            "画面只在夜里消失——看门口机的红外灯：灯珠烧掉后摄像头在黑暗中失明。白天画面「像蒙了奶」——通常只是面板玻璃脏了或划花了：先擦干净，再怀疑电子。",
+          ] },
+          { h: "IP对讲：手机收不到呼叫", p: [
+            "IP对讲有自己的病：本地一切正常，手机就是不响。十有九次是安卓省电机制把App休眠了——把它移出电池优化并允许后台。其余是网络：换路由器或改密码后门口机掉线了。",
+            "手机呼叫的配置、振铃顺序和权限，我们在海康IP对讲与Hik-Connect一文里讲得很细——若您正是这种情况，从那篇开始。",
+          ] },
+          { h: "什么时候修、什么时候换", p: [
+            "点状维修划算：听筒、按键、电源、闭门器。当故障成了常态、机型配件停产、或想要现代功能——可视、手机接听、手机开门——就该整体升级。升级往往比想象便宜：线路保留，换门口机和终端即可。",
+            "任何品牌的对讲我们都能诊断维修：上门找出原因——听筒、门口机、锁、线路还是设置，开工前报价。塔什干范围上门免费；仓库备有替换的听筒、室内机和门口机。",
+          ] },
+        ],
+        faq: [
+          { q: "对讲机沙沙作响是怎么回事？", a: "多半是听筒线磨损或触点氧化：信号在断点处「沙沙」响。少数是喇叭膜破裂。两者都靠更换解决——线和听筒都不贵。" },
+          { q: "我能自己换家里的听筒吗？", a: "技术上就是两个接线端子，但有讲究：模拟总线制看极性，数字制要拨对房号跳线。接错了就没铃声或开不了门。拿不准的话，师傅一次上门就装好。" },
+          { q: "对讲诊断多少钱？", a: "塔什干范围上门检查免费：查听筒、门口机、锁和线路，开工前告知原因和维修价格。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ip-domofon-hikvision-zvonok-na-telefon",
+    date: "2026-09-04",
+    related: ["intercom"],
+    hubs: ["videodomofony"],
+    loc: {
+      ru: {
+        title: "IP-домофон Hikvision: как настроить звонок на телефон через Hik-Connect",
+        excerpt: "Как работает IP-домофония Hikvision: звонок на смартфон из любой точки мира, настройка Hik-Connect по шагам, сценарии для квартиры, офиса и дома, разбор типичных проблем с уведомлениями.",
+        sections: [
+          { h: "Чем IP-домофон отличается от обычного", p: [
+            "Классический домофон — замкнутая пара «панель–трубка»: он звонит только туда, где висит трубка. IP-домофон живёт в сети: вызывная панель и мониторы — сетевые устройства, поэтому звонок можно принять на внутреннем мониторе, на компьютере охраны и на смартфоне в любой точке мира.",
+            "Второе отличие — расширяемость. К IP-системе без перекладки кабеля добавляются мониторы, камеры и контроль доступа: панель у Hikvision умеет работать и считывателем карт, и терминалом с распознаванием лиц. Один кабель — витая пара, часто с питанием по PoE, без отдельного блока у каждой двери.",
+          ] },
+          { h: "Как устроен звонок на смартфон", p: [
+            "Мост между домофоном и телефоном — облачный сервис Hik-Connect. Панель и монитор привязываются к аккаунту, и при вызове облако будит приложение пуш-уведомлением: вы видите видео с панели, говорите и открываете дверь. Работает это через P2P — белый IP-адрес и проброс портов не нужны, достаточно обычного домашнего интернета.",
+            "Важно понимать порядок звонка: сначала вызов идёт на внутренние мониторы, и параллельно или с задержкой — в приложение. Если дома кто-то есть, он откроет с монитора; если нет — звонок догонит вас на телефоне. Сама дверь при этом остаётся автономной: без интернета панель, монитор и замок продолжают работать локально.",
+          ] },
+          { h: "Настройка по шагам", p: [
+            "Шаг первый — активация: новым устройствам Hikvision задаётся сильный пароль, и здесь же стоит привязать e-mail для восстановления (сэкономит дни, если пароль потеряется). Шаг второй — сеть: панель и монитор попадают в один сегмент, по кабелю или PoE.",
+            "Шаг третий — Hik-Connect: ставите приложение, создаёте аккаунт, добавляете устройство по QR-коду с корпуса или серийному номеру. Шаг четвёртый — проверка сценария: звонок с панели, приём на мониторе и телефоне, открытие замка из приложения. На этом же шаге добавьте членов семьи или коллег: у Hikvision это делается «расшариванием» устройства на их аккаунты, каждому можно урезать права — например, только просмотр без открытия двери.",
+          ] },
+          { h: "Сценарии: квартира, дом, офис", p: [
+            "В квартире IP-домофон чаще всего ставят рядом с подъездным: своя панель у двери на этаже плюс звонок на телефон. В частном доме это связка «панель на калитке + монитор + смартфоны всей семьи» — подробнее мы разбирали её в статье о видеодомофоне для частного дома.",
+            "В офисе IP-домофония срастается со СКУД: панель на входе работает терминалом доступа (карта, лицо, PIN), секретарь принимает гостей с монитора или ПК, а права раздаются по отделам. Многоабонентские панели Hikvision обслуживают и целые бизнес-центры — у каждого арендатора свой монитор и свои телефоны.",
+          ] },
+          { h: "Если пуши не приходят", p: [
+            "Девять из десяти жалоб «звонок не приходит на телефон» — это экономия батареи на Android: система усыпляет Hik-Connect, и пуш будит его с опозданием или не будит вовсе. Лечится в настройках телефона: убрать приложение из оптимизации батареи, разрешить автозапуск и работу в фоне. На iPhone проверьте, что уведомлениям разрешены баннеры и звук.",
+            "Оставшиеся случаи — сеть: панель без интернета (проверьте статус в приложении), перегруженный Wi-Fi или закрытые операторские сети с жёстким NAT. И классика: после смены роутера или пароля Wi-Fi устройство осталось в старой сети — его нужно просто переподключить.",
+          ] },
+          { h: "Подбор и монтаж", p: [
+            "На складе в Ташкенте — основная IP-линейка домофонии Hikvision: вызывные панели от компактных до антивандальных с распознаванием лиц, внутренние мониторы, комплекты для квартиры и дома. Поможем выбрать под вашу дверь, сеть и бюджет.",
+            "Монтируем под ключ: панель, монитор, замок, сеть, привязка телефонов всей семьи и обучение. Настроим и уже купленное оборудование — включая случаи, когда «всё поставили, а на телефон не звонит». Выезд инженера по Ташкенту бесплатный.",
+          ] },
+        ],
+        faq: [
+          { q: "Работает ли IP-домофон без интернета?", a: "Локально — полностью: панель звонит на мониторы, замок открывается, запись событий ведётся. Без интернета не работает только звонок на смартфон вне дома — он вернётся сам, как только появится сеть." },
+          { q: "Нужен ли белый IP-адрес или проброс портов?", a: "Нет. Hik-Connect работает через облачный P2P: устройство само устанавливает исходящее соединение, и приложение находит его откуда угодно. Достаточно обычного домашнего тарифа." },
+          { q: "Сколько телефонов можно подключить к одному домофону?", a: "Практически без ограничений для семьи или офиса: устройство расшаривается на другие аккаунты Hik-Connect, каждому настраиваются свои права — от полного управления до просмотра без открытия двери." },
+        ],
+      },
+      uz: {
+        title: "Hikvision IP-domofoni: Hik-Connect orqali telefonga qo'ng'iroqni qanday sozlash",
+        excerpt: "Hikvision IP-domofoniyasi qanday ishlaydi: dunyoning istalgan nuqtasidan smartfonga qo'ng'iroq, Hik-Connect ni bosqichma-bosqich sozlash, kvartira, ofis va uy stsenariylari, bildirishnoma muammolari tahlili.",
+        sections: [
+          { h: "IP-domofon oddiysidan nimasi bilan farq qiladi", p: [
+            "Klassik domofon — yopiq «panel–trubka» juftligi: u faqat trubka osilgan joyga qo'ng'iroq qiladi. IP-domofon tarmoqda yashaydi: chaqiruv paneli va monitorlar — tarmoq qurilmalari, shuning uchun qo'ng'iroqni ichki monitorda ham, qo'riqchi kompyuterida ham, dunyoning istalgan nuqtasidagi smartfonda ham qabul qilish mumkin.",
+            "Ikkinchi farq — kengayuvchanlik. IP-tizimga kabelni qayta yotqizmasdan monitorlar, kameralar va kirish nazorati qo'shiladi: Hikvision paneli karta o'qigich ham, yuzni taniydigan terminal ham bo'la oladi. Bitta kabel — vitaya para, ko'pincha PoE quvvati bilan, har eshik yonida alohida bloksiz.",
+          ] },
+          { h: "Smartfonga qo'ng'iroq qanday ishlaydi", p: [
+            "Domofon va telefon orasidagi ko'prik — Hik-Connect bulut xizmati. Panel va monitor akkauntga bog'lanadi, chaqiruvda bulut ilovani push-bildirishnoma bilan uyg'otadi: paneldan videoni ko'rasiz, gaplashasiz va eshikni ochasiz. Bu P2P orqali ishlaydi — oq IP-manzil va portlarni ochish kerak emas, oddiy uy interneti yetadi.",
+            "Qo'ng'iroq tartibini tushunish muhim: avval chaqiruv ichki monitorlarga boradi, parallel yoki kechikish bilan — ilovaga. Uyda kimdir bo'lsa, monitordan ochadi; bo'lmasa — qo'ng'iroq sizni telefonda topadi. Eshikning o'zi avtonom qoladi: internetsiz panel, monitor va qulf lokal ishlashda davom etadi.",
+          ] },
+          { h: "Bosqichma-bosqich sozlash", p: [
+            "Birinchi qadam — faollashtirish: yangi Hikvision qurilmalariga kuchli parol qo'yiladi, shu yerda tiklash uchun e-mail ni ham bog'lash kerak (parol yo'qolsa kunlarni tejaydi). Ikkinchi qadam — tarmoq: panel va monitor bitta segmentga tushadi, kabel yoki PoE orqali.",
+            "Uchinchi qadam — Hik-Connect: ilovani o'rnatasiz, akkaunt ochasiz, qurilmani korpusdagi QR-kod yoki seriya raqami bo'yicha qo'shasiz. To'rtinchi qadam — stsenariyni tekshirish: paneldan qo'ng'iroq, monitor va telefonda qabul, ilovadan qulfni ochish. Shu qadamda oila a'zolari yoki hamkasblarni qo'shing: Hikvision da bu qurilmani ularning akkauntlariga «ulashish» bilan qilinadi, har kimga huquqlarni qisqartirish mumkin — masalan, eshikni ochmasdan faqat ko'rish.",
+          ] },
+          { h: "Stsenariylar: kvartira, uy, ofis", p: [
+            "Kvartirada IP-domofon ko'pincha podezdnikiga qo'shimcha qo'yiladi: qavatdagi eshik yonida o'z paneli plus telefonga qo'ng'iroq. Xususiy uyda bu «kalitkadagi panel + monitor + butun oila smartfonlari» bog'lami — uni xususiy uy videodomofoni haqidagi maqolada batafsil ko'rganmiz.",
+            "Ofisda IP-domofoniya SKUD bilan qo'shiladi: kirishdagi panel kirish terminali bo'lib ishlaydi (karta, yuz, PIN), kotib mehmonlarni monitor yoki kompyuterdan qabul qiladi, huquqlar bo'limlar bo'yicha beriladi. Hikvision ko'p abonentli panellari butun biznes-markazlarga ham xizmat qiladi — har ijarachida o'z monitori va telefonlari.",
+          ] },
+          { h: "Push kelmasa nima qilish kerak", p: [
+            "«Qo'ng'iroq telefonga kelmayapti» shikoyatlarining o'ntadan to'qqiztasi — Android da batareya tejash: tizim Hik-Connect ni uxlatadi, push esa uni kech uyg'otadi yoki umuman uyg'otmaydi. Telefon sozlamalarida davolanadi: ilovani batareya optimizatsiyasidan chiqarish, avtoishga tushish va fonda ishlashga ruxsat berish. iPhone da bildirishnomalarga banner va ovoz ruxsatini tekshiring.",
+            "Qolgan holatlar — tarmoq: internetsiz panel (ilovada statusni tekshiring), ortiqcha yuklangan Wi-Fi yoki qattiq NAT li operator tarmoqlari. Va klassika: router yoki Wi-Fi paroli almashgandan keyin qurilma eski tarmoqda qolgan — uni shunchaki qayta ulash kerak.",
+          ] },
+          { h: "Tanlov va montaj", p: [
+            "Toshkentdagi omborda — Hikvision domofoniyasining asosiy IP-liniyasi: ixchamlaridan yuzni taniydigan antivandal panellargacha, ichki monitorlar, kvartira va uy to'plamlari. Eshigingiz, tarmog'ingiz va byudjetingizga tanlashga yordam beramiz.",
+            "Kalit topshirish bilan o'rnatamiz: panel, monitor, qulf, tarmoq, butun oila telefonlarini bog'lash va o'rgatish. Sotib olingan uskunani ham sozlaymiz — «hammasini o'rnatishdi, telefonga qo'ng'iroq kelmayapti» holatlarini ham. Toshkent bo'ylab muhandis chiqishi bepul.",
+          ] },
+        ],
+        faq: [
+          { q: "IP-domofon internetsiz ishlaydimi?", a: "Lokal — to'liq: panel monitorlarga qo'ng'iroq qiladi, qulf ochiladi, hodisalar yoziladi. Internetsiz faqat uydan tashqarida smartfonga qo'ng'iroq ishlamaydi — tarmoq paydo bo'lishi bilan o'zi qaytadi." },
+          { q: "Oq IP-manzil yoki portlarni ochish kerakmi?", a: "Yo'q. Hik-Connect bulutli P2P orqali ishlaydi: qurilma o'zi chiquvchi ulanish o'rnatadi va ilova uni istalgan joydan topadi. Oddiy uy tarifi yetadi." },
+          { q: "Bitta domofonga nechta telefon ulash mumkin?", a: "Oila yoki ofis uchun amalda cheklovsiz: qurilma boshqa Hik-Connect akkauntlariga ulashiladi, har biriga o'z huquqlari sozlanadi — to'liq boshqaruvdan eshik ochmasdan ko'rishgacha." },
+        ],
+      },
+      en: {
+        title: "Hikvision IP intercom: setting up calls to your phone via Hik-Connect",
+        excerpt: "How Hikvision IP intercoms work: calls to your smartphone from anywhere, step-by-step Hik-Connect setup, scenarios for apartments, houses and offices, and a breakdown of typical notification problems.",
+        sections: [
+          { h: "How an IP intercom differs from a regular one", p: [
+            "A classic intercom is a closed 'panel–handset' pair: it rings only where the handset hangs. An IP intercom lives on the network: the door station and monitors are network devices, so a call can be answered on an indoor monitor, at the guard's computer, or on a smartphone anywhere in the world.",
+            "The second difference is expandability. Monitors, cameras and access control join an IP system without re-cabling: a Hikvision station doubles as a card reader or a face recognition terminal. One cable — twisted pair, often with PoE power — and no separate power brick at every door.",
+          ] },
+          { h: "How the call reaches your smartphone", p: [
+            "The bridge between the intercom and the phone is the Hik-Connect cloud. The station and monitor are linked to an account, and on a call the cloud wakes the app with a push notification: you see the station's video, talk and open the door. It works over P2P — no public IP address or port forwarding needed, an ordinary home connection is enough.",
+            "Understand the call order: the call first goes to the indoor monitors, and in parallel or with a delay — to the app. If someone is home, they answer at the monitor; if not, the call catches you on the phone. The door itself stays autonomous: without internet the station, monitor and lock keep working locally.",
+          ] },
+          { h: "Setup step by step", p: [
+            "Step one — activation: new Hikvision devices get a strong password, and this is the moment to link a recovery e-mail (it saves days if the password is ever lost). Step two — the network: the station and monitor land in one segment, over cable or PoE.",
+            "Step three — Hik-Connect: install the app, create an account, add the device by the QR code on the body or by serial number. Step four — test the scenario: a call from the station, answering on the monitor and the phone, opening the lock from the app. At this step add family members or colleagues: in Hikvision it is done by sharing the device to their accounts, and each can get trimmed rights — viewing without door release, for example.",
+          ] },
+          { h: "Scenarios: apartment, house, office", p: [
+            "In an apartment an IP intercom usually complements the building one: your own station at the floor door plus calls to the phone. In a private house it is the 'gate station + monitor + the whole family's smartphones' combination — covered in detail in our private-house video intercom article.",
+            "In an office IP intercoms merge with access control: the entrance station works as an access terminal (card, face, PIN), the receptionist answers guests from a monitor or PC, and rights are assigned per department. Hikvision multi-tenant stations serve whole business centers — each tenant with their own monitor and phones.",
+          ] },
+          { h: "If push notifications do not arrive", p: [
+            "Nine out of ten 'the call does not reach my phone' complaints are Android battery saving: the system puts Hik-Connect to sleep, and the push wakes it late or not at all. The cure is in the phone settings: exclude the app from battery optimization, allow autostart and background work. On iPhone check that notifications are allowed banners and sound.",
+            "The remaining cases are the network: a station without internet (check its status in the app), congested Wi-Fi, or carrier networks with strict NAT. And the classic: after a router or Wi-Fi password change the device stayed in the old network — it just needs to be reconnected.",
+          ] },
+          { h: "Selection and installation", p: [
+            "Our Tashkent stock carries Hikvision's core intercom IP line: door stations from compact to vandal-proof with face recognition, indoor monitors, apartment and house kits. We will help choose for your door, network and budget.",
+            "We install turnkey: station, monitor, lock, network, the whole family's phones linked, plus a walkthrough. We also configure equipment you already bought — including the 'everything installed but the phone never rings' cases. The engineer's visit is free in Tashkent.",
+          ] },
+        ],
+        faq: [
+          { q: "Does an IP intercom work without internet?", a: "Locally — fully: the station rings the monitors, the lock opens, events are logged. Only calls to a smartphone outside the home need the internet — and they resume by themselves once the connection is back." },
+          { q: "Do I need a public IP or port forwarding?", a: "No. Hik-Connect works over cloud P2P: the device makes an outgoing connection itself and the app finds it from anywhere. A regular home plan is enough." },
+          { q: "How many phones can one intercom serve?", a: "Practically unlimited for a family or office: the device is shared to other Hik-Connect accounts, each with its own rights — from full control to viewing without unlocking." },
+        ],
+      },
+      tr: {
+        title: "Hikvision IP diafon: Hik-Connect ile telefona arama kurulumu",
+        excerpt: "Hikvision IP diafonu nasıl çalışır: dünyanın her yerinden akıllı telefona arama, adım adım Hik-Connect kurulumu, daire, ev ve ofis senaryoları, bildirim sorunlarının çözümü.",
+        sections: [
+          { h: "IP diafon klasikten nasıl ayrılır", p: [
+            "Klasik diafon kapalı bir 'panel–ahize' çiftidir: yalnızca ahizenin asılı olduğu yere çalar. IP diafon ağda yaşar: zil paneli ve monitörler ağ cihazlarıdır; arama iç monitörde, güvenlik bilgisayarında veya dünyanın herhangi bir yerindeki akıllı telefonda yanıtlanabilir.",
+            "İkinci fark genişleyebilirliktir. IP sisteme kablo yenilemeden monitörler, kameralar ve geçiş kontrolü eklenir: Hikvision paneli kart okuyucu da, yüz tanıma terminali de olabilir. Tek kablo — çoğu kez PoE beslemeli ethernet — her kapıda ayrı adaptör yok.",
+          ] },
+          { h: "Arama akıllı telefona nasıl ulaşır", p: [
+            "Diafon ile telefon arasındaki köprü Hik-Connect bulutudur. Panel ve monitör hesaba bağlanır; aramada bulut, uygulamayı push bildirimiyle uyandırır: panelin görüntüsünü görür, konuşur ve kapıyı açarsınız. P2P üzerinden çalışır — statik IP ve port yönlendirme gerekmez, sıradan ev interneti yeter.",
+            "Arama sırasını bilmek önemli: çağrı önce iç monitörlere, paralel veya gecikmeyle uygulamaya gider. Evde biri varsa monitörden açar; yoksa arama sizi telefonda yakalar. Kapının kendisi özerktir: internetsiz panel, monitör ve kilit yerel çalışmaya devam eder.",
+          ] },
+          { h: "Adım adım kurulum", p: [
+            "Birinci adım aktivasyon: yeni Hikvision cihazlarına güçlü şifre verilir; kurtarma e-postasını da burada bağlayın (şifre kaybolursa günler kazandırır). İkinci adım ağ: panel ve monitör kabloyla veya PoE ile aynı segmente alınır.",
+            "Üçüncü adım Hik-Connect: uygulamayı kurun, hesap açın, cihazı gövdedeki QR kod veya seri numarasıyla ekleyin. Dördüncü adım senaryo testi: panelden arama, monitörde ve telefonda yanıt, uygulamadan kilidi açma. Bu adımda aile üyelerini veya mesai arkadaşlarını ekleyin: Hikvision'da bu, cihazı onların hesaplarına paylaşmakla yapılır; herkese kısıtlı yetki verilebilir — örneğin kapıyı açmadan yalnızca izleme.",
+          ] },
+          { h: "Senaryolar: daire, ev, ofis", p: [
+            "Dairede IP diafon çoğu kez bina diafonunun yanına kurulur: kat kapısında kendi paneliniz artı telefona arama. Müstakil evde bu 'kapıda panel + monitör + tüm ailenin telefonları' bağıdır — ayrıntısını müstakil ev diafonu yazısında ele aldık.",
+            "Ofiste IP diafon geçiş kontrolüyle kaynaşır: girişteki panel erişim terminali olarak çalışır (kart, yüz, PIN), sekreter konukları monitörden veya PC'den karşılar, yetkiler bölümlere göre dağıtılır. Hikvision çok aboneli panelleri koca iş merkezlerine hizmet eder — her kiracının kendi monitörü ve telefonları olur.",
+          ] },
+          { h: "Push bildirimleri gelmiyorsa", p: [
+            "'Arama telefona düşmüyor' şikâyetlerinin onda dokuzu Android pil tasarrufudur: sistem Hik-Connect'i uyutur, push onu geç uyandırır ya da hiç uyandırmaz. Çare telefon ayarlarında: uygulamayı pil optimizasyonundan çıkarın, otomatik başlatma ve arka plan izni verin. iPhone'da bildirimlere banner ve ses izni verildiğini kontrol edin.",
+            "Kalan vakalar ağdır: internetsiz panel (durumu uygulamadan kontrol edin), boğulmuş Wi-Fi veya katı NAT'lı operatör ağları. Ve klasik: router ya da Wi-Fi şifresi değişince cihaz eski ağda kalmıştır — yeniden bağlamak yeter.",
+          ] },
+          { h: "Seçim ve montaj", p: [
+            "Taşkent depomuzda Hikvision diafonunun ana IP serisi var: kompaktlardan yüz tanımalı antivandal panellere, iç monitörler, daire ve ev setleri. Kapınıza, ağınıza ve bütçenize göre seçmenize yardım ederiz.",
+            "Anahtar teslim kuruyoruz: panel, monitör, kilit, ağ, tüm ailenin telefonlarının bağlanması ve eğitim. Hazır alınmış ekipmanı da kurarız — 'her şey takıldı ama telefon çalmıyor' vakaları dahil. Taşkent'te mühendis ziyareti ücretsiz.",
+          ] },
+        ],
+        faq: [
+          { q: "IP diafon internetsiz çalışır mı?", a: "Yerelde tamamen: panel monitörleri çaldırır, kilit açılır, olaylar kaydedilir. İnternetsiz yalnızca ev dışındaki telefona arama çalışmaz — bağlantı gelince kendiliğinden döner." },
+          { q: "Statik IP veya port yönlendirme gerekir mi?", a: "Hayır. Hik-Connect bulut P2P ile çalışır: cihaz dışa doğru bağlantıyı kendisi kurar, uygulama onu her yerden bulur. Sıradan ev tarifesi yeterlidir." },
+          { q: "Bir diafona kaç telefon bağlanabilir?", a: "Aile veya ofis için pratikte sınırsız: cihaz diğer Hik-Connect hesaplarına paylaşılır, her birine ayrı yetki tanımlanır — tam kontrolden kapı açmadan izlemeye kadar." },
+        ],
+      },
+      zh: {
+        title: "海康威视IP对讲：通过Hik-Connect把呼叫接到手机",
+        excerpt: "海康IP对讲的工作原理：在世界任何角落用手机接听门口呼叫、Hik-Connect分步配置、公寓/住宅/办公室场景、推送不到手机的排查。",
+        sections: [
+          { h: "IP对讲与传统对讲的区别", p: [
+            "传统对讲是封闭的「门口机–听筒」一对一：铃声只响在挂听筒的地方。IP对讲活在网络里：门口机和室内机都是网络设备，呼叫可以在室内机接、在保安电脑接，也可以在世界任何角落的手机上接。",
+            "第二个区别是可扩展性。IP系统不用重新布线就能加室内机、摄像机和门禁：海康的门口机可以兼作刷卡器，也可以是人脸识别终端。一根网线——常常还带PoE供电——每扇门不再需要单独的电源。",
+          ] },
+          { h: "呼叫如何到达手机", p: [
+            "对讲与手机之间的桥梁是Hik-Connect云服务。门口机和室内机绑定到账号后，来访呼叫时云端用推送唤醒App：您看到门口画面、对话并开门。它走P2P——不需要公网IP和端口映射，普通家庭宽带即可。",
+            "要理解呼叫顺序：呼叫先到室内机，同时或稍后推到App。家里有人就在室内机接；没人，呼叫就在手机上找到您。门本身始终自治：断网时门口机、室内机和锁照常本地工作。",
+          ] },
+          { h: "分步配置", p: [
+            "第一步激活：给新的海康设备设置强密码，并顺手绑定找回邮箱（万一忘记密码能省下好几天）。第二步组网：门口机与室内机放进同一网段，网线或PoE。",
+            "第三步Hik-Connect：装App、注册账号、扫机身二维码或输序列号添加设备。第四步走通场景：门口机呼叫、室内机和手机接听、App里开锁。同一步把家人或同事加进来：海康通过把设备「分享」到他们的账号实现，每人可单独限权——例如只能看不能开门。",
+          ] },
+          { h: "场景：公寓、住宅、办公室", p: [
+            "公寓里IP对讲常与楼宇对讲并存：楼层门口装自己的门口机，呼叫接到手机。独栋住宅则是「院门门口机+室内机+全家手机」的组合——我们在独栋住宅可视对讲一文中详细讲过。",
+            "办公室里IP对讲与门禁融为一体：入口门口机兼作门禁终端（刷卡、人脸、密码），前台在室内机或电脑上接待访客，权限按部门分配。海康的多户门口机能服务整栋商务中心——每家租户有自己的室内机和手机。",
+          ] },
+          { h: "推送不来怎么办", p: [
+            "「呼叫不到手机」的投诉九成是安卓省电机制：系统把Hik-Connect休眠，推送叫醒它太迟甚至叫不醒。在手机设置里解决：把App移出电池优化、允许自启动和后台运行。iPhone则确认通知允许横幅和声音。",
+            "剩下的情形是网络：门口机断网（在App里看状态）、Wi-Fi拥堵、或NAT严格的运营商网络。还有经典一幕：换了路由器或改了Wi-Fi密码，设备还留在旧网络里——重新配网即可。",
+          ] },
+          { h: "选型与安装", p: [
+            "塔什干仓库常备海康对讲主力IP系列：从小巧到带人脸识别的防暴力门口机、室内机、公寓和住宅套装。按您的门、网络和预算帮您选型。",
+            "交钥匙施工：门口机、室内机、锁、网络、全家手机绑定和使用讲解。已购设备我们也能调——包括「都装好了就是手机不响」的情况。塔什干范围工程师免费上门。",
+          ] },
+        ],
+        faq: [
+          { q: "IP对讲断网能用吗？", a: "本地功能完整：门口机呼叫室内机、开锁、记录事件都正常。断网只影响户外手机接听——网络恢复后自动回来。" },
+          { q: "需要公网IP或端口映射吗？", a: "不需要。Hik-Connect走云P2P：设备自己建立外连，App在任何地方都能找到它。普通家庭套餐足够。" },
+          { q: "一台对讲能绑几部手机？", a: "对家庭或办公室来说几乎不限：把设备分享给其他Hik-Connect账号即可，每个账号可单独设权——从完全控制到只看不开门。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "videodomofon-dlya-chastnogo-doma",
+    date: "2026-09-04",
+    related: ["intercom", "access"],
+    hubs: ["videodomofony", "zamki-i-skud"],
+    loc: {
+      ru: {
+        title: "Видеодомофон для частного дома: собираем комплект с замком и калиткой",
+        excerpt: "Из чего состоит видеодомофон частного дома: вызывная панель на калитку, монитор, электромеханический замок, питание и кабель. Аналог или IP, звонок на телефон, типичные ошибки монтажа.",
+        sections: [
+          { h: "Из чего состоит комплект", p: [
+            "Видеодомофон частного дома — это четыре узла: вызывная панель у калитки, монитор в доме, замок на калитке и блок питания. Плюс кабель между ними — и именно кабель чаще всего оказывается слабым местом: панель и монитор соединяются напрямую, и до калитки может быть 20–50 метров по улице.",
+            "Комплекты «панель + монитор» из коробки закрывают только разговор и картинку. Открывание калитки — это отдельный замок со своим питанием и кнопкой выхода со двора: закладывайте его в проект сразу, а не «потом докупим», иначе придётся перекапывать дорожку ради одного кабеля.",
+          ] },
+          { h: "Вызывная панель: уличная служба", p: [
+            "Панель у калитки живёт под солнцем, дождём и морозом, поэтому смотрите на класс защиты от пыли и влаги (IP65 и выше) и рабочие температуры. Вторая уличная беда — контровый свет: солнце за спиной гостя превращает лицо в силуэт. Помогают панели с широким динамическим диапазоном и правильное размещение — не напротив юга.",
+            "Угол обзора выбирайте от задачи: узкий показывает лицо крупно, широкий — кто стоит рядом и что происходит у калитки. Для дома практичнее широкий (120° и больше): он же частично заменяет камеру на входе. Антивандальное исполнение в частном секторе менее критично, чем в подъезде, но металлический корпус переживает и град, и любопытных детей.",
+          ] },
+          { h: "Замок: электромеханика против электромагнита", p: [
+            "На калитку в 9 случаях из 10 ставят электромеханический замок: при пропадании света он остаётся ЗАПЕРТЫМ, а открыть его можно механическим ключом. Электромагнитный — наоборот, при отключении питания открывается: для эвакуационных дверей это плюс, для калитки частного дома — дыра в безопасности.",
+            "Уличный замок должен быть уличным: с защитой от влаги и рассчитанным на перекос калитки, который неизбежно появляется со временем. И сразу ставьте кнопку выхода со стороны двора и доводчик: замок, который «почти закрылся», не заперт вовсе.",
+          ] },
+          { h: "Аналог или IP: где какой уместен", p: [
+            "Аналоговый четырёхпроводный комплект проще и дешевле: панель, монитор, четыре жилы — работает без сети и настроек десятилетиями. Его хватает, когда сценарий «услышал звонок — посмотрел — открыл» устраивает всех домашних.",
+            "IP-домофон добавляет главное: звонок уходит на смартфон, где бы вы ни были — курьер у калитки, а вы на работе, посмотрели, поговорили, открыли. Плюс интеграция с камерами и СКУД в одну систему. Платить за это приходится настройкой сети и зависимостью от интернета — сам домофон при этом продолжает работать локально и без него.",
+          ] },
+          { h: "Кабель и питание: где ошибаются", p: [
+            "Типичная ошибка — тонкий кабель на длинной трассе: на 30–50 метрах слаботочные жилы «просаживают» питание панели, и появляются наводки на видео. До калитки закладывайте кабель с запасом по сечению (для питания замка — отдельные толстые жилы) и в гофре или трубе на глубине, где его не порвёт лопата.",
+            "Питание замка считайте отдельно от домофона: импульсный замок в момент открывания берёт ток в разы больше номинала, и слабый блок питания «проседает» вместе с картинкой. Если к воротам планируется автоматика — заложите в ту же траншею и её кабели: копать дважды дороже.",
+          ] },
+          { h: "Монтаж под ключ и что держим на складе", p: [
+            "Мы собираем видеодомофонию частного дома под ключ: панель на калитку, монитор (или два — на этажи), электромеханический замок с кнопкой выхода, трасса в гофре, настройка звонка на телефоны всей семьи. Выезд инженера по Ташкенту бесплатный — посмотрим двор и скажем точную конфигурацию.",
+            "На складе в Ташкенте — больше шестидесяти позиций домофонии, основа — IP-линейка Hikvision: вызывные панели, мониторы, комплекты. Подберём под бюджет: от простого аналогового комплекта до IP-системы, интегрированной с камерами и умным домом.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли открывать калитку со смартфона?", a: "Да — это штатный сценарий IP-домофона: звонок приходит в приложение, вы видите гостя, разговариваете и открываете замок из любой точки мира. У аналоговых комплектов такой возможности нет либо она добавляется отдельным IP-модулем." },
+          { q: "Что будет при отключении света?", a: "С электромеханическим замком калитка останется запертой, открыть можно ключом. Чтобы домофон продолжал звонить и открывать, поставьте небольшой ИБП на блок питания — узел ест единицы ватт, автономии хватает на часы." },
+          { q: "Панель и монитор можно разнести на 50 метров?", a: "Можно: для аналоговых комплектов это штатная дистанция при правильном сечении кабеля, для IP — вообще не проблема (сеть). Важно одно: уличная трасса в гофре или трубе и отдельные жилы под питание замка." },
+        ],
+      },
+      uz: {
+        title: "Xususiy uy uchun videodomofon: qulf va kalitka bilan to'plam yig'amiz",
+        excerpt: "Xususiy uy videodomofoni nimadan iborat: kalitkaga chaqiruv paneli, monitor, elektromexanik qulf, quvvat va kabel. Analog yoki IP, telefonga qo'ng'iroq, montajning tipik xatolari.",
+        sections: [
+          { h: "To'plam nimadan iborat", p: [
+            "Xususiy uy videodomofoni — to'rt uzel: kalitka yonidagi chaqiruv paneli, uydagi monitor, kalitkadagi qulf va quvvat bloki. Plus ular orasidagi kabel — va aynan kabel ko'pincha zaif joy bo'lib chiqadi: panel va monitor to'g'ridan-to'g'ri ulanadi, kalitkagacha esa ko'cha bo'ylab 20–50 metr bo'lishi mumkin.",
+            "Qutidagi «panel + monitor» to'plamlari faqat suhbat va tasvirni yopadi. Kalitkani ochish — bu o'z quvvati va hovlidan chiqish tugmasi bilan alohida qulf: uni loyihaga darhol kiriting, «keyin qo'shib olamiz» emas, aks holda bitta kabel uchun yo'lakni qayta kavlashga to'g'ri keladi.",
+          ] },
+          { h: "Chaqiruv paneli: ko'cha xizmati", p: [
+            "Kalitka yonidagi panel quyosh, yomg'ir va sovuq ostida yashaydi, shuning uchun chang va namlikdan himoya klassiga (IP65 va undan yuqori) hamda ish haroratlariga qarang. Ikkinchi ko'cha balosi — qarshi yorug'lik: mehmon orqasidagi quyosh yuzni siluetga aylantiradi. Keng dinamik diapazonli panellar va to'g'ri joylashtirish yordam beradi — janubga qaratmang.",
+            "Ko'rish burchagini vazifadan tanlang: tor burchak yuzni yirik ko'rsatadi, keng — yonida kim turgani va kalitka oldida nima bo'layotganini. Uy uchun keng (120° va undan ko'p) amaliyroq: u kirishda kamerani ham qisman almashtiradi. Metall korpus do'l va qiziquvchan bolalarni ham o'tkazib yuboradi.",
+          ] },
+          { h: "Qulf: elektromexanika elektromagnitga qarshi", p: [
+            "Kalitkaga 10 tadan 9 holatda elektromexanik qulf qo'yiladi: svet o'chganda u QULFLANGAN qoladi, mexanik kalit bilan ochish mumkin. Elektromagnit esa aksincha — quvvat o'chganda ochiladi: evakuatsiya eshiklariga bu plyus, xususiy uy kalitkasiga — xavfsizlikdagi teshik.",
+            "Ko'cha qulfi ko'chaga mo'ljallangan bo'lishi kerak: namlikdan himoyali va vaqt bilan muqarrar paydo bo'ladigan kalitka qiyshayishiga chidamli. Va darhol hovli tomondan chiqish tugmasi hamda dovodchik qo'ying: «deyarli yopilgan» qulf umuman qulflanmagan.",
+          ] },
+          { h: "Analog yoki IP: qayerda qaysi biri o'rinli", p: [
+            "Analog to'rt simli to'plam sodda va arzon: panel, monitor, to'rtta sim — tarmoqsiz va sozlamalarsiz o'n yillab ishlaydi. «Qo'ng'iroqni eshitdim — qaradim — ochdim» stsenariysi hammani qanoatlantirsa, shu yetadi.",
+            "IP-domofon asosiysini qo'shadi: qo'ng'iroq smartfonga boradi, qayerda bo'lsangiz ham — kuryer kalitka oldida, siz ishdasiz: ko'rdingiz, gaplashdingiz, ochdingiz. Plus kameralar va SKUD bilan bitta tizimga integratsiya. Buning narxi — tarmoq sozlash va internetga bog'liqlik, lekin domofonning o'zi usiz ham lokal ishlashda davom etadi.",
+          ] },
+          { h: "Kabel va quvvat: qayerda xato qilishadi", p: [
+            "Tipik xato — uzun trassada ingichka kabel: 30–50 metrda kuchsiz simlar panel quvvatini «cho'ktiradi», videoda shovqinlar paydo bo'ladi. Kalitkagacha kesim bo'yicha zaxirali kabel yotqizing (qulf quvvatiga — alohida yo'g'on simlar) va gofra yoki trubada, belkurak yetmaydigan chuqurlikda.",
+            "Qulf quvvatini domofondan alohida hisoblang: impulsli qulf ochilish paytida nominaldan bir necha baravar ko'p tok oladi, kuchsiz blok esa tasvir bilan birga «cho'kadi». Darvozaga avtomatika rejalashtirilsa — o'sha transheyaga uning kabellarini ham qo'ying: ikki marta kavlash qimmat.",
+          ] },
+          { h: "Kalit topshirish montaji va omborda nima bor", p: [
+            "Xususiy uy videodomofoniyasini kalit topshirish bilan yig'amiz: kalitkaga panel, monitor (yoki ikkitasi — qavatlarga), chiqish tugmali elektromexanik qulf, gofradagi trassa, butun oila telefonlariga qo'ng'iroq sozlash. Toshkent bo'ylab muhandis chiqishi bepul — hovlini ko'rib, aniq konfiguratsiyani aytamiz.",
+            "Toshkentdagi omborda — oltmishdan ortiq domofoniya pozitsiyasi, asosi — Hikvision IP-liniyasi: chaqiruv panellari, monitorlar, to'plamlar. Byudjetga moslaymiz: oddiy analog to'plamdan kameralar va aqlli uy bilan integratsiyalangan IP-tizimgacha.",
+          ] },
+        ],
+        faq: [
+          { q: "Kalitkani smartfondan ochish mumkinmi?", a: "Ha — bu IP-domofonning shtatniy stsenariysi: qo'ng'iroq ilovaga keladi, mehmonni ko'rasiz, gaplashasiz va qulfni dunyoning istalgan nuqtasidan ochasiz. Analog to'plamlarda bunday imkoniyat yo'q yoki alohida IP-modul bilan qo'shiladi." },
+          { q: "Svet o'chganda nima bo'ladi?", a: "Elektromexanik qulf bilan kalitka qulflangan qoladi, kalit bilan ochish mumkin. Domofon qo'ng'iroq qilib, ochishda davom etishi uchun quvvat blokiga kichik UPS qo'ying — uzel bir necha vatt yeydi, avtonomiya soatlarga yetadi." },
+          { q: "Panel va monitorni 50 metrga ajratish mumkinmi?", a: "Mumkin: analog to'plamlar uchun to'g'ri kabel kesimida bu shtatniy masofa, IP uchun umuman muammo emas (tarmoq). Muhimi bitta: ko'cha trassasi gofra yoki trubada va qulf quvvatiga alohida simlar." },
+        ],
+      },
+      en: {
+        title: "A video intercom for a private house: the kit with a lock and gate",
+        excerpt: "What a private-house video intercom consists of: a door station at the gate, an indoor monitor, an electromechanical lock, power and cabling. Analog vs IP, calls to your phone, typical installation mistakes.",
+        sections: [
+          { h: "What the kit consists of", p: [
+            "A private-house video intercom is four parts: the door station at the gate, the monitor in the house, the lock on the gate and a power supply. Plus the cable between them — and the cable is most often the weak point: the station and monitor connect directly, and the gate can be 20–50 meters away across the yard.",
+            "Out-of-the-box 'station + monitor' kits cover only talking and video. Opening the gate is a separate lock with its own power and an exit button on the yard side: plan it into the project from the start rather than 'add it later' — or you will dig up the walkway again for a single cable.",
+          ] },
+          { h: "The door station: outdoor duty", p: [
+            "The station at the gate lives under sun, rain and frost, so check the ingress protection rating (IP65 and up) and operating temperatures. The second outdoor enemy is backlight: the sun behind a visitor turns the face into a silhouette. Stations with wide dynamic range help, and so does placement — not facing due south.",
+            "Choose the viewing angle by task: a narrow one shows the face large, a wide one shows who stands nearby and what happens at the gate. For a house the wide angle (120° and more) is more practical — it partially replaces an entrance camera. A metal body survives hail and curious children alike.",
+          ] },
+          { h: "The lock: electromechanical versus magnetic", p: [
+            "Nine times out of ten a gate gets an electromechanical lock: during a blackout it stays LOCKED and opens with a mechanical key. A magnetic lock is the opposite — it opens when power fails: a plus for evacuation doors, a security hole for a private gate.",
+            "An outdoor lock must be built for outdoors: moisture-protected and tolerant of the gate sag that inevitably develops over time. Fit an exit button on the yard side and a closer right away: a lock that 'almost latched' is not locked at all.",
+          ] },
+          { h: "Analog or IP: which fits where", p: [
+            "An analog four-wire kit is simpler and cheaper: a station, a monitor, four cores — it works for decades with no network and no configuration. It is enough when 'heard the bell — looked — opened' suits everyone at home.",
+            "An IP intercom adds the main thing: the call reaches your smartphone wherever you are — a courier at the gate while you are at work: you see, talk and open. Plus integration with cameras and access control into one system. The price is network setup and internet dependence — though the intercom itself keeps working locally without it.",
+          ] },
+          { h: "Cable and power: where people go wrong", p: [
+            "The typical mistake is thin cable on a long run: over 30–50 meters weak cores sag the station's power and video picks up noise. Lay cable with cross-section headroom to the gate (separate thick cores for the lock), in conduit, at a depth a shovel will not reach.",
+            "Count the lock's power separately from the intercom: an impulse lock draws several times its nominal current at the moment of opening, and a weak power supply sags together with the picture. If gate automation is planned, put its cables into the same trench — digging twice costs more.",
+          ] },
+          { h: "Turnkey installation and what we stock", p: [
+            "We build private-house intercom systems turnkey: the gate station, the monitor (or two, per floor), an electromechanical lock with an exit button, the run in conduit, and calls set up on the whole family's phones. The engineer's visit is free in Tashkent — we look at the yard and name the exact configuration.",
+            "Our Tashkent warehouse holds over sixty intercom items, the backbone being Hikvision's IP line: door stations, monitors, kits. We match the budget: from a simple analog kit to an IP system integrated with cameras and the smart home.",
+          ] },
+        ],
+        faq: [
+          { q: "Can I open the gate from a smartphone?", a: "Yes — that is the standard IP intercom scenario: the call arrives in the app, you see the visitor, talk and release the lock from anywhere in the world. Analog kits lack this or add it with a separate IP module." },
+          { q: "What happens during a blackout?", a: "With an electromechanical lock the gate stays locked and opens with a key. To keep the intercom ringing and opening, add a small UPS to its power supply — the node draws a few watts, so the runtime lasts hours." },
+          { q: "Can the station and monitor be 50 meters apart?", a: "Yes: for analog kits that is a standard distance with the right cable cross-section, and for IP it is no issue at all (it is a network). What matters: the outdoor run goes in conduit and the lock gets separate power cores." },
+        ],
+      },
+      tr: {
+        title: "Müstakil ev için görüntülü diafon: kilit ve bahçe kapısıyla set kurmak",
+        excerpt: "Müstakil ev diafonu nelerden oluşur: bahçe kapısına zil paneli, iç monitör, elektromekanik kilit, besleme ve kablo. Analog mu IP mi, telefona arama, tipik montaj hataları.",
+        sections: [
+          { h: "Set nelerden oluşur", p: [
+            "Müstakil ev görüntülü diafonu dört parçadır: bahçe kapısındaki zil paneli, evdeki monitör, kapıdaki kilit ve güç kaynağı. Bir de aralarındaki kablo — ve en zayıf halka çoğu kez kablodur: panel ile monitör doğrudan bağlanır ve kapı avludan 20–50 metre uzakta olabilir.",
+            "Kutudan çıkan 'panel + monitör' setleri yalnızca konuşma ve görüntüyü karşılar. Kapıyı açmak, kendi beslemesi ve avlu tarafında çıkış butonu olan ayrı bir kilittir: onu projeye baştan koyun, 'sonra ekleriz' demeyin — yoksa tek kablo için yürüyüş yolunu yeniden kazarsınız.",
+          ] },
+          { h: "Zil paneli: dış görev", p: [
+            "Kapıdaki panel güneş, yağmur ve ayazda yaşar; bu yüzden toz-su koruma sınıfına (IP65 ve üzeri) ve çalışma sıcaklıklarına bakın. İkinci dış düşman ters ışıktır: konuğun arkasındaki güneş yüzü silüete çevirir. Geniş dinamik aralıklı paneller ve doğru yerleşim — tam güneye bakmamak — yardım eder.",
+            "Görüş açısını göreve göre seçin: dar açı yüzü büyük gösterir, geniş açı yanında kim var ve kapıda ne oluyor onu gösterir. Ev için geniş açı (120° ve üzeri) daha pratiktir — giriş kamerasının yerini kısmen tutar. Metal gövde doluya da meraklı çocuklara da dayanır.",
+          ] },
+          { h: "Kilit: elektromekanik mi manyetik mi", p: [
+            "Bahçe kapısına on vakadan dokuzunda elektromekanik kilit takılır: elektrik kesilince KİLİTLİ kalır ve mekanik anahtarla açılır. Manyetik kilit tam tersi — güç gidince açılır: kaçış kapıları için artı, müstakil ev kapısı için güvenlik açığıdır.",
+            "Dış kilit dışarı için yapılmış olmalı: neme dayanıklı ve zamanla kaçınılmaz gelen kapı sarkmasını tolere eden. Avlu tarafına çıkış butonu ve kapı kapatıcıyı hemen ekleyin: 'neredeyse kapanmış' kilit hiç kilitli değildir.",
+          ] },
+          { h: "Analog mu IP mi: hangisi nerede", p: [
+            "Analog dört telli set daha basit ve ucuzdur: panel, monitör, dört damar — ağsız ve ayarsız onyıllarca çalışır. 'Zili duydum — baktım — açtım' senaryosu evdeki herkese yetiyorsa bu yeterlidir.",
+            "IP diafon asıl şeyi ekler: arama nerede olursanız olun akıllı telefona düşer — kurye kapıda, siz işte: gördünüz, konuştunuz, açtınız. Ayrıca kameralar ve geçiş kontrolüyle tek sistemde bütünleşir. Bedeli ağ kurulumu ve internete bağımlılıktır — gerçi diafonun kendisi onsuz da yerel çalışmaya devam eder.",
+          ] },
+          { h: "Kablo ve besleme: nerede yanılıyorlar", p: [
+            "Tipik hata, uzun hatta ince kablodur: 30–50 metrede zayıf damarlar panelin beslemesini düşürür, görüntüye parazit biner. Kapıya kadar kesitte paylı kablo çekin (kilit beslemesine ayrı kalın damarlar), spiral boru içinde ve küreğin ulaşamayacağı derinlikte.",
+            "Kilidin beslemesini diafondan ayrı hesaplayın: darbeli kilit açılma anında anma akımının birkaç katını çeker, zayıf adaptör görüntüyle birlikte çöker. Kapıya otomasyon da planlanıyorsa kablolarını aynı kanala koyun — iki kez kazmak pahalıdır.",
+          ] },
+          { h: "Anahtar teslim montaj ve stoktakiler", p: [
+            "Müstakil ev diafonunu anahtar teslim kuruyoruz: kapı paneli, monitör (katlara iki tane de olur), çıkış butonlu elektromekanik kilit, spiralde hat, tüm ailenin telefonlarına arama kurulumu. Taşkent'te mühendis ziyareti ücretsiz — avluya bakar, kesin konfigürasyonu söyleriz.",
+            "Taşkent depomuzda altmıştan fazla diafon kalemi var; omurga Hikvision IP serisi: zil panelleri, monitörler, setler. Bütçeye uyar: basit analog setten kameralar ve akıllı evle bütünleşik IP sistemine kadar.",
+          ] },
+        ],
+        faq: [
+          { q: "Bahçe kapısı akıllı telefondan açılır mı?", a: "Evet — IP diafonun standart senaryosu: arama uygulamaya düşer, konuğu görür, konuşur ve kilidi dünyanın her yerinden açarsınız. Analog setlerde bu yoktur ya da ayrı IP modülle eklenir." },
+          { q: "Elektrik kesilince ne olur?", a: "Elektromekanik kilitle kapı kilitli kalır, anahtarla açılır. Diafonun çalmaya ve açmaya devam etmesi için beslemesine küçük bir UPS koyun — düğüm birkaç watt çeker, süre saatlerce yeter." },
+          { q: "Panel ile monitör 50 metre ayrılabilir mi?", a: "Evet: analog setlerde doğru kablo kesitiyle bu standart mesafedir, IP'de zaten sorun değildir (ağdır). Önemli olan: dış hat spiral boruda gitmeli ve kilide ayrı besleme damarları çekilmelidir." },
+        ],
+      },
+      zh: {
+        title: "独栋住宅可视对讲：门口机、锁具与院门的整套方案",
+        excerpt: "独栋住宅可视对讲的组成：院门口的门口机、室内分机、电控机械锁、供电与布线。模拟还是IP、手机接听、常见施工错误。",
+        sections: [
+          { h: "整套系统由什么组成", p: [
+            "独栋住宅的可视对讲有四个节点：院门口的门口机、屋内的室内机、院门上的锁和电源。再加上连接它们的线缆——而线缆恰恰最常成为薄弱环节：门口机与室内机直连，而院门可能在20–50米开外。",
+            "开箱即用的「门口机+室内机」套装只解决对讲和画面。开门是另一回事：一把带独立供电和院内出门按钮的锁——请一开始就纳入方案，别想「以后再加」，否则为一根线要把步道重新挖开。",
+          ] },
+          { h: "门口机：户外岗位", p: [
+            "院门口的门口机常年经受日晒雨淋和严寒，所以要看防尘防水等级（IP65及以上）和工作温度。第二个户外难题是逆光：访客背后的太阳把脸拍成剪影。带宽动态的门口机和正确的朝向（别正对南面）能解决。",
+            "视角按需求选：窄视角把脸拍得大，宽视角能看到旁边站着谁、门口发生什么。住宅更实用的是宽视角（120°以上）——它还能部分替代入口摄像机。金属机身扛得住冰雹，也扛得住好奇的孩子。",
+          ] },
+          { h: "锁具：电控机械锁对电磁锁", p: [
+            "院门十有八九装电控机械锁：停电时它保持锁闭，可用机械钥匙打开。电磁锁正相反——断电即开：对疏散门是优点，对住宅院门则是安全漏洞。",
+            "户外锁必须是户外级的：防潮，并能容忍院门随时间必然出现的下垂变形。同时立刻装上院内侧出门按钮和闭门器：一把「差点锁上」的锁等于没锁。",
+          ] },
+          { h: "模拟还是IP：各适合哪里", p: [
+            "模拟四线制套装更简单便宜：门口机、室内机、四根线——不用网络不用设置，一用几十年。如果「听到铃声—看一眼—开门」的场景全家都满意，它就够了。",
+            "IP对讲补上关键一环：呼叫直达手机，无论您在哪——快递员在门口而您在上班：看到、通话、开门。还能与摄像机和门禁整合成一套系统。代价是要配置网络、依赖互联网——不过对讲本身离了网也照常本地工作。",
+          ] },
+          { h: "布线与供电：错在哪里", p: [
+            "典型错误是长距离用细线：30–50米上细芯线把门口机电压拉低，画面出现干扰。到院门的线要留足线径余量（锁的供电单独走粗芯线），穿波纹管或管道，埋到铁锹够不着的深度。",
+            "锁的供电要与对讲分开计算：电控锁在开门瞬间的电流是额定值的数倍，电源弱了画面会跟着抖。若院门还计划装自动化，把它的线缆放进同一条沟——挖两次更贵。",
+          ] },
+          { h: "交钥匙施工与现货", p: [
+            "我们交钥匙搭建住宅对讲：院门门口机、室内机（可按楼层配两台）、带出门按钮的电控机械锁、穿管布线、全家手机呼叫设置。塔什干范围工程师免费上门——看过院子给出准确配置。",
+            "塔什干仓库常备六十多个对讲品项，主力是海康威视IP系列：门口机、室内机、套装。按预算搭配：从简单模拟套装到与摄像机、智能家居联动的IP系统。",
+          ] },
+        ],
+        faq: [
+          { q: "能用手机开院门吗？", a: "能——这是IP对讲的标准场景：呼叫推送到App，看到访客、对话并在世界任何角落开锁。模拟套装没有此功能，或需另加IP模块。" },
+          { q: "停电了怎么办？", a: "配电控机械锁的院门保持锁闭，可用钥匙打开。要让对讲继续响铃开门，给电源加一台小UPS——整个节点只耗几瓦，续航以小时计。" },
+          { q: "门口机和室内机能相距50米吗？", a: "能：模拟套装在线径正确时这是标准距离，IP更不是问题（走网络）。关键只有一条：户外线穿管敷设，锁的供电单独走线。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "kak-vybrat-ibp",
+    date: "2026-09-04",
+    related: ["servers", "cctv"],
+    hubs: ["ibp-i-elektropitanie"],
+    loc: {
+      ru: {
+        title: "Как выбрать ИБП: для компьютера, роутера, котла и видеонаблюдения",
+        excerpt: "Разбираем выбор источника бесперебойного питания: ВА и Вт, три типа ИБП, чистый синус для котла, расчёт автономии для камер и серверной. С типовыми конфигурациями.",
+        sections: [
+          { h: "Чем ИБП отличается от стабилизатора", p: [
+            "Стабилизатор выравнивает напряжение, но при отключении света бессилен. ИБП — это батарея с электроникой: при пропадании сети он мгновенно подхватывает нагрузку и держит её от нескольких минут до часов, в зависимости от ёмкости. Для полной защиты техники их часто ставят вместе: стабилизатор гасит скачки, ИБП закрывает отключения.",
+            "Типов ИБП три. Резервный (off-line) — самый простой и дешёвый: переключается на батарею за 5–10 миллисекунд, годится для роутера и простой техники. Линейно-интерактивный добавляет автотрансформатор и вытягивает просадки без разряда батареи — стандарт для компьютеров. Онлайн (двойное преобразование) питает нагрузку через инвертор постоянно: ноль времени переключения и идеальный синус — выбор для серверных и медицины.",
+          ] },
+          { h: "ВА и Вт: как не ошибиться с мощностью", p: [
+            "На ИБП пишут вольт-амперы (ВА), а техника потребляет ватты (Вт) — и это разные числа. Для типового ИБП ватты составляют 60–70 % от вольт-ампер: модель «на 1000 ВА» честно тянет 600–700 Вт. Продавец, который равняет ВА и Вт, закладывает вам перегрузку.",
+            "Считайте так: сложите ватты всей подключаемой техники, разделите на 0,6 — получите минимальные ВА, и добавьте 20–30 % запаса: батареи стареют, а нагрузка со временем только растёт. Компьютер с монитором — обычно 250–400 Вт, значит комфортный ИБП — от 800–1000 ВА.",
+          ] },
+          { h: "Для компьютера и домашнего офиса", p: [
+            "Задача домашнего ИБП — не работать часами, а пережить короткое отключение и дать корректно сохраниться: типовые 650–1000 ВА держат компьютер 5–15 минут. Берите линейно-интерактивную модель: в сетях с просадками она не изнашивает батарею постоянными переключениями.",
+            "Полезная мелочь, о которой забывают, — порт USB и функция автовыключения: при разряде батареи ИБП сам корректно завершает работу системы, даже если вас нет дома. И подключайте к ИБП роутер: интернет во время отключений нужен не меньше компьютера, а ест роутер всего 10–20 Вт.",
+          ] },
+          { h: "Для газового котла — только чистый синус", p: [
+            "Котёл — особый случай: его циркуляционный насос и электроника требуют правильной синусоиды. Дешёвые компьютерные ИБП выдают на батарее «ступенчатую» аппроксимацию — насос на ней гудит, греется и выходит из строя, а автоматика котла ловит ошибки. Для котла нужен ИБП с чистым синусом, обычно это модели с внешними батареями.",
+            "Мощности котёл ест немного — 100–250 Вт вместе с насосом, но автономия нужна часами: зимнее отключение на вечер не должно останавливать отопление. Поэтому котловые ИБП комплектуют внешними аккумуляторами: пара батарей по 100 А·ч держит средний котёл 6–10 часов. Важна и полярность фазы — котлы с ионизационным контролем пламени чувствительны к «перевёрнутой» розетке.",
+          ] },
+          { h: "Для видеонаблюдения и серверной", p: [
+            "В видеонаблюдении ИБП ставят на весь узел записи: регистратор, PoE-коммутатор (он же питает камеры) и роутер. Считайте по максимуму: 16-канальный регистратор с дисками — 40–60 Вт, PoE-коммутатор с камерами — по их суммарному бюджету, зимой с подогревом больше. Цель — 15–30 минут автономии: этого хватает, чтобы пережить типовое отключение и зафиксировать, что происходило, пока «не было света».",
+            "Серверная — территория онлайн-ИБП: двойное преобразование, ноль миллисекунд переключения, карта мониторинга по сети и автоматическое завершение виртуальных машин. Автономию считают не «на подольше», а до штатного завершения работы или запуска генератора — обычно те же 10–20 минут, но с гарантией под полной нагрузкой.",
+          ] },
+          { h: "Батареи, обслуживание и подбор", p: [
+            "Любой ИБП — это в первую очередь батарея, а она расходник: типовой свинцовый аккумулятор живёт 3–5 лет, в жаре — меньше. Раз в полгода полезно проверять автономию простым тестом с выдёргиванием вилки: деградацию батареи замечают обычно в самый неподходящий момент.",
+            "На складе в Ташкенте — ИБП Pixietech, Vertiv и SNR: от компактных моделей для компьютера до стоечных для серверных, плюс сменные батареи. Скажите, что защищаем — подберём мощность и автономию под задачу, привезём и подключим, для организаций — счёт с НДС.",
+          ] },
+        ],
+        faq: [
+          { q: "ИБП и стабилизатор — нужно ставить оба?", a: "Если в сети и скачки, и отключения — да, это разные защиты: стабилизатор на входе принимает просадки, ИБП за ним закрывает пропадания. В стабильной сети городской квартиры обычно достаточно линейно-интерактивного ИБП: небольшие колебания он выравнивает сам." },
+          { q: "Сколько компьютер проработает от ИБП на 650 ВА?", a: "Офисный компьютер с монитором (250–300 Вт) — порядка 5–10 минут: достаточно сохраниться и корректно выключиться. Для работы часами нужен ИБП с внешними батареями — это другой класс и бюджет." },
+          { q: "Можно ли подключить котёл к обычному компьютерному ИБП?", a: "Нельзя: на батарее он выдаёт ступенчатый сигнал вместо синуса — циркуляционный насос гудит и перегревается, автоматика котла сбоит. Для котла нужен ИБП с чистой синусоидой и внешними батареями на часы автономии." },
+        ],
+      },
+      uz: {
+        title: "UPS ni qanday tanlash: kompyuter, router, qozon va videokuzatuv uchun",
+        excerpt: "Uzluksiz quvvat manbaini tanlashni ko'rib chiqamiz: VA va Vt, UPS ning uch turi, qozon uchun toza sinus, kameralar va server xonasi uchun avtonomiya hisobi. Tipik konfiguratsiyalar bilan.",
+        sections: [
+          { h: "UPS stabilizatordan nimasi bilan farq qiladi", p: [
+            "Stabilizator kuchlanishni tekislaydi, lekin svet o'chganda ojiz. UPS — elektronikali batareya: tarmoq yo'qolganda yukni bir zumda ilib oladi va sig'imga qarab bir necha daqiqadan soatlargacha ushlaydi. To'liq himoya uchun ularni ko'pincha birga qo'yishadi: stabilizator sakrashlarni o'chiradi, UPS o'chishlarni yopadi.",
+            "UPS turlari uchta. Rezerv (off-line) — eng oddiy va arzon: batareyaga 5–10 millisekundda o'tadi, router va oddiy texnikaga yaraydi. Chiziqli-interaktiv avtotransformator qo'shadi va pasayishlarni batareyani sarflamasdan tortadi — kompyuterlar standarti. Onlayn (ikki marta o'zgartirish) yukni doim invertor orqali oziqlantiradi: nol o'tish vaqti va ideal sinus — server xonalari va tibbiyot tanlovi.",
+          ] },
+          { h: "VA va Vt: quvvatda adashmaslik", p: [
+            "UPS da volt-amper (VA) yoziladi, texnika esa vatt (Vt) iste'mol qiladi — bular har xil raqamlar. Tipik UPS da vatt volt-amperning 60–70 % ini tashkil qiladi: «1000 VA» model halol 600–700 Vt tortadi. VA bilan Vt ni tenglashtirgan sotuvchi sizga ortiqcha yuklama tayyorlaydi.",
+            "Bunday hisoblang: ulanadigan texnikaning vattlarini qo'shing, 0,6 ga bo'ling — minimal VA chiqadi, va 20–30 % zaxira qo'shing: batareyalar qariydi, yuk esa vaqt bilan faqat o'sadi. Monitorli kompyuter odatda 250–400 Vt — demak qulay UPS 800–1000 VA dan.",
+          ] },
+          { h: "Kompyuter va uy ofisi uchun", p: [
+            "Uy UPS ining vazifasi soatlab ishlash emas, qisqa o'chishni o'tkazib, to'g'ri saqlanishga imkon berish: tipik 650–1000 VA kompyuterni 5–15 daqiqa ushlaydi. Chiziqli-interaktiv model oling: pasayishli tarmoqlarda u batareyani doimiy o'tishlar bilan yemirmaydi.",
+            "Unutiladigan foydali mayda narsa — USB port va avto-o'chirish funksiyasi: batareya tugaganda UPS o'zi tizimni to'g'ri yakunlaydi, uyda bo'lmasangiz ham. Routerni ham UPS ga ulang: o'chish paytida internet kompyuterdan kam kerak emas, router esa bor-yo'g'i 10–20 Vt yeydi.",
+          ] },
+          { h: "Gaz qozoni uchun — faqat toza sinus", p: [
+            "Qozon — alohida holat: uning aylanma nasosi va elektronikasi to'g'ri sinusoidani talab qiladi. Arzon kompyuter UPS lari batareyada «pog'onali» taxminiy signal beradi — nasos unda g'uvillaydi, qiziydi va ishdan chiqadi, qozon avtomatikasi xatolar beradi. Qozonga toza sinusli UPS kerak, odatda tashqi batareyali modellar.",
+            "Qozon quvvatni oz yeydi — nasos bilan birga 100–250 Vt, lekin avtonomiya soatlab kerak: qishki kechqurun o'chish isitishni to'xtatmasligi kerak. Shuning uchun qozon UPS lariga tashqi akkumulyatorlar qo'shiladi: 100 A·soatlik ikkita batareya o'rtacha qozonni 6–10 soat ushlaydi. Faza qutbi ham muhim — alanga ionlashuv nazoratli qozonlar «ag'darilgan» rozetkaga sezgir.",
+          ] },
+          { h: "Videokuzatuv va server xonasi uchun", p: [
+            "Videokuzatuvda UPS butun yozuv uzeliga qo'yiladi: registrator, PoE-kommutator (u kameralarni ham oziqlantiradi) va router. Maksimum bo'yicha hisoblang: diskli 16 kanalli registrator — 40–60 Vt, PoE-kommutator kameralar bilan — ularning umumiy byudjeti bo'yicha, qishda isitish bilan ko'proq. Maqsad — 15–30 daqiqa avtonomiya: tipik o'chishni o'tkazishga va «svet yo'q» paytida nima bo'lganini yozib olishga yetadi.",
+            "Server xonasi — onlayn-UPS hududi: ikki marta o'zgartirish, nol millisekund o'tish, tarmoq bo'ylab monitoring kartasi va virtual mashinalarni avtomatik yakunlash. Avtonomiya «uzoqroq» emas, ishni shtatli yakunlash yoki generator ishga tushishigacha hisoblanadi — odatda o'sha 10–20 daqiqa, lekin to'liq yuk ostida kafolat bilan.",
+          ] },
+          { h: "Batareyalar, xizmat va tanlov", p: [
+            "Har qanday UPS — avvalo batareya, u esa sarflanadigan qism: tipik qo'rg'oshin akkumulyator 3–5 yil yashaydi, issiqda kamroq. Yarim yilda bir marta vilkani sug'urib oddiy test bilan avtonomiyani tekshirish foydali: batareya degradatsiyasi odatda eng noqulay paytda bilinadi.",
+            "Toshkentdagi omborda — Pixietech, Vertiv va SNR UPS lari: kompyuter uchun ixchamlaridan server xonalari uchun stoykalilarigacha, plus almashtiriladigan batareyalar. Nimani himoya qilayotganimizni ayting — quvvat va avtonomiyani vazifaga moslab tanlaymiz, olib kelib ulaymiz, tashkilotlarga QQS li hisob.",
+          ] },
+        ],
+        faq: [
+          { q: "UPS va stabilizator — ikkalasini qo'yish kerakmi?", a: "Tarmoqda ham sakrash, ham o'chish bo'lsa — ha, bular turli himoyalar: kirishdagi stabilizator pasayishlarni oladi, undan keyingi UPS yo'qolishlarni yopadi. Shahar kvartirasining barqaror tarmog'ida odatda chiziqli-interaktiv UPS yetadi." },
+          { q: "650 VA UPS dan kompyuter qancha ishlaydi?", a: "Monitorli ofis kompyuteri (250–300 Vt) — taxminan 5–10 daqiqa: saqlanish va to'g'ri o'chishga yetadi. Soatlab ishlash uchun tashqi batareyali UPS kerak — bu boshqa klass va byudjet." },
+          { q: "Qozonni oddiy kompyuter UPS iga ulasa bo'ladimi?", a: "Bo'lmaydi: batareyada u sinus o'rniga pog'onali signal beradi — aylanma nasos g'uvillaydi va qiziydi, qozon avtomatikasi sboy beradi. Qozonga toza sinusoidali va soatlab avtonomiyaga tashqi batareyali UPS kerak." },
+        ],
+      },
+      en: {
+        title: "How to choose a UPS: for a computer, router, boiler and CCTV",
+        excerpt: "Choosing an uninterruptible power supply: VA vs watts, the three UPS types, pure sine wave for boilers, runtime maths for cameras and server rooms. With typical configurations.",
+        sections: [
+          { h: "How a UPS differs from a stabilizer", p: [
+            "A stabilizer levels the voltage but is helpless during a blackout. A UPS is a battery with electronics: when mains power drops it picks up the load instantly and carries it from minutes to hours depending on capacity. For full protection the two are often paired: the stabilizer absorbs surges, the UPS covers the outages.",
+            "There are three UPS types. Standby (off-line) is the simplest and cheapest: it switches to battery in 5–10 milliseconds — fine for a router and simple loads. Line-interactive adds an autotransformer and rides through sags without draining the battery — the standard for computers. Online (double conversion) feeds the load through the inverter permanently: zero transfer time and a perfect sine wave — the choice for server rooms and medical equipment.",
+          ] },
+          { h: "VA versus watts: getting the size right", p: [
+            "A UPS is rated in volt-amperes (VA) while your equipment consumes watts — and these are different numbers. On a typical UPS the watts are 60–70 % of the VA: a '1000 VA' unit honestly carries 600–700 W. A seller who equates VA and watts is selling you an overload.",
+            "Count it like this: add up the watts of everything you will plug in, divide by 0.6 to get the minimum VA, and add 20–30 % headroom — batteries age and loads only grow. A computer with a monitor is usually 250–400 W, so a comfortable UPS starts at 800–1000 VA.",
+          ] },
+          { h: "For a computer and home office", p: [
+            "A home UPS is not meant to run for hours — it exists to ride out a short outage and let you save your work: a typical 650–1000 VA unit holds a computer for 5–15 minutes. Take a line-interactive model: in sagging grids it does not wear the battery with constant transfers.",
+            "A useful detail people forget is the USB port with auto-shutdown: when the battery runs low the UPS gracefully shuts the system down even if you are away. And plug your router into the UPS too: during outages the internet matters as much as the computer, and a router draws just 10–20 W.",
+          ] },
+          { h: "For a gas boiler — pure sine wave only", p: [
+            "A boiler is a special case: its circulation pump and electronics need a proper sine wave. Cheap computer UPSes output a stepped approximation on battery — the pump hums, overheats and fails, and the boiler's controller throws errors. A boiler needs a pure sine wave UPS, usually one with external batteries.",
+            "A boiler draws little — 100–250 W with the pump — but needs hours of runtime: a winter evening outage must not stop the heating. That is why boiler UPSes take external batteries: a pair of 100 Ah units keeps an average boiler running 6–10 hours. Phase polarity matters too — boilers with ionization flame control are sensitive to a 'reversed' socket.",
+          ] },
+          { h: "For CCTV and the server room", p: [
+            "In CCTV the UPS protects the whole recording node: the NVR, the PoE switch (which also powers the cameras) and the router. Count the maximum: a 16-channel NVR with disks is 40–60 W, the PoE switch carries its cameras' total budget — more in winter with heaters on. The goal is 15–30 minutes of runtime: enough to ride out a typical outage and record what happened while the lights were off.",
+            "A server room is online-UPS territory: double conversion, zero transfer time, a network monitoring card and automatic shutdown of virtual machines. Runtime is sized not for 'as long as possible' but until graceful shutdown or generator start — usually the same 10–20 minutes, guaranteed at full load.",
+          ] },
+          { h: "Batteries, maintenance and selection", p: [
+            "Any UPS is first of all a battery, and the battery is a consumable: a typical lead-acid unit lives 3–5 years, less in heat. Every six months it pays to test the runtime by simply pulling the plug: battery degradation is usually discovered at the worst possible moment.",
+            "In stock in Tashkent — Pixietech, Vertiv and SNR UPSes: from compact desktop units to rack models for server rooms, plus replacement batteries. Tell us what you are protecting — we will size the power and runtime, deliver and connect it; VAT invoicing for companies.",
+          ] },
+        ],
+        faq: [
+          { q: "Do I need both a UPS and a stabilizer?", a: "If your grid has both surges and outages — yes, they are different protections: the stabilizer at the input absorbs the sags, the UPS behind it covers the blackouts. In a stable city apartment a line-interactive UPS alone is usually enough." },
+          { q: "How long will a computer run on a 650 VA UPS?", a: "An office computer with a monitor (250–300 W) — around 5–10 minutes: enough to save and shut down properly. Running for hours takes a UPS with external batteries — a different class and budget." },
+          { q: "Can I connect a boiler to a regular computer UPS?", a: "No: on battery it outputs a stepped signal instead of a sine wave — the circulation pump hums and overheats, and the boiler controller fails. A boiler needs a pure sine wave UPS with external batteries for hours of runtime." },
+        ],
+      },
+      tr: {
+        title: "UPS nasıl seçilir: bilgisayar, router, kombi ve kamera sistemi için",
+        excerpt: "Kesintisiz güç kaynağı seçimi: VA ile watt farkı, üç UPS tipi, kombi için saf sinüs, kameralar ve sunucu odası için çalışma süresi hesabı. Tipik konfigürasyonlarla.",
+        sections: [
+          { h: "UPS regülatörden nasıl ayrılır", p: [
+            "Regülatör voltajı düzler ama kesintide çaresizdir. UPS, elektronikli bir aküdür: şebeke gidince yükü anında devralır ve kapasitesine göre dakikalardan saatlere kadar taşır. Tam koruma için ikisi çoğu kez birlikte kurulur: regülatör dalgalanmaları emer, UPS kesintileri kapatır.",
+            "Üç UPS tipi vardır. Yedek (off-line) en basit ve ucuzudur: aküye 5–10 milisaniyede geçer; router ve basit yükler için uygundur. Line-interactive, ototransformatör ekler ve çökmeleri aküyü harcamadan taşır — bilgisayarların standardı. Online (çift çevrim) yükü sürekli invertör üzerinden besler: sıfır geçiş süresi ve kusursuz sinüs — sunucu odalarının ve tıbbi cihazların tercihi.",
+          ] },
+          { h: "VA ile watt: gücü doğru seçmek", p: [
+            "UPS'te volt-amper (VA) yazar, cihazlarınız ise watt tüketir — bunlar farklı sayılardır. Tipik bir UPS'te watt, VA'nın %60–70'idir: '1000 VA' model dürüstçe 600–700 W taşır. VA ile watt'ı eşitleyen satıcı size aşırı yük satıyordur.",
+            "Şöyle hesaplayın: bağlanacak her şeyin watt'ını toplayın, 0,6'ya bölüp asgari VA'yı bulun ve %20–30 pay ekleyin — aküler yaşlanır, yük hep büyür. Monitörlü bilgisayar genelde 250–400 W'tır; rahat UPS 800–1000 VA'dan başlar.",
+          ] },
+          { h: "Bilgisayar ve ev ofisi için", p: [
+            "Ev UPS'inin işi saatlerce çalışmak değil, kısa kesintiyi atlatıp kaydetmenize izin vermektir: tipik 650–1000 VA bilgisayarı 5–15 dakika tutar. Line-interactive model alın: çöken şebekelerde aküyü sürekli geçişlerle yıpratmaz.",
+            "Unutulan faydalı ayrıntı, USB portu ve otomatik kapatmadır: akü azalınca UPS, siz evde olmasanız bile sistemi düzgün kapatır. Router'ı da UPS'e bağlayın: kesintide internet bilgisayar kadar önemlidir ve router yalnızca 10–20 W çeker.",
+          ] },
+          { h: "Kombi için — yalnızca saf sinüs", p: [
+            "Kombi özel bir durumdur: sirkülasyon pompası ve elektroniği düzgün sinüs ister. Ucuz bilgisayar UPS'leri aküde 'basamaklı' bir sinyal verir — pompa uğuldar, ısınır ve arızalanır, kombi otomatiği hata verir. Kombiye saf sinüslü, genellikle harici akülü UPS gerekir.",
+            "Kombi az çeker — pompayla birlikte 100–250 W — ama saatlerce süre ister: kış akşamı kesintisi ısıtmayı durdurmamalı. Bu yüzden kombi UPS'lerine harici aküler takılır: 100 Ah'lik iki akü ortalama kombiyi 6–10 saat taşır. Faz kutbu da önemlidir — iyonizasyonla alev kontrolü yapan kombiler 'ters' prize duyarlıdır.",
+          ] },
+          { h: "Kameralar ve sunucu odası için", p: [
+            "Kamera sistemlerinde UPS tüm kayıt düğümünü korur: NVR, kameraları da besleyen PoE switch ve router. Azamiye göre sayın: diskli 16 kanallı NVR 40–60 W'tır, PoE switch kameralarının toplam bütçesini taşır — kışın ısıtıcılarla daha fazla. Hedef 15–30 dakika süre: tipik kesintiyi atlatmaya ve 'elektrik yokken' olanları kaydetmeye yeter.",
+            "Sunucu odası online-UPS bölgesidir: çift çevrim, sıfır geçiş, ağ izleme kartı ve sanal makinelerin otomatik kapatılması. Süre 'olabildiğince uzun' değil, düzgün kapanışa veya jeneratörün devreye girişine kadar hesaplanır — genelde yine 10–20 dakika, ama tam yükte garantili.",
+          ] },
+          { h: "Aküler, bakım ve seçim", p: [
+            "Her UPS önce bir aküdür ve akü sarf malzemesidir: tipik kurşun-asit akü 3–5 yıl yaşar, sıcakta daha az. Altı ayda bir fişi çekerek süreyi test etmek iyidir: akü yıpranması genelde en kötü anda fark edilir.",
+            "Taşkent depomuzda Pixietech, Vertiv ve SNR UPS'leri var: masaüstü kompaktlardan sunucu odası rack modellerine, ayrıca yedek aküler. Neyi koruduğunuzu söyleyin — gücü ve süreyi işe göre seçer, getirir ve bağlarız; kurumlara KDV'li fatura.",
+          ] },
+        ],
+        faq: [
+          { q: "UPS ve regülatör — ikisi de gerekli mi?", a: "Şebekede hem dalgalanma hem kesinti varsa evet, bunlar farklı korumalardır: girişteki regülatör çökmeleri emer, arkasındaki UPS kesintileri kapatır. İstikrarlı şehir dairesinde genelde line-interactive UPS tek başına yeter." },
+          { q: "650 VA UPS ile bilgisayar ne kadar çalışır?", a: "Monitörlü ofis bilgisayarı (250–300 W) yaklaşık 5–10 dakika: kaydedip düzgün kapatmaya yeter. Saatlerce çalışmak, harici akülü UPS ister — o başka bir sınıf ve bütçedir." },
+          { q: "Kombi normal bilgisayar UPS'ine bağlanır mı?", a: "Bağlanmaz: aküde sinüs yerine basamaklı sinyal verir — sirkülasyon pompası uğuldar ve ısınır, kombi otomatiği bozulur. Kombiye saf sinüslü ve saatlerce süre için harici akülü UPS gerekir." },
+        ],
+      },
+      zh: {
+        title: "如何选购UPS：电脑、路由器、壁挂炉与监控系统",
+        excerpt: "不间断电源选购指南：VA与瓦特的区别、三种UPS类型、壁挂炉必须纯正弦波、摄像机和机房的续航计算。附典型配置。",
+        sections: [
+          { h: "UPS与稳压器的区别", p: [
+            "稳压器只能拉平电压，停电时无能为力。UPS是带电子控制的电池：市电消失的瞬间接管负载，按容量可支撑几分钟到几小时。要做全面保护，两者常常配合使用：稳压器在前端吃掉波动，UPS兜底停电。",
+            "UPS分三类。后备式（off-line）最简单便宜：5–10毫秒切换到电池，适合路由器等简单负载。在线互动式加入自耦变压器，电压下陷时不耗电池即可拉升——电脑的标准配置。在线式（双变换）让负载始终经逆变器供电：零切换时间、完美正弦波——机房和医疗设备的选择。",
+          ] },
+          { h: "VA与瓦特：容量别选错", p: [
+            "UPS标注伏安（VA），设备消耗的却是瓦特——两者不是一回事。典型UPS的瓦特约为VA的60–70%：标称「1000 VA」的机器实际承载600–700瓦。把VA当瓦特卖给您的商家，是在卖过载。",
+            "算法如下：把要接入设备的瓦数相加，除以0.6得出最低VA，再留20–30%余量——电池会老化，负载只会增加。带显示器的电脑通常250–400瓦，舒适的UPS从800–1000 VA起。",
+          ] },
+          { h: "电脑与家庭办公", p: [
+            "家用UPS的使命不是撑几个小时，而是扛过短时停电、让您从容存盘：典型650–1000 VA可支撑电脑5–15分钟。选在线互动式：在电压不稳的电网里它不会因频繁切换损耗电池。",
+            "常被忽略的实用细节是USB口和自动关机：电池耗尽前UPS会自动让系统正常关机，哪怕您不在家。路由器也接到UPS上：停电时网络和电脑一样重要，而路由器只吃10–20瓦。",
+          ] },
+          { h: "燃气壁挂炉——只能用纯正弦波", p: [
+            "壁挂炉是特殊情况：循环泵和电子板需要标准正弦波。廉价电脑UPS在电池模式输出「阶梯波」——水泵嗡嗡作响、发热损坏，炉子控制器频报故障。壁挂炉必须配纯正弦波UPS，通常是外接电池的机型。",
+            "壁挂炉功率不大——连水泵100–250瓦，但续航要以小时计：冬夜停电不能停暖气。所以炉用UPS都配外接电池：两块100安时电池可让普通壁挂炉运行6–10小时。相位极性也重要——带离子火焰检测的炉子对「反接」插座敏感。",
+          ] },
+          { h: "监控系统与机房", p: [
+            "监控系统的UPS要保整个录像节点：录像机、PoE交换机（它同时给摄像机供电）和路由器。按峰值计算：带硬盘的16路录像机40–60瓦，PoE交换机按摄像机总功耗算——冬天加热开启时更高。目标是15–30分钟续航：足以扛过常见停电，并录下「没电时」发生的一切。",
+            "机房是在线式UPS的地盘：双变换、零切换、网络监控卡、虚拟机自动关机。续航不求「越久越好」，而是算到正常关机或发电机启动——通常同样10–20分钟，但要在满载下有保证。",
+          ] },
+          { h: "电池、维护与选型", p: [
+            "任何UPS本质上先是一块电池，而电池是耗材：典型铅酸电池寿命3–5年，高温环境更短。每半年拔一次插头做续航测试很有必要：电池老化往往在最糟的时刻才暴露。",
+            "塔什干现货：Pixietech、Vertiv和SNR的UPS——从桌面小机到机房机架式，另有替换电池。告诉我们要保护什么——按需求选好功率和续航，送货接线，企业可开增值税发票。",
+          ] },
+        ],
+        faq: [
+          { q: "UPS和稳压器要都装吗？", a: "如果电网既有波动又有停电——要，两者是不同的保护：前端稳压器吃掉电压下陷，后面的UPS兜底断电。市区公寓电网稳定的话，通常一台在线互动式UPS就够。" },
+          { q: "650 VA的UPS能让电脑撑多久？", a: "带显示器的办公电脑（250–300瓦）约5–10分钟：足够存盘并正常关机。想撑几个小时需要外接电池的UPS——那是另一个级别和预算。" },
+          { q: "壁挂炉能接普通电脑UPS吗？", a: "不能：电池模式下它输出阶梯波而非正弦波——循环泵嗡响过热，炉子控制器出错。壁挂炉需要纯正弦波、外接电池、以小时计续航的UPS。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "skolko-stoit-sks-za-tochku",
     date: "2026-09-04",
     related: ["network", "slabotochnye-sistemy"],
