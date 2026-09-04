@@ -216,8 +216,8 @@ export const ARTICLES: Article[] = [
         excerpt: "Формула расчёта объёма диска под камеры: битрейт, число камер, глубина архива. Таблица типовых конфигураций, почему нужны диски серии Purple и когда одного диска мало.",
         sections: [
           { h: "Формула, которая решает всё", p: [
-            "Объём архива считается просто: битрейт камеры (Мбит/с) ÷ 8 × 3600 × 24 = гигабайты в сутки с одной камеры. Камера 4 МП со сжатием H.265 в типовой сцене пишет 2–4 Мбит/с — это 20–45 ГБ в сутки.",
-            "Дальше умножаете на число камер и дни хранения. Восемь камер по 3 Мбит/с на 30 суток: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 ТБ. Значит, диск на 8 ТБ — впритык, и правильнее взять 10 ТБ или две восьмёрки.",
+            "Объём архива считается просто: битрейт камеры (Мбит/с) ÷ 8 × 86 400 ÷ 1000 = гигабайты в сутки с одной камеры (86 400 — секунд в сутках). Камера 4 МП со сжатием H.265 в типовой сцене пишет 2–4 Мбит/с — это 20–45 ГБ в сутки.",
+            "Дальше умножаете на число камер и дни хранения. Поток 3 Мбит/с — это 32,4 ГБ в сутки; восемь таких камер на 30 суток: 32,4 × 8 × 30 ≈ 7,8 ТБ. Значит, диск на 8 ТБ — впритык, и правильнее взять 10 ТБ или две восьмёрки.",
           ] },
           { h: "Что влияет на битрейт сильнее всего", p: [
             "Кодек: H.265 экономит до половины объёма против H.264 — на регистраторах, где он есть, включать обязательно. Движение в кадре: камера на оживлённой кассе пишет вдвое больше камеры в тихом коридоре. Ночь: шум матрицы раздувает поток, поэтому уличные камеры ночью «тяжелее» дневных.",
@@ -251,8 +251,8 @@ export const ARTICLES: Article[] = [
         excerpt: "Kameralarga disk hajmi hisobi formulasi: bitreyt, kameralar soni, arxiv chuqurligi. Tipik konfiguratsiyalar jadvali, nega Purple seriya kerak va qachon bitta disk yetmaydi.",
         sections: [
           { h: "Hammasini hal qiladigan formula", p: [
-            "Arxiv hajmi oddiy hisoblanadi: kamera bitreyti (Mbit/s) ÷ 8 × 3600 × 24 = bitta kameradan sutkasiga gigabayt. H.265 siqishli 4 MP kamera tipik sahnada 2–4 Mbit/s yozadi — bu sutkasiga 20–45 GB.",
-            "Keyin kameralar soni va saqlash kunlariga ko'paytirasiz. 3 Mbit/s dan sakkizta kamera 30 sutkaga: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 TB. Demak 8 TB disk — zo'rg'a, to'g'risi 10 TB yoki ikkita sakkizlik olish.",
+            "Arxiv hajmi oddiy hisoblanadi: kamera bitreyti (Mbit/s) ÷ 8 × 86 400 ÷ 1000 = bitta kameradan sutkasiga gigabayt (86 400 — sutkadagi soniyalar). H.265 siqishli 4 MP kamera tipik sahnada 2–4 Mbit/s yozadi — bu sutkasiga 20–45 GB.",
+            "Keyin kameralar soni va saqlash kunlariga ko'paytirasiz. 3 Mbit/s oqim — sutkasiga 32,4 GB; shunday sakkizta kamera 30 sutkaga: 32,4 × 8 × 30 ≈ 7,8 TB. Demak 8 TB disk — zo'rg'a, to'g'risi 10 TB yoki ikkita sakkizlik olish.",
           ] },
           { h: "Bitreytga eng kuchli ta'sir qiladigan narsalar", p: [
             "Kodek: H.265 H.264 ga nisbatan hajmning yarmigacha tejaydi — bor registratorlarda majburiy yoqish kerak. Kadrdagi harakat: gavjum kassadagi kamera tinch koridordagidan ikki baravar ko'p yozadi. Tun: matritsa shovqini oqimni shishiradi, shuning uchun ko'cha kameralari kechasi kunduzgidan «og'irroq».",
@@ -286,8 +286,8 @@ export const ARTICLES: Article[] = [
         excerpt: "The formula for camera storage: bitrate, camera count, archive depth. A table of typical configurations, why Purple-class drives are a must and when one drive is not enough.",
         sections: [
           { h: "The formula that settles everything", p: [
-            "Archive volume is simple: camera bitrate (Mbps) ÷ 8 × 3600 × 24 = gigabytes per day per camera. A 4 MP camera with H.265 in a typical scene writes 2–4 Mbps — that is 20–45 GB a day.",
-            "Then multiply by cameras and days of storage. Eight cameras at 3 Mbps for 30 days: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7.8 TB. So an 8 TB drive is borderline — take 10 TB or two eights.",
+            "Archive volume is simple: camera bitrate (Mbps) ÷ 8 × 86,400 ÷ 1,000 = gigabytes per day per camera (86,400 being the seconds in a day). A 4 MP camera with H.265 in a typical scene writes 2–4 Mbps — that is 20–45 GB a day.",
+            "Then multiply by cameras and days of storage. A 3 Mbps stream is 32.4 GB a day; eight such cameras for 30 days: 32.4 × 8 × 30 ≈ 7.8 TB. So an 8 TB drive is borderline — take 10 TB or two eights.",
           ] },
           { h: "What drives the bitrate most", p: [
             "The codec: H.265 saves up to half the volume versus H.264 — enable it wherever the recorder supports it. Motion in frame: a camera over a busy checkout writes twice as much as one in a quiet corridor. Night: sensor noise inflates the stream, so outdoor cameras are 'heavier' at night.",
@@ -321,8 +321,8 @@ export const ARTICLES: Article[] = [
         excerpt: "Kamera depolaması formülü: bit hızı, kamera sayısı, arşiv derinliği. Tipik konfigürasyon tablosu, Purple sınıfı disklerin neden şart olduğu ve tek diskin ne zaman yetmediği.",
         sections: [
           { h: "Her şeyi çözen formül", p: [
-            "Arşiv hacmi basit: kamera bit hızı (Mbps) ÷ 8 × 3600 × 24 = kamera başına günde gigabayt. Tipik sahnede H.265'li 4 MP kamera 2–4 Mbps yazar — günde 20–45 GB eder.",
-            "Sonra kamera sayısı ve gün sayısıyla çarparsınız. 3 Mbps'lik sekiz kamera 30 gün: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 TB. Yani 8 TB disk sınırda — 10 TB veya iki sekizlik alın.",
+            "Arşiv hacmi basit: kamera bit hızı (Mbps) ÷ 8 × 86.400 ÷ 1.000 = kamera başına günde gigabayt (86.400, bir gündeki saniye sayısı). Tipik sahnede H.265'li 4 MP kamera 2–4 Mbps yazar — günde 20–45 GB eder.",
+            "Sonra kamera sayısı ve gün sayısıyla çarparsınız. 3 Mbps akış günde 32,4 GB eder; böyle sekiz kamera 30 gün: 32,4 × 8 × 30 ≈ 7,8 TB. Yani 8 TB disk sınırda — 10 TB veya iki sekizlik alın.",
           ] },
           { h: "Bit hızını en çok ne etkiler", p: [
             "Kodek: H.265, H.264'e göre hacmin yarısına kadar kazandırır — destekleyen cihazlarda mutlaka açın. Karedeki hareket: yoğun kasadaki kamera, sakin koridordakinin iki katını yazar. Gece: sensör gürültüsü akışı şişirir; dış kameralar gece 'ağırlaşır'.",
@@ -356,8 +356,8 @@ export const ARTICLES: Article[] = [
         excerpt: "摄像机存储的计算公式：码流、路数、存档天数。典型配置表、为什么必须用紫盘级硬盘、什么时候一块盘不够。",
         sections: [
           { h: "一条公式定乾坤", p: [
-            "存档容量算法简单：摄像机码流（Mbps）÷ 8 × 3600 × 24 = 每台每天的GB数。典型场景下H.265的4MP摄像机写2–4Mbps——即每天20–45GB。",
-            "再乘以路数和保存天数。八台3Mbps存30天：3 ÷ 8 × 86400 × 8 × 30 ≈ 7.8TB。8TB盘就是贴着上限——该上10TB或两块8TB。",
+            "存档容量算法简单：摄像机码流（Mbps）÷ 8 × 86400 ÷ 1000 = 每台每天的GB数（86400是一天的秒数）。典型场景下H.265的4MP摄像机写2–4Mbps——即每天20–45GB。",
+            "再乘以路数和保存天数。3Mbps的码流即每天32.4GB；八台这样的摄像机存30天：32.4 × 8 × 30 ≈ 7.8TB。8TB盘就是贴着上限——该上10TB或两块8TB。",
           ] },
           { h: "影响码流最大的因素", p: [
             "编码：H.265比H.264省一半——设备支持就必须开。画面动态：繁忙收银台的摄像机比安静走廊写两倍。夜晚：传感器噪点撑大码流，室外机夜里比白天“重”。",
@@ -415,7 +415,7 @@ export const ARTICLES: Article[] = [
             "Типовая ошибка — ставить везде одинаковые «ширики» 2,8 мм: они дают красивую общую картинку, на которой не читается ничего конкретного. Половина камер склада обычно с фокусными 4–12 мм.",
           ] },
           { h: "Регистратор, диски и сеть под это количество", p: [
-            "Правило запаса: регистратор берётся со свободными каналами на треть — склады всегда дорастают камеры. Глубина архива для склада — от 30 суток (претензии приходят поздно): 16 камер 4 МП в постоянной записи — это порядка 8–10 ТБ на месяц в зависимости от битрейта и кодека.",
+            "Правило запаса: регистратор берётся со свободными каналами на треть — склады всегда дорастают камеры. Глубина архива для склада — от 30 суток (претензии приходят поздно): 16 камер 4 МП в постоянной записи — это порядка 12–16 ТБ на месяц в зависимости от битрейта и кодека.",
             "PoE-бюджет коммутаторов считается по максимальному потреблению камер с ИК (зимой подсветка и обогрев работают одновременно), плюс 20–30% запаса — иначе камеры перезагружаются ночью.",
           ] },
           { h: "Как получить точную схему бесплатно", p: [
@@ -450,7 +450,7 @@ export const ARTICLES: Article[] = [
             "Tipik xato — hamma joyga bir xil 2,8 mm «shiriklar» qo'yish: ular chiroyli umumiy tasvir beradi, unda aniq hech narsa o'qilmaydi. Ombor kameralarining yarmi odatda 4–12 mm fokusli bo'ladi.",
           ] },
           { h: "Bu songa registrator, disk va tarmoq", p: [
-            "Zaxira qoidasi: registrator uchdan bir bo'sh kanal bilan olinadi — omborlar doim kamera qo'shadi. Ombor uchun arxiv chuqurligi — 30 sutkadan (da'volar kech keladi): doimiy yozuvdagi 16 ta 4 MP kamera — bitreyt va kodekga qarab oyiga 8–10 TB atrofida.",
+            "Zaxira qoidasi: registrator uchdan bir bo'sh kanal bilan olinadi — omborlar doim kamera qo'shadi. Ombor uchun arxiv chuqurligi — 30 sutkadan (da'volar kech keladi): doimiy yozuvdagi 16 ta 4 MP kamera — bitreyt va kodekga qarab oyiga 12–16 TB atrofida.",
             "Kommutatorlarning PoE-byudjeti IK li kameralarning maksimal iste'moli bo'yicha hisoblanadi (qishda yoritish va isitish birga ishlaydi), plus 20–30% zaxira — aks holda kameralar kechasi qayta yuklanadi.",
           ] },
           { h: "Aniq sxemani bepul qanday olish mumkin", p: [
@@ -485,7 +485,7 @@ export const ARTICLES: Article[] = [
             "The typical mistake is identical 2.8 mm wide lenses everywhere: they give a pretty overall picture on which nothing specific is readable. Half of a warehouse's cameras usually carry 4–12 mm lenses.",
           ] },
           { h: "The recorder, disks and network for that count", p: [
-            "The headroom rule: take a recorder with a third of the channels free — warehouses always grow cameras. Archive depth for a warehouse starts at 30 days (claims arrive late): sixteen 4 MP cameras on continuous recording take roughly 8–10 TB a month depending on bitrate and codec.",
+            "The headroom rule: take a recorder with a third of the channels free — warehouses always grow cameras. Archive depth for a warehouse starts at 30 days (claims arrive late): sixteen 4 MP cameras on continuous recording take roughly 12–16 TB a month depending on bitrate and codec.",
             "The PoE budget is calculated from the cameras' maximum draw with IR on (in winter illumination and heating run together), plus 20–30% headroom — otherwise cameras reboot at night.",
           ] },
           { h: "How to get an exact scheme for free", p: [
@@ -520,7 +520,7 @@ export const ARTICLES: Article[] = [
             "Tipik hata her yere aynı 2,8 mm geniş lensleri koymak: güzel bir genel resim verir ama üzerinde somut hiçbir şey okunmaz. Depo kameralarının yarısı genelde 4–12 mm lens taşır.",
           ] },
           { h: "Bu sayıya kayıt cihazı, disk ve ağ", p: [
-            "Pay kuralı: kayıt cihazı kanallarının üçte biri boş alınır — depolar hep kamera büyütür. Depo için arşiv derinliği 30 günden başlar (itirazlar geç gelir): sürekli kayıtta on altı 4 MP kamera, bit hızına göre ayda kabaca 8–10 TB alır.",
+            "Pay kuralı: kayıt cihazı kanallarının üçte biri boş alınır — depolar hep kamera büyütür. Depo için arşiv derinliği 30 günden başlar (itirazlar geç gelir): sürekli kayıtta on altı 4 MP kamera, bit hızına göre ayda kabaca 12–16 TB alır.",
             "PoE bütçesi, IR açıkken kameraların azami tüketimiyle hesaplanır (kışın aydınlatma ve ısıtma birlikte çalışır), artı %20–30 pay — yoksa kameralar gece yeniden başlar.",
           ] },
           { h: "Kesin şema ücretsiz nasıl alınır", p: [
@@ -555,7 +555,7 @@ export const ARTICLES: Article[] = [
             "典型错误是到处装同样的2.8mm广角：画面好看，具体什么都读不清。仓库一半的摄像机通常该用4–12mm焦距。",
           ] },
           { h: "这个数量对应的录像机、硬盘和网络", p: [
-            "留量规则：录像机要留三分之一空通道——仓库总会加机。仓库存档从30天起（索赔来得晚）：16台4MP连续录像按码流约每月8–10TB。",
+            "留量规则：录像机要留三分之一空通道——仓库总会加机。仓库存档从30天起（索赔来得晚）：16台4MP连续录像按码流约每月12–16TB。",
             "PoE预算按红外全开时的最大功耗计算（冬天补光和加热同时工作），再留20–30%——否则摄像机夜里重启。",
           ] },
           { h: "如何免费拿到准确方案", p: [
