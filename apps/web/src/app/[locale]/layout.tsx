@@ -289,26 +289,33 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteLd) }}
         />
-        {/* Google tag (gtag.js) — Google Ads AW-18194158897 + GA4 G-SHQYK1BS1S (один gtag.js на оба) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18194158897" />
+        {/* Аналитика с отложенной загрузкой (TBT главной был 5,3 с, ~2,9 с — Метрика+gtag).
+            Стабы dataLayer/ym ставятся сразу и копят вызовы (конверсии не теряются),
+            сами скрипты грузятся по первому взаимодействию или через 6 с.
+            gtag.js один на Ads AW-18194158897 и GA4 G-SHQYK1BS1S; Метрика 98915892. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
 gtag('js', new Date());
 gtag('config', 'AW-18194158897');
-gtag('config', 'G-SHQYK1BS1S');`
-          }}
-        />
-        {/* Яндекс.Метрика 98915892 (счётчик «steel» в аккаунте cadi.tay) — вебвизор, карта кликов, точный отказ */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-m[i].l=1*new Date();
-for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
-ym(98915892, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});`
+gtag('config', 'G-SHQYK1BS1S');
+(function(m,i){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();})(window,'ym');
+ym(98915892, 'init', {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+(function(){
+var loaded=false;
+function add(src){var s=document.createElement('script');s.async=true;s.src=src;document.head.appendChild(s);}
+function load(){
+if(loaded)return;loaded=true;
+add('https://www.googletagmanager.com/gtag/js?id=AW-18194158897');
+add('https://mc.yandex.ru/metrika/tag.js');
+evs.forEach(function(ev){window.removeEventListener(ev,load)});
+}
+var evs=['pointerdown','keydown','scroll','touchstart'];
+evs.forEach(function(ev){window.addEventListener(ev,load,{passive:true})});
+setTimeout(load,6000);
+})();`
           }}
         />
         <noscript>
