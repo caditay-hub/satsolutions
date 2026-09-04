@@ -40,6 +40,7 @@ async function recoverProductSlug(slug: string): Promise<string | null> {
     .filter((t) => /\d/.test(t) && t.length >= 4)
     .sort((a, b) => b.length - a.length)[0];
   if (!modelTok) return null; // нет надёжного кода модели — не рискуем редиректить
+
   try {
     const sug = await getSearchSuggest(modelTok); // ищем по одному токену-коду модели
     let best: { slug: string; score: number } | null = null;
@@ -55,6 +56,19 @@ async function recoverProductSlug(slug: string): Promise<string | null> {
     // ignore
   }
   return null;
+}
+
+// Фолбэк для снятых товаров, не попавших в статический список removedProducts.ts
+// (GSC копит 404 по слагам bolid-*/rubezh-*/dahua-* и т.п. — партии снимаются пачками).
+// Живой товар сюда не доходит (резолвится раньше), мёртвый брендовый слаг → 308 на бренд.
+const DEAD_SLUG_BRAND: Record<string, string> = {
+  hik: "hikvision", hikvision: "hikvision", avigilon: "hikvision",
+  dahua: "dahua", bolid: "bolid", bld: "bolid", rubezh: "rubezh",
+  hilook: "hilook", tapo: "tapo", zkt: "zkteco", zkteco: "zkteco",
+};
+function deadSlugBrandPath(slug: string, locale: string): string | null {
+  const brand = DEAD_SLUG_BRAND[slug.toLowerCase().split("-")[0]];
+  return brand ? `${locale === routing.defaultLocale ? "" : `/${locale}`}/catalog/${brand}` : null;
 }
 import Image from "next/image";
 import { resolveImageUrl } from "@/lib/image";
@@ -103,6 +117,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     if (!product) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      const brandPath = deadSlugBrandPath(slug, locale);
+      if (brandPath) permanentRedirect(brandPath);
       notFound();
     }
     const loc = localizeProduct(product, locale);
@@ -142,6 +158,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      const brandPath = deadSlugBrandPath(slug, locale);
+      if (brandPath) permanentRedirect(brandPath);
       notFound();
     }
     return { title: t("product.fallbackTitle") };
@@ -164,6 +182,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      const brandPath = deadSlugBrandPath(slug, locale);
+      if (brandPath) permanentRedirect(brandPath);
       notFound();
     }
     try {
@@ -175,6 +195,8 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
   if (!product) {
     const recovered = await recoverProductSlug(slug);
     if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+    const brandPath = deadSlugBrandPath(slug, locale);
+    if (brandPath) permanentRedirect(brandPath);
     notFound();
   }
 

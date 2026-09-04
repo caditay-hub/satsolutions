@@ -24,13 +24,10 @@ const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? ""
 // Страница бренд×категория («Пожарная сигнализация Рубеж — купить в Ташкенте»).
 // Существует ТОЛЬКО для связок с ≥3 товаров (белый список /brand-type-pairs) — пустышек нет.
 async function resolvePair(brandSlug: string, slug: string): Promise<{ typeName: string; count: number } | null> {
-  try {
-    const { pairs } = await getBrandTypePairs();
-    const hit = pairs.find((p) => p.brand.toLowerCase() === brandSlug && typeSlug(p.type) === slug);
-    return hit ? { typeName: hit.type, count: hit.count } : null;
-  } catch {
-    return null;
-  }
+  // Ошибка API пробрасывается наружу: сбой сети не должен превращаться в 404/редирект.
+  const { pairs } = await getBrandTypePairs();
+  const hit = pairs.find((p) => p.brand.toLowerCase() === brandSlug && typeSlug(p.type) === slug);
+  return hit ? { typeName: hit.type, count: hit.count } : null;
 }
 
 export async function generateMetadata({
@@ -45,7 +42,7 @@ export async function generateMetadata({
   const brandSlug = brand.toLowerCase();
   const t = await getTranslations({ locale });
   const cfg = BRAND_CONFIG[brandSlug];
-  const pair = cfg ? await resolvePair(brandSlug, type) : null;
+  const pair = cfg ? await resolvePair(brandSlug, type).catch(() => null) : null;
   if (!cfg || !pair) return { title: t("nav.products") };
   const brandName = localizeBrandName(brandSlug, cfg.displayName, locale);
   const locType = localizeCatName(pair.typeName, locale);
@@ -79,8 +76,13 @@ export default async function BrandTypePage({
     const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
     permanentRedirect(`${lp}/catalog/${brandSlug}/${to}`);
   }
+  // Пары загружены успешно, но связки нет: тип слит/товары сняты (<3 шт.) — GSC копил
+  // такие 404 (пример: /tr/catalog/dahua/kontrol-dostupa-i-uchet-vremeni). 308 на бренд.
   const pair = await resolvePair(brandSlug, type);
-  if (!pair) notFound();
+  if (!pair) {
+    const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+    permanentRedirect(`${lp}/catalog/${brandSlug}`);
+  }
 
   const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const brandInfo = brands.find((b) => b.slug.toLowerCase() === brandSlug);
