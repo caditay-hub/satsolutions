@@ -2550,7 +2550,7 @@
         },
         {
           "q": "H3C serveri virtualizatsiya bilan qancha turadi?",
-          "a": "Konfiguratsiyaga bog'liq: bitta server 1S uchun va CAS Enterprise bilan ishonchli klaster — turli byuджetlar. Vazifalaringizni ta'riflab bering — kun ichida spetsifikatsiya va kometavoy qiymatni hisoblayotgan bo'lamiz."
+          "a": "Konfiguratsiyaga bog'liq: bitta server 1S uchun va CAS Enterprise bilan ishonchli klaster — turli byudjetlar. Vazifalaringizni ta'riflab bering — kun ichida spetsifikatsiya va kometavoy qiymatni hisoblayotgan bo'lamiz."
         }
       ]
     },
@@ -2778,7 +2778,7 @@
         },
         {
           "q": "Binolar orasida to'g'ri ko'rinish kerak bo'ladimi?",
-          "a": "Afzaldir: 5 GGts chastotalarda to'siqlar signalni kuchli surishi mumkin. Agar ko'rinish bo'lmasa — retransliyatorli variant yoki boshqa xatti-harakat bilan hisoblab berамiz."
+          "a": "Afzaldir: 5 GGts chastotalarda to'siqlar signalni kuchli surishi mumkin. Agar ko'rinish bo'lmasa — retransliyatorli variant yoki boshqa xatti-harakat bilan hisoblab beramiz."
         },
         {
           "q": "Ob-hava sharoit aloqaga ta'sir qiladimi?",
@@ -3094,7 +3094,7 @@
         },
         {
           "q": "Yong'in bo'lsa nima bo'ladi?",
-          "a": "Yong'in signalizatsiyasining signali bo'ysa turnikte'tlar avtomatik blokdan chiqadi («antipanika» rejimi) — evakuatsiya yo'li ochiq bo'ladi. Bu meъyorlar talabi, albatta sozlashtiramiz."
+          "a": "Yong'in signalizatsiyasining signali bo'ysa turnikte'tlar avtomatik blokdan chiqadi («antipanika» rejimi) — evakuatsiya yo'li ochiq bo'ladi. Bu me'yorlar talabi, albatta sozlashtiramiz."
         },
         {
           "q": "Yuz tanishni o'tish orqali o'tish mumkinmi?",
@@ -3388,7 +3388,7 @@
       ],
       "faq": [
         {
-          "q": "IP-telefoniyaning oddiy telefoniyadан nima bilan yaxshiroq?",
+          "q": "IP-telefoniyaning oddiy telefoniyadan nima bilan yaxshiroq?",
           "a": "Qo'ng'iroqlar va xizmat ko'rsatish arzonroq, ko'p kanallilik, suhbatlarni yozish, ovozli menyu, statistika — va hammasi internet orqali ishlaydi: filiallar va masofaviy xodimlar bitta tarmaqda qisqa raqamlari bilan."
         },
         {
