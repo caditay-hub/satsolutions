@@ -5260,5 +5260,23 @@
     "en": "Dimensions (LxWxH)",
     "tr": "Ölçüler (UxGxY)",
     "zh": "尺寸（长×宽×高）"
+  },
+  "Оболочка": {
+    "uz": "Qobiq",
+    "en": "Jacket",
+    "tr": "Kılıf",
+    "zh": "护套"
+  },
+  "Разъём A": {
+    "uz": "A ulagichi",
+    "en": "Connector A",
+    "tr": "Konnektör A",
+    "zh": "接头 A"
+  },
+  "Разъём B": {
+    "uz": "B ulagichi",
+    "en": "Connector B",
+    "tr": "Konnektör B",
+    "zh": "接头 B"
   }
 }

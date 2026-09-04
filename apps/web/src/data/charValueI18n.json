@@ -19612,5 +19612,131 @@
     "en": "Smart Hybrid Light with red-blue strobe, 3 extra modes",
     "tr": "Kırmızı-mavi flaşörlü Smart Hybrid Light, 3 ek mod",
     "zh": "带红蓝爆闪的 Smart Hybrid Light，另有 3 种模式"
+  },
+  "F/UTP (экранированный)": {
+    "uz": "F/UTP (ekranlangan)",
+    "en": "F/UTP (shielded)",
+    "tr": "F/UTP (ekranlı)",
+    "zh": "F/UTP（屏蔽）"
+  },
+  "одномод (SM)": {
+    "uz": "bir modli (SM)",
+    "en": "single-mode (SM)",
+    "tr": "tek modlu (SM)",
+    "zh": "单模 (SM)"
+  },
+  "многомод OM3": {
+    "uz": "ko'p modli OM3",
+    "en": "multimode OM3",
+    "tr": "çok modlu OM3",
+    "zh": "多模 OM3"
+  },
+  "многомод OM4": {
+    "uz": "ko'p modli OM4",
+    "en": "multimode OM4",
+    "tr": "çok modlu OM4",
+    "zh": "多模 OM4"
+  },
+  "симплекс": {
+    "uz": "simpleks",
+    "en": "simplex",
+    "tr": "simpleks",
+    "zh": "单工"
+  },
+  "дуплекс": {
+    "uz": "dupleks",
+    "en": "duplex",
+    "tr": "dupleks",
+    "zh": "双工"
+  },
+  "синий": {
+    "uz": "ko'k",
+    "en": "blue",
+    "tr": "mavi",
+    "zh": "蓝色"
+  },
+  "серый": {
+    "uz": "kulrang",
+    "en": "grey",
+    "tr": "gri",
+    "zh": "灰色"
+  },
+  "чёрный": {
+    "uz": "qora",
+    "en": "black",
+    "tr": "siyah",
+    "zh": "黑色"
+  },
+  "0,15 м": {
+    "uz": "0,15 m",
+    "en": "0,15 m",
+    "tr": "0,15 m",
+    "zh": "0,15 米"
+  },
+  "0,3 м": {
+    "uz": "0,3 m",
+    "en": "0,3 m",
+    "tr": "0,3 m",
+    "zh": "0,3 米"
+  },
+  "0,5 м": {
+    "uz": "0,5 m",
+    "en": "0,5 m",
+    "tr": "0,5 m",
+    "zh": "0,5 米"
+  },
+  "1,8 м": {
+    "uz": "1,8 m",
+    "en": "1,8 m",
+    "tr": "1,8 m",
+    "zh": "1,8 米"
+  },
+  "10 м": {
+    "uz": "10 m",
+    "en": "10 m",
+    "tr": "10 m",
+    "zh": "10 米"
+  },
+  "15 м": {
+    "uz": "15 m",
+    "en": "15 m",
+    "tr": "15 m",
+    "zh": "15 米"
+  },
+  "2 м": {
+    "uz": "2 m",
+    "en": "2 m",
+    "tr": "2 m",
+    "zh": "2 米"
+  },
+  "20 м": {
+    "uz": "20 m",
+    "en": "20 m",
+    "tr": "20 m",
+    "zh": "20 米"
+  },
+  "25 м": {
+    "uz": "25 m",
+    "en": "25 m",
+    "tr": "25 m",
+    "zh": "25 米"
+  },
+  "30 м": {
+    "uz": "30 m",
+    "en": "30 m",
+    "tr": "30 m",
+    "zh": "30 米"
+  },
+  "40 м": {
+    "uz": "40 m",
+    "en": "40 m",
+    "tr": "40 m",
+    "zh": "40 米"
+  },
+  "50 м": {
+    "uz": "50 m",
+    "en": "50 m",
+    "tr": "50 m",
+    "zh": "50 米"
   }
 }
