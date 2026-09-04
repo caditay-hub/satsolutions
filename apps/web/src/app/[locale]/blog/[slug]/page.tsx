@@ -31,7 +31,7 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
   "optika-i-aksessuary": { ru: "Оптика и аксессуары", uz: "Optika va aksessuarlar", en: "Optics and accessories", tr: "Optik ve aksesuarlar", zh: "光纤与配件" },
   "telekommunikacionnye-shkafy": { ru: "Телекоммуникационные шкафы", uz: "Telekommunikatsiya shkaflari", en: "Network cabinets", tr: "Kabinetler", zh: "网络机柜" },
   "zhestkie-diski": { ru: "Жёсткие диски", uz: "Qattiq disklar", en: "Hard drives", tr: "Sabit diskler", zh: "硬盘" },
-  "videodomofony": { ru: "Видеодомофоны", uz: "Videodomofonlar", en: "Video intercoms", tr: "Görüntülü diafonlar", zh: "可视对讲" },
+  "domofoniya": { ru: "Домофония", uz: "Domofoniya", en: "Video intercoms", tr: "Diafon sistemleri", zh: "可视对讲" },
   "zamki-i-skud": { ru: "Замки и СКУД", uz: "Qulflar va SKUD", en: "Locks and access control", tr: "Kilitler ve geçiş kontrolü", zh: "锁具与门禁" },
 };
 

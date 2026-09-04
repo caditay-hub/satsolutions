@@ -26,7 +26,7 @@ export const ARTICLES: Article[] = [
     slug: "trubka-domofona-zamena",
     date: "2026-09-04",
     related: ["intercom"],
-    hubs: ["videodomofony"],
+    hubs: ["domofoniya"],
     loc: {
       ru: {
         title: "Трубка домофона: как подобрать совместимую и заменить самому",
@@ -209,7 +209,7 @@ export const ARTICLES: Article[] = [
     slug: "domofon-ne-rabotaet",
     date: "2026-09-04",
     related: ["intercom"],
-    hubs: ["videodomofony"],
+    hubs: ["domofoniya"],
     loc: {
       ru: {
         title: "Домофон не работает или не звонит: причины и что делать",
@@ -392,7 +392,7 @@ export const ARTICLES: Article[] = [
     slug: "ip-domofon-hikvision-zvonok-na-telefon",
     date: "2026-09-04",
     related: ["intercom"],
-    hubs: ["videodomofony"],
+    hubs: ["domofoniya"],
     loc: {
       ru: {
         title: "IP-домофон Hikvision: как настроить звонок на телефон через Hik-Connect",
@@ -575,7 +575,7 @@ export const ARTICLES: Article[] = [
     slug: "videodomofon-dlya-chastnogo-doma",
     date: "2026-09-04",
     related: ["intercom", "access"],
-    hubs: ["videodomofony", "zamki-i-skud"],
+    hubs: ["domofoniya", "zamki-i-skud"],
     loc: {
       ru: {
         title: "Видеодомофон для частного дома: собираем комплект с замком и калиткой",
