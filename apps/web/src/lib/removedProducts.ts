@@ -669,6 +669,12 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   // DS-K7P03 (дубль бесконтактной DS-K7P03A), pxt-UAP-AC-Pro (дубль ubnt-карточки).
   "hik-ds-k7p03": "hikvision",
   "pxt-uap-ac-pro": "ubiquiti",
+  // 2026-09-04: склейка дублей Ubiquiti. У производителя U6-Pro, U6+ и USW-24-PoE —
+  // по одному товару, а в каталоге было по две карточки из партий 10 и 11 июня.
+  // Оставлены карточки ubnt-* (у них заполнены характеристики), pxt-* сняты.
+  "pxt-u6-pro": "/products/ubnt-u6-pro-ubiquiti-accesspoint",
+  "pxt-u6": "/products/ubnt-u6-plus-ubiquiti-accesspoint",
+  "pxt-usw-24-poe": "/products/ubnt-usw-24-poe-ubiquiti-switch",
   // 2026-09-04: снят по решению владельца — OEM-адаптер MOSO X30-T1670R360-060P0-Q,
   // фотографии нет ни у Hikvision (позиция не публикуется), ни у дистрибьюторов CIS.
   "hik-ds-x30-t1670r360-060p0-q-36v1-67a-60w-36": "hikvision",
