@@ -158,7 +158,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // Содержательный SEO-текст под голые высокочастотники (RU-приоритет; нет — не рендерим)
   const content = getServiceContent(locale, svc.key);
   // Обратная перелинковка: инфо-статьи блога, связанные с этой услугой (только с переводом на локаль)
-  const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 3);
+  const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 6);
   // Отзывы, привязанные к этой услуге (одобренные); avg/count — компактный рейтинг под H1
   const reviews = await getReviews(svc.key);
   const reviewItems: Review[] = reviews.items.map((r) => ({

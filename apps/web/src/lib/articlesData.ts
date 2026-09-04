@@ -23,6 +23,555 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "skolko-stoit-sks-za-tochku",
+    date: "2026-09-04",
+    related: ["network", "slabotochnye-sistemy"],
+    hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
+    loc: {
+      ru: {
+        title: "Сколько стоит СКС за точку и что входит в эту цену",
+        excerpt: "Разбираем цену структурированной кабельной сети «за точку»: что входит, почему разброс в разы, как сравнивать сметы подрядчиков и на чём нельзя экономить.",
+        sections: [
+          { h: "Что такое «точка» и почему это удобная единица", p: [
+            "Точка СКС — это одно рабочее место сети: путь от патч-панели в шкафу до розетки у стола, включая кабель, розетку, порт панели, маркировку и тестирование. Смета «за точку» позволяет быстро сравнивать предложения: офис на 40 рабочих мест — это 40–80 точек (по одной-две на место).",
+            "Но сравнивать можно только одинаковый состав: «точка» у одного подрядчика включает кабель-канал и тестирование, у другого — голый кабель. Отсюда и разброс цен в разы.",
+          ] },
+          { h: "Из чего складывается цена точки", p: [
+            "Материалы: кабель (35–60 метров на точку в среднем офисе), розетка, модуль патч-панели, кабель-канал или лоток, патч-корды с двух сторон. Работа: прокладка, врезка, расшивка с двух концов, маркировка. И то, о чём забывают: тестирование каждой линии и исполнительная документация.",
+            "Доли примерно такие: 40–50% материалы, 40–50% работа, остальное — документация и накладные. Кабель категории Cat6 вместо Cat5e добавляет к точке 10–15% и даёт запас до 10 гигабит на коротких линиях.",
+          ] },
+          { h: "Почему разброс цен в разы", p: [
+            "Первое — состояние объекта: тянуть по открытым лоткам стройки и штробить готовый ремонт — разные вселенные по трудозатратам. Второе — длина трасс: точка в 20 метрах от шкафа и точка в 70 метрах стоят по-разному, хотя в смете обе «точки».",
+            "Третье — состав: экранированный кабель, огнестойкие линии для пожарных систем, кабель-каналы против существующих лотков. Поэтому честная смета всегда идёт с планом и спецификацией, а не одной цифрой.",
+          ] },
+          { h: "Как сравнивать сметы подрядчиков", p: [
+            "Требуйте одинаковый состав: категория и производитель кабеля, длины трасс по плану, тип каналов, тестирование, документация. Смету «за точку всё включено» без плана сравнить нельзя — в ней спрятан либо запас подрядчика, либо будущие допработы.",
+            "Красный флаг — цена заметно ниже рынка: обычно это кабель без сертификата, отсутствие тестирования или счёт за «непредвиденные работы» в конце. Кабельная сеть живёт 10–15 лет — ошибка в ней дороже экономии.",
+          ] },
+          { h: "На чём можно и нельзя экономить", p: [
+            "Можно: объединить СКС с другими слаботочными системами в общие трассы (камеры, телефония, Wi-Fi — один лоток), делать сеть на этапе ремонта, а не после, брать Cat5e там, где точно не будет 10G.",
+            "Нельзя: на тестировании (непроверенная линия — это будущий «плавающий» глюк сети), на патч-панелях и шкафе (сердце сети), на запасе точек — доложить кабель после ремонта стоит дороже всей исходной сметы.",
+          ] },
+          { h: "Посчитаем ваш офис", p: [
+            "Пришлите план помещения с рабочими местами — вернём смету с планом трасс, спецификацией и ценой за точку в вашем составе работ. Прикинуть порядок бюджета можно в онлайн-калькуляторе на сайте, выезд инженера по Ташкенту бесплатный.",
+            "Монтируем СКС с тестированием каждой линии и исполнительной документацией; кабель, шкафы, панели и коммутаторы — со склада в Ташкенте.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько точек нужно на рабочее место?", a: "Стандарт — две: компьютер и телефон/резерв. Экономия до одной точки на место мстит при первом же переезде сотрудника или добавлении принтера." },
+          { q: "Cat5e или Cat6?", a: "Cat5e закрывает гигабит и почти все офисные задачи. Cat6 даёт запас до 10G на коротких линиях за +10–15% к цене точки — разумно для новых офисов, серверных зон и видеонаблюдения 4K." },
+          { q: "Что такое исполнительная документация и зачем она?", a: "Схема реальной прокладки, кабельный журнал и результаты тестов. Без неё любой ремонт сети превращается в раскопки: следующий подрядчик будет искать линии наощупь за ваши деньги." },
+        ],
+      },
+      uz: {
+        title: "SKS nuqtasi qancha turadi va bu narxga nima kiradi",
+        excerpt: "Strukturali kabel tarmog'ining «nuqta» narxini tahlil qilamiz: nima kiradi, nega farq bir necha baravar, pudratchilar smetalarini qanday solishtirish va nimada tejash mumkin emas.",
+        sections: [
+          { h: "«Nuqta» nima va nega bu qulay birlik", p: [
+            "SKS nuqtasi — tarmoqning bitta ish o'rni: shkafdagi patch-paneldan stol yonidagi rozetkagacha yo'l, kabel, rozetka, panel porti, markirovka va testlash bilan. «Nuqta» smetasi takliflarni tez solishtirishga imkon beradi: 40 ish o'rinli ofis — 40–80 nuqta (har o'ringa bir-ikkitadan).",
+            "Lekin faqat bir xil tarkibni solishtirish mumkin: bir pudratchida «nuqta» kabel-kanal va testlashni o'z ichiga oladi, boshqasida — yalang'och kabel. Narxlar farqi ham shundan.",
+          ] },
+          { h: "Nuqta narxi nimadan yig'iladi", p: [
+            "Materiallar: kabel (o'rtacha ofisda nuqtaga 35–60 metr), rozetka, patch-panel moduli, kabel-kanal yoki lotok, ikki tomondan patch-kordlar. Ish: yotqizish, o'rnatish, ikki uchdan rasshivka, markirovka. Va unutiladigani: har liniyani testlash va ijro hujjatlari.",
+            "Ulushlar taxminan: 40–50% materiallar, 40–50% ish, qolgani hujjatlar va ustama. Cat5e o'rniga Cat6 kabel nuqtaga 10–15% qo'shadi va qisqa liniyalarda 10 gigabitgacha zaxira beradi.",
+          ] },
+          { h: "Nega narxlar farqi bir necha baravar", p: [
+            "Birinchisi — obyekt holati: qurilishning ochiq lotoklari bo'ylab tortish va tayyor ta'mirni shtroblash — mehnat bo'yicha turli olamlar. Ikkinchisi — trassalar uzunligi: shkafdan 20 metrdagi nuqta va 70 metrdagisi har xil turadi, garchi smetada ikkalasi ham «nuqta».",
+            "Uchinchisi — tarkib: ekranli kabel, yong'in tizimlariga olovbardosh liniyalar, mavjud lotoklar o'rniga kabel-kanallar. Shuning uchun halol smeta doim plan va spetsifikatsiya bilan boradi, bitta raqam bilan emas.",
+          ] },
+          { h: "Pudratchilar smetalarini qanday solishtirish", p: [
+            "Bir xil tarkibni talab qiling: kabel toifasi va ishlab chiqaruvchisi, plan bo'yicha trassa uzunliklari, kanallar turi, testlash, hujjatlar. Plansiz «hammasi kiritilgan nuqta» smetasini solishtirib bo'lmaydi — unda yo pudratchi zaxirasi, yo kelgusi qo'shimcha ishlar yashiringan.",
+            "Qizil bayroq — bozordan sezilarli past narx: odatda bu sertifikatsiz kabel, testlashsizlik yoki oxirida «kutilmagan ishlar» hisobi. Kabel tarmog'i 10–15 yil yashaydi — undagi xato tejashdan qimmat.",
+          ] },
+          { h: "Nimada tejash mumkin va mumkin emas", p: [
+            "Mumkin: SKSni boshqa kuchsiz tok tizimlari bilan umumiy trassalarga birlashtirish (kameralar, telefoniya, Wi-Fi — bitta lotok), tarmoqni ta'mir bosqichida qilish, 10G aniq bo'lmaydigan joyda Cat5e olish.",
+            "Mumkin emas: testlashda (tekshirilmagan liniya — tarmoqning kelgusi «suzuvchi» nosozligi), patch-panellar va shkafda (tarmoq yuragi), nuqtalar zaxirasida — ta'mirdan keyin kabel qo'shish butun dastlabki smetadan qimmat turadi.",
+          ] },
+          { h: "Ofisingizni hisoblaymiz", p: [
+            "Ish o'rinlari bilan xona planini yuboring — trassalar plani, spetsifikatsiya va sizning ish tarkibingizda nuqta narxi bilan smeta qaytaramiz. Byudjet tartibini saytdagi onlayn-kalkulyatorda chamalash mumkin, Toshkent bo'ylab muhandis chiqishi bepul.",
+            "SKSni har liniyani testlash va ijro hujjatlari bilan montaj qilamiz; kabel, shkaflar, panellar va kommutatorlar — Toshkentdagi ombordan.",
+          ] },
+        ],
+        faq: [
+          { q: "Bir ish o'rniga nechta nuqta kerak?", a: "Standart — ikkita: kompyuter va telefon/zaxira. O'ringa bitta nuqtagacha tejash xodimning birinchi ko'chishida yoki printer qo'shilganda o'ch oladi." },
+          { q: "Cat5e yoki Cat6?", a: "Cat5e gigabit va deyarli barcha ofis vazifalarini yopadi. Cat6 nuqta narxiga +10–15% evaziga qisqa liniyalarda 10G gacha zaxira beradi — yangi ofislar, server zonalari va 4K videokuzatuvga oqilona." },
+          { q: "Ijro hujjatlari nima va nimaga kerak?", a: "Real yotqizish sxemasi, kabel jurnali va test natijalari. Ularsiz tarmoqning istalgan ta'miri qazishmaga aylanadi: keyingi pudratchi liniyalarni sizning pulingizga paypaslab qidiradi." },
+        ],
+      },
+      en: {
+        title: "What structured cabling costs per point and what that price includes",
+        excerpt: "Breaking down the per-point price of a structured cabling system: what is included, why quotes differ several-fold, how to compare contractors and where saving backfires.",
+        sections: [
+          { h: "What a 'point' is and why it is a handy unit", p: [
+            "An SCS point is one network workplace: the path from the patch panel in the cabinet to the desk outlet — cable, outlet, panel port, labeling and testing included. Per-point pricing makes offers comparable: a 40-desk office is 40–80 points (one or two per desk).",
+            "But only identical scope compares: one contractor's 'point' includes trunking and testing, another's is bare cable. That is where the multi-fold spread comes from.",
+          ] },
+          { h: "What makes up the point price", p: [
+            "Materials: cable (35–60 meters per point in an average office), an outlet, a patch panel module, trunking or tray, patch cords on both ends. Labor: routing, mounting, termination at both ends, labeling. And the parts people forget: testing every line and as-built documentation.",
+            "The shares are roughly 40–50% materials, 40–50% labor, the rest documentation and overhead. Cat6 instead of Cat5e adds 10–15% per point and gives headroom to 10 gigabit on short runs.",
+          ] },
+          { h: "Why quotes differ several-fold", p: [
+            "First, site condition: pulling along open construction trays versus chasing a finished renovation are different universes of labor. Second, run lengths: a point 20 meters from the cabinet and one 70 meters away cost differently, though both are 'points' in the quote.",
+            "Third, scope: shielded cable, fire-rated lines for fire systems, trunking versus existing trays. An honest quote therefore always comes with a plan and a specification, not a single number.",
+          ] },
+          { h: "How to compare contractor quotes", p: [
+            "Demand identical scope: cable category and maker, run lengths from the plan, channel type, testing, documentation. An 'all-inclusive per point' quote without a plan cannot be compared — it hides either the contractor's margin or future extras.",
+            "The red flag is a price notably below market: usually uncertified cable, skipped testing or an 'unforeseen works' bill at the end. A cabling system lives 10–15 years — a mistake in it outprices the savings.",
+          ] },
+          { h: "Where you can and cannot save", p: [
+            "You can: merge SCS with other low-current systems into shared routes (cameras, telephony, Wi-Fi — one tray), build the network during renovation rather than after, use Cat5e where 10G will definitely never come.",
+            "You cannot: on testing (an unverified line is a future floating network glitch), on patch panels and the cabinet (the network's heart), on spare points — adding cable after renovation costs more than the whole original quote.",
+          ] },
+          { h: "Let us price your office", p: [
+            "Send the floor plan with workplaces — we return an estimate with a route plan, a specification and a per-point price in your scope. Ballpark the budget in the online calculator on our site; the engineer's visit is free in Tashkent.",
+            "We build SCS with every line tested and as-built documentation; cable, cabinets, panels and switches come from our Tashkent warehouse.",
+          ] },
+        ],
+        faq: [
+          { q: "How many points per workplace?", a: "The standard is two: the computer and the phone/spare. Trimming to one point per desk takes revenge at the first employee move or added printer." },
+          { q: "Cat5e or Cat6?", a: "Cat5e covers gigabit and nearly all office tasks. Cat6 gives 10G headroom on short runs for +10–15% per point — sensible for new offices, server zones and 4K CCTV." },
+          { q: "What is as-built documentation for?", a: "The real routing scheme, the cable log and test results. Without it any network repair becomes an excavation: the next contractor hunts lines blindly at your expense." },
+        ],
+      },
+      tr: {
+        title: "Yapısal kablolama nokta başına kaça mal olur ve fiyata ne girer",
+        excerpt: "Yapısal kablolamanın 'nokta başına' fiyatını ayrıştırıyoruz: neler dahil, teklifler neden katbekat farklı, yükleniciler nasıl karşılaştırılır ve nerede tasarruf geri teper.",
+        sections: [
+          { h: "'Nokta' nedir ve neden kullanışlı bir birim", p: [
+            "SCS noktası bir ağ çalışma yeridir: kabindeki patch panelden masa prizine giden yol — kablo, priz, panel portu, etiketleme ve test dahil. Nokta bazlı fiyat teklifleri karşılaştırılabilir kılar: 40 masalı ofis 40–80 noktadır (masa başına bir-iki).",
+            "Ama yalnızca aynı kapsam karşılaştırılır: birinin 'noktası' kanal ve testi içerir, ötekininki çıplak kablodur. Katbekat fark buradan doğar.",
+          ] },
+          { h: "Nokta fiyatı neyden oluşur", p: [
+            "Malzeme: kablo (ortalama ofiste nokta başına 35–60 metre), priz, patch panel modülü, kanal veya tava, iki uçta patch kordlar. İşçilik: çekim, montaj, iki uçta sonlandırma, etiketleme. Ve unutulanlar: her hattın testi ve uygulama dokümantasyonu.",
+            "Paylar kabaca %40–50 malzeme, %40–50 işçilik, kalanı doküman ve genel gider. Cat5e yerine Cat6 noktaya %10–15 ekler ve kısa hatlarda 10 gigabite pay bırakır.",
+          ] },
+          { h: "Teklifler neden katbekat farklı", p: [
+            "Birincisi saha durumu: inşaatın açık tavalarından çekmekle bitmiş tadilatta kanal açmak, işçilikte ayrı evrenlerdir. İkincisi hat boyları: kabine 20 metredeki nokta ile 70 metredeki farklı tutar; teklifte ikisi de 'nokta'dır.",
+            "Üçüncüsü kapsam: ekranlı kablo, yangın sistemleri için yangına dayanıklı hatlar, mevcut tavalara karşı kanallar. Dürüst teklif bu yüzden hep plan ve spesifikasyonla gelir, tek rakamla değil.",
+          ] },
+          { h: "Yüklenici teklifleri nasıl karşılaştırılır", p: [
+            "Aynı kapsamı isteyin: kablo kategorisi ve üreticisi, plana göre hat boyları, kanal tipi, test, dokümantasyon. Plansız 'her şey dahil nokta' teklifi karşılaştırılamaz — içinde ya yüklenici payı ya gelecekteki ek işler saklıdır.",
+            "Kırmızı bayrak, piyasanın belirgin altındaki fiyattır: genelde sertifikasız kablo, atlanmış test veya sonda 'öngörülemeyen işler' faturası demektir. Kablolama 10–15 yıl yaşar — içindeki hata tasarruftan pahalıdır.",
+          ] },
+          { h: "Nerede tasarruf edilir, nerede edilmez", p: [
+            "Edilir: SCS'yi diğer zayıf akım sistemleriyle ortak hatlarda birleştirmek (kameralar, telefon, Wi-Fi — tek tava), ağı tadilat sırasında yapmak, 10G'nin kesin gelmeyeceği yerde Cat5e kullanmak.",
+            "Edilmez: testte (doğrulanmamış hat, ağın gelecekteki gezici arızasıdır), patch paneller ve kabinde (ağın kalbi), yedek noktalarda — tadilattan sonra kablo eklemek, ilk keşfin tamamından pahalıya gelir.",
+          ] },
+          { h: "Ofisinizi fiyatlandıralım", p: [
+            "Çalışma yerleriyle kat planını gönderin — hat planı, spesifikasyon ve sizin kapsamınızda nokta fiyatıyla keşif döneriz. Bütçenin kabasını sitedeki online hesaplayıcıda alın; Taşkent'te mühendis ziyareti ücretsiz.",
+            "SCS'yi her hattı test ederek ve uygulama dokümantasyonuyla kuruyoruz; kablo, kabinler, paneller ve switch'ler Taşkent depomuzdan.",
+          ] },
+        ],
+        faq: [
+          { q: "Çalışma yeri başına kaç nokta gerekir?", a: "Standart ikidir: bilgisayar ve telefon/yedek. Masa başına tek noktaya inmek, ilk personel taşınmasında veya eklenen yazıcıda intikamını alır." },
+          { q: "Cat5e mi Cat6 mı?", a: "Cat5e gigabiti ve neredeyse tüm ofis işlerini karşılar. Cat6, nokta başına +%10–15 ile kısa hatlarda 10G payı verir — yeni ofisler, sunucu bölgeleri ve 4K kameralar için mantıklı." },
+          { q: "Uygulama dokümantasyonu ne işe yarar?", a: "Gerçek güzergâh şeması, kablo defteri ve test sonuçları. Onsuz her ağ onarımı kazıya döner: sonraki yüklenici hatları sizin paranızla el yordamıyla arar." },
+        ],
+      },
+      zh: {
+        title: "综合布线每个点位多少钱、价格里包含什么",
+        excerpt: "拆解结构化布线“按点位”的价格：包含哪些内容、为什么报价能差几倍、如何比较承包商报价、哪些地方省钱会翻车。",
+        sections: [
+          { h: "什么是“点位”、为什么好用", p: [
+            "一个布线点位就是一个网络工位：从机柜配线架到桌边插座的整条路径——含线缆、插座、配线架端口、标签和测试。按点位报价便于快速比价：40个工位的办公室就是40–80个点位（每工位一到两个）。",
+            "但只有同口径才能比：有的承包商“点位”含线槽和测试，有的只有裸线。几倍的价差就是这么来的。",
+          ] },
+          { h: "点位价格的构成", p: [
+            "材料：线缆（普通办公室每点位平均35–60米）、面板插座、配线架模块、线槽或桥架、两端跳线。人工：敷设、安装、两端打线、标签。还有常被忘掉的：每条链路的测试和竣工文档。",
+            "占比大致是：材料40–50%、人工40–50%，其余是文档和管理费。用Cat6替代Cat5e每点位贵10–15%，短链路可留到万兆的余量。",
+          ] },
+          { h: "报价为什么差几倍", p: [
+            "其一是现场条件：沿工地敞开桥架敷设与在精装房开槽，是两个人工世界。其二是线路长度：离机柜20米的点位和70米的成本不同，报价单里却都叫“点位”。",
+            "其三是构成：屏蔽线、消防系统的耐火线路、新装线槽还是借用现有桥架。所以诚实的报价永远附平面图和清单，而不是一个数字。",
+          ] },
+          { h: "如何比较承包商报价", p: [
+            "要求统一口径：线缆类别和品牌、按图纸的线路长度、槽管类型、测试、文档。没有图纸的“全包点位价”没法比——里面藏着要么承包商的余量，要么日后的增项。",
+            "红旗信号是明显低于市场的价格：通常意味着无证线缆、跳过测试或收尾时的“计划外工程”账单。布线要用10–15年——里面的错误比省下的钱贵。",
+          ] },
+          { h: "哪里能省、哪里不能省", p: [
+            "能省：把布线与其他弱电系统合并进公共线槽（监控、电话、Wi-Fi共用桥架）、趁装修做网络而不是装修后、确定用不上万兆的地方用Cat5e。",
+            "不能省：测试（没验证的链路就是将来的“漂移”故障）、配线架和机柜（网络的心脏）、备用点位——装修后补线比整套原始预算还贵。",
+          ] },
+          { h: "帮您的办公室算一算", p: [
+            "把带工位的平面图发来——我们回传线路图、清单和按您口径的点位单价。预算量级可先在网站的在线计算器里估，塔什干范围工程师上门免费。",
+            "我们施工的布线每条链路都测试、交付竣工文档；线缆、机柜、配线架和交换机塔什干现货。",
+          ] },
+        ],
+        faq: [
+          { q: "每个工位需要几个点位？", a: "标准是两个：电脑加电话/备用。省到每工位一个点位，第一次员工换座或加打印机时就会还债。" },
+          { q: "Cat5e还是Cat6？", a: "Cat5e满足千兆和几乎所有办公需求。Cat6每点位贵10–15%，短链路留出万兆余量——新办公室、服务器区和4K监控值得上。" },
+          { q: "竣工文档是什么、有什么用？", a: "实际敷设图、线缆台账和测试结果。没有它，任何网络检修都变成考古：下一个承包商拿您的钱摸黑找线。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "kak-rasschitat-disk-dlya-videonablyudeniya",
+    date: "2026-09-04",
+    related: ["cctv"],
+    hubs: ["zhestkie-diski", "ip-videoregistratory-nvr"],
+    loc: {
+      ru: {
+        title: "Как рассчитать жёсткий диск для видеонаблюдения",
+        excerpt: "Формула расчёта объёма диска под камеры: битрейт, число камер, глубина архива. Таблица типовых конфигураций, почему нужны диски серии Purple и когда одного диска мало.",
+        sections: [
+          { h: "Формула, которая решает всё", p: [
+            "Объём архива считается просто: битрейт камеры (Мбит/с) ÷ 8 × 3600 × 24 = гигабайты в сутки с одной камеры. Камера 4 МП со сжатием H.265 в типовой сцене пишет 2–4 Мбит/с — это 20–45 ГБ в сутки.",
+            "Дальше умножаете на число камер и дни хранения. Восемь камер по 3 Мбит/с на 30 суток: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 ТБ. Значит, диск на 8 ТБ — впритык, и правильнее взять 10 ТБ или две восьмёрки.",
+          ] },
+          { h: "Что влияет на битрейт сильнее всего", p: [
+            "Кодек: H.265 экономит до половины объёма против H.264 — на регистраторах, где он есть, включать обязательно. Движение в кадре: камера на оживлённой кассе пишет вдвое больше камеры в тихом коридоре. Ночь: шум матрицы раздувает поток, поэтому уличные камеры ночью «тяжелее» дневных.",
+            "Умные кодеки (H.265+, Zip+) добавляют экономию на статичных сценах, но закладывать её в расчёт стоит осторожно: живой объект может оказаться «шумнее», чем обещает калькулятор производителя.",
+          ] },
+          { h: "Таблица типовых конфигураций", p: [
+            "Дом, 4 камеры 2 МП, 14 суток — около 1 ТБ: хватает диска 2 ТБ. Офис, 8 камер 4 МП, 30 суток — 6–8 ТБ: диск 8–10 ТБ. Магазин, 16 камер 4 МП, 30 суток — 12–16 ТБ: два диска по 8–10 ТБ. Склад, 32 камеры, 30 суток — 25–35 ТБ: регистратор на 4 диска или серверное хранение с RAID.",
+            "Правило запаса — плюс 20–25% к расчёту: битрейт в жизни всегда выше калькуляторного, а место под перезапись кольцевого архива не должно кончаться в ноль.",
+          ] },
+          { h: "Почему нельзя обычный компьютерный диск", p: [
+            "Видеонаблюдение пишет 24/7 — это режим, под который настольные диски не проектировались: они рассчитаны на офисные 8 часов и паузы. В регистраторе такой диск живёт год-полтора и умирает вместе с архивом.",
+            "Серии для видеонаблюдения — WD Purple, Seagate SkyHawk — рассчитаны на круглосуточную запись десятков потоков, вибрацию соседних дисков и имеют прошивки под DVR/NVR. Разница в цене процентов пятнадцать, разница в ресурсе — кратная.",
+          ] },
+          { h: "Когда одного диска мало", p: [
+            "От 16 камер или архива дольше месяца смотрите на регистраторы с двумя-четырьмя корзинами: и объём набирается, и нагрузка на каждый диск ниже. Для критичных объектов — RAID-хранение: выход диска из строя не уносит архив.",
+            "И держите свободный слот: доращивание архива — самая частая доработка систем после запуска, дешевле предусмотреть корзину сразу.",
+          ] },
+          { h: "Посчитаем за вас", p: [
+            "В нашем калькуляторе можно прикинуть систему целиком, а точный расчёт под ваши камеры, сцены и сроки хранения сделает инженер — бесплатно. Диски WD Purple и Seagate SkyHawk всех ходовых объёмов — со склада в Ташкенте, с гарантией.",
+            "Если архив уже «не влезает» — приезжаем, смотрим битрейты и либо настраиваем кодеки, либо считаем апгрейд хранения. Часто месяц архива возвращается одной правкой настроек.",
+          ] },
+        ],
+        faq: [
+          { q: "Сколько хранится запись по закону?", a: "Единой нормы для частных объектов нет — срок задаёт владелец или отраслевые требования (у банков и ТЦ свои). Практический стандарт бизнеса — 30 суток." },
+          { q: "Запись по движению сильно экономит место?", a: "Да, на тихих объектах — в разы. Но для касс, складов и споров с клиентами надёжнее постоянная запись: детекция может пропустить начало события." },
+          { q: "Можно ли ставить SSD?", a: "Для кольцевой записи видео SSD экономически не оправдан: ресурс перезаписи расходуется быстро, а скорость не нужна. SSD уместен под систему/аналитику, архив — на специализированных HDD." },
+        ],
+      },
+      uz: {
+        title: "Videokuzatuv uchun qattiq diskni qanday hisoblash kerak",
+        excerpt: "Kameralarga disk hajmi hisobi formulasi: bitreyt, kameralar soni, arxiv chuqurligi. Tipik konfiguratsiyalar jadvali, nega Purple seriya kerak va qachon bitta disk yetmaydi.",
+        sections: [
+          { h: "Hammasini hal qiladigan formula", p: [
+            "Arxiv hajmi oddiy hisoblanadi: kamera bitreyti (Mbit/s) ÷ 8 × 3600 × 24 = bitta kameradan sutkasiga gigabayt. H.265 siqishli 4 MP kamera tipik sahnada 2–4 Mbit/s yozadi — bu sutkasiga 20–45 GB.",
+            "Keyin kameralar soni va saqlash kunlariga ko'paytirasiz. 3 Mbit/s dan sakkizta kamera 30 sutkaga: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 TB. Demak 8 TB disk — zo'rg'a, to'g'risi 10 TB yoki ikkita sakkizlik olish.",
+          ] },
+          { h: "Bitreytga eng kuchli ta'sir qiladigan narsalar", p: [
+            "Kodek: H.265 H.264 ga nisbatan hajmning yarmigacha tejaydi — bor registratorlarda majburiy yoqish kerak. Kadrdagi harakat: gavjum kassadagi kamera tinch koridordagidan ikki baravar ko'p yozadi. Tun: matritsa shovqini oqimni shishiradi, shuning uchun ko'cha kameralari kechasi kunduzgidan «og'irroq».",
+            "Aqlli kodeklar (H.265+) statik sahnalarda qo'shimcha tejaydi, lekin hisobga ehtiyotkorlik bilan kiritish kerak: jonli obyekt ishlab chiqaruvchi kalkulyatori va'da qilganidan «shovqinliroq» chiqishi mumkin.",
+          ] },
+          { h: "Tipik konfiguratsiyalar jadvali", p: [
+            "Uy, 4 ta 2 MP kamera, 14 sutka — 1 TB atrofida: 2 TB disk yetadi. Ofis, 8 ta 4 MP, 30 sutka — 6–8 TB: 8–10 TB disk. Do'kon, 16 ta 4 MP, 30 sutka — 12–16 TB: 8–10 TB dan ikkita disk. Ombor, 32 kamera, 30 sutka — 25–35 TB: 4 diskli registrator yoki RAID li server saqlash.",
+            "Zaxira qoidasi — hisobga plus 20–25%: hayotda bitreyt doim kalkulyatordagidan yuqori, halqali arxiv qayta yozuv joyi nolga tushmasligi kerak.",
+          ] },
+          { h: "Nega oddiy kompyuter diski bo'lmaydi", p: [
+            "Videokuzatuv 24/7 yozadi — stol disklari bunga mo'ljallanmagan: ular ofisning 8 soati va pauzalarga hisoblangan. Registratorda bunday disk bir-bir yarim yil yashaydi va arxiv bilan birga o'ladi.",
+            "Videokuzatuv seriyalari — WD Purple, Seagate SkyHawk — o'nlab oqimlarning kecha-kunduz yozuviga, qo'shni disklar tebranishiga mo'ljallangan va DVR/NVR uchun proshivkalarga ega. Narx farqi o'n besh foizcha, resurs farqi — bir necha baravar.",
+          ] },
+          { h: "Qachon bitta disk yetmaydi", p: [
+            "16 kameradan yoki bir oydan uzun arxivdan boshlab ikki-to'rt korzinali registratorlarga qarang: hajm ham yig'iladi, har diskka yuk ham past. Kritik obyektlarga — RAID: disk ishdan chiqishi arxivni olib ketmaydi.",
+            "Va bo'sh slot saqlang: arxivni o'stirish — ishga tushirilgandan keyingi eng ko'p qayta ishlash, korzinani boshidan ko'zda tutish arzon.",
+          ] },
+          { h: "Siz uchun hisoblaymiz", p: [
+            "Kalkulyatorimizda tizimni butunlay chamalash mumkin, kameralaringiz, sahnalar va saqlash muddatlariga aniq hisobni muhandis qiladi — bepul. Barcha yurimli hajmdagi WD Purple va Seagate SkyHawk disklari — Toshkentdagi ombordan, kafolat bilan.",
+            "Arxiv allaqachon «sig'mayotgan» bo'lsa — kelamiz, bitreytlarni ko'ramiz va yo kodeklarni sozlaymiz, yo saqlash apgreydini hisoblaymiz. Ko'pincha bir oylik arxiv bitta sozlama tuzatish bilan qaytadi.",
+          ] },
+        ],
+        faq: [
+          { q: "Qonun bo'yicha yozuv qancha saqlanadi?", a: "Xususiy obyektlarga yagona norma yo'q — muddatni ega yoki soha talablari belgilaydi (bank va savdo markazlarida o'ziniki). Biznesning amaliy standarti — 30 sutka." },
+          { q: "Harakat bo'yicha yozuv joyni ko'p tejaydimi?", a: "Ha, tinch obyektlarda — bir necha baravar. Lekin kassalar, omborlar va mijozlar bilan bahslar uchun doimiy yozuv ishonchliroq: detektsiya hodisa boshini o'tkazib yuborishi mumkin." },
+          { q: "SSD qo'ysa bo'ladimi?", a: "Halqali video yozuvga SSD iqtisodiy jihatdan o'zini oqlamaydi: qayta yozish resursi tez sarflanadi, tezlik esa kerak emas. SSD tizim/analitikaga o'rinli, arxiv — maxsus HDD larda." },
+        ],
+      },
+      en: {
+        title: "How to size a hard drive for CCTV",
+        excerpt: "The formula for camera storage: bitrate, camera count, archive depth. A table of typical configurations, why Purple-class drives are a must and when one drive is not enough.",
+        sections: [
+          { h: "The formula that settles everything", p: [
+            "Archive volume is simple: camera bitrate (Mbps) ÷ 8 × 3600 × 24 = gigabytes per day per camera. A 4 MP camera with H.265 in a typical scene writes 2–4 Mbps — that is 20–45 GB a day.",
+            "Then multiply by cameras and days of storage. Eight cameras at 3 Mbps for 30 days: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7.8 TB. So an 8 TB drive is borderline — take 10 TB or two eights.",
+          ] },
+          { h: "What drives the bitrate most", p: [
+            "The codec: H.265 saves up to half the volume versus H.264 — enable it wherever the recorder supports it. Motion in frame: a camera over a busy checkout writes twice as much as one in a quiet corridor. Night: sensor noise inflates the stream, so outdoor cameras are 'heavier' at night.",
+            "Smart codecs (H.265+) add savings on static scenes, but bake them into the calculation cautiously: a live site can be noisier than the vendor's calculator promises.",
+          ] },
+          { h: "A table of typical configurations", p: [
+            "A home, four 2 MP cameras, 14 days — about 1 TB: a 2 TB drive is fine. An office, eight 4 MP, 30 days — 6–8 TB: an 8–10 TB drive. A store, sixteen 4 MP, 30 days — 12–16 TB: two 8–10 TB drives. A warehouse, 32 cameras, 30 days — 25–35 TB: a four-bay recorder or server storage with RAID.",
+            "The headroom rule is plus 20–25%: real bitrate always beats the calculator, and a circular archive must never run to zero free space.",
+          ] },
+          { h: "Why a desktop drive will not do", p: [
+            "CCTV writes 24/7 — a regime desktop drives were not designed for: they expect an office's eight hours with pauses. In a recorder such a drive lives a year or so and dies together with the archive.",
+            "Surveillance series — WD Purple, Seagate SkyHawk — are built for round-the-clock recording of dozens of streams and the vibration of neighboring drives, with DVR/NVR-tuned firmware. The price difference is about fifteen percent; the endurance difference is multiples.",
+          ] },
+          { h: "When one drive is not enough", p: [
+            "From 16 cameras or archives beyond a month, look at recorders with two to four bays: the volume adds up and each drive works easier. For critical sites — RAID storage: a failed drive does not take the archive with it.",
+            "And keep a free bay: growing the archive is the most common post-launch upgrade, and a spare bay is the cheapest way to prepare for it.",
+          ] },
+          { h: "We will do the math for you", p: [
+            "Our online calculator gives the ballpark for a whole system, and an engineer will size it exactly for your cameras, scenes and retention — free. WD Purple and Seagate SkyHawk drives of all popular sizes are in stock in Tashkent, with warranty.",
+            "If the archive no longer fits — we come, check the bitrates and either tune the codecs or size a storage upgrade. A month of archive often comes back with one settings fix.",
+          ] },
+        ],
+        faq: [
+          { q: "How long must recordings be kept by law?", a: "There is no single norm for private sites — the owner or industry requirements set the term (banks and malls have their own). The practical business standard is 30 days." },
+          { q: "Does motion-triggered recording save much space?", a: "Yes, on quiet sites — several times over. But for checkouts, warehouses and client disputes continuous recording is safer: detection can miss the start of an event." },
+          { q: "Can I use an SSD?", a: "For circular video recording an SSD is not economical: write endurance burns fast and the speed is not needed. SSDs fit the system/analytics; the archive belongs on surveillance-class HDDs." },
+        ],
+      },
+      tr: {
+        title: "Kamera sistemi için sabit disk nasıl hesaplanır",
+        excerpt: "Kamera depolaması formülü: bit hızı, kamera sayısı, arşiv derinliği. Tipik konfigürasyon tablosu, Purple sınıfı disklerin neden şart olduğu ve tek diskin ne zaman yetmediği.",
+        sections: [
+          { h: "Her şeyi çözen formül", p: [
+            "Arşiv hacmi basit: kamera bit hızı (Mbps) ÷ 8 × 3600 × 24 = kamera başına günde gigabayt. Tipik sahnede H.265'li 4 MP kamera 2–4 Mbps yazar — günde 20–45 GB eder.",
+            "Sonra kamera sayısı ve gün sayısıyla çarparsınız. 3 Mbps'lik sekiz kamera 30 gün: 3 ÷ 8 × 86400 × 8 × 30 ≈ 7,8 TB. Yani 8 TB disk sınırda — 10 TB veya iki sekizlik alın.",
+          ] },
+          { h: "Bit hızını en çok ne etkiler", p: [
+            "Kodek: H.265, H.264'e göre hacmin yarısına kadar kazandırır — destekleyen cihazlarda mutlaka açın. Karedeki hareket: yoğun kasadaki kamera, sakin koridordakinin iki katını yazar. Gece: sensör gürültüsü akışı şişirir; dış kameralar gece 'ağırlaşır'.",
+            "Akıllı kodekler (H.265+) statik sahnelerde ek kazandırır ama hesaba temkinli koyun: canlı saha, üretici hesaplayıcısının vaadinden gürültülü çıkabilir.",
+          ] },
+          { h: "Tipik konfigürasyon tablosu", p: [
+            "Ev, dört 2 MP kamera, 14 gün — yaklaşık 1 TB: 2 TB disk yeter. Ofis, sekiz 4 MP, 30 gün — 6–8 TB: 8–10 TB disk. Mağaza, on altı 4 MP, 30 gün — 12–16 TB: iki adet 8–10 TB. Depo, 32 kamera, 30 gün — 25–35 TB: dört yuvalı kayıt cihazı veya RAID'li sunucu depolama.",
+            "Pay kuralı artı %20–25: gerçek bit hızı hesaplayıcıyı hep aşar ve dairesel arşivin boş alanı sıfıra inmemelidir.",
+          ] },
+          { h: "Neden masaüstü disk olmaz", p: [
+            "Kamera sistemi 7/24 yazar — masaüstü diskler bunun için tasarlanmadı: ofisin sekiz saatine ve molalara göre yapıldılar. Kayıt cihazında böyle bir disk bir-bir buçuk yıl yaşar ve arşivle birlikte ölür.",
+            "Gözetim serileri — WD Purple, Seagate SkyHawk — onlarca akışın kesintisiz kaydına ve komşu disklerin titreşimine göre yapılmıştır, DVR/NVR yazılımlıdır. Fiyat farkı yüzde on beş kadar; dayanım farkı katlarcadır.",
+          ] },
+          { h: "Tek disk ne zaman yetmez", p: [
+            "16 kameradan veya bir ayı aşan arşivden itibaren iki-dört yuvalı cihazlara bakın: hem hacim toplanır hem her disk rahat çalışır. Kritik sahalara RAID: bozulan disk arşivi götürmez.",
+            "Ve boş yuva bırakın: arşivi büyütmek, açılış sonrası en sık yükseltmedir; yedek yuva buna hazırlanmanın en ucuz yoludur.",
+          ] },
+          { h: "Hesabı biz yapalım", p: [
+            "Online hesaplayıcımız tüm sistemin kabasını verir; kameralarınıza, sahnelere ve saklama süresine göre kesin hesabı mühendis yapar — ücretsiz. Tüm yaygın hacimlerde WD Purple ve Seagate SkyHawk Taşkent'te stokta, garantili.",
+            "Arşiv artık sığmıyorsa — gelir, bit hızlarına bakar, ya kodekleri ayarlar ya depolama yükseltmesini hesaplarız. Bir aylık arşiv çoğu kez tek ayar düzeltmesiyle geri gelir.",
+          ] },
+        ],
+        faq: [
+          { q: "Kayıtlar yasal olarak ne kadar saklanmalı?", a: "Özel sahalar için tek norm yok — süreyi sahibi veya sektör gereksinimleri belirler (bankaların ve AVM'lerin kendi kuralları var). Pratik iş standardı 30 gündür." },
+          { q: "Harekete bağlı kayıt çok yer kazandırır mı?", a: "Evet, sakin sahalarda kat kat. Ama kasalar, depolar ve müşteri ihtilafları için sürekli kayıt daha güvenlidir: algılama olayın başını kaçırabilir." },
+          { q: "SSD takılır mı?", a: "Dairesel video kaydında SSD ekonomik değildir: yazma ömrü hızla tükenir, hıza da gerek yoktur. SSD sistem/analitik için uygundur; arşiv gözetim sınıfı HDD'lere aittir." },
+        ],
+      },
+      zh: {
+        title: "如何计算监控系统的硬盘容量",
+        excerpt: "摄像机存储的计算公式：码流、路数、存档天数。典型配置表、为什么必须用紫盘级硬盘、什么时候一块盘不够。",
+        sections: [
+          { h: "一条公式定乾坤", p: [
+            "存档容量算法简单：摄像机码流（Mbps）÷ 8 × 3600 × 24 = 每台每天的GB数。典型场景下H.265的4MP摄像机写2–4Mbps——即每天20–45GB。",
+            "再乘以路数和保存天数。八台3Mbps存30天：3 ÷ 8 × 86400 × 8 × 30 ≈ 7.8TB。8TB盘就是贴着上限——该上10TB或两块8TB。",
+          ] },
+          { h: "影响码流最大的因素", p: [
+            "编码：H.265比H.264省一半——设备支持就必须开。画面动态：繁忙收银台的摄像机比安静走廊写两倍。夜晚：传感器噪点撑大码流，室外机夜里比白天“重”。",
+            "智能编码（H.265+）在静态场景再省一截，但纳入计算要保守：实际现场往往比厂商计算器承诺的更“吵”。",
+          ] },
+          { h: "典型配置表", p: [
+            "住宅，4台2MP存14天——约1TB：2TB盘够用。办公室，8台4MP存30天——6–8TB：配8–10TB。商店，16台4MP存30天——12–16TB：两块8–10TB。仓库，32台存30天——25–35TB：四盘位录像机或带RAID的服务器存储。",
+            "留量规则：计算结果加20–25%——实际码流总比计算器高，循环覆盖的存档不能把剩余空间跑到零。",
+          ] },
+          { h: "为什么不能用普通电脑硬盘", p: [
+            "监控是7×24写入——台式盘不是为此设计的：它们按办公8小时加停顿设计。装进录像机的台式盘一年到一年半就带着存档一起阵亡。",
+            "监控专用系列——WD紫盘、希捷酷鹰——为全天候多路写入和相邻硬盘振动而生，固件针对DVR/NVR调校。价差约百分之十五，寿命差成倍。",
+          ] },
+          { h: "什么时候一块盘不够", p: [
+            "16路以上或存档超一个月，就看双盘到四盘位的录像机：容量凑得够，每块盘的负载也低。关键场所上RAID：坏一块盘不丢档。",
+            "并且留一个空盘位：加大存档是上线后最常见的升级，预留盘位是最便宜的准备。",
+          ] },
+          { h: "交给我们来算", p: [
+            "用我们的在线计算器可以先估整套系统，精确到您的摄像机、场景和保存期的计算由工程师免费完成。WD紫盘和希捷酷鹰各常用容量塔什干现货，含保修。",
+            "如果存档已经“装不下”——我们上门看码流，要么调编码，要么算存储升级。常常一处设置就找回一个月的存档。",
+          ] },
+        ],
+        faq: [
+          { q: "法律要求录像保存多久？", a: "私营场所没有统一规定——期限由业主或行业要求决定（银行和商场有自己的标准）。商业上的实践标准是30天。" },
+          { q: "移动侦测录像很省空间吗？", a: "安静场所能省数倍。但收银台、仓库和客户纠纷场景还是连续录像稳妥：侦测可能漏掉事件的开头。" },
+          { q: "能用SSD吗？", a: "循环写视频用SSD不划算：写入寿命消耗快，而速度用不上。SSD适合系统盘/智能分析，存档归监控级机械盘。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "skolko-kamer-nuzhno-skladu",
+    date: "2026-09-04",
+    related: ["cctv", "analytics"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    loc: {
+      ru: {
+        title: "Сколько камер нужно складу: считаем на примерах",
+        excerpt: "Формула расчёта камер для склада 500, 1000 и 3000 м²: зоны, коридоры, рампы, фокусные расстояния. С примерами конфигураций и типичными ошибками экономии.",
+        sections: [
+          { h: "Почему «одна камера на 100 м²» — миф", p: [
+            "Универсальной нормы не существует: количество камер определяет не площадь, а задачи и геометрия. Пустой ангар 1000 м² закрывается четырьмя обзорными камерами, а склад той же площади со стеллажами шестиметровой высоты потребует пятнадцать — потому что каждый ряд стеллажей это стена, за которую камера не видит.",
+            "Правильный порядок расчёта: сначала список задач (что должно быть видно и с какой детализацией), потом схема зон, и только потом — количество камер.",
+          ] },
+          { h: "Считаем по зонам: четыре контура склада", p: [
+            "Приёмка и отгрузка — самая важная зона: здесь рождаются споры с поставщиками и клиентами. На каждую рампу — камера с читаемым номером машины и зоной выгрузки; на узел приёмки — камера с детализацией до коробки. Это 2–4 камеры на каждый док.",
+            "Коридоры хранения: по камере на конец каждого длинного прохода (фокусное подбирается под длину коридора), плюс камеры на пересечениях. Периметр и входы: все двери, ворота, калитки. Офисно-бытовой блок: вход и касса/учёт, если есть.",
+          ] },
+          { h: "Три примера конфигураций", p: [
+            "Склад 500 м² (мини-склад, 1 рампа, 4 ряда стеллажей): 2 камеры на рампу и приёмку, 4 на коридоры, 2 на входы и периметр — итого 8 камер и 8-канальный регистратор с запасом.",
+            "Склад 1000 м² (2 рампы, 8 рядов): 4 камеры на доки, 8 на коридоры, 3 на периметр и входы, 1 на офис — около 16 камер, 16-канальный NVR. Склад 3000 м² (4 рампы, высотное хранение): 8–10 на доки, 16–20 на коридоры и пересечения, 6 на периметр, ANPR на въезд — 30–40 камер, 32/64-канальный регистратор или серверная запись.",
+          ] },
+          { h: "Разрешение и фокусные: где какие камеры", p: [
+            "Для чтения номера машины на рампе нужна плотность порядка 250 пикселей на метр — это 4 МП камера с правильным фокусным на дистанции дока. Для коридора хватает 2–4 МП с узким углом (длинный коридор — «телевик», а не ширик). Обзорным точкам периметра достаточно 4 МП с широким углом.",
+            "Типовая ошибка — ставить везде одинаковые «ширики» 2,8 мм: они дают красивую общую картинку, на которой не читается ничего конкретного. Половина камер склада обычно с фокусными 4–12 мм.",
+          ] },
+          { h: "Регистратор, диски и сеть под это количество", p: [
+            "Правило запаса: регистратор берётся со свободными каналами на треть — склады всегда дорастают камеры. Глубина архива для склада — от 30 суток (претензии приходят поздно): 16 камер 4 МП в постоянной записи — это порядка 8–10 ТБ на месяц в зависимости от битрейта и кодека.",
+            "PoE-бюджет коммутаторов считается по максимальному потреблению камер с ИК (зимой подсветка и обогрев работают одновременно), плюс 20–30% запаса — иначе камеры перезагружаются ночью.",
+          ] },
+          { h: "Как получить точную схему бесплатно", p: [
+            "Пришлите план склада с расстановкой стеллажей — вернём схему камер с фокусными, спецификацию и смету. Или посчитайте порядок цифр сами в нашем онлайн-калькуляторе, а инженер уточнит детали на объекте — выезд по Ташкенту бесплатный.",
+            "Монтируем склады без остановки работы: зоны по очереди, трассы по существующим лоткам. Оборудование Hikvision и Dahua со склада в Ташкенте.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли обойтись четырьмя камерами на склад 1000 м²?", a: "Как обзор «что-то происходит» — да. Но ни один спор по отгрузке такая система не решит: номера машин и содержимое паллет читаться не будут. Задача определяет количество." },
+          { q: "Что важнее: больше камер или выше разрешение?", a: "Правильные фокусные важнее и того, и другого. 4 МП камера с нужным объективом в нужной точке бьёт три «ширика», размазанные по потолку." },
+          { q: "Сколько это стоит?", a: "Порядок: мини-склад — от нескольких десятков миллионов сумов под ключ, 1000 м² — умеренно больше за счёт числа камер и кабельных трасс. Точную смету считаем бесплатно по плану — с ней и стоит сравнивать предложения." },
+        ],
+      },
+      uz: {
+        title: "Omborga nechta kamera kerak: misollarda hisoblaymiz",
+        excerpt: "500, 1000 va 3000 m² omborga kameralar hisobi formulasi: zonalar, koridorlar, rampalar, fokus masofalari. Konfiguratsiya misollari va tejashning tipik xatolari bilan.",
+        sections: [
+          { h: "Nega «100 m² ga bitta kamera» — afsona", p: [
+            "Universal norma yo'q: kameralar sonini maydon emas, vazifalar va geometriya belgilaydi. Bo'sh 1000 m² angar to'rtta umumiy ko'rinish kamerasi bilan yopiladi, xuddi shu maydondagi olti metrli stellajli ombor esa o'n beshtani talab qiladi — chunki har stellaj qatori kamera ko'rmaydigan devor.",
+            "To'g'ri hisob tartibi: avval vazifalar ro'yxati (nima va qanday detallashuvda ko'rinishi kerak), keyin zonalar sxemasi, undan keyingina — kameralar soni.",
+          ] },
+          { h: "Zonalar bo'yicha hisoblaymiz: omborning to'rt konturi", p: [
+            "Qabul va jo'natish — eng muhim zona: yetkazib beruvchi va mijozlar bilan bahslar shu yerda tug'iladi. Har rampaga — mashina raqami va tushirish zonasi o'qiladigan kamera; qabul uzeliga — qutigacha detallashuvli kamera. Bu har dokka 2–4 kamera.",
+            "Saqlash koridorlari: har uzun o'tish oxiriga bittadan kamera (fokus koridor uzunligiga tanlanadi), plus kesishmalarga kameralar. Perimetr va kirishlar: barcha eshik, darvoza, kalitkalar. Ofis-maishiy blok: kirish va kassa/hisob bo'lsa.",
+          ] },
+          { h: "Uchta konfiguratsiya misoli", p: [
+            "500 m² ombor (mini-ombor, 1 rampa, 4 qator stellaj): rampa va qabulga 2 kamera, koridorlarga 4, kirish va perimetrga 2 — jami 8 kamera va zaxirali 8 kanalli registrator.",
+            "1000 m² ombor (2 rampa, 8 qator): doklarga 4, koridorlarga 8, perimetr va kirishlarga 3, ofisga 1 — taxminan 16 kamera, 16 kanalli NVR. 3000 m² ombor (4 rampa, baland saqlash): doklarga 8–10, koridor va kesishmalarga 16–20, perimetrga 6, kirishga ANPR — 30–40 kamera, 32/64 kanalli registrator yoki server yozuvi.",
+          ] },
+          { h: "Ruxsat va fokuslar: qayerda qanday kameralar", p: [
+            "Rampada mashina raqamini o'qish uchun metrga 250 piksel atrofida zichlik kerak — bu dok masofasida to'g'ri fokusli 4 MP kamera. Koridorga tor burchakli 2–4 MP yetadi (uzun koridor — «televik», shirik emas). Perimetr umumiy nuqtalariga keng burchakli 4 MP kifoya.",
+            "Tipik xato — hamma joyga bir xil 2,8 mm «shiriklar» qo'yish: ular chiroyli umumiy tasvir beradi, unda aniq hech narsa o'qilmaydi. Ombor kameralarining yarmi odatda 4–12 mm fokusli bo'ladi.",
+          ] },
+          { h: "Bu songa registrator, disk va tarmoq", p: [
+            "Zaxira qoidasi: registrator uchdan bir bo'sh kanal bilan olinadi — omborlar doim kamera qo'shadi. Ombor uchun arxiv chuqurligi — 30 sutkadan (da'volar kech keladi): doimiy yozuvdagi 16 ta 4 MP kamera — bitreyt va kodekga qarab oyiga 8–10 TB atrofida.",
+            "Kommutatorlarning PoE-byudjeti IK li kameralarning maksimal iste'moli bo'yicha hisoblanadi (qishda yoritish va isitish birga ishlaydi), plus 20–30% zaxira — aks holda kameralar kechasi qayta yuklanadi.",
+          ] },
+          { h: "Aniq sxemani bepul qanday olish mumkin", p: [
+            "Stellajlar joylashuvi bilan ombor planini yuboring — fokuslar bilan kameralar sxemasi, spetsifikatsiya va smetani qaytaramiz. Yoki raqamlar tartibini onlayn-kalkulyatorimizda o'zingiz hisoblang, muhandis obyektda aniqlashtiradi — Toshkent bo'ylab chiqish bepul.",
+            "Omborlarni ish to'xtatmasdan montaj qilamiz: zonalar navbat bilan, trassalar mavjud lotoklar bo'ylab. Hikvision va Dahua uskunalari Toshkentdagi ombordan.",
+          ] },
+        ],
+        faq: [
+          { q: "1000 m² omborga to'rtta kamera bilan bo'ladimi?", a: "«Nimadir bo'lyapti» umumiy ko'rinish sifatida — ha. Lekin bunday tizim jo'natish bo'yicha birorta bahsni hal qilmaydi: mashina raqamlari va palletlar tarkibi o'qilmaydi. Sonni vazifa belgilaydi." },
+          { q: "Nima muhimroq: ko'proq kamera yoki yuqoriroq ruxsat?", a: "To'g'ri fokuslar ikkalasidan ham muhim. Kerakli nuqtadagi kerakli obyektivli 4 MP kamera shipga yoyilgan uchta «shirikni» yengadi." },
+          { q: "Bu qancha turadi?", a: "Tartib: mini-ombor — kalit topshirish bilan bir necha o'n million so'mdan, 1000 m² — kamera soni va kabel trassalari hisobiga mo''tadil ko'proq. Aniq smetani plan bo'yicha bepul hisoblaymiz — takliflarni u bilan solishtirish kerak." },
+        ],
+      },
+      en: {
+        title: "How many cameras does a warehouse need: worked examples",
+        excerpt: "A camera calculation for warehouses of 500, 1,000 and 3,000 m²: zones, aisles, ramps, focal lengths. With sample configurations and the typical false economies.",
+        sections: [
+          { h: "Why 'one camera per 100 m²' is a myth", p: [
+            "There is no universal norm: the camera count is set by tasks and geometry, not area. An empty 1,000 m² hangar is covered by four overview cameras, while a warehouse of the same area with six-meter racks needs fifteen — every rack row is a wall the camera cannot see past.",
+            "The right order: first the task list (what must be visible and in what detail), then the zone scheme, and only then the camera count.",
+          ] },
+          { h: "Counting by zone: a warehouse's four loops", p: [
+            "Receiving and dispatch is the most important zone: disputes with suppliers and clients are born here. Every ramp gets a camera with a readable truck plate and unloading area; the receiving node gets detail down to a box. That is 2–4 cameras per dock.",
+            "Storage aisles: a camera at the end of every long aisle (the focal length matched to its length), plus cameras at intersections. Perimeter and entrances: every door, gate and wicket. The office block: the entrance and the cash/records room if present.",
+          ] },
+          { h: "Three sample configurations", p: [
+            "A 500 m² warehouse (1 ramp, 4 rack rows): 2 cameras for the ramp and receiving, 4 for aisles, 2 for entrances and perimeter — 8 cameras and an 8-channel recorder with headroom.",
+            "A 1,000 m² warehouse (2 ramps, 8 rows): 4 for docks, 8 for aisles, 3 for perimeter and entrances, 1 for the office — around 16 cameras and a 16-channel NVR. A 3,000 m² site (4 ramps, high-bay storage): 8–10 for docks, 16–20 for aisles and crossings, 6 for the perimeter, ANPR at the gate — 30–40 cameras, a 32/64-channel recorder or server recording.",
+          ] },
+          { h: "Resolution and focal lengths: which cameras where", p: [
+            "Reading a truck plate at a ramp takes about 250 pixels per meter — a 4 MP camera with the right lens at dock distance. An aisle is fine with 2–4 MP and a narrow angle (a long aisle wants a tele lens, not a wide one). Perimeter overview points are fine with a wide-angle 4 MP.",
+            "The typical mistake is identical 2.8 mm wide lenses everywhere: they give a pretty overall picture on which nothing specific is readable. Half of a warehouse's cameras usually carry 4–12 mm lenses.",
+          ] },
+          { h: "The recorder, disks and network for that count", p: [
+            "The headroom rule: take a recorder with a third of the channels free — warehouses always grow cameras. Archive depth for a warehouse starts at 30 days (claims arrive late): sixteen 4 MP cameras on continuous recording take roughly 8–10 TB a month depending on bitrate and codec.",
+            "The PoE budget is calculated from the cameras' maximum draw with IR on (in winter illumination and heating run together), plus 20–30% headroom — otherwise cameras reboot at night.",
+          ] },
+          { h: "How to get an exact scheme for free", p: [
+            "Send the warehouse plan with rack placement — we return a camera scheme with focal lengths, a specification and an estimate. Or get the ballpark in our online calculator, and an engineer refines it on site — the visit is free in Tashkent.",
+            "We fit warehouses without stopping operations: zone by zone, cables along existing trays. Hikvision and Dahua equipment from our Tashkent warehouse.",
+          ] },
+        ],
+        faq: [
+          { q: "Can four cameras cover a 1,000 m² warehouse?", a: "As an overview that 'something is happening' — yes. But such a system settles no dispatch dispute: truck plates and pallet contents will not be readable. The task defines the count." },
+          { q: "Which matters more: more cameras or higher resolution?", a: "The right focal lengths beat both. A 4 MP camera with the right lens in the right spot outperforms three wide-angles smeared across the ceiling." },
+          { q: "What does it cost?", a: "Ballpark: a mini-warehouse starts from tens of millions of UZS turnkey; 1,000 m² is moderately more due to camera count and cable runs. We calculate the exact estimate free from your plan — compare quotes against that." },
+        ],
+      },
+      tr: {
+        title: "Depoya kaç kamera gerekir: örneklerle hesap",
+        excerpt: "500, 1.000 ve 3.000 m² depolar için kamera hesabı: bölgeler, koridorlar, rampalar, odak uzaklıkları. Örnek konfigürasyonlar ve tipik yanlış tasarruflarla.",
+        sections: [
+          { h: "Neden '100 m²'ye bir kamera' bir efsane", p: [
+            "Evrensel norm yok: kamera sayısını alan değil, görevler ve geometri belirler. Boş 1.000 m² hangar dört genel bakış kamerasıyla kapanır; aynı alanda altı metrelik raflı depo on beş ister — her raf sırası, kameranın arkasını göremediği bir duvardır.",
+            "Doğru sıra: önce görev listesi (ne, hangi ayrıntıyla görünmeli), sonra bölge şeması, ancak ondan sonra kamera sayısı.",
+          ] },
+          { h: "Bölge bölge sayıyoruz: deponun dört devresi", p: [
+            "Mal kabul ve sevkiyat en önemli bölgedir: tedarikçi ve müşteri ihtilafları burada doğar. Her rampaya plakası ve boşaltma alanı okunur bir kamera; kabul noktasına koliye kadar ayrıntı veren bir kamera. Dok başına 2–4 kamera eder.",
+            "Depolama koridorları: her uzun koridorun ucuna bir kamera (odak, koridor boyuna göre), artı kesişmelere kameralar. Çevre ve girişler: tüm kapılar. Ofis bloğu: giriş ve varsa kasa/kayıt odası.",
+          ] },
+          { h: "Üç örnek konfigürasyon", p: [
+            "500 m² depo (1 rampa, 4 raf sırası): rampa ve kabule 2, koridorlara 4, giriş ve çevreye 2 — toplam 8 kamera ve paylı 8 kanallı kayıt cihazı.",
+            "1.000 m² depo (2 rampa, 8 sıra): doklara 4, koridorlara 8, çevre ve girişlere 3, ofise 1 — yaklaşık 16 kamera, 16 kanallı NVR. 3.000 m² (4 rampa, yüksek raf): doklara 8–10, koridor ve kesişmelere 16–20, çevreye 6, girişe ANPR — 30–40 kamera, 32/64 kanal veya sunucu kaydı.",
+          ] },
+          { h: "Çözünürlük ve odaklar: nereye hangi kamera", p: [
+            "Rampada plaka okumak metreye ~250 piksel ister — dok mesafesinde doğru lensli 4 MP kamera. Koridora dar açılı 2–4 MP yeter (uzun koridor geniş değil, tele lens ister). Çevre genel noktalarına geniş açılı 4 MP yeter.",
+            "Tipik hata her yere aynı 2,8 mm geniş lensleri koymak: güzel bir genel resim verir ama üzerinde somut hiçbir şey okunmaz. Depo kameralarının yarısı genelde 4–12 mm lens taşır.",
+          ] },
+          { h: "Bu sayıya kayıt cihazı, disk ve ağ", p: [
+            "Pay kuralı: kayıt cihazı kanallarının üçte biri boş alınır — depolar hep kamera büyütür. Depo için arşiv derinliği 30 günden başlar (itirazlar geç gelir): sürekli kayıtta on altı 4 MP kamera, bit hızına göre ayda kabaca 8–10 TB alır.",
+            "PoE bütçesi, IR açıkken kameraların azami tüketimiyle hesaplanır (kışın aydınlatma ve ısıtma birlikte çalışır), artı %20–30 pay — yoksa kameralar gece yeniden başlar.",
+          ] },
+          { h: "Kesin şema ücretsiz nasıl alınır", p: [
+            "Raf yerleşimli depo planını gönderin — odaklarıyla kamera şeması, spesifikasyon ve keşif döneriz. Ya da kabaca rakamı online hesaplayıcımızda kendiniz alın, mühendis sahada netleştirir — Taşkent'te ziyaret ücretsiz.",
+            "Depoları işi durdurmadan kurarız: bölge bölge, hatlar mevcut kanallardan. Hikvision ve Dahua ekipmanı Taşkent depomuzdan.",
+          ] },
+        ],
+        faq: [
+          { q: "1.000 m² depoyu dört kamera karşılar mı?", a: "'Bir şeyler oluyor' genel görüntüsü olarak — evet. Ama böyle bir sistem hiçbir sevkiyat ihtilafını çözmez: plakalar ve palet içerikleri okunmaz. Sayıyı görev belirler." },
+          { q: "Hangisi önemli: daha çok kamera mı, yüksek çözünürlük mü?", a: "Doğru odaklar ikisinden de önemlidir. Doğru noktadaki doğru lensli 4 MP kamera, tavana yayılmış üç geniş açılıyı yener." },
+          { q: "Kaça mal olur?", a: "Kabaca: mini depo anahtar teslim on milyonlarca somdan başlar; 1.000 m², kamera sayısı ve hatlar nedeniyle ölçülü daha fazladır. Kesin keşfi planınızdan ücretsiz çıkarırız — teklifleri onunla karşılaştırın." },
+        ],
+      },
+      zh: {
+        title: "仓库需要多少台摄像机：按实例计算",
+        excerpt: "500、1000、3000平方米仓库的摄像机测算：分区、巷道、月台、焦距。附配置示例和典型的省钱误区。",
+        sections: [
+          { h: "为什么“每100平米一台”是迷思", p: [
+            "不存在通用定额：数量由任务和几何决定，而不是面积。空旷的1000平米厂房四台全景机就够；同样面积但有六米高货架的仓库要十五台——因为每排货架都是摄像机看不透的墙。",
+            "正确的顺序：先列任务（要看清什么、到什么程度），再画分区图，最后才是数量。",
+          ] },
+          { h: "按分区计算：仓库的四个回路", p: [
+            "收发货是最重要的分区：与供应商和客户的纠纷都诞生在这里。每个月台配一台能看清车牌和卸货区的摄像机；收货节点配能看清到箱的摄像机。每个站台2–4台。",
+            "存储巷道：每条长巷道末端一台（焦距按巷道长度选），交叉口加装。周界与出入口：所有门。办公区：入口，若有收银/账房也要覆盖。",
+          ] },
+          { h: "三个配置示例", p: [
+            "500平米仓（1月台、4排货架）：月台和收货2台、巷道4台、出入口和周界2台——共8台，配留余量的8路录像机。",
+            "1000平米（2月台、8排）：站台4台、巷道8台、周界和出入口3台、办公1台——约16台，16路NVR。3000平米（4月台、高位货架）：站台8–10台、巷道和交叉16–20台、周界6台、入口车牌识别——30–40台，32/64路或服务器存储。",
+          ] },
+          { h: "分辨率与焦距：哪里放什么机", p: [
+            "月台读车牌需要约每米250像素——即在站台距离上配对焦距的4MP相机。巷道用窄视角2–4MP即可（长巷道要“长焦”不要广角）。周界全景点位用广角4MP足够。",
+            "典型错误是到处装同样的2.8mm广角：画面好看，具体什么都读不清。仓库一半的摄像机通常该用4–12mm焦距。",
+          ] },
+          { h: "这个数量对应的录像机、硬盘和网络", p: [
+            "留量规则：录像机要留三分之一空通道——仓库总会加机。仓库存档从30天起（索赔来得晚）：16台4MP连续录像按码流约每月8–10TB。",
+            "PoE预算按红外全开时的最大功耗计算（冬天补光和加热同时工作），再留20–30%——否则摄像机夜里重启。",
+          ] },
+          { h: "如何免费拿到准确方案", p: [
+            "把带货架布局的平面图发来——我们回传带焦距的布点图、清单和预算。也可先用我们的在线计算器估个数量级，工程师现场再核——塔什干上门免费。",
+            "仓库施工不停业：分区轮流、线缆走现有桥架。海康和大华设备塔什干现货。",
+          ] },
+        ],
+        faq: [
+          { q: "1000平米仓库四台摄像机行吗？", a: "作为“有事发生”的概览——行。但任何发货纠纷它都解决不了：车牌和托盘内容读不出来。数量由任务决定。" },
+          { q: "数量和分辨率哪个更重要？", a: "正确的焦距比两者都重要。放对位置、配对镜头的一台4MP胜过天花板上撒的三台广角。" },
+          { q: "要花多少钱？", a: "数量级：小仓库交钥匙从数千万苏姆起；1000平米因摄像机和线缆更多而适度增加。按图纸免费出精确预算——比价请以它为准。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "router-sozlash",
     date: "2026-09-03",
     related: ["network", "wifi"],

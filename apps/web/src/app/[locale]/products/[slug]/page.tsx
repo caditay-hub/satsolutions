@@ -107,7 +107,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     }
     const loc = localizeProduct(product, locale);
     const ogImage = resolveImageUrl(product.coverImageUrl) ?? undefined;
-    const desc = clip(loc.shortDescription || loc.name, 160);
+    // Цена и наличие в сниппете: по артикульным запросам ищут именно цену/наличие —
+    // хвост поднимает CTR (у топ-позиций без него CTR был 0–2%). Цены в БД — в сумах.
+    const priceNum = Number(product.price);
+    const SNIPPET_TAIL: Record<string, { price: (v: string) => string; onRequest: string; inStock: string; onOrder: string }> = {
+      ru: { price: (v) => `Цена: ${v} сум`, onRequest: "Цена по запросу", inStock: "в наличии в Ташкенте", onOrder: "под заказ" },
+      uz: { price: (v) => `Narxi: ${v} so'm`, onRequest: "Narxi so'rov bo'yicha", inStock: "Toshkentda mavjud", onOrder: "buyurtma asosida" },
+      en: { price: (v) => `Price: ${v} UZS`, onRequest: "Price on request", inStock: "in stock in Tashkent", onOrder: "on order" },
+      tr: { price: (v) => `Fiyat: ${v} som`, onRequest: "Fiyat talep üzerine", inStock: "Taşkent'te stokta", onOrder: "siparişle" },
+      zh: { price: (v) => `价格：${v}苏姆`, onRequest: "价格面议", inStock: "塔什干现货", onOrder: "接受预订" },
+    };
+    const tailDict = SNIPPET_TAIL[locale] ?? SNIPPET_TAIL.ru;
+    const pricePart = Number.isFinite(priceNum) && priceNum > 0
+      ? tailDict.price(Math.round(priceNum).toLocaleString("ru-RU").replace(/ /g, " "))
+      : tailDict.onRequest;
+    const tail = ` ${pricePart} · ${product.inStock === false ? tailDict.onOrder : tailDict.inStock}.`;
+    const desc = clip(loc.shortDescription || loc.name, 158 - tail.length) + tail;
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
       title: { absolute: `${loc.name} — ${t("product.titleBuy")}` },

@@ -8,6 +8,16 @@ import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeLongread } from "@/lib/longreadI18n";
 import { localizeServiceCase } from "@/lib/serviceCaseI18n";
 import { Link } from "@/i18n/navigation";
+import { ARTICLES } from "@/lib/articlesData";
+
+// Заголовок блока «Статьи по теме» на хабах типов (инлайн — не раздуваем messages)
+const HUB_ARTICLES_UI: Record<string, string> = {
+  ru: "Статьи по теме",
+  uz: "Mavzu bo'yicha maqolalar",
+  en: "Related articles",
+  tr: "İlgili makaleler",
+  zh: "相关文章",
+};
 import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { localizePortfolioProject } from "@/lib/contentI18n";
@@ -234,6 +244,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
   // SEO-блок связки бренд×категория (страницы /catalog/[brand]/[type])
   const pairBlock = pairSeo && cleanScope ? pairSeo : null;
+  // Статьи, привязанные к этому хабу типа через Article.hubs (до 4, свежие первыми)
+  const hubArticles = pathType && cleanScope
+    ? ARTICLES.filter((a) => a.hubs?.includes(pathType) && a.loc[locale]).slice(0, 4)
+    : [];
   const pairFaqLd = pairBlock && pairBlock.faq.length
     ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pairBlock.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
     : null;
@@ -504,6 +518,20 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{pairBlock.heading} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={pairBlock.intro + (pairBlock.faq.length ? "\n\n" + pairBlock.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />
+              </div>
+            </section>
+          ) : null}
+          {/* Хаб типа → статьи: обратная нога перелинковки к Article.hubs (статья → хаб).
+              Даёт хабам свежие внутренние ссылки, а статьям — переходы из каталога. */}
+          {pathType && hubArticles.length > 0 ? (
+            <section className="mt-10 border-t border-slate-200 pt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{HUB_ARTICLES_UI[locale] ?? HUB_ARTICLES_UI.ru}</p>
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                {hubArticles.map((a) => (
+                  <Link key={a.slug} href={`/blog/${a.slug}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700">
+                    {a.loc[locale]?.title ?? a.loc.ru.title}
+                  </Link>
+                ))}
               </div>
             </section>
           ) : null}

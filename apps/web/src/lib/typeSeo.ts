@@ -82,9 +82,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "ip-videoregistratory-nvr": {
     title: {
-      ru: "Купить видеорегистратор NVR в Ташкенте — Hikvision, цены",
-      uz: "Videoregistrator NVR narxlari Toshkentda — Hikvision",
-      en: "NVR Video Recorders in Tashkent — Hikvision, Prices",
+      ru: "IP-видеорегистратор NVR — купить в Ташкенте, Hikvision, цены",
+      uz: "IP-videoregistrator NVR — Toshkentda narxlari, Hikvision",
+      en: "IP NVR Video Recorders in Tashkent — Hikvision, Prices",
     },
     desc: {
       ru: "IP-видеорегистраторы NVR на 4–64 канала: Hikvision, Dahua, HiLook. Подбор под количество камер, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
