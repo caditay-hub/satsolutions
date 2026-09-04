@@ -244,9 +244,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
   // SEO-блок связки бренд×категория (страницы /catalog/[brand]/[type])
   const pairBlock = pairSeo && cleanScope ? pairSeo : null;
-  // Статьи, привязанные к этому хабу типа через Article.hubs (до 4, свежие первыми)
+  // Статьи, привязанные к этому хабу типа через Article.hubs (до 4, свежие первыми).
+  // pathType приходит РУССКИМ именем типа — hubs хранят слаги, конвертируем.
   const hubArticles = pathType && cleanScope
-    ? ARTICLES.filter((a) => a.hubs?.includes(pathType) && a.loc[locale]).slice(0, 4)
+    ? ARTICLES.filter((a) => a.hubs?.includes(typeSlug(pathType)) && a.loc[locale]).slice(0, 4)
     : [];
   const pairFaqLd = pairBlock && pairBlock.faq.length
     ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pairBlock.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
