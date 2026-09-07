@@ -19738,5 +19738,371 @@
     "en": "50 m",
     "tr": "50 m",
     "zh": "50 米"
+  },
+  "12 В DC, 1 А для считывателя и замка": {
+    "uz": "12 V DC, o'quvchi va qulf uchun 1 A",
+    "en": "12 V DC, 1 A for reader and lock",
+    "tr": "12 V DC, okuyucu ve kilit için 1 A",
+    "zh": "12 V DC 1 A，供读卡器和门锁"
+  },
+  "2 МП CMOS, два объектива": {
+    "uz": "2 MP CMOS, ikkita obyektiv",
+    "en": "2 MP CMOS, dual lens",
+    "tr": "2 MP CMOS, çift objektif",
+    "zh": "200 万像素 CMOS，双镜头"
+  },
+  "2 замка при питании 12 В DC": {
+    "uz": "12 V DC quvvatda 2 ta qulf",
+    "en": "2 locks when powered at 12 V DC",
+    "tr": "12 V DC beslemede 2 kilit",
+    "zh": "12 V DC 供电时 2 把门锁"
+  },
+  "2, двустороннее движение": {
+    "uz": "2 ta, ikki tomonlama harakat",
+    "en": "2, two-way passage",
+    "tr": "2, çift yönlü geçiş",
+    "zh": "2 扇，双向通行"
+  },
+  "2.8 мм или 3.6 мм": {
+    "uz": "2.8 mm yoki 3.6 mm",
+    "en": "2.8 mm or 3.6 mm",
+    "tr": "2.8 mm veya 3.6 mm",
+    "zh": "2.8 毫米或 3.6 毫米"
+  },
+  "2.8 мм, 3.6 мм или 6 мм": {
+    "uz": "2.8 mm, 3.6 mm yoki 6 mm",
+    "en": "2.8 mm, 3.6 mm or 6 mm",
+    "tr": "2.8 mm, 3.6 mm veya 6 mm",
+    "zh": "2.8、3.6 或 6 毫米"
+  },
+  "4 замка по 12 В, до 1.2 А": {
+    "uz": "12 V da 4 ta qulf, 1.2 A gacha",
+    "en": "4 locks at 12 V, up to 1.2 A",
+    "tr": "12 V'ta 4 kilit, 1.2 A'e kadar",
+    "zh": "4 把 12 V 门锁，最大 1.2 A"
+  },
+  "4 канала": {
+    "uz": "4 ta kanal",
+    "en": "4 channels",
+    "tr": "4 kanal",
+    "zh": "4 路"
+  },
+  "4 считывателя": {
+    "uz": "4 ta o'quvchi",
+    "en": "4 readers",
+    "tr": "4 okuyucu",
+    "zh": "4 台读卡器"
+  },
+  "4 считывателя по 12 В, до 500 мА": {
+    "uz": "12 V da 4 ta o'quvchi, 500 mA gacha",
+    "en": "4 readers at 12 V, up to 500 mA",
+    "tr": "12 V'ta 4 okuyucu, 500 mA'e kadar",
+    "zh": "4 台 12 V 读卡器，最大 500 mA"
+  },
+  "4, одностороннее движение": {
+    "uz": "4 ta, bir tomonlama harakat",
+    "en": "4, one-way passage",
+    "tr": "4, tek yönlü geçiş",
+    "zh": "4 扇，单向通行"
+  },
+  "4.3\", сенсорный, 272×480": {
+    "uz": "4.3 dyuym, sensorli, 272×480",
+    "en": "4.3\" touchscreen, 272×480",
+    "tr": "4.3 inç dokunmatik, 272×480",
+    "zh": "4.3 英寸触摸屏，272×480"
+  },
+  "500 000 записей": {
+    "uz": "500 000 ta yozuv",
+    "en": "500,000 records",
+    "tr": "500.000 kayıt",
+    "zh": "50 万条记录"
+  },
+  "Linux, встроенный веб-интерфейс": {
+    "uz": "Linux, o'rnatilgan veb-interfeys",
+    "en": "Linux with built-in web interface",
+    "tr": "Linux, dahili web arayüzü",
+    "zh": "Linux，内置网页界面"
+  },
+  "PoE или 12 В DC": {
+    "uz": "PoE yoki 12 V DC",
+    "en": "PoE or 12 V DC",
+    "tr": "PoE ya da 12 V DC",
+    "zh": "PoE 或 12 V DC"
+  },
+  "PoE или внешний адаптер": {
+    "uz": "PoE yoki tashqi adapter",
+    "en": "PoE or external adapter",
+    "tr": "PoE ya da harici adaptör",
+    "zh": "PoE 或外接适配器"
+  },
+  "RS-485 и Wiegand": {
+    "uz": "RS-485 va Wiegand",
+    "en": "RS-485 and Wiegand",
+    "tr": "RS-485 ve Wiegand",
+    "zh": "RS-485 与韦根"
+  },
+  "SMD 3.0, защита периметра, автосопровождение Lite": {
+    "uz": "SMD 3.0, perimetr himoyasi, avtomatik kuzatish Lite",
+    "en": "SMD 3.0, perimeter protection, auto-tracking Lite",
+    "tr": "SMD 3.0, çevre koruma, otomatik takip Lite",
+    "zh": "SMD 3.0、周界防护、自动跟踪 Lite"
+  },
+  "antipassback, разблокировка несколькими пользователями, первая карта, удалённая проверка": {
+    "uz": "antipassback, bir necha foydalanuvchi bilan ochish, birinchi karta, masofaviy tekshiruv",
+    "en": "anti-passback, multi-user unlocking, first card, remote verification",
+    "tr": "anti-passback, çok kullanıcılı açma, ilk kart, uzaktan doğrulama",
+    "zh": "反潜回、多人开门、首卡常开、远程核验"
+  },
+  "microSD до 256 ГБ": {
+    "uz": "256 GB gacha microSD",
+    "en": "microSD up to 256 GB",
+    "tr": "256 GB'a kadar microSD",
+    "zh": "microSD 最大 256 GB"
+  },
+  "автономно или через DoLynk Care": {
+    "uz": "mustaqil yoki DoLynk Care orqali",
+    "en": "standalone or through DoLynk Care",
+    "tr": "bağımsız ya da DoLynk Care üzerinden",
+    "zh": "独立运行或通过 DoLynk Care"
+  },
+  "автономный режим FAT или централизованный FIT / DoLynk Care": {
+    "uz": "mustaqil FAT rejimi yoki markazlashgan FIT / DoLynk Care",
+    "en": "standalone FAT or centralised FIT / DoLynk Care",
+    "tr": "bağımsız FAT ya da merkezî FIT / DoLynk Care",
+    "zh": "独立 FAT 模式或集中式 FIT / DoLynk Care"
+  },
+  "бесшовный, 802.11r/k/v": {
+    "uz": "uzluksiz, 802.11r/k/v",
+    "en": "seamless, 802.11r/k/v",
+    "tr": "kesintisiz, 802.11r/k/v",
+    "zh": "无缝，802.11r/k/v"
+  },
+  "веб-интерфейс и мобильное приложение": {
+    "uz": "veb-interfeys va mobil ilova",
+    "en": "web interface and mobile app",
+    "tr": "web arayüzü ve mobil uygulama",
+    "zh": "网页界面与手机应用"
+  },
+  "всенаправленные, 3.5 dBi (2.4 ГГц) и 6 dBi (5 ГГц)": {
+    "uz": "har tomonlama, 3.5 dBi (2.4 GGts) va 6 dBi (5 GGts)",
+    "en": "omnidirectional, 3.5 dBi (2.4 GHz) and 6 dBi (5 GHz)",
+    "tr": "her yöne, 3.5 dBi (2.4 GHz) ve 6 dBi (5 GHz)",
+    "zh": "全向，3.5 dBi（2.4 GHz）与 6 dBi（5 GHz）"
+  },
+  "встроенный микрофон": {
+    "uz": "o'rnatilgan mikrofon",
+    "en": "built-in microphone",
+    "tr": "dahili mikrofon",
+    "zh": "内置麦克风"
+  },
+  "встроенный микрофон и динамик": {
+    "uz": "o'rnatilgan mikrofon va dinamik",
+    "en": "built-in microphone and speaker",
+    "tr": "dahili mikrofon ve hoparlör",
+    "zh": "内置麦克风与扬声器"
+  },
+  "встроенный, для выбора канала": {
+    "uz": "o'rnatilgan, kanal tanlash uchun",
+    "en": "built in, for channel selection",
+    "tr": "dahili, kanal seçimi için",
+    "zh": "内置，用于信道选择"
+  },
+  "двойная: ИК и белая, до 30 м": {
+    "uz": "qo'sh: infraqizil va oq, 30 m gacha",
+    "en": "dual: IR and white light, up to 30 m",
+    "tr": "çift: kızılötesi ve beyaz ışık, 30 m'ye kadar",
+    "zh": "双光：红外与白光，最远 30 米"
+  },
+  "до 1 км": {
+    "uz": "1 km gacha",
+    "en": "up to 1 km",
+    "tr": "1 km'ye kadar",
+    "zh": "最远 1 公里"
+  },
+  "до 2402 Мбит/с": {
+    "uz": "2402 Mbit/s gacha",
+    "en": "up to 2402 Mbps",
+    "tr": "2402 Mbps'ye kadar",
+    "zh": "最高 2402 Mbps"
+  },
+  "до 25/30 к/с при 4 МП": {
+    "uz": "4 MP da 25/30 kadr/s gacha",
+    "en": "up to 25/30 fps at 4 MP",
+    "tr": "4 MP'de 25/30 fps'ye kadar",
+    "zh": "400 万像素下最高 25/30 帧"
+  },
+  "до 5 км": {
+    "uz": "5 km gacha",
+    "en": "up to 5 km",
+    "tr": "5 km'ye kadar",
+    "zh": "最远 5 公里"
+  },
+  "до 574 Мбит/с": {
+    "uz": "574 Mbit/s gacha",
+    "en": "up to 574 Mbps",
+    "tr": "574 Mbps'ye kadar",
+    "zh": "最高 574 Mbps"
+  },
+  "до 80 м": {
+    "uz": "80 m gacha",
+    "en": "up to 80 m",
+    "tr": "80 m'ye kadar",
+    "zh": "最远 80 米"
+  },
+  "до 867 Мбит/с": {
+    "uz": "867 Mbit/s gacha",
+    "en": "up to 867 Mbps",
+    "tr": "867 Mbps'ye kadar",
+    "zh": "最高 867 Mbps"
+  },
+  "есть, в видимом свете": {
+    "uz": "bor, ko'rinadigan yorug'likda",
+    "en": "yes, in visible light",
+    "tr": "var, görünür ışıkta",
+    "zh": "支持，可见光"
+  },
+  "есть, вызов и управление через приложение": {
+    "uz": "bor, chaqiruv va ilova orqali boshqaruv",
+    "en": "yes, calling and control from the app",
+    "tr": "var, çağrı ve uygulamadan yönetim",
+    "zh": "支持，呼叫与手机应用控制"
+  },
+  "заводская, работа сразу после включения": {
+    "uz": "zavod sozlamasi, yoqilgach darhol ishlaydi",
+    "en": "factory-set, works right after power-up",
+    "tr": "fabrika ayarlı, güç verilir verilmez çalışır",
+    "zh": "出厂已配置，通电即用"
+  },
+  "карта, пароль, отпечаток, QR-код и их сочетания": {
+    "uz": "karta, parol, barmoq izi, QR-kod va ularning uyg'unligi",
+    "en": "card, PIN, fingerprint, QR code and their combinations",
+    "tr": "kart, şifre, parmak izi, QR kod ve bunların birleşimi",
+    "zh": "刷卡、密码、指纹、二维码及其组合"
+  },
+  "классификация людей и транспорта, SMD": {
+    "uz": "odam va transport tasnifi, SMD",
+    "en": "human and vehicle classification, SMD",
+    "tr": "insan ve araç sınıflandırma, SMD",
+    "zh": "人车分类，SMD"
+  },
+  "менее 0.2 с на человека": {
+    "uz": "bir kishiga 0.2 s dan kam",
+    "en": "under 0.2 s per person",
+    "tr": "kişi başına 0.2 s'den az",
+    "zh": "每人低于 0.2 秒"
+  },
+  "на стену или на столб": {
+    "uz": "devorga yoki ustunga",
+    "en": "wall or pole mount",
+    "tr": "duvara ya da direğe",
+    "zh": "壁装或抱杆安装"
+  },
+  "не ниже 99.9%": {
+    "uz": "99.9% dan kam emas",
+    "en": "no less than 99.9%",
+    "tr": "%99,9'un altında değil",
+    "zh": "不低于 99.9%"
+  },
+  "обнаружение людей и транспорта, SMD": {
+    "uz": "odam va transportni aniqlash, SMD",
+    "en": "human and vehicle detection, SMD",
+    "tr": "insan ve araç algılama, SMD",
+    "zh": "人车检测，SMD"
+  },
+  "от −30 до +65 °C": {
+    "uz": "−30 dan +65 °C gacha",
+    "en": "from −30 to +65 °C",
+    "tr": "−30 ile +65 °C arası",
+    "zh": "−30 至 +65 °C"
+  },
+  "панорама 355°, наклон 90°": {
+    "uz": "panorama 355°, egilish 90°",
+    "en": "355° pan, 90° tilt",
+    "tr": "355° yatay, 90° dikey",
+    "zh": "水平 355°，俯仰 90°"
+  },
+  "пара мостов, PoE-комбинатор, адаптер 12 В DC": {
+    "uz": "juft ko'prik, PoE kombinator, 12 V DC adapter",
+    "en": "a pair of bridges, PoE combiner, 12 V DC adapter",
+    "tr": "bir çift köprü, PoE birleştirici, 12 V DC adaptör",
+    "zh": "一对网桥、PoE 合路器、12 V DC 适配器"
+  },
+  "потолочный, для помещений": {
+    "uz": "shiftga, ichki foydalanish uchun",
+    "en": "ceiling, indoor",
+    "tr": "tavan, iç mekân",
+    "zh": "吸顶安装，室内"
+  },
+  "связь между зданиями, вынос камер": {
+    "uz": "binolar orasidagi aloqa, kameralarni chiqarish",
+    "en": "building-to-building links, remote cameras",
+    "tr": "binalar arası bağlantı, uzak kameralar",
+    "zh": "楼宇互联、远端摄像机接入"
+  },
+  "связь с кабиной лифта": {
+    "uz": "lift kabinasi bilan aloqa",
+    "en": "link to the lift car",
+    "tr": "asansör kabiniyle bağlantı",
+    "zh": "与电梯轿厢的通信"
+  },
+  "сирена и стробоскоп": {
+    "uz": "sirena va chaqnovchi chiroq",
+    "en": "siren and strobe",
+    "tr": "siren ve flaşör",
+    "zh": "警笛与频闪灯"
+  },
+  "уличный": {
+    "uz": "ko'cha uchun",
+    "en": "outdoor",
+    "tr": "dış mekân",
+    "zh": "室外"
+  },
+  "цветной без ИК-подсветки": {
+    "uz": "infraqizil yoritishsiz rangli",
+    "en": "colour without IR illumination",
+    "tr": "kızılötesi olmadan renkli",
+    "zh": "无红外补光的彩色"
+  },
+  "шахта лифта и кабина": {
+    "uz": "lift shaxtasi va kabina",
+    "en": "lift shaft and car",
+    "tr": "asansör kuyusu ve kabin",
+    "zh": "电梯井道与轿厢"
+  },
+  "2 МП, 1920×1080": {
+    "uz": "2 MP, 1920×1080",
+    "en": "2 MP, 1920×1080",
+    "tr": "2 MP, 1920×1080",
+    "zh": "200 万像素，1920×1080"
+  },
+  "4 МП, 2560×1440": {
+    "uz": "4 MP, 2560×1440",
+    "en": "4 MP, 2560×1440",
+    "tr": "4 MP, 2560×1440",
+    "zh": "400 万像素，2560×1440"
+  },
+  "4 МП, 2688×1520": {
+    "uz": "4 MP, 2688×1520",
+    "en": "4 MP, 2688×1520",
+    "tr": "4 MP, 2688×1520",
+    "zh": "400 万像素，2688×1520"
+  },
+  "8 МП, 3840×2160": {
+    "uz": "8 MP, 3840×2160",
+    "en": "8 MP, 3840×2160",
+    "tr": "8 MP, 3840×2160",
+    "zh": "800 万像素，3840×2160"
+  },
+  "1 × Gigabit RJ-45 с PoE-входом": {
+    "uz": "1 × Gigabit RJ-45, PoE kirishi bilan",
+    "en": "1 × Gigabit RJ-45 with PoE in",
+    "tr": "1 × Gigabit RJ-45, PoE girişli",
+    "zh": "1 × 千兆 RJ-45（支持 PoE 供电）"
+  },
+  "1 × 2.5G RJ-45 с PoE-входом, 1 × 1G LAN": {
+    "uz": "1 × 2.5G RJ-45, PoE kirishi bilan, 1 × 1G LAN",
+    "en": "1 × 2.5G RJ-45 with PoE in, 1 × 1G LAN",
+    "tr": "1 × 2.5G RJ-45, PoE girişli, 1 × 1G LAN",
+    "zh": "1 × 2.5G RJ-45（PoE 输入）、1 × 1G LAN"
   }
 }

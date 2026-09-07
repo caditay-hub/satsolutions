@@ -5278,5 +5278,131 @@
     "en": "Connector B",
     "tr": "Konnektör B",
     "zh": "接头 B"
+  },
+  "Активное сдерживание": {
+    "uz": "Faol to'xtatish",
+    "en": "Active deterrence",
+    "tr": "Aktif caydırma",
+    "zh": "主动威慑"
+  },
+  "Анализ эфира": {
+    "uz": "Efir tahlili",
+    "en": "Spectrum analysis",
+    "tr": "Spektrum analizi",
+    "zh": "频谱分析"
+  },
+  "База паролей": {
+    "uz": "Parollar bazasi",
+    "en": "Password capacity",
+    "tr": "Şifre kapasitesi",
+    "zh": "密码容量"
+  },
+  "Выход питания": {
+    "uz": "Quvvat chiqishi",
+    "en": "Power output",
+    "tr": "Güç çıkışı",
+    "zh": "供电输出"
+  },
+  "Выходы тревоги": {
+    "uz": "Signal chiqishlari",
+    "en": "Alarm outputs",
+    "tr": "Alarm çıkışları",
+    "zh": "报警输出"
+  },
+  "Журнал событий": {
+    "uz": "Hodisalar jurnali",
+    "en": "Event log",
+    "tr": "Olay kaydı",
+    "zh": "事件记录"
+  },
+  "Карт": {
+    "uz": "Kartalar",
+    "en": "Cards",
+    "tr": "Kartlar",
+    "zh": "卡片容量"
+  },
+  "Количество дверей": {
+    "uz": "Eshiklar soni",
+    "en": "Number of doors",
+    "tr": "Kapı sayısı",
+    "zh": "门数量"
+  },
+  "Ночной режим": {
+    "uz": "Tungi rejim",
+    "en": "Night mode",
+    "tr": "Gece modu",
+    "zh": "夜视模式"
+  },
+  "Определение живости": {
+    "uz": "Tiriklikni aniqlash",
+    "en": "Liveness detection",
+    "tr": "Canlılık tespiti",
+    "zh": "活体检测"
+  },
+  "Отпечатков": {
+    "uz": "Barmoq izlari",
+    "en": "Fingerprints",
+    "tr": "Parmak izleri",
+    "zh": "指纹容量"
+  },
+  "Паролей": {
+    "uz": "Parollar",
+    "en": "Passwords",
+    "tr": "Şifreler",
+    "zh": "密码容量"
+  },
+  "Питание замков": {
+    "uz": "Qulflar quvvati",
+    "en": "Lock power",
+    "tr": "Kilit beslemesi",
+    "zh": "门锁供电"
+  },
+  "Питание контроллера": {
+    "uz": "Kontroller quvvati",
+    "en": "Controller power",
+    "tr": "Ünite beslemesi",
+    "zh": "控制器供电"
+  },
+  "Питание считывателей": {
+    "uz": "O'quvchilar quvvati",
+    "en": "Reader power",
+    "tr": "Okuyucu beslemesi",
+    "zh": "读卡器供电"
+  },
+  "Платформы": {
+    "uz": "Platformalar",
+    "en": "Platforms",
+    "tr": "Platformlar",
+    "zh": "管理平台"
+  },
+  "Порты RS-485": {
+    "uz": "RS-485 portlari",
+    "en": "RS-485 ports",
+    "tr": "RS-485 portları",
+    "zh": "RS-485 端口"
+  },
+  "Порты Wiegand": {
+    "uz": "Wiegand portlari",
+    "en": "Wiegand ports",
+    "tr": "Wiegand portları",
+    "zh": "韦根端口"
+  },
+  "Роуминг": {
+    "uz": "Rouming",
+    "en": "Roaming",
+    "tr": "Dolaşım",
+    "zh": "漫游"
+  },
+  "Способы прохода": {
+    "uz": "O'tish usullari",
+    "en": "Access methods",
+    "tr": "Geçiş yöntemleri",
+    "zh": "通行方式"
+  },
+  "Функция домофона": {
+    "uz": "Domofon funksiyasi",
+    "en": "Intercom function",
+    "tr": "İnterkom işlevi",
+    "zh": "对讲功能"
   }
 }
