@@ -134,6 +134,14 @@ export default async function RootLayout({
             Caveat и *-ext не прелоадим: optional гарантирует ноль CLS, а файлы догрузятся в кэш для следующих переходов. */}
         <link rel="preload" href="/fonts/jura-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/jura-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* tr/uz-заголовки используют latin-ext (ş, ğ, İ, ʻ): без прелоада display:optional
+            отрисует эти буквы Arial-фолбэком — внутри слова «пляшет» начертание. */}
+        {(locale === "tr" || locale === "uz") && (
+          <>
+            <link rel="preload" href="/fonts/jura-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+            <link rel="preload" href="/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+          </>
+        )}
         <link rel="preload" href="/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
@@ -155,6 +163,16 @@ export default async function RootLayout({
             font-display: optional;
             src: url(/fonts/jura-latin.woff2) format('woff2-variations');
             unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+          }
+          /* latin-ext (07.09.2026): турецкие ş/ğ/İ и др. — без этого face они падали
+             в Arial-фолбэк, и в tr/uz-заголовках прыгала жирность внутри слов. */
+          @font-face {
+            font-family: 'Jura Variable';
+            font-style: normal;
+            font-weight: 300 700;
+            font-display: optional;
+            src: url(/fonts/jura-latin-ext.woff2) format('woff2-variations');
+            unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
           }
           /* Inter Variable (текст) и Caveat Variable (акценты) — self-hosted, display:optional
              (были @fontsource со swap → полевой CLS 0.33; optional исключает сдвиг в принципе). */
@@ -239,7 +257,7 @@ export default async function RootLayout({
             size-adjust: 106.66%;
           }
           :root {
-            --font-jura: 'Jura Variable', 'Jura Fallback', sans-serif;
+            --font-jura: 'Jura Variable', 'Jura Fallback', 'PingFang SC', 'Microsoft YaHei', sans-serif;
             --font-inter: 'Inter Variable', 'Inter Fallback', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
             --font-caveat: 'Caveat Variable', cursive;
             --brand-700: #1d4ed8;
