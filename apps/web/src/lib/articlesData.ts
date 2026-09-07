@@ -2438,7 +2438,11 @@ export const ARTICLES: Article[] = [
           }, {
             h: "Цены и сроки службы",
             p: ["Порошковые РИФ: ОП-4 — 122 900 сум, ОП-5 — 141 900, ОП-8 — 184 900, ОП-10 — 246 900, ОП-25 — 803 900, передвижные ОП-50 — 1 298 900 и ОП-100 — 2 474 900 сум. Углекислотный ОУ-5 — 543 900 сум. Для организаций — счёт с НДС, доставка по Узбекистану.", "Огнетушитель — не «купил и забыл»: порошковый перезаряжается раз в 5 лет, углекислотный ежегодно проходит контроль массы, а после любого срабатывания заряд восстанавливается немедленно. Заведите график — или отдайте его нам: посчитаем комплект под ваш объект, поставим со склада в Ташкенте и будем напоминать о перезарядке сами."]
-          }],
+          },  { h: "Где размещать и как хранить", p: [
+            "Огнетушитель вешают на видном месте у выхода, на высоте не выше 1,5 м до ручки, чтобы к нему был свободный подход. В машине и на складе корпус не должен лежать на солнце: летом в Ташкенте температура в закрытом объёме доходит до +60 °C, порошок слёживается.",
+            "Раз в квартал проверяют давление по манометру, пломбу и целостность шланга. Порошок в ОП рекомендуется взрыхлять, а корпус держать сухим: пыль и влага ускоряют коррозию.",
+          ] },
+        ],
         faq: [{
             q: "Какой огнетушитель нужен в автомобиль?",
             a: "Порошковый ОП-2 или ОП-4 (для грузовых и автобусов — от ОП-5). Главное — крепление в салоне, а не в глубине багажника: при возгорании счёт идёт на секунды."
@@ -2465,7 +2469,11 @@ export const ARTICLES: Article[] = [
           }, {
             h: "Narxlar va xizmat muddatlari",
             p: ["Kukunli RIF: OP-4 — 122 900 so'm, OP-5 — 141 900, OP-8 — 184 900, OP-10 — 246 900, OP-25 — 803 900, g'ildirakli OP-50 — 1 298 900 va OP-100 — 2 474 900 so'm. Karbonat angidridli OU-5 — 543 900 so'm. Tashkilotlarga QQS li hisob, O'zbekiston bo'ylab yetkazish.", "O't o'chirgich «oldim-unutdim» emas: kukunlisi 5 yilda bir qayta zaryadlanadi, karbonat angidridlisi har yili massa nazoratidan o'tadi, har ishlashdan keyin zaryad darhol tiklanadi. Grafik yuriting — yoki bizga topshiring: to'plamni obyektingizga hisoblaymiz, Toshkentdagi ombordan yetkazamiz va qayta zaryadlashni o'zimiz eslatamiz."]
-          }],
+          },  { h: "Qayerga joylash va qanday saqlash", p: [
+            "O't o'chirgich chiqish yo'li yonidagi ko'rinadigan joyga, tutqichigacha 1,5 m dan baland bo'lmagan balandlikka osiladi, unga erkin yaqinlashish mumkin bo'lsin. Avtomobil va omborda korpus quyoshda turmasligi kerak: yozda Toshkentda yopiq hajmdagi harorat +60 °C ga yetadi, kukun qotib qoladi.",
+            "Chorakda bir marta manometr bo'yicha bosim, plomba va shlang butunligi tekshiriladi. Kukunli o't o'chirgichdagi kukunni yumshatish tavsiya etiladi, korpusni esa quruq saqlash kerak: chang va namlik korroziyani tezlashtiradi.",
+          ] },
+        ],
         faq: [{
             q: "Avtomobilga qanday o't o'chirgich kerak?",
             a: "Kukunli OP-2 yoki OP-4 (yuk mashinasi va avtobuslarga OP-5 dan). Asosiysi — bagaj tubida emas, salonda mahkamlash: yong'inda soniyalar hal qiladi."
@@ -2492,7 +2500,11 @@ export const ARTICLES: Article[] = [
           }, {
             h: "Prices and service life",
             p: ["RIF powder units: OP-4 — 122,900 UZS, OP-5 — 141,900, OP-8 — 184,900, OP-10 — 246,900, OP-25 — 803,900, wheeled OP-50 — 1,298,900 and OP-100 — 2,474,900 UZS. The CO2 OU-5 — 543,900 UZS. VAT invoicing for organisations, delivery across Uzbekistan.", "An extinguisher is not buy-and-forget: powder units are recharged every 5 years, CO2 units pass an annual weight check, and any discharged unit is refilled at once. Keep a schedule — or hand it to us: we calculate the set for your site, deliver from Tashkent stock and send the recharge reminders ourselves."]
-          }],
+          },  { h: "Where to mount and how to store", p: [
+            "An extinguisher is mounted in plain sight near the exit, with the handle no higher than 1.5 m and clear access to it. In a vehicle or a warehouse the cylinder should not sit in the sun: inside a closed space a Tashkent summer reaches +60 °C and the powder cakes.",
+            "Pressure on the gauge, the seal and the hose are checked once a quarter. Powder units benefit from having the charge loosened, and the body kept dry: dust and moisture speed up corrosion.",
+          ] },
+        ],
         faq: [{
             q: "Which extinguisher belongs in a car?",
             a: "A 2–4 kg powder unit (5 kg and up for trucks and buses). What matters is mounting it in the cabin, not deep in the boot: a fire gives you seconds."
@@ -2519,7 +2531,11 @@ export const ARTICLES: Article[] = [
           }, {
             h: "Fiyatlar ve ömür",
             p: ["RIF tozlu tüpler: OP-4 — 122.900 UZS, OP-5 — 141.900, OP-8 — 184.900, OP-10 — 246.900, OP-25 — 803.900, tekerlekli OP-50 — 1.298.900 ve OP-100 — 2.474.900 UZS. CO2 OU-5 — 543.900 UZS. Kurumlara KDV'li fatura, tüm Özbekistan'a teslimat.", "Söndürücü al-unut değildir: tozlu 5 yılda bir dolum ister, CO2 her yıl tartı kontrolünden geçer, boşalan tüp hemen doldurulur. Takvim tutun — ya da bize bırakın: seti tesisinize göre hesaplar, Taşkent stoğundan teslim eder, dolum hatırlatmalarını biz göndeririz."]
-          }],
+          },  { h: "Nereye asılır, nasıl saklanır", p: [
+            "Yangın söndürücü çıkışa yakın, görünür bir yere, kolu 1,5 m'yi geçmeyecek yükseklikte ve önü açık olacak şekilde asılır. Araçta ve depoda tüp güneş altında kalmamalı: Taşkent yazında kapalı hacimde sıcaklık +60 °C'yi bulur, toz kekleşir.",
+            "Üç ayda bir manometredeki basınç, mühür ve hortum bütünlüğü kontrol edilir. Kuru tozlu tüplerde tozun kabartılması önerilir, gövde ise kuru tutulur: toz ve nem korozyonu hızlandırır.",
+          ] },
+        ],
         faq: [{
             q: "Araca hangi söndürücü konur?",
             a: "2–4 kg tozlu tüp (kamyon ve otobüslere 5 kg ve üzeri). Önemli olan bagajın dibine değil kabine sabitlemek: yangında saniyeler sayılır."
@@ -2546,7 +2562,11 @@ export const ARTICLES: Article[] = [
           }, {
             h: "价格与使用年限",
             p: ["RIF 干粉系列：OP-4——122,900 苏姆，OP-5——141,900，OP-8——184,900，OP-10——246,900，OP-25——803,900，推车式 OP-50——1,298,900，OP-100——2,474,900 苏姆。二氧化碳 OU-5——543,900 苏姆。单位客户开增值税发票，全乌兹别克斯坦配送。", "灭火器不是买完就忘：干粉每 5 年充装一次，二氧化碳每年称重检查，任何喷放后立即补充。自己记台账——或交给我们：按场所计算配置、塔什干现货发货、到期充装我们主动提醒。"]
-          }],
+          },  { h: "放在哪里，怎么存放", p: [
+            "灭火器应挂在靠近出口的显眼位置，把手离地不超过1.5 m，前方留出取用空间。车内和仓库中不要让瓶体长时间暴晒：塔什干夏季密闭空间内温度可达+60 °C，干粉会结块。",
+            "每季度检查一次压力表读数、铅封和喷管是否完好。干粉灭火器建议定期翻松药剂，瓶体保持干燥：粉尘和潮气会加快锈蚀。",
+          ] },
+        ],
         faq: [{
             q: "车里放哪种灭火器？",
             a: "2–4 公斤干粉型（货车和大巴用 5 公斤以上）。关键是固定在驾驶舱内而非后备箱深处：起火时以秒计算。"
@@ -2576,6 +2596,10 @@ export const ARTICLES: Article[] = [
             "Стабилизатор — это трансформатор, и он греется: ему нужны вентиляция и запас пространства, а не глухая ниша за шкафом. Ставьте его до защищаемой техники, но после автомата защиты, и не на пол в сыром подвале — влага убивает контакты быстрее перегрузок.",
             "Для сервисных работ полезен байпас: техника остаётся с питанием, пока стабилизатор обслуживается или меняется. Мы подбираем модель по реальной нагрузке с запасом, монтируем с байпасом и заземлением и даём гарантию — включая честный совет, когда стабилизатор не нужен вовсе.",
           ] },
+          { h: "Частые ошибки при выборе", p: [
+            "Чаще всего стабилизатор берут по мощности нагрузки, забыв о диапазоне входного напряжения: в сетях с просадками до 150 В аппарат с рабочим окном от 180 В просто уходит в защиту. Вторая ошибка — игнорировать перекос фаз: для трёхфазного ввода нужны три однофазных модуля или полноценный трёхфазный прибор.",
+            "Ещё одна ошибка — экономия на кабеле и автомате перед стабилизатором. Тонкая линия греется, защита срабатывает позже прибора, и ресурс реле сокращается за один сезон.",
+          ] },
         ],
         faq: [{ q: "Какой стабилизатор нужен для газового котла?", a: "Инверторный или качественный релейный на 500–1000 ВА с широким входным диапазоном. Котлу важна и правильная синусоида, и защита от скачков — дешёвые ступенчатые модели с этим справляются плохо." }, { q: "Стабилизатор или ИБП — что выбрать?", a: "Скачки и просадки — стабилизатор; отключения света — ИБП. Полная защита серверной — связка обоих: стабилизатор на входе, ИБП за ним." }, { q: "Можно ли ставить стабилизатор на всю квартиру?", a: "Да, модель на 5–10 кВА ставится на ввод после счётчика и защищает всё сразу. Монтаж занимает пару часов, для трёхфазного ввода нужна трёхфазная схема." }],
       },
@@ -2585,6 +2609,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "Qachon stabilizator, qachon UPS kerak", p: ["Stabilizator kuchlanishni tekislaydi: tarmoqda surunkali 180 yoki 250 volt bo'lsa, texnika tekis 220 oladi. Lekin svet o'chganda u ojiz — bunga batareyali UPS kerak. Server va videokuzatuv uchun klassik bog'lam: kirishdagi stabilizator sakrashlarni oladi, undan keyingi UPS o'chishlarda tizimni ushlaydi.", "Stabilizator kechagidan kerakligining belgilari: choynak yoqilganda lampalar miltillaydi, quvvat bloklari g'uvillaydi, qishda kuchlanish 200 V dan pastga tushadi, muzlatgich yoki qozon xatoga chiqadi. Gaz qozonlari va nasoslar uchun stabilizator amalda majburiy."] }, { h: "Stabilizator turlari: releli, servoprivodli, invertorli", p: ["Releli — eng hamyonbop: chulg'amlarni pog'onali almashtiradi, aniqlik ±8 %, maishiy texnikaga yetadi. Servoprivodli kuchlanishni silliq va aniq boshqaradi (±3 %), lekin yeyiladigan mexanikasi bor. Invertorli (ikki marta o'zgartirish) — etalon: bir zumda javob, ±2 % aniqlik, jimlik; buning uchun eng yuqori narx to'lanadi.", "Uy va ofisga ko'pincha releli va invertorlilar olinadi; tibbiy va laboratoriya uskunalariga — faqat invertorli. Kirish kuchlanishi diapazoniga ham qarang: arzon modellar 140–160 V dan ishlaydi, chuqurroq pasayishlarda shunchaki o'chadi."] }, { h: "Quvvatni to'g'ri hisoblaymiz", p: ["Barcha iste'molchilar quvvatini qo'shing va 30 % zaxira qo'shing. Ishga tushirish toklariga e'tibor: muzlatgich kompressori va nasos startda nominaldan 3–5 barobar ko'p oladi. 5 kVA stabilizator — kvartira standarti; qozon va nasosli uy — 8–10 kVA; uch fazali kirish uch fazali modelni yoki uchta bir fazalini talab qiladi.", "Quvvatda tejash qimmatga tushadi: ortiqcha yuklangan stabilizator uzoq yashamaydi. Biz texnika ro'yxati bo'yicha yuklamani bepul hisoblaymiz va Toshkentdagi ombordan modelni tanlaymiz — o'rnatish va kafolat bilan."] },  { h: "O'rnatish: joy xizmat muddatini hal qiladi", p: [
             "Stabilizator — transformator, u qiziydi: unga ventilyatsiya va joy zaxirasi kerak, shkaf ortidagi berk tokcha emas. Uni himoyalanadigan texnikagacha, lekin himoya avtomatidan keyin qo'ying, nam yerto'lada polga emas — namlik kontaktlarni yuklamalardan tez o'ldiradi.",
             "Servis ishlariga baypas foydali: stabilizator xizmatlanayotganda yoki almashtirilayotganda texnika quvvat bilan qoladi. Modelni real yukka zaxira bilan tanlaymiz, baypas va yerga ulash bilan montaj qilamiz va kafolat beramiz — stabilizator umuman kerak emasligini halol maslahat bilan birga.",
+          ] },
+          { h: "Tanlashda uchraydigan xatolar", p: [
+            "Ko'pincha stabilizator faqat yuk quvvatiga qarab olinadi, kirish kuchlanishi diapazoni esa e'tibordan chetda qoladi: tarmoq 150 V gacha tushadigan joyda ishchi oynasi 180 V dan boshlanadigan qurilma shunchaki himoyaga o'tadi. Ikkinchi xato — fazalar nomutanosibligini hisobga olmaslik: uch fazali kirish uchun uchta bir fazali modul yoki to'liq uch fazali qurilma kerak.",
+            "Yana bir xato — stabilizator oldidagi kabel va avtomatga tejash. Ingichka liniya qiziydi, himoya qurilmadan kechroq ishlaydi va rele resursi bir mavsumda qisqaradi.",
           ] },
         ],
         faq: [{ q: "Gaz qozoni uchun qanday stabilizator kerak?", a: "Keng kirish diapazonli 500–1000 VA invertorli yoki sifatli releli. Qozonga to'g'ri sinusoida ham, sakrashlardan himoya ham muhim." }, { q: "Stabilizator yoki UPS — qaysi birini tanlash?", a: "Sakrash va pasayishlar — stabilizator; svet o'chishi — UPS. Server xonasining to'liq himoyasi — ikkalasining bog'lami." }, { q: "Butun kvartiraga stabilizator qo'yish mumkinmi?", a: "Ha, 5–10 kVA model hisoblagichdan keyin kirishga o'rnatiladi va hammasini birdan himoya qiladi. Montaj bir necha soat oladi." }],
@@ -2596,6 +2624,10 @@ export const ARTICLES: Article[] = [
             "A stabilizer is a transformer, and it heats up: it needs ventilation and clearance, not a blind niche behind a cabinet. Install it upstream of the protected equipment but after the circuit breaker, and not on the floor of a damp basement — moisture kills contacts faster than overloads.",
             "A bypass helps during service: the equipment keeps its power while the stabilizer is maintained or replaced. We size the model to the real load with margin, install it with a bypass and earthing, and back it with a warranty — including the honest advice when a stabilizer is not needed at all.",
           ] },
+          { h: "Common mistakes when choosing", p: [
+            "A stabilizer is usually picked by load power alone, while the input voltage range is overlooked: where the mains sags to 150 V, a unit whose working window starts at 180 V simply drops into protection. The second mistake is ignoring phase imbalance — a three-phase input needs three single-phase modules or a true three-phase device.",
+            "Another mistake is saving on the cable and the breaker ahead of the stabilizer. A thin line heats up, protection trips later than the device itself does, and relay life shortens within one season.",
+          ] },
         ],
         faq: [{ q: "Which stabilizer suits a gas boiler?", a: "An inverter or a good relay unit of 500–1000 VA with a wide input range. A boiler needs both a clean sine wave and surge protection." }, { q: "Stabilizer or UPS?", a: "Surges and sags — stabilizer; blackouts — UPS. Full protection for a server room is both: stabilizer at the input, UPS behind it." }, { q: "Can one stabilizer cover the whole apartment?", a: "Yes — a 5–10 kVA unit at the incomer after the meter protects everything at once. Installation takes a couple of hours." }],
       },
@@ -2606,6 +2638,10 @@ export const ARTICLES: Article[] = [
             "Stabilizatör bir trafodur ve ısınır: ona havalandırma ve boşluk gerekir, dolap arkasındaki kör niş değil. Onu korunan cihazlardan önce ama sigortadan sonra kurun; rutubetli bodrumda yere değil — nem kontakları aşırı yükten hızlı öldürür.",
             "Servis işlerinde baypas işe yarar: stabilizatör bakılırken veya değişirken cihazlar beslemede kalır. Modeli gerçek yüke göre payla seçer, baypas ve topraklamayla kurar, garanti veririz — stabilizatörün hiç gerekmediği durumda dürüst tavsiye dahil.",
           ] },
+          { h: "Seçimde sık yapılan hatalar", p: [
+            "Regülatör çoğu zaman yalnızca yük gücüne göre alınır, giriş gerilimi aralığı gözden kaçar: şebekenin 150 V'a kadar düştüğü yerde çalışma aralığı 180 V'tan başlayan cihaz doğrudan korumaya geçer. İkinci hata faz dengesizliğini yok saymaktır; üç fazlı giriş için üç adet tek fazlı modül ya da gerçek bir üç fazlı cihaz gerekir.",
+            "Bir başka hata, regülatörün önündeki kablo ve sigortadan kısmaktır. İnce hat ısınır, koruma cihazdan geç devreye girer ve röle ömrü tek sezonda kısalır.",
+          ] },
         ],
         faq: [{ q: "Kombi için hangi regülatör?", a: "Geniş giriş aralıklı 500–1000 VA inverter veya kaliteli röleli tip. Kombiye temiz sinüs ve darbe koruması birlikte gerekir." }, { q: "Regülatör mü UPS mi?", a: "Dalgalanma ve çökme — regülatör; kesinti — UPS. Sunucu odasının tam koruması ikisinin birlikte kullanımıdır." }, { q: "Tek regülatör tüm daireyi korur mu?", a: "Evet — sayaç sonrası girişe konan 5–10 kVA'lık model her şeyi birden korur. Montaj birkaç saat sürer." }],
       },
@@ -2615,6 +2651,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "什么时候需要稳压器，什么时候需要UPS", p: ["稳压器整平电压：即使电网长期只有180或250伏，设备仍能得到平稳的220伏。但停电时它无能为力——那是带电池UPS的工作。机房和监控的经典组合：入口稳压器吸收冲击，其后的UPS撑过断电。", "早该装稳压器的信号：烧水壶一开灯就闪、电源嗡嗡响、冬天电压跌破200伏、锅炉或冰箱报错。燃气锅炉和水泵实际上必须配稳压器——它们的电子板最先被电压冲击损坏。"] }, { h: "稳压器类型：继电器式、伺服式、逆变式", p: ["继电器式最经济：分级切换绕组，精度±8%，家用足够。伺服式平滑跟踪电压（±3%），但有会磨损的机械结构，怕严寒。逆变式（双变换）是标杆：瞬时响应、±2%精度、安静——价格也最高。", "家庭和办公室多选继电器式或逆变式；医疗和实验设备只用逆变式。还要看输入范围：便宜型号从140–160伏起工作，更深的跌落直接停机。"] }, { h: "正确计算功率", p: ["把所有负载功率相加，再加30%余量。注意启动电流：冰箱压缩机和水泵启动时是额定值的3–5倍。5kVA是公寓标准；带锅炉和水泵的住宅要8–10kVA；三相进线要三相机型或三台单相。", "在容量上省钱会吃亏：过载的稳压器寿命短，且在最不巧的时刻跳停。我们按设备清单免费核算负载，从塔什干现货选型——含安装和保修。"] },  { h: "安装：位置决定寿命", p: [
             "稳压器本质是变压器，它会发热：需要通风和空间余量，而不是柜子后面的闷龛。装在被保护设备的上游、断路器的下游；别放在潮湿地下室的地面上——潮气比过载更快弄坏触点。",
             "旁路开关在检修时很有用：维护或更换稳压器时设备照常供电。我们按真实负载留余量选型、带旁路和接地安装并提供质保——包括当稳压器根本没必要时的诚实劝告。",
+          ] },
+          { h: "选购中的常见误区", p: [
+            "选稳压器时常常只看负载功率，却忽略输入电压范围：在电网跌到150 V的地方，工作窗口从180 V起步的机器只会直接进入保护状态。第二个误区是不考虑三相不平衡——三相进线需要三台单相模块，或者一台真正的三相设备。",
+            "还有一个误区是在稳压器前端的电缆和空气开关上省钱。线径偏细会发热，保护动作比设备本身还慢，继电器寿命一个季度就明显缩短。",
           ] },
         ],
         faq: [{ q: "燃气锅炉配哪种稳压器？", a: "宽输入范围的500–1000VA逆变式或优质继电器式。锅炉既要正弦波干净，也要防冲击。" }, { q: "选稳压器还是UPS？", a: "电压波动选稳压器；停电选UPS。机房完整保护是两者组合：稳压器在前，UPS在后。" }, { q: "一台稳压器能保护整套公寓吗？", a: "能——5–10kVA机型装在电表后进线上，一次保护全部。安装只需几小时。" }],
@@ -2634,6 +2674,10 @@ export const ARTICLES: Article[] = [
             "Правильный монтаж — половина срока службы: фундамент или закладная под тумбу, фотоэлементы и петлевой детектор, чтобы стрела никогда не опустилась на автомобиль, заземление и аккуратная подводка питания. Для двора с постоянным потоком берите интенсивный привод: бытовой на тысячах циклов в день живёт один сезон.",
             "Зимой шлагбаум сдаёт экзамен: плавный старт не даёт рвать примёрзшую стрелу, а сезонная смазка сохраняет механику. Мы настраиваем зимние режимы при установке и обслуживаем шлагбаумы по договору — смазка, регулировки, батарейки в пультах и фотоэлементах.",
           ] },
+          { h: "Безопасность проезда и защита от удара", p: [
+            "Стрела опускается на движущийся автомобиль, если нет фотоэлементов или индуктивной петли. Фотоэлементы ставят по обе стороны проезда на высоте 50–60 см, петлю закладывают в асфальт до укладки верхнего слоя — переделка потом обходится дороже самого шлагбаума.",
+            "Проверьте также поведение при отключении питания: у большинства моделей стрела разблокируется ключом вручную, но механизм должен быть доступен снаружи. Светоотражающие накладки и сигнальная лампа обязательны там, где проезд используется ночью.",
+          ] },
         ],
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
@@ -2643,6 +2687,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "Shlagbaumlar qanday bo'ladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli o'tish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga mo'ljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, to'rtburchak va LED yoritishli bo'ladi; uzun o'tish joylariga buklanadigan o'rnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yo'qoladi va begonalarga o'tadi. Telefon qo'ng'irog'i qulayroq: yashovchi raqami oq ro'yxatda, qo'ng'iroq bepul — shlagbaum ochildi. Qulaylik cho'qqisi — avtoraqamni tanish kamerasi (ANPR): o'z mashinalari to'xtamasdan o'tadi, mehmonlar qo'riqchi ruxsati bilan, har bir o'tish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda o'zini oqlaydi: kirishda navbatlar yo'qoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik o'tishlari bilan bitta tizimda ko'rinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qo'shing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini o'rnatamiz: bir-ikki kunda kalit topshirish, kafolat va servis. O'tish joyi fotosi va kengligini yuboring — o'sha kuni aniq smeta qaytaramiz."] },  { h: "Montaj, qish va xizmat", p: [
             "To'g'ri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki zakladnoy, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va petlevoy detektor, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
             "Qishda shlagbaum imtihon topshiradi: silliq start muzlagan strelani yulishga yo'l qo'ymaydi, mavsumiy moy mexanikani saqlaydi. O'rnatishda qishki rejimlarni sozlaymiz va shlagbaumlarni shartnoma bo'yicha xizmatlaymiz — moylash, sozlashlar, pult va fotoelement batareykalari.",
+          ] },
+          { h: "Xavfsiz o'tish va urilishdan himoya", p: [
+            "Fotoelementlar yoki induktiv halqa bo'lmasa, strela harakatdagi avtomobil ustiga tushadi. Fotoelementlar o'tish yo'lining ikki tomoniga 50–60 sm balandlikda o'rnatiladi, halqa esa asfaltning ustki qatlami yotqizilishidan oldin joylanadi — keyin qayta qilish shlagbaumning o'zidan qimmatga tushadi.",
+            "Elektr o'chganda qanday ishlashini ham tekshiring: ko'p modellarda strela kalit bilan qo'lda bo'shatiladi, ammo mexanizm tashqaridan qulay joyda bo'lishi kerak. Yorug'lik qaytaruvchi tasmalar va signal chirog'i kechasi foydalaniladigan o'tish joylarida majburiy.",
           ] },
         ],
         faq: [{ q: "Shlagbaum o'rnatish bilan qancha turadi?", a: "Strela uzunligi, privod intensivligi va boshqaruv usuliga bog'liq: hovli uchun bazaviy to'plam arzonroq, ANPR li intensiv qimmatroq. Muhandis chiqishi va smeta bepul." }, { q: "Svet o'chganda nima qilish kerak?", a: "Privodlarda qo'lda ochish bor — strela kalit bilan ko'tariladi. Yaxshisi kichik UPS qo'ying: shlagbaum o'chishlarni yashovchilar ishtirokisiz o'tkazadi." }, { q: "Hovlida shlagbaumni kelishish kerakmi?", a: "Ko'p kvartirali uy hovlisi uchun mulkdorlar qarori va tuman xizmatlari bilan kelishuv kerak — maxsus texnika o'tishi saqlanishi shart. Kelishuv uchun o'rnatish sxemasini tayyorlashda yordam beramiz." }],
@@ -2654,6 +2702,10 @@ export const ARTICLES: Article[] = [
             "Proper installation is half the lifespan: a foundation or embed under the cabinet, photocells and a loop detector so the boom never drops onto a car, earthing and neat power routing. For a yard with constant flow take an intensive drive: a domestic one at thousands of cycles a day lasts one season.",
             "In winter the barrier sits its exam: a soft start keeps it from tearing a frozen boom, and seasonal grease preserves the mechanics. We configure winter modes at installation and service barriers under contract — lubrication, adjustments, batteries in remotes and photocells.",
           ] },
+          { h: "Safety devices and impact protection", p: [
+            "Without photocells or an induction loop the boom will drop onto a moving car. Photocells go on both sides of the lane at a height of 50–60 cm, and the loop is set into the asphalt before the top layer is laid — redoing it later costs more than the barrier itself.",
+            "Check the behaviour during a power cut as well: most models release the boom manually with a key, but the mechanism has to be reachable from outside. Reflective strips and a warning lamp are mandatory wherever the lane is used at night.",
+          ] },
         ],
         faq: [{ q: "How much is a barrier with installation?", a: "It depends on boom length, drive duty and the control method: a base yard kit costs less, an intensive ANPR setup more. The engineer visit and the estimate are free." }, { q: "What happens during a power cut?", a: "Drives have a manual release — the boom lifts with a key. Better, add a small UPS so the barrier rides through outages on its own." }, { q: "Does a residential yard barrier need approvals?", a: "A block-of-flats yard needs an owners' decision and district approvals — emergency vehicle access must remain. We help prepare the installation scheme for approval." }],
       },
@@ -2664,6 +2716,10 @@ export const ARTICLES: Article[] = [
             "Doğru montaj ömrün yarısıdır: gövde altına temel veya ankraj, kolun asla araca inmemesi için fotoseller ve loop dedektörü, topraklama ve düzenli güç hattı. Sürekli akışlı avluya yoğun tip motor alın: günde binlerce çevrimde ev tipi bir sezon dayanır.",
             "Kışın bariyer sınava girer: yumuşak kalkış donmuş kolu koparmayı önler, mevsimlik gres mekaniği korur. Kurulumda kış modlarını ayarlar, bariyerlere sözleşmeyle bakarız — yağlama, ayarlar, kumanda ve fotosel pilleri.",
           ] },
+          { h: "Geçiş güvenliği ve çarpma koruması", p: [
+            "Fotosel veya indüktif loop yoksa kol hareket hâlindeki aracın üzerine iner. Fotoseller geçiş yolunun iki yanına 50–60 cm yükseklikte konur, loop ise asfaltın üst tabakası serilmeden önce yerleştirilir; sonradan yapılan düzeltme bariyerin kendisinden pahalıya gelir.",
+            "Elektrik kesintisindeki davranışı da kontrol edin: çoğu modelde kol anahtarla elle serbest bırakılır, ancak mekanizmaya dışarıdan erişilebilmelidir. Reflektif şeritler ve uyarı lambası, geçişin gece kullanıldığı yerlerde zorunludur.",
+          ] },
         ],
         faq: [{ q: "Kurulumla bariyer ne kadar?", a: "Kol uzunluğu, sürücü yoğunluğu ve kontrol yöntemine bağlıdır: avlu için taban set daha ucuz, ANPR'li yoğun set daha pahalıdır. Keşif ve teklif ücretsizdir." }, { q: "Elektrik kesilince ne olur?", a: "Sürücülerde manuel açma vardır — kol anahtarla kalkar. En iyisi küçük bir UPS eklemek: bariyer kesintileri kendi başına atlatır." }, { q: "Site avlusunda bariyer izin ister mi?", a: "Apartman avlusu için kat malikleri kararı ve ilçe onayları gerekir — acil araç geçişi korunmalıdır. Onay için kurulum şemasını hazırlamaya yardım ederiz." }],
       },
@@ -2673,6 +2729,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修与维保。发来现场照片和通道宽度——当天回复精确报价。"] },  { h: "安装、过冬与维保", p: [
             "正确的安装占寿命的一半：机箱下打基础或预埋，红外对射加地感线圈保证闸杆永不砸车，接地和规整的供电走线。车流不断的院区要选重载电机：家用型每天数千次循环只能撑一季。",
             "冬天是道闸的考场：缓启动避免硬拽冻住的闸杆，换季润滑保护机械。我们安装时调好冬季模式，并按合同维保——润滑、调校、更换遥控器和对射的电池。",
+          ] },
+          { h: "通行安全与防砸保护", p: [
+            "没有红外对射或地感线圈，闸杆会砸在正在通行的车上。对射探头装在车道两侧、离地50–60厘米处，地感线圈要在沥青面层摊铺之前埋设——事后返工的花费会超过道闸本身。",
+            "还要确认断电时的表现：多数机型可用钥匙手动释放闸杆，但操作机构必须能从外侧够到。夜间通行的出入口，反光贴条和警示灯不可省略。",
           ] },
         ],
         faq: [{ q: "道闸带安装多少钱？", a: "取决于栏杆长度、机芯强度和控制方式：小区基础套装较便宜，带车牌识别的高强度套装较贵。勘查与报价免费。" }, { q: "停电了怎么办？", a: "机芯有手动释放——用钥匙即可抬杆。更好的做法是配小UPS，道闸自己撑过停电。" }, { q: "小区装道闸要审批吗？", a: "多层住宅小区需业主决议和区级部门核准——必须保留消防救护通道。我们协助准备报批安装方案。" }],
@@ -2692,6 +2752,10 @@ export const ARTICLES: Article[] = [
             "Первая — PoE-бюджет «впритык»: камеры с зимним подогревом удваивают потребление, и в мороз дальние порты начинают отваливаться. Вторая — каскады бытовых свитчей: петли, узкие места и сеть, которую невозможно диагностировать. Третья — ноунейм в серьёзной системе: под нагрузкой из десятка потоков он зависает, и камеры «моргают» без видимой причины.",
             "Рецепт скучный, но рабочий: бюджет мощности с запасом 30 %, нормальное ядро вместо каскадов и бренд с управлением там, где есть камеры и кассы. Мы преднастраиваем коммутаторы при поставке — VLAN и мониторинг включены с первого дня.",
           ] },
+          { h: "Место установки и питание", p: [
+            "Коммутатор ставят в закрытый шкаф с вентиляцией, а не на полку у окна. Летом в серверной под +45 °C ресурс блока питания расходуется первым, поэтому в помещении нужен отвод тепла и защита от пыли.",
+            "Второй фактор — электропитание. Перебои и просадки напряжения перезагружают PoE-порты, и камеры уходят в циклическую загрузку. ИБП на 15–20 минут удерживает коммутатор и регистратор до возврата сети.",
+          ] },
         ],
         faq: [{ q: "Какой коммутатор нужен для 8 камер видеонаблюдения?", a: "8-портовый PoE с бюджетом от 90 Вт и двумя аплинками — под регистратор и сеть. Для камер с подогревом и PTZ считайте мощность отдельно." }, { q: "Чем свитч отличается от роутера?", a: "Роутер соединяет сеть с интернетом и раздаёт адреса; свитч множит порты внутри сети. В типовом офисе они работают в паре: роутер на входе, свитчи — на этажах." }, { q: "Что такое VLAN и зачем он мне?", a: "VLAN делит один физический свитч на изолированные сети: камеры не видят бухгалтерию, гостевой Wi-Fi не видит серверы. Настраивается один раз на управляемом коммутаторе." }],
       },
@@ -2701,6 +2765,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "Boshqariladigan yoki oddiy", p: ["Oddiy switch — «taqsimlagich»: ulading — ishlaydi. Uy yoki kabinetdagi bir juft qurilmaga shu yetadi. Boshqariladigani VLAN (kameralarni ofis tarmog'idan ajratish), trafik prioriteti, port monitoringi va halqalardan himoya qo'shadi — ofis tarmog'i va videokuzatuvda narx farqini birinchi hal qilingan hodisayoq oqlaydi.", "Qoida oddiy: qurilmalar o'ntadan ko'p bo'lsa yoki tarmoqda kamera va telefoniya bo'lsa — boshqariladiganini oling."] }, { h: "PoE: kameralarni vitaya para orqali quvvatlash", p: ["PoE kommutator kamera, ulanish nuqtalari va IP-telefonlarni ma'lumot kabeli orqali quvvatlaydi — kamera yonida rozetka kerak emas. Quvvat byudjetini hisoblang: oddiy kamera 6–8 Vt, IK li gumbaz 12 Vt gacha, PTZ 25 Vt gacha, Wi-Fi 6 nuqtasi 20 Vt gacha oladi. 8 portli switch byudjeti odatda 60–120 Vt.", "Standartga ham qarang: 802.3af portga 15 Vt gacha, 802.3at (PoE+) 30 Vt gacha, bt — og'ir iste'molchilarga 60–90 Vt. Quvvatda 20–30 % zaxira majburiy — qishda kamera isitish yuk qo'shadi."] }, { h: "L2, L3 va aplinklar", p: ["L2 kommutator bitta tarmoq ichida ishlaydi — kirish darajasi: qavat, kabinet, kamerali stoyka. L3 quyi tarmoqlar orasida marshrutlaydi va korxona tarmog'i yadrosiga aylanadi. Kichik ofisda L3 kerak emas — routerga gigabit aplinkli L2 yetadi.", "Aplink — tor joy: switchga 24 gigabit port ulangan bo'lsa, yadro yoki serverga 10G SFP+ aplink oqilona. Hikvision, MikroTik, TP-Link, Ruijie va H3C kommutatorlarini vazifaga tanlaymiz, VLAN'ni oldindan sozlaymiz, loyihalarga H3C hamkorlik narxlarini beramiz."] },  { h: "Keyin chiqadigan uch xato", p: [
             "Birinchisi — «zo'rg'a» PoE-byudjet: qishki isitgichli kameralar iste'molni ikki barobar oshiradi, sovuqda uzoq portlar uzila boshlaydi. Ikkinchisi — maishiy svitchlar kaskadi: halqalar, tor joylar va diagnostika qilib bo'lmaydigan tarmoq. Uchinchisi — jiddiy tizimda noneym: o'nlab oqim yukida u osilib qoladi, kameralar sababsiz «miltillaydi».",
             "Retsept zerikarli, lekin ishlaydi: 30 % zaxirali quvvat byudjeti, kaskadlar o'rniga normal yadro va kamera hamda kassalar bor joyda boshqaruvli brend. Kommutatorlarni yetkazishda oldindan sozlaymiz — VLAN va monitoring birinchi kundan yoqilgan.",
+          ] },
+          { h: "O'rnatish joyi va quvvat", p: [
+            "Kommutator deraza yonidagi javonga emas, ventilyatsiyali yopiq shkafga o'rnatiladi. Yozda server xonasi +45 °C gacha qizisa, birinchi bo'lib quvvat bloki resursi tugaydi, shuning uchun issiqlikni chiqarish va changdan himoya kerak.",
+            "Ikkinchi omil — elektr ta'minoti. Uzilishlar va kuchlanish pasayishi PoE portlarni qayta yuklaydi, kameralar esa aylanma yuklanishga tushadi. 15–20 daqiqalik UPS kommutator va registratorni tarmoq qaytguncha ushlab turadi.",
           ] },
         ],
         faq: [{ q: "8 ta kamera uchun qanday kommutator kerak?", a: "90 Vt dan byudjetli va ikkita aplinkli 8 portli PoE — registrator va tarmoq uchun. Isitiladigan va PTZ kameralarga quvvatni alohida hisoblang." }, { q: "Switch routerdan nimasi bilan farq qiladi?", a: "Router tarmoqni internetga ulaydi va manzillar beradi; switch tarmoq ichida portlarni ko'paytiradi. Odatiy ofisda ular juft ishlaydi." }, { q: "VLAN nima va u menga nimaga kerak?", a: "VLAN bitta jismoniy switchni izolyatsiyalangan tarmoqlarga bo'ladi: kameralar buxgalteriyani ko'rmaydi, mehmon Wi-Fi serverlarni ko'rmaydi." }],
@@ -2712,6 +2780,10 @@ export const ARTICLES: Article[] = [
             "First — a PoE budget \"just enough\": cameras with winter heating double their draw, and in frost the far ports start dropping. Second — cascades of household switches: loops, bottlenecks and a network impossible to diagnose. Third — a no-name in a serious system: under a dozen streams it hangs, and cameras \"blink\" for no visible reason.",
             "The recipe is boring but works: a power budget with 30 % margin, a proper core instead of cascades, and a managed brand wherever cameras and tills live. We preconfigure switches at delivery — VLANs and monitoring enabled from day one.",
           ] },
+          { h: "Placement and power supply", p: [
+            "A switch belongs in a closed, ventilated cabinet rather than on a shelf by a window. When a server room reaches +45 °C in summer, the power supply degrades first, so heat removal and dust protection matter.",
+            "The second factor is electricity. Outages and voltage dips reboot PoE ports, and cameras fall into a reboot loop. A UPS covering 15–20 minutes keeps the switch and the recorder alive until the grid returns.",
+          ] },
         ],
         faq: [{ q: "Which switch fits 8 CCTV cameras?", a: "An 8-port PoE unit with a 90 W+ budget and two uplinks — for the NVR and the LAN. Heated and PTZ cameras need their power counted separately." }, { q: "How is a switch different from a router?", a: "The router connects the network to the internet and hands out addresses; the switch multiplies ports inside the network. A typical office runs both." }, { q: "What is a VLAN for?", a: "A VLAN splits one physical switch into isolated networks: cameras cannot see accounting, guest Wi-Fi cannot see servers. Configured once on a managed switch." }],
       },
@@ -2722,6 +2794,10 @@ export const ARTICLES: Article[] = [
             "Birincisi «ucu ucuna» PoE bütçesi: kış ısıtmalı kameralar tüketimi ikiye katlar, ayazda uzak portlar düşmeye başlar. İkincisi ev tipi switch kaskadları: döngüler, dar boğazlar ve teşhis edilemeyen ağ. Üçüncüsü ciddi sistemde markasız cihaz: onlarca akış yükünde donar, kameralar görünür sebepsiz «göz kırpar».",
             "Reçete sıkıcı ama işe yarar: %30 paylı güç bütçesi, kaskad yerine düzgün çekirdek ve kameralarla kasaların olduğu yerde yönetilebilir marka. Switch'leri teslimatta ön-ayarlarız — VLAN ve izleme ilk günden açık.",
           ] },
+          { h: "Montaj yeri ve besleme", p: [
+            "Switch, pencere kenarındaki bir rafa değil, havalandırmalı kapalı bir kabinete konur. Yazın sistem odası +45 °C'ye çıktığında ilk yıpranan güç kaynağı olur; bu yüzden ısı atımı ve toz koruması gerekir.",
+            "İkinci etken elektriktir. Kesintiler ve gerilim düşmeleri PoE portlarını yeniden başlatır, kameralar döngüsel açılışa girer. 15–20 dakikalık bir UPS, şebeke gelene kadar switch ve kayıt cihazını ayakta tutar.",
+          ] },
         ],
         faq: [{ q: "8 kamera için hangi switch?", a: "90 W+ bütçeli, iki uplinkli 8 portlu PoE — NVR ve ağ için. Isıtmalı ve PTZ kameraların gücü ayrı sayılır." }, { q: "Switch ile router farkı?", a: "Router ağı internete bağlar ve adres dağıtır; switch ağ içinde portları çoğaltır. Tipik ofiste ikisi birlikte çalışır." }, { q: "VLAN ne işe yarar?", a: "VLAN tek fiziksel switchi yalıtılmış ağlara böler: kameralar muhasebeyi, misafir Wi-Fi sunucuları görmez." }],
       },
@@ -2731,6 +2807,10 @@ export const ARTICLES: Article[] = [
         sections: [{ h: "可管理还是非管理", p: ["非管理交换机就是「分线器」：插上就能用——家里或几台设备够了。可管理型增加VLAN（把摄像机与办公网隔离）、QoS、端口监控和环路保护；在办公网络里，第一次排查故障就能赚回差价。", "经验法则：设备超过十台，或网络里有摄像机和电话——选可管理型。"] }, { h: "PoE：用网线为摄像机供电", p: ["PoE交换机通过数据线为摄像机、AP和IP话机供电——摄像机旁不需要插座。算好功率预算：普通摄像机6–8W，红外半球最高12W，球机最高25W，Wi-Fi 6 AP最高20W。典型8口机型总预算60–120W——带八台球机是不够的。", "还要看标准：802.3af每口最高15W，802.3at（PoE+）30W，bt可达60–90W。留20–30%余量——冬季摄像机加热会增加负载。"] }, { h: "L2、L3与上联", p: ["L2交换机在单个网络内工作——接入层：楼层、房间、摄像机机柜。L3在子网间路由，充当企业核心：部门相互隔离，跨网流量可控。小办公室不需要L3——千兆上联到路由器的L2就够。", "上联是瓶颈：24个千兆口都在用时，到核心或服务器应配10G SFP+上联。我们按需求选配海康威视、MikroTik、TP-Link、锐捷和新华三交换机，预配VLAN，项目享新华三合作伙伴价。"] },  { h: "三个日后才显形的错误", p: [
             "其一，PoE预算「刚刚好」：带冬季加热的摄像机功耗翻倍，严寒里远端端口开始掉线。其二，家用交换机层层级联：环路、瓶颈、一张无法诊断的网。其三，正经系统里用杂牌：十几路码流的负载下它就死机，摄像机无缘无故「眨眼」。",
             "药方乏味但管用：功率预算留30%余量、用像样的核心替代级联、有摄像机和收银的地方用可管理的品牌。我们发货前预配置——VLAN和监控第一天就开着。",
+          ] },
+          { h: "安装位置与供电", p: [
+            "交换机应装在通风的封闭机柜内，而不是窗边的搁板上。夏季机房温度可达 +45 °C，最先老化的是电源模块，因此散热和防尘必须做到位。",
+            "第二个因素是供电。断电和电压跌落会让 PoE 端口重启，摄像机随之陷入反复启动。一台可支撑 15–20 分钟的 UPS 能让交换机和录像机撑到市电恢复。",
           ] },
         ],
         faq: [{ q: "8台监控摄像机配哪种交换机？", a: "8口PoE、功率预算90W以上、带两个上联口——接录像机和网络。加热型和球机功率单独计算。" }, { q: "交换机和路由器有何区别？", a: "路由器连接互联网并分配地址；交换机在网内扩展端口。典型办公室两者配合使用。" }, { q: "VLAN有什么用？", a: "VLAN把一台物理交换机分成隔离网络：摄像机看不到财务，访客Wi-Fi看不到服务器。可管理交换机上配置一次即可。" }],
@@ -2747,31 +2827,51 @@ export const ARTICLES: Article[] = [
       ru: {
         title: "iVMS-4200: как скачать и настроить программу Hikvision для просмотра камер",
         excerpt: "iVMS-4200 — бесплатная программа Hikvision для просмотра камер и архива с компьютера. Где скачать официальную версию, как добавить регистратор и камеры, и что делать с типовыми ошибками подключения.",
-        sections: [{ h: "Что такое iVMS-4200 и зачем она нужна", p: ["iVMS-4200 — официальная бесплатная программа Hikvision для Windows и macOS: живой просмотр камер, воспроизведение архива, скачивание записей, управление PTZ и уведомления о событиях. Она работает с регистраторами NVR/DVR и IP-камерами Hikvision и HiLook, поддерживает десятки устройств одновременно — стандартный инструмент поста охраны и администратора.", "В отличие от мобильного Hik-Connect, iVMS-4200 рассчитана на постоянную работу на компьютере: многоэкранные раскладки, экспорт видео для разбора инцидентов, карты объектов и учёт событий. Для дома достаточно приложения на телефоне; для офиса и склада с постом наблюдения нужна именно iVMS-4200."] }, { h: "Где скачать официальную версию", p: ["Скачивайте iVMS-4200 только с официального сайта Hikvision — раздел Support → Download → Software (hikvision.com). Там всегда лежит актуальная версия для Windows и macOS без рекламы и переупаковки. Сторонние «сборки» с файлообменников нередко содержат лишнее — рисковать постом охраны не стоит.", "Для стран Центральной Азии Hikvision держит отдельный портал загрузок CATC — версии те же. После установки язык интерфейса переключается на русский в настройках (System Configuration → General → Language)."] }, { h: "Как добавить регистратор и камеры", p: ["Откройте Device Management → Add. Если компьютер в одной сети с регистратором, нажмите Online Device — программа сама найдёт устройства, останется ввести логин и пароль. Для добавления по адресу выбирайте IP/Domain и вводите адрес устройства, порт 8000, логин и пароль администратора.", "Если объект удалённый и белого IP нет — добавляйте через Hik-Connect Domain: включите Hik-Connect на регистраторе (Network → Advanced → Platform Access), войдите в аккаунт в iVMS-4200 и устройства подтянутся сами. После добавления откройте Main View и перетащите камеры в окна раскладки — живой просмотр готов; вкладка Remote Playback открывает архив."] }, { h: "Типовые проблемы и их решения", p: ["«Устройство не найдено» в одной сети — проверьте, что компьютер и регистратор в одной подсети, и отключите на время поиска брандмауэр. Ошибка пароля после нескольких попыток блокирует учётку на несколько минут — подождите и вводите заново, раскладку клавиатуры проверьте. Чёрные окна вместо видео при большом числе камер лечатся включением аппаратного декодирования (Image → Hardware Decoding) или просмотром дополнительного потока.", "Если после обновления Windows программа перестала видеть устройства — переустановите iVMS-4200 свежей версией с официального сайта: старые сборки конфликтуют с новыми компонентами системы. Настройки и список устройств при обновлении сохраняются."] }],
+        sections: [{ h: "Что такое iVMS-4200 и зачем она нужна", p: ["iVMS-4200 — официальная бесплатная программа Hikvision для Windows и macOS: живой просмотр камер, воспроизведение архива, скачивание записей, управление PTZ и уведомления о событиях. Она работает с регистраторами NVR/DVR и IP-камерами Hikvision и HiLook, поддерживает десятки устройств одновременно — стандартный инструмент поста охраны и администратора.", "В отличие от мобильного Hik-Connect, iVMS-4200 рассчитана на постоянную работу на компьютере: многоэкранные раскладки, экспорт видео для разбора инцидентов, карты объектов и учёт событий. Для дома достаточно приложения на телефоне; для офиса и склада с постом наблюдения нужна именно iVMS-4200."] }, { h: "Где скачать официальную версию", p: ["Скачивайте iVMS-4200 только с официального сайта Hikvision — раздел Support → Download → Software (hikvision.com). Там всегда лежит актуальная версия для Windows и macOS без рекламы и переупаковки. Сторонние «сборки» с файлообменников нередко содержат лишнее — рисковать постом охраны не стоит.", "Для стран Центральной Азии Hikvision держит отдельный портал загрузок CATC — версии те же. После установки язык интерфейса переключается на русский в настройках (System Configuration → General → Language)."] }, { h: "Как добавить регистратор и камеры", p: ["Откройте Device Management → Add. Если компьютер в одной сети с регистратором, нажмите Online Device — программа сама найдёт устройства, останется ввести логин и пароль. Для добавления по адресу выбирайте IP/Domain и вводите адрес устройства, порт 8000, логин и пароль администратора.", "Если объект удалённый и белого IP нет — добавляйте через Hik-Connect Domain: включите Hik-Connect на регистраторе (Network → Advanced → Platform Access), войдите в аккаунт в iVMS-4200 и устройства подтянутся сами. После добавления откройте Main View и перетащите камеры в окна раскладки — живой просмотр готов; вкладка Remote Playback открывает архив."] }, { h: "Типовые проблемы и их решения", p: ["«Устройство не найдено» в одной сети — проверьте, что компьютер и регистратор в одной подсети, и отключите на время поиска брандмауэр. Ошибка пароля после нескольких попыток блокирует учётку на несколько минут — подождите и вводите заново, раскладку клавиатуры проверьте. Чёрные окна вместо видео при большом числе камер лечатся включением аппаратного декодирования (Image → Hardware Decoding) или просмотром дополнительного потока.", "Если после обновления Windows программа перестала видеть устройства — переустановите iVMS-4200 свежей версией с официального сайта: старые сборки конфликтуют с новыми компонентами системы. Настройки и список устройств при обновлении сохраняются."] },  { h: "Безопасность удалённого доступа", p: [
+            "Клиент на компьютере часто подключают через проброс портов на регистраторе — это самый быстрый путь и самый уязвимый. Устройства с открытым наружу веб-интерфейсом и заводским паролем сканируются автоматически в первые же сутки. Безопаснее оставить P2P-подключение по серийному номеру либо поднять VPN до объекта.",
+            "Перед вводом в работу смените пароль администратора, заведите отдельные учётные записи для операторов и обновите прошивку регистратора и камер. Обновление прошивки раз в год закрывает известные уязвимости и обычно решает часть проблем совместимости с новыми версиями iVMS-4200.",
+          ] },
+        ],
         faq: [{ q: "iVMS-4200 бесплатная?", a: "Да, полностью: Hikvision распространяет её свободно для своих устройств. Платных «про-версий» не существует — если где-то просят денег за скачивание, это не официальный источник." }, { q: "Работает ли iVMS-4200 с камерами HiLook и другими брендами?", a: "С HiLook — да, это суббренд Hikvision. Камеры других производителей подключаются по ONVIF, но без части функций; для смешанных систем удобнее универсальные VMS." }, { q: "Можно ли смотреть камеры без белого IP?", a: "Да — через облако Hik-Connect: включите Platform Access на регистраторе и войдите в аккаунт в iVMS-4200. Проброс портов и статический адрес не нужны." }],
       },
       uz: {
         title: "iVMS-4200: Hikvision kameralarini kompyuterdan ko'rish dasturini yuklab olish va sozlash",
         excerpt: "iVMS-4200 — Hikvision'ning kameralar va arxivni kompyuterdan ko'rish uchun bepul dasturi. Rasmiy versiyani qayerdan yuklab olish, registrator va kameralarni qanday qo'shish va odatiy xatolar bilan nima qilish.",
-        sections: [{ h: "iVMS-4200 nima va nima uchun kerak", p: ["iVMS-4200 — Hikvision'ning Windows va macOS uchun rasmiy bepul dasturi: kameralarni jonli ko'rish, arxivni qayta ko'rish, yozuvlarni yuklab olish, PTZ boshqaruvi va hodisa xabarlari. NVR/DVR registratorlar hamda Hikvision va HiLook IP-kameralari bilan ishlaydi, bir vaqtda o'nlab qurilmani qo'llab-quvvatlaydi.", "Mobil Hik-Connect'dan farqli o'laroq, iVMS-4200 kompyuterda doimiy ishlashga mo'ljallangan: ko'p ekranli joylashuvlar, hodisalarni tahlil qilish uchun video eksporti, obyekt xaritalari. Uy uchun telefon ilovasi yetadi; kuzatuv postli ofis va ombor uchun aynan iVMS-4200 kerak."] }, { h: "Rasmiy versiyani qayerdan yuklab olish", p: ["iVMS-4200'ni faqat Hikvision rasmiy saytidan yuklab oling — Support → Download → Software bo'limi (hikvision.com). U yerda har doim Windows va macOS uchun dolzarb versiya bor. Fayl almashish saytlaridagi «yig'malar»da ortiqcha narsalar bo'lishi mumkin — qo'riqlash posti bilan tavakkal qilmang.", "Markaziy Osiyo davlatlari uchun Hikvision alohida CATC yuklab olish portalini yuritadi — versiyalar bir xil. O'rnatilgandan keyin interfeys tili sozlamalarda o'zgartiriladi (System Configuration → General → Language)."] }, { h: "Registrator va kameralarni qanday qo'shish", p: ["Device Management → Add oching. Kompyuter registrator bilan bitta tarmoqda bo'lsa, Online Device bosing — dastur qurilmalarni o'zi topadi, login va parolni kiritish qoladi. Manzil bo'yicha qo'shish uchun IP/Domain tanlab, qurilma manzili, 8000 port, administrator login-parolini kiriting.", "Obyekt masofada bo'lsa va oq IP bo'lmasa — Hik-Connect Domain orqali qo'shing: registratorda Hik-Connect'ni yoqing (Network → Advanced → Platform Access), iVMS-4200'da akkauntga kiring — qurilmalar o'zi keladi. Qo'shilgach Main View'da kameralarni oynalarga torting; Remote Playback arxivni ochadi."] }, { h: "Odatiy muammolar va yechimlar", p: ["Bitta tarmoqda «qurilma topilmadi» — kompyuter va registrator bitta quyi tarmoqda ekanini tekshiring, qidiruv payti brandmauerni o'chiring. Bir necha urinishdan keyin parol xatosi akkauntni bir necha daqiqaga bloklaydi — kutib qayta kiriting. Ko'p kamerada qora oynalar Hardware Decoding'ni yoqish bilan davolanadi.", "Windows yangilanishidan keyin dastur qurilmalarni ko'rmay qolsa — rasmiy saytdan yangi versiya bilan qayta o'rnating: sozlamalar va qurilmalar ro'yxati saqlanadi."] }],
+        sections: [{ h: "iVMS-4200 nima va nima uchun kerak", p: ["iVMS-4200 — Hikvision'ning Windows va macOS uchun rasmiy bepul dasturi: kameralarni jonli ko'rish, arxivni qayta ko'rish, yozuvlarni yuklab olish, PTZ boshqaruvi va hodisa xabarlari. NVR/DVR registratorlar hamda Hikvision va HiLook IP-kameralari bilan ishlaydi, bir vaqtda o'nlab qurilmani qo'llab-quvvatlaydi.", "Mobil Hik-Connect'dan farqli o'laroq, iVMS-4200 kompyuterda doimiy ishlashga mo'ljallangan: ko'p ekranli joylashuvlar, hodisalarni tahlil qilish uchun video eksporti, obyekt xaritalari. Uy uchun telefon ilovasi yetadi; kuzatuv postli ofis va ombor uchun aynan iVMS-4200 kerak."] }, { h: "Rasmiy versiyani qayerdan yuklab olish", p: ["iVMS-4200'ni faqat Hikvision rasmiy saytidan yuklab oling — Support → Download → Software bo'limi (hikvision.com). U yerda har doim Windows va macOS uchun dolzarb versiya bor. Fayl almashish saytlaridagi «yig'malar»da ortiqcha narsalar bo'lishi mumkin — qo'riqlash posti bilan tavakkal qilmang.", "Markaziy Osiyo davlatlari uchun Hikvision alohida CATC yuklab olish portalini yuritadi — versiyalar bir xil. O'rnatilgandan keyin interfeys tili sozlamalarda o'zgartiriladi (System Configuration → General → Language)."] }, { h: "Registrator va kameralarni qanday qo'shish", p: ["Device Management → Add oching. Kompyuter registrator bilan bitta tarmoqda bo'lsa, Online Device bosing — dastur qurilmalarni o'zi topadi, login va parolni kiritish qoladi. Manzil bo'yicha qo'shish uchun IP/Domain tanlab, qurilma manzili, 8000 port, administrator login-parolini kiriting.", "Obyekt masofada bo'lsa va oq IP bo'lmasa — Hik-Connect Domain orqali qo'shing: registratorda Hik-Connect'ni yoqing (Network → Advanced → Platform Access), iVMS-4200'da akkauntga kiring — qurilmalar o'zi keladi. Qo'shilgach Main View'da kameralarni oynalarga torting; Remote Playback arxivni ochadi."] }, { h: "Odatiy muammolar va yechimlar", p: ["Bitta tarmoqda «qurilma topilmadi» — kompyuter va registrator bitta quyi tarmoqda ekanini tekshiring, qidiruv payti brandmauerni o'chiring. Bir necha urinishdan keyin parol xatosi akkauntni bir necha daqiqaga bloklaydi — kutib qayta kiriting. Ko'p kamerada qora oynalar Hardware Decoding'ni yoqish bilan davolanadi.", "Windows yangilanishidan keyin dastur qurilmalarni ko'rmay qolsa — rasmiy saytdan yangi versiya bilan qayta o'rnating: sozlamalar va qurilmalar ro'yxati saqlanadi."] },  { h: "Masofaviy kirish xavfsizligi", p: [
+            "Kompyuterdagi dasturni ko'pincha registratorda portlarni ochish orqali ulashadi — bu eng tez, ammo eng himoyasiz yo'l. Veb-interfeysi internetga ochiq va zavod paroli o'zgartirilmagan qurilmalar birinchi sutkadayoq avtomatik skanerlanadi. Seriya raqami bo'yicha P2P ulanishni qoldirish yoki obyektgacha VPN ko'tarish xavfsizroq.",
+            "Ishga tushirishdan oldin administrator parolini almashtiring, operatorlar uchun alohida hisoblar yarating va registrator hamda kameralar proshivkasini yangilang. Yiliga bir marta proshivkani yangilash ma'lum zaifliklarni yopadi va odatda iVMS-4200 ning yangi versiyalari bilan moslik muammolarining bir qismini hal qiladi.",
+          ] },
+        ],
         faq: [{ q: "iVMS-4200 bepulmi?", a: "Ha, to'liq bepul: Hikvision uni o'z qurilmalari uchun erkin tarqatadi. Pullik «pro-versiyalar» yo'q — yuklab olish uchun pul so'ralsa, bu rasmiy manba emas." }, { q: "iVMS-4200 HiLook va boshqa brendlar bilan ishlaydimi?", a: "HiLook bilan — ha, bu Hikvision sub-brendi. Boshqa ishlab chiqaruvchilar kameralari ONVIF orqali ulanadi, lekin funksiyalarning bir qismisiz." }, { q: "Oq IP bo'lmasa kameralarni ko'rish mumkinmi?", a: "Ha — Hik-Connect buluti orqali: registratorda Platform Access'ni yoqing va iVMS-4200'da akkauntga kiring. Port ochish va statik manzil kerak emas." }],
       },
       en: {
         title: "iVMS-4200: how to download and set up Hikvision's PC viewing software",
         excerpt: "iVMS-4200 is Hikvision's free desktop software for live view and playback. Where to download the official build, how to add an NVR and cameras, and how to fix the usual connection errors.",
-        sections: [{ h: "What iVMS-4200 is for", p: ["iVMS-4200 is Hikvision's official free application for Windows and macOS: live view, archive playback, clip export, PTZ control and event notifications. It talks to Hikvision and HiLook NVRs, DVRs and IP cameras and handles dozens of devices at once — the standard tool for a guard post or an administrator.", "Unlike the mobile Hik-Connect app, iVMS-4200 is built for permanent desktop duty: multi-screen layouts, video export for incident review, site maps and event logs. A phone app is enough at home; an office or warehouse with a monitoring post needs iVMS-4200."] }, { h: "Where to download the official build", p: ["Download iVMS-4200 only from the official Hikvision site — Support → Download → Software (hikvision.com). The current Windows and macOS builds are always there, with no repacks. Third-party bundles from file hosts often carry extras you do not want on a security workstation.", "For Central Asia Hikvision runs a separate CATC download portal with the same builds. After installation the interface language is switched in System Configuration → General → Language."] }, { h: "Adding an NVR and cameras", p: ["Open Device Management → Add. On the same LAN, click Online Device — the app discovers devices itself; enter the admin login and password. To add by address, choose IP/Domain and enter the device address, port 8000 and admin credentials.", "For a remote site without a public IP, add via Hik-Connect Domain: enable Hik-Connect on the recorder (Network → Advanced → Platform Access), sign in to the account in iVMS-4200 and the devices appear. Then drag cameras into the Main View layout; Remote Playback opens the archive."] }, { h: "Common problems and fixes", p: ["Device not found on the same LAN — check both are in one subnet and pause the firewall during discovery. Repeated wrong passwords lock the account for a few minutes — wait and retype. Black tiles with many cameras are cured by Hardware Decoding (Image settings) or by viewing the sub-stream.", "If the app stops seeing devices after a Windows update, reinstall the latest build from the official site — settings and the device list survive the upgrade."] }],
+        sections: [{ h: "What iVMS-4200 is for", p: ["iVMS-4200 is Hikvision's official free application for Windows and macOS: live view, archive playback, clip export, PTZ control and event notifications. It talks to Hikvision and HiLook NVRs, DVRs and IP cameras and handles dozens of devices at once — the standard tool for a guard post or an administrator.", "Unlike the mobile Hik-Connect app, iVMS-4200 is built for permanent desktop duty: multi-screen layouts, video export for incident review, site maps and event logs. A phone app is enough at home; an office or warehouse with a monitoring post needs iVMS-4200."] }, { h: "Where to download the official build", p: ["Download iVMS-4200 only from the official Hikvision site — Support → Download → Software (hikvision.com). The current Windows and macOS builds are always there, with no repacks. Third-party bundles from file hosts often carry extras you do not want on a security workstation.", "For Central Asia Hikvision runs a separate CATC download portal with the same builds. After installation the interface language is switched in System Configuration → General → Language."] }, { h: "Adding an NVR and cameras", p: ["Open Device Management → Add. On the same LAN, click Online Device — the app discovers devices itself; enter the admin login and password. To add by address, choose IP/Domain and enter the device address, port 8000 and admin credentials.", "For a remote site without a public IP, add via Hik-Connect Domain: enable Hik-Connect on the recorder (Network → Advanced → Platform Access), sign in to the account in iVMS-4200 and the devices appear. Then drag cameras into the Main View layout; Remote Playback opens the archive."] }, { h: "Common problems and fixes", p: ["Device not found on the same LAN — check both are in one subnet and pause the firewall during discovery. Repeated wrong passwords lock the account for a few minutes — wait and retype. Black tiles with many cameras are cured by Hardware Decoding (Image settings) or by viewing the sub-stream.", "If the app stops seeing devices after a Windows update, reinstall the latest build from the official site — settings and the device list survive the upgrade."] },  { h: "Securing remote access", p: [
+            "The PC client is often connected by forwarding ports on the recorder — the quickest route and the most exposed one. Devices with a web interface open to the internet and a factory password are scanned automatically within the first day. It is safer to keep the P2P connection by serial number, or to bring up a VPN to the site.",
+            "Before going live, change the administrator password, create separate accounts for operators, and update the firmware on the NVR and the cameras. A yearly firmware update closes known vulnerabilities and usually clears part of the compatibility trouble with newer iVMS-4200 builds.",
+          ] },
+        ],
         faq: [{ q: "Is iVMS-4200 free?", a: "Yes, completely: Hikvision distributes it freely for its devices. There is no paid pro edition — any site charging for the download is not official." }, { q: "Does it work with HiLook and other brands?", a: "HiLook — yes, it is a Hikvision sub-brand. Other makers' cameras connect over ONVIF with reduced features; mixed fleets are happier on a universal VMS." }, { q: "Can I view cameras without a public IP?", a: "Yes — through the Hik-Connect cloud: enable Platform Access on the recorder and sign in inside iVMS-4200. No port forwarding or static IP needed." }],
       },
       tr: {
         title: "iVMS-4200: Hikvision'ın PC izleme yazılımını indirme ve kurma",
         excerpt: "iVMS-4200, canlı izleme ve kayıt oynatma için Hikvision'ın ücretsiz masaüstü yazılımıdır. Resmi sürüm nereden indirilir, NVR ve kameralar nasıl eklenir, tipik bağlantı hataları nasıl çözülür.",
-        sections: [{ h: "iVMS-4200 nedir, ne işe yarar", p: ["iVMS-4200, Hikvision'ın Windows ve macOS için resmi ücretsiz uygulamasıdır: canlı izleme, arşiv oynatma, klip dışa aktarma, PTZ kontrolü ve olay bildirimleri. Hikvision ve HiLook NVR/DVR'ları ve IP kameralarıyla çalışır, onlarca cihazı aynı anda yönetir.", "Mobil Hik-Connect'ten farklı olarak iVMS-4200 sürekli masaüstü görevi için tasarlanmıştır: çok ekranlı düzenler, olay incelemesi için video dışa aktarma, saha haritaları. Evde telefon uygulaması yeter; izleme noktalı ofis ve depoya iVMS-4200 gerekir."] }, { h: "Resmi sürüm nereden indirilir", p: ["iVMS-4200'ü yalnızca resmi Hikvision sitesinden indirin — Support → Download → Software (hikvision.com). Güncel Windows ve macOS sürümleri her zaman oradadır. Dosya paylaşım sitelerindeki paketler güvenlik bilgisayarında istenmeyen ekler taşıyabilir.", "Orta Asya için Hikvision aynı sürümleri sunan ayrı bir CATC indirme portalı işletir. Kurulumdan sonra arayüz dili System Configuration → General → Language'ten değiştirilir."] }, { h: "NVR ve kamera ekleme", p: ["Device Management → Add açın. Aynı ağdaysanız Online Device'a basın — uygulama cihazları kendisi bulur; yönetici adı ve şifresini girin. Adresle eklemek için IP/Domain seçin: cihaz adresi, 8000 portu ve yönetici bilgileri.", "Genel IP'si olmayan uzak saha için Hik-Connect Domain kullanın: kayıt cihazında Platform Access'i açın, iVMS-4200'de hesaba girin — cihazlar kendiliğinden gelir. Sonra kameraları Main View düzenine sürükleyin; Remote Playback arşivi açar."] }, { h: "Tipik sorunlar ve çözümleri", p: ["Aynı ağda cihaz bulunamıyorsa — ikisinin de aynı alt ağda olduğunu doğrulayın, arama sırasında güvenlik duvarını durdurun. Üst üste yanlış şifre hesabı birkaç dakika kilitler — bekleyip yeniden girin. Çok kamerada siyah kareler Hardware Decoding ile veya alt akış izlenerek çözülür.", "Windows güncellemesinden sonra cihazlar görünmezse resmi siteden son sürümü yeniden kurun — ayarlar ve cihaz listesi korunur."] }],
+        sections: [{ h: "iVMS-4200 nedir, ne işe yarar", p: ["iVMS-4200, Hikvision'ın Windows ve macOS için resmi ücretsiz uygulamasıdır: canlı izleme, arşiv oynatma, klip dışa aktarma, PTZ kontrolü ve olay bildirimleri. Hikvision ve HiLook NVR/DVR'ları ve IP kameralarıyla çalışır, onlarca cihazı aynı anda yönetir.", "Mobil Hik-Connect'ten farklı olarak iVMS-4200 sürekli masaüstü görevi için tasarlanmıştır: çok ekranlı düzenler, olay incelemesi için video dışa aktarma, saha haritaları. Evde telefon uygulaması yeter; izleme noktalı ofis ve depoya iVMS-4200 gerekir."] }, { h: "Resmi sürüm nereden indirilir", p: ["iVMS-4200'ü yalnızca resmi Hikvision sitesinden indirin — Support → Download → Software (hikvision.com). Güncel Windows ve macOS sürümleri her zaman oradadır. Dosya paylaşım sitelerindeki paketler güvenlik bilgisayarında istenmeyen ekler taşıyabilir.", "Orta Asya için Hikvision aynı sürümleri sunan ayrı bir CATC indirme portalı işletir. Kurulumdan sonra arayüz dili System Configuration → General → Language'ten değiştirilir."] }, { h: "NVR ve kamera ekleme", p: ["Device Management → Add açın. Aynı ağdaysanız Online Device'a basın — uygulama cihazları kendisi bulur; yönetici adı ve şifresini girin. Adresle eklemek için IP/Domain seçin: cihaz adresi, 8000 portu ve yönetici bilgileri.", "Genel IP'si olmayan uzak saha için Hik-Connect Domain kullanın: kayıt cihazında Platform Access'i açın, iVMS-4200'de hesaba girin — cihazlar kendiliğinden gelir. Sonra kameraları Main View düzenine sürükleyin; Remote Playback arşivi açar."] }, { h: "Tipik sorunlar ve çözümleri", p: ["Aynı ağda cihaz bulunamıyorsa — ikisinin de aynı alt ağda olduğunu doğrulayın, arama sırasında güvenlik duvarını durdurun. Üst üste yanlış şifre hesabı birkaç dakika kilitler — bekleyip yeniden girin. Çok kamerada siyah kareler Hardware Decoding ile veya alt akış izlenerek çözülür.", "Windows güncellemesinden sonra cihazlar görünmezse resmi siteden son sürümü yeniden kurun — ayarlar ve cihaz listesi korunur."] },  { h: "Uzaktan erişimin güvenliği", p: [
+            "PC istemcisi çoğu zaman kayıt cihazında port yönlendirme ile bağlanır; en hızlı ama en savunmasız yol budur. Web arayüzü internete açık ve fabrika şifresi duran cihazlar daha ilk gün otomatik olarak taranır. Seri numarası üzerinden P2P bağlantısını bırakmak veya sahaya VPN kurmak daha güvenlidir.",
+            "Devreye almadan önce yönetici şifresini değiştirin, operatörler için ayrı hesaplar açın, NVR ve kameraların yazılımını güncelleyin. Yılda bir yapılan firmware güncellemesi bilinen açıkları kapatır ve yeni iVMS-4200 sürümleriyle yaşanan uyumluluk sorunlarının bir kısmını da çözer.",
+          ] },
+        ],
         faq: [{ q: "iVMS-4200 ücretsiz mi?", a: "Evet, tamamen: Hikvision kendi cihazları için serbestçe dağıtır. Ücretli pro sürüm yoktur — indirme için para isteyen kaynak resmi değildir." }, { q: "HiLook ve diğer markalarla çalışır mı?", a: "HiLook ile evet — Hikvision'ın alt markasıdır. Diğer üreticilerin kameraları ONVIF ile kısıtlı özelliklerle bağlanır." }, { q: "Genel IP olmadan izleme mümkün mü?", a: "Evet — Hik-Connect bulutu üzerinden: kayıt cihazında Platform Access'i açın, iVMS-4200'de hesaba girin. Port yönlendirme gerekmez." }],
       },
       zh: {
         title: "iVMS-4200：海康威视电脑客户端下载与设置指南",
         excerpt: "iVMS-4200是海康威视免费的电脑客户端，用于实时预览和录像回放。在哪里下载官方版本、如何添加录像机和摄像机、常见连接错误怎么解决。",
-        sections: [{ h: "iVMS-4200是什么", p: ["iVMS-4200是海康威视面向Windows和macOS的官方免费客户端：实时预览、录像回放、片段导出、PTZ控制和事件通知。它连接海康威视和HiLook的NVR/DVR及IP摄像机，可同时管理数十台设备——是值班室和管理员的标准工具。", "与手机端Hik-Connect不同，iVMS-4200为电脑常驻值守设计：多屏布局、事件取证导出、电子地图和事件日志。家用手机App够用；有监控值守的办公室和仓库需要iVMS-4200。"] }, { h: "在哪里下载官方版本", p: ["请只从海康威视官网下载iVMS-4200——Support → Download → Software（hikvision.com）。那里始终提供最新的Windows和macOS版本。网盘上的第三方打包版常夹带多余内容，安防工作站不值得冒险。", "海康威视为中亚地区设有单独的CATC下载门户，版本相同。安装后在System Configuration → General → Language切换界面语言。"] }, { h: "添加录像机和摄像机", p: ["打开Device Management → Add。同一局域网内点Online Device——程序自动发现设备，输入管理员账号密码即可。按地址添加则选IP/Domain：输入设备地址、端口8000和管理员凭据。", "远程站点没有公网IP时，通过Hik-Connect Domain添加：在录像机上开启Hik-Connect（Network → Advanced → Platform Access），在iVMS-4200登录账号，设备自动出现。之后把摄像机拖入Main View布局；Remote Playback打开录像回放。"] }, { h: "常见问题与解决", p: ["同网段找不到设备——确认电脑与录像机在同一子网，搜索时暂时关闭防火墙。多次密码错误会锁定账号几分钟——稍候重输。摄像机多时出现黑窗，开启硬件解码或改看子码流即可。", "Windows更新后看不到设备——从官网重装最新版本：设置和设备列表会保留。"] }],
+        sections: [{ h: "iVMS-4200是什么", p: ["iVMS-4200是海康威视面向Windows和macOS的官方免费客户端：实时预览、录像回放、片段导出、PTZ控制和事件通知。它连接海康威视和HiLook的NVR/DVR及IP摄像机，可同时管理数十台设备——是值班室和管理员的标准工具。", "与手机端Hik-Connect不同，iVMS-4200为电脑常驻值守设计：多屏布局、事件取证导出、电子地图和事件日志。家用手机App够用；有监控值守的办公室和仓库需要iVMS-4200。"] }, { h: "在哪里下载官方版本", p: ["请只从海康威视官网下载iVMS-4200——Support → Download → Software（hikvision.com）。那里始终提供最新的Windows和macOS版本。网盘上的第三方打包版常夹带多余内容，安防工作站不值得冒险。", "海康威视为中亚地区设有单独的CATC下载门户，版本相同。安装后在System Configuration → General → Language切换界面语言。"] }, { h: "添加录像机和摄像机", p: ["打开Device Management → Add。同一局域网内点Online Device——程序自动发现设备，输入管理员账号密码即可。按地址添加则选IP/Domain：输入设备地址、端口8000和管理员凭据。", "远程站点没有公网IP时，通过Hik-Connect Domain添加：在录像机上开启Hik-Connect（Network → Advanced → Platform Access），在iVMS-4200登录账号，设备自动出现。之后把摄像机拖入Main View布局；Remote Playback打开录像回放。"] }, { h: "常见问题与解决", p: ["同网段找不到设备——确认电脑与录像机在同一子网，搜索时暂时关闭防火墙。多次密码错误会锁定账号几分钟——稍候重输。摄像机多时出现黑窗，开启硬件解码或改看子码流即可。", "Windows更新后看不到设备——从官网重装最新版本：设置和设备列表会保留。"] },  { h: "远程访问的安全设置", p: [
+            "电脑客户端常常通过在录像机上做端口映射来连接，这是最快也是最不安全的方式。Web 界面直接暴露在公网、又保留出厂密码的设备，第一天就会被自动扫描到。更稳妥的做法是保留按序列号的 P2P 连接，或者为现场搭建 VPN。",
+            "投入使用前先修改管理员密码，为操作员建立独立账号，并升级录像机和摄像机的固件。每年升级一次固件可以堵上已知漏洞，通常还能解决部分与新版 iVMS-4200 的兼容问题。",
+          ] },
+        ],
         faq: [{ q: "iVMS-4200免费吗？", a: "完全免费：海康威视为自家设备免费提供。不存在付费专业版——任何收费下载都不是官方渠道。" }, { q: "支持HiLook和其他品牌吗？", a: "HiLook支持——它是海康威视子品牌。其他品牌摄像机可通过ONVIF接入，但功能受限。" }, { q: "没有公网IP能看摄像机吗？", a: "能——通过Hik-Connect云：在录像机开启Platform Access，在iVMS-4200登录账号即可，无需端口映射和固定IP。" }],
       },
     },
@@ -2802,6 +2902,10 @@ export const ARTICLES: Article[] = [
             "Электронный замок жив, пока есть питание, поэтому блок питания с резервным аккумулятором — не опция, а часть замка: без него первое отключение света оставит дверь нараспашку или наглухо закрытой, смотря по типу. Магнитный замок при пропадании питания открывается — его место на путях эвакуации; электромеханический остаётся закрытым — он для входных дверей.",
             "Вторая обязательная связка — с пожарной сигнализацией: по тревоге замки на путях эвакуации должны разблокироваться автоматически. Это требование норм закладывается в проект при монтаже — мы делаем это штатно в каждой установке.",
           ] },
+          { h: "Что влияет на срок службы замка", p: [
+            "Ресурс электронного замка определяется не столько маркой, сколько условиями работы. Пыль и летняя жара выше +40 °C ускоряют износ соленоида и электроники, а перекошенная дверь заставляет ригель работать с натягом — отказ приходит через полгода вместо пяти лет.",
+            "Раз в год стоит проверять доводчик, зазоры полотна, затяжку контактов и состояние аккумулятора резервного питания. Магнитные замки дополнительно требуют чистки ответной планки: слой пыли снижает усилие удержания на десятки килограммов.",
+          ] },
         ],
         faq: [
           { q: "Что будет с замком при отключении света?", a: "Электромагнитный откроется (fail-open), электромеханический останется заперт (fail-secure). Для дверей, которые должны быть заперты всегда, ставят электромеханику или добавляют ИБП; для путей эвакуации разблокировка при пропадании питания — требование норм." },
@@ -2828,6 +2932,10 @@ export const ARTICLES: Article[] = [
           { h: "Quvvat va yong'in xavfsizligi", p: [
             "Elektron qulf quvvat borida tirik, shuning uchun zaxira akkumulyatorli quvvat bloki opsiya emas, qulfning qismi: usiz birinchi svet o'chishi eshikni turiga qarab lang ochiq yoki butunlay yopiq qoldiradi. Magnit qulf quvvat yo'qolganda ochiladi — uning joyi evakuatsiya yo'llarida; elektromexanik yopiq qoladi — u kirish eshiklariga.",
             "Ikkinchi majburiy bog'lam — yong'in signalizatsiyasi bilan: trevoga bo'yicha evakuatsiya yo'llaridagi qulflar avtomatik ochilishi kerak. Bu me'yor talabi montajda loyihaga kiritiladi — buni har o'rnatishda shtatniy qilamiz.",
+          ] },
+          { h: "Qulf xizmat muddatiga nima ta'sir qiladi", p: [
+            "Elektron qulfning resursi markadan ko'ra ish sharoitlari bilan belgilanadi. Chang va +40 °C dan yuqori yozgi issiq solenoid hamda elektronika yeyilishini tezlashtiradi, qiyshaygan eshik esa tilni tarangda ishlashga majbur qiladi — nosozlik besh yil o'rniga olti oyda keladi.",
+            "Yiliga bir marta eshik yopgichi (dovodchik), eshik tavarasidagi tirqishlar, kontaktlarning tortilishi va zaxira quvvat akkumulyatori holatini tekshirish kerak. Magnit qulflar qo'shimcha ravishda javob plankasini tozalashni talab qiladi: chang qatlami ushlab turish kuchini o'nlab kilogrammga kamaytiradi.",
           ] },
         ],
         faq: [
@@ -2856,6 +2964,10 @@ export const ARTICLES: Article[] = [
             "An electronic lock lives while power lives, so a supply with a backup battery is not an option but part of the lock: without it the first outage leaves the door either wide open or shut tight, depending on the type. A magnetic lock opens when power fails — its place is on evacuation routes; an electromechanical one stays locked — it belongs on entrance doors.",
             "The second mandatory link is with the fire alarm: on alarm, locks on evacuation routes must release automatically. This code requirement goes into the design at installation — we do it as standard on every job.",
           ] },
+          { h: "What determines a lock's service life", p: [
+            "The service life of an electronic lock depends less on the brand than on operating conditions. Dust and summer heat above +40 °C accelerate wear of the solenoid and the electronics, while a misaligned door forces the bolt to work under strain — failure arrives in six months instead of five years.",
+            "Once a year it is worth checking the door closer, leaf clearances, terminal tightness and the state of the backup power battery. Magnetic locks additionally need the armature plate cleaned: a layer of dust cuts holding force by tens of kilograms.",
+          ] },
         ],
         faq: [
           { q: "What happens to the lock in a power cut?", a: "An electromagnetic lock opens (fail-open), an electromechanical one stays locked (fail-secure). Doors that must always stay locked get electromechanics or a UPS; escape routes must unlock on power loss by code." },
@@ -2883,6 +2995,10 @@ export const ARTICLES: Article[] = [
             "Elektronik kilit güç varken yaşar; bu yüzden yedek akülü besleme bir seçenek değil kilidin parçasıdır: onsuz ilk kesinti kapıyı tipine göre ya ardına dek açık ya da sımsıkı kapalı bırakır. Manyetik kilit güç gidince açılır — yeri kaçış yollarıdır; elektromekanik kilitli kalır — giriş kapılarına aittir.",
             "İkinci zorunlu bağ yangın alarmıyladır: alarmda kaçış yollarındaki kilitler otomatik açılmalıdır. Bu norm gereği montajda projeye konur — her kurulumda bunu standart yaparız.",
           ] },
+          { h: "Kilidin ömrünü ne belirler", p: [
+            "Elektronik kilidin ömrü markadan çok çalışma koşullarına bağlıdır. Toz ve +40 °C üzerindeki yaz sıcağı bobinin ve elektroniğin yıpranmasını hızlandırır; ayarı bozuk bir kapı ise dilin zorlanarak çalışmasına yol açar — arıza beş yıl yerine altı ayda gelir.",
+            "Yılda bir kez kapı kapatıcı, kanat boşlukları, klemens sıkılığı ve yedek besleme aküsünün durumu kontrol edilmelidir. Manyetik kilitlerde ayrıca karşı plakanın temizlenmesi gerekir: toz tabakası tutma kuvvetini onlarca kilogram düşürür.",
+          ] },
         ],
         faq: [
           { q: "Elektrik kesintisinde kilide ne olur?", a: "Elektromanyetik açılır (fail-open), elektromekanik kilitli kalır (fail-secure). Hep kilitli kalması gereken kapılara elektromekanik veya UPS konur; kaçış yolları yönetmelik gereği güç kesilince açılmalıdır." },
@@ -2909,6 +3025,10 @@ export const ARTICLES: Article[] = [
           { h: "供电与消防安全", p: [
             "电子锁有电才活着，所以带备用电池的电源不是选配而是锁的一部分：没有它，第一次停电就会让门要么大敞要么死锁，取决于锁型。磁力锁断电即开——它属于疏散通道；电机锁断电保持锁闭——它属于入户门。",
             "第二个强制联动是与火灾报警：报警时疏散通道上的锁必须自动释放。这条规范要求在安装时写进方案——我们每单都标准执行。",
+          ] },
+          { h: "决定门锁使用寿命的因素", p: [
+            "电子锁的寿命更多取决于使用环境而非品牌。灰尘和夏季超过 +40 °C 的高温会加快电磁线圈与电路老化，而门扇变形会让锁舌长期受力工作——本可用五年的锁半年就会失效。",
+            "每年应检查一次闭门器、门缝间隙、端子紧固情况以及后备电源电池状态。磁力锁还需清洁吸板：一层积灰就能让吸持力下降几十公斤。",
           ] },
         ],
         faq: [
@@ -2945,6 +3065,10 @@ export const ARTICLES: Article[] = [
             "Бюджет складывается из площади и категорий помещений, числа извещателей и шлейфов, типа прибора и состава оповещения. Маленький магазин закрывается пороговой системой за скромные деньги; офисному зданию нужна адресная — дороже на старте, но дешевле в эксплуатации за счёт точной диагностики. Честную смету даёт только выезд: мы считаем бесплатно по вашей планировке.",
             "После сдачи начинается регламент: проверки извещателей по графику, замена аккумуляторов, записи в журнале ТО — именно журнал инспектор открывает первым. Мы берём объекты на обслуживание с выездами по графику: система остаётся рабочей, а проверки проходят без замечаний и штрафов.",
           ] },
+          { h: "Ложные срабатывания и их причины", p: [
+            "Основной источник ложных тревог — пыль и насекомые в камере дымового извещателя, а также датчик, поставленный над плитой, у вентиляции или прямо под кондиционером. В производственных зонах с запылённостью вместо дымовых ставят тепловые или аспирационные извещатели.",
+            "Извещатели продувают и протирают не реже раза в год, шлейфы проверяют при плановом обслуживании. Журнал таких работ инспектор смотрит вместе с актами, поэтому его ведут с первого месяца эксплуатации.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит пожарная сигнализация для магазина?", a: "Для помещения до 300 м² пороговая система с датчиками, сиреной и табло «Выход» — самый доступный вариант, монтаж занимает 1–3 дня. Точная смета — после бесплатного обследования: состав диктуют нормы, а не прайс." },
@@ -2971,6 +3095,10 @@ export const ARTICLES: Article[] = [
           { h: "Narx va topshirilgandan keyingi hayot", p: [
             "Byudjet xonalar maydoni va kategoriyalari, xabar beruvchi va shleyflar soni, prib turi va ogohlantirish tarkibidan yig'iladi. Kichik do'kon chegaraviy tizim bilan kamtar pulga yopiladi; ofis binosiga manzilli kerak — startda qimmatroq, lekin aniq diagnostika hisobiga ekspluatatsiyada arzonroq. Halol smetani faqat chiqish beradi: rejangiz bo'yicha bepul hisoblaymiz.",
             "Topshirilgandan keyin reglament boshlanadi: jadval bo'yicha xabar beruvchilarni tekshirish, akkumulyatorlarni almashtirish, TX jurnaliga yozuvlar — inspektor birinchi bo'lib aynan jurnalni ochadi. Obyektlarni jadvalli chiqishlar bilan xizmatga olamiz: tizim ishchi qoladi, tekshiruvlar e'tiroz va jarimalarsiz o'tadi.",
+          ] },
+          { h: "Yolg'on ishga tushishlar va ularning sabablari", p: [
+            "Yolg'on signalning asosiy manbai — tutun detektori kamerasidagi chang va hasharotlar, shuningdek plita ustiga, ventilyatsiya yoniga yoki to'g'ridan-to'g'ri konditsioner tagiga qo'yilgan datchik. Changli ishlab chiqarish zonalarida tutun detektorlari o'rniga issiqlik yoki aspiratsion detektorlar o'rnatiladi.",
+            "Detektorlar yiliga kamida bir marta puflanadi va artiladi, shleyflar rejali xizmat ko'rsatishda tekshiriladi. Bunday ishlar jurnalini inspektor dalolatnomalar bilan birga ko'radi, shuning uchun u ekspluatatsiyaning birinchi oyidan yuritiladi.",
           ] },
         ],
         faq: [
@@ -2999,6 +3127,10 @@ export const ARTICLES: Article[] = [
             "The budget is built from the area and category of the rooms, the number of detectors and loops, the panel type and the evacuation setup. A small shop is covered by a conventional system for modest money; an office building needs an addressable one — pricier upfront but cheaper to run thanks to precise diagnostics. Only a site visit yields an honest estimate: we calculate free of charge from your floor plan.",
             "After handover the schedule begins: detector checks on a calendar, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. We take sites onto scheduled service: the system stays operational, and inspections pass without findings or fines.",
           ] },
+          { h: "False alarms and what causes them", p: [
+            "The main source of false alarms is dust and insects inside the smoke detector chamber, along with a detector placed above a stove, next to ventilation or directly under an air conditioner. In dusty production areas heat or aspirating detectors are used instead of smoke ones.",
+            "Detectors are blown out and wiped at least once a year, and loops are checked during scheduled maintenance. The inspector reviews the log of this work together with the handover documents, so it is kept from the first month of operation.",
+          ] },
         ],
         faq: [
           { q: "How much is a fire alarm for a shop?", a: "For premises up to 300 m² a conventional system with detectors, a sounder and EXIT signs is the most affordable option; installation takes 1–3 days. An exact estimate follows a free survey: codes, not a price list, dictate the composition." },
@@ -3026,6 +3158,10 @@ export const ARTICLES: Article[] = [
             "Bütçe; alanların büyüklüğü ve kategorisi, dedektör ve zon sayısı, panel tipi ve tahliye düzeninden oluşur. Küçük mağaza mütevazı paraya konvansiyonel sistemle kapanır; ofis binasına adresli gerekir — başta pahalı ama hassas teşhis sayesinde işletmede ucuzdur. Dürüst teklifi yalnız keşif verir: kat planınıza göre ücretsiz hesaplarız.",
             "Teslimden sonra takvim başlar: programlı dedektör kontrolleri, akü değişimi, bakım defterine kayıtlar — müfettişin ilk açtığı şey o defterdir. Tesisleri programlı servise alırız: sistem çalışır kalır, denetimler bulgusuz ve cezasız geçer.",
           ] },
+          { h: "Hatalı alarmlar ve nedenleri", p: [
+            "Hatalı alarmların başlıca kaynağı duman dedektörü haznesindeki toz ve böceklerdir; ocak üstüne, havalandırma yanına veya doğrudan klima altına konan dedektör de aynı sonucu verir. Tozlu üretim alanlarında duman yerine ısı ya da aspirasyonlu dedektör kullanılır.",
+            "Dedektörler yılda en az bir kez üflenip silinir, hatlar planlı bakımda kontrol edilir. Müfettiş bu çalışmaların kaydını teslim belgeleriyle birlikte inceler, bu yüzden kayıt işletmenin ilk ayından itibaren tutulur.",
+          ] },
         ],
         faq: [
           { q: "Dükkân için yangın alarmı ne kadar?", a: "300 m²'ye kadar yerlerde dedektörlü, sirenli ve ÇIKIŞ levhalı konvansiyonel sistem en ekonomik seçenektir; montaj 1–3 gün sürer. Kesin fiyat ücretsiz keşiften sonra verilir." },
@@ -3052,6 +3188,10 @@ export const ARTICLES: Article[] = [
           { h: "造价，以及交付之后的日子", p: [
             "预算由房间面积和类别、探测器和回路数量、主机类型及广播构成。小商店用总线制系统花不了多少钱；办公楼需要编址系统——前期贵些，但凭精确诊断在使用中更省。诚实的报价只能来自现场勘测：按您的平面图免费核算。",
             "交付之后规程开始运转：按计划检查探测器、更换电池、登记维保台账——检查员第一个翻的就是台账。我们按计划上门维保：系统始终在岗，检查零整改、零罚款。",
+          ] },
+          { h: "误报的常见原因", p: [
+            "误报最主要的来源是烟感探测器腔体内的灰尘和虫子，其次是把探测器装在灶台上方、通风口旁或空调正下方。粉尘较大的生产区域应改用感温探测器或吸气式探测器。",
+            "探测器每年至少吹扫、擦拭一次，回路在计划性维护时一并检查。检查人员会连同交付资料一起查看这份维护记录，因此从投用第一个月起就要开始登记。",
           ] },
         ],
         faq: [
@@ -3975,6 +4115,10 @@ export const ARTICLES: Article[] = [
             "Учёт ради учёта бессмысленен — данные должны доехать до расчёта зарплаты. Мы настраиваем выгрузку табеля в 1С и учётные системы: отработанные часы, переработки и ночные попадают в расчёт без ручного переноса и ошибок «человеческого фактора». Отчёты — по подразделениям, объектам и проектам.",
             "Внедрение не останавливает работу: терминалы на проходной — день монтажа, заведение сотрудников — ещё день (на больших штатах импортируем список из 1С или Excel). Обучаем кадровика и администратора, дальше система живёт своими силами. Выезд и расчёт бесплатны, оборудование со склада в Ташкенте, гарантия и поддержка по всему Узбекистану.",
           ] },
+          { h: "Где биометрия даёт сбой", p: [
+            "Отпечаток плохо читается у сотрудников с изношенной кожей рук — стройка, склад, кухня. На проходной под прямым солнцем сбивается и распознавание лица: контровой свет меняет экспозицию. Решение простое — терминал с несколькими способами идентификации (лицо, карта, PIN) плюс небольшой козырёк или разворот крепления от окна.",
+            "Второй источник сбоев — сеть. Если терминал теряет связь с сервером, отметки должны сохраняться в его памяти и подгружаться позже; иначе смена уходит в табель пустой.",
+          ] },
         ],
         faq: [
           { q: "Сколько времени занимает внедрение учёта рабочего времени?", a: "Типовой офис или цех: день на монтаж терминалов, день на заведение сотрудников и настройку графиков. С понедельника система уже считает." },
@@ -4002,6 +4146,10 @@ export const ARTICLES: Article[] = [
           { h: "Ma'lumotlarning ish haqiga yo'li", p: [
             "Hisob uchun hisob ma'nosiz — ma'lumotlar ish haqi hisobigacha yetib borishi kerak. Tabelni 1C va hisob tizimlariga yuklashni sozlaymiz: ishlangan soatlar, qayta ishlash va tungilar qo'l ko'chirishsiz va «inson omili» xatolarisiz hisobga tushadi. Hisobotlar — bo'lim, obyekt va loyihalar bo'yicha.",
             "Joriy etish ishni to'xtatmaydi: prohodnayadagi terminallar — bir kun montaj, xodimlarni kiritish — yana bir kun (katta shtatlarda ro'yxatni 1C yoki Excel dan import qilamiz). Kadrchi va administratorni o'rgatamiz, keyin tizim o'z kuchi bilan yashaydi. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va qo'llab-quvvatlash butun O'zbekiston bo'ylab.",
+          ] },
+          { h: "Biometriya qayerda nosozlik beradi", p: [
+            "Barmoq izi qo'l terisi eskirgan xodimlarda — qurilish, ombor, oshxona — yomon o'qiladi. To'g'ridan-to'g'ri quyosh tushadigan o'tish joyida yuzni aniqlash ham adashadi: qarshi yorug'lik ekspozitsiyani o'zgartiradi. Yechim oddiy — bir nechta identifikatsiya usuliga ega terminal (yuz, karta, PIN), ustiga kichik soyabon yoki qurilmani derazadan burib o'rnatish.",
+            "Nosozlikning ikkinchi manbai — tarmoq. Terminal server bilan aloqani yo'qotsa, belgilar uning xotirasida saqlanib, keyinroq yuklanishi kerak; aks holda smena tabelga bo'sh tushadi.",
           ] },
         ],
         faq: [
@@ -4031,6 +4179,10 @@ export const ARTICLES: Article[] = [
             "Tracking for its own sake is pointless — the data must reach payroll. We configure timesheet export to 1C and other ERP systems: worked hours, overtime and night shifts land in the calculation without manual transfer or human-factor errors. Reports come by department, site and project.",
             "Deployment does not stop the business: terminals at the entrance take a day to install, enrolling staff another day (for large headcounts we import the list from 1C or Excel). We train HR and the administrator, and the system then runs on its own. The survey and quote are free, equipment from Tashkent stock, warranty and support across Uzbekistan.",
           ] },
+          { h: "Where biometrics fails", p: [
+            "Fingerprints read poorly on worn skin — construction, warehouses, kitchens. At an entrance in direct sun, face recognition drifts as well: backlight shifts the exposure. The fix is straightforward — a terminal with several identification methods (face, card, PIN) plus a small canopy or a mounting angle turned away from the window.",
+            "The second source of failures is the network. If a terminal loses the server, punches must be stored in its own memory and uploaded later; otherwise the shift reaches the timesheet empty.",
+          ] },
         ],
         faq: [
           { q: "How long does deployment take?", a: "A typical office or workshop: a day for terminal installation, a day for enrolling staff and configuring schedules. By Monday the system is already counting." },
@@ -4059,6 +4211,10 @@ export const ARTICLES: Article[] = [
             "Takip için takip anlamsızdır — veri bordroya ulaşmalıdır. Puantajın 1C ve ERP sistemlerine aktarımını kurarız: çalışılan saatler, fazla mesai ve gece vardiyaları elle taşınmadan, insan hatasız hesaba düşer. Raporlar departman, lokasyon ve proje bazındadır.",
             "Kurulum işi durdurmaz: girişteki terminaller bir günde monte edilir, personelin tanıtımı bir gün daha sürer (kalabalık kadroda listeyi 1C veya Excel'den alırız). İK'yı ve yöneticiyi eğitiriz; sistem sonra kendi başına yaşar. Keşif ve teklif ücretsiz, ekipman Taşkent stoğundan, garanti ve destek tüm Özbekistan'da.",
           ] },
+          { h: "Biyometrinin aksadığı noktalar", p: [
+            "Parmak izi, eli yıpranmış çalışanlarda — şantiye, depo, mutfak — zor okunur. Doğrudan güneş alan bir girişte yüz tanıma da şaşar: arkadan gelen ışık pozlamayı değiştirir. Çözüm basit: birden çok kimlik yöntemi olan bir terminal (yüz, kart, PIN) ve küçük bir güneşlik ya da pencereden çevrilmiş bir montaj açısı.",
+            "Arızaların ikinci kaynağı ağdır. Terminal sunucuyla bağlantıyı kaybederse okutmalar kendi hafızasında tutulmalı ve sonradan yüklenmelidir; aksi hâlde vardiya puantaja boş düşer.",
+          ] },
         ],
         faq: [
           { q: "Kurulum ne kadar sürer?", a: "Tipik ofis veya atölye: terminallere bir gün, personel tanıtımı ve çizelge ayarına bir gün. Pazartesi sistem saymaya başlamıştır." },
@@ -4086,6 +4242,10 @@ export const ARTICLES: Article[] = [
           { h: "数据通往工资的路", p: [
             "为考勤而考勤没有意义——数据必须抵达工资核算。我们配置考勤表导出到1C等管理系统：工时、加班和夜班直接进入核算，没有手工誊抄，没有「人为因素」出错。报表按部门、场所和项目出。",
             "部署不停工：门口终端一天装好，录入员工再一天（人多时从1C或Excel导入名单）。培训人事和管理员，之后系统自己运转。勘测和报价免费，设备塔什干现货，质保和支持覆盖全乌兹别克斯坦。",
+          ] },
+          { h: "生物识别失效的场景", p: [
+            "工地、仓库、后厨的员工手部皮肤磨损，指纹往往读不出来。门口若被阳光直射，人脸识别同样会漂移：逆光改变了曝光。办法并不复杂——选支持多种识别方式的终端（人脸、卡片、PIN），再加一块小遮阳板，或把安装角度避开窗户。",
+            "第二个故障来源是网络。终端与服务器断连时，打卡记录必须存在本机内存里、恢复连接后再补传；否则这个班次到了考勤表上就是空白。",
           ] },
         ],
         faq: [
@@ -4123,6 +4283,10 @@ export const ARTICLES: Article[] = [
             "Проектируем сеть по плану помещения с учётом стен и помех, прокладываем СКС и ставим PoE-коммутаторы — точки питаются по тому же кабелю, что несёт данные, розетки под потолком не нужны. Работаем с Ubiquiti UniFi, MikroTik, TP-Link Omada и Ruijie со склада в Ташкенте: платформу подбираем под масштаб и бюджет.",
             "На выходе — сеть с понятной схемой, доступами к контроллеру и инструкцией по гостевым кодам. Даём гарантию, берём Wi-Fi на сопровождение: мониторинг, обновления, разбор «у нас тормозит» по графикам контроллера, а не гаданием. Выезд и расчёт бесплатны, работаем по Ташкенту и всему Узбекистану.",
           ] },
+          { h: "Ошибки размещения точек доступа", p: [
+            "Точки в коридорах и серверных дают ровную карту на бумаге и провалы в переговорных. Оборудование размещают в зонах, где реально работают люди, а не там, где ближе розетка; металлические стеллажи, зеркала и стеклянные перегородки съедают сигнал сильнее гипсокартона.",
+            "Вторая частая ошибка — максимальная мощность на всех точках: клиенты держатся за дальнюю и не переключаются. Мощность снижают, каналы разводят, а после монтажа делают контрольный замер.",
+          ] },
         ],
         faq: [
           { q: "Сколько точек доступа нужно офису на 30 человек?", a: "Обычно две-четыре: зависит от планировки, стен и переговорок. Точный ответ даёт радиообследование — мы делаем его бесплатно при расчёте проекта." },
@@ -4150,6 +4314,10 @@ export const ARTICLES: Article[] = [
           { h: "Biz nima qilamiz va siz nima olasiz", p: [
             "Tarmoqni xona plani bo'yicha devor va xalaqitlarni hisobga olib loyihalaymiz, SKS o'tkazamiz va PoE-kommutatorlar qo'yamiz — nuqtalar ma'lumot olib boradigan o'sha kabeldan quvvatlanadi, ship ostida rozetka kerak emas. Toshkentdagi ombordan Ubiquiti UniFi, MikroTik, TP-Link Omada va Ruijie bilan ishlaymiz: platformani ko'lam va byudjetga tanlaymiz.",
             "Natijada — tushunarli sxemali tarmoq, kontrollerga kirishlar va mehmon kodlari yo'riqnomasi. Kafolat beramiz, Wi-Fi ni kuzatuvga olamiz: monitoring, yangilanishlar, «tormozlayapti»ni taxmin bilan emas, kontroller grafiklari bo'yicha tahlil. Chiqish va hisob bepul, Toshkent va butun O'zbekiston bo'ylab ishlaymiz.",
+          ] },
+          { h: "Kirish nuqtalarini joylashtirishdagi xatolar", p: [
+            "Koridor va server xonalariga o'rnatilgan nuqtalar qog'ozda tekis qamrov beradi, muzokara xonalarida esa uzilish qoldiradi. Uskuna rozetka yaqin bo'lgan joyga emas, odamlar haqiqatan ishlaydigan zonalarga qo'yiladi; metall javonlar, oynalar va shisha to'siqlar signalni gipsokartondan ko'ra kuchliroq yutadi.",
+            "Ikkinchi keng tarqalgan xato — barcha nuqtalarda quvvatni maksimalga qo'yish: qurilmalar uzoqdagi nuqtaga yopishib, boshqasiga o'tmaydi. Quvvat pasaytiriladi, kanallar taqsimlanadi, montajdan keyin esa nazorat o'lchovi qilinadi.",
           ] },
         ],
         faq: [
@@ -4179,6 +4347,10 @@ export const ARTICLES: Article[] = [
             "We design the network from the floor plan accounting for walls and interference, run structured cabling and install PoE switches — access points take power over the same cable that carries data, no ceiling outlets needed. We work with Ubiquiti UniFi, MikroTik, TP-Link Omada and Ruijie from Tashkent stock, choosing the platform for your scale and budget.",
             "The result is a network with a clear diagram, controller credentials and guest code instructions. We provide a warranty and ongoing support: monitoring, updates, and \"it's slow\" investigated with controller graphs rather than guesswork. The survey and quote are free; we work across Tashkent and all of Uzbekistan.",
           ] },
+          { h: "Access point placement mistakes", p: [
+            "Access points in corridors and server rooms give an even map on paper and dead spots in meeting rooms. Hardware belongs where people actually work, not where the nearest socket is; metal racking, mirrors and glass partitions absorb the signal far more than drywall.",
+            "The second common mistake is running every access point at full power: clients cling to a distant one and never hand over. Power is turned down, channels are spread out, and a verification survey follows the installation.",
+          ] },
         ],
         faq: [
           { q: "How many access points does a 30-person office need?", a: "Usually two to four, depending on the layout, walls and meeting rooms. The exact answer comes from a site survey — free as part of our project calculation." },
@@ -4207,6 +4379,10 @@ export const ARTICLES: Article[] = [
             "Ağı kat planından, duvarları ve parazitleri hesaba katarak tasarlar, yapısal kablolama çeker ve PoE switch kurarız — noktalar veriyi taşıyan kablodan beslenir, tavan altına priz gerekmez. Taşkent stoğundan Ubiquiti UniFi, MikroTik, TP-Link Omada ve Ruijie ile çalışır, platformu ölçeğe ve bütçeye göre seçeriz.",
             "Sonuç: net şemalı ağ, kontrolcü erişimleri ve misafir kodu talimatı. Garanti verir, Wi-Fi'ı izleriz: takip, güncellemeler ve «yavaş» şikâyetinin tahminle değil kontrolcü grafikleriyle çözümü. Keşif ve teklif ücretsiz; Taşkent ve tüm Özbekistan'da çalışıyoruz.",
           ] },
+          { h: "Erişim noktası yerleşim hataları", p: [
+            "Koridorlara ve sistem odalarına konan erişim noktaları kâğıt üzerinde düzgün bir kapsama, toplantı odalarında ise boşluk verir. Cihazlar en yakın prizin bulunduğu yere değil, insanların gerçekten çalıştığı bölgelere konumlandırılır; metal raflar, aynalar ve cam bölmeler sinyali alçıpandan çok daha fazla yutar.",
+            "İkinci sık hata, tüm noktaları tam güçte çalıştırmaktır: istemciler uzaktaki noktaya yapışır ve devretmez. Güç düşürülür, kanallar dağıtılır, montaj sonrasında da doğrulama ölçümü yapılır.",
+          ] },
         ],
         faq: [
           { q: "30 kişilik ofise kaç erişim noktası gerekir?", a: "Genelde iki-dört: plana, duvarlara ve toplantı odalarına bağlı. Kesin yanıtı saha etüdü verir — proje hesabında ücretsizdir." },
@@ -4234,6 +4410,10 @@ export const ARTICLES: Article[] = [
           { h: "我们做什么、您得到什么", p: [
             "按平面图设计网络，考虑墙体和干扰源；敷设综合布线并安装PoE交换机——接入点由传数据的同一根线供电，吊顶下不需要插座。设备用塔什干现货的Ubiquiti UniFi、MikroTik、TP-Link Omada和锐捷：平台按规模和预算选。",
             "交付的是一张有清晰图纸的网络：控制器账号、访客码发放说明。提供质保并持续运维：监控、升级，「网慢了」用控制器图表诊断而不是猜。勘测和报价免费，服务覆盖塔什干及全乌兹别克斯坦。",
+          ] },
+          { h: "无线AP点位常见错误", p: [
+            "把AP装在走廊和机房，图纸上覆盖很均匀，会议室里却是盲区。设备应该放在人真正办公的区域，而不是插座最近的地方；金属货架、镜面和玻璃隔断对信号的衰减远大于石膏板。",
+            "第二个常见错误是把所有AP的功率开到最大：终端会一直黏在远处那台上，不肯切换。正确做法是压低功率、错开信道，施工完成后再做一次复测。",
           ] },
         ],
         faq: [
@@ -4270,6 +4450,10 @@ export const ARTICLES: Article[] = [
             "Зоопарк приложений: лампы в одном, розетки в другом, камеры в третьем, и ничто ни с чем не дружит. Сценарий «ушли» в таком доме невозможен — некому выключить всё разом. Мы собираем систему на единой платформе: устройства видят друг друга, сценарии общие, семья пользуется одним приложением с понятными правами.",
             "Обследование и проект сценариев — бесплатно; стартовый комплект на квартиру — неделя от заявки до работающих сценариев. Оборудование со склада в Ташкенте, гарантия, поддержка и расширение системы по мере запросов — по всему Узбекистану.",
           ] },
+          { h: "Вопросы подрядчику до договора", p: [
+            "До подписания стоит выяснить, работают ли сценарии при отключении интернета, кто владеет учётной записью системы и на каком оборудовании она держится. Ответы показывают, останется ли дом управляемым после смены подрядчика.",
+            "Отдельно уточните гарантию на монтаж и срок реакции на выезд, а также возможность добавить датчики через год-два без замены контроллера. Совместимость дешевле закладывать на старте, чем переделывать после ремонта.",
+          ] },
         ],
         faq: [
           { q: "Можно ли сделать умный дом в квартире с готовым ремонтом?", a: "Да, беспроводные системы ставятся без штробления: реле в подрозетники, датчики на клейкой основе. Ремонт не страдает, монтаж занимает день-два." },
@@ -4297,6 +4481,10 @@ export const ARTICLES: Article[] = [
           { h: "Mustaqil yig'ishning bosh xatosi", p: [
             "Ilovalar hayvonot bog'i: lampalar birida, rozetkalar boshqasida, kameralar uchinchisida — hech narsa hech narsa bilan do'st emas. Bunday uyda «ketdik» stsenariysi mumkin emas — hammasini birdan o'chiradigan yo'q. Tizimni yagona platformada yig'amiz: qurilmalar bir-birini ko'radi, stsenariylar umumiy, oila tushunarli huquqli bitta ilovadan foydalanadi.",
             "Tekshiruv va stsenariylar loyihasi — bepul; kvartiraga start to'plami — arizadan ishlaydigan stsenariylargacha bir hafta. Uskuna Toshkentdagi ombordan, kafolat, qo'llab-quvvatlash va tizimni so'rov bo'yicha kengaytirish — butun O'zbekiston bo'ylab.",
+          ] },
+          { h: "Shartnomadan oldingi savollar", p: [
+            "Imzolashdan oldin stsenariylar internet uzilganda ishlaydimi, tizim hisob yozuvi kimga tegishli va u qanday uskunada turadi — shularni aniqlab olish kerak. Javoblar uy pudratchi almashgandan keyin ham boshqariladigan qoladimi, shuni ko'rsatadi.",
+            "Alohida qilib montaj kafolatini va chaqiruvga javob berish muddatini, shuningdek bir-ikki yildan keyin kontrollerni almashtirmasdan datchik qo'shish imkonini so'rang. Moslikni boshida hisobga olish ta'mirdan keyin qayta qilishdan arzonroq.",
           ] },
         ],
         faq: [
@@ -4326,6 +4514,10 @@ export const ARTICLES: Article[] = [
             "A zoo of apps: bulbs in one, sockets in another, cameras in a third — and nothing talks to anything. The \"away\" scenario is impossible in such a home: there is nobody to switch everything off at once. We build on a single platform: devices see each other, scenarios are shared, and the family uses one app with sensible permissions.",
             "The survey and scenario design are free; a starter apartment kit takes a week from request to working scenarios. Equipment from Tashkent stock, warranty, support and system growth on demand — across Uzbekistan.",
           ] },
+          { h: "Questions to ask before signing", p: [
+            "Before signing, find out whether the scenarios still run when the internet is down, who owns the system account, and what hardware it depends on. The answers show whether the house stays manageable after the contractor changes.",
+            "Ask separately about the installation warranty, the response time for a site visit, and the option to add sensors a year or two later without replacing the controller. Compatibility is cheaper to plan at the start than to rebuild after renovation.",
+          ] },
         ],
         faq: [
           { q: "Can a smart home be added to a finished apartment?", a: "Yes — wireless systems install without chasing: relays go into wall boxes, sensors are adhesive. The renovation is untouched; installation takes a day or two." },
@@ -4354,6 +4546,10 @@ export const ARTICLES: Article[] = [
             "Uygulama hayvanat bahçesi: ampuller birinde, prizler diğerinde, kameralar üçüncüsünde — hiçbiri diğeriyle konuşmaz. Böyle evde «çıktık» senaryosu imkânsızdır: her şeyi bir anda kapatacak kimse yoktur. Tek platformda kurarız: cihazlar birbirini görür, senaryolar ortak, aile mantıklı yetkili tek uygulama kullanır.",
             "Keşif ve senaryo tasarımı ücretsizdir; daireye başlangıç seti talepten çalışan senaryolara bir hafta sürer. Ekipman Taşkent stoğundan; garanti, destek ve talebe göre büyüme — tüm Özbekistan'da.",
           ] },
+          { h: "Sözleşme öncesi sorulacaklar", p: [
+            "İmzadan önce senaryoların internet kesildiğinde çalışıp çalışmadığını, sistem hesabının kime ait olduğunu ve hangi donanıma bağlı olduğunu öğrenin. Yanıtlar, yüklenici değiştikten sonra evin yönetilebilir kalıp kalmayacağını gösterir.",
+            "Ayrıca montaj garantisini, yerinde müdahale süresini ve bir iki yıl sonra kontrolcüyü değiştirmeden sensör eklenip eklenemeyeceğini sorun. Uyumluluğu baştan planlamak, tadilattan sonra yeniden yapmaktan ucuzdur.",
+          ] },
         ],
         faq: [
           { q: "Bitmiş tadilatlı daireye akıllı ev kurulur mu?", a: "Evet — kablosuz sistemler kırımsız kurulur: röleler kasalara, sensörler yapışkanla. Tadilat zarar görmez; kurulum bir-iki gün." },
@@ -4381,6 +4577,10 @@ export const ARTICLES: Article[] = [
           { h: "自己攒设备的最大错误", p: [
             "应用「动物园」：灯在一个App、插座在另一个、摄像机在第三个——谁也不认识谁。这样的家里「离家」场景无法实现：没有谁能一键关掉一切。我们把系统建在统一平台上：设备互通、场景共享，全家用一个应用、权限清晰。",
             "勘测和场景设计免费；公寓入门套装从下单到场景可用约一周。设备塔什干现货，质保、支持和按需扩展——覆盖全乌兹别克斯坦。",
+          ] },
+          { h: "签约前该问的问题", p: [
+            "签约前先确认：断网时场景还能不能执行，系统账号归谁所有，整套逻辑依赖哪些设备。这些回答决定了更换施工方之后，房子是否仍然可控。",
+            "另外要问清施工质保期、上门响应时限，以及一两年后能否在不更换主控的前提下加装传感器。兼容性在开工时规划，比装修完再返工便宜得多。",
           ] },
         ],
         faq: [
@@ -4418,6 +4618,10 @@ export const ARTICLES: Article[] = [
             "Бюджет зависит от типа: трипод — самый доступный, спидгейт — в разы дороже за счёт механики и стекла, роторный — между ними в зависимости от исполнения. Прибавьте монтаж с анкеровкой в пол, пусконаладку и настройку прав. Уличное исполнение с подогревом — отдельная строка для КПП без павильона.",
             "Мы ставим турникеты ZKTeco и Hikvision со склада в Ташкенте: выезд, подбор под поток и дизайн, монтаж за один-два дня, интеграция со СКУД и учётом времени, гарантия и обслуживание по всему Узбекистану. Расчёт проходной — бесплатно.",
           ] },
+          { h: "Обслуживание и ресурс механизма", p: [
+            "Ресурс турникета считают в миллионах проходов, и заявленную цифру он выдерживает только при регламентном обслуживании. Раз в полгода проверяют затяжку крепления к полу, смазку демпферного механизма, износ планок и работу режима свободного прохода при снятии питания — этот режим требуется пожарной безопасностью.",
+            "На улице и в неотапливаемых проходных к корпусу добавляются требования по пыли и влаге, а зимой — подогрев механизма. Стойка из окрашенной стали в такой среде живёт заметно меньше нержавеющей, и экономия на корпусе окупается ржавыми потёками уже за первый сезон.",
+          ] },
         ],
         faq: [
           { q: "Какой турникет поставить в офис на 50 сотрудников?", a: "Обычно хватает одного трипода с распознаванием лица или картами плюс калитка. Такой комплект держит утренний поток без очередей и закрывает учёт времени." },
@@ -4445,6 +4649,10 @@ export const ARTICLES: Article[] = [
           { h: "Narx va joriy etish", p: [
             "Byudjet turga bog'liq: tripod — eng arzon, spidgeyt mexanika va shisha hisobiga bir necha barobar qimmat, rotorli — bajarilishiga qarab ular orasida. Polga ankerlash bilan montaj, ishga tushirish va huquqlarni sozlashni qo'shing. Isitishli ko'cha bajarilishi — pavilonsiz KPP uchun alohida qator.",
             "Toshkentdagi ombordan ZKTeco va Hikvision turniketlarini o'rnatamiz: chiqish, oqim va dizaynga tanlash, bir-ikki kunda montaj, SKUD va vaqt hisobi bilan integratsiya, kafolat va xizmat butun O'zbekiston bo'ylab. Prohodnaya hisobi — bepul.",
+          ] },
+          { h: "Xizmat ko'rsatish va mexanizm resursi", p: [
+            "Turniket resursi millionlab o'tishlarda hisoblanadi va e'lon qilingan raqamga u faqat reglament bo'yicha xizmat ko'rsatilganda chidaydi. Yarim yilda bir marta polga mahkamlash boltlari, demper mexanizmining moylanishi, to'siq richaglarining yeyilishi va quvvat uzilganda erkin o'tish rejimi tekshiriladi — bu rejimni yong'in xavfsizligi talab qiladi.",
+            "Ko'chada va isitilmaydigan o'tish nuqtalarida korpusga chang va namlikdan himoya talabi qo'shiladi, qishda esa mexanizm isitgichi kerak bo'ladi. Bo'yalgan po'latdan qilingan stoyka bunday muhitda zanglamas po'latdagiga qaraganda sezilarli darajada kam xizmat qiladi, korpusdagi tejamkorlik esa birinchi mavsumdayoq zang izlari bilan qaytadi.",
           ] },
         ],
         faq: [
@@ -4474,6 +4682,10 @@ export const ARTICLES: Article[] = [
             "The budget depends on the type: a tripod is the most affordable; a speed gate costs severalfold more for its mechanics and glass; a rotor sits between, depending on the build. Add installation with floor anchoring, commissioning and rights configuration. An outdoor version with heating is a separate line for gate posts without a pavilion.",
             "We install ZKTeco and Hikvision turnstiles from Tashkent stock: survey, selection for flow and design, installation in one or two days, integration with access control and attendance, warranty and service across Uzbekistan. The entrance calculation is free.",
           ] },
+          { h: "Maintenance and mechanism life", p: [
+            "Turnstile life is rated in millions of passages, and it reaches that figure only with scheduled maintenance. Twice a year, check the floor anchors, the lubrication of the damper mechanism, wear on the arms, and the free-passage mode that releases the arms when power is cut — fire regulations require it.",
+            "Outdoors and in unheated entrances the housing also has to cope with dust and moisture, and in winter the mechanism needs a heater. A painted steel column lasts noticeably less than a stainless one in that environment, and saving on the housing shows up as rust streaks within the first season.",
+          ] },
         ],
         faq: [
           { q: "Which turnstile for a 50-person office?", a: "Usually one tripod with facial recognition or cards plus a gate. That kit holds the morning flow without queues and covers time tracking." },
@@ -4502,6 +4714,10 @@ export const ARTICLES: Article[] = [
             "Bütçe türe bağlıdır: tripod en ekonomik; speed gate mekanik ve cam nedeniyle kat kat pahalı; rotor yapıya göre arada. Zemine ankrajlı montajı, devreye almayı ve yetki ayarını ekleyin. Isıtmalı dış mekân modeli, kulübesiz kontrol noktaları için ayrı kalemdir.",
             "Taşkent stoğundan ZKTeco ve Hikvision turnikeleri kurarız: keşif, akışa ve tasarıma göre seçim, bir-iki günde montaj, geçiş kontrolü ve mesaiyle entegrasyon, tüm Özbekistan'da garanti ve servis. Giriş hesabı ücretsizdir.",
           ] },
+          { h: "Bakım ve mekanizma ömrü", p: [
+            "Turnike ömrü milyonlarca geçişle ölçülür ve bu rakama ancak düzenli bakımla ulaşır. Altı ayda bir zemin ankrajlarının sıkılığı, damper mekanizmasının yağlanması, kolların aşınması ve enerji kesildiğinde kolları serbest bırakan geçiş modu kontrol edilir; bu mod yangın mevzuatının gereğidir.",
+            "Açık alanda ve ısıtılmayan girişlerde gövdeden toza ve neme dayanım da beklenir, kışın ise mekanizma ısıtıcısı gerekir. Boyalı çelik gövde bu koşullarda paslanmaz olana göre belirgin biçimde kısa ömürlüdür; gövdeden yapılan tasarruf daha ilk sezonda pas lekeleri olarak geri döner.",
+          ] },
         ],
         faq: [
           { q: "50 kişilik ofise hangi turnike?", a: "Genelde yüz tanımalı veya kartlı tek tripod artı kapı yeter. Bu set sabah akışını kuyruksuz taşır ve mesai takibini kapatır." },
@@ -4529,6 +4745,10 @@ export const ARTICLES: Article[] = [
           { h: "费用与实施", p: [
             "预算取决于类型：三辊闸最实惠；速通门因机械结构和玻璃贵出数倍；全高转闸按配置介于两者之间。再加地面锚固安装、调试和权限配置。带加热的室外型是无岗亭卡口的单列项目。",
             "我们安装塔什干现货的中控智慧（ZKTeco）和海康威视闸机：勘测、按人流和装修风格选型、一至两天安装、对接门禁和考勤，质保和维保覆盖全乌兹别克斯坦。通道方案免费测算。",
+          ] },
+          { h: "保养与机芯使用寿命", p: [
+            "闸机寿命按百万次通行计算，只有按规程保养才能达到标称值。每半年检查一次地脚膨胀螺栓的紧固、阻尼机芯的润滑、挡杆磨损，以及断电后自动落杆的自由通行功能——这项功能是消防要求。",
+            "室外和无供暖的通道里，机箱还要能抗粉尘和潮气，冬天则需要机芯加热。同样条件下喷漆钢机箱的寿命明显短于不锈钢，机箱上省下的钱，第一个季节就会以锈痕的形式还回来。",
           ] },
         ],
         faq: [
@@ -4566,6 +4786,10 @@ export const ARTICLES: Article[] = [
             "Камера с честными 99 % распознавания легко превращается в 80 % кривым монтажом: слишком острый угол к полосе, встречный свет фар, номер перекрывается соседней машиной. Мы ставим камеру под правильным углом и на правильной высоте, с ИК-подсветкой для ночи — и проверяем на реальном потоке, включая грязные и транзитные номера.",
             "Комплекты Hikvision и Dahua со склада в Ташкенте, монтаж въезда за один-два дня, настройка списков и обучение охраны: добавлять и удалять номера вы будете сами. Гарантия и обслуживание по всему Узбекистану; выезд и расчёт бесплатны.",
           ] },
+          { h: "Перебои питания, пыль и зима", p: [
+            "Автоматический въезд остаётся уязвимым к отключениям электричества: без ИБП стрела замирает в закрытом положении и двор блокируется. Источник бесперебойного питания на контроллер и привод плюс механическая разблокировка ключом решают вопрос за считаные проценты бюджета проекта.",
+            "Пыль оседает на объективе и снижает распознавание задолго до появления явных ошибок, поэтому протирку стекла закладывают в регламент раз в месяц. Зимой полезен подогрев корпуса камеры и проверка смазки редуктора привода.",
+          ] },
         ],
         faq: [
           { q: "Что будет, если номер грязный или не читается?", a: "Работают резервные способы: пульт, звонок охране, вызывная панель. Хорошо смонтированная система читает и загрязнённые номера — критичен угол установки и подсветка." },
@@ -4593,6 +4817,10 @@ export const ARTICLES: Article[] = [
           { h: "Tanish aniqligi — montaj masalasi", p: [
             "Halol 99 % taniydigan kamera qiyshiq montaj bilan osongina 80 % ga aylanadi: polosaga o'ta o'tkir burchak, qarshi fara nuri, raqamni qo'shni mashina to'sib qo'yishi. Kamerani to'g'ri burchak va balandlikka, kecha uchun IK-yoritish bilan o'rnatamiz — va real oqimda tekshiramiz, iflos va tranzit raqamlar bilan birga.",
             "Toshkentdagi ombordan Hikvision va Dahua to'plamlari, kirish montaji bir-ikki kun, ro'yxatlarni sozlash va qo'riqni o'rgatish: raqam qo'shish va o'chirishni o'zingiz qilasiz. Kafolat va xizmat butun O'zbekiston bo'ylab; chiqish va hisob bepul.",
+          ] },
+          { h: "Quvvat uzilishi, chang va qish", p: [
+            "Avtomatik kirish elektr uzilishlariga zaif bo'lib qoladi: UPS bo'lmasa strela yopiq holatda qotib qoladi va hovli berkiladi. Kontroller hamda yuritma uchun uzluksiz quvvat manbai va kalit bilan mexanik ochish bu masalani loyiha byudjetining bir necha foizi evaziga hal qiladi.",
+            "Chang obyektivga o'tirib, aniq xatolar paydo bo'lishidan ancha oldin tanish sifatini pasaytiradi, shuning uchun oynani artish oyiga bir marta reglamentga kiritiladi. Qishda kamera korpusini isitish va yuritma reduktori moyini tekshirish foydali.",
           ] },
         ],
         faq: [
@@ -4622,6 +4850,10 @@ export const ARTICLES: Article[] = [
             "A camera with an honest 99 % recognition rate easily becomes 80 % through poor installation: too sharp an angle to the lane, oncoming headlights, a plate blocked by the next car. We mount the camera at the right angle and height, with IR for the night — and test on real traffic, dirty and transit plates included.",
             "Hikvision and Dahua kits from Tashkent stock, entrance installation in one or two days, list setup and guard training: you will add and remove plates yourself. Warranty and service across Uzbekistan; the survey and quote are free.",
           ] },
+          { h: "Power cuts, dust and winter", p: [
+            "An automatic entrance stays vulnerable to power cuts: without a UPS the boom freezes in the closed position and the yard is blocked. A UPS for the controller and the drive, plus a mechanical key release, solve this for a few per cent of the project budget.",
+            "Dust settles on the lens and degrades recognition long before obvious errors appear, so wiping the glass is written into a monthly service routine. In winter, heating for the camera housing and a check of the drive gearbox grease are worth doing.",
+          ] },
         ],
         faq: [
           { q: "What if the plate is dirty or unreadable?", a: "The backups work: a remote, a call to the guard, the call panel. A well-installed system reads even dirty plates — the mounting angle and illumination are what matter." },
@@ -4650,6 +4882,10 @@ export const ARTICLES: Article[] = [
             "Dürüst %99 tanıyan kamera, kötü montajla kolayca %80'e düşer: şeride fazla keskin açı, karşı far ışığı, yandaki araçça kapatılan plaka. Kamerayı doğru açı ve yüksekliğe, gece için IR ile monte eder ve gerçek trafikte test ederiz — kirli ve transit plakalar dahil.",
             "Taşkent stoğundan Hikvision ve Dahua setleri, giriş montajı bir-iki gün, liste ayarları ve güvenlik eğitimi: plakaları kendiniz ekleyip sileceksiniz. Tüm Özbekistan'da garanti ve servis; keşif ve teklif ücretsiz.",
           ] },
+          { h: "Elektrik kesintisi, toz ve kış", p: [
+            "Otomatik giriş elektrik kesintilerine karşı savunmasız kalır: UPS yoksa kol kapalı konumda kilitlenir ve avlu tıkanır. Kumanda kartı ile motor için bir UPS ve anahtarla mekanik boşa alma, proje bütçesinin yüzde birkaçına bu sorunu çözer.",
+            "Toz lensin üzerine oturur ve belirgin hatalar ortaya çıkmadan çok önce tanıma başarısını düşürür; bu yüzden cam temizliği aylık bakım planına yazılır. Kışın kamera muhafazasının ısıtılması ve motor redüktör gresinin kontrolü yararlıdır.",
+          ] },
         ],
         faq: [
           { q: "Plaka kirliyse veya okunmuyorsa ne olur?", a: "Yedekler devrede: kumanda, güvenliği arama, zil paneli. İyi monte edilmiş sistem kirli plakayı da okur — montaj açısı ve aydınlatma belirleyicidir." },
@@ -4677,6 +4913,10 @@ export const ARTICLES: Article[] = [
           { h: "识别率是安装问题", p: [
             "标称99%识别率的摄像机，安装不当轻松跌到80%：对车道角度太斜、逆着车灯、号牌被邻车遮挡。我们把摄像机装在正确的角度和高度、配夜间红外——并用真实车流验证，包括脏污和外地号牌。",
             "海康威视和大华套件塔什干现货，入口一至两天装完，配置名单并培训门卫：添加、删除号牌您自己就能做。质保和维保覆盖全乌兹别克斯坦；勘测和报价免费。",
+          ] },
+          { h: "断电、粉尘与冬季运行", p: [
+            "自动出入口对停电很敏感：没有 UPS 时，栏杆会停在关闭位置，整个院子被堵死。为控制器和驱动器配一台 UPS，再加上钥匙机械解锁，只占项目预算的百分之几就能解决问题。",
+            "粉尘落在镜头上，会在明显报错之前就拉低识别率，因此应把每月擦拭镜片写进维护规程。冬季建议开启摄像机护罩加热，并检查驱动减速箱的润滑脂。",
           ] },
         ],
         faq: [
@@ -4713,6 +4953,10 @@ export const ARTICLES: Article[] = [
             "Квартира: беспроводная панель, датчики на входную дверь и окна первого-последнего этажей, объёмник в коридоре. Магазин: плюс тревожная кнопка у кассы и акустические датчики на витрины. Склад и производство: гибридная система с периметральным контуром — датчики на ограждении и лучевые барьеры ловят нарушителя до подхода к зданию.",
             "Сигнализацию связываем с видеонаблюдением: сработка привязывается к записи, и вы видите картинку события ещё до звонка охране. Монтаж квартиры — день, магазина — один-два, склад считаем после бесплатного выезда. Оборудование со склада в Ташкенте, гарантия и обслуживание по всему Узбекистану.",
           ] },
+          { h: "Ошибки при размещении датчиков", p: [
+            "Объёмный датчик, направленный на окно, батарею или кондиционер, даёт ложные тревоги от солнца и потоков тёплого воздуха. Магнитоконтактные извещатели ставят на все открывающиеся створки, включая форточки и заднюю дверь склада — злоумышленник идёт там, где тише.",
+            "Второй частый промах — единственный рубеж охраны. Периметр окон, объём внутри и датчик на двери работают вместе; одиночный извещатель у входа отключается за секунды.",
+          ] },
         ],
         faq: [
           { q: "Сработает ли беспроводная система при отключении света?", a: "Да: панель держит встроенный аккумулятор, датчики работают от батареек, тревога уходит по GSM-каналу даже при обрыве интернета. Резерв питания — обязательная часть комплекта." },
@@ -4740,6 +4984,10 @@ export const ARTICLES: Article[] = [
           { h: "Obyektingizga nimani tanlash", p: [
             "Kvartira: simsiz panel, kirish eshigi va birinchi-oxirgi qavat derazalariga datchiklar, koridorga hajmiy datchik. Do'kon: plyus kassa yonida trevoga tugmasi va vitrinalarga akustik datchiklar. Ombor va ishlab chiqarish: perimetr konturli gibrid tizim — to'siqdagi datchiklar va nurli barerlar buzg'unchini binoga yetmasdan ushlaydi.",
             "Signalizatsiyani videokuzatuv bilan bog'laymiz: ishga tushish yozuvga bog'lanadi va hodisa tasvirini qo'riqqa qo'ng'iroqdan oldin ko'rasiz. Kvartira montaji — bir kun, do'kon — bir-ikki, omborni bepul chiqishdan keyin hisoblaymiz. Uskuna Toshkentdagi ombordan, kafolat va xizmat butun O'zbekiston bo'ylab.",
+          ] },
+          { h: "Datchiklarni joylashtirishdagi xatolar", p: [
+            "Deraza, radiator yoki konditsionerga qaratilgan hajmiy datchik quyosh va iliq havo oqimidan yolg'on signal beradi. Magnit-kontaktli detektorlar barcha ochiladigan tavaqalarga, shu jumladan fortochka va ombor orqa eshigiga o'rnatiladi — buzg'unchi tinchroq joydan kiradi.",
+            "Ikkinchi tez-tez uchraydigan xato — yagona qo'riqlash chegarasi. Deraza perimetri, ichkaridagi hajm va eshikdagi datchik birgalikda ishlaydi; kiraverishdagi yolg'iz detektor bir necha soniyada ishdan chiqariladi.",
           ] },
         ],
         faq: [
@@ -4769,6 +5017,10 @@ export const ARTICLES: Article[] = [
             "An apartment: a wireless panel, contacts on the entrance door and the windows of the first and top floors, a motion detector in the hallway. A shop: plus a panic button at the till and acoustic sensors on the display windows. A warehouse or factory: a hybrid system with a perimeter loop — fence sensors and beam barriers catch the intruder before he reaches the building.",
             "We link the alarm to CCTV: an activation ties to footage, and you see the event before calling security. An apartment takes a day to install, a shop one or two; a warehouse is quoted after a free survey. Equipment from Tashkent stock, warranty and service across Uzbekistan.",
           ] },
+          { h: "Mistakes in sensor placement", p: [
+            "A motion detector aimed at a window, a radiator or an air conditioner produces false alarms from sunlight and warm air currents. Magnetic contacts go on every opening leaf, including small vent windows and the rear warehouse door — an intruder takes the quiet way in.",
+            "The second common error is a single line of defence. The window perimeter, the volume inside and a contact on the door work together; a lone detector by the entrance is disabled in seconds.",
+          ] },
         ],
         faq: [
           { q: "Does a wireless system work during a power cut?", a: "Yes: the panel has a built-in battery, sensors run on their own batteries, and the alarm goes out over GSM even if the internet is down. Backup power is a mandatory part of the kit." },
@@ -4797,6 +5049,10 @@ export const ARTICLES: Article[] = [
             "Daire: kablosuz panel, giriş kapısına ve ilk-son kat pencerelerine kontaklar, koridora hareket dedektörü. Mağaza: artı kasada panik butonu ve vitrinlere akustik sensörler. Depo ve fabrika: çevre halkalı hibrit sistem — çit sensörleri ve ışın bariyerleri davetsizi binaya varmadan yakalar.",
             "Alarmı kameralara bağlarız: tetikleme görüntüye bağlanır, olayı güvenliği aramadan görürsünüz. Daire kurulumu bir gün, mağaza bir-iki; depo ücretsiz keşiften sonra fiyatlanır. Ekipman Taşkent stoğundan; tüm Özbekistan'da garanti ve servis.",
           ] },
+          { h: "Dedektör yerleşiminde yapılan hatalar", p: [
+            "Pencereye, radyatöre veya klimaya bakan hacim dedektörü, güneş ve sıcak hava akımı yüzünden hatalı alarm üretir. Manyetik kontaklar açılan tüm kanatlara takılır; küçük vasistaslar ve deponun arka kapısı dahil — hırsız sessiz olan taraftan girer.",
+            "İkinci sık hata tek bir koruma hattıyla yetinmektir. Pencere çevresi, iç hacim ve kapıdaki kontak birlikte çalışır; girişteki tek dedektör saniyeler içinde devre dışı bırakılır.",
+          ] },
         ],
         faq: [
           { q: "Elektrik kesintisinde kablosuz sistem çalışır mı?", a: "Evet: panelde dahili akü vardır, sensörler kendi pilleriyle çalışır, alarm internet kesik olsa da GSM üzerinden gider. Yedek güç setin zorunlu parçasıdır." },
@@ -4824,6 +5080,10 @@ export const ARTICLES: Article[] = [
           { h: "按您的场所怎么配", p: [
             "公寓：无线主机、入户门和首层顶层窗户装门磁、走廊装红外。商店：再加收银台紧急按钮和橱窗的声学探测器。仓库和工厂：带周界防线的混合系统——围栏传感器和对射光栅在入侵者接近建筑之前就发现他。",
             "报警与视频监控联动：触发即绑定录像，打电话给保安之前就能看到现场。公寓一天装完，商店一到两天，仓库免费勘测后报价。设备塔什干现货，质保和维保覆盖全乌兹别克斯坦。",
+          ] },
+          { h: "探测器安装位置的常见错误", p: [
+            "对着窗户、暖气片或空调的红外探测器，会因阳光和暖气流频繁误报。门磁应装在所有可开启的扇上，包括气窗和仓库后门——入侵者总是走最安静的一侧。",
+            "第二个常见错误是只做一道防线。窗户周界、室内空间和门上的门磁要配合使用；只在入口装一只探测器，几秒钟就会被绕过。",
           ] },
         ],
         faq: [
@@ -4861,6 +5121,10 @@ export const ARTICLES: Article[] = [
             "Стоящие ворота чаще всего можно автоматизировать без замены: привод, фотоэлементы и лампа ставятся за один день. Условие — исправная механика: ролики, петли и геометрия. Если створку клинит вручную, привод не вылечит, а добьёт — и мы честно скажем, что сначала ремонтировать.",
             "Цена складывается из типа ворот, класса привода и способа управления. Полный комплект с нуля дороже автоматизации готовых ворот в разы — но и живёт дольше при правильном подборе. Выезд и расчёт бесплатны; монтаж — один-три дня, гарантия на механику и работы, обслуживание по всему Узбекистану.",
           ] },
+          { h: "Перебои питания и обслуживание", p: [
+            "При отключении электричества привод должен разблокироваться ключом за несколько секунд — проверьте, что механизм аварийного расцепления доступен снаружи, а не только со двора. Для интенсивного въезда имеет смысл блок резервного питания: он держит десятки циклов и снимает вопрос выезда в пиковые часы.",
+            "Раз в полгода — протяжка крепежа, смазка роликов и чистка фотоэлементов от пыли: летом её слой на линзе даёт ложные срабатывания, и створка замирает на середине.",
+          ] },
         ],
         faq: [
           { q: "Можно ли автоматизировать старые распашные ворота?", a: "В большинстве случаев да: линейные приводы ставятся на створки за день. Главное условие — исправные петли и геометрия: если ворота клинит рукой, сначала ремонт, потом автоматика." },
@@ -4888,6 +5152,10 @@ export const ARTICLES: Article[] = [
           { h: "Turgan darvozani avtomatlashtirish va narx", p: [
             "Turgan darvozani ko'pincha almashtirmasdan avtomatlashtirsa bo'ladi: privod, fotoelementlar va chiroq bir kunda o'rnatiladi. Shart — soz mexanika: roliklar, oshiq-moshiqlar va geometriya. Tavaqa qo'lda qisilsa, privod davolamaydi, o'ldiradi — avval nimani ta'mirlashni halol aytamiz.",
             "Narx darvoza turi, privod sinfi va boshqaruv usulidan yig'iladi. Noldan to'liq to'plam tayyor darvozani avtomatlashtirishdan bir necha barobar qimmat — lekin to'g'ri tanlovda uzoqroq ham yashaydi. Chiqish va hisob bepul; montaj — bir-uch kun, mexanika va ishlarga kafolat, xizmat butun O'zbekiston bo'ylab.",
+          ] },
+          { h: "Elektr uzilishi va texnik xizmat", p: [
+            "Elektr o'chganda privod bir necha soniyada kalit bilan qo'lda ochiladigan bo'lishi kerak — avariya ajratish mexanizmiga faqat hovlidan emas, tashqaridan ham qo'l yetishini tekshiring. Intensiv kirish-chiqishda zaxira quvvat bloki o'zini oqlaydi: u o'nlab siklga yetadi va tig'iz soatlarda chiqish masalasini yopadi.",
+            "Yarim yilda bir marta — mahkamlagichlarni tortish, roliklarni moylash va fotoelementlarni changdan tozalash: yozda linzadagi chang qatlami yolg'on ishga tushishlar beradi, tavaqa yo'l o'rtasida to'xtab qoladi.",
           ] },
         ],
         faq: [
@@ -4917,6 +5185,10 @@ export const ARTICLES: Article[] = [
             "Existing gates can usually be automated without replacement: the drive, photocells and lamp go on in a day. The condition is sound mechanics: rollers, hinges and geometry. If the leaf jams by hand, a drive will not cure it but finish it off — and we will say honestly what to repair first.",
             "The price is built from the gate type, the drive class and the control method. A complete new set costs severalfold more than automating existing gates — and lasts longer when sized properly. The survey and quote are free; installation takes one to three days, with a warranty on mechanics and work, and service across Uzbekistan.",
           ] },
+          { h: "Power cuts and maintenance", p: [
+            "During a power cut the drive must release by key within seconds — check that the emergency disengagement is reachable from outside, not only from the yard. For a busy entrance a backup power unit pays off: it holds dozens of cycles and removes the question of getting out during peak hours.",
+            "Twice a year: retighten the fixings, grease the rollers and clean dust off the photocells. In summer a film of dust on the lens causes false triggers and the leaf stops halfway.",
+          ] },
         ],
         faq: [
           { q: "Can old swing gates be automated?", a: "In most cases yes: linear drives mount on the leaves in a day. The key condition is sound hinges and geometry: if the gate jams by hand, repair first, automation second." },
@@ -4945,6 +5217,10 @@ export const ARTICLES: Article[] = [
             "Mevcut kapı çoğu kez değiştirilmeden otomatikleştirilir: motor, fotoseller ve lamba bir günde takılır. Şart, sağlam mekaniktir: makaralar, menteşeler ve geometri. Kanat elle zorlanıyorsa motor iyileştirmez, bitirir — önce neyin onarılacağını dürüstçe söyleriz.",
             "Fiyat; kapı tipi, motor sınıfı ve kontrol yönteminden oluşur. Sıfırdan komple set, mevcut kapının otomasyonundan kat kat pahalıdır — ama doğru seçimde daha uzun yaşar. Keşif ve teklif ücretsiz; montaj bir-üç gün, mekanik ve işçilik garantili, tüm Özbekistan'da servis.",
           ] },
+          { h: "Elektrik kesintisi ve bakım", p: [
+            "Elektrik kesildiğinde motor birkaç saniye içinde anahtarla boşa alınabilmelidir; acil ayırma mekanizmasının yalnızca bahçeden değil, dışarıdan da erişilebilir olduğunu kontrol edin. Yoğun kullanılan bir girişte yedek güç ünitesi kendini amorti eder: onlarca çevrimi taşır ve yoğun saatlerde çıkış sorununu ortadan kaldırır.",
+            "Altı ayda bir bağlantı elemanlarını sıkın, makaraları yağlayın ve fotoselleri tozdan temizleyin. Yazın mercekteki toz tabakası yanlış algılamaya yol açar, kanat yolun ortasında durur.",
+          ] },
         ],
         faq: [
           { q: "Eski çift kanat kapı otomatikleştirilebilir mi?", a: "Çoğu durumda evet: lineer motorlar kanatlara bir günde takılır. Ana şart sağlam menteşe ve geometri: kapı elle zorlanıyorsa önce onarım, sonra otomasyon." },
@@ -4972,6 +5248,10 @@ export const ARTICLES: Article[] = [
           { h: "现有大门的自动化与价格", p: [
             "现有大门大多不用换就能自动化：电机、红外对射和警示灯一天装好。前提是机械完好：滑轮、合页和门体几何。如果手推都卡，电机治不了病、只会送终——我们会照实说先修什么。",
             "价格由门型、电机等级和控制方式构成。全新成套比给现有门装电机贵数倍——但选型得当也用得更久。勘测和报价免费；安装一到三天，机械和施工带质保，维保覆盖全乌兹别克斯坦。",
+          ] },
+          { h: "断电应对与日常维护", p: [
+            "停电时电机必须能在几秒内用钥匙脱开——请确认应急离合装置从院外也够得着，而不是只能从院子里操作。进出频繁的场地值得配一台备用电源：它可以支撑几十个开关循环，高峰时段不必为出不去发愁。",
+            "每半年做一次：紧固螺栓、给滚轮加润滑、清理光电对射上的积灰。夏天镜片上的一层浮尘就会造成误触发，门扇停在半路。",
           ] },
         ],
         faq: [
@@ -5009,6 +5289,10 @@ export const ARTICLES: Article[] = [
             "Стоимость СКС считается прозрачно: число портов, категория кабеля, сложность трасс, состав шкафов и активного оборудования. Мы выезжаем бесплатно, считаем по плану помещения и отдаём смету с позициями — не «цену за точку», за которой прячутся доплаты.",
             "Монтируем офисы, склады и производства по Ташкенту и всему Узбекистану: новые объекты — на этапе отделки, действующие — без остановки работы, с переключением в нерабочие часы. Гарантия на линии и работы, дальше — сопровождение сети от замены патч-корда до дежурного администрирования.",
           ] },
+          { h: "Внешние трассы и жара", p: [
+            "Между корпусами кабель ведут в гофре или лотке с УФ-стойкой оболочкой: обычная витая пара на солнце Ташкента трескается за два-три сезона. Внутри неотапливаемых складов и на кровле летом бывает выше +50 °C, поэтому запас по температурному диапазону закладывают заранее.",
+            "Пыль — вторая причина отказов: шкафы ставят закрытые, с фильтрами, а неиспользованные порты закрывают заглушками. Такие мелочи стоят копейки на монтаже и экономят выезды потом.",
+          ] },
         ],
         faq: [
           { q: "Сколько портов закладывать на рабочее место?", a: "Стандарт — две розетки на место: компьютер и телефон или запас. Плюс отдельные порты под принтеры, камеры, точки доступа и переговорки. Запас 20–30 % окупается при первом же росте штата." },
@@ -5036,6 +5320,10 @@ export const ARTICLES: Article[] = [
           { h: "Qanday buyurtma qilish va narxi qancha", p: [
             "SKS narxi shaffof hisoblanadi: portlar soni, kabel toifasi, trassalar murakkabligi, shkaflar va aktiv uskuna tarkibi. Bepul chiqamiz, xona plani bo'yicha hisoblaymiz va moddali smeta beramiz — ortida qo'shimcha to'lovlar yashiringan «nuqta narxi» emas.",
             "Toshkent va butun O'zbekiston bo'ylab ofis, ombor va ishlab chiqarishlarni montaj qilamiz: yangi obyektlar — pardozlash bosqichida, ishlayotganlar — ishni to'xtatmasdan, ishlanmaydigan soatlarda ulash bilan. Liniya va ishlarga kafolat, keyin — patch-kord almashtirishdan navbatchi administratorlikkacha tarmoq kuzatuvi.",
+          ] },
+          { h: "Tashqi trassalar va issiq", p: [
+            "Binolar orasida kabel gofra yoki lotokda, UV nurlariga chidamli qobiq bilan tortiladi: oddiy o'ralgan juftlik Toshkent quyoshida ikki-uch mavsumda yorilib ketadi. Isitilmaydigan omborlar ichida va tomda yozda harorat +50 °C dan oshadi, shu sababli harorat diapazoni bo'yicha zaxira oldindan hisobga olinadi.",
+            "Chang — ishdan chiqishning ikkinchi sababi: shkaflar yopiq va filtrli qilib tanlanadi, ishlatilmaydigan portlar esa qopqoqcha bilan yopiladi. Bunday mayda ishlar montajda deyarli hech narsa turmaydi, keyinchalik esa chaqiruvlarni kamaytiradi.",
           ] },
         ],
         faq: [
@@ -5065,6 +5353,10 @@ export const ARTICLES: Article[] = [
             "Structured cabling is priced transparently: port count, cable category, route complexity, cabinets and active equipment. We survey for free, calculate from the floor plan and hand over an itemised estimate — not a \"price per point\" with surcharges hiding behind it.",
             "We build offices, warehouses and factories across Tashkent and Uzbekistan: new sites during fit-out, working ones without stopping the business, with cutover out of hours. Warranty on lines and work; afterwards, network support from patch cord replacement to standby administration.",
           ] },
+          { h: "Outdoor routes and heat", p: [
+            "Between buildings the cable runs in conduit or tray with a UV-resistant jacket: ordinary twisted pair cracks under the Tashkent sun within two or three seasons. Unheated warehouses and rooftops go past +50 °C in summer, so headroom in the temperature rating is planned in advance.",
+            "Dust is the second cause of failures: cabinets are specified closed and filtered, and unused ports get blanking caps. Details like these cost almost nothing during installation and save call-outs later.",
+          ] },
         ],
         faq: [
           { q: "How many ports per workplace?", a: "The standard is two outlets per desk: computer and phone, or spare. Plus dedicated ports for printers, cameras, access points and meeting rooms. A 20–30 % reserve pays off at the first headcount growth." },
@@ -5093,6 +5385,10 @@ export const ARTICLES: Article[] = [
             "SKS şeffaf fiyatlanır: port sayısı, kablo kategorisi, güzergâh zorluğu, kabinler ve aktif ekipman. Ücretsiz keşfe gelir, kat planından hesaplar ve kalem kalem teklif veririz — arkasında ek ücret saklanan «nokta fiyatı» değil.",
             "Taşkent ve tüm Özbekistan'da ofis, depo ve fabrika kurarız: yeni tesisler ince işte, çalışanlar iş durmadan, geçişler mesai dışında. Hatlara ve işçiliğe garanti; sonrasında patch kablo değişiminden nöbetçi yönetime kadar ağ desteği.",
           ] },
+          { h: "Dış güzergâhlar ve sıcak", p: [
+            "Binalar arasında kablo, UV dayanımlı kılıfla spiral boruda veya kablo kanalında çekilir: sıradan burgulu çift, Taşkent güneşinde iki üç sezonda çatlar. Isıtılmayan depolarda ve çatıda yaz sıcaklığı +50 °C'yi aşar, bu yüzden sıcaklık aralığında pay baştan bırakılır.",
+            "Arızaların ikinci nedeni tozdur: kabinetler kapalı ve filtreli seçilir, kullanılmayan portlara kör tapa takılır. Bu ayrıntılar montajda neredeyse hiçbir maliyet getirmez, sonrasında ise servis çağrılarını azaltır.",
+          ] },
         ],
         faq: [
           { q: "Çalışma yeri başına kaç port konmalı?", a: "Standart, masa başına iki priz: bilgisayar ve telefon veya yedek. Artı yazıcılara, kameralara, erişim noktalarına ve toplantı odalarına ayrı portlar. %20–30 pay, ilk kadro büyümesinde kendini öder." },
@@ -5120,6 +5416,10 @@ export const ARTICLES: Article[] = [
           { h: "怎么下单，花多少钱", p: [
             "综合布线报价透明：端口数、线缆类别、路由难度、机柜和有源设备构成。我们免费上门，按平面图核算，给出逐项预算——不是背后藏着加价的「每点单价」。",
             "在塔什干及全乌兹别克斯坦施工办公室、仓库和工厂：新项目在装修阶段进场，在用场所不停业施工、割接安排在非工作时间。链路和施工带质保；之后提供网络运维——从换根跳线到值守管理。",
+          ] },
+          { h: "室外走线与高温", p: [
+            "楼与楼之间的线缆要走波纹管或桥架，并选抗紫外线护套：普通双绞线在塔什干的日晒下两三个季节就会开裂。不采暖的仓库内部和屋面夏季会超过+50 °C，因此温度范围要预先留出余量。",
+            "灰尘是第二大故障原因：机柜选封闭带滤网的款式，空余端口加防尘塞。这些细节在施工阶段几乎不增加成本，日后却能少跑很多趟。",
           ] },
         ],
         faq: [
@@ -5157,6 +5457,10 @@ export const ARTICLES: Article[] = [
             "Аппараты подбираются под роли: настольные IP-телефоны менеджерам, гарнитуры операторам колл-центра, DECT-трубки складу, программные телефоны на компьютерах — там, где физический аппарат не нужен. Сеть готовим правильно: телефония выделяется в свой VLAN с приоритетом, чтобы голос не «квакал» под нагрузкой.",
             "Внедрение — от одного дня для облачной АТС до недели для колл-центра с интеграциями: переносим номера, настраиваем меню и очереди, обучаем сотрудников. Дальше сопровождаем по заявкам — изменения в сценариях не требуют «искать специалиста». Работаем по Ташкенту и всему Узбекистану.",
           ] },
+          { h: "Канал связи и резервирование", p: [
+            "Качество разговора упирается в интернет-канал: телефонии хватает 100 Кбит/с на линию, но важнее стабильность задержки. Голосовой трафик выделяют в отдельный VLAN и приоритизируют на маршрутизаторе, иначе выгрузка файлов рвёт речь.",
+            "Для офиса, где приём звонков — это выручка, предусматривают второго провайдера и питание АТС от ИБП. При обрыве связи облачная АТС автоматически переводит вызовы на мобильные номера сотрудников.",
+          ] },
         ],
         faq: [
           { q: "Сохранится ли наш городской номер при переходе?", a: "Да, существующие номера переносятся или подключаются к IP-АТС через шлюз. Клиенты продолжают звонить на привычный номер — меняется только то, что происходит после гудка." },
@@ -5184,6 +5488,10 @@ export const ARTICLES: Article[] = [
           { h: "Uskuna va joriy etish", p: [
             "Apparatlar rollarga tanlanadi: menejerlarga stol IP-telefonlari, call-markaz operatorlariga garnituralar, omborga DECT-go'shaklar, jismoniy apparat kerak bo'lmagan joyga kompyuterdagi dasturiy telefonlar. Tarmoqni to'g'ri tayyorlaymiz: telefoniya ustuvorlikli o'z VLAN iga ajratiladi, ovoz yuk ostida «vaqillamasligi» uchun.",
             "Joriy etish — bulutli ATS ga bir kundan integratsiyali call-markazga bir haftagacha: raqamlarni ko'chiramiz, menyu va navbatlarni sozlaymiz, xodimlarni o'rgatamiz. Keyin arizalar bo'yicha kuzatib boramiz — stsenariy o'zgarishlari «mutaxassis qidirish»ni talab qilmaydi. Toshkent va butun O'zbekiston bo'ylab ishlaymiz.",
+          ] },
+          { h: "Aloqa kanali va zaxiralash", p: [
+            "Suhbat sifati internet kanaliga bog'liq: bir liniya uchun 100 Kbit/s yetadi, lekin kechikishning barqarorligi muhimroq. Ovoz trafigi alohida VLAN ga ajratiladi va marshrutizatorda ustuvor qilinadi, aks holda fayl yuklash nutqni uzadi.",
+            "Qo'ng'iroqlar tushum keltiradigan ofisda ikkinchi provayder va ATS ni UPS dan quvvatlash oldindan ko'zda tutiladi. Aloqa uzilganda bulutli ATS chaqiruvlarni xodimlarning mobil raqamlariga avtomatik yo'naltiradi.",
           ] },
         ],
         faq: [
@@ -5213,6 +5521,10 @@ export const ARTICLES: Article[] = [
             "Devices follow roles: desk IP phones for managers, headsets for call center operators, DECT handsets for the warehouse, softphones on computers where a physical device is unnecessary. The network is prepared properly: telephony gets its own prioritised VLAN so the voice does not croak under load.",
             "Rollout takes from one day for a cloud PBX to a week for a call center with integrations: we port the numbers, configure menus and queues, and train the staff. Then we support by request — scenario changes do not require \"finding a specialist\". We work across Tashkent and all of Uzbekistan.",
           ] },
+          { h: "Connectivity and backup links", p: [
+            "Call quality rests on the internet channel: telephony needs about 100 Kbps per line, but latency stability matters more. Voice traffic is placed in a separate VLAN and prioritised on the router, otherwise a large upload breaks up speech.",
+            "In an office where answered calls mean revenue, a second provider and a UPS for the PBX are planned in advance. If the link drops, a cloud PBX forwards calls to staff mobile numbers automatically.",
+          ] },
         ],
         faq: [
           { q: "Do we keep our city number after the switch?", a: "Yes — existing numbers are ported or connected to the IP PBX through a gateway. Clients keep calling the familiar number; only what happens after the ring changes." },
@@ -5241,6 +5553,10 @@ export const ARTICLES: Article[] = [
             "Cihazlar role göre seçilir: yöneticilere masa IP telefonları, çağrı merkezi operatörlerine kulaklıklar, depoya DECT el cihazları, fiziksel cihaz gerekmeyen yere bilgisayarda softphone. Ağ doğru hazırlanır: telefon, öncelikli kendi VLAN'ına alınır — ses yük altında hırıldamasın.",
             "Kurulum bulut santral için bir günden, entegrasyonlu çağrı merkezi için bir haftaya: numaraları taşır, menü ve kuyrukları kurar, personeli eğitiriz. Sonrası talep üzerine destek — senaryo değişikliği «uzman aramayı» gerektirmez. Taşkent ve tüm Özbekistan'da çalışıyoruz.",
           ] },
+          { h: "Bağlantı kanalı ve yedekleme", p: [
+            "Görüşme kalitesi internet kanalına dayanır: hat başına yaklaşık 100 Kbit/sn yeterlidir, asıl önemli olan gecikmenin kararlılığıdır. Ses trafiği ayrı bir VLAN'a alınır ve yönlendiricide önceliklendirilir; aksi hâlde büyük bir dosya yüklemesi konuşmayı böler.",
+            "Gelen çağrının ciro anlamına geldiği ofislerde ikinci bir operatör ve santral için UPS baştan planlanır. Hat koptuğunda bulut santral çağrıları personelin cep numaralarına otomatik yönlendirir.",
+          ] },
         ],
         faq: [
           { q: "Geçişte şehir numaramız kalır mı?", a: "Evet — mevcut numaralar taşınır veya ağ geçidiyle IP santrale bağlanır. Müşteriler bildikleri numarayı aramaya devam eder; yalnız zil sesinden sonrası değişir." },
@@ -5268,6 +5584,10 @@ export const ARTICLES: Article[] = [
           { h: "设备与实施", p: [
             "话机按岗位配：经理用桌面IP话机，呼叫中心坐席用耳麦，仓库用DECT无绳手柄，不需要实体话机的岗位用电脑软电话。网络也要备好：语音单独划入高优先级VLAN，高负载下声音不卡顿。",
             "实施周期：云端一天，带集成的呼叫中心一周：迁移号码、配置菜单和队列、培训员工。之后按需支持——改个场景不必「另请高明」。服务覆盖塔什干及全乌兹别克斯坦。",
+          ] },
+          { h: "线路质量与冗余", p: [
+            "通话质量取决于互联网线路：每路通话约需 100 Kbps，但更关键的是延迟是否稳定。语音流量应划入独立 VLAN 并在路由器上做优先级，否则一次大文件上传就会让话音断续。",
+            "对于接通电话即等于营收的办公室，要预先规划第二家运营商并为交换机配置 UPS。线路中断时，云端交换机会自动把来电转到员工手机号上。",
           ] },
         ],
         faq: [
@@ -5305,6 +5625,10 @@ export const ARTICLES: Article[] = [
             "Дверь серверной закрывается СКУД с журналом: «кто и когда заходил к стойкам» — вопрос, на который у ИТ-директора должен быть ответ. Внутри — порядок, который экономит часы при каждой аварии: организация кабеля, маркировка линий, кабельные журналы, схема размещения.",
             "Мы проектируем и строим серверные под ключ: помещение, электрика с ИБП, охлаждение, газовое пожаротушение, СКУД и мониторинг — и модернизируем действующие без остановки сервисов. Обследование бесплатно; работаем по Ташкенту и всему Узбекистану с гарантией и сервисным сопровождением.",
           ] },
+          { h: "Мониторинг температуры и аварий", p: [
+            "Серверная выходит из строя тихо: кондиционер встал ночью в пятницу, а обнаруживают это в понедельник по перегретым дискам. Минимальный набор датчиков — температура в холодном и горячем коридоре, влажность, протечка под фальшполом и открытие двери; все они должны уходить в Telegram или на почту дежурного.",
+            "ИБП и кондиционер подключают к сети по SNMP, чтобы видеть остаток заряда и аварии до отключения нагрузки. Отдельно стоит настроить порог по тренду: рост температуры на 5 °C за полчаса — уже повод выехать, не дожидаясь аварийного значения.",
+          ] },
         ],
         faq: [
           { q: "Можно ли обойтись шкафом вместо отдельной комнаты?", a: "Для малого офиса — да: серверный шкаф с ИБП и вентиляцией в общем помещении. Граница проходит по теплу и шуму: от двух-трёх серверов и выше нужна отдельная комната с нормальным охлаждением." },
@@ -5332,6 +5656,10 @@ export const ARTICLES: Article[] = [
           { h: "Kirish, tartib va hujjatlar", p: [
             "Server xonasi eshigi jurnalli SKUD bilan yopiladi: «stoykalarga kim va qachon kirgan» — IT-direktorda javobi bo'lishi kerak bo'lgan savol. Ichkarida — har avariyada soatlarni tejaydigan tartib: kabel tashkiloti, liniyalar markirovkasi, kabel jurnallari, joylashuv sxemasi.",
             "Server xonalarini kalit topshirish sharti bilan loyihalaymiz va quramiz: xona, UPS li elektrika, sovutish, gazli o't o'chirish, SKUD va monitoring — ishlayotganlarni servislarni to'xtatmasdan modernizatsiya qilamiz. Tekshiruv bepul; Toshkent va butun O'zbekiston bo'ylab kafolat va servis kuzatuvi bilan ishlaymiz.",
+          ] },
+          { h: "Harorat va avariyalar monitoringi", p: [
+            "Server xonasi jimgina ishdan chiqadi: konditsioner juma kuni kechasi to'xtaydi, buni esa dushanba kuni qizib ketgan disklardan bilib qolishadi. Datchiklarning minimal to'plami — sovuq va issiq yo'lakdagi harorat, namlik, fals-pol ostidagi suv oqishi va eshik ochilishi; ularning barchasi Telegramga yoki navbatchining pochtasiga xabar yuborishi kerak.",
+            "UPS va konditsioner SNMP orqali tarmoqqa ulanadi — shunda zaryad qoldig'i va nosozliklar yuk o'chishidan oldin ko'rinadi. Alohida chegara ham foydali: yarim soatda haroratning 5 °C ga ko'tarilishi avariya qiymatini kutmasdan yo'lga chiqish uchun asos bo'ladi.",
           ] },
         ],
         faq: [
@@ -5361,6 +5689,10 @@ export const ARTICLES: Article[] = [
             "The server room door is closed with logged access control: \"who entered the racks and when\" is a question the IT director must be able to answer. Inside — the order that saves hours in every incident: cable management, line labeling, cable journals, a layout diagram.",
             "We design and build server rooms turnkey: the room, electrics with UPS, cooling, gas suppression, access control and monitoring — and modernise live rooms without stopping services. The survey is free; we work across Tashkent and all of Uzbekistan with a warranty and service support.",
           ] },
+          { h: "Monitoring temperature and alarms", p: [
+            "A server room fails quietly: the air conditioner stops on Friday night and it is discovered on Monday, from overheated drives. The minimum sensor set is temperature in the cold and hot aisle, humidity, a leak detector under the raised floor and a door contact; all of them should report to Telegram or to the duty engineer's mailbox.",
+            "The UPS and the air conditioner are put on the network over SNMP so that remaining runtime and faults are visible before the load drops. A trend threshold is worth setting as well: a 5 °C rise in half an hour is already a reason to drive out, without waiting for the alarm value.",
+          ] },
         ],
         faq: [
           { q: "Can a cabinet replace a separate room?", a: "For a small office — yes: a server cabinet with a UPS and ventilation in a shared room. The boundary is heat and noise: from two or three servers up, you need a separate room with proper cooling." },
@@ -5389,6 +5721,10 @@ export const ARTICLES: Article[] = [
             "Sistem odasının kapısı kayıtlı geçiş kontrolüyle kapatılır: «kabinlere kim, ne zaman girdi» BT direktörünün yanıtlayabilmesi gereken sorudur. İçeride her arızada saat kazandıran düzen: kablo yönetimi, hat etiketleri, kablo defterleri, yerleşim şeması.",
             "Sistem odalarını anahtar teslim tasarlar ve kurarız: mekân, UPS'li elektrik, soğutma, gazlı söndürme, geçiş kontrolü ve izleme — çalışan odaları da servisleri durdurmadan yenileriz. Keşif ücretsiz; Taşkent ve tüm Özbekistan'da garanti ve servis desteğiyle çalışırız.",
           ] },
+          { h: "Sıcaklık ve arıza izleme", p: [
+            "Sistem odası sessizce çöker: klima cuma gecesi durur, bu da pazartesi günü ısınmış disklerden anlaşılır. Asgari sensör seti soğuk ve sıcak koridor sıcaklığı, nem, yükseltilmiş döşeme altındaki su kaçağı ve kapı kontağıdır; hepsi Telegram'a ya da nöbetçinin e-postasına düşmelidir.",
+            "UPS ve klima, kalan akü süresi ile arızalar yük düşmeden görülebilsin diye SNMP üzerinden ağa bağlanır. Ayrıca bir eğilim eşiği tanımlamak yerinde olur: yarım saatte 5 °C artış, alarm değerini beklemeden yola çıkmak için yeterli sebeptir.",
+          ] },
         ],
         faq: [
           { q: "Ayrı oda yerine kabin yeter mi?", a: "Küçük ofise evet: ortak mekânda UPS'li ve havalandırmalı sunucu kabini. Sınır ısı ve gürültüden geçer: iki-üç sunucudan itibaren düzgün soğutmalı ayrı oda gerekir." },
@@ -5416,6 +5752,10 @@ export const ARTICLES: Article[] = [
           { h: "门禁、秩序与文档", p: [
             "机房的门用带日志的门禁管住：「谁在什么时候进过机柜」——IT主管必须答得上来。屋里是每次故障都省下数小时的秩序：理线、线路标识、线缆台账、设备布置图。",
             "我们一站式设计建设机房：房间、带UPS的电气、制冷、气体灭火、门禁和监控——在用机房的改造不停业务进行。勘测免费；服务覆盖塔什干及全乌兹别克斯坦，带质保和维保。",
+          ] },
+          { h: "温度与告警监控", p: [
+            "机房出事往往是无声的：空调周五夜里停机，周一才从过热的硬盘上发现。最低限度的传感器包括冷热通道温度、湿度、架空地板下的漏水检测和门磁；这些信号都应推送到 Telegram 或值班人员的邮箱。",
+            "UPS 和空调通过 SNMP 接入网络，这样在负载掉电之前就能看到剩余电池时间和故障信息。另外建议设置趋势阈值：半小时内温度上升 5 °C，就该立即赶到现场，而不是等到报警值。",
           ] },
         ],
         faq: [
@@ -5453,6 +5793,10 @@ export const ARTICLES: Article[] = [
             "Базовые алгоритмы современные камеры Hikvision и Dahua несут «на борту» — периметру и детекции сервер не нужен. Распознавание по большим базам лиц, подсчёт в масштабе сети магазинов и сложные сценарии требуют серверной платформы с ИИ. Мы считаем оба варианта честно — и часто добавляем аналитику к уже установленным камерам без замены парка.",
             "Начинаем со сценариев, а не с прайса: что должно происходить при тревоге, кому приходит уведомление, какие отчёты нужны руководителю. Затем пилот на одной-двух камерах и тираж. Внедряем под ключ по Ташкенту и всему Узбекистану — с обучением операторов, гарантией и поддержкой.",
           ] },
+          { h: "Хранение биометрии и доступ к базе", p: [
+            "Шаблоны лиц — персональные данные, и хранить их лучше внутри объекта: на сервере или регистраторе, а не в чужом облаке. До запуска стоит определить, кто имеет право добавлять людей в базу, сколько хранятся события и как сотрудника удаляют при увольнении.",
+            "Отдельно фиксируют журнал действий администратора — он же защищает компанию при спорах. Согласие сотрудников на биометрию оформляют письменно, а для посетителей обычно ограничиваются детекцией без идентификации.",
+          ] },
         ],
         faq: [
           { q: "Можно ли добавить аналитику к нашим старым камерам?", a: "Чаще всего да: серверное ПО анализирует поток с любых камер приличного разрешения. Приезжаем, смотрим парк и говорим честно, что заработает, а где камеру лучше заменить." },
@@ -5480,6 +5824,10 @@ export const ARTICLES: Article[] = [
           { h: "Kamera yoki server — va qanday boshlash", p: [
             "Bazaviy algoritmlarni zamonaviy Hikvision va Dahua kameralari «bortida» olib yuradi — perimetr va detektsiyaga server kerak emas. Katta yuz bazalari bo'yicha tanish, do'konlar tarmog'i ko'lamidagi hisob va murakkab stsenariylar sun'iy intellektli server platformasini talab qiladi. Ikkala variantni halol hisoblaymiz — va ko'pincha analitikani parkni almashtirmasdan o'rnatilgan kameralarga qo'shamiz.",
             "Prays bilan emas, stsenariylar bilan boshlaymiz: trevogada nima bo'lishi kerak, xabar kimga keladi, rahbarga qanday hisobotlar kerak. Keyin bir-ikki kamerada pilot va tiraj. Toshkent va butun O'zbekiston bo'ylab kalit topshirish sharti bilan joriy etamiz — operatorlarni o'qitish, kafolat va qo'llab-quvvatlash bilan.",
+          ] },
+          { h: "Biometriyani saqlash va bazaga kirish", p: [
+            "Yuz shablonlari — shaxsiy ma'lumotlar, ularni obyekt ichida saqlagan ma'qul: serverda yoki registratorda, begona bulutda emas. Ishga tushirishdan oldin kim bazaga odam qo'shish huquqiga ega, hodisalar qancha saqlanadi va ishdan bo'shaganda xodim yozuvi qanday o'chiriladi — shular belgilab olinadi.",
+            "Administrator harakatlari jurnali alohida yuritiladi — nizolarda u kompaniyani ham himoya qiladi. Xodimlarning biometriyaga roziligi yozma rasmiylashtiriladi, mehmonlar uchun esa odatda identifikatsiyasiz detektsiya bilan cheklaniladi.",
           ] },
         ],
         faq: [
@@ -5509,6 +5857,10 @@ export const ARTICLES: Article[] = [
             "Modern Hikvision and Dahua cameras carry the basic algorithms on board — perimeter and detection need no server. Recognition against large face databases, counting across a store chain and complex scenarios call for an AI server platform. We price both options honestly — and often add analytics to cameras already installed, with no fleet replacement.",
             "We start with scenarios, not a price list: what must happen on an alarm, who gets the notification, which reports management needs. Then a pilot on one or two cameras, and rollout. Turnkey across Tashkent and all of Uzbekistan — with operator training, warranty and support.",
           ] },
+          { h: "Biometric storage and database access", p: [
+            "Face templates are personal data and are better kept on site — on a server or recorder rather than in someone else's cloud. Before launch, decide who may add people to the database, how long events are retained, and how an employee record is deleted after dismissal.",
+            "Keep a separate audit log of administrator actions; it also protects the company in disputes. Employee consent to biometrics is put in writing, while for visitors detection without identification is usually enough.",
+          ] },
         ],
         faq: [
           { q: "Can analytics be added to our old cameras?", a: "Usually yes: server software analyses the stream from any camera of decent resolution. We come, look at the fleet and say honestly what will work and where a camera is better replaced." },
@@ -5537,6 +5889,10 @@ export const ARTICLES: Article[] = [
             "Modern Hikvision ve Dahua kameralar temel algoritmaları üzerinde taşır — çevre ve algılama için sunucu gerekmez. Büyük yüz veritabanları, zincir ölçeğinde sayım ve karmaşık senaryolar yapay zekâlı sunucu platformu ister. İkisini de dürüstçe fiyatlandırırız — ve analitiği çoğu kez filo değiştirmeden kurulu kameralara ekleriz.",
             "Fiyat listesiyle değil senaryolarla başlarız: alarmda ne olmalı, bildirim kime gitmeli, yönetime hangi raporlar gerekli. Sonra bir-iki kamerada pilot ve yaygınlaştırma. Taşkent ve tüm Özbekistan'da anahtar teslim — operatör eğitimi, garanti ve destekle.",
           ] },
+          { h: "Biyometri saklama ve veri tabanı erişimi", p: [
+            "Yüz şablonları kişisel veridir ve sahada tutulması daha doğrudur: yabancı bir bulutta değil, kendi sunucunuzda veya kayıt cihazında. Devreye almadan önce veri tabanına kimin kişi ekleyebileceği, olayların ne kadar saklanacağı ve işten ayrılan personelin kaydının nasıl silineceği belirlenmelidir.",
+            "Yönetici işlemleri için ayrı bir kayıt günlüğü tutulur; bu günlük anlaşmazlıklarda şirketi de korur. Personelin biyometri onayı yazılı alınır, ziyaretçiler için genellikle kimlik eşleştirmesiz algılama yeterli olur.",
+          ] },
         ],
         faq: [
           { q: "Eski kameralarımıza analitik eklenir mi?", a: "Çoğunlukla evet: sunucu yazılımı, makul çözünürlükteki her kameranın akışını analiz eder. Gelir, filoya bakar ve neyin çalışacağını, hangi kameranın değişmesinin daha iyi olduğunu dürüstçe söyleriz." },
@@ -5564,6 +5920,10 @@ export const ARTICLES: Article[] = [
           { h: "算法放在哪、从哪开始", p: [
             "现代海康威视和大华摄像机自带基础算法——周界和检测不需要服务器。基于大型人脸库的识别、连锁规模的客流统计和复杂场景才需要AI服务器平台。两种方案我们都如实核算——并常常在不更换现有摄像机的前提下叠加分析。",
             "我们从场景出发而不是从价格表：报警时应发生什么、通知发给谁、管理层要什么报表。然后一两台摄像机试点、再铺开。塔什干及全乌兹别克斯坦一站式交付——含值班员培训、质保和支持。",
+          ] },
+          { h: "人脸数据的存储与库权限", p: [
+            "人脸特征属于个人数据，最好留在本地——存放在自有服务器或录像机上，而不是第三方云端。上线前应确定谁有权向底库添加人员、事件记录保存多久，以及员工离职后如何删除其数据。",
+            "管理员操作日志要单独留存，一旦发生纠纷，它同样保护企业。员工的人脸采集需取得书面同意；对访客通常只做不进行身份比对的检测。",
           ] },
         ],
         faq: [
@@ -5763,6 +6123,10 @@ export const ARTICLES: Article[] = [
             "Реальные объекты редко бывают «чистыми»: типичный магазин живёт с аналоговыми камерами по коаксиалу и хочет добавить пару IP с распознаванием на вход. Это штатная схема — гибридный регистратор принимает оба типа, и апгрейд идёт поэтапно, без остановки записи и замены всей проводки.",
             "Планируя переход, начните с зон, где важна детализация: вход, касса, периметр. Старый аналог остаётся в подсобках и коридорах до конца своего ресурса. Мы считаем такие миграции регулярно — приезжайте с планом объекта или зовите инженера, маршрут перехода будет бесплатным.",
           ] },
+          { h: "Нагрузка на сеть и глубина архива", p: [
+            "IP-камера 4 Мп в H.265 даёт порядка 4–6 Мбит/с, и шестнадцать таких камер уже требуют отдельного коммутатора с запасом по PoE и гигабитного канала до регистратора. Аналоговая линия этой нагрузки на сеть не создаёт вовсе.",
+            "Глубину архива считают заранее: тридцать суток по шестнадцати каналам — это единицы терабайт. Детекция движения и переменный битрейт сокращают объём в два-три раза без потери нужных кадров.",
+          ] },
           { h: "Вывод", p: [
             "Технология — не религия, а инструмент под бюджет и состояние объекта. Мы монтируем и то и другое: пришлите фото объекта или план — посчитаем оба варианта, и вы сравните не абстракции, а конкретные сметы.",
           ] },
@@ -5791,6 +6155,10 @@ export const ARTICLES: Article[] = [
           { h: "Amaliyotda gibrid: obyektlar IP ga qanday o'tadi", p: [
             "Real obyektlar kamdan-kam «toza» bo'ladi: tipik do'kon koaksialdagi analog kameralar bilan yashaydi va kirishga tanishli bir juft IP qo'shmoqchi. Bu shtatniy sxema — gibrid registrator ikkala turni qabul qiladi, apgreyd yozuvni to'xtatmasdan va butun simlarni almashtirmasdan bosqichma-bosqich boradi.",
             "O'tishni rejalashtirganda detalizatsiya muhim zonalardan boshlang: kirish, kassa, perimetr. Eski analog resursi tugaguncha yordamchi xona va koridorlarda qoladi. Bunday migratsiyalarni muntazam hisoblaymiz — obyekt plani bilan keling yoki muhandisni chaqiring, o'tish marshruti bepul bo'ladi.",
+          ] },
+          { h: "Tarmoqqa yuk va arxiv chuqurligi", p: [
+            "H.265 dagi 4 Mp li IP kamera taxminan 4–6 Mbit/s beradi, o'n oltita shunday kamera esa PoE zaxirasi bo'lgan alohida kommutator va registratorgacha gigabitli kanalni talab qiladi. Analog liniya tarmoqqa bunday yukni umuman bermaydi.",
+            "Arxiv chuqurligi oldindan hisoblanadi: o'n olti kanal bo'yicha o'ttiz sutka — bu bir necha terabayt. Harakat detektsiyasi va o'zgaruvchan bitreyt hajmni kerakli kadrlarni yo'qotmasdan ikki-uch barobar kamaytiradi.",
           ] },
           { h: "Xulosa", p: [
             "Texnologiya — din emas, byudjet va obyekt holatiga mos vosita. Biz ikkalasini ham o'rnatamiz: obyekt suratini yoki rejasini yuboring — ikkala variantni hisoblaymiz, siz esa mavhumlikni emas, aniq smetalarni taqqoslaysiz.",
@@ -5821,6 +6189,10 @@ export const ARTICLES: Article[] = [
             "Real sites are rarely \"pure\": a typical shop lives with analog cameras over coax and wants to add a couple of IP units with recognition at the entrance. That is a standard scheme — a hybrid recorder accepts both types, and the upgrade goes in stages without stopping recording or replacing all the wiring.",
             "When planning the move, start with the zones where detail matters: the entrance, the till, the perimeter. The old analog stays in back rooms and corridors until the end of its life. We calculate such migrations regularly — come with a site plan or call an engineer; the migration route is free.",
           ] },
+          { h: "Network load and archive depth", p: [
+            "A 4 MP IP camera in H.265 produces roughly 4–6 Mbps, and sixteen of them already call for a dedicated switch with PoE headroom and a gigabit link to the recorder. An analog line puts no load on the network at all.",
+            "Archive depth is calculated in advance: thirty days across sixteen channels means several terabytes. Motion detection and variable bitrate cut the volume two to three times without losing the frames that matter.",
+          ] },
           { h: "Conclusion", p: [
             "Technology is not a religion — it is a tool matched to your budget and the state of the site. We install both: send a photo or plan of your site and we will price both options, so you compare real estimates, not abstractions.",
           ] },
@@ -5850,6 +6222,10 @@ export const ARTICLES: Article[] = [
             "Gerçek tesisler nadiren «saf» olur: tipik mağaza koaksiyeldeki analog kameralarla yaşar ve girişe tanımalı birkaç IP eklemek ister. Bu standart şemadır — hibrit kayıt cihazı iki tipi de kabul eder; yükseltme, kaydı durdurmadan ve tüm kabloyu değiştirmeden aşamalı gider.",
             "Geçişi planlarken detayın önemli olduğu bölgelerden başlayın: giriş, kasa, çevre. Eski analog, ömrü bitene dek arka odalarda ve koridorlarda kalır. Bu tür geçişleri düzenli hesaplıyoruz — tesis planıyla gelin veya mühendis çağırın; geçiş rotası ücretsizdir.",
           ] },
+          { h: "Ağ yükü ve kayıt süresi", p: [
+            "H.265 kodlamalı 4 MP bir IP kamera yaklaşık 4–6 Mbit/sn üretir; on altı kamera ise PoE payı olan ayrı bir switch ve kayıt cihazına gigabit bağlantı gerektirir. Analog hat ağa hiçbir yük bindirmez.",
+            "Kayıt derinliği önceden hesaplanır: on altı kanalda otuz gün birkaç terabayt eder. Hareket algılama ve değişken bit hızı, önemli kareleri kaybetmeden hacmi iki üç kat düşürür.",
+          ] },
           { h: "Sonuç", p: [
             "Teknoloji din değil, bütçeye ve sahanın durumuna göre seçilen bir araçtır. İkisini de kuruyoruz: sahanızın fotoğrafını veya planını gönderin, iki seçeneği de fiyatlandıralım — soyutlamaları değil somut teklifleri karşılaştırın.",
           ] },
@@ -5878,6 +6254,10 @@ export const ARTICLES: Article[] = [
           { h: "混合方案的实践：现场怎样过渡到IP", p: [
             "真实的现场很少「纯粹」：典型的商店用同轴模拟摄像机过日子，又想在入口加两台带识别的IP机。这是标准方案——混合录像机两种都收，升级分阶段进行，录像不中断、线路不必全换。",
             "规划过渡时，从需要细节的区域开始：入口、收银台、周界。老的模拟机留在后仓和走廊，用到寿终正寝。这类迁移我们经常核算——带着平面图来，或叫工程师上门，过渡路线图免费。",
+          ] },
+          { h: "网络带宽与录像存储时长", p: [
+            "一台400万像素、采用H.265编码的IP摄像机码流约为4–6 Mbps，十六台就需要一台带PoE余量的独立交换机和到录像机的千兆链路。模拟线路则完全不占用网络带宽。",
+            "存储时长要提前计算：十六路保存三十天，容量在几个TB量级。开启移动侦测和可变码率，可以在不丢关键画面的前提下把容量降到原来的三分之一到二分之一。",
           ] },
           { h: "结论", p: [
             "技术不是信仰，而是匹配预算和现场条件的工具。两种我们都安装：把现场照片或平面图发给我们，两个方案都报价——您比较的将是具体预算，而非抽象概念。",
@@ -5915,6 +6295,10 @@ export const ARTICLES: Article[] = [
             "По бюджету ZKTeco выигрывает в классике «дверь + учёт времени»: терминалы дешевле при сопоставимой точности, и для проходной на 50–500 человек это самый частый выбор. Hikvision берёт своё там, где биометрия — часть большой системы: единая платформа с камерами, домофонами и турникетами, один журнал и один интерфейс для охраны.",
             "Наша практика: офисы и производства чаще получают ZKTeco по соотношению цена/функции, объекты с развитым видеонаблюдением Hikvision — терминалы того же вендора. Оба варианта со склада в Ташкенте; привозим на объект, показываем скорость распознавания вживую и считаем комплект бесплатно.",
           ] },
+          { h: "Расширение и совместимость систем", p: [
+            "Смешивать бренды в одной системе можно, но точка стыка должна быть определена заранее: чаще всего это контроллер и считыватель по Wiegand или OSDP, реже — обмен событиями через API. Единая база сотрудников при этом остаётся в одной платформе, вторая работает как периферия.",
+            "Перед закупкой уточните, есть ли выгрузка отметок в формат, который примет ваша бухгалтерия, и хранится ли шаблон отпечатка локально — это влияет на переезд на другую систему через два-три года.",
+          ] },
           { h: "Вывод", p: [
             "ZKTeco — про биометрию и учёт времени за разумные деньги, Hikvision — про единую экосистему безопасности. Мы внедряем обе марки, включая интеграцию с 1С и зарплатными модулями: расскажите, какие отчёты и сценарии прохода вам нужны — предложим конфигурацию в двух вариантах с ценами.",
           ] },
@@ -5942,6 +6326,10 @@ export const ARTICLES: Article[] = [
           { h: "Narxlar va bizning amaliy tanlovimiz", p: [
             "Byudjet bo'yicha ZKTeco «eshik + vaqt hisobi» klassikasida yutadi: terminallar taqqoslanadigan aniqlikda arzonroq, 50–500 kishilik prohodnayaga bu eng ko'p tanlov. Hikvision biometriya katta tizimning qismi bo'lgan joyda o'zinikini oladi: kameralar, domofonlar va turniketlar bilan yagona platforma, qo'riq uchun bitta jurnal va bitta interfeys.",
             "Amaliyotimiz: ofis va ishlab chiqarishlar narx/funksiya nisbatida ko'proq ZKTeco oladi, rivojlangan Hikvision videokuzatuvli obyektlar — o'sha vendor terminallarini. Ikkala variant Toshkentdagi ombordan; obyektga olib kelamiz, tanish tezligini jonli ko'rsatamiz va to'plamni bepul hisoblaymiz.",
+          ] },
+          { h: "Kengaytirish va tizim mosligi", p: [
+            "Bir tizimda brendlarni aralashtirish mumkin, lekin ulanish nuqtasi oldindan belgilanishi kerak: ko'pincha bu Wiegand yoki OSDP orqali kontroller va o'quvchi, kamroq hollarda — API orqali hodisa almashinuvi. Xodimlarning yagona bazasi bitta platformada qoladi, ikkinchisi periferiya sifatida ishlaydi.",
+            "Xarid oldidan aniqlang: belgilar buxgalteriyangiz qabul qiladigan formatga yuklanadimi va barmoq izi shabloni lokal saqlanadimi — bu ikki-uch yildan keyin boshqa tizimga o'tish qanchalik oson bo'lishini belgilaydi.",
           ] },
           { h: "Xulosa", p: [
             "ZKTeco — oqilona pulga biometriya va vaqt hisobi haqida, Hikvision — yagona xavfsizlik ekotizimi haqida. Biz ikkala markani, shu jumladan 1C va ish haqi modullari bilan integratsiyani joriy etamiz: qanday hisobot va o'tish stsenariylari kerakligini ayting — narxlari bilan ikki variantda konfiguratsiya taklif qilamiz.",
@@ -5971,6 +6359,10 @@ export const ARTICLES: Article[] = [
             "On budget, ZKTeco wins the classic \"door + time attendance\" case: terminals are cheaper at comparable accuracy, and for a 50–500 person entrance it is the most frequent choice. Hikvision takes over where biometrics is part of a bigger system: one platform with cameras, intercoms and turnstiles, one log and one interface for security.",
             "Our practice: offices and factories more often get ZKTeco for price/features, while sites with an established Hikvision CCTV setup get the same vendor's terminals. Both are in Tashkent stock; we bring them to your site, demonstrate recognition speed live and quote the kit for free.",
           ] },
+          { h: "Expansion and cross-brand compatibility", p: [
+            "Mixing brands in one system is workable, but the junction point has to be defined in advance: usually a controller and reader over Wiegand or OSDP, less often an event exchange through an API. The single employee database stays in one platform, while the other side works as peripheral hardware.",
+            "Before purchasing, confirm whether punch data exports in a format your accounting will accept, and whether the fingerprint template is stored locally — that decides how hard a move to another system will be in two or three years.",
+          ] },
           { h: "Conclusion", p: [
             "ZKTeco is about biometrics and time tracking for sensible money; Hikvision is about a unified security ecosystem. We deploy both, including 1C and payroll integration: tell us which reports and entry scenarios you need — we will propose two configurations with prices.",
           ] },
@@ -5999,6 +6391,10 @@ export const ARTICLES: Article[] = [
             "Bütçede ZKTeco, klasik «kapı + mesai» senaryosunu kazanır: terminaller benzer doğrulukta daha ucuzdur ve 50–500 kişilik giriş için en sık seçimdir. Hikvision, biyometrinin büyük sistemin parçası olduğu yerde öne geçer: kameralar, diafonlar ve turnikelerle tek platform, güvenlik için tek kayıt ve tek arayüz.",
             "Pratiğimiz: ofisler ve fabrikalar fiyat/özellik oranıyla çoğunlukla ZKTeco alır; oturmuş Hikvision kamera altyapısı olan tesisler aynı üreticinin terminallerini seçer. İkisi de Taşkent stoğunda; tesise getirir, tanıma hızını canlı gösterir ve seti ücretsiz hesaplarız.",
           ] },
+          { h: "Genişletme ve markalar arası uyum", p: [
+            "Tek bir sistemde markaları karıştırmak mümkündür, ancak birleşme noktası önceden belirlenmelidir: çoğunlukla Wiegand ya da OSDP üzerinden kontrolcü ve okuyucu, daha seyrek olarak API ile olay alışverişi. Tek personel veritabanı bir platformda kalır, diğer taraf çevre donanımı olarak çalışır.",
+            "Satın almadan önce okutma verilerinin muhasebenizin kabul edeceği bir biçimde dışa aktarılıp aktarılmadığını ve parmak izi şablonunun yerelde saklanıp saklanmadığını netleştirin; iki üç yıl sonra başka bir sisteme geçişin zorluğu buna bağlı.",
+          ] },
           { h: "Sonuç", p: [
             "ZKTeco makul paraya biyometri ve mesai takibi; Hikvision bütünleşik güvenlik ekosistemi demektir. İkisini de kuruyoruz, 1C ve bordro entegrasyonu dahil: hangi raporlara ve geçiş senaryolarına ihtiyacınız olduğunu söyleyin — fiyatlarıyla iki konfigürasyon önerelim.",
           ] },
@@ -6026,6 +6422,10 @@ export const ARTICLES: Article[] = [
           { h: "价格与我们的实战选择", p: [
             "论预算，ZKTeco赢在「门禁＋考勤」的经典场景：精度相当、终端更便宜，50–500人的门岗它是最常见的选择。当生物识别是大系统的一环时，海康威视占优：与摄像机、对讲和闸机同平台，保安只看一个日志、一个界面。",
             "我们的实践：办公室和工厂按性价比多选ZKTeco；已有成熟海康威视监控的场所选同厂终端。两种都是塔什干现货；带到现场实测识别速度，套件免费核算。",
+          ] },
+          { h: "扩容与跨品牌兼容", p: [
+            "同一套系统里混用品牌是可行的，但衔接点必须提前定下来：通常是控制器与读头之间走Wiegand或OSDP，较少见的是通过API交换事件。统一的人员库留在其中一个平台上，另一侧作为外围设备运行。",
+            "采购前先确认两点：打卡数据能否导出成财务能接收的格式，指纹模板是否保存在本地。两三年后要迁移到别的系统时，这两点决定了难易程度。",
           ] },
           { h: "结论", p: [
             "ZKTeco代表花合理的钱做生物识别和考勤；海康威视代表统一的安防生态。两个品牌我们都做，包括1C和工资模块对接：告诉我们您需要哪些报表和通行场景——我们给出两套带价格的配置方案。",
@@ -6598,6 +6998,10 @@ export const ARTICLES: Article[] = [
             "NVR со встроенными PoE-портами питает камеры сам: воткнули кабель — камера работает, отдельный коммутатор не нужен. Это идеальный вариант для дома и небольшого офиса на 4–8 камер: минимум оборудования и настройки.",
             "На больших объектах гибче схема с отдельными PoE-коммутаторами: камеры группируются по этажам, а до регистратора идёт один магистральный кабель.",
           ] },
+          { h: "Совместимость камер и ONVIF", p: [
+            "Регистратор одного бренда не всегда полноценно работает с чужими камерами: базовый поток по ONVIF пойдёт, а детекция, аудио и настройка параметров из интерфейса — не факт. Если камеры уже стоят, регистратор подбирают под них, а не наоборот.",
+            "Отдельно уточняйте поддержку кодека: H.265+ экономит до половины места на диске, но старые камеры его не отдают. Смешанный парк проще собрать вокруг одной линейки и оставить два-три свободных канала на будущее.",
+          ] },
           { h: "Итог: как не ошибиться", p: [
             "Формула выбора: каналы с запасом ×1.5, поддержка разрешения ваших камер, H.265, диск Purple/SkyHawk нужного объёма и облачный доступ с телефона. Остальное — детали конкретного объекта.",
             "Пришлите список камер или план объекта — подберём регистратор и диск под нужную глубину архива, установим и настроим просмотр с телефона.",
@@ -6633,6 +7037,10 @@ export const ARTICLES: Article[] = [
           { h: "PoE-registratorlar: qachon qulay", p: [
             "Ichki PoE-portli NVR kameralarni o'zi quvvatlaydi: kabelni ulading — kamera ishlaydi, alohida kommutator kerak emas. Bu 4–8 kamerali uy va kichik ofis uchun ideal variant.",
             "Katta obyektlarda alohida PoE-kommutatorli sxema moslashuvchanroq: kameralar qavatlar bo'yicha guruhlanadi.",
+          ] },
+          { h: "Kameralar mosligi va ONVIF", p: [
+            "Bir brend registratori begona kameralar bilan har doim ham to'liq ishlamaydi: ONVIF orqali asosiy oqim keladi, ammo detektsiya, ovoz va parametrlarni interfeysdan sozlash kafolatlanmaydi. Kameralar allaqachon o'rnatilgan bo'lsa, registrator ularga moslab tanlanadi, teskarisiga emas.",
+            "Kodek qo'llab-quvvatlanishini alohida aniqlashtiring: H.265+ diskda joyning yarmigacha tejaydi, lekin eski kameralar uni bermaydi. Aralash parkni bitta mahsulot liniyasi atrofida yig'ish osonroq, kelajak uchun esa ikki-uchta bo'sh kanal qoldiriladi.",
           ] },
           { h: "Xulosa: qanday adashmaslik", p: [
             "Tanlash formulasi: kanallar ×1.5 zaxira bilan, kameralaringiz aniqligini qo'llab-quvvatlash, H.265, kerakli hajmdagi Purple/SkyHawk disk va telefondan bulutli kirish.",
@@ -6670,6 +7078,10 @@ export const ARTICLES: Article[] = [
             "An NVR with built-in PoE ports powers the cameras itself: plug in the cable and the camera is running — no separate switch required. It's the ideal option for a home or small office with 4–8 cameras: minimal hardware and setup.",
             "On larger sites a layout with dedicated PoE switches is more flexible: cameras are grouped by floor, and a single trunk cable runs to the recorder.",
           ] },
+          { h: "Camera compatibility and ONVIF", p: [
+            "A recorder from one brand does not always work fully with another vendor's cameras: the basic stream over ONVIF will come through, but detection, audio and parameter setup from the interface are not guaranteed. If the cameras are already in place, the recorder is chosen to match them, not the other way round.",
+            "Check codec support separately: H.265+ saves up to half the disk space, but older cameras will not deliver it. A mixed fleet is easier to build around a single product line, leaving two or three free channels for later.",
+          ] },
           { h: "Bottom Line: How to Get It Right", p: [
             "The selection formula: channels with a ×1.5 reserve, support for your cameras' resolution, H.265, a Purple/SkyHawk drive of the right capacity, and cloud access from your phone. Everything else comes down to the specifics of your site.",
             "Send us your camera list or a site plan — we'll match a recorder and drive to the archive depth you need, install everything and set up mobile viewing.",
@@ -6706,6 +7118,10 @@ export const ARTICLES: Article[] = [
             "Dahili PoE portlu bir NVR, kameraları kendisi besler: kabloyu taktığınız anda kamera çalışır, ayrıca switch gerekmez. Ev ve 4–8 kameralı küçük ofisler için ideal seçenektir: minimum ekipman ve kurulum.",
             "Büyük tesislerde ayrı PoE switch'li mimari daha esnektir: kameralar katlara göre gruplanır ve kayıt cihazına tek bir ana hat kablosu çekilir.",
           ] },
+          { h: "Kamera uyumluluğu ve ONVIF", p: [
+            "Bir markanın kayıt cihazı, başka üreticinin kameralarıyla her zaman tam çalışmaz: ONVIF üzerinden temel görüntü akışı gelir, ancak algılama, ses ve parametrelerin arayüzden ayarlanması garanti değildir. Kameralar zaten kuruluysa kayıt cihazı onlara göre seçilir, tersi değil.",
+            "Kodek desteğini ayrıca teyit edin: H.265+ disk alanının yarısına kadarını kazandırır, ancak eski kameralar bunu vermez. Karma bir park tek bir ürün ailesi etrafında kurulduğunda daha kolay yönetilir; ileride kullanmak üzere iki üç kanal boş bırakılır.",
+          ] },
           { h: "Özet: Hata Yapmamak İçin", p: [
             "Seçim formülü: ×1,5 yedekli kanal sayısı, kameralarınızın çözünürlüğüne destek, H.265, uygun kapasitede Purple/SkyHawk disk ve telefondan bulut erişimi. Gerisi projenin kendine özgü detaylarıdır.",
             "Kamera listenizi veya tesis planınızı gönderin — ihtiyacınız olan arşiv süresine uygun kayıt cihazı ve diski seçelim, kurulumu yapıp telefondan izlemeyi ayarlayalım.",
@@ -6741,6 +7157,10 @@ export const ARTICLES: Article[] = [
           { h: "PoE录像机：什么场景更方便", p: [
             "内置PoE端口的NVR可直接为摄像机供电：插上网线摄像机即可工作，无需单独的交换机。这是家庭和4–8台摄像机的小型办公室的理想方案：设备和配置都降到最少。",
             "在大型项目中，采用独立PoE交换机的方案更灵活：摄像机按楼层分组，只需一条主干线缆连接到录像机。",
+          ] },
+          { h: "摄像机兼容性与ONVIF", p: [
+            "一个品牌的录像机未必能完整支持别家的摄像机：通过ONVIF能取到基本码流，但移动侦测、音频和在界面里改参数就不一定了。如果摄像机已经装好，应按现有设备来挑录像机，而不是反过来。",
+            "编码格式要单独确认：H.265+最多能省下一半硬盘空间，但老款摄像机输出不了。设备品牌混杂时，围绕同一产品线搭建更省事，并留出两三个空余通道备用。",
           ] },
           { h: "总结：如何避免选错", p: [
             "选购公式：通道数按×1.5留余量、支持现有摄像机的分辨率、H.265、容量合适的Purple/SkyHawk硬盘，以及手机云端访问。其余都是具体项目的细节问题。",
@@ -6790,6 +7210,10 @@ export const ARTICLES: Article[] = [
             "Квартира: одна Wi-Fi-камера с картой памяти. Частный дом: 2–4 уличные камеры, PoE-регистратор, диск на месяц архива. Подъезд или двор многоквартирного дома — решается вместе с соседями и управляющей компанией, мы поможем с проектом.",
             "В нашем каталоге камеры Hikvision, Dahua, EZVIZ и TP-Link Tapo в наличии в Ташкенте — подберём под бюджет, установим и настроим просмотр с телефона.",
           ] },
+          { h: "Обслуживание и срок службы", p: [
+            "Уличная камера в Ташкенте за сезон собирает пыль на стекле и кожухе ИК-подсветки: снимки ночью мутнеют из-за засветки. Протирка объектива и проверка козырька раз в полгода возвращают картинку без вызова специалиста.",
+            "Ресурс расходуется у двух узлов — жёсткого диска регистратора и блока питания. Диск под круглосуточной записью служит около трёх лет, поэтому раз в год стоит проверять его состояние и запас свободного места.",
+          ] },
         ],
         faq: [
           { q: "Какую камеру поставить в квартиру, чтобы смотреть с телефона?", a: "Поворотную Wi-Fi-камеру 2–4 Мп с картой памяти: установка за пять минут, просмотр через приложение из любой точки мира. Из нашего каталога — EZVIZ или TP-Link Tapo." },
@@ -6825,6 +7249,10 @@ export const ARTICLES: Article[] = [
           { h: "Odatiy to'plamlar va narx", p: [
             "Kvartira: xotira kartali bitta Wi-Fi kamera. Xususiy uy: 2–4 tashqi kamera, PoE-registrator, bir oylik arxivga disk. Ko'p kvartirali uy podezi — qo'shnilar va boshqaruv kompaniyasi bilan birga hal qilinadi.",
             "Katalogimizda Hikvision, Dahua, EZVIZ va TP-Link Tapo kameralari Toshkentda mavjud — byudjetga mos tanlab, o'rnatib, telefondan ko'rishni sozlab beramiz.",
+          ] },
+          { h: "Xizmat ko'rsatish va xizmat muddati", p: [
+            "Toshkentda tashqi kamera bir mavsumda shisha va IQ-yoritgich qopqog'iga chang yig'adi: tunda tasvir yorug'lik aksidan xiralashadi. Ob'ektivni artish va kozirokni yarim yilda bir marta tekshirish tasvirni mutaxassisni chaqirmasdan tiklaydi.",
+            "Resurs ikki tugunda sarflanadi — registratorning qattiq diski va quvvat bloki. Kechayu kunduz yozuvda disk taxminan uch yil xizmat qiladi, shuning uchun yiliga bir marta uning holati va bo'sh joy zaxirasi tekshiriladi.",
           ] },
         ],
         faq: [
@@ -6862,6 +7290,10 @@ export const ARTICLES: Article[] = [
             "Apartment: one Wi-Fi camera with a memory card. Private house: 2–4 outdoor cameras, a PoE recorder and a drive sized for a month of archive. An entrance hall or courtyard of an apartment building is arranged together with neighbors and the building management — we'll help with the project.",
             "Our catalog stocks Hikvision, Dahua, EZVIZ and TP-Link Tapo cameras in Tashkent — we'll match one to your budget, install it and set up viewing from your phone.",
           ] },
+          { h: "Upkeep and service life", p: [
+            "Over one season an outdoor camera in Tashkent collects dust on the glass and on the IR illuminator housing, and night footage turns hazy from glare. Wiping the lens and checking the sun shield twice a year restores the image without calling a technician.",
+            "Two components wear out first: the recorder's hard drive and the power supply. Under continuous recording a drive lasts roughly three years, so its health and free space are worth checking once a year.",
+          ] },
         ],
         faq: [
           { q: "Which camera should I put in my apartment to watch from my phone?", a: "A pan-and-tilt Wi-Fi camera at 2–4 MP with a memory card: five-minute setup, viewing through the app from anywhere in the world. From our catalog — EZVIZ or TP-Link Tapo." },
@@ -6898,6 +7330,10 @@ export const ARTICLES: Article[] = [
             "Daire: hafıza kartlı bir Wi-Fi kamera. Müstakil ev: 2–4 dış mekân kamerası, PoE kayıt cihazı ve bir aylık arşive yetecek disk. Apartman girişi veya sitenin avlusu komşular ve site yönetimiyle birlikte çözülür — projede size yardımcı oluruz.",
             "Kataloğumuzda Hikvision, Dahua, EZVIZ ve TP-Link Tapo kameralar Taşkent'te stoktan mevcut — bütçenize uygun modeli seçelim, kurulumu yapalım ve telefondan izlemeyi ayarlayalım.",
           ] },
+          { h: "Bakım ve kullanım ömrü", p: [
+            "Taşkent'te dış mekân kamerası bir sezonda camında ve IR aydınlatma kapağında toz biriktirir; gece görüntüleri yansımadan bulanıklaşır. Objektifi silmek ve güneşliği altı ayda bir kontrol etmek, teknisyen çağırmadan görüntüyü geri getirir.",
+            "Ömür iki noktada tükenir: kayıt cihazının sabit diski ve güç kaynağı. Kesintisiz kayıtta disk yaklaşık üç yıl dayanır, bu yüzden yılda bir kez disk durumu ve boş alan kontrol edilmelidir.",
+          ] },
         ],
         faq: [
           { q: "Telefondan izlemek için daireye hangi kamera kurulmalı?", a: "Hafıza kartlı, 2–4 MP döner başlıklı bir Wi-Fi kamera: beş dakikada kurulum, dünyanın her yerinden uygulama üzerinden izleme. Kataloğumuzdan — EZVIZ veya TP-Link Tapo." },
@@ -6933,6 +7369,10 @@ export const ARTICLES: Article[] = [
           { h: "典型配置与费用", p: [
             "公寓：一台带存储卡的Wi-Fi摄像机。私人住宅：2–4台室外摄像机、PoE录像机和可存一个月录像的硬盘。多层住宅的楼道或院落需与邻居和物业公司共同商定——我们可以协助规划方案。",
             "我们的目录中有Hikvision、Dahua、EZVIZ和TP-Link Tapo摄像机，塔什干现货供应——按预算选型、安装并调试手机观看。",
+          ] },
+          { h: "日常维护与使用寿命", p: [
+            "在塔什干，室外摄像机一个季度就会在镜头玻璃和红外补光罩上积灰，夜间画面因反光而发雾。每半年擦一次镜头、检查一次遮阳罩，不用叫工程师画面就能恢复。",
+            "最先消耗寿命的是两处：录像机硬盘和电源。全天候录像下硬盘大约能用三年，因此每年应检查一次硬盘健康状态和剩余存储空间。",
           ] },
         ],
         faq: [
@@ -7961,6 +8401,10 @@ export const ARTICLES: Article[] = [
             "Uch eng qimmat xato: maxsus disk o'rniga kompyuter diski (kecha-kunduz yozuvdan birinchi bo'lib o'ladi), detalizatsiya kerak kassaga arzon kamera va quvvat zaxirasisiz «qanday bo'lsa» kabel — qishda uzoq kameralar qayta yuklana boshlaydi. Bu tejashlarning har biri narx farqidan qimmatga tushadi.",
             "To'g'ri tartib boshqa: avval bepul chiqish va zonalar vazifalariga hisob, keyin to'liq smeta — kameralar, registrator, disk, kabel, montaj va yashirin to'lovlarsiz telefonlarni sozlash. Shunda tizim birinchi qishgacha emas, yillab ishlaydi.",
           ] },
+          { h: "Tizimni kengaytirish uchun zaxira", p: [
+            "Tizim deyarli har doim kengaytiriladi: bir yildan keyin ombor, avtoturargoh yoki ikkinchi kirish qo'shiladi. Boshida 8 va 16 kanalli registrator o'rtasidagi narx farqi katta emas, to'lib ketgan qurilmani almashtirish esa yangi to'plam narxiga va qayta sozlashga tushadi.",
+            "Xuddi shu narsa PoE-kommutatordagi bo'sh portlarga, quvvat blokidagi zaxiraga va disk uchun ikkinchi uyaga ham tegishli. Kelajakdagi trassalar uchun bo'sh quvur yoki gofra alohida yotqiziladi — tayyor kanaldan kabel tortish pardozlangan devorni shtroblashdan arzonroq.",
+          ] },
         ],
         faq: [
           { q: "O'rnatish qancha vaqt oladi?", a: "Uy yoki do'kon uchun odatda bir kun. Katta obyekt (ombor, ishlab chiqarish, hovli) — bir necha kun, kabel hajmiga qarab." },
@@ -7996,6 +8440,10 @@ export const ARTICLES: Article[] = [
           { h: "На чём заказчики теряют деньги", p: [
             "Три самые дорогие ошибки: компьютерный диск вместо специализированного (умирает от круглосуточной записи первым), дешёвая камера на кассе, где нужна детализация, и кабель «какой был» без запаса по питанию — зимой дальние камеры начинают перезагружаться. Каждая из этих экономий стоит дороже разницы в цене.",
             "Правильный порядок другой: сначала бесплатный выезд и расчёт под задачи зон, затем смета целиком — камеры, регистратор, диск, кабель, монтаж и настройка телефонов без скрытых доплат. Так система работает годами, а не до первой зимы.",
+          ] },
+          { h: "Запас под расширение системы", p: [
+            "Систему почти всегда достраивают: через год добавляют склад, парковку или второй вход. Разница в цене между 8- и 16-канальным регистратором на старте невелика, а замена под завязку заполненного устройства обходится в стоимость нового комплекта с перенастройкой.",
+            "То же касается свободных портов на PoE-коммутаторе, запаса по мощности блока питания и второй корзины под диск. Отдельно закладывают пустые трубы или гофру на будущие трассы — протянуть кабель в готовый канал дешевле, чем штробить отделанные стены.",
           ] },
         ],
         faq: [
@@ -8033,6 +8481,10 @@ export const ARTICLES: Article[] = [
             "The three costliest mistakes: a desktop disk instead of a surveillance-rated one (it dies first from round-the-clock recording), a cheap camera at the till where detail matters, and \"whatever cable was around\" without power margin — in winter the far cameras start rebooting. Each of these savings costs more than the price difference.",
             "The right order is different: first a free survey and a calculation per zone task, then a complete estimate — cameras, recorder, disk, cable, installation and phone setup with no hidden charges. That way the system works for years, not until the first winter.",
           ] },
+          { h: "Headroom for future expansion", p: [
+            "A system is almost always extended: a year later a warehouse, a car park or a second entrance is added. The price gap between an 8- and a 16-channel recorder at the start is small, while replacing a fully loaded unit costs as much as a new kit plus reconfiguration.",
+            "The same applies to free ports on the PoE switch, headroom in the power supply, and a second drive bay. Empty conduit for future routes is laid separately — pulling cable through a ready channel is cheaper than chasing finished walls.",
+          ] },
         ],
         faq: [
           { q: "How long does installation take?", a: "For a house or a shop, usually one day. A large site (warehouse, factory, yard) takes several days, depending on the amount of cabling work." },
@@ -8069,6 +8521,10 @@ export const ARTICLES: Article[] = [
             "En pahalı üç hata: gözetim sınıfı yerine masaüstü disk (7/24 kayıttan önce o ölür), detayın önemli olduğu kasada ucuz kamera ve güç payı olmayan «eldeki» kablo — kışın uzak kameralar yeniden başlamaya başlar. Bu tasarrufların her biri fiyat farkından pahalıya oturur.",
             "Doğru sıra farklıdır: önce ücretsiz keşif ve bölge görevlerine göre hesap, sonra komple teklif — kameralar, kayıt cihazı, disk, kablo, montaj ve gizli ücretsiz telefon kurulumu. Böylece sistem ilk kışa kadar değil, yıllarca çalışır.",
           ] },
+          { h: "Genişleme için pay bırakmak", p: [
+            "Sistem neredeyse her zaman büyütülür: bir yıl sonra depo, otopark ya da ikinci bir giriş eklenir. Başlangıçta 8 ile 16 kanallı kayıt cihazı arasındaki fiyat farkı küçüktür; dolmuş bir cihazı değiştirmek ise yeni bir set ile yeniden yapılandırma bedeline mal olur.",
+            "Aynısı PoE anahtardaki boş portlar, güç kaynağındaki yedek kapasite ve ikinci disk yuvası için de geçerlidir. Gelecekteki güzergâhlar için boş boru veya spiral ayrıca döşenir; hazır kanaldan kablo çekmek, bitmiş duvarı kırmaktan ucuzdur.",
+          ] },
         ],
         faq: [
           { q: "Kurulum ne kadar sürer?", a: "Ev veya mağaza için genellikle bir gün. Büyük mekânlar (depo, üretim tesisi, avlu) kablo işlerinin hacmine göre birkaç gün sürer." },
@@ -8104,6 +8560,10 @@ export const ARTICLES: Article[] = [
           { h: "客户最容易在哪里赔钱", p: [
             "三个最贵的错误：用电脑硬盘代替监控盘（7×24录像最先累死的就是它）、在需要细节的收银台装便宜摄像机、用「手头现有」的线缆不留供电余量——到了冬天远端摄像机开始反复重启。每一项省钱都比差价更贵。",
             "正确的顺序是另一种：先免费勘测、按各区任务核算，然后整套报价——摄像机、录像机、硬盘、线缆、施工和手机配置，没有隐藏加价。这样系统才能用上几年，而不是撑到第一个冬天。",
+          ] },
+          { h: "为后续扩容留出余量", p: [
+            "系统几乎都会继续扩建：一年后要加仓库、停车场或第二个出入口。前期 8 路和 16 路录像机的差价并不大，而更换一台已经插满的设备，花费相当于一整套新设备加上重新调试。",
+            "PoE 交换机的空余端口、电源的功率余量和第二个硬盘位同理。未来线路的空管或波纹管要一并预埋——从现成管路里穿线，比在装修好的墙上重新开槽便宜得多。",
           ] },
         ],
         faq: [
@@ -8144,6 +8604,10 @@ export const ARTICLES: Article[] = [
             "Турникет без окружения — просто механика: рабочей проходную делают анкеровка в пол, ограждения, калитка для маломобильных и грузов, резервированное питание и связка со СКУД. По сигналу пожарной тревоги планки складываются, а калитки открываются — эта связка обязательна по нормам и закладывается в проект.",
             "Интеграция с учётом времени превращает проходную в источник табеля для 1С, а привязка проходов к видеозаписи закрывает споры. Монтируем проходные за один-два дня, обучаем охрану и администратора, обслуживаем по договору.",
           ] },
+          { h: "Что уточнить в смете до договора", p: [
+            "До подписания в смете проверяют пять позиций: тип и количество считывателей, лицензии на ПО учёта, стойку или тумбу под турникет, кабель с прокладкой и пусконаладку. Именно эти строки чаще всего дописывают после монтажа.",
+            "Стоит зафиксировать срок гарантии на механику и электронику отдельно, наличие ЗИП на планках и условия выезда сервисной бригады. SAT Solutions выдаёт спецификацию с артикулами, чтобы состав комплекта можно было сверить при приёмке.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит самый недорогой турникет?", a: "Турникет-трипод начального уровня — примерно от 4–6 млн сум за оборудование. С установкой и настройкой — от 6–8 млн сум." },
@@ -8174,6 +8638,10 @@ export const ARTICLES: Article[] = [
           { h: "Prohodnayani yaratadigan montaj va bog'lamlar", p: [
             "Atrofisiz turniket — shunchaki mexanika: prohodnayani ishchi qiladigan narsalar — polga ankerlash, to'siqlar, imkoniyati cheklanganlar va yuklar uchun kalitka, zaxiralangan quvvat va SKUD bilan bog'lam. Yong'in trevogasi signali bo'yicha plankalar yig'iladi, kalitkalar ochiladi — bu bog'lam me'yorlar bo'yicha majburiy va loyihaga kiritiladi.",
             "Vaqt hisobi bilan integratsiya prohodnayani 1C uchun tabel manbaiga aylantiradi, o'tishlarni videoyozuvga bog'lash bahslarni yopadi. Prohodnayalarni bir-ikki kunda montaj qilamiz, qo'riq va administratorni o'rgatamiz, shartnoma bo'yicha xizmatlaymiz.",
+          ] },
+          { h: "Shartnomagacha smetada nimani aniqlash kerak", p: [
+            "Imzolashdan oldin smetada besh pozitsiya tekshiriladi: o'quvchilar turi va soni, hisob dasturi litsenziyalari, turniket ostidagi stoyka yoki tumba, kabel va uni yotqizish hamda ishga tushirish-sozlash. Aynan shu satrlar ko'pincha montajdan keyin qo'shiladi.",
+            "Mexanika va elektronikaga kafolat muddatini alohida, plankalar uchun ehtiyot qismlar borligini va servis brigadasi chiqishi shartlarini yozib qo'yish kerak. SAT Solutions artikullar bilan spetsifikatsiya beradi, shunda to'plam tarkibini qabul qilishda solishtirib chiqish mumkin.",
           ] },
         ],
         faq: [
@@ -8206,6 +8674,10 @@ export const ARTICLES: Article[] = [
             "A turnstile without its surroundings is just mechanics: what makes the entrance work is floor anchoring, railings, a gate for wheelchair users and loads, redundant power and the access control link. On a fire alarm the arms drop and the gates open — this link is mandatory by code and goes into the design.",
             "Integration with time attendance turns the entrance into a timesheet source for the ERP, and tying passages to video closes disputes. We install entrances in one or two days, train the guards and the administrator, and service under contract.",
           ] },
+          { h: "What to verify in the quote", p: [
+            "Before signing, check five lines in the quote: the type and number of readers, licences for the attendance software, the pedestal or cabinet under the turnstile, cable and its routing, and commissioning. These are the items most often added after installation.",
+            "Fix the warranty terms for mechanics and electronics separately, the availability of spare arms and the conditions for a service crew call-out. SAT Solutions issues a specification with part numbers so the contents of the kit can be checked at handover.",
+          ] },
         ],
         faq: [
           { q: "How much is the cheapest turnstile?", a: "An entry-level tripod is about 4–6 million UZS for hardware, or 6–8 million UZS installed and configured." },
@@ -8237,6 +8709,10 @@ export const ARTICLES: Article[] = [
             "Çevresi olmayan turnike yalnız mekaniktir: girişi çalışır kılan şeyler zemine ankraj, korkuluklar, engelliler ve yükler için kapı, yedekli besleme ve geçiş kontrolü bağıdır. Yangın alarmında kollar düşer, kapılar açılır — bu bağ normlarca zorunludur ve projeye konur.",
             "Mesai entegrasyonu girişi ERP için puantaj kaynağına çevirir; geçişleri videoya bağlamak tartışmaları kapatır. Girişleri bir-iki günde kurar, güvenliği ve yöneticiyi eğitir, sözleşmeyle bakarız.",
           ] },
+          { h: "Sözleşme öncesi teklifte kontrol edilecekler", p: [
+            "İmzadan önce teklifte beş kalem kontrol edilir: okuyucuların tipi ve sayısı, personel takip yazılımı lisansları, turnikenin altındaki kaide veya kabin, kablo ve çekim işçiliği, devreye alma. Montajdan sonra en sık eklenen satırlar bunlardır.",
+            "Mekanik ve elektronik için garanti süreleri ayrı ayrı, kollar için yedek parça bulunurluğu ve servis ekibinin yerinde müdahale koşulları yazılı olmalıdır. SAT Solutions, set içeriğinin teslimde karşılaştırılabilmesi için parça numaralı bir şartname verir.",
+          ] },
         ],
         faq: [
           { q: "En uygun turnike ne kadar?", a: "Giriş seviyesi tripod, ekipman olarak yaklaşık 4–6 milyon UZS; montaj ve ayarlarla 6–8 milyon UZS'den." },
@@ -8267,6 +8743,10 @@ export const ARTICLES: Article[] = [
           { h: "让门岗成为门岗的安装与联动", p: [
             "光秃秃的闸机只是机械：让门岗真正运转的是地面锚固、护栏、供轮椅和货物的边门、冗余供电和与门禁的联动。火灾报警时落杆、边门放开——这一联动是规范强制项，要写进设计。",
             "接入考勤后门岗变成1C考勤表的数据源，通行绑定录像让争议无处遁形。门岗一到两天装好，培训保安和管理员，按合同维保。",
+          ] },
+          { h: "签约前应核对的报价项", p: [
+            "签约前要核对报价中的五项：读卡器的型号与数量、考勤软件授权、闸机下方的底座或机柜、线缆及敷设人工、调试开通。这些恰恰是安装完成后最常被追加的条目。",
+            "机械部分与电子部分的质保期应分别写明，还要确认摆臂等备件的供应和上门服务的响应条件。SAT Solutions 提供带物料编号的清单，验收时可逐项核对配置。",
           ] },
         ],
         faq: [
@@ -8306,6 +8786,10 @@ export const ARTICLES: Article[] = [
             "Вызывная панель — только видимая часть: для работающей двери нужны электромеханический или магнитный замок, доводчик, блок питания с резервным аккумулятором и кнопка выхода. Для подъезда добавляется антивандальное исполнение. Экономия на доводчике заканчивается хлопающей дверью и разбитым замком за полгода.",
             "IP-домофоны окупают разницу удобством: вызов приходит на смартфон, где бы вы ни были, а связка со СКУД пускает своих по карте. Считаем комплект целиком под вашу дверь или подъезд — выезд и смета бесплатны.",
           ] },
+          { h: "Эксплуатация в местном климате", p: [
+            "Вызывная панель на южной стене летом нагревается выше +50 °C, и дешёвая матрица за сезон выцветает. Козырёк или монтаж в нишу продлевают срок службы; в пыльных дворах линзу протирают раз в месяц, иначе изображение уходит в муть.",
+            "Второй фактор — питание. Скачки и отключения выводят из строя блок питания чаще, чем саму панель, поэтому его ставят в щит с защитой, а IP-домофон — за небольшой ИБП.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит видеодомофон для квартиры?", a: "Комплект «панель + монитор» — от 1,2–1,5 млн сум. С установкой — примерно плюс 300–500 тысяч сум." },
@@ -8336,6 +8820,10 @@ export const ARTICLES: Article[] = [
           { h: "Panel dan tashqari to'plamga nima kiradi", p: [
             "Chaqiruv paneli — faqat ko'rinadigan qism: ishlaydigan eshikka elektromexanik yoki magnit qulf, dovodchik, zaxira akkumulyatorli quvvat bloki va chiqish tugmasi kerak. Podyezdga antivandal bajarilish qo'shiladi. Dovodchikda tejash yarim yilda taraqlaydigan eshik va singan qulf bilan tugaydi.",
             "IP-domofonlar farqni qulaylik bilan oqlaydi: chaqiruv qayerda bo'lsangiz ham smartfonga keladi, SKUD bilan bog'lam o'zinikilarni karta bilan kiritadi. To'plamni eshigingiz yoki podyezdingiz uchun to'liq hisoblaymiz — chiqish va smeta bepul.",
+          ] },
+          { h: "Mahalliy iqlimda ekspluatatsiya", p: [
+            "Janubiy devordagi chaqiruv paneli yozda +50 °C dan yuqori qiziydi va arzon matritsa bir mavsumda rangini yo'qotadi. Kozirek yoki nishaga o'rnatish xizmat muddatini uzaytiradi; changli hovlilarda linza oyiga bir marta artiladi, aks holda tasvir xiralashadi.",
+            "Ikkinchi omil — quvvat manbai. Kuchlanish sakrashlari va uzilishlar panelning o'zidan ko'ra ko'proq quvvat blokini ishdan chiqaradi, shuning uchun uni himoyali elektr qalqoniga o'rnatishadi, IP-domofonni esa kichik UPS orqasiga ulashadi.",
           ] },
         ],
         faq: [
@@ -8368,6 +8856,10 @@ export const ARTICLES: Article[] = [
             "The door panel is only the visible part: a working door needs an electromechanical or magnetic lock, a closer, a power supply with a backup battery and an exit button. An entrance block adds a vandal-proof build. Saving on the closer ends with a slamming door and a broken lock within half a year.",
             "IP intercoms repay the difference in convenience: the call reaches your smartphone wherever you are, and the access control link lets residents in by card. We quote the complete kit for your door or entrance — the visit and the estimate are free.",
           ] },
+          { h: "Operating in the local climate", p: [
+            "A call panel on a south-facing wall heats past +50 °C in summer, and a cheap image sensor fades within one season. A canopy or a recessed mount extends its life; in dusty courtyards the lens is wiped monthly, otherwise the picture turns hazy.",
+            "The second factor is power. Surges and outages kill the power supply unit more often than the panel itself, so it is placed in a protected enclosure, and an IP intercom is backed by a small UPS.",
+          ] },
         ],
         faq: [
           { q: "How much is a video intercom for an apartment?", a: "A panel + monitor kit is 1.2–1.5 million UZS; installation adds roughly 300–500 thousand UZS." },
@@ -8399,6 +8891,10 @@ export const ARTICLES: Article[] = [
             "Zil paneli yalnız görünen kısımdır: çalışan kapıya elektromekanik veya manyetik kilit, kapı kapatıcı, yedek akülü güç kaynağı ve çıkış butonu gerekir. Apartman girişine vandala dayanıklı yapı eklenir. Kapatıcıdan kısmak, yarım yılda çarpan kapı ve kırık kilitle biter.",
             "IP diafonlar farkı konforla öder: çağrı nerede olursanız olun telefonunuza gelir, geçiş kontrolü bağı sakinleri kartla içeri alır. Seti kapınız veya girişiniz için komple hesaplarız — keşif ve teklif ücretsizdir.",
           ] },
+          { h: "Yerel iklimde kullanım", p: [
+            "Güney cepheye takılan kapı panelinin sıcaklığı yazın +50 °C'yi aşar; ucuz görüntü sensörü tek sezonda solar. Saçak veya niş montajı ömrü uzatır; tozlu avlularda lens ayda bir silinir, yoksa görüntü puslanır.",
+            "İkinci etken beslemedir. Dalgalanma ve kesintiler paneli değil, çoğunlukla güç kaynağını bozar; bu yüzden kaynak korumalı bir pano içine alınır, IP diafon ise küçük bir UPS'e bağlanır.",
+          ] },
         ],
         faq: [
           { q: "Daire için görüntülü diafon ne kadar?", a: "Panel + monitör seti 1,2–1,5 milyon UZS; montaj yaklaşık 300–500 bin UZS ekler." },
@@ -8429,6 +8925,10 @@ export const ARTICLES: Article[] = [
           { h: "套件里除了门口机还有什么", p: [
             "门口机只是看得见的部分：一扇能用的门还需要电机锁或磁力锁、闭门器、带备用电池的电源和出门按钮。单元门再加防破坏外壳。省掉闭门器的结局：半年后门砰砰作响、锁被砸坏。",
             "IP对讲用便利偿还差价：无论身在何处呼叫都到手机，联动门禁后住户刷卡即入。按您的门或单元整套核算——上门和报价免费。",
+          ] },
+          { h: "本地气候下的使用维护", p: [
+            "装在朝南墙面的门口机，夏季表面温度会超过+50 °C，廉价图像传感器一个季度就会褪色发白。加装雨檐或做嵌入式安装能延长寿命；院子里灰尘大时，镜头每月擦一次，否则画面发雾。",
+            "第二个因素是供电。电压波动和停电损坏电源模块的概率高于门口机本身，因此电源应装在带保护的配电箱内，IP对讲则接一台小容量UPS。",
           ] },
         ],
         faq: [
@@ -8469,6 +8969,10 @@ export const ARTICLES: Article[] = [
             "Смонтированная сигнализация без обслуживания — это просроченный огнетушитель на стене: формально есть, фактически нет. Нормы требуют регламентных проверок с записями в журнале, и именно журнал ТО инспектор открывает первым. Пыль в камерах извещателей — главный источник ложных тревог, которые отучают персонал реагировать.",
             "Мы берём системы на регламент: чистка и проверка извещателей, тест оповещения, замена аккумуляторов, ведение журнала. Обслуживаем и системы, смонтированные другими подрядчиками, — после бесплатного аудита с честной дефектной ведомостью.",
           ] },
+          { h: "Что уточнить в смете подрядчика", p: [
+            "В смете часто виден только прибор и извещатели, а кабель, гофра или металлорукав, крепёж и штробление уходят в «прочее». Спросите отдельной строкой: огнестойкий кабель, пусконаладку, исполнительную документацию и участие подрядчика при сдаче надзору — без этих позиций объект не примут.",
+            "Уточните и гарантию: на оборудование её даёт производитель, на монтаж — исполнитель. SAT Solutions фиксирует обе в договоре вместе со сроком реакции на выезд.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит пожарная сигнализация для маленького офиса?", a: "Небольшой офис или магазин под ключ — обычно от 5–10 млн сум: проект, оборудование, монтаж и пусконаладка. Точную цифру даёт бесплатная смета." },
@@ -8499,6 +9003,10 @@ export const ARTICLES: Article[] = [
           { h: "Xizmat: usiz tizim hisobga o'tmaydi", p: [
             "Xizmatsiz montaj qilingan signalizatsiya — devordagi muddati o'tgan o't o'chirgich: rasman bor, amalda yo'q. Me'yorlar jurnalga yozuvli reglament tekshiruvlarni talab qiladi, inspektor birinchi bo'lib aynan TX jurnalini ochadi. Xabar beruvchi kameralaridagi chang — xodimlarni javob berishdan bezdiradigan yolg'on trevogalarning bosh manbai.",
             "Tizimlarni reglamentga olamiz: xabar beruvchilarni tozalash va tekshirish, ogohlantirish testi, akkumulyatorlarni almashtirish, jurnal yuritish. Boshqa pudratchilar montaj qilgan tizimlarga ham xizmat ko'rsatamiz — halol nuqson vedomostli bepul auditdan keyin.",
+          ] },
+          { h: "Pudratchi smetasida nimani aniqlash kerak", p: [
+            "Smetada ko'pincha faqat asbob va datchiklar ko'rinadi, kabel, gofra yoki metall shlang, mahkamlagich va shtroblash esa «boshqalar» qatoriga tushib ketadi. Alohida qator bilan so'rang: o'tga chidamli kabel, ishga tushirish-sozlash, ijro hujjatlari va nazoratga topshirishda pudratchining ishtiroki — bu bandlarsiz obyekt qabul qilinmaydi.",
+            "Kafolatni ham aniqlang: uskunaga uni ishlab chiqaruvchi, montajga esa bajaruvchi beradi. SAT Solutions ikkalasini ham chiqishga javob berish muddati bilan birga shartnomada qayd etadi.",
           ] },
         ],
         faq: [
@@ -8531,6 +9039,10 @@ export const ARTICLES: Article[] = [
             "An installed alarm without maintenance is an expired extinguisher on the wall: formally present, practically absent. The codes require scheduled checks with log entries, and the maintenance log is the first thing an inspector opens. Dust in detector chambers is the main source of false alarms that teach the staff to ignore the system.",
             "We take systems onto a schedule: cleaning and testing detectors, checking the sounders, replacing batteries, keeping the log. We also service systems installed by other contractors — after a free audit with an honest defect list.",
           ] },
+          { h: "What to clarify in the contractor's estimate", p: [
+            "An estimate often shows only the panel and the detectors, while cable, conduit or flexible metal tube, fixings and wall chasing disappear into a line called “other”. Ask for separate lines: fire-rated cable, commissioning, as-built documentation and the contractor's presence at handover to the inspectorate — without these items the site will not be accepted.",
+            "Clarify the warranty as well: the manufacturer covers the equipment, the installer covers the workmanship. SAT Solutions records both in the contract, together with the response time for a call-out.",
+          ] },
         ],
         faq: [
           { q: "How much is a fire alarm for a small office?", a: "A small office or shop turnkey usually starts from 5–10 million UZS: design, equipment, installation and commissioning. A free estimate gives the exact figure." },
@@ -8562,6 +9074,10 @@ export const ARTICLES: Article[] = [
             "Bakımı olmayan kurulu alarm, duvardaki süresi geçmiş söndürücü gibidir: resmen var, fiilen yok. Normlar deftere işlenen programlı kontrolleri ister; müfettişin ilk açtığı şey bakım defteridir. Dedektör haznelerindeki toz, personeli tepki vermemeye alıştıran yanlış alarmların baş kaynağıdır.",
             "Sistemleri programa alırız: dedektör temizliği ve testi, anons denemesi, akü değişimi, defter tutma. Başka yüklenicilerin kurduğu sistemlere de bakarız — dürüst kusur listesiyle ücretsiz denetimden sonra.",
           ] },
+          { h: "Yüklenici keşfinde netleştirilecekler", p: [
+            "Keşifte çoğu zaman yalnızca panel ve dedektörler görünür; kablo, spiral boru veya çelik bükülgen boru, montaj elemanları ve kanal açma işi “diğer” satırında kaybolur. Ayrı satır olarak isteyin: yangına dayanıklı kablo, devreye alma, as-built dokümantasyon ve denetime teslimde yüklenicinin bulunması — bunlar olmadan tesis kabul edilmez.",
+            "Garantiyi de netleştirin: ekipmanın garantisini üretici, montajın garantisini uygulayıcı verir. SAT Solutions ikisini de, yerinde müdahale süresiyle birlikte sözleşmeye yazar.",
+          ] },
         ],
         faq: [
           { q: "Küçük ofis için yangın alarmı ne kadar?", a: "Küçük ofis/mağaza anahtar teslim genelde 5–10 milyon UZS'den: proje, ekipman, montaj, devreye alma. Kesin rakam ücretsiz keşifle." },
@@ -8592,6 +9108,10 @@ export const ARTICLES: Article[] = [
           { h: "维保：没有它系统等于没装", p: [
             "装好却不维保的报警系统，就像墙上过期的灭火器：形式上有，实际上没有。规范要求按计划检查并记入台账，检查员第一个翻的就是维保台账。探测器暗室里的灰尘是误报的头号来源——而误报会教会员工对警报无动于衷。",
             "我们承接定期规程：清洁和测试探测器、试验广播、更换电池、登记台账。别的承包商装的系统也接——先做免费审计，出一份诚实的缺陷清单。",
+          ] },
+          { h: "承包商报价里要问清的项", p: [
+            "报价单上往往只列了主机和探测器，电缆、波纹管或金属软管、固定件和开槽都被并进“其他”一项。请要求单独列出：耐火电缆、调试、竣工资料，以及验收时承包方到场配合——缺了这几项，工程通不过验收。",
+            "保修也要问清：设备保修由厂家承担，施工质量由施工方承担。SAT Solutions 会把两者连同上门响应时限一并写进合同。",
           ] },
         ],
         faq: [
@@ -8632,6 +9152,10 @@ export const ARTICLES: Article[] = [
             "Правильно настроенная детекция движения удлиняет архив в разы: регистратор пишет постоянно только кассу и вход, остальные зоны — по событию. Модели с AcuSense фильтруют ложные срабатывания от веток и животных, и уведомления на телефон снова начинают что-то значить.",
             "Вторая настройка, о которой забывают, — двойной поток: основной в архив, лёгкий для просмотра с телефона. Без него мобильное приложение «жуёт» трафик и тормозит. Мы настраиваем оба потока, детекцию и доступ с телефонов при каждом монтаже — это входит в цену.",
           ] },
+          { h: "На чём экономить нельзя", p: [
+            "Дешёвый блок питания и отсутствие ИБП — самая частая причина, по которой регистратор уходит в ремонт раньше срока. Скачки и отключения бьют по диску: архив теряется целыми днями, а восстановление стоит дороже источника бесперебойного питания.",
+            "Второй пункт — диск: обычный десктопный проработает под непрерывной записью около года, серверный или предназначенный для видеонаблюдения — в разы дольше. Гарантию и наличие сервиса в Ташкенте уточняйте до оплаты.",
+          ] },
         ],
         faq: [
           { q: "Сколько стоит регистратор на 4 камеры?", a: "4-канальный NVR — примерно от 800 тысяч сум, с встроенным PoE — от 1,2–1,5 млн сум. Плюс жёсткий диск от ~500 тысяч сум." },
@@ -8662,6 +9186,10 @@ export const ARTICLES: Article[] = [
           { h: "Arxivni uzaytiradigan sozlash", p: [
             "To'g'ri sozlangan harakat detektsiyasi arxivni bir necha barobar uzaytiradi: registrator faqat kassa va kirishni doimiy yozadi, qolgan zonalar — hodisa bo'yicha. AcuSense li modellar shox va hayvonlardan yolg'on ishga tushishlarni filtrlaydi, telefonga bildirishnomalar yana nimanidir anglata boshlaydi.",
             "Unutiladigan ikkinchi sozlash — ikkilangan oqim: asosiysi arxivga, yengili telefondan ko'rishga. Usiz mobil ilova trafik «chaynaydi» va tormozlaydi. Har montajda ikkala oqim, detektsiya va telefonlardan kirishni sozlaymiz — bu narxga kiradi.",
+          ] },
+          { h: "Nimada tejash mumkin emas", p: [
+            "Arzon quvvat bloki va UPS yo'qligi — registratorning muddatidan oldin ta'mirga ketishining eng keng tarqalgan sababi. Kuchlanish sakrashlari va o'chishlar diskka uriladi: arxiv kunlab yo'qoladi, tiklash esa uzluksiz quvvat manbaidan qimmatroq tushadi.",
+            "Ikkinchi nuqta — disk: oddiy desktop diski uzluksiz yozuvda taxminan bir yil ishlaydi, server yoki videokuzatuv uchun mo'ljallangani bir necha barobar uzoq xizmat qiladi. Kafolat va Toshkentda servis borligini to'lovdan oldin aniqlang.",
           ] },
         ],
         faq: [
@@ -8694,6 +9222,10 @@ export const ARTICLES: Article[] = [
             "Properly configured motion detection stretches the archive severalfold: the recorder writes continuously only for the till and the entrance, the rest by event. AcuSense models filter false triggers from branches and animals — and phone notifications start meaning something again.",
             "The second forgotten setting is the dual stream: the main one for the archive, a light one for phone viewing. Without it the mobile app chews traffic and lags. We configure both streams, detection and phone access at every installation — it is included in the price.",
           ] },
+          { h: "Where cutting costs backfires", p: [
+            "A cheap power supply and no UPS are the most common reason a recorder goes in for repair ahead of time. Surges and outages hit the drive: whole days of archive disappear, and recovery costs more than an uninterruptible power supply would have.",
+            "The second item is the drive: an ordinary desktop model lasts around a year under continuous recording, while a server or surveillance-rated one lasts several times longer. Confirm the warranty and the availability of service in Tashkent before paying.",
+          ] },
         ],
         faq: [
           { q: "How much is a recorder for 4 cameras?", a: "A 4-channel NVR from about 800 thousand UZS; with built-in PoE from 1.2–1.5 million UZS, plus a hard drive from ~500 thousand UZS." },
@@ -8725,6 +9257,10 @@ export const ARTICLES: Article[] = [
             "Doğru kurulan hareket algılama arşivi kat kat uzatır: kayıt cihazı yalnız kasayı ve girişi sürekli yazar, kalan bölgeleri olaya göre. AcuSense modeller dallardan ve hayvanlardan gelen yanlış tetiklemeleri süzer — telefon bildirimleri yeniden anlam kazanır.",
             "Unutulan ikinci ayar çift akıştır: ana akış arşive, hafif akış telefondan izlemeye. Onsuz mobil uygulama trafiği yer ve takılır. Her montajda iki akışı, algılamayı ve telefon erişimini kurarız — fiyata dahildir.",
           ] },
+          { h: "Kısılmaması gereken kalemler", p: [
+            "Ucuz güç kaynağı ve UPS'siz kurulum, kayıt cihazının süresinden önce servise gitmesinin en yaygın nedenidir. Dalgalanmalar ve kesintiler diski vurur: arşivin günlerce süren bölümü kaybolur, kurtarma ise bir kesintisiz güç kaynağından pahalıya gelir.",
+            "İkinci kalem disktir: sıradan masaüstü disk sürekli kayıtta yaklaşık bir yıl dayanır, sunucu veya güvenlik kaydı için üretilmiş olan ise kat kat uzun ömürlüdür. Garantiyi ve Taşkent'te servis bulunup bulunmadığını ödemeden önce netleştirin.",
+          ] },
         ],
         faq: [
           { q: "4 kamera için kayıt cihazı ne kadar?", a: "4 kanallı NVR yaklaşık 800 bin UZS'den, dahili PoE'li 1,2–1,5 milyon UZS'den; artı ~500 bin UZS'den hard disk." },
@@ -8755,6 +9291,10 @@ export const ARTICLES: Article[] = [
           { h: "让存储更耐用的配置", p: [
             "调好移动侦测能让存储时长翻几倍：录像机只对收银台和入口连续录像，其余区域按事件触发。带AcuSense的型号过滤树枝和动物的误触发——手机推送重新变得有意义。",
             "第二个常被遗忘的设置是双码流：主码流进存储，轻码流供手机观看。没有它，手机应用既费流量又卡顿。我们每次施工都配好双码流、侦测和手机访问——包含在价格里。",
+          ] },
+          { h: "不能省的几项开支", p: [
+            "电源劣质、又不配UPS，是录像机提前进维修的最常见原因。电压波动和停电首先伤硬盘：整天的录像可能丢失，而数据恢复的花费高于一台不间断电源。",
+            "第二项是硬盘：普通台式机硬盘在连续录像下大约能撑一年，服务器级或监控专用盘可以用上好几倍的时间。付款前先确认质保条款以及塔什干本地是否有售后。",
           ] },
         ],
         faq: [
@@ -9375,6 +9915,10 @@ export const ARTICLES: Article[] = [
             "Kirish smetasida shlagbaumdan tashqari montajda eslanadigan pozitsiyalar yashaydi: poydevor yoki zakladnoy, quvvat kirishi, strela kapotga yotmasligi uchun fotoelementlar va petlevoy detektor. TJMga mehmonlar uchun chaqiruv paneli va ANPR-kamera qo'shing — ularsiz qo'riq «domofonga qo'ng'iroq» bilan ishlashda davom etadi.",
             "Boshqaruv usulida tejash oqilona (pultlar ANPR dan arzon), lekin privod sinfida emas: intensiv kirishdagi maishiy shlagbaum — mavsumdan keyin almashtirish degani. Kirish guruhini to'liq hisoblaymiz va ishlar boshlanishidan oldin to'liq narxni aytamiz.",
           ] },
+          { h: "Xizmat reglamenti va resurs", p: [
+            "Shlagbaum resursi sikllarda hisoblanadi: maishiy modellar sutkasiga bir necha yuz ochilishga mo'ljallangan, intensiv turlari esa bir necha barobar ko'proq. Turar-joy majmuasi kirish yo'li uchun strela uzunligidan ko'ra intensivlik zaxirasi muhimroq.",
+            "Xizmat ko'rsatish reduktorni moylash, muvozanat prujinasini rostlash va fotoelementlarni changdan tozalashdan iborat — yiliga ikki marta. SAT Solutions'da bunday chiqish kirish kontrolleri va brelok qabul qilgichlarini tekshirish bilan birga rejalashtiriladi.",
+          ] },
         ],
         faq: [
           { q: "Eng arzon shlagbaum qancha turadi?", a: "Hovli uchun bazaviy avtomatik shlagbaum o'rnatish bilan — bir necha million so'mdan. Aniq narx strela uzunligi va intensivlikka bog'liq — smeta bepul." },
@@ -9407,6 +9951,10 @@ export const ARTICLES: Article[] = [
           { h: "Скрытые статьи расходов", p: [
             "В смете въезда кроме шлагбаума живут позиции, о которых вспоминают на монтаже: фундамент или закладная, подвод питания, фотоэлементы и петлевой детектор, чтобы стрела не легла на капот. Для ЖК прибавьте вызывную панель для гостей и ANPR-камеру — без них охрана продолжит работать «звонком в домофон».",
             "Экономить разумно на способе управления (пульты дешевле ANPR), но не на классе привода: бытовой шлагбаум на интенсивном въезде — это замена через сезон. Считаем въездную группу целиком и называем полную цену до начала работ.",
+          ] },
+          { h: "Регламент обслуживания и ресурс", p: [
+            "Ресурс шлагбаума считают в циклах: бытовые модели рассчитаны на несколько сотен открываний в сутки, интенсивные — на кратно большее число. Для въезда жилого комплекса запас по интенсивности важнее длины стрелы.",
+            "Обслуживание сводится к смазке редуктора, регулировке пружины балансировки и очистке фотоэлементов от пыли — дважды в год. В SAT Solutions такой выезд планируют вместе с проверкой контроллера доступа и приёмников брелоков.",
           ] },
         ],
         faq: [
@@ -9441,6 +9989,10 @@ export const ARTICLES: Article[] = [
             "Besides the barrier, the entrance estimate holds items remembered only at installation: a foundation or embed, power supply, photocells and a loop detector so the boom never lands on a hood. For a residential complex add a guest call panel and an ANPR camera — without them the guards keep working \"by intercom call\".",
             "It is reasonable to save on the control method (remotes are cheaper than ANPR) but not on the drive class: a domestic barrier at an intensive entrance means replacement within a season. We quote the entrance as a whole and name the full price before work begins.",
           ] },
+          { h: "Service schedule and duty cycle", p: [
+            "A barrier's life is measured in cycles: domestic models are rated for a few hundred openings per day, while intensive-duty units handle several times more. For a residential complex entrance, headroom in the duty rating matters more than boom length.",
+            "Maintenance comes down to greasing the gearbox, adjusting the balance spring and cleaning dust off the photocells, twice a year. SAT Solutions schedules such a visit together with a check of the access controller and the remote receivers.",
+          ] },
         ],
         faq: [
           { q: "How much is the cheapest barrier?", a: "A basic automatic barrier for a yard with installation — from a few million UZS. The exact price depends on boom length and duty — the estimate is free." },
@@ -9474,6 +10026,10 @@ export const ARTICLES: Article[] = [
             "Giriş teklifinde bariyerin yanında ancak montajda hatırlanan kalemler yaşar: temel veya ankraj, güç beslemesi, kolun kaputa inmemesi için fotoseller ve loop dedektörü. Siteye misafir zil paneli ve ANPR kamera ekleyin — onlarsız güvenlik «diafonu arayarak» çalışmaya devam eder.",
             "Kontrol yönteminden kısmak mantıklıdır (kumanda ANPR'den ucuz) ama motor sınıfından değil: yoğun girişteki ev tipi bariyer bir sezonda değişim demektir. Girişi bütün olarak hesaplar, işe başlamadan tam fiyatı söyleriz.",
           ] },
+          { h: "Bakım programı ve çevrim ömrü", p: [
+            "Bariyerin ömrü çevrim sayısıyla ölçülür: konut tipi modeller günde birkaç yüz açılışa göre tasarlanır, yoğun kullanım modelleri bunun katlarını kaldırır. Bir sitenin girişinde kol uzunluğundan çok yoğunluk payı önemlidir.",
+            "Bakım; redüktörün yağlanması, denge yayının ayarı ve fotoselin tozdan temizlenmesinden ibarettir, yılda iki kez. SAT Solutions bu ziyareti geçiş kontrol ünitesinin ve kumanda alıcılarının kontrolüyle birlikte planlar.",
+          ] },
         ],
         faq: [
           { q: "En ucuz bariyer ne kadar?", a: "Avlu için temel otomatik bariyer montajla — birkaç milyon UZS'den. Kesin fiyat kol boyuna ve yoğunluğa bağlıdır — teklif ücretsizdir." },
@@ -9506,6 +10062,10 @@ export const ARTICLES: Article[] = [
           { h: "隐藏的费用项", p: [
             "入口预算里除了道闸，还有那些到施工时才想起的项目：基础或预埋、供电、防止闸杆压上引擎盖的红外对射和地感线圈。小区还要加访客对讲面板和ANPR摄像机——没有它们，保安还得靠「打对讲电话」干活。",
             "在控制方式上省钱是合理的（遥控比车牌识别便宜），但电机等级不能省：高强度入口装家用道闸等于一季后重买。我们把入口整组核算，开工前就报出全价。",
+          ] },
+          { h: "维保周期与开合寿命", p: [
+            "道闸的寿命按开合次数计算：家用型按每天数百次设计，重载型可承受数倍的量。小区入口选型时，开合强度的余量比闸杆长度更值得关注。",
+            "维保内容就是给减速机加注润滑、调整平衡弹簧、清除光电对射上的积灰，一年两次。SAT Solutions 会把这类上门与门禁控制器、遥控接收模块的检查安排在一起。",
           ] },
         ],
         faq: [
@@ -9553,6 +10113,10 @@ export const ARTICLES: Article[] = [
             "Hisob qiymati ma'lumotlar hisob-kitobgacha yetganda ochiladi: tabelni 1C ga yuklash qo'l ko'chirish va xatolarni olib tashlaydi, bo'limlar bo'yicha hisobotlar istalgan davr uchun kechikish va qayta ishlashlarni ko'rsatadi. Rahbar kun manzarasini oy oxirida emas, real vaqtda ko'radi.",
             "Qoidalarni siyosatingizga sozlaymiz — grafiklar, smenalar, kechikish ruxsatlari — va administratorni yangi xodimlarni mustaqil kiritishga o'rgatamiz. Joriy etish bir-ikki kun oladi va ishni to'xtatmaydi.",
           ] },
+          { h: "Terminal xodimni nega tanimaydi", p: [
+            "Davomat tizimiga oid shikoyatlarning asosiy qismi dasturga emas, tanib olishga tegishli. Ishlab chiqarishda barmoq izi terining yeyilishi, chang va moy izlari tufayli o'qilmaydi; u yerda karta yoki yuz bo'yicha tanish ishonchliroq. Yuzni tanish terminalini deraza ro'parasiga o'rnatib bo'lmaydi: ertalabki qarshi yorug'lik kamerani adashtiradi.",
+            "Har bir xodim uchun ikkita barmoqni ro'yxatga olish va muammoli xodimlarning shablonini yiliga bir marta qayta yozish yordam beradi. SAT Solutions obyektni ko'zdan kechirish bosqichida o'tish nuqtasining yoritilishini va o'rnatish balandligini tekshiradi — shu ikki mayda narsa birinchi oydagi murojaatlarning ko'pini yo'q qiladi.",
+          ] },
         ],
         faq: [
           { q: "Davomat tizimi narxi qancha?", a: "Bitta Face ID terminal va sozlash bilan — bir necha million so'mdan. Aniq narx kirish nuqtalari va xodimlar soniga bog'liq — smeta bepul." },
@@ -9589,6 +10153,10 @@ export const ARTICLES: Article[] = [
           { h: "Дорога данных: из терминала в зарплату", p: [
             "Ценность учёта раскрывается, когда данные доезжают до расчёта: выгрузка табеля в 1С убирает ручной перенос и ошибки, отчёты по подразделениям показывают опоздания и переработки за любой период. Руководитель видит картину дня в реальном времени, а не в конце месяца.",
             "Мы настраиваем правила под вашу политику — графики, смены, допуски на опоздание — и обучаем администратора заводить новых сотрудников самостоятельно. Внедрение занимает пару дней и не останавливает работу.",
+          ] },
+          { h: "Почему терминал не узнаёт сотрудника", p: [
+            "Основная часть жалоб на учёт посещаемости — не про софт, а про распознавание. На производстве отпечаток не читается из-за стёртой кожи, пыли и следов масла; там надёжнее карта или лицо. Терминал распознавания лица нельзя ставить против окна: контровой свет утром сбивает камеру.",
+            "Помогает регистрация двух пальцев на человека и повторное обучение шаблона раз в год для проблемных сотрудников. SAT Solutions на этапе обследования проверяет освещение точки прохода и высоту установки — эти две мелочи снимают большинство обращений в первый месяц.",
           ] },
         ],
         faq: [
@@ -9627,6 +10195,10 @@ export const ARTICLES: Article[] = [
             "Attendance shows its value when data reaches payroll: timesheet export to the ERP removes manual transfer and errors, and per-department reports show lateness and overtime for any period. The manager sees the day in real time, not at month end.",
             "We configure the rules to your policy — schedules, shifts, lateness allowances — and train the administrator to enroll new employees independently. Deployment takes a couple of days and does not stop the business.",
           ] },
+          { h: "When the terminal fails to recognise", p: [
+            "Most complaints about attendance systems are not about the software but about recognition. On a shop floor a fingerprint fails because of worn skin, dust and traces of oil; a card or a face reader is more reliable there. A face terminal should not be mounted facing a window: morning backlight blinds the camera.",
+            "Registering two fingers per person and re-enrolling the template once a year for problem employees helps. During the site survey SAT Solutions checks the lighting at the passage point and the mounting height — those two details remove most of the support calls in the first month.",
+          ] },
         ],
         faq: [
           { q: "How much does an attendance system cost?", a: "With one Face ID terminal and setup — from a few million UZS. The exact price depends on entrances and headcount — the estimate is free." },
@@ -9664,6 +10236,10 @@ export const ARTICLES: Article[] = [
             "Takibin değeri veri bordroya ulaşınca ortaya çıkar: puantajın ERP'ye aktarımı elle taşımayı ve hataları kaldırır; departman raporları her dönem için gecikme ve fazla mesaiyi gösterir. Yönetici günü ay sonunda değil, gerçek zamanlı görür.",
             "Kuralları politikanıza göre kurarız — çizelgeler, vardiyalar, gecikme payları — ve yöneticiye yeni çalışanları kendi başına eklemeyi öğretiriz. Kurulum birkaç gün sürer ve işi durdurmaz.",
           ] },
+          { h: "Terminal çalışanı neden tanımıyor", p: [
+            "Yoklama sistemine gelen şikâyetlerin çoğu yazılımla değil, tanımayla ilgilidir. Üretimde parmak izi; aşınmış deri, toz ve yağ izleri yüzünden okunmaz, orada kart ya da yüz tanıma daha güvenilirdir. Yüz tanıma terminali pencere karşısına konmaz: sabah arkadan gelen ışık kamerayı şaşırtır.",
+            "Kişi başına iki parmağın kaydedilmesi ve sorunlu çalışanların şablonunun yılda bir yenilenmesi işe yarar. SAT Solutions keşif aşamasında geçiş noktasının aydınlatmasını ve montaj yüksekliğini kontrol eder; bu iki ayrıntı ilk aydaki çağrıların çoğunu ortadan kaldırır.",
+          ] },
         ],
         faq: [
           { q: "Yoklama sistemi ne kadar?", a: "Tek Face ID terminal ve kurulumla — birkaç milyon UZS'den. Kesin fiyat giriş ve kişi sayısına bağlıdır — teklif ücretsizdir." },
@@ -9700,6 +10276,10 @@ export const ARTICLES: Article[] = [
           { h: "数据之路：从终端到工资单", p: [
             "当数据抵达工资核算，考勤的价值才兑现：考勤表导入1C省去手工誊抄和差错，部门报表随时呈现任意期间的迟到与加班。管理者实时掌握当天，而不是等到月底。",
             "我们按您的制度配置规则——排班、班次、迟到宽限——并教会管理员自行录入新员工。部署只需两三天，业务照常运转。",
+          ] },
+          { h: "终端为什么认不出员工", p: [
+            "关于考勤系统的抱怨，大多不是软件问题，而是识别问题。在车间里，指纹会因为皮肤磨损、粉尘和油污读不出来，那里用刷卡或人脸更可靠。人脸终端不能正对窗户安装：早晨的逆光会让摄像头失效。",
+            "每人录入两枚指纹、对识别困难的员工每年重新采集一次模板，都能明显改善。SAT Solutions 在现场勘查阶段会检查通行点的照明和安装高度——就这两个细节，能消掉第一个月的大部分报修。",
           ] },
         ],
         faq: [
@@ -9741,6 +10321,10 @@ export const ARTICLES: Article[] = [
             "Eng qimmat xato — ilovalar hayvonot bog'i: lampalar birida, rozetkalar boshqasida, kameralar uchinchisida — «uydan ketdik» stsenariysini yig'ishga hech narsa yo'q. Ikkinchisi — yorug'lik faqat aqlli lampalarda: devordagi vyklyuchatel ishlamay qo'yadi va qo'lida smartfonli oila avtomatlashtirishga tez sovuqlashadi.",
             "Tizimni stsenariyli yagona platformada yig'amiz, yorug'likni esa aqlli vyklyuchatellarga quramiz — odatiy klavisha hamma uchun ishlaydi. Tekshiruv va stsenariylar loyihasi bepul: qaysi uchta yumushni olib tashlamoqchi ekaningizni ayting — ularga mos tarkib va narx taklif qilamiz.",
           ] },
+          { h: "Moslik va kengaytirish uchun zaxira", p: [
+            "Aqlli uy yillar davomida o'sadi, shuning uchun protokol boshida tanlanadi: Zigbee, Z-Wave va Wi-Fi qurilmalari bitta tizimda faqat umumiy xab orqali yashaydi. Bitta brendning yopiq ekotizimi keyinchalik begona datchik yoki parda yuritmasini qo'shishga imkon bermaydi.",
+            "Zaxira oldindan qo'yiladi: elektr shchitida bo'sh modullar, kalit qutilarida nol o'tkazgich, ikki-uch zaxira liniya va xab uchun UPS quvvati. Busiz kengaytirish allaqachon ta'mirlangan devorlarni shtroblashga borib taqaladi.",
+          ] },
         ],
         faq: [
           { q: "Aqlli uy tizimi narxi qancha?", a: "Boshlang'ich to'plam — bir necha yuz ming so'mdan. Kvartira uchun yoritish, pardalar va iqlim bilan — bir necha million. Aniq narx reja bo'yicha, smeta bepul." },
@@ -9773,6 +10357,10 @@ export const ARTICLES: Article[] = [
           { h: "Ошибки, которые обесценивают умный дом", p: [
             "Самая дорогая ошибка — зоопарк приложений: лампы в одном, розетки в другом, камеры в третьем, и сценарий «ушли из дома» собрать не из чего. Вторая — свет только на умных лампах: выключатель на стене перестаёт работать, и семья со смартфоном в руках быстро охладевает к автоматизации.",
             "Мы собираем систему на единой платформе со сценариями, а свет строим на умных выключателях — привычная клавиша работает для всех. Обследование и проект сценариев бесплатны: расскажите, какие три рутины хотите убрать, — предложим состав и цену под них.",
+          ] },
+          { h: "Совместимость и запас на расширение", p: [
+            "Умный дом растёт годами, поэтому протокол выбирают на старте: устройства Zigbee, Z-Wave и Wi-Fi живут в одной системе только через общий хаб. Закрытая экосистема одного бренда позже не даст добавить чужой датчик или привод штор.",
+            "Запас закладывают заранее: свободные модули в щите, нулевой провод в подрозетниках выключателей, две-три резервные линии и питание хаба от ИБП. Без этого расширение упирается в штробление уже отремонтированных стен.",
           ] },
         ],
         faq: [
@@ -9807,6 +10395,10 @@ export const ARTICLES: Article[] = [
             "The costliest mistake is a zoo of apps: bulbs in one, sockets in another, cameras in a third — and there is nothing to build the \"left home\" scenario from. The second is lighting on smart bulbs alone: the wall switch stops working, and a family holding smartphones quickly cools to automation.",
             "We build the system on a single platform with scenarios, and construct lighting on smart switches — the familiar key keeps working for everyone. The survey and scenario design are free: name the three routines you want gone, and we will propose the setup and the price for them.",
           ] },
+          { h: "Compatibility and room to expand", p: [
+            "A smart home grows over years, so the protocol is chosen at the start: Zigbee, Z-Wave and Wi-Fi devices coexist in one system only through a common hub. A closed single-brand ecosystem will later refuse a third-party sensor or curtain drive.",
+            "Build in reserve from the outset: spare modules in the distribution board, a neutral wire in switch back boxes, two or three spare cable runs, and UPS power for the hub. Without this, expansion means chasing walls that have already been decorated.",
+          ] },
         ],
         faq: [
           { q: "How much does a smart home system cost?", a: "A starter kit — from a few hundred thousand UZS. For a flat with lighting, curtains and climate — a few million. Exact price per plan, the estimate is free." },
@@ -9840,6 +10432,10 @@ export const ARTICLES: Article[] = [
             "En pahalı hata uygulama hayvanat bahçesidir: ampuller birinde, prizler diğerinde, kameralar üçüncüsünde — «evden çıktık» senaryosunu kuracak malzeme yoktur. İkincisi, aydınlatmanın yalnız akıllı ampullerde olmasıdır: duvardaki anahtar çalışmaz olur ve elinde telefonla dolaşan aile otomasyona hızla soğur.",
             "Sistemi senaryolu tek platformda kurar, aydınlatmayı akıllı anahtarlara inşa ederiz — alışıldık tuş herkes için çalışır. Keşif ve senaryo tasarımı ücretsizdir: kaldırmak istediğiniz üç rutini söyleyin, onlara göre yapı ve fiyat önerelim.",
           ] },
+          { h: "Uyumluluk ve büyüme payı", p: [
+            "Akıllı ev yıllar içinde büyür, bu yüzden protokol en başta seçilir: Zigbee, Z-Wave ve Wi-Fi cihazları tek bir sistemde ancak ortak bir hub üzerinden bir arada çalışır. Tek markanın kapalı ekosistemi ileride başka marka bir sensörü ya da perde motorunu kabul etmez.",
+            "Pay baştan bırakılır: panoda boş modül yerleri, anahtar kasalarında nötr hattı, iki üç yedek kablo güzergâhı ve hub için UPS beslemesi. Bunlar yoksa genişletme, boyası bitmiş duvarları yeniden kırmak demektir.",
+          ] },
         ],
         faq: [
           { q: "Akıllı ev sistemi ne kadar?", a: "Başlangıç seti — birkaç yüz bin UZS'den. Aydınlatma, perde ve iklimli daire için — birkaç milyon. Kesin fiyat plana göre, teklif ücretsiz." },
@@ -9872,6 +10468,10 @@ export const ARTICLES: Article[] = [
           { h: "让智能家居贬值的错误", p: [
             "最昂贵的错误是应用「动物园」：灯在一个App、插座在另一个、摄像机在第三个——「离家模式」根本无从拼起。第二是照明只靠智能灯泡：墙上的开关失灵，举着手机开灯的家人很快就对自动化失去热情。",
             "我们把系统建在带场景的统一平台上，照明建在智能开关上——熟悉的按键对所有人有效。勘测和场景设计免费：说出您想消灭的三件日常琐事，我们按它们给出配置和价格。",
+          ] },
+          { h: "兼容性与预留扩展余量", p: [
+            "智能家居是逐年扩建的，所以协议要在一开始就定下来：Zigbee、Z-Wave 和 Wi-Fi 设备只有通过统一网关才能共处于一套系统。单一品牌的封闭生态日后往往无法接入别家的传感器或窗帘电机。",
+            "余量要提前留出：配电箱里的空模块位、开关底盒中的零线、两三条备用线路，以及为网关配的 UPS 供电。否则日后扩展就意味着在已装修好的墙上重新开槽。",
           ] },
         ],
         faq: [
@@ -9914,6 +10514,12 @@ export const ARTICLES: Article[] = [
             "Bosh xato — tavaqa og'irligi va kengligi bo'yicha «zo'rg'a» privod: yaxlit polotno shamolda yelkan bo'ladi, keng tavaqadagi kuchsiz motor bir mavsum yashaydi. Ikkinchisi — xavfsizlikda tejash: fotoelementlar va kuch sozlamasisiz darvoza bir kuni mashina yoki odamni qisadi, «keyin qo'yamiz» degan signal chiroqni esa hech qachon qo'yishmaydi.",
             "Uchinchi xato — qishni unutish: silliq startsiz avtomatika muzlab qolgan tavaqani yulqiydi, mavsumga mos bo'lmagan moy quyuqlashadi. Biz privodni zaxira bilan tanlaymiz, har to'plamga to'liq xavfsizlik konturini kiritamiz va montajda qishki rejimlarni sozlaymiz — shuning uchun darvozalarimiz yillab ishlaydi.",
           ] },
+          { h: "Privodga xizmat ko'rsatish va resurs", p: [
+            "Privod resursi tsikllarda hisoblanadi: maishiy model sutkasiga bir necha o'nlab ochilishga, intensiv model esa yuzlab ochilishga mo'ljallangan. Hovli o'tish joyiga qo'yilgan «uy» privodi qizib ketadi va bir-ikki mavsumda ishdan chiqadi.",
+            "Yarim yilda bir marta zanjir yoki tasma tarangligi, reduktor moylanishi, reyka mahkamligi va fotoelementlar tozaligi tekshiriladi: changli linzalar o'z-o'zidan revers beradi. Darvoza mexanikasi — g'ildirakchalar va ilgaklar — avtomatika bilan birga xizmat ko'rsatiladi.",
+          
+            "Alohida masala — ehtiyot qismlarning mavjudligi. O'zbekistonda keng tarqalgan brendlarda boshqaruv platasi, chegaraviy o'chirgichlar va pultlar omborda bo'ladi, ta'mirlash bir kun oladi; kam uchraydigan modellarda detalni haftalab kutishga to'g'ri keladi.",
+          ] },
         ],
         faq: [
           { q: "Darvozani avtomatlashtirish qancha turadi?", a: "Hovli darvozasi uchun privod to'plami o'rnatish bilan — bir necha million so'mdan. Aniq narx darvoza og'irligi va turiga bog'liq — smeta bepul." },
@@ -9946,6 +10552,12 @@ export const ARTICLES: Article[] = [
           { h: "Частые ошибки при заказе автоматики", p: [
             "Главная ошибка — привод «впритык» по весу и ширине створки: сплошное полотно парусит на ветру, и слабый мотор на широкой створке живёт один сезон. Вторая — экономия на безопасности: без фотоэлементов и регулировки усилия ворота однажды прижмут машину или человека, а сигнальную лампу «поставим потом» не ставят никогда.",
             "Третья ошибка — забыть про зиму: без плавного старта автоматика рвёт примёрзшую створку, а смазка не по сезону густеет. Мы подбираем привод с запасом, включаем полный контур безопасности в каждый комплект и настраиваем зимние режимы при монтаже — поэтому наши ворота работают годами.",
+          ] },
+          { h: "Обслуживание привода и ресурс", p: [
+            "Ресурс привода считают в циклах: бытовая модель рассчитана на несколько десятков открываний в сутки, интенсивная — на сотни. Поставленный на проходную двора «домашний» привод перегревается и выходит из строя за один-два сезона.",
+            "Раз в полгода проверяют натяжение цепи или ремня, смазку редуктора, крепление рейки и чистоту фотоэлементов: запылённые линзы дают самопроизвольный реверс. Механику ворот — ролики и петли — обслуживают вместе с автоматикой.",
+          
+            "Отдельный вопрос — доступность запчастей. У распространённых в Узбекистане брендов плата управления, концевые выключатели и пульты есть на складе, и ремонт занимает день; по редким моделям деталь приходится ждать неделями.",
           ] },
         ],
         faq: [
@@ -9980,6 +10592,12 @@ export const ARTICLES: Article[] = [
             "The main mistake is a drive sized \"just enough\" for the leaf's weight and width: a solid panel sails in the wind, and a weak motor on a wide leaf lasts one season. The second is saving on safety: without photocells and force adjustment the gate will one day press on a car or a person, and the warning lamp promised \"for later\" never gets installed.",
             "The third mistake is forgetting about winter: without a soft start the drive tears at a frozen leaf, and off-season grease thickens. We size the drive with a margin, include the full safety loop in every kit and configure winter modes at installation — which is why our gates run for years.",
           ] },
+          { h: "Drive maintenance and service life", p: [
+            "Drive life is measured in cycles: a domestic model is rated for a few dozen openings a day, an intensive one for hundreds. A residential drive fitted to a courtyard entrance overheats and fails within one or two seasons.",
+            "Every six months the chain or belt tension, gearbox lubrication, rack fixing and photocell cleanliness are checked: dusty lenses trigger spontaneous reversal. The gate mechanics, rollers and hinges, are serviced together with the automation.",
+          
+            "Spare parts availability is a separate question. For brands common in Uzbekistan the control board, limit switches and remotes are kept in stock and a repair takes a day; for rare models the part has to be waited for over weeks.",
+          ] },
         ],
         faq: [
           { q: "What does gate automation cost?", a: "A drive kit for yard gates with installation — from a few million UZS. The exact price depends on gate weight and type — the estimate is free." },
@@ -10013,6 +10631,12 @@ export const ARTICLES: Article[] = [
             "Ana hata, kanadın ağırlığına ve genişliğine «ucu ucuna» motor seçmektir: dolu panel rüzgârda yelken olur, geniş kanatta zayıf motor bir sezon dayanır. İkincisi güvenlikten kısmaktır: fotoseller ve kuvvet ayarı olmadan kapı bir gün araca veya insana yüklenir; «sonra takarız» denen flaşör asla takılmaz.",
             "Üçüncü hata kışı unutmaktır: yumuşak kalkış yoksa motor donmuş kanadı yolar, mevsime uymayan gres katılaşır. Motoru payla seçer, her sete tam güvenlik devresini koyar ve montajda kış modlarını ayarlarız — kapılarımız bu yüzden yıllarca çalışır.",
           ] },
+          { h: "Motor bakımı ve ömrü", p: [
+            "Motor ömrü çevrim sayısıyla ölçülür: konut tipi bir model günde birkaç düzine açılışa, yoğun kullanım modeli yüzlerce açılışa göre tasarlanır. Avlu girişine takılan konut tipi motor ısınır ve bir iki sezonda arızalanır.",
+            "Altı ayda bir zincir veya kayış gerginliği, redüktör yağlaması, kremayer bağlantısı ve fotosel temizliği kontrol edilir: tozlanan mercekler kendiliğinden geri dönüşe yol açar. Kapı mekaniği — makaralar ve menteşeler — otomasyonla birlikte bakılır.",
+          
+            "Ayrı bir konu da yedek parça bulunabilirliğidir. Özbekistan'da yaygın markalarda kontrol kartı, limit şalterleri ve kumandalar stokta bulunur ve onarım bir gün sürer; nadir modellerde parça haftalarca beklenir.",
+          ] },
         ],
         faq: [
           { q: "Kapı otomasyonu ne kadar?", a: "Avlu kapısı için motor seti montajla — birkaç milyon UZS'den. Kesin fiyat kapının ağırlığına ve tipine bağlı — teklif ücretsiz." },
@@ -10045,6 +10669,12 @@ export const ARTICLES: Article[] = [
           { h: "订购大门自动化时的常见错误", p: [
             "头号错误是电机按门扇重量和宽度「刚刚好」选：实心门板兜风，宽门扇配小电机一季就报废。第二是省掉安全装置：没有红外对射和推力调节，大门早晚会压到车或人，而说好「以后装」的警示灯永远不会装。",
             "第三个错误是忘了冬天：没有缓启动，电机硬拽冻住的门扇；润滑脂不对季节就会变稠。我们按余量选电机、每套标配完整安全回路、安装时调好冬季模式——所以我们装的大门能用很多年。",
+          ] },
+          { h: "电机保养与使用寿命", p: [
+            "电机寿命以开合次数计算：家用型按每天几十次设计，重载型可达每天数百次。把家用电机装在院子或厂区的通行口上，很快就会过热，一两个季度即报废。",
+            "每半年检查一次链条或皮带张紧度、减速箱润滑、齿条固定和光电对射的清洁度：镜头积灰会导致大门无故反向。门体机械部分——滚轮和铰链——应与自动化设备一并保养。",
+          
+            "备件供应是另一个问题。在乌兹别克斯坦常见的品牌，控制板、限位开关和遥控器都有现货，维修一天即可完成；冷门型号则要等上几周。",
           ] },
         ],
         faq: [
