@@ -4664,7 +4664,15 @@
     "needTitle": "{name} mı lazım?",
     "detailCtaText": "Tesisinize uygun ekipmanı seçer ve 30 dakika içinde teklif göndeririz.",
     "relatedLabel": "İlgili hizmetler",
-    "relatedTitle": "Ayrıca ihtiyacınız olabilir"
+    "relatedTitle": "Ayrıca ihtiyacınız olabilir",
+    "longTitle": "Zayıf akım taahhüdü nasıl yürütülür",
+    "long": [
+      "Zayıf akım sistemleri, yük değil sinyal taşıyan her şeyi kapsar: video gözetim, geçiş kontrol sistemi ve turnikeler, hırsız ve yangın alarm sistemleri, diafon, IP telefon, yapısal kablolama ve fiber optik ağ, sunucu kabinleri, video duvarlar, kapı ve bariyer otomasyonu. Bunların tek bir taahhütte toplanmasının nedeni düzenli bir teklif hazırlamak değil, uygulamadır: aynı kablo güzergâhlarını, kanalları ve spiralleri, aynı kesintisiz güç kaynaklarını, aynı topraklamayı ve aynı teknik odayı paylaşırlar. Ayrı ekiplere bölmek, aynı duvarı üç kez kırmak anlamına gelir.",
+      "Tüm zayıf akım işlerinin tek yüklenicide olması sahaya tek bir sorumluluk hattı kazandırır. Üç güzergâh yerine bir, tüzel kişiyle tek sözleşme, tek kabul tutanağı ve kurulan her şey için tek garanti. Bir kamera kayıt almadığında ya da turnike açılmadığında kimin kapsamı olduğu tartışılmaz: kablo ekibi mi, entegratör mü, yangın kısmını kuran taraf mı. Tasarımı, montajı ve bakımı kendi kadromuzla yaptığımız için projede çizilen ile kanala gerçekten çekilen aynı olur.",
+      "İş sırası küçük bir mağazada da fabrikada da aynıdır. Önce mühendisin ücretsiz saha ziyareti: ölçüm, yerleşim, montaj noktaları, mevcut güzergâhlar ve besleme. Ardından spesifikasyonlu teknik çözüm: ekipman modelleri, kablo metrajı, malzemeler ve kalem bazında fiyat; keşif genellikle bir iş günü içinde verilir. Sonra onaylanan plana göre montaj, devreye alma, kayıt ve yetki ayarları, personel eğitimi ve as-built belgelerle teslim. Teslimden sonra saha bakım aşamasına geçer.",
+      "Bütçe kamera sayısıyla belirlenmez. Büyük kısmını güzergâh ve işçilik oluşturur: kablo, kanal, sabitleme elemanları, dağıtım panoları, kesintisiz güç kaynakları ve PoE anahtarlar. Buradaki tasarruf en pahalıya mal olur; bakır kaplı kablo uzaktaki kameraya beslemeyi taşımaz, zayıf bir güç kaynağı sıcakta tüm hattı düşürür. Bu yüzden fiyat saha üzerinden hesaplanır: mesafeler, kat sayısı, duvar malzemesi ve istenen görüntü kalitesi rakamı kayıt cihazı modelinden çok daha fazla değiştirir. Yerel ağ kurulumu ve diğer ağlar yedek port ve metrajla planlanır, bir yıl sonraki genişleme daha ucuza gelir.",
+      "Özbekistan koşulları kendi gerekliliklerini ekler. Yazın güneşte +45 °C, sanayi bölgelerinde ve şantiyelerde toz, şebeke geriliminde dalgalanma ve kesinti vardır; ekipman fabrika hatasından çok bu nedenlerle arızalanır. Dış mekân kameraları sıcaklık ve sızdırmazlık payıyla seçilir, kabinlere havalandırma konur, kayıt üniteleri ve yangın panelleri UPS arkasına alınır. Üç ayda bir yapılan periyodik bakım; lens ve muhafaza temizliğini, kontak sıkmayı, akü testini, dedektör ve siren kontrolünü, yazılım güncellemesini ve arşiv derinliğinin denetimini içerir."
+    ]
   },
   "chat": {
     "title": "Canlı sohbet",

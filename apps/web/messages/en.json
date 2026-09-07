@@ -4672,7 +4672,15 @@
     "needTitle": "Need {name}?",
     "detailCtaText": "We'll select equipment for your site and send a quote within 30 minutes.",
     "relatedLabel": "Related services",
-    "relatedTitle": "You may also need"
+    "relatedTitle": "You may also need",
+    "longTitle": "How a low-voltage systems contract works",
+    "long": [
+      "Low-voltage systems cover everything that carries a signal rather than a load: video surveillance, ACS and turnstiles, intruder and fire alarm systems, door entry, IP telephony, structured cabling and fiber optic network, server cabinets, video walls, gate and barrier automation. They are bundled into one contract for a practical reason rather than for a tidy quotation: they share the same cable routes, trays and conduit, the same uninterruptible power supplies, the same grounding and the same technical room. Splitting them between separate crews means chasing the same walls three times.",
+      "One contractor for all low-voltage work gives a site a single line of responsibility. One route instead of three, one contract with a legal entity, one handover act and one warranty covering everything installed. When a camera stops recording or a turnstile refuses to open, nobody has to argue whose scope it is: the cabling crew, the integrator or whoever fitted the fire part. We design, install and maintain with our own staff, so what the drawings show matches what is actually pulled through the tray.",
+      "The sequence is the same for a shop and for a plant. First a free site visit by an engineer: measurements, layout, mounting points, existing routes and power. Then a technical solution with a specification: equipment models, cable footage, accessories and itemised pricing, with the estimate usually delivered within one working day. Next comes installation to the approved plan, commissioning, setup of recording and access rights, staff training and handover with as-built documentation. After handover the site moves onto maintenance.",
+      "The budget is not a function of camera count. Most of it goes into routes and labour: cable, trays, fixings, distribution boards, uninterruptible power supplies and PoE switches. Saving here costs the most, because copper-clad cable will not carry power to a distant camera and an undersized supply drops the whole line in the heat. That is why an estimate is priced per site: distances, number of floors, wall material and the required image quality shift the figure far more than the recorder model does. Local network installation and the remaining networks are laid out with spare ports and footage, so expanding a year later costs less.",
+      "Conditions in Uzbekistan add their own requirements. Summer brings +45 °C in the sun, industrial zones and construction sites are dusty, and mains voltage surges or disappears, so equipment fails from this more often than from factory defects. Outdoor cameras are selected with margin on temperature rating and ingress protection, cabinets get ventilation, and recording nodes and fire panels sit behind a UPS. Scheduled quarterly maintenance covers cleaning lenses and housings, retightening contacts, testing batteries, checking detectors and sounders, updating firmware and verifying archive depth."
+    ]
   },
   "chat": {
     "title": "Online chat",

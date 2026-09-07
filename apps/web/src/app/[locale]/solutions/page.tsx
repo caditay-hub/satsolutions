@@ -240,6 +240,24 @@ export default async function ServicesPage() {
         </div>
       </section>
 
+      {/* Содержательный блок. Страница-хаб была сеткой ссылок почти без текста, и Google Ads
+          оценивал её как посадочную «ниже среднего» по ключу «слаботочные системы» (QS 3).
+          Раскрывает состав работ и порядок сотрудничества прямо на хабе. */}
+      <section className="border-t border-slate-100 bg-slate-50">
+        <div className="container-page py-12 sm:py-16">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("longTitle")}</h2>
+            <div className="mt-5 space-y-4">
+              {(t.raw("long") as string[]).map((par) => (
+                <p key={par.slice(0, 40)} className="text-[15px] leading-relaxed text-slate-600">
+                  {par}
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-slate-900 text-white">
         <div className="container-page flex flex-col items-center gap-5 py-14 text-center">

@@ -34,7 +34,13 @@ export async function GET() {
   // Политики Google Shopping: детекторы скрытых камер/жучков считаются
   // «hacking» (answer/6150005) — товар легален на сайте, но в фид нельзя,
   // иначе копятся policy-отклонения на аккаунт.
-  const POLICY_BANNED = new Set(["pro-k68-detektor-skrytyh-kamer-i-zhuchkov"]);
+  // Пульсоксиметр — медицинский прибор: Google относит его к «personalized advertising:
+  // personal hardships» (состояние здоровья) и отклоняет. Товар остаётся в каталоге,
+  // но в фид не идёт, иначе висит постоянное policy-отклонение (проверено 07.09.2026).
+  const POLICY_BANNED = new Set([
+    "pro-k68-detektor-skrytyh-kamer-i-zhuchkov",
+    "pro-pulsoksimetr",
+  ]);
 
   // Товары «под заказ» (inStock=false) уходят как backorder, а для него Google требует
   // дату ожидаемого поступления — без неё позиция отклоняется целиком (22 отклонения
