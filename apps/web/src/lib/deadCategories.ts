@@ -20,6 +20,7 @@ const BRAND_PREFIX: Record<string, string> = {
   "mikrotik-": "mikrotik",
   "ruijie-": "ruijie",
   "dolynk-": "dahua", // облачные сервисы Dahua
+  "avigilon-": "avigilon", // старые подразделы avigilon-domes/avigilon-ptz (GSC 404, 06.09)
 };
 
 /** Хвост «-hik» остался от старых hikvision-разделов. */
