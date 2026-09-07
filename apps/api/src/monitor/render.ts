@@ -115,7 +115,11 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
           : hdPos < 0
             ? { delta: `−${fmt(Math.abs(hdPos), 1)}`, icon: "📈" }
             : { delta: `+${fmt(hdPos, 1)}`, icon: "📉 ⚠️" };
-      L.push(`<i>🇺🇿 Узбекистан — домашний рынок (по нему и судим):</i>`);
+      const junk = report.homeJunk;
+      const junkNote = junk && junk.impressions
+        ? ` <i>(отсеяно ${fmt(junk.impressions)} мусорных показов)</i>`
+        : "";
+      L.push(`<i>🇺🇿 Узбекистан — домашний рынок (по нему и судим):</i>${junkNote}`);
       L.push(
         table([
           { label: "Клики", value: fmt(h.clicks), delta: hClicks.delta, icon: hClicks.icon },

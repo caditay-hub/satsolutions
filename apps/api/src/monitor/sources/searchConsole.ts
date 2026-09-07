@@ -7,13 +7,17 @@ import { config } from "../config.js";
 const API = "https://searchconsole.googleapis.com/webmasters/v3/sites";
 
 export type GscTotals = { clicks: number; impressions: number; ctr: number; position: number };
+/** Объём отсеянного мусора — чтобы видеть, если поток вдруг вырастет. */
+export type GscJunk = { queries: number; impressions: number };
 export type GscRow = { key: string; clicks: number; impressions: number; ctr: number; position: number };
 
 export type GscReport = {
   range: { from: string; to: string };
   current: GscTotals;
-  /** Только домашний рынок (Узбекистан) — без зарубежных показов по артикулам. */
+  /** Домашний рынок (Узбекистан) без зарубежных показов по артикулам и без мусора. */
   home: GscTotals;
+  /** Сколько мусора отсеяно из домашних цифр. */
+  homeJunk: GscJunk;
   topQueries: GscRow[];
   topPages: GscRow[];
 };
@@ -26,6 +30,37 @@ export type GscReport = {
  * общий CTR 2,53% против 3,99% по Узбекистану).
  */
 const HOME_COUNTRY = "uzb";
+
+/**
+ * Мусорные запросы вида «ai12345» — ботовый поток, тысячи показов с нулём кликов.
+ * Сидят и внутри узбекского сегмента (07.09.2026: 3098 показов из 6539), поэтому
+ * фильтра по стране мало — вычитаем их из домашних цифр отдельно.
+ */
+const JUNK_QUERY = /^ai\d{4,6}$/i;
+
+/** Сумма мусорных запросов в срезе по запросам. */
+function junkTotals(rows: any[] | undefined): { clicks: number; impressions: number; queries: number } {
+  let clicks = 0, impressions = 0, queries = 0;
+  for (const r of rows ?? []) {
+    if (!JUNK_QUERY.test(r.keys?.[0] ?? "")) continue;
+    clicks += r.clicks ?? 0;
+    impressions += r.impressions ?? 0;
+    queries++;
+  }
+  return { clicks, impressions, queries };
+}
+
+/**
+ * Домашние цифры за вычетом мусора. Срез по запросам не отдаёт анонимизированные
+ * запросы, поэтому вычитаем измеренный мусор из полного итога по стране —
+ * так итог остаётся полным, а нулевые показы уходят.
+ * Средняя позиция не корректируется (её из срезов не пересчитать).
+ */
+function subtractJunk(total: GscTotals, junk: { clicks: number; impressions: number }): GscTotals {
+  const impressions = Math.max(0, total.impressions - junk.impressions);
+  const clicks = Math.max(0, total.clicks - junk.clicks);
+  return { clicks, impressions, ctr: impressions ? clicks / impressions : 0, position: total.position };
+}
 const homeFilter = {
   dimensionFilterGroups: [
     { filters: [{ dimension: "country", operator: "equals", expression: HOME_COUNTRY }] },
@@ -78,9 +113,10 @@ export async function fetchGscReport(windowDays = 7, lagDays = 3): Promise<GscRe
   const to = daysAgo(lagDays);
   const from = daysAgo(lagDays + windowDays - 1);
 
-  const [totalsRes, homeRes, queriesRes, pagesRes] = await Promise.all([
+  const [totalsRes, homeRes, homeQueriesRes, queriesRes, pagesRes] = await Promise.all([
     query({ startDate: from, endDate: to }),
     query({ startDate: from, endDate: to, ...homeFilter }),
+    query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25000, ...homeFilter }),
     query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25, orderBy: [{ field: "impressions", descending: true }] }),
     query({ startDate: from, endDate: to, dimensions: ["page"], rowLimit: 25 }),
   ]);
@@ -88,7 +124,11 @@ export async function fetchGscReport(windowDays = 7, lagDays = 3): Promise<GscRe
   return {
     range: { from, to },
     current: totals(totalsRes.rows),
-    home: totals(homeRes.rows),
+    home: subtractJunk(totals(homeRes.rows), junkTotals(homeQueriesRes.rows)),
+    homeJunk: (() => {
+      const j = junkTotals(homeQueriesRes.rows);
+      return { queries: j.queries, impressions: j.impressions };
+    })(),
     topQueries: mapRows(queriesRes.rows),
     topPages: mapRows(pagesRes.rows),
   };
@@ -101,11 +141,15 @@ export async function fetchGscTotalsForPrevWindow(
 ): Promise<{ all: GscTotals; home: GscTotals }> {
   const to = daysAgo(lagDays + windowDays);
   const from = daysAgo(lagDays + windowDays * 2 - 1);
-  const [allRes, homeRes] = await Promise.all([
+  const [allRes, homeRes, homeQueriesRes] = await Promise.all([
     query({ startDate: from, endDate: to }),
     query({ startDate: from, endDate: to, ...homeFilter }),
+    query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25000, ...homeFilter }),
   ]);
-  return { all: totals(allRes.rows), home: totals(homeRes.rows) };
+  return {
+    all: totals(allRes.rows),
+    home: subtractJunk(totals(homeRes.rows), junkTotals(homeQueriesRes.rows)),
+  };
 }
 
 /**
