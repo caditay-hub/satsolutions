@@ -12,7 +12,7 @@ import type { YandexReport } from "./sources/yandex.js";
 
 export type Snapshot = {
   ts: string; // ISO-время прогона
-  gsc?: { report: GscReport; prev: GscTotals } | null;
+  gsc?: { report: GscReport; prev: { all: GscTotals; home: GscTotals } } | null;
   ga4?: Ga4Report | null;
   psi?: PsiResult[] | null;
   ads?: GoogleAdsReport | null;

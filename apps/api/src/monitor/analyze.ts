@@ -21,23 +21,31 @@ export function detectAlerts(snap: Snapshot): Alert[] {
   const alerts: Alert[] = [];
 
   // --- GSC: клики и позиции ---
+  // ВАЖНО: тревоги считаем по ДОМАШНЕМУ рынку (Узбекистан), а не по общим цифрам.
+  // Общие показы шумят: зарубежные показы по кодам моделей и мусорные запросы
+  // вида «ai12345» дают тысячи показов с нулём кликов и роняют средний CTR,
+  // из-за чего отчёт поднимал ложную тревогу (разбор 07.09.2026).
   if (snap.gsc) {
-    const { report, prev } = snap.gsc;
-    const dClicks = pctChange(report.current.clicks, prev.clicks);
+    const { report } = snap.gsc;
+    // Старые снапшоты хранят prev плоским объектом — поддерживаем оба формата.
+    const prevAll = (snap.gsc.prev as any).all ?? snap.gsc.prev;
+    const prev = (snap.gsc.prev as any).home ?? prevAll;
+    const cur = report.home ?? report.current;
+    const dClicks = pctChange(cur.clicks, prev.clicks);
     if (dClicks <= -t.clicksDropPct) {
       alerts.push({
         severity: "critical",
         area: "SEO",
-        text: `Клики из поиска упали на ${fmt(Math.abs(dClicks), 0)}% WoW (${fmt(prev.clicks)} → ${fmt(report.current.clicks)}).`,
+        text: `Клики из поиска (Узбекистан) упали на ${fmt(Math.abs(dClicks), 0)}% WoW (${fmt(prev.clicks)} → ${fmt(cur.clicks)}).`,
       });
     }
     // Ухудшение средней позиции (в GSC больше = хуже).
-    const dPos = report.current.position - prev.position;
+    const dPos = cur.position - prev.position;
     if (dPos >= t.positionDrop) {
       alerts.push({
         severity: "warning",
         area: "SEO",
-        text: `Средняя позиция ухудшилась на ${fmt(dPos, 1)} п. (${fmt(prev.position, 1)} → ${fmt(report.current.position, 1)}).`,
+        text: `Средняя позиция (Узбекистан) ухудшилась на ${fmt(dPos, 1)} п. (${fmt(prev.position, 1)} → ${fmt(cur.position, 1)}).`,
       });
     }
   }
@@ -130,13 +138,24 @@ export function buildDigest(snap: Snapshot): string {
   const lines: string[] = [];
 
   if (snap.gsc) {
-    const { report, prev } = snap.gsc;
+    const { report } = snap.gsc;
+    const prevAll = (snap.gsc.prev as any).all ?? snap.gsc.prev;
+    const prevHome = (snap.gsc.prev as any).home ?? prevAll;
     const c = report.current;
     lines.push(
-      `SEO (GSC, ${report.range.from}…${report.range.to}): клики ${fmt(c.clicks)} (${sign(pctChange(c.clicks, prev.clicks))}${fmt(pctChange(c.clicks, prev.clicks), 0)}%), ` +
-        `показы ${fmt(c.impressions)} (${sign(pctChange(c.impressions, prev.impressions))}${fmt(pctChange(c.impressions, prev.impressions), 0)}%), ` +
+      `SEO (GSC, ${report.range.from}…${report.range.to}), ВСЕ страны: клики ${fmt(c.clicks)} (${sign(pctChange(c.clicks, prevAll.clicks))}${fmt(pctChange(c.clicks, prevAll.clicks), 0)}%), ` +
+        `показы ${fmt(c.impressions)} (${sign(pctChange(c.impressions, prevAll.impressions))}${fmt(pctChange(c.impressions, prevAll.impressions), 0)}%), ` +
         `CTR ${fmt(c.ctr * 100, 1)}%, поз. ${fmt(c.position, 1)}.`,
     );
+    if (report.home) {
+      const h = report.home;
+      lines.push(
+        `SEO, ДОМАШНИЙ РЫНОК (Узбекистан) — по нему и судим: клики ${fmt(h.clicks)} (${sign(pctChange(h.clicks, prevHome.clicks))}${fmt(pctChange(h.clicks, prevHome.clicks), 0)}%), ` +
+          `показы ${fmt(h.impressions)} (${sign(pctChange(h.impressions, prevHome.impressions))}${fmt(pctChange(h.impressions, prevHome.impressions), 0)}%), ` +
+          `CTR ${fmt(h.ctr * 100, 1)}%, поз. ${fmt(h.position, 1)}. ` +
+          `Разница с общими цифрами — зарубежные показы по кодам моделей и мусорные запросы «ai#####» с нулевым CTR; это НЕ проблема сниппетов.`,
+      );
+    }
     const qw = quickWins(report);
     if (qw.length) {
       lines.push("Быстрые победы (поз. 5–15, много показов):");

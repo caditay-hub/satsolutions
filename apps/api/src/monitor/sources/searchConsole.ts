@@ -12,8 +12,24 @@ export type GscRow = { key: string; clicks: number; impressions: number; ctr: nu
 export type GscReport = {
   range: { from: string; to: string };
   current: GscTotals;
+  /** Только домашний рынок (Узбекистан) — без зарубежных показов по артикулам. */
+  home: GscTotals;
   topQueries: GscRow[];
   topPages: GscRow[];
+};
+
+/**
+ * Фильтр «домашний рынок». Общие цифры GSC сильно шумят: английские карточки
+ * товаров ловят показы по кодам моделей со всего мира (ОАЭ, Египет, Бангладеш…)
+ * с нулевым CTR — это не наша аудитория, но она валит средний CTR вниз.
+ * Разрез по Узбекистану показывает реальное положение дел (проверено 07.09.2026:
+ * общий CTR 2,53% против 3,99% по Узбекистану).
+ */
+const HOME_COUNTRY = "uzb";
+const homeFilter = {
+  dimensionFilterGroups: [
+    { filters: [{ dimension: "country", operator: "equals", expression: HOME_COUNTRY }] },
+  ],
 };
 
 /** YYYY-MM-DD для смещения на N дней назад от сегодня (UTC). */
@@ -62,8 +78,9 @@ export async function fetchGscReport(windowDays = 7, lagDays = 3): Promise<GscRe
   const to = daysAgo(lagDays);
   const from = daysAgo(lagDays + windowDays - 1);
 
-  const [totalsRes, queriesRes, pagesRes] = await Promise.all([
+  const [totalsRes, homeRes, queriesRes, pagesRes] = await Promise.all([
     query({ startDate: from, endDate: to }),
+    query({ startDate: from, endDate: to, ...homeFilter }),
     query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25, orderBy: [{ field: "impressions", descending: true }] }),
     query({ startDate: from, endDate: to, dimensions: ["page"], rowLimit: 25 }),
   ]);
@@ -71,17 +88,24 @@ export async function fetchGscReport(windowDays = 7, lagDays = 3): Promise<GscRe
   return {
     range: { from, to },
     current: totals(totalsRes.rows),
+    home: totals(homeRes.rows),
     topQueries: mapRows(queriesRes.rows),
     topPages: mapRows(pagesRes.rows),
   };
 }
 
 /** Те же агрегаты за предыдущее окно той же длины — для дельты WoW. */
-export async function fetchGscTotalsForPrevWindow(windowDays = 7, lagDays = 3): Promise<GscTotals> {
+export async function fetchGscTotalsForPrevWindow(
+  windowDays = 7,
+  lagDays = 3,
+): Promise<{ all: GscTotals; home: GscTotals }> {
   const to = daysAgo(lagDays + windowDays);
   const from = daysAgo(lagDays + windowDays * 2 - 1);
-  const res = await query({ startDate: from, endDate: to });
-  return totals(res.rows);
+  const [allRes, homeRes] = await Promise.all([
+    query({ startDate: from, endDate: to }),
+    query({ startDate: from, endDate: to, ...homeFilter }),
+  ]);
+  return { all: totals(allRes.rows), home: totals(homeRes.rows) };
 }
 
 /**

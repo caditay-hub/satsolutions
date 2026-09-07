@@ -74,7 +74,10 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
 
   // ── Поиск (Search Console) ────────────────────────────
   if (snap.gsc) {
-    const { report, prev } = snap.gsc;
+    const { report } = snap.gsc;
+    // Старые снапшоты хранят prev плоским объектом — поддерживаем оба формата.
+    const prev = (snap.gsc.prev as any).all ?? snap.gsc.prev;
+    const prevHome = (snap.gsc.prev as any).home ?? prev;
     const c = report.current;
     L.push("", RULE, `🔍 <b>Поиск</b> · Search Console`, `<i>${report.range.from} — ${report.range.to}</i>`);
 
@@ -97,6 +100,31 @@ export function renderReport(snap: Snapshot, alerts: Alert[], narrative: string)
         { label: "Ср. позиция", value: fmt(c.position, 1), delta: posCell.delta, icon: posCell.icon },
       ]),
     );
+
+    // Домашний рынок отдельной таблицей: общие цифры включают зарубежные показы
+    // по кодам моделей и мусорные запросы «ai#####» с нулевым CTR.
+    if (report.home) {
+      const h = report.home;
+      const hClicks = deltaPct(h.clicks, prevHome.clicks);
+      const hImpr = deltaPct(h.impressions, prevHome.impressions);
+      const hCtr = deltaPct(h.ctr, prevHome.ctr);
+      const hdPos = h.position - prevHome.position;
+      const hPosCell =
+        Math.abs(hdPos) < 0.1
+          ? { delta: "0", icon: "➖" }
+          : hdPos < 0
+            ? { delta: `−${fmt(Math.abs(hdPos), 1)}`, icon: "📈" }
+            : { delta: `+${fmt(hdPos, 1)}`, icon: "📉 ⚠️" };
+      L.push(`<i>🇺🇿 Узбекистан — домашний рынок (по нему и судим):</i>`);
+      L.push(
+        table([
+          { label: "Клики", value: fmt(h.clicks), delta: hClicks.delta, icon: hClicks.icon },
+          { label: "Показы", value: fmt(h.impressions), delta: hImpr.delta, icon: hImpr.icon },
+          { label: "CTR", value: `${fmt(h.ctr * 100, 1)}%`, delta: hCtr.delta, icon: hCtr.icon },
+          { label: "Ср. позиция", value: fmt(h.position, 1), delta: hPosCell.delta, icon: hPosCell.icon },
+        ]),
+      );
+    }
 
     const qw = quickWins(report);
     if (qw.length) {
