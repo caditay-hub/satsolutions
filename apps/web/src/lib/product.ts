@@ -44,8 +44,11 @@ export function productIcon(name: string): string {
 }
 
 // «Новинка»: товар моложе 60 дней с момента добавления. Бейдж в карточках и на странице товара.
+// Товар без цены («Цена по запросу») новинкой не помечаем: бейдж зовёт купить,
+// а купить нечего — то же правило действует в разделе /products/new.
 export const NEW_BADGE_DAYS = 60;
-export function isNewProduct(p: Pick<ProductDto, "createdAt">): boolean {
+export function isNewProduct(p: Pick<ProductDto, "createdAt" | "price">): boolean {
   const t = Date.parse(p.createdAt ?? "");
-  return Number.isFinite(t) && Date.now() - t < NEW_BADGE_DAYS * 86400_000;
+  if (!Number.isFinite(t) || Date.now() - t >= NEW_BADGE_DAYS * 86400_000) return false;
+  return Number(p.price ?? 0) > 0;
 }

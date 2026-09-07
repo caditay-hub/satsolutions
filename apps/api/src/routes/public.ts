@@ -200,6 +200,12 @@ publicRouter.get("/products", async (req, res) => {
   if (days > 0 && days <= 366) {
     where.createdAt = { [Op.gte]: new Date(Date.now() - days * 86400_000) };
   }
+  // hasPrice=1 — только товары с ценой. Витрина «Новинок» не должна показывать
+  // карточки «Цена по запросу»: покупателю там нечего сделать.
+  const hasPriceRaw = String(req.query.hasPrice ?? "");
+  if (hasPriceRaw === "1" || hasPriceRaw === "true") {
+    where.price = { [Op.gt]: 0 };
+  }
   const qf = q ? flipLayout(q) : ""; // раскладка (флип) — нужна и в OR, и позже для corrected-подсказки
   if (q) {
     // Поиск по названию/модели товара + по названию КАТЕГОРИИ и БРЕНДА

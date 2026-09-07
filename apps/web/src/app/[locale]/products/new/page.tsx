@@ -38,9 +38,9 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
   const tm = await getTranslations({ locale, namespace: "catalogMega" });
 
   // Свежие за 90 дней; при затишье — просто последние поступления
-  let data = await getProducts(page, PER_PAGE, { sort: "new", days: NEW_SECTION_DAYS });
+  let data = await getProducts(page, PER_PAGE, { sort: "new", days: NEW_SECTION_DAYS, hasPrice: true });
   if (data.total < MIN_ITEMS) {
-    data = await getProducts(page, PER_PAGE, { sort: "new" });
+    data = await getProducts(page, PER_PAGE, { sort: "new", hasPrice: true });
   }
   const { items, total } = data;
   const { brands } = await getBrands().catch(() => ({ brands: [] as any[] }));
