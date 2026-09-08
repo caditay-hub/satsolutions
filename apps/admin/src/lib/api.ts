@@ -62,6 +62,8 @@ export type ProductDto = {
   shortDescription: string | null;
   description: string | null;
   characteristics: Record<string, string> | null;
+  seoTitle: string | null;
+  seoDescription: string | null;
   coverImageUrl: string | null;
   published: boolean;
   inStock?: boolean;

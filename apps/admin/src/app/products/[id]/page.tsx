@@ -94,6 +94,8 @@ export default function EditProductPage() {
           shortDescription: (product.shortDescription ?? "").trim().slice(0, 500) || null,
           description: product.description,
           characteristics: Object.keys(characteristicsObj).length ? characteristicsObj : null,
+          seoTitle: (product.seoTitle ?? "").trim().slice(0, 255) || null,
+          seoDescription: (product.seoDescription ?? "").trim().slice(0, 600) || null,
           coverImageUrl: product.coverImageUrl,
           published: product.published,
           inStock: (product as any).inStock ?? true,
@@ -271,6 +273,41 @@ export default function EditProductPage() {
                     maxLength={500}
                   />
                   <div className="mt-1 text-xs text-slate-500">{String(product.shortDescription ?? "").length}/500</div>
+                </label>
+                <label className="block">
+                  <div className="text-sm font-medium text-slate-700">SEO: заголовок страницы</div>
+                  <div className="text-xs text-slate-500">
+                    Заменяет автоматический «Название — купить в Ташкенте». Только для русской версии.
+                    Google показывает ~65 символов.
+                  </div>
+                  <input
+                    value={product.seoTitle ?? ""}
+                    onChange={(e) => {
+                      const v = e.target.value.slice(0, 255);
+                      setProduct({ ...product, seoTitle: v ? v : null });
+                    }}
+                    className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                    maxLength={255}
+                  />
+                  <div className="mt-1 text-xs text-slate-500">{String(product.seoTitle ?? "").length}/65 рекомендуемых</div>
+                </label>
+                <label className="block">
+                  <div className="text-sm font-medium text-slate-700">SEO: описание для выдачи</div>
+                  <div className="text-xs text-slate-500">
+                    Заменяет краткое описание в сниппете. Цену и наличие писать НЕ надо — страница
+                    подставляет их сама, актуальными.
+                  </div>
+                  <textarea
+                    value={product.seoDescription ?? ""}
+                    onChange={(e) => {
+                      const v = e.target.value.slice(0, 600);
+                      setProduct({ ...product, seoDescription: v ? v : null });
+                    }}
+                    className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                    rows={3}
+                    maxLength={600}
+                  />
+                  <div className="mt-1 text-xs text-slate-500">{String(product.seoDescription ?? "").length}/120 рекомендуемых</div>
                 </label>
                 <div>
                   <div className="text-sm font-medium text-slate-700">Характеристики</div>

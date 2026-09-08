@@ -806,6 +806,10 @@ adminRouter.post("/products", async (req, res) => {
     shortDescription: z.string().max(500).optional().nullable(),
     description: z.string().optional().nullable(),
     characteristics: z.record(z.string(), z.string()).optional().nullable(),
+    // Ручные SEO-поля страницы товара: применяются только на RU.
+    // Цену внутрь seoDescription не писать — страница добавляет её живым хвостом.
+    seoTitle: z.string().max(255).optional().nullable(),
+    seoDescription: z.string().max(600).optional().nullable(),
     coverImageUrl: coverSchema,
     published: z.boolean().optional(),
     categoryId: z.string().uuid(),
@@ -871,6 +875,10 @@ adminRouter.patch("/products/:id", async (req, res) => {
     shortDescription: z.string().max(500).optional().nullable(),
     description: z.string().optional().nullable(),
     characteristics: z.record(z.string(), z.string()).optional().nullable(),
+    // Ручные SEO-поля страницы товара: применяются только на RU.
+    // Цену внутрь seoDescription не писать — страница добавляет её живым хвостом.
+    seoTitle: z.string().max(255).optional().nullable(),
+    seoDescription: z.string().max(600).optional().nullable(),
     coverImageUrl: coverSchema,
     published: z.boolean().optional(),
     categoryId: z.string().uuid().optional(),
