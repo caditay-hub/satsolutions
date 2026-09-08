@@ -138,10 +138,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       ? tailDict.price(Math.round(priceNum).toLocaleString("ru-RU").replace(/ /g, " "))
       : tailDict.onRequest;
     const tail = ` ${pricePart} · ${product.inStock === false ? tailDict.onOrder : tailDict.inStock}.`;
-    const desc = clip(loc.shortDescription || loc.name, 158 - tail.length) + tail;
+    // Ручные seoTitle/seoDescription из БД заточены под конкретные запросы и бьют
+    // шаблон — но переводов у них нет, поэтому только на RU. Цену в них не держим:
+    // она уезжает при каждой переоценке, живой хвост добавляется ниже.
+    const isRu = locale === routing.defaultLocale;
+    const seoTitle = (isRu && product.seoTitle?.trim()) || "";
+    const seoDesc = (isRu && product.seoDescription?.trim()) || "";
+    const desc = clip(seoDesc || loc.shortDescription || loc.name, 158 - tail.length) + tail;
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
-      title: { absolute: `${loc.name} — ${t("product.titleBuy")}` },
+      title: { absolute: seoTitle || `${loc.name} — ${t("product.titleBuy")}` },
       description: desc,
       alternates: hreflangAlternates(`/products/${product.slug}`, locale),
       openGraph: {

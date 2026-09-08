@@ -443,7 +443,9 @@ publicRouter.get("/products", async (req, res) => {
     where,
     order,
     limit,
-    offset
+    offset,
+    // seo-поля нужны только карточке товара — в списке это лишние ~250 символов на позицию
+    attributes: { exclude: ["seoTitle", "seoDescription"] }
   });
 
   // Исправление раскладки: если по оригиналу товаров нет, а результаты есть (значит нашлись по флипу) —

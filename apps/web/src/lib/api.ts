@@ -58,6 +58,9 @@ export type ProductDto = {
   shortDescription: string | null;
   description: string | null;
   characteristics: Record<string, string> | null;
+  /** Ручные SEO-поля: приходят только из /products/:slug и применяются только на RU */
+  seoTitle?: string | null;
+  seoDescription?: string | null;
   coverImageUrl: string | null;
   galleryImageUrls?: string[] | null;
   published: boolean;

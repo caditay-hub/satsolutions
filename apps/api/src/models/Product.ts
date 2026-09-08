@@ -12,6 +12,8 @@ export class Product extends Model<InferAttributes<Product>, InferCreationAttrib
   declare shortDescription: string | null;
   declare description: string | null;
   declare characteristics: Record<string, string> | null;
+  declare seoTitle: string | null;
+  declare seoDescription: string | null;
   declare coverImageUrl: string | null;
   declare galleryImageUrls: string[] | null;
   declare published: boolean;
@@ -67,6 +69,17 @@ Product.init(
     },
     characteristics: {
       type: DataTypes.JSONB,
+      allowNull: true
+    },
+    // Ручные title/description под поисковые запросы. Заполнены не у всех; читает их
+    // только страница товара и только на RU (переводов нет) — см. generateMetadata.
+    // Из списочного /products исключены: там они не нужны, а вес ответа растят.
+    seoTitle: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    seoDescription: {
+      type: DataTypes.TEXT,
       allowNull: true
     },
     coverImageUrl: {
