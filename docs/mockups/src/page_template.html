@@ -1,0 +1,346 @@
+<title>Видеонаблюдение: макет страницы</title>
+<meta name="description" content="Макет страницы услуги /solutions/cctv satsolutions.uz в новом порядке блоков">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jura:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f6f8fb; --ink:#0f172a; --ink2:#334155; --mute:#64748b; --line:#e2e8f0;
+  --brand:#1d4ed8; --brand2:#1e40af; --brand-soft:#eaf0ff; --navy:#0b1730; --navy2:#122448;
+  --ok:#0f766e; --card:#ffffff; --shadow:0 1px 2px rgba(15,23,42,.05),0 12px 32px -18px rgba(15,23,42,.25);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1320; --bg2:#111a2b; --ink:#eef2f8; --ink2:#c8d1de; --mute:#8b98ad; --line:#24324a;
+    --brand:#7ea2ff; --brand2:#5f8bff; --brand-soft:#182746; --navy:#060c18; --navy2:#0f1d38; --card:#131e30; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1320; --bg2:#111a2b; --ink:#eef2f8; --ink2:#c8d1de; --mute:#8b98ad; --line:#24324a;
+  --brand:#7ea2ff; --brand2:#5f8bff; --brand-soft:#182746; --navy:#060c18; --navy2:#0f1d38; --card:#131e30; --shadow:none;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,Arial,sans-serif}
+h1,h2,h3,.jura{font-family:Jura,"Trebuchet MS",Arial,sans-serif;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,3.4vw,46px);line-height:1.08;font-weight:700}
+h2{font-size:clamp(24px,2.2vw,32px);line-height:1.15;font-weight:700}
+h3{font-size:18px;font-weight:700;line-height:1.3}
+p{margin:0}
+a{color:var(--brand);text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.eyebrow{font:800 11px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line)}
+.sub{color:var(--ink2);max-width:70ch}
+
+/* header */
+.top{border-bottom:1px solid var(--line);background:var(--bg)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:78px}
+.logo{display:grid;gap:3px}
+.logo .pill{background:#0f172a;color:#fff;font:700 13px/1 Jura,sans-serif;letter-spacing:.14em;padding:11px 18px;border-radius:999px;display:inline-flex;align-items:center;gap:8px}
+.logo .pill i{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.logo small{font:700 9.5px/1 Inter,sans-serif;letter-spacing:.22em;color:var(--mute);padding-left:14px}
+nav.main{display:flex;gap:30px;margin-left:auto;font:700 17px/1 Jura,sans-serif}
+nav.main span{color:var(--ink)}
+nav.main span.dd:after{content:" ⌄";color:var(--mute)}
+.search{margin-left:auto;border:1px solid var(--line);border-radius:12px;padding:10px 14px;color:var(--mute);font-size:14px;min-width:230px}
+.lang{border:1px solid var(--line);border-radius:12px;padding:10px 14px;font:700 14px/1 Inter,sans-serif}
+.mocktag{background:var(--bg2);border-bottom:1px solid var(--line);font:600 12px/1 Inter,sans-serif;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.mocktag .wrap{height:34px;display:flex;align-items:center}
+
+/* hero */
+.hero{padding:34px 0 56px}
+.crumbs{font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:26px}
+.crumbs b{color:var(--ink);font-weight:600;text-transform:none;letter-spacing:0;font-size:12px}
+.hero .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:start}
+.hero .lead{font-size:18px;color:var(--ink2);margin-top:18px;max-width:56ch}
+.hero .photo{aspect-ratio:16/10;max-height:340px;width:100%;object-fit:cover;border-radius:20px;border:1px solid var(--line)}
+
+/* what */
+.cols2{columns:2;column-gap:40px;color:var(--ink2);margin-top:18px}
+.cols2 p{break-inside:avoid;margin-bottom:14px}
+
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:28px}
+.tile{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:22px 20px;display:grid;gap:12px;align-content:start;position:relative}
+.tile .ic{width:46px;height:46px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
+.tile .ic svg{width:24px;height:24px}
+.tile b{font-family:Jura,sans-serif;font-size:17px;line-height:1.25}
+.tile span{font-size:14px;color:var(--mute);line-height:1.5}
+.tile em{position:absolute;right:16px;top:14px;font:700 12px/1 Jura,sans-serif;color:var(--mute);font-style:normal}
+
+/* pricing */
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:var(--shadow)}
+.pkg img{aspect-ratio:16/9;width:100%;object-fit:cover}
+.pkg .body{padding:20px 22px 22px;display:grid;gap:10px;align-content:start}
+.pkg .for{font-size:13px;color:var(--mute)}
+.pkg .price{font:700 26px/1.1 Jura,sans-serif;color:var(--brand);font-variant-numeric:tabular-nums;margin-top:4px}
+.pkg ul{margin:4px 0 0;padding-left:18px;color:var(--ink2);font-size:14.5px;display:grid;gap:4px}
+.pkg .term{font-size:13px;color:var(--mute);margin-top:4px}
+.pkg .more{font-weight:700;font-size:14px;margin-top:2px}
+.pricegrid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;margin-top:28px;align-items:start}
+.pricetable{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.pricetable div{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-top:1px solid var(--line);font-size:15px}
+.pricetable div:first-child{border-top:0;background:var(--bg2);font:800 11px/1.4 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.pricetable b{font-variant-numeric:tabular-nums;color:var(--brand)}
+.pricenote{color:var(--ink2);font-size:15px}
+.pricenote a{font-weight:700}
+
+/* process infographic */
+.proc{margin-top:34px;background:linear-gradient(180deg,var(--bg2),var(--bg));border:1px solid var(--line);border-radius:28px;padding:44px 36px 36px;position:relative;overflow:hidden}
+.proc:before{content:"";position:absolute;inset:auto -10% -55% -10%;height:70%;background:radial-gradient(ellipse at center,var(--brand-soft),transparent 65%);pointer-events:none}
+.route{display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative}
+.route:before{content:"";position:absolute;left:calc(10% + 0px);right:10%;top:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--brand) 0%,var(--brand) 60%,var(--line) 100%)}
+.step{position:relative;display:grid;justify-items:center;text-align:center;padding:0 10px}
+.step .when{position:absolute;top:-30px;font:800 10.5px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);background:var(--bg);border:1px solid var(--brand-soft);border-radius:999px;padding:6px 10px;white-space:nowrap}
+.step .ic{width:72px;height:72px;border-radius:50%;background:var(--bg);border:4px solid var(--brand);color:var(--brand);display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 10px 24px -12px rgba(29,78,216,.5)}
+.step .ic svg{width:30px;height:30px}
+.step .ic i{position:absolute;right:-6px;top:-6px;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font:700 12px/24px Jura,sans-serif;font-style:normal;text-align:center}
+.step.last .ic{background:var(--brand);color:#fff}
+.step.last .ic i{background:#0f172a}
+.step b{display:block;font-family:Jura,sans-serif;font-size:18px;margin-top:18px;line-height:1.2}
+.step span{display:block;font-size:14px;color:var(--mute);line-height:1.5;margin-top:6px;max-width:22ch}
+.step .out{margin-top:14px;font-size:12.5px;font-weight:700;color:var(--ok);background:rgba(15,118,110,.08);border-radius:10px;padding:8px 10px;line-height:1.35;max-width:24ch}
+.step .out:before{content:"→ ";}
+.proc .total{margin:38px auto 0;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;font-size:15px;color:var(--ink2);position:relative}
+.proc .total b{font-family:Jura,sans-serif;font-size:26px;color:var(--ink);letter-spacing:.01em}
+.proc .total .sep{width:6px;height:6px;border-radius:50%;background:var(--brand)}
+@media (max-width:1000px){
+  .route{grid-template-columns:1fr;gap:34px;padding-left:26px}
+  .route:before{left:36px;right:auto;top:20px;bottom:20px;width:4px;height:auto;background:linear-gradient(180deg,var(--brand),var(--line))}
+  .step{grid-template-columns:72px 1fr;justify-items:start;text-align:left;column-gap:18px;padding:0}
+  .step .when{position:static;margin-bottom:8px;grid-column:2}
+  .step .ic{grid-row:1/5;grid-column:1}
+  .step b{margin-top:0;grid-column:2}
+  .step span,.step .out{grid-column:2;max-width:none}
+}
+
+/* equipment */
+.brands{color:var(--ink2);margin-top:12px;max-width:70ch}
+.equip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+.item{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.item .ph{height:150px;background:#fff;display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.item .ph img{max-height:130px;width:auto;object-fit:contain}
+.item .ph svg{width:70px;height:70px;color:#cbd5e1}
+.item .b{padding:12px 14px;display:grid;gap:4px}
+.item .b b{font-size:14px;font-weight:600;line-height:1.35}
+.item .b span{font-size:13px;color:var(--mute)}
+.item .b .p{color:var(--brand);font-weight:800;font-variant-numeric:tabular-nums;font-size:14px}
+.catlink{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:700;border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--ink)}
+
+/* details */
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 44px;margin-top:26px}
+.details h3{margin-bottom:8px}
+.details p{color:var(--ink2)}
+
+/* faq */
+.faq{display:grid;gap:10px;margin-top:26px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:14px;padding:0 20px;background:var(--card)}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--brand);font:700 20px/1 Inter,sans-serif}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding:0 0 16px;color:var(--ink2)}
+
+/* proof */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.case{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.case .ph{height:150px;background:linear-gradient(135deg,var(--navy2),var(--brand2))}
+.case .b{padding:14px 16px}
+.case .b b{display:block;font-size:15px}
+.case .b span{font-size:13px;color:var(--mute)}
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+.rev{border:1px solid var(--line);border-radius:16px;padding:16px 18px;background:var(--bg2)}
+.rev .who{display:flex;justify-content:space-between;font-weight:700;font-size:14px}
+.rev .who span{color:#f59e0b;letter-spacing:2px}
+.rev p{color:var(--ink2);font-size:14.5px;margin-top:6px}
+.rev small{color:var(--mute);font-size:12px}
+.revlink{display:inline-block;margin-top:14px;font-weight:700;font-size:14px}
+
+/* final */
+.final{background:var(--navy);color:#fff;padding:72px 0}
+.final .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.final .eyebrow{color:#93c5fd}
+.final h2{color:#fff}
+.final p{color:#cbd5e1;margin-top:14px;max-width:48ch}
+.final .contacts{display:grid;gap:10px;margin-top:26px;font-size:15px;color:#e2e8f0}
+.final .contacts b{font-size:22px;font-family:Jura,sans-serif;color:#fff;letter-spacing:.02em}
+.final .msgs{display:flex;gap:10px;margin-top:6px}
+.final .msgs span{border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:8px 14px;font-weight:600;font-size:14px}
+.form{background:#fff;color:#0f172a;border-radius:20px;padding:26px;display:grid;gap:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.form h3{font-size:20px}
+.form .f{border:1px solid #e2e8f0;border-radius:12px;padding:13px 14px;color:#94a3b8;font-size:15px}
+.form .f.ta{min-height:86px}
+.form .btn{background:#1d4ed8;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:12px;font-size:16px}
+.form small{color:#64748b;font-size:12.5px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:22px 0 0}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;color:var(--ink2)}
+.chips .l{border:0;color:var(--mute);padding-left:0;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;align-self:center}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:1000px){
+  .hero .grid,.pricegrid,.final .grid,.details,.revs{grid-template-columns:1fr}
+  .tiles,.pkgs,.timeline,.equip,.cases{grid-template-columns:1fr 1fr}
+  .timeline:before{display:none}
+  .cols2{columns:1}
+  nav.main,.search{display:none}
+}
+@media (max-width:600px){.tiles,.pkgs,.timeline,.equip,.cases{grid-template-columns:1fr}}
+
+/* compact process strip */
+.mini{margin-top:0;border:1px solid var(--line);border-radius:18px;background:var(--bg2);padding:18px 22px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center}
+.mini .lbl{font:800 11px/1.3 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);max-width:12ch}
+.mini ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
+.mini ol:before{content:"";position:absolute;left:10%;right:10%;top:15px;height:2px;background:var(--line)}
+.mini li{display:grid;justify-items:center;text-align:center;gap:8px;position:relative;font:700 13px/1.25 Jura,sans-serif;color:var(--ink)}
+.mini li i{width:30px;height:30px;border-radius:50%;background:var(--bg);border:2px solid var(--brand);color:var(--brand);font:700 12px/26px Jura,sans-serif;font-style:normal;text-align:center;position:relative;z-index:1}
+.mini li:last-child i{background:var(--brand);color:#fff}
+.mini li small{display:block;font:500 11.5px/1.3 Inter,sans-serif;color:var(--mute)}
+.mini a{font-weight:700;font-size:13.5px;white-space:nowrap}
+@media (max-width:1000px){.mini{grid-template-columns:1fr}.mini ol{grid-template-columns:repeat(5,1fr)}.mini ol:before{display:none}}
+</style>
+
+<div class="mocktag"><div class="wrap">Макет · satsolutions.uz/solutions/cctv · новый порядок блоков</div></div>
+
+<header class="top"><div class="wrap">
+  <div class="logo"><span class="pill"><i></i>SAT SOLUTIONS</span><small>СИСТЕМЫ БЕЗОПАСНОСТИ</small></div>
+  <nav class="main"><span>Главная</span><span class="dd">Услуги</span><span class="dd">Каталог</span><span class="dd">Портфолио</span><span>О компании</span></nav>
+  <div class="search">Поиск: камера, пожарка…</div>
+  <div class="lang">RU ⌄</div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="crumbs">Главная &nbsp;/&nbsp; Услуги &nbsp;/&nbsp; <b>Видеонаблюдение</b></div>
+  <div class="grid">
+    <div>
+      <div class="eyebrow">Услуга</div>
+      <h1>Системы видеонаблюдения в Ташкенте — установка под ключ</h1>
+      <p class="lead">Проектируем и монтируем системы любого масштаба: от небольшого офиса до распределённых объектов с десятками камер и круглосуточным мониторингом.</p>
+    </div>
+    <img class="photo" src="{{HERO}}" alt="Инженер проверяет камеры с планшета над планом объекта">
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Что это</div>
+  <h2>Установка видеонаблюдения под ключ в Ташкенте и по Узбекистану</h2>
+  <div class="cols2">
+    <p>SAT Solutions проектирует и монтирует системы видеонаблюдения для объектов любого масштаба — от квартиры и небольшого магазина до заводов, складов и распределённых сетей филиалов. Мы работаем с IP- и аналоговыми (HDCVI/TVI) камерами, устанавливаем видеорегистраторы NVR и DVR, настраиваем локальный и облачный архив, а также удалённый просмотр камер с телефона и компьютера из любой точки.</p>
+    <p>Установка камер видеонаблюдения начинается с бесплатного выезда инженера на объект: определяем зоны обзора, точки подключения и оптимальное количество камер, после чего готовим смету и коммерческое предложение. В работу входит прокладка кабельных трасс, монтаж оборудования, пусконаладка, настройка детекции движения и видеоаналитики, обучение персонала.</p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Что входит</div>
+  <h2>Пять составляющих работы</h2>
+  <div class="tiles">
+    <div class="tile"><em>01</em><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div><b>Аудит объекта</b><span>Зоны обзора, точки подключения, число камер под задачу</span></div>
+    <div class="tile"><em>02</em><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg></div><b>Проект и схема</b><span>Схема размещения, спецификация, смета с ценами</span></div>
+    <div class="tile"><em>03</em><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 9l-2-5-5 2.3z"/><path d="M12 12 3 21"/><path d="M14.7 6.3 9 12"/></svg></div><b>Монтаж</b><span>Камеры, регистраторы NVR/DVR и кабельная сеть</span></div>
+    <div class="tile"><em>04</em><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><b>Настройка</b><span>Запись, удалённый доступ с телефона, видеоаналитика</span></div>
+    <div class="tile"><em>05</em><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg></div><b>Сдача и сервис</b><span>Пусконаладка, обучение персонала, гарантийный сервис</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Сколько стоит</div>
+  <h2>Три типовые системы видеонаблюдения</h2>
+  <div class="pkgs">
+    <div class="pkg"><img src="{{P1}}" alt="Камера в частном доме и просмотр с телефона"><div class="body"><h3>Дом или квартира</h3><span class="for">Частный дом, дача, квартира, подъезд</span><span class="price">от 4 000 000 сум</span><ul><li>2–4 камеры: двор, вход, периметр или прихожая</li><li>Просмотр с телефона из любой точки, уведомления о движении</li><li>Запись в архив на 2–4 недели</li><li>Wi-Fi камеры без штробления — где нельзя тянуть кабель</li></ul><span class="term">Срок: 1 день</span><a class="more" href="#">Состав комплекта →</a></div></div>
+    <div class="pkg"><img src="{{P2}}" alt="Камеры и монитор в помещении"><div class="body"><h3>Офис, магазин, кафе</h3><span class="for">Торговая точка, офис, клиника, учебный центр</span><span class="price">от 4 000 000 сум</span><ul><li>4–16 IP-камер: входы, касса, зал, склад</li><li>PoE-питание — одна линия на камеру, без розеток</li><li>Регистратор с архивом от 30 дней, доступ по ролям</li><li>Просмотр нескольких филиалов в одном приложении</li></ul><span class="term">Срок: 1–3 дня</span><a class="more" href="#">Состав комплекта →</a></div></div>
+    <div class="pkg"><img src="{{P3}}" alt="Въезд на территорию со шлагбаумом"><div class="body"><h3>Склад, производство, территория</h3><span class="for">Промышленный объект, логистика, стройплощадка, ЖК</span><span class="price">от 7 500 000 сум</span><ul><li>16–100+ камер, оптические магистрали между зданиями</li><li>Видеоаналитика: пересечение линии, скопление людей, каска/жилет</li><li>Распознавание автономеров на въездах, интеграция со шлагбаумом</li><li>Серверная запись с резервированием, вывод на пост охраны</li></ul><span class="term">Срок: по проекту, от 2 недель</span><a class="more" href="#">Состав комплекта →</a></div></div>
+  </div>
+  <div class="pricegrid">
+    <div class="pricenote"><p>Стоимость видеонаблюдения зависит от числа камер, их разрешения, глубины архива и сложности монтажа — рассчитываем индивидуально под задачу и бюджет. Поставляем оборудование Hikvision, Dahua, HiLook и других проверенных брендов с официальной гарантией, даём гарантию на работы и берём систему на сервисное обслуживание по всему Узбекистану.</p><p style="margin-top:12px">Скрытых доплат за «настройку телефона» или «выезд» нет: всё, что нужно для работы системы, включено в расчёт. <a href="#">Посчитать смету в калькуляторе →</a></p></div>
+    <div class="pricetable"><div><span>Оборудование из каталога</span><span>Цена</span></div><div><span>IP-камеры</span><b>от 234 900 сум</b></div><div><span>Видеорегистраторы (NVR)</span><b>от 308 900 сум</b></div><div><span>Готовый комплект с монтажом</span><b>от 4 000 000 сум</b></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Оборудование</div>
+  <h2>Камеры и регистраторы — со склада в Ташкенте</h2>
+  <p class="brands">Hikvision, Dahua, HiLook, TP-Link Tapo — подбираем под задачу и бюджет, всё оборудование поставляем сами с гарантией.</p>
+  <div class="equip">
+    <div class="item"><div class="ph"><img src="{{E1}}" alt="Поворотная PTZ-камера"></div><div class="b"><b>Поворотная PTZ-камера, 20× зум</b><span>Уличная, ИК до 100 м</span><span class="p">цена из каталога</span></div></div>
+    <div class="item"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l14-4 1.5 4L5 13z"/><path d="M6 13v5h4"/><circle cx="17" cy="7.5" r="1"/></svg></div><div class="b"><b>Hikvision DS-2CD1343G2-IUF</b><span>IP-камера 4 Мп, купольная</span><span class="p">цена из каталога</span></div></div>
+    <div class="item"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="8" width="18" height="8" rx="1"/><path d="M6 12h2M17 12h1"/></svg></div><div class="b"><b>Dahua DHI-NVR1108HS-S3/H</b><span>IP-видеорегистратор на 8 каналов</span><span class="p">цена из каталога</span></div></div>
+    <div class="item"><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3"/></svg></div><div class="b"><b>TP-Link Tapo C320WS</b><span>Wi-Fi камера, цветная ночь</span><span class="p">цена из каталога</span></div></div>
+  </div>
+  <a class="catlink" href="#">Все камеры видеонаблюдения в каталоге →</a>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Подробно о выборе</div>
+  <h2>IP или аналог, сроки, дом и квартира, сервис</h2>
+  <div class="details">
+    <div><h3>IP-система или HDCVI/TVI</h3><p>Системы видеонаблюдения различаются не только числом камер. IP-система даёт высокое разрешение, питание по одному кабелю (PoE) и точную аналитику, но требует нормальной сети; аналоговая HDCVI/TVI дешевле и работает по уже проложенному коаксиалу, поэтому её берут при модернизации старого объекта. Беспроводные камеры выручают там, где кабель тянуть некуда, но зависят от качества Wi-Fi и питания. На большинстве объектов мы собираем смешанную схему: IP там, где важна детализация лиц и номеров, аналог — на периметре и в подсобных зонах.</p></div>
+    <div><h3>Сроки и что входит в смету</h3><p>Монтаж видеонаблюдения идёт по понятным этапам, и мы называем сроки заранее. Выезд и обследование — в день обращения или на следующий; проект и смета — один-два дня; монтаж небольшого объекта на 4–8 камер — один день, магазина или офиса на 16–32 камеры — два-три дня; крупные объекты и распределённые сети считаем отдельно. В смету входят камеры и регистратор, кабель и крепёж, блоки питания и коммутаторы PoE, прокладка трасс, пусконаладка и настройка удалённого доступа.</p></div>
+    <div><h3>Видеонаблюдение для дома и квартиры</h3><p>Ставим так же, как коммерческое, только проще по составу: две-четыре камеры на въезд, двор и вход, регистратор с архивом на 7–30 дней и просмотр с телефона. Для частного дома обычно берут камеры с ночной съёмкой и защитой от осадков, для квартиры хватает одной внутренней камеры и вызывной панели. Если нужно только видеть, что происходит, пока вас нет, — это самая недорогая конфигурация, и мы честно скажем, когда переплачивать за разрешение 4K не за чем.</p></div>
+    <div><h3>Обслуживание после установки</h3><p>Систему мало установить — её нужно поддерживать. Мы берём видеонаблюдение на сервисное обслуживание: проверяем запись и глубину архива, чистим объективы, следим за дисками регистратора (именно они выходят из строя первыми) и обновляем прошивки. Отдельная услуга — аудит уже работающей системы: часто оказывается, что половина камер пишет в никуда, а архив перезаписывается раньше, чем кто-то успевает посмотреть событие.</p></div>
+    <div><h3>Как подбирают камеры под сцену</h3><p>Купольные ставят в помещениях с ровным потолком, цилиндрические — вдоль фасадов и периметра, поворотные PTZ — там, где один оператор ведёт крупный объект. Разрешение 2 Мп остаётся читаемым на десяти метрах, 4 Мп удерживает деталь на двадцати, 8 Мп нужны для широкой сцены без потери лица. Ночью выбирают между цветной съёмкой при слабом свете и инфракрасной подсветкой. На въезде ставят отдельную камеру распознавания номеров — так установка видеонаблюдения закрывает и учёт транспорта.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Вопросы</div>
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <details open><summary>Сколько стоит установить видеонаблюдение?</summary><p>Стоимость зависит от числа камер, типа оборудования и сложности монтажа. Мы бесплатно выезжаем на объект, считаем смету и называем цену до начала работ.</p></details>
+    <details><summary>Чем IP-камеры отличаются от аналоговых?</summary><p>IP-камеры дают более высокое разрешение, видеоаналитику и гибкое масштабирование по сети; аналоговые дешевле и работают по уже проложенному кабелю.</p></details>
+    <details><summary>Можно ли смотреть камеры с телефона?</summary><p>Да, настраиваем удалённый доступ с телефона и компьютера, а также облачный просмотр и уведомления о событиях.</p></details>
+    <details><summary>Сколько хранится архив записи?</summary><p>Глубина архива зависит от ёмкости накопителя, числа камер и разрешения — обычно от 7 до 30 суток. Рассчитываем под ваши требования.</p></details>
+    <details><summary>Вы обслуживаете систему после установки?</summary><p>Да, даём гарантию и берём систему на сервисное обслуживание по договору по всему Узбекистану.</p></details>
+  </div>
+</div></section>
+
+
+<section style="padding-top:0;border-top:0"><div class="wrap">
+  <div class="mini"><div class="lbl">Как проходит работа</div>
+    <ol><li><i>1</i>Выезд инженера<small>день обращения, бесплатно</small></li><li><i>2</i>Подбор и КП<small>1–2 дня</small></li><li><i>3</i>Монтаж<small>1–3 дня</small></li><li><i>4</i>Настройка<small>в день монтажа</small></li><li><i>5</i>Сдача и гарантия<small>акт, обучение</small></li></ol>
+    <a href="#">Подробно о том, как мы работаем →</a></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Что уже сделано</div>
+  <h2>Проекты и отзывы</h2>
+  <div class="cases">
+    <div class="case"><div class="ph"></div><div class="b"><b>Uzum: распределительный центр</b><span>54 камеры, архив 56 ТБ, видеоаналитика на въездах</span></div></div>
+    <div class="case"><div class="ph"></div><div class="b"><b>Damira Beverages: завод</b><span>67 км трасс, 42 км cat6, СКУД и видеонаблюдение</span></div></div>
+    <div class="case"><div class="ph"></div><div class="b"><b>Ucell: ситуационный центр</b><span>Видеостена 12×55″ и вывод камер на пост</span></div></div>
+  </div>
+  <div class="revs">
+    <div class="rev"><div class="who">Клиент <span>★★★★★</span></div><p>Текст одобренного отзыва по услуге из базы сайта.</p><small>сентябрь 2026</small></div>
+    <div class="rev"><div class="who">Клиент <span>★★★★★</span></div><p>Второй одобренный отзыв. Форма отзыва открывается по ссылке, на странице не стоит.</p><small>август 2026</small></div>
+  </div>
+  <a class="revlink" href="#">Все проекты → &nbsp;·&nbsp; Оставить отзыв</a>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <div class="grid">
+    <div>
+      <div class="eyebrow">Расчёт под ваш объект</div>
+      <h2>Пришлите план или опишите задачу</h2>
+      <p>Инженер подготовит схему, спецификацию и смету. Выезд по Ташкенту бесплатный, ответ в рабочее время в течение часа.</p>
+      <div class="contacts">
+        <b>+998 97 862 66 99</b>
+        <span>Пн–Пт 9:00–18:00 · sales@satsolutions.uz</span>
+        <span>Ташкент, ул. Катта Дархон, 5</span>
+        <div class="msgs"><span>Telegram</span><span>WhatsApp</span></div>
+      </div>
+    </div>
+    <div class="form">
+      <h3>Получить КП</h3>
+      <div class="f">Имя</div>
+      <div class="f">Телефон</div>
+      <div class="f ta">Объект: адрес или описание, примерное число камер</div>
+      <div class="btn">Получить КП</div>
+      <small>Нажимая кнопку, вы соглашаетесь на обработку данных</small>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap chips"><span class="l">Смежные услуги</span><span>Видеоаналитика и ИИ</span><span>Распознавание автономеров</span><span>Контроль доступа</span><span class="l">Отрасли</span><span>Склады и логистика</span><span>Ритейл</span><span class="l">Статьи</span><span>Как выбрать камеру</span><span>Сколько камер нужно складу</span><span>Как рассчитать диск</span></div>
+
+<footer><div class="wrap"><span>SAT Solutions · системы безопасности · Ташкент</span><span>Лицензии Нацгвардии и МЧС РУз · Dahua Authorized Integrator</span></div></footer>

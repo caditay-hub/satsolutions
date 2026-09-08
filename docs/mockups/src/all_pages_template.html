@@ -1,0 +1,298 @@
+<title>Страницы услуг: 44 макета</title>
+<meta name="description" content="Все 44 страницы услуг и отраслей satsolutions.uz в новом порядке блоков, собранные из реальных текстов сайта">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jura:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f6f8fb; --ink:#0f172a; --ink2:#334155; --mute:#64748b; --line:#e2e8f0;
+  --brand:#1d4ed8; --brand2:#1e40af; --brand-soft:#eaf0ff; --navy:#0b1730; --navy2:#122448;
+  --ok:#0f766e; --card:#ffffff; --shadow:0 1px 2px rgba(15,23,42,.05),0 12px 32px -18px rgba(15,23,42,.25);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1320; --bg2:#111a2b; --ink:#eef2f8; --ink2:#c8d1de; --mute:#8b98ad; --line:#24324a;
+    --brand:#7ea2ff; --brand2:#5f8bff; --brand-soft:#182746; --navy:#060c18; --navy2:#0f1d38; --card:#131e30; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1320; --bg2:#111a2b; --ink:#eef2f8; --ink2:#c8d1de; --mute:#8b98ad; --line:#24324a;
+  --brand:#7ea2ff; --brand2:#5f8bff; --brand-soft:#182746; --navy:#060c18; --navy2:#0f1d38; --card:#131e30; --shadow:none;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,Arial,sans-serif}
+h1,h2,h3{font-family:Jura,"Trebuchet MS",Arial,sans-serif;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(28px,3vw,42px);line-height:1.08;font-weight:700}
+h2{font-size:clamp(22px,2vw,30px);line-height:1.15;font-weight:700}
+h3{font-size:18px;font-weight:700;line-height:1.3}
+p{margin:0}a{color:var(--brand);text-decoration:none}img{display:block;max-width:100%}
+.eyebrow{font:800 11px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);margin-bottom:10px}
+section{padding:56px 0}section+section{border-top:1px solid var(--line)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+/* app shell */
+.shell{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+.side{border-right:1px solid var(--line);background:var(--bg2);position:sticky;top:0;height:100vh;overflow:auto;padding:18px 14px 30px}
+.side .t{font:800 11px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin:16px 8px 8px}
+.side button{display:block;width:100%;text-align:left;border:0;background:transparent;color:var(--ink2);font:600 13.5px/1.3 Inter,sans-serif;padding:8px 10px;border-radius:9px;cursor:pointer}
+.side button:hover{background:var(--brand-soft)}
+.side button.on{background:var(--brand);color:#fff}
+.side .brand{font:700 13px/1 Jura,sans-serif;letter-spacing:.14em;background:#0f172a;color:#fff;padding:11px 16px;border-radius:999px;display:inline-flex;gap:8px;align-items:center;margin:4px 6px 6px}
+.side .brand i{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}
+.side .hint{font-size:12px;color:var(--mute);margin:0 8px 6px;line-height:1.45}
+main{min-width:0}
+.mocktag{background:var(--bg2);border-bottom:1px solid var(--line);font:600 12px/1 Inter,sans-serif;color:var(--mute);letter-spacing:.06em;text-transform:uppercase}
+.mocktag .wrap{height:34px;display:flex;align-items:center;justify-content:space-between}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:26px;height:70px}
+nav.main{display:flex;gap:26px;font:700 16px/1 Jura,sans-serif}
+nav.main span.dd:after{content:" ⌄";color:var(--mute)}
+.search{margin-left:auto;border:1px solid var(--line);border-radius:12px;padding:9px 14px;color:var(--mute);font-size:14px;min-width:200px}
+.lang{border:1px solid var(--line);border-radius:12px;padding:9px 14px;font:700 14px/1 Inter,sans-serif}
+
+/* hero */
+.hero{padding:30px 0 50px}
+.crumbs{font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:24px}
+.crumbs b{color:var(--ink);font-weight:600;text-transform:none;letter-spacing:0;font-size:12px}
+.hero .grid{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:start}
+.hero .lead{font-size:17px;color:var(--ink2);margin-top:16px;max-width:56ch}
+.ph{aspect-ratio:16/10;max-height:320px;width:100%;object-fit:cover;border-radius:20px;border:1px solid var(--line)}
+.phx{aspect-ratio:16/10;max-height:320px;border-radius:20px;background:linear-gradient(135deg,var(--navy2),var(--brand2));display:grid;place-items:center;color:#fff;position:relative}
+.phx svg{width:64px;height:64px;opacity:.9}
+.phx em{position:absolute;left:14px;bottom:12px;font:600 11px/1.3 Inter,sans-serif;font-style:normal;background:rgba(0,0,0,.35);padding:5px 8px;border-radius:6px;color:#dbeafe}
+/* industry hero */
+.ihero{background:var(--navy);color:#fff;padding:44px 0 0}
+.ihero .crumbs,.ihero .crumbs b{color:#94a3b8}
+.ihero .eyebrow{color:#67e8f9}
+.ihero h1{color:#fff;max-width:26ch}
+.ihero .lead{color:#cbd5e1;font-size:17px;margin-top:16px;max-width:60ch}
+.ihero .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding-bottom:36px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.12)}
+.stats div{padding:20px 0;border-left:1px solid rgba(255,255,255,.12);padding-left:20px}
+.stats div:first-child{border-left:0;padding-left:0}
+.stats b{display:block;font:700 26px/1 Jura,sans-serif;color:#67e8f9}
+.stats span{font-size:12px;color:#94a3b8}
+
+.cols2{columns:2;column-gap:40px;color:var(--ink2);margin-top:18px}
+.cols2 p{break-inside:avoid;margin-bottom:14px}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:26px}
+.tiles.n4{grid-template-columns:repeat(4,1fr)}.tiles.n3{grid-template-columns:repeat(3,1fr)}.tiles.n6{grid-template-columns:repeat(3,1fr)}
+.tile{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:20px 18px;display:grid;gap:10px;align-content:start;position:relative}
+.tile .ic{width:44px;height:44px;border-radius:12px;background:var(--brand-soft);color:var(--brand);display:grid;place-items:center}
+.tile .ic svg{width:24px;height:24px}
+.tile b{font-family:Jura,sans-serif;font-size:16px;line-height:1.3}
+.tile em{position:absolute;right:16px;top:14px;font:700 12px/1 Jura,sans-serif;color:var(--mute);font-style:normal}
+
+.pkgs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.pkg{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:var(--shadow)}
+.pkg .cov{aspect-ratio:16/9;width:100%;object-fit:cover}
+.pkg .covx{aspect-ratio:16/9;display:flex;align-items:flex-end;padding:12px 14px;color:#fff;font:700 15px/1.2 Jura,sans-serif}
+.pkg .body{padding:18px 20px 20px;display:grid;gap:9px;align-content:start}
+.pkg .for{font-size:13px;color:var(--mute)}
+.pkg .price{font:700 24px/1.1 Jura,sans-serif;color:var(--brand);font-variant-numeric:tabular-nums;margin-top:2px}
+.pkg .price.req{font-size:15px;color:var(--ink2);font-family:Inter,sans-serif;font-weight:700}
+.pkg ul{margin:2px 0 0;padding-left:18px;color:var(--ink2);font-size:14px;display:grid;gap:4px}
+.pkg .term{font-size:13px;color:var(--mute)}
+.pricegrid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;margin-top:26px;align-items:start}
+.pricetable{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.pricetable div{display:flex;justify-content:space-between;gap:16px;padding:13px 18px;border-top:1px solid var(--line);font-size:15px}
+.pricetable div:first-child{border-top:0;background:var(--bg2);font:800 11px/1.4 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.pricetable b{font-variant-numeric:tabular-nums;color:var(--brand)}
+.pricenote{color:var(--ink2);font-size:15px}.pricenote a{font-weight:700}
+
+.proc{margin-top:30px;background:linear-gradient(180deg,var(--bg2),var(--bg));border:1px solid var(--line);border-radius:28px;padding:44px 32px 32px;position:relative;overflow:hidden}
+.route{display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.route.n4{grid-template-columns:repeat(4,1fr)}.route.n6{grid-template-columns:repeat(6,1fr)}
+.route:before{content:"";position:absolute;left:10%;right:10%;top:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--brand) 0%,var(--brand) 60%,var(--line) 100%)}
+.step{position:relative;display:grid;justify-items:center;text-align:center;padding:0 10px}
+.step .when{position:absolute;top:-30px;font:800 10.5px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);background:var(--bg);border:1px solid var(--brand-soft);border-radius:999px;padding:6px 10px;white-space:nowrap}
+.step .ic{width:72px;height:72px;border-radius:50%;background:var(--bg);border:4px solid var(--brand);color:var(--brand);display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 10px 24px -12px rgba(29,78,216,.5)}
+.step .ic svg{width:30px;height:30px}
+.step .ic i{position:absolute;right:-6px;top:-6px;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font:700 12px/24px Jura,sans-serif;font-style:normal;text-align:center}
+.step.last .ic{background:var(--brand);color:#fff}.step.last .ic i{background:#0f172a}
+.step b{display:block;font-family:Jura,sans-serif;font-size:17px;margin-top:18px;line-height:1.2}
+.step span{display:block;font-size:13.5px;color:var(--mute);line-height:1.5;margin-top:6px;max-width:22ch}
+
+.brands{color:var(--ink2);margin-top:12px;max-width:70ch}
+.catlink{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:700;border:1px solid var(--line);border-radius:12px;padding:12px 18px;color:var(--ink)}
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 44px;margin-top:24px}
+.details p{color:var(--ink2)}
+.details h3{margin-bottom:8px}
+.faq{display:grid;gap:10px;margin-top:24px;max-width:860px}
+.faq details{border:1px solid var(--line);border-radius:14px;padding:0 20px;background:var(--card)}
+.faq summary{cursor:pointer;list-style:none;padding:15px 0;font-weight:700;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--brand);font:700 20px/1 Inter,sans-serif}
+.faq details[open] summary:after{content:"–"}
+.faq details p{padding:0 0 15px;color:var(--ink2)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.case{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.case .cph{height:140px;background:linear-gradient(135deg,var(--navy2),var(--brand2))}
+.case .b{padding:14px 16px}.case .b b{display:block;font-size:15px}.case .b span{font-size:13px;color:var(--mute)}
+.revs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+.rev{border:1px solid var(--line);border-radius:16px;padding:16px 18px;background:var(--bg2)}
+.rev .who{display:flex;justify-content:space-between;font-weight:700;font-size:14px}.rev .who span{color:#f59e0b;letter-spacing:2px}
+.rev p{color:var(--ink2);font-size:14.5px;margin-top:6px}
+.ind{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.ind .c{border:1px solid var(--line);border-radius:16px;padding:18px;background:var(--card)}
+.ind .c b{display:block;font-family:Jura,sans-serif;font-size:16px;margin-bottom:6px}
+.ind .c p{font-size:14px;color:var(--ink2)}
+.dark{background:var(--navy);color:#fff}.dark .eyebrow{color:#67e8f9}.dark h2{color:#fff}
+.dark .ind .c{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}.dark .ind .c p{color:#cbd5e1}
+.final{background:var(--navy);color:#fff;padding:64px 0}
+.final .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.final .eyebrow{color:#93c5fd}.final h2{color:#fff}.final p{color:#cbd5e1;margin-top:14px;max-width:48ch}
+.final .contacts{display:grid;gap:10px;margin-top:24px;font-size:15px;color:#e2e8f0}
+.final .contacts b{font-size:22px;font-family:Jura,sans-serif;color:#fff}
+.final .msgs{display:flex;gap:10px;margin-top:6px}.final .msgs span{border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:8px 14px;font-weight:600;font-size:14px}
+.form{background:#fff;color:#0f172a;border-radius:20px;padding:24px;display:grid;gap:12px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.form h3{font-size:20px}.form .f{border:1px solid #e2e8f0;border-radius:12px;padding:13px 14px;color:#94a3b8;font-size:15px}.form .f.ta{min-height:80px}
+.form .btn{background:#1d4ed8;color:#fff;font-weight:800;text-align:center;padding:15px;border-radius:12px;font-size:16px}
+.form small{color:#64748b;font-size:12.5px;text-align:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:22px 0 30px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:600;font-size:14px;color:var(--ink2)}
+.chips .l{border:0;color:var(--mute);padding-left:0;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;align-self:center}
+@media (max-width:1100px){.shell{grid-template-columns:1fr}.side{position:static;height:auto;max-height:40vh}.hero .grid,.ihero .grid,.pricegrid,.final .grid,.details,.revs{grid-template-columns:1fr}.tiles,.tiles.n4,.tiles.n3,.pkgs,.route,.route.n4,.route.n6,.cases,.ind,.stats{grid-template-columns:1fr 1fr}.route:before{display:none}.cols2{columns:1}nav.main,.search{display:none}.step .when{position:static;margin-bottom:8px}}
+
+/* compact process strip */
+.mini{margin-top:0;border:1px solid var(--line);border-radius:18px;background:var(--bg2);padding:18px 22px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center}
+.mini .lbl{font:800 11px/1.3 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);max-width:12ch}
+.mini ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
+.mini ol:before{content:"";position:absolute;left:10%;right:10%;top:15px;height:2px;background:var(--line)}
+.mini li{display:grid;justify-items:center;text-align:center;gap:8px;position:relative;font:700 13px/1.25 Jura,sans-serif;color:var(--ink)}
+.mini li i{width:30px;height:30px;border-radius:50%;background:var(--bg);border:2px solid var(--brand);color:var(--brand);font:700 12px/26px Jura,sans-serif;font-style:normal;text-align:center;position:relative;z-index:1}
+.mini li:last-child i{background:var(--brand);color:#fff}
+.mini li small{display:block;font:500 11.5px/1.3 Inter,sans-serif;color:var(--mute)}
+.mini a{font-weight:700;font-size:13.5px;white-space:nowrap}
+@media (max-width:1000px){.mini{grid-template-columns:1fr}.mini ol{grid-template-columns:repeat(5,1fr)}.mini ol:before{display:none}}
+</style>
+
+<div class="shell">
+  <aside class="side">
+    <span class="brand"><i></i>SAT SOLUTIONS</span>
+    <p class="hint">44 страницы в новом порядке. Тексты, пакеты, этапы и вопросы взяты с сайта как есть.</p>
+    <div class="t">Услуги · 31</div><div id="navS"></div>
+    <div class="t">Отрасли · 13</div><div id="navI"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+
+<script id="data" type="application/json">{{DATA}}</script>
+<script>
+const IMG = {{IMG}};
+const D = JSON.parse(document.getElementById('data').textContent);
+const P = D.pages;
+const byKey = Object.fromEntries(P.map(p=>[p.key,p]));
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICONS = [
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 9l-2-5-5 2.3z"/><path d="M12 12 3 21"/><path d="M14.7 6.3 9 12"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4.5"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>'
+];
+const PROC = ['<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',
+ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
+ ICONS[2], ICONS[3], ICONS[4], ICONS[5]];
+const FAM = {
+  net:['network','wifi','fiber','radiobridge','mikrotik','server','servers','virtualization','telephony','videowall','slabotochnye-sistemy','sistemnaya-integraciya','proektirovanie','obsluzhivanie'],
+  bar:['barrier','parking','anpr','intellektualnoe-upravlenie-parkingom','gates','perimeter','fuel','warehouse','construction','industry'],
+  home:['intercom','smarthome','locks','residential','hotel','alarm','ohrannye-sistemy'],
+  cam:['cctv','analytics','access','turnstile','attendance','retail','bank','school','medical','fire','pa'],
+  bus:['bus'], city:['city']
+};
+const heroFor = k => { for (const [f,ks] of Object.entries(FAM)) if (ks.includes(k)) return IMG[f]||null; return null; };
+const COV = {net:['fiber','fiber','net2'], bar:['bar','bar2','bar'], home:['home','home2','home'], cam:['cctv1','cctv2','cctv3'], bus:['bus','bus','bus'], city:['city','city','city']};
+const covFor = (k,i) => { for (const [f,ks] of Object.entries(FAM)) if (ks.includes(k)) { const c=COV[f]; return IMG[c[i%3]]||null; } return null; };
+const GRAD = ['linear-gradient(160deg,#3a6b47,#8fb98a 60%,#d9c9a3)','linear-gradient(160deg,#2f3f6b,#6a7bb5 60%,#c9d2ee)','linear-gradient(160deg,#4a4a4a,#8a8f96 60%,#d5d8dc)'];
+const tag = (t,c)=>`<div class="wrap"><div class="eyebrow">${esc(t)}</div>${c}</div>`;
+
+function priceLine(p, i, name){
+  if (p.key==='cctv') return ['от 4 000 000 сум','от 4 000 000 сум','от 7 500 000 сум'][i];
+  if (p.kitsPrices?.length && /офис/i.test(name||'')) return 'от '+p.kitsPrices[0].toLocaleString('ru-RU').replace(/,/g,' ')+' сум';
+  return null;
+}
+function renderService(p){
+  const c = p.content;
+  const paras = c?.paragraphs ?? [];
+  const first = paras.slice(0,2), rest = paras.slice(2);
+  const works = (p.works||[]).slice(0,6);
+  const tilesCls = works.length===4?'n4':works.length===3?'n3':works.length===6?'n6':'';
+  const hero = heroFor(p.key);
+  const d = p.details||{};
+  const pk = (d.packages||[]).slice(0,3);
+  const st = (d.stages||[]).slice(0,6);
+  const isCctv = p.key==='cctv';
+  const whens = isCctv?['День обращения','1–2 дня','1–3 дня','В день монтажа','Сдача']:st.map((_,i)=>'Шаг '+(i+1));
+  return `
+  <section class="hero"><div class="wrap">
+    <div class="crumbs">Главная &nbsp;/&nbsp; Услуги &nbsp;/&nbsp; <b>${esc(p.title)}</b></div>
+    <div class="grid"><div><div class="eyebrow">Услуга</div><h1>${esc(p.h1)}</h1><p class="lead">${esc(p.intro)}</p></div>
+    ${hero?`<img class="ph" src="${hero}" alt="">`:`<div class="phx">${ICONS[4]}<em>фото услуги: services-page/${esc(p.key)}.jpg</em></div>`}</div>
+  </div></section>
+  ${c?`<section>${tag('Что это',`<h2>${esc(c.heading)}</h2><div class="cols2">${first.map(x=>`<p>${esc(x)}</p>`).join('')}</div>`)}</section>`:
+       `<section>${tag('Что это',`<h2>${esc(p.title)}</h2><p class="lead" style="margin-top:14px;color:var(--ink2)">${esc(p.desc)}</p>`)}</section>`}
+  ${works.length?`<section>${tag('Что входит',`<h2>Состав работ</h2><div class="tiles ${tilesCls}">${works.map((w,i)=>{const [t,...r]=w.split(/[:—–,]/);return `<div class="tile"><em>0${i+1}</em><div class="ic">${ICONS[i%ICONS.length]}</div><b>${esc(t.trim())}</b>${r.length?`<span style="font-size:13.5px;color:var(--mute)">${esc(r.join(',').trim())}</span>`:''}</div>`}).join('')}</div>`)}</section>`:''}
+  ${pk.length?`<section>${tag('Сколько стоит',`<h2>${esc(d.pkgTitle||'Типовые решения')}</h2><div class="pkgs">${pk.map((x,i)=>{const cov=covFor(p.key,i);const pr=priceLine(p,i,x.name);return `<div class="pkg">${cov?`<img class="cov" src="${cov}" alt="">`:`<div class="covx" style="background:${GRAD[i%3]}">${esc(x.name)}</div>`}<div class="body"><h3>${esc(x.name)}</h3><span class="for">${esc(x.for||'')}</span><span class="price ${pr?'':'req'}">${pr||'Цена по расчёту после осмотра'}</span><ul>${(x.items||[]).slice(0,4).map(it=>`<li>${esc(it)}</li>`).join('')}</ul>${x.term?`<span class="term">${esc(x.term)}</span>`:''}</div></div>`}).join('')}</div>
+    <div class="pricegrid"><div class="pricenote"><p>${esc(d.pkgNote||'')}</p>${paras[2]?`<p style="margin-top:12px">${esc(paras[2])}</p>`:''}<p style="margin-top:12px"><a href="#">Рассчитать смету →</a></p></div>
+    ${p.prices?`<div class="pricetable"><div><span>Оборудование из каталога</span><span>Цена</span></div>${p.prices.rows.map(r=>`<div><span>${esc(r.label)}</span><b>${esc(r.price)}</b></div>`).join('')}</div>`:`<div class="pricetable"><div><span>Оборудование из каталога</span><span>Цена</span></div><div><span style="color:var(--mute)">Таблица цен на оборудование: добавить из каталога по типу</span></div></div>`}</div>`)}</section>`:''}
+  
+  ${d.brandsText?`<section>${tag('Оборудование',`<h2>${esc(d.brandsTitle||'Оборудование')}</h2><p class="brands">${esc(d.brandsText)}</p><a class="catlink" href="#">Смотреть в каталоге →</a>`)}</section>`:''}
+  ${rest.length>(paras[2]?1:0)?`<section>${tag('Подробно',`<h2>Что важно знать до договора</h2><div class="details">${rest.slice(paras[2]?1:0).map(x=>`<div><p>${esc(x)}</p></div>`).join('')}</div>`)}</section>`:''}
+  ${p.faq.length?`<section>${tag('Вопросы',`<h2>Частые вопросы</h2><div class="faq">${p.faq.map((f,i)=>`<details ${i===0?'open':''}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div>`)}</section>`:''}
+  ${st.length?`<section style="padding-top:0;border-top:0"><div class="wrap"><div class="mini"><div class="lbl">Как проходит работа</div><ol>${st.slice(0,5).map((s,i)=>`<li><i>${i+1}</i>${esc(s.t)}${isCctv?`<small>${esc(whens[i])}</small>`:''}</li>`).join('')}</ol><a href="#">Подробно о том, как мы работаем →</a></div></div></section>`:''}
+  ${proof(p)}
+  ${finalBlock(p)}`;
+}
+function renderIndustry(p){
+  const hero = heroFor(p.key); const S = D.industryStats||{};
+  const ind = p.industry||{}; const d=p.details||{}; const pk=(d.packages||[]).slice(0,3); const st=(d.stages||[]).slice(0,6);
+  const card = arr => `<div class="ind">${(arr||[]).map(x=>`<div class="c"><b>${esc(x.title)}</b><p>${esc(x.text)}</p></div>`).join('')}</div>`;
+  const faq = ind.faq?.length?ind.faq:p.faq;
+  return `
+  <section class="ihero" style="padding-bottom:0"><div class="wrap">
+    <div class="crumbs">Главная &nbsp;/&nbsp; Услуги &nbsp;/&nbsp; <b>${esc(p.title)}</b></div>
+    <div class="grid"><div><div class="eyebrow">Решение для отрасли</div><h1>${esc(p.h1)}</h1><p class="lead">${esc(p.intro)}</p></div>
+    ${hero?`<img class="ph" src="${hero}" alt="" style="border-color:rgba(255,255,255,.15)">`:`<div class="phx">${ICONS[1]}<em>фото отрасли: services-page/${esc(p.key)}.jpg</em></div>`}</div>
+    <div class="stats">${['s1','s2','s3','s4'].map(k=>`<div><b>${esc(S[k]?.v||'')}</b><span>${esc(S[k]?.l||'')}</span></div>`).join('')}</div>
+  </div></section>
+  ${ind.specifics?`<section>${tag('Специфика объекта',`<h2>${esc(ind.specificsTitle||'Специфика объекта')}</h2>${card(ind.specifics)}`)}</section>`:''}
+  ${pk.length?`<section>${tag('Что ставим',`<h2>${esc(d.pkgTitle||'Типовые решения')}</h2><div class="pkgs">${pk.map((x,i)=>{const cov=covFor(p.key,i);return `<div class="pkg">${cov?`<img class="cov" src="${cov}" alt="">`:`<div class="covx" style="background:${GRAD[i%3]}">${esc(x.name)}</div>`}<div class="body"><h3>${esc(x.name)}</h3><span class="for">${esc(x.for||'')}</span><span class="price req">Смета после осмотра объекта</span><ul>${(x.items||[]).slice(0,4).map(it=>`<li>${esc(it)}</li>`).join('')}</ul>${x.term?`<span class="term">${esc(x.term)}</span>`:''}</div></div>`}).join('')}</div>`)}</section>`:''}
+  ${ind.workflow?`<section>${tag('Как ведём проект',`<h2>${esc(ind.workflowTitle||'Как ведём проект')}</h2><div class="proc"><div class="route ${ind.workflow.length===4?'n4':ind.workflow.length===6?'n6':''}">${ind.workflow.map((s,i)=>`<div class="step ${i===ind.workflow.length-1?'last':''}"><span class="when">Шаг ${i+1}</span><div class="ic"><i>${i+1}</i>${PROC[i%PROC.length]}</div><b>${esc(s.title)}</b><span>${esc(s.text)}</span></div>`).join('')}</div></div>`)}</section>`:''}
+  ${ind.pitfalls?`<section class="dark">${tag('Сложности и решения',`<h2>${esc(ind.pitfallsTitle||'Сложности и решения')}</h2>${card(ind.pitfalls)}`)}</section>`:''}
+  ${p.industryServices?.length?`<section>${tag('Профильные услуги',`<h2>Что входит в проект</h2><div class="tiles ${p.industryServices.length>=5?'':'n4'}">${p.industryServices.slice(0,6).map((k,i)=>`<div class="tile"><div class="ic">${ICONS[i%ICONS.length]}</div><b>${esc(byKey[k]?.title||k)}</b><span style="font-size:13.5px;color:var(--mute)">${esc(byKey[k]?.desc||'')}</span></div>`).join('')}</div>`)}</section>`:''}
+  ${faq?.length?`<section>${tag('Вопросы',`<h2>Частые вопросы</h2><div class="faq">${faq.map((f,i)=>`<details ${i===0?'open':''}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('')}</div>`)}</section>`:''}
+  ${proof(p)}
+  ${finalBlock(p,true)}`;
+}
+function proof(p){
+  return `<section>${tag('Что уже сделано',`<h2>Проекты и отзывы</h2><div class="cases">
+   <div class="case"><div class="cph"></div><div class="b"><b>Uzum: распределительный центр</b><span>54 камеры, архив 56 ТБ</span></div></div>
+   <div class="case"><div class="cph"></div><div class="b"><b>Damira Beverages: завод</b><span>67 км трасс, 42 км cat6, СКУД</span></div></div>
+   <div class="case"><div class="cph"></div><div class="b"><b>Ucell: ситуационный центр</b><span>Видеостена 12×55″</span></div></div></div>
+   <div class="revs"><div class="rev"><div class="who">Клиент <span>★★★★★</span></div><p>Одобренный отзыв по этой услуге из базы сайта.</p></div><div class="rev"><div class="who">Клиент <span>★★★★★</span></div><p>Второй одобренный отзыв. Форма отзыва открывается по ссылке.</p></div></div>`)}</section>`;
+}
+function finalBlock(p, ind){
+  const arts = p.articles||[];
+  return `<section class="final"><div class="wrap"><div class="grid"><div><div class="eyebrow">${ind?'Расчёт проекта':'Расчёт под ваш объект'}</div><h2>${ind?'Пришлите план объекта или ТЗ':'Пришлите план или опишите задачу'}</h2><p>Инженер подготовит схему, спецификацию и смету. Выезд по Ташкенту бесплатный, ответ в рабочее время в течение часа.</p>
+   <div class="contacts"><b>+998 97 862 66 99</b><span>Пн–Пт 9:00–18:00 · sales@satsolutions.uz</span><span>Ташкент, ул. Катта Дархон, 5</span><div class="msgs"><span>Telegram</span><span>WhatsApp</span></div></div></div>
+   <div class="form"><h3>Получить КП</h3><div class="f">Имя</div><div class="f">Телефон</div><div class="f ta">Объект: адрес или описание задачи</div><div class="btn">Получить КП</div><small>Нажимая кнопку, вы соглашаетесь на обработку данных</small></div></div></div></section>
+   <div class="wrap chips">${arts.length?`<span class="l">Статьи</span>${arts.map(a=>`<span>${esc(a.title)}</span>`).join('')}`:''}${p.industryServices?.length?`<span class="l">Услуги</span>${p.industryServices.slice(0,4).map(k=>`<span>${esc(byKey[k]?.title||k)}</span>`).join('')}`:''}</div>`;
+}
+function show(key){
+  const p = byKey[key]||P[0];
+  document.querySelectorAll('.side button').forEach(b=>b.classList.toggle('on',b.dataset.k===p.key));
+  document.getElementById('main').innerHTML = `
+   <div class="mocktag"><div class="wrap"><span>Макет · satsolutions.uz/solutions/${esc(p.key)}</span><span>${p.group==='industry'?'отрасль':'услуга'} · новый порядок блоков</span></div></div>
+   <header class="top"><div class="wrap"><nav class="main"><span>Главная</span><span class="dd">Услуги</span><span class="dd">Каталог</span><span class="dd">Портфолио</span><span>О компании</span></nav><div class="search">Поиск: камера, пожарка…</div><div class="lang">RU ⌄</div></div></header>
+   ${p.group==='industry'?renderIndustry(p):renderService(p)}`;
+  document.getElementById('main').scrollIntoView({block:'start'});
+  history.replaceState(null,'','#'+p.key);
+}
+for (const g of ['service','industry']){
+  const box = document.getElementById(g==='service'?'navS':'navI');
+  box.innerHTML = P.filter(p=>p.group===g).map(p=>`<button data-k="${p.key}">${esc(p.title)}</button>`).join('');
+}
+document.querySelectorAll('.side button').forEach(b=>b.addEventListener('click',()=>show(b.dataset.k)));
+show((location.hash||'#access').slice(1));
+</script>
