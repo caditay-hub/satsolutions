@@ -13,6 +13,7 @@ export type GscRow = { key: string; clicks: number; impressions: number; ctr: nu
 
 export type GscReport = {
   range: { from: string; to: string };
+  /** Итог по сайту ЗА ВЫЧЕТОМ мусорного потока (см. JUNK_QUERY). */
   current: GscTotals;
   /** Домашний рынок (Узбекистан) без зарубежных показов по артикулам и без мусора. */
   home: GscTotals;
@@ -34,7 +35,17 @@ const HOME_COUNTRY = "uzb";
 /**
  * Мусорные запросы вида «ai12345» — ботовый поток, тысячи показов с нулём кликов.
  * Сидят и внутри узбекского сегмента (07.09.2026: 3098 показов из 6539), поэтому
- * фильтра по стране мало — вычитаем их из домашних цифр отдельно.
+ * фильтра по стране мало — вычитаем их из цифр отдельно.
+ *
+ * Разбор 08.09.2026: строго `ai` + РОВНО 5 цифр, 2487 уникальных запросов за 180 дней,
+ * 0 кликов за всё время, растёт втрое в месяц (июн 3,3% показов → авг-сен 30,8%).
+ * Причина внешняя (не наш контент — проверено), заблокировать нечем, только вычитать.
+ *
+ * ⚠️ Соблазн отфильтровать на стороне API (`operator: "excludingRegex"`) — ЛОВУШКА:
+ * любой фильтр по dimension `query` выбрасывает ещё и анонимизированные строки.
+ * Замер 08.09: итог без фильтра 91 930 показов, с excludingRegex — 26 625, то есть
+ * «отсеклось» 65 305 вместо ожидаемых ~6 000. Поэтому итоги берём БЕЗ фильтра
+ * и вычитаем измеренный мусор.
  */
 const JUNK_QUERY = /^ai\d{4,6}$/i;
 
@@ -113,25 +124,64 @@ export async function fetchGscReport(windowDays = 7, lagDays = 3): Promise<GscRe
   const to = daysAgo(lagDays);
   const from = daysAgo(lagDays + windowDays - 1);
 
-  const [totalsRes, homeRes, homeQueriesRes, queriesRes, pagesRes] = await Promise.all([
+  const [totalsRes, homeRes, homeQueriesRes, allQueriesRes, pageQueryRes] = await Promise.all([
     query({ startDate: from, endDate: to }),
     query({ startDate: from, endDate: to, ...homeFilter }),
     query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25000, ...homeFilter }),
-    query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25, orderBy: [{ field: "impressions", descending: true }] }),
-    query({ startDate: from, endDate: to, dimensions: ["page"], rowLimit: 25 }),
+    // Полный срез по запросам: из него и мусор считаем, и топ строим — отдельный
+    // вызов с rowLimit 25 не нужен, а мусор из топа теперь вычищается.
+    query({ startDate: from, endDate: to, dimensions: ["query"], rowLimit: 25000 }),
+    // Топ страниц собираем из среза запрос×страница: иначе показы мусорных запросов
+    // поднимают в топ страницы, у которых живого спроса нет вовсе
+    // (08.09.2026: /en/products/pro-swich-ai-poe-9-2 — 1898 показов и НИ ОДНОГО живого запроса).
+    query({ startDate: from, endDate: to, dimensions: ["page", "query"], rowLimit: 25000 }),
   ]);
+
+  const allJunk = junkTotals(allQueriesRes.rows);
+  const homeJunkT = junkTotals(homeQueriesRes.rows);
 
   return {
     range: { from, to },
-    current: totals(totalsRes.rows),
-    home: subtractJunk(totals(homeRes.rows), junkTotals(homeQueriesRes.rows)),
-    homeJunk: (() => {
-      const j = junkTotals(homeQueriesRes.rows);
-      return { queries: j.queries, impressions: j.impressions };
-    })(),
-    topQueries: mapRows(queriesRes.rows),
-    topPages: mapRows(pagesRes.rows),
+    current: subtractJunk(totals(totalsRes.rows), allJunk),
+    home: subtractJunk(totals(homeRes.rows), homeJunkT),
+    homeJunk: { queries: homeJunkT.queries, impressions: homeJunkT.impressions },
+    topQueries: mapRows(cleanQueries(allQueriesRes.rows))
+      .sort((a, b) => b.impressions - a.impressions)
+      .slice(0, 25),
+    topPages: topPagesWithoutJunk(pageQueryRes.rows),
   };
+}
+
+/** Строки среза по запросам без ботового потока. */
+function cleanQueries(rows: any[] | undefined): any[] {
+  return (rows ?? []).filter((r) => !JUNK_QUERY.test(r.keys?.[0] ?? ""));
+}
+
+/**
+ * Топ страниц по живым показам: складываем срез запрос×страница, выбросив мусор.
+ * Позиция — средняя по показам, иначе редкие запросы с позицией 1 перекашивают итог.
+ */
+function topPagesWithoutJunk(rows: any[] | undefined, limit = 25): GscRow[] {
+  const acc = new Map<string, { clicks: number; impressions: number; posSum: number }>();
+  for (const r of rows ?? []) {
+    const [page, q] = r.keys ?? [];
+    if (!page || JUNK_QUERY.test(q ?? "")) continue;
+    const a = acc.get(page) ?? { clicks: 0, impressions: 0, posSum: 0 };
+    a.clicks += r.clicks ?? 0;
+    a.impressions += r.impressions ?? 0;
+    a.posSum += (r.position ?? 0) * (r.impressions ?? 0);
+    acc.set(page, a);
+  }
+  return [...acc.entries()]
+    .map(([key, a]) => ({
+      key,
+      clicks: a.clicks,
+      impressions: a.impressions,
+      ctr: a.impressions ? a.clicks / a.impressions : 0,
+      position: a.impressions ? a.posSum / a.impressions : 0,
+    }))
+    .sort((x, y) => y.impressions - x.impressions)
+    .slice(0, limit);
 }
 
 /** Те же агрегаты за предыдущее окно той же длины — для дельты WoW. */

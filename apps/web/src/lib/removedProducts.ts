@@ -3,6 +3,11 @@
 // чтобы очистить индекс, вернуть вес и не отдавать пользователю тупик. Снимок GSC от 2026-07-01.
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
+  // 2026-09-08: убрали «Ai Poe» из названий и слагов — имя ничего не говорило покупателю,
+  // а токен «ai» тянул поток ботовых запросов ai#####. Товары живые, 308 на новые адреса.
+  "pro-swich-ai-poe-6-2": "/products/pro-poe-kommutator-6-2",
+  "pro-swich-ai-poe-9-2": "/products/pro-poe-kommutator-9-2",
+  "pro-swich-ai-poe-24-2": "/products/pro-poe-kommutator-24-2",
   // 2026-08-28: сняты по решению владельца — весь Avigilon (36) → бренд Hikvision;
   // VoIP-шлюзы Eltex TAU и UniFi USW с нулевой ценой → страницы брендов.
   "avigilon-ava-bullet": "hikvision",
