@@ -95,10 +95,10 @@ const D: Record<string, Block> = {
 
   uz: {
     badge: "ZKTeco hamkori",
-    h1: "O'zbekistonda ZKTeco: SKUD, turniketlar va shlagbaumlar kalit topshirish sharti bilan",
-    lead: "SAT Solutions — ZKTeco hamkori: kirish nazorati tizimlarini to'liq yetkazib beramiz, loyihalaymiz va o'rnatamiz — eshikdagi terminaldan kiraverishdagi shlagbaumgacha. Barcha uskunalar bitta ishlab chiqaruvchiniki va bitta dasturda ishlaydi.",
+    h1: "Oʻzbekistonda ZKTeco: SKUD, turniketlar va shlagbaumlar kalit topshirish sharti bilan",
+    lead: "SAT Solutions — ZKTeco hamkori: kirish nazorati tizimlarini toʻliq yetkazib beramiz, loyihalaymiz va oʻrnatamiz — eshikdagi terminaldan kiraverishdagi shlagbaumgacha. Barcha uskunalar bitta ishlab chiqaruvchiniki va bitta dasturda ishlaydi.",
     title: "Toshkentda ZKTeco — SKUD, turniket, shlagbaum | SAT Solutions",
-    metaDesc: "O'zbekistonda ZKTeco hamkori: turniketlar, shlagbaumlar, biometrik terminallar, raqam tanish va parkovka yagona ZKBio CVSecurity platformasida. Loyihalash, montaj, integratsiya va Toshkentda servis.",
+    metaDesc: "Oʻzbekistonda ZKTeco hamkori: turniketlar, shlagbaumlar, biometrik terminallar, raqam tanish va parkovka yagona ZKBio CVSecurity platformasida. Loyihalash, montaj, integratsiya va Toshkentda servis.",
     stats: [
       { v: "100+", l: "davlatda faoliyat" },
       { v: "950+", l: "R&D muhandisi" },
@@ -107,30 +107,30 @@ const D: Record<string, Block> = {
     ],
     sections: [
       {
-        h: "Bitta ishlab chiqaruvchidan to'liq SKUD tsikli",
+        h: "Bitta ishlab chiqaruvchidan toʻliq SKUD tsikli",
         p: [
-          "Barcha turdagi turniketlar — tripodlar, shisha qanotli swing, flap-barerlar, to'liq bo'yli. Maishiydan servoprivodli tezkorgacha shlagbaumlar. Biometrik terminallar, kontrollerlar, o'quvchilar, elektron qulflar. Raqam tanish kameralari, uzoq masofali UHF o'quvchilar, tikit-bokslar va parkovka barerlari.",
-          "Bularning barchasini ZKTeco o'zi ishlab chiqadi. Obyektda bu to'rtta emas, bitta kafolat va bitta servis degani.",
+          "Barcha turdagi turniketlar — tripodlar, shisha qanotli swing, flap-barerlar, toʻliq boʻyli. Maishiydan servoprivodli tezkorgacha shlagbaumlar. Biometrik terminallar, kontrollerlar, oʻquvchilar, elektron qulflar. Raqam tanish kameralari, uzoq masofali UHF oʻquvchilar, tikit-bokslar va parkovka barerlari.",
+          "Bularning barchasini ZKTeco oʻzi ishlab chiqadi. Obyektda bu toʻrtta emas, bitta kafolat va bitta servis degani.",
         ],
       },
       {
         h: "Shlagbaum va turniket — yonma-yon emas, bitta tizimda",
         p: [
-          "Odatda o'tish nuqtasi va kiraverish alohida yashaydi: odamlar uchun bir dastur, transport uchun boshqasi. ZKTecoda hammasi ZKBio CVSecurity platformasida birlashadi — turniketlar, shlagbaumlar, eshik terminallari, liftlar, parkovka va video bitta oynadan boshqariladi.",
-          "Huquqlar odamga va uning avtomobiliga bir vaqtda beriladi: xodim ishdan bo'shadi — propusk ham, avtomobil raqami ham bir bosishda ishlamay qoladi. API bor, shuning uchun tizimni 1C, kadrlar hisobi va CRM bilan bog'lash mumkin.",
+          "Odatda oʻtish nuqtasi va kiraverish alohida yashaydi: odamlar uchun bir dastur, transport uchun boshqasi. ZKTecoda hammasi ZKBio CVSecurity platformasida birlashadi — turniketlar, shlagbaumlar, eshik terminallari, liftlar, parkovka va video bitta oynadan boshqariladi.",
+          "Huquqlar odamga va uning avtomobiliga bir vaqtda beriladi: xodim ishdan boʻshadi — propusk ham, avtomobil raqami ham bir bosishda ishlamay qoladi. API bor, shuning uchun tizimni 1C, kadrlar hisobi va CRM bilan bogʻlash mumkin.",
         ],
       },
       {
         h: "Hamma narsaga bitta propusk, jumladan QR-kod",
         p: [
-          "O'tish qulay tarzda tasdiqlanadi: yuz, kaft, barmoq izi, karta, QR-kod yoki NFC orqali telefon. Bir xil identifikator holldagi turniketda ham, kiraverishdagi shlagbaumda ham ishlaydi.",
+          "Oʻtish qulay tarzda tasdiqlanadi: yuz, kaft, barmoq izi, karta, QR-kod yoki NFC orqali telefon. Bir xil identifikator holldagi turniketda ham, kiraverishdagi shlagbaumda ham ishlaydi.",
           "QR mehmonlar va pudratchilar uchun qulay: propusk messenjerga yuboriladi, cheklangan vaqt amal qiladi va faqat ruxsat etilgan nuqtalarni ochadi — parkovkaga kirish ham shunga kiradi.",
         ],
       },
       {
         h: "Biz nima qilamiz",
         p: [
-          "Obyektni ko'rish va loyiha: nechta nuqta, trassalar qayerdan o'tadi, qanday o'tkazuvchanlik kerak. Uskuna yetkazib berish, montaj, ishga tushirish va platformani sozlash. Xodimlaringizni o'qitish, 1C va CRM bilan integratsiya, Toshkentda kafolat va servis.",
+          "Obyektni koʻrish va loyiha: nechta nuqta, trassalar qayerdan oʻtadi, qanday oʻtkazuvchanlik kerak. Uskuna yetkazib berish, montaj, ishga tushirish va platformani sozlash. Xodimlaringizni oʻqitish, 1C va CRM bilan integratsiya, Toshkentda kafolat va servis.",
           "Montaj ishlari narxini alohida hisoblaymiz — byudjetni saytdagi kalkulyatorda oldindan chamalash mumkin.",
         ],
       },
@@ -138,8 +138,8 @@ const D: Record<string, Block> = {
     cases: [
       { h: "Biznes-markaz", t: "Holldagi turniketlar, parkingdagi shlagbaum, mehmon QR-propusklari va ijarachilar ish vaqtini hisobga olish." },
       { h: "Turar-joy majmuasi", t: "Raqam tanish orqali kirish, aholi uchun kalitkalar, domofon va telefondan podyezdga kirish." },
-      { h: "Zavod va ombor", t: "Perimetrda to'liq bo'yli turniketlar, smenalarni hisobga olish, transport nazorati va sexlarni ajratish." },
-      { h: "Maktab va OTM", t: "Kiraverishda tripodlar, ota-onaga bola kelgani haqida xabar, laboratoriyalarga jadval bo'yicha kirish." },
+      { h: "Zavod va ombor", t: "Perimetrda toʻliq boʻyli turniketlar, smenalarni hisobga olish, transport nazorati va sexlarni ajratish." },
+      { h: "Maktab va OTM", t: "Kiraverishda tripodlar, ota-onaga bola kelgani haqida xabar, laboratoriyalarga jadval boʻyicha kirish." },
       { h: "Pullik parkovka", t: "Raqam tanish, tikit-bokslar, barerlar va tariflash — kiraverishda operatorsiz." },
     ],
     cmpTitle: "SKUD uchun ZKTeco yoki Hikvision",
@@ -147,19 +147,19 @@ const D: Record<string, Block> = {
     cmpCols: ["Nimani solishtiramiz", "ZKTeco", "Hikvision"],
     cmp: [
       { f: "Kompaniya profili", zk: "Biometriya va kirish nazorati — asosiy biznes", hik: "Videokuzatuv — asosiy biznes" },
-      { f: "Turniket, shlagbaum, terminal", zk: "O'z ishlab chiqarishi, yagona liniya", hik: "Bor, lekin bog'lanish ko'proq modulli" },
-      { f: "Yagona platforma", zk: "ZKBio CVSecurity: kirish, transport, parkovka, lift, video", hik: "O'z modullari orqali, bir qismi uchinchi tomon" },
-      { f: "Biometriya", zk: "Yuz, kaft, barmoq izi — o'z algoritmlari", hik: "Yuz, barmoq izi" },
-      { f: "QR va mobil propusk", zk: "Uzluksiz: eshik, turniket, shlagbaum", hik: "Qo'llab-quvvatlanadi" },
+      { f: "Turniket, shlagbaum, terminal", zk: "Oʻz ishlab chiqarishi, yagona liniya", hik: "Bor, lekin bogʻlanish koʻproq modulli" },
+      { f: "Yagona platforma", zk: "ZKBio CVSecurity: kirish, transport, parkovka, lift, video", hik: "Oʻz modullari orqali, bir qismi uchinchi tomon" },
+      { f: "Biometriya", zk: "Yuz, kaft, barmoq izi — oʻz algoritmlari", hik: "Yuz, barmoq izi" },
+      { f: "QR va mobil propusk", zk: "Uzluksiz: eshik, turniket, shlagbaum", hik: "Qoʻllab-quvvatlanadi" },
       { f: "Videokuzatuv", zk: "Bor, lekin brend profili emas", hik: "Kuchli tomoni, keng liniya" },
-      { f: "AQSh va Yevropa davlat xaridlaridagi cheklovlar", zk: "Qo'llanilmaydi", hik: "Amal qiladi, tashqi auditli loyihalarda muhim" },
+      { f: "AQSh va Yevropa davlat xaridlaridagi cheklovlar", zk: "Qoʻllanilmaydi", hik: "Amal qiladi, tashqi auditli loyihalarda muhim" },
     ],
-    cmpNote: "Agar obyektda allaqachon Hikvision videokuzatuvi bo'lsa, ularning biometriyasi o'sha ekotizimga osonroq tushadi — buni to'g'ridan-to'g'ri aytamiz. Agar SKUD noldan qurilsa va odamlar bilan transport bitta tizimda bo'lishi kerak bo'lsa, ZKTeco foydaliroq.",
-    equipTitle: "ZKTeco uskunalari mavjud va buyurtma bo'yicha",
-    priceOnReq: "Narxi so'rov bo'yicha",
+    cmpNote: "Agar obyektda allaqachon Hikvision videokuzatuvi boʻlsa, ularning biometriyasi oʻsha ekotizimga osonroq tushadi — buni toʻgʻridan-toʻgʻri aytamiz. Agar SKUD noldan qurilsa va odamlar bilan transport bitta tizimda boʻlishi kerak boʻlsa, ZKTeco foydaliroq.",
+    equipTitle: "ZKTeco uskunalari mavjud va buyurtma boʻyicha",
+    priceOnReq: "Narxi soʻrov boʻyicha",
     allProducts: "Butun ZKTeco katalogi",
     ctaTitle: "ZKTeco uskunasida loyiha kerakmi?",
-    ctaText: "Nuqtalar sonini hisoblaymiz, vazifaga mos modellarni tanlaymiz va spetsifikatsiya tayyorlaymiz. Toshkent bo'ylab muhandis chiqishi — bepul.",
+    ctaText: "Nuqtalar sonini hisoblaymiz, vazifaga mos modellarni tanlaymiz va spetsifikatsiya tayyorlaymiz. Toshkent boʻylab muhandis chiqishi — bepul.",
     ctaBtn: "Loyihani muhokama qilish",
   },
 

@@ -23,13 +23,13 @@ const STRINGS: Record<string, UI> = {
   uz: {
     title: "Ishimizni baholang",
     hint: "Yulduzlarni bosing",
-    notes: ["", "Yomon", "O'rtacha", "Normal", "Yaxshi", "A'lo"],
-    comment: "Ish haqida bir-ikki so'z — ixtiyoriy",
+    notes: ["", "Yomon", "Oʻrtacha", "Normal", "Yaxshi", "Aʼlo"],
+    comment: "Ish haqida bir-ikki soʻz — ixtiyoriy",
     name: "Ism — ixtiyoriy",
     send: "Yuborish",
     sending: "Yuborilmoqda…",
-    thanks: "Rahmat! Sharh tekshiruvga yuborildi va moderatsiyadan so'ng paydo bo'ladi.",
-    err: "Yuborib bo'lmadi. Keyinroq urinib ko'ring.",
+    thanks: "Rahmat! Sharh tekshiruvga yuborildi va moderatsiyadan soʻng paydo boʻladi.",
+    err: "Yuborib boʻlmadi. Keyinroq urinib koʻring.",
   },
   en: {
     title: "Rate our work",

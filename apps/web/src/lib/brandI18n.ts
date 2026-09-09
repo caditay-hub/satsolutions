@@ -8,37 +8,37 @@ type Loc = { uz: string; en: string; tr: string; zh: string };
 const BRAND_DESC: Record<string, Loc> = {
   dahua: {
     en: "Dahua Technology is one of the world's leading manufacturers of video surveillance, access control, intrusion alarm and intelligent security solutions.",
-    uz: "Dahua Technology — videokuzatuv, kirishni nazorat qilish, qo'riqlash signalizatsiyasi va aqlli xavfsizlik yechimlarining yetakchi jahon ishlab chiqaruvchilaridan biri.",
+    uz: "Dahua Technology — videokuzatuv, kirishni nazorat qilish, qoʻriqlash signalizatsiyasi va aqlli xavfsizlik yechimlarining yetakchi jahon ishlab chiqaruvchilaridan biri.",
     tr: "Dahua Technology, video gözetim, geçiş kontrolü, hırsız alarmı ve akıllı güvenlik çözümlerinin dünyadaki önde gelen üreticilerinden biridir.",
     zh: "Dahua Technology（大华）是全球领先的视频监控、门禁、入侵报警和智能安防解决方案制造商之一。",
   },
   hikvision: {
     en: "Hikvision is a global leader in innovative security products and solutions: IP cameras, thermal imagers, access control and video analytics systems.",
-    uz: "Hikvision — innovatsion xavfsizlik mahsulotlari va yechimlari bo'yicha jahon yetakchisi: IP kameralar, termovizorlar, kirishni nazorat qilish va videoanalitika tizimlari.",
+    uz: "Hikvision — innovatsion xavfsizlik mahsulotlari va yechimlari boʻyicha jahon yetakchisi: IP kameralar, termovizorlar, kirishni nazorat qilish va videoanalitika tizimlari.",
     tr: "Hikvision, yenilikçi güvenlik ürünleri ve çözümlerinde dünya lideridir: IP kameralar, termal kameralar, geçiş kontrolü ve video analitik sistemleri.",
     zh: "海康威视（Hikvision）是创新安防产品和解决方案的全球领导者：IP摄像机、热成像仪、门禁和视频分析系统。",
   },
   rubezh: {
     en: "Rubezh is a Russian manufacturer of fire and security alarm, access control, notification and automation systems. The Rubezh R3 series is an addressable intelligent security system.",
-    uz: "Rubezh — yong'in va qo'riqlash signalizatsiyasi, kirishni nazorat qilish, ogohlantirish va avtomatika tizimlarining rossiyalik ishlab chiqaruvchisi. Rubezh R3 seriyasi — manzilli aqlli xavfsizlik tizimi.",
+    uz: "Rubezh — yongʻin va qoʻriqlash signalizatsiyasi, kirishni nazorat qilish, ogohlantirish va avtomatika tizimlarining rossiyalik ishlab chiqaruvchisi. Rubezh R3 seriyasi — manzilli aqlli xavfsizlik tizimi.",
     tr: "Rubezh, yangın ve güvenlik alarmı, geçiş kontrolü, anons ve otomasyon sistemlerinin Rus üreticisidir. Rubezh R3 serisi, adreslenebilir akıllı güvenlik sistemidir.",
     zh: "Rubezh 是俄罗斯的消防和安防报警、门禁、广播和自动化系统制造商。Rubezh R3 系列是可寻址智能安防系统。",
   },
   bolid: {
     en: "Bolid is a Russian manufacturer of the ISO Orion integrated security systems: fire and intrusion alarm, access control, video surveillance and notification.",
-    uz: "Bolid — ISO Orion integrallashgan qo'riqlash tizimlarining rossiyalik ishlab chiqaruvchisi: yong'in va qo'riqlash signalizatsiyasi, kirishni nazorat qilish, videokuzatuv va ogohlantirish.",
+    uz: "Bolid — ISO Orion integrallashgan qoʻriqlash tizimlarining rossiyalik ishlab chiqaruvchisi: yongʻin va qoʻriqlash signalizatsiyasi, kirishni nazorat qilish, videokuzatuv va ogohlantirish.",
     tr: "Bolid, ISO Orion entegre güvenlik sistemlerinin Rus üreticisidir: yangın ve hırsız alarmı, geçiş kontrolü, video gözetim ve anons.",
     zh: "Bolid 是俄罗斯 ISO Orion 集成安防系统制造商：消防和入侵报警、门禁、视频监控和广播。",
   },
   "sibirskiy-arsenal": {
     en: "Sibirsky Arsenal is a Russian manufacturer of fire and security alarm control panels: the Grand Magistr and Altai series, notification devices and automation.",
-    uz: "Sibirsky Arsenal — qo'riqlash-yong'in signalizatsiyasi qabul-nazorat qurilmalarining rossiyalik ishlab chiqaruvchisi: «Grand Magistr» va «Altai» seriyalari, ogohlantirish qurilmalari va avtomatika.",
+    uz: "Sibirsky Arsenal — qoʻriqlash-yongʻin signalizatsiyasi qabul-nazorat qurilmalarining rossiyalik ishlab chiqaruvchisi: «Grand Magistr» va «Altai» seriyalari, ogohlantirish qurilmalari va avtomatika.",
     tr: "Sibirsky Arsenal, yangın ve güvenlik alarmı kontrol panellerinin Rus üreticisidir: «Grand Magistr» ve «Altai» serileri, anons cihazları ve otomasyon.",
     zh: "Sibirsky Arsenal 是俄罗斯的消防和安防报警控制设备制造商：Grand Magistr 和 Altai 系列、广播设备及自动化产品。",
   },
   avigilon: {
     en: "Avigilon (Motorola Solutions) — premium high-resolution IP cameras with built-in AI video analytics and the Unity / Alta platform for cloud and on-premise management.",
-    uz: "Avigilon (Motorola Solutions) — o'rnatilgan sun'iy intellekt videoanalitikasi va bulutli hamda lokal boshqaruv uchun Unity / Alta platformasiga ega yuqori aniqlikdagi premium IP kameralar.",
+    uz: "Avigilon (Motorola Solutions) — oʻrnatilgan sun'iy intellekt videoanalitikasi va bulutli hamda lokal boshqaruv uchun Unity / Alta platformasiga ega yuqori aniqlikdagi premium IP kameralar.",
     tr: "Avigilon (Motorola Solutions) — yerleşik yapay zeka video analitiği ve bulut ile yerel yönetim için Unity / Alta platformuna sahip premium yüksek çözünürlüklü IP kameralar.",
     zh: "Avigilon（摩托罗拉解决方案）——内置 AI 视频分析的高分辨率高端 IP 摄像机，配备用于云端和本地管理的 Unity / Alta 平台。",
   },
@@ -68,13 +68,13 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   witek: {
     en: "Wi-Tek is networking equipment for video surveillance and communications: PoE switches, routers and wireless bridges.",
-    uz: "Wi-Tek — videokuzatuv va aloqa tizimlari uchun tarmoq uskunalari: PoE kommutatorlar, marshrutizatorlar va simsiz ko'priklar.",
+    uz: "Wi-Tek — videokuzatuv va aloqa tizimlari uchun tarmoq uskunalari: PoE kommutatorlar, marshrutizatorlar va simsiz koʻpriklar.",
     tr: "Wi-Tek, video gözetim ve iletişim sistemleri için ağ ekipmanlarıdır: PoE switchler, yönlendiriciler ve kablosuz köprüler.",
     zh: "Wi-Tek 是用于视频监控和通信的网络设备：PoE 交换机、路由器和无线网桥。",
   },
   kanihad: {
     en: "KANIHAD provides access control and passage automation equipment: turnstiles, barriers and switches.",
-    uz: "KANIHAD — kirishni nazorat qilish va o'tishni avtomatlashtirish uskunalari: turniketlar, shlagbaumlar va kommutatorlar.",
+    uz: "KANIHAD — kirishni nazorat qilish va oʻtishni avtomatlashtirish uskunalari: turniketlar, shlagbaumlar va kommutatorlar.",
     tr: "KANIHAD, geçiş kontrolü ve geçiş otomasyonu ekipmanları sunar: turnikeler, bariyerler ve switchler.",
     zh: "KANIHAD 提供门禁和通道自动化设备：闸机、道闸和交换机。",
   },
@@ -98,13 +98,13 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   ruijie: {
     en: "Ruijie Networks — Reyee cloud networks: routers, managed switches, Wi-Fi 6/7 access points and radio bridges for business and ISPs.",
-    uz: "Ruijie Networks — Reyee bulutli tarmoqlari: biznes va provayderlar uchun marshrutizatorlar, boshqariladigan kommutatorlar, Wi-Fi 6/7 kirish nuqtalari va radioko'priklar.",
+    uz: "Ruijie Networks — Reyee bulutli tarmoqlari: biznes va provayderlar uchun marshrutizatorlar, boshqariladigan kommutatorlar, Wi-Fi 6/7 kirish nuqtalari va radiokoʻpriklar.",
     tr: "Ruijie Networks — Reyee bulut ağları: işletmeler ve internet sağlayıcıları için yönlendiriciler, yönetilebilir switchler, Wi-Fi 6/7 erişim noktaları ve radyo köprüleri.",
     zh: "Ruijie Networks（锐捷）——Reyee 云网络：面向企业和运营商的路由器、网管交换机、Wi-Fi 6/7 接入点和无线网桥。",
   },
   prochee: {
     en: "Components and related equipment: brackets and mounting accessories, cable, fiber optics, hard drives, notification and fire safety.",
-    uz: "Komplektlovchi va yondosh uskunalar: kronshteynlar va montaj aksessuarlari, kabel, optika, qattiq disklar, ogohlantirish va yong'in xavfsizligi.",
+    uz: "Komplektlovchi va yondosh uskunalar: kronshteynlar va montaj aksessuarlari, kabel, optika, qattiq disklar, ogohlantirish va yongʻin xavfsizligi.",
     tr: "Bileşenler ve ilgili ekipmanlar: braketler ve montaj aksesuarları, kablo, fiber optik, sabit diskler, anons ve yangın güvenliği.",
     zh: "配件及相关设备：支架和安装配件、线缆、光纤、硬盘、广播和消防安全。",
   },
@@ -128,7 +128,7 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   cambium: {
     en: "Cambium Networks — carrier wireless solutions: ePMP/PMP radio bridges, access points and access network equipment.",
-    uz: "Cambium Networks — operator simsiz yechimlari: ePMP/PMP radioko'priklar, kirish nuqtalari va kirish tarmog'i uskunalari.",
+    uz: "Cambium Networks — operator simsiz yechimlari: ePMP/PMP radiokoʻpriklar, kirish nuqtalari va kirish tarmogʻi uskunalari.",
     tr: "Cambium Networks — operatör kablosuz çözümleri: ePMP/PMP radyo köprüleri, erişim noktaları ve erişim ağı ekipmanları.",
     zh: "Cambium Networks——运营商无线解决方案：ePMP/PMP 无线网桥、接入点和接入网设备。",
   },
@@ -140,7 +140,7 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   vertiv: {
     en: "Vertiv — uninterruptible power supplies (UPS), power and cooling systems for data centers and telecom infrastructure.",
-    uz: "Vertiv — uzluksiz quvvat manbalari (UPS), ma'lumotlar markazlari va telekom infratuzilmasi uchun elektr ta'minoti va sovutish tizimlari.",
+    uz: "Vertiv — uzluksiz quvvat manbalari (UPS), maʼlumotlar markazlari va telekom infratuzilmasi uchun elektr taʼminoti va sovutish tizimlari.",
     tr: "Vertiv — kesintisiz güç kaynakları (UPS), veri merkezleri ve telekom altyapısı için güç ve soğutma sistemleri.",
     zh: "Vertiv（维谛）——用于数据中心和电信基础设施的不间断电源（UPS）、供电和制冷系统。",
   },
@@ -164,7 +164,7 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   finen: {
     en: "FINEN — telecom and server cabinets (floor-standing and wall-mounted) and equipment mounting accessories.",
-    uz: "FINEN — telekommunikatsiya va server shkaflari (poldan va devorga o'rnatiladigan) hamda uskunalarni montaj qilish aksessuarlari.",
+    uz: "FINEN — telekommunikatsiya va server shkaflari (poldan va devorga oʻrnatiladigan) hamda uskunalarni montaj qilish aksessuarlari.",
     tr: "FINEN — telekom ve sunucu kabinleri (yer ve duvar tipi) ve ekipman montaj aksesuarları.",
     zh: "FINEN——电信和服务器机柜（落地式和壁挂式）及设备安装配件。",
   },
@@ -200,13 +200,13 @@ const BRAND_DESC: Record<string, Loc> = {
   },
   h3c: {
     en: "H3C — enterprise networks: managed switches, routers and data center solutions.",
-    uz: "H3C — korporativ tarmoqlar: boshqariladigan kommutatorlar, marshrutizatorlar va ma'lumotlar markazi yechimlari.",
+    uz: "H3C — korporativ tarmoqlar: boshqariladigan kommutatorlar, marshrutizatorlar va maʼlumotlar markazi yechimlari.",
     tr: "H3C — kurumsal ağlar: yönetilebilir switchler, yönlendiriciler ve veri merkezi çözümleri.",
     zh: "H3C（新华三）——企业网络：网管交换机、路由器和数据中心解决方案。",
   },
   apc: {
     en: "APC — uninterruptible power supplies (UPS), surge protectors and power solutions for IT equipment.",
-    uz: "APC — uzluksiz quvvat manbalari (UPS), tarmoq filtrlari va IT uskunalari uchun elektr ta'minoti yechimlari.",
+    uz: "APC — uzluksiz quvvat manbalari (UPS), tarmoq filtrlari va IT uskunalari uchun elektr taʼminoti yechimlari.",
     tr: "APC — kesintisiz güç kaynakları (UPS), akım korumalar ve BT ekipmanları için güç çözümleri.",
     zh: "APC——不间断电源（UPS）、电涌保护器和 IT 设备供电解决方案。",
   },

@@ -26,11 +26,6 @@ export const BRAND_CONFIG: Record<string, { displayName: string; description: st
     description:
       "Сибирский Арсенал — российский производитель приёмно-контрольных приборов охранно-пожарной сигнализации: серии «Гранд Магистр» и «Алтай», устройства оповещения и автоматики.",
   },
-  avigilon: {
-    displayName: "Avigilon",
-    description:
-      "Avigilon (Motorola Solutions) — премиальные IP-камеры высокого разрешения с встроенной ИИ-видеоаналитикой и платформой Unity / Alta для облачного и локального управления.",
-  },
   hilook: {
     displayName: "HiLook",
     description:

@@ -68,34 +68,34 @@ const D: Record<string, Dict> = {
     ctaBtn: "Обсудить проект",
   },
   uz: {
-    title: "O'zbekistonda H3C — SAT Solutions hamkori | serverlar, virtualizatsiya, tarmoqlar",
+    title: "Oʻzbekistonda H3C — SAT Solutions hamkori | serverlar, virtualizatsiya, tarmoqlar",
     metaDesc:
-      "SAT Solutions — O'zbekistonda H3C hamkori: H3C UniServer serverlari, H3C CAS virtualizatsiya platformasi, kommutatorlar va ma'lumotlar markazi yechimlarini Toshkentda kalit topshirish asosida yetkazib berish va joriy etish. Loyiha, ko'chirish, vendor qo'llab-quvvatlash.",
-    h1: "O'zbekistonda H3C — SAT Solutions hamkori",
+      "SAT Solutions — Oʻzbekistonda H3C hamkori: H3C UniServer serverlari, H3C CAS virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlarini Toshkentda kalit topshirish asosida yetkazib berish va joriy etish. Loyiha, koʻchirish, vendor qoʻllab-quvvatlash.",
+    h1: "Oʻzbekistonda H3C — SAT Solutions hamkori",
     lead:
-      "SAT Solutions — O'zbekistonda H3C hamkori. H3C korporativ uskunalarini kalit topshirish asosida yetkazib beramiz va joriy etamiz: serverlar, virtualizatsiya platformasi, kommutatorlar va ma'lumotlar markazi yechimlari — auditdan va spetsifikatsiyadan ishlayotgan tizimlarni ko'chirish va vendor qo'llab-quvvatlashgacha.",
+      "SAT Solutions — Oʻzbekistonda H3C hamkori. H3C korporativ uskunalarini kalit topshirish asosida yetkazib beramiz va joriy etamiz: serverlar, virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlari — auditdan va spetsifikatsiyadan ishlayotgan tizimlarni koʻchirish va vendor qoʻllab-quvvatlashgacha.",
     badge: "Rasmiy hamkorlik",
     sections: [
       {
         h: "H3C nima",
         p: [
-          "H3C (New H3C Technologies) — korporativ IT-infratuzilma bo'yicha jahon yetakchilaridan biri: serverlar, saqlash tizimlari, tarmoq uskunalari, virtualizatsiya platformalari va bulutli yechimlar. H3C uskunalaridan butun dunyo bo'ylab ma'lumotlar markazlari, banklar, aloqa operatorlari va sanoat korxonalari foydalanadi.",
-          "O'zbekistondagi biznes uchun H3C — ma'lumotlar markazi va virtualizatsiya uchun kuchli liniyaga, raqobatbardosh narxga va to'liq vendor qo'llab-quvvatlashga ega ishonchli muqobil.",
+          "H3C (New H3C Technologies) — korporativ IT-infratuzilma boʻyicha jahon yetakchilaridan biri: serverlar, saqlash tizimlari, tarmoq uskunalari, virtualizatsiya platformalari va bulutli yechimlar. H3C uskunalaridan butun dunyo boʻylab maʼlumotlar markazlari, banklar, aloqa operatorlari va sanoat korxonalari foydalanadi.",
+          "Oʻzbekistondagi biznes uchun H3C — maʼlumotlar markazi va virtualizatsiya uchun kuchli liniyaga, raqobatbardosh narxga va toʻliq vendor qoʻllab-quvvatlashga ega ishonchli muqobil.",
         ],
       },
       {
         h: "Biz nima yetkazib beramiz va joriy etamiz",
         p: [
-          "H3C UniServer serverlari — virtualizatsiya, ma'lumotlar bazasi va korporativ ilovalar uchun stojli serverlar: ko'p yadroli protsessorlar, DDR5 xotira, NVMe/SSD saqlash, 10/25GbE tarmoq interfeyslari.",
-          "H3C CAS — korporativ darajadagi virtualizatsiya platformasi: virtual mashinalar avtomatik qayta ishga tushadigan yuqori ishonchlilik klasterlari, qayta o'rnatishsiz «uchishda» ko'chirish, infratuzilmani boshqarishning yagona konsoli.",
-          "H3C tarmoq uskunalari — boshqariladigan kommutatorlar, marshrutizatorlar va ma'lumotlar markazi yechimlari: korxonaning uzilishsiz tarmog'ini qurish, segmentatsiya, kanallarni birlashtirish.",
+          "H3C UniServer serverlari — virtualizatsiya, maʼlumotlar bazasi va korporativ ilovalar uchun stojli serverlar: koʻp yadroli protsessorlar, DDR5 xotira, NVMe/SSD saqlash, 10/25GbE tarmoq interfeyslari.",
+          "H3C CAS — korporativ darajadagi virtualizatsiya platformasi: virtual mashinalar avtomatik qayta ishga tushadigan yuqori ishonchlilik klasterlari, qayta oʻrnatishsiz «uchishda» koʻchirish, infratuzilmani boshqarishning yagona konsoli.",
+          "H3C tarmoq uskunalari — boshqariladigan kommutatorlar, marshrutizatorlar va maʼlumotlar markazi yechimlari: korxonaning uzilishsiz tarmogʻini qurish, segmentatsiya, kanallarni birlashtirish.",
         ],
       },
       {
         h: "Nega SAT Solutions bilan kalit topshirish asosida",
         p: [
-          "Loyihani to'liq olib boramiz: infratuzilmani tekshirish, yuklamaga mos konfiguratsiyani tanlash, yetkazib berish, stojga o'rnatish, platformani joylashtirish, mavjud tizimlarni ko'chirish, zaxira nusxalashni sozlash va buyurtmachi administratorlarini o'qitish.",
-          "H3C yillik vendor qo'llab-quvvatlashini ulaymiz va topshirgandan keyin ham aloqada bo'lamiz — infratuzilmani kuzatib boramiz va platformani almashtirmasdan masshtablashga yordam beramiz.",
+          "Loyihani toʻliq olib boramiz: infratuzilmani tekshirish, yuklamaga mos konfiguratsiyani tanlash, yetkazib berish, stojga oʻrnatish, platformani joylashtirish, mavjud tizimlarni koʻchirish, zaxira nusxalashni sozlash va buyurtmachi administratorlarini oʻqitish.",
+          "H3C yillik vendor qoʻllab-quvvatlashini ulaymiz va topshirgandan keyin ham aloqada boʻlamiz — infratuzilmani kuzatib boramiz va platformani almashtirmasdan masshtablashga yordam beramiz.",
         ],
       },
     ],
@@ -178,7 +178,7 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
     /* API недоступен — секцию не рендерим */
   }
   const equipTitle = ({ ru: "Оборудование H3C — что мы поставляем", uz: "H3C uskunalari — biz yetkazib beradigan", en: "H3C equipment we supply", tr: "Sağladığımız H3C ekipmanları", zh: "我们供应的 H3C 设备" } as Record<string, string>)[locale] ?? "Оборудование H3C";
-  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
+  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi soʻrov boʻyicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
 
   const crumbHome = ({ ru: "Главная", uz: "Bosh sahifa", en: "Home", tr: "Ana sayfa", zh: "首页" } as Record<string, string>)[locale] ?? "Home";
   const breadcrumbLd = {

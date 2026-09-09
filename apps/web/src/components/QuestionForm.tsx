@@ -23,14 +23,14 @@ const STRINGS: Record<string, UI> = {
   },
   uz: {
     title: "Muhandisga savol",
-    sub: "Moslik, montaj, tanlash — javob beramiz va javobni shu sahifada e'lon qilamiz.",
+    sub: "Moslik, montaj, tanlash — javob beramiz va javobni shu sahifada eʼlon qilamiz.",
     q: "Mahsulot haqidagi savolingiz",
     name: "Ism — ixtiyoriy",
-    phone: "Telefon — shaxsiy javob kerak bo'lsa",
+    phone: "Telefon — shaxsiy javob kerak boʻlsa",
     send: "Savol yuborish",
     sending: "Yuborilmoqda…",
-    thanks: "Savol muhandisga yuborildi. Javob tekshiruvdan so'ng shu yerda chiqadi; telefon ko'rsatilgan bo'lsa — o'zimiz bog'lanamiz.",
-    err: "Yuborib bo'lmadi. Keyinroq urinib ko'ring.",
+    thanks: "Savol muhandisga yuborildi. Javob tekshiruvdan soʻng shu yerda chiqadi; telefon koʻrsatilgan boʻlsa — oʻzimiz bogʻlanamiz.",
+    err: "Yuborib boʻlmadi. Keyinroq urinib koʻring.",
     short: "Savolni biroz batafsilroq yozing (kamida 10 belgi).",
   },
   en: {

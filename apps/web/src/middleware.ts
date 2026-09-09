@@ -19,6 +19,13 @@ const REMOVED_SERVICE_REDIRECTS: Record<string, string> = {
 };
 const SVC_RE = new RegExp(`^(?:/(${localeAlt}))?/solutions/([^/]+)/?$`);
 
+// Закрытые бренды: товаров нет, страница отдавала пустой раздел, а в выдаче стояла
+// вторым местом и вела в тупик. 308 на бренд с тем же профилем товаров.
+const REMOVED_BRAND_REDIRECTS: Record<string, string> = {
+  avigilon: "hikvision", // 36 карточек сняты 28.08, спрос в стране ~10 запросов/мес
+};
+const BRAND_RE = new RegExp(`^(?:/(${localeAlt}))?/catalog/([^/]+)/?$`);
+
 // Точечные маппинги старых URL, которые ДО СИХ ПОР ранжируются в Google (из GSC):
 // ведём не на общий каталог, а на живой релевантный товар/раздел — сохраняем показы.
 const LEGACY_PRODUCT_REDIRECTS: Record<string, string> = {
@@ -68,6 +75,14 @@ export default function middleware(req: NextRequest) {
       // значение с «/» — готовый путь (дубли → карточка-оригинал), иначе — бренд-слаг → /catalog/<brand>
       const dest = target.startsWith("/") ? target : `/catalog/${target}`;
       return NextResponse.redirect(new URL(`${prefix}${dest}`, req.url), 308);
+    }
+  }
+  const bm = req.nextUrl.pathname.match(BRAND_RE);
+  if (bm) {
+    const dest = REMOVED_BRAND_REDIRECTS[decodeURIComponent(bm[2])];
+    if (dest) {
+      const prefix = bm[1] ? `/${bm[1]}` : "";
+      return NextResponse.redirect(new URL(`${prefix}/catalog/${dest}`, req.url), 308);
     }
   }
   const sm = req.nextUrl.pathname.match(SVC_RE);

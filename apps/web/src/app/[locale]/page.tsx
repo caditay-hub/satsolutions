@@ -221,7 +221,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const homeArticles = articlesForLocale(locale).slice(0, 4);
   const ARTICLES_UI: Record<string, { label: string; title: string; all: string; read: string }> = {
     ru: { label: "Блог", title: "Полезные статьи о безопасности", all: "Все статьи", read: "Читать" },
-    uz: { label: "Blog", title: "Xavfsizlik haqida foydali maqolalar", all: "Barcha maqolalar", read: "O'qish" },
+    uz: { label: "Blog", title: "Xavfsizlik haqida foydali maqolalar", all: "Barcha maqolalar", read: "Oʻqish" },
     en: { label: "Blog", title: "Useful security articles", all: "All articles", read: "Read" },
     tr: { label: "Blog", title: "Güvenlik hakkında faydalı makaleler", all: "Tüm makaleler", read: "Oku" },
     zh: { label: "博客", title: "安全领域实用文章", all: "全部文章", read: "阅读" },

@@ -20104,5 +20104,11 @@
     "en": "1 × 2.5G RJ-45 with PoE in, 1 × 1G LAN",
     "tr": "1 × 2.5G RJ-45, PoE girişli, 1 × 1G LAN",
     "zh": "1 × 2.5G RJ-45（PoE 输入）、1 × 1G LAN"
+  },
+  "Аккумулятор Tapo A110, зарядка USB Type-C": {
+    "uz": "Tapo A110 akkumulyatori, USB Type-C orqali zaryadlash",
+    "en": "Tapo A110 rechargeable battery, USB Type-C charging",
+    "tr": "Tapo A110 bataryası, USB Type-C ile şarj",
+    "zh": "Tapo A110 锂电池，USB Type-C 充电"
   }
 }

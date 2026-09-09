@@ -13,7 +13,7 @@ import { ARTICLES } from "@/lib/articlesData";
 // Заголовок блока «Статьи по теме» на хабах типов (инлайн — не раздуваем messages)
 const HUB_ARTICLES_UI: Record<string, string> = {
   ru: "Статьи по теме",
-  uz: "Mavzu bo'yicha maqolalar",
+  uz: "Mavzu boʻyicha maqolalar",
   en: "Related articles",
   tr: "İlgili makaleler",
   zh: "相关文章",

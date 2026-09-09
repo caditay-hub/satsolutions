@@ -42,7 +42,7 @@ export async function H3cEquipment({ locale }: { locale: string }) {
     })),
   };
 
-  const goLabel = ({ ru: "Смотреть в каталоге", uz: "Katalogda ko'rish", en: "View in catalog", tr: "Katalogda görün", zh: "在目录中查看" } as Record<string, string>)[locale] ?? "Смотреть в каталоге";
+  const goLabel = ({ ru: "Смотреть в каталоге", uz: "Katalogda koʻrish", en: "View in catalog", tr: "Katalogda görün", zh: "在目录中查看" } as Record<string, string>)[locale] ?? "Смотреть в каталоге";
 
   return (
     <div className="mt-12">

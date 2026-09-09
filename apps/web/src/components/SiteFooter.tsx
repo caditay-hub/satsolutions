@@ -53,7 +53,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
   const blogLabel = ({ ru: "Блог", uz: "Blog", en: "Blog", tr: "Blog", zh: "博客" } as Record<string, string>)[locale] ?? "Блог";
   const calcLabel = ({ ru: "Калькулятор стоимости", uz: "Narx kalkulyatori", en: "Cost calculator", tr: "Maliyet hesaplayıcı", zh: "费用计算器" } as Record<string, string>)[locale] ?? "Калькулятор стоимости";
-  const kitsLabel = ({ ru: "Готовые комплекты", uz: "Tayyor to'plamlar", en: "Ready-made kits", tr: "Hazır setler", zh: "成品套装" } as Record<string, string>)[locale] ?? "Готовые комплекты";
+  const kitsLabel = ({ ru: "Готовые комплекты", uz: "Tayyor toʻplamlar", en: "Ready-made kits", tr: "Hazır setler", zh: "成品套装" } as Record<string, string>)[locale] ?? "Готовые комплекты";
   const h3cLabel = ({ ru: "Партнёр H3C", uz: "H3C hamkori", en: "H3C partner", tr: "H3C ortağı", zh: "H3C 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр H3C";
   const zktecoLabel = ({ ru: "Партнёр ZKTeco", uz: "ZKTeco hamkori", en: "ZKTeco partner", tr: "ZKTeco ortağı", zh: "ZKTeco 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр ZKTeco";
   // Ссылки на экспортные/международные посадочные: до этого на них не вело ни одной

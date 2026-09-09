@@ -158,8 +158,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       return { ...p, name: loc.name, shortDescription: loc.shortDescription };
     });
   }
-  const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz o'rnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
-  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi so'rov bo'yicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
+  const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz oʻrnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
+  const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi soʻrov boʻyicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
 
   const title = ts(`${svc.key}.title`);
   const intro = ts(`${svc.key}.intro`);
@@ -631,7 +631,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               <p className="mt-3 max-w-md text-sm text-slate-600 sm:text-base">
                 {({
                   ru: "Опишите задачу или пришлите план помещения — инженер подготовит схему, спецификацию и смету. Выезд на объект по Ташкенту бесплатный.",
-                  uz: "Vazifani ta'riflang yoki xona planini yuboring — muhandis sxema, spetsifikatsiya va smeta tayyorlaydi. Toshkent bo'ylab obyektga chiqish bepul.",
+                  uz: "Vazifani taʼriflang yoki xona planini yuboring — muhandis sxema, spetsifikatsiya va smeta tayyorlaydi. Toshkent boʻylab obyektga chiqish bepul.",
                   en: "Describe the task or send a floor plan — an engineer prepares the layout, specification and estimate. Site visits in Tashkent are free.",
                   tr: "İşi anlatın veya kat planını gönderin — mühendis şema, şartname ve keşif hazırlar. Taşkent'te saha ziyareti ücretsizdir.",
                   zh: "描述需求或发来平面图——工程师将准备布点方案、清单和预算。塔什干范围内免费上门勘察。",

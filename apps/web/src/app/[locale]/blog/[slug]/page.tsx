@@ -10,7 +10,7 @@ import { ogLocale } from "@/lib/ogLocale";
 
 const UI: Record<string, { blog: string; home: string; related: string; hubsLabel: string; ctaTitle: string; ctaBtn: string; faq: string }> = {
   ru: { blog: "Блог", home: "Главная", related: "Смежные услуги", hubsLabel: "Каталог по теме", ctaTitle: "Нужна консультация или расчёт?", ctaBtn: "Получить КП", faq: "Частые вопросы" },
-  uz: { blog: "Blog", home: "Bosh sahifa", related: "Aloqador xizmatlar", hubsLabel: "Mavzu bo'yicha katalog", ctaTitle: "Maslahat yoki hisob-kitob kerakmi?", ctaBtn: "Taklif olish", faq: "Ko'p so'raladigan savollar" },
+  uz: { blog: "Blog", home: "Bosh sahifa", related: "Aloqador xizmatlar", hubsLabel: "Mavzu boʻyicha katalog", ctaTitle: "Maslahat yoki hisob-kitob kerakmi?", ctaBtn: "Taklif olish", faq: "Koʻp soʻraladigan savollar" },
   en: { blog: "Blog", home: "Home", related: "Related services", hubsLabel: "Catalog on the topic", ctaTitle: "Need advice or a quote?", ctaBtn: "Get a quote", faq: "FAQ" },
   tr: { blog: "Blog", home: "Ana sayfa", related: "İlgili hizmetler", hubsLabel: "Konuya göre katalog", ctaTitle: "Danışmanlık veya teklif?", ctaBtn: "Teklif al", faq: "SSS" },
   zh: { blog: "博客", home: "首页", related: "相关服务", hubsLabel: "相关产品目录", ctaTitle: "需要咨询或报价？", ctaBtn: "获取报价", faq: "常见问题" },
@@ -24,9 +24,9 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
   "kommutatory": { ru: "Коммутаторы", uz: "Kommutatorlar", en: "Switches", tr: "Switch'ler", zh: "交换机" },
   "marshrutizatory": { ru: "Маршрутизаторы", uz: "Marshrutizatorlar", en: "Routers", tr: "Yönlendiriciler", zh: "路由器" },
   "wi-fi-tochki-dostupa": { ru: "Wi-Fi точки доступа", uz: "Wi-Fi kirish nuqtalari", en: "Wi-Fi access points", tr: "Wi-Fi erişim noktaları", zh: "Wi-Fi接入点" },
-  "ibp-i-elektropitanie": { ru: "ИБП и электропитание", uz: "UPS va elektr ta'minoti", en: "UPS and power", tr: "UPS ve güç", zh: "UPS与电源" },
-  "pozharnaya-bezopasnost": { ru: "Пожарная безопасность", uz: "Yong'in xavfsizligi", en: "Fire safety", tr: "Yangın güvenliği", zh: "消防安全" },
-  "ognetushiteli": { ru: "Огнетушители", uz: "O't o'chirgichlar", en: "Fire extinguishers", tr: "Yangın tüpleri", zh: "灭火器" },
+  "ibp-i-elektropitanie": { ru: "ИБП и электропитание", uz: "UPS va elektr taʼminoti", en: "UPS and power", tr: "UPS ve güç", zh: "UPS与电源" },
+  "pozharnaya-bezopasnost": { ru: "Пожарная безопасность", uz: "Yongʻin xavfsizligi", en: "Fire safety", tr: "Yangın güvenliği", zh: "消防安全" },
+  "ognetushiteli": { ru: "Огнетушители", uz: "Oʻt oʻchirgichlar", en: "Fire extinguishers", tr: "Yangın tüpleri", zh: "灭火器" },
   "pon-oborudovanie": { ru: "PON-оборудование", uz: "PON uskunalari", en: "PON equipment", tr: "PON ekipmanı", zh: "PON设备" },
   "optika-i-aksessuary": { ru: "Оптика и аксессуары", uz: "Optika va aksessuarlar", en: "Optics and accessories", tr: "Optik ve aksesuarlar", zh: "光纤与配件" },
   "telekommunikacionnye-shkafy": { ru: "Телекоммуникационные шкафы", uz: "Telekommunikatsiya shkaflari", en: "Network cabinets", tr: "Kabinetler", zh: "网络机柜" },

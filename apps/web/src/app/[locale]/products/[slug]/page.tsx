@@ -24,7 +24,7 @@ import { articlesForService } from "@/lib/articlesData";
 // Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
 const ARTICLES_UI: Record<string, string> = {
   ru: "Статьи по теме",
-  uz: "Mavzu bo'yicha maqolalar",
+  uz: "Mavzu boʻyicha maqolalar",
   en: "Related articles",
   tr: "İlgili makaleler",
   zh: "相关文章",
@@ -133,7 +133,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const priceNum = Number(product.price);
     const SNIPPET_TAIL: Record<string, { price: (v: string) => string; onRequest: string; inStock: string; onOrder: string }> = {
       ru: { price: (v) => `Цена: ${v} сум`, onRequest: "Цена по запросу", inStock: "в наличии в Ташкенте", onOrder: "под заказ" },
-      uz: { price: (v) => `Narxi: ${v} so'm`, onRequest: "Narxi so'rov bo'yicha", inStock: "Toshkentda mavjud", onOrder: "buyurtma asosida" },
+      uz: { price: (v) => `Narxi: ${v} soʻm`, onRequest: "Narxi soʻrov boʻyicha", inStock: "Toshkentda mavjud", onOrder: "buyurtma asosida" },
       en: { price: (v) => `Price: ${v} UZS`, onRequest: "Price on request", inStock: "in stock in Tashkent", onOrder: "on order" },
       tr: { price: (v) => `Fiyat: ${v} som`, onRequest: "Fiyat talep üzerine", inStock: "Taşkent'te stokta", onOrder: "siparişle" },
       zh: { price: (v) => `价格：${v}苏姆`, onRequest: "价格面议", inStock: "塔什干现货", onOrder: "接受预订" },
