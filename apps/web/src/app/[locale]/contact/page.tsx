@@ -5,13 +5,16 @@ import { formatPhone } from "@/lib/formatPhone";
 import { resolveImageUrl } from "@/lib/image";
 import { SocialLinks } from "@/components/SocialLinks";
 import { FeedbackForm } from "@/components/FeedbackForm";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeAddress } from "@/lib/contentI18n";
 
 function pick(data: any, key: string) {
   return typeof data?.[key] === "string" ? (data[key] as string) : null;
 }
+
+// ISR: контакты приходят из site-pages API
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -28,9 +31,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
 }
 
-export default async function ContactPage() {
-  const t = await getTranslations("contact");
-  const locale = await getLocale();
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: без неё маршрут динамический на каждый запрос
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "contact" });
   try {
     const [{ page }, { page: site }] = await Promise.all([getSitePage("contact"), getSitePage("site")]);
     const img = resolveImageUrl(page.coverImageUrl);

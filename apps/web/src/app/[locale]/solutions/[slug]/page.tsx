@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeProduct, localizeProductName } from "@/lib/productI18n";
-import { getServiceBySlug, getPortfolio, getProducts } from "@/lib/api";
+import { getServiceBySlug, getPortfolio, getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
@@ -36,10 +36,17 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 
 // Услуги, которые калькулятор умеет считать — только на них есть смысл вести
 const CALC_SERVICES = new Set(["cctv", "access", "fire", "network", "wifi", "intercom", "perimeter", "alarm", "turnstile", "locks", "attendance"]);
+// Справочные разделы: страница объясняет устройство оборудования и ведёт в смежную
+// услугу. Кнопки запроса предложения на них не показываем — заявку принимать не на что.
+const REFERENCE_ONLY = new Set(["gates"]);
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
+
+// ISR по требованию: страниц услуг ~40, данные (оборудование, кейсы) из API
+export const revalidate = 300;
+export async function generateStaticParams() { return []; }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -72,10 +79,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function SolutionDetailsPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  // Явная локаль: иначе next-intl читает заголовки и страница рендерится на каждый запрос
+  setRequestLocale(locale);
   const svc = serviceByKey[slug];
-  const t = await getTranslations("solutionsPage");
-  const ts = await getTranslations("services");
-  const tcm = await getTranslations("common");
+  const t = await getTranslations({ locale, namespace: "solutionsPage" });
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tcm = await getTranslations({ locale, namespace: "common" });
 
   // Fallback: legacy API-backed service pages (linked from the home page)
   if (!svc) {
@@ -88,6 +97,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   }
 
   const isInd = svc.group === "industry";
+  const isReference = REFERENCE_ONLY.has(svc.key);
   // Отраслевые: первое фото галереи уходит в секцию «Специфика объекта» — в галерее не дублируем
   const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=11`).slice(isInd ? 1 : 0);
   // Полоса цифр и цветная полоса формы — только на отраслевых (вариант А «журнальный ритм»)
@@ -137,7 +147,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const cats = EQUIP_CATS[svc.key];
   if (cats) {
     const chunks = await Promise.all(
-      cats.map((c) => getProducts(1, 4, { category: c }).then((r) => r.items ?? []).catch(() => []))
+      cats.map((c) => getProductsCached(1, 4, { category: c }).then((r) => r.items ?? []).catch(() => []))
     );
     // перемешиваем по одному из каждой категории, чтобы витрина не была однобрендовой
     const merged: any[] = [];
@@ -179,17 +189,17 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   } catch {
     // ignore
   }
-  // FAQ: RU — из servicesData (источник), остальные локали — переводы из messages
-  // (services.<key>.faq). Нет перевода — блок просто не показывается.
+  // FAQ для всех пяти локалей берём из messages (services.<key>.faq).
+  // Раньше русская версия читалась из SERVICE_FAQ в коде — из-за двух источников
+  // правды наборы вопросов разъехались, и разметка FAQPage отдавала на разных
+  // языках разные вопросы. SERVICE_FAQ остаётся запасным вариантом на случай,
+  // если перевода нет (например, у отраслевых страниц).
   let faq: { q: string; a: string }[] = [];
-  if (locale === "ru") {
-    faq = SERVICE_FAQ[svc.key] ?? [];
-  } else {
-    try {
-      const tr = ts.raw(`${svc.key}.faq`) as { q: string; a: string }[];
-      if (Array.isArray(tr)) faq = tr.filter((f) => f?.q && f?.a);
-    } catch { /* перевода нет */ }
-  }
+  try {
+    const tr = ts.raw(`${svc.key}.faq`) as { q: string; a: string }[];
+    if (Array.isArray(tr)) faq = tr.filter((f) => f?.q && f?.a);
+  } catch { /* перевода нет */ }
+  if (faq.length === 0 && locale === "ru") faq = SERVICE_FAQ[svc.key] ?? [];
   const faqLd =
     faq.length > 0
       ? {
@@ -272,7 +282,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               )}
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">{intro}</p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
+                {isReference ? null : (
+                  <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
+                )}
                 <ContactButtons />
               </div>
             </div>
@@ -371,28 +383,28 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         )}
 
         {/* СКС и ЛВС: типовые конфигурации, этапы, бренды каталога */}
-        {svc.key === "network" && <NetworkDetails />}
+        {svc.key === "network" && <NetworkDetails locale={locale} />}
 
         {/* Умный дом: витрина устройств Tuya из каталога (фото + перелинковка) */}
-        {svc.key === "smarthome" && <SmartHomeDevices />}
+        {svc.key === "smarthome" && <SmartHomeDevices locale={locale} />}
 
         {/* Серверы H3C: перечень поставляемого оборудования (модельные линейки) */}
-        {svc.key === "virtualization" && <H3cEquipment />}
+        {svc.key === "virtualization" && <H3cEquipment locale={locale} />}
 
         {/* Серверные и ЦОД: типовые конфигурации, этапы, каталог */}
-        {svc.key === "server" && <DataCenterDetails />}
+        {svc.key === "server" && <DataCenterDetails locale={locale} />}
 
         {/* Типовые конфигурации (универсальный блок: турникеты, Wi-Fi, умный дом…) */}
-        {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} />}
+        {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} locale={locale} />}
 
         {/* Ценовой ориентир — для ключей «… цена / narxi», которые ведут на эту страницу */}
         <ServicePriceHint k={svc.key} locale={locale} />
 
         {/* Принцип работы */}
-        <ServiceScheme k={svc.key} />
+        <ServiceScheme k={svc.key} locale={locale} />
 
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
-        <RelatedServices current={svc.key} />
+        <RelatedServices current={svc.key} locale={locale} />
 
         {/* Перелинковка услуга → отрасли, где она применяется */}
         {svc.group === "service" && <ServiceIndustriesBlock locale={locale} serviceKey={svc.key} />}
@@ -633,7 +645,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         </section>
       )}
 
-      {/* CTA */}
+      {/* CTA — на справочных разделах не показываем (см. REFERENCE_ONLY) */}
+      {isReference ? null : (
       <section className="bg-slate-900 text-white">
         <div className="container-page flex flex-col items-center gap-5 py-12 text-center sm:py-14">
           <p className="text-xs font-black uppercase tracking-widest text-brand-400">{t("ctaLabel")}</p>
@@ -644,6 +657,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title} (CTA)`} />
         </div>
       </section>
+      )}
     </div>
   );
 }

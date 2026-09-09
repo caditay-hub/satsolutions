@@ -44,10 +44,10 @@ const D: Record<string, Dict> = {
       { title: "Гарантия и обслуживание", items: [
         { q: "Какая гарантия на оборудование и работы?", a: "На оборудование действует гарантия производителя, на монтажные работы — наша гарантия; сроки фиксируем в договоре. Гарантийные случаи закрываем своим сервисом, ходовые запчасти держим на складе." },
         { q: "Что после окончания гарантии?", a: "Предлагаем договор технического обслуживания: регламентные проверки, чистка датчиков и камер, аварийные выезды. Для пожарной сигнализации регулярное ТО — требование норм, журнал обслуживания проверяет инспектор." },
-        { q: "Возьмёте на обслуживание систему, которую монтировали не вы?", a: "Да. Начинаем с бесплатного аудита: проверяем состояние, составляем дефектную ведомость, и вы решаете, что чинить сейчас, а что планировать. Дальше система встаёт на регламент." },
+        { q: "Возьмёте на обслуживание систему, которую монтировали не вы?", a: "По договору ведём системы, которые смонтировали сами. Чужой монтаж обследуем: проверяем состояние, составляем дефектную ведомость и считаем модернизацию — после замены оборудования на наше система встаёт на регламент." },
       ]},
       { title: "Оборудование и партнёрства", items: [
-        { q: "С какими брендами вы работаете?", a: "Hikvision, Dahua, ZKTeco, Болид, Рубеж, MikroTik, TP-Link, H3C и другие — более 3000 позиций со склада в Ташкенте. Мы сертифицированный партнёр H3C и интегратор Dahua." },
+        { q: "С какими брендами вы работаете?", a: "Hikvision, Dahua, ZKTeco, Болид, Рубеж, MikroTik, TP-Link, H3C и другие — более 3000 позиций со склада в Ташкенте. Мы партнёр H3C в Узбекистане и интегратор Dahua." },
         { q: "Вы участвуете в тендерах и корпоративных закупках?", a: "Да: готовим КП и спецификации под требования закупки за 24 часа, поставляем по договору, даём полный пакет документов. Подробности — на странице «Поставки и тендеры»." },
       ]},
     ],
@@ -88,10 +88,10 @@ const D: Record<string, Dict> = {
       { title: "Kafolat va xizmat", items: [
         { q: "Uskuna va ishlarga qanday kafolat bor?", a: "Uskunaga ishlab chiqaruvchi kafolati, montaj ishlariga — bizning kafolatimiz amal qiladi; muddatlar shartnomada belgilanadi. Kafolat holatlarini o'z servisimiz yopadi, yurimli ehtiyot qismlar omborda." },
         { q: "Kafolat tugagach nima bo'ladi?", a: "Texnik xizmat shartnomasini taklif qilamiz: reglamentli tekshiruvlar, datchik va kameralarni tozalash, avariya chiqishlari. Yong'in signalizatsiyasiga muntazam TX — normalar talabi, jurnalni inspektor tekshiradi." },
-        { q: "Boshqalar o'rnatgan tizimni xizmatga olasizmi?", a: "Ha. Bepul auditdan boshlaymiz: holatni tekshiramiz, nuqson vedomostini tuzamiz, nimani hozir tuzatish, nimani rejalashtirish — siz hal qilasiz. Keyin tizim reglamentga o'tadi." },
+        { q: "Boshqalar o'rnatgan tizimni xizmatga olasizmi?", a: "Shartnoma boʻyicha oʻzimiz montaj qilgan tizimlarni yuritamiz. Boshqalar oʻrnatgan tizimni tekshiramiz: holatini baholaymiz, nuqson vedomostini tuzamiz va modernizatsiyani hisoblaymiz — uskuna bizniki bilan almashtirilgach, tizim reglamentga oʻtadi." },
       ]},
       { title: "Uskunalar va hamkorliklar", items: [
-        { q: "Qaysi brendlar bilan ishlaysiz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, MikroTik, TP-Link, H3C va boshqalar — Toshkentdagi ombordan 3000 dan ortiq pozitsiya. Biz H3C sertifikatlangan hamkori va Dahua integratorimiz." },
+        { q: "Qaysi brendlar bilan ishlaysiz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, MikroTik, TP-Link, H3C va boshqalar — Toshkentdagi ombordan 3000 dan ortiq pozitsiya. Biz Oʻzbekistonda H3C hamkori va Dahua integratorimiz." },
         { q: "Tender va korporativ xaridlarda qatnashasizmi?", a: "Ha: xarid talablariga KP va spetsifikatsiyalarni 24 soatda tayyorlaymiz, shartnoma bo'yicha yetkazamiz, to'liq hujjatlar paketini beramiz. Batafsil — «Ta'minot va tenderlar» sahifasida." },
       ]},
     ],
@@ -132,10 +132,10 @@ const D: Record<string, Dict> = {
       { title: "Warranty and service", items: [
         { q: "What warranty covers the equipment and the works?", a: "Equipment carries the manufacturer's warranty, installation carries ours; the terms are fixed in the contract. Warranty cases are handled by our own service team, with popular spares kept in stock." },
         { q: "What happens after the warranty ends?", a: "We offer a maintenance contract: scheduled checks, detector and camera cleaning, emergency call-outs. For fire alarms regular maintenance is a legal requirement — the inspector checks the log." },
-        { q: "Will you service a system installed by someone else?", a: "Yes. We start with a free audit: we check the condition, draw up a defect list, and you decide what to fix now and what to plan. Then the system goes onto a schedule." },
+        { q: "Will you service a system installed by someone else?", a: "Under a maintenance contract we look after the systems we installed ourselves. A system installed by someone else we will survey: check its condition, draw up a defect list and cost an upgrade — once the equipment has been replaced with ours, the system goes onto a schedule." },
       ]},
       { title: "Equipment and partnerships", items: [
-        { q: "Which brands do you work with?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, MikroTik, TP-Link, H3C and others — over 3,000 items from our Tashkent warehouse. We are a certified H3C partner and a Dahua integrator." },
+        { q: "Which brands do you work with?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, MikroTik, TP-Link, H3C and others — over 3,000 items from our Tashkent warehouse. We are an H3C partner in Uzbekistan and a Dahua integrator." },
         { q: "Do you take part in tenders and corporate procurement?", a: "Yes: we prepare quotes and specifications to procurement requirements within 24 hours, supply under contract and provide the full document package. Details — on the Supply and tenders page." },
       ]},
     ],
@@ -176,10 +176,10 @@ const D: Record<string, Dict> = {
       { title: "Garanti ve servis", items: [
         { q: "Ekipman ve işçilik garantisi nedir?", a: "Ekipmanda üretici garantisi, montajda bizim garantimiz geçerlidir; süreler sözleşmede sabitlenir. Garanti vakalarını kendi servisimiz kapatır, yaygın yedekler stokta tutulur." },
         { q: "Garanti bitince ne olur?", a: "Bakım sözleşmesi öneririz: planlı kontroller, dedektör ve kamera temizliği, arıza çıkışları. Yangın alarmında düzenli bakım norm gereğidir — defteri müfettiş kontrol eder." },
-        { q: "Başkasının kurduğu sistemi bakıma alır mısınız?", a: "Evet. Ücretsiz denetimle başlarız: durumu kontrol eder, kusur listesi çıkarırız; neyin şimdi, neyin sonra yapılacağına siz karar verirsiniz. Sonra sistem programa girer." },
+        { q: "Başkasının kurduğu sistemi bakıma alır mısınız?", a: "Bakım sözleşmesiyle kendi kurduğumuz sistemleri yürütürüz. Başkasının kurduğu sistemi inceleriz: durumu kontrol eder, kusur listesi çıkarır ve modernizasyonu fiyatlandırırız — ekipman bizimkiyle değiştirildikten sonra sistem programa girer." },
       ]},
       { title: "Ekipman ve iş ortaklıkları", items: [
-        { q: "Hangi markalarla çalışıyorsunuz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, MikroTik, TP-Link, H3C ve diğerleri — Taşkent depomuzdan 3.000'den fazla kalem. Sertifikalı H3C iş ortağı ve Dahua entegratörüyüz." },
+        { q: "Hangi markalarla çalışıyorsunuz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, MikroTik, TP-Link, H3C ve diğerleri — Taşkent depomuzdan 3.000'den fazla kalem. Özbekistan'da H3C iş ortağı ve Dahua entegratörüyüz." },
         { q: "Tenderlere ve kurumsal alımlara katılıyor musunuz?", a: "Evet: alım gereksinimlerine göre teklif ve spesifikasyonları 24 saatte hazırlar, sözleşmeyle teslim eder, tam evrak paketi veririz. Ayrıntılar — Tedarik ve tenderler sayfasında." },
       ]},
     ],
@@ -220,10 +220,10 @@ const D: Record<string, Dict> = {
       { title: "保修与维保", items: [
         { q: "设备和施工的保修如何？", a: "设备享受原厂保修，施工由我们保修；期限写进合同。保修问题由自有服务团队处理，常用备件仓库常备。" },
         { q: "保修期过后怎么办？", a: "可签维保合同：定期巡检、清洁探测器和摄像机、故障上门。火灾报警的定期维保是法规要求——检查员会查台账。" },
-        { q: "别家装的系统你们接维保吗？", a: "接。先做免费审计：查状态、列缺陷清单，修什么、缓什么由您决定，之后系统进入定期维保。" },
+        { q: "别家装的系统你们接维保吗？", a: "维保合同只承接由我方施工的系统。别家装的系统我们可以做检测：查状态、列缺陷清单并核算改造费用——设备更换为我方供货后，系统即可纳入定期维保。" },
       ]},
       { title: "设备与合作", items: [
-        { q: "你们做哪些品牌？", a: "海康、大华、中控、Bolid、Rubezh、MikroTik、TP-Link、H3C等——塔什干仓库3000多种现货。我们是H3C认证合作伙伴和大华集成商。" },
+        { q: "你们做哪些品牌？", a: "海康、大华、中控、Bolid、Rubezh、MikroTik、TP-Link、H3C等——塔什干仓库3000多种现货。我们是H3C在乌兹别克斯坦的合作伙伴和大华集成商。" },
         { q: "参与投标和企业采购吗？", a: "参与：24小时内按采购要求出报价和清单，按合同供货，提供全套单据。详见«供货与投标»页面。" },
       ]},
     ],

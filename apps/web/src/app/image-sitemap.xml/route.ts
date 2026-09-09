@@ -1,4 +1,4 @@
-import { getProducts } from "@/lib/api";
+import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 
 // Image Sitemap: фото товаров для Google Картинок (страница товара + его cover-изображение).
@@ -12,7 +12,7 @@ export async function GET() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
   const acc: import("@/lib/api").ProductDto[] = [];
   for (let page = 1; page <= 12; page++) {
-    const { items, total } = await getProducts(page, 500).catch(() => ({ items: [], total: 0 }));
+    const { items, total } = await getProductsCached(page, 500, undefined, 86400).catch(() => ({ items: [], total: 0 }));
     acc.push(...items);
     if (acc.length >= (total || 0) || items.length === 0) break;
   }

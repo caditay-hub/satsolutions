@@ -12,10 +12,11 @@ const SCHEME_KEYS = new Set([
   "turnstile", "locks", "gates", "telephony", "servers"
 ]);
 
-export async function ServiceScheme({ k }: { k: string }) {
+// locale пропом от страницы (иначе next-intl уводит маршрут в динамику)
+export async function ServiceScheme({ k, locale }: { k: string; locale: string }) {
   if (!SCHEME_KEYS.has(k)) return null;
-  const ts = await getTranslations("scheme");
-  const tp = await getTranslations("solutionsPage");
+  const ts = await getTranslations({ locale, namespace: "scheme" });
+  const tp = await getTranslations({ locale, namespace: "solutionsPage" });
   const steps = ts.raw(k) as Step[];
   if (!Array.isArray(steps) || steps.length === 0) return null;
   return (

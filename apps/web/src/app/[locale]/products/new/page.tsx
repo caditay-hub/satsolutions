@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { getBrands, getProducts } from "@/lib/api";
+import { getBrands, getProductsCached } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeProductName } from "@/lib/productI18n";
@@ -38,9 +38,10 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
   const tm = await getTranslations({ locale, namespace: "catalogMega" });
 
   // Свежие за 90 дней; при затишье — просто последние поступления
-  let data = await getProducts(page, PER_PAGE, { sort: "new", days: NEW_SECTION_DAYS, hasPrice: true });
+  // выборка детерминирована (страница + «новинки»), пользовательских фильтров нет → кэш 5 мин
+  let data = await getProductsCached(page, PER_PAGE, { sort: "new", days: NEW_SECTION_DAYS, hasPrice: true });
   if (data.total < MIN_ITEMS) {
-    data = await getProducts(page, PER_PAGE, { sort: "new", hasPrice: true });
+    data = await getProductsCached(page, PER_PAGE, { sort: "new", hasPrice: true });
   }
   const { items, total } = data;
   const { brands } = await getBrands().catch(() => ({ brands: [] as any[] }));

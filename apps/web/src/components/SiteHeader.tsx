@@ -1,5 +1,4 @@
 import { getSitePage, getPortfolio } from "@/lib/api";
-import { getLocale } from "next-intl/server";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 // Refreshed component to fix hydration issues
 import { resolveImageUrl } from "@/lib/image";
@@ -10,7 +9,8 @@ function pickString(data: any, key: string) {
   return typeof data?.[key] === "string" ? (data[key] as string) : null;
 }
 
-export async function SiteHeader() {
+// locale приходит из layout: getLocale() читал заголовки запроса
+export async function SiteHeader({ locale }: { locale: string }) {
   let logoImageUrl: string | null = null;
 
   try {
@@ -23,7 +23,6 @@ export async function SiteHeader() {
   // Кейсы для выпадашки «Портфолио»: локализуем на сервере (оверлей в бандл не тянем)
   let portfolioItems: { title: string; slug: string }[] = [];
   try {
-    const locale = await getLocale();
     const { items } = await getPortfolio(1, 8);
     portfolioItems = items.map((p) => {
       const l = localizePortfolioProject(p, locale);

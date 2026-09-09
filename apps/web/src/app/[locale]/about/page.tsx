@@ -6,10 +6,13 @@ import { resolveImageUrl } from "@/lib/image";
 import { contactGeo } from "@/lib/geo";
 import { Reveal } from "@/components/Reveal";
 import { DocPreview } from "@/components/DocPreview";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeAboutContent, localizeAddress } from "@/lib/contentI18n";
+
+// ISR: данные (бренды, текст страницы) из API — обновляем раз в 5 минут
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -206,9 +209,11 @@ const DownloadIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   </svg>
 );
 
-export default async function AboutPage() {
-  const t = await getTranslations("about");
-  const locale = await getLocale();
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: без setRequestLocale вызовы next-intl читают заголовки запроса → маршрут динамический
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "about" });
   try {
     const [{ page }, { brands }, { page: contact }] = await Promise.all([
       getSitePage("about").catch(() => ({ page: { title: "SAT Solutions", content: "", coverImageUrl: null, data: {} } as any })),

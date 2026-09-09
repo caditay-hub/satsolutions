@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getProductBySlug, getProducts, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
+import { getProductBySlug, getProductsCached, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
 import { CrossSellClick } from "@/components/CrossSellClick";
 import { QuestionForm } from "@/components/QuestionForm";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createMetadata, clip } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
@@ -29,6 +29,11 @@ const ARTICLES_UI: Record<string, string> = {
   tr: "İlgili makaleler",
   zh: "相关文章",
 };
+
+// ISR по требованию: 3256 карточек не пререндерим на сборке (пустой generateStaticParams),
+// но первый запрос кладёт страницу в кэш на 5 минут — раньше каждый заход рендерил заново.
+export const revalidate = 300;
+export async function generateStaticParams() { return []; }
 
 /**
  * Восстановление товара по старому/битому slug (после пересборки каталога слаги сменились).
@@ -174,6 +179,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function ProductDetailsPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale });
 
   // Фетч товара отдельно. 404 («Страница не найдена») — ТОЛЬКО если товар реально
@@ -286,11 +292,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     let similarItems: any[] = [];
     if (categoryInfo) {
       try {
-        const similar = await getProducts(1, 12, { category: categoryInfo.slug, brand: brandInfo?.slug });
+        const similar = await getProductsCached(1, 12, { category: categoryInfo.slug, brand: brandInfo?.slug });
         similarItems = similar.items.filter((p: any) => p.id !== product.id).slice(0, 6);
         // Фолбэк: если внутри бренда похожих мало — добираем по категории без бренда
         if (similarItems.length < 3) {
-          const wide = await getProducts(1, 12, { category: categoryInfo.slug });
+          const wide = await getProductsCached(1, 12, { category: categoryInfo.slug });
           const seen = new Set([product.id, ...similarItems.map((p: any) => p.id)]);
           for (const p of wide.items) {
             if (!seen.has(p.id)) { seen.add(p.id); similarItems.push(p); }
@@ -354,7 +360,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             const byName = (l: { items: any[] }) =>
               word ? { items: l.items.filter((p: any) => String(p.name || "").toLowerCase().includes(word)) } : l;
             if (prodUzs > 0) {
-              const corridor = byName(await getProducts(1, lim, {
+              const corridor = byName(await getProductsCached(1, lim, {
                 type: tn,
                 // name_desc при #слове: кириллица сортируется после латиницы, ASC-лимит
                 // съедали HDMI/4G — в DESC русские «Кронштейн…» идут в начале выборки
@@ -364,7 +370,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               }).catch(() => ({ items: [] as any[] })));
               if (corridor.items.length >= 2) return corridor;
             }
-            return byName(await getProducts(1, lim, { type: tn, sort: word ? "name_desc" : undefined }).catch(() => ({ items: [] as any[] })));
+            return byName(await getProductsCached(1, lim, { type: tn, sort: word ? "name_desc" : undefined }).catch(() => ({ items: [] as any[] })));
           };
           const lists = await Promise.all(accCats.slice(0, 3).map(fetchType));
           const seed = Array.from(String(product.id)).reduce((s, ch) => (s * 31 + ch.charCodeAt(0)) >>> 0, 7);

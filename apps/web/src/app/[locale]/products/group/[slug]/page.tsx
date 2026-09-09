@@ -68,6 +68,9 @@ export default async function ProductGroupPage({ params, searchParams }: { param
       {CatalogView({
         params: Promise.resolve({ locale }),
         searchParams: Promise.resolve({ ...sp, type: types.join(","), __clean: "1" }),
+        // крошки уже отданы выше: у группы из одного типа CatalogView считает страницу
+        // тип-страницей и без этого флага печатает второй BreadcrumbList
+        skipBreadcrumbLd: true,
         groupLanding: {
           name: groupName,
           idx,

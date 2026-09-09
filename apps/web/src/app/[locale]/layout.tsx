@@ -92,12 +92,6 @@ export default async function RootLayout({
         opens: "09:00",
         closes: "18:00",
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "10:00",
-        closes: "15:00",
-      },
     ],
     contactPoint: {
       "@type": "ContactPoint",
@@ -348,12 +342,12 @@ setTimeout(load,6000);
             <Suspense fallback={null}>
               <ScrollManager />
             </Suspense>
-            <SiteHeader />
+            <SiteHeader locale={locale} />
             <main className="flex-1">{children}</main>
             <GlobalBackButton />
           </ClientProviders>
           {/* подвал рендерится на сервере: его ссылки должны быть в HTML, а не появляться после гидратации */}
-          <SiteFooter />
+          <SiteFooter locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

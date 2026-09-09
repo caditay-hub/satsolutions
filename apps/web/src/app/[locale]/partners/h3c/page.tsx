@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { getProducts } from "@/lib/api";
+import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { localizeProductName } from "@/lib/productI18n";
 
@@ -170,9 +170,9 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
   // Витрина оборудования H3C — реальные товары бренда из каталога (фото + характеристики).
-  let h3cProducts: Awaited<ReturnType<typeof getProducts>>["items"] = [];
+  let h3cProducts: Awaited<ReturnType<typeof getProductsCached>>["items"] = [];
   try {
-    const r = await getProducts(1, 24, { brand: "h3c" });
+    const r = await getProductsCached(1, 24, { brand: "h3c" }, 86400); // no-store ломал revalidate страницы
     h3cProducts = r.items ?? [];
   } catch {
     /* API недоступен — секцию не рендерим */

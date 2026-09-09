@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
-import { getLocale, getTranslations } from "next-intl/server";
-import { getProducts } from "@/lib/api";
+import { getTranslations } from "next-intl/server";
+import { getProductsCached } from "@/lib/api";
 import { localizeProductName } from "@/lib/productI18n";
 import { resolveImageUrl } from "@/lib/image";
 
@@ -18,12 +18,12 @@ const GROUPS: { key: string; slugs: string[] }[] = [
   { key: "hubs", slugs: ["pxt-pst-z1", "pxt-pst-tyzbg-01", "pxt-pst-zmai-90"] },
 ];
 
-export async function SmartHomeDevices() {
-  const locale = await getLocale();
-  const ts = await getTranslations("services");
+// locale пропом от страницы (иначе next-intl уводит маршрут в динамику)
+export async function SmartHomeDevices({ locale }: { locale: string }) {
+  const ts = await getTranslations({ locale, namespace: "services" });
   let items: any[] = [];
   try {
-    const r = await getProducts(1, 60, { brand: "tuya" });
+    const r = await getProductsCached(1, 60, { brand: "tuya" }); // фикс. выборка → можно кэшировать
     items = r.items || [];
   } catch {
     return null; // API недоступен — блок просто не показываем

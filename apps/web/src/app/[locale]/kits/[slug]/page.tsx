@@ -16,6 +16,17 @@ const UI: Record<string, { home: string; kits: string; includes: string; mount: 
   zh: { home: "首页", kits: "套装", includes: "套装包含", mount: "安装包含", faq: "常见问题", forWhom: "适用对象", ctaTitle: "免费为您的场地出具准确报价", ctaBtn: "获取报价", related: "了解服务详情", other: "其他套装" },
 };
 
+// Своих фото у комплектов нет, поэтому карточку иллюстрирует тематический кадр из
+// библиотеки блога (1200×630). Product без image — ошибка Rich Results на всех 20
+// адресах комплектов (5 локалей × 4 комплекта), из-за неё карточка не показывается.
+const KIT_IMG: Record<string, string> = {
+  "videonablyudenie-dlya-doma": "/blog-img/kamera-dlya-doma.jpg",
+  "videonablyudenie-dlya-magazina": "/blog-img/skolko-stoit-videonablyudenie.jpg",
+  "videonablyudenie-i-skud-dlya-ofisa": "/blog-img/skolko-stoit-skud.jpg",
+  "videonablyudenie-dlya-sklada": "/blog-img/skolko-kamer-nuzhno-skladu.jpg",
+};
+const kitImg = (slug: string) => KIT_IMG[slug] ?? "/og.png";
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const kit = kitBySlug(slug);
@@ -25,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: `${body.title} — ${body.priceLabel} — SAT Solutions` },
     description: `${body.tagline} ${body.audience}`,
     alternates: hreflangAlternates(`/kits/${slug}`, locale),
-    openGraph: { title: body.title, description: body.tagline, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: body.title, description: body.tagline, locale: ogLocale(locale), images: [`${process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz"}${kitImg(slug)}`] },
   };
 }
 
@@ -48,7 +59,9 @@ export default async function KitPage({ params }: { params: Promise<{ locale: st
     "@type": "Product",
     name: body.title,
     description: body.tagline,
-    brand: { "@type": "Organization", name: "SAT Solutions" },
+    image: [`${siteUrl}${kitImg(slug)}`],
+    // Product.brand требует Brand, не Organization — с Organization схема невалидна
+    brand: { "@type": "Brand", name: "SAT Solutions" },
     offers: {
       "@type": "Offer",
       price: kit.priceFrom,

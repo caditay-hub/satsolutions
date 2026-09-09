@@ -6,11 +6,14 @@ import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 // У network/server свои расширенные блоки — этот для остальных услуг.
 // У отраслей stages — коммерческий путь заказчика (заявка → КП → монтаж → сдача);
 // инженерная методика живёт отдельно в IndustryDetailsBlock («Как ведём проект»).
-type Pkg = { name: string; for: string; items: string[]; term: string };
+// term необязателен: у справочных услуг (автоматические ворота) сроки убраны,
+// пустой абзац оставлял лишний отступ в карточке.
+type Pkg = { name: string; for: string; items: string[]; term?: string };
 
-export async function ServicePackages({ k }: { k: string }) {
-  const ts = await getTranslations("services");
-  const tp = await getTranslations("solutionsPage");
+// locale пропом от страницы (иначе next-intl уводит маршрут в динамику)
+export async function ServicePackages({ k, locale }: { k: string; locale: string }) {
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tp = await getTranslations({ locale, namespace: "solutionsPage" });
   let packages: Pkg[] = [];
   try {
     const raw = ts.raw(`${k}.details.packages`) as Pkg[];
@@ -48,7 +51,9 @@ export async function ServicePackages({ k }: { k: string }) {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400">{p.term}</p>
+            {p.term ? (
+              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400">{p.term}</p>
+            ) : null}
             <div className="mt-3">
               <RequestQuoteButton label={tp("getQuote")} variant="brand" productName={`Заявка: ${ts(`${k}.title`)} — ${p.name}`} />
             </div>

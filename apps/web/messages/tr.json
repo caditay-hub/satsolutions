@@ -9,7 +9,7 @@
     "turnkey": "Anahtar teslim hizmet",
     "designInstall": "tasarım ve kurulum",
     "helpTitle": "Seçim için yardım mı lazım?",
-    "helpText": "Mühendisimiz göreviniz için uygun ekipmanı seçip 30 dakika içinde teklif gönderir.",
+    "helpText": "Mühendisimiz göreviniz için uygun ekipmanı seçip teklifi bir iş günü içinde gönderir.",
     "getConsult": "Danışmanlık alın",
     "similar": "Benzer",
     "boughtWith": "Birlikte alınanlar",
@@ -47,7 +47,7 @@
     "priceOnRequest": "Fiyat talep üzerine",
     "noPhoto": "Fotoğraf yok",
     "inStock": "Stokta",
-    "onOrder": "Sipariş üzerine",
+    "onOrder": "Siparişle",
     "faqTitle": "Sık sorulan sorular",
     "photo": "fotoğraf",
     "openPhoto": "Fotoğrafı aç",
@@ -141,7 +141,7 @@
       ],
       "warranty": [
         "Garanti ve servis",
-        "Tüm ekipmanda resmi garanti. Kendi servis merkezi, 24 saat içinde mühendis."
+        "Tüm ekipmanda resmi garanti. Tedarik ettiğimiz ekipman için garanti servisi, mühendis bir iş günü içinde yerinde."
       ]
     },
     "heroSlides": [
@@ -349,75 +349,75 @@
         },
         {
           "q": "Kurulumdan sonra sistemin bakımını yapıyor musunuz?",
-          "a": "Evet, garanti ve servis bakımı sağlıyor, tüm Özbekistan genelinde arıza tespiti ve onarım için yerinde hizmet veriyoruz."
+          "a": "Evet. Kendi kurduğumuz sistemlere garanti verir ve bakım sözleşmesine alırız — Taşkent'te ve Özbekistan genelinde. Başka bir yüklenicinin kurduğu sistemi denetimden geçirerek işe alırız: inceler ve ekipman değişimiyle modernizasyonu fiyatlandırırız — sonrasında tesis periyodik bakıma alınır."
         }
       ],
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Üç tipik kamera sistemi",
-        "pkgNote": "Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within a day.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: mekânı anlatın veya planı gönderin — kesin keşifli teklifi bir iş günü içinde göndeririz.",
         "packages": [
           {
-            "name": "House or flat",
-            "for": "Private house, country home, flat, entrance",
+            "name": "Ev veya daire",
+            "for": "Müstakil ev, yazlık, daire, apartman girişi",
             "items": [
-              "2–4 cameras: yard, entrance, perimeter or hallway",
-              "Viewing from a phone anywhere, motion alerts",
-              "Archive recording for 2–4 weeks",
-              "Wi-Fi cameras where cable cannot be run"
+              "2–4 kamera: bahçe, giriş, çevre veya antre",
+              "Her yerden telefonla izleme, hareket bildirimleri",
+              "2–4 haftalık arşiv kaydı",
+              "Kablo çekilemeyen yerlerde Wi-Fi kameralar"
             ],
-            "term": "Time: 1 day"
+            "term": "Süre: 1 gün"
           },
           {
-            "name": "Office, shop, café",
-            "for": "Retail point, office, clinic, training centre",
+            "name": "Ofis, mağaza, kafe",
+            "for": "Satış noktası, ofis, klinik, eğitim merkezi",
             "items": [
-              "4–16 IP cameras: entrances, tills, floor, storeroom",
-              "PoE power — one line per camera, no sockets",
-              "Recorder with 30+ days of archive, role-based access",
-              "Several branches in one app"
+              "4–16 IP kamera: girişler, kasa, salon, depo",
+              "PoE besleme — kamera başına tek hat, priz gerekmez",
+              "30 günden uzun arşivli kayıt cihazı, rol bazlı erişim",
+              "Birden çok şubeyi tek uygulamada izleme"
             ],
-            "term": "Time: 1–3 days"
+            "term": "Süre: 1–3 gün"
           },
           {
-            "name": "Warehouse, production, grounds",
-            "for": "Industrial site, logistics, construction, residential complex",
+            "name": "Depo, üretim, saha",
+            "for": "Sanayi tesisi, lojistik, şantiye, konut sitesi",
             "items": [
-              "16–100+ cameras, fibre trunks between buildings",
-              "Video analytics: line crossing, crowding, helmet/vest",
-              "Licence plate recognition at gates, barrier integration",
-              "Redundant server recording, security desk output"
+              "16–100+ kamera, binalar arası fiber omurga",
+              "Video analitik: çizgi ihlali, kalabalık, baret/yelek kontrolü",
+              "Girişlerde plaka tanıma, bariyerle entegrasyon",
+              "Yedekli sunucu kaydı, güvenlik noktasına aktarım"
             ],
-            "term": "Time: per project, from 2 weeks"
+            "term": "Süre: projeye göre, 2 haftadan itibaren"
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "From request to working cameras — 5 steps",
+        "stagesTitle": "Talepten çalışan kameralara — 5 adım",
         "stages": [
           {
-            "t": "Engineer visit",
-            "s": "site survey, camera points, coverage — free"
+            "t": "Mühendis keşfi",
+            "s": "tesis incelemesi, kamera noktaları, görüş alanları — ücretsiz"
           },
           {
-            "t": "Selection & quote",
-            "s": "cameras, recorder, priced estimate — within a day"
+            "t": "Seçim ve teklif",
+            "s": "kameralar, kayıt cihazı, fiyatlı keşif — bir iş günü içinde"
           },
           {
-            "t": "Installation",
-            "s": "tidy runs, no mess or extra holes"
+            "t": "Montaj",
+            "s": "düzenli güzergâhlar, kir ve fazladan delik olmadan"
           },
           {
-            "t": "Setup",
-            "s": "phone viewing, alerts, access rights"
+            "t": "Kurulum",
+            "s": "telefondan izleme, bildirimler, erişim hakları"
           },
           {
-            "t": "Handover & service",
-            "s": "training, warranty on hardware and work"
+            "t": "Teslim ve servis",
+            "s": "eğitim, ekipman ve işçilik garantisi"
           }
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Kameralar ve kayıt cihazları — Taşkent depomuzdan",
-        "brandsText": "Hikvision, Dahua, HiLook, TP-Link Tapo — matched to task and budget, supplied by us with warranty:"
+        "brandsText": "Hikvision, Dahua, HiLook, TP-Link Tapo — göreve ve bütçeye göre seçiyor, tüm ekipmanı garantili olarak kendimiz tedarik ediyoruz:"
       }
     },
     "analytics": {
@@ -448,7 +448,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Video analitikte üç senaryo",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Kamera üstü analitik",
@@ -541,7 +541,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart plaka tanıma şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: girişin fotoğrafını ve günde kaç araç geçtiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: girişin fotoğrafını ve günde kaç araç geçtiğini gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Tek giriş",
@@ -586,7 +586,7 @@
           },
           {
             "t": "Seçim ve teklif",
-            "s": "kamera, denetleyici, geçiş mantığı, fiyatlı keşif — aynı gün"
+            "s": "kamera, denetleyici, geçiş mantığı, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -638,69 +638,69 @@
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Geçiş kontrolü: tek kapıdan tesis çevresine",
-        "pkgNote": "We send a quote after a short site visit: readers, locks and turnstiles are matched to people flow and security regime.",
+        "pkgNote": "Kısa bir keşiften sonra teklifi göndeririz: okuyucular, kilitler ve turnikeler insan akışına ve güvenlik düzenine göre seçilir.",
         "packages": [
           {
-            "name": "Office door",
-            "for": "Office entrance, director’s room, server room",
+            "name": "Ofis kapısı",
+            "for": "Ofis girişi, yönetici odası, sistem odası",
             "items": [
-              "Electromagnetic or electromechanical lock",
-              "Access by card, code or fingerprint",
-              "Exit button, door closer, standalone controller",
-              "Entry log — who entered and when"
+              "Elektromanyetik veya elektromekanik kilit",
+              "Kart, şifre veya parmak iziyle geçiş",
+              "Çıkış butonu, kapı kapatıcı, bağımsız kontrol ünitesi",
+              "Geçiş kaydı — kimin ne zaman girdiği görünür"
             ],
-            "term": "Time: 1 day"
+            "term": "Süre: 1 gün"
           },
           {
-            "name": "Turnstile entrance",
-            "for": "Office building, business centre, school, gym",
+            "name": "Turnikeli giriş",
+            "for": "Ofis binası, iş merkezi, okul, spor salonu",
             "items": [
-              "Tripod or swing turnstile — Hikvision, ZKTeco",
-              "Face ID terminals: pass by face, no cards",
-              "Integration with time & attendance and 1C",
-              "Guest passes and scheduled permissions"
+              "Tripod veya kanatlı turnike — Hikvision, ZKTeco",
+              "Face ID terminalleri: kartsız, yüzle geçiş",
+              "Personel devam takibi ve 1C entegrasyonu",
+              "Ziyaretçi kartları ve zaman planlı yetkiler"
             ],
-            "term": "Time: 2–5 days"
+            "term": "Süre: 2–5 gün"
           },
           {
-            "name": "Site perimeter",
-            "for": "Plant, warehouse, logistics centre, residential complex",
+            "name": "Tesis çevresi",
+            "for": "Fabrika, depo, lojistik merkezi, konut sitesi",
             "items": [
-              "Barriers with licence plate recognition",
-              "Multi-point access control: gates, shops, warehouses — one system",
-              "Integration with CCTV and fire alarm",
-              "Escape routes unlock on alarm — per code"
+              "Plaka tanımalı bariyerler",
+              "Çok noktalı geçiş kontrol: girişler, atölyeler, depolar — tek sistem",
+              "Güvenlik kamerası ve yangın alarm sistemiyle entegrasyon",
+              "Alarm anında kaçış yollarının açılması — mevzuata uygun"
             ],
-            "term": "Time: per project"
+            "term": "Süre: projeye göre"
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "From survey to a working entrance — 5 steps",
+        "stagesTitle": "Keşiften çalışan girişe — 5 adım",
         "stages": [
           {
-            "t": "Survey",
-            "s": "access points, people flow, regime — free"
+            "t": "Keşif",
+            "s": "geçiş noktaları, insan akışı, güvenlik düzeni — ücretsiz"
           },
           {
-            "t": "Selection & quote",
-            "s": "readers, locks, turnstiles — estimate in a day"
+            "t": "Seçim ve teklif",
+            "s": "okuyucular, kilitler, turnikeler — keşif bir iş günü içinde"
           },
           {
-            "t": "Installation",
-            "s": "mounting and wiring without stopping the site"
+            "t": "Montaj",
+            "s": "tesisin işleyişini durdurmadan kurulum ve bağlantı"
           },
           {
-            "t": "Setup",
-            "s": "access rights, time & attendance and 1C integration"
+            "t": "Kurulum",
+            "s": "erişim hakları, devam takibi ve 1C entegrasyonu"
           },
           {
-            "t": "Handover & service",
-            "s": "admin training, warranty, support"
+            "t": "Teslim ve servis",
+            "s": "yönetici eğitimi, garanti, destek"
           }
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Turnikeler, terminaller ve kilitler — Taşkent depomuzdan",
-        "brandsText": "Hikvision, ZKTeco, Dahua, KANIHAD — from a reader to a premium turnstile, supplied by us with warranty:"
+        "brandsText": "Hikvision, ZKTeco, Dahua, KANIHAD — okuyucudan premium turnikeye kadar, garantili olarak kendimiz tedarik ediyoruz:"
       }
     },
     "intercom": {
@@ -716,22 +716,30 @@
       ],
       "faq": [
         {
-          "q": "IP diafon analogdan neden daha iyi?",
-          "a": "IP diafon yüksek görüntü kalitesi, her yerden telefonla görüntüleme, kayıt ve akıllı ev ile geçiş kontrol entegrasyonu sunar."
+          "q": "Taşkent'te diafon montajı ne kadar tutar?",
+          "a": "Daire veya müstakil ev için fiyat setin (zil paneli ve monitör) bedeliyle başlar, üzerine montaj eklenir; toplam modele bağlıdır: analog set daha ucuz, kayıt ve telefondan kapı açma özellikli IP görüntülü diafon daha pahalıdır. Apartman için fiyat abone sayısına göre hesaplanır. Kısa bir görüşmenin ardından hesabı göndeririz — genellikle aynı gün."
         },
         {
-          "q": "Çağrılara telefondan cevap verilebilir mi?",
-          "a": "Evet, panelden gelen çağrı akıllı telefona düşer — evde veya ofiste olmasanız bile kapıyı uzaktan açarsınız."
+          "q": "Daireye hangi diafon: analog mu, IP mi?",
+          "a": "Sadece ziyaretçiyi görüp kapıyı açmak yetiyorsa analog görüntülü diafon yeterlidir. Her yerden telefona çağrı, ziyaretçi arşivi ve akıllı ev ya da ofis geçiş kontrolüyle entegrasyon önemliyse IP diafon tercih edilmelidir. Hikvision ve Dahua ile çalışıyoruz — her iki seri de Taşkent stoğumuzda."
         },
         {
-          "q": "Apartmanlar için uygun mu?",
-          "a": "Evet, konut siteleri için çok aboneli diafon sistemleri tasarlıyoruz — kapı panelleri ve daire monitörleriyle."
+          "q": "Apartman girişine diafon kuruyor musunuz?",
+          "a": "Evet. Çok aboneli sistemler kuruyoruz: girişe tek zil paneli, her daireye ahize veya monitör, kapıya elektromanyetik kilit ve kapı kapatıcı. Hem ince yapı aşamasındaki yeni binalarda hem de eski sesli diafonların görüntülüyle değiştirilmesinde çalışıyoruz."
+        },
+        {
+          "q": "Diafon elektronik kilide ve geçiş kontrolüne bağlanabilir mi?",
+          "a": "Evet, bu projelerimizin standart parçası: diafon elektromanyetik veya elektromekanik kilidi açar, sakinler ve personel ise kart, kod veya parmak iziyle girer. Ofislerde diafonu geçiş kontrolüyle tek sistemde birleştiriyoruz; geçiş kaydı ortak olur."
+        },
+        {
+          "q": "Montajdan sonra diafona servis veriyor musunuz?",
+          "a": "Evet: kendi kurduğumuz diafon sistemlerini sözleşmeyle yürütürüz — programlı kontroller, tedarik ettiğimiz ekipmana garanti, panel, monitör ve kilitlerin yedek havuzundan değişimi. Başka bir yüklenicinin kurduğu sistemi denetimden geçirerek işe alırız: şemayı çıkarır, eksik listesi hazırlar, ekipman değişimiyle modernizasyonu fiyatlandırırız — sonrasında tesis periyodik bakıma alınır. Çoğu zaman panel ve ahizeler mevcut tesisat korunarak değiştirilir."
         }
       ],
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart diyafon şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: giriş planını veya daire sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: giriş planını veya daire sayısını gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Müstakil ev veya daire",
@@ -776,7 +784,7 @@
           },
           {
             "t": "Seçim ve teklif",
-            "s": "panel, monitör, kilit, fiyatlı keşif — aynı gün"
+            "s": "panel, monitör, kilit, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -824,7 +832,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart personel takip şeması",
-        "pkgNote": "İşe göre hesaplıyoruz: personel sayısını, giriş sayısını ve raporda ne olması gerektiğini yazın, aynı gün teklif dönelim.",
+        "pkgNote": "İşe göre hesaplıyoruz: personel sayısını, giriş sayısını ve raporda ne olması gerektiğini yazın, bir iş günü içinde teklif dönelim.",
         "packages": [
           {
             "name": "Küçük ofis",
@@ -869,7 +877,7 @@
           },
           {
             "t": "Seçim ve teklif",
-            "s": "terminaller, tanıma yöntemi, fiyatlı keşif — aynı gün"
+            "s": "terminaller, tanıma yöntemi, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -890,34 +898,34 @@
       }
     },
     "alarm": {
-      "title": "Hırsız alarmı",
-      "desc": "Tesis ve çevre koruması, panik butonu.",
-      "intro": "Tesisi izinsiz girişe karşı koruma: hareket, kapı açılma ve cam kırılma sensörleri, panik butonları, sinyalin güvenlik merkezine ve mobil uygulamaya iletilmesi.",
+      "title": "Ev için hırsız alarmı",
+      "desc": "Daire, müstakil ev ve yazlık için kablosuz setler.",
+      "intro": "Konut için hırsız alarmı: daire, müstakil ev veya yazlık için kablosuz set — hareket ve kapı sensörleri, cam kırılma ve su kaçağı dedektörleri, siren ve telefona bildirim. Montaj bir günde, duvar kırmadan ve dekorasyona zarar vermeden.",
       "works": [
-        "Güvenlik bölgelerinin tasarımı",
-        "Sensör, panel ve siren montajı",
-        "Senaryo ve panik butonu ayarı",
-        "Güvenlik merkezine ve uygulamaya aktarım",
-        "Devreye alma ve bakım"
+        "Kat planına uygun kablosuz set seçimi",
+        "Hareket, kapı, cam kırılma ve su kaçağı dedektörleri",
+        "«Gece» ve «evde yok» modları, evcil hayvan bağışıklığı",
+        "Telefona bildirim, yedek besleme ve GSM kanalı",
+        "Bir günde montaj ve tüm aileye kullanım eğitimi"
       ],
       "faq": [
         {
-          "q": "Hırsız alarmı nasıl çalışır?",
-          "a": "Hareket, kapı açılma ve cam kırılma sensörleri izinsiz girişi tespit eder ve alarmı merkeze, telefona ve sirene iletir."
+          "q": "Dairede alarm montajı ne kadar sürer?",
+          "a": "Kablosuz set bir günde kurulur: hub, giriş kapısı ve pencerelerde manyetik kontaklar, koridorda hareket dedektörü ve siren. Duvar kırmaya, dekorasyonu bozmaya gerek yok — dedektörler yapıştırıcıyla ya da birkaç vidayla sabitlenir."
         },
         {
-          "q": "Alarm merkezine bağlanabilir mi?",
-          "a": "Evet, sistem hem güvenlik şirketinin merkezine hem de telefonunuza aynı anda bağlanabilir."
+          "q": "Kedi veya köpek yüzünden alarm çalar mı?",
+          "a": "Evcil hayvanı olan evlerde 20–25 kg'a kadar bağışıklığı olan hareket dedektörleri kullanır, bölgeleri hayvanın alışıldık güzergâhı algılama alanını kesmeyecek şekilde ayarlarız. İnsanı sistemi kullanmaktan en çok soğutan şey yanlış alarmlardır."
         },
         {
-          "q": "Elektrik kesildiğinde çalışır mı?",
-          "a": "Evet, cihazlar yedek aküyle donatılır ve şebeke kesintisinde çalışmaya devam eder."
+          "q": "Elektrik ve internet kesilirse ne olur?",
+          "a": "Hub yedek aküyle birkaç saat çalışır; dedektörler kendi pilleriyle yıllarca çalışır ve pil zayıfladığında kendileri haber verir. İnternet koptuğunda alarm GSM kanalından gider — ev sahibinin ve güvendiği kişilerin telefonuna."
         }
       ],
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart hırsız alarmı şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kat planını ve giriş sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kat planını ve giriş sayısını gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Daire veya müstakil ev",
@@ -962,7 +970,7 @@
           },
           {
             "t": "Bölge projesi ve teklif",
-            "s": "dedektörler, panel, alarm senaryoları, fiyatlı keşif — aynı gün"
+            "s": "dedektörler, panel, alarm senaryoları, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -1014,69 +1022,69 @@
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Üç tesis tipi için yangın alarmı",
-        "pkgNote": "System composition is dictated by fire safety codes — after a free survey we will state exactly what your site needs and price it.",
+        "pkgNote": "Sistemin içeriğini yangın güvenliği mevzuatı belirler — ücretsiz keşiften sonra tesisinizin tam olarak neye ihtiyacı olduğunu söyler ve keşif bedelini çıkarırız.",
         "packages": [
           {
-            "name": "Shop, office, café",
-            "for": "Premises up to ~300 m², rented format",
+            "name": "Mağaza, ofis, kafe",
+            "for": "Yaklaşık 300 m² altı mekân, kiralık format",
             "items": [
-              "Conventional alarm: smoke and heat detectors, sounder",
-              "Rubezh or Altai panels — affordable and certified",
-              "EXIT signs, manual call points at exits",
-              "The site passes fire inspection"
+              "Konvansiyonel alarm: duman ve ısı dedektörleri, siren",
+              "Rubezh veya Altay panelleri — uygun fiyatlı ve sertifikalı",
+              "«Çıkış» levhaları, çıkışlarda yangın butonları",
+              "Tesis yangın denetiminden geçer"
             ],
-            "term": "Time: 1–3 days"
+            "term": "Süre: 1–3 gün"
           },
           {
-            "name": "Office building, school, clinic",
-            "for": "Multi-floor building with permanent staff",
+            "name": "Ofis binası, okul, klinik",
+            "for": "Katlı ve sürekli personelli bina",
             "items": [
-              "Bolid or Rubezh addressable system — the panel sees every detector",
-              "Evacuation alerting: sounders, signs, escape route lights",
-              "Status output to the security desk",
-              "Design by licensed specialists + as-built documents"
+              "Bolid veya Rubezh adresli sistem — panel her dedektörü görür",
+              "Tahliye anonsu: sirenler, levhalar, kaçış yönlendirmeleri",
+              "Durum bilgisinin güvenlik noktasına aktarılması",
+              "Lisanslı uzmanlarca proje ve as-built belgeler"
             ],
-            "term": "Time: 1–3 weeks"
+            "term": "Süre: 1–3 hafta"
           },
           {
-            "name": "Warehouse, production, mall",
-            "for": "Large areas, high ceilings, complex codes",
+            "name": "Depo, üretim, AVM",
+            "for": "Geniş alanlar, yüksek tavanlar, karmaşık mevzuat",
             "items": [
-              "Analogue addressable system: beam and aspirating detectors",
-              "Voice evacuation: Rupor, zoned announcements",
-              "Smoke extraction and suppression control",
-              "Design, approvals, inspection handover — on us"
+              "Adresli analog sistem: lineer ve aspiratörlü dedektörler",
+              "Sesli tahliye anonsu (3–5. tip): Rupor, bölgesel yayın",
+              "Duman tahliyesi ve söndürme kontrolü",
+              "Proje, onaylar, denetime teslim — bizden"
             ],
-            "term": "Time: per project, from 1 month"
+            "term": "Süre: projeye göre, 1 aydan itibaren"
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "From audit to inspection handover — 5 steps",
+        "stagesTitle": "Denetimden resmî teslime — 5 adım",
         "stages": [
           {
-            "t": "Survey",
-            "s": "site and code requirements audit — free"
+            "t": "Keşif",
+            "s": "tesis ve mevzuat gereklerinin incelenmesi — ücretsiz"
           },
           {
-            "t": "Design",
-            "s": "alarm and evacuation sections, specification, licences"
+            "t": "Proje",
+            "s": "yangın alarmı ve tahliye anons bölümleri, spesifikasyon, lisanslar"
           },
           {
-            "t": "Installation",
-            "s": "detectors, loops, sounders — per design"
+            "t": "Montaj",
+            "s": "dedektörler, hatlar, anons cihazları — projeye göre"
           },
           {
-            "t": "Commissioning",
-            "s": "every detector tested, inspection handover"
+            "t": "Devreye alma",
+            "s": "her dedektörün testi, denetime teslim"
           },
           {
-            "t": "Maintenance",
-            "s": "scheduled service — the system always ready"
+            "t": "Bakım",
+            "s": "planlı bakım — sistem her zaman çalışır durumda"
           }
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Paneller ve dedektörler — Taşkent depomuzdan",
-        "brandsText": "Bolid and Rubezh — certified equipment with warranty, panels and detectors always in stock:"
+        "brandsText": "Bolid ve Rubezh — garantili sertifikalı ekipman, paneller ve dedektörler her zaman stokta:"
       }
     },
     "network": {
@@ -1093,7 +1101,7 @@
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Ne kuruyoruz: üç tipik konfigürasyon",
-        "pkgNote": "Her tesis ayrı hesaplanır: kat planını gönderin — bir gün içinde ayrıntılı teklif dönelim.",
+        "pkgNote": "Her tesis ayrı hesaplanır: kat planını gönderin — bir iş günü içinde ayrıntılı teklif dönelim.",
         "packages": [
           {
             "name": "30 çalışma yerine kadar ofis",
@@ -1164,7 +1172,7 @@
         },
         {
           "q": "SCS montajı ne kadar tutar?",
-          "a": "Maliyet port sayısına, kablo kategorisine ve güzergâh zorluğuna bağlıdır. Kat planını gönderin — bir gün içinde kesin keşifli teklif dönelim; mühendis keşfi ücretsizdir."
+          "a": "Maliyet port sayısına, kablo kategorisine ve güzergâh zorluğuna bağlıdır. Kat planını gönderin — bir iş günü içinde kesin keşifli teklif dönelim; mühendis keşfi ücretsizdir."
         },
         {
           "q": "Hangi kablo seçilmeli — Cat5e, Cat6 yoksa fiber mi?",
@@ -1323,7 +1331,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart video duvar konfigürasyonu",
-        "pkgNote": "Salona göre hesaplıyoruz: mekân ölçülerini ve izleme mesafesini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Salona göre hesaplıyoruz: mekân ölçülerini ve izleme mesafesini gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Güvenlik noktası",
@@ -1416,7 +1424,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üç tip anons sistemi",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Fon müziği ve anonslar",
@@ -1483,10 +1491,10 @@
     },
     "barrier": {
       "title": "Bariyerler & otomasyon",
-      "desc": "Otomatik kapılar, bariyerler ve otopark kontrolü.",
-      "intro": "Giriş otomasyonu: bariyerler, sürgülü ve kanatlı kapılar, otopark kontrolü — kolay yönetim ve geçiş kontrol sistemine entegrasyon ile.",
+      "desc": "Bariyerler, plaka tanıma ve otopark kontrolü.",
+      "intro": "Giriş otomasyonu: bariyerler, plaka tanıma ve otopark kontrolü — kolay yönetim ve geçiş kontrol sistemine entegrasyon ile.",
       "works": [
-        "Kapı veya bariyer için motor seçimi",
+        "Geçiş genişliği ve yoğunluğa göre bariyer seçimi",
         "Otomasyon ve güvenlik fotoseli montajı",
         "Kontrol ve kumanda ayarı",
         "ANPR ve geçiş kontrolü entegrasyonu",
@@ -1509,14 +1517,14 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart giriş şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: geçiş genişliğini ve günde kaç araç geçtiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: geçiş genişliğini ve günde kaç araç geçtiğini gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Müstakil ev bahçesi",
             "for": "Müstakil ev, yazlık, küçük alan",
             "term": "Süre: 1 gün",
             "items": [
-              "3–4 metre kollu bariyer veya sürgülü kapı",
+              "Geçiş genişliğine göre 3–4 metre kollu bariyer",
               "İki kumanda dahil, istenirse telefondan açma",
               "Fotosel — kol aracın veya kişinin üzerine inmez",
               "Elektrik kesildiğinde aküyle çalışır"
@@ -1554,7 +1562,7 @@
           },
           {
             "t": "Seçim ve teklif",
-            "s": "bariyer, kol, geçiş yöntemi, fiyatlı keşif — aynı gün"
+            "s": "bariyer, kol, geçiş yöntemi, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -1602,7 +1610,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Çevre korumada üç hat",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Çevre video analitiği",
@@ -1695,7 +1703,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Ulaşım için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Kabinde video kaydı",
@@ -1788,7 +1796,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Şehir sistemlerinde üç ölçek",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Pilot bölge",
@@ -1854,20 +1862,20 @@
       }
     },
     "parking": {
-      "title": "Akıllı Otopark",
-      "desc": "ANPR, bariyerler ve giriş/çıkış otomasyonu.",
-      "intro": "Otopark otomasyonu: plaka tanıma (ANPR), bariyerler, boş yer takibi ve giriş-çıkış kaydı.",
+      "title": "AVM ve konut projelerinde otopark",
+      "desc": "AVM, konut ve iş merkezi otoparkında düzen: yerler, misafirler, raporlar.",
+      "intro": "AVM, konut projesi veya iş merkezi otoparkında düzeni kuruyoruz: sakinlere ve kiracılara tahsisli yerler, misafir ve teslimat araçları için net bir giriş düzeni, mülk sahibine doluluk ve gelir raporları.",
       "works": [
-        "Otopark sistemi projesi",
-        "ANPR kamera ve bariyer montajı",
-        "Yer sayımı ve ücretlendirme",
-        "Ödeme ve geçiş kontrolü entegrasyonu",
-        "Devreye alma ve servis"
+        "Yoğun saate göre kapasite hesabı",
+        "Erişim kuralları: sakinler, kiracılar, misafirler, teslimat",
+        "Yerlerin daireye veya kira sözleşmesine bağlanması",
+        "Pilot dönem ve listelerin doldurulması",
+        "Doluluk, park süresi ve gelir raporları"
       ],
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart otopark şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: park yeri sayısını ve günde kaç araç girdiğini gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: park yeri sayısını ve günde kaç araç girdiğini gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Site veya ofis bahçesi",
@@ -1912,7 +1920,7 @@
           },
           {
             "t": "Proje ve teklif",
-            "s": "kameralar, bariyer, geçiş mantığı, fiyatlı keşif — aynı gün"
+            "s": "kameralar, bariyer, geçiş mantığı, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -1974,7 +1982,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Perakende için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Tek mağaza",
@@ -2067,7 +2075,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Banka için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Banka şubesi",
@@ -2160,7 +2168,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Okul için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Okul girişi",
@@ -2253,7 +2261,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üretim için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Giriş noktası ve vardiya kaydı",
@@ -2346,7 +2354,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Site için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Anahtar teslim bina girişi",
@@ -2455,7 +2463,7 @@
         },
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Sanallaştırmada üç senaryo",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Sunucu konsolidasyonu",
@@ -2530,7 +2538,7 @@
         },
         {
           "q": "Resmi H3C iş ortağı mısınız?",
-          "a": "Evet, SAT Solutions H3C iş ortağıdır: iş ortağı fiyatlarıyla ekipman, resmi CAS lisansları ve üretici desteği."
+          "a": "Evet, SAT Solutions Özbekistan'da H3C iş ortağıdır: ortaklık fiyatlarıyla ekipman tedariki, resmi CAS lisansları ve üretici desteği."
         },
         {
           "q": "Mevcut sunucularımız sanal ortama taşınabilir mi?",
@@ -2542,7 +2550,7 @@
         },
         {
           "q": "Sanallaştırmalı H3C sunucu ne kadar tutar?",
-          "a": "Konfigürasyona bağlı: ERP için tek sunucu ile CAS Enterprise'lı yüksek erişilebilirlik kümesi farklı bütçelerdir. Görevleri anlatın — bir gün içinde şartname ve teklif hazırlayalım."
+          "a": "Konfigürasyona bağlı: ERP için tek sunucu ile CAS Enterprise'lı yüksek erişilebilirlik kümesi farklı bütçelerdir. Görevleri anlatın — bir iş günü içinde şartname ve teklif hazırlayalım."
         }
       ]
     },
@@ -2576,7 +2584,7 @@
         },
         {
           "q": "Ofis için Wi-Fi ağı ne kadar tutar?",
-          "a": "Alana ve nokta sayısına bağlıdır. Kat planını gönderin — bir gün içinde hesap ve teklif hazırlayalım."
+          "a": "Alana ve nokta sayısına bağlıdır. Kat planını gönderin — bir iş günü içinde hesap ve teklif hazırlayalım."
         }
       ],
       "details": {
@@ -2656,7 +2664,7 @@
         "Kablo kanalında, direk ve cephelerde döşeme",
         "Füzyon ek ve optik kros montajı",
         "OTDR ölçümleri ve hat raporları",
-        "Hasarlı fiber hatların onarımı"
+        "Kendi döşediğimiz güzergâhlarda hasarlı hatların onarımı"
       ],
       "faq": [
         {
@@ -2673,7 +2681,7 @@
         },
         {
           "q": "Fiber kopmalarını onarıyor musunuz?",
-          "a": "Evet, hasar noktasını OTDR ile bulup hattı onarıyoruz — yerinde ek veya bölüm değişimi."
+          "a": "Evet, kendi döşediğimiz güzergâhlarda: arıza noktasını OTDR ile buluruz ve hattı geri getiririz — yerinde ek yapılır ya da bölüm değiştirilir. Başkasının güzergâhında ölçüm yapıp rapor veririz; onarımı ise bölüm değişimini içeren ayrı bir proje olarak fiyatlandırırız."
         },
         {
           "q": "Fiber döşeme ne kadar tutar?",
@@ -2683,7 +2691,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart fiber işi",
-        "pkgNote": "Güzergâha göre hesaplıyoruz: mesafeyi ve noktalar arasında ne olduğunu — bina, yol, direk — gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Güzergâha göre hesaplıyoruz: mesafeyi ve noktalar arasında ne olduğunu — bina, yol, direk — gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Binalar arası bağlantı",
@@ -2728,7 +2736,7 @@
           },
           {
             "t": "Proje ve teklif",
-            "s": "kablo tipi, fiber sayısı, krokingler, fiyatlı keşif — aynı gün"
+            "s": "kablo tipi, fiber sayısı, krokingler, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Serim",
@@ -2784,7 +2792,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üç tip telsiz köprü",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Yüzlerce metreye köprü",
@@ -2852,7 +2860,7 @@
     "mikrotik": {
       "title": "MikroTik Kurulumu",
       "desc": "Router, VLAN, çift hat, VPN ve Wi-Fi — yapılandırma ve denetim.",
-      "intro": "MikroTik'i işletmeye göre yapılandırıyoruz: çift servis sağlayıcı yedekliliği, VLAN, şubeler arası VPN, misafir Wi-Fi, güvenlik duvarı ve hız sınırı. 'İnternet yok' sorunlarını çözüyor, devralınan yapılandırmaları düzeltiyoruz.",
+      "intro": "MikroTik cihazlarını iş ihtiyaçlarınıza göre yapılandırıyoruz: iki operatör yedekliliği, VLAN, şubeler arası VPN, misafir Wi-Fi, güvenlik duvarı ve hız sınırlama. «İnternet yok» arızalarını kökünden çözüyor, yapılandırmayı düzene sokuyoruz — denetim, dokümantasyon ve anlaşılır kurallarla.",
       "works": [
         "Mevcut yapılandırma ve güvenlik denetimi",
         "Hat yedekliliği: iki veya daha fazla sağlayıcı",
@@ -2885,7 +2893,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "MikroTik'te üç tipik görev",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Anahtar teslim ofis yönlendiricisi",
@@ -3073,7 +3081,7 @@
         "Montaj ve geçiş kontrol sistemine bağlantı",
         "Kimlik doğrulama: kart, parmak izi, yüz tanıma",
         "Mesai takibi ve ERP entegrasyonu",
-        "Turnike bakım ve onarımı"
+        "Tedarik ettiğimiz turnikeler için garanti ve periyodik bakım"
       ],
       "faq": [
         {
@@ -3174,7 +3182,7 @@
         "Montaj ve diafon veya geçiş kontrole bağlantı",
         "Erişim ayarı: kod, kart, parmak izi, uygulama",
         "Geçiş kayıtlı bağımsız ve ağ bağlantılı çözümler",
-        "Bakım ve yeniden yapılandırma"
+        "Garanti kapsamında servis ve erişim yetkilerinin yeniden ayarlanması"
       ],
       "faq": [
         {
@@ -3201,7 +3209,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart elektronik kilit şeması",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kapının fotoğrafını ve nokta sayısını gönderin, aynı gün içinde net keşifli teklif dönelim.",
+        "pkgNote": "Her tesisi ayrı hesaplıyoruz: kapının fotoğrafını ve nokta sayısını gönderin, bir iş günü içinde net keşifli teklif dönelim.",
         "packages": [
           {
             "name": "Daire veya müstakil ev",
@@ -3246,7 +3254,7 @@
           },
           {
             "t": "Seçim ve teklif",
-            "s": "kapınıza uygun kilit, fiyatlı keşif — aynı gün"
+            "s": "kapınıza uygun kilit, fiyatlı keşif — bir iş günü içinde"
           },
           {
             "t": "Montaj",
@@ -3268,104 +3276,37 @@
     },
     "gates": {
       "title": "Otomatik Kapılar",
-      "desc": "Yana kayar, çift kanat ve seksiyonel kapılar — otomasyon ve geçiş kontrollü.",
-      "intro": "Girişleri otomatikleştiriyoruz: yana kayar, çift kanat ve seksiyonel kapılar, motorlar, kumandalar ve GSM modüller, diafon, geçiş kontrol ve plaka tanıma entegrasyonu.",
+      "desc": "Kapı motorları rehberi: tipler, ağırlık ve yoğunluğa göre seçim, güvenlik.",
+      "intro": "Kapı otomasyonunun nasıl çalıştığına dair bir başvuru bölümü: sürgülü, kanatlı, seksiyonel ve panjur kanatlar için motorlar nasıl ayrışır, hangi sayılara göre seçilir ve güvenliği ne sağlar. Ekipmanı stoktan tedarik ediyoruz, tesise girişi ise bariyer, plaka tanıma ve geçiş kontrol ile kapatıyoruz.",
       "works": [
-        "Kapı tipine ve ağırlığına göre otomasyon seçimi",
-        "Motor ve güvenlik fotoseli montajı",
-        "Kumanda, GSM modül, telefondan açma",
-        "Diafon, geçiş kontrol ve ANPR entegrasyonu",
-        "Otomasyon bakım ve onarımı"
+        "Kanat ağırlığı, boyu ve kullanım yoğunluğuna göre motor seçimi",
+        "Motor ve bileşenlerin Taşkent deposundan tedariki",
+        "Güvenlik danışmanlığı: fotosel, flaşör, manuel kurtarma",
+        "Mevcut kapı ve elektrik altyapısıyla uyumluluk kontrolü",
+        "Giriş grubunun tamamı: bariyer, plaka tanıma, geçiş kontrolü"
       ],
       "faq": [
         {
-          "q": "Yana kayar kapı için hangi otomasyon uygun?",
-          "a": "Motor, kanadın ağırlığı ve uzunluğuna göre seçilir: 500 kg'a kadar hafif, 1000 kg'a kadar orta, daha ağırı endüstriyel. Aşırı yük korumalı ve fotoselli otomasyon kuruyoruz."
+          "q": "Yana kayar kapı için motor nasıl seçilir?",
+          "a": "Kanat kütlesi ve boyuna göre, ucu ucuna değil payla: konut serileri genelde 500–800 kg, orta seriler 1000–1200 kg kanada göredir, daha ağırı endüstriyel sınıfa geçer. Kremayer ve taşıyıcı makaralar ayrı hesaplanır. Ağır kanattaki zayıf motor tek sezonda yıpranır, bu yüzden pay baştan bırakılır."
         },
         {
-          "q": "Kapı telefondan açılabilir mi?",
-          "a": "Evet: GSM modül kapıyı aramayla (ücretsiz) veya uygulamayla açar; aileye ve çalışanlara erişim verilebilir, plaka tanımayla entegre edilebilir — kendi araçlar kendiliğinden girer."
+          "q": "Çift kanatlı ve seksiyonel kapılar otomasyon açısından nasıl ayrışır?",
+          "a": "Çift kanatlıda her kanada ayrı motor — lineer ya da kollu — gelir; belirleyici parametreler kanat boyu ve rüzgâr yüküdür, çünkü dolu panel yelken gibi davranır. Seksiyonel kanadı tek bir tavan ya da mil motoru kaldırır; onun için panel alanı ve kalkış yüksekliği daha önemlidir. Yana kayar kapıda ise tek bir kremayerli motor ve çit boyunca düz bir kayma hattı gerekir."
         },
         {
-          "q": "Elektrik kesintisinde ne yapmalı?",
-          "a": "Tüm motorlarda anahtarla manuel çözme vardır — kapı elle açılır. Önemli girişler için yedek güç koyuyoruz."
+          "q": "Güvenlik açısından otomasyonda neler zorunludur?",
+          "a": "Açıklığa karşılıklı fotoseller — araç ya da kişi belirdiğinde kanat durup geri döner; hareketi haber veren flaşör; kuvvet ayarı ve engelde ters dönüş; limit anahtarları. Mekanik kilit ya da anahtarla kurtarma şarttır — elektrik kesildiğinde kapı, motor sökülmeden elle açılabilmelidir."
         },
         {
-          "q": "Otomasyon çocuklar ve araçlar için güvenli mi?",
-          "a": "Evet: fotoseller engel belirdiğinde kapıyı durdurup açar, motor hassasiyeti standartlara göre ayarlanır."
+          "q": "Motora neden soğukta ve sıcakta güç payı gerekir?",
+          "a": "Soğukta gres koyulaşır, kızaklar buzlanır ve kalkış momenti büyür; yazın güneşte motor aşırı ısınır ve termik koruma devreye girer. İkinci parametre kullanım yoğunluğudur: konut motoru günde birkaç düzine çevrim içindir, site, depo ya da fabrika için yüzlerce ve binlerce çevrimlik yoğun tip seri gerekir. Ucu ucuna seçilmiş motor tam da sıcakta ve soğukta arızalanır."
         },
         {
-          "q": "Başkasının kurduğu otomasyonu onarıyor musunuz?",
-          "a": "Evet, çoğu üreticinin motorlarını teşhis edip onarıyor; kart, fotosel ve kumanda değiştiriyoruz."
+          "q": "SAT Solutions kapı otomasyonu tarafında ne yapıyor?",
+          "a": "Ekipman tedarik ediyor ve seçimde yardımcı oluyoruz: katalogda kanatlı kapılar için ZKTeco ZK-SW300DC otomasyon seti, ZK-SW400DC motoru ve Tuya Smart Wi-Fi garaj kapısı açma sistemi var — güncel fiyat için ürün sayfasına bakın, katalog rakamları değişir. Sahada bariyer, plaka tanıma ve geçiş kontrol montajı yapıyoruz: amaç tesise girişi düzenlemekse «Bariyerler ve giriş grupları» bölümüne bakın."
         }
-      ],
-      "details": {
-        "pkgLabel": "Tip çözümler",
-        "pkgTitle": "Kapı otomasyonunda üç tip set",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
-        "packages": [
-          {
-            "name": "Yana kayar kapılar",
-            "for": "Müstakil ev, avlu, depo",
-            "items": [
-              "Kanat ağırlığına ve boyuna göre motor",
-              "Fotoseller ve sinyal lambası",
-              "Kumandalar, telefondan açma",
-              "Elektrik kesilince anahtarla boşa alma"
-            ],
-            "term": "Süre: 1 gün"
-          },
-          {
-            "name": "Çift kanatlı kapılar",
-            "for": "Villa, tesis sahası",
-            "items": [
-              "Çift lineer veya kollu motor",
-              "Ağır kanatlara ve rüzgâra ayar",
-              "Sağlam kilitleme için elektrikli kilit",
-              "İnterkomla entegrasyon"
-            ],
-            "term": "Süre: 1 gün"
-          },
-          {
-            "name": "Endüstriyel ve hızlı",
-            "for": "Depo, otopark, üretim",
-            "items": [
-              "Otomasyonlu seksiyonel ve sarmal kapılar",
-              "Geçişler için hızlı PVC kapılar",
-              "Halka dedektörleri ve radarlar",
-              "Geçiş kontrolü ve ANPR bağlantısı"
-            ],
-            "term": "Süre: 2–5 gün"
-          }
-        ],
-        "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "Ölçüden açılan kapıya — 5 adım",
-        "stages": [
-          {
-            "t": "Yerinde ölçü",
-            "s": "ağırlık, genişlik, kanat durumu"
-          },
-          {
-            "t": "Motor seçimi",
-            "s": "çevrim ve rüzgâr payıyla"
-          },
-          {
-            "t": "Montaj",
-            "s": "otomasyon, fotoseller, lamba"
-          },
-          {
-            "t": "Ayar",
-            "s": "kuvvet, limitler, kumandalar, telefon"
-          },
-          {
-            "t": "Teslim ve servis",
-            "s": "eğitim, garanti, bakım"
-          }
-        ],
-        "brandsLabel": "Ekipman",
-        "brandsTitle": "Gerçek kapılara göre otomasyon",
-        "brandsText": "Kayar, çift kanatlı ve seksiyonel kapılara önde gelen üreticilerin motor ve otomasyonu — stoktan:"
-      }
+      ]
     },
     "telephony": {
       "title": "Ofis IP Telefonu",
@@ -3403,7 +3344,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "IP telefonda üç format",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Ofis santrali",
@@ -3470,11 +3411,11 @@
     },
     "servers": {
       "title": "Sipariş Üzerine Sunucular",
-      "desc": "Supermicro, Lenovo, H3C ve depolama: göreve uygun konfigürasyon, tedarik, devreye alma.",
-      "intro": "Sipariş üzerine sunucu tedarik ediyoruz: Supermicro, Lenovo ThinkSystem, H3C UniServer ve depolama sistemleri. ERP, veritabanı, sanallaştırma veya video arşivi için konfigürasyon hazırlıyoruz — montaj, kurulum ve üretici garantisiyle.",
+      "desc": "H3C UniServer, Supermicro ve depolama: göreve uygun konfigürasyon, tedarik, devreye alma.",
+      "intro": "Sipariş üzerine sunucu tedarik ediyoruz: H3C UniServer, Supermicro ve depolama sistemleri; diğer üreticilerin donanımı talep üzerine. ERP, veritabanı, sanallaştırma veya video arşivi için konfigürasyon hazırlıyoruz — montaj, kurulum ve üretici garantisiyle.",
       "works": [
         "Göreve uygun konfigürasyon seçimi: ERP, DB, sanallaştırma, video arşivi",
-        "Supermicro, Lenovo, H3C sunucu ve depolama tedariki",
+        "H3C UniServer, Supermicro sunucu ve depolama tedariki",
         "Kabinete montaj, RAID, işletim sistemi ve hipervizör kurulumu",
         "Veri ve servislerin yeni donanıma taşınması",
         "Üretici garantisi ve servis sözleşmeleri"
@@ -3486,7 +3427,7 @@
         },
         {
           "q": "Hangi markaları tedarik ediyorsunuz?",
-          "a": "Supermicro, Lenovo ThinkSystem ve H3C UniServer (H3C iş ortağıyız), depolama sistemleri — talep üzerine diğer üreticiler de. Hepsi sıfır ve resmi garantili."
+          "a": "H3C UniServer ve Supermicro (Özbekistan'da H3C iş ortağıyız), depolama sistemleri; diğer üreticilerin donanımı talep üzerine. Tamamı sıfır ve resmi garantilidir."
         },
         {
           "q": "Sunucu teslimatı ne kadar sürer?",
@@ -3508,7 +3449,7 @@
       "details": {
         "pkgLabel": "Standart çözümler",
         "pkgTitle": "Üç standart sunucu konfigürasyonu",
-        "pkgNote": "İşe göre hesaplıyoruz: yükü anlatın — 1C’de kaç kullanıcı, ne kadar veri, kesintisiz çalışma gerekiyor mu — aynı gün teklif dönelim.",
+        "pkgNote": "İşe göre hesaplıyoruz: yükü anlatın — 1C’de kaç kullanıcı, ne kadar veri, kesintisiz çalışma gerekiyor mu — bir iş günü içinde teklif dönelim.",
         "packages": [
           {
             "name": "1C ve dosya sunucusu",
@@ -3574,15 +3515,15 @@
       }
     },
     "warehouse": {
-      "title": "Warehouses and logistics",
-      "desc": "CCTV of receiving and dispatch areas, access control, vehicle control.",
-      "intro": "Security systems for warehouses and logistics centres: CCTV of receiving and dispatch areas, loading control, access control for staff and vehicles, licence plate recognition at the gates.",
+      "title": "Depolar ve lojistik",
+      "desc": "Kabul ve sevkiyat alanlarında güvenlik kamerası, geçiş kontrol, araç takibi.",
+      "intro": "Depo ve lojistik merkezleri için güvenlik sistemleri: kabul ve sevkiyat alanlarının kamerayla izlenmesi, yükleme kontrolü, personel ve araçlar için geçiş kontrol sistemi, kapıda plaka tanıma.",
       "works": [
-        "System design based on the warehouse layout",
-        "CCTV of receiving, dispatch and racking areas",
-        "Loading control linked to warehouse operations",
-        "Access control for staff and ANPR at the gates",
-        "Commissioning, training and service"
+        "Depo yerleşimine göre sistem projesi",
+        "Kabul, sevkiyat ve raf alanlarının kamerayla izlenmesi",
+        "Yükleme kontrolü ve depo operasyonlarıyla eşleştirme",
+        "Personel için geçiş kontrol ve kapıda plaka tanıma",
+        "Devreye alma, eğitim ve servis"
       ],
       "faq": [
         {
@@ -3601,7 +3542,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Depo için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Mal kabul ve sevkiyat",
@@ -3667,15 +3608,15 @@
       }
     },
     "construction": {
-      "title": "Construction sites",
-      "desc": "Autonomous 4G cameras, protection of machinery and materials, access control.",
-      "intro": "Protection of construction sites: autonomous 4G video surveillance, control of machinery and materials, access control for site cabins and entry, perimeter alarm. The system moves together with the site.",
+      "title": "Şantiyeler",
+      "desc": "4G bağımsız kameralar, iş makinesi ve malzeme koruması, girişte geçiş kontrol.",
+      "intro": "Şantiye güvenliği: 4G üzerinden bağımsız güvenlik kamerası sistemi, iş makinesi ve malzeme kontrolü, şantiye barakaları ve girişte geçiş kontrol, çevre alarmı. Sistemi şantiyeyle birlikte taşıyoruz.",
       "works": [
-        "Coverage plan and camera poles for the site",
-        "Autonomous cameras with 4G and backup power",
-        "Perimeter alarm and protection of the material store",
-        "Access control at the entry and crew time tracking",
-        "Relocation and dismantling when the stage ends"
+        "Saha kapsama şeması ve kamera direkleri",
+        "4G ve yedek beslemeli bağımsız kameralar",
+        "Çevre alarmı ve malzeme deposunun korunması",
+        "Girişte geçiş kontrol ve ekiplerin çalışma saati takibi",
+        "Etap bitiminde taşıma ve sökme"
       ],
       "faq": [
         {
@@ -3694,7 +3635,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Şantiye için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Otonom izleme direği",
@@ -3760,15 +3701,15 @@
       }
     },
     "medical": {
-      "title": "Clinics and hospitals",
-      "desc": "CCTV, access control for wards, panic buttons, fire alarm.",
-      "intro": "Equipment for medical facilities: CCTV of halls and corridors, access control for wards, laboratory and pharmacy, panic buttons for staff, fire alarm and evacuation warning.",
+      "title": "Klinikler ve hastaneler",
+      "desc": "Güvenlik kamerası, servislerde geçiş kontrol, panik butonları, yangın alarmı.",
+      "intro": "Sağlık kuruluşlarının donatımı: hollerin ve koridorların kamerayla izlenmesi, servislere, laboratuvara ve eczaneye geçiş kontrol, personel için panik butonları, yangın alarm sistemi ve tahliye anonsu.",
       "works": [
-        "Design that follows healthcare requirements",
-        "CCTV of public areas and the reception",
-        "Access control for wards, pharmacy and server room",
-        "Panic buttons and link to the security desk",
-        "Fire alarm, warning system and service"
+        "Sağlık kuruluşu gerekliliklerine uygun proje",
+        "Ortak alanların ve kayıt bankosunun kamerayla izlenmesi",
+        "Servislere, eczaneye ve sistem odasına geçiş kontrol",
+        "Panik butonları ve güvenlik noktasıyla bağlantı",
+        "Yangın alarm sistemi, tahliye anonsu ve servis"
       ],
       "faq": [
         {
@@ -3787,7 +3728,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Klinik için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Özel klinik",
@@ -3853,15 +3794,15 @@
       }
     },
     "hotel": {
-      "title": "Hotels and apart-hotels",
-      "desc": "Electronic room locks, CCTV of public areas, fire safety.",
-      "intro": "Equipment for hotels: electronic room locks with cards and phone opening, CCTV of public areas, access control for service rooms, fire alarm and evacuation warning.",
+      "title": "Oteller ve apart oteller",
+      "desc": "Odalarda elektronik kilit, ortak alanlarda kamera, yangın güvenliği.",
+      "intro": "Otellerin donatımı: kartla ve telefonla açılan elektronik oda kilitleri, ortak alanların kamerayla izlenmesi, servis alanları için geçiş kontrol, yangın alarm sistemi ve tahliye anonsu.",
       "works": [
-        "Electronic room locks and card issuing",
-        "CCTV of the lobby, corridors and parking",
-        "Access control for service areas and stores",
-        "Fire alarm and evacuation warning",
-        "Integration with the hotel management system"
+        "Odalarda elektronik kilitler ve kart basımı",
+        "Lobi, koridor ve otoparkın kamerayla izlenmesi",
+        "Servis alanları ve deponun geçiş kontrolü",
+        "Yangın alarm sistemi ve tahliye anonsu",
+        "Otel yönetim sistemiyle entegrasyon"
       ],
       "faq": [
         {
@@ -3880,7 +3821,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Otel için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Oda stoğuna kilitler",
@@ -3946,15 +3887,15 @@
       }
     },
     "fuel": {
-      "title": "Petrol stations and oil depots",
-      "desc": "CCTV of pumps and cash desk, ANPR, perimeter, explosion-proof equipment.",
-      "intro": "Security for petrol and gas stations and oil depots: CCTV of pumps, cash desk and unloading area, licence plate recognition, perimeter protection and explosion-proof fire alarm systems.",
+      "title": "Akaryakıt istasyonları ve petrol depoları",
+      "desc": "Pompa ve kasa kamerası, plaka tanıma, çevre koruma, ex-proof ekipman.",
+      "intro": "Akaryakıt ve LPG istasyonları ile petrol depolarının güvenliği: pompaların, kasanın ve tahliye alanının kamerayla izlenmesi, plaka tanıma, çevre koruma ve ex-proof yangın alarm sistemleri.",
       "works": [
-        "Design that accounts for hazardous zones",
-        "CCTV of pumps, cash desk and unloading area",
-        "Licence plate recognition and visit logging",
-        "Perimeter protection and site control",
-        "Fire alarm and maintenance"
+        "Patlayıcı ortam bölgelerini dikkate alan proje",
+        "Pompaların, kasanın ve tahliye alanının kamerayla izlenmesi",
+        "Plaka tanıma ve giriş kayıtları",
+        "Çevre koruma ve saha kontrolü",
+        "Yangın alarm sistemi ve bakım"
       ],
       "faq": [
         {
@@ -3973,7 +3914,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Akaryakıt istasyonu için üç tip çözüm",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Tek istasyon",
@@ -4039,34 +3980,34 @@
       }
     },
     "ohrannye-sistemy": {
-      "title": "Hırsız Alarm Sistemleri",
-      "desc": "Ev ve işletmeler için alarm panelleri, sensörler ve panik butonları.",
-      "intro": "Anahtar teslim hırsız alarm sistemleri: paneller, hareket ve kapı sensörleri, panik butonları ve telefona bildirimler — daireler, ofisler, depolar ve tesisler için.",
+      "title": "İşletmeler için hırsız alarm sistemleri",
+      "desc": "Tesis alarmı, merkezi izleme, geçiş kontrol entegrasyonu.",
+      "intro": "Ofis, depo, mağaza ve üretim tesisleri için hırsız alarm sistemleri: kablolu ve hibrit hatlar, birim ve vardiyaya göre bölümler, kasiyer panik butonu, izleme merkezine bağlantı ve geçiş kontrolü ile kamera entegrasyonu.",
       "works": [
-        "Mühendis ziyareti ve keşif",
-        "Göreve uygun panel ve sensör seçimi",
-        "Kurulum ve bölge ayarı",
-        "Kamera ve geçiş kontrolü entegrasyonu",
-        "Garanti ve servis"
+        "Keşif ve alarm bölümlerine ayırma",
+        "Kablolu ve hibrit hatlar, Bolid ve Hikvision panelleri",
+        "Birim ve vardiyaya göre yetkiler, olay kaydı",
+        "İzleme merkezine bağlantı ve müdahale prosedürü",
+        "Geçiş kontrolü ve kamera entegrasyonu, bakım sözleşmesi"
       ],
       "faq": [
         {
-          "q": "Hırsız alarmı ne kadara mal olur?",
-          "a": "Sensör sayısına ve panel tipine bağlıdır: kablolu daha ucuz, kablosuz daha hızlı kurulur. Keşif ve teklif ücretsizdir."
+          "q": "Güvenliği birimler ve vardiyalar arasında nasıl ayırırsınız?",
+          "a": "Tesis bölümlere ayrılır: satış alanı ve depo odası, ambar ve ofis, kiralık üniteler ayrı ayrı. Her bölümün kendi yetkileri ve onu kurup çözebilecek personel listesi vardır; kayıt defteri bunu kimin ne zaman yaptığını gösterir."
         },
         {
-          "q": "Telefona bildirim gelir mi?",
-          "a": "Evet: alarmlar, kurma ve çözme mobil uygulamaya düşer; izleme merkezine bağlıysa güvenlik şirketi müdahale eder."
+          "q": "İzleme merkezine bağlanmak ne sağlar?",
+          "a": "Fiziksel müdahale: alarmda güvenlik şirketinin ekibi yola çıkar, çıkış ve saati kayda geçer. Müdahale prosedürü — kimin geleceği, hangi sürede ve neyi kontrol edeceği — güvenlik şirketiyle yapılan sözleşmede yazılır; biz sinyalin iletiminden ve güvenilirliğinden sorumluyuz."
         },
         {
-          "q": "Alarm kameralara bağlanabilir mi?",
-          "a": "Evet, sensör olaylarını video kaydına bağlarız: her olayın görüntüsü olur, yanlış alarmlar azalır."
+          "q": "Alarmı geçiş kontrolü ve kamerayla neden bağlamalı?",
+          "a": "Olayı tahmin etmek yerine inceleyebilmek için. Tetiklenme video kaydıyla eşleşir, kurma ise turnikeye bağlanır: son çalışan çıkar, tesis kendini kurar. Videolu kayıt, bir açık veya olay incelendiğinde belge yerine geçer."
         }
       ],
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üç tip alarm seti",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Daire veya ev",
@@ -4159,7 +4100,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Akıllı otoparkta üç düzey",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Otomatik giriş",
@@ -4256,7 +4197,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Zayıf akımda üç sözleşme formatı",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Anahtar teslim tek sistem",
@@ -4353,7 +4294,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üç proje formatı",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Uygulama dokümantasyonu",
@@ -4421,12 +4362,12 @@
     "obsluzhivanie": {
       "title": "Bakım Sözleşmeleri",
       "desc": "Periyodik kontroller, acil müdahale, kayıt defteri ve yedek parça havuzu.",
-      "intro": "Yangın alarmı, CCTV, geçiş kontrolü ve ağların bakımını üstleniyoruz: programlı kontroller, anlaşmalı müdahale süreli acil çağrılar, kayıt defterleri ve yedek parça havuzu.",
+      "intro": "Bakım sözleşmesiyle kendi kurduğumuz sistemleri yürütüyoruz — yangın alarmı, kamera, geçiş kontrolü ve ağlar: programlı kontroller, kayıt defterleri ve yedek ekipman havuzu. Başka bir firmanın kurduğu sistemlerde modernizasyon öncesi denetim yapıyoruz.",
       "works": [
-        "Sistemlerin denetimle devralınması (üçüncü taraf kurulumlar dâhil)",
+        "Kendi sistemlerimizin bakıma alınması, modernizasyon öncesi denetim",
         "Kayıt defterine işlenen programlı kontroller",
         "Sabit müdahale süreli acil çağrılar",
-        "Yedek parça havuzu ve ekipman onarımı",
+        "Yedek ekipman havuzu ve garanti kapsamında değişim",
         "Resmî denetimlere hazır raporlama"
       ],
       "faq": [
@@ -4439,8 +4380,8 @@
           "a": "Dedektör ve hat kontrolleri, tahliye testi, akü ve güç kaynağı durumu, kamera temizliği ve arşiv kontrolü, yazılım güncellemeleri, deftere kayıt. Kapsam sözleşmede sistemlerinize göre sabitlenir."
         },
         {
-          "q": "Başkasının kurduğu sistemi devralır mısınız?",
-          "a": "Evet — ücretsiz denetimden sonra: durumu değerlendirir, eksik listesi çıkarır ve bakıma alırız. Üçüncü taraf kurulum engel değildir."
+          "q": "Başka bir yüklenicinin kurduğu sistemin bakımını yapar mısınız?",
+          "a": "Bakımını yalnızca kendi kurduğumuz sistemler için üstleniyoruz. Tesisi başka bir yüklenici donattıysa ücretsiz denetim yapar ve ekipman değişimiyle modernizasyon öneririz: yeniden kurulumdan sonra sistem, ekipman ve işçilik garantisiyle bizim bakım sözleşmemize geçer."
         },
         {
           "q": "Acil müdahale süresi nedir?",
@@ -4450,7 +4391,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Üç bakım formatı",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "Temel program",
@@ -4547,7 +4488,7 @@
       "details": {
         "pkgLabel": "Tip çözümler",
         "pkgTitle": "Sistem entegrasyonunda üç düzey",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir gün içinde kesin keşifli teklif döneriz.",
+        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
             "name": "İki sistemi bağlama",
@@ -4624,7 +4565,7 @@
     "howTitle": "Talepten servise — anahtar teslim",
     "ctaLabel": "Projeye başlayalım",
     "ctaTitle": "Projenizi görüşmeye hazır mısınız?",
-    "ctaText": "Göreviniz için ekipman seçip 30 dakika içinde teklif gönderelim.",
+    "ctaText": "Göreviniz için ekipman seçip teklifi bir iş günü içinde gönderelim.",
     "whatInc": "Neler dahil",
     "worksTitle": "İş kapsamı",
     "scheme": "Çalışma prensibi",
@@ -4662,7 +4603,7 @@
     "industryTag": "Sektör çözümü",
     "getQuote": "Teklif al",
     "needTitle": "{name} mı lazım?",
-    "detailCtaText": "Tesisinize uygun ekipmanı seçer ve 30 dakika içinde teklif göndeririz.",
+    "detailCtaText": "Tesisinize uygun ekipmanı seçer ve teklifi bir iş günü içinde göndeririz.",
     "relatedLabel": "İlgili hizmetler",
     "relatedTitle": "Ayrıca ihtiyacınız olabilir",
     "longTitle": "Zayıf akım taahhüdü nasıl yürütülür",
@@ -4729,7 +4670,7 @@
     "srSuccess": "Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
     "srError": "Talep gönderilirken hata oluştu. Lütfen tekrar deneyin.",
     "quoteSent": "Talep gönderildi!",
-    "quoteSentSub": "Mesai saatlerinde 30 dakika içinde sizi arayacağız.",
+    "quoteSentSub": "Mesai saatleri içinde sizi arayacağız.",
     "consent": "\"Gönder\"e tıklayarak kişisel verilerin işlenmesini kabul edersiniz",
     "close": "Kapat",
     "srTitle": "Talep gönder",
@@ -4745,7 +4686,7 @@
     "orderSubmit": "Siparişi gönder",
     "orderAccepted": "Siparişiniz alındı!",
     "orderNumber": "Sipariş numarası",
-    "orderNext": "Yöneticimiz çalışma saatleri içinde (Pzt–Cmt 9:00–18:00) onay için sizinle iletişime geçecek.",
+    "orderNext": "Yöneticimiz çalışma saatleri içinde (Pzt–Cum 9:00–18:00) onay için sizinle iletişime geçecek.",
     "orderPayment": "Ödeme — fatura ile (havale) veya teslimatta nakit. Taşkent ve tüm Özbekistan'a teslimat.",
     "orderDeliveryLink": "Teslimat ve ödeme koşulları",
     "orderComment": "Not: teslimat adresi, fatura veya teklif gerekiyorsa yazın",
@@ -4947,7 +4888,7 @@
     ],
     "attendance": [
       {
-        "t": "Terminal",
+        "t": "Kayıt terminali",
         "s": "yüz veya parmak izi"
       },
       {
@@ -5372,52 +5313,52 @@
     "learnMore": "Daha fazla"
   },
   "projectForm": {
-    "badge": "Project estimate",
-    "title": "We will design a system for your site",
-    "subtitle": "Takes a minute to fill in — our engineer prepares the system layout and a cost estimate. We reply within one business day.",
-    "objectLabel": "Type of site",
-    "systemsLabel": "Systems required",
-    "scaleLabel": "Size of the site",
-    "scalePlaceholder": "e.g. 3,500 m² / 40 cameras / 6 access points",
-    "termLabel": "Timeline",
-    "company": "Company",
-    "name": "Your name",
-    "phone": "Phone *",
+    "badge": "Proje hesabı",
+    "title": "Tesisiniz için sistemi hesaplayalım",
+    "subtitle": "Bir dakikada doldurun — mühendisimiz sistem içeriğini ve keşfi hazırlar. Bir iş günü içinde yanıt veriyoruz.",
+    "objectLabel": "Tesis türü",
+    "systemsLabel": "Hangi sistemler gerekli",
+    "scaleLabel": "Tesisin büyüklüğü",
+    "scalePlaceholder": "örneğin: 3.500 m² / 40 kamera / 6 geçiş noktası",
+    "termLabel": "Süre",
+    "company": "Şirket",
+    "name": "Adınız",
+    "phone": "Telefon *",
     "email": "Email",
-    "comment": "Your task, site specifics, what is already installed",
-    "submit": "Get a project estimate",
-    "sending": "Sending…",
-    "note": "We never share your contacts. A site visit by our engineer is free of charge.",
-    "sentTitle": "Request received",
-    "sentText": "Our engineer will contact you to clarify the details of the site. We usually reply within one business day.",
+    "comment": "Göreviniz, tesisin özellikleri, hâlihazırda kurulu olanlar",
+    "submit": "Proje hesabı alın",
+    "sending": "Gönderiliyor…",
+    "note": "İletişim bilgilerinizi yalnızca talebinize yanıt vermek için kullanırız. Mühendisimizin tesise gelişi ücretsizdir.",
+    "sentTitle": "Talebiniz alındı",
+    "sentText": "Mühendisimiz sizinle iletişime geçip tesisin ayrıntılarını netleştirecek. Genellikle bir iş günü içinde yanıt veriyoruz.",
     "objects": {
-      "factory": "Factory, manufacturing",
-      "warehouse": "Warehouse, logistics",
-      "office": "Business centre, office",
-      "residential": "Residential complex",
-      "retail": "Shop, retail chain",
-      "school": "School, university",
-      "medical": "Clinic, hospital",
-      "hotel": "Hotel",
-      "fuel": "Petrol station, oil depot",
-      "construction": "Construction site",
-      "other": "Other"
+      "factory": "Fabrika, üretim",
+      "warehouse": "Depo, lojistik",
+      "office": "İş merkezi, ofis",
+      "residential": "Konut sitesi",
+      "retail": "Mağaza, zincir",
+      "school": "Okul, üniversite",
+      "medical": "Klinik, hastane",
+      "hotel": "Otel",
+      "fuel": "Akaryakıt istasyonu, petrol deposu",
+      "construction": "Şantiye",
+      "other": "Diğer"
     },
     "systems": {
-      "cctv": "CCTV",
-      "access": "Access control, turnstiles",
-      "fire": "Fire alarm",
-      "network": "Structured cabling and network",
-      "intercom": "Intercom",
-      "barrier": "Barriers and gates",
-      "server": "Servers, data centre",
-      "videowall": "Video wall"
+      "cctv": "Güvenlik kamerası",
+      "access": "Geçiş kontrol, turnike",
+      "fire": "Yangın alarm sistemi",
+      "network": "Yapısal kablolama ve ağ",
+      "intercom": "Diafon",
+      "barrier": "Bariyer, kapı otomasyonu",
+      "server": "Sunucu, veri merkezi",
+      "videowall": "Video duvar"
     },
     "terms": {
-      "urgent": "Urgent",
-      "month": "Within a month",
-      "quarter": "2–3 months",
-      "planning": "Planning the budget"
+      "urgent": "Acil",
+      "month": "Bir ay içinde",
+      "quarter": "2–3 ay",
+      "planning": "Bütçe planlıyoruz"
     }
   },
   "industryStats": {
@@ -5434,24 +5375,24 @@
       "l": "işçilik garantisi"
     },
     "s4": {
-      "v": "48 sa",
+      "v": "1 iş günü",
       "l": "garanti müdahale süresi"
     }
   },
   "trust": {
-    "title": "Why large sites trust us",
-    "warrantyT": "Warranty from 1 to 3 years",
-    "warrantyD": "The term depends on the equipment and contract terms. Warranty call-out within 48 hours.",
-    "partnersT": "Manufacturer partner",
-    "partnersD": "We work directly with H3C, Hikvision and Dahua: genuine equipment, stock in Tashkent, warranty replacement.",
-    "teamT": "Our own installation team",
-    "teamD": "Designers and installers are in-house, not subcontractors. We work across Uzbekistan.",
-    "docsT": "Documents for tenders",
-    "docsD": "We work with companies and public sector clients: contract, specification, acts, invoices, handover by project."
+    "title": "Büyük tesisler bize neden güveniyor",
+    "warrantyT": "1 ila 3 yıl garanti",
+    "warrantyD": "Süre ekipmana ve sözleşme şartlarına bağlıdır. Garanti kapsamında servis bir iş günü içinde.",
+    "partnersT": "Üretici iş ortağı",
+    "partnersD": "H3C, Hikvision ve Dahua ile doğrudan çalışıyoruz: orijinal ekipman, Taşkent'te stok, garantiyle değişim.",
+    "teamT": "Kendi montaj ekibimiz",
+    "teamD": "Proje ve montaj ekibi kadromuzda — taşeron değil. Özbekistan'ın tamamında çalışıyoruz.",
+    "docsT": "İhale için belgeler",
+    "docsD": "Tüzel kişiler ve kamu kurumlarıyla çalışıyoruz: sözleşme, spesifikasyon, tutanaklar, faturalar, proje bazlı teslim."
   },
   "clients": {
-    "title": "Among our clients",
-    "subtitle": "Companies and organisations we have designed and installed security systems for."
+    "title": "Müşterilerimiz arasında",
+    "subtitle": "Güvenlik sistemlerini tasarlayıp kurduğumuz şirketler ve kurumlar."
   },
   "calc": {
     "h1": "Kamera ve zayıf akım montajı: işçilik ne kadar tutar",
@@ -5610,6 +5551,18 @@
     ],
     "faqTitle": "Sık sorulan sorular",
     "faq": [
+      {
+        "q": "Anahtar teslim kamera sistemi ne kadar tutar?",
+        "a": "Fiyat iki kalemden oluşur: ekipman ve işçilik. Yukarıdaki hesaplayıcı işçiliği tek fiyat listemize göre hesaplar; ekipman ayrı hesaplanır — kameralar, kayıt cihazı, diskler, güç kaynakları ve PoE switch'ler. Bir ev için dört kameralık set ile bir mağaza için on altı kameralık set yalnızca kamera sayısıyla değil, kayıt cihazının sınıfı, arşiv derinliği ve kablo güzergâhlarının uzunluğuyla da ayrışır. Tipik tesisler için hazır hesaplar bu sayfanın yukarısında; tesisinize ait kesin tutarı mühendisimiz ücretsiz keşiften sonra söyler."
+      },
+      {
+        "q": "Yangın alarm sistemi ne kadar tutar?",
+        "a": "Maliyet mekânın alanına ve kullanım amacına, dedektör ve hat sayısına, kontrol panelinin tipine ve sesli tahliye anons sisteminin gerekip gerekmediğine bağlıdır. Proje ve resmî teslim ayrı bir kalemdir: denetime tabi tesislerde belge olmadan sistem kabul edilmez ve bu kısım montaj fiyat listesine dâhil değildir. İşçiliği hesaplayıcı hesaplar; proje ve ekipman keşiften sonra fiyatlanır."
+      },
+      {
+        "q": "Ev ile mağazanın kamera sistemi fiyatı farklı mı?",
+        "a": "Evet, üstelik yalnızca kamera sayısı yüzünden değil. Evde genellikle iki–dört kamera, kısa güzergâhlar ve bir–iki haftalık arşiv olur. Mağazada kasalara, girişe ve depoya kamera eklenir, müşterilerle yaşanan anlaşmazlıklar nedeniyle arşiv daha uzun tutulur ve güzergâhlar uzar. Kamera sayısı eşit olduğunda, kablo güzergâhları hazır olan bir tesis yaklaşık dörtte bir daha ucuza gelir."
+      },
       {
         "q": "Hesaplayıcı ne kadar isabetli?",
         "a": "Montaj işçiliğine dair standart fiyat listemize dayanan bir öngörüdür: bu parametrelere sahip bir tesisin genelde hangi aralığa düştüğünü gösterir. Kesin teklif, mühendisin yerleşimi, güzergâhların durumunu ve tavan yüksekliğini gördüğü keşiften sonra çıkar."

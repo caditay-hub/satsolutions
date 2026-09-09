@@ -138,7 +138,7 @@
     "zh": "≤200 毫秒"
   },
   "≤200 мс (в среднем)": {
-    "uz": "≤200 ms (o'rtacha)",
+    "uz": "≤200 ms (oʻrtacha)",
     "en": "≤200 ms (average)",
     "tr": "≤200 ms (ortalama)",
     "zh": "≤200 毫秒（平均）"
@@ -313,7 +313,7 @@
   },
   "0.0005 lux (Color), 0 lux с LED": {
     "uz": "0.0005 lux (rangli), LED bilan 0 lux",
-    "en": "0.0005 lux (colour), 0 lux with LED",
+    "en": "0.0005 lux (color), 0 lux with LED",
     "tr": "0,0005 lux (renkli), LED ile 0 lux",
     "zh": "0.0005 lux（彩色），开 LED 时 0 lux"
   },
@@ -349,13 +349,13 @@
   },
   "0.001 люкс/F1.2 (цвет)": {
     "uz": "0.001 lyuks/F1.2 (rangli)",
-    "en": "0.001 lux/F1.2 (colour)",
+    "en": "0.001 lux/F1.2 (color)",
     "tr": "0,001 lux/F1.2 (renkli)",
     "zh": "0.001 lux/F1.2（彩色）"
   },
   "0.001 Lux (цвет), 0.0003 Lux (Ч/Б)": {
     "uz": "0.001 lux (rangli), 0.0003 lux (oq-qora)",
-    "en": "0.001 lux (colour), 0.0003 lux (B/W)",
+    "en": "0.001 lux (color), 0.0003 lux (B/W)",
     "tr": "0,001 lux (renkli), 0,0003 lux (siyah-beyaz)",
     "zh": "0.001 lux（彩色），0.0003 lux（黑白）"
   },
@@ -367,7 +367,7 @@
   },
   "0.003 Лк (цвет), 0 Лк (ИК)": {
     "uz": "0.003 lk (rangli), 0 lk (IQ)",
-    "en": "0.003 lux (colour), 0 lux (IR)",
+    "en": "0.003 lux (color), 0 lux (IR)",
     "tr": "0,003 lux (renkli), 0 lux (IR)",
     "zh": "0.003 lux（彩色），0 lux（红外）"
   },
@@ -385,13 +385,13 @@
   },
   "0.003 Люкс (цвет), 0 Люкс ИК": {
     "uz": "0.003 lyuks (rangli), 0 lyuks IQ",
-    "en": "0.003 lux (colour), 0 lux IR",
+    "en": "0.003 lux (color), 0 lux IR",
     "tr": "0,003 lux (renkli), 0 lux IR",
     "zh": "0.003 lux（彩色），红外 0 lux"
   },
   "0.003 люкс (цветное) / 0 люкс (ИК)": {
     "uz": "0.003 lyuks (rangli) / 0 lyuks (IQ)",
-    "en": "0.003 lux (colour) / 0 lux (IR)",
+    "en": "0.003 lux (color) / 0 lux (IR)",
     "tr": "0,003 lux (renkli) / 0 lux (IR)",
     "zh": "0.003 lux（彩色）/ 0 lux（红外）"
   },
@@ -427,7 +427,7 @@
   },
   "0.005 Лк (цвет), 0 Лк (ИК)": {
     "uz": "0.005 lk (rangli), 0 lk (IQ)",
-    "en": "0.005 lux (colour), 0 lux (IR)",
+    "en": "0.005 lux (color), 0 lux (IR)",
     "tr": "0,005 lux (renkli), 0 lux (IR)",
     "zh": "0.005 lux（彩色），0 lux（红外）"
   },
@@ -451,13 +451,13 @@
   },
   "0.005 люкс (цвет), 0 люкс (ИК)": {
     "uz": "0.005 lyuks (rangli), 0 lyuks (IQ)",
-    "en": "0.005 lux (colour), 0 lux (IR)",
+    "en": "0.005 lux (color), 0 lux (IR)",
     "tr": "0,005 lux (renkli), 0 lux (IR)",
     "zh": "0.005 lux（彩色），0 lux（红外）"
   },
   "0.005 Люкс (цвет), 0 Люкс ИК": {
     "uz": "0.005 lyuks (rangli), 0 lyuks IQ",
-    "en": "0.005 lux (colour), 0 lux IR",
+    "en": "0.005 lux (color), 0 lux IR",
     "tr": "0,005 lux (renkli), 0 lux IR",
     "zh": "0.005 lux（彩色），红外 0 lux"
   },
@@ -493,7 +493,7 @@
   },
   "0.005 lux (Color), 0 lux с ИК": {
     "uz": "0.005 lux (rangli), IQ bilan 0 lux",
-    "en": "0.005 lux (colour), 0 lux with IR",
+    "en": "0.005 lux (color), 0 lux with IR",
     "tr": "0,005 lux (renkli), IR ile 0 lux",
     "zh": "0.005 lux（彩色），开红外时 0 lux"
   },
@@ -505,7 +505,7 @@
   },
   "0.009 Люкс (цвет), 0.0009 Люкс (ч/б)": {
     "uz": "0.009 lyuks (rangli), 0.0009 lyuks (oq-qora)",
-    "en": "0.009 lux (colour), 0.0009 lux (B/W)",
+    "en": "0.009 lux (color), 0.0009 lux (B/W)",
     "tr": "0,009 lux (renkli), 0,0009 lux (siyah-beyaz)",
     "zh": "0.009 lux（彩色），0.0009 lux（黑白）"
   },
@@ -535,7 +535,7 @@
   },
   "0.01 люкса (цвет), 0 люкс (ИК)": {
     "uz": "0.01 lyuks (rangli), 0 lyuks (IQ)",
-    "en": "0.01 lux (colour), 0 lux (IR)",
+    "en": "0.01 lux (color), 0 lux (IR)",
     "tr": "0,01 lux (renkli), 0 lux (IR)",
     "zh": "0.01 lux（彩色），0 lux（红外）"
   },
@@ -571,7 +571,7 @@
   },
   "0.014 люкс (цвет), 0 люкс (ИК)": {
     "uz": "0.014 lyuks (rangli), 0 lyuks (IQ)",
-    "en": "0.014 lux (colour), 0 lux (IR)",
+    "en": "0.014 lux (color), 0 lux (IR)",
     "tr": "0,014 lux (renkli), 0 lux (IR)",
     "zh": "0.014 lux（彩色），0 lux（红外）"
   },
@@ -589,7 +589,7 @@
   },
   "0.018 Люкс (цвет), 0 Люкс ИК": {
     "uz": "0.018 lyuks (rangli), 0 lyuks IQ",
-    "en": "0.018 lux (colour), 0 lux IR",
+    "en": "0.018 lux (color), 0 lux IR",
     "tr": "0,018 lux (renkli), 0 lux IR",
     "zh": "0.018 lux（彩色），红外 0 lux"
   },
@@ -960,7 +960,7 @@
     "zh": "1/1.79 英寸，支持 ColorPro"
   },
   "1× Gigabit без PoE": {
-    "uz": "1× Gigabit PoE'siz",
+    "uz": "1× Gigabit PoEʼsiz",
     "en": "1× Gigabit without PoE",
     "tr": "1× Gigabit PoE'siz",
     "zh": "1× 千兆 无 PoE"
@@ -1038,7 +1038,7 @@
     "zh": "10–90%（无凝结）"
   },
   "10.1\" емкостный сенсорный": {
-    "uz": "10.1\" sig'imli sensorli",
+    "uz": "10.1\" sigʻimli sensorli",
     "en": "10.1\" capacitive touchscreen",
     "tr": "10,1\" kapasitif dokunmatik",
     "zh": "10.1 英寸电容触摸屏"
@@ -1140,13 +1140,13 @@
     "zh": "100 个"
   },
   "100-240V переменного тока": {
-    "uz": "100–240 V o‘zgaruvchan tok",
+    "uz": "100–240 V oʻzgaruvchan tok",
     "en": "100–240 V AC",
     "tr": "100–240 V AC",
     "zh": "100–240 V 交流"
   },
   "100-240V переменного тока, 50/60Hz": {
-    "uz": "100-240 V o'zgaruvchan tok, 50/60 Gts",
+    "uz": "100-240 V oʻzgaruvchan tok, 50/60 Gts",
     "en": "100–240 V AC, 50/60 Hz",
     "tr": "100-240 V AC, 50/60 Hz",
     "zh": "100–240 V 交流，50/60 Hz"
@@ -1177,7 +1177,7 @@
   },
   "1000 метров": {
     "uz": "1000 metr",
-    "en": "1000 metres",
+    "en": "1000 meters",
     "tr": "1000 metre",
     "zh": "1000 米"
   },
@@ -1266,7 +1266,7 @@
     "zh": "110–300 mm"
   },
   "12 (4 считывателя, 4 геркона, 4 доп.)": {
-    "uz": "12 (4 o'qigich, 4 gerkon, 4 qo'shimcha)",
+    "uz": "12 (4 oʻqigich, 4 gerkon, 4 qoʻshimcha)",
     "en": "12 (4 readers, 4 reed switches, 4 auxiliary)",
     "tr": "12 (4 okuyucu, 4 manyetik kontak, 4 yardımcı)",
     "zh": "12（4 读头、4 门磁、4 辅助）"
@@ -1314,7 +1314,7 @@
     "zh": "12V 直流或无源 PoE"
   },
   "12-30 fps (в зависимости от разрешения)": {
-    "uz": "12-30 fps (ruxsatga qarab)",
+    "uz": "12-30 fps (aniqlikka qarab)",
     "en": "12–30 fps (depending on resolution)",
     "tr": "12-30 fps (çözünürlüğe bağlı)",
     "zh": "12–30 fps（取决于分辨率）"
@@ -1416,7 +1416,7 @@
     "zh": "13 dBi"
   },
   "13 dBi встроенная": {
-    "uz": "13 dBi o'rnatilgan",
+    "uz": "13 dBi oʻrnatilgan",
     "en": "13 dBi integrated",
     "tr": "13 dBi entegre",
     "zh": "13 dBi 内置"
@@ -1488,7 +1488,7 @@
     "zh": "1500 mAh"
   },
   "15m белый свет": {
-    "uz": "15 m oq yorug‘lik",
+    "uz": "15 m oq yorugʻlik",
     "en": "15 m white light",
     "tr": "15 m beyaz ışık",
     "zh": "15 米白光"
@@ -1555,13 +1555,13 @@
   },
   "16 миллионов цветов": {
     "uz": "16 million rang",
-    "en": "16 million colours",
+    "en": "16 million colors",
     "tr": "16 milyon renk",
     "zh": "1600 万色"
   },
   "16 миллионов цветов (2500K–6500K)": {
     "uz": "16 million rang (2500K–6500K)",
-    "en": "16 million colours (2500 K–6500 K)",
+    "en": "16 million colors (2500 K–6500 K)",
     "tr": "16 milyon renk (2500 K–6500 K)",
     "zh": "1600 万色（2500K–6500K）"
   },
@@ -1596,13 +1596,13 @@
     "zh": "16× 数字"
   },
   "160° по диагонали": {
-    "uz": "diagonal bo'yicha 160°",
+    "uz": "diagonal boʻyicha 160°",
     "en": "160° diagonal",
     "tr": "160° çapraz",
     "zh": "对角 160°"
   },
   "160MHz поддерживается": {
-    "uz": "160 MHz qo'llab-quvvatlanadi",
+    "uz": "160 MHz qoʻllab-quvvatlanadi",
     "en": "160 MHz supported",
     "tr": "160 MHz destekleniyor",
     "zh": "支持 160MHz"
@@ -1806,7 +1806,7 @@
     "zh": "2 个千兆 Combo 口"
   },
   "2 000 000 проходов": {
-    "uz": "2 000 000 o'tish",
+    "uz": "2 000 000 oʻtish",
     "en": "2,000,000 passages",
     "tr": "2.000.000 geçiş",
     "zh": "200 万次通行"
@@ -1836,7 +1836,7 @@
     "zh": "2 根内置"
   },
   "2 встроенные всенаправленные": {
-    "uz": "2 ta o'rnatilgan har tomonlama",
+    "uz": "2 ta oʻrnatilgan har tomonlama",
     "en": "2 built-in omnidirectional",
     "tr": "2 dahili çok yönlü",
     "zh": "2 根内置全向天线"
@@ -1933,7 +1933,7 @@
   },
   "2 метра": {
     "uz": "2 metr",
-    "en": "2 metres",
+    "en": "2 meters",
     "tr": "2 metre",
     "zh": "2 米"
   },
@@ -1968,13 +1968,13 @@
     "zh": "2 路独立"
   },
   "2 огнетушителя": {
-    "uz": "2 ta o‘t o‘chirgich",
+    "uz": "2 ta oʻt oʻchirgich",
     "en": "2 fire extinguishers",
     "tr": "2 yangın söndürücü",
     "zh": "2 具灭火器"
   },
   "2 огнетушителя (1–10 кг)": {
-    "uz": "2 ta o't o'chirgich (1–10 kg)",
+    "uz": "2 ta oʻt oʻchirgich (1–10 kg)",
     "en": "2 fire extinguishers (1–10 kg)",
     "tr": "2 yangın söndürücü (1-10 kg)",
     "zh": "2 具灭火器（1–10 kg）"
@@ -2034,7 +2034,7 @@
     "zh": "2 扇翼门"
   },
   "2 съёмные водонепроницаемые": {
-    "uz": "2 ta olinadigan, suv o'tkazmaydigan",
+    "uz": "2 ta olinadigan, suv oʻtkazmaydigan",
     "en": "2 detachable waterproof",
     "tr": "2 sökülebilir su geçirmez",
     "zh": "2 根可拆卸防水天线"
@@ -2052,7 +2052,7 @@
     "zh": "2 级"
   },
   "2 фиксированные внешние": {
-    "uz": "2 ta qat'iy tashqi",
+    "uz": "2 ta qatʼiy tashqi",
     "en": "2 fixed external",
     "tr": "2 sabit harici",
     "zh": "2 根固定外置"
@@ -2094,13 +2094,13 @@
     "zh": "2 路 HDMI 与 2 路 VGA"
   },
   "2 HDMI и 2 VGA, 8K или двойной 4K": {
-    "uz": "2 HDMI va 2 VGA, 8K yoki qo'sh 4K",
+    "uz": "2 HDMI va 2 VGA, 8K yoki qoʻsh 4K",
     "en": "2 HDMI and 2 VGA, 8K or dual 4K",
     "tr": "2 HDMI ve 2 VGA, 8K veya çift 4K",
     "zh": "2 路 HDMI 与 2 路 VGA，8K 或双 4K"
   },
   "2 MP встроенная": {
-    "uz": "2 MP o'rnatilgan",
+    "uz": "2 MP oʻrnatilgan",
     "en": "2 MP built-in",
     "tr": "2 MP dahili",
     "zh": "内置 200 万像素"
@@ -2130,7 +2130,7 @@
     "zh": "200 万像素，1080P，自动对焦"
   },
   "2 MP, двойная широкоугольная": {
-    "uz": "2 MP, qo'sh keng burchakli",
+    "uz": "2 MP, qoʻsh keng burchakli",
     "en": "2 MP, dual wide-angle",
     "tr": "2 MP, çift geniş açı",
     "zh": "200 万像素，双广角"
@@ -2239,13 +2239,13 @@
   },
   "2.4\" TFT цветной LCD": {
     "uz": "2.4\" TFT rangli LCD",
-    "en": "2.4\" TFT colour LCD",
+    "en": "2.4\" TFT color LCD",
     "tr": "2,4\" TFT renkli LCD",
     "zh": "2.4 英寸 TFT 彩色 LCD"
   },
   "2.4\" TFT LCD цветной": {
     "uz": "2.4\" TFT LCD rangli",
-    "en": "2.4\" TFT LCD colour",
+    "en": "2.4\" TFT LCD color",
     "tr": "2,4\" TFT LCD renkli",
     "zh": "2.4 英寸 TFT LCD 彩色"
   },
@@ -2299,12 +2299,12 @@
   },
   "2.8\" TFT цветной сенсорный": {
     "uz": "2.8\" TFT rangli sensorli",
-    "en": "2.8\" TFT colour touchscreen",
+    "en": "2.8\" TFT color touchscreen",
     "tr": "2,8\" TFT renkli dokunmatik",
     "zh": "2.8 英寸 TFT 彩色触摸屏"
   },
   "2.8mm фиксированный": {
-    "uz": "2.8 mm qat'iy",
+    "uz": "2.8 mm qatʼiy",
     "en": "2.8 mm fixed",
     "tr": "2,8 mm sabit",
     "zh": "2.8 mm 定焦"
@@ -2430,7 +2430,7 @@
     "zh": "20 米红外"
   },
   "20m ИК, 15m белый свет": {
-    "uz": "20 m IQ, 15 m oq yorug'lik",
+    "uz": "20 m IQ, 15 m oq yorugʻlik",
     "en": "20 m IR, 15 m white light",
     "tr": "20 m IR, 15 m beyaz ışık",
     "zh": "红外 20 米，白光 15 米"
@@ -2490,7 +2490,7 @@
     "zh": "2200 mAh"
   },
   "220V переменного тока": {
-    "uz": "220 V o'zgaruvchan tok",
+    "uz": "220 V oʻzgaruvchan tok",
     "en": "220 V AC",
     "tr": "220 V AC",
     "zh": "220 V 交流"
@@ -2508,7 +2508,7 @@
     "zh": "23 dBi"
   },
   "23 дБи направленная": {
-    "uz": "23 dBi yo'naltirilgan",
+    "uz": "23 dBi yoʻnaltirilgan",
     "en": "23 dBi directional",
     "tr": "23 dBi yönlü",
     "zh": "23 dBi 定向"
@@ -2538,7 +2538,7 @@
     "zh": "24 V DC"
   },
   "24 В DC бесщёточный двигатель": {
-    "uz": "24 V DC cho'tkasiz dvigatel",
+    "uz": "24 V DC choʻtkasiz dvigatel",
     "en": "24 V DC brushless motor",
     "tr": "24 V DC fırçasız motor",
     "zh": "24 V 直流无刷电机"
@@ -2563,24 +2563,24 @@
   },
   "24/7 цветная": {
     "uz": "24/7 rangli",
-    "en": "24/7 colour",
+    "en": "24/7 color",
     "tr": "7/24 renkli",
     "zh": "7×24 全彩"
   },
   "24/7 цветная съёмка": {
     "uz": "24/7 rangli suratga olish",
-    "en": "24/7 colour imaging",
+    "en": "24/7 color imaging",
     "tr": "7/24 renkli görüntüleme",
     "zh": "7×24 全彩成像"
   },
   "24/7 цветной": {
     "uz": "24/7 rangli",
-    "en": "24/7 colour",
+    "en": "24/7 color",
     "tr": "7/24 renkli",
     "zh": "7×24 全彩"
   },
   "24×1G/10G SFP+ + 2×40GE QSFP+ (делятся на 4×10GE) + 2 слота расширения": {
-    "uz": "24×1G/10G SFP+ + 2×40GE QSFP+ (4×10GE ga bo'linadi) + 2 kengaytirish uyasi",
+    "uz": "24×1G/10G SFP+ + 2×40GE QSFP+ (4×10GE ga boʻlinadi) + 2 kengaytirish uyasi",
     "en": "24×1G/10G SFP+ + 2×40GE QSFP+ (split into 4×10GE) + 2 expansion slots",
     "tr": "24×1G/10G SFP+ + 2×40GE QSFP+ (4×10GE'ye bölünür) + 2 genişletme yuvası",
     "zh": "24×1G/10G SFP+ + 2×40GE QSFP+（可拆分为 4×10GE）+ 2 个扩展插槽"
@@ -2862,13 +2862,13 @@
     "zh": "2U 机架式"
   },
   "2x встроенные": {
-    "uz": "2x o‘rnatilgan",
+    "uz": "2x oʻrnatilgan",
     "en": "2× built-in",
     "tr": "2× dahili",
     "zh": "2× 内置"
   },
   "2x встроенные, 1.5 dBi": {
-    "uz": "2 ta o'rnatilgan, 1.5 dBi",
+    "uz": "2 ta oʻrnatilgan, 1.5 dBi",
     "en": "2 built-in, 1.5 dBi",
     "tr": "2 dahili, 1,5 dBi",
     "zh": "2 根内置，1.5 dBi"
@@ -2940,7 +2940,7 @@
     "zh": "3 年"
   },
   "3 дополнительных режима": {
-    "uz": "3 ta qo‘shimcha rejim",
+    "uz": "3 ta qoʻshimcha rejim",
     "en": "3 additional modes",
     "tr": "3 ek mod",
     "zh": "3 种附加模式"
@@ -3030,7 +3030,7 @@
     "zh": "3.5 mm 接口"
   },
   "3.6mm фиксированный": {
-    "uz": "3.6 mm qat'iy",
+    "uz": "3.6 mm qatʼiy",
     "en": "3.6 mm fixed",
     "tr": "3,6 mm sabit",
     "zh": "3.6 mm 定焦"
@@ -3067,7 +3067,7 @@
   },
   "30 метров": {
     "uz": "30 metr",
-    "en": "30 metres",
+    "en": "30 meters",
     "tr": "30 metre",
     "zh": "30 米"
   },
@@ -3103,7 +3103,7 @@
   },
   "300 метров": {
     "uz": "300 metr",
-    "en": "300 metres",
+    "en": "300 meters",
     "tr": "300 metre",
     "zh": "300 米"
   },
@@ -3145,12 +3145,12 @@
   },
   "305 метров": {
     "uz": "305 metr",
-    "en": "305 metres",
+    "en": "305 meters",
     "tr": "305 metre",
     "zh": "305 米"
   },
   "30m белый свет и ИК": {
-    "uz": "30 m oq yorug'lik va IQ",
+    "uz": "30 m oq yorugʻlik va IQ",
     "en": "30 m white light and IR",
     "tr": "30 m beyaz ışık ve IR",
     "zh": "白光与红外 30 米"
@@ -3300,7 +3300,7 @@
     "zh": "水平 360°，垂直 130°"
   },
   "360° по горизонтали": {
-    "uz": "gorizontal bo'yicha 360°",
+    "uz": "gorizontal boʻyicha 360°",
     "en": "360° horizontally",
     "tr": "yatayda 360°",
     "zh": "水平方向 360°"
@@ -3372,7 +3372,7 @@
     "zh": "4 × 64 位 ARMv8-A Cortex-A57"
   },
   "4 × без PoE": {
-    "uz": "4 × PoE'siz",
+    "uz": "4 × PoEʼsiz",
     "en": "4 × without PoE",
     "tr": "4 × PoE'siz",
     "zh": "4 × 无 PoE"
@@ -3444,7 +3444,7 @@
     "zh": "4 门"
   },
   "4 дополнительных режима": {
-    "uz": "4 ta qo‘shimcha rejim",
+    "uz": "4 ta qoʻshimcha rejim",
     "en": "4 additional modes",
     "tr": "4 ek mod",
     "zh": "4 种附加模式"
@@ -3516,7 +3516,7 @@
     "zh": "4 LED"
   },
   "4 светодиода (белый свет + ИК)": {
-    "uz": "4 ta svetodiod (oq yorug'lik + IQ)",
+    "uz": "4 ta svetodiod (oq yorugʻlik + IQ)",
     "en": "4 LEDs (white light + IR)",
     "tr": "4 LED (beyaz ışık + IR)",
     "zh": "4 颗 LED（白光 + 红外）"
@@ -3528,13 +3528,13 @@
     "zh": "4 cm"
   },
   "4 фиксированные внешние": {
-    "uz": "4 ta qat'iy tashqi",
+    "uz": "4 ta qatʼiy tashqi",
     "en": "4 fixed external",
     "tr": "4 sabit harici",
     "zh": "4 根固定外置"
   },
   "4 фиксированные наружные": {
-    "uz": "4 ta qat'iy tashqi",
+    "uz": "4 ta qatʼiy tashqi",
     "en": "4 fixed external",
     "tr": "4 sabit harici",
     "zh": "4 根固定外置"
@@ -3606,7 +3606,7 @@
     "zh": "4 路 HDTVI、AHD、模拟，1 路 RCA"
   },
   "4-осевой": {
-    "uz": "4 o'qli",
+    "uz": "4 oʻqli",
     "en": "4-axis",
     "tr": "4 eksenli",
     "zh": "四轴"
@@ -3648,7 +3648,7 @@
     "zh": "4.2（用于适配）"
   },
   "4.3-дюймовый емкостный сенсорный": {
-    "uz": "4.3 dyuymli sig'imli sensorli",
+    "uz": "4.3 dyuymli sigʻimli sensorli",
     "en": "4.3-inch capacitive touchscreen",
     "tr": "4,3 inç kapasitif dokunmatik",
     "zh": "4.3 英寸电容触摸屏"
@@ -3685,7 +3685,7 @@
   },
   "4.3\" TFT цветной сенсорный": {
     "uz": "4.3\" TFT rangli sensorli",
-    "en": "4.3\" TFT colour touchscreen",
+    "en": "4.3\" TFT color touchscreen",
     "tr": "4,3\" TFT renkli dokunmatik",
     "zh": "4.3 英寸 TFT 彩色触摸屏"
   },
@@ -3996,7 +3996,7 @@
     "zh": "500 万"
   },
   "5 млн проходов": {
-    "uz": "5 mln o'tish",
+    "uz": "5 mln oʻtish",
     "en": "5 million passages",
     "tr": "5 milyon geçiş",
     "zh": "500 万次通行"
@@ -4057,7 +4057,7 @@
   },
   "5\" TFT цветной сенсорный": {
     "uz": "5\" TFT rangli sensorli",
-    "en": "5\" TFT colour touchscreen",
+    "en": "5\" TFT color touchscreen",
     "tr": "5\" TFT renkli dokunmatik",
     "zh": "5 英寸 TFT 彩色触摸屏"
   },
@@ -4278,7 +4278,7 @@
     "zh": "6 根外置"
   },
   "6 встроенных всенаправленных": {
-    "uz": "6 ta o'rnatilgan har tomonlama",
+    "uz": "6 ta oʻrnatilgan har tomonlama",
     "en": "6 built-in omnidirectional",
     "tr": "6 dahili çok yönlü",
     "zh": "6 根内置全向天线"
@@ -4326,7 +4326,7 @@
     "zh": "6.5 毫秒"
   },
   "6+ языков включая русский": {
-    "uz": "rus tilini ham qo'shganda 6+ til",
+    "uz": "rus tilini ham qoʻshganda 6+ til",
     "en": "6+ languages including Russian",
     "tr": "Rusça dahil 6+ dil",
     "zh": "6 种以上语言（含俄语）"
@@ -4357,7 +4357,7 @@
   },
   "60 метров": {
     "uz": "60 metr",
-    "en": "60 metres",
+    "en": "60 meters",
     "tr": "60 metre",
     "zh": "60 米"
   },
@@ -4434,13 +4434,13 @@
     "zh": "63 个"
   },
   "64 датчика/кнопки + 16 камер/звонков": {
-    "uz": "64 ta datchik/tugma + 16 ta kamera/qo'ng'iroq",
+    "uz": "64 ta datchik/tugma + 16 ta kamera/qoʻngʻiroq",
     "en": "64 sensors/buttons + 16 cameras/doorbells",
     "tr": "64 sensör/buton + 16 kamera/zil",
     "zh": "64 个传感器/按钮 + 16 台摄像机/门铃"
   },
   "64 датчика/кнопки + 4 камеры/звонка": {
-    "uz": "64 ta datchik/tugma + 4 ta kamera/qo'ng'iroq",
+    "uz": "64 ta datchik/tugma + 4 ta kamera/qoʻngʻiroq",
     "en": "64 sensors/buttons + 4 cameras/doorbells",
     "tr": "64 sensör/buton + 4 kamera/zil",
     "zh": "64 个传感器/按钮 + 4 台摄像机/门铃"
@@ -4506,7 +4506,7 @@
     "zh": "6kV 浪涌、8kV 静电、过热保护"
   },
   "6m на выбор": {
-    "uz": "6 m tanlash bo‘yicha",
+    "uz": "6 m tanlash boʻyicha",
     "en": "6 m optional",
     "tr": "6 m seçime bağlı",
     "zh": "6 米可选"
@@ -4549,19 +4549,19 @@
   },
   "7 дюймов, 1024 × 600, Цветной сенсорный": {
     "uz": "7 dyuym, 1024 × 600, rangli sensorli",
-    "en": "7 inch, 1024 × 600, colour touchscreen",
+    "en": "7 inch, 1024 × 600, color touchscreen",
     "tr": "7 inç, 1024 × 600, renkli dokunmatik",
     "zh": "7 英寸，1024 × 600，彩色触摸屏"
   },
   "7 дюймов, 1024 × 600, Цветной IPS LCD": {
     "uz": "7 dyuym, 1024 × 600, rangli IPS LCD",
-    "en": "7 inch, 1024 × 600, colour IPS LCD",
+    "en": "7 inch, 1024 × 600, color IPS LCD",
     "tr": "7 inç, 1024 × 600, renkli IPS LCD",
     "zh": "7 英寸，1024 × 600，彩色 IPS LCD"
   },
   "7 дюймов, 1024 × 600, Цветной TFT LCD": {
     "uz": "7 dyuym, 1024 × 600, rangli TFT LCD",
-    "en": "7 inch, 1024 × 600, colour TFT LCD",
+    "en": "7 inch, 1024 × 600, color TFT LCD",
     "tr": "7 inç, 1024 × 600, renkli TFT LCD",
     "zh": "7 英寸，1024 × 600，彩色 TFT LCD"
   },
@@ -4639,7 +4639,7 @@
   },
   "7\" TFT цветной сенсорный": {
     "uz": "7\" TFT rangli sensorli",
-    "en": "7\" TFT colour touchscreen",
+    "en": "7\" TFT color touchscreen",
     "tr": "7\" TFT renkli dokunmatik",
     "zh": "7 英寸 TFT 彩色触摸屏"
   },
@@ -4692,7 +4692,7 @@
     "zh": "7 Ah"
   },
   "8 (4 реле, 4 доп.)": {
-    "uz": "8 (4 rele, 4 qo'shimcha)",
+    "uz": "8 (4 rele, 4 qoʻshimcha)",
     "en": "8 (4 relays, 4 auxiliary)",
     "tr": "8 (4 röle, 4 yardımcı)",
     "zh": "8（4 路继电器、4 路辅助）"
@@ -4782,7 +4782,7 @@
     "zh": "8 芯"
   },
   "8 фиксированных внешних": {
-    "uz": "8 ta qat'iy tashqi",
+    "uz": "8 ta qatʼiy tashqi",
     "en": "8 fixed external",
     "tr": "8 sabit harici",
     "zh": "8 根固定外置"
@@ -4825,7 +4825,7 @@
   },
   "8×Gigabit PoE + 2×Gigabit SFP (оптика)": {
     "uz": "8× Gigabit PoE + 2× Gigabit SFP (optika)",
-    "en": "8× gigabit PoE + 2× gigabit SFP (fibre)",
+    "en": "8× gigabit PoE + 2× gigabit SFP (fiber)",
     "tr": "8× gigabit PoE + 2× gigabit SFP (fiber)",
     "zh": "8 个千兆 PoE 口 + 2 个千兆 SFP 光口"
   },
@@ -4932,7 +4932,7 @@
     "zh": "8K 个地址"
   },
   "8K или двойной 4K": {
-    "uz": "8K yoki qo'sh 4K",
+    "uz": "8K yoki qoʻsh 4K",
     "en": "8K or dual 4K",
     "tr": "8K veya çift 4K",
     "zh": "8K 或双 4K"
@@ -5010,7 +5010,7 @@
     "zh": "楼宇自控"
   },
   "Автоматизированные участки проезда": {
-    "uz": "Avtomatlashtirilgan o'tish uchastkalari",
+    "uz": "Avtomatlashtirilgan oʻtish uchastkalari",
     "en": "Automated traffic lanes",
     "tr": "Otomatik geçiş şeritleri",
     "zh": "自动化通行车道"
@@ -5028,13 +5028,13 @@
     "zh": "自动抓拍与存储，最多 100 张"
   },
   "Автоматическое опускание барьера": {
-    "uz": "To'siqni avtomatik tushirish",
+    "uz": "Toʻsiqni avtomatik tushirish",
     "en": "Automatic barrier lowering",
     "tr": "Bariyerin otomatik inmesi",
     "zh": "道闸自动落杆"
   },
   "Автоматическое опускание при отключении питания": {
-    "uz": "Quvvat o'chganda avtomatik tushish",
+    "uz": "Quvvat oʻchganda avtomatik tushish",
     "en": "Automatic lowering on power failure",
     "tr": "Elektrik kesintisinde otomatik inme",
     "zh": "断电时自动落杆"
@@ -5160,7 +5160,7 @@
     "zh": "数据库管理端、服务端、值守运行端"
   },
   "Администрирование БД": {
-    "uz": "Ma'lumotlar bazasini administratorlash",
+    "uz": "Maʼlumotlar bazasini administratorlash",
     "en": "Database administration",
     "tr": "Veritabanı yönetimi",
     "zh": "数据库管理"
@@ -5190,19 +5190,19 @@
     "zh": "总线编址模块"
   },
   "Адресная метка (пожарная сигнализация)": {
-    "uz": "Adresli belgi (yong'in signalizatsiyasi)",
+    "uz": "Adresli belgi (yongʻin signalizatsiyasi)",
     "en": "Addressable module (fire alarm)",
     "tr": "Adresli modül (yangın alarmı)",
     "zh": "总线编址模块（火灾报警）"
   },
   "Адресная пожарная сигнализация": {
-    "uz": "Adresli yong'in signalizatsiyasi",
+    "uz": "Adresli yongʻin signalizatsiyasi",
     "en": "Addressable fire alarm",
     "tr": "Adresli yangın alarmı",
     "zh": "总线制火灾报警"
   },
   "Адресная приёмно-контрольная панель пожарной сигнализации": {
-    "uz": "Adresli yong'in signalizatsiyasi qabul-nazorat paneli",
+    "uz": "Adresli yongʻin signalizatsiyasi qabul-nazorat paneli",
     "en": "Addressable fire alarm control panel",
     "tr": "Adresli yangın alarm kontrol paneli",
     "zh": "总线制火灾报警控制器"
@@ -5316,13 +5316,13 @@
     "zh": "总线中继器"
   },
   "Адресный ручной пожарный извещатель": {
-    "uz": "Adresli qo'lda yong'in izvestiteli",
+    "uz": "Adresli qoʻlda yongʻin izvestiteli",
     "en": "Addressable manual call point",
     "tr": "Adresli yangın butonu",
     "zh": "总线制手动报警按钮"
   },
   "Адресный свето-звуковой оповещатель": {
-    "uz": "Adresli yorug'lik-ovozli ogohlantirgich",
+    "uz": "Adresli yorugʻlik-ovozli ogohlantirgich",
     "en": "Addressable audible-visual sounder",
     "tr": "Adresli sesli-ışıklı uyarıcı",
     "zh": "总线制声光警报器"
@@ -5340,7 +5340,7 @@
     "zh": "加油站"
   },
   "АЗС, нефтебазы, химические производства": {
-    "uz": "Yoqilg'i quyish shoxobchalari, neft bazalari, kimyo ishlab chiqarishlari",
+    "uz": "Yoqilgʻi quyish shoxobchalari, neft bazalari, kimyo ishlab chiqarishlari",
     "en": "Filling stations, oil depots, chemical plants",
     "tr": "Akaryakıt istasyonları, petrol depoları, kimya tesisleri",
     "zh": "加油站、油库、化工企业"
@@ -5377,7 +5377,7 @@
   },
   "Акрил, алюминий": {
     "uz": "Akril, alyuminiy",
-    "en": "Acrylic, aluminium",
+    "en": "Acrylic, aluminum",
     "tr": "Akrilik, alüminyum",
     "zh": "亚克力、铝材"
   },
@@ -5449,37 +5449,37 @@
   },
   "Алюминиевый сплав": {
     "uz": "Alyuminiy qotishma",
-    "en": "Aluminium alloy",
+    "en": "Aluminum alloy",
     "tr": "Alüminyum alaşım",
     "zh": "铝合金"
   },
   "Алюминиевый сплав и сталь": {
-    "uz": "Alyuminiy qotishma va po'lat",
-    "en": "Aluminium alloy and steel",
+    "uz": "Alyuminiy qotishma va poʻlat",
+    "en": "Aluminum alloy and steel",
     "tr": "Alüminyum alaşım ve çelik",
     "zh": "铝合金与钢材"
   },
   "Алюминиевый сплав и стекло": {
     "uz": "Alyuminiy qotishma va shisha",
-    "en": "Aluminium alloy and glass",
+    "en": "Aluminum alloy and glass",
     "tr": "Alüminyum alaşım ve cam",
     "zh": "铝合金与玻璃"
   },
   "алюминий": {
     "uz": "alyuminiy",
-    "en": "aluminium",
+    "en": "aluminum",
     "tr": "alüminyum",
     "zh": "铝材"
   },
   "Алюминий": {
     "uz": "Alyuminiy",
-    "en": "Aluminium",
+    "en": "Aluminum",
     "tr": "Alüminyum",
     "zh": "铝"
   },
   "Алюминий, стекло": {
     "uz": "Alyuminiy, shisha",
-    "en": "Aluminium, glass",
+    "en": "Aluminum, glass",
     "tr": "Alüminyum, cam",
     "zh": "铝材、玻璃"
   },
@@ -5502,7 +5502,7 @@
     "zh": "膨胀螺栓固定"
   },
   "аномальный шум": {
-    "uz": "g‘ayritabiiy shovqin",
+    "uz": "gʻayritabiiy shovqin",
     "en": "abnormal noise",
     "tr": "anormal gürültü",
     "zh": "异常声响"
@@ -5568,7 +5568,7 @@
     "zh": "逃生推杆"
   },
   "Антипаника, индикация направления": {
-    "uz": "Antipanika, yo'nalish indikatsiyasi",
+    "uz": "Antipanika, yoʻnalish indikatsiyasi",
     "en": "Anti-panic, direction indication",
     "tr": "Anti-panik, yön göstergesi",
     "zh": "防夹逃生、方向指示"
@@ -5580,19 +5580,19 @@
     "zh": "硬件加密狗"
   },
   "АРМ \"Орион Про\"": {
-    "uz": "«Orion Pro» ish o‘rni",
+    "uz": "«Orion Pro» ish oʻrni",
     "en": "Orion Pro workstation",
     "tr": "Orion Pro iş istasyonu",
     "zh": "Orion Pro 工作站"
   },
   "АРМ оператора ИСО «Орион»": {
-    "uz": "«Orion» tizimi operatorining ish o'rni",
+    "uz": "«Orion» tizimi operatorining ish oʻrni",
     "en": "Orion system operator workstation",
     "tr": "Orion sistemi operatör iş istasyonu",
     "zh": "Orion 系统操作员工作站"
   },
   "арочный (сквозной) металлодетектор": {
-    "uz": "arkali (o'tuvchi) metall detektori",
+    "uz": "arkali (oʻtuvchi) metall detektori",
     "en": "walk-through metal detector",
     "tr": "kapı tipi metal dedektörü",
     "zh": "通过式金属探测门"
@@ -5718,7 +5718,7 @@
     "zh": "9V 电池（随附）"
   },
   "Башневой корпус, Домашняя/офисная сеть": {
-    "uz": "Minora korpus, uy/ofis tarmog'i",
+    "uz": "Minora korpus, uy/ofis tarmogʻi",
     "en": "Tower chassis, home/office network",
     "tr": "Kule kasa, ev/ofis ağı",
     "zh": "塔式机身，家庭/办公网络"
@@ -5958,31 +5958,31 @@
     "zh": "无线红外传感器"
   },
   "Беспроводной мост": {
-    "uz": "Simsiz ko'prik",
+    "uz": "Simsiz koʻprik",
     "en": "Wireless bridge",
     "tr": "Kablosuz köprü",
     "zh": "无线网桥"
   },
   "Беспроводной мост (комплект 2 шт)": {
-    "uz": "Simsiz ko'prik (2 dona komplekt)",
+    "uz": "Simsiz koʻprik (2 dona komplekt)",
     "en": "Wireless bridge (kit of 2)",
     "tr": "Kablosuz köprü (2'li set)",
     "zh": "无线网桥（2 台套装）"
   },
   "Беспроводной мост (комплект)": {
-    "uz": "Simsiz ko'prik (komplekt)",
+    "uz": "Simsiz koʻprik (komplekt)",
     "en": "Wireless bridge (kit)",
     "tr": "Kablosuz köprü (set)",
     "zh": "无线网桥（套装）"
   },
   "беспроводной настенный переключатель": {
-    "uz": "simsiz devor o'chirgichi",
+    "uz": "simsiz devor oʻchirgichi",
     "en": "wireless wall switch",
     "tr": "kablosuz duvar anahtarı",
     "zh": "无线墙壁开关"
   },
   "беспроводной охранный хаб": {
-    "uz": "simsiz qo'riqlash xabi",
+    "uz": "simsiz qoʻriqlash xabi",
     "en": "wireless security hub",
     "tr": "kablosuz güvenlik hub'ı",
     "zh": "无线安防网关"
@@ -5994,19 +5994,19 @@
     "zh": "静音运行"
   },
   "Бесщеточный DC": {
-    "uz": "Cho'tkasiz DC",
+    "uz": "Choʻtkasiz DC",
     "en": "Brushless DC",
     "tr": "Fırçasız DC",
     "zh": "直流无刷"
   },
   "Бесщеточный DC с низким шумом": {
-    "uz": "Past shovqinli cho'tkasiz DC",
+    "uz": "Past shovqinli choʻtkasiz DC",
     "en": "Low-noise brushless DC",
     "tr": "Düşük gürültülü fırçasız DC",
     "zh": "低噪声直流无刷"
   },
   "Бесщеточный DC-мотор": {
-    "uz": "Cho'tkasiz DC-motor",
+    "uz": "Choʻtkasiz DC-motor",
     "en": "Brushless DC motor",
     "tr": "Fırçasız DC motor",
     "zh": "直流无刷电机"
@@ -6048,7 +6048,7 @@
     "zh": "锁定"
   },
   "Богатый набор": {
-    "uz": "Boy to'plam",
+    "uz": "Boy toʻplam",
     "en": "Extensive set",
     "tr": "Zengin set",
     "zh": "功能丰富"
@@ -6090,7 +6090,7 @@
     "zh": "大型（工程级）"
   },
   "Больше объектов и зон": {
-    "uz": "Ko'proq obyekt va zonalar",
+    "uz": "Koʻproq obyekt va zonalar",
     "en": "More sites and zones",
     "tr": "Daha fazla tesis ve bölge",
     "zh": "更多项目与防区"
@@ -6108,7 +6108,7 @@
     "zh": "大型厅堂、仓库、中庭"
   },
   "большое число 3.5\" LFF + NVMe": {
-    "uz": "ko'p sonli 3.5\" LFF + NVMe",
+    "uz": "koʻp sonli 3.5\" LFF + NVMe",
     "en": "large number of 3.5\" LFF + NVMe",
     "tr": "çok sayıda 3,5\" LFF + NVMe",
     "zh": "大量 3.5 英寸 LFF 盘位 + NVMe"
@@ -6132,7 +6132,7 @@
     "zh": "遥控器"
   },
   "Бумажная": {
-    "uz": "Qog'oz",
+    "uz": "Qogʻoz",
     "en": "Paper",
     "tr": "Kâğıt",
     "zh": "纸质"
@@ -6174,7 +6174,7 @@
     "zh": "安装于机柜侧部区域"
   },
   "В дорожное покрытие": {
-    "uz": "Yo'l qoplamasiga",
+    "uz": "Yoʻl qoplamasiga",
     "en": "Into the road surface",
     "tr": "Yol kaplamasına",
     "zh": "嵌入路面"
@@ -6204,19 +6204,19 @@
     "zh": "室内"
   },
   "в помещении / на улице": {
-    "uz": "xonada / ko'chada",
+    "uz": "xonada / koʻchada",
     "en": "indoor / outdoor",
     "tr": "iç mekân / dış mekân",
     "zh": "室内 / 室外"
   },
   "в помещении / на улице (if sheltered)": {
-    "uz": "xonada / ko'chada (koziraq ostida)",
+    "uz": "xonada / koʻchada (koziraq ostida)",
     "en": "indoor / outdoor (if sheltered)",
     "tr": "iç mekân / dış mekân (korunaklıysa)",
     "zh": "室内 / 室外（有遮蔽时）"
   },
   "В помещении и на улице": {
-    "uz": "Xonada va ko'chada",
+    "uz": "Xonada va koʻchada",
     "en": "Indoor and outdoor",
     "tr": "İç ve dış mekân",
     "zh": "室内与室外"
@@ -6234,13 +6234,13 @@
     "zh": "插座式"
   },
   "в среднем 1 с per movement": {
-    "uz": "o‘rtacha har harakatga 1 s",
+    "uz": "oʻrtacha har harakatga 1 s",
     "en": "average 1 s per movement",
     "tr": "ortalama hareket başına 1 s",
     "zh": "平均每次动作 1 秒"
   },
   "в среднем 1 с per movement (регулируемое open/close timing)": {
-    "uz": "har bir harakat uchun o'rtacha 1 s (sozlanadigan ochilish/yopilish)",
+    "uz": "har bir harakat uchun oʻrtacha 1 s (sozlanadigan ochilish/yopilish)",
     "en": "average 1 s per movement (adjustable open/close timing)",
     "tr": "hareket başına ortalama 1 sn (ayarlanabilir açma/kapama)",
     "zh": "每次动作平均 1 秒（开闭时序可调）"
@@ -6324,7 +6324,7 @@
     "zh": "防爆"
   },
   "Взрывозащищённое, нержавеющая сталь": {
-    "uz": "Portlashdan himoyalangan, zanglamaydigan po'lat",
+    "uz": "Portlashdan himoyalangan, zanglamaydigan poʻlat",
     "en": "Explosion-proof, stainless steel",
     "tr": "Ex-proof, paslanmaz çelik",
     "zh": "防爆型，不锈钢"
@@ -6396,7 +6396,7 @@
     "zh": "可视对讲（独立式）"
   },
   "Видеодомофон со встроенной камерой": {
-    "uz": "O'rnatilgan kamerali videodomofon",
+    "uz": "Oʻrnatilgan kamerali videodomofon",
     "en": "Video intercom with built-in camera",
     "tr": "Dahili kameralı görüntülü interkom",
     "zh": "内置摄像头的可视对讲"
@@ -6414,7 +6414,7 @@
     "zh": "可视对讲、手机管理"
   },
   "Видеоинтерком, управление охраной": {
-    "uz": "Videointerkom, qo'riqlashni boshqarish",
+    "uz": "Videointerkom, qoʻriqlashni boshqarish",
     "en": "Video intercom, security control",
     "tr": "Görüntülü interkom, güvenlik kontrolü",
     "zh": "可视对讲、安防控制"
@@ -6432,7 +6432,7 @@
     "zh": "视频监控"
   },
   "Видеонаблюдение, железные дороги, транспорт, энергетика": {
-    "uz": "Videokuzatuv, temir yo'llar, transport, energetika",
+    "uz": "Videokuzatuv, temir yoʻllar, transport, energetika",
     "en": "CCTV, railways, transport, power industry",
     "tr": "Kamera sistemleri, demiryolları, ulaşım, enerji",
     "zh": "视频监控、铁路、交通、电力"
@@ -6462,19 +6462,19 @@
     "zh": "螺钉式"
   },
   "Витая пара": {
-    "uz": "O'ralgan juftlik",
+    "uz": "Oʻralgan juftlik",
     "en": "Twisted pair",
     "tr": "Burgulu çift",
     "zh": "双绞线"
   },
   "Вкл/выкл": {
-    "uz": "Yoq/o‘chir",
+    "uz": "Yoq/oʻchir",
     "en": "On/off",
     "tr": "Aç/kapat",
     "zh": "开/关"
   },
   "Вкл/выкл, диммирование поворотом": {
-    "uz": "Yoqish/o'chirish, burab dimmerlash",
+    "uz": "Yoqish/oʻchirish, burab dimmerlash",
     "en": "On/off, rotary dimming",
     "tr": "Aç/kapa, çevirmeli karartma",
     "zh": "开关、旋转调光"
@@ -6612,7 +6612,7 @@
     "zh": "探测器内部"
   },
   "Внутри охраняемой зоны": {
-    "uz": "Qo'riqlanadigan zona ichida",
+    "uz": "Qoʻriqlanadigan zona ichida",
     "en": "Inside the protected area",
     "tr": "Korunan bölgenin içinde",
     "zh": "受保护区域内"
@@ -6636,31 +6636,31 @@
     "zh": "Vodoley"
   },
   "Водонепроницаемая": {
-    "uz": "Suv o'tkazmaydigan",
+    "uz": "Suv oʻtkazmaydigan",
     "en": "Waterproof",
     "tr": "Su geçirmez",
     "zh": "防水"
   },
   "Водонепроницаемая конструкция": {
-    "uz": "Suv o'tkazmaydigan konstruksiya",
+    "uz": "Suv oʻtkazmaydigan konstruksiya",
     "en": "Waterproof construction",
     "tr": "Su geçirmez yapı",
     "zh": "防水结构"
   },
   "водонепроницаемый": {
-    "uz": "suv o‘tkazmaydigan",
+    "uz": "suv oʻtkazmaydigan",
     "en": "waterproof",
     "tr": "su geçirmez",
     "zh": "防水"
   },
   "Водонепроницаемый": {
-    "uz": "Suv o'tkazmaydigan",
+    "uz": "Suv oʻtkazmaydigan",
     "en": "Waterproof",
     "tr": "Su geçirmez",
     "zh": "防水"
   },
   "водонепроницаемый, накладной монтаж": {
-    "uz": "suv o'tkazmaydigan, ustama montaj",
+    "uz": "suv oʻtkazmaydigan, ustama montaj",
     "en": "waterproof, surface mounting",
     "tr": "su geçirmez, sıva üstü montaj",
     "zh": "防水，明装"
@@ -6673,7 +6673,7 @@
   },
   "Волоконно-оптический": {
     "uz": "Tolali-optik",
-    "en": "Fibre-optic",
+    "en": "Fiber-optic",
     "tr": "Fiber optik",
     "zh": "光纤式"
   },
@@ -6696,7 +6696,7 @@
     "zh": "360° 旋转"
   },
   "Вращение 360°, наклон ±45°": {
-    "uz": "360° aylanish, ±45° og'ish",
+    "uz": "360° aylanish, ±45° ogʻish",
     "en": "360° pan, ±45° tilt",
     "tr": "360° dönüş, ±45° eğim",
     "zh": "水平 360°，俯仰 ±45°"
@@ -6708,13 +6708,13 @@
     "zh": "嵌装/明装"
   },
   "врезной": {
-    "uz": "o‘rnatma",
+    "uz": "oʻrnatma",
     "en": "mortise",
     "tr": "gömme",
     "zh": "嵌入式"
   },
   "Врезной": {
-    "uz": "Kesib o'rnatiladigan",
+    "uz": "Kesib oʻrnatiladigan",
     "en": "Mortise",
     "tr": "Gömme",
     "zh": "嵌入式"
@@ -6726,187 +6726,187 @@
     "zh": "全天候"
   },
   "встроенная": {
-    "uz": "o'rnatilgan",
+    "uz": "oʻrnatilgan",
     "en": "built-in",
     "tr": "dahili",
     "zh": "内置"
   },
   "Встроенная": {
-    "uz": "O'rnatilgan",
+    "uz": "Oʻrnatilgan",
     "en": "Built-in",
     "tr": "Dahili",
     "zh": "内置"
   },
   "Встроенная 90 дБ": {
-    "uz": "O'rnatilgan 90 dB",
+    "uz": "Oʻrnatilgan 90 dB",
     "en": "Built-in 90 dB",
     "tr": "Dahili 90 dB",
     "zh": "内置 90 dB"
   },
   "Встроенная ИК": {
-    "uz": "O'rnatilgan IQ",
+    "uz": "Oʻrnatilgan IQ",
     "en": "Built-in IR",
     "tr": "Dahili IR",
     "zh": "内置红外"
   },
   "Встроенная раздача": {
-    "uz": "O'rnatilgan tarqatish",
+    "uz": "Oʻrnatilgan tarqatish",
     "en": "Built-in distribution",
     "tr": "Dahili dağıtım",
     "zh": "内置分配"
   },
   "Встроенная, широкий угол": {
-    "uz": "O'rnatilgan, keng burchak",
+    "uz": "Oʻrnatilgan, keng burchak",
     "en": "Built-in, wide angle",
     "tr": "Dahili, geniş açı",
     "zh": "内置广角"
   },
   "Встроенные": {
-    "uz": "O'rnatilgan",
+    "uz": "Oʻrnatilgan",
     "en": "Built-in",
     "tr": "Dahili",
     "zh": "内置"
   },
   "встроенные микрофон и динамик": {
-    "uz": "o'rnatilgan mikrofon va dinamik",
+    "uz": "oʻrnatilgan mikrofon va dinamik",
     "en": "built-in microphone and speaker",
     "tr": "dahili mikrofon ve hoparlör",
     "zh": "内置麦克风与扬声器"
   },
   "Встроенные микрофон и динамик": {
-    "uz": "O'rnatilgan mikrofon va dinamik",
+    "uz": "Oʻrnatilgan mikrofon va dinamik",
     "en": "Built-in microphone and speaker",
     "tr": "Dahili mikrofon ve hoparlör",
     "zh": "内置麦克风与扬声器"
   },
   "встроенный": {
-    "uz": "o'rnatilgan",
+    "uz": "oʻrnatilgan",
     "en": "built-in",
     "tr": "dahili",
     "zh": "内置"
   },
   "Встроенный": {
-    "uz": "O'rnatilgan",
+    "uz": "Oʻrnatilgan",
     "en": "Built-in",
     "tr": "Dahili",
     "zh": "内置"
   },
   "встроенный аккумулятор": {
-    "uz": "o‘rnatilgan akkumulyator",
+    "uz": "oʻrnatilgan akkumulyator",
     "en": "built-in battery",
     "tr": "dahili pil",
     "zh": "内置电池"
   },
   "встроенный двойной": {
-    "uz": "o'rnatilgan qo'sh",
+    "uz": "oʻrnatilgan qoʻsh",
     "en": "built-in dual",
     "tr": "dahili çift",
     "zh": "内置双路"
   },
   "Встроенный двойной": {
-    "uz": "O'rnatilgan qo'sh",
+    "uz": "Oʻrnatilgan qoʻsh",
     "en": "Built-in dual",
     "tr": "Dahili çift",
     "zh": "内置双路"
   },
   "встроенный двойной (-2U)": {
-    "uz": "o'rnatilgan qo'sh (-2U)",
+    "uz": "oʻrnatilgan qoʻsh (-2U)",
     "en": "built-in dual (-2U)",
     "tr": "dahili çift (-2U)",
     "zh": "内置双路（-2U）"
   },
   "Встроенный двойной микрофон": {
-    "uz": "O'rnatilgan qo'sh mikrofon",
+    "uz": "Oʻrnatilgan qoʻsh mikrofon",
     "en": "Built-in dual microphone",
     "tr": "Dahili çift mikrofon",
     "zh": "内置双麦克风"
   },
   "Встроенный двойной микрофон + PA-динамик": {
-    "uz": "O'rnatilgan qo'sh mikrofon + PA-dinamik",
+    "uz": "Oʻrnatilgan qoʻsh mikrofon + PA-dinamik",
     "en": "Built-in dual microphone + PA speaker",
     "tr": "Dahili çift mikrofon + anons hoparlörü",
     "zh": "内置双麦克风 + 广播扬声器"
   },
   "Встроенный двусторонний": {
-    "uz": "O'rnatilgan ikki tomonlama",
+    "uz": "Oʻrnatilgan ikki tomonlama",
     "en": "Built-in two-way",
     "tr": "Dahili çift yönlü",
     "zh": "内置双向"
   },
   "Встроенный звуковой": {
-    "uz": "O'rnatilgan ovozli",
+    "uz": "Oʻrnatilgan ovozli",
     "en": "Built-in audible",
     "tr": "Dahili sesli",
     "zh": "内置声响"
   },
   "Встроенный изолятор КЗ": {
-    "uz": "O'rnatilgan qisqa tutashuv izolyatori",
+    "uz": "Oʻrnatilgan qisqa tutashuv izolyatori",
     "en": "Built-in short-circuit isolator",
     "tr": "Dahili kısa devre izolatörü",
     "zh": "内置短路隔离器"
   },
   "Встроенный микрофон": {
-    "uz": "O'rnatilgan mikrofon",
+    "uz": "Oʻrnatilgan mikrofon",
     "en": "Built-in microphone",
     "tr": "Dahili mikrofon",
     "zh": "内置麦克风"
   },
   "Встроенный микрофон и динамик": {
-    "uz": "O'rnatilgan mikrofon va dinamik",
+    "uz": "Oʻrnatilgan mikrofon va dinamik",
     "en": "Built-in microphone and speaker",
     "tr": "Dahili mikrofon ve hoparlör",
     "zh": "内置麦克风与扬声器"
   },
   "Встроенный микрофон, AI детектор человека": {
-    "uz": "O'rnatilgan mikrofon, SI odam detektori",
+    "uz": "Oʻrnatilgan mikrofon, SI odam detektori",
     "en": "Built-in microphone, AI human detection",
     "tr": "Dahili mikrofon, yapay zekâ insan algılama",
     "zh": "内置麦克风、AI 人形检测"
   },
   "Встроенный модуль": {
-    "uz": "O'rnatilgan modul",
+    "uz": "Oʻrnatilgan modul",
     "en": "Built-in module",
     "tr": "Dahili modül",
     "zh": "内置模块"
   },
   "встроенный обогреватель": {
-    "uz": "o‘rnatilgan isitgich",
+    "uz": "oʻrnatilgan isitgich",
     "en": "built-in heater",
     "tr": "dahili ısıtıcı",
     "zh": "内置加热器"
   },
   "Встроенный с двухсторонней аудио": {
-    "uz": "Ikki tomonlama audioli o'rnatilgan",
+    "uz": "Ikki tomonlama audioli oʻrnatilgan",
     "en": "Built-in with two-way audio",
     "tr": "Çift yönlü sesli dahili",
     "zh": "内置，支持双向语音"
   },
   "Встроенный считыватель": {
-    "uz": "O‘rnatilgan o‘qigich",
+    "uz": "Oʻrnatilgan oʻqigich",
     "en": "Built-in reader",
     "tr": "Dahili okuyucu",
     "zh": "内置读头"
   },
   "Встроенный считыватель (бесконтактные карты)": {
-    "uz": "O'rnatilgan o'qigich (kontaktsiz kartalar)",
+    "uz": "Oʻrnatilgan oʻqigich (kontaktsiz kartalar)",
     "en": "Built-in reader (contactless cards)",
     "tr": "Dahili okuyucu (temassız kartlar)",
     "zh": "内置读头（非接触卡）"
   },
   "Встроенный электрощиток": {
-    "uz": "O'rnatilgan elektr shchiti",
+    "uz": "Oʻrnatilgan elektr shchiti",
     "en": "Built-in electrical panel",
     "tr": "Dahili elektrik panosu",
     "zh": "内置配电箱"
   },
   "встроенный ANPR-движок": {
-    "uz": "o'rnatilgan ANPR-dvigatel",
+    "uz": "oʻrnatilgan ANPR-dvigatel",
     "en": "built-in ANPR engine",
     "tr": "dahili ANPR motoru",
     "zh": "内置车牌识别引擎"
   },
   "Встроенный AVR": {
-    "uz": "O'rnatilgan AVR",
+    "uz": "Oʻrnatilgan AVR",
     "en": "Built-in AVR",
     "tr": "Dahili AVR",
     "zh": "内置 AVR 稳压"
@@ -6924,13 +6924,13 @@
     "zh": "PoE 输入"
   },
   "въездные каналы": {
-    "uz": "kirish yo‘laklari",
+    "uz": "kirish yoʻlaklari",
     "en": "entry lanes",
     "tr": "giriş şeritleri",
     "zh": "入口通道"
   },
   "въезды": {
-    "uz": "kirish yo‘llari",
+    "uz": "kirish yoʻllari",
     "en": "entrances",
     "tr": "girişler",
     "zh": "入口"
@@ -6960,7 +6960,7 @@
     "zh": "呼叫、广播、控制"
   },
   "Вызовы, открытие двери, удаленный просмотр": {
-    "uz": "Chaqiruvlar, eshikni ochish, masofadan ko'rish",
+    "uz": "Chaqiruvlar, eshikni ochish, masofadan koʻrish",
     "en": "Calls, door release, remote viewing",
     "tr": "Çağrılar, kapı açma, uzaktan izleme",
     "zh": "呼叫、开门、远程查看"
@@ -7011,7 +7011,7 @@
     "uz": "CHIQISH-EXIT, ustama",
     "en": "EXIT sign, surface-mounted",
     "tr": "ÇIKIŞ-EXIT, sıva üstü",
-    "zh": "「安全出口」标志，明装"
+    "zh": "“安全出口”标志，明装"
   },
   "Газовый": {
     "uz": "Gazli",
@@ -7026,7 +7026,7 @@
     "zh": "气体式（一氧化碳 CO）"
   },
   "Гальваническая изоляция и преобразование": {
-    "uz": "Galvanik izolyatsiya va o'zgartirish",
+    "uz": "Galvanik izolyatsiya va oʻzgartirish",
     "en": "Galvanic isolation and conversion",
     "tr": "Galvanik izolasyon ve dönüştürme",
     "zh": "电气隔离与转换"
@@ -7038,7 +7038,7 @@
     "zh": "车库"
   },
   "Геркон переключатель": {
-    "uz": "Gerkon o'chirgich",
+    "uz": "Gerkon oʻchirgich",
     "en": "Reed switch",
     "tr": "Manyetik kontak",
     "zh": "干簧管开关"
@@ -7092,7 +7092,7 @@
     "zh": "混合式（红外 + 白光）"
   },
   "Гибридная (ИК + белый свет)": {
-    "uz": "Gibrid (IQ + oq yorug'lik)",
+    "uz": "Gibrid (IQ + oq yorugʻlik)",
     "en": "Hybrid (IR + white light)",
     "tr": "Hibrit (IR + beyaz ışık)",
     "zh": "混合式（红外 + 白光）"
@@ -7158,7 +7158,7 @@
     "zh": "MagSlam 陀螺仪"
   },
   "Глубокое обучение": {
-    "uz": "Chuqur o'rganish",
+    "uz": "Chuqur oʻrganish",
     "en": "Deep learning",
     "tr": "Derin öğrenme",
     "zh": "深度学习"
@@ -7194,7 +7194,7 @@
     "zh": "应用内两年曲线"
   },
   "Графическая станция мониторинга пожарной сигнализации": {
-    "uz": "Yong'in signalizatsiyasi monitoringining grafik stansiyasi",
+    "uz": "Yongʻin signalizatsiyasi monitoringining grafik stansiyasi",
     "en": "Graphical fire alarm monitoring workstation",
     "tr": "Grafik yangın alarm izleme istasyonu",
     "zh": "图形化火灾报警监控工作站"
@@ -7218,13 +7218,13 @@
     "zh": "有（-UF 型号）"
   },
   "Да, на базе глубокого обучения": {
-    "uz": "Ha, chuqur o'rganish asosida",
+    "uz": "Ha, chuqur oʻrganish asosida",
     "en": "Yes, deep-learning based",
     "tr": "Var, derin öğrenme tabanlı",
     "zh": "有，基于深度学习"
   },
   "дата-центр": {
-    "uz": "ma’lumot markazi",
+    "uz": "maʼlumot markazi",
     "en": "data center",
     "tr": "veri merkezi",
     "zh": "数据中心"
@@ -7290,7 +7290,7 @@
     "zh": "温度传感器"
   },
   "Два встроенных реле": {
-    "uz": "Ikkita o'rnatilgan rele",
+    "uz": "Ikkita oʻrnatilgan rele",
     "en": "Two built-in relays",
     "tr": "İki dahili röle",
     "zh": "两路内置继电器"
@@ -7338,7 +7338,7 @@
     "zh": "移动、人形"
   },
   "Движение, люди, детский плач": {
-    "uz": "Harakat, odamlar, bola yig'isi",
+    "uz": "Harakat, odamlar, bola yigʻisi",
     "en": "Motion, people, baby crying",
     "tr": "Hareket, insan, bebek ağlaması",
     "zh": "移动、人形、婴儿哭声"
@@ -7368,61 +7368,61 @@
     "zh": "移动、人形、动物、车辆、包裹"
   },
   "Двойная": {
-    "uz": "Qo'sh",
+    "uz": "Qoʻsh",
     "en": "Dual",
     "tr": "Çift",
     "zh": "双路"
   },
   "двойная широкоугольная": {
-    "uz": "qo‘sh keng burchakli",
+    "uz": "qoʻsh keng burchakli",
     "en": "dual wide-angle",
     "tr": "çift geniş açılı",
     "zh": "双广角"
   },
   "Двойная, 1 MP, WDR": {
-    "uz": "Qo'sh, 1 MP, WDR",
+    "uz": "Qoʻsh, 1 MP, WDR",
     "en": "Dual, 1 MP, WDR",
     "tr": "Çift, 1 MP, WDR",
     "zh": "双目，100 万像素，WDR"
   },
   "Двойное преобразование": {
-    "uz": "Ikki marta o‘zgartirish",
+    "uz": "Ikki marta oʻzgartirish",
     "en": "Double conversion",
     "tr": "Çift dönüşüm",
     "zh": "双变换"
   },
   "Двойное преобразование, Online": {
-    "uz": "Qo'sh o'zgartirish, Online",
+    "uz": "Qoʻsh oʻzgartirish, Online",
     "en": "Double conversion, online",
     "tr": "Çift dönüşümlü, online",
     "zh": "双变换在线式"
   },
   "Двойной встроенный": {
-    "uz": "Qo'sh o'rnatilgan",
+    "uz": "Qoʻsh oʻrnatilgan",
     "en": "Dual built-in",
     "tr": "Çift dahili",
     "zh": "内置双路"
   },
   "Двойной встроенный микрофон": {
-    "uz": "Qo'sh o'rnatilgan mikrofon",
+    "uz": "Qoʻsh oʻrnatilgan mikrofon",
     "en": "Dual built-in microphone",
     "tr": "Çift dahili mikrofon",
     "zh": "内置双麦克风"
   },
   "Двойной микрофон + PA динамик": {
-    "uz": "Qo'sh mikrofon + PA dinamik",
+    "uz": "Qoʻsh mikrofon + PA dinamik",
     "en": "Dual microphone + PA speaker",
     "tr": "Çift mikrofon + anons hoparlörü",
     "zh": "双麦克风 + 广播扬声器"
   },
   "Двойной стек": {
-    "uz": "Qo'sh stek",
+    "uz": "Qoʻsh stek",
     "en": "Dual stack",
     "tr": "Çift yığın",
     "zh": "双栈"
   },
   "Двойные 2K": {
-    "uz": "Qo'sh 2K",
+    "uz": "Qoʻsh 2K",
     "en": "Dual 2K",
     "tr": "Çift 2K",
     "zh": "双 2K"
@@ -7446,7 +7446,7 @@
     "zh": "双向"
   },
   "Двунаправленный, Антипаника": {
-    "uz": "Ikki yo'nalishli, antipanika",
+    "uz": "Ikki yoʻnalishli, antipanika",
     "en": "Bi-directional, anti-panic",
     "tr": "Çift yönlü, anti-panik",
     "zh": "双向通行、防夹逃生"
@@ -7506,13 +7506,13 @@
     "zh": "双向语音"
   },
   "Двусторонний проход": {
-    "uz": "Ikki tomonlama o‘tish",
+    "uz": "Ikki tomonlama oʻtish",
     "en": "Bidirectional passage",
     "tr": "Çift yönlü geçiş",
     "zh": "双向通行"
   },
   "Двусторонний проход (вход/выход)": {
-    "uz": "Ikki tomonlama o'tish (kirish/chiqish)",
+    "uz": "Ikki tomonlama oʻtish (kirish/chiqish)",
     "en": "Bi-directional passage (in/out)",
     "tr": "Çift yönlü geçiş (giriş/çıkış)",
     "zh": "双向通行（进/出）"
@@ -7548,13 +7548,13 @@
     "zh": "双向语音、移动侦测"
   },
   "Двусторонняя аудиосвязь, просмотр в реальном времени": {
-    "uz": "Ikki tomonlama audio aloqa, real vaqtda ko'rish",
+    "uz": "Ikki tomonlama audio aloqa, real vaqtda koʻrish",
     "en": "Two-way audio, live viewing",
     "tr": "Çift yönlü ses, canlı izleme",
     "zh": "双向语音、实时预览"
   },
   "Двусторонняя аудиосвязь, просмотр и воспроизведение": {
-    "uz": "Ikki tomonlama audio aloqa, ko'rish va ijro etish",
+    "uz": "Ikki tomonlama audio aloqa, koʻrish va ijro etish",
     "en": "Two-way audio, live view and playback",
     "tr": "Çift yönlü ses, canlı izleme ve oynatma",
     "zh": "双向语音、实时预览与回放"
@@ -7578,7 +7578,7 @@
     "zh": "双向通话"
   },
   "двусторонняя связь, открытие двери со смартфона, просмотр IP-камер": {
-    "uz": "ikki tomonlama aloqa, smartfondan eshikni ochish, IP-kameralarni ko'rish",
+    "uz": "ikki tomonlama aloqa, smartfondan eshikni ochish, IP-kameralarni koʻrish",
     "en": "two-way audio, door release from smartphone, IP camera viewing",
     "tr": "çift yönlü ses, akıllı telefondan kapı açma, IP kamera izleme",
     "zh": "双向通话、手机开门、查看 IP 摄像机"
@@ -7650,26 +7650,26 @@
     "zh": "两段式"
   },
   "Деревянные": {
-    "uz": "Yog‘och",
+    "uz": "Yogʻoch",
     "en": "Wooden",
     "tr": "Ahşap",
     "zh": "木制"
   },
   "Деревянные, металлические, узкие коробки": {
-    "uz": "Yog'och, metall, tor qutilar",
+    "uz": "Yogʻoch, metall, tor qutilar",
     "en": "Wooden, metal, narrow frames",
     "tr": "Ahşap, metal, dar kasalar",
     "zh": "木门、金属门、窄边门框"
   },
   "Деревянные, стеклянные, металлические, противопожарные двери": {
-    "uz": "Yog'och, shisha, metall, yong'inga qarshi eshiklar",
+    "uz": "Yogʻoch, shisha, metall, yongʻinga qarshi eshiklar",
     "en": "Wooden, glass, metal and fire doors",
     "tr": "Ahşap, cam, metal ve yangın kapıları",
     "zh": "木门、玻璃门、金属门、防火门"
   },
   "Десятки метров": {
-    "uz": "O'nlab metr",
-    "en": "Tens of metres",
+    "uz": "Oʻnlab metr",
+    "en": "Tens of meters",
     "tr": "Onlarca metre",
     "zh": "数十米"
   },
@@ -7728,7 +7728,7 @@
     "zh": "移动侦测、双向语音"
   },
   "детектор плача": {
-    "uz": "yig‘i detektori",
+    "uz": "yigʻi detektori",
     "en": "cry detector",
     "tr": "ağlama dedektörü",
     "zh": "哭声检测"
@@ -7758,7 +7758,7 @@
     "zh": "人员检测"
   },
   "Детекция удара и наклона": {
-    "uz": "Zarba va og'ishni aniqlash",
+    "uz": "Zarba va ogʻishni aniqlash",
     "en": "Impact and tilt detection",
     "tr": "Darbe ve eğim algılama",
     "zh": "撞击与倾斜检测"
@@ -7770,7 +7770,7 @@
     "zh": "人形与车辆检测"
   },
   "детский плач": {
-    "uz": "bola yig‘isi",
+    "uz": "bola yigʻisi",
     "en": "baby cry",
     "tr": "bebek ağlaması",
     "zh": "婴儿哭声"
@@ -7794,13 +7794,13 @@
     "zh": "故障诊断、信号灯接入"
   },
   "Диммирование": {
-    "uz": "Yorug‘likni sozlash",
+    "uz": "Yorugʻlikni sozlash",
     "en": "Dimming",
     "tr": "Karartma",
     "zh": "调光"
   },
   "диммирование поворотом": {
-    "uz": "burab yorug‘likni sozlash",
+    "uz": "burab yorugʻlikni sozlash",
     "en": "rotary dimming",
     "tr": "döndürerek karartma",
     "zh": "旋钮调光"
@@ -7812,7 +7812,7 @@
     "zh": "调光、语音控制"
   },
   "диммируемый": {
-    "uz": "yorug‘ligi sozlanadigan",
+    "uz": "yorugʻligi sozlanadigan",
     "en": "dimmable",
     "tr": "karartılabilir",
     "zh": "可调光"
@@ -8592,13 +8592,13 @@
     "zh": "最多 4 路 1080p"
   },
   "до 4 полос": {
-    "uz": "4 tagacha yo‘lak",
+    "uz": "4 tagacha yoʻlak",
     "en": "up to 4 lanes",
     "tr": "en fazla 4 şerit",
     "zh": "最多 4 条车道"
   },
   "до 4 полос, каскадирование до 5 устройств": {
-    "uz": "4 yo'lakgacha, 5 qurilmagacha kaskadlash",
+    "uz": "4 yoʻlakgacha, 5 qurilmagacha kaskadlash",
     "en": "up to 4 lanes, cascading up to 5 devices",
     "tr": "4 şeride kadar, 5 cihaza kadar kaskad",
     "zh": "最多 4 车道，可级联至 5 台设备"
@@ -8965,7 +8965,7 @@
   },
   "до 9m (цветное)": {
     "uz": "9 m gacha (rangli)",
-    "en": "up to 9 m (colour)",
+    "en": "up to 9 m (color)",
     "tr": "9 m'ye kadar (renkli)",
     "zh": "最远 9 米（彩色）"
   },
@@ -8976,8 +8976,8 @@
     "zh": "最远 9 米，940nm/850nm 模式"
   },
   "До нескольких десятков метров": {
-    "uz": "Bir necha o'n metrgacha",
-    "en": "Up to several dozen metres",
+    "uz": "Bir necha oʻn metrgacha",
+    "en": "Up to several dozen meters",
     "tr": "Birkaç on metreye kadar",
     "zh": "最远数十米"
   },
@@ -9018,13 +9018,13 @@
     "zh": "楼宇对讲系统"
   },
   "Дополнительные рабочие места": {
-    "uz": "Qo'shimcha ish o'rinlari",
+    "uz": "Qoʻshimcha ish oʻrinlari",
     "en": "Additional workstations",
     "tr": "Ek iş istasyonları",
     "zh": "增配坐席"
   },
   "Дополнительный зонд": {
-    "uz": "Qo'shimcha zond",
+    "uz": "Qoʻshimcha zond",
     "en": "Additional probe",
     "tr": "Ek prob",
     "zh": "外接探头"
@@ -9120,7 +9120,7 @@
     "zh": "有"
   },
   "железные дороги": {
-    "uz": "temir yo‘llar",
+    "uz": "temir yoʻllar",
     "en": "railways",
     "tr": "demiryolları",
     "zh": "铁路"
@@ -9150,7 +9150,7 @@
     "zh": "动物"
   },
   "Жилые и административные": {
-    "uz": "Turar-joy va ma'muriy",
+    "uz": "Turar-joy va maʼmuriy",
     "en": "Residential and administrative",
     "tr": "Konut ve idari",
     "zh": "住宅与行政建筑"
@@ -9163,7 +9163,7 @@
   },
   "Жилые комплексы, парковки, торговые центры": {
     "uz": "Turar-joy majmualari, avtoturargohlar, savdo markazlari",
-    "en": "Residential complexes, car parks, shopping centres",
+    "en": "Residential complexes, car parks, shopping centers",
     "tr": "Konut siteleri, otoparklar, alışveriş merkezleri",
     "zh": "住宅小区、停车场、购物中心"
   },
@@ -9181,7 +9181,7 @@
   },
   "За 1 метр": {
     "uz": "1 metr uchun",
-    "en": "Per metre",
+    "en": "Per meter",
     "tr": "Metre başına",
     "zh": "每米"
   },
@@ -9276,7 +9276,7 @@
     "zh": "机械锁（用于机柜）"
   },
   "Запасные/дополнительные створки": {
-    "uz": "Zaxira/qo'shimcha tavaqalar",
+    "uz": "Zaxira/qoʻshimcha tavaqalar",
     "en": "Spare/additional leaves",
     "tr": "Yedek/ek kanatlar",
     "zh": "备用/附加翼板"
@@ -9300,7 +9300,7 @@
     "zh": "禁止"
   },
   "Запуск пожаротушения и оповещения": {
-    "uz": "Yong'in o'chirish va ogohlantirishni ishga tushirish",
+    "uz": "Yongʻin oʻchirish va ogohlantirishni ishga tushirish",
     "en": "Activation of extinguishing and alarm",
     "tr": "Söndürme ve uyarının başlatılması",
     "zh": "启动灭火与广播"
@@ -9390,31 +9390,31 @@
     "zh": "过热保护"
   },
   "защита от подпирания": {
-    "uz": "tirab qo‘yishdan himoya",
+    "uz": "tirab qoʻyishdan himoya",
     "en": "anti-tailgating",
     "tr": "birlikte geçiş koruması",
     "zh": "防尾随"
   },
   "Защита от проталкивания": {
-    "uz": "Itarib o‘tishdan himoya",
+    "uz": "Itarib oʻtishdan himoya",
     "en": "Anti-push-through",
     "tr": "İterek geçme koruması",
     "zh": "防推挤"
   },
   "Защита от проталкивания и несанкционированного входа": {
-    "uz": "Itarib o'tish va ruxsatsiz kirishdan himoya",
+    "uz": "Itarib oʻtish va ruxsatsiz kirishdan himoya",
     "en": "Protection against push-through and unauthorised entry",
     "tr": "İtip geçme ve yetkisiz girişe karşı koruma",
     "zh": "防强行推入与未授权进入"
   },
   "Защита от проталкивания, перелезания, неправильного входа": {
-    "uz": "Itarib o'tish, oshib o'tish, noto'g'ri kirishdan himoya",
+    "uz": "Itarib oʻtish, oshib oʻtish, notoʻgʻri kirishdan himoya",
     "en": "Protection against push-through, climbing over and wrong-way entry",
     "tr": "İtip geçme, tırmanma ve ters yönde girişe karşı koruma",
     "zh": "防强行推入、防翻越、防逆向通行"
   },
   "Защита от проталкивания, перелезания, несанкционированного входа": {
-    "uz": "Itarib o'tish, oshib o'tish, ruxsatsiz kirishdan himoya",
+    "uz": "Itarib oʻtish, oshib oʻtish, ruxsatsiz kirishdan himoya",
     "en": "Protection against pushing through, climbing over and unauthorised entry",
     "tr": "İtip geçme, tırmanma ve yetkisiz girişe karşı koruma",
     "zh": "防强行推入、防翻越、防未授权进入"
@@ -9462,13 +9462,13 @@
     "zh": "遮孔护条"
   },
   "Защитный бокс для устройства пожарной сигнализации": {
-    "uz": "Yong'in signalizatsiyasi qurilmasi uchun himoya boksi",
+    "uz": "Yongʻin signalizatsiyasi qurilmasi uchun himoya boksi",
     "en": "Protective box for a fire alarm device",
     "tr": "Yangın alarm cihazı için koruma kutusu",
     "zh": "火灾报警设备保护箱"
   },
   "звонок": {
-    "uz": "qo‘ng‘iroq",
+    "uz": "qoʻngʻiroq",
     "en": "doorbell",
     "tr": "zil",
     "zh": "门铃"
@@ -9486,13 +9486,13 @@
     "zh": "声音与 LED 闪烁"
   },
   "звуко-световая сигнализация": {
-    "uz": "tovush-yorug‘lik signalizatsiyasi",
+    "uz": "tovush-yorugʻlik signalizatsiyasi",
     "en": "audible and visual alarm",
     "tr": "sesli ve ışıklı alarm",
     "zh": "声光报警"
   },
   "звуко-световая сигнализация, двусторонняя связь": {
-    "uz": "ovozli-yorug'lik signalizatsiyasi, ikki tomonlama aloqa",
+    "uz": "ovozli-yorugʻlik signalizatsiyasi, ikki tomonlama aloqa",
     "en": "audible and visual alarm, two-way audio",
     "tr": "sesli ve ışıklı uyarı, çift yönlü ses",
     "zh": "声光报警、双向语音"
@@ -9516,7 +9516,7 @@
     "zh": "声音报警与爆闪灯"
   },
   "звуковая, световая, вибрационная": {
-    "uz": "ovozli, yorug'lik, tebranishli",
+    "uz": "ovozli, yorugʻlik, tebranishli",
     "en": "audible, visual, vibration",
     "tr": "sesli, ışıklı, titreşimli",
     "zh": "声音、灯光、振动"
@@ -9612,7 +9612,7 @@
     "zh": "曲面"
   },
   "Изогнутый (гусиная шея)": {
-    "uz": "Egilgan (g'oz bo'yni)",
+    "uz": "Egilgan (gʻoz boʻyni)",
     "en": "Gooseneck",
     "tr": "Kaz boynu",
     "zh": "鹅颈式"
@@ -9744,13 +9744,13 @@
     "zh": "红外或白光，最远 30 米"
   },
   "ИК или белый свет": {
-    "uz": "IQ yoki oq yorug‘lik",
+    "uz": "IQ yoki oq yorugʻlik",
     "en": "IR or white light",
     "tr": "IR veya beyaz ışık",
     "zh": "红外或白光"
   },
   "ИК или белый свет, до 30m": {
-    "uz": "IQ yoki oq yorug'lik, 30 m gacha",
+    "uz": "IQ yoki oq yorugʻlik, 30 m gacha",
     "en": "IR or white light, up to 30 m",
     "tr": "IR veya beyaz ışık, 30 m'ye kadar",
     "zh": "红外或白光，最远 30 米"
@@ -9762,7 +9762,7 @@
     "zh": "红外移动探测器"
   },
   "ИК-датчик движения, звонок": {
-    "uz": "IQ harakat datchigi, qo'ng'iroq",
+    "uz": "IQ harakat datchigi, qoʻngʻiroq",
     "en": "IR motion sensor, doorbell",
     "tr": "IR hareket sensörü, zil",
     "zh": "红外移动传感器、门铃"
@@ -9816,13 +9816,13 @@
     "zh": "系统指示与控制"
   },
   "индикация направления": {
-    "uz": "yo‘nalish ko‘rsatkichi",
+    "uz": "yoʻnalish koʻrsatkichi",
     "en": "direction indication",
     "tr": "yön göstergesi",
     "zh": "方向指示"
   },
   "индикация статуса": {
-    "uz": "holat ko‘rsatkichi",
+    "uz": "holat koʻrsatkichi",
     "en": "status indication",
     "tr": "durum göstergesi",
     "zh": "状态指示"
@@ -9858,7 +9858,7 @@
     "zh": "报警联动"
   },
   "Интеграция читателей Wiegand": {
-    "uz": "Wiegand o'qigichlarini integratsiya qilish",
+    "uz": "Wiegand oʻqigichlarini integratsiya qilish",
     "en": "Wiegand reader integration",
     "tr": "Wiegand okuyucu entegrasyonu",
     "zh": "Wiegand 读头集成"
@@ -9876,7 +9876,7 @@
     "zh": "智能式"
   },
   "Интеллектуальные функции на основе глубокого обучения": {
-    "uz": "Chuqur o'rganishga asoslangan intellektual funksiyalar",
+    "uz": "Chuqur oʻrganishga asoslangan intellektual funksiyalar",
     "en": "Deep-learning based intelligent features",
     "tr": "Derin öğrenme tabanlı akıllı işlevler",
     "zh": "基于深度学习的智能功能"
@@ -9894,7 +9894,7 @@
     "zh": "信息查询机 / 终端"
   },
   "Инфракрасный + микроволновой": {
-    "uz": "Infraqizil + mikroto'lqinli",
+    "uz": "Infraqizil + mikrotoʻlqinli",
     "en": "Infrared + microwave",
     "tr": "Kızılötesi + mikrodalga",
     "zh": "红外 + 微波"
@@ -10087,7 +10087,7 @@
   },
   "кастомизация функций": {
     "uz": "funksiyalarni moslash",
-    "en": "function customisation",
+    "en": "function customization",
     "tr": "fonksiyon özelleştirme",
     "zh": "功能自定义"
   },
@@ -10224,7 +10224,7 @@
     "zh": "端子接线盒"
   },
   "Клиентское место оператора": {
-    "uz": "Operatorning mijoz ish o'rni",
+    "uz": "Operatorning mijoz ish oʻrni",
     "en": "Operator client workstation",
     "tr": "Operatör istemci iş istasyonu",
     "zh": "操作员客户端工位"
@@ -10248,7 +10248,7 @@
     "zh": "Touch Memory 钥匙"
   },
   "Ключи Touch Memory, разделы": {
-    "uz": "Touch Memory kalitlari, bo'limlar",
+    "uz": "Touch Memory kalitlari, boʻlimlar",
     "en": "Touch Memory keys, partitions",
     "tr": "Touch Memory anahtarları, bölümler",
     "zh": "Touch Memory 钥匙、分区"
@@ -10260,7 +10260,7 @@
     "zh": "按钮"
   },
   "Кнопка аварийного запуска и остановки пожаротушения": {
-    "uz": "Yong'in o'chirishni favqulodda ishga tushirish va to'xtatish tugmasi",
+    "uz": "Yongʻin oʻchirishni favqulodda ishga tushirish va toʻxtatish tugmasi",
     "en": "Emergency extinguishing start/stop button",
     "tr": "Acil söndürme başlatma/durdurma butonu",
     "zh": "灭火紧急启停按钮"
@@ -10314,7 +10314,7 @@
     "zh": "切换按钮"
   },
   "Кнопка-переключатель (СКУД/сигнализация)": {
-    "uz": "Tugma-o'chirgich (SKUD/signalizatsiya)",
+    "uz": "Tugma-oʻchirgich (SKUD/signalizatsiya)",
     "en": "Toggle button (access control/alarm)",
     "tr": "Anahtarlı buton (geçiş kontrolü/alarm)",
     "zh": "转换按钮（门禁/报警）"
@@ -10344,25 +10344,25 @@
     "zh": "密码、Mifare 卡"
   },
   "Козырёк от солнца и осадков": {
-    "uz": "Quyosh va yog'ingarchilikdan kozirak",
+    "uz": "Quyosh va yogʻingarchilikdan kozirak",
     "en": "Sun and rain shield",
     "tr": "Güneş ve yağmur siperi",
     "zh": "遮阳防雨罩"
   },
   "Колёса с фиксаторами": {
-    "uz": "Fiksatorli g'ildiraklar",
+    "uz": "Fiksatorli gʻildiraklar",
     "en": "Castors with locks",
     "tr": "Kilitli tekerlekler",
     "zh": "带锁脚轮"
   },
   "колыбельные": {
-    "uz": "alla qo‘shiqlar",
+    "uz": "alla qoʻshiqlar",
     "en": "lullabies",
     "tr": "ninniler",
     "zh": "摇篮曲"
   },
   "Колыбельные песни": {
-    "uz": "Alla qo'shiqlari",
+    "uz": "Alla qoʻshiqlari",
     "en": "Lullabies",
     "tr": "Ninniler",
     "zh": "摇篮曲"
@@ -10422,13 +10422,13 @@
     "zh": "紧凑机身"
   },
   "Компактный, складной": {
-    "uz": "Ixcham, yig'iladigan",
+    "uz": "Ixcham, yigʻiladigan",
     "en": "Compact, foldable",
     "tr": "Kompakt, katlanabilir",
     "zh": "紧凑可折叠"
   },
   "Компактный, со встроенным кронштейном": {
-    "uz": "Ixcham, o'rnatilgan kronshteyn bilan",
+    "uz": "Ixcham, oʻrnatilgan kronshteyn bilan",
     "en": "Compact, with integrated bracket",
     "tr": "Kompakt, entegre bağlantılı",
     "zh": "紧凑型，带一体化支架"
@@ -10452,8 +10452,8 @@
     "zh": "监控套装（Wi-Fi）"
   },
   "Композитная бумажно-волоконная": {
-    "uz": "Kompozit qog'oz-tolali",
-    "en": "Paper-fibre composite",
+    "uz": "Kompozit qogʻoz-tolali",
+    "en": "Paper-fiber composite",
     "tr": "Kâğıt-elyaf kompozit",
     "zh": "纸纤维复合"
   },
@@ -10512,13 +10512,13 @@
     "zh": "探测器监测、设备控制"
   },
   "контроль подпирания": {
-    "uz": "tirab qo‘yishni nazorat qilish",
+    "uz": "tirab qoʻyishni nazorat qilish",
     "en": "tailgating control",
     "tr": "birlikte geçiş kontrolü",
     "zh": "尾随控制"
   },
   "контроль полос": {
-    "uz": "yo‘laklarni nazorat qilish",
+    "uz": "yoʻlaklarni nazorat qilish",
     "en": "lane monitoring",
     "tr": "şerit kontrolü",
     "zh": "车道监控"
@@ -10530,7 +10530,7 @@
     "zh": "应用管控"
   },
   "контроль противопожарного оборудования": {
-    "uz": "yong‘inga qarshi uskunalarni nazorat qilish",
+    "uz": "yongʻinga qarshi uskunalarni nazorat qilish",
     "en": "fire equipment supervision",
     "tr": "yangın ekipmanı denetimi",
     "zh": "消防设备监控"
@@ -10596,7 +10596,7 @@
     "zh": "红古铜"
   },
   "Красно-синий стробоскоп": {
-    "uz": "Qizil-ko'k stroboskop",
+    "uz": "Qizil-koʻk stroboskop",
     "en": "Red-blue strobe",
     "tr": "Kırmızı-mavi flaşör",
     "zh": "红蓝爆闪灯"
@@ -10620,7 +10620,7 @@
     "zh": "随附紧固件"
   },
   "Крепеж лежачих полицейских и ограничителей": {
-    "uz": "Tezlik cheklovchilari va to'siqlarni mahkamlash",
+    "uz": "Tezlik cheklovchilari va toʻsiqlarni mahkamlash",
     "en": "Fixings for speed humps and wheel stops",
     "tr": "Hız kesici ve park bariyeri bağlantıları",
     "zh": "减速带与限位器紧固件"
@@ -10710,7 +10710,7 @@
     "zh": "大型项目"
   },
   "Крюк для страховочного троса": {
-    "uz": "Sug'urta trosi uchun ilgak",
+    "uz": "Sugʻurta trosi uchun ilgak",
     "en": "Safety rope hook",
     "tr": "Emniyet halatı kancası",
     "zh": "安全绳挂钩"
@@ -11148,7 +11148,7 @@
     "zh": "人脸、RFID、密码/PIN"
   },
   "Логика управления реле": {
-    "uz": "Relelarni boshqarish mantig'i",
+    "uz": "Relelarni boshqarish mantigʻi",
     "en": "Relay control logic",
     "tr": "Röle kumanda mantığı",
     "zh": "继电器控制逻辑"
@@ -11292,7 +11292,7 @@
     "zh": "小"
   },
   "малый размер": {
-    "uz": "kichik o‘lcham",
+    "uz": "kichik oʻlcham",
     "en": "small size",
     "tr": "küçük boyut",
     "zh": "小尺寸"
@@ -11370,7 +11370,7 @@
     "zh": "下一代防火墙（NGFW）"
   },
   "Межсетевой экран нового поколения (NGFW) для SMB": {
-    "uz": "Kichik va o'rta biznes uchun yangi avlod tarmoqlararo ekrani (NGFW)",
+    "uz": "Kichik va oʻrta biznes uchun yangi avlod tarmoqlararo ekrani (NGFW)",
     "en": "Next-generation firewall (NGFW) for SMB",
     "tr": "KOBİ'ler için yeni nesil güvenlik duvarı (NGFW)",
     "zh": "面向中小企业的下一代防火墙（NGFW）"
@@ -11538,7 +11538,7 @@
     "zh": "集尘袋约 70 天"
   },
   "микроволновая СВЧ": {
-    "uz": "mikroto'lqinli",
+    "uz": "mikrotoʻlqinli",
     "en": "microwave",
     "tr": "mikrodalga",
     "zh": "微波式"
@@ -11604,37 +11604,37 @@
     "zh": "微型"
   },
   "многожильный": {
-    "uz": "ko'p tomirli",
+    "uz": "koʻp tomirli",
     "en": "stranded",
     "tr": "çok damarlı",
     "zh": "多股"
   },
   "Многоканальная обработка": {
-    "uz": "Ko'p kanalli qayta ishlash",
+    "uz": "Koʻp kanalli qayta ishlash",
     "en": "Multi-channel processing",
     "tr": "Çok kanallı işleme",
     "zh": "多通道处理"
   },
   "Многомод": {
-    "uz": "Ko'p modali",
+    "uz": "Koʻp modali",
     "en": "Multimode",
     "tr": "Çok modlu",
     "zh": "多模"
   },
   "Многомодовое": {
-    "uz": "Ko'p modali",
+    "uz": "Koʻp modali",
     "en": "Multimode",
     "tr": "Çok modlu",
     "zh": "多模"
   },
   "Многофункциональные": {
-    "uz": "Ko'p funksiyali",
+    "uz": "Koʻp funksiyali",
     "en": "Multifunctional",
     "tr": "Çok işlevli",
     "zh": "多功能"
   },
   "Многофункциональный": {
-    "uz": "Ko'p funksiyali",
+    "uz": "Koʻp funksiyali",
     "en": "Multifunctional",
     "tr": "Çok işlevli",
     "zh": "多功能"
@@ -11766,25 +11766,25 @@
     "zh": "能耗监测"
   },
   "Мониторинг, колыбельные": {
-    "uz": "Monitoring, alla qo'shiqlari",
+    "uz": "Monitoring, alla qoʻshiqlari",
     "en": "Monitoring, lullabies",
     "tr": "İzleme, ninniler",
     "zh": "监护、摇篮曲"
   },
   "монтаж 13\"": {
-    "uz": "13\" o‘rnatish",
+    "uz": "13\" oʻrnatish",
     "en": "13\" mount",
     "tr": "13\" montaj",
     "zh": "13 英寸安装"
   },
   "монтаж 19\"": {
-    "uz": "19\" o‘rnatish",
+    "uz": "19\" oʻrnatish",
     "en": "19\" mount",
     "tr": "19\" montaj",
     "zh": "19 英寸安装"
   },
   "монтаж в стойку": {
-    "uz": "stoykaga o‘rnatish",
+    "uz": "stoykaga oʻrnatish",
     "en": "rack mount",
     "tr": "kabinet montajı",
     "zh": "机架安装"
@@ -11796,7 +11796,7 @@
     "zh": "机架式安装"
   },
   "монтаж в стойку 19\"": {
-    "uz": "19\" stoykaga o‘rnatish",
+    "uz": "19\" stoykaga oʻrnatish",
     "en": "19\" rack mount",
     "tr": "19\" kabinet montajı",
     "zh": "19 英寸机架安装"
@@ -11808,7 +11808,7 @@
     "zh": "门禁控制器安装"
   },
   "монтаж на мачте/стене": {
-    "uz": "machta/devorga o‘rnatish",
+    "uz": "machta/devorga oʻrnatish",
     "en": "pole/wall mount",
     "tr": "direk/duvar montajı",
     "zh": "抱杆/壁装"
@@ -11892,7 +11892,7 @@
     "zh": "摩托车、轿车/货车、行人"
   },
   "Мультисенсорная": {
-    "uz": "Ko'p sensorli",
+    "uz": "Koʻp sensorli",
     "en": "Multi-sensor",
     "tr": "Çok sensörlü",
     "zh": "多目"
@@ -11904,13 +11904,13 @@
     "zh": "多点触控"
   },
   "на базе глубокого обучения": {
-    "uz": "chuqur o‘qitish asosida",
+    "uz": "chuqur oʻqitish asosida",
     "en": "deep-learning based",
     "tr": "derin öğrenme tabanlı",
     "zh": "基于深度学习"
   },
   "На врезной ригель": {
-    "uz": "O‘rnatma rigelga",
+    "uz": "Oʻrnatma rigelga",
     "en": "For mortise bolt",
     "tr": "Gömme sürgü için",
     "zh": "用于嵌入式锁舌"
@@ -11928,7 +11928,7 @@
     "zh": "鹅颈支架式"
   },
   "На порог и на скорость роста температуры": {
-    "uz": "Chegara va harorat o'sish tezligiga",
+    "uz": "Chegara va harorat oʻsish tezligiga",
     "en": "Fixed threshold and rate of rise",
     "tr": "Sabit eşik ve artış hızı",
     "zh": "定温与差温双判据"
@@ -11947,7 +11947,7 @@
   },
   "Наблюдение на километры": {
     "uz": "Kilometrlarga kuzatuv",
-    "en": "Surveillance over kilometres",
+    "en": "Surveillance over kilometers",
     "tr": "Kilometrelerce gözetim",
     "zh": "公里级监视"
   },
@@ -11964,19 +11964,19 @@
     "zh": "IPC 监视、报警联动、录像与抓拍"
   },
   "Набор": {
-    "uz": "To'plam",
+    "uz": "Toʻplam",
     "en": "Set",
     "tr": "Set",
     "zh": "套件"
   },
   "Набор инструментов": {
-    "uz": "Asboblar to‘plami",
+    "uz": "Asboblar toʻplami",
     "en": "Tool kit",
     "tr": "Alet seti",
     "zh": "工具套装"
   },
   "Набор инструментов (электромонтаж)": {
-    "uz": "Asboblar to'plami (elektromontaj)",
+    "uz": "Asboblar toʻplami (elektromontaj)",
     "en": "Tool set (electrical installation)",
     "tr": "Alet seti (elektrik montajı)",
     "zh": "工具套装（电气安装）"
@@ -12036,7 +12036,7 @@
     "zh": "落地托板"
   },
   "Напольная стойка на колёсах": {
-    "uz": "G'ildirakli poldagi stoyka",
+    "uz": "Gʻildirakli poldagi stoyka",
     "en": "Floor stand on castors",
     "tr": "Tekerlekli zemin ayaklığı",
     "zh": "带轮落地支架"
@@ -12072,7 +12072,7 @@
     "zh": "电压"
   },
   "напряжение, ток, энергопотребление": {
-    "uz": "kuchlanish, tok, energiya iste'moli",
+    "uz": "kuchlanish, tok, energiya isteʼmoli",
     "en": "voltage, current, power consumption",
     "tr": "gerilim, akım, enerji tüketimi",
     "zh": "电压、电流、功耗"
@@ -12240,7 +12240,7 @@
     "zh": "金属台式"
   },
   "Настольный, стальной": {
-    "uz": "Stol usti, po'lat",
+    "uz": "Stol usti, poʻlat",
     "en": "Desktop, steel",
     "tr": "Masaüstü, çelik",
     "zh": "钢制台式"
@@ -12270,13 +12270,13 @@
     "zh": "阻燃型"
   },
   "не более 1": {
-    "uz": "1 tadan ko‘p emas",
+    "uz": "1 tadan koʻp emas",
     "en": "no more than 1",
     "tr": "en fazla 1",
     "zh": "不超过 1"
   },
   "не более 1,2А (с АКБ)": {
-    "uz": "1,2A dan ko'p emas (akkumulyator bilan)",
+    "uz": "1,2A dan koʻp emas (akkumulyator bilan)",
     "en": "no more than 1.2 A (with battery)",
     "tr": "en fazla 1,2 A (aküyle)",
     "zh": "不超过 1.2A（含蓄电池）"
@@ -12294,13 +12294,13 @@
     "zh": "无需"
   },
   "Неадресные пожарные/охранные извещатели": {
-    "uz": "Manzilsiz yong‘in/qo‘riqlash datchiklari",
+    "uz": "Manzilsiz yongʻin/qoʻriqlash datchiklari",
     "en": "Conventional fire/security detectors",
     "tr": "Konvansiyonel yangın/güvenlik dedektörleri",
     "zh": "非编址消防/安防探测器"
   },
   "Неадресные пожарные/охранные извещатели, Wiegand": {
-    "uz": "Adressiz yong'in/qo'riqlash izvestitellari, Wiegand",
+    "uz": "Adressiz yongʻin/qoʻriqlash izvestitellari, Wiegand",
     "en": "Conventional fire/intruder detectors, Wiegand",
     "tr": "Adressiz yangın/hırsız dedektörleri, Wiegand",
     "zh": "非编址消防/防盗探测器、Wiegand"
@@ -12324,49 +12324,49 @@
     "zh": "非磁性"
   },
   "неправильного входа": {
-    "uz": "noto‘g‘ri kirish",
+    "uz": "notoʻgʻri kirish",
     "en": "invalid entry",
     "tr": "hatalı giriş",
     "zh": "错误输入"
   },
   "Неправильное направление": {
-    "uz": "Noto‘g‘ri yo‘nalish",
+    "uz": "Notoʻgʻri yoʻnalish",
     "en": "Wrong direction",
     "tr": "Yanlış yön",
     "zh": "逆行"
   },
   "Неправильное направление, превышение скорости": {
-    "uz": "Noto'g'ri yo'nalish, tezlikdan oshish",
+    "uz": "Notoʻgʻri yoʻnalish, tezlikdan oshish",
     "en": "Wrong-way driving, speeding",
     "tr": "Ters yönde sürüş, hız aşımı",
     "zh": "逆行、超速"
   },
   "нержавеющая сталь": {
-    "uz": "zanglamaydigan po'lat",
+    "uz": "zanglamaydigan poʻlat",
     "en": "stainless steel",
     "tr": "paslanmaz çelik",
     "zh": "不锈钢"
   },
   "Нержавеющая сталь": {
-    "uz": "Zanglamaydigan po'lat",
+    "uz": "Zanglamaydigan poʻlat",
     "en": "Stainless steel",
     "tr": "Paslanmaz çelik",
     "zh": "不锈钢"
   },
   "Нержавеющая сталь / Оцинкованный металл": {
-    "uz": "Zanglamaydigan po'lat / rux qoplamali metall",
+    "uz": "Zanglamaydigan poʻlat / rux qoplamali metall",
     "en": "Stainless steel / galvanised metal",
     "tr": "Paslanmaz çelik / galvanizli metal",
     "zh": "不锈钢 / 镀锌金属"
   },
   "нержавеющая сталь SUS304": {
-    "uz": "SUS304 zanglamaydigan po'lat",
+    "uz": "SUS304 zanglamaydigan poʻlat",
     "en": "SUS304 stainless steel",
     "tr": "SUS304 paslanmaz çelik",
     "zh": "SUS304 不锈钢"
   },
   "Нержавеющая сталь SUS304": {
-    "uz": "SUS304 zanglamaydigan po'lat",
+    "uz": "SUS304 zanglamaydigan poʻlat",
     "en": "SUS304 stainless steel",
     "tr": "SUS304 paslanmaz çelik",
     "zh": "SUS304 不锈钢"
@@ -12396,13 +12396,13 @@
     "zh": "多台道闸与大门"
   },
   "нет": {
-    "uz": "yo'q",
+    "uz": "yoʻq",
     "en": "no",
     "tr": "yok",
     "zh": "无"
   },
   "Нет": {
-    "uz": "Yo'q",
+    "uz": "Yoʻq",
     "en": "No",
     "tr": "Yok",
     "zh": "无"
@@ -12457,7 +12457,7 @@
   },
   "номерной знак": {
     "uz": "davlat raqami",
-    "en": "licence plate",
+    "en": "license plate",
     "tr": "plaka",
     "zh": "车牌"
   },
@@ -12474,7 +12474,7 @@
     "zh": "压接 + 测试"
   },
   "обзор 140°": {
-    "uz": "140° ko‘rish burchagi",
+    "uz": "140° koʻrish burchagi",
     "en": "140° field of view",
     "tr": "140° görüş açısı",
     "zh": "140° 视野"
@@ -12492,19 +12492,19 @@
     "zh": "检测 3.0"
   },
   "Обнаружение возгорания": {
-    "uz": "Yong‘inni aniqlash",
+    "uz": "Yongʻinni aniqlash",
     "en": "Fire detection",
     "tr": "Yangın algılama",
     "zh": "火灾探测"
   },
   "Обнаружение возгорания и вторжений": {
-    "uz": "Yong'in va kirib borishni aniqlash",
+    "uz": "Yongʻin va kirib borishni aniqlash",
     "en": "Fire and intrusion detection",
     "tr": "Yangın ve izinsiz giriş algılama",
     "zh": "火情与入侵检测"
   },
   "Обнаружение возгорания, температурный контроль": {
-    "uz": "Yong'inni aniqlash, harorat nazorati",
+    "uz": "Yongʻinni aniqlash, harorat nazorati",
     "en": "Fire detection, temperature monitoring",
     "tr": "Yangın algılama, sıcaklık izleme",
     "zh": "火情探测、温度监测"
@@ -12594,7 +12594,7 @@
     "zh": "人形检测、自动跟踪、双向语音"
   },
   "Обозначение выходов и путей эвакуации": {
-    "uz": "Chiqishlar va evakuatsiya yo'llarini belgilash",
+    "uz": "Chiqishlar va evakuatsiya yoʻllarini belgilash",
     "en": "Marking of exits and escape routes",
     "tr": "Çıkışların ve kaçış yollarının işaretlenmesi",
     "zh": "出口与疏散通道标识"
@@ -12618,7 +12618,7 @@
     "zh": "断路与短路"
   },
   "Обучаемый": {
-    "uz": "O'rgatiladigan",
+    "uz": "Oʻrgatiladigan",
     "en": "Learning",
     "tr": "Öğrenmeli",
     "zh": "可学习"
@@ -12744,49 +12744,49 @@
     "zh": "口罩检测、二维码、双门控制"
   },
   "определение направления движения": {
-    "uz": "harakat yo'nalishini aniqlash",
+    "uz": "harakat yoʻnalishini aniqlash",
     "en": "direction-of-travel detection",
     "tr": "hareket yönü algılama",
     "zh": "通行方向判别"
   },
   "ОПС": {
-    "uz": "Qo‘riqlash-yong‘in signalizatsiyasi",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi",
     "en": "security and fire alarm",
     "tr": "güvenlik ve yangın alarmı",
     "zh": "安防消防报警"
   },
   "ОПС «Рубеж»": {
-    "uz": "«Rubezh» qo'riqlash-yong'in signalizatsiyasi",
+    "uz": "«Rubezh» qoʻriqlash-yongʻin signalizatsiyasi",
     "en": "Rubezh security and fire alarm",
     "tr": "Rubezh hırsız-yangın alarmı",
     "zh": "Rubezh 消防防盗报警"
   },
   "ОПС Рубеж": {
-    "uz": "Rubezh qo'riqlash-yong'in signalizatsiyasi",
+    "uz": "Rubezh qoʻriqlash-yongʻin signalizatsiyasi",
     "en": "Rubezh security and fire alarm",
     "tr": "Rubezh hırsız-yangın alarmı",
     "zh": "Rubezh 消防防盗报警"
   },
   "ОПС, автоматизация зданий": {
-    "uz": "Qo'riqlash-yong'in signalizatsiyasi, binolarni avtomatlashtirish",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi, binolarni avtomatlashtirish",
     "en": "Security and fire alarm, building automation",
     "tr": "Hırsız-yangın alarmı, bina otomasyonu",
     "zh": "消防防盗报警、楼宇自动化"
   },
   "ОПС, домофония": {
-    "uz": "Qo'riqlash-yong'in signalizatsiyasi, domofoniya",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi, domofoniya",
     "en": "Security and fire alarm, intercom",
     "tr": "Hırsız-yangın alarmı, interkom",
     "zh": "消防防盗报警、楼宇对讲"
   },
   "ОПС, СКУД": {
-    "uz": "Qo'riqlash-yong'in signalizatsiyasi, kirish nazorati",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi, kirish nazorati",
     "en": "Security and fire alarm, access control",
     "tr": "Hırsız-yangın alarmı, geçiş kontrolü",
     "zh": "消防防盗报警、门禁"
   },
   "ОПС, СКУД, СКС": {
-    "uz": "Qo'riqlash-yong'in signalizatsiyasi, kirish nazorati, tuzilmali kabel tizimi",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi, kirish nazorati, tuzilmali kabel tizimi",
     "en": "Security and fire alarm, access control, structured cabling",
     "tr": "Hırsız-yangın alarmı, geçiş kontrolü, yapısal kablolama",
     "zh": "消防防盗报警、门禁、综合布线"
@@ -12799,7 +12799,7 @@
   },
   "оптимизация для плохой сети": {
     "uz": "sust tarmoq uchun optimallashtirish",
-    "en": "poor-network optimisation",
+    "en": "poor-network optimization",
     "tr": "zayıf ağ optimizasyonu",
     "zh": "弱网优化"
   },
@@ -12853,7 +12853,7 @@
   },
   "Оптоволоконный композит": {
     "uz": "Optik tolali kompozit",
-    "en": "Fibre-optic composite",
+    "en": "Fiber-optic composite",
     "tr": "Fiber optik kompozit",
     "zh": "光纤复合"
   },
@@ -12882,7 +12882,7 @@
     "zh": "选配（可与集成人脸识别系统搭配）"
   },
   "Оранжевый": {
-    "uz": "To'q sariq",
+    "uz": "Toʻq sariq",
     "en": "Orange",
     "tr": "Turuncu",
     "zh": "橙色"
@@ -12894,7 +12894,7 @@
     "zh": "照明配件"
   },
   "Осветительный аксессуар (велофонарь)": {
-    "uz": "Yoritish aksessuari (velosiped chirog'i)",
+    "uz": "Yoritish aksessuari (velosiped chirogʻi)",
     "en": "Lighting accessory (bicycle light)",
     "tr": "Aydınlatma aksesuarı (bisiklet feneri)",
     "zh": "照明配件（自行车灯）"
@@ -13002,7 +13002,7 @@
     "zh": "防误触"
   },
   "От считывателя СКУД": {
-    "uz": "SKUD o'qigichidan",
+    "uz": "SKUD oʻqigichidan",
     "en": "From the access control reader",
     "tr": "Geçiş kontrol okuyucusundan",
     "zh": "由门禁读头触发"
@@ -13068,7 +13068,7 @@
     "zh": "回声消除"
   },
   "Отображение и управление": {
-    "uz": "Ko'rsatish va boshqarish",
+    "uz": "Koʻrsatish va boshqarish",
     "en": "Display and control",
     "tr": "Görüntüleme ve kumanda",
     "zh": "显示与控制"
@@ -13146,13 +13146,13 @@
     "zh": "指纹、密码、应用、钥匙"
   },
   "Отсек под АКБ": {
-    "uz": "Akkumulyator uchun bo'lma",
+    "uz": "Akkumulyator uchun boʻlma",
     "en": "Battery compartment",
     "tr": "Akü bölmesi",
     "zh": "蓄电池仓"
   },
   "Отсек под аккумуляторы": {
-    "uz": "Akkumulyatorlar uchun bo'lma",
+    "uz": "Akkumulyatorlar uchun boʻlma",
     "en": "Battery compartment",
     "tr": "Akü bölmesi",
     "zh": "蓄电池仓"
@@ -13170,7 +13170,7 @@
     "zh": "移动跟踪"
   },
   "Отслеживание движения, детектор плача": {
-    "uz": "Harakatni kuzatish, yig'i detektori",
+    "uz": "Harakatni kuzatish, yigʻi detektori",
     "en": "Motion tracking, cry detection",
     "tr": "Hareket takibi, ağlama algılama",
     "zh": "移动跟踪、哭声检测"
@@ -13182,7 +13182,7 @@
     "zh": "使用跟踪"
   },
   "Отслеживание энергопотребления": {
-    "uz": "Energiya iste'molini kuzatish",
+    "uz": "Energiya isteʼmolini kuzatish",
     "en": "Energy consumption tracking",
     "tr": "Enerji tüketimi takibi",
     "zh": "用电量监测"
@@ -13194,61 +13194,61 @@
     "zh": "跟踪、双向语音"
   },
   "Отсутствует": {
-    "uz": "Yo'q",
+    "uz": "Yoʻq",
     "en": "Not available",
     "tr": "Yok",
     "zh": "无"
   },
   "Охрана дверей и конструкций": {
-    "uz": "Eshik va konstruksiyalarni qo'riqlash",
+    "uz": "Eshik va konstruksiyalarni qoʻriqlash",
     "en": "Protection of doors and structures",
     "tr": "Kapı ve yapıların korunması",
     "zh": "门与结构件的防护"
   },
   "Охранная и пожарная сигнализация": {
-    "uz": "Qo'riqlash va yong'in signalizatsiyasi",
+    "uz": "Qoʻriqlash va yongʻin signalizatsiyasi",
     "en": "Intruder and fire alarm",
     "tr": "Hırsız ve yangın alarmı",
     "zh": "防盗与火灾报警"
   },
   "Охранная и пожарная сигнализация, контроль доступа": {
-    "uz": "Qo'riqlash va yong'in signalizatsiyasi, kirish nazorati",
+    "uz": "Qoʻriqlash va yongʻin signalizatsiyasi, kirish nazorati",
     "en": "Intruder and fire alarm, access control",
     "tr": "Hırsız ve yangın alarmı, geçiş kontrolü",
     "zh": "防盗与火灾报警、门禁控制"
   },
   "Охранная и пожарная сигнализация, СКУД": {
-    "uz": "Qo'riqlash va yong'in signalizatsiyasi, kirish nazorati",
+    "uz": "Qoʻriqlash va yongʻin signalizatsiyasi, kirish nazorati",
     "en": "Intruder and fire alarm, access control",
     "tr": "Hırsız ve yangın alarmı, geçiş kontrolü",
     "zh": "防盗与火灾报警、门禁"
   },
   "Охранно-пожарная сигнализация": {
-    "uz": "Qo'riqlash-yong'in signalizatsiyasi",
+    "uz": "Qoʻriqlash-yongʻin signalizatsiyasi",
     "en": "Intruder and fire alarm",
     "tr": "Hırsız-yangın alarmı",
     "zh": "消防防盗报警"
   },
   "Охранно-пожарные системы": {
-    "uz": "Qo'riqlash-yong'in tizimlari",
+    "uz": "Qoʻriqlash-yongʻin tizimlari",
     "en": "Security and fire systems",
     "tr": "Hırsız-yangın sistemleri",
     "zh": "消防防盗系统"
   },
   "охранные": {
-    "uz": "qo‘riqlash",
+    "uz": "qoʻriqlash",
     "en": "security",
     "tr": "güvenlik",
     "zh": "安防"
   },
   "Охранный извещатель": {
-    "uz": "Qo'riqlash izvestiteli",
+    "uz": "Qoʻriqlash izvestiteli",
     "en": "Intruder detector",
     "tr": "Hırsız dedektörü",
     "zh": "防盗探测器"
   },
   "Охранный извещатель (проводной)": {
-    "uz": "Qo'riqlash izvestiteli (simli)",
+    "uz": "Qoʻriqlash izvestiteli (simli)",
     "en": "Intruder detector (wired)",
     "tr": "Hırsız dedektörü (kablolu)",
     "zh": "防盗探测器（有线）"
@@ -13285,7 +13285,7 @@
   },
   "Панорамная ColorVu (24/7 цветная)": {
     "uz": "Panoramali ColorVu (24/7 rangli)",
-    "en": "Panoramic ColorVu (24/7 colour)",
+    "en": "Panoramic ColorVu (24/7 color)",
     "tr": "Panoramik ColorVu (7/24 renkli)",
     "zh": "全景 ColorVu（7×24 全彩）"
   },
@@ -13302,7 +13302,7 @@
     "zh": "停车场"
   },
   "Парковки, въездные каналы": {
-    "uz": "Avtoturargohlar, kirish yo'laklari",
+    "uz": "Avtoturargohlar, kirish yoʻlaklari",
     "en": "Car parks, entry lanes",
     "tr": "Otoparklar, giriş şeritleri",
     "zh": "停车场、车行入口通道"
@@ -13338,7 +13338,7 @@
     "zh": "对数"
   },
   "Пары, дым, химикаты, аномальный шум": {
-    "uz": "Bug'lar, tutun, kimyoviy moddalar, g'ayritabiiy shovqin",
+    "uz": "Bugʻlar, tutun, kimyoviy moddalar, gʻayritabiiy shovqin",
     "en": "Vapours, smoke, chemicals, abnormal noise",
     "tr": "Buharlar, duman, kimyasallar, anormal gürültü",
     "zh": "蒸汽、烟雾、化学品、异常噪声"
@@ -13374,7 +13374,7 @@
     "zh": "会议室"
   },
   "Переговорные, учебные классы": {
-    "uz": "Muzokara xonalari, o'quv sinflari",
+    "uz": "Muzokara xonalari, oʻquv sinflari",
     "en": "Meeting rooms, classrooms",
     "tr": "Toplantı odaları, derslikler",
     "zh": "会议室、教室"
@@ -13398,7 +13398,7 @@
     "zh": "可更换适配器"
   },
   "перелезания": {
-    "uz": "oshib o‘tish",
+    "uz": "oshib oʻtish",
     "en": "climbing over",
     "tr": "tırmanma",
     "zh": "翻越"
@@ -13428,7 +13428,7 @@
     "zh": "反极性"
   },
   "Переходная монтажная пластина": {
-    "uz": "O'tkazgich montaj plastinasi",
+    "uz": "Oʻtkazgich montaj plastinasi",
     "en": "Adapter mounting plate",
     "tr": "Geçiş montaj plakası",
     "zh": "转接安装板"
@@ -13531,7 +13531,7 @@
   },
   "Платиновый серый": {
     "uz": "Platina kulrang",
-    "en": "Platinum grey",
+    "en": "Platinum gray",
     "tr": "Platin gri",
     "zh": "铂灰色"
   },
@@ -13542,19 +13542,19 @@
     "zh": "平面式"
   },
   "По высоте": {
-    "uz": "Balandlik bo'yicha",
+    "uz": "Balandlik boʻyicha",
     "en": "By height",
     "tr": "Yüksekliğe göre",
     "zh": "按高度"
   },
   "По двухпроводной адресной линии": {
-    "uz": "Ikki simli adresli liniya bo'yicha",
+    "uz": "Ikki simli adresli liniya boʻyicha",
     "en": "Over the two-wire addressable line",
     "tr": "İki telli adresli hat üzerinden",
     "zh": "经两线制总线回路"
   },
   "по запросу": {
-    "uz": "so'rov bo'yicha",
+    "uz": "soʻrov boʻyicha",
     "en": "on request",
     "tr": "talep üzerine",
     "zh": "按需询价"
@@ -13566,13 +13566,13 @@
     "zh": "通过以太网线"
   },
   "По кабелю Ethernet (PoE)": {
-    "uz": "Ethernet kabeli bo'ylab (PoE)",
+    "uz": "Ethernet kabeli boʻylab (PoE)",
     "en": "Over Ethernet cable (PoE)",
     "tr": "Ethernet kablosu üzerinden (PoE)",
     "zh": "经以太网线（PoE）"
   },
   "ПО контроля доступа входа/выхода": {
-    "uz": "Kirish/chiqish nazorati dasturiy ta'minoti",
+    "uz": "Kirish/chiqish nazorati dasturiy taʼminoti",
     "en": "Entry/exit access control software",
     "tr": "Giriş/çıkış geçiş kontrol yazılımı",
     "zh": "出入口门禁管理软件"
@@ -13584,13 +13584,13 @@
     "zh": "通过网络"
   },
   "ПО Hikvision": {
-    "uz": "Hikvision dasturiy ta'minoti",
+    "uz": "Hikvision dasturiy taʼminoti",
     "en": "Hikvision software",
     "tr": "Hikvision yazılımı",
     "zh": "Hikvision 软件"
   },
   "ПО Hikvision (HikCentral)": {
-    "uz": "Hikvision dasturiy ta'minoti (HikCentral)",
+    "uz": "Hikvision dasturiy taʼminoti (HikCentral)",
     "en": "Hikvision software (HikCentral)",
     "tr": "Hikvision yazılımı (HikCentral)",
     "zh": "Hikvision 软件（HikCentral）"
@@ -13650,7 +13650,7 @@
     "zh": "云台式，双镜头"
   },
   "Поворотная, уличная IP65": {
-    "uz": "Buriluvchi, ko'cha IP65",
+    "uz": "Buriluvchi, koʻcha IP65",
     "en": "PTZ, outdoor IP65",
     "tr": "PTZ, dış mekân IP65",
     "zh": "云台式，室外 IP65"
@@ -13662,7 +13662,7 @@
     "zh": "云台"
   },
   "Поворотно-наклонная, 360° горизонталь": {
-    "uz": "Burilib-og'uvchi, 360° gorizontal",
+    "uz": "Burilib-ogʻuvchi, 360° gorizontal",
     "en": "Pan-tilt, 360° horizontal",
     "tr": "Pan-tilt, 360° yatay",
     "zh": "云台式，水平 360°"
@@ -13674,7 +13674,7 @@
     "zh": "云台式"
   },
   "Повышение температуры": {
-    "uz": "Harorat ko'tarilishi",
+    "uz": "Harorat koʻtarilishi",
     "en": "Temperature rise",
     "tr": "Sıcaklık artışı",
     "zh": "温升"
@@ -13686,7 +13686,7 @@
     "zh": "高可靠性"
   },
   "Под тяжёлые камеры и PTZ": {
-    "uz": "Og'ir kameralar va PTZ uchun",
+    "uz": "Ogʻir kameralar va PTZ uchun",
     "en": "For heavy cameras and PTZ",
     "tr": "Ağır kameralar ve PTZ için",
     "zh": "适配重型摄像机与球机"
@@ -13698,49 +13698,49 @@
     "zh": "降噪"
   },
   "Подавление шумов, отмена эха": {
-    "uz": "Shovqinni bostirish, aks-sadoni yo'qotish",
+    "uz": "Shovqinni bostirish, aks-sadoni yoʻqotish",
     "en": "Noise suppression, echo cancellation",
     "tr": "Gürültü bastırma, yankı önleme",
     "zh": "降噪、回声消除"
   },
   "поддерживается": {
-    "uz": "qo'llab-quvvatlanadi",
+    "uz": "qoʻllab-quvvatlanadi",
     "en": "supported",
     "tr": "destekleniyor",
     "zh": "支持"
   },
   "Поддерживается": {
-    "uz": "Qo'llab-quvvatlanadi",
+    "uz": "Qoʻllab-quvvatlanadi",
     "en": "Supported",
     "tr": "Destekleniyor",
     "zh": "支持"
   },
   "Поддержка дополнительных считывателей RS485": {
-    "uz": "Qo'shimcha RS485 o'qigichlarni qo'llab-quvvatlash",
+    "uz": "Qoʻshimcha RS485 oʻqigichlarni qoʻllab-quvvatlash",
     "en": "Support for additional RS485 readers",
     "tr": "Ek RS485 okuyucu desteği",
     "zh": "支持扩展 RS485 读头"
   },
   "Поддержка ANPR": {
-    "uz": "ANPR qo‘llab-quvvatlash",
+    "uz": "ANPR qoʻllab-quvvatlash",
     "en": "ANPR support",
     "tr": "ANPR desteği",
     "zh": "支持车牌识别"
   },
   "Поддержка ANPR, оптимизация для плохой сети": {
-    "uz": "ANPR qo'llab-quvvatlash, yomon tarmoq uchun optimizatsiya",
-    "en": "ANPR support, optimisation for poor networks",
+    "uz": "ANPR qoʻllab-quvvatlash, yomon tarmoq uchun optimizatsiya",
+    "en": "ANPR support, optimization for poor networks",
     "tr": "ANPR desteği, zayıf ağ için optimizasyon",
     "zh": "支持车牌识别，弱网优化"
   },
   "Поддержка ANPR, счета людей": {
-    "uz": "ANPR va odamlarni sanashni qo'llab-quvvatlash",
+    "uz": "ANPR va odamlarni sanashni qoʻllab-quvvatlash",
     "en": "ANPR and people counting support",
     "tr": "ANPR ve insan sayımı desteği",
     "zh": "支持车牌识别与客流统计"
   },
   "Поддержка IO подключения": {
-    "uz": "IO ulanishini qo'llab-quvvatlash",
+    "uz": "IO ulanishini qoʻllab-quvvatlash",
     "en": "I/O connection support",
     "tr": "IO bağlantı desteği",
     "zh": "支持输入输出接口"
@@ -13770,7 +13770,7 @@
     "zh": "将常规探测器接入总线回路"
   },
   "Подключение пожарных извещателей": {
-    "uz": "Yong'in izvestitellarini ulash",
+    "uz": "Yongʻin izvestitellarini ulash",
     "en": "Connection of fire detectors",
     "tr": "Yangın dedektörlerinin bağlanması",
     "zh": "接入火灾探测器"
@@ -13800,97 +13800,97 @@
     "zh": "带背光"
   },
   "пожар": {
-    "uz": "yong‘in",
+    "uz": "yongʻin",
     "en": "fire",
     "tr": "yangın",
     "zh": "火警"
   },
   "Пожар": {
-    "uz": "Yong'in",
+    "uz": "Yongʻin",
     "en": "Fire",
     "tr": "Yangın",
     "zh": "火警"
   },
   "ПОЖАР": {
-    "uz": "YONG'IN",
+    "uz": "YONGʻIN",
     "en": "FIRE",
     "tr": "YANGIN",
     "zh": "火警"
   },
   "Пожар, Запыленность, Внимание, Неисправность, Тест": {
-    "uz": "Yong'in, changlanish, diqqat, nosozlik, sinov",
+    "uz": "Yongʻin, changlanish, diqqat, nosozlik, sinov",
     "en": "Fire, dust, warning, fault, test",
     "tr": "Yangın, tozlanma, dikkat, arıza, test",
     "zh": "火警、积尘、预警、故障、测试"
   },
   "пожар, медпомощь, вторжение, паника": {
-    "uz": "yong'in, tibbiy yordam, kirib borish, vahima",
+    "uz": "yongʻin, tibbiy yordam, kirib borish, vahima",
     "en": "fire, medical, intrusion, panic",
     "tr": "yangın, tıbbi yardım, izinsiz giriş, panik",
     "zh": "火警、医疗求助、入侵、紧急求救"
   },
   "Пожар, обрыв, короткое замыкание": {
-    "uz": "Yong'in, uzilish, qisqa tutashuv",
+    "uz": "Yongʻin, uzilish, qisqa tutashuv",
     "en": "Fire, open circuit, short circuit",
     "tr": "Yangın, kopukluk, kısa devre",
     "zh": "火警、断路、短路"
   },
   "Пожарная и охранная": {
-    "uz": "Yong'in va qo'riqlash",
+    "uz": "Yongʻin va qoʻriqlash",
     "en": "Fire and intruder",
     "tr": "Yangın ve hırsız",
     "zh": "消防与防盗"
   },
   "Пожарная и охранная сигнализация": {
-    "uz": "Yong'in va qo'riqlash signalizatsiyasi",
+    "uz": "Yongʻin va qoʻriqlash signalizatsiyasi",
     "en": "Fire and intruder alarm",
     "tr": "Yangın ve hırsız alarmı",
     "zh": "火灾与防盗报警"
   },
   "Пожарная сигнализация": {
-    "uz": "Yong'in signalizatsiyasi",
+    "uz": "Yongʻin signalizatsiyasi",
     "en": "Fire alarm",
     "tr": "Yangın alarmı",
     "zh": "火灾报警"
   },
   "Пожарная сигнализация Рубеж": {
-    "uz": "Rubezh yong'in signalizatsiyasi",
+    "uz": "Rubezh yongʻin signalizatsiyasi",
     "en": "Rubezh fire alarm",
     "tr": "Rubezh yangın alarmı",
     "zh": "Rubezh 火灾报警"
   },
   "Пожарные и охранные системы": {
-    "uz": "Yong'in va qo'riqlash tizimlari",
+    "uz": "Yongʻin va qoʻriqlash tizimlari",
     "en": "Fire and security systems",
     "tr": "Yangın ve güvenlik sistemleri",
     "zh": "消防与安防系统"
   },
   "Пожарный кран и шланг": {
-    "uz": "Yong'in kranlari va shlang",
+    "uz": "Yongʻin kranlari va shlang",
     "en": "Fire hydrant and hose",
     "tr": "Yangın vanası ve hortumu",
     "zh": "消火栓与水带"
   },
   "Пожарный сигнал": {
-    "uz": "Yong‘in signali",
+    "uz": "Yongʻin signali",
     "en": "Fire signal",
     "tr": "Yangın sinyali",
     "zh": "火警信号"
   },
   "Пожарный сигнал, техническое состояние": {
-    "uz": "Yong'in signali, texnik holat",
+    "uz": "Yongʻin signali, texnik holat",
     "en": "Fire signal, technical status",
     "tr": "Yangın sinyali, teknik durum",
     "zh": "火警信号、设备状态"
   },
   "Пожарный шкаф": {
-    "uz": "Yong'in shkafi",
+    "uz": "Yongʻin shkafi",
     "en": "Fire cabinet",
     "tr": "Yangın dolabı",
     "zh": "消防箱"
   },
   "пожаротушением": {
-    "uz": "yong‘in o‘chirish bilan",
+    "uz": "yongʻin oʻchirish bilan",
     "en": "with fire suppression",
     "tr": "yangın söndürme ile",
     "zh": "带灭火"
@@ -13914,7 +13914,7 @@
     "zh": "镀金"
   },
   "полевая сборка": {
-    "uz": "dala sharoitida yig'ish",
+    "uz": "dala sharoitida yigʻish",
     "en": "field assembly",
     "tr": "sahada montaj",
     "zh": "现场组装"
@@ -13968,44 +13968,44 @@
     "zh": "聚丙烯（PP）"
   },
   "Полнодуплексный": {
-    "uz": "To'liq dupleksli",
+    "uz": "Toʻliq dupleksli",
     "en": "Full duplex",
     "tr": "Tam dupleks",
     "zh": "全双工"
   },
   "Полноростовый револьверный турникет": {
-    "uz": "To'liq bo'yli revolverli turniket",
+    "uz": "Toʻliq boʻyli revolverli turniket",
     "en": "Full-height rotor turnstile",
     "tr": "Tam boy döner turnike",
     "zh": "全高旋转闸"
   },
   "Полностью закрытая": {
-    "uz": "To‘liq yopiq",
+    "uz": "Toʻliq yopiq",
     "en": "Fully enclosed",
     "tr": "Tamamen kapalı",
     "zh": "全封闭"
   },
   "Полностью закрытая, без вентилятора": {
-    "uz": "To'liq yopiq, ventilyatorsiz",
+    "uz": "Toʻliq yopiq, ventilyatorsiz",
     "en": "Fully enclosed, fanless",
     "tr": "Tamamen kapalı, fansız",
     "zh": "全封闭无风扇"
   },
   "Полноцветная": {
-    "uz": "To'liq rangli",
-    "en": "Full colour",
+    "uz": "Toʻliq rangli",
+    "en": "Full color",
     "tr": "Tam renkli",
     "zh": "全彩"
   },
   "полноцветная ночная съёмка": {
-    "uz": "to‘liq rangli tungi suratga olish",
-    "en": "full-colour night imaging",
+    "uz": "toʻliq rangli tungi suratga olish",
+    "en": "full-color night imaging",
     "tr": "tam renkli gece görüşü",
     "zh": "全彩夜视"
   },
   "полноцветная ночная съёмка, ИИ-шумоподавление": {
-    "uz": "to'liq rangli tungi suratga olish, SI-shovqin bostirish",
-    "en": "full-colour night imaging, AI noise reduction",
+    "uz": "toʻliq rangli tungi suratga olish, SI-shovqin bostirish",
+    "en": "full-color night imaging, AI noise reduction",
     "tr": "tam renkli gece görüntüleme, yapay zekâ gürültü azaltma",
     "zh": "全彩夜视、AI 降噪"
   },
@@ -14022,7 +14022,7 @@
     "zh": "室内"
   },
   "Помещение/улица": {
-    "uz": "Xona/ko'cha",
+    "uz": "Xona/koʻcha",
     "en": "Indoor/outdoor",
     "tr": "İç/dış mekân",
     "zh": "室内/室外"
@@ -14082,55 +14082,55 @@
     "zh": "吸顶安装"
   },
   "Потолочный, врезной": {
-    "uz": "Shiftga, kesib o'rnatiladigan",
+    "uz": "Shiftga, kesib oʻrnatiladigan",
     "en": "Ceiling, recessed",
     "tr": "Tavan, gömme",
     "zh": "吸顶嵌入式"
   },
   "ППКП": {
-    "uz": "Yong‘in nazorat paneli",
+    "uz": "Yongʻin nazorat paneli",
     "en": "fire alarm control panel",
     "tr": "yangın alarm paneli",
     "zh": "火灾报警控制器"
   },
   "ППКП, блоки индикации, пульты ДУ": {
-    "uz": "Yong'in nazorat paneli, indikatsiya bloklari, masofadan boshqarish pultlari",
+    "uz": "Yongʻin nazorat paneli, indikatsiya bloklari, masofadan boshqarish pultlari",
     "en": "Fire panel, indication units, remote control panels",
     "tr": "Yangın paneli, gösterge üniteleri, uzaktan kumanda panelleri",
     "zh": "火灾报警主机、显示单元、远程控制盘"
   },
   "ППКУП Сириус": {
-    "uz": "«Sirius» yong‘in nazorat paneli",
+    "uz": "«Sirius» yongʻin nazorat paneli",
     "en": "Sirius fire control panel",
     "tr": "Sirius yangın kontrol paneli",
     "zh": "Sirius 火灾控制器"
   },
   "ППКУП Сириус, С2000М": {
-    "uz": "Sirius yong'in nazorat paneli, S2000M",
+    "uz": "Sirius yongʻin nazorat paneli, S2000M",
     "en": "Sirius fire panel, S2000M",
     "tr": "Sirius yangın paneli, S2000M",
     "zh": "Sirius 火灾主机、S2000M"
   },
   "правая сторона": {
-    "uz": "o‘ng tomon",
+    "uz": "oʻng tomon",
     "en": "right side",
     "tr": "sağ taraf",
     "zh": "右侧"
   },
   "Правая сторона": {
-    "uz": "O'ng tomon",
+    "uz": "Oʻng tomon",
     "en": "Right side",
     "tr": "Sağ taraf",
     "zh": "右置"
   },
   "Право или левосторонний": {
-    "uz": "O'ng yoki chap tomonli",
+    "uz": "Oʻng yoki chap tomonli",
     "en": "Right- or left-hand",
     "tr": "Sağ veya sol taraflı",
     "zh": "左置或右置"
   },
   "Правостороннее": {
-    "uz": "O'ng tomonli",
+    "uz": "Oʻng tomonli",
     "en": "Right-hand",
     "tr": "Sağ taraflı",
     "zh": "右置"
@@ -14142,25 +14142,25 @@
     "zh": "超速"
   },
   "предпросмотр": {
-    "uz": "oldindan ko‘rish",
+    "uz": "oldindan koʻrish",
     "en": "preview",
     "tr": "ön izleme",
     "zh": "预览"
   },
   "Предпросмотр": {
-    "uz": "Oldindan ko‘rish",
+    "uz": "Oldindan koʻrish",
     "en": "Preview",
     "tr": "Ön izleme",
     "zh": "预览"
   },
   "Предпросмотр, PTZ, видеостена": {
-    "uz": "Oldindan ko'rish, PTZ, videodevor",
+    "uz": "Oldindan koʻrish, PTZ, videodevor",
     "en": "Preview, PTZ, video wall",
     "tr": "Ön izleme, PTZ, video duvarı",
     "zh": "预览、云台控制、视频墙"
   },
   "Предустановлена": {
-    "uz": "Oldindan o'rnatilgan",
+    "uz": "Oldindan oʻrnatilgan",
     "en": "Pre-installed",
     "tr": "Önceden kurulu",
     "zh": "预装"
@@ -14178,7 +14178,7 @@
     "zh": "演示、数字标牌"
   },
   "Прибор управления газовым пожаротушением": {
-    "uz": "Gazli yong'in o'chirishni boshqarish asbobi",
+    "uz": "Gazli yongʻin oʻchirishni boshqarish asbobi",
     "en": "Gas extinguishing control panel",
     "tr": "Gazlı söndürme kumanda paneli",
     "zh": "气体灭火控制器"
@@ -14280,8 +14280,8 @@
     "zh": "运营商"
   },
   "Провайдер, дата-центр": {
-    "uz": "Provayder, ma'lumotlar markazi",
-    "en": "Service provider, data centre",
+    "uz": "Provayder, maʼlumotlar markazi",
+    "en": "Service provider, data center",
     "tr": "Servis sağlayıcı, veri merkezi",
     "zh": "运营商、数据中心"
   },
@@ -14328,37 +14328,37 @@
     "zh": "工业级 4G/LTE Wi-Fi 路由器"
   },
   "просмотр в реальном времени": {
-    "uz": "real vaqtda ko‘rish",
+    "uz": "real vaqtda koʻrish",
     "en": "real-time viewing",
     "tr": "gerçek zamanlı izleme",
     "zh": "实时预览"
   },
   "Просмотр видео": {
-    "uz": "Videoni ko‘rish",
+    "uz": "Videoni koʻrish",
     "en": "Video viewing",
     "tr": "Video izleme",
     "zh": "视频查看"
   },
   "Просмотр видео со станций и камер": {
-    "uz": "Stansiyalar va kameralardan videoni ko'rish",
+    "uz": "Stansiyalar va kameralardan videoni koʻrish",
     "en": "Viewing video from stations and cameras",
     "tr": "İstasyon ve kameralardan video izleme",
     "zh": "查看门口机与摄像机画面"
   },
   "Просмотр видео, кастомизация функций": {
-    "uz": "Videoni ko'rish, funksiyalarni moslashtirish",
-    "en": "Video viewing, function customisation",
+    "uz": "Videoni koʻrish, funksiyalarni moslashtirish",
+    "en": "Video viewing, function customization",
     "tr": "Video izleme, işlev özelleştirme",
     "zh": "视频查看、功能自定义"
   },
   "просмотр и воспроизведение": {
-    "uz": "ko‘rish va qayta ijro",
+    "uz": "koʻrish va qayta ijro",
     "en": "live view and playback",
     "tr": "canlı izleme ve oynatma",
     "zh": "预览与回放"
   },
   "просмотр IP-камер": {
-    "uz": "IP-kameralarni ko‘rish",
+    "uz": "IP-kameralarni koʻrish",
     "en": "IP camera viewing",
     "tr": "IP kamera izleme",
     "zh": "IP 摄像机预览"
@@ -14370,13 +14370,13 @@
     "zh": "简易"
   },
   "Простая установка": {
-    "uz": "Oddiy o'rnatish",
+    "uz": "Oddiy oʻrnatish",
     "en": "Simple installation",
     "tr": "Kolay kurulum",
     "zh": "安装简便"
   },
   "противопожарные двери": {
-    "uz": "yong‘inga qarshi eshiklar",
+    "uz": "yongʻinga qarshi eshiklar",
     "en": "fire doors",
     "tr": "yangın kapıları",
     "zh": "防火门"
@@ -14388,13 +14388,13 @@
     "zh": "带滚轮压紧弹簧"
   },
   "Прямая": {
-    "uz": "To'g'ri",
+    "uz": "Toʻgʻri",
     "en": "Straight",
     "tr": "Düz",
     "zh": "直杆式"
   },
   "Прямая телескопическая": {
-    "uz": "To'g'ri teleskopik",
+    "uz": "Toʻgʻri teleskopik",
     "en": "Straight telescopic",
     "tr": "Düz teleskopik",
     "zh": "直杆伸缩式"
@@ -14514,7 +14514,7 @@
     "zh": "无线射频"
   },
   "разделы": {
-    "uz": "bo‘limlar",
+    "uz": "boʻlimlar",
     "en": "partitions",
     "tr": "bölümler",
     "zh": "分区"
@@ -14544,7 +14544,7 @@
     "zh": "电源接口（DC）"
   },
   "Раннее обнаружение тления": {
-    "uz": "Cho'g'lanishni erta aniqlash",
+    "uz": "Choʻgʻlanishni erta aniqlash",
     "en": "Early smouldering detection",
     "tr": "İçin için yanmanın erken tespiti",
     "zh": "阴燃早期探测"
@@ -14556,7 +14556,7 @@
     "zh": "线缆端接"
   },
   "Расключение проводов, Пожарная и охранная сигнализация": {
-    "uz": "Simlarni ulash, yong'in va qo'riqlash signalizatsiyasi",
+    "uz": "Simlarni ulash, yongʻin va qoʻriqlash signalizatsiyasi",
     "en": "Wire termination, fire and intruder alarm",
     "tr": "Kablo sonlandırma, yangın ve hırsız alarmı",
     "zh": "线缆端接、消防与防盗报警"
@@ -14605,19 +14605,19 @@
   },
   "Распознавание автомобильных номеров": {
     "uz": "Avtomobil raqamlarini tanish",
-    "en": "Licence plate recognition",
+    "en": "License plate recognition",
     "tr": "Plaka tanıma",
     "zh": "车牌识别"
   },
   "Распознавание автомобильных номеров (LPR)": {
     "uz": "Avtomobil raqamlarini tanish (LPR)",
-    "en": "Licence plate recognition (LPR)",
+    "en": "License plate recognition (LPR)",
     "tr": "Plaka tanıma (LPR)",
     "zh": "车牌识别（LPR）"
   },
   "Распознавание автономеров": {
     "uz": "Avtomobil raqamlarini tanish",
-    "en": "Licence plate recognition",
+    "en": "License plate recognition",
     "tr": "Plaka tanıma",
     "zh": "车牌识别"
   },
@@ -14689,7 +14689,7 @@
   },
   "распознавание типа и цвета авто": {
     "uz": "avtomobil turi va rangini aniqlash",
-    "en": "vehicle type and colour recognition",
+    "en": "vehicle type and color recognition",
     "tr": "araç tipi ve rengi tanıma",
     "zh": "车型车色识别"
   },
@@ -14760,19 +14760,19 @@
     "zh": "录像机、交换机、电脑"
   },
   "Регистрация и идентификация": {
-    "uz": "Ro'yxatga olish va identifikatsiya",
+    "uz": "Roʻyxatga olish va identifikatsiya",
     "en": "Registration and identification",
     "tr": "Kayıt ve kimlik doğrulama",
     "zh": "登记与身份识别"
   },
   "Регистрация посетителей": {
-    "uz": "Tashrif buyuruvchilarni ro‘yxatga olish",
+    "uz": "Tashrif buyuruvchilarni roʻyxatga olish",
     "en": "Visitor registration",
     "tr": "Ziyaretçi kaydı",
     "zh": "访客登记"
   },
   "Регистрация посетителей, печать пропусков": {
-    "uz": "Tashrif buyuruvchilarni ro'yxatga olish, ruxsatnomalarni chop etish",
+    "uz": "Tashrif buyuruvchilarni roʻyxatga olish, ruxsatnomalarni chop etish",
     "en": "Visitor registration, pass printing",
     "tr": "Ziyaretçi kaydı, kart basımı",
     "zh": "访客登记、通行证打印"
@@ -14868,13 +14868,13 @@
     "zh": "道闸继电器"
   },
   "Реле охраны": {
-    "uz": "Qo‘riqlash relesi",
+    "uz": "Qoʻriqlash relesi",
     "en": "Security relay",
     "tr": "Güvenlik rölesi",
     "zh": "安防继电器"
   },
   "Реле охраны, датчик вскрытия": {
-    "uz": "Qo'riqlash relesi, ochish datchigi",
+    "uz": "Qoʻriqlash relesi, ochish datchigi",
     "en": "Security relay, tamper sensor",
     "tr": "Güvenlik rölesi, tamper sensörü",
     "zh": "防区继电器、防拆传感器"
@@ -14976,49 +14976,49 @@
     "zh": "Rubezh-4A、Rubezh-2OP、Vodoley"
   },
   "Ручное": {
-    "uz": "Qo'lda",
+    "uz": "Qoʻlda",
     "en": "Manual",
     "tr": "Manuel",
     "zh": "手动"
   },
   "Ручное колесо при отключении питания": {
-    "uz": "Quvvat o'chganda qo'lda burash g'ildiragi",
+    "uz": "Quvvat oʻchganda qoʻlda burash gʻildiragi",
     "en": "Manual wheel on power failure",
     "tr": "Elektrik kesintisinde manuel çevirme",
     "zh": "断电时手动摇柄"
   },
   "Ручной и автоматический": {
-    "uz": "Qo'lda va avtomatik",
+    "uz": "Qoʻlda va avtomatik",
     "en": "Manual and automatic",
     "tr": "Manuel ve otomatik",
     "zh": "手动与自动"
   },
   "ручной металлоискатель": {
-    "uz": "qo'lda metall detektori",
+    "uz": "qoʻlda metall detektori",
     "en": "handheld metal detector",
     "tr": "el tipi metal dedektörü",
     "zh": "手持金属探测器"
   },
   "Ручной пожарный извещатель": {
-    "uz": "Qo‘lda ishga tushiriladigan yong‘in datchigi",
+    "uz": "Qoʻlda ishga tushiriladigan yongʻin datchigi",
     "en": "Manual call point",
     "tr": "Yangın ihbar butonu",
     "zh": "手动报警按钮"
   },
   "Ручной пожарный извещатель (ИПР)": {
-    "uz": "Qo'lda yong'in izvestiteli",
+    "uz": "Qoʻlda yongʻin izvestiteli",
     "en": "Manual call point",
     "tr": "Yangın butonu",
     "zh": "手动火灾报警按钮"
   },
   "рыбий глаз": {
-    "uz": "baliq ko‘zi",
+    "uz": "baliq koʻzi",
     "en": "fisheye",
     "tr": "balık gözü",
     "zh": "鱼眼"
   },
   "С выключателем": {
-    "uz": "O'chirgich bilan",
+    "uz": "Oʻchirgich bilan",
     "en": "With switch",
     "tr": "Anahtarlı",
     "zh": "带开关"
@@ -15102,7 +15102,7 @@
     "zh": "S2000M"
   },
   "С2000М, АРМ \"Орион Про\"": {
-    "uz": "S2000M, «Orion Pro» ish o'rni",
+    "uz": "S2000M, «Orion Pro» ish oʻrni",
     "en": "S2000M, Orion Pro workstation",
     "tr": "S2000M, Orion Pro iş istasyonu",
     "zh": "S2000M、Orion Pro 工作站"
@@ -15126,73 +15126,73 @@
     "zh": "电缆密封接头 Ø20 / Ø25 / Ø32"
   },
   "Самодиагностика": {
-    "uz": "O‘z-o‘zini tekshirish",
+    "uz": "Oʻz-oʻzini tekshirish",
     "en": "Self-diagnostics",
     "tr": "Kendi kendine teşhis",
     "zh": "自诊断"
   },
   "Самодиагностика, контроль подпирания, звуковой сигнал": {
-    "uz": "O'z-o'zini diagnostika, tirkash nazorati, ovozli signal",
+    "uz": "Oʻz-oʻzini diagnostika, tirkash nazorati, ovozli signal",
     "en": "Self-diagnostics, anti-tailgating, audible alarm",
     "tr": "Kendi kendine tanılama, sıkı takip denetimi, sesli uyarı",
     "zh": "自诊断、防尾随、声音提示"
   },
   "Самоочистка": {
-    "uz": "O‘z-o‘zini tozalash",
+    "uz": "Oʻz-oʻzini tozalash",
     "en": "Self-cleaning",
     "tr": "Kendi kendini temizleme",
     "zh": "自清洁"
   },
   "Самоочистка, мешок ~70 дней": {
-    "uz": "O'z-o'zini tozalash, xalta ~70 kun",
+    "uz": "Oʻz-oʻzini tozalash, xalta ~70 kun",
     "en": "Self-emptying, bag lasts ~70 days",
     "tr": "Kendi kendini boşaltma, torba ~70 gün",
     "zh": "自动集尘，尘袋约 70 天"
   },
   "самопроверка одной кнопкой": {
-    "uz": "bitta tugma bilan o'z-o'zini tekshirish",
+    "uz": "bitta tugma bilan oʻz-oʻzini tekshirish",
     "en": "one-button self-test",
     "tr": "tek tuşla kendi kendine test",
     "zh": "一键自检"
   },
   "световая": {
-    "uz": "yorug‘lik",
+    "uz": "yorugʻlik",
     "en": "visual",
     "tr": "ışıklı",
     "zh": "灯光"
   },
   "Световая и звуковая": {
-    "uz": "Yorug'lik va ovozli",
+    "uz": "Yorugʻlik va ovozli",
     "en": "Visual and audible",
     "tr": "Işıklı ve sesli",
     "zh": "声光式"
   },
   "Световая и звуковая индикация": {
-    "uz": "Yorug'lik va ovozli indikatsiya",
+    "uz": "Yorugʻlik va ovozli indikatsiya",
     "en": "Visual and audible indication",
     "tr": "Işıklı ve sesli gösterge",
     "zh": "声光指示"
   },
   "Световое табло «Выход»": {
-    "uz": "«Chiqish» yorug'lik tablosi",
+    "uz": "«Chiqish» yorugʻlik tablosi",
     "en": "Illuminated EXIT sign",
     "tr": "Işıklı ÇIKIŞ levhası",
-    "zh": "「安全出口」灯箱标志"
+    "zh": "“安全出口”灯箱标志"
   },
   "Световое табло адресное": {
-    "uz": "Adresli yorug'lik tablosi",
+    "uz": "Adresli yorugʻlik tablosi",
     "en": "Addressable illuminated sign",
     "tr": "Adresli ışıklı levha",
     "zh": "总线制灯箱标志"
   },
   "Световое табло оповещения": {
-    "uz": "Ogohlantirish yorug'lik tablosi",
+    "uz": "Ogohlantirish yorugʻlik tablosi",
     "en": "Illuminated alarm sign",
     "tr": "Işıklı uyarı levhası",
     "zh": "警示灯箱标志"
   },
   "Световой и звуковой": {
-    "uz": "Yorug'lik va ovozli",
+    "uz": "Yorugʻlik va ovozli",
     "en": "Visual and audible",
     "tr": "Işıklı ve sesli",
     "zh": "声光式"
@@ -15210,13 +15210,13 @@
     "zh": "LED 式"
   },
   "Светодиодная (оба направления)": {
-    "uz": "Svetodiodli (ikkala yo'nalish)",
+    "uz": "Svetodiodli (ikkala yoʻnalish)",
     "en": "LED (both directions)",
     "tr": "LED (her iki yön)",
     "zh": "LED（双向）"
   },
   "Светодиодная стрелка направления движения": {
-    "uz": "Harakat yo'nalishining svetodiod strelkasi",
+    "uz": "Harakat yoʻnalishining svetodiod strelkasi",
     "en": "LED direction-of-travel arrow",
     "tr": "LED yön oku",
     "zh": "LED 通行方向箭头"
@@ -15367,7 +15367,7 @@
   },
   "Серый": {
     "uz": "Kulrang",
-    "en": "Grey",
+    "en": "Gray",
     "tr": "Gri",
     "zh": "灰色"
   },
@@ -15408,13 +15408,13 @@
     "zh": "报警、广播提示"
   },
   "Силовые цепи и цепи КИПиА": {
-    "uz": "Kuch zanjirlari va o'lchov-nazorat zanjirlari",
+    "uz": "Kuch zanjirlari va oʻlchov-nazorat zanjirlari",
     "en": "Power circuits and instrumentation circuits",
     "tr": "Güç devreleri ve enstrümantasyon devreleri",
     "zh": "动力回路与仪表控制回路"
   },
   "Синий": {
-    "uz": "Ko'k",
+    "uz": "Koʻk",
     "en": "Blue",
     "tr": "Mavi",
     "zh": "蓝色"
@@ -15432,7 +15432,7 @@
     "zh": "交替闪光警号"
   },
   "Сирена со светом": {
-    "uz": "Yorug'likli sirena",
+    "uz": "Yorugʻlikli sirena",
     "en": "Siren with light",
     "tr": "Işıklı siren",
     "zh": "带灯警号"
@@ -15480,7 +15480,7 @@
     "zh": "浪涌"
   },
   "складной": {
-    "uz": "yig‘iladigan",
+    "uz": "yigʻiladigan",
     "en": "foldable",
     "tr": "katlanır",
     "zh": "可折叠"
@@ -15540,7 +15540,7 @@
     "zh": "嵌入式（Flush）"
   },
   "Скрытый, малый размер": {
-    "uz": "Yashirin, kichik o'lcham",
+    "uz": "Yashirin, kichik oʻlcham",
     "en": "Concealed, compact",
     "tr": "Gizli, küçük boyut",
     "zh": "隐蔽式，体积小"
@@ -15636,7 +15636,7 @@
     "zh": "切断锁具供电"
   },
   "со встроенным кронштейном": {
-    "uz": "o‘rnatilgan kronshteyn bilan",
+    "uz": "oʻrnatilgan kronshteyn bilan",
     "en": "with integrated bracket",
     "tr": "entegre braketli",
     "zh": "带一体支架"
@@ -15708,7 +15708,7 @@
     "zh": "8W 太阳能板 + 9000mAh 电池"
   },
   "Солнечная панель, встроенный аккумулятор": {
-    "uz": "Quyosh paneli, o'rnatilgan akkumulyator",
+    "uz": "Quyosh paneli, oʻrnatilgan akkumulyator",
     "en": "Solar panel, built-in battery",
     "tr": "Güneş paneli, dahili akü",
     "zh": "太阳能板、内置电池"
@@ -15720,13 +15720,13 @@
     "zh": "与电脑对接"
   },
   "Соседние стойки": {
-    "uz": "Qo‘shni stoykalar",
+    "uz": "Qoʻshni stoykalar",
     "en": "Adjacent racks",
     "tr": "Bitişik kabinetler",
     "zh": "相邻机柜"
   },
   "Соседние стойки, шкаф — сервер": {
-    "uz": "Qo'shni stoykalar, shkaf — server",
+    "uz": "Qoʻshni stoykalar, shkaf — server",
     "en": "Adjacent racks, cabinet to server",
     "tr": "Komşu kabinler, kabin - sunucu",
     "zh": "相邻机柜、机柜与服务器之间"
@@ -15811,72 +15811,72 @@
   },
   "Сращивание волокна": {
     "uz": "Tolani payvandlash",
-    "en": "Fibre splicing",
+    "en": "Fiber splicing",
     "tr": "Fiber ekleme",
     "zh": "光纤熔接"
   },
   "средняя часть": {
-    "uz": "o‘rta qism",
+    "uz": "oʻrta qism",
     "en": "middle section",
     "tr": "orta bölüm",
     "zh": "中间段"
   },
   "Сталь / алюминиевый сплав": {
-    "uz": "Po'lat / alyuminiy qotishma",
-    "en": "Steel / aluminium alloy",
+    "uz": "Poʻlat / alyuminiy qotishma",
+    "en": "Steel / aluminum alloy",
     "tr": "Çelik / alüminyum alaşım",
     "zh": "钢材 / 铝合金"
   },
   "Сталь горячего цинкования": {
-    "uz": "Issiq rux qoplamali po'lat",
+    "uz": "Issiq rux qoplamali poʻlat",
     "en": "Hot-dip galvanised steel",
     "tr": "Sıcak daldırma galvanizli çelik",
     "zh": "热浸镀锌钢"
   },
   "Сталь с покрытием": {
-    "uz": "Qoplamali po'lat",
+    "uz": "Qoplamali poʻlat",
     "en": "Coated steel",
     "tr": "Kaplamalı çelik",
     "zh": "带涂层钢材"
   },
   "сталь SPCC": {
-    "uz": "SPCC po'lat",
+    "uz": "SPCC poʻlat",
     "en": "SPCC steel",
     "tr": "SPCC çelik",
     "zh": "SPCC 钢"
   },
   "сталь SPCC / поликарбонат": {
-    "uz": "SPCC po'lat / polikarbonat",
+    "uz": "SPCC poʻlat / polikarbonat",
     "en": "SPCC steel / polycarbonate",
     "tr": "SPCC çelik / polikarbonat",
     "zh": "SPCC 钢 / 聚碳酸酯"
   },
   "Сталь SUS304 0.8 мм": {
-    "uz": "SUS304 po'lat 0.8 mm",
+    "uz": "SUS304 poʻlat 0.8 mm",
     "en": "SUS304 steel 0.8 mm",
     "tr": "SUS304 çelik 0,8 mm",
     "zh": "SUS304 钢 0.8 mm"
   },
   "стальной": {
-    "uz": "po‘latdan",
+    "uz": "poʻlatdan",
     "en": "steel",
     "tr": "çelik",
     "zh": "钢制"
   },
   "Стальной": {
-    "uz": "Po'lat",
+    "uz": "Poʻlat",
     "en": "Steel",
     "tr": "Çelik",
     "zh": "钢制"
   },
   "Стальной пружинный зажим": {
-    "uz": "Po'lat prujinali qisqich",
+    "uz": "Poʻlat prujinali qisqich",
     "en": "Steel spring clamp",
     "tr": "Çelik yaylı kelepçe",
     "zh": "钢制弹簧夹"
   },
   "Стальной, 1U стойка": {
-    "uz": "Po'lat, 1U stoyka",
+    "uz": "Poʻlat, 1U stoyka",
     "en": "Steel, 1U rack",
     "tr": "Çelik, 1U kabin",
     "zh": "钢制 1U 机架式"
@@ -15942,13 +15942,13 @@
     "zh": "玻璃，左置"
   },
   "Стеклянная, правая сторона": {
-    "uz": "Shishali, o'ng tomon",
+    "uz": "Shishali, oʻng tomon",
     "en": "Glass, right side",
     "tr": "Cam, sağ taraf",
     "zh": "玻璃，右置"
   },
   "Стеклянная, средняя часть": {
-    "uz": "Shishali, o'rta qism",
+    "uz": "Shishali, oʻrta qism",
     "en": "Glass, middle section",
     "tr": "Cam, orta bölüm",
     "zh": "玻璃，中间段"
@@ -16116,13 +16116,13 @@
     "zh": "箭头 LED"
   },
   "Стробо-свет": {
-    "uz": "Strob-yorug‘lik",
+    "uz": "Strob-yorugʻlik",
     "en": "Strobe light",
     "tr": "Flaş ışığı",
     "zh": "频闪灯"
   },
   "Стробо-свет, звуковая сигнализация": {
-    "uz": "Stroboskopik yorug'lik, ovozli signalizatsiya",
+    "uz": "Stroboskopik yorugʻlik, ovozli signalizatsiya",
     "en": "Strobe light, audible alarm",
     "tr": "Flaşörlü ışık, sesli uyarı",
     "zh": "爆闪灯、声音报警"
@@ -16170,31 +16170,31 @@
     "zh": "频闪与声音"
   },
   "Стробоскопическая красная/синяя + ИК": {
-    "uz": "Stroboskopik qizil/ko'k + IQ",
+    "uz": "Stroboskopik qizil/koʻk + IQ",
     "en": "Red/blue strobe + IR",
     "tr": "Kırmızı/mavi flaşör + IR",
     "zh": "红蓝爆闪 + 红外"
   },
   "Стробоскопический свет": {
-    "uz": "Stroboskopik yorug‘lik",
+    "uz": "Stroboskopik yorugʻlik",
     "en": "Strobe light",
     "tr": "Stroboskopik ışık",
     "zh": "频闪灯"
   },
   "Стробоскопический свет + звуковой сигнал": {
-    "uz": "Stroboskopik yorug'lik + ovozli signal",
+    "uz": "Stroboskopik yorugʻlik + ovozli signal",
     "en": "Strobe light + audible signal",
     "tr": "Flaşörlü ışık + sesli uyarı",
     "zh": "爆闪灯 + 声音提示"
   },
   "Стробоскопический свет, звуковая сигнализация": {
-    "uz": "Stroboskopik yorug'lik, ovozli signalizatsiya",
+    "uz": "Stroboskopik yorugʻlik, ovozli signalizatsiya",
     "en": "Strobe light, audible alarm",
     "tr": "Flaşörlü ışık, sesli uyarı",
     "zh": "爆闪灯、声音报警"
   },
   "Стробоскопический свет, звуковой сигнал": {
-    "uz": "Stroboskopik yorug'lik, ovozli signal",
+    "uz": "Stroboskopik yorugʻlik, ovozli signal",
     "en": "Strobe light, audible alarm",
     "tr": "Flaşörlü ışık, sesli uyarı",
     "zh": "爆闪灯、声音提示"
@@ -16218,13 +16218,13 @@
     "zh": "SUZ - 迷你 - 爆闪"
   },
   "Супер-быстрая": {
-    "uz": "O'ta tez",
+    "uz": "Oʻta tez",
     "en": "Ultra-fast",
     "tr": "Ultra hızlı",
     "zh": "超高速"
   },
   "Сухая + влажная уборка": {
-    "uz": "Quruq + ho'l tozalash",
+    "uz": "Quruq + hoʻl tozalash",
     "en": "Dry + wet cleaning",
     "tr": "Kuru + ıslak temizlik",
     "zh": "干扫 + 湿拖"
@@ -16254,7 +16254,7 @@
     "zh": "人数统计"
   },
   "Счётчик людей, ANPR, рыбий глаз": {
-    "uz": "Odamlarni sanagich, ANPR, baliq ko'zi",
+    "uz": "Odamlarni sanagich, ANPR, baliq koʻzi",
     "en": "People counting, ANPR, fisheye",
     "tr": "İnsan sayımı, ANPR, balıkgözü",
     "zh": "客流统计、车牌识别、鱼眼"
@@ -16266,13 +16266,13 @@
     "zh": "RS-485 计量表"
   },
   "Считывание карт": {
-    "uz": "Kartalarni o‘qish",
+    "uz": "Kartalarni oʻqish",
     "en": "Card reading",
     "tr": "Kart okuma",
     "zh": "读卡"
   },
   "Считывание карт, дистанционное управление, индикация статуса": {
-    "uz": "Kartalarni o'qish, masofadan boshqarish, holat indikatsiyasi",
+    "uz": "Kartalarni oʻqish, masofadan boshqarish, holat indikatsiyasi",
     "en": "Card reading, remote control, status indication",
     "tr": "Kart okuma, uzaktan kumanda, durum göstergesi",
     "zh": "读卡、远程控制、状态指示"
@@ -16314,14 +16314,14 @@
     "zh": "伸缩式闸杆"
   },
   "телефонная сеть": {
-    "uz": "telefon tarmog'i",
+    "uz": "telefon tarmogʻi",
     "en": "telephone network",
     "tr": "telefon şebekesi",
     "zh": "电话网络"
   },
   "Темно-серый": {
-    "uz": "To'q kulrang",
-    "en": "Dark grey",
+    "uz": "Toʻq kulrang",
+    "en": "Dark gray",
     "tr": "Koyu gri",
     "zh": "深灰色"
   },
@@ -16374,7 +16374,7 @@
     "zh": "暖光，最远 30 米"
   },
   "Теплая свет до 30m": {
-    "uz": "Iliq yorug'lik 30 m gacha",
+    "uz": "Iliq yorugʻlik 30 m gacha",
     "en": "Warm light up to 30 m",
     "tr": "Sıcak ışık 30 m'ye kadar",
     "zh": "暖光，最远 30 米"
@@ -16398,7 +16398,7 @@
     "zh": "定温差温复合感温式"
   },
   "Тепловой пожарный извещатель": {
-    "uz": "Issiqlik yong'in izvestiteli",
+    "uz": "Issiqlik yongʻin izvestiteli",
     "en": "Heat fire detector",
     "tr": "Isı yangın dedektörü",
     "zh": "感温火灾探测器"
@@ -16501,7 +16501,7 @@
   },
   "торговые центры": {
     "uz": "savdo markazlari",
-    "en": "shopping centres",
+    "en": "shopping centers",
     "tr": "alışveriş merkezleri",
     "zh": "购物中心"
   },
@@ -16512,7 +16512,7 @@
     "zh": "接入点"
   },
   "Трансляция данных": {
-    "uz": "Ma'lumotlarni uzatish",
+    "uz": "Maʼlumotlarni uzatish",
     "en": "Data transmission",
     "tr": "Veri aktarımı",
     "zh": "数据传输"
@@ -16524,7 +16524,7 @@
     "zh": "车辆"
   },
   "Транспортные средства более 2 колес": {
-    "uz": "2 g'ildirakdan ortiq transport vositalari",
+    "uz": "2 gʻildirakdan ortiq transport vositalari",
     "en": "Vehicles with more than 2 wheels",
     "tr": "İkiden fazla tekerlekli araçlar",
     "zh": "两轮以上的车辆"
@@ -16549,7 +16549,7 @@
   },
   "Тревожная сигнализация": {
     "uz": "Trevoga signalizatsiyasi",
-    "en": "Alarm signalling",
+    "en": "Alarm signaling",
     "tr": "Alarm sinyalizasyonu",
     "zh": "报警指示"
   },
@@ -16608,7 +16608,7 @@
     "zh": "三通道门式闸机"
   },
   "Трёхслойное лакокрасочное покрытие": {
-    "uz": "Uch qatlamli lak-bo'yoq qoplama",
+    "uz": "Uch qatlamli lak-boʻyoq qoplama",
     "en": "Three-layer paint coating",
     "tr": "Üç katmanlı boya kaplama",
     "zh": "三层烤漆涂装"
@@ -16722,7 +16722,7 @@
     "zh": "远程站点"
   },
   "удаленный просмотр": {
-    "uz": "masofadan ko‘rish",
+    "uz": "masofadan koʻrish",
     "en": "remote viewing",
     "tr": "uzaktan izleme",
     "zh": "远程查看"
@@ -16752,133 +16752,133 @@
     "zh": "垂直理线"
   },
   "Улица": {
-    "uz": "Ko'cha",
+    "uz": "Koʻcha",
     "en": "Outdoor",
     "tr": "Dış mekân",
     "zh": "室外"
   },
   "Улица, IP66": {
-    "uz": "Ko'cha, IP66",
+    "uz": "Koʻcha, IP66",
     "en": "Outdoor, IP66",
     "tr": "Dış mekân, IP66",
     "zh": "室外，IP66"
   },
   "Улица/помещение": {
-    "uz": "Ko'cha/xona",
+    "uz": "Koʻcha/xona",
     "en": "Outdoor/indoor",
     "tr": "Dış/iç mekân",
     "zh": "室外/室内"
   },
   "Уличная": {
-    "uz": "Ko'cha",
+    "uz": "Koʻcha",
     "en": "Outdoor",
     "tr": "Dış mekân",
     "zh": "室外型"
   },
   "Уличная точка доступа": {
-    "uz": "Ko‘cha kirish nuqtasi",
+    "uz": "Koʻcha kirish nuqtasi",
     "en": "Outdoor access point",
     "tr": "Dış mekân erişim noktası",
     "zh": "室外 AP"
   },
   "Уличная точка доступа (всенаправленная)": {
-    "uz": "Ko'cha kirish nuqtasi (har tomonlama)",
+    "uz": "Koʻcha kirish nuqtasi (har tomonlama)",
     "en": "Outdoor access point (omnidirectional)",
     "tr": "Dış mekân erişim noktası (çok yönlü)",
     "zh": "室外 AP（全向）"
   },
   "уличная IP65": {
-    "uz": "ko‘cha IP65",
+    "uz": "koʻcha IP65",
     "en": "outdoor IP65",
     "tr": "dış mekân IP65",
     "zh": "室外 IP65"
   },
   "уличная PT-камера": {
-    "uz": "ko‘cha PT-kamerasi",
+    "uz": "koʻcha PT-kamerasi",
     "en": "outdoor PT camera",
     "tr": "dış mekân PT kamera",
     "zh": "室外 PT 摄像机"
   },
   "уличная PT-камера (WizColor)": {
-    "uz": "ko'cha PT-kamerasi (WizColor)",
+    "uz": "koʻcha PT-kamerasi (WizColor)",
     "en": "outdoor PT camera (WizColor)",
     "tr": "dış mekân PT kamera (WizColor)",
     "zh": "室外云台摄像机（WizColor）"
   },
   "уличная Wi-Fi камера": {
-    "uz": "ko'cha Wi-Fi kamerasi",
+    "uz": "koʻcha Wi-Fi kamerasi",
     "en": "outdoor Wi-Fi camera",
     "tr": "dış mekân Wi-Fi kamerası",
     "zh": "室外 Wi-Fi 摄像机"
   },
   "уличная Wi-Fi PT-камера": {
-    "uz": "ko'cha Wi-Fi PT-kamerasi",
+    "uz": "koʻcha Wi-Fi PT-kamerasi",
     "en": "outdoor Wi-Fi PT camera",
     "tr": "dış mekân Wi-Fi PT kamera",
     "zh": "室外 Wi-Fi 云台摄像机"
   },
   "Уличная, всепогодная": {
-    "uz": "Ko'cha, har qanday ob-havoga chidamli",
+    "uz": "Koʻcha, har qanday ob-havoga chidamli",
     "en": "Outdoor, all-weather",
     "tr": "Dış mekân, her hava koşuluna uygun",
     "zh": "室外全天候型"
   },
   "Уличное": {
-    "uz": "Ko'cha",
+    "uz": "Koʻcha",
     "en": "Outdoor",
     "tr": "Dış mekân",
     "zh": "室外型"
   },
   "Уличное исполнение": {
-    "uz": "Ko'cha bajarilishi",
+    "uz": "Koʻcha bajarilishi",
     "en": "Outdoor version",
     "tr": "Dış mekân versiyonu",
     "zh": "室外型"
   },
   "Уличное, круглогодичное": {
-    "uz": "Ko'cha, butun yillik",
+    "uz": "Koʻcha, butun yillik",
     "en": "Outdoor, year-round",
     "tr": "Dış mekân, yıl boyu",
     "zh": "室外全年适用"
   },
   "Уличный": {
-    "uz": "Ko'cha",
+    "uz": "Koʻcha",
     "en": "Outdoor",
     "tr": "Dış mekân",
     "zh": "室外型"
   },
   "Уличный корпус": {
-    "uz": "Ko'cha korpusi",
+    "uz": "Koʻcha korpusi",
     "en": "Outdoor housing",
     "tr": "Dış mekân gövdesi",
     "zh": "室外机壳"
   },
   "Уличный термокожух": {
-    "uz": "Ko'cha termoqobig'i",
+    "uz": "Koʻcha termoqobigʻi",
     "en": "Outdoor thermal housing",
     "tr": "Dış mekân termal muhafazası",
     "zh": "室外热控护罩"
   },
   "Уличный, металлический": {
-    "uz": "Ko'cha, metall",
+    "uz": "Koʻcha, metall",
     "en": "Outdoor, metal",
     "tr": "Dış mekân, metal",
     "zh": "室外金属型"
   },
   "Уличный, с подсветкой": {
-    "uz": "Ko'cha, yoritgichli",
+    "uz": "Koʻcha, yoritgichli",
     "en": "Outdoor, backlit",
     "tr": "Dış mekân, aydınlatmalı",
     "zh": "室外型，带背光"
   },
   "Ультратонкий": {
-    "uz": "O'ta yupqa",
+    "uz": "Oʻta yupqa",
     "en": "Ultra-thin",
     "tr": "Ultra ince",
     "zh": "超薄"
   },
   "Умная ИК-подсветка и белый свет": {
-    "uz": "Aqlli IQ yoritish va oq yorug'lik",
+    "uz": "Aqlli IQ yoritish va oq yorugʻlik",
     "en": "Smart IR illumination and white light",
     "tr": "Akıllı IR aydınlatma ve beyaz ışık",
     "zh": "智能红外补光与白光"
@@ -17016,43 +17016,43 @@
     "zh": "广播与机电系统控制"
   },
   "Управление оповещением и пожаротушением": {
-    "uz": "Ogohlantirish va yong'in o'chirishni boshqarish",
+    "uz": "Ogohlantirish va yongʻin oʻchirishni boshqarish",
     "en": "Control of alarm and extinguishing",
     "tr": "Uyarı ve söndürme kumandası",
     "zh": "广播与灭火系统控制"
   },
   "Управление оповещением, дымоудалением, пожаротушением": {
-    "uz": "Ogohlantirish, tutun chiqarish, yong'in o'chirishni boshqarish",
+    "uz": "Ogohlantirish, tutun chiqarish, yongʻin oʻchirishni boshqarish",
     "en": "Control of alarm, smoke extraction and extinguishing",
     "tr": "Uyarı, duman tahliyesi ve söndürme kumandası",
     "zh": "广播、排烟与灭火控制"
   },
   "Управление оповещением, контроль противопожарного оборудования": {
-    "uz": "Ogohlantirishni boshqarish, yong'inga qarshi uskunani nazorat qilish",
+    "uz": "Ogohlantirishni boshqarish, yongʻinga qarshi uskunani nazorat qilish",
     "en": "Alarm control, monitoring of fire equipment",
     "tr": "Uyarı kumandası, yangın ekipmanı izleme",
     "zh": "广播控制、消防设备监测"
   },
   "управление охраной": {
-    "uz": "qo‘riqlashni boshqarish",
+    "uz": "qoʻriqlashni boshqarish",
     "en": "security control",
     "tr": "güvenlik kontrolü",
     "zh": "布撤防控制"
   },
   "Управление пожаротушением": {
-    "uz": "Yong‘in o‘chirishni boshqarish",
+    "uz": "Yongʻin oʻchirishni boshqarish",
     "en": "Fire suppression control",
     "tr": "Yangın söndürme kontrolü",
     "zh": "灭火控制"
   },
   "Управление пожаротушением, дымоудалением, оповещением": {
-    "uz": "Yong'in o'chirish, tutun chiqarish, ogohlantirishni boshqarish",
+    "uz": "Yongʻin oʻchirish, tutun chiqarish, ogohlantirishni boshqarish",
     "en": "Control of extinguishing, smoke extraction and alarm",
     "tr": "Söndürme, duman tahliyesi ve uyarı kumandası",
     "zh": "灭火、排烟与广播控制"
   },
   "Управление противопожарным оборудованием": {
-    "uz": "Yong'inga qarshi uskunani boshqarish",
+    "uz": "Yongʻinga qarshi uskunani boshqarish",
     "en": "Control of fire equipment",
     "tr": "Yangın ekipmanının kumandası",
     "zh": "消防设备控制"
@@ -17148,19 +17148,19 @@
     "zh": "加强型"
   },
   "Установка и изменение адресов": {
-    "uz": "Adreslarni o'rnatish va o'zgartirish",
+    "uz": "Adreslarni oʻrnatish va oʻzgartirish",
     "en": "Setting and changing addresses",
     "tr": "Adreslerin atanması ve değiştirilmesi",
     "zh": "地址设定与修改"
   },
   "Установка камер": {
-    "uz": "Kameralarni o'rnatish",
+    "uz": "Kameralarni oʻrnatish",
     "en": "Camera mounting",
     "tr": "Kamera montajı",
     "zh": "摄像机安装"
   },
   "Установка на турникеты": {
-    "uz": "Turniketlarga o'rnatish",
+    "uz": "Turniketlarga oʻrnatish",
     "en": "Mounting on turnstiles",
     "tr": "Turnikelere montaj",
     "zh": "闸机安装"
@@ -17172,7 +17172,7 @@
     "zh": "耐潮湿与温差变化"
   },
   "учебные классы": {
-    "uz": "o‘quv xonalari",
+    "uz": "oʻquv xonalari",
     "en": "classrooms",
     "tr": "derslikler",
     "zh": "教室"
@@ -17196,25 +17196,25 @@
     "zh": "车辆抓拍"
   },
   "Фиксация ТС, ANPR, контроль полос": {
-    "uz": "Transportni qayd etish, ANPR, yo'laklarni nazorat qilish",
+    "uz": "Transportni qayd etish, ANPR, yoʻlaklarni nazorat qilish",
     "en": "Vehicle capture, ANPR, lane monitoring",
     "tr": "Araç kaydı, ANPR, şerit denetimi",
     "zh": "车辆抓拍、车牌识别、车道监控"
   },
   "Фиксированное": {
-    "uz": "Qat'iy",
+    "uz": "Qatʼiy",
     "en": "Fixed",
     "tr": "Sabit",
     "zh": "固定"
   },
   "фиксированные GE + модульные слоты SIC/DSIC": {
-    "uz": "qat'iy GE + modulli SIC/DSIC uyalari",
+    "uz": "qatʼiy GE + modulli SIC/DSIC uyalari",
     "en": "fixed GE + modular SIC/DSIC slots",
     "tr": "sabit GE + modüler SIC/DSIC yuvaları",
     "zh": "固定千兆口 + SIC/DSIC 模块化插槽"
   },
   "фиксированный": {
-    "uz": "qat'iy",
+    "uz": "qatʼiy",
     "en": "fixed",
     "tr": "sabit",
     "zh": "定焦"
@@ -17280,19 +17280,19 @@
     "zh": "化工"
   },
   "Холоднокатаная сталь": {
-    "uz": "Sovuq prokat po'lat",
+    "uz": "Sovuq prokat poʻlat",
     "en": "Cold-rolled steel",
     "tr": "Soğuk haddelenmiş çelik",
     "zh": "冷轧钢"
   },
   "холоднокатаная сталь SPCC": {
-    "uz": "sovuq prokat SPCC po‘lat",
+    "uz": "sovuq prokat SPCC poʻlat",
     "en": "cold-rolled SPCC steel",
     "tr": "soğuk haddelenmiş SPCC çelik",
     "zh": "冷轧 SPCC 钢板"
   },
   "холоднокатаная сталь SPCC (GB700)": {
-    "uz": "SPCC sovuq prokat po'lat (GB700)",
+    "uz": "SPCC sovuq prokat poʻlat (GB700)",
     "en": "SPCC cold-rolled steel (GB700)",
     "tr": "SPCC soğuk haddelenmiş çelik (GB700)",
     "zh": "SPCC 冷轧钢（GB700）"
@@ -17304,7 +17304,7 @@
     "zh": "大型系统的视频归档存储"
   },
   "Хранение пожарного оборудования": {
-    "uz": "Yong'in uskunasini saqlash",
+    "uz": "Yongʻin uskunasini saqlash",
     "en": "Fire equipment storage",
     "tr": "Yangın ekipmanı saklama",
     "zh": "消防器材存放"
@@ -17316,7 +17316,7 @@
     "zh": "存储"
   },
   "Хранилище видеоданных": {
-    "uz": "Video ma'lumotlar saqlagichi",
+    "uz": "Video maʼlumotlar saqlagichi",
     "en": "Video data storage",
     "tr": "Video veri deposu",
     "zh": "视频数据存储"
@@ -17329,91 +17329,91 @@
   },
   "цветная": {
     "uz": "rangli",
-    "en": "colour",
+    "en": "color",
     "tr": "renkli",
     "zh": "彩色"
   },
   "Цветная": {
     "uz": "Rangli",
-    "en": "Colour",
+    "en": "Color",
     "tr": "Renkli",
     "zh": "彩色"
   },
   "Цветная 24/7 съемка": {
     "uz": "24/7 rangli suratga olish",
-    "en": "24/7 colour imaging",
+    "en": "24/7 color imaging",
     "tr": "7/24 renkli görüntüleme",
     "zh": "7×24 全彩成像"
   },
   "Цветная без подсветки": {
     "uz": "Yoritgichsiz rangli",
-    "en": "Colour without illumination",
+    "en": "Color without illumination",
     "tr": "Aydınlatmasız renkli",
     "zh": "无补光全彩"
   },
   "цветная до 30 м": {
     "uz": "30 m gacha rangli",
-    "en": "colour up to 30 m",
+    "en": "color up to 30 m",
     "tr": "30 m'ye kadar renkli",
     "zh": "彩色最远 30 米"
   },
   "цветная и ИК съемка": {
     "uz": "rangli va IQ suratga olish",
-    "en": "colour and IR imaging",
+    "en": "color and IR imaging",
     "tr": "renkli ve IR görüntüleme",
     "zh": "彩色与红外成像"
   },
   "цветное": {
     "uz": "rangli",
-    "en": "colour",
+    "en": "color",
     "tr": "renkli",
     "zh": "彩色"
   },
   "Цветное": {
     "uz": "Rangli",
-    "en": "Colour",
+    "en": "Color",
     "tr": "Renkli",
     "zh": "彩色"
   },
   "Цветное с прожекторами": {
     "uz": "Projektorli rangli",
-    "en": "Colour with floodlights",
+    "en": "Color with floodlights",
     "tr": "Projektörlü renkli",
     "zh": "带补光灯全彩"
   },
   "цветной": {
     "uz": "rangli",
-    "en": "colour",
+    "en": "color",
     "tr": "renkli",
     "zh": "彩色"
   },
   "Цветной": {
     "uz": "Rangli",
-    "en": "Colour",
+    "en": "Color",
     "tr": "Renkli",
     "zh": "彩色"
   },
   "Цветной сенсорный": {
     "uz": "Rangli sensorli",
-    "en": "Colour touch",
+    "en": "Color touch",
     "tr": "Renkli dokunmatik",
     "zh": "彩色触摸"
   },
   "Цветной IPS LCD": {
     "uz": "Rangli IPS LCD",
-    "en": "Colour IPS LCD",
+    "en": "Color IPS LCD",
     "tr": "Renkli IPS LCD",
     "zh": "彩色 IPS LCD"
   },
   "Цветной TFT LCD": {
     "uz": "Rangli TFT LCD",
-    "en": "Colour TFT LCD",
+    "en": "Color TFT LCD",
     "tr": "Renkli TFT LCD",
     "zh": "彩色 TFT LCD"
   },
   "Центр": {
     "uz": "Markaz",
-    "en": "Centre",
+    "en": "Center",
     "tr": "Merkez",
     "zh": "中间"
   },
@@ -17430,7 +17430,7 @@
     "zh": "集中式，经网络"
   },
   "Центральная обработка данных": {
-    "uz": "Markaziy ma'lumotlarni qayta ishlash",
+    "uz": "Markaziy maʼlumotlarni qayta ishlash",
     "en": "Central data processing",
     "tr": "Merkezî veri işleme",
     "zh": "集中数据处理"
@@ -17466,7 +17466,7 @@
     "zh": "锁芯机构"
   },
   "Цилиндровый механизм (сердцевина)": {
-    "uz": "Silindrli mexanizm (o'zak)",
+    "uz": "Silindrli mexanizm (oʻzak)",
     "en": "Cylinder mechanism (core)",
     "tr": "Silindir mekanizması (barel)",
     "zh": "锁芯机构"
@@ -17508,14 +17508,14 @@
     "zh": "数字标牌（Digital Signage）"
   },
   "ЦОД": {
-    "uz": "Ma’lumot markazi",
+    "uz": "Maʼlumot markazi",
     "en": "Data center",
     "tr": "Veri merkezi",
     "zh": "数据中心"
   },
   "ЦОД, ядро сети": {
-    "uz": "Ma'lumotlar markazi, tarmoq yadrosi",
-    "en": "Data centre, network core",
+    "uz": "Maʼlumotlar markazi, tarmoq yadrosi",
+    "en": "Data center, network core",
     "tr": "Veri merkezi, ağ çekirdeği",
     "zh": "数据中心、网络核心"
   },
@@ -17532,7 +17532,7 @@
     "zh": "通过 Tapo 网关（Sub-1G）"
   },
   "Чёрно-жёлтый со светоотражателями": {
-    "uz": "Qora-sariq, yorug'lik qaytargichlar bilan",
+    "uz": "Qora-sariq, yorugʻlik qaytargichlar bilan",
     "en": "Black and yellow with reflectors",
     "tr": "Reflektörlü siyah-sarı",
     "zh": "黑黄配色带反光片"
@@ -17562,13 +17562,13 @@
     "zh": "黑色、银色、红古铜色"
   },
   "Четырехпроводные пожарные": {
-    "uz": "To‘rt simli yong‘in",
+    "uz": "Toʻrt simli yongʻin",
     "en": "Four-wire fire",
     "tr": "Dört telli yangın",
     "zh": "四线制消防"
   },
   "Четырехпроводные пожарные, охранные": {
-    "uz": "To'rt simli yong'in, qo'riqlash",
+    "uz": "Toʻrt simli yongʻin, qoʻriqlash",
     "en": "Four-wire fire and intruder",
     "tr": "Dört telli yangın ve hırsız",
     "zh": "四线制消防与防盗"
@@ -17682,19 +17682,19 @@
     "zh": "幕帘 + 激光"
   },
   "шторка + СВЧ": {
-    "uz": "parda + mikroto‘lqin",
+    "uz": "parda + mikrotoʻlqin",
     "en": "curtain + microwave",
     "tr": "perde + mikrodalga",
     "zh": "幕帘 + 微波"
   },
   "шторка + СВЧ (dual-tech)": {
-    "uz": "parda + mikroto'lqin (dual-tech)",
+    "uz": "parda + mikrotoʻlqin (dual-tech)",
     "en": "curtain + microwave (dual-tech)",
     "tr": "perde + mikrodalga (dual-tech)",
     "zh": "幕帘 + 微波（双鉴）"
   },
   "Щеточная панель": {
-    "uz": "Cho'tkali panel",
+    "uz": "Choʻtkali panel",
     "en": "Brush panel",
     "tr": "Fırçalı panel",
     "zh": "毛刷面板"
@@ -17730,7 +17730,7 @@
     "zh": "电触点式"
   },
   "Электропитание систем безопасности": {
-    "uz": "Xavfsizlik tizimlarini elektr bilan ta'minlash",
+    "uz": "Xavfsizlik tizimlarini elektr bilan taʼminlash",
     "en": "Power supply for security systems",
     "tr": "Güvenlik sistemlerinin beslenmesi",
     "zh": "安防系统供电"
@@ -17754,7 +17754,7 @@
     "zh": "桥架配件"
   },
   "Элемент кабельного лотка (гибкий переход)": {
-    "uz": "Kabel tokchasi elementi (egiluvchan o'tish)",
+    "uz": "Kabel tokchasi elementi (egiluvchan oʻtish)",
     "en": "Cable tray element (flexible transition)",
     "tr": "Kablo tavası elemanı (esnek geçiş)",
     "zh": "桥架配件（柔性过渡段）"
@@ -17778,7 +17778,7 @@
     "zh": "电量监测、定时"
   },
   "Энергонезависимая": {
-    "uz": "Energiyaga bog'liq bo'lmagan",
+    "uz": "Energiyaga bogʻliq boʻlmagan",
     "en": "Non-volatile",
     "tr": "Kalıcı (non-volatile)",
     "zh": "掉电不丢失"
@@ -17790,7 +17790,7 @@
     "zh": "功耗"
   },
   "Энергосбережение и компактный размер": {
-    "uz": "Energiya tejash va ixcham o'lcham",
+    "uz": "Energiya tejash va ixcham oʻlcham",
     "en": "Energy saving and compact size",
     "tr": "Enerji tasarrufu ve kompakt boyut",
     "zh": "节能且体积小巧"
@@ -17941,7 +17941,7 @@
   },
   "AcuSense, цветная и ИК съемка": {
     "uz": "AcuSense, rangli va IQ suratga olish",
-    "en": "AcuSense, colour and IR imaging",
+    "en": "AcuSense, color and IR imaging",
     "tr": "AcuSense, renkli ve IR görüntüleme",
     "zh": "AcuSense、彩色与红外成像"
   },
@@ -17965,7 +17965,7 @@
   },
   "ANPR, распознавание типа и цвета авто": {
     "uz": "ANPR, avtomobil turi va rangini tanish",
-    "en": "ANPR, vehicle type and colour recognition",
+    "en": "ANPR, vehicle type and color recognition",
     "tr": "ANPR, araç tipi ve renk tanıma",
     "zh": "车牌识别、车型与车身颜色识别"
   },
@@ -18085,13 +18085,13 @@
   },
   "ColorVu с круглосуточной цветной съемкой": {
     "uz": "Kecha-kunduz rangli suratga oladigan ColorVu",
-    "en": "ColorVu with round-the-clock colour imaging",
+    "en": "ColorVu with round-the-clock color imaging",
     "tr": "Yirmi dört saat renkli görüntüleyen ColorVu",
     "zh": "ColorVu，全天候彩色成像"
   },
   "ColorVu Lite, цветная до 30 м": {
     "uz": "ColorVu Lite, 30 m gacha rangli",
-    "en": "ColorVu Lite, colour up to 30 m",
+    "en": "ColorVu Lite, color up to 30 m",
     "tr": "ColorVu Lite, 30 m'ye kadar renkli",
     "zh": "ColorVu Lite，彩色最远 30 米"
   },
@@ -18103,12 +18103,12 @@
   },
   "ColorVu, цветная": {
     "uz": "ColorVu, rangli",
-    "en": "ColorVu, colour",
+    "en": "ColorVu, color",
     "tr": "ColorVu, renkli",
     "zh": "ColorVu 全彩"
   },
   "CPE (точка-многоточка)": {
-    "uz": "CPE (nuqta-ko'p nuqta)",
+    "uz": "CPE (nuqta-koʻp nuqta)",
     "en": "CPE (point-to-multipoint)",
     "tr": "CPE (noktadan çok noktaya)",
     "zh": "CPE（点对多点）"
@@ -18174,13 +18174,13 @@
     "zh": "DC 12–57 V"
   },
   "DC без щёток": {
-    "uz": "DC cho'tkasiz",
+    "uz": "DC choʻtkasiz",
     "en": "Brushless DC",
     "tr": "Fırçasız DC",
     "zh": "直流无刷"
   },
   "DC без щёток, низкий уровень шума": {
-    "uz": "DC cho'tkasiz, past shovqin darajasi",
+    "uz": "DC choʻtkasiz, past shovqin darajasi",
     "en": "Brushless DC, low noise",
     "tr": "Fırçasız DC, düşük gürültü",
     "zh": "直流无刷，低噪声"
@@ -18210,7 +18210,7 @@
     "zh": "DDR4，配置灵活"
   },
   "DIP-переключатели": {
-    "uz": "DIP-o'chirgichlar",
+    "uz": "DIP-oʻchirgichlar",
     "en": "DIP switches",
     "tr": "DIP anahtarlar",
     "zh": "拨码开关"
@@ -18228,7 +18228,7 @@
     "zh": "DS-TMG4XX 系列"
   },
   "DWDR, встроенный обогреватель": {
-    "uz": "DWDR, o'rnatilgan isitgich",
+    "uz": "DWDR, oʻrnatilgan isitgich",
     "en": "DWDR, built-in heater",
     "tr": "DWDR, dahili ısıtıcı",
     "zh": "DWDR，内置加热"
@@ -18379,7 +18379,7 @@
   },
   "HD, цветное": {
     "uz": "HD, rangli",
-    "en": "HD, colour",
+    "en": "HD, color",
     "tr": "HD, renkli",
     "zh": "高清彩色"
   },
@@ -18391,7 +18391,7 @@
   },
   "HDD обнаружение/восстановление, RAID оптимизация": {
     "uz": "HDD aniqlash/tiklash, RAID optimizatsiyasi",
-    "en": "HDD detection/recovery, RAID optimisation",
+    "en": "HDD detection/recovery, RAID optimization",
     "tr": "HDD algılama/kurtarma, RAID optimizasyonu",
     "zh": "硬盘检测/恢复、RAID 优化"
   },
@@ -18426,7 +18426,7 @@
     "zh": "HDTVI/AHD/CVI/CVBS，最多 5 路 IP 摄像机"
   },
   "HE160 поддерживается": {
-    "uz": "HE160 qo'llab-quvvatlanadi",
+    "uz": "HE160 qoʻllab-quvvatlanadi",
     "en": "HE160 supported",
     "tr": "HE160 destekleniyor",
     "zh": "支持 HE160"
@@ -18474,7 +18474,7 @@
     "zh": "ICR、WDR、3D DNR、BLC、报警"
   },
   "ICR, WDR, 3D DNR, BLC, сигнализация (синий и красный свет)": {
-    "uz": "ICR, WDR, 3D DNR, BLC, signalizatsiya (ko'k va qizil yorug'lik)",
+    "uz": "ICR, WDR, 3D DNR, BLC, signalizatsiya (koʻk va qizil yorugʻlik)",
     "en": "ICR, WDR, 3D DNR, BLC, alarm (blue and red light)",
     "tr": "ICR, WDR, 3D DNR, BLC, alarm (mavi ve kırmızı ışık)",
     "zh": "ICR、WDR、3D DNR、BLC、报警（红蓝灯）"
@@ -18516,7 +18516,7 @@
     "zh": "IP 摄像机"
   },
   "IP-камера (мультисенсорная)": {
-    "uz": "IP-kamera (ko'p sensorli)",
+    "uz": "IP-kamera (koʻp sensorli)",
     "en": "IP camera (multi-sensor)",
     "tr": "IP kamera (çok sensörlü)",
     "zh": "IP 摄像机（多目）"
@@ -18625,7 +18625,7 @@
   },
   "LCD 4.3\", 800×480 пикселей, цветной": {
     "uz": "LCD 4.3\", 800×480 piksel, rangli",
-    "en": "LCD 4.3\", 800×480 pixels, colour",
+    "en": "LCD 4.3\", 800×480 pixels, color",
     "tr": "LCD 4,3\", 800×480 piksel, renkli",
     "zh": "4.3 英寸 LCD，800×480 像素，彩色"
   },
@@ -18636,7 +18636,7 @@
     "zh": "7 英寸 LCD 触摸屏"
   },
   "LED 3000K теплый свет": {
-    "uz": "LED 3000K iliq yorug'lik",
+    "uz": "LED 3000K iliq yorugʻlik",
     "en": "LED 3000 K warm light",
     "tr": "LED 3000 K sıcak ışık",
     "zh": "LED 3000K 暖光"
@@ -18703,7 +18703,7 @@
   },
   "Light gray transparent acrylic (305*555*10 мм) (standard) /": {
     "uz": "Och kulrang shaffof akril (305*555*10 mm) (standart) /",
-    "en": "Light grey transparent acrylic (305*555*10 mm) (standard) /",
+    "en": "Light gray transparent acrylic (305*555*10 mm) (standard) /",
     "tr": "Açık gri şeffaf akrilik (305*555*10 mm) (standart) /",
     "zh": "浅灰透明亚克力（305*555*10 mm）（标准）/"
   },
@@ -18919,7 +18919,7 @@
   },
   "PC + 10% стекловолокно": {
     "uz": "PC + 10% shishatola",
-    "en": "PC + 10% fibreglass",
+    "en": "PC + 10% fiberglass",
     "tr": "PC + %10 cam elyaf",
     "zh": "PC + 10% 玻纤"
   },
@@ -19038,13 +19038,13 @@
     "zh": "PtP、PtMP 最远 20 公里"
   },
   "PTP/PTMP мост": {
-    "uz": "PTP/PTMP ko‘prik",
+    "uz": "PTP/PTMP koʻprik",
     "en": "PTP/PTMP bridge",
     "tr": "PTP/PTMP köprü",
     "zh": "PTP/PTMP 网桥"
   },
   "PTP/PTMP мост, Передача видео CCTV": {
-    "uz": "PTP/PTMP ko'prik, CCTV videosini uzatish",
+    "uz": "PTP/PTMP koʻprik, CCTV videosini uzatish",
     "en": "PTP/PTMP bridge, CCTV video transmission",
     "tr": "PTP/PTMP köprü, CCTV video iletimi",
     "zh": "PTP/PTMP 网桥，监控视频传输"
@@ -19074,7 +19074,7 @@
     "zh": "球机、视频墙"
   },
   "PTZ, предпросмотр, TV-стена": {
-    "uz": "PTZ, oldindan ko'rish, TV-devor",
+    "uz": "PTZ, oldindan koʻrish, TV-devor",
     "en": "PTZ, preview, TV wall",
     "tr": "PTZ, ön izleme, TV duvarı",
     "zh": "球机、预览、电视墙"
@@ -19237,7 +19237,7 @@
   },
   "RAID оптимизация": {
     "uz": "RAID optimallashtirish",
-    "en": "RAID optimisation",
+    "en": "RAID optimization",
     "tr": "RAID optimizasyonu",
     "zh": "RAID 优化"
   },
@@ -19272,7 +19272,7 @@
     "zh": "RFID 卡、手机应用"
   },
   "RFID-считыватель": {
-    "uz": "RFID-o'qigich",
+    "uz": "RFID-oʻqigich",
     "en": "RFID reader",
     "tr": "RFID okuyucu",
     "zh": "RFID 读头"
@@ -19320,13 +19320,13 @@
     "zh": "SD-WAN、语音、QoS"
   },
   "SFP многомодовый": {
-    "uz": "SFP ko‘p rejimli",
+    "uz": "SFP koʻp rejimli",
     "en": "SFP multimode",
     "tr": "SFP çok modlu",
     "zh": "SFP 多模"
   },
   "SFP многомодовый (MM)": {
-    "uz": "SFP ko'p modali (MM)",
+    "uz": "SFP koʻp modali (MM)",
     "en": "SFP multimode (MM)",
     "tr": "SFP çok modlu (MM)",
     "zh": "SFP 多模（MM）"
@@ -19380,13 +19380,13 @@
     "zh": "Smart Hybrid Light（远距离）"
   },
   "Smart Hybrid Light (ИК + белый свет)": {
-    "uz": "Smart Hybrid Light (IQ + oq yorug'lik)",
+    "uz": "Smart Hybrid Light (IQ + oq yorugʻlik)",
     "en": "Smart Hybrid Light (IR + white light)",
     "tr": "Smart Hybrid Light (IR + beyaz ışık)",
     "zh": "Smart Hybrid Light（红外 + 白光）"
   },
   "Smart Hybrid Light (ИК + белый свет), 4 дополнительных режима": {
-    "uz": "Smart Hybrid Light (IQ + oq yorug'lik), 4 qo'shimcha rejim",
+    "uz": "Smart Hybrid Light (IQ + oq yorugʻlik), 4 qoʻshimcha rejim",
     "en": "Smart Hybrid Light (IR + white light), 4 extra modes",
     "tr": "Smart Hybrid Light (IR + beyaz ışık), 4 ek mod",
     "zh": "Smart Hybrid Light（红外 + 白光），另有 4 种模式"
@@ -19422,7 +19422,7 @@
     "zh": "星光级，最远 30 米"
   },
   "SUS304 нержавеющая сталь": {
-    "uz": "SUS304 zanglamaydigan po'lat",
+    "uz": "SUS304 zanglamaydigan poʻlat",
     "en": "SUS304 stainless steel",
     "tr": "SUS304 paslanmaz çelik",
     "zh": "SUS304 不锈钢"
@@ -19440,7 +19440,7 @@
     "zh": "TCP/IP（加密）"
   },
   "TCP/IP с шифрованием данных": {
-    "uz": "Ma'lumotlar shifrlangan TCP/IP",
+    "uz": "Maʼlumotlar shifrlangan TCP/IP",
     "en": "TCP/IP with data encryption",
     "tr": "Veri şifrelemeli TCP/IP",
     "zh": "TCP/IP（数据加密）"
@@ -19596,19 +19596,19 @@
     "zh": "Smart Hybrid Light 白光爆闪"
   },
   "Smart Hybrid Light с белым стробом, 3 дополнительных режима": {
-    "uz": "Oq stroboskopli Smart Hybrid Light, 3 qo'shimcha rejim",
+    "uz": "Oq stroboskopli Smart Hybrid Light, 3 qoʻshimcha rejim",
     "en": "Smart Hybrid Light with white strobe, 3 extra modes",
     "tr": "Beyaz flaşörlü Smart Hybrid Light, 3 ek mod",
     "zh": "带白光爆闪的 Smart Hybrid Light，另有 3 种模式"
   },
   "Smart Hybrid Light с красно-синим стробом": {
-    "uz": "Smart Hybrid Light qizil-ko‘k strob bilan",
+    "uz": "Smart Hybrid Light qizil-koʻk strob bilan",
     "en": "Smart Hybrid Light with red-blue strobe",
     "tr": "Kırmızı-mavi flaşlı Smart Hybrid Light",
     "zh": "Smart Hybrid Light 红蓝爆闪"
   },
   "Smart Hybrid Light с красно-синим стробом, 3 дополнительных режима": {
-    "uz": "Qizil-ko'k stroboskopli Smart Hybrid Light, 3 qo'shimcha rejim",
+    "uz": "Qizil-koʻk stroboskopli Smart Hybrid Light, 3 qoʻshimcha rejim",
     "en": "Smart Hybrid Light with red-blue strobe, 3 extra modes",
     "tr": "Kırmızı-mavi flaşörlü Smart Hybrid Light, 3 ek mod",
     "zh": "带红蓝爆闪的 Smart Hybrid Light，另有 3 种模式"
@@ -19626,13 +19626,13 @@
     "zh": "单模 (SM)"
   },
   "многомод OM3": {
-    "uz": "ko'p modli OM3",
+    "uz": "koʻp modli OM3",
     "en": "multimode OM3",
     "tr": "çok modlu OM3",
     "zh": "多模 OM3"
   },
   "многомод OM4": {
-    "uz": "ko'p modli OM4",
+    "uz": "koʻp modli OM4",
     "en": "multimode OM4",
     "tr": "çok modlu OM4",
     "zh": "多模 OM4"
@@ -19650,14 +19650,14 @@
     "zh": "双工"
   },
   "синий": {
-    "uz": "ko'k",
+    "uz": "koʻk",
     "en": "blue",
     "tr": "mavi",
     "zh": "蓝色"
   },
   "серый": {
     "uz": "kulrang",
-    "en": "grey",
+    "en": "gray",
     "tr": "gri",
     "zh": "灰色"
   },
@@ -19740,7 +19740,7 @@
     "zh": "50 米"
   },
   "12 В DC, 1 А для считывателя и замка": {
-    "uz": "12 V DC, o'quvchi va qulf uchun 1 A",
+    "uz": "12 V DC, oʻquvchi va qulf uchun 1 A",
     "en": "12 V DC, 1 A for reader and lock",
     "tr": "12 V DC, okuyucu ve kilit için 1 A",
     "zh": "12 V DC 1 A，供读卡器和门锁"
@@ -19788,13 +19788,13 @@
     "zh": "4 路"
   },
   "4 считывателя": {
-    "uz": "4 ta o'quvchi",
+    "uz": "4 ta oʻquvchi",
     "en": "4 readers",
     "tr": "4 okuyucu",
     "zh": "4 台读卡器"
   },
   "4 считывателя по 12 В, до 500 мА": {
-    "uz": "12 V da 4 ta o'quvchi, 500 mA gacha",
+    "uz": "12 V da 4 ta oʻquvchi, 500 mA gacha",
     "en": "4 readers at 12 V, up to 500 mA",
     "tr": "12 V'ta 4 okuyucu, 500 mA'e kadar",
     "zh": "4 台 12 V 读卡器，最大 500 mA"
@@ -19818,7 +19818,7 @@
     "zh": "50 万条记录"
   },
   "Linux, встроенный веб-интерфейс": {
-    "uz": "Linux, o'rnatilgan veb-interfeys",
+    "uz": "Linux, oʻrnatilgan veb-interfeys",
     "en": "Linux with built-in web interface",
     "tr": "Linux, dahili web arayüzü",
     "zh": "Linux，内置网页界面"
@@ -19890,25 +19890,25 @@
     "zh": "全向，3.5 dBi（2.4 GHz）与 6 dBi（5 GHz）"
   },
   "встроенный микрофон": {
-    "uz": "o'rnatilgan mikrofon",
+    "uz": "oʻrnatilgan mikrofon",
     "en": "built-in microphone",
     "tr": "dahili mikrofon",
     "zh": "内置麦克风"
   },
   "встроенный микрофон и динамик": {
-    "uz": "o'rnatilgan mikrofon va dinamik",
+    "uz": "oʻrnatilgan mikrofon va dinamik",
     "en": "built-in microphone and speaker",
     "tr": "dahili mikrofon ve hoparlör",
     "zh": "内置麦克风与扬声器"
   },
   "встроенный, для выбора канала": {
-    "uz": "o'rnatilgan, kanal tanlash uchun",
+    "uz": "oʻrnatilgan, kanal tanlash uchun",
     "en": "built in, for channel selection",
     "tr": "dahili, kanal seçimi için",
     "zh": "内置，用于信道选择"
   },
   "двойная: ИК и белая, до 30 м": {
-    "uz": "qo'sh: infraqizil va oq, 30 m gacha",
+    "uz": "qoʻsh: infraqizil va oq, 30 m gacha",
     "en": "dual: IR and white light, up to 30 m",
     "tr": "çift: kızılötesi ve beyaz ışık, 30 m'ye kadar",
     "zh": "双光：红外与白光，最远 30 米"
@@ -19956,7 +19956,7 @@
     "zh": "最高 867 Mbps"
   },
   "есть, в видимом свете": {
-    "uz": "bor, ko'rinadigan yorug'likda",
+    "uz": "bor, koʻrinadigan yorugʻlikda",
     "en": "yes, in visible light",
     "tr": "var, görünür ışıkta",
     "zh": "支持，可见光"
@@ -19974,7 +19974,7 @@
     "zh": "出厂已配置，通电即用"
   },
   "карта, пароль, отпечаток, QR-код и их сочетания": {
-    "uz": "karta, parol, barmoq izi, QR-kod va ularning uyg'unligi",
+    "uz": "karta, parol, barmoq izi, QR-kod va ularning uygʻunligi",
     "en": "card, PIN, fingerprint, QR code and their combinations",
     "tr": "kart, şifre, parmak izi, QR kod ve bunların birleşimi",
     "zh": "刷卡、密码、指纹、二维码及其组合"
@@ -20022,7 +20022,7 @@
     "zh": "水平 355°，俯仰 90°"
   },
   "пара мостов, PoE-комбинатор, адаптер 12 В DC": {
-    "uz": "juft ko'prik, PoE kombinator, 12 V DC adapter",
+    "uz": "juft koʻprik, PoE kombinator, 12 V DC adapter",
     "en": "a pair of bridges, PoE combiner, 12 V DC adapter",
     "tr": "bir çift köprü, PoE birleştirici, 12 V DC adaptör",
     "zh": "一对网桥、PoE 合路器、12 V DC 适配器"
@@ -20052,14 +20052,14 @@
     "zh": "警笛与频闪灯"
   },
   "уличный": {
-    "uz": "ko'cha uchun",
+    "uz": "koʻcha uchun",
     "en": "outdoor",
     "tr": "dış mekân",
     "zh": "室外"
   },
   "цветной без ИК-подсветки": {
     "uz": "infraqizil yoritishsiz rangli",
-    "en": "colour without IR illumination",
+    "en": "color without IR illumination",
     "tr": "kızılötesi olmadan renkli",
     "zh": "无红外补光的彩色"
   },

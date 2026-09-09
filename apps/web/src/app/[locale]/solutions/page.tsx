@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { Reveal } from "@/components/Reveal";
 import { SERVICES, INDUSTRIES, ALL_SERVICES } from "@/lib/servicesData";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { AutoPlayVideo } from "@/components/AutoPlayVideo";
@@ -111,11 +111,14 @@ function SolutionCard({ k, title, desc, more }: { k: string; title: string; desc
 }
 
 /* ─────────────  Page  ───────────── */
-export default async function ServicesPage() {
-  const t = await getTranslations("solutionsPage");
-  const ts = await getTranslations("services");
-  const tc = await getTranslations("common");
-  const tcalc = await getTranslations("calc");
+export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: страница целиком из констант/переводов — становится статикой
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "solutionsPage" });
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tc = await getTranslations({ locale, namespace: "common" });
+  const tcalc = await getTranslations({ locale, namespace: "calc" });
   const steps = t.raw("steps") as { title: string; desc: string }[];
   // JSON-LD: список всех решений/возможностей (ItemList)
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";

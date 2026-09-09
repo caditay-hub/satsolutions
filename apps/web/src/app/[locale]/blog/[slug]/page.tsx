@@ -35,16 +35,22 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
   "zamki-i-skud": { ru: "Замки и СКУД", uz: "Qulflar va SKUD", en: "Locks and access control", tr: "Kilitler ve geçiş kontrolü", zh: "锁具与门禁" },
 };
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+// Формат даты публикации по локалям (Intl хочет BCP-47, у нас коды короткие)
+const DATE_LOCALE: Record<string, string> = { ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN" };
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = articleBySlug[slug];
   const body = article?.loc[locale];
   if (!article || !body) return { title: "Blog" };
+  // Обложка статьи вместо общего /og.png: у каждой из статей есть свой кадр 1200×630
+  const cover = `${SITE_URL}${articleImg(slug)}`;
   return {
     title: { absolute: `${body.title} — SAT Solutions` },
     description: body.excerpt,
     alternates: hreflangAlternates(`/blog/${slug}`, locale),
-    openGraph: { type: "article", title: body.title, description: body.excerpt, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { type: "article", title: body.title, description: body.excerpt, locale: ogLocale(locale), images: [cover], publishedTime: article.date },
   };
 }
 
@@ -57,8 +63,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
   const ui = UI[locale] ?? UI.ru;
   const ts = await getTranslations({ locale, namespace: "services" });
   const tcalc = await getTranslations({ locale, namespace: "calc" });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+  const siteUrl = SITE_URL;
   const lp = locale !== "ru" ? `/${locale}` : "";
+  const cover = `${siteUrl}${articleImg(slug)}`;
+  const publishedLabel = new Date(article.date).toLocaleDateString(DATE_LOCALE[locale] ?? "ru-RU", { day: "numeric", month: "long", year: "numeric" });
 
   // Смежные услуги: локализованный H1 из SEO-оверлея, иначе короткий title
   const related = article.related
@@ -75,7 +83,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     "@type": "Article",
     headline: body.title,
     description: body.excerpt,
+    image: [cover],
     datePublished: article.date,
+    // отдельной даты правки у статьи в данных нет (Article.date — единственное поле),
+    // поэтому dateModified = дате публикации; появится поле — подставить его
     dateModified: article.date,
     inLanguage: locale,
     author: { "@type": "Organization", name: "SAT Solutions" },
@@ -121,6 +132,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
           </nav>
           <h1 className="max-w-3xl text-2xl sm:text-4xl font-black tracking-tight text-white [text-shadow:0_2px_16px_rgba(0,0,0,.5)]">{body.title}</h1>
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-200 [text-shadow:0_1px_8px_rgba(0,0,0,.5)]">{body.excerpt}</p>
+          {/* дата публикации была только в разметке — читателю и Google её видно не было */}
+          <time dateTime={article.date} className="mt-4 block text-[11px] font-bold uppercase tracking-widest text-slate-300/80">{publishedLabel}</time>
         </div>
       </header>
 

@@ -2,7 +2,8 @@
 // Написаны под реальные поисковые запросы (срез спроса из Ads 20.08.2026:
 // mikrotik 1963, wifi router 951, шлагбаум 845, poe switch 845, огнетушитель 691,
 // nvr 621, hdd 513, видеорегистратор 486, стабилизатор 464, ups 401, роутер 403,
-// серверный шкаф 402, турникет 391, коммутатор 375). Фолбэк локалей: tr/zh → en.
+// серверный шкаф 402, турникет 391, коммутатор 375). Все пять локалей заполнены;
+// фолбэк tr/zh → en в typeSeoFor оставлен на случай новых записей.
 // Остальные типы продолжают использовать общий шаблон из messages.
 
 type LocText = { ru: string; uz: string; en: string; tr?: string; zh?: string };
@@ -13,11 +14,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить коммутатор в Ташкенте — PoE и управляемые, цены",
       uz: "Kommutator (switch) narxlari Toshkentda — PoE switch sotib olish",
       en: "Network Switches in Tashkent — PoE & Managed, Prices",
+      tr: "Taşkent'te ağ anahtarı — PoE ve yönetilebilir, fiyatlar",
+      zh: "塔什干交换机价格 — PoE与网管型交换机",
     },
     desc: {
       ru: "Сетевые коммутаторы в наличии в Ташкенте: PoE-свитчи для камер, управляемые L2/L3, гигабитные и 10G. Hikvision, MikroTik, TP-Link, Ruijie, Wi-Tek. Цены, гарантия, доставка по Узбекистану.",
       uz: "Tarmoq kommutatorlari Toshkentda: kameralar uchun PoE switch, boshqariladigan L2/L3, gigabit va 10G. Hikvision, MikroTik, TP-Link. Narxlar, kafolat, O'zbekiston bo'ylab yetkazib berish.",
       en: "Network switches in stock in Tashkent: PoE for cameras, managed L2/L3, gigabit and 10G. Hikvision, MikroTik, TP-Link, Ruijie. Prices, warranty, delivery across Uzbekistan.",
+      tr: "Taşkent stoğunda ağ anahtarları: kameralar için PoE switch, yönetilebilir L2/L3, gigabit ve 10G. Hikvision, MikroTik, TP-Link, Ruijie. Fiyat, garanti, teslimat.",
+      zh: "塔什干现货交换机：摄像机供电PoE交换机、网管型L2/L3、千兆与万兆机型。海康威视、MikroTik、TP-Link、锐捷，提供报价、质保与全境配送。",
     },
   },
   marshrutizatory: {
@@ -25,11 +30,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить роутер в Ташкенте — Wi-Fi и GPON маршрутизаторы",
       uz: "Router narxlari Toshkentda — Wi-Fi va GPON marshrutizatorlar",
       en: "Routers in Tashkent — Wi-Fi & GPON, MikroTik, Prices",
+      tr: "Taşkent'te router — Wi-Fi ve GPON yönlendirici fiyatı",
+      zh: "塔什干路由器价格 — Wi-Fi与GPON路由器",
     },
     desc: {
       ru: "Маршрутизаторы в наличии: Wi-Fi роутеры для дома и офиса, GPON, MikroTik и Ruijie для бизнеса. Подбор, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
       uz: "Marshrutizatorlar: uy va ofis uchun Wi-Fi routerlar, GPON, biznes uchun MikroTik va Ruijie. Tanlash, sozlash, kafolat. Toshkentda narxlar, O'zbekiston bo'ylab yetkazib berish.",
       en: "Routers in stock: Wi-Fi for home and office, GPON, MikroTik and Ruijie for business. Selection, setup, warranty. Tashkent prices, delivery across Uzbekistan.",
+      tr: "Stoktan yönlendiriciler: ev ve ofis için Wi-Fi router, GPON, işletmeler için MikroTik ve Ruijie. Seçim, kurulum, garanti. Taşkent fiyatları ve hızlı teslimat.",
+      zh: "现货路由器：家用与办公Wi-Fi路由器、GPON光猫，企业级MikroTik与锐捷。提供选型、配置调试与质保。塔什干报价，乌兹别克斯坦全境配送。",
     },
   },
   "turnikety-i-shlagbaumy": {
@@ -37,11 +46,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Турникеты и шлагбаумы — купить с установкой в Ташкенте",
       uz: "Turniket va shlagbaum narxlari — o'rnatish bilan, Toshkent",
       en: "Turnstiles & Barrier Gates in Tashkent — Supply + Install",
+      tr: "Taşkent'te turnike ve bariyer — montaj dahil satış",
+      zh: "塔什干闸机与道闸 — 含安装，价格",
     },
     desc: {
       ru: "Турникеты-триподы, распашные, полноростовые и автоматические шлагбаумы Hikvision, ZKTeco. Продажа с монтажом под ключ, интеграция со СКУД и Face ID. Цены, гарантия, сервис по Узбекистану.",
       uz: "Tripod turniketlar, avtomatik shlagbaumlar Hikvision, ZKTeco. O'rnatish bilan sotish, SKUD va Face ID integratsiyasi. Narxlar, kafolat, O'zbekiston bo'ylab servis.",
       en: "Tripod, swing and full-height turnstiles, automatic barrier gates by Hikvision and ZKTeco. Supply with turnkey installation, ACS and Face ID integration. Prices and service across Uzbekistan.",
+      tr: "Tripod, kanatlı ve boy turnikeler, otomatik bariyer kolları: Hikvision, ZKTeco. Anahtar teslim montaj, geçiş kontrolü ve Face ID entegrasyonu. Taşkent fiyatı.",
+      zh: "三辊闸、摆闸、全高闸与自动道闸：海康威视、中控智慧。提供整体安装交付，可与门禁系统及人脸识别联动。塔什干报价，乌兹别克斯坦全境质保与售后服务。",
     },
   },
   "pozharnaya-bezopasnost": {
@@ -49,11 +62,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Пожарное оборудование — шкафы, рукава, вентили | Ташкент",
       uz: "Yong'in jihozlari — shkaflar, shlanglar, ventillar | Toshkent",
       en: "Fire Safety Equipment — Cabinets, Hoses, Valves | Tashkent",
+      tr: "Yangın güvenliği ekipmanı Taşkent — dolap, hortum",
+      zh: "塔什干消防安全器材 — 消防柜、水带、阀门",
     },
     desc: {
       ru: "Пожарные шкафы ПШ, рукава «Классик»/«Селект», вентили, спринклеры и знаки в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации с лицензией. Доставка по Узбекистану.",
       uz: "PSh yong'in shkaflari, shlanglar, ventillar, sprinklerlar va belgilar Toshkentda mavjud. Ob'ektlarni FVV talablariga muvofiq jihozlash, litsenziya bilan yong'in signalizatsiyasi montaji. Yetkazib berish.",
       en: "Fire cabinets, delivery hoses, valves, sprinklers and signage in stock in Tashkent. Site outfitting to fire-safety regulations, licensed fire alarm installation. Delivery across Uzbekistan.",
+      tr: "Yangın dolapları, hortumlar, vanalar, sprinkler ve uyarı levhaları Taşkent stoğunda. Tesisin mevzuata göre donatımı, lisanslı yangın alarmı montajı, teslimat.",
+      zh: "消防柜、消防水带、阀门、喷淋头与安全标识塔什干现货。按消防规范为场所配齐器材，持证承接火灾报警系统的设计与安装。乌兹别克斯坦全境配送与开票。",
     },
   },
   "ognetushiteli": {
@@ -61,11 +78,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить огнетушитель в Ташкенте — ОП и ОУ, цены | SAT Solutions",
       uz: "O't o'chirgich narxlari Toshkentda — OP va OU | SAT Solutions",
       en: "Buy Fire Extinguishers in Tashkent — Powder & CO2 Prices",
+      tr: "Taşkent'te yangın tüpü — kuru kimyevi ve CO2 fiyatı",
+      zh: "塔什干灭火器价格 — 干粉与二氧化碳灭火器",
     },
     desc: {
       ru: "Огнетушители порошковые ОП-4…ОП-100 и углекислотные ОУ-5 в наличии в Ташкенте, цены от 122 900 сум. Подбор по классу пожара и площади, перезарядка, счёт с НДС, доставка по Узбекистану.",
       uz: "Kukunli OP-4…OP-100 va karbonat angidridli OU-5 o't o'chirgichlar Toshkentda mavjud, narxlar 122 900 so'mdan. Yong'in sinfi bo'yicha tanlash, qayta zaryadlash, QQS li hisob, yetkazib berish.",
       en: "Powder OP-4…OP-100 and CO2 extinguishers in stock in Tashkent, prices from 122,900 UZS. Selection by fire class and area, recharging, VAT invoicing, delivery across Uzbekistan.",
+      tr: "Kuru kimyevi tozlu OP-4…OP-100 ve karbondioksitli OU-5 yangın tüpleri Taşkent stoğunda, 122 900 somdan. Yangın sınıfına göre seçim, dolum, fatura, teslimat.",
+      zh: "干粉OP-4至OP-100与二氧化碳OU-5灭火器塔什干现货，价格122900苏姆起。按火灾类别与面积选型，提供充装、含税发票与乌兹别克斯坦全境配送。",
     },
   },
   "ibp-i-elektropitanie": {
@@ -73,11 +94,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить ИБП и стабилизатор напряжения в Ташкенте — цены",
       uz: "UPS va kuchlanish stabilizatori narxlari Toshkentda",
       en: "UPS & Voltage Stabilizers in Tashkent — Prices",
+      tr: "Taşkent'te kesintisiz güç kaynağı ve regülatör",
+      zh: "塔什干UPS电源与稳压器价格",
     },
     desc: {
       ru: "ИБП (UPS) для серверов, видеонаблюдения и офиса, стабилизаторы напряжения, аккумуляторы. Подбор по мощности, монтаж. Цены в Ташкенте, гарантия, доставка по Узбекистану.",
       uz: "Serverlar, videokuzatuv va ofis uchun UPS, kuchlanish stabilizatorlari, akkumulyatorlar. Quvvat bo'yicha tanlash, o'rnatish. Toshkentda narxlar, kafolat, yetkazib berish.",
       en: "UPS units for servers, CCTV and office, voltage stabilizers, batteries. Sizing assistance and installation. Tashkent prices, warranty, delivery across Uzbekistan.",
+      tr: "Sunucu, güvenlik kamerası ve ofis için kesintisiz güç kaynağı, voltaj regülatörleri ve aküler. Güce göre seçim, montaj. Taşkent fiyatları, garanti, teslimat.",
+      zh: "服务器、监控系统与办公用UPS电源、稳压器及蓄电池。按负载功率与后备时间选型，提供现场安装调试。塔什干现货报价，含质保与乌兹别克斯坦全境配送。",
     },
   },
   "ip-videoregistratory-nvr": {
@@ -85,11 +110,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "IP-видеорегистратор NVR — купить в Ташкенте, Hikvision, цены",
       uz: "IP-videoregistrator NVR — Toshkentda narxlari, Hikvision",
       en: "IP NVR Video Recorders in Tashkent — Hikvision, Prices",
+      tr: "Taşkent'te NVR kaydedici — Hikvision, fiyatlar",
+      zh: "塔什干网络硬盘录像机NVR — 海康威视价格",
     },
     desc: {
       ru: "IP-видеорегистраторы NVR на 4–64 канала: Hikvision, Dahua, HiLook. Подбор под количество камер, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
       uz: "4–64 kanalli NVR videoregistratorlar: Hikvision, Dahua, HiLook. Kamera soniga qarab tanlash, sozlash, kafolat. Toshkentda narxlar, yetkazib berish.",
       en: "IP NVR recorders for 4–64 channels: Hikvision, Dahua, HiLook. Sizing to camera count, configuration, warranty. Tashkent prices, delivery across Uzbekistan.",
+      tr: "4–64 kanallı IP NVR kaydediciler: Hikvision, Dahua, HiLook. Kamera sayısına göre seçim, kurulum ve garanti. Taşkent fiyatları, Özbekistan geneline teslimat.",
+      zh: "4至64路网络硬盘录像机NVR：海康威视、大华、HiLook。按摄像机数量选型，含现场配置调试与整机质保。塔什干现货报价，乌兹别克斯坦全境配送。",
     },
   },
   "zhestkie-diski": {
@@ -97,11 +126,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить HDD для видеонаблюдения в Ташкенте — WD Purple",
       uz: "Videokuzatuv uchun HDD narxlari Toshkentda — WD Purple",
       en: "Surveillance HDD in Tashkent — WD Purple, Prices",
+      tr: "Taşkent'te güvenlik kamerası HDD — WD Purple",
+      zh: "塔什干监控硬盘价格 — 西数紫盘WD Purple",
     },
     desc: {
       ru: "Жёсткие диски для видеорегистраторов и серверов: WD Purple, Seagate SkyHawk на 1–18 ТБ. Расчёт объёма архива под ваши камеры. Цены в Ташкенте, гарантия, доставка.",
       uz: "Videoregistrator va serverlar uchun qattiq disklar: WD Purple, Seagate SkyHawk 1–18 TB. Arxiv hajmini hisoblash. Toshkentda narxlar, kafolat, yetkazib berish.",
       en: "Hard drives for NVRs and servers: WD Purple, Seagate SkyHawk 1–18 TB. Archive capacity sizing for your cameras. Tashkent prices, warranty, delivery.",
+      tr: "Kayıt cihazları ve sunucular için sabit diskler: 1–18 TB WD Purple ve Seagate SkyHawk. Kameralarınıza göre arşiv kapasitesi hesabı. Taşkent fiyatları, garanti.",
+      zh: "录像机与服务器专用硬盘：西数紫盘WD Purple、希捷酷鹰SkyHawk，容量1至18TB。按摄像机数量核算录像保存天数。塔什干报价，含质保与配送。",
     },
   },
   "telekommunikacionnye-shkafy": {
@@ -109,11 +142,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить серверный шкаф в Ташкенте — 19″ стойки, цены",
       uz: "Server shkafi narxlari Toshkentda — 19″ stoykalar",
       en: "Server Racks & Cabinets in Tashkent — 19″, Prices",
+      tr: "Taşkent'te sunucu kabini — 19″ rack fiyatları",
+      zh: "塔什干服务器机柜价格 — 19英寸机架机柜",
     },
     desc: {
       ru: "Телекоммуникационные и серверные шкафы 19″: настенные и напольные 4U–47U, стойки, аксессуары. Сборка и монтаж серверных под ключ. Цены в Ташкенте, доставка по Узбекистану.",
       uz: "19″ telekommunikatsiya va server shkaflari: devoriy va polga o'rnatiladigan 4U–47U, stoykalar. Server xonalarini yig'ish va montaj. Toshkentda narxlar, yetkazib berish.",
       en: "19″ telecom and server cabinets: wall-mount and floor-standing 4U–47U, racks, accessories. Turnkey server room assembly. Tashkent prices, delivery across Uzbekistan.",
+      tr: "19″ telekom ve sunucu kabinleri: 4U–47U duvar tipi ve dikili modeller, rack aksesuarları. Anahtar teslim sistem odası kurulumu. Taşkent fiyatları, teslimat.",
+      zh: "19英寸网络与服务器机柜：4U至47U壁挂式和落地式机柜、机架及配件。承接机房整体设计、搭建与安装。塔什干现货报价，含质保与乌兹别克斯坦全境配送。",
     },
   },
   "wi-fi-tochki-dostupa": {
@@ -121,11 +158,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить Wi-Fi точку доступа в Ташкенте — UniFi, TP-Link",
       uz: "Wi-Fi ulanish nuqtasi narxlari Toshkentda — UniFi, TP-Link",
       en: "Wi-Fi Access Points in Tashkent — UniFi, TP-Link",
+      tr: "Taşkent'te Wi-Fi erişim noktası — UniFi, TP-Link",
+      zh: "塔什干Wi-Fi无线接入点 — UniFi、TP-Link",
     },
     desc: {
       ru: "Wi-Fi точки доступа для офиса, склада и гостиницы: TP-Link Omada, Ruijie, Hikvision. Бесшовный роуминг, проектирование покрытия, монтаж. Цены в Ташкенте, гарантия.",
       uz: "Ofis, ombor va mehmonxona uchun Wi-Fi ulanish nuqtalari: TP-Link Omada, Ruijie. Uzluksiz rouming, qamrovni loyihalash, montaj. Toshkentda narxlar, kafolat.",
       en: "Wi-Fi access points for office, warehouse and hotel: TP-Link Omada, Ruijie, Hikvision. Seamless roaming, coverage design, installation. Tashkent prices, warranty.",
+      tr: "Ofis, depo ve otel için Wi-Fi erişim noktaları: TP-Link Omada, Ruijie, Hikvision. Kesintisiz dolaşım, kapsama projelendirmesi ve montaj. Taşkent fiyatları.",
+      zh: "办公室、仓库与酒店用Wi-Fi无线接入点：TP-Link Omada、锐捷、海康威视。支持无缝漫游，提供覆盖设计与现场安装。塔什干报价与质保。",
     },
   },
   "ip-kamery": {
@@ -133,11 +174,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить IP-камеру в Ташкенте — Hikvision, Dahua, цены",
       uz: "IP kamera narxlari Toshkentda — Hikvision, Dahua",
       en: "IP Cameras in Tashkent — Hikvision, Dahua, Prices",
+      tr: "Taşkent'te IP güvenlik kamerası — Hikvision, Dahua",
+      zh: "塔什干IP监控摄像机 — 海康威视、大华价格",
     },
     desc: {
       ru: "IP-камеры видеонаблюдения 2–8 Мп: Hikvision, Dahua, HiLook, Avigilon. Уличные и внутренние, ColorVu и AcuSense. Подбор, монтаж под ключ. Цены в Ташкенте, гарантия, доставка.",
       uz: "2–8 Mp IP videokuzatuv kameralari: Hikvision, Dahua, HiLook. Tashqi va ichki, ColorVu va AcuSense. Tanlash, montaj. Toshkentda narxlar, kafolat, yetkazib berish.",
       en: "2–8 MP IP surveillance cameras: Hikvision, Dahua, HiLook, Avigilon. Outdoor and indoor, ColorVu and AcuSense. Selection and turnkey installation. Tashkent prices, warranty.",
+      tr: "2–8 MP IP güvenlik kameraları: Hikvision, Dahua, HiLook, Avigilon. Dış ve iç mekân, ColorVu ve AcuSense. Anahtar teslim montaj, Taşkent fiyatları, garanti.",
+      zh: "200万至800万像素IP监控摄像机：海康威视、大华、HiLook、Avigilon。室外与室内款，支持全彩ColorVu与智能侦测。塔什干报价，含安装与质保。",
     },
   },
   "videoregistratory-dvr": {
@@ -145,11 +190,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Купить видеорегистратор DVR в Ташкенте — Hikvision, Dahua",
       uz: "DVR videoregistrator narxlari Toshkentda — Hikvision, Dahua",
       en: "DVR Recorders in Tashkent — Hikvision, Dahua, Prices",
+      tr: "Taşkent'te DVR kayıt cihazı — Hikvision, Dahua",
+      zh: "塔什干DVR硬盘录像机 — 海康威视、大华",
     },
     desc: {
       ru: "Аналоговые видеорегистраторы DVR на 4–32 канала: Hikvision Turbo HD, Dahua HDCVI. Гибридные модели с IP-каналами. Апгрейд старых систем без замены кабеля. Цены в Ташкенте, гарантия.",
       uz: "4–32 kanalli DVR videoregistratorlar: Hikvision Turbo HD, Dahua HDCVI. IP-kanalli gibrid modellar. Eski tizimlarni kabel almashtirmasdan yangilash. Toshkentda narxlar, kafolat.",
       en: "4–32 channel analog DVR recorders: Hikvision Turbo HD, Dahua HDCVI. Hybrid models with IP channels. Upgrade legacy CCTV without recabling. Tashkent prices, warranty.",
+      tr: "4–32 kanallı analog DVR kayıt cihazları: Hikvision Turbo HD, Dahua HDCVI. IP kanallı hibrit modeller, kablo değiştirmeden sistem yenileme. Taşkent fiyatları.",
+      zh: "4至32路模拟DVR硬盘录像机：海康威视Turbo HD、大华HDCVI，另有支持IP通道的混合机型，无需重新布线即可升级旧系统。塔什干报价与质保。",
     },
   },
   "besprovodnye-kamery": {
@@ -157,11 +206,15 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       ru: "Беспроводные Wi-Fi камеры в Ташкенте — Tapo, Hikvision, Dahua",
       uz: "Simsiz Wi-Fi kameralar Toshkentda — Tapo, Hikvision, Dahua",
       en: "Wireless Wi-Fi Cameras in Tashkent — Tapo, Hikvision, Dahua",
+      tr: "Kablosuz Wi-Fi kamera Taşkent — Tapo, Hikvision",
+      zh: "塔什干无线Wi-Fi监控摄像机 — Tapo、海康威视",
     },
     desc: {
       ru: "Wi-Fi камеры для дома и офиса: Tapo, Hikvision, Dahua, ZKTeco. Поворотные, с записью на SD-карту и в облако, двусторонней связью. Настройка приложения. Цены в Ташкенте, гарантия.",
       uz: "Uy va ofis uchun Wi-Fi kameralar: Tapo, Hikvision, Dahua, ZKTeco. Burar, SD-karta va bulutga yozadigan, ikki tomonlama aloqali. Ilovani sozlash. Toshkentda narxlar, kafolat.",
       en: "Wi-Fi cameras for home and office: Tapo, Hikvision, Dahua, ZKTeco. Pan-tilt models, SD-card and cloud recording, two-way audio. App setup included. Tashkent prices, warranty.",
+      tr: "Ev ve ofis için Wi-Fi güvenlik kameraları: Tapo, Hikvision, Dahua, ZKTeco. Döner modeller, SD kart ve bulut kaydı, çift yönlü ses, uygulama kurulumu, garanti.",
+      zh: "家庭与办公用Wi-Fi无线监控摄像机：Tapo、海康威视、大华、中控智慧。云台旋转，支持SD卡与云端录像、双向语音，含App配置。塔什干报价与质保。",
     },
   },
 };

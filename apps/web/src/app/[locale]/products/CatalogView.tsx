@@ -74,7 +74,7 @@ function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): imp
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -249,17 +249,11 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const hubArticles = pathType && cleanScope
     ? ARTICLES.filter((a) => a.hubs?.includes(typeSlug(pathType)) && a.loc[locale]).slice(0, 4)
     : [];
-  const pairFaqLd = pairBlock && pairBlock.faq.length
-    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: pairBlock.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
-    : null;
-  const brandFaqLd = brandSeo && brandSeo.faq.length
-    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: brandSeo.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
-    : null;
   const typeGroup = isTypePage ? CATALOG_GROUPS.find((g) => g.types.some((t) => t.n === type)) : undefined;
   // JSON-LD BreadcrumbList для страниц типа (в HTML крошки есть, разметки не было)
   const siteUrlLd = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
   const lpLd = locale !== routing.defaultLocale ? `/${locale}` : "";
-  const typeBreadcrumbLd = isTypePage
+  const typeBreadcrumbLd = isTypePage && !skipBreadcrumbLd
     ? {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -273,13 +267,24 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     : null;
   const typeIntro = typeLongDesc ? ((typeLongDesc.split(/\n##\s/)[0] || "").trim().split(/\n\n/)[0] || "").trim() : "";
   const typeFaq = typeLongDesc ? parseRichDescription(typeLongDesc).faq : [];
-  const typeFaqLd = typeFaq.length
-    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: typeFaq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
+  // Google засчитывает ОДНУ FAQPage на страницу: у хаба типа вопросов два источника
+  // (тип-лендинг и категорийный лонгрид), раньше уходили две схемы и вторая пропадала.
+  // Порядок: лендинг → лонгрид → бренд; дубли снимаем по тексту вопроса.
+  const faqSeen = new Set<string>();
+  const faqAll = [...(pairBlock?.faq ?? []), ...typeFaq, ...(brandSeo?.faq ?? [])].filter((f) => {
+    const key = f.q.trim().toLowerCase();
+    if (!key || faqSeen.has(key)) return false;
+    faqSeen.add(key);
+    return true;
+  });
+  const faqLd = faqAll.length
+    ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqAll.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }
     : null;
 
   return (
     <div className="container-page !pt-3 !pb-10">
       {typeBreadcrumbLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(typeBreadcrumbLd) }} />}
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Хлебные крошки: страница типа (Главная › Каталог › Группа › Тип) или бренда */}
       {isTypePage ? (
         <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
@@ -484,7 +489,6 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
           {typeLongDesc && typeLongDesc.trim() ? (
             <section id="type-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
-              {typeFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(typeFaqLd) }} />}
               <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{localizeCatName(type as string, locale)} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={typeLongDesc} />
@@ -494,7 +498,6 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
           {brandSeo ? (
             <section id="brand-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
-              {brandFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(brandFaqLd) }} />}
               <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{brandLanding!.name} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 {/* Q:/A:-пары RichDescription сам вынесет в FAQ-блок с локализованным заголовком */}
@@ -515,7 +518,6 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           ) : null}
           {pairBlock ? (
             <section id="pair-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
-              {pairFaqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pairFaqLd) }} />}
               <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{pairBlock.heading} — {tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={pairBlock.intro + (pairBlock.faq.length ? "\n\n" + pairBlock.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />

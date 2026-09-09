@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { BackButton } from "@/components/BackButton";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
@@ -22,8 +22,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function CategoriesPage() {
-  const locale = await getLocale();
+export default async function CategoriesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: страница целиком статическая (данные из констант)
+  setRequestLocale(locale);
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const groups = CATALOG_GROUPS.map((g, i) => ({
     idx: i,

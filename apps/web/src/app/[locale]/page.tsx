@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import dynamic from "next/dynamic";
-import { getBrands, getPartners, getPortfolio, getProducts, getSitePage } from "@/lib/api";
+import { getBrands, getPartners, getPortfolio, getProductsCached, getSitePage } from "@/lib/api";
 import { NewArrivalsTicker } from "@/components/Cards";
 import { localizeProductName } from "@/lib/productI18n";
 import { priceInfo } from "@/lib/product";
 import { resolveImageUrl } from "@/lib/image";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { HeroCarousel, type HeroSlide } from "@/components/HeroCarousel";
@@ -28,6 +28,9 @@ const FeedbackForm = dynamic(
   () => import("@/components/FeedbackForm").then((m) => m.FeedbackForm),
   { ssr: true, loading: () => <div className="h-64 animate-pulse rounded-2xl bg-slate-100" /> }
 );
+
+// ISR: новинки/портфолио/бренды тянутся из API — пересобираем раз в 5 минут
+export const revalidate = 300;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -176,12 +179,15 @@ const WHY_US = [
   },
 ];
 
-export default async function HomePage() {
-  const locale = await getLocale();
-  const t = await getTranslations("home");
-  const tcm = await getTranslations("common");
-  const ts = await getTranslations("services");
-  const tcalc = await getTranslations("calc");
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: getLocale()/getTranslations("ns") лезут в headers() и делают главную
+  // динамической — она рендерилась заново на каждый запрос
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "home" });
+  const tcm = await getTranslations({ locale, namespace: "common" });
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tcalc = await getTranslations({ locale, namespace: "calc" });
   const dir = t.raw("dir") as Record<string, [string, string]>;
   const why = t.raw("why") as Record<string, [string, string]>;
   const [
@@ -194,7 +200,7 @@ export default async function HomePage() {
     getBrands().catch(() => ({ brands: [] })),
     getPartners().catch(() => ({ partners: [] })),
     // Новинки каталога: 8 последних за 90 дней (блок после «Каталога продукции»)
-    getProducts(1, 8, { sort: "new", days: 60, hasPrice: true }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
+    getProductsCached(1, 8, { sort: "new", days: 60, hasPrice: true }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
   ]);
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));

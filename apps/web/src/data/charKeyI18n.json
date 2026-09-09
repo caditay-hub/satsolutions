@@ -6,7 +6,7 @@
     "zh": "供电"
   },
   "Разрешение": {
-    "uz": "Ruxsat (piksel)",
+    "uz": "Aniqlik (piksel)",
     "en": "Resolution",
     "tr": "Çözünürlük",
     "zh": "分辨率"
@@ -150,7 +150,7 @@
     "zh": "单位"
   },
   "Емкость карт": {
-    "uz": "Karta sig'imi",
+    "uz": "Karta sigʻimi",
     "en": "Card capacity",
     "tr": "Kart kapasitesi",
     "zh": "卡容量"
@@ -210,7 +210,7 @@
     "zh": "识别方式"
   },
   "Ночное видение": {
-    "uz": "Tungi ko'rish",
+    "uz": "Tungi koʻrish",
     "en": "Night vision",
     "tr": "Gece görüşü",
     "zh": "夜视"
@@ -222,13 +222,13 @@
     "zh": "层板"
   },
   "Применение": {
-    "uz": "Qo'llanilishi",
+    "uz": "Qoʻllanilishi",
     "en": "Application",
     "tr": "Uygulama",
     "zh": "应用"
   },
   "Пропускная способность": {
-    "uz": "O'tkazuvchanlik",
+    "uz": "Oʻtkazuvchanlik",
     "en": "Throughput",
     "tr": "Veri hızı",
     "zh": "吞吐量"
@@ -294,7 +294,7 @@
     "zh": "技术"
   },
   "Тип монтажа": {
-    "uz": "O'rnatish turi",
+    "uz": "Oʻrnatish turi",
     "en": "Mounting type",
     "tr": "Montaj tipi",
     "zh": "安装方式"
@@ -306,7 +306,7 @@
     "zh": "门类型"
   },
   "Угол обзора": {
-    "uz": "Ko'rish burchagi",
+    "uz": "Koʻrish burchagi",
     "en": "Field of view",
     "tr": "Görüş açısı",
     "zh": "视场角"
@@ -432,7 +432,7 @@
     "zh": "型号"
   },
   "Размеры": {
-    "uz": "O'lchamlari",
+    "uz": "Oʻlchamlari",
     "en": "Dimensions",
     "tr": "Boyutlar",
     "zh": "尺寸"
@@ -480,7 +480,7 @@
     "zh": "通信"
   },
   "Установка": {
-    "uz": "O'rnatish",
+    "uz": "Oʻrnatish",
     "en": "Installation",
     "tr": "Kurulum",
     "zh": "安装方式"
@@ -498,7 +498,7 @@
     "zh": "上联端口"
   },
   "Размер": {
-    "uz": "O'lcham",
+    "uz": "Oʻlcham",
     "en": "Size",
     "tr": "Boyut",
     "zh": "尺寸"
@@ -540,7 +540,7 @@
     "zh": "标准"
   },
   "Вес": {
-    "uz": "Og'irlik",
+    "uz": "Ogʻirlik",
     "en": "Weight",
     "tr": "Ağırlık",
     "zh": "重量"
@@ -582,7 +582,7 @@
     "zh": "电流"
   },
   "Емкость лиц": {
-    "uz": "Yuzlar sig'imi",
+    "uz": "Yuzlar sigʻimi",
     "en": "Face capacity",
     "tr": "Yüz kapasitesi",
     "zh": "人脸容量"
@@ -618,7 +618,7 @@
     "zh": "深度"
   },
   "макс. разрешение": {
-    "uz": "maks. ruxsat",
+    "uz": "maks. aniqlik",
     "en": "max. resolution",
     "tr": "maks. çözünürlük",
     "zh": "最大分辨率"
@@ -858,7 +858,7 @@
     "zh": "续航时间"
   },
   "Ширина прохода": {
-    "uz": "O'tish kengligi",
+    "uz": "Oʻtish kengligi",
     "en": "Passage width",
     "tr": "Geçiş genişliği",
     "zh": "通道宽度"
@@ -870,7 +870,7 @@
     "zh": "接口"
   },
   "Считыватель карт": {
-    "uz": "Karta o'qigich",
+    "uz": "Karta oʻqigich",
     "en": "Card reader",
     "tr": "Kart okuyucu",
     "zh": "读卡器"
@@ -888,7 +888,7 @@
     "zh": "天线增益"
   },
   "Светочувствительность": {
-    "uz": "Yorug'likka sezgirlik",
+    "uz": "Yorugʻlikka sezgirlik",
     "en": "Light sensitivity",
     "tr": "Işık hassasiyeti",
     "zh": "感光度"
@@ -906,13 +906,13 @@
     "zh": "外形尺寸"
   },
   "Пожарная эвакуация": {
-    "uz": "Yong'in evakuatsiyasi",
+    "uz": "Yongʻin evakuatsiyasi",
     "en": "Fire evacuation",
     "tr": "Yangın tahliyesi",
     "zh": "火灾疏散"
   },
   "Ширина прохода, мм": {
-    "uz": "O'tish kengligi, mm",
+    "uz": "Oʻtish kengligi, mm",
     "en": "Passage width, mm",
     "tr": "Geçiş genişliği, mm",
     "zh": "通道宽度（mm）"
@@ -996,7 +996,7 @@
     "zh": "PoE 端口数"
   },
   "Емкость отпечатков": {
-    "uz": "Barmoq izlari sig'imi",
+    "uz": "Barmoq izlari sigʻimi",
     "en": "Fingerprint capacity",
     "tr": "Parmak izi kapasitesi",
     "zh": "指纹容量"
@@ -1026,7 +1026,7 @@
     "zh": "视频格式"
   },
   "Грузоподъёмность": {
-    "uz": "Yuk ko'tarish",
+    "uz": "Yuk koʻtarish",
     "en": "Load capacity",
     "tr": "Taşıma kapasitesi",
     "zh": "承载能力"
@@ -1050,7 +1050,7 @@
     "zh": "宽×深"
   },
   "Вес, кг": {
-    "uz": "Og'irlik, kg",
+    "uz": "Ogʻirlik, kg",
     "en": "Weight, kg",
     "tr": "Ağırlık, kg",
     "zh": "重量（kg）"
@@ -1117,7 +1117,7 @@
   },
   "Тип волокна": {
     "uz": "Tola turi",
-    "en": "Fibre type",
+    "en": "Fiber type",
     "tr": "Fiber tipi",
     "zh": "光纤类型"
   },
@@ -1170,7 +1170,7 @@
     "zh": "开启角度"
   },
   "Тип установки": {
-    "uz": "O'rnatish turi",
+    "uz": "Oʻrnatish turi",
     "en": "Installation type",
     "tr": "Kurulum tipi",
     "zh": "安装方式"
@@ -1230,7 +1230,7 @@
     "zh": "特点"
   },
   "Ориентация": {
-    "uz": "Yo'nalish",
+    "uz": "Yoʻnalish",
     "en": "Orientation",
     "tr": "Yönlendirme",
     "zh": "方向"
@@ -1284,7 +1284,7 @@
     "zh": "探测距离"
   },
   "Дальность считывания": {
-    "uz": "O'qish masofasi",
+    "uz": "Oʻqish masofasi",
     "en": "Read range",
     "tr": "Okuma mesafesi",
     "zh": "读取距离"
@@ -1332,7 +1332,7 @@
     "zh": "键盘"
   },
   "Потребляемая мощность": {
-    "uz": "Iste'mol quvvati",
+    "uz": "Isteʼmol quvvati",
     "en": "Power consumption",
     "tr": "Güç tüketimi",
     "zh": "功耗"
@@ -1350,7 +1350,7 @@
     "zh": "最大帧率（fps）"
   },
   "Максимальное разрешение": {
-    "uz": "Maksimal ruxsat",
+    "uz": "Maksimal aniqlik",
     "en": "Maximum resolution",
     "tr": "Maksimum çözünürlük",
     "zh": "最大分辨率"
@@ -1440,7 +1440,7 @@
     "zh": "传输距离"
   },
   "Размеры замка": {
-    "uz": "Qulf o'lchamlari",
+    "uz": "Qulf oʻlchamlari",
     "en": "Lock dimensions",
     "tr": "Kilit ölçüleri",
     "zh": "锁体尺寸"
@@ -1470,7 +1470,7 @@
     "zh": "距离"
   },
   "Поддерживаемые устройства": {
-    "uz": "Qo'llab-quvvatlanadigan qurilmalar",
+    "uz": "Qoʻllab-quvvatlanadigan qurilmalar",
     "en": "Supported devices",
     "tr": "Desteklenen cihazlar",
     "zh": "支持的设备"
@@ -1494,7 +1494,7 @@
     "zh": "SFP28 端口"
   },
   "Направление открытия": {
-    "uz": "Ochilish yo'nalishi",
+    "uz": "Ochilish yoʻnalishi",
     "en": "Opening direction",
     "tr": "Açılma yönü",
     "zh": "开启方向"
@@ -1542,7 +1542,7 @@
     "zh": "遥控距离"
   },
   "Поддержка": {
-    "uz": "Qo'llab-quvvatlash",
+    "uz": "Qoʻllab-quvvatlash",
     "en": "Support",
     "tr": "Destek",
     "zh": "支持"
@@ -1560,7 +1560,7 @@
     "zh": "QSFP28 端口"
   },
   "Световой поток": {
-    "uz": "Yorug'lik oqimi",
+    "uz": "Yorugʻlik oqimi",
     "en": "Luminous flux",
     "tr": "Işık akısı",
     "zh": "光通量"
@@ -1572,7 +1572,7 @@
     "zh": "宽 × 深"
   },
   "Источник света": {
-    "uz": "Yorug'lik manbai",
+    "uz": "Yorugʻlik manbai",
     "en": "Light source",
     "tr": "Işık kaynağı",
     "zh": "光源"
@@ -1590,7 +1590,7 @@
     "zh": "处理器"
   },
   "Модуль считывания": {
-    "uz": "O'qish moduli",
+    "uz": "Oʻqish moduli",
     "en": "Reader module",
     "tr": "Okuyucu modülü",
     "zh": "读头模块"
@@ -1668,13 +1668,13 @@
     "zh": "报警输入"
   },
   "Дополнительно": {
-    "uz": "Qo'shimcha",
+    "uz": "Qoʻshimcha",
     "en": "Additional",
     "tr": "Ek özellikler",
     "zh": "其他"
   },
   "Ёмкость": {
-    "uz": "Sig'im",
+    "uz": "Sigʻim",
     "en": "Capacity",
     "tr": "Kapasite",
     "zh": "容量"
@@ -1686,7 +1686,7 @@
     "zh": "静态电流"
   },
   "Питание при пожаре": {
-    "uz": "Yong'in paytida quvvat",
+    "uz": "Yongʻin paytida quvvat",
     "en": "Power during fire",
     "tr": "Yangında besleme",
     "zh": "火灾时供电"
@@ -1728,7 +1728,7 @@
     "zh": "人脸库"
   },
   "Максимальное разрешение декодирования": {
-    "uz": "Maksimal dekodlash ruxsati",
+    "uz": "Maksimal dekodlash aniqligi",
     "en": "Maximum decoding resolution",
     "tr": "Maksimum kod çözme çözünürlüğü",
     "zh": "最大解码分辨率"
@@ -1746,7 +1746,7 @@
     "zh": "特点"
   },
   "Модули считывания": {
-    "uz": "O'qish modullari",
+    "uz": "Oʻqish modullari",
     "en": "Reader modules",
     "tr": "Okuyucu modülleri",
     "zh": "读头模块"
@@ -1788,7 +1788,7 @@
     "zh": "翼门材质"
   },
   "Полоса пропускания": {
-    "uz": "O'tkazish qobiliyati",
+    "uz": "Oʻtkazish qobiliyati",
     "en": "Bandwidth",
     "tr": "Bant genişliği",
     "zh": "带宽"
@@ -1872,7 +1872,7 @@
     "zh": "继电器"
   },
   "Детекция препятствий": {
-    "uz": "To'siqlarni aniqlash",
+    "uz": "Toʻsiqlarni aniqlash",
     "en": "Obstacle detection",
     "tr": "Engel algılama",
     "zh": "障碍物检测"
@@ -1921,7 +1921,7 @@
   },
   "Цвета": {
     "uz": "Ranglar",
-    "en": "Colours",
+    "en": "Colors",
     "tr": "Renkler",
     "zh": "颜色"
   },
@@ -1980,7 +1980,7 @@
     "zh": "技术"
   },
   "Входы считывателей": {
-    "uz": "O'qigich kirishlari",
+    "uz": "Oʻqigich kirishlari",
     "en": "Reader inputs",
     "tr": "Okuyucu girişleri",
     "zh": "读头输入"
@@ -2052,7 +2052,7 @@
     "zh": "开锁方式"
   },
   "Проход": {
-    "uz": "O'tish",
+    "uz": "Oʻtish",
     "en": "Passage",
     "tr": "Geçiş",
     "zh": "通行"
@@ -2071,7 +2071,7 @@
   },
   "Волокно": {
     "uz": "Tola",
-    "en": "Fibre",
+    "en": "Fiber",
     "tr": "Fiber",
     "zh": "光纤"
   },
@@ -2088,7 +2088,7 @@
     "zh": "输出电流"
   },
   "Вместимость событий": {
-    "uz": "Hodisalar sig'imi",
+    "uz": "Hodisalar sigʻimi",
     "en": "Event capacity",
     "tr": "Olay kapasitesi",
     "zh": "事件存储容量"
@@ -2178,7 +2178,7 @@
     "zh": "使用寿命"
   },
   "Направление": {
-    "uz": "Yo'nalish",
+    "uz": "Yoʻnalish",
     "en": "Direction",
     "tr": "Yön",
     "zh": "方向"
@@ -2256,7 +2256,7 @@
     "zh": "卡片库"
   },
   "Базы данных лиц": {
-    "uz": "Yuzlar ma'lumotlar bazasi",
+    "uz": "Yuzlar maʼlumotlar bazasi",
     "en": "Face databases",
     "tr": "Yüz veritabanları",
     "zh": "人脸数据库"
@@ -2274,19 +2274,19 @@
     "zh": "型式"
   },
   "Вес двери": {
-    "uz": "Eshik og'irligi",
+    "uz": "Eshik ogʻirligi",
     "en": "Door weight",
     "tr": "Kapı ağırlığı",
     "zh": "门重"
   },
   "Вместимость": {
-    "uz": "Sig'im",
+    "uz": "Sigʻim",
     "en": "Capacity",
     "tr": "Kapasite",
     "zh": "容量"
   },
   "Вместимость лиц": {
-    "uz": "Yuzlar sig'imi",
+    "uz": "Yuzlar sigʻimi",
     "en": "Face capacity",
     "tr": "Yüz kapasitesi",
     "zh": "人脸容量"
@@ -2304,13 +2304,13 @@
     "zh": "运行时间"
   },
   "Встроенный": {
-    "uz": "O'rnatilgan",
+    "uz": "Oʻrnatilgan",
     "en": "Built-in",
     "tr": "Dahili",
     "zh": "内置"
   },
   "Встроенный динамик": {
-    "uz": "O'rnatilgan dinamik",
+    "uz": "Oʻrnatilgan dinamik",
     "en": "Built-in speaker",
     "tr": "Dahili hoparlör",
     "zh": "内置扬声器"
@@ -2376,13 +2376,13 @@
     "zh": "扬声器"
   },
   "Длины волн": {
-    "uz": "To'lqin uzunliklari",
+    "uz": "Toʻlqin uzunliklari",
     "en": "Wavelengths",
     "tr": "Dalga boyları",
     "zh": "波长"
   },
   "Емкость АБ": {
-    "uz": "Akkumulyator sig'imi",
+    "uz": "Akkumulyator sigʻimi",
     "en": "Battery capacity",
     "tr": "Akü kapasitesi",
     "zh": "蓄电池容量"
@@ -2430,7 +2430,7 @@
     "zh": "红外技术"
   },
   "Измеряет": {
-    "uz": "O'lchaydi",
+    "uz": "Oʻlchaydi",
     "en": "Measures",
     "tr": "Ölçtüğü değerler",
     "zh": "测量参数"
@@ -2472,7 +2472,7 @@
     "zh": "组件"
   },
   "Контактные выключатели": {
-    "uz": "Kontaktli o'chirgichlar",
+    "uz": "Kontaktli oʻchirgichlar",
     "en": "Contact switches",
     "tr": "Kontak anahtarları",
     "zh": "触点开关"
@@ -2503,12 +2503,12 @@
   },
   "Лицензия": {
     "uz": "Litsenziya",
-    "en": "Licence",
+    "en": "License",
     "tr": "Lisans",
     "zh": "授权"
   },
   "Макс. вес двери": {
-    "uz": "Maks. eshik og'irligi",
+    "uz": "Maks. eshik ogʻirligi",
     "en": "Max. door weight",
     "tr": "Maks. kapı ağırlığı",
     "zh": "最大门重"
@@ -2664,19 +2664,19 @@
     "zh": "市电供电"
   },
   "Поддерживаемые камеры": {
-    "uz": "Qo'llab-quvvatlanadigan kameralar",
+    "uz": "Qoʻllab-quvvatlanadigan kameralar",
     "en": "Supported cameras",
     "tr": "Desteklenen kameralar",
     "zh": "支持的摄像机"
   },
   "Поддержка 4K": {
-    "uz": "4K qo'llab-quvvatlash",
+    "uz": "4K qoʻllab-quvvatlash",
     "en": "4K support",
     "tr": "4K desteği",
     "zh": "4K 支持"
   },
   "Поддержка SIM": {
-    "uz": "SIM qo'llab-quvvatlash",
+    "uz": "SIM qoʻllab-quvvatlash",
     "en": "SIM support",
     "tr": "SIM desteği",
     "zh": "SIM 卡支持"
@@ -2706,7 +2706,7 @@
     "zh": "SC 端口"
   },
   "Проводников": {
-    "uz": "O'tkazgichlar",
+    "uz": "Oʻtkazgichlar",
     "en": "Conductors",
     "tr": "İletken sayısı",
     "zh": "导体数量"
@@ -2736,13 +2736,13 @@
     "zh": "遥控半径"
   },
   "Размер секции": {
-    "uz": "Seksiya o'lchami",
+    "uz": "Seksiya oʻlchami",
     "en": "Section size",
     "tr": "Bölüm ölçüsü",
     "zh": "模块尺寸"
   },
   "Разрешение камеры": {
-    "uz": "Kamera ruxsati",
+    "uz": "Kamera aniqligi",
     "en": "Camera resolution",
     "tr": "Kamera çözünürlüğü",
     "zh": "摄像机分辨率"
@@ -2784,7 +2784,7 @@
     "zh": "含安装盒"
   },
   "Световая индикация": {
-    "uz": "Yorug'lik indikatsiyasi",
+    "uz": "Yorugʻlik indikatsiyasi",
     "en": "Light indication",
     "tr": "Işıklı gösterge",
     "zh": "灯光指示"
@@ -2814,13 +2814,13 @@
     "zh": "6 GHz 速率"
   },
   "Скорость подъёма": {
-    "uz": "Ko'tarilish tezligi",
+    "uz": "Koʻtarilish tezligi",
     "en": "Opening speed",
     "tr": "Kalkış hızı",
     "zh": "起杆速度"
   },
   "Совместимые размеры": {
-    "uz": "Mos o'lchamlar",
+    "uz": "Mos oʻlchamlar",
     "en": "Compatible sizes",
     "tr": "Uyumlu ölçüler",
     "zh": "适配尺寸"
@@ -2844,13 +2844,13 @@
     "zh": "吸合力"
   },
   "Считыватели": {
-    "uz": "O'qigichlar",
+    "uz": "Oʻqigichlar",
     "en": "Readers",
     "tr": "Okuyucular",
     "zh": "读头"
   },
   "Считыватель": {
-    "uz": "O'qigich",
+    "uz": "Oʻqigich",
     "en": "Reader",
     "tr": "Okuyucu",
     "zh": "读头"
@@ -2916,7 +2916,7 @@
     "zh": "开启角度"
   },
   "Угол подъема": {
-    "uz": "Ko'tarilish burchagi",
+    "uz": "Koʻtarilish burchagi",
     "en": "Lift angle",
     "tr": "Kalkış açısı",
     "zh": "抬升角度"
@@ -2953,7 +2953,7 @@
   },
   "Цветовая температура": {
     "uz": "Rang harorati",
-    "en": "Colour temperature",
+    "en": "Color temperature",
     "tr": "Renk sıcaklığı",
     "zh": "色温"
   },
@@ -2970,7 +2970,7 @@
     "zh": "边框宽度"
   },
   "Ширина дорожки": {
-    "uz": "Yo'lak kengligi",
+    "uz": "Yoʻlak kengligi",
     "en": "Track width",
     "tr": "Şerit genişliği",
     "zh": "轨道宽度"
@@ -3006,7 +3006,7 @@
     "zh": "最大红外照射距离 *"
   },
   "макс. угол обзора по горизонтали": {
-    "uz": "gorizontal bo'yicha maks. ko'rish burchagi",
+    "uz": "gorizontal boʻyicha maks. koʻrish burchagi",
     "en": "max. horizontal field of view",
     "tr": "maks. yatay görüş açısı",
     "zh": "最大水平视场角"
@@ -3036,7 +3036,7 @@
     "zh": "拾音范围"
   },
   "Поле зрения": {
-    "uz": "Ko'rish maydoni",
+    "uz": "Koʻrish maydoni",
     "en": "Field of view",
     "tr": "Görüş alanı",
     "zh": "视场"
@@ -3090,7 +3090,7 @@
     "zh": "通信线路"
   },
   "степень защиты по военному стандарту": {
-    "uz": "harbiy standart bo'yicha himoya darajasi",
+    "uz": "harbiy standart boʻyicha himoya darajasi",
     "en": "military-standard protection rating",
     "tr": "askeri standart koruma sınıfı",
     "zh": "军标防护等级"
@@ -3132,7 +3132,7 @@
     "zh": "LAN 端口"
   },
   "Коэффициент деления": {
-    "uz": "Bo'lish koeffitsienti",
+    "uz": "Boʻlish koeffitsienti",
     "en": "Split ratio",
     "tr": "Bölme oranı",
     "zh": "分光比"
@@ -3156,7 +3156,7 @@
     "zh": "连接器"
   },
   "Циклов без обслуживания": {
-    "uz": "Xizmat ko'rsatishsiz tsikllar",
+    "uz": "Xizmat koʻrsatishsiz tsikllar",
     "en": "Cycles between servicing",
     "tr": "Bakımsız çevrim sayısı",
     "zh": "免维护循环次数"
@@ -3204,7 +3204,7 @@
     "zh": "插座数量"
   },
   "Потребление": {
-    "uz": "Iste'mol",
+    "uz": "Isteʼmol",
     "en": "Consumption",
     "tr": "Tüketim",
     "zh": "功耗"
@@ -3235,7 +3235,7 @@
   },
   "Количество волокон": {
     "uz": "Tolalar soni",
-    "en": "Number of fibres",
+    "en": "Number of fibers",
     "tr": "Fiber sayısı",
     "zh": "光纤芯数"
   },
@@ -3246,7 +3246,7 @@
     "zh": "按键"
   },
   "Проводник": {
-    "uz": "O'tkazgich",
+    "uz": "Oʻtkazgich",
     "en": "Conductor",
     "tr": "İletken",
     "zh": "导体"
@@ -3265,7 +3265,7 @@
   },
   "Программы": {
     "uz": "Dasturlar",
-    "en": "Programmes",
+    "en": "Programs",
     "tr": "Programlar",
     "zh": "程序"
   },
@@ -3348,7 +3348,7 @@
     "zh": "进线口"
   },
   "Проходов": {
-    "uz": "O'tishlar",
+    "uz": "Oʻtishlar",
     "en": "Passages",
     "tr": "Geçiş sayısı",
     "zh": "通道数"
@@ -3414,37 +3414,37 @@
     "zh": "使用场景"
   },
   "Разделов": {
-    "uz": "Bo'limlar",
+    "uz": "Boʻlimlar",
     "en": "Partitions",
     "tr": "Bölüm sayısı",
     "zh": "分区数"
   },
   "Разделы": {
-    "uz": "Bo'limlar",
+    "uz": "Boʻlimlar",
     "en": "Partitions",
     "tr": "Bölümler",
     "zh": "分区"
   },
   "Информация": {
-    "uz": "Ma'lumot",
+    "uz": "Maʼlumot",
     "en": "Information",
     "tr": "Bilgi",
     "zh": "信息"
   },
   "Размер L": {
-    "uz": "L o'lchami",
+    "uz": "L oʻlchami",
     "en": "Size L",
     "tr": "L ölçüsü",
     "zh": "L 尺寸"
   },
   "Размер Z": {
-    "uz": "Z o'lchami",
+    "uz": "Z oʻlchami",
     "en": "Size Z",
     "tr": "Z ölçüsü",
     "zh": "Z 尺寸"
   },
   "Размер замка": {
-    "uz": "Qulf o'lchami",
+    "uz": "Qulf oʻlchami",
     "en": "Lock size",
     "tr": "Kilit ölçüsü",
     "zh": "锁体尺寸"
@@ -3468,13 +3468,13 @@
     "zh": "模式指示"
   },
   "Размеры (ШхВхГ)": {
-    "uz": "O'lchamlari (KxBxCh)",
+    "uz": "Oʻlchamlari (KxBxCh)",
     "en": "Dimensions (WxHxD)",
     "tr": "Ölçüler (GxYxD)",
     "zh": "尺寸（宽×高×深）"
   },
   "Размеры (мм)": {
-    "uz": "O'lchamlari (mm)",
+    "uz": "Oʻlchamlari (mm)",
     "en": "Dimensions (mm)",
     "tr": "Ölçüler (mm)",
     "zh": "尺寸（mm）"
@@ -3486,13 +3486,13 @@
     "zh": "宠物免疫"
   },
   "Измеряемые параметры": {
-    "uz": "O'lchanadigan parametrlar",
+    "uz": "Oʻlchanadigan parametrlar",
     "en": "Measured parameters",
     "tr": "Ölçülen parametreler",
     "zh": "测量参数"
   },
   "Разрешение записи": {
-    "uz": "Yozib olish ruxsati",
+    "uz": "Yozib olish aniqligi",
     "en": "Recording resolution",
     "tr": "Kayıt çözünürlüğü",
     "zh": "录像分辨率"
@@ -3582,7 +3582,7 @@
     "zh": "扫描器防护"
   },
   "Частоты считывателя": {
-    "uz": "O'qigich chastotalari",
+    "uz": "Oʻqigich chastotalari",
     "en": "Reader frequencies",
     "tr": "Okuyucu frekansları",
     "zh": "读头频率"
@@ -3612,13 +3612,13 @@
     "zh": "存储模式"
   },
   "Защита данных": {
-    "uz": "Ma'lumotlar himoyasi",
+    "uz": "Maʼlumotlar himoyasi",
     "en": "Data protection",
     "tr": "Veri koruma",
     "zh": "数据保护"
   },
   "Режимы отображения": {
-    "uz": "Ko'rsatish rejimlari",
+    "uz": "Koʻrsatish rejimlari",
     "en": "Display modes",
     "tr": "Görüntüleme modları",
     "zh": "显示模式"
@@ -3654,7 +3654,7 @@
     "zh": "硬盘"
   },
   "Емкость событий": {
-    "uz": "Hodisalar sig'imi",
+    "uz": "Hodisalar sigʻimi",
     "en": "Event capacity",
     "tr": "Olay kapasitesi",
     "zh": "事件容量"
@@ -3672,7 +3672,7 @@
     "zh": "PoE LAN 口数量"
   },
   "Дополнительные входы": {
-    "uz": "Qo'shimcha kirishlar",
+    "uz": "Qoʻshimcha kirishlar",
     "en": "Additional inputs",
     "tr": "Ek girişler",
     "zh": "附加输入"
@@ -3726,7 +3726,7 @@
     "zh": "把手"
   },
   "Ручное управление": {
-    "uz": "Qo'lda boshqarish",
+    "uz": "Qoʻlda boshqarish",
     "en": "Manual control",
     "tr": "Manuel kumanda",
     "zh": "手动控制"
@@ -3738,7 +3738,7 @@
     "zh": "PIR 传感器"
   },
   "Свет": {
-    "uz": "Yorug'lik",
+    "uz": "Yorugʻlik",
     "en": "Light",
     "tr": "Işık",
     "zh": "灯光"
@@ -3762,7 +3762,7 @@
     "zh": "灯带长度"
   },
   "Длина лезвия": {
-    "uz": "Tig' uzunligi",
+    "uz": "Tigʻ uzunligi",
     "en": "Blade length",
     "tr": "Bıçak uzunluğu",
     "zh": "刀片长度"
@@ -3774,7 +3774,7 @@
     "zh": "属性"
   },
   "Длина волны": {
-    "uz": "To'lqin uzunligi",
+    "uz": "Toʻlqin uzunligi",
     "en": "Wavelength",
     "tr": "Dalga boyu",
     "zh": "波长"
@@ -4002,13 +4002,13 @@
     "zh": "识别速度"
   },
   "Дальность считывания RFID": {
-    "uz": "RFID o'qish masofasi",
+    "uz": "RFID oʻqish masofasi",
     "en": "RFID read range",
     "tr": "RFID okuma mesafesi",
     "zh": "RFID 读取距离"
   },
   "Скорость чтения": {
-    "uz": "O'qish tezligi",
+    "uz": "Oʻqish tezligi",
     "en": "Read speed",
     "tr": "Okuma hızı",
     "zh": "读取速度"
@@ -4026,7 +4026,7 @@
     "zh": "扩展插槽"
   },
   "Дальность считывания QR": {
-    "uz": "QR o'qish masofasi",
+    "uz": "QR oʻqish masofasi",
     "en": "QR read range",
     "tr": "QR okuma mesafesi",
     "zh": "二维码读取距离"
@@ -4104,7 +4104,7 @@
     "zh": "水平面以上"
   },
   "Дальность (город/лес)": {
-    "uz": "Masofa (shahar/o'rmon)",
+    "uz": "Masofa (shahar/oʻrmon)",
     "en": "Range (urban/forest)",
     "tr": "Menzil (şehir/orman)",
     "zh": "距离（城区/林区）"
@@ -4212,7 +4212,7 @@
     "zh": "MAC 地址表"
   },
   "Считывание карт": {
-    "uz": "Kartalarni o'qish",
+    "uz": "Kartalarni oʻqish",
     "en": "Card reading",
     "tr": "Kart okuma",
     "zh": "读卡"
@@ -4224,7 +4224,7 @@
     "zh": "IP 转发"
   },
   "Считыватели RFID": {
-    "uz": "RFID o'qigichlar",
+    "uz": "RFID oʻqigichlar",
     "en": "RFID readers",
     "tr": "RFID okuyucular",
     "zh": "RFID 读头"
@@ -4278,7 +4278,7 @@
     "zh": "动作温度"
   },
   "Высота подъёма": {
-    "uz": "Ko'tarilish balandligi",
+    "uz": "Koʻtarilish balandligi",
     "en": "Lift height",
     "tr": "Kalkış yüksekliği",
     "zh": "抬升高度"
@@ -4290,7 +4290,7 @@
     "zh": "回路"
   },
   "Выключатель": {
-    "uz": "O'chirgich",
+    "uz": "Oʻchirgich",
     "en": "Switch",
     "tr": "Anahtar",
     "zh": "开关"
@@ -4386,7 +4386,7 @@
     "zh": "连接器类型"
   },
   "Встроенная память": {
-    "uz": "O'rnatilgan xotira",
+    "uz": "Oʻrnatilgan xotira",
     "en": "Built-in memory",
     "tr": "Dahili bellek",
     "zh": "内置存储"
@@ -4404,7 +4404,7 @@
     "zh": "随附硬盘"
   },
   "Время считывания": {
-    "uz": "O'qish vaqti",
+    "uz": "Oʻqish vaqti",
     "en": "Read time",
     "tr": "Okuma süresi",
     "zh": "读取时间"
@@ -4458,7 +4458,7 @@
     "zh": "识别时间"
   },
   "Время подъёма": {
-    "uz": "Ko'tarilish vaqti",
+    "uz": "Koʻtarilish vaqti",
     "en": "Lift time",
     "tr": "Kalkış süresi",
     "zh": "起杆时间"
@@ -4572,13 +4572,13 @@
     "zh": "负载电流"
   },
   "Вместимость пользователей": {
-    "uz": "Foydalanuvchilar sig'imi",
+    "uz": "Foydalanuvchilar sigʻimi",
     "en": "User capacity",
     "tr": "Kullanıcı kapasitesi",
     "zh": "用户容量"
   },
   "Ток потребления": {
-    "uz": "Iste'mol toki",
+    "uz": "Isteʼmol toki",
     "en": "Current draw",
     "tr": "Çekilen akım",
     "zh": "工作电流"
@@ -4602,13 +4602,13 @@
     "zh": "电子钥匙"
   },
   "Энергопотребление": {
-    "uz": "Energiya iste'moli",
+    "uz": "Energiya isteʼmoli",
     "en": "Power consumption",
     "tr": "Enerji tüketimi",
     "zh": "功耗"
   },
   "Вместимость отпечатков": {
-    "uz": "Barmoq izlari sig'imi",
+    "uz": "Barmoq izlari sigʻimi",
     "en": "Fingerprint capacity",
     "tr": "Parmak izi kapasitesi",
     "zh": "指纹容量"
@@ -4674,13 +4674,13 @@
     "zh": "光束角"
   },
   "Вес удержания": {
-    "uz": "Ushlab turish og'irligi",
+    "uz": "Ushlab turish ogʻirligi",
     "en": "Holding weight",
     "tr": "Tutma ağırlığı",
     "zh": "吸持重量"
   },
   "Вес (г)": {
-    "uz": "Og'irlik (g)",
+    "uz": "Ogʻirlik (g)",
     "en": "Weight (g)",
     "tr": "Ağırlık (g)",
     "zh": "重量（克）"
@@ -4734,7 +4734,7 @@
     "zh": "门控制"
   },
   "Управление полос": {
-    "uz": "Yo'laklarni boshqarish",
+    "uz": "Yoʻlaklarni boshqarish",
     "en": "Lane control",
     "tr": "Şerit kontrolü",
     "zh": "车道控制"
@@ -4746,7 +4746,7 @@
     "zh": "受控输出数"
   },
   "Белый список": {
-    "uz": "Oq ro'yxat",
+    "uz": "Oq roʻyxat",
     "en": "Whitelist",
     "tr": "Beyaz liste",
     "zh": "白名单"
@@ -4860,7 +4860,7 @@
     "zh": "低照度"
   },
   "Несущий трос": {
-    "uz": "Ko'taruvchi tros",
+    "uz": "Koʻtaruvchi tros",
     "en": "Support wire",
     "tr": "Taşıyıcı halat",
     "zh": "承力钢丝"
@@ -4872,7 +4872,7 @@
     "zh": "存储盘"
   },
   "Наклон пулевого канала": {
-    "uz": "Bullet kanalining og'ishi",
+    "uz": "Bullet kanalining ogʻishi",
     "en": "Bullet channel tilt",
     "tr": "Bullet kanal eğimi",
     "zh": "枪机通道俯仰"
@@ -4890,7 +4890,7 @@
     "zh": "卡片格式"
   },
   "Наклон панорамного канала": {
-    "uz": "Panoramali kanalning og'ishi",
+    "uz": "Panoramali kanalning ogʻishi",
     "en": "Panoramic channel tilt",
     "tr": "Panoramik kanal eğimi",
     "zh": "全景通道俯仰"
@@ -4926,7 +4926,7 @@
     "zh": "续航"
   },
   "Мощность всасывания": {
-    "uz": "So'rish quvvati",
+    "uz": "Soʻrish quvvati",
     "en": "Suction power",
     "tr": "Emiş gücü",
     "zh": "吸力"
@@ -5016,7 +5016,7 @@
     "zh": "通信模块"
   },
   "Отсеков": {
-    "uz": "Bo'lmalar",
+    "uz": "Boʻlmalar",
     "en": "Bays",
     "tr": "Yuva sayısı",
     "zh": "仓位数量"
@@ -5028,7 +5028,7 @@
     "zh": "功能"
   },
   "ПО": {
-    "uz": "Dasturiy ta'minot",
+    "uz": "Dasturiy taʼminot",
     "en": "Software",
     "tr": "Yazılım",
     "zh": "软件"
@@ -5166,7 +5166,7 @@
     "zh": "回声消除"
   },
   "Поддерживаемые источники": {
-    "uz": "Qo'llab-quvvatlanadigan manbalar",
+    "uz": "Qoʻllab-quvvatlanadigan manbalar",
     "en": "Supported sources",
     "tr": "Desteklenen kaynaklar",
     "zh": "支持的信号源"
@@ -5178,25 +5178,25 @@
     "zh": "人脸存储"
   },
   "Поддерживаемые коды": {
-    "uz": "Qo'llab-quvvatlanadigan kodlar",
+    "uz": "Qoʻllab-quvvatlanadigan kodlar",
     "en": "Supported codes",
     "tr": "Desteklenen kodlar",
     "zh": "支持的编码"
   },
   "Поддерживаемые пользователи": {
-    "uz": "Qo'llab-quvvatlanadigan foydalanuvchilar",
+    "uz": "Qoʻllab-quvvatlanadigan foydalanuvchilar",
     "en": "Supported users",
     "tr": "Desteklenen kullanıcılar",
     "zh": "支持的用户数"
   },
   "Поддерживаемые приложения": {
-    "uz": "Qo'llab-quvvatlanadigan ilovalar",
+    "uz": "Qoʻllab-quvvatlanadigan ilovalar",
     "en": "Supported apps",
     "tr": "Desteklenen uygulamalar",
     "zh": "支持的应用"
   },
   "Максимум делений": {
-    "uz": "Maksimal bo'linmalar",
+    "uz": "Maksimal boʻlinmalar",
     "en": "Maximum splits",
     "tr": "Maksimum bölme",
     "zh": "最大分割数"
@@ -5226,7 +5226,7 @@
     "zh": "最大速率"
   },
   "Подчиненные контроллеры": {
-    "uz": "Bo'ysunuvchi kontrollerlar",
+    "uz": "Boʻysunuvchi kontrollerlar",
     "en": "Subordinate controllers",
     "tr": "Alt denetleyiciler",
     "zh": "从控制器"
@@ -5244,7 +5244,7 @@
     "zh": "最大帧率"
   },
   "Макс. разрешение": {
-    "uz": "maks. ruxsat",
+    "uz": "maks. aniqlik",
     "en": "max. resolution",
     "tr": "maks. çözünürlük",
     "zh": "最大分辨率"
@@ -5256,7 +5256,7 @@
     "zh": "最高工作温度"
   },
   "Размеры (ДхШхВ)": {
-    "uz": "O'lchamlari (UxKxB)",
+    "uz": "Oʻlchamlari (UxKxB)",
     "en": "Dimensions (LxWxH)",
     "tr": "Ölçüler (UxGxY)",
     "zh": "尺寸（长×宽×高）"
@@ -5280,7 +5280,7 @@
     "zh": "接头 B"
   },
   "Активное сдерживание": {
-    "uz": "Faol to'xtatish",
+    "uz": "Faol toʻxtatish",
     "en": "Active deterrence",
     "tr": "Aktif caydırma",
     "zh": "主动威慑"
@@ -5364,7 +5364,7 @@
     "zh": "控制器供电"
   },
   "Питание считывателей": {
-    "uz": "O'quvchilar quvvati",
+    "uz": "Oʻquvchilar quvvati",
     "en": "Reader power",
     "tr": "Okuyucu beslemesi",
     "zh": "读卡器供电"
@@ -5394,7 +5394,7 @@
     "zh": "漫游"
   },
   "Способы прохода": {
-    "uz": "O'tish usullari",
+    "uz": "Oʻtish usullari",
     "en": "Access methods",
     "tr": "Geçiş yöntemleri",
     "zh": "通行方式"

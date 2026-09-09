@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getBrands, getBrandTypePairs, type BrandDto } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
@@ -86,9 +86,8 @@ function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitl
 }
 
 // Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
-async function BrandCard({ b }: { b: BrandDto }) {
-  const t = await getTranslations("catalog");
-  const locale = await getLocale();
+async function BrandCard({ b, locale }: { b: BrandDto; locale: string }) {
+  const t = await getTranslations({ locale, namespace: "catalog" });
   const slug = b.slug.toLowerCase();
   const forceText = TEXT_LABEL_SLUGS.has(slug);
   const logo = !forceText && b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
@@ -137,9 +136,8 @@ async function BrandCard({ b }: { b: BrandDto }) {
 // «Прочее оборудование» раскрыто: чипы категорий внутри (топ по количеству),
 // каждый ведёт сразу на /catalog/prochee/<type> — покупатель видит содержимое
 // «чёрного ящика», а Google получает внутренние ссылки на связки бренд×тип.
-async function ProcheeCard({ b }: { b: BrandDto }) {
-  const t = await getTranslations("catalog");
-  const locale = await getLocale();
+async function ProcheeCard({ b, locale }: { b: BrandDto; locale: string }) {
+  const t = await getTranslations({ locale, namespace: "catalog" });
   let inside: { type: string; count: number }[] = [];
   try {
     const { pairs } = await getBrandTypePairs();
@@ -148,7 +146,7 @@ async function ProcheeCard({ b }: { b: BrandDto }) {
       .sort((a, b2) => b2.count - a.count)
       .slice(0, 8);
   } catch { /* без чипов */ }
-  if (!inside.length) return <BrandCard b={b} />;
+  if (!inside.length) return <BrandCard b={b} locale={locale} />;
 
   const name = localizeBrandName("prochee", b.name, locale);
   const count = b.productCount ?? 0;
@@ -191,9 +189,11 @@ async function ProcheeCard({ b }: { b: BrandDto }) {
   );
 }
 
-export default async function CatalogIndexPage() {
-  const t = await getTranslations("catalog");
-  const locale = await getLocale();
+export default async function CatalogIndexPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: без setRequestLocale next-intl уходит в headers() и ломает ISR
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "catalog" });
   // Список брендов — динамический, из БД (published).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
   // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
@@ -232,7 +232,7 @@ export default async function CatalogIndexPage() {
         <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* Фикс. фронт + остальные по убыванию количества */}
           {orderedBrands.map((b) => (
-            <BrandCard key={b.slug.toLowerCase()} b={b} />
+            <BrandCard key={b.slug.toLowerCase()} b={b} locale={locale} />
           ))}
 
           {/* Предпоследняя: агрегат «Другие бренды» (1..20 товаров) — единый стиль карточки */}
@@ -260,7 +260,7 @@ export default async function CatalogIndexPage() {
           )}
 
           {/* Самая последняя: «Прочее оборудование» — раскрыта по содержимому */}
-          {procheeBrand && <ProcheeCard b={procheeBrand} />}
+          {procheeBrand && <ProcheeCard b={procheeBrand} locale={locale} />}
         </div>
       </div>
     </div>

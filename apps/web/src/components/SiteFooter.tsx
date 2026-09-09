@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { getSitePage } from "@/lib/api";
 import { formatPhone } from "@/lib/formatPhone";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -18,12 +18,13 @@ function pick(data: any, key: string) {
  * телефон, адрес — не попадали в исходный HTML, то есть доставались поисковику
  * только при выполнении JavaScript. Интерактив остался один — карта.
  */
-export async function SiteFooter() {
-  const [t, tn, tc, locale] = await Promise.all([
-    getTranslations("footer"),
-    getTranslations("nav"),
-    getTranslations("common"),
-    getLocale(),
+// locale приходит пропом из layout: getLocale()/getTranslations без локали читают
+// заголовки запроса и делают динамическим КАЖДЫЙ маршрут сайта (подвал сквозной)
+export async function SiteFooter({ locale }: { locale: string }) {
+  const [t, tn, tc] = await Promise.all([
+    getTranslations({ locale, namespace: "footer" }),
+    getTranslations({ locale, namespace: "nav" }),
+    getTranslations({ locale, namespace: "common" }),
   ]);
 
   // Данные подвала берём с сервера. Ошибка API не должна ронять весь макет —
@@ -55,7 +56,22 @@ export async function SiteFooter() {
   const kitsLabel = ({ ru: "Готовые комплекты", uz: "Tayyor to'plamlar", en: "Ready-made kits", tr: "Hazır setler", zh: "成品套装" } as Record<string, string>)[locale] ?? "Готовые комплекты";
   const h3cLabel = ({ ru: "Партнёр H3C", uz: "H3C hamkori", en: "H3C partner", tr: "H3C ortağı", zh: "H3C 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр H3C";
   const zktecoLabel = ({ ru: "Партнёр ZKTeco", uz: "ZKTeco hamkori", en: "ZKTeco partner", tr: "ZKTeco ortağı", zh: "ZKTeco 合作伙伴" } as Record<string, string>)[locale] ?? "Партнёр ZKTeco";
+  // Ссылки на экспортные/международные посадочные: до этого на них не вело ни одной
+  // внутренней ссылки (страницы-сироты в sitemap). Подписи инлайном — messages правит другой трек.
+  const intlLabel = ({ ru: "Иностранным компаниям", uz: "Xorijiy kompaniyalar uchun", en: "For international companies", tr: "Yabancı şirketler için", zh: "面向外国公司" } as Record<string, string>)[locale] ?? "Иностранным компаниям";
+  const exportLabel = ({ ru: "Экспорт оборудования", uz: "Uskunalar eksporti", en: "Equipment export", tr: "Ekipman ihracatı", zh: "设备出口" } as Record<string, string>)[locale] ?? "Экспорт оборудования";
+  const exportTjLabel = ({ ru: "Поставки в Таджикистан", uz: "Tojikistonga yetkazish", en: "Supply to Tajikistan", tr: "Tacikistan'a tedarik", zh: "供货至塔吉克斯坦" } as Record<string, string>)[locale] ?? "Поставки в Таджикистан";
+  const exportTmLabel = ({ ru: "Поставки в Туркменистан", uz: "Turkmanistonga yetkazish", en: "Supply to Turkmenistan", tr: "Türkmenistan'a tedarik", zh: "供货至土库曼斯坦" } as Record<string, string>)[locale] ?? "Поставки в Туркменистан";
   const reviewLabel = ({ ru: "Оценить нас на Google Картах", uz: "Google Xaritada baholang", en: "Rate us on Google Maps", tr: "Google Haritalar'da değerlendirin", zh: "在 Google 地图上评价我们" } as Record<string, string>)[locale] ?? "Оценить нас на Google Картах";
+
+  // Реквизиты по локалям — совпадают с блоком «Компания» на /tenders
+  const legalLine = ({
+    ru: "ООО «SAT SOLUTIONS», ИНН 308603912",
+    uz: "«SAT SOLUTIONS» MChJ, STIR 308603912",
+    en: "SAT SOLUTIONS LLC, TIN 308603912",
+    tr: "SAT SOLUTIONS LLC, VKN 308603912",
+    zh: "SAT SOLUTIONS 有限公司，税号 308603912",
+  } as Record<string, string>)[locale] ?? "ООО «SAT SOLUTIONS», ИНН 308603912";
 
   return (
     <footer className="border-t border-slate-300 bg-white" id="site-footer">
@@ -91,6 +107,10 @@ export async function SiteFooter() {
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/faq" className="hover:text-brand-700">{t("faq")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
+              <li><Link href="/international" className="hover:text-brand-700">{intlLabel}</Link></li>
+              <li><Link href="/export" className="hover:text-brand-700">{exportLabel}</Link></li>
+              <li><Link href="/export/tajikistan" className="hover:text-brand-700">{exportTjLabel}</Link></li>
+              <li><Link href="/export/turkmenistan" className="hover:text-brand-700">{exportTmLabel}</Link></li>
               <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>
           </div>
@@ -157,7 +177,9 @@ export async function SiteFooter() {
       <div className="border-t border-slate-200 bg-slate-50">
         <div className="container-page flex flex-col items-center justify-center gap-1 py-5 text-center text-xs font-bold text-slate-700">
           <div>© 2026 SAT Solutions. {t("rights")}.</div>
-          <div>{tc("legalForm")} &quot;SUPPLY AND TRANSPORTATION&quot;</div>
+          {/* Юрлицо и ИНН — как на странице тендеров (/tenders): раньше в подвале стояло
+              другое название («SUPPLY AND TRANSPORTATION»), и реквизиты сайта расходились */}
+          <div>{legalLine}</div>
         </div>
       </div>
     </footer>

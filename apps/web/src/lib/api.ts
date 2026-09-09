@@ -224,10 +224,14 @@ export async function getPartners() {
   return apiFetch<{ partners: PartnerDto[] }>("/partners", { next: { revalidate: 300 } });
 }
 
+export type ProductListOpts = { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string; type?: string; chars?: Record<string, string[]>; priceMin?: number; priceMax?: number; days?: number; hasPrice?: boolean };
+
 export async function getProducts(
   page = 1,
   limit = 12,
-  opts?: { category?: string; brand?: string; q?: string; sort?: string; recommended?: boolean; mp?: string; audio?: string; technology?: string; installationType?: string; type?: string; chars?: Record<string, string[]>; priceMin?: number; priceMax?: number; days?: number; hasPrice?: boolean }
+  opts?: ProductListOpts,
+  // revalidate задаётся ТОЛЬКО для детерминированных подборок (см. getProductsCached ниже)
+  revalidate?: number
 ) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
   if (opts?.days) qs.set("days", String(opts.days));
@@ -248,8 +252,21 @@ export async function getProducts(
   // no-store: список товаров имеет неограниченное число комбинаций фильтров/сортировки/страниц,
   // ISR-кэш этих запросов раздувал .next/cache/fetch-cache до десятков ГБ. Список всегда свежий.
   return apiFetch<{ items: ProductDto[]; total: number; page: number; limit: number; corrected?: string | null }>(`/products?${qs}`, {
-    cache: "no-store"
-  });
+    ...(revalidate ? { next: { revalidate } } : { cache: "no-store" })
+  } as any);
+}
+
+// Кэшируемая обёртка над getProducts — ТОЛЬКО для подборок с фиксированным набором
+// параметров (похожие товары и кросс-селл в карточке, новинки на главной): число
+// вариантов конечно, поэтому fetch-cache не раздувается, а страница остаётся ISR.
+// Для списков с пользовательскими фильтрами использовать getProducts (no-store).
+export async function getProductsCached(
+  page = 1,
+  limit = 12,
+  opts?: ProductListOpts,
+  revalidate = 300
+) {
+  return getProducts(page, limit, opts, revalidate);
 }
 
 export type ProductFacets = {
@@ -304,8 +321,9 @@ export async function updateServiceRequestStatus(id: number, status: 'pending' |
 }
 
 export async function getProductBySlug(slug: string) {
-  // no-store: страница товара должна показывать актуальные фото/цены/название сразу после правок (не кэш)
-  return apiFetch<{ product: ProductDto }>(`/products/${encodeURIComponent(slug)}`, { cache: "no-store" });
+  // ISR 5 минут вместо no-store: карточка рендерилась заново на каждый запрос (3256 товаров,
+  // каждый обход бота = полный рендер). Правки фото/цен видны с задержкой ≤5 мин.
+  return apiFetch<{ product: ProductDto }>(`/products/${encodeURIComponent(slug)}`, { next: { revalidate: 300 } });
 }
 
 

@@ -1,4 +1,4 @@
-import { getBrands, getProducts } from "@/lib/api";
+import { getBrands, getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 
 // Товарный фид Google Merchant Center (RSS 2.0, g:-namespace).
@@ -20,7 +20,7 @@ export async function GET() {
     (async () => {
       const acc: any[] = [];
       for (let page = 1; page <= 20; page++) {
-        const { items, total } = await getProducts(page, 500).catch(() => ({ items: [], total: 0 }));
+        const { items, total } = await getProductsCached(page, 500, undefined, 3600).catch(() => ({ items: [], total: 0 }));
         acc.push(...items);
         if (acc.length >= (total || 0) || items.length === 0) break;
       }

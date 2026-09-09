@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# Канонический скрипт деплоя satweb.
-# ЖИВАЯ копия, которую реально запускает `npm run deploy`, лежит на сервере:
-#   /root/deploy-satweb.sh
-# Если правишь этот файл — синхронизируй на сервер: `npm run deploy:push-script`
+# Канонический скрипт деплоя satweb — ЭТОТ файл и есть рабочая логика.
+# На сервере лежит только загрузчик /root/deploy-satweb.sh (= scripts/deploy-bootstrap.sh),
+# который при каждом запуске забирает `scripts/deploy.sh` из origin/main в /root/deploy-run.sh
+# и выполняет его. То есть правки здесь доезжают до прода САМИ — после `git push`.
+# Копировать этот файл на сервер вручную НЕ нужно (`npm run deploy:push-script` не существует;
+# загрузчик обновляется отдельно: `npm run deploy:push-bootstrap`).
 set -euo pipefail
 cd /var/www/satweb
 echo "==> [satweb deploy] start $(date -u +%FT%TZ)"
@@ -30,15 +32,61 @@ echo "    now at $(git rev-parse --short HEAD): $(git log -1 --pretty=%s)"
 # 3) Зависимости (с dev — нужны для сборки)
 npm install --include=dev --no-audit --no-fund
 
+# 3b) Очистка .next БЕЗ каталога cache/.
+#    Было: `npm run build` в apps/web и apps/admin начинается с `npm run clean`,
+#    который сносит ВЕСЬ .next — вместе с .next/cache/images. Это кэш оптимизатора
+#    картинок: после каждого деплоя он пересоздавался с нуля (аудит 09.09.2026 —
+#    самый старый файл кэша ровно от последнего деплоя, 658 файлов/13 МБ за сутки).
+#    При 10–33 деплоях в день это давало всплески 504 «upstream image response
+#    timed out» на /_next/image: холодная AVIF-конвертация w=1200 занимает 1,6 с,
+#    шесть параллельных — до 6 с при таймауте оптимизатора 7 с.
+#    Стало: чистим содержимое .next, но НЕ cache/ — и артефакты детерминированы,
+#    и кэш картинок с webpack-кэшем переживают деплой (webpack-кэш заодно
+#    сокращает время сборки, а значит и окно, в котором ловятся 504).
+#    Страховка от разрастания: cache/webpack растёт от сборки к сборке; если весь
+#    cache/ перевалил за 2 ГБ — сносим webpack-часть, но cache/images оставляем
+#    (её цена как раз в том, чтобы пережить деплой).
+clean_next_keep_cache() {
+  local d="$1"
+  [ -d "$d" ] || return 0
+  find "$d" -mindepth 1 -maxdepth 1 ! -name cache -exec rm -rf {} +
+  local mb
+  mb=$(du -sm "$d/cache" 2>/dev/null | cut -f1 || echo 0)
+  if [ "${mb:-0}" -gt 2048 ]; then
+    echo "    cache/ = ${mb} МБ (> 2 ГБ) — чистим cache/webpack, cache/images оставляем"
+    rm -rf "$d/cache/webpack"
+  fi
+}
+clean_next_keep_cache /var/www/satweb/apps/web/.next
+clean_next_keep_cache /var/www/satweb/apps/admin/.next
+echo "    .next очищен, cache/ сохранён: \
+web $(du -sh /var/www/satweb/apps/web/.next/cache 2>/dev/null | cut -f1 || echo -), \
+admin $(du -sh /var/www/satweb/apps/admin/.next/cache 2>/dev/null | cut -f1 || echo -)"
+
 # 4) Сборка api + web + admin — с таймаутом и одним ретраем.
 #    Сборка НЕ должна висеть вечно: timeout аварийно прервёт зависший билд
 #    (старый сайт продолжает работать — pm2 restart ниже только после успеха).
 #    Историческая причина зависаний: next/font тянул шрифты из Google на каждом
 #    билде; теперь шрифты self-hosted, но таймаут оставляем как страховку.
-build_once() { timeout 420 npm run build; }
+#    ВАЖНО: web и admin собираются напрямую через `next build`, минуя
+#    `npm run build -w …`, потому что тот начинается с `npm run clean` (см. шаг 3b).
+#    Очистку мы уже сделали сами — с сохранением cache/.
+NEXT_BIN=/var/www/satweb/node_modules/.bin/next
+[ -x "$NEXT_BIN" ] || NEXT_BIN="npx --no-install next"
+build_once() {
+  timeout 420 bash -c "
+    set -e
+    cd /var/www/satweb
+    npm run build -w @satsolutions/api
+    ( cd /var/www/satweb/apps/web   && $NEXT_BIN build )
+    ( cd /var/www/satweb/apps/admin && $NEXT_BIN build )
+  "
+}
 if ! build_once; then
-  echo "    !! сборка упала/зависла — повтор через 5с"
+  echo "    !! сборка упала/зависла — повтор через 5с (с повторной очисткой, cache/ снова сохраняем)"
   sleep 5
+  clean_next_keep_cache /var/www/satweb/apps/web/.next
+  clean_next_keep_cache /var/www/satweb/apps/admin/.next
   build_once
 fi
 

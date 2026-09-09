@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CostCalculator } from "@/components/CostCalculator";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -24,6 +24,7 @@ const RELATED = ["cctv", "access", "fire", "network", "intercom", "perimeter"] a
 
 export default async function CalculatorPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  setRequestLocale(locale); // страница целиком из переводов — держим статикой
   const t = await getTranslations({ locale, namespace: "calc" });
   const tn = await getTranslations({ locale, namespace: "nav" });
   const ts = await getTranslations({ locale, namespace: "services" });

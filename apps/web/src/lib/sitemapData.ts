@@ -26,8 +26,24 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolution
 const LOCALES = ["ru", "uz", "en", "tr", "zh"] as const;
 const DEFAULT_LOCALE = "ru";
 
-// Стабильная дата сборки: «вечно-сейчашний» lastmod Google со временем игнорирует.
-export const GENERATED = new Date();
+// Дата последнего значимого изменения статики и лендингов каталога — ПРАВИТЬ ВРУЧНУЮ
+// при заметной правке этих страниц. Почему не new Date(): lastmod, который менялся на
+// каждой сборке, хотя страница не менялась, Google перестаёт учитывать вовсе — и вместе
+// с ним обесцениваются честные даты соседних URL в том же файле.
+export const CONTENT_RELEASE = new Date("2026-09-09T00:00:00.000Z");
+
+/** @deprecated историческое имя — им пользуется индекс /sitemap.xml. */
+export const GENERATED = CONTENT_RELEASE;
+
+/** Самая свежая из дат; пусто/мусор → дата релиза контента. */
+function newestDate(values: Iterable<string | null | undefined>): Date {
+  let ms = 0;
+  for (const v of values) {
+    const t = v ? Date.parse(v) : NaN;
+    if (Number.isFinite(t) && t > ms) ms = t;
+  }
+  return ms ? new Date(ms) : CONTENT_RELEASE;
+}
 
 export function langAlternates(path: string) {
   const languages: Record<string, string> = {};
@@ -65,7 +81,9 @@ const STATIC_ROUTES = [
   "", "/about", "/contact", "/products", "/products/new", "/solutions", "/portfolio",
   "/catalog", "/international", "/tenders", "/returns", "/delivery", "/partners/h3c",
   "/calculator", "/partners/zkteco", "/kits", "/faq",
-  "/export/tajikistan", "/export/turkmenistan",
+  // /export — хаб экспортного направления: даёт входящие ссылки страницам стран,
+  // которые до этого были достижимы только из карты сайта.
+  "/export", "/export/tajikistan", "/export/turkmenistan",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking
@@ -74,7 +92,7 @@ const LEGACY_SERVICE_SLUGS = new Set(["umniy-avtobus", "parkovka"]);
 export async function pagesEntries(): Promise<SitemapEntry[]> {
   const staticRoutes: SitemapEntry[] = STATIC_ROUTES.map((route) => ({
     url: `${SITE_URL}${route}`,
-    lastModified: GENERATED,
+    lastModified: CONTENT_RELEASE,
     changeFrequency: "daily",
     priority: route === "" ? 1 : 0.8,
     alternates: { languages: langAlternates(route) },
@@ -82,7 +100,7 @@ export async function pagesEntries(): Promise<SitemapEntry[]> {
 
   const staticServiceRoutes: SitemapEntry[] = ALL_SERVICES.map((s) => ({
     url: `${SITE_URL}/solutions/${s.key}`,
-    lastModified: GENERATED,
+    lastModified: CONTENT_RELEASE,
     changeFrequency: "monthly",
     priority: 0.7,
     alternates: { languages: langAlternates(`/solutions/${s.key}`) },
@@ -103,7 +121,7 @@ export async function pagesEntries(): Promise<SitemapEntry[]> {
   const { KITS } = await import("./kitsData");
   const kitRoutes: SitemapEntry[] = KITS.map((k) => ({
     url: `${SITE_URL}/kits/${k.slug}`,
-    lastModified: GENERATED,
+    lastModified: CONTENT_RELEASE,
     changeFrequency: "monthly",
     priority: 0.7,
     alternates: { languages: langAlternates(`/kits/${k.slug}`) },
@@ -114,18 +132,46 @@ export async function pagesEntries(): Promise<SitemapEntry[]> {
 
 // ── 2. Каталог: бренды, бренд×тип, группы, типы ─────────────────────────────
 export async function catalogEntries(): Promise<SitemapEntry[]> {
-  const [{ categories }, { brands }, { pairs }] = await Promise.all([
+  const [{ categories }, { brands }, { pairs }, products] = await Promise.all([
     getCategories().catch(() => ({ categories: [] as any[] })),
     getBrands().catch(() => ({ brands: [] as any[] })),
     getBrandTypePairs().catch(() => ({ pairs: [] as any[] })),
+    fetchAllProducts(),
   ]);
+
+  // lastmod раздела каталога = самая свежая правка товара внутри него: своего updatedAt
+  // у категорий и брендов API не отдаёт, а страница-выдача меняется именно с товарами.
+  const brandSlugById = new Map<string, string>();
+  for (const b of brands as any[]) if (b.id && b.slug) brandSlugById.set(String(b.id), b.slug);
+  const typeNameById = new Map<string, string>();
+  for (const c of categories as any[]) if (c.id && c.name) typeNameById.set(String(c.id), c.name);
+
+  const bump = (m: Map<string, number>, key: string | undefined, ms: number) => {
+    if (key && (m.get(key) ?? 0) < ms) m.set(key, ms);
+  };
+  const byBrand = new Map<string, number>();
+  const byType = new Map<string, number>();
+  const byPair = new Map<string, number>();
+  let newestMs = 0;
+  for (const p of products) {
+    const ms = Date.parse(p.updatedAt);
+    if (!Number.isFinite(ms)) continue;
+    if (ms > newestMs) newestMs = ms;
+    const bSlug = p.brandId ? brandSlugById.get(String(p.brandId)) : undefined;
+    const tName = p.categoryId ? typeNameById.get(String(p.categoryId)) : undefined;
+    bump(byBrand, bSlug, ms);
+    // по slug, а не по имени: разные написания типа дают одну страницу
+    bump(byType, tName ? typeSlug(tName) : undefined, ms);
+    if (bSlug && tName) bump(byPair, `${bSlug}\u0000${tName}`, ms);
+  }
+  const at = (ms: number | undefined): Date => (ms ? new Date(ms) : CONTENT_RELEASE);
 
   // Бренды без опубликованных товаров в карту не идут — пустая страница = soft-404.
   const brandRoutes: SitemapEntry[] = brands
     .filter((b: any) => (b.productCount ?? 0) > 0)
     .map((b: any) => ({
       url: `${SITE_URL}/catalog/${b.slug}`,
-      lastModified: GENERATED,
+      lastModified: at(byBrand.get(b.slug)),
       changeFrequency: "weekly",
       priority: 0.8,
       alternates: { languages: langAlternates(`/catalog/${b.slug}`) },
@@ -135,7 +181,7 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
     const path = `/catalog/${p.brand}/${typeSlug(p.type)}`;
     return {
       url: `${SITE_URL}${path}`,
-      lastModified: GENERATED,
+      lastModified: at(byPair.get(`${p.brand}\u0000${p.type}`)),
       changeFrequency: "weekly",
       priority: 0.75,
       alternates: { languages: langAlternates(path) },
@@ -144,9 +190,11 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
 
   const groupRoutes: SitemapEntry[] = CATALOG_GROUPS.map((g) => {
     const path = `/products/group/${typeSlug(g.title)}`;
+    // Группа = несколько типов: берём самый свежий из них.
+    const ms = g.types.reduce((acc, t) => Math.max(acc, byType.get(typeSlug(t.n)) ?? 0), 0);
     return {
       url: `${SITE_URL}${path}`,
-      lastModified: GENERATED,
+      lastModified: at(ms),
       changeFrequency: "weekly",
       priority: 0.8,
       alternates: { languages: langAlternates(path) },
@@ -164,7 +212,7 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
   const categoryRoutes: SitemapEntry[] = [
     {
       url: `${SITE_URL}/categories`,
-      lastModified: GENERATED,
+      lastModified: at(newestMs),
       changeFrequency: "weekly",
       priority: 0.7,
       alternates: { languages: langAlternates("/categories") },
@@ -173,7 +221,7 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
       const path = `/products/type/${typeSlug(name)}`;
       return {
         url: `${SITE_URL}${path}`,
-        lastModified: GENERATED,
+        lastModified: at(byType.get(typeSlug(name))),
         changeFrequency: "weekly" as const,
         priority: 0.7,
         alternates: { languages: langAlternates(path) },
@@ -185,13 +233,20 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
 }
 
 // ── 3. Товары ───────────────────────────────────────────────────────────────
-export async function productEntries(): Promise<SitemapEntry[]> {
+// Весь каталог постранично. Нужен и карте товаров, и карте каталога (там из updatedAt
+// товаров считается lastmod разделов), поэтому вынесен в общий хелпер.
+async function fetchAllProducts(): Promise<any[]> {
   const acc: any[] = [];
   for (let page = 1; page <= 20; page++) {
     const { items, total } = await getProducts(page, 500).catch(() => ({ items: [] as any[], total: 0 }));
     acc.push(...items);
     if (acc.length >= (total || 0) || items.length === 0) break;
   }
+  return acc;
+}
+
+export async function productEntries(): Promise<SitemapEntry[]> {
+  const acc = await fetchAllProducts();
   return expandLocales(
     acc.map((p) => ({
       url: `${SITE_URL}/products/${p.slug}`,
@@ -211,7 +266,8 @@ export async function contentEntries(): Promise<SitemapEntry[]> {
   const blogRoutes: SitemapEntry[] = [
     {
       url: `${SITE_URL}/blog`,
-      lastModified: GENERATED,
+      // индекс блога «меняется» с появлением самой свежей статьи
+      lastModified: newestDate(ARTICLES.map((a) => a.date)),
       changeFrequency: "weekly",
       priority: 0.6,
       alternates: { languages: localeAlternates("/blog", BLOG_LOCALES) },

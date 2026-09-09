@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { getBrands, getProducts, type ProductDto } from "@/lib/api";
+import { getBrands, getProductsCached, type ProductDto } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
 import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeProductName } from "@/lib/productI18n";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { splitBrands, OTHER_BRANDS_SLUG } from "@/lib/brandGroups";
 
 export const revalidate = 300;
@@ -24,9 +24,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function OtherBrandsPage() {
-  const locale = await getLocale();
-  const t = await getTranslations("catalog");
+export default async function OtherBrandsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  // Явная локаль: иначе next-intl читает заголовки и revalidate=300 не работает
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "catalog" });
   const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const { small } = splitBrands(brands);
 
@@ -34,7 +36,8 @@ export default async function OtherBrandsPage() {
   const sections = await Promise.all(
     small.map(async (b) => {
       const slug = b.slug.toLowerCase();
-      const { items } = await getProducts(1, Math.max(b.productCount ?? 0, 24), {
+      // фиксированная выборка по бренду (без пользовательских фильтров) → кэшируем
+      const { items } = await getProductsCached(1, Math.max(b.productCount ?? 0, 24), {
         brand: slug,
       }).catch(() => ({ items: [] as ProductDto[] }));
       const sorted = [...items].sort(

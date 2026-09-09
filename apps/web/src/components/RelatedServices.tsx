@@ -8,11 +8,12 @@ const FAMILIES: string[][] = [
   ["server", "servers", "virtualization"],
 ];
 
-export async function RelatedServices({ current }: { current: string }) {
+// locale приходит пропом от страницы: без него getTranslations читает заголовки → динамика
+export async function RelatedServices({ current, locale }: { current: string; locale: string }) {
   const family = FAMILIES.find((f) => f.includes(current));
   if (!family) return null;
-  const ts = await getTranslations("services");
-  const tp = await getTranslations("solutionsPage");
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tp = await getTranslations({ locale, namespace: "solutionsPage" });
   const others = family.filter((k) => k !== current);
 
   return (

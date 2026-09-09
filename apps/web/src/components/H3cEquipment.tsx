@@ -1,7 +1,7 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
-import { getProducts } from "@/lib/api";
+import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 
 // Перечень оборудования H3C на странице «Серверы H3C и виртуализация».
@@ -17,15 +17,15 @@ const EQUIPMENT: { key: string; models: string; rep?: string; href?: string }[] 
   { key: "storage", models: "UniServer R4300 G6", rep: "h3c-uniserver-r4300-g6" },
 ];
 
-export async function H3cEquipment() {
-  const ts = await getTranslations("services");
-  const tp = await getTranslations("solutionsPage");
-  const locale = await getLocale();
+// locale пропом от страницы (иначе next-intl уводит маршрут в динамику)
+export async function H3cEquipment({ locale }: { locale: string }) {
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tp = await getTranslations({ locale, namespace: "solutionsPage" });
 
   // Карта slug → coverImageUrl (для фото карточек). Товары бренда H3C из каталога.
   const imgBySlug: Record<string, string | null> = {};
   try {
-    const r = await getProducts(1, 30, { brand: "h3c" });
+    const r = await getProductsCached(1, 30, { brand: "h3c" }); // фикс. выборка → можно кэшировать
     for (const p of r.items ?? []) imgBySlug[p.slug] = p.coverImageUrl;
   } catch {
     /* API недоступен — карточки без фото, но остаются кликабельными */

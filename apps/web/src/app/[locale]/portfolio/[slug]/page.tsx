@@ -11,7 +11,7 @@ import Image from "next/image";
 import { resolveImageUrl } from "@/lib/image";
 import { BackButton } from "@/components/BackButton";
 import { PortfolioWorksAccordion } from "@/components/PortfolioWorksAccordion";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizePortfolioProject, localizeCategoryName } from "@/lib/contentI18n";
 
@@ -72,6 +72,11 @@ function ProjectContent({ text }: { text: string }) {
   );
 }
 
+// ISR по требованию: кейсы почти не меняются, но их десятки — не пререндерим все на сборке,
+// пустой generateStaticParams включает кэширование первого запроса
+export const revalidate = 600;
+export async function generateStaticParams() { return []; }
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: "portfolio" });
@@ -97,8 +102,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function PortfolioDetailsPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   try {
     const { locale, slug } = await params;
-    const t = await getTranslations("portfolio");
-    const tnav = await getTranslations("nav");
+    setRequestLocale(locale);
+    const t = await getTranslations({ locale, namespace: "portfolio" });
+    const tnav = await getTranslations({ locale, namespace: "nav" });
     const dateLocale = DATE_LOCALE[locale] ?? "ru-RU";
     const [{ item: rawItem }, { categories }] = await Promise.all([
       getPortfolioBySlug(slug),

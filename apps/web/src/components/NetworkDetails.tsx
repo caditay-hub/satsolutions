@@ -17,9 +17,10 @@ const NET_BRANDS: { slug: string; name: string }[] = [
 type Pkg = { name: string; for: string; items: string[]; term: string };
 type Stage = { t: string; s?: string };
 
-export async function NetworkDetails() {
-  const ts = await getTranslations("services");
-  const tp = await getTranslations("solutionsPage");
+// locale пропом от страницы (иначе next-intl уводит маршрут в динамику)
+export async function NetworkDetails({ locale }: { locale: string }) {
+  const ts = await getTranslations({ locale, namespace: "services" });
+  const tp = await getTranslations({ locale, namespace: "solutionsPage" });
   const packages = ts.raw("network.details.packages") as Pkg[];
   const stages = ts.raw("network.details.stages") as Stage[];
 

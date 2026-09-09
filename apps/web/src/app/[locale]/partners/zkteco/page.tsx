@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { getProducts } from "@/lib/api";
+import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 
 const locPath = (locale: string, p: string) => (locale === "ru" ? p : `/${locale}${p}`);
@@ -374,6 +374,9 @@ const D: Record<string, Block> = {
   },
 };
 
+// Партнёрский лендинг: контент статичен, витрина бренда обновляется раз в сутки
+export const revalidate = 86400;
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = D[locale] ?? D.en;
@@ -391,9 +394,9 @@ export default async function ZKTecoPartnerPage({ params }: { params: Promise<{ 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
   // Витрина: реальные карточки бренда из каталога. API упал — секцию не рисуем.
-  let products: Awaited<ReturnType<typeof getProducts>>["items"] = [];
+  let products: Awaited<ReturnType<typeof getProductsCached>>["items"] = [];
   try {
-    const r = await getProducts(1, 12, { brand: "zkteco" });
+    const r = await getProductsCached(1, 12, { brand: "zkteco" }, 86400); // фикс. выборка → кэш
     products = r.items ?? [];
   } catch {
     /* ignore */

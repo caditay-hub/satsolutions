@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { resolveImageUrl } from "@/lib/image";
 import { getPortfolio, getPortfolioCategories } from "@/lib/api";
 import { Pagination } from "@/components/Pagination";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeCategoryName, localizePortfolioProject } from "@/lib/contentI18n";
 
@@ -27,13 +27,17 @@ function chipClass(active: boolean) {
 }
 
 export default async function PortfolioPage({
+  params,
   searchParams
 }: {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{ page?: string; category?: string }>;
 }) {
   const sp = await searchParams;
-  const t = await getTranslations("portfolio");
-  const locale = await getLocale();
+  // locale берём из params (не getLocale) — лишний заход в headers() ни к чему.
+  // Страница остаётся динамической из-за searchParams (?page/?category) — это Next 15.
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "portfolio" });
   const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
   const category = typeof sp.category === "string" ? sp.category : undefined;
   const [{ items: rawItems, total, limit }, { categories }] = await Promise.all([

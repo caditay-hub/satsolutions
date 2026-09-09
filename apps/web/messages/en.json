@@ -1,7 +1,7 @@
 {
   "product": {
     "titleBuy": "buy in Tashkent",
-    "groupTitleBuy": "category catalogue, Tashkent prices",
+    "groupTitleBuy": "category catalog, Tashkent prices",
     "fallbackTitle": "Product",
     "characteristics": "Specifications",
     "eol": "Discontinued",
@@ -9,7 +9,7 @@
     "turnkey": "Turnkey service",
     "designInstall": "design and installation",
     "helpTitle": "Need help choosing?",
-    "helpText": "Our engineer will pick the right equipment for your needs and send a quote within 30 minutes.",
+    "helpText": "Our engineer will pick the right equipment for your needs and send a quote within one business day.",
     "getConsult": "Get a consultation",
     "similar": "Similar",
     "boughtWith": "Frequently bought together",
@@ -55,7 +55,7 @@
     "imgNext": "Next",
     "loading": "Loading",
     "call": "Call us",
-    "order": "Order now",
+    "order": "Order",
     "industryServices": "Specialist services for this industry",
     "industrySolutions": "Solutions by industry",
     "ourClients": "Our clients",
@@ -141,7 +141,7 @@
       ],
       "warranty": [
         "Warranty and service",
-        "Official warranty on all equipment. In-house service center, engineer dispatch within 24 hours."
+        "Official warranty on all equipment. Warranty service for the equipment we supplied, engineer on site within one business day."
       ]
     },
     "heroSlides": [
@@ -349,13 +349,13 @@
         },
         {
           "q": "Do you service the system after installation?",
-          "a": "Yes, we provide warranty and maintenance services, dispatch technicians for diagnostics and repairs throughout Uzbekistan."
+          "a": "Yes. The systems we install come with a warranty and are taken onto our maintenance contract — in Tashkent and across Uzbekistan. A system installed by another contractor we take on through an audit: we survey it and cost an upgrade with replacement equipment — after that the site goes onto scheduled maintenance."
         }
       ],
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical CCTV systems",
-        "pkgNote": "Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "House or flat",
@@ -370,7 +370,7 @@
           },
           {
             "name": "Office, shop, café",
-            "for": "Retail point, office, clinic, training centre",
+            "for": "Retail point, office, clinic, training center",
             "items": [
               "4–16 IP cameras: entrances, tills, floor, storeroom",
               "PoE power — one line per camera, no sockets",
@@ -383,9 +383,9 @@
             "name": "Warehouse, production, grounds",
             "for": "Industrial site, logistics, construction, residential complex",
             "items": [
-              "16–100+ cameras, fibre trunks between buildings",
+              "16–100+ cameras, fiber trunks between buildings",
               "Video analytics: line crossing, crowding, helmet/vest",
-              "Licence plate recognition at gates, barrier integration",
+              "License plate recognition at gates, barrier integration",
               "Redundant server recording, security desk output"
             ],
             "term": "Time: per project, from 2 weeks"
@@ -400,7 +400,7 @@
           },
           {
             "t": "Selection & quote",
-            "s": "cameras, recorder, priced estimate — within a day"
+            "s": "cameras, recorder, priced estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -448,7 +448,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three video analytics scenarios",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "On-camera analytics",
@@ -541,7 +541,7 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard plate recognition setups",
-        "pkgNote": "We price every site individually: send a photo of the entrance and how many cars pass per day, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send a photo of the entrance and how many cars pass per day, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Single entrance",
@@ -556,7 +556,7 @@
           },
           {
             "name": "Entry and exit",
-            "for": "Residential complex, business centre, car park",
+            "for": "Residential complex, business center, car park",
             "term": "Timeline: by project, from 1 week",
             "items": [
               "Two cameras: time spent inside is counted automatically",
@@ -586,7 +586,7 @@
           },
           {
             "t": "Selection and quote",
-            "s": "camera, controller, entry logic, itemised estimate — same day"
+            "s": "camera, controller, entry logic, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -619,7 +619,7 @@
       ],
       "faq": [
         {
-          "q": "What is included in an access control system (СКУД)?",
+          "q": "What is included in an access control system?",
           "a": "Controllers, card readers or biometric terminals, electromagnetic/electromechanical locks, turnstiles, and software for managing access rights."
         },
         {
@@ -653,7 +653,7 @@
           },
           {
             "name": "Turnstile entrance",
-            "for": "Office building, business centre, school, gym",
+            "for": "Office building, business center, school, gym",
             "items": [
               "Tripod or swing turnstile — Hikvision, ZKTeco",
               "Face ID terminals: pass by face, no cards",
@@ -664,9 +664,9 @@
           },
           {
             "name": "Site perimeter",
-            "for": "Plant, warehouse, logistics centre, residential complex",
+            "for": "Plant, warehouse, logistics center, residential complex",
             "items": [
-              "Barriers with licence plate recognition",
+              "Barriers with license plate recognition",
               "Multi-point access control: gates, shops, warehouses — one system",
               "Integration with CCTV and fire alarm",
               "Escape routes unlock on alarm — per code"
@@ -683,7 +683,7 @@
           },
           {
             "t": "Selection & quote",
-            "s": "readers, locks, turnstiles — estimate in a day"
+            "s": "readers, locks, turnstiles — estimate within one business day"
           },
           {
             "t": "Installation",
@@ -716,30 +716,30 @@
       ],
       "faq": [
         {
-          "q": "What makes an IP intercom better than an analog one?",
-          "a": "IP intercoms deliver high-quality video, remote viewing from your phone from anywhere, recording capability, and seamless integration with smart home systems and access control."
-        },
-        {
-          "q": "Can I answer calls from my phone?",
-          "a": "Absolutely. When someone calls from the panel, the call comes to your smartphone — you can unlock the door remotely, even if you're away from home or the office."
-        },
-        {
-          "q": "Is it suitable for multi-apartment buildings?",
-          "a": "Yes, we design multi-unit intercom systems for residential complexes complete with call panels and individual monitors in each unit."
-        },
-        {
           "q": "How much does intercom installation cost in Tashkent?",
-          "a": "For a flat or a private house the price is the kit (door station + monitor) plus installation: an analogue kit costs less, an IP video intercom with recording and smartphone unlock costs more. For an apartment entrance the price depends on the number of units. We usually send a quote the same day after a short call."
+          "a": "For an apartment or a private house it starts from the price of the kit (door station plus monitor) plus installation; the total depends on the model — an analog kit is cheaper, an IP video intercom with recording and smartphone unlocking costs more. For an apartment block the price is calculated per subscriber. We send the figures after a short call, usually the same day."
+        },
+        {
+          "q": "Which intercom is right for an apartment: analog or IP?",
+          "a": "If you only need to see the visitor and open the door, an analog video intercom is enough. Choose an IP intercom when a call to your smartphone from anywhere, an archive of visitors and integration with a smart home or an office access control system matter. We work with Hikvision and Dahua — both lines are in our Tashkent stock."
+        },
+        {
+          "q": "Do you install intercoms for apartment blocks?",
+          "a": "Yes. We build multi-tenant systems: one door station per entrance, a handset or monitor in every apartment, an electromagnetic lock and a door closer. We work both on new buildings during fit-out and on replacing old audio intercoms with video."
         },
         {
           "q": "Can the intercom be connected to an electronic lock and access control?",
-          "a": "Yes, that is a standard part of our projects: the intercom releases an electromagnetic or electromechanical lock, while residents and staff use cards, codes or fingerprints. For offices we merge the intercom with the access control system into one setup with a shared entry log."
+          "a": "Yes, that is a standard part of our projects: the intercom releases an electromagnetic or electromechanical lock, while residents and staff get in by card, code or fingerprint. In offices we merge intercom and access control into one system with a shared entry log."
+        },
+        {
+          "q": "Do you service the intercom after installation?",
+          "a": "Yes — the intercom systems we installed are covered by a maintenance contract: scheduled checks, warranty on the equipment we supplied, replacement of door stations, monitors and locks from our spare pool. A system built by another contractor we take on through an audit: we recover the wiring map, draw up a defect list and cost an upgrade with replacement equipment — after that the site goes onto scheduled maintenance. Often the panel and handsets can be replaced while keeping the existing wiring."
         }
       ],
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard intercom setups",
-        "pkgNote": "We price every site individually: send the entrance layout or the number of apartments and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send the entrance layout or the number of apartments and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "House or apartment",
@@ -753,8 +753,8 @@
             ]
           },
           {
-            "name": "Office or business centre",
-            "for": "Office, clinic, training centre, salon",
+            "name": "Office or business center",
+            "for": "Office, clinic, training center, salon",
             "term": "Timeline: 1–3 days",
             "items": [
               "Panel at the entrance, monitors at reception and in the rooms",
@@ -784,7 +784,7 @@
           },
           {
             "t": "Selection and quote",
-            "s": "panel, monitor, lock, itemised estimate — same day"
+            "s": "panel, monitor, lock, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -832,7 +832,7 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard time-tracking setups",
-        "pkgNote": "We size it to the job: tell us the headcount, the number of entrances and what the report must contain, and we return a quote the same day.",
+        "pkgNote": "We size it to the job: tell us the headcount, the number of entrances and what the report must contain, and we return a quote within one business day.",
         "packages": [
           {
             "name": "Small office",
@@ -877,7 +877,7 @@
           },
           {
             "t": "Selection and quote",
-            "s": "terminals, identification method, itemised estimate — same day"
+            "s": "terminals, identification method, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -898,34 +898,34 @@
       }
     },
     "alarm": {
-      "title": "Intruder alarm",
-      "desc": "Site and perimeter protection, panic button.",
-      "intro": "Protecting a site against intrusion: motion, door-opening and glass-break detectors, panic buttons, signal output to the security desk and a mobile app.",
+      "title": "Home intruder alarm",
+      "desc": "Wireless kits for apartments, private houses and country homes.",
+      "intro": "An intruder alarm for the home: a wireless kit for an apartment, private house or country home — motion and door contacts, glass-break and water-leak detectors, a siren and alerts to your phone. Installed in a day, with no wall chasing and no damage to your finishes.",
       "works": [
-        "Design of security zones",
-        "Installation of detectors, panels and sounders",
-        "Configuring scenarios and panic button",
-        "Output to security desk and mobile app",
-        "Commissioning and maintenance"
+        "A wireless kit chosen to match your floor plan",
+        "Motion, door, glass-break and water-leak detectors",
+        "Night and away modes, pet-immune detection",
+        "Phone alerts, battery backup and a GSM channel",
+        "One-day installation and a walkthrough for the whole family"
       ],
       "faq": [
         {
-          "q": "How does security alarm system work?",
-          "a": "Motion sensors, door/window opening sensors, and glass break detectors detect intrusion and send alerts to the control panel, your phone, and the siren."
+          "q": "How long does it take to install an alarm in an apartment?",
+          "a": "A wireless kit goes in within a day: the hub, contacts on the front door and windows, a motion detector in the hallway and a siren. There is no need to chase walls or spoil the finishes — detectors are fixed with adhesive pads or a couple of screws."
         },
         {
-          "q": "Can I connect it to a security monitoring station?",
-          "a": "Yes, you can send alerts simultaneously to a professional security monitoring station and to your phone at the same time."
+          "q": "Will the alarm go off because of a cat or a dog?",
+          "a": "In homes with pets we use motion detectors immune to animals up to 20–25 kg and lay out the zones so the pet's usual path stays outside the detection area. Nothing puts people off using an alarm faster than false alerts."
         },
         {
-          "q": "Does it work if the power goes out?",
-          "a": "Yes, all devices are equipped with backup UPS battery and continue operating if the main power supply fails."
+          "q": "What happens if the power or the internet goes down?",
+          "a": "The hub runs for several hours on its backup battery, and the detectors work for years on their own batteries and report a low charge themselves. If the internet drops, the alarm goes out over the GSM channel — to the owner's phone and to trusted contacts."
         }
       ],
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard intruder alarm setups",
-        "pkgNote": "We price every site individually: send the floor plan and the number of entrances, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send the floor plan and the number of entrances, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Apartment or private house",
@@ -970,7 +970,7 @@
           },
           {
             "t": "Zone design and quote",
-            "s": "sensors, panel, alarm scenarios, itemised estimate — same day"
+            "s": "sensors, panel, alarm scenarios, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -1067,7 +1067,7 @@
           },
           {
             "t": "Design",
-            "s": "alarm and evacuation sections, specification, licences"
+            "s": "alarm and evacuation sections, specification, licenses"
           },
           {
             "t": "Installation",
@@ -1101,7 +1101,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "What we build: three typical configurations",
-        "pkgNote": "Every site is quoted individually: send us a floor plan and we will return a detailed quote within one day.",
+        "pkgNote": "Every site is quoted individually: send us a floor plan and we will return a detailed quote within one business day.",
         "packages": [
           {
             "name": "Office up to 30 workplaces",
@@ -1115,8 +1115,8 @@
             "term": "Lead time: 3–7 days"
           },
           {
-            "name": "Office 50–150 seats or a business-centre floor",
-            "for": "Mid-size office, bank, call centre, IT company",
+            "name": "Office 50–150 seats or a business-center floor",
+            "for": "Mid-size office, bank, call center, IT company",
             "items": [
               "100–300 Cat6 ports, floor patch panels, 19\" rack",
               "Network core and access switches, VLANs: internet, cameras, telephony separated",
@@ -1127,9 +1127,9 @@
           },
           {
             "name": "Building, warehouse or plant",
-            "for": "Industrial site, mall, hotel, logistics centre",
+            "for": "Industrial site, mall, hotel, logistics center",
             "items": [
-              "Fibre backbones between floors, buildings and shops",
+              "Fiber backbones between floors, buildings and shops",
               "Industrial switches with redundancy — the network survives a line break",
               "Wi-Fi coverage for warehouses and open areas, wireless bridges between buildings",
               "Server node: racks, UPS; CCTV and access control run on the same network"
@@ -1154,7 +1154,7 @@
           },
           {
             "t": "Testing",
-            "s": "every line tested, ports labelled"
+            "s": "every line tested, ports labeled"
           },
           {
             "t": "Handover",
@@ -1172,7 +1172,7 @@
         },
         {
           "q": "How much does structured cabling installation cost?",
-          "a": "The cost depends on the number of ports, cable category, and route complexity. Send us your floor plan — we'll deliver a detailed quote within a day, and our engineer's site survey is free."
+          "a": "The cost depends on the number of ports, cable category and route complexity. Send us your floor plan — we deliver a detailed quote within one business day, and our engineer's site survey is free."
         },
         {
           "q": "Which cable should I choose — Cat5e, Cat6, or fiber optics?",
@@ -1331,7 +1331,7 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard video wall configurations",
-        "pkgNote": "We size it to the room: send the dimensions and the viewing distance, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We size it to the room: send the dimensions and the viewing distance, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Security post",
@@ -1356,8 +1356,8 @@
             ]
           },
           {
-            "name": "Situation centre",
-            "for": "Government client, large enterprise, data centre",
+            "name": "Situation center",
+            "for": "Government client, large enterprise, data center",
             "term": "Timeline: by project",
             "items": [
               "Room design: viewing distance, mounting height, lighting",
@@ -1424,7 +1424,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical PA systems",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Background music and announcements",
@@ -1491,10 +1491,10 @@
     },
     "barrier": {
       "title": "Barriers & automation",
-      "desc": "Automatic gates, barriers and parking control.",
-      "intro": "Entry automation: barriers, sliding and swing gates, parking control with convenient management and integration into the access-control system.",
+      "desc": "Barriers, license plate recognition and parking control.",
+      "intro": "Entry automation: barriers, license plate recognition and parking control with convenient management and integration into the access-control system.",
       "works": [
-        "Drive selection for gate or barrier",
+        "Barrier selection by driveway width and traffic intensity",
         "Installation of automation and safety photocells",
         "Configuring control and remotes",
         "Integration with ANPR and access control",
@@ -1517,14 +1517,14 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard entrance setups",
-        "pkgNote": "We price every site individually: send the width of the driveway and how many cars pass per day, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send the width of the driveway and how many cars pass per day, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Private house yard",
             "for": "Private house, country home, small grounds",
             "term": "Timeline: 1 day",
             "items": [
-              "Barrier with a 3–4 metre boom, or a sliding gate",
+              "A barrier with a 3–4 meter boom sized to the driveway",
               "Two remotes included, phone opening if you want it",
               "Photocells — the boom will not come down on a car or a person",
               "Battery backup keeps it working during a power cut"
@@ -1532,12 +1532,12 @@
           },
           {
             "name": "Office or residential car park",
-            "for": "Business centre, residential complex, clinic",
+            "for": "Business center, residential complex, clinic",
             "term": "Timeline: 1–3 days",
             "items": [
-              "Barrier with a boom up to 6 metres, vandal-resistant housing",
+              "Barrier with a boom up to 6 meters, vandal-resistant housing",
               "Entry by card, fob or a QR code on the phone",
-              "Licence plate recognition — regulars drive in without stopping",
+              "License plate recognition — regulars drive in without stopping",
               "Entry log: who came in, when and in which car"
             ]
           },
@@ -1562,7 +1562,7 @@
           },
           {
             "t": "Selection and quote",
-            "s": "barrier, boom, entry method, itemised estimate — same day"
+            "s": "barrier, boom, entry method, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -1610,7 +1610,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three lines of perimeter protection",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Perimeter video analytics",
@@ -1703,7 +1703,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical transport solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Cabin video recording",
@@ -1796,7 +1796,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three scales of city systems",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A pilot zone",
@@ -1862,24 +1862,24 @@
       }
     },
     "parking": {
-      "title": "Smart Parking",
-      "desc": "ANPR, barriers and entry/exit automation.",
-      "intro": "Parking automation: license-plate recognition (ANPR), barriers, free-space monitoring and entry/exit accounting.",
+      "title": "Parking for malls and residential complexes",
+      "desc": "Order on the parking of a mall, residential or business center: bays, visitors, reports.",
+      "intro": "We bring order to the parking of a mall, residential complex or business center: bays assigned to residents and tenants, a clear procedure for visitors and deliveries, and occupancy and revenue reports for the property owner.",
       "works": [
-        "Parking system design",
-        "Installation of ANPR cameras and barriers",
-        "Space counting and tariffing",
-        "Payment and access-control integration",
-        "Commissioning and service"
+        "Throughput calculated for the peak hour",
+        "Access rules: residents, tenants, visitors, deliveries",
+        "Bays tied to an apartment or a lease agreement",
+        "A pilot period and building up the access lists",
+        "Reports on occupancy, parking duration and revenue"
       ],
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard car park setups",
-        "pkgNote": "We price every site individually: send the number of bays and how many cars enter per day, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send the number of bays and how many cars enter per day, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Residential or office yard",
-            "for": "Residential complex, business centre, clinic",
+            "for": "Residential complex, business center, clinic",
             "term": "Timeline: 1–3 days",
             "items": [
               "Barrier at the entrance with plate recognition for residents and staff",
@@ -1890,7 +1890,7 @@
           },
           {
             "name": "Paid car park",
-            "for": "Shopping centre, market, business park",
+            "for": "Shopping center, market, business park",
             "term": "Timeline: by project, from 1 week",
             "items": [
               "Entry and exit by plate, parking time counted automatically",
@@ -1920,7 +1920,7 @@
           },
           {
             "t": "Design and quote",
-            "s": "cameras, barrier, entry logic, itemised estimate — same day"
+            "s": "cameras, barrier, entry logic, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -1982,7 +1982,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical retail solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A single store",
@@ -2075,7 +2075,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical bank solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A bank branch",
@@ -2168,7 +2168,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical school solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "The school entrance",
@@ -2261,7 +2261,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical solutions for manufacturing",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Checkpoint and shift records",
@@ -2354,7 +2354,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical residential solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A turnkey entrance",
@@ -2463,7 +2463,7 @@
         },
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three virtualization scenarios",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Server consolidation",
@@ -2538,7 +2538,7 @@
         },
         {
           "q": "Are you an official H3C partner?",
-          "a": "Yes, SAT Solutions is an H3C partner: equipment at partner pricing, official CAS licenses and vendor support."
+          "a": "Yes, SAT Solutions is an H3C partner in Uzbekistan: equipment at partner pricing, official CAS licenses and vendor support."
         },
         {
           "q": "Can we move our current servers into a virtual environment?",
@@ -2550,7 +2550,7 @@
         },
         {
           "q": "How much does an H3C server with virtualization cost?",
-          "a": "It depends on the configuration: a single ERP server and a fault-tolerant cluster with CAS Enterprise are different budgets. Describe your tasks and we will prepare a specification and quote within a day."
+          "a": "It depends on the configuration: a single ERP server and a fault-tolerant cluster with CAS Enterprise are different budgets. Describe your tasks and we will prepare a specification and quote within one business day."
         }
       ]
     },
@@ -2584,7 +2584,7 @@
         },
         {
           "q": "How much does an office Wi-Fi network cost?",
-          "a": "Depends on area and number of access points. Send us your floor plan — we'll prepare an estimate and quote within a day."
+          "a": "Depends on the area and the number of access points. Send us your floor plan — we prepare an estimate and quote within one business day."
         }
       ],
       "details": {
@@ -2664,7 +2664,7 @@
         "Laying in cable ducts, on poles and facades",
         "Fusion splicing and optical cross installation",
         "OTDR measurements and line reports",
-        "Repair of damaged fiber lines"
+        "Restoring damaged lines on routes we laid ourselves"
       ],
       "faq": [
         {
@@ -2681,7 +2681,7 @@
         },
         {
           "q": "Do you repair fiber optic breaks?",
-          "a": "Yes, we locate the damage point using an OTDR and restore the line—either by on-site splicing or replacing the damaged section."
+          "a": "Yes, on the routes we laid ourselves: we locate the fault with an OTDR and restore the line — splicing on site or replacing the section. On someone else's routes we take measurements and issue a report, while the restoration is priced as a separate project with section replacement."
         },
         {
           "q": "How much does fiber optic installation cost?",
@@ -2690,8 +2690,8 @@
       ],
       "details": {
         "pkgLabel": "Standard solutions",
-        "pkgTitle": "Three standard fibre jobs",
-        "pkgNote": "We price by the route: send the distance and what lies between the points — buildings, a road, poles — and we return a quote with an exact estimate the same day.",
+        "pkgTitle": "Three standard fiber jobs",
+        "pkgNote": "We price by the route: send the distance and what lies between the points — buildings, a road, poles — and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Link between buildings",
@@ -2700,17 +2700,17 @@
             "items": [
               "Route along poles, the façade or through cable ducts",
               "Outdoor or ADSS cable — depending on site conditions",
-              "Fibres spliced, optical patch panels fitted at both ends",
+              "Fibers spliced, optical patch panels fitted at both ends",
               "OTDR test report handed over on completion"
             ]
           },
           {
             "name": "Backbone inside a building",
-            "for": "Multi-storey office, residential complex, shopping centre",
+            "for": "Multi-story office, residential complex, shopping center",
             "term": "Timeline: by project, from 1 week",
             "items": [
               "Riser between floors, a patch panel on every floor",
-              "Spare fibres for future expansion",
+              "Spare fibers for future expansion",
               "Labelling and a line diagram in the documentation",
               "Route agreed against fire safety requirements"
             ]
@@ -2723,7 +2723,7 @@
               "We locate the break with an OTDR",
               "Splicing on site and fitting of a closure",
               "Verification measurements after the repair",
-              "Report with attenuation for every fibre"
+              "Report with attenuation for every fiber"
             ]
           }
         ],
@@ -2736,7 +2736,7 @@
           },
           {
             "t": "Design and quote",
-            "s": "cable type, fibre count, patch panels, itemised estimate — same day"
+            "s": "cable type, fiber count, patch panels, itemised estimate — within one business day"
           },
           {
             "t": "Laying",
@@ -2744,7 +2744,7 @@
           },
           {
             "t": "Splicing and testing",
-            "s": "fibres spliced, panels fitted, OTDR trace on every fibre"
+            "s": "fibers spliced, panels fitted, OTDR trace on every fiber"
           },
           {
             "t": "Handover",
@@ -2792,7 +2792,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical radio links",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A link over hundreds of meters",
@@ -2860,7 +2860,7 @@
     "mikrotik": {
       "title": "MikroTik Setup",
       "desc": "Routers, VLAN, dual WAN, VPN and Wi-Fi — configuration and audit.",
-      "intro": "We configure MikroTik for business: dual-provider failover, VLANs, VPN between branches, guest Wi-Fi, firewall and bandwidth limits. We fix 'no internet' issues and clean up inherited configurations.",
+      "intro": "We configure MikroTik for business needs: dual-ISP failover, VLANs, VPN between branches, guest Wi-Fi, firewall and bandwidth limits. We track down \"no internet\" faults and put the configuration in order — with an audit, documentation and rules you can follow.",
       "works": [
         "Audit of current configuration and security",
         "Channel redundancy: two or more providers",
@@ -2893,7 +2893,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical MikroTik tasks",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A turnkey office router",
@@ -3081,7 +3081,7 @@
         "Installation and connection to access control",
         "Identification: cards, fingerprints, face recognition",
         "Integration with time attendance and ERP",
-        "Turnstile maintenance and repair"
+        "Warranty and scheduled servicing of the turnstiles we supplied"
       ],
       "faq": [
         {
@@ -3182,7 +3182,7 @@
         "Installation and connection to intercom or access control",
         "Access setup: codes, cards, fingerprints, app",
         "Standalone and networked solutions with entry logs",
-        "Maintenance and reconfiguration"
+        "Warranty service and reconfiguration of access rights"
       ],
       "faq": [
         {
@@ -3209,7 +3209,7 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard electronic lock setups",
-        "pkgNote": "We price every site individually: send a photo of the door and the number of doors, and we return a quote with an exact estimate the same day.",
+        "pkgNote": "We price every site individually: send a photo of the door and the number of doors, and we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Apartment or private house",
@@ -3224,7 +3224,7 @@
           },
           {
             "name": "Office and meeting rooms",
-            "for": "Office, clinic, training centre, coworking",
+            "for": "Office, clinic, training center, coworking",
             "term": "Timeline: 1–3 days",
             "items": [
               "Electromagnetic or electromechanical locks on the doors",
@@ -3254,7 +3254,7 @@
           },
           {
             "t": "Selection and quote",
-            "s": "a lock that fits your door, itemised estimate — same day"
+            "s": "a lock that fits your door, itemised estimate — within one business day"
           },
           {
             "t": "Installation",
@@ -3276,104 +3276,37 @@
     },
     "gates": {
       "title": "Automatic Gates",
-      "desc": "Sliding, swing and sectional gates with automation and access control.",
-      "intro": "We automate entrances: sliding, swing and sectional gates, drives, remotes and GSM modules, integration with intercom, access control and plate recognition.",
+      "desc": "A guide to gate drives: types, sizing by weight and duty cycle, safety.",
+      "intro": "A reference section on how gate automation works: what sets apart drives for sliding, swing, sectional and roller leaves, which numbers they are sized by, and what keeps them safe. We supply the equipment from stock, and we close site entrances with barriers, license plate recognition and access control.",
       "works": [
-        "Automation selection for gate type and weight",
-        "Drive and safety photocell installation",
-        "Remotes, GSM module, opening from your phone",
-        "Integration with intercom, access control and ANPR",
-        "Automation maintenance and repair"
+        "Drive selection by leaf weight, length and duty cycle",
+        "Supply of drives and components from our Tashkent warehouse",
+        "Safety guidance: photocells, warning lamp, manual release",
+        "Compatibility check against existing gates and power supply",
+        "The full entrance group: barrier, plate recognition, access control"
       ],
       "faq": [
         {
-          "q": "What automation is suitable for sliding gates?",
-          "a": "The drive is selected based on the weight and length of the gate leaf: light up to 500 kg, medium up to 1000 kg, industrial heavier. We install automation with overload protection and photocells."
+          "q": "How is a drive sized for sliding gates?",
+          "a": "By leaf mass and length with a margin, not to the exact minimum: residential series are usually rated for leaves up to 500–800 kg, mid-range ones up to 1000–1200 kg, and heavier leaves move into industrial territory. The gear rack and support rollers are counted separately. An underpowered drive on a heavy leaf wears out in a single season, so the margin is planned from the start."
         },
         {
-          "q": "Can you open gates from your phone?",
-          "a": "Yes: a GSM module opens gates with a call (free of charge) or through an app; you can grant access to family and employees, and also integrate it with license plate recognition — your vehicles enter automatically."
+          "q": "How do swing and sectional gates differ in automation?",
+          "a": "Swing gates take a separate drive per leaf — linear or articulated — and the deciding factors are leaf length and wind load, because a solid panel acts like a sail. A sectional door is lifted by one ceiling or shaft drive, which cares more about panel area and lift height. A sliding gate needs a single rack drive and a straight run along the fence for the travel."
         },
         {
-          "q": "What to do if the power goes out?",
-          "a": "All drives have manual unlocking with a key — gates can be opened by hand. For critical entrances, we install backup power supply."
+          "q": "Which safety devices are mandatory?",
+          "a": "Photocells across the opening, so the leaf stops and reverses when a car or a person appears; a flashing lamp warning of movement; force adjustment and obstacle reversal; limit switches. A mechanical lock or key release is mandatory — during a power outage the gate must open by hand without dismantling the drive."
         },
         {
-          "q": "Is automation safe for children and vehicles?",
-          "a": "Yes: photocells stop and open the gates when an obstacle appears, and the drive sensitivity is adjusted according to standards."
+          "q": "Why does a drive need a power margin in frost and heat?",
+          "a": "In frost the grease thickens, the guides ice up and starting torque grows; in summer sun the motor overheats and thermal protection cuts in. The second parameter is duty cycle: a residential drive is rated for a few dozen cycles a day, while a housing estate, a warehouse or a plant needs an intensive-duty series rated for hundreds and thousands of cycles. A drive sized to the exact minimum fails precisely in heat and frost."
         },
         {
-          "q": "Do you repair automation installed by others?",
-          "a": "Yes, we diagnose and repair drives from most manufacturers, replace boards, photocells, and remote controls."
+          "q": "What does SAT Solutions do around gate automation?",
+          "a": "We supply equipment and help with sizing: the catalog carries the ZKTeco ZK-SW300DC swing gate automation kit, the ZK-SW400DC drive and the Tuya Smart Wi-Fi garage door opener — check the product page for current pricing, catalog figures change. On site we install barriers, license plate recognition and access control: if the task is to organize entry to the territory, see the Barriers and entry groups section."
         }
-      ],
-      "details": {
-        "pkgLabel": "Typical solutions",
-        "pkgTitle": "Three typical gate automation kits",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
-        "packages": [
-          {
-            "name": "Sliding gates",
-            "for": "Private house, courtyard, warehouse",
-            "items": [
-              "A drive sized for the leaf weight and length",
-              "Photocells and a signal lamp",
-              "Remotes, opening from the phone",
-              "Key release during a power cut"
-            ],
-            "term": "Time: 1 day"
-          },
-          {
-            "name": "Swing gates",
-            "for": "Cottage, company grounds",
-            "items": [
-              "A pair of linear or arm drives",
-              "Tuning for heavy leaves and wind",
-              "An electric lock for firm holding",
-              "Intercom integration"
-            ],
-            "term": "Time: 1 day"
-          },
-          {
-            "name": "Industrial and high-speed",
-            "for": "Warehouse, parking, plant",
-            "items": [
-              "Sectional and roller doors with automation",
-              "High-speed PVC doors for passages",
-              "Loop detectors and radars",
-              "A link to access control and ANPR"
-            ],
-            "term": "Time: 2–5 days"
-          }
-        ],
-        "stagesLabel": "How we work",
-        "stagesTitle": "From measurement to opening gates — 5 steps",
-        "stages": [
-          {
-            "t": "On-site measurement",
-            "s": "weight, width, leaf condition"
-          },
-          {
-            "t": "Choosing the drive",
-            "s": "with a margin for cycles and wind"
-          },
-          {
-            "t": "Installation",
-            "s": "automation, photocells, lamp"
-          },
-          {
-            "t": "Setup",
-            "s": "force, limit switches, remotes, phone"
-          },
-          {
-            "t": "Handover and service",
-            "s": "training, warranty, maintenance"
-          }
-        ],
-        "brandsLabel": "Equipment",
-        "brandsTitle": "Automation sized for real gates",
-        "brandsText": "Drives and automation by leading makers for sliding, swing and sectional gates — from stock:"
-      }
+      ]
     },
     "telephony": {
       "title": "Office IP Telephony",
@@ -3411,7 +3344,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three IP telephony formats",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "An office PBX",
@@ -3478,11 +3411,11 @@
     },
     "servers": {
       "title": "Servers to Order",
-      "desc": "Supermicro, Lenovo, H3C and storage: configuration for the task, supply, launch.",
-      "intro": "We supply servers to order: Supermicro, Lenovo ThinkSystem, H3C UniServer and storage systems. We size the configuration for ERP, databases, virtualization or video archives — with installation, setup and vendor warranty.",
+      "desc": "H3C UniServer, Supermicro and storage: configuration for the task, supply, launch.",
+      "intro": "We supply servers to order: H3C UniServer, Supermicro and storage systems; equipment from other vendors on request. We will size the configuration for ERP, databases, virtualization or video archives — with installation, setup and vendor warranty.",
       "works": [
         "Configuration sizing for the task: ERP, DB, virtualization, video archive",
-        "Supply of Supermicro, Lenovo, H3C servers and storage",
+        "Supply of H3C UniServer, Supermicro servers and storage",
         "Rack installation, RAID setup, OS and hypervisor deployment",
         "Migration of data and services to the new hardware",
         "Vendor warranty and service contracts"
@@ -3494,7 +3427,7 @@
         },
         {
           "q": "What brands do you supply?",
-          "a": "Supermicro, Lenovo ThinkSystem, and H3C UniServer (we're an H3C partner), data storage systems — on request and other vendors. Everything is new with official warranty."
+          "a": "H3C UniServer and Supermicro (we are an H3C partner in Uzbekistan) plus storage systems; equipment from other vendors on request. Everything is new, with an official warranty."
         },
         {
           "q": "How long does server delivery take?",
@@ -3516,7 +3449,7 @@
       "details": {
         "pkgLabel": "Standard solutions",
         "pkgTitle": "Three standard server configurations",
-        "pkgNote": "We size it to the job: describe the load — how many 1C users, how much data, whether you need it to run without downtime — and we return a quote the same day.",
+        "pkgNote": "We size it to the job: describe the load — how many 1C users, how much data, whether you need it to run without downtime — and we return a quote within one business day.",
         "packages": [
           {
             "name": "Server for 1C and files",
@@ -3584,7 +3517,7 @@
     "warehouse": {
       "title": "Warehouses and logistics",
       "desc": "CCTV of receiving and dispatch areas, access control, vehicle control.",
-      "intro": "Security systems for warehouses and logistics centres: CCTV of receiving and dispatch areas, loading control, access control for staff and vehicles, licence plate recognition at the gates.",
+      "intro": "Security systems for warehouses and logistics centers: CCTV of receiving and dispatch areas, loading control, access control for staff and vehicles, license plate recognition at the gates.",
       "works": [
         "System design based on the warehouse layout",
         "CCTV of receiving, dispatch and racking areas",
@@ -3609,7 +3542,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical warehouse solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Receiving and dispatch",
@@ -3702,7 +3635,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical construction solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "An autonomous surveillance post",
@@ -3795,7 +3728,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical clinic solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A private clinic",
@@ -3888,7 +3821,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical hotel solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Locks for the room stock",
@@ -3956,11 +3889,11 @@
     "fuel": {
       "title": "Petrol stations and oil depots",
       "desc": "CCTV of pumps and cash desk, ANPR, perimeter, explosion-proof equipment.",
-      "intro": "Security for petrol and gas stations and oil depots: CCTV of pumps, cash desk and unloading area, licence plate recognition, perimeter protection and explosion-proof fire alarm systems.",
+      "intro": "Security for petrol and gas stations and oil depots: CCTV of pumps, cash desk and unloading area, license plate recognition, perimeter protection and explosion-proof fire alarm systems.",
       "works": [
         "Design that accounts for hazardous zones",
         "CCTV of pumps, cash desk and unloading area",
-        "Licence plate recognition and visit logging",
+        "License plate recognition and visit logging",
         "Perimeter protection and site control",
         "Fire alarm and maintenance"
       ],
@@ -3981,7 +3914,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical fuel station solutions",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "A single station",
@@ -4047,34 +3980,34 @@
       }
     },
     "ohrannye-sistemy": {
-      "title": "Intruder Alarm Systems",
-      "desc": "Alarm panels, sensors and panic buttons for homes and business.",
-      "intro": "Turnkey intruder alarm systems: panels, motion and door sensors, panic buttons and phone notifications — for apartments, offices, warehouses and industrial sites.",
+      "title": "Intruder alarm systems for business",
+      "desc": "Site alarms, monitored response, integration with access control.",
+      "intro": "Intruder alarm systems for offices, warehouses, shops and production sites: wired and hybrid loops, partitions by department and shift, a cashier's panic button, output to a monitoring station and integration with access control and CCTV.",
       "works": [
-        "Engineer visit and site survey",
-        "Panel and sensor selection for the task",
-        "Installation and zone setup",
-        "Integration with CCTV and access control",
-        "Warranty and service"
+        "Site survey and division into alarm partitions",
+        "Wired and hybrid loops, Bolid and Hikvision panels",
+        "Rights by department and shift, full event log",
+        "Output to a monitoring station and an agreed response procedure",
+        "Integration with access control and CCTV, maintenance contract"
       ],
       "faq": [
         {
-          "q": "How much does an intruder alarm cost?",
-          "a": "It depends on the number of sensors and panel type: wired is cheaper, wireless is faster to install. The engineer visit and estimate are free."
+          "q": "How do you split security between departments and shifts?",
+          "a": "The site is divided into partitions: sales floor and back room, warehouse and office, leased units separately. Each partition has its own rights and its own list of staff allowed to arm and disarm it, and the log shows who did it and when."
         },
         {
-          "q": "Will I get phone notifications?",
-          "a": "Yes: alarms, arming and disarming arrive in the mobile app; with monitoring, a security company responds."
+          "q": "What does connection to a monitoring station give?",
+          "a": "A physical response: an alarm sends a patrol crew from the security company, and the callout and its time are recorded. The response procedure — who comes, within what time and what they check — is written into the contract with the security company; we are responsible for transmitting the signal and for its reliability."
         },
         {
-          "q": "Can the alarm be linked to cameras?",
-          "a": "Yes, we link sensor events to video recording: every event comes with footage, and false alarms drop."
+          "q": "Why link the alarm to access control and CCTV?",
+          "a": "So that an event can be examined instead of guessed at. A trigger is tied to the video recording, arming is tied to the entrance — the last employee leaves and the site arms itself. A log with video becomes evidence when a shortage or an incident is investigated."
         }
       ],
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical alarm kits",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Apartment or house",
@@ -4142,7 +4075,7 @@
     "intellektualnoe-upravlenie-parkingom": {
       "title": "Smart Parking",
       "desc": "ANPR, bay sensors, guidance displays and automated parking payment.",
-      "intro": "Intelligent parking management: licence plate recognition, bay occupancy sensors, guidance displays and automated payment — for malls, business centres and residential complexes.",
+      "intro": "Intelligent parking management: license plate recognition, bay occupancy sensors, guidance displays and automated payment — for malls, business centers and residential complexes.",
       "works": [
         "Survey and parking design",
         "Barriers and ANPR cameras",
@@ -4167,7 +4100,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three levels of smart parking",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Automatic entry",
@@ -4264,7 +4197,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three low-current contract formats",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "One turnkey system",
@@ -4355,13 +4288,13 @@
         },
         {
           "q": "How long does design take?",
-          "a": "A typical office or shop — 1–2 weeks; a production building or business centre — from 3 weeks depending on area and subsystems. Deadlines are fixed in the contract."
+          "a": "A typical office or shop — 1–2 weeks; a production building or business center — from 3 weeks depending on area and subsystems. Deadlines are fixed in the contract."
         }
       ],
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three design formats",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Working documentation",
@@ -4429,12 +4362,12 @@
     "obsluzhivanie": {
       "title": "Maintenance Contracts",
       "desc": "Scheduled inspections, emergency callouts, logbooks and spare stock.",
-      "intro": "We maintain fire alarm, CCTV, access control and networks: scheduled inspections, emergency callouts with agreed response times, logbooks and a spare-parts pool.",
+      "intro": "Under a maintenance contract we look after the systems we installed ourselves — fire alarm, CCTV, access control and networks: scheduled inspections, logbooks and a pool of replacement equipment. For a system installed by someone else we run an audit ahead of an upgrade.",
       "works": [
-        "Audit and takeover of systems (including third-party installs)",
+        "Taking our own systems into maintenance, audit before an upgrade",
         "Scheduled inspections with logbook entries",
-        "Emergency callouts with fixed response times",
-        "Spare-parts pool and equipment repair",
+        "Emergency callouts with a fixed response time",
+        "Replacement pool and warranty exchange of equipment",
         "Reporting ready for authority inspections"
       ],
       "faq": [
@@ -4447,8 +4380,8 @@
           "a": "Detector and loop checks, evacuation test, battery and PSU condition, camera cleaning and archive control, firmware updates, logbook entries. The scope is fixed in the contract for your systems."
         },
         {
-          "q": "Will you take over a system installed by others?",
-          "a": "Yes — after a free audit: we assess the condition, issue a defect list and take the system on. Third-party installation is not an obstacle."
+          "q": "Will you maintain a system installed by another contractor?",
+          "a": "We only maintain systems we installed ourselves. If the site was equipped by another contractor, we run a free audit and propose an upgrade with replacement equipment: once reinstalled, the system moves onto our maintenance contract with a warranty on equipment and work."
         },
         {
           "q": "What is the emergency response time?",
@@ -4458,7 +4391,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three service formats",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Basic schedule",
@@ -4555,7 +4488,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three levels of system integration",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within a day.",
+        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "Linking two systems",
@@ -4632,7 +4565,7 @@
     "howTitle": "From request to service — turnkey",
     "ctaLabel": "Start a project",
     "ctaTitle": "Ready to discuss your project?",
-    "ctaText": "We'll select equipment for your task and send a quote within 30 minutes.",
+    "ctaText": "We'll select equipment for your task and send a quote within one business day.",
     "whatInc": "What's included",
     "worksTitle": "Scope of work",
     "scheme": "How it works",
@@ -4670,7 +4603,7 @@
     "industryTag": "Industry solution",
     "getQuote": "Get a quote",
     "needTitle": "Need {name}?",
-    "detailCtaText": "We'll select equipment for your site and send a quote within 30 minutes.",
+    "detailCtaText": "We'll select equipment for your site and send a quote within one business day.",
     "relatedLabel": "Related services",
     "relatedTitle": "You may also need",
     "longTitle": "How a low-voltage systems contract works",
@@ -4737,7 +4670,7 @@
     "srSuccess": "Your request has been sent successfully! We'll contact you shortly.",
     "srError": "An error occurred while sending the request. Please try again.",
     "quoteSent": "Request sent!",
-    "quoteSentSub": "We'll call back within 30 minutes during business hours.",
+    "quoteSentSub": "We'll call you back during business hours.",
     "consent": "By clicking \"Send\", you agree to the processing of personal data",
     "close": "Close",
     "srTitle": "Submit a request",
@@ -4753,7 +4686,7 @@
     "orderSubmit": "Submit order",
     "orderAccepted": "Order received!",
     "orderNumber": "Order number",
-    "orderNext": "Our manager will contact you to confirm during business hours (Mon–Sat 9:00–18:00).",
+    "orderNext": "Our manager will contact you to confirm during business hours (Mon–Fri 9:00–18:00).",
     "orderPayment": "Payment — by invoice (bank transfer) or cash on delivery. Delivery across Tashkent and all of Uzbekistan.",
     "orderDeliveryLink": "Delivery & payment terms",
     "orderComment": "Comment: delivery address, need an invoice or quote — let us know",
@@ -4768,7 +4701,7 @@
     "solTitle": "Services — SAT Solutions",
     "solDesc": "Low-voltage systems and security solutions in Uzbekistan: CCTV, access control, fire alarm, structured cabling, safe city and more.",
     "calcTitle": "CCTV installation cost in Tashkent — calculator and rates",
-    "calcDesc": "What it costs to install CCTV, access control, fire alarm and structured cabling in Tashkent. Labour rates per point and per metre of cable, worked examples for a shop, an office and a house, an online estimate in a minute."
+    "calcDesc": "What it costs to install CCTV, access control, fire alarm and structured cabling in Tashkent. Labour rates per point and per meter of cable, worked examples for a shop, an office and a house, an online estimate in a minute."
   },
   "contact": {
     "feedback": "Contact us",
@@ -5395,13 +5328,13 @@
     "comment": "Your task, site specifics, what is already installed",
     "submit": "Get a project estimate",
     "sending": "Sending…",
-    "note": "We never share your contacts. A site visit by our engineer is free of charge.",
+    "note": "We use your contacts only to reply to your request. A site visit by our engineer is free of charge.",
     "sentTitle": "Request received",
     "sentText": "Our engineer will contact you to clarify the details of the site. We usually reply within one business day.",
     "objects": {
       "factory": "Factory, manufacturing",
       "warehouse": "Warehouse, logistics",
-      "office": "Business centre, office",
+      "office": "Business center, office",
       "residential": "Residential complex",
       "retail": "Shop, retail chain",
       "school": "School, university",
@@ -5418,7 +5351,7 @@
       "network": "Structured cabling and network",
       "intercom": "Intercom",
       "barrier": "Barriers and gates",
-      "server": "Servers, data centre",
+      "server": "Servers, data center",
       "videowall": "Video wall"
     },
     "terms": {
@@ -5442,14 +5375,14 @@
       "l": "workmanship warranty"
     },
     "s4": {
-      "v": "48 h",
+      "v": "1 business day",
       "l": "warranty response time"
     }
   },
   "trust": {
     "title": "Why large sites trust us",
     "warrantyT": "Warranty from 1 to 3 years",
-    "warrantyD": "The term depends on the equipment and contract terms. Warranty call-out within 48 hours.",
+    "warrantyD": "The term depends on the equipment and contract terms. Warranty call-out within one business day.",
     "partnersT": "Manufacturer partner",
     "partnersD": "We work directly with H3C, Hikvision and Dahua: genuine equipment, stock in Tashkent, warranty replacement.",
     "teamT": "Our own installation team",
@@ -5459,12 +5392,12 @@
   },
   "clients": {
     "title": "Among our clients",
-    "subtitle": "Companies and organisations we have designed and installed security systems for."
+    "subtitle": "Companies and organizations we have designed and installed security systems for."
   },
   "calc": {
     "h1": "CCTV and low-voltage installation: what the work costs",
     "crumb": "Calculator",
-    "lead": "Tick the systems your site needs — the calculator lays out a plan, counts the points and metres of cable routes and shows the labour cost from our standard price list. Below are worked examples for typical sites and the unit rates behind them. It takes a minute and commits you to nothing.",
+    "lead": "Tick the systems your site needs — the calculator lays out a plan, counts the points and meters of cable routes and shows the labour cost from our standard price list. Below are worked examples for typical sites and the unit rates behind them. It takes a minute and commits you to nothing.",
     "step1": "Type of site",
     "step1sub": "Pick the type and set the floor area — route length depends on it.",
     "step2": "What we install",
@@ -5612,19 +5545,31 @@
     "dep": [
       "The number of points — cameras, doors, detectors, outlets. This is the bulk of the quote.",
       "Whether cable routes already exist. With trays and conduit in place the work is roughly a quarter cheaper.",
-      "Installation height. Above 4.5 metres lifts and fall protection are required — a 40% surcharge in the price list.",
+      "Installation height. Above 4.5 meters lifts and fall protection are required — a 40% surcharge in the price list.",
       "Type of site. Warehouses and production floors mean longer routes and harder access.",
       "Identification type in access control: cards cost about half of biometrics."
     ],
     "faqTitle": "Frequently asked questions",
     "faq": [
       {
+        "q": "What does turnkey CCTV cost?",
+        "a": "The price has two parts: equipment and work. The calculator above prices the work from our single rate card; equipment is priced separately — cameras, recorder, drives, power supplies and PoE switches. A four-camera kit for a house differs from a sixteen-camera kit for a shop not only in the number of cameras but also in the class of recorder, the archive depth and the length of the cable routes. Worked examples for typical sites are further up this page, and the exact figure for your site is quoted by our engineer after a free visit."
+      },
+      {
+        "q": "What does a fire alarm system cost?",
+        "a": "The cost depends on the area and use of the premises, the number of detectors and loops, the type of control panel and whether an evacuation warning system is required. Design and handover to the authorities is a separate item: sites that are subject to inspection will not be accepted without documentation, and that part is not included in the installation rate card. The calculator prices the work; design and equipment are priced after a site survey."
+      },
+      {
+        "q": "Does CCTV cost differently for a house and for a shop?",
+        "a": "Yes, and not only because of the number of cameras. At home it is usually two to four cameras, short routes and one to two weeks of archive. A shop adds cameras at the tills, the entrance and the storeroom, keeps the archive longer because of disputes with customers, and has longer routes. With the same number of cameras, a site where the cable routes already exist costs about a quarter less."
+      },
+      {
         "q": "How accurate is the calculator?",
         "a": "It is a guide based on our standard price list for installation work: it shows the range a site with these parameters usually falls into. A firm quote follows a site visit, where the engineer checks the layout, the state of the routes and the ceiling height."
       },
       {
         "q": "Does the figure include equipment?",
-        "a": "No. The calculator prices the work only: mounting, cable laying, termination and commissioning. Cameras, recorders, controllers and detectors can be bought from our catalogue or supplied by you — it does not change the installation price."
+        "a": "No. The calculator prices the work only: mounting, cable laying, termination and commissioning. Cameras, recorders, controllers and detectors can be bought from our catalog or supplied by you — it does not change the installation price."
       },
       {
         "q": "Is the site visit chargeable?",
@@ -5647,8 +5592,8 @@
         "a": "An indoor camera starts at 155,000 UZS, an outdoor one at 180,000, a PTZ at 310,000. On top of that come the point setup, commissioning and the cable run to the recorder. A single camera on its own is subject to our minimum order of 560,000 UZS."
       },
       {
-        "q": "What is the cable laying price per metre?",
-        "a": "Surface laying starts at 7,000 UZS per metre, pulling into an existing tray or conduit at 5,500. Where no routes exist, conduit and chasing are added — and we price those by route length, not per cable, so a bundle of ten cables does not cost ten times more."
+        "q": "What is the cable laying price per meter?",
+        "a": "Surface laying starts at 7,000 UZS per meter, pulling into an existing tray or conduit at 5,500. Where no routes exist, conduit and chasing are added — and we price those by route length, not per cable, so a bundle of ten cables does not cost ten times more."
       }
     ],
     "promoTitle": "Not sure what the installation will cost?",
@@ -5681,7 +5626,7 @@
       }
     ],
     "tableTitle": "Installation rates",
-    "tableNote": "Rates from our standard price list for low-voltage work. Equipment is bought separately — from our catalogue or supplied by you; it does not change the labour price.",
+    "tableNote": "Rates from our standard price list for low-voltage work. Equipment is bought separately — from our catalog or supplied by you; it does not change the labour price.",
     "colWork": "Work",
     "colPrice": "Price"
   },

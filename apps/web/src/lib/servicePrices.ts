@@ -33,11 +33,11 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
     uz: {
       title: "Uskuna qancha turadi",
       rows: [
-        { label: "IP-kameralar", price: "234 900 so'mdan", href: CCTV_LINKS.cams },
-        { label: "Videoregistratorlar (NVR)", price: "308 900 so'mdan", href: CCTV_LINKS.nvr },
-        { label: "Montaj bilan tayyor to'plam", price: "4 000 000 so'mdan", href: CCTV_LINKS.kits },
+        { label: "IP-kameralar", price: "234 900 soʻmdan", href: CCTV_LINKS.cams },
+        { label: "Videoregistratorlar (NVR)", price: "308 900 soʻmdan", href: CCTV_LINKS.nvr },
+        { label: "Montaj bilan tayyor toʻplam", price: "4 000 000 soʻmdan", href: CCTV_LINKS.kits },
       ],
-      note: "Bu — katalogdagi uskuna narxlari. Montaj narxi obyektga bog'liq: kameralar soni, kabel uzunligi va devor turi. Kalkulyatorda hisoblang yoki muhandisni chaqiring.",
+      note: "Bu — katalogdagi uskuna narxlari. Montaj narxi obyektga bogʻliq: kameralar soni, kabel uzunligi va devor turi. Kalkulyatorda hisoblang yoki muhandisni chaqiring.",
     },
     en: {
       title: "What the equipment costs",
@@ -71,7 +71,7 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
     ru: {
       title: "Сколько стоит оборудование",
       rows: [
-        { label: "Комплектующие: диски, память, сетевые карты", price: "от 137 900 сум", href: SERVER_LINK },
+        { label: "Комплектующие: диски, память, сетевые карты", price: "от 218 900 сум", href: SERVER_LINK },
         { label: "Готовые серверы и серверы видеонаблюдения", price: "от 20 374 900 сум", href: SERVER_LINK },
       ],
       note: "Сервер под конкретную задачу считается индивидуально: цена зависит от числа ядер, объёма памяти и дисковой подсистемы. Пришлите число пользователей и объём данных — вернёмся с двумя-тремя конфигурациями и ценой.",
@@ -79,15 +79,15 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
     uz: {
       title: "Uskuna qancha turadi",
       rows: [
-        { label: "Butlovchilar: disklar, xotira, tarmoq kartalari", price: "137 900 so'mdan", href: SERVER_LINK },
-        { label: "Tayyor serverlar va videokuzatuv serverlari", price: "20 374 900 so'mdan", href: SERVER_LINK },
+        { label: "Butlovchilar: disklar, xotira, tarmoq kartalari", price: "218 900 soʻmdan", href: SERVER_LINK },
+        { label: "Tayyor serverlar va videokuzatuv serverlari", price: "20 374 900 soʻmdan", href: SERVER_LINK },
       ],
-      note: "Aniq vazifa uchun server alohida hisoblanadi: narx yadrolar soni, xotira hajmi va disk quyi tizimiga bog'liq. Foydalanuvchilar soni va ma'lumot hajmini yuboring — ikki-uchta konfiguratsiya va narx bilan qaytamiz.",
+      note: "Aniq vazifa uchun server alohida hisoblanadi: narx yadrolar soni, xotira hajmi va disk quyi tizimiga bogʻliq. Foydalanuvchilar soni va maʼlumot hajmini yuboring — ikki-uchta konfiguratsiya va narx bilan qaytamiz.",
     },
     en: {
       title: "What the equipment costs",
       rows: [
-        { label: "Components: drives, memory, network cards", price: "from 137,900 UZS", href: SERVER_LINK },
+        { label: "Components: drives, memory, network cards", price: "from 218,900 UZS", href: SERVER_LINK },
         { label: "Ready servers and video surveillance servers", price: "from 20,374,900 UZS", href: SERVER_LINK },
       ],
       note: "A server for a specific workload is quoted individually: the price depends on core count, memory and the disk subsystem. Send us the number of users and your data volume — we will come back with two or three configurations and a price.",
@@ -95,7 +95,7 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
     tr: {
       title: "Ekipman ne kadar",
       rows: [
-        { label: "Bileşenler: diskler, bellek, ağ kartları", price: "137.900 UZS'den", href: SERVER_LINK },
+        { label: "Bileşenler: diskler, bellek, ağ kartları", price: "218.900 UZS'den", href: SERVER_LINK },
         { label: "Hazır sunucular ve video gözetim sunucuları", price: "20.374.900 UZS'den", href: SERVER_LINK },
       ],
       note: "Belirli bir iş yükü için sunucu ayrıca fiyatlandırılır: fiyat çekirdek sayısına, belleğe ve disk alt sistemine bağlıdır. Kullanıcı sayısını ve veri hacmini gönderin — iki üç konfigürasyon ve fiyatla dönelim.",
@@ -103,7 +103,7 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
     zh: {
       title: "设备价格",
       rows: [
-        { label: "配件：硬盘、内存、网卡", price: "137 900 苏姆起", href: SERVER_LINK },
+        { label: "配件：硬盘、内存、网卡", price: "218 900 苏姆起", href: SERVER_LINK },
         { label: "整机服务器与视频监控服务器", price: "20 374 900 苏姆起", href: SERVER_LINK },
       ],
       note: "针对具体业务的服务器需单独报价：价格取决于核心数、内存容量与磁盘子系统。请告知用户数量和数据量，我们将提供两到三套配置及报价。",
