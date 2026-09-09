@@ -16,6 +16,7 @@ export const articleImg = (slug: string) => `/blog-img/${slug}.jpg`;
 export type Article = {
   slug: string;
   date: string;              // ISO — дата публикации
+  updated?: string;          // ISO — дата последней правки текста; идёт в dateModified
   related: string[];         // ключи услуг для перелинковки (serviceByKey)
   hubs?: string[];           // слаги товарных хабов /products/type/<slug> — «Каталог по теме»
   loc: Record<string, ArticleBody>;
@@ -25,6 +26,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "trubka-domofona-zamena",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["intercom"],
     hubs: ["domofoniya"],
     loc: {
@@ -208,6 +210,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "domofon-ne-rabotaet",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["intercom"],
     hubs: ["domofoniya"],
     loc: {
@@ -391,6 +394,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ip-domofon-hikvision-zvonok-na-telefon",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["intercom"],
     hubs: ["domofoniya"],
     loc: {
@@ -574,6 +578,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videodomofon-dlya-chastnogo-doma",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["intercom", "access"],
     hubs: ["domofoniya", "zamki-i-skud"],
     loc: {
@@ -757,6 +762,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-ibp",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["servers", "cctv"],
     hubs: ["ibp-i-elektropitanie"],
     loc: {
@@ -940,6 +946,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-sks-za-tochku",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["network", "slabotochnye-sistemy"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
@@ -1123,6 +1130,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-rasschitat-disk-dlya-videonablyudeniya",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["zhestkie-diski", "ip-videoregistratory-nvr"],
     loc: {
@@ -1306,6 +1314,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-kamer-nuzhno-skladu",
     date: "2026-09-04",
+    updated: "2026-09-09",
     related: ["cctv", "analytics"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -1489,6 +1498,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "router-sozlash",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["network", "wifi"],
     hubs: ["marshrutizatory", "wi-fi-tochki-dostupa"],
     loc: {
@@ -1692,6 +1702,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kamera-ploho-pokazyvaet",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -1875,6 +1886,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "signalizatsiya-narxi",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["alarm", "cctv"],
     loc: {
       ru: {
@@ -2057,6 +2069,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "sbros-parolya-hikvision",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -2240,6 +2253,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "wifi-signalini-kuchaytirish",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["wifi", "network"],
     hubs: ["wi-fi-tochki-dostupa", "marshrutizatory"],
     loc: {
@@ -2423,6 +2437,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-ognetushitel",
     date: "2026-09-03",
+    updated: "2026-09-09",
     related: ["fire"],
     hubs: ["ognetushiteli", "pozharnaya-bezopasnost"],
     loc: {
@@ -2586,6 +2601,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-stabilizator-napryazheniya",
     date: "2026-08-31",
+    updated: "2026-09-09",
     related: ["servers"],
     hubs: ["ibp-i-elektropitanie"],
     loc: {
@@ -2664,6 +2680,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-dlya-dvora-i-parkovki",
     date: "2026-08-31",
+    updated: "2026-09-09",
     related: ["barrier", "parking"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -2742,6 +2759,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-kommutator-switch",
     date: "2026-08-31",
+    updated: "2026-09-09",
     related: ["network"],
     hubs: ["kommutatory"],
     loc: {
@@ -2821,6 +2839,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ivms-4200-skachat-nastroit",
     date: "2026-08-31",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -2880,6 +2899,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "elektronnyj-zamok-na-dver-kak-vybrat",
     date: "2026-08-05",
+    updated: "2026-09-09",
     related: ["locks", "access", "intercom"],
     loc: {
       ru: {
@@ -3042,6 +3062,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "pozharnaya-signalizatsiya-dlya-biznesa-trebovaniya",
     date: "2026-08-05",
+    updated: "2026-09-09",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
@@ -3205,6 +3226,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-videonablyudenie",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -3353,6 +3375,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-kameru-videonablyudeniya",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery"],
     loc: {
@@ -3501,6 +3524,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "chto-takoe-skud",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["access", "turnstile", "attendance"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -3649,6 +3673,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "pozharnaya-signalizatsiya-vidy",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost"],
     loc: {
@@ -3797,6 +3822,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-domofon",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["intercom", "access"],
     loc: {
       ru: {
@@ -3944,6 +3970,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-skud",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["access", "turnstile", "attendance"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -4092,6 +4119,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "uchet-rabochego-vremeni",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["attendance", "access"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -4265,6 +4293,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "wifi-dlya-ofisa",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["wifi", "network"],
     hubs: ["wi-fi-tochki-dostupa", "marshrutizatory"],
     loc: {
@@ -4433,6 +4462,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "umnyy-dom-s-chego-nachat",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["smarthome"],
     loc: {
       ru: {
@@ -4600,6 +4630,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-turniket",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["turnstile", "access", "attendance"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -4768,6 +4799,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-anpr",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["barrier", "anpr", "gates"],
     hubs: ["turnikety-i-shlagbaumy", "ip-kamery"],
     loc: {
@@ -4936,6 +4968,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ohrannaya-signalizatsiya-kak-vybrat",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["alarm", "cctv"],
     loc: {
       ru: {
@@ -5103,6 +5136,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "avtomaticheskie-vorota-kak-vybrat",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["gates", "barrier"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -5271,6 +5305,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "montazh-sks",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["network", "fiber", "wifi"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
@@ -5439,6 +5474,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ip-telefoniya-dlya-ofisa",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["telephony", "network"],
     hubs: ["kommutatory", "marshrutizatory"],
     loc: {
@@ -5607,6 +5643,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "servernaya-komnata",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["server", "network", "virtualization"],
     hubs: ["telekommunikacionnye-shkafy", "ibp-i-elektropitanie"],
     loc: {
@@ -5775,6 +5812,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videoanalitika-raspoznavanie-lic",
     date: "2026-07-17",
+    updated: "2026-09-09",
     related: ["analytics", "cctv", "anpr"],
     hubs: ["ip-kamery"],
     loc: {
@@ -5943,6 +5981,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "hikvision-vs-dahua",
     date: "2026-07-19",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -6106,6 +6145,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ip-ili-analogovaya-kamera",
     date: "2026-07-19",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -6279,6 +6319,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "zkteco-vs-hikvision-biometriya",
     date: "2026-07-19",
+    updated: "2026-09-09",
     related: ["access", "attendance"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -6447,6 +6488,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "poe-kommutator-ili-bloki-pitaniya",
     date: "2026-07-19",
+    updated: "2026-09-09",
     related: ["cctv", "network"],
     hubs: ["kommutatory", "ibp-i-elektropitanie"],
     loc: {
@@ -6600,6 +6642,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videonablyudenie-cherez-telefon",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery"],
     loc: {
@@ -6788,6 +6831,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-podklyuchit-ip-kameru-hikvision",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv", "network"],
     hubs: ["ip-kamery", "kommutatory"],
     loc: {
@@ -6976,6 +7020,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-vybrat-videoregistrator",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-videoregistratory-nvr", "zhestkie-diski"],
     loc: {
@@ -7184,6 +7229,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kamera-dlya-doma",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery"],
     loc: {
@@ -7392,6 +7438,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videonablyudenie-bez-interneta",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "marshrutizatory"],
     loc: {
@@ -7595,6 +7642,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "ip-kvm-udlinitel",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["server", "network"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
@@ -7798,6 +7846,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "slabotochnye-sistemy",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["cctv", "fire", "network"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
@@ -8001,6 +8050,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "chto-takoe-poe",
     date: "2026-07-29",
+    updated: "2026-09-09",
     related: ["network", "cctv"],
     hubs: ["kommutatory"],
     loc: {
@@ -8204,6 +8254,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kamera-narxlari",
     date: "2026-08-20",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery"],
     loc: {
@@ -8375,6 +8426,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videokuzatuv-ornatish-narxi",
     date: "2026-07-30",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -8583,6 +8635,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "turniket-narxi",
     date: "2026-08-20",
+    updated: "2026-09-09",
     related: ["turnstile", "access"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -8766,6 +8819,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "domofon-narxi",
     date: "2026-08-20",
+    updated: "2026-09-09",
     related: ["intercom", "locks"],
     loc: {
       ru: {
@@ -8948,6 +9002,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-signalizatsiyasi-narxi",
     date: "2026-08-20",
+    updated: "2026-09-09",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
@@ -9131,6 +9186,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videoregistrator-narxi",
     date: "2026-08-20",
+    updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-videoregistratory-nvr", "zhestkie-diski"],
     loc: {
@@ -9314,6 +9370,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-xavfsizligi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
@@ -9507,6 +9564,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "lokal-tarmoq-narxi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["network", "wifi", "fiber"],
     hubs: ["kommutatory", "wi-fi-tochki-dostupa"],
     loc: {
@@ -9700,6 +9758,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "eshik-qulfi-narxi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["locks", "access", "intercom"],
     loc: {
       uz: {
@@ -9893,6 +9952,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-narxi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["barrier", "gates", "anpr"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -10087,6 +10147,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "davomat-tizimi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["attendance", "access"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -10300,6 +10361,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "aqlli-uy-narxi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["smarthome", "cctv", "locks"],
     loc: {
       uz: {
@@ -10492,6 +10554,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "avtomatik-darvoza-narxi",
     date: "2026-08-26",
+    updated: "2026-09-09",
     related: ["gates", "barrier", "anpr"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
@@ -10696,6 +10759,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "gpon-uzbekistan",
     date: "2026-08-27",
+    updated: "2026-09-09",
     related: ["fiber", "network"],
     hubs: ["pon-oborudovanie", "optika-i-aksessuary"],
     loc: {

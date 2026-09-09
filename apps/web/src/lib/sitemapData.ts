@@ -267,14 +267,14 @@ export async function contentEntries(): Promise<SitemapEntry[]> {
     {
       url: `${SITE_URL}/blog`,
       // индекс блога «меняется» с появлением самой свежей статьи
-      lastModified: newestDate(ARTICLES.map((a) => a.date)),
+      lastModified: newestDate(ARTICLES.map((a) => a.updated ?? a.date)),
       changeFrequency: "weekly",
       priority: 0.6,
       alternates: { languages: localeAlternates("/blog", BLOG_LOCALES) },
     },
     ...ARTICLES.map((a) => ({
       url: `${SITE_URL}/blog/${a.slug}`,
-      lastModified: new Date(a.date),
+      lastModified: new Date(a.updated ?? a.date),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       alternates: { languages: localeAlternates(`/blog/${a.slug}`, Object.keys(a.loc)) },

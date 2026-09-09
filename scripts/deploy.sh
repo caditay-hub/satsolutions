@@ -108,9 +108,21 @@ if ! ls "$W"/static/css/*.css >/dev/null 2>&1; then
 fi
 echo "    сборка полная (BUILD_ID $(cat "$W/BUILD_ID"))"
 
-# 5) Перезапуск ТОЛЬКО satweb-приложений (restart, не reload — в fork-режиме reload
-#    не перезапускал sat-web/sat-admin; CRM/боты не трогаем)
-pm2 restart sat-api sat-web sat-admin --update-env
+# 5) Перезапуск ТОЛЬКО satweb-приложений (CRM/боты не трогаем).
+#    sat-api остаётся на restart: fork-режим, node dist/index.js, поднимается за доли
+#    секунды. sat-web/sat-admin с 09.09.2026 живут в cluster_mode (см.
+#    scripts/ecosystem.satweb.js), поэтому им — reload: новый воркер поднимается,
+#    отдаёт `listening`, и только потом гаснет старый. Это убирает окно 502 на каждом
+#    деплое (за 03.09 их было 280, за 08.09 — 229, все внутри окон рестарта).
+pm2 restart sat-api --update-env
+pm2 reload sat-web sat-admin --update-env
+# Страховка: если reload по какой-то причине не поднял воркера, не оставляем сайт
+# лежащим — возвращаемся к жёсткому рестарту.
+code=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -H 'Host: satsolutions.uz' http://localhost:3000/ || echo 000)
+if [ "$code" != "200" ]; then
+  echo "    !! после reload главная отдала $code — аварийный pm2 restart"
+  pm2 restart sat-web sat-admin --update-env
+fi
 pm2 save
 
 # 6) Сброс устаревших ISR-пререндеров каталога и прогрев.

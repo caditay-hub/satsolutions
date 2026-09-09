@@ -3,6 +3,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 // Force config reload - v2.2
 const nextConfig = {
+  // Сжатие делает nginx (gzip + brotli, conf.d/brotli.conf). Пока жал Next, ответы
+  // приходили к nginx уже сжатыми gzip и brotli не срабатывал вообще — проверено
+  // замером 09.09.2026: выигрыш был ровно 0 %.
+  compress: false,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },

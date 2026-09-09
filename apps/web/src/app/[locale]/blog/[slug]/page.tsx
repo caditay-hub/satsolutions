@@ -89,9 +89,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     description: body.excerpt,
     image: [cover],
     datePublished: article.date,
-    // отдельной даты правки у статьи в данных нет (Article.date — единственное поле),
-    // поэтому dateModified = дате публикации; появится поле — подставить его
-    dateModified: article.date,
+    // Article.updated — дата последней правки текста. Без неё сайт объявлял июльскую
+    // дату для статей, переписанных в сентябре: свежесть — сигнал и для поиска,
+    // и для ИИ-ответов, которые предпочитают цитировать актуальный источник.
+    dateModified: article.updated ?? article.date,
     inLanguage: locale,
     author: { "@type": "Organization", name: "SAT Solutions" },
     publisher: { "@type": "Organization", name: "SAT Solutions", url: siteUrl },
