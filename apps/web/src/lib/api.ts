@@ -399,6 +399,17 @@ export type SuggestDto = {
   brands: { name: string; slug: string }[];
   cases?: CaseHitDto[];
 };
+// Кэшируемый вариант: используется в серверном рендере карточки товара, где запрос —
+// детерминированный токен модели из URL, а не пользовательский ввод. Без кэша один этот
+// вызов делал динамическим весь маршрут /products/[slug].
+export async function getSearchSuggestCached(q: string): Promise<SuggestDto> {
+  try {
+    return await apiFetch<SuggestDto>(`/search-suggest?q=${encodeURIComponent(q)}`, { next: { revalidate: 300 } });
+  } catch {
+    return { products: [], types: [], brands: [], cases: [] };
+  }
+}
+
 export async function getSearchSuggest(q: string): Promise<SuggestDto> {
   const res = await fetch(`${apiBaseUrl()}/search-suggest?q=${encodeURIComponent(q)}`, { cache: "no-store" });
   if (!res.ok) return { products: [], types: [], brands: [], cases: [] };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { notFound, permanentRedirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getProductBySlug, getProductsCached, getSitePage, getBrands, getCategories, getSearchSuggest, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
+import { getProductBySlug, getProductsCached, getSitePage, getBrands, getCategories, getSearchSuggestCached, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
 import { ReviewForm } from "@/components/ReviewForm";
 import { CrossSellClick } from "@/components/CrossSellClick";
@@ -47,7 +47,7 @@ async function recoverProductSlug(slug: string): Promise<string | null> {
   if (!modelTok) return null; // нет надёжного кода модели — не рискуем редиректить
 
   try {
-    const sug = await getSearchSuggest(modelTok); // ищем по одному токену-коду модели
+    const sug = await getSearchSuggestCached(modelTok); // ищем по одному токену-коду модели
     let best: { slug: string; score: number } | null = null;
     for (const p of sug.products || []) {
       const cand = (p.slug || "").toLowerCase();

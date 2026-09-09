@@ -39,6 +39,10 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 // Формат даты публикации по локалям (Intl хочет BCP-47, у нас коды короткие)
 const DATE_LOCALE: Record<string, string> = { ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN" };
 
+// Статьи меняются редко: ISR по требованию, без пререндера 315 страниц
+export const revalidate = 3600;
+export async function generateStaticParams() { return []; }
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = articleBySlug[slug];
