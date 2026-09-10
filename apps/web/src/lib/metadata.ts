@@ -53,6 +53,14 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
             ],
             apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
         },
+        // Подтверждение прав в Bing Webmaster Tools. Нужно не ради самого Bing:
+        // поиск ChatGPT и Copilot отвечает из индекса Bing, а ботов ассистентов
+        // на сайт приходит больше, чем bingbot (замер 10.09.2026: PerplexityBot
+        // 5 882, GPTBot 2 479, OAI-SearchBot 654 против 859 у bingbot).
+        // Тег снимать нельзя — Bing перепроверяет владение.
+        verification: {
+            other: { "msvalidate.01": "6DB0893A583C39EFDB71781A65907610" },
+        },
         alternates: overrides?.alternates,
         openGraph: {
             type: "website",
