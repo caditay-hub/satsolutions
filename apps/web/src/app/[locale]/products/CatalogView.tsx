@@ -346,7 +346,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           получали по одной внутренней ссылке со всего сайта (замер 10.09.2026) и стояли в
           выдаче на 39–47 местах по головным словам. Блок даёт и навигацию вглубь раздела,
           и вес страницам, которые обязаны эти слова брать. */}
-      {groupLanding && !type && cleanScope ? (
+      {/* Условие без !type: роут группы всегда передаёт type списком своих типов
+          (см. products/group/[slug]/page.tsx), поэтому проверка на пустой type
+          глушила блок целиком. groupLanding задан только на странице группы. */}
+      {groupLanding && cleanScope ? (
         <div className="mb-5 flex flex-wrap gap-1.5">
           {groupLanding.types.map((n) => {
             const cnt = typeFacets?.types?.find((t) => t.name === n)?.count;
