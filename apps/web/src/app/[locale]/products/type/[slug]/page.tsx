@@ -6,6 +6,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { typeSeoFor, typeLandingFor } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { deadTypeTarget } from "@/lib/deadCategories";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { routing } from "@/i18n/routing";
@@ -57,6 +58,16 @@ export default async function ProductTypePage({ params, searchParams }: { params
   if (to) {
     const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
     permanentRedirect(`${lp}/products/type/${to}`);
+  }
+  // Три слага заведены и как группа, и как тип, и обе страницы показывают один и тот
+  // же набор товаров с одним и тем же лонгридом. Они конкурировали между собой в
+  // выдаче: по «умному дому» группа стояла на 25,0, а тип на 27,8. Канонической
+  // оставлена ГРУППА — она в меню и получает семь внутренних ссылок против одной у
+  // типа, а по домофонии ещё и шире (72 товара против 53, H1 «Домофоны в Ташкенте»).
+  const grouped = GROUP_CANONICAL[slug];
+  if (grouped) {
+    const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+    permanentRedirect(`${lp}/products/group/${grouped}`);
   }
   const name = await resolveTypeName(slug);
   if (!name) {

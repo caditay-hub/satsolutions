@@ -340,6 +340,27 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
         </p>
       ) : null}
 
+      {/* Разделы внутри группы. Страница группы показывала товары всех своих типов, но
+          НЕ ссылалась ни на один из них: у «Сетевого оборудования» было ноль ссылок на
+          «Коммутаторы» — свой же крупнейший раздел на 325 позиций. Из-за этого разделы-типы
+          получали по одной внутренней ссылке со всего сайта (замер 10.09.2026) и стояли в
+          выдаче на 39–47 местах по головным словам. Блок даёт и навигацию вглубь раздела,
+          и вес страницам, которые обязаны эти слова брать. */}
+      {groupLanding && !type && cleanScope ? (
+        <div className="mb-5 flex flex-wrap gap-1.5">
+          {groupLanding.types.map((n) => {
+            const cnt = typeFacets?.types?.find((t) => t.name === n)?.count;
+            return (
+              <Link key={n} href={`/products/type/${typeSlug(n)}`}
+                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+                {localizeCatName(n, locale)}
+                {cnt ? <span className="ml-1.5 font-normal text-slate-400">{cnt}</span> : null}
+              </Link>
+            );
+          })}
+        </div>
+      ) : null}
+
       {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}
       {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3).length ?? 0) > 0 ? (
         <div className="mb-4 flex flex-wrap gap-1.5">

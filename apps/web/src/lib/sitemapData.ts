@@ -13,6 +13,7 @@ import { ARTICLES } from "@/lib/articlesData";
 import { typeSlug } from "@/lib/typeSlug";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 
 export type SitemapEntry = {
   url: string;
@@ -51,6 +52,11 @@ export function langAlternates(path: string) {
     const prefix = loc === DEFAULT_LOCALE ? "" : `/${loc}`;
     languages[loc] = `${SITE_URL}${prefix}${path}` || `${SITE_URL}/`;
   }
+  // x-default — версия для всех, кому не подошла ни одна языковая. Без неё по
+  // запросу из одного латинского слова («hikvision», «tp link») Google выбирал
+  // версию сам и ставил английскую выше русской: 9,5 против 23,6 и 6,5 против 32,0
+  // в выдаче по Узбекистану за лето 2026. Указываем русскую — она основная.
+  languages["x-default"] = languages[DEFAULT_LOCALE];
   return languages;
 }
 
@@ -60,6 +66,8 @@ function localeAlternates(path: string, locales: string[]) {
     const prefix = loc === DEFAULT_LOCALE ? "" : `/${loc}`;
     languages[loc] = `${SITE_URL}${prefix}${path}` || `${SITE_URL}/`;
   }
+  // см. langAlternates: вариант по умолчанию обязателен, иначе язык выбирает Google
+  if (languages[DEFAULT_LOCALE]) languages["x-default"] = languages[DEFAULT_LOCALE];
   return languages;
 }
 
@@ -203,11 +211,13 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
 
   // Дедуп по SLUG, не по имени: разные написания дают один slug.
   // Слитые типы (TYPE_REDIRECTS) исключаем — редиректам не место в карте.
+  // Три слага, склеенные с одноимённой группой (GROUP_CANONICAL), исключаем по той же
+  // причине: /products/type/<slug> теперь отдаёт 308 на /products/group/<slug>.
   const typeBySlug = new Map<string, string>();
   for (const c of categories as any[]) {
     if (!c.name) continue;
     const s = typeSlug(c.name);
-    if (!TYPE_REDIRECTS[s] && !typeBySlug.has(s)) typeBySlug.set(s, c.name);
+    if (!TYPE_REDIRECTS[s] && !GROUP_CANONICAL[s] && !typeBySlug.has(s)) typeBySlug.set(s, c.name);
   }
   const categoryRoutes: SitemapEntry[] = [
     {
