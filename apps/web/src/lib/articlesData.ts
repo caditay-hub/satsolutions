@@ -24,6 +24,166 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "licenziya-na-montazh-signalizacii-uzbekistan",
+    date: "2026-09-10",
+    updated: "2026-09-10",
+    related: ["fire", "alarm"],
+    hubs: ["pozharnaya-bezopasnost", "zamki-i-skud"],
+    loc: {
+      ru: {
+        title: "Лицензия на монтаж сигнализации в Узбекистане: кто выдаёт и как проверить подрядчика",
+        excerpt: "Деятельность по проектированию, монтажу и обслуживанию пожарной и охранной сигнализации лицензирует МВД, а не МЧС. Лицензия бессрочная, реестр публичный, требования к штату — в постановлении № 880 от 27.10.2018.",
+        sections: [
+          { h: "Лицензию выдаёт МВД, а не МЧС", p: [
+            "Это первое, на чём ошибаются почти все, кто ищет ответ в интернете. Русскоязычные источники отвечают по российской практике, где лицензии на противопожарную деятельность выдаёт МЧС. В Узбекистане иначе: постановление Кабинета Министров от 27 октября 2018 года № 880 прямо определяет, что лицензирование деятельности по проектированию, монтажу, наладке, ремонту и техническому обслуживанию средств противопожарной автоматики, охранной, пожарной и охранно-пожарной сигнализации осуществляется Министерством внутренних дел Республики Узбекистан.",
+            "Практический смысл этой разницы простой: если подрядчик показывает вам лицензию МЧС на монтаж сигнализации, документ выдан не тем органом. Проверять надо реестр лицензирующего органа — по постановлению он размещается на его веб-сайте и открыт для ознакомления.",
+          ] },
+          { h: "Что именно лицензируется", p: [
+            "Лицензия покрывает пять видов работ с одними и теми же системами: проектирование, монтаж, наладку, ремонт и техническое обслуживание. Системы — средства противопожарной автоматики, охранная, пожарная и охранно-пожарная сигнализация. То есть под лицензирование попадает и проект, и работа руками, и последующий регламент.",
+            "Важная деталь, о которой редко пишут: по заявлению соискателя лицензия может быть выдана на часть лицензируемой деятельности. Компания вправе иметь лицензию только на техническое обслуживание, но не на проектирование. Поэтому корректный вопрос подрядчику звучит не «есть ли у вас лицензия», а «на какие виды работ она выдана».",
+          ] },
+          { h: "Требования к подрядчику, которые стоит знать заказчику", p: [
+            "Положение задаёт минимальный состав специалистов: в постоянном штате юридического лица должно быть не менее двух работников — руководитель работ и исполнитель — со стажем работы по соответствующему профилю не менее трёх лет. Профиль считается по тому же перечню: проектирование, монтаж, наладка, ремонт или техническое обслуживание установок пожаротушения и сигнализации.",
+            "К образованию тоже есть требование. Исполнители работ должны иметь высшее или профессионально-техническое образование либо специальную подготовку по направлениям «электроэнергетика», «электроника и микроэлектроника», «автоматизация и управление», «радиотехника и телекоммуникация» — не ниже третьего разряда. Кроме того, положение отдельно оговаривает материально-техническую базу, необходимую для заявленных работ.",
+          ] },
+          { h: "Лицензия бессрочная, но её могут отозвать", p: [
+            "Лицензия на этот вид деятельности выдаётся без ограничения срока действия. Ежегодно продлевать её не нужно, и дата выдачи сама по себе ни о чём не говорит — документ 2019 года так же действителен, как документ прошлого месяца.",
+            "Зато положение предусматривает приостановление, прекращение действия и аннулирование лицензии за нарушение лицензионных требований, а лицензирующий орган ведёт контроль за их соблюдением. Именно поэтому проверять надо не бумагу на руках у подрядчика, а запись в реестре на момент подписания договора.",
+          ] },
+          { h: "Зачем это заказчику на практике", p: [
+            "Пожарная сигнализация — часть системы противопожарной защиты объекта, и её принимает инспекция. Работы, выполненные организацией без соответствующей лицензии, создают риск на самом неприятном этапе: когда объект готов, деньги потрачены, а сдача не проходит. Переделка силами лицензированного подрядчика обходится дороже, чем изначально правильный выбор.",
+            "Вторая причина — обслуживание. По правилам пожарной безопасности собственник обязан в течение тридцати дней после ввода систем заключить договор на обслуживание с лицензированной организацией. Если монтаж делал подрядчик без лицензии, договор с ним не закроет это требование.",
+          ] },
+          { h: "Наши документы", p: [
+            "SAT Solutions работает с лицензиями на проектирование и монтаж систем безопасности и пожарной автоматики. Мы ведём объект целиком: проект, поставка оборудования официальными каналами, монтаж, пусконаладка, сдача с актами и последующее обслуживание по договору.",
+            "Если вы выбираете подрядчика и хотите сверить документы — попросите у нас копии, мы их предоставим до подписания договора. Это нормальная практика, и заказчику стоит требовать её от любого исполнителя.",
+          ] },
+        ],
+      },
+      uz: {
+        title: "Oʻzbekistonda signalizatsiya montaji litsenziyasi: kim beradi va pudratchini qanday tekshirish kerak",
+        excerpt: "Yongʻin va qoʻriqlash signalizatsiyasini loyihalash, montaj qilish va unga xizmat koʻrsatish faoliyatini FVV emas, IIV litsenziyalaydi. Litsenziya muddatsiz, reyestr ochiq, shtatga talablar — 27.10.2018 dagi 880-son qarorda.",
+        sections: [
+          { h: "Litsenziyani FVV emas, IIV beradi", p: [
+            "Internetdan javob izlayotganlarning deyarli barchasi shu yerda xato qiladi. Rusiyzabon manbalar Rossiya amaliyoti boʻyicha javob beradi, u yerda yongʻinga qarshi faoliyat litsenziyasini FVV beradi. Oʻzbekistonda boshqacha: Vazirlar Mahkamasining 2018-yil 27-oktabrdagi 880-son qarori toʻgʻridan-toʻgʻri belgilaydiki, yongʻinga qarshi avtomatika, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi vositalarini loyihalash, montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish faoliyatini litsenziyalash Oʻzbekiston Respublikasi Ichki ishlar vazirligi tomonidan amalga oshiriladi.",
+            "Bu farqning amaliy maʼnosi oddiy: agar pudratchi sizga signalizatsiya montaji uchun FVV litsenziyasini koʻrsatsa, hujjat kerakli organ tomonidan berilmagan. Tekshirish kerak boʻlgan joy — litsenziyalovchi organ reyestri: qarorga koʻra u organning veb-saytida joylashtiriladi va tanishish uchun ochiq.",
+          ] },
+          { h: "Aynan nima litsenziyalanadi", p: [
+            "Litsenziya bir xil tizimlar boʻyicha besh turdagi ishni qamrab oladi: loyihalash, montaj, sozlash, taʼmirlash va texnik xizmat koʻrsatish. Tizimlar — yongʻinga qarshi avtomatika vositalari, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi. Yaʼni litsenziyaga loyiha ham, qoʻl mehnati ham, keyingi reglament ham kiradi.",
+            "Kam yoziladigan muhim tafsilot: talabgorning arizasiga koʻra litsenziya litsenziyalanadigan faoliyatning bir qismiga berilishi mumkin. Kompaniya faqat texnik xizmat koʻrsatishga litsenziyaga ega boʻlishi, loyihalashga esa ega boʻlmasligi mumkin. Shuning uchun pudratchiga toʻgʻri savol «litsenziyangiz bormi» emas, «u qaysi ish turlariga berilgan» boʻladi.",
+          ] },
+          { h: "Buyurtmachi bilishi kerak boʻlgan talablar", p: [
+            "Nizom mutaxassislarning minimal tarkibini belgilaydi: yuridik shaxsning doimiy shtatida kamida ikkita xodim — ish rahbari va ijrochi — tegishli profil boʻyicha kamida uch yillik ish stajiga ega boʻlishi kerak. Profil oʻsha roʻyxat boʻyicha hisoblanadi: yongʻin oʻchirish va signalizatsiya qurilmalarini loyihalash, montaj qilish, sozlash, taʼmirlash yoki texnik xizmat koʻrsatish.",
+            "Taʼlimga ham talab bor. Ish ijrochilari oliy yoki kasb-hunar taʼlimiga, yoxud «elektroenergetika», «elektronika va mikroelektronika», «avtomatlashtirish va boshqaruv», «radiotexnika va telekommunikatsiya» yoʻnalishlari boʻyicha maxsus tayyorgarlikka ega boʻlishi kerak — uchinchi razryaddan past boʻlmagan. Bundan tashqari, nizom eʼlon qilingan ishlar uchun zarur moddiy-texnik bazani alohida belgilaydi.",
+          ] },
+          { h: "Litsenziya muddatsiz, lekin uni bekor qilish mumkin", p: [
+            "Ushbu faoliyat turiga litsenziya amal qilish muddati cheklanmagan holda beriladi. Uni har yili uzaytirish shart emas, berilgan sana esa oʻzicha hech narsa demaydi — 2019-yilgi hujjat oʻtgan oygi hujjat kabi amal qiladi.",
+            "Buning oʻrniga nizom litsenziya talablari buzilganda uni toʻxtatib turish, amal qilishini tugatish va bekor qilishni nazarda tutadi, litsenziyalovchi organ esa ularga rioya etilishini nazorat qiladi. Aynan shuning uchun pudratchi qoʻlidagi qogʻozni emas, shartnoma imzolash paytidagi reyestrdagi yozuvni tekshirish kerak.",
+          ] },
+          { h: "Buyurtmachiga bu amalda nima uchun kerak", p: [
+            "Yongʻin signalizatsiyasi obyektning yongʻindan himoya tizimi qismi boʻlib, uni inspeksiya qabul qiladi. Tegishli litsenziyasiz tashkilot bajargan ishlar eng yoqimsiz bosqichda xavf tugʻdiradi: obyekt tayyor, pul sarflangan, topshirish esa oʻtmaydi. Litsenziyali pudratchi kuchi bilan qayta ishlash dastlab toʻgʻri tanlovdan qimmatga tushadi.",
+            "Ikkinchi sabab — xizmat koʻrsatish. Yongʻin xavfsizligi qoidalariga koʻra mulkdor tizimlar ishga tushirilgandan keyin oʻttiz kun ichida litsenziyalangan tashkilot bilan xizmat koʻrsatish shartnomasini tuzishi shart. Agar montajni litsenziyasiz pudratchi qilgan boʻlsa, u bilan tuzilgan shartnoma bu talabni yopmaydi.",
+          ] },
+          { h: "Bizning hujjatlarimiz", p: [
+            "SAT Solutions xavfsizlik tizimlari va yongʻin avtomatikasini loyihalash hamda montaj qilish litsenziyalari bilan ishlaydi. Obyektni butunligicha olib boramiz: loyiha, uskunani rasmiy kanallar orqali yetkazib berish, montaj, ishga tushirish, dalolatnomalar bilan topshirish va shartnoma boʻyicha keyingi xizmat koʻrsatish.",
+            "Agar pudratchi tanlayotgan boʻlsangiz va hujjatlarni sverka qilmoqchi boʻlsangiz — bizdan nusxalarini soʻrang, shartnoma imzolashdan oldin taqdim etamiz. Bu odatiy amaliyot va buyurtmachi buni har qanday ijrochidan talab qilishi kerak.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Alarm installation licence in Uzbekistan: who issues it and how to check a contractor",
+        excerpt: "Designing, installing and servicing fire and security alarms is licensed by the Ministry of Internal Affairs, not by the Emergencies Ministry. The licence has no expiry date, the register is public, and staffing requirements are set by decree No. 880 of 27.10.2018.",
+        sections: [
+          { h: "The licence comes from the Interior Ministry, not the Emergencies Ministry", p: [
+            "This is where almost everyone searching online goes wrong. Russian-language sources answer from Russian practice, where fire-safety activity is licensed by the emergencies authority. Uzbekistan works differently: Cabinet of Ministers Decree No. 880 of 27 October 2018 states directly that licensing of the design, installation, commissioning, repair and maintenance of fire automation, security, fire and combined alarm systems is carried out by the Ministry of Internal Affairs of the Republic of Uzbekistan.",
+            "The practical meaning is simple: if a contractor shows you an emergencies-ministry licence for alarm installation, the document came from the wrong authority. What you check is the register of the licensing body — under the decree it is published on that body's website and open for inspection.",
+          ] },
+          { h: "What exactly is licensed", p: [
+            "The licence covers five kinds of work on the same systems: design, installation, commissioning, repair and maintenance. The systems are fire automation equipment and security, fire and combined fire-and-security alarms. In other words, the design, the hands-on work and the later servicing regime all fall under licensing.",
+            "A detail that is rarely written down: at the applicant's request the licence may be issued for part of the licensed activity. A company may hold a licence for maintenance only and not for design. So the correct question to a contractor is not «do you have a licence» but «which kinds of work is it issued for».",
+          ] },
+          { h: "Requirements a client should know about", p: [
+            "The regulation sets a minimum team: the permanent staff of the legal entity must include at least two employees — a works manager and an operative — with at least three years of experience in the relevant field. The field is counted against the same list: design, installation, commissioning, repair or maintenance of fire suppression and alarm installations.",
+            "There is an education requirement too. Operatives must hold higher or vocational-technical education, or special training in electrical power engineering, electronics and microelectronics, automation and control, or radio engineering and telecommunications — at grade three or above. The regulation also separately defines the material and technical base required for the declared work.",
+          ] },
+          { h: "The licence never expires, but it can be revoked", p: [
+            "A licence for this activity is issued with no limit on its validity period. There is nothing to renew annually, and the issue date on its own tells you nothing — a document from 2019 is as valid as one from last month.",
+            "What the regulation does provide for is suspension, termination and annulment of the licence for breaching licensing requirements, with the licensing body monitoring compliance. That is exactly why you check the register entry at the moment of signing, not the paper in the contractor's folder.",
+          ] },
+          { h: "Why this matters in practice", p: [
+            "A fire alarm is part of a site's fire protection system and is accepted by the inspection. Work carried out by an organisation without the relevant licence creates risk at the worst possible moment: the site is finished, the money is spent, and the handover fails. Redoing the work through a licensed contractor costs more than choosing correctly at the start.",
+            "The second reason is servicing. Under the fire safety rules the owner must, within thirty days of the systems being commissioned, conclude a maintenance contract with a licensed organisation. If an unlicensed contractor did the installation, a contract with them will not satisfy that requirement.",
+          ] },
+          { h: "Our documents", p: [
+            "SAT Solutions works under licences for the design and installation of security systems and fire automation. We carry the site end to end: design, equipment supplied through official channels, installation, commissioning, handover with certificates and subsequent servicing under contract.",
+            "If you are choosing a contractor and want to check the paperwork, ask us for copies and we will provide them before the contract is signed. This is normal practice, and a client is right to require it of any contractor.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Özbekistan'da alarm montajı lisansı: kim veriyor ve yüklenici nasıl kontrol edilir",
+        excerpt: "Yangın ve güvenlik alarmlarının projelendirilmesi, montajı ve bakımı Acil Durumlar Bakanlığı tarafından değil, İçişleri Bakanlığı tarafından lisanslanıyor. Lisans süresizdir, sicil kamuya açıktır, personel şartları 27.10.2018 tarihli 880 sayılı kararda.",
+        sections: [
+          { h: "Lisansı Acil Durumlar Bakanlığı değil, İçişleri Bakanlığı verir", p: [
+            "İnternette cevap arayan hemen herkes tam burada yanılıyor. Rusça kaynaklar Rusya uygulamasına göre cevap veriyor; orada yangın güvenliği faaliyeti lisansını Acil Durumlar Bakanlığı veriyor. Özbekistan'da durum farklı: Bakanlar Kurulunun 27 Ekim 2018 tarihli 880 sayılı kararı doğrudan belirtiyor ki yangın otomasyonu, güvenlik, yangın ve yangın-güvenlik alarm sistemlerinin projelendirilmesi, montajı, devreye alınması, onarımı ve bakımı faaliyetinin lisanslanması Özbekistan Cumhuriyeti İçişleri Bakanlığı tarafından yürütülür.",
+            "Bu farkın pratik anlamı basit: yüklenici size alarm montajı için Acil Durumlar Bakanlığı lisansı gösteriyorsa, belge yanlış makamdan alınmıştır. Kontrol edilecek yer lisans veren makamın sicilidir — karara göre bu sicil o makamın web sitesinde yayımlanır ve incelemeye açıktır.",
+          ] },
+          { h: "Tam olarak ne lisanslanıyor", p: [
+            "Lisans, aynı sistemler üzerinde beş tür işi kapsar: projelendirme, montaj, devreye alma, onarım ve bakım. Sistemler ise yangın otomasyonu ekipmanları ile güvenlik, yangın ve yangın-güvenlik alarmlarıdır. Yani hem proje, hem el emeği, hem de sonraki bakım rejimi lisans kapsamındadır.",
+            "Nadiren yazılan önemli bir ayrıntı: başvuru sahibinin talebiyle lisans, lisanslı faaliyetin bir kısmı için verilebilir. Bir şirket yalnızca bakım için lisansa sahip olup projelendirme için olmayabilir. Bu yüzden yükleniciye sorulacak doğru soru «lisansınız var mı» değil, «hangi iş türleri için verilmiş» olmalıdır.",
+          ] },
+          { h: "Müşterinin bilmesi gereken şartlar", p: [
+            "Yönetmelik asgari ekibi belirler: tüzel kişinin daimi kadrosunda en az iki çalışan — iş sorumlusu ve uygulayıcı — ilgili alanda en az üç yıllık deneyime sahip olmalıdır. Alan aynı listeye göre sayılır: yangın söndürme ve alarm tesislerinin projelendirilmesi, montajı, devreye alınması, onarımı veya bakımı.",
+            "Eğitim şartı da var. Uygulayıcıların yüksek ya da mesleki-teknik eğitimi veya «elektrik enerjisi», «elektronik ve mikroelektronik», «otomasyon ve kontrol», «radyo tekniği ve telekomünikasyon» alanlarında özel eğitimi bulunmalı — üçüncü dereceden aşağı olmamak üzere. Yönetmelik ayrıca beyan edilen işler için gereken maddi-teknik altyapıyı da ayrıca tanımlar.",
+          ] },
+          { h: "Lisansın süresi yoktur, ama iptal edilebilir", p: [
+            "Bu faaliyet için lisans, geçerlilik süresi sınırlanmadan verilir. Her yıl yenilenecek bir şey yoktur ve veriliş tarihi tek başına bir şey söylemez — 2019 tarihli bir belge, geçen ayki kadar geçerlidir.",
+            "Buna karşılık yönetmelik, lisans şartlarının ihlali hâlinde lisansın askıya alınmasını, sona erdirilmesini ve iptalini öngörür; lisans veren makam da uyumu denetler. İşte tam bu yüzden yüklenicinin elindeki kâğıt değil, sözleşme imzalandığı andaki sicil kaydı kontrol edilir.",
+          ] },
+          { h: "Bunun pratikte önemi", p: [
+            "Yangın alarmı, tesisin yangından korunma sisteminin parçasıdır ve denetim tarafından kabul edilir. İlgili lisansı olmayan bir kuruluşun yaptığı işler en kötü anda risk yaratır: tesis bitmiştir, para harcanmıştır, teslim ise geçmez. İşi lisanslı bir yükleniciyle yeniden yapmak, baştan doğru seçim yapmaktan pahalıdır.",
+            "İkinci neden bakımdır. Yangın güvenliği kurallarına göre mal sahibi, sistemler devreye alındıktan sonra otuz gün içinde lisanslı bir kuruluşla bakım sözleşmesi yapmak zorundadır. Montajı lisanssız bir yüklenici yaptıysa, onunla yapılan sözleşme bu şartı karşılamaz.",
+          ] },
+          { h: "Bizim belgelerimiz", p: [
+            "SAT Solutions, güvenlik sistemleri ve yangın otomasyonunun projelendirilmesi ve montajı lisanslarıyla çalışır. Tesisi baştan sona yürütürüz: proje, resmi kanallardan ekipman tedariki, montaj, devreye alma, tutanaklarla teslim ve sözleşme kapsamında sonraki bakım.",
+            "Yüklenici seçiyor ve belgeleri karşılaştırmak istiyorsanız bizden kopyalarını isteyin, sözleşme imzalanmadan önce veririz. Bu olağan bir uygulamadır ve müşteri bunu her yükleniciden talep etmelidir.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "乌兹别克斯坦报警系统安装许可证：由谁颁发，如何核查承包商",
+        excerpt: "火灾与安防报警系统的设计、安装和维护由内务部许可，而非紧急情况部。许可证无有效期限制，登记册对外公开，人员要求见 2018 年 10 月 27 日第 880 号决议。",
+        sections: [
+          { h: "许可证由内务部颁发，不是紧急情况部", p: [
+            "这是几乎所有在网上查找答案的人都会弄错的地方。俄语资料按俄罗斯的做法作答，那里的消防活动许可由紧急情况部颁发。乌兹别克斯坦不同：内阁 2018 年 10 月 27 日第 880 号决议明确规定，消防自动化装置、安防报警、火灾报警及火灾安防合一报警系统的设计、安装、调试、维修和维护活动的许可，由乌兹别克斯坦共和国内务部实施。",
+            "这一差别的实际含义很简单：如果承包商向您出示紧急情况部颁发的报警安装许可证，那么这份文件出自不该出的机关。应当核查的是许可机关的登记册——按决议规定，它公布在该机关网站上，对外开放查阅。",
+          ] },
+          { h: "究竟哪些内容需要许可", p: [
+            "许可证涵盖同一批系统上的五类工作：设计、安装、调试、维修和维护。系统包括消防自动化装置以及安防报警、火灾报警和火灾安防合一报警。也就是说，设计、现场施工和后续的维保制度都在许可范围内。",
+            "一个很少被写出来的细节：应申请人请求，许可证可以只针对被许可活动的一部分颁发。一家公司可能只持有维护许可，而没有设计许可。因此向承包商提问的正确方式不是「你们有许可证吗」，而是「它是针对哪些工作类别颁发的」。",
+          ] },
+          { h: "业主应当了解的资质要求", p: [
+            "条例规定了最低人员配置：法人常设编制中应至少有两名员工——工程负责人和执行人——在相应专业方向具有不少于三年的工作经历。专业方向按同一清单计算：灭火与报警装置的设计、安装、调试、维修或维护。",
+            "对学历也有要求。执行人应具有高等或职业技术教育，或在「电力工程」「电子与微电子」「自动化与控制」「无线电技术与电信」方向接受过专门培训，且不低于三级。此外，条例还单独规定了开展所申报工作所必需的物资技术基础。",
+          ] },
+          { h: "许可证无期限，但可以被吊销", p: [
+            "此类活动的许可证在颁发时不限制有效期。无需每年续期，颁发日期本身也说明不了什么——2019 年的文件与上个月的文件同样有效。",
+            "但条例规定了在违反许可要求时中止、终止和吊销许可证，许可机关也对遵守情况进行监督。正因如此，需要核查的是签约当时登记册上的记录，而不是承包商手里的那张纸。",
+          ] },
+          { h: "这在实务中为何重要", p: [
+            "火灾报警属于项目消防保护系统的一部分，须经检查机关验收。由不具备相应许可的机构完成的工程，会在最难受的时刻带来风险：项目已完工、钱已花出，验收却过不了。由持证承包商返工的代价，高于一开始就选对。",
+            "第二个原因是维保。按消防安全规则，业主须在系统投入使用后三十天内与持牌机构签订维护合同。如果安装由无证承包商完成，与其签订的合同并不能满足这项要求。",
+          ] },
+          { h: "我们的资质文件", p: [
+            "SAT Solutions 依据安防系统与消防自动化的设计和安装许可开展工作。我们从头到尾负责项目：设计、经官方渠道供应设备、安装、调试、附验收单据交付，以及后续的合同制维保。",
+            "如果您正在挑选承包商并希望核对文件，请向我们索取副本，我们会在签约前提供。这是通行做法，业主有理由向任何一家承包商提出这一要求。",
+          ] },
+        ],
+      },
+    },
+  },
+
+  {
     slug: "kamery-domofony-novostroyki-uzbekistan",
     date: "2026-09-10",
     updated: "2026-09-10",
