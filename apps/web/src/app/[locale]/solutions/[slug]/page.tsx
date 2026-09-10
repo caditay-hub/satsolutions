@@ -46,6 +46,21 @@ import { ogLocale } from "@/lib/ogLocale";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
+// Подводка абзаца SEO-текста: первое предложение (или часть до двоеточия / тире)
+// выделяется жирным — по таким строкам текст просматривается как по подзаголовкам.
+// Короче 25 знаков не берём (сокращения вроде «т. д.»), длиннее 170 — без подводки.
+function splitLead(p: string): [string, string] {
+  const re = /(\.\s|:\s|\s—\s|。|：)/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(p))) {
+    const end = m[0].trim() === "—" ? m.index : m.index + m[0].trimEnd().length;
+    if (end < 25) continue;
+    if (end > 170) break;
+    return [p.slice(0, end), p.slice(end)];
+  }
+  return ["", p];
+}
+
 // ISR по требованию: страниц услуг ~40, данные (оборудование, кейсы) из API
 export const revalidate = 300;
 export async function generateStaticParams() { return []; }
@@ -504,19 +519,30 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           </ul>
         </section>
 
-        {/* SEO-текст целиком: вводный абзац во всю ширину, остальное — в две колонки
-            (была узкая колонка на треть экрана с пустотой справа) */}
+        {/* SEO-текст целиком. Абзацы — блоками по два в ряд: читаются слева направо, а не
+            газетными колонками сверху вниз; первое предложение каждого — жирной подводкой
+            (замечание владельца 10.09: «сложно читать»). Сам текст не меняется. */}
         {content && (
           <section id="about" className="mt-12 scroll-mt-32 lg:scroll-mt-44">
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{content.heading}</h2>
-            <p className="mt-4 text-sm leading-relaxed text-slate-700 sm:text-base">{content.paragraphs[0]}</p>
+            {/* вводный абзац — первым блоком той же сетки (темнее и крупнее): отдельной
+                строкой он оставлял пустую треть справа, а во всю ширину — строки по 180 знаков */}
+            <div className="mt-5 grid grid-cols-1 gap-x-14 gap-y-7 lg:grid-cols-2">
+              <p className="text-[15px] leading-7 text-slate-800 sm:text-[17px] sm:leading-[1.7]">{content.paragraphs[0]}</p>
             {content.paragraphs.length > 1 && (
-              <div className="mt-4 gap-12 lg:columns-2">
-                {content.paragraphs.slice(1).map((p, i) => (
-                  <p key={i} className="mb-4 text-sm leading-relaxed text-slate-600 sm:text-base">{p}</p>
-                ))}
-              </div>
+              <>
+                {content.paragraphs.slice(1).map((p, i) => {
+                  const [lead, rest] = splitLead(p);
+                  return (
+                    <p key={i} className="text-[15px] leading-7 text-slate-600 sm:text-base">
+                      {lead ? <strong className="font-bold text-slate-900">{lead}</strong> : null}
+                      {rest}
+                    </p>
+                  );
+                })}
+              </>
             )}
+            </div>
           </section>
         )}
 
