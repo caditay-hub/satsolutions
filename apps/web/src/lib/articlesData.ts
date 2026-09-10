@@ -24,6 +24,166 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "obsluzhivanie-pozharnoy-signalizacii-uzbekistan",
+    date: "2026-09-10",
+    updated: "2026-09-10",
+    related: ["fire"],
+    hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
+    loc: {
+      ru: {
+        title: "Обслуживание пожарной сигнализации в Узбекистане: годовой план вместо «раз в квартал»",
+        excerpt: "Правила пожарной безопасности РУз не знают нормы «раз в квартал»: пункт 148 требует годового плана работ по документации изготовителя. Кто может обслуживать, откуда берутся 30 дней и 24 часа.",
+        sections: [
+          { h: "Нормы «раз в квартал» в Узбекистане нет", p: [
+            "Это самое частое заблуждение, и оно попадает даже в коммерческие предложения. Требование обслуживать пожарную сигнализацию не реже одного раза в квартал — норма российского руководящего документа. В Узбекистане действуют Правила пожарной безопасности, утверждённые постановлением Кабинета Министров от 20 октября 2020 года № 649, и они устроены иначе.",
+            "Пункт 148 Правил задаёт другой принцип: регламентные работы по техническому обслуживанию и планово-предупредительному ремонту установок пожарной сигнализации и пожаротушения, систем противодымной защиты, оповещения о пожаре и управления эвакуацией выполняются на основании годового плана работ, составленного с учётом технической документации предприятия-изготовителя и сроков проведения ремонтных работ. То есть периодичность берётся из паспорта конкретного оборудования, а не из универсальной цифры.",
+          ] },
+          { h: "Кто имеет право обслуживать систему", p: [
+            "Тот же пункт 148 допускает два пути, и это важно для расчёта бюджета. Первый: работы выполняют работники самого предприятия, прошедшие в соответствии с законодательством специальную и периодическую подготовку. Второй: работы выполняет по договору организация, имеющая специальную лицензию.",
+            "Своими силами обслуживать закон не запрещает — но только при наличии подготовленных работников, и подготовка эта не разовая, а периодическая. На практике держать в штате обученного специалиста имеет смысл крупному предприятию с большой системой; для офиса, магазина или склада договор со специализированной организацией выходит дешевле и надёжнее.",
+          ] },
+          { h: "Откуда берутся тридцать дней", p: [
+            "Пункт 149 формулирует условие, которое часто цитируют неточно. Он не требует договора от всех подряд. Норма звучит так: если специалисты объекта не имеют возможности осуществлять техническое обслуживание установок пожарной автоматики, систем противодымной защиты и оповещения людей о пожаре, то в течение 30 дней после ввода устройств в работу необходимо заключить договор на его осуществление со специализированными организациями, имеющими лицензию по данному виду деятельности.",
+            "Ключевые слова здесь — «после ввода устройств в работу», а не после ввода объекта, и «если нет возможности». Тридцатидневный срок отсчитывается от момента, когда система запущена, и относится к тем объектам, которые не могут обслуживать её сами.",
+          ] },
+          { h: "Двадцать четыре часа при расторжении договора", p: [
+            "Второй абзац того же пункта — про выход из договора. При расторжении договора на техническое обслуживание установок пожарной автоматики и систем противодымной защиты руководитель предприятия обязан в течение 24 часов уведомить районный или городской отдел по чрезвычайным ситуациям либо подразделения по чрезвычайным ситуациям, обслуживающие объект.",
+            "Смысл нормы понятен: государство хочет знать, что объект остался без обслуживания. Для собственника это означает, что смена подрядчика — событие, о котором нужно сообщать, и разрыв между старым и новым договором лучше не растягивать.",
+          ] },
+          { h: "Что входит в регламент на практике", p: [
+            "Нормы задают рамку, конкретный состав работ определяется документацией изготовителя и проектом. По нашей практике годовой план обычно включает проверку работоспособности извещателей и ручных пожарных извещателей, чистку дымовых камер, контроль шлейфов и линий связи, проверку приёмно-контрольного прибора и его индикации, тест оповещателей и световых табло, контроль резервного питания и состояния аккумуляторов, проверку кабельных трасс и обновление документации.",
+            "Отдельная тема — резервное питание. Аккумуляторы приёмно-контрольного прибора живут три-пять лет и умирают тихо: об этом узнают в момент отключения света, когда система должна была продержаться, а не продержалась. Поэтому их состояние проверяют по плану, а не по факту отказа.",
+          ] },
+          { h: "Как это устроено у нас", p: [
+            "SAT Solutions обслуживает по договору системы, смонтированные нашими специалистами: составляем годовой план по документации установленного оборудования, ведём журнал работ, готовим документы, которые предъявляются при проверке. Работаем по Ташкенту и регионам.",
+            "Если вы принимаете объект и не знаете, какой режим обслуживания вам положен — пришлите состав системы и паспорта оборудования, разберём и посчитаем регламент под ваш случай. Статья описывает нормы в общем виде: конкретные сроки для вашего оборудования определяются его документацией.",
+          ] },
+        ],
+      },
+      uz: {
+        title: "Oʻzbekistonda yongʻin signalizatsiyasiga xizmat koʻrsatish: «chorakda bir marta» emas, yillik reja",
+        excerpt: "Oʻzbekiston Yongʻin xavfsizligi qoidalarida «chorakda bir marta» normasi yoʻq: 148-band ishlab chiqaruvchi hujjatlari boʻyicha yillik reja talab qiladi. Kim xizmat koʻrsata oladi, 30 kun va 24 soat qayerdan kelib chiqadi.",
+        sections: [
+          { h: "Oʻzbekistonda «chorakda bir marta» normasi yoʻq", p: [
+            "Bu eng koʻp uchraydigan adashish boʻlib, u hatto tijorat takliflariga ham tushadi. Yongʻin signalizatsiyasiga chorakda kamida bir marta xizmat koʻrsatish talabi — Rossiya rahbariy hujjatining normasi. Oʻzbekistonda Vazirlar Mahkamasining 2020-yil 20-oktabrdagi 649-son qarori bilan tasdiqlangan Yongʻin xavfsizligi qoidalari amal qiladi va ular boshqacha tuzilgan.",
+            "Qoidalarning 148-bandi boshqa tamoyilni belgilaydi: yongʻin signalizatsiyasi va yongʻin oʻchirish qurilmalari, tutundan himoyalash, odamlarga yongʻin haqida xabar berish va evakuatsiyani boshqarish tizimlariga texnik xizmat koʻrsatish hamda rejali-ogohlantiruvchi taʼmirlash boʻyicha reglament ishlari ishlab chiqaruvchi korxonaning texnik hujjatlari va taʼmirlash ishlari muddatlari hisobga olingan yillik ish rejasi asosida amalga oshiriladi. Yaʼni davriylik universal raqamdan emas, aniq uskuna pasportidan olinadi.",
+          ] },
+          { h: "Kim tizimga xizmat koʻrsatishga haqli", p: [
+            "Oʻsha 148-band ikki yoʻlga ruxsat beradi va byudjetni hisoblash uchun bu muhim. Birinchisi: ishlarni qonunchilikka muvofiq maxsus va davriy tayyorgarlikdan oʻtgan korxona xodimlari bajaradi. Ikkinchisi: ishlarni shartnoma boʻyicha maxsus litsenziyaga ega tashkilot bajaradi.",
+            "Qonun oʻz kuchi bilan xizmat koʻrsatishni taqiqlamaydi — lekin faqat tayyorlangan xodimlar boʻlganda, va bu tayyorgarlik bir martalik emas, davriy. Amalda tayyorlangan mutaxassisni shtatda saqlash katta tizimga ega yirik korxona uchun maʼqul; ofis, doʻkon yoki ombor uchun ixtisoslashtirilgan tashkilot bilan shartnoma arzonroq va ishonchliroq chiqadi.",
+          ] },
+          { h: "Oʻttiz kun qayerdan kelib chiqadi", p: [
+            "149-band koʻpincha notoʻgʻri keltiriladigan shartni ifodalaydi. U hammadan ham shartnoma talab qilmaydi. Norma shunday yangraydi: agar obyekt mutaxassislari yongʻin avtomatikasi moslamalariga, tutunga qarshi himoyalash tizimlariga va odamlarni yongʻindan ogohlantirishga texnik xizmat koʻrsatish imkoniga ega boʻlmasa, qurilmalar ishga tushirilgandan keyin 30 kun ichida ushbu faoliyat turi boʻyicha litsenziyaga ega ixtisoslashtirilgan tashkilotlar bilan shartnoma tuzish kerak.",
+            "Bu yerdagi kalit soʻzlar — «qurilmalar ishga tushirilgandan keyin», obyekt topshirilgandan keyin emas, va «imkoni boʻlmasa». Oʻttiz kunlik muddat tizim ishga tushirilgan paytdan hisoblanadi va oʻzi xizmat koʻrsata olmaydigan obyektlarga tegishli.",
+          ] },
+          { h: "Shartnoma bekor qilinganda yigirma toʻrt soat", p: [
+            "Oʻsha bandning ikkinchi xatboshisi shartnomadan chiqish haqida. Yongʻin avtomatikasi moslamalari va tutunga qarshi himoyalash tizimlariga texnik xizmat koʻrsatish shartnomasi bekor qilinganda, korxona rahbari 24 soat ichida tuman yoki shahar Favqulodda vaziyatlar boʻlimini yoxud obyektga xizmat koʻrsatadigan favqulodda vaziyatlar boʻlinmalarini xabardor qilishi shart.",
+            "Normaning maʼnosi tushunarli: davlat obyekt xizmat koʻrsatishsiz qolganini bilishi kerak. Mulkdor uchun bu shuni anglatadiki, pudratchini almashtirish — xabar berilishi lozim boʻlgan hodisa, eski va yangi shartnoma orasidagi uzilishni esa choʻzmagan maʼqul.",
+          ] },
+          { h: "Amalda reglamentga nima kiradi", p: [
+            "Normalar ramka beradi, ishlarning aniq tarkibini esa ishlab chiqaruvchi hujjatlari va loyiha belgilaydi. Bizning amaliyotimizda yillik reja odatda quyidagilarni oʻz ichiga oladi: xabar bergichlar va qoʻl xabar bergichlari ishlashini tekshirish, tutun kameralarini tozalash, shleyflar va aloqa liniyalarini nazorat qilish, qabul-nazorat pribori va uning indikatsiyasini tekshirish, ogohlantirgichlar va yorugʻlik tablolarini sinash, zaxira quvvat va akkumulyatorlar holatini nazorat qilish, kabel yoʻllarini tekshirish va hujjatlarni yangilash.",
+            "Alohida mavzu — zaxira quvvat. Qabul-nazorat priborining akkumulyatorlari uch-besh yil yashaydi va jimgina oʻladi: bu haqda svet oʻchgan paytda bilishadi, tizim ushlab turishi kerak edi-yu, ushlab turmadi. Shuning uchun ularning holati nosozlik faktidan keyin emas, reja boʻyicha tekshiriladi.",
+          ] },
+          { h: "Bizda bu qanday tashkil etilgan", p: [
+            "SAT Solutions shartnoma boʻyicha mutaxassislarimiz montaj qilgan tizimlarga xizmat koʻrsatadi: oʻrnatilgan uskuna hujjatlari boʻyicha yillik reja tuzamiz, ishlar jurnalini yuritamiz, tekshiruvda taqdim etiladigan hujjatlarni tayyorlaymiz. Toshkent va viloyatlar boʻylab ishlaymiz.",
+            "Agar obyektni qabul qilayotgan boʻlsangiz va qanday xizmat rejimi tegishli ekanini bilmasangiz — tizim tarkibi va uskuna pasportlarini yuboring, sizning holatingizga moslab reglamentni hisoblab beramiz. Maqola normalarni umumiy holda tavsiflaydi: uskunangiz uchun aniq muddatlar uning hujjatlari bilan belgilanadi.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Fire alarm servicing in Uzbekistan: an annual plan, not «once a quarter»",
+        excerpt: "Uzbekistan's Fire Safety Rules contain no «once a quarter» norm: clause 148 requires an annual work plan based on the manufacturer's documentation. Who may service the system, and where the 30 days and 24 hours come from.",
+        sections: [
+          { h: "There is no «once a quarter» norm in Uzbekistan", p: [
+            "This is the most common misconception, and it reaches even commercial proposals. The requirement to service a fire alarm at least once a quarter belongs to a Russian guidance document. Uzbekistan applies the Fire Safety Rules approved by Cabinet of Ministers Decree No. 649 of 20 October 2020, and they are built differently.",
+            "Clause 148 of the Rules sets another principle: routine work on the maintenance and scheduled preventive repair of fire alarm and fire suppression installations, smoke protection systems, fire warning and evacuation management systems is carried out on the basis of an annual work plan drawn up with regard to the technical documentation of the manufacturing enterprise and the timing of repair work. In other words, the interval comes from the passport of the specific equipment, not from a universal figure.",
+          ] },
+          { h: "Who may service the system", p: [
+            "The same clause 148 allows two routes, and that matters for the budget. First: the work is done by the enterprise's own employees who have undergone special and periodic training in accordance with the legislation. Second: the work is done under contract by an organisation holding a special licence.",
+            "The law does not forbid in-house servicing — but only where trained employees exist, and that training is periodic rather than one-off. In practice keeping a trained specialist on staff makes sense for a large enterprise with a large system; for an office, a shop or a warehouse a contract with a specialised organisation works out cheaper and safer.",
+          ] },
+          { h: "Where the thirty days come from", p: [
+            "Clause 149 states a condition that is often quoted inaccurately. It does not demand a contract from everyone. The norm reads: if the site's specialists do not have the ability to carry out maintenance of fire automation installations, smoke protection systems and fire warning systems, then within 30 days after the devices are put into operation a contract for it must be concluded with specialised organisations holding a licence for this type of activity.",
+            "The key words are «after the devices are put into operation» — not after the building is commissioned — and «do not have the ability». The thirty-day period runs from the moment the system is started and applies to sites that cannot service it themselves.",
+          ] },
+          { h: "Twenty-four hours on terminating the contract", p: [
+            "The second paragraph of the same clause covers exiting a contract. When a maintenance contract for fire automation installations and smoke protection systems is terminated, the head of the enterprise must within 24 hours notify the district or city emergencies department, or the emergency units serving the site.",
+            "The purpose is clear: the state wants to know that a site has been left without servicing. For an owner this means that changing contractors is a reportable event, and the gap between the old and the new contract is best kept short.",
+          ] },
+          { h: "What the routine actually covers", p: [
+            "The rules set the frame; the specific scope of work follows the manufacturer's documentation and the design. In our practice an annual plan usually includes checking detectors and manual call points, cleaning smoke chambers, testing loops and communication lines, checking the control panel and its indication, testing sounders and exit signs, checking backup power and battery condition, inspecting cable routes and updating the documentation.",
+            "Backup power deserves a separate mention. The batteries of a control panel last three to five years and die quietly: you find out during a power cut, when the system was supposed to hold and did not. That is why their condition is checked on plan rather than after a failure.",
+          ] },
+          { h: "How we do it", p: [
+            "SAT Solutions services, under contract, the systems installed by our own specialists: we draw up the annual plan from the documentation of the installed equipment, keep the work log and prepare the documents presented during an inspection. We work in Tashkent and the regions.",
+            "If you are accepting a site and are unsure which servicing regime applies, send us the system composition and the equipment passports and we will work out the routine for your case. This article describes the norms in general terms: the exact intervals for your equipment come from its documentation.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Özbekistan'da yangın alarmı bakımı: «üç ayda bir» değil, yıllık plan",
+        excerpt: "Özbekistan Yangın Güvenliği Kuralları «üç ayda bir» normunu tanımıyor: 148. madde üreticinin belgelerine dayalı yıllık iş planı istiyor. Bakımı kim yapabilir, 30 gün ve 24 saat nereden geliyor.",
+        sections: [
+          { h: "Özbekistan'da «üç ayda bir» normu yoktur", p: [
+            "Bu en yaygın yanılgıdır ve ticari tekliflere bile girer. Yangın alarmına en az üç ayda bir bakım yapma zorunluluğu bir Rus yönlendirici belgesinin normudur. Özbekistan'da Bakanlar Kurulunun 20 Ekim 2020 tarihli 649 sayılı kararıyla onaylanan Yangın Güvenliği Kuralları geçerlidir ve bunlar farklı kurgulanmıştır.",
+            "Kuralların 148. maddesi başka bir ilke koyar: yangın alarmı ve söndürme tesisatlarının, duman kontrol sistemlerinin, yangın ihbar ve tahliye yönetim sistemlerinin bakımı ile planlı önleyici onarımına ilişkin rutin işler, üretici işletmenin teknik belgeleri ve onarım işlerinin süreleri dikkate alınarak hazırlanan yıllık iş planına dayanarak yapılır. Yani periyot evrensel bir rakamdan değil, somut ekipmanın pasaportundan alınır.",
+          ] },
+          { h: "Sistemin bakımını kim yapabilir", p: [
+            "Aynı 148. madde iki yol tanır ve bu bütçe açısından önemlidir. Birincisi: işler, mevzuata uygun olarak özel ve periyodik eğitimden geçmiş işletme personeli tarafından yapılır. İkincisi: işler, sözleşmeyle özel lisansa sahip bir kuruluş tarafından yapılır.",
+            "Kanun kendi imkânlarıyla bakımı yasaklamaz — ancak yalnızca eğitimli personel varsa ve bu eğitim bir kerelik değil, periyodiktir. Uygulamada eğitimli uzmanı kadroda tutmak büyük sistemli büyük işletmeler için anlamlıdır; ofis, mağaza veya depo için uzman kuruluşla sözleşme daha ucuz ve daha güvenlidir.",
+          ] },
+          { h: "Otuz gün nereden geliyor", p: [
+            "149. madde, sıkça yanlış aktarılan bir koşul belirtir. Herkesten sözleşme istemez. Norm şöyledir: tesisin uzmanları yangın otomasyonu tesisatlarının, duman kontrol ve yangın ihbar sistemlerinin bakımını yapma imkânına sahip değilse, cihazlar işletmeye alındıktan sonra 30 gün içinde bu faaliyet türü için lisansa sahip uzman kuruluşlarla bakım sözleşmesi yapılmalıdır.",
+            "Anahtar ifadeler şunlardır: «cihazlar işletmeye alındıktan sonra» — bina teslim edildikten sonra değil — ve «imkânı yoksa». Otuz günlük süre sistemin çalıştırıldığı andan işler ve bakımı kendisi yapamayan tesisleri ilgilendirir.",
+          ] },
+          { h: "Sözleşme feshinde yirmi dört saat", p: [
+            "Aynı maddenin ikinci fıkrası sözleşmeden çıkışı düzenler. Yangın otomasyonu tesisatları ve duman kontrol sistemleri için bakım sözleşmesi feshedildiğinde, işletme yöneticisi 24 saat içinde ilçe veya şehir acil durumlar müdürlüğüne ya da tesise hizmet veren acil durum birimlerine bildirmek zorundadır.",
+            "Amacı açıktır: devlet bir tesisin bakımsız kaldığını bilmek ister. Mal sahibi açısından bu, yüklenici değişikliğinin bildirime tabi bir olay olduğu ve eski ile yeni sözleşme arasındaki boşluğun uzatılmaması gerektiği anlamına gelir.",
+          ] },
+          { h: "Rutin bakım pratikte neleri kapsar", p: [
+            "Kurallar çerçeveyi çizer; işlerin somut kapsamını üreticinin belgeleri ve proje belirler. Bizim uygulamamızda yıllık plan genellikle şunları içerir: dedektörlerin ve yangın butonlarının çalışabilirliğinin kontrolü, duman odacıklarının temizliği, devrelerin ve haberleşme hatlarının denetimi, kontrol panelinin ve göstergelerinin kontrolü, sirenlerin ve çıkış levhalarının testi, yedek besleme ile akü durumunun denetimi, kablo güzergâhlarının incelenmesi ve belgelerin güncellenmesi.",
+            "Yedek besleme ayrı bir konudur. Kontrol panelinin aküleri üç ilâ beş yıl yaşar ve sessizce ölür: bunu elektrik kesintisinde, sistem dayanması gerekirken dayanmadığında öğrenirsiniz. Bu yüzden durumları arıza sonrası değil, plana göre kontrol edilir.",
+          ] },
+          { h: "Bizde nasıl yürüyor", p: [
+            "SAT Solutions, sözleşme kapsamında kendi uzmanlarımızın kurduğu sistemlere bakım yapar: kurulu ekipmanın belgelerinden yıllık planı hazırlar, iş defterini tutar ve denetimde sunulacak belgeleri düzenler. Taşkent ve bölgelerde çalışıyoruz.",
+            "Bir tesisi teslim alıyor ve hangi bakım rejiminin geçerli olduğunu bilmiyorsanız — sistem kapsamını ve ekipman pasaportlarını gönderin, sizin durumunuza göre rutini hesaplayalım. Bu yazı normları genel hatlarıyla anlatır: ekipmanınız için kesin süreler onun belgelerinden gelir.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "乌兹别克斯坦的火灾报警系统维护：按年度计划，而不是「每季度一次」",
+        excerpt: "乌兹别克斯坦《消防安全规则》没有「每季度一次」的规定：第 148 条要求依据制造商文件编制年度工作计划。谁可以维护，30 天和 24 小时从何而来。",
+        sections: [
+          { h: "乌兹别克斯坦没有「每季度一次」的规定", p: [
+            "这是最常见的误解，甚至会写进商业报价。「火灾报警系统每季度至少维护一次」是俄罗斯指导性文件中的规定。乌兹别克斯坦适用的是内阁 2020 年 10 月 20 日第 649 号决议批准的《消防安全规则》，其构造不同。",
+            "规则第 148 条确立了另一条原则：火灾报警与灭火装置、防烟系统、火灾警报与疏散管理系统的技术维护和计划预防性检修的例行工作，依据结合制造企业技术文件及检修工期编制的年度工作计划执行。也就是说，周期取自具体设备的产品护照，而非某个通用数字。",
+          ] },
+          { h: "谁有权维护系统", p: [
+            "同一条第 148 条允许两条路径，这对预算测算很重要。第一：由依照法律接受过专门培训和定期培训的本企业员工完成。第二：由持有专门许可证的机构按合同完成。",
+            "法律并不禁止自行维护——但前提是拥有受过培训的员工，而且这种培训不是一次性的，而是定期的。实务中，在编制内保留受训专家对拥有大型系统的大企业才划算；对办公室、商铺或仓库而言，与专业机构签订合同更省钱也更可靠。",
+          ] },
+          { h: "三十天从何而来", p: [
+            "第 149 条给出的是一个常被不准确引用的条件。它并不要求所有人都签合同。规定是这样的：如果场所的专业人员不具备对消防自动化装置、防烟系统和火灾警报系统实施技术维护的能力，则应在装置投入运行后 30 天内，与持有该活动类别许可证的专业机构签订实施该项工作的合同。",
+            "关键词是「装置投入运行后」——而不是建筑竣工后——以及「不具备能力」。三十天期限自系统启用之时起算，且针对的是无法自行维护的场所。",
+          ] },
+          { h: "解除合同时的二十四小时", p: [
+            "同一条的第二段涉及退出合同。消防自动化装置和防烟系统的技术维护合同解除时，企业负责人须在 24 小时内通知区或市紧急情况部门，或为该场所提供服务的紧急情况分队。",
+            "立法意图很清楚：国家需要知道某个场所已经失去维护。对业主而言，这意味着更换承包商是一件应当报告的事，而新旧合同之间的空档最好不要拉长。",
+          ] },
+          { h: "例行维护实际包含什么", p: [
+            "规范给出框架，具体工作内容由制造商文件和设计确定。按我们的实践，年度计划通常包括：检查探测器和手动报警按钮的工作状态、清洁烟室、检测回路与通信线路、检查控制主机及其指示、测试声光报警器和出口标志、检查备用电源与蓄电池状态、检查线缆走线并更新文档。",
+            "备用电源值得单独一提。控制主机的蓄电池寿命三到五年，而且是悄无声息地失效：往往在停电时才发现——系统本该撑住，却没撑住。因此它们的状态按计划检查，而不是等出故障之后。",
+          ] },
+          { h: "我们是怎么做的", p: [
+            "SAT Solutions 按合同为我们自己的专家安装的系统提供维护：依据已安装设备的文件编制年度计划、记录工作日志、准备检查时需出示的文件。我们服务于塔什干及各地区。",
+            "如果您正在接收项目、不清楚适用哪种维护制度——请把系统构成和设备护照发给我们，我们会按您的情况核算例行方案。本文以概括方式介绍规范：您设备的确切周期以其文件为准。",
+          ] },
+        ],
+      },
+    },
+  },
+
+  {
     slug: "videonablyudenie-personalnye-dannye-uzbekistan",
     date: "2026-09-10",
     updated: "2026-09-10",
