@@ -7,6 +7,7 @@ import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 
 const UI: Record<string, { blog: string; home: string; related: string; hubsLabel: string; ctaTitle: string; ctaBtn: string; faq: string }> = {
   ru: { blog: "Блог", home: "Главная", related: "Смежные услуги", hubsLabel: "Каталог по теме", ctaTitle: "Нужна консультация или расчёт?", ctaBtn: "Получить КП", faq: "Частые вопросы" },
@@ -33,6 +34,7 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
   "zhestkie-diski": { ru: "Жёсткие диски", uz: "Qattiq disklar", en: "Hard drives", tr: "Sabit diskler", zh: "硬盘" },
   "domofoniya": { ru: "Домофония", uz: "Domofoniya", en: "Video intercoms", tr: "Diafon sistemleri", zh: "可视对讲" },
   "zamki-i-skud": { ru: "Замки и СКУД", uz: "Qulflar va SKUD", en: "Locks and access control", tr: "Kilitler ve geçiş kontrolü", zh: "锁具与门禁" },
+  "terminaly-i-schityvateli": { ru: "Терминалы и считыватели", uz: "Terminallar va oʻqigichlar", en: "Terminals and readers", tr: "Terminaller ve okuyucular", zh: "门禁终端与读卡器" },
 };
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
@@ -78,9 +80,16 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     .map((k) => ({ key: k, label: getServiceSeo(locale, k)?.h1 ?? ts(`${k}.title`) }));
 
   // Товарные хабы «Каталог по теме» — вторая нога перелинковки: статья → /products/type/<slug>
+  // Три слага склеены с одноимённой группой (GROUP_CANONICAL): /products/type/<slug>
+  // отдаёт по ним 308. Ведём сразу на группу, чтобы не гонять читателя и робота
+  // через редирект.
   const hubs = (article.hubs ?? [])
     .filter((h) => HUB_LABELS[h])
-    .map((h) => ({ slug: h, label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru }));
+    .map((h) => ({
+      href: GROUP_CANONICAL[h] ? `/products/group/${GROUP_CANONICAL[h]}` : `/products/type/${h}`,
+      slug: h,
+      label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru,
+    }));
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -210,7 +219,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                 {hubs.map((h) => (
                   <Link
                     key={h.slug}
-                    href={`/products/type/${h.slug}`}
+                    href={h.href}
                     className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
                   >
                     {h.label}
