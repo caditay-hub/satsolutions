@@ -24,6 +24,166 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "kamery-domofony-novostroyki-uzbekistan",
+    date: "2026-09-10",
+    updated: "2026-09-10",
+    related: ["cctv", "intercom"],
+    hubs: ["ip-kamery", "domofoniya", "ip-videoregistratory-nvr"],
+    loc: {
+      ru: {
+        title: "Камеры и домофоны в новостройках: что требует постановление ПП-48",
+        excerpt: "С 1 мая 2026 года камеры в каждом подъезде, лифте и на прилегающей территории и домофоны на входных дверях обязательны в проектах многоквартирных домов. Без них проект не проходит экспертизу, а дом не принимают в эксплуатацию.",
+        sections: [
+          { h: "Что изменилось с 1 мая 2026 года", p: [
+            "Постановление Президента Республики Узбекистан от 5 февраля 2026 года № ПП-48 «О дополнительных мерах по дальнейшему совершенствованию системы управления многоквартирными домами» ввело требование, которое напрямую меняет работу застройщиков. Пункт 11 устанавливает: с 1 мая 2026 года в проектной документации вновь строящихся многоквартирных домов предусматривается установка камер наблюдения в каждом подъезде, в лифтах и на прилегающей территории, а также домофонных комплексов на входных дверях.",
+            "Формулировка важна тем, что говорит не о готовом доме, а о проектной документации. Требование срабатывает на самой ранней стадии, когда до закупки оборудования ещё месяцы, — и именно поэтому его чаще всего обнаруживают поздно, когда проект уже отправлен на экспертизу.",
+          ] },
+          { h: "Два запрета, которые останавливают стройку", p: [
+            "В постановлении не рекомендация, а два прямых запрета. Первый: если эти объекты не включены в проектную документацию, проведение экспертизы проектной документации запрещается. То есть проект просто не примут к рассмотрению.",
+            "Второй запрет ждёт в конце стройки: при приёмке в эксплуатацию завершённого многоквартирного дома, если предусмотренное имущество не установлено, приёмка дома в эксплуатацию запрещается. Дом, построенный без камер и домофонов, юридически не существует как введённый объект — квартиры не оформить, ключи не выдать.",
+          ] },
+          { h: "Камеры и домофоны становятся общим имуществом", p: [
+            "Постановление относит установленное оборудование к общему имуществу дома. Оно передаётся управляющей организации на сохранение в установленном порядке, а сведения вносятся в информационный раздел «Turarjoy» информационной системы «Mening uyim» — этот раздел запущен с 1 марта 2026 года.",
+            "Практический вывод для застройщика: система не может быть временной, «чтобы прошла приёмка». Её принимает управляющая организация, ей же с ней жить, и на объекте останется след в государственной системе. Оборудование без гарантии, документации и возможности обслуживания создаст проблему уже после сдачи.",
+          ] },
+          { h: "Что закладывать в проект", p: [
+            "Из текста постановления следует минимальный состав: камеры в каждом подъезде, камеры в лифтах, камеры на прилегающей территории и домофонные комплексы на входных дверях. Точное количество и расстановку определяет проект, но подход обычно такой: камера над входной группой снаружи, камера в тамбуре или холле, по камере в каждой кабине лифта и две-три камеры на двор с перекрытием зон.",
+            "Лифтовая камера — отдельная история. Кабина движется, поэтому нужен либо гибкий шлейф в лифтовой петле, либо беспроводной канал, и это согласуется с лифтовой организацией на стадии проекта. Заложить такую камеру задним числом дороже, чем предусмотреть сразу: тянуть трассу в шахте по готовому дому никто не любит.",
+          ] },
+          { h: "Сколько это стоит по каталогу", p: [
+            "Посчитаем дом на три подъезда с одним лифтом в каждом — пятнадцать камер и три вызывные панели. По ценам каталога на сентябрь 2026, без монтажа: пятнадцать цилиндрических IP-камер 2 Мп HiLook HL-IPC-B121HE-UC по 258 900 — 3 883 500 сум; три вызывные панели Dahua DHI-VTO2111D-P-S2 по 661 900 — 1 985 700 сум; три PoE-коммутатора Hikvision DS-3E0310HP-E по 741 900 — 2 225 700 сум; шестнадцатиканальный регистратор Hikvision DS-7616NI-K1 — 1 112 900 сум; жёсткий диск Seagate SkyHawk на 4 ТБ — 1 694 900 сум.",
+            "Итого 10 902 700 сум по оборудованию. Если в доме сто восемь квартир, это около 101 тысячи сум на квартиру — меньше стоимости одной входной двери. На фоне цены квадратного метра сумма практически незаметна, и именно поэтому спор с требованием обходится дороже, чем его выполнение.",
+          ] },
+          { h: "Что мы берём на себя", p: [
+            "SAT Solutions проектирует, поставляет и монтирует ровно этот состав: подъездное и дворовое видеонаблюдение, камеры в лифтах, IP-домофонию с переадресацией вызова на смартфон и серверную часть с архивом. Работаем по всему Узбекистану, оборудование идёт официальными каналами с гарантией производителя и сертификатами — теми самыми, которые понадобятся при передаче общего имущества управляющей организации.",
+            "Пришлите проект или хотя бы поэтажный план и число подъездов — посчитаем спецификацию и смету под ваш дом. Выезд инженера и расчёт бесплатны, ответ на заявку — в течение рабочего дня.",
+          ] },
+        ],
+      },
+      uz: {
+        title: "Yangi uylarda kameralar va domofonlar: PQ-48 qarori nimani talab qiladi",
+        excerpt: "2026-yil 1-maydan koʻp kvartirali uylar loyihalarida har bir podyezdga, liftlarga va tutash hududga kuzatuv kameralari, kirish eshiklariga esa domofon komplekslari majburiy. Ularsiz loyiha ekspertizadan oʻtmaydi, uy esa foydalanishga qabul qilinmaydi.",
+        sections: [
+          { h: "2026-yil 1-maydan nima oʻzgardi", p: [
+            "Oʻzbekiston Respublikasi Prezidentining 2026-yil 5-fevraldagi «Koʻp kvartirali uylarni boshqarish tizimini yanada takomillashtirish boʻyicha qoʻshimcha chora-tadbirlar toʻgʻrisida»gi PQ-48-son qarori quruvchilarning ishini bevosita oʻzgartiradigan talabni kiritdi. 11-band belgilaydi: 2026-yil 1-maydan boshlab yangi quriladigan koʻp kvartirali uylarning loyiha hujjatlarida har bir podyezdga, liftlarga va tutash hududga kuzatuv kameralari, shuningdek, kirish eshiklariga domofon komplekslari oʻrnatish nazarda tutiladi.",
+            "Bu qoidaning muhim jihati shundaki, u tayyor uy haqida emas, loyiha hujjatlari haqida gapiradi. Talab eng erta bosqichda, uskuna xaridiga hali oylar borligida ishlaydi — aynan shuning uchun uni koʻpincha kech, loyiha ekspertizaga joʻnatilganda payqashadi.",
+          ] },
+          { h: "Qurilishni toʻxtatadigan ikkita taqiq", p: [
+            "Qarorda tavsiya emas, ikkita toʻgʻridan-toʻgʻri taqiq bor. Birinchisi: ushbu obyektlar loyiha hujjatlariga kiritilmaganda loyiha hujjatlarini ekspertizadan oʻtkazish taqiqlanadi. Yaʼni loyiha koʻrib chiqishga ham qabul qilinmaydi.",
+            "Ikkinchi taqiq qurilish oxirida kutadi: qurilishi tugallangan koʻp kvartirali uyni foydalanishga qabul qilishda nazarda tutilgan mol-mulk oʻrnatilmagan boʻlsa, uyni foydalanishga qabul qilish taqiqlanadi. Kamerasiz va domofonsiz qurilgan uy yuridik jihatdan foydalanishga topshirilgan obyekt sifatida mavjud emas — kvartiralarni rasmiylashtirib ham, kalitlarni berib ham boʻlmaydi.",
+          ] },
+          { h: "Kameralar va domofonlar umumiy mol-mulkka aylanadi", p: [
+            "Qaror oʻrnatilgan uskunani uyning umumiy mol-mulkiga kiritadi. U belgilangan tartibda boshqaruvchiga saqlash uchun topshiriladi, maʼlumotlar esa «Mening uyim» axborot tizimining «Turarjoy» boʻlimiga kiritiladi — bu boʻlim 2026-yil 1-martdan ishga tushirilgan.",
+            "Quruvchi uchun amaliy xulosa: tizim «qabul oʻtsin deb» vaqtinchalik boʻlishi mumkin emas. Uni boshqaruvchi tashkilot qabul qiladi va u bilan ishlaydi, obyektda esa davlat tizimida iz qoladi. Kafolatsiz, hujjatsiz va xizmat koʻrsatib boʻlmaydigan uskuna topshirishdan keyin muammoga aylanadi.",
+          ] },
+          { h: "Loyihaga nimani kiritish kerak", p: [
+            "Qaror matnidan minimal tarkib kelib chiqadi: har bir podyezdda kameralar, liftlarda kameralar, tutash hududda kameralar va kirish eshiklarida domofon komplekslari. Aniq soni va joylashuvini loyiha belgilaydi, lekin yondashuv odatda shunday: tashqarida kirish guruhi tepasida kamera, tambur yoki xollda kamera, har bir lift kabinasida bittadan kamera va hovliga zonalari kesishadigan ikki-uchta kamera.",
+            "Lift kamerasi — alohida masala. Kabina harakatlanadi, shuning uchun lift halqasida moslashuvchan shleyf yoki simsiz kanal kerak, bu esa loyiha bosqichida lift tashkiloti bilan kelishiladi. Bunday kamerani keyinchalik qoʻshish qimmatroq: tayyor uyda shaxtada trassa tortishni hech kim yoqtirmaydi.",
+          ] },
+          { h: "Katalog boʻyicha qancha turadi", p: [
+            "Har birida bitta lift boʻlgan uch podyezdli uyni hisoblaymiz — oʻn beshta kamera va uchta chaqiruv paneli. 2026-yil sentyabr katalog narxlari boʻyicha, montajsiz: oʻn beshta silindrik IP-kamera 2 Mp HiLook HL-IPC-B121HE-UC, donasi 258 900 dan — 3 883 500 soʻm; uchta chaqiruv paneli Dahua DHI-VTO2111D-P-S2, donasi 661 900 dan — 1 985 700 soʻm; uchta PoE-kommutator Hikvision DS-3E0310HP-E, donasi 741 900 dan — 2 225 700 soʻm; oʻn olti kanalli registrator Hikvision DS-7616NI-K1 — 1 112 900 soʻm; 4 TB li Seagate SkyHawk qattiq diski — 1 694 900 soʻm.",
+            "Uskuna boʻyicha jami 10 902 700 soʻm. Uyda bir yuz sakkiz kvartira boʻlsa, bu bitta kvartiraga taxminan 101 ming soʻm — bitta kirish eshigidan ham arzon. Kvadrat metr narxi fonida bu deyarli sezilmaydi, shuning uchun talab bilan bahslashish uni bajarishdan qimmatga tushadi.",
+          ] },
+          { h: "Biz nimani oʻz zimmamizga olamiz", p: [
+            "SAT Solutions aynan shu tarkibni loyihalaydi, yetkazib beradi va montaj qiladi: podyezd va hovli videokuzatuvi, liftlardagi kameralar, chaqiruvni smartfonga yoʻnaltiruvchi IP-domofoniya va arxivli server qismi. Butun Oʻzbekiston boʻylab ishlaymiz, uskuna rasmiy kanallar orqali ishlab chiqaruvchi kafolati va sertifikatlari bilan keladi — aynan ular umumiy mol-mulkni boshqaruvchiga topshirishda kerak boʻladi.",
+            "Loyihani yoki hech boʻlmaganda qavat rejasi va podyezdlar sonini yuboring — uyingizga moslab spetsifikatsiya va smeta hisoblab beramiz. Muhandis chiqishi va hisob-kitob bepul, arizaga javob — bir ish kuni ichida.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Cameras and intercoms in new buildings: what decree PP-48 requires",
+        excerpt: "From 1 May 2026, cameras in every entrance, lift and adjoining area and intercoms on entrance doors are mandatory in the designs of apartment buildings in Uzbekistan. Without them the design fails expert review and the building is not accepted into service.",
+        sections: [
+          { h: "What changed on 1 May 2026", p: [
+            "Decree of the President of the Republic of Uzbekistan No. PP-48 of 5 February 2026, «On additional measures to further improve the management system of apartment buildings», introduced a requirement that changes a developer's work directly. Clause 11 states that from 1 May 2026 the design documentation of newly built apartment buildings shall provide for surveillance cameras in every entrance, in the lifts and in the adjoining area, as well as intercom systems on the entrance doors.",
+            "The wording matters because it speaks about design documentation, not a finished building. The requirement fires at the earliest stage, months before any equipment is purchased — which is exactly why it is usually noticed late, once the design has already gone to expert review.",
+          ] },
+          { h: "Two prohibitions that stop construction", p: [
+            "The decree contains no recommendation but two direct prohibitions. First: if these items are not included in the design documentation, carrying out the expert review of that documentation is prohibited. The design will simply not be accepted for consideration.",
+            "The second prohibition waits at the end of construction: when a completed apartment building is accepted into service and the required property has not been installed, accepting the building into service is prohibited. A building erected without cameras and intercoms does not legally exist as a commissioned object — flats cannot be registered and keys cannot be handed over.",
+          ] },
+          { h: "Cameras and intercoms become common property", p: [
+            "The decree classifies the installed equipment as the common property of the building. It is handed over to the managing organisation for safekeeping in the established manner, and the details are entered into the «Turarjoy» section of the «Mening uyim» information system, launched on 1 March 2026.",
+            "The practical conclusion for a developer: the system cannot be a temporary one fitted «so that the handover passes». The managing organisation accepts it and then lives with it, and a record stays in a state system. Equipment without a warranty, documentation and a service path becomes a problem right after handover.",
+          ] },
+          { h: "What to put in the design", p: [
+            "The text implies a minimum scope: cameras in every entrance, cameras in the lifts, cameras in the adjoining area and intercom systems on the entrance doors. Exact counts and placement come from the design, but the usual approach is a camera above the entrance group outside, a camera in the lobby, one camera per lift car and two or three yard cameras with overlapping zones.",
+            "The lift camera is a story of its own. The car moves, so it needs either a flexible cable in the travelling loop or a wireless link, and this is agreed with the lift contractor at the design stage. Adding such a camera afterwards costs more: nobody enjoys pulling a route through a shaft in a finished building.",
+          ] },
+          { h: "What it costs from the catalogue", p: [
+            "Take a building with three entrances and one lift in each — fifteen cameras and three door stations. At catalogue prices as of September 2026, installation excluded: fifteen HiLook HL-IPC-B121HE-UC 2 MP bullet IP cameras at 258 900 each for 3 883 500 UZS; three Dahua DHI-VTO2111D-P-S2 door stations at 661 900 each for 1 985 700 UZS; three Hikvision DS-3E0310HP-E PoE switches at 741 900 each for 2 225 700 UZS; a sixteen-channel Hikvision DS-7616NI-K1 recorder at 1 112 900 UZS; and a 4 TB Seagate SkyHawk drive at 1 694 900 UZS.",
+            "That is 10 902 700 UZS of equipment. For a building of one hundred and eight flats it works out at roughly 101 thousand UZS per flat — less than a single entrance door. Against the price of a square metre the sum is barely visible, which is why arguing with the requirement costs more than meeting it.",
+          ] },
+          { h: "What we take on", p: [
+            "SAT Solutions designs, supplies and installs exactly this scope: entrance and yard surveillance, cameras in lifts, IP intercoms that forward the call to a smartphone, and the server side with the archive. We work across Uzbekistan; equipment arrives through official channels with the manufacturer's warranty and certificates — the very ones needed when common property is handed to the managing organisation.",
+            "Send us the design, or at least a floor plan and the number of entrances, and we will price a specification and an estimate for your building. The engineer's visit and the calculation are free, and we answer enquiries within one business day.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Yeni binalarda kamera ve diafon: PP-48 kararı ne istiyor",
+        excerpt: "1 Mayıs 2026'dan itibaren Özbekistan'da yeni apartman projelerinde her girişe, asansöre ve bitişik alana kamera, giriş kapılarına diafon zorunlu. Bunlar olmadan proje ekspertizden geçmiyor, bina da kabul edilmiyor.",
+        sections: [
+          { h: "1 Mayıs 2026'da ne değişti", p: [
+            "Özbekistan Cumhurbaşkanının 5 Şubat 2026 tarihli «Apartman yönetim sisteminin daha da iyileştirilmesine ilişkin ek tedbirler hakkında» PP-48 sayılı kararı, müteahhitlerin işini doğrudan değiştiren bir zorunluluk getirdi. 11. madde şunu belirliyor: 1 Mayıs 2026'dan itibaren yeni inşa edilen apartmanların proje belgelerinde her girişe, asansörlere ve bitişik alana gözetim kameraları, ayrıca giriş kapılarına diafon sistemleri konulması öngörülür.",
+            "İfadenin önemi, bitmiş binadan değil proje belgelerinden söz etmesinde. Zorunluluk, ekipman alımına daha aylar varken en erken aşamada devreye giriyor — tam da bu yüzden çoğunlukla geç, proje ekspertize gönderildiğinde fark ediliyor.",
+          ] },
+          { h: "İnşaatı durduran iki yasak", p: [
+            "Kararda tavsiye değil, iki doğrudan yasak var. Birincisi: bu unsurlar proje belgelerine dâhil edilmediğinde proje belgelerinin ekspertizden geçirilmesi yasaktır. Yani proje incelemeye bile alınmaz.",
+            "İkinci yasak inşaatın sonunda bekliyor: tamamlanmış apartmanın kabulünde öngörülen mülk kurulmamışsa, binanın kullanıma kabulü yasaktır. Kamerasız ve diafonsuz yapılan bina, hukuken teslim edilmiş bir yapı olarak yoktur — daireler tapuya işlenemez, anahtar teslim edilemez.",
+          ] },
+          { h: "Kamera ve diafonlar ortak mülk hâline geliyor", p: [
+            "Karar, kurulan ekipmanı binanın ortak mülkü sayıyor. Ekipman belirlenen usulde yönetim kuruluşuna muhafaza için devredilir ve bilgiler «Mening uyim» bilgi sisteminin «Turarjoy» bölümüne işlenir; bu bölüm 1 Mart 2026'da devreye alındı.",
+            "Müteahhit için pratik sonuç: sistem «kabul geçsin diye» geçici olamaz. Onu yönetim kuruluşu teslim alır ve onunla yaşar, tesiste ise devlet sisteminde iz kalır. Garantisiz, belgesiz ve servis edilemeyen ekipman, teslimden hemen sonra soruna dönüşür.",
+          ] },
+          { h: "Projeye ne konmalı", p: [
+            "Metinden asgari kapsam çıkıyor: her girişte kamera, asansörlerde kamera, bitişik alanda kamera ve giriş kapılarında diafon sistemleri. Kesin sayı ve yerleşimi proje belirler, ama alışılmış yaklaşım şudur: dışarıda giriş grubunun üzerinde bir kamera, holde bir kamera, her asansör kabininde birer kamera ve bahçede alanları örtüşen iki-üç kamera.",
+            "Asansör kamerası ayrı bir konu. Kabin hareket ettiği için ya asansör askı halkasında esnek kablo ya da kablosuz bağlantı gerekir; bu da proje aşamasında asansör firmasıyla mutabık kalınır. Böyle bir kamerayı sonradan eklemek daha pahalıdır: bitmiş binada kuyudan güzergâh çekmeyi kimse sevmez.",
+          ] },
+          { h: "Katalog üzerinden maliyeti", p: [
+            "Her birinde bir asansör bulunan üç girişli bir bina alalım — on beş kamera ve üç kapı paneli. Eylül 2026 katalog fiyatlarıyla, montaj hariç: on beş adet HiLook HL-IPC-B121HE-UC 2 MP silindirik IP kamera tanesi 258 900'den 3 883 500 UZS; üç adet Dahua DHI-VTO2111D-P-S2 kapı paneli tanesi 661 900'den 1 985 700 UZS; üç adet Hikvision DS-3E0310HP-E PoE switch tanesi 741 900'den 2 225 700 UZS; on altı kanallı Hikvision DS-7616NI-K1 kayıt cihazı 1 112 900 UZS; 4 TB Seagate SkyHawk disk 1 694 900 UZS.",
+            "Ekipman toplamı 10 902 700 UZS. Yüz sekiz daireli bir binada bu, daire başına yaklaşık 101 bin UZS eder — tek bir giriş kapısından ucuz. Metrekare fiyatının yanında tutar neredeyse görünmez; bu yüzden zorunlulukla tartışmak onu yerine getirmekten pahalıya gelir.",
+          ] },
+          { h: "Biz neyi üstleniyoruz", p: [
+            "SAT Solutions tam olarak bu kapsamı projelendirir, tedarik eder ve kurar: giriş ve bahçe gözetimi, asansör kameraları, çağrıyı akıllı telefona yönlendiren IP diafon ve arşivli sunucu tarafı. Özbekistan genelinde çalışıyoruz; ekipman resmi kanallardan, üretici garantisi ve sertifikalarıyla gelir — ortak mülk yönetim kuruluşuna devredilirken gereken belgeler tam da bunlardır.",
+            "Projeyi ya da en azından kat planını ve giriş sayısını gönderin — binanıza göre şartname ve keşif hazırlayalım. Mühendis çıkışı ve hesap ücretsizdir, taleplere bir iş günü içinde dönüyoruz.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "新建住宅的摄像机与可视对讲：PP-48 号决议要求什么",
+        excerpt: "自 2026 年 5 月 1 日起，乌兹别克斯坦新建多户住宅的设计文件必须包含每个单元、每部电梯和周边区域的摄像机，以及入户门上的可视对讲。缺少这些，设计通不过审查，房屋也无法竣工验收。",
+        sections: [
+          { h: "2026 年 5 月 1 日起变了什么", p: [
+            "乌兹别克斯坦共和国总统 2026 年 2 月 5 日第 PP-48 号决议《关于进一步完善多户住宅管理体系的补充措施》提出了一项直接改变开发商工作的要求。第 11 条规定：自 2026 年 5 月 1 日起，新建多户住宅的设计文件中须预设每个单元、电梯内和周边区域的监控摄像机，以及入户门上的可视对讲设备。",
+            "这条表述的关键在于，它针对的不是建成的楼房，而是设计文件。要求在最早阶段生效——距离采购设备还有数月，也正因如此往往被发现得太晚，那时设计已经送审。",
+          ] },
+          { h: "两条让工程停下来的禁止条款", p: [
+            "决议中不是建议，而是两条直接的禁止。其一：这些设施未纳入设计文件时，禁止对该设计文件进行专家审查。也就是说，设计根本不会被受理。",
+            "第二条禁止等在工程末尾：竣工的多户住宅办理验收时，若应设置的财产未安装，禁止将房屋交付使用。没有摄像机和可视对讲而建成的楼房，在法律上不存在为已交付的对象——房屋无法登记，钥匙也无法交付。",
+          ] },
+          { h: "摄像机与可视对讲成为共有财产", p: [
+            "决议把已安装的设备归入房屋共有财产。它按规定程序移交给管理机构保管，相关信息录入「Mening uyim」信息系统的「Turarjoy」板块——该板块已于 2026 年 3 月 1 日上线。",
+            "对开发商的实际含义是：系统不能是「为了通过验收」的临时之物。接收它的是管理机构，日后与它相处的也是管理机构，而项目会在国家系统中留下记录。没有质保、没有文档、无法维护的设备，交付之后立刻变成麻烦。",
+          ] },
+          { h: "设计里该放什么", p: [
+            "从条文可推出最小配置：每个单元的摄像机、电梯内的摄像机、周边区域的摄像机，以及入户门上的可视对讲。确切数量和点位由设计确定，通常的做法是：室外入户门上方一台，门厅一台，每部电梯轿厢各一台，院内两到三台并使覆盖区域相互交叠。",
+            "电梯摄像机是单独的一件事。轿厢在移动，因此需要随行电缆或无线通道，这要在设计阶段与电梯单位协调。事后加装成本更高：在建成的楼里往井道内敷线，谁都不乐意。",
+          ] },
+          { h: "按目录算多少钱", p: [
+            "以三个单元、每单元一部电梯的楼为例——十五台摄像机、三台门口机。按 2026 年 9 月目录价，不含施工：十五台 HiLook HL-IPC-B121HE-UC 200 万像素筒型 IP 摄像机每台 258 900、合计 3 883 500 苏姆；三台大华 DHI-VTO2111D-P-S2 门口机每台 661 900、合计 1 985 700 苏姆；三台海康 DS-3E0310HP-E PoE 交换机每台 741 900、合计 2 225 700 苏姆；十六路海康 DS-7616NI-K1 录像机 1 112 900 苏姆；4 TB 希捷 SkyHawk 硬盘 1 694 900 苏姆。",
+            "设备合计 10 902 700 苏姆。若楼内有一百零八套住宅，折合每套约 10.1 万苏姆——比一扇入户门还便宜。与每平方米的售价相比几乎看不见，因此与这项要求较劲比满足它更贵。",
+          ] },
+          { h: "我们承担什么", p: [
+            "SAT Solutions 正是按这一范围做设计、供货和施工：单元与院区视频监控、电梯轿厢摄像机、可将呼叫转至手机的 IP 可视对讲，以及带存档的服务器端。我们服务于乌兹别克斯坦全境，设备经官方渠道供应，附制造商质保与合格证书——正是向管理机构移交共有财产时所需要的那些文件。",
+            "请把设计图，或至少楼层平面和单元数量发给我们，我们会为您的楼盘核算配置清单和预算。工程师上门与核算均免费，申请在一个工作日内回复。",
+          ] },
+        ],
+      },
+    },
+  },
+
+  {
     slug: "trubka-domofona-zamena",
     date: "2026-09-04",
     updated: "2026-09-09",
