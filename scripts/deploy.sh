@@ -111,7 +111,7 @@ echo "    сборка полная (BUILD_ID $(cat "$W/BUILD_ID"))"
 # 5) Перезапуск ТОЛЬКО satweb-приложений (CRM/боты не трогаем).
 #    sat-api остаётся на restart: fork-режим, node dist/index.js, поднимается за доли
 #    секунды. sat-web/sat-admin с 09.09.2026 живут в cluster_mode (см.
-#    scripts/ecosystem.satweb.js), поэтому им — reload: новый воркер поднимается,
+#    scripts/ecosystem.satweb.config.js), поэтому им — reload: новый воркер поднимается,
 #    отдаёт `listening`, и только потом гаснет старый. Это убирает окно 502 на каждом
 #    деплое (за 03.09 их было 280, за 08.09 — 229, все внутри окон рестарта).
 pm2 restart sat-api --update-env
@@ -147,15 +147,41 @@ fi
 
 # 7) Контроль: живой сайт должен ссылаться на файлы, которые реально отдаются.
 #    Именно эта проверка ловит рассинхрон «процесс на старом билде, диск на новом».
-HTML=$(curl -s -m 30 -H 'Host: satsolutions.uz' http://localhost:3000/ || true)
-CSS=$(printf '%s' "$HTML" | grep -o '/_next/static/css/[a-z0-9]*\.css' | head -1)
+#
+#    ⚠ ЖДЁМ, А НЕ ПАДАЕМ СРАЗУ. С переходом на `pm2 reload` (10.09.2026) старый воркер
+#    доигрывает запросы до kill_timeout — до десяти секунд, — и всё это время отвечает
+#    ПРЕДЫДУЩЕЙ сборкой. Проверка, запущенная сразу после reload, ловила именно его и
+#    роняла деплой на живом и здоровом сайте. Даём до 40 секунд на смену воркера.
+CSS=""
+CODE=""
+for i in $(seq 1 20); do
+  HTML=$(curl -s -m 30 -H 'Host: satsolutions.uz' http://localhost:3000/ || true)
+  CSS=$(printf '%s' "$HTML" | grep -o '/_next/static/css/[a-z0-9]*\.css' | head -1)
+  if [ -n "$CSS" ]; then
+    CODE=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -H 'Host: satsolutions.uz' "http://localhost:3000$CSS")
+    [ "$CODE" = "200" ] && break
+  fi
+  sleep 2
+done
 if [ -z "$CSS" ]; then
   echo "    !! главная не отдала HTML со ссылкой на CSS — проверьте pm2 logs sat-web"
   exit 1
 fi
-CODE=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -H 'Host: satsolutions.uz' "http://localhost:3000$CSS")
 if [ "$CODE" != "200" ]; then
-  echo "    !! КРИТИЧНО: главная ссылается на $CSS, а он отдаёт $CODE."
+  # Не оставляем сайт без стилей: сначала лечим жёстким рестартом, потом проверяем снова.
+  echo "    !! за 40 с воркер не сменился ($CSS -> $CODE) — аварийный pm2 restart sat-web"
+  pm2 restart sat-web --update-env
+  for i in $(seq 1 15); do
+    sleep 2
+    HTML=$(curl -s -m 30 -H 'Host: satsolutions.uz' http://localhost:3000/ || true)
+    CSS=$(printf '%s' "$HTML" | grep -o '/_next/static/css/[a-z0-9]*\.css' | head -1)
+    [ -z "$CSS" ] && continue
+    CODE=$(curl -s -o /dev/null -w '%{http_code}' -m 20 -H 'Host: satsolutions.uz' "http://localhost:3000$CSS")
+    [ "$CODE" = "200" ] && break
+  done
+fi
+if [ "$CODE" != "200" ]; then
+  echo "    !! КРИТИЧНО: даже после рестарта главная ссылается на $CSS, а он отдаёт $CODE."
   echo "       Процесс раздаёт не ту сборку, что лежит на диске — сайт будет без стилей."
   exit 1
 fi
