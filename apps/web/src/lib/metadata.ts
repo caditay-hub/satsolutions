@@ -41,6 +41,10 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         authors: [{ name: "SAT Solutions" }],
         creator: "SAT Solutions",
         publisher: "SAT Solutions",
+        // Подтверждение владения для Bing Webmaster Tools (кабинет заведён 10.09.2026).
+        // Тег нужен постоянно: Bing периодически перепроверяет владение и снимает сайт,
+        // если подтверждение исчезло. Индекс Bing — источник ответов поиска ChatGPT и Copilot.
+        verification: { other: { "msvalidate.01": "8B426810555837A71D264757187B02D2" } },
         formatDetection: {
             email: false,
             address: false,
