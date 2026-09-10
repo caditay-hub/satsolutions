@@ -24,6 +24,166 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "videonablyudenie-personalnye-dannye-uzbekistan",
+    date: "2026-09-10",
+    updated: "2026-09-10",
+    related: ["cctv", "access"],
+    hubs: ["ip-kamery", "zamki-i-skud"],
+    loc: {
+      ru: {
+        title: "Видеонаблюдение и персональные данные: где по закону может лежать архив",
+        excerpt: "Закон РУз «О персональных данных» № ЗРУ-547 требует хранить базы с данными граждан республики на технических средствах в Узбекистане. Что это значит для видеоархива, распознавания лиц и биометрии в СКУД.",
+        sections: [
+          { h: "Почему видеозапись — это персональные данные", p: [
+            "Закон Республики Узбекистан «О персональных данных» от 2 июля 2019 года № ЗРУ-547 определяет персональные данные как зафиксированную на электронном, бумажном или ином носителе информацию, относящуюся к определённому физическому лицу или дающую возможность его идентификации. Формулировка «дающую возможность идентификации» и есть ключ: запись, на которой различимо лицо человека, под это определение попадает.",
+            "Отсюда следует неожиданный для многих вывод: обычный видеорегистратор в офисе — это база персональных данных, а компания, которая его поставила и настроила себе, выступает их оператором. Со всеми вытекающими обязанностями, о которых обычно не думают до первой проверки или жалобы.",
+          ] },
+          { h: "Биометрия — отдельная и более строгая категория", p: [
+            "Закон выделяет биометрические данные отдельно: это персональные данные, характеризующие анатомические и физиологические особенности субъекта. Распознавание лица на турникете, отпечаток пальца на терминале учёта рабочего времени, шаблон радужной оболочки — всё это биометрия в смысле закона, а не просто «удобный способ открыть дверь».",
+            "Разница практическая. Карта доступа обезличена: потерял — выдали новую. Биометрический шаблон изменить нельзя, и утечка такой базы необратима. Именно поэтому к обработке биометрических данных закон предъявляет отдельные требования, и именно поэтому терминал с распознаванием лиц нельзя ставить «просто чтобы было».",
+          ] },
+          { h: "Статья 27-1: где физически должна лежать база", p: [
+            "Это самое важное для выбора оборудования. Закон дополнен статьёй 27-1 об особых условиях обработки персональных данных граждан Республики Узбекистан. Согласно ей, собственник или оператор при обработке персональных данных граждан республики с использованием информационных технологий, в том числе во всемирной информационной сети Интернет, обязан обеспечить их сбор, систематизацию и хранение в базах персональных данных на технических средствах, физически размещённых на территории Республики Узбекистан и зарегистрированных в установленном порядке в Государственном реестре баз персональных данных.",
+            "Уполномоченный государственный орган в этой области — Государственный центр персонализации при Кабинете Министров. Он ведёт Государственный реестр баз персональных данных, выдаёт свидетельство о регистрации базы и в пределах своих полномочий контролирует соблюдение законодательства.",
+          ] },
+          { h: "Что это значит для облачного видеонаблюдения", p: [
+            "Массовые облачные сервисы производителей камер удобны: поставил камеру, привязал к приложению, смотришь из любой точки. Вопрос в том, где физически лежит запись. Если система идентифицирует граждан Узбекистана, а сервер находится за пределами республики, конструкция вступает в противоречие с требованием о размещении базы на территории страны.",
+            "Отсюда наша инженерная позиция, которую мы объясняем каждому заказчику: локальный регистратор или сервер на объекте — это не консерватизм и не попытка продать железо. Удалённый доступ при этом никуда не девается: смотреть с телефона можно и через локальный регистратор, разница только в том, где хранится архив.",
+          ] },
+          { h: "Что обязан сделать владелец системы", p: [
+            "Первое — уведомление. Субъект при включении его персональных данных в базу должен быть письменно уведомлён о целях обработки и о своих правах. На практике это и есть та самая табличка «ведётся видеонаблюдение», но табличкой обязанность не исчерпывается: для сотрудников, чьи биометрические данные попадают в СКУД, нужен документ.",
+            "Второе — передача третьим лицам. Если персональные данные передаются третьему лицу, собственник или оператор в течение трёх дней письменно уведомляет об этом субъекта. Третье — сроки: обязанности по защите данных возникают с момента их сбора и действуют до момента уничтожения либо обезличивания. То есть «мы просто храним архив и никому его не показываем» от обязанностей не освобождает.",
+          ] },
+          { h: "Как мы это учитываем в проектах", p: [
+            "SAT Solutions проектирует системы так, чтобы архив и биометрические шаблоны оставались на объекте заказчика или на его сервере в Узбекистане: локальные регистраторы, серверы видеонаблюдения, СКУД с локальной базой. Удалённый доступ настраиваем через защищённое подключение, а не через перенос базы за рубеж.",
+            "Эта статья описывает требования закона в общем виде и не заменяет юридическую консультацию по конкретному объекту: состав данных, круг субъектов и схема обработки у каждого заказчика свои. Если вам нужна оценка конкретной конфигурации — присылайте описание системы, разберём вместе с вашим юристом.",
+          ] },
+        ],
+      },
+      uz: {
+        title: "Videokuzatuv va shaxsga doir maʼlumotlar: qonun boʻyicha arxiv qayerda turishi mumkin",
+        excerpt: "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547 qonuni respublika fuqarolari maʼlumotlari bazasini Oʻzbekiston hududidagi texnik vositalarda saqlashni talab qiladi. Bu videoarxiv, yuzni tanish va SKUD biometriyasi uchun nimani anglatadi.",
+        sections: [
+          { h: "Nega videoyozuv shaxsga doir maʼlumot hisoblanadi", p: [
+            "Oʻzbekiston Respublikasining 2019-yil 2-iyuldagi «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547-son qonuni shaxsga doir maʼlumotlarni elektron, qogʻoz yoki boshqa moddiy tashuvchida qayd etilgan, muayyan jismoniy shaxsga taalluqli yoki uni identifikatsiya qilish imkonini beruvchi axborot sifatida belgilaydi. «Identifikatsiya qilish imkonini beruvchi» iborasi kalit boʻlib xizmat qiladi: odamning yuzi ajralib turadigan yozuv shu taʼrifga tushadi.",
+            "Bundan koʻpchilik uchun kutilmagan xulosa kelib chiqadi: ofisdagi oddiy videoregistrator — bu shaxsga doir maʼlumotlar bazasi, uni oʻrnatgan va sozlagan kompaniya esa operator sifatida chiqadi. Odatda birinchi tekshiruv yoki shikoyatgacha oʻylanmaydigan barcha majburiyatlar bilan birga.",
+          ] },
+          { h: "Biometriya — alohida va qatʼiyroq toifa", p: [
+            "Qonun biometrik maʼlumotlarni alohida ajratadi: bu subyektning anatomik va fiziologik xususiyatlarini tavsiflovchi shaxsga doir maʼlumotlar. Turniketdagi yuzni tanish, ish vaqtini hisobga olish terminalidagi barmoq izi, koʻz pardasi shabloni — bularning barchasi qonun maʼnosida biometriya, shunchaki «eshikni ochishning qulay usuli» emas.",
+            "Farq amaliy. Kirish kartasi shaxssiz: yoʻqotding — yangisini berishadi. Biometrik shablonni oʻzgartirib boʻlmaydi, bunday baza sizib chiqsa, buni qaytarib boʻlmaydi. Aynan shuning uchun qonun biometrik maʼlumotlarni qayta ishlashga alohida talablar qoʻyadi va aynan shuning uchun yuzni tanish terminalini «shunchaki boʻlsin deb» qoʻyib boʻlmaydi.",
+          ] },
+          { h: "27-1-modda: baza jismonan qayerda boʻlishi kerak", p: [
+            "Uskuna tanlash uchun eng muhimi shu. Qonun Oʻzbekiston Respublikasi fuqarolarining shaxsga doir maʼlumotlarini qayta ishlashning alohida shartlari haqidagi 27-1-modda bilan toʻldirilgan. Unga koʻra, mulkdor yoki operator respublika fuqarolarining shaxsga doir maʼlumotlarini axborot texnologiyalaridan, jumladan, jahon axborot tarmogʻi Internetdan foydalangan holda qayta ishlashda ularni Oʻzbekiston Respublikasi hududida jismonan joylashgan va belgilangan tartibda Shaxsga doir maʼlumotlar bazalarining davlat reyestrida roʻyxatga olingan texnik vositalardagi bazalarda yigʻish, tizimlashtirish va saqlashni taʼminlashi shart.",
+            "Ushbu sohadagi vakolatli davlat organi — Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi. U Shaxsga doir maʼlumotlar bazalarining davlat reyestrini yuritadi, baza roʻyxatga olingani haqida guvohnoma beradi va oʻz vakolatlari doirasida qonunchilikka rioya etilishini nazorat qiladi.",
+          ] },
+          { h: "Bulutli videokuzatuv uchun bu nimani anglatadi", p: [
+            "Kamera ishlab chiqaruvchilarining ommaviy bulutli xizmatlari qulay: kamerani qoʻyding, ilovaga bogʻlading, istalgan joydan koʻrasan. Savol shundaki, yozuv jismonan qayerda yotadi. Agar tizim Oʻzbekiston fuqarolarini identifikatsiya qilsa, server esa respublikadan tashqarida boʻlsa, bu qurilma bazani mamlakat hududida joylashtirish talabiga zid keladi.",
+            "Bundan har bir buyurtmachiga tushuntiradigan muhandislik pozitsiyamiz kelib chiqadi: obyektdagi lokal registrator yoki server — bu konservatizm ham, temir sotish urinishi ham emas. Masofaviy kirish esa hech qayerga ketmaydi: lokal registrator orqali ham telefondan koʻrish mumkin, farq faqat arxiv qayerda saqlanishida.",
+          ] },
+          { h: "Tizim egasi nima qilishi shart", p: [
+            "Birinchisi — xabardor qilish. Subyekt oʻzining shaxsga doir maʼlumotlari bazaga kiritilayotganda qayta ishlash maqsadlari va oʻz huquqlari haqida yozma ravishda xabardor qilinishi kerak. Amalda bu oʻsha «videokuzatuv olib borilmoqda» yozuvi, lekin majburiyat yozuv bilan tugamaydi: biometrik maʼlumotlari SKUDga tushadigan xodimlar uchun hujjat kerak.",
+            "Ikkinchisi — uchinchi shaxslarga uzatish. Agar shaxsga doir maʼlumotlar uchinchi shaxsga uzatilsa, mulkdor yoki operator bu haqda subyektni uch kun ichida yozma ravishda xabardor qiladi. Uchinchisi — muddatlar: maʼlumotlarni himoya qilish majburiyatlari ularni yigʻish paytidan boshlanadi va yoʻq qilinishi yoki shaxssizlantirilishigacha amal qiladi. Yaʼni «biz shunchaki arxiv saqlaymiz va hech kimga koʻrsatmaymiz» majburiyatlardan ozod qilmaydi.",
+          ] },
+          { h: "Loyihalarda buni qanday hisobga olamiz", p: [
+            "SAT Solutions tizimlarni shunday loyihalaydiki, arxiv va biometrik shablonlar buyurtmachi obyektida yoki uning Oʻzbekistondagi serverida qoladi: lokal registratorlar, videokuzatuv serverlari, lokal bazali SKUD. Masofaviy kirishni bazani chet elga koʻchirish orqali emas, himoyalangan ulanish orqali sozlaymiz.",
+            "Ushbu maqola qonun talablarini umumiy holda tavsiflaydi va aniq obyekt boʻyicha yuridik maslahatni almashtirmaydi: maʼlumotlar tarkibi, subyektlar doirasi va qayta ishlash sxemasi har bir buyurtmachida oʻziga xos. Aniq konfiguratsiyaga baho kerak boʻlsa — tizim tavsifini yuboring, yuristingiz bilan birga koʻrib chiqamiz.",
+          ] },
+        ],
+      },
+      en: {
+        title: "Video surveillance and personal data: where the archive may legally be stored",
+        excerpt: "Uzbekistan's Personal Data Law No. ZRU-547 requires databases holding the data of the republic's citizens to be kept on technical facilities located in Uzbekistan. What that means for video archives, face recognition and biometrics in access control.",
+        sections: [
+          { h: "Why a video recording counts as personal data", p: [
+            "The Law of the Republic of Uzbekistan «On Personal Data» No. ZRU-547 of 2 July 2019 defines personal data as information recorded on an electronic, paper or other medium that relates to a specific individual or makes it possible to identify them. The phrase «makes it possible to identify» is the key: a recording in which a person's face is distinguishable falls under that definition.",
+            "From this follows a conclusion many find unexpected: an ordinary office recorder is a personal data database, and the company that installed and configured it for itself acts as the operator, with all the duties that people tend not to consider until the first inspection or complaint.",
+          ] },
+          { h: "Biometrics is a separate and stricter category", p: [
+            "The law singles out biometric data: personal data characterising the anatomical and physiological features of the subject. Face recognition at a turnstile, a fingerprint on a time-attendance terminal, an iris template — all of it is biometrics in the legal sense, not merely «a convenient way to open a door».",
+            "The difference is practical. An access card is impersonal: lose it and you are issued another. A biometric template cannot be changed, and a leak of such a database is irreversible. That is precisely why the law places separate requirements on processing biometric data, and why a face recognition terminal should not be installed simply because it is available.",
+          ] },
+          { h: "Article 27-1: where the database must physically sit", p: [
+            "This is the part that decides equipment choice. The law was supplemented with Article 27-1 on special conditions for processing the personal data of citizens of the Republic of Uzbekistan. Under it, when processing the personal data of the republic's citizens using information technologies, including over the internet, the owner or operator must ensure their collection, systematisation and storage in personal data databases on technical facilities physically located in the territory of the Republic of Uzbekistan and registered in the established manner in the State Register of Personal Data Databases.",
+            "The authorised state body in this area is the State Personalisation Centre under the Cabinet of Ministers. It maintains the State Register of Personal Data Databases, issues the certificate of registration of a database and, within its powers, oversees compliance with the legislation.",
+          ] },
+          { h: "What this means for cloud video surveillance", p: [
+            "The mass-market cloud services offered by camera manufacturers are convenient: mount the camera, link it to the app, watch from anywhere. The question is where the recording physically resides. If the system identifies citizens of Uzbekistan while the server sits outside the republic, the arrangement runs against the requirement to keep the database within the country.",
+            "Hence our engineering position, which we explain to every client: a local recorder or an on-site server is neither conservatism nor an attempt to sell hardware. Remote access does not disappear — you can still watch from a phone through a local recorder; the only difference is where the archive is kept.",
+          ] },
+          { h: "What the system owner must do", p: [
+            "First, notification. When their personal data is entered into a database, the subject must be notified in writing of the purposes of processing and of their rights. In practice that is the familiar «video surveillance in progress» sign, but the duty does not end with a sign: employees whose biometric data enters an access control system need a document.",
+            "Second, transfers. If personal data is passed to a third party, the owner or operator notifies the subject in writing within three days. Third, timing: the duty to protect the data arises at the moment of collection and lasts until the data is destroyed or de-identified. «We simply keep an archive and show it to nobody» does not remove the obligations.",
+          ] },
+          { h: "How we account for this in projects", p: [
+            "SAT Solutions designs systems so that the archive and biometric templates stay at the client's site or on their server in Uzbekistan: local recorders, surveillance servers, access control with a local database. Remote access is set up over a secured connection rather than by moving the database abroad.",
+            "This article describes the requirements of the law in general terms and does not replace legal advice on a specific site: the composition of the data, the range of subjects and the processing scheme differ from client to client. If you need an assessment of a particular configuration, send us the system description and we will go through it together with your lawyer.",
+          ] },
+        ],
+      },
+      tr: {
+        title: "Video gözetim ve kişisel veriler: arşiv yasal olarak nerede tutulabilir",
+        excerpt: "Özbekistan'ın ZRU-547 sayılı Kişisel Veriler Kanunu, ülke vatandaşlarının verilerini içeren veri tabanlarının Özbekistan'daki teknik altyapıda tutulmasını zorunlu kılıyor. Bunun video arşivi, yüz tanıma ve geçiş kontrolündeki biyometri için anlamı.",
+        sections: [
+          { h: "Video kaydı neden kişisel veri sayılır", p: [
+            "Özbekistan Cumhuriyeti'nin 2 Temmuz 2019 tarihli ZRU-547 sayılı «Kişisel Veriler Hakkında» Kanunu, kişisel veriyi elektronik, kâğıt ya da başka bir ortama kaydedilmiş, belirli bir gerçek kişiye ait olan veya onun kimliğinin belirlenmesine imkân veren bilgi olarak tanımlar. «Kimliğin belirlenmesine imkân veren» ifadesi anahtardır: bir kişinin yüzünün seçilebildiği kayıt bu tanıma girer.",
+            "Buradan çoğu kişi için beklenmedik bir sonuç çıkar: ofisteki sıradan bir kayıt cihazı bir kişisel veri tabanıdır ve onu kurup yapılandıran şirket işleyen sıfatıyla hareket eder — ilk denetime ya da şikâyete kadar akla gelmeyen tüm yükümlülüklerle birlikte.",
+          ] },
+          { h: "Biyometri ayrı ve daha katı bir kategoridir", p: [
+            "Kanun biyometrik verileri ayrı tutar: bunlar ilgili kişinin anatomik ve fizyolojik özelliklerini niteleyen kişisel verilerdir. Turnikede yüz tanıma, mesai takip terminalinde parmak izi, iris şablonu — hepsi hukuki anlamda biyometridir, yalnızca «kapıyı açmanın kolay yolu» değil.",
+            "Fark pratiktir. Geçiş kartı kişiliksizdir: kaybedersiniz, yenisi verilir. Biyometrik şablon değiştirilemez ve böyle bir veri tabanının sızması geri alınamaz. Kanunun biyometrik verilerin işlenmesine ayrı şartlar getirmesinin ve yüz tanımalı terminalin «olsun diye» konulmaması gerektiğinin nedeni tam da budur.",
+          ] },
+          { h: "27-1. madde: veri tabanı fiziken nerede durmalı", p: [
+            "Ekipman seçimini belirleyen kısım burasıdır. Kanuna, Özbekistan Cumhuriyeti vatandaşlarının kişisel verilerinin işlenmesine ilişkin özel şartları düzenleyen 27-1. madde eklenmiştir. Buna göre mal sahibi veya işleyen, ülke vatandaşlarının kişisel verilerini bilgi teknolojilerini, internet dâhil, kullanarak işlerken bunların toplanmasını, sistematize edilmesini ve saklanmasını Özbekistan Cumhuriyeti topraklarında fiziken bulunan ve Kişisel Veri Tabanları Devlet Siciline usulünce kaydedilmiş teknik altyapıdaki veri tabanlarında sağlamak zorundadır.",
+            "Bu alandaki yetkili devlet kurumu Bakanlar Kurulu bünyesindeki Devlet Kişiselleştirme Merkezidir. Kişisel Veri Tabanları Devlet Sicilini tutar, veri tabanının kayıt belgesini verir ve yetkileri çerçevesinde mevzuata uyumu denetler.",
+          ] },
+          { h: "Bulut tabanlı gözetim için bu ne demek", p: [
+            "Kamera üreticilerinin yaygın bulut hizmetleri kullanışlıdır: kamerayı takarsınız, uygulamaya bağlarsınız, her yerden izlersiniz. Soru, kaydın fiziken nerede durduğudur. Sistem Özbekistan vatandaşlarını teşhis ediyor, sunucu ise ülke dışındaysa, bu kurgu veri tabanının ülke içinde tutulması şartıyla çelişir.",
+            "Her müşteriye anlattığımız mühendislik duruşumuz buradan gelir: sahadaki yerel kayıt cihazı ya da sunucu ne muhafazakârlıktır ne de donanım satma çabası. Uzaktan erişim de ortadan kalkmaz: yerel kayıt cihazı üzerinden de telefondan izlenebilir; tek fark arşivin nerede saklandığıdır.",
+          ] },
+          { h: "Sistem sahibinin yapması gerekenler", p: [
+            "Birincisi bilgilendirmedir. Kişisel verileri bir veri tabanına dâhil edilirken ilgili kişi, işleme amaçları ve hakları konusunda yazılı olarak bilgilendirilmelidir. Uygulamada bu, bilinen «video gözetim yapılmaktadır» tabelasıdır; ama yükümlülük tabelayla bitmez: biyometrik verileri geçiş kontrol sistemine giren çalışanlar için bir belge gerekir.",
+            "İkincisi aktarımdır. Kişisel veriler üçüncü bir kişiye aktarılırsa, mal sahibi veya işleyen ilgili kişiyi üç gün içinde yazılı olarak bilgilendirir. Üçüncüsü süredir: verileri koruma yükümlülüğü toplandıkları anda doğar ve imha ya da anonimleştirme anına kadar sürer. «Biz sadece arşiv tutuyoruz, kimseye göstermiyoruz» demek yükümlülükleri kaldırmaz.",
+          ] },
+          { h: "Projelerde bunu nasıl gözetiyoruz", p: [
+            "SAT Solutions sistemleri, arşiv ve biyometrik şablonlar müşterinin sahasında ya da Özbekistan'daki sunucusunda kalacak şekilde projelendirir: yerel kayıt cihazları, gözetim sunucuları, yerel veri tabanlı geçiş kontrolü. Uzaktan erişimi, veri tabanını yurt dışına taşıyarak değil, güvenli bağlantı üzerinden kurarız.",
+            "Bu yazı kanunun gereklerini genel hatlarıyla anlatır ve belirli bir tesis için hukuki danışmanlığın yerini tutmaz: verilerin kapsamı, ilgili kişilerin çevresi ve işleme şeması her müşteride farklıdır. Belirli bir yapılandırmanın değerlendirilmesi gerekiyorsa sistem tanımını gönderin, avukatınızla birlikte inceleyelim.",
+          ] },
+        ],
+      },
+      zh: {
+        title: "视频监控与个人数据：按法律规定，录像存档可以放在哪里",
+        excerpt: "乌兹别克斯坦《个人数据法》第 ZRU-547 号要求含有本国公民数据的数据库存放在位于乌兹别克斯坦境内的技术设施上。这对视频存档、人脸识别和门禁生物识别意味着什么。",
+        sections: [
+          { h: "为什么录像属于个人数据", p: [
+            "乌兹别克斯坦共和国 2019 年 7 月 2 日第 ZRU-547 号《个人数据法》将个人数据定义为：记录在电子、纸质或其他载体上，涉及特定自然人或能够使其被识别的信息。「能够使其被识别」正是关键：能辨认出人脸的录像即落入该定义。",
+            "由此得出一个许多人意想不到的结论：办公室里普通的录像机就是一个个人数据库，而为自己安装并配置它的公司就充当了处理者的角色——连同那些通常直到第一次检查或投诉才会想起的全部义务。",
+          ] },
+          { h: "生物识别是单独且更严格的类别", p: [
+            "法律将生物识别数据单列：即表征主体解剖学和生理特征的个人数据。闸机上的人脸识别、考勤终端上的指纹、虹膜模板——在法律意义上这些都是生物识别，而不仅仅是「开门的便捷方式」。",
+            "区别是实际存在的。门禁卡不具人身性：丢了就补发一张。生物识别模板无法更改，此类数据库一旦泄露便不可挽回。法律对生物识别数据的处理提出单独要求，正是出于这个原因；人脸识别终端不能「有就装上」，也是出于这个原因。",
+          ] },
+          { h: "第 27-1 条：数据库在物理上应当放在哪里", p: [
+            "这是决定设备选型的部分。法律增补了关于处理乌兹别克斯坦共和国公民个人数据特别条件的第 27-1 条。据此，所有者或处理者在使用信息技术（包括通过互联网）处理本国公民个人数据时，必须确保其收集、系统化和存储在位于乌兹别克斯坦共和国境内、并按规定程序在个人数据库国家登记册中注册的技术设施上的数据库中。",
+            "该领域的授权国家机关是内阁下属的国家个人化中心。它维护个人数据库国家登记册，颁发数据库注册证书，并在职权范围内监督法律的遵守情况。",
+          ] },
+          { h: "这对云端视频监控意味着什么", p: [
+            "摄像机厂商的大众化云服务很方便：装上摄像机、绑定应用、随处可看。问题在于录像在物理上放在哪里。如果系统识别的是乌兹别克斯坦公民，而服务器位于共和国境外，这套结构就与数据库须存放于境内的要求相抵触。",
+            "我们向每一位客户说明的工程立场由此而来：现场的本地录像机或服务器既不是守旧，也不是为了卖硬件。远程访问并不会消失——通过本地录像机同样可以用手机查看，区别只在于存档放在哪里。",
+          ] },
+          { h: "系统所有者必须做什么", p: [
+            "第一是告知。个人数据被纳入数据库时，须以书面形式告知数据主体处理目的及其权利。实践中这就是常见的「本区域进行视频监控」标识，但义务并不止于一块牌子：生物识别数据进入门禁系统的员工，需要一份文件。",
+            "第二是对外提供。若个人数据被提供给第三方，所有者或处理者须在三日内书面告知数据主体。第三是期限：保护数据的义务自收集之时产生，持续到销毁或去标识化之时。「我们只是保存存档、不给任何人看」并不能免除这些义务。",
+          ] },
+          { h: "我们在项目中如何考虑这一点", p: [
+            "SAT Solutions 在设计系统时，使存档和生物识别模板留在客户现场或其位于乌兹别克斯坦的服务器上：本地录像机、监控服务器、带本地数据库的门禁系统。远程访问通过受保护的连接实现，而不是把数据库搬到国外。",
+            "本文以概括方式介绍法律要求，不能替代针对具体项目的法律意见：数据构成、涉及的主体范围和处理方案因客户而异。若您需要对某一具体方案作出评估，请将系统说明发给我们，我们会与您的法务一同研究。",
+          ] },
+        ],
+      },
+    },
+  },
+
+  {
     slug: "licenziya-na-montazh-signalizacii-uzbekistan",
     date: "2026-09-10",
     updated: "2026-09-10",
