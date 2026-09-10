@@ -49,7 +49,15 @@ npm install --include=dev --no-audit --no-fund
 clean_next_keep_cache() {
   local d="$1"
   [ -d "$d" ] || return 0
-  find "$d" -mindepth 1 -maxdepth 1 ! -name cache -exec rm -rf {} +
+  # Живой сервер во время очистки дописывает ISR-страницы в server/app, и rm -rf
+  # падает с «Directory not empty» (10.09.2026: деплой оборвался под set -e,
+  # .next остался выпотрошенным, CSS отдавал 400). Повторяем до пяти раз.
+  local i
+  for i in 1 2 3 4 5; do
+    find "$d" -mindepth 1 -maxdepth 1 ! -name cache -exec rm -rf {} + 2>/dev/null && break
+    [ "$i" -eq 5 ] && { echo "    !! не удалось очистить $d за 5 попыток"; return 1; }
+    sleep 1
+  done
   local mb
   mb=$(du -sm "$d/cache" 2>/dev/null | cut -f1 || echo 0)
   if [ "${mb:-0}" -gt 2048 ]; then
