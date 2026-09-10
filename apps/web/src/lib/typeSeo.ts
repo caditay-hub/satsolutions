@@ -107,11 +107,11 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "ip-videoregistratory-nvr": {
     title: {
-      ru: "IP-видеорегистратор NVR — купить в Ташкенте, Hikvision, цены",
-      uz: "IP-videoregistrator NVR — Toshkentda narxlari, Hikvision",
-      en: "IP NVR Video Recorders in Tashkent — Hikvision, Prices",
-      tr: "Taşkent'te NVR kaydedici — Hikvision, fiyatlar",
-      zh: "塔什干网络硬盘录像机NVR — 海康威视价格",
+      ru: "Видеорегистратор — купить в Ташкенте, IP NVR Hikvision, цены",
+      uz: "Videoregistrator — Toshkentda narxlari, IP NVR Hikvision",
+      en: "Video Recorders in Tashkent — IP NVR, Hikvision, Prices",
+      tr: "Taşkent'te video kaydedici — IP NVR, Hikvision, fiyatlar",
+      zh: "塔什干硬盘录像机 — 网络型NVR，海康威视价格",
     },
     desc: {
       ru: "IP-видеорегистраторы NVR на 4–64 канала: Hikvision, Dahua, HiLook. Подбор под количество камер, настройка, гарантия. Цены в Ташкенте, доставка по Узбекистану.",
@@ -187,11 +187,11 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   },
   "videoregistratory-dvr": {
     title: {
-      ru: "Купить видеорегистратор DVR в Ташкенте — Hikvision, Dahua",
-      uz: "DVR videoregistrator narxlari Toshkentda — Hikvision, Dahua",
-      en: "DVR Recorders in Tashkent — Hikvision, Dahua, Prices",
-      tr: "Taşkent'te DVR kayıt cihazı — Hikvision, Dahua",
-      zh: "塔什干DVR硬盘录像机 — 海康威视、大华",
+      ru: "Видеорегистратор DVR для аналоговых камер — Ташкент, цены",
+      uz: "Analog kameralar uchun DVR videoregistrator — Toshkent, narxlar",
+      en: "DVR Recorders for Analog Cameras — Tashkent, Prices",
+      tr: "Analog kameralar için DVR kayıt cihazı — Taşkent, fiyatlar",
+      zh: "模拟摄像机用DVR录像机 — 塔什干报价",
     },
     desc: {
       ru: "Аналоговые видеорегистраторы DVR на 4–32 канала: Hikvision Turbo HD, Dahua HDCVI. Гибридные модели с IP-каналами. Апгрейд старых систем без замены кабеля. Цены в Ташкенте, гарантия.",

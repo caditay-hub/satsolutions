@@ -4166,7 +4166,11 @@ export const ARTICLES: Article[] = [
     date: "2026-07-17",
     updated: "2026-09-09",
     related: ["access", "turnstile", "attendance"],
-    hubs: ["turnikety-i-shlagbaumy"],
+    // По запросу «скуд» эта статья стоит на 8,7, а каталожный раздел — на 42:
+    // коммерческий запрос попадает на текст без цен. Блок «Каталог по теме» ведёт
+    // читателя в товарные разделы, они же получают ссылку со страницы, которая
+    // реально ранжируется.
+    hubs: ["zamki-i-skud", "terminaly-i-schityvateli", "turnikety-i-shlagbaumy"],
     loc: {
       ru: {
         title: "Что такое СКУД: как работает система контроля доступа",

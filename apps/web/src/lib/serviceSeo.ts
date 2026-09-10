@@ -63,8 +63,12 @@ const ru: Record<string, ServiceSeo> = {
     desc: "Системы оповещения и трансляции в Ташкенте: СОУЭ и речевое оповещение по нормам, фоновая музыка, зонное вещание, микрофонные консоли. Проект, монтаж, гарантия.",
   },
   intercom: {
+    // Заголовок начинается с «Установка», а не с «Домофоны»: слово в слово с H1
+    // каталожной группы /products/group/domofoniya, и по запросу «домофон»
+    // (590/мес) страницы конкурировали друг с другом — услуга 27,0, каталог 47,0.
+    // Каталог берёт «домофон», услуга — «установку домофона».
     h1: "Установка домофонов в Ташкенте",
-    title: "Домофоны в Ташкенте — установка IP-домофонов под ключ | SAT",
+    title: "Установка домофона в Ташкенте — монтаж IP-домофонов | SAT",
     desc: "Установка домофонов в Ташкенте: IP- и видеодомофоны для дома, офиса и ЖК, вызов на смартфон, интеграция со СКУД. Монтаж и сервис по всему Узбекистану.",
   },
   turnstile: {
@@ -289,7 +293,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   intercom: {
     h1: "Toshkentda domofon oʻrnatish",
-    title: "Domofonlar Toshkentda — IP-domofon oʻrnatish | SAT",
+    title: "Toshkentda domofon oʻrnatish — IP-domofon montaji | SAT",
     desc: "Toshkentda domofon oʻrnatish: uy, ofis va TJM uchun IP va video domofonlar, smartfonga qoʻngʻiroq, SKUD bilan integratsiya. Montaj va servis mamlakat boʻylab.",
   },
   turnstile: {
