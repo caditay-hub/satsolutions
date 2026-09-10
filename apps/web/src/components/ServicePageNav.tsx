@@ -42,6 +42,27 @@ export function SectionNav({
 }) {
   const [cur, setCur] = useState(items[0]?.id ?? "");
   const stripRef = useRef<HTMLElement>(null);
+  const barRef = useRef<HTMLDivElement>(null);
+
+  // Переход к разделу — сами. Замер 10.09.2026 настоящим кликом мыши: адрес менялся на
+  // #prices, а страница оставалась на месте (Next 15 перехватывает переход по якорю от
+  // реального клика). Отступ — по фактической высоте шапки (h-16) и видимой полосы.
+  // В history.replaceState передаём history.state: в нём дерево роутера Next, без него
+  // ломается «Назад».
+  const go = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const el = document.getElementById(id);
+    if (!el || el.offsetParent === null) return;
+    e.preventDefault();
+    // низ полосы в прилипшем состоянии: верх липкого блока (top-16 = 64) + отступ полосы
+    // внутри него (у container-page есть вертикальная подкладка) + высота самой полосы
+    const bar = barRef.current;
+    const stuckBottom = 64 + (bar ? bar.offsetTop + bar.offsetHeight : 64);
+    const top = el.getBoundingClientRect().top + window.scrollY - stuckBottom - 16;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: Math.max(0, top), behavior: reduce ? "auto" : "smooth" });
+    try { window.history.replaceState(window.history.state, "", `#${id}`); } catch { /* без адреса */ }
+    setCur(id);
+  };
 
   // текущий раздел — последний, чей верх уже прошёл под полосу
   useEffect(() => {
@@ -72,11 +93,11 @@ export function SectionNav({
   return (
     <div className="pointer-events-none sticky top-16 z-30 mt-4 border-y border-slate-200 bg-white lg:mt-6 lg:border-0 lg:bg-transparent">
       <div className="container-page">
-        <div className="pointer-events-auto flex items-center gap-3 py-2 lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:px-2 lg:shadow-[0_6px_18px_-14px_rgba(15,23,42,0.35)]">
+        <div ref={barRef} className="pointer-events-auto flex items-center gap-3 py-2 lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:px-2 lg:shadow-[0_6px_18px_-14px_rgba(15,23,42,0.35)]">
           <nav ref={stripRef} aria-label={ariaLabel}
             className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {items.map((it) => (
-              <a key={it.id} href={`#${it.id}`}
+              <a key={it.id} href={`#${it.id}`} onClick={(e) => go(e, it.id)}
                 className={`${it.mobileOnly ? "lg:hidden " : ""}shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-[13px] font-bold transition-colors lg:rounded-lg lg:py-2 lg:text-sm ${
                   cur === it.id ? "bg-brand-600 text-white lg:bg-brand-50 lg:text-brand-800" : "bg-slate-100 text-slate-600 hover:text-slate-900 lg:bg-transparent"
                 }`}>

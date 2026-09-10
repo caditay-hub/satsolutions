@@ -67,7 +67,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
       {d && (
         <>
           {/* 01 · Специфика объекта: текст в связке с фото (зигзаг) */}
-          <section id="specifics" className="scroll-mt-32 bg-white">
+          <section id="specifics" className="scroll-mt-32 lg:scroll-mt-44 bg-white">
             <div className="container-page py-12 sm:py-16">
               <SectionHead n="01" title={d.specificsTitle} />
               <div className="mt-6 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
@@ -97,7 +97,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
           </section>
 
           {/* 02 · Как ведём проект: этапы единой линией */}
-          <section id="process" className="scroll-mt-32 bg-slate-50">
+          <section id="process" className="scroll-mt-32 lg:scroll-mt-44 bg-slate-50">
             <div className="container-page py-12 sm:py-16">
               <SectionHead n="02" title={d.workflowTitle} />
               <ol className="relative mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -137,7 +137,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
 
       {/* 04 · FAQ узкой колонкой + профильные услуги */}
       {(d?.faq?.length || services.length > 0) ? (
-        <section id="ind-faq" className="scroll-mt-32 bg-white">
+        <section id="ind-faq" className="scroll-mt-32 lg:scroll-mt-44 bg-white">
           <div className="container-page py-12 sm:py-16">
             {d?.faq?.length ? (
               <>

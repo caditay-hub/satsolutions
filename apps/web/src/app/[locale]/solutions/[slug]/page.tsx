@@ -294,7 +294,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     ) : null;
 
   const equipmentBlock = equipment.length > 0 ? (
-    <section id="equipment" className="mt-12 scroll-mt-32">
+    <section id="equipment" className="mt-12 scroll-mt-32 lg:scroll-mt-44">
       <h2 className="text-xl font-black tracking-tight text-slate-900 sm:text-2xl">{equipTitle}</h2>
       {/* на телефоне — лента вбок: восемь карточек столбиком занимали экран за экраном */}
       <div className="mt-4 flex gap-3 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
@@ -338,7 +338,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
   // Кейсы (услуга → портфолио)
   const casesBlock = cases.length > 0 ? (
-    <section id="projects" className="scroll-mt-32">
+    <section id="projects" className="scroll-mt-32 lg:scroll-mt-44">
       <div className="flex items-end justify-between gap-4">
         <div>
           <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
@@ -489,7 +489,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
       <div className="container-page pb-2">
         {/* Состав работ — компактным чек-листом во всю ширину */}
-        <section id="sostav" className="mt-6 scroll-mt-32 lg:mt-8">
+        <section id="sostav" className="mt-6 scroll-mt-32 lg:scroll-mt-44 lg:mt-8">
           <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("whatInc")}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("worksTitle")}</h2>
           <ul className="mt-4 grid gap-x-8 gap-y-2.5 rounded-2xl bg-slate-50 p-4 sm:grid-cols-2 lg:grid-cols-3 lg:p-5">
@@ -507,7 +507,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* SEO-текст целиком: вводный абзац во всю ширину, остальное — в две колонки
             (была узкая колонка на треть экрана с пустотой справа) */}
         {content && (
-          <section id="about" className="mt-12 scroll-mt-32">
+          <section id="about" className="mt-12 scroll-mt-32 lg:scroll-mt-44">
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{content.heading}</h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-700 sm:text-base">{content.paragraphs[0]}</p>
             {content.paragraphs.length > 1 && (
@@ -533,7 +533,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {svc.key === "server" && <DataCenterDetails locale={locale} />}
 
         {/* Типовые решения и ценовой ориентир — один раздел (якорь «Цены») */}
-        <div id={hasPrices ? "prices" : undefined} className="scroll-mt-32">
+        <div id={hasPrices ? "prices" : undefined} className="scroll-mt-32 lg:scroll-mt-44">
           {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} locale={locale} />}
           <ServicePriceHint k={svc.key} locale={locale} />
         </div>
@@ -565,7 +565,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       {/* Отрасли: расчёт проекта — единственный призыв внизу страницы (было четыре подряд).
           Слева заголовок, гарантии и контакты, справа форма. */}
       {isInd && (
-        <section id="order" className="scroll-mt-32 bg-gradient-to-br from-brand-700 to-[#134e5e] text-white">
+        <section id="order" className="scroll-mt-32 lg:scroll-mt-44 bg-gradient-to-br from-brand-700 to-[#134e5e] text-white">
           <div className="container-page grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <div>
               <p className="text-xs font-black uppercase tracking-widest text-cyan-200">{tpf!("badge")}</p>
@@ -635,7 +635,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {(faq.length > 0 || relatedArticles.length > 0) && (
           <div className={`mt-12 grid grid-cols-1 gap-10 ${faq.length > 0 && relatedArticles.length > 0 ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start" : ""}`}>
             {faq.length > 0 && (
-              <section id="faq" className="scroll-mt-32">
+              <section id="faq" className="scroll-mt-32 lg:scroll-mt-44">
                 <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
                 <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
                 <FaqAccordion items={faq} />

@@ -123,7 +123,12 @@ export function ScrollManager() {
   // destination, so we read its saved position and start holding it right away —
   // suppressing saves first so the read value can't be overwritten meanwhile.
   useEffect(() => {
-    const onPop = () => {
+    const onPop = (e: PopStateEvent) => {
+      // Переход по #якорю на той же странице: браузер кладёт в историю запись без
+      // состояния (state === null) и сам прокручивает к разделу. Записи роутера Next
+      // и лайтбокса состояние несут. Раньше мы здесь откатывали прокрутку на
+      // сохранённую — ссылки «к разделу» никуда не вели (замер 10.09.2026).
+      if (e.state == null) return;
       suppressSaveUntil = performance.now() + RESTORE_BUDGET_MS;
       let v: string | null = null;
       try {
