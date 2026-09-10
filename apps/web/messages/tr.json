@@ -4632,7 +4632,14 @@
     "closed": "Görüşme operatör tarafından kapatıldı. Tekrar yazın — aynı görüşmeye devam edelim.",
     "open": "Sohbeti aç",
     "errConnect": "Bağlantı hatası",
-    "errChat": "Sohbet hatası"
+    "errChat": "Sohbet hatası",
+    "attach": "Fotoğraf ekle",
+    "uploading": "Fotoğraf yükleniyor…",
+    "photo": "Fotoğraf",
+    "errFileType": "Yalnızca görsel gönderilebilir (JPG, PNG, WebP).",
+    "errFileSize": "Fotoğraf 10 MB'tan büyük — daha küçük bir dosya seçin.",
+    "errUpload": "Fotoğraf gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+    "sendBtn": "Gönder"
   },
   "search": {
     "placeholder": "Ara: kamera, yangın…",

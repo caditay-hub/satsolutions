@@ -5,11 +5,17 @@ import { verifyAccessToken } from "./auth.js";
 import { ChatConversation } from "./models/ChatConversation.js";
 import { ChatMessage } from "./models/ChatMessage.js";
 import { sequelize } from "./db.js";
+import { chatImageUrl } from "./routes/chatUpload.js";
 
 function safeTrim(v: unknown, max: number) {
   const s = typeof v === "string" ? v.trim() : "";
   if (!s) return "";
   return s.length > max ? s.slice(0, max) : s;
+}
+
+// Сообщение для виджета, админки и бота: картинка (если есть) идёт рядом с текстом.
+function msgDto(m: ChatMessage) {
+  return { id: m.id, conversationId: m.conversationId, sender: m.sender, text: m.text, imageUrl: m.imageUrl ?? null, createdAt: m.createdAt };
 }
 
 function convRoom(id: string) {
@@ -107,13 +113,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           status: conversation.status,
           createdAt: conversation.createdAt
         },
-        messages: messages.map((m) => ({
-          id: m.id,
-          conversationId: m.conversationId,
-          sender: m.sender,
-          text: m.text,
-          createdAt: m.createdAt
-        }))
+        messages: messages.map(msgDto)
       });
     });
 
@@ -124,7 +124,8 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const name = safeTrim(payload?.name, 200) || null;
       const phone = safeTrim(payload?.phone, 32) || null;
       const page = safeTrim(payload?.page, 300) || null;
-      if (!text) return;
+      const imageUrl = chatImageUrl(payload?.imageUrl);
+      if (!text && !imageUrl) return;
 
       let conversation: InstanceType<typeof ChatConversation> | null = null;
       let isNewConversation = false;
@@ -177,7 +178,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const cid = conversation.id;
       const created = await sequelize.transaction(async (t) => {
         const msg = await ChatMessage.create(
-          { conversationId: cid, sender: "USER", text } as any,
+          { conversationId: cid, sender: "USER", text, imageUrl } as any,
           { transaction: t }
         );
         await conversation!.update(
@@ -190,7 +191,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
         return msg;
       });
 
-      const dto = { id: created.id, conversationId: cid, sender: created.sender, text: created.text, createdAt: created.createdAt };
+      const dto = msgDto(created);
 
       socket.data.conversationId = cid;
       socket.join(convRoom(cid));
@@ -210,13 +211,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           status: conversation.status,
           createdAt: conversation.createdAt
         },
-        messages: messages.map((m) => ({
-          id: m.id,
-          conversationId: m.conversationId,
-          sender: m.sender,
-          text: m.text,
-          createdAt: m.createdAt
-        }))
+        messages: messages.map(msgDto)
       });
 
       if (isNewConversation) {
@@ -231,7 +226,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           lastMessageAt: conversation.lastMessageAt,
           unreadCount: conversation.unreadCount,
           createdAt: conversation.createdAt,
-          lastMessage: { id: created.id, sender: "USER", text: created.text, createdAt: created.createdAt }
+          lastMessage: { id: created.id, sender: "USER", text: created.text, imageUrl: created.imageUrl ?? null, createdAt: created.createdAt }
         });
       } else if (wasReopened) {
         // Thread continued after being closed: tell admins it's open again, and the user widget.
@@ -287,7 +282,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
             lastMessageAt: c.lastMessageAt,
             createdAt: c.createdAt,
             lastMessage: last
-              ? { sender: last.sender, text: last.text, createdAt: last.createdAt, id: last.id }
+              ? { sender: last.sender, text: last.text, imageUrl: last.imageUrl ?? null, createdAt: last.createdAt, id: last.id }
               : null
           };
         })
@@ -308,14 +303,15 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const messages = await ChatMessage.findAll({ where: { conversationId }, order: [["createdAt", "ASC"]], limit: 500 });
       socket.emit(
         "admin:messages",
-        messages.map((m) => ({ id: m.id, conversationId: m.conversationId, sender: m.sender, text: m.text, createdAt: m.createdAt }))
+        messages.map(msgDto)
       );
     });
 
     socket.on("admin:send", async (payload: any) => {
       const conversationId = safeTrim(payload?.conversationId, 60);
       const text = safeTrim(payload?.text, 2000);
-      if (!conversationId || !text) return;
+      const imageUrl = chatImageUrl(payload?.imageUrl);
+      if (!conversationId || (!text && !imageUrl)) return;
       const conversation = await ChatConversation.findByPk(conversationId);
       if (!conversation || conversation.status !== "OPEN") return;
 
@@ -324,7 +320,8 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           {
             conversationId,
             sender: "ADMIN",
-            text
+            text,
+            imageUrl
           } as any,
           { transaction: t }
         );
@@ -332,7 +329,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
         return msg;
       });
 
-      const dto = { id: created.id, conversationId, sender: created.sender, text: created.text, createdAt: created.createdAt };
+      const dto = msgDto(created);
       // Send to user (public namespace) first so widget shows it
       io.to(convRoom(conversationId)).emit("chat:message", dto);
       // Send to admin panel (so admin sees own message and list updates)

@@ -4632,7 +4632,14 @@
     "closed": "对话已被客服结束。再次留言即可继续此对话。",
     "open": "打开客服",
     "errConnect": "连接错误",
-    "errChat": "对话错误"
+    "errChat": "对话错误",
+    "attach": "添加图片",
+    "uploading": "图片上传中…",
+    "photo": "图片",
+    "errFileType": "只能发送图片（JPG、PNG、WebP）。",
+    "errFileSize": "图片超过 10 MB，请选择更小的文件。",
+    "errUpload": "图片未发送成功，请检查网络后重试。",
+    "sendBtn": "发送"
   },
   "search": {
     "placeholder": "搜索：摄像头、消防…",

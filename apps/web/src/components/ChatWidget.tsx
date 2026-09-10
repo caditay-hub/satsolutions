@@ -21,8 +21,11 @@ type Msg = {
   conversationId: string;
   sender: "USER" | "ADMIN";
   text: string;
+  imageUrl?: string | null;
   createdAt: string | Date;
 };
+
+const MAX_IMAGE_BYTES = 10 * 1024 * 1024; // тот же предел, что на сервере (routes/chatUpload.ts)
 
 function apiBaseUrl() {
   return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
@@ -148,6 +151,8 @@ export function ChatWidget() {
   const [showGreeting, setShowGreeting] = useState(false);
   const [formName, setFormName] = useState("");
   const [formPhoneRest, setFormPhoneRest] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const fileRef = useRef<HTMLInputElement | null>(null);
   const profileRef = useRef<Profile | null>(null);
   profileRef.current = profile;
 
@@ -340,6 +345,7 @@ export function ChatWidget() {
                 conversationId: String(m.conversationId ?? cid ?? ""),
                 sender: m.sender === "ADMIN" ? "ADMIN" : "USER",
                 text: String(m.text ?? ""),
+                imageUrl: typeof m.imageUrl === "string" ? m.imageUrl : null,
                 createdAt: m.createdAt ?? new Date().toISOString()
               }))
               .filter((m: Msg) => m.conversationId || cid)
@@ -387,6 +393,7 @@ export function ChatWidget() {
           if (cid !== conversationIdRef.current) return;
           const isAdmin = m?.sender === "ADMIN";
           const text = String(m?.text ?? "");
+          const imageUrl = typeof m?.imageUrl === "string" ? m.imageUrl : null;
 
           setMessages((prev) => {
             if (prev.some((x) => x.id === String(m?.id))) return prev;
@@ -397,6 +404,7 @@ export function ChatWidget() {
                 conversationId: cid,
                 sender: isAdmin ? "ADMIN" : "USER",
                 text,
+                imageUrl,
                 createdAt: m?.createdAt ?? new Date().toISOString()
               }
             ];
@@ -413,7 +421,7 @@ export function ChatWidget() {
                 try {
                   console.log('ChatWidget: Creating notification');
                   new Notification("Новое сообщение в чате", {
-                    body: text.length > 80 ? text.slice(0, 80) + "…" : text,
+                    body: text ? (text.length > 80 ? text.slice(0, 80) + "…" : text) : `📷 ${tw("photo")}`,
                     icon: "/favicon.ico",
                     tag: `chat-${cid}-${m?.id ?? Date.now()}`
                   });
@@ -475,11 +483,7 @@ export function ChatWidget() {
     }
   }, [unreadCount, open]);
 
-  async function send() {
-    if (!canSend) return;
-    const text = draft.trim();
-    setDraft("");
-    setError(null);
+  function emitSend(fields: { text: string; imageUrl?: string }) {
     const socket = socketRef.current;
     if (!socket) return;
     const p = profileRef.current;
@@ -488,10 +492,47 @@ export function ChatWidget() {
       phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
       page: currentPage()
     };
-    if (conversationId) {
-      socket.emit("chat:send", { conversationId, text, ...extra });
+    const cid = conversationIdRef.current;
+    if (cid) {
+      socket.emit("chat:send", { conversationId: cid, ...fields, ...extra });
     } else {
-      socket.emit("chat:send", { visitorId: getVisitorId(), text, ...extra });
+      socket.emit("chat:send", { visitorId: getVisitorId(), ...fields, ...extra });
+    }
+  }
+
+  async function send() {
+    if (!canSend) return;
+    const text = draft.trim();
+    setDraft("");
+    setError(null);
+    emitSend({ text });
+  }
+
+  // Фото: сначала файл уходит на сервер (пережимается в JPEG), затем сообщение
+  // с адресом картинки. Набранный текст становится подписью к фото.
+  async function sendImage(file: File) {
+    if (!connected || !profileRef.current || uploading) return;
+    if (!/^image\//.test(file.type)) { setError(tw("errFileType")); return; }
+    if (file.size > MAX_IMAGE_BYTES) { setError(tw("errFileSize")); return; }
+    setError(null);
+    setUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      const r = await fetch(`${apiBaseUrl()}/chat/upload`, { method: "POST", body: fd });
+      const j = await r.json().catch(() => null);
+      if (!r.ok || typeof j?.url !== "string") {
+        setError(r.status === 413 ? tw("errFileSize") : r.status === 400 ? tw("errFileType") : tw("errUpload"));
+        return;
+      }
+      const caption = draft.trim().slice(0, 2000);
+      setDraft("");
+      emitSend({ text: caption, imageUrl: j.url });
+    } catch {
+      setError(tw("errUpload"));
+    } finally {
+      setUploading(false);
+      if (fileRef.current) fileRef.current.value = "";
     }
   }
 
@@ -614,7 +655,19 @@ export function ChatWidget() {
                         className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${mine ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-900"
                           }`}
                       >
-                        <div className="whitespace-pre-wrap">{m.text}</div>
+                        {m.imageUrl ? (
+                          <a href={m.imageUrl} target="_blank" rel="noopener noreferrer" className="block">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={m.imageUrl}
+                              alt={tw("photo")}
+                              loading="lazy"
+                              onLoad={scrollToBottom}
+                              className="max-h-60 w-auto max-w-full rounded-lg"
+                            />
+                          </a>
+                        ) : null}
+                        {m.text ? <div className={`whitespace-pre-wrap${m.imageUrl ? " mt-1" : ""}`}>{m.text}</div> : null}
                         <div className={`mt-1 text-[11px] ${mine ? "text-white/80" : "text-slate-500"}`}>{fmtTime(m.createdAt)}</div>
                       </div>
                     </div>
@@ -624,6 +677,30 @@ export function ChatWidget() {
 
               <div className="border-t border-slate-200 bg-white p-3">
                 <div className="flex items-center gap-2">
+                  <input
+                    ref={fileRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={(e) => {
+                      const f = e.target.files?.[0];
+                      if (f) void sendImage(f);
+                    }}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => fileRef.current?.click()}
+                    disabled={!connected || uploading}
+                    aria-label={tw("attach")}
+                    title={tw("attach")}
+                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-slate-600 hover:border-brand-600 hover:text-brand-600 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {uploading ? (
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-brand-600" />
+                    ) : (
+                      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
+                    )}
+                  </button>
                   <input
                     name="message"
                     autoComplete="off"
@@ -635,7 +712,7 @@ export function ChatWidget() {
                         void send();
                       }
                     }}
-                    className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                    className="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
                     placeholder={tw("placeholder")}
                   />
                   <button
@@ -645,10 +722,10 @@ export function ChatWidget() {
                     aria-label={tw("send")}
                     className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
                   >
-                    Отправить
+                    {tw("sendBtn")}
                   </button>
                 </div>
-                <div className="mt-1 text-xs text-slate-500">{tcc("chatRealtime")}</div>
+                <div className="mt-1 text-xs text-slate-500">{uploading ? tw("uploading") : tcc("chatRealtime")}</div>
               </div>
             </>
           )}

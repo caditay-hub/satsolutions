@@ -4632,7 +4632,14 @@
     "closed": "The dialog was closed by the operator. Write again — we'll continue the same conversation.",
     "open": "Open chat",
     "errConnect": "Connection error",
-    "errChat": "Chat error"
+    "errChat": "Chat error",
+    "attach": "Attach a photo",
+    "uploading": "Uploading photo…",
+    "photo": "Photo",
+    "errFileType": "Only images can be sent (JPG, PNG, WebP).",
+    "errFileSize": "The photo is larger than 10 MB — please choose a smaller file.",
+    "errUpload": "The photo was not sent. Check your connection and try again.",
+    "sendBtn": "Send"
   },
   "search": {
     "placeholder": "Search: camera, fire…",

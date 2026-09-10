@@ -17,6 +17,7 @@ import { adminRouter } from "./routes/admin.js";
 import { authRouter } from "./routes/auth.js";
 import { healthRouter } from "./routes/health.js";
 import { publicRouter } from "./routes/public.js";
+import { chatUploadRouter } from "./routes/chatUpload.js";
 import { smartSearchRouter } from "./routes/smartSearch.js";
 import { createSocketServer } from "./chatSocket.js";
 
@@ -66,6 +67,7 @@ async function main() {
   app.use(healthRouter);
   app.use(authRouter);
   app.use(publicRouter);
+  app.use(chatUploadRouter);
   app.use(smartSearchRouter);
 
   // Public static files (images)

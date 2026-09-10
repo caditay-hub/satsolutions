@@ -4632,7 +4632,14 @@
     "closed": "Suhbat operator tomonidan yakunlandi. Yana yozing — shu suhbatni davom ettiramiz.",
     "open": "Chatni ochish",
     "errConnect": "Ulanish xatosi",
-    "errChat": "Chat xatosi"
+    "errChat": "Chat xatosi",
+    "attach": "Rasm biriktirish",
+    "uploading": "Rasm yuklanmoqda…",
+    "photo": "Rasm",
+    "errFileType": "Faqat rasm yuborish mumkin (JPG, PNG, WebP).",
+    "errFileSize": "Rasm 10 MB dan katta — kichikroq fayl tanlang.",
+    "errUpload": "Rasm yuborilmadi. Internetni tekshirib, qaytadan urinib koʻring.",
+    "sendBtn": "Yuborish"
   },
   "search": {
     "placeholder": "Qidirish: kamera, yongʻin…",
