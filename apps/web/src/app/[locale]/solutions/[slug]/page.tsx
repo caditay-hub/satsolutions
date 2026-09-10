@@ -48,14 +48,23 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
 // Подводка абзаца SEO-текста: первое предложение (или часть до двоеточия / тире)
 // выделяется жирным — по таким строкам текст просматривается как по подзаголовкам.
-// Короче 25 знаков не берём (сокращения вроде «т. д.»), длиннее 170 — без подводки.
+// Границы: 25–130 знаков (у китайского 6–60 — иероглифы плотнее: при 25 жирным
+// уходило два предложения). Точка перед цифрой или строчной буквой — не конец
+// предложения («Resolution No. 649», «т. д.»). Длиннее предела — абзац без подводки.
 function splitLead(p: string): [string, string] {
-  const re = /(\.\s|:\s|\s—\s|。|：)/g;
+  const cjk = /[\u3400-\u9fff]/.test(p);
+  const min = cjk ? 6 : 25;
+  const max = cjk ? 60 : 130;
+  const re = /(\.\s|:\s|\s—\s|——|。|：)/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(p))) {
-    const end = m[0].trim() === "—" ? m.index : m.index + m[0].trimEnd().length;
-    if (end < 25) continue;
-    if (end > 170) break;
+    const tok = m[0].trim();
+    const end = tok === "—" || tok === "——" ? m.index : m.index + m[0].trimEnd().length;
+    if (tok === "." && /^\s*[0-9a-zа-яёçğıöşüʻ]/.test(p.slice(m.index + 1))) continue;
+    // тире посреди длинного предложения — плохая граница («…and where required»)
+    if ((tok === "—" || tok === "——") && end > (cjk ? 40 : 110)) continue;
+    if (end < min) continue;
+    if (end > max) break;
     return [p.slice(0, end), p.slice(end)];
   }
   return ["", p];
