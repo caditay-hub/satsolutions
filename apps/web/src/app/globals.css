@@ -220,3 +220,11 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
 @media (prefers-reduced-motion: reduce) {
   .newarr-ticker { animation: none; }
 }
+
+/* Нижняя панель контактов на телефоне (MobileContactBar): пока она видна,
+   плавающие кнопки «Назад», «Наверх» и чат поднимаются над ней. */
+.fab-lift { transition: transform .25s ease; }
+@media (max-width: 1023px) {
+  html[data-cbar="1"] .fab-lift { transform: translateY(-64px); }
+}
+@media (prefers-reduced-motion: reduce) { .fab-lift { transition: none; } }

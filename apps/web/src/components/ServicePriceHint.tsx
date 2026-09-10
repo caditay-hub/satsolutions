@@ -10,15 +10,16 @@ export function ServicePriceHint({ k, locale }: { k: string; locale: string }) {
   return (
     <div className="mt-12">
       <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{block.title}</h2>
-      <div className="mt-5 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-        {block.rows.map((row) => (
+      {/* строки в ряд: на компьютере ориентир занимает одну полосу, а не столбик на всю ширину */}
+      <div className="mt-5 grid overflow-hidden rounded-2xl border border-brand-200 bg-brand-50/60 sm:grid-cols-3">
+        {block.rows.map((row, i) => (
           <Link
             key={row.label}
             href={row.href}
-            className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 py-4 transition-colors hover:bg-slate-50"
+            className={`flex flex-col gap-0.5 px-5 py-3.5 transition-colors hover:bg-brand-100/60 ${i ? "border-t border-brand-200 sm:border-l sm:border-t-0" : ""}`}
           >
-            <span className="text-sm font-semibold text-slate-700">{row.label}</span>
-            <span className="text-base font-black tabular-nums text-brand-700">{row.price}</span>
+            <span className="text-[13px] font-semibold text-slate-600">{row.label}</span>
+            <span className="text-base font-black tabular-nums text-slate-900">{row.price}</span>
           </Link>
         ))}
       </div>

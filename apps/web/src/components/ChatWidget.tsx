@@ -559,7 +559,7 @@ export function ChatWidget() {
   }
 
   return (
-    <div className="fixed z-[60] bottom-4 right-4 sm:bottom-[40px] sm:right-[40px]">
+    <div className="fab-lift fixed z-[60] bottom-4 right-4 sm:bottom-[40px] sm:right-[40px]">
       {open ? (
         <div className="w-[92vw] max-w-sm overflow-hidden rounded-2xl border-2 border-brand-600 bg-white shadow-2xl ring-4 ring-brand-600/15">
           <div className="flex items-center justify-between gap-3 bg-brand-600 px-4 py-3 text-white">

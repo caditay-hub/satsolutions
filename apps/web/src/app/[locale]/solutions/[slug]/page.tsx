@@ -14,6 +14,9 @@ import { TrustBlock } from "@/components/TrustBlock";
 import { ClientsStrip } from "@/components/ClientsStrip";
 import { IndustryDetailsBlock, ServiceIndustriesBlock } from "@/components/IndustryDetailsBlock";
 import { ContactButtons } from "@/components/ContactButtons";
+import { SectionNav, MobileContactBar, type SectionNavItem } from "@/components/ServicePageNav";
+import { servicePrices } from "@/lib/servicePrices";
+import { getIndustryDetails, industriesForService } from "@/lib/industryDetails";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
 import { SmartHomeDevices } from "@/components/SmartHomeDevices";
@@ -23,8 +26,7 @@ import { RelatedServices } from "@/components/RelatedServices";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { Lightbox } from "@/components/Lightbox";
-import { serviceByKey, SERVICE_FAQ, INDUSTRIES } from "@/lib/servicesData";
-import { FeedbackForm } from "@/components/FeedbackForm";
+import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
 import { SERVICE_TO_GROUP } from "@/lib/groupSeo";
@@ -213,6 +215,20 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         }
       : null;
 
+  // Цена «от» для первого экрана и разметки — последняя строка ценового блока
+  // (у cctv: «Готовый комплект с монтажом — от 4 000 000 сум»). Блок есть не у всех услуг.
+  const priceBlock = servicePrices(svc.key, locale);
+  const heroPrice = priceBlock?.rows[priceBlock.rows.length - 1] ?? null;
+  const heroMinPrice = heroPrice ? Number(heroPrice.price.replace(/\D/g, "")) || null : null;
+  let hasPackages = false;
+  try {
+    const pk = ts.raw(`${svc.key}.details.packages`);
+    hasPackages = Array.isArray(pk) && pk.length > 0 && !["network", "server"].includes(svc.key);
+  } catch { /* пакетов нет */ }
+  const hasPrices = hasPackages || !!priceBlock;
+  const ind = isInd ? getIndustryDetails(locale, svc.key) : null;
+  const svcIndustries = svc.group === "service" ? industriesForService(svc.key) : [];
+
   // JSON-LD: Service + BreadcrumbList — страницы «возможностей» должны попадать
   // в расширенную выдачу по коммерческим запросам (шлагбаумы, скуд, видеостена…)
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
@@ -227,6 +243,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     areaServed: { "@type": "Country", name: "Узбекистан" },
     url: `${siteUrl}${lp}/solutions/${svc.key}`,
     image: `${IMG_BASE}/${svc.key}.jpg`,
+    // ценовой ориентир «от» — тот же, что в первом экране
+    ...(heroMinPrice
+      ? { offers: { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", priceCurrency: "UZS", minPrice: heroMinPrice } } }
+      : {}),
   };
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -238,11 +258,122 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     ],
   };
 
+  // Полоса разделов: у услуг — по содержимому страницы, у отраслей — инженерные разделы.
+  // «Заказать» у услуг только на телефоне: на компьютере КП уже в самой полосе.
+  const navItems: SectionNavItem[] = isInd
+    ? [
+        { id: "sostav", label: t("worksTitle") },
+        ...(ind ? [{ id: "specifics", label: t("navSpecifics") }, { id: "process", label: t("navProcess") }] : []),
+        ...(ind?.faq?.length ? [{ id: "ind-faq", label: t("navFaq") }] : []),
+        { id: "order", label: t("navOrder") },
+      ]
+    : [
+        { id: "sostav", label: t("worksTitle") },
+        ...(content ? [{ id: "about", label: t("navAbout") }] : []),
+        ...(hasPrices ? [{ id: "prices", label: t("navPrices") }] : []),
+        ...(equipment.length ? [{ id: "equipment", label: t("navEquipment") }] : []),
+        ...(cases.length ? [{ id: "projects", label: t("navProjects") }] : []),
+        ...(faq.length ? [{ id: "faq", label: t("navFaq") }] : []),
+        ...(isReference ? [] : [{ id: "order", label: t("navOrder"), mobileOnly: true }]),
+      ];
+  // Нижняя панель на телефоне появляется, когда человек дошёл до цен (прочитал предложение)
+  const barStart = isInd ? (ind ? "specifics" : "sostav") : hasPrices ? "prices" : content ? "about" : "sostav";
+  const quoteProduct = `Заявка: ${title}`;
+
+  const stars = (dark: boolean) =>
+    reviews.count > 0 ? (
+      <div className={`mt-3 flex items-center gap-2 text-sm font-bold ${dark ? "text-slate-300" : "text-slate-600"}`}>
+        <span className="inline-flex" aria-hidden>
+          {[1, 2, 3, 4, 5].map((i) => (
+            <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : dark ? "text-slate-600" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+          ))}
+        </span>
+        <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
+        <span className={dark ? "text-slate-500" : "text-slate-400"}>· {reviews.count}</span>
+      </div>
+    ) : null;
+
+  const equipmentBlock = equipment.length > 0 ? (
+    <section id="equipment" className="mt-12 scroll-mt-32">
+      <h2 className="text-xl font-black tracking-tight text-slate-900 sm:text-2xl">{equipTitle}</h2>
+      {/* на телефоне — лента вбок: восемь карточек столбиком занимали экран за экраном */}
+      <div className="mt-4 flex gap-3 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
+        {equipment.map((p: any) => (
+          <Link key={p.id} href={`/products/${p.slug}`}
+            className="group flex w-[46%] shrink-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-300 sm:w-auto">
+            <div className="flex h-32 items-center justify-center bg-white p-3">
+              {resolveImageUrl(p.coverImageUrl) ? (
+                <Image src={resolveImageUrl(p.coverImageUrl) as string} alt={p.name} width={160} height={116}
+                  className="max-h-[110px] w-auto object-contain" />
+              ) : null}
+            </div>
+            <div className="border-t border-slate-100 p-3">
+              <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{p.name}</div>
+              {p.shortDescription ? (
+                <div className="mt-1 line-clamp-2 text-[11.5px] leading-snug text-slate-500">{p.shortDescription}</div>
+              ) : null}
+              <div className="mt-1 text-[12px] font-bold text-brand-700">
+                {Number(p.price) > 0
+                  ? `${Math.round(Number(p.price)).toLocaleString("ru-RU")} ${locale === "ru" ? "сум" : "UZS"}`
+                  : priceOnReq}
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  ) : null;
+
+  // Мост «установить ↔ купить»: keyword-ссылка на hub-страницу группы каталога (groupSeo)
+  const bridgeLink = SERVICE_TO_GROUP[svc.key] ? (
+    <div className={equipment.length > 0 ? "mt-4" : "mt-10"}>
+      <Link
+        href={SERVICE_TO_GROUP[svc.key].href}
+        className="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm font-bold text-brand-800 transition-colors hover:bg-brand-100"
+      >
+        {(SERVICE_TO_GROUP[svc.key].label[locale] ?? SERVICE_TO_GROUP[svc.key].label.ru)} →
+      </Link>
+    </div>
+  ) : null;
+
+  // Кейсы (услуга → портфолио)
+  const casesBlock = cases.length > 0 ? (
+    <section id="projects" className="scroll-mt-32">
+      <div className="flex items-end justify-between gap-4">
+        <div>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("casesTitle")}</h2>
+        </div>
+        <Link href="/portfolio" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
+          {t("allProjects")} →
+        </Link>
+      </div>
+      <div className="mt-5 flex gap-4 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0">
+        {cases.map((c) => {
+          const img = resolveImageUrl(c.coverImageUrl);
+          return (
+            <Link key={c.slug} href={`/portfolio/${c.slug}`} className="group w-[78%] shrink-0 overflow-hidden rounded-xl border border-slate-200 transition-shadow hover:shadow-md sm:w-auto">
+              <div className="relative aspect-[16/10] bg-slate-100">
+                {img ? (
+                  <Image src={img} alt={c.title} fill sizes="(max-width:640px) 100vw, 25vw" className="object-cover" unoptimized />
+                ) : null}
+              </div>
+              <div className="p-3 text-sm font-semibold text-slate-900 group-hover:text-brand-700">{c.title}</div>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  ) : null;
+
+  const articlesTitle = locale === "uz" ? "Foydali maqolalar" : locale === "en" ? "Useful articles" : locale === "tr" ? "Faydalı makaleler" : locale === "zh" ? "实用文章" : "Полезные статьи";
+
   return (
     <div className="bg-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      {/* Отраслевые: тёмный hero с фото-подложкой + полоса цифр (вариант А) */}
+      {/* Отраслевые: тёмный hero с фото-подложкой + полоса цифр. Кнопок в первом экране
+          нет (10.09.2026): контакты — в полосе разделов и в форме расчёта ниже. */}
       {isInd && (
         <>
           <section className="relative overflow-hidden bg-[#031422] text-white">
@@ -269,24 +400,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               </nav>
               <p className="text-xs font-black uppercase tracking-widest text-cyan-300">{t("industryTag")}</p>
               <h1 className="mt-2 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl">{h1}</h1>
-              {reviews.count > 0 && (
-                <div className="mt-3 flex items-center gap-2 text-sm font-bold text-slate-300">
-                  <span className="inline-flex" aria-hidden>
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-600"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
-                    ))}
-                  </span>
-                  <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
-                  <span className="text-slate-500">· {reviews.count}</span>
-                </div>
-              )}
+              {stars(true)}
               <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">{intro}</p>
-              <div className="mt-7 flex flex-wrap items-center gap-3">
-                {isReference ? null : (
-                  <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
-                )}
-                <ContactButtons />
-              </div>
             </div>
           </section>
           <section className="border-t border-white/10 bg-[#031422] text-white">
@@ -305,80 +420,103 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         </>
       )}
 
-      <div className="container-page py-6 sm:py-10">
-        {!isInd && (
-          <>
-            {/* Breadcrumbs */}
-            <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
-              <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
-              <span className="text-slate-300">/</span>
-              <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
-              <span className="text-slate-300">/</span>
-              <span className="text-slate-900 normal-case tracking-normal">{title}</span>
-            </nav>
+      {/* Услуги: первый экран — «лицо» (решение владельца 10.09.2026). Контакты сюда не
+          ставим — они перебивали текст; КП на компьютере в полосе разделов, на телефоне —
+          блоком перед вопросами и тонкой панелью внизу. H1 один: на телефоне он лежит
+          поверх фото во всю ширину (та же ячейка сетки), на компьютере — справа от фото. */}
+      {!isInd && (
+        <div className="container-page pt-4 sm:pt-8">
+          <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+            <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
+            <span className="text-slate-300">/</span>
+            <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
+            <span className="text-slate-300">/</span>
+            <span className="text-slate-900 normal-case tracking-normal">{title}</span>
+          </nav>
 
-            {/* Hero: cover + intro */}
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-10">
-              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[16/9]">
-                <Image
-                  src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
-                  unoptimized
-                />
-              </div>
-              <div className="flex flex-col justify-center">
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("serviceTag")}</p>
-                <h1 className="mt-2 text-2xl sm:text-4xl font-black tracking-tight text-slate-900">{h1}</h1>
-                {reviews.count > 0 && (
-                  <div className="mt-2 flex items-center gap-2 text-sm font-bold text-slate-600">
-                    <span className="inline-flex text-amber-400" aria-hidden>
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i <= Math.round(reviews.avg) ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
-                      ))}
-                    </span>
-                    <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
-                    <span className="text-slate-400">· {reviews.count}</span>
-                  </div>
-                )}
-                <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-600">{intro}</p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title}`} />
-                  <ContactButtons />
-                </div>
-              </div>
+          <div className="grid [grid-template-areas:'media'_'body'] lg:grid-cols-[minmax(0,480px)_minmax(0,1fr)] lg:gap-x-10 lg:[grid-template-areas:'media_title'_'media_body']">
+            <div className="relative h-[340px] overflow-hidden bg-slate-900 [grid-area:media] max-lg:mx-[calc(50%-50vw)] sm:h-[400px] lg:h-auto lg:min-h-[300px] lg:self-stretch lg:rounded-2xl lg:border lg:border-slate-200">
+              <Image
+                src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
+                alt={title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 480px"
+                className="object-cover"
+                priority
+                unoptimized
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030e18] via-[#030e18]/55 to-transparent lg:hidden" aria-hidden />
             </div>
-          </>
-        )}
-
-        {/* Состав работ */}
-        <div className="mt-12">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("whatInc")}</p>
-          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("worksTitle")}</h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {works.map((w) => (
-              <div key={w} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                </span>
-                <span className="text-sm font-semibold leading-snug text-slate-800">{w}</span>
-              </div>
-            ))}
+            <div className="relative z-10 self-end pb-5 [grid-area:media] lg:self-end lg:pb-0 lg:[grid-area:title]">
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-300 lg:text-brand-600">{t("serviceTag")}</p>
+              <h1 className="mt-2 text-[26px] font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-slate-900">{h1}</h1>
+            </div>
+            <div className="[grid-area:body] lg:self-start">
+              {stars(false)}
+              <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">{intro}</p>
+              {!isReference && (
+                <div className="mt-4 grid max-w-xl grid-cols-3 overflow-hidden rounded-xl border border-slate-200 text-center">
+                  {([["factVisitV", "factVisitL"], ["factKpV", "factKpL"], ["factWarrantyV", "factWarrantyL"]] as const).map(([v, l], i) => (
+                    <div key={v} className={`px-2 py-2.5 ${i ? "border-l border-slate-200" : ""}`}>
+                      <div className="text-[15px] font-black text-brand-700 sm:text-base">{t(v)}</div>
+                      <div className="mt-0.5 text-[11.5px] leading-snug text-slate-500 sm:text-xs">{t(l)}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {!isReference && (heroPrice || CALC_SERVICES.has(svc.key)) && (
+                <div className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  {heroPrice ? (
+                    <>
+                      <span className="text-sm font-semibold text-slate-500">{heroPrice.label}</span>
+                      <span className="text-xl font-black tabular-nums text-slate-900 sm:text-2xl">{heroPrice.price}</span>
+                    </>
+                  ) : null}
+                  {CALC_SERVICES.has(svc.key) ? (
+                    <Link href="/calculator" className="text-sm font-bold text-brand-700 hover:underline">{tcalc("promoBtn")} →</Link>
+                  ) : null}
+                </div>
+              )}
+            </div>
           </div>
         </div>
+      )}
 
-        {/* SEO-текст: глубина контента под голые высокочастотные запросы */}
+      {/* Липкая полоса разделов — прямой потомок обёртки страницы, иначе sticky
+          отлипнет на границе первого контейнера */}
+      <SectionNav items={navItems} ariaLabel={t("navAria")} quoteLabel={t("getQuote")}
+        quoteProduct={`${quoteProduct} (полоса разделов)`} showQuote={!isReference} />
+
+      <div className="container-page pb-2">
+        {/* Состав работ — компактным чек-листом во всю ширину */}
+        <section id="sostav" className="mt-6 scroll-mt-32 lg:mt-8">
+          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("whatInc")}</p>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("worksTitle")}</h2>
+          <ul className="mt-4 grid gap-x-8 gap-y-2.5 rounded-2xl bg-slate-50 p-4 sm:grid-cols-2 lg:grid-cols-3 lg:p-5">
+            {works.map((w) => (
+              <li key={w} className="flex items-start gap-2.5 text-sm font-semibold leading-snug text-slate-800">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-100 text-brand-700">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                </span>
+                {w}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* SEO-текст целиком: вводный абзац во всю ширину, остальное — в две колонки
+            (была узкая колонка на треть экрана с пустотой справа) */}
         {content && (
-          <section className="mt-12 max-w-3xl">
+          <section id="about" className="mt-12 scroll-mt-32">
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{content.heading}</h2>
-            <div className="mt-4 space-y-4">
-              {content.paragraphs.map((p, i) => (
-                <p key={i} className="text-sm sm:text-base leading-relaxed text-slate-600">{p}</p>
-              ))}
-            </div>
+            <p className="mt-4 text-sm leading-relaxed text-slate-700 sm:text-base">{content.paragraphs[0]}</p>
+            {content.paragraphs.length > 1 && (
+              <div className="mt-4 gap-12 lg:columns-2">
+                {content.paragraphs.slice(1).map((p, i) => (
+                  <p key={i} className="mb-4 text-sm leading-relaxed text-slate-600 sm:text-base">{p}</p>
+                ))}
+              </div>
+            )}
           </section>
         )}
 
@@ -394,11 +532,11 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Серверные и ЦОД: типовые конфигурации, этапы, каталог */}
         {svc.key === "server" && <DataCenterDetails locale={locale} />}
 
-        {/* Типовые конфигурации (универсальный блок: турникеты, Wi-Fi, умный дом…) */}
-        {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} locale={locale} />}
-
-        {/* Ценовой ориентир — для ключей «… цена / narxi», которые ведут на эту страницу */}
-        <ServicePriceHint k={svc.key} locale={locale} />
+        {/* Типовые решения и ценовой ориентир — один раздел (якорь «Цены») */}
+        <div id={hasPrices ? "prices" : undefined} className="scroll-mt-32">
+          {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} locale={locale} />}
+          <ServicePriceHint k={svc.key} locale={locale} />
+        </div>
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} locale={locale} />
@@ -406,18 +544,28 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} locale={locale} />
 
-        {/* Перелинковка услуга → отрасли, где она применяется */}
-        {svc.group === "service" && <ServiceIndustriesBlock locale={locale} serviceKey={svc.key} />}
+        {/* Услуги: витрина оборудования и кейсы — выше, рядом с предложением.
+            Проекты и отрасли — в одном ряду, только если есть оба блока.
+            grid-cols-1 обязателен: без него колонка растягивается под ленту «вбок»,
+            страница становится шире экрана и телефон уменьшает масштаб. */}
+        {!isInd && equipmentBlock}
+        {!isInd && bridgeLink}
+        {!isInd && (casesBlock || svcIndustries.length > 0) && (
+          <div className={`mt-12 grid grid-cols-1 gap-10 ${casesBlock && svcIndustries.length > 0 ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start" : ""}`}>
+            {casesBlock}
+            {svcIndustries.length > 0 && <ServiceIndustriesBlock locale={locale} serviceKey={svc.key} className="" />}
+          </div>
+        )}
       </div>
 
       {/* Инженерный контент отрасли — полноширинные секции: специфика с фото,
           этапы линией на сером, сложности на тёмном, FAQ узкой колонкой */}
       {isInd && <IndustryDetailsBlock locale={locale} industryKey={svc.key} />}
 
-      {/* Расчёт проекта — полоса на брендовом градиенте: слева заголовок и
-          гарантии, справа белая карточка формы (визуальный финал истории) */}
+      {/* Отрасли: расчёт проекта — единственный призыв внизу страницы (было четыре подряд).
+          Слева заголовок, гарантии и контакты, справа форма. */}
       {isInd && (
-        <section className="bg-gradient-to-br from-brand-700 to-[#134e5e] text-white">
+        <section id="order" className="scroll-mt-32 bg-gradient-to-br from-brand-700 to-[#134e5e] text-white">
           <div className="container-page grid gap-10 py-12 sm:py-16 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <div>
               <p className="text-xs font-black uppercase tracking-widest text-cyan-200">{tpf!("badge")}</p>
@@ -431,6 +579,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                   </li>
                 ))}
               </ul>
+              <div data-placement="order-block" className="mt-6 grid max-w-md grid-cols-3 gap-2">
+                <ContactButtons compact full />
+              </div>
             </div>
             <ProjectQuoteForm industryKey={svc.key} hideHeader />
           </div>
@@ -457,120 +608,56 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           </div>
         )}
 
-        {/* Кейсы (услуга → портфолио) */}
-        {cases.length > 0 && (
-          <div className="mt-12">
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
-                <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("casesTitle")}</h2>
+        {/* Отрасли: кейсы и витрина — внизу, как раньше */}
+        {isInd && casesBlock && <div className="mt-12">{casesBlock}</div>}
+        {isInd && equipmentBlock}
+        {isInd && bridgeLink}
+
+        {/* Телефон: контакты одним блоком — перед вопросами, когда человек уже прочитал
+            предложение, цены и проекты (на компьютере КП — в полосе разделов) */}
+        {!isInd && !isReference && (
+          <section id="order" className="mt-10 scroll-mt-28 lg:hidden">
+            <div className="rounded-2xl bg-gradient-to-br from-brand-900 via-brand-700 to-brand-600 p-5 text-white">
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-200">{t("orderLabel")}</p>
+              <h2 className="mt-1.5 text-[22px] font-black leading-tight">{t("orderTitle")}</h2>
+              <p className="mt-2 text-sm leading-relaxed text-white/85">{t("orderText")}</p>
+              <div className="mt-4">
+                <RequestQuoteButton label={t("getQuote")} variant="white" fullWidth productName={`${quoteProduct} (блок заказа)`} />
               </div>
-              <Link href="/portfolio" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
-                {t("allProjects")} →
-              </Link>
+              <div data-placement="order-block" className="mt-2 grid grid-cols-3 gap-2">
+                <ContactButtons compact full />
+              </div>
             </div>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {cases.map((c) => {
-                const img = resolveImageUrl(c.coverImageUrl);
-                return (
-                  <Link key={c.slug} href={`/portfolio/${c.slug}`} className="group overflow-hidden rounded-xl border border-slate-200 transition-shadow hover:shadow-md">
-                    <div className="relative aspect-[16/10] bg-slate-100">
-                      {img ? (
-                        <Image src={img} alt={c.title} fill sizes="(max-width:640px) 100vw, 33vw" className="object-cover" unoptimized />
-                      ) : null}
-                    </div>
-                    <div className="p-3 text-sm font-semibold text-slate-900 group-hover:text-brand-700">{c.title}</div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
+          </section>
         )}
 
-        {/* Калькулятор: показываем только там, где он реально считает эту систему */}
-        {CALC_SERVICES.has(svc.key) && (
-          <div className="mt-12 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:flex sm:items-center sm:justify-between sm:gap-6">
-            <div className="max-w-xl">
-              <p className="text-base font-black text-slate-900">{tcalc("promoTitle")}</p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-600">{tcalc("promoText")}</p>
-            </div>
-            <Link href="/calculator"
-              className="mt-4 inline-flex shrink-0 items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500 sm:mt-0">
-              {tcalc("promoBtn")} →
-            </Link>
-          </div>
-        )}
-
-        {/* FAQ */}
-        {faq.length > 0 && (
-          <div className="mt-12">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
-            <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
-            <FaqAccordion items={faq} />
-          </div>
-        )}
-
-        {/* Витрина оборудования: по запросам «шлагбаум», «турникет» человек ищет
-            технику, а на странице услуги её не было — только описание работ. */}
-        {equipment.length > 0 && (
-          <div className="mt-12">
-            <h2 className="text-xl font-black tracking-tight text-slate-900 sm:text-2xl">{equipTitle}</h2>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {equipment.map((p: any) => (
-                <Link key={p.id} href={`/products/${p.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-300">
-                  <div className="flex h-32 items-center justify-center bg-white p-3">
-                    {resolveImageUrl(p.coverImageUrl) ? (
-                      <Image src={resolveImageUrl(p.coverImageUrl) as string} alt={p.name} width={160} height={116}
-                        className="max-h-[110px] w-auto object-contain" />
-                    ) : null}
-                  </div>
-                  <div className="border-t border-slate-100 p-3">
-                    <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{p.name}</div>
-                    {p.shortDescription ? (
-                      <div className="mt-1 line-clamp-2 text-[11.5px] leading-snug text-slate-500">{p.shortDescription}</div>
-                    ) : null}
-                    <div className="mt-1 text-[12px] font-bold text-brand-700">
-                      {Number(p.price) > 0
-                        ? `${Math.round(Number(p.price)).toLocaleString("ru-RU")} ${locale === "ru" ? "сум" : "UZS"}`
-                        : priceOnReq}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Мост «установить ↔ купить»: keyword-ссылка на hub-страницу группы каталога (groupSeo) */}
-        {SERVICE_TO_GROUP[svc.key] && (
-          <div className="mt-10">
-            <Link
-              href={SERVICE_TO_GROUP[svc.key].href}
-              className="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm font-bold text-brand-800 hover:bg-brand-100 transition-colors"
-            >
-              {(SERVICE_TO_GROUP[svc.key].label[locale] ?? SERVICE_TO_GROUP[svc.key].label.ru)} →
-            </Link>
-          </div>
-        )}
-
-        {/* Полезные статьи (услуга → блог) — обратная перелинковка */}
-        {relatedArticles.length > 0 && (
-          <div className="mt-12">
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
-              {locale === "uz" ? "Foydali maqolalar" : locale === "en" ? "Useful articles" : locale === "tr" ? "Faydalı makaleler" : locale === "zh" ? "实用文章" : "Полезные статьи"}
-            </h2>
-            <div className="mt-5 grid gap-4 sm:grid-cols-3">
-              {relatedArticles.map((a) => {
-                const b = a.loc[locale]!;
-                return (
-                  <Link key={a.slug} href={`/blog/${a.slug}`} className="group rounded-xl border border-slate-200 p-4 transition-shadow hover:shadow-md">
-                    <div className="text-sm font-black leading-snug text-slate-900 group-hover:text-brand-700">{b.title}</div>
-                    <div className="mt-2 line-clamp-3 text-xs leading-relaxed text-slate-500">{b.excerpt}</div>
-                  </Link>
-                );
-              })}
-            </div>
+        {/* Вопросы и статьи — в одном ряду */}
+        {(faq.length > 0 || relatedArticles.length > 0) && (
+          <div className={`mt-12 grid grid-cols-1 gap-10 ${faq.length > 0 && relatedArticles.length > 0 ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start" : ""}`}>
+            {faq.length > 0 && (
+              <section id="faq" className="scroll-mt-32">
+                <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
+                <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
+                <FaqAccordion items={faq} />
+              </section>
+            )}
+            {relatedArticles.length > 0 && (
+              <section>
+                <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{articlesTitle}</h2>
+                {/* заголовками: все ссылки на месте, колонка встаёт вровень с вопросами */}
+                <div className={`mt-5 grid gap-2 ${faq.length > 0 ? "" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
+                  {relatedArticles.map((a) => {
+                    const b = a.loc[locale]!;
+                    return (
+                      <Link key={a.slug} href={`/blog/${a.slug}`} title={b.excerpt} className="group flex items-start justify-between gap-3 rounded-xl border border-slate-200 px-4 py-3 transition-colors hover:border-brand-300">
+                        <span className="text-sm font-bold leading-snug text-slate-900 group-hover:text-brand-700">{b.title}</span>
+                        <span className="shrink-0 text-brand-600" aria-hidden>→</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
           </div>
         )}
 
@@ -592,8 +679,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                     <div className="flex items-center justify-between gap-2">
                       <span className="text-sm font-black text-slate-900">{r.name}</span>
                       <span className="inline-flex text-amber-400">
-                        {[1, 2, 3, 4, 5].map((s) => (
-                          <svg key={s} viewBox="0 0 20 20" className={`h-3.5 w-3.5 ${s <= r.rating ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
+                        {[1, 2, 3, 4, 5].map((st) => (
+                          <svg key={st} viewBox="0 0 20 20" className={`h-3.5 w-3.5 ${st <= r.rating ? "text-amber-400" : "text-slate-200"}`} fill="currentColor"><path d="M10 1.6l2.47 5.01 5.53.8-4 3.9.94 5.5L10 14.2l-4.94 2.6.94-5.5-4-3.9 5.53-.8L10 1.6z" /></svg>
                         ))}
                       </span>
                     </div>
@@ -609,54 +696,28 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
-      {/* Отраслевые страницы: встроенная форма запроса расчёта (B2B-план) — инлайн
-          конвертирует лучше кнопки-модалки; сама форма локализована (namespace form),
-          лид уходит тем же каналом с gclid. */}
-      {INDUSTRIES.some((i) => i.key === svc.key) && (
-        <section className="bg-slate-50 border-y border-slate-200">
-          <div className="container-page grid gap-8 py-12 sm:py-14 lg:grid-cols-2 lg:items-center">
-            <div>
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600">
-                {({ ru: "Бесплатный расчёт", uz: "Bepul hisob-kitob", en: "Free estimate", tr: "Ücretsiz keşif", zh: "免费测算" } as Record<string, string>)[locale] ?? "Бесплатный расчёт"}
-              </p>
-              <h2 className="mt-2 text-2xl sm:text-3xl font-black tracking-tight text-slate-900">
-                {({
-                  ru: "Получите расчёт под ваш объект",
-                  uz: "Obyektingiz uchun hisob-kitob oling",
-                  en: "Get an estimate for your site",
-                  tr: "Sahanız için keşif alın",
-                  zh: "获取您项目的方案测算",
-                } as Record<string, string>)[locale] ?? "Получите расчёт под ваш объект"}
-              </h2>
-              <p className="mt-3 max-w-md text-sm text-slate-600 sm:text-base">
-                {({
-                  ru: "Опишите задачу или пришлите план помещения — инженер подготовит схему, спецификацию и смету. Выезд на объект по Ташкенту бесплатный.",
-                  uz: "Vazifani taʼriflang yoki xona planini yuboring — muhandis sxema, spetsifikatsiya va smeta tayyorlaydi. Toshkent boʻylab obyektga chiqish bepul.",
-                  en: "Describe the task or send a floor plan — an engineer prepares the layout, specification and estimate. Site visits in Tashkent are free.",
-                  tr: "İşi anlatın veya kat planını gönderin — mühendis şema, şartname ve keşif hazırlar. Taşkent'te saha ziyareti ücretsizdir.",
-                  zh: "描述需求或发来平面图——工程师将准备布点方案、清单和预算。塔什干范围内免费上门勘察。",
-                } as Record<string, string>)[locale] ?? ""}
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-              <FeedbackForm hideHeader />
-            </div>
+      {/* Финальный призыв — у услуг и только на компьютере (на телефоне контакты уже
+          были блоком перед вопросами); у отраслей его заменяет форма расчёта */}
+      {!isInd && !isReference && (
+        <section className="hidden bg-slate-900 text-white lg:block">
+          <div className="container-page flex flex-col items-center gap-5 py-12 text-center sm:py-14">
+            <p className="text-xs font-black uppercase tracking-widest text-brand-400">{t("ctaLabel")}</p>
+            <h2 className="max-w-2xl text-2xl sm:text-3xl font-black tracking-tight">{t("needTitle", { name: title.toLowerCase() })}</h2>
+            <p className="max-w-xl text-sm text-slate-300 sm:text-base">
+              {t("detailCtaText")}
+            </p>
+            <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`${quoteProduct} (CTA)`} />
           </div>
         </section>
       )}
 
-      {/* CTA — на справочных разделах не показываем (см. REFERENCE_ONLY) */}
-      {isReference ? null : (
-      <section className="bg-slate-900 text-white">
-        <div className="container-page flex flex-col items-center gap-5 py-12 text-center sm:py-14">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-400">{t("ctaLabel")}</p>
-          <h2 className="max-w-2xl text-2xl sm:text-3xl font-black tracking-tight">{t("needTitle", { name: title.toLowerCase() })}</h2>
-          <p className="max-w-xl text-sm text-slate-300 sm:text-base">
-            {t("detailCtaText")}
-          </p>
-          <RequestQuoteButton label={t("getQuote")} variant="brand" productName={`Заявка: ${title} (CTA)`} />
-        </div>
-      </section>
+      {/* Телефон: тонкая панель контактов — после раздела цен, прячется у блока заказа */}
+      {!isReference && (
+        <>
+          <MobileContactBar startId={barStart} callLabel={t("barCall")} quoteLabel={t("getQuote")}
+            quoteProduct={`${quoteProduct} (панель внизу)`} />
+          <div className="h-16 lg:hidden" aria-hidden />
+        </>
       )}
     </div>
   );

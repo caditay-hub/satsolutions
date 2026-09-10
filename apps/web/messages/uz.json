@@ -4613,7 +4613,26 @@
       "Ish tartibi doʻkon uchun ham, zavod uchun ham bir xil. Avval muhandis obyektga bepul chiqadi: oʻlchovlar, joylashuv, oʻrnatish nuqtalari, mavjud trassalar va quvvat manbai. Soʻng spetsifikatsiyali texnik yechim: uskuna markalari, kabel metraji, butlovchilar va pozitsiyalar boʻyicha narx; smetani odatda bir ish kuni ichida beramiz. Keyin kelishilgan reja boʻyicha montaj, ishga tushirish, yozuv va kirish huquqlarini sozlash, xodimlarni oʻqitish hamda ijro hujjatlari bilan topshirish. Topshirilgandan soʻng obyekt xizmat koʻrsatishga oʻtadi.",
       "Byudjet kameralar sonidan kelib chiqmaydi. Asosiy qismini trassalar va ish tashkil qiladi: kabel, lotok, mahkamlagichlar, kirish shchitlari, uzluksiz quvvat manbalari, PoE kommutatorlar. Bu yerda tejash eng qimmatga tushadi: mis qoplamali kabel uzoqdagi kameraga quvvatni yetkazmaydi, kuchsiz blok esa issiqda butun liniyani oʻchiradi. Shuning uchun smeta obyekt boʻyicha hisoblanadi: masofa, qavatlar soni, devor materiali va talab qilingan tasvir sifati narxni registrator modelidan koʻra kuchliroq oʻzgartiradi. Lokal tarmoq montaji va qolgan tarmoqlarni port hamda metraj zaxirasi bilan quramiz.",
       "Oʻzbekiston sharoiti oʻz talablarini qoʻshadi. Yozda quyoshda +45 °C, sanoat zonalari va qurilish maydonlarida chang, tarmoqdagi kuchlanish sakraydi va oʻchadi — uskunalar zavod nuqsonidan koʻra koʻproq shu sabablardan ishdan chiqadi. Koʻchadagi kameralarni harorat va germetiklik zaxirasi bilan tanlaymiz, shkaflarni ventilyatsiya bilan oʻrnatamiz, yozuv tugunlari va yongʻin asboblarini UPS orqasiga ulaymiz. Choraklik reglament xizmati obyektiv va korpuslarni tozalash, kontaktlarni tortish, akkumulyatorlarni tekshirish, datchiklar va ogohlantirish sinovlari, proshivkalarni yangilash hamda arxiv chuqurligini nazorat qilishni oʻz ichiga oladi."
-    ]
+    ],
+    "navAria": "Sahifa boʻlimlari",
+    "navAbout": "Xizmat haqida",
+    "navPrices": "Narxlar",
+    "navEquipment": "Uskunalar",
+    "navProjects": "Loyihalar",
+    "navFaq": "Savollar",
+    "navOrder": "Buyurtma",
+    "navSpecifics": "Xususiyatlar",
+    "navProcess": "Bosqichlar",
+    "factVisitV": "Bepul",
+    "factVisitL": "Toshkent boʻylab chiqish",
+    "factKpV": "1 kun",
+    "factKpL": "taklif va smeta",
+    "factWarrantyV": "Kafolat",
+    "factWarrantyL": "uskuna va ishlarga",
+    "orderLabel": "Keyingi qadam",
+    "orderTitle": "Obyektingizni muhokama qilamizmi?",
+    "orderText": "Toshkent boʻylab muhandis chiqishi bepul, smeta va tijorat taklifini bir ish kuni ichida yuboramiz.",
+    "barCall": "Qoʻngʻiroq"
   },
   "chat": {
     "title": "Onlayn chat",

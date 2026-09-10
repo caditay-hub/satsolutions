@@ -42,7 +42,7 @@ function setUserData(u?: LeadUserData) {
 const GA4_ID = "G-SHQYK1BS1S";
 
 /** Зафиксировать конверсию в Google Ads + GA4. Безопасно вызывать на сервере/без gtag. */
-export function trackConversion(key: ConversionKey, opts?: { value?: number; user?: LeadUserData }) {
+export function trackConversion(key: ConversionKey, opts?: { value?: number; user?: LeadUserData; placement?: string }) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
   setUserData(opts?.user);
   const value = opts?.value ?? 1.0;
@@ -56,6 +56,9 @@ export function trackConversion(key: ConversionKey, opts?: { value?: number; use
   window.gtag("event", "generate_lead", {
     send_to: GA4_ID,
     method: key, // lead / call / whatsapp / telegram / chat
+    // где был клик: шапка, полоса разделов, нижняя панель, блок заказа… — замер после
+    // переноса контактов из первого экрана страниц услуг (10.09.2026)
+    ...(opts?.placement ? { placement: opts.placement } : {}),
     value,
     currency: "USD",
   });

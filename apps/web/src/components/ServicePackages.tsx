@@ -54,7 +54,8 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
             {p.term ? (
               <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400">{p.term}</p>
             ) : null}
-            <div className="mt-3">
+            {/* на телефоне КП — в блоке заказа и в нижней панели (контакты не перебивают текст) */}
+            <div className="mt-3 hidden lg:block">
               <RequestQuoteButton label={tp("getQuote")} variant="brand" productName={`Заявка: ${ts(`${k}.title`)} — ${p.name}`} />
             </div>
           </div>
@@ -66,12 +67,14 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
         <div className="mt-12">
           <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.stagesLabel`)}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.stagesTitle`)}</h2>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-5 grid gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-5">
             {stages.map((st, i) => (
-              <div key={st.t} className="rounded-xl border border-slate-100 bg-slate-50/60 p-4">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-600 text-sm font-black text-white">{i + 1}</span>
-                <p className="mt-3 text-sm font-black text-slate-900">{st.t}</p>
-                {st.s ? <p className="mt-1 text-xs leading-snug text-slate-500">{st.s}</p> : null}
+              <div key={st.t} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-slate-50/60 p-3 sm:block sm:p-4">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-600 text-sm font-black text-white">{i + 1}</span>
+                <div>
+                  <p className="text-sm font-black text-slate-900 sm:mt-3">{st.t}</p>
+                  {st.s ? <p className="mt-1 text-xs leading-snug text-slate-500">{st.s}</p> : null}
+                </div>
               </div>
             ))}
           </div>

@@ -4613,7 +4613,26 @@
       "The sequence is the same for a shop and for a plant. First a free site visit by an engineer: measurements, layout, mounting points, existing routes and power. Then a technical solution with a specification: equipment models, cable footage, accessories and itemised pricing, with the estimate usually delivered within one working day. Next comes installation to the approved plan, commissioning, setup of recording and access rights, staff training and handover with as-built documentation. After handover the site moves onto maintenance.",
       "The budget is not a function of camera count. Most of it goes into routes and labour: cable, trays, fixings, distribution boards, uninterruptible power supplies and PoE switches. Saving here costs the most, because copper-clad cable will not carry power to a distant camera and an undersized supply drops the whole line in the heat. That is why an estimate is priced per site: distances, number of floors, wall material and the required image quality shift the figure far more than the recorder model does. Local network installation and the remaining networks are laid out with spare ports and footage, so expanding a year later costs less.",
       "Conditions in Uzbekistan add their own requirements. Summer brings +45 °C in the sun, industrial zones and construction sites are dusty, and mains voltage surges or disappears, so equipment fails from this more often than from factory defects. Outdoor cameras are selected with margin on temperature rating and ingress protection, cabinets get ventilation, and recording nodes and fire panels sit behind a UPS. Scheduled quarterly maintenance covers cleaning lenses and housings, retightening contacts, testing batteries, checking detectors and sounders, updating firmware and verifying archive depth."
-    ]
+    ],
+    "navAria": "Page sections",
+    "navAbout": "About",
+    "navPrices": "Prices",
+    "navEquipment": "Equipment",
+    "navProjects": "Projects",
+    "navFaq": "FAQ",
+    "navOrder": "Order",
+    "navSpecifics": "Specifics",
+    "navProcess": "Process",
+    "factVisitV": "Free",
+    "factVisitL": "site visit in Tashkent",
+    "factKpV": "1 day",
+    "factKpL": "quote and estimate",
+    "factWarrantyV": "Warranty",
+    "factWarrantyL": "on equipment and work",
+    "orderLabel": "Next step",
+    "orderTitle": "Ready to discuss your site?",
+    "orderText": "An engineer visits sites in Tashkent free of charge; we send the estimate and quote within one business day.",
+    "barCall": "Call"
   },
   "chat": {
     "title": "Online chat",

@@ -4613,7 +4613,26 @@
       "İş sırası küçük bir mağazada da fabrikada da aynıdır. Önce mühendisin ücretsiz saha ziyareti: ölçüm, yerleşim, montaj noktaları, mevcut güzergâhlar ve besleme. Ardından spesifikasyonlu teknik çözüm: ekipman modelleri, kablo metrajı, malzemeler ve kalem bazında fiyat; keşif genellikle bir iş günü içinde verilir. Sonra onaylanan plana göre montaj, devreye alma, kayıt ve yetki ayarları, personel eğitimi ve as-built belgelerle teslim. Teslimden sonra saha bakım aşamasına geçer.",
       "Bütçe kamera sayısıyla belirlenmez. Büyük kısmını güzergâh ve işçilik oluşturur: kablo, kanal, sabitleme elemanları, dağıtım panoları, kesintisiz güç kaynakları ve PoE anahtarlar. Buradaki tasarruf en pahalıya mal olur; bakır kaplı kablo uzaktaki kameraya beslemeyi taşımaz, zayıf bir güç kaynağı sıcakta tüm hattı düşürür. Bu yüzden fiyat saha üzerinden hesaplanır: mesafeler, kat sayısı, duvar malzemesi ve istenen görüntü kalitesi rakamı kayıt cihazı modelinden çok daha fazla değiştirir. Yerel ağ kurulumu ve diğer ağlar yedek port ve metrajla planlanır, bir yıl sonraki genişleme daha ucuza gelir.",
       "Özbekistan koşulları kendi gerekliliklerini ekler. Yazın güneşte +45 °C, sanayi bölgelerinde ve şantiyelerde toz, şebeke geriliminde dalgalanma ve kesinti vardır; ekipman fabrika hatasından çok bu nedenlerle arızalanır. Dış mekân kameraları sıcaklık ve sızdırmazlık payıyla seçilir, kabinlere havalandırma konur, kayıt üniteleri ve yangın panelleri UPS arkasına alınır. Üç ayda bir yapılan periyodik bakım; lens ve muhafaza temizliğini, kontak sıkmayı, akü testini, dedektör ve siren kontrolünü, yazılım güncellemesini ve arşiv derinliğinin denetimini içerir."
-    ]
+    ],
+    "navAria": "Sayfa bölümleri",
+    "navAbout": "Hizmet hakkında",
+    "navPrices": "Fiyatlar",
+    "navEquipment": "Ekipman",
+    "navProjects": "Projeler",
+    "navFaq": "SSS",
+    "navOrder": "Sipariş",
+    "navSpecifics": "Özellikler",
+    "navProcess": "Aşamalar",
+    "factVisitV": "Ücretsiz",
+    "factVisitL": "Taşkent’te keşif",
+    "factKpV": "1 gün",
+    "factKpL": "teklif ve maliyet",
+    "factWarrantyV": "Garanti",
+    "factWarrantyL": "ekipman ve işçilik",
+    "orderLabel": "Sonraki adım",
+    "orderTitle": "Projenizi konuşalım mı?",
+    "orderText": "Taşkent’te mühendis keşfi ücretsizdir; maliyet hesabını ve teklifi bir iş günü içinde göndeririz.",
+    "barCall": "Ara"
   },
   "chat": {
     "title": "Canlı sohbet",

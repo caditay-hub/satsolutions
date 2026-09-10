@@ -2,7 +2,6 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { getIndustryDetails, INDUSTRY_SERVICES, industriesForService } from "@/lib/industryDetails";
-import { ProjectCalcForm } from "@/components/ProjectCalcForm";
 
 /** Реальные проекты портфолио по отраслям (только существующие карточки, без выдуманных цифр). */
 const INDUSTRY_CASES: Record<string, Array<{ slug: string; title: string }>> = {
@@ -68,7 +67,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
       {d && (
         <>
           {/* 01 · Специфика объекта: текст в связке с фото (зигзаг) */}
-          <section className="bg-white">
+          <section id="specifics" className="scroll-mt-32 bg-white">
             <div className="container-page py-12 sm:py-16">
               <SectionHead n="01" title={d.specificsTitle} />
               <div className="mt-6 grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12">
@@ -98,7 +97,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
           </section>
 
           {/* 02 · Как ведём проект: этапы единой линией */}
-          <section className="bg-slate-50">
+          <section id="process" className="scroll-mt-32 bg-slate-50">
             <div className="container-page py-12 sm:py-16">
               <SectionHead n="02" title={d.workflowTitle} />
               <ol className="relative mt-9 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
@@ -138,7 +137,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
 
       {/* 04 · FAQ узкой колонкой + профильные услуги */}
       {(d?.faq?.length || services.length > 0) ? (
-        <section className="bg-white">
+        <section id="ind-faq" className="scroll-mt-32 bg-white">
           <div className="container-page py-12 sm:py-16">
             {d?.faq?.length ? (
               <>
@@ -194,26 +193,27 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
         </section>
       ) : null}
 
-      {/* 05 · Инлайн-форма расчёта: дочитал страницу — форма уже перед глазами */}
-      {d && <ProjectCalcForm serviceName={`Расчёт проекта: ${d.specificsTitle}`} />}
+      {/* 05 · Форма расчёта — одна, полосой ниже на странице (#order). Здесь стояла вторая
+          (ProjectCalcForm): внизу отраслевой страницы было четыре призыва подряд,
+          владелец попросил один (10.09.2026). */}
     </>
   );
 }
 
 /** Обратная перелинковка: на странице услуги — отрасли, где она применяется. */
-export async function ServiceIndustriesBlock({ locale, serviceKey }: { locale: string; serviceKey: string }) {
+export async function ServiceIndustriesBlock({ locale, serviceKey, className = "mt-12" }: { locale: string; serviceKey: string; className?: string }) {
   const industries = industriesForService(serviceKey);
   if (!industries.length) return null;
   const ts = await getTranslations({ locale, namespace: "services" });
   const tc = await getTranslations({ locale, namespace: "common" });
   return (
-    <section className="mt-12">
+    <section className={className}>
       <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
       <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industrySolutions")}</h2>
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible sm:pb-0">
         {industries.map((k) => (
           <Link key={k} href={`/solutions/${k}`}
-            className="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-500 hover:text-brand-700">
+            className="shrink-0 whitespace-nowrap rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-[13px] font-semibold text-slate-700 transition-colors hover:border-brand-500 hover:text-brand-700">
             {ts(`${k}.title`)} →
           </Link>
         ))}

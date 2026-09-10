@@ -23,7 +23,9 @@ export function ContactConversionTracker() {
       const now = Date.now();
       if (last[href] && now - last[href] < 2000) return; // антидубль
       last[href] = now;
-      trackConversion(key);
+      // место на странице — из ближайшего data-placement (шапка, полоса, панель, блок заказа)
+      const placement = a.closest("[data-placement]")?.getAttribute("data-placement") || "other";
+      trackConversion(key, { placement });
     }
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);

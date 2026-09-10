@@ -309,6 +309,16 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
           <HeaderSearch className="hidden lg:block w-40 xl:w-48 2xl:w-56" />
           <LanguageSwitcher className="hidden lg:block" />
 
+          {/* Телефон в шапке (10.09.2026): контакты ушли из первого экрана страниц услуг —
+              позвонить можно с любого места. Номером — только на очень широком экране (на 1440 шапка переполнялась), иначе значком. */}
+          <a href="tel:+998978626699" data-placement="header" className="hidden items-center gap-1.5 whitespace-nowrap px-1 text-sm font-extrabold text-slate-900 transition-colors hover:text-brand-700 2xl:inline-flex">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            +998 97 862 66 99
+          </a>
+          <a href="tel:+998978626699" data-placement="header" aria-label="+998 97 862 66 99" className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-800 hover:bg-slate-50 2xl:hidden">
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+          </a>
+
           {/* Мобильный переключатель языков — в пустом месте между лого и «гамбургером» */}
           <LanguageSwitcher className="lg:hidden" />
 

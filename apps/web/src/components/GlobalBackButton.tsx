@@ -27,7 +27,7 @@ export function GlobalBackButton() {
       type="button"
       onClick={goBack}
       aria-label={t("back")}
-      className="fixed bottom-5 left-5 z-40 inline-flex items-center gap-1.5 rounded-full bg-brand-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-black/20 transition-colors hover:bg-brand-700"
+      className="fab-lift fixed bottom-5 left-5 z-40 inline-flex items-center gap-1.5 rounded-full bg-brand-600 px-4 py-2.5 text-sm font-bold text-white shadow-lg shadow-black/20 transition-colors hover:bg-brand-700"
     >
       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
