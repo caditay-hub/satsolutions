@@ -19,6 +19,7 @@ const KEY = "7f21529e192eaadfbf56c168e250f686";
 const HOST = "satsolutions.uz";
 const SITEMAP = "http://localhost:3000/sitemap.xml";
 const ENDPOINTS = ["https://www.bing.com/indexnow", "https://yandex.com/indexnow"];
+const CHUNK = 100; // размер пачки: больше Bing отбивает (см. комментарий у submit)
 
 const locs = (xml: string) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 
@@ -58,22 +59,37 @@ async function collectUrls(): Promise<Record<string, string>> {
   return map;
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * Шлём частями по 100 адресов. Bing отбивает крупные пачки: проверено 10.09.2026 —
+ * 750 URL одним запросом дают HTTP 403, те же 750 по сотне проходят полностью.
+ * Яндекс принимает и пачкой, но дробим одинаково, чтобы поведение было одно.
+ */
 async function submit(urls: string[]): Promise<boolean> {
   let ok = false;
   for (const endpoint of ENDPOINTS) {
-    try {
-      const r = await fetch(endpoint, {
-        method: "POST",
-        headers: { "content-type": "application/json; charset=utf-8" },
-        body: JSON.stringify({ host: HOST, key: KEY, urlList: urls }),
-        signal: AbortSignal.timeout(30000),
-      });
-      // 200/202 = принято
-      console.log(`[indexnow] ${new URL(endpoint).host}: ${urls.length} URL → HTTP ${r.status}`);
-      if (r.status === 200 || r.status === 202) ok = true;
-    } catch (e) {
-      console.error(`[indexnow] ${new URL(endpoint).host}: ${(e as Error).message}`);
+    const host = new URL(endpoint).host;
+    let sent = 0, failed = 0;
+    for (let i = 0; i < urls.length; i += CHUNK) {
+      const batch = urls.slice(i, i + CHUNK);
+      try {
+        const r = await fetch(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json; charset=utf-8" },
+          body: JSON.stringify({ host: HOST, key: KEY, keyLocation: `https://${HOST}/${KEY}.txt`, urlList: batch }),
+          signal: AbortSignal.timeout(30000),
+        });
+        // 200/202 = принято
+        if (r.status === 200 || r.status === 202) { sent += batch.length; ok = true; }
+        else { failed += batch.length; console.error(`[indexnow] ${host}: пачка ${i + 1}–${i + batch.length} → HTTP ${r.status}`); }
+      } catch (e) {
+        failed += batch.length;
+        console.error(`[indexnow] ${host}: ${(e as Error).message}`);
+      }
+      if (i + CHUNK < urls.length) await sleep(1500);
     }
+    console.log(`[indexnow] ${host}: принято ${sent}${failed ? `, отбито ${failed}` : ""}`);
   }
   return ok;
 }
