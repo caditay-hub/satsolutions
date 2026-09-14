@@ -1,0 +1,20 @@
+# Уведомления о почте sales@satsolutions.uz — см. src/index.js.
+# Выкладка: cd mail-worker && npx wrangler deploy
+#
+# Секрет (в репозиторий не попадает, ставится через `wrangler secret put`):
+#   TELEGRAM_BOT_TOKEN — токен бота @SAT_zayavki_online_bot (TELEGRAM_BOT_TOKEN из /root/sat-web-bot/.env).
+name = "sat-mail"
+main = "src/index.js"
+compatibility_date = "2026-05-01"
+
+# у обработчика нет веб-адреса: он только принимает письма
+workers_dev = false
+preview_urls = false
+
+[vars]
+# группа «SAT заявки консультация онлайн» и тема «📧 Почта» в ней
+TELEGRAM_CHAT_ID = "-1003940191688"
+TELEGRAM_THREAD_ID = "2387"
+
+[observability]
+enabled = true

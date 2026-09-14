@@ -1,0 +1,13 @@
+{
+  "name": "sat-mail",
+  "private": true,
+  "type": "module",
+  "description": "Уведомления о почте sales@satsolutions.uz в тему «📧 Почта» Telegram-группы заявок (Cloudflare Email Worker)",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "dependencies": {
+    "postal-mime": "^2.7.6"
+  }
+}
