@@ -69,7 +69,8 @@
     "newBadge": "新品",
     "priceSum": "{value} 苏姆",
     "industryCases": "已交付项目",
-    "caseMore": "查看案例"
+    "caseMore": "查看案例",
+    "total": "合计"
   },
   "home": {
     "heroTitle": "安防与弱电系统",
@@ -5523,6 +5524,7 @@
     "ratesTitle": "本项目适用单价",
     "brkTitle": "按系统与数量拆分",
     "totalLabel": "项目合计（估算）",
+    "totalShort": "合计",
     "sum": "苏姆",
     "from": "起",
     "unit": {

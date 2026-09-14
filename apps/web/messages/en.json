@@ -69,7 +69,8 @@
     "newBadge": "New",
     "priceSum": "{value} UZS",
     "industryCases": "Delivered projects",
-    "caseMore": "View case"
+    "caseMore": "View case",
+    "total": "Total"
   },
   "home": {
     "heroTitle": "Security and low-voltage systems",
@@ -5523,6 +5524,7 @@
     "ratesTitle": "Rates for your scope",
     "brkTitle": "By system, at your volume",
     "totalLabel": "Site total, approximate",
+    "totalShort": "total",
     "sum": "UZS",
     "from": "from",
     "unit": {

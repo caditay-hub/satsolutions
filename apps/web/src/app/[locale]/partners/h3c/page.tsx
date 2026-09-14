@@ -151,6 +151,90 @@ const D: Record<string, Dict> = {
     ctaText: "We will size a configuration for your workload and prepare a specification — free of charge.",
     ctaBtn: "Discuss the project",
   },
+  tr: {
+    title: "H3C Özbekistan — SAT Solutions iş ortağı | sunucular, sanallaştırma, ağlar",
+    metaDesc:
+      "SAT Solutions, Özbekistan'da H3C iş ortağıdır: Taşkent'te H3C UniServer sunucuları, H3C CAS sanallaştırma platformu, switch'ler ve veri merkezi çözümlerinin anahtar teslim tedariki ve kurulumu. Tasarım, taşıma, üretici desteği.",
+    h1: "H3C Özbekistan — SAT Solutions iş ortağı",
+    lead:
+      "SAT Solutions, Özbekistan'da H3C iş ortağıdır. H3C kurumsal ekipmanlarını anahtar teslim tedarik ediyor ve kuruyoruz: sunucular, sanallaştırma platformu, switch'ler ve veri merkezi çözümleri — keşif ve teknik şartnameden üretim sistemlerinin taşınmasına ve üretici desteğine kadar.",
+    badge: "Resmi iş ortaklığı",
+    sections: [
+      {
+        h: "H3C kimdir",
+        p: [
+          "H3C (New H3C Technologies), kurumsal BT altyapısında dünya liderlerinden biridir: sunucular, depolama sistemleri, ağ ekipmanları, sanallaştırma platformları ve bulut çözümleri. H3C donanımı dünya genelinde veri merkezlerinde, bankalarda, telekom operatörlerinde ve sanayi işletmelerinde çalışır.",
+          "Özbekistan'daki işletmeler için H3C, alışılmış üreticilere güvenilir bir alternatiftir — güçlü veri merkezi ve sanallaştırma ürün yelpazesi, rekabetçi fiyatlar ve tam üretici desteğiyle.",
+        ],
+      },
+      {
+        h: "Neleri tedarik ediyor ve kuruyoruz",
+        p: [
+          "H3C UniServer sunucuları — sanallaştırma, veritabanları ve kurumsal uygulamalar için rack sunucular: çok çekirdekli işlemciler, DDR5 bellek, NVMe/SSD depolama, 10/25GbE ağ arayüzleri.",
+          "H3C CAS — kurumsal sınıf sanallaştırma platformu: sanal makinelerin otomatik yeniden başlatıldığı yüksek erişilebilirlik kümeleri, yeniden kurulum gerektirmeyen canlı taşıma, altyapıyı yönetmek için tek konsol.",
+          "H3C ağ ekipmanları — yönetilebilir switch'ler, yönlendiriciler ve veri merkezi çözümleri: hataya dayanıklı kurumsal ağ kurulumu, segmentasyon, bağlantı birleştirme.",
+        ],
+      },
+      {
+        h: "Neden SAT Solutions ile anahtar teslim",
+        p: [
+          "Projeyi baştan sona yürütüyoruz: altyapı keşfi, iş yüküne göre yapılandırma boyutlandırması, tedarik, rack montajı, platform kurulumu, mevcut sistemlerin taşınması, yedekleme yapılandırması ve müşterinin sistem yöneticilerinin eğitimi.",
+          "Bir yıllık H3C üretici desteği aboneliğini bağlıyor ve teslimden sonra da iletişimde kalıyoruz — altyapının bakımını yapıyor ve platformu değiştirmeden ölçeklendirmenize yardımcı oluyoruz.",
+        ],
+      },
+    ],
+    linksTitle: "Daha fazla bilgi",
+    catalog: "Katalogdaki H3C ekipmanları",
+    caseLink: "Vaka çalışmamız: anahtar teslim sunucu odası kurulumu",
+    svcServer: "Anahtar teslim sunucular ve sunucu odaları",
+    svcVirt: "Altyapı sanallaştırma",
+    svcNet: "Kurumsal ağlar ve yapısal kablolama",
+    ctaTitle: "H3C ekipmanıyla bir projeye mi ihtiyacınız var?",
+    ctaText: "İş yükünüze uygun yapılandırmayı hesaplar ve teknik şartnameyi hazırlarız — ücretsiz.",
+    ctaBtn: "Projeyi görüşelim",
+  },
+  zh: {
+    title: "H3C 乌兹别克斯坦 — SAT Solutions 合作伙伴 | 服务器、虚拟化、网络",
+    metaDesc:
+      "SAT Solutions 是 H3C 在乌兹别克斯坦的合作伙伴：在塔什干提供 H3C UniServer 服务器、H3C CAS 虚拟化平台、交换机及数据中心解决方案的交钥匙供货与部署。方案设计、系统迁移、厂商支持。",
+    h1: "H3C 乌兹别克斯坦 — SAT Solutions 合作伙伴",
+    lead:
+      "SAT Solutions 是 H3C 在乌兹别克斯坦的合作伙伴。我们以交钥匙方式供应并部署 H3C 企业级设备：服务器、虚拟化平台、交换机和数据中心解决方案——从现场评估和配置清单到生产系统迁移及厂商支持。",
+    badge: "官方合作伙伴",
+    sections: [
+      {
+        h: "H3C 是谁",
+        p: [
+          "H3C（新华三技术有限公司）是全球企业级 IT 基础设施领域的领先厂商之一：服务器、存储、网络设备、虚拟化平台和云解决方案。H3C 设备广泛应用于全球的数据中心、银行、电信运营商和工业企业。",
+          "对乌兹别克斯坦的企业而言，H3C 是常见厂商之外的可靠选择——拥有强大的数据中心和虚拟化产品线、有竞争力的价格以及完整的厂商支持。",
+        ],
+      },
+      {
+        h: "我们供应和部署的产品",
+        p: [
+          "H3C UniServer 服务器——用于虚拟化、数据库和企业应用的机架式服务器：多核处理器、DDR5 内存、NVMe/SSD 存储、10/25GbE 网络接口。",
+          "H3C CAS——企业级虚拟化平台：虚拟机自动重启的高可用集群、无需重装的在线迁移、统一的基础设施管理控制台。",
+          "H3C 网络设备——可管理交换机、路由器和数据中心解决方案：构建高可靠企业网络、网络分段、链路聚合。",
+        ],
+      },
+      {
+        h: "为什么选择 SAT Solutions 交钥匙服务",
+        p: [
+          "我们负责整个项目：基础设施评估、按负载确定配置、供货、机架安装、平台部署、现有系统迁移、备份配置以及客户管理员培训。",
+          "我们开通一年期 H3C 厂商支持服务，交付后持续保持联系——维护基础设施，并帮助您在不更换平台的情况下扩展。",
+        ],
+      },
+    ],
+    linksTitle: "了解更多",
+    catalog: "目录中的 H3C 设备",
+    caseLink: "我们的案例：交钥匙服务器机房安装",
+    svcServer: "交钥匙服务器与服务器机房",
+    svcVirt: "基础设施虚拟化",
+    svcNet: "企业网络与综合布线",
+    ctaTitle: "需要基于 H3C 设备的项目？",
+    ctaText: "我们将根据您的负载计算配置并准备配置清单——免费。",
+    ctaBtn: "讨论项目",
+  },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

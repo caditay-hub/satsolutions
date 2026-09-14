@@ -1712,7 +1712,7 @@ const tr: Record<string, ServiceContent> = {
     ],
   },
   "hotel": {
-    heading: "Tashkent'te oteller için güvenlik sistemleri",
+    heading: "Taşkent'te oteller için güvenlik sistemleri",
     paragraphs: [
       "Otel, ofisten şu yönden ayrılır: içinden her gün tanımadık insanlar geçer ve sistem onları tam olması gereken yere, tam konaklama süresi kadar sokmalıdır. Temel, check-in sistemine bağlı kartlı otel kilitleridir: kart resepsiyonda verilir, çıkış tarihine kadar çalışır ve yalnızca kendi odasını ve asansör, spor salonu veya otopark gibi ortak alanları açar. Personel ayrı yetkili servis kartları taşır; yönetim ise kaydı görür: kim, hangi kapıyı, ne zaman açtı.",
       "Otelde kameralar lobiye, koridorlara, asansör önlerine, girişlere, otoparka ve servis alanlarına kurulur — odalara asla. Ayrı bir katman yangın güvenliğidir: konaklama tesislerinde otomatik yangın alarmı ve tahliye anons sistemi zorunludur; tahliye yollarındaki kilitler yangın otomasyonunun sinyaliyle açılmalıdır. Bu, en baştan projeye konur; teslimden sonra değiştirmek daha pahalıya gelir.",

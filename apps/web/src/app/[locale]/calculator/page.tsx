@@ -183,7 +183,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
             <g>
               <rect x="288" y="44" width="118" height="212" rx="16" fill="#fff" stroke="#328fa8" strokeWidth="2.5" />
               <rect x="302" y="60" width="90" height="46" rx="8" fill="#eaf6f8" stroke="#addbe3" />
-              <text x="382" y="80" textAnchor="end" fontSize="11" fill="#94a3b8" fontFamily="ui-monospace,Menlo,monospace">итого</text>
+              <text x="382" y="80" textAnchor="end" fontSize="11" fill="#94a3b8" fontFamily="ui-monospace,Menlo,monospace">{t("totalShort")}</text>
               <text x="382" y="98" textAnchor="end" fontSize="16" fontWeight="700" fill="#2a7b90" fontFamily="ui-monospace,Menlo,monospace">5 324 300</text>
               {[122, 156, 190, 224].map((y) =>
                 [302, 332, 362].map((x) => (

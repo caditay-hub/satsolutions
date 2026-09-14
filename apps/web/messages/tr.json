@@ -69,7 +69,8 @@
     "newBadge": "Yeni",
     "priceSum": "{value} sum",
     "industryCases": "Tamamlanan projeler",
-    "caseMore": "Vakayı incele"
+    "caseMore": "Vakayı incele",
+    "total": "Toplam"
   },
   "home": {
     "heroTitle": "Güvenlik ve zayıf akım sistemleri",
@@ -155,7 +156,7 @@
       },
       {
         "title": "BT altyapısı ve sunucu odaları",
-        "text": "Yapısal kablolama, PoE switchler, UPS, soğutma ve kabinetler — tasarımdan devreye almaya tam döngü",
+        "text": "Yapısal kablolama, PoE switchler, UPS, soğutma ve kabinler — tasarımdan devreye almaya tam döngü",
         "buttons": [
           "Çözümler",
           "İletişim"
@@ -171,7 +172,7 @@
       },
       {
         "title": "Yangın güvenliği",
-        "text": "Bolid ve Rubezh adresli sistemleri: Özbekistan genelinde tasarım, montaj ve bakım",
+        "text": "Bolid ve Rubezh adresli sistemler: Özbekistan genelinde tasarım, montaj ve bakım",
         "buttons": [
           "Katalog",
           "İletişim"
@@ -5523,6 +5524,7 @@
     "ratesTitle": "İşleriniz için birim fiyatlar",
     "brkTitle": "Sisteme göre, hacminizle",
     "totalLabel": "Tesis toplamı, yaklaşık",
+    "totalShort": "toplam",
     "sum": "UZS",
     "from": "başlangıç",
     "unit": {

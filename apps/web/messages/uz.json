@@ -69,7 +69,8 @@
     "newBadge": "Yangi",
     "priceSum": "{value} soʻm",
     "industryCases": "Amalga oshirilgan loyihalar",
-    "caseMore": "Keysni koʻrish"
+    "caseMore": "Keysni koʻrish",
+    "total": "Jami"
   },
   "home": {
     "heroTitle": "Xavfsizlik va kuchsiz tok tizimlari",
@@ -5523,6 +5524,7 @@
     "ratesTitle": "Sizning ishlaringiz narxi",
     "brkTitle": "Tizimlar boʻyicha, hajmni hisobga olib",
     "totalLabel": "Obyekt boʻyicha jami, taxminan",
+    "totalShort": "jami",
     "sum": "soʻm",
     "from": "dan",
     "unit": {

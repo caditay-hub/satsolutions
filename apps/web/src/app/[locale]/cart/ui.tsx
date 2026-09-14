@@ -151,7 +151,7 @@ export function CartClient() {
           </div>
         </label>
         <div className="mt-4 flex items-center justify-between text-sm">
-          <div className="text-slate-600">Итого</div>
+          <div className="text-slate-600">{tc("total")}</div>
           <div className="font-semibold text-slate-900">{formatPrice(total)} сум</div>
         </div>
         {error ? <div className="mt-3 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-800">{error}</div> : null}
