@@ -334,7 +334,7 @@
       "faq": [
         {
           "q": "How much does it cost to install video surveillance?",
-          "a": "The cost depends on the number of cameras, equipment type, and installation complexity. We conduct free site surveys, prepare estimates, and provide commercial proposals."
+          "a": "The cost depends on the number of cameras, equipment type, and installation complexity. We conduct free site surveys, prepare estimates, and provide quotes."
         },
         {
           "q": "What is the difference between IP cameras and analog cameras?",
@@ -639,7 +639,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Access control: from one door to a site perimeter",
-        "pkgNote": "We send a quote after a short site visit: readers, locks and turnstiles are matched to people flow and security regime.",
+        "pkgNote": "We send a quote after a short site visit: readers, locks and turnstiles are matched to people flow and security requirements.",
         "packages": [
           {
             "name": "Office door",
@@ -680,7 +680,7 @@
         "stages": [
           {
             "t": "Survey",
-            "s": "access points, people flow, regime — free"
+            "s": "access points, people flow, security level — free"
           },
           {
             "t": "Selection & quote",
@@ -1439,7 +1439,7 @@
             "term": "Time: 1–2 days"
           },
           {
-            "name": "Voice evacuation (SOUE)",
+            "name": "Voice evacuation (VA)",
             "for": "Office, mall, school, clinic",
             "items": [
               "Voice notification per the codes",
@@ -2383,7 +2383,7 @@
             "name": "A turnkey complex for a developer",
             "for": "A new build",
             "items": [
-              "A low-current design before finishing",
+              "A low-voltage design before finishing",
               "Intercoms, video, access, parking",
               "Handover to the MC with training",
               "A service contract after delivery"
@@ -3053,7 +3053,7 @@
       "faq": [
         {
           "q": "What can a smart home on Tuya do?",
-          "a": "Lighting, outlets, blinds, climate control, leak and motion sensors, cameras and smart locks — all in one Smart Life app with automation scenarios: «Away from home» turns off lights and activates security mode."
+          "a": "Lighting, outlets, blinds, climate control, leak and motion sensors, cameras and smart locks — all in one Smart Life app with automation scenarios: “Away from home” turns off lights and activates security mode."
         },
         {
           "q": "Does a smart home work without internet?",
@@ -4180,7 +4180,7 @@
       "faq": [
         {
           "q": "What counts as low-voltage systems?",
-          "a": "Everything running on low current: CCTV, access control, fire and intruder alarms, PA, intercom, structured cabling and LAN, telephony. We cover the whole list with one team."
+          "a": "Everything running on low voltage: CCTV, access control, fire and intruder alarms, PA, intercom, structured cabling and LAN, telephony. We cover the whole list with one team."
         },
         {
           "q": "Why is a single contractor cheaper for the whole scope?",
@@ -4197,7 +4197,7 @@
       ],
       "details": {
         "pkgLabel": "Typical solutions",
-        "pkgTitle": "Three low-current contract formats",
+        "pkgTitle": "Three low-voltage contract formats",
         "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
@@ -4223,7 +4223,7 @@
             "term": "Time: per construction schedule"
           },
           {
-            "name": "General low-current contractor",
+            "name": "General low-voltage contractor",
             "for": "Developer, general contractor",
             "items": [
               "One project engineer for the whole loop",
@@ -4320,7 +4320,7 @@
             "term": "Time: 2–4 weeks"
           },
           {
-            "name": "A comprehensive low-current design",
+            "name": "A comprehensive low-voltage design",
             "for": "Business center, plant, residential complex",
             "items": [
               "All subsystems in shared routes and racks",

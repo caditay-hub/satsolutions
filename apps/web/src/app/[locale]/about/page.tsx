@@ -495,7 +495,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 { name: "Uzum", note: { ru: "видеонаблюдение складов и ПВЗ", uz: "omborlar videokuzatuvi", en: "warehouse & pickup CCTV", tr: "depo kamera sistemleri", zh: "仓储视频监控" }, href: "/portfolio/uzum-videonablyudenie-skladov-i-punktov-vydachi" },
                 { name: "Ucell", note: { ru: "видеостена ситуационного центра", uz: "vaziyat markazi videodevori", en: "situation-centre video wall", tr: "durum merkezi video duvarı", zh: "态势中心拼接屏" }, href: "/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre" },
                 { name: "Damira Beverages", note: { ru: "СКУД и видеонаблюдение завода", uz: "zavod SKUD va videokuzatuvi", en: "factory access control & CCTV", tr: "fabrika geçiş ve kamera", zh: "工厂门禁与监控" }, href: "/portfolio/skud-zavod-damira-beverages" },
-                { name: "ЖК Tower Up", note: { ru: "система безопасности комплекса", uz: "majmua xavfsizlik tizimi", en: "residential security system", tr: "site güvenlik sistemi", zh: "住宅安防系统" }, href: "/portfolio/zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa" },
+                { name: "Tower Up", note: { ru: "система безопасности ЖК", uz: "majmua xavfsizlik tizimi", en: "residential security system", tr: "site güvenlik sistemi", zh: "住宅安防系统" }, href: "/portfolio/zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa" },
               ].map((c) => (
                 <Link key={c.name} href={c.href}
                   className="group rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand-500">

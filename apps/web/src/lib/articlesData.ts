@@ -92,10 +92,10 @@ export const ARTICLES: Article[] = [
       },
       en: {
         title: "Fire alarm servicing in Uzbekistan: an annual plan, not «once a quarter»",
-        excerpt: "Uzbekistan's Fire Safety Rules contain no «once a quarter» norm: clause 148 requires an annual work plan based on the manufacturer's documentation. Who may service the system, and where the 30 days and 24 hours come from.",
+        excerpt: "Uzbekistan's Fire Safety Rules contain no “once a quarter” norm: clause 148 requires an annual work plan based on the manufacturer's documentation. Who may service the system, and where the 30 days and 24 hours come from.",
         sections: [
           { h: "There is no «once a quarter» norm in Uzbekistan", p: [
-            "This is the most common misconception, and it reaches even commercial proposals. The requirement to service a fire alarm at least once a quarter belongs to a Russian guidance document. Uzbekistan applies the Fire Safety Rules approved by Cabinet of Ministers Decree No. 649 of 20 October 2020, and they are built differently.",
+            "This is the most common misconception, and it even makes its way into contractor quotes. The requirement to service a fire alarm at least once a quarter belongs to a Russian guidance document. Uzbekistan applies the Fire Safety Rules approved by Cabinet of Ministers Decree No. 649 of 20 October 2020, and they are built differently.",
             "Clause 148 of the Rules sets another principle: routine work on the maintenance and scheduled preventive repair of fire alarm and fire suppression installations, smoke protection systems, fire warning and evacuation management systems is carried out on the basis of an annual work plan drawn up with regard to the technical documentation of the manufacturing enterprise and the timing of repair work. In other words, the interval comes from the passport of the specific equipment, not from a universal figure.",
           ] },
           { h: "Who may service the system", p: [
@@ -104,7 +104,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Where the thirty days come from", p: [
             "Clause 149 states a condition that is often quoted inaccurately. It does not demand a contract from everyone. The norm reads: if the site's specialists do not have the ability to carry out maintenance of fire automation installations, smoke protection systems and fire warning systems, then within 30 days after the devices are put into operation a contract for it must be concluded with specialised organisations holding a licence for this type of activity.",
-            "The key words are «after the devices are put into operation» — not after the building is commissioned — and «do not have the ability». The thirty-day period runs from the moment the system is started and applies to sites that cannot service it themselves.",
+            "The key words are “after the devices are put into operation” — not after the building is commissioned — and “do not have the ability”. The thirty-day period runs from the moment the system is started and applies to sites that cannot service it themselves.",
           ] },
           { h: "Twenty-four hours on terminating the contract", p: [
             "The second paragraph of the same clause covers exiting a contract. When a maintenance contract for fire automation installations and smoke protection systems is terminated, the head of the enterprise must within 24 hours notify the district or city emergencies department, or the emergency units serving the site.",
@@ -116,7 +116,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "How we do it", p: [
             "SAT Solutions services, under contract, the systems installed by our own specialists: we draw up the annual plan from the documentation of the installed equipment, keep the work log and prepare the documents presented during an inspection. We work in Tashkent and the regions.",
-            "If you are accepting a site and are unsure which servicing regime applies, send us the system composition and the equipment passports and we will work out the routine for your case. This article describes the norms in general terms: the exact intervals for your equipment come from its documentation.",
+            "If you are accepting a site and are unsure which servicing schedule applies, send us the system composition and the equipment passports and we will work out the routine for your case. This article describes the norms in general terms: the exact intervals for your equipment come from its documentation.",
           ] },
         ],
       },
@@ -255,11 +255,11 @@ export const ARTICLES: Article[] = [
         excerpt: "Uzbekistan's Personal Data Law No. ZRU-547 requires databases holding the data of the republic's citizens to be kept on technical facilities located in Uzbekistan. What that means for video archives, face recognition and biometrics in access control.",
         sections: [
           { h: "Why a video recording counts as personal data", p: [
-            "The Law of the Republic of Uzbekistan «On Personal Data» No. ZRU-547 of 2 July 2019 defines personal data as information recorded on an electronic, paper or other medium that relates to a specific individual or makes it possible to identify them. The phrase «makes it possible to identify» is the key: a recording in which a person's face is distinguishable falls under that definition.",
+            "The Law of the Republic of Uzbekistan “On Personal Data” No. ZRU-547 of 2 July 2019 defines personal data as information recorded on an electronic, paper or other medium that relates to a specific individual or makes it possible to identify them. The phrase “makes it possible to identify” is the key: a recording in which a person's face is distinguishable falls under that definition.",
             "From this follows a conclusion many find unexpected: an ordinary office recorder is a personal data database, and the company that installed and configured it for itself acts as the operator, with all the duties that people tend not to consider until the first inspection or complaint.",
           ] },
           { h: "Biometrics is a separate and stricter category", p: [
-            "The law singles out biometric data: personal data characterising the anatomical and physiological features of the subject. Face recognition at a turnstile, a fingerprint on a time-attendance terminal, an iris template — all of it is biometrics in the legal sense, not merely «a convenient way to open a door».",
+            "The law singles out biometric data: personal data characterising the anatomical and physiological features of the subject. Face recognition at a turnstile, a fingerprint on a time-attendance terminal, an iris template — all of it is biometrics in the legal sense, not merely “a convenient way to open a door”.",
             "The difference is practical. An access card is impersonal: lose it and you are issued another. A biometric template cannot be changed, and a leak of such a database is irreversible. That is precisely why the law places separate requirements on processing biometric data, and why a face recognition terminal should not be installed simply because it is available.",
           ] },
           { h: "Article 27-1: where the database must physically sit", p: [
@@ -271,8 +271,8 @@ export const ARTICLES: Article[] = [
             "Hence our engineering position, which we explain to every client: a local recorder or an on-site server is neither conservatism nor an attempt to sell hardware. Remote access does not disappear — you can still watch from a phone through a local recorder; the only difference is where the archive is kept.",
           ] },
           { h: "What the system owner must do", p: [
-            "First, notification. When their personal data is entered into a database, the subject must be notified in writing of the purposes of processing and of their rights. In practice that is the familiar «video surveillance in progress» sign, but the duty does not end with a sign: employees whose biometric data enters an access control system need a document.",
-            "Second, transfers. If personal data is passed to a third party, the owner or operator notifies the subject in writing within three days. Third, timing: the duty to protect the data arises at the moment of collection and lasts until the data is destroyed or de-identified. «We simply keep an archive and show it to nobody» does not remove the obligations.",
+            "First, notification. When their personal data is entered into a database, the subject must be notified in writing of the purposes of processing and of their rights. In practice that is the familiar “video surveillance in progress” sign, but the duty does not end with a sign: employees whose biometric data enters an access control system need a document.",
+            "Second, transfers. If personal data is passed to a third party, the owner or operator notifies the subject in writing within three days. Third, timing: the duty to protect the data arises at the moment of collection and lasts until the data is destroyed or de-identified. “We simply keep an archive and show it to nobody” does not remove the obligations.",
           ] },
           { h: "How we account for this in projects", p: [
             "SAT Solutions designs systems so that the archive and biometric templates stay at the client's site or on their server in Uzbekistan: local recorders, surveillance servers, access control with a local database. Remote access is set up over a secured connection rather than by moving the database abroad.",
@@ -419,8 +419,8 @@ export const ARTICLES: Article[] = [
             "The practical meaning is simple: if a contractor shows you an emergencies-ministry licence for alarm installation, the document came from the wrong authority. What you check is the register of the licensing body — under the decree it is published on that body's website and open for inspection.",
           ] },
           { h: "What exactly is licensed", p: [
-            "The licence covers five kinds of work on the same systems: design, installation, commissioning, repair and maintenance. The systems are fire automation equipment and security, fire and combined fire-and-security alarms. In other words, the design, the hands-on work and the later servicing regime all fall under licensing.",
-            "A detail that is rarely written down: at the applicant's request the licence may be issued for part of the licensed activity. A company may hold a licence for maintenance only and not for design. So the correct question to a contractor is not «do you have a licence» but «which kinds of work is it issued for».",
+            "The licence covers five kinds of work on the same systems: design, installation, commissioning, repair and maintenance. The systems are fire automation equipment and security, fire and combined fire-and-security alarms. In other words, the design, the hands-on work and the later servicing schedule all fall under licensing.",
+            "A detail that is rarely written down: at the applicant's request the licence may be issued for part of the licensed activity. A company may hold a licence for maintenance only and not for design. So the correct question to a contractor is not “do you have a licence” but “which kinds of work is it issued for”.",
           ] },
           { h: "Requirements a client should know about", p: [
             "The regulation sets a minimum team: the permanent staff of the legal entity must include at least two employees — a works manager and an operative — with at least three years of experience in the relevant field. The field is counted against the same list: design, installation, commissioning, repair or maintenance of fire suppression and alarm installations.",
@@ -583,8 +583,8 @@ export const ARTICLES: Article[] = [
             "The second prohibition waits at the end of construction: when a completed apartment building is accepted into service and the required property has not been installed, accepting the building into service is prohibited. A building erected without cameras and intercoms does not legally exist as a commissioned object — flats cannot be registered and keys cannot be handed over.",
           ] },
           { h: "Cameras and intercoms become common property", p: [
-            "The decree classifies the installed equipment as the common property of the building. It is handed over to the managing organisation for safekeeping in the established manner, and the details are entered into the «Turarjoy» section of the «Mening uyim» information system, launched on 1 March 2026.",
-            "The practical conclusion for a developer: the system cannot be a temporary one fitted «so that the handover passes». The managing organisation accepts it and then lives with it, and a record stays in a state system. Equipment without a warranty, documentation and a service path becomes a problem right after handover.",
+            "The decree classifies the installed equipment as the common property of the building. It is handed over to the managing organisation for safekeeping in the established manner, and the details are entered into the “Turarjoy” section of the “Mening uyim” information system, launched on 1 March 2026.",
+            "The practical conclusion for a developer: the system cannot be a temporary one fitted “so that the handover passes”. The managing organisation accepts it and then lives with it, and a record stays in a state system. Equipment without a warranty, documentation and a service path becomes a problem right after handover.",
           ] },
           { h: "What to put in the design", p: [
             "The text implies a minimum scope: cameras in every entrance, cameras in the lifts, cameras in the adjoining area and intercom systems on the entrance doors. Exact counts and placement come from the design, but the usual approach is a camera above the entrance group outside, a camera in the lobby, one camera per lift car and two or three yard cameras with overlapping zones.",
@@ -1681,7 +1681,7 @@ export const ARTICLES: Article[] = [
             "The red flag is a price notably below market: usually uncertified cable, skipped testing or an 'unforeseen works' bill at the end. A cabling system lives 10–15 years — a mistake in it outprices the savings.",
           ] },
           { h: "Where you can and cannot save", p: [
-            "You can: merge SCS with other low-current systems into shared routes (cameras, telephony, Wi-Fi — one tray), build the network during renovation rather than after, use Cat5e where 10G will definitely never come.",
+            "You can: merge SCS with other low-voltage systems into shared routes (cameras, telephony, Wi-Fi — one tray), build the network during renovation rather than after, use Cat5e where 10G will definitely never come.",
             "You cannot: on testing (an unverified line is a future floating network glitch), on patch panels and the cabinet (the network's heart), on spare points — adding cable after renovation costs more than the whole original quote.",
           ] },
           { h: "Let us price your office", p: [
@@ -1861,7 +1861,7 @@ export const ARTICLES: Article[] = [
             "The headroom rule is plus 20–25%: real bitrate always beats the calculator, and a circular archive must never run to zero free space.",
           ] },
           { h: "Why a desktop drive will not do", p: [
-            "CCTV writes 24/7 — a regime desktop drives were not designed for: they expect an office's eight hours with pauses. In a recorder such a drive lives a year or so and dies together with the archive.",
+            "CCTV writes 24/7 — a workload desktop drives were not designed for: they expect an office's eight hours with pauses. In a recorder such a drive lives a year or so and dies together with the archive.",
             "Surveillance series — WD Purple, Seagate SkyHawk — are built for round-the-clock recording of dozens of streams and the vibration of neighboring drives, with DVR/NVR-tuned firmware. The price difference is about fifteen percent; the endurance difference is multiples.",
           ] },
           { h: "When one drive is not enough", p: [
@@ -3786,7 +3786,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "The cost, and life after handover", p: [
             "The budget is built from the area and category of the rooms, the number of detectors and loops, the panel type and the evacuation setup. A small shop is covered by a conventional system for modest money; an office building needs an addressable one — pricier upfront but cheaper to run thanks to precise diagnostics. Only a site visit yields an honest estimate: we calculate free of charge from your floor plan.",
-            "After handover the maintenance regime begins, and its framework is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020: under clause 148, maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149 obliges the site to sign a contract with a licensed organisation within 30 days of the system being put into operation and, if that contract is terminated, to notify the emergency service authorities within 24 hours. Detector checks against the plan, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. Sites we installed ourselves we take onto that annual schedule.",
+            "After handover the maintenance schedule begins, and its framework is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020: under clause 148, maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149 obliges the site to sign a contract with a licensed organisation within 30 days of the system being put into operation and, if that contract is terminated, to notify the emergency service authorities within 24 hours. Detector checks against the plan, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. Sites we installed ourselves we take onto that annual schedule.",
           ] },
           { h: "False alarms and what causes them", p: [
             "The main source of false alarms is dust and insects inside the smoke detector chamber, along with a detector placed above a stove, next to ventilation or directly under an air conditioner. In dusty production areas heat or aspirating detectors are used instead of smoke ones.",
@@ -7218,7 +7218,7 @@ export const ARTICLES: Article[] = [
           ] },
         ],
           faq: [
-            { q: "Can PoE power more than cameras?", a: "Yes: Wi-Fi access points, IP phones, intercom panels and access controllers also run on standard PoE — one infrastructure covers the whole low-current stack." },
+            { q: "Can PoE power more than cameras?", a: "Yes: Wi-Fi access points, IP phones, intercom panels and access controllers also run on standard PoE — one infrastructure covers the whole low-voltage stack." },
             { q: "What happens if the switch runs out of power?", a: "The switch drops the lowest-priority ports, or cameras start rebooting at night when IR turns on — a floating fault that is hard to diagnose." },
             { q: "Does a PoE switch need grounding?", a: "Yes, like any active gear: grounding and surge protection on outdoor lines protect both the switch and the cameras — especially on long runs between buildings." },
           ],
@@ -8597,7 +8597,7 @@ export const ARTICLES: Article[] = [
             "SAT Solutions holds state licenses for the design and installation of fire-protection systems.",
           ] },
           { h: "What low-current systems cost", p: [
-            "In a construction budget, low-current systems usually take 3–7% — far less than finishing, yet they decide whether the building works: communications, security, access control. The price is made of design, cable infrastructure, equipment and commissioning; cable and installation often reach half the estimate, so merging systems into shared routes brings real savings.",
+            "In a construction budget, low-voltage systems usually take 3–7% — far less than finishing, yet they decide whether the building works: communications, security, access control. The price is made of design, cable infrastructure, equipment and commissioning; cable and installation often reach half the estimate, so merging systems into shared routes brings real savings.",
             "Reference points: an office for 20–30 workplaces with SCS, CCTV, access control and a fire alarm starts from several hundred million UZS; only a design gives the exact figure. We calculate the estimate free of charge from the floor plan — broken down by system, so the client sees what the sum is made of and can phase the budget.",
           ] },
           { h: "Where to start", p: [

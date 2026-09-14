@@ -775,7 +775,7 @@ const en: Record<string, IndustryDetails> = {
     ],
     workflowTitle: "How we run the project",
     workflow: [
-      { title: "Design by construction stage", text: "On a new build we enter before finishing: routes go into risers and low-current niches. On an existing building we design routes along existing ducts." },
+      { title: "Design by construction stage", text: "On a new build we enter before finishing: routes go into risers and low-voltage niches. On an existing building we design routes along existing ducts." },
       { title: "The entrance group", text: "We install the barrier, plate recognition and resident whitelists, and configure the mode for guests and delivery services." },
       { title: "Entrances and parking", text: "We fit intercoms, locks, closers and entrance cameras, and cover the parking and technical rooms separately." },
       { title: "Handover to the management company", text: "We train the staff and leave diagrams, passwords and the procedure for releasing footage on a resident's request." },

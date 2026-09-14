@@ -20953,7 +20953,7 @@
   },
   "«Селект»": {
     "uz": "«Selekt»",
-    "en": "«Select»",
+    "en": "“Select”",
     "tr": "«Select»",
     "zh": "«Select»"
   },
@@ -21535,7 +21535,7 @@
   },
   "ИСО «Орион» (ДПЛС С2000-КДЛ)": {
     "uz": "«Orion» ISO (DPLS S2000-KDL)",
-    "en": "«Orion» system (DPLS S2000-KDL)",
+    "en": "“Orion” system (DPLS S2000-KDL)",
     "tr": "«Orion» sistemi (DPLS S2000-KDL)",
     "zh": "«Orion» 系统（DPLS S2000-KDL）"
   },
@@ -21661,7 +21661,7 @@
   },
   "«Классик»": {
     "uz": "«Klassik»",
-    "en": "«Classic»",
+    "en": "“Classic”",
     "tr": "«Klasik»",
     "zh": "«经典»"
   },
@@ -21685,7 +21685,7 @@
   },
   "Световой указатель «Выход»": {
     "uz": "«Chiqish» yorugʻlik koʻrsatkichi",
-    "en": "Illuminated «Exit» sign",
+    "en": "Illuminated “Exit” sign",
     "tr": "Işıklı «Çıkış» levhası",
     "zh": "«出口»灯光指示牌"
   },
@@ -22699,7 +22699,7 @@
   },
   "RS-485 (ИСО «Орион»)": {
     "uz": "RS-485 («Orion» ISO)",
-    "en": "RS-485 («Orion» system)",
+    "en": "RS-485 (“Orion” system)",
     "tr": "RS-485 («Orion» sistemi)",
     "zh": "RS-485（«Orion» 系统）"
   },
