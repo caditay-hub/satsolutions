@@ -5404,5 +5404,569 @@
     "en": "Intercom function",
     "tr": "İnterkom işlevi",
     "zh": "对讲功能"
+  },
+  "Юниты": {
+    "uz": "Yunitlar",
+    "en": "Rack units",
+    "tr": "Ünite sayısı",
+    "zh": "U 数"
+  },
+  "Размеры (Ш×Г×В)": {
+    "uz": "Oʻlchamlari (K×Ch×B)",
+    "en": "Dimensions (W×D×H)",
+    "tr": "Ölçüler (G×D×Y)",
+    "zh": "尺寸（宽×深×高）"
+  },
+  "Экосистема": {
+    "uz": "Ekotizim",
+    "en": "Ecosystem",
+    "tr": "Ekosistem",
+    "zh": "生态系统"
+  },
+  "Бюджет": {
+    "uz": "Quvvat byudjeti",
+    "en": "Power budget",
+    "tr": "Güç bütçesi",
+    "zh": "功率预算"
+  },
+  "Деление": {
+    "uz": "Boʻlish nisbati",
+    "en": "Split ratio",
+    "tr": "Bölme oranı",
+    "zh": "分光比"
+  },
+  "Дверь": {
+    "uz": "Eshik",
+    "en": "Door",
+    "tr": "Kapı",
+    "zh": "门"
+  },
+  "Для шкафов глубиной": {
+    "uz": "Shkaf chuqurligi uchun",
+    "en": "For cabinet depth",
+    "tr": "Kabin derinliği için",
+    "zh": "适用机柜深度"
+  },
+  "Затухание": {
+    "uz": "Soʻnish",
+    "en": "Attenuation",
+    "tr": "Zayıflama",
+    "zh": "衰减"
+  },
+  "Диаметр прутка": {
+    "uz": "Sterjen diametri",
+    "en": "Rod diameter",
+    "tr": "Çubuk çapı",
+    "zh": "穿管杆直径"
+  },
+  "Отводы": {
+    "uz": "Tarmoq chiqishlari",
+    "en": "Tap outputs",
+    "tr": "Tap çıkışları",
+    "zh": "分支口"
+  },
+  "Стандарты PoE": {
+    "uz": "PoE standartlari",
+    "en": "PoE standards",
+    "tr": "PoE standartları",
+    "zh": "PoE 标准"
+  },
+  "Отсеки HDD": {
+    "uz": "HDD uyalari",
+    "en": "HDD bays",
+    "tr": "HDD yuvaları",
+    "zh": "硬盘位"
+  },
+  "Топология": {
+    "uz": "Topologiya",
+    "en": "Topology",
+    "tr": "Topoloji",
+    "zh": "拓扑结构"
+  },
+  "Аплинки": {
+    "uz": "Uplink portlar",
+    "en": "Uplinks",
+    "tr": "Uplink portları",
+    "zh": "上联口"
+  },
+  "Экранирование": {
+    "uz": "Ekranlash",
+    "en": "Shielding",
+    "tr": "Blendaj",
+    "zh": "屏蔽"
+  },
+  "Порты PON": {
+    "uz": "PON portlar",
+    "en": "PON ports",
+    "tr": "PON portları",
+    "zh": "PON 口"
+  },
+  "Производство": {
+    "uz": "Ishlab chiqarilgan mamlakat",
+    "en": "Country of origin",
+    "tr": "Üretim yeri",
+    "zh": "产地"
+  },
+  "Крышка": {
+    "uz": "Qopqoq",
+    "en": "Lid",
+    "tr": "Kapak",
+    "zh": "盖板"
+  },
+  "Размеры (Ш×Г)": {
+    "uz": "Oʻlchamlari (K×Ch)",
+    "en": "Dimensions (W×D)",
+    "tr": "Ölçüler (G×D)",
+    "zh": "尺寸（宽×深）"
+  },
+  "Рабочее давление": {
+    "uz": "Ishchi bosim",
+    "en": "Working pressure",
+    "tr": "Çalışma basıncı",
+    "zh": "工作压力"
+  },
+  "Фазы (вход:выход)": {
+    "uz": "Fazalar (kirish:chiqish)",
+    "en": "Phases (input:output)",
+    "tr": "Fazlar (giriş:çıkış)",
+    "zh": "相数（输入:输出）"
+  },
+  "Диапазон кабеля": {
+    "uz": "Kabel diapazoni",
+    "en": "Cable range",
+    "tr": "Kablo aralığı",
+    "zh": "适用线缆范围"
+  },
+  "Длина волны (Tx/Rx)": {
+    "uz": "Toʻlqin uzunligi (Tx/Rx)",
+    "en": "Wavelength (Tx/Rx)",
+    "tr": "Dalga boyu (Tx/Rx)",
+    "zh": "波长（Tx/Rx）"
+  },
+  "АКБ": {
+    "uz": "Akkumulyator",
+    "en": "Battery",
+    "tr": "Akü",
+    "zh": "蓄电池"
+  },
+  "Динамический диапазон": {
+    "uz": "Dinamik diapazon",
+    "en": "Dynamic range",
+    "tr": "Dinamik aralık",
+    "zh": "动态范围"
+  },
+  "Заделка": {
+    "uz": "Terminatsiya",
+    "en": "Termination",
+    "tr": "Sonlandırma",
+    "zh": "端接方式"
+  },
+  "Ду": {
+    "uz": "DN",
+    "en": "DN",
+    "tr": "DN",
+    "zh": "公称直径"
+  },
+  "Давление": {
+    "uz": "Bosim",
+    "en": "Pressure",
+    "tr": "Basınç",
+    "zh": "压力"
+  },
+  "Заземление": {
+    "uz": "Yerga ulash",
+    "en": "Grounding",
+    "tr": "Topraklama",
+    "zh": "接地"
+  },
+  "Адаптеры": {
+    "uz": "Adapterlar",
+    "en": "Adapters",
+    "tr": "Adaptörler",
+    "zh": "适配器"
+  },
+  "Буфер": {
+    "uz": "Bufer qoplama",
+    "en": "Buffer",
+    "tr": "Tampon",
+    "zh": "缓冲层"
+  },
+  "Фазы": {
+    "uz": "Fazalar",
+    "en": "Phases",
+    "tr": "Fazlar",
+    "zh": "相数"
+  },
+  "Монитор": {
+    "uz": "Monitor",
+    "en": "Monitor",
+    "tr": "Monitör",
+    "zh": "显示器"
+  },
+  "Вызывная панель": {
+    "uz": "Chaqiruv paneli",
+    "en": "Door station",
+    "tr": "Kapı paneli",
+    "zh": "门口机"
+  },
+  "Мобильное приложение": {
+    "uz": "Mobil ilova",
+    "en": "Mobile app",
+    "tr": "Mobil uygulama",
+    "zh": "手机应用"
+  },
+  "Диски": {
+    "uz": "Disklar",
+    "en": "Drives",
+    "tr": "Diskler",
+    "zh": "硬盘"
+  },
+  "ИИ-аналитика": {
+    "uz": "SI-analitika",
+    "en": "AI analytics",
+    "tr": "Yapay zekâ analitiği",
+    "zh": "AI 分析"
+  },
+  "Кассеты": {
+    "uz": "Kassetalar",
+    "en": "Splice trays",
+    "tr": "Ek kasetleri",
+    "zh": "熔纤盘"
+  },
+  "Вводы": {
+    "uz": "Kabel kirishlari",
+    "en": "Cable entries",
+    "tr": "Kablo girişleri",
+    "zh": "进线孔"
+  },
+  "Сплайс-кассета": {
+    "uz": "Splays-kasseta",
+    "en": "Splice tray",
+    "tr": "Ek kaseti",
+    "zh": "熔纤盘"
+  },
+  "Коннекторы": {
+    "uz": "Konnektorlar",
+    "en": "Connectors",
+    "tr": "Konektörler",
+    "zh": "连接器"
+  },
+  "Вносимые потери": {
+    "uz": "Kiritish yoʻqotishlari",
+    "en": "Insertion loss",
+    "tr": "Araya girme kaybı",
+    "zh": "插入损耗"
+  },
+  "Подключения": {
+    "uz": "Ulanishlar",
+    "en": "Connections",
+    "tr": "Bağlantılar",
+    "zh": "连接"
+  },
+  "Место под PLC": {
+    "uz": "PLC uchun joy",
+    "en": "PLC slot",
+    "tr": "PLC yuvası",
+    "zh": "PLC 安装位"
+  },
+  "Парный модуль": {
+    "uz": "Juft modul",
+    "en": "Paired module",
+    "tr": "Eş modül",
+    "zh": "配对模块"
+  },
+  "Габариты (Ш×В×Г)": {
+    "uz": "Gabaritlar (K×B×Ch)",
+    "en": "Dimensions (W×H×D)",
+    "tr": "Ölçüler (G×Y×D)",
+    "zh": "外形尺寸（宽×高×深）"
+  },
+  "Климат-контроль": {
+    "uz": "Iqlim nazorati",
+    "en": "Climate control",
+    "tr": "İklim kontrolü",
+    "zh": "温控系统"
+  },
+  "Коммутатор": {
+    "uz": "Kommutator",
+    "en": "Switch",
+    "tr": "Switch",
+    "zh": "交换机"
+  },
+  "Управление замками": {
+    "uz": "Qulflarni boshqarish",
+    "en": "Lock control",
+    "tr": "Kilit kontrolü",
+    "zh": "门锁控制"
+  },
+  "Оптический зум": {
+    "uz": "Optik zum",
+    "en": "Optical zoom",
+    "tr": "Optik zoom",
+    "zh": "光学变焦"
+  },
+  "Вход": {
+    "uz": "Kirish",
+    "en": "Input",
+    "tr": "Giriş",
+    "zh": "输入"
+  },
+  "Защиты": {
+    "uz": "Himoya turlari",
+    "en": "Protections",
+    "tr": "Korumalar",
+    "zh": "保护功能"
+  },
+  "Угол скола": {
+    "uz": "Kesim burchagi",
+    "en": "Cleave angle",
+    "tr": "Kesim açısı",
+    "zh": "切割角度"
+  },
+  "Сбор осколков": {
+    "uz": "Tola qoldiqlarini yigʻish",
+    "en": "Fiber scrap collection",
+    "tr": "Fiber artığı toplama",
+    "zh": "废纤收集"
+  },
+  "Колпачки": {
+    "uz": "Qalpoqchalar",
+    "en": "Boots",
+    "tr": "Kılıflar",
+    "zh": "护套"
+  },
+  "Сокет": {
+    "uz": "Soket",
+    "en": "Socket",
+    "tr": "Soket",
+    "zh": "CPU 插槽"
+  },
+  "Термостат": {
+    "uz": "Termostat",
+    "en": "Thermostat",
+    "tr": "Termostat",
+    "zh": "温控器"
+  },
+  "Частота процессора": {
+    "uz": "Protsessor chastotasi",
+    "en": "CPU frequency",
+    "tr": "İşlemci frekansı",
+    "zh": "处理器主频"
+  },
+  "Кассета укладки": {
+    "uz": "Tolalarni joylash kassetasi",
+    "en": "Fiber storage tray",
+    "tr": "Fiber depolama kaseti",
+    "zh": "盘纤盒"
+  },
+  "Укладка запаса": {
+    "uz": "Kabel zaxirasini joylash",
+    "en": "Slack storage",
+    "tr": "Fazla kablo depolama",
+    "zh": "余缆收纳"
+  },
+  "Кабели": {
+    "uz": "Kabellar",
+    "en": "Cables",
+    "tr": "Kablolar",
+    "zh": "线缆"
+  },
+  "Лезвия": {
+    "uz": "Pichoqlar",
+    "en": "Blades",
+    "tr": "Bıçaklar",
+    "zh": "刀片"
+  },
+  "Глубина реза": {
+    "uz": "Kesish chuqurligi",
+    "en": "Cutting depth",
+    "tr": "Kesim derinliği",
+    "zh": "切割深度"
+  },
+  "Заряд": {
+    "uz": "Zaryad",
+    "en": "Charge",
+    "tr": "Dolum",
+    "zh": "充装量"
+  },
+  "Раструб": {
+    "uz": "Karnay",
+    "en": "Discharge horn",
+    "tr": "Korne",
+    "zh": "喷筒"
+  },
+  "Классы пожара": {
+    "uz": "Yongʻin sinflari",
+    "en": "Fire classes",
+    "tr": "Yangın sınıfları",
+    "zh": "火灾类别"
+  },
+  "Схема": {
+    "uz": "Sxema",
+    "en": "Scheme",
+    "tr": "Şema",
+    "zh": "方案"
+  },
+  "Сплайс-зона": {
+    "uz": "Splays zonasi",
+    "en": "Splice area",
+    "tr": "Ek bölgesi",
+    "zh": "熔接区"
+  },
+  "Точки доступа": {
+    "uz": "Kirish nuqtalari",
+    "en": "Access points",
+    "tr": "Geçiş noktaları",
+    "zh": "门禁点"
+  },
+  "Графики доступа": {
+    "uz": "Kirish jadvallari",
+    "en": "Access schedules",
+    "tr": "Geçiş programları",
+    "zh": "门禁时间表"
+  },
+  "Интерфейс системы": {
+    "uz": "Tizim interfeysi",
+    "en": "System interface",
+    "tr": "Sistem arayüzü",
+    "zh": "系统接口"
+  },
+  "Интерфейсы считывателей": {
+    "uz": "Oʻqish qurilmalari interfeyslari",
+    "en": "Reader interfaces",
+    "tr": "Okuyucu arayüzleri",
+    "zh": "读卡器接口"
+  },
+  "Уплотнение": {
+    "uz": "Zichlagich",
+    "en": "Sealing",
+    "tr": "Sızdırmazlık",
+    "zh": "密封"
+  },
+  "Поворот/наклон": {
+    "uz": "Burilish/ogʻish",
+    "en": "Pan/tilt",
+    "tr": "Dönüş/eğim",
+    "zh": "水平/垂直转动"
+  },
+  "Контроллер AP": {
+    "uz": "AP kontrolleri",
+    "en": "AP controller",
+    "tr": "AP denetleyicisi",
+    "zh": "AP 控制器"
+  },
+  "Входящий поток": {
+    "uz": "Kiruvchi oqim",
+    "en": "Incoming bandwidth",
+    "tr": "Gelen bant genişliği",
+    "zh": "接入带宽"
+  },
+  "Двери в базе": {
+    "uz": "Bazadagi eshiklar",
+    "en": "Doors in database",
+    "tr": "Veritabanındaki kapılar",
+    "zh": "数据库门数"
+  },
+  "Замки": {
+    "uz": "Qulflar",
+    "en": "Locks",
+    "tr": "Kilitler",
+    "zh": "门锁"
+  },
+  "Тепловизионный сенсор": {
+    "uz": "Teplovizor sensori",
+    "en": "Thermal sensor",
+    "tr": "Termal sensör",
+    "zh": "热成像传感器"
+  },
+  "Бухта": {
+    "uz": "Oʻram (buxta)",
+    "en": "Coil",
+    "tr": "Rulo",
+    "zh": "卷装"
+  },
+  "Масса двери": {
+    "uz": "Eshik ogʻirligi",
+    "en": "Door weight",
+    "tr": "Kapı ağırlığı",
+    "zh": "门重"
+  },
+  "Регулировки": {
+    "uz": "Sozlashlar",
+    "en": "Adjustments",
+    "tr": "Ayarlar",
+    "zh": "调节"
+  },
+  "Колба": {
+    "uz": "Kolba",
+    "en": "Bulb",
+    "tr": "Ampul",
+    "zh": "玻璃球"
+  },
+  "Резьба": {
+    "uz": "Rezba",
+    "en": "Thread",
+    "tr": "Diş",
+    "zh": "螺纹"
+  },
+  "Для замка": {
+    "uz": "Qulf uchun",
+    "en": "For lock",
+    "tr": "Kilit için",
+    "zh": "适用门锁"
+  },
+  "Повторная заделка": {
+    "uz": "Qayta terminatsiya",
+    "en": "Re-termination",
+    "tr": "Yeniden sonlandırma",
+    "zh": "可重复端接"
+  },
+  "Направляющие": {
+    "uz": "Yoʻnaltiruvchi reykalar",
+    "en": "Rails",
+    "tr": "Raylar",
+    "zh": "导轨"
+  },
+  "Штабелирование": {
+    "uz": "Ustma-ust joylash",
+    "en": "Stacking",
+    "tr": "İstifleme",
+    "zh": "堆叠"
+  },
+  "Каретка": {
+    "uz": "Karetka",
+    "en": "Carriage",
+    "tr": "Taşıyıcı",
+    "zh": "滑架"
+  },
+  "Станина": {
+    "uz": "Asos",
+    "en": "Base",
+    "tr": "Gövde",
+    "zh": "机座"
+  },
+  "Ресурс лезвия": {
+    "uz": "Pichoq resursi",
+    "en": "Blade life",
+    "tr": "Bıçak ömrü",
+    "zh": "刀片寿命"
+  },
+  "Волокна": {
+    "uz": "Tolalar",
+    "en": "Fibers",
+    "tr": "Fiberler",
+    "zh": "光纤"
+  },
+  "Выравнивание": {
+    "uz": "Tekislash",
+    "en": "Alignment",
+    "tr": "Hizalama",
+    "zh": "对准方式"
+  },
+  "Материал жил": {
+    "uz": "Tomirlar materiali",
+    "en": "Conductor material",
+    "tr": "İletken malzemesi",
+    "zh": "导体材质"
   }
 }

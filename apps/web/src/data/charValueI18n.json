@@ -20110,5 +20110,4421 @@
     "en": "Tapo A110 rechargeable battery, USB Type-C charging",
     "tr": "Tapo A110 bataryası, USB Type-C ile şarj",
     "zh": "Tapo A110 锂电池，USB Type-C 充电"
+  },
+  "Управляемый L2": {
+    "uz": "Boshqariladigan L2",
+    "en": "Managed L2",
+    "tr": "Yönetilebilir L2",
+    "zh": "L2 网管型"
+  },
+  "Оптический модуль SFP": {
+    "uz": "SFP optik moduli",
+    "en": "SFP optical module",
+    "tr": "SFP optik modül",
+    "zh": "SFP 光模块"
+  },
+  "WDM (одноволоконный)": {
+    "uz": "WDM (bir tolali)",
+    "en": "WDM (single-fiber)",
+    "tr": "WDM (tek fiber)",
+    "zh": "WDM（单纤）"
+  },
+  "Точка доступа": {
+    "uz": "Kirish nuqtasi",
+    "en": "Access point",
+    "tr": "Erişim noktası",
+    "zh": "无线接入点"
+  },
+  "IP-телефон": {
+    "uz": "IP-telefon",
+    "en": "IP phone",
+    "tr": "IP telefon",
+    "zh": "IP 电话机"
+  },
+  "PLC-делитель (планарный, бескорпусный)": {
+    "uz": "PLC splitter (planar, korpussiz)",
+    "en": "PLC splitter (planar, bare fiber)",
+    "tr": "PLC splitter (planar, gövdesiz)",
+    "zh": "PLC 分光器（平面波导型，裸纤式）"
+  },
+  "Оптический кросс 19″ (ШКОС)": {
+    "uz": "Optik kross 19″ (stoykali)",
+    "en": "Fiber patch panel 19″ (rack-mount)",
+    "tr": "Fiber patch panel 19″ (kabin tipi)",
+    "zh": "光纤配线架 19″（机架式）"
+  },
+  "Перфорированная": {
+    "uz": "Perforatsiyalangan",
+    "en": "Perforated",
+    "tr": "Delikli",
+    "zh": "网孔"
+  },
+  "IP-видеорегистратор (NVR)": {
+    "uz": "IP videoregistrator (NVR)",
+    "en": "IP recorder (NVR)",
+    "tr": "IP kaydedici (NVR)",
+    "zh": "网络硬盘录像机（NVR）"
+  },
+  "УЗК (устройство закладки кабеля)": {
+    "uz": "UZK (kabel tortish qurilmasi)",
+    "en": "Duct rodder (cable pulling device)",
+    "tr": "Kablo çekme kılavuzu (kablo döşeme aparatı)",
+    "zh": "穿管器（线缆敷设工具）"
+  },
+  "Полка стационарная": {
+    "uz": "Qoʻzgʻalmas tokcha",
+    "en": "Fixed shelf",
+    "tr": "Sabit raf",
+    "zh": "固定托盘"
+  },
+  "Жёсткий диск (HDD)": {
+    "uz": "Qattiq disk (HDD)",
+    "en": "Hard drive (HDD)",
+    "tr": "Sabit disk (HDD)",
+    "zh": "硬盘（HDD）"
+  },
+  "Ответвитель абонентский (TAP)": {
+    "uz": "Abonent tarmoqlagichi (TAP)",
+    "en": "Subscriber tap (TAP)",
+    "tr": "Abone ayırıcı (TAP)",
+    "zh": "用户分支器（TAP）"
+  },
+  "Оптический модуль SFP+": {
+    "uz": "SFP+ optik moduli",
+    "en": "SFP+ optical module",
+    "tr": "SFP+ optik modül",
+    "zh": "SFP+ 光模块"
+  },
+  "Облачное (Cloud)": {
+    "uz": "Bulutli (Cloud)",
+    "en": "Cloud-based (Cloud)",
+    "tr": "Bulut tabanlı (Cloud)",
+    "zh": "云管理（Cloud）"
+  },
+  "On-line (двойное преобразование)": {
+    "uz": "On-line (ikki marta oʻzgartirish)",
+    "en": "On-line (double conversion)",
+    "tr": "On-line (çift dönüşüm)",
+    "zh": "在线式（双变换）"
+  },
+  "Патч-панель 19″": {
+    "uz": "Patch-panel 19″",
+    "en": "Patch panel 19″",
+    "tr": "Patch panel 19″",
+    "zh": "配线架 19″"
+  },
+  "100 Гбит/с": {
+    "uz": "100 Gbit/s",
+    "en": "100 Gbps",
+    "tr": "100 Gbps",
+    "zh": "100 Gbps"
+  },
+  "Сетевая карта (серверная)": {
+    "uz": "Tarmoq kartasi (server uchun)",
+    "en": "Network card (server)",
+    "tr": "Ağ kartı (sunucu)",
+    "zh": "网卡（服务器）"
+  },
+  "Прибор приёмно-контрольный (охранная панель)": {
+    "uz": "Qabul-nazorat asbobi (qoʻriqlash paneli)",
+    "en": "Control panel (intruder alarm panel)",
+    "tr": "Kontrol paneli (hırsız alarm paneli)",
+    "zh": "报警控制器（防盗报警主机）"
+  },
+  "Оптический адаптер (розетка)": {
+    "uz": "Optik adapter (rozetka)",
+    "en": "Fiber adapter (coupler)",
+    "tr": "Fiber adaptör (kuplör)",
+    "zh": "光纤适配器（法兰）"
+  },
+  "С адаптерами и шнурами": {
+    "uz": "Adapterlar va shnurlar bilan",
+    "en": "With adapters and patch cords",
+    "tr": "Adaptör ve patch kablolarla",
+    "zh": "含适配器和跳线"
+  },
+  "25 Гбит/с": {
+    "uz": "25 Gbit/s",
+    "en": "25 Gbps",
+    "tr": "25 Gbps",
+    "zh": "25 Gbps"
+  },
+  "1310 нм": {
+    "uz": "1310 nm",
+    "en": "1310 nm",
+    "tr": "1310 nm",
+    "zh": "1310 nm"
+  },
+  "1550 нм": {
+    "uz": "1550 nm",
+    "en": "1550 nm",
+    "tr": "1550 nm",
+    "zh": "1550 nm"
+  },
+  "Для видеонаблюдения (24/7)": {
+    "uz": "Videokuzatuv uchun (24/7)",
+    "en": "For video surveillance (24/7)",
+    "tr": "Video gözetim için (24/7)",
+    "zh": "监控专用（24/7）"
+  },
+  "Блок розеток (PDU)": {
+    "uz": "Rozetkalar bloki (PDU)",
+    "en": "Power distribution unit (PDU)",
+    "tr": "Priz bloğu (PDU)",
+    "zh": "机柜电源插座（PDU）"
+  },
+  "Коннектор RJ-45": {
+    "uz": "RJ-45 konnektori",
+    "en": "RJ-45 connector",
+    "tr": "RJ-45 konektör",
+    "zh": "RJ-45 水晶头"
+  },
+  "Обжимной инструмент (кримпер)": {
+    "uz": "Siqish asbobi (krimper)",
+    "en": "Crimping tool (crimper)",
+    "tr": "Sıkma pensesi (krimpleme aleti)",
+    "zh": "压线钳（压接工具）"
+  },
+  "Стоечный (rack)": {
+    "uz": "Stoykali (rack)",
+    "en": "Rack-mount (rack)",
+    "tr": "Kabin tipi (rack)",
+    "zh": "机架式（rack）"
+  },
+  "14 дБ": {
+    "uz": "14 dB",
+    "en": "14 dB",
+    "tr": "14 dB",
+    "zh": "14 dB"
+  },
+  "Модуль Keystone Jack": {
+    "uz": "Keystone Jack moduli",
+    "en": "Keystone Jack module",
+    "tr": "Keystone Jack modül",
+    "zh": "Keystone Jack 模块"
+  },
+  "Wi-Fi камера (умный дом)": {
+    "uz": "Wi-Fi kamera (aqlli uy)",
+    "en": "Wi-Fi camera (smart home)",
+    "tr": "Wi-Fi kamera (akıllı ev)",
+    "zh": "Wi-Fi 摄像机（智能家居）"
+  },
+  "Wi-Fi камера": {
+    "uz": "Wi-Fi kamera",
+    "en": "Wi-Fi camera",
+    "tr": "Wi-Fi kamera",
+    "zh": "Wi-Fi 摄像机"
+  },
+  "Внутренний монитор видеодомофона": {
+    "uz": "Videodomofon ichki monitori",
+    "en": "Video intercom indoor monitor",
+    "tr": "Görüntülü interkom iç monitörü",
+    "zh": "可视对讲室内机"
+  },
+  "40 Гбит/с": {
+    "uz": "40 Gbit/s",
+    "en": "40 Gbps",
+    "tr": "40 Gbps",
+    "zh": "40 Gbps"
+  },
+  "до 40 км": {
+    "uz": "40 km gacha",
+    "en": "up to 40 km",
+    "tr": "40 km'ye kadar",
+    "zh": "最远 40 km"
+  },
+  "Кабельный тестер": {
+    "uz": "Kabel testeri",
+    "en": "Cable tester",
+    "tr": "Kablo test cihazı",
+    "zh": "线缆测试仪"
+  },
+  "OLT (станционный терминал)": {
+    "uz": "OLT (stansiya terminali)",
+    "en": "OLT (optical line terminal)",
+    "tr": "OLT (optik hat terminali)",
+    "zh": "OLT（局端设备）"
+  },
+  "600 мм": {
+    "uz": "600 mm",
+    "en": "600 mm",
+    "tr": "600 mm",
+    "zh": "600 mm"
+  },
+  "до 10 км": {
+    "uz": "10 km gacha",
+    "en": "up to 10 km",
+    "tr": "10 km'ye kadar",
+    "zh": "最远 10 km"
+  },
+  "Оптический модуль QSFP28": {
+    "uz": "QSFP28 optik moduli",
+    "en": "QSFP28 optical module",
+    "tr": "QSFP28 optik modül",
+    "zh": "QSFP28 光模块"
+  },
+  "Карта мониторинга SNMP для ИБП": {
+    "uz": "UPS uchun SNMP monitoring kartasi",
+    "en": "SNMP monitoring card for UPS",
+    "tr": "UPS için SNMP izleme kartı",
+    "zh": "UPS SNMP 监控卡"
+  },
+  "Заглушка 19″": {
+    "uz": "Yopqich panel 19″",
+    "en": "Blanking panel 19″",
+    "tr": "Kör panel 19″",
+    "zh": "盲板 19″"
+  },
+  "Трансляция/оповещение": {
+    "uz": "Eshittirish/ogohlantirish",
+    "en": "Broadcasting/notification",
+    "tr": "Anons/uyarı",
+    "zh": "广播/通知"
+  },
+  "6,0 мм": {
+    "uz": "6,0 mm",
+    "en": "6.0 mm",
+    "tr": "6,0 mm",
+    "zh": "6.0 mm"
+  },
+  "ONU (абонентский терминал)": {
+    "uz": "ONU (abonent terminali)",
+    "en": "ONU (optical network unit)",
+    "tr": "ONU (abone terminali)",
+    "zh": "ONU（用户终端）"
+  },
+  "Встроенный UPS": {
+    "uz": "Oʻrnatilgan UPS",
+    "en": "Built-in UPS",
+    "tr": "Dahili UPS",
+    "zh": "内置 UPS"
+  },
+  "Одномод (SM)": {
+    "uz": "Bir modali (SM)",
+    "en": "Single-mode (SM)",
+    "tr": "Tek modlu (SM)",
+    "zh": "单模（SM）"
+  },
+  "Трансляционный усилитель": {
+    "uz": "Eshittirish kuchaytirgichi",
+    "en": "Public address amplifier",
+    "tr": "Anons amplifikatörü",
+    "zh": "广播功放"
+  },
+  "Кабельный органайзер 19″": {
+    "uz": "Kabel organayzeri 19″",
+    "en": "Cable manager 19″",
+    "tr": "Kablo düzenleyici 19″",
+    "zh": "理线架 19″"
+  },
+  "ИБП для систем безопасности (12 В)": {
+    "uz": "Xavfsizlik tizimlari uchun UPS (12 V)",
+    "en": "UPS for security systems (12 V)",
+    "tr": "Güvenlik sistemleri için UPS (12 V)",
+    "zh": "安防系统 UPS（12 V）"
+  },
+  "Уличный всепогодный": {
+    "uz": "Koʻcha uchun, har qanday ob-havoga chidamli",
+    "en": "Outdoor weatherproof",
+    "tr": "Dış mekân, her hava koşuluna dayanıklı",
+    "zh": "室外全天候型"
+  },
+  "Оптический аттенюатор": {
+    "uz": "Optik attenyuator",
+    "en": "Optical attenuator",
+    "tr": "Optik zayıflatıcı",
+    "zh": "光衰减器"
+  },
+  "16 дБ": {
+    "uz": "16 dB",
+    "en": "16 dB",
+    "tr": "16 dB",
+    "zh": "16 dB"
+  },
+  "12 дБ": {
+    "uz": "12 dB",
+    "en": "12 dB",
+    "tr": "12 dB",
+    "zh": "12 dB"
+  },
+  "Медиаконвертер": {
+    "uz": "Mediakonverter",
+    "en": "Media converter",
+    "tr": "Medya dönüştürücü",
+    "zh": "媒体转换器"
+  },
+  "Россия": {
+    "uz": "Rossiya",
+    "en": "Russia",
+    "tr": "Rusya",
+    "zh": "俄罗斯"
+  },
+  "1200 мм": {
+    "uz": "1200 mm",
+    "en": "1200 mm",
+    "tr": "1200 mm",
+    "zh": "1200 mm"
+  },
+  "Открытая стойка двухрамная": {
+    "uz": "Ochiq ikki ramali stoyka",
+    "en": "Open frame 2-post rack",
+    "tr": "Çift çerçeveli açık kabin",
+    "zh": "双柱开放式机架"
+  },
+  "Адаптерная планка для ODF": {
+    "uz": "ODF uchun adapter plankasi",
+    "en": "Adapter plate for ODF",
+    "tr": "ODF için adaptör paneli",
+    "zh": "ODF 适配器面板"
+  },
+  "Патч-корд": {
+    "uz": "Patch-kord",
+    "en": "Patch cord",
+    "tr": "Patch kablo",
+    "zh": "跳线"
+  },
+  "Неэкранированный": {
+    "uz": "Ekranlanmagan",
+    "en": "Unshielded",
+    "tr": "Blendajsız",
+    "zh": "非屏蔽"
+  },
+  "3,5 мм": {
+    "uz": "3,5 mm",
+    "en": "3.5 mm",
+    "tr": "3,5 mm",
+    "zh": "3.5 mm"
+  },
+  "4,5 мм": {
+    "uz": "4,5 mm",
+    "en": "4.5 mm",
+    "tr": "4,5 mm",
+    "zh": "4.5 mm"
+  },
+  "Извещатель охранный": {
+    "uz": "Qoʻriqlash datchigi",
+    "en": "Intrusion detector",
+    "tr": "Hırsız alarm dedektörü",
+    "zh": "防盗探测器"
+  },
+  "Оптическая распределительная коробка": {
+    "uz": "Optik taqsimlash qutisi",
+    "en": "Fiber distribution box",
+    "tr": "Fiber dağıtım kutusu",
+    "zh": "光纤分纤箱"
+  },
+  "Розетка накладная": {
+    "uz": "Ustki montajli rozetka",
+    "en": "Surface-mount outlet",
+    "tr": "Sıva üstü priz",
+    "zh": "明装插座"
+  },
+  "Корпоративный (Enterprise)": {
+    "uz": "Korporativ (Enterprise)",
+    "en": "Corporate (Enterprise)",
+    "tr": "Kurumsal (Enterprise)",
+    "zh": "企业级（Enterprise）"
+  },
+  "Hikvision AX PRO (беспроводная)": {
+    "uz": "Hikvision AX PRO (simsiz)",
+    "en": "Hikvision AX PRO (wireless)",
+    "tr": "Hikvision AX PRO (kablosuz)",
+    "zh": "Hikvision AX PRO（无线）"
+  },
+  "Рукав пожарный напорный": {
+    "uz": "Bosimli yongʻin shlangi",
+    "en": "Pressure fire hose",
+    "tr": "Basınçlı yangın hortumu",
+    "zh": "有压消防水带"
+  },
+  "Пожарные краны, мотопомпы, автоцистерны": {
+    "uz": "Yongʻin kranlari, motopompalar, avtotsisternalar",
+    "en": "Fire hose valves, motor pumps, fire tankers",
+    "tr": "Yangın vanaları, motopomplar, arazözler",
+    "zh": "消火栓、机动泵、消防水罐车"
+  },
+  "Датчик температуры и влажности": {
+    "uz": "Harorat va namlik datchigi",
+    "en": "Temperature and humidity sensor",
+    "tr": "Sıcaklık ve nem sensörü",
+    "zh": "温湿度传感器"
+  },
+  "240 Вт": {
+    "uz": "240 W",
+    "en": "240 W",
+    "tr": "240 W",
+    "zh": "240 W"
+  },
+  "800×1000×2000 мм": {
+    "uz": "800×1000×2000 mm",
+    "en": "800×1000×2000 mm",
+    "tr": "800×1000×2000 mm",
+    "zh": "800×1000×2000 mm"
+  },
+  "Усиленная": {
+    "uz": "Mustahkamlangan",
+    "en": "Reinforced",
+    "tr": "Güçlendirilmiş",
+    "zh": "加强型"
+  },
+  "Вертикальный кабельный органайзер": {
+    "uz": "Vertikal kabel organayzeri",
+    "en": "Vertical cable manager",
+    "tr": "Dikey kablo düzenleyici",
+    "zh": "垂直理线器"
+  },
+  "Зажим спиральный натяжной": {
+    "uz": "Spiral tortish qisqichi",
+    "en": "Helical dead-end clamp",
+    "tr": "Spiral gergi klemensi",
+    "zh": "预绞式耐张线夹"
+  },
+  "DAC-кабель SFP28": {
+    "uz": "DAC-kabel SFP28",
+    "en": "DAC cable SFP28",
+    "tr": "DAC kablo SFP28",
+    "zh": "DAC 高速线缆 SFP28"
+  },
+  "DAC-кабель QSFP+": {
+    "uz": "DAC-kabel QSFP+",
+    "en": "DAC cable QSFP+",
+    "tr": "DAC kablo QSFP+",
+    "zh": "DAC 高速线缆 QSFP+"
+  },
+  "Оптический модуль QSFP+": {
+    "uz": "QSFP+ optik moduli",
+    "en": "QSFP+ optical module",
+    "tr": "QSFP+ optik modül",
+    "zh": "QSFP+ 光模块"
+  },
+  "BiDi (одноволоконный)": {
+    "uz": "BiDi (bir tolali)",
+    "en": "BiDi (single-fiber)",
+    "tr": "BiDi (tek fiber)",
+    "zh": "BiDi（单纤）"
+  },
+  "DAC-кабель SFP+": {
+    "uz": "DAC-kabel SFP+",
+    "en": "DAC cable SFP+",
+    "tr": "DAC kablo SFP+",
+    "zh": "DAC 高速线缆 SFP+"
+  },
+  "1330 нм": {
+    "uz": "1330 nm",
+    "en": "1330 nm",
+    "tr": "1330 nm",
+    "zh": "1330 nm"
+  },
+  "10/100/1000 Мбит/с": {
+    "uz": "10/100/1000 Mbit/s",
+    "en": "10/100/1000 Mbps",
+    "tr": "10/100/1000 Mbps",
+    "zh": "10/100/1000 Mbps"
+  },
+  "1270 нм": {
+    "uz": "1270 nm",
+    "en": "1270 nm",
+    "tr": "1270 nm",
+    "zh": "1270 nm"
+  },
+  "USB-накопитель": {
+    "uz": "USB-fleshka",
+    "en": "USB flash drive",
+    "tr": "USB bellek",
+    "zh": "U 盘"
+  },
+  "Запись видео в домофоне": {
+    "uz": "Domofonda video yozish",
+    "en": "Video recording in the intercom",
+    "tr": "İnterkomda video kaydı",
+    "zh": "对讲录像存储"
+  },
+  "Хомут-липучка (многоразовый)": {
+    "uz": "Velkro xomut (koʻp marta ishlatiladigan)",
+    "en": "Velcro cable tie (reusable)",
+    "tr": "Cırt cırtlı kablo bağı (tekrar kullanılabilir)",
+    "zh": "魔术贴扎带（可重复使用）"
+  },
+  "17 дБ": {
+    "uz": "17 dB",
+    "en": "17 dB",
+    "tr": "17 dB",
+    "zh": "17 dB"
+  },
+  "до 60 км": {
+    "uz": "60 km gacha",
+    "en": "up to 60 km",
+    "tr": "60 km'ye kadar",
+    "zh": "最远 60 km"
+  },
+  "Стриппер кабельный": {
+    "uz": "Kabel stripperi",
+    "en": "Cable stripper",
+    "tr": "Kablo soyucu",
+    "zh": "剥线器"
+  },
+  "10 дБ": {
+    "uz": "10 dB",
+    "en": "10 dB",
+    "tr": "10 dB",
+    "zh": "10 dB"
+  },
+  "SFP-модуль OLT": {
+    "uz": "OLT uchun SFP-modul",
+    "en": "OLT SFP module",
+    "tr": "OLT SFP modülü",
+    "zh": "OLT SFP 光模块"
+  },
+  "Оптический рефлектометр (OTDR)": {
+    "uz": "Optik reflektometr (OTDR)",
+    "en": "Optical time-domain reflectometer (OTDR)",
+    "tr": "Optik reflektometre (OTDR)",
+    "zh": "光时域反射仪（OTDR）"
+  },
+  "IP-АТС": {
+    "uz": "IP-ATS",
+    "en": "IP PBX",
+    "tr": "IP santral",
+    "zh": "IP 电话交换机"
+  },
+  "Монтажный аксессуар для ИБП/PDU": {
+    "uz": "UPS/PDU uchun montaj aksessuari",
+    "en": "Mounting accessory for UPS/PDU",
+    "tr": "UPS/PDU için montaj aksesuarı",
+    "zh": "UPS/PDU 安装配件"
+  },
+  "Цилиндрическая IP-камера": {
+    "uz": "Silindrik IP-kamera",
+    "en": "Bullet IP camera",
+    "tr": "Bullet IP kamera",
+    "zh": "筒型 IP 摄像机"
+  },
+  "Умный переключатель": {
+    "uz": "Aqlli oʻchirgich",
+    "en": "Smart switch",
+    "tr": "Akıllı anahtar",
+    "zh": "智能开关"
+  },
+  "Скоба под плинты LSA": {
+    "uz": "LSA plintlari uchun kronshteyn",
+    "en": "Mounting bracket for LSA modules",
+    "tr": "LSA klemens braketi",
+    "zh": "LSA 模块支架"
+  },
+  "Вызывная панель IP-домофона": {
+    "uz": "IP-domofon chaqiruv paneli",
+    "en": "IP intercom door station",
+    "tr": "IP interkom kapı paneli",
+    "zh": "IP 对讲门口机"
+  },
+  "Горизонтальная": {
+    "uz": "Gorizontal",
+    "en": "Horizontal",
+    "tr": "Yatay",
+    "zh": "水平"
+  },
+  "Экранированный": {
+    "uz": "Ekranlangan",
+    "en": "Shielded",
+    "tr": "Blendajlı",
+    "zh": "屏蔽"
+  },
+  "6 дБ": {
+    "uz": "6 dB",
+    "en": "6 dB",
+    "tr": "6 dB",
+    "zh": "6 dB"
+  },
+  "до 80 км": {
+    "uz": "80 km gacha",
+    "en": "up to 80 km",
+    "tr": "80 km'ye kadar",
+    "zh": "最远 80 km"
+  },
+  "PN16 (1,6 МПа)": {
+    "uz": "PN16 (1,6 MPa)",
+    "en": "PN16 (1.6 MPa)",
+    "tr": "PN16 (1,6 MPa)",
+    "zh": "PN16（1.6 MPa）"
+  },
+  "Пожарные краны (ШПК)": {
+    "uz": "Yongʻin kranlari (yongʻin krani shkaflari)",
+    "en": "Fire hose valves (fire hose cabinets)",
+    "tr": "Yangın vanaları (yangın dolapları)",
+    "zh": "消火栓（消火栓箱）"
+  },
+  "Разветвитель электрический": {
+    "uz": "Elektr tarmoqlagich",
+    "en": "Multi-socket adapter",
+    "tr": "Çoklu priz adaptörü",
+    "zh": "多用插座转换器"
+  },
+  "20 кВА": {
+    "uz": "20 kVA",
+    "en": "20 kVA",
+    "tr": "20 kVA",
+    "zh": "20 kVA"
+  },
+  "Отвёртка": {
+    "uz": "Otvyortka",
+    "en": "Screwdriver",
+    "tr": "Tornavida",
+    "zh": "螺丝刀"
+  },
+  "Удлинитель электрический": {
+    "uz": "Elektr uzaytirgich",
+    "en": "Extension cord",
+    "tr": "Uzatma kablosu",
+    "zh": "电源延长线"
+  },
+  "Пигтейл оптический": {
+    "uz": "Optik pigteyl",
+    "en": "Fiber pigtail",
+    "tr": "Fiber pigtail",
+    "zh": "光纤尾纤"
+  },
+  "0,9 мм": {
+    "uz": "0,9 mm",
+    "en": "0.9 mm",
+    "tr": "0,9 mm",
+    "zh": "0.9 mm"
+  },
+  "Одномодовое (SM)": {
+    "uz": "Bir modali (SM)",
+    "en": "Single-mode (SM)",
+    "tr": "Tek modlu (SM)",
+    "zh": "单模（SM）"
+  },
+  "15 дБ": {
+    "uz": "15 dB",
+    "en": "15 dB",
+    "tr": "15 dB",
+    "zh": "15 dB"
+  },
+  "Мультиплексор CWDM": {
+    "uz": "CWDM multipleksori",
+    "en": "CWDM multiplexer",
+    "tr": "CWDM çoklayıcı",
+    "zh": "CWDM 波分复用器"
+  },
+  "Одно волокно": {
+    "uz": "Bitta tola",
+    "en": "Single fiber",
+    "tr": "Tek fiber",
+    "zh": "单纤"
+  },
+  "850 нм": {
+    "uz": "850 nm",
+    "en": "850 nm",
+    "tr": "850 nm",
+    "zh": "850 nm"
+  },
+  "8 дБ": {
+    "uz": "8 dB",
+    "en": "8 dB",
+    "tr": "8 dB",
+    "zh": "8 dB"
+  },
+  "1490 нм": {
+    "uz": "1490 nm",
+    "en": "1490 nm",
+    "tr": "1490 nm",
+    "zh": "1490 nm"
+  },
+  "5 дБ": {
+    "uz": "5 dB",
+    "en": "5 dB",
+    "tr": "5 dB",
+    "zh": "5 dB"
+  },
+  "10 кВА": {
+    "uz": "10 kVA",
+    "en": "10 kVA",
+    "tr": "10 kVA",
+    "zh": "10 kVA"
+  },
+  "DAC-кабель QSFP28": {
+    "uz": "DAC-kabel QSFP28",
+    "en": "DAC cable QSFP28",
+    "tr": "DAC kablo QSFP28",
+    "zh": "DAC 高速线缆 QSFP28"
+  },
+  "32 А": {
+    "uz": "32 A",
+    "en": "32 A",
+    "tr": "32 A",
+    "zh": "32 A"
+  },
+  "16 А": {
+    "uz": "16 A",
+    "en": "16 A",
+    "tr": "16 A",
+    "zh": "16 A"
+  },
+  "Сварочный аппарат для оптоволокна": {
+    "uz": "Optik tolani payvandlash apparati",
+    "en": "Fiber fusion splicer",
+    "tr": "Fiber füzyon ek makinesi",
+    "zh": "光纤熔接机"
+  },
+  "Соединитель жил (скотчлок)": {
+    "uz": "Sim tomirlari ulagichi (skotchlok)",
+    "en": "Wire connector (Scotchlok)",
+    "tr": "Kablo ek konnektörü (scotchlok)",
+    "zh": "接线子（Scotchlok）"
+  },
+  "Сплайс-кассета": {
+    "uz": "Splays-kasseta",
+    "en": "Splice tray",
+    "tr": "Ek kaseti",
+    "zh": "熔纤盘"
+  },
+  "Датчик протечки": {
+    "uz": "Suv oqishi datchigi",
+    "en": "Water leak sensor",
+    "tr": "Su kaçağı sensörü",
+    "zh": "漏水传感器"
+  },
+  "Доводчик дверной": {
+    "uz": "Eshik yopgich",
+    "en": "Door closer",
+    "tr": "Kapı kapatıcı",
+    "zh": "闭门器"
+  },
+  "RJ45 1 Гбит/с": {
+    "uz": "RJ45 1 Gbit/s",
+    "en": "RJ45 1 Gbps",
+    "tr": "RJ45 1 Gbps",
+    "zh": "RJ45 1 Gbps"
+  },
+  "Оперативная память (серверная)": {
+    "uz": "Operativ xotira (server uchun)",
+    "en": "RAM (server)",
+    "tr": "RAM bellek (sunucu)",
+    "zh": "内存（服务器）"
+  },
+  "2 ТБ": {
+    "uz": "2 TB",
+    "en": "2 TB",
+    "tr": "2 TB",
+    "zh": "2 TB"
+  },
+  "Блок питания PoE": {
+    "uz": "PoE quvvat bloki",
+    "en": "PoE power supply",
+    "tr": "PoE güç kaynağı",
+    "zh": "PoE 电源"
+  },
+  "Шуруповёрт аккумуляторный": {
+    "uz": "Akkumulyatorli shurupburagich",
+    "en": "Cordless screwdriver",
+    "tr": "Akülü vidalama makinesi",
+    "zh": "充电式电动螺丝刀"
+  },
+  "24/48 волокон": {
+    "uz": "24/48 tola",
+    "en": "24/48 fibers",
+    "tr": "24/48 fiber",
+    "zh": "24/48 芯"
+  },
+  "Дисплей для видеостены": {
+    "uz": "Videodevor uchun displey",
+    "en": "Video wall display",
+    "tr": "Video duvar ekranı",
+    "zh": "拼接屏"
+  },
+  "Комплект IP-домофона": {
+    "uz": "IP-domofon komplekti",
+    "en": "IP intercom kit",
+    "tr": "IP interkom seti",
+    "zh": "IP 对讲套装"
+  },
+  "Болид, Россия": {
+    "uz": "Bolid, Rossiya",
+    "en": "Bolid, Russia",
+    "tr": "Bolid, Rusya",
+    "zh": "Bolid，俄罗斯"
+  },
+  "Контроллер доступа": {
+    "uz": "Kirish kontrolleri",
+    "en": "Access controller",
+    "tr": "Geçiş kontrolörü",
+    "zh": "门禁控制器"
+  },
+  "«Селект»": {
+    "uz": "«Selekt»",
+    "en": "«Select»",
+    "tr": "«Select»",
+    "zh": "«Select»"
+  },
+  "1,6 МПа": {
+    "uz": "1,6 MPa",
+    "en": "1.6 MPa",
+    "tr": "1,6 MPa",
+    "zh": "1.6 MPa"
+  },
+  "Оптический модуль SFP28": {
+    "uz": "SFP28 optik moduli",
+    "en": "SFP28 optical module",
+    "tr": "SFP28 optik modül",
+    "zh": "SFP28 光模块"
+  },
+  "сталь": {
+    "uz": "poʻlat",
+    "en": "steel",
+    "tr": "çelik",
+    "zh": "钢"
+  },
+  "PLC-делитель": {
+    "uz": "PLC splitter",
+    "en": "PLC splitter",
+    "tr": "PLC splitter",
+    "zh": "PLC 分光器"
+  },
+  "1260–1650 нм": {
+    "uz": "1260–1650 nm",
+    "en": "1260–1650 nm",
+    "tr": "1260–1650 nm",
+    "zh": "1260–1650 nm"
+  },
+  "Абонентский модуль (радиомост)": {
+    "uz": "Abonent moduli (radiokoʻprik)",
+    "en": "Subscriber unit (wireless bridge)",
+    "tr": "Abone modülü (radyo köprüsü)",
+    "zh": "客户端模块（无线网桥）"
+  },
+  "Дюбель": {
+    "uz": "Dyubel",
+    "en": "Wall plug",
+    "tr": "Dübel",
+    "zh": "膨胀管"
+  },
+  "Умная розетка": {
+    "uz": "Aqlli rozetka",
+    "en": "Smart plug",
+    "tr": "Akıllı priz",
+    "zh": "智能插座"
+  },
+  "Скалыватель оптического волокна": {
+    "uz": "Optik tola kesgichi",
+    "en": "Fiber cleaver",
+    "tr": "Fiber kesme cihazı",
+    "zh": "光纤切割刀"
+  },
+  "Кабель витая пара": {
+    "uz": "Oʻralgan juftlik kabeli",
+    "en": "Twisted pair cable",
+    "tr": "Bükümlü çift kablo",
+    "zh": "双绞线"
+  },
+  "Датчик открытия": {
+    "uz": "Ochilish datchigi",
+    "en": "Contact sensor",
+    "tr": "Açılma sensörü",
+    "zh": "门磁传感器"
+  },
+  "Узел крепления подвесного кабеля": {
+    "uz": "Osma kabelni mahkamlash uzeli",
+    "en": "Aerial cable fixing assembly",
+    "tr": "Havai kablo bağlantı aparatı",
+    "zh": "架空光缆固定组件"
+  },
+  "2 × 1 Гбит/с": {
+    "uz": "2 × 1 Gbit/s",
+    "en": "2 × 1 Gbps",
+    "tr": "2 × 1 Gbps",
+    "zh": "2 × 1 Gbps"
+  },
+  "Изолирующий колпачок RJ-45": {
+    "uz": "RJ-45 izolyatsiya qalpoqchasi",
+    "en": "RJ-45 insulating boot",
+    "tr": "RJ-45 yalıtkan kılıf",
+    "zh": "RJ-45 绝缘护套"
+  },
+  "Вентиляторная панель": {
+    "uz": "Ventilyator paneli",
+    "en": "Fan panel",
+    "tr": "Fan paneli",
+    "zh": "风扇单元"
+  },
+  "Распределительная коробка (кросс)": {
+    "uz": "Taqsimlash qutisi (kross)",
+    "en": "Distribution box (cross-connect)",
+    "tr": "Dağıtım kutusu (kross bağlantı)",
+    "zh": "分线盒（配线架）"
+  },
+  "Дюбель-хомут для стяжек": {
+    "uz": "Kabel styajkalari uchun dyubel-xomut",
+    "en": "Wall plug tie mount",
+    "tr": "Kablo bağı için dübelli kelepçe",
+    "zh": "扎带膨胀固定座"
+  },
+  "Инструмент очистки феррул": {
+    "uz": "Ferrulalarni tozalash asbobi",
+    "en": "Ferrule cleaning tool",
+    "tr": "Ferrule temizleme aleti",
+    "zh": "插芯清洁器"
+  },
+  "868 МГц": {
+    "uz": "868 MGts",
+    "en": "868 MHz",
+    "tr": "868 MHz",
+    "zh": "868 MHz"
+  },
+  "Бокс защиты сварного стыка": {
+    "uz": "Payvand ulanishni himoya qilish qutisi",
+    "en": "Splice protection box",
+    "tr": "Ek koruma kutusu",
+    "zh": "熔接保护盒"
+  },
+  "2 × комбо SFP/RJ45 1 Гбит/с": {
+    "uz": "2 × kombo SFP/RJ45 1 Gbit/s",
+    "en": "2 × combo SFP/RJ45 1 Gbps",
+    "tr": "2 × kombo SFP/RJ45 1 Gbps",
+    "zh": "2 × Combo SFP/RJ45 1 Gbps"
+  },
+  "135 Вт": {
+    "uz": "135 W",
+    "en": "135 W",
+    "tr": "135 W",
+    "zh": "135 W"
+  },
+  "Быстрый коннектор FTTH": {
+    "uz": "FTTH tezkor konnektori",
+    "en": "FTTH fast connector",
+    "tr": "FTTH hızlı konektör",
+    "zh": "FTTH 快速连接器"
+  },
+  "2× гигабит, PoE-вход": {
+    "uz": "2× gigabit, PoE-kirish",
+    "en": "2× gigabit, PoE input",
+    "tr": "2× gigabit, PoE girişi",
+    "zh": "2× 千兆，PoE 输入"
+  },
+  "облачное": {
+    "uz": "bulutli",
+    "en": "cloud-based",
+    "tr": "bulut tabanlı",
+    "zh": "云管理"
+  },
+  "Бокс распределительный": {
+    "uz": "Taqsimlash boksi",
+    "en": "Distribution box",
+    "tr": "Dağıtım kutusu",
+    "zh": "分纤盒"
+  },
+  "с уплотнением": {
+    "uz": "zichlagichli",
+    "en": "with seal",
+    "tr": "contalı",
+    "zh": "带密封圈"
+  },
+  "в комплекте": {
+    "uz": "komplektda",
+    "en": "included",
+    "tr": "dahil",
+    "zh": "随附"
+  },
+  "Пульт управления": {
+    "uz": "Boshqaruv pulti",
+    "en": "Control keypad",
+    "tr": "Kumanda paneli",
+    "zh": "控制键盘"
+  },
+  "Рулетка измерительная": {
+    "uz": "Oʻlchov ruletkasi",
+    "en": "Tape measure",
+    "tr": "Şerit metre",
+    "zh": "卷尺"
+  },
+  "Бокс уличный": {
+    "uz": "Koʻcha boksi",
+    "en": "Outdoor box",
+    "tr": "Dış mekân kutusu",
+    "zh": "室外箱"
+  },
+  "Стойка для камеры": {
+    "uz": "Kamera uchun ustun",
+    "en": "Camera stand",
+    "tr": "Kamera direği",
+    "zh": "摄像机立杆"
+  },
+  "Оптический кросс (ODF)": {
+    "uz": "Optik kross (ODF)",
+    "en": "Fiber patch panel (ODF)",
+    "tr": "Fiber patch panel (ODF)",
+    "zh": "光纤配线架（ODF）"
+  },
+  "Насадки для шуруповёрта": {
+    "uz": "Shurupburagich uchun uchliklar",
+    "en": "Screwdriver bits",
+    "tr": "Vidalama uçları",
+    "zh": "电动螺丝刀批头"
+  },
+  "600×800×800 мм": {
+    "uz": "600×800×800 mm",
+    "en": "600×800×800 mm",
+    "tr": "600×800×800 mm",
+    "zh": "600×800×800 mm"
+  },
+  "Выдвижной ящик 19″": {
+    "uz": "Tortma quti 19″",
+    "en": "Drawer 19″",
+    "tr": "Çekmece 19″",
+    "zh": "抽屉 19″"
+  },
+  "415 мм": {
+    "uz": "415 mm",
+    "en": "415 mm",
+    "tr": "415 mm",
+    "zh": "415 mm"
+  },
+  "600×1000×1313 мм": {
+    "uz": "600×1000×1313 mm",
+    "en": "600×1000×1313 mm",
+    "tr": "600×1000×1313 mm",
+    "zh": "600×1000×1313 mm"
+  },
+  "600×1000×1600 мм": {
+    "uz": "600×1000×1600 mm",
+    "en": "600×1000×1600 mm",
+    "tr": "600×1000×1600 mm",
+    "zh": "600×1000×1600 mm"
+  },
+  "600×800×1600 мм": {
+    "uz": "600×800×1600 mm",
+    "en": "600×800×1600 mm",
+    "tr": "600×800×1600 mm",
+    "zh": "600×800×1600 mm"
+  },
+  "600×800 мм": {
+    "uz": "600×800 mm",
+    "en": "600×800 mm",
+    "tr": "600×800 mm",
+    "zh": "600×800 mm"
+  },
+  "ударопрочный пластик": {
+    "uz": "zarbaga chidamli plastik",
+    "en": "impact-resistant plastic",
+    "tr": "darbeye dayanıklı plastik",
+    "zh": "抗冲击塑料"
+  },
+  "600×1000×1093 мм": {
+    "uz": "600×1000×1093 mm",
+    "en": "600×1000×1093 mm",
+    "tr": "600×1000×1093 mm",
+    "zh": "600×1000×1093 mm"
+  },
+  "600×800×1093 мм": {
+    "uz": "600×800×1093 mm",
+    "en": "600×800×1093 mm",
+    "tr": "600×800×1093 mm",
+    "zh": "600×800×1093 mm"
+  },
+  "600×800×1150 мм": {
+    "uz": "600×800×1150 mm",
+    "en": "600×800×1150 mm",
+    "tr": "600×800×1150 mm",
+    "zh": "600×800×1150 mm"
+  },
+  "600×800×1313 мм": {
+    "uz": "600×800×1313 mm",
+    "en": "600×800×1313 mm",
+    "tr": "600×800×1313 mm",
+    "zh": "600×800×1313 mm"
+  },
+  "600×1000×2000 мм": {
+    "uz": "600×1000×2000 mm",
+    "en": "600×1000×2000 mm",
+    "tr": "600×1000×2000 mm",
+    "zh": "600×1000×2000 mm"
+  },
+  "600×1200×2000 мм": {
+    "uz": "600×1200×2000 mm",
+    "en": "600×1200×2000 mm",
+    "tr": "600×1200×2000 mm",
+    "zh": "600×1200×2000 mm"
+  },
+  "DAC-кабель пассивный": {
+    "uz": "Passiv DAC kabel",
+    "en": "Passive DAC cable",
+    "tr": "Pasif DAC kablo",
+    "zh": "无源 DAC 直连线缆"
+  },
+  "основные вендоры": {
+    "uz": "asosiy ishlab chiqaruvchilar",
+    "en": "major vendors",
+    "tr": "başlıca üreticiler",
+    "zh": "主流厂商"
+  },
+  "Клещи натяжные (для СИП/ВОЛС)": {
+    "uz": "Taranglovchi qisqich (SIP/optik kabel uchun)",
+    "en": "Tensioning pliers (for ABC/fiber-optic lines)",
+    "tr": "Germe pensesi (ABC/fiber optik hat için)",
+    "zh": "紧线钳（用于架空绝缘线/光缆）"
+  },
+  "Перфоратор аккумуляторный": {
+    "uz": "Akkumulyatorli perforator",
+    "en": "Cordless rotary hammer",
+    "tr": "Akülü kırıcı delici",
+    "zh": "充电式电锤"
+  },
+  "WDM (одно волокно)": {
+    "uz": "WDM (bitta tola)",
+    "en": "WDM (single fiber)",
+    "tr": "WDM (tek fiber)",
+    "zh": "WDM（单纤）"
+  },
+  "Крепёжный набор": {
+    "uz": "Mahkamlash elementlari toʻplami",
+    "en": "Fastener kit",
+    "tr": "Bağlantı elemanı seti",
+    "zh": "紧固件套装"
+  },
+  "термостат, обогрев, вентиляция": {
+    "uz": "termostat, isitish, ventilyatsiya",
+    "en": "thermostat, heating, ventilation",
+    "tr": "termostat, ısıtma, havalandırma",
+    "zh": "温控器、加热、通风"
+  },
+  "1550/1310 нм": {
+    "uz": "1550/1310 nm",
+    "en": "1550/1310 nm",
+    "tr": "1550/1310 nm",
+    "zh": "1550/1310 nm"
+  },
+  "30 дБ": {
+    "uz": "30 dB",
+    "en": "30 dB",
+    "tr": "30 dB",
+    "zh": "30 dB"
+  },
+  "до 120 км": {
+    "uz": "120 km gacha",
+    "en": "up to 120 km",
+    "tr": "120 km'ye kadar",
+    "zh": "最远 120 km"
+  },
+  "1 кВА": {
+    "uz": "1 kVA",
+    "en": "1 kVA",
+    "tr": "1 kVA",
+    "zh": "1 kVA"
+  },
+  "Без батарей (внешние)": {
+    "uz": "Batareyasiz (tashqi)",
+    "en": "No batteries (external)",
+    "tr": "Akü yok (harici)",
+    "zh": "不含电池（外置）"
+  },
+  "до 1 м": {
+    "uz": "1 m gacha",
+    "en": "up to 1 m",
+    "tr": "1 m'ye kadar",
+    "zh": "最远 1 m"
+  },
+  "Батарейный блок для ИБП": {
+    "uz": "UPS uchun batareya bloki",
+    "en": "UPS battery pack",
+    "tr": "UPS akü paketi",
+    "zh": "UPS 电池组"
+  },
+  "С функцией ИБП": {
+    "uz": "UPS funksiyali",
+    "en": "With UPS function",
+    "tr": "UPS işlevli",
+    "zh": "带 UPS 功能"
+  },
+  "Защитный рукав для кабеля": {
+    "uz": "Kabel uchun himoya gʻilofi",
+    "en": "Cable protection sleeve",
+    "tr": "Kablo koruma kılıfı",
+    "zh": "线缆保护套管"
+  },
+  "Модуль диммера": {
+    "uz": "Dimmer moduli",
+    "en": "Dimmer module",
+    "tr": "Dimmer modülü",
+    "zh": "调光模块"
+  },
+  "Напольный (tower)": {
+    "uz": "Polda turuvchi (tower)",
+    "en": "Floor-standing (tower)",
+    "tr": "Zemin tipi (tower)",
+    "zh": "落地式（塔式）"
+  },
+  "2 кВА": {
+    "uz": "2 kVA",
+    "en": "2 kVA",
+    "tr": "2 kVA",
+    "zh": "2 kVA"
+  },
+  "Вставка под модули Keystone": {
+    "uz": "Keystone modullari uchun qoʻyma",
+    "en": "Insert for Keystone modules",
+    "tr": "Keystone modül adaptörü",
+    "zh": "Keystone 模块嵌件"
+  },
+  "10/100 Мбит/с": {
+    "uz": "10/100 Mbit/s",
+    "en": "10/100 Mbps",
+    "tr": "10/100 Mbps",
+    "zh": "10/100 Mbps"
+  },
+  "Полка консольная": {
+    "uz": "Konsol javon",
+    "en": "Cantilever shelf",
+    "tr": "Konsol raf",
+    "zh": "悬臂托盘"
+  },
+  "450 мм": {
+    "uz": "450 mm",
+    "en": "450 mm",
+    "tr": "450 mm",
+    "zh": "450 mm"
+  },
+  "Аккумулятор": {
+    "uz": "Akkumulyator",
+    "en": "Battery",
+    "tr": "Akü",
+    "zh": "蓄电池"
+  },
+  "Оптический приёмник КТВ": {
+    "uz": "CATV optik qabul qilgichi",
+    "en": "CATV optical receiver",
+    "tr": "CATV optik alıcı",
+    "zh": "CATV 光接收机"
+  },
+  "Оптический модуль XFP": {
+    "uz": "XFP optik moduli",
+    "en": "XFP optical module",
+    "tr": "XFP optik modül",
+    "zh": "XFP 光模块"
+  },
+  "SSD-накопитель": {
+    "uz": "SSD-disk",
+    "en": "SSD",
+    "tr": "SSD disk",
+    "zh": "SSD 固态硬盘"
+  },
+  "HDMI-удлинитель (по витой паре)": {
+    "uz": "HDMI uzaytirgich (oʻralgan juftlik orqali)",
+    "en": "HDMI extender (over twisted pair)",
+    "tr": "HDMI uzatıcı (bükümlü çift üzerinden)",
+    "zh": "HDMI 延长器（双绞线传输）"
+  },
+  "25 дБи": {
+    "uz": "25 dBi",
+    "en": "25 dBi",
+    "tr": "25 dBi",
+    "zh": "25 dBi"
+  },
+  "Встраиваемая (в стену)": {
+    "uz": "Oʻrnatma (devorga)",
+    "en": "Flush-mounted (in-wall)",
+    "tr": "Sıva altı (duvara)",
+    "zh": "嵌入式（入墙）"
+  },
+  "8 ТБ": {
+    "uz": "8 TB",
+    "en": "8 TB",
+    "tr": "8 TB",
+    "zh": "8 TB"
+  },
+  "ИК-пульт (передатчик)": {
+    "uz": "IQ pult (uzatgich)",
+    "en": "IR remote (transmitter)",
+    "tr": "IR kumanda (verici)",
+    "zh": "红外遥控器（发射器）"
+  },
+  "Динамик настенный": {
+    "uz": "Devorga oʻrnatiladigan dinamik",
+    "en": "Wall-mounted speaker",
+    "tr": "Duvar tipi hoparlör",
+    "zh": "壁挂扬声器"
+  },
+  "40 Вт": {
+    "uz": "40 W",
+    "en": "40 W",
+    "tr": "40 W",
+    "zh": "40 W"
+  },
+  "24 Вт": {
+    "uz": "24 W",
+    "en": "24 W",
+    "tr": "24 W",
+    "zh": "24 W"
+  },
+  "1 А": {
+    "uz": "1 A",
+    "en": "1 A",
+    "tr": "1 A",
+    "zh": "1 A"
+  },
+  "24 В": {
+    "uz": "24 V",
+    "en": "24 V",
+    "tr": "24 V",
+    "zh": "24 V"
+  },
+  "2 × 600 Вт": {
+    "uz": "2 × 600 W",
+    "en": "2 × 600 W",
+    "tr": "2 × 600 W",
+    "zh": "2 × 600 W"
+  },
+  "RAID-контроллер": {
+    "uz": "RAID-kontroller",
+    "en": "RAID controller",
+    "tr": "RAID denetleyici",
+    "zh": "RAID 控制器"
+  },
+  "Оптическая муфта тупиковая": {
+    "uz": "Tupik optik mufta",
+    "en": "Dome fiber splice closure",
+    "tr": "Kubbe tipi fiber ek kutusu",
+    "zh": "帽式光缆接头盒"
+  },
+  "Считыватель карт": {
+    "uz": "Karta oʻquvchi",
+    "en": "Card reader",
+    "tr": "Kart okuyucu",
+    "zh": "读卡器"
+  },
+  "Сетевой видеодекодер": {
+    "uz": "Tarmoq videodekoderi",
+    "en": "Network video decoder",
+    "tr": "Ağ video kod çözücü",
+    "zh": "网络视频解码器"
+  },
+  "Программное обеспечение (Орион Про)": {
+    "uz": "Dasturiy taʼminot (Orion Pro)",
+    "en": "Software (Orion Pro)",
+    "tr": "Yazılım (Orion Pro)",
+    "zh": "软件（Orion Pro）"
+  },
+  "PoE 4 порта": {
+    "uz": "PoE 4 port",
+    "en": "PoE 4 ports",
+    "tr": "PoE 4 port",
+    "zh": "PoE 4 口"
+  },
+  "2 замка": {
+    "uz": "2 ta qulf",
+    "en": "2 locks",
+    "tr": "2 kilit",
+    "zh": "2 把锁"
+  },
+  "570×450×270 мм": {
+    "uz": "570×450×270 mm",
+    "en": "570×450×270 mm",
+    "tr": "570×450×270 mm",
+    "zh": "570×450×270 mm"
+  },
+  "Кросс настенный": {
+    "uz": "Devorga oʻrnatiladigan kross",
+    "en": "Wall-mount cross-connect box",
+    "tr": "Duvar tipi dağıtım kutusu",
+    "zh": "壁挂式配线箱"
+  },
+  "По ДПЛС": {
+    "uz": "DPLS liniyasidan",
+    "en": "From the DPLS line",
+    "tr": "DPLS hattından",
+    "zh": "由 DPLS 总线供电"
+  },
+  "ИСО «Орион» (ДПЛС С2000-КДЛ)": {
+    "uz": "«Orion» ISO (DPLS S2000-KDL)",
+    "en": "«Orion» system (DPLS S2000-KDL)",
+    "tr": "«Orion» sistemi (DPLS S2000-KDL)",
+    "zh": "«Orion» 系统（DPLS S2000-KDL）"
+  },
+  "600×1000×1150 мм": {
+    "uz": "600×1000×1150 mm",
+    "en": "600×1000×1150 mm",
+    "tr": "600×1000×1150 mm",
+    "zh": "600×1000×1150 mm"
+  },
+  "600×800×2000 мм": {
+    "uz": "600×800×2000 mm",
+    "en": "600×800×2000 mm",
+    "tr": "600×800×2000 mm",
+    "zh": "600×800×2000 mm"
+  },
+  "Умный диммер": {
+    "uz": "Aqlli dimmer",
+    "en": "Smart dimmer",
+    "tr": "Akıllı dimmer",
+    "zh": "智能调光器"
+  },
+  "1 ТБ": {
+    "uz": "1 TB",
+    "en": "1 TB",
+    "tr": "1 TB",
+    "zh": "1 TB"
+  },
+  "2,8 мм (фиксированный)": {
+    "uz": "2,8 mm (oʻzgarmas)",
+    "en": "2.8 mm (fixed)",
+    "tr": "2,8 mm (sabit)",
+    "zh": "2.8 mm（定焦）"
+  },
+  "150 м": {
+    "uz": "150 m",
+    "en": "150 m",
+    "tr": "150 m",
+    "zh": "150 m"
+  },
+  "Инструмент для заделки (панч-даун)": {
+    "uz": "Kabelni ulash asbobi (punch-down)",
+    "en": "Termination tool (punch-down)",
+    "tr": "Sonlandırma aleti (punch-down)",
+    "zh": "端接工具（打线刀）"
+  },
+  "до 20 м": {
+    "uz": "20 m gacha",
+    "en": "up to 20 m",
+    "tr": "20 m'ye kadar",
+    "zh": "最远 20 m"
+  },
+  "до 2 м": {
+    "uz": "2 m gacha",
+    "en": "up to 2 m",
+    "tr": "2 m'ye kadar",
+    "zh": "最远 2 m"
+  },
+  "до 3 м": {
+    "uz": "3 m gacha",
+    "en": "up to 3 m",
+    "tr": "3 m'ye kadar",
+    "zh": "最远 3 m"
+  },
+  "до 32 кан. 1080p": {
+    "uz": "32 kanalgacha 1080p",
+    "en": "up to 32 ch. 1080p",
+    "tr": "32 kanala kadar 1080p",
+    "zh": "最多 32 路 1080p"
+  },
+  "Зажим анкерный клиновой": {
+    "uz": "Ponasimon ankerli qisqich",
+    "en": "Wedge anchor clamp",
+    "tr": "Kama tipi ankraj kelepçesi",
+    "zh": "楔形耐张线夹"
+  },
+  "Набор инструментов для СКС": {
+    "uz": "Tuzilmali kabel tizimi uchun asboblar toʻplami",
+    "en": "Structured cabling tool kit",
+    "tr": "Yapısal kablolama alet seti",
+    "zh": "综合布线工具套装"
+  },
+  "до 2 км": {
+    "uz": "2 km gacha",
+    "en": "up to 2 km",
+    "tr": "2 km'ye kadar",
+    "zh": "最远 2 km"
+  },
+  "21 дБ": {
+    "uz": "21 dB",
+    "en": "21 dB",
+    "tr": "21 dB",
+    "zh": "21 dB"
+  },
+  "Место под аккумулятор 12 В 7 А·ч": {
+    "uz": "12 V 7 Ah akkumulyator uchun joy",
+    "en": "Space for 12 V 7 Ah battery",
+    "tr": "12 V 7 Ah akü yeri",
+    "zh": "可容纳 12 V 7 Ah 蓄电池"
+  },
+  "Блок бесперебойного питания": {
+    "uz": "Uzluksiz quvvat bloki",
+    "en": "Uninterruptible power supply unit",
+    "tr": "Kesintisiz güç kaynağı ünitesi",
+    "zh": "不间断电源"
+  },
+  "КЗ, перегрузка, переполюсовка": {
+    "uz": "Qisqa tutashuv, oʻta yuklanish, qutblarning teskari ulanishi",
+    "en": "Short circuit, overload, reverse polarity",
+    "tr": "Kısa devre, aşırı yük, ters kutup",
+    "zh": "短路、过载、反接"
+  },
+  "Металлический с индикацией": {
+    "uz": "Metall, indikatsiyali",
+    "en": "Metal, with indicators",
+    "tr": "Metal, göstergeli",
+    "zh": "金属，带指示灯"
+  },
+  "65 Вт": {
+    "uz": "65 W",
+    "en": "65 W",
+    "tr": "65 W",
+    "zh": "65 W"
+  },
+  "«Классик»": {
+    "uz": "«Klassik»",
+    "en": "«Classic»",
+    "tr": "«Klasik»",
+    "zh": "«经典»"
+  },
+  "51 мм": {
+    "uz": "51 mm",
+    "en": "51 mm",
+    "tr": "51 mm",
+    "zh": "51 mm"
+  },
+  "1,0 МПа": {
+    "uz": "1,0 MPa",
+    "en": "1.0 MPa",
+    "tr": "1,0 MPa",
+    "zh": "1.0 MPa"
+  },
+  "66 мм": {
+    "uz": "66 mm",
+    "en": "66 mm",
+    "tr": "66 mm",
+    "zh": "66 mm"
+  },
+  "Световой указатель «Выход»": {
+    "uz": "«Chiqish» yorugʻlik koʻrsatkichi",
+    "en": "Illuminated «Exit» sign",
+    "tr": "Işıklı «Çıkış» levhası",
+    "zh": "«出口»灯光指示牌"
+  },
+  "24 дБ": {
+    "uz": "24 dB",
+    "en": "24 dB",
+    "tr": "24 dB",
+    "zh": "24 dB"
+  },
+  "Радиомост": {
+    "uz": "Radiokoʻprik",
+    "en": "Wireless bridge",
+    "tr": "Kablosuz köprü",
+    "zh": "无线网桥"
+  },
+  "Вентиль пожарный в комплекте": {
+    "uz": "Yongʻin ventili toʻplami",
+    "en": "Fire valve kit",
+    "tr": "Yangın vanası seti",
+    "zh": "消防阀门套件"
+  },
+  "Вентиль (клапан) пожарный": {
+    "uz": "Yongʻin ventili (klapan)",
+    "en": "Fire valve (landing valve)",
+    "tr": "Yangın vanası (hidrant vanası)",
+    "zh": "消防阀（消火栓阀）"
+  },
+  "Латунь": {
+    "uz": "Latun",
+    "en": "Brass",
+    "tr": "Pirinç",
+    "zh": "黄铜"
+  },
+  "Угловое": {
+    "uz": "Burchakli",
+    "en": "Angled",
+    "tr": "Açılı",
+    "zh": "角式"
+  },
+  "Хомут нейлоновый": {
+    "uz": "Neylon xomut",
+    "en": "Nylon cable tie",
+    "tr": "Naylon kablo bağı",
+    "zh": "尼龙扎带"
+  },
+  "буфер 250/900 мкм": {
+    "uz": "bufer 250/900 µm",
+    "en": "buffer 250/900 µm",
+    "tr": "tampon 250/900 µm",
+    "zh": "缓冲层 250/900 µm"
+  },
+  "сенсорный, карта событий": {
+    "uz": "sensorli, hodisalar xaritasi",
+    "en": "touchscreen, event map",
+    "tr": "dokunmatik, olay haritası",
+    "zh": "触摸屏，事件地图"
+  },
+  "Патч-корд UTP": {
+    "uz": "UTP patch-kord",
+    "en": "UTP patch cord",
+    "tr": "UTP patch kablo",
+    "zh": "UTP 跳线"
+  },
+  "литые": {
+    "uz": "quyma",
+    "en": "molded",
+    "tr": "kalıplı",
+    "zh": "一体成型"
+  },
+  "cat.6 (250 МГц)": {
+    "uz": "cat.6 (250 MGts)",
+    "en": "cat.6 (250 MHz)",
+    "tr": "cat.6 (250 MHz)",
+    "zh": "cat.6（250 MHz）"
+  },
+  "многожильная медь": {
+    "uz": "koʻp tolali mis",
+    "en": "stranded copper",
+    "tr": "çok telli bakır",
+    "zh": "多股铜"
+  },
+  "Кронштейн угловой": {
+    "uz": "Burchak kronshteyni",
+    "en": "Corner bracket",
+    "tr": "Köşe braketi",
+    "zh": "转角支架"
+  },
+  "ABS-кассета, цветные пигтейлы": {
+    "uz": "ABS kasseta, rangli pigteyllar",
+    "en": "ABS cassette, color-coded pigtails",
+    "tr": "ABS kaset, renkli pigtailler",
+    "zh": "ABS 盒式，彩色尾纤"
+  },
+  "≈20.5 дБ": {
+    "uz": "≈20.5 dB",
+    "en": "≈20.5 dB",
+    "tr": "≈20.5 dB",
+    "zh": "≈20.5 dB"
+  },
+  "Сетевой фильтр (пилот)": {
+    "uz": "Tarmoq filtri (uzaytirgich)",
+    "en": "Surge protector (power strip)",
+    "tr": "Akım korumalı priz (grup priz)",
+    "zh": "防浪涌插座（排插）"
+  },
+  "6 кВА": {
+    "uz": "6 kVA",
+    "en": "6 kVA",
+    "tr": "6 kVA",
+    "zh": "6 kVA"
+  },
+  "Стрела шлагбаума": {
+    "uz": "Shlagbaum strelasi",
+    "en": "Barrier boom",
+    "tr": "Bariyer kolu",
+    "zh": "道闸杆"
+  },
+  "Датчик газа": {
+    "uz": "Gaz datchigi",
+    "en": "Gas detector",
+    "tr": "Gaz dedektörü",
+    "zh": "燃气探测器"
+  },
+  "Шлюз умного дома": {
+    "uz": "Aqlli uy shlyuzi",
+    "en": "Smart home gateway",
+    "tr": "Akıllı ev ağ geçidi",
+    "zh": "智能家居网关"
+  },
+  "Оптическая муфта": {
+    "uz": "Optik mufta",
+    "en": "Fiber splice closure",
+    "tr": "Fiber ek kutusu",
+    "zh": "光缆接头盒"
+  },
+  "Процессор (серверный)": {
+    "uz": "Protsessor (server uchun)",
+    "en": "Processor (server)",
+    "tr": "İşlemci (sunucu)",
+    "zh": "处理器（服务器）"
+  },
+  "Монтажный аксессуар (серверный)": {
+    "uz": "Montaj aksessuari (server uchun)",
+    "en": "Mounting accessory (server)",
+    "tr": "Montaj aksesuarı (sunucu)",
+    "zh": "安装配件（服务器）"
+  },
+  "32 ГБ": {
+    "uz": "32 GB",
+    "en": "32 GB",
+    "tr": "32 GB",
+    "zh": "32 GB"
+  },
+  "Терминал доступа с распознаванием лиц (комплект)": {
+    "uz": "Yuzni tanish kirish terminali (toʻplam)",
+    "en": "Face recognition access terminal (kit)",
+    "tr": "Yüz tanımalı geçiş terminali (set)",
+    "zh": "人脸识别门禁终端（套装）"
+  },
+  "Шлагбаум автоматический": {
+    "uz": "Avtomatik shlagbaum",
+    "en": "Automatic barrier",
+    "tr": "Otomatik bariyer",
+    "zh": "自动道闸"
+  },
+  "Модуль переключения (реле)": {
+    "uz": "Kommutatsiya moduli (rele)",
+    "en": "Switching module (relay)",
+    "tr": "Anahtarlama modülü (röle)",
+    "zh": "切换模块（继电器）"
+  },
+  "Кросс-панель тип 110": {
+    "uz": "110 turidagi kross-panel",
+    "en": "Type 110 cross-connect panel",
+    "tr": "110 tipi kros panel",
+    "zh": "110 型配线架"
+  },
+  "50 пар": {
+    "uz": "50 juft",
+    "en": "50 pairs",
+    "tr": "50 çift",
+    "zh": "50 对"
+  },
+  "Датчик движения": {
+    "uz": "Harakat datchigi",
+    "en": "Motion sensor",
+    "tr": "Hareket sensörü",
+    "zh": "移动探测器"
+  },
+  "Гибридный видеорегистратор (XVR)": {
+    "uz": "Gibrid videoregistrator (XVR)",
+    "en": "Hybrid video recorder (XVR)",
+    "tr": "Hibrit kayıt cihazı (XVR)",
+    "zh": "混合型硬盘录像机（XVR）"
+  },
+  "18 дБ": {
+    "uz": "18 dB",
+    "en": "18 dB",
+    "tr": "18 dB",
+    "zh": "18 dB"
+  },
+  "Кронштейн": {
+    "uz": "Kronshteyn",
+    "en": "Bracket",
+    "tr": "Braket",
+    "zh": "支架"
+  },
+  "Монтажный модуль для терминала": {
+    "uz": "Terminal uchun montaj moduli",
+    "en": "Terminal mounting module",
+    "tr": "Terminal montaj modülü",
+    "zh": "终端安装模块"
+  },
+  "100 пар": {
+    "uz": "100 juft",
+    "en": "100 pairs",
+    "tr": "100 çift",
+    "zh": "100 对"
+  },
+  "Установочная коробка (подрозетник)": {
+    "uz": "Oʻrnatish qutisi (rozetka osti)",
+    "en": "Mounting box (back box)",
+    "tr": "Montaj kutusu (sıva altı buat)",
+    "zh": "安装盒（底盒）"
+  },
+  "Ударный инструмент (кросс 110)": {
+    "uz": "Zarbli asbob (110 kross)",
+    "en": "Impact tool (110 cross-connect)",
+    "tr": "Darbeli alet (110 kros)",
+    "zh": "冲击式打线刀（110 配线架）"
+  },
+  "570×450×370 мм": {
+    "uz": "570×450×370 mm",
+    "en": "570×450×370 mm",
+    "tr": "570×450×370 mm",
+    "zh": "570×450×370 mm"
+  },
+  "Секторная антенна": {
+    "uz": "Sektorli antenna",
+    "en": "Sector antenna",
+    "tr": "Sektör anten",
+    "zh": "扇区天线"
+  },
+  "Гильза КДЗС (защита сварного стыка)": {
+    "uz": "KDZS gilzasi (payvand choki himoyasi)",
+    "en": "KDZS sleeve (fusion splice protection)",
+    "tr": "KDZS kılıfı (füzyon ek koruması)",
+    "zh": "KDZS 热缩管（熔接点保护）"
+  },
+  "60 мм": {
+    "uz": "60 mm",
+    "en": "60 mm",
+    "tr": "60 mm",
+    "zh": "60 mm"
+  },
+  "8 мм": {
+    "uz": "8 mm",
+    "en": "8 mm",
+    "tr": "8 mm",
+    "zh": "8 mm"
+  },
+  "Разъём питания (DC), винтовой": {
+    "uz": "Quvvat ulagichi (DC), vintli",
+    "en": "Power connector (DC), screw terminal",
+    "tr": "Güç konnektörü (DC), vidalı",
+    "zh": "电源接头（DC），螺丝接线式"
+  },
+  "Контрольная панель сигнализации (беспроводная)": {
+    "uz": "Signalizatsiya boshqaruv paneli (simsiz)",
+    "en": "Alarm control panel (wireless)",
+    "tr": "Alarm kontrol paneli (kablosuz)",
+    "zh": "报警控制主机（无线）"
+  },
+  "Сетевой адаптер": {
+    "uz": "Tarmoq adapteri",
+    "en": "Network adapter",
+    "tr": "Ağ adaptörü",
+    "zh": "网络适配器"
+  },
+  "Извещатель пожарный ручной (ИПР)": {
+    "uz": "Qoʻlda yongʻin izvestiteli (IPR)",
+    "en": "Manual call point (MCP)",
+    "tr": "Yangın butonu (manuel)",
+    "zh": "手动火灾报警按钮（手报）"
+  },
+  "Бокс для аккумулятора": {
+    "uz": "Akkumulyator qutisi",
+    "en": "Battery box",
+    "tr": "Akü kutusu",
+    "zh": "电池箱"
+  },
+  "многомодовое OM3/OM4": {
+    "uz": "koʻp modli OM3/OM4",
+    "en": "multimode OM3/OM4",
+    "tr": "çok modlu OM3/OM4",
+    "zh": "多模 OM3/OM4"
+  },
+  "80 Вт": {
+    "uz": "80 W",
+    "en": "80 W",
+    "tr": "80 W",
+    "zh": "80 W"
+  },
+  "Потолочная точка доступа": {
+    "uz": "Shiftga oʻrnatiladigan kirish nuqtasi",
+    "en": "Ceiling access point",
+    "tr": "Tavan tipi erişim noktası",
+    "zh": "吸顶式 AP"
+  },
+  "до 256 (рекомендовано 110)": {
+    "uz": "256 gacha (tavsiya etiladi 110)",
+    "en": "up to 256 (110 recommended)",
+    "tr": "256'ya kadar (önerilen 110)",
+    "zh": "最多 256 个（建议 110 个）"
+  },
+  "АБС-пластик": {
+    "uz": "ABS plastik",
+    "en": "ABS plastic",
+    "tr": "ABS plastik",
+    "zh": "ABS 塑料"
+  },
+  "Питание камер видеонаблюдения": {
+    "uz": "Videokuzatuv kameralarini quvvat bilan taʼminlash",
+    "en": "Powering CCTV cameras",
+    "tr": "Güvenlik kameralarının beslenmesi",
+    "zh": "为监控摄像机供电"
+  },
+  "125 кГц": {
+    "uz": "125 kGts",
+    "en": "125 kHz",
+    "tr": "125 kHz",
+    "zh": "125 kHz"
+  },
+  "плотно прилегающая": {
+    "uz": "zich yopiladigan",
+    "en": "tight-fitting",
+    "tr": "sıkı oturan",
+    "zh": "紧密贴合"
+  },
+  "стена / опора": {
+    "uz": "devor / ustun",
+    "en": "wall / pole",
+    "tr": "duvar / direk",
+    "zh": "墙面 / 立杆"
+  },
+  "Бесконтактная кнопка выхода": {
+    "uz": "Kontaktsiz chiqish tugmasi",
+    "en": "Touchless exit button",
+    "tr": "Temassız çıkış butonu",
+    "zh": "免接触出门按钮"
+  },
+  "Сухие контакты NO/NC": {
+    "uz": "Quruq kontaktlar NO/NC",
+    "en": "Dry contacts NO/NC",
+    "tr": "Kuru kontaklar NO/NC",
+    "zh": "干接点 NO/NC"
+  },
+  "86×86×25 мм": {
+    "uz": "86×86×25 mm",
+    "en": "86×86×25 mm",
+    "tr": "86×86×25 mm",
+    "zh": "86×86×25 mm"
+  },
+  "Поднесение руки (ИК-датчик)": {
+    "uz": "Qoʻlni yaqinlashtirish (IQ datchik)",
+    "en": "Hand wave (IR sensor)",
+    "tr": "El yaklaştırma (IR sensör)",
+    "zh": "手靠近感应（红外传感器）"
+  },
+  "Базовая": {
+    "uz": "Bazaviy",
+    "en": "Basic",
+    "tr": "Temel",
+    "zh": "基础版"
+  },
+  "Панель 19″ с DIN-рейкой": {
+    "uz": "DIN-reykali 19″ panel",
+    "en": "19″ panel with DIN rail",
+    "tr": "DIN raylı 19″ panel",
+    "zh": "19″ 面板，带 DIN 导轨"
+  },
+  "15 А": {
+    "uz": "15 A",
+    "en": "15 A",
+    "tr": "15 A",
+    "zh": "15 A"
+  },
+  "Комплект заземления": {
+    "uz": "Yerga ulash toʻplami",
+    "en": "Grounding kit",
+    "tr": "Topraklama seti",
+    "zh": "接地套件"
+  },
+  "570×450×490 мм": {
+    "uz": "570×450×490 mm",
+    "en": "570×450×490 mm",
+    "tr": "570×450×490 mm",
+    "zh": "570×450×490 mm"
+  },
+  "570×600×490 мм": {
+    "uz": "570×600×490 mm",
+    "en": "570×600×490 mm",
+    "tr": "570×600×490 mm",
+    "zh": "570×600×490 mm"
+  },
+  "570×450×625 мм": {
+    "uz": "570×450×625 mm",
+    "en": "570×450×625 mm",
+    "tr": "570×450×625 mm",
+    "zh": "570×450×625 mm"
+  },
+  "570×600×625 мм": {
+    "uz": "570×600×625 mm",
+    "en": "570×600×625 mm",
+    "tr": "570×600×625 mm",
+    "zh": "570×600×625 mm"
+  },
+  "600×1000 мм": {
+    "uz": "600×1000 mm",
+    "en": "600×1000 mm",
+    "tr": "600×1000 mm",
+    "zh": "600×1000 mm"
+  },
+  "600×1200 мм": {
+    "uz": "600×1200 mm",
+    "en": "600×1200 mm",
+    "tr": "600×1200 mm",
+    "zh": "600×1200 mm"
+  },
+  "570×600×1070 мм": {
+    "uz": "570×600×1070 mm",
+    "en": "570×600×1070 mm",
+    "tr": "570×600×1070 mm",
+    "zh": "570×600×1070 mm"
+  },
+  "Стриппер универсальный кассетный": {
+    "uz": "Universal kassetali stripper",
+    "en": "Universal cassette stripper",
+    "tr": "Üniversal kasetli kablo sıyırıcı",
+    "zh": "通用刀盒式剥线器"
+  },
+  "RG59/RG6/RG7/RG11, UTP/STP, плоский": {
+    "uz": "RG59/RG6/RG7/RG11, UTP/STP, yassi",
+    "en": "RG59/RG6/RG7/RG11, UTP/STP, flat",
+    "tr": "RG59/RG6/RG7/RG11, UTP/STP, yassı",
+    "zh": "RG59/RG6/RG7/RG11，UTP/STP，扁平线"
+  },
+  "сменные кассетные": {
+    "uz": "almashtiriladigan kassetali",
+    "en": "replaceable cassette",
+    "tr": "değiştirilebilir kaset",
+    "zh": "可更换刀盒"
+  },
+  "600×600×800 мм": {
+    "uz": "600×600×800 mm",
+    "en": "600×600×800 mm",
+    "tr": "600×600×800 mm",
+    "zh": "600×600×800 mm"
+  },
+  "Блок освещения 19″": {
+    "uz": "19″ yoritish bloki",
+    "en": "19″ lighting unit",
+    "tr": "19″ aydınlatma ünitesi",
+    "zh": "19″ 照明单元"
+  },
+  "Огнетушитель углекислотный": {
+    "uz": "Karbonat angidridli oʻt oʻchirgich",
+    "en": "CO2 fire extinguisher",
+    "tr": "CO2'li yangın söndürücü",
+    "zh": "二氧化碳灭火器"
+  },
+  "CO2, 5 кг": {
+    "uz": "CO2, 5 kg",
+    "en": "CO2, 5 kg",
+    "tr": "CO2, 5 kg",
+    "zh": "CO2，5 kg"
+  },
+  "Не оставляет следов тушения": {
+    "uz": "Oʻchirishdan keyin iz qoldirmaydi",
+    "en": "Leaves no extinguishing residue",
+    "tr": "Söndürme sonrası kalıntı bırakmaz",
+    "zh": "灭火后无残留"
+  },
+  "B, C, E (электроустановки)": {
+    "uz": "B, C, E (elektr qurilmalari)",
+    "en": "B, C, E (electrical equipment)",
+    "tr": "B, C, E (elektrik tesisatları)",
+    "zh": "B、C、E（电气设备）"
+  },
+  "600×600×1093 мм": {
+    "uz": "600×600×1093 mm",
+    "en": "600×600×1093 mm",
+    "tr": "600×600×1093 mm",
+    "zh": "600×600×1093 mm"
+  },
+  "600×600×2000 мм": {
+    "uz": "600×600×2000 mm",
+    "en": "600×600×2000 mm",
+    "tr": "600×600×2000 mm",
+    "zh": "600×600×2000 mm"
+  },
+  "800×800×2000 мм": {
+    "uz": "800×800×2000 mm",
+    "en": "800×800×2000 mm",
+    "tr": "800×800×2000 mm",
+    "zh": "800×800×2000 mm"
+  },
+  "Сплайс-кассета (лоток)": {
+    "uz": "Splays-kasseta (lotok)",
+    "en": "Splice cassette (tray)",
+    "tr": "Ek kaseti (tepsi)",
+    "zh": "熔接盘（托盘）"
+  },
+  "2 А": {
+    "uz": "2 A",
+    "en": "2 A",
+    "tr": "2 A",
+    "zh": "2 A"
+  },
+  "1,5-5,0/5,5 мм": {
+    "uz": "1,5-5,0/5,5 mm",
+    "en": "1.5-5.0/5.5 mm",
+    "tr": "1,5-5,0/5,5 mm",
+    "zh": "1.5-5.0/5.5 mm"
+  },
+  "Механический соединитель волокон (FTTH)": {
+    "uz": "Tolalar uchun mexanik ulagich (FTTH)",
+    "en": "Mechanical fiber splice (FTTH)",
+    "tr": "Mekanik fiber ek elemanı (FTTH)",
+    "zh": "光纤机械接续子（FTTH）"
+  },
+  "Извещатель магнитоконтактный (СМК)": {
+    "uz": "Magnit-kontaktli izvestitel (SMK)",
+    "en": "Magnetic contact detector (door contact)",
+    "tr": "Manyetik kontak dedektörü (kapı kontağı)",
+    "zh": "门磁探测器（磁控开关）"
+  },
+  "TX 1330 нм / RX 1270 нм": {
+    "uz": "TX 1330 nm / RX 1270 nm",
+    "en": "TX 1330 nm / RX 1270 nm",
+    "tr": "TX 1330 nm / RX 1270 nm",
+    "zh": "TX 1330 nm / RX 1270 nm"
+  },
+  "TX 1270 нм / RX 1330 нм": {
+    "uz": "TX 1270 nm / RX 1330 nm",
+    "en": "TX 1270 nm / RX 1330 nm",
+    "tr": "TX 1270 nm / RX 1330 nm",
+    "zh": "TX 1270 nm / RX 1330 nm"
+  },
+  "Вилка электрическая": {
+    "uz": "Elektr vilkasi",
+    "en": "Power plug",
+    "tr": "Elektrik fişi",
+    "zh": "电源插头"
+  },
+  "Преобразователь интерфейсов USB-RS485": {
+    "uz": "USB-RS485 interfeys oʻzgartirgichi",
+    "en": "USB-RS485 interface converter",
+    "tr": "USB-RS485 arayüz dönüştürücü",
+    "zh": "USB-RS485 接口转换器"
+  },
+  "Промышленный (DIN-рейка)": {
+    "uz": "Sanoat (DIN-reyka)",
+    "en": "Industrial (DIN rail)",
+    "tr": "Endüstriyel (DIN ray)",
+    "zh": "工业级（DIN 导轨）"
+  },
+  "1309 нм": {
+    "uz": "1309 nm",
+    "en": "1309 nm",
+    "tr": "1309 nm",
+    "zh": "1309 nm"
+  },
+  "1311 нм": {
+    "uz": "1311 nm",
+    "en": "1311 nm",
+    "tr": "1311 nm",
+    "zh": "1311 nm"
+  },
+  "7.5 дБ": {
+    "uz": "7.5 dB",
+    "en": "7.5 dB",
+    "tr": "7.5 dB",
+    "zh": "7.5 dB"
+  },
+  "400×400×250 мм": {
+    "uz": "400×400×250 mm",
+    "en": "400×400×250 mm",
+    "tr": "400×400×250 mm",
+    "zh": "400×400×250 mm"
+  },
+  "500×500×250 мм": {
+    "uz": "500×500×250 mm",
+    "en": "500×500×250 mm",
+    "tr": "500×500×250 mm",
+    "zh": "500×500×250 mm"
+  },
+  "Счётчик электроэнергии (умный)": {
+    "uz": "Elektr energiyasi hisoblagichi (aqlli)",
+    "en": "Energy meter (smart)",
+    "tr": "Elektrik sayacı (akıllı)",
+    "zh": "电能表（智能）"
+  },
+  "3 ТБ": {
+    "uz": "3 TB",
+    "en": "3 TB",
+    "tr": "3 TB",
+    "zh": "3 TB"
+  },
+  "Защитный колпачок": {
+    "uz": "Himoya qalpoqchasi",
+    "en": "Protective cap",
+    "tr": "Koruyucu kapak",
+    "zh": "保护帽"
+  },
+  "Модуль управления шторами": {
+    "uz": "Pardalarni boshqarish moduli",
+    "en": "Curtain control module",
+    "tr": "Perde kontrol modülü",
+    "zh": "窗帘控制模块"
+  },
+  "30 кВА": {
+    "uz": "30 kVA",
+    "en": "30 kVA",
+    "tr": "30 kVA",
+    "zh": "30 kVA"
+  },
+  "Корпус розетки под Keystone": {
+    "uz": "Keystone uchun rozetka korpusi",
+    "en": "Keystone outlet housing",
+    "tr": "Keystone priz kutusu",
+    "zh": "Keystone 插座盒"
+  },
+  "6 мм": {
+    "uz": "6 mm",
+    "en": "6 mm",
+    "tr": "6 mm",
+    "zh": "6 mm"
+  },
+  "120 мм": {
+    "uz": "120 mm",
+    "en": "120 mm",
+    "tr": "120 mm",
+    "zh": "120 mm"
+  },
+  "1590 нм": {
+    "uz": "1590 nm",
+    "en": "1590 nm",
+    "tr": "1590 nm",
+    "zh": "1590 nm"
+  },
+  "Аккумулятор для сварочного аппарата": {
+    "uz": "Payvandlash apparati uchun akkumulyator",
+    "en": "Fusion splicer battery",
+    "tr": "Füzyon ek makinesi aküsü",
+    "zh": "熔接机电池"
+  },
+  "05 дБ": {
+    "uz": "05 dB",
+    "en": "05 dB",
+    "tr": "05 dB",
+    "zh": "05 dB"
+  },
+  "Щёточный ввод": {
+    "uz": "Choʻtkali kirish",
+    "en": "Brush entry",
+    "tr": "Fırçalı kablo girişi",
+    "zh": "毛刷进线口"
+  },
+  "32/30 дБ": {
+    "uz": "32/30 dB",
+    "en": "32/30 dB",
+    "tr": "32/30 dB",
+    "zh": "32/30 dB"
+  },
+  "Источник оптического излучения": {
+    "uz": "Optik nurlanish manbai",
+    "en": "Optical light source",
+    "tr": "Optik ışık kaynağı",
+    "zh": "光源"
+  },
+  "6 ТБ": {
+    "uz": "6 TB",
+    "en": "6 TB",
+    "tr": "6 TB",
+    "zh": "6 TB"
+  },
+  "24/22 дБ": {
+    "uz": "24/22 dB",
+    "en": "24/22 dB",
+    "tr": "24/22 dB",
+    "zh": "24/22 dB"
+  },
+  "Маркеры для кабеля": {
+    "uz": "Kabel markerlari",
+    "en": "Cable markers",
+    "tr": "Kablo işaretleyicileri",
+    "zh": "线缆标识"
+  },
+  "Медиаконвертер (комплект)": {
+    "uz": "Media konverter (toʻplam)",
+    "en": "Media converter (kit)",
+    "tr": "Medya dönüştürücü (set)",
+    "zh": "光纤收发器（套装）"
+  },
+  "1390 нм": {
+    "uz": "1390 nm",
+    "en": "1390 nm",
+    "tr": "1390 nm",
+    "zh": "1390 nm"
+  },
+  "Арома-диффузор (умный)": {
+    "uz": "Aroma-diffuzor (aqlli)",
+    "en": "Aroma diffuser (smart)",
+    "tr": "Koku difüzörü (akıllı)",
+    "zh": "香薰机（智能）"
+  },
+  "Сирена свето-звуковая": {
+    "uz": "Yorugʻlik-tovushli sirena",
+    "en": "Strobe siren",
+    "tr": "Işıklı sesli siren",
+    "zh": "声光警号"
+  },
+  "7.2 Ач": {
+    "uz": "7.2 Ah",
+    "en": "7.2 Ah",
+    "tr": "7.2 Ah",
+    "zh": "7.2 Ah"
+  },
+  "Блок питания (DC)": {
+    "uz": "Quvvat bloki (DC)",
+    "en": "Power supply (DC)",
+    "tr": "Güç kaynağı (DC)",
+    "zh": "电源（DC）"
+  },
+  "8.5 дБ": {
+    "uz": "8.5 dB",
+    "en": "8.5 dB",
+    "tr": "8.5 dB",
+    "zh": "8.5 dB"
+  },
+  "Кабель питания": {
+    "uz": "Quvvat kabeli",
+    "en": "Power cable",
+    "tr": "Güç kablosu",
+    "zh": "电源线"
+  },
+  "120 ГБ": {
+    "uz": "120 GB",
+    "en": "120 GB",
+    "tr": "120 GB",
+    "zh": "120 GB"
+  },
+  "8 ГБ": {
+    "uz": "8 GB",
+    "en": "8 GB",
+    "tr": "8 GB",
+    "zh": "8 GB"
+  },
+  "5 А": {
+    "uz": "5 A",
+    "en": "5 A",
+    "tr": "5 A",
+    "zh": "5 A"
+  },
+  "960 ГБ": {
+    "uz": "960 GB",
+    "en": "960 GB",
+    "tr": "960 GB",
+    "zh": "960 GB"
+  },
+  "Интерфейсный кабель (SAS/NVMe)": {
+    "uz": "Interfeys kabeli (SAS/NVMe)",
+    "en": "Interface cable (SAS/NVMe)",
+    "tr": "Arayüz kablosu (SAS/NVMe)",
+    "zh": "接口线缆（SAS/NVMe）"
+  },
+  "Блок питания (AC)": {
+    "uz": "Quvvat bloki (AC)",
+    "en": "Power supply (AC)",
+    "tr": "Güç kaynağı (AC)",
+    "zh": "电源（AC）"
+  },
+  "14 ТБ": {
+    "uz": "14 TB",
+    "en": "14 TB",
+    "tr": "14 TB",
+    "zh": "14 TB"
+  },
+  "20 ТБ": {
+    "uz": "20 TB",
+    "en": "20 TB",
+    "tr": "20 TB",
+    "zh": "20 TB"
+  },
+  "Внутреннее": {
+    "uz": "Ichki",
+    "en": "Indoor",
+    "tr": "İç mekân",
+    "zh": "室内型"
+  },
+  "20 А": {
+    "uz": "20 A",
+    "en": "20 A",
+    "tr": "20 A",
+    "zh": "20 A"
+  },
+  "Индуктивная петля (детектор авто)": {
+    "uz": "Induktiv halqa (avtomobil detektori)",
+    "en": "Inductive loop (vehicle detector)",
+    "tr": "Endüktif döngü (araç dedektörü)",
+    "zh": "地感线圈（车辆检测器）"
+  },
+  "0.5 А": {
+    "uz": "0.5 A",
+    "en": "0.5 A",
+    "tr": "0.5 A",
+    "zh": "0.5 A"
+  },
+  "Грозозащита Ethernet": {
+    "uz": "Ethernet uchun chaqmoqdan himoya",
+    "en": "Ethernet surge protector",
+    "tr": "Ethernet yıldırım koruyucu",
+    "zh": "网络防雷器"
+  },
+  "Салфетки безворсовые": {
+    "uz": "Tuksiz salfetkalar",
+    "en": "Lint-free wipes",
+    "tr": "Tüy bırakmayan mendil",
+    "zh": "无尘擦拭纸"
+  },
+  "350 Вт": {
+    "uz": "350 W",
+    "en": "350 W",
+    "tr": "350 W",
+    "zh": "350 W"
+  },
+  "Модуль расширения для IP-телефона": {
+    "uz": "IP-telefon uchun kengaytirish moduli",
+    "en": "IP phone expansion module",
+    "tr": "IP telefon genişletme modülü",
+    "zh": "IP 电话扩展模块"
+  },
+  "1000 Вт": {
+    "uz": "1000 W",
+    "en": "1000 W",
+    "tr": "1000 W",
+    "zh": "1000 W"
+  },
+  "Оптическая муфта проходная": {
+    "uz": "Oʻtuvchi optik mufta",
+    "en": "Inline fiber splice closure",
+    "tr": "Hat tipi fiber ek kutusu",
+    "zh": "卧式光缆接头盒"
+  },
+  "48/96 волокон": {
+    "uz": "48/96 tola",
+    "en": "48/96 fibers",
+    "tr": "48/96 fiber",
+    "zh": "48/96 芯"
+  },
+  "18 Вт": {
+    "uz": "18 W",
+    "en": "18 W",
+    "tr": "18 W",
+    "zh": "18 W"
+  },
+  "4-10,6/11,6 мм": {
+    "uz": "4-10,6/11,6 mm",
+    "en": "4-10.6/11.6 mm",
+    "tr": "4-10,6/11,6 mm",
+    "zh": "4-10.6/11.6 mm"
+  },
+  "Спирт изопропиловый (расходник)": {
+    "uz": "Izopropil spirti (sarf materiali)",
+    "en": "Isopropyl alcohol (consumable)",
+    "tr": "İzopropil alkol (sarf malzemesi)",
+    "zh": "异丙醇（耗材）"
+  },
+  "4-9,9/10,9 мм": {
+    "uz": "4-9,9/10,9 mm",
+    "en": "4-9.9/10.9 mm",
+    "tr": "4-9,9/10,9 mm",
+    "zh": "4-9.9/10.9 mm"
+  },
+  "HDMI сплиттер (активный)": {
+    "uz": "HDMI splitter (aktiv)",
+    "en": "HDMI splitter (active)",
+    "tr": "HDMI çoklayıcı (aktif)",
+    "zh": "HDMI 分配器（有源）"
+  },
+  "1 вход — 2 выхода": {
+    "uz": "1 kirish — 2 chiqish",
+    "en": "1 input — 2 outputs",
+    "tr": "1 giriş — 2 çıkış",
+    "zh": "1 进 — 2 出"
+  },
+  "Внешний адаптер 5 В": {
+    "uz": "Tashqi adapter 5 V",
+    "en": "External 5 V adapter",
+    "tr": "Harici 5 V adaptör",
+    "zh": "外置 5 V 适配器"
+  },
+  "до 4K": {
+    "uz": "4K gacha",
+    "en": "up to 4K",
+    "tr": "4K'ya kadar",
+    "zh": "最远 4K"
+  },
+  "Усиление сигнала": {
+    "uz": "Signalni kuchaytirish",
+    "en": "Signal amplification",
+    "tr": "Sinyal güçlendirme",
+    "zh": "信号放大"
+  },
+  "Программное обеспечение СКУД": {
+    "uz": "Kirish nazorati dasturiy taʼminoti",
+    "en": "Access control software",
+    "tr": "Geçiş kontrol yazılımı",
+    "zh": "门禁管理软件"
+  },
+  "5 Мп": {
+    "uz": "5 MP",
+    "en": "5 MP",
+    "tr": "5 MP",
+    "zh": "5 MP"
+  },
+  "Извещатель разбития стекла (адресный)": {
+    "uz": "Shisha sinishi izvestiteli (adresli)",
+    "en": "Glass break detector (addressable)",
+    "tr": "Cam kırılma dedektörü (adresli)",
+    "zh": "玻璃破碎探测器（总线制）"
+  },
+  "DS-KH8380-WTE1 (увеличенный экран)": {
+    "uz": "DS-KH8380-WTE1 (kattalashtirilgan ekran)",
+    "en": "DS-KH8380-WTE1 (larger screen)",
+    "tr": "DS-KH8380-WTE1 (büyük ekran)",
+    "zh": "DS-KH8380-WTE1（大屏）"
+  },
+  "Аудио/видео распределитель домофонии": {
+    "uz": "Domofon audio/video taqsimlagichi",
+    "en": "Intercom audio/video distributor",
+    "tr": "Diafon ses/görüntü dağıtıcı",
+    "zh": "楼宇对讲音/视频分配器"
+  },
+  "металл, антивандальный": {
+    "uz": "metall, vandalga chidamli",
+    "en": "metal, vandal-resistant",
+    "tr": "metal, vandalizme dayanıklı",
+    "zh": "金属，防暴"
+  },
+  "AP-режим со смартфона": {
+    "uz": "Smartfondan AP rejimi orqali",
+    "en": "AP mode via smartphone",
+    "tr": "Akıllı telefondan AP modu",
+    "zh": "手机 AP 模式配置"
+  },
+  "карта, Bluetooth, динамический QR": {
+    "uz": "karta, Bluetooth, dinamik QR",
+    "en": "card, Bluetooth, dynamic QR",
+    "tr": "kart, Bluetooth, dinamik QR",
+    "zh": "卡、蓝牙、动态 QR 码"
+  },
+  "до 128 клиентов": {
+    "uz": "128 klientgacha",
+    "en": "up to 128 clients",
+    "tr": "128 istemciye kadar",
+    "zh": "最多 128 个客户端"
+  },
+  "570×600×760 мм": {
+    "uz": "570×600×760 mm",
+    "en": "570×600×760 mm",
+    "tr": "570×600×760 mm",
+    "zh": "570×600×760 mm"
+  },
+  "570×600×890 мм": {
+    "uz": "570×600×890 mm",
+    "en": "570×600×890 mm",
+    "tr": "570×600×890 mm",
+    "zh": "570×600×890 mm"
+  },
+  "Извещатель пожарный ручной адресный": {
+    "uz": "Adresli qoʻlda yongʻin izvestiteli",
+    "en": "Addressable manual call point",
+    "tr": "Adresli yangın butonu",
+    "zh": "总线制手动报警按钮"
+  },
+  "Занимает 1 адрес в ДПЛС": {
+    "uz": "DPLSda 1 ta manzilni egallaydi",
+    "en": "Uses 1 address on the DPLS line",
+    "tr": "DPLS hattında 1 adres kullanır",
+    "zh": "占用 DPLS 总线 1 个地址"
+  },
+  "570×450×760 мм": {
+    "uz": "570×450×760 mm",
+    "en": "570×450×760 mm",
+    "tr": "570×450×760 mm",
+    "zh": "570×450×760 mm"
+  },
+  "1 (вход/выход) или 2 (на вход)": {
+    "uz": "1 (kirish/chiqish) yoki 2 (kirishga)",
+    "en": "1 (entry/exit) or 2 (entry only)",
+    "tr": "1 (giriş/çıkış) veya 2 (yalnızca giriş)",
+    "zh": "1 个（进/出）或 2 个（仅进）"
+  },
+  "Программируемые": {
+    "uz": "Dasturlanadigan",
+    "en": "Programmable",
+    "tr": "Programlanabilir",
+    "zh": "可编程"
+  },
+  "RS-485 (ИСО «Орион»)": {
+    "uz": "RS-485 («Orion» ISO)",
+    "en": "RS-485 («Orion» system)",
+    "tr": "RS-485 («Orion» sistemi)",
+    "zh": "RS-485（«Orion» 系统）"
+  },
+  "Устройство дистанционного пуска адресное": {
+    "uz": "Adresli masofaviy ishga tushirish qurilmasi",
+    "en": "Addressable remote start device",
+    "tr": "Adresli uzaktan başlatma cihazı",
+    "zh": "总线制远程启动装置"
+  },
+  "Пуск пожаротушения / автоматики": {
+    "uz": "Yongʻin oʻchirish / avtomatikani ishga tushirish",
+    "en": "Fire suppression / automation start",
+    "tr": "Yangın söndürme / otomasyon başlatma",
+    "zh": "启动灭火 / 自动化设备"
+  },
+  "Бокс уличный герметичный": {
+    "uz": "Germetik koʻcha qutisi",
+    "en": "Sealed outdoor box",
+    "tr": "Sızdırmaz dış mekân kutusu",
+    "zh": "室外密封箱"
+  },
+  "стена / опора / колодец": {
+    "uz": "devor / ustun / quduq",
+    "en": "wall / pole / manhole",
+    "tr": "duvar / direk / menhol",
+    "zh": "墙面 / 立杆 / 人井"
+  },
+  "резиновое, гермовводы": {
+    "uz": "rezina, germetik kirishlar",
+    "en": "rubber, cable glands",
+    "tr": "kauçuk, kablo rakorları",
+    "zh": "橡胶密封，防水格兰头"
+  },
+  "800×1200×2000 мм": {
+    "uz": "800×1200×2000 mm",
+    "en": "800×1200×2000 mm",
+    "tr": "800×1200×2000 mm",
+    "zh": "800×1200×2000 mm"
+  },
+  "Датчик с сиреной": {
+    "uz": "Sirenali datchik",
+    "en": "Sensor with siren",
+    "tr": "Sirenli sensör",
+    "zh": "带警号探测器"
+  },
+  "до 250 м": {
+    "uz": "250 m gacha",
+    "en": "up to 250 m",
+    "tr": "250 m'ye kadar",
+    "zh": "最远 250 m"
+  },
+  "Smart Hybrid Light (белый свет + ИК)": {
+    "uz": "Smart Hybrid Light (oq yorugʻlik + IQ)",
+    "en": "Smart Hybrid Light (white light + IR)",
+    "tr": "Smart Hybrid Light (beyaz ışık + IR)",
+    "zh": "Smart Hybrid Light（白光 + 红外）"
+  },
+  "4 МП": {
+    "uz": "4 MP",
+    "en": "4 MP",
+    "tr": "4 MP",
+    "zh": "4 MP"
+  },
+  "Строб + звуковое оповещение (/SL)": {
+    "uz": "Strob + ovozli ogohlantirish (/SL)",
+    "en": "Strobe + audio alarm (/SL)",
+    "tr": "Flaşör + sesli uyarı (/SL)",
+    "zh": "爆闪 + 声音报警（/SL）"
+  },
+  "DIN-рейка": {
+    "uz": "DIN-reyka",
+    "en": "DIN rail",
+    "tr": "DIN ray",
+    "zh": "DIN 导轨"
+  },
+  "Запасной пруток для УЗК": {
+    "uz": "Kabel tortish qurilmasi uchun zaxira sterjen",
+    "en": "Spare rod for duct rodder",
+    "tr": "Kablo çekme aparatı için yedek çubuk",
+    "zh": "穿管器备用穿线条"
+  },
+  "11 мм": {
+    "uz": "11 mm",
+    "en": "11 mm",
+    "tr": "11 mm",
+    "zh": "11 mm"
+  },
+  "С сенсором": {
+    "uz": "Sensorli",
+    "en": "With sensor",
+    "tr": "Sensörlü",
+    "zh": "带传感器"
+  },
+  "Датчик дыма (для мониторинга шкафа)": {
+    "uz": "Tutun datchigi (shkafni monitoring qilish uchun)",
+    "en": "Smoke sensor (for cabinet monitoring)",
+    "tr": "Duman sensörü (kabin izleme için)",
+    "zh": "烟雾传感器（用于机柜监控）"
+  },
+  "3 плинтов": {
+    "uz": "3 ta plint",
+    "en": "3 modules",
+    "tr": "3 modül",
+    "zh": "3 个模块"
+  },
+  "5 плинтов": {
+    "uz": "5 ta plint",
+    "en": "5 modules",
+    "tr": "5 modül",
+    "zh": "5 个模块"
+  },
+  "Щёточный кабельный ввод": {
+    "uz": "Choʻtkali kabel kiritgich",
+    "en": "Brush cable entry",
+    "tr": "Fırçalı kablo giriş paneli",
+    "zh": "毛刷进线板"
+  },
+  "120 дБ": {
+    "uz": "120 dB",
+    "en": "120 dB",
+    "tr": "120 dB",
+    "zh": "120 dB"
+  },
+  "Купольная (turret) IP-камера": {
+    "uz": "Kupolli (turret) IP-kamera",
+    "en": "Dome (turret) IP camera",
+    "tr": "Dome (turret) IP kamera",
+    "zh": "半球（海螺型）IP 摄像机"
+  },
+  "2 микрофона + громкоговоритель": {
+    "uz": "2 ta mikrofon + karnay",
+    "en": "2 microphones + speaker",
+    "tr": "2 mikrofon + hoparlör",
+    "zh": "2 个麦克风 + 扬声器"
+  },
+  "IP67, NEMA 4X (антикоррозийная)": {
+    "uz": "IP67, NEMA 4X (korroziyaga chidamli)",
+    "en": "IP67, NEMA 4X (corrosion-resistant)",
+    "tr": "IP67, NEMA 4X (korozyona dayanıklı)",
+    "zh": "IP67，NEMA 4X（防腐）"
+  },
+  "12 МП (4608×2592)": {
+    "uz": "12 MP (4608×2592)",
+    "en": "12 MP (4608×2592)",
+    "tr": "12 MP (4608×2592)",
+    "zh": "1200 万像素（4608×2592）"
+  },
+  "Красно-синий строб + звуковое оповещение (/SRB)": {
+    "uz": "Qizil-koʻk strob + ovozli ogohlantirish (/SRB)",
+    "en": "Red-blue strobe + audio alarm (/SRB)",
+    "tr": "Kırmızı-mavi flaşör + sesli uyarı (/SRB)",
+    "zh": "红蓝爆闪 + 声音报警（/SRB）"
+  },
+  "4G камера с солнечной панелью": {
+    "uz": "Quyosh panelli 4G kamera",
+    "en": "4G camera with solar panel",
+    "tr": "Güneş panelli 4G kamera",
+    "zh": "带太阳能板的 4G 摄像机"
+  },
+  "Микрофон + динамик, двусторонняя связь": {
+    "uz": "Mikrofon + dinamik, ikki tomonlama aloqa",
+    "en": "Microphone + speaker, two-way audio",
+    "tr": "Mikrofon + hoparlör, çift yönlü iletişim",
+    "zh": "麦克风 + 扬声器，双向对讲"
+  },
+  "AOV — запись 24/7": {
+    "uz": "AOV — 24/7 yozib olish",
+    "en": "AOV — 24/7 recording",
+    "tr": "AOV — 24/7 kayıt",
+    "zh": "AOV — 24/7 录像"
+  },
+  "9000 мА·ч": {
+    "uz": "9000 mAh",
+    "en": "9000 mAh",
+    "tr": "9000 mAh",
+    "zh": "9000 mAh"
+  },
+  "PT (поворотная)": {
+    "uz": "PT (buriluvchi)",
+    "en": "PT (pan/tilt)",
+    "tr": "PT (döner)",
+    "zh": "PT (云台)"
+  },
+  "Детекция и сопровождение человека": {
+    "uz": "Odamni aniqlash va kuzatib borish",
+    "en": "Human detection and tracking",
+    "tr": "İnsan algılama ve takip",
+    "zh": "人形检测与跟踪"
+  },
+  "Smart Hybrid Light до 30 м": {
+    "uz": "Smart Hybrid Light 30 m gacha",
+    "en": "Smart Hybrid Light up to 30 m",
+    "tr": "Smart Hybrid Light, 30 m'ye kadar",
+    "zh": "Smart Hybrid Light 最远 30 m"
+  },
+  "4+4 МП (два объектива)": {
+    "uz": "4+4 MP (ikki obyektiv)",
+    "en": "4+4 MP (dual lens)",
+    "tr": "4+4 MP (çift lens)",
+    "zh": "4+4 MP (双镜头)"
+  },
+  "8 Вт": {
+    "uz": "8 W",
+    "en": "8 W",
+    "tr": "8 W",
+    "zh": "8 W"
+  },
+  "Соединительная коробка": {
+    "uz": "Ulash qutisi",
+    "en": "Junction box",
+    "tr": "Bağlantı kutusu",
+    "zh": "接线盒"
+  },
+  "Мини-PTZ 2\"": {
+    "uz": "Mini-PTZ 2\"",
+    "en": "Mini PTZ 2\"",
+    "tr": "Mini PTZ 2\"",
+    "zh": "迷你 PTZ 2\""
+  },
+  "PoE (802.3af) / 12 В": {
+    "uz": "PoE (802.3af) / 12 V",
+    "en": "PoE (802.3af) / 12 V",
+    "tr": "PoE (802.3af) / 12 V",
+    "zh": "PoE (802.3af) / 12 V"
+  },
+  "4× (2.8–12 мм)": {
+    "uz": "4× (2.8–12 mm)",
+    "en": "4× (2.8–12 mm)",
+    "tr": "4× (2.8–12 mm)",
+    "zh": "4× (2.8–12 mm)"
+  },
+  "Поворотная speed dome 4\"": {
+    "uz": "Buriluvchi speed dome 4\"",
+    "en": "PTZ speed dome 4\"",
+    "tr": "Döner speed dome 4\"",
+    "zh": "高速球机 4\""
+  },
+  "25× (4.8–120 мм)": {
+    "uz": "25× (4.8–120 mm)",
+    "en": "25× (4.8–120 mm)",
+    "tr": "25× (4.8–120 mm)",
+    "zh": "25× (4.8–120 mm)"
+  },
+  "Маршрутизатор / AC-контроллер": {
+    "uz": "Marshrutizator / AC-kontroller",
+    "en": "Router / AC controller",
+    "tr": "Yönlendirici / AC denetleyici",
+    "zh": "路由器 / AC 控制器"
+  },
+  "8× LAN гигабит (2 переключаемых), 2× WAN": {
+    "uz": "8× gigabitli LAN (2 tasi almashtiriladigan), 2× WAN",
+    "en": "8× gigabit LAN (2 switchable), 2× WAN",
+    "tr": "8× gigabit LAN (2'si değiştirilebilir), 2× WAN",
+    "zh": "8× 千兆 LAN (2 个可切换)，2× WAN"
+  },
+  "до 64 точек Hikvision": {
+    "uz": "64 tagacha Hikvision kirish nuqtasi",
+    "en": "up to 64 Hikvision APs",
+    "tr": "64 adede kadar Hikvision erişim noktası",
+    "zh": "最多 64 台 Hikvision AP"
+  },
+  "до 250": {
+    "uz": "250 tagacha",
+    "en": "up to 250",
+    "tr": "250'ye kadar",
+    "zh": "最多 250"
+  },
+  "2 Гбит/с": {
+    "uz": "2 Gbit/s",
+    "en": "2 Gbps",
+    "tr": "2 Gbps",
+    "zh": "2 Gbps"
+  },
+  "с точками Hikvision": {
+    "uz": "Hikvision kirish nuqtalari bilan",
+    "en": "with Hikvision APs",
+    "tr": "Hikvision erişim noktalarıyla",
+    "zh": "与 Hikvision AP 组网"
+  },
+  "Wi-Fi 6 роутер": {
+    "uz": "Wi-Fi 6 router",
+    "en": "Wi-Fi 6 router",
+    "tr": "Wi-Fi 6 yönlendirici",
+    "zh": "Wi-Fi 6 路由器"
+  },
+  "гигабитные WAN/LAN": {
+    "uz": "gigabitli WAN/LAN",
+    "en": "gigabit WAN/LAN",
+    "tr": "gigabit WAN/LAN",
+    "zh": "千兆 WAN/LAN"
+  },
+  "до 3000 Мбит/с (AX3000)": {
+    "uz": "3000 Mbit/s gacha (AX3000)",
+    "en": "up to 3000 Mbps (AX3000)",
+    "tr": "en fazla 3000 Mbps (AX3000)",
+    "zh": "最高 3000 Mbps (AX3000)"
+  },
+  "1304 нм": {
+    "uz": "1304 nm",
+    "en": "1304 nm",
+    "tr": "1304 nm",
+    "zh": "1304 nm"
+  },
+  "30/28 дБ": {
+    "uz": "30/28 dB",
+    "en": "30/28 dB",
+    "tr": "30/28 dB",
+    "zh": "30/28 dB"
+  },
+  "8 портов": {
+    "uz": "8 port",
+    "en": "8 ports",
+    "tr": "8 port",
+    "zh": "8 个端口"
+  },
+  "8 IP-камер": {
+    "uz": "8 ta IP-kamera",
+    "en": "8 IP cameras",
+    "tr": "8 IP kamera",
+    "zh": "8 路 IP 摄像机"
+  },
+  "AcuSeek, AcuSearch, распознавание лиц (до 8 кан.)": {
+    "uz": "AcuSeek, AcuSearch, yuzni tanish (8 kan. gacha)",
+    "en": "AcuSeek, AcuSearch, face recognition (up to 8 ch)",
+    "tr": "AcuSeek, AcuSearch, yüz tanıma (8 kanala kadar)",
+    "zh": "AcuSeek、AcuSearch、人脸识别 (最多 8 路)"
+  },
+  "Модуль управления питанием (RPCM)": {
+    "uz": "Quvvatni boshqarish moduli (RPCM)",
+    "en": "Power control module (RPCM)",
+    "tr": "Güç kontrol modülü (RPCM)",
+    "zh": "电源管理模块 (RPCM)"
+  },
+  "63 А": {
+    "uz": "63 A",
+    "en": "63 A",
+    "tr": "63 A",
+    "zh": "63 A"
+  },
+  "AcuSeek, AcuSearch, AcuSense, периметр (до 16 кан.)": {
+    "uz": "AcuSeek, AcuSearch, AcuSense, perimetr (16 kan. gacha)",
+    "en": "AcuSeek, AcuSearch, AcuSense, perimeter (up to 16 ch)",
+    "tr": "AcuSeek, AcuSearch, AcuSense, çevre koruma (16 kanala kadar)",
+    "zh": "AcuSeek、AcuSearch、AcuSense、周界防范 (最多 16 路)"
+  },
+  "4×12МП / 6×8МП / 12×4МП / 16×2МП": {
+    "uz": "4×12MP / 6×8MP / 12×4MP / 16×2MP",
+    "en": "4×12MP / 6×8MP / 12×4MP / 16×2MP",
+    "tr": "4×12MP / 6×8MP / 12×4MP / 16×2MP",
+    "zh": "4×12MP / 6×8MP / 12×4MP / 16×2MP"
+  },
+  "160 Мбит/с": {
+    "uz": "160 Mbit/s",
+    "en": "160 Mbps",
+    "tr": "160 Mbps",
+    "zh": "160 Mbps"
+  },
+  "AcuSeek/AcuSearch до 32 кан., распознавание лиц до 8 кан.": {
+    "uz": "AcuSeek/AcuSearch 32 kan. gacha, yuzni tanish 8 kan. gacha",
+    "en": "AcuSeek/AcuSearch up to 32 ch, face recognition up to 8 ch",
+    "tr": "AcuSeek/AcuSearch 32 kanala kadar, yüz tanıma 8 kanala kadar",
+    "zh": "AcuSeek/AcuSearch 最多 32 路，人脸识别最多 8 路"
+  },
+  "Считыватель с клавиатурой": {
+    "uz": "Klaviaturali oʻquvchi qurilma",
+    "en": "Reader with keypad",
+    "tr": "Tuş takımlı okuyucu",
+    "zh": "带键盘读卡器"
+  },
+  "карта, PIN, QR, Bluetooth": {
+    "uz": "karta, PIN, QR, Bluetooth",
+    "en": "card, PIN, QR, Bluetooth",
+    "tr": "kart, PIN, QR, Bluetooth",
+    "zh": "刷卡、PIN、QR、蓝牙"
+  },
+  "RS-485 (резервированная шина)": {
+    "uz": "RS-485 (zaxiralangan shina)",
+    "en": "RS-485 (redundant bus)",
+    "tr": "RS-485 (yedekli veri yolu)",
+    "zh": "RS-485 (冗余总线)"
+  },
+  "металлический шкаф с замком": {
+    "uz": "qulfli metall shkaf",
+    "en": "metal cabinet with lock",
+    "tr": "kilitli metal kabin",
+    "zh": "带锁金属机箱"
+  },
+  "до 126 дверей (DS-K2M002X)": {
+    "uz": "126 eshikkacha (DS-K2M002X)",
+    "en": "up to 126 doors (DS-K2M002X)",
+    "tr": "126 kapıya kadar (DS-K2M002X)",
+    "zh": "最多 126 门 (DS-K2M002X)"
+  },
+  "1291 нм": {
+    "uz": "1291 nm",
+    "en": "1291 nm",
+    "tr": "1291 nm",
+    "zh": "1291 nm"
+  },
+  "Внутренняя панель видеодомофона": {
+    "uz": "Videodomofon ichki paneli",
+    "en": "Video intercom indoor station",
+    "tr": "Görüntülü diyafon iç ünitesi",
+    "zh": "可视对讲室内机"
+  },
+  "Ethernet 10/100, Wi-Fi 6 (2.4/5 ГГц)": {
+    "uz": "Ethernet 10/100, Wi-Fi 6 (2.4/5 GHz)",
+    "en": "Ethernet 10/100, Wi-Fi 6 (2.4/5 GHz)",
+    "tr": "Ethernet 10/100, Wi-Fi 6 (2.4/5 GHz)",
+    "zh": "Ethernet 10/100，Wi-Fi 6 (2.4/5 GHz)"
+  },
+  "2 микрофона, 2 динамика": {
+    "uz": "2 ta mikrofon, 2 ta dinamik",
+    "en": "2 microphones, 2 speakers",
+    "tr": "2 mikrofon, 2 hoparlör",
+    "zh": "2 个麦克风，2 个扬声器"
+  },
+  "козырёк, крепёж, карты, БП": {
+    "uz": "soyabon, mahkamlash elementlari, kartalar, quvvat bloki",
+    "en": "rain hood, mounting hardware, cards, PSU",
+    "tr": "yağmur siperliği, montaj elemanları, kartlar, güç adaptörü",
+    "zh": "防雨罩、安装配件、卡片、电源"
+  },
+  "PoE-адаптер в комплекте": {
+    "uz": "PoE-adapter komplektda",
+    "en": "PoE adapter included",
+    "tr": "PoE adaptörü dahil",
+    "zh": "附带 PoE 适配器"
+  },
+  "карты доступа": {
+    "uz": "kirish kartalari",
+    "en": "access cards",
+    "tr": "erişim kartları",
+    "zh": "门禁卡"
+  },
+  "Управление 2 замками": {
+    "uz": "2 ta qulfni boshqarish",
+    "en": "Controls 2 locks",
+    "tr": "2 kilit kontrolü",
+    "zh": "控制 2 把锁"
+  },
+  "Видео через Hik-Connect / веб": {
+    "uz": "Video Hik-Connect / veb orqali",
+    "en": "Video via Hik-Connect / web",
+    "tr": "Hik-Connect / web üzerinden video",
+    "zh": "通过 Hik-Connect / Web 查看视频"
+  },
+  "4 МП, обзор 150°": {
+    "uz": "4 MP, koʻrish burchagi 150°",
+    "en": "4 MP, 150° field of view",
+    "tr": "4 MP, 150° görüş açısı",
+    "zh": "4 MP，150° 视场角"
+  },
+  "Карта, PIN-код, Bluetooth, Hik-Connect, внутренняя панель": {
+    "uz": "Karta, PIN-kod, Bluetooth, Hik-Connect, ichki panel",
+    "en": "Card, PIN code, Bluetooth, Hik-Connect, indoor station",
+    "tr": "Kart, PIN kodu, Bluetooth, Hik-Connect, iç ünite",
+    "zh": "刷卡、PIN 码、蓝牙、Hik-Connect、室内机"
+  },
+  "Кодонаборная": {
+    "uz": "Kod teriladigan",
+    "en": "Code keypad",
+    "tr": "Şifre tuş takımı",
+    "zh": "密码键盘"
+  },
+  "Оптическая муфта компактная": {
+    "uz": "Ixcham optik mufta",
+    "en": "Compact fiber splice closure",
+    "tr": "Kompakt fiber ek kutusu",
+    "zh": "紧凑型光缆接头盒"
+  },
+  "Гарнитура": {
+    "uz": "Garnitura",
+    "en": "Headset",
+    "tr": "Mikrofonlu kulaklık",
+    "zh": "耳麦"
+  },
+  "Моно": {
+    "uz": "Mono",
+    "en": "Mono",
+    "tr": "Mono",
+    "zh": "单耳"
+  },
+  "Биспектральная цилиндрическая": {
+    "uz": "Bispektral silindrsimon kamera",
+    "en": "Bi-spectrum bullet camera",
+    "tr": "Bi-spektrum bullet kamera",
+    "zh": "双光谱筒型摄像机"
+  },
+  "тепловизор + оптика": {
+    "uz": "teplovizor + optika",
+    "en": "thermal + optical",
+    "tr": "termal + optik",
+    "zh": "热成像 + 可见光"
+  },
+  "AI GUANLAN (человек/транспорт)": {
+    "uz": "AI GUANLAN (odam/transport)",
+    "en": "AI GUANLAN (human/vehicle)",
+    "tr": "AI GUANLAN (insan/araç)",
+    "zh": "AI GUANLAN (人/车)"
+  },
+  "охрана периметра": {
+    "uz": "perimetrni qoʻriqlash",
+    "en": "perimeter protection",
+    "tr": "çevre güvenliği",
+    "zh": "周界防护"
+  },
+  "NETD ≤25 мК": {
+    "uz": "NETD ≤25 mK",
+    "en": "NETD ≤25 mK",
+    "tr": "NETD ≤25 mK",
+    "zh": "NETD ≤25 mK"
+  },
+  "256×192, 12 мкм VOx": {
+    "uz": "256×192, 12 mkm VOx",
+    "en": "256×192, 12 µm VOx",
+    "tr": "256×192, 12 µm VOx",
+    "zh": "256×192，12 µm VOx"
+  },
+  "Набор отвёрток": {
+    "uz": "Otvyortkalar toʻplami",
+    "en": "Screwdriver set",
+    "tr": "Tornavida seti",
+    "zh": "螺丝刀套装"
+  },
+  "Кабель FTP (экранированный)": {
+    "uz": "FTP kabel (ekranlangan)",
+    "en": "FTP cable (shielded)",
+    "tr": "FTP kablo (ekranlı)",
+    "zh": "FTP 网线 (屏蔽)"
+  },
+  "4×2×0,5 (медь)": {
+    "uz": "4×2×0,5 (mis)",
+    "en": "4×2×0.5 (copper)",
+    "tr": "4×2×0,5 (bakır)",
+    "zh": "4×2×0.5 (铜)"
+  },
+  "305 м": {
+    "uz": "305 m",
+    "en": "305 m",
+    "tr": "305 m",
+    "zh": "305 m"
+  },
+  "Фольга + дренажная жила": {
+    "uz": "Folga + drenaj simi",
+    "en": "Foil + drain wire",
+    "tr": "Folyo + drenaj teli",
+    "zh": "铝箔 + 排流线"
+  },
+  "12 В, 2 А": {
+    "uz": "12 V, 2 A",
+    "en": "12 V, 2 A",
+    "tr": "12 V, 2 A",
+    "zh": "12 V, 2 A"
+  },
+  "12 В, 3 А": {
+    "uz": "12 V, 3 A",
+    "en": "12 V, 3 A",
+    "tr": "12 V, 3 A",
+    "zh": "12 V, 3 A"
+  },
+  "Левые и правые двери": {
+    "uz": "Chap va oʻng eshiklar",
+    "en": "Left- and right-hand doors",
+    "tr": "Sol ve sağ kapılar",
+    "zh": "左开门与右开门"
+  },
+  "Входные и межкомнатные двери": {
+    "uz": "Kirish va xonalararo eshiklar",
+    "en": "Entrance and interior doors",
+    "tr": "Giriş ve iç mekân kapıları",
+    "zh": "入户门与室内门"
+  },
+  "до 80 кг": {
+    "uz": "80 kg gacha",
+    "en": "up to 80 kg",
+    "tr": "80 kg'a kadar",
+    "zh": "最大 80 kg"
+  },
+  "Скорость закрывания и дохлоп": {
+    "uz": "Yopilish tezligi va soʻnggi zarb",
+    "en": "Closing speed and latching speed",
+    "tr": "Kapanma hızı ve son kapanma darbesi",
+    "zh": "关门速度与末端锁闭速度"
+  },
+  "PoE-сплиттер": {
+    "uz": "PoE-splitter",
+    "en": "PoE splitter",
+    "tr": "PoE ayırıcı",
+    "zh": "PoE 分离器"
+  },
+  "Медиаконвертер, комплект A+B": {
+    "uz": "Media konverter, A+B toʻplami",
+    "en": "Media converter, A+B pair",
+    "tr": "Medya dönüştürücü, A+B seti",
+    "zh": "光纤收发器，A+B 套装"
+  },
+  "одномодовое, 1 волокно": {
+    "uz": "bir modali, 1 tola",
+    "en": "single-mode, 1 fiber",
+    "tr": "tek modlu, 1 fiber",
+    "zh": "单模，1 芯"
+  },
+  "внешние адаптеры": {
+    "uz": "tashqi adapterlar",
+    "en": "external adapters",
+    "tr": "harici adaptörler",
+    "zh": "外置电源适配器"
+  },
+  "WDM 1310/1550 нм": {
+    "uz": "WDM 1310/1550 nm",
+    "en": "WDM 1310/1550 nm",
+    "tr": "WDM 1310/1550 nm",
+    "zh": "WDM 1310/1550 nm"
+  },
+  "77 мм": {
+    "uz": "77 mm",
+    "en": "77 mm",
+    "tr": "77 mm",
+    "zh": "77 mm"
+  },
+  "4 ТБ": {
+    "uz": "4 TB",
+    "en": "4 TB",
+    "tr": "4 TB",
+    "zh": "4 TB"
+  },
+  "Сетевой шлюз (гейтвей)": {
+    "uz": "Tarmoq shlyuzi (gateway)",
+    "en": "Network gateway",
+    "tr": "Ağ geçidi (gateway)",
+    "zh": "网络网关 (gateway)"
+  },
+  "Ороситель спринклерный водяной": {
+    "uz": "Suvli sprinkler purkagich",
+    "en": "Water sprinkler head",
+    "tr": "Su sprinkleri",
+    "zh": "水喷淋头"
+  },
+  "Термочувствительная (стандартно 68 °C)": {
+    "uz": "Termosezgir (standart 68 °C)",
+    "en": "Heat-sensitive (standard 68 °C)",
+    "tr": "Isıya duyarlı (standart 68 °C)",
+    "zh": "感温型 (标准 68 °C)"
+  },
+  "Розеткой вниз/вверх (уточняйте)": {
+    "uz": "Deflektor pastga/yuqoriga (aniqlashtiring)",
+    "en": "Pendent/upright (please specify)",
+    "tr": "Deflektör aşağı/yukarı (teyit edin)",
+    "zh": "下垂型/直立型 (请确认)"
+  },
+  "Уголок монтажный (ZL-кронштейн)": {
+    "uz": "Montaj burchakligi (ZL-kronshteyn)",
+    "en": "Mounting angle (ZL bracket)",
+    "tr": "Montaj köşebenti (ZL braket)",
+    "zh": "安装角码 (ZL 支架)"
+  },
+  "Электромагнитный 280 кг": {
+    "uz": "Elektromagnit 280 kg",
+    "en": "Electromagnetic 280 kg",
+    "tr": "Elektromanyetik 280 kg",
+    "zh": "电磁锁 280 kg"
+  },
+  "Двери, открывающиеся наружу": {
+    "uz": "Tashqariga ochiladigan eshiklar",
+    "en": "Outward-opening doors",
+    "tr": "Dışa açılan kapılar",
+    "zh": "外开门"
+  },
+  "Головки ГМ-50 и ГЦ-50": {
+    "uz": "GM-50 va GTs-50 kallaklari",
+    "en": "GM-50 and GTs-50 couplings",
+    "tr": "GM-50 ve GTs-50 rakorları",
+    "zh": "GM-50 与 GTs-50 接口"
+  },
+  "Кабельная клипса": {
+    "uz": "Kabel klipsasi",
+    "en": "Cable clip",
+    "tr": "Kablo klipsi",
+    "zh": "线缆卡扣"
+  },
+  "Головки ГМ-65 и ГЦ-65": {
+    "uz": "GM-65 va GTs-65 kallaklari",
+    "en": "GM-65 and GTs-65 couplings",
+    "tr": "GM-65 ve GTs-65 rakorları",
+    "zh": "GM-65 与 GTs-65 接口"
+  },
+  "Быстрый коннектор": {
+    "uz": "Tez ulanadigan konnektor",
+    "en": "Fast connector",
+    "tr": "Hızlı konnektör",
+    "zh": "快速连接器"
+  },
+  "механический, без сварки": {
+    "uz": "mexanik, payvandlashsiz",
+    "en": "mechanical, no fusion splicing",
+    "tr": "mekanik, füzyon eksiz",
+    "zh": "机械式，免熔接"
+  },
+  "250/900 мкм, плоский дроп": {
+    "uz": "250/900 mkm, yassi drop",
+    "en": "250/900 µm, flat drop",
+    "tr": "250/900 µm, yassı drop",
+    "zh": "250/900 µm，扁平皮线"
+  },
+  "допускается": {
+    "uz": "mumkin",
+    "en": "supported",
+    "tr": "mümkün",
+    "zh": "支持"
+  },
+  "Кросс стоечный выдвижной": {
+    "uz": "Tortma stoyka krossi",
+    "en": "Sliding rack-mount ODF",
+    "tr": "Kızaklı rack tipi ODF",
+    "zh": "抽拉式机架光纤配线架"
+  },
+  "съёмные": {
+    "uz": "yechiladigan",
+    "en": "removable",
+    "tr": "çıkarılabilir",
+    "zh": "可拆卸"
+  },
+  "телескопические": {
+    "uz": "teleskopik",
+    "en": "telescopic",
+    "tr": "teleskopik",
+    "zh": "伸缩式"
+  },
+  "Кросс стоечный": {
+    "uz": "Stoyka krossi",
+    "en": "Rack-mount ODF",
+    "tr": "Rack tipi ODF",
+    "zh": "机架式光纤配线架"
+  },
+  "в стойку": {
+    "uz": "stoykaga",
+    "en": "rack-mount",
+    "tr": "kabine montaj",
+    "zh": "机架安装"
+  },
+  "внутренние": {
+    "uz": "ichki",
+    "en": "internal",
+    "tr": "dahili",
+    "zh": "内置"
+  },
+  "19\" стойка": {
+    "uz": "19\" stoyka",
+    "en": "19\" rack",
+    "tr": "19\" kabin",
+    "zh": "19\" 机架"
+  },
+  "Сварочные, с органайзерами": {
+    "uz": "Payvandlash uchun, organayzerli",
+    "en": "Splice, with organizers",
+    "tr": "Füzyon ek, organizerli",
+    "zh": "熔接盘，带理纤器"
+  },
+  "выламываемые, 4 стороны": {
+    "uz": "sindirib ochiladigan, 4 tomondan",
+    "en": "knockouts, 4 sides",
+    "tr": "kırılabilir, 4 tarafta",
+    "zh": "敲落孔，4 面"
+  },
+  "на защёлках": {
+    "uz": "qisqichli",
+    "en": "snap-fit",
+    "tr": "klipsli",
+    "zh": "卡扣式"
+  },
+  "интегрированная": {
+    "uz": "integratsiyalangan",
+    "en": "integrated",
+    "tr": "entegre",
+    "zh": "集成式"
+  },
+  "2, с гермовводами": {
+    "uz": "2 ta, germetik kirishlar bilan",
+    "en": "2, with sealed glands",
+    "tr": "2, sızdırmaz rakorlu",
+    "zh": "2 个，带密封接头"
+  },
+  "Бокс абонентский": {
+    "uz": "Abonent qutisi",
+    "en": "Subscriber terminal box",
+    "tr": "Abone sonlandırma kutusu",
+    "zh": "用户终端盒"
+  },
+  "настенный, 2 шурупа": {
+    "uz": "devorga, 2 ta shurup",
+    "en": "wall-mount, 2 screws",
+    "tr": "duvara, 2 vida",
+    "zh": "壁挂，2 颗螺钉"
+  },
+  "пластик": {
+    "uz": "plastik",
+    "en": "plastic",
+    "tr": "plastik",
+    "zh": "塑料"
+  },
+  "абонентская разводка": {
+    "uz": "abonentlarga tarqatish",
+    "en": "subscriber distribution",
+    "tr": "abone dağıtımı",
+    "zh": "用户入户布线"
+  },
+  "10 А": {
+    "uz": "10 A",
+    "en": "10 A",
+    "tr": "10 A",
+    "zh": "10 A"
+  },
+  "Оптический бокс уличный": {
+    "uz": "Tashqi optik quti",
+    "en": "Outdoor fiber box",
+    "tr": "Dış ortam fiber kutusu",
+    "zh": "室外光纤分纤箱"
+  },
+  "Герметичный корпус, гермовводы": {
+    "uz": "Germetik korpus, germetik kirishlar",
+    "en": "Sealed housing, sealed glands",
+    "tr": "Sızdırmaz gövde, sızdırmaz rakorlar",
+    "zh": "密封外壳，密封接头"
+  },
+  "Стена / опора": {
+    "uz": "Devor / ustun",
+    "en": "Wall / pole",
+    "tr": "Duvar / direk",
+    "zh": "墙面 / 立杆"
+  },
+  "магистраль + дроп": {
+    "uz": "magistral + drop",
+    "en": "trunk + drop",
+    "tr": "ana hat + drop",
+    "zh": "主干 + 皮线"
+  },
+  "стена / подвес": {
+    "uz": "devor / osma",
+    "en": "wall / aerial",
+    "tr": "duvar / askı",
+    "zh": "墙面 / 架空"
+  },
+  "прозрачная": {
+    "uz": "shaffof",
+    "en": "transparent",
+    "tr": "şeffaf",
+    "zh": "透明"
+  },
+  "до 24 КДЗС": {
+    "uz": "24 tagacha KDZS gilzasi",
+    "en": "up to 24 splice protection sleeves",
+    "tr": "24 ek koruma kılıfına kadar",
+    "zh": "最多 24 个熔接保护管"
+  },
+  "муфты, кроссы, боксы": {
+    "uz": "muftalar, krosslar, qutilar",
+    "en": "closures, ODFs, boxes",
+    "tr": "ek kutuları, ODF'ler, kutular",
+    "zh": "接头盒、配线架、分纤箱"
+  },
+  "Скалыватель компактный": {
+    "uz": "Ixcham optik tola kesgich",
+    "en": "Compact fiber cleaver",
+    "tr": "Kompakt fiber kesici",
+    "zh": "小型光纤切割刀"
+  },
+  "автовозврат": {
+    "uz": "avtomatik qaytish",
+    "en": "auto-return",
+    "tr": "otomatik geri dönüş",
+    "zh": "自动回刀"
+  },
+  "защитный чехол": {
+    "uz": "himoya gʻilofi",
+    "en": "protective case",
+    "tr": "koruyucu kılıf",
+    "zh": "保护套"
+  },
+  "нескользящее": {
+    "uz": "sirpanmaydigan",
+    "en": "non-slip",
+    "tr": "kaymaz",
+    "zh": "防滑"
+  },
+  "Скалыватель прецизионный": {
+    "uz": "Yuqori aniqlikdagi optik tola kesgich",
+    "en": "Precision fiber cleaver",
+    "tr": "Hassas fiber kesici",
+    "zh": "高精度光纤切割刀"
+  },
+  "250/900 мкм": {
+    "uz": "250/900 mkm",
+    "en": "250/900 µm",
+    "tr": "250/900 µm",
+    "zh": "250/900 µm"
+  },
+  "встроенный контейнер": {
+    "uz": "oʻrnatilgan konteyner",
+    "en": "built-in bin",
+    "tr": "dahili hazne",
+    "zh": "内置废纤收集盒"
+  },
+  "Скалыватель полевой": {
+    "uz": "Dala sharoiti uchun optik tola kesgich",
+    "en": "Field fiber cleaver",
+    "tr": "Saha tipi fiber kesici",
+    "zh": "现场型光纤切割刀"
+  },
+  "чехол, ключи, инструкция": {
+    "uz": "gʻilof, kalitlar, yoʻriqnoma",
+    "en": "case, wrenches, manual",
+    "tr": "kılıf, anahtarlar, kılavuz",
+    "zh": "保护套、扳手、说明书"
+  },
+  "до 48 000 сколов (16 позиций)": {
+    "uz": "48 000 tagacha kesish (16 pozitsiya)",
+    "en": "up to 48 000 cleaves (16 positions)",
+    "tr": "48 000 kesime kadar (16 pozisyon)",
+    "zh": "最多 48 000 次切割 (16 个刀位)"
+  },
+  "кассета": {
+    "uz": "kasseta",
+    "en": "cassette",
+    "tr": "kaset",
+    "zh": "收集盒"
+  },
+  "Сварочный аппарат автоматический": {
+    "uz": "Avtomatik payvandlash apparati",
+    "en": "Automatic fusion splicer",
+    "tr": "Otomatik füzyon ek makinesi",
+    "zh": "全自动光纤熔接机"
+  },
+  "цветной сенсорный": {
+    "uz": "rangli sensorli",
+    "en": "color touchscreen",
+    "tr": "renkli dokunmatik",
+    "zh": "彩色触摸屏"
+  },
+  "SM/MM, 250/900 мкм, дроп": {
+    "uz": "SM/MM, 250/900 mkm, drop",
+    "en": "SM/MM, 250/900 µm, drop",
+    "tr": "SM/MM, 250/900 µm, drop",
+    "zh": "SM/MM，250/900 µm，皮线"
+  },
+  "Li-ion батарея / сеть": {
+    "uz": "Li-ion batareya / tarmoq",
+    "en": "Li-ion battery / mains",
+    "tr": "Li-ion batarya / şebeke",
+    "zh": "锂电池 / 市电"
+  },
+  "скалыватель, стриппер, кейс-трансформер": {
+    "uz": "tola kesgich, stripper, transformer-keys",
+    "en": "cleaver, stripper, convertible case",
+    "tr": "fiber kesici, soyucu, dönüştürülebilir çanta",
+    "zh": "切割刀、剥线钳、变形工具箱"
+  },
+  "по сердцевине, 6 моторов": {
+    "uz": "oʻzak boʻyicha, 6 ta motor",
+    "en": "core alignment, 6 motors",
+    "tr": "çekirdek hizalama, 6 motor",
+    "zh": "纤芯对准，6 马达"
+  },
+  "OTDR-рефлектометр карманный": {
+    "uz": "Choʻntak OTDR-reflektometr",
+    "en": "Handheld OTDR",
+    "tr": "Cep tipi OTDR",
+    "zh": "掌上型 OTDR"
+  },
+  "аккумулятор, зарядка USB": {
+    "uz": "akkumulyator, USB orqali zaryadlash",
+    "en": "rechargeable battery, USB charging",
+    "tr": "şarjlı batarya, USB şarj",
+    "zh": "充电电池，USB 充电"
+  },
+  "OTDR, OPM, VFL, источник": {
+    "uz": "OTDR, OPM, VFL, yorugʻlik manbai",
+    "en": "OTDR, OPM, VFL, light source",
+    "tr": "OTDR, OPM, VFL, ışık kaynağı",
+    "zh": "OTDR、OPM、VFL、光源"
+  },
+  "FTTH/GPON линии": {
+    "uz": "FTTH/GPON liniyalari",
+    "en": "FTTH/GPON lines",
+    "tr": "FTTH/GPON hatları",
+    "zh": "FTTH/GPON 线路"
+  },
+  "OTDR-рефлектометр": {
+    "uz": "OTDR-reflektometr",
+    "en": "OTDR",
+    "tr": "OTDR cihazı",
+    "zh": "OTDR 光时域反射仪"
+  },
+  "аккумулятор": {
+    "uz": "akkumulyator",
+    "en": "rechargeable battery",
+    "tr": "şarjlı batarya",
+    "zh": "充电电池"
+  },
+  "OTDR, OPM, источник, VFL": {
+    "uz": "OTDR, OPM, yorugʻlik manbai, VFL",
+    "en": "OTDR, OPM, light source, VFL",
+    "tr": "OTDR, OPM, ışık kaynağı, VFL",
+    "zh": "OTDR、OPM、光源、VFL"
+  },
+  "чехол, адаптеры": {
+    "uz": "gʻilof, adapterlar",
+    "en": "case, adapters",
+    "tr": "kılıf, adaptörler",
+    "zh": "保护套、适配器"
+  },
+  "GPON, корпоративные ВОЛС": {
+    "uz": "GPON, korporativ optik liniyalar",
+    "en": "GPON, enterprise fiber links",
+    "tr": "GPON, kurumsal fiber hatlar",
+    "zh": "GPON、企业光纤线路"
+  },
+  "0.3 м": {
+    "uz": "0.3 m",
+    "en": "0.3 m",
+    "tr": "0.3 m",
+    "zh": "0.3 m"
+  },
+  "0.5 м": {
+    "uz": "0.5 m",
+    "en": "0.5 m",
+    "tr": "0.5 m",
+    "zh": "0.5 m"
+  },
+  "стальной минимодуль": {
+    "uz": "poʻlat minimodul",
+    "en": "steel tube mini module",
+    "tr": "çelik tüp mini modül",
+    "zh": "钢管微型封装"
+  },
+  "≈10.5 дБ": {
+    "uz": "≈10.5 dB",
+    "en": "≈10.5 dB",
+    "tr": "≈10.5 dB",
+    "zh": "≈10.5 dB"
+  },
+  "Визуальный локатор дефектов, до 20 км": {
+    "uz": "Vizual nuqson lokatori, 20 km gacha",
+    "en": "Visual fault locator, up to 20 km",
+    "tr": "Görsel hata bulucu, 20 km'ye kadar",
+    "zh": "可视故障定位，最远 20 km"
+  },
+  "Измеритель оптической мощности + VFL": {
+    "uz": "Optik quvvat oʻlchagich + VFL",
+    "en": "Optical power meter + VFL",
+    "tr": "Optik güç ölçer + VFL",
+    "zh": "光功率计 + VFL"
+  },
+  "Аккумулятор, зарядка USB": {
+    "uz": "Akkumulyator, USB orqali zaryadlash",
+    "en": "Rechargeable battery, USB charging",
+    "tr": "Şarjlı batarya, USB şarj",
+    "zh": "充电电池，USB 充电"
+  },
+  "FC/SC (универсальные)": {
+    "uz": "FC/SC (universal)",
+    "en": "FC/SC (universal)",
+    "tr": "FC/SC (evrensel)",
+    "zh": "FC/SC (通用)"
+  },
+  "PON, ВОЛС, FTTH": {
+    "uz": "PON, optik liniyalar, FTTH",
+    "en": "PON, fiber links, FTTH",
+    "tr": "PON, fiber hatlar, FTTH",
+    "zh": "PON、光纤线路、FTTH"
+  },
+  "Измеритель мощности + VFL": {
+    "uz": "Quvvat oʻlchagich + VFL",
+    "en": "Power meter + VFL",
+    "tr": "Güç ölçer + VFL",
+    "zh": "光功率计 + VFL"
+  },
+  "универсальный 2.5 мм (SC/FC/ST)": {
+    "uz": "universal 2.5 mm (SC/FC/ST)",
+    "en": "universal 2.5 mm (SC/FC/ST)",
+    "tr": "evrensel 2.5 mm (SC/FC/ST)",
+    "zh": "通用 2.5 mm (SC/FC/ST)"
+  },
+  "батареи / USB": {
+    "uz": "batareyalar / USB",
+    "en": "batteries / USB",
+    "tr": "piller / USB",
+    "zh": "电池 / USB"
+  },
+  "850–1625 нм": {
+    "uz": "850–1625 nm",
+    "en": "850–1625 nm",
+    "tr": "850–1625 nm",
+    "zh": "850–1625 nm"
+  },
+  "Кейс для инструментов": {
+    "uz": "Asboblar uchun keys",
+    "en": "Tool case",
+    "tr": "Alet çantası",
+    "zh": "工具箱"
+  },
+  "Розеточный модуль (keystone)": {
+    "uz": "Rozetka moduli (keystone)",
+    "en": "Jack module (keystone)",
+    "tr": "Priz modülü (keystone)",
+    "zh": "信息模块 (keystone)"
+  },
+  "3 кВА": {
+    "uz": "3 kVA",
+    "en": "3 kVA",
+    "tr": "3 kVA",
+    "zh": "3 kVA"
+  },
+  "500 ГБ": {
+    "uz": "500 GB",
+    "en": "500 GB",
+    "tr": "500 GB",
+    "zh": "500 GB"
+  },
+  "Аккумуляторное": {
+    "uz": "Akkumulyatorli",
+    "en": "Rechargeable battery",
+    "tr": "Şarjlı batarya",
+    "zh": "充电电池供电"
+  },
+  "Wi-Fi PTZ-камера (умный дом)": {
+    "uz": "Wi-Fi PTZ-kamera (aqlli uy)",
+    "en": "Wi-Fi PTZ camera (smart home)",
+    "tr": "Wi-Fi PTZ kamera (akıllı ev)",
+    "zh": "Wi-Fi PTZ 摄像机 (智能家居)"
+  },
+  "Клеммная коробка": {
+    "uz": "Klemma qutisi",
+    "en": "Terminal box",
+    "tr": "Klemens kutusu",
+    "zh": "端子盒"
+  },
+  "Дефектоскоп оптический (VFL)": {
+    "uz": "Optik nuqson aniqlagich (VFL)",
+    "en": "Visual fault locator (VFL)",
+    "tr": "Görsel hata bulucu (VFL)",
+    "zh": "红光笔 (VFL)"
+  },
+  "Радиомост Wi-Fi": {
+    "uz": "Wi-Fi radiokoʻprik",
+    "en": "Wi-Fi wireless bridge",
+    "tr": "Wi-Fi kablosuz köprü",
+    "zh": "Wi-Fi 无线网桥"
+  },
+  "Умный термостат": {
+    "uz": "Aqlli termostat",
+    "en": "Smart thermostat",
+    "tr": "Akıllı termostat",
+    "zh": "智能温控器"
+  },
+  "Датчик напряжения (контроль фаз)": {
+    "uz": "Kuchlanish datchigi (fazalar nazorati)",
+    "en": "Voltage sensor (phase monitoring)",
+    "tr": "Gerilim sensörü (faz kontrolü)",
+    "zh": "电压传感器 (相位监测)"
+  },
+  "Делитель ТВ-сигнала": {
+    "uz": "TV-signal ajratgichi",
+    "en": "TV signal splitter",
+    "tr": "TV sinyal bölücü",
+    "zh": "电视信号分配器"
+  },
+  "6 м": {
+    "uz": "6 m",
+    "en": "6 m",
+    "tr": "6 m",
+    "zh": "6 m"
+  },
+  "Стеклянные створки": {
+    "uz": "Shisha tavaqalar",
+    "en": "Glass wings",
+    "tr": "Cam kanatlar",
+    "zh": "玻璃闸翼"
+  },
+  "Светильник с Wi-Fi камерой": {
+    "uz": "Wi-Fi kamerali chiroq",
+    "en": "Light fixture with Wi-Fi camera",
+    "tr": "Wi-Fi kameralı aydınlatma armatürü",
+    "zh": "带 Wi-Fi 摄像头的灯具"
+  },
+  "Беспроводной пульт": {
+    "uz": "Simsiz pult",
+    "en": "Wireless keypad",
+    "tr": "Kablosuz tuş takımı",
+    "zh": "无线键盘"
+  },
+  "Поворотная 4G-камера": {
+    "uz": "Buriluvchi 4G-kamera",
+    "en": "4G pan/tilt camera",
+    "tr": "Döner 4G kamera",
+    "zh": "4G 云台摄像机"
+  },
+  "Обжимной инструмент с тестером": {
+    "uz": "Testerli qisish asbobi",
+    "en": "Crimping tool with tester",
+    "tr": "Test cihazlı sıkma pensesi",
+    "zh": "带测线仪的压线钳"
+  },
+  "200 м": {
+    "uz": "200 m",
+    "en": "200 m",
+    "tr": "200 m",
+    "zh": "200 m"
+  },
+  "Хомут с площадкой для маркировки": {
+    "uz": "Markirovka maydonchali xomut",
+    "en": "Cable tie with marker tag",
+    "tr": "Etiket alanlı kablo bağı",
+    "zh": "标牌扎带"
+  },
+  "Адаптер-салазки 2.5″→3.5″": {
+    "uz": "Adapter-salazka 2.5″→3.5″",
+    "en": "Drive adapter bracket 2.5″→3.5″",
+    "tr": "Disk adaptör kızağı 2.5″→3.5″",
+    "zh": "硬盘转接架 2.5″→3.5″"
+  },
+  "300 м": {
+    "uz": "300 m",
+    "en": "300 m",
+    "tr": "300 m",
+    "zh": "300 m"
+  },
+  "52 Вт": {
+    "uz": "52 W",
+    "en": "52 W",
+    "tr": "52 W",
+    "zh": "52 W"
+  },
+  "10 ТБ": {
+    "uz": "10 TB",
+    "en": "10 TB",
+    "tr": "10 TB",
+    "zh": "10 TB"
+  },
+  "7 Ач": {
+    "uz": "7 Ah",
+    "en": "7 Ah",
+    "tr": "7 Ah",
+    "zh": "7 Ah"
+  },
+  "Извещатель разбития стекла": {
+    "uz": "Oyna sinishi datchigi",
+    "en": "Glass break detector",
+    "tr": "Cam kırılma dedektörü",
+    "zh": "玻璃破碎探测器"
+  },
+  "Очиститель оптических разъёмов": {
+    "uz": "Optik ulagichlar tozalagichi",
+    "en": "Fiber connector cleaner",
+    "tr": "Fiber konnektör temizleyici",
+    "zh": "光纤连接器清洁器"
+  },
+  "Плоскогубцы-кусачки": {
+    "uz": "Ombir-kesgich",
+    "en": "Combination pliers",
+    "tr": "Kombine pense",
+    "zh": "钢丝钳"
+  },
+  "Пульт-брелок (радио)": {
+    "uz": "Brelok-pult (radio)",
+    "en": "Key fob remote (radio)",
+    "tr": "Anahtarlık kumanda (radyo)",
+    "zh": "遥控钥匙扣 (无线)"
+  },
+  "Кронштейн для терминала": {
+    "uz": "Terminal uchun kronshteyn",
+    "en": "Terminal bracket",
+    "tr": "Terminal braketi",
+    "zh": "终端支架"
+  },
+  "Беспроводной пульт с экраном": {
+    "uz": "Ekranli simsiz pult",
+    "en": "Wireless keypad with display",
+    "tr": "Ekranlı kablosuz tuş takımı",
+    "zh": "带屏无线键盘"
+  },
+  "Брелок управления": {
+    "uz": "Boshqaruv breloki",
+    "en": "Control key fob",
+    "tr": "Kumanda anahtarlığı",
+    "zh": "遥控钥匙扣"
+  },
+  "3 Мп": {
+    "uz": "3 MP",
+    "en": "3 MP",
+    "tr": "3 MP",
+    "zh": "3 MP"
+  },
+  "Энкодер карт (USB)": {
+    "uz": "Karta enkoderi (USB)",
+    "en": "Card encoder (USB)",
+    "tr": "Kart kodlayıcı (USB)",
+    "zh": "发卡器 (USB)"
+  },
+  "Крышка сплайс-кассеты": {
+    "uz": "Splays-kasseta qopqogʻi",
+    "en": "Splice tray cover",
+    "tr": "Ek kaseti kapağı",
+    "zh": "熔接盘盖板"
+  },
+  "Автокормушка для животных": {
+    "uz": "Uy hayvonlari uchun avtomatik yemlagich",
+    "en": "Automatic pet feeder",
+    "tr": "Otomatik evcil hayvan besleyicisi",
+    "zh": "自动宠物喂食器"
+  },
+  "Плоскогубцы многофункциональные": {
+    "uz": "Koʻp funksiyali ombir",
+    "en": "Multi-function pliers",
+    "tr": "Çok fonksiyonlu pense",
+    "zh": "多功能钳"
+  },
+  "Комбо (RJ45/SFP)": {
+    "uz": "Kombo (RJ45/SFP)",
+    "en": "Combo (RJ45/SFP)",
+    "tr": "Kombo (RJ45/SFP)",
+    "zh": "Combo 口 (RJ45/SFP)"
+  },
+  "Светодиодная лента": {
+    "uz": "Svetodiodli lenta",
+    "en": "LED strip",
+    "tr": "LED şerit",
+    "zh": "LED 灯带"
+  },
+  "Умный клапан (вода/газ)": {
+    "uz": "Aqlli klapan (suv/gaz)",
+    "en": "Smart valve (water/gas)",
+    "tr": "Akıllı vana (su/gaz)",
+    "zh": "智能阀门 (水/燃气)"
+  },
+  "Электронный замок": {
+    "uz": "Elektron qulf",
+    "en": "Electronic lock",
+    "tr": "Elektronik kilit",
+    "zh": "电子锁"
+  },
+  "Кронштейн (настенный)": {
+    "uz": "Kronshteyn (devorga)",
+    "en": "Bracket (wall-mount)",
+    "tr": "Braket (duvar tipi)",
+    "zh": "支架 (壁装)"
+  },
+  "Карта доступа": {
+    "uz": "Kirish kartasi",
+    "en": "Access card",
+    "tr": "Erişim kartı",
+    "zh": "门禁卡"
+  },
+  "Переходник для вилки": {
+    "uz": "Vilka adapteri",
+    "en": "Plug adapter",
+    "tr": "Fiş adaptörü",
+    "zh": "插头转换器"
+  },
+  "Стриппер коаксиального кабеля": {
+    "uz": "Koaksial kabel uchun stripper",
+    "en": "Coaxial cable stripper",
+    "tr": "Koaksiyel kablo soyucu",
+    "zh": "同轴电缆剥线器"
+  },
+  "1610 нм": {
+    "uz": "1610 nm",
+    "en": "1610 nm",
+    "tr": "1610 nm",
+    "zh": "1610 nm"
+  },
+  "Уличная сирена (беспроводная)": {
+    "uz": "Tashqi sirena (simsiz)",
+    "en": "Outdoor siren (wireless)",
+    "tr": "Dış ortam sireni (kablosuz)",
+    "zh": "室外警号 (无线)"
+  },
+  "Уличное соединение витой пары": {
+    "uz": "Tashqi muhitda oʻralgan juft kabelni ulash",
+    "en": "Outdoor twisted-pair splicing",
+    "tr": "Dış ortamda bükümlü çift kablo bağlantısı",
+    "zh": "室外双绞线连接"
+  },
+  "28/26 дБ": {
+    "uz": "28/26 dB",
+    "en": "28/26 dB",
+    "tr": "28/26 dB",
+    "zh": "28/26 dB"
+  },
+  "HDMI-удлинитель": {
+    "uz": "HDMI-uzaytirgich",
+    "en": "HDMI extender",
+    "tr": "HDMI uzatıcı",
+    "zh": "HDMI 延长器"
+  },
+  "18 ТБ": {
+    "uz": "18 TB",
+    "en": "18 TB",
+    "tr": "18 TB",
+    "zh": "18 TB"
+  },
+  "Шасси для мультиплексоров": {
+    "uz": "Multipleksorlar uchun shassi",
+    "en": "Multiplexer chassis",
+    "tr": "Çoklayıcı şasisi",
+    "zh": "复用器机框"
+  },
+  "1 плинтов": {
+    "uz": "1 ta plint",
+    "en": "1 module",
+    "tr": "1 modül",
+    "zh": "1 个模块"
+  },
+  "Датчик открытия двери": {
+    "uz": "Eshik ochilish datchigi",
+    "en": "Door contact sensor",
+    "tr": "Kapı açılma sensörü",
+    "zh": "门磁传感器"
+  },
+  "Датчик движения (беспроводной)": {
+    "uz": "Harakat datchigi (simsiz)",
+    "en": "Motion sensor (wireless)",
+    "tr": "Hareket sensörü (kablosuz)",
+    "zh": "移动探测器 (无线)"
+  },
+  "600×600 мм": {
+    "uz": "600×600 mm",
+    "en": "600×600 mm",
+    "tr": "600×600 mm",
+    "zh": "600×600 mm"
+  },
+  "Купольная IP-камера": {
+    "uz": "Gumbazsimon IP-kamera",
+    "en": "IP dome camera",
+    "tr": "Dome IP kamera",
+    "zh": "半球 IP 摄像机"
+  },
+  "Измеритель оптической мощности": {
+    "uz": "Optik quvvat oʻlchagich",
+    "en": "Optical power meter",
+    "tr": "Optik güç ölçer",
+    "zh": "光功率计"
+  },
+  "800×1000×2222 мм": {
+    "uz": "800×1000×2222 mm",
+    "en": "800×1000×2222 mm",
+    "tr": "800×1000×2222 mm",
+    "zh": "800×1000×2222 mm"
+  },
+  "Кнопка тревожная": {
+    "uz": "Trevoga tugmasi",
+    "en": "Panic button",
+    "tr": "Panik butonu",
+    "zh": "紧急按钮"
+  },
+  "10 плинтов": {
+    "uz": "10 ta plint",
+    "en": "10 modules",
+    "tr": "10 modül",
+    "zh": "10 个模块"
+  },
+  "Кронштейн угловой (телескопический)": {
+    "uz": "Burchak kronshteyni (teleskopik)",
+    "en": "Corner bracket (telescopic)",
+    "tr": "Köşe braketi (teleskopik)",
+    "zh": "转角支架 (伸缩式)"
+  },
+  "Держатель бит": {
+    "uz": "Bita ushlagichi",
+    "en": "Bit holder",
+    "tr": "Bits tutucu",
+    "zh": "批头杆"
+  },
+  "Плоскогубцы": {
+    "uz": "Ombir",
+    "en": "Pliers",
+    "tr": "Pense",
+    "zh": "钳子"
+  },
+  "Влагозащита": {
+    "uz": "Namlikdan himoya",
+    "en": "Moisture protection",
+    "tr": "Nem koruması",
+    "zh": "防潮"
+  },
+  "Монтажный нож": {
+    "uz": "Montaj pichogʻi",
+    "en": "Utility knife",
+    "tr": "Montaj bıçağı",
+    "zh": "美工刀"
+  },
+  "30 А": {
+    "uz": "30 A",
+    "en": "30 A",
+    "tr": "30 A",
+    "zh": "30 A"
+  },
+  "375 Вт": {
+    "uz": "375 W",
+    "en": "375 W",
+    "tr": "375 W",
+    "zh": "375 W"
+  },
+  "Фонарь ручной": {
+    "uz": "Qoʻl fonari",
+    "en": "Handheld flashlight",
+    "tr": "El feneri",
+    "zh": "手电筒"
+  },
+  "Динамик (трансляция)": {
+    "uz": "Dinamik (translyatsiya)",
+    "en": "Speaker (public address)",
+    "tr": "Hoparlör (anons)",
+    "zh": "扬声器 (广播)"
+  },
+  "4G-роутер (CPE)": {
+    "uz": "4G-router (CPE)",
+    "en": "4G router (CPE)",
+    "tr": "4G yönlendirici (CPE)",
+    "zh": "4G 路由器 (CPE)"
+  },
+  "Оптический фильтр-модуль": {
+    "uz": "Optik filtr-modul",
+    "en": "Optical filter module",
+    "tr": "Optik filtre modülü",
+    "zh": "光滤波模块"
+  },
+  "Датчик протечки воды": {
+    "uz": "Suv oqishi datchigi",
+    "en": "Water leak sensor",
+    "tr": "Su kaçağı sensörü",
+    "zh": "水浸传感器"
+  },
+  "300 мм": {
+    "uz": "300 mm",
+    "en": "300 mm",
+    "tr": "300 mm",
+    "zh": "300 mm"
+  },
+  "Полые стены": {
+    "uz": "Ichi boʻsh devorlar",
+    "en": "Hollow walls",
+    "tr": "Boşluklu duvarlar",
+    "zh": "空心墙"
+  },
+  "Бетон": {
+    "uz": "Beton",
+    "en": "Concrete",
+    "tr": "Beton",
+    "zh": "混凝土"
+  },
+  "Контроллер Wi-Fi сети": {
+    "uz": "Wi-Fi tarmogʻi kontrolleri",
+    "en": "Wi-Fi network controller",
+    "tr": "Wi-Fi ağ denetleyicisi",
+    "zh": "Wi-Fi 无线控制器"
+  },
+  "Изолятор шлейфа": {
+    "uz": "Shleyf izolyatori",
+    "en": "Loop isolator",
+    "tr": "Hat izolatörü",
+    "zh": "回路隔离器"
+  },
+  "Стойка ограждения с лентой": {
+    "uz": "Lentali toʻsiq ustuni",
+    "en": "Retractable belt stanchion",
+    "tr": "Şeritli bariyer direği",
+    "zh": "伸缩带隔离柱"
+  },
+  "Привод шлагбаума": {
+    "uz": "Shlagbaum yuritmasi",
+    "en": "Barrier gate operator",
+    "tr": "Bariyer motoru",
+    "zh": "道闸驱动器"
+  },
+  "Радиорепитер": {
+    "uz": "Radiorepiter",
+    "en": "Wireless repeater",
+    "tr": "Kablosuz tekrarlayıcı",
+    "zh": "无线中继器"
+  },
+  "Термоусадочная трубка для волокна": {
+    "uz": "Tola uchun termousadka naychasi",
+    "en": "Fiber heat-shrink sleeve",
+    "tr": "Fiber için ısıyla daralan makaron",
+    "zh": "光纤热缩管"
+  },
+  "Извещатель тепловой": {
+    "uz": "Issiqlik detektori",
+    "en": "Heat detector",
+    "tr": "Isı dedektörü",
+    "zh": "感温探测器"
+  },
+  "Извещатель дымовой": {
+    "uz": "Tutun detektori",
+    "en": "Smoke detector",
+    "tr": "Duman dedektörü",
+    "zh": "感烟探测器"
+  },
+  "Ножницы монтажные": {
+    "uz": "Montaj qaychisi",
+    "en": "Electrician scissors",
+    "tr": "Montaj makası",
+    "zh": "电工剪刀"
+  },
+  "Оптический патч-корд": {
+    "uz": "Optik patch-kord",
+    "en": "Fiber patch cord",
+    "tr": "Fiber patch kablo",
+    "zh": "光纤跳线"
+  },
+  "Педаль управления (для гарнитуры)": {
+    "uz": "Boshqaruv pedali (garnitura uchun)",
+    "en": "Foot pedal (for headset)",
+    "tr": "Kontrol pedalı (kulaklık için)",
+    "zh": "控制脚踏 (用于耳麦)"
+  },
+  "Уличный монтажный щит": {
+    "uz": "Tashqi montaj shiti",
+    "en": "Outdoor enclosure",
+    "tr": "Dış ortam montaj panosu",
+    "zh": "室外安装箱"
+  },
+  "2000 Вт": {
+    "uz": "2000 W",
+    "en": "2000 W",
+    "tr": "2000 W",
+    "zh": "2000 W"
+  },
+  "305 м (бухта)": {
+    "uz": "305 m (buxta)",
+    "en": "305 m (reel)",
+    "tr": "305 m (makara)",
+    "zh": "305 m (卷)"
+  },
+  "Бескислородная медь": {
+    "uz": "Kislorodsiz mis",
+    "en": "Oxygen-free copper",
+    "tr": "Oksijensiz bakır",
+    "zh": "无氧铜"
+  },
+  "570×600×370 мм": {
+    "uz": "570×600×370 mm",
+    "en": "570×600×370 mm",
+    "tr": "570×600×370 mm",
+    "zh": "570×600×370 mm"
+  },
+  "600×600×1150 мм": {
+    "uz": "600×600×1150 mm",
+    "en": "600×600×1150 mm",
+    "tr": "600×600×1150 mm",
+    "zh": "600×600×1150 mm"
+  },
+  "2 × 12 см": {
+    "uz": "2 × 12 cm",
+    "en": "2 × 12 cm",
+    "tr": "2 × 12 cm",
+    "zh": "2 × 12 cm"
+  },
+  "4 × 12 см": {
+    "uz": "4 × 12 cm",
+    "en": "4 × 12 cm",
+    "tr": "4 × 12 cm",
+    "zh": "4 × 12 cm"
+  },
+  "Оптический микробокс (настенный)": {
+    "uz": "Optik mikroquti (devorga)",
+    "en": "Fiber micro box (wall-mount)",
+    "tr": "Fiber mikro kutu (duvar tipi)",
+    "zh": "光纤微型盒 (壁挂)"
+  },
+  "6 соединений": {
+    "uz": "6 ta ulanish",
+    "en": "6 splices",
+    "tr": "6 ek",
+    "zh": "6 个熔接点"
+  },
+  "Полукольцо для кабельных жгутов": {
+    "uz": "Kabel toʻplamlari uchun yarim halqa",
+    "en": "Cable management half-ring",
+    "tr": "Kablo demeti için yarım halka",
+    "zh": "理线半圆环"
+  },
+  "70 м": {
+    "uz": "70 m",
+    "en": "70 m",
+    "tr": "70 m",
+    "zh": "70 m"
+  },
+  "Сменная лента для очистителя": {
+    "uz": "Tozalagich uchun almashtiriladigan lenta",
+    "en": "Replacement tape for cleaner",
+    "tr": "Temizleyici yedek şeridi",
+    "zh": "清洁器替换带"
+  },
+  "Крепление для распределительных коробок": {
+    "uz": "Tarqatish qutilari uchun mahkamlagich",
+    "en": "Distribution box mount",
+    "tr": "Dağıtım kutusu montaj aparatı",
+    "zh": "分线盒固定件"
+  },
+  "1,5-5,8/7,0 мм": {
+    "uz": "1,5-5,8/7,0 mm",
+    "en": "1.5-5.8/7.0 mm",
+    "tr": "1,5-5,8/7,0 mm",
+    "zh": "1.5-5.8/7.0 mm"
+  },
+  "40 кВА": {
+    "uz": "40 kVA",
+    "en": "40 kVA",
+    "tr": "40 kVA",
+    "zh": "40 kVA"
+  },
+  "Датчик дыма": {
+    "uz": "Tutun datchigi",
+    "en": "Smoke sensor",
+    "tr": "Duman sensörü",
+    "zh": "烟雾传感器"
+  },
+  "Оптическая розетка (нанобокс)": {
+    "uz": "Optik rozetka (nanoquti)",
+    "en": "Fiber outlet (nano box)",
+    "tr": "Fiber priz (nano kutu)",
+    "zh": "光纤插座 (微型盒)"
+  },
+  "Дозатор для спирта": {
+    "uz": "Spirt dozatori",
+    "en": "Alcohol dispenser",
+    "tr": "Alkol dispenseri",
+    "zh": "酒精按压瓶"
+  },
+  "Анкерный болт": {
+    "uz": "Anker bolt",
+    "en": "Anchor bolt",
+    "tr": "Ankraj cıvatası",
+    "zh": "膨胀螺栓"
+  },
+  "Лицевая панель": {
+    "uz": "Old panel",
+    "en": "Faceplate",
+    "tr": "Ön panel",
+    "zh": "面板"
+  },
+  "80×80 мм": {
+    "uz": "80×80 mm",
+    "en": "80×80 mm",
+    "tr": "80×80 mm",
+    "zh": "80×80 mm"
+  },
+  "Проходной адаптер (1 порт)": {
+    "uz": "Oʻtkazuvchi adapter (1 port)",
+    "en": "Pass-through adapter (1 port)",
+    "tr": "Geçişli adaptör (1 port)",
+    "zh": "直通适配器 (1 口)"
+  },
+  "Скрепа монтажная": {
+    "uz": "Montaj skrepasi",
+    "en": "Band buckle",
+    "tr": "Çelik bant tokası",
+    "zh": "钢带扣"
+  },
+  "Блок управления климатом (термостат)": {
+    "uz": "Iqlim boshqaruv bloki (termostat)",
+    "en": "Climate control unit (thermostat)",
+    "tr": "İklim kontrol ünitesi (termostat)",
+    "zh": "温控单元 (温控器)"
+  },
+  "Плинт LSA": {
+    "uz": "LSA plinti",
+    "en": "LSA module",
+    "tr": "LSA modülü",
+    "zh": "LSA 卡接模块"
+  },
+  "Монтажная коробка накладная": {
+    "uz": "Ustki montaj qutisi",
+    "en": "Surface-mount box",
+    "tr": "Sıva üstü montaj kutusu",
+    "zh": "明装底盒"
+  },
+  "86×86 мм": {
+    "uz": "86×86 mm",
+    "en": "86×86 mm",
+    "tr": "86×86 mm",
+    "zh": "86×86 mm"
+  },
+  "30 пар": {
+    "uz": "30 juft",
+    "en": "30 pairs",
+    "tr": "30 çift",
+    "zh": "30 对"
+  },
+  "Заглушка для ODF": {
+    "uz": "ODF uchun zaglushka",
+    "en": "ODF blank plate",
+    "tr": "ODF kör kapağı",
+    "zh": "ODF 盲板"
+  },
+  "Лента монтажная (нержавеющая)": {
+    "uz": "Montaj lentasi (zanglamaydigan)",
+    "en": "Mounting band (stainless)",
+    "tr": "Montaj bandı (paslanmaz)",
+    "zh": "安装钢带 (不锈钢)"
+  },
+  "200 мм": {
+    "uz": "200 mm",
+    "en": "200 mm",
+    "tr": "200 mm",
+    "zh": "200 mm"
+  },
+  "250 мм": {
+    "uz": "250 mm",
+    "en": "250 mm",
+    "tr": "250 mm",
+    "zh": "250 mm"
+  },
+  "Замок для стеклянных дверей": {
+    "uz": "Shisha eshiklar uchun qulf",
+    "en": "Glass door lock",
+    "tr": "Cam kapı kilidi",
+    "zh": "玻璃门锁"
+  },
+  "Сервер видеонаблюдения (all-in-one)": {
+    "uz": "Videokuzatuv serveri (all-in-one)",
+    "en": "Video surveillance server (all-in-one)",
+    "tr": "Video gözetim sunucusu (all-in-one)",
+    "zh": "视频监控服务器 (一体机)"
   }
 }
