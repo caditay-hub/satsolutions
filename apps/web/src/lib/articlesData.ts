@@ -91,10 +91,10 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Fire alarm servicing in Uzbekistan: an annual plan, not «once a quarter»",
+        title: "Fire alarm servicing in Uzbekistan: an annual plan, not “once a quarter”",
         excerpt: "Uzbekistan's Fire Safety Rules contain no “once a quarter” norm: clause 148 requires an annual work plan based on the manufacturer's documentation. Who may service the system, and where the 30 days and 24 hours come from.",
         sections: [
-          { h: "There is no «once a quarter» norm in Uzbekistan", p: [
+          { h: "There is no “once a quarter” norm in Uzbekistan", p: [
             "This is the most common misconception, and it even makes its way into contractor quotes. The requirement to service a fire alarm at least once a quarter belongs to a Russian guidance document. Uzbekistan applies the Fire Safety Rules approved by Cabinet of Ministers Decree No. 649 of 20 October 2020, and they are built differently.",
             "Clause 148 of the Rules sets another principle: routine work on the maintenance and scheduled preventive repair of fire alarm and fire suppression installations, smoke protection systems, fire warning and evacuation management systems is carried out on the basis of an annual work plan drawn up with regard to the technical documentation of the manufacturing enterprise and the timing of repair work. In other words, the interval comes from the passport of the specific equipment, not from a universal figure.",
           ] },
