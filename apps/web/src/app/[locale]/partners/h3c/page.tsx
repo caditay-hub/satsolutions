@@ -70,10 +70,10 @@ const D: Record<string, Dict> = {
   uz: {
     title: "Oʻzbekistonda H3C — SAT Solutions hamkori | serverlar, virtualizatsiya, tarmoqlar",
     metaDesc:
-      "SAT Solutions — Oʻzbekistonda H3C hamkori: H3C UniServer serverlari, H3C CAS virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlarini Toshkentda kalit topshirish asosida yetkazib berish va joriy etish. Loyiha, koʻchirish, vendor qoʻllab-quvvatlash.",
+      "SAT Solutions — Oʻzbekistonda H3C hamkori: H3C UniServer serverlari, H3C CAS virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlarini Toshkentda toʻliq tayyor holda yetkazib berish va joriy etish. Loyiha, koʻchirish, vendor qoʻllab-quvvatlash.",
     h1: "Oʻzbekistonda H3C — SAT Solutions hamkori",
     lead:
-      "SAT Solutions — Oʻzbekistonda H3C hamkori. H3C korporativ uskunalarini kalit topshirish asosida yetkazib beramiz va joriy etamiz: serverlar, virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlari — auditdan va spetsifikatsiyadan ishlayotgan tizimlarni koʻchirish va vendor qoʻllab-quvvatlashgacha.",
+      "SAT Solutions — Oʻzbekistonda H3C hamkori. H3C korporativ uskunalarini toʻliq tayyor holda yetkazib beramiz va joriy etamiz: serverlar, virtualizatsiya platformasi, kommutatorlar va maʼlumotlar markazi yechimlari — auditdan va spetsifikatsiyadan ishlayotgan tizimlarni koʻchirish va vendor qoʻllab-quvvatlashgacha.",
     badge: "Rasmiy hamkorlik",
     sections: [
       {
@@ -92,7 +92,7 @@ const D: Record<string, Dict> = {
         ],
       },
       {
-        h: "Nega SAT Solutions bilan kalit topshirish asosida",
+        h: "Nega toʻliq tayyor yechim — SAT Solutions bilan",
         p: [
           "Loyihani toʻliq olib boramiz: infratuzilmani tekshirish, yuklamaga mos konfiguratsiyani tanlash, yetkazib berish, stojga oʻrnatish, platformani joylashtirish, mavjud tizimlarni koʻchirish, zaxira nusxalashni sozlash va buyurtmachi administratorlarini oʻqitish.",
           "H3C yillik vendor qoʻllab-quvvatlashini ulaymiz va topshirgandan keyin ham aloqada boʻlamiz — infratuzilmani kuzatib boramiz va platformani almashtirmasdan masshtablashga yordam beramiz.",
@@ -101,8 +101,8 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "Batafsil",
     catalog: "Katalogda H3C uskunalari",
-    caseLink: "Bizning keys: server xonasini kalit topshirish asosida montaj qilish",
-    svcServer: "Serverlar va server xonalari kalit topshirish asosida",
+    caseLink: "Bizning keys: server xonasini toʻliq tayyor holda montaj qilish",
+    svcServer: "Serverlar va server xonalari toʻliq tayyor holda",
     svcVirt: "Infratuzilma virtualizatsiyasi",
     svcNet: "Korporativ tarmoqlar va SKS",
     ctaTitle: "H3C uskunalarida loyiha kerakmi?",

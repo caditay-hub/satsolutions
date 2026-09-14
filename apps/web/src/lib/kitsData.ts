@@ -51,7 +51,7 @@ export const KITS: Kit[] = [
         priceLabel: `от ${f(4000000)} сум`,
       },
       uz: {
-        title: "Uy uchun videokuzatuv toʻplami — kalit topshirish",
+        title: "Uy uchun videokuzatuv toʻplami — toʻliq tayyor holda",
         tagline: "4 ta koʻcha IP-kamerasi 4 Mp, registrator, disk va montaj — oʻrnatilgan kuniyoq telefondan koʻrasiz.",
         audience: "Hovli, dala hovli, taunxaus: hovli, darvoza, perimetr va kirish.",
         includes: [

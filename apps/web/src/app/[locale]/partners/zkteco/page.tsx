@@ -95,7 +95,7 @@ const D: Record<string, Block> = {
 
   uz: {
     badge: "ZKTeco hamkori",
-    h1: "Oʻzbekistonda ZKTeco: SKUD, turniketlar va shlagbaumlar kalit topshirish sharti bilan",
+    h1: "Oʻzbekistonda ZKTeco: SKUD, turniketlar va shlagbaumlar toʻliq tayyor holda",
     lead: "SAT Solutions — ZKTeco hamkori: kirish nazorati tizimlarini toʻliq yetkazib beramiz, loyihalaymiz va oʻrnatamiz — eshikdagi terminaldan kiraverishdagi shlagbaumgacha. Barcha uskunalar bitta ishlab chiqaruvchiniki va bitta dasturda ishlaydi.",
     title: "Toshkentda ZKTeco — SKUD, turniket, shlagbaum | SAT Solutions",
     metaDesc: "Oʻzbekistonda ZKTeco hamkori: turniketlar, shlagbaumlar, biometrik terminallar, raqam tanish va parkovka yagona ZKBio CVSecurity platformasida. Loyihalash, montaj, integratsiya va Toshkentda servis.",

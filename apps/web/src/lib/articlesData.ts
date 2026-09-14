@@ -731,7 +731,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Modernizatsiya haqida qachon oʻylash kerak", p: [
             "Trubkani almashtirish xususiy masalani hal qiladi, lekin podyezd tizimining imkoniyatlarini oʻzgartirmaydi: unda na video, na smartfonga qoʻngʻiroq, na telefondagi kalitlar paydo boʻladi. Shu funksiyalar kerak boʻlsa, gap trubka haqida emas, oʻz domofoniyangiz haqida boradi — xususiy uyda, ofisda, doʻkonda yoki yangi podyezdda.",
-            "SAT Solutions bunday tizimlarni kalit topshirish sharti bilan montaj qiladi va modernizatsiya qiladi: panel, monitor va qulf tanlaymiz, uskunani yetkazamiz, liniyani tortamiz, ilovani sozlaymiz va foydalanishni oʻrgatamiz; kafolat texnikani ham, ishlarni ham qamrab oladi. Soʻrovga ish kuni davomida javob beramiz.",
+            "SAT Solutions bunday tizimlarni toʻliq tayyor holda montaj qiladi va modernizatsiya qiladi: panel, monitor va qulf tanlaymiz, uskunani yetkazamiz, liniyani tortamiz, ilovani sozlaymiz va foydalanishni oʻrgatamiz; kafolat texnikani ham, ishlarni ham qamrab oladi. Soʻrovga ish kuni davomida javob beramiz.",
           ] },
         ],
         faq: [
@@ -1099,7 +1099,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Tanlov va montaj", p: [
             "Toshkentdagi omborda — Hikvision domofoniyasining asosiy IP-liniyasi: ixchamlaridan yuzni taniydigan antivandal panellargacha, ichki monitorlar, kvartira va uy toʻplamlari. Eshigingiz, tarmogʻingiz va byudjetingizga tanlashga yordam beramiz.",
-            "Kalit topshirish bilan oʻrnatamiz: panel, monitor, qulf, tarmoq, butun oila telefonlarini bogʻlash va oʻrgatish. Uskunani oʻzimiz yetkazamiz — shunda kafolat texnikani ham, sozlashni ham qamrab oladi, «hammasini oʻrnatishdi, telefonga qoʻngʻiroq kelmayapti» degan tipik muammo esa topshirish bosqichidayoq hal boʻladi. Soʻrovga ish kuni davomida javob beramiz.",
+            "Toʻliq tayyor holda oʻrnatamiz: panel, monitor, qulf, tarmoq, butun oila telefonlarini bogʻlash va oʻrgatish. Uskunani oʻzimiz yetkazamiz — shunda kafolat texnikani ham, sozlashni ham qamrab oladi, «hammasini oʻrnatishdi, telefonga qoʻngʻiroq kelmayapti» degan tipik muammo esa topshirish bosqichidayoq hal boʻladi. Soʻrovga ish kuni davomida javob beramiz.",
           ] },
         ],
         faq: [
@@ -1281,8 +1281,8 @@ export const ARTICLES: Article[] = [
             "Tipik xato — uzun trassada ingichka kabel: 30–50 metrda kuchsiz simlar panel quvvatini «choʻktiradi», videoda shovqinlar paydo boʻladi. Kalitkagacha kesim boʻyicha zaxirali kabel yotqizing (qulf quvvatiga — alohida yoʻgʻon simlar) va gofra yoki trubada, belkurak yetmaydigan chuqurlikda.",
             "Qulf quvvatini domofondan alohida hisoblang: impulsli qulf ochilish paytida nominaldan bir necha baravar koʻp tok oladi, kuchsiz blok esa tasvir bilan birga «choʻkadi». Darvozaga avtomatika rejalashtirilsa — oʻsha transheyaga uning kabellarini ham qoʻying: ikki marta kavlash qimmat.",
           ] },
-          { h: "Kalit topshirish montaji va omborda nima bor", p: [
-            "Xususiy uy videodomofoniyasini kalit topshirish bilan yigʻamiz: kalitkaga panel, monitor (yoki ikkitasi — qavatlarga), chiqish tugmali elektromexanik qulf, gofradagi trassa, butun oila telefonlariga qoʻngʻiroq sozlash. Toshkent boʻylab muhandis chiqishi bepul — hovlini koʻrib, aniq konfiguratsiyani aytamiz.",
+          { h: "Toʻliq tayyor holda montaj va omborda nima bor", p: [
+            "Xususiy uy videodomofoniyasini toʻliq tayyor holda yigʻamiz: kalitkaga panel, monitor (yoki ikkitasi — qavatlarga), chiqish tugmali elektromexanik qulf, gofradagi trassa, butun oila telefonlariga qoʻngʻiroq sozlash. Toshkent boʻylab muhandis chiqishi bepul — hovlini koʻrib, aniq konfiguratsiyani aytamiz.",
             "Toshkentdagi omborda — oltmishdan ortiq domofoniya pozitsiyasi, asosi — Hikvision IP-liniyasi: chaqiruv panellari, monitorlar, toʻplamlar. Byudjetga moslaymiz: oddiy analog toʻplamdan kameralar va aqlli uy bilan integratsiyalangan IP-tizimgacha.",
           ] },
         ],
@@ -2025,7 +2025,7 @@ export const ARTICLES: Article[] = [
         faq: [
           { q: "1000 m² omborga toʻrtta kamera bilan boʻladimi?", a: "«Nimadir boʻlyapti» umumiy koʻrinish sifatida — ha. Lekin bunday tizim joʻnatish boʻyicha birorta bahsni hal qilmaydi: mashina raqamlari va palletlar tarkibi oʻqilmaydi. Sonni vazifa belgilaydi." },
           { q: "Nima muhimroq: koʻproq kamera yoki yuqoriroq ruxsat?", a: "Toʻgʻri fokuslar ikkalasidan ham muhim. Kerakli nuqtadagi kerakli obyektivli 4 MP kamera shipga yoyilgan uchta «shirikni» yengadi." },
-          { q: "Bu qancha turadi?", a: "Tartib: mini-ombor — kalit topshirish bilan bir necha oʻn million soʻmdan, 1000 m² — kamera soni va kabel trassalari hisobiga moʻtadil koʻproq. Aniq smetani plan boʻyicha bepul hisoblaymiz — takliflarni u bilan solishtirish kerak." },
+          { q: "Bu qancha turadi?", a: "Tartib: mini-ombor — toʻliq tayyor holda bir necha oʻn million soʻmdan, 1000 m² — kamera soni va kabel trassalari hisobiga moʻtadil koʻproq. Aniq smetani plan boʻyicha bepul hisoblaymiz — takliflarni u bilan solishtirish kerak." },
         ],
       },
       en: {
@@ -2958,7 +2958,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Vaziyatingizga nimani tanlash", p: [
             "Uch xonagacha kvartira — toʻgʻri joylashtirilgan zamonaviy router, kerak boʻlsa bitta mesh-uzel. Katta kvartira yoki uy — 2–3 uzelli mesh, qavatlar orasi kabel bogʻlamli boʻlsa yaxshi. Ofis — xona plani boʻyicha hisoblangan PoE va kontrollerli kabelli kirish nuqtalari.",
-            "Biz radiotekshiruv qilamiz, nuqtalar soni va joyini hisoblaymiz va kalit topshirish bilan oʻrnatamiz — kvartiradan yuz xodimli ofisgacha. TP-Link, MikroTik, Ubiquiti va Ruijie uskunalari bilan ishlaymiz: kirish nuqtalari, kommutatorlar va kontrollerlarni oʻzimiz yetkazamiz, platformani koʻlamga qarab tanlaymiz.",
+            "Biz radiotekshiruv qilamiz, nuqtalar soni va joyini hisoblaymiz va toʻliq tayyor holda oʻrnatamiz — kvartiradan yuz xodimli ofisgacha. TP-Link, MikroTik, Ubiquiti va Ruijie uskunalari bilan ishlaymiz: kirish nuqtalari, kommutatorlar va kontrollerlarni oʻzimiz yetkazamiz, platformani koʻlamga qarab tanlaymiz.",
           ] },
         ],
         faq: [
@@ -3341,7 +3341,7 @@ export const ARTICLES: Article[] = [
       uz: {
         title: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika va narx nimadan iborat",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini koʻrib chiqamiz.",
-        sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda kalit topshirish, kafolat va servis. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
+        sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish, kafolat va servis. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
             "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki zakladnoy, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va petlevoy detektor, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
             "Qishda shlagbaum imtihon topshiradi: silliq start muzlagan strelani yulishga yoʻl qoʻymaydi, mavsumiy moy mexanikani saqlaydi. Qishki rejimlarni oʻrnatish paytida sozlaymiz, shartnoma boʻyicha esa oʻzimiz montaj qilgan shlagbaumlarga xizmat koʻrsatamiz: moylash, sozlashlar, pult va fotoelement batareykalari.",
           ] },
@@ -4515,7 +4515,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Tanlashda nimaga qarash", p: [
             "Panel ruxsati: eski analoglar loyqa tasvir beradi, zamonaviy IP — yuz koʻrinadigan Full HD. Panelning 90–120° koʻrish burchagi faqat yuzni emas, yonidagi makonni ham koʻrsatadi — mehmon yolgʻiz kelmagan boʻlsa muhim. Hodisalar xotirasi, panel yonidagi harakat detektsiyasi, svet oʻchganda qulf ishlashi — xariddan keyin emas, oldin beriladigan savollar.",
-            "Hikvision, Dahua va boshqa brendlar domofonlarini kalit topshirish sharti bilan tanlaymiz va oʻrnatamiz: panel, qulf, monitor, smartfonlarni sozlash va oʻrgatish. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va servis butun Oʻzbekiston boʻylab.",
+            "Hikvision, Dahua va boshqa brendlar domofonlarini toʻliq tayyor holda tanlaymiz va oʻrnatamiz: panel, qulf, monitor, smartfonlarni sozlash va oʻrgatish. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va servis butun Oʻzbekiston boʻylab.",
           ] },
         ],
         faq: [
@@ -6341,7 +6341,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Kirish, tartib va hujjatlar", p: [
             "Server xonasi eshigi jurnalli SKUD bilan yopiladi: «stoykalarga kim va qachon kirgan» — IT-direktorda javobi boʻlishi kerak boʻlgan savol. Ichkarida — har avariyada soatlarni tejaydigan tartib: kabel tashkiloti, liniyalar markirovkasi, kabel jurnallari, joylashuv sxemasi.",
-            "Server xonalarini kalit topshirish sharti bilan loyihalaymiz va quramiz: xona, UPS li elektrika, sovutish, gazli oʻt oʻchirish, SKUD va monitoring — ishlayotganlarni servislarni toʻxtatmasdan modernizatsiya qilamiz. Tekshiruv bepul; Toshkent va butun Oʻzbekiston boʻylab kafolat va servis kuzatuvi bilan ishlaymiz.",
+            "Server xonalarini toʻliq tayyor holda loyihalaymiz va quramiz: xona, UPS li elektrika, sovutish, gazli oʻt oʻchirish, SKUD va monitoring — ishlayotganlarni servislarni toʻxtatmasdan modernizatsiya qilamiz. Tekshiruv bepul; Toshkent va butun Oʻzbekiston boʻylab kafolat va servis kuzatuvi bilan ishlaymiz.",
           ] },
           { h: "Harorat va avariyalar monitoringi", p: [
             "Server xonasi jimgina ishdan chiqadi: konditsioner juma kuni kechasi toʻxtaydi, buni esa dushanba kuni qizib ketgan disklardan bilib qolishadi. Datchiklarning minimal toʻplami — sovuq va issiq yoʻlakdagi harorat, namlik, fals-pol ostidagi suv oqishi va eshik ochilishi; ularning barchasi Telegramga yoki navbatchining pochtasiga xabar yuborishi kerak.",
@@ -6510,7 +6510,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Kamera yoki server — va qanday boshlash", p: [
             "Bazaviy algoritmlarni zamonaviy Hikvision va Dahua kameralari «bortida» olib yuradi — perimetr va detektsiyaga server kerak emas. Katta yuz bazalari boʻyicha tanish, doʻkonlar tarmogʻi koʻlamidagi hisob va murakkab stsenariylar sunʼiy intellektli server platformasini talab qiladi. Ikkala variantni ham hisoblaymiz: modernizatsiya loyihasida analitika koʻpincha kalit kameralarni kerakli algoritmli modellarga almashtirish orqali olinadi, server esa faqat katta bazasiz ish bitmaydigan joyda qoʻshiladi.",
-            "Prays bilan emas, stsenariylar bilan boshlaymiz: trevogada nima boʻlishi kerak, xabar kimga keladi, rahbarga qanday hisobotlar kerak. Keyin bir-ikki kamerada pilot va tiraj. Toshkent va butun Oʻzbekiston boʻylab kalit topshirish sharti bilan joriy etamiz — operatorlarni oʻqitish, kafolat va qoʻllab-quvvatlash bilan.",
+            "Prays bilan emas, stsenariylar bilan boshlaymiz: trevogada nima boʻlishi kerak, xabar kimga keladi, rahbarga qanday hisobotlar kerak. Keyin bir-ikki kamerada pilot va tiraj. Toshkent va butun Oʻzbekiston boʻylab toʻliq tayyor holda joriy etamiz — operatorlarni oʻqitish, kafolat va qoʻllab-quvvatlash bilan.",
           ] },
           { h: "Biometriyani saqlash va bazaga kirish", p: [
             "Yuz shablonlari — shaxsiy maʼlumotlar, ularni obyekt ichida saqlagan maʼqul: serverda yoki registratorda, begona bulutda emas. Ishga tushirishdan oldin kim bazaga odam qoʻshish huquqiga ega, hodisalar qancha saqlanadi va ishdan boʻshaganda xodim yozuvi qanday oʻchiriladi — shular belgilab olinadi.",
@@ -7352,7 +7352,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Masofaviy kirish xavfsizligi", p: [
             "Zavod parolini noyob parolga almashtiring va bulut akkauntida ikki bosqichli autentifikatsiyani yoqing. Asosiy akkauntni xodimlarga bermang — ilovalar kamerani cheklangan huquqlar bilan «ulashish» imkonini beradi: faqat koʻrish, arxiv va sozlamalarsiz.",
-            "Biz har bir obyektda masofaviy koʻrishni kalit topshirish sharti bilan sozlaymiz: kameralar, registrator, telefonlaringizdagi ilova va kirish huquqlari.",
+            "Biz har bir obyektda masofaviy koʻrishni toʻliq tayyor holda sozlaymiz: kameralar, registrator, telefonlaringizdagi ilova va kirish huquqlari.",
           ] },
         ],
         faq: [
@@ -7541,7 +7541,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Odatiy xatolar", p: [
             "Kamera «topilmaydi» — koʻpincha u boshqa pastki tarmoqda: SADP orqali IP-manzilni almashtirish davolaydi. Ikkinchi keng tarqalgan xato — kabelning yomon siqilishi: link goh bor, goh yoʻq, kamera qayta yuklanadi.",
-            "Va asosiysi: kameralarni zavod sozlamalari bilan «internetga qarab» qoldirmang — aynan shunday qurilmalar botnetlarga tushadi. Oʻzingiz shugʻullanishni istamasangiz — kalit topshirish sharti bilan ulab, sozlab beramiz.",
+            "Va asosiysi: kameralarni zavod sozlamalari bilan «internetga qarab» qoldirmang — aynan shunday qurilmalar botnetlarga tushadi. Oʻzingiz shugʻullanishni istamasangiz — toʻliq tayyor holda ulab, sozlab beramiz.",
           ] },
         ],
         faq: [
@@ -8927,7 +8927,7 @@ export const ARTICLES: Article[] = [
             "Katalogda uch mingdan ortiq pozitsiya bor — kameralar, registratorlar, disklar va sarf materiallari, narxlar soʻmda va kafolat bilan; aniq modelning mavjudligini tanlash paytida aniqlaymiz. Vazifangizni ayting — byudjetga mos toʻplamni tanlab, aniq narxni hisoblab beramiz.",
           ] },
         { h: "2026-yil sentyabr: katalogdan real narx orientirlari", p: ["Toshkentdagi omborimizdagi joriy «...dan» narxlar: Wi-Fi kamera — 197 900 soʻmdan, 2 Mp IP-kamera — 234 900 soʻmdan, aylanuvchi mini-PTZ — 221 900 soʻmdan, 4 Mp IP-kamera — 395 900 soʻmdan, NVR registrator — 308 900 soʻmdan. Bular katalogdagi eng arzon modellari; brend va funksiyalarga qarab narx yuqoriroq boʻladi.", "Toʻplam narxini taxminan hisoblash oson: kameralar + registrator + har kameraga 8–12 metr kabel va quvvat. Toʻrtta 2 Mp kamera 234 900 soʻmdan va 320 900 soʻmlik registrator — uskuna boʻyicha 1 260 500 soʻm, ustiga 704 900 soʻmdan disk va ishlar. Aniq smeta uchun obyekt rejasini yuboring: soʻrovga ish kuni davomida javob beramiz."] }],
-        faq: [{ q: "Kamera oʻrnatish narxi qancha?", a: "Oʻrnatish kameralar soni va kabel uzunligiga bogʻliq: bitta kamera montaji oʻrtacha 150–300 ming soʻm, 4 kamerali toʻplam kalit topshirish bilan — smetaga qarab. Muhandis chiqishi va hisob-kitob bepul." },
+        faq: [{ q: "Kamera oʻrnatish narxi qancha?", a: "Oʻrnatish kameralar soni va kabel uzunligiga bogʻliq: bitta kamera montaji oʻrtacha 150–300 ming soʻm, 4 kamerali toʻplam toʻliq tayyor holda — smetaga qarab. Muhandis chiqishi va hisob-kitob bepul." },
           { q: "Eng arzon kamera qancha turadi?", a: "Ichki Wi-Fi kamera Tapo TC60 yoki C201 — 197 900 soʻm. Simli koʻcha IP-kamerasi 2 Mp 234 900 soʻmdan, 4 Mp 395 900 soʻmdan boshlanadi. Narxlar 2026-yil sentyabr holatiga, montajsiz." },
           { q: "4 kameradan iborat toʻplam qancha boʻladi?", a: "Uskuna, registrator, disk, kabel va montaj bilan birga — obyektga bogʻliq. Muhandis chiqib, bepul smeta tuzib beradi." },
           { q: "Registrator shartmi?", a: "1–2 kamera uchun xotira kartasi yetarli. 3+ kamera va uzoq arxiv kerak boʻlsa — registrator arzonroq va ishonchliroq." },
@@ -9326,7 +9326,7 @@ export const ARTICLES: Article[] = [
             "Tripod turniket — ofis va oʻtish punkti uchun eng arzon variant: KANIHAD KND-SB121 va ZKTeco TS1000 Plus 4 330 900 soʻm, ZKTeco Saturn T1000 — 4 577 900 soʻm, Hikvision DS-K3G200LX-R — 5 196 900 soʻm. Shisha qanotli tezkor oʻtishlar (speed gate) qimmatroq, lekin bir necha barobar emas: ZKTeco Saturn S1200 — 8 042 900 soʻm, Hikvision DS-K3B220LX — 9 280 900 soʻm, keng oʻtimli katta modellar — 12,7 dan 18,2 mln soʻmgacha. Perimetr va stadionlar uchun toʻliq boʻyli aylanma turniket Hikvision DS-K3H4410-120 — 70 289 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
             "Turniketga deyarli har doim identifikatsiya qoʻshiladi: karta oʻqigich 145 900 soʻmdan (Dahua DHI-ASR2100H) 184 900 soʻmgacha (Hikvision DS-K1802E), yuzni taniydigan terminal esa — 877 900 soʻm (ZKTeco SenseFace 2A: yuz + barmoq izi + karta) yoki 1 050 900 soʻm (Hikvision DS-K1T343MX). Toshkentda biznesga aynan «turniket + yuzni tanish + ish vaqtini hisobga olish» kombinatsiyasi koʻproq kerak boʻladi.",
           ] },
-          { h: "«Kalit topshirish» narxi nimadan iborat", p: [
+          { h: "Toʻliq tayyor holda oʻrnatish narxi nimadan iborat", p: [
             "Yakuniy smeta — uskuna + montaj + ishga tushirish. Montajga polga mahkamlash, elektr taʼminoti, SKUD tizimiga ulash va oʻtish stsenariylarini sozlash kiradi. Bitta oʻtish uchun uskuna tartibi aniq: tripod 4 330 900 soʻm va yuzni taniydigan terminal 877 900 soʻm — ishlarsiz nuqtasiga 5 208 800 soʻm. Montaj narxi obyekt boʻyicha hisoblanadi: trassa uzunligi, pol turi, server xonasi va zaxira quvvat bor-yoʻqligi.",
             "Ish vaqtini hisobga olish kerak boʻlsa, dasturiy qism qoʻshiladi: terminallarni dastur bilan integratsiya qilish va tabel yuklab olish. Buni ham oʻsha loyihada bajaramiz.",
           ] },
@@ -9532,7 +9532,7 @@ export const ARTICLES: Article[] = [
         faq: [
           { q: "Kvartira uchun videodomofon qancha turadi?", a: "«Panel + monitor» toʻplami: Hikvision DS-KIS202T — 865 900 soʻm, DS-KIS203T — 989 900 soʻm, DS-KIS205T — 1 088 900 soʻm. Telefonga qoʻngʻiroq qiladigan IP-versiya — 1 236 900 soʻmdan (DS-KIS302-P). Oʻrnatish alohida hisoblanadi, ishlar boʻyicha moʻljal — nuqtasiga 300–500 ming soʻmdan." },
           { q: "Qoʻngʻiroqqa telefondan javob berish mumkinmi?", a: "Ha, buning uchun IP-domofon kerak (masalan, Hikvision): qoʻngʻiroq ilovaga yoʻnaltiriladi, eshikni istalgan joydan ochasiz." },
-          { q: "Hovlilarga domofon oʻrnatasizmi?", a: "Ha: antivandal koʻcha paneli, uyda monitor, darvozaga elektromexanik qulf. Kabelni ozoda yotqizamiz, kalit topshirish sharti bilan." },
+          { q: "Hovlilarga domofon oʻrnatasizmi?", a: "Ha: antivandal koʻcha paneli, uyda monitor, darvozaga elektromexanik qulf. Kabelni ozoda yotqizamiz, toʻliq tayyor holda." },
           { q: "Oʻrnatish qancha vaqt oladi?", a: "Kvartira yoki hovli — odatda 2–4 soat. Bir nechta monitorli ofis yoki podez — loyihaga qarab bir kundan." },
         ],
       },
@@ -9693,11 +9693,11 @@ export const ARTICLES: Article[] = [
       },
       uz: {
         title: "Yongʻin signalizatsiyasi narxi qancha? Toshkentda",
-        excerpt: "2026-yilda yongʻin signalizatsiyasining «kalit topshirish» narxi: nuqta va obyekt boʻyicha, manzilli va manzilsiz tizim, loyiha, montaj va FVVʼga topshirish.",
+        excerpt: "2026-yilda yongʻin signalizatsiyasini toʻliq tayyor holda oʻrnatish narxi: nuqta va obyekt boʻyicha, manzilli va manzilsiz tizim, loyiha, montaj va FVVʼga topshirish.",
         sections: [
           { h: "Narx nimaga bogʻliq", p: [
             "Qiymat loyiha, uskuna (qabul-nazorat pribori, xabar bergichlar, ogohlantirgichlar, kabel) va montajdan iborat. Asosiy omillar — obyekt maydoni, ship balandligi va tizim turi: manzilsiz tizim arzonroq va kichik xonalarga mos, manzilli (Rubej, Bolid, Dahua) — ofis, doʻkon va omborlar standarti, chunki qaysi datchik ishlaganini aniq koʻrsatadi.",
-            "Amaliy moʻljal — nuqta narxi (xabar bergich + kabel + ishlar). Kichik ofis yoki doʻkon uchun tizim «kalit topshirish» sharti bilan odatda 5–10 mln soʻmdan boshlanadi, 500 m² dan katta obyektlar loyiha boʻyicha hisoblanadi.",
+            "Amaliy moʻljal — nuqta narxi (xabar bergich + kabel + ishlar). Kichik ofis yoki doʻkon uchun tizim toʻliq tayyor holda odatda 5–10 mln soʻmdan boshlanadi, 500 m² dan katta obyektlar loyiha boʻyicha hisoblanadi.",
           ] },
           { h: "Katalog boʻyicha smeta: ikkita tipik tizim", p: [
             "2026-yil sentyabr holatidagi katalog narxlari boʻyicha yoyamiz — loyiha, kabel va montajsiz. Uch-besh xonali kichik ofis yoki doʻkonni manzilsiz tizim yopadi: qabul-nazorat pribori Bolid «Signal-20P» — 1 174 900 soʻm, sakkizta tutun xabar bergichi Rubej IP 212-141, donasi 43 290 dan — 346 320 soʻm, ikkita qoʻl xabar bergichi IPR 513-10, donasi 61 790 dan — 123 580 soʻm, ikkita yorugʻlik-tovushli ogohlantirgich Rubej SUZ OPOP 124-7, donasi 78 890 dan — 157 780 soʻm va ikkita «CHIQISH» tablosi, donasi 49 490 dan — 98 980 soʻm. Uskuna boʻyicha 1 901 560 soʻm chiqadi, yaʼni bitta nuqtaga taxminan 190 ming.",
@@ -9726,7 +9726,7 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Kichik ofis uchun yongʻin signalizatsiyasi qancha turadi?", a: "Kichik ofis yoki doʻkon «kalit topshirish» bilan — odatda 5–10 mln soʻmdan: loyiha, uskuna, montaj va ishga tushirish. Aniq raqamni bepul smeta beradi." },
+          { q: "Kichik ofis uchun yongʻin signalizatsiyasi qancha turadi?", a: "Kichik ofis yoki doʻkon toʻliq tayyor holda — odatda 5–10 mln soʻmdan: loyiha, uskuna, montaj va ishga tushirish. Aniq raqamni bepul smeta beradi." },
           { q: "Montaj uchun litsenziya kerakmi?", a: "Ha, yongʻin signalizatsiyasini loyihalash va montaj qilish litsenziyalanadigan faoliyat. Bizda litsenziya bor, obyektni toʻliq hujjatlar bilan topshiramiz." },
           { q: "Manzilli tizim ancha qimmatmi?", a: "Uskuna qimmatroq, lekin kabel va ish kamroq. 10+ xonali obyektlarda yakuniy farq katta emas, ekspluatatsiya esa ancha qulay." },
           { q: "Texnik xizmat koʻrsatasizmi?", a: "Ha, shartnoma boʻyicha oylik TX: xabar bergichlar, priborlar va ogohlantirishni jurnalga belgilagan holda tekshirish — meʼyorlar talab qilganidek." },
@@ -11498,7 +11498,7 @@ export const ARTICLES: Article[] = [
             "Mis Ethernet kommutatorgacha yuz metr bilan cheklangan — turar-joy majmuasi yoki posyolkada bu har podʼezdda faol uzellar degani: shkaflar, quvvat, xizmat. GPON passiv optika bilan 20 kilometrgacha qamraydi: stansiya va abonent orasida faqat tola va splitterlar — ularga elektr ham, konditsioner ham kerak emas.",
             "Shuning uchun yuzlab abonentda PON egalik qiymati boʻyicha yutadi: faol temir kam — nosozlik nuqtalari va elektr hisoblari kam. Ethernet bino ichida va har abonentga kafolatlangan simmetrik kanal kerak joylarda tanlov boʻlib qoladi — masalan, kompaniya-ijarachilar bilan ofis markazida. Koʻpincha bogʻlam optimal: binogacha GPON, ichkarida Ethernet.",
           ] },
-          { h: "Kalit topshirish montaji", p: [
+          { h: "Toʻliq tayyor holda montaj", p: [
             "Tarmoqni toʻliq qilamiz: loyiha va optik byudjet hisobi, kabel yotqizish, reflektometr oʻlchovlari bilan tola payvandlash, boks va splitterlar montaji, OLT sozlash, ONU ulash va muhandisingizni oʻqitish.",
             "Tarmoq pasporti va sxemalar bilan topshiramiz. Yuridik shaxs bilan shartnoma, NDS, uskuna va ishlarga kafolat.",
           ] },

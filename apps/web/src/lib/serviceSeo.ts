@@ -257,7 +257,7 @@ const uz: Record<string, ServiceSeo> = {
     desc: "OʻzR meʼyorlari boʻyicha ishchi loyihalar: yongʻin signalizatsiyasi (ShNQ), videokuzatuv, SKUD, SKS. Rejalar, spetsifikatsiyalar, smetalar. Toshkent va viloyatlar.",
   },
   "slabotochnye-sistemy": {
-    h1: "Toshkentda kuchsiz tok tizimlari — kalit topshirish montaji",
+    h1: "Toshkentda kuchsiz tok tizimlari — toʻliq tayyor holda montaj",
     title: "Kuchsiz tok tizimlari Toshkentda — loyiha va montaj | SAT",
     desc: "Toshkentda kuchsiz tok tizimlari montaji: videokuzatuv, SKUD, yongʻin signalizatsiyasi, SKS, domofoniya. Hujjatlar bilan topshirish, subpudrat, kafolat.",
   },
@@ -269,7 +269,7 @@ const uz: Record<string, ServiceSeo> = {
   cctv: {
     h1: "Toshkentda videokuzatuv oʻrnatish",
     title: "Toshkentda videokuzatuv oʻrnatish — kamera montaji | SAT",
-    desc: "Toshkentda videokuzatuv kameralarini kalit topshirish asosida oʻrnatamiz: bepul chiqish, loyiha, IP va analog tizimlar montaji, telefondan kirish. Kafolat va servis.",
+    desc: "Toshkentda videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: bepul chiqish, loyiha, IP va analog tizimlar montaji, telefondan kirish. Kafolat va servis.",
   },
   analytics: {
     h1: "Toshkentda videoanalitika va yuzni tanish",
@@ -297,7 +297,7 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda domofon oʻrnatish: uy, ofis va TJM uchun IP va video domofonlar, smartfonga qoʻngʻiroq, SKUD bilan integratsiya. Montaj va servis mamlakat boʻylab.",
   },
   turnstile: {
-    h1: "Toshkentda turniketlar — kalit topshirish montaji",
+    h1: "Toshkentda turniketlar — toʻliq tayyor holda montaj",
     title: "Turniketlar Toshkentda — sotish va oʻrnatish | SAT",
     desc: "Toshkentda turniketlarni sotish va oʻrnatish: oʻtish yoʻlaklari, kalitkalar, SKUD va ish vaqti hisobi bilan integratsiya. Montaj va xizmat mamlakat boʻylab.",
   },
@@ -337,7 +337,7 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda strukturali kabel tizimlari (SKS) va lokal tarmoqlar: loyihalash, kabel trassalari montaji, server shkaflari, kommutatorlar, hujjatlar topshiriladi.",
   },
   videowall: {
-    h1: "Toshkentda videodevorlar — kalit topshirish asosida oʻrnatish",
+    h1: "Toshkentda videodevorlar — toʻliq tayyor holda oʻrnatish",
     title: "Videodevor Toshkentda — 2×2, 3×3 oʻrnatish | SAT",
     desc: "Toshkentda videodevorlar oʻrnatish: 2×2 va 3×3 konfiguratsiyalar, 46–55 dyuymli ingichka chokli panellar, kontrollerlar, sozlash. Dispetcherlik markazlari.",
   },
@@ -353,7 +353,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   smarthome: {
     h1: "Toshkentda aqlli uy — tizim oʻrnatish",
-    title: "Aqlli uy Toshkentda — kalit topshirish oʻrnatish | SAT",
+    title: "Aqlli uy Toshkentda — toʻliq tayyor holda oʻrnatish | SAT",
     desc: "Toshkentda aqlli uy tizimlari: yoritish, iqlim, pardalar, videokuzatuv va ssenariylar bitta ilovada. Oʻrnatish va sozlash butun Oʻzbekiston boʻylab.",
   },
   anpr: {
@@ -383,8 +383,8 @@ const uz: Record<string, ServiceSeo> = {
   },
   server: {
     h1: "Toshkentda server xonasi va maʼlumot markazi",
-    title: "Server xonasi Toshkentda — kalit topshirish montaji | SAT",
-    desc: "Toshkentda server xonalari va maʼlumot markazlarini loyihalash va montaji: stoykalar, SKS, uzluksiz quvvat, sovitish va kirish nazorati. Kalit topshirish asosida.",
+    title: "Server xonasi Toshkentda — toʻliq tayyor holda montaj | SAT",
+    desc: "Toshkentda server xonalari va maʼlumot markazlarini loyihalash va montaji: stoykalar, SKS, uzluksiz quvvat, sovitish va kirish nazorati. Toʻliq tayyor holda.",
   },
   virtualization: {
     h1: "Toshkentda H3C serverlari va virtualizatsiya",
@@ -404,7 +404,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   warehouse: {
     h1: "Ombor uchun videokuzatuv va xavfsizlik",
-    title: "Ombor uchun videokuzatuv — Toshkentda kalit topshirish | SAT",
+    title: "Ombor uchun videokuzatuv — Toshkentda toʻliq tayyor holda | SAT",
     desc: "Ombor va logistika markazlari xavfsizligi: qabul va joʻnatish zonalari videokuzatuvi, xodimlar va transport uchun SKUD, darvozada ANPR. Loyiha, montaj va servis.",
   },
   bank: {

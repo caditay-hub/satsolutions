@@ -149,7 +149,7 @@ const SEO: LocaleMap = {
       h1: "Toshkentda videokuzatuv kameralari",
       intro: "IP, Wi-Fi, PTZ va analog kameralar, videoregistratorlar hamda Hikvision, Dahua, HiLook, Avigilon toʻplamlari — Toshkentda mavjud, butun Oʻzbekiston boʻylab yetkazib beramiz.",
       serviceHref: "/solutions/cctv",
-      serviceLabel: "Videokuzatuvni kalit topshirish asosida oʻrnatish →",
+      serviceLabel: "Videokuzatuvni toʻliq tayyor holda oʻrnatish →",
       long:
         "Guruh katalogi obyektni bitta buyurtma bilan yopadigan qilib yigʻilgan: IP va analog kameralar, simsiz modellar, aylanuvchi PTZ, NVR va DVR registratorlar, 4–16 kameralik tayyor toʻplamlar, shuningdek kabel, quvvat bloklari va PoE kommutatorlari. Brendlar — Hikvision, Dahua, HiLook, Avigilon: ular boʻyicha Toshkentda ombor, rasmiy kafolat va servis bor.\n\nTanlov toʻrt parametrga keladi. Ruxsat: uy va kichik ofis uchun 2–4 Mp yetadi, yuz va avtomobil raqamlarini ajratish kerak boʻlganda 4–8 Mp olinadi. Qorongʻida ishlash: infraqizil yoritish oq-qora tasvir beradi, ColorVu kabi texnologiyalar — kam yorugʻlikda rangli. Oʻrnatish joyi: koʻcha uchun himoyalangan korpus va harorat diapazoni, xona uchun koʻrish burchagi muhimroq. Ulanish usuli: IP-kameralar maʼlumot uzatadigan oʻsha kabel orqali quvvat oladi (PoE), analoglar arzonroq va allaqachon yotqizilgan koaksialda ishlaydi.\n\nKameralarga qolgan hamma narsa ham hisoblanadi: kerakli arxiv chuqurligiga mos diskli registrator, quvvat, kabel va kommutator. Arxiv chuqurligi — koʻpincha unutiladigan parametr: kameralar koʻp va ruxsat yuqori boʻlsa, disk yozuvga murojaat qilishga ulgurmasdan qayta yoziladi. Biz toʻplamni butunlay hisoblaymiz va necha kunlik yozuv chiqishini oldindan aytamiz, kerak boʻlsa montajni ham olamiz — loyiha, trassalar, masofaviy kirishni sozlash va ishlarga kafolat bilan.",
     },
@@ -159,7 +159,7 @@ const SEO: LocaleMap = {
       h1: "SKUD — Toshkentda kirishni boshqarish",
       intro: "ZKTeco, Hikvision, Dahua kontrollerlari, oʻquvchilari, biometriyasi, turniketlari va elektroqulflari — ish vaqtini hisobga olish va 1C integratsiyasi bilan.",
       serviceHref: "/solutions/access",
-      serviceLabel: "SKUD ni kalit topshirish asosida oʻrnatish →",
+      serviceLabel: "SKUD ni toʻliq tayyor holda oʻrnatish →",
     },
     "ohranno-pozharnaya": {
       title: "Toshkentda yongʻin va qoʻriqlash signalizatsiyasi",
@@ -177,9 +177,9 @@ const SEO: LocaleMap = {
       h1: "Toshkentda domofonlar",
       intro: "Hikvision va Dahua video domofonlari, chaqiruv panellari va ichki monitorlari — kvartiralar, uylar, ofislar va turar-joy majmualari uchun audio va IP domofoniya.",
       long:
-        "Domofon obyektga qarab tanlanadi. Kvartiraga «chaqiruv paneli + monitor» toʻplami yetadi: audio — hamyonbop, video — standart, IP-model istalgan joydan telefon orqali koʻrish va ochishni qoʻshadi. Hovlili uyga yogʻingarchilikdan himoyalangan kalitka paneli va ichkariga monitor olinadi, koʻpincha qulf va darvoza boshqaruvi bilan. Podezd va turar-joy majmuasiga koʻp abonentli tizimlar oʻrnatiladi: bitta antivandal panel oʻnlab kvartiraga xizmat qiladi.\n\nIP-domofoniya — yangi obyektlar uchun bugungi standart: chaqiruv uyda boʻlmaganingizda ham ilovaga keladi, video arxivga yoziladi, tizim esa SKUD va videokuzatuv bilan bitta konturga birlashadi. Ofislarga domofon kirishdagi kotibni almashtiradi.\n\nKatalogda — Toshkentdagi ombordan Hikvision va Dahua video domofonlari, chaqiruv panellari va monitorlari. Kvartira, uy yoki podezdga toʻplamni tanlaymiz, kalit topshirish sharti bilan oʻrnatamiz, ilovani sozlaymiz va xizmatga olamiz.",
+        "Domofon obyektga qarab tanlanadi. Kvartiraga «chaqiruv paneli + monitor» toʻplami yetadi: audio — hamyonbop, video — standart, IP-model istalgan joydan telefon orqali koʻrish va ochishni qoʻshadi. Hovlili uyga yogʻingarchilikdan himoyalangan kalitka paneli va ichkariga monitor olinadi, koʻpincha qulf va darvoza boshqaruvi bilan. Podezd va turar-joy majmuasiga koʻp abonentli tizimlar oʻrnatiladi: bitta antivandal panel oʻnlab kvartiraga xizmat qiladi.\n\nIP-domofoniya — yangi obyektlar uchun bugungi standart: chaqiruv uyda boʻlmaganingizda ham ilovaga keladi, video arxivga yoziladi, tizim esa SKUD va videokuzatuv bilan bitta konturga birlashadi. Ofislarga domofon kirishdagi kotibni almashtiradi.\n\nKatalogda — Toshkentdagi ombordan Hikvision va Dahua video domofonlari, chaqiruv panellari va monitorlari. Kvartira, uy yoki podezdga toʻplamni tanlaymiz, toʻliq tayyor holda oʻrnatamiz, ilovani sozlaymiz va xizmatga olamiz.",
       serviceHref: "/solutions/intercom",
-      serviceLabel: "Domofonni kalit topshirish asosida oʻrnatish →",
+      serviceLabel: "Domofonni toʻliq tayyor holda oʻrnatish →",
     },
   },
   en: {

@@ -6,7 +6,7 @@
     "characteristics": "Xususiyatlari",
     "eol": "Ishlab chiqarishdan olingan",
     "hit": "XIT",
-    "turnkey": "Kalit topshirish xizmati",
+    "turnkey": "Toʻliq tayyor yechim",
     "designInstall": "loyihalash va montaj",
     "helpTitle": "Tanlashda yordam kerakmi?",
     "helpText": "Muhandisimiz vazifangizga mos uskunani tanlab, tijorat taklifini bir ish kuni ichida yuboradi.",
@@ -275,7 +275,7 @@
       },
       {
         "title": "Server xonalari va data-markazlar",
-        "text": "Kalitga tayyor: taʼminot, iqlim, monitoring.",
+        "text": "Toʻliq tayyor holda: taʼminot, iqlim, monitoring.",
         "buttons": [
           "Batafsil",
           "Tijorat taklifi"
@@ -322,7 +322,7 @@
     "cctv": {
       "title": "Videokuzatuv",
       "desc": "Har qanday miqyosdagi obyekt uchun IP, analog va bulutli tizimlar.",
-      "intro": "Videokuzatuv kameralarini kalitga tayyor oʻrnatamiz: kichik ofisdan tortib oʻnlab kamerali va kunu-tun monitoringli tarqoq obyektlargacha boʻlgan tizimlarni loyihalaymiz va montaj qilamiz.",
+      "intro": "Videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: kichik ofisdan tortib oʻnlab kamerali va kunu-tun monitoringli tarqoq obyektlargacha boʻlgan tizimlarni loyihalaymiz va montaj qilamiz.",
       "works": [
         "Obyekt auditi va vazifaga mos kameralarni tanlash",
         "Loyihalash va joylashtirish sxemasi",
@@ -1195,7 +1195,7 @@
     "server": {
       "title": "Serverxona va data-markaz",
       "desc": "Stoyka, UPS, sovutish va jihozlarni monitoring qilish.",
-      "intro": "Server xonalari va maʼlumotlar markazlarini (data-markaz) kalitga tayyor quramiz: montaj stoykalari, uzluksiz taʼminot, sovutish va muhandislik tizimlari monitoringi.",
+      "intro": "Server xonalari va maʼlumotlar markazlarini (data-markaz) toʻliq tayyor holda quramiz: montaj stoykalari, uzluksiz taʼminot, sovutish va muhandislik tizimlari monitoringi.",
       "works": [
         "Server xonasi yoki maʼlumotlar markazi loyihasi",
         "Stoyka, kabel tarmogʻi va quvvatni montaj qilish",
@@ -2194,7 +2194,7 @@
           },
           {
             "name": "Xavfsizlik kompleksi",
-            "for": "Oʻquv muassasasi kalit topshirish",
+            "for": "Oʻquv muassasasi — toʻliq tayyor yechim",
             "items": [
               "Prohodnaya + kameralar + yongʻin + ogohlantirish",
               "Pultga trevoga tugmasi",
@@ -2357,7 +2357,7 @@
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
-            "name": "Podʼezd kalit topshirish",
+            "name": "Podʼezd — toʻliq tayyor yechim",
             "for": "TSJ, boshqaruv kompaniyasi",
             "items": [
               "Telefonga chaqiruvli IP-domofon",
@@ -2379,7 +2379,7 @@
             "term": "Muddat: 1–2 hafta"
           },
           {
-            "name": "Quruvchiga majmua kalit topshirish",
+            "name": "Quruvchiga — toʻliq tayyor majmua",
             "for": "Yangi qurilish",
             "items": [
               "Pardozgacha kuchsiz tok loyihasi",
@@ -2896,7 +2896,7 @@
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
-            "name": "Ofis routeri kalit topshirish",
+            "name": "Ofis routeri — toʻliq tayyor yechim",
             "for": "50 xodimgacha ofis",
             "items": [
               "hEX/RB5009 sozlash: internet, VLAN, Wi-Fi",
@@ -2961,7 +2961,7 @@
     "smarthome": {
       "title": "Aqlli uy",
       "desc": "Tuya asosida yoritish, iqlim, pardalar va xavfsizlik — telefondan boshqarish.",
-      "intro": "Tuya platformasida kalitga tayyor aqlli uy: yoritish, iqlim, pardalar, datchiklar va kameralar bitta ilovada. Ssenariylarni loyihalaymiz, oʻrnatamiz va sozlaymiz — katalogimizda 50 dan ortiq Tuya qurilmasi.",
+      "intro": "Tuya platformasida toʻliq tayyor aqlli uy: yoritish, iqlim, pardalar, datchiklar va kameralar bitta ilovada. Ssenariylarni loyihalaymiz, oʻrnatamiz va sozlaymiz — katalogimizda 50 dan ortiq Tuya qurilmasi.",
       "works": [
         "Kvartira, uy yoki ofisga qurilmalar tanlash",
         "Aqlli yoritish, kalitlar va rozetkalar",
@@ -2999,7 +2999,7 @@
             "term": "Muddat: 1–2 kun"
           },
           {
-            "name": "Kalitga tayyor kvartira",
+            "name": "Toʻliq tayyor kvartira",
             "for": "Kvartira, taunxaus",
             "items": [
               "Yorugʻlik, pardalar, iqlim va suv datchiklari",
@@ -3013,7 +3013,7 @@
             "name": "Uy / ofis premium",
             "for": "Xususiy uy, kompaniya ofisi",
             "items": [
-              "«Kalitga tayyor» + qoʻriqlash datchiklari va sirena",
+              "Toʻliq tayyor tizim + qoʻriqlash datchiklari va sirena",
               "Yozuvli kameralar, darvoza va domofon ssenariylarda",
               "Zonalar boʻyicha iqlim, elektr hisobi",
               "Barcha xonalarda ovozli boshqaruv"
@@ -3846,7 +3846,7 @@
             "term": "Muddat: 2–4 hafta"
           },
           {
-            "name": "Mehmonxona kalit topshirish",
+            "name": "Mehmonxona — toʻliq tayyor yechim",
             "for": "Yangi obyekt, renovatsiya",
             "items": [
               "Qulflar + video + yongʻin + tarmoq",
@@ -4200,7 +4200,7 @@
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
-            "name": "Bitta tizim kalit topshirish",
+            "name": "Bitta tizim — toʻliq tayyor yechim",
             "for": "Ofis, doʻkon, ombor",
             "items": [
               "SKS, video, SKUD yoki yongʻin — tanlovga",
@@ -4555,14 +4555,14 @@
     }
   },
   "solutionsPage": {
-    "hero": "Kuchsiz tok tizimlari — kalit topshirish",
+    "hero": "Kuchsiz tok tizimlari — toʻliq tayyor holda",
     "heroSub": "Oʻzbekiston boʻylab xavfsizlik va kuchsiz tok tizimlarini loyihalash, oʻrnatish va xizmat koʻrsatish.",
     "whatWeCan": "Biz nima qila olamiz",
     "systemsLabel": "Tizimlar va xizmatlar",
     "industriesLabel": "Tayyor yechimlar",
     "industriesTitle": "Tarmoqlar uchun yechimlar",
     "howLabel": "Biz qanday ishlaymiz",
-    "howTitle": "Arizadan xizmatgacha — kalit topshirish",
+    "howTitle": "Arizadan xizmatgacha — toʻliq tayyor holda",
     "ctaLabel": "Loyihani boshlaymiz",
     "ctaTitle": "Loyihangizni muhokama qilishga tayyormisiz?",
     "ctaText": "Vazifaga mos jihozni tanlaymiz va tijorat taklifini bir ish kuni ichida yuboramiz.",
@@ -4590,7 +4590,7 @@
       },
       {
         "title": "Oʻrnatish va sozlash",
-        "desc": "Professional oʻrnatish va kalit topshirish sozlamasi."
+        "desc": "Professional oʻrnatish va toʻliq tayyor holda sozlash."
       },
       {
         "title": "Topshirish va servis",
@@ -5578,7 +5578,7 @@
     "faqTitle": "Koʻp beriladigan savollar",
     "faq": [
       {
-        "q": "Kalit topshirish asosida videokuzatuv qancha turadi?",
+        "q": "Toʻliq tayyor videokuzatuv qancha turadi?",
         "a": "Narx ikki qismdan iborat: uskuna va ishlar. Yuqoridagi kalkulyator ishlarni bizning yagona praysimiz boʻyicha hisoblaydi, uskuna alohida hisoblanadi — kameralar, registrator, disklar, quvvat bloklari va PoE kommutatorlari. Uy uchun toʻrt kameralik toʻplam doʻkon uchun oʻn olti kameralik toʻplamdan faqat kameralar soni bilan emas, registrator klassi, arxiv chuqurligi va kabel trassalari uzunligi bilan ham farq qiladi. Tipik obyektlar boʻyicha tayyor hisoblar shu sahifada yuqorida, aniq summani esa muhandis bepul chiqishdan keyin aytadi."
       },
       {
