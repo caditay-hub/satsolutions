@@ -5,6 +5,7 @@ import { ogLocale } from "@/lib/ogLocale";
 import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { localizeProductName } from "@/lib/productI18n";
+import { localizeCharValue } from "@/lib/charValueI18n";
 
 export const revalidate = 86400;
 
@@ -331,7 +332,7 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
                       {chars.length > 0 && (
                         <ul className="mt-0.5 flex flex-col gap-0.5">
                           {chars.map(([k, v]) => (
-                            <li key={k} className="text-[11px] leading-tight text-slate-500 line-clamp-1">{String(v)}</li>
+                            <li key={k} className="text-[11px] leading-tight text-slate-500 line-clamp-1">{localizeCharValue(String(v), locale)}</li>
                           ))}
                         </ul>
                       )}

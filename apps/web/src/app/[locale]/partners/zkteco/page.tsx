@@ -6,6 +6,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
+import { localizeProductName } from "@/lib/productI18n";
 
 const locPath = (locale: string, p: string) => (locale === "ru" ? p : `/${locale}${p}`);
 
@@ -503,12 +504,12 @@ export default async function ZKTecoPartnerPage({ params }: { params: Promise<{ 
                   className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-brand-300">
                   <div className="flex h-36 items-center justify-center bg-white p-3">
                     {resolveImageUrl(p.coverImageUrl) ? (
-                      <Image src={resolveImageUrl(p.coverImageUrl) as string} alt={p.name} width={180} height={130}
+                      <Image src={resolveImageUrl(p.coverImageUrl) as string} alt={localizeProductName(p, locale)} width={180} height={130}
                         className="max-h-[124px] w-auto object-contain" />
                     ) : null}
                   </div>
                   <div className="border-t border-slate-100 p-3">
-                    <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{p.name}</div>
+                    <div className="line-clamp-2 text-[13px] font-semibold text-slate-800 group-hover:text-brand-700">{localizeProductName(p, locale)}</div>
                     <div className="mt-1 text-[12px] font-bold text-brand-700">
                       {Number(p.price) > 0 ? `${Math.round(Number(p.price)).toLocaleString("ru-RU")} ${locale === "ru" ? "сум" : "UZS"}` : d.priceOnReq}
                     </div>

@@ -5,6 +5,7 @@ import { getBrands, getProductsCached } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeProductName } from "@/lib/productI18n";
+import { localizeBrandName } from "@/lib/brandI18n";
 import { NewArrivalCard } from "@/components/Cards";
 
 export const revalidate = 300;
@@ -45,7 +46,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
   }
   const { items, total } = data;
   const { brands } = await getBrands().catch(() => ({ brands: [] as any[] }));
-  const brandNameById = new Map(brands.map((b: any) => [b.id, b.name]));
+  const brandNameById = new Map(brands.map((b: any) => [b.id, localizeBrandName(b.slug, b.name, locale)]));
   const pages = Math.max(1, Math.ceil(total / PER_PAGE));
 
   // ItemList — свежая страница со ссылками на новые карточки ускоряет их обход

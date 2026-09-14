@@ -2,6 +2,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { getIndustryDetails, INDUSTRY_SERVICES, industriesForService } from "@/lib/industryDetails";
+import { localizePortfolioProject } from "@/lib/contentI18n";
 
 /** Реальные проекты портфолио по отраслям (только существующие карточки, без выдуманных цифр). */
 const INDUSTRY_CASES: Record<string, Array<{ slug: string; title: string }>> = {
@@ -182,7 +183,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
                   {(INDUSTRY_CASES[industryKey] ?? []).map((c) => (
                     <Link key={c.slug} href={`/portfolio/${c.slug}`}
                       className="group rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand-500">
-                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-700">{c.title}</div>
+                      <div className="text-sm font-bold text-slate-900 group-hover:text-brand-700">{localizePortfolioProject(c, locale).title}</div>
                       <div className="mt-1 text-xs font-semibold text-brand-600">{tc("caseMore")} →</div>
                     </Link>
                   ))}

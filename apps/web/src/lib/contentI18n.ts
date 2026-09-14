@@ -297,12 +297,61 @@ export function localizeCategoryName(slug: string | null | undefined, name: stri
   return CATEGORY[slug]?.[locale] ?? name;
 }
 
+/** «Состав решения» кейса (поле equipmentSupply в БД — только RU): строки через перевод строки. 14.09.2026. */
+const EQUIPMENT: Record<string, Record<Loc, string>> = {
+  "montazh-servernoy-komnaty": {
+    uz: "Perforatsiyalangan eshikli server shkaflari\nKabel lotoklari va trassalari\nSKS va lokal tarmoq (LVS)\nStoykalarning elektr taʼminoti\nKabellarni markirovkalash va yotqizish",
+    en: "Server cabinets with perforated doors\nCable trays and routes\nStructured cabling and LAN\nRack power supply\nCable labeling and routing",
+    tr: "Perfore kapılı sunucu kabinleri\nKablo tavaları ve güzergâhları\nYapısal kablolama ve yerel ağ (LAN)\nKabin güç beslemesi\nKablo etiketleme ve düzenleme",
+    zh: "带网孔门的服务器机柜\n桥架与线缆路由\n综合布线与局域网（LAN）\n机柜供电\n线缆标识与理线",
+  },
+  "sistema-videonablyudeniya-na-bodikamerah-dahua": {
+    uz: "Dahua DH-MPT230 bodikameralari (Full HD, butun smena davomida)\nDahua DH-EEC300D8-N1 yig‘ish stansiyalari, 8 slot\nDH-EEC300 nazorat modullari\nArxivni avtomatik yuklash va zaryadlash",
+    en: "Dahua DH-MPT230 body cameras (Full HD, a full shift of operation)\nDahua DH-EEC300D8-N1 docking stations, 8 slots\nDH-EEC300 management modules\nAutomatic archive upload and charging",
+    tr: "Dahua DH-MPT230 yaka kameraları (Full HD, tam vardiya çalışma)\n8 yuvalı Dahua DH-EEC300D8-N1 toplama istasyonları\nDH-EEC300 kontrol modülleri\nOtomatik arşiv aktarımı ve şarj",
+    zh: "大华 DH-MPT230 执法记录仪（全高清，续航一个班次）\n大华 DH-EEC300D8-N1 采集站，8 槽位\nDH-EEC300 管理模块\n录像自动上传与充电",
+  },
+  "skud-zavod-damira-beverages": {
+    uz: "Hikvision DS-K3B501SX turniketlari — 8 seksiya va kalitkalar\n112 ta kirish nuqtasi: o‘quvchilar, qulflar, chiqish tugmalari\n12 ta yuzni tanish terminali\n32 ta DS-K2604T tarmoq kontrolleri\n130 eshik uchun HikCentral Professional dasturi",
+    en: "Hikvision DS-K3B501SX turnstiles — 8 sections and wicket gates\n112 access points: readers, locks, exit buttons\n12 face recognition terminals\n32 DS-K2604T network controllers\nHikCentral Professional software for 130 doors",
+    tr: "Hikvision DS-K3B501SX turnikeler — 8 bölüm ve yaya kapıları\n112 geçiş noktası: okuyucular, kilitler, çıkış butonları\n12 yüz tanıma terminali\n32 adet DS-K2604T ağ kontrolörü\n130 kapı için HikCentral Professional yazılımı",
+    zh: "海康威视 DS-K3B501SX 闸机——8 通道及小门\n112 个门禁点：读卡器、门锁、出门按钮\n12 台人脸识别终端\n32 台 DS-K2604T 网络门禁控制器\nHikCentral Professional 软件，130 门",
+  },
+  "ucell-ustanovka-videosteny-dahua-v-situacionnom-centre": {
+    uz: "Dahua videodevorlari\nDahua IP-kamerasi\nVideodevor uchun SKS va optik tolali liniyalar\nSCADA / NOC",
+    en: "Dahua video walls\nDahua IP camera\nStructured cabling and fiber-optic lines for the video wall\nSCADA / NOC",
+    tr: "Dahua video duvarları\nDahua IP kamera\nVideo duvarı için yapısal kablolama ve fiber optik hatlar\nSCADA / NOC",
+    zh: "大华视频墙\n大华 IP 摄像机\n视频墙综合布线与光纤线路\nSCADA / NOC",
+  },
+  "uzum-videonablyudenie-skladov-i-punktov-vydachi": {
+    uz: "Dahua IP-kameralari — omborlar va yuklash zonalari\n100+ buyurtma topshirish punktida videokuzatuv\nKabel tarmog‘i va kommutatsiya\nButun mamlakat bo‘ylab montaj va ishga tushirish",
+    en: "Dahua IP cameras — warehouses and shipping areas\nVideo surveillance at 100+ order pickup points\nCabling and switching\nInstallation and commissioning nationwide",
+    tr: "Dahua IP kameralar — depolar ve sevkiyat alanları\n100+ sipariş teslim noktasında video gözetim\nKablo ağı ve anahtarlama\nÜlke genelinde kurulum ve devreye alma",
+    zh: "大华 IP 摄像机——仓库与发货区\n100 多个自提点的视频监控\n线缆网络与交换设备\n全国范围安装与调试",
+  },
+  "virtualizaciya-h3c-cas-finansovaya-organizaciya": {
+    uz: "2 ta H3C UniServer R4900 G6 serveri\nHar bir serverda 2 ta Intel Xeon protsessori (16 yadro)\nH3C CAS virtualizatsiya platformasi\nIshlayotgan servislarni ko‘chirish va zaxiralash",
+    en: "2 × H3C UniServer R4900 G6 servers\n2 × Intel Xeon processors (16 cores) in each server\nH3C CAS virtualization platform\nMigration of running services and redundancy",
+    tr: "2 adet H3C UniServer R4900 G6 sunucu\nHer sunucuda 2 adet Intel Xeon işlemci (16 çekirdek)\nH3C CAS sanallaştırma platformu\nÇalışan hizmetlerin taşınması ve yedeklilik",
+    zh: "2 台 H3C UniServer R4900 G6 服务器\n每台服务器配 2 颗 Intel Xeon 处理器（16 核）\nH3C CAS 虚拟化平台\n运行中业务迁移与冗余备份",
+  },
+  "zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa": {
+    uz: "Dahua\nHikvision\nIP-domofoniya\nTarmoq uskunalari\nKirishni nazorat qilish tizimi\nLCD videodevor",
+    en: "Dahua\nHikvision\nIP intercom\nNetwork equipment\nAccess control system\nLCD video wall",
+    tr: "Dahua\nHikvision\nIP interkom\nAğ ekipmanları\nGeçiş kontrol sistemi\nLCD video duvarı",
+    zh: "大华\n海康威视\nIP 楼宇对讲\n网络设备\n门禁系统\nLCD 视频墙",
+  },
+};
+
 /** Накладывает перевод на проект портфолио (по slug). RU/неизвестные — без изменений. */
 export function localizePortfolioProject<T extends { slug: string; items?: any }>(p: T, locale: string): T {
   if (!isLoc(locale)) return p;
   const tr = PROJECT[p.slug]?.[locale];
-  if (!tr) return p;
+  const eq = EQUIPMENT[p.slug]?.[locale];
+  if (!tr && !eq) return p;
   const out: any = { ...p };
+  if (eq && (p as any).equipmentSupply) out.equipmentSupply = eq;
+  if (!tr) return out as T;
   if (tr.title) out.title = tr.title;
   if (tr.excerpt) out.excerpt = tr.excerpt;
   if (tr.content) out.content = tr.content;
