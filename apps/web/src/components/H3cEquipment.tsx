@@ -13,7 +13,7 @@ const EQUIPMENT: { key: string; models: string; rep?: string; href?: string }[] 
   { key: "switches", models: "S5130S · S5560S · S6520X", rep: "h3c-s5130s-28s-ei" },
   { key: "routers", models: "MSR810 · MSR2600 · MSR3620", rep: "h3c-msr810" },
   { key: "firewalls", models: "SecPath F100-C · F1000-C", rep: "h3c-secpath-f1000-c-g2" },
-  { key: "wifi", models: "WA6320 · WA6330 + контроллеры", href: "/catalog/h3c" },
+  { key: "wifi", models: "WA6320 · WA6330", href: "/catalog/h3c" },  // + «контроллеры» на языке страницы (ниже)
   { key: "storage", models: "UniServer R4300 G6", rep: "h3c-uniserver-r4300-g6" },
 ];
 
@@ -31,14 +31,16 @@ export async function H3cEquipment({ locale }: { locale: string }) {
     /* API недоступен — карточки без фото, но остаются кликабельными */
   }
 
+  const ctrl = ({ ru: "контроллеры", uz: "kontrollerlar", en: "controllers", tr: "kontrolcüler", zh: "控制器" } as Record<string, string>)[locale] ?? "контроллеры";
+  const modelsOf = (e: (typeof EQUIPMENT)[number]) => (e.key === "wifi" ? `${e.models} + ${ctrl}` : e.models);
   const itemListLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Оборудование H3C — поставка в Узбекистане",
+    name: ({ ru: "Оборудование H3C — поставка в Узбекистане", uz: "H3C uskunalari — Oʻzbekistonda yetkazib berish", en: "H3C equipment — supply in Uzbekistan", tr: "H3C ekipmanları — Özbekistan'da tedarik", zh: "H3C 设备 — 乌兹别克斯坦供货" } as Record<string, string>)[locale] ?? "Оборудование H3C — поставка в Узбекистане",
     itemListElement: EQUIPMENT.map((e, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      name: `H3C ${e.models}`,
+      name: `H3C ${modelsOf(e)}`,
     })),
   };
 
@@ -69,7 +71,7 @@ export async function H3cEquipment({ locale }: { locale: string }) {
               ) : null}
               <div className="min-w-0 flex-1">
                 <h3 className="text-sm font-black tracking-tight text-slate-900 group-hover:text-brand-700">{ts(`virtualization.details.eq.${e.key}.name`)}</h3>
-                <p className="mt-1 text-[13px] font-bold text-brand-700">{e.models}</p>
+                <p className="mt-1 text-[13px] font-bold text-brand-700">{modelsOf(e)}</p>
                 <p className="mt-1.5 text-[13px] leading-snug text-slate-600">{ts(`virtualization.details.eq.${e.key}.desc`)}</p>
                 <span className="mt-2 inline-block text-[12px] font-bold text-brand-600">{goLabel} →</span>
               </div>
