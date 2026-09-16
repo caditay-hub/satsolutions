@@ -31,7 +31,7 @@ const D: Record<string, Dict> = {
     ],
     factsTitle: "Реквизиты для тендерной документации",
     facts: [
-      { t: "Компания", d: "ООО «SAT SOLUTIONS», ИНН 308603912, г. Ташкент, ул. Катта Дархон, 5" },
+      { t: "Компания", d: "ООО «SUPPLY AND TRANSPORTATION» (бренд SAT Solutions), ИНН 308603912, г. Ташкент, ул. Катта Дархон, 5" },
       { t: "Опыт", d: "На рынке с 2021 года: Uzum, Ucell, Damira Beverages, ЖК Tower Up и другие проекты — кейсы в разделе «Портфолио»" },
       { t: "География", d: "Поставки и монтажные бригады — Ташкент и все регионы Узбекистана" },
       { t: "Партнёрства", d: "Сертифицированный партнёр H3C, интегратор Dahua, авторизованный партнёр Lenovo 360 и Eltex — сертификаты на странице «О компании»" },
@@ -62,7 +62,7 @@ const D: Record<string, Dict> = {
     ],
     factsTitle: "Tender hujjatlari uchun rekvizitlar",
     facts: [
-      { t: "Kompaniya", d: "«SAT SOLUTIONS» MChJ, STIR 308603912, Toshkent sh., Katta Darxon koʻchasi, 5" },
+      { t: "Kompaniya", d: "«SUPPLY AND TRANSPORTATION» MChJ (SAT Solutions brendi), STIR 308603912, Toshkent sh., Katta Darxon koʻchasi, 5" },
       { t: "Tajriba", d: "Bozorda 2021 yildan: Uzum, Ucell, Damira Beverages, Tower Up TJM va boshqa loyihalar — keyslar «Portfolio» boʻlimida" },
       { t: "Geografiya", d: "Taʼminot va montaj brigadalari — Toshkent va Oʻzbekistonning barcha viloyatlari" },
       { t: "Hamkorliklar", d: "H3C sertifikatlangan hamkori, Dahua integratori, Lenovo 360 va Eltex vakolatli hamkori — sertifikatlar «Kompaniya haqida» sahifasida" },
@@ -93,7 +93,7 @@ const D: Record<string, Dict> = {
     ],
     factsTitle: "Details for tender documentation",
     facts: [
-      { t: "Company", d: "SAT SOLUTIONS LLC, TIN 308603912, 5 Katta Darkhon st., Tashkent" },
+      { t: "Company", d: "SUPPLY AND TRANSPORTATION LLC (SAT Solutions brand), TIN 308603912, 5 Katta Darkhon st., Tashkent" },
       { t: "Track record", d: "On the market since 2021: Uzum, Ucell, Damira Beverages, Tower Up and more — cases in the Portfolio section" },
       { t: "Geography", d: "Supply and installation teams across Tashkent and all regions of Uzbekistan" },
       { t: "Partnerships", d: "Certified H3C partner, Dahua integrator, authorised Lenovo 360 and Eltex partner — certificates on the About page" },
@@ -124,7 +124,7 @@ const D: Record<string, Dict> = {
     ],
     factsTitle: "İhale dosyası için bilgiler",
     facts: [
-      { t: "Şirket", d: "SAT SOLUTIONS LLC, VKN 308603912, Katta Darxon cad. 5, Taşkent" },
+      { t: "Şirket", d: "SUPPLY AND TRANSPORTATION LLC (SAT Solutions markası), VKN 308603912, Katta Darxon cad. 5, Taşkent" },
       { t: "Referanslar", d: "2021'den beri: Uzum, Ucell, Damira Beverages, Tower Up — vakalar Portföy bölümünde" },
       { t: "Coğrafya", d: "Tedarik ve montaj ekipleri — Taşkent ve tüm Özbekistan" },
       { t: "Ortaklıklar", d: "Sertifikalı H3C ortağı, Dahua entegratörü, yetkili Lenovo 360 ve Eltex ortağı — sertifikalar Hakkımızda sayfasında" },
@@ -155,7 +155,7 @@ const D: Record<string, Dict> = {
     ],
     factsTitle: "投标文件所需信息",
     facts: [
-      { t: "公司", d: "SAT SOLUTIONS 有限公司，税号 308603912，塔什干市 Katta Darxon 街 5 号" },
+      { t: "公司", d: "SUPPLY AND TRANSPORTATION 有限公司（SAT Solutions 品牌），税号 308603912，塔什干市 Katta Darxon 街 5 号" },
       { t: "业绩", d: "2021 年至今：Uzum、Ucell、Damira Beverages、Tower Up 等——案例见作品集" },
       { t: "覆盖范围", d: "供货与安装团队覆盖塔什干及乌兹别克斯坦全境" },
       { t: "合作资质", d: "H3C 认证合作伙伴、大华集成商、联想 360 与 Eltex 授权伙伴——证书见公司简介页" },

@@ -66,12 +66,12 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
   // Реквизиты по локалям — совпадают с блоком «Компания» на /tenders
   const legalLine = ({
-    ru: "ООО «SAT SOLUTIONS», ИНН 308603912",
-    uz: "«SAT SOLUTIONS» MChJ, STIR 308603912",
-    en: "SAT SOLUTIONS LLC, TIN 308603912",
-    tr: "SAT SOLUTIONS LLC, VKN 308603912",
-    zh: "SAT SOLUTIONS 有限公司，税号 308603912",
-  } as Record<string, string>)[locale] ?? "ООО «SAT SOLUTIONS», ИНН 308603912";
+    ru: "ООО «SUPPLY AND TRANSPORTATION» (бренд SAT Solutions), ИНН 308603912",
+    uz: "«SUPPLY AND TRANSPORTATION» MChJ (SAT Solutions brendi), STIR 308603912",
+    en: "SUPPLY AND TRANSPORTATION LLC (SAT Solutions brand), TIN 308603912",
+    tr: "SUPPLY AND TRANSPORTATION LLC (SAT Solutions markası), VKN 308603912",
+    zh: "SUPPLY AND TRANSPORTATION 有限公司（SAT Solutions 品牌），税号 308603912",
+  } as Record<string, string>)[locale] ?? "ООО «SUPPLY AND TRANSPORTATION» (бренд SAT Solutions), ИНН 308603912";
 
   return (
     <footer className="border-t border-slate-300 bg-white" id="site-footer">
