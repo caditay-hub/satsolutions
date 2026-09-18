@@ -146,6 +146,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
         <img src={articleImg(slug)} alt={body.title} className="absolute inset-0 h-full w-full object-cover opacity-45" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-900/40" />
         <div className="container-page relative py-10 sm:py-16">
+          <div className="mx-auto max-w-3xl">
           <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
             <Link href="/" className="hover:text-white transition-colors">{ui.home}</Link>
             <span className="text-slate-400/60">/</span>
@@ -155,11 +156,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
           <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-200 [text-shadow:0_1px_8px_rgba(0,0,0,.5)]">{body.excerpt}</p>
           {/* дата публикации была только в разметке — читателю и Google её видно не было */}
           <time dateTime={article.date} className="mt-4 block text-[11px] font-bold uppercase tracking-widest text-slate-300/80">{publishedLabel}</time>
+          </div>
         </div>
       </header>
 
       <article className="container-page py-8 sm:py-12">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl">
           {body.summary && body.summary.length > 0 && (
             <div className="mb-8 rounded-xl border border-slate-200 border-l-4 border-l-brand-600 bg-slate-50 p-4 sm:p-5">
               <p className="text-[11px] font-black uppercase tracking-widest text-brand-600">{artUi.summary}</p>
