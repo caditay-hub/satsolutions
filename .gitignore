@@ -33,3 +33,7 @@ apps/api/uploads/
 .secrets/
 # MCP-конфиг с ключами (Firecrawl и др.) — не в git/деплой
 .mcp.json
+
+# Доступы к Google Business Profile: в репозиторий не кладём
+scripts/gbp/client.json
+scripts/gbp/gbp_oauth.json
