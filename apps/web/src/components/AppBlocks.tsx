@@ -15,12 +15,33 @@ function SectionHead({ title, lead }: { title: string; lead?: string }) {
   );
 }
 
+
+/** Фотополоса: снимок проявляется с лёгким наездом камеры один раз. */
+export function Photo({ src, className = "", ratio = "aspect-[4/3]" }: { src: string; className?: string; ratio?: string }) {
+  return (
+    <InView variant="rv-zoom" className={`overflow-hidden rounded-2xl bg-slate-100 ${ratio} ${className}`}>
+      <img src={src} alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
+    </InView>
+  );
+}
+
+/** Широкая фотополоса между разделами. */
+export function PhotoBand({ src }: { src: string }) {
+  return (
+    <InView variant="rv-zoom" className="mt-12 aspect-[16/7] overflow-hidden rounded-3xl bg-slate-100">
+      <img src={src} alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
+    </InView>
+  );
+}
+
 /** Четыре шага прохода гостя: загораются по очереди при появлении. */
 export function GuestFlow({ d }: { d: UyExtras }) {
   return (
     <section>
       <SectionHead title={d.flowTitle} lead={d.flowLead} />
-      <InView as="ol" variant="rv-stagger" className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:items-center">
+      <Photo src="/apps-img/uy-guest.jpg" />
+      <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
         {d.flow.map((s, i) => (
           <li key={s.t} className="rounded-2xl border border-slate-200 bg-white p-5">
             <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-brand-700 text-sm font-bold text-white">
@@ -31,6 +52,7 @@ export function GuestFlow({ d }: { d: UyExtras }) {
           </li>
         ))}
       </InView>
+      </div>
     </section>
   );
 }
@@ -64,7 +86,8 @@ export function EventFeed({ d }: { d: UyExtras }) {
   return (
     <section>
       <SectionHead title={d.feedTitle} lead={d.feedLead} />
-      <InView as="ul" variant="rv-stagger" className="mt-6 max-w-xl rounded-2xl border border-slate-200 bg-white px-4">
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-center">
+      <InView as="ul" variant="rv-stagger" className="rounded-2xl border border-slate-200 bg-white px-4">
         {d.feed.map((e) => (
           <li key={e.t} className="flex items-center gap-3 border-b border-slate-100 py-3 last:border-0">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-brand-50">
@@ -77,6 +100,8 @@ export function EventFeed({ d }: { d: UyExtras }) {
           </li>
         ))}
       </InView>
+      <Photo src="/apps-img/uy-office.jpg" />
+      </div>
     </section>
   );
 }
@@ -144,9 +169,12 @@ export function AttendanceCharts({ d }: { d: DavomatExtras }) {
   return (
     <section>
       <SectionHead title={d.chartsTitle} lead={d.chartsLead} />
-      <div className="mt-6 grid gap-8 rounded-2xl border border-slate-200 bg-white p-5 sm:grid-cols-2 sm:p-6">
-        <BarChart c={d.arrival} tone="teal" />
-        <BarChart c={d.late} tone="warn" />
+      <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-stretch">
+        <div className="grid gap-8 rounded-2xl border border-slate-200 bg-white p-5 sm:grid-cols-2 sm:p-6">
+          <BarChart c={d.arrival} tone="teal" />
+          <BarChart c={d.late} tone="warn" />
+        </div>
+        <Photo src="/apps-img/davomat-report.jpg" ratio="aspect-[4/3] lg:aspect-auto lg:h-full" />
       </div>
     </section>
   );

@@ -58,7 +58,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
   const hub = HUB_EXTRAS[locale] ?? HUB_EXTRAS.ru;
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+    <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
@@ -67,13 +67,17 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
         <span className="text-slate-700">{crumbs.apps}</span>
       </nav>
 
-      <div className="mt-3 grid gap-8 md:grid-cols-[1.15fr_1fr] md:items-center">
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
-          <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+      <section className="relative mt-3 overflow-hidden rounded-3xl bg-slate-900">
+        <img src="/apps-img/apps-hero.jpg" alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-55" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/40" />
+        <div className="relative grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1.15fr_auto]">
+          <div>
+            <h1 className="text-3xl font-bold text-white sm:text-4xl">{d.h1}</h1>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
+          </div>
+          <AppHeroArt app="uy" />
         </div>
-        <AppHeroArt app="uy" />
-      </div>
+      </section>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.cardsTitle}</h2>
       <div className="mt-6 grid md:grid-cols-2 gap-5">

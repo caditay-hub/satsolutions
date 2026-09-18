@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import type { AppPage } from "@/lib/appsContent";
 import { CRUMBS } from "@/lib/appsContent";
 import { AppHeroArt, DAVOMAT_SCREENS, PanelMock, PhoneMock, UY_SCREENS } from "@/components/AppMockups";
-import { AttendanceCharts, BeforeAfter, EventFeed, GuestFlow } from "@/components/AppBlocks";
+import { AttendanceCharts, BeforeAfter, EventFeed, GuestFlow, PhotoBand } from "@/components/AppBlocks";
 import { DAVOMAT_EXTRAS, UY_EXTRAS } from "@/lib/appsExtrasContent";
 
 export function AppProductPage({
@@ -26,7 +26,7 @@ export function AppProductPage({
   const dav = app === "davomat" ? DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru : null;
   const c = CRUMBS[locale] ?? CRUMBS.ru;
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+    <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
       <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
         <Link href="/" className="hover:text-brand-600">{c.home}</Link>
         <span>/</span>
@@ -35,13 +35,23 @@ export function AppProductPage({
         <span className="text-slate-700">{d.h1.split(" — ")[0]}</span>
       </nav>
 
-      <div className="mt-3 grid gap-8 md:grid-cols-[1.15fr_1fr] md:items-center">
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
-          <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+      {/* Первый экран — широкая фотополоса: текст поверх снимка, телефоны сверху. */}
+      <section className="relative mt-3 overflow-hidden rounded-3xl bg-slate-900">
+        <img
+          src={app === "uy" ? "/apps-img/uy-hero.jpg" : "/apps-img/davomat-hero.jpg"}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/40" />
+        <div className="relative grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1.15fr_auto]">
+          <div>
+            <h1 className="text-3xl font-bold text-white sm:text-4xl">{d.h1}</h1>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
+          </div>
+          <AppHeroArt app={app} />
         </div>
-        <AppHeroArt app={app} />
-      </div>
+      </section>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.screensTitle}</h2>
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -77,6 +87,8 @@ export function AppProductPage({
       </div>
 
       {uy && <EventFeed d={uy} />}
+
+      <PhotoBand src={app === "uy" ? "/apps-img/uy-yard.jpg" : "/apps-img/davomat-check.jpg"} />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.howTitle}</h2>
       <ol className="mt-6 grid sm:grid-cols-2 gap-5">

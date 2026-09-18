@@ -9,7 +9,7 @@
 // prefers-reduced-motion содержимое видно сразу (правила в globals.css).
 import { useEffect, useRef, type ReactNode } from "react";
 
-export type InViewVariant = "rv" | "rv-stagger" | "rv-bars" | "rv-line";
+export type InViewVariant = "rv" | "rv-stagger" | "rv-bars" | "rv-line" | "rv-zoom";
 
 export function InView({
   children,
@@ -20,7 +20,7 @@ export function InView({
   children: ReactNode;
   variant?: InViewVariant;
   className?: string;
-  as?: "div" | "ol" | "ul";
+  as?: "div" | "ol" | "ul" | "figure";
 }) {
   const ref = useRef<HTMLElement | null>(null);
 

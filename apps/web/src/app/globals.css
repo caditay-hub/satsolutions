@@ -262,3 +262,10 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
     opacity: 1; transform: none; transition: none;
   }
 }
+
+/* фото проявляется с лёгким наездом камеры — один раз */
+.rv-armed.rv-zoom img { opacity: 0; transform: scale(1.06); }
+.rv-armed.rv-zoom.is-in img { opacity: 1; transform: none; transition: opacity .7s ease, transform 1.2s cubic-bezier(.2,.7,.3,1); }
+@media (prefers-reduced-motion: reduce) {
+  .rv-armed.rv-zoom img { opacity: 1; transform: none; transition: none; }
+}

@@ -145,12 +145,21 @@ if [ -d "$WEB_APP" ]; then
   # catalog/other: артефакты other.html/.rsc/.meta — сиблинги папки other/.
   # Точка после `other` (other.*) исключает совпадение с other/page.js (other/...).
   find "$WEB_APP" -type f -path '*/catalog/other.*' -delete 2>/dev/null || true
+  # Страницы приложений: старый воркер во время reload успевает дописать сюда свой
+  # HTML со ссылкой на УЖЕ УДАЛЁННЫЙ css — посетитель получает страницу без стилей.
+  # Поэтому их пререндеры тоже сбрасываем и прогреваем заново (18.09.2026).
+  find "$WEB_APP" -type f \( -name 'apps.html' -o -name 'apps.rsc' -o -name 'apps.meta' -o -name 'apps.body' \) -delete 2>/dev/null || true
+  find "$WEB_APP" -type f -path '*/apps/uy.*' -delete 2>/dev/null || true
+  find "$WEB_APP" -type f -path '*/apps/davomat.*' -delete 2>/dev/null || true
   sleep 2
   for L in ru uz en tr zh; do
     curl -s -o /dev/null -m 30 "http://localhost:3000/$L/catalog" || true
     curl -s -o /dev/null -m 30 "http://localhost:3000/$L/catalog/other" || true
+    curl -s -o /dev/null -m 30 "http://localhost:3000/$L/apps" || true
+    curl -s -o /dev/null -m 30 "http://localhost:3000/$L/apps/uy" || true
+    curl -s -o /dev/null -m 30 "http://localhost:3000/$L/apps/davomat" || true
   done
-  echo "    ISR-пререндеры каталога сброшены и прогреты"
+  echo "    ISR-пререндеры каталога и страниц приложений сброшены и прогреты"
 fi
 
 # 7) Контроль: живой сайт должен ссылаться на файлы, которые реально отдаются.
