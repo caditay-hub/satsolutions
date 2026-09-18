@@ -19,7 +19,9 @@
     "typeDesc": "{type}: katalog, narxlar, tanlash va Toshkent hamda Oʻzbekiston boʻylab yetkazib berish. Rasmiy kafolat, montaj va servis — SAT Solutions.",
     "inStockCount": "Toshkentda {count} ta model mavjud.",
     "priceProject": "Loyihangiz uchun hisoblab beramiz",
-    "priceProjectNote": "Bu uskuna loyiha boʻyicha yetkazib beriladi: narx konfiguratsiya va hajmga bogʻliq. Hisob-kitobni bir ish kuni ichida yuboramiz."
+    "priceProjectNote": "Bu uskuna loyiha boʻyicha yetkazib beriladi: narx konfiguratsiya va hajmga bogʻliq. Hisob-kitobni bir ish kuni ichida yuboramiz.",
+    "listSeoTitle": "Toshkentda xavfsizlik uskunalari — SAT katalogi",
+    "listSeoDesc": "3 200 dan ortiq mahsulot: kameralar, domofonlar, kirish nazorati, turniketlar, yongʻin signalizatsiyasi, tarmoq va optika. Narxlar soʻmda, yetkazib berish bor."
   },
   "nav": {
     "home": "Asosiy",

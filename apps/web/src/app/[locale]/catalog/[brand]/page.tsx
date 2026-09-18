@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getBrands, getBrandTypePairs } from "@/lib/api";
@@ -52,7 +53,7 @@ export async function generateMetadata({
   const description = stockCount >= 5 ? `${tc("brandInStock", { count: stockCount })} ${baseDesc}` : baseDesc;
   return {
     title,
-    description,
+    description: clampDesc(description),
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     // Фасет-комбинации (chars/цена/сортировка/страница>1) — noindex,follow, как на type/group

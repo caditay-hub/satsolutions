@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -31,7 +32,7 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
   const description = seo?.desc ?? t("product.typeDesc", { type: name });
   return {
     title,
-    description,
+    description: clampDesc(description),
     alternates: hreflangAlternates(`/products/group/${slug}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     robots: catalogRobots(sp),

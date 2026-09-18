@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPortfolioBySlug, getPortfolioCategories, getProductBySlug, getSitePage } from "@/lib/api";
@@ -90,7 +91,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const img = resolveImageUrl(item.coverImageUrl);
     return {
       title,
-      description,
+      description: clampDesc(description),
       alternates: hreflangAlternates(`/portfolio/${item.slug}`, locale),
       openGraph: { title, description, ...(img ? { images: [{ url: img }] } : {}) }
     };

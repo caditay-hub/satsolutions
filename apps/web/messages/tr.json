@@ -19,7 +19,9 @@
     "typeDesc": "{type}: katalog, fiyatlar, seçim ve Taşkent ile Özbekistan genelinde teslimat. Resmi garanti, kurulum ve servis — SAT Solutions.",
     "inStockCount": "Taşkent'te stokta {count} model.",
     "priceProject": "Projeniz için fiyat verelim",
-    "priceProjectNote": "Bu ekipman proje bazında tedarik edilir: fiyat konfigürasyona ve hacme bağlıdır. Teklifi bir iş günü içinde göndeririz."
+    "priceProjectNote": "Bu ekipman proje bazında tedarik edilir: fiyat konfigürasyona ve hacme bağlıdır. Teklifi bir iş günü içinde göndeririz.",
+    "listSeoTitle": "Taşkent’te güvenlik ekipmanları — SAT kataloğu",
+    "listSeoDesc": "3.200’den fazla ürün: kameralar, interkomlar, geçiş kontrolü, turnikeler, yangın alarmı, ağ ve fiber. Fiyatlar somda, Özbekistan geneline teslimat."
   },
   "nav": {
     "home": "Ana Sayfa",

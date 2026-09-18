@@ -7,6 +7,7 @@ import { GroupIcon } from "@/components/GroupIcon";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
+import { EXTRA_TYPES, EXTRA_TYPES_TITLE } from "@/lib/extraTypes";
 import { ogLocale } from "@/lib/ogLocale";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -67,6 +68,24 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
           </section>
         ))}
       </div>
+
+      {/* Типы вне укрупнённых групп: раньше на них не вело ни одной внутренней ссылки */}
+      <section className="mt-10 border-t border-slate-200 pt-6">
+        <h2 className="text-[15px] font-semibold text-slate-900">{EXTRA_TYPES_TITLE[locale] ?? EXTRA_TYPES_TITLE.ru}</h2>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {EXTRA_TYPES.map((t) => (
+            <li key={t.slug}>
+              <Link
+                href={`/products/type/${t.slug}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-[13.5px] text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700"
+              >
+                <span>{localizeCatName(t.name, locale)}</span>
+                <span className="text-[11px] text-slate-400">{t.count}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       <div className="mt-10 flex flex-wrap gap-4 border-t border-slate-200 pt-6 text-sm">
         <Link href="/catalog" className="font-semibold text-brand-700 hover:underline">{tc("byBrands")} →</Link>

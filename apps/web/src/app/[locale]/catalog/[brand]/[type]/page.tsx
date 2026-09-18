@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getBrands, getBrandTypePairs } from "@/lib/api";
@@ -52,7 +53,7 @@ export async function generateMetadata({
   const description = `${t("product.inStockCount", { count: pair.count })} ${t("product.typeDesc", { type: `${locType} ${brandName}` })}`;
   return {
     title,
-    description,
+    description: clampDesc(description),
     alternates: hreflangAlternates(`/catalog/${brandSlug}/${type}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     robots: catalogRobots(sp),

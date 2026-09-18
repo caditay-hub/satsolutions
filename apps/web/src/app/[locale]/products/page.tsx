@@ -55,8 +55,10 @@ export async function generateMetadata({ params, searchParams }: { params: Promi
       openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale), images: ["/og.png"] }
     };
   }
-  const listDesc = t("product.listDesc");
-  const listTitle = t("nav.products");
+  // Корень каталога: раньше title был «Продукция — SAT Solutions» — 962 показа и ноль
+  // кликов за месяц. Отдельные SEO-строки с городом и объёмом каталога.
+  const listDesc = t("product.listSeoDesc");
+  const listTitle = t("product.listSeoTitle");
   return {
     title: listTitle,
     description: listDesc,
