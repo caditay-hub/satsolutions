@@ -209,11 +209,82 @@ const DownloadIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
   </svg>
 );
 
+const MORE: Record<string, { title: string; links: { href: string; t: string; d: string }[] }> = {
+  ru: {
+    title: "Ещё о нас",
+    links: [
+      { href: "/apps", t: "Приложения SAT", d: "SAT Uy для жителей ЖК и SAT Davomat для учёта рабочего времени" },
+      { href: "/blog", t: "Блог", d: "Разборы оборудования, инструкции и опыт с объектов" },
+      { href: "/portfolio", t: "Портфолио", d: "Выполненные объекты: что ставили и какую задачу решали" },
+      { href: "/reviews", t: "Отзывы", d: "Что говорят заказчики о работе и обслуживании" },
+      { href: "/partners/zkteco", t: "Партнёр ZKTeco", d: "Турникеты, контроллеры и терминалы учёта времени" },
+      { href: "/partners/h3c", t: "Партнёр H3C", d: "Коммутаторы, маршрутизаторы и серверные решения" },
+      { href: "/tenders", t: "Поставки и тендеры", d: "Спецификации, коммерческие предложения и документы для закупки" },
+      { href: "/export", t: "Экспорт оборудования", d: "Поставки в Таджикистан, Туркменистан и другие страны" },
+    ],
+  },
+  uz: {
+    title: "Biz haqimizda yana",
+    links: [
+      { href: "/apps", t: "SAT ilovalari", d: "TJM aholisi uchun SAT Uy va ish vaqti hisobi uchun SAT Davomat" },
+      { href: "/blog", t: "Blog", d: "Uskunalar tahlili, qoʻllanmalar va obyektlardagi tajriba" },
+      { href: "/portfolio", t: "Portfolio", d: "Bajarilgan obyektlar: nima oʻrnatildi va qanday vazifa hal qilindi" },
+      { href: "/reviews", t: "Sharhlar", d: "Buyurtmachilar ish va xizmat koʻrsatish haqida nima deydi" },
+      { href: "/partners/zkteco", t: "ZKTeco hamkori", d: "Turniketlar, kontrollerlar va ish vaqti terminallari" },
+      { href: "/partners/h3c", t: "H3C hamkori", d: "Kommutatorlar, marshrutizatorlar va server yechimlari" },
+      { href: "/tenders", t: "Yetkazib berish va tenderlar", d: "Spetsifikatsiya, tijorat taklifi va xarid hujjatlari" },
+      { href: "/export", t: "Uskunalar eksporti", d: "Tojikiston, Turkmaniston va boshqa davlatlarga yetkazish" },
+    ],
+  },
+  en: {
+    title: "More about us",
+    links: [
+      { href: "/apps", t: "SAT apps", d: "SAT Uy for residential complexes and SAT Davomat for time tracking" },
+      { href: "/blog", t: "Blog", d: "Equipment reviews, guides and field experience" },
+      { href: "/portfolio", t: "Portfolio", d: "Completed sites: what we installed and which task it solved" },
+      { href: "/reviews", t: "Reviews", d: "What customers say about our work and service" },
+      { href: "/partners/zkteco", t: "ZKTeco partner", d: "Turnstiles, controllers and time attendance terminals" },
+      { href: "/partners/h3c", t: "H3C partner", d: "Switches, routers and data centre solutions" },
+      { href: "/tenders", t: "Supply and tenders", d: "Specifications, quotations and procurement paperwork" },
+      { href: "/export", t: "Equipment export", d: "Supply to Tajikistan, Turkmenistan and other countries" },
+    ],
+  },
+  tr: {
+    title: "Hakkımızda daha fazlası",
+    links: [
+      { href: "/apps", t: "SAT uygulamaları", d: "Konut siteleri için SAT Uy ve mesai takibi için SAT Davomat" },
+      { href: "/blog", t: "Blog", d: "Cihaz incelemeleri, kılavuzlar ve sahadan deneyimler" },
+      { href: "/portfolio", t: "Portföy", d: "Tamamlanan sahalar: ne kurduk ve hangi ihtiyacı çözdük" },
+      { href: "/reviews", t: "Yorumlar", d: "Müşterilerin işimiz ve servisimiz hakkında görüşleri" },
+      { href: "/partners/zkteco", t: "ZKTeco ortağı", d: "Turnikeler, kontrolörler ve mesai terminalleri" },
+      { href: "/partners/h3c", t: "H3C ortağı", d: "Anahtarlar, yönlendiriciler ve veri merkezi çözümleri" },
+      { href: "/tenders", t: "Tedarik ve ihaleler", d: "Şartnameler, teklifler ve satın alma evrakları" },
+      { href: "/export", t: "Ekipman ihracatı", d: "Tacikistan, Türkmenistan ve diğer ülkelere tedarik" },
+    ],
+  },
+  zh: {
+    title: "更多关于我们",
+    links: [
+      { href: "/apps", t: "SAT 应用", d: "面向小区住户的 SAT Uy 与考勤管理 SAT Davomat" },
+      { href: "/blog", t: "博客", d: "设备解析、操作指南与现场经验" },
+      { href: "/portfolio", t: "案例", d: "已完成项目：安装了什么、解决了什么问题" },
+      { href: "/reviews", t: "客户评价", d: "客户对我们的施工与服务的评价" },
+      { href: "/partners/zkteco", t: "ZKTeco 合作伙伴", d: "闸机、控制器与考勤终端" },
+      { href: "/partners/h3c", t: "H3C 合作伙伴", d: "交换机、路由器与数据中心方案" },
+      { href: "/tenders", t: "供货与招标", d: "规格书、报价与采购文件" },
+      { href: "/export", t: "设备出口", d: "供货至塔吉克斯坦、土库曼斯坦等国家" },
+    ],
+  },
+};
+
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   // Явная локаль: без setRequestLocale вызовы next-intl читают заголовки запроса → маршрут динамический
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "about" });
+  const more = MORE[locale] ?? MORE.ru;
+  const moreTitle = more.title;
+  const moreLinks = more.links;
   try {
     const [{ page }, { brands }, { page: contact }] = await Promise.all([
       getSitePage("about").catch(() => ({ page: { title: "SAT Solutions", content: "", coverImageUrl: null, data: {} } as any })),
@@ -538,6 +609,24 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               </Reveal>
             </section>
           ) : null}
+
+          {/* «Ещё о нас» — с этой страницы раньше не было ссылок на блог, партнёрские
+              страницы, отзывы и приложения: разделы жили только в подвале и карте сайта. */}
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold text-slate-900">{moreTitle}</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {moreLinks.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="rounded-xl border border-slate-200 bg-white p-5 transition-colors hover:border-brand-300 hover:bg-brand-50"
+                >
+                  <div className="font-semibold text-slate-900">{l.t}</div>
+                  <p className="mt-1 text-sm text-slate-600 leading-relaxed">{l.d}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
 
         </div>
       </div>

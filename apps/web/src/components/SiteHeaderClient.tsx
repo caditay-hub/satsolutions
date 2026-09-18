@@ -21,6 +21,7 @@ const nav = [
   { href: "/", key: "home" },
   { href: "/solutions", key: "services" },
   { href: "/products", key: "catalog", mega: true },
+  { href: "/apps", key: "apps" },
   { href: "/portfolio", key: "portfolio" },
   { href: "/about", key: "about" }
 ] as const;

@@ -29,7 +29,8 @@
     "portfolio": "Portfolio",
     "about": "About",
     "allServices": "All services",
-    "allProjects": "All projects"
+    "allProjects": "All projects",
+    "apps": "Apps"
   },
   "common": {
     "contacts": "Contacts",

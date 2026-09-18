@@ -92,6 +92,8 @@ const STATIC_ROUTES = [
   // /export — хаб экспортного направления: даёт входящие ссылки страницам стран,
   // которые до этого были достижимы только из карты сайта.
   "/export", "/export/tajikistan", "/export/turkmenistan",
+  // Свои приложения: хаб и две продуктовые страницы (контент в lib/appsContent.ts)
+  "/apps", "/apps/uy", "/apps/davomat",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking

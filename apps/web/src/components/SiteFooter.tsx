@@ -62,6 +62,16 @@ export async function SiteFooter({ locale }: { locale: string }) {
   const exportLabel = ({ ru: "Экспорт оборудования", uz: "Uskunalar eksporti", en: "Equipment export", tr: "Ekipman ihracatı", zh: "设备出口" } as Record<string, string>)[locale] ?? "Экспорт оборудования";
   const exportTjLabel = ({ ru: "Поставки в Таджикистан", uz: "Tojikistonga yetkazish", en: "Supply to Tajikistan", tr: "Tacikistan'a tedarik", zh: "供货至塔吉克斯坦" } as Record<string, string>)[locale] ?? "Поставки в Таджикистан";
   const exportTmLabel = ({ ru: "Поставки в Туркменистан", uz: "Turkmanistonga yetkazish", en: "Supply to Turkmenistan", tr: "Türkmenistan'a tedarik", zh: "供货至土库曼斯坦" } as Record<string, string>)[locale] ?? "Поставки в Туркменистан";
+  const appsLabel = ({ ru: "Приложения SAT", uz: "SAT ilovalari", en: "SAT apps", tr: "SAT uygulamaları", zh: "SAT 应用" } as Record<string, string>)[locale] ?? "Приложения SAT";
+  const uyLabel = ({ ru: "SAT Uy — жителям ЖК", uz: "SAT Uy — TJM aholisiga", en: "SAT Uy — for residents", tr: "SAT Uy — site sakinlerine", zh: "SAT Uy——面向住户" } as Record<string, string>)[locale] ?? "SAT Uy — жителям ЖК";
+  const davomatLabel = ({ ru: "SAT Davomat — учёт времени", uz: "SAT Davomat — ish vaqti hisobi", en: "SAT Davomat — time tracking", tr: "SAT Davomat — mesai takibi", zh: "SAT Davomat——考勤" } as Record<string, string>)[locale] ?? "SAT Davomat — учёт времени";
+  const reviewsLabel = ({ ru: "Отзывы", uz: "Sharhlar", en: "Reviews", tr: "Yorumlar", zh: "客户评价" } as Record<string, string>)[locale] ?? "Отзывы";
+  const tendersLabel = ({ ru: "Поставки и тендеры", uz: "Yetkazib berish va tenderlar", en: "Supply and tenders", tr: "Tedarik ve ihaleler", zh: "供货与招标" } as Record<string, string>)[locale] ?? "Поставки и тендеры";
+  // Заголовки колонок подвала: раньше все 18 ссылок лежали одним списком «Разделы».
+  const colCatalogLabel = ({ ru: "Каталог и услуги", uz: "Katalog va xizmatlar", en: "Catalogue and services", tr: "Katalog ve hizmetler", zh: "产品与服务" } as Record<string, string>)[locale] ?? "Каталог и услуги";
+  const colCompanyLabel = ({ ru: "Компания", uz: "Kompaniya", en: "Company", tr: "Şirket", zh: "公司" } as Record<string, string>)[locale] ?? "Компания";
+  const colBuyersLabel = ({ ru: "Покупателям", uz: "Xaridorlarga", en: "For customers", tr: "Müşterilere", zh: "购买须知" } as Record<string, string>)[locale] ?? "Покупателям";
+
   const reviewLabel = ({ ru: "Оценить нас на Google Картах", uz: "Google Xaritada baholang", en: "Rate us on Google Maps", tr: "Google Haritalar'da değerlendirin", zh: "在 Google 地图上评价我们" } as Record<string, string>)[locale] ?? "Оценить нас на Google Картах";
 
   // Реквизиты по локалям — совпадают с блоком «Компания» на /tenders
@@ -76,7 +86,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
   return (
     <footer className="border-t border-slate-300 bg-white" id="site-footer">
       <div className="container-page py-5">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:items-start">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 lg:items-start">
           <div>
             <SatLogo size="md" />
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">{t("tagline")}</p>
@@ -92,18 +102,40 @@ export async function SiteFooter({ locale }: { locale: string }) {
           </div>
 
           <div>
-            <div className="text-sm font-bold text-slate-950">{t("sections")}</div>
+            <div className="text-sm font-bold text-slate-950">{colCatalogLabel}</div>
             <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/" className="hover:text-brand-700">{tn("home")}</Link></li>
-              <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
-              <li><Link href="/calculator" className="hover:text-brand-700">{calcLabel}</Link></li>
-              <li><Link href="/kits" className="hover:text-brand-700">{kitsLabel}</Link></li>
               <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
-              <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
-              <li><Link href="/blog" className="hover:text-brand-700">{blogLabel}</Link></li>
+              <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
+              <li><Link href="/kits" className="hover:text-brand-700">{kitsLabel}</Link></li>
+              <li><Link href="/calculator" className="hover:text-brand-700">{calcLabel}</Link></li>
+            </ul>
+
+            <div className="mt-6 text-sm font-bold text-slate-950">{appsLabel}</div>
+            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+              <li><Link href="/apps" className="hover:text-brand-700">{appsLabel}</Link></li>
+              <li><Link href="/apps/uy" className="hover:text-brand-700">{uyLabel}</Link></li>
+              <li><Link href="/apps/davomat" className="hover:text-brand-700">{davomatLabel}</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-sm font-bold text-slate-950">{colCompanyLabel}</div>
+            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
+              <li><Link href="/blog" className="hover:text-brand-700">{blogLabel}</Link></li>
+              <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
+              <li><Link href="/reviews" className="hover:text-brand-700">{reviewsLabel}</Link></li>
               <li><Link href="/partners/zkteco" className="hover:text-brand-700">{zktecoLabel}</Link></li>
               <li><Link href="/partners/h3c" className="hover:text-brand-700">{h3cLabel}</Link></li>
+              <li><Link href="/tenders" className="hover:text-brand-700">{tendersLabel}</Link></li>
+              <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-sm font-bold text-slate-950">{colBuyersLabel}</div>
+            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/faq" className="hover:text-brand-700">{t("faq")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
@@ -111,7 +143,6 @@ export async function SiteFooter({ locale }: { locale: string }) {
               <li><Link href="/export" className="hover:text-brand-700">{exportLabel}</Link></li>
               <li><Link href="/export/tajikistan" className="hover:text-brand-700">{exportTjLabel}</Link></li>
               <li><Link href="/export/turkmenistan" className="hover:text-brand-700">{exportTmLabel}</Link></li>
-              <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>
           </div>
 
