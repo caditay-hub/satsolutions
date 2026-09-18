@@ -228,3 +228,37 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
   html[data-cbar="1"] .fab-lift { transform: translateY(-64px); }
 }
 @media (prefers-reduced-motion: reduce) { .fab-lift { transition: none; } }
+
+/* ===== Появление блоков-иллюстраций при прокрутке (InView.tsx) =====
+   Класс rv-armed ставит клиент и только блокам, которые сейчас за экраном:
+   без JavaScript и при prefers-reduced-motion содержимое видно сразу,
+   анимация проигрывается один раз, в покое ничего не движется. */
+.rv-armed.rv { opacity: 0; transform: translateY(10px); }
+.rv-armed.rv.is-in { opacity: 1; transform: none; transition: opacity .5s ease, transform .5s ease; }
+
+.rv-armed.rv-stagger > * { opacity: 0; transform: translateY(10px); }
+.rv-armed.rv-stagger.is-in > * { opacity: 1; transform: none; transition: opacity .45s ease, transform .45s ease; }
+.rv-armed.rv-stagger.is-in > *:nth-child(2) { transition-delay: .12s; }
+.rv-armed.rv-stagger.is-in > *:nth-child(3) { transition-delay: .24s; }
+.rv-armed.rv-stagger.is-in > *:nth-child(4) { transition-delay: .36s; }
+.rv-armed.rv-stagger.is-in > *:nth-child(5) { transition-delay: .48s; }
+.rv-armed.rv-stagger.is-in > *:nth-child(6) { transition-delay: .6s; }
+
+/* столбики графика растут снизу */
+.rv-armed.rv-bars .rv-bar { transform: scaleY(.04); transform-origin: bottom; }
+.rv-armed.rv-bars.is-in .rv-bar { transform: none; transition: transform .65s cubic-bezier(.2,.7,.3,1); }
+.rv-armed.rv-bars.is-in .rv-bar:nth-child(2) { transition-delay: .06s; }
+.rv-armed.rv-bars.is-in .rv-bar:nth-child(3) { transition-delay: .12s; }
+.rv-armed.rv-bars.is-in .rv-bar:nth-child(4) { transition-delay: .18s; }
+.rv-armed.rv-bars.is-in .rv-bar:nth-child(5) { transition-delay: .24s; }
+.rv-armed.rv-bars.is-in .rv-bar:nth-child(6) { transition-delay: .3s; }
+
+/* линия-соединитель в схеме прорисовывается один раз */
+.rv-armed.rv-line .rv-grow { transform: scaleX(0); transform-origin: left; }
+.rv-armed.rv-line.is-in .rv-grow { transform: none; transition: transform 1s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rv-armed.rv, .rv-armed.rv-stagger > *, .rv-armed.rv-bars .rv-bar, .rv-armed.rv-line .rv-grow {
+    opacity: 1; transform: none; transition: none;
+  }
+}

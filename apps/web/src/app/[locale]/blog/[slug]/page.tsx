@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { articleBySlug, articleImg } from "@/lib/articlesData";
+import { ArticleArt } from "@/components/AppBlocks";
+import { InView } from "@/components/InView";
+import { ARTICLE_UI } from "@/lib/appsExtrasContent";
 import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -116,6 +119,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
       { "@type": "ListItem", position: 3, name: body.title },
     ],
   };
+  const artUi = ARTICLE_UI[locale] ?? ARTICLE_UI.ru;
   const faqLd = body.faq?.length
     ? {
         "@context": "https://schema.org",
@@ -153,6 +157,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
       <article className="container-page py-8 sm:py-12">
         <div className="max-w-3xl">
+          {body.summary && body.summary.length > 0 && (
+            <div className="mb-8 rounded-xl border border-slate-200 border-l-4 border-l-brand-600 bg-slate-50 p-4 sm:p-5">
+              <p className="text-[11px] font-black uppercase tracking-widest text-brand-600">{artUi.summary}</p>
+              <ul className="mt-3 space-y-2">
+                {body.summary.map((line) => (
+                  <li key={line} className="flex gap-2 text-sm sm:text-base leading-relaxed text-slate-700">
+                    <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="space-y-8">
             {body.sections.map((s, i) => (
               <section key={i}>
@@ -162,9 +180,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                     <p key={j} className="text-sm sm:text-base leading-relaxed text-slate-600">{para}</p>
                   ))}
                 </div>
+                {/* Схема ставится после второй секции: к этому месту читатель уже понял тему. */}
+                {article.art && i === 1 && <ArticleArt kind={article.art} locale={locale} />}
               </section>
             ))}
           </div>
+
+          {article.appHref && (
+            <InView className="mt-8">
+              <Link
+                href={article.appHref}
+                className="inline-flex items-center gap-2 rounded-xl border border-brand-200 bg-brand-50 px-5 py-3 text-sm font-bold text-brand-700 transition-colors hover:bg-brand-100"
+              >
+                {artUi.more} →
+              </Link>
+            </InView>
+          )}
 
           {body.faq && body.faq.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">

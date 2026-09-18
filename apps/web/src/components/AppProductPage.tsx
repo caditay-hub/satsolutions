@@ -3,18 +3,27 @@
 import { Link } from "@/i18n/navigation";
 import type { AppPage } from "@/lib/appsContent";
 import { CRUMBS } from "@/lib/appsContent";
+import { AppHeroArt, DAVOMAT_SCREENS, PanelMock, PhoneMock, UY_SCREENS } from "@/components/AppMockups";
+import { AttendanceCharts, BeforeAfter, EventFeed, GuestFlow } from "@/components/AppBlocks";
+import { DAVOMAT_EXTRAS, UY_EXTRAS } from "@/lib/appsExtrasContent";
 
 export function AppProductPage({
   d,
   locale,
   otherHref,
+  app,
   download,
 }: {
   d: AppPage;
   locale: string;
   otherHref: "/apps/uy" | "/apps/davomat";
+  app: "uy" | "davomat";
   download?: { label: string; href: string };
 }) {
+  const kinds = app === "uy" ? UY_SCREENS : DAVOMAT_SCREENS;
+  const Mock = app === "uy" ? PhoneMock : PanelMock;
+  const uy = app === "uy" ? UY_EXTRAS[locale] ?? UY_EXTRAS.ru : null;
+  const dav = app === "davomat" ? DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru : null;
   const c = CRUMBS[locale] ?? CRUMBS.ru;
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
@@ -26,18 +35,26 @@ export function AppProductPage({
         <span className="text-slate-700">{d.h1.split(" — ")[0]}</span>
       </nav>
 
-      <h1 className="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
-      <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+      <div className="mt-3 grid gap-8 md:grid-cols-[1.15fr_1fr] md:items-center">
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
+          <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+        </div>
+        <AppHeroArt app={app} />
+      </div>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.screensTitle}</h2>
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {d.screens.map((s) => (
-          <div key={s} className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-center">
-            <div className="mx-auto h-28 w-16 rounded-xl border-2 border-slate-300 bg-white" aria-hidden />
+        {d.screens.map((s, i) => (
+          <div key={s} className="rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
+            <Mock kind={kinds[i] ?? kinds[0]} uid="grid" className="mx-auto h-40 w-auto" />
             <div className="mt-3 text-sm font-medium text-slate-700">{s}</div>
           </div>
         ))}
       </div>
+
+      {uy && <GuestFlow d={uy} />}
+      {dav && <AttendanceCharts d={dav} />}
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.forWhomTitle}</h2>
       <div className="mt-6 grid sm:grid-cols-2 gap-5">
@@ -59,6 +76,8 @@ export function AppProductPage({
         ))}
       </div>
 
+      {uy && <EventFeed d={uy} />}
+
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.howTitle}</h2>
       <ol className="mt-6 grid sm:grid-cols-2 gap-5">
         {d.how.map((h) => (
@@ -79,6 +98,8 @@ export function AppProductPage({
           </li>
         ))}
       </ul>
+
+      {uy && <BeforeAfter d={uy} />}
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.faqTitle}</h2>
       <div className="mt-6 space-y-4">

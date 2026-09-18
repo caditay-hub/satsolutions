@@ -67,6 +67,7 @@ export default async function SatUyPage({ params }: { params: Promise<{ locale: 
         d={d}
         locale={locale}
         otherHref="/apps/davomat"
+        app="uy"
         download={{ label: DOWNLOAD[locale] ?? DOWNLOAD.ru, href: "https://uy.satsolutions.uz/download/SAT-Uy.apk" }}
       />
     </>

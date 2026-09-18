@@ -2,6 +2,9 @@
 // Контент — lib/appsContent.ts (5 локалей). SEO: ItemList приложений + FAQPage, hreflang, ссылки на страницы продуктов.
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
+import { AppHeroArt, PanelMock, PhoneMock } from "@/components/AppMockups";
+import { BrandStrip, SiteScheme } from "@/components/AppBlocks";
+import { HUB_EXTRAS } from "@/lib/appsExtrasContent";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { CRUMBS, HUB } from "@/lib/appsContent";
@@ -52,6 +55,8 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
     { ...d.davomat, href: "/apps/davomat" as const },
   ];
 
+  const hub = HUB_EXTRAS[locale] ?? HUB_EXTRAS.ru;
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -62,13 +67,25 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
         <span className="text-slate-700">{crumbs.apps}</span>
       </nav>
 
-      <h1 className="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
-      <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+      <div className="mt-3 grid gap-8 md:grid-cols-[1.15fr_1fr] md:items-center">
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
+          <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
+        </div>
+        <AppHeroArt app="uy" />
+      </div>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.cardsTitle}</h2>
       <div className="mt-6 grid md:grid-cols-2 gap-5">
         {cards.map((c) => (
           <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
+            <div className="mb-4 flex justify-center rounded-xl bg-gradient-to-b from-slate-50 to-white py-4">
+              {c.href === "/apps/uy" ? (
+                <PhoneMock kind="doors" uid="card" className="h-36 w-auto" />
+              ) : (
+                <PanelMock kind="timesheet" uid="card" className="h-36 w-auto" />
+              )}
+            </div>
             <div className="text-xl font-bold text-slate-900">{c.title}</div>
             <div className="mt-1 text-sm text-brand-700 font-semibold">{c.tagline}</div>
             <ul className="mt-4 space-y-2 text-sm text-slate-600 leading-relaxed">
@@ -98,6 +115,9 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
           </div>
         ))}
       </div>
+
+      <SiteScheme d={hub} />
+      <BrandStrip d={hub} />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.faqTitle}</h2>
       <div className="mt-6 space-y-4">

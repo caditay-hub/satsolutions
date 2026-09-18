@@ -9,7 +9,7 @@
 export type ArticleSection = { h: string; p: string[] };
 export type ArticleFaqItem = { q: string; a: string };
 // faq → блок «Частые вопросы» + FAQPage JSON-LD на странице статьи (rich-сниппеты)
-export type ArticleBody = { title: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[] };
+export type ArticleBody = { title: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
 
 // Обложка статьи: /blog-img/<slug>.jpg в public (карточка списка + фон шапки статьи)
 export const articleImg = (slug: string) => `/blog-img/${slug}.jpg`;
@@ -19,6 +19,8 @@ export type Article = {
   updated?: string;          // ISO — дата последней правки текста; идёт в dateModified
   related: string[];         // ключи услуг для перелинковки (serviceByKey)
   hubs?: string[];           // слаги товарных хабов /products/type/<slug> — «Каталог по теме»
+  art?: "guest" | "house" | "attendance";        // рисованная схема внутри статьи (ArticleArt)
+  appHref?: "/apps/uy" | "/apps/davomat";        // ссылка на страницу нашего приложения
   loc: Record<string, ArticleBody>;
 };
 
@@ -29,10 +31,17 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-18",
     related: ["attendance", "turnstile", "access"],
     hubs: ["zamki-i-skud", "turnikety-i-shlagbaumy"],
+    art: "attendance",
+    appHref: "/apps/davomat",
     loc: {
       ru: {
         title: "Учёт рабочего времени по лицу: от терминала на проходной до табеля в 1С",
         excerpt: "Как устроен учёт по лицу: что ставят на проходной, откуда берётся табель, как считаются опоздания и ночные смены, что делать с согласием работников и как данные попадают в 1С.",
+        summary: [
+          "Отметка по лицу занимает меньше секунды, отметиться за другого нельзя",
+          "Табель считается по графику подразделения: опоздания и переработки видны сразу",
+          "Готовый табель выгружается в 1С — часы не переписывают руками",
+        ],
         sections: [
           { h: "Зачем это компании", p: [
             "Бумажный журнал на проходной и охранник с ручкой дают цифры, которым никто не верит. Часы в табеле расходятся с фактом, опоздания всплывают только при конфликте, а спорные дни восстанавливаются по памяти. Компания при этом платит за время, которое никто не считал.",
@@ -69,6 +78,11 @@ export const ARTICLES: Article[] = [
       uz: {
         title: "Yuz orqali ish vaqtini hisobga olish: oʻtish punktidagi terminaldan 1Cdagi tabelgacha",
         excerpt: "Yuz orqali hisob qanday ishlaydi: oʻtish punktiga nima qoʻyiladi, tabel qayerdan olinadi, kechikish va tungi smenalar qanday hisoblanadi, xodim roziligi bilan nima qilinadi va maʼlumot 1Cga qanday tushadi.",
+        summary: [
+          "Yuz orqali qayd bir soniyadan kam vaqt oladi, boshqa odam oʻrniga belgilab boʻlmaydi",
+          "Tabel boʻlim grafigi boʻyicha hisoblanadi: kechikish va ortiqcha ish darhol koʻrinadi",
+          "Tayyor tabel 1Cga yuklanadi — soatlar qoʻlda koʻchirilmaydi",
+        ],
         sections: [
           { h: "Kompaniyaga bu nima uchun kerak", p: [
             "Oʻtish punktidagi qogʻoz jurnal va qoʻlida ruchka ushlagan qorovul hech kim ishonmaydigan raqamlarni beradi. Tabeldagi soatlar haqiqatdan farq qiladi, kechikishlar faqat nizo chiqqanda maʼlum boʻladi, bahsli kunlar esa xotiradan tiklanadi. Kompaniya esa hech kim sanamagan vaqt uchun pul toʻlaydi.",
@@ -105,6 +119,11 @@ export const ARTICLES: Article[] = [
       en: {
         title: "Face-based time tracking: from the terminal at the entrance to the timesheet in 1C",
         excerpt: "How face-based attendance works: what goes at the checkpoint, where the timesheet comes from, how late arrivals and night shifts are calculated, what to do about employee consent and how the data reaches 1C.",
+        summary: [
+          "A face check-in takes under a second and nobody can clock in for a colleague",
+          "The timesheet follows the department's schedule: late arrivals and overtime show up at once",
+          "The finished timesheet exports into 1C — no hours retyped by hand",
+        ],
         sections: [
           { h: "Why a company needs it", p: [
             "A paper logbook at the gate and a guard with a pen produce numbers nobody trusts. Hours in the timesheet drift from reality, late arrivals surface only during a conflict, and disputed days are reconstructed from memory. Meanwhile the company pays for time that was never actually counted.",
@@ -141,6 +160,11 @@ export const ARTICLES: Article[] = [
       tr: {
         title: "Yüz tanımayla mesai takibi: girişteki terminalden 1C’deki puantaja",
         excerpt: "Yüzle devam takibi nasıl çalışır: giriş noktasına ne kurulur, puantaj nereden gelir, geç kalma ve gece vardiyaları nasıl hesaplanır, çalışan rızası nasıl alınır ve veriler 1C’ye nasıl aktarılır.",
+        summary: [
+          "Yüzle okutma bir saniyeden kısa sürer ve kimse başkası yerine okutamaz",
+          "Puantaj departmanın programına göre hesaplanır: geç kalmalar ve fazla mesai anında görünür",
+          "Hazır puantaj 1C'ye aktarılır — saatler elle yeniden yazılmaz",
+        ],
         sections: [
           { h: "Şirketin buna neden ihtiyacı var", p: [
             "Girişteki kâğıt defter ve elinde kalem tutan güvenlik, kimsenin güvenmediği rakamlar üretir. Puantajdaki saatler gerçekle uyuşmaz, geç kalmalar ancak bir anlaşmazlıkta ortaya çıkar, tartışmalı günler hafızadan kurtarılmaya çalışılır. Şirket ise hiç sayılmamış zamanın parasını öder.",
@@ -177,6 +201,11 @@ export const ARTICLES: Article[] = [
       zh: {
         title: "人脸考勤：从门口终端到 1C 中的考勤表",
         excerpt: "人脸考勤如何运作：门口装什么、考勤表从何而来、迟到与夜班如何计算、员工同意书如何处理，以及数据如何进入 1C。",
+        summary: [
+          "人脸打卡不到一秒，且无法代他人打卡",
+          "考勤按部门班表计算：迟到与加班即时呈现",
+          "成型的考勤表导入 1C — 无需人工誊写工时",
+        ],
         sections: [
           { h: "企业为什么需要它", p: [
             "门口的纸质登记本和手写记录给出的数字没人相信。考勤表上的工时与事实不符，迟到只有在发生纠纷时才浮现，有争议的日子只能靠回忆还原。与此同时，企业为从未被真正统计的时间买单。",
@@ -218,10 +247,17 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-18",
     related: ["access", "intercom", "barrier"],
     hubs: ["zamki-i-skud", "domofoniya"],
+    art: "guest",
+    appHref: "/apps/uy",
     loc: {
       ru: {
         title: "Гостевой пропуск по QR-коду: как пускать курьеров и гостей без звонков диспетчеру",
         excerpt: "Разовый пропуск вместо запасного брелока: как работает ссылка с QR-кодом, чем она безопаснее кода на двери, что нужно от терминала и какие правила стоит задать управляющей компании.",
+        summary: [
+          "Житель сам выдаёт гостю ссылку с QR-кодом — звонить диспетчеру не нужно",
+          "Пропуск действует на один визит или на срок и гаснет сам",
+          "Каждый проход по QR виден в журнале: кто пришёл, куда и когда",
+        ],
         sections: [
           { h: "Почему код на двери и запасной брелок — плохая идея", p: [
             "Самый частый способ пустить гостя в закрытый двор — сказать ему код или отдать запасной брелок. Оба способа неуправляемы: код через месяц знает весь район, а брелок гуляет по знакомым и копируется за несколько тысяч сумов в любой мастерской. Управляющая компания при этом не знает, кто именно прошёл, и в случае происшествия видит только «проход по карте».",
@@ -258,6 +294,11 @@ export const ARTICLES: Article[] = [
       uz: {
         title: "QR-kod boʻyicha mehmon ruxsatnomasi: kuryer va mehmonlarni dispetcherga qoʻngʻiroqsiz kiritish",
         excerpt: "Zaxira brelok oʻrniga bir martalik ruxsatnoma: QR-kodli havola qanday ishlaydi, nega u eshikdagi koddan xavfsizroq, terminaldan nima talab qilinadi va boshqaruv kompaniyasi qanday qoidalarni belgilashi kerak.",
+        summary: [
+          "Aholi mehmonga QR-kodli havolani oʻzi beradi — dispetcherga qoʻngʻiroq shart emas",
+          "Ruxsatnoma bir tashrifga yoki muddatga amal qiladi va oʻzi oʻchadi",
+          "QR boʻyicha har bir oʻtish jurnalda koʻrinadi: kim keldi, qayerga va qachon",
+        ],
         sections: [
           { h: "Nega eshikdagi kod va zaxira brelok yomon yechim", p: [
             "Mehmonni yopiq hovliga kiritishning eng keng tarqalgan usuli — unga kodni aytish yoki zaxira brelokni berish. Ikkalasi ham nazoratsiz: kodni bir oydan soʻng butun mahalla biladi, brelok esa tanishlar qoʻlida yuradi va istalgan ustaxonada arzon nusxalanadi. Boshqaruv kompaniyasi esa kim oʻtganini bilmaydi, jurnalda faqat «karta orqali oʻtish» koʻrinadi.",
@@ -294,6 +335,11 @@ export const ARTICLES: Article[] = [
       en: {
         title: "Guest passes by QR code: letting couriers and visitors in without calling the dispatcher",
         excerpt: "A single-visit pass instead of a spare fob: how the link with a QR code works, why it is safer than a door code, what the terminal needs and which rules a management company should set.",
+        summary: [
+          "The resident sends the guest a link with a QR code — no call to the front desk",
+          "The pass works for one visit or for a period and expires on its own",
+          "Every QR entry is visible in the log: who came, where and when",
+        ],
         sections: [
           { h: "Why door codes and spare fobs fail", p: [
             "The usual way to let a guest into a gated yard is to tell them the code or hand over a spare fob. Neither can be controlled: within a month the code is known across the neighbourhood, and the fob travels between acquaintances and is copied cheaply at any workshop. The management company has no idea who actually walked in — the log only says \"card entry\".",
@@ -330,6 +376,11 @@ export const ARTICLES: Article[] = [
       tr: {
         title: "QR kodlu misafir geçişi: kuryeleri ve konukları dispeçeri aramadan içeri almak",
         excerpt: "Yedek kumanda yerine tek kullanımlık geçiş: QR kodlu bağlantı nasıl çalışır, kapı şifresinden neden güvenlidir, terminalden ne beklenir ve yönetim şirketi hangi kuralları koymalı.",
+        summary: [
+          "Sakin misafire QR kodlu bağlantıyı kendisi gönderir — danışmayı aramaya gerek yok",
+          "Geçiş izni tek ziyaret ya da belirli süre için geçerlidir ve kendiliğinden kapanır",
+          "QR ile yapılan her geçiş kayıtta görünür: kim geldi, nereye ve ne zaman",
+        ],
         sections: [
           { h: "Kapı şifresi ve yedek kumanda neden işe yaramaz", p: [
             "Kapalı siteye misafir almanın alışılmış yolu şifreyi söylemek ya da yedek kumandayı vermektir. İkisi de denetlenemez: şifreyi bir ay içinde tüm mahalle öğrenir, kumanda tanıdıklar arasında dolaşır ve herhangi bir atölyede ucuza çoğaltılır. Yönetim ise kimin girdiğini bilmez, kayıtta yalnızca \"kartla geçiş\" görünür.",
@@ -366,6 +417,11 @@ export const ARTICLES: Article[] = [
       zh: {
         title: "访客二维码通行证：不必打电话给调度也能放快递和客人进门",
         excerpt: "用一次性通行证替代备用门禁卡：二维码链接如何工作、为何比门口密码更安全、终端需要什么条件，以及物业应当设定哪些规则。",
+        summary: [
+          "住户自己把带二维码的链接发给访客 — 无需给调度打电话",
+          "通行证按单次到访或有效期生效，到期自动失效",
+          "每次二维码通行都记入日志：谁来了、去哪里、什么时间",
+        ],
         sections: [
           { h: "门口密码和备用门禁卡为何行不通", p: [
             "让客人进入封闭小区，常见做法是把密码告诉对方或把备用卡借出去。两者都不可控：密码一个月内传遍周边，门禁卡在熟人之间流转，还能在任何小店低价复制。物业根本不知道进来的是谁，日志里只有一条“刷卡通行”。",
@@ -407,10 +463,17 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-18",
     related: ["intercom", "access", "residential"],
     hubs: ["domofoniya", "zamki-i-skud"],
+    art: "house",
+    appHref: "/apps/uy",
     loc: {
       ru: {
         title: "Приложение для жителей ЖК: что оно меняет в доме и в работе управляющей компании",
         excerpt: "Домофон на телефоне, гостевой пропуск по ссылке, заявки с этапами и счёт за месяц. Разбираем, какие задачи дома закрывает приложение, что нужно из оборудования и почему его чаще ставят на уже работающую технику.",
+        summary: [
+          "Подъезд, калитка и шлагбаум открываются с телефона — ключи и брелоки не нужны",
+          "Заявка в управляющую компанию видна с этапами: принята, в работе, исполнитель",
+          "Начисления и оплата — в том же приложении, а каждый проход остаётся в журнале",
+        ],
         sections: [
           { h: "Что не так с домом без приложения", p: [
             "Обычный жилой комплекс живёт на трубках домофона, брелоках и телефоне диспетчера. Житель потерял брелок — идёт в управляющую компанию. Ждёт курьера — сидит у трубки или спускается вниз. Прорвало кран — звонит диспетчеру и потом весь день не знает, придёт мастер или нет. Управляющая компания в это время ведёт заявки в тетради, начисления считает в Excel, а на вопрос «за что я плачу» отвечает по памяти.",
@@ -447,6 +510,11 @@ export const ARTICLES: Article[] = [
       uz: {
         title: "TJM aholisi uchun ilova: uyda va boshqaruv kompaniyasi ishida nima oʻzgaradi",
         excerpt: "Telefondagi domofon, havola orqali mehmon ruxsatnomasi, bosqichli arizalar va oylik hisob. Ilova qanday vazifalarni yopadi, qanday uskuna kerak va nega uni koʻpincha mavjud texnikaga ulashadi.",
+        summary: [
+          "Podyezd, darvozacha va shlagbaum telefondan ochiladi — kalit va brelok kerak emas",
+          "Boshqaruv kompaniyasiga ariza bosqichlari bilan koʻrinadi: qabul qilindi, ishda, ijrochi",
+          "Hisob-kitob va toʻlov shu ilovada, har bir oʻtish esa jurnalda qoladi",
+        ],
         sections: [
           { h: "Ilovasiz uyda nima noqulay", p: [
             "Oddiy turar joy majmuasi domofon trubkalari, brelok va dispetcher telefoniga tayanadi. Yashovchi brelokni yoʻqotsa — boshqaruv kompaniyasiga boradi. Kuryerni kutsa — trubka yonida oʻtiradi yoki pastga tushadi. Kran buzilsa — dispetcherga qoʻngʻiroq qiladi va kun boʻyi usta keladimi-yoʻqmi bilmaydi.",
@@ -483,6 +551,11 @@ export const ARTICLES: Article[] = [
       en: {
         title: "A resident app for apartment complexes: what changes for tenants and the management company",
         excerpt: "Intercom on the phone, guest passes by link, requests with visible stages and the monthly bill. What the app actually solves, what hardware it needs and why it is usually installed on equipment that is already there.",
+        summary: [
+          "The entrance, gate and barrier open from a phone — no keys or fobs",
+          "A request to the management company shows its stages: accepted, in progress, assignee",
+          "Charges and payment live in the same app, and every entry stays in the log",
+        ],
         sections: [
           { h: "Life in a building without an app", p: [
             "A typical complex runs on intercom handsets, key fobs and the dispatcher's phone. A resident loses a fob and walks to the management office. Someone waits for a courier and sits by the handset. A pipe bursts, the resident calls the dispatcher and then spends the day guessing whether a plumber will arrive.",
@@ -519,6 +592,11 @@ export const ARTICLES: Article[] = [
       tr: {
         title: "Site sakinleri için uygulama: konutta ve yönetim şirketinde ne değişir",
         excerpt: "Telefonda interkom, bağlantıyla misafir geçişi, aşamaları görünen talepler ve aylık fatura. Uygulamanın çözdüğü işler, gereken donanım ve neden çoğunlukla mevcut cihazların üzerine kurulduğu.",
+        summary: [
+          "Bina kapısı, yan kapı ve bariyer telefondan açılır — anahtara ve kumandaya gerek yok",
+          "Yönetim şirketine açılan talep aşamalarıyla görünür: alındı, işlemde, sorumlu",
+          "Tahakkuk ve ödeme aynı uygulamada, her geçiş ise kayıtta kalır",
+        ],
         sections: [
           { h: "Uygulamasız bir sitede hayat", p: [
             "Tipik bir site interkom ahizeleri, kumandalar ve dispeçerin telefonuyla yönetilir. Sakin kumandayı kaybeder, yönetim ofisine gider. Kargo bekleyen kişi ahizenin başında oturur. Su patlar, sakin dispeçeri arar ve gün boyu tesisatçının gelip gelmeyeceğini bilemez.",
@@ -555,6 +633,11 @@ export const ARTICLES: Article[] = [
       zh: {
         title: "小区住户应用：住户与物业分别得到什么",
         excerpt: "手机对讲、链接式访客通行、进度可见的报修与月度账单。这款应用真正解决了什么问题、需要哪些设备，以及为何通常安装在现有设备之上。",
+        summary: [
+          "单元门、边门和道闸都用手机打开 — 无需钥匙和门禁卡",
+          "报修在物业端带流程显示：已受理、处理中、负责人",
+          "账单与支付在同一应用内，每次通行都留在日志里",
+        ],
         sections: [
           { h: "没有应用的小区是什么样", p: [
             "常见小区依靠对讲分机、门禁卡和调度电话运转。住户丢了门禁卡就要跑物业；等快递就得守在分机旁；水管漏了只能打电话给调度，然后一整天都不知道师傅会不会来。",

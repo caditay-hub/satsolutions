@@ -55,7 +55,7 @@ export default async function SatDavomatPage({ params }: { params: Promise<{ loc
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <AppProductPage d={d} locale={locale} otherHref="/apps/uy" />
+      <AppProductPage d={d} locale={locale} otherHref="/apps/uy" app="davomat" />
     </>
   );
 }
