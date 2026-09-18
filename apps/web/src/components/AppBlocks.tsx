@@ -2,7 +2,6 @@
 // «было / стало», графики учёта времени, схема работы на объекте, полоса техники.
 // Всё рисуется вёрсткой и SVG — ни картинок, ни библиотек; анимация одноразовая (Reveal).
 import { InView } from "@/components/InView";
-import { PanelMock, PhoneMock } from "@/components/AppMockups";
 import { DAVOMAT_EXTRAS, HUB_EXTRAS, UY_EXTRAS } from "@/lib/appsExtrasContent";
 import type { Chart, DavomatExtras, EventItem, HubExtras, UyExtras } from "@/lib/appsExtrasContent";
 
@@ -230,7 +229,7 @@ export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attend
     return (
       <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
         <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-          <PanelMock kind="timesheet" uid="art" className="mx-auto h-40 w-auto" />
+          <Photo src="/apps-img/shots/shot-timesheet.jpg" ratio="aspect-[16/7]" className="w-full sm:w-72" />
           <div className="grid gap-6">
             <div className="text-sm font-semibold text-slate-900">{d.chartsTitle}</div>
             <InView variant="rv-bars" className="flex h-24 items-end gap-2">
@@ -258,7 +257,7 @@ export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attend
     return (
       <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
         <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-          <PhoneMock kind="guest" uid="art" className="mx-auto h-44 w-auto" />
+          <Photo src="/apps-img/shots/shot-guest.jpg" ratio="aspect-[3/4]" className="w-full sm:w-52" />
           <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
             {d.flow.map((s, i) => (
               <li key={s.t} className="rounded-xl border border-slate-200 bg-slate-50 p-3">
@@ -279,7 +278,7 @@ export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attend
   return (
     <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
       <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-        <PhoneMock kind="doors" uid="art" className="mx-auto h-44 w-auto" />
+        <Photo src="/apps-img/shots/shot-doors.jpg" ratio="aspect-[3/4]" className="w-full sm:w-52" />
         <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
           {d.nodes.map((n, i) => (
             <li

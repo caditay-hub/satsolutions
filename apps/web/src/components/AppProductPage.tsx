@@ -3,9 +3,22 @@
 import { Link } from "@/i18n/navigation";
 import type { AppPage } from "@/lib/appsContent";
 import { CRUMBS } from "@/lib/appsContent";
-import { AppHeroArt, DAVOMAT_SCREENS, PanelMock, PhoneMock, UY_SCREENS } from "@/components/AppMockups";
 import { AttendanceCharts, BeforeAfter, EventFeed, GuestFlow, PhotoBand } from "@/components/AppBlocks";
 import { DAVOMAT_EXTRAS, UY_EXTRAS } from "@/lib/appsExtrasContent";
+
+// Снимки экранов приложения и кабинета — в том же порядке, что подписи d.screens
+const UY_SHOTS = [
+  "/apps-img/shots/shot-doors.jpg",
+  "/apps-img/shots/shot-guest.jpg",
+  "/apps-img/shots/shot-tickets.jpg",
+  "/apps-img/shots/shot-bill.jpg",
+];
+const DAVOMAT_SHOTS = [
+  "/apps-img/shots/shot-now.jpg",
+  "/apps-img/shots/shot-timesheet.jpg",
+  "/apps-img/shots/shot-late.jpg",
+  "/apps-img/shots/shot-export.jpg",
+];
 
 export function AppProductPage({
   d,
@@ -20,8 +33,7 @@ export function AppProductPage({
   app: "uy" | "davomat";
   download?: { label: string; href: string };
 }) {
-  const kinds = app === "uy" ? UY_SCREENS : DAVOMAT_SCREENS;
-  const Mock = app === "uy" ? PhoneMock : PanelMock;
+  const shots = app === "uy" ? UY_SHOTS : DAVOMAT_SHOTS;
   const uy = app === "uy" ? UY_EXTRAS[locale] ?? UY_EXTRAS.ru : null;
   const dav = app === "davomat" ? DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru : null;
   const c = CRUMBS[locale] ?? CRUMBS.ru;
@@ -49,7 +61,14 @@ export function AppProductPage({
             <h1 className="text-3xl font-bold text-white sm:text-4xl">{d.h1}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
           </div>
-          <AppHeroArt app={app} />
+          <div className="grid w-full max-w-md gap-4 sm:grid-cols-2 lg:max-w-none lg:grid-cols-1 lg:gap-5">
+            <img
+              src={app === "uy" ? "/apps-img/shots/shot-doors.jpg" : "/apps-img/shots/shot-timesheet.jpg"}
+              alt=""
+              aria-hidden
+              className="w-full rounded-2xl shadow-2xl lg:w-80"
+            />
+          </div>
         </div>
       </section>
 
@@ -57,7 +76,7 @@ export function AppProductPage({
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
         {d.screens.map((s, i) => (
           <div key={s} className="rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
-            <Mock kind={kinds[i] ?? kinds[0]} uid="grid" className="mx-auto h-40 w-auto" />
+            <img src={shots[i] ?? shots[0]} alt="" aria-hidden loading="lazy" className="mx-auto w-full rounded-xl" />
             <div className="mt-3 text-sm font-medium text-slate-700">{s}</div>
           </div>
         ))}

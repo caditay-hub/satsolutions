@@ -2,7 +2,6 @@
 // Контент — lib/appsContent.ts (5 локалей). SEO: ItemList приложений + FAQPage, hreflang, ссылки на страницы продуктов.
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { AppHeroArt, PanelMock, PhoneMock } from "@/components/AppMockups";
 import { BrandStrip, SiteScheme } from "@/components/AppBlocks";
 import { HUB_EXTRAS } from "@/lib/appsExtrasContent";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -75,7 +74,10 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
             <h1 className="text-3xl font-bold text-white sm:text-4xl">{d.h1}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
           </div>
-          <AppHeroArt app="uy" />
+          <div className="flex gap-4">
+            <img src="/apps-img/shots/shot-doors.jpg" alt="" aria-hidden className="w-40 rounded-2xl shadow-2xl sm:w-48" />
+            <img src="/apps-img/shots/shot-now.jpg" alt="" aria-hidden className="hidden h-fit w-64 self-center rounded-2xl shadow-2xl sm:block" />
+          </div>
         </div>
       </section>
 
@@ -84,11 +86,13 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
         {cards.map((c) => (
           <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
             <div className="mb-4 flex justify-center rounded-xl bg-gradient-to-b from-slate-50 to-white py-4">
-              {c.href === "/apps/uy" ? (
-                <PhoneMock kind="doors" uid="card" className="h-36 w-auto" />
-              ) : (
-                <PanelMock kind="timesheet" uid="card" className="h-36 w-auto" />
-              )}
+              <img
+                src={c.href === "/apps/uy" ? "/apps-img/shots/shot-guest.jpg" : "/apps-img/shots/shot-now.jpg"}
+                alt=""
+                aria-hidden
+                loading="lazy"
+                className={c.href === "/apps/uy" ? "h-44 w-auto rounded-xl" : "w-full rounded-xl"}
+              />
             </div>
             <div className="text-xl font-bold text-slate-900">{c.title}</div>
             <div className="mt-1 text-sm text-brand-700 font-semibold">{c.tagline}</div>
