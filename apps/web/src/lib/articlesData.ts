@@ -24,6 +24,573 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "uchet-rabochego-vremeni-po-litsu",
+    date: "2026-09-18",
+    updated: "2026-09-18",
+    related: ["attendance", "turnstile", "access"],
+    hubs: ["zamki-i-skud", "turnikety-i-shlagbaumy"],
+    loc: {
+      ru: {
+        title: "Учёт рабочего времени по лицу: от терминала на проходной до табеля в 1С",
+        excerpt: "Как устроен учёт по лицу: что ставят на проходной, откуда берётся табель, как считаются опоздания и ночные смены, что делать с согласием работников и как данные попадают в 1С.",
+        sections: [
+          { h: "Зачем это компании", p: [
+            "Бумажный журнал на проходной и охранник с ручкой дают цифры, которым никто не верит. Часы в табеле расходятся с фактом, опоздания всплывают только при конфликте, а спорные дни восстанавливаются по памяти. Компания при этом платит за время, которое никто не считал.",
+            "Учёт по лицу закрывает именно это: отметка занимает меньше секунды, отметиться за другого нельзя, а каждая отметка остаётся в системе. Бухгалтер в конце месяца открывает готовый табель, а не собирает записи у охраны.",
+          ] },
+          { h: "Что стоит на проходной", p: [
+            "На входе ставится терминал распознавания лиц: он узнаёт сотрудника по лицу, а при необходимости принимает карту или отпечаток. Одного терминала хватает небольшому офису, на производстве обычно ставят по терминалу на вход и на выход.",
+            "Если проход нужно физически ограничить, добавляется турникет или калитка: терминал даёт команду, турникет пропускает одного человека. Без турникета учёт тоже работает, но тогда компания полагается на дисциплину, а не на технику.",
+          ] },
+          { h: "Откуда берётся табель", p: [
+            "Отметки с терминалов собираются в единую базу, а система раскладывает их по сменам: приход, уход, обед, если он отмечается. Дальше считаются часы за день, за смену и за месяц.",
+            "График работы задаётся по подразделениям: офис с началом в девять, производство с ночными сменами, магазины со скользящим графиком. Опоздания и переработки считаются от этого графика, а не вручную. Отпуска, больничные и командировки кадровик отмечает в кабинете, и они попадают в тот же табель.",
+          ] },
+          { h: "Как данные попадают в 1С", p: [
+            "Табель выгружается в 1С обработкой: бухгалтер не переписывает часы руками и не сверяет два файла. Это важный пункт для тех, у кого зарплата уже считается в 1С — учёт времени встраивается в существующий процесс, а не заменяет его.",
+            "Для руководителя рядом с табелем есть отчёты: кто на работе прямо сейчас, сколько опозданий за месяц по подразделениям, сколько переработок. Выгрузка в Excel нужна, когда данные идут в кадровую отчётность или во внутренний расчёт премий.",
+          ] },
+          { h: "Согласие работников и закон", p: [
+            "Изображение лица — персональные данные, поэтому учёт строится на согласии работника и на внутреннем документе: положении об учёте рабочего времени. В нём фиксируется, какие данные собираются, зачем и сколько хранятся.",
+            "Практика простая: согласие подписывается при приёме на работу или при внедрении системы, а для тех, кто отказывается, оставляют карту или отпечаток. Мы помогаем подготовить формулировки, чтобы у отдела кадров был полный пакет до запуска.",
+          ] },
+          { h: "Что нужно на объекте и сколько это занимает", p: [
+            "Нужны терминалы на проходных, сеть и питание рядом с ними и небольшой шлюз, который связывает технику с сервером. Терминалы ZKTeco, Dahua и Hikvision подключаются к нашей системе; если они уже стоят, менять их обычно не нужно.",
+            "Запуск в компании до ста человек занимает несколько дней: монтаж и настройка, регистрация лиц, перенос списка сотрудников из 1С или Excel, настройка графиков и обучение кадровика. Дальше система работает без обслуживания, а при отключении интернета терминал хранит отметки у себя и передаёт их, когда связь появится.",
+          ] },
+        ],
+        faq: [
+          { q: "Можно ли обмануть терминал фотографией?", a: "Современные терминалы распознавания лиц проверяют, что перед камерой живой человек, и фотографию на экране телефона не принимают. Для критичных объектов дополнительно включается проход по лицу вместе с картой." },
+          { q: "Что делать с сотрудниками, которые не хотят сдавать лицо?", a: "Им оставляют карту или отпечаток: система считает часы одинаково, независимо от способа отметки. Отказ от биометрии не должен мешать человеку работать." },
+          { q: "Работает ли учёт без интернета?", a: "Да. Терминал принимает решение сам и хранит отметки в своей памяти, а когда связь восстанавливается, передаёт их в систему. Табель за этот период не теряется." },
+          { q: "Подходит ли система для нескольких объектов?", a: "Да, объекты ведутся в одном кабинете: у каждого свои терминалы и графики, а отчёты можно смотреть как по площадке, так и по всей компании." },
+        ],
+      },
+      uz: {
+        title: "Yuz orqali ish vaqtini hisobga olish: oʻtish punktidagi terminaldan 1Cdagi tabelgacha",
+        excerpt: "Yuz orqali hisob qanday ishlaydi: oʻtish punktiga nima qoʻyiladi, tabel qayerdan olinadi, kechikish va tungi smenalar qanday hisoblanadi, xodim roziligi bilan nima qilinadi va maʼlumot 1Cga qanday tushadi.",
+        sections: [
+          { h: "Kompaniyaga bu nima uchun kerak", p: [
+            "Oʻtish punktidagi qogʻoz jurnal va qoʻlida ruchka ushlagan qorovul hech kim ishonmaydigan raqamlarni beradi. Tabeldagi soatlar haqiqatdan farq qiladi, kechikishlar faqat nizo chiqqanda maʼlum boʻladi, bahsli kunlar esa xotiradan tiklanadi. Kompaniya esa hech kim sanamagan vaqt uchun pul toʻlaydi.",
+            "Yuz orqali hisob aynan shuni yopadi: qayd bir soniyadan kam vaqt oladi, boshqa odam oʻrniga belgilab boʻlmaydi, har bir qayd tizimda qoladi. Buxgalter oy oxirida tayyor tabelni ochadi, qorovuldan yozuv yigʻmaydi.",
+          ] },
+          { h: "Oʻtish punktida nima turadi", p: [
+            "Kirish joyiga yuzni tanish terminali oʻrnatiladi: u xodimni yuzidan taniydi, kerak boʻlsa karta yoki barmoq izini ham qabul qiladi. Kichik ofisga bitta terminal yetadi, ishlab chiqarishda odatda kirish va chiqishga alohida qoʻyiladi.",
+            "Oʻtishni jismonan cheklash kerak boʻlsa, turniket yoki darvozacha qoʻshiladi: terminal buyruq beradi, turniket bitta odamni oʻtkazadi. Turniketsiz ham hisob ishlaydi, lekin unda kompaniya texnikaga emas, tartibga tayanadi.",
+          ] },
+          { h: "Tabel qayerdan olinadi", p: [
+            "Terminallardagi qaydlar yagona bazaga yigʻiladi, tizim ularni smenalarga ajratadi: kelish, ketish, belgilanadigan boʻlsa tushlik. Keyin kun, smena va oy boʻyicha soatlar hisoblanadi.",
+            "Ish grafigi boʻlimlar boʻyicha beriladi: toʻqqizda boshlanadigan ofis, tungi smenali ishlab chiqarish, siljuvchi grafikli doʻkonlar. Kechikish va ortiqcha ish shu grafikdan hisoblanadi, qoʻlda emas. Taʼtil, kasallik va xizmat safarini kadrlar xodimi kabinetda belgilaydi va ular oʻsha tabelga tushadi.",
+          ] },
+          { h: "Maʼlumot 1Cga qanday tushadi", p: [
+            "Tabel maxsus ishlov bilan 1Cga yuklanadi: buxgalter soatlarni qoʻlda koʻchirmaydi va ikkita faylni solishtirmaydi. Bu ish haqi allaqachon 1Cda hisoblanadigan kompaniyalar uchun muhim — vaqt hisobi mavjud jarayonga qoʻshiladi, uni almashtirmaydi.",
+            "Rahbar uchun tabel yonida hisobotlar bor: hozir kim ishda, oy davomida boʻlimlar boʻyicha nechta kechikish, qancha ortiqcha ish. Excelga yuklash maʼlumot kadrlar hisobotiga yoki ichki mukofot hisobiga ketganda kerak boʻladi.",
+          ] },
+          { h: "Xodim roziligi va qonun", p: [
+            "Yuz tasviri — shaxsiy maʼlumot, shuning uchun hisob xodim roziligi va ichki hujjat — ish vaqtini hisobga olish nizomiga tayanadi. Unda qanday maʼlumot yigʻilishi, nima uchun va qancha saqlanishi yoziladi.",
+            "Amaliyot oddiy: rozilik ishga qabul qilishda yoki tizim joriy etilganda imzolanadi, rad etganlarga karta yoki barmoq izi qoldiriladi. Biz matnlarni tayyorlashda yordam beramiz, toki ishga tushirishdan oldin kadrlar boʻlimida toʻliq hujjat boʻlsin.",
+          ] },
+          { h: "Obyektda nima kerak va qancha vaqt oladi", p: [
+            "Oʻtish punktlarida terminallar, ular yonida tarmoq va quvvat, hamda texnikani server bilan bogʻlaydigan kichik shlyuz kerak. ZKTeco, Dahua va Hikvision terminallari tizimimizga ulanadi; ular allaqachon turgan boʻlsa, odatda almashtirish shart emas.",
+            "Yuz kishigacha boʻlgan kompaniyada ishga tushirish bir necha kun oladi: montaj va sozlash, yuzlarni roʻyxatga olish, xodimlar roʻyxatini 1C yoki Exceldan koʻchirish, grafiklarni sozlash va kadrlar xodimini oʻqitish. Keyin tizim xizmatsiz ishlaydi, internet uzilganda esa terminal qaydlarni oʻzida saqlaydi va aloqa paydo boʻlganda uzatadi.",
+          ] },
+        ],
+        faq: [
+          { q: "Terminalni fotosurat bilan aldab boʻladimi?", a: "Zamonaviy yuzni tanish terminallari kamera oldida tirik odam turganini tekshiradi va telefon ekranidagi suratni qabul qilmaydi. Muhim obyektlarda yuz bilan birga karta ham talab qilinadi." },
+          { q: "Yuzini berishni istamagan xodimlar bilan nima qilish kerak?", a: "Ularga karta yoki barmoq izi qoldiriladi: tizim soatlarni qayd usulidan qatʼi nazar bir xil hisoblaydi. Biometriyadan bosh tortish ishga xalaqit bermasligi kerak." },
+          { q: "Internetsiz hisob ishlaydimi?", a: "Ha. Terminal qarorni oʻzi qabul qiladi va qaydlarni xotirasida saqlaydi, aloqa tiklangach tizimga uzatadi. Bu davr uchun tabel yoʻqolmaydi." },
+          { q: "Tizim bir nechta obyektga mos keladimi?", a: "Ha, obyektlar bitta kabinetda yuritiladi: har birida oʻz terminallari va grafiklari, hisobotlarni esa maydoncha boʻyicha ham, butun kompaniya boʻyicha ham koʻrish mumkin." },
+        ],
+      },
+      en: {
+        title: "Face-based time tracking: from the terminal at the entrance to the timesheet in 1C",
+        excerpt: "How face-based attendance works: what goes at the checkpoint, where the timesheet comes from, how late arrivals and night shifts are calculated, what to do about employee consent and how the data reaches 1C.",
+        sections: [
+          { h: "Why a company needs it", p: [
+            "A paper logbook at the gate and a guard with a pen produce numbers nobody trusts. Hours in the timesheet drift from reality, late arrivals surface only during a conflict, and disputed days are reconstructed from memory. Meanwhile the company pays for time that was never actually counted.",
+            "Face-based tracking closes exactly that gap: a check-in takes under a second, nobody can clock in for a colleague, and every record stays in the system. At month end the accountant opens a finished timesheet instead of collecting notes from security.",
+          ] },
+          { h: "What sits at the checkpoint", p: [
+            "A face recognition terminal is installed at the entrance: it recognises the employee by face and, if needed, accepts a card or a fingerprint. One terminal is enough for a small office; a factory usually gets one terminal for entry and one for exit.",
+            "If the passage has to be physically restricted, a turnstile or a gate is added: the terminal sends the command and the turnstile lets one person through. Tracking works without a turnstile too, but then the company relies on discipline rather than hardware.",
+          ] },
+          { h: "Where the timesheet comes from", p: [
+            "Records from the terminals are collected into one database and sorted into shifts: arrival, departure and lunch if it is recorded. Hours are then calculated per day, per shift and per month.",
+            "Work schedules are defined per department: an office starting at nine, production with night shifts, shops on rotating rosters. Late arrivals and overtime are measured against that schedule rather than by hand. Holidays, sick leave and business trips are marked by HR in the dashboard and land in the same timesheet.",
+          ] },
+          { h: "How the data reaches 1C", p: [
+            "The timesheet is exported into 1C through a processing file: the accountant does not retype hours or reconcile two spreadsheets. That matters where payroll already lives in 1C — time tracking joins the existing process instead of replacing it.",
+            "Next to the timesheet a manager gets reports: who is at work right now, how many late arrivals per department this month, how much overtime. Excel export is used when the figures feed HR reporting or an internal bonus calculation.",
+          ] },
+          { h: "Employee consent and the law", p: [
+            "A face image is personal data, so tracking rests on the employee's consent and an internal document — the time-tracking policy. It states what data is collected, why and for how long it is kept.",
+            "The practice is simple: consent is signed on hiring or when the system is introduced, and anyone who refuses keeps a card or fingerprint. We help draft the wording so HR has the full package before launch.",
+          ] },
+          { h: "What the site needs and how long it takes", p: [
+            "You need terminals at the checkpoints, network and power beside them, and a small gateway linking the hardware to the server. ZKTeco, Dahua and Hikvision terminals connect to our system; if they are already installed, replacement is usually unnecessary.",
+            "For a company of up to a hundred people the rollout takes a few days: installation and setup, face enrolment, importing the staff list from 1C or Excel, configuring schedules and training HR. After that the system runs unattended, and if the internet drops the terminal stores records locally and uploads them once the link is back.",
+          ] },
+        ],
+        faq: [
+          { q: "Can the terminal be fooled with a photo?", a: "Modern face terminals check that a live person is in front of the camera and reject a photo on a phone screen. On critical sites face recognition can be combined with a card." },
+          { q: "What about employees who refuse to enrol their face?", a: "They keep a card or fingerprint: the system counts hours the same way regardless of the check-in method. Refusing biometrics must not stop someone from working." },
+          { q: "Does tracking work without internet?", a: "Yes. The terminal decides locally and stores records in its own memory, uploading them once the connection returns. The timesheet for that period is not lost." },
+          { q: "Does the system suit several sites?", a: "Yes, sites are managed in one dashboard: each has its own terminals and schedules, and reports can be viewed per location or across the whole company." },
+        ],
+      },
+      tr: {
+        title: "Yüz tanımayla mesai takibi: girişteki terminalden 1C’deki puantaja",
+        excerpt: "Yüzle devam takibi nasıl çalışır: giriş noktasına ne kurulur, puantaj nereden gelir, geç kalma ve gece vardiyaları nasıl hesaplanır, çalışan rızası nasıl alınır ve veriler 1C’ye nasıl aktarılır.",
+        sections: [
+          { h: "Şirketin buna neden ihtiyacı var", p: [
+            "Girişteki kâğıt defter ve elinde kalem tutan güvenlik, kimsenin güvenmediği rakamlar üretir. Puantajdaki saatler gerçekle uyuşmaz, geç kalmalar ancak bir anlaşmazlıkta ortaya çıkar, tartışmalı günler hafızadan kurtarılmaya çalışılır. Şirket ise hiç sayılmamış zamanın parasını öder.",
+            "Yüzle takip tam bu boşluğu kapatır: kayıt bir saniyenin altında olur, başkası yerine okutulamaz ve her kayıt sistemde kalır. Ay sonunda muhasebe, güvenlikten not toplamak yerine hazır puantajı açar.",
+          ] },
+          { h: "Giriş noktasında ne bulunur", p: [
+            "Girişe yüz tanıma terminali kurulur: çalışanı yüzünden tanır, gerekirse kart veya parmak izi de kabul eder. Küçük ofise tek terminal yeter; üretimde genelde giriş ve çıkış için ayrı terminal konur.",
+            "Geçişin fiziksel olarak sınırlanması gerekiyorsa turnike ya da kapı eklenir: terminal komutu verir, turnike tek kişiyi geçirir. Turnikesiz de takip çalışır, ama o zaman şirket donanıma değil disipline güvenir.",
+          ] },
+          { h: "Puantaj nasıl oluşur", p: [
+            "Terminallerdeki kayıtlar tek veritabanında toplanır ve vardiyalara ayrılır: giriş, çıkış, kaydediliyorsa öğle arası. Ardından gün, vardiya ve ay bazında saatler hesaplanır.",
+            "Çalışma programı departman bazında tanımlanır: dokuzda başlayan ofis, gece vardiyalı üretim, dönüşümlü çalışan mağazalar. Geç kalma ve fazla mesai bu programa göre hesaplanır, elle değil. İzin, rapor ve görevlendirmeyi İK panelde işaretler ve bunlar aynı puantaja düşer.",
+          ] },
+          { h: "Veriler 1C’ye nasıl gider", p: [
+            "Puantaj, işleme dosyasıyla 1C’ye aktarılır: muhasebe saatleri yeniden yazmaz, iki dosyayı karşılaştırmaz. Bordrosu zaten 1C’de olan şirketler için bu önemlidir — mesai takibi mevcut sürece eklenir, onu değiştirmez.",
+            "Puantajın yanında yöneticiye raporlar sunulur: şu an kim işte, ay içinde departman bazında kaç geç kalma, ne kadar fazla mesai. Excel aktarımı, veriler İK raporlamasına veya prim hesabına gidiyorsa kullanılır.",
+          ] },
+          { h: "Çalışan rızası ve mevzuat", p: [
+            "Yüz görüntüsü kişisel veridir; bu yüzden takip, çalışanın rızasına ve şirket içi bir belgeye — mesai takip yönergesine — dayanır. Belgede hangi verinin toplandığı, neden ve ne kadar saklandığı yazar.",
+            "Uygulama basittir: rıza işe girişte ya da sistem devreye alınırken imzalanır, kabul etmeyenlere kart veya parmak izi bırakılır. Metinleri hazırlamaya yardım ederiz, böylece İK devreye almadan önce eksiksiz dosyaya sahip olur.",
+          ] },
+          { h: "Sahada gerekenler ve süre", p: [
+            "Geçiş noktalarında terminaller, yanlarında ağ ve enerji, bir de donanımı sunucuya bağlayan küçük ağ geçidi gerekir. ZKTeco, Dahua ve Hikvision terminalleri sistemimize bağlanır; zaten kuruluysa değiştirmek çoğunlukla gerekmez.",
+            "Yüz kişiye kadar bir şirkette devreye alma birkaç gün sürer: montaj ve ayar, yüz kaydı, personel listesinin 1C veya Excel’den aktarımı, programların tanımı ve İK eğitimi. Sonrasında sistem bakımsız çalışır; internet kesilirse terminal kayıtları kendinde tutar ve bağlantı gelince aktarır.",
+          ] },
+        ],
+        faq: [
+          { q: "Terminal fotoğrafla kandırılabilir mi?", a: "Güncel yüz terminalleri kameranın önünde canlı bir kişi olup olmadığını denetler ve telefon ekranındaki fotoğrafı kabul etmez. Kritik sahalarda yüz ile kart birlikte istenebilir." },
+          { q: "Yüz kaydı vermek istemeyen personel ne yapar?", a: "Onlara kart ya da parmak izi bırakılır: sistem, okutma yöntemi ne olursa olsun saatleri aynı şekilde hesaplar. Biyometriyi reddetmek çalışmaya engel olmamalıdır." },
+          { q: "İnternetsiz çalışır mı?", a: "Evet. Terminal kararı kendisi verir, kayıtları belleğinde tutar ve bağlantı gelince aktarır. O döneme ait puantaj kaybolmaz." },
+          { q: "Birden çok saha için uygun mu?", a: "Evet, sahalar tek panelde yönetilir: her birinin kendi terminalleri ve programları olur, raporlar saha bazında da şirket genelinde de görüntülenir." },
+        ],
+      },
+      zh: {
+        title: "人脸考勤：从门口终端到 1C 中的考勤表",
+        excerpt: "人脸考勤如何运作：门口装什么、考勤表从何而来、迟到与夜班如何计算、员工同意书如何处理，以及数据如何进入 1C。",
+        sections: [
+          { h: "企业为什么需要它", p: [
+            "门口的纸质登记本和手写记录给出的数字没人相信。考勤表上的工时与事实不符，迟到只有在发生纠纷时才浮现，有争议的日子只能靠回忆还原。与此同时，企业为从未被真正统计的时间买单。",
+            "人脸考勤正是补上这一环：打卡不到一秒，无法代打卡，每条记录都留在系统中。月末会计直接打开成型的考勤表，而不是向保安要记录。",
+          ] },
+          { h: "门口安装什么", p: [
+            "入口安装人脸识别终端：通过人脸识别员工，必要时也支持刷卡或指纹。小型办公室一台即可；生产企业通常在进出口各装一台。",
+            "如果需要在物理上限制通行，可加装闸机或通道门：终端下发指令，闸机一次放行一人。没有闸机也能考勤，但那时依靠的是纪律而非设备。",
+          ] },
+          { h: "考勤表如何生成", p: [
+            "终端上的记录汇入统一数据库，系统按班次整理：上班、下班，如有打卡则含午休。随后按日、按班次和按月计算工时。",
+            "班表按部门设置：九点上班的办公室、含夜班的生产、轮班的门店。迟到与加班按班表自动计算，无需人工。休假、病假与出差由人事在后台标注，并计入同一张考勤表。",
+          ] },
+          { h: "数据如何进入 1C", p: [
+            "考勤表通过处理文件导入 1C：会计无需重新誊写工时，也不必核对两个表格。对薪资已在 1C 中核算的企业尤为重要——考勤接入既有流程，而非取而代之。",
+            "在考勤表之外，管理者可查看报表：当前在岗人员、本月各部门迟到次数、加班总量。当数据用于人事报表或内部奖金核算时，可导出 Excel。",
+          ] },
+          { h: "员工同意与合规", p: [
+            "人脸图像属于个人数据，因此考勤须基于员工同意与内部文件——考勤管理制度。制度需写明采集哪些数据、目的为何以及保存期限。",
+            "做法很简单：入职时或系统上线时签署同意书，不愿意的人保留刷卡或指纹。我们协助拟定条款，让人事在上线前拥有完整文件。",
+          ] },
+          { h: "现场需要什么、需要多久", p: [
+            "需要门口的终端、其旁的网络与供电，以及把设备接入服务器的小型网关。ZKTeco、大华与海康终端均可接入我们的系统；若已安装，通常无需更换。",
+            "百人以内的企业上线需数天：安装调试、人脸录入、从 1C 或 Excel 导入员工名单、配置班表并培训人事。之后系统免维护运行；断网时终端本地保存记录，网络恢复后自动上传。",
+          ] },
+        ],
+        faq: [
+          { q: "能用照片骗过终端吗？", a: "现代人脸终端会检测镜头前是否为真人，手机屏幕上的照片无法通过。重要场所还可要求人脸与刷卡同时验证。" },
+          { q: "不愿录入人脸的员工怎么办？", a: "可保留刷卡或指纹：无论采用哪种方式，系统统计工时的方法一致。拒绝生物识别不应影响正常工作。" },
+          { q: "断网还能考勤吗？", a: "可以。终端本地判断并保存记录，网络恢复后上传，该时段的考勤不会丢失。" },
+          { q: "适合多个场所吗？", a: "适合，多个场所在一个后台管理：各自配置终端与班表，报表既可按场所查看，也可按公司整体查看。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "gostevoy-propusk-po-qr",
+    date: "2026-09-18",
+    updated: "2026-09-18",
+    related: ["access", "intercom", "barrier"],
+    hubs: ["zamki-i-skud", "domofoniya"],
+    loc: {
+      ru: {
+        title: "Гостевой пропуск по QR-коду: как пускать курьеров и гостей без звонков диспетчеру",
+        excerpt: "Разовый пропуск вместо запасного брелока: как работает ссылка с QR-кодом, чем она безопаснее кода на двери, что нужно от терминала и какие правила стоит задать управляющей компании.",
+        sections: [
+          { h: "Почему код на двери и запасной брелок — плохая идея", p: [
+            "Самый частый способ пустить гостя в закрытый двор — сказать ему код или отдать запасной брелок. Оба способа неуправляемы: код через месяц знает весь район, а брелок гуляет по знакомым и копируется за несколько тысяч сумов в любой мастерской. Управляющая компания при этом не знает, кто именно прошёл, и в случае происшествия видит только «проход по карте».",
+            "Разовый пропуск устроен иначе: он привязан к конкретной квартире, действует ограниченное время и попадает в журнал вместе с именем жителя, который его выдал. Потерянная ссылка перестаёт работать по истечении срока, а отозвать её можно в одно нажатие.",
+          ] },
+          { h: "Как это выглядит у жителя и у гостя", p: [
+            "Житель в приложении создаёт пропуск: пишет, кто придёт, выбирает срок — час, три, восемь, сутки — или отмечает «на один визит». Приложение выдаёт ссылку и QR-код, которые отправляются гостю в мессенджер.",
+            "Гость открывает ссылку и видит страницу пропуска: чей это дом, до какого времени действует и какие двери можно открыть. Дальше два пути. Если у входа стоит терминал с камерой, гость подносит QR-код с экрана телефона. Если терминала нет, нажимает кнопку нужной двери на странице, и дверь открывает сервер через оборудование дома.",
+          ] },
+          { h: "Что значит «на один визит»", p: [
+            "Пропуск на один визит рассчитан на типичный сценарий: гостю нужно пройти шлагбаум, потом подъезд, иногда вернуться к машине. Поэтому после первого открытия он действует ещё тридцать минут и затем закрывается сам.",
+            "Для курьера этого достаточно, а для жителя это значит, что ссылка не станет постоянным ключом. Пропуск на срок работает иначе: он живёт заданное количество часов и подходит, когда в квартире идёт ремонт и бригада ходит весь день.",
+          ] },
+          { h: "Что требуется от оборудования", p: [
+            "Открытие по ссылке работает с любой техникой, которой управляет система: домофонами, контроллерами дверей и шлагбаумов. Здесь решение принимает сервер, а оборудованию уходит готовая команда.",
+            "Сканирование QR-кода требует терминала со считывателем. На терминалах Dahua мы включаем режим передачи QR: терминал не проверяет код сам, а отдаёт его нашему агенту, тот спрашивает сервер и открывает дверь, если пропуск действует. Так один и тот же QR-код работает и у терминала, и по ссылке, а срок действия и отзыв считаются в одном месте.",
+          ] },
+          { h: "Что видит управляющая компания", p: [
+            "Каждое открытие по пропуску пишется в журнал: дверь, время, подпись пропуска и квартира, которая его выдала. Отказы тоже видны — например, попытка пройти по отозванному или просроченному пропуску.",
+            "Это снимает главный спор старых систем: «кто пустил постороннего». Ответ находится в журнале за несколько секунд, а не восстанавливается по опросу соседей и записям камер.",
+          ] },
+          { h: "Правила, которые стоит задать сразу", p: [
+            "Практика подсказывает три правила. Первое: пропуск на один визит — основной вариант для курьеров и такси, а пропуска на сутки выдаются осознанно. Второе: шлагбаум и калитка открываются по пропуску, а служебные помещения — нет, для них права настраиваются отдельно.",
+            "Третье: житель отвечает за своих гостей, и это стоит зафиксировать в правилах дома. Технически всё готово — журнал ведётся, срок ограничен, отзыв мгновенный, — но дисциплина в доме держится на договорённости между управляющей компанией и собственниками.",
+          ] },
+        ],
+        faq: [
+          { q: "Что будет, если гость перешлёт ссылку другому человеку?", a: "Ссылка действует ограниченное время, а после первого прохода «на один визит» закрывается через тридцать минут. Пропуск привязан к квартире, и любое открытие видно в журнале, поэтому пересылка не даёт постоянного доступа." },
+          { q: "Нужен ли гостю интернет, чтобы открыть дверь?", a: "Для открытия по ссылке — да, страница пропуска работает через интернет. Для сканирования QR-кода у терминала интернет гостю не нужен, связь нужна оборудованию дома." },
+          { q: "Можно ли отозвать пропуск до окончания срока?", a: "Да, житель отзывает пропуск в приложении в одно нажатие. После этого терминал перестаёт его принимать, а попытка прохода записывается в журнал как отказ." },
+          { q: "Подходит ли QR-пропуск для въезда машины на шлагбаум?", a: "Да, если у въезда стоит терминал со считывателем или водитель открывает шлагбаум по ссылке. Для постоянных машин удобнее распознавание номеров, для разовых гостей — QR." },
+        ],
+      },
+      uz: {
+        title: "QR-kod boʻyicha mehmon ruxsatnomasi: kuryer va mehmonlarni dispetcherga qoʻngʻiroqsiz kiritish",
+        excerpt: "Zaxira brelok oʻrniga bir martalik ruxsatnoma: QR-kodli havola qanday ishlaydi, nega u eshikdagi koddan xavfsizroq, terminaldan nima talab qilinadi va boshqaruv kompaniyasi qanday qoidalarni belgilashi kerak.",
+        sections: [
+          { h: "Nega eshikdagi kod va zaxira brelok yomon yechim", p: [
+            "Mehmonni yopiq hovliga kiritishning eng keng tarqalgan usuli — unga kodni aytish yoki zaxira brelokni berish. Ikkalasi ham nazoratsiz: kodni bir oydan soʻng butun mahalla biladi, brelok esa tanishlar qoʻlida yuradi va istalgan ustaxonada arzon nusxalanadi. Boshqaruv kompaniyasi esa kim oʻtganini bilmaydi, jurnalda faqat «karta orqali oʻtish» koʻrinadi.",
+            "Bir martalik ruxsatnoma boshqacha: u aniq xonadonga biriktirilgan, cheklangan vaqt amal qiladi va uni bergan yashovchi ismi bilan jurnalga tushadi. Yoʻqolgan havola muddat tugagach ishlamaydi, bekor qilish esa bir bosishda.",
+          ] },
+          { h: "Yashovchi va mehmon nimani koʻradi", p: [
+            "Yashovchi ilovada ruxsatnoma yaratadi: kim kelishini yozadi, muddatni tanlaydi — bir, uch, sakkiz soat yoki bir kun — yoki «bir martalik tashrif»ni belgilaydi. Ilova havola va QR-kod beradi, ular messenjer orqali mehmonga yuboriladi.",
+            "Mehmon havolani ochib ruxsatnoma sahifasini koʻradi: qaysi uy, qachongacha amal qiladi va qaysi eshiklarni ochish mumkin. Keyin ikki yoʻl bor. Kirish oldida kamerali terminal boʻlsa, mehmon telefon ekranidagi QR-kodni koʻrsatadi. Terminal boʻlmasa, sahifadagi eshik tugmasini bosadi va eshikni uy uskunasi orqali server ochadi.",
+          ] },
+          { h: "«Bir martalik tashrif» nimani anglatadi", p: [
+            "Bir martalik ruxsatnoma odatiy holatga moʻljallangan: mehmon shlagbaumdan, keyin yoʻlakdan oʻtishi, baʼzan mashinasiga qaytishi kerak. Shuning uchun birinchi ochilishdan keyin u yana oʻttiz daqiqa ishlaydi va soʻng oʻzi yopiladi.",
+            "Kuryer uchun bu yetarli, yashovchi uchun esa havola doimiy kalitga aylanmasligini bildiradi. Muddatli ruxsatnoma boshqacha ishlaydi: belgilangan soatlar davomida amal qiladi va xonadonda ta’mir ketayotib, brigada kun boʻyi kirib-chiqqanda qulay.",
+          ] },
+          { h: "Uskunadan nima talab qilinadi", p: [
+            "Havola orqali ochish tizim boshqaradigan har qanday texnika bilan ishlaydi: domofonlar, eshik va shlagbaum kontrollerlari. Bu yerda qarorni server qabul qiladi, uskunaga tayyor buyruq boradi.",
+            "QR-kodni skanerlash uchun esa oʻqigichli terminal kerak. Dahua terminallarida QRni uzatish rejimini yoqamiz: terminal kodni oʻzi tekshirmaydi, agentimizga beradi, agent serverdan soʻraydi va ruxsatnoma amal qilsa, eshikni ochadi. Shunday qilib bitta QR-kod ham terminalda, ham havola orqali ishlaydi, muddat va bekor qilish esa bitta joyda hisoblanadi.",
+          ] },
+          { h: "Boshqaruv kompaniyasi nimani koʻradi", p: [
+            "Ruxsatnoma boʻyicha har bir ochilish jurnalga yoziladi: eshik, vaqt, ruxsatnoma nomi va uni bergan xonadon. Rad javoblari ham koʻrinadi — masalan, bekor qilingan yoki muddati tugagan ruxsatnoma bilan oʻtishga urinish.",
+            "Bu eski tizimlardagi asosiy bahsni yopadi: «begonani kim kiritdi». Javob jurnaldan bir necha soniyada topiladi, qoʻshnilarni soʻroq qilish va kamera yozuvlarini titish shart emas.",
+          ] },
+          { h: "Darhol belgilash kerak boʻlgan qoidalar", p: [
+            "Amaliyot uchta qoidani koʻrsatadi. Birinchi: kuryer va taksi uchun asosiysi — bir martalik ruxsatnoma, bir kunlik ruxsatnomalar esa ongli ravishda beriladi. Ikkinchi: shlagbaum va darvozacha ruxsatnoma bilan ochiladi, xizmat xonalari esa yoʻq — ularga ruxsat alohida sozlanadi.",
+            "Uchinchi: yashovchi oʻz mehmonlari uchun javobgar va buni uy qoidalarida yozib qoʻygan ma’qul. Texnik tomoni tayyor — jurnal yuritiladi, muddat cheklangan, bekor qilish bir zumda, — ammo uydagi tartib boshqaruv kompaniyasi va egalar kelishuviga tayanadi.",
+          ] },
+        ],
+        faq: [
+          { q: "Mehmon havolani boshqa odamga yuborsa nima boʻladi?", a: "Havola cheklangan vaqt amal qiladi, «bir martalik tashrif»da esa birinchi oʻtishdan soʻng oʻttiz daqiqada yopiladi. Ruxsatnoma xonadonga biriktirilgan va har bir ochilish jurnalda koʻrinadi, shuning uchun uzatish doimiy kirish bermaydi." },
+          { q: "Eshikni ochish uchun mehmonga internet kerakmi?", a: "Havola orqali ochishda — ha, ruxsatnoma sahifasi internet orqali ishlaydi. Terminalda QR-kodni skanerlashda mehmonga internet kerak emas, aloqa uy uskunasiga kerak." },
+          { q: "Ruxsatnomani muddatidan oldin bekor qilsa boʻladimi?", a: "Ha, yashovchi ilovada bir bosishda bekor qiladi. Shundan keyin terminal uni qabul qilmaydi, urinish esa jurnalga rad javobi sifatida yoziladi." },
+          { q: "QR-ruxsatnoma mashina uchun shlagbaumga mos keladimi?", a: "Ha, kirish joyida oʻqigichli terminal boʻlsa yoki haydovchi shlagbaumni havola orqali ochsa. Doimiy mashinalarga raqam tanish qulayroq, bir martalik mehmonlarga — QR." },
+        ],
+      },
+      en: {
+        title: "Guest passes by QR code: letting couriers and visitors in without calling the dispatcher",
+        excerpt: "A single-visit pass instead of a spare fob: how the link with a QR code works, why it is safer than a door code, what the terminal needs and which rules a management company should set.",
+        sections: [
+          { h: "Why door codes and spare fobs fail", p: [
+            "The usual way to let a guest into a gated yard is to tell them the code or hand over a spare fob. Neither can be controlled: within a month the code is known across the neighbourhood, and the fob travels between acquaintances and is copied cheaply at any workshop. The management company has no idea who actually walked in — the log only says \"card entry\".",
+            "A single-visit pass works differently: it belongs to a specific apartment, is valid for a limited time and lands in the log together with the name of the resident who issued it. A forwarded link stops working when the time expires, and it can be revoked in one tap.",
+          ] },
+          { h: "What the resident and the guest see", p: [
+            "In the app the resident creates a pass: who is coming, for how long — an hour, three, eight, a day — or marks it as a single visit. The app produces a link and a QR code that go to the guest in a messenger.",
+            "The guest opens the link and sees the pass page: which building it belongs to, until when it is valid and which doors it opens. From there, two options. If the entrance has a terminal with a camera, the guest shows the QR code on the phone screen. If there is no terminal, they tap the door on the page and the server opens it through the building's hardware.",
+          ] },
+          { h: "What \"single visit\" means", p: [
+            "A single-visit pass matches the usual scenario: the guest has to pass the barrier, then the entrance, and sometimes walk back to the car. That is why it stays valid for another thirty minutes after the first opening and then closes itself.",
+            "For a courier that is enough, and for the resident it means the link never becomes a permanent key. A timed pass behaves differently: it lives for the chosen number of hours and fits a renovation crew that comes and goes all day.",
+          ] },
+          { h: "What the hardware must support", p: [
+            "Opening by link works with any equipment the system controls: intercoms, door and barrier controllers. The decision is made by the server and the hardware receives a ready command.",
+            "Scanning a QR code needs a terminal with a reader. On Dahua terminals we switch on QR pass-through: the terminal does not validate the code itself but hands it to our agent, which asks the server and opens the door if the pass is valid. One QR code then works both at the terminal and through the link, while validity and revocation are handled in one place.",
+          ] },
+          { h: "What the management company sees", p: [
+            "Every guest entry is written to the log: the door, the time, the pass label and the apartment that issued it. Refusals are visible too — for example an attempt to use a revoked or expired pass.",
+            "This closes the classic dispute of old systems: who let a stranger in. The answer is in the log within seconds instead of being reconstructed from neighbours' accounts and camera footage.",
+          ] },
+          { h: "Rules worth setting from day one", p: [
+            "Practice suggests three. First, the single-visit pass is the default for couriers and taxis, while day-long passes are issued deliberately. Second, the barrier and the gate open by pass, while service rooms do not — their rights are configured separately.",
+            "Third, the resident is responsible for their guests, and that belongs in the house rules. The technical side is ready — the log is kept, validity is limited, revocation is instant — but order in a building rests on the agreement between the management company and the owners.",
+          ] },
+        ],
+        faq: [
+          { q: "What if the guest forwards the link to someone else?", a: "The link is valid for a limited time, and a single-visit pass closes thirty minutes after the first entry. The pass belongs to an apartment and every opening is logged, so forwarding does not create permanent access." },
+          { q: "Does the guest need internet to open a door?", a: "For the link, yes — the pass page works over the internet. For scanning the QR code at a terminal the guest needs nothing; the building's hardware needs the connection." },
+          { q: "Can a pass be revoked before it expires?", a: "Yes, the resident revokes it in the app in one tap. The terminal then stops accepting it, and an attempt to use it is recorded as a refusal." },
+          { q: "Does a QR pass work for a car at the barrier?", a: "Yes, if the entrance has a terminal with a reader or the driver opens the barrier by link. Regular cars are better served by number plate recognition, one-off guests by QR." },
+        ],
+      },
+      tr: {
+        title: "QR kodlu misafir geçişi: kuryeleri ve konukları dispeçeri aramadan içeri almak",
+        excerpt: "Yedek kumanda yerine tek kullanımlık geçiş: QR kodlu bağlantı nasıl çalışır, kapı şifresinden neden güvenlidir, terminalden ne beklenir ve yönetim şirketi hangi kuralları koymalı.",
+        sections: [
+          { h: "Kapı şifresi ve yedek kumanda neden işe yaramaz", p: [
+            "Kapalı siteye misafir almanın alışılmış yolu şifreyi söylemek ya da yedek kumandayı vermektir. İkisi de denetlenemez: şifreyi bir ay içinde tüm mahalle öğrenir, kumanda tanıdıklar arasında dolaşır ve herhangi bir atölyede ucuza çoğaltılır. Yönetim ise kimin girdiğini bilmez, kayıtta yalnızca \"kartla geçiş\" görünür.",
+            "Tek kullanımlık geçiş farklı çalışır: belirli bir daireye bağlıdır, sınırlı süre geçerlidir ve onu veren sakinin adıyla kayda düşer. İletilen bağlantı süre dolunca çalışmaz, iptal etmek ise tek dokunuş.",
+          ] },
+          { h: "Sakin ve misafir ne görür", p: [
+            "Sakin uygulamada geçiş oluşturur: kimin geleceğini yazar, süreyi seçer — bir, üç, sekiz saat ya da bir gün — veya tek girişlik işaretler. Uygulama bağlantı ve QR kod üretir; bunlar mesajla misafire gider.",
+            "Misafir bağlantıyı açar ve geçiş sayfasını görür: hangi bina, ne zamana kadar geçerli, hangi kapılar açılır. Sonrası iki yol. Girişte kameralı terminal varsa telefon ekranındaki QR kodu gösterir. Terminal yoksa sayfadaki kapıya dokunur, kapıyı sunucu binanın donanımı üzerinden açar.",
+          ] },
+          { h: "\"Tek giriş\" ne demek", p: [
+            "Tek girişlik geçiş tipik senaryoya göre ayarlıdır: misafirin önce bariyerden, sonra bina girişinden geçmesi, bazen arabaya dönmesi gerekir. Bu yüzden ilk açılıştan sonra otuz dakika daha geçerli kalır ve ardından kendiliğinden kapanır.",
+            "Kurye için bu yeterlidir; sakin içinse bağlantının kalıcı anahtara dönüşmemesi demektir. Süreli geçiş farklıdır: seçilen saat boyunca yaşar ve gün boyu girip çıkan tadilat ekibine uygundur.",
+          ] },
+          { h: "Donanımdan beklenen", p: [
+            "Bağlantıyla açma, sistemin yönettiği her cihazla çalışır: interkomlar, kapı ve bariyer kontrolörleri. Kararı sunucu verir, cihaza hazır komut gider.",
+            "QR kodu okutmak içinse okuyuculu terminal gerekir. Dahua terminallerinde QR aktarımını açıyoruz: terminal kodu kendisi doğrulamaz, ajanımıza iletir; ajan sunucuya sorar ve geçiş geçerliyse kapıyı açar. Böylece aynı QR kod hem terminalde hem bağlantıda çalışır, süre ve iptal tek yerden yönetilir.",
+          ] },
+          { h: "Yönetim şirketi ne görür", p: [
+            "Her misafir geçişi kaydedilir: kapı, saat, geçişin adı ve onu veren daire. Redler de görünür — örneğin iptal edilmiş ya da süresi dolmuş geçişle giriş denemesi.",
+            "Bu, eski sistemlerin klasik tartışmasını bitirir: yabancıyı kim aldı. Yanıt saniyeler içinde kayıtta bulunur; komşu ifadeleri ve kamera görüntüleriyle yeniden kurulmaz.",
+          ] },
+          { h: "Baştan konulacak kurallar", p: [
+            "Uygulama üç kural öneriyor. Birincisi: kurye ve taksi için varsayılan tek girişlik geçiştir, günlük geçişler bilinçli verilir. İkincisi: bariyer ve bahçe kapısı geçişle açılır, teknik hacimler açılmaz; onların yetkisi ayrı tanımlanır.",
+            "Üçüncüsü: sakin misafirlerinden sorumludur ve bu, bina kurallarına yazılmalıdır. Teknik taraf hazır — kayıt tutulur, süre sınırlıdır, iptal anında olur — ama binadaki düzen yönetim ile malikler arasındaki mutabakata dayanır.",
+          ] },
+        ],
+        faq: [
+          { q: "Misafir bağlantıyı başkasına iletirse?", a: "Bağlantı sınırlı süre geçerlidir; tek girişlik geçiş ilk girişten otuz dakika sonra kapanır. Geçiş daireye bağlıdır ve her açılış kaydedilir, bu yüzden iletmek kalıcı erişim vermez." },
+          { q: "Misafirin kapıyı açmak için internete ihtiyacı var mı?", a: "Bağlantıyla açmak için evet, geçiş sayfası internet üzerinden çalışır. Terminalde QR okutmak için misafire gerek yoktur; bağlantı binanın donanımına gerekir." },
+          { q: "Geçiş süresi dolmadan iptal edilebilir mi?", a: "Evet, sakin uygulamada tek dokunuşla iptal eder. Terminal artık kabul etmez, deneme ise kayıtta red olarak görünür." },
+          { q: "QR geçişi araç için bariyerde çalışır mı?", a: "Evet, girişte okuyuculu terminal varsa ya da sürücü bariyeri bağlantıyla açarsa. Sürekli araçlar için plaka tanıma, tek seferlik misafirler için QR daha uygundur." },
+        ],
+      },
+      zh: {
+        title: "访客二维码通行证：不必打电话给调度也能放快递和客人进门",
+        excerpt: "用一次性通行证替代备用门禁卡：二维码链接如何工作、为何比门口密码更安全、终端需要什么条件，以及物业应当设定哪些规则。",
+        sections: [
+          { h: "门口密码和备用门禁卡为何行不通", p: [
+            "让客人进入封闭小区，常见做法是把密码告诉对方或把备用卡借出去。两者都不可控：密码一个月内传遍周边，门禁卡在熟人之间流转，还能在任何小店低价复制。物业根本不知道进来的是谁，日志里只有一条“刷卡通行”。",
+            "一次性通行证不同：它绑定到具体房号，只在限定时间内有效，并连同签发住户的姓名一起写入日志。被转发的链接到期即失效，撤销也只需一次点击。",
+          ] },
+          { h: "住户和访客分别看到什么", p: [
+            "住户在应用中创建通行证：填写来访人、选择有效期（1 小时、3 小时、8 小时或一天），或勾选“仅一次”。应用生成链接和二维码，通过聊天工具发给访客。",
+            "访客打开链接即可看到通行证页面：属于哪栋楼、有效到何时、可开哪些门。接下来有两种方式：入口若有带摄像头的终端，出示手机上的二维码；若没有终端，则在页面上点击对应的门，由服务器通过楼内设备开门。",
+          ] },
+          { h: "“仅一次”是什么意思", p: [
+            "一次性通行证按常见流程设计：访客要先过道闸，再进单元门，有时还要回到车上。因此首次开门后仍有效三十分钟，随后自动失效。",
+            "对快递员来说足够，对住户来说意味着链接不会变成长期钥匙。限时通行证则不同：在设定的小时数内持续有效，适合整天进出的装修工人。",
+          ] },
+          { h: "对设备的要求", p: [
+            "通过链接开门适用于系统所控制的任何设备：对讲、门禁与道闸控制器。判断由服务器完成，设备只接收现成指令。",
+            "扫描二维码则需要带读头的终端。在大华终端上我们启用二维码透传：终端不自行校验，而是把内容交给我们的代理，代理向服务器确认，通行证有效即开门。于是同一个二维码既能在终端使用，也能通过链接使用，有效期与撤销在同一处管理。",
+          ] },
+          { h: "物业能看到什么", p: [
+            "每次访客通行都会写入日志：门、时间、通行证名称以及签发它的房号。拒绝记录同样可见，例如使用已撤销或过期通行证的尝试。",
+            "这解决了老系统的老问题：是谁把陌生人放进来的。答案几秒钟就能在日志中找到，而不必依靠邻居回忆和监控回放拼凑。",
+          ] },
+          { h: "建议一开始就定下的规则", p: [
+            "实践中有三条。第一，快递和网约车默认使用一次性通行证，全天通行证谨慎签发。第二，道闸与小门可凭通行证打开，设备间等区域不可，其权限单独配置。",
+            "第三，住户对自己的访客负责，这一点应写入小区规则。技术上已经齐备——有日志、有期限、可即时撤销——但秩序仍取决于物业与业主之间的约定。",
+          ] },
+        ],
+        faq: [
+          { q: "访客把链接转发给别人怎么办？", a: "链接有效期有限，一次性通行证在首次进入后三十分钟失效。通行证绑定房号且每次开门都有记录，因此转发无法形成长期访问权。" },
+          { q: "访客开门需要联网吗？", a: "通过链接开门需要，通行证页面依赖网络；在终端扫二维码则不需要访客联网，需要联网的是楼内设备。" },
+          { q: "可以在到期前撤销通行证吗？", a: "可以，住户在应用中一键撤销。此后终端不再接受该码，尝试通行会记录为拒绝。" },
+          { q: "二维码通行证适合车辆过道闸吗？", a: "适合，前提是入口有带读头的终端，或司机通过链接开闸。长期车辆更适合车牌识别，临时访客更适合二维码。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "prilozhenie-dlya-zhiteley-zhk",
+    date: "2026-09-18",
+    updated: "2026-09-18",
+    related: ["intercom", "access", "residential"],
+    hubs: ["domofoniya", "zamki-i-skud"],
+    loc: {
+      ru: {
+        title: "Приложение для жителей ЖК: что оно меняет в доме и в работе управляющей компании",
+        excerpt: "Домофон на телефоне, гостевой пропуск по ссылке, заявки с этапами и счёт за месяц. Разбираем, какие задачи дома закрывает приложение, что нужно из оборудования и почему его чаще ставят на уже работающую технику.",
+        sections: [
+          { h: "Что не так с домом без приложения", p: [
+            "Обычный жилой комплекс живёт на трубках домофона, брелоках и телефоне диспетчера. Житель потерял брелок — идёт в управляющую компанию. Ждёт курьера — сидит у трубки или спускается вниз. Прорвало кран — звонит диспетчеру и потом весь день не знает, придёт мастер или нет. Управляющая компания в это время ведёт заявки в тетради, начисления считает в Excel, а на вопрос «за что я плачу» отвечает по памяти.",
+            "Ни одна из этих задач не решается заменой домофона на более дорогой. Нужен слой, который связывает технику с телефонами жителей и с рабочим местом диспетчера: приложение у жителя, кабинет у управляющей компании и общая база квартир, прав и событий.",
+          ] },
+          { h: "Двери в телефоне вместо брелоков", p: [
+            "В приложении житель видит только свои двери: подъезд, калитку, шлагбаум своего двора. Открытие — одно нажатие, интернет нужен только телефону, а не жителю у двери: команда уходит через наш сервер на объект, где её выполняет оборудование.",
+            "Брелоки при этом никуда не деваются: карта и лицо продолжают работать, потому что решение о проходе принимает сам терминал. Приложение добавляет удобный способ, а не отбирает привычный. Потерянный телефон не страшен: вход в приложение по почте с кодом, на новом телефоне достаточно войти заново, старый доступ теряет.",
+          ] },
+          { h: "Гость по ссылке и QR-коду", p: [
+            "Житель выдаёт гостю пропуск на срок или на один визит и отправляет ссылку в мессенджере. Гость открывает её и нажимает кнопку нужной двери, а если у входа стоит терминал с камерой — просто показывает QR-код с экрана телефона.",
+            "Для управляющей компании это дисциплина, а не дыра в безопасности: каждый проход по пропуску попадает в журнал с подписью «гость такого-то жителя», срок действия ограничен, а пропуск можно отозвать в любой момент. Курьеры, сантехник по вызову, гости на свадьбу — всё это перестаёт быть звонками диспетчеру в час ночи.",
+          ] },
+          { h: "Заявки, которые видно", p: [
+            "Заявка в приложении — не письмо в пустоту. Житель выбирает тему, описывает, что случилось, и дальше видит этапы: принята, в работе, выполнена. Видно, кого назначили исполнителем и что ответил диспетчер. Уточнение можно дописать прямо в заявку.",
+            "Управляющей компании это экономит рабочее время. Диспетчер не отвечает на «когда придёт мастер» — житель видит это сам. Руководитель видит, сколько заявок открыто, у кого они висят и как жители оценивают выполненные работы. Спорные ситуации разбираются по истории заявки, а не по памяти сторон.",
+          ] },
+          { h: "Счёт, который не вызывает вопросов", p: [
+            "Начисления в приложении разложены по месяцам и услугам, рядом видно оплаты и остаток. Оплатить можно из приложения, показания счётчиков житель передаёт сам, не переписывая их на бумажку у лифта.",
+            "Управляющая компания либо считает начисления по тарифам в кабинете (по площади, по квартире или по числу жильцов), либо загружает готовые суммы из Excel или 1С. Второй путь важен для домов, где бухгалтерия уже настроена: приложение не заставляет менять учёт, оно показывает жителю то, что бухгалтерия уже посчитала.",
+          ] },
+          { h: "Что нужно на объекте", p: [
+            "Приложению нужны три вещи: сетевая техника у дверей, интернет на объекте и небольшой шлюз в серверной, который связывает оборудование с сервером. Домофоны и контроллеры Hikvision, Dahua и ZKTeco в большинстве случаев подключаются как есть — менять их не нужно.",
+            "Если на доме стоит старая аналоговая система без сети, её действительно придётся заменить хотя бы на подъездах, где нужен вызов на телефон. Поэтому первый шаг — осмотр: что уже стоит, что подключается, а что дешевле заменить. Начать можно с одного подъезда и расширяться по мере готовности.",
+          ] },
+        ],
+        faq: [
+          { q: "Нужно ли менять домофоны, чтобы запустить приложение?", a: "Чаще всего нет. Сетевые домофоны и контроллеры подключаются к приложению без замены. Менять приходится только устаревшие аналоговые системы, которые не умеют работать по сети." },
+          { q: "Что будет, если в доме пропадёт интернет?", a: "Проход по лицу и карте продолжает работать: решение принимает сам терминал у двери. Открытие с телефона, гостевые QR-коды и заявки восстанавливаются вместе со связью." },
+          { q: "Как управляющая компания защищена от чужих подключений?", a: "Квартиру заводит управляющая компания и привязывает к ней почту владельца. Остальных жителей приглашает владелец, арендатора — на срок. Самостоятельно привязать чужую квартиру житель не может." },
+          { q: "Кто платит за приложение — жители или управляющая компания?", a: "Обычно это часть обслуживания дома: договор заключается с управляющей компанией, а жители пользуются приложением без отдельной оплаты. Условия обсуждаются под конкретный объект." },
+        ],
+      },
+      uz: {
+        title: "TJM aholisi uchun ilova: uyda va boshqaruv kompaniyasi ishida nima oʻzgaradi",
+        excerpt: "Telefondagi domofon, havola orqali mehmon ruxsatnomasi, bosqichli arizalar va oylik hisob. Ilova qanday vazifalarni yopadi, qanday uskuna kerak va nega uni koʻpincha mavjud texnikaga ulashadi.",
+        sections: [
+          { h: "Ilovasiz uyda nima noqulay", p: [
+            "Oddiy turar joy majmuasi domofon trubkalari, brelok va dispetcher telefoniga tayanadi. Yashovchi brelokni yoʻqotsa — boshqaruv kompaniyasiga boradi. Kuryerni kutsa — trubka yonida oʻtiradi yoki pastga tushadi. Kran buzilsa — dispetcherga qoʻngʻiroq qiladi va kun boʻyi usta keladimi-yoʻqmi bilmaydi.",
+            "Bu vazifalarning hech biri qimmatroq domofon qoʻyish bilan hal boʻlmaydi. Texnikani yashovchilar telefoni va dispetcher ish oʻrni bilan bogʻlaydigan qatlam kerak: yashovchida ilova, boshqaruv kompaniyasida kabinet va xonadonlar, ruxsatlar hamda hodisalarning umumiy bazasi.",
+          ] },
+          { h: "Brelok oʻrniga telefondagi eshiklar", p: [
+            "Ilovada yashovchi faqat oʻz eshiklarini koʻradi: yoʻlagi, darvozachasi, hovlisidagi shlagbaum. Ochish — bitta bosish; internet eshik oldidagi odamga emas, telefonga kerak: buyruq serverimiz orqali obyektga boradi va uskuna uni bajaradi.",
+            "Brelok va kartalar ishlayveradi, chunki oʻtish haqidagi qarorni terminalning oʻzi qabul qiladi. Ilova qulay usul qoʻshadi, odatdagisini olib tashlamaydi. Telefon yoʻqolsa ham muammo yoʻq: kirish pochta va kod orqali, yangi telefonda qaytadan kirish kifoya, eskisi esa huquqini yoʻqotadi.",
+          ] },
+          { h: "Mehmon havola va QR-kod bilan", p: [
+            "Yashovchi mehmonga muddatli yoki bir martalik ruxsatnoma beradi va havolani messenjerda yuboradi. Mehmon havolani ochib kerakli eshik tugmasini bosadi, kirish oldida kamerali terminal boʻlsa — telefon ekranidagi QR-kodni koʻrsatadi.",
+            "Boshqaruv kompaniyasi uchun bu tartib, xavf emas: har bir oʻtish jurnalga «falon yashovchining mehmoni» degan izoh bilan tushadi, muddat cheklangan, ruxsatnomani istalgan payt bekor qilish mumkin. Kuryerlar, chaqiruv boʻyicha usta, toʻyga kelgan mehmonlar — bularning bari yarim tunda dispetcherga qoʻngʻiroq boʻlishdan chiqadi.",
+          ] },
+          { h: "Koʻrinadigan arizalar", p: [
+            "Ilovadagi ariza — javobsiz xat emas. Yashovchi mavzuni tanlaydi, nima boʻlganini yozadi va keyin bosqichlarni koʻradi: qabul qilindi, bajarilmoqda, bajarildi. Kim ijrochi etib tayinlangani va dispetcher nima deb javob bergani koʻrinadi. Izohni aynan arizaga qoʻshib qoʻyish mumkin.",
+            "Boshqaruv kompaniyasiga bu ish vaqtini tejaydi. Dispetcher «usta qachon keladi» degan savolga javob bermaydi — yashovchi buni oʻzi koʻradi. Rahbar nechta ariza ochiqligini, ular kimda turganini va bajarilgan ishga qanday baho berilganini koʻradi. Bahsli holatlar tomonlarning xotirasiga emas, ariza tarixiga qarab hal qilinadi.",
+          ] },
+          { h: "Savol tugʻdirmaydigan hisob", p: [
+            "Ilovadagi hisob oylar va xizmatlar boʻyicha ajratilgan, yonida toʻlovlar va qoldiq koʻrinadi. Toʻlash ilovadan mumkin, hisoblagich koʻrsatkichlarini yashovchi oʻzi yuboradi va lift yonida qogʻozga yozib qoʻymaydi.",
+            "Boshqaruv kompaniyasi hisobni kabinetdagi tariflar boʻyicha hisoblaydi (maydon, xonadon yoki yashovchilar soniga qarab) yoki tayyor summalarni Excel hamda 1Cdan yuklaydi. Ikkinchi yoʻl buxgalteriyasi sozlangan uylar uchun muhim: ilova hisobni oʻzgartirishga majburlamaydi, u buxgalteriya hisoblagan narsani yashovchiga koʻrsatadi.",
+          ] },
+          { h: "Obyektda nima kerak", p: [
+            "Ilovaga uchta narsa kerak: eshiklardagi tarmoq texnikasi, obyektdagi internet va server xonasidagi kichik shlyuz. Hikvision, Dahua va ZKTeco domofonlari hamda kontrollerlari koʻpincha borligicha ulanadi — ularni almashtirish shart emas.",
+            "Uyda tarmoqsiz eski analog tizim boʻlsa, hech boʻlmasa telefonga qoʻngʻiroq kerak boʻlgan yoʻlaklarda uni almashtirishga toʻgʻri keladi. Shu sababli birinchi qadam — koʻrik: nima turibdi, nimasi ulanadi, nimani almashtirgan arzon. Bitta yoʻlakdan boshlab, keyin kengaytirish mumkin.",
+          ] },
+        ],
+        faq: [
+          { q: "Ilovani ishga tushirish uchun domofonlarni almashtirish kerakmi?", a: "Koʻpincha yoʻq. Tarmoqqa ulangan domofon va kontrollerlar almashtirilmasdan ulanadi. Faqat tarmoq bilan ishlamaydigan eski analog tizimlarni almashtirish kerak boʻladi." },
+          { q: "Uyda internet uzilsa nima boʻladi?", a: "Yuz va karta orqali oʻtish ishlayveradi: qarorni eshik oldidagi terminal qabul qiladi. Telefondan ochish, mehmon QR-kodlari va arizalar aloqa tiklangach qayta ishlaydi." },
+          { q: "Boshqaruv kompaniyasi begona ulanishlardan qanday himoyalangan?", a: "Xonadonni boshqaruv kompaniyasi kiritadi va egasining pochtasini biriktiradi. Qolgan yashovchilarni egasi taklif qiladi, ijarachini muddatga. Yashovchi begona xonadonga oʻzi ulana olmaydi." },
+          { q: "Ilova uchun kim toʻlaydi — aholimi yoki boshqaruv kompaniyasimi?", a: "Odatda bu uy xizmati tarkibiga kiradi: shartnoma boshqaruv kompaniyasi bilan tuziladi, aholi esa alohida toʻlovsiz foydalanadi. Shartlar har bir obyekt uchun alohida kelishiladi." },
+        ],
+      },
+      en: {
+        title: "A resident app for apartment complexes: what changes for tenants and the management company",
+        excerpt: "Intercom on the phone, guest passes by link, requests with visible stages and the monthly bill. What the app actually solves, what hardware it needs and why it is usually installed on equipment that is already there.",
+        sections: [
+          { h: "Life in a building without an app", p: [
+            "A typical complex runs on intercom handsets, key fobs and the dispatcher's phone. A resident loses a fob and walks to the management office. Someone waits for a courier and sits by the handset. A pipe bursts, the resident calls the dispatcher and then spends the day guessing whether a plumber will arrive.",
+            "None of this is fixed by buying a more expensive intercom. What is missing is a layer that connects the hardware to residents' phones and to the dispatcher's desk: an app for the resident, a dashboard for the management company and one shared database of apartments, rights and events.",
+          ] },
+          { h: "Doors on the phone instead of fobs", p: [
+            "In the app a resident sees only their own doors: their entrance, gate and barrier. Opening takes one tap, and the internet is needed by the phone rather than by the person at the door: the command travels through our server to the site, where the hardware executes it.",
+            "Fobs and cards keep working, because the decision to let a person in is made by the terminal itself. The app adds a convenient option instead of removing the familiar one. A lost phone is not a problem: sign-in is by email with a code, so a new phone simply signs in again and the old one loses access.",
+          ] },
+          { h: "Guests by link and QR code", p: [
+            "A resident issues a pass for a period or a single visit and sends the link in a messenger. The guest opens it and taps the door they need; if there is a terminal with a camera at the entrance, they simply show the QR code on the phone screen.",
+            "For the management company this is discipline rather than a security hole: every guest entry lands in the log under the resident's name, the validity is limited and the pass can be revoked at any moment. Couriers, a plumber on call, wedding guests — none of it turns into a call to the dispatcher at one in the morning.",
+          ] },
+          { h: "Requests you can actually follow", p: [
+            "A request in the app is not a message into the void. The resident picks a topic, describes what happened and then follows the stages: accepted, in progress, done. The assignee and the dispatcher's replies are visible, and a clarification can be added to the same request.",
+            "For the management company it saves working hours. The dispatcher no longer answers \"when is the plumber coming\" — the resident sees it. A manager sees how many requests are open, who is holding them and how residents rate finished work. Disputes are settled by the request history, not by memory.",
+          ] },
+          { h: "A bill that raises no questions", p: [
+            "Charges in the app are broken down by month and service, with payments and the balance next to them. Payment goes through the app, and meter readings are submitted by the resident instead of being written on a scrap of paper by the lift.",
+            "The management company either calculates charges from tariffs in the dashboard — per square metre, per apartment or per resident — or imports ready figures from Excel or 1C. The second path matters for buildings where accounting is already set up: the app does not force a change of bookkeeping, it shows residents what accounting has already calculated.",
+          ] },
+          { h: "What the site needs", p: [
+            "The app needs three things: networked hardware at the doors, internet on site and a small gateway in the server room that links the equipment to the server. Hikvision, Dahua and ZKTeco intercoms and controllers usually connect as they are.",
+            "If the building runs an old analogue system with no network, it does have to be replaced at least at the entrances where calls to a phone are required. That is why the first step is a survey: what is installed, what connects and what is cheaper to replace. You can start with one entrance and expand later.",
+          ] },
+        ],
+        faq: [
+          { q: "Do intercoms have to be replaced to launch the app?", a: "In most cases no. Networked intercoms and controllers connect without replacement. Only outdated analogue systems that cannot work over a network have to go." },
+          { q: "What happens if the building loses internet access?", a: "Face and card access keeps working: the terminal at the door decides locally. Phone unlocking, guest QR codes and requests resume as soon as the connection is back." },
+          { q: "How is the management company protected from unauthorised links?", a: "The management company creates the apartment and attaches the owner's email. The owner invites the rest of the household, and a tenant only for a set term. A resident cannot attach themselves to someone else's apartment." },
+          { q: "Who pays for the app — residents or the management company?", a: "Usually it is part of the building service: the contract is signed with the management company and residents use the app without a separate fee. Terms are agreed per site." },
+        ],
+      },
+      tr: {
+        title: "Site sakinleri için uygulama: konutta ve yönetim şirketinde ne değişir",
+        excerpt: "Telefonda interkom, bağlantıyla misafir geçişi, aşamaları görünen talepler ve aylık fatura. Uygulamanın çözdüğü işler, gereken donanım ve neden çoğunlukla mevcut cihazların üzerine kurulduğu.",
+        sections: [
+          { h: "Uygulamasız bir sitede hayat", p: [
+            "Tipik bir site interkom ahizeleri, kumandalar ve dispeçerin telefonuyla yönetilir. Sakin kumandayı kaybeder, yönetim ofisine gider. Kargo bekleyen kişi ahizenin başında oturur. Su patlar, sakin dispeçeri arar ve gün boyu tesisatçının gelip gelmeyeceğini bilemez.",
+            "Bunların hiçbiri daha pahalı bir interkomla çözülmez. Eksik olan, donanımı sakinlerin telefonuna ve dispeçerin masasına bağlayan katmandır: sakinde uygulama, yönetimde panel ve dairelerin, yetkilerin, olayların ortak veritabanı.",
+          ] },
+          { h: "Kumanda yerine telefondaki kapılar", p: [
+            "Uygulamada sakin yalnızca kendi kapılarını görür: kendi girişi, bahçe kapısı, bariyeri. Açmak tek dokunuş; internet kapıdaki kişiye değil telefona gerekir: komut sunucumuz üzerinden sahaya gider ve cihaz onu uygular.",
+            "Kumanda ve kartlar çalışmaya devam eder, çünkü geçiş kararını terminalin kendisi verir. Uygulama alışılmışı kaldırmaz, kolay bir yol ekler. Telefon kaybolursa sorun olmaz: giriş e-posta ve kodla yapılır, yeni telefonda yeniden girilir, eskisi erişimi kaybeder.",
+          ] },
+          { h: "Misafir bağlantı ve QR ile", p: [
+            "Sakin misafire süreli ya da tek girişlik geçiş verir ve bağlantıyı mesajla gönderir. Misafir bağlantıyı açıp ilgili kapıya dokunur; girişte kameralı terminal varsa telefon ekranındaki QR kodu gösterir.",
+            "Yönetim için bu bir güvenlik açığı değil, düzendir: her misafir geçişi sakinin adıyla kayda düşer, süre sınırlıdır ve geçiş istenildiği an iptal edilir. Kuryeler, çağrılan tesisatçı, düğün misafirleri — hiçbiri gece bir dispeçer telefonuna dönüşmez.",
+          ] },
+          { h: "Takip edilebilen talepler", p: [
+            "Uygulamadaki talep boşluğa yazılmış bir mesaj değildir. Sakin konuyu seçer, olayı anlatır ve aşamaları izler: kabul edildi, işlemde, tamamlandı. Sorumlu kişi ve dispeçerin yanıtları görünür, ek açıklama aynı talebe yazılır.",
+            "Yönetim için bu, çalışma saati kazandırır. Dispeçer \"usta ne zaman gelecek\" sorusunu yanıtlamaz, sakin zaten görür. Yönetici kaç talebin açık olduğunu, kimde beklediğini ve tamamlanan işlerin nasıl puanlandığını görür. Anlaşmazlıklar hafızaya değil talep geçmişine bakılarak çözülür.",
+          ] },
+          { h: "Soru yaratmayan fatura", p: [
+            "Uygulamadaki tahakkuk aylara ve hizmetlere ayrılmıştır; yanında ödemeler ve bakiye görünür. Ödeme uygulamadan yapılır, sayaç değerlerini sakin kendisi gönderir, asansörün yanında kâğıda yazmaz.",
+            "Yönetim şirketi ya paneldeki tarifelerle hesaplar — metrekare, daire ya da kişi başına — ya da hazır tutarları Excel veya 1C’den yükler. İkincisi muhasebesi kurulu binalar için önemlidir: uygulama muhasebeyi değiştirmeye zorlamaz, hesaplananı sakine gösterir.",
+          ] },
+          { h: "Sahada gerekenler", p: [
+            "Uygulamaya üç şey gerekir: kapılarda ağa bağlı donanım, sahada internet ve sistem odasında donanımı sunucuya bağlayan küçük bir ağ geçidi. Hikvision, Dahua ve ZKTeco interkom ve kontrolörleri çoğunlukla olduğu gibi bağlanır.",
+            "Binada ağa bağlanmayan eski analog sistem varsa, en azından telefona çağrı gereken girişlerde değiştirmek gerekir. Bu yüzden ilk adım keşiftir: ne kurulu, ne bağlanır, neyi değiştirmek daha ucuz. Tek girişle başlayıp sonra genişletebilirsiniz.",
+          ] },
+        ],
+        faq: [
+          { q: "Uygulama için interkomları değiştirmek şart mı?", a: "Çoğu durumda hayır. Ağa bağlı interkom ve kontrolörler değiştirilmeden bağlanır. Yalnızca ağ üzerinden çalışamayan eski analog sistemler değişir." },
+          { q: "Binada internet kesilirse ne olur?", a: "Yüz ve kartla geçiş çalışır: kararı kapıdaki terminal verir. Telefonla açma, misafir QR kodları ve talepler bağlantı gelince yeniden çalışır." },
+          { q: "Yönetim şirketi yetkisiz bağlanmalara karşı nasıl korunur?", a: "Daireyi yönetim şirketi oluşturur ve ev sahibinin e-postasını bağlar. Diğer sakinleri ev sahibi davet eder, kiracıyı süreli. Sakin başkasının dairesine kendi başına bağlanamaz." },
+          { q: "Uygulamanın bedelini kim öder?", a: "Genelde bina hizmetinin parçasıdır: sözleşme yönetim şirketiyle yapılır, sakinler ayrı ücret ödemez. Koşullar her saha için ayrı görüşülür." },
+        ],
+      },
+      zh: {
+        title: "小区住户应用：住户与物业分别得到什么",
+        excerpt: "手机对讲、链接式访客通行、进度可见的报修与月度账单。这款应用真正解决了什么问题、需要哪些设备，以及为何通常安装在现有设备之上。",
+        sections: [
+          { h: "没有应用的小区是什么样", p: [
+            "常见小区依靠对讲分机、门禁卡和调度电话运转。住户丢了门禁卡就要跑物业；等快递就得守在分机旁；水管漏了只能打电话给调度，然后一整天都不知道师傅会不会来。",
+            "这些问题并不会因为换一台更贵的对讲主机而消失。真正缺少的是一层把设备、住户手机与调度台连起来的软件：住户端应用、物业端后台，以及房号、权限和事件的统一数据。",
+          ] },
+          { h: "手机取代门禁卡", p: [
+            "住户在应用中只看到自己的门：本单元门、小门和自家院子的道闸。开门只需一次点击，需要联网的是手机而不是门口的人：指令经我们的服务器下发到现场，由设备执行。",
+            "门禁卡和刷卡照常可用，因为放行与否由终端本地判断。应用只是增加了一种便捷方式。手机丢失也不麻烦：登录使用邮箱加验证码，新手机重新登录即可，旧设备随即失去权限。",
+          ] },
+          { h: "访客用链接和二维码", p: [
+            "住户签发限时或一次性通行证，并把链接发到聊天工具里。访客打开链接点击相应的门；若入口装有带摄像头的终端，直接出示手机上的二维码即可。",
+            "对物业而言这是规范而非漏洞：每次访客通行都以住户名义记入日志，有效期受限，通行证可随时撤销。快递、上门维修、婚宴客人——都不再变成凌晨给调度打电话。",
+          ] },
+          { h: "看得见进度的报修", p: [
+            "应用里的报修不是石沉大海。住户选择类别、描述问题，然后可看到进度：已受理、处理中、已完成，并能看到负责人与调度的回复，补充说明也写在同一条记录里。",
+            "对物业来说这节省工时。调度不必回答“师傅什么时候来”，住户自己能看到。管理者可看到有多少报修未完成、卡在谁那里，以及住户对完成工作的评分。出现争议时按记录核对，而不是靠回忆。",
+          ] },
+          { h: "不引发争议的账单", p: [
+            "应用中的费用按月份和服务项目分列，旁边显示缴费与余额。可直接在应用内缴费，水电读数由住户自行上报，无需在电梯口用纸条记录。",
+            "物业既可以在后台按面积、按户或按人数的费率计算，也可以从 Excel 或 1C 导入已算好的金额。后者对财务流程已成型的小区很重要：应用不强迫更改记账方式，只是把财务算好的结果展示给住户。",
+          ] },
+          { h: "现场需要什么", p: [
+            "应用需要三样东西：门口的联网设备、现场网络，以及机房中把设备接入服务器的小型网关。海康、大华与 ZKTeco 的对讲和控制器多数可直接接入。",
+            "如果楼内仍是不联网的老式模拟系统，至少在需要呼叫手机的单元门处需要更换。因此第一步是现场勘察：现有什么、哪些能接入、哪些更换更划算。可以先从一个单元开始，之后再扩展。",
+          ] },
+        ],
+        faq: [
+          { q: "启用应用必须更换对讲设备吗？", a: "多数情况下不必。联网的对讲与控制器可直接接入；只有无法联网的老式模拟系统需要更换。" },
+          { q: "小区断网会怎样？", a: "人脸与刷卡通行照常可用，由门口终端本地判断。手机开门、访客二维码与报修在网络恢复后即可使用。" },
+          { q: "如何防止他人绑定别人的房号？", a: "房号由物业创建并绑定业主邮箱，其余住户由业主邀请，租户按期限邀请。住户无法自行绑定他人房号。" },
+          { q: "费用由住户还是物业承担？", a: "通常作为物业服务的一部分：合同与物业公司签署，住户无需单独付费。具体条件按项目商定。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "obsluzhivanie-pozharnoy-signalizacii-uzbekistan",
     date: "2026-09-10",
     updated: "2026-09-10",
