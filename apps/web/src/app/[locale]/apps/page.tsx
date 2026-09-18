@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: d.metaTitle },
     description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps", locale),
-    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/apps-img/apps-hero.jpg"] },
   };
 }
 
@@ -69,7 +69,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
       </nav>
 
       <section className="relative mt-3 overflow-hidden rounded-3xl bg-slate-900">
-        <img src="/apps-img/apps-hero.jpg" alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-55" />
+        <img src="/apps-img/apps-hero.jpg" alt={d.h1} className="absolute inset-0 h-full w-full object-cover opacity-55" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/40" />
         <div className="relative grid items-center gap-8 p-6 sm:p-10 lg:grid-cols-[1.15fr_auto]">
           <div>

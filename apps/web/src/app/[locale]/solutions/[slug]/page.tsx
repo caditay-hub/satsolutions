@@ -402,10 +402,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       {isInd && (
         <>
           <section className="relative overflow-hidden bg-[#031422] text-white">
-            <div className="absolute inset-0" aria-hidden>
+            <div className="absolute inset-0">
               <Image
                 src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
-                alt=""
+                alt={h1}
                 fill
                 sizes="100vw"
                 className="object-cover"

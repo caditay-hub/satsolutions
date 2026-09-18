@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: d.metaTitle },
     description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps/davomat", locale),
-    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/apps-img/shots/shot-timesheet.jpg"] },
   };
 }
 
@@ -38,6 +38,9 @@ export default async function SatDavomatPage({ params }: { params: Promise<{ loc
         operatingSystem: "Web",
         description: clampDesc(d.metaDesc),
         url: "https://satsolutions.uz/apps/davomat",
+        screenshot: ["https://satsolutions.uz/apps-img/shots/shot-timesheet.jpg", "https://satsolutions.uz/apps-img/shots/shot-now.jpg"],
+        // цена договорная: Offer нужен, чтобы сниппет приложения показывался вообще
+        offers: { "@type": "Offer", price: "0", priceCurrency: "UZS", availability: "https://schema.org/InStock" },
         author: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz" },
         areaServed: { "@type": "Country", name: "Uzbekistan" },
       },

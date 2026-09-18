@@ -130,7 +130,7 @@ export function NewArrivalsTicker({
                 className="flex flex-none items-center gap-2.5 whitespace-nowrap rounded-full border border-[#f0d6d6] bg-white py-1.5 pl-2 pr-4 text-[14.5px] shadow-[0_1px_5px_rgba(180,40,40,0.09)] transition-colors hover:border-[#e3b8b8]"
               >
                 {it.img ? (
-                  <img src={it.img} alt="" width={38} height={38} loading="lazy" className="h-[38px] w-[38px] rounded-full bg-white object-contain" />
+                  <img src={it.img} alt={dup ? "" : it.name} width={38} height={38} loading="lazy" className="h-[38px] w-[38px] rounded-full bg-white object-contain" />
                 ) : (
                   <span className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-slate-100 text-base" aria-hidden>📦</span>
                 )}

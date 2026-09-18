@@ -6,7 +6,7 @@ import { articleBySlug, articleImg } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
 import { ARTICLE_UI } from "@/lib/appsExtrasContent";
-import { clampDesc, clampTitle } from "@/lib/seoText";
+import { clampDesc, titleWithBrand } from "@/lib/seoText";
 import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -59,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   // Обложка статьи вместо общего /og.png: у каждой из статей есть свой кадр 1200×630
   const cover = `${SITE_URL}${articleImg(slug)}`;
   return {
-    title: { absolute: `${clampTitle(body.title, 48)} — SAT Solutions` },
+    title: { absolute: titleWithBrand(body.title) },
     description: clampDesc(body.excerpt),
     alternates: hreflangAlternates(`/blog/${slug}`, locale),
     openGraph: { type: "article", title: body.title, description: clampDesc(body.excerpt), locale: ogLocale(locale), images: [cover], publishedTime: article.date },

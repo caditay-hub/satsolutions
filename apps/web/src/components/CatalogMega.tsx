@@ -6,10 +6,13 @@ import { Link, useRouter } from "@/i18n/navigation";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
 import { typeSlug } from "@/lib/typeSlug";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { localizeCatName } from "@/lib/catalogI18n";
 
 function typeHref(name: string) {
-  return `/products/type/${typeSlug(name)}`;
+  const slug = typeSlug(name);
+  // у трёх слагов канонической назначена группа — ведём сразу туда, без 308
+  return GROUP_CANONICAL[slug] ? `/products/group/${GROUP_CANONICAL[slug]}` : `/products/type/${slug}`;
 }
 // Раздел всей группы (все товары группы) — /products/group/<slug>
 function groupHref(title: string) {

@@ -9,6 +9,7 @@ import { SatLogo } from "@/components/SatLogo";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { getSearchSuggest, type SuggestDto } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { typeSlug } from "@/lib/typeSlug";
 import { priceLabel, productIcon } from "@/lib/product";
 import { CatalogMega } from "@/components/CatalogMega";
@@ -119,7 +120,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
             <div className="mb-1">
               <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("cats")}</div>
               {sug.types.map((t) => (
-                <button key={t.name} type="button" onClick={() => go(`/products/type/${typeSlug(t.name)}`)}
+                <button key={t.name} type="button" onClick={() => go(GROUP_CANONICAL[typeSlug(t.name)] ? `/products/group/${GROUP_CANONICAL[typeSlug(t.name)]}` : `/products/type/${typeSlug(t.name)}`)}
                   className="flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-slate-50">
                   <span className="truncate text-slate-700">{t.name}</span>
                   <span className="shrink-0 text-[11px] text-slate-400">{t.count}</span>
@@ -393,7 +394,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 <summary className="cursor-pointer list-none py-2 text-[13px] font-semibold text-slate-700">{g.title}</summary>
                                 <div className="grid gap-0.5 pb-2 pl-3">
                                   {g.types.map((tn) => (
-                                    <Link key={tn.n} href={`/products/type/${typeSlug(tn.n)}`} className="flex items-center justify-between gap-2 rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">
+                                    <Link key={tn.n} href={GROUP_CANONICAL[typeSlug(tn.n)] ? `/products/group/${GROUP_CANONICAL[typeSlug(tn.n)]}` : `/products/type/${typeSlug(tn.n)}`} className="flex items-center justify-between gap-2 rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">
                                       <span className="truncate">{tn.n}</span><span className="shrink-0 text-[11px] text-slate-400">{tn.c}</span>
                                     </Link>
                                   ))}

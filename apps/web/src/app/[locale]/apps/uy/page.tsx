@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: d.metaTitle },
     description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps/uy", locale),
-    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/apps-img/shots/shot-doors.jpg"] },
   };
 }
 
@@ -46,6 +46,9 @@ export default async function SatUyPage({ params }: { params: Promise<{ locale: 
         operatingSystem: "Android",
         description: clampDesc(d.metaDesc),
         url: "https://satsolutions.uz/apps/uy",
+        screenshot: ["https://satsolutions.uz/apps-img/shots/shot-doors.jpg", "https://satsolutions.uz/apps-img/shots/shot-guest.jpg"],
+        // приложение бесплатно для жителя — без offers Google не покажет расширенный сниппет
+        offers: { "@type": "Offer", price: "0", priceCurrency: "UZS", availability: "https://schema.org/InStock" },
         author: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz" },
         areaServed: { "@type": "Country", name: "Uzbekistan" },
       },

@@ -19,6 +19,12 @@ const nextConfig = {
     staleTimes: { dynamic: 30, static: 180 },
     optimizePackageImports: ['react-icons', 'lucide-react', '@headlessui/react', '@heroicons/react'],
   },
+  // ⚠️ Стриминг метаданных: по умолчанию Next отдаёт <title>, description, canonical и
+  // hreflang ПОСЛЕ </head> всем, кого считает способным исполнять JS, — в том числе
+  // Googlebot и ИИ-краулерам. Аудит 18.09.2026 показал, что так 155 страниц (весь
+  // русский блог, /products/group/*, /kits/*, /products) приходили к Google без меты.
+  // Список ниже заменяет умолчание целиком, поэтому включает и «обычных» ботов.
+  htmlLimitedBots: new RegExp('Googlebot|Google-InspectionTool|Storebot-Google|Mediapartners-Google|AdsBot-Google|GPTBot|OAI-SearchBot|ChatGPT-User|PerplexityBot|ClaudeBot|Claude-Web|anthropic-ai|Bytespider|CCBot|Amazonbot|Applebot|Bingbot|BingPreview|Slurp|DuckDuckBot|baiduspider|yandex|sogou|facebookexternalhit|facebookcatalog|Twitterbot|LinkedInBot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|redditbot|vkShare|tumblr|ia_archiver|bitlybot|quora link preview', 'i'),
   poweredByHeader: false,
   images: {
     // 14 ширин плодили десятки вариантов одной картинки в кэше оптимизатора

@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { typeSlug } from "@/lib/typeSlug";
 
 // Дерево каталога в стиле NAG: 12 групп → типы. Текущий тип подсвечен,
@@ -27,7 +28,7 @@ export function CatalogTree({ currentType }: { currentType?: string }) {
                   return (
                     <li key={t.n}>
                       <Link
-                        href={`/products/type/${typeSlug(t.n)}`}
+                        href={GROUP_CANONICAL[typeSlug(t.n)] ? `/products/group/${GROUP_CANONICAL[typeSlug(t.n)]}` : `/products/type/${typeSlug(t.n)}`}
                         className={`flex items-center justify-between gap-2 py-1 pl-5 pr-3 ${
                           on ? "font-bold text-brand-700" : "text-slate-600 hover:text-brand-700"
                         }`}

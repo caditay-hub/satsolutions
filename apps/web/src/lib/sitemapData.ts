@@ -31,7 +31,7 @@ const DEFAULT_LOCALE = "ru";
 // при заметной правке этих страниц. Почему не new Date(): lastmod, который менялся на
 // каждой сборке, хотя страница не менялась, Google перестаёт учитывать вовсе — и вместе
 // с ним обесцениваются честные даты соседних URL в том же файле.
-export const CONTENT_RELEASE = new Date("2026-09-09T00:00:00.000Z");
+export const CONTENT_RELEASE = new Date("2026-09-18T00:00:00.000Z");
 
 /** @deprecated историческое имя — им пользуется индекс /sitemap.xml. */
 export const GENERATED = CONTENT_RELEASE;

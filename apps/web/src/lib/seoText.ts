@@ -1,24 +1,33 @@
-// Мета-описание в выдаче обрезается примерно на 160 символах, а заголовок — на 60–65.
-// Тексты на странице оставляем полными, а в <title> и description отдаём укладывающийся
-// в выдачу вариант: режем по границе предложения, иначе по границе слова.
+// Заголовок в выдаче обрезается примерно на 60–65 символах, описание — на 160.
+// Резать своими многоточиями нельзя: в выдаче это читается как оборванная фраза
+// («Что такое СКУД: как работает система контроля… — SAT Solutions»).
+// Поэтому режем только по естественной границе — двоеточию или концу предложения,
+// а если её нет, отдаём текст целиком: обрезать умеет и сам поисковик, но без «…».
 
+const BRAND = " — SAT Solutions";
+
+/** Описание: сокращаем до целого предложения, иначе оставляем как есть. */
 export function clampDesc(text: string, max = 158): string {
   const s = text.trim();
   if (s.length <= max) return s;
   const head = s.slice(0, max);
-  const sentence = Math.max(head.lastIndexOf(". "), head.lastIndexOf("。"), head.lastIndexOf("! "), head.lastIndexOf("? "));
-  if (sentence > max * 0.55) return s.slice(0, sentence + 1).trim();
-  const space = head.lastIndexOf(" ");
-  return (space > 0 ? head.slice(0, space) : head).trim() + "…";
+  const end = Math.max(head.lastIndexOf(". "), head.lastIndexOf("。"), head.lastIndexOf("! "), head.lastIndexOf("? "));
+  return end > max * 0.5 ? s.slice(0, end + 1).trim() : s;
 }
 
+/** Заголовок: берём часть до двоеточия или тире, иначе отдаём целиком. */
 export function clampTitle(text: string, max = 62): string {
   const s = text.trim();
   if (s.length <= max) return s;
-  const head = s.slice(0, max);
-  // заголовки статей построены как «Тема: уточнение» — при переборе оставляем тему
-  const colon = s.indexOf(": ");
-  if (colon > 20 && colon <= max) return s.slice(0, colon);
-  const space = head.lastIndexOf(" ");
-  return (space > 0 ? head.slice(0, space) : head).trim() + "…";
+  for (const sep of [": ", " — ", " – ", "：", " - "]) {
+    const i = s.indexOf(sep);
+    if (i > 15 && i <= max) return s.slice(0, i).trim();
+  }
+  return s;
+}
+
+/** Заголовок страницы с брендом: бренд приписываем, только если помещается. */
+export function titleWithBrand(text: string, max = 62): string {
+  const base = clampTitle(text, max - BRAND.length);
+  return base.length + BRAND.length <= max ? base + BRAND : base;
 }
