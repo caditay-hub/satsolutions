@@ -17,11 +17,19 @@ import { SERVICES, INDUSTRIES } from "@/lib/servicesData";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { LoadingDots } from "@/components/LoadingDots";
 
+/** Пункты выпадающего меню «О компании»: свои приложения и страницы компании. */
+const ABOUT_MENU: Record<string, { all: string; apps: string; uy: string; davomat: string; blog: string; reviews: string; zkteco: string; h3c: string; tenders: string; company: string; products: string }> = {
+  ru: { all: "О компании", apps: "Приложения SAT", uy: "SAT Uy — жителям ЖК", davomat: "SAT Davomat — учёт времени", blog: "Блог", reviews: "Отзывы", zkteco: "Партнёр ZKTeco", h3c: "Партнёр H3C", tenders: "Поставки и тендеры", company: "Компания", products: "Наши продукты" },
+  uz: { all: "Kompaniya haqida", apps: "SAT ilovalari", uy: "SAT Uy — TJM aholisiga", davomat: "SAT Davomat — ish vaqti", blog: "Blog", reviews: "Sharhlar", zkteco: "ZKTeco hamkori", h3c: "H3C hamkori", tenders: "Yetkazish va tenderlar", company: "Kompaniya", products: "Bizning mahsulotlar" },
+  en: { all: "About us", apps: "SAT apps", uy: "SAT Uy — for residents", davomat: "SAT Davomat — time tracking", blog: "Blog", reviews: "Reviews", zkteco: "ZKTeco partner", h3c: "H3C partner", tenders: "Supply and tenders", company: "Company", products: "Our products" },
+  tr: { all: "Hakkımızda", apps: "SAT uygulamaları", uy: "SAT Uy — site sakinlerine", davomat: "SAT Davomat — mesai takibi", blog: "Blog", reviews: "Yorumlar", zkteco: "ZKTeco ortağı", h3c: "H3C ortağı", tenders: "Tedarik ve ihaleler", company: "Şirket", products: "Ürünlerimiz" },
+  zh: { all: "关于我们", apps: "SAT 应用", uy: "SAT Uy——面向住户", davomat: "SAT Davomat——考勤", blog: "博客", reviews: "客户评价", zkteco: "ZKTeco 合作伙伴", h3c: "H3C 合作伙伴", tenders: "供货与招标", company: "公司", products: "我们的产品" },
+};
+
 const nav = [
   { href: "/", key: "home" },
   { href: "/solutions", key: "services" },
   { href: "/products", key: "catalog", mega: true },
-  { href: "/apps", key: "apps" },
   { href: "/portfolio", key: "portfolio" },
   { href: "/about", key: "about" }
 ] as const;
@@ -235,6 +243,13 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
   };
 
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
+  // «О компании»: свои приложения и страницы компании в одном меню
+  const am = ABOUT_MENU[locale] ?? ABOUT_MENU.ru;
+  const aboutGroups: NavDropGroup[] = [
+    { label: am.products, items: [{ title: am.apps, href: "/apps" }, { title: am.uy, href: "/apps/uy" }, { title: am.davomat, href: "/apps/davomat" }] },
+    { label: am.company, items: [{ title: am.blog, href: "/blog" }, { title: am.reviews, href: "/reviews" }, { title: am.zkteco, href: "/partners/zkteco" }, { title: am.h3c, href: "/partners/h3c" }, { title: am.tenders, href: "/tenders" }] },
+  ];
+
   const solutionGroups: NavDropGroup[] = [
     { label: tsp("systemsLabel"), items: [...SERVICES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })), zktecoItem, h3cItem] },
     { label: tsp("industriesLabel"), items: INDUSTRIES.map((s) => ({ title: tsv(`${s.key}.title`), href: `/solutions/${s.key}` })) },
@@ -276,7 +291,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
           <SatLogo size="md" />
         </div>
 
-        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-5 lg:flex xl:gap-8" suppressHydrationWarning>
+        <nav className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:gap-6 2xl:gap-8" suppressHydrationWarning>
           {nav.map((item) => {
             if ((item as any).mega) {
               return <CatalogMega key={item.href} />;
@@ -284,12 +299,15 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
             if (item.key === "services") {
               return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} feature={calcFeature} />;
             }
+            if (item.key === "about") {
+              return <NavDropdown key={item.href} label={t(item.key)} href="/about" groups={aboutGroups} allLabel={am.all} active={item.href === activeHref} width={300} />;
+            }
             if (item.key === "portfolio" && portfolioItems.length > 0) {
               return <NavDropdown key={item.href} label={t(item.key)} href="/portfolio" groups={portfolioGroups} allLabel={t("allProjects")} active={item.href === activeHref} width={380} />;
             }
             const active = item.href === activeHref;
             // Меню всегда по центру страницы (absolute + -translate-x-1/2): одинаково на всех языках. Крупный шрифт.
-            const linkClasses = `whitespace-nowrap text-base xl:text-lg font-bold tracking-tight transition-colors ${active
+            const linkClasses = `whitespace-nowrap text-[13px] xl:text-base 2xl:text-lg font-bold tracking-tight transition-colors ${active
               ? "text-brand-700 underline underline-offset-8 decoration-2"
               : "text-slate-950 hover:text-brand-700"
               }`;
@@ -307,7 +325,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2 ml-auto">
-          <HeaderSearch className="hidden lg:block w-40 xl:w-48 2xl:w-56" />
+          <HeaderSearch className="hidden lg:block w-28 xl:w-44 2xl:w-56" />
           <LanguageSwitcher className="hidden lg:block" />
 
           {/* Телефон в шапке (10.09.2026): контакты ушли из первого экрана страниц услуг —
@@ -409,6 +427,19 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 <span className="block truncate text-[11px] text-white/80">{calcFeature.subtitle}</span>
                               </span>
                             </Link>
+                          </div>
+                        </details>
+                      );
+                    }
+                    if (item.key === "about") {
+                      return (
+                        <details key={item.href} className="rounded-xl border border-slate-200 bg-white">
+                          <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-slate-900">{t(item.key)}</summary>
+                          <div className="border-t border-slate-100 px-2 py-2">
+                            <Link href="/about" className="block rounded-md px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-slate-50">{am.all} →</Link>
+                            {aboutGroups.flatMap((g) => g.items).map((it) => (
+                              <Link key={it.href} href={it.href as any} className="block rounded-md px-3 py-2 text-[13px] text-slate-600 hover:bg-slate-50">{it.title}</Link>
+                            ))}
                           </div>
                         </details>
                       );

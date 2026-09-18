@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
-import { HUB } from "@/lib/appsContent";
+import { CRUMBS, HUB } from "@/lib/appsContent";
 
 const pick = (locale: string) => HUB[locale] ?? HUB.ru;
 
@@ -22,6 +22,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function AppsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const d = pick(locale);
+  const crumbs = CRUMBS[locale] ?? CRUMBS.ru;
+  const site = `https://satsolutions.uz${locale === "ru" ? "" : `/${locale}`}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -35,6 +37,13 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
         ],
       },
       { "@type": "FAQPage", mainEntity: d.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: crumbs.home, item: `${site}/` },
+          { "@type": "ListItem", position: 2, name: crumbs.apps },
+        ],
+      },
     ],
   };
 
@@ -47,7 +56,13 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
     <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
+      <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+        <Link href="/" className="hover:text-brand-600">{crumbs.home}</Link>
+        <span>/</span>
+        <span className="text-slate-700">{crumbs.apps}</span>
+      </nav>
+
+      <h1 className="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
       <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.cardsTitle}</h2>

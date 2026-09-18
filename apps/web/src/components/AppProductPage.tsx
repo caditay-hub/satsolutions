@@ -2,19 +2,31 @@
 // как подключаем, техника, вопросы и заявка. Тексты приходят готовым словарём локали.
 import { Link } from "@/i18n/navigation";
 import type { AppPage } from "@/lib/appsContent";
+import { CRUMBS } from "@/lib/appsContent";
 
 export function AppProductPage({
   d,
+  locale,
   otherHref,
   download,
 }: {
   d: AppPage;
+  locale: string;
   otherHref: "/apps/uy" | "/apps/davomat";
   download?: { label: string; href: string };
 }) {
+  const c = CRUMBS[locale] ?? CRUMBS.ru;
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
-      <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
+      <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+        <Link href="/" className="hover:text-brand-600">{c.home}</Link>
+        <span>/</span>
+        <Link href="/apps" className="hover:text-brand-600">{c.apps}</Link>
+        <span>/</span>
+        <span className="text-slate-700">{d.h1.split(" — ")[0]}</span>
+      </nav>
+
+      <h1 className="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">{d.h1}</h1>
       <p className="mt-5 text-lg text-slate-600 leading-relaxed">{d.intro}</p>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.screensTitle}</h2>

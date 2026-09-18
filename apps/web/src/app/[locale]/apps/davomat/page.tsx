@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import { AppProductPage } from "@/components/AppProductPage";
 import { hreflangAlternates } from "@/lib/hreflang";
+import { CRUMBS } from "@/lib/appsContent";
 import { ogLocale } from "@/lib/ogLocale";
 import { DAVOMAT } from "@/lib/appsDavomatContent";
 
@@ -22,6 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function SatDavomatPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const d = pick(locale);
+  const crumbs = CRUMBS[locale] ?? CRUMBS.ru;
+  // Ссылки в крошках — на языковую версию страницы, чтобы путь совпадал с canonical.
+  const site = `https://satsolutions.uz${locale === "ru" ? "" : `/${locale}`}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,13 +41,21 @@ export default async function SatDavomatPage({ params }: { params: Promise<{ loc
         areaServed: { "@type": "Country", name: "Uzbekistan" },
       },
       { "@type": "FAQPage", mainEntity: d.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: crumbs.home, item: `${site}/` },
+          { "@type": "ListItem", position: 2, name: crumbs.apps, item: `${site}/apps` },
+          { "@type": "ListItem", position: 3, name: "SAT Davomat" },
+        ],
+      },
     ],
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <AppProductPage d={d} otherHref="/apps/uy" />
+      <AppProductPage d={d} locale={locale} otherHref="/apps/uy" />
     </>
   );
 }

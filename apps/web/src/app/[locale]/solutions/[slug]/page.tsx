@@ -23,6 +23,7 @@ import { SmartHomeDevices } from "@/components/SmartHomeDevices";
 import { H3cEquipment } from "@/components/H3cEquipment";
 import { DataCenterDetails } from "@/components/DataCenterDetails";
 import { RelatedServices } from "@/components/RelatedServices";
+import { ServiceAppLink } from "@/components/ServiceAppLink";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { Lightbox } from "@/components/Lightbox";
@@ -575,6 +576,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Принцип работы */}
         <ServiceScheme k={svc.key} locale={locale} />
+
+        {/* Своё приложение по теме услуги: домофония и СКУД → SAT Uy, учёт времени → SAT Davomat */}
+        <ServiceAppLink serviceKey={svc.key} locale={locale} />
 
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} locale={locale} />

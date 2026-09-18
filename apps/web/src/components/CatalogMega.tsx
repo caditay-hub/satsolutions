@@ -50,7 +50,7 @@ export function CatalogMega() {
         onClick={() => go("/products")}
         onFocus={show}
         aria-expanded={open}
-        className="inline-flex items-center gap-1.5 whitespace-nowrap text-base xl:text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-brand-700"
+        className="inline-flex items-center gap-1.5 whitespace-nowrap text-[13px] xl:text-base 2xl:text-lg font-bold tracking-tight text-slate-950 transition-colors hover:text-brand-700"
       >
         {t("catalog")}
         <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" className={`transition-transform ${open ? "rotate-180" : ""}`}>

@@ -46,6 +46,15 @@ export type AppPage = {
   otherApp: string;
 };
 
+/** Подписи хлебных крошек по локалям: хаб приложений и обе продуктовые страницы. */
+export const CRUMBS: Record<string, { home: string; apps: string }> = {
+  ru: { home: "Главная", apps: "Приложения" },
+  uz: { home: "Bosh sahifa", apps: "Ilovalar" },
+  en: { home: "Home", apps: "Apps" },
+  tr: { home: "Ana sayfa", apps: "Uygulamalar" },
+  zh: { home: "首页", apps: "应用" },
+};
+
 export const HUB: Record<string, AppsHub> = {
   ru: {
     metaTitle: "Приложения SAT: для жителей ЖК и для учёта рабочего времени | SAT Solutions",
