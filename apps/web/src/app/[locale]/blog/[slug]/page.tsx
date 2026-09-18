@@ -185,6 +185,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                     <p key={j} className="text-sm sm:text-base leading-relaxed text-slate-600">{para}</p>
                   ))}
                 </div>
+                {/* Мост в коммерцию: статьи перехватывают запросы вроде «установка
+                    видеонаблюдения» и «скуд», но ведут читателя в никуда. Ссылка с
+                    точным анкором после первого раздела передаёт вес профильной услуге
+                    и уводит на страницу, где есть цена и заявка. */}
+                {i === 0 && article.related[0] && (
+                  <p className="mt-5 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm sm:text-base">
+                    <Link href={`/solutions/${article.related[0]}`} className="font-bold text-brand-700 hover:underline">
+                      {getServiceSeo(locale, article.related[0])?.h1 ?? ts(`${article.related[0]}.title`)} →
+                    </Link>
+                  </p>
+                )}
                 {/* Схема ставится после второй секции: к этому месту читатель уже понял тему. */}
                 {article.art && i === 1 && <ArticleArt kind={article.art} locale={locale} alt={body.title} />}
               </section>
