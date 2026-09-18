@@ -51,6 +51,10 @@ const nextConfig = {
       { source: "/:locale(uz|en|tr|zh)/partners", destination: "/:locale/about", permanent: true },
       { source: "/news", destination: "/", permanent: true },
       { source: "/news/:slug*", destination: "/", permanent: true },
+      // То же для остальных локалей: без этих правил /uz/news, /tr/news и /zh/news
+      // отдавали 404, хотя ru и en редиректили на главную (обход 18.09.2026).
+      { source: "/:locale(uz|en|tr|zh)/news", destination: "/:locale", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/news/:slug*", destination: "/:locale", permanent: true },
       // Легаси-URL старой версии сайта (другая CMS) — в индексе Google, отдавали 404.
       // 301 на новые разделы, чтобы вернуть вес и убрать массовые 404.
       // Точечные маппинги URL, которые ДО СИХ ПОР ранжируются (из GSC 14.07) — ВЫШЕ общих правил:

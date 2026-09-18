@@ -10,6 +10,10 @@ const has = (sp: SP, k: string) => {
 /** Активны ли фасет-фильтры (характеристики/цена/бренд/сортировка/страница>1). */
 export function catalogFiltersActive(sp: SP): boolean {
   return (
+    // строка поиска: результаты плавают вместе с каталогом, в индексе им не место
+    has(sp, "search") ||
+    has(sp, "q") ||
+    has(sp, "type") ||
     has(sp, "chars") ||
     has(sp, "priceMin") ||
     has(sp, "priceMax") ||
