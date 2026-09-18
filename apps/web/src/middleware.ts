@@ -64,6 +64,15 @@ function uzAutoRedirect(req: NextRequest) {
 }
 
 export default function middleware(req: NextRequest) {
+  // Ссылка из карточки Google Business шла с метками utm_*: Google проиндексировал
+  // адрес с хвостом как ОТДЕЛЬНУЮ страницу (336 показов за 28 дней) и ранжировал её
+  // по «видеонаблюдение» выше, чем страницу услуги — главная конкурировала сама с
+  // собой. Canonical Google игнорировал, поэтому режем метку на сервере: 301 на
+  // чистый адрес. Работает и если метка когда-нибудь вернётся в карточку.
+  if (req.nextUrl.searchParams.get("utm_campaign") === "gbp") {
+    const clean = new URL(req.nextUrl.pathname, req.url);
+    return NextResponse.redirect(clean, 301);
+  }
   // Снятые с продажи товары (см. removedProducts.ts): старые URL в индексе Google отдавали 404.
   // 308 на страницу бренда — очищает индекс, возвращает вес, убирает тупик для пользователя.
   const m = req.nextUrl.pathname.match(REMOVED_RE);
