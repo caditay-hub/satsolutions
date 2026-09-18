@@ -66,7 +66,7 @@ export function AppProductPage({
             <img
               src={app === "uy" ? "/apps-img/shots/shot-doors.jpg" : "/apps-img/shots/shot-timesheet.jpg"}
               alt={`${name} — ${d.screens[app === "uy" ? 0 : 1] ?? d.screensTitle}`}
-              className="w-full rounded-2xl shadow-2xl lg:w-80"
+              className="mx-auto w-64 rounded-2xl object-cover shadow-2xl sm:w-72 lg:w-80"
             />
           </div>
         </div>
@@ -75,8 +75,11 @@ export function AppProductPage({
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.screensTitle}</h2>
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
         {d.screens.map((s, i) => (
-          <div key={s} className="rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
-            <img src={shots[i] ?? shots[0]} alt={`${name} — ${s}`} loading="lazy" className="mx-auto w-full rounded-xl" />
+          <div key={s} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
+            {/* одна рамка на все четыре снимка: телефоны и окна кабинета стоят ровно */}
+            <div className={`flex items-center justify-center overflow-hidden rounded-xl bg-white p-2 ${app === "uy" ? "aspect-[3/4]" : "aspect-[4/3]"}`}>
+              <img src={shots[i] ?? shots[0]} alt={`${name} — ${s}`} loading="lazy" className="max-h-full w-auto rounded-lg object-contain" />
+            </div>
             <div className="mt-3 text-sm font-medium text-slate-700">{s}</div>
           </div>
         ))}

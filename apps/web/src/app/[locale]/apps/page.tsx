@@ -76,9 +76,9 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
             <h1 className="text-3xl font-bold text-white sm:text-4xl">{d.h1}</h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
           </div>
-          <div className="flex gap-4">
-            <img src="/apps-img/shots/shot-doors.jpg" alt="SAT Uy" className="w-40 rounded-2xl shadow-2xl sm:w-48" />
-            <img src="/apps-img/shots/shot-now.jpg" alt="SAT Davomat" className="hidden h-fit w-64 self-center rounded-2xl shadow-2xl sm:block" />
+          <div className="flex items-center justify-center gap-4">
+            <img src="/apps-img/shots/shot-doors.jpg" alt="SAT Uy" className="h-56 w-auto rounded-2xl object-cover shadow-2xl sm:h-64" />
+            <img src="/apps-img/shots/shot-now.jpg" alt="SAT Davomat" className="hidden h-56 w-auto rounded-2xl object-cover shadow-2xl sm:h-64 sm:block" />
           </div>
         </div>
       </section>
@@ -86,18 +86,20 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.cardsTitle}</h2>
       <div className="mt-6 grid md:grid-cols-2 gap-5">
         {cards.map((c) => (
-          <div key={c.title} className="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col">
-            <div className="mb-4 flex justify-center rounded-xl bg-gradient-to-b from-slate-50 to-white py-4">
+          <div key={c.title} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6">
+            {/* Кадры разной формы (телефон вертикальный, ноутбук горизонтальный) приводим
+                к одной рамке 16:10 — иначе карточки стоят неровно. */}
+            <div className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-slate-50 to-slate-100 p-3">
               <img
                 src={c.href === "/apps/uy" ? "/apps-img/shots/shot-guest.jpg" : "/apps-img/shots/shot-now.jpg"}
                 alt={c.title}
                 loading="lazy"
-                className={c.href === "/apps/uy" ? "h-44 w-auto rounded-xl" : "w-full rounded-xl"}
+                className="max-h-full w-auto rounded-lg object-contain"
               />
             </div>
             <div className="text-xl font-bold text-slate-900">{c.title}</div>
             <div className="mt-1 text-sm text-brand-700 font-semibold">{c.tagline}</div>
-            <ul className="mt-4 space-y-2 text-sm text-slate-600 leading-relaxed">
+            <ul className="mt-4 mb-6 space-y-2 text-sm text-slate-600 leading-relaxed">
               {c.bullets.map((b) => (
                 <li key={b} className="flex gap-2">
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
@@ -107,7 +109,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
             </ul>
             <Link
               href={c.href}
-              className="mt-6 inline-flex w-fit items-center rounded-lg bg-brand-700 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-800"
+              className="mt-auto inline-flex w-fit items-center rounded-lg bg-brand-700 px-5 py-2.5 pt-2.5 text-sm font-semibold text-white hover:bg-brand-800"
             >
               {c.link}
             </Link>
