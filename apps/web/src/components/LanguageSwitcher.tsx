@@ -5,6 +5,15 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, localeNames } from "@/i18n/routing";
 
+// Подписи для скринридера: раньше на всех пяти локалях стояло русское «Сменить язык».
+const LABELS: Record<string, { switch: string }> = {
+  ru: { switch: "Сменить язык" },
+  uz: { switch: "Tilni almashtirish" },
+  en: { switch: "Change language" },
+  tr: { switch: "Dili değiştir" },
+  zh: { switch: "切换语言" },
+};
+
 /* Векторные мини-флаги (эмодзи-флаги не рендерятся на Windows/Chrome — рисуем SVG). */
 const Flags: Record<string, React.ReactNode> = {
   ru: (
@@ -87,7 +96,7 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-2.5 py-2 text-sm font-bold text-slate-900 hover:bg-slate-50"
-        aria-label="Сменить язык"
+        aria-label={LABELS[locale]?.switch ?? "Change language"}
         aria-expanded={open}
       >
         {Flags[locale]}

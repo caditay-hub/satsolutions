@@ -19,6 +19,15 @@ import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { LoadingDots } from "@/components/LoadingDots";
 
 /** Пункты выпадающего меню «О компании»: свои приложения и страницы компании. */
+// Подписи бургер-меню для скринридера: были русскими на всех локалях.
+const MENU_LABEL: Record<string, { open: string; close: string }> = {
+  ru: { open: "Открыть меню", close: "Закрыть меню" },
+  uz: { open: "Menyuni ochish", close: "Menyuni yopish" },
+  en: { open: "Open menu", close: "Close menu" },
+  tr: { open: "Menüyü aç", close: "Menüyü kapat" },
+  zh: { open: "打开菜单", close: "关闭菜单" },
+};
+
 const ABOUT_MENU: Record<string, { all: string; apps: string; uy: string; davomat: string; blog: string; reviews: string; zkteco: string; h3c: string; tenders: string; company: string; products: string }> = {
   ru: { all: "О компании", apps: "Приложения SAT", uy: "SAT Uy — жителям ЖК", davomat: "SAT Davomat — учёт времени", blog: "Блог", reviews: "Отзывы", zkteco: "Партнёр ZKTeco", h3c: "Партнёр H3C", tenders: "Поставки и тендеры", company: "Компания", products: "Наши продукты" },
   uz: { all: "Kompaniya haqida", apps: "SAT ilovalari", uy: "SAT Uy — TJM aholisiga", davomat: "SAT Davomat — ish vaqti", blog: "Blog", reviews: "Sharhlar", zkteco: "ZKTeco hamkori", h3c: "H3C hamkori", tenders: "Yetkazish va tenderlar", company: "Kompaniya", products: "Bizning mahsulotlar" },
@@ -346,7 +355,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
             type="button"
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white hover:bg-slate-50 lg:hidden"
-            aria-label={open ? "Закрыть меню" : "Открыть меню"}
+            aria-label={open ? (MENU_LABEL[locale]?.close ?? "Close menu") : (MENU_LABEL[locale]?.open ?? "Open menu")}
             aria-expanded={open}
           >
             <MenuIcon open={open} />

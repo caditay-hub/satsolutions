@@ -26,18 +26,8 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         metadataBase: new URL(siteUrl),
         title,
         description,
-        keywords: [
-            "видеонаблюдение",
-            "безопасность",
-            "контроль доступа",
-            "smart-решения",
-            "SAT Solutions",
-            "Ташкент",
-            "Узбекистан",
-            "CCTV",
-            "системы безопасности",
-            "умный дом"
-        ],
+        // meta keywords убраны 18.09.2026: поисковики их не учитывают, а русский
+        // список на китайских и турецких страницах смешивал языковой сигнал.
         authors: [{ name: "SAT Solutions" }],
         creator: "SAT Solutions",
         publisher: "SAT Solutions",
