@@ -21,6 +21,7 @@ export type Article = {
   hubs?: string[];           // слаги товарных хабов /products/type/<slug> — «Каталог по теме»
   art?: "guest" | "house" | "attendance";        // рисованная схема внутри статьи (ArticleArt)
   appHref?: "/apps/uy" | "/apps/davomat";        // ссылка на страницу нашего приложения
+  seeAlso?: string[];                            // слаги статей для блока «Читайте также»
   loc: Record<string, ArticleBody>;
 };
 
@@ -33,6 +34,7 @@ export const ARTICLES: Article[] = [
     hubs: ["zamki-i-skud", "turnikety-i-shlagbaumy"],
     art: "attendance",
     appHref: "/apps/davomat",
+    seeAlso: ["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr"],
     loc: {
       ru: {
         title: "Учёт рабочего времени по лицу: от терминала на проходной до табеля в 1С",
@@ -249,6 +251,7 @@ export const ARTICLES: Article[] = [
     hubs: ["zamki-i-skud", "domofoniya"],
     art: "guest",
     appHref: "/apps/uy",
+    seeAlso: ["prilozhenie-dlya-zhiteley-zhk", "uchet-rabochego-vremeni-po-litsu"],
     loc: {
       ru: {
         title: "Гостевой пропуск по QR-коду: как пускать курьеров и гостей без звонков диспетчеру",
@@ -465,6 +468,7 @@ export const ARTICLES: Article[] = [
     hubs: ["domofoniya", "zamki-i-skud"],
     art: "house",
     appHref: "/apps/uy",
+    seeAlso: ["gostevoy-propusk-po-qr", "uchet-rabochego-vremeni-po-litsu"],
     loc: {
       ru: {
         title: "Приложение для жителей ЖК: что оно меняет в доме и в работе управляющей компании",

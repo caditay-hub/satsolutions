@@ -5,6 +5,7 @@ import type { AppPage } from "@/lib/appsContent";
 import { CRUMBS } from "@/lib/appsContent";
 import { AttendanceCharts, BeforeAfter, EventFeed, GuestFlow, PhotoBand } from "@/components/AppBlocks";
 import { DAVOMAT_EXTRAS, UY_EXTRAS } from "@/lib/appsExtrasContent";
+import { AppCrossLinks } from "@/components/AppCrossLinks";
 
 // Снимки экранов приложения и кабинета — в том же порядке, что подписи d.screens
 const UY_SHOTS = [
@@ -37,6 +38,7 @@ export function AppProductPage({
   const uy = app === "uy" ? UY_EXTRAS[locale] ?? UY_EXTRAS.ru : null;
   const dav = app === "davomat" ? DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru : null;
   const c = CRUMBS[locale] ?? CRUMBS.ru;
+  const name = d.h1.split(" — ")[0];
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
       <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
@@ -51,8 +53,7 @@ export function AppProductPage({
       <section className="relative mt-3 overflow-hidden rounded-3xl bg-slate-900">
         <img
           src={app === "uy" ? "/apps-img/uy-hero.jpg" : "/apps-img/davomat-hero.jpg"}
-          alt=""
-          aria-hidden
+          alt={name}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/40" />
@@ -64,8 +65,7 @@ export function AppProductPage({
           <div className="grid w-full max-w-md gap-4 sm:grid-cols-2 lg:max-w-none lg:grid-cols-1 lg:gap-5">
             <img
               src={app === "uy" ? "/apps-img/shots/shot-doors.jpg" : "/apps-img/shots/shot-timesheet.jpg"}
-              alt=""
-              aria-hidden
+              alt={`${name} — ${d.screens[app === "uy" ? 0 : 1] ?? d.screensTitle}`}
               className="w-full rounded-2xl shadow-2xl lg:w-80"
             />
           </div>
@@ -76,7 +76,7 @@ export function AppProductPage({
       <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
         {d.screens.map((s, i) => (
           <div key={s} className="rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
-            <img src={shots[i] ?? shots[0]} alt="" aria-hidden loading="lazy" className="mx-auto w-full rounded-xl" />
+            <img src={shots[i] ?? shots[0]} alt={`${name} — ${s}`} loading="lazy" className="mx-auto w-full rounded-xl" />
             <div className="mt-3 text-sm font-medium text-slate-700">{s}</div>
           </div>
         ))}
@@ -107,7 +107,7 @@ export function AppProductPage({
 
       {uy && <EventFeed d={uy} />}
 
-      <PhotoBand src={app === "uy" ? "/apps-img/uy-yard.jpg" : "/apps-img/davomat-check.jpg"} />
+      <PhotoBand src={app === "uy" ? "/apps-img/uy-yard.jpg" : "/apps-img/davomat-check.jpg"} alt={name} />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.howTitle}</h2>
       <ol className="mt-6 grid sm:grid-cols-2 gap-5">
@@ -131,6 +131,14 @@ export function AppProductPage({
       </ul>
 
       {uy && <BeforeAfter d={uy} />}
+
+      <AppCrossLinks
+        locale={locale}
+        services={app === "uy" ? ["intercom", "access", "barrier", "residential"] : ["attendance", "turnstile", "access", "barrier"]}
+        articles={app === "uy"
+          ? ["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr"]
+          : ["uchet-rabochego-vremeni-po-litsu"]}
+      />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.faqTitle}</h2>
       <div className="mt-6 space-y-4">

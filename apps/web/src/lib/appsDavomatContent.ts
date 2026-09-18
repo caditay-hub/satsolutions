@@ -3,7 +3,7 @@ import type { AppPage } from "./appsContent";
 
 export const DAVOMAT: Record<string, AppPage> = {
   ru: {
-    metaTitle: "SAT Davomat — учёт рабочего времени по лицу: табель и выгрузка в 1С | SAT Solutions",
+    metaTitle: "SAT Davomat — учёт рабочего времени по лицу и табель",
     metaDesc: "Программа учёта рабочего времени: приход и уход по лицу или карте, табель по сотрудникам, опоздания и переработки, выгрузка табеля в 1С, несколько объектов в одном кабинете. Терминалы ZKTeco, Dahua и Hikvision.",
     h1: "SAT Davomat — учёт рабочего времени по лицу",
     intro: "Сотрудник подходит к терминалу, тот узнаёт лицо за доли секунды и отмечает приход. Бухгалтер в конце месяца открывает готовый табель, а не собирает журналы охраны. Программа работает с терминалами, которые уже стоят на проходной.",
@@ -54,7 +54,7 @@ export const DAVOMAT: Record<string, AppPage> = {
     otherApp: "Приложение для жителей ЖК — SAT Uy",
   },
   uz: {
-    metaTitle: "SAT Davomat — yuz orqali ish vaqti hisobi: tabel va 1Cga yuklash | SAT Solutions",
+    metaTitle: "SAT Davomat — yuz orqali ish vaqti hisobi va tabel",
     metaDesc: "Ish vaqtini hisobga olish dasturi: yuz yoki karta orqali kelish-ketish, xodimlar boʻyicha tabel, kechikish va ortiqcha ish, tabelni 1Cga yuklash, bitta kabinetda bir nechta obyekt. ZKTeco, Dahua va Hikvision terminallari.",
     h1: "SAT Davomat — yuz orqali ish vaqtini hisobga olish",
     intro: "Xodim terminalga yaqinlashadi, u yuzni bir soniyadan tez taniydi va kelishni qayd etadi. Buxgalter oy oxirida tayyor tabelni ochadi, qorovul daftarlarini yigʻmaydi. Dastur nazorat-oʻtkazish punktidagi terminallar bilan ishlaydi.",
@@ -105,7 +105,7 @@ export const DAVOMAT: Record<string, AppPage> = {
     otherApp: "TJM aholisi uchun ilova — SAT Uy",
   },
   en: {
-    metaTitle: "SAT Davomat — face-based time tracking with timesheets and 1C export | SAT Solutions",
+    metaTitle: "SAT Davomat — face-based time tracking and 1C export",
     metaDesc: "Time and attendance software: face or card check-in, per-employee timesheets, late arrivals and overtime, timesheet export to 1C, several sites in one dashboard. Works with ZKTeco, Dahua and Hikvision terminals.",
     h1: "SAT Davomat — face-based time and attendance",
     intro: "An employee steps up to the terminal, it recognises the face in a fraction of a second and records the arrival. At month end the accountant opens a finished timesheet instead of collecting guard logbooks. The software works with terminals already installed at the entrance.",
@@ -156,7 +156,7 @@ export const DAVOMAT: Record<string, AppPage> = {
     otherApp: "Resident app for apartment complexes — SAT Uy",
   },
   tr: {
-    metaTitle: "SAT Davomat — yüzle mesai takibi: puantaj ve 1C aktarımı | SAT Solutions",
+    metaTitle: "SAT Davomat — yüzle mesai takibi ve 1C aktarımı",
     metaDesc: "Personel devam takibi yazılımı: yüz veya kartla giriş-çıkış, personel bazlı puantaj, geç kalma ve fazla mesai, puantajın 1C’ye aktarımı, tek panelde birden çok saha. ZKTeco, Dahua ve Hikvision terminalleriyle çalışır.",
     h1: "SAT Davomat — yüz tanımayla mesai takibi",
     intro: "Personel terminale yaklaşır, cihaz yüzü saniyenin altında tanır ve girişi kaydeder. Ay sonunda muhasebe, güvenlik defterlerini toplamak yerine hazır puantajı açar. Yazılım girişte zaten kurulu terminallerle çalışır.",
@@ -207,7 +207,7 @@ export const DAVOMAT: Record<string, AppPage> = {
     otherApp: "Konut siteleri için uygulama — SAT Uy",
   },
   zh: {
-    metaTitle: "SAT Davomat——人脸考勤：考勤表与导出到 1C | SAT Solutions",
+    metaTitle: "SAT Davomat——人脸考勤与 1C 导出",
     metaDesc: "考勤管理软件：人脸或刷卡打卡、按员工统计考勤表、迟到与加班、考勤表导出到 1C、一个后台管理多个场所，兼容 ZKTeco、大华与海康终端。",
     h1: "SAT Davomat——人脸考勤",
     intro: "员工走到终端前，设备在一秒内识别人脸并记录上班时间。月末会计直接打开成型的考勤表，不必再收集门卫记录。软件可对接门口已安装的终端。",

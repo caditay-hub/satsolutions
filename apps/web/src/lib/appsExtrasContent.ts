@@ -264,6 +264,15 @@ export const HUB_EXTRAS: Record<string, HubExtras> = {
   },
 };
 
+/** Заголовки блоков перелинковки на страницах приложений. */
+export const CROSS_UI: Record<string, { services: string; articles: string }> = {
+  ru: { services: "Услуги по теме", articles: "Статьи по теме" },
+  uz: { services: "Mavzu boʻyicha xizmatlar", articles: "Mavzu boʻyicha maqolalar" },
+  en: { services: "Related services", articles: "Related articles" },
+  tr: { services: "İlgili hizmetler", articles: "İlgili yazılar" },
+  zh: { services: "相关服务", articles: "相关文章" },
+};
+
 /** Подписи врезок внутри статей блога. */
 export const ARTICLE_UI: Record<string, { summary: string; more: string }> = {
   ru: { summary: "Коротко", more: "Смотреть приложение" },

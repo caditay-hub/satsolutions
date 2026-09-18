@@ -57,7 +57,7 @@ export const CRUMBS: Record<string, { home: string; apps: string }> = {
 
 export const HUB: Record<string, AppsHub> = {
   ru: {
-    metaTitle: "Приложения SAT: для жителей ЖК и для учёта рабочего времени | SAT Solutions",
+    metaTitle: "Приложения SAT: для жителей ЖК и учёта рабочего времени",
     metaDesc: "Собственные приложения SAT Solutions: SAT Uy — подъезд с телефона, гости по QR, заявки и счета для жителей ЖК и кабинет управляющей компании; SAT Davomat — учёт рабочего времени по лицу с табелем и выгрузкой в 1С.",
     h1: "Приложения SAT",
     intro: "Мы не только монтируем оборудование, но и пишем программы, которые им управляют. Два приложения работают с техникой, которая уже стоит на объекте: домофонами, терминалами распознавания лиц, контроллерами дверей и шлагбаумов.",
@@ -101,7 +101,7 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Оставить заявку",
   },
   uz: {
-    metaTitle: "SAT ilovalari: TJM aholisi uchun va ish vaqtini hisobga olish | SAT Solutions",
+    metaTitle: "SAT ilovalari: TJM aholisi va ish vaqti hisobi uchun",
     metaDesc: "SAT Solutions ilovalari: SAT Uy — yoʻlakni telefondan ochish, mehmonlar uchun QR, arizalar va hisob, boshqaruv kompaniyasi kabineti; SAT Davomat — yuz orqali ish vaqtini hisobga olish, tabel va 1Cga yuklash.",
     h1: "SAT ilovalari",
     intro: "Biz uskunani oʻrnatibgina qolmay, uni boshqaradigan dasturlarni ham yozamiz. Ikkala ilova obyektda allaqachon turgan texnika bilan ishlaydi: domofonlar, yuzni tanish terminallari, eshik va shlagbaum kontrollerlari.",
@@ -145,7 +145,7 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Ariza qoldirish",
   },
   en: {
-    metaTitle: "SAT apps: for residential complexes and workforce time tracking | SAT Solutions",
+    metaTitle: "SAT apps: resident app and workforce time tracking",
     metaDesc: "In-house apps by SAT Solutions: SAT Uy — open the entrance from a phone, guest QR passes, requests and bills for residents plus a management company dashboard; SAT Davomat — face-based time tracking with timesheets and 1C export.",
     h1: "SAT apps",
     intro: "We install hardware and we write the software that runs it. Both apps work with equipment already installed on site: intercoms, face recognition terminals, door and barrier controllers.",
@@ -189,7 +189,7 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Request a demo",
   },
   tr: {
-    metaTitle: "SAT uygulamaları: konut siteleri ve personel devam takibi | SAT Solutions",
+    metaTitle: "SAT uygulamaları: site sakinleri ve mesai takibi",
     metaDesc: "SAT Solutions’ın kendi uygulamaları: SAT Uy — kapıyı telefondan açma, misafir için QR geçiş, talepler ve faturalar, yönetim şirketi paneli; SAT Davomat — yüzle devam takibi, puantaj ve 1C aktarımı.",
     h1: "SAT uygulamaları",
     intro: "Yalnızca donanım kurmuyoruz, onu çalıştıran yazılımı da biz yazıyoruz. Her iki uygulama da sahada hâlihazırda bulunan cihazlarla çalışır: interkomlar, yüz tanıma terminalleri, kapı ve bariyer kontrolörleri.",
@@ -233,7 +233,7 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Talep gönderin",
   },
   zh: {
-    metaTitle: "SAT 应用：住宅小区与考勤管理 | SAT Solutions",
+    metaTitle: "SAT 应用：小区住户与考勤管理",
     metaDesc: "SAT Solutions 自研应用：SAT Uy——手机开门、访客二维码通行、报修与账单，物业管理后台；SAT Davomat——人脸考勤、考勤表与导出到 1C。",
     h1: "SAT 应用",
     intro: "我们不仅安装设备，也自己编写运行这些设备的软件。两款应用都可对接现场已有设备：楼宇对讲、人脸识别终端、门禁与道闸控制器。",

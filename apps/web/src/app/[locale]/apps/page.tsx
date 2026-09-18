@@ -1,8 +1,10 @@
 // Хаб собственных приложений SAT: SAT Uy (жителям ЖК и УК) и SAT Davomat (учёт рабочего времени).
 // Контент — lib/appsContent.ts (5 локалей). SEO: ItemList приложений + FAQPage, hreflang, ссылки на страницы продуктов.
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { Link } from "@/i18n/navigation";
 import { BrandStrip, SiteScheme } from "@/components/AppBlocks";
+import { AppCrossLinks } from "@/components/AppCrossLinks";
 import { HUB_EXTRAS } from "@/lib/appsExtrasContent";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -15,9 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const d = pick(locale);
   return {
     title: { absolute: d.metaTitle },
-    description: d.metaDesc,
+    description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps", locale),
-    openGraph: { title: d.metaTitle, description: d.metaDesc, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
 
@@ -75,8 +77,8 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-200">{d.intro}</p>
           </div>
           <div className="flex gap-4">
-            <img src="/apps-img/shots/shot-doors.jpg" alt="" aria-hidden className="w-40 rounded-2xl shadow-2xl sm:w-48" />
-            <img src="/apps-img/shots/shot-now.jpg" alt="" aria-hidden className="hidden h-fit w-64 self-center rounded-2xl shadow-2xl sm:block" />
+            <img src="/apps-img/shots/shot-doors.jpg" alt="SAT Uy" className="w-40 rounded-2xl shadow-2xl sm:w-48" />
+            <img src="/apps-img/shots/shot-now.jpg" alt="SAT Davomat" className="hidden h-fit w-64 self-center rounded-2xl shadow-2xl sm:block" />
           </div>
         </div>
       </section>
@@ -88,8 +90,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
             <div className="mb-4 flex justify-center rounded-xl bg-gradient-to-b from-slate-50 to-white py-4">
               <img
                 src={c.href === "/apps/uy" ? "/apps-img/shots/shot-guest.jpg" : "/apps-img/shots/shot-now.jpg"}
-                alt=""
-                aria-hidden
+                alt={c.title}
                 loading="lazy"
                 className={c.href === "/apps/uy" ? "h-44 w-auto rounded-xl" : "w-full rounded-xl"}
               />
@@ -123,6 +124,12 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
           </div>
         ))}
       </div>
+
+      <AppCrossLinks
+        locale={locale}
+        services={["intercom", "access", "barrier", "attendance", "turnstile"]}
+        articles={["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr", "uchet-rabochego-vremeni-po-litsu"]}
+      />
 
       <SiteScheme d={hub} />
       <BrandStrip d={hub} />

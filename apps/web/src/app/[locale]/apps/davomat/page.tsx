@@ -1,6 +1,7 @@
 // SAT Davomat — учёт рабочего времени по лицу. Контент — lib/appsDavomatContent.ts (5 локалей).
 // SEO: SoftwareApplication + FAQPage, hreflang. Ключи: «учёт рабочего времени», «табель 1С», «приход уход по лицу».
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { AppProductPage } from "@/components/AppProductPage";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { CRUMBS } from "@/lib/appsContent";
@@ -14,9 +15,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const d = pick(locale);
   return {
     title: { absolute: d.metaTitle },
-    description: d.metaDesc,
+    description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps/davomat", locale),
-    openGraph: { title: d.metaTitle, description: d.metaDesc, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
 
@@ -35,7 +36,7 @@ export default async function SatDavomatPage({ params }: { params: Promise<{ loc
         name: "SAT Davomat",
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
-        description: d.metaDesc,
+        description: clampDesc(d.metaDesc),
         url: "https://satsolutions.uz/apps/davomat",
         author: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz" },
         areaServed: { "@type": "Country", name: "Uzbekistan" },

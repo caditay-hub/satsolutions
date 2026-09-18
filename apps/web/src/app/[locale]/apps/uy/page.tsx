@@ -1,6 +1,7 @@
 // SAT Uy — приложение жителям ЖК и кабинет управляющей компании. Контент — lib/appsUyContent.ts (5 локалей).
 // SEO: SoftwareApplication + FAQPage, hreflang. Ключи: «приложение для жителей ЖК», «домофон на телефон», «пропуск гостя по QR».
 import type { Metadata } from "next";
+import { clampDesc } from "@/lib/seoText";
 import { AppProductPage } from "@/components/AppProductPage";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { CRUMBS } from "@/lib/appsContent";
@@ -22,9 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const d = pick(locale);
   return {
     title: { absolute: d.metaTitle },
-    description: d.metaDesc,
+    description: clampDesc(d.metaDesc),
     alternates: hreflangAlternates("/apps/uy", locale),
-    openGraph: { title: d.metaTitle, description: d.metaDesc, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: d.metaTitle, description: clampDesc(d.metaDesc), locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
 
@@ -43,7 +44,7 @@ export default async function SatUyPage({ params }: { params: Promise<{ locale: 
         name: "SAT Uy",
         applicationCategory: "LifestyleApplication",
         operatingSystem: "Android",
-        description: d.metaDesc,
+        description: clampDesc(d.metaDesc),
         url: "https://satsolutions.uz/apps/uy",
         author: { "@type": "Organization", name: "SAT Solutions", url: "https://satsolutions.uz" },
         areaServed: { "@type": "Country", name: "Uzbekistan" },

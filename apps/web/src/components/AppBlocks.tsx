@@ -16,19 +16,19 @@ function SectionHead({ title, lead }: { title: string; lead?: string }) {
 
 
 /** Фотополоса: снимок проявляется с лёгким наездом камеры один раз. */
-export function Photo({ src, className = "", ratio = "aspect-[4/3]" }: { src: string; className?: string; ratio?: string }) {
+export function Photo({ src, alt = "", className = "", ratio = "aspect-[4/3]" }: { src: string; alt?: string; className?: string; ratio?: string }) {
   return (
     <InView variant="rv-zoom" className={`overflow-hidden rounded-2xl bg-slate-100 ${ratio} ${className}`}>
-      <img src={src} alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
+      <img src={src} alt={alt} aria-hidden={alt ? undefined : true} className="h-full w-full object-cover" loading="lazy" />
     </InView>
   );
 }
 
 /** Широкая фотополоса между разделами. */
-export function PhotoBand({ src }: { src: string }) {
+export function PhotoBand({ src, alt = "" }: { src: string; alt?: string }) {
   return (
     <InView variant="rv-zoom" className="mt-12 aspect-[16/7] overflow-hidden rounded-3xl bg-slate-100">
-      <img src={src} alt="" aria-hidden className="h-full w-full object-cover" loading="lazy" />
+      <img src={src} alt={alt} aria-hidden={alt ? undefined : true} className="h-full w-full object-cover" loading="lazy" />
     </InView>
   );
 }
@@ -39,7 +39,7 @@ export function GuestFlow({ d }: { d: UyExtras }) {
     <section>
       <SectionHead title={d.flowTitle} lead={d.flowLead} />
       <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:items-center">
-      <Photo src="/apps-img/uy-guest.jpg" />
+      <Photo src="/apps-img/uy-guest.jpg" alt={d.flowTitle} />
       <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
         {d.flow.map((s, i) => (
           <li key={s.t} className="rounded-2xl border border-slate-200 bg-white p-5">
@@ -99,7 +99,7 @@ export function EventFeed({ d }: { d: UyExtras }) {
           </li>
         ))}
       </InView>
-      <Photo src="/apps-img/uy-office.jpg" />
+      <Photo src="/apps-img/uy-office.jpg" alt={d.feedTitle} />
       </div>
     </section>
   );
@@ -173,7 +173,7 @@ export function AttendanceCharts({ d }: { d: DavomatExtras }) {
           <BarChart c={d.arrival} tone="teal" />
           <BarChart c={d.late} tone="warn" />
         </div>
-        <Photo src="/apps-img/davomat-report.jpg" ratio="aspect-[4/3] lg:aspect-auto lg:h-full" />
+        <Photo src="/apps-img/davomat-report.jpg" alt={d.chartsTitle} ratio="aspect-[4/3] lg:aspect-auto lg:h-full" />
       </div>
     </section>
   );
@@ -223,13 +223,13 @@ export function BrandStrip({ d }: { d: HubExtras }) {
 }
 
 /** Иллюстрация внутри статьи блога: переиспользует словари страниц приложений. */
-export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attendance"; locale: string }) {
+export function ArticleArt({ kind, locale, alt = "" }: { kind: "guest" | "house" | "attendance"; locale: string; alt?: string }) {
   if (kind === "attendance") {
     const d = DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru;
     return (
       <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
         <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-          <Photo src="/apps-img/shots/shot-timesheet.jpg" ratio="aspect-[16/7]" className="w-full sm:w-72" />
+          <Photo src="/apps-img/shots/shot-timesheet.jpg" alt={alt} ratio="aspect-[16/7]" className="w-full sm:w-72" />
           <div className="grid gap-6">
             <div className="text-sm font-semibold text-slate-900">{d.chartsTitle}</div>
             <InView variant="rv-bars" className="flex h-24 items-end gap-2">
@@ -257,7 +257,7 @@ export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attend
     return (
       <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
         <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-          <Photo src="/apps-img/shots/shot-guest.jpg" ratio="aspect-[3/4]" className="w-full sm:w-52" />
+          <Photo src="/apps-img/shots/shot-guest.jpg" alt={alt} ratio="aspect-[3/4]" className="w-full sm:w-52" />
           <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
             {d.flow.map((s, i) => (
               <li key={s.t} className="rounded-xl border border-slate-200 bg-slate-50 p-3">
@@ -278,7 +278,7 @@ export function ArticleArt({ kind, locale }: { kind: "guest" | "house" | "attend
   return (
     <div className="my-8 rounded-2xl border border-slate-200 bg-white p-5">
       <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:items-center">
-        <Photo src="/apps-img/shots/shot-doors.jpg" ratio="aspect-[3/4]" className="w-full sm:w-52" />
+        <Photo src="/apps-img/shots/shot-doors.jpg" alt={alt} ratio="aspect-[3/4]" className="w-full sm:w-52" />
         <InView as="ol" variant="rv-stagger" className="grid gap-3 sm:grid-cols-2">
           {d.nodes.map((n, i) => (
             <li

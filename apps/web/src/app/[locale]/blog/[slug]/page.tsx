@@ -6,11 +6,14 @@ import { articleBySlug, articleImg } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
 import { ARTICLE_UI } from "@/lib/appsExtrasContent";
+import { clampDesc, clampTitle } from "@/lib/seoText";
 import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { GROUP_CANONICAL } from "@/lib/groupCanonical";
+
+const READ_ALSO: Record<string, string> = { ru: "Читайте также", uz: "Yana oʻqing", en: "Read also", tr: "Şunları da okuyun", zh: "延伸阅读" };
 
 const UI: Record<string, { blog: string; home: string; related: string; hubsLabel: string; ctaTitle: string; ctaBtn: string; faq: string }> = {
   ru: { blog: "Блог", home: "Главная", related: "Смежные услуги", hubsLabel: "Каталог по теме", ctaTitle: "Нужна консультация или расчёт?", ctaBtn: "Получить КП", faq: "Частые вопросы" },
@@ -56,10 +59,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   // Обложка статьи вместо общего /og.png: у каждой из статей есть свой кадр 1200×630
   const cover = `${SITE_URL}${articleImg(slug)}`;
   return {
-    title: { absolute: `${body.title} — SAT Solutions` },
-    description: body.excerpt,
+    title: { absolute: `${clampTitle(body.title, 48)} — SAT Solutions` },
+    description: clampDesc(body.excerpt),
     alternates: hreflangAlternates(`/blog/${slug}`, locale),
-    openGraph: { type: "article", title: body.title, description: body.excerpt, locale: ogLocale(locale), images: [cover], publishedTime: article.date },
+    openGraph: { type: "article", title: body.title, description: clampDesc(body.excerpt), locale: ogLocale(locale), images: [cover], publishedTime: article.date },
   };
 }
 
@@ -98,7 +101,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     "@context": "https://schema.org",
     "@type": "Article",
     headline: body.title,
-    description: body.excerpt,
+    description: clampDesc(body.excerpt),
     image: [cover],
     datePublished: article.date,
     // Article.updated — дата последней правки текста. Без неё сайт объявлял июльскую
@@ -140,7 +143,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
       {/* Шапка с тематическим фото на заднем фоне (public/blog-img/<slug>.jpg) */}
       <header className="relative overflow-hidden bg-slate-900">
-        <img src={articleImg(slug)} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-45" />
+        <img src={articleImg(slug)} alt={body.title} className="absolute inset-0 h-full w-full object-cover opacity-45" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-900/40" />
         <div className="container-page relative py-10 sm:py-16">
           <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
@@ -181,7 +184,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                   ))}
                 </div>
                 {/* Схема ставится после второй секции: к этому месту читатель уже понял тему. */}
-                {article.art && i === 1 && <ArticleArt kind={article.art} locale={locale} />}
+                {article.art && i === 1 && <ArticleArt kind={article.art} locale={locale} alt={body.title} />}
               </section>
             ))}
           </div>
@@ -225,6 +228,29 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
               {tcalc("promoBtn")} →
             </Link>
           </div>
+
+          {(article.seeAlso ?? []).filter((sl) => articleBySlug[sl]?.loc[locale]).length > 0 && (
+            <div className="mt-10 border-t border-slate-200 pt-6">
+              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{READ_ALSO[locale] ?? READ_ALSO.ru}</p>
+              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                {(article.seeAlso ?? [])
+                  .map((sl) => articleBySlug[sl])
+                  .filter((a) => a && a.loc[locale])
+                  .map((a) => (
+                    <Link
+                      key={a.slug}
+                      href={`/blog/${a.slug}`}
+                      className="group flex gap-3 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-400"
+                    >
+                      <img src={articleImg(a.slug)} alt={a.loc[locale].title} loading="lazy" className="h-20 w-28 shrink-0 rounded-lg object-cover" />
+                      <span className="text-sm font-bold leading-snug text-slate-900 group-hover:text-brand-700">
+                        {a.loc[locale].title}
+                      </span>
+                    </Link>
+                  ))}
+              </div>
+            </div>
+          )}
 
           {related.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">

@@ -3,7 +3,7 @@ import type { AppPage } from "./appsContent";
 
 export const UY: Record<string, AppPage> = {
   ru: {
-    metaTitle: "SAT Uy — приложение для жителей ЖК: домофон на телефоне, гости по QR | SAT Solutions",
+    metaTitle: "SAT Uy — приложение жителям ЖК: домофон и гости по QR",
     metaDesc: "Приложение для жителей жилого комплекса: открыть подъезд и шлагбаум с телефона, пропуск гостю по QR-коду, звонок домофона на телефон, заявки в УК, счёт за месяц и оплата. Кабинет управляющей компании: жители, заявки, начисления, журнал.",
     h1: "SAT Uy — приложение жителям ЖК и кабинет управляющей компании",
     intro: "Жители открывают двери телефоном, вызывают лифтёра и сантехника без звонков диспетчеру и видят, за что платят. Управляющая компания ведёт заявки, начисления и журнал проходов в одном кабинете. Приложение работает с домофонами, терминалами распознавания лиц и контроллерами, которые стоят на объекте.",
@@ -57,7 +57,7 @@ export const UY: Record<string, AppPage> = {
     otherApp: "Учёт рабочего времени — SAT Davomat",
   },
   uz: {
-    metaTitle: "SAT Uy — TJM aholisi uchun ilova: domofon telefonda, mehmonlar QR orqali | SAT Solutions",
+    metaTitle: "SAT Uy — TJM ilovasi: domofon va mehmonlar QR orqali",
     metaDesc: "Turar joy majmuasi aholisi uchun ilova: yoʻlak va shlagbaumni telefondan ochish, mehmonga QR-kodli ruxsatnoma, domofon qoʻngʻirogʻi telefonga, BKga arizalar, oylik hisob va toʻlov. Boshqaruv kompaniyasi kabineti ham bor.",
     h1: "SAT Uy — aholiga ilova va boshqaruv kompaniyasiga kabinet",
     intro: "Aholi eshiklarni telefon bilan ochadi, santexnik yoki elektrikni dispetcherga qoʻngʻiroq qilmasdan chaqiradi va nima uchun toʻlayotganini koʻradi. Boshqaruv kompaniyasi arizalar, hisob-kitob va oʻtishlar jurnalini bitta kabinetda yuritadi. Ilova obyektdagi domofonlar, yuzni tanish terminallari va kontrollerlar bilan ishlaydi.",
@@ -111,7 +111,7 @@ export const UY: Record<string, AppPage> = {
     otherApp: "Ish vaqtini hisobga olish — SAT Davomat",
   },
   en: {
-    metaTitle: "SAT Uy — resident app for apartment complexes: intercom on the phone, guest QR | SAT Solutions",
+    metaTitle: "SAT Uy — resident app: intercom on phone, guest QR pass",
     metaDesc: "An app for residents: open the entrance and barrier from a phone, issue a guest QR pass, take intercom calls anywhere, send requests to the management company, see the monthly bill and pay. Includes the management dashboard.",
     h1: "SAT Uy — resident app and management company dashboard",
     intro: "Residents open doors with a phone, call a plumber without phoning the dispatcher and see what they pay for. The management company runs requests, charges and the access log in one dashboard. The app works with intercoms, face terminals and controllers already installed on site.",
@@ -165,7 +165,7 @@ export const UY: Record<string, AppPage> = {
     otherApp: "Time tracking — SAT Davomat",
   },
   tr: {
-    metaTitle: "SAT Uy — site sakinleri için uygulama: telefonda interkom, misafire QR | SAT Solutions",
+    metaTitle: "SAT Uy — site uygulaması: interkom ve misafir QR",
     metaDesc: "Site sakinleri için uygulama: bina kapısını ve bariyeri telefondan açma, misafire QR geçiş, interkom çağrısını telefonda yanıtlama, yönetime talep, aylık fatura ve ödeme. Yönetim şirketi paneli dahildir.",
     h1: "SAT Uy — sakinler için uygulama ve yönetim paneli",
     intro: "Sakinler kapıları telefonla açar, tesisatçıyı dispeçere telefon etmeden çağırır ve neye ödeme yaptığını görür. Yönetim şirketi talepleri, tahakkukları ve geçiş kayıtlarını tek panelde yürütür. Uygulama sahadaki interkomlar, yüz terminalleri ve kontrolörlerle çalışır.",
@@ -219,7 +219,7 @@ export const UY: Record<string, AppPage> = {
     otherApp: "Mesai takibi — SAT Davomat",
   },
   zh: {
-    metaTitle: "SAT Uy——小区住户应用：手机对讲、访客二维码 | SAT Solutions",
+    metaTitle: "SAT Uy——小区住户应用：手机对讲与访客二维码",
     metaDesc: "面向小区住户的应用：手机开启单元门与道闸，向访客发送二维码通行证，手机接听对讲，向物业报修，查看月度账单并缴费；同时包含物业管理后台。",
     h1: "SAT Uy——住户应用与物业管理后台",
     intro: "住户用手机开门，不必打电话给调度即可报修，并清楚每月费用的来源。物业在一个后台处理报修、账单与通行记录。应用对接现场已有的对讲、人脸终端与控制器。",
