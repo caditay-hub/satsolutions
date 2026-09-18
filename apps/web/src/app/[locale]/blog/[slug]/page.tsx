@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { articleBySlug, articleImg } from "@/lib/articlesData";
+import { articleBySlug, articleImg, relatedArticles } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
 import { ARTICLE_UI } from "@/lib/appsExtrasContent";
@@ -123,6 +123,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     ],
   };
   const artUi = ARTICLE_UI[locale] ?? ARTICLE_UI.ru;
+  const seeAlso = relatedArticles(slug, locale);
   const faqLd = body.faq?.length
     ? {
         "@context": "https://schema.org",
@@ -242,14 +243,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
             </Link>
           </div>
 
-          {(article.seeAlso ?? []).filter((sl) => articleBySlug[sl]?.loc[locale]).length > 0 && (
+          {seeAlso.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">
               <p className="text-xs font-black uppercase tracking-widest text-brand-600">{READ_ALSO[locale] ?? READ_ALSO.ru}</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                {(article.seeAlso ?? [])
-                  .map((sl) => articleBySlug[sl])
-                  .filter((a) => a && a.loc[locale])
-                  .map((a) => (
+                {seeAlso.map((a) => (
                     <Link
                       key={a.slug}
                       href={`/blog/${a.slug}`}

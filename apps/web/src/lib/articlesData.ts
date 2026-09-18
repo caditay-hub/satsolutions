@@ -12283,6 +12283,36 @@ export const ARTICLES: Article[] = [
 
 export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLES.map((a) => [a.slug, a]));
 
+
+// Соседние статьи для блока «Читайте также». Раньше блок жил только у трёх статей,
+// где seeAlso был проставлен руками, и 70 материалов блога не ссылались друг на друга —
+// обход 18.09.2026 показал, что около трети статей вообще не в индексе.
+// Подбор: сначала явный seeAlso, затем — наибольшее пересечение по товарным хабам и
+// смежным услугам, при равенстве ближе та, что свежее.
+export function relatedArticles(slug: string, locale: string, limit = 2): Article[] {
+  const self = articleBySlug[slug];
+  if (!self) return [];
+  const explicit = (self.seeAlso ?? [])
+    .map((s) => articleBySlug[s])
+    .filter((a): a is Article => Boolean(a && a.loc[locale]));
+  if (explicit.length >= limit) return explicit.slice(0, limit);
+
+  const hubs = new Set(self.hubs ?? []);
+  const services = new Set(self.related ?? []);
+  const scored = ARTICLES
+    .filter((a) => a.slug !== slug && a.loc[locale] && !explicit.some((e) => e.slug === a.slug))
+    .map((a) => {
+      const hubHit = (a.hubs ?? []).filter((h) => hubs.has(h)).length;
+      const svcHit = (a.related ?? []).filter((r) => services.has(r)).length;
+      return { a, score: hubHit * 2 + svcHit };
+    })
+    .filter((x) => x.score > 0)
+    .sort((x, y) => y.score - x.score || (y.a.date > x.a.date ? 1 : -1))
+    .map((x) => x.a);
+
+  return [...explicit, ...scored].slice(0, limit);
+}
+
 // Статьи, доступные для локали (есть перевод) — для списка и sitemap.
 export function articlesForLocale(locale: string): Article[] {
   return ARTICLES.filter((a) => a.loc[locale]);
