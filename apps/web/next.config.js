@@ -49,12 +49,15 @@ const nextConfig = {
       { source: "/partner", destination: "/about", permanent: true },
       { source: "/:locale(uz|en|tr|zh)/partner", destination: "/:locale/about", permanent: true },
       { source: "/:locale(uz|en|tr|zh)/partners", destination: "/:locale/about", permanent: true },
-      { source: "/news", destination: "/", permanent: true },
-      { source: "/news/:slug*", destination: "/", permanent: true },
+      // Раздела «Новости» нет — его роль выполняет блог. Ведём именно туда, а не на
+      // главную: редирект на главную с тематического URL Google засчитывает как
+      // «мягкую 404» (страница-приёмник не про то же, что исходная).
+      { source: "/news", destination: "/blog", permanent: true },
+      { source: "/news/:slug*", destination: "/blog", permanent: true },
       // То же для остальных локалей: без этих правил /uz/news, /tr/news и /zh/news
       // отдавали 404, хотя ru и en редиректили на главную (обход 18.09.2026).
-      { source: "/:locale(uz|en|tr|zh)/news", destination: "/:locale", permanent: true },
-      { source: "/:locale(uz|en|tr|zh)/news/:slug*", destination: "/:locale", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/news", destination: "/:locale/blog", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/news/:slug*", destination: "/:locale/blog", permanent: true },
       // Легаси-URL старой версии сайта (другая CMS) — в индексе Google, отдавали 404.
       // 301 на новые разделы, чтобы вернуть вес и убрать массовые 404.
       // Точечные маппинги URL, которые ДО СИХ ПОР ранжируются (из GSC 14.07) — ВЫШЕ общих правил:
@@ -85,7 +88,7 @@ const nextConfig = {
       { source: "/brand/:path*", destination: "/catalog", permanent: true },
       { source: "/en/brand/:path*", destination: "/en/catalog", permanent: true },
       { source: "/en/category/:path*", destination: "/en/products", permanent: true },
-      { source: "/en/news/:path*", destination: "/en", permanent: true },
+      { source: "/en/news/:path*", destination: "/en/blog", permanent: true },
       // Старые слаги статичных решений → канонические ключи
       { source: "/solutions/umniy-avtobus", destination: "/solutions/bus", permanent: true },
       { source: "/solutions/parkovka", destination: "/solutions/parking", permanent: true },

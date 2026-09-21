@@ -7,7 +7,7 @@ import { Suspense } from "react";
 // Полевой CLS 0.33 в июле давал @fontsource-swap БЕЗ метрического фолбэка — не то же самое.
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale, getTranslations, getMessages } from "next-intl/server";
 import "../globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { ClientProviders } from "@/components/ClientProviders";
@@ -18,6 +18,7 @@ import { ChunkReload } from "@/components/ChunkReload";
 import { createMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import { routing } from "@/i18n/routing";
+import { clientMessages } from "@/lib/clientMessages";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -66,6 +67,9 @@ export default async function RootLayout({
   const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
 
   const tm = await getTranslations({ locale, namespace: "meta" });
+  // В браузер отдаём урезанный словарь: тела услуг рендерит сервер, а в RSC-потоке
+  // они висели на каждой странице (см. lib/clientMessages.ts).
+  const messages = clientMessages(await getMessages({ locale }));
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -338,7 +342,7 @@ setTimeout(load,6000);
         </noscript>
       </head>
       <body className="min-h-screen flex flex-col bg-white text-slate-950 antialiased">
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ClientProviders>
             <ChunkReload />
             <Suspense fallback={null}>
