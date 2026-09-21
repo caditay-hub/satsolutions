@@ -14,6 +14,7 @@ import { ClientProviders } from "@/components/ClientProviders";
 import { SiteFooter } from "@/components/SiteFooter";
 import { GlobalBackButton } from "@/components/GlobalBackButton";
 import { ScrollManager } from "@/components/ScrollManager";
+import { ChunkReload } from "@/components/ChunkReload";
 import { createMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 import { routing } from "@/i18n/routing";
@@ -339,6 +340,7 @@ setTimeout(load,6000);
       <body className="min-h-screen flex flex-col bg-white text-slate-950 antialiased">
         <NextIntlClientProvider>
           <ClientProviders>
+            <ChunkReload />
             <Suspense fallback={null}>
               <ScrollManager />
             </Suspense>

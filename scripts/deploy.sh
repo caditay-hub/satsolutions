@@ -65,6 +65,21 @@ clean_next_keep_cache() {
     rm -rf "$d/cache/webpack"
   fi
 }
+# 3c) Статика прошлой сборки — во временный каталог.
+#    Причина (21.09.2026): деплой удаляет .next целиком, вместе со старыми
+#    JS-чанками. У посетителя, который держит вкладку открытой или получил
+#    страницу из кэша, при первом же переходе Next просит свой старый чанк,
+#    ловит 404 и показывает «Application error: a client-side exception».
+#    Держим статику предыдущей сборки и после сборки возвращаем недостающие
+#    файлы рядом с новыми: старые вкладки доживают свой век, новые получают новое.
+PREV_STATIC=/var/www/satweb/.prev-static
+rm -rf "$PREV_STATIC"
+if [ -d /var/www/satweb/apps/web/.next/static ]; then
+  mkdir -p "$PREV_STATIC"
+  cp -a /var/www/satweb/apps/web/.next/static/. "$PREV_STATIC"/ 2>/dev/null || true
+  echo "    статика прошлой сборки сохранена: $(du -sh "$PREV_STATIC" 2>/dev/null | cut -f1 || echo -)"
+fi
+
 clean_next_keep_cache /var/www/satweb/apps/web/.next
 clean_next_keep_cache /var/www/satweb/apps/admin/.next
 echo "    .next очищен, cache/ сохранён: \
@@ -96,6 +111,15 @@ if ! build_once; then
   clean_next_keep_cache /var/www/satweb/apps/web/.next
   clean_next_keep_cache /var/www/satweb/apps/admin/.next
   build_once
+fi
+
+# 4a2) Возвращаем статику прошлой сборки рядом с новой — только те файлы, которых
+#    нет в новой (cp -n): новые артефакты не перетираются, а старые вкладки
+#    продолжают догружать свои чанки вместо 404 и «Application error».
+if [ -d "$PREV_STATIC" ] && [ -d /var/www/satweb/apps/web/.next/static ]; then
+  cp -an "$PREV_STATIC"/. /var/www/satweb/apps/web/.next/static/ 2>/dev/null || true
+  rm -rf "$PREV_STATIC"
+  echo "    статика прошлой сборки возвращена рядом с новой (старые вкладки не ломаются)"
 fi
 
 # 4b) Проверка полноты сборки. Оборванный `next build` оставляет .next без
