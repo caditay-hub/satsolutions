@@ -220,21 +220,29 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
         {/* ── прайс списком: под «цена за точку», «цена за метр» ── */}
         <section className="mt-12">
           <h2 className="text-lg font-black text-slate-900 sm:text-xl">{t("tableTitle")}</h2>
-          <div className="mt-4 overflow-x-auto">
-            <table className="w-full min-w-[420px] border-collapse text-sm">
+          {/* Раньше таблица имела min-width 420px и уезжала за край телефона: колонка
+              цены обрезалась, а о горизонтальной прокрутке никто не догадывался.
+              Теперь название переносится, а единица измерения уходит под цену. */}
+          <div className="mt-4">
+            <table className="w-full border-collapse text-sm">
               <thead>
                 <tr className="border-b border-slate-200 text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                  <th className="py-2 pr-4 font-bold">{t("colWork")}</th>
+                  <th className="py-2 pr-3 font-bold">{t("colWork")}</th>
                   <th className="py-2 text-right font-bold">{t("colPrice")}</th>
                 </tr>
               </thead>
               <tbody>
                 {rateRows.map((r, i) => (
-                  <tr key={i} className="border-b border-slate-100 last:border-0">
-                    <td className="py-2.5 pr-4 text-slate-700">{r.label}</td>
-                    <td className="whitespace-nowrap py-2.5 text-right font-semibold tabular-nums text-slate-900">
-                      <span className="mr-1 text-[11px] font-normal text-slate-400">{t("from")}</span>
-                      {fmt(r.value)} <span className="text-[11px] font-normal text-slate-400">{r.unit}</span>
+                  <tr key={i} className="border-b border-slate-100 last:border-0 align-top">
+                    <td className="py-2.5 pr-3 text-slate-700">{r.label}</td>
+                    <td className="py-2.5 text-right font-semibold tabular-nums text-slate-900">
+                      <span className="whitespace-nowrap">
+                        <span className="mr-1 text-[11px] font-normal text-slate-400">{t("from")}</span>
+                        {fmt(r.value)}
+                      </span>
+                      <span className="ml-1 block whitespace-nowrap text-[11px] font-normal text-slate-400 sm:ml-1 sm:inline">
+                        {r.unit}
+                      </span>
                     </td>
                   </tr>
                 ))}
