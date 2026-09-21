@@ -91,13 +91,16 @@ admin $(du -sh /var/www/satweb/apps/admin/.next/cache 2>/dev/null | cut -f1 || e
 #    (старый сайт продолжает работать — pm2 restart ниже только после успеха).
 #    Историческая причина зависаний: next/font тянул шрифты из Google на каждом
 #    билде; теперь шрифты self-hosted, но таймаут оставляем как страховку.
+#    21.09.2026: подняли 420 → 900 c. Статьи блога теперь пререндерятся на сборке
+#    (350 страниц), и прежний запас стал слишком тонким — упёршийся в таймаут
+#    билд ронял бы деплой, а не просто замедлял его.
 #    ВАЖНО: web и admin собираются напрямую через `next build`, минуя
 #    `npm run build -w …`, потому что тот начинается с `npm run clean` (см. шаг 3b).
 #    Очистку мы уже сделали сами — с сохранением cache/.
 NEXT_BIN=/var/www/satweb/node_modules/.bin/next
 [ -x "$NEXT_BIN" ] || NEXT_BIN="npx --no-install next"
 build_once() {
-  timeout 420 bash -c "
+  timeout 900 bash -c "
     set -e
     cd /var/www/satweb
     npm run build -w @satsolutions/api

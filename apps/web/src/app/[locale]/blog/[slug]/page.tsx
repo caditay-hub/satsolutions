@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { articleBySlug, articleImg, relatedArticles } from "@/lib/articlesData";
+import { ARTICLES, articleBySlug, articleImg, relatedArticles } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
 import { ARTICLE_UI } from "@/lib/appsExtrasContent";
@@ -47,9 +47,17 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 // Формат даты публикации по локалям (Intl хочет BCP-47, у нас коды короткие)
 const DATE_LOCALE: Record<string, string> = { ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN" };
 
-// Статьи меняются редко: ISR по требованию, без пререндера 315 страниц
+// Статьи пререндерим на сборке — все 63 на пяти языках (350 страниц, +~30 c к билду).
+// Раньше здесь был пустой generateStaticParams и ISR по требованию, но для РУССКОЙ
+// локали он не работал: у неё нет префикса в URL, next-intl переписывает /blog/x →
+// /ru/blog/x, а на переписанном пути Next ISR-кэш НЕ пишет. Проверено 21.09.2026:
+// в .next/server/app/ru/ каталога blog не было вовсе, тогда как в uz/ и en/ файлы
+// есть. Русская статья рендерилась заново на КАЖДЫЙ запрос и отдавала
+// Cache-Control: no-store — ни браузер, ни Googlebot ничего не кэшировали.
 export const revalidate = 3600;
-export async function generateStaticParams() { return []; }
+export async function generateStaticParams() {
+  return ARTICLES.map((a) => ({ slug: a.slug }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;

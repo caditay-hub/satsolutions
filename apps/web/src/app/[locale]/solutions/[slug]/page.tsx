@@ -71,9 +71,16 @@ function splitLead(p: string): [string, string] {
   return ["", p];
 }
 
-// ISR по требованию: страниц услуг ~40, данные (оборудование, кейсы) из API
+// Страницы услуг пререндерим на сборке (~44 ключа x 5 языков). Раньше тут был пустой
+// generateStaticParams и ISR по требованию, но для русской локали он не работает:
+// у неё нет префикса, next-intl переписывает /solutions/x в /ru/solutions/x, а на
+// переписанном пути Next ISR-кэш не пишет — страница рендерилась заново на каждый
+// запрос и отдавала Cache-Control: no-store. Данные (оборудование, кейсы, отзывы)
+// по-прежнему освежаются каждые 5 минут через revalidate.
 export const revalidate = 300;
-export async function generateStaticParams() { return []; }
+export async function generateStaticParams() {
+  return Object.keys(serviceByKey).map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -198,7 +205,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // Обратная перелинковка: инфо-статьи блога, связанные с этой услугой (только с переводом на локаль)
   const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 6);
   // Отзывы, привязанные к этой услуге (одобренные); avg/count — компактный рейтинг под H1
-  const reviews = await getReviews(svc.key);
+  // .catch: страницы услуг пререндерятся на сборке, и падение API не должно ронять билд
+  const reviews = await getReviews(svc.key).catch(() => ({ avg: 0, count: 0, items: [] as Awaited<ReturnType<typeof getReviews>>["items"] }));
   const reviewItems: Review[] = reviews.items.map((r) => ({
     name: r.authorName?.trim() || "Клиент",
     rating: r.rating,
