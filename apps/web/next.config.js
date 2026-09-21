@@ -89,6 +89,20 @@ const nextConfig = {
       { source: "/en/brand/:path*", destination: "/en/catalog", permanent: true },
       { source: "/en/category/:path*", destination: "/en/products", permanent: true },
       { source: "/en/news/:path*", destination: "/en/blog", permanent: true },
+      // Битые ссылки вида /products/null: всплыли в логах 15–17.09.2026 (4 848 запросов
+      // от рендерящего JS краулера, каждый — полноценная 404-страница на 83 КБ).
+      // В БД слагов null нет, воспроизвести на живой странице не удалось, поэтому
+      // страхуемся редиректом: даже если ссылка где-то соберётся, она не даст 404.
+      { source: "/products/:bad(null|undefined)", destination: "/products", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/products/:bad(null|undefined)", destination: "/:locale/products", permanent: true },
+      { source: "/solutions/:bad(null|undefined)", destination: "/solutions", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/solutions/:bad(null|undefined)", destination: "/:locale/solutions", permanent: true },
+      { source: "/blog/:bad(null|undefined)", destination: "/blog", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/blog/:bad(null|undefined)", destination: "/:locale/blog", permanent: true },
+      // Русские слаги страницы видеонаблюдения: Googlebot до сих пор их долбит (из логов),
+      // канонический ключ услуги — cctv.
+      { source: "/solutions/:old(videonablyudenie|videonablyudenie-ustanovka|ustanovka-videonablyudeniya)", destination: "/solutions/cctv", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/solutions/:old(videonablyudenie|videonablyudenie-ustanovka|ustanovka-videonablyudeniya)", destination: "/:locale/solutions/cctv", permanent: true },
       // Старые слаги статичных решений → канонические ключи
       { source: "/solutions/umniy-avtobus", destination: "/solutions/bus", permanent: true },
       { source: "/solutions/parkovka", destination: "/solutions/parking", permanent: true },
