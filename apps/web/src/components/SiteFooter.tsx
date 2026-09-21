@@ -66,6 +66,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
   const uyLabel = ({ ru: "SAT Uy — жителям ЖК", uz: "SAT Uy — TJM aholisiga", en: "SAT Uy — for residents", tr: "SAT Uy — site sakinlerine", zh: "SAT Uy——面向住户" } as Record<string, string>)[locale] ?? "SAT Uy — жителям ЖК";
   const davomatLabel = ({ ru: "SAT Davomat — учёт времени", uz: "SAT Davomat — ish vaqti hisobi", en: "SAT Davomat — time tracking", tr: "SAT Davomat — mesai takibi", zh: "SAT Davomat——考勤" } as Record<string, string>)[locale] ?? "SAT Davomat — учёт времени";
   const reviewsLabel = ({ ru: "Отзывы", uz: "Sharhlar", en: "Reviews", tr: "Yorumlar", zh: "客户评价" } as Record<string, string>)[locale] ?? "Отзывы";
+  const partnersLabel = ({ ru: "Партнёрам и СМИ", uz: "Hamkorlar va OAV", en: "Partners and media", tr: "Ortaklar ve basın", zh: "合作伙伴与媒体" } as Record<string, string>)[locale] ?? "Партнёрам и СМИ";
   const tendersLabel = ({ ru: "Поставки и тендеры", uz: "Yetkazib berish va tenderlar", en: "Supply and tenders", tr: "Tedarik ve ihaleler", zh: "供货与招标" } as Record<string, string>)[locale] ?? "Поставки и тендеры";
   // Заголовки колонок подвала: раньше все 18 ссылок лежали одним списком «Разделы».
   const colCatalogLabel = ({ ru: "Каталог и услуги", uz: "Katalog va xizmatlar", en: "Catalogue and services", tr: "Katalog ve hizmetler", zh: "产品与服务" } as Record<string, string>)[locale] ?? "Каталог и услуги";
@@ -129,6 +130,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
               <li><Link href="/partners/zkteco" className="hover:text-brand-700">{zktecoLabel}</Link></li>
               <li><Link href="/partners/h3c" className="hover:text-brand-700">{h3cLabel}</Link></li>
               <li><Link href="/tenders" className="hover:text-brand-700">{tendersLabel}</Link></li>
+              <li><Link href="/for-partners" className="hover:text-brand-700">{partnersLabel}</Link></li>
               <li><Link href="/contact" className="hover:text-brand-700">{tc("contacts")}</Link></li>
             </ul>
           </div>

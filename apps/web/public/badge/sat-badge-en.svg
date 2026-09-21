@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56" role="img" aria-label="Security systems — SAT Solutions">
+  <rect x="0.5" y="0.5" width="219" height="55" rx="10" fill="#ffffff" stroke="#d6edf1"/>
+  <rect x="10" y="10" width="36" height="36" rx="8" fill="#328fa8"/>
+  <text x="28" y="36" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#ffffff">S</text>
+  <text x="56" y="24" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#e02020" letter-spacing="0.8">SECURITY SYSTEMS</text>
+  <text x="56" y="43" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#0f172a">SAT <tspan fill="#328fa8">Solutions</tspan></text>
+</svg>

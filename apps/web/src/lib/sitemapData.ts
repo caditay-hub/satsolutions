@@ -89,6 +89,8 @@ const STATIC_ROUTES = [
   "", "/about", "/contact", "/products", "/products/new", "/solutions", "/portfolio",
   "/catalog", "/international", "/tenders", "/returns", "/delivery", "/partners/h3c",
   "/calculator", "/partners/zkteco", "/kits", "/faq",
+  // Партнёрам и СМИ: бейдж для сайтов заказчиков, логотип, факты для публикаций
+  "/for-partners",
   // /export — хаб экспортного направления: даёт входящие ссылки страницам стран,
   // которые до этого были достижимы только из карты сайта.
   "/export", "/export/tajikistan", "/export/turkmenistan",

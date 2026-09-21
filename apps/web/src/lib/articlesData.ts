@@ -27,6 +27,506 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "indeks-cen-slabotochnye-sistemy-tashkent-2026",
+    date: "2026-09-21",
+    updated: "2026-09-21",
+    related: ["cctv", "access", "fire", "network"],
+    hubs: ["ip-kamery", "ip-videoregistratory-nvr", "terminaly-i-schityvateli", "izveschateli", "kommutatory"],
+    seeAlso: ["skolko-stoit-videonablyudenie", "skolko-stoit-skud", "skolko-stoit-sks-za-tochku", "kamery-domofony-novostroyki-uzbekistan"],
+    loc: {
+      ru: {
+        title: "Сколько стоят видеонаблюдение, СКУД и пожарная сигнализация в Ташкенте: индекс цен SAT Solutions, сентябрь 2026",
+        excerpt: "Медианные цены оборудования по 3 200 позициям каталога и стоимость работ по прайсу для шести типовых объектов — от магазина 200 м² до производства 1 500 м². Все цифры с датой и методикой, можно цитировать.",
+        summary: [
+          "IP-камера — 965 тыс. сум (медиана по 246 моделям), регистратор NVR — 1,55 млн, считыватель СКУД — 1,24 млн, дымовой извещатель — 222 тыс.",
+          "Работы по монтажу видеонаблюдения на 8 камер в магазине 200 м² — 3,9–4,9 млн сум; полный комплект систем для офиса 300 м² — 13,9–17,4 млн",
+          "Оборудование — около трёх четвертей сметы, монтаж — четверть; кабельные трассы на большом объекте дороже самих камер",
+          "Цены каталога на 21 сентября 2026, прайс на работы — август 2026, курс 12 700 сум за доллар",
+        ],
+        sections: [
+          { h: "Откуда цифры и как их читать", p: [
+            "Это не оценка «по рынку», а срез по двум нашим источникам. Первый — каталог satsolutions.uz: 3 256 опубликованных позиций с ценами в сумах и долларах, по каждому типу оборудования мы взяли медиану и квартили, а не среднее, чтобы одна дорогая PTZ-камера не искажала картину. Второй — «Единый прайс на слаботочные работы» (август 2026), по которому считает наш калькулятор на сайте: монтаж, пусконаладка, прокладка кабеля.",
+            "Долларовые позиции пересчитаны по 12 700 сум за доллар. Дата среза каталога — 21 сентября 2026 года; следующий срез сделаем в декабре. Цифры можно цитировать со ссылкой на источник, методика описана ниже, в конце статьи — типовые вопросы.",
+          ] },
+          { h: "Оборудование для видеонаблюдения", p: [
+            "IP-камера: медиана 964 900 сум по 246 моделям, четверть моделей дешевле 617 900, четверть дороже 1 360 900. Аналоговая (HD-TVI) камера — 197 900 сум по 28 моделям, диапазон 122 900–253 900; это единственный сегмент, где цена почти не разбросана. Поворотная PTZ-камера — 3 394 900 сум, здесь разброс от 1,8 до 5,3 млн, потому что в тип попадают и уличные модели с 25-кратным зумом.",
+            "Регистратор IP (NVR) — 1 545 900 сум, медиана по 94 моделям; четверть регистраторов на 4–8 каналов стоит до 865 900, а серверные модели на 32–64 канала уходят за 5,3 млн. Аналоговый DVR — 729 900 сум. Жёсткий диск для видеоархива — 2 969 900 сум (медиана, диски от 2 до 10 ТБ). Практический вывод: в системе на 8 камер регистратор с диском стоит примерно как 4–5 самих камер.",
+          ] },
+          { h: "Контроль доступа, домофония, турникеты", p: [
+            "Терминал или считыватель СКУД — 1 236 900 сум, медиана по 96 моделям: простые считыватели карт от 580 900, терминалы распознавания лиц — 1,8 млн и выше. Контроллер доступа — 1 442 900 сум. Электромагнитный или электромеханический замок — 494 900 сум. Комплект на одну дверь «считыватель + замок + кнопка выхода» по каталогу обходится примерно в 1,8–2,0 млн сум без работ.",
+            "Вызывная панель домофона — 1 153 900 сум, внутренний монитор — 1 697 900. Турникеты и шлагбаумы — 6 186 900 сум медиана по 63 позициям, при этом четверть позиций (компактные шлагбаумы на 3–4 метра) дешевле 4,3 млн, а полноростовые турникеты и антивандальные шлагбаумы — от 13,6 млн.",
+          ] },
+          { h: "Пожарная и охранная сигнализация", p: [
+            "Дымовой или тепловой извещатель — 221 900 сум по 30 моделям, диапазон 170 280–289 900. Приборы и модули (приёмно-контрольные приборы, адресные модули) — 1 187 010 сум медиана, но здесь разброс огромный: релейный модуль стоит 560 900, а адресный ППКП — 3,3 млн и выше. Оповещение (сирены, световые табло, речевые блоки) — 617 900 сум.",
+            "Беспроводная охранная сигнализация Hikvision AX PRO — 469 900 сум за устройство (медиана по 35 позициям: датчики, брелоки, ретрансляторы; хаб дороже). Для квартиры или небольшого магазина комплект «хаб + 4 датчика + брелок» по каталогу собирается в 2,5–3 млн сум.",
+          ] },
+          { h: "Сети, Wi-Fi и электропитание", p: [
+            "Коммутатор — 1 917 900 сум, самая большая выборка в каталоге, 319 моделей: неуправляемые на 5–8 портов от 667 900, управляемые PoE на 24–48 портов — от 4,7 млн. Точка доступа Wi-Fi — 1 174 900 сум (диапазон 716 900–2 091 900), маршрутизатор — 1 499 900 сум. Витая пара — 16 590 сум за метр медиана; кабель категории 5e без экрана от 9 600, экранированный категории 6 — 31 490 и выше.",
+            "ИБП и электропитание — 1 050 900 сум медиана, но тип объединяет блоки питания камер за 200 тыс. и онлайн-ИБП на 3 кВА за 5,6 млн. Телекоммуникационный шкаф — 1 299 900 сум: настенный на 6–9U от 330 тыс., напольный на 42U — до 5,7 млн.",
+          ] },
+          { h: "Стоимость работ: шесть типовых объектов", p: [
+            "Единичные расценки по прайсу: монтаж внутренней камеры 155 000 сум, наружной 180 000, поворотной 310 000, плюс настройка 34 000 и пусконаладка 43 000 за каждую; регистратор 280 000 (до 16 камер) или 450 000; считыватель 85 000, биометрический терминал 170 000, контроллер 215 000, замок 110 000; извещатель 65 000, приёмно-контрольный прибор 360 000; розетка СКС с портом 34 000, точка Wi-Fi 110 000. Кабель открытым способом 7 000 сум за метр, в готовом лотке 5 500, гофра 9 000, штроба 23 000. Минимальный заказ — 560 000 сум.",
+            "По этим расценкам калькулятор даёт вилку «от–до» (верхняя граница +25 % на непредвиденное). Только видеонаблюдение: магазин 200 м² на 8 камер — 3,9–4,9 млн сум; офис 300 м² на 10 камер — 5,2–6,5 млн; частный дом 250 м² на 6 камер — 3,2–4,0 млн; двор ЖК 600 м² на 9 камер — 6,1–7,7 млн; склад 1 200 м² на 14 камер — 12,0–15,0 млн; производство 1 500 м² на 16 камер — 15,1–18,9 млн. Полный комплект (видеонаблюдение, СКУД, пожарная сигнализация, сеть): магазин — 9,1–11,4 млн, офис — 13,9–17,4 млн, дом — 8,4–10,5 млн, ЖК — 20,9–26,1 млн, склад — 51,0–63,7 млн, производство — 70,1–87,6 млн сум.",
+          ] },
+          { h: "Что видно из индекса", p: [
+            "Оборудование — около трёх четвертей бюджета. Офис на 10 IP-камер: камеры по медиане 9,6 млн, регистратор 1,5 млн, диск 3,0 млн, PoE-коммутатор 1,9 млн — итого около 16 млн сум оборудования против 5,2–6,5 млн работ. То есть экономить на монтаже, выбирая подрядчика без лицензии, бессмысленно: выигрыш — единицы процентов от сметы, а риск — вся система.",
+            "На большом объекте трассы дороже камер. Для склада 1 200 м² монтаж и настройка 14 камер стоят 3,8 млн, а кабельные трассы к ним — 6,6 млн: расстояния растут быстрее числа камер. Именно поэтому на складах и производствах мы сразу считаем оптику и PoE-коммутаторы в цехах, а не тянем витую пару к каждой камере от серверной.",
+          ] },
+        ],
+        faq: [
+          { q: "Почему медиана, а не средняя цена?", a: "В одном типе живут и бюджетные, и флагманские модели: средняя по IP-камерам с учётом PTZ и тепловизоров была бы вдвое выше медианы и никому не помогла бы спланировать бюджет. Медиана — цена «типичной» модели, квартили показывают разброс." },
+          { q: "Можно ли использовать эти цифры в публикации?", a: "Да, со ссылкой на satsolutions.uz и датой среза (21 сентября 2026). Методика описана в статье; по запросу пришлём выгрузку по конкретному типу оборудования." },
+          { q: "Входит ли оборудование в стоимость работ калькулятора?", a: "Нет. Калькулятор и раздел «Стоимость работ» считают только монтаж, пусконаладку и кабель. Оборудование выбирается в каталоге отдельно — так заказчик видит обе части сметы и может менять любую из них." },
+          { q: "Как часто обновляется индекс?", a: "Раз в квартал по каталогу; прайс на работы пересматривается при изменении зарплат и цен на расходники. Дата актуальности указана в начале статьи." },
+        ],
+      },
+      uz: {
+        title: "Toshkentda videokuzatuv, SKUD va yongʻin signalizatsiyasi qancha turadi: SAT Solutions narx indeksi, 2026-yil sentabr",
+        excerpt: "Katalogdagi 3 200 pozitsiya boʻyicha uskunalarning median narxlari va oltita tipik obyekt — 200 m² doʻkondan 1 500 m² ishlab chiqarishgacha — uchun ishlar narxi. Barcha raqamlar sana va metodika bilan, iqtibos keltirish mumkin.",
+        summary: [
+          "IP-kamera — 965 ming soʻm (246 model boʻyicha mediana), NVR registrator — 1,55 mln, SKUD oʻqigichi — 1,24 mln, tutun datchigi — 222 ming",
+          "200 m² doʻkonda 8 kameraga videokuzatuv montaji — 3,9–4,9 mln soʻm; 300 m² ofis uchun toʻliq tizimlar toʻplami — 13,9–17,4 mln",
+          "Uskuna — smetaning taxminan toʻrtdan uch qismi, montaj — toʻrtdan biri; katta obyektda kabel trassalari kameralarning oʻzidan qimmat",
+          "Katalog narxlari 2026-yil 21-sentabr holatiga, ishlar narxnomasi — 2026-yil avgust, kurs 1 dollar = 12 700 soʻm",
+        ],
+        sections: [
+          { h: "Raqamlar qayerdan va ularni qanday oʻqish kerak", p: [
+            "Bu «bozor boʻyicha» baho emas, balki ikkita oʻz manbamiz boʻyicha kesim. Birinchisi — satsolutions.uz katalogi: soʻm va dollarda narxi bor 3 256 chop etilgan pozitsiya; har bir uskuna turi boʻyicha oʻrtacha emas, mediana va kvartillarni oldik, toki bitta qimmat PTZ-kamera manzarani buzmasin. Ikkinchisi — saytdagi kalkulyator hisoblaydigan «Kuchsiz tokli ishlar yagona narxnomasi» (2026-yil avgust): montaj, ishga tushirish, kabel yotqizish.",
+            "Dollardagi pozitsiyalar 12 700 soʻm kursda qayta hisoblangan. Katalog kesimi sanasi — 2026-yil 21-sentabr; keyingi kesimni dekabrda qilamiz. Raqamlarni manbaga havola bilan iqtibos keltirish mumkin, metodika quyida, maqola oxirida — tipik savollar.",
+          ] },
+          { h: "Videokuzatuv uskunalari", p: [
+            "IP-kamera: 246 model boʻyicha mediana 964 900 soʻm, modellarning choragi 617 900 dan arzon, choragi 1 360 900 dan qimmat. Analog (HD-TVI) kamera — 28 model boʻyicha 197 900 soʻm, diapazon 122 900–253 900; bu narx deyarli tarqalmagan yagona segment. Burilma PTZ-kamera — 3 394 900 soʻm, bu yerda tarqalish 1,8 dan 5,3 mln gacha, chunki turga 25 karra zumli koʻcha modellari ham kiradi.",
+            "IP registrator (NVR) — 94 model boʻyicha mediana 1 545 900 soʻm; 4–8 kanalli registratorlarning choragi 865 900 gacha, 32–64 kanalli server modellari esa 5,3 mln dan oshadi. Analog DVR — 729 900 soʻm. Videoarxiv uchun qattiq disk — 2 969 900 soʻm (mediana, 2 dan 10 TB gacha disklar). Amaliy xulosa: 8 kamerali tizimda diskli registrator taxminan 4–5 kameraning oʻzi kabi turadi.",
+          ] },
+          { h: "Kirishni nazorat qilish, domofoniya, turniketlar", p: [
+            "SKUD terminali yoki oʻqigichi — 96 model boʻyicha mediana 1 236 900 soʻm: oddiy karta oʻqigichlari 580 900 dan, yuzni tanish terminallari — 1,8 mln va undan yuqori. Kirish kontrolleri — 1 442 900 soʻm. Elektromagnit yoki elektromexanik qulf — 494 900 soʻm. Bitta eshikka «oʻqigich + qulf + chiqish tugmasi» toʻplami katalog boʻyicha ishlarsiz taxminan 1,8–2,0 mln soʻmga tushadi.",
+            "Domofon chaqiruv paneli — 1 153 900 soʻm, ichki monitor — 1 697 900. Turniket va shlagbaumlar — 63 pozitsiya boʻyicha mediana 6 186 900 soʻm, bunda pozitsiyalarning choragi (3–4 metrli ixcham shlagbaumlar) 4,3 mln dan arzon, toʻliq boʻyli turniketlar va vandalga chidamli shlagbaumlar — 13,6 mln dan.",
+          ] },
+          { h: "Yongʻin va qoʻriqlash signalizatsiyasi", p: [
+            "Tutun yoki issiqlik datchigi — 30 model boʻyicha 221 900 soʻm, diapazon 170 280–289 900. Asboblar va modullar (qabul-nazorat asboblari, manzilli modullar) — mediana 1 187 010 soʻm, lekin bu yerda tarqalish juda katta: rele moduli 560 900, manzilli QNA esa 3,3 mln va undan yuqori. Xabardor qilish (sirenalar, yorugʻlik tablolari, nutq bloklari) — 617 900 soʻm.",
+            "Hikvision AX PRO simsiz qoʻriqlash signalizatsiyasi — qurilma uchun 469 900 soʻm (35 pozitsiya boʻyicha mediana: datchiklar, brelok, retranslyatorlar; xab qimmatroq). Kvartira yoki kichik doʻkon uchun «xab + 4 datchik + brelok» toʻplami katalog boʻyicha 2,5–3 mln soʻmga yigʻiladi.",
+          ] },
+          { h: "Tarmoqlar, Wi-Fi va elektr taʼminoti", p: [
+            "Kommutator — 1 917 900 soʻm, katalogdagi eng katta tanlanma, 319 model: 5–8 portli boshqarilmaydiganlari 667 900 dan, 24–48 portli boshqariladigan PoE — 4,7 mln dan. Wi-Fi kirish nuqtasi — 1 174 900 soʻm (diapazon 716 900–2 091 900), marshrutizator — 1 499 900 soʻm. Juft oʻram kabel — metr uchun mediana 16 590 soʻm; ekransiz 5e toifa 9 600 dan, ekranli 6 toifa — 31 490 va undan yuqori.",
+            "UPS va elektr taʼminoti — mediana 1 050 900 soʻm, lekin tur 200 ming soʻmlik kamera quvvat bloklarini ham, 5,6 mln soʻmlik 3 kVA onlayn-UPSni ham birlashtiradi. Telekommunikatsiya shkafi — 1 299 900 soʻm: 6–9U devorga osiladigan 330 mingdan, 42U polga qoʻyiladigan — 5,7 mln gacha.",
+          ] },
+          { h: "Ishlar narxi: oltita tipik obyekt", p: [
+            "Narxnoma boʻyicha birlik narxlari: ichki kamera montaji 155 000 soʻm, tashqi 180 000, burilma 310 000, har biriga sozlash 34 000 va ishga tushirish 43 000 qoʻshiladi; registrator 280 000 (16 kameragacha) yoki 450 000; oʻqigich 85 000, biometrik terminal 170 000, kontroller 215 000, qulf 110 000; datchik 65 000, qabul-nazorat asbobi 360 000; portli SKS rozetkasi 34 000, Wi-Fi nuqtasi 110 000. Kabel ochiq usulda metriga 7 000 soʻm, tayyor lotokda 5 500, gofra 9 000, shtroba 23 000. Minimal buyurtma — 560 000 soʻm.",
+            "Shu narxlar boʻyicha kalkulyator «dan–gacha» oraligʻini beradi (yuqori chegara kutilmagan xarajatlarga +25 %). Faqat videokuzatuv: 200 m² doʻkon, 8 kamera — 3,9–4,9 mln soʻm; 300 m² ofis, 10 kamera — 5,2–6,5 mln; 250 m² xususiy uy, 6 kamera — 3,2–4,0 mln; TJM hovlisi 600 m², 9 kamera — 6,1–7,7 mln; 1 200 m² ombor, 14 kamera — 12,0–15,0 mln; 1 500 m² ishlab chiqarish, 16 kamera — 15,1–18,9 mln. Toʻliq toʻplam (videokuzatuv, SKUD, yongʻin signalizatsiyasi, tarmoq): doʻkon — 9,1–11,4 mln, ofis — 13,9–17,4 mln, uy — 8,4–10,5 mln, TJM — 20,9–26,1 mln, ombor — 51,0–63,7 mln, ishlab chiqarish — 70,1–87,6 mln soʻm.",
+          ] },
+          { h: "Indeksdan nima koʻrinadi", p: [
+            "Uskuna — byudjetning taxminan toʻrtdan uch qismi. 10 ta IP-kamerali ofis: mediana boʻyicha kameralar 9,6 mln, registrator 1,5 mln, disk 3,0 mln, PoE-kommutator 1,9 mln — jami taxminan 16 mln soʻm uskuna, ishlar esa 5,2–6,5 mln. Yaʼni litsenziyasiz pudratchini tanlab montajda tejash maʼnosiz: yutuq — smetaning bir necha foizi, xavf — butun tizim.",
+            "Katta obyektda trassalar kameralardan qimmat. 1 200 m² ombor uchun 14 kamera montaji va sozlash 3,8 mln, ularga kabel trassalari esa 6,6 mln: masofalar kameralar sonidan tezroq oʻsadi. Aynan shuning uchun omborlar va ishlab chiqarishda biz darhol sexlarda optika va PoE-kommutatorlarni hisoblaymiz, har bir kameraga server xonasidan juft oʻram tortmaymiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Nega oʻrtacha narx emas, mediana?", a: "Bitta turda ham byudjet, ham flagman modellar bor: PTZ va teploviziyalarni hisobga olgan holda IP-kameralar boʻyicha oʻrtacha narx medianadan ikki barobar yuqori boʻlar va hech kimga byudjet rejalashtirishga yordam bermas edi. Mediana — «tipik» model narxi, kvartillar tarqalishni koʻrsatadi." },
+          { q: "Bu raqamlarni nashrda ishlatish mumkinmi?", a: "Ha, satsolutions.uz ga havola va kesim sanasi (2026-yil 21-sentabr) bilan. Metodika maqolada tavsiflangan; soʻrov boʻyicha muayyan uskuna turi boʻyicha yuklamani yuboramiz." },
+          { q: "Kalkulyator ishlari narxiga uskuna kiradimi?", a: "Yoʻq. Kalkulyator va «Ishlar narxi» boʻlimi faqat montaj, ishga tushirish va kabelni hisoblaydi. Uskuna katalogda alohida tanlanadi — shunda buyurtmachi smetaning ikkala qismini koʻradi va istalganini oʻzgartira oladi." },
+          { q: "Indeks qanchalik tez yangilanadi?", a: "Katalog boʻyicha chorakda bir marta; ishlar narxnomasi ish haqi va sarf materiallari narxi oʻzgarganda qayta koʻriladi. Dolzarblik sanasi maqola boshida koʻrsatilgan." },
+        ],
+      },
+      en: {
+        title: "How much do video surveillance, access control and fire alarms cost in Tashkent: SAT Solutions price index, September 2026",
+        excerpt: "Median equipment prices across 3,200 catalogue items and labour costs from our price list for six typical sites — from a 200 m² shop to a 1,500 m² plant. Every figure is dated and sourced; quote freely.",
+        summary: [
+          "IP camera — 965k UZS (median of 246 models), NVR — 1.55m, access-control reader — 1.24m, smoke detector — 222k",
+          "Installing 8 cameras in a 200 m² shop — 3.9–4.9m UZS in labour; a full set of systems for a 300 m² office — 13.9–17.4m",
+          "Equipment is roughly three quarters of the budget, installation one quarter; on a large site cable routes cost more than the cameras",
+          "Catalogue prices as of 21 September 2026, labour price list August 2026, 12,700 UZS per dollar",
+        ],
+        sections: [
+          { h: "Where the figures come from and how to read them", p: [
+            "This is not a market estimate but a slice of two sources of our own. The first is the satsolutions.uz catalogue: 3,256 published items priced in soum and dollars; for each equipment type we took the median and quartiles rather than the mean, so that one expensive PTZ camera does not skew the picture. The second is our Unified Price List for Low-Voltage Works (August 2026), which powers the calculator on this site: installation, commissioning and cabling.",
+            "Dollar-priced items were converted at 12,700 UZS per dollar. The catalogue snapshot is dated 21 September 2026; the next one is due in December. Figures may be quoted with attribution; the method is described below and typical questions are answered at the end.",
+          ] },
+          { h: "Video surveillance equipment", p: [
+            "IP camera: median 964,900 UZS across 246 models, a quarter of models below 617,900 and a quarter above 1,360,900. Analogue (HD-TVI) camera — 197,900 UZS across 28 models, range 122,900–253,900; the only segment with almost no spread. PTZ camera — 3,394,900 UZS, with a spread from 1.8m to 5.3m because the type includes outdoor models with 25× zoom.",
+            "IP recorder (NVR) — 1,545,900 UZS, median of 94 models; a quarter of 4–8-channel recorders cost up to 865,900, while 32–64-channel server-grade units exceed 5.3m. Analogue DVR — 729,900 UZS. Hard drive for the video archive — 2,969,900 UZS (median, 2 to 10 TB). Practical takeaway: in an 8-camera system the recorder with a drive costs about as much as 4–5 cameras.",
+          ] },
+          { h: "Access control, intercoms, turnstiles", p: [
+            "Access-control terminal or reader — 1,236,900 UZS, median of 96 models: simple card readers from 580,900, face-recognition terminals 1.8m and up. Access controller — 1,442,900 UZS. Electromagnetic or electromechanical lock — 494,900 UZS. A single-door kit of reader, lock and exit button comes to roughly 1.8–2.0m UZS in equipment, excluding labour.",
+            "Intercom door station — 1,153,900 UZS, indoor monitor — 1,697,900. Turnstiles and barriers — 6,186,900 UZS median across 63 items; a quarter of items (compact 3–4 m barriers) are below 4.3m, full-height turnstiles and heavy-duty barriers start at 13.6m.",
+          ] },
+          { h: "Fire and intrusion alarms", p: [
+            "Smoke or heat detector — 221,900 UZS across 30 models, range 170,280–289,900. Panels and modules (control panels, addressable modules) — 1,187,010 UZS median, with a huge spread: a relay module costs 560,900 while an addressable control panel is 3.3m and up. Notification (sounders, exit signs, voice units) — 617,900 UZS.",
+            "Hikvision AX PRO wireless intrusion alarm — 469,900 UZS per device (median of 35 items: detectors, key fobs, repeaters; the hub costs more). For a flat or a small shop, a hub, four detectors and a fob add up to 2.5–3m UZS at catalogue prices.",
+          ] },
+          { h: "Networks, Wi-Fi and power", p: [
+            "Switch — 1,917,900 UZS, the largest sample in the catalogue at 319 models: unmanaged 5–8-port units from 667,900, managed 24–48-port PoE from 4.7m. Wi-Fi access point — 1,174,900 UZS (range 716,900–2,091,900), router — 1,499,900 UZS. Twisted-pair cable — 16,590 UZS per metre median; unshielded Cat 5e from 9,600, shielded Cat 6 from 31,490.",
+            "UPS and power — 1,050,900 UZS median, but the type spans camera power supplies at 200k and 3 kVA online UPS units at 5.6m. Telecom cabinet — 1,299,900 UZS: wall-mount 6–9U from 330k, floor-standing 42U up to 5.7m.",
+          ] },
+          { h: "Labour cost: six typical sites", p: [
+            "Unit rates from the price list: indoor camera installation 155,000 UZS, outdoor 180,000, PTZ 310,000, plus configuration 34,000 and commissioning 43,000 per camera; recorder 280,000 (up to 16 cameras) or 450,000; reader 85,000, biometric terminal 170,000, controller 215,000, lock 110,000; detector 65,000, control panel 360,000; structured-cabling outlet with port 34,000, Wi-Fi point 110,000. Cable surface-run 7,000 UZS per metre, in an existing tray 5,500, conduit 9,000, chasing 23,000. Minimum order — 560,000 UZS.",
+            "At these rates the calculator gives a from–to range (upper bound +25 % contingency). Video surveillance only: 200 m² shop, 8 cameras — 3.9–4.9m UZS; 300 m² office, 10 cameras — 5.2–6.5m; 250 m² house, 6 cameras — 3.2–4.0m; 600 m² residential yard, 9 cameras — 6.1–7.7m; 1,200 m² warehouse, 14 cameras — 12.0–15.0m; 1,500 m² plant, 16 cameras — 15.1–18.9m. Full set (video, access control, fire alarm, network): shop — 9.1–11.4m, office — 13.9–17.4m, house — 8.4–10.5m, residential — 20.9–26.1m, warehouse — 51.0–63.7m, plant — 70.1–87.6m UZS.",
+          ] },
+          { h: "What the index shows", p: [
+            "Equipment is about three quarters of the budget. An office with 10 IP cameras: cameras at the median 9.6m, recorder 1.5m, drive 3.0m, PoE switch 1.9m — about 16m UZS of equipment against 5.2–6.5m of labour. Saving on installation by hiring an unlicensed contractor therefore makes no sense: the gain is a few per cent of the estimate, the risk is the whole system.",
+            "On a large site the routes cost more than the cameras. For a 1,200 m² warehouse, installing and configuring 14 cameras costs 3.8m while the cable routes to them cost 6.6m: distances grow faster than camera counts. That is why on warehouses and plants we plan fibre and PoE switches in the halls straight away instead of running twisted pair from the server room to every camera.",
+          ] },
+        ],
+        faq: [
+          { q: "Why the median rather than the average?", a: "Budget and flagship models live in the same type: the average for IP cameras including PTZ and thermal units would be double the median and would help nobody plan a budget. The median is the price of a typical model; the quartiles show the spread." },
+          { q: "May these figures be used in a publication?", a: "Yes, with attribution to satsolutions.uz and the snapshot date (21 September 2026). The method is described in the article; on request we will send the export for a specific equipment type." },
+          { q: "Is equipment included in the calculator's labour cost?", a: "No. The calculator and the labour section count only installation, commissioning and cabling. Equipment is chosen separately in the catalogue, so the client sees both halves of the estimate and can change either." },
+          { q: "How often is the index updated?", a: "Quarterly from the catalogue; the labour price list is revised when wages and consumable prices change. The validity date is stated at the top of the article." },
+        ],
+      },
+      tr: {
+        title: "Taşkent'te video gözetim, geçiş kontrol ve yangın alarmı ne kadar: SAT Solutions fiyat endeksi, Eylül 2026",
+        excerpt: "Katalogdaki 3.200 ürün için medyan ekipman fiyatları ve fiyat listemize göre altı tipik tesis — 200 m² mağazadan 1.500 m² fabrikaya — için işçilik maliyeti. Her rakam tarihli ve kaynaklı; alıntılanabilir.",
+        summary: [
+          "IP kamera — 965 bin UZS (246 modelin medyanı), NVR — 1,55 mln, geçiş kontrol okuyucu — 1,24 mln, duman dedektörü — 222 bin",
+          "200 m² mağazada 8 kamera montajı — 3,9–4,9 mln UZS işçilik; 300 m² ofis için tam sistem seti — 13,9–17,4 mln",
+          "Ekipman bütçenin yaklaşık dörtte üçü, montaj dörtte biri; büyük tesiste kablo güzergâhları kameralardan pahalı",
+          "Katalog fiyatları 21 Eylül 2026 itibarıyla, işçilik fiyat listesi Ağustos 2026, dolar kuru 12.700 UZS",
+        ],
+        sections: [
+          { h: "Rakamlar nereden geliyor ve nasıl okunmalı", p: [
+            "Bu bir piyasa tahmini değil, iki kendi kaynağımızdan alınan bir kesittir. Birincisi satsolutions.uz kataloğu: som ve dolar cinsinden fiyatlı 3.256 yayınlanmış ürün; her ekipman türü için tek bir pahalı PTZ kameranın tabloyu bozmaması adına ortalama yerine medyan ve çeyrekleri aldık. İkincisi, sitedeki hesaplayıcının kullandığı Zayıf Akım İşleri Birleşik Fiyat Listesi (Ağustos 2026): montaj, devreye alma, kablo çekimi.",
+            "Dolar fiyatlı ürünler 12.700 UZS kurundan çevrildi. Katalog kesiti 21 Eylül 2026 tarihli; bir sonrakini Aralık'ta yapacağız. Rakamlar kaynak gösterilerek alıntılanabilir, yöntem aşağıda, makale sonunda tipik sorular var.",
+          ] },
+          { h: "Video gözetim ekipmanı", p: [
+            "IP kamera: 246 model için medyan 964.900 UZS, modellerin dörtte biri 617.900'ün altında, dörtte biri 1.360.900'ün üzerinde. Analog (HD-TVI) kamera — 28 model için 197.900 UZS, aralık 122.900–253.900; fiyatın neredeyse hiç dağılmadığı tek segment. PTZ kamera — 3.394.900 UZS; türe 25× zumlu dış mekân modelleri de girdiğinden dağılım 1,8 ile 5,3 mln arasında.",
+            "IP kayıt cihazı (NVR) — 94 model için medyan 1.545.900 UZS; 4–8 kanallı cihazların dörtte biri 865.900'e kadar, 32–64 kanallı sunucu sınıfı modeller 5,3 mln'yi aşıyor. Analog DVR — 729.900 UZS. Video arşivi için sabit disk — 2.969.900 UZS (medyan, 2–10 TB). Pratik sonuç: 8 kameralı bir sistemde diskli kayıt cihazı yaklaşık 4–5 kamera kadar tutuyor.",
+          ] },
+          { h: "Geçiş kontrol, diafon, turnike", p: [
+            "Geçiş kontrol terminali veya okuyucu — 96 model için medyan 1.236.900 UZS: basit kart okuyucular 580.900'den, yüz tanıma terminalleri 1,8 mln ve üzeri. Geçiş kontrol denetleyicisi — 1.442.900 UZS. Elektromanyetik veya elektromekanik kilit — 494.900 UZS. Tek kapı için okuyucu + kilit + çıkış butonu seti katalogda işçilik hariç yaklaşık 1,8–2,0 mln UZS.",
+            "Diafon kapı paneli — 1.153.900 UZS, iç monitör — 1.697.900. Turnike ve bariyerler — 63 ürün için medyan 6.186.900 UZS; ürünlerin dörtte biri (3–4 m kompakt bariyerler) 4,3 mln'nin altında, tam boy turnikeler ve ağır hizmet bariyerleri 13,6 mln'den başlıyor.",
+          ] },
+          { h: "Yangın ve hırsız alarmı", p: [
+            "Duman veya ısı dedektörü — 30 model için 221.900 UZS, aralık 170.280–289.900. Paneller ve modüller (kontrol panelleri, adresli modüller) — medyan 1.187.010 UZS, ancak dağılım çok geniş: röle modülü 560.900, adresli kontrol paneli 3,3 mln ve üzeri. Uyarı (sirenler, ışıklı tabelalar, sesli üniteler) — 617.900 UZS.",
+            "Hikvision AX PRO kablosuz hırsız alarmı — cihaz başına 469.900 UZS (35 ürünün medyanı: dedektörler, kumandalar, tekrarlayıcılar; hub daha pahalı). Daire veya küçük mağaza için hub + 4 dedektör + kumanda seti katalog fiyatlarıyla 2,5–3 mln UZS.",
+          ] },
+          { h: "Ağ, Wi-Fi ve güç", p: [
+            "Switch — 1.917.900 UZS, katalogdaki en büyük örneklem, 319 model: 5–8 portlu yönetilmeyenler 667.900'den, 24–48 portlu yönetilebilir PoE 4,7 mln'den. Wi-Fi erişim noktası — 1.174.900 UZS (aralık 716.900–2.091.900), yönlendirici — 1.499.900 UZS. Bükümlü çift kablo — metre başına medyan 16.590 UZS; ekransız Cat 5e 9.600'den, ekranlı Cat 6 31.490'dan.",
+            "UPS ve güç — medyan 1.050.900 UZS, ancak tür 200 binlik kamera güç kaynaklarından 5,6 mln'lik 3 kVA online UPS'e uzanıyor. Telekom kabini — 1.299.900 UZS: duvar tipi 6–9U 330 binden, dikili 42U 5,7 mln'ye kadar.",
+          ] },
+          { h: "İşçilik maliyeti: altı tipik tesis", p: [
+            "Fiyat listesinden birim ücretler: iç kamera montajı 155.000 UZS, dış 180.000, PTZ 310.000, her kamera için artı yapılandırma 34.000 ve devreye alma 43.000; kayıt cihazı 280.000 (16 kameraya kadar) veya 450.000; okuyucu 85.000, biyometrik terminal 170.000, denetleyici 215.000, kilit 110.000; dedektör 65.000, kontrol paneli 360.000; portlu yapısal kablolama prizi 34.000, Wi-Fi noktası 110.000. Kablo açık döşeme metre başına 7.000 UZS, mevcut kanalda 5.500, spiral boru 9.000, kanal açma 23.000. Asgari sipariş — 560.000 UZS.",
+            "Bu ücretlerle hesaplayıcı bir alt–üst aralığı verir (üst sınır +%25 öngörülemeyen giderler). Yalnızca video gözetim: 200 m² mağaza, 8 kamera — 3,9–4,9 mln UZS; 300 m² ofis, 10 kamera — 5,2–6,5 mln; 250 m² müstakil ev, 6 kamera — 3,2–4,0 mln; 600 m² site avlusu, 9 kamera — 6,1–7,7 mln; 1.200 m² depo, 14 kamera — 12,0–15,0 mln; 1.500 m² fabrika, 16 kamera — 15,1–18,9 mln. Tam set (video, geçiş kontrol, yangın alarmı, ağ): mağaza — 9,1–11,4 mln, ofis — 13,9–17,4 mln, ev — 8,4–10,5 mln, site — 20,9–26,1 mln, depo — 51,0–63,7 mln, fabrika — 70,1–87,6 mln UZS.",
+          ] },
+          { h: "Endeks ne gösteriyor", p: [
+            "Ekipman bütçenin yaklaşık dörtte üçü. 10 IP kameralı ofis: medyan fiyatla kameralar 9,6 mln, kayıt cihazı 1,5 mln, disk 3,0 mln, PoE switch 1,9 mln — yaklaşık 16 mln UZS ekipmana karşılık 5,2–6,5 mln işçilik. Lisanssız bir yüklenici seçerek montajdan tasarruf etmek bu yüzden anlamsız: kazanç bütçenin yüzde birkaçı, risk tüm sistem.",
+            "Büyük tesiste güzergâhlar kameralardan pahalı. 1.200 m² depoda 14 kameranın montajı ve yapılandırması 3,8 mln, kablo güzergâhları ise 6,6 mln: mesafeler kamera sayısından hızlı büyüyor. Bu yüzden depo ve fabrikalarda sunucu odasından her kameraya bükümlü çift çekmek yerine baştan fiber ve salonlarda PoE switch planlıyoruz.",
+          ] },
+        ],
+        faq: [
+          { q: "Neden ortalama değil medyan?", a: "Aynı türde hem bütçe hem amiral gemisi modeller var: PTZ ve termal kameralar dahil IP kameraların ortalaması medyanın iki katı olur ve kimsenin bütçe planlamasına yardımcı olmazdı. Medyan tipik modelin fiyatı, çeyrekler dağılımı gösterir." },
+          { q: "Bu rakamlar bir yayında kullanılabilir mi?", a: "Evet, satsolutions.uz'a atıf ve kesit tarihi (21 Eylül 2026) ile. Yöntem makalede anlatıldı; talep üzerine belirli bir ekipman türü için dışa aktarımı göndeririz." },
+          { q: "Hesaplayıcının işçilik maliyetine ekipman dahil mi?", a: "Hayır. Hesaplayıcı ve işçilik bölümü yalnızca montaj, devreye alma ve kabloyu sayar. Ekipman katalogdan ayrıca seçilir; böylece müşteri bütçenin iki yarısını da görür ve istediğini değiştirebilir." },
+          { q: "Endeks ne sıklıkla güncelleniyor?", a: "Katalogdan üç ayda bir; işçilik fiyat listesi ücretler ve sarf malzemesi fiyatları değiştiğinde gözden geçirilir. Geçerlilik tarihi makalenin başında belirtilir." },
+        ],
+      },
+      zh: {
+        title: "塔什干视频监控、门禁和火灾报警要多少钱：SAT Solutions 价格指数，2026 年 9 月",
+        excerpt: "基于目录中 3,200 种产品的设备中位价，以及按价目表计算的六类典型场所（从 200 m² 商店到 1,500 m² 工厂）施工费用。每个数字均注明日期和来源，可引用。",
+        summary: [
+          "IP 摄像机 — 96.5 万苏姆（246 个型号中位数），NVR — 155 万，门禁读卡器 — 124 万，烟感探测器 — 22.2 万",
+          "200 m² 商店安装 8 台摄像机施工费 390–490 万苏姆；300 m² 办公室全套系统 — 1,390–1,740 万",
+          "设备约占预算四分之三，安装占四分之一；大型场所的线缆路由比摄像机本身更贵",
+          "目录价格截至 2026 年 9 月 21 日，施工价目表为 2026 年 8 月，汇率 1 美元 = 12,700 苏姆",
+        ],
+        sections: [
+          { h: "数据来源与阅读方法", p: [
+            "这不是“市场估计”，而是对我们两个自有来源的切片。第一是 satsolutions.uz 目录：3,256 种已发布产品，以苏姆和美元标价；每类设备取中位数和四分位数而非平均值，以免一台昂贵的 PTZ 摄像机扭曲整体。第二是本站计算器所依据的《弱电工程统一价目表》（2026 年 8 月）：安装、调试、布线。",
+            "美元标价产品按 12,700 苏姆/美元换算。目录切片日期为 2026 年 9 月 21 日，下一次切片在 12 月。数字可注明来源引用，方法见下文，文末附常见问题。",
+          ] },
+          { h: "视频监控设备", p: [
+            "IP 摄像机：246 个型号中位数 964,900 苏姆，四分之一型号低于 617,900，四分之一高于 1,360,900。模拟（HD-TVI）摄像机 — 28 个型号 197,900 苏姆，区间 122,900–253,900，是唯一价格几乎不离散的细分。PTZ 云台摄像机 — 3,394,900 苏姆，区间 180 万至 530 万，因为该类别包含 25 倍变焦的室外型号。",
+            "IP 录像机（NVR）— 94 个型号中位数 1,545,900 苏姆；四分之一的 4–8 路录像机不超过 865,900，而 32–64 路服务器级型号超过 530 万。模拟 DVR — 729,900 苏姆。视频存档硬盘 — 2,969,900 苏姆（中位数，2–10 TB）。实用结论：在 8 路系统中，带硬盘的录像机价格约等于 4–5 台摄像机。",
+          ] },
+          { h: "门禁、楼宇对讲、闸机", p: [
+            "门禁终端或读卡器 — 96 个型号中位数 1,236,900 苏姆：普通读卡器 580,900 起，人脸识别终端 180 万以上。门禁控制器 — 1,442,900 苏姆。电磁锁或电机锁 — 494,900 苏姆。单门“读卡器 + 锁 + 出门按钮”套件按目录价约 180–200 万苏姆，不含施工。",
+            "对讲门口机 — 1,153,900 苏姆，室内分机 — 1,697,900。闸机与道闸 — 63 种产品中位数 6,186,900 苏姆；四分之一产品（3–4 米紧凑道闸）低于 430 万，全高闸机和重型道闸 1,360 万起。",
+          ] },
+          { h: "火灾与入侵报警", p: [
+            "烟感或温感探测器 — 30 个型号 221,900 苏姆，区间 170,280–289,900。主机与模块（控制主机、总线模块）— 中位数 1,187,010 苏姆，但离散极大：继电器模块 560,900，总线式控制主机 330 万以上。声光警报（警笛、疏散指示、语音单元）— 617,900 苏姆。",
+            "海康威视 AX PRO 无线入侵报警 — 每件 469,900 苏姆（35 种产品中位数：探测器、遥控器、中继器；主机更贵）。公寓或小商店的“主机 + 4 探测器 + 遥控器”套装按目录价 250–300 万苏姆。",
+          ] },
+          { h: "网络、Wi-Fi 与供电", p: [
+            "交换机 — 1,917,900 苏姆，目录中样本最大的类别，319 个型号：5–8 口非网管 667,900 起，24–48 口网管 PoE 470 万起。Wi-Fi 接入点 — 1,174,900 苏姆（区间 716,900–2,091,900），路由器 — 1,499,900 苏姆。双绞线 — 每米中位数 16,590 苏姆；非屏蔽 Cat 5e 9,600 起，屏蔽 Cat 6 31,490 起。",
+            "UPS 与供电 — 中位数 1,050,900 苏姆，但该类别涵盖 20 万的摄像机电源到 560 万的 3 kVA 在线式 UPS。机柜 — 1,299,900 苏姆：壁挂 6–9U 33 万起，落地 42U 最高 570 万。",
+          ] },
+          { h: "施工费用：六类典型场所", p: [
+            "价目表单价：室内摄像机安装 155,000 苏姆，室外 180,000，云台 310,000，每台另加配置 34,000 和调试 43,000；录像机 280,000（16 路以内）或 450,000；读卡器 85,000，生物识别终端 170,000，控制器 215,000，门锁 110,000；探测器 65,000，控制主机 360,000；带端口的综合布线插座 34,000，Wi-Fi 点 110,000。明线布缆每米 7,000 苏姆，既有线槽内 5,500，波纹管 9,000，开槽 23,000。最低订单 — 560,000 苏姆。",
+            "按此单价，计算器给出“从–到”区间（上限含 25% 不可预见费）。仅视频监控：200 m² 商店 8 台 — 390–490 万苏姆；300 m² 办公室 10 台 — 520–650 万；250 m² 独栋住宅 6 台 — 320–400 万；600 m² 小区院落 9 台 — 610–770 万；1,200 m² 仓库 14 台 — 1,200–1,500 万；1,500 m² 工厂 16 台 — 1,510–1,890 万。全套（视频、门禁、火灾报警、网络）：商店 — 910–1,140 万，办公室 — 1,390–1,740 万，住宅 — 840–1,050 万，小区 — 2,090–2,610 万，仓库 — 5,100–6,370 万，工厂 — 7,010–8,760 万苏姆。",
+          ] },
+          { h: "指数说明了什么", p: [
+            "设备约占预算四分之三。10 台 IP 摄像机的办公室：按中位价摄像机 960 万，录像机 150 万，硬盘 300 万，PoE 交换机 190 万 — 设备合计约 1,600 万苏姆，而施工 520–650 万。因此通过选择无资质承包商在安装上省钱毫无意义：收益只是预算的几个百分点，风险却是整套系统。",
+            "大型场所的线路比摄像机更贵。1,200 m² 仓库安装和配置 14 台摄像机需 380 万，而通往它们的线缆路由需 660 万：距离增长快于摄像机数量。正因如此，在仓库和工厂我们一开始就规划光纤和车间内的 PoE 交换机，而不是从机房向每台摄像机拉双绞线。",
+          ] },
+        ],
+        faq: [
+          { q: "为什么用中位数而不是平均价？", a: "同一类别里既有入门型号也有旗舰型号：若把 PTZ 和热成像计入，IP 摄像机的平均价会是中位数的两倍，对预算规划毫无帮助。中位数是“典型”型号的价格，四分位数显示离散程度。" },
+          { q: "这些数字可以用于报道吗？", a: "可以，请注明来源 satsolutions.uz 和切片日期（2026 年 9 月 21 日）。方法已在文中说明；如有需要，我们可提供特定设备类别的导出数据。" },
+          { q: "计算器的施工费用包含设备吗？", a: "不包含。计算器和“施工费用”部分只计算安装、调试和布线。设备在目录中单独选择——这样客户能看到预算的两部分，并可分别调整。" },
+          { q: "指数多久更新一次？", a: "按目录每季度一次；施工价目表在工资和耗材价格变化时修订。有效日期标注在文章开头。" },
+        ],
+      },
+    },
+  },
+  {
+    slug: "normy-slabotochnye-sistemy-uzbekistan",
+    date: "2026-09-21",
+    updated: "2026-09-21",
+    related: ["fire", "cctv", "access", "alarm"],
+    hubs: ["izveschateli", "pribory-i-moduli", "ip-kamery", "terminaly-i-schityvateli"],
+    seeAlso: ["licenziya-na-montazh-signalizacii-uzbekistan", "obsluzhivanie-pozharnoy-signalizacii-uzbekistan", "videonablyudenie-personalnye-dannye-uzbekistan", "kamery-domofony-novostroyki-uzbekistan"],
+    loc: {
+      ru: {
+        title: "Нормы Узбекистана по видеонаблюдению, СКУД и пожарной сигнализации: справочник с номерами документов",
+        excerpt: "Шесть действующих документов РУз, которые регулируют системы безопасности: кто лицензирует монтаж, как обслуживать пожарную сигнализацию, где хранить видеоархив, что обязательно в новостройках. Только первоисточники, без российских норм.",
+        summary: [
+          "Лицензирование монтажа сигнализации — ПКМ № 880 от 27.10.2018: лицензия бессрочная, реестр публичный",
+          "Обслуживание пожарной сигнализации — ПКМ № 649 от 20.10.2020, п. 148–149: годовой план, а не «раз в квартал»",
+          "Видеоархив и биометрия — ЗРУ-547, ст. 27-1: базы с данными граждан хранятся на серверах в Узбекистане",
+          "Камеры и домофоны в новостройках — ПП-48 от 05.02.2026, п. 11: обязательны с 1 мая 2026 года",
+        ],
+        sections: [
+          { h: "Почему нельзя пользоваться российскими нормами", p: [
+            "Русскоязычная выдача по любому вопросу о сигнализации или видеонаблюдении отвечает нормами Российской Федерации: «обслуживание раз в квартал», «лицензия МЧС», «СП 3.13130». В Узбекистане действуют свои документы, и они устроены иначе — по срокам, по органам и по обязанностям заказчика. Мы проверяли каждый пункт этого справочника по тексту документа на lex.uz, а не по пересказам.",
+            "Справочник даёт номер документа, дату и ключевой пункт, чтобы на него можно было сослаться в договоре, техническом задании или публикации. По четырём темам есть подробные разборы — ссылки в конце статьи. Дата проверки актуальности — 21 сентября 2026 года.",
+          ] },
+          { h: "Лицензирование монтажа: ПКМ № 880 от 27.10.2018", p: [
+            "Постановление Кабинета Министров № 880 регулирует лицензирование деятельности по проектированию, монтажу, наладке, ремонту и техническому обслуживанию средств противопожарной автоматики, охранной, пожарной и охранно-пожарной сигнализации. Лицензирующий орган по постановлению — Министерство внутренних дел, а не МЧС, как отвечают российские источники.",
+            "Лицензия бессрочная, может выдаваться на часть видов работ, реестр лицензий публичный. Требования к подрядчику: в штате не менее двух работников со стажем не менее трёх лет и квалификацией не ниже третьего разряда. Наши документы: подтверждение Национальной гвардии № 1554491 на охранные системы и лицензия МЧС № 913518 на пожарные системы — оба открыты на странице «О компании».",
+          ] },
+          { h: "Обслуживание пожарной сигнализации: ПКМ № 649 от 20.10.2020, п. 148–149", p: [
+            "Правила пожарной безопасности, утверждённые постановлением № 649, не содержат нормы «раз в квартал». Пункт 148 в редакции постановления № 153 от 04.04.2022 требует годовой план регламентных работ, составленный по технической документации изготовителя оборудования. Обслуживать систему вправе либо обученные работники самого объекта, либо лицензированная организация.",
+            "Пункт 149 — условный: договор с обслуживающей организацией в течение 30 дней заключается только если специалисты объекта не могут выполнять работы сами, и отсчёт идёт от ввода устройств в работу. При расторжении договора обслуживающая организация уведомляет районный или городской отдел по чрезвычайным ситуациям в течение 24 часов.",
+          ] },
+          { h: "Видеоархив и биометрия: закон ЗРУ-547 от 02.07.2019, ст. 27-1", p: [
+            "Закон «О персональных данных» относит к персональным данным любую информацию, позволяющую идентифицировать человека, — видеозапись с различимым лицом под это определение попадает, а шаблон лица или отпечатка в СКУД считается биометрическими данными, более строгой категорией.",
+            "Статья 27-1 обязывает собирать, систематизировать и хранить базы персональных данных граждан Узбекистана на технических средствах, физически размещённых в республике и зарегистрированных в Государственном реестре баз персональных данных. Уполномоченный орган — Государственный центр персонализации при Кабинете Министров. Практическое следствие: видеоархив и база биометрии должны лежать на регистраторе или сервере в Узбекистане, а не в зарубежном облаке производителя.",
+          ] },
+          { h: "Новостройки: ПП-48 от 05.02.2026, п. 11", p: [
+            "Постановление Президента № ПП-48 с 1 мая 2026 года требует включать в проекты новых многоквартирных домов камеры видеонаблюдения в каждом подъезде, в лифтах и на прилегающей территории, а также домофоны на входных дверях подъездов.",
+            "Без этих систем проект не проходит экспертизу, а дом с неустановленным общим имуществом запрещено принимать в эксплуатацию. Установленное оборудование передаётся управляющей организации как общее имущество, данные о нём вносятся в информационную систему «Mening uyim» платформы «Turarjoy».",
+          ] },
+          { h: "Проектирование пожарной автоматики: ШНК 2.04.09-2007", p: [
+            "Действующий нормативный документ Узбекистана по пожарной автоматике зданий и сооружений — ШНК 2.04.09-2007. Именно по нему выбираются типы систем оповещения и управления эвакуацией, состав автоматической пожарной сигнализации и пожаротушения для объекта.",
+            "Российские СП 3.13130.2009 и НПБ 104-03, на которые ссылаются многие проекты и коммерческие предложения, в Узбекистане не применяются. Если в вашем техническом задании стоит ссылка на «СП», её нужно заменить на ШНК — экспертиза проекта иначе не пройдёт.",
+          ] },
+          { h: "Сертификация оборудования: ПКМ № 43 от 30.01.2021", p: [
+            "Обязательная сертификация продукции регулируется постановлением № 43 от 30.01.2021 с сокращением перечня по постановлению № 683 от 16.11.2021. Это рамочный документ: перечень позиций в приложениях мы построчно не проверяли, поэтому в справочнике он приведён как отправная точка, а не как готовый ответ.",
+            "На практике для тендера или экспертизы достаточно запросить у поставщика сертификат соответствия на конкретную модель — мы прикладываем их к спецификации по каждой позиции, где сертификат требуется.",
+          ] },
+          { h: "Как пользоваться справочником", p: [
+            "Все документы доступны на lex.uz по номеру и дате; тексты некоторых редакций опубликованы только на узбекском языке, поэтому при работе с юристом ссылайтесь на номер пункта, а не на перевод. Мы обновляем справочник при изменении любого из документов и указываем дату проверки в начале статьи.",
+            "Статья описывает требования в общем виде и не заменяет юридическую консультацию по конкретному объекту. Если нужна оценка вашей системы на соответствие — пришлите описание, разберём вместе с вашим юристом и приложим ссылки на первоисточники.",
+          ] },
+        ],
+        faq: [
+          { q: "Кто выдаёт лицензию на монтаж сигнализации в Узбекистане?", a: "По постановлению Кабинета Министров № 880 от 27.10.2018 лицензирующий орган — МВД. Лицензия бессрочная, реестр публичный. Проверяйте подрядчика по реестру, а не по копии документа." },
+          { q: "Как часто нужно обслуживать пожарную сигнализацию?", a: "Нормы «раз в квартал» в Узбекистане нет. Пункт 148 Правил пожарной безопасности (ПКМ № 649) требует годовой план регламентных работ по документации изготовителя оборудования." },
+          { q: "Можно ли хранить видеоархив в зарубежном облаке?", a: "Если система идентифицирует граждан Узбекистана, статья 27-1 закона ЗРУ-547 требует хранить базу на технических средствах в республике. Локальный регистратор или сервер в Узбекистане с удалённым доступом закрывает это требование." },
+          { q: "Обязательны ли камеры в новом жилом доме?", a: "Да, с 1 мая 2026 года по ПП-48: камеры в подъездах, лифтах и на территории плюс домофоны на входных дверях. Без них проект не проходит экспертизу, а дом не принимают в эксплуатацию." },
+        ],
+      },
+      uz: {
+        title: "Oʻzbekistonning videokuzatuv, SKUD va yongʻin signalizatsiyasi boʻyicha meʼyorlari: hujjat raqamlari bilan maʼlumotnoma",
+        excerpt: "Xavfsizlik tizimlarini tartibga soluvchi oltita amaldagi OʻzR hujjati: montajni kim litsenziyalaydi, yongʻin signalizatsiyasiga qanday xizmat koʻrsatiladi, videoarxiv qayerda saqlanadi, yangi uylarda nima majburiy. Faqat birlamchi manbalar, Rossiya meʼyorlarisiz.",
+        summary: [
+          "Signalizatsiya montajini litsenziyalash — 27.10.2018 dagi 880-son VMQ: litsenziya muddatsiz, reyestr ochiq",
+          "Yongʻin signalizatsiyasiga xizmat koʻrsatish — 20.10.2020 dagi 649-son VMQ, 148–149-bandlar: «chorakda bir» emas, yillik reja",
+          "Videoarxiv va biometriya — OʻRQ-547, 27-1-modda: fuqarolar maʼlumotlari bazalari Oʻzbekistondagi serverlarda saqlanadi",
+          "Yangi uylarda kamera va domofonlar — 05.02.2026 dagi PQ-48, 11-band: 2026-yil 1-maydan majburiy",
+        ],
+        sections: [
+          { h: "Nega Rossiya meʼyorlaridan foydalanib boʻlmaydi", p: [
+            "Signalizatsiya yoki videokuzatuv haqidagi istalgan savolga rus tilidagi qidiruv Rossiya Federatsiyasi meʼyorlari bilan javob beradi: «chorakda bir xizmat», «FVV litsenziyasi», «SP 3.13130». Oʻzbekistonda oʻz hujjatlari amal qiladi va ular boshqacha tuzilgan — muddatlar, organlar va buyurtmachi majburiyatlari boʻyicha. Biz ushbu maʼlumotnomaning har bir bandini qayta hikoyalar boʻyicha emas, lex.uz dagi hujjat matni boʻyicha tekshirdik.",
+            "Maʼlumotnoma hujjat raqami, sanasi va asosiy bandini beradi — shartnoma, texnik topshiriq yoki nashrda unga havola qilish mumkin boʻlsin. Toʻrtta mavzu boʻyicha batafsil tahlillar bor — havolalar maqola oxirida. Dolzarblik tekshiruvi sanasi — 2026-yil 21-sentabr.",
+          ] },
+          { h: "Montajni litsenziyalash: 27.10.2018 dagi 880-son VMQ", p: [
+            "Vazirlar Mahkamasining 880-son qarori yongʻinga qarshi avtomatika, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi vositalarini loyihalash, montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish faoliyatini litsenziyalashni tartibga soladi. Qarorga koʻra litsenziyalovchi organ — Rossiya manbalari javob berganidek FVV emas, Ichki ishlar vazirligi.",
+            "Litsenziya muddatsiz, ishlarning bir qismiga berilishi mumkin, litsenziyalar reyestri ochiq. Pudratchiga talablar: shtatda kamida uch yil stajli va uchinchi razryaddan past boʻlmagan malakali kamida ikki xodim. Bizning hujjatlarimiz: qoʻriqlash tizimlariga Milliy gvardiyaning 1554491-son tasdigʻi va yongʻin tizimlariga FVVning 913518-son litsenziyasi — ikkalasi ham «Kompaniya haqida» sahifasida ochiq.",
+          ] },
+          { h: "Yongʻin signalizatsiyasiga xizmat koʻrsatish: 20.10.2020 dagi 649-son VMQ, 148–149-bandlar", p: [
+            "649-son qaror bilan tasdiqlangan Yongʻin xavfsizligi qoidalarida «chorakda bir» meʼyori yoʻq. 04.04.2022 dagi 153-son qaror tahriridagi 148-band uskuna ishlab chiqaruvchisining texnik hujjatlari asosida tuzilgan yillik reglament ishlari rejasini talab qiladi. Tizimga obyektning oʻzining oʻqitilgan xodimlari yoki litsenziyalangan tashkilot xizmat koʻrsatishi mumkin.",
+            "149-band shartli: xizmat koʻrsatuvchi tashkilot bilan 30 kun ichida shartnoma faqat obyekt mutaxassislari ishlarni oʻzlari bajara olmasa tuziladi va hisob qurilmalar ishga tushirilgan paytdan boshlanadi. Shartnoma bekor qilinganda xizmat koʻrsatuvchi tashkilot 24 soat ichida tuman yoki shahar favqulodda vaziyatlar boʻlimini xabardor qiladi.",
+          ] },
+          { h: "Videoarxiv va biometriya: 02.07.2019 dagi OʻRQ-547 qonuni, 27-1-modda", p: [
+            "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi qonun odamni identifikatsiya qilish imkonini beruvchi har qanday axborotni shaxsga doir maʼlumotlarga kiritadi — yuzi ajralib turadigan videoyozuv shu taʼrifga tushadi, SKUDdagi yuz yoki barmoq izi shabloni esa qatʼiyroq toifa — biometrik maʼlumot hisoblanadi.",
+            "27-1-modda Oʻzbekiston fuqarolarining shaxsga doir maʼlumotlari bazalarini respublika hududida jismonan joylashgan va Shaxsga doir maʼlumotlar bazalarining davlat reyestrida roʻyxatga olingan texnik vositalarda yigʻish, tizimlashtirish va saqlashga majbur qiladi. Vakolatli organ — Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi. Amaliy oqibat: videoarxiv va biometriya bazasi ishlab chiqaruvchining xorijiy bulutida emas, Oʻzbekistondagi registrator yoki serverda turishi kerak.",
+          ] },
+          { h: "Yangi uylar: 05.02.2026 dagi PQ-48, 11-band", p: [
+            "Prezidentning PQ-48-son qarori 2026-yil 1-maydan yangi koʻp kvartirali uylar loyihalariga har bir podyezdda, liftlarda va yondosh hududda videokuzatuv kameralarini, shuningdek, podyezd kirish eshiklarida domofonlarni kiritishni talab qiladi.",
+            "Bu tizimlarsiz loyiha ekspertizadan oʻtmaydi, umumiy mulki oʻrnatilmagan uyni foydalanishga qabul qilish taqiqlanadi. Oʻrnatilgan uskuna umumiy mulk sifatida boshqaruvchi tashkilotga topshiriladi, u haqidagi maʼlumotlar «Turarjoy» platformasining «Mening uyim» axborot tizimiga kiritiladi.",
+          ] },
+          { h: "Yongʻin avtomatikasini loyihalash: ShNQ 2.04.09-2007", p: [
+            "Oʻzbekistonning binolar va inshootlar yongʻin avtomatikasi boʻyicha amaldagi normativ hujjati — ShNQ 2.04.09-2007. Aynan u boʻyicha obyekt uchun xabardor qilish va evakuatsiyani boshqarish tizimlari turlari, avtomatik yongʻin signalizatsiyasi va oʻt oʻchirish tarkibi tanlanadi.",
+            "Koʻplab loyihalar va tijorat takliflari havola qiladigan Rossiya SP 3.13130.2009 va NPB 104-03 Oʻzbekistonda qoʻllanilmaydi. Agar texnik topshirigʻingizda «SP»ga havola boʻlsa, uni ShNQ bilan almashtirish kerak — aks holda loyiha ekspertizasi oʻtmaydi.",
+          ] },
+          { h: "Uskunani sertifikatlash: 30.01.2021 dagi 43-son VMQ", p: [
+            "Mahsulotni majburiy sertifikatlash 30.01.2021 dagi 43-son qaror bilan, roʻyxat 16.11.2021 dagi 683-son qaror bilan qisqartirilgan holda tartibga solinadi. Bu ramkaviy hujjat: ilovalardagi pozitsiyalar roʻyxatini biz satrma-satr tekshirmadik, shuning uchun maʼlumotnomada u tayyor javob emas, boshlangʻich nuqta sifatida keltirilgan.",
+            "Amalda tender yoki ekspertiza uchun yetkazib beruvchidan muayyan modelga muvofiqlik sertifikatini soʻrash yetarli — biz ularni sertifikat talab qilinadigan har bir pozitsiya boʻyicha spetsifikatsiyaga ilova qilamiz.",
+          ] },
+          { h: "Maʼlumotnomadan qanday foydalanish", p: [
+            "Barcha hujjatlar lex.uz da raqam va sana boʻyicha mavjud; ayrim tahrirlar matni faqat oʻzbek tilida chop etilgan, shuning uchun yurist bilan ishlaganda tarjimaga emas, band raqamiga havola qiling. Hujjatlardan istalgani oʻzgarganda maʼlumotnomani yangilaymiz va tekshiruv sanasini maqola boshida koʻrsatamiz.",
+            "Maqola talablarni umumiy koʻrinishda tavsiflaydi va muayyan obyekt boʻyicha yuridik maslahat oʻrnini bosmaydi. Tizimingizning muvofiqligini baholash kerak boʻlsa — tavsifni yuboring, yuristingiz bilan birga koʻrib chiqamiz va birlamchi manbalarga havolalar ilova qilamiz.",
+          ] },
+        ],
+        faq: [
+          { q: "Oʻzbekistonda signalizatsiya montajiga litsenziyani kim beradi?", a: "Vazirlar Mahkamasining 27.10.2018 dagi 880-son qaroriga koʻra litsenziyalovchi organ — IIV. Litsenziya muddatsiz, reyestr ochiq. Pudratchini hujjat nusxasi boʻyicha emas, reyestr boʻyicha tekshiring." },
+          { q: "Yongʻin signalizatsiyasiga qanchalik tez xizmat koʻrsatish kerak?", a: "Oʻzbekistonda «chorakda bir» meʼyori yoʻq. Yongʻin xavfsizligi qoidalarining 148-bandi (649-son VMQ) uskuna ishlab chiqaruvchisi hujjatlari boʻyicha yillik reglament ishlari rejasini talab qiladi." },
+          { q: "Videoarxivni xorijiy bulutda saqlash mumkinmi?", a: "Agar tizim Oʻzbekiston fuqarolarini identifikatsiya qilsa, OʻRQ-547 qonunining 27-1-moddasi bazani respublikadagi texnik vositalarda saqlashni talab qiladi. Masofaviy kirishli Oʻzbekistondagi lokal registrator yoki server bu talabni yopadi." },
+          { q: "Yangi turar-joy uyida kameralar majburiymi?", a: "Ha, 2026-yil 1-maydan PQ-48 boʻyicha: podyezdlar, liftlar va hududda kameralar hamda kirish eshiklarida domofonlar. Ularsiz loyiha ekspertizadan oʻtmaydi, uy foydalanishga qabul qilinmaydi." },
+        ],
+      },
+      en: {
+        title: "Uzbekistan's regulations on video surveillance, access control and fire alarms: a reference with document numbers",
+        excerpt: "Six current Uzbek documents that govern security systems: who licenses installation, how fire alarms must be serviced, where video archives may be stored, what is mandatory in new housing. Primary sources only, no Russian norms.",
+        summary: [
+          "Licensing of alarm installation — Cabinet Resolution No. 880 of 27.10.2018: licence is open-ended, register is public",
+          "Fire-alarm maintenance — Cabinet Resolution No. 649 of 20.10.2020, cl. 148–149: an annual plan, not “once a quarter”",
+          "Video archive and biometrics — Law ZRU-547, art. 27-1: databases on Uzbek citizens are stored on servers in Uzbekistan",
+          "Cameras and intercoms in new housing — Presidential Resolution PP-48 of 05.02.2026, cl. 11: mandatory from 1 May 2026",
+        ],
+        sections: [
+          { h: "Why Russian norms cannot be used", p: [
+            "Russian-language search results answer any question about alarms or video surveillance with the norms of the Russian Federation: “service once a quarter”, “licence from the Ministry of Emergencies”, “SP 3.13130”. Uzbekistan has its own documents, and they are structured differently — in deadlines, in authorities and in the client's duties. We checked every item in this reference against the document text on lex.uz, not against retellings.",
+            "The reference gives the document number, date and key clause so that it can be cited in a contract, a technical specification or a publication. Four topics have detailed write-ups — links at the end. Validity checked on 21 September 2026.",
+          ] },
+          { h: "Installation licensing: Cabinet Resolution No. 880 of 27.10.2018", p: [
+            "Cabinet of Ministers Resolution No. 880 governs the licensing of design, installation, commissioning, repair and maintenance of fire automation, intrusion, fire and combined alarm systems. Under the resolution the licensing authority is the Ministry of Internal Affairs — not the Ministry of Emergency Situations, as Russian sources claim.",
+            "The licence is open-ended, may be issued for part of the work types, and the register of licences is public. Contractor requirements: at least two employees on staff with at least three years' experience and a qualification of grade three or higher. Our documents: National Guard confirmation No. 1554491 for security systems and Ministry of Emergency Situations licence No. 913518 for fire systems — both published on the About page.",
+          ] },
+          { h: "Fire-alarm maintenance: Cabinet Resolution No. 649 of 20.10.2020, cl. 148–149", p: [
+            "The Fire Safety Rules approved by Resolution No. 649 contain no “once a quarter” norm. Clause 148, as amended by Resolution No. 153 of 04.04.2022, requires an annual plan of scheduled work drawn up from the equipment manufacturer's technical documentation. The system may be serviced either by the site's own trained staff or by a licensed organisation.",
+            "Clause 149 is conditional: a contract with a service organisation within 30 days is required only if the site's specialists cannot do the work themselves, and the period runs from the moment the devices are put into operation. On termination of the contract, the service organisation notifies the district or city emergency department within 24 hours.",
+          ] },
+          { h: "Video archive and biometrics: Law ZRU-547 of 02.07.2019, art. 27-1", p: [
+            "The Law on Personal Data treats as personal data any information that allows a person to be identified — a video recording with a recognisable face falls under this definition, and a face or fingerprint template in an access-control system counts as biometric data, a stricter category.",
+            "Article 27-1 requires that databases of personal data of Uzbek citizens be collected, organised and stored on hardware physically located in the republic and registered in the State Register of Personal Data Databases. The competent authority is the State Personalisation Centre under the Cabinet of Ministers. Practical consequence: the video archive and the biometric database must reside on a recorder or server in Uzbekistan, not in a manufacturer's foreign cloud.",
+          ] },
+          { h: "New housing: Presidential Resolution PP-48 of 05.02.2026, cl. 11", p: [
+            "Presidential Resolution PP-48 requires, from 1 May 2026, that designs for new apartment buildings include video cameras in every entrance hall, in lifts and on the adjacent grounds, plus intercoms on entrance doors.",
+            "Without these systems the design does not pass expert review, and a building whose common property is not installed may not be accepted for occupancy. The installed equipment is handed over to the management company as common property, and its details are entered into the “Mening uyim” information system of the “Turarjoy” platform.",
+          ] },
+          { h: "Fire automation design: ShNK 2.04.09-2007", p: [
+            "Uzbekistan's current normative document on fire automation for buildings and structures is ShNK 2.04.09-2007. It defines the choice of voice-alarm and evacuation-control system types and the composition of automatic fire detection and suppression for a site.",
+            "The Russian SP 3.13130.2009 and NPB 104-03, cited in many designs and commercial proposals, do not apply in Uzbekistan. If your technical specification references an “SP”, replace it with the ShNK — otherwise the design will not pass expert review.",
+          ] },
+          { h: "Equipment certification: Cabinet Resolution No. 43 of 30.01.2021", p: [
+            "Mandatory product certification is governed by Resolution No. 43 of 30.01.2021, with the list shortened by Resolution No. 683 of 16.11.2021. This is a framework document: we have not verified the annexed lists line by line, so the reference presents it as a starting point rather than a ready answer.",
+            "In practice, for a tender or expert review it is enough to request a certificate of conformity for the specific model from the supplier — we attach them to the specification for every item where a certificate is required.",
+          ] },
+          { h: "How to use this reference", p: [
+            "All documents are available on lex.uz by number and date; some editions are published only in Uzbek, so when working with a lawyer refer to the clause number rather than a translation. We update the reference whenever any of the documents changes and state the check date at the top of the article.",
+            "The article describes the requirements in general terms and does not replace legal advice for a specific site. If you need your system assessed for compliance, send us a description — we will review it together with your lawyer and attach links to the primary sources.",
+          ] },
+        ],
+        faq: [
+          { q: "Who issues the licence for alarm installation in Uzbekistan?", a: "Under Cabinet of Ministers Resolution No. 880 of 27.10.2018 the licensing authority is the Ministry of Internal Affairs. The licence is open-ended and the register is public. Check a contractor against the register, not against a copy of the document." },
+          { q: "How often must a fire alarm be serviced?", a: "There is no “once a quarter” norm in Uzbekistan. Clause 148 of the Fire Safety Rules (Resolution No. 649) requires an annual plan of scheduled work based on the equipment manufacturer's documentation." },
+          { q: "May a video archive be stored in a foreign cloud?", a: "If the system identifies Uzbek citizens, article 27-1 of Law ZRU-547 requires the database to be stored on hardware in the republic. A local recorder or server in Uzbekistan with remote access satisfies this requirement." },
+          { q: "Are cameras mandatory in a new apartment building?", a: "Yes, from 1 May 2026 under PP-48: cameras in entrance halls, lifts and on the grounds, plus intercoms on entrance doors. Without them the design fails expert review and the building is not accepted for occupancy." },
+        ],
+      },
+      tr: {
+        title: "Özbekistan'ın video gözetim, geçiş kontrol ve yangın alarmı mevzuatı: belge numaralı rehber",
+        excerpt: "Güvenlik sistemlerini düzenleyen altı yürürlükteki Özbekistan belgesi: montajı kim lisanslar, yangın alarmı nasıl bakılır, video arşivi nerede saklanır, yeni konutlarda ne zorunlu. Yalnızca birincil kaynaklar, Rus normları yok.",
+        summary: [
+          "Alarm montajı lisansı — 27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı: lisans süresiz, sicil kamuya açık",
+          "Yangın alarmı bakımı — 20.10.2020 tarihli 649 sayılı Karar, md. 148–149: «üç ayda bir» değil, yıllık plan",
+          "Video arşivi ve biyometri — ZRU-547 Kanunu, md. 27-1: vatandaş verileri Özbekistan'daki sunucularda saklanır",
+          "Yeni konutlarda kamera ve diafon — 05.02.2026 tarihli PP-48 Cumhurbaşkanı Kararı, md. 11: 1 Mayıs 2026'dan itibaren zorunlu",
+        ],
+        sections: [
+          { h: "Rus normları neden kullanılamaz", p: [
+            "Alarm veya video gözetimle ilgili her soruya Rusça arama sonuçları Rusya Federasyonu normlarıyla yanıt verir: «üç ayda bir bakım», «Acil Durumlar Bakanlığı lisansı», «SP 3.13130». Özbekistan'ın kendi belgeleri vardır ve bunlar süreler, kurumlar ve müşteri yükümlülükleri bakımından farklı kurgulanmıştır. Bu rehberdeki her maddeyi aktarımlara göre değil, lex.uz'daki belge metnine göre kontrol ettik.",
+            "Rehber, sözleşmede, teknik şartnamede veya yayında atıf yapılabilsin diye belge numarası, tarihi ve kilit maddeyi verir. Dört konuda ayrıntılı incelemeler var — bağlantılar makale sonunda. Geçerlilik kontrolü tarihi — 21 Eylül 2026.",
+          ] },
+          { h: "Montaj lisansı: 27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı", p: [
+            "880 sayılı Bakanlar Kurulu Kararı, yangın otomasyonu, hırsız, yangın ve birleşik alarm sistemlerinin tasarımı, montajı, devreye alınması, onarımı ve bakımı faaliyetlerinin lisanslanmasını düzenler. Karara göre lisans veren kurum, Rus kaynaklarının söylediği gibi Acil Durumlar Bakanlığı değil, İçişleri Bakanlığı'dır.",
+            "Lisans süresizdir, iş türlerinin bir kısmı için verilebilir, lisans sicili kamuya açıktır. Yüklenici şartları: kadroda en az üç yıl deneyimli ve en az üçüncü derece nitelikli en az iki çalışan. Belgelerimiz: güvenlik sistemleri için Ulusal Muhafızlar onayı No. 1554491 ve yangın sistemleri için Acil Durumlar Bakanlığı lisansı No. 913518 — ikisi de «Hakkımızda» sayfasında açık.",
+          ] },
+          { h: "Yangın alarmı bakımı: 20.10.2020 tarihli 649 sayılı Karar, md. 148–149", p: [
+            "649 sayılı Kararla onaylanan Yangın Güvenliği Kuralları «üç ayda bir» normu içermez. 04.04.2022 tarihli 153 sayılı Kararla değişik 148. madde, ekipman üreticisinin teknik belgelerine göre hazırlanmış yıllık periyodik bakım planı gerektirir. Sisteme tesisin kendi eğitimli personeli ya da lisanslı bir kuruluş bakım yapabilir.",
+            "149. madde koşulludur: bakım kuruluşuyla 30 gün içinde sözleşme yalnızca tesis uzmanları işi kendileri yapamıyorsa gerekir ve süre cihazların işletmeye alınmasından itibaren işler. Sözleşme feshedildiğinde bakım kuruluşu 24 saat içinde ilçe veya il acil durum birimini bilgilendirir.",
+          ] },
+          { h: "Video arşivi ve biyometri: 02.07.2019 tarihli ZRU-547 Kanunu, md. 27-1", p: [
+            "Kişisel Veriler Kanunu, bir kişinin tanımlanmasını sağlayan her bilgiyi kişisel veri sayar — yüzü seçilebilen bir video kaydı bu tanıma girer, geçiş kontrol sistemindeki yüz veya parmak izi şablonu ise daha sıkı bir kategori olan biyometrik veri sayılır.",
+            "27-1. madde, Özbekistan vatandaşlarının kişisel veri tabanlarının cumhuriyet topraklarında fiziksel olarak bulunan ve Kişisel Veri Tabanları Devlet Sicili'ne kayıtlı donanımda toplanmasını, düzenlenmesini ve saklanmasını zorunlu kılar. Yetkili kurum, Bakanlar Kurulu bünyesindeki Devlet Kişiselleştirme Merkezi'dir. Pratik sonuç: video arşivi ve biyometri veri tabanı üreticinin yabancı bulutunda değil, Özbekistan'daki kayıt cihazı veya sunucuda bulunmalıdır.",
+          ] },
+          { h: "Yeni konutlar: 05.02.2026 tarihli PP-48, md. 11", p: [
+            "PP-48 sayılı Cumhurbaşkanı Kararı, 1 Mayıs 2026'dan itibaren yeni apartman projelerine her girişte, asansörlerde ve çevre alanda video kameraların ve giriş kapılarında diafonların dahil edilmesini şart koşar.",
+            "Bu sistemler olmadan proje uzman incelemesinden geçmez, ortak mülkü kurulmamış bina iskâna kabul edilemez. Kurulan ekipman ortak mülk olarak yönetim şirketine devredilir, bilgileri «Turarjoy» platformunun «Mening uyim» bilgi sistemine girilir.",
+          ] },
+          { h: "Yangın otomasyonu tasarımı: ShNK 2.04.09-2007", p: [
+            "Özbekistan'ın bina ve yapıların yangın otomasyonuna ilişkin yürürlükteki normatif belgesi ShNK 2.04.09-2007'dir. Sesli uyarı ve tahliye yönetim sistemi türleri ile bir tesisin otomatik yangın algılama ve söndürme bileşimi bu belgeye göre seçilir.",
+            "Birçok proje ve ticari teklifte atıf yapılan Rus SP 3.13130.2009 ve NPB 104-03 Özbekistan'da uygulanmaz. Teknik şartnamenizde «SP» atfı varsa ShNK ile değiştirilmelidir — aksi halde proje uzman incelemesinden geçmez.",
+          ] },
+          { h: "Ekipman belgelendirmesi: 30.01.2021 tarihli 43 sayılı Karar", p: [
+            "Zorunlu ürün belgelendirmesi 30.01.2021 tarihli 43 sayılı Kararla düzenlenir; liste 16.11.2021 tarihli 683 sayılı Kararla kısaltılmıştır. Bu bir çerçeve belgedir: eklerdeki listeleri satır satır doğrulamadık, bu nedenle rehberde hazır yanıt değil başlangıç noktası olarak yer alır.",
+            "Uygulamada ihale veya uzman incelemesi için tedarikçiden belirli modele ait uygunluk belgesini istemek yeterlidir — belge gereken her kalem için bunları şartnameye ekliyoruz.",
+          ] },
+          { h: "Rehber nasıl kullanılır", p: [
+            "Tüm belgeler lex.uz'da numara ve tarihle erişilebilir; bazı sürümlerin metni yalnızca Özbekçe yayımlanmıştır, bu yüzden avukatla çalışırken çeviriye değil madde numarasına atıf yapın. Belgelerden herhangi biri değiştiğinde rehberi güncelliyor ve kontrol tarihini makalenin başında belirtiyoruz.",
+            "Makale gereklilikleri genel hatlarıyla anlatır ve belirli bir tesis için hukuki danışmanlığın yerini tutmaz. Sisteminizin uyumluluk değerlendirmesi gerekiyorsa açıklamasını gönderin — avukatınızla birlikte inceler ve birincil kaynaklara bağlantı ekleriz.",
+          ] },
+        ],
+        faq: [
+          { q: "Özbekistan'da alarm montajı lisansını kim verir?", a: "27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı'na göre lisans veren kurum İçişleri Bakanlığı'dır. Lisans süresiz, sicil kamuya açıktır. Yükleniciyi belge kopyasıyla değil sicille kontrol edin." },
+          { q: "Yangın alarmına ne sıklıkla bakım yapılmalı?", a: "Özbekistan'da «üç ayda bir» normu yoktur. Yangın Güvenliği Kuralları'nın 148. maddesi (649 sayılı Karar) ekipman üreticisinin belgelerine göre yıllık periyodik bakım planı gerektirir." },
+          { q: "Video arşivi yabancı bir bulutta saklanabilir mi?", a: "Sistem Özbekistan vatandaşlarını tanımlıyorsa ZRU-547 Kanunu'nun 27-1. maddesi veri tabanının cumhuriyetteki donanımda saklanmasını gerektirir. Uzaktan erişimli, Özbekistan'daki yerel kayıt cihazı veya sunucu bu şartı karşılar." },
+          { q: "Yeni bir apartmanda kameralar zorunlu mu?", a: "Evet, PP-48 uyarınca 1 Mayıs 2026'dan itibaren: girişlerde, asansörlerde ve çevre alanda kameralar ile giriş kapılarında diafonlar. Bunlar olmadan proje uzman incelemesinden geçmez, bina iskâna kabul edilmez." },
+        ],
+      },
+      zh: {
+        title: "乌兹别克斯坦视频监控、门禁与火灾报警法规：附文件编号的参考指南",
+        excerpt: "规范安防系统的六份乌兹别克斯坦现行文件：谁颁发安装许可、火灾报警如何维护、视频存档存放于何处、新建住宅必须配备什么。仅基于一手来源，不引用俄罗斯规范。",
+        summary: [
+          "报警系统安装许可 — 2018 年 10 月 27 日第 880 号内阁决议：许可证无期限，登记册公开",
+          "火灾报警维护 — 2020 年 10 月 20 日第 649 号内阁决议第 148–149 条：年度计划，而非“每季度一次”",
+          "视频存档与生物识别 — ZRU-547 法第 27-1 条：公民数据库须存储在乌兹别克斯坦境内的服务器上",
+          "新建住宅的摄像机与对讲 — 2026 年 2 月 5 日第 PP-48 号总统决议第 11 条：自 2026 年 5 月 1 日起强制",
+        ],
+        sections: [
+          { h: "为什么不能套用俄罗斯规范", p: [
+            "关于报警或视频监控的任何问题，俄语搜索结果都以俄罗斯联邦的规范作答：“每季度维护一次”“紧急情况部许可证”“SP 3.13130”。乌兹别克斯坦有自己的文件，且在期限、主管机关和客户义务方面结构不同。本指南的每一条我们都按 lex.uz 上的文件原文核对，而非转述。",
+            "指南给出文件编号、日期和关键条款，便于在合同、技术任务书或报道中引用。其中四个主题有详细解读——链接见文末。有效性核对日期：2026 年 9 月 21 日。",
+          ] },
+          { h: "安装许可：2018 年 10 月 27 日第 880 号内阁决议", p: [
+            "内阁第 880 号决议规范消防自动化、入侵报警、火灾报警及综合报警系统的设计、安装、调试、维修和维护活动的许可。根据该决议，发证机关是内务部，而非俄罗斯来源所称的紧急情况部。",
+            "许可证无期限，可仅针对部分工作类型颁发，许可登记册公开。对承包商的要求：在编员工不少于两人，工龄不少于三年，资质不低于三级。我们的文件：国民近卫军安防系统确认书第 1554491 号和紧急情况部消防系统许可证第 913518 号——均公开于“关于公司”页面。",
+          ] },
+          { h: "火灾报警维护：2020 年 10 月 20 日第 649 号内阁决议第 148–149 条", p: [
+            "第 649 号决议批准的《消防安全规则》不含“每季度一次”的规定。经 2022 年 4 月 4 日第 153 号决议修订的第 148 条要求依据设备制造商技术文件编制年度定期维护计划。系统可由场所自有的受训人员或持证机构维护。",
+            "第 149 条为条件性条款：仅当场所专业人员无法自行完成工作时，才须在 30 天内与维护机构签订合同，期限自设备投入使用之日起算。合同解除时，维护机构须在 24 小时内通知区或市紧急情况部门。",
+          ] },
+          { h: "视频存档与生物识别：2019 年 7 月 2 日 ZRU-547 法第 27-1 条", p: [
+            "《个人数据法》将任何可识别个人的信息视为个人数据——面部可辨的视频记录属于此定义，而门禁系统中的人脸或指纹模板属于更严格的类别：生物识别数据。",
+            "第 27-1 条要求乌兹别克斯坦公民的个人数据库须在实际位于共和国境内并在国家个人数据库登记册登记的技术设备上收集、整理和存储。主管机关是内阁下属的国家个人化中心。实际后果：视频存档和生物识别数据库必须存放在乌兹别克斯坦境内的录像机或服务器上，而非制造商的境外云端。",
+          ] },
+          { h: "新建住宅：2026 年 2 月 5 日第 PP-48 号总统决议第 11 条", p: [
+            "第 PP-48 号总统决议要求自 2026 年 5 月 1 日起，新建多层住宅的设计须包含每个单元门厅、电梯及周边区域的视频摄像机，以及单元入口门上的对讲系统。",
+            "缺少这些系统，设计无法通过审查；共用财产未安装的住宅禁止验收投入使用。安装的设备作为共用财产移交物业管理机构，其信息录入“Turarjoy”平台的“Mening uyim”信息系统。",
+          ] },
+          { h: "消防自动化设计：ShNK 2.04.09-2007", p: [
+            "乌兹别克斯坦关于建筑物和构筑物消防自动化的现行规范文件是 ShNK 2.04.09-2007。场所的声光疏散系统类型、自动火灾报警和灭火系统的组成均依据该文件选定。",
+            "许多设计和商业报价引用的俄罗斯 SP 3.13130.2009 和 NPB 104-03 在乌兹别克斯坦不适用。若您的技术任务书引用了“SP”，须改为 ShNK——否则设计无法通过审查。",
+          ] },
+          { h: "设备认证：2021 年 1 月 30 日第 43 号内阁决议", p: [
+            "强制性产品认证由 2021 年 1 月 30 日第 43 号决议规范，目录经 2021 年 11 月 16 日第 683 号决议缩减。这是一份框架性文件：附件中的目录我们未逐行核实，因此在指南中仅作为起点而非现成答案。",
+            "实践中，投标或审查只需向供应商索取具体型号的合格证书——对每一个需要证书的条目，我们都会将其附于规格说明中。",
+          ] },
+          { h: "如何使用本指南", p: [
+            "所有文件均可在 lex.uz 按编号和日期查阅；部分版本仅以乌兹别克语发布，因此与律师合作时请引用条款编号而非译文。任一文件变更时我们会更新指南，并在文章开头注明核对日期。",
+            "本文仅概述要求，不能替代针对具体场所的法律咨询。若需评估您的系统合规性，请发送系统说明——我们将与您的律师共同审阅，并附上一手来源链接。",
+          ] },
+        ],
+        faq: [
+          { q: "乌兹别克斯坦的报警系统安装许可由谁颁发？", a: "根据 2018 年 10 月 27 日第 880 号内阁决议，发证机关是内务部。许可证无期限，登记册公开。核查承包商请以登记册为准，而非文件复印件。" },
+          { q: "火灾报警多久维护一次？", a: "乌兹别克斯坦没有“每季度一次”的规定。《消防安全规则》（第 649 号决议）第 148 条要求依据设备制造商文件编制年度定期维护计划。" },
+          { q: "视频存档可以存放在境外云端吗？", a: "若系统识别乌兹别克斯坦公民，ZRU-547 法第 27-1 条要求数据库存储在共和国境内的技术设备上。带远程访问的本地录像机或境内服务器即可满足该要求。" },
+          { q: "新建住宅楼必须安装摄像机吗？", a: "是的，依据 PP-48，自 2026 年 5 月 1 日起：门厅、电梯和周边区域安装摄像机，入口门安装对讲。缺少这些，设计无法通过审查，住宅不予验收。" },
+        ],
+      },
+    },
+  },
+  {
     slug: "uchet-rabochego-vremeni-po-litsu",
     date: "2026-09-18",
     updated: "2026-09-18",
