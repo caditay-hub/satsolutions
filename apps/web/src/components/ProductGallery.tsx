@@ -25,6 +25,14 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
   // пересчитывать активный индекс из промежуточных позиций ленты
   const scrolling = useRef(false);
 
+  // следующий кадр подгружаем заранее — свайп не должен упираться в белый квадрат
+  useEffect(() => {
+    const next = list[active + 1];
+    if (!next) return;
+    const img = new window.Image();
+    img.src = next;
+  }, [active, list]);
+
   useEffect(() => {
     const strip = stripRef.current;
     if (!strip) return;
@@ -82,6 +90,7 @@ export function ProductGallery({ images, alt }: { images: string[]; alt: string 
                 sizes="100vw"
                 className="object-contain p-6"
                 priority={i === 0}
+                loading={i < 2 ? "eager" : "lazy"}
                 unoptimized
               />
             </div>
