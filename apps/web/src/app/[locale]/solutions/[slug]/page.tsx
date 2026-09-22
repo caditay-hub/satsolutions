@@ -565,6 +565,32 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           </section>
         )}
 
+        {/* Дополнительные разделы текста со своим H2 (22.09.2026: видеонаблюдение —
+            «Камеры наблюдения для дома, офиса, магазина и склада» под запросы людей) */}
+        {content?.extra?.map((x) => (
+          <section key={x.heading} className="mt-12">
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{x.heading}</h2>
+            <div className="mt-5 grid grid-cols-1 gap-x-14 gap-y-7 lg:grid-cols-2">
+              {x.paragraphs.map((p, i) => {
+                const [lead, rest] = splitLead(p);
+                return (
+                  <p key={i} className="text-[15px] leading-7 text-slate-600 sm:text-base">
+                    {lead ? <strong className="font-bold text-slate-900">{lead}</strong> : null}
+                    {rest}
+                  </p>
+                );
+              })}
+            </div>
+            {x.links?.length ? (
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                {x.links.map((l) => (
+                  <Link key={l.href} href={l.href as any} className="text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
+                ))}
+              </div>
+            ) : null}
+          </section>
+        ))}
+
         {/* СКС и ЛВС: типовые конфигурации, этапы, бренды каталога */}
         {svc.key === "network" && <NetworkDetails locale={locale} />}
 

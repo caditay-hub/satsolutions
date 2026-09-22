@@ -7,7 +7,9 @@
 // Фолбэк: нет ключа для локали → блок просто не рендерится (лучше пусто, чем
 // машинный перевод). RU — источник; uz/en догоняются вручную позже.
 
-export type ServiceContent = { heading: string; paragraphs: string[] };
+export type ServiceExtra = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[] };
+// extra — необязательные дополнительные разделы со своим H2 (22.09.2026: cctv — «Камеры наблюдения…»).
+export type ServiceContent = { heading: string; paragraphs: string[]; extra?: ServiceExtra[] };
 
 const ru: Record<string, ServiceContent> = {
   "sistemnaya-integraciya": {
@@ -69,6 +71,21 @@ const ru: Record<string, ServiceContent> = {
       "Видеонаблюдение для дома и квартиры мы ставим так же, как коммерческое, только проще по составу: две-четыре камеры на въезд, двор и вход, регистратор с архивом на 7–30 дней и просмотр с телефона. Для частного дома обычно берут камеры с ночной съёмкой и защитой от осадков, для квартиры хватает одной внутренней камеры и вызывной панели. Если нужно только видеть, что происходит, пока вас нет, — это самая недорогая конфигурация, и мы честно скажем, когда переплачивать за разрешение 4K не за чем.",
       "Систему мало установить — её нужно поддерживать. Смонтированное нами видеонаблюдение мы берём на сервисное обслуживание: проверяем запись и глубину архива, чистим объективы, следим за дисками регистратора (именно они выходят из строя первыми) и обновляем прошивки. Отдельная услуга — аудит перед модернизацией: обследуем действующую систему и показываем цифрами, что с ней не так. Часто оказывается, что половина камер пишет в никуда, а архив перезаписывается раньше, чем кто-то успевает посмотреть событие; по итогам считаем замену оборудования, после которой объект встаёт на регламент.",
       "Видеокамеры подбирают под конкретную сцену. Купольные ставят в помещениях с ровным потолком, цилиндрические — вдоль фасадов и периметра, поворотные PTZ — там, где один оператор ведёт крупный объект. Разрешение 2 Мп остаётся читаемым на десяти метрах, 4 Мп удерживает деталь на двадцати, 8 Мп нужны для широкой сцены без потери лица. Ночью выбирают между цветной съёмкой при слабом свете и инфракрасной подсветкой. На въезде ставят отдельную камеру распознавания номеров — так установка видеонаблюдения закрывает и учёт транспорта.",
+    ],
+    extra: [
+      {
+        heading: "Камеры наблюдения для дома, офиса, магазина и склада",
+        paragraphs: [
+          "Камера наблюдения — это не один товар, а класс устройств под разные задачи, и выбор начинается с места, а не с бренда. Внутренняя камера видеонаблюдения для офиса или магазина работает в тепле и при ровном освещении, поэтому здесь важны угол обзора и разрешение, чтобы читать лица у кассы и на входе. Уличная, она же наружная, камера должна выдерживать пыль, дождь и мороз ташкентской зимы: корпус с защитой IP66 или IP67, инфракрасная подсветка на 30–50 метров и козырёк от засветки солнцем. Мы ставим и те и другие, и на большинстве объектов их сочетаем.",
+          "Домашнее видеонаблюдение чаще всего начинается с одной беспроводной камеры. Wi-Fi камера (в запросах её пишут и как «wifi камера») с записью на карту памяти и просмотром с телефона ставится за час, без штробления и кабеля. Для частного дома добавляем одну-две уличные видеокамеры на въезд и во двор, подключённые к небольшому регистратору, чтобы архив не зависел от интернета. Такие камеры для дома есть в каталоге с ценами, а установку делаем в день обращения.",
+          "Для бизнеса и предприятия камеры наблюдения решают конкретные задачи, и систему мы проектируем от них. Магазину нужны камеры над кассами и в торговом зале с подсчётом посетителей. Складу — обзор зон приёмки и отгрузки, распознавание номеров на воротах и запись 30 суток. Офису — вход, коридоры и переговорные с ограниченным доступом. Производству — цеха, периметр и КПП с интеграцией в контроль доступа. Для сети филиалов собираем единый архив и просмотр всех объектов из головного офиса.",
+          "Как компания по установке видеонаблюдения мы делаем всё своим штатом: 3 инженера и 15 монтажников, оборудование Hikvision, Dahua и HiLook со склада в Ташкенте, гарантия 3 года на работы. Что именно поставить на ваш объект, скажем после бесплатного выезда, а ориентир по цене можно получить прямо сейчас в разделе «Сколько стоит установка» выше или в калькуляторе.",
+        ],
+        links: [
+          { label: "Wi-Fi камеры для дома в каталоге", href: "/products/type/besprovodnye-kamery" },
+          { label: "Обслуживание видеонаблюдения по договору", href: "/solutions/obsluzhivanie" },
+        ],
+      },
     ],
   },
   "access": {
@@ -514,6 +531,21 @@ const uz: Record<string, ServiceContent> = {
       "Tizimni oʻrnatishning oʻzi yetarli emas, uni qoʻllab-quvvatlash kerak. Oʻzimiz montaj qilgan videokuzatuvni servis xizmatiga olamiz: yozuv va arxiv chuqurligini tekshiramiz, obyektivlarni tozalaymiz, registrator disklarini kuzatamiz (aynan ular birinchi boʻlib ishdan chiqadi) va proshivkalarni yangilaymiz. Alohida xizmat — modernizatsiyadan oldingi audit: amaldagi tizimni koʻzdan kechirib, unda nima notoʻgʻriligini raqamlarda koʻrsatamiz. Koʻpincha kameralarning yarmi hech qayerga yozmayotgani, arxiv esa voqeani koʻrishga ulgurmasdan qayta yozilayotgani maʼlum boʻladi; natijaga koʻra uskuna almashtirishni hisoblaymiz, undan keyin obyekt reglamentga tushadi.",
       "Videokameralar aniq vazifaga qarab tanlanadi. Kupolsimon modellar tekis shiftli xonalarga, silindrsimon modellar fasad va perimetr boʻylab, PTZ boshqariluvchi kameralar esa bitta operator katta hududni kuzatadigan joyga qoʻyiladi. 2 MP oʻn metrgacha oʻqilarli qoladi, 4 MP yigirma metrda tafsilotni ushlab turadi, 8 MP keng sahnada yuzni yoʻqotmaydi. Tunda kam yorugʻlikdagi rangli tasvir yoki infraqizil yoritish tanlanadi. Kirish darvozasiga raqam tanuvchi alohida kamera qoʻyiladi, shunda videokuzatuv oʻrnatish transport hisobini ham qamrab oladi.",
     ],
+    extra: [
+      {
+        heading: "Uy, ofis, doʻkon va ombor uchun kuzatuv kameralari",
+        paragraphs: [
+          "Kuzatuv kamerasi — bitta tovar emas, turli vazifalar uchun qurilmalar sinfi, va tanlov branddan emas, joydan boshlanadi. Ofis yoki doʻkon uchun ichki videokuzatuv kamerasi issiq xonada, bir tekis yorugʻlikda ishlaydi, shuning uchun bu yerda kassa va kirishdagi yuzlarni oʻqish uchun koʻrish burchagi va tiniqlik muhim. Koʻcha, yaʼni tashqi kamera chang, yomgʻir va Toshkent qishining sovugʻiga chidashi kerak: IP66 yoki IP67 himoyali korpus, 30–50 metrga infraqizil yoritish va quyoshdan himoya qiluvchi soyabon. Biz ikkalasini ham oʻrnatamiz va koʻpchilik obyektlarda ularni birlashtiramiz.",
+          "Uy videokuzatuvi koʻpincha bitta simsiz kameradan boshlanadi. Xotira kartasiga yozadigan va telefondan koʻrsatadigan Wi-Fi kamera (soʻrovlarda uni «wifi kamera» deb ham yozishadi) bir soatda, devor teshmasdan va kabelsiz oʻrnatiladi. Xususiy uy uchun kirish va hovliga bir-ikkita koʻcha videokamerasini qoʻshamiz, ular kichik registratorga ulanadi, shunda arxiv internetga bogʻliq boʻlmaydi. Bunday uy kameralari katalogda narxlari bilan bor, oʻrnatishni murojaat kuniyoq bajaramiz.",
+          "Biznes va korxona uchun kuzatuv kameralari aniq vazifalarni hal qiladi, tizimni ham shulardan kelib chiqib loyihalaymiz. Doʻkonga kassalar ustida va savdo zalida tashrif buyuruvchilarni sanaydigan kameralar kerak. Omborga — qabul va joʻnatish zonalarini koʻrish, darvozada raqamlarni aniqlash va 30 kunlik yozuv. Ofisga — kirish, yoʻlaklar va cheklangan kirishli majlis xonalari. Ishlab chiqarishga — sexlar, perimetr va nazorat punkti, kirishni nazorat qilish tizimi bilan birlashtirilgan holda. Filiallar tarmogʻi uchun yagona arxiv va barcha obyektlarni bosh ofisdan koʻrishni yigʻamiz.",
+          "Videokuzatuv oʻrnatuvchi kompaniya sifatida hammasini oʻz jamoamiz bilan qilamiz: 3 muhandis va 15 montajchi, Toshkentdagi ombordan Hikvision, Dahua va HiLook uskunalari, ishlarga 3 yil kafolat. Obyektingizga aynan nima oʻrnatishni bepul chiqishdan soʻng aytamiz, narx boʻyicha moʻljalni esa hoziroq yuqoridagi «qancha turadi» boʻlimida yoki kalkulyatorda olishingiz mumkin.",
+        ],
+        links: [
+          { label: "Katalogda uy uchun Wi-Fi kameralar", href: "/products/type/besprovodnye-kamery" },
+          { label: "Videokuzatuvga shartnoma boʻyicha xizmat koʻrsatish", href: "/solutions/obsluzhivanie" },
+        ],
+      },
+    ],
   },
   "access": {
     heading: "Toshkentda kirishni nazorat qilish tizimlari (SKUD) — toʻliq tayyor holda",
@@ -955,6 +987,21 @@ const en: Record<string, ServiceContent> = {
       "Home and apartment surveillance is built the same way as commercial, only simpler: two to four cameras for the driveway, yard and entrance, a recorder with a 7–30 day archive and phone viewing. A private house usually takes night-vision weatherproof cameras; an apartment needs one indoor camera and a doorbell panel. If you only need to see what happens while you are away, that is the least expensive configuration — and we will say honestly when paying extra for 4K makes no sense.",
       "Installing a system is not enough — it needs upkeep. CCTV we installed ourselves goes onto a service contract: checking recording and archive depth, cleaning lenses, watching the recorder's disks (they fail first) and updating firmware. A separate service is an audit before modernisation: we survey the working system and show in numbers what is wrong with it. It often turns out half the cameras record into the void and the archive overwrites before anyone can review an event; we then cost out the equipment replacement, after which the site goes onto a schedule.",
       "Cameras are chosen for the scene they actually cover. Dome units suit flat indoor ceilings, bullet units run along facades and perimeter fences, and PTZ models fit sites where a single operator watches a large area. 2 MP stays readable at ten metres, 4 MP holds detail at twenty, 8 MP keeps faces legible across a wide scene. At night the choice is between low-light colour imaging and infrared illumination, while a separate licence plate camera at the entrance adds vehicle logging.",
+    ],
+    extra: [
+      {
+        heading: "Surveillance cameras for homes, offices, shops and warehouses",
+        paragraphs: [
+          "A surveillance camera is not one product but a class of devices for different jobs, and the choice starts with the location, not the brand. An indoor camera for an office or shop works in warmth and even light, so what matters is the viewing angle and resolution to read faces at the till and the entrance. An outdoor camera has to survive dust, rain and the Tashkent winter: an IP66 or IP67 housing, infrared illumination to 30–50 metres and a hood against sun glare. We install both and combine them on most sites.",
+          "Home video surveillance usually starts with one wireless camera. A Wi-Fi camera that records to a memory card and streams to your phone goes up in an hour, with no chasing or cable. For a private house we add one or two outdoor cameras on the driveway and yard, connected to a small recorder so the archive does not depend on the internet. These home cameras are in our catalogue with prices, and we install on the day you call.",
+          "For businesses and industrial sites, cameras solve specific tasks, and we design the system around them. A shop needs cameras over the tills and in the sales area with people counting. A warehouse needs coverage of receiving and dispatch zones, number-plate recognition at the gate and 30 days of recording. An office needs the entrance, corridors and meeting rooms with restricted access. A factory needs workshops, the perimeter and the checkpoint integrated with access control. For a chain of branches we build a single archive with viewing of every site from head office.",
+          "As a CCTV installation company we do everything in-house: 3 engineers and 15 installers, Hikvision, Dahua and HiLook equipment from our Tashkent warehouse, a 3-year warranty on the work. We will tell you exactly what to install after a free site visit, and you can get a price guide right now in the “What installation costs” section above or in the calculator.",
+        ],
+        links: [
+          { label: "Wi-Fi home cameras in the catalogue", href: "/products/type/besprovodnye-kamery" },
+          { label: "CCTV maintenance under contract", href: "/solutions/obsluzhivanie" },
+        ],
+      },
     ],
   },
   "servers": {
@@ -1623,6 +1670,21 @@ const tr: Record<string, ServiceContent> = {
       "Sistemi kurmak yetmez — bakım ister. Kendi kurduğumuz kamera sistemlerini sözleşmeyle servise alırız: kayıt ve arşiv derinliği kontrolü, lens temizliği, kayıt cihazı disklerinin takibi (önce onlar bozulur) ve yazılım güncellemeleri. Ayrı bir hizmet, modernizasyon öncesi denetimdir: çalışan sistemi inceler, neyin yanlış olduğunu rakamlarla gösteririz. Çoğu kez kameraların yarısının boşa kaydettiği ve arşivin, olay izlenemeden üzerine yazıldığı ortaya çıkar; sonrasında ekipman değişimini fiyatlarız ve tesis periyodik bakıma alınır.",
       "Kameralar izlenecek sahneye göre seçilir. Dome modeller düz tavanlı iç mekânlara, bullet modeller cephe ve çevre hattına, PTZ modeller ise tek bir operatörün geniş alanı izlediği sahalara uygundur. 2 MP on metrede okunur kalır, 4 MP yirmi metrede ayrıntıyı korur, 8 MP geniş sahnede yüzleri kaybetmez. Gece için düşük ışıkta renkli görüntü ile kızılötesi aydınlatma arasında seçim yapılır; girişe konan ayrı plaka tanıma kamerası araç kaydını da kapsar.",
     ],
+    extra: [
+      {
+        heading: "Ev, ofis, mağaza ve depo için güvenlik kameraları",
+        paragraphs: [
+          "Güvenlik kamerası tek bir ürün değil, farklı işler için bir cihaz sınıfıdır ve seçim markadan değil yerden başlar. Ofis veya mağaza için iç mekân kamerası sıcak ve düzgün aydınlatılmış ortamda çalışır; burada kasada ve girişte yüzleri okumak için görüş açısı ve çözünürlük önemlidir. Dış mekân kamerası ise toza, yağmura ve Taşkent kışının soğuğuna dayanmalıdır: IP66 veya IP67 gövde, 30–50 metre kızılötesi aydınlatma ve güneş parlamasına karşı siperlik. Her ikisini de kuruyor, çoğu sahada birlikte kullanıyoruz.",
+          "Ev için video gözetim çoğunlukla tek bir kablosuz kamerayla başlar. Hafıza kartına kaydeden ve telefondan izlenen Wi-Fi kamera bir saatte, duvar kırmadan ve kablosuz kurulur. Müstakil ev için giriş ve avluya bir iki dış mekân kamerası ekler, arşiv internete bağlı kalmasın diye küçük bir kayıt cihazına bağlarız. Bu ev kameraları kataloğumuzda fiyatlarıyla var; kurulumu başvuru günü yapıyoruz.",
+          "İşletmeler ve tesisler için kameralar somut görevleri çözer ve sistemi bu görevlere göre tasarlarız. Mağazaya kasaların üstünde ve satış alanında ziyaretçi sayan kameralar gerekir. Depoya mal kabul ve sevkiyat alanlarının izlenmesi, kapıda plaka tanıma ve 30 günlük kayıt. Ofise giriş, koridorlar ve erişimi kısıtlı toplantı odaları. Fabrikaya atölyeler, çevre ve geçiş kontrolüyle entegre kontrol noktası. Şube ağı için tek arşiv ve tüm sahaların merkez ofisten izlenmesini kuruyoruz.",
+          "Kamera sistemi kurulum firması olarak her şeyi kendi ekibimizle yapıyoruz: 3 mühendis ve 15 montajcı, Taşkent depomuzdan Hikvision, Dahua ve HiLook ekipmanı, işçiliğe 3 yıl garanti. Sahanıza tam olarak ne kurulacağını ücretsiz keşiften sonra söyleriz; fiyat için yol göstericiyi hemen yukarıdaki “ne kadar” bölümünden veya hesaplayıcıdan alabilirsiniz.",
+        ],
+        links: [
+          { label: "Katalogda ev için Wi-Fi kameralar", href: "/products/type/besprovodnye-kamery" },
+          { label: "Sözleşmeli kamera sistemi bakımı", href: "/solutions/obsluzhivanie" },
+        ],
+      },
+    ],
   },
   "fire": {
     heading: "Taşkent'te Yangın Alarmı ve Sesli Tahliye Sistemi Kurulumu",
@@ -2059,6 +2121,21 @@ const zh: Record<string, ServiceContent> = {
       "家庭和公寓监控与商用同样标准，只是构成更简单：车道、院子和入口两到四台摄像机，录像机存7–30天，手机随时查看。私宅通常选夜视防水摄像机；公寓一台室内机加可视门铃即可。如果只想看看不在家时发生了什么，这是最省钱的配置——什么时候不值得为4K多花钱，我们会照实说。",
       "系统装好不等于万事大吉——它需要维护。由我方施工的监控系统按合同纳入维保：检查录像和存储时长、清洁镜头、盯着录像机硬盘（它们最先坏）、升级固件。另一项单独服务是改造前审计：勘察在用系统，用数字说明问题出在哪里。经常发现一半摄像机在录空气，事件还没来得及查看，存档就被覆盖了；据此核算设备更换，改造完成后场所纳入定期维保。",
       "摄像机应按照实际监控场景选型。半球机适合平整吊顶的室内区域，枪机沿建筑立面和周界布置，PTZ 云台机则用于一名值班人员需要覆盖大范围场地的位置。2 兆像素在十米内保持可辨认，4 兆像素在二十米处仍能保留细节，8 兆像素用于宽幅画面而不丢失人脸细节。夜间需在微光全彩成像与红外补光之间做出取舍；出入口另设车牌识别摄像机，视频监控安装同时完成车辆通行记录。",
+    ],
+    extra: [
+      {
+        heading: "住宅、办公室、商店与仓库的监控摄像机",
+        paragraphs: [
+          "监控摄像机不是单一产品，而是针对不同任务的一类设备，选型从安装位置开始，而不是从品牌开始。办公室或商店的室内摄像机在温暖、光线均匀的环境中工作，因此关键是视角和分辨率，以便看清收银台和入口处的人脸。室外摄像机则要经受灰尘、雨水和塔什干冬季的严寒：IP66 或 IP67 防护外壳、30–50 米红外补光以及防阳光眩光的遮阳罩。两类我们都安装，多数场所会将二者结合使用。",
+          "家庭视频监控通常从一台无线摄像机开始。Wi-Fi 摄像机录像存入存储卡并可在手机上查看，一小时即可装好，无需开槽布线。对于独栋住宅，我们会在入口和院子增加一到两台室外摄像机，接入小型录像机，让录像归档不依赖网络。这类家用摄像机在目录中均有标价，安装当天即可完成。",
+          "对于企业和生产场所，摄像机解决的是具体任务，我们据此设计系统。商店需要收银台上方和营业区带客流统计的摄像机；仓库需要覆盖收货与发货区、大门车牌识别和 30 天录像；办公室需要入口、走廊和受限进入的会议室；工厂需要车间、周界和与门禁联动的门岗。对于连锁分支机构，我们搭建统一归档，可在总部查看所有场所。",
+          "作为视频监控安装公司，我们全部由自有团队完成：3 名工程师和 15 名安装人员，塔什干仓库现货海康威视、大华和 HiLook 设备，工程质保 3 年。免费勘查后我们会告诉您具体应安装什么；价格参考可立即在上方\"安装多少钱\"栏目或计算器中获取。",
+        ],
+        links: [
+          { label: "目录中的家用 Wi-Fi 摄像机", href: "/products/type/besprovodnye-kamery" },
+          { label: "合同制视频监控维保", href: "/solutions/obsluzhivanie" },
+        ],
+      },
     ],
   },
   "fire": {
