@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
+import { ContactButtons } from "@/components/ContactButtons";
+import { WorkTerms } from "@/components/WorkTerms";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { getProductsCached } from "@/lib/api";
@@ -63,6 +65,14 @@ const D: Record<string, Block> = {
         p: [
           "Обследование объекта и проект: сколько точек, где проходят трассы, какая пропускная способность нужна. Поставка оборудования, монтаж, пусконаладка и настройка платформы. Обучение вашей охраны и кадровой службы, интеграция с 1С и CRM, гарантия и сервис в Ташкенте.",
           "Отдельно считаем стоимость монтажных работ — можно прикинуть бюджет заранее в калькуляторе на сайте.",
+        ],
+      },
+      {
+        h: "Популярные модели ZKTeco в наличии и табель в 1С",
+        p: [
+          "Терминалы распознавания лиц SpeedFace — самая востребованная линейка ZKTeco на нашем складе. SpeedFace-V3L и V3L Lite ставят на дверь офиса на 50–500 сотрудников, SpeedFace-V5L и V5L-RFID с картами — на проходную, SpeedFace M4 — на улицу и КПП. Там, где лицо не подходит из-за касок и масок, работает терминал F18 по отпечатку и коду, а двери без терминала подключаются к сетевым контроллерам C3-200 и C3-400.",
+          "Проходную собираем из турникетов ZKTeco: триподы TS1000 и TS2000 для офисов и заводов, калитки Saturn и SBTL для маломобильных посетителей и гостей, флап-турникеты FBL500 и FBL700 для бизнес-центров. На въезде — шлагбаум BGM500 со стрелой до 6 метров или складной PB4130 для паркинга с низким потолком, и радар VR10 Pro, который не даёт стреле опуститься на машину. Всё это работает в одной программе ZKBio CVSecurity: пропуск сотрудника действует и на двери, и на проходной, и на въезде.",
+          "Учёт рабочего времени на ZKTeco доводим до табеля: проходы через терминалы попадают в нашу систему учёта времени, а из неё табель выгружается в 1С по сменам, с опозданиями и переработками. Установка и настройка своим штатом за 1–3 дня, договор с юрлицом, гарантия 3 года на работы.",
         ],
       },
     ],
@@ -135,6 +145,14 @@ const D: Record<string, Block> = {
           "Montaj ishlari narxini alohida hisoblaymiz — byudjetni saytdagi kalkulyatorda oldindan chamalash mumkin.",
         ],
       },
+      {
+        h: "Omborda bor mashhur ZKTeco modellari va 1C dagi tabel",
+        p: [
+          "SpeedFace yuzni aniqlash terminallari — omborimizdagi eng talabgir ZKTeco liniyasi. SpeedFace-V3L va V3L Lite 50–500 xodimli ofis eshigiga, kartali SpeedFace-V5L va V5L-RFID — oʻtish punktiga, SpeedFace M4 — koʻcha va nazorat punktiga oʻrnatiladi. Kaska va niqob tufayli yuz mos kelmagan joyda barmoq izi va kod boʻyicha F18 terminali ishlaydi, terminalsiz eshiklar esa C3-200 va C3-400 tarmoq kontrollerlariga ulanadi.",
+          "Oʻtish punktini ZKTeco turniketlaridan yigʻamiz: ofis va zavodlar uchun TS1000 va TS2000 tripodlari, harakati cheklangan tashrif buyuruvchilar va mehmonlar uchun Saturn va SBTL darvozachalari, biznes-markazlar uchun FBL500 va FBL700 flap-turniketlari. Kirish yoʻlida — 6 metrgacha strelali BGM500 shlagbaumi yoki past shipli avtoturargoh uchun buklanadigan PB4130, hamda strelani mashinaga tushirmaydigan VR10 Pro radari. Bularning bari yagona ZKBio CVSecurity dasturida ishlaydi: xodim ruxsatnomasi eshikda ham, oʻtish punktida ham, kirish yoʻlida ham amal qiladi.",
+          "ZKTeco da ish vaqtini hisobga olishni tabelgacha olib boramiz: terminallar orqali oʻtishlar bizning vaqt hisobi tizimimizga tushadi, undan tabel smenalar, kechikishlar va ortiqcha ishlar bilan 1C ga yuklanadi. Oʻrnatish va sozlash oʻz jamoamiz bilan 1–3 kunda, yuridik shaxs bilan shartnoma, ishlarga 3 yil kafolat.",
+        ],
+      },
     ],
     cases: [
       { h: "Biznes-markaz", t: "Holldagi turniketlar, parkingdagi shlagbaum, mehmon QR-propusklari va ijarachilar ish vaqtini hisobga olish." },
@@ -203,6 +221,14 @@ const D: Record<string, Block> = {
         p: [
           "Site survey and design: how many points, where the routes run, what throughput is needed. Supply, installation, commissioning and platform setup. Training for your security and HR teams, integration with ERP and CRM, warranty and service in Tashkent.",
           "Installation work is priced separately — you can estimate the budget in advance with the calculator on this site.",
+        ],
+      },
+      {
+        h: "Popular ZKTeco models in stock and timesheets in 1C",
+        p: [
+          "SpeedFace face-recognition terminals are the most requested ZKTeco line in our warehouse. SpeedFace-V3L and V3L Lite go on an office door for 50–500 staff, SpeedFace-V5L and V5L-RFID with cards on a checkpoint, SpeedFace M4 outdoors and at gates. Where faces do not work because of helmets and masks, the F18 terminal reads fingerprints and codes, and doors without a terminal connect to C3-200 and C3-400 network controllers.",
+          "We build a checkpoint from ZKTeco turnstiles: TS1000 and TS2000 tripods for offices and factories, Saturn and SBTL gates for visitors with reduced mobility and guests, FBL500 and FBL700 flap barriers for business centres. At the entrance — a BGM500 barrier with a boom up to 6 metres or a folding PB4130 for low-ceiling parking, plus the VR10 Pro radar that keeps the boom from dropping on a car. All of it runs in one ZKBio CVSecurity platform: an employee’s pass works on the door, the checkpoint and the entrance.",
+          "We take ZKTeco time and attendance all the way to the timesheet: terminal events go to our attendance system and the timesheet is exported to 1C by shift, with late arrivals and overtime. Installation and setup by our own team in 1–3 days, a contract with a legal entity, a 3-year warranty on the work.",
         ],
       },
     ],
@@ -275,6 +301,14 @@ const D: Record<string, Block> = {
           "Montaj işçiliğini ayrıca hesaplıyoruz — bütçeyi sitedeki hesaplayıcıyla önceden görebilirsiniz.",
         ],
       },
+      {
+        h: "Stoktaki popüler ZKTeco modelleri ve 1C’de puantaj",
+        p: [
+          "SpeedFace yüz tanıma terminalleri depomuzdaki en çok talep gören ZKTeco serisidir. SpeedFace-V3L ve V3L Lite 50–500 çalışanlı ofis kapısına, kartlı SpeedFace-V5L ve V5L-RFID geçiş noktasına, SpeedFace M4 dış mekâna ve giriş kapılarına takılır. Baret ve maske yüzünden yüzün işe yaramadığı yerde F18 terminali parmak izi ve kodla çalışır; terminalsiz kapılar C3-200 ve C3-400 ağ kontrolörlerine bağlanır.",
+          "Geçiş noktasını ZKTeco turnikelerinden kuruyoruz: ofis ve fabrikalar için TS1000 ve TS2000 tripodlar, hareket kısıtlı ziyaretçiler ve misafirler için Saturn ve SBTL kapıları, iş merkezleri için FBL500 ve FBL700 flap turnikeler. Girişte 6 metreye kadar kollu BGM500 bariyer veya alçak tavanlı otopark için katlanır PB4130 ve kolun aracın üzerine inmesini önleyen VR10 Pro radar. Hepsi tek ZKBio CVSecurity yazılımında çalışır: çalışan kartı kapıda, geçiş noktasında ve girişte geçerlidir.",
+          "ZKTeco ile personel devam takibini puantaja kadar götürüyoruz: terminal geçişleri devam takip sistemimize düşer, oradan puantaj vardiya, geç kalma ve fazla mesaiyle 1C’ye aktarılır. Kurulum ve ayar kendi ekibimizle 1–3 günde, tüzel kişiyle sözleşme, işçiliğe 3 yıl garanti.",
+        ],
+      },
     ],
     cases: [
       { h: "İş merkezi", t: "Lobide turnikeler, otoparkta bariyer, misafir QR kartları ve kiracı mesai takibi." },
@@ -343,6 +377,14 @@ const D: Record<string, Block> = {
         p: [
           "现场勘察与设计：点位数量、线路走向、所需通行能力。设备供货、安装、调试与平台配置。对贵方安保与人事团队的培训，与 ERP、CRM 的集成，以及塔什干的质保与售后。",
           "安装施工费单独核算——可先用本站计算器估算预算。",
+        ],
+      },
+      {
+        h: "现货热门 ZKTeco 型号与 1C 考勤表",
+        p: [
+          "SpeedFace 人脸识别终端是我们仓库中最受欢迎的 ZKTeco 系列。SpeedFace-V3L 和 V3L Lite 适用于 50–500 人办公室的门，带刷卡的 SpeedFace-V5L 和 V5L-RFID 适用于门岗，SpeedFace M4 适用于室外和大门。在安全帽和口罩导致人脸不可用的场合，F18 终端以指纹和密码工作；无终端的门接入 C3-200 和 C3-400 网络控制器。",
+          "门岗由 ZKTeco 闸机组成：办公室和工厂用 TS1000、TS2000 三辊闸，行动不便者和访客用 Saturn、SBTL 通道门，商务中心用 FBL500、FBL700 翼闸。入口处配杆长达 6 米的 BGM500 道闸，或低层高停车场用的折臂 PB4130，以及防止闸杆落到车上的 VR10 Pro 雷达。全部在同一 ZKBio CVSecurity 平台运行：员工通行证在门、门岗和入口均有效。",
+          "ZKTeco 考勤我们做到考勤表：终端通行记录进入我们的考勤系统，再按班次、迟到和加班导出到 1C。自有团队 1–3 天完成安装调试，与法人签约，工程质保 3 年。",
         ],
       },
     ],
@@ -522,14 +564,20 @@ export default async function ZKTecoPartnerPage({ params }: { params: Promise<{ 
             </Link>
           </section>
         )}
+
+        {/* Условия работы — те же шесть фактов, что на страницах услуг (22.09.2026) */}
+        <WorkTerms locale={locale} className="mt-14" />
       </div>
 
-      {/* CTA */}
+      {/* CTA: КП плюс телефон, Telegram и WhatsApp — раньше на странице не было ни одного контакта */}
       <section className="bg-slate-900 text-white">
         <div className="container-page flex flex-col items-center gap-5 py-12 text-center sm:py-14">
           <h2 className="max-w-2xl text-2xl font-black tracking-tight sm:text-3xl">{d.ctaTitle}</h2>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-300">{d.ctaText}</p>
           <RequestQuoteButton label={d.ctaBtn} variant="brand" productName="Заявка со страницы партнёрства ZKTeco" />
+          <div data-placement="order-block" className="grid w-full max-w-md grid-cols-3 gap-2">
+            <ContactButtons compact full />
+          </div>
         </div>
       </section>
     </div>
