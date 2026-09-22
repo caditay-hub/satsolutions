@@ -2078,7 +2078,7 @@
       ],
       "details": {
         "pkgLabel": "Tip çözümler",
-        "pkgTitle": "Banka için üç tip çözüm",
+        "pkgTitle": "Banka ve ofis için tip çözümler",
         "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
         "packages": [
           {
@@ -2113,6 +2113,17 @@
               "Tüm noktalara SLA'lı bakım"
             ],
             "term": "Süre: kademeli"
+          },
+          {
+            "name": "İş merkezinde ofis veya kat",
+            "for": "20–200 çalışanlı şirketler",
+            "items": [
+              "Girişte kartlı veya yüz tanımalı geçiş kontrolü",
+              "Giriş, resepsiyon ve koridorlara kameralar",
+              "1C’ye aktarımlı personel devam takibi",
+              "Resepsiyonda panik butonu"
+            ],
+            "term": "Süre: 1–3 gün"
           }
         ],
         "brandsLabel": "Ekipman",

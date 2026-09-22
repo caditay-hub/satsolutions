@@ -9,7 +9,7 @@
 
 export type ServiceExtra = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[] };
 // extra — необязательные дополнительные разделы со своим H2 (22.09.2026: cctv — «Камеры наблюдения…»).
-export type ServiceContent = { heading: string; paragraphs: string[]; extra?: ServiceExtra[] };
+export type ServiceContent = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[]; extra?: ServiceExtra[] };
 
 const ru: Record<string, ServiceContent> = {
   "sistemnaya-integraciya": {
@@ -498,6 +498,20 @@ const ru: Record<string, ServiceContent> = {
       "Работаем с Ubiquiti, MikroTik и другим проверенным оборудованием со склада в Ташкенте. Обследование и расчёт канала — бесплатно: приезжаем с оборудованием, измеряем сигнал на реальной трассе и называем достижимую скорость до покупки. Монтаж с гарантией, мониторинг и обслуживание по договору — по всему Узбекистану.",
     ],
   },
+  "bank": {
+    heading: "Системы безопасности для офиса и бизнес-центра",
+    paragraphs: [
+      "Система безопасности офиса собирается из трёх частей: СКУД на входе и в служебные помещения, видеонаблюдение в общих зонах и учёт рабочего времени. Для офиса на одном этаже это дверь с терминалом по карте или лицу, две-четыре камеры на вход, ресепшн и коридор и небольшой регистратор. Для компании на несколько этажей — контроллеры на каждый этаж, турникет в лобби и единая база сотрудников.",
+      "СКУД для офиса решает не только вопрос «кто зашёл». Проход по лицу убирает очередь у двери утром, гостевые QR-коды снимают тему временных пропусков, а журнал проходов уходит в табель и в 1С, так что переработки и опоздания считаются без кадровика. Права по зонам и времени задаёт администратор сам, вызывать подрядчика для этого не нужно.",
+      "Видеонаблюдение в бизнес-центре строим как одну систему для управляющей компании и арендаторов: общие зоны, лифтовые холлы, паркинг и входные группы под наблюдением УК, а камеры внутри офисов остаются в доступе арендатора. Камеры для офиса ставим с записью 30 суток, доступ к архиву разграничиваем по ролям. Тревожная кнопка на ресепшне с выводом на пульт охраны добавляется в ту же систему.",
+      "Монтаж в работающем офисе делаем без остановки работы: кабель ведём в существующих коробах и за подвесным потолком, шумные операции планируем на вечер и выходные. Обследование и смета бесплатно, типовой офис на одну дверь и четыре камеры запускаем за один-два дня. Дальше система переходит на обслуживание по договору вместе с остальными системами здания.",
+    ],
+    links: [
+      { label: "СКУД: контроль доступа под ключ", href: "/solutions/access" },
+      { label: "Учёт рабочего времени", href: "/solutions/attendance" },
+      { label: "Турникеты для бизнес-центра", href: "/solutions/turnstile" },
+    ],
+  },
 };
 
 const uz: Record<string, ServiceContent> = {
@@ -978,6 +992,20 @@ const uz: Record<string, ServiceContent> = {
       "Tez-tez uchraydigan vazifa — na kabel, na tarmoq bor joydagi kameralar: omborning uzoq burchagi, kirishdagi tarozixona, qurilish maydonchasi, suv olish inshooti. Radiokoʻprik tarmoq va PoE quvvatni nuqtaga bir kunda yetkazadi, obyekt qayta qurilganda koʻprik u bilan birga koʻchadi. Ferma va karerlarga nuqta-koʻp nuqta tarmoqlar quramiz: bitta tayanch stansiya hududning oʻnlab nuqtasidan kamera va datchiklarni yigʻadi.",
       "Ishonchlilik konstruktiv qoʻyiladi: antennalar «koʻz bilan» emas, signal darajasi boʻyicha yustirlanadi, har kirishga chaqmoqdan himoya, germetik quvvat bokslari, shamolga hisoblangan mahkamlash. Kritik kanallarga zaxira qoʻyamiz: boshqa diapazondagi ikkinchi koʻprik yoki avtomatik almashinuvli LTE-zaxira — asosiy kanal yotsa ham aloqa qoladi.",
       "Toshkentdagi ombordan Ubiquiti, MikroTik va boshqa sinalgan uskunalar bilan ishlaymiz. Tekshiruv va kanal hisobi — bepul: uskuna bilan kelamiz, real trassada signalni oʻlchaymiz va xariddan oldin erishiladigan tezlikni aytamiz. Kafolatli montaj, shartnoma boʻyicha monitoring va xizmat — butun Oʻzbekiston boʻylab.",
+    ],
+  },
+  "bank": {
+    heading: "Ofis va biznes-markaz uchun xavfsizlik tizimlari",
+    paragraphs: [
+      "Ofis xavfsizlik tizimi uch qismdan yigʻiladi: kirishda va xizmat xonalarida SKUD, umumiy zonalarda videokuzatuv va ish vaqtini hisobga olish. Bir qavatli ofis uchun bu karta yoki yuz boʻyicha terminalli eshik, kirish, resepshn va yoʻlakka ikki-toʻrtta kamera va kichik registrator. Bir necha qavatli kompaniya uchun — har qavatga kontroller, lobbida turniket va xodimlarning yagona bazasi.",
+      "Ofis uchun SKUD faqat «kim kirdi» savolini hal qilmaydi. Yuz boʻyicha oʻtish ertalab eshik oldidagi navbatni yoʻq qiladi, mehmon QR-kodlari vaqtinchalik ruxsatnomalar masalasini yechadi, oʻtishlar jurnali esa tabel va 1C ga ketadi — ishdan ortiqcha qolish va kechikishlar kadr xodimisiz hisoblanadi. Zonalar va vaqt boʻyicha huquqlarni administrator oʻzi belgilaydi, buning uchun pudratchini chaqirish shart emas.",
+      "Biznes-markazda videokuzatuvni boshqaruv kompaniyasi va ijarachilar uchun yagona tizim sifatida quramiz: umumiy zonalar, lift xollari, avtoturargoh va kirish guruhlari boshqaruv kompaniyasi nazoratida, ofislar ichidagi kameralar esa ijarachining ixtiyorida qoladi. Ofis kameralarini 30 kunlik yozuv bilan oʻrnatamiz, arxivga kirishni rollar boʻyicha chegaralaymiz. Resepshndagi qoʻriqlash pultiga chiqadigan trevoga tugmasi shu tizimga qoʻshiladi.",
+      "Ishlayotgan ofisda montajni ishni toʻxtatmasdan bajaramiz: kabelni mavjud korob va osma shift ortidan oʻtkazamiz, shovqinli ishlarni kechga va dam olish kunlariga rejalashtiramiz. Koʻrik va smeta bepul, bitta eshik va toʻrtta kamerali tipik ofisni bir-ikki kunda ishga tushiramiz. Keyin tizim binoning boshqa tizimlari bilan birga shartnoma boʻyicha xizmatga oʻtadi.",
+    ],
+    links: [
+      { label: "SKUD: kirishni nazorat qilish toʻliq tayyor holda", href: "/solutions/access" },
+      { label: "Ish vaqtini hisobga olish", href: "/solutions/attendance" },
+      { label: "Biznes-markaz uchun turniketlar", href: "/solutions/turnstile" },
     ],
   },
 };
@@ -1467,6 +1495,20 @@ const en: Record<string, ServiceContent> = {
       "We design and build such sites end to end: CCTV, access control and time attendance, fire alarm and suppression per room purpose, structured cabling and industrial networks, a server room for archives and management systems. We work without stopping production, in stages, and take the site into scheduled service maintenance across Tashkent and the regions.",
     ],
   },
+  "bank": {
+    heading: "Security systems for offices and business centres",
+    paragraphs: [
+      "An office security system has three parts: access control at the entrance and to staff rooms, video surveillance in shared areas, and time and attendance. For a single-floor office that means a door with a card or face terminal, two to four cameras on the entrance, reception and corridor, and a small recorder. For a company on several floors — a controller per floor, a turnstile in the lobby and one employee database.",
+      "Office access control answers more than “who came in”. Face recognition removes the morning queue at the door, guest QR codes settle the question of temporary passes, and the entry log goes to the timesheet and to 1C, so overtime and late arrivals are counted without an HR officer. Rights by zone and time are set by the administrator; no contractor visit is needed for that.",
+      "Video surveillance in a business centre is built as one system for the management company and the tenants: shared areas, lift lobbies, parking and entrances are watched by the management company, while cameras inside offices stay under the tenant’s control. Office cameras record for 30 days and archive access is split by role. A panic button at reception wired to the security station is added to the same system.",
+      "We install in a working office without stopping it: cable runs in existing trunking and above the suspended ceiling, noisy work is scheduled for evenings and weekends. Survey and estimate are free; a typical office with one door and four cameras is up in one or two days. After that the system moves to contract maintenance together with the rest of the building.",
+    ],
+    links: [
+      { label: "Access control (ACS) turnkey", href: "/solutions/access" },
+      { label: "Time and attendance", href: "/solutions/attendance" },
+      { label: "Turnstiles for a business centre", href: "/solutions/turnstile" },
+    ],
+  },
 };
 
 const tr: Record<string, ServiceContent> = {
@@ -1949,6 +1991,20 @@ const tr: Record<string, ServiceContent> = {
       "Bu tesisleri uçtan uca projelendirip kuruyoruz: kameralar, geçiş kontrolü ve mesai takibi, oda amacına göre yangın alarmı ve söndürme, yapısal kablolama ve endüstriyel ağlar, arşiv ve yönetim sistemleri için sistem odası. Üretimi durdurmadan, kademeli çalışıyor ve tesisi Taşkent ile bölgelerde planlı servis bakımına alıyoruz.",
     ],
   },
+  "bank": {
+    heading: "Ofis ve iş merkezi için güvenlik sistemleri",
+    paragraphs: [
+      "Ofis güvenlik sistemi üç parçadan oluşur: girişte ve servis odalarında geçiş kontrolü, ortak alanlarda kamera sistemi ve personel devam takibi. Tek katlı ofis için bu, kartlı veya yüz tanımalı terminalli bir kapı, giriş, resepsiyon ve koridora iki dört kamera ve küçük bir kayıt cihazıdır. Birkaç kata yayılan şirket için her kata kontrolör, lobide turnike ve tek çalışan veritabanı.",
+      "Ofis geçiş kontrolü yalnızca “kim girdi” sorusunu çözmez. Yüz tanıma sabah kapıdaki kuyruğu kaldırır, misafir QR kodları geçici kart konusunu kapatır, geçiş kaydı puantaja ve 1C’ye gider; fazla mesai ve geç kalmalar İK çalışanı olmadan hesaplanır. Bölge ve saat bazlı yetkileri yönetici kendisi tanımlar, bunun için yüklenici çağırmak gerekmez.",
+      "İş merkezinde kamera sistemini yönetim şirketi ve kiracılar için tek sistem olarak kuruyoruz: ortak alanlar, asansör holleri, otopark ve giriş grupları yönetimin gözetiminde, ofis içindeki kameralar kiracının erişiminde kalır. Ofis kameralarını 30 gün kayıtla kuruyor, arşiv erişimini rollere göre ayırıyoruz. Resepsiyondaki, güvenlik merkezine bağlı panik butonu aynı sisteme eklenir.",
+      "Çalışan ofiste montajı işi durdurmadan yapıyoruz: kabloyu mevcut kanallardan ve asma tavan üstünden geçiriyor, gürültülü işleri akşam ve hafta sonuna planlıyoruz. Keşif ve metraj ücretsiz; bir kapı ve dört kameralı tipik ofis bir iki günde devreye girer. Ardından sistem binanın diğer sistemleriyle birlikte sözleşmeli bakıma geçer.",
+    ],
+    links: [
+      { label: "Geçiş kontrol sistemi anahtar teslim", href: "/solutions/access" },
+      { label: "Personel devam takibi", href: "/solutions/attendance" },
+      { label: "İş merkezi için turnikeler", href: "/solutions/turnstile" },
+    ],
+  },
 };
 
 const zh: Record<string, ServiceContent> = {
@@ -2429,6 +2485,20 @@ const zh: Record<string, ServiceContent> = {
       "在工厂，周界和门岗比厂房内漂亮的画面更重要。周界用夜视摄像机布防，必要处加热成像仪和入侵报警；门岗配刷卡或生物识别闸机及考勤系统，工时可导出到工时表和核算系统。两个问题一并解决：此刻谁在厂区、这个班干了多少小时。",
       "车间内部要求不同：粉尘、潮湿、温差、振动和电磁干扰。这里要上防护外壳的工业级设备，走线时要考虑旁边就是动力设备。厂房与仓库之间的网络是单独课题：光纤线路、工业交换机、通道冗余——断网不能停产。",
       "我们整厂设计施工：视频监控、门禁与考勤、按房间用途配置的火灾报警和灭火、综合布线与工业网络、存放录像和管理系统的机房。不停产、分阶段施工，之后按计划巡检承接维保，覆盖塔什干及各州。",
+    ],
+  },
+  "bank": {
+    heading: "办公室与商务中心的安防系统",
+    paragraphs: [
+      "办公室安防系统由三部分组成：入口和后勤区域的门禁、公共区域的视频监控以及考勤。单层办公室配置为刷卡或人脸终端的一扇门、入口、前台和走廊的两到四台摄像机以及一台小型录像机。跨多层的公司则每层配控制器、大堂设闸机并使用统一员工数据库。",
+      "办公室门禁解决的不只是\"谁进来了\"。人脸通行消除早晨门口的排队，访客二维码解决临时通行证问题，通行记录进入考勤表和 1C，加班和迟到无需人事人员即可统计。分区和时段权限由管理员自行设置，无需请施工方上门。",
+      "商务中心的视频监控按物业公司和租户共用的一套系统建设：公共区域、电梯厅、停车场和入口由物业监控，办公室内部的摄像机仍由租户掌控。办公室摄像机录像保存 30 天，归档访问按角色划分。前台接入保安中心的紧急按钮加入同一系统。",
+      "在运营中的办公室施工不停工：线缆沿现有线槽和吊顶上方敷设，噪音作业安排在晚间和周末。勘查和预算免费，一扇门加四台摄像机的典型办公室一到两天即可上线。之后系统与楼内其他系统一起转入合同维保。",
+    ],
+    links: [
+      { label: "门禁系统交钥匙工程", href: "/solutions/access" },
+      { label: "考勤系统", href: "/solutions/attendance" },
+      { label: "商务中心闸机", href: "/solutions/turnstile" },
     ],
   },
 };

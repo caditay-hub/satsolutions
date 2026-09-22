@@ -2078,7 +2078,7 @@
       ],
       "details": {
         "pkgLabel": "Typical solutions",
-        "pkgTitle": "Three typical bank solutions",
+        "pkgTitle": "Typical solutions for banks and offices",
         "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
         "packages": [
           {
@@ -2113,6 +2113,17 @@
               "SLA maintenance for all sites"
             ],
             "term": "Time: in stages"
+          },
+          {
+            "name": "An office or a floor in a business centre",
+            "for": "Companies with 20–200 staff",
+            "items": [
+              "Access control at the entrance by card or face",
+              "Cameras on the entrance, reception and corridors",
+              "Time and attendance with export to 1C",
+              "Panic button at reception"
+            ],
+            "term": "Time: 1–3 days"
           }
         ],
         "brandsLabel": "Equipment",

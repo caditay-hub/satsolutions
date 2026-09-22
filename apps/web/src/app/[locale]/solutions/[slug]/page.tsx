@@ -562,6 +562,13 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               </>
             )}
             </div>
+            {content.links?.length ? (
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                {content.links.map((l) => (
+                  <Link key={l.href} href={l.href as any} className="text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
+                ))}
+              </div>
+            ) : null}
           </section>
         )}
 

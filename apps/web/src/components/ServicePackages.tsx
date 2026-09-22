@@ -36,7 +36,8 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
       <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.pkgLabel`)}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.pkgTitle`)}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts(`${k}.details.pkgNote`)}</p>
-      <div className="mt-5 grid gap-4 lg:grid-cols-3">
+      {/* четыре пакета — 2×2 на ноутбуке и в ряд на широком экране, чтобы не было «3 + 1» */}
+      <div className={`mt-5 grid gap-4 ${packages.length === 4 ? "sm:grid-cols-2 xl:grid-cols-4" : "lg:grid-cols-3"}`}>
         {packages.map((p) => (
           <div key={p.name} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition-shadow hover:shadow-md">
             <h3 className="text-base font-black leading-snug text-slate-900">{p.name}</h3>

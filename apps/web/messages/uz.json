@@ -2078,7 +2078,7 @@
       ],
       "details": {
         "pkgLabel": "Tipik yechimlar",
-        "pkgTitle": "Bankka uch tipovoy yechim",
+        "pkgTitle": "Bank va ofis uchun tipovoy yechimlar",
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
@@ -2113,6 +2113,17 @@
               "Barcha nuqtalarga SLA boʻyicha xizmat"
             ],
             "term": "Muddat: bosqichma-bosqich"
+          },
+          {
+            "name": "Biznes-markazdagi ofis yoki qavat",
+            "for": "20–200 xodimli kompaniyalar",
+            "items": [
+              "Kirishda karta yoki yuz boʻyicha SKUD",
+              "Kirish, resepshn va yoʻlaklarga kameralar",
+              "1C ga yuklanadigan ish vaqti hisobi",
+              "Resepshnda trevoga tugmasi"
+            ],
+            "term": "Muddat: 1–3 kun"
           }
         ],
         "brandsLabel": "Uskunalar",
