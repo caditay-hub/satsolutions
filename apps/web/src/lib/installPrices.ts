@@ -13,7 +13,7 @@ import { PRICE, calc, initialState, applyDefaults, type CalcState, type ObjectKe
 
 export type WorkRow = { k: string; price: number; per: "pc" | "m" | "set" };
 export type EquipRow = { k: string; price: number; href: string };
-export type PkgSpec = { k: string; obj: ObjectKey; area: number; on: Partial<CalcState["on"]>; v: Record<string, Record<string, unknown>> };
+export type PkgSpec = { k: string; obj: ObjectKey; area: number; on: Partial<CalcState["on"]>; v: Partial<Record<keyof CalcState["v"], Record<string, number | string>>> };
 export type InstallPrices = { works: WorkRow[]; equip: EquipRow[]; pkgs: PkgSpec[] };
 
 const CATALOG = {
@@ -133,7 +133,7 @@ export function packageRange(spec: PkgSpec): { low: number; high: number } {
   const st = initialState();
   st.obj = spec.obj; st.area = spec.area; applyDefaults(st);
   st.on = { cctv: false, acs: false, intr: false, fire: false, lan: false, perim: false, ...spec.on };
-  for (const [sys, vals] of Object.entries(spec.v)) st.v[sys as keyof CalcState["v"]] = { ...st.v[sys as keyof CalcState["v"]], ...vals };
+  for (const sys of Object.keys(spec.v) as (keyof CalcState["v"])[]) st.v[sys] = { ...st.v[sys], ...(spec.v[sys] ?? {}) };
   st.trace = "need"; st.high = "no";
   const r = calc(st);
   const round = (n: number) => Math.round(n / 10_000) * 10_000;
