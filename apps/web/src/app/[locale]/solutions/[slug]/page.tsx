@@ -26,6 +26,7 @@ import { ServiceAppLink } from "@/components/ServiceAppLink";
 import { WorkTerms } from "@/components/WorkTerms";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
+import { ServiceInstallPrices } from "@/components/ServiceInstallPrices";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
@@ -580,6 +581,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         <div id={hasPrices ? "prices" : undefined} className="scroll-mt-32 lg:scroll-mt-44">
           {!["network", "server"].includes(svc.key) && <ServicePackages k={svc.key} locale={locale} />}
           <ServicePriceHint k={svc.key} locale={locale} />
+          {/* Сколько стоит установка: расценки на работы, оборудование из каталога, ориентир
+              для типовых объектов — видеонаблюдение, домофоны, замки, СКУД, пожарная (22.09.2026) */}
+          <ServiceInstallPrices k={svc.key} locale={locale} />
         </div>
 
         {/* Принцип работы */}
