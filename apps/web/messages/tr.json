@@ -5420,6 +5420,23 @@
     "docsT": "İhale için belgeler",
     "docsD": "Tüzel kişiler ve kamu kurumlarıyla çalışıyoruz: sözleşme, spesifikasyon, tutanaklar, faturalar, proje bazlı teslim."
   },
+  "workTerms": {
+    "label": "Nasıl çalışıyoruz",
+    "title": "SAT Solutions çalışma koşulları",
+    "warrantyT": "İşçilikte 3 yıl garanti",
+    "warrantyD": "Montaj işlerine 3 yıl, ekipmana üreticiye göre 1–3 yıl garanti veriyoruz. Garanti kapsamındaki servis çıkışı bir iş günü içinde.",
+    "teamT": "Kendi montaj ekibimiz",
+    "teamD": "Kadroda 3 mühendis ve 15 montajcı, taşeron yok. Taşkent ve tüm Özbekistan'da çalışıyoruz.",
+    "visitT": "Mühendis aynı gün sahada",
+    "visitD": "Taşkent içinde keşif ücretsiz ve başvuru günü yapılır. Bölgeler için anlaşmaya göre.",
+    "quoteT": "Ücretsiz keşif ve teklif",
+    "quoteD": "Keşiften sonra metraj ve ticari teklifi bir iş günü içinde hazırlıyoruz. Hesaplama hiçbir yükümlülük getirmez.",
+    "docsT": "Sözleşme, KDV, evrak",
+    "docsD": "Tüzel kişiyle sözleşme, fatura, KDV'li çalışma, tutanaklar ve as-built dokümantasyon. Bireysel müşterilerle de çalışıyoruz.",
+    "licenseT": "Lisanslı çalışma",
+    "licenseD": "Güvenlik sistemleri montajı — Özbekistan Ulusal Muhafızları lisansı No. 1554491. Yangın alarm ve tahliye sistemleri — Acil Durumlar Bakanlığı lisansı No. 913518.",
+    "licenseLink": "Lisansları görüntüle"
+  },
   "clients": {
     "title": "Müşterilerimiz arasında",
     "subtitle": "Güvenlik sistemlerini tasarlayıp kurduğumuz şirketler ve kurumlar."

@@ -5420,6 +5420,23 @@
     "docsT": "Tender uchun hujjatlar",
     "docsD": "Yuridik shaxslar va davlat buyurtmachilari bilan ishlaymiz: shartnoma, spetsifikatsiya, dalolatnoma, hisob-faktura."
   },
+  "workTerms": {
+    "label": "Biz qanday ishlaymiz",
+    "title": "SAT Solutions bilan ishlash shartlari",
+    "warrantyT": "Ishlarga 3 yil kafolat",
+    "warrantyD": "Montaj ishlariga 3 yil kafolat beramiz, uskunaga — ishlab chiqaruvchi boʻyicha 1 yildan 3 yilgacha. Kafolat boʻyicha chiqish — bir ish kuni ichida.",
+    "teamT": "Oʻz montaj jamoamiz",
+    "teamD": "Shtatda 3 muhandis va 15 montajchi, subpudratsiz. Toshkent va butun Oʻzbekiston boʻylab ishlaymiz.",
+    "visitT": "Muhandis murojaat kuniyoq keladi",
+    "visitD": "Toshkent boʻylab obyektga chiqish bepul, murojaat qilingan kuni. Viloyatlarga — kelishuv boʻyicha.",
+    "quoteT": "Smeta va tijorat taklifi bepul",
+    "quoteD": "Koʻrikdan soʻng smeta va tijorat taklifini bir ish kuni ichida tayyorlaymiz. Hisob-kitob hech qanday majburiyat yuklamaydi.",
+    "docsT": "Shartnoma, QQS, hujjatlar",
+    "docsD": "Yuridik shaxs bilan shartnoma, hisob-faktura, QQS bilan ishlash, dalolatnomalar va ijro hujjatlari. Jismoniy shaxslar bilan ham ishlaymiz.",
+    "licenseT": "Ishlarga litsenziyalar",
+    "licenseD": "Qoʻriqlash tizimlari montaji — Oʻzbekiston Respublikasi Milliy gvardiyasi litsenziyasi № 1554491. Yongʻin signalizatsiyasi va ogohlantirish — FVV litsenziyasi № 913518.",
+    "licenseLink": "Litsenziyalarni koʻrish"
+  },
   "clients": {
     "title": "Bizning buyurtmachilarimiz",
     "subtitle": "Biz xavfsizlik tizimlarini loyihalab, oʻrnatgan kompaniya va tashkilotlar."

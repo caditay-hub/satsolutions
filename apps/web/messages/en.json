@@ -5420,6 +5420,23 @@
     "docsT": "Documents for tenders",
     "docsD": "We work with companies and public sector clients: contract, specification, acts, invoices, handover by project."
   },
+  "workTerms": {
+    "label": "How we work",
+    "title": "SAT Solutions terms of work",
+    "warrantyT": "3-year warranty on installation",
+    "warrantyD": "Installation work is covered for 3 years; equipment for 1 to 3 years per the manufacturer. Warranty visits within one business day.",
+    "teamT": "In-house installation team",
+    "teamD": "3 engineers and 15 installers on staff, no subcontractors. We work in Tashkent and across Uzbekistan.",
+    "visitT": "Engineer on site the same day",
+    "visitD": "Site visits in Tashkent are free and happen on the day you call. Regions by arrangement.",
+    "quoteT": "Free estimate and quotation",
+    "quoteD": "After the survey we prepare an estimate and a commercial proposal within one business day. No obligation.",
+    "docsT": "Contract, VAT, paperwork",
+    "docsD": "Contract with a legal entity, invoice, VAT-compliant billing, acceptance acts and as-built documentation. We also work with private clients.",
+    "licenseT": "Licensed work",
+    "licenseD": "Security systems installation — National Guard of Uzbekistan licence No. 1554491. Fire alarm and evacuation systems — Ministry of Emergency Situations licence No. 913518.",
+    "licenseLink": "View licences"
+  },
   "clients": {
     "title": "Among our clients",
     "subtitle": "Companies and organizations we have designed and installed security systems for."

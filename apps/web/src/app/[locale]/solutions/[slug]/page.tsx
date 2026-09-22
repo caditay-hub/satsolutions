@@ -10,7 +10,6 @@ import { resolveImageUrl } from "@/lib/image";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ProjectQuoteForm } from "@/components/ProjectQuoteForm";
-import { TrustBlock } from "@/components/TrustBlock";
 import { ClientsStrip } from "@/components/ClientsStrip";
 import { IndustryDetailsBlock, ServiceIndustriesBlock } from "@/components/IndustryDetailsBlock";
 import { ContactButtons } from "@/components/ContactButtons";
@@ -24,6 +23,7 @@ import { H3cEquipment } from "@/components/H3cEquipment";
 import { DataCenterDetails } from "@/components/DataCenterDetails";
 import { RelatedServices } from "@/components/RelatedServices";
 import { ServiceAppLink } from "@/components/ServiceAppLink";
+import { WorkTerms } from "@/components/WorkTerms";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { Lightbox } from "@/components/Lightbox";
@@ -639,7 +639,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       {isInd && (
         <section className="bg-slate-50">
           <div className="container-page py-12 sm:py-16">
-            <TrustBlock locale={locale} />
+            <WorkTerms locale={locale} />
             <ClientsStrip locale={locale} />
           </div>
         </section>
@@ -677,6 +677,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             </div>
           </section>
         )}
+
+        {/* Условия работы: гарантия, штат, выезд, смета, договор, лицензии — одним блоком
+            перед вопросами (22.09.2026: объявления это обещают, страница подтверждает) */}
+        {!isInd && <WorkTerms locale={locale} className="mt-12" />}
 
         {/* Вопросы и статьи — в одном ряду */}
         {(faq.length > 0 || relatedArticles.length > 0) && (
