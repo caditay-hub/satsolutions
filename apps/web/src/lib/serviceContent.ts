@@ -125,6 +125,21 @@ const ru: Record<string, ServiceContent> = {
           "Стоимость складывается по-разному для квартиры и для подъезда. Индивидуальный комплект — панель, монитор, замок и питание — считается поштучно и ставится за день. В многоабонентской системе экономика другая: панель, коммутатор и замок делятся на всех, поэтому цена на квартиру получается заметно ниже, а решение о замене обычно принимает ТСЖ или управляющая компания — мы готовим для них расчёт с вариантами «трубки» и «мониторы» и помогаем собрать решение собрания.",
           "Смонтированную нами домофонию берём на регламентное обслуживание и закрываем гарантию на поставленное оборудование. Слабые места известны заранее: залипшие кнопки и разбитые козырьки панелей, севшие блоки питания, размагниченные замки, оборванные трубки в квартирах — ходовые панели, трубки и блоки питания держим на складе, поэтому замена делается за один выезд, а подъезд не живёт неделями с открытой дверью. Систему, которую ставил другой подрядчик, берём в работу через аудит и модернизацию с заменой оборудования — после неё объект встаёт на обслуживание на общих условиях.",
     ],
+    extra: [
+      {
+        heading: "Домофон для квартиры, частного дома и подъезда",
+        paragraphs: [
+          "Домофон для квартиры — самый быстрый вариант: видеодомофон с монитором внутри и вызывной панелью у двери или на площадке ставится за два-три часа. Если в доме уже есть подъездная система, монитор подключаем к ней, и вы видите гостя и открываете дверь, не выходя. Установка домофона в квартире чаще всего идёт вместе с заменой старой трубки на монитор с записью визитов.",
+          "Домофон для дома, то есть для частного дома с калиткой, работает в паре с электромеханическим замком: вызывная панель у калитки, монитор в доме, открытие с кнопки или с телефона. Видеодомофон для дома выбирают с уличной панелью в антивандальном корпусе и с подсветкой, чтобы видеть гостя ночью. К нему же подключаем ворота, и тогда одной кнопкой открываются и калитка, и въезд.",
+          "Домофон для подъезда и многоквартирного дома — это многоабонентская панель, замок на входной двери и трубки или мониторы в квартирах. В новом ЖК ставим IP-домофонию: вызов уходит в приложение жильца, гостям выдаются временные коды, а управляющая компания видит все проходы. В старом доме дешевле заменить координатную панель на видеодомофон с сохранением проводки. Расчёт для ТСЖ и управляющих компаний делаем с вариантами на весь подъезд.",
+          "Звонок на смартфон и открытие с телефона настраиваем на любом IP-домофоне Hikvision и Dahua, замок на калитку и на дверь подъезда ставим со склада в Ташкенте. Цена домофона с монтажом зависит от типа объекта: расценки на работы и минимальные цены оборудования собраны в разделе «Сколько стоит домофон с установкой» выше, точную смету назовём после бесплатного выезда в день обращения.",
+        ],
+        links: [
+          { label: "Домофоны и вызывные панели в каталоге", href: "/products/group/domofoniya" },
+          { label: "Домофония для ЖК и застройщиков", href: "/solutions/residential" },
+        ],
+      },
+    ],
   },
   turnstile: {
     heading: "Установка турникетов и проходных в Ташкенте",
@@ -583,6 +598,21 @@ const uz: Record<string, ServiceContent> = {
       "Chaqiruv paneli — toʻplamning bir qismi xolos. Unga elektromagnit yoki elektromexanik qulf, yopgich, zaxira akkumulyatorli quvvat bloki va chiqish tugmasi kerak, podyezd uchun esa panelning vandalga chidamli bajarilishi. Jihozni obyekt sharoitiga qarab tanlaymiz — koʻcha uchun vandalga chidamli panel, eshik ogʻirligi va turiga mos qulf, elektr uzilishiga zaxirali quvvat — va domofonni SKUD bilan bogʻlaymiz: shunda yashovchilar va xodimlar karta yoki telefon bilan oʻtadi, mehmonlar — chaqiruv boʻyicha, barcha hodisalar esa videoyozuv bilan birga bitta tizimda koʻrinadi.",
           "Narx kvartira va podʼezd uchun turlicha yigʻiladi. Individual komplekt — panel, monitor, qulf va quvvat — donalab hisoblanadi va bir kunda oʻrnatiladi. Koʻp abonentli tizimda iqtisod boshqacha: panel, kommutator va qulf hammaga boʻlinadi, shuning uchun kvartiraga narx sezilarli past chiqadi, almashtirish qarorini esa odatda TSJ yoki boshqaruv kompaniyasi qabul qiladi — biz ular uchun «trubkalar» va «monitorlar» variantli hisob-kitob tayyorlaymiz va yigʻilish qarorini yigʻishga yordam beramiz.",
           "Oʻzimiz montaj qilgan domofoniyani reglament xizmatiga olamiz va yetkazib bergan uskunaga kafolat beramiz. Zaif joylar oldindan maʼlum: yopishib qolgan tugmalar va singan panel kozirkalari, oʻtirgan quvvat bloklari, magniti ketgan qulflar, kvartiralardagi uzilgan trubkalar — keng tarqalgan panellar, trubkalar va quvvat bloklarini omborda saqlaymiz, shuning uchun almashtirish bitta chiqishda bajariladi, podyezd esa haftalab ochiq eshik bilan qolmaydi. Boshqa pudratchi oʻrnatgan tizimni audit va uskuna almashtiriladigan modernizatsiya orqali ishga olamiz — undan keyin obyekt umumiy shartlarda xizmatga olinadi.",
+    ],
+    extra: [
+      {
+        heading: "Kvartira, xususiy uy va podyezd uchun domofon",
+        paragraphs: [
+          "Kvartira uchun domofon — eng tez variant: ichkarida monitor va eshik yonida yoki maydonchada chaqiruv paneli boʻlgan videodomofon ikki-uch soatda oʻrnatiladi. Uyda podyezd tizimi boʻlsa, monitorni unga ulaymiz — mehmonni koʻrib, eshikni chiqmasdan ochasiz. Kvartirada domofon oʻrnatish koʻpincha eski trubkani tashriflarni yozib oladigan monitorga almashtirish bilan birga boradi.",
+          "Uy uchun domofon, yaʼni darvozachali xususiy uy uchun, elektromexanik qulf bilan juft ishlaydi: darvozacha yonida chaqiruv paneli, uyda monitor, tugma yoki telefon orqali ochish. Uy uchun videodomofonni vandalga chidamli korpusli va yoritgichli koʻcha paneli bilan tanlashadi, shunda mehmon kechasi ham koʻrinadi. Unga darvozani ham ulaymiz — bitta tugma bilan darvozacha ham, kirish yoʻli ham ochiladi.",
+          "Podyezd va koʻp kvartirali uy uchun domofon — bu koʻp abonentli panel, kirish eshigidagi qulf va kvartiralardagi trubkalar yoki monitorlar. Yangi turar-joy majmuasida IP-domofoniya oʻrnatamiz: chaqiruv yashovchining ilovasiga keladi, mehmonlarga vaqtinchalik kodlar beriladi, boshqaruv kompaniyasi barcha kirishlarni koʻradi. Eski uyda koordinatali panelni simlarni saqlab videodomofonga almashtirish arzonroq. Uy-joy mulkdorlari shirkatlari va boshqaruv kompaniyalari uchun butun podyezdga variantlar bilan hisob-kitob tayyorlaymiz.",
+          "Smartfonga qoʻngʻiroq va telefondan ochishni istalgan Hikvision va Dahua IP-domofonida sozlaymiz, darvozacha va podyezd eshigiga qulfni Toshkentdagi ombordan oʻrnatamiz. Montaj bilan domofon narxi obyekt turiga bogʻliq: ishlar narxlari va uskunaning eng past narxlari yuqoridagi «domofon qancha turadi» boʻlimida, aniq smetani murojaat kuni bepul chiqishdan soʻng aytamiz.",
+        ],
+        links: [
+          { label: "Katalogda domofonlar va chaqiruv panellari", href: "/products/group/domofoniya" },
+          { label: "Turar-joy majmualari va quruvchilar uchun domofoniya", href: "/solutions/residential" },
+        ],
+      },
     ],
   },
   turnstile: {
@@ -1051,6 +1081,21 @@ const en: Record<string, ServiceContent> = {
       "The door panel is only part of the kit. It needs an electromagnetic or electromechanical lock, a closer, a power supply with a backup battery and an exit button, and for an entrance block — a vandal-proof panel. We match the kit to the site — a vandal-proof outdoor panel, a lock chosen by door weight and type, a power supply with reserve for outages — and tie the intercom to access control: residents and staff pass by card or phone, guests by call, and every event lands in one system together with video.",
           "The cost adds up differently for an apartment and for a building entrance. An individual kit — panel, monitor, lock and power — is priced per item and installed in a day. In a multi-tenant system the economics differ: the panel, switch and lock are shared by everyone, so the per-apartment price comes out noticeably lower, and the replacement decision is usually made by the homeowners' association or the management company — we prepare a calculation for them with handset and monitor options and help carry the residents' vote.",
           "Intercoms we installed ourselves go onto scheduled maintenance, and we honour the warranty on the equipment we supplied. The weak points are known in advance: stuck buttons and cracked panel hoods, dead power supplies, demagnetized locks, torn handset lines in apartments — we keep common panels, handsets and power units in stock, so a replacement takes a single visit and the entrance does not live for weeks with an open door. An installation built by another contractor we take on through an audit and a modernization with equipment replacement, after which the site goes onto maintenance on the usual terms.",
+    ],
+    extra: [
+      {
+        heading: "Intercoms for flats, private houses and apartment entrances",
+        paragraphs: [
+          "An intercom for a flat is the quickest option: a video intercom with a monitor inside and a door station at the door or on the landing goes in within two to three hours. If the building already has an entrance system, we connect the monitor to it, so you see the visitor and open the door without leaving the flat. Installing an intercom in a flat usually goes together with replacing the old handset with a monitor that records visits.",
+          "An intercom for a private house with a gate works in tandem with an electromechanical lock: a door station at the gate, a monitor in the house, opening by button or from a phone. For a house we choose an outdoor station in a vandal-proof housing with illumination so you can see the visitor at night. We connect the driveway gate to it as well, so one button opens both the wicket and the entrance.",
+          "An intercom for an apartment entrance or a multi-storey block is a multi-tenant door station, a lock on the entrance door and handsets or monitors in the flats. In a new residential complex we install IP intercoms: the call goes to the resident’s app, guests receive temporary codes, and the management company sees every entry. In an older building it is cheaper to replace the legacy panel with a video intercom while keeping the existing wiring. For homeowner associations and management companies we prepare a calculation with options for the whole entrance.",
+          "We set up calls to a smartphone and door opening from a phone on any Hikvision or Dahua IP intercom, and install gate and entrance locks from our Tashkent warehouse. The price of an intercom with installation depends on the site: labour rates and minimum equipment prices are in the “What an intercom with installation costs” section above, and we give an exact estimate after a free same-day site visit.",
+        ],
+        links: [
+          { label: "Intercoms and door stations in the catalogue", href: "/products/group/domofoniya" },
+          { label: "Intercoms for residential complexes and developers", href: "/solutions/residential" },
+        ],
+      },
     ],
   },
   perimeter: {
@@ -1711,6 +1756,21 @@ const tr: Record<string, ServiceContent> = {
           "Maliyet daire için ve bina girişi için farklı toplanır. Bireysel set — panel, monitör, kilit ve besleme — parça başı hesaplanır ve bir günde kurulur. Çok aboneli sistemde ekonomi başkadır: panel, santral ve kilit herkese bölünür, bu yüzden daire başına fiyat belirgin düşer; değişim kararını genelde site yönetimi verir — onlar için ahize ve monitör seçenekli hesap hazırlar, kat malikleri kararının alınmasına yardım ederiz.",
           "Kendi kurduğumuz diafon sistemlerini periyodik bakıma alır, tedarik ettiğimiz ekipmanın garantisini karşılarız. Zayıf noktalar önceden bellidir: yapışan tuşlar ve kırık panel siperleri, biten güç kaynakları, mıknatısı zayıflamış kilitler, dairelerdeki kopuk ahize hatları — yaygın panelleri, ahizeleri ve güç kaynaklarını stokta tuttuğumuz için değişim tek ziyarette biter, giriş haftalarca açık kapıyla yaşamaz. Başka bir yüklenicinin kurduğu sistemi denetim ve ekipman değişimiyle modernizasyon üzerinden işe alırız; sonrasında tesis genel koşullarla bakıma alınır.",
     ],
+    extra: [
+      {
+        heading: "Daire, müstakil ev ve apartman girişi için interkom",
+        paragraphs: [
+          "Daire için interkom en hızlı seçenektir: içeride monitör, kapıda veya sahanlıkta kapı paneli olan görüntülü interkom iki üç saatte kurulur. Binada apartman sistemi varsa monitörü ona bağlarız; ziyaretçiyi görür ve kapıyı daireden çıkmadan açarsınız. Dairede interkom kurulumu çoğunlukla eski ahizenin ziyaretleri kaydeden monitörle değiştirilmesiyle birlikte yapılır.",
+          "Bahçe kapılı müstakil ev için interkom elektromekanik kilitle birlikte çalışır: bahçe kapısında kapı paneli, evde monitör, butonla veya telefondan açma. Ev için görüntülü interkom, ziyaretçiyi gece de görmek üzere aydınlatmalı, darbeye dayanıklı gövdeli dış panelle seçilir. Araç kapısını da ona bağlarız; tek tuşla hem bahçe kapısı hem giriş açılır.",
+          "Apartman girişi ve çok katlı bina için interkom, çok daireli kapı paneli, giriş kapısında kilit ve dairelerde ahize veya monitörlerden oluşur. Yeni sitelerde IP interkom kuruyoruz: çağrı sakinin uygulamasına düşer, misafirlere geçici kod verilir, site yönetimi tüm girişleri görür. Eski binada mevcut kablolamayı koruyarak eski paneli görüntülü interkomla değiştirmek daha ucuzdur. Site yönetimleri ve yönetim şirketleri için tüm giriş bazında seçenekli hesap hazırlıyoruz.",
+          "Akıllı telefona arama ve telefondan kapı açmayı her Hikvision ve Dahua IP interkomunda ayarlıyor, bahçe ve giriş kapısı kilitlerini Taşkent depomuzdan kuruyoruz. Montajlı interkom fiyatı sahaya göre değişir: işçilik fiyatları ve en düşük ekipman fiyatları yukarıdaki “montajlı interkom ne kadar” bölümünde; kesin metrajı başvuru günü yapılan ücretsiz keşiften sonra veririz.",
+        ],
+        links: [
+          { label: "Katalogda interkomlar ve kapı panelleri", href: "/products/group/domofoniya" },
+          { label: "Siteler ve müteahhitler için interkom", href: "/solutions/residential" },
+        ],
+      },
+    ],
   },
   "turnstile": {
     heading: "Taşkent'te Turnike ve Geçiş Kontrol Kurulumu",
@@ -2162,6 +2222,21 @@ const zh: Record<string, ServiceContent> = {
       "门口机只是套件的一部分。还需要电磁锁或电机锁、闭门器、带备用电池的电源和出门按钮；单元门用防破坏面板。配置按现场条件选型——室外用防破坏面板、按门重和门型选锁、带停电备用的电源——并把对讲接入门禁：住户和员工刷卡或手机通行，访客按呼叫进入，所有事件连同录像汇入同一系统。",
           "单户和整个单元的费用算法不同。单户套装——门口机、室内机、门锁和电源——按件计价，一天装完。多户系统的经济账不一样：门口机、交换设备和门锁由全体分摊，摊到每户明显更便宜；换新通常由业委会或物业拍板——我们为其准备“话机版”和“室内机版”两套方案的核算，并协助促成业主决议。",
           "由我方施工的对讲系统纳入定期维保，我方供货的设备由我方承担质保。薄弱环节是可预见的：按键卡死、面板护罩碎裂、电源老化、磁力锁消磁、住户话机线断——常用面板、话机和电源我们有库存，更换一次上门即可完成，单元门不会连着几周敞着。别家施工的系统，我们通过审计和更换设备的改造来承接：改造完成后按通用条件纳入维保。",
+    ],
+    extra: [
+      {
+        heading: "公寓、独栋住宅与单元门的楼宇对讲",
+        paragraphs: [
+          "公寓对讲是最快的方案：室内机加门口或楼道的门口机，两三小时装好。若楼内已有单元对讲系统，我们把室内机接入其中，您不用出门就能看到访客并开门。公寓装对讲通常同时把旧话机换成可记录来访的室内机。",
+          "独栋住宅（带院门）的对讲与电机锁配合使用：院门处门口机，屋内室内机，按键或手机开门。住宅可视对讲选用带补光的防破坏室外门口机，夜间也能看清访客。我们还可以把车辆大门接入，一键同时打开院门和车道门。",
+          "单元门和多层住宅的对讲由多户门口机、单元门锁以及各户的话机或室内机组成。新建小区我们安装 IP 对讲：呼叫直达住户手机应用，访客获得临时密码，物业可查看所有进出记录。老旧楼栋更经济的做法是在保留原有布线的前提下把旧面板换成可视对讲。我们为业委会和物业公司提供整个单元的多方案测算。",
+          "手机接听和手机开门可在任何海康威视、大华 IP 对讲上设置，院门和单元门的电锁从塔什干仓库现货供应。含安装的对讲价格取决于场所类型：工费和设备最低价见上方\"楼宇对讲含安装多少钱\"栏目，精确预算在当天免费勘查后给出。",
+        ],
+        links: [
+          { label: "目录中的对讲与门口机", href: "/products/group/domofoniya" },
+          { label: "小区与开发商的楼宇对讲", href: "/solutions/residential" },
+        ],
+      },
     ],
   },
   "turnstile": {
