@@ -112,6 +112,21 @@ const ru: Record<string, ServiceContent> = {
           "СОУЭ различаются по типам — от простой сирены до речевого оповещения с зонами и управлением потоками эвакуации. Небольшому офису достаточно звуковых оповещателей и табло «Выход»; торговому центру, гостинице или производству с сотнями людей нужно речевое оповещение: записанные сообщения по зонам снижают панику и разводят потоки по разным лестницам. Тип СОУЭ определяется назначением и вместимостью здания по нормам — мы закладываем его в проект и подтверждаем расчётом, чтобы вопрос не всплыл на сдаче.",
           "Пожарная сигнализация раскрывается в связке с другими системами здания. По тревоге разблокируются эвакуационные двери СКУД, отключается общеобменная вентиляция, лифты опускаются на первый этаж, а сигнал уходит на пост охраны и на телефоны ответственных. Эти сценарии мы прописываем в проекте и проверяем на пусконаладке по каждому шлейфу — потому что на реальном пожаре времени проверять уже не будет.",
     ],
+    extra: [
+      {
+        heading: "Обслуживание пожарной сигнализации по договору",
+        paragraphs: [
+          "Противопожарная сигнализация обязана работать каждый день, а не только в день сдачи, поэтому обслуживание пожарной сигнализации — отдельная услуга с договором, графиком и журналом. По договору мы проверяем извещатели и шлейфы, тестируем оповещение и резервное питание, меняем аккумуляторы прибора по сроку, чистим извещатели от пыли и ведём журнал, который первым открывает инспектор МЧС. Работы выполняем по лицензии МЧС № 913518.",
+          "График считается под оборудование объекта, как требует постановление № 649: для небольшого офиса это ежеквартальный выезд, для склада с высокими стеллажами и производства чаще, потому что пыль и перепады температуры выводят извещатели из строя быстрее. Дата каждой проверки, найденные замечания и замены фиксируются в журнале и актах, так что к проверке объект готов всегда.",
+          "Берём на обслуживание не только смонтированные нами системы. Чужую сигнализацию принимаем через обследование: проверяем соответствие проекту, состояние шлейфов и прибора, выдаём перечень замечаний с ценой их устранения. После этого объект переходит на обычный регламент. Ходовые извещатели, аккумуляторы и оповещатели Рубеж и Болид держим на складе в Ташкенте, поэтому замена делается за один выезд.",
+          "Стоимость обслуживания зависит от числа извещателей, шлейфов и приборов на объекте и считается за месяц или за год. Монтаж пожарной сигнализации под ключ и её обслуживание можно заказать одним договором: цену установки видно в разделе «Сколько стоит» выше, а расчёт обслуживания пришлём в течение рабочего дня после осмотра.",
+        ],
+        links: [
+          { label: "Обслуживание систем безопасности: как устроен регламент", href: "/solutions/obsluzhivanie" },
+          { label: "Нормы пожарной сигнализации в Узбекистане", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+        ],
+      },
+    ],
   },
   intercom: {
     heading: "Установка домофонов в Ташкенте: IP и видеодомофоны",
@@ -585,6 +600,21 @@ const uz: Record<string, ServiceContent> = {
       "Narx xonalarning maydoni va vazifasi, izlagichlar va shleyflar soni, qurilma turi, ovozli xabardor qilish tizimi va tutun chiqarishni boshqarish avtomatikasi kerakligiga qarab shakllanadi. Ofis uchun va baland stellajli ombor uchun yongʻin signalizatsiyasini oʻrnatish narxi tubdan farq qiladi — ikkinchi holatda izlagichlarning balandligi ham, turi ham oʻzgaradi. Topshirgandan keyin tizimni reglament xizmatiga olamiz: izlagichlarni tekshirish, akkumulyatorni almashtirish, bayonnomalar.",
           "SOUE turlari boʻyicha farqlanadi — oddiy sirenadan zonali va evakuatsiya oqimlarini boshqaruvchi nutqli ogohlantirishgacha. Kichik ofisga tovushli ogohlantirgichlar va «Chiqish» tablosi yetadi; yuzlab odamli savdo markazi, mehmonxona yoki ishlab chiqarishga nutqli ogohlantirish kerak: zonalar boʻyicha yozilgan xabarlar vahimani pasaytiradi va oqimlarni turli zinalarga ajratadi. SOUE turi bino vazifasi va sigʻimiga qarab normalar boʻyicha belgilanadi — biz uni loyihaga kiritamiz va hisob bilan tasdiqlaymiz, savol topshirishda chiqmasin.",
           "Yongʻin signalizatsiyasi bino boshqa tizimlari bilan bogʻlanmada ochiladi. Trevoga boʻyicha SKUD evakuatsiya eshiklari boʻshatiladi, umumiy ventilyatsiya oʻchiriladi, liftlar birinchi qavatga tushadi, signal esa qoʻriqlash postiga va masʼullar telefonlariga ketadi. Bu stsenariylarni loyihada yozamiz va ishga tushirishda har bir shleyf boʻyicha tekshiramiz — chunki haqiqiy yongʻinda tekshirishga vaqt boʻlmaydi.",
+    ],
+    extra: [
+      {
+        heading: "Yongʻin signalizatsiyasiga shartnoma boʻyicha xizmat koʻrsatish",
+        paragraphs: [
+          "Yongʻinga qarshi signalizatsiya faqat topshirish kuni emas, har kuni ishlashi shart, shuning uchun yongʻin signalizatsiyasiga xizmat koʻrsatish — shartnoma, jadval va jurnalli alohida xizmat. Shartnoma boʻyicha datchiklar va shleyflarni tekshiramiz, ogohlantirish va zaxira taʼminotni sinaymiz, qurilma akkumulyatorlarini muddati boʻyicha almashtiramiz, datchiklarni changdan tozalaymiz va FVV inspektori birinchi ochadigan jurnalni yuritamiz. Ishlar FVV litsenziyasi № 913518 asosida bajariladi.",
+          "649-son qaror talab qilganidek, jadval obyekt uskunasiga qarab tuziladi: kichik ofis uchun bu har chorakda chiqish, baland stellajli ombor va ishlab chiqarish uchun tez-tez, chunki chang va harorat oʻzgarishi datchiklarni tezroq ishdan chiqaradi. Har bir tekshiruv sanasi, aniqlangan kamchiliklar va almashtirishlar jurnal va dalolatnomalarda qayd etiladi — obyekt tekshiruvga doim tayyor.",
+          "Faqat oʻzimiz oʻrnatgan tizimlarni emas, boshqalarnikini ham xizmatga olamiz. Begona signalizatsiyani koʻrikdan oʻtkazib qabul qilamiz: loyihaga muvofiqligini, shleyflar va qurilma holatini tekshiramiz, kamchiliklar roʻyxatini bartaraf etish narxi bilan beramiz. Shundan soʻng obyekt oddiy reglamentga oʻtadi. Rubej va Bolid datchiklari, akkumulyatorlar va ogohlantirgichlarni Toshkentdagi omborda saqlaymiz, shuning uchun almashtirish bir chiqishda bajariladi.",
+          "Xizmat koʻrsatish narxi obyektdagi datchiklar, shleyflar va qurilmalar soniga bogʻliq, oyiga yoki yiliga hisoblanadi. Yongʻin signalizatsiyasini toʻliq tayyor holda oʻrnatish va unga xizmat koʻrsatishni bitta shartnoma bilan buyurtma qilish mumkin: oʻrnatish narxi yuqoridagi «qancha turadi» boʻlimida, xizmat koʻrsatish hisobini koʻrikdan soʻng bir ish kuni ichida yuboramiz.",
+        ],
+        links: [
+          { label: "Xavfsizlik tizimlariga xizmat koʻrsatish: reglament qanday tuzilgan", href: "/solutions/obsluzhivanie" },
+          { label: "Oʻzbekistonda yongʻin signalizatsiyasi normalari", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+        ],
+      },
     ],
   },
   intercom: {
@@ -1068,6 +1098,21 @@ const en: Record<string, ServiceContent> = {
       "The cost is built from the area and purpose of the rooms, the number of detectors and loops, the panel type, and the need for voice evacuation and smoke extraction control. The price for an office differs fundamentally from a high-bay warehouse — the detector mounting height and type both change. After handover we take the system onto scheduled maintenance: detector checks, battery replacement, reports — without it, inspectors will fault even a working system.",
           "Voice evacuation systems differ by type — from a simple siren to zoned voice announcements with evacuation flow control. A small office is fine with sounders and exit signs; a shopping mall, hotel or plant with hundreds of people needs voice notification: pre-recorded zone messages reduce panic and split the flows onto different stairways. The system type is set by the building's purpose and capacity under the codes — we put it into the design and back it with calculations, so the question never surfaces at handover.",
           "A fire alarm shows its worth in concert with the building's other systems. On alarm, the access-control evacuation doors release, general ventilation shuts down, elevators descend to the ground floor, and the signal goes to the guard post and the phones of those responsible. We write these scenarios into the design and verify them at commissioning loop by loop — because in a real fire there will be no time left to check.",
+    ],
+    extra: [
+      {
+        heading: "Fire alarm maintenance under contract",
+        paragraphs: [
+          "A fire alarm has to work every day, not just on the day of commissioning, so fire alarm maintenance is a separate service with a contract, a schedule and a logbook. Under the contract we check detectors and loops, test the sounders and backup power, replace panel batteries on schedule, clean detectors of dust and keep the logbook that a Ministry of Emergency Situations inspector opens first. The work is done under licence No. 913518.",
+          "The schedule follows the equipment on site, as Resolution No. 649 requires: a quarterly visit for a small office, more often for a high-bay warehouse or a factory, because dust and temperature swings wear detectors out faster. The date of every check, the findings and the replacements are recorded in the logbook and acts, so the site is always ready for an inspection.",
+          "We take on more than the systems we installed ourselves. A third-party alarm is accepted after a survey: we check compliance with the design, the state of the loops and the panel, and issue a list of defects with the cost of fixing them. After that the site moves to the regular schedule. Common Rubezh and Bolid detectors, batteries and sounders are kept in our Tashkent warehouse, so a replacement takes one visit.",
+          "The maintenance fee depends on the number of detectors, loops and panels on site and is quoted per month or per year. Turnkey fire alarm installation and its maintenance can be ordered under one contract: the installation price is in the “What it costs” section above, and we send the maintenance quote within one business day after the survey.",
+        ],
+        links: [
+          { label: "Security systems maintenance: how the schedule works", href: "/solutions/obsluzhivanie" },
+          { label: "Fire alarm regulations in Uzbekistan", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+        ],
+      },
     ],
   },
   "intercom": {
@@ -1743,6 +1788,21 @@ const tr: Record<string, ServiceContent> = {
           "Tahliye anons sistemleri tipe göre ayrılır — basit sirenden, bölgeli ve tahliye akışını yöneten sesli anonsa kadar. Küçük ofise sesli uyarıcılar ve çıkış tabelaları yeter; yüzlerce insanın bulunduğu AVM, otel veya fabrikaya sesli anons gerekir: bölge bölge kayıtlı mesajlar paniği azaltır ve akışları farklı merdivenlere ayırır. Sistemin tipini binanın amacı ve kapasitesi normlara göre belirler — biz bunu projeye koyar, hesapla destekleriz ki konu teslimde gündeme gelmesin.",
           "Yangın alarmı, binanın diğer sistemleriyle birlikte değer kazanır. Alarmda geçiş kontrolünün tahliye kapıları açılır, genel havalandırma durur, asansörler zemine iner; sinyal güvenlik noktasına ve sorumluların telefonlarına gider. Bu senaryoları projeye yazar, devreye almada zon zon doğrularız — çünkü gerçek yangında kontrol edecek zaman kalmaz.",
     ],
+    extra: [
+      {
+        heading: "Sözleşmeli yangın alarm bakımı",
+        paragraphs: [
+          "Yangın alarmı yalnızca teslim günü değil her gün çalışmak zorundadır; bu yüzden yangın alarm bakımı sözleşmesi, takvimi ve kayıt defteri olan ayrı bir hizmettir. Sözleşme kapsamında dedektörleri ve hatları kontrol eder, sirenleri ve yedek beslemeyi test eder, panel akülerini süresinde değiştirir, dedektörleri tozdan temizler ve Acil Durumlar Bakanlığı müfettişinin ilk açtığı kayıt defterini tutarız. İşler 913518 numaralı lisansla yapılır.",
+          "649 sayılı kararın öngördüğü gibi takvim sahadaki ekipmana göre belirlenir: küçük bir ofis için üç ayda bir ziyaret, yüksek raflı depo ve fabrika için daha sık, çünkü toz ve sıcaklık dalgalanmaları dedektörleri daha hızlı yıpratır. Her kontrolün tarihi, bulgular ve değişimler kayıt defterine ve tutanaklara işlenir; saha denetime her zaman hazırdır.",
+          "Yalnızca kendi kurduğumuz sistemleri değil, başkalarınınkini de bakıma alıyoruz. Yabancı bir alarmı keşifle kabul ederiz: projeye uygunluğu, hatların ve panelin durumunu kontrol eder, giderme maliyetiyle birlikte eksik listesi veririz. Ardından saha olağan takvime geçer. Yaygın Rubezh ve Bolid dedektörleri, aküler ve sirenler Taşkent depomuzda bulunur; değişim tek ziyarette yapılır.",
+          "Bakım ücreti sahadaki dedektör, hat ve panel sayısına bağlıdır; aylık veya yıllık teklif edilir. Anahtar teslim yangın alarm montajı ve bakımı tek sözleşmeyle sipariş edilebilir: montaj fiyatı yukarıdaki “ne kadar” bölümünde, bakım teklifini keşiften sonra bir iş günü içinde göndeririz.",
+        ],
+        links: [
+          { label: "Güvenlik sistemleri bakımı: takvim nasıl işler", href: "/solutions/obsluzhivanie" },
+          { label: "Özbekistan’da yangın alarm mevzuatı", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+        ],
+      },
+    ],
   },
   "intercom": {
     heading: "Taşkent'te Diafon Kurulumu: IP ve Görüntülü Diafonlar",
@@ -2209,6 +2269,21 @@ const zh: Record<string, ServiceContent> = {
       "费用由房间面积和用途、探测器和回路数量、控制器类型以及是否需要疏散广播和排烟联动构成。办公室与高货架仓库的造价有本质区别——探测器的安装高度和类型都不同。交付后我们承接定期维保：检查探测器、更换电池、出具记录——没有这些，检查机构连正常工作的系统也会开出整改单。",
           "疏散广播系统分等级——从简单的警笛到分区语音播报加疏散引导。小办公室有声光警号和出口指示就够；数百人流量的商场、酒店或工厂则需要语音疏散：分区播放的预录语音能稳住情绪，把人流引向不同楼梯。系统等级由建筑用途和容纳人数按规范确定——我们在设计中就定好并附计算书，验收时不留悬念。",
           "火灾报警的价值在与楼宇其他系统的联动中体现。报警时门禁的疏散门解锁、通风系统停机、电梯降至首层，信号同时发往保安岗和责任人手机。这些联动场景我们写进设计并在调试时逐回路验证——因为真着火时没有时间再去检查。",
+    ],
+    extra: [
+      {
+        heading: "火灾报警系统合同维保",
+        paragraphs: [
+          "火灾报警系统必须每天正常运行，而不只是在验收当天，因此火灾报警维保是一项有合同、有计划、有记录的独立服务。按合同我们检查探测器和回路，测试报警和备用电源，按期更换主机电池，清除探测器灰尘，并保持紧急情况部检查员首先翻阅的记录本。作业依据紧急情况部许可证 No. 913518 进行。",
+          "按第 649 号决议要求，计划按现场设备制定：小型办公室每季度上门一次，高货架仓库和工厂则更频繁，因为灰尘和温差会加速探测器损耗。每次检查日期、发现的问题和更换情况均记入记录本和验收单，现场随时可迎接检查。",
+          "我们不仅维保自己安装的系统。第三方报警系统经勘查后接管：核对与设计的符合性、回路和主机状态，出具缺陷清单及整改费用。之后现场转入常规维保计划。常用的 Rubezh 和 Bolid 探测器、电池和报警器在塔什干仓库有现货，更换一次上门即可完成。",
+          "维保费用取决于现场探测器、回路和主机的数量，按月或按年报价。火灾报警系统交钥匙安装与维保可签一份合同：安装价格见上方\"多少钱\"栏目，维保报价在勘查后一个工作日内发送。",
+        ],
+        links: [
+          { label: "安防系统维保：维保计划如何运作", href: "/solutions/obsluzhivanie" },
+          { label: "乌兹别克斯坦火灾报警规范", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+        ],
+      },
     ],
   },
   "intercom": {
