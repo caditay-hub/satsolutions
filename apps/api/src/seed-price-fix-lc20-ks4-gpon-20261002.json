@@ -1,0 +1,5 @@
+{
+ "afe28b8e-6946-47fb-a3ab-90d34e17914a": {"slug": "pro-sfp-lc20km", "set": {"price": 209900}, "old": {"price": 122900}},
+ "2d0eb472-ed20-4d72-a658-9e9497e31722": {"slug": "pro-ks-4", "set": {"price": 20990}, "old": {"price": 6090}},
+ "639682ed-a1d9-4efa-b968-c28782a9da89": {"slug": "pxt-gpon-olt-sfp-class-c-2", "set": {"supplierCode": "GPON OLT SFP Class C++++", "price": 340900}, "old": {"supplierCode": "GPON OLT SFP Class C+++", "price": 326900}}
+}
