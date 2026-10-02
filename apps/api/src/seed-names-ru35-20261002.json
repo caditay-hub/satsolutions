@@ -1,0 +1,287 @@
+{
+ "1f3cd46f-ff5e-4713-ae65-a9469e5ce455": {
+  "ru": "Видеодомофон (внутренняя станция) Hikvision DS-KH9510-WTE1, чёрный",
+  "uz": "Videodomofon (ichki stansiya) Hikvision DS-KH9510-WTE1, qora",
+  "en": "Hikvision DS-KH9510-WTE1 Video Intercom (Indoor Station), black",
+  "tr": "Hikvision DS-KH9510-WTE1 Görüntülü Diafon (Dahili İstasyon), siyah",
+  "zh": "海康威视 DS-KH9510-WTE1 可视对讲（室内分机），黑色",
+  "slug": "hik-ds-kh9510-wte1-black"
+ },
+ "3844cc72-f281-4364-ab58-ef594c0695ed": {
+  "ru": "Конец лежачего полицейского «Стандарт», жёлтый, 175×350×50 мм",
+  "uz": "Yoʻl tezligini cheklagich uchi «Standart», sariq, 175×350×50 mm",
+  "en": "Speed bump end piece Standard, yellow, 175×350×50 mm",
+  "tr": "Hız kesici uç parçası Standart, sarı, 175×350×50 mm",
+  "zh": "减速带端块 标准款，黄色，175×350×50 mm",
+  "slug": "pro-konec-lezhachego-policeiskogo-standart-yellow-size-175-350-50mm"
+ },
+ "7f2e94df-0180-49e5-abe6-3dbeb81cd146": {
+  "ru": "Конец лежачего полицейского «Стандарт», чёрный, 175×350×50 мм",
+  "uz": "Yoʻl tezligini cheklagich uchi «Standart», qora, 175×350×50 mm",
+  "en": "Speed bump end piece Standard, black, 175×350×50 mm",
+  "tr": "Hız kesici uç parçası Standart, siyah, 175×350×50 mm",
+  "zh": "减速带端块 标准款，黑色，175×350×50 mm",
+  "slug": "pro-konec-lezhachego-policeiskogo-standart-black-size-175-350-50mm"
+ },
+ "3b260b4e-1526-4f5c-9ca4-be117acd7900": {
+  "ru": "Модуль QSFP28 100GBASE, BiDi, 1309 нм, LC Simplex, дальность до 40 км",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-pxt-qsfp28-w39-40"
+ },
+ "b31f0fd2-afc2-4ab5-93eb-7d8293bc1423": {
+  "ru": "Модуль QSFP28 100GBASE, BiDi, 1311 нм, LC Simplex, дальность до 20 км",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-pxt-qsfp28-w31-20"
+ },
+ "b6add59a-13ca-417a-9905-da8a721ea83f": {
+  "ru": "Модуль QSFP28 100GBASE, BiDi, 1304 нм, LC Simplex, дальность до 40 км",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-pxt-qsfp28-w34-40"
+ },
+ "bb6edbd3-8460-4fd1-b798-b5c879eb0a55": {
+  "ru": "Модуль QSFP28 100GBASE, BiDi, 1291 нм, LC Simplex, дальность до 20 км",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-pxt-qsfp28-w21-20"
+ },
+ "ff500cec-dd88-45c3-bf09-0e9d28c2f223": {
+  "ru": "Парковочный ограничитель колеса 550×150×100 мм",
+  "uz": "Avtoturargoh gʻildirak cheklovchisi 550×150×100 mm",
+  "en": "Parking wheel stop 550×150×100 mm",
+  "tr": "Park tekerlek stoperi 550×150×100 mm",
+  "zh": "停车挡轮器 550×150×100 mm",
+  "slug": "pro-parkovochnyi-ogranichitel-kolesa-size-550-x-150-x-100mm"
+ },
+ "7899d9e2-39e6-4453-805d-f79bd89eab4b": {
+  "ru": "IP-телефон Cisco IP Phone 7811 с прошивкой Multiplatform (3PCC)",
+  "uz": "IP telefon Cisco IP Phone 7811, Multiplatform (3PCC) mikrodasturi bilan",
+  "en": "Cisco IP Phone 7811 IP phone with Multiplatform firmware (3PCC)",
+  "tr": "Cisco IP Phone 7811 IP telefon, Multiplatform (3PCC) yazılımlı",
+  "zh": "Cisco IP Phone 7811 IP 电话，Multiplatform（3PCC）固件",
+  "slug": "pxt-cp-7811-3pcc-k9"
+ },
+ "dd03de6b-d072-4a73-ad61-cd8cd1e5572f": {
+  "ru": "IP-телефон Cisco IP Phone 7821 с прошивкой Multiplatform (3PCC)",
+  "uz": "IP telefon Cisco IP Phone 7821, Multiplatform (3PCC) mikrodasturi bilan",
+  "en": "Cisco IP Phone 7821 IP phone with Multiplatform firmware (3PCC)",
+  "tr": "Cisco IP Phone 7821 IP telefon, Multiplatform (3PCC) yazılımlı",
+  "zh": "Cisco IP Phone 7821 IP 电话，Multiplatform（3PCC）固件",
+  "slug": "pxt-cp-7821-3pcc-k9"
+ },
+ "1c57a36f-ec6e-4363-b4ce-45e3d78c159f": {
+  "ru": "IP-телефон Cisco IP Phone 7841 с прошивкой Multiplatform (3PCC)",
+  "uz": "IP telefon Cisco IP Phone 7841, Multiplatform (3PCC) mikrodasturi bilan",
+  "en": "Cisco IP Phone 7841 IP phone with Multiplatform firmware (3PCC)",
+  "tr": "Cisco IP Phone 7841 IP telefon, Multiplatform (3PCC) yazılımlı",
+  "zh": "Cisco IP Phone 7841 IP 电话，Multiplatform（3PCC）固件",
+  "slug": "pxt-cp-7841-3pcc-k9"
+ },
+ "e5860176-d236-4106-9ac4-88db3ffcd613": {
+  "ru": "IP-телефон Cisco IP Phone 8841 с прошивкой Multiplatform (3PCC)",
+  "uz": "IP telefon Cisco IP Phone 8841, Multiplatform (3PCC) mikrodasturi bilan",
+  "en": "Cisco IP Phone 8841 IP phone with Multiplatform firmware (3PCC)",
+  "tr": "Cisco IP Phone 8841 IP telefon, Multiplatform (3PCC) yazılımlı",
+  "zh": "Cisco IP Phone 8841 IP 电话，Multiplatform（3PCC）固件",
+  "slug": "pxt-cp-8841-3pcc-k9"
+ },
+ "6aa91c5e-8b7b-4458-8af1-28abb9ed4f9b": {
+  "ru": "IP-видеотелефон Cisco IP Phone 8845 с прошивкой Multiplatform (MPP)",
+  "uz": "IP videotelefon Cisco IP Phone 8845, Multiplatform (MPP) mikrodasturi bilan",
+  "en": "Cisco IP Phone 8845 video phone with Multiplatform firmware (MPP)",
+  "tr": "Cisco IP Phone 8845 IP görüntülü telefon, Multiplatform (MPP) yazılımlı",
+  "zh": "Cisco IP Phone 8845 IP 视频电话，Multiplatform（MPP）固件",
+  "slug": "pxt-cp-8845-3pcc-k9"
+ },
+ "871f1500-ef50-4512-9e41-05001ef39c56": {
+  "ru": "IP-телефон Cisco IP Phone 7861 для сторонних систем управления вызовами (3PCC)",
+  "uz": "IP telefon Cisco IP Phone 7861, uchinchi tomon qoʻngʻiroqlarni boshqarish tizimlari uchun (3PCC)",
+  "en": "Cisco IP Phone 7861 IP phone for 3rd Party Call Control (3PCC)",
+  "tr": "Cisco IP Phone 7861 IP telefon, üçüncü taraf çağrı kontrolü için (3PCC)",
+  "zh": "Cisco IP Phone 7861 IP 电话，适用于第三方呼叫控制（3PCC）",
+  "slug": "pxt-cp-7861-3pcc-k9"
+ },
+ "54a84fa2-684e-4be5-bb3b-11c918f1370e": {
+  "ru": "Модуль расширения кнопочный Cisco 8800 KEM для видеотелефонов, прошивка MPP",
+  "uz": "Cisco 8800 KEM tugmali kengaytirish moduli videotelefonlar uchun, MPP mikrodasturi",
+  "en": "Cisco 8800 series key expansion module (KEM) for video IP phones, MPP firmware",
+  "tr": "Cisco 8800 KEM tuşlu genişletme modülü, görüntülü IP telefonlar için, MPP yazılımı",
+  "zh": "Cisco 8800 系列按键扩展模块（KEM），适用于视频 IP 电话，MPP 固件",
+  "slug": "pxt-cp-8800-v-kem-3pc"
+ },
+ "b9a11c5b-14cd-4b93-9e38-310a00a51ea3": {
+  "ru": "Кабель питания Cisco CP-PWR-CORD-CE, вилка для Центральной Европы (CEE 7)",
+  "uz": "Cisco CP-PWR-CORD-CE quvvat kabeli, Markaziy Yevropa vilkasi (CEE 7)",
+  "en": "Cisco CP-PWR-CORD-CE power cord, Central Europe plug (CEE 7)",
+  "tr": "Cisco CP-PWR-CORD-CE güç kablosu, Orta Avrupa fişi (CEE 7)",
+  "zh": "Cisco CP-PWR-CORD-CE 电源线，中欧插头（CEE 7）",
+  "slug": "pxt-cp-pwr-cord-ce"
+ },
+ "7ad1a08a-c50b-4e70-b7c0-027a8444a783": {
+  "ru": "Блок питания Cisco CP-PWR-ADPT-3-EU для IP-телефонов серии 7800, евровилка",
+  "uz": "Cisco CP-PWR-ADPT-3-EU quvvat bloki 7800 seriyali IP telefonlar uchun, Yevropa vilkasi",
+  "en": "Cisco CP-PWR-ADPT-3-EU power adapter for 7800 series IP phones, EU plug",
+  "tr": "Cisco CP-PWR-ADPT-3-EU güç adaptörü, 7800 serisi IP telefonlar için, AB fişi",
+  "zh": "Cisco CP-PWR-ADPT-3-EU 电源适配器，适用于 7800 系列 IP 电话，欧标插头",
+  "slug": "pxt-cp-pwr-adpt-3-eu"
+ },
+ "9ef37b63-324f-44b5-ab00-feafc7c4eff1": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES210G: 8 портов PoE 10/100 Мбит/с + 2 гигабитных аплинка",
+  "uz": "Wi-Tek WI-PCES210G bulutli PoE kommutatori: 8 ta PoE 10/100 Mbit/s port + 2 ta gigabit uplink",
+  "en": "Wi-Tek WI-PCES210G cloud PoE switch: 8 × 10/100 Mbps PoE + 2 gigabit uplinks",
+  "tr": "Wi-Tek WI-PCES210G bulut yönetimli PoE switch: 8 × 10/100 Mbps PoE + 2 gigabit uplink",
+  "zh": "Wi-Tek WI-PCES210G 云管理 PoE 交换机：8 个 10/100 Mbps PoE 口 + 2 个千兆上联口",
+  "slug": "wtk-wi-tek-wi-pces210g-cloud-poe-8-mb-2-gb"
+ },
+ "df3bc723-e523-41d2-9f0f-01a8c00920b3": {
+  "ru": "Уличный облачный PoE-коммутатор Wi-Tek WI-PCES210G-O: 8 портов PoE 10/100 Мбит/с + 2 гигабитных аплинка",
+  "uz": "Wi-Tek WI-PCES210G-O tashqi bulutli PoE kommutatori: 8 ta PoE 10/100 Mbit/s port + 2 ta gigabit uplink",
+  "en": "Wi-Tek WI-PCES210G-O outdoor cloud PoE switch: 8 × 10/100 Mbps PoE + 2 gigabit uplinks",
+  "tr": "Wi-Tek WI-PCES210G-O dış mekan bulut yönetimli PoE switch: 8 × 10/100 Mbps PoE + 2 gigabit uplink",
+  "zh": "Wi-Tek WI-PCES210G-O 室外云管理 PoE 交换机：8 个 10/100 Mbps PoE 口 + 2 个千兆上联口",
+  "slug": "wtk-wi-tek-wi-pces210g-o-outdoor-cloud-poe-8-mb-2-gb"
+ },
+ "afac921d-3151-4a0c-a8b2-17e521d34776": {
+  "ru": "Пассивный PoE-инжектор TP-Link POE4824G",
+  "uz": "TP-Link POE4824G passiv PoE-injektori",
+  "en": "TP-Link POE4824G passive PoE injector",
+  "tr": "TP-Link POE4824G pasif PoE enjektör",
+  "zh": "TP-Link POE4824G 无源 PoE 注入器",
+  "slug": "tpl-tp-link-poe4824g"
+ },
+ "cb7fd14b-918e-4e6a-a25f-976331349bf5": {
+  "ru": "Пассивный PoE-инжектор TP-Link POE2412G",
+  "uz": "TP-Link POE2412G passiv PoE-injektori",
+  "en": "TP-Link POE2412G passive PoE injector",
+  "tr": "TP-Link POE2412G pasif PoE enjektör",
+  "zh": "TP-Link POE2412G 无源 PoE 注入器",
+  "slug": "tpl-tp-link-poe2412g"
+ },
+ "4a44d8af-85c2-4aa4-8f09-1513dd46cab2": {
+  "ru": "Пассивный PoE-инжектор TP-Link POE4818G",
+  "uz": "TP-Link POE4818G passiv PoE-injektori",
+  "en": "TP-Link POE4818G passive PoE injector",
+  "tr": "TP-Link POE4818G pasif PoE enjektör",
+  "zh": "TP-Link POE4818G 无源 PoE 注入器",
+  "slug": "tpl-tp-link-poe4818g"
+ },
+ "9fd79d29-383b-4b25-9395-51d1c5dcda2e": {
+  "ru": "Конец лежачего полицейского Premium, 600×225×30 мм",
+  "uz": "Yoʻl tezligini cheklagich uchi Premium, 600×225×30 mm",
+  "en": "Speed bump end piece Premium, 600×225×30 mm",
+  "tr": "Hız kesici uç parçası Premium, 600×225×30 mm",
+  "zh": "减速带端块 Premium，600×225×30 mm",
+  "slug": "pro-konec-lezhachego-policeiskogo-premium-size-600-x-225-x-30m"
+ },
+ "071cb9b0-517c-45b2-90f1-0603d4611762": {
+  "ru": "Лежачий полицейский «Стандарт», чёрный, секция 500×350×50 мм (за 1 метр)",
+  "uz": "Yoʻl tezligini cheklagich «Standart», qora, seksiya 500×350×50 mm (1 metr uchun)",
+  "en": "Speed bump Standard, black, section 500×350×50 mm (per meter)",
+  "tr": "Hız kesici Standart, siyah, modül 500×350×50 mm (metre başına)",
+  "zh": "减速带 标准款，黑色，模块 500×350×50 mm（每米计价）",
+  "slug": "pro-lezhachii-policeiskii-standart-black-500-350-50",
+  "seoTitle": "Лежачий полицейский «Стандарт» чёрный 500×350×50 мм — купить в Ташкенте"
+ },
+ "c72e2d44-42f5-4b1c-bb39-20d315d128e3": {
+  "ru": "Лежачий полицейский «Стандарт», жёлтый, секция 500×350×50 мм (за 1 метр)",
+  "uz": "Yoʻl tezligini cheklagich «Standart», sariq, seksiya 500×350×50 mm (1 metr uchun)",
+  "en": "Speed bump Standard, yellow, section 500×350×50 mm (per meter)",
+  "tr": "Hız kesici Standart, sarı, modül 500×350×50 mm (metre başına)",
+  "zh": "减速带 标准款，黄色，模块 500×350×50 mm（每米计价）",
+  "slug": "pro-lezhachii-policeiskii-standart-yellow-500-350-50",
+  "seoTitle": "Лежачий полицейский «Стандарт» жёлтый 500×350×50 мм — купить в Ташкенте"
+ },
+ "1e4c1b76-c5ab-48ee-9d9a-daa33a4e46f9": {
+  "ru": "Мышь беспроводная",
+  "uz": "Simsiz sichqoncha",
+  "en": "Wireless mouse",
+  "tr": "Kablosuz fare",
+  "zh": "无线鼠标",
+  "charDrop": [
+   "Тип"
+  ],
+  "slug": "pro-myshka-besprovodnaya-wireless"
+ },
+ "a70755ca-6661-4789-832a-0246e01508dd": {
+  "ru": "Радиомост Ubiquiti NanoBeam 5AC Gen2, EU",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-nbe-5ac-gen2"
+ },
+ "c8fbae99-72b8-4f22-ac75-9747483ee101": {
+  "ru": "Конец лежачего полицейского цельный удлинённый, 190×300×50 мм",
+  "uz": "Yoʻl tezligini cheklagich uchi, yaxlit uzaytirilgan, 190×300×50 mm",
+  "en": "Speed bump end piece, one-piece long, 190×300×50 mm",
+  "tr": "Hız kesici uç parçası, tek parça uzun, 190×300×50 mm",
+  "zh": "减速带端块，一体加长款，190×300×50 mm",
+  "slug": "pro-konec-lezhachego-policeiskogo-celyi-dlinnyi-size-190-x-300-x-50mm"
+ },
+ "cd6c47ce-9bbd-4431-ae5a-97d80dabe034": {
+  "ru": "Точка доступа Ubiquiti NanoStation M5",
+  "uz": null,
+  "en": null,
+  "tr": null,
+  "zh": null,
+  "slug": "pxt-ns-m5"
+ },
+ "b1c00595-6f64-4c5c-8cfd-b66019d7a3be": {
+  "ru": "Защита углов резиновая, высота 800 мм",
+  "uz": "Burchaklar uchun rezina himoya, balandligi 800 mm",
+  "en": "Rubber corner guard, height 800 mm",
+  "tr": "Kauçuk köşe koruyucu, yükseklik 800 mm",
+  "zh": "橡胶护角，高 800 mm",
+  "slug": "pro-zaschita-uglov-rezinovaya-height-800mm"
+ },
+ "b953b0bd-2d42-4751-9808-d79b79d84a54": {
+  "ru": "Магнитный замок KANIHAD ML-280AS, 280 кг, чёрный",
+  "uz": "KANIHAD ML-280AS magnit qulfi, 280 kg, qora",
+  "en": "KANIHAD ML-280AS magnetic lock, 280 kg, black",
+  "tr": "KANIHAD ML-280AS manyetik kilit, 280 kg, siyah",
+  "zh": "KANIHAD ML-280AS 磁力锁，280 kg，黑色",
+  "slug": "knd-zamok-280kg-magnitnyi-ml-280as-black"
+ },
+ "1f6e51f6-791d-44c3-8b63-578b212f1433": {
+  "ru": "Лежачий полицейский Premium, 600×470×30 мм",
+  "uz": "Yoʻl tezligini cheklagich Premium, 600×470×30 mm",
+  "en": "Speed bump Premium, 600×470×30 mm",
+  "tr": "Hız kesici Premium, 600×470×30 mm",
+  "zh": "减速带 Premium，600×470×30 mm",
+  "slug": "pro-lizhachii-policeiskii-premium-size-600-x-470-x-30mm"
+ },
+ "d6634d84-1280-446a-9c4d-fb0005547000": {
+  "ru": "Секторная антенна Cambium ePMP 5 ГГц 90/120° с монтажным комплектом",
+  "uz": "Cambium ePMP 5 GGs 90/120° sektor antennasi, montaj toʻplami bilan",
+  "en": "Cambium ePMP 5 GHz 90/120° sector antenna with mounting kit",
+  "tr": "Cambium ePMP 5 GHz 90/120° sektör anten, montaj kitiyle",
+  "zh": "Cambium ePMP 5 GHz 90/120° 扇区天线，含安装套件",
+  "slug": "pxt-c050900d021b"
+ },
+ "228051d3-f7e8-4883-baca-75d690738b7a": {
+  "ru": "Секторная антенна Cambium ePMP 4x4 MU-MIMO с креплением для ePMP 3000 AP",
+  "uz": "Cambium ePMP 4x4 MU-MIMO sektor antennasi, mahkamlagich bilan, ePMP 3000 AP uchun",
+  "en": "Cambium ePMP 4x4 MU-MIMO sector antenna with mount, for ePMP 3000 AP",
+  "tr": "Cambium ePMP 4x4 MU-MIMO sektör anten, montaj aparatlı, ePMP 3000 AP için",
+  "zh": "Cambium ePMP 4x4 MU-MIMO 扇区天线，带支架，适用于 ePMP 3000 AP",
+  "slug": "pxt-c050910d301a"
+ },
+ "d1476bb2-1c51-4b7c-8d6a-ce4d3c88336a": {
+  "ru": "Лента монтажная PXT-C201-50, нержавеющая сталь 201, 20×0,7 мм (кассета 50 м)",
+  "uz": "Montaj tasmasi PXT-C201-50, 201 markali zanglamaydigan poʻlat, 20×0,7 mm (kasseta 50 m)",
+  "en": "Mounting band PXT-C201-50, stainless steel 201, 20×0.7 mm (50 m reel)",
+  "tr": "Montaj bandı PXT-C201-50, 201 paslanmaz çelik, 20×0,7 mm (50 m makara)",
+  "zh": "PXT-C201-50 安装钢带，201 不锈钢，20×0.7 mm（50 米一卷）",
+  "slug": "pxt-pxt-s201-50"
+ }
+}
