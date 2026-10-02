@@ -1,0 +1,200 @@
+{
+ "ae816be1-6405-41e4-a49b-05326fc746ec": {
+  "slug": "pxt-pxt-rj-45-tg",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-RJ-45-TG",
+  "price": 790,
+  "old": {
+   "price": 880.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "0750dc13-dc7d-449b-bb49-52ee368f1ce3": {
+  "slug": "pxt-pxt-uy2",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-UY2",
+  "price": 390,
+  "old": {
+   "price": 460.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "d4b91190-c015-4c4b-918b-5e96d1dbd723": {
+  "slug": "pxt-ksvppe-6-4h2h0-57",
+  "supplier": "pixietech",
+  "supplierCode": "КСВППЭ-6 4х2х0.57",
+  "price": 9190,
+  "old": {
+   "price": 9280.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c72e2d44-42f5-4b1c-bb39-20d315d128e3": {
+  "slug": "pro-lezhachii-policeiskii-standart-yellow-500-350-50",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Лижачий полицейский STANDART Yellow за 1 метр Size:500*350*50MM",
+  "price": 320900,
+  "old": {
+   "price": 357900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "3690e0db-6de4-4859-9261-3a9a4ea41f30": {
+  "slug": "pxt-ksvppe-5e-2h2h0-52",
+  "supplier": "pixietech",
+  "supplierCode": "КСВППЭ-5е 2х2х0,52",
+  "price": 4490,
+  "old": {
+   "price": 3730.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "03b74788-ebeb-49fa-9a2c-2e05e6c00810": {
+  "slug": "zkt-bgm1060-right",
+  "supplier": "hikvision-premium",
+  "supplierCode": "ZKTeco Шлагбаум BGM1060 премиум Правая сторона",
+  "price": 9899900,
+  "old": {
+   "price": 9899900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "7162df99-e84b-43fe-a796-db7c69469b54": {
+  "slug": "mkt-e50ug",
+  "supplier": "ekom",
+  "supplierCode": "MikroTik E50UG",
+  "price": 887900,
+  "old": {
+   "price": 842900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "1c2ab539-563f-49c3-8824-e75ab9113c42": {
+  "slug": "mkt-gper",
+  "supplier": "ekom",
+  "supplierCode": "MikroTik GPeR",
+  "price": 206900,
+  "old": {
+   "price": 206900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "171630d7-b091-4346-884c-c84fb3d06cb4": {
+  "slug": "pxt-91102",
+  "supplier": "pixietech",
+  "supplierCode": "91102",
+  "price": 8590,
+  "old": {
+   "price": 8610.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c2088026-d4b6-41e6-8ad5-c58ff0bc7ec2": {
+  "slug": "pxt-91122",
+  "supplier": "pixietech",
+  "supplierCode": "91122",
+  "price": 14390,
+  "old": {
+   "price": 14390.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "4ef98d6f-93f2-4e5c-a08d-34a7daa7693a": {
+  "slug": "pxt-91124",
+  "supplier": "pixietech",
+  "supplierCode": "91124",
+  "price": 19890,
+  "old": {
+   "price": 19790.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "9c8478af-c05b-4b70-8b21-02b8727a637f": {
+  "slug": "knd-shkaf-4-yunit-600-450-kanihad",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Шкаф 4 ЮНИТ 600*450 KANIHAD",
+  "price": 617900,
+  "old": {
+   "price": 618900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "6014edde-97cb-4e59-81da-a07092666c78": {
+  "slug": "pro-knopka-pb-68-trevozh-knopka-emergency",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Кнопка PB-68-тревож.кнопка EMERGENCY",
+  "price": 8590,
+  "old": {
+   "price": 8660.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "f0347bda-a841-45fc-8715-0a4d571315af": {
+  "slug": "pro-kabel-kspv-2-0-4",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Кабель КСПВ 2*0,4",
+  "price": 990,
+  "old": {
+   "price": 1110.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "793ad4df-2e30-4952-bbbc-3aaa62aa8e4b": {
+  "slug": "pxt-pxt-rj-45-bt-gr",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-RJ-45-BT-GR",
+  "price": 490,
+  "old": {
+   "price": 570.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "4e6f563f-9e2c-41e3-9a24-6341d1b66fb4": {
+  "slug": "pxt-pxt-rj-45-bt-rd",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-RJ-45-BT-RD",
+  "price": 490,
+  "old": {
+   "price": 570.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "5dac1b11-02b4-4270-b0e8-68fa0e57d05e": {
+  "slug": "pxt-pxt-rj-45-bt-bl",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-RJ-45-BT-BL",
+  "price": 490,
+  "old": {
+   "price": 570.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "05cb5dac-eb1d-4598-9df2-618aaf8f2d35": {
+  "slug": "pxt-pxt-tct-1-0-60",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-TCT-1.0/60",
+  "price": 390,
+  "old": {
+   "price": 490.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ }
+}
