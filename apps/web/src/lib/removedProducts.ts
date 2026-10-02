@@ -78,6 +78,15 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   "mkt-rb4011igs-rm-mikrotik-router": "/products/pxt-rb4011igs-rm",
   // 2026-09-03: дубль CCR2004-16G-2S+PC (одинаковая цена и описание), мерж по решению владельца.
   "mkt-ccr2004-16g-2s-mikrotik-router": "/products/mkt-ccr2004-16g-2s-pluspc",
+  // 2026-10-02: дубли, вскрытые проверкой «одна строка прайса — несколько товаров».
+  // Оставлена карточка, которую чаще посещают поисковые роботы (логи nginx); недостающие
+  // характеристики дубля перенесены в неё (бэкап products_merge_bak_20261002).
+  "pro-hdmi-4k-1-2-1-vhod-2-vyhoda": "/products/pro-hdmi-4k-1-2-1-vhod-2-vyhod",
+  "pxt-rb941-2nd": "/products/mkt-rb941-2nd",
+  "pxt-rb941-2nd-tc": "/products/mkt-rb941-2nd-tc",
+  "pxt-rb960pgs": "/products/mkt-rb960pgs",
+  "knd-kabel-ftp-kanihad-5-kateg-vnutrennii-305m": "/products/knd-kabel-ftp-kanihad-5-kateg-vnutrennyi-chernyi-4-2-0-5-305-metr",
+  "bld-s2000-m-isp-02-pult-kontrolya-i-upravleniya": "/products/bld-s2000m",
   // 2026-08-04: дубль HDMI-сплиттера 1×4, оставлена карточка с ценой из свежего прайса.
   "pro-hdmi-splitter-4k-1-4": "/products/pro-hdmi-4k-1-4-1-vhod-4-vyhod",
   "pro-dinamik-dlya-plity-dd80-35w-2": "/products/pro-dinamik-dlya-plity-dd80-35w",
