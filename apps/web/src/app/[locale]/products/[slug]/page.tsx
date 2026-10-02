@@ -4,6 +4,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getProductBySlug, getProductsCached, getSitePage, getBrands, getCategories, getSearchSuggestCached, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { ReviewForm } from "@/components/ReviewForm";
 import { CrossSellClick } from "@/components/CrossSellClick";
 import { QuestionForm } from "@/components/QuestionForm";
@@ -244,22 +245,32 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       // ignore
     }
 
-    // Ссылка крошки категории: пара бренд×категория (если есть в белом списке), иначе страница типа напрямую (без 308-хопа /categories)
+    // Ссылка «Вся категория»: пара бренд×категория (если есть в белом списке), иначе страница типа напрямую (без 308-хопа /categories)
     let categoryHref: string | null = null;
+    // Межбрендовый хаб типа — крошка уровнем выше бренда. До 02.10.2026 крошка вела только
+    // на пару бренд×тип (389 карточек из 394 в выборке), и хаб, который должен брать
+    // головной запрос («коммутатор», «видеорегистратор», «ибп»), с карточек ссылок не получал.
+    // Три слага склеены с группой (GROUP_CANONICAL) — для них сразу группа, без 308-хопа.
+    let typeHubHref: string | null = null;
+    let pairHref: string | null = null;
     if (categoryInfo) {
       const tSlug = typeSlug(categoryInfo.name);
-      categoryHref = `/products/type/${tSlug}`;
+      typeHubHref = GROUP_CANONICAL[tSlug] ? `/products/group/${GROUP_CANONICAL[tSlug]}` : `/products/type/${tSlug}`;
+      categoryHref = typeHubHref;
       if (brandInfo) {
         try {
           const { pairs } = await getBrandTypePairs();
           if (pairs.some((p) => p.brand.toLowerCase() === brandInfo!.slug && typeSlug(p.type) === tSlug)) {
-            categoryHref = `/catalog/${brandInfo.slug}/${tSlug}`;
+            pairHref = `/catalog/${brandInfo.slug}/${tSlug}`;
+            categoryHref = pairHref;
           }
         } catch {
           // ignore
         }
       }
     }
+    // Крошка бренда: внутри типа (пара) если есть, иначе страница бренда
+    const brandCrumbHref = brandInfo ? (pairHref ?? `/catalog/${brandInfo.slug}`) : null;
 
     const characteristics = localizeCharacteristics(product.id, product.characteristics ?? {}, locale);
     // «Цена» в характеристиках — служебный маркер «по запросу», не показываем в таблице
@@ -470,17 +481,19 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         ? { aggregateRating: { "@type": "AggregateRating", ratingValue: productReviews.avg, reviewCount: productReviews.count, bestRating: 5, worstRating: 1 } }
         : {}),
     };
+    // Порядок крошек: Главная / Каталог / Тип (все бренды) / Бренд (внутри типа) / Товар
+    const crumbMid: { name: string; href: string }[] = [
+      ...(categoryInfo && typeHubHref ? [{ name: localizeCatName(categoryInfo.name, locale), href: typeHubHref }] : []),
+      ...(brandInfo && brandCrumbHref ? [{ name: localizeBrandName(brandInfo.slug, brandInfo.name, locale), href: brandCrumbHref }] : []),
+    ];
     const breadcrumbLd = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
         { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
-        ...(brandInfo ? [{ "@type": "ListItem", position: 3, name: localizeBrandName(brandInfo.slug, brandInfo.name, locale), item: `${siteUrl}/catalog/${brandInfo.slug}` }] : []),
-        ...(categoryInfo && categoryHref
-          ? [{ "@type": "ListItem", position: brandInfo ? 4 : 3, name: localizeCatName(categoryInfo.name, locale), item: `${siteUrl}${categoryHref}` }]
-          : []),
-        { "@type": "ListItem", position: (brandInfo ? 4 : 3) + (categoryInfo && categoryHref ? 1 : 0), name: locName, item: `${siteUrl}/products/${product.slug}` },
+        ...crumbMid.map((c, i) => ({ "@type": "ListItem", position: 3 + i, name: c.name, item: `${siteUrl}${c.href}` })),
+        { "@type": "ListItem", position: 3 + crumbMid.length, name: locName, item: `${siteUrl}/products/${product.slug}` },
       ],
     };
     // FAQ-схема (FAQPage) из структурированного описания — для расширенных сниппетов Google
@@ -511,22 +524,14 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
           <Link href="/" className="hover:text-slate-900 transition-colors">{t("nav.home")}</Link>
           <span className="text-slate-300">/</span>
           <Link href="/catalog" className="hover:text-slate-900 transition-colors">{t("nav.catalog")}</Link>
-          {brandInfo && (
-            <>
+          {crumbMid.map((c) => (
+            <span key={c.href} className="contents">
               <span className="text-slate-300">/</span>
-              <Link href={`/catalog/${brandInfo.slug}`} className="hover:text-slate-900 transition-colors">
-                {localizeBrandName(brandInfo.slug, brandInfo.name, locale)}
+              <Link href={c.href} className="hover:text-slate-900 transition-colors">
+                {c.name}
               </Link>
-            </>
-          )}
-          {categoryInfo && categoryHref && (
-            <>
-              <span className="text-slate-300">/</span>
-              <Link href={categoryHref} className="hover:text-slate-900 transition-colors">
-                {localizeCatName(categoryInfo.name, locale)}
-              </Link>
-            </>
-          )}
+            </span>
+          ))}
           <span className="text-slate-300">/</span>
           <span className="text-slate-900 normal-case tracking-normal">{displayModelCode(modelCode, locale) ?? locName ?? product.slug}</span>
         </nav>
@@ -682,7 +687,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Статьи по теме: товар → блог (перелинковка, краулинг статей) */}
             {(() => {
               const relSvc = serviceForCategory(categoryInfo?.name);
-              const arts = articlesForService(relSvc?.key, locale);
+              let arts = articlesForService(relSvc?.key, locale);
+              // Узкие сетевые услуги отделены от network 02.10.2026; статей по ним мало
+              // (по радиомостам нет вовсе) — тогда показываем сетевые, как раньше
+              if (!arts.length && relSvc && ["radiobridge", "wifi", "telephony", "fiber"].includes(relSvc.key)) arts = articlesForService("network", locale);
               if (!arts.length) return null;
               return (
                 <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50/60 p-4">

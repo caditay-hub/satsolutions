@@ -594,6 +594,13 @@ export function serviceForCategory(name: string | null | undefined): ServiceItem
   else if (/сигнализац/.test(n)) key = "alarm";
   else if (/видеостен|диспле|монитор/.test(n)) key = "videowall";
   else if (/сервер|ибп|жёстк.*диск|жестк.*диск|хранилищ/.test(n)) key = "server";
-  else if (/коммутатор|маршрутизатор|витая пара|скс|sfp|оптик|шкаф|кабель|точк.*доступ|wi-fi|wifi|радиомост|pon|телефон/.test(n)) key = "network";
+  // Узкие сетевые направления — на свои страницы услуг, а не на общую «СКС» (02.10.2026:
+  // до этого Wi-Fi, радиомосты, телефония и оптика вели на network, умный дом — никуда)
+  else if (/радиомост|беспроводн.*мост/.test(n)) key = "radiobridge";
+  else if (/точк.*доступ|wi-fi|wifi/.test(n)) key = "wifi";
+  else if (/телефон/.test(n)) key = "telephony";
+  else if (/оптик|sfp|трансивер|pon|медиаконвертер/.test(n)) key = "fiber";
+  else if (/умн.*дом/.test(n)) key = "smarthome";
+  else if (/коммутатор|маршрутизатор|витая пара|скс|шкаф|кабель/.test(n)) key = "network";
   return key ? serviceByKey[key] ?? null : null;
 }
