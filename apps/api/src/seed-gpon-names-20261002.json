@@ -1,0 +1,20 @@
+{
+ "d457f27a-0078-49d3-bff6-449f92f97775": {
+  "slug": "pxt-gpon-olt-sfp-class-c",
+  "set": {
+   "name": "Модуль SFP GPON OLT Class C+++"
+  },
+  "old": {
+   "name": "Модуль SFP GPON OLT SFP Class C+++"
+  }
+ },
+ "639682ed-a1d9-4efa-b968-c28782a9da89": {
+  "slug": "pxt-gpon-olt-sfp-class-c-2",
+  "set": {
+   "name": "Модуль SFP GPON OLT Class C++++"
+  },
+  "old": {
+   "name": "Модуль SFP GPON OLT SFP Class C++++"
+  }
+ }
+}
