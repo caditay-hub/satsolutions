@@ -24526,5 +24526,47 @@
     "en": "Video surveillance server (all-in-one)",
     "tr": "Video gözetim sunucusu (all-in-one)",
     "zh": "视频监控服务器 (一体机)"
+  },
+  "FBT-делитель (сварной, корпусный)": {
+    "uz": "FBT boʻluvchi (payvandlangan, korpusli)",
+    "en": "FBT splitter (fused, housed)",
+    "tr": "FBT bölücü (kaynaklı, kutulu)",
+    "zh": "FBT 分光器（熔融拉锥，带外壳）"
+  },
+  "PLC-делитель (планарный, корпусный)": {
+    "uz": "PLC boʻluvchi (planar, korpusli)",
+    "en": "PLC splitter (planar, housed)",
+    "tr": "PLC bölücü (planar, kutulu)",
+    "zh": "PLC 分光器（平面波导型，带外壳）"
+  },
+  "стальная гильза 3×54 мм": {
+    "uz": "poʻlat gilza 3×54 mm",
+    "en": "steel tube 3×54 mm",
+    "tr": "çelik tüp 3×54 mm",
+    "zh": "钢管 3×54 mm"
+  },
+  "10 % — 11,3 дБ, 90 % — 0,6 дБ": {
+    "uz": "10 % — 11,3 dB, 90 % — 0,6 dB",
+    "en": "10% — 11.3 dB, 90% — 0.6 dB",
+    "tr": "%10 — 11,3 dB, %90 — 0,6 dB",
+    "zh": "10% — 11.3 dB，90% — 0.6 dB"
+  },
+  "20 % — 7,9 дБ, 80 % — 1,3 дБ": {
+    "uz": "20 % — 7,9 dB, 80 % — 1,3 dB",
+    "en": "20% — 7.9 dB, 80% — 1.3 dB",
+    "tr": "%20 — 7,9 dB, %80 — 1,3 dB",
+    "zh": "20% — 7.9 dB，80% — 1.3 dB"
+  },
+  "30 % — 6,0 дБ, 70 % — 1,9 дБ": {
+    "uz": "30 % — 6,0 dB, 70 % — 1,9 dB",
+    "en": "30% — 6.0 dB, 70% — 1.9 dB",
+    "tr": "%30 — 6,0 dB, %70 — 1,9 dB",
+    "zh": "30% — 6.0 dB，70% — 1.9 dB"
+  },
+  "40 % — 4,7 дБ, 60 % — 2,7 дБ": {
+    "uz": "40 % — 4,7 dB, 60 % — 2,7 dB",
+    "en": "40% — 4.7 dB, 60% — 2.7 dB",
+    "tr": "%40 — 4,7 dB, %60 — 2,7 dB",
+    "zh": "40% — 4.7 dB，60% — 2.7 dB"
   }
 }
