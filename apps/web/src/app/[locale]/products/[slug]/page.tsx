@@ -421,6 +421,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
+    const lp = locale !== "ru" ? `/${locale}` : "";
     // Цена для offers: только если есть валидное число и цена в сумах (UZS). Для «по запросу» — без offers.
     const priceNum = typeof product.price === "string" ? Number(product.price) : (product.price as unknown as number);
     const hasPrice = Number.isFinite(priceNum) && priceNum > 0 && !(product as any).isUsd;
@@ -447,7 +448,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 ? "https://schema.org/BackOrder"
                 : "https://schema.org/InStock",
               itemCondition: "https://schema.org/NewCondition",
-              url: `${siteUrl}/products/${product.slug}`,
+              url: `${siteUrl}${lp}/products/${product.slug}`,
               seller: { "@type": "Organization", name: "SAT Solutions" },
               // Согласовано со страницами /returns (14 дней) и /delivery — важно для Merchant Center
               hasMerchantReturnPolicy: {
@@ -490,10 +491,12 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: t("nav.home"), item: siteUrl },
-        { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}/catalog` },
-        ...crumbMid.map((c, i) => ({ "@type": "ListItem", position: 3 + i, name: c.name, item: `${siteUrl}${c.href}` })),
-        { "@type": "ListItem", position: 3 + crumbMid.length, name: locName, item: `${siteUrl}/products/${product.slug}` },
+        // Адреса с префиксом локали, как на остальных страницах (до 02.10.2026 uz/en/tr/zh
+        // карточки отдавали в разметке русские адреса)
+        { "@type": "ListItem", position: 1, name: t("nav.home"), item: `${siteUrl}${lp}/` },
+        { "@type": "ListItem", position: 2, name: t("nav.catalog"), item: `${siteUrl}${lp}/catalog` },
+        ...crumbMid.map((c, i) => ({ "@type": "ListItem", position: 3 + i, name: c.name, item: `${siteUrl}${lp}${c.href}` })),
+        { "@type": "ListItem", position: 3 + crumbMid.length, name: locName, item: `${siteUrl}${lp}/products/${product.slug}` },
       ],
     };
     // FAQ-схема (FAQPage) из структурированного описания — для расширенных сниппетов Google
