@@ -1,0 +1,671 @@
+{
+ "7404c26f-3579-41f6-8192-f4f6f22be503": {
+  "uz": "Wi-Tek WK-DL110 4G CPE modemi (WI-LTE300 V1)",
+  "tr": "Wi-Tek WK-DL110 4G CPE modem (WI-LTE300 V1)"
+ },
+ "3b58f5ec-fb37-43ac-a544-0335a2e5908c": {
+  "uz": "4G-CPE CPF912 4G modemi",
+  "tr": "4G-CPE CPF912 4G modem"
+ },
+ "f2b76401-717c-46d4-851b-70e2160d805a": {
+  "tr": "4G-CPE-903 4G modem"
+ },
+ "c9427df2-5d87-4a75-bb43-8b8261476efa": {
+  "ru": "LTE-модем LTE-CPE CP106, 300 Мбит/с",
+  "en": "LTE-CPE CP106 LTE modem, 300 Mbps",
+  "tr": "LTE-CPE CP106 LTE modem, 300 Mbit/s"
+ },
+ "c7acc15e-83c8-41da-9619-c7114856e8b8": {
+  "ru": "4G CPE-модем Wi-Tek WI-LTE300 V1, 2 порта LAN",
+  "en": "Wi-Tek WI-LTE300 V1 4G CPE modem, 2 LAN ports",
+  "tr": "Wi-Tek WI-LTE300 V1 4G CPE modem, 2 LAN portu"
+ },
+ "695da697-bb86-40f9-93c6-9992bc457de8": {
+  "tr": "Geçiş anahtarlık kartı (125 kHz)",
+  "zh": "门禁钥匙扣卡（125 kHz）"
+ },
+ "f750e2d2-99fe-493a-be12-64b3dfed07fa": {
+  "tr": "Renkli anahtarlık kart",
+  "zh": "彩色钥匙扣卡"
+ },
+ "c1261c95-6031-4641-9786-29b53a4b2d54": {
+  "tr": "EM-Marine plastik kart",
+  "zh": "EM-Marine 塑料卡"
+ },
+ "ac7b7b88-f7fb-45c5-a238-1c0919241b18": {
+  "ru": "Плата управления шлагбаумом RTU5024 с SIM-картой 2G",
+  "en": "RTU5024 barrier gate control board with 2G SIM",
+  "tr": "RTU5024 bariyer kontrol kartı, 2G SIM kartlı",
+  "zh": "RTU5024 道闸控制板，2G SIM 卡"
+ },
+ "49b7fd17-21ea-4e54-a496-a6872c53008a": {
+  "tr": "KANIHAD KND-BGM350/L bariyeri (sol)",
+  "zh": "KANIHAD KND-BGM350/L 道闸（左向）"
+ },
+ "7661eab5-b3ab-472b-b7ab-b63212c4d06d": {
+  "tr": "KANIHAD KND-BGM350/R bariyeri (sağ)",
+  "zh": "KANIHAD KND-BGM350/R 道闸（右向）"
+ },
+ "04e60de9-d765-45a0-ab5c-644a96ce44d6": {
+  "tr": "Bolid Orion Pro sunucu yazılımı (sürüm 512)",
+  "zh": "Bolid Orion Pro 服务器软件（版本 512）"
+ },
+ "6fb3ce10-fa12-4ace-a852-294d4edb35dd": {
+  "tr": "Bolid Signal-20P yangın ve hırsız alarm kontrol paneli",
+  "zh": "Bolid Signal-20P 防火防盗报警控制器"
+ },
+ "c5b5bba0-9f63-4d8e-a526-bdfacb45471e": {
+  "tr": "Bolid Signal-20P rev.01 yangın ve hırsız alarm kontrol paneli",
+  "zh": "Bolid Signal-20P rev.01 防火防盗报警控制器"
+ },
+ "8b0cd6da-66d4-447b-9f84-21bfd9b795cf": {
+  "tr": "Rubezh-2OP adresli yangın ve hırsız alarm paneli (PPKOPU 011249-2-1)",
+  "zh": "Rubezh-2OP 地址式防火防盗报警控制器（PPKOPU 011249-2-1）"
+ },
+ "a300512b-69c4-49c8-a039-9b701309ffe7": {
+  "tr": "Rubezh-2OP yangın ve hırsız alarm paneli, R3 protokolü (PPKOPU 011249-2-1)",
+  "zh": "Rubezh-2OP 防火防盗报警控制器，R3 协议（PPKOPU 011249-2-1）"
+ },
+ "ab62cd41-2250-40f0-8d37-12ec90ebd37d": {
+  "tr": "Rubezh-2OP yangın ve hırsız alarm paneli, R3 protokolü, HASP Pro anahtarlı (PPKOPU 011249-2-1)",
+  "zh": "Rubezh-2OP 防火防盗报警控制器，R3 协议，带 HASP Pro 密钥（PPKOPU 011249-2-1）"
+ },
+ "697e0a56-c0d1-4d6f-bacb-d94ac742eefe": {
+  "tr": "Rubezh-2OP yangın ve hırsız alarm paneli, HASP anahtarlı (PPKOPU 011249-2-1)",
+  "zh": "Rubezh-2OP 防火防盗报警控制器，带 HASP 密钥（PPKOPU 011249-2-1）"
+ },
+ "7cff2a31-af43-46ea-990c-bd62f3261117": {
+  "ru": "Датчик разбития стекла GLASSTREK-456",
+  "tr": "GLASSTREK-456 cam kırılma dedektörü",
+  "zh": "GLASSTREK-456 玻璃破碎探测器"
+ },
+ "680c7fbc-8883-4989-afb3-fbe88decd3b8": {
+  "ru": "Тепловой извещатель ИП-103-А13 с индикацией",
+  "tr": "IP-103-A13 ısı dedektörü (göstergeli)",
+  "zh": "IP-103-A13 感温探测器（带指示）"
+ },
+ "6014edde-97cb-4e59-81da-a07092666c78": {
+  "tr": "PB-68 EMERGENCY panik butonu",
+  "zh": "PB-68 EMERGENCY 紧急按钮"
+ },
+ "2b80ede7-4fdb-4c12-b195-16a4cda4b7e1": {
+  "ru": "Органайзер для кабеля на 12 ячеек",
+  "en": "Cable organizer, 12 slots",
+  "tr": "Kablo düzenleyici, 12 yuvalı",
+  "zh": "理线器，12 位"
+ },
+ "44c9e328-1392-4c37-808a-4ccf8a55d9a0": {
+  "ru": "Органайзер для кабелей на 24 ячейки",
+  "en": "Cable organizer, 24 slots",
+  "tr": "Kablo düzenleyici, 24 yuvalı",
+  "zh": "理线器，24 位"
+ },
+ "23eb7e2a-b88f-42cd-9498-592b4e8152f3": {
+  "ru": "Угловой серверный шкаф KANIHAD 6U, 600×450×300 мм",
+  "en": "KANIHAD 6U corner server cabinet, 600×450×300 mm",
+  "tr": "KANIHAD 6U köşe sunucu kabini, 600×450×300 mm",
+  "zh": "KANIHAD 6U 转角服务器机柜，600×450×300 mm"
+ },
+ "9c8478af-c05b-4b70-8b21-02b8727a637f": {
+  "ru": "Шкаф серверный KANIHAD 4U, 600×450 мм",
+  "en": "KANIHAD 4U server cabinet, 600×450 mm",
+  "tr": "KANIHAD 4U sunucu kabini, 600×450 mm",
+  "zh": "KANIHAD 4U 服务器机柜，600×450 mm"
+ },
+ "4730942e-16cc-4c62-9ce8-1965ad5e0420": {
+  "ru": "Шкаф серверный KANIHAD 6U, 600×450 мм",
+  "en": "KANIHAD 6U server cabinet, 600×450 mm",
+  "tr": "KANIHAD 6U sunucu kabini, 600×450 mm",
+  "zh": "KANIHAD 6U 服务器机柜，600×450 mm"
+ },
+ "ee616fe5-b0c4-41bc-a077-6f1c7e1c1482": {
+  "ru": "Шкаф серверный KANIHAD 6U, 600×600 мм",
+  "en": "KANIHAD 6U server cabinet, 600×600 mm",
+  "tr": "KANIHAD 6U sunucu kabini, 600×600 mm",
+  "zh": "KANIHAD 6U 服务器机柜，600×600 mm"
+ },
+ "1ff88dfd-8d45-4cc3-900f-68cbb8a5d018": {
+  "ru": "Полка KANIHAD для напольного шкафа, 600 мм",
+  "en": "KANIHAD shelf for floor-standing rack, 600 mm",
+  "tr": "KANIHAD dikili kabin rafı, 600 mm",
+  "zh": "KANIHAD 落地机柜托盘，600 mm"
+ },
+ "70e534c2-2c6c-4285-a62c-99be8af3d6ec": {
+  "ru": "Полка KANIHAD для напольного шкафа, 800 мм",
+  "en": "KANIHAD shelf for floor-standing rack, 800 mm",
+  "tr": "KANIHAD dikili kabin rafı, 800 mm",
+  "zh": "KANIHAD 落地机柜托盘，800 mm"
+ },
+ "9b9a41de-c64a-46d7-b628-3cfbe121527d": {
+  "ru": "Полка выдвижная KANIHAD для шкафа, 800 мм",
+  "en": "KANIHAD sliding rack shelf, 800 mm",
+  "tr": "KANIHAD sürgülü kabin rafı, 800 mm",
+  "zh": "KANIHAD 机柜滑动托盘，800 mm"
+ },
+ "473f977d-fc5c-44b4-8b4d-a6282f601b63": {
+  "ru": "Полка KANIHAD для настенного шкафа, 600 мм",
+  "en": "KANIHAD shelf for wall-mount rack, 600 mm",
+  "tr": "KANIHAD duvar tipi kabin rafı, 600 mm",
+  "zh": "KANIHAD 壁挂机柜托盘，600 mm"
+ },
+ "c9ea71d7-b67a-4e2e-a0d2-fe90e9b3b8f7": {
+  "tr": "YY-HS-N5684R sıkma pensesi",
+  "zh": "YY-HS-N5684R 压线钳"
+ },
+ "faeeed99-90ad-48df-9bb3-255104fe3c32": {
+  "tr": "YY-HS-N568CR sıkma pensesi",
+  "zh": "YY-HS-N568CR 压线钳"
+ },
+ "eaf313d8-b242-452e-bfb2-60f334c72d1b": {
+  "tr": "YY-HT-315 sıkma pensesi",
+  "zh": "YY-HT-315 压线钳"
+ },
+ "4182c5a7-8866-48a3-8153-6da5dd01544e": {
+  "tr": "YY-HT-316 sıkma pensesi",
+  "zh": "YY-HT-316 压线钳"
+ },
+ "027d40a2-3447-4d06-a2b6-1b02609ae238": {
+  "tr": "YY-XB-002 çok fonksiyonlu pense",
+  "zh": "YY-XB-002 多功能钳"
+ },
+ "e7a56cf6-65cf-4979-8875-15c7e3ce8536": {
+  "tr": "OneVolt akülü tornavida seti",
+  "zh": "OneVolt 无绳电动螺丝刀套装"
+ },
+ "ff8cdc2a-0218-49e2-a22f-1e062797fe98": {
+  "tr": "OneVolt darbeli akülü tornavida",
+  "zh": "OneVolt 冲击式无绳螺丝刀"
+ },
+ "4a67aa90-5d25-4edc-823a-2b2cffa2576a": {
+  "ru": "Набор отвёрток 6,5×100 мм",
+  "en": "Screwdriver set 6.5×100 mm",
+  "tr": "Tornavida seti 6,5×100 mm",
+  "zh": "螺丝刀套装 6.5×100 mm"
+ },
+ "c46df2b1-eda1-4494-b517-a3a66e7f19e9": {
+  "ru": "Отвёртка универсальная 2 в 1",
+  "tr": "Üniversal tornavida, 2’si 1 arada",
+  "zh": "二合一多用螺丝刀"
+ },
+ "61c6cea1-fe26-42b6-bec0-be289118ad69": {
+  "tr": "RJ-45 konnektör kılıfı",
+  "zh": "RJ-45 水晶头护套"
+ },
+ "cdd02058-aaa3-474c-8b26-58c03fbe3086": {
+  "tr": "Hortum 66-10",
+  "zh": "软管 66-10"
+ },
+ "bf196c30-9ec7-4d6e-84e1-70c8605384f1": {
+  "tr": "Tuya Smart PST-HG200 Wi-Fi kapı kilidi (parmak izi/şifre/kart)",
+  "zh": "Tuya Smart PST-HG200 Wi-Fi 门锁（指纹/密码/卡）"
+ },
+ "1a09701f-eff4-4979-8315-f6fc7fedbc2f": {
+  "tr": "Tuya Smart PST-HR01 Wi-Fi kapı kilidi (parmak izi/şifre/kart)",
+  "zh": "Tuya Smart PST-HR01 Wi-Fi 门锁（指纹/密码/卡）"
+ },
+ "087ef19e-aa25-4b54-acea-758a1144cbd4": {
+  "tr": "Tuya Smart PST-HR04 Wi-Fi kapı kilidi (parmak izi/şifre/kart)",
+  "zh": "Tuya Smart PST-HR04 Wi-Fi 门锁（指纹/密码/卡）"
+ },
+ "40268432-b4ea-425a-b0a4-cb0b4d741242": {
+  "ru": "Магнитный замок KANIHAD ML-280AS, 280 кг",
+  "en": "KANIHAD ML-280AS magnetic lock, 280 kg",
+  "tr": "KANIHAD ML-280AS manyetik kilit, 280 kg",
+  "zh": "KANIHAD ML-280AS 磁力锁，280 kg"
+ },
+ "bffb1a22-9178-4940-b0d2-c9af52b2b4fd": {
+  "ru": "Магнитный замок KANIHAD ML-380A, 380 кг",
+  "en": "KANIHAD ML-380A magnetic lock, 380 kg",
+  "tr": "KANIHAD ML-380A manyetik kilit, 380 kg",
+  "zh": "KANIHAD ML-380A 磁力锁，380 kg"
+ },
+ "190f006b-58b9-44e6-ad75-8868b61a2ed8": {
+  "ru": "Магнитный замок KANIHAD ML-500A, 500 кг",
+  "en": "KANIHAD ML-500A magnetic lock, 500 kg",
+  "tr": "KANIHAD ML-500A manyetik kilit, 500 kg",
+  "zh": "KANIHAD ML-500A 磁力锁，500 kg"
+ },
+ "b2d62bb4-7ee2-4059-ad2b-7c5a2b6e6043": {
+  "ru": "Магнитный замок, 180 кг",
+  "en": "Magnetic lock, 180 kg",
+  "tr": "Manyetik kilit, 180 kg",
+  "zh": "磁力锁，180 kg"
+ },
+ "8f320e8e-dee8-4a48-a9a6-cabfefa40552": {
+  "tr": "PT-S102 gömme elektrikli kilit",
+  "zh": "PT-S102 嵌入式电控锁"
+ },
+ "c24fc155-1db5-49ea-a933-4f721891aa90": {
+  "tr": "PT-S202 gömme elektrikli kilit",
+  "zh": "PT-S202 嵌入式电控锁"
+ },
+ "05264a52-7dc0-4b13-a991-66e1f366ce73": {
+  "tr": "EXIT çıkış butonu C286, gizli dokunmatik (siyah)",
+  "zh": "EXIT 出门按钮 C286，隐藏式触摸（黑色）"
+ },
+ "1c60f7e3-d9ed-4cfc-b815-366e0ca01f9f": {
+  "tr": "EXIT çıkış butonu K170, dokunmatik, metal",
+  "zh": "EXIT 出门按钮 K170，触摸式，金属"
+ },
+ "7863857d-e5e9-46a1-93f2-85c0e6dd490a": {
+  "tr": "EXIT çıkış butonu K286, dokunmatik, metal",
+  "zh": "EXIT 出门按钮 K286，触摸式，金属"
+ },
+ "adedb173-90ef-40d4-a258-28fe524db982": {
+  "tr": "EXIT çıkış butonu K86-2, dış mekan, gizli dokunmatik (siyah)",
+  "zh": "EXIT 出门按钮 K86-2，室外，隐藏式触摸（黑色）"
+ },
+ "f639896e-a333-424b-830b-5bf48d84ef1a": {
+  "tr": "EXIT çıkış butonu Ok-Kora",
+  "zh": "EXIT 出门按钮 Ok-Kora"
+ },
+ "9175d439-cb1b-4a3c-be9f-ec4b98f2edee": {
+  "tr": "EXIT çıkış butonu S186, siyah, büyük",
+  "zh": "EXIT 出门按钮 S186，黑色，大号"
+ },
+ "1d5f2245-84d1-4f2b-9a90-78d6959651fa": {
+  "tr": "EXIT çıkış butonu S28, metal, ince",
+  "zh": "EXIT 出门按钮 S28，金属，窄款"
+ },
+ "4d0cb107-22e7-4829-a2b7-1c14848eb50a": {
+  "tr": "EXIT çıkış butonu S86, iç mekan, metal, büyük",
+  "zh": "EXIT 出门按钮 S86，室内，金属，大号"
+ },
+ "339affbb-7874-479d-8ce9-9b9cf279dc63": {
+  "tr": "EXIT çıkış butonu S886M5G, yeşil",
+  "zh": "EXIT 出门按钮 S886M5G，绿色"
+ },
+ "9ed2b3e0-c118-4599-84bc-8533c0d3239e": {
+  "tr": "EXIT çıkış butonu Z30, metal",
+  "zh": "EXIT 出门按钮 Z30，金属"
+ },
+ "43da7876-f255-434a-99fa-0cbfe608b52a": {
+  "tr": "EXIT çıkış butonu, siyah, büyük",
+  "zh": "EXIT 出门按钮，黑色，大号"
+ },
+ "57cbe9b3-09ad-49e1-8dfc-af26c728c74d": {
+  "tr": "EXIT çıkış butonu, gizli dokunmatik (siyah)",
+  "zh": "EXIT 出门按钮，隐藏式触摸（黑色）"
+ },
+ "15b7dde1-9fa0-4dbc-9a87-777cf94fb7c3": {
+  "tr": "EXIT çıkış butonu, metal",
+  "zh": "EXIT 出门按钮，金属"
+ },
+ "84e96ecc-8520-4c49-ac07-71a35e8dc4ee": {
+  "tr": "EXIT çıkış butonu, metal, siyah",
+  "zh": "EXIT 出门按钮，金属，黑色"
+ },
+ "2dd40495-45a4-44f1-8b84-a1a6b91e4d8d": {
+  "tr": "EXIT kapı açma butonu PM9D",
+  "zh": "EXIT 开门按钮 PM9D"
+ },
+ "eb25b4ec-72fc-41a3-94d0-1c816b3ad0ab": {
+  "tr": "Tuya Smart PST-G12 GSM ve Wi-Fi alarm sistemi",
+  "zh": "Tuya Smart PST-G12 GSM 与 Wi-Fi 报警系统"
+ },
+ "b92a12e0-3b5f-493d-b9fc-4f697041d747": {
+  "tr": "Tuya Smart PST-G30 GSM ve Wi-Fi alarm sistemi",
+  "zh": "Tuya Smart PST-G30 GSM 与 Wi-Fi 报警系统"
+ },
+ "290fe212-554a-4ac9-a8fa-839a79033125": {
+  "tr": "Tuya Smart Zigbee PST-TE110 sıcaklık ve nem sensörü",
+  "zh": "Tuya Smart Zigbee PST-TE110 温湿度传感器"
+ },
+ "945931d9-2fb9-48c3-9703-885af0cd500d": {
+  "tr": "Tuya Smart Zigbee PST-WSD500A sıcaklık ve nem sensörü",
+  "zh": "Tuya Smart Zigbee PST-WSD500A 温湿度传感器"
+ },
+ "92d1df2c-bfd0-4f10-97e0-dd9e41516f2b": {
+  "tr": "Tuya Smart Wi-Fi PST-WW001 su kaçağı sensörü",
+  "zh": "Tuya Smart Wi-Fi PST-WW001 漏水传感器"
+ },
+ "179082e1-bc65-415a-b6a5-1d2bb3876080": {
+  "tr": "Tuya Smart Wi-Fi PST-WW002 su kaçağı sensörü",
+  "zh": "Tuya Smart Wi-Fi PST-WW002 漏水传感器"
+ },
+ "da2d4653-d457-48c1-9abf-171050db716a": {
+  "tr": "Tuya Smart PST-SC03 güneş panelli Wi-Fi kamera",
+  "zh": "Tuya Smart PST-SC03 太阳能 Wi-Fi 摄像机"
+ },
+ "08c3cd66-1557-4fdb-bbc6-8caebeb909d3": {
+  "tr": "Tuya Smart PST-SC218 güneş panelli Wi-Fi kamera",
+  "zh": "Tuya Smart PST-SC218 太阳能 Wi-Fi 摄像机"
+ },
+ "4d2afdd4-0da3-4065-904d-dfdb578ed0fc": {
+  "tr": "Tuya Smart PST-ST-382 kablosuz FullHD Wi-Fi kamera",
+  "zh": "Tuya Smart PST-ST-382 无线全高清 Wi-Fi 摄像机"
+ },
+ "fa56fa7d-7053-47b1-9601-bfec1042792e": {
+  "tr": "Tuya Smart PST-X1 kablosuz Wi-Fi kamera, 2 MP",
+  "zh": "Tuya Smart PST-X1 无线 Wi-Fi 摄像机，2 MP"
+ },
+ "1a813a76-aab7-44ef-8371-b0e500c00122": {
+  "tr": "Tuya Smart PST-C10A kablosuz Wi-Fi kamera, 3 MP",
+  "zh": "Tuya Smart PST-C10A 无线 Wi-Fi 摄像机，3 MP"
+ },
+ "57f32266-d8ca-46a4-8974-adefc14d3ff8": {
+  "tr": "H3C MSR2600-6-X1 yönlendirici (modüler, 6×GE)",
+  "zh": "H3C MSR2600-6-X1 路由器（模块化，6×GE）"
+ },
+ "91ea3db3-e7ff-4986-80fa-03cbf813fbed": {
+  "tr": "H3C MSR3620 yönlendirici (modüler, yüksek performanslı)",
+  "zh": "H3C MSR3620 路由器（模块化，高性能）"
+ },
+ "49def894-f975-4862-a700-8d5aec3d77c6": {
+  "tr": "H3C MSR810 yönlendirici (kurumsal, VPN, güvenlik duvarı)",
+  "zh": "H3C MSR810 路由器（企业级，VPN，防火墙）"
+ },
+ "39978c2a-e4a8-46ba-a336-1c35af021c1f": {
+  "tr": "H3C SecPath F100-C-G2 güvenlik duvarı (KOBİ için NGFW)",
+  "zh": "H3C SecPath F100-C-G2 防火墙（面向中小企业的 NGFW）"
+ },
+ "f6f59533-097c-473c-ade2-bafb2478cce7": {
+  "tr": "H3C UniServer R4300 G6 depolama sunucusu (yüksek kapasiteli)",
+  "zh": "H3C UniServer R4300 G6 存储服务器（大容量）"
+ },
+ "2460537d-f9bc-4fc7-85b5-7f9abe5ec0e5": {
+  "uz": "MikroTik Audience LTE6 toʻplami (RBD25GR-5HPacQD2HPnD&R11e-LTE6)",
+  "tr": "MikroTik Audience LTE6 kiti (RBD25GR-5HPacQD2HPnD&R11e-LTE6)",
+  "zh": "MikroTik Audience LTE6 套件 (RBD25GR-5HPacQD2HPnD&R11e-LTE6)"
+ },
+ "a6697b59-de46-45bd-8dc2-4ac921328187": {
+  "uz": "MikroTik LtAP LTE toʻplami (RBLtAP-2HnD&R11e-LTE)",
+  "tr": "MikroTik LtAP LTE kiti (RBLtAP-2HnD&R11e-LTE)",
+  "zh": "MikroTik LtAP LTE 套件 (RBLtAP-2HnD&R11e-LTE)"
+ },
+ "159e4882-c22e-4d92-9e83-28c171a56910": {
+  "uz": "MikroTik LtAP LTE6 toʻplami (RBLtAP-2HnD&R11e-LTE6)",
+  "tr": "MikroTik LtAP LTE6 kiti (RBLtAP-2HnD&R11e-LTE6)",
+  "zh": "MikroTik LtAP LTE6 套件 (RBLtAP-2HnD&R11e-LTE6)"
+ },
+ "9978ba8d-7161-49e8-91cb-d5c960698e2e": {
+  "uz": "MikroTik LtAP mini LTE toʻplami (RB912R-2nD-LTm&EC200A-EU)",
+  "tr": "MikroTik LtAP mini LTE kiti (RB912R-2nD-LTm&EC200A-EU)",
+  "zh": "MikroTik LtAP mini LTE 套件 (RB912R-2nD-LTm&EC200A-EU)"
+ },
+ "6c61ce87-0f9f-4d05-9395-d9471ad60a83": {
+  "uz": "MikroTik hAP ac³ LTE6 toʻplami (RBD53GR-5HacD2HnD&R11e-LTE6)",
+  "tr": "MikroTik hAP ac³ LTE6 kiti (RBD53GR-5HacD2HnD&R11e-LTE6)",
+  "zh": "MikroTik hAP ac³ LTE6 套件 (RBD53GR-5HacD2HnD&R11e-LTE6)"
+ },
+ "1122cfe7-a82c-427e-9d2a-62a19316dab8": {
+  "uz": "MikroTik wAP LTE toʻplami (wAPR-2nD&EC200A-EU)",
+  "tr": "MikroTik wAP LTE kiti (wAPR-2nD&EC200A-EU)",
+  "zh": "MikroTik wAP LTE 套件 (wAPR-2nD&EC200A-EU)"
+ },
+ "0bff26cf-8336-4457-9e29-03d1ce0c2d4c": {
+  "tr": "MikroTik GPEN11 PoE enjektör",
+  "zh": "MikroTik GPEN11 PoE 注入器"
+ },
+ "b69800b0-4447-4928-92a0-dc7d4dbef2a6": {
+  "tr": "Ruijie Reyee RG-EW1200R Wi-Fi genişletici (Mesh tekrarlayıcı)",
+  "zh": "Ruijie Reyee RG-EW1200R Wi-Fi 扩展器（Mesh 中继器）"
+ },
+ "2b9db971-3dea-4e8b-bbe0-a228bb215c38": {
+  "ru": "Патч-панель на 24 порта, категория 5",
+  "uz": "Patch-panel, 24 port, 5-toifa",
+  "en": "Patch panel, 24 ports, Cat 5",
+  "tr": "Patch panel, 24 port, Cat 5",
+  "zh": "配线架，24 口，5 类"
+ },
+ "7da2a0ec-b84b-46e5-b4b9-e40d0a25ceee": {
+  "ru": "Патч-панель на 24 порта, категория 6",
+  "uz": "Patch-panel, 24 port, 6-toifa",
+  "en": "Patch panel, 24 ports, Cat 6",
+  "tr": "Patch panel, 24 port, Cat 6",
+  "zh": "配线架，24 口，6 类"
+ },
+ "1947b700-c6ae-4b41-8d8e-9d32c4dbbdd7": {
+  "ru": "Патч-панель на 48 портов, категория 5",
+  "uz": "Patch-panel, 48 port, 5-toifa",
+  "en": "Patch panel, 48 ports, Cat 5",
+  "tr": "Patch panel, 48 port, Cat 5",
+  "zh": "配线架，48 口，5 类"
+ },
+ "8e903f91-56a0-4266-ae25-595c229abf14": {
+  "ru": "Патч-панель на 48 портов, категория 6",
+  "uz": "Patch-panel, 48 port, 6-toifa",
+  "en": "Patch panel, 48 ports, Cat 6",
+  "tr": "Patch panel, 48 port, Cat 6",
+  "zh": "配线架，48 口，6 类"
+ },
+ "b8b02cd2-739d-485d-92eb-529e3e3c2bb2": {
+  "uz": "HDMI splitter 4K 1×2 (1 kirish — 2 chiqish)",
+  "en": "HDMI splitter 4K 1×2 (1 input — 2 outputs)",
+  "tr": "HDMI splitter 4K 1×2 (1 giriş — 2 çıkış)",
+  "zh": "HDMI 分配器 4K 1×2（1 进 2 出）"
+ },
+ "f5947579-d088-4a76-b44d-e6ba3e13a1cb": {
+  "uz": "HDMI splitter 4K 1×4 (1 kirish — 4 chiqish)",
+  "en": "HDMI splitter 4K 1×4 (1 input — 4 outputs)",
+  "tr": "HDMI splitter 4K 1×4 (1 giriş — 4 çıkış)",
+  "zh": "HDMI 分配器 4K 1×4（1 进 4 出）"
+ },
+ "599597c1-cebf-4e64-95b4-3c5c5e20f122": {
+  "tr": "RJ11 telefon prizi",
+  "zh": "RJ11 电话插座"
+ },
+ "6e0ac035-ecbb-432e-85c7-09103943e61b": {
+  "tr": "KANIHAD E8002 elektrik priz adaptörü",
+  "zh": "KANIHAD E8002 电源转换插头"
+ },
+ "ff22c9ba-c89b-4459-86ea-0016c56756cc": {
+  "tr": "KANIHAD E8003 elektrik priz adaptörü",
+  "zh": "KANIHAD E8003 电源转换插头"
+ },
+ "1bedcd40-94bf-42eb-a162-330c3e895cb1": {
+  "tr": "KANIHAD E8003ES elektrik priz adaptörü",
+  "zh": "KANIHAD E8003ES 电源转换插头"
+ },
+ "9de5eed9-7e3a-4fdb-aff8-446c1414448d": {
+  "tr": "KANIHAD E8004 elektrik priz adaptörü",
+  "zh": "KANIHAD E8004 电源转换插头"
+ },
+ "0e0cbfc7-fc1c-4fed-be1d-5a86092bc684": {
+  "ru": "Переходник электрический 220 В (Китай — Европа)",
+  "tr": "Elektrik fiş adaptörü 220 V (Çin — Avrupa)",
+  "zh": "电源转换插头 220 V（中规转欧规）"
+ },
+ "61503aee-962c-45cb-b16b-9be38d6c56e9": {
+  "ru": "Удлинитель электрический на 3 розетки, 2 м",
+  "tr": "Elektrik uzatma kablosu, 3 prizli, 2 m",
+  "zh": "电源延长线，3 孔，2 m"
+ },
+ "11a717f0-6d25-4233-b66f-3e7a5a56e80d": {
+  "ru": "Удлинитель электрический на 4 розетки, 2 м",
+  "tr": "Elektrik uzatma kablosu, 4 prizli, 2 m",
+  "zh": "电源延长线，4 孔，2 m"
+ },
+ "aad3bc3f-73d3-4797-a752-9b5a7daea591": {
+  "ru": "Удлинитель электрический на 5 розеток, 2 м",
+  "tr": "Elektrik uzatma kablosu, 5 prizli, 2 m",
+  "zh": "电源延长线，5 孔，2 m"
+ },
+ "bd8c53d1-86c3-477c-a2ce-26ae5df04bb5": {
+  "ru": "Усилитель мощности 120 Вт",
+  "en": "Power amplifier 120 W",
+  "tr": "Güç amplifikatörü 120 W",
+  "zh": "功率放大器 120 W"
+ },
+ "35d3896b-5c0c-4d54-ac23-45036daa1b6f": {
+  "ru": "Усилитель мощности 2000 Вт",
+  "en": "Power amplifier 2000 W",
+  "tr": "Güç amplifikatörü 2000 W",
+  "zh": "功率放大器 2000 W"
+ },
+ "3b669a6b-c47e-4c14-8577-181e5c6b1770": {
+  "ru": "Усилитель мощности 250 Вт",
+  "en": "Power amplifier 250 W",
+  "tr": "Güç amplifikatörü 250 W",
+  "zh": "功率放大器 250 W"
+ },
+ "3f96a6ba-89fd-497f-b769-f826921c7126": {
+  "tr": "KANIHAD SVC-D10000VA voltaj regülatörü",
+  "zh": "KANIHAD SVC-D10000VA 稳压器"
+ },
+ "ac15220c-70be-49a0-8bab-ce270bf3b33e": {
+  "tr": "KANIHAD SVC-D3000VA voltaj regülatörü",
+  "zh": "KANIHAD SVC-D3000VA 稳压器"
+ },
+ "6a42a100-1cf5-4673-b512-3a57c50b4fff": {
+  "tr": "KANIHAD SVC-D5000VA voltaj regülatörü",
+  "zh": "KANIHAD SVC-D5000VA 稳压器"
+ },
+ "6e617da2-f6fe-4646-8d6b-9709960cc2cd": {
+  "tr": "Monitör braketi, küçük",
+  "zh": "显示器支架，小号"
+ },
+ "e4e8ac1a-a62c-4660-8214-de0164fffc3e": {
+  "tr": "Tozlu yangın söndürücü OP-10 RIF (orijinal, büyük)",
+  "zh": "干粉灭火器 OP-10 RIF（原装大号）"
+ },
+ "f37a9baa-fdb7-438e-8ac0-6843f7d51c9e": {
+  "tr": "Tozlu yangın söndürücü OP-100 RIF",
+  "zh": "干粉灭火器 OP-100 RIF"
+ },
+ "5a4b5118-6d2d-459d-ab8d-f767cc037d0e": {
+  "tr": "Tozlu yangın söndürücü OP-25 RIF",
+  "zh": "干粉灭火器 OP-25 RIF"
+ },
+ "ed91f029-a172-4e4f-b74b-d936dd962876": {
+  "tr": "Tozlu yangın söndürücü OP-4 RIF",
+  "zh": "干粉灭火器 OP-4 RIF"
+ },
+ "c645f3d3-ae90-43e6-8e88-b70e3df68ff6": {
+  "tr": "Tozlu yangın söndürücü OP-5 RIF (orijinal, büyük)",
+  "zh": "干粉灭火器 OP-5 RIF（原装大号）"
+ },
+ "a0f22649-c8a1-4ca9-9e20-154eb0169f9f": {
+  "tr": "Tozlu yangın söndürücü OP-50 RIF",
+  "zh": "干粉灭火器 OP-50 RIF"
+ },
+ "0ff793fc-4037-4ba2-a5cf-5df2bba98276": {
+  "tr": "Tozlu yangın söndürücü OP-8 RIF",
+  "zh": "干粉灭火器 OP-8 RIF"
+ },
+ "8abce653-a99b-426b-95cd-ff578886f806": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES206: 4 порта PoE + 2 аплинка, 10/100 Мбит/с",
+  "en": "Wi-Tek WI-PCES206 cloud PoE switch: 4 PoE + 2 uplink ports, 10/100 Mbps",
+  "tr": "Wi-Tek WI-PCES206 bulut yönetimli PoE switch: 4 PoE + 2 uplink port, 10/100 Mbps"
+ },
+ "452dfa03-c6c1-4793-9377-18b8060cfde0": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES306G V2: 4 порта PoE + 2 аплинка, гигабитный",
+  "en": "Wi-Tek WI-PCES306G V2 cloud PoE switch: 4 PoE + 2 uplink ports, gigabit",
+  "tr": "Wi-Tek WI-PCES306G V2 bulut yönetimli PoE switch: 4 PoE + 2 uplink port, gigabit"
+ },
+ "8e67cee2-bc3b-4441-a0f6-e7c70f9819c4": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES310G: 8 портов PoE + 2 аплинка, гигабитный",
+  "en": "Wi-Tek WI-PCES310G cloud PoE switch: 8 PoE + 2 uplink ports, gigabit",
+  "tr": "Wi-Tek WI-PCES310G bulut yönetimli PoE switch: 8 PoE + 2 uplink port, gigabit"
+ },
+ "bc943468-b45c-4655-acc7-6213fdfe5e6b": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES310GF V2: 8 гигабитных портов PoE + 2 SFP",
+  "en": "Wi-Tek WI-PCES310GF V2 cloud PoE switch: 8 gigabit PoE ports + 2 SFP",
+  "tr": "Wi-Tek WI-PCES310GF V2 bulut yönetimli PoE switch: 8 gigabit PoE port + 2 SFP"
+ },
+ "e4c6869c-6306-4a26-b457-8d2df2115fea": {
+  "ru": "Облачный PoE-коммутатор Wi-Tek WI-PCES318GF V2: 16 гигабитных портов PoE + 2 SFP",
+  "en": "Wi-Tek WI-PCES318GF V2 cloud PoE switch: 16 gigabit PoE ports + 2 SFP",
+  "tr": "Wi-Tek WI-PCES318GF V2 bulut yönetimli PoE switch: 16 gigabit PoE port + 2 SFP"
+ },
+ "78a6d23f-b960-47a8-9b70-d94282be6379": {
+  "ru": "PoE-коммутатор Wi-Tek WI-PCMS328GF V2: 24 порта PoE + 2 порта + 4 SFP",
+  "en": "Wi-Tek WI-PCMS328GF V2 PoE switch: 24 PoE + 2 ports + 4 SFP",
+  "tr": "Wi-Tek WI-PCMS328GF V2 PoE switch: 24 PoE + 2 port + 4 SFP"
+ },
+ "a9348394-4a28-436e-8941-502227939418": {
+  "ru": "Коммутатор Wi-Tek WK-S205, 5 портов 10/100 Мбит/с",
+  "en": "Wi-Tek WK-S205 switch, 5 × 10/100 Mbps",
+  "tr": "Wi-Tek WK-S205 switch, 5 × 10/100 Mbps"
+ },
+ "3622bcb6-df9d-434b-8859-29472927b022": {
+  "ru": "Коммутатор Wi-Tek WK-S208, 8 портов 10/100 Мбит/с",
+  "en": "Wi-Tek WK-S208 switch, 8 × 10/100 Mbps",
+  "tr": "Wi-Tek WK-S208 switch, 8 × 10/100 Mbps"
+ },
+ "eb64f049-8355-4b79-b488-82885bd5dc51": {
+  "ru": "Коммутатор Wi-Tek WK-S305, 5 портов 100/1000 Мбит/с",
+  "en": "Wi-Tek WK-S305 switch, 5 × 100/1000 Mbps",
+  "tr": "Wi-Tek WK-S305 switch, 5 × 100/1000 Mbps"
+ },
+ "57e968a4-2ca2-47a4-a316-dcea1ff3fbee": {
+  "ru": "Коммутатор Wi-Tek WK-S308, 8 портов 100/1000 Мбит/с",
+  "en": "Wi-Tek WK-S308 switch, 8 × 100/1000 Mbps",
+  "tr": "Wi-Tek WK-S308 switch, 8 × 100/1000 Mbps"
+ },
+ "d5b3c2d2-6a7c-453c-9771-ea8285babec3": {
+  "uz": "Hikvision DS-KAB673-S1 terminali uchun himoya soyaboni"
+ },
+ "e6b0dae8-06a7-47d8-914e-cfefc1b87d32": {
+  "uz": "Hikvision DS-D2055LU-Y LCD monitori"
+ },
+ "82f9ea8a-feef-44db-8c53-cb46d5573a90": {
+  "uz": "Hikvision DS-D2055UL-0A LCD monitori"
+ },
+ "893c5afd-3641-4524-9992-c31723244303": {
+  "tr": "Dahua PFS3005-5ET-L PoE switch"
+ },
+ "608a56c5-864f-4305-82a5-af69c3b511ba": {
+  "tr": "Dahua PFS3218-16ET-135 PoE switch"
+ },
+ "632cada1-aa98-4e9a-83d3-7ba8f4965024": {
+  "tr": "Dahua PFS3226-24ET-240 PoE switch"
+ },
+ "65778a1f-ecf6-4b5c-a8cd-05d5fdefbc1d": {
+  "tr": "Tp-Link SX3206HPP L2+ PoE++ switch"
+ },
+ "bc96770b-c05a-4de4-baba-bbdf5c8fbcc4": {
+  "tr": "Dahua S3006-4ET-36 PoE switch"
+ },
+ "31647f12-7da9-43a9-b609-1441d5f7d2c5": {
+  "tr": "Dahua PFS3008-8ET-L PoE switch"
+ },
+ "ff4161e9-3449-41e2-a131-318c70f406ee": {
+  "tr": "Dahua PFS3009-8ET-65 PoE switch"
+ },
+ "6bd5579f-d281-4b37-8825-026fb1bd1370": {
+  "tr": "Dahua PFS3008-8GT-L PoE switch"
+ },
+ "d9a230af-612d-4b1e-9022-2857b2eceeed": {
+  "tr": "TP-Link TL-SX1008 çoklu gigabit switch"
+ },
+ "cb74aab2-0ca2-46b0-8c83-7405e57a1337": {
+  "tr": "Dahua CS4218-16ET-190 PoE switch"
+ },
+ "488b8c6f-5c29-47ac-b438-904c51d6232d": {
+  "tr": "Dahua CS4228-24GT-240 PoE switch"
+ },
+ "7ecb60fa-2d2f-43b3-8739-033a93ea0427": {
+  "tr": "Dahua CS4010-8ET-60 PoE switch"
+ },
+ "77481607-eddb-4583-9105-cef5a2f20993": {
+  "tr": "Dahua CS4218-16ET-135 PoE switch"
+ },
+ "e2ca007d-66b9-4ee8-b1d9-4a9d422e0302": {
+  "tr": "Dahua PFS3010-8ET-65 PoE switch"
+ },
+ "e6cfb25a-3dbf-4111-b8d1-0cf67fc38ed9": {
+  "tr": "Dahua CS4218-16ET-240 PoE switch"
+ },
+ "f514da50-f145-4180-a63f-ca6ce4751860": {
+  "tr": "Dahua CS4006-4ET2GT-36 PoE switch"
+ },
+ "cceabfed-908e-402c-a226-c7d10d810acc": {
+  "tr": "Dahua CS4010-8ET2GT-60 PoE switch"
+ },
+ "f6ff27d4-9c20-4b57-b27c-704263a66e3f": {
+  "tr": "Dahua CS4220-16GT-190 PoE switch"
+ },
+ "e391f87c-bea3-47b2-88d6-9530547d88ac": {
+  "tr": "Dahua CS4226-24ET-375 PoE switch"
+ },
+ "79077416-9932-4409-8b6a-7a54d913dc8d": {
+  "tr": "Dahua CS4226-24ET-240 PoE switch"
+ },
+ "cee10f75-b402-44d6-9539-1c70dd39acba": {
+  "tr": "Dahua PFS3005-5GT-L PoE switch"
+ },
+ "a9bcce5e-fb57-45fb-9c16-4b2ca515ec63": {
+  "tr": "Dahua PFS3110-8ET-96 PoE switch"
+ }
+}
