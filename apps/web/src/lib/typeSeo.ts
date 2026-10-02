@@ -94,14 +94,14 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   "oborudovanie-ktv": {
     title: {
       ru: "Оборудование КТВ: абонентские ответвители и делители | Ташкент",
-      uz: "KTV uskunalari: abonent tarmoqlagichlari va boʻlgichlar | Toshkent",
+      uz: "KTV uskunalari: abonent ajratuvchilari va boʻluvchilar | Toshkent",
       en: "CATV Equipment — Subscriber Taps & Splitters | Tashkent",
       tr: "CATV Ekipmanı — Abone Tap'ları ve Bölücüler | Taşkent",
       zh: "有线电视（CATV）设备——用户分支器与分配器｜塔什干",
     },
     desc: {
       ru: "Абонентские ответвители SNR-T на 1–8 отводов с затуханием 10–18 дБ, делитель SNR-SPLT6 и оптические приёмники для сетей кабельного ТВ. Цены от 14 790 сум, счёт с НДС, доставка по Узбекистану.",
-      uz: "1–8 chiqishli, 10–18 dB soʻnishli SNR-T abonent tarmoqlagichlari, SNR-SPLT6 boʻlgichi va kabel televideniyesi tarmoqlari uchun optik qabul qilgichlar. Narxlar 14 790 soʻmdan, QQS bilan hisob-faktura, Oʻzbekiston boʻylab yetkazib berish.",
+      uz: "1–8 chiqishli, 10–18 dB susayishli SNR-T abonent ajratuvchilari, SNR-SPLT6 boʻluvchisi va kabel televideniyesi tarmoqlari uchun optik qabul qilgichlar. Narxlar 14 790 soʻmdan, QQS bilan hisob-faktura, Oʻzbekiston boʻylab yetkazib berish.",
       en: "SNR-T subscriber taps with 1–8 ports and 10–18 dB tap loss, the SNR-SPLT6 splitter and optical receivers for cable TV networks. Prices from 14,790 UZS, VAT invoicing, delivery across Uzbekistan.",
       tr: "1–8 çıkışlı, 10–18 dB tap kaybına sahip SNR-T abone tap'ları, SNR-SPLT6 bölücü ve kablo TV şebekeleri için optik alıcılar. 14 790 somdan başlayan fiyatlar, KDV'li fatura, tüm Özbekistan'a teslimat.",
       zh: "SNR-T用户分支器（1–8路输出，分支损耗10–18 dB）、SNR-SPLT6分配器及有线电视网络光接收机。价格14,790苏姆起，可开增值税发票，全乌兹别克斯坦配送。",
@@ -590,18 +590,18 @@ export const TYPE_LANDING: Record<string, Record<string, TypeLanding>> = {
       ],
     },
     uz: {
-      intro: "Kabel televideniyesi tarmoqlari uchun passiv va tugun uskunalari: 1–8 chiqishli SNR-T abonent tarmoqlagichlari, SNR-SPLT6 boʻlgichi va KTV optik qabul qilgichlari. Narxlar 14 790 soʻmdan.",
+      intro: "Kabel televideniyesi tarmoqlari uchun passiv va tugun uskunalari: 1–8 chiqishli SNR-T abonent ajratuvchilari, SNR-SPLT6 boʻluvchisi va KTV optik qabul qilgichlari. Narxlar 14 790 soʻmdan.",
       long: [
-        "Abonent tarmoqlagichi — uydagi koaksial taqsimlash tarmogʻining asosiy elementi. Magistral signal undan IN kirishidan OUT chiqishiga deyarli yoʻqotishsiz oʻtadi va stoyak boʻylab davom etadi, TAP chiqishlariga esa nominal soʻnish qadar susaytirilgan signal ulushi beriladi. SNR-T belgisida hammasi koʻrsatilgan: birinchi raqam — chiqishlar soni, oxirgi ikkitasi — detsibeldagi soʻnish. SNR-T-318 — 18 dB li uchta chiqish, SNR-T-112 — 12 dB li bitta chiqish.",
-        "Soʻnish oʻrnatish nuqtasidagi signal darajasiga qarab tanlanadi. Kuchaytirgich yoki bosh stansiya yaqinida signal kuchli — u yerga abonent televizorlarini ortiqcha yuklamaslik uchun 16–18 dB li tarmoqlagichlar qoʻyiladi. Magistral oxiriga borib signal zaiflashadi va soʻnish 10–12 dB gacha kamaytiriladi. Hisobdan maqsad — birinchi qavatdan oxirgisigacha har bir abonent rozetkasida bir xil daraja. Chiqishlar soni nuqtadagi ulanishlar soniga qarab tanlanadi: xususiy uy uchun bir-ikkita, qavat maydonchasiga uch-toʻrtta, stoyakdagi tugun uchun olti-sakkizta.",
-        "Boʻlgich boshqacha ishlaydi: u signalni barcha chiqishlar orasida teng taqsimlaydi va unda oʻtuvchi chiqish yoʻq. Shuning uchun boʻlgich liniya oxirida yoki kvartira va uy ichidagi tarqatishda qoʻyiladi, oʻtuvchi magistral esa tarmoqlagichlarda yigʻiladi. Ularni almashtirib qoʻysangiz, oxirgi podyezdlarga signal zaif yetib boradi.",
-        "Gibrid tolali-koaksial (HFC) tarmoqlarda signal uyga optika orqali keladi. Optik qabul qilgich — Vermax-LTP-088-7-IS yoki ixcham WR1001J — uni radiochastotali signalga aylantirib, koaksial tarqatishga uzatadi, keyin tarmoqlagich va boʻlgichlar ishlaydi. Tarmogʻingiz sxemasiga mos toʻplam yigʻishda yordam beramiz: signal darajalariga koʻra nominallarni tanlaymiz, QQS bilan hisob-faktura beramiz va Oʻzbekiston boʻylab yetkazib beramiz.",
+        "Abonent ajratuvchisi — uydagi koaksial taqsimlash tarmogʻining asosiy elementi. Magistral signal undan IN kirishidan OUT chiqishiga deyarli yoʻqotishsiz oʻtadi va stoyak boʻylab davom etadi, TAP chiqishlariga esa nominal susayish qadar susaytirilgan signal ulushi beriladi. SNR-T belgisida hammasi koʻrsatilgan: birinchi raqam — chiqishlar soni, oxirgi ikkitasi — detsibeldagi susayish. SNR-T-318 — 18 dB li uchta chiqish, SNR-T-112 — 12 dB li bitta chiqish.",
+        "Susayish oʻrnatish nuqtasidagi signal darajasiga qarab tanlanadi. Kuchaytirgich yoki bosh stansiya yaqinida signal kuchli — u yerga abonent televizorlarini ortiqcha yuklamaslik uchun 16–18 dB li ajratuvchilar qoʻyiladi. Magistral oxiriga borib signal zaiflashadi va susayish 10–12 dB gacha kamaytiriladi. Hisobdan maqsad — birinchi qavatdan oxirgisigacha har bir abonent rozetkasida bir xil daraja. Chiqishlar soni nuqtadagi ulanishlar soniga qarab tanlanadi: xususiy uy uchun bir-ikkita, qavat maydonchasiga uch-toʻrtta, stoyakdagi tugun uchun olti-sakkizta.",
+        "Boʻluvchi boshqacha ishlaydi: u signalni barcha chiqishlar orasida teng taqsimlaydi va unda oʻtuvchi chiqish yoʻq. Shuning uchun boʻluvchi liniya oxirida yoki kvartira va uy ichidagi tarqatishda qoʻyiladi, oʻtuvchi magistral esa ajratuvchilarda yigʻiladi. Ularni almashtirib qoʻysangiz, oxirgi podyezdlarga signal zaif yetib boradi.",
+        "Gibrid tolali-koaksial (HFC) tarmoqlarda signal uyga optika orqali keladi. Optik qabul qilgich — Vermax-LTP-088-7-IS yoki ixcham WR1001J — uni radiochastotali signalga aylantirib, koaksial tarqatishga uzatadi, keyin ajratuvchi va boʻluvchilar ishlaydi. Tarmogʻingiz sxemasiga mos toʻplam yigʻishda yordam beramiz: signal darajalariga koʻra nominallarni tanlaymiz, QQS bilan hisob-faktura beramiz va Oʻzbekiston boʻylab yetkazib beramiz.",
       ],
       faq: [
-        ["SNR-T belgisini qanday oʻqish kerak?", "Birinchi raqam — chiqishlar soni (1, 2, 3, 4, 6 yoki 8), oxirgi ikkitasi — chiqishdagi soʻnish, dB. Masalan, SNR-T-214 — 14 dB li ikkita chiqish, SNR-T-816 — 16 dB li sakkizta chiqish."],
-        ["Qanday soʻnishni tanlash kerak?", "Kuchaytirgichga qanchalik yaqin va signal qanchalik kuchli boʻlsa, soʻnish shunchalik katta: magistral boshida — 16–18 dB, oʻrtasida — 14 dB, oxirida — 10–12 dB. Vazifa — barcha abonent rozetkalarida darajani tenglashtirish."],
-        ["Tarmoqlagich boʻlgichdan nimasi bilan farq qiladi?", "Tarmoqlagich chiqishlarga signalning bir qismini beradi va asosiy oqimni magistral boʻylab oʻtkazadi. Boʻlgich signalni chiqishlar orasida teng taqsimlaydi va oʻtuvchi chiqishga ega emas — u liniya oxirida yoki kvartira ichida qoʻyiladi."],
-        ["KTV uskunalari qancha turadi?", "Bitta chiqishli SNR-T tarmoqlagichlari — 14 790 soʻm, ikkita chiqishli — 16 190, uchta — 21 490, toʻrtta — 24 490, oltita — 43 490, sakkizta — 47 690; SNR-SPLT6 boʻlgichi — 44 390; Vermax-LTP-088-7-IS optik qabul qilgichi — 454 900, WR1001J — 1 265 900 soʻm. Tashkilotlarga QQS bilan hisob-faktura."],
+        ["SNR-T belgisini qanday oʻqish kerak?", "Birinchi raqam — chiqishlar soni (1, 2, 3, 4, 6 yoki 8), oxirgi ikkitasi — chiqishdagi susayish, dB. Masalan, SNR-T-214 — 14 dB li ikkita chiqish, SNR-T-816 — 16 dB li sakkizta chiqish."],
+        ["Qanday susayishni tanlash kerak?", "Kuchaytirgichga qanchalik yaqin va signal qanchalik kuchli boʻlsa, susayish shunchalik katta: magistral boshida — 16–18 dB, oʻrtasida — 14 dB, oxirida — 10–12 dB. Vazifa — barcha abonent rozetkalarida darajani tenglashtirish."],
+        ["Ajratuvchi boʻluvchidan nimasi bilan farq qiladi?", "Ajratuvchi chiqishlarga signalning bir qismini beradi va asosiy oqimni magistral boʻylab oʻtkazadi. Boʻluvchi signalni chiqishlar orasida teng taqsimlaydi va oʻtuvchi chiqishga ega emas — u liniya oxirida yoki kvartira ichida qoʻyiladi."],
+        ["KTV uskunalari qancha turadi?", "Bitta chiqishli SNR-T ajratuvchilari — 14 790 soʻm, ikkita chiqishli — 16 190, uchta — 21 490, toʻrtta — 24 490, oltita — 43 490, sakkizta — 47 690; SNR-SPLT6 boʻluvchisi — 44 390; Vermax-LTP-088-7-IS optik qabul qilgichi — 454 900, WR1001J — 1 265 900 soʻm. Tashkilotlarga QQS bilan hisob-faktura."],
       ],
     },
     en: {
