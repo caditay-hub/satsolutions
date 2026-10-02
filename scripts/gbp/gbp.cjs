@@ -3,7 +3,7 @@
 //
 //   node gbp.cjs                       # аккаунты, карточки, текущая ссылка на сайт — только чтение
 //   node gbp.cjs --set-website URL     # сухой прогон: покажет, что изменится
-//   node gbp.cjs --set-website URL --apply    # записать
+//   node gbp.cjs --set-website URL --location SAT --apply    # записать только у карточки SAT
 //
 // Правка ссылки нужна из-за utm-меток: адрес с хвостом Google индексирует как
 // отдельную страницу, и она конкурирует с главной в выдаче.
@@ -14,6 +14,9 @@ const TOKEN_FILE = "/root/.gbp_oauth.json";
 const APPLY = process.argv.includes("--apply");
 const setIdx = process.argv.indexOf("--set-website");
 const NEW_SITE = setIdx > -1 ? process.argv[setIdx + 1] : null;
+// --location <часть названия> — правка только одной карточки (в аккаунте их две: SAT и Temirkor)
+const locIdx = process.argv.indexOf("--location");
+const ONLY = locIdx > -1 ? process.argv[locIdx + 1].toLowerCase() : null;
 
 if (!fs.existsSync(TOKEN_FILE)) {
   console.error(`Нет ${TOKEN_FILE}. Сначала получите токен: node scripts/gbp/auth.cjs (локально).`);
@@ -81,6 +84,8 @@ async function token() {
       console.log(`  телефон:${(l.phoneNumbers?.primaryPhone) || "—"}`);
 
       if (!NEW_SITE) continue;
+      if (!ONLY) { console.log("  правка без --location не выполняется: укажите карточку"); continue; }
+      if (!(l.title || "").toLowerCase().includes(ONLY)) { console.log("  пропуск: не совпадает с --location"); continue; }
       if (l.websiteUri === NEW_SITE) { console.log("  ссылка уже такая — правка не нужна"); continue; }
       console.log(`  правка: ${l.websiteUri} → ${NEW_SITE}`);
       if (!APPLY) { console.log("  (сухой прогон, для записи добавьте --apply)"); continue; }

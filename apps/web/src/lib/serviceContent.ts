@@ -58,6 +58,7 @@ const ru: Record<string, ServiceContent> = {
       "На действующих предприятиях сценарий другой: работать нужно без остановки производства и офиса. Здесь выручает этапность — систему делим на участки, переключения планируем на нерабочие часы, старые линии выводим из эксплуатации только после проверки новых. Так мы переводили на новую инфраструктуру объекты, где простой даже в час стоил дороже всего монтажа.",
       "В каталоге более трёх тысяч позиций, а ходовое оборудование лежит на нашем складе в Ташкенте: камеры и регистраторы Hikvision и Dahua, пожарные приборы Болид и Рубеж, СКУД ZKTeco, сетевое оборудование MikroTik, TP-Link и H3C, кабель и шкафы. Складская логика проста: монтаж не останавливается в ожидании контейнера, а замена вышедшего из строя блока занимает день, а не месяц.",
       "Смету считаем по проекту или техническому заданию; если документации нет, обследуем объект и готовим её сами — выезд инженера по Ташкенту бесплатный. После сдачи даём гарантию на работы и оборудование и предлагаем договор технического обслуживания с регламентными проверками. Работаем по всему Узбекистану, для юридических лиц — полный пакет закрывающих документов и счёт с НДС.",
+      "Слаботочные сети объединяют всё, что работает на низком напряжении: видеонаблюдение, СКУД, пожарную и охранную сигнализацию, домофонию, СКС и Wi-Fi. Как интегратор систем безопасности мы ведём объект одним договором, от проекта до сдачи с исполнительной документацией, и берём смонтированные системы на обслуживание.",
     ],
   },
   cctv: {
@@ -165,6 +166,7 @@ const ru: Record<string, ServiceContent> = {
       "Турникеты различаются по проходимости и по тому, что должны предотвратить. Трипод — самый распространённый и недорогой вариант для офиса и проходной небольшого предприятия: он фиксирует проход по одному, но перелезть через него теоретически можно. Роторный турникет полного роста ставят на периметр, стройплощадку и завод, где проход должен быть исключён физически. Скоростные калитки (спидгейты) выбирают для бизнес-центров и приёмных, где важны вид и скорость потока, а рядом обязательно ставят широкую калитку для маломобильных посетителей и проноса груза.",
       "Идентификация подбирается под порядок на объекте, а не наоборот. Турникет с Face ID пропускает по лицу за доли секунды и не требует ничего доставать из кармана — это удобно там, где поток идёт волнами в начале смены. Карты и брелоки дешевле и проще в выдаче, отпечаток пальца исключает передачу пропуска другому, QR-код удобен для разовых посетителей. Все варианты работают в одной системе: турникет связывается со СКУД и учётом рабочего времени, события прохода привязываются к видеозаписи, а повторный вход по одному пропуску блокируется (антипассбэк).",
       "В стоимость проходной входит не только сам турникет: нужны считыватели, контроллер, блок питания с резервом, ограждения или дополнительная калитка, монтаж, пусконаладка и настройка ПО с правами доступа. Цена турникета зависит от типа, материала корпуса и способа идентификации — трипод для офиса и роторный турникет на периметр отличаются в разы. Мы считаем комплект целиком, чтобы не оказалось, что оборудование куплено, а система не работает. Шлагбаумы и въездные группы — отдельная услуга, их считаем вместе с парковочным комплексом.",
+      "Электронная проходная — это турникет, контроллер и терминал в одной системе, и цену турникета с монтажом мы называем сразу по трём вещам: тип турникета (трипод, калитка, створчатый или полноростовый), способ прохода (карта, отпечаток или турникет с Face ID) и число проходов в час. Расценки на работы и оборудование из каталога собраны в разделе «Сколько стоит» выше, а точную смету готовим после бесплатного выезда.",
     ],
   },
   "alarm": {
@@ -202,6 +204,7 @@ const ru: Record<string, ServiceContent> = {
       "Точки доступа питаются по PoE — тот же кабель несёт и данные, и питание, поэтому монтаж не требует розеток под потолком. Мы прокладываем СКС до каждой точки, ставим PoE-коммутаторы с запасом мощности, настраиваем контроллер — аппаратный или облачный. Работаем с Ubiquiti UniFi, MikroTik, TP-Link Omada и Ruijie со склада в Ташкенте: подбираем платформу под бюджет и масштаб, а не «что привезли».",
       "Для склада, производства и улицы используются другие точки: защищённые корпуса, работа в мороз и жару, антенны направленного действия для длинных проходов между стеллажами. Терминалы сбора данных особенно чувствительны к роумингу — при разрыве связи оператор теряет отсканированную позицию, поэтому склад проектируем с двойным запасом по перекрытию. Двор, парковку и летние площадки закрываем уличными точками.",
       "После запуска отдаём сеть в понятном виде: схема размещения точек, доступы к контроллеру, инструкция по выдаче гостевых кодов. Даём гарантию на оборудование и монтаж, берём Wi-Fi на сопровождение: мониторинг, обновление прошивок, реакция на «у нас тормозит» с диагностикой по графикам контроллера, а не наугад. Работаем по Ташкенту и всему Узбекистану.",
+      "Wi-Fi для кафе и ресторана — это гостевая сеть с авторизацией и отдельный канал для кассы; Wi-Fi для гостиницы — бесшовное покрытие номеров и лобби с точками доступа в коридорах; Wi-Fi для предприятия — уличные и промышленные точки для склада и цеха с роумингом для терминалов сбора данных. Каждую сеть проектируем по радиообследованию, а не по плану здания.",
     ],
   },
   "gates": {
@@ -287,6 +290,7 @@ const ru: Record<string, ServiceContent> = {
       "Пожарная безопасность серверной — отдельная дисциплина: вода и порошок уничтожают оборудование надёжнее огня. Проектируем газовое пожаротушение, которое гасит возгорание, не оставляя следов на технике, ставим раннее обнаружение дыма и блокировку вентиляции. Доступ в помещение закрываем СКУД с журналом: кто и когда заходил к стойкам — вопрос, на который у ИТ-директора должен быть ответ.",
       "Внутри серверной — порядок, который экономит часы при каждой аварии: стойки с организацией кабеля, маркировка каждой линии, кабельные журналы, схема размещения оборудования. Сдаём исполнительную документацию, по которой новый администратор или подрядчик разберётся в хозяйстве без раскопок. Мониторинг микроклимата, питания и дверей выводим на телефон дежурного.",
       "Работаем и с новыми помещениями, и с модернизацией действующих серверных без остановки сервисов: новую инфраструктуру готовим параллельно, переключение — в согласованные окна. Стоимость зависит от площади, требований к резервированию и состава инженерных систем; после бесплатного обследования даём проект с бюджетом. Гарантия, сервисное сопровождение и аварийные выезды — по Ташкенту и всему Узбекистану.",
+      "Строительство серверной начинается с расчёта: сколько стоек, какая нагрузка на питание и охлаждение, какой резерв. Дата-центр, он же центр обработки данных, отличается от серверной комнаты только масштабом требований: резервированные вводы питания, ИБП с автономией, прецизионный климат, контроль доступа и мониторинг. Мы проектируем и строим оба формата под ключ.",
     ],
   },
   // Ключ страницы /solutions/servers — именно `servers`, а не `server`: это
@@ -366,6 +370,7 @@ const ru: Record<string, ServiceContent> = {
       "Замок — часть системы контроля доступа, а не самостоятельная покупка, и считать его в отрыве от двери бессмысленно: перекошенное полотно или разболтанные петли сведут на нет любое усилие удержания, поэтому осмотр начинается с самой двери. Считаем комплект целиком: замок, доводчик, питание, считыватель и контроллер, монтаж и настройку прав. Цена зависит от типа замка, усилия удержания и того, есть ли уже СКУД, к которой дверь можно подключить.",
           "Сценарий определяет выбор точнее, чем бюджет. Квартире и дому подходит умный замок с отпечатком и приложением: без ключей, с временными кодами для гостей и уведомлениями о каждом открытии. Офису нужен замок как часть СКУД — с картами сотрудников, журналом проходов и правами по времени. Гостинице и апартаментам — карточная система, связанная с заселением: карта живёт до даты выезда. Для калитки и уличных дверей берут модели в защищённом исполнении, устойчивые к пыли, влаге и перепадам температуры.",
       "Живёт электронный замок дольше, чем кажется: у качественных моделей ресурс исчисляется сотнями тысяч циклов, а слабое место обычно не механика, а питание и монтаж. Поэтому в комплект мы всегда закладываем резервный аккумулятор, а умным замкам настраиваем уведомление о разряде батарей заранее. По Ташкенту делаем монтаж за один выезд, по гарантии меняем блок целиком, не оставляя дверь без защиты.",
+      "Смарт-замок на входную дверь квартиры, замок для офиса с картами и учётом сотрудников, кодовый замок на подъездную дверь для ТСЖ — три разные задачи с разным оборудованием, и мы подбираем под дверь, а не под каталог. На металлическую и деревянную дверь ставим врезные и накладные модели, на стеклянную — электромагнитные с кронштейном, в подъезде — антивандальные панели с кодом и ключами-таблетками.",
     ],
   },
   videowall: {
@@ -379,6 +384,7 @@ const ru: Record<string, ServiceContent> = {
       "Монтаж требует подготовки стены и продуманной эксплуатации: кронштейны с выдвижением (pop-out) для доступа к панелям без разбора всей конструкции, вентиляция, скрытая прокладка кабелей и питание с резервом. Стоимость видеостены зависит от числа и диагонали панелей, ширины шва, типа контроллера и сложности монтажа. Мы считаем и монтируем конструкцию целиком, включая пусконаладку и настройку раскладок под задачи дежурной смены. В смету мониторингового центра, кроме самой стены, входят рабочие места операторов с двумя-тремя мониторами, ИБП на стойку и кабельные трассы с запасом по портам.",
           "LCD-панели и LED-экраны — две разные технологии под разные задачи. Панели с тонким швом дешевле на квадратный метр и дают высокую плотность пикселей — оптимум для диспетчерских, где оператор сидит в метрах от экрана и читает мелкие детали. LED-экран бесшовный вовсе, ярче и собирается в любой размер и форму, поэтому он выигрывает в вестибюлях, залах и на витринах, где картинку смотрят с расстояния. Выбор определяется дистанцией просмотра: чем ближе зритель, тем меньший шаг пикселя нужен.",
       "Типовые сроки: видеостена 2×2 монтируется и настраивается за один-два дня, крупные конфигурации и LED-экраны — от недели с учётом сборки и юстировки. От заказчика нужны стена, выдерживающая вес конструкции, питание и кондиционирование помещения. После сдачи обучаем дежурную смену работе с раскладками и берём стену на сервис: диагностика панелей, чистка, замена вышедшего из строя модуля из подменного фонда без остановки остальной стены.",
+      "Самые частые конфигурации — видеостена 2х2 из четырёх панелей и 3х3 из девяти: первая закрывает пост охраны или переговорную, вторая нужна диспетчерской и ситуационному центру, где оператор одновременно ведёт десятки камер. Панели 46–55 дюймов с тонким швом, контроллер и кронштейны подбираем под помещение, монтаж и настройку делаем своим штатом.",
     ],
   },
   hotel: {
@@ -561,6 +567,7 @@ const uz: Record<string, ServiceContent> = {
       "Ishlayotgan korxonalarda stsenariy boshqa: ishlab chiqarish va ofisni toʻxtatmasdan ishlash kerak. Bunda bosqichlilik qutqaradi — tizimni uchastkalarga boʻlamiz, ulanishlarni ishdan tashqari soatlarga rejalashtiramiz, eski liniyalarni faqat yangilari tekshirilgach oʻchiramiz. Shu tarzda bir soatlik toʻxtash butun montajdan qimmat turadigan obyektlarni yangi infratuzilmaga oʻtkazganmiz.",
       "Katalogda uch mingdan ortiq pozitsiya bor, keng talab qilinadigan uskuna esa Toshkentdagi omborimizda turadi: Hikvision va Dahua kamera va registratorlari, Bolid va Rubej yongʻin priborlari, ZKTeco SKUD, MikroTik, TP-Link va H3C tarmoq uskunalari, kabel va shkaflar. Ombor mantigʻi oddiy: montaj konteyner kutib toʻxtamaydi, nosoz blokni almashtirish esa bir oy emas, bir kun oladi.",
       "Smetani loyiha yoki texnik topshiriq boʻyicha hisoblaymiz; hujjatlar boʻlmasa, obyektni tekshirib oʻzimiz tayyorlaymiz — Toshkent boʻylab muhandis chiqishi bepul. Topshirilgach ish va uskunalarga kafolat beramiz, reglamentli tekshiruvli texnik xizmat shartnomasini taklif qilamiz. Butun Oʻzbekiston boʻylab ishlaymiz, yuridik shaxslarga — toʻliq yopuvchi hujjatlar va QQS li hisob.",
+      "Kuchsiz tokli tarmoqlar past kuchlanishda ishlaydigan hamma narsani birlashtiradi: videokuzatuv, SKUD, yongʻin va qoʻriqlash signalizatsiyasi, domofoniya, SKS va Wi-Fi. Xavfsizlik tizimlari integratori sifatida obyektni bitta shartnoma bilan — loyihadan ijro hujjatlari bilan topshirishgacha — olib boramiz va oʻrnatilgan tizimlarni xizmatga olamiz.",
     ],
   },
   cctv: {
@@ -668,6 +675,7 @@ const uz: Record<string, ServiceContent> = {
       "Turniketlar oʻtkazuvchanligi va nimani oldini olishi kerakligi bilan farq qiladi. Tripod — ofis va kichik korxona nazorat punkti uchun eng keng tarqalgan va arzon variant: u oʻtishni birma-bir qayd etadi, lekin nazariy jihatdan oshib oʻtish mumkin. Toʻliq boʻyli rotorli turniket perimetr, qurilish maydoni va zavodga qoʻyiladi, u yerda oʻtish jismonan istisno qilinishi kerak. Tezkor darvozachalar (spidgeytlar) biznes-markazlar va qabulxonalar uchun tanlanadi, ular yonida nogironlar va yuk uchun keng darvozacha albatta boʻladi.",
       "Identifikatsiya obyektdagi tartibga qarab tanlanadi. Face ID li turniket yuz boʻyicha soniyaning ulushida oʻtkazadi va choʻntakdan hech narsa olishni talab qilmaydi — smena boshida oqim toʻlqin boʻlib kelganda bu qulay. Kartalar va breloklar arzonroq va berish osonroq, barmoq izi propuskni boshqaga berishni istisno qiladi, QR-kod bir martalik mehmonlar uchun qulay. Barcha variantlar bitta tizimda ishlaydi: turniket SKUD va ish vaqti hisobi bilan bogʻlanadi, oʻtish hodisalari videoyozuvga bogʻlanadi, bitta propusk boʻyicha takroriy kirish bloklanadi (antipassbek).",
       "Nazorat punkti narxiga turniketning oʻzi emas, balki oʻquvchilar, kontroller, zaxirali quvvat bloki, toʻsiqlar yoki qoʻshimcha darvozacha, montaj, ishga tushirish va kirish huquqlari bilan dasturiy taʼminotni sozlash ham kiradi. Turniket narxi turiga, korpus materialiga va identifikatsiya usuliga bogʻliq — ofis uchun tripod va perimetr uchun rotorli turniket bir necha barobar farq qiladi. Biz toʻplamni butunlay hisoblaymiz. Shlagbaumlar va kirish guruhlari — alohida xizmat, ularni parkovka majmuasi bilan birga hisoblaymiz.",
+      "Elektron oʻtish punkti — bu turniket, kontroller va terminalning yagona tizimi, montaj bilan turniket narxini esa uchta narsaga qarab darhol aytamiz: turniket turi (tripod, darvozacha, qanotli yoki toʻliq boʻyli), oʻtish usuli (karta, barmoq izi yoki Face ID li turniket) va soatiga oʻtishlar soni. Ishlar narxlari va katalogdagi uskuna yuqoridagi «qancha turadi» boʻlimida, aniq smetani bepul chiqishdan soʻng tayyorlaymiz.",
     ],
   },
   "alarm": {
@@ -705,6 +713,7 @@ const uz: Record<string, ServiceContent> = {
       "Ulanish nuqtalari PoE orqali quvvatlanadi — bitta kabel ham maʼlumot, ham quvvat olib boradi, shuning uchun montaj ship ostida rozetka talab qilmaydi. Har bir nuqtagacha SKS oʻtkazamiz, quvvat zaxirali PoE-kommutatorlar qoʻyamiz, kontrollerni — apparat yoki bulutli — sozlaymiz. Toshkentdagi ombordan Ubiquiti UniFi, MikroTik, TP-Link Omada va Ruijie bilan ishlaymiz: platformani «nima keltirildi» emas, byudjet va koʻlamga qarab tanlaymiz.",
       "Ombor, ishlab chiqarish va koʻcha uchun boshqa nuqtalar ishlatiladi: himoyalangan korpuslar, sovuq va issiqda ishlash, stellajlar orasidagi uzun yoʻlaklar uchun yoʻnaltirilgan antennalar. Maʼlumot yigʻish terminallari roumingga ayniqsa sezgir — aloqa uzilsa operator skanerlangan pozitsiyani yoʻqotadi, shuning uchun omborni qoplanish boʻyicha ikki barobar zaxira bilan loyihalaymiz. Hovli, avtoturargoh va yozgi maydonchalarni koʻcha nuqtalari bilan yopamiz.",
       "Ishga tushirgach tarmoqni tushunarli koʻrinishda topshiramiz: nuqtalar joylashuvi sxemasi, kontrollerga kirishlar, mehmon kodlarini berish yoʻriqnomasi. Uskuna va montajga kafolat beramiz, Wi-Fi ni kuzatuvga olamiz: monitoring, proshivkalarni yangilash, «bizda tormozlayapti»ga taxmin bilan emas, kontroller grafiklari boʻyicha diagnostika bilan javob. Toshkent va butun Oʻzbekiston boʻylab ishlaymiz.",
+      "Kafe va restoran uchun Wi-Fi — bu avtorizatsiyali mehmon tarmogʻi va kassa uchun alohida kanal; mehmonxona uchun Wi-Fi — yoʻlaklardagi kirish nuqtalari bilan xonalar va lobbini uzluksiz qamrash; korxona uchun Wi-Fi — ombor va sex uchun koʻcha va sanoat nuqtalari, maʼlumot yigʻish terminallari uchun rouming bilan. Har bir tarmoqni bino rejasi boʻyicha emas, radiotekshiruv boʻyicha loyihalaymiz.",
     ],
   },
   "gates": {
@@ -790,6 +799,7 @@ const uz: Record<string, ServiceContent> = {
       "Server xonasining yongʻin xavfsizligi — alohida intizom: suv va kukun uskunani olovdan ham ishonchliroq yoʻq qiladi. Texnikada iz qoldirmasdan oʻchiradigan gazli oʻt oʻchirishni loyihalaymiz, tutunni erta aniqlash va ventilyatsiya blokirovkasini qoʻyamiz. Xonaga kirishni jurnalli SKUD bilan yopamiz: stoykalarga kim va qachon kirgani — IT-direktorda javobi boʻlishi kerak boʻlgan savol.",
       "Server xonasi ichida — har avariyada soatlarni tejaydigan tartib: kabel tashkil qilingan stoykalar, har liniya markirovkasi, kabel jurnallari, uskuna joylashuv sxemasi. Yangi administrator yoki pudratchi qazishmalarsiz tushunadigan ijro hujjatlarini topshiramiz. Mikroiqlim, quvvat va eshiklar monitoringini navbatchi telefoniga chiqaramiz.",
       "Yangi xonalar bilan ham, ishlayotgan server xonalarini servislarni toʻxtatmasdan modernizatsiya qilish bilan ham ishlaymiz: yangi infratuzilmani parallel tayyorlaymiz, oʻtish — kelishilgan oynalarda. Narx maydon, zaxiralash talablari va muhandislik tizimlari tarkibiga bogʻliq; bepul tekshiruvdan keyin byudjetli loyiha beramiz. Kafolat, servis kuzatuvi va avariya chiqishlari — Toshkent va butun Oʻzbekiston boʻylab.",
+      "Server xonasini qurish hisob-kitobdan boshlanadi: nechta stoyka, taʼminot va sovutishga qanday yuk, qanday zaxira. Data-markaz, yaʼni maʼlumotlarni qayta ishlash markazi, server xonasidan faqat talablar koʻlami bilan farq qiladi: zaxiralangan quvvat kirishlari, avtonom ishlaydigan UPS, aniq iqlim nazorati, kirishni nazorat qilish va monitoring. Ikkala formatni ham toʻliq tayyor holda loyihalaymiz va quramiz.",
     ],
   },
   servers: {
@@ -862,6 +872,7 @@ const uz: Record<string, ServiceContent> = {
       "Qulf — kirishni boshqarish tizimining bir qismi, alohida xarid emas, va uni eshikdan ajratib hisoblash maʼnosiz: qiyshaygan polotno yoki boʻshashgan ilgaklar har qanday ushlab turish kuchini yoʻqqa chiqaradi, shuning uchun koʻrik eshikning oʻzidan boshlanadi. Toʻplamni butunlay hisoblaymiz: qulf, yopgich, quvvat, oʻquvchi va kontroller, montaj va huquqlarni sozlash. Narx qulf turiga, ushlab turish kuchiga va eshikni ulash mumkin boʻlgan SKUD borligiga bogʻliq.",
           "Stsenariy tanlovni byudjetdan aniqroq belgilaydi. Kvartira va uyga barmoq izi va ilovali aqlli qulf mos: kalitlarsiz, mehmonlarga vaqtinchalik kodlar va har ochilish haqida bildirishnomalar bilan. Ofisga qulf SKUD qismi sifatida kerak — xodimlar kartalari, oʻtishlar jurnali va vaqt boʻyicha huquqlar bilan. Mehmonxona va apartamentlarga — joylashtirish bilan bogʻlangan kartali tizim: karta chiqish sanasigacha yashaydi. Kalitka va koʻcha eshiklariga chang, nam va harorat farqlariga chidamli himoyalangan modellarni olishadi.",
       "Elektron qulf koʻringandan uzoqroq yashaydi: sifatli modellarda resurs yuz minglab tsikllar bilan oʻlchanadi, zaif joy esa odatda mexanika emas, quvvat va montaj. Shuning uchun komplektga doim zaxira akkumulyator kiritamiz, aqlli qulflarga esa batareya zaryadsizlanishi haqida oldindan bildirishnoma sozlaymiz. Toshkent boʻylab montajni bir chiqishda qilamiz, kafolat boʻyicha blokni butunlay almashtiramiz — eshikni himoyasiz qoldirmasdan.",
+      "Kvartira kirish eshigiga smart-qulf, xodimlarni hisobga oladigan kartali ofis qulfi, uy-joy mulkdorlari shirkati uchun podyezd eshigiga kodli qulf — bu uch xil vazifa va uch xil uskuna, biz esa katalogga emas, eshikka qarab tanlaymiz. Metall va yogʻoch eshikka oʻrnatma va ustki modellarni, shisha eshikka kronshteynli elektromagnit qulfni, podyezdga kod va kalit-tabletkali vandalga chidamli panellarni oʻrnatamiz.",
     ],
   },
   videowall: {
@@ -875,6 +886,7 @@ const uz: Record<string, ServiceContent> = {
       "Montaj devorni tayyorlashni va oʻylangan ekspluatatsiyani talab qiladi: butun konstruksiyani buzmasdan panellarga kirish uchun surilib chiqadigan kronshteynlar, shamollatish, kabellarni yashirin yotqizish va zaxirali quvvat. Videodevor narxi panellar soni va diagonali, chok kengligi, kontroller turi va montaj murakkabligiga bogʻliq. Konstruksiyani butunlay hisoblaymiz va montaj qilamiz, ishga tushirish va navbatchi smena vazifalariga mos tartiblarni sozlashni ham qoʻshib. Monitoring markazi smetasiga devorning oʻzidan tashqari ikki yoki uchta monitorli operator ish oʻrinlari, tokchaga UPS va portlar zaxirasi bilan kabel trassalari kiradi.",
           "LCD-panellar va LED-ekranlar — turli vazifalarga moʻljallangan ikki xil texnologiya. Ingichka chokli panellar kvadrat metrga arzonroq va yuqori piksel zichligini beradi — operator ekrandan bir necha metrda oʻtirib mayda detallarni oʻqiydigan dispetcherlik uchun optimum. LED-ekran umuman choksiz, yorqinroq va istalgan oʻlcham hamda shaklda yigʻiladi, shuning uchun u tasvirni uzoqdan koʻradigan vestibyul, zal va vitrinalarda yutadi. Tanlovni koʻrish masofasi belgilaydi: tomoshabin qancha yaqin boʻlsa, piksel qadami shuncha kichik kerak.",
       "Tipik muddatlar: 2×2 videodevor bir-ikki kunda oʻrnatiladi va sozlanadi, yirik konfiguratsiyalar va LED-ekranlar — yigʻish va yustirovkani hisobga olib bir haftadan. Buyurtmachidan konstruktsiya ogʻirligini koʻtaradigan devor, quvvat va xona konditsioneri kerak. Topshirgach navbatchi smenani rasklad bilan ishlashga oʻrgatamiz va devorni servisga olamiz: panellar diagnostikasi, tozalash, buzilgan modulni zaxira fonddan almashtirish — qolgan devorni toʻxtatmasdan.",
+      "Eng koʻp uchraydigan konfiguratsiyalar — toʻrtta paneldan iborat 2x2 videodevor va toʻqqiztadan iborat 3x3: birinchisi qoʻriqlash posti yoki majlis xonasiga yetadi, ikkinchisi operator bir vaqtda oʻnlab kamerani kuzatadigan dispetcherlik va vaziyat markaziga kerak. 46–55 dyuymli ingichka chokli panellar, kontroller va kronshteynlarni xonaga qarab tanlaymiz, montaj va sozlashni oʻz jamoamiz bilan qilamiz.",
     ],
   },
   hotel: {
@@ -1062,6 +1074,7 @@ const en: Record<string, ServiceContent> = {
       "At operating facilities the scenario differs: work must not stop production or the office. Staging saves the day — we split the system into sections, plan switchovers for off-hours, and retire old lines only after the new ones are proven. This is how we migrated sites where even an hour of downtime cost more than the whole installation.",
       "The catalogue holds over three thousand items, and the fast-moving ones sit in our own Tashkent warehouse: Hikvision and Dahua cameras and recorders, Bolid and Rubezh fire panels, ZKTeco access control, MikroTik, TP-Link and H3C networking, cable and cabinets. The warehouse logic is simple: installation never waits for a container, and replacing a failed unit takes a day, not a month.",
       "We budget from the design or the brief; if there is no documentation, we survey the site and produce it ourselves — an engineer's visit in Tashkent is free. After handover we warrant the work and equipment and offer a maintenance contract with scheduled inspections. We work across Uzbekistan; companies receive the full closing document package and VAT invoicing.",
+      "Low-current networks bring together everything that runs on low voltage: video surveillance, access control, fire and intruder alarms, intercoms, structured cabling and Wi-Fi. As a security systems integrator we run the site under one contract, from design to handover with as-built documentation, and take the installed systems into maintenance.",
     ],
   },
   "cctv": {
@@ -1268,6 +1281,7 @@ const en: Record<string, ServiceContent> = {
       "Access points are powered over PoE — one cable carries both data and power, so mounting needs no outlets under the ceiling. We run structured cabling to every point, install PoE switches with power headroom, and configure a hardware or cloud controller. We work with Ubiquiti UniFi, MikroTik, TP-Link Omada and Ruijie from our Tashkent warehouse, choosing the platform for your budget and scale rather than \"whatever is on hand\".",
       "Warehouses, factories and outdoor areas need different hardware: rugged enclosures, operation in heat and frost, directional antennas for long aisles between racking. Barcode terminals are especially sensitive to roaming — a dropped link loses the scanned item — so we design warehouses with double the overlap margin. Yards, parking lots and terraces are covered with outdoor access points.",
       "At handover you get the network in a comprehensible form: an access point layout, controller credentials, and instructions for issuing guest codes. Hardware and installation are under warranty, and we support the Wi-Fi afterwards: monitoring, firmware updates, and responses to \"it's slow\" backed by controller graphs rather than guesswork. We work across Tashkent and all of Uzbekistan.",
+      "Wi-Fi for a café or restaurant is a guest network with authorisation and a separate channel for the till; Wi-Fi for a hotel is seamless coverage of rooms and the lobby with access points in the corridors; Wi-Fi for an industrial site is outdoor and industrial access points for the warehouse and workshop with roaming for data-collection terminals. We design every network from a radio survey, not from the building plan.",
     ],
   },
   "gates": {
@@ -1328,6 +1342,7 @@ const en: Record<string, ServiceContent> = {
       "Fire safety in a server room is its own discipline: water and powder destroy equipment more surely than fire does. We design gas suppression that extinguishes a fire without a trace on the hardware, add early smoke detection and ventilation shutdown. Room access is closed with logged access control: who entered the racks and when is a question an IT director must be able to answer.",
       "Inside the room — order that saves hours in every incident: racks with cable management, labeling on every line, cable journals, an equipment layout diagram. We hand over as-built documentation that lets a new administrator or contractor understand the estate without excavation. Climate, power and door monitoring goes to the duty engineer's phone.",
       "We build new rooms and modernise live ones without stopping services: the new infrastructure is prepared in parallel and cutover happens in agreed windows. The cost depends on the area, redundancy requirements and the engineering systems involved; after a free survey you get a design with a budget. Warranty, service support and emergency call-outs — across Tashkent and all of Uzbekistan.",
+      "Building a server room starts with a calculation: how many racks, what load on power and cooling, what redundancy. A data centre differs from a server room only in the scale of requirements: redundant power feeds, UPS with autonomy, precision cooling, access control and monitoring. We design and build both formats turnkey.",
     ],
   },
   "fiber": {
@@ -1398,6 +1413,7 @@ const en: Record<string, ServiceContent> = {
       "Turnstiles differ by throughput and by what they must prevent. A tripod is the most common and affordable option for an office or a small factory checkpoint: it enforces one-by-one passage, though it can theoretically be climbed over. A full-height rotor turnstile goes on perimeters, construction sites and factories where passage must be physically impossible. Speed gates suit business centers and lobbies where looks and flow speed matter, with a wide accessibility gate always installed alongside for wheelchair users and deliveries.",
       "Identification should follow the site's rules, not the other way around. A Face ID turnstile passes people in a fraction of a second with nothing to take out of a pocket — convenient where the flow comes in waves at shift start. Cards and fobs are cheaper and easier to issue, a fingerprint rules out pass sharing, QR codes suit one-time visitors. All options run in one system: the turnstile links to access control and attendance, passages tie to video, and re-entry on the same pass is blocked (anti-passback).",
       "The entrance costs more than the turnstile alone: readers, a controller, backed-up power, railings or an extra gate, installation, commissioning and software setup with access rights. The price depends on the type, body material and identification method — an office tripod and a perimeter rotor differ severalfold. We quote the complete kit so it never turns out the hardware is bought but the system does not work. Barriers and vehicle entrances are a separate service, quoted with the parking complex.",
+      "An electronic checkpoint is a turnstile, a controller and a terminal in one system, and we quote the price of a turnstile with installation from three things: the turnstile type (tripod, gate, flap or full-height), the way of passing (card, fingerprint or a turnstile with Face ID) and the number of passes per hour. Labour rates and catalogue equipment are collected in the “What it costs” section above; the exact estimate follows a free site visit.",
     ],
   },
   "locks": {
@@ -1411,6 +1427,7 @@ const en: Record<string, ServiceContent> = {
       "A lock is part of an access control system, not a standalone purchase, and quoting it apart from the door makes no sense: a warped leaf or worn hinges will defeat any holding force, so the survey starts with the door itself. We quote the complete kit: the lock, closer, power, reader and controller, installation and rights setup. The price depends on the lock type, holding force, and whether an access system already exists to connect the door to.",
           "The scenario defines the choice better than the budget. An apartment or house suits a smart lock with a fingerprint and an app: no keys, temporary guest codes, a notification on every opening. An office needs the lock as part of access control — with staff cards, an entry log and time-based rights. A hotel or serviced apartments — a card system tied to check-in: the card lives until the check-out date. For gates and street doors, protected models resistant to dust, moisture and temperature swings are the pick.",
       "An electronic lock lives longer than it seems: quality models are rated for hundreds of thousands of cycles, and the weak spot is usually not the mechanics but power and installation. So we always include a backup battery in the kit and configure smart locks to warn about low batteries in advance. In Tashkent we install in one visit and replace a unit whole under warranty, never leaving the door unprotected.",
+      "A smart lock on a flat’s front door, an office lock with cards and staff records, a code lock on an apartment-block entrance for the homeowners’ association — three different tasks with different hardware, and we choose for the door, not for the catalogue. Metal and wooden doors get mortise and surface-mounted models, glass doors get magnetic locks with a bracket, and entrances get vandal-proof panels with a code and key fobs.",
     ],
   },
   "barrier": {
@@ -1437,6 +1454,7 @@ const en: Record<string, ServiceContent> = {
       "Installation needs wall preparation and serviceability thought through: pop-out brackets for panel access without dismantling the array, ventilation, concealed cabling and backed-up power. The cost depends on the panel count and size, bezel width, controller type and installation complexity. We quote and build the entire structure, including commissioning and layout setup for the duty shift. Beyond the wall itself, the monitoring centre estimate covers operator workstations with two or three displays, a rack UPS and cable routes with spare ports.",
           "LCD panels and LED screens are two different technologies for different tasks. Thin-bezel panels are cheaper per square meter and deliver high pixel density — the optimum for control rooms, where the operator sits meters from the screen and reads fine detail. An LED screen has no seams at all, is brighter and assembles into any size and shape, so it wins in lobbies, halls and shop windows, where the picture is watched from a distance. Viewing distance decides: the closer the viewer, the finer the pixel pitch required.",
       "Typical timelines: a 2×2 video wall is mounted and tuned in one or two days; large configurations and LED screens take from a week including assembly and alignment. From the client we need a wall that bears the structure's weight, power and room air conditioning. After handover we train the duty shift on layouts and take the wall into service: panel diagnostics, cleaning, swapping a failed module from the spare pool without stopping the rest of the wall.",
+      "The most common configurations are a 2x2 video wall of four panels and a 3x3 of nine: the first serves a security post or a meeting room, the second a dispatch or situation centre where one operator watches dozens of cameras at once. We pick 46–55-inch thin-bezel panels, the controller and the brackets to fit the room, and our own team installs and sets everything up.",
     ],
   },
   "hotel": {
@@ -1558,6 +1576,7 @@ const tr: Record<string, ServiceContent> = {
       "İşletmedeki tesislerde senaryo farklıdır: üretim ve ofis durmamalıdır. Burada aşamalandırma kurtarır — sistemi bölümlere ayırır, geçişleri mesai dışına planlar, eski hatları ancak yeniler kanıtlandıktan sonra devreden çıkarırız. Bir saatlik duruşun bile tüm montajdan pahalı olduğu tesisleri böyle taşıdık.",
       "Katalogda üç binden fazla kalem var; hızlı tüketilenler Taşkent'teki kendi depomuzda durur: Hikvision ve Dahua kamera ve kayıt cihazları, Bolid ve Rubezh yangın panelleri, ZKTeco geçiş kontrolü, MikroTik, TP-Link ve H3C ağ ürünleri, kablo ve kabinler. Depo mantığı basittir: montaj konteyner beklemez, arızalı ünitenin değişimi bir ay değil bir gün sürer.",
       "Bütçeyi proje veya şartnameye göre çıkarırız; dokümantasyon yoksa sahayı etüt edip kendimiz hazırlarız — Taşkent'te mühendis keşfi ücretsizdir. Teslim sonrası işçilik ve ekipman garantisi verir, periyodik kontrollü bakım sözleşmesi öneririz. Tüm Özbekistan'da çalışırız; kurumlara eksiksiz kapanış evrakı ve KDV faturası.",
+      "Zayıf akım ağları düşük gerilimle çalışan her şeyi birleştirir: kamera sistemi, geçiş kontrolü, yangın ve hırsız alarmı, interkom, yapısal kablolama ve Wi-Fi. Güvenlik sistemleri entegratörü olarak sahayı projeden as-built dokümantasyonla teslime kadar tek sözleşmeyle yürütüyor, kurulan sistemleri bakıma alıyoruz.",
     ],
   },
   perimeter: {
@@ -1669,6 +1688,7 @@ const tr: Record<string, ServiceContent> = {
       "Erişim noktaları PoE ile beslenir — aynı kablo hem veriyi hem gücü taşır, tavan altına priz gerekmez. Her noktaya yapısal kablolama çeker, güç payı olan PoE switch'ler kurar, donanımsal veya bulut kontrolcüyü yapılandırırız. Taşkent depomuzdan Ubiquiti UniFi, MikroTik, TP-Link Omada ve Ruijie ile çalışır, platformu «elde ne varsa» değil bütçe ve ölçeğe göre seçeriz.",
       "Depo, fabrika ve dış mekân farklı donanım ister: korumalı kasalar, soğukta ve sıcakta çalışma, raflar arasındaki uzun koridorlar için yönlü antenler. El terminalleri dolaşıma özellikle duyarlıdır — bağlantı kopunca taranan kalem kaybolur; bu yüzden depoları iki kat örtüşme payıyla tasarlarız. Avlu, otopark ve terasları dış mekân noktalarıyla kapsarız.",
       "Teslimde ağı anlaşılır hâlde veririz: nokta yerleşim şeması, kontrolcü erişim bilgileri, misafir kodu verme talimatı. Donanım ve montaj garantilidir; Wi-Fi'ı sonrasında da destekleriz: izleme, yazılım güncellemeleri ve «yavaş» şikâyetine tahminle değil kontrolcü grafikleriyle teşhis. Taşkent ve tüm Özbekistan'da çalışıyoruz.",
+      "Kafe ve restoran için Wi-Fi, yetkilendirmeli misafir ağı ve kasa için ayrı kanaldır; otel için Wi-Fi, koridorlardaki erişim noktalarıyla odaların ve lobinin kesintisiz kapsanmasıdır; işletme için Wi-Fi, depo ve atölye için veri toplama terminallerine dolaşım sağlayan dış mekân ve endüstriyel erişim noktalarıdır. Her ağı bina planına göre değil, saha radyo ölçümüne göre tasarlıyoruz.",
     ],
   },
   "gates": {
@@ -1729,6 +1749,7 @@ const tr: Record<string, ServiceContent> = {
       "Sistem odasında yangın güvenliği ayrı disiplindir: su ve toz, ekipmanı ateşten daha kesin yok eder. Donanımda iz bırakmadan söndüren gazlı söndürme tasarlar, erken duman algılama ve havalandırma kilidi koyarız. Oda erişimini kayıtlı geçiş kontrolüyle kapatırız: kabinlere kimin ne zaman girdiği, BT direktörünün yanıtlayabilmesi gereken sorudur.",
       "Odanın içinde her arızada saat kazandıran düzen vardır: kablo yönetimli kabinler, her hatta etiket, kablo defterleri, yerleşim şeması. Yeni yöneticinin veya yüklenicinin kazı yapmadan anlayacağı as-built dokümantasyon teslim ederiz. İklim, güç ve kapı izlemesi nöbetçinin telefonuna düşer.",
       "Hem yeni odalar kurar hem çalışan odaları servisleri durdurmadan yenileriz: yeni altyapı paralel hazırlanır, geçiş anlaşılan pencerelerde yapılır. Maliyet; alana, yedeklilik gereksinimlerine ve mühendislik sistemlerine bağlıdır; ücretsiz keşiften sonra bütçeli proje verilir. Garanti, servis desteği ve acil çıkışlar — Taşkent ve tüm Özbekistan'da.",
+      "Sunucu odası inşası hesapla başlar: kaç kabin, güç ve soğutmaya ne kadar yük, ne kadar yedek. Veri merkezi sunucu odasından yalnızca gereksinimlerin ölçeğiyle ayrılır: yedekli güç girişleri, otonomili UPS, hassas iklimlendirme, geçiş kontrolü ve izleme. Her iki formatı da anahtar teslim tasarlıyor ve kuruyoruz.",
     ],
   },
   "fiber": {
@@ -1883,6 +1904,7 @@ const tr: Record<string, ServiceContent> = {
       "Turnikeler geçiş kapasitesine ve neyi önlemeleri gerektiğine göre ayrılır. Tripod, ofis ve küçük fabrika girişi için en yaygın ve ekonomik seçenektir: teker teker geçişi zorlar ama üzerinden teorik olarak atlanabilir. Boy turnikesi; çevre hatlarına, şantiyelere ve geçişin fiziksel olarak imkânsız olması gereken fabrikalara konur. Speed gate'ler görünümün ve akış hızının önemli olduğu iş merkezleri içindir; yanına tekerlekli sandalye ve yük geçişi için geniş kapı mutlaka eklenir.",
       "Kimlik doğrulama tesisin düzenine uymalıdır, tersi değil. Face ID'li turnike cepten bir şey çıkarmadan saniyenin kesrinde geçirir — akışın vardiya başında dalga dalga geldiği yerde rahattır. Kart ve anahtarlık daha ucuz ve kolay dağıtılır, parmak izi kart paylaşımını keser, QR tek seferlik ziyaretçiye uygundur. Hepsi tek sistemde çalışır: turnike geçiş kontrolü ve mesaiyle bağlanır, geçişler videoya bağlanır, aynı kartla ikinci giriş engellenir (anti-passback).",
       "Girişin maliyeti turnikeden ibaret değildir: okuyucular, kontrolör, yedekli güç, korkuluklar veya ek kapı, montaj, devreye alma ve yetkilerle yazılım ayarı gerekir. Fiyat; tipe, gövde malzemesine ve kimlik doğrulama yöntemine bağlıdır — ofis tripodu ile çevre rotoru kat kat farklıdır. Seti komple fiyatlandırırız ki donanım alınmış ama sistem çalışmıyor durumu yaşanmasın. Bariyerler ve araç girişleri ayrı hizmettir; otopark kompleksiyle birlikte fiyatlanır.",
+      "Elektronik geçiş noktası tek sistemde turnike, kontrolör ve terminaldir; montajlı turnike fiyatını üç şeye göre hemen söyleriz: turnike tipi (tripod, kapı, kanatlı veya tam boy), geçiş yöntemi (kart, parmak izi veya Face ID’li turnike) ve saatte geçiş sayısı. İşçilik fiyatları ve katalog ekipmanı yukarıdaki “ne kadar” bölümünde; kesin metraj ücretsiz keşiften sonra hazırlanır.",
     ],
   },
   "locks": {
@@ -1896,6 +1918,7 @@ const tr: Record<string, ServiceContent> = {
       "Kilit, bağımsız bir alışveriş değil geçiş kontrol sisteminin parçasıdır ve kapıdan ayrı fiyatlandırmak anlamsızdır: eğrilmiş kanat veya gevşemiş menteşeler her tutma kuvvetini boşa çıkarır, bu yüzden keşif kapının kendisinden başlar. Seti komple fiyatlandırırız: kilit, kapatıcı, güç, okuyucu ve kontrolör, montaj ve yetki ayarları. Fiyat; kilit tipine, tutma kuvvetine ve kapının bağlanacağı bir sistemin olup olmamasına bağlıdır.",
           "Senaryo, seçimi bütçeden daha iyi belirler. Daireye ve eve parmak izli, uygulamalı akıllı kilit uyar: anahtarsız, misafirlere geçici kodlu, her açılışta bildirimli. Ofise kilit, geçiş kontrolünün parçası olarak gerekir — personel kartları, geçiş kaydı ve zamana bağlı yetkilerle. Otele ve apart dairelere — check-in'e bağlı kart sistemi: kart, çıkış tarihine kadar yaşar. Bahçe kapısı ve dış kapılara toza, neme ve sıcaklık farklarına dayanıklı korumalı modeller alınır.",
       "Elektronik kilit sanıldığından uzun yaşar: kaliteli modellerin ömrü yüz binlerce çevrimle ölçülür; zayıf nokta genelde mekanik değil, besleme ve montajdır. Bu yüzden sete her zaman yedek akü koyar, akıllı kilitlerde pil azalınca önceden uyarı ayarlarız. Taşkent'te montajı tek seferde yapar, garantide üniteyi bütün olarak değiştiririz — kapıyı korumasız bırakmadan.",
+      "Daire giriş kapısına akıllı kilit, kartlı ve personel kayıtlı ofis kilidi, site yönetimi için apartman giriş kapısına şifreli kilit — farklı donanım gerektiren üç ayrı iş; biz kataloğa değil kapıya göre seçiyoruz. Metal ve ahşap kapıya gömme ve yüzeye monte modeller, cam kapıya braketli manyetik kilit, apartman girişine şifre ve anahtar etiketli darbeye dayanıklı paneller kuruyoruz.",
     ],
   },
   "barrier": {
@@ -1922,6 +1945,7 @@ const tr: Record<string, ServiceContent> = {
       "Montaj; duvar hazırlığı ve bakım kolaylığı ister: diziyi sökmeden panele erişim için öne açılır (pop-out) askılar, havalandırma, gizli kablolama ve yedekli güç. Maliyet; panel sayısı ve boyutuna, çerçeve genişliğine, kontrolcü tipine ve montaj zorluğuna bağlıdır. Yapıyı komple fiyatlandırır ve kurarız — devreye alma ve vardiya düzenlerinin ayarı dahil. İzleme merkezi teklifine duvarın kendisi dışında iki ya da üç ekranlı operatör istasyonları, kabinet UPS'i ve yedek portlu kablo güzergâhları da girer.",
           "LCD paneller ve LED ekranlar, farklı görevler için iki farklı teknolojidir. İnce çerçeveli paneller metrekare başına ucuzdur ve yüksek piksel yoğunluğu verir — operatörün ekrana metrelerce mesafede oturup ince ayrıntı okuduğu kumanda odaları için optimumdur. LED ekran tamamen dikişsizdir, daha parlaktır ve her boyut ile biçimde kurulur; bu yüzden görüntünün uzaktan izlendiği lobilerde, salonlarda ve vitrinlerde kazanır. Kararı izleme mesafesi verir: izleyici ne kadar yakınsa piksel aralığı o kadar küçük olmalı.",
       "Tipik süreler: 2×2 video duvar bir-iki günde kurulup ayarlanır; büyük konfigürasyonlar ve LED ekranlar montaj ve hizalamayla birlikte bir haftadan başlar. Müşteriden konstrüksiyonun ağırlığını taşıyan duvar, besleme ve oda kliması gerekir. Teslimden sonra nöbetçi ekibi düzenlerle çalışmaya alıştırır, duvarı servise alırız: panel tanılama, temizlik, bozulan modülü yedek havuzdan değiştirme — duvarın kalanını durdurmadan.",
+      "En sık kurulan konfigürasyonlar dört panelden oluşan 2x2 ve dokuz panelden oluşan 3x3 video duvarıdır: ilki güvenlik noktası veya toplantı odası için yeterlidir, ikincisi tek operatörün onlarca kamerayı aynı anda izlediği dispeç ve durum merkezleri için gerekir. 46–55 inç ince çerçeveli panelleri, kontrolörü ve askı aparatlarını odaya göre seçiyor, montaj ve ayarı kendi ekibimizle yapıyoruz.",
     ],
   },
   "servers": {
@@ -2054,6 +2078,7 @@ const zh: Record<string, ServiceContent> = {
       "在运营中的企业则是另一种打法：生产和办公不能停。分段实施是关键——系统划成区段，切换安排在非工作时间，旧线路只有在新线路验证后才退役。我们就这样迁移过停机一小时都比整个工程还贵的场所。",
       "目录里有三千余种商品，走量的常备在塔什干自有仓库：海康威视与大华的摄像机和录像机、Bolid 与 Rubezh 的消防主机、中控智慧门禁、MikroTik、TP-Link 与 H3C 网络设备、线缆与机柜。仓储的逻辑很简单：施工不必等集装箱，故障单元的更换以天计而不是以月计。",
       "预算依据设计或任务书编制；若没有文件，我们勘察现场并亲自出图——塔什干范围内工程师上门免费。交付后提供工程与设备保修，并可签订定期巡检的维保合同。业务覆盖全乌兹别克斯坦，企业客户获得全套结算单据与增值税发票。",
+      "弱电系统涵盖所有低压运行的设备：视频监控、门禁、火灾与入侵报警、楼宇对讲、综合布线和 Wi-Fi。作为安防系统集成商，我们以一份合同承接整个项目，从设计到带竣工文件的交付，并对已安装系统提供维保。",
     ],
   },
   perimeter: {
@@ -2165,6 +2190,7 @@ const zh: Record<string, ServiceContent> = {
       "接入点通过PoE供电——一根网线同时传数据和供电，吊顶下无需电源插座。我们为每个点位敷设综合布线，配置留有功率余量的PoE交换机，并部署硬件或云控制器。设备来自塔什干现货的Ubiquiti UniFi、MikroTik、TP-Link Omada和锐捷——平台按预算和规模选型，而不是「有什么装什么」。",
       "仓库、工厂和室外需要另一类设备：加固外壳、耐高低温、为货架间长通道配置定向天线。手持数据终端对漫游尤其敏感——断链就丢失刚扫的条目，因此仓库按双倍重叠余量设计。院区、停车场和露台用室外接入点覆盖。",
       "交付时网络以看得懂的形式移交：接入点布置图、控制器账号、访客码发放说明。设备和施工提供质保，之后持续维护：监控、固件升级，对「网慢了」的诊断依据控制器图表而非猜测。服务范围覆盖塔什干及全乌兹别克斯坦。",
+      "咖啡馆和餐厅的 Wi-Fi 是带认证的访客网络加收银专用通道；酒店的 Wi-Fi 是客房和大堂的无缝覆盖，走廊布设接入点；企业的 Wi-Fi 是仓库和车间的室外及工业级接入点，支持数据采集终端漫游。每个网络都按无线勘测设计，而不是按建筑平面图。",
     ],
   },
   "gates": {
@@ -2225,6 +2251,7 @@ const zh: Record<string, ServiceContent> = {
       "机房消防是独立学科：水和干粉毁坏设备比火更彻底。我们设计气体灭火——扑灭火情且不在设备上留任何痕迹，配备早期烟雾探测和通风联锁。房间出入用带日志的门禁管住：谁在什么时候进过机柜——IT主管必须答得上来。",
       "机房内部是每次故障都能省下数小时的秩序：带理线的机柜、每条线路的标签、线缆台账、设备布置图。交付竣工文档，新管理员或承包商无需考古即可看懂全局。温湿度、供电和门禁状态推送到值班人员手机。",
       "我们既建新机房，也在不停业务的前提下改造在用机房：新基础设施并行准备，割接安排在约定的时间窗内。费用取决于面积、冗余要求和机电系统构成；免费勘测后提供带预算的方案。质保、维保和紧急响应覆盖塔什干及全乌兹别克斯坦。",
+      "机房建设从测算开始：多少机柜、供电和制冷负荷多大、冗余多少。数据中心与机房的区别只在要求的规模：冗余供电引入、带续航的 UPS、精密空调、门禁和监控。两种形态我们均可交钥匙设计和建设。",
     ],
   },
   "fiber": {
@@ -2379,6 +2406,7 @@ const zh: Record<string, ServiceContent> = {
       "闸机按通行能力和要防住什么来区分。三辊闸是办公室和小型厂区门岗最常见、最实惠的选择：强制一人一杆，但理论上可以翻越。全高转闸用于周界、工地和必须物理杜绝通行的工厂。速通门适合讲究形象和通行速度的商务中心和大堂，旁边必须加装供轮椅和货物通过的宽通道门。",
       "识别方式要迁就现场的管理制度，而不是反过来。人脸识别闸机瞬间放行、无需从口袋掏任何东西——适合换班时人流成浪涌来的场合。卡和钥匙扣更便宜、发放容易；指纹杜绝借卡；二维码适合一次性访客。所有方式都在一套系统里：闸机与门禁和考勤联动，通行绑定录像，同一凭证重复进入被拦截（防尾随反复用）。",
       "通道的成本不止闸机本身：还有读卡器、控制器、带后备的电源、护栏或加装的边门、安装调试和带权限配置的软件。价格取决于类型、机身材质和识别方式——办公室三辊闸和周界全高闸相差数倍。我们按整套报价，避免「设备买了、系统跑不起来」。道闸和车辆出入口是另一项服务，与停车系统一并核算。",
+      "电子门岗是闸机、控制器和终端组成的一套系统，含安装的闸机价格我们按三项即时报出：闸机类型（三辊闸、通道门、翼闸或全高闸）、通行方式（刷卡、指纹或带 Face ID 的闸机）以及每小时通行人数。工费和目录设备见上方\"多少钱\"栏目，精确预算在免费勘查后出具。",
     ],
   },
   "locks": {
@@ -2392,6 +2420,7 @@ const zh: Record<string, ServiceContent> = {
       "锁是门禁系统的一部分，不是一件孤立的商品，脱离门去报价也没有意义：门扇变形或合页松动会让再大的吸力都白费，所以勘察从门本身开始。按整套报价：锁、闭门器、电源、读卡器和控制器、安装及权限配置。价格取决于锁型、吸力大小，以及现场是否已有可接入的门禁系统。",
           "场景比预算更能决定选型。公寓和住宅适合带指纹和App的智能锁：无钥匙、访客临时密码、每次开门都有通知。办公室的锁要作为门禁的一部分——员工刷卡、通行日志、分时段权限。酒店和公寓式酒店用与入住系统联动的卡锁：卡片有效期到退房为止。院门和临街门要选防护型号，耐粉尘、潮湿和温差。",
       "电子锁比想象中耐用：优质型号的寿命以几十万次计，薄弱环节通常不是机械，而是供电和安装。所以套装里我们必配后备电池，智能锁则设好电量不足的提前提醒。塔什干范围一次上门装好，保修期内整件更换——不会让门处于无防护状态。",
+      "公寓入户门的智能锁、带刷卡和员工记录的办公室门锁、业委会的单元门密码锁——三种任务、三种设备，我们按门选型而不是按目录选型。金属门和木门装嵌入式或明装型号，玻璃门装带支架的电磁锁，单元门装带密码和钥匙扣的防破坏面板。",
     ],
   },
   "barrier": {
@@ -2418,6 +2447,7 @@ const zh: Record<string, ServiceContent> = {
       "安装要求墙体处理和检修便利：前翻（pop-out）支架让维护单块面板不必拆整面墙，还有通风、隐蔽布线和带备份的供电。造价取决于面板数量与尺寸、拼缝宽度、控制器类型和施工难度。我们对整套结构统一报价并施工，含调试和为值班班组预设布局。监控中心的报价除拼接墙本身外，还包含配两到三台显示器的坐席工作站、机柜UPS以及预留端口的桥架布线。",
           "LCD拼接屏和LED屏是面向不同任务的两种技术。窄缝拼接屏每平方米更便宜、像素密度高——适合操作员坐在几米内读取细节的调度室。LED屏则完全无缝、更亮，尺寸和造型随意拼装，所以在大堂、展厅和橱窗这类远距离观看的场合更占优。选择由观看距离决定：观众越近，需要的像素间距越小。",
       "典型工期：2×2拼接墙一到两天装调完毕；大型配置和LED屏从一周起，含拼装与校准。甲方需提供能承重的墙体、供电和房间空调。交付后我们培训值班人员使用画面布局，并承接维保：面板诊断、清洁、用备件池更换故障模块——其余屏体不停机。",
+      "最常见的配置是四块屏的 2x2 拼接墙和九块屏的 3x3：前者满足保安值班室或会议室，后者用于调度室和指挥中心，一名操作员同时监看数十路摄像机。46–55 英寸窄边框面板、拼接控制器和支架按房间选配，安装与调试由自有团队完成。",
     ],
   },
   "servers": {
