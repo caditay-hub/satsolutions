@@ -24568,5 +24568,59 @@
     "en": "40% — 4.7 dB, 60% — 2.7 dB",
     "tr": "%40 — 4,7 dB, %60 — 2,7 dB",
     "zh": "40% — 4.7 dB，60% — 2.7 dB"
+  },
+  "Ethernet-повторитель с PoE": {
+    "uz": "PoE bilan Ethernet takrorlagich",
+    "en": "Ethernet repeater with PoE",
+    "tr": "PoE'li Ethernet tekrarlayıcı",
+    "zh": "带 PoE 的以太网中继器"
+  },
+  "PoE 802.3af/at, 24–57 В": {
+    "uz": "PoE 802.3af/at, 24–57 V",
+    "en": "PoE 802.3af/at, 24–57 V",
+    "tr": "PoE 802.3af/at, 24–57 V",
+    "zh": "PoE 802.3af/at，24–57 V"
+  },
+  "до 100 м на каждый повторитель": {
+    "uz": "har bir takrorlagichga 100 m gacha",
+    "en": "up to 100 m per repeater",
+    "tr": "tekrarlayıcı başına 100 m'ye kadar",
+    "zh": "每台中继器最多 100 m"
+  },
+  "EN7562CT, 2 ядра, 950 МГц": {
+    "uz": "EN7562CT, 2 yadro, 950 MHz",
+    "en": "EN7562CT, 2 cores, 950 MHz",
+    "tr": "EN7562CT, 2 çekirdek, 950 MHz",
+    "zh": "EN7562CT，双核，950 MHz"
+  },
+  "2,5×150 мм": {
+    "uz": "2,5×150 mm",
+    "en": "2.5×150 mm",
+    "tr": "2,5×150 mm",
+    "zh": "2.5×150 mm"
+  },
+  "3,6×200 мм": {
+    "uz": "3,6×200 mm",
+    "en": "3.6×200 mm",
+    "tr": "3,6×200 mm",
+    "zh": "3.6×200 mm"
+  },
+  "3,6×300 мм": {
+    "uz": "3,6×300 mm",
+    "en": "3.6×300 mm",
+    "tr": "3,6×300 mm",
+    "zh": "3.6×300 mm"
+  },
+  "Кабельная стяжка": {
+    "uz": "Kabel bogʻichi",
+    "en": "Cable tie",
+    "tr": "Kablo bağı",
+    "zh": "扎带"
+  },
+  "Охранная сигнализация, домофония": {
+    "uz": "Qoʻriqlash signalizatsiyasi, domofoniya",
+    "en": "Security alarm, intercom",
+    "tr": "Hırsız alarmı, interkom",
+    "zh": "防盗报警、楼宇对讲"
   }
 }
