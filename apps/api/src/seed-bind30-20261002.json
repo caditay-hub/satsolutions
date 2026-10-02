@@ -1,0 +1,343 @@
+{
+ "65dee101-134f-4b8d-a523-906f88614642": {
+  "slug": "pxt-pxt-adss-1-5-04",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-1,5-04",
+  "price": 2590,
+  "old": {
+   "price": 2600.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "7ced6277-ae27-427e-b188-6f7b221e8afe": {
+  "slug": "pxt-pxt-adss-1-5-08",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-1,5-08",
+  "price": 4090,
+  "old": {
+   "price": 4130.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "bc500195-e776-476d-afec-1544ebe3eaa7": {
+  "slug": "pxt-pxt-adss-1-5-24",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-1,5-24",
+  "price": 8590,
+  "old": {
+   "price": 8660.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c61c22ed-6587-4187-8b22-f970de370d98": {
+  "slug": "pxt-pxt-adss-3-0-04",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-3,0-04",
+  "price": 6390,
+  "old": {
+   "price": 6460.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "90e473a3-d93d-4c46-ba9e-9c6793564cad": {
+  "slug": "pxt-pxt-adss-3-0-08",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-3,0-08",
+  "price": 8790,
+  "old": {
+   "price": 8820.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "01e75ba3-7ae3-486d-9fe4-584890b7852d": {
+  "slug": "pro-mikrofon-cooma",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Микрофон -COOMA",
+  "price": 135900,
+  "old": {
+   "price": 135900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "15c14661-b0f7-44eb-a11b-6762dc20ccf3": {
+  "slug": "pro-dinamik-potolochnyi-mc-16-10-20w-premium-bez-ramki",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик потолочный MC-16 10-20W Premium (без рамки)",
+  "price": 221900,
+  "old": {
+   "price": 222900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "12aacbdc-1beb-40a1-a46a-c4dc895fc96b": {
+  "slug": "pro-dinamik-potolochnyi-dlya-girlyandy-3w-6w",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик потолочный для гирлянды 3W-6W",
+  "price": 74190,
+  "old": {
+   "price": 74190.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "b8b02cd2-739d-485d-92eb-529e3e3c2bb2": {
+  "slug": "pro-hdmi-4k-1-2-1-vhod-2-vyhod",
+  "supplier": "hikvision-premium",
+  "supplierCode": "HDMI 4K 1-2 (1 вход- 2 выход)",
+  "price": 159900,
+  "old": {
+   "price": 160900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "68cdc78d-eb0f-462f-9a1a-c3f4045388a4": {
+  "slug": "mkt-qmp",
+  "supplier": "ekom",
+  "supplierCode": "MikroTik QMP",
+  "price": 120900,
+  "old": {
+   "price": 120900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "468513dd-b305-41b8-90c3-19b303cbd22a": {
+  "slug": "pro-dinamik-nastennyi-20w-ws-07",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик настенный 20W WS-07",
+  "price": 147900,
+  "old": {
+   "price": 147900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c729b639-9f3d-45f2-8d6e-d9b6c56e3056": {
+  "slug": "pxt-pxt-adss-1-5-16",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-1,5-16",
+  "price": 6290,
+  "old": {
+   "price": 6310.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "3977f5ec-2580-476b-ba9e-a995563cc719": {
+  "slug": "pxt-pxt-adss-3-0-16",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-3,0-16",
+  "price": 9990,
+  "old": {
+   "price": 9990.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "72b25e23-f27a-458a-b592-210c16a81e14": {
+  "slug": "pxt-pxt-fttx-1-0-02",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-FTTx-1,0-02",
+  "price": 1590,
+  "old": {
+   "price": 1670.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "0cce5061-eec0-4d0a-bb99-414212fbe007": {
+  "slug": "pxt-pxt-fttx-0-25-01w",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-FTTx-0,25-01W",
+  "price": 890,
+  "old": {
+   "price": 970.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "b48fe895-e485-439e-a682-27c067d990f0": {
+  "slug": "pro-dinamik-haitek-510a",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик Хайтек 510A",
+  "price": 221900,
+  "old": {
+   "price": 222900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "6c36e07c-5f48-4af7-802f-bab37561ac49": {
+  "slug": "pro-dinamik-potolochnyi-548-10w",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик потолочный-548 10W",
+  "price": 86590,
+  "old": {
+   "price": 86590.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "15b7dde1-9fa0-4dbc-9a87-777cf94fb7c3": {
+  "slug": "pro-knopka-exit-metal",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Кнопка EXIT метал",
+  "price": 49490,
+  "old": {
+   "price": 49490.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "84d8b48a-c6d2-4309-af0d-81d418e40ec4": {
+  "slug": "pro-dinamik-nastennyi-15w-ws-06",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Динамик настенный 15W WS-06",
+  "price": 110900,
+  "old": {
+   "price": 110900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c53ed28e-4d8c-48cc-a159-e0bb6f1ae887": {
+  "slug": "pro-vyhod-exit-steklyannyi",
+  "supplier": "hikvision-premium",
+  "supplierCode": "ВЫХОД-EXIT Стеклянный",
+  "price": 122900,
+  "old": {
+   "price": 123900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "61503aee-962c-45cb-b16b-9be38d6c56e9": {
+  "slug": "pro-udlinitel-3-gnezd-2-metr",
+  "supplier": "hikvision-premium",
+  "supplierCode": "Удлинитель 3 гнезд. 2 метр",
+  "price": 30890,
+  "old": {
+   "price": 30890.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "06d93c95-2332-4c23-badf-53294787a552": {
+  "slug": "pxt-pxt-adss-3-0-24",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-3,0-24",
+  "price": 11290,
+  "old": {
+   "price": 11290.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "01329aa0-5281-4f3f-8b74-57ce6365ba23": {
+  "slug": "pxt-pxt-adss-4x12-3-0-48",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-ADSS-(4x12)-3,0-48",
+  "price": 18090,
+  "old": {
+   "price": 18090.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c057b156-9acf-4ccf-8b4a-50eb98536229": {
+  "slug": "pxt-pxt-fttx-1-0-01",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-FTTx-1,0-01",
+  "price": 1290,
+  "old": {
+   "price": 1300.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "511ae201-70c7-4bc5-93b6-9cd0ea805f4e": {
+  "slug": "pxt-pxt-fttx-1-0-04",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-FTTx-1,0-04",
+  "price": 2390,
+  "old": {
+   "price": 2460.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "df67c623-bd1c-44e7-a056-824d16b98f7b": {
+  "slug": "pxt-pxt-k-2-7-08",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-K-2,7-08",
+  "price": 5290,
+  "old": {
+   "price": 5380.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "b5801201-f232-4f92-85c9-0cff265256e5": {
+  "slug": "pxt-pxt-ut-07-12-l",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-UT-07-12-L",
+  "price": 9290,
+  "old": {
+   "price": 9340.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "a20fe089-25ea-447c-81d4-faa4b524ccb7": {
+  "slug": "pxt-pxt-ut-07-24-l",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-UT-07-24-L",
+  "price": 15690,
+  "old": {
+   "price": 13890.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "1796fe3c-c7d1-4cb2-a0d7-d272b2cf9383": {
+  "slug": "pxt-pxt-ut-07-48-l",
+  "supplier": "pixietech",
+  "supplierCode": "PXT-UT-07-48-L",
+  "price": 26390,
+  "old": {
+   "price": 25890.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "c1b84d63-a939-4648-bea8-54a4062b6690": {
+  "slug": "pro-a17-germetichnaya-korobka-w-03-malenkaya-vodonepronicaemaya-kitai",
+  "supplier": "hikvision-premium",
+  "supplierCode": "A17 Герметичная коробка W-03 маленькая водонепроницаемая (Китай)",
+  "price": 15990,
+  "old": {
+   "price": 16090.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ },
+ "53f71852-374b-4c15-a486-174c8c9024ac": {
+  "slug": "pxt-as-121c-tn10r-oto-44-r",
+  "supplier": "pixietech",
+  "supplierCode": "AS-121C-TN10R-OTO-44",
+  "price": 105317900,
+  "old": {
+   "price": 105317900.0,
+   "supplier": null,
+   "supplierCode": null
+  }
+ }
+}
