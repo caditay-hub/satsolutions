@@ -84,6 +84,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "Оптика и аксессуары": { uz: "Optika va aksessuarlar", en: "Fiber & accessories", tr: "Fiber ve aksesuarlar", zh: "光纤与配件" },
   "СКС (витая пара)": { uz: "SKS (oʻralgan juftlik)", en: "Structured cabling (twisted pair)", tr: "Yapısal kablolama (twisted pair)", zh: "综合布线 (双绞线)" },
   "Кабель": { uz: "Kabel", en: "Cable", tr: "Kablo", zh: "线缆" },
+  "Оборудование КТВ": { uz: "Kabel televideniyesi uskunalari", en: "Cable TV (CATV) equipment", tr: "Kablo TV (CATV) ekipmanı", zh: "有线电视（CATV）设备" },
   "Оптика и HDMI": { uz: "Optika va HDMI", en: "Fiber & HDMI", tr: "Fiber ve HDMI", zh: "光纤与HDMI" },
   "Телекоммуникационные шкафы": { uz: "Telekommunikatsiya shkaflari", en: "Telecom cabinets", tr: "Telekom kabinleri", zh: "通信机柜" },
   "ИБП и электропитание": { uz: "UPS va elektr taʼminoti", en: "UPS & power", tr: "UPS ve güç kaynağı", zh: "UPS与供电" },

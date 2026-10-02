@@ -89,6 +89,24 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       zh: "干粉OP-4至OP-100与二氧化碳OU-5灭火器塔什干现货，价格122900苏姆起。按火灾类别与面积选型，提供充装、含税发票与乌兹别克斯坦全境配送。",
     },
   },
+  // Тип заведён 02.10.2026: 18 товаров кабельного ТВ вынесены из «IP-телефонии»
+  // (seed-move-ktv.ts). Цены — по прод-БД на 02.10; при смене прайса править и TYPE_LANDING ниже.
+  "oborudovanie-ktv": {
+    title: {
+      ru: "Оборудование КТВ: абонентские ответвители и делители | Ташкент",
+      uz: "KTV uskunalari: abonent tarmoqlagichlari va boʻlgichlar | Toshkent",
+      en: "CATV Equipment — Subscriber Taps & Splitters | Tashkent",
+      tr: "CATV Ekipmanı — Abone Tap'ları ve Bölücüler | Taşkent",
+      zh: "有线电视（CATV）设备——用户分支器与分配器｜塔什干",
+    },
+    desc: {
+      ru: "Абонентские ответвители SNR-T на 1–8 отводов с затуханием 10–18 дБ, делитель SNR-SPLT6 и оптические приёмники для сетей кабельного ТВ. Цены от 14 790 сум, счёт с НДС, доставка по Узбекистану.",
+      uz: "1–8 chiqishli, 10–18 dB soʻnishli SNR-T abonent tarmoqlagichlari, SNR-SPLT6 boʻlgichi va kabel televideniyesi tarmoqlari uchun optik qabul qilgichlar. Narxlar 14 790 soʻmdan, QQS bilan hisob-faktura, Oʻzbekiston boʻylab yetkazib berish.",
+      en: "SNR-T subscriber taps with 1–8 ports and 10–18 dB tap loss, the SNR-SPLT6 splitter and optical receivers for cable TV networks. Prices from 14,790 UZS, VAT invoicing, delivery across Uzbekistan.",
+      tr: "1–8 çıkışlı, 10–18 dB tap kaybına sahip SNR-T abone tap'ları, SNR-SPLT6 bölücü ve kablo TV şebekeleri için optik alıcılar. 14 790 somdan başlayan fiyatlar, KDV'li fatura, tüm Özbekistan'a teslimat.",
+      zh: "SNR-T用户分支器（1–8路输出，分支损耗10–18 dB）、SNR-SPLT6分配器及有线电视网络光接收机。价格14,790苏姆起，可开增值税发票，全乌兹别克斯坦配送。",
+    },
+  },
   "ibp-i-elektropitanie": {
     title: {
       ru: "Купить ИБП и стабилизатор напряжения в Ташкенте — цены",
@@ -553,6 +571,83 @@ export const TYPE_LANDING: Record<string, Record<string, TypeLanding>> = {
       intro: "干粉（OP）与二氧化碳（OU）灭火器，塔什干现货——122,900 苏姆起。按火灾类别与面积选型，提供再充装与迎检配置。",
       long: ["选灭火器先看火灾类别。干粉型是万能选手：固体（A）、液体（B）、气体（C）及 1000V 以内带电设备——办公室、商店、仓库和车辆的标准配置。二氧化碳型灭火无残留：气体挥发不损伤设备，适合机房、配电室和有贵重电子设备的场所。数量计算很简单：每 50–100 平方米至少一具 4–5 公斤干粉灭火器，每层不少于两具。", "RIF 全系现货：室内用 OP-4（122,900 苏姆）、OP-5 和 OP-8，生产区用 OP-10 和 OP-25，仓库、加油站和车间用推车式 OP-50 和 OP-100，电气房间用二氧化碳 OU-5（543,900 苏姆）。配套支架、底座和消防箱；交付所需的标识与台账一应俱全。", "灭火器有维护规程：干粉型每 5 年再充装，二氧化碳型每年称重检查，任何使用后立即补充。这些我们全包：按规范为场所计算配置、开增值税发票、全乌兹别克斯坦配送并代管充装台账——消防检查零整改通过。", "摆放位置决定灭火器能否派上用场：出口旁的醒目处、安装高度不超过1.5米，冬天不要放在严寒处——低温让干粉结块、气瓶失压。车里支架比容量更重要：随手可取的OP-2胜过压在后备箱底的OP-5——起火时以秒计。", "我们反复见到的三个错误：整层楼只摆一具「应付检查」的灭火器、铅封磨掉的过期充装、机房旁放干粉灭火器——一旦喷出，毁设备比火更彻底。把平面图发来——按规范免费核算配置：类型、规格、支架和标识。"],
       faq: [["办公室选哪种灭火器？", "4–5 公斤干粉型——每 50–100 平方米至少一具，每层不少于两具。机房和配电箱旁加配二氧化碳型：不损伤设备。"], ["灭火器多少钱？", "干粉 OP-4 — 122,900 苏姆，OP-5 — 141,900，OP-8 — 184,900，OP-10 — 246,900；推车式 OP-50 — 1,298,900；二氧化碳 OU-5 — 543,900 苏姆。单位客户开增值税发票。"], ["配电箱能用干粉灭火器吗？", "能（1000V 以内），但粉末会覆盖触点和设备。配电室和机房更该用无残留的二氧化碳型。"], ["你们做再充装吗？", "做：干粉每 5 年一次，二氧化碳每年称重，使用后立即充装。台账我们代管并提醒到期。"]],
+    },
+  },
+  "oborudovanie-ktv": {
+    ru: {
+      intro: "Пассивное и узловое оборудование для сетей кабельного телевидения: абонентские ответвители SNR-T на 1–8 отводов, делитель SNR-SPLT6 и оптические приёмники КТВ. Цены от 14 790 сум.",
+      long: [
+        "Абонентский ответвитель — основной элемент коаксиальной распределительной сети дома. Магистральный сигнал проходит через него с входа IN на выход OUT почти без потерь и идёт дальше по стояку, а на отводы TAP уходит часть сигнала, ослабленная на номинальное затухание. В маркировке SNR-T всё зашифровано: первая цифра — число отводов, две последние — затухание в децибелах. SNR-T-318 — три отвода по 18 дБ, SNR-T-112 — один отвод на 12 дБ.",
+        "Затухание подбирают по уровню сигнала в точке установки. Рядом с усилителем или головной станцией сигнал сильный — там ставят ответвители на 16–18 дБ, чтобы не перегрузить телевизоры абонентов. К концу магистрали сигнал слабеет, и затухание уменьшают до 10–12 дБ. Цель расчёта — одинаковый уровень на каждой абонентской розетке от первого этажа до последнего. Число отводов выбирают по количеству подключений в точке: один-два для частного дома, три-четыре на этажную площадку, шесть-восемь для узла в стояке.",
+        "Делитель работает иначе: он делит сигнал поровну между всеми выходами, и проходного выхода у него нет. Поэтому делитель ставят в конце линии или для разводки внутри квартиры и дома, а проходную магистраль собирают на ответвителях. Если их перепутать, последние подъезды получат слабый сигнал.",
+        "В гибридных волоконно-коаксиальных сетях (HFC) сигнал приходит в дом по оптике. Оптический приёмник — Vermax-LTP-088-7-IS или компактный WR1001J — преобразует его в радиочастотный и отдаёт в коаксиальную разводку, а дальше работают ответвители и делители. Поможем собрать комплект под вашу схему сети: подберём номиналы по уровням сигнала, выставим счёт с НДС и доставим по Узбекистану.",
+      ],
+      faq: [
+        ["Как расшифровать маркировку SNR-T?", "Первая цифра — число отводов (1, 2, 3, 4, 6 или 8), две последние — затухание на отводе в дБ. Например, SNR-T-214 — два отвода по 14 дБ, SNR-T-816 — восемь отводов по 16 дБ."],
+        ["Какое затухание выбрать?", "Чем ближе к усилителю и сильнее сигнал, тем больше затухание: в начале магистрали — 16–18 дБ, в середине — 14 дБ, в конце — 10–12 дБ. Задача — выровнять уровень на всех абонентских розетках."],
+        ["Чем ответвитель отличается от делителя?", "Ответвитель отдаёт на отводы часть сигнала и пропускает основной поток дальше по магистрали. Делитель делит сигнал поровну между выходами и проходного выхода не имеет — его ставят в конце линии или внутри квартиры."],
+        ["Сколько стоит оборудование КТВ?", "Ответвители SNR-T на 1 отвод — 14 790 сум, на 2 отвода — 16 190, на 3 — 21 490, на 4 — 24 490, на 6 — 43 490, на 8 — 47 690; делитель SNR-SPLT6 — 44 390; оптический приёмник Vermax-LTP-088-7-IS — 454 900, WR1001J — 1 265 900 сум. Для организаций — счёт с НДС."],
+      ],
+    },
+    uz: {
+      intro: "Kabel televideniyesi tarmoqlari uchun passiv va tugun uskunalari: 1–8 chiqishli SNR-T abonent tarmoqlagichlari, SNR-SPLT6 boʻlgichi va KTV optik qabul qilgichlari. Narxlar 14 790 soʻmdan.",
+      long: [
+        "Abonent tarmoqlagichi — uydagi koaksial taqsimlash tarmogʻining asosiy elementi. Magistral signal undan IN kirishidan OUT chiqishiga deyarli yoʻqotishsiz oʻtadi va stoyak boʻylab davom etadi, TAP chiqishlariga esa nominal soʻnish qadar susaytirilgan signal ulushi beriladi. SNR-T belgisida hammasi koʻrsatilgan: birinchi raqam — chiqishlar soni, oxirgi ikkitasi — detsibeldagi soʻnish. SNR-T-318 — 18 dB li uchta chiqish, SNR-T-112 — 12 dB li bitta chiqish.",
+        "Soʻnish oʻrnatish nuqtasidagi signal darajasiga qarab tanlanadi. Kuchaytirgich yoki bosh stansiya yaqinida signal kuchli — u yerga abonent televizorlarini ortiqcha yuklamaslik uchun 16–18 dB li tarmoqlagichlar qoʻyiladi. Magistral oxiriga borib signal zaiflashadi va soʻnish 10–12 dB gacha kamaytiriladi. Hisobdan maqsad — birinchi qavatdan oxirgisigacha har bir abonent rozetkasida bir xil daraja. Chiqishlar soni nuqtadagi ulanishlar soniga qarab tanlanadi: xususiy uy uchun bir-ikkita, qavat maydonchasiga uch-toʻrtta, stoyakdagi tugun uchun olti-sakkizta.",
+        "Boʻlgich boshqacha ishlaydi: u signalni barcha chiqishlar orasida teng taqsimlaydi va unda oʻtuvchi chiqish yoʻq. Shuning uchun boʻlgich liniya oxirida yoki kvartira va uy ichidagi tarqatishda qoʻyiladi, oʻtuvchi magistral esa tarmoqlagichlarda yigʻiladi. Ularni almashtirib qoʻysangiz, oxirgi podyezdlarga signal zaif yetib boradi.",
+        "Gibrid tolali-koaksial (HFC) tarmoqlarda signal uyga optika orqali keladi. Optik qabul qilgich — Vermax-LTP-088-7-IS yoki ixcham WR1001J — uni radiochastotali signalga aylantirib, koaksial tarqatishga uzatadi, keyin tarmoqlagich va boʻlgichlar ishlaydi. Tarmogʻingiz sxemasiga mos toʻplam yigʻishda yordam beramiz: signal darajalariga koʻra nominallarni tanlaymiz, QQS bilan hisob-faktura beramiz va Oʻzbekiston boʻylab yetkazib beramiz.",
+      ],
+      faq: [
+        ["SNR-T belgisini qanday oʻqish kerak?", "Birinchi raqam — chiqishlar soni (1, 2, 3, 4, 6 yoki 8), oxirgi ikkitasi — chiqishdagi soʻnish, dB. Masalan, SNR-T-214 — 14 dB li ikkita chiqish, SNR-T-816 — 16 dB li sakkizta chiqish."],
+        ["Qanday soʻnishni tanlash kerak?", "Kuchaytirgichga qanchalik yaqin va signal qanchalik kuchli boʻlsa, soʻnish shunchalik katta: magistral boshida — 16–18 dB, oʻrtasida — 14 dB, oxirida — 10–12 dB. Vazifa — barcha abonent rozetkalarida darajani tenglashtirish."],
+        ["Tarmoqlagich boʻlgichdan nimasi bilan farq qiladi?", "Tarmoqlagich chiqishlarga signalning bir qismini beradi va asosiy oqimni magistral boʻylab oʻtkazadi. Boʻlgich signalni chiqishlar orasida teng taqsimlaydi va oʻtuvchi chiqishga ega emas — u liniya oxirida yoki kvartira ichida qoʻyiladi."],
+        ["KTV uskunalari qancha turadi?", "Bitta chiqishli SNR-T tarmoqlagichlari — 14 790 soʻm, ikkita chiqishli — 16 190, uchta — 21 490, toʻrtta — 24 490, oltita — 43 490, sakkizta — 47 690; SNR-SPLT6 boʻlgichi — 44 390; Vermax-LTP-088-7-IS optik qabul qilgichi — 454 900, WR1001J — 1 265 900 soʻm. Tashkilotlarga QQS bilan hisob-faktura."],
+      ],
+    },
+    en: {
+      intro: "Passive and node equipment for cable TV networks: SNR-T subscriber taps with 1–8 ports, the SNR-SPLT6 splitter and CATV optical receivers. Prices from 14,790 UZS.",
+      long: [
+        "A subscriber tap is the core element of a building's coaxial distribution network. The trunk signal passes through it from IN to OUT with minimal loss and continues up the riser, while the TAP ports receive a share of the signal reduced by the rated tap loss. The SNR-T part number says it all: the first digit is the number of ports, the last two are the tap loss in decibels. SNR-T-318 means three ports at 18 dB; SNR-T-112 means one port at 12 dB.",
+        "Tap loss is chosen by the signal level at the installation point. Near an amplifier or headend the signal is strong, so taps with 16–18 dB are used to avoid overloading subscribers' TV sets. Towards the end of the trunk the signal weakens and the tap loss drops to 10–12 dB. The goal of the calculation is an equal level at every subscriber outlet from the ground floor to the top. The port count follows the number of connections at the point: one or two for a private house, three or four per floor landing, six to eight for a riser node.",
+        "A splitter works differently: it divides the signal equally between all outputs and has no through port. That is why splitters go at the end of a line or inside a flat or house, while the trunk itself is built on taps. Mix them up and the last entrances end up with a weak signal.",
+        "In hybrid fibre-coaxial (HFC) networks the signal reaches the building over fibre. An optical receiver — the Vermax-LTP-088-7-IS or the compact WR1001J — converts it to RF and feeds the coaxial distribution, where taps and splitters take over. We help assemble a kit for your network layout: we pick tap values by signal levels, invoice with VAT and deliver across Uzbekistan.",
+      ],
+      faq: [
+        ["How do I read the SNR-T part number?", "The first digit is the number of ports (1, 2, 3, 4, 6 or 8), the last two are the tap loss in dB. For example, SNR-T-214 is two ports at 14 dB, SNR-T-816 is eight ports at 16 dB."],
+        ["Which tap loss should I choose?", "The closer to the amplifier and the stronger the signal, the higher the tap loss: 16–18 dB at the start of the trunk, 14 dB in the middle, 10–12 dB at the end. The task is to level the signal across all subscriber outlets."],
+        ["What is the difference between a tap and a splitter?", "A tap sends part of the signal to its ports and passes the main flow on along the trunk. A splitter divides the signal equally between its outputs and has no through port — it goes at the end of a line or inside a flat."],
+        ["How much does CATV equipment cost?", "SNR-T taps: 1 port — 14,790 UZS, 2 ports — 16,190, 3 — 21,490, 4 — 24,490, 6 — 43,490, 8 — 47,690; SNR-SPLT6 splitter — 44,390; Vermax-LTP-088-7-IS optical receiver — 454,900, WR1001J — 1,265,900 UZS. VAT invoicing for organisations."],
+      ],
+    },
+    tr: {
+      intro: "Kablo TV şebekeleri için pasif ve düğüm ekipmanı: 1–8 çıkışlı SNR-T abone tap'ları, SNR-SPLT6 bölücü ve CATV optik alıcılar. Fiyatlar 14.790 UZS'den başlıyor.",
+      long: [
+        "Abone tap'ı, bina içi koaksiyel dağıtım şebekesinin temel elemanıdır. Ana hat sinyali IN girişinden OUT çıkışına neredeyse kayıpsız geçip kolon boyunca devam eder; TAP çıkışlarına ise nominal tap kaybı kadar zayıflatılmış bir pay ayrılır. SNR-T kodunda her şey yazılıdır: ilk rakam çıkış sayısı, son iki rakam desibel cinsinden tap kaybıdır. SNR-T-318 — 18 dB'lik üç çıkış, SNR-T-112 — 12 dB'lik tek çıkış.",
+        "Tap kaybı, montaj noktasındaki sinyal seviyesine göre seçilir. Yükselteç veya başlık istasyonu yakınında sinyal güçlüdür; abonelerin televizyonlarını aşırı yüklememek için 16–18 dB'lik tap'lar takılır. Ana hattın sonuna doğru sinyal zayıflar ve tap kaybı 10–12 dB'ye düşürülür. Hesabın amacı, giriş katından en üst kata kadar her abone prizinde eşit seviyedir. Çıkış sayısı noktadaki bağlantı sayısına göre seçilir: müstakil ev için bir-iki, kat sahanlığı için üç-dört, kolon düğümü için altı-sekiz.",
+        "Bölücü farklı çalışır: sinyali tüm çıkışlar arasında eşit böler ve geçiş çıkışı yoktur. Bu yüzden bölücü hattın sonuna veya daire ve ev içi dağıtıma takılır, ana hat ise tap'larla kurulur. Karıştırılırsa son girişlere zayıf sinyal ulaşır.",
+        "Hibrit fiber-koaksiyel (HFC) şebekelerde sinyal binaya fiber üzerinden gelir. Optik alıcı — Vermax-LTP-088-7-IS veya kompakt WR1001J — onu RF sinyaline çevirip koaksiyel dağıtıma verir; sonrasında tap ve bölücüler devreye girer. Şebeke şemanıza uygun seti birlikte hazırlarız: değerleri sinyal seviyelerine göre seçer, KDV'li fatura keser ve tüm Özbekistan'a teslim ederiz.",
+      ],
+      faq: [
+        ["SNR-T kodu nasıl okunur?", "İlk rakam çıkış sayısı (1, 2, 3, 4, 6 veya 8), son iki rakam dB cinsinden tap kaybıdır. Örneğin SNR-T-214 — 14 dB'lik iki çıkış, SNR-T-816 — 16 dB'lik sekiz çıkış."],
+        ["Hangi tap kaybını seçmeliyim?", "Yükseltece ne kadar yakın ve sinyal ne kadar güçlüyse tap kaybı o kadar yüksek olur: ana hattın başında 16–18 dB, ortasında 14 dB, sonunda 10–12 dB. Amaç tüm abone prizlerinde seviyeyi eşitlemektir."],
+        ["Tap ile bölücü arasındaki fark nedir?", "Tap, sinyalin bir kısmını çıkışlarına verir ve ana akışı hat boyunca geçirir. Bölücü sinyali çıkışlar arasında eşit böler ve geçiş çıkışı yoktur — hattın sonuna veya daire içine takılır."],
+        ["CATV ekipmanı ne kadar?", "SNR-T tap'ları: 1 çıkış — 14.790 UZS, 2 çıkış — 16.190, 3 — 21.490, 4 — 24.490, 6 — 43.490, 8 — 47.690; SNR-SPLT6 bölücü — 44.390; Vermax-LTP-088-7-IS optik alıcı — 454.900, WR1001J — 1.265.900 UZS. Kurumlara KDV'li fatura."],
+      ],
+    },
+    zh: {
+      intro: "有线电视网络的无源与节点设备：1–8路输出的SNR-T用户分支器、SNR-SPLT6分配器及CATV光接收机。价格14,790苏姆起。",
+      long: [
+        "用户分支器是楼内同轴分配网络的核心元件。干线信号从IN端到OUT端几乎无损通过并沿竖井继续传输，TAP分支口则获得按标称分支损耗衰减后的一部分信号。SNR-T型号一目了然：第一位数字是分支口数量，后两位是以分贝计的分支损耗。SNR-T-318即三个分支口、每口18 dB；SNR-T-112即一个分支口、12 dB。",
+        "分支损耗根据安装点的信号电平选择。靠近放大器或前端时信号强，应选用16–18 dB的分支器，以免用户电视过载；越接近干线末端信号越弱，分支损耗降至10–12 dB。计算的目标是从一楼到顶层每个用户终端盒电平一致。分支口数量按该点的接入数确定：独栋住宅一到两个，楼层平台三到四个，竖井节点六到八个。",
+        "分配器的工作方式不同：它把信号平均分给所有输出口，没有直通口。因此分配器装在线路末端或用于户内分配，干线则由分支器组成。若用反了，最后几个单元的信号会偏弱。",
+        "在光纤同轴混合网（HFC）中，信号通过光纤进入楼宇。光接收机——Vermax-LTP-088-7-IS或小巧的WR1001J——将其转换为射频信号送入同轴分配网，随后由分支器和分配器完成分配。我们可协助按您的网络方案配齐设备：依据信号电平选定规格，开具增值税发票，并配送至乌兹别克斯坦全境。",
+      ],
+      faq: [
+        ["SNR-T型号怎么看？", "第一位数字是分支口数量（1、2、3、4、6或8），后两位是分支损耗（dB）。例如SNR-T-214为两个14 dB分支口，SNR-T-816为八个16 dB分支口。"],
+        ["分支损耗怎么选？", "越靠近放大器、信号越强，分支损耗越大：干线起点16–18 dB，中段14 dB，末端10–12 dB。目的是让所有用户终端盒电平一致。"],
+        ["分支器和分配器有什么区别？", "分支器把一部分信号送到分支口，主信号沿干线继续传输。分配器把信号平均分给各输出口，没有直通口——装在线路末端或户内。"],
+        ["CATV设备多少钱？", "SNR-T分支器：1路 — 14,790苏姆，2路 — 16,190，3路 — 21,490，4路 — 24,490，6路 — 43,490，8路 — 47,690；SNR-SPLT6分配器 — 44,390；Vermax-LTP-088-7-IS光接收机 — 454,900，WR1001J — 1,265,900苏姆。单位客户可开增值税发票。"],
+      ],
     },
   },
   "wi-fi-tochki-dostupa": {
