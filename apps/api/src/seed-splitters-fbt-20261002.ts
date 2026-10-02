@@ -18,7 +18,9 @@ import { Product } from "./models/Product.js";
 const APPLY = process.argv.includes("--apply");
 // запуск из apps/api (см. шапку) — пакет CJS, import.meta здесь недоступен
 const DATA: Record<string, any> = JSON.parse(readFileSync(join(process.cwd(), "src", "seed-splitters-fbt-20261002.json"), "utf8"));
-const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
+// jsonb хранит ключи в своём порядке — сравниваем без учёта порядка
+const canon = (x: unknown): unknown => (x && typeof x === "object" && !Array.isArray(x) ? Object.fromEntries(Object.keys(x as object).sort().map((k) => [k, canon((x as any)[k])])) : x);
+const same = (a: unknown, b: unknown) => JSON.stringify(canon(a)) === JSON.stringify(canon(b));
 
 async function main() {
   initModels();
