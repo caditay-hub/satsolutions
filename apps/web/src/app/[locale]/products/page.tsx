@@ -82,6 +82,12 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
 export default async function ProductsPage(props: { params?: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const { locale } = props.params ? await props.params : { locale: routing.defaultLocale };
   const t = await getTranslations({ locale, namespace: "common" });
+  // 05.10.2026: без поиска каталог отдаём сразу целиком — иначе в <main> стояла заглушка
+  // «Загрузка…», а товары лежали в скрытых потоковых блоках в конце HTML (и для Googlebot).
+  // Скелетон оставлен только для умного поиска (?q=), который ждёт до ~2.5 с; эти страницы noindex.
+  const sp = await props.searchParams;
+  const q = typeof sp?.q === "string" ? sp.q.trim() : "";
+  if (!q) return CatalogView(props as any);
   return (
     <Suspense
       fallback={
