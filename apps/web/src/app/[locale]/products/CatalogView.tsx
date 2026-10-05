@@ -61,6 +61,9 @@ function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): imp
     recommended: p.recommended,
     modelCode: p.modelCode ?? null,
     coverImageUrl: p.coverImageUrl,
+    // бейдж «В наличии / Под заказ» в карточке и строке: без поля все 31 товар «под заказ»
+    // показывались в каталоге как «В наличии» (найдено 05.10.2026)
+    inStock: p.inStock,
     characteristics: keepChars ? p.characteristics : null, // строке нужны чипы-спеки
     // обязательные по типу, но карточке не нужны — облегчаем
     shortDescription: null,
