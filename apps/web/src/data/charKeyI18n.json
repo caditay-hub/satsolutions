@@ -5968,5 +5968,41 @@
     "en": "Conductor material",
     "tr": "İletken malzemesi",
     "zh": "导体材质"
+  },
+  "Диагностика": {
+    "uz": "Diagnostika",
+    "en": "Diagnostics",
+    "tr": "Tanılama",
+    "zh": "自检诊断"
+  },
+  "Зон обнаружения": {
+    "uz": "Aniqlash zonalari",
+    "en": "Detection zones",
+    "tr": "Algılama bölgesi",
+    "zh": "探测区数"
+  },
+  "Минимальный объект": {
+    "uz": "Minimal obyekt",
+    "en": "Minimum detectable object",
+    "tr": "Minimum nesne",
+    "zh": "最小探测物"
+  },
+  "Настройка чувствительности": {
+    "uz": "Sezgirlikni sozlash",
+    "en": "Sensitivity adjustment",
+    "tr": "Hassasiyet ayarı",
+    "zh": "灵敏度调节"
+  },
+  "Стандарт карт": {
+    "uz": "Karta standarti",
+    "en": "Card standard",
+    "tr": "Kart standardı",
+    "zh": "卡片标准"
+  },
+  "Тип устройства": {
+    "uz": "Qurilma turi",
+    "en": "Device type",
+    "tr": "Cihaz tipi",
+    "zh": "设备类型"
   }
 }

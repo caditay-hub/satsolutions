@@ -24622,5 +24622,65 @@
     "en": "Security alarm, intercom",
     "tr": "Hırsız alarmı, interkom",
     "zh": "防盗报警、楼宇对讲"
+  },
+  "цифровой дисплей на головной части": {
+    "uz": "bosh qismida raqamli displey",
+    "en": "digital display on the top unit",
+    "tr": "üst bölümde dijital ekran",
+    "zh": "门头数码显示屏"
+  },
+  "звуковой сигнал и индикация зоны": {
+    "uz": "ovozli signal va zona indikatsiyasi",
+    "en": "audible alarm and zone indication",
+    "tr": "sesli alarm ve bölge göstergesi",
+    "zh": "声音报警与区位指示"
+  },
+  "самопроверка при включении": {
+    "uz": "yoqilganda oʻz-oʻzini tekshirish",
+    "en": "self-test at power-on",
+    "tr": "açılışta otomatik test",
+    "zh": "开机自检"
+  },
+  "металл размером с монету": {
+    "uz": "tanga kattaligidagi metall",
+    "en": "coin-sized metal object",
+    "tr": "madeni para boyutunda metal",
+    "zh": "硬币大小的金属物"
+  },
+  "раздельно по каждой зоне": {
+    "uz": "har bir zona uchun alohida",
+    "en": "separately for each zone",
+    "tr": "her bölge için ayrı ayrı",
+    "zh": "各区独立调节"
+  },
+  "у двери или турникета": {
+    "uz": "eshik yoki turniket yonida",
+    "en": "at a door or turnstile",
+    "tr": "kapı veya turnike yanında",
+    "zh": "门旁或闸机旁"
+  },
+  "системы контроля доступа": {
+    "uz": "kirishni nazorat qilish tizimlari",
+    "en": "access control systems",
+    "tr": "geçiş kontrol sistemleri",
+    "zh": "门禁系统"
+  },
+  "EM-Marine, 125 кГц": {
+    "uz": "EM-Marine, 125 kHz",
+    "en": "EM-Marine, 125 kHz",
+    "tr": "EM-Marine, 125 kHz",
+    "zh": "EM-Marine，125 kHz"
+  },
+  "карта или брелок": {
+    "uz": "karta yoki brelok",
+    "en": "card or key fob",
+    "tr": "kart veya anahtarlık",
+    "zh": "卡片或钥匙扣"
+  },
+  "считыватель карт": {
+    "uz": "karta oʻquvchi",
+    "en": "card reader",
+    "tr": "kart okuyucu",
+    "zh": "读卡器"
   }
 }
