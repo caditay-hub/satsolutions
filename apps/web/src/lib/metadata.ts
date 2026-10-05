@@ -22,6 +22,15 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         ? overrides.description
         : site.description;
 
+    // og:url = canonical страницы. Раньше здесь всегда стоял адрес главной: 16 270 карточек
+    // товаров и страницы без своего openGraph (наследуют layout) отдавали og:url=https://satsolutions.uz
+    // (сплошной обход 02.10.2026). Нет canonical (layout) — og:url не ставим вовсе, чтобы его не
+    // наследовали дочерние страницы.
+    const canonical = overrides?.alternates?.canonical as string | URL | { url: string | URL } | null | undefined;
+    const ogUrl = (overrides?.openGraph as any)?.url
+        ?? (canonical && typeof canonical === 'object' && 'url' in canonical ? canonical.url : canonical)
+        ?? undefined;
+
     return {
         metadataBase: new URL(siteUrl),
         title,
@@ -51,7 +60,7 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         openGraph: {
             type: "website",
             locale: (overrides?.openGraph as any)?.locale ?? site.locale,
-            url: siteUrl,
+            ...(ogUrl ? { url: ogUrl } : {}),
             siteName: site.name,
             title: typeof overrides?.openGraph?.title === 'string' ? overrides.openGraph.title : site.name,
             description: typeof overrides?.openGraph?.description === 'string' ? overrides.openGraph.description : site.description,

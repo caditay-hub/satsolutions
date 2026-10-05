@@ -2,6 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, localeNames } from "@/i18n/routing";
 
@@ -79,15 +80,26 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
     return () => document.removeEventListener("mousedown", onClick);
   }, []);
 
-  const switchTo = (l: string) => {
+  // Пункты — настоящие ссылки <a href> на ту же страницу в другой локали: раньше это были
+  // кнопки с router.replace, и с русских страниц не было ни одной обходимой ссылки на
+  // /uz, /en, /tr, /zh (языки связывали только hreflang и sitemap — обход 02.10.2026).
+  // Список рендерится всегда (скрыт CSS), чтобы ссылки были в HTML для поисковиков.
+  // Адрес строим сами, как в hreflang/sitemap: русская версия БЕЗ префикса (Link из next-intl
+  // давал /ru/… — а это 307-редирект на прод), остальные — /uz, /en, /tr, /zh.
+  const hrefFor = (l: string) =>
+    l === routing.defaultLocale ? pathname : `/${l}${pathname === "/" ? "" : pathname}`;
+  const switchTo = (e: React.MouseEvent<HTMLAnchorElement>, l: string) => {
     setOpen(false);
+    // Ручной выбор запоминаем на год — middleware не будет уводить на /uz по языку браузера
+    document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`;
     // Сохраняем query-параметры (фильтры каталога, поиск, пагинация) — иначе смена
     // языка сбрасывает состояние страницы. window.location вместо useSearchParams,
     // чтобы не оборачивать шапку в Suspense на статических страницах.
     const qs = window.location.search;
-    // Ручной выбор запоминаем на год — middleware не будет уводить на /uz по языку браузера
-    document.cookie = `NEXT_LOCALE=${l}; path=/; max-age=31536000; SameSite=Lax`;
-    router.replace(`${pathname}${qs}`, { locale: l });
+    if (qs) {
+      e.preventDefault();
+      router.replace(`${pathname}${qs}`, { locale: l });
+    }
   };
 
   return (
@@ -103,26 +115,28 @@ export function LanguageSwitcher({ className = "" }: { className?: string }) {
         <span className="uppercase">{locale}</span>
         <svg className={`h-3 w-3 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>
       </button>
-      {open && (
-        <div className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg">
-          {routing.locales.map((l) => (
-            <button
-              key={l}
-              type="button"
-              onClick={() => switchTo(l)}
-              className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm font-semibold hover:bg-slate-50 ${
-                l === locale ? "text-brand-700" : "text-slate-700"
-              }`}
-            >
-              <span className="inline-flex items-center gap-2">
-                {Flags[l]}
-                {localeNames[l]}
-              </span>
-              {l === locale ? <span className="text-brand-600">✓</span> : null}
-            </button>
-          ))}
-        </div>
-      )}
+      <div className={`absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg ${open ? "" : "hidden"}`}>
+        {routing.locales.map((l) => (
+          <Link
+            key={l}
+            href={hrefFor(l)}
+            hrefLang={l}
+            lang={l}
+            prefetch={false}
+            onClick={(e) => switchTo(e, l)}
+            aria-current={l === locale ? "true" : undefined}
+            className={`flex w-full items-center justify-between px-3 py-2 text-left text-sm font-semibold hover:bg-slate-50 ${
+              l === locale ? "text-brand-700" : "text-slate-700"
+            }`}
+          >
+            <span className="inline-flex items-center gap-2">
+              {Flags[l]}
+              {localeNames[l]}
+            </span>
+            {l === locale ? <span className="text-brand-600">✓</span> : null}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
