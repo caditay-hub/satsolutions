@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "./site";
+import { OG_LOCALE } from "./ogLocale";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 
@@ -10,6 +11,40 @@ export function clip(text: string, max = 160): string {
     const cut = t.slice(0, max);
     const lastSpace = cut.lastIndexOf(" ");
     return (lastSpace > max * 0.5 ? cut.slice(0, lastSpace) : cut).replace(/[\s.,;:–—-]+$/, "") + "…";
+}
+
+/**
+ * og:url = canonical страницы. Обёртка для generateMetadata каждой страницы (05.10.2026):
+ * у ~1960 страниц og:url не было вовсе — openGraph страницы целиком заменяет openGraph
+ * layout (Next не сливает его по полям), а url в нём никто не ставил.
+ * Страницам без своего openGraph собираем его здесь же: иначе подстановка одного url
+ * затёрла бы унаследованные из layout title/описание/картинку.
+ */
+export function withOgUrl<T extends Metadata | null | undefined>(m: T): T {
+    if (!m) return m;
+    const c = m.alternates?.canonical as string | URL | { url: string | URL } | null | undefined;
+    const url = c && typeof c === "object" && "url" in c ? c.url : c;
+    if (!url) return m;
+    if (m.openGraph) {
+        if ((m.openGraph as any).url) return m;
+        return { ...m, openGraph: { ...m.openGraph, url } };
+    }
+    const path = new URL(String(url), siteUrl).pathname.split("/")[1];
+    const locale = ["uz", "en", "tr", "zh"].includes(path) ? path : "ru";
+    const t = m.title as any;
+    const title = typeof t === "string" ? t : t?.absolute ?? t?.default ?? site.name;
+    return {
+        ...m,
+        openGraph: {
+            type: "website",
+            url,
+            siteName: site.name,
+            locale: OG_LOCALE[locale],
+            title,
+            description: typeof m.description === "string" ? m.description : site.description,
+            images: [{ url: site.defaultOgImagePath, width: 1200, height: 630, alt: site.name }],
+        },
+    };
 }
 
 export function createMetadata(overrides?: Partial<Metadata>): Metadata {
