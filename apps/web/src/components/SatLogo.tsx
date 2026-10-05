@@ -21,7 +21,7 @@ export function SatLogo({
 }: {
   variant?: "default" | "dark";
   showSubtitle?: boolean;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "header";
   href?: string | null;
   className?: string;
 }) {
@@ -30,6 +30,9 @@ export function SatLogo({
     sm: { pill: "px-3 py-1.5 text-[10px]", dot: "h-1.5 w-1.5", gap: "gap-2", track: "tracking-[0.2em]", sub: "text-[9px] tracking-[0.16em] mt-1" },
     md: { pill: "px-4 py-2 text-[11px]", dot: "h-2 w-2", gap: "gap-2.5", track: "tracking-[0.22em]", sub: "text-[10px] tracking-[0.18em] mt-1" },
     lg: { pill: "px-5 py-2.5 text-sm", dot: "h-2.5 w-2.5", gap: "gap-3", track: "tracking-[0.22em]", sub: "text-[11px] tracking-[0.18em] mt-1.5" },
+    // Шапка: на телефоне как sm (подпись плотнее), с 640 px — как md. С md на всех ширинах
+    // строка шапки была 415 px и растягивала страницу: «гамбургер» уезжал за край экрана (05.10.2026)
+    header: { pill: "px-3 py-1.5 text-[10px] sm:px-4 sm:py-2 sm:text-[11px]", dot: "h-1.5 w-1.5 sm:h-2 sm:w-2", gap: "gap-2 sm:gap-2.5", track: "tracking-[0.2em] sm:tracking-[0.22em]", sub: "text-[9px] tracking-[0.06em] mt-1 sm:text-[10px] sm:tracking-[0.18em]" },
   }[size];
 
   const pillBg = variant === "dark"

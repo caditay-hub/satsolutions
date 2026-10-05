@@ -294,11 +294,12 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
-      {/* gap-3 на узких экранах: с gap-6 логотип + язык + «гамбургер» не влезали
-          в 375 px и страница получала горизонтальный скролл */}
-      <div className="container-page relative flex h-16 items-center gap-3 sm:gap-6">
+      {/* На телефоне рабочая ширина строки — 94vw минус 2×16 px (306 px при экране 360).
+          Логотип md + кнопка языка с подписью давали 415 px: строка растягивала страницу,
+          «гамбургер» уезжал за край. Поэтому логотип size="header", язык — одним флагом (05.10.2026) */}
+      <div className="container-page relative flex h-16 items-center gap-2 sm:gap-6">
         <div className="flex shrink-0 items-center">
-          <SatLogo size="md" />
+          <SatLogo size="header" />
         </div>
 
         <nav className="hidden min-w-0 flex-1 items-center justify-center gap-3 lg:flex xl:gap-6 2xl:gap-8" suppressHydrationWarning>
@@ -334,7 +335,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
           })}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-2 ml-auto">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 ml-auto">
           <HeaderSearch className="hidden lg:block w-28 xl:w-44 2xl:w-56" />
           <LanguageSwitcher className="hidden lg:block" />
 
@@ -349,7 +350,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
           </a>
 
           {/* Мобильный переключатель языков — в пустом месте между лого и «гамбургером» */}
-          <LanguageSwitcher className="lg:hidden" />
+          <LanguageSwitcher className="lg:hidden" compact />
 
           <button
             type="button"
