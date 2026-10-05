@@ -41,9 +41,11 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
   // Поэтому noindex+follow: Google перестаёт индексировать адреса-с-параметрами и ранжирует постоянные
   // страницы товаров (/products/<slug>) и /categories/[slug]. См. canonical выше.
   const isBarePage1 = !sp.page || sp.page === "1";
-  const hasOtherFilters = !!(sp.brand || sp.q || sp.perPage || sp.sort || sp.chars || sp.priceMin || sp.priceMax || sp.technology || sp.installationType || sp.mp);
+  const hasOtherFilters = !!(sp.brand || sp.q || sp.perPage || sp.sort || sp.chars || sp.priceMin || sp.priceMax || sp.technology || sp.installationType || sp.mp || sp.view);
   const isBare = !category && !type && isBarePage1 && !hasOtherFilters;
-  const indexable = onlyType || isBare;
+  // 05.10.2026: /products?type=X тоже noindex (canonical на /products/type/X остаётся) —
+  // индексируется сама страница типа, а не её дубль с параметром (и ?type= закрыт в robots.txt)
+  const indexable = isBare;
   const robots = indexable ? undefined : { index: false, follow: true };
   if (onlyType) {
     const locType = localizeCatName(type as string, locale);
@@ -53,7 +55,8 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
       title: typeTitle,
       description: typeDesc,
       alternates: { canonical: lp + canonical },
-      openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale), images: ["/og.png"] }
+      openGraph: { title: typeTitle, description: typeDesc, locale: ogLocale(locale), images: ["/og.png"] },
+      robots: { index: false, follow: true }
     };
   }
   // Корень каталога: раньше title был «Продукция — SAT Solutions» — 962 показа и ноль

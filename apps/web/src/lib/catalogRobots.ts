@@ -19,6 +19,14 @@ export function catalogFiltersActive(sp: SP): boolean {
     has(sp, "priceMax") ||
     has(sp, "brand") ||
     has(sp, "sort") ||
+    // 05.10.2026: те же фильтры, что закрыты в robots.txt, — иначе на типе/группе/бренде/паре
+    // они отдавали индекс (canonical на чистую страницу), а на /products — noindex
+    has(sp, "category") ||
+    has(sp, "perPage") ||
+    has(sp, "view") ||
+    has(sp, "mp") ||
+    has(sp, "technology") ||
+    has(sp, "installationType") ||
     (has(sp, "page") && sp?.page !== "1")
   );
 }
