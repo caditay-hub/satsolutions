@@ -52,8 +52,18 @@ export function trackConversion(key: ConversionKey, opts?: { value?: number; use
     value,
     currency: "USD",
   });
-  // GA4 — событие лида (пометить generate_lead как «ключевое событие» в GA4).
-  window.gtag("event", "generate_lead", {
+  // GA4. С 05.10.2026 клики по контактам — отдельные события click_phone / click_whatsapp /
+  // click_telegram; generate_lead — только настоящие заявки (форма, телефон в чате). Раньше
+  // клики тоже шли как generate_lead: за 90 дней 1 866 «заявок» в GA4 при 185 реальных.
+  // Google Ads не затронут — у него свои метки send_to выше.
+  const GA4_EVENT: Record<ConversionKey, string> = {
+    lead: "generate_lead",
+    chat: "generate_lead",
+    call: "click_phone",
+    whatsapp: "click_whatsapp",
+    telegram: "click_telegram",
+  };
+  window.gtag("event", GA4_EVENT[key], {
     send_to: GA4_ID,
     method: key, // lead / call / whatsapp / telegram / chat
     // где был клик: шапка, полоса разделов, нижняя панель, блок заказа… — замер после
