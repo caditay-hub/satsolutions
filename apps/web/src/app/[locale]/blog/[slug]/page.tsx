@@ -12,6 +12,7 @@ import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { GROUP_CANONICAL } from "@/lib/groupCanonical";
+import { withOgUrl } from "@/lib/metadata";
 
 const READ_ALSO: Record<string, string> = { ru: "Читайте также", uz: "Yana oʻqing", en: "Read also", tr: "Şunları da okuyun", zh: "延伸阅读" };
 
@@ -59,7 +60,7 @@ export async function generateStaticParams() {
   return ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const article = articleBySlug[slug];
   const body = article?.loc[locale];
@@ -317,4 +318,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
       </section>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

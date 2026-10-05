@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 // Доставка и оплата — сервисная страница (требование Google Merchant Center:
 // прозрачный процесс покупки). Инлайн-словарь по образцу /returns.
@@ -162,7 +163,7 @@ const D: Record<string, {
 
 export const revalidate = 86400;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = D[locale] ?? D.ru;
   return {
@@ -195,4 +196,9 @@ export default async function DeliveryPage({ params }: { params: Promise<{ local
       <p className="mt-10 text-sm font-semibold text-slate-500">{d.contact}</p>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

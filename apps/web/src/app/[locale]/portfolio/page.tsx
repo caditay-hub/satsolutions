@@ -7,8 +7,9 @@ import { Pagination } from "@/components/Pagination";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeCategoryName, localizePortfolioProject } from "@/lib/contentI18n";
+import { withOgUrl } from "@/lib/metadata";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "portfolio" });
   return {
@@ -145,4 +146,9 @@ export default async function PortfolioPage({
       <Pagination basePath="/portfolio" page={page} limit={limit} total={total} params={{ category }} />
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

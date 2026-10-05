@@ -15,6 +15,7 @@ import { PortfolioWorksAccordion } from "@/components/PortfolioWorksAccordion";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizePortfolioProject, localizeCategoryName } from "@/lib/contentI18n";
+import { withOgUrl } from "@/lib/metadata";
 
 const DATE_LOCALE: Record<string, string> = {
   ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN"
@@ -78,7 +79,7 @@ function ProjectContent({ text }: { text: string }) {
 export const revalidate = 600;
 export async function generateStaticParams() { return []; }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: "portfolio" });
   try {
@@ -305,4 +306,9 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
   } catch {
     notFound();
   }
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

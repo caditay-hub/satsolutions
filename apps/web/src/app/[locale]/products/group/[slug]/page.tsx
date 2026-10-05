@@ -10,6 +10,7 @@ import { getGroupSeo } from "@/lib/groupSeo";
 import { ogLocale } from "@/lib/ogLocale";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CatalogView } from "../../CatalogView";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
 
@@ -18,7 +19,7 @@ function resolveGroupIdx(slug: string): number {
   return CATALOG_GROUPS.findIndex((g) => typeSlug(g.title) === slug);
 }
 
-export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const sp = (await searchParams) ?? {};
   const t = await getTranslations({ locale });
@@ -81,4 +82,9 @@ export default async function ProductGroupPage({ params, searchParams }: { param
       } as any)}
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

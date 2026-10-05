@@ -16,6 +16,7 @@ import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { getPairSeo } from "@/lib/pairSeo";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
 import { CatalogView } from "../../../products/CatalogView";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 600;
 
@@ -31,7 +32,7 @@ async function resolvePair(brandSlug: string, slug: string): Promise<{ typeName:
   return hit ? { typeName: hit.type, count: hit.count } : null;
 }
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
   searchParams,
 }: {
@@ -120,4 +121,9 @@ export default async function BrandTypePage({
       <CategoryServiceLink typeName={pair.typeName} locale={locale} />
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

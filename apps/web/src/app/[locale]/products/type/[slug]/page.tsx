@@ -14,6 +14,7 @@ import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
 import { CatalogView } from "../../CatalogView";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
 
@@ -29,7 +30,7 @@ async function resolveTypeName(slug: string): Promise<string | null> {
   }
 }
 
-export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const sp = (await searchParams) ?? {};
   const t = await getTranslations({ locale });
@@ -109,4 +110,9 @@ export default async function ProductTypePage({ params, searchParams }: { params
       <CategoryServiceLink typeName={name} locale={locale} />
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

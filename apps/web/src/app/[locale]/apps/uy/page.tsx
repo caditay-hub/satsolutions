@@ -7,6 +7,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { CRUMBS } from "@/lib/appsContent";
 import { ogLocale } from "@/lib/ogLocale";
 import { UY } from "@/lib/appsUyContent";
+import { withOgUrl } from "@/lib/metadata";
 
 const pick = (locale: string) => UY[locale] ?? UY.ru;
 
@@ -18,7 +19,7 @@ const DOWNLOAD: Record<string, string> = {
   zh: "下载应用",
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = pick(locale);
   return {
@@ -76,4 +77,9 @@ export default async function SatUyPage({ params }: { params: Promise<{ locale: 
       />
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

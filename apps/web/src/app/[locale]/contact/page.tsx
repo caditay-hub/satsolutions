@@ -9,6 +9,7 @@ import { FeedbackForm } from "@/components/FeedbackForm";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeAddress } from "@/lib/contentI18n";
+import { withOgUrl } from "@/lib/metadata";
 
 const INFO: Record<string, { h2a: string; pa: string; h2b: string; pb: string; h2c: string; pc: string; more: string; l1: string; l2: string; l3: string }> = {
   ru: { h2a: "Как мы отвечаем на обращение", pa: "Заявку с сайта и сообщение в мессенджер берём в работу в рабочие часы — с понедельника по пятницу с 9:00 до 18:00, по субботам по договорённости. Сначала уточняем задачу и тип объекта, затем предлагаем время бесплатного выезда инженера: он замеряет объект, проверяет существующие трассы и питание и говорит, что реально нужно, а что можно не покупать. Смету присылаем в течение одного рабочего дня после выезда.", h2b: "Куда выезжаем", pb: "Работаем по Ташкенту и Ташкентской области, на объекты в других регионах Узбекистана выезжаем под проект — от жилых комплексов и складов до АЗС и производств. Обслуживание смонтированных систем ведём по договору: регламентные проверки, замена оборудования, аварийные выезды.", h2c: "Что подготовить к разговору", pc: "Быстрее всего расчёт идёт, когда есть план помещения или хотя бы площадь и число входов, понятно, есть ли на объекте интернет и готов ли ремонт, и известно, нужна ли запись с архивом или достаточно просмотра в реальном времени. Если ничего этого пока нет — не страшно: подскажем по фотографиям объекта.", more: "Пока ждёте ответа:", l1: "Посчитать стоимость", l2: "Готовые комплекты с ценой", l3: "Услуги и монтаж" },
@@ -25,7 +26,7 @@ function pick(data: any, key: string) {
 // ISR: контакты приходят из site-pages API
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
   const info = INFO[locale] ?? INFO.ru;
@@ -161,3 +162,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   }
 }
 
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
+}

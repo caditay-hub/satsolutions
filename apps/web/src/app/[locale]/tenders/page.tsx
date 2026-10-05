@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 type Dict = {
   metaTitle: string; metaDesc: string;
@@ -176,7 +177,7 @@ const D: Record<string, Dict> = {
 
 const pick = (locale: string): Dict => D[locale] ?? D.ru;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = pick(locale);
   return {
@@ -259,4 +260,9 @@ export default async function TendersPage({ params }: { params: Promise<{ locale
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

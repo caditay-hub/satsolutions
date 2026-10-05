@@ -7,10 +7,11 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { CRUMBS } from "@/lib/appsContent";
 import { ogLocale } from "@/lib/ogLocale";
 import { DAVOMAT } from "@/lib/appsDavomatContent";
+import { withOgUrl } from "@/lib/metadata";
 
 const pick = (locale: string) => DAVOMAT[locale] ?? DAVOMAT.ru;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = pick(locale);
   return {
@@ -62,4 +63,9 @@ export default async function SatDavomatPage({ params }: { params: Promise<{ loc
       <AppProductPage d={d} locale={locale} otherHref="/apps/uy" app="davomat" />
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

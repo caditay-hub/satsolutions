@@ -21,6 +21,7 @@ import { typeSlug } from "@/lib/typeSlug";
 import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { articlesForLocale, articleImg } from "@/lib/articlesData";
 import { optimizedImg } from "@/lib/imgProxy";
+import { withOgUrl } from "@/lib/metadata";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -32,7 +33,7 @@ const FeedbackForm = dynamic(
 // ISR: новинки/портфолио/бренды тянутся из API — пересобираем раз в 5 минут
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: "meta" });
   return {
@@ -830,4 +831,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

@@ -9,7 +9,7 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { CrossSellClick } from "@/components/CrossSellClick";
 import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { createMetadata, clip } from "@/lib/metadata";
+import { createMetadata, clip, withOgUrl } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
@@ -113,7 +113,7 @@ function iconFor(key: string): string {
   return "▸";
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale });
   try {
@@ -854,4 +854,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     // throw от notFound/permanentRedirect) — пробрасываем, не делаем ложный 404.
     throw e;
   }
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

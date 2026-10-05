@@ -13,6 +13,7 @@ import { CatalogView } from "../../products/CatalogView";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
 import { serviceForCategory } from "@/lib/servicesData";
+import { withOgUrl } from "@/lib/metadata";
 
 const SITE = "https://satsolutions.uz";
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
@@ -31,7 +32,7 @@ export const revalidate = 300;
 
 
 // ─── metadata ─────────────────────────────────────────────────────────────────
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
   searchParams,
 }: {
@@ -127,4 +128,9 @@ export default async function BrandCatalogPage({
       <CategoryServiceLink typeName={dominantType} locale={locale} />
     </>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

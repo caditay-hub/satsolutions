@@ -11,10 +11,11 @@ import { BackButton } from "@/components/BackButton";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { splitBrands, OTHER_BRANDS_SLUG } from "@/lib/brandGroups";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const title = tc("byBrands");
@@ -265,4 +266,9 @@ export default async function CatalogIndexPage({ params }: { params: Promise<{ l
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

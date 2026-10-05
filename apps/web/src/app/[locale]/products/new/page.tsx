@@ -7,6 +7,7 @@ import { ogLocale } from "@/lib/ogLocale";
 import { localizeProductName } from "@/lib/productI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
 import { NewArrivalCard } from "@/components/Cards";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
 
@@ -19,7 +20,7 @@ const NEW_SECTION_DAYS = 60;
 const PER_PAGE = 24;
 const MIN_ITEMS = 12;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "newPage" });
   return {
@@ -102,4 +103,9 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

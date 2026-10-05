@@ -8,10 +8,11 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { AutoPlayVideo } from "@/components/AutoPlayVideo";
+import { withOgUrl } from "@/lib/metadata";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: "meta" });
   return { title: { absolute: tm("solTitle") }, description: tm("solDesc"), alternates: hreflangAlternates("/solutions", locale), openGraph: { title: tm("solTitle"), description: tm("solDesc"), locale: ogLocale(locale), images: ["/og.png"] } };
@@ -276,4 +277,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       </section>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

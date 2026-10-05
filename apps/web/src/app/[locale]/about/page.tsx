@@ -10,11 +10,12 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeAboutContent, localizeAddress } from "@/lib/contentI18n";
+import { withOgUrl } from "@/lib/metadata";
 
 // ISR: данные (бренды, текст страницы) из API — обновляем раз в 5 минут
 export const revalidate = 300;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "about" });
   try {
@@ -641,4 +642,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       </div>
     );
   }
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

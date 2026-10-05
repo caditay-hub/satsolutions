@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 type Country = {
   slug: string;
@@ -169,7 +170,7 @@ export function generateStaticParams() {
   return Object.keys(COUNTRIES).map((country) => ({ country }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; country: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; country: string }> }): Promise<Metadata> {
   const { locale, country } = await params;
   const c = COUNTRIES[country];
   if (!c) return {};
@@ -243,4 +244,9 @@ export default async function ExportCountryPage({ params }: { params: Promise<{ 
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

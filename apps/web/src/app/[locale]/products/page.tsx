@@ -9,10 +9,11 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "./CatalogView";
+import { withOgUrl } from "@/lib/metadata";
 
 // canonical: при активном ТОЛЬКО фильтре категории указываем на индексируемую /categories/[slug]
 // (иначе главная/чипы «Уточнить» распыляли бы вес на служебный /products?category=)
-export async function generateMetadata({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
+async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale });
   const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
@@ -101,4 +102,9 @@ export default async function ProductsPage(props: { params?: Promise<{ locale: s
       {CatalogView(props as any)}
     </Suspense>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

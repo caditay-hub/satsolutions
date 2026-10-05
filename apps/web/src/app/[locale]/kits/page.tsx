@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { kitsForLocale } from "@/lib/kitsData";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 const UI: Record<string, { title: string; desc: string; sub: string; home: string; from: string; more: string }> = {
   ru: { title: "Готовые комплекты безопасности с ценой", desc: "Комплекты видеонаблюдения и СКУД под ключ для дома, магазина, офиса и склада: состав, цена «от» и монтаж за 1–2 дня.", sub: "Оборудование + монтаж + настройка телефона. Цена «от» — за типовой объект; точную смету считаем бесплатно за 1 день.", home: "Главная", from: "от", more: "Подробнее" },
@@ -20,7 +21,7 @@ const LONG: Record<string, { h2a: string; pa: string; h2b: string; pb: string; h
   zh: { h2a: "套装包含什么", pa: "套装不是一箱设备，而是一套能用的系统：摄像机或读卡器、录像机或控制器、电源、线缆与支架，以及施工班组的人工、调试和手机远程查看的设置。起价按典型场地计算：单层住宅、100 平方米以内的卖场、10–15 人的办公室，或只有一个出入口的仓库。", h2b: "如何选择套装", pb: "先看任务，而不是先数摄像机。若要在入口看清人脸，就选 4MP 以上的摄像机，并装在与头部齐平的高度，而不是吊顶下。若要夜间看清院子，就看红外距离与低照度能力。商铺要覆盖收银台与卖场，仓库要覆盖大门与装卸区，办公室要覆盖入口与走廊。第二个关键参数是录像保存天数：摄像机越多、分辨率越高，硬盘覆写越快，这要提前算好。", h2c: "哪些单独计价", pc: "起价不含与现场状况相关的工作：在已完成装修的空间开槽布管、使用升降平台高空作业、为延长保存天数增加硬盘、不间断电源，以及现场没有网络时的接入。这些我们在开工前就讲清楚，而不是结账时才提——非标准场地的报价一天内免费给出。", more: "需要按您的场地测算：", l1: "视频监控安装", l2: "门禁系统", l3: "设备目录" },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const ui = UI[locale] ?? UI.ru;
   return {
@@ -106,4 +107,9 @@ export default async function KitsPage({ params }: { params: Promise<{ locale: s
       </section>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

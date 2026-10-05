@@ -6,8 +6,9 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { PRICE } from "@/lib/calcPricing";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tm = await getTranslations({ locale, namespace: "meta" });
   return {
@@ -299,4 +300,9 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

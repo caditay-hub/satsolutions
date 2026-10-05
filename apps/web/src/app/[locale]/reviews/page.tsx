@@ -3,6 +3,7 @@ import { ReviewsSection, type Review } from "@/components/ReviewsSection";
 import { ReviewForm } from "@/components/ReviewForm";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 type ApiReview = { id: string; rating: number; authorName: string | null; text: string | null; serviceKey: string | null; createdAt: string };
 type ApiResp = { avg: number; count: number; items: ApiReview[] };
@@ -43,7 +44,7 @@ function fmtDate(iso: string, locale = "ru"): string {
   return locale === "zh" ? `${d.getFullYear()}年${m}` : `${m} ${d.getFullYear()}`;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const ui = UI[locale] ?? UI.ru;
   return {
@@ -104,4 +105,9 @@ export default async function ReviewsPage({ params }: { params: Promise<{ locale
       )}
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

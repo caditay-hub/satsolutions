@@ -7,6 +7,7 @@ import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 const UI: Record<string, { home: string; kits: string; includes: string; mount: string; faq: string; forWhom: string; ctaTitle: string; ctaBtn: string; related: string; other: string }> = {
   ru: { home: "Главная", kits: "Комплекты", includes: "Что входит в комплект", mount: "Что входит в монтаж", faq: "Частые вопросы", forWhom: "Для кого", ctaTitle: "Посчитаем точную смету под ваш объект — бесплатно", ctaBtn: "Получить смету", related: "Подробнее об услуге", other: "Другие комплекты" },
@@ -27,7 +28,7 @@ const KIT_IMG: Record<string, string> = {
 };
 const kitImg = (slug: string) => KIT_IMG[slug] ?? "/og.png";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const kit = kitBySlug(slug);
   const body = kit?.loc[locale];
@@ -187,4 +188,9 @@ export default async function KitPage({ params }: { params: Promise<{ locale: st
       </section>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

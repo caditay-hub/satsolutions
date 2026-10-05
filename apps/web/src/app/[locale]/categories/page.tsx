@@ -9,8 +9,9 @@ import { typeSlug } from "@/lib/typeSlug";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { EXTRA_TYPES, EXTRA_TYPES_TITLE } from "@/lib/extraTypes";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const title = tc("byCategories");
@@ -93,4 +94,9 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

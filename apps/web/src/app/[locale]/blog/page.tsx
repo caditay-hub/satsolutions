@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { articlesForLocale, articleImg } from "@/lib/articlesData";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 // UI-строки блога (инлайн, чтобы не раздувать 5 message-файлов; контент статей — ru/uz)
 const UI: Record<string, { title: string; h1: string; metaTitle: string; subtitle: string; read: string; empty: string; crumbHome: string }> = {
@@ -13,7 +14,7 @@ const UI: Record<string, { title: string; h1: string; metaTitle: string; subtitl
   zh: { title: "博客", h1: "视频监控、门禁与消防安全博客", metaTitle: "视频监控、门禁与消防安全博客 — SAT Solutions", subtitle: "关于视频监控、门禁和消防安全的实用文章。", read: "阅读", empty: "文章即将推出。", crumbHome: "首页" },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const ui = UI[locale] ?? UI.ru;
   return {
@@ -75,4 +76,9 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

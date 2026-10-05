@@ -7,10 +7,11 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeProductName } from "@/lib/productI18n";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { splitBrands, OTHER_BRANDS_SLUG } from "@/lib/brandGroups";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -118,4 +119,9 @@ export default async function OtherBrandsPage({ params }: { params: Promise<{ lo
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

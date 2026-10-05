@@ -6,6 +6,7 @@ import { getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { localizeProductName } from "@/lib/productI18n";
 import { localizeCharValue } from "@/lib/charValueI18n";
+import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 86400;
 
@@ -238,7 +239,7 @@ const D: Record<string, Dict> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const d = D[locale] ?? D.en;
   return {
@@ -367,4 +368,9 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
       </div>
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }

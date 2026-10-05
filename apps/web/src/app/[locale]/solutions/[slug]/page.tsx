@@ -45,6 +45,7 @@ const CALC_SERVICES = new Set(["cctv", "access", "fire", "network", "wifi", "int
 const REFERENCE_ONLY = new Set(["gates"]);
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
+import { withOgUrl } from "@/lib/metadata";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -83,7 +84,7 @@ export async function generateStaticParams() {
   return Object.keys(serviceByKey).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const svc = serviceByKey[slug];
   if (svc) {
@@ -809,4 +810,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       )}
     </div>
   );
+}
+
+// og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
+export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
+  return withOgUrl(await generateMetadataBase(props));
 }
