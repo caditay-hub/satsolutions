@@ -49,7 +49,11 @@ async function generateMetadataBase({
   const title = seo?.title || `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
   // Сниппет с наличием и CTA впереди — дожим CTR на позициях 5–8 (страницы с показами в GSC)
   const { brands } = await getBrands().catch(() => ({ brands: [] as Awaited<ReturnType<typeof getBrands>>["brands"] }));
-  const stockCount = brands.find((b) => b.slug.toLowerCase() === brand.toLowerCase())?.productCount ?? 0;
+  const brandRow = brands.find((b) => b.slug.toLowerCase() === brand.toLowerCase());
+  const stockCount = brandRow?.productCount ?? 0;
+  // Бренд без опубликованных товаров: страница остаётся (вернутся товары — вернётся в индекс),
+  // но «Найдено: 0» не индексируем (05.10.2026: Eltex, Teltonika)
+  const emptyBrand = brandRow?.productCount === 0;
   const baseDesc = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   const description = stockCount >= 5 ? `${tc("brandInStock", { count: stockCount })} ${baseDesc}` : baseDesc;
   return {
@@ -58,7 +62,7 @@ async function generateMetadataBase({
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     // Фасет-комбинации (chars/цена/сортировка/страница>1) — noindex,follow, как на type/group
-    robots: catalogRobots(sp),
+    robots: emptyBrand ? { index: false, follow: true } : catalogRobots(sp),
   };
 }
 

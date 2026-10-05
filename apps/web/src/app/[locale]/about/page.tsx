@@ -1,3 +1,4 @@
+import { hasProducts } from "@/lib/brandGroups";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
@@ -294,7 +295,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     ]);
     // Бренды-партнёры для стены логотипов (исключаем служебную «Прочее оборудование»)
     const brandWall = (brands ?? [])
-      .filter((b) => !/прочее/i.test(b.name || "") && b.logoImageUrl)
+      .filter((b) => !/прочее/i.test(b.name || "") && b.logoImageUrl && hasProducts(b))
       .map((b) => ({ id: b.id, name: b.name, logo: resolveImageUrl(b.logoImageUrl), href: (b as any).slug ? `/catalog/${(b as any).slug}` : null }));
     const img = resolveImageUrl(page.coverImageUrl);
     const rawAddress = typeof contact.data?.address === "string" ? contact.data.address : null;

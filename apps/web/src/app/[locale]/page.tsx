@@ -1,3 +1,4 @@
+import { hasProducts } from "@/lib/brandGroups";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
@@ -297,7 +298,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     }
   }
 
-  const brandList = brands.length > 0 ? brands : [];
+  const brandList = brands.filter(hasProducts);
   // Не показываем партнёров, дублирующих бренд по названию (напр. Dahua и в брендах, и в партнёрах)
   const brandNames = new Set(brandList.map((b) => (b.name || "").trim().toLowerCase()));
   const partnerList = (partners.length > 0 ? partners : [])

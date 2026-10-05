@@ -18,8 +18,18 @@ export type SplitBrands = { main: BrandDto[]; small: BrandDto[] };
 // Делит бренды на «крупные» (показываются отдельной карточкой) и «мелкие»
 // (1..SMALL_BRAND_MAX товаров — сворачиваются в «Другие бренды»).
 // Порядок внутри сохраняется как пришёл из API (по sortOrder, затем name).
+/**
+ * Бренд с товарами на сайте. Бренды без опубликованных товаров (05.10.2026: Eltex, Teltonika)
+ * вели из списков на пустую страницу «Найдено: 0» — их не показываем; страница бренда при этом
+ * отдаёт noindex,follow (catalog/[brand]). Товары вернутся — всё восстановится само.
+ * productCount не пришёл (старый API) — бренд оставляем.
+ */
+export function hasProducts(b: { productCount?: number }): boolean {
+  return b.productCount === undefined || b.productCount > 0;
+}
+
 export function splitBrands(brands: BrandDto[]): SplitBrands {
-  const published = brands.filter((b) => b.published !== false);
+  const published = brands.filter((b) => b.published !== false && hasProducts(b));
   const main: BrandDto[] = [];
   const small: BrandDto[] = [];
   for (const b of published) {

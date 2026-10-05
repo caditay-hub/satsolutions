@@ -301,7 +301,7 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
         { type: QueryTypes.SELECT, replacements: { like } },
       ),
       sequelize.query(
-        `SELECT name, slug FROM brands WHERE published AND (name ILIKE :like OR name ILIKE :likeF) ORDER BY "sortOrder" LIMIT 3`,
+        `SELECT name, slug FROM brands b WHERE published AND (name ILIKE :like OR name ILIKE :likeF) AND EXISTS (SELECT 1 FROM products p WHERE p."brandId" = b.id AND p.published) ORDER BY "sortOrder" LIMIT 3`,
         { type: QueryTypes.SELECT, replacements: { like, likeF } },
       ),
       searchCases(q, 2).catch(() => []),
