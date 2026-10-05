@@ -18,7 +18,8 @@ const HUB_ARTICLES_UI: Record<string, string> = {
   tr: "İlgili makaleler",
   zh: "相关文章",
 };
-import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
+import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, getBrandTypePairs, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
+import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { resolveImageUrl } from "@/lib/image";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { ProductCard } from "@/components/Cards";
@@ -241,6 +242,18 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   // SEO-блок бренда (лонгрид + FAQ) — только на «чистой» первой странице бренда без доп. фильтров
   const cleanScope = !chars && !priceMin && !priceMax && !q && page === 1;
   const onlyBrand = !!brandLanding && !type && cleanScope;
+  // Чипы «тип × бренд» ведут на /catalog/[brand]/[type]: показываем только пары, которые там
+  // реально есть (тот же список /brand-type-pairs). Счётчик фасета давал чипы и для пар вне
+  // списка — например «HDCVI продукты Dahua», и такая ссылка уходила 308 на страницу бренда
+  // (обход 02.10.2026). Сбой API — оставляем прежнее поведение.
+  let pairSet: Set<string> | null = null;
+  if (typeFacets && ((isTypePage && !brand && cleanScope) || onlyBrand)) {
+    try {
+      const { pairs } = await getBrandTypePairs();
+      pairSet = new Set(pairs.map((p) => `${p.brand.toLowerCase()}|${typeSlug(p.type)}`));
+    } catch { pairSet = null; }
+  }
+  const pairExists = (brandSlug: string, typeName: string) => !pairSet || pairSet.has(`${brandSlug.toLowerCase()}|${typeSlug(typeName)}`);
   const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
   // SEO-блок связки бренд×категория (страницы /catalog/[brand]/[type])
   const pairBlock = pairSeo && cleanScope ? pairSeo : null;
@@ -351,7 +364,8 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           глушила блок целиком. groupLanding задан только на странице группы. */}
       {groupLanding && cleanScope ? (
         <div className="mb-5 flex flex-wrap gap-1.5">
-          {groupLanding.types.map((n) => {
+          {/* типы, склеенные с группой (GROUP_CANONICAL), — это сама группа: ссылка вела на 308 к себе же */}
+          {groupLanding.types.filter((n) => !GROUP_CANONICAL[typeSlug(n)]).map((n) => {
             const cnt = typeFacets?.types?.find((t) => t.name === n)?.count;
             return (
               <Link key={n} href={`/products/type/${typeSlug(n)}`}
@@ -365,9 +379,9 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       ) : null}
 
       {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}
-      {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3).length ?? 0) > 0 ? (
+      {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3 && pairExists(brand, t.name)).length ?? 0) > 0 ? (
         <div className="mb-4 flex flex-wrap gap-1.5">
-          {typeFacets.types.filter((t) => t.count >= 3).slice(0, 14).map((t) => (
+          {typeFacets.types.filter((t) => t.count >= 3 && pairExists(brand, t.name)).slice(0, 14).map((t) => (
             <Link key={t.name} href={`/catalog/${brand}/${typeSlug(t.name)}`}
               className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
               {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-400">({t.count})</span>
@@ -375,9 +389,9 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           ))}
         </div>
       ) : null}
-      {isTypePage && !brand && cleanScope && typeFacets && (typeFacets.brands?.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug?.toLowerCase?.() ?? ""]).length ?? 0) > 0 ? (
+      {isTypePage && !brand && cleanScope && typeFacets && (typeFacets.brands?.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug?.toLowerCase?.() ?? ""] && pairExists(b.slug ?? "", type as string)).length ?? 0) > 0 ? (
         <div className="mb-4 flex flex-wrap gap-1.5">
-          {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()]).slice(0, 12).map((b) => (
+          {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()] && pairExists(b.slug, type as string)).slice(0, 12).map((b) => (
             <Link key={b.slug} href={`/catalog/${b.slug.toLowerCase()}/${typeSlug(type as string)}`}
               className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
               {localizeCatName(type as string, locale)} {localizeBrandName(b.slug, b.name, locale)} <span className="text-slate-400">({b.count})</span>

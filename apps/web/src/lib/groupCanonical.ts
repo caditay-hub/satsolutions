@@ -22,3 +22,12 @@ export const GROUP_CANONICAL: Record<string, string> = {
   "ip-telefoniya": "ip-telefoniya",
   "umnyy-dom": "umnyy-dom",
 };
+
+/**
+ * Адрес раздела для имени-слага типа: склеенные с группой типы ведут сразу на группу.
+ * Без этого ссылки на /products/type/<slug> давали лишний 308 (обход 02.10.2026:
+ * группа «Домофония» и /categories ссылались на тип, редиректящий обратно на группу).
+ */
+export function typeHubHref(slug: string): string {
+  return GROUP_CANONICAL[slug] ? `/products/group/${GROUP_CANONICAL[slug]}` : `/products/type/${slug}`;
+}

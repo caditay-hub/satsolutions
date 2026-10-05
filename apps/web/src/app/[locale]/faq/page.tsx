@@ -54,7 +54,7 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "Куда дальше",
     links: [
-      { href: "/services", label: "Все услуги и цены" },
+      { href: "/solutions", label: "Все услуги и цены" },
       { href: "/catalog", label: "Каталог оборудования" },
       { href: "/tenders", label: "Поставки и тендеры" },
       { href: "/portfolio", label: "Реализованные проекты" },
@@ -98,7 +98,7 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "Keyin qayerga",
     links: [
-      { href: "/services", label: "Barcha xizmatlar va narxlar" },
+      { href: "/solutions", label: "Barcha xizmatlar va narxlar" },
       { href: "/catalog", label: "Uskunalar katalogi" },
       { href: "/tenders", label: "Taʼminot va tenderlar" },
       { href: "/portfolio", label: "Amalga oshirilgan loyihalar" },
@@ -142,7 +142,7 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "Where to next",
     links: [
-      { href: "/services", label: "All services and prices" },
+      { href: "/solutions", label: "All services and prices" },
       { href: "/catalog", label: "Equipment catalog" },
       { href: "/tenders", label: "Supply and tenders" },
       { href: "/portfolio", label: "Completed projects" },
@@ -186,7 +186,7 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "Sırada ne var",
     links: [
-      { href: "/services", label: "Tüm hizmetler ve fiyatlar" },
+      { href: "/solutions", label: "Tüm hizmetler ve fiyatlar" },
       { href: "/catalog", label: "Ekipman kataloğu" },
       { href: "/tenders", label: "Tedarik ve tenderler" },
       { href: "/portfolio", label: "Tamamlanan projeler" },
@@ -230,7 +230,7 @@ const D: Record<string, Dict> = {
     ],
     linksTitle: "接下来看",
     links: [
-      { href: "/services", label: "全部服务与价格" },
+      { href: "/solutions", label: "全部服务与价格" },
       { href: "/catalog", label: "设备目录" },
       { href: "/tenders", label: "供货与投标" },
       { href: "/portfolio", label: "已完成项目" },

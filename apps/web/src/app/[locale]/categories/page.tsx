@@ -6,6 +6,7 @@ import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { GroupIcon } from "@/components/GroupIcon";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { typeHubHref } from "@/lib/groupCanonical";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { EXTRA_TYPES, EXTRA_TYPES_TITLE } from "@/lib/extraTypes";
 import { ogLocale } from "@/lib/ogLocale";
@@ -57,7 +58,7 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
               {g.types.map((t) => (
                 <li key={t.n}>
                   <Link
-                    href={`/products/type/${typeSlug(t.n)}`}
+                    href={typeHubHref(typeSlug(t.n))}
                     className="flex items-center justify-between gap-2 rounded-md px-1.5 py-1.5 text-[13.5px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
                   >
                     <span className="truncate">{localizeCatName(t.n, locale)}</span>
