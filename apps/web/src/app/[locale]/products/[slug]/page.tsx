@@ -23,6 +23,8 @@ import { getServiceSeo } from "@/lib/serviceSeo";
 import { articlesForService } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
+// Заголовок блока описания (h2): без него разделы описания (h3) шли сразу после H1 — пропуск уровня
+const DESCRIPTION_UI: Record<string, string> = { ru: "Описание", uz: "Tavsif", en: "Description", tr: "Açıklama", zh: "产品描述" };
 const ARTICLES_UI: Record<string, string> = {
   ru: "Статьи по теме",
   uz: "Mavzu boʻyicha maqolalar",
@@ -650,7 +652,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Full characteristics + description (no tabs since data is sparse) */}
             {charEntries.length > 0 && (
               <div className="mt-4 overflow-hidden rounded-xl border border-slate-200">
-                <div className="bg-slate-50 px-4 py-2 text-sm font-semibold">{t("product.characteristics")}</div>
+                <h2 className="font-body bg-slate-50 px-4 py-2 text-sm font-semibold">{t("product.characteristics")}</h2>
                 <dl className="divide-y divide-slate-100 bg-white">
                   {charEntries.map(([k, v]) => (
                     <div key={k} className="grid grid-cols-1 gap-1 px-4 py-2 sm:grid-cols-3 sm:gap-4">
@@ -662,6 +664,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               </div>
             )}
 
+            {locDescription?.trim() ? (
+              <h2 className="mt-6 text-lg font-bold tracking-tight">{DESCRIPTION_UI[locale] ?? DESCRIPTION_UI.ru}</h2>
+            ) : null}
             <RichDescription text={locDescription} />
 
             {(() => {
