@@ -803,7 +803,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       {/* Телефон: тонкая панель контактов — после раздела цен, прячется у блока заказа */}
       {!isReference && (
         <>
-          <MobileContactBar startId={barStart} callLabel={t("barCall")} quoteLabel={t("getQuote")}
+          <MobileContactBar startId={barStart} callLabel={t("barCall")} quoteLabel={t("barQuote")}
             quoteProduct={`${quoteProduct} (панель внизу)`} />
           <div className="h-16 lg:hidden" aria-hidden />
         </>

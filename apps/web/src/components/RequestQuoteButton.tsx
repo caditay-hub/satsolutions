@@ -10,11 +10,14 @@ export function RequestQuoteButton({
   label = "📋 Запросить КП",
   variant = "outline",
   fullWidth = false,
+  compact = false,
 }: {
   productName: string;
   label?: string;
   variant?: "outline" | "primary" | "white" | "brand";
   fullWidth?: boolean;
+  /** нижняя панель на телефоне: та же высота и шрифт, что у «Позвонить» и Telegram, в одну строку */
+  compact?: boolean;
 }) {
   const t = useTranslations("form");
   const [open, setOpen] = useState(false);
@@ -58,7 +61,9 @@ export function RequestQuoteButton({
         onClick={() => { setOpen(true); setSent(false); }}
         className={
           (fullWidth ? "w-full text-center " : "") +
-          (variant === "brand"
+          (compact
+            ? "rounded-xl bg-brand-600 px-2 py-2.5 text-[13px] font-extrabold whitespace-nowrap text-white hover:bg-brand-500 transition-colors"
+            : variant === "brand"
             ? "rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-brand-500 transition-colors"
             : variant === "primary"
             ? "rounded-lg px-5 py-2.5 text-sm font-bold text-white hover:opacity-90 transition-opacity"

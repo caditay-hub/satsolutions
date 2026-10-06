@@ -4647,7 +4647,8 @@
     "orderLabel": "下一步",
     "orderTitle": "准备好讨论您的项目了吗？",
     "orderText": "塔什干范围内工程师免费上门，一个工作日内发送预算和报价。",
-    "barCall": "致电"
+    "barCall": "致电",
+    "barQuote": "获取报价"
   },
   "chat": {
     "title": "在线客服",

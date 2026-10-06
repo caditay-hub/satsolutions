@@ -4647,7 +4647,8 @@
     "orderLabel": "Keyingi qadam",
     "orderTitle": "Obyektingizni muhokama qilamizmi?",
     "orderText": "Toshkent boʻylab muhandis chiqishi bepul, smeta va tijorat taklifini bir ish kuni ichida yuboramiz.",
-    "barCall": "Qoʻngʻiroq"
+    "barCall": "Qoʻngʻiroq",
+    "barQuote": "Taklif olish"
   },
   "chat": {
     "title": "Onlayn chat",

@@ -4647,7 +4647,8 @@
     "orderLabel": "Next step",
     "orderTitle": "Ready to discuss your site?",
     "orderText": "An engineer visits sites in Tashkent free of charge; we send the estimate and quote within one business day.",
-    "barCall": "Call"
+    "barCall": "Call",
+    "barQuote": "Get a quote"
   },
   "chat": {
     "title": "Online chat",

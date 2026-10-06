@@ -226,6 +226,9 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
 .fab-lift { transition: transform .25s ease; }
 @media (max-width: 1023px) {
   html[data-cbar="1"] .fab-lift { transform: translateY(-64px); }
+  /* «Назад» и «Наверх» при видимой панели прячем: они ложились на текст над ней (06.10.2026).
+     Чат остаётся — он поднимается над панелью */
+  html[data-cbar="1"] .fab-hide-bar { visibility: hidden; opacity: 0; pointer-events: none; }
 }
 @media (prefers-reduced-motion: reduce) { .fab-lift { transition: none; } }
 

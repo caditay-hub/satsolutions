@@ -4647,7 +4647,8 @@
     "orderLabel": "Sonraki adım",
     "orderTitle": "Projenizi konuşalım mı?",
     "orderText": "Taşkent’te mühendis keşfi ücretsizdir; maliyet hesabını ve teklifi bir iş günü içinde göndeririz.",
-    "barCall": "Ara"
+    "barCall": "Ara",
+    "barQuote": "Teklif al"
   },
   "chat": {
     "title": "Canlı sohbet",

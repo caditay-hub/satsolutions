@@ -43,6 +43,23 @@ export function SectionNav({
   const [cur, setCur] = useState(items[0]?.id ?? "");
   const stripRef = useRef<HTMLElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  // Телефон: при прокрутке вниз полоса уезжает под шапку, при прокрутке вверх возвращается.
+  // Закреплённые слои занимали 216 px из 844 (шапка 65 + полоса 91 + панель 60) — 06.10.2026.
+  // Прячем через top липкого блока, а не transform (см. ⚠️ выше про модальное окно).
+  const [tuck, setTuck] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1023px)");
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (!mq.matches || y < 300) { setTuck(false); last = y; return; }
+      if (y - last > 8) { setTuck(true); last = y; }
+      else if (last - y > 8) { setTuck(false); last = y; }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Переход к разделу — сами. Замер 10.09.2026 настоящим кликом мыши: адрес менялся на
   // #prices, а страница оставалась на месте (Next 15 перехватывает переход по якорю от
@@ -56,8 +73,11 @@ export function SectionNav({
     // низ полосы в прилипшем состоянии: верх липкого блока (top-16 = 64) + отступ полосы
     // внутри него (у container-page есть вертикальная подкладка) + высота самой полосы
     const bar = barRef.current;
-    const stuckBottom = 64 + (bar ? bar.offsetTop + bar.offsetHeight : 64);
-    const top = el.getBoundingClientRect().top + window.scrollY - stuckBottom - 16;
+    const target = el.getBoundingClientRect().top + window.scrollY;
+    // на телефоне при переходе вниз полоса уедет под шапку — отступаем только на шапку
+    const tucks = window.matchMedia("(max-width: 1023px)").matches && target > window.scrollY;
+    const stuckBottom = 64 + (tucks ? 0 : bar ? bar.offsetTop + bar.offsetHeight : 64);
+    const top = target - stuckBottom - 16;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     window.scrollTo({ top: Math.max(0, top), behavior: reduce ? "auto" : "smooth" });
     try { window.history.replaceState(window.history.state, "", `#${id}`); } catch { /* без адреса */ }
@@ -91,8 +111,10 @@ export function SectionNav({
 
   if (!items.length) return null;
   return (
-    <div className="pointer-events-none sticky top-16 z-30 mt-4 border-y border-slate-200 bg-white lg:mt-6 lg:border-0 lg:bg-transparent">
-      <div className="container-page">
+    <div ref={wrapRef} style={tuck ? { top: 64 - (wrapRef.current?.offsetHeight ?? 60) } : undefined}
+      className="pointer-events-none sticky top-16 z-30 mt-4 border-y border-slate-200 bg-white transition-[top] duration-200 motion-reduce:transition-none lg:mt-6 lg:border-0 lg:bg-transparent">
+      {/* на телефоне без вертикальных полей container-page (по 20 px): полоса 91 → ~51 px */}
+      <div className="container-page max-lg:!py-0">
         <div ref={barRef} className="pointer-events-auto flex items-center gap-3 py-2 lg:rounded-2xl lg:border lg:border-slate-200 lg:bg-white lg:px-2 lg:shadow-[0_6px_18px_-14px_rgba(15,23,42,0.35)]">
           <nav ref={stripRef} aria-label={ariaLabel}
             className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -176,6 +198,8 @@ export function MobileContactBar({
       className={`fixed inset-x-0 z-40 border-t border-slate-200 bg-white px-2.5 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] shadow-[0_-8px_20px_-12px_rgba(15,23,42,0.35)] transition-[bottom] duration-200 lg:hidden ${
         show ? "visible bottom-0" : "pointer-events-none invisible -bottom-40"
       }`}>
+      {/* «Получить КП» в панели — короткой подписью (barQuote): «Tijoriy taklif olish» переносился
+          на две строки, и узбекская панель была 77 px вместо 60 (06.10.2026) */}
       <div className="grid grid-cols-[1fr_1fr_1.25fr] items-stretch gap-2">
         <a href={`tel:${PHONE}`} tabIndex={show ? 0 : -1}
           className="inline-flex min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl border border-slate-300 bg-white px-2 py-2.5 text-[13px] font-extrabold text-slate-900">
@@ -185,7 +209,7 @@ export function MobileContactBar({
           className="inline-flex min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl border border-sky-200 bg-sky-50 px-2 py-2.5 text-[13px] font-extrabold text-sky-800">
           <TelegramIcon />Telegram
         </a>
-        <RequestQuoteButton label={quoteLabel} variant="brand" fullWidth productName={quoteProduct} />
+        <RequestQuoteButton label={quoteLabel} variant="brand" fullWidth compact productName={quoteProduct} />
       </div>
     </div>
   );
