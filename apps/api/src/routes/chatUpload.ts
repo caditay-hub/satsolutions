@@ -173,13 +173,15 @@ chatUploadRouter.post(
           await run("ffmpeg", ["-y", "-v", "error", "-i", tmp, "-vn", "-ac", "1", "-c:a", "libopus", "-b:a", "32k", "-application", "voip", ogg], 120_000);
         }
         const st = await fs.stat(m4a);
+        // запись из Chrome (webm) приходит без длительности в заголовке — берём её у готового m4a
+        const outInfo = await probe(m4a);
         const att: ChatAttachment = {
           url: `${base}/uploads/chat/${id}.m4a`,
           kind: kind as "voice" | "audio",
           name: kind === "voice" ? "voice.m4a" : origName,
           size: st.size,
           mime: "audio/mp4",
-          duration: info.duration
+          duration: outInfo.duration ?? info.duration
         };
         return res.status(201).json({ attachment: att });
       }
@@ -193,7 +195,8 @@ chatUploadRouter.post(
         : ["-y", "-v", "error", "-i", tmp, "-c:v", "libx264", "-preset", "veryfast", "-crf", "28", "-vf", "scale=min(1280\\,iw):-2", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", mp4];
       await run("ffmpeg", args, 240_000);
       const st = await fs.stat(mp4);
-      const att: ChatAttachment = { url: `${base}/uploads/chat/${id}.mp4`, kind: "video", name: origName, size: st.size, mime: "video/mp4", duration: info.duration };
+      const outInfo = await probe(mp4);
+      const att: ChatAttachment = { url: `${base}/uploads/chat/${id}.mp4`, kind: "video", name: origName, size: st.size, mime: "video/mp4", duration: outInfo.duration ?? info.duration };
       return res.status(201).json({ attachment: att });
     } catch (e: any) {
       console.error("[chat/upload-file]", kind, e?.message || e);
