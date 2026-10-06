@@ -15,6 +15,7 @@ import type { Socket } from "socket.io-client";
 
 const PHONE_OPTIONAL: Record<string, string> = { ru: "необязательно", uz: "ixtiyoriy", en: "optional", tr: "isteğe bağlı", zh: "可选" };
 import { trackConversion } from "@/lib/gtag";
+import { AttachmentView, parseAttachment, useVoiceRecorder, type ChatAttachment } from "@/components/ChatAttachments";
 
 type Msg = {
   id: string;
@@ -22,10 +23,14 @@ type Msg = {
   sender: "USER" | "ADMIN";
   text: string;
   imageUrl?: string | null;
+  attachment?: ChatAttachment | null;
   createdAt: string | Date;
 };
 
 const MAX_IMAGE_BYTES = 10 * 1024 * 1024; // тот же предел, что на сервере (routes/chatUpload.ts)
+const MAX_FILE_BYTES = 20 * 1024 * 1024;  // голосовые, видео и файлы — /chat/upload-file
+// что можно приложить скрепкой: фото, документы, видео (сервер проверяет то же самое)
+const ATTACH_ACCEPT = "image/*,video/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.odt,.ods,.rtf,.txt,.csv,.zip,.rar,.7z,.dwg,.dxf";
 
 function apiBaseUrl() {
   return process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:4000";
@@ -153,6 +158,9 @@ export function ChatWidget() {
   const [formPhoneRest, setFormPhoneRest] = useState("");
   const [uploading, setUploading] = useState(false);
   const fileRef = useRef<HTMLInputElement | null>(null);
+  // голосовое: запись в браузере, до 2 минут
+  const rec = useVoiceRecorder(120);
+  useEffect(() => { if (rec.denied) setError(tw("micDenied")); }, [rec.denied]); // eslint-disable-line react-hooks/exhaustive-deps
   const profileRef = useRef<Profile | null>(null);
   profileRef.current = profile;
 
@@ -346,6 +354,7 @@ export function ChatWidget() {
                 sender: m.sender === "ADMIN" ? "ADMIN" : "USER",
                 text: String(m.text ?? ""),
                 imageUrl: typeof m.imageUrl === "string" ? m.imageUrl : null,
+                attachment: parseAttachment(m.attachment),
                 createdAt: m.createdAt ?? new Date().toISOString()
               }))
               .filter((m: Msg) => m.conversationId || cid)
@@ -394,6 +403,7 @@ export function ChatWidget() {
           const isAdmin = m?.sender === "ADMIN";
           const text = String(m?.text ?? "");
           const imageUrl = typeof m?.imageUrl === "string" ? m.imageUrl : null;
+          const attachment = parseAttachment(m?.attachment);
 
           setMessages((prev) => {
             if (prev.some((x) => x.id === String(m?.id))) return prev;
@@ -405,6 +415,7 @@ export function ChatWidget() {
                 sender: isAdmin ? "ADMIN" : "USER",
                 text,
                 imageUrl,
+                attachment,
                 createdAt: m?.createdAt ?? new Date().toISOString()
               }
             ];
@@ -483,7 +494,7 @@ export function ChatWidget() {
     }
   }, [unreadCount, open]);
 
-  function emitSend(fields: { text: string; imageUrl?: string }) {
+  function emitSend(fields: { text: string; imageUrl?: string; attachment?: ChatAttachment }) {
     const socket = socketRef.current;
     if (!socket) return;
     const p = profileRef.current;
@@ -534,6 +545,47 @@ export function ChatWidget() {
       setUploading(false);
       if (fileRef.current) fileRef.current.value = "";
     }
+  }
+
+  // Файл, видео или голосовое: сервер принимает, голос и видео перекодирует, возвращает
+  // вложение — его и отправляем сообщением. Набранный текст становится подписью.
+  async function uploadAttachment(blob: Blob, filename: string, kind: "voice" | "video" | "file") {
+    if (!connected || !profileRef.current || uploading) return;
+    if (blob.size > MAX_FILE_BYTES) { setError(tw("errFileSize")); return; }
+    setError(null);
+    setUploading(true);
+    try {
+      const fd = new FormData();
+      fd.append("kind", kind);
+      fd.append("file", blob, filename);
+      const r = await fetch(`${apiBaseUrl()}/chat/upload-file`, { method: "POST", body: fd });
+      const j = await r.json().catch(() => null);
+      const att = parseAttachment(j?.attachment);
+      if (!r.ok || !att) {
+        setError(r.status === 413 ? tw("errFileSize") : r.status === 400 ? tw("errFileType") : tw("errUpload"));
+        return;
+      }
+      const caption = kind === "voice" ? "" : draft.trim().slice(0, 2000);
+      if (kind !== "voice") setDraft("");
+      emitSend({ text: caption, attachment: att });
+    } catch {
+      setError(tw("errUpload"));
+    } finally {
+      setUploading(false);
+      if (fileRef.current) fileRef.current.value = "";
+    }
+  }
+
+  function sendPicked(file: File) {
+    if (/^image\//.test(file.type) && !/heic|heif/i.test(file.type)) { void sendImage(file); return; }
+    void uploadAttachment(file, file.name || "file", /^video\//.test(file.type) ? "video" : "file");
+  }
+
+  async function sendVoice() {
+    const blob = await rec.stop();
+    if (!blob || blob.size < 800) return; // пустая или случайная запись
+    const ext = /mp4|aac|m4a/.test(blob.type) ? "m4a" : /ogg/.test(blob.type) ? "ogg" : "webm";
+    await uploadAttachment(blob, `voice.${ext}`, "voice");
   }
 
   function submitProfile() {
@@ -671,7 +723,10 @@ export function ChatWidget() {
                             />
                           </a>
                         ) : null}
-                        {m.text ? <div className={`whitespace-pre-wrap${m.imageUrl ? " mt-1" : ""}`}>{m.text}</div> : null}
+                        {m.attachment ? (
+                          <AttachmentView a={m.attachment} mine={mine} labels={{ play: tw("play"), pause: tw("pause"), download: tw("download"), video: tw("video") }} />
+                        ) : null}
+                        {m.text ? <div className={`whitespace-pre-wrap${m.imageUrl || m.attachment ? " mt-1" : ""}`}>{m.text}</div> : null}
                         <div className={`mt-1 text-[11px] ${mine ? "text-white/80" : "text-slate-500"}`}>{fmtTime(m.createdAt)}</div>
                       </div>
                     </div>
@@ -680,56 +735,100 @@ export function ChatWidget() {
               </div>
 
               <div className="border-t border-slate-200 bg-white p-3">
-                <div className="flex items-center gap-2">
-                  <input
-                    ref={fileRef}
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={(e) => {
-                      const f = e.target.files?.[0];
-                      if (f) void sendImage(f);
-                    }}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => fileRef.current?.click()}
-                    disabled={!connected || uploading}
-                    aria-label={tw("attach")}
-                    title={tw("attach")}
-                    className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-slate-600 hover:border-brand-600 hover:text-brand-600 disabled:cursor-not-allowed disabled:opacity-50"
-                  >
-                    {uploading ? (
-                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-brand-600" />
+                <input
+                  ref={fileRef}
+                  type="file"
+                  accept={ATTACH_ACCEPT}
+                  className="hidden"
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (f) sendPicked(f);
+                  }}
+                />
+                {rec.recording ? (
+                  // Идёт запись голосового: 🗑 отменить · таймер · ➤ отправить
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={rec.cancel}
+                      aria-label={tw("voiceCancel")}
+                      title={tw("voiceCancel")}
+                      className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-slate-600 hover:border-red-400 hover:text-red-600"
+                    >
+                      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14" /></svg>
+                    </button>
+                    <div className="flex min-w-0 flex-1 items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm" role="status">
+                      <span className="inline-block h-2.5 w-2.5 shrink-0 animate-pulse rounded-full bg-red-600 motion-reduce:animate-none" />
+                      <span className="font-bold tabular-nums text-red-700">{rec.fmt(rec.secs)}</span>
+                      <span className="truncate text-xs text-red-700/80">{tw("voice")}</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => void sendVoice()}
+                      aria-label={tw("voiceSend")}
+                      title={tw("voiceSend")}
+                      className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm hover:bg-brand-700"
+                    >
+                      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor"><path d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z" /></svg>
+                    </button>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => fileRef.current?.click()}
+                      disabled={!connected || uploading}
+                      aria-label={tw("attach")}
+                      title={`${tw("attach")}: ${tw("attachHint")}`}
+                      className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-300 text-slate-600 hover:border-brand-600 hover:text-brand-600 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {uploading ? (
+                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-300 border-t-brand-600" />
+                      ) : (
+                        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
+                      )}
+                    </button>
+                    <input
+                      name="message"
+                      autoComplete="off"
+                      aria-label={tw("placeholder")}
+                      value={draft}
+                      onChange={(e) => setDraft(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          void send();
+                        }
+                      }}
+                      className="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
+                      placeholder={tw("placeholder")}
+                    />
+                    {/* Пустое поле — микрофон (если браузер умеет записывать и доступ не запрещён), иначе «Отправить» */}
+                    {!draft.trim() && rec.supported && !rec.denied ? (
+                      <button
+                        type="button"
+                        onClick={() => void rec.start()}
+                        disabled={!connected || uploading}
+                        aria-label={tw("voiceRecord")}
+                        title={tw("voiceRecord")}
+                        className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-600 text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                      >
+                        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="9" y="3" width="6" height="11" rx="3" /><path d="M5 11a7 7 0 0 0 14 0M12 18v3" /></svg>
+                      </button>
                     ) : (
-                      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
+                      <button
+                        type="button"
+                        onClick={() => void send()}
+                        disabled={!canSend}
+                        aria-label={tw("send")}
+                        className="inline-flex h-10 items-center justify-center rounded-lg bg-brand-600 px-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
+                      >
+                        {tw("sendBtn")}
+                      </button>
                     )}
-                  </button>
-                  <input
-                    name="message"
-                    autoComplete="off"
-                    value={draft}
-                    onChange={(e) => setDraft(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        e.preventDefault();
-                        void send();
-                      }
-                    }}
-                    className="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm"
-                    placeholder={tw("placeholder")}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => void send()}
-                    disabled={!canSend}
-                    aria-label={tw("send")}
-                    className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-700 disabled:cursor-not-allowed disabled:bg-slate-300"
-                  >
-                    {tw("sendBtn")}
-                  </button>
-                </div>
-                <div className="mt-1 text-xs text-slate-500">{uploading ? tw("uploading") : tcc("chatRealtime")}</div>
+                  </div>
+                )}
+                <div className="mt-1 text-xs text-slate-500">{uploading ? tw("uploading") : rec.recording ? tw("recordingHint") : tcc("chatRealtime")}</div>
               </div>
             </>
           )}

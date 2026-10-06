@@ -5,7 +5,7 @@ import { verifyAccessToken } from "./auth.js";
 import { ChatConversation } from "./models/ChatConversation.js";
 import { ChatMessage } from "./models/ChatMessage.js";
 import { sequelize } from "./db.js";
-import { chatImageUrl } from "./routes/chatUpload.js";
+import { chatAttachment, chatImageUrl } from "./routes/chatUpload.js";
 
 function safeTrim(v: unknown, max: number) {
   const s = typeof v === "string" ? v.trim() : "";
@@ -13,9 +13,9 @@ function safeTrim(v: unknown, max: number) {
   return s.length > max ? s.slice(0, max) : s;
 }
 
-// Сообщение для виджета, админки и бота: картинка (если есть) идёт рядом с текстом.
+// Сообщение для виджета, админки и бота: картинка и вложение (голосовое, видео, файл) идут рядом с текстом.
 function msgDto(m: ChatMessage) {
-  return { id: m.id, conversationId: m.conversationId, sender: m.sender, text: m.text, imageUrl: m.imageUrl ?? null, createdAt: m.createdAt };
+  return { id: m.id, conversationId: m.conversationId, sender: m.sender, text: m.text, imageUrl: m.imageUrl ?? null, attachment: m.attachment ?? null, createdAt: m.createdAt };
 }
 
 function convRoom(id: string) {
@@ -125,7 +125,8 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const phone = safeTrim(payload?.phone, 32) || null;
       const page = safeTrim(payload?.page, 300) || null;
       const imageUrl = chatImageUrl(payload?.imageUrl);
-      if (!text && !imageUrl) return;
+      const attachment = chatAttachment(payload?.attachment);
+      if (!text && !imageUrl && !attachment) return;
 
       let conversation: InstanceType<typeof ChatConversation> | null = null;
       let isNewConversation = false;
@@ -178,7 +179,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const cid = conversation.id;
       const created = await sequelize.transaction(async (t) => {
         const msg = await ChatMessage.create(
-          { conversationId: cid, sender: "USER", text, imageUrl } as any,
+          { conversationId: cid, sender: "USER", text, imageUrl, attachment } as any,
           { transaction: t }
         );
         await conversation!.update(
@@ -226,7 +227,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           lastMessageAt: conversation.lastMessageAt,
           unreadCount: conversation.unreadCount,
           createdAt: conversation.createdAt,
-          lastMessage: { id: created.id, sender: "USER", text: created.text, imageUrl: created.imageUrl ?? null, createdAt: created.createdAt }
+          lastMessage: { id: created.id, sender: "USER", text: created.text, imageUrl: created.imageUrl ?? null, attachment: created.attachment ?? null, createdAt: created.createdAt }
         });
       } else if (wasReopened) {
         // Thread continued after being closed: tell admins it's open again, and the user widget.
@@ -282,7 +283,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
             lastMessageAt: c.lastMessageAt,
             createdAt: c.createdAt,
             lastMessage: last
-              ? { sender: last.sender, text: last.text, imageUrl: last.imageUrl ?? null, createdAt: last.createdAt, id: last.id }
+              ? { sender: last.sender, text: last.text, imageUrl: last.imageUrl ?? null, attachment: last.attachment ?? null, createdAt: last.createdAt, id: last.id }
               : null
           };
         })
@@ -311,7 +312,8 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const conversationId = safeTrim(payload?.conversationId, 60);
       const text = safeTrim(payload?.text, 2000);
       const imageUrl = chatImageUrl(payload?.imageUrl);
-      if (!conversationId || (!text && !imageUrl)) return;
+      const attachment = chatAttachment(payload?.attachment);
+      if (!conversationId || (!text && !imageUrl && !attachment)) return;
       const conversation = await ChatConversation.findByPk(conversationId);
       if (!conversation || conversation.status !== "OPEN") return;
 
@@ -321,7 +323,8 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
             conversationId,
             sender: "ADMIN",
             text,
-            imageUrl
+            imageUrl,
+            attachment
           } as any,
           { transaction: t }
         );
