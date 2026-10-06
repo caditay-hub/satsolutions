@@ -29,7 +29,8 @@ const Check = ({ on }: { on: boolean }) => (
 // иконки групп
 const IconType = () => (<svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M2.5 3.5h4v4h-4zM9.5 3.5h4v4h-4zM2.5 9.5h4v4h-4zM9.5 9.5h4v4h-4z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" /></svg>);
 const IconBrand = () => (<svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M2 3h7l5 5-6 6-5-5V3z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" /><circle cx="5.5" cy="5.5" r="1" fill="currentColor" /></svg>);
-const IconPrice = () => (<svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M5 3h3.5a2.5 2.5 0 010 5H5m0 0V3m0 5v5m0-5h5M5 10.5h4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>);
+// купюра (раньше был знак рубля — цены у нас в сумах)
+const IconPrice = () => (<svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="4" width="13" height="8" rx="1.3" stroke="currentColor" strokeWidth="1.4" /><circle cx="8" cy="8" r="1.7" stroke="currentColor" strokeWidth="1.3" /></svg>);
 const IconSpec = () => (<svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M3 5h10M3 11h10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" /><circle cx="6" cy="5" r="1.6" fill="#fff" stroke="currentColor" strokeWidth="1.4" /><circle cx="10" cy="11" r="1.6" fill="#fff" stroke="currentColor" strokeWidth="1.4" /></svg>);
 
 function Group({ title, icon, defaultOpen = true, children }: { title: string; icon: React.ReactNode; defaultOpen?: boolean; children: React.ReactNode }) {
@@ -79,7 +80,7 @@ type Show = { brands?: boolean; types?: boolean };
  * /catalog/[brand]). Оно не видно в query, поэтому передаём его явно: «Тип» показывает текущий
  * тип отмеченным, а переключение типа уводит на унифицированный /products?... со всеми фильтрами.
  */
-export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: ProductFacets; show?: Show; pathType?: string; pathBrand?: string }) {
+export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { facets: ProductFacets; show?: Show; pathType?: string; pathBrand?: string; total?: number }) {
   const sp = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -89,6 +90,17 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   const locale = useLocale();
   const showBrands = show?.brands !== false;
   const showTypes = show?.types !== false;
+  // Телефон: фильтры за кнопкой «Фильтры», открываются панелью во весь экран.
+  // Раньше вся колонка фильтров (575–1080 px) стояла над товарами: первая карточка — на 2–3 экране (05.10.2026).
+  const [sheet, setSheet] = useState(false);
+  useEffect(() => {
+    if (!sheet) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setSheet(false); };
+    window.addEventListener("keydown", onKey);
+    return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", onKey); };
+  }, [sheet]);
 
   const brands = (sp.get("brand") || "").split(",").filter(Boolean);
   const queryTypes = (sp.get("type") || "").split(",").map((s) => s.trim()).filter(Boolean);
@@ -154,8 +166,23 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
     setVMin(clampP(urlMin || bMin));
     setVMax(clampP(urlMax || bMax));
   }, [bMin, bMax, urlMin, urlMax]);
-  const step = Math.max(1, Math.round((bMax - bMin) / 100));
-  const pct = (v: number) => (bMax > bMin ? ((clampP(v) - bMin) / (bMax - bMin)) * 100 : 0);
+  // Ползунок в логарифмической шкале: цены от 390 сум до 270 млн, медиана ~690 тыс. В линейной
+  // шкале шаг был 2,7 млн, и 95 % товаров умещались в первые 5 % трека. Теперь каждый порядок
+  // (100 тыс → 1 млн → 10 млн) занимает равную долю трека. Поля ввода — точные суммы.
+  const LOG = bMin > 0 && bMax / bMin > 20;
+  const SPAN = 1000;
+  const toPos = (v: number) => {
+    if (bMax <= bMin) return 0;
+    const c = clampP(v);
+    return Math.round(SPAN * (LOG ? Math.log(c / bMin) / Math.log(bMax / bMin) : (c - bMin) / (bMax - bMin)));
+  };
+  const nice = (v: number) => { const m = Math.pow(10, Math.max(0, Math.floor(Math.log10(v)) - 1)); return Math.round(v / m) * m; };
+  const fromPos = (p: number) => {
+    if (p <= 0) return bMin;
+    if (p >= SPAN) return bMax;
+    return clampP(nice(LOG ? bMin * Math.pow(bMax / bMin, p / SPAN) : bMin + ((bMax - bMin) * p) / SPAN));
+  };
+  const pct = (v: number) => toPos(v) / (SPAN / 100);
   function commitPrice(lo = vMin, hi = vMax) {
     const clo = clampP(lo), chi = clampP(hi);
     go(build((p) => {
@@ -169,8 +196,55 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
   // «Сбросить» — по query-фильтрам (тип из ПУТИ чистого URL сбрасывается уходом со страницы, не кнопкой).
   const hasActive = brands.length > 0 || queryTypes.length > 0 || Object.keys(chars).length > 0 || !!sp.get("priceMin") || !!sp.get("priceMax");
 
+  // Сводка выбранных фильтров для телефона: метка + снятие одним нажатием.
+  const active: { key: string; label: string; remove: () => void }[] = [];
+  for (const slug of brands) {
+    const b = facets.brands.find((x) => x.slug === slug);
+    active.push({ key: `b:${slug}`, label: localizeBrandName(slug, b?.name ?? slug, locale), remove: () => toggleBrand(slug) });
+  }
+  for (const t of queryTypes) active.push({ key: `t:${t}`, label: localizeCatName(t, locale), remove: () => toggleType(t) });
+  if (urlMin || urlMax) {
+    active.push({
+      key: "price",
+      label: `${urlMin ? fmt(urlMin) : fmt(bMin)} – ${urlMax ? fmt(urlMax) : fmt(bMax)}`,
+      remove: () => go(build((p) => { p.delete("priceMin"); p.delete("priceMax"); })),
+    });
+  }
+  for (const [k, vals] of Object.entries(chars)) for (const v of vals) {
+    active.push({ key: `c:${k}:${v}`, label: `${localizeCharKey(k, locale)}: ${localizeCharValue(v, locale)}`, remove: () => toggleChar(k, v) });
+  }
+
   return (
-    <aside className="space-y-1.5 pb-24 text-sm lg:sticky lg:top-20 lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5 lg:pb-28">
+    <div className="min-w-0">
+      {/* Телефон: компактная полоса вместо колонки фильтров */}
+      <div className="lg:hidden">
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={() => setSheet(true)} aria-expanded={sheet} aria-controls="catalog-filters"
+            className="inline-flex h-10 items-center gap-2 rounded-lg border border-slate-300 bg-white px-3.5 text-sm font-bold text-slate-900 hover:bg-slate-50">
+            <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M2 4h12M4.5 8h7M6.5 12h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
+            {tc("filters")}
+            {active.length ? <span className="rounded-full bg-brand-600 px-1.5 text-[11px] leading-5 text-white">{active.length}</span> : null}
+          </button>
+          {hasActive ? (
+            <button type="button" onClick={() => go(pathname)} className="ml-auto h-10 px-2 text-[12px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
+          ) : null}
+        </div>
+        {active.length ? (
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {active.map((a) => (
+              <button key={a.key} type="button" onClick={a.remove}
+                className="inline-flex max-w-full items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-[12px] font-semibold text-brand-800">
+                <span className="truncate">{a.label}</span><span aria-hidden className="text-brand-500">✕</span>
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+
+    <aside id="catalog-filters" role={sheet ? "dialog" : undefined} aria-modal={sheet ? true : undefined} aria-label={tc("filters")}
+      className={`space-y-1.5 pb-24 text-sm lg:sticky lg:top-20 lg:block lg:self-start lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:overscroll-contain lg:pr-1.5 lg:pb-28 ${
+        sheet ? "max-lg:fixed max-lg:inset-0 max-lg:z-[60] max-lg:overflow-y-auto max-lg:overscroll-contain max-lg:bg-white max-lg:px-4 max-lg:pb-28 max-lg:pt-3" : "max-lg:hidden"
+      }`}>
       <style>{`
         .dual-range{ -webkit-appearance:none; appearance:none; background:transparent; pointer-events:none; position:absolute; left:0; right:0; width:100%; height:24px; margin:0; }
         .dual-range::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none; pointer-events:auto; height:24px; width:24px; border-radius:9999px; background:#fff; border:2px solid #328fa8; cursor:pointer; box-shadow:0 1px 2px rgba(0,0,0,.25); }
@@ -184,9 +258,15 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
           <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M4.5 8h7M6.5 12h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
           {tc("filters")}
         </span>
-        {hasActive ? (
-          <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
-        ) : null}
+        <span className="flex items-center gap-3">
+          {hasActive ? (
+            <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
+          ) : null}
+          <button type="button" onClick={() => setSheet(false)} aria-label={tc("closeFilters")}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 lg:hidden">
+            <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
+          </button>
+        </span>
       </div>
 
       {/* Поиск по всему сайту — над фильтром цен. Переход на страницу результатов /products?q= */}
@@ -218,8 +298,8 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
             <div className="relative mb-3 h-6">
               <div className="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded bg-slate-200" />
               <div className="absolute top-1/2 h-1 -translate-y-1/2 rounded bg-brand-500" style={{ left: `${pct(vMin)}%`, right: `${100 - pct(vMax)}%` }} />
-              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMin} onChange={(e) => setVMin(Math.min(Number(e.target.value), vMax))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label={tSearch("priceFrom")} />
-              <input className="dual-range" type="range" min={bMin} max={bMax} step={step} value={vMax} onChange={(e) => setVMax(Math.max(Number(e.target.value), vMin))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} aria-label={tSearch("priceTo")} />
+              <input className="dual-range" type="range" min={0} max={SPAN} step={1} value={toPos(vMin)} onChange={(e) => setVMin(Math.min(fromPos(Number(e.target.value)), vMax))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} onKeyUp={() => commitPrice()} aria-label={tSearch("priceFrom")} aria-valuetext={fmt(vMin)} />
+              <input className="dual-range" type="range" min={0} max={SPAN} step={1} value={toPos(vMax)} onChange={(e) => setVMax(Math.max(fromPos(Number(e.target.value)), vMin))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} onKeyUp={() => commitPrice()} aria-label={tSearch("priceTo")} aria-valuetext={fmt(vMax)} />
             </div>
             <div className="flex items-center gap-1.5">
               <input type="number" inputMode="numeric" aria-label={tSearch("priceFrom")} value={vMin} onChange={(e) => setVMin(Number(e.target.value) || bMin)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
@@ -286,6 +366,17 @@ export function CatalogFacets({ facets, show, pathType, pathBrand }: { facets: P
           />
         </Group>
       ))}
+
+      {/* Телефон: закрыть панель и смотреть товары. Фильтры применяются сразу по нажатию, кнопка только закрывает */}
+      {sheet ? (
+        <div className="fixed inset-x-0 bottom-0 z-[61] border-t border-slate-200 bg-white px-4 pt-2.5 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden">
+          <button type="button" onClick={() => setSheet(false)}
+            className="h-11 w-full rounded-xl bg-brand-600 text-[15px] font-bold text-white hover:bg-brand-700">
+            {tc("showResults", { count: (total ?? 0).toLocaleString("ru-RU").replace(/,/g, " ") })}
+          </button>
+        </div>
+      ) : null}
     </aside>
+    </div>
   );
 }

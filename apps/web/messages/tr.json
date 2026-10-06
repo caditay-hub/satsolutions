@@ -5288,6 +5288,8 @@
     "searchPrefix": "Sorgu için",
     "searchFound": "bulundu",
     "filters": "Filtreler",
+    "showResults": "Ürünleri göster ({count})",
+    "closeFilters": "Filtreleri kapat",
     "price": "Fiyat, UZS",
     "priceRange": "Aralık",
     "brand": "Marka",

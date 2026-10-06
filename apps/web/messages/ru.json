@@ -5288,6 +5288,8 @@
     "searchPrefix": "По запросу",
     "searchFound": "найдено",
     "filters": "Фильтры",
+    "showResults": "Показать товары ({count})",
+    "closeFilters": "Закрыть фильтры",
     "price": "Цена, сум",
     "priceRange": "Диапазон",
     "brand": "Бренд",

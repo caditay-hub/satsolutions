@@ -5288,6 +5288,8 @@
     "searchPrefix": "For query",
     "searchFound": "found",
     "filters": "Filters",
+    "showResults": "Show products ({count})",
+    "closeFilters": "Close filters",
     "price": "Price, UZS",
     "priceRange": "Range",
     "brand": "Brand",

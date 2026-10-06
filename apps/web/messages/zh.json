@@ -5288,6 +5288,8 @@
     "searchPrefix": "搜索",
     "searchFound": "找到",
     "filters": "筛选",
+    "showResults": "查看商品（{count}）",
+    "closeFilters": "关闭筛选",
     "price": "价格，苏姆",
     "priceRange": "范围",
     "brand": "品牌",

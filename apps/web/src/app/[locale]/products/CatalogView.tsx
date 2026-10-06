@@ -412,7 +412,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
       <div className="mt-3 grid gap-6 lg:grid-cols-[260px_1fr]">
         {/* smart-поиск несёт свой фильтр внутри SmartResultsView — колонку не занимаем */}
-        {smart ? null : hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} pathType={pathType} pathBrand={brandLanding ? brand : undefined} /> : <div />}
+        {smart ? null : hasFacets && typeFacets ? <CatalogFacets facets={typeFacets} show={facetShow} pathType={pathType} pathBrand={brandLanding ? brand : undefined} total={total} /> : <div />}
 
         <div className={smart ? "lg:col-span-2" : undefined}>
           {/* Заголовок: по какому запросу выдан результат (только для поиска) */}

@@ -5288,6 +5288,8 @@
     "searchPrefix": "Soʻrov boʻyicha",
     "searchFound": "topildi",
     "filters": "Filtrlar",
+    "showResults": "Mahsulotlarni koʻrsatish ({count})",
+    "closeFilters": "Filtrlarni yopish",
     "price": "Narx, soʻm",
     "priceRange": "Diapazon",
     "brand": "Brend",
