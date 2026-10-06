@@ -63,7 +63,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
     <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+      <nav className="crumbs flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
         <Link href="/" className="hover:text-brand-600">{crumbs.home}</Link>
         <span>/</span>
         <span className="text-slate-700">{crumbs.apps}</span>

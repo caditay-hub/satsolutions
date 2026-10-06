@@ -525,7 +525,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
         {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
         {/* Breadcrumbs */}
-        <nav className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
+        <nav className="crumbs flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
           <Link href="/" className="hover:text-slate-900 transition-colors">{t("nav.home")}</Link>
           <span className="text-slate-300">/</span>
           <Link href="/catalog" className="hover:text-slate-900 transition-colors">{t("nav.catalog")}</Link>
@@ -565,7 +565,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               {brandInfo && (
                 <Link
                   href={`/catalog/${brandInfo.slug}`}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-100 hover:bg-slate-200 rounded-md text-xs font-bold uppercase tracking-wide transition-colors"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 max-lg:py-2 bg-slate-100 hover:bg-slate-200 rounded-md text-xs font-bold uppercase tracking-wide transition-colors"
                 >
                   <span style={{ color: "#e02020" }}>●</span> {localizeBrandName(brandInfo.slug, brandInfo.name, locale)}
                 </Link>
@@ -826,7 +826,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 {categoryInfo ? `${t("product.similar")}: ${localizeCatName(categoryInfo.name, locale)}` : t("product.similarProducts")}
               </div>
               {categoryInfo && categoryHref && (
-                <Link href={categoryHref} className="text-xs font-bold text-[#e02020] hover:underline">
+                <Link href={categoryHref} className="tap text-xs font-bold text-[#e02020] hover:underline">
                   {t("product.wholeCategory")} →
                 </Link>
               )}

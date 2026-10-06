@@ -55,7 +55,7 @@ export default async function OtherBrandsPage({ params }: { params: Promise<{ lo
       {/* ── Page header (compact) ── */}
       <div className="border-b border-slate-200 bg-white">
         <div className="container-page !pt-2 !pb-3">
-          <nav className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
+          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
             <Link href="/" className="hover:text-slate-900 transition-colors">
               {t("home")}
             </Link>

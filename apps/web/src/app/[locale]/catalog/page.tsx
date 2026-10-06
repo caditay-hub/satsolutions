@@ -220,7 +220,7 @@ export default async function CatalogIndexPage({ params }: { params: Promise<{ l
         {/* Compact header row: back + breadcrumb */}
         <div className="flex items-center gap-3 mb-3">
           <BackButton />
-          <nav className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
             <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
             <span className="text-slate-300">/</span>
             <span className="text-slate-900">{t("catalogCrumb")}</span>

@@ -37,7 +37,7 @@ function Group({ title, icon, defaultOpen = true, children }: { title: string; i
   const [open, setOpen] = useState(defaultOpen);
   return (
     <div>
-      <button type="button" onClick={() => setOpen((o) => !o)} className="flex w-full items-center gap-2 rounded-md bg-slate-100 px-2.5 py-2 text-left hover:bg-slate-200/70">
+      <button type="button" onClick={() => setOpen((o) => !o)} className="flex w-full items-center gap-2 rounded-md bg-slate-100 px-2.5 py-2 text-left hover:bg-slate-200/70 max-lg:py-3">
         <span className="text-brand-600">{icon}</span>
         <span className="flex-1 truncate text-[13px] font-bold text-slate-800">{title}</span>
         <svg className={`h-3.5 w-3.5 shrink-0 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`} viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8l3.5-3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -60,7 +60,7 @@ function ValueList<T>({ items, render, selected }: { items: T[]; render: (item: 
     <>
       <div className="flex flex-col gap-0.5">{shown.map(render)}</div>
       {(all ? items.length > VISIBLE : hiddenCount > 0) ? (
-        <button type="button" onClick={() => setAll((a) => !a)} className="mt-1 pl-1.5 text-[12px] font-semibold text-brand-700 hover:underline">
+        <button type="button" onClick={() => setAll((a) => !a)} className="mt-1 pl-1.5 text-[12px] font-semibold text-brand-700 hover:underline max-lg:py-2.5 max-lg:pr-3">
           {all ? tc("hide") : `${tc("showMore")} ${hiddenCount}`}
         </button>
       ) : null}
@@ -233,7 +233,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
           <div className="mt-2 flex flex-wrap gap-1.5">
             {active.map((a) => (
               <button key={a.key} type="button" onClick={a.remove}
-                className="inline-flex max-w-full items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-2.5 py-1 text-[12px] font-semibold text-brand-800">
+                className="inline-flex max-w-full items-center gap-1 rounded-full border border-brand-200 bg-brand-50 px-3 py-2 text-[12px] font-semibold text-brand-800">
                 <span className="truncate">{a.label}</span><span aria-hidden className="text-brand-500">✕</span>
               </button>
             ))}
@@ -263,7 +263,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
             <button type="button" onClick={() => go(pathname)} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">{tc("reset")} ✕</button>
           ) : null}
           <button type="button" onClick={() => setSheet(false)} aria-label={tc("closeFilters")}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 lg:hidden">
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-300 bg-white text-slate-700 lg:hidden">
             <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none" aria-hidden><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
           </button>
         </span>
@@ -285,7 +285,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
             onChange={(e) => setQInput(e.target.value)}
             placeholder={tSearch("placeholder")}
             aria-label={tSearch("aria")}
-            className="h-9 w-full rounded-lg border border-slate-300 bg-white pl-9 pr-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-brand-600"
+            className="h-9 w-full rounded-lg border border-slate-300 bg-white pl-9 pr-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none focus:border-brand-600 max-lg:h-11"
           />
         </div>
       </form>
@@ -302,9 +302,9 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
               <input className="dual-range" type="range" min={0} max={SPAN} step={1} value={toPos(vMax)} onChange={(e) => setVMax(Math.max(fromPos(Number(e.target.value)), vMin))} onMouseUp={() => commitPrice()} onTouchEnd={() => commitPrice()} onKeyUp={() => commitPrice()} aria-label={tSearch("priceTo")} aria-valuetext={fmt(vMax)} />
             </div>
             <div className="flex items-center gap-1.5">
-              <input type="number" inputMode="numeric" aria-label={tSearch("priceFrom")} value={vMin} onChange={(e) => setVMin(Number(e.target.value) || bMin)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
+              <input type="number" inputMode="numeric" aria-label={tSearch("priceFrom")} value={vMin} onChange={(e) => setVMin(Number(e.target.value) || bMin)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600 max-lg:h-10" />
               <span className="text-slate-500">–</span>
-              <input type="number" inputMode="numeric" aria-label={tSearch("priceTo")} value={vMax} onChange={(e) => setVMax(Number(e.target.value) || bMax)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600" />
+              <input type="number" inputMode="numeric" aria-label={tSearch("priceTo")} value={vMax} onChange={(e) => setVMax(Number(e.target.value) || bMax)} onBlur={() => commitPrice()} className="h-8 w-full rounded-md border border-slate-300 px-2 text-[13px] outline-none focus:border-brand-600 max-lg:h-10" />
             </div>
           </div>
         </Group>
@@ -318,7 +318,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
             render={(b) => {
               const on = brands.includes(b.slug);
               return (
-                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={b.slug} type="button" onClick={() => toggleBrand(b.slug)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50 max-lg:py-2.5">
                   <Check on={on} />
                   <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{localizeBrandName(b.slug, b.name, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{b.count}</span>
@@ -337,7 +337,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
             render={(t) => {
               const on = types.includes(t.name);
               return (
-                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={t.name} type="button" onClick={() => toggleType(t.name)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50 max-lg:py-2.5">
                   <Check on={on} />
                   <span className="flex-1 break-words leading-snug text-[13px] text-slate-700 first-letter:uppercase">{localizeCatName(t.name, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
@@ -356,7 +356,7 @@ export function CatalogFacets({ facets, show, pathType, pathBrand, total }: { fa
             render={(v) => {
               const on = (chars[c.key] || []).includes(v.value);
               return (
-                <button key={v.value} type="button" onClick={() => toggleChar(c.key, v.value)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50">
+                <button key={v.value} type="button" onClick={() => toggleChar(c.key, v.value)} className="flex w-full items-start gap-2 rounded-md px-1.5 py-1 text-left hover:bg-slate-50 max-lg:py-2.5">
                   <Check on={on} />
                   <span className="flex-1 break-words leading-snug text-[13px] text-slate-700">{localizeCharValue(v.value, locale)}</span>
                   <span className="shrink-0 text-[11px] text-slate-500">{v.count}</span>

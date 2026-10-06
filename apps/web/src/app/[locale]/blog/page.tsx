@@ -33,7 +33,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
   return (
     <div className="bg-white">
       <div className="container-page py-8 sm:py-12">
-        <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+        <nav className="crumbs mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
           <Link href="/" className="hover:text-slate-900 transition-colors">{ui.crumbHome}</Link>
           <span className="text-slate-300">/</span>
           <span className="text-slate-900 normal-case tracking-normal">{ui.title}</span>

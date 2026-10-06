@@ -115,7 +115,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
-        <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+        <nav className="crumbs flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
           <Link href="/" className="hover:text-brand-600">{tn("home")}</Link>
           <span>/</span>
           <Link href="/solutions" className="hover:text-brand-600">{tn("services")}</Link>

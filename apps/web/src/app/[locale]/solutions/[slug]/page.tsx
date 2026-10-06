@@ -379,7 +379,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("casesTitle")}</h2>
         </div>
-        <Link href="/portfolio" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
+        <Link href="/portfolio" className="tap shrink-0 text-sm font-bold text-brand-600 hover:underline">
           {t("allProjects")} →
         </Link>
       </div>
@@ -426,7 +426,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               <div className="absolute inset-0 bg-[#031422]/45 lg:hidden" />
             </div>
             <div className="container-page relative py-12 sm:py-16 lg:py-20">
-              <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+              <nav className="crumbs mb-6 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
                 <Link href="/" className="transition-colors hover:text-white">{t("home")}</Link>
                 <span className="text-slate-600">/</span>
                 <Link href="/solutions" className="transition-colors hover:text-white">{t("servicesCrumb")}</Link>
@@ -461,7 +461,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           поверх фото во всю ширину (та же ячейка сетки), на компьютере — справа от фото. */}
       {!isInd && (
         <div className="container-page pt-4 sm:pt-8">
-          <nav className="mb-4 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <nav className="crumbs mb-4 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
             <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
             <span className="text-slate-300">/</span>
             <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
@@ -508,7 +508,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                     </>
                   ) : null}
                   {CALC_SERVICES.has(svc.key) ? (
-                    <Link href="/calculator" className="text-sm font-bold text-brand-700 hover:underline">{tcalc("promoBtn")} →</Link>
+                    <Link href="/calculator" className="tap text-sm font-bold text-brand-700 hover:underline">{tcalc("promoBtn")} →</Link>
                   ) : null}
                 </div>
               )}
@@ -566,7 +566,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             {content.links?.length ? (
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                 {content.links.map((l) => (
-                  <Link key={l.href} href={l.href as any} className="text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
+                  <Link key={l.href} href={l.href as any} className="tap text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
                 ))}
               </div>
             ) : null}
@@ -592,7 +592,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
             {x.links?.length ? (
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                 {x.links.map((l) => (
-                  <Link key={l.href} href={l.href as any} className="text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
+                  <Link key={l.href} href={l.href as any} className="tap text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
                 ))}
               </div>
             ) : null}

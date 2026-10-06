@@ -344,7 +344,7 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
               })}
             </div>
             <div className="mt-5">
-              <Link href={`/catalog/h3c`} className="text-sm font-semibold text-brand-700 hover:underline">{d.catalog} →</Link>
+              <Link href={`/catalog/h3c`} className="tap text-sm font-semibold text-brand-700 hover:underline">{d.catalog} →</Link>
             </div>
           </section>
         )}
@@ -352,11 +352,11 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
         <div className="mt-10 max-w-3xl">
           <div className="text-sm font-bold uppercase tracking-wider text-brand-600">{d.linksTitle}</div>
           <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold">
-            <li><Link href={`/catalog/h3c`} className="text-brand-700 hover:underline">{d.catalog} →</Link></li>
-            <li><Link href={`/portfolio/${CASE_SLUG}`} className="text-brand-700 hover:underline">{d.caseLink} →</Link></li>
-            <li><Link href={`/solutions/server`} className="text-brand-700 hover:underline">{d.svcServer} →</Link></li>
-            <li><Link href={`/solutions/virtualization`} className="text-brand-700 hover:underline">{d.svcVirt} →</Link></li>
-            <li><Link href={`/solutions/network`} className="text-brand-700 hover:underline">{d.svcNet} →</Link></li>
+            <li><Link href={`/catalog/h3c`} className="tap text-brand-700 hover:underline">{d.catalog} →</Link></li>
+            <li><Link href={`/portfolio/${CASE_SLUG}`} className="tap text-brand-700 hover:underline">{d.caseLink} →</Link></li>
+            <li><Link href={`/solutions/server`} className="tap text-brand-700 hover:underline">{d.svcServer} →</Link></li>
+            <li><Link href={`/solutions/virtualization`} className="tap text-brand-700 hover:underline">{d.svcVirt} →</Link></li>
+            <li><Link href={`/solutions/network`} className="tap text-brand-700 hover:underline">{d.svcNet} →</Link></li>
           </ul>
         </div>
 

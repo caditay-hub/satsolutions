@@ -90,8 +90,8 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
       </section>
 
       <div className="mt-10 flex flex-wrap gap-4 border-t border-slate-200 pt-6 text-sm">
-        <Link href="/catalog" className="font-semibold text-brand-700 hover:underline">{tc("byBrands")} →</Link>
-        <Link href="/products" className="font-semibold text-slate-600 hover:text-brand-700">{tc("allProducts")} →</Link>
+        <Link href="/catalog" className="tap font-semibold text-brand-700 hover:underline">{tc("byBrands")} →</Link>
+        <Link href="/products" className="tap font-semibold text-slate-600 hover:text-brand-700">{tc("allProducts")} →</Link>
       </div>
     </div>
   );

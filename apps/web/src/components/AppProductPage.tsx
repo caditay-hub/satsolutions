@@ -41,7 +41,7 @@ export function AppProductPage({
   const name = d.h1.split(" — ")[0];
   return (
     <div className="max-w-6xl mx-auto px-4 py-10 sm:py-14">
-      <nav className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
+      <nav className="crumbs flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
         <Link href="/" className="hover:text-brand-600">{c.home}</Link>
         <span>/</span>
         <Link href="/apps" className="hover:text-brand-600">{c.apps}</Link>

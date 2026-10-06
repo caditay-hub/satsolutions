@@ -141,9 +141,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </section>
             <p className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-200 pt-6 text-sm">
               <span className="font-bold text-slate-900">{info.more}</span>
-              <Link href="/calculator" className="font-bold text-brand-700 hover:underline">{info.l1} →</Link>
-              <Link href="/kits" className="font-bold text-brand-700 hover:underline">{info.l2} →</Link>
-              <Link href="/solutions" className="font-bold text-brand-700 hover:underline">{info.l3} →</Link>
+              <Link href="/calculator" className="tap font-bold text-brand-700 hover:underline">{info.l1} →</Link>
+              <Link href="/kits" className="tap font-bold text-brand-700 hover:underline">{info.l2} →</Link>
+              <Link href="/solutions" className="tap font-bold text-brand-700 hover:underline">{info.l3} →</Link>
             </p>
           </div>
         </div>

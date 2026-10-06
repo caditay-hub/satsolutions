@@ -94,7 +94,7 @@ export default async function KitPage({ params }: { params: Promise<{ locale: st
 
       <header className="bg-slate-900">
         <div className="container-page py-10 sm:py-16">
-          <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
+          <nav className="crumbs mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
             <Link href="/" className="hover:text-white transition-colors">{ui.home}</Link>
             <span className="text-slate-400/60">/</span>
             <Link href="/kits" className="hover:text-white transition-colors">{ui.kits}</Link>

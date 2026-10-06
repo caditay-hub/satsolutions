@@ -370,7 +370,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
             <button
               type="button"
               className="absolute inset-0 bg-black/40"
-              aria-label="Закрыть меню"
+              aria-label={MENU_LABEL[locale]?.close ?? "Close menu"}
               onClick={() => setOpen(false)}
             />
             <div className="absolute right-0 top-0 h-[100dvh] w-[86%] max-w-sm overflow-y-auto bg-white shadow-2xl">
@@ -379,8 +379,8 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-300 bg-white hover:bg-slate-50"
-                  aria-label="Закрыть"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-300 bg-white hover:bg-slate-50"
+                  aria-label={MENU_LABEL[locale]?.close ?? "Close menu"}
                 >
                   <MenuIcon open />
                 </button>

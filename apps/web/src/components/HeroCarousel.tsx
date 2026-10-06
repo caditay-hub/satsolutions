@@ -277,7 +277,13 @@ export function HeroCarousel({
             {/* Dot indicators — bottom, centered */}
             <div className="absolute bottom-5 sm:bottom-7 inset-x-0 z-20">
               <div className="mx-auto max-w-[1480px] px-6 sm:px-10 md:px-14 lg:px-20 flex items-center justify-center gap-3">
-                <div className="flex items-center gap-2">
+                {/* Телефон: 18 полосок = 516 px не влезали в экран (крайние за краем), зона нажатия
+                    20×16 px. Вместо них — стрелки 40×40 и счётчик (06.10.2026) */}
+                <button type="button" aria-label={prevLabel} onClick={() => setIdx((v) => (v - 1 + count) % count)}
+                  className="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-inset ring-white/25">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                </button>
+                <div className="hidden sm:flex items-center gap-2">
                   {items.map((s, i) => {
                     const activeDot = i === idx;
                     return (
@@ -295,11 +301,15 @@ export function HeroCarousel({
                     );
                   })}
                 </div>
-                <span className="text-xs font-bold tabular-nums text-white/70 ml-2">
+                <span className="text-xs font-bold tabular-nums text-white/70 sm:ml-2">
                   {String(idx + 1).padStart(2, "0")}
                   <span className="mx-1 text-white/30">/</span>
                   <span className="text-white/40">{String(count).padStart(2, "0")}</span>
                 </span>
+                <button type="button" aria-label={nextLabel} onClick={() => setIdx((v) => (v + 1) % count)}
+                  className="sm:hidden inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-inset ring-white/25">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                </button>
               </div>
             </div>
           </>

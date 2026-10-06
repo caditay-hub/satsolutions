@@ -157,7 +157,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-900/40" />
         <div className="container-page relative py-10 sm:py-16">
           <div className="mx-auto max-w-3xl">
-          <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
+          <nav className="crumbs mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
             <Link href="/" className="hover:text-white transition-colors">{ui.home}</Link>
             <span className="text-slate-400/60">/</span>
             <Link href="/blog" className="hover:text-white transition-colors">{ui.blog}</Link>

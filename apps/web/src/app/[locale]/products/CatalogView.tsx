@@ -303,7 +303,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
       {/* Хлебные крошки: страница типа (Главная › Каталог › Группа › Тип) или бренда */}
       {isTypePage ? (
-        <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
+        <nav className="crumbs mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
           <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
           <span>›</span>
           <Link href="/categories" className="hover:text-brand-700">{tnav("catalog")}</Link>
@@ -312,7 +312,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           <span className="font-semibold text-slate-600">{localizeCatName(type as string, locale)}</span>
         </nav>
       ) : groupLanding ? (
-        <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
+        <nav className="crumbs mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
           <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
           <span>›</span>
           <Link href="/categories" className="hover:text-brand-700">{tnav("catalog")}</Link>
@@ -320,7 +320,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           <span className="font-semibold text-slate-600">{groupLanding.name}</span>
         </nav>
       ) : brandLanding ? (
-        <nav className="mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
+        <nav className="crumbs mb-2 flex flex-wrap items-center gap-1.5 text-[12px] text-slate-500">
           <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
           <span>›</span>
           <Link href="/catalog" className="hover:text-brand-700">{tnav("catalog")}</Link>
@@ -365,14 +365,15 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       {/* Условие без !type: роут группы всегда передаёт type списком своих типов
           (см. products/group/[slug]/page.tsx), поэтому проверка на пустой type
           глушила блок целиком. groupLanding задан только на странице группы. */}
+      {/* Телефон: подборки — одной прокручиваемой строкой, чипы 37 px (было 7 строк по 29 px над товарами, 06.10.2026) */}
       {groupLanding && cleanScope ? (
-        <div className="mb-5 flex flex-wrap gap-1.5">
+        <div className="mb-5 flex flex-wrap gap-1.5 max-lg:-mx-4 max-lg:flex-nowrap max-lg:overflow-x-auto max-lg:px-4 max-lg:pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {/* типы, склеенные с группой (GROUP_CANONICAL), — это сама группа: ссылка вела на 308 к себе же */}
           {groupLanding.types.filter((n) => !GROUP_CANONICAL[typeSlug(n)]).map((n) => {
             const cnt = typeFacets?.types?.find((t) => t.name === n)?.count;
             return (
               <Link key={n} href={`/products/type/${typeSlug(n)}`}
-                className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+                className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
                 {localizeCatName(n, locale)}
                 {cnt ? <span className="ml-1.5 font-normal text-slate-400">{cnt}</span> : null}
               </Link>
@@ -383,20 +384,20 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
       {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}
       {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3 && pairExists(brand, t.name)).length ?? 0) > 0 ? (
-        <div className="mb-4 flex flex-wrap gap-1.5">
+        <div className="mb-4 flex flex-wrap gap-1.5 max-lg:-mx-4 max-lg:flex-nowrap max-lg:overflow-x-auto max-lg:px-4 max-lg:pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {typeFacets.types.filter((t) => t.count >= 3 && pairExists(brand, t.name)).slice(0, 14).map((t) => (
             <Link key={t.name} href={`/catalog/${brand}/${typeSlug(t.name)}`}
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+              className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
               {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-400">({t.count})</span>
             </Link>
           ))}
         </div>
       ) : null}
       {isTypePage && !brand && cleanScope && typeFacets && (typeFacets.brands?.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug?.toLowerCase?.() ?? ""] && pairExists(b.slug ?? "", type as string)).length ?? 0) > 0 ? (
-        <div className="mb-4 flex flex-wrap gap-1.5">
+        <div className="mb-4 flex flex-wrap gap-1.5 max-lg:-mx-4 max-lg:flex-nowrap max-lg:overflow-x-auto max-lg:px-4 max-lg:pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()] && pairExists(b.slug, type as string)).slice(0, 12).map((b) => (
             <Link key={b.slug} href={`/catalog/${b.slug.toLowerCase()}/${typeSlug(type as string)}`}
-              className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors">
+              className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
               {localizeCatName(type as string, locale)} {localizeBrandName(b.slug, b.name, locale)} <span className="text-slate-400">({b.count})</span>
             </Link>
           ))}

@@ -56,7 +56,7 @@ export default async function KitsPage({ params }: { params: Promise<{ locale: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listLd) }} />
       <header className="bg-slate-900">
         <div className="container-page py-10 sm:py-16">
-          <nav className="mb-5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
+          <nav className="crumbs mb-5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-300/80">
             <Link href="/" className="hover:text-white transition-colors">{ui.home}</Link>
           </nav>
           <h1 className="max-w-3xl text-2xl sm:text-4xl font-black tracking-tight text-white">{ui.title}</h1>
@@ -99,9 +99,9 @@ export default async function KitsPage({ params }: { params: Promise<{ locale: s
           </section>
           <p className="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-slate-200 pt-6 text-sm">
             <span className="font-bold text-slate-900">{lg.more}</span>
-            <Link href="/solutions/cctv" className="font-bold text-brand-700 hover:underline">{lg.l1} →</Link>
-            <Link href="/solutions/access" className="font-bold text-brand-700 hover:underline">{lg.l2} →</Link>
-            <Link href="/products" className="font-bold text-brand-700 hover:underline">{lg.l3} →</Link>
+            <Link href="/solutions/cctv" className="tap font-bold text-brand-700 hover:underline">{lg.l1} →</Link>
+            <Link href="/solutions/access" className="tap font-bold text-brand-700 hover:underline">{lg.l2} →</Link>
+            <Link href="/products" className="tap font-bold text-brand-700 hover:underline">{lg.l3} →</Link>
           </p>
         </div>
       </section>

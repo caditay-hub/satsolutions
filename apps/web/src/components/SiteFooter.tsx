@@ -104,7 +104,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
           <div>
             <div className="text-sm font-bold text-slate-950">{colCatalogLabel}</div>
-            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+            <ul className="tap-list mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/" className="hover:text-brand-700">{tn("home")}</Link></li>
               <li><Link href="/catalog" className="hover:text-brand-700">{tn("catalog")}</Link></li>
               <li><Link href="/solutions" className="hover:text-brand-700">{tn("services")}</Link></li>
@@ -113,7 +113,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
             </ul>
 
             <div className="mt-6 text-sm font-bold text-slate-950">{appsLabel}</div>
-            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+            <ul className="tap-list mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/apps" className="hover:text-brand-700">{appsLabel}</Link></li>
               <li><Link href="/apps/uy" className="hover:text-brand-700">{uyLabel}</Link></li>
               <li><Link href="/apps/davomat" className="hover:text-brand-700">{davomatLabel}</Link></li>
@@ -122,7 +122,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
           <div>
             <div className="text-sm font-bold text-slate-950">{colCompanyLabel}</div>
-            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+            <ul className="tap-list mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/about" className="hover:text-brand-700">{tn("about")}</Link></li>
               <li><Link href="/blog" className="hover:text-brand-700">{blogLabel}</Link></li>
               <li><Link href="/portfolio" className="hover:text-brand-700">{tn("portfolio")}</Link></li>
@@ -137,7 +137,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
 
           <div>
             <div className="text-sm font-bold text-slate-950">{colBuyersLabel}</div>
-            <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
+            <ul className="tap-list mt-3 flex flex-col gap-2.5 text-sm font-semibold text-slate-800">
               <li><Link href="/delivery" className="hover:text-brand-700">{t("delivery")}</Link></li>
               <li><Link href="/faq" className="hover:text-brand-700">{t("faq")}</Link></li>
               <li><Link href="/returns" className="hover:text-brand-700">{t("returns")}</Link></li>
@@ -155,13 +155,13 @@ export async function SiteFooter({ locale }: { locale: string }) {
                 {phone ? (
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("phone")}</div>
-                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="mt-1 block font-bold text-slate-950 hover:text-brand-700">{formatPhone(phone)}</a>
+                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="tap mt-1 block font-bold text-slate-950 hover:text-brand-700">{formatPhone(phone)}</a>
                   </div>
                 ) : null}
                 {email ? (
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">Email</div>
-                    <a href={`mailto:${email}`} className="mt-1 block text-slate-950 hover:text-brand-700">{email}</a>
+                    <a href={`mailto:${email}`} className="tap mt-1 block text-slate-950 hover:text-brand-700">{email}</a>
                   </div>
                 ) : null}
                 {address ? (
@@ -174,7 +174,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
                   <div>
                     <div className="text-xs font-black uppercase tracking-wide text-brand-700">{t("geo")}</div>
                     <div className="mt-1">
-                      <a href={geoHref} target="_blank" rel="noopener noreferrer" className="font-bold text-brand-700 hover:underline">
+                      <a href={geoHref} target="_blank" rel="noopener noreferrer" className="tap font-bold text-brand-700 hover:underline">
                         {tc("more")} →
                       </a>
                     </div>

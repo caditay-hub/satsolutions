@@ -436,7 +436,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </nav>
 
         <div className="mt-6 sm:hidden text-center">
-          <Link href="/categories" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("wholeCatalog")} →</Link>
+          <Link href="/categories" className="tap inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("wholeCatalog")} →</Link>
         </div>
       </section>
 
@@ -521,7 +521,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
 
             <div className="mt-4 sm:hidden text-center">
-              <Link href="/solutions" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allServices")} →</Link>
+              <Link href="/solutions" className="tap inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allServices")} →</Link>
             </div>
 
             {/* Калькулятор — единственная точка входа на главной. Значок рисуем
@@ -658,7 +658,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
 
           <div className="mt-5 sm:hidden text-center">
-            <Link href="/portfolio" className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allProjects")} →</Link>
+            <Link href="/portfolio" className="tap inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allProjects")} →</Link>
           </div>
         </section>
       )}
@@ -733,7 +733,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{articlesUi.label}</p>
                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">{articlesUi.title}</h2>
               </div>
-              <Link href="/blog" className="shrink-0 text-sm font-bold text-brand-600 hover:underline">
+              <Link href="/blog" className="tap shrink-0 text-sm font-bold text-brand-600 hover:underline">
                 {articlesUi.all} →
               </Link>
             </div>

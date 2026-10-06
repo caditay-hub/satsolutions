@@ -232,6 +232,14 @@ html[lang="zh"] .font-black { font-weight: 500 !important; }
 }
 @media (prefers-reduced-motion: reduce) { .fab-lift { transition: none; } }
 
+/* Тач-зоны на телефоне (06.10.2026): ссылки-строки («Все проекты →»), хлебные крошки и ссылки
+   подвала были высотой 16–20 px. Отступ сверху/снизу с таким же отрицательным полем: зона
+   нажатия ~34–36 px, а вид и раскладка не меняются. */
+@media (max-width: 1023px) {
+  .tap, .crumbs a, .tap-list a { padding-block: 8px; margin-block: -8px; }
+  .crumbs a, .tap-list a { display: inline-block; }
+}
+
 /* ===== Появление блоков-иллюстраций при прокрутке (InView.tsx) =====
    Класс rv-armed ставит клиент и только блокам, которые сейчас за экраном:
    без JavaScript и при prefers-reduced-motion содержимое видно сразу,
