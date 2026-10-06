@@ -349,7 +349,7 @@ export function CostCalculator() {
       <div className="space-y-4">
         <section className="rounded-2xl border border-slate-200 bg-white p-5">
           <h2 className="text-base font-black text-slate-900">
-            <span className="mr-2 text-sm font-bold text-brand-600">01</span>{t("step1")}
+            <span className="mr-2 text-sm font-bold text-brand-700">01</span>{t("step1")}
           </h2>
           <p className="mt-1 text-sm text-slate-500">{t("step1sub")}</p>
 
@@ -371,7 +371,7 @@ export function CostCalculator() {
                   </span>
                   <span className="min-w-0">
                     <span className="block truncate text-sm font-bold" style={{ color: active ? c : "#334155" }}>{t(`obj.${k}`)}</span>
-                    <span className="block text-[11px] font-medium text-slate-400">{OBJECTS[k].area} м²</span>
+                    <span className="block text-[11px] font-medium text-slate-500">{OBJECTS[k].area} м²</span>
                   </span>
                 </button>
               );
@@ -381,7 +381,7 @@ export function CostCalculator() {
           <label className="mt-5 block">
             <span className="flex items-baseline justify-between text-sm font-semibold text-slate-700">
               {t("area")}
-              <span className="text-lg font-black tabular-nums text-slate-900">{st.area} <span className="text-xs font-semibold text-slate-400">м²</span></span>
+              <span className="text-lg font-black tabular-nums text-slate-900">{st.area} <span className="text-xs font-semibold text-slate-500">м²</span></span>
             </span>
             <input type="range" min={30} max={3000} step={10} value={st.area}
               onChange={(e) => patch((s) => { s.area = Number(e.target.value); applyDefaults(s); })}
@@ -391,7 +391,7 @@ export function CostCalculator() {
 
         <section className="rounded-2xl border border-slate-200 bg-white p-5">
           <h2 className="text-base font-black text-slate-900">
-            <span className="mr-2 text-sm font-bold text-brand-600">02</span>{t("step2")}
+            <span className="mr-2 text-sm font-bold text-brand-700">02</span>{t("step2")}
           </h2>
           <p className="mt-1 text-sm text-slate-500">{t("step2sub")}</p>
 
@@ -441,7 +441,7 @@ export function CostCalculator() {
 
         <section className="rounded-2xl border border-slate-200 bg-white p-5">
           <h2 className="text-base font-black text-slate-900">
-            <span className="mr-2 text-sm font-bold text-brand-600">03</span>{t("step3")}
+            <span className="mr-2 text-sm font-bold text-brand-700">03</span>{t("step3")}
           </h2>
           <p className="mt-1 text-sm text-slate-500">{t("step3sub")}</p>
           <div className="mt-4 space-y-3">
@@ -466,7 +466,7 @@ export function CostCalculator() {
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
           <div className="flex items-baseline justify-between border-b border-slate-100 px-4 py-3">
             <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{t("plan")}</span>
-            <span className="text-[11px] font-semibold tabular-nums text-slate-400">
+            <span className="text-[11px] font-semibold tabular-nums text-slate-500">
               {r.points ? t("planMeta", { points: r.points, meters: r.cableM }) : "—"}
             </span>
           </div>
@@ -495,9 +495,9 @@ export function CostCalculator() {
                     <div key={x.key} className="flex items-baseline justify-between gap-3 text-[13px]">
                       <dt className="text-slate-600">{t(`rate.${x.key}`)}</dt>
                       <dd className="whitespace-nowrap font-semibold tabular-nums text-slate-900">
-                        <span className="mr-1 text-[11px] font-normal text-slate-400">{t("from")}</span>
+                        <span className="mr-1 text-[11px] font-normal text-slate-500">{t("from")}</span>
                         {fmt(x.price)}
-                        <span className="ml-1 text-[11px] font-normal text-slate-400">{t(`unit.${x.unit}`)}</span>
+                        <span className="ml-1 text-[11px] font-normal text-slate-500">{t(`unit.${x.unit}`)}</span>
                       </dd>
                     </div>
                   ))}
@@ -514,7 +514,7 @@ export function CostCalculator() {
                         <i className="mt-[1px] h-2 w-2 shrink-0 rounded-full"
                           style={{ backgroundColor: SYS_COLOR[l.key as SystemKey] ?? "#94a3b8" }} />
                         <span>
-                          {t(`sys.${l.key}`)} <span className="text-slate-400 tabular-nums">{l.qty} {t(`unitOf.${l.key}`)}</span>
+                          {t(`sys.${l.key}`)} <span className="text-slate-500 tabular-nums">{l.qty} {t(`unitOf.${l.key}`)}</span>
                         </span>
                       </dt>
                       <dd className="whitespace-nowrap font-semibold tabular-nums text-slate-900">{fmt(l.sum)}</dd>
@@ -526,13 +526,13 @@ export function CostCalculator() {
               <div className="mt-2 border-t border-slate-100 bg-slate-50 px-4 py-4">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{t("totalLabel")}</div>
                 <div className="mt-1 text-xl font-black tabular-nums text-slate-900 sm:text-2xl">
-                  {fmt(r.low)} – {fmt(r.high)} <span className="text-sm font-bold text-slate-400">{t("sum")}</span>
+                  {fmt(r.low)} – {fmt(r.high)} <span className="text-sm font-bold text-slate-500">{t("sum")}</span>
                 </div>
                 <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{t("note")}</p>
               </div>
             </>
           ) : (
-            <div className="px-4 py-8 text-center text-sm text-slate-400">{t("empty")}</div>
+            <div className="px-4 py-8 text-center text-sm text-slate-500">{t("empty")}</div>
           )}
         </section>
 
@@ -548,16 +548,16 @@ export function CostCalculator() {
             <form onSubmit={submit} className="space-y-2.5">
               <div className="text-sm font-bold text-slate-900">{t("ctaTitle")}</div>
               <p className="text-xs text-slate-500">{t("ctaSub")}</p>
-              <input required placeholder={tf("yourName")} value={name} onChange={(e) => setName(e.target.value)}
+              <input required name="name" autoComplete="name" aria-label={tf("yourName")} placeholder={tf("yourName")} value={name} onChange={(e) => setName(e.target.value)}
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none" />
-              <input required type="tel" placeholder={tf("phoneReq")} value={phone} onChange={(e) => setPhone(e.target.value)}
+              <input required type="tel" inputMode="tel" name="phone" autoComplete="tel" aria-label={tf("phoneReq")} placeholder={tf("phoneReq")} value={phone} onChange={(e) => setPhone(e.target.value)}
                 className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none" />
               <button type="submit" disabled={sending || !anyOn}
                 className="w-full rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-brand-500 disabled:opacity-50">
                 {sending ? tf("sendingShort") : t("ctaBtn")}
               </button>
-              {err && <p className="text-xs font-semibold text-red-600">{tf("errSend")}</p>}
-              <p className="text-center text-[11px] text-slate-400">{tf("consent")}</p>
+              {err && <p role="alert" className="text-xs font-semibold text-red-600">{tf("errFallback")}</p>}
+              <p className="text-center text-[11px] text-slate-500">{tf("consent")}</p>
             </form>
           )}
         </section>

@@ -55,7 +55,7 @@ export default async function OtherBrandsPage({ params }: { params: Promise<{ lo
       {/* ── Page header (compact) ── */}
       <div className="border-b border-slate-200 bg-white">
         <div className="container-page !pt-2 !pb-3">
-          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-2">
+          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">
             <Link href="/" className="hover:text-slate-900 transition-colors">
               {t("home")}
             </Link>
@@ -87,7 +87,7 @@ export default async function OtherBrandsPage({ params }: { params: Promise<{ lo
       {/* ── Body: секция на каждый бренд ── */}
       <div className="container-page !pt-3 !pb-10">
         {withItems.length === 0 ? (
-          <div className="py-14 text-center text-sm text-slate-400">{t("noProductsYet")}</div>
+          <div className="py-14 text-center text-sm text-slate-500">{t("noProductsYet")}</div>
         ) : (
           <div className="space-y-7">
             {withItems.map(({ brand, slug, items }) => (
@@ -99,10 +99,10 @@ export default async function OtherBrandsPage({ params }: { params: Promise<{ lo
                   >
                     {brand.name}
                   </Link>
-                  <span className="text-xs font-bold text-slate-400">{items.length}</span>
+                  <span className="text-xs font-bold text-slate-500">{items.length}</span>
                   <Link
                     href={`/catalog/${slug}`}
-                    className="ml-auto text-[11px] font-bold uppercase tracking-wider text-slate-400 hover:text-[#e02020] transition-colors"
+                    className="ml-auto text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020] transition-colors"
                   >
                     {t("wholeBrand")} →
                   </Link>

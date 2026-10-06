@@ -102,7 +102,7 @@ export function CatalogMega() {
                       onClick={() => setOpen(false)}
                       className={`flex w-full items-center gap-2 rounded-lg px-2.5 py-2 text-left text-sm transition-colors ${on ? "bg-white font-semibold text-brand-700 shadow-sm" : "text-slate-700 hover:bg-white/70"}`}
                     >
-                      <GroupIcon name={g.icon} className={`h-[18px] w-[18px] shrink-0 ${on ? "text-brand-600" : "text-slate-400"}`} />
+                      <GroupIcon name={g.icon} className={`h-[18px] w-[18px] shrink-0 ${on ? "text-brand-600" : "text-slate-500"}`} />
                       <span className="flex-1 leading-tight">{localizeCatName(g.title, locale)}</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" className="shrink-0 opacity-40"><path fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" d="m9 6 6 6-6 6" /></svg>
                     </Link>
@@ -128,7 +128,7 @@ export function CatalogMega() {
                       className="flex items-center justify-between gap-1.5 rounded-md px-2 py-1.5 text-[13px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
                     >
                       <span className="truncate">{localizeCatName(t.n, locale)}</span>
-                      <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
+                      <span className="shrink-0 text-[11px] text-slate-500">{t.c}</span>
                     </Link>
                   ))}
                 </div>

@@ -4708,6 +4708,7 @@
     "sendingShort": "Sending...",
     "sent": "Message sent. Thank you!",
     "errSend": "Sending error",
+    "errFallback": "Couldn't send. Call +998 97 862 66 99 or message us on Telegram.",
     "quoteTitle": "Request a quote",
     "srSuccess": "Your request has been sent successfully! We'll contact you shortly.",
     "srError": "An error occurred while sending the request. Please try again.",

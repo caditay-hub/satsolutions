@@ -29,7 +29,7 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 function SectionHead({ n, title }: { n: string; title: string }) {
   return (
     <div className="flex items-baseline gap-3">
-      <span className="text-sm font-black text-brand-600">{n}</span>
+      <span className="text-sm font-black text-brand-700">{n}</span>
       <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{title}</h2>
     </div>
   );
@@ -162,7 +162,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
 
             {services.length > 0 && (
               <div className={d?.faq?.length ? "mt-12" : ""}>
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
+                <p className="text-xs font-black uppercase tracking-widest text-brand-700">SAT Solutions</p>
                 <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industryServices")}</h2>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {services.map((k) => (
@@ -177,7 +177,7 @@ export async function IndustryDetailsBlock({ locale, industryKey }: { locale: st
 
             {(INDUSTRY_CASES[industryKey] ?? []).length > 0 && (
               <div className="mt-12">
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
+                <p className="text-xs font-black uppercase tracking-widest text-brand-700">SAT Solutions</p>
                 <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industryCases")}</h2>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {(INDUSTRY_CASES[industryKey] ?? []).map((c) => (
@@ -209,7 +209,7 @@ export async function ServiceIndustriesBlock({ locale, serviceKey, className = "
   const tc = await getTranslations({ locale, namespace: "common" });
   return (
     <section className={className}>
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">SAT Solutions</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">SAT Solutions</p>
       <h2 className="mt-1 text-lg font-black tracking-tight text-slate-900">{tc("industrySolutions")}</h2>
       <div className="mt-4 flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:overflow-visible sm:pb-0">
         {industries.map((k) => (

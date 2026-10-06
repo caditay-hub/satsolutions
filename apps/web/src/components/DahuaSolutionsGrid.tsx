@@ -25,7 +25,7 @@ function GridCard({ href, imageSrc, imageAlt, label }: { href: string; imageSrc:
                 <h3 className="text-sm font-bold text-slate-900 uppercase tracking-tight pr-4 group-hover:text-red-600 transition-colors">
                     {label}
                 </h3>
-                <div className="shrink-0 text-slate-400 group-hover:text-red-600 transition-colors">
+                <div className="shrink-0 text-slate-500 group-hover:text-red-600 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                     </svg>

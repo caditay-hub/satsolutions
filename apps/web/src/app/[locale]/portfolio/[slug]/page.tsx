@@ -287,7 +287,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
 
         {caseServices.length > 0 && (
           <section className="mt-10 border-t border-slate-200 pt-6">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{linkUi.services}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700">{linkUi.services}</p>
             <div className="mt-3 flex flex-wrap gap-2.5">
               {caseServices.map((s) => (
                 <Link

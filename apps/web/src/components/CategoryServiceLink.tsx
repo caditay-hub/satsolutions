@@ -32,7 +32,7 @@ export async function CategoryServiceLink({
       >
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
         <span className="flex-1">
-          <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">{t("product.turnkey")}</span>
+          <span className="block text-xs font-bold uppercase tracking-wider text-brand-700">{t("product.turnkey")}</span>
           <span className="block text-sm font-semibold text-slate-900">{anchor} — {t("product.designInstall")}</span>
         </span>
         <span className="shrink-0 font-bold text-brand-600">→</span>

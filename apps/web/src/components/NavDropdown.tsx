@@ -73,7 +73,7 @@ export function NavDropdown({
             {groups.map((g, gi) => (
               <div key={gi} className="min-w-0">
                 {g.label ? (
-                  <div className="px-2 pb-1 pt-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{g.label}</div>
+                  <div className="px-2 pb-1 pt-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{g.label}</div>
                 ) : null}
                 <div className="grid gap-0.5">
                   {g.items.map((it) => (

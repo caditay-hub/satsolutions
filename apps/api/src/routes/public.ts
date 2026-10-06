@@ -1,4 +1,5 @@
 import { Router } from "express";
+import rateLimit from "express-rate-limit";
 import { Op } from "sequelize";
 import { matchI18nProductIds } from "../lib/productI18nIndex.js";
 import { Category } from "../models/Category.js";
@@ -858,8 +859,28 @@ publicRouter.get("/site-pages/:key", async (req, res) => {
   res.json({ page });
 });
 
+// Заявки и формы сайта (06.10.2026): общий лимит API — 600 запросов в минуту, для форм это
+// не защита. Свой лимит на IP: 10 отправок за 10 минут. Настоящий клиент столько не шлёт;
+// бот и SSR ходят по localhost и под лимит не попадают. Ловушку-поле не ставили: ботового
+// спама в заявках нет (за 120 дней — 0), а автозаполнение браузера может её заполнить и
+// потерять живую заявку.
+// Отладочные логи с телефонами/именами клиентов — заглушены: в логах PM2 личным данным не место
+const quietLog = (..._args: unknown[]) => {};
+
+const formLimiter = rateLimit({
+  windowMs: 10 * 60_000,
+  limit: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many requests" },
+  skip: (req) => {
+    const ip = (req.ip || "").replace(/^::ffff:/, "");
+    return ip === "127.0.0.1" || ip === "::1";
+  }
+});
+
 // Feedback (public)
-publicRouter.post("/feedback", async (req, res) => {
+publicRouter.post("/feedback", formLimiter, async (req, res) => {
   const name = typeof req.body?.name === "string" ? req.body.name.trim() : "";
   const phone = typeof req.body?.phone === "string" ? req.body.phone.trim() : "";
   const email = typeof req.body?.email === "string" ? req.body.email.trim() : "";
@@ -884,17 +905,8 @@ publicRouter.post("/feedback", async (req, res) => {
     } as any
   );
 
-  console.log("Feedback created (raw):", created);
-  console.log("Feedback created (JSON):", JSON.stringify(created, null, 2));
-  console.log("Feedback fields:", {
-    id: created.id,
-    idType: typeof created.id,
-    name: created.name,
-    phone: created.phone,
-    message: created.message,
-    status: created.status,
-    createdAt: created.createdAt
-  });
+  // Раньше сюда целиком писались имя, телефон и текст заявки — в логах PM2 им не место
+  console.log("Feedback created:", created.id);
 
   // Emit socket event for real-time notification
   const io = req.app.get('io') || (global as any).io;
@@ -920,7 +932,6 @@ publicRouter.post("/feedback", async (req, res) => {
         createdAt: String(created.createdAt || new Date().toISOString())
       };
 
-      console.log("Feedback socket data (cleaned):", eventData);
       console.log("Emitting feedback to admin namespace...");
 
       adminNs.emit('admin:new_feedback', eventData);
@@ -948,7 +959,7 @@ publicRouter.post("/feedback", async (req, res) => {
 });
 
 // Orders (public)
-publicRouter.post("/orders", async (req, res) => {
+publicRouter.post("/orders", formLimiter, async (req, res) => {
   const phone = typeof req.body?.phone === "string" ? req.body.phone.trim() : "";
   const items = Array.isArray(req.body?.items) ? req.body.items : [];
   const custName = typeof req.body?.name === "string" ? req.body.name.trim().slice(0, 200) : "";
@@ -1068,7 +1079,7 @@ publicRouter.post("/orders", async (req, res) => {
       createdAt: String(created.createdAt || new Date().toISOString())
     };
 
-    console.log("Order socket data (cleaned):", eventData);
+    quietLog("Order socket data (cleaned):", eventData);
     console.log("Emitting order to admin namespace...");
 
     adminNs.emit('admin:new_order', eventData);
@@ -1103,7 +1114,7 @@ publicRouter.post("/orders", async (req, res) => {
 // Reviews (public): приём отзыва → на модерацию (PENDING); выдача — только APPROVED.
 // Q&A на карточке товара: вопрос инженеру. Публикуются только отвеченные
 // и одобренные (status=APPROVED + answer) — модерация в админке.
-publicRouter.post("/product-questions", async (req, res) => {
+publicRouter.post("/product-questions", formLimiter, async (req, res) => {
   const productIdRaw = typeof req.body?.productId === "string" ? req.body.productId.trim() : "";
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(productIdRaw))
     return res.status(400).json({ error: "Invalid productId" });
@@ -1145,7 +1156,7 @@ publicRouter.get("/product-questions", async (req, res) => {
   res.json({ items: rows, count: rows.length });
 });
 
-publicRouter.post("/reviews", async (req, res) => {
+publicRouter.post("/reviews", formLimiter, async (req, res) => {
   const ratingRaw = Number(req.body?.rating);
   const rating = Number.isFinite(ratingRaw) ? Math.round(ratingRaw) : 0;
   if (rating < 1 || rating > 5) return res.status(400).json({ error: "Invalid rating" });
@@ -1196,19 +1207,19 @@ publicRouter.get("/reviews", async (req, res) => {
 });
 
 // Service request endpoint
-publicRouter.post("/service-requests", async (req, res) => {
+publicRouter.post("/service-requests", formLimiter, async (req, res) => {
   try {
     console.log("=== SERVICE REQUEST START ===");
-    console.log("Received service request:", req.body);
+    quietLog("Received service request:", req.body);
     const { serviceName, phone, description } = req.body;
 
     if (!serviceName || !phone) {
-      console.log("Missing required fields:", { serviceName, phone });
+      quietLog("Missing required fields:", { serviceName, phone });
       return res.status(400).json({ error: "Service name and phone are required" });
     }
 
     console.log("Creating service request...");
-    console.log("Input data:", { serviceName, phone, description });
+    quietLog("Input data:", { serviceName, phone, description });
 
     const serviceRequest = await ServiceRequest.create({
       serviceName,
@@ -1217,9 +1228,9 @@ publicRouter.post("/service-requests", async (req, res) => {
       status: 'pending'
     });
 
-    console.log("Service request created (raw):", serviceRequest);
-    console.log("Service request created (JSON):", JSON.stringify(serviceRequest, null, 2));
-    console.log("Service request fields:", {
+    quietLog("Service request created (raw):", serviceRequest);
+    quietLog("Service request created (JSON):", JSON.stringify(serviceRequest, null, 2));
+    quietLog("Service request fields:", {
       id: serviceRequest.id,
       idType: typeof serviceRequest.id,
       serviceName: serviceRequest.serviceName,
@@ -1235,7 +1246,7 @@ publicRouter.post("/service-requests", async (req, res) => {
     // Wait a bit for the data to be properly set
     await new Promise(resolve => setTimeout(resolve, 100));
 
-    console.log("Service request after wait:", {
+    quietLog("Service request after wait:", {
       id: serviceRequest.id,
       serviceName: serviceRequest.serviceName,
       phone: serviceRequest.phone,
@@ -1264,8 +1275,8 @@ publicRouter.post("/service-requests", async (req, res) => {
           createdAt: String(serviceRequest.get('createdAt') || new Date().toISOString())
         };
 
-        console.log("Service request socket data (cleaned):", eventData);
-        console.log("Service request data validation:", {
+        quietLog("Service request socket data (cleaned):", eventData);
+        quietLog("Service request data validation:", {
           hasId: !!eventData.id,
           hasServiceName: !!eventData.serviceName,
           hasPhone: !!eventData.phone,

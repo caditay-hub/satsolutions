@@ -254,7 +254,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
           {seeAlso.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{READ_ALSO[locale] ?? READ_ALSO.ru}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-700">{READ_ALSO[locale] ?? READ_ALSO.ru}</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {seeAlso.map((a) => (
                     <Link
@@ -274,7 +274,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
           {related.length > 0 && (
             <div className="mt-10 border-t border-slate-200 pt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ui.related}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ui.related}</p>
               <div className="mt-3 flex flex-wrap gap-2.5">
                 {related.map((r) => (
                   <Link
@@ -291,7 +291,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
 
           {hubs.length > 0 && (
             <div className="mt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ui.hubsLabel}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ui.hubsLabel}</p>
               <div className="mt-3 flex flex-wrap gap-2.5">
                 {hubs.map((h) => (
                   <Link

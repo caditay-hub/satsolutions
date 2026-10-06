@@ -113,7 +113,7 @@ export default async function KitPage({ params }: { params: Promise<{ locale: st
       <article className="container-page py-8 sm:py-12">
         <div className="max-w-3xl space-y-10">
           <section>
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ui.forWhom}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ui.forWhom}</p>
             <p className="mt-2 text-sm sm:text-base leading-relaxed text-slate-600">{body.audience}</p>
           </section>
 

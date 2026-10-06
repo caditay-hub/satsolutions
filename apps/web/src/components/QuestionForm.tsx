@@ -112,18 +112,20 @@ export function QuestionForm({ locale, productId }: { locale: string; productId:
         value={question}
         onChange={(e) => { setQuestion(e.target.value); if (state === "short") setState("idle"); }}
         placeholder={ui.q}
+        name="question"
+        aria-label={ui.q}
         rows={3}
         required
         className="mt-3 w-full rounded-lg border border-slate-300 bg-white p-3 text-sm"
       />
       <div className="mt-2 grid gap-2 sm:grid-cols-2">
-        <input value={name} onChange={(e) => setName(e.target.value)} placeholder={ui.name} maxLength={120}
+        <input value={name} onChange={(e) => setName(e.target.value)} placeholder={ui.name} maxLength={120} name="name" autoComplete="name" aria-label={ui.name}
           className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm" />
-        <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={ui.phone} maxLength={32} inputMode="tel"
+        <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder={ui.phone} maxLength={32} type="tel" inputMode="tel" name="phone" autoComplete="tel" aria-label={ui.phone}
           className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm" />
       </div>
-      {state === "short" && <p className="mt-2 text-xs font-semibold text-amber-700">{ui.short}</p>}
-      {state === "error" && <p className="mt-2 text-xs font-semibold text-rose-600">{ui.err}</p>}
+      {state === "short" && <p role="alert" className="mt-2 text-xs font-semibold text-amber-700">{ui.short}</p>}
+      {state === "error" && <p role="alert" className="mt-2 text-xs font-semibold text-rose-600">{ui.err}</p>}
       <button type="submit" disabled={state === "sending"}
         className="mt-3 rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-slate-700 disabled:opacity-60">
         {state === "sending" ? ui.sending : ui.send}

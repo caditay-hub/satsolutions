@@ -75,12 +75,13 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
       setMessage("");
     } catch (e: any) {
       setStatus("error");
-      setError(e?.message ?? t("errSend"));
+      setError(t("errFallback"));
     }
   }
 
   return (
-    <div className={`rounded-2xl ${hideHeader ? "" : "border border-slate-200 bg-white p-6"}`}>
+    // <form>: раньше это был <div>, и Enter в поле ничего не отправлял (06.10.2026)
+    <form onSubmit={(e) => { e.preventDefault(); if (canSend) void submit(); }} className={`rounded-2xl ${hideHeader ? "" : "border border-slate-200 bg-white p-6"}`}>
       {!hideHeader ? (
         <>
           <div className="text-lg font-bold text-slate-950">{t("feedbackTitle")}</div>
@@ -107,10 +108,16 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
             <input
               type="tel"
               name="phone"
-              autoComplete="tel"
+              autoComplete="tel-national"
               inputMode="tel"
               value={formatUzRest(phoneRest)}
-              onChange={(e) => setPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
+              onChange={(e) => {
+                // автозаполнение подставляло номер целиком (+998 90 …) и после обрезки до 9 цифр
+                // уходило «998 90 123 4» — неверный номер. Код страны отрезаем (06.10.2026)
+                let d = digitsOnly(e.target.value);
+                if (d.length > 9 && d.startsWith("998")) d = d.slice(3);
+                setPhoneRest(d.slice(0, 9));
+              }}
               placeholder="90 123 45 67"
               className="w-full px-4 py-3 text-base font-medium text-slate-950 outline-none"
             />
@@ -145,8 +152,7 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
       </div>
       <div className="mt-4 flex items-center justify-end gap-2 sm:col-span-2">
         <button
-          type="button"
-          onClick={() => void submit()}
+          type="submit"
           disabled={!canSend}
           className="btn-primary"
         >
@@ -154,13 +160,13 @@ export function FeedbackForm({ hideHeader }: { hideHeader?: boolean }) {
         </button>
       </div>
       {status === "ok" ? (
-        <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold text-emerald-800">
+        <div role="status" className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold text-emerald-800">
           {t("sent")}
         </div>
       ) : null}
       {status === "error" && error ? (
-        <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-semibold text-red-800">{error}</div>
+        <div role="alert" className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-semibold text-red-800">{error}</div>
       ) : null}
-    </div>
+    </form>
   );
 }

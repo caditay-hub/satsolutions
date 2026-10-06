@@ -525,7 +525,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
         {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
         {/* Breadcrumbs */}
-        <nav className="crumbs flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400 mb-3">
+        <nav className="crumbs flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-3">
           <Link href="/" className="hover:text-slate-900 transition-colors">{t("nav.home")}</Link>
           <span className="text-slate-300">/</span>
           <Link href="/catalog" className="hover:text-slate-900 transition-colors">{t("nav.catalog")}</Link>
@@ -684,7 +684,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
                   <span className="flex-1">
-                    <span className="block text-xs font-bold uppercase tracking-wider text-brand-600">{t("product.turnkey")}</span>
+                    <span className="block text-xs font-bold uppercase tracking-wider text-brand-700">{t("product.turnkey")}</span>
                     <span className="block text-sm font-semibold text-slate-900">{anchor} — {t("product.designInstall")}</span>
                   </span>
                   <span className="shrink-0 font-bold text-brand-600">→</span>
@@ -702,7 +702,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
               if (!arts.length) return null;
               return (
                 <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50/60 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-slate-400">{ARTICLES_UI[locale] ?? ARTICLES_UI.ru}</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">{ARTICLES_UI[locale] ?? ARTICLES_UI.ru}</p>
                   <ul className="mt-2 space-y-1.5">
                     {arts.map((a) => (
                       <li key={a.slug}>
@@ -748,7 +748,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   ))}
                 </span>
                 <span className="tabular-nums">{productReviews.avg.toFixed(1)}</span>
-                <span className="text-slate-400">· {productReviews.count}</span>
+                <span className="text-slate-500">· {productReviews.count}</span>
               </span>
             )}
           </div>

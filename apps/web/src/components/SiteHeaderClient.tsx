@@ -96,7 +96,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
     <div ref={boxRef} className={`relative ${className}`}>
       <form onSubmit={submit} role="search">
         <div className="relative">
-          <svg className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+          <svg className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-4.34-4.34M17 10.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" />
           </svg>
           <input
@@ -122,17 +122,17 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
             </div>
           )}
           {!hasResults && !loading && (
-            <div className="px-3 py-2 text-sm text-slate-400">{ts("nothing")}</div>
+            <div className="px-3 py-2 text-sm text-slate-500">{ts("nothing")}</div>
           )}
 
           {sug.types.length > 0 && (
             <div className="mb-1">
-              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("cats")}</div>
+              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{ts("cats")}</div>
               {sug.types.map((t) => (
                 <button key={t.name} type="button" onClick={() => go(GROUP_CANONICAL[typeSlug(t.name)] ? `/products/group/${GROUP_CANONICAL[typeSlug(t.name)]}` : `/products/type/${typeSlug(t.name)}`)}
                   className="flex w-full items-center justify-between gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-slate-50">
                   <span className="truncate text-slate-700">{t.name}</span>
-                  <span className="shrink-0 text-[11px] text-slate-400">{t.count}</span>
+                  <span className="shrink-0 text-[11px] text-slate-500">{t.count}</span>
                 </button>
               ))}
             </div>
@@ -140,7 +140,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
 
           {sug.brands.length > 0 && (
             <div className="mb-1 border-t border-slate-100 pt-1">
-              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("brands")}</div>
+              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{ts("brands")}</div>
               {sug.brands.map((b) => (
                 <button key={b.slug} type="button" onClick={() => go(`/catalog/${b.slug}`)}
                   className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm text-slate-700 hover:bg-slate-50">
@@ -152,7 +152,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
 
           {sug.products.length > 0 && (
             <div className="border-t border-slate-100 pt-1">
-              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("products")}</div>
+              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{ts("products")}</div>
               {sug.products.map((p) => {
                 const img = resolveImageUrl(p.coverImageUrl);
                 const price = priceLabel({ price: p.price, characteristics: p.chars_text ? safeParse(p.chars_text) : null } as any);
@@ -164,7 +164,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[13px] font-semibold text-slate-800">{p.name}</span>
-                      {price ? <span className="block text-[11px] font-bold text-[#e02020]">{price}</span> : (p.brand_name ? <span className="block text-[11px] text-slate-400">{p.brand_name}</span> : null)}
+                      {price ? <span className="block text-[11px] font-bold text-[#e02020]">{price}</span> : (p.brand_name ? <span className="block text-[11px] text-slate-500">{p.brand_name}</span> : null)}
                     </span>
                   </button>
                 );
@@ -174,7 +174,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
 
           {(sug.cases?.length ?? 0) > 0 && (
             <div className="border-t border-slate-100 pt-1">
-              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{ts("cases")}</div>
+              <div className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{ts("cases")}</div>
               {sug.cases!.map((c) => (
                 <button key={`${c.kind}-${c.slug}`} type="button"
                   onClick={() => go(c.kind === "portfolio" ? `/portfolio/${c.slug}` : `/solutions/${c.slug}`)}
@@ -182,7 +182,7 @@ function HeaderSearch({ className = "", onDone }: { className?: string; onDone?:
                   <span className="mt-0.5 text-emerald-600">◆</span>
                   <span className="min-w-0">
                     <span className="block truncate text-[13px] font-semibold text-slate-800">{c.title}</span>
-                    {c.excerpt ? <span className="block truncate text-[11px] text-slate-400">{c.excerpt}</span> : null}
+                    {c.excerpt ? <span className="block truncate text-[11px] text-slate-500">{c.excerpt}</span> : null}
                   </span>
                 </button>
               ))}
@@ -405,7 +405,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 <div className="grid gap-0.5 pb-2 pl-3">
                                   {g.types.map((tn) => (
                                     <Link key={tn.n} href={GROUP_CANONICAL[typeSlug(tn.n)] ? `/products/group/${GROUP_CANONICAL[typeSlug(tn.n)]}` : `/products/type/${typeSlug(tn.n)}`} className="flex items-center justify-between gap-2 rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">
-                                      <span className="truncate">{tn.n}</span><span className="shrink-0 text-[11px] text-slate-400">{tn.c}</span>
+                                      <span className="truncate">{tn.n}</span><span className="shrink-0 text-[11px] text-slate-500">{tn.c}</span>
                                     </Link>
                                   ))}
                                 </div>
@@ -423,7 +423,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                             <Link href="/solutions" className="mb-2 block rounded-md bg-brand-50 px-3 py-2 text-[13px] font-bold text-brand-700 hover:bg-brand-100">{t("allServices")} →</Link>
                             {solutionGroups.map((g, gi) => (
                               <div key={gi} className="px-2 pb-1">
-                                {g.label ? <div className="py-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">{g.label}</div> : null}
+                                {g.label ? <div className="py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500">{g.label}</div> : null}
                                 {g.items.map((it) => (
                                   <Link key={it.href} href={it.href as any} className="block rounded-md px-2 py-1.5 text-[13px] text-slate-600 hover:bg-slate-50">{it.title}</Link>
                                 ))}

@@ -25,14 +25,14 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
         {p.recommended ? (
           <span className="absolute left-2 top-2 z-10 rounded-md bg-brand-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">Хит</span>
         ) : isNewProduct(p) ? (
-          <span className="absolute left-2 top-2 z-10 rounded-md bg-green-600 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">{tc("newBadge")}</span>
+          <span className="absolute left-2 top-2 z-10 rounded-md bg-green-700 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">{tc("newBadge")}</span>
         ) : null}
         {img ? (
           <Image alt={displayName} src={img} fill sizes="(max-width:640px) 50vw, 25vw" loading="lazy" unoptimized className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-105" />
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-brand-50">
             <span className="text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{tc("noPhoto")}</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">{tc("noPhoto")}</span>
           </div>
         )}
       </Link>
@@ -47,12 +47,12 @@ export function CatalogCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
 
         <div className="mt-auto pt-2">
           {(p as any).inStock === false ? (
-            <div className="inline-flex items-center gap-1 text-[12px] font-bold text-amber-600">
+            <div className="inline-flex items-center gap-1 text-[12px] font-bold text-amber-700">
               <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
               {tc("onOrder")}
             </div>
           ) : (
-            <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-600">
+            <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-700">
               <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
               {tc("inStock")}
             </div>

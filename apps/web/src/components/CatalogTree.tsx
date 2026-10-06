@@ -18,7 +18,7 @@ export function CatalogTree({ currentType }: { currentType?: string }) {
             <details key={g.title} open={has} className="group">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-2 px-3 py-1.5 font-semibold text-slate-800 hover:bg-slate-50 [&::-webkit-details-marker]:hidden">
                 <span className="truncate">{g.title}</span>
-                <svg className="h-3.5 w-3.5 shrink-0 text-slate-400 transition-transform group-open:rotate-90" viewBox="0 0 12 12" fill="none">
+                <svg className="h-3.5 w-3.5 shrink-0 text-slate-500 transition-transform group-open:rotate-90" viewBox="0 0 12 12" fill="none">
                   <path d="M4 2.5l4 3.5-4 3.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </summary>
@@ -34,7 +34,7 @@ export function CatalogTree({ currentType }: { currentType?: string }) {
                         }`}
                       >
                         <span className="truncate">{t.n}</span>
-                        <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
+                        <span className="shrink-0 text-[11px] text-slate-500">{t.c}</span>
                       </Link>
                     </li>
                   );

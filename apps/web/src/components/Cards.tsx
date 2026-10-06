@@ -22,7 +22,7 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
         {isNewProduct(p) && (
-          <span className="absolute left-2 top-2 z-[2] rounded-md bg-green-600 px-2 py-0.5 text-[11px] font-extrabold text-white shadow-sm">
+          <span className="absolute left-2 top-2 z-[2] rounded-md bg-green-700 px-2 py-0.5 text-[11px] font-extrabold text-white shadow-sm">
             {tc("newBadge")}
           </span>
         )}
@@ -40,7 +40,7 @@ export function ProductCard({ p, name }: { p: ProductDto; usdToUzs?: number; nam
           <div className="relative flex h-full w-full flex-col items-center justify-center gap-1.5 overflow-hidden bg-gradient-to-br from-slate-100 via-white to-brand-50">
             <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #0f2231 1.5px, transparent 1.5px)", backgroundSize: "18px 18px" }} aria-hidden />
             <span className="relative text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
-            <span className="relative text-[10px] font-bold uppercase tracking-wider text-slate-400">{tc("noPhoto")}</span>
+            <span className="relative text-[10px] font-bold uppercase tracking-wider text-slate-500">{tc("noPhoto")}</span>
           </div>
         )}
       </div>
@@ -67,7 +67,7 @@ export function NewArrivalCard({ p, name, brandName, priority }: { p: ProductDto
       href={`/products/${p.slug}`}
       className="group relative flex flex-col rounded-xl border border-slate-200 bg-white p-3 transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-md"
     >
-      <span className="absolute left-2.5 top-2.5 z-[2] rounded-md bg-green-600 px-2 py-0.5 text-[10px] font-extrabold text-white shadow-sm">
+      <span className="absolute left-2.5 top-2.5 z-[2] rounded-md bg-green-700 px-2 py-0.5 text-[10px] font-extrabold text-white shadow-sm">
         {tc("newBadge")}
       </span>
       <span className="relative block aspect-square w-full overflow-hidden bg-white">
@@ -85,7 +85,7 @@ export function NewArrivalCard({ p, name, brandName, priority }: { p: ProductDto
         ) : (
           <span className="flex h-full w-full flex-col items-center justify-center gap-1 bg-gradient-to-br from-slate-100 via-white to-slate-50">
             <span className="text-4xl opacity-50" aria-hidden>{productIcon(p.name)}</span>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">{tc("noPhoto")}</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">{tc("noPhoto")}</span>
           </span>
         )}
       </span>

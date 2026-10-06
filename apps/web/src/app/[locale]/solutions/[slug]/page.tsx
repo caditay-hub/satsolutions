@@ -324,7 +324,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           ))}
         </span>
         <span className="tabular-nums">{reviews.avg.toFixed(1)}</span>
-        <span className={dark ? "text-slate-500" : "text-slate-400"}>· {reviews.count}</span>
+        <span className={dark ? "text-slate-400" : "text-slate-500"}>· {reviews.count}</span>
       </div>
     ) : null;
 
@@ -376,10 +376,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     <section id="projects" className="scroll-mt-32 lg:scroll-mt-44">
       <div className="flex items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("examples")}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("casesTitle")}</h2>
         </div>
-        <Link href="/portfolio" className="tap shrink-0 text-sm font-bold text-brand-600 hover:underline">
+        <Link href="/portfolio" className="tap shrink-0 text-sm font-bold text-brand-700 hover:underline">
           {t("allProjects")} →
         </Link>
       </div>
@@ -461,7 +461,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           поверх фото во всю ширину (та же ячейка сетки), на компьютере — справа от фото. */}
       {!isInd && (
         <div className="container-page pt-4 sm:pt-8">
-          <nav className="crumbs mb-4 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <nav className="crumbs mb-4 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500">
             <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
             <span className="text-slate-300">/</span>
             <Link href="/solutions" className="hover:text-slate-900 transition-colors">{t("servicesCrumb")}</Link>
@@ -483,7 +483,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               <div className="absolute inset-0 bg-gradient-to-t from-[#030e18] via-[#030e18]/55 to-transparent lg:hidden" aria-hidden />
             </div>
             <div className="relative z-10 self-end pb-5 [grid-area:media] lg:self-end lg:pb-0 lg:[grid-area:title]">
-              <p className="text-xs font-black uppercase tracking-widest text-cyan-300 lg:text-brand-600">{t("serviceTag")}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-cyan-300 lg:text-brand-700">{t("serviceTag")}</p>
               <h1 className="mt-2 text-[26px] font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-slate-900">{h1}</h1>
             </div>
             <div className="[grid-area:body] lg:self-start">
@@ -525,7 +525,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       <div className="container-page pb-2">
         {/* Состав работ — компактным чек-листом во всю ширину */}
         <section id="sostav" className="mt-6 scroll-mt-32 lg:scroll-mt-44 lg:mt-8">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("whatInc")}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("whatInc")}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("worksTitle")}</h2>
           <ul className="mt-4 grid gap-x-8 gap-y-2.5 rounded-2xl bg-slate-50 p-4 sm:grid-cols-2 lg:grid-cols-3 lg:p-5">
             {works.map((w) => (
@@ -687,7 +687,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Галерея */}
         {gallery.length > 0 && (
           <div className="mt-12">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("examples")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("examples")}</p>
             <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("gallery")}</h2>
             <Lightbox images={gallery} alt={title} />
           </div>
@@ -725,7 +725,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <div className={`mt-12 grid grid-cols-1 gap-10 ${faq.length > 0 && relatedArticles.length > 0 ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start" : ""}`}>
             {faq.length > 0 && (
               <section id="faq" className="scroll-mt-32 lg:scroll-mt-44">
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("faqLabel")}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("faqLabel")}</p>
                 <h2 className="mt-1 mb-5 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tcm("faqTitle")}</h2>
                 <FaqAccordion items={faq} />
               </section>
@@ -774,7 +774,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                       </span>
                     </div>
                     {r.text && <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{r.text}</p>}
-                    <div className="mt-1.5 text-xs font-semibold text-slate-400">{r.date}</div>
+                    <div className="mt-1.5 text-xs font-semibold text-slate-500">{r.date}</div>
                   </div>
                 ))}
               </div>

@@ -22,6 +22,8 @@ const PAGE_TO_OBJECT: Record<string, string> = { industry: "factory", bank: "off
 
 export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader = false }: { industryKey?: string; variant?: "section" | "compact"; hideHeader?: boolean }) {
   const t = useTranslations("projectForm");
+  const tf = useTranslations("form");
+  const [failed, setFailed] = useState(false);
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const initialObject = (() => {
@@ -45,6 +47,7 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
     e.preventDefault();
     if (!phone.trim()) return;
     setSending(true);
+    setFailed(false);
     // Текст письма собираем по-русски: его читают менеджеры в Telegram и CRM
     const lines = [
       "🏗 РАСЧЁТ ПРОЕКТА (заявка с сайта)",
@@ -72,9 +75,10 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
         setSent(true);
         const ph = phone.startsWith("+") ? phone : `+998${phone.replace(/\D/g, "").slice(-9)}`;
         trackLead({ phone: ph, email: email || null });
-      }
+      } else setFailed(true);
     } catch {
-      /* тихо: пользователю показываем общий результат ниже */
+      // раньше ошибка молча проглатывалась — человек не видел, что заявка не ушла (06.10.2026)
+      setFailed(true);
     }
     setSending(false);
   }
@@ -107,10 +111,10 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
       )}
 
       <div className={hideHeader ? "" : "mt-5"}>
-        <div className="text-xs font-semibold text-slate-500 mb-2">{t("objectLabel")}</div>
-        <div className="flex flex-wrap gap-2">
+        <div id="pqf-object" className="text-xs font-semibold text-slate-500 mb-2">{t("objectLabel")}</div>
+        <div role="group" aria-labelledby="pqf-object" className="flex flex-wrap gap-2">
           {OBJECTS.map((o) => (
-            <button key={o} type="button" onClick={() => setObject(object === o ? "" : o)} className={chip(object === o)}>
+            <button key={o} type="button" aria-pressed={object === o} onClick={() => setObject(object === o ? "" : o)} className={chip(object === o)}>
               {t(`objects.${o}`)}
             </button>
           ))}
@@ -118,10 +122,10 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
       </div>
 
       <div className="mt-4">
-        <div className="text-xs font-semibold text-slate-500 mb-2">{t("systemsLabel")}</div>
-        <div className="flex flex-wrap gap-2">
+        <div id="pqf-systems" className="text-xs font-semibold text-slate-500 mb-2">{t("systemsLabel")}</div>
+        <div role="group" aria-labelledby="pqf-systems" className="flex flex-wrap gap-2">
           {SYSTEMS.map((s) => (
-            <button key={s} type="button" onClick={() => toggle(s)} className={chip(systems.includes(s))}>
+            <button key={s} type="button" aria-pressed={systems.includes(s)} onClick={() => toggle(s)} className={chip(systems.includes(s))}>
               {t(`systems.${s}`)}
             </button>
           ))}
@@ -130,14 +134,14 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <div>
-          <div className="text-xs font-semibold text-slate-500 mb-2">{t("scaleLabel")}</div>
-          <input className={input} placeholder={t("scalePlaceholder")} value={scale} onChange={(e) => setScale(e.target.value)} />
+          <label htmlFor="pqf-scale" className="block text-xs font-semibold text-slate-500 mb-2">{t("scaleLabel")}</label>
+          <input id="pqf-scale" name="scale" className={input} placeholder={t("scalePlaceholder")} value={scale} onChange={(e) => setScale(e.target.value)} />
         </div>
         <div>
-          <div className="text-xs font-semibold text-slate-500 mb-2">{t("termLabel")}</div>
-          <div className="flex flex-wrap gap-2">
+          <div id="pqf-term" className="text-xs font-semibold text-slate-500 mb-2">{t("termLabel")}</div>
+          <div role="group" aria-labelledby="pqf-term" className="flex flex-wrap gap-2">
             {TERMS.map((x) => (
-              <button key={x} type="button" onClick={() => setTerm(term === x ? "" : x)} className={chip(term === x)}>
+              <button key={x} type="button" aria-pressed={term === x} onClick={() => setTerm(term === x ? "" : x)} className={chip(term === x)}>
                 {t(`terms.${x}`)}
               </button>
             ))}
@@ -146,14 +150,15 @@ export function ProjectQuoteForm({ industryKey, variant = "section", hideHeader 
       </div>
 
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <input className={input} placeholder={t("company")} value={company} onChange={(e) => setCompany(e.target.value)} />
-        <input className={input} placeholder={t("name")} value={name} onChange={(e) => setName(e.target.value)} />
-        <input className={input} required placeholder={t("phone")} value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" />
-        <input className={input} placeholder={t("email")} value={email} onChange={(e) => setEmail(e.target.value)} type="email" />
+        <input className={input} name="organization" autoComplete="organization" aria-label={t("company")} placeholder={t("company")} value={company} onChange={(e) => setCompany(e.target.value)} />
+        <input className={input} name="name" autoComplete="name" aria-label={t("name")} placeholder={t("name")} value={name} onChange={(e) => setName(e.target.value)} />
+        <input className={input} required type="tel" name="phone" autoComplete="tel" aria-label={t("phone")} placeholder={t("phone")} value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" />
+        <input className={input} name="email" autoComplete="email" aria-label={t("email")} placeholder={t("email")} value={email} onChange={(e) => setEmail(e.target.value)} type="email" />
       </div>
 
-      <textarea className={`${input} mt-3 min-h-[76px]`} placeholder={t("comment")} value={comment} onChange={(e) => setComment(e.target.value)} />
+      <textarea className={`${input} mt-3 min-h-[76px]`} name="comment" aria-label={t("comment")} placeholder={t("comment")} value={comment} onChange={(e) => setComment(e.target.value)} />
 
+      {failed ? <div role="alert" className="mt-3 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{tf("errFallback")}</div> : null}
       <button
         type="submit"
         disabled={sending || !phone.trim()}

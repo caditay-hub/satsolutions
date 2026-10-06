@@ -43,7 +43,7 @@ function FacetGroup({ title, options, selected, onToggle }: {
             />
             {/* названия переносим целиком (break-words), не обрезаем многоточием */}
             <span className="min-w-0 flex-1 break-words leading-snug">{o.label}</span>
-            <span className="shrink-0 text-[11px] text-slate-400">{o.count}</span>
+            <span className="shrink-0 text-[11px] text-slate-500">{o.count}</span>
           </label>
         ))}
       </div>
@@ -102,7 +102,7 @@ export function SmartResultsView({ items, related = [], usdToUzs }: { items: Sma
       <div className="flex items-center justify-between px-4 py-2.5">
         <span className="text-sm font-bold text-slate-900">{tc("filters")}</span>
         {hasActive ? (
-          <button type="button" onClick={reset} className="text-[11px] font-bold uppercase tracking-wider text-slate-400 hover:text-[#e02020]">
+          <button type="button" onClick={reset} className="text-[11px] font-bold uppercase tracking-wider text-slate-500 hover:text-[#e02020]">
             {tc("reset")} ✕
           </button>
         ) : null}

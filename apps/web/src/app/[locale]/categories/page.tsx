@@ -62,7 +62,7 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
                     className="flex items-center justify-between gap-2 rounded-md px-1.5 py-1.5 text-[13.5px] text-slate-700 transition-colors hover:bg-slate-50 hover:text-brand-700"
                   >
                     <span className="truncate">{localizeCatName(t.n, locale)}</span>
-                    <span className="shrink-0 text-[11px] text-slate-400">{t.c}</span>
+                    <span className="shrink-0 text-[11px] text-slate-500">{t.c}</span>
                   </Link>
                 </li>
               ))}
@@ -82,7 +82,7 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
                 className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-[13.5px] text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700"
               >
                 <span>{localizeCatName(t.name, locale)}</span>
-                <span className="text-[11px] text-slate-400">{t.count}</span>
+                <span className="text-[11px] text-slate-500">{t.count}</span>
               </Link>
             </li>
           ))}

@@ -4708,6 +4708,7 @@
     "sendingShort": "Yuborilmoqda...",
     "sent": "Xabar yuborildi. Rahmat!",
     "errSend": "Yuborishda xatolik",
+    "errFallback": "Yuborib boʻlmadi. +998 97 862 66 99 raqamiga qoʻngʻiroq qiling yoki Telegramda yozing.",
     "quoteTitle": "Taklif soʻrash",
     "srSuccess": "Arizangiz muvaffaqiyatli yuborildi! Tez orada siz bilan bogʻlanamiz.",
     "srError": "Ariza yuborishda xatolik yuz berdi. Qayta urinib koʻring.",

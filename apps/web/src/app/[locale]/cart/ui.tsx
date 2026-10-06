@@ -142,9 +142,16 @@ export function CartClient() {
           <div className="mt-1 flex overflow-hidden rounded-lg border border-slate-300">
             <div className="flex items-center bg-slate-50 px-3 text-sm font-semibold text-slate-700">+998</div>
             <input
+              type="tel"
+              name="phone"
+              autoComplete="tel-national"
               inputMode="tel"
               value={formatUzRest(phoneRest)}
-              onChange={(e) => setPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
+              onChange={(e) => {
+                let d = digitsOnly(e.target.value);
+                if (d.length > 9 && d.startsWith("998")) d = d.slice(3); // автозаполнение: +998… целиком
+                setPhoneRest(d.slice(0, 9));
+              }}
               placeholder="90 123 45 67"
               className="w-full px-3 py-2 text-sm outline-none"
             />

@@ -113,7 +113,7 @@ export default async function PortfolioPage({
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
-                  <div className="flex h-full w-full items-center justify-center text-sm font-bold text-slate-400">
+                  <div className="flex h-full w-full items-center justify-center text-sm font-bold text-slate-500">
                     {t("noImage")}
                   </div>
                 )}

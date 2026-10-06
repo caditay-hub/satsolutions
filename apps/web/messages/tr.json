@@ -4708,6 +4708,7 @@
     "sendingShort": "Gönderiliyor...",
     "sent": "Mesaj gönderildi. Teşekkürler!",
     "errSend": "Gönderme hatası",
+    "errFallback": "Gönderilemedi. +998 97 862 66 99 numarasını arayın veya bize Telegram'dan yazın.",
     "quoteTitle": "Teklif iste",
     "srSuccess": "Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
     "srError": "Talep gönderilirken hata oluştu. Lütfen tekrar deneyin.",

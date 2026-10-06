@@ -53,7 +53,7 @@ export function ReviewsSection({ title, avg, count, items, basedOn }: { title: s
               </div>
               <Stars n={r.rating} className="mt-3" />
               <blockquote className="mt-2.5 flex-1 text-sm leading-relaxed text-slate-600">{r.text}</blockquote>
-              <div className="mt-3 text-xs font-semibold text-slate-400">{r.date}</div>
+              <div className="mt-3 text-xs font-semibold text-slate-500">{r.date}</div>
             </figure>
           ))}
         </div>

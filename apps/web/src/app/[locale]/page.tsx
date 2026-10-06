@@ -330,7 +330,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       ══════════════════════════════════════════════════════ */}
       <section className="container-page py-14 sm:py-16">
         <div className="text-center mb-10">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("whatWeDo")}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("whatWeDo")}</p>
           <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">{t("directionsTitle")}</h2>
           <p className="mt-3 text-slate-500 max-w-xl mx-auto text-sm">
             {t("directionsSubtitle")}
@@ -388,7 +388,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="container-page py-12 sm:py-14">
         <div className="flex items-end justify-between gap-4 mb-7 sm:mb-9">
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("catalogLabel")}</p>
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-700 mb-1.5">{t("catalogLabel")}</p>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("catalogTitle")}</h2>
           </div>
           <Link
@@ -466,7 +466,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="container-page !py-0">
             <div className="flex items-end justify-between gap-4 mb-6 sm:mb-8">
               <div>
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-600 mb-1.5">{t("readySolutions")}</p>
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-brand-700 mb-1.5">{t("readySolutions")}</p>
                 <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("readySolutions")}</h2>
               </div>
               <Link
@@ -508,7 +508,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                         {ts(`${s.key}.title`)}
                       </h3>
                       <p className="mt-2 text-sm text-slate-500 line-clamp-2 leading-relaxed">{ts(`${s.key}.desc`)}</p>
-                      <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-brand-600">
+                      <span className="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-brand-700">
                         {t("more")}
                         <svg className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -620,7 +620,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <section className="container-page py-14 sm:py-16">
           <div className="flex items-end justify-between gap-4 mb-8">
             <div>
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-1">{t("portfolioLabel")}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-1">{t("portfolioLabel")}</p>
               <h2 className="text-3xl font-black text-slate-900 tracking-tight">{t("portfolioTitle")}</h2>
             </div>
             <Link href="/portfolio" className="hidden sm:inline-flex text-sm font-bold text-brand-700 hover:text-brand-600 whitespace-nowrap">
@@ -642,14 +642,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                       <Image alt={p.title} src={img} fill sizes="(max-width: 640px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105" quality={80} />
                     ) : (
-                      <div className="flex h-full items-center justify-center bg-slate-200 text-sm font-bold text-slate-400">{t("noImage")}</div>
+                      <div className="flex h-full items-center justify-center bg-slate-200 text-sm font-bold text-slate-500">{t("noImage")}</div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-5 bg-white flex flex-col gap-1">
                     <h3 className="font-black text-slate-900 text-sm line-clamp-1 group-hover:text-brand-700 transition-colors">{p.title}</h3>
                     {p.excerpt && <p className="text-xs text-slate-500 line-clamp-1">{p.excerpt}</p>}
-                    <span className="mt-2 text-xs font-black uppercase tracking-wider text-brand-600">{t("view")}</span>
+                    <span className="mt-2 text-xs font-black uppercase tracking-wider text-brand-700">{t("view")}</span>
                   </div>
                 </Link>
                 </Reveal>
@@ -669,7 +669,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {(brandList.length > 0 || partnerList.length > 0) && (
         <section className="bg-slate-50 py-12 sm:py-14 border-y border-slate-200">
           <div className="container-page">
-            <p className="text-center text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("distributorLabel")}</p>
+            <p className="text-center text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("distributorLabel")}</p>
             <h2 className="text-center text-2xl font-black text-slate-900 tracking-tight mb-8">{t("officialBrands")}</h2>
 
             {/* Единая сетка равных ячеек: все логотипы одного стандартного размера,
@@ -730,10 +730,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="container-page">
             <div className="mb-6 flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{articlesUi.label}</p>
+                <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{articlesUi.label}</p>
                 <h2 className="text-2xl font-black text-slate-900 tracking-tight">{articlesUi.title}</h2>
               </div>
-              <Link href="/blog" className="tap shrink-0 text-sm font-bold text-brand-600 hover:underline">
+              <Link href="/blog" className="tap shrink-0 text-sm font-bold text-brand-700 hover:underline">
                 {articlesUi.all} →
               </Link>
             </div>
@@ -752,7 +752,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     </div>
                     <div className="flex flex-1 flex-col p-4">
                       <h3 className="text-[15px] font-black leading-snug tracking-tight text-slate-900 group-hover:text-brand-700">{b.title}</h3>
-                      <span className="mt-3 text-sm font-bold text-brand-600">{articlesUi.read} →</span>
+                      <span className="mt-3 text-sm font-bold text-brand-700">{articlesUi.read} →</span>
                     </div>
                   </Link>
                 );
@@ -768,7 +768,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="py-14 sm:py-16 bg-white">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center mb-8">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("contactLabel")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("contactLabel")}</p>
             <h2 className="text-3xl font-black text-slate-900 tracking-tight">{t("contactTitle")}</h2>
             <p className="mt-3 text-sm text-slate-500">
               {t("contactSubtitle")}

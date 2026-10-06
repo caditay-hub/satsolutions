@@ -121,6 +121,7 @@ export function ReviewForm({ locale, serviceKey, productId }: { locale: string; 
             onMouseEnter={() => setHover(i)}
             onClick={() => setRating(i)}
             aria-label={`${i}/5`}
+            aria-pressed={rating === i}
           >
             <Star filled={i <= shown} />
           </button>
@@ -136,6 +137,8 @@ export function ReviewForm({ locale, serviceKey, productId }: { locale: string; 
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder={t.comment}
+            name="review"
+            aria-label={t.comment}
             className="min-h-[80px] w-full rounded-xl border border-slate-200 px-3.5 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
             maxLength={2000}
           />
@@ -143,10 +146,13 @@ export function ReviewForm({ locale, serviceKey, productId }: { locale: string; 
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder={t.name}
+            name="name"
+            autoComplete="name"
+            aria-label={t.name}
             className="mt-3 w-full rounded-xl border border-slate-200 px-3.5 py-3 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-100"
             maxLength={120}
           />
-          {state === "error" && <p className="mt-2 text-sm font-semibold text-rose-600">{t.err}</p>}
+          {state === "error" && <p role="alert" className="mt-2 text-sm font-semibold text-rose-600">{t.err}</p>}
           <button
             type="submit"
             disabled={state === "sending"}

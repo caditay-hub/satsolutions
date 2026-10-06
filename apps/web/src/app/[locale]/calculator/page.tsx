@@ -211,7 +211,7 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
                 <div className="text-sm font-black text-slate-900">{c.name}</div>
                 <div className="mt-1 text-[13px] leading-relaxed text-slate-500">{c.spec}</div>
                 <div className="mt-2 text-base font-black tabular-nums text-brand-700">
-                  {c.sum} <span className="text-xs font-bold text-slate-400">{t("sum")}</span>
+                  {c.sum} <span className="text-xs font-bold text-slate-500">{t("sum")}</span>
                 </div>
               </div>
             ))}
@@ -238,10 +238,10 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
                     <td className="py-2.5 pr-3 text-slate-700">{r.label}</td>
                     <td className="py-2.5 text-right font-semibold tabular-nums text-slate-900">
                       <span className="whitespace-nowrap">
-                        <span className="mr-1 text-[11px] font-normal text-slate-400">{t("from")}</span>
+                        <span className="mr-1 text-[11px] font-normal text-slate-500">{t("from")}</span>
                         {fmt(r.value)}
                       </span>
-                      <span className="ml-1 block whitespace-nowrap text-[11px] font-normal text-slate-400 sm:ml-1 sm:inline">
+                      <span className="ml-1 block whitespace-nowrap text-[11px] font-normal text-slate-500 sm:ml-1 sm:inline">
                         {r.unit}
                       </span>
                     </td>

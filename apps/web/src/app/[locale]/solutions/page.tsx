@@ -179,7 +179,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       {/* SERVICES */}
       <section className="container-page py-12 sm:py-16">
         <div className="mb-8 max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("systemsLabel")}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("systemsLabel")}</p>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("whatWeCan")}</h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -195,7 +195,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       <section className="border-y border-slate-100 bg-gradient-to-b from-slate-50 to-white">
         <div className="container-page py-12 sm:py-16">
           <div className="mb-8 max-w-3xl">
-            <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("industriesLabel")}</p>
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("industriesLabel")}</p>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("industriesTitle")}</h2>
           </div>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -226,7 +226,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       {/* STEPS */}
       <section className="container-page py-12 sm:py-16">
         <div className="mb-8 max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600 mb-2">{t("howLabel")}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("howLabel")}</p>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("howTitle")}</h2>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">

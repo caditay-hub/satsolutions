@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useId, useState } from "react";
+import { useDialogFocus, useEscape } from "@/lib/useEscape";
 import { trackLead } from "@/lib/gtag";
 import { getGclid } from "@/lib/gclid";
 import { useTranslations } from "next-intl";
@@ -27,10 +28,16 @@ export function RequestQuoteButton({
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
+  const [failed, setFailed] = useState(false);
+  const titleId = useId();
+  const closeModal = useCallback(() => setOpen(false), []);
+  useEscape(open, closeModal);
+  const dialogRef = useDialogFocus<HTMLDivElement>(open);
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setSending(true);
+    setFailed(false);
     try {
       const r = await fetch("https://api.satsolutions.uz/feedback", {
         method: "POST",
@@ -47,9 +54,10 @@ export function RequestQuoteButton({
         setSent(true);
         const ph = phone ? (phone.startsWith("+") ? phone : `+998${phone.replace(/\D/g, "").slice(-9)}`) : null;
         trackLead({ phone: ph, email: email || null });
-      }
+      } else setFailed(true);
     } catch {
-      /* swallow */
+      // раньше ошибка молча проглатывалась: кнопка возвращалась, человек не понимал, что заявка не ушла
+      setFailed(true);
     }
     setSending(false);
   }
@@ -84,7 +92,7 @@ export function RequestQuoteButton({
 
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={() => setOpen(false)}>
-          <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div role="dialog" aria-modal="true" aria-labelledby={titleId} ref={dialogRef} tabIndex={-1} className="outline-none w-full max-w-md rounded-xl bg-white p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
             {sent ? (
               <div className="text-center py-6">
                 <div className="text-4xl mb-3">✅</div>
@@ -102,18 +110,22 @@ export function RequestQuoteButton({
               <>
                 <div className="flex items-start justify-between mb-3">
                   <div>
-                    <div className="text-lg font-bold">{t("quoteTitle")}</div>
+                    <div id={titleId} className="text-lg font-bold">{t("quoteTitle")}</div>
                     <div className="text-xs text-slate-500 mt-0.5 line-clamp-2">{productName}</div>
                   </div>
                   <button
                     type="button"
                     onClick={() => setOpen(false)}
-                    className="text-slate-400 hover:text-slate-700 text-2xl leading-none"
+                    aria-label={t("close")}
+                    className="-mr-2 -mt-2 inline-flex h-10 w-10 items-center justify-center text-slate-500 hover:text-slate-700 text-2xl leading-none"
                   >×</button>
                 </div>
                 <form onSubmit={submit} className="space-y-3">
                   <input
                     required
+                    name="name"
+                    autoComplete="name"
+                    aria-label={t("yourName")}
                     placeholder={t("yourName")}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -121,6 +133,11 @@ export function RequestQuoteButton({
                   />
                   <input
                     required
+                    type="tel"
+                    name="phone"
+                    autoComplete="tel"
+                    inputMode="tel"
+                    aria-label={t("phoneReq")}
                     placeholder={t("phoneReq")}
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -128,18 +145,24 @@ export function RequestQuoteButton({
                   />
                   <input
                     type="email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label={t("emailOpt")}
                     placeholder={t("emailOpt")}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020]"
                   />
                   <textarea
+                    name="comment"
+                    aria-label={t("comment")}
                     placeholder={t("comment")}
                     rows={3}
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020] resize-none"
                   />
+                  {failed ? <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{t("errFallback")}</div> : null}
                   <button
                     type="submit"
                     disabled={sending}

@@ -39,7 +39,7 @@ export async function WorkTerms({ locale, className = "" }: { locale: string; cl
   ] as const;
   return (
     <section id="terms" className={`scroll-mt-32 lg:scroll-mt-44 ${className}`} aria-labelledby="work-terms-title">
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("label")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("label")}</p>
       <h2 id="work-terms-title" className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("title")}</h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map(({ Icon, k }) => (

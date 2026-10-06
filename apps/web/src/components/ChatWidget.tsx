@@ -608,16 +608,20 @@ export function ChatWidget() {
                 />
               </div>
               <div>
-                <div className="text-xs font-bold text-slate-900">{tw("phone")} <span className="font-normal text-slate-400">({PHONE_OPTIONAL[locale] ?? PHONE_OPTIONAL.ru})</span></div>
+                <div className="text-xs font-bold text-slate-900">{tw("phone")} <span className="font-normal text-slate-500">({PHONE_OPTIONAL[locale] ?? PHONE_OPTIONAL.ru})</span></div>
                 <div className="mt-1 flex overflow-hidden rounded-lg border border-slate-300 focus-within:border-brand-600">
                   <div className="flex items-center bg-slate-100 px-3 text-sm font-bold text-slate-900">+998</div>
                   <input
                     type="tel"
                     name="phone"
-                    autoComplete="tel"
+                    autoComplete="tel-national"
                     inputMode="tel"
                     value={formatUzRest(formPhoneRest)}
-                    onChange={(e) => setFormPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
+                    onChange={(e) => {
+                      let d = digitsOnly(e.target.value);
+                      if (d.length > 9 && d.startsWith("998")) d = d.slice(3); // автозаполнение: +998… целиком
+                      setFormPhoneRest(d.slice(0, 9));
+                    }}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
                         e.preventDefault();

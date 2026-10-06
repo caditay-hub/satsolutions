@@ -21,7 +21,7 @@ export async function ServiceScheme({ k, locale }: { k: string; locale: string }
   if (!Array.isArray(steps) || steps.length === 0) return null;
   return (
     <div className="mt-12">
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{tp("scheme")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{tp("scheme")}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tp("schemeTitle")}</h2>
       <div className="mt-5 flex flex-col rounded-2xl border border-slate-100 bg-slate-50/60 p-5 md:flex-row md:items-center md:p-6">
         {steps.map((st, i) => (

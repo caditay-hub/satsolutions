@@ -4708,6 +4708,7 @@
     "sendingShort": "提交中…",
     "sent": "留言已发送，谢谢！",
     "errSend": "发送错误",
+    "errFallback": "发送失败。请致电 +998 97 862 66 99 或通过 Telegram 联系我们。",
     "quoteTitle": "获取报价",
     "srSuccess": "您的申请已成功提交！我们会尽快与您联系。",
     "srError": "提交申请时出错，请重试。",

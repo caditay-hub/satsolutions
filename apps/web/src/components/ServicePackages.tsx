@@ -33,7 +33,7 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
 
   return (
     <div className="mt-12">
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.pkgLabel`)}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts(`${k}.details.pkgLabel`)}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.pkgTitle`)}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts(`${k}.details.pkgNote`)}</p>
       {/* четыре пакета — 2×2 на ноутбуке и в ряд на широком экране, чтобы не было «3 + 1» */}
@@ -53,7 +53,7 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
               ))}
             </ul>
             {p.term ? (
-              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400">{p.term}</p>
+              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-500">{p.term}</p>
             ) : null}
             {/* на телефоне КП — в блоке заказа и в нижней панели (контакты не перебивают текст) */}
             <div className="mt-3 hidden lg:block">
@@ -66,7 +66,7 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
       {/* Этапы работы — рендерятся, если у услуги есть details.stages (как у network) */}
       {stages.length > 0 && (
         <div className="mt-12">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.stagesLabel`)}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts(`${k}.details.stagesLabel`)}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.stagesTitle`)}</h2>
           <div className="mt-5 grid gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-5">
             {stages.map((st, i) => (
@@ -85,7 +85,7 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
       {/* Бренды: текстовая подводка к каталогу, если задана */}
       {brandsText ? (
         <div className="mt-12">
-          <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts(`${k}.details.brandsLabel`)}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts(`${k}.details.brandsLabel`)}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.brandsTitle`)}</h2>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{brandsText}</p>
         </div>

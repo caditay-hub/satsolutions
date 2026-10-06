@@ -50,7 +50,7 @@ type CatchAll = { subtitle: string; color: string; icon: "grid" | "plus" };
 const CATCHALL: Record<string, CatchAll> = {
   prochee: {
     subtitle: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
-    color: "#328fa8",
+    color: "#2a7b90", // brand-700: подпись на белом читается (контраст 4,9; был 3,7)
     icon: "grid",
   },
 };
@@ -220,7 +220,7 @@ export default async function CatalogIndexPage({ params }: { params: Promise<{ l
         {/* Compact header row: back + breadcrumb */}
         <div className="flex items-center gap-3 mb-3">
           <BackButton />
-          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+          <nav className="crumbs flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500">
             <Link href="/" className="hover:text-slate-900 transition-colors">{t("home")}</Link>
             <span className="text-slate-300">/</span>
             <span className="text-slate-900">{t("catalogCrumb")}</span>

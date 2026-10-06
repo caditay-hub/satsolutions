@@ -17,7 +17,7 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
 
   return (
     <section className="mt-12" aria-labelledby={`install-prices-${k}`}>
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{t("label")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("label")}</p>
       <h2 id={`install-prices-${k}`} className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{title}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{t("lead")}</p>
 
@@ -32,7 +32,7 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
                   <td className="px-5 py-2.5 text-slate-700">{t(`work.${w.k}`)}</td>
                   <td className="whitespace-nowrap px-5 py-2.5 text-right font-black tabular-nums text-slate-900">
                     {fmtSum(w.price, locale)}
-                    <span className="ml-1 text-xs font-semibold text-slate-400">{t(`per.${w.per}`)}</span>
+                    <span className="ml-1 text-xs font-semibold text-slate-500">{t(`per.${w.per}`)}</span>
                   </td>
                 </tr>
               ))}
@@ -65,7 +65,7 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
             <div key={p.k} className="rounded-2xl border border-slate-200 bg-white p-4">
               <div className="text-[13px] font-semibold leading-snug text-slate-600">{t(`pkg.${p.k}`)}</div>
               <div className="mt-2 text-base font-black tabular-nums text-slate-900">{fmtSum(p.low, locale)} – {fmtSum(p.high, locale)}</div>
-              <div className="mt-0.5 text-xs text-slate-400">{t("pkgUnit")}</div>
+              <div className="mt-0.5 text-xs text-slate-500">{t("pkgUnit")}</div>
             </div>
           ))}
         </div>

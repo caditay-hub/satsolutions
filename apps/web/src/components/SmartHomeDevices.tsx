@@ -32,7 +32,7 @@ export async function SmartHomeDevices({ locale }: { locale: string }) {
 
   return (
     <div className="mt-12">
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts("smarthome.details.devicesLabel")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts("smarthome.details.devicesLabel")}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts("smarthome.details.devicesTitle")}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts("smarthome.details.devicesText")}</p>
 

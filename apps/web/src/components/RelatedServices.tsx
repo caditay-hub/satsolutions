@@ -18,7 +18,7 @@ export async function RelatedServices({ current, locale }: { current: string; lo
 
   return (
     <div className="mt-12">
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{tp("relatedLabel")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{tp("relatedLabel")}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{tp("relatedTitle")}</h2>
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {others.map((k) => (

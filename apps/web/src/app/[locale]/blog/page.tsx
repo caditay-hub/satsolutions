@@ -33,7 +33,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
   return (
     <div className="bg-white">
       <div className="container-page py-8 sm:py-12">
-        <nav className="crumbs mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-400">
+        <nav className="crumbs mb-5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-slate-500">
           <Link href="/" className="hover:text-slate-900 transition-colors">{ui.crumbHome}</Link>
           <span className="text-slate-300">/</span>
           <span className="text-slate-900 normal-case tracking-normal">{ui.title}</span>
@@ -66,7 +66,7 @@ export default async function BlogListPage({ params }: { params: Promise<{ local
                   <div className="flex flex-1 flex-col p-5">
                     <h2 className="text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-brand-700">{b.title}</h2>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{b.excerpt}</p>
-                    <span className="mt-4 text-sm font-bold text-brand-600">{ui.read} →</span>
+                    <span className="mt-4 text-sm font-bold text-brand-700">{ui.read} →</span>
                   </div>
                 </Link>
               );

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
+import { useDialogFocus, useEscape } from "@/lib/useEscape";
 import { useTranslations } from "next-intl";
 import { createServiceRequest } from "@/lib/api";
 import { trackLead } from "@/lib/gtag";
@@ -13,6 +14,9 @@ interface ServiceRequestModalProps {
 
 export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceRequestModalProps) {
   const t = useTranslations("form");
+  const uid = useId();
+  useEscape(isOpen, onClose);
+  const dialogRef = useDialogFocus<HTMLDivElement>(isOpen);
   const [formData, setFormData] = useState({
     serviceName,
     phoneRest: "",
@@ -78,12 +82,14 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
-      <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
+      <div role="dialog" aria-modal="true" aria-labelledby={`${uid}-t`} ref={dialogRef} tabIndex={-1} className="outline-none w-full max-w-md rounded-lg bg-white p-6 shadow-lg">
         <div className="mb-4 flex items-center justify-between">
-          <h2 className="text-xl font-semibold text-slate-900">{t("srTitle")}</h2>
+          <h2 id={`${uid}-t`} className="text-xl font-semibold text-slate-900">{t("srTitle")}</h2>
           <button
+            type="button"
             onClick={onClose}
-            className="rounded-lg p-2 text-slate-500 hover:bg-slate-100"
+            aria-label={t("close")}
+            className="rounded-lg p-2.5 text-slate-500 hover:bg-slate-100"
           >
             <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -92,7 +98,7 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
         </div>
 
         {message && (
-          <div className={`mb-4 rounded-lg p-3 ${message === t("srSuccess")
+          <div role={message === t("srSuccess") ? "status" : "alert"} className={`mb-4 rounded-lg p-3 ${message === t("srSuccess")
               ? "bg-green-50 text-green-800 border border-green-200"
               : "bg-red-50 text-red-800 border border-red-200"
             }`}>
@@ -102,10 +108,11 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label htmlFor={`${uid}-svc`} className="block text-sm font-medium text-slate-700 mb-1">
               {t("service")}
             </label>
             <input
+              id={`${uid}-svc`}
               type="text"
               name="serviceName"
               value={formData.serviceName}
@@ -117,16 +124,24 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label htmlFor={`${uid}-ph`} className="block text-sm font-medium text-slate-700 mb-1">
               {t("phoneReq")}
             </label>
             <div className="flex overflow-hidden rounded-lg border border-slate-300">
               <div className="flex items-center bg-slate-50 px-3 text-sm font-semibold text-slate-700">+998</div>
               <input
+                id={`${uid}-ph`}
                 type="tel"
                 name="phoneRest"
+                autoComplete="tel-national"
+                inputMode="tel"
                 value={formatUzRest(formData.phoneRest)}
-                onChange={(e) => setFormData(prev => ({ ...prev, phoneRest: digitsOnly(e.target.value).slice(0, 9) }))}
+                onChange={(e) => {
+                  // автозаполнение подставляет номер целиком (+998…) — код страны отрезаем
+                  let d = digitsOnly(e.target.value);
+                  if (d.length > 9 && d.startsWith("998")) d = d.slice(3);
+                  setFormData(prev => ({ ...prev, phoneRest: d.slice(0, 9) }));
+                }}
                 required
                 placeholder="90 123 45 67"
                 className="w-full px-3 py-2 text-sm outline-none"
@@ -136,10 +151,11 @@ export function ServiceRequestModal({ isOpen, onClose, serviceName }: ServiceReq
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label htmlFor={`${uid}-d`} className="block text-sm font-medium text-slate-700 mb-1">
               {t("description")}
             </label>
             <textarea
+              id={`${uid}-d`}
               name="description"
               value={formData.description}
               onChange={handleChange}

@@ -28,7 +28,7 @@ export async function NetworkDetails({ locale }: { locale: string }) {
     <>
       {/* Типовые решения */}
       <div className="mt-12">
-        <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts("network.details.pkgLabel")}</p>
+        <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts("network.details.pkgLabel")}</p>
         <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts("network.details.pkgTitle")}</h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts("network.details.pkgNote")}</p>
         <div className="mt-5 grid gap-4 lg:grid-cols-3">
@@ -46,7 +46,7 @@ export async function NetworkDetails({ locale }: { locale: string }) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-400">{p.term}</p>
+              <p className="mt-4 text-xs font-bold uppercase tracking-wide text-slate-500">{p.term}</p>
               <div className="mt-3">
                 <RequestQuoteButton label={tp("getQuote")} variant="brand" productName={`Заявка: СКС — ${p.name}`} />
               </div>
@@ -57,7 +57,7 @@ export async function NetworkDetails({ locale }: { locale: string }) {
 
       {/* Этапы работ */}
       <div className="mt-12">
-        <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts("network.details.stagesLabel")}</p>
+        <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts("network.details.stagesLabel")}</p>
         <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts("network.details.stagesTitle")}</h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           {stages.map((st, i) => (
@@ -72,7 +72,7 @@ export async function NetworkDetails({ locale }: { locale: string }) {
 
       {/* Бренды каталога */}
       <div className="mt-12">
-        <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts("network.details.brandsLabel")}</p>
+        <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts("network.details.brandsLabel")}</p>
         <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts("network.details.brandsTitle")}</h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts("network.details.brandsText")}</p>
         <div className="mt-4 flex flex-wrap gap-2.5">

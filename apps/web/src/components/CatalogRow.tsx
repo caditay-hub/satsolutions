@@ -39,7 +39,7 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
 
       <div className="min-w-0 flex-1">
         {displayModelCode(p.modelCode, locale) ? (
-          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400">{displayModelCode(p.modelCode, locale)}</div>
+          <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500">{displayModelCode(p.modelCode, locale)}</div>
         ) : null}
         <Link href={`/products/${p.slug}`} className="block text-[15px] font-bold leading-snug text-slate-900 hover:text-brand-700 first-letter:uppercase">
           {displayName}
@@ -47,7 +47,7 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
         {specs.length > 0 ? (
           <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-[12px] text-slate-500">
             {specs.map(([k, v]) => (
-              <span key={k}><span className="text-slate-400">{k}:</span> <span className="text-slate-700">{v}</span></span>
+              <span key={k}><span className="text-slate-500">{k}:</span> <span className="text-slate-700">{v}</span></span>
             ))}
           </div>
         ) : null}
@@ -55,12 +55,12 @@ export function CatalogRow({ p, name }: { p: ProductDto; usdToUzs?: number; name
 
       <div className="flex shrink-0 flex-row items-center justify-between gap-3 sm:w-48 sm:flex-col sm:items-end sm:justify-start sm:text-right">
         {(p as any).inStock === false ? (
-          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-amber-600">
+          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-amber-700">
             <span className="h-1.5 w-1.5 rounded-full bg-amber-500" />
             {tc("onOrder")}
           </div>
         ) : (
-          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-600">
+          <div className="inline-flex items-center gap-1 text-[12px] font-bold text-emerald-700">
             <svg className="h-3.5 w-3.5" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             {tc("inStock")}
           </div>

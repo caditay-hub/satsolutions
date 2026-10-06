@@ -49,7 +49,7 @@ export async function H3cEquipment({ locale }: { locale: string }) {
   return (
     <div className="mt-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
-      <p className="text-xs font-black uppercase tracking-widest text-brand-600">{ts("virtualization.details.eqLabel")}</p>
+      <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts("virtualization.details.eqLabel")}</p>
       <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts("virtualization.details.eqTitle")}</h2>
       <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{ts("virtualization.details.eqText")}</p>
 

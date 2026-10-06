@@ -103,7 +103,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
               <button
                 key={s.id}
                 onClick={() => scrollTo(s.id)}
-                className={`relative h-full text-[11px] font-black uppercase tracking-[0.2em] transition-all flex flex-col items-center justify-center gap-1 ${activeSection === s.id ? "text-[#E60012]" : "text-slate-400 hover:text-slate-900"
+                className={`relative h-full text-[11px] font-black uppercase tracking-[0.2em] transition-all flex flex-col items-center justify-center gap-1 ${activeSection === s.id ? "text-[#E60012]" : "text-slate-500 hover:text-slate-900"
                   }`}
               >
                 <span className="z-10">{s.label}</span>
@@ -252,7 +252,7 @@ export function SolutionDetailsClient({ item }: SolutionDetailsClientProps) {
                         {kt.description}
                       </div>
                       {kt.secondaryDescription && (
-                        <div className="prose prose-lg text-slate-400 font-bold border-t border-slate-100 pt-8 italic leading-relaxed">
+                        <div className="prose prose-lg text-slate-500 font-bold border-t border-slate-100 pt-8 italic leading-relaxed">
                           {kt.secondaryDescription}
                         </div>
                       )}

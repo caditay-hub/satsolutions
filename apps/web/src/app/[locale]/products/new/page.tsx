@@ -66,7 +66,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
     <div className="container-page py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
       <div className="mx-auto max-w-[1180px]">
-      <nav className="mb-4 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+      <nav className="mb-4 text-[11px] font-bold uppercase tracking-wider text-slate-500">
         <Link href="/" className="hover:text-brand-700">{tnav("home")}</Link>
         <span className="mx-1.5">/</span>
         <Link href="/products" className="hover:text-brand-700">{tnav("products")}</Link>
@@ -89,7 +89,7 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
             .filter((n) => n === 1 || n === pages || Math.abs(n - page) <= 2)
             .map((n, idx, arr) => (
               <span key={n} className="flex items-center gap-2">
-                {idx > 0 && n - arr[idx - 1] > 1 ? <span className="text-slate-400">…</span> : null}
+                {idx > 0 && n - arr[idx - 1] > 1 ? <span className="text-slate-500">…</span> : null}
                 <Link
                   href={n === 1 ? "/products/new" : (`/products/new?page=${n}` as any)}
                   className={`rounded-lg px-3.5 py-2 text-sm font-bold ${n === page ? "bg-brand-600 text-white" : "border border-slate-200 text-slate-700 hover:border-brand-400"}`}

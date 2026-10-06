@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
+import { useDialogFocus, useEscape } from "@/lib/useEscape";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { trackLead } from "@/lib/gtag";
@@ -76,12 +77,15 @@ export function OrderButton({
       setOrderNo(id ? id.replace(/-/g, "").slice(-6).toUpperCase() : "—");
       trackLead({ phone: `+998${rest}`, email: null });
     } catch {
-      setError(t("errSend"));
+      setError(t("errFallback"));
     }
     setSending(false);
   }
 
   const reset = () => { setOpen(false); setOrderNo(null); setError(null); setQty(1); };
+  const titleId = useId();
+  useEscape(open, reset);
+  const dialogRef = useDialogFocus<HTMLDivElement>(open);
 
   return (
     <>
@@ -101,7 +105,7 @@ export function OrderButton({
 
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4" onClick={reset}>
-          <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+          <div role="dialog" aria-modal="true" aria-labelledby={titleId} ref={dialogRef} tabIndex={-1} className="outline-none w-full max-w-md rounded-xl bg-white p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
             {orderNo ? (
               <div className="py-4 text-center">
                 <div className="mb-3 text-4xl">✅</div>
@@ -125,25 +129,27 @@ export function OrderButton({
               <>
                 <div className="mb-3 flex items-start justify-between">
                   <div>
-                    <div className="text-lg font-bold">{t("orderTitle")}</div>
+                    <div id={titleId} className="text-lg font-bold">{t("orderTitle")}</div>
                     <div className="mt-0.5 text-xs text-slate-500 line-clamp-2">{productName}</div>
                   </div>
-                  <button type="button" onClick={reset} className="text-2xl leading-none text-slate-400 hover:text-slate-700">×</button>
+                  <button type="button" onClick={reset} aria-label={t("close")} className="-mr-2 -mt-2 inline-flex h-10 w-10 items-center justify-center text-2xl leading-none text-slate-500 hover:text-slate-700">×</button>
                 </div>
                 <form onSubmit={submit} className="space-y-3">
                   <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
                     <span className="text-sm text-slate-600">{t("orderQty")}</span>
                     <span className="inline-flex items-center gap-2">
-                      <button type="button" onClick={() => setQty((q) => Math.max(1, q - 1))}
-                        className="h-8 w-8 rounded-lg border border-slate-300 bg-white text-lg font-bold leading-none hover:bg-slate-100">−</button>
+                      <button type="button" aria-label="−1" onClick={() => setQty((q) => Math.max(1, q - 1))}
+                        className="h-10 w-10 rounded-lg border border-slate-300 bg-white text-lg font-bold leading-none hover:bg-slate-100">−</button>
                       <input
                         value={qty}
                         onChange={(e) => setQty(Math.min(999, Math.max(1, Number(digitsOnly(e.target.value)) || 1)))}
                         inputMode="numeric"
-                        className="h-8 w-14 rounded-lg border border-slate-300 text-center text-sm font-bold focus:outline-none focus:border-[#e02020]"
+                        name="quantity"
+                        aria-label={t("orderQty")}
+                        className="h-10 w-14 rounded-lg border border-slate-300 text-center text-sm font-bold focus:outline-none focus:border-[#e02020]"
                       />
-                      <button type="button" onClick={() => setQty((q) => Math.min(999, q + 1))}
-                        className="h-8 w-8 rounded-lg border border-slate-300 bg-white text-lg font-bold leading-none hover:bg-slate-100">+</button>
+                      <button type="button" aria-label="+1" onClick={() => setQty((q) => Math.min(999, q + 1))}
+                        className="h-10 w-10 rounded-lg border border-slate-300 bg-white text-lg font-bold leading-none hover:bg-slate-100">+</button>
                     </span>
                   </div>
                   <div className="flex items-baseline justify-between px-1 text-sm">
@@ -153,6 +159,9 @@ export function OrderButton({
                     </span>
                   </div>
                   <input
+                    name="name"
+                    autoComplete="name"
+                    aria-label={t("yourName")}
                     placeholder={t("yourName")}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -162,21 +171,32 @@ export function OrderButton({
                     <span className="flex items-center bg-slate-50 px-3 text-sm font-semibold text-slate-700">+998</span>
                     <input
                       required
+                      type="tel"
                       inputMode="tel"
+                      name="phone"
+                      autoComplete="tel-national"
+                      aria-label={`${t("phone")} +998`}
                       placeholder="90 123 45 67"
                       value={formatUzRest(phoneRest)}
-                      onChange={(e) => setPhoneRest(digitsOnly(e.target.value).slice(0, 9))}
+                      onChange={(e) => {
+                        // автозаполнение браузера подставляет номер целиком (+998…) — код страны отрезаем
+                        let d = digitsOnly(e.target.value);
+                        if (d.length > 9 && d.startsWith("998")) d = d.slice(3);
+                        setPhoneRest(d.slice(0, 9));
+                      }}
                       className="w-full px-3 py-2 text-sm outline-none"
                     />
                   </div>
                   <textarea
+                    name="comment"
+                    aria-label={t("orderComment")}
                     placeholder={t("orderComment")}
                     rows={2}
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                     className="w-full resize-none rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020]"
                   />
-                  {error ? <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{error}</div> : null}
+                  {error ? <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{error}</div> : null}
                   <button
                     type="submit"
                     disabled={sending}

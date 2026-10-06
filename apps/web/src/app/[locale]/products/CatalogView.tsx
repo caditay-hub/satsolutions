@@ -375,7 +375,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <Link key={n} href={`/products/type/${typeSlug(n)}`}
                 className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
                 {localizeCatName(n, locale)}
-                {cnt ? <span className="ml-1.5 font-normal text-slate-400">{cnt}</span> : null}
+                {cnt ? <span className="ml-1.5 font-normal text-slate-500">{cnt}</span> : null}
               </Link>
             );
           })}
@@ -388,7 +388,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           {typeFacets.types.filter((t) => t.count >= 3 && pairExists(brand, t.name)).slice(0, 14).map((t) => (
             <Link key={t.name} href={`/catalog/${brand}/${typeSlug(t.name)}`}
               className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
-              {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-400">({t.count})</span>
+              {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-500">({t.count})</span>
             </Link>
           ))}
         </div>
@@ -398,7 +398,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           {typeFacets.brands.filter((b) => b.count >= 3 && BRAND_CONFIG[b.slug.toLowerCase()] && pairExists(b.slug, type as string)).slice(0, 12).map((b) => (
             <Link key={b.slug} href={`/catalog/${b.slug.toLowerCase()}/${typeSlug(type as string)}`}
               className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
-              {localizeCatName(type as string, locale)} {localizeBrandName(b.slug, b.name, locale)} <span className="text-slate-400">({b.count})</span>
+              {localizeCatName(type as string, locale)} {localizeBrandName(b.slug, b.name, locale)} <span className="text-slate-500">({b.count})</span>
             </Link>
           ))}
         </div>
@@ -570,7 +570,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               Даёт хабам свежие внутренние ссылки, а статьям — переходы из каталога. */}
           {pathType && hubArticles.length > 0 ? (
             <section className="mt-10 border-t border-slate-200 pt-6">
-              <p className="text-xs font-black uppercase tracking-widest text-brand-600">{HUB_ARTICLES_UI[locale] ?? HUB_ARTICLES_UI.ru}</p>
+              <p className="text-xs font-black uppercase tracking-widest text-brand-700">{HUB_ARTICLES_UI[locale] ?? HUB_ARTICLES_UI.ru}</p>
               <div className="mt-3 flex flex-wrap gap-2.5">
                 {hubArticles.map((a) => (
                   <Link key={a.slug} href={`/blog/${a.slug}`} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700">

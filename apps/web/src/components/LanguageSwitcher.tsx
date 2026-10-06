@@ -114,7 +114,7 @@ export function LanguageSwitcher({ className = "", compact = false }: { classNam
       >
         {Flags[locale]}
         {compact ? null : <span className="uppercase">{locale}</span>}
-        {compact ? null : <svg className={`h-3 w-3 text-slate-400 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>}
+        {compact ? null : <svg className={`h-3 w-3 text-slate-500 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" /></svg>}
       </button>
       <div className={`absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg ${open ? "" : "hidden"}`}>
         {routing.locales.map((l) => (
