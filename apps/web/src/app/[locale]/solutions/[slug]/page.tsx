@@ -28,6 +28,7 @@ import { WorkTerms } from "@/components/WorkTerms";
 import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { ServiceInstallPrices } from "@/components/ServiceInstallPrices";
+import { installPrices, fmtSum } from "@/lib/installPrices";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
@@ -94,6 +95,22 @@ export async function generateStaticParams() {
   return Object.keys(serviceByKey).map((slug) => ({ slug }));
 }
 
+/** «Монтаж внутренней камеры — от 155 000 сум.» на языке страницы; null — если у услуги нет прайса. */
+async function priceLead(key: string, locale: string): Promise<string | null> {
+  const w = installPrices(key)?.works?.[0];
+  if (!w) return null;
+  const t = await getTranslations({ locale, namespace: "installPrices" });
+  const work = t(`work.${w.k}`);
+  const price = fmtSum(w.price, locale);
+  switch (locale) {
+    case "uz": return `${work} — ${price}dan.`;
+    case "en": return `${work} from ${price}.`;
+    case "tr": return `${work}: ${price}'den başlayan fiyatlarla.`;
+    case "zh": return `${work} ${price}起。`;
+    default: return `${work} — от ${price}.`;
+  }
+}
+
 async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const svc = serviceByKey[slug];
@@ -104,7 +121,11 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     // Гео-коммерческий SEO-оверлей (город + интент) — приоритет над генерик-title/intro
     const seo = getServiceSeo(locale, svc.key);
     const metaTitle = seo ? `${seo.title}` : `${title} — SAT Solutions`;
-    const metaDesc = seo?.desc ?? intro;
+    // Описание в выдаче начинается с цены из прайса монтажа (07.10.2026): по запросам с «цена»
+    // при позиции ~7 кликов не было (0 из 95 показов). Цена берётся из того же прайса, что блок
+    // «Сколько стоит» на странице, — меняется прайс, меняется и описание.
+    const lead = await priceLead(svc.key, locale);
+    const metaDesc = `${lead ? lead + (locale === "zh" ? "" : " ") : ""}${seo?.desc ?? intro}`; // в китайском без пробела между фразами
     return {
       title: { absolute: metaTitle },
       description: metaDesc,
