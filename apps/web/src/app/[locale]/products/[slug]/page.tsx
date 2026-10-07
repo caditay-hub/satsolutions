@@ -721,10 +721,10 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Статьи по теме: товар → блог (перелинковка, краулинг статей) */}
             {(() => {
               const relSvc = serviceForCategory(categoryInfo?.name);
-              let arts = articlesForService(relSvc?.key, locale);
+              let arts = articlesForService(relSvc?.key, locale, 3, slug);
               // Узкие сетевые услуги отделены от network 02.10.2026; статей по ним мало
               // (по радиомостам нет вовсе) — тогда показываем сетевые, как раньше
-              if (!arts.length && relSvc && ["radiobridge", "wifi", "telephony", "fiber"].includes(relSvc.key)) arts = articlesForService("network", locale);
+              if (!arts.length && relSvc && ["radiobridge", "wifi", "telephony", "fiber"].includes(relSvc.key)) arts = articlesForService("network", locale, 3, slug);
               if (!arts.length) return null;
               return (
                 <div className="mt-5 rounded-xl border border-slate-200 bg-slate-50/60 p-4">

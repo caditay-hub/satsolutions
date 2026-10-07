@@ -34,7 +34,7 @@ import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
 import { SERVICE_TO_GROUP } from "@/lib/groupSeo";
-import { ARTICLES } from "@/lib/articlesData";
+import { articlesForServicePage } from "@/lib/articlesData";
 import { getReviews } from "@/lib/api";
 import { ReviewForm } from "@/components/ReviewForm";
 import { type Review } from "@/components/ReviewsSection";
@@ -236,7 +236,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // Содержательный SEO-текст под голые высокочастотники (RU-приоритет; нет — не рендерим)
   const content = getServiceContent(locale, svc.key);
   // Обратная перелинковка: инфо-статьи блога, связанные с этой услугой (только с переводом на локаль)
-  const relatedArticles = ARTICLES.filter((a) => a.related.includes(svc.key) && a.loc[locale]).slice(0, 6);
+  const relatedArticles = articlesForServicePage(svc.key, locale);
   // Отзывы, привязанные к этой услуге (одобренные); avg/count — компактный рейтинг под H1
   // .catch: страницы услуг пререндерятся на сборке, и падение API не должно ронять билд
   const reviews = await getReviews(svc.key).catch(() => ({ avg: 0, count: 0, items: [] as Awaited<ReturnType<typeof getReviews>>["items"] }));

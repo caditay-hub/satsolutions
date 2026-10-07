@@ -26,6 +26,11 @@ const UI: Record<string, { blog: string; home: string; related: string; hubsLabe
 
 // Названия товарных хабов для чипов «Каталог по теме» (слаг = /products/type/<slug>)
 const HUB_LABELS: Record<string, Record<string, string>> = {
+  // Подписи как в catalogI18n.ts. izveschateli и pribory-i-moduli стояли в hubs двух статей,
+  // но без подписи фильтр ниже их молча выкидывал (AF, 07.10.2026)
+  "ohrannaya-signalizaciya": { ru: "Охранная сигнализация", uz: "Qoʻriqlash signalizatsiyasi", en: "Intruder alarm", tr: "Hırsız alarmı", zh: "防盗报警" },
+  "izveschateli": { ru: "Извещатели", uz: "Datchiklar", en: "Detectors", tr: "Dedektörler", zh: "探测器" },
+  "pribory-i-moduli": { ru: "Приборы и модули", uz: "Asboblar va modullar", en: "Devices & modules", tr: "Cihazlar ve modüller", zh: "设备与模块" },
   "ip-kamery": { ru: "IP-камеры", uz: "IP-kameralar", en: "IP cameras", tr: "IP kameralar", zh: "IP摄像机" },
   "ip-videoregistratory-nvr": { ru: "IP-видеорегистраторы (NVR)", uz: "IP-videoregistratorlar (NVR)", en: "Network video recorders (NVR)", tr: "Kayıt cihazları (NVR)", zh: "网络录像机（NVR）" },
   "turnikety-i-shlagbaumy": { ru: "Турникеты и шлагбаумы", uz: "Turniket va shlagbaumlar", en: "Turnstiles and barriers", tr: "Turnikeler ve bariyerler", zh: "闸机与道闸" },
@@ -68,7 +73,7 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
   // Обложка статьи вместо общего /og.png: у каждой из статей есть свой кадр 1200×630
   const cover = `${SITE_URL}${articleImg(slug)}`;
   return {
-    title: { absolute: titleWithBrand(body.title) },
+    title: { absolute: titleWithBrand(body.seoTitle ?? body.title) },
     description: clampDesc(body.excerpt),
     alternates: hreflangAlternates(`/blog/${slug}`, locale),
     openGraph: { type: "article", title: body.title, description: clampDesc(body.excerpt), locale: ogLocale(locale), images: [cover], publishedTime: article.date },

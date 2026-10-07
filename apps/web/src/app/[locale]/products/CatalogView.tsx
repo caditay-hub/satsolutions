@@ -8,7 +8,7 @@ import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeLongread } from "@/lib/longreadI18n";
 import { localizeServiceCase } from "@/lib/serviceCaseI18n";
 import { Link } from "@/i18n/navigation";
-import { ARTICLES } from "@/lib/articlesData";
+import { articlesForHub } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» на хабах типов (инлайн — не раздуваем messages)
 const HUB_ARTICLES_UI: Record<string, string> = {
@@ -236,10 +236,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const brandSeo = onlyBrand ? (brandLanding?.seo ?? null) : null;
   // SEO-блок связки бренд×категория (страницы /catalog/[brand]/[type])
   const pairBlock = pairSeo && cleanScope ? pairSeo : null;
-  // Статьи, привязанные к этому хабу типа через Article.hubs (до 4, свежие первыми).
+  // Статьи, привязанные к этому хабу типа через Article.hubs (до 6, свежие первыми).
   // pathType приходит РУССКИМ именем типа — hubs хранят слаги, конвертируем.
   const hubArticles = pathType && cleanScope
-    ? ARTICLES.filter((a) => a.hubs?.includes(typeSlug(pathType)) && a.loc[locale]).slice(0, 4)
+    ? articlesForHub(typeSlug(pathType), locale)
     : [];
   const typeGroup = isTypePage ? CATALOG_GROUPS.find((g) => g.types.some((t) => t.n === type)) : undefined;
   // JSON-LD BreadcrumbList для страниц типа (в HTML крошки есть, разметки не было)

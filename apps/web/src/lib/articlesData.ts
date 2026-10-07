@@ -9,7 +9,8 @@
 export type ArticleSection = { h: string; p: string[] };
 export type ArticleFaqItem = { q: string; a: string };
 // faq → блок «Частые вопросы» + FAQPage JSON-LD на странице статьи (rich-сниппеты)
-export type ArticleBody = { title: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
+// seoTitle — короткий заголовок для выдачи (≤62 знаков), когда title длиннее и обрезался бы
+export type ArticleBody = { title: string; seoTitle?: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
 
 // Обложка статьи: /blog-img/<slug>.jpg в public (карточка списка + фон шапки статьи)
 export const articleImg = (slug: string) => `/blog-img/${slug}.jpg`;
@@ -3742,6 +3743,7 @@ export const ARTICLES: Article[] = [
     date: "2026-09-03",
     updated: "2026-09-09",
     related: ["alarm", "cctv"],
+    hubs: ["ohrannaya-signalizaciya", "izveschateli"],
     loc: {
       ru: {
         title: "Сколько стоит охранная сигнализация для дома и магазина",
@@ -4787,6 +4789,7 @@ export const ARTICLES: Article[] = [
     date: "2026-08-05",
     updated: "2026-09-09",
     related: ["locks", "access", "intercom"],
+    hubs: ["zamki-i-skud"],
     loc: {
       ru: {
         title: "Электронный замок на дверь: магнитный, кодовый или smart — что выбрать",
@@ -10835,6 +10838,7 @@ export const ARTICLES: Article[] = [
     date: "2026-08-20",
     updated: "2026-09-09",
     related: ["intercom", "locks"],
+    hubs: ["domofoniya"],
     loc: {
       ru: {
         title: "Сколько стоит домофон с установкой в Ташкенте",
@@ -13033,14 +13037,36 @@ export const articleBySlug: Record<string, Article> = Object.fromEntries(ARTICLE
 // обход 18.09.2026 показал, что около трети статей вообще не в индексе.
 // Подбор: сначала явный seeAlso, затем — наибольшее пересечение по товарным хабам и
 // смежным услугам, при равенстве ближе та, что свежее.
-export function relatedArticles(slug: string, locale: string, limit = 2): Article[] {
+// Ручные «Читайте также» поверх seeAlso (AF, 07.10.2026). Обход URL Inspection 07.10:
+// 8 из 9 статей 26.08–18.09 Google не взял в индекс за 3–6 недель, хотя они в sitemap,
+// в списке /blog и отправлены через Indexing API. Общее у них одно — на них почти не
+// ведут ссылки из других статей. Сюда — входящие ссылки из сильных соседних материалов
+// (с показами и кликами в GSC): ключ — статья-ИСТОЧНИК, значение — на кого ссылается.
+const LINK_BOOST: Record<string, string[]> = {
+  "sbros-parolya-hikvision": ["ivms-4200-skachat-nastroit", "kak-podklyuchit-ip-kameru-hikvision"],
+  "kak-podklyuchit-ip-kameru-hikvision": ["ivms-4200-skachat-nastroit", "sbros-parolya-hikvision"],
+  "videonablyudenie-cherez-telefon": ["ivms-4200-skachat-nastroit"],
+  "chto-takoe-poe": ["kak-vybrat-kommutator-switch"],
+  "poe-kommutator-ili-bloki-pitaniya": ["kak-vybrat-kommutator-switch", "kak-vybrat-ibp"],
+  "shlagbaum-narxi": ["shlagbaum-dlya-dvora-i-parkovki"],
+  "shlagbaum-anpr": ["shlagbaum-dlya-dvora-i-parkovki"],
+  "kak-vybrat-ibp": ["kak-vybrat-stabilizator-napryazheniya"],
+  "kak-vybrat-stabilizator-napryazheniya": ["kak-vybrat-ibp"],
+  "wifi-dlya-ofisa": ["wifi-signalini-kuchaytirish"],
+  "router-sozlash": ["wifi-signalini-kuchaytirish"],
+  "umnyy-dom-s-chego-nachat": ["aqlli-uy-narxi"],
+  "uchet-rabochego-vremeni": ["davomat-tizimi", "uchet-rabochego-vremeni-po-litsu"],
+  "skolko-stoit-videonablyudenie": ["kamera-narxlari"],
+  "videokuzatuv-ornatish-narxi": ["kamera-narxlari"],
+};
+
+export function relatedArticles(slug: string, locale: string, limit = 4): Article[] {
   const self = articleBySlug[slug];
   if (!self) return [];
-  const explicit = (self.seeAlso ?? [])
+  const explicit = [...new Set([...(LINK_BOOST[slug] ?? []), ...(self.seeAlso ?? [])])]
     .map((s) => articleBySlug[s])
-    .filter((a): a is Article => Boolean(a && a.loc[locale]));
+    .filter((a): a is Article => Boolean(a && a.slug !== slug && a.loc[locale]));
   if (explicit.length >= limit) return explicit.slice(0, limit);
-
   const hubs = new Set(self.hubs ?? []);
   const services = new Set(self.related ?? []);
   const scored = ARTICLES
@@ -13062,8 +13088,48 @@ export function articlesForLocale(locale: string): Article[] {
   return ARTICLES.filter((a) => a.loc[locale]);
 }
 
+// Детерминированный хеш строки: одна и та же страница всегда получает один и тот же набор
+// (стабильно для кэша и для робота), а разные страницы — разные наборы.
+function seedHash(s: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619);
+  return h >>> 0;
+}
+
 // Статьи, привязанные к услуге (related) — перелинковка товар/услуга → блог.
-export function articlesForService(serviceKey: string | null | undefined, locale: string, limit = 3): Article[] {
+// Раньше брались первые N по порядку массива, и 3 256 карточек товаров ссылались на одни и
+// те же 3 статьи темы: у видеонаблюдения 29 статей, 26 из них со страниц товаров не получали
+// ничего (AF, 07.10.2026). С seed (слаг товара) — окно из N подряд со сдвигом по хешу,
+// так каждая статья темы набирает ссылки примерно с равной доли карточек.
+export function articlesForService(serviceKey: string | null | undefined, locale: string, limit = 3, seed?: string): Article[] {
   if (!serviceKey) return [];
-  return ARTICLES.filter((a) => a.loc[locale] && a.related.includes(serviceKey)).slice(0, limit);
+  const list = ARTICLES.filter((a) => a.loc[locale] && a.related.includes(serviceKey));
+  if (!seed || list.length <= limit) return list.slice(0, limit);
+  const start = seedHash(seed) % list.length;
+  return Array.from({ length: limit }, (_, i) => list[(start + i) % list.length]);
+}
+
+// Статьи, закреплённые за страницей услуги: ответ на головной запрос темы. «Что такое СКУД»
+// стоит на 8–10 месте по «скуд»/«скуд это», а на /solutions/access не выводилась — у СКУД
+// 17 статей при 6 местах; kamera-narxlari — главная статья блога по Узбекистану.
+const SERVICE_PINNED: Record<string, string[]> = {
+  access: ["chto-takoe-skud", "skolko-stoit-skud"],
+  cctv: ["kamera-narxlari", "skolko-stoit-videonablyudenie"],
+};
+
+// Блок статей на странице услуги: закреплённые → те, для которых эта услуга главная
+// (related[0]) → остальные; внутри групп — порядок массива (свежие первыми).
+export function articlesForServicePage(serviceKey: string, locale: string, limit = 6): Article[] {
+  const ok = (a?: Article): a is Article => Boolean(a && a.loc[locale] && a.related.includes(serviceKey));
+  const pinned = (SERVICE_PINNED[serviceKey] ?? []).map((s) => articleBySlug[s]).filter(ok);
+  const rest = ARTICLES.filter((a) => ok(a) && !pinned.includes(a));
+  const primary = rest.filter((a) => a.related[0] === serviceKey);
+  const secondary = rest.filter((a) => a.related[0] !== serviceKey);
+  return [...pinned, ...primary, ...secondary].slice(0, limit);
+}
+
+// Статьи раздела каталога (Article.hubs). Было 4 — у IP-камер 20 статей, у NVR и турникетов
+// по 13; на одну страницу раздела ставим 6, остальное добирают карточки товаров.
+export function articlesForHub(hub: string, locale: string, limit = 6): Article[] {
+  return ARTICLES.filter((a) => a.hubs?.includes(hub) && a.loc[locale]).slice(0, limit);
 }
