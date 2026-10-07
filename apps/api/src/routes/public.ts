@@ -439,6 +439,10 @@ publicRouter.get("/products", async (req, res) => {
                 ? [["createdAt", "DESC"]]
                 // default: by category, then by name — logical grouping
                 : [[categoryNameExpr, "ASC"], ["name", "ASC"]];
+  // Последний ключ — id: у товаров с одинаковой ценой/датой загрузки (партии)/названием
+  // порядок иначе случайный, и при выдаче порциями (каталог подгружается при прокрутке,
+  // 07.10.2026) товары повторялись на соседних страницах или пропадали.
+  order.push(["id", "ASC"]);
 
   const { rows, count } = await Product.findAndCountAll({
     where,
