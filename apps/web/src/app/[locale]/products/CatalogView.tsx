@@ -54,7 +54,7 @@ const CATALOG_SCOPED_PAGE = 60;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [] }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -85,14 +85,16 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const scoped = !!(type || brand || category || q || (chars && Object.keys(chars).length) || priceMin !== undefined || priceMax !== undefined);
   const perPage = scoped ? CATALOG_SCOPED_PAGE : CATALOG_PAGE_BARE;
 
-  // 301: голая страница типа /products?type=<имя> → чистый URL /products/type/<slug>.
+  // 301: голая страница типа /products?type=<имя>[&page=N] → чистый URL /products/type/<slug>[?page=N].
+  // Номер страницы сохраняем (07.10.2026): старая пагинация разделов вела на /products?type=…&page=N,
+  // такие ссылки Google уже знает — пусть переезжают на чистый адрес, а не висят фасетом.
   // __clean=1 — внутренний вызов из /products/type/[slug] (без редиректа, иначе цикл).
   if ((sp as any).__clean !== "1"
-    && type && !type.includes(",") && !category && !brand && !q && page === 1
+    && type && !type.includes(",") && !category && !brand && !q
     && !chars && priceMin === undefined && priceMax === undefined
     && !mp && !technology && !installationType && !sp.perPage && !sp.sort) {
     const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
-    permanentRedirect(`${lp}/products/type/${typeSlug(type)}`);
+    permanentRedirect(`${lp}/products/type/${typeSlug(type)}${page > 1 ? `?page=${page}` : ""}`);
   }
 
   let usdToUzs = 1;
@@ -220,6 +222,13 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   }
   // SEO-блок бренда (лонгрид + FAQ) — только на «чистой» первой странице бренда без доп. фильтров
   const cleanScope = !chars && !priceMin && !priceMax && !q && page === 1;
+  // Пагинация раздела ведёт на СВОЙ адрес (/products/type/x?page=2), а не на фасет
+  // /products?type=…&page=2: тот закрыт robots.txt и noindex, и Google не проходил дальше
+  // первых 60 товаров раздела (разбор индексации 07.10.2026). Измерения, уже зашитые в путь
+  // (тип, бренд, типы группы), в query не дублируем.
+  const pagerBase = listPath ?? "/products";
+  const pagerParams: Record<string, string | undefined> = { q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined };
+  if (listPath) for (const k of listFixed) delete pagerParams[k];
   const onlyBrand = !!brandLanding && !type && cleanScope;
   // Чипы «тип × бренд» ведут на /catalog/[brand]/[type]: показываем только пары, которые там
   // реально есть (тот же список /brand-type-pairs). Счётчик фасета давал чипы и для пар вне
@@ -480,7 +489,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               )}
               {/* верхняя пагинация — только у голого /products; в разделе товары подгружаются при прокрутке */}
               {!smart && !scoped ? (
-                <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} className="mb-4" />
+                <Pagination basePath={pagerBase} page={page} limit={perPage} total={total} params={pagerParams} className="mb-4" />
               ) : null}
               {smart ? (
                 <SmartResultsView items={smartItems} related={similar.map(toSmartItem)} usdToUzs={usdToUzs} />
@@ -510,7 +519,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             </>
           )}
           {smart ? null : (
-            <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} />
+            <Pagination basePath={pagerBase} page={page} limit={perPage} total={total} params={pagerParams} />
           )}
 
           {/* «Похожие товары» для smart-режима рендерятся внутри SmartResultsView —

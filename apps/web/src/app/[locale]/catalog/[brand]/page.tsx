@@ -106,6 +106,8 @@ export default async function BrandCatalogPage({
   const view = await CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, __clean: "1" }),
+    listPath: `/catalog/${brandSlug}`,
+    listFixed: ["brand"],
     brandLanding: {
       name: brandName,
       // H1 с гео: спрос идёт как «<бренд> uzbekistan/узбекистан» (hikvision uzbekistan —

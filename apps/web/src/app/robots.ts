@@ -15,15 +15,20 @@ import type { MetadataRoute } from "next";
 //
 // Правило пишем на сам параметр (а не на /products?), чтобы накрыть и фасеты
 // на страницах бренда/типа/группы во всех пяти локалях.
+//
+// 07.10.2026 убраны "type" и "page". page: пагинация разделов (/products/type/x?page=2,
+// /catalog/<бренд>?page=2) — единственный путь робота к товарам дальше первых 60 в разделе;
+// эти страницы сами отдают noindex,follow. type: старые /products?type=<имя> отдают 308 на
+// /products/type/<slug>, а под Disallow Google редиректа не видел и держал 300+ таких адресов
+// в «404»/«переадресации» и «проиндексировано, несмотря на блокировку». Сочетания с
+// category/brand/chars и т.д. по-прежнему закрыты правилами этих параметров.
 const FACET_PARAMS = [
   "category",
   "brand",
-  "type",
   "chars",
   "priceMin",
   "priceMax",
   "sort",
-  "page",
   "perPage",
   "view",
   "mp",

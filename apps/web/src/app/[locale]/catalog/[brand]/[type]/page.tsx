@@ -111,6 +111,8 @@ export default async function BrandTypePage({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, brand: brandSlug, type: pair.typeName, __clean: "1" }),
     pathType: pair.typeName,
+    listPath: `/catalog/${brandSlug}/${type}`,
+    listFixed: ["brand", "type"],
     brandLanding: { name: h1, description: undefined, logoUrl, seo: null },
     pairSeo: seo ? { intro: seo.intro, faq: seo.faq, heading: h1 } : null,
   } as any);

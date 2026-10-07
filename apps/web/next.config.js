@@ -77,6 +77,31 @@ const nextConfig = {
       { source: "/page/kontakty", destination: "/contact", permanent: true },
       { source: "/page/kontakti", destination: "/contact", permanent: true },
       { source: "/page/contacts", destination: "/contact", permanent: true },
+      // Живые 404 из отчёта GSC «Индексирование страниц» (разбор 07.10.2026). Стоят ДО общего
+      // /page/:slug* → «/», иначе гарантия ушла бы на главную.
+      // Гарантия старой CMS → «Возврат и обмен» (там же условия гарантии); общий /page/* для
+      // локалей раньше не ловился вовсе (/en/page/garantiia-na-tovary отдавал 404).
+      { source: "/page/garantiia-na-tovary", destination: "/returns", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/page/garantiia-na-tovary", destination: "/:locale/returns", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/page/:slug*", destination: "/:locale", permanent: true },
+      // Старая страница поддержки → контакты
+      { source: "/support", destination: "/contact", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/support", destination: "/:locale/contact", permanent: true },
+      // Подстраницы старых решений «умный автобус» и «парковка» → сами решения
+      { source: "/solutions/umniy-avtobus/:path+", destination: "/solutions/bus", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/solutions/umniy-avtobus/:path+", destination: "/:locale/solutions/bus", permanent: true },
+      { source: "/solutions/parkovka/:path+", destination: "/solutions/parking", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/solutions/parkovka/:path+", destination: "/:locale/solutions/parking", permanent: true },
+      // Подстраницы кейса Ucell (видеостена) → сам кейс
+      { source: "/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre/:path+", destination: "/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre/:path+", destination: "/:locale/portfolio/ucell-ustanovka-videosteny-dahua-v-situacionnom-centre", permanent: true },
+      // Бренд Avigilon закрыт 09.09: /catalog/avigilon уже уходит на hikvision (middleware),
+      // а бренд×тип отдавал 404 — ведём в раздел того же типа
+      { source: "/catalog/avigilon/:type", destination: "/products/type/:type", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/catalog/avigilon/:type", destination: "/:locale/products/type/:type", permanent: true },
+      // Снятый товар Dahua без записи в removedProducts → раздел бренда
+      { source: "/products/dh-ipc-hdw2221rp-zs", destination: "/catalog/dahua", permanent: true },
+      { source: "/:locale(uz|en|tr|zh)/products/dh-ipc-hdw2221rp-zs", destination: "/:locale/catalog/dahua", permanent: true },
       { source: "/page/:slug*", destination: "/", permanent: true },
       // Легаси-URL старой CMS (массово в индексе Google, отдавали 404 — см. выгрузку GSC).
       // Старый сайт использовал префиксы /ru и /en; /ru/* стрипается middleware и ловится

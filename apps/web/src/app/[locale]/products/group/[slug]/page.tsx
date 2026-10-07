@@ -73,6 +73,8 @@ export default async function ProductGroupPage({ params, searchParams }: { param
         // крошки уже отданы выше: у группы из одного типа CatalogView считает страницу
         // тип-страницей и без этого флага печатает второй BreadcrumbList
         skipBreadcrumbLd: true,
+        listPath: `/products/group/${slug}`,
+        listFixed: ["type"],
         groupLanding: {
           name: groupName,
           idx,
