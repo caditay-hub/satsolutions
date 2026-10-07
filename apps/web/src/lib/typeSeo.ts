@@ -196,11 +196,11 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       zh: "塔什干IP监控摄像机 — 海康威视、大华价格",
     },
     desc: {
-      ru: "IP-камеры видеонаблюдения 2–8 Мп: Hikvision, Dahua, HiLook, Avigilon. Уличные и внутренние, ColorVu и AcuSense. Подбор, монтаж под ключ. Цены в Ташкенте, гарантия, доставка.",
+      ru: "IP-камеры видеонаблюдения 2–8 Мп: Hikvision, Dahua, HiLook. Уличные и внутренние, ColorVu и AcuSense. Подбор, монтаж под ключ. Цены в Ташкенте, гарантия, доставка.",
       uz: "2–8 Mp IP videokuzatuv kameralari: Hikvision, Dahua, HiLook. Tashqi va ichki, ColorVu va AcuSense. Tanlash, montaj. Toshkentda narxlar, kafolat, yetkazib berish.",
-      en: "2–8 MP IP surveillance cameras: Hikvision, Dahua, HiLook, Avigilon. Outdoor and indoor, ColorVu and AcuSense. Selection and turnkey installation. Tashkent prices, warranty.",
-      tr: "2–8 MP IP güvenlik kameraları: Hikvision, Dahua, HiLook, Avigilon. Dış ve iç mekân, ColorVu ve AcuSense. Anahtar teslim montaj, Taşkent fiyatları, garanti.",
-      zh: "200万至800万像素IP监控摄像机：海康威视、大华、HiLook、Avigilon。室外与室内款，支持全彩ColorVu与智能侦测。塔什干报价，含安装与质保。",
+      en: "2–8 MP IP surveillance cameras: Hikvision, Dahua, HiLook. Outdoor and indoor, ColorVu and AcuSense. Selection and turnkey installation. Tashkent prices, warranty.",
+      tr: "2–8 MP IP güvenlik kameraları: Hikvision, Dahua, HiLook. Dış ve iç mekân, ColorVu ve AcuSense. Anahtar teslim montaj, Taşkent fiyatları, garanti.",
+      zh: "200万至800万像素IP监控摄像机：海康威视、大华、HiLook。室外与室内款，支持全彩ColorVu与智能侦测。塔什干报价，含安装与质保。",
     },
   },
   "videoregistratory-dvr": {

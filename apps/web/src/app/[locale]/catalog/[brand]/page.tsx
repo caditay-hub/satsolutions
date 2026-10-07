@@ -47,6 +47,10 @@ async function generateMetadataBase({
   // фолбэк — прежний шаблон «{Бренд} — Каталог продукции».
   const seo = getBrandSeo(brand.toLowerCase(), locale);
   const title = seo?.title || `${localizeBrandName(brand.toLowerCase(), cfg.displayName, locale)} — ${tc("productCatalog")}`;
+  // Короткие title брендов (B, 07.10.2026) уже содержат « | SAT» и идут как есть: шаблон
+  // «— SAT Solutions» удлинял их до 80–102 знаков, Google обрезал. Без « | SAT» — прежний шаблон.
+  const metaTitle = title.endsWith("| SAT") ? { absolute: title } : title;
+  const ogTitle = title.replace(/\s*\|\s*SAT$/, "");
   // Сниппет с наличием и CTA впереди — дожим CTR на позициях 5–8 (страницы с показами в GSC)
   const { brands } = await getBrands().catch(() => ({ brands: [] as Awaited<ReturnType<typeof getBrands>>["brands"] }));
   const brandRow = brands.find((b) => b.slug.toLowerCase() === brand.toLowerCase());
@@ -57,10 +61,10 @@ async function generateMetadataBase({
   const baseDesc = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   const description = stockCount >= 5 ? `${tc("brandInStock", { count: stockCount })} ${baseDesc}` : baseDesc;
   return {
-    title,
+    title: metaTitle,
     description: clampDesc(description),
     alternates: hreflangAlternates(`/catalog/${brand.toLowerCase()}`, locale),
-    openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
+    openGraph: { title: ogTitle, description, locale: ogLocale(locale), images: ["/og.png"] },
     // Фасет-комбинации (chars/цена/сортировка/страница>1) — noindex,follow, как на type/group
     robots: emptyBrand ? { index: false, follow: true } : catalogRobots(sp),
   };
