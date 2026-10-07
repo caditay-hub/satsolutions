@@ -131,7 +131,10 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <head>
         {/* Preload критичных шрифтов — успевают к первому рендеру, своп почти не виден. */}
-        <link rel="preload" href="/fonts/jura-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Кириллицу предзагружаем только на русской версии: на uz/en/tr/zh она не нужна
+            (32 КБ отнимали канал у фото первого экрана — AO, 07.10.2026). Если кириллица
+            всё же встретится, шрифт подгрузится сам по unicode-range. */}
+        {locale === "ru" && <link rel="preload" href="/fonts/jura-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />}
         <link rel="preload" href="/fonts/jura-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* tr/uz-заголовки используют latin-ext (ş, ğ, İ, ʻ): без прелоада display:optional
             отрисует эти буквы Arial-фолбэком — внутри слова «пляшет» начертание. */}
@@ -141,7 +144,7 @@ export default async function RootLayout({
             <link rel="preload" href="/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
           </>
         )}
-        <link rel="preload" href="/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {locale === "ru" && <link rel="preload" href="/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />}
         <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{
           __html: `

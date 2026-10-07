@@ -193,6 +193,7 @@ export function HeroCarousel({
                       src={sImg}
                       fill
                       priority={i === 0}
+                      fetchPriority={i === 0 ? "high" : undefined}
                       loading={i === 0 ? undefined : "lazy"}
                       sizes="100vw"
                       className="object-cover object-center"

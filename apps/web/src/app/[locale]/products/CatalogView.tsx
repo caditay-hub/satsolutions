@@ -39,41 +39,17 @@ import { TYPE_LONGREAD_SLUG } from "@/lib/typeLongread";
 import { CatalogFacets } from "./CatalogFacets";
 import { SmartResultsView, type SmartItem } from "./SmartResultsView";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
+import { slimProduct } from "@/lib/catalogSlim";
+import { InfiniteProducts } from "@/components/catalog/InfiniteProducts";
 
-// Размер «страницы» для голого каталога /products (тысячи позиций). На страницах
-// с выбранным разделом/фильтром (тип/бренд/категория/поиск/характеристики/цена)
-// показываем ВСЕ товары разом (CATALOG_SHOW_ALL) — без пагинации и без селектора.
+// Размер «страницы» для голого каталога /products (тысячи позиций, постранично).
+// На страницах раздела/фильтра (тип/бренд/категория/поиск/характеристики/цена) товары
+// подгружаются при прокрутке (InfiniteProducts) порциями по CATALOG_SCOPED_PAGE.
+// Раньше там выводились ВСЕ товары разом (до 1000): HTML группы «Видеонаблюдение» —
+// 1,7 МБ, разбор на телефоне до 4,5 с (замер 06.10.2026). Решение владельца 07.10.2026:
+// подгрузка при прокрутке, без кнопки «Показать ещё».
 const CATALOG_PAGE_BARE = 120;
-const CATALOG_SHOW_ALL = 1000;
-
-// Карточка/строка — клиентские компоненты: весь ProductDto сериализуется в RSC-поток.
-// Карточке (сетка) нужны id/slug/name/price/cover/modelCode/recommended — тяжёлые поля
-// (description ~сотни символов, галерея, seo) вырезаем ДО передачи → RSC-поток ~×5 легче,
-// быстрее FCP на мобильном. Списку оставляем characteristics (чипы-спеки).
-function slimProduct(p: import("@/lib/api").ProductDto, keepChars: boolean): import("@/lib/api").ProductDto {
-  // Явный набор полей (не spread) — иначе description/gallery/createdAt протаскиваются в RSC.
-  return {
-    id: p.id,
-    name: p.name,
-    slug: p.slug,
-    price: p.price,
-    isUsd: p.isUsd,
-    recommended: p.recommended,
-    modelCode: p.modelCode ?? null,
-    coverImageUrl: p.coverImageUrl,
-    // бейдж «В наличии / Под заказ» в карточке и строке: без поля все 31 товар «под заказ»
-    // показывались в каталоге как «В наличии» (найдено 05.10.2026)
-    inStock: p.inStock,
-    characteristics: keepChars ? p.characteristics : null, // строке нужны чипы-спеки
-    // обязательные по типу, но карточке не нужны — облегчаем
-    shortDescription: null,
-    description: null,
-    published: true,
-    categoryId: null,
-    createdAt: p.createdAt, // нужен бейджу «Новинка» в карточках
-    updatedAt: "",
-  };
-}
+const CATALOG_SCOPED_PAGE = 60;
 
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
@@ -104,10 +80,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const priceMin = Number(sp.priceMin) || undefined;
   const priceMax = Number(sp.priceMax) || undefined;
 
-  // В пределах выбранного раздела/фильтра показываем ВСЕ товары разом (без пагинации
-  // и без селектора «показывать по»). Голый каталог /products — постранично (тысячи позиций).
+  // Раздел/фильтр — первые CATALOG_SCOPED_PAGE товаров, остальные подгружаются при прокрутке.
+  // Голый каталог /products — постранично (тысячи позиций).
   const scoped = !!(type || brand || category || q || (chars && Object.keys(chars).length) || priceMin !== undefined || priceMax !== undefined);
-  const perPage = scoped ? CATALOG_SHOW_ALL : CATALOG_PAGE_BARE;
+  const perPage = scoped ? CATALOG_SCOPED_PAGE : CATALOG_PAGE_BARE;
 
   // 301: голая страница типа /products?type=<имя> → чистый URL /products/type/<slug>.
   // __clean=1 — внутренний вызов из /products/type/[slug] (без редиректа, иначе цикл).
@@ -502,11 +478,22 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                   <ViewToggle view={view} />
                 </div>
               )}
-              {!smart ? (
+              {/* верхняя пагинация — только у голого /products; в разделе товары подгружаются при прокрутке */}
+              {!smart && !scoped ? (
                 <Pagination basePath="/products" page={page} limit={perPage} total={total} params={{ q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined }} className="mb-4" />
               ) : null}
               {smart ? (
                 <SmartResultsView items={smartItems} related={similar.map(toSmartItem)} usdToUzs={usdToUzs} />
+              ) : scoped ? (
+                <InfiniteProducts
+                  key={`${page}|${view}|${sort ?? ""}|${type ?? ""}|${brand ?? ""}|${category ?? ""}|${q ?? ""}|${sp.chars ?? ""}|${sp.priceMin ?? ""}|${sp.priceMax ?? ""}|${mp ?? ""}|${technology ?? ""}|${installationType ?? ""}`}
+                  initial={items.map((p) => ({ p: slimProduct(p, view === "list"), name: localizeProductName(p, locale) }))}
+                  total={total}
+                  page={page}
+                  perPage={perPage}
+                  view={view}
+                  params={{ category, brand, q, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }}
+                />
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">
                   {items.map((p) => (

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { existsSync } from "node:fs";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeProduct, localizeProductName } from "@/lib/productI18n";
 import { getServiceBySlug, getPortfolio, getProductsCached } from "@/lib/api";
@@ -48,6 +49,15 @@ import { ogLocale } from "@/lib/ogLocale";
 import { withOgUrl } from "@/lib/metadata";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
+// Фото первого экрана — WebP-копия, если она есть рядом с JPEG (scripts/services-hero-webp.mjs):
+// вдвое легче, главный блок появляется раньше (AO, 07.10.2026). Нет копии (новая услуга,
+// локальная разработка) — остаётся JPEG, страница не ломается.
+const SERVICES_IMG_DIR = process.env.SERVICES_IMG_DIR || "/var/www/satweb/apps/api/uploads/services-page";
+function heroSrc(key: string) {
+  let webp = false;
+  try { webp = existsSync(`${SERVICES_IMG_DIR}/${key}.webp`); } catch { webp = false; }
+  return `${IMG_BASE}/${key}.${webp ? "webp" : "jpg"}?v=11`;
+}
 
 // Подводка абзаца SEO-текста: первое предложение (или часть до двоеточия / тире)
 // выделяется жирным — по таким строкам текст просматривается как по подзаголовкам.
@@ -414,12 +424,13 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <section className="relative overflow-hidden bg-[#031422] text-white">
             <div className="absolute inset-0">
               <Image
-                src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
+                src={heroSrc(svc.key)}
                 alt={h1}
                 fill
                 sizes="100vw"
                 className="object-cover"
                 priority
+                fetchPriority="high"
                 unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#031422] via-[#031422]/85 to-[#031422]/30" />
@@ -472,12 +483,13 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           <div className="grid [grid-template-areas:'media'_'body'] lg:grid-cols-[minmax(0,480px)_minmax(0,1fr)] lg:gap-x-10 lg:[grid-template-areas:'media_title'_'media_body']">
             <div className="relative h-[340px] overflow-hidden bg-slate-900 [grid-area:media] max-lg:mx-[calc(50%-50vw)] sm:h-[400px] lg:h-auto lg:min-h-[300px] lg:self-stretch lg:rounded-2xl lg:border lg:border-slate-200">
               <Image
-                src={`${IMG_BASE}/${svc.key}.jpg?v=11`}
+                src={heroSrc(svc.key)}
                 alt={title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 480px"
                 className="object-cover"
                 priority
+                fetchPriority="high"
                 unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#030e18] via-[#030e18]/55 to-transparent lg:hidden" aria-hidden />
