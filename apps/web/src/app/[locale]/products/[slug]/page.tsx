@@ -152,7 +152,33 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     const isRu = locale === routing.defaultLocale;
     const seoTitle = (isRu && product.seoTitle?.trim()) || "";
     const seoDesc = (isRu && product.seoDescription?.trim()) || "";
-    const desc = clip(seoDesc || loc.shortDescription || loc.name, 158 - tail.length) + tail;
+    // Бренд и код модели — в начало описания, если их там нет (07.10.2026). У 3180 из 3248
+    // товаров есть код модели, но в описании он был лишь у 927: модели одной серии (Tapo
+    // C510W/C520WS, 6 турникетов ZKTeco, поворотные Hikvision…) получали одинаковый сниппет.
+    // Код модели одинаков на всех языках — правка работает сразу на 5 языках.
+    const squash = (s: string) => s.toLowerCase().replace(/[\s\-_.()/,]+/g, "");
+    const cleanSnippet = (s: string) => s
+      .replace(/^\s*[>•·\-–—]+\s*/, "")          // «> Поддерживает…» — маркер списка из описания поставщика
+      .replace(/\s+>\s+/g, "; ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const body0 = cleanSnippet(loc.shortDescription || "");
+    const mc = (product.modelCode || "").trim();
+    let modelLead = "";
+    if (!seoDesc && mc && body0 && !squash(body0).includes(squash(mc))) {
+      let brandName = "";
+      try {
+        const { brands } = await getBrands();
+        const b = brands.find((x: any) => x.id === (product as any).brandId);
+        if (b && b.slug !== "prochee") brandName = localizeBrandName(b.slug, b.name, locale);
+      } catch { /* без бренда — только код */ }
+      const label = brandName && !squash(mc).includes(squash(brandName)) ? `${brandName} ${mc}` : mc;
+      modelLead = label + (locale === "zh" ? "：" : ": ");
+    }
+    let body = clip(seoDesc || (body0 ? modelLead + body0 : loc.name), 158 - tail.length);
+    // перед хвостом с ценой — точка («…IP-kamera Narxi:» читалось как одно предложение)
+    if (!/[.!?…。！？]$/.test(body)) body += locale === "zh" ? "。" : ".";
+    const desc = body + tail;
     return createMetadata({
       // title с коммерч. интентом + гео (важнейший фактор ранжирования)
       title: { absolute: seoTitle || `${loc.name} — ${t("product.titleBuy")}` },

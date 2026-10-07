@@ -19,7 +19,7 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
   const { locale } = await params;
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const title = tc("byBrands");
-  const description = tc("byCategoriesDesc");
+  const description = tc("byBrandsDesc"); // своё описание: раньше /catalog и /categories отдавали одно и то же
   return {
     title,
     alternates: hreflangAlternates("/catalog", locale),

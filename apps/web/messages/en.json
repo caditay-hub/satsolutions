@@ -17,7 +17,7 @@
     "wholeCategory": "Whole category",
     "listDesc": "Security equipment catalog: cameras, NVRs, access control, intercoms, alarms — Dahua, Hikvision and other brands.",
     "typeDesc": "{type}: catalog, prices, selection and delivery across Tashkent and Uzbekistan. Official warranty, installation and service by SAT Solutions.",
-    "inStockCount": "{count} models in stock in Tashkent.",
+    "inStockCount": "{count, plural, one {# model} other {# models}} in stock in Tashkent.",
     "priceProject": "We will quote for your project",
     "priceProjectNote": "This equipment is supplied per project: the price depends on configuration and volume. We will send a quote within one business day.",
     "listSeoTitle": "Security equipment in Tashkent",
@@ -5323,6 +5323,7 @@
     "viewList": "List",
     "viewGrid": "Grid",
     "byCategoriesDesc": "Security systems, video surveillance, networking and cabling — the full SAT Solutions catalog by category. Delivery across Tashkent and Uzbekistan.",
+    "byBrandsDesc": "Catalog by brand: Hikvision, Dahua, ZKTeco, Tapo, MikroTik and other manufacturers — prices in UZS, stock in Tashkent, delivery across Uzbekistan.",
     "productCatalog": "Product catalog",
     "showingFor": "Showing results for",
     "home": "Home",
@@ -5332,7 +5333,7 @@
     "itemsShort": "{count} items",
     "itemsInCatalog": "Products in catalog: {count}",
     "itemsInside": "Products inside: {count}",
-    "brandsCount": "{count} brands",
+    "brandsCount": "{count, plural, one {# brand} other {# brands}}",
     "otherBrands": "Other brands",
     "otherBrandsTitle": "Other brands — product catalog",
     "otherBrandsDesc": "Manufacturers with a smaller range, gathered in one section: networking and telecom equipment, UPS, IP telephony and optical access.",
@@ -5343,7 +5344,7 @@
     "casesTitle": "Case studies & solutions",
     "caseBadge": "Case",
     "solutionBadge": "Solution",
-    "brandInStock": "{count} models in stock — prices in UZS, warranty, delivery across Tashkent and Uzbekistan."
+    "brandInStock": "{count, plural, one {# model} other {# models}} in stock — prices in UZS, warranty, delivery across Tashkent and Uzbekistan."
   },
   "notFound": {
     "title": "Page not found",
