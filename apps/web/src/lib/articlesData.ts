@@ -538,7 +538,7 @@ export const ARTICLES: Article[] = [
     seeAlso: ["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr"],
     loc: {
       ru: {
-        title: "Учёт рабочего времени по лицу: от терминала на проходной до табеля в 1С",
+        title: "Учёт рабочего времени по лицу: от терминала на проходной до табеля в 1С", seoTitle: "Учёт рабочего времени по лицу: терминал и табель в 1С",
         excerpt: "Как устроен учёт по лицу: что ставят на проходной, откуда берётся табель, как считаются опоздания и ночные смены, что делать с согласием работников и как данные попадают в 1С.",
         summary: [
           "Отметка по лицу занимает меньше секунды, отметиться за другого нельзя",
@@ -579,7 +579,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Yuz orqali ish vaqtini hisobga olish: oʻtish punktidagi terminaldan 1Cdagi tabelgacha",
+        title: "Yuz orqali ish vaqtini hisobga olish: oʻtish punktidagi terminaldan 1Cdagi tabelgacha", seoTitle: "Yuz orqali ish vaqtini hisobga olish: terminal va 1C tabeli",
         excerpt: "Yuz orqali hisob qanday ishlaydi: oʻtish punktiga nima qoʻyiladi, tabel qayerdan olinadi, kechikish va tungi smenalar qanday hisoblanadi, xodim roziligi bilan nima qilinadi va maʼlumot 1Cga qanday tushadi.",
         summary: [
           "Yuz orqali qayd bir soniyadan kam vaqt oladi, boshqa odam oʻrniga belgilab boʻlmaydi",
@@ -620,7 +620,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Face-based time tracking: from the terminal at the entrance to the timesheet in 1C",
+        title: "Face-based time tracking: from the terminal at the entrance to the timesheet in 1C", seoTitle: "Face-based time tracking: from terminal to 1C timesheet",
         excerpt: "How face-based attendance works: what goes at the checkpoint, where the timesheet comes from, how late arrivals and night shifts are calculated, what to do about employee consent and how the data reaches 1C.",
         summary: [
           "A face check-in takes under a second and nobody can clock in for a colleague",
@@ -661,7 +661,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Yüz tanımayla mesai takibi: girişteki terminalden 1C’deki puantaja",
+        title: "Yüz tanımayla mesai takibi: girişteki terminalden 1C’deki puantaja", seoTitle: "Yüz tanımayla mesai takibi: terminalden 1C puantajına",
         excerpt: "Yüzle devam takibi nasıl çalışır: giriş noktasına ne kurulur, puantaj nereden gelir, geç kalma ve gece vardiyaları nasıl hesaplanır, çalışan rızası nasıl alınır ve veriler 1C’ye nasıl aktarılır.",
         summary: [
           "Yüzle okutma bir saniyeden kısa sürer ve kimse başkası yerine okutamaz",
@@ -759,7 +759,7 @@ export const ARTICLES: Article[] = [
     seeAlso: ["prilozhenie-dlya-zhiteley-zhk", "uchet-rabochego-vremeni-po-litsu"],
     loc: {
       ru: {
-        title: "Гостевой пропуск по QR-коду: как пускать курьеров и гостей без звонков диспетчеру",
+        title: "Гостевой пропуск по QR-коду: как пускать курьеров и гостей без звонков диспетчеру", seoTitle: "Гостевой пропуск по QR-коду: курьеры и гости без звонков",
         excerpt: "Разовый пропуск вместо запасного брелока: как работает ссылка с QR-кодом, чем она безопаснее кода на двери, что нужно от терминала и какие правила стоит задать управляющей компании.",
         summary: [
           "Житель сам выдаёт гостю ссылку с QR-кодом — звонить диспетчеру не нужно",
@@ -800,7 +800,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "QR-kod boʻyicha mehmon ruxsatnomasi: kuryer va mehmonlarni dispetcherga qoʻngʻiroqsiz kiritish",
+        title: "QR-kod boʻyicha mehmon ruxsatnomasi: kuryer va mehmonlarni dispetcherga qoʻngʻiroqsiz kiritish", seoTitle: "QR-kodli mehmon ruxsatnomasi: kuryer va mehmonlar uchun",
         excerpt: "Zaxira brelok oʻrniga bir martalik ruxsatnoma: QR-kodli havola qanday ishlaydi, nega u eshikdagi koddan xavfsizroq, terminaldan nima talab qilinadi va boshqaruv kompaniyasi qanday qoidalarni belgilashi kerak.",
         summary: [
           "Aholi mehmonga QR-kodli havolani oʻzi beradi — dispetcherga qoʻngʻiroq shart emas",
@@ -841,7 +841,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Guest passes by QR code: letting couriers and visitors in without calling the dispatcher",
+        title: "Guest passes by QR code: letting couriers and visitors in without calling the dispatcher", seoTitle: "QR guest passes: letting couriers and visitors in",
         excerpt: "A single-visit pass instead of a spare fob: how the link with a QR code works, why it is safer than a door code, what the terminal needs and which rules a management company should set.",
         summary: [
           "The resident sends the guest a link with a QR code — no call to the front desk",
@@ -882,7 +882,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "QR kodlu misafir geçişi: kuryeleri ve konukları dispeçeri aramadan içeri almak",
+        title: "QR kodlu misafir geçişi: kuryeleri ve konukları dispeçeri aramadan içeri almak", seoTitle: "QR kodlu misafir geçişi: kurye ve konuklar için",
         excerpt: "Yedek kumanda yerine tek kullanımlık geçiş: QR kodlu bağlantı nasıl çalışır, kapı şifresinden neden güvenlidir, terminalden ne beklenir ve yönetim şirketi hangi kuralları koymalı.",
         summary: [
           "Sakin misafire QR kodlu bağlantıyı kendisi gönderir — danışmayı aramaya gerek yok",
@@ -980,7 +980,7 @@ export const ARTICLES: Article[] = [
     seeAlso: ["gostevoy-propusk-po-qr", "uchet-rabochego-vremeni-po-litsu"],
     loc: {
       ru: {
-        title: "Приложение для жителей ЖК: что оно меняет в доме и в работе управляющей компании",
+        title: "Приложение для жителей ЖК: что оно меняет в доме и в работе управляющей компании", seoTitle: "Приложение для жителей ЖК: что меняется для дома и УК",
         excerpt: "Домофон на телефоне, гостевой пропуск по ссылке, заявки с этапами и счёт за месяц. Разбираем, какие задачи дома закрывает приложение, что нужно из оборудования и почему его чаще ставят на уже работающую технику.",
         summary: [
           "Подъезд, калитка и шлагбаум открываются с телефона — ключи и брелоки не нужны",
@@ -1021,7 +1021,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "TJM aholisi uchun ilova: uyda va boshqaruv kompaniyasi ishida nima oʻzgaradi",
+        title: "TJM aholisi uchun ilova: uyda va boshqaruv kompaniyasi ishida nima oʻzgaradi", seoTitle: "TJM aholisi uchun ilova: uy va boshqaruv kompaniyasi uchun",
         excerpt: "Telefondagi domofon, havola orqali mehmon ruxsatnomasi, bosqichli arizalar va oylik hisob. Ilova qanday vazifalarni yopadi, qanday uskuna kerak va nega uni koʻpincha mavjud texnikaga ulashadi.",
         summary: [
           "Podyezd, darvozacha va shlagbaum telefondan ochiladi — kalit va brelok kerak emas",
@@ -1062,7 +1062,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "A resident app for apartment complexes: what changes for tenants and the management company",
+        title: "A resident app for apartment complexes: what changes for tenants and the management company", seoTitle: "Resident app for apartment complexes: what it changes",
         excerpt: "Intercom on the phone, guest passes by link, requests with visible stages and the monthly bill. What the app actually solves, what hardware it needs and why it is usually installed on equipment that is already there.",
         summary: [
           "The entrance, gate and barrier open from a phone — no keys or fobs",
@@ -1103,7 +1103,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Site sakinleri için uygulama: konutta ve yönetim şirketinde ne değişir",
+        title: "Site sakinleri için uygulama: konutta ve yönetim şirketinde ne değişir", seoTitle: "Site sakinleri için uygulama: konutta ne değişir",
         excerpt: "Telefonda interkom, bağlantıyla misafir geçişi, aşamaları görünen talepler ve aylık fatura. Uygulamanın çözdüğü işler, gereken donanım ve neden çoğunlukla mevcut cihazların üzerine kurulduğu.",
         summary: [
           "Bina kapısı, yan kapı ve bariyer telefondan açılır — anahtara ve kumandaya gerek yok",
@@ -1258,7 +1258,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Fire alarm servicing in Uzbekistan: an annual plan, not “once a quarter”",
+        title: "Fire alarm servicing in Uzbekistan: an annual plan, not “once a quarter”", seoTitle: "Fire alarm servicing in Uzbekistan: an annual plan",
         excerpt: "Uzbekistan's Fire Safety Rules contain no “once a quarter” norm: clause 148 requires an annual work plan based on the manufacturer's documentation. Who may service the system, and where the 30 days and 24 hours come from.",
         sections: [
           { h: "There is no “once a quarter” norm in Uzbekistan", p: [
@@ -1288,7 +1288,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Özbekistan'da yangın alarmı bakımı: «üç ayda bir» değil, yıllık plan",
+        title: "Özbekistan'da yangın alarmı bakımı: «üç ayda bir» değil, yıllık plan", seoTitle: "Özbekistan'da yangın alarmı bakımı: yıllık plan",
         excerpt: "Özbekistan Yangın Güvenliği Kuralları «üç ayda bir» normunu tanımıyor: 148. madde üreticinin belgelerine dayalı yıllık iş planı istiyor. Bakımı kim yapabilir, 30 gün ve 24 saat nereden geliyor.",
         sections: [
           { h: "Özbekistan'da «üç ayda bir» normu yoktur", p: [
@@ -1358,7 +1358,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery", "zamki-i-skud"],
     loc: {
       ru: {
-        title: "Видеонаблюдение и персональные данные: где по закону может лежать архив",
+        title: "Видеонаблюдение и персональные данные: где по закону может лежать архив", seoTitle: "Видеонаблюдение и персональные данные: где хранить архив",
         excerpt: "Закон РУз «О персональных данных» № ЗРУ-547 требует хранить базы с данными граждан республики на технических средствах в Узбекистане. Что это значит для видеоархива, распознавания лиц и биометрии в СКУД.",
         sections: [
           { h: "Почему видеозапись — это персональные данные", p: [
@@ -1388,7 +1388,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Videokuzatuv va shaxsga doir maʼlumotlar: qonun boʻyicha arxiv qayerda turishi mumkin",
+        title: "Videokuzatuv va shaxsga doir maʼlumotlar: qonun boʻyicha arxiv qayerda turishi mumkin", seoTitle: "Videokuzatuv va shaxsga doir maʼlumotlar: arxiv qayerda",
         excerpt: "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547 qonuni respublika fuqarolari maʼlumotlari bazasini Oʻzbekiston hududidagi texnik vositalarda saqlashni talab qiladi. Bu videoarxiv, yuzni tanish va SKUD biometriyasi uchun nimani anglatadi.",
         sections: [
           { h: "Nega videoyozuv shaxsga doir maʼlumot hisoblanadi", p: [
@@ -1418,7 +1418,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Video surveillance and personal data: where the archive may legally be stored",
+        title: "Video surveillance and personal data: where the archive may legally be stored", seoTitle: "Video surveillance and personal data: where to keep archives",
         excerpt: "Uzbekistan's Personal Data Law No. ZRU-547 requires databases holding the data of the republic's citizens to be kept on technical facilities located in Uzbekistan. What that means for video archives, face recognition and biometrics in access control.",
         sections: [
           { h: "Why a video recording counts as personal data", p: [
@@ -1448,7 +1448,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Video gözetim ve kişisel veriler: arşiv yasal olarak nerede tutulabilir",
+        title: "Video gözetim ve kişisel veriler: arşiv yasal olarak nerede tutulabilir", seoTitle: "Video gözetim ve kişisel veriler: arşiv nerede tutulmalı",
         excerpt: "Özbekistan'ın ZRU-547 sayılı Kişisel Veriler Kanunu, ülke vatandaşlarının verilerini içeren veri tabanlarının Özbekistan'daki teknik altyapıda tutulmasını zorunlu kılıyor. Bunun video arşivi, yüz tanıma ve geçiş kontrolündeki biyometri için anlamı.",
         sections: [
           { h: "Video kaydı neden kişisel veri sayılır", p: [
@@ -1522,7 +1522,7 @@ export const ARTICLES: Article[] = [
     hubs: ["pozharnaya-bezopasnost", "zamki-i-skud"],
     loc: {
       ru: {
-        title: "Лицензия на монтаж сигнализации в Узбекистане: кто выдаёт и как проверить подрядчика",
+        title: "Лицензия на монтаж сигнализации в Узбекистане: кто выдаёт и как проверить подрядчика", seoTitle: "Лицензия на монтаж сигнализации: как проверить подрядчика",
         excerpt: "Деятельность по проектированию, монтажу и обслуживанию пожарной и охранной сигнализации лицензирует МВД, а не МЧС. Лицензия бессрочная, реестр публичный, требования к штату — в постановлении № 880 от 27.10.2018.",
         sections: [
           { h: "Лицензию выдаёт МВД, а не МЧС", p: [
@@ -1582,7 +1582,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Alarm installation licence in Uzbekistan: who issues it and how to check a contractor",
+        title: "Alarm installation licence in Uzbekistan: who issues it and how to check a contractor", seoTitle: "Alarm installation licence in Uzbekistan: how to verify",
         excerpt: "Designing, installing and servicing fire and security alarms is licensed by the Ministry of Internal Affairs, not by the Emergencies Ministry. The licence has no expiry date, the register is public, and staffing requirements are set by decree No. 880 of 27.10.2018.",
         sections: [
           { h: "The licence comes from the Interior Ministry, not the Emergencies Ministry", p: [
@@ -1612,7 +1612,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Özbekistan'da alarm montajı lisansı: kim veriyor ve yüklenici nasıl kontrol edilir",
+        title: "Özbekistan'da alarm montajı lisansı: kim veriyor ve yüklenici nasıl kontrol edilir", seoTitle: "Özbekistan'da alarm montaj lisansı: nasıl kontrol edilir",
         excerpt: "Yangın ve güvenlik alarmlarının projelendirilmesi, montajı ve bakımı Acil Durumlar Bakanlığı tarafından değil, İçişleri Bakanlığı tarafından lisanslanıyor. Lisans süresizdir, sicil kamuya açıktır, personel şartları 27.10.2018 tarihli 880 sayılı kararda.",
         sections: [
           { h: "Lisansı Acil Durumlar Bakanlığı değil, İçişleri Bakanlığı verir", p: [
@@ -1682,7 +1682,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery", "domofoniya", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
-        title: "Камеры и домофоны в новостройках: что требует постановление ПП-48",
+        title: "Камеры и домофоны в новостройках: что требует постановление ПП-48", seoTitle: "Камеры и домофоны в новостройках: требования ПП-48",
         excerpt: "С 1 мая 2026 года камеры в каждом подъезде, лифте и на прилегающей территории и домофоны на входных дверях обязательны в проектах многоквартирных домов. Без них проект не проходит экспертизу, а дом не принимают в эксплуатацию.",
         sections: [
           { h: "Что изменилось с 1 мая 2026 года", p: [
@@ -1712,7 +1712,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Yangi uylarda kameralar va domofonlar: PQ-48 qarori nimani talab qiladi",
+        title: "Yangi uylarda kameralar va domofonlar: PQ-48 qarori nimani talab qiladi", seoTitle: "Yangi uylarda kamera va domofonlar: PQ-48 talablari",
         excerpt: "2026-yil 1-maydan koʻp kvartirali uylar loyihalarida har bir podyezdga, liftlarga va tutash hududga kuzatuv kameralari, kirish eshiklariga esa domofon komplekslari majburiy. Ularsiz loyiha ekspertizadan oʻtmaydi, uy esa foydalanishga qabul qilinmaydi.",
         sections: [
           { h: "2026-yil 1-maydan nima oʻzgardi", p: [
@@ -1742,7 +1742,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Cameras and intercoms in new buildings: what decree PP-48 requires",
+        title: "Cameras and intercoms in new buildings: what decree PP-48 requires", seoTitle: "Cameras and intercoms in new buildings: PP-48 rules",
         excerpt: "From 1 May 2026, cameras in every entrance, lift and adjoining area and intercoms on entrance doors are mandatory in the designs of apartment buildings in Uzbekistan. Without them the design fails expert review and the building is not accepted into service.",
         sections: [
           { h: "What changed on 1 May 2026", p: [
@@ -1881,7 +1881,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Domofon trubkasi: mosini qanday tanlash va oʻzingiz almashtirish",
+        title: "Domofon trubkasi: mosini qanday tanlash va oʻzingiz almashtirish", seoTitle: "Domofon trubkasi: mosini tanlash va almashtirish",
         excerpt: "Nega domofon trubkalari oʻzaro almashinmaydi: koordinatali va raqamli tizimlar, oʻzingiznikini qanday aniqlash, qutb va raqam peremychkalari, trubkani videomonitorga yangilash.",
         sections: [
           { h: "Nega «istalgan trubka» toʻgʻri kelmaydi", p: [
@@ -1916,7 +1916,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Intercom handset: choosing a compatible one and replacing it yourself",
+        title: "Intercom handset: choosing a compatible one and replacing it yourself", seoTitle: "Intercom handset: choosing and replacing it yourself",
         excerpt: "Why intercom handsets are not interchangeable: coordinate and digital systems, how to identify yours, polarity and apartment number jumpers, and upgrading a handset to a video monitor.",
         sections: [
           { h: "Why 'any handset' will not do", p: [
@@ -2069,7 +2069,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Domofon ishlamayapti yoki jiringlamayapti: sabablar va nima qilish kerak",
+        title: "Domofon ishlamayapti yoki jiringlamayapti: sabablar va nima qilish kerak", seoTitle: "Domofon ishlamayapti yoki jiringlamayapti: nima qilish kerak",
         excerpt: "Domofonning tipik nosozliklarini koʻrib chiqamiz: trubka jim, ovoz bir tomonlama, eshik ochilmaydi, tasvir yoʻq, IP-domofon telefonga qoʻngʻiroq yubormaydi. Nimani oʻzingiz tekshirish va qachon usta chaqirish kerak.",
         sections: [
           { h: "Trubka butunlay jim", p: [
@@ -2222,7 +2222,7 @@ export const ARTICLES: Article[] = [
     hubs: ["domofoniya"],
     loc: {
       ru: {
-        title: "IP-домофон Hikvision: как настроить звонок на телефон через Hik-Connect",
+        title: "IP-домофон Hikvision: как настроить звонок на телефон через Hik-Connect", seoTitle: "IP-домофон Hikvision: звонок на телефон через Hik-Connect",
         excerpt: "Как работает IP-домофония Hikvision: звонок на смартфон из любой точки мира, настройка Hik-Connect по шагам, сценарии для квартиры, офиса и дома, разбор типичных проблем с уведомлениями.",
         sections: [
           { h: "Чем IP-домофон отличается от обычного", p: [
@@ -2257,7 +2257,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Hikvision IP-domofoni: Hik-Connect orqali telefonga qoʻngʻiroqni qanday sozlash",
+        title: "Hikvision IP-domofoni: Hik-Connect orqali telefonga qoʻngʻiroqni qanday sozlash", seoTitle: "Hikvision IP-domofoni: Hik-Connect orqali telefonga qoʻngʻiroq",
         excerpt: "Hikvision IP-domofoniyasi qanday ishlaydi: dunyoning istalgan nuqtasidan smartfonga qoʻngʻiroq, Hik-Connect ni bosqichma-bosqich sozlash, kvartira, ofis va uy stsenariylari, bildirishnoma muammolari tahlili.",
         sections: [
           { h: "IP-domofon oddiysidan nimasi bilan farq qiladi", p: [
@@ -2292,7 +2292,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Hikvision IP intercom: setting up calls to your phone via Hik-Connect",
+        title: "Hikvision IP intercom: setting up calls to your phone via Hik-Connect", seoTitle: "Hikvision IP intercom: calls to your phone via Hik-Connect",
         excerpt: "How Hikvision IP intercoms work: calls to your smartphone from anywhere, step-by-step Hik-Connect setup, scenarios for apartments, houses and offices, and a breakdown of typical notification problems.",
         sections: [
           { h: "How an IP intercom differs from a regular one", p: [
@@ -2410,7 +2410,7 @@ export const ARTICLES: Article[] = [
     hubs: ["domofoniya", "zamki-i-skud"],
     loc: {
       ru: {
-        title: "Видеодомофон для частного дома: собираем комплект с замком и калиткой",
+        title: "Видеодомофон для частного дома: собираем комплект с замком и калиткой", seoTitle: "Видеодомофон для частного дома: комплект с замком и калиткой",
         excerpt: "Из чего состоит видеодомофон частного дома: вызывная панель на калитку, монитор, электромеханический замок, питание и кабель. Аналог или IP, звонок на телефон, типичные ошибки монтажа.",
         sections: [
           { h: "Из чего состоит комплект", p: [
@@ -2445,7 +2445,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Xususiy uy uchun videodomofon: qulf va kalitka bilan toʻplam yigʻamiz",
+        title: "Xususiy uy uchun videodomofon: qulf va kalitka bilan toʻplam yigʻamiz", seoTitle: "Xususiy uy uchun videodomofon: qulf va kalitka bilan toʻplam",
         excerpt: "Xususiy uy videodomofoni nimadan iborat: kalitkaga chaqiruv paneli, monitor, elektromexanik qulf, quvvat va kabel. Analog yoki IP, telefonga qoʻngʻiroq, montajning tipik xatolari.",
         sections: [
           { h: "Toʻplam nimadan iborat", p: [
@@ -2480,7 +2480,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "A video intercom for a private house: the kit with a lock and gate",
+        title: "A video intercom for a private house: the kit with a lock and gate", seoTitle: "Video intercom for a private house: kit with lock and gate",
         excerpt: "What a private-house video intercom consists of: a door station at the gate, an indoor monitor, an electromechanical lock, power and cabling. Analog vs IP, calls to your phone, typical installation mistakes.",
         sections: [
           { h: "What the kit consists of", p: [
@@ -2515,7 +2515,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Müstakil ev için görüntülü diafon: kilit ve bahçe kapısıyla set kurmak",
+        title: "Müstakil ev için görüntülü diafon: kilit ve bahçe kapısıyla set kurmak", seoTitle: "Müstakil ev için görüntülü diafon: kilit ve kapı seti",
         excerpt: "Müstakil ev diafonu nelerden oluşur: bahçe kapısına zil paneli, iç monitör, elektromekanik kilit, besleme ve kablo. Analog mu IP mi, telefona arama, tipik montaj hataları.",
         sections: [
           { h: "Set nelerden oluşur", p: [
@@ -2633,7 +2633,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "UPS ni qanday tanlash: kompyuter, router, qozon va videokuzatuv uchun",
+        title: "UPS ni qanday tanlash: kompyuter, router, qozon va videokuzatuv uchun", seoTitle: "UPS ni qanday tanlash: kompyuter, router, qozon, kameralar",
         excerpt: "Uzluksiz quvvat manbaini tanlashni koʻrib chiqamiz: VA va Vt, UPS ning uch turi, qozon uchun toza sinus, kameralar va server xonasi uchun avtonomiya hisobi. Tipik konfiguratsiyalar bilan.",
         sections: [
           { h: "UPS stabilizatordan nimasi bilan farq qiladi", p: [
@@ -2703,7 +2703,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "UPS nasıl seçilir: bilgisayar, router, kombi ve kamera sistemi için",
+        title: "UPS nasıl seçilir: bilgisayar, router, kombi ve kamera sistemi için", seoTitle: "UPS nasıl seçilir: bilgisayar, router, kombi ve kamera",
         excerpt: "Kesintisiz güç kaynağı seçimi: VA ile watt farkı, üç UPS tipi, kombi için saf sinüs, kameralar ve sunucu odası için çalışma süresi hesabı. Tipik konfigürasyonlarla.",
         sections: [
           { h: "UPS regülatörden nasıl ayrılır", p: [
@@ -4310,7 +4310,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ognetushiteli", "pozharnaya-bezopasnost"],
     loc: {
       ru: {
-        title: "Как выбрать огнетушитель: ОП или ОУ, расчёт количества, сроки перезарядки",
+        title: "Как выбрать огнетушитель: ОП или ОУ, расчёт количества, сроки перезарядки", seoTitle: "Как выбрать огнетушитель: ОП или ОУ, количество, перезарядка",
         excerpt: "Порошковый или углекислотный, сколько огнетушителей нужно на офис и склад по нормам, что вешать у серверной и как не завалить проверку: практичный разбор с ценами.",
         sections: [{
             h: "Классы пожара решают всё",
@@ -4341,7 +4341,7 @@ export const ARTICLES: Article[] = [
           }]
       },
       uz: {
-        title: "Oʻt oʻchirgichni qanday tanlash: OP yoki OU, miqdor hisobi, qayta zaryadlash muddatlari",
+        title: "Oʻt oʻchirgichni qanday tanlash: OP yoki OU, miqdor hisobi, qayta zaryadlash muddatlari", seoTitle: "Oʻt oʻchirgich tanlash: OP yoki OU, soni va qayta zaryadlash",
         excerpt: "Kukunlimi yoki karbonat angidridlimi, ofis va omborga meʼyor boʻyicha nechta kerak, server yoniga nima osish va tekshiruvdan qanday oʻtish: narxlar bilan amaliy tahlil.",
         sections: [{
             h: "Yongʻin sinflari hammasini hal qiladi",
@@ -4372,7 +4372,7 @@ export const ARTICLES: Article[] = [
           }]
       },
       en: {
-        title: "Choosing a Fire Extinguisher: Powder vs CO2, Quantity Maths, Recharge Intervals",
+        title: "Choosing a Fire Extinguisher: Powder vs CO2, Quantity Maths, Recharge Intervals", seoTitle: "Choosing a fire extinguisher: powder or CO2, how many",
         excerpt: "Powder or CO2, how many extinguishers an office and a warehouse need by code, what to hang near the server room and how to pass inspection: a practical guide with prices.",
         sections: [{
             h: "Fire classes decide everything",
@@ -4403,7 +4403,7 @@ export const ARTICLES: Article[] = [
           }]
       },
       tr: {
-        title: "Yangın Söndürücü Nasıl Seçilir: Tozlu mu CO2 mi, Adet Hesabı, Dolum Aralıkları",
+        title: "Yangın Söndürücü Nasıl Seçilir: Tozlu mu CO2 mi, Adet Hesabı, Dolum Aralıkları", seoTitle: "Yangın söndürücü seçimi: tozlu mu CO2 mi, adet ve dolum",
         excerpt: "Tozlu mu karbondioksitli mi, ofis ve depoya yönetmelikçe kaç adet gerekir, sunucu odasının yanına ne asılır ve denetim nasıl geçilir: fiyatlarla pratik rehber.",
         sections: [{
             h: "Yangın sınıfları her şeyi belirler",
@@ -4561,7 +4561,7 @@ export const ARTICLES: Article[] = [
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена",
+        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для двора и парковки: виды, автоматика, цена",
         excerpt: "Стрела на 3–6 метров, интенсивность, управление с пульта, телефона или по номеру машины: разбираем, какой шлагбаум подходит двору, офису и ТЦ, и что входит в честную смету.",
         sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, гарантия и сервис. Пришлите фото и ширину проезда — на заявку отвечаем в течение рабочего дня."] },  { h: "Монтаж, зима и обслуживание", p: [
             "Правильный монтаж — половина срока службы: фундамент или закладная под тумбу, фотоэлементы и петлевой детектор, чтобы стрела никогда не опустилась на автомобиль, заземление и аккуратная подводка питания. Для двора с постоянным потоком берите интенсивный привод: бытовой на тысячах циклов в день живёт один сезон.",
@@ -4575,7 +4575,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
       uz: {
-        title: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika va narx nimadan iborat",
+        title: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika, narxi",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini koʻrib chiqamiz.",
         sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish, kafolat va servis. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
             "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki zakladnoy, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va petlevoy detektor, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
@@ -4589,7 +4589,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Shlagbaum oʻrnatish bilan qancha turadi?", a: "Strela uzunligi, privod intensivligi va boshqaruv usuliga bogʻliq: hovli uchun bazaviy toʻplam arzonroq, ANPR li intensiv qimmatroq. Muhandis chiqishi va smeta bepul." }, { q: "Svet oʻchganda nima qilish kerak?", a: "Privodlarda qoʻlda ochish bor — strela kalit bilan koʻtariladi. Yaxshisi kichik UPS qoʻying: shlagbaum oʻchishlarni yashovchilar ishtirokisiz oʻtkazadi." }, { q: "Hovlida shlagbaumni kelishish kerakmi?", a: "Koʻp kvartirali uy hovlisi uchun mulkdorlar qarori va tuman xizmatlari bilan kelishuv kerak — maxsus texnika oʻtishi saqlanishi shart. Kelishuv uchun oʻrnatish sxemasini tayyorlashda yordam beramiz." }],
       },
       en: {
-        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes",
+        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes", seoTitle: "Barrier gate for a yard or car park: types, automation, price",
         excerpt: "A 3–6 m boom, duty cycle, control by remote, phone or plate recognition: which barrier fits a yard, an office or a mall, and what belongs in an honest estimate.",
         sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty and service. Send a photo and the opening width — we reply to requests within the working day."] },  { h: "Installation, winter and service", p: [
             "Proper installation is half the lifespan: a foundation or embed under the cabinet, photocells and a loop detector so the boom never drops onto a car, earthing and neat power routing. For a yard with constant flow take an intensive drive: a domestic one at thousands of cycles a day lasts one season.",
@@ -4603,7 +4603,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "How much is a barrier with installation?", a: "It depends on boom length, drive duty and the control method: a base yard kit costs less, an intensive ANPR setup more. The engineer visit and the estimate are free." }, { q: "What happens during a power cut?", a: "Drives have a manual release — the boom lifts with a key. Better, add a small UPS so the barrier rides through outages on its own." }, { q: "Does a residential yard barrier need approvals?", a: "A block-of-flats yard needs an owners' decision and district approvals — emergency vehicle access must remain. We help prepare the installation scheme for approval." }],
       },
       tr: {
-        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir",
+        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir", seoTitle: "Avlu ve otopark için bariyer: tipler, otomasyon, fiyat",
         excerpt: "3–6 m kol, kullanım yoğunluğu, kumanda, telefon veya plaka tanımayla kontrol: avluya, ofise ve AVM'ye hangi bariyer uyar, dürüst teklif neleri kapsar.",
         sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garanti ve servisle. Fotoğraf ve açıklık genişliğini gönderin — taleplere iş günü içinde dönüş yaparız."] },  { h: "Montaj, kış ve bakım", p: [
             "Doğru montaj ömrün yarısıdır: gövde altına temel veya ankraj, kolun asla araca inmemesi için fotoseller ve loop dedektörü, topraklama ve düzenli güç hattı. Sürekli akışlı avluya yoğun tip motor alın: günde binlerce çevrimde ev tipi bir sezon dayanır.",
@@ -4644,7 +4644,7 @@ export const ARTICLES: Article[] = [
     hubs: ["kommutatory"],
     loc: {
       ru: {
-        title: "Как выбрать сетевой коммутатор (свитч): PoE, управляемость, L2 или L3",
+        title: "Как выбрать сетевой коммутатор (свитч): PoE, управляемость, L2 или L3", seoTitle: "Как выбрать коммутатор (свитч): PoE, управляемость, L2/L3",
         excerpt: "Управляемый или нет, сколько PoE-мощности нужно камерам, когда хватает L2 и зачем ядру сети L3: практичный разбор для офиса, видеонаблюдения и серверной.",
         sections: [{ h: "Управляемый или неуправляемый", p: ["Неуправляемый свитч — «разветвитель»: воткнул и работает. Для дома или пары устройств в кабинете этого достаточно. Управляемый добавляет VLAN (изоляция камер от офисной сети), приоритизацию трафика, мониторинг портов и защиту от петель — в офисной сети и системах видеонаблюдения он быстро окупает разницу в цене первым же разобранным инцидентом.", "Правило простое: если устройств больше десятка или в сети есть камеры и телефония — берите управляемый."] }, { h: "PoE: питание камер по витой паре", p: ["PoE-коммутатор питает камеры, точки доступа и IP-телефоны по тому же кабелю, что передаёт данные, — розетки у камеры не нужны. Считайте бюджет мощности: обычная камера берёт 6–8 Вт, купол с ИК — до 12 Вт, поворотная PTZ — до 25 Вт, а точка доступа Wi-Fi 6 — до 20 Вт. У 8-портового свитча бюджет обычно 60–120 Вт — на восемь PTZ его не хватит.", "Смотрите и стандарт: 802.3af даёт до 15 Вт на порт, 802.3at (PoE+) — до 30 Вт, bt — до 60–90 Вт для тяжёлых потребителей. Запас 20–30 % по мощности обязателен — зимой подогрев камер добавляет нагрузку."] }, { h: "L2, L3 и аплинки", p: ["L2-коммутатор работает внутри одной сети — это уровень доступа: этаж, кабинет, стойка с камерами. L3 умеет маршрутизировать между подсетями и становится ядром сети предприятия: отделы изолированы, трафик между ними контролируется. В малом офисе L3 не нужен — хватает L2 с гигабитным аплинком к роутеру.", "Аплинк — узкое место: если к свитчу подключены 24 гигабитных порта, разумно иметь SFP+ аплинк на 10G к ядру или серверу. Мы подбираем коммутаторы Hikvision, MikroTik, TP-Link, Ruijie и H3C под задачу, преднастраиваем VLAN и поставляем всё это официально; проектные позиции H3C считаем отдельно."] },  { h: "Три ошибки, которые всплывают потом", p: [
             "Первая — PoE-бюджет «впритык»: камеры с зимним подогревом удваивают потребление, и в мороз дальние порты начинают отваливаться. Вторая — каскады бытовых свитчей: петли, узкие места и сеть, которую невозможно диагностировать. Третья — ноунейм в серьёзной системе: под нагрузкой из десятка потоков он зависает, и камеры «моргают» без видимой причины.",
@@ -4658,7 +4658,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Какой коммутатор нужен для 8 камер видеонаблюдения?", a: "8-портовый PoE с бюджетом от 90 Вт и двумя аплинками — под регистратор и сеть. Для камер с подогревом и PTZ считайте мощность отдельно." }, { q: "Чем свитч отличается от роутера?", a: "Роутер соединяет сеть с интернетом и раздаёт адреса; свитч множит порты внутри сети. В типовом офисе они работают в паре: роутер на входе, свитчи — на этажах." }, { q: "Что такое VLAN и зачем он мне?", a: "VLAN делит один физический свитч на изолированные сети: камеры не видят бухгалтерию, гостевой Wi-Fi не видит серверы. Настраивается один раз на управляемом коммутаторе." }],
       },
       uz: {
-        title: "Tarmoq kommutatorini (switch) qanday tanlash: PoE, boshqaruv, L2 yoki L3",
+        title: "Tarmoq kommutatorini (switch) qanday tanlash: PoE, boshqaruv, L2 yoki L3", seoTitle: "Kommutatorni (switch) qanday tanlash: PoE, boshqaruv, L2/L3",
         excerpt: "Boshqariladiganmi yoki yoʻqmi, kameralarga qancha PoE quvvat kerak, qachon L2 yetadi va tarmoq yadrosiga nega L3 kerak: ofis, videokuzatuv va server xonasi uchun amaliy tahlil.",
         sections: [{ h: "Boshqariladigan yoki oddiy", p: ["Oddiy switch — «taqsimlagich»: ulading — ishlaydi. Uy yoki kabinetdagi bir juft qurilmaga shu yetadi. Boshqariladigani VLAN (kameralarni ofis tarmogʻidan ajratish), trafik prioriteti, port monitoringi va halqalardan himoya qoʻshadi — ofis tarmogʻi va videokuzatuvda narx farqini birinchi hal qilingan hodisayoq oqlaydi.", "Qoida oddiy: qurilmalar oʻntadan koʻp boʻlsa yoki tarmoqda kamera va telefoniya boʻlsa — boshqariladiganini oling."] }, { h: "PoE: kameralarni vitaya para orqali quvvatlash", p: ["PoE kommutator kamera, ulanish nuqtalari va IP-telefonlarni maʼlumot kabeli orqali quvvatlaydi — kamera yonida rozetka kerak emas. Quvvat byudjetini hisoblang: oddiy kamera 6–8 Vt, IK li gumbaz 12 Vt gacha, PTZ 25 Vt gacha, Wi-Fi 6 nuqtasi 20 Vt gacha oladi. 8 portli switch byudjeti odatda 60–120 Vt.", "Standartga ham qarang: 802.3af portga 15 Vt gacha, 802.3at (PoE+) 30 Vt gacha, bt — ogʻir isteʼmolchilarga 60–90 Vt. Quvvatda 20–30 % zaxira majburiy — qishda kamera isitish yuk qoʻshadi."] }, { h: "L2, L3 va aplinklar", p: ["L2 kommutator bitta tarmoq ichida ishlaydi — kirish darajasi: qavat, kabinet, kamerali stoyka. L3 quyi tarmoqlar orasida marshrutlaydi va korxona tarmogʻi yadrosiga aylanadi. Kichik ofisda L3 kerak emas — routerga gigabit aplinkli L2 yetadi.", "Aplink — tor joy: switchga 24 gigabit port ulangan boʻlsa, yadro yoki serverga 10G SFP+ aplink oqilona. Hikvision, MikroTik, TP-Link, Ruijie va H3C kommutatorlarini vazifaga tanlaymiz, VLANni oldindan sozlaymiz va hammasini rasmiy yetkazamiz; loyiha boʻyicha H3C pozitsiyalarini alohida hisoblaymiz."] },  { h: "Keyin chiqadigan uch xato", p: [
             "Birinchisi — «zoʻrgʻa» PoE-byudjet: qishki isitgichli kameralar isteʼmolni ikki barobar oshiradi, sovuqda uzoq portlar uzila boshlaydi. Ikkinchisi — maishiy svitchlar kaskadi: halqalar, tor joylar va diagnostika qilib boʻlmaydigan tarmoq. Uchinchisi — jiddiy tizimda noneym: oʻnlab oqim yukida u osilib qoladi, kameralar sababsiz «miltillaydi».",
@@ -4792,7 +4792,7 @@ export const ARTICLES: Article[] = [
     hubs: ["zamki-i-skud"],
     loc: {
       ru: {
-        title: "Электронный замок на дверь: магнитный, кодовый или smart — что выбрать",
+        title: "Электронный замок на дверь: магнитный, кодовый или smart — что выбрать", seoTitle: "Электронный замок на дверь: магнитный, кодовый или smart",
         excerpt: "Электромагнитный, электромеханический, кодовый или smart-замок: чем они отличаются, что подходит офису, квартире и калитке — и когда замок стоит подключать к домофону и СКУД.",
         sections: [
           { h: "Четыре типа электронных замков", p: [
@@ -4823,7 +4823,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Eshikka elektron qulf: magnit, kodli yoki smart — qaysi birini tanlash",
+        title: "Eshikka elektron qulf: magnit, kodli yoki smart — qaysi birini tanlash", seoTitle: "Eshikka elektron qulf: magnit, kodli yoki smart",
         excerpt: "Elektromagnit, elektromexanik, kodli yoki smart-qulf: ular nimasi bilan farq qiladi, ofis, kvartira va kalitkaga nima mos keladi — va qulfni qachon domofon hamda SKUDga ulash kerak.",
         sections: [
           { h: "Elektron qulflarning toʻrt turi", p: [
@@ -4854,7 +4854,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Electronic door lock: magnetic, coded or smart — which to choose",
+        title: "Electronic door lock: magnetic, coded or smart — which to choose", seoTitle: "Electronic door lock: magnetic, keypad or smart",
         excerpt: "Electromagnetic, electromechanical, coded or smart lock: how they differ, what suits an office, a flat and a gate — and when a lock should be tied to an intercom and access control.",
         sections: [
           { h: "Four types of electronic locks", p: [
@@ -4885,7 +4885,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Elektronik kapı kilidi: manyetik, şifreli veya akıllı — hangisi seçilmeli",
+        title: "Elektronik kapı kilidi: manyetik, şifreli veya akıllı — hangisi seçilmeli", seoTitle: "Elektronik kapı kilidi: manyetik, şifreli veya akıllı",
         excerpt: "Elektromanyetik, elektromekanik, şifreli veya akıllı kilit: farkları neler, ofise, daireye ve bahçe kapısına ne uyar — kilit ne zaman interkom ve geçiş kontrolüne bağlanmalı.",
         sections: [
           { h: "Dört tip elektronik kilit", p: [
@@ -4960,7 +4960,7 @@ export const ARTICLES: Article[] = [
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       ru: {
-        title: "Пожарная сигнализация для бизнеса: что требует инспекция в Узбекистане",
+        title: "Пожарная сигнализация для бизнеса: что требует инспекция в Узбекистане", seoTitle: "Пожарная сигнализация для бизнеса: требования инспекции",
         excerpt: "Кому обязательна пожарная сигнализация, чем пороговая система отличается от адресной, что проверяет инспектор и как пройти проверку с первого раза.",
         sections: [
           { h: "Кому сигнализация обязательна", p: [
@@ -4991,7 +4991,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Biznes uchun yongʻin signalizatsiyasi: Oʻzbekistonda inspeksiya nimani talab qiladi",
+        title: "Biznes uchun yongʻin signalizatsiyasi: Oʻzbekistonda inspeksiya nimani talab qiladi", seoTitle: "Biznes uchun yongʻin signalizatsiyasi: inspeksiya talablari",
         excerpt: "Kimga yongʻin signalizatsiyasi majburiy, chegara tizimi adreslisidan nimasi bilan farq qiladi, inspektor nimani tekshiradi va tekshiruvdan birinchi urinishda qanday oʻtish mumkin.",
         sections: [
           { h: "Signalizatsiya kimga majburiy", p: [
@@ -5022,7 +5022,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Fire alarm for business: what inspection requires in Uzbekistan",
+        title: "Fire alarm for business: what inspection requires in Uzbekistan", seoTitle: "Fire alarm for business in Uzbekistan: inspection rules",
         excerpt: "Who must have a fire alarm, how a conventional system differs from an addressable one, what the inspector checks and how to pass inspection first time.",
         sections: [
           { h: "Who must have an alarm", p: [
@@ -5277,7 +5277,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery"],
     loc: {
       ru: {
-        title: "Как выбрать камеру видеонаблюдения: разрешение, объектив, ночная съёмка",
+        title: "Как выбрать камеру видеонаблюдения: разрешение, объектив, ночная съёмка", seoTitle: "Как выбрать камеру видеонаблюдения: разрешение и объектив",
         excerpt: "Практичный разбор характеристик камеры: сколько мегапикселей нужно на самом деле, как выбрать фокусное расстояние, что важно для ночной съёмки и улицы — без маркетинговой шелухи.",
         sections: [
           { h: "Разрешение: сколько мегапикселей нужно", p: [
@@ -5305,7 +5305,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Videokuzatuv kamerasini qanday tanlash: ruxsat, obyektiv, tungi suratga olish",
+        title: "Videokuzatuv kamerasini qanday tanlash: ruxsat, obyektiv, tungi suratga olish", seoTitle: "Videokuzatuv kamerasini tanlash: ruxsat, obyektiv, tungi rejim",
         excerpt: "Kamera xususiyatlarining amaliy tahlili: aslida nechta megapiksel kerak, fokus masofasini qanday tanlash, tungi va koʻcha suratga olishda nima muhim — marketing poʻchogʻisiz.",
         sections: [
           { h: "Ruxsat: nechta megapiksel kerak", p: [
@@ -5587,7 +5587,7 @@ export const ARTICLES: Article[] = [
     hubs: ["pozharnaya-bezopasnost"],
     loc: {
       ru: {
-        title: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая",
+        title: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая", seoTitle: "Виды пожарной сигнализации: пороговая, адресная, аналоговая",
         excerpt: "Чем отличаются пороговые, адресные и адресно-аналоговые системы, какие извещатели бывают и куда их ставят, что требует закон — и какую систему выбрать для офиса, магазина и склада.",
         sections: [
           { h: "Три типа систем — в чём разница", p: [
@@ -5615,7 +5615,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Yongʻin signalizatsiyasi turlari: chegaraviy, manzilli, manzilli-analog",
+        title: "Yongʻin signalizatsiyasi turlari: chegaraviy, manzilli, manzilli-analog", seoTitle: "Yongʻin signalizatsiyasi turlari: chegaraviy va manzilli",
         excerpt: "Chegaraviy, manzilli va manzilli-analog tizimlar nimasi bilan farq qiladi, qanday xabar beruvchilar bor va ular qayerga qoʻyiladi, qonun nimani talab qiladi — ofis, doʻkon va omborga qaysi tizimni tanlash.",
         sections: [
           { h: "Uch xil tizim — farqi nimada", p: [
@@ -5643,7 +5643,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Types of Fire Alarm Systems: Conventional, Addressable, Analogue Addressable",
+        title: "Types of Fire Alarm Systems: Conventional, Addressable, Analogue Addressable", seoTitle: "Fire alarm types: conventional, addressable, analogue",
         excerpt: "How conventional, addressable and analogue addressable systems differ, which detectors exist and where they go, what the law requires — and which system fits an office, a shop and a warehouse.",
         sections: [
           { h: "Three system types — the difference", p: [
@@ -5671,7 +5671,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Yangın Alarm Sistemi Türleri: Konvansiyonel, Adresli, Analog Adresli",
+        title: "Yangın Alarm Sistemi Türleri: Konvansiyonel, Adresli, Analog Adresli", seoTitle: "Yangın alarm türleri: konvansiyonel, adresli, analog",
         excerpt: "Konvansiyonel, adresli ve analog adresli sistemler nasıl ayrışır, hangi dedektörler vardır ve nereye konur, yasa ne ister — ofis, mağaza ve depoya hangi sistem uyar.",
         sections: [
           { h: "Üç sistem türü — fark nerede", p: [
@@ -6945,7 +6945,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Qoʻriqlash signalizatsiyasini qanday tanlash: simli yoki simsiz",
+        title: "Qoʻriqlash signalizatsiyasini qanday tanlash: simli yoki simsiz", seoTitle: "Qoʻriqlash signalizatsiyasini tanlash: simli yoki simsiz",
         excerpt: "Qoʻriqlash tizimi nimadan iborat, simsiz panel qachon simlidan yaxshi, kvartira, doʻkon va omborga qanday datchiklar kerak — va qoʻriq pultiga ulanish telefon xabarlariga nisbatan nima beradi.",
         sections: [
           { h: "Tizim nimadan iborat", p: [
@@ -7323,7 +7323,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Structured Cabling Installation: Building a Network That Will Not Fail",
+        title: "Structured Cabling Installation: Building a Network That Will Not Fail", seoTitle: "Structured cabling installation: a network that lasts",
         excerpt: "What structured cabling is, how Cat5e differs from Cat6, why testing and a cable journal matter — and how to tell professional installation from \"twists above the ceiling\".",
         sections: [
           { h: "What SCS is and why business needs it", p: [
@@ -7355,7 +7355,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Yapısal Kablolama Montajı: Yarı Yolda Bırakmayan Ağ Nasıl Kurulur",
+        title: "Yapısal Kablolama Montajı: Yarı Yolda Bırakmayan Ağ Nasıl Kurulur", seoTitle: "Yapısal kablolama montajı: sorunsuz ağ nasıl kurulur",
         excerpt: "Yapısal kablolama nedir, Cat5e Cat6'dan nasıl ayrılır, test ve kablo defteri neden önemlidir — ve profesyonel montaj «asma tavan üstü bükümlerden» hangi işaretlerle ayrılır.",
         sections: [
           { h: "SKS nedir, işletmeye neden gerekir", p: [
@@ -7464,7 +7464,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Ofis uchun IP-telefoniya: odatiy liniyalarni nega almashtirish kerak",
+        title: "Ofis uchun IP-telefoniya: odatiy liniyalarni nega almashtirish kerak", seoTitle: "Ofis uchun IP-telefoniya: oddiy liniyalar oʻrniga",
         excerpt: "IP-ATS ga oʻtishda mijozlar va rahbar uchun nima oʻzgaradi: koʻp kanallilik, ovozli menyu, qoʻngʻiroqlar yozuvi va statistikasi — hamda bulutli va lokal stansiya orasida qanday tanlash.",
         sections: [
           { h: "Mijoz nimani eshitadi", p: [
@@ -7842,7 +7842,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Video Analytics and Facial Recognition: What Smart Cameras Can Do",
+        title: "Video Analytics and Facial Recognition: What Smart Cameras Can Do", seoTitle: "Video analytics and face recognition: what cameras can do",
         excerpt: "How analytics turns cameras from an archive into a working system: face and plate recognition, visitor counting, perimeter protection — and what upgrading a system for analytics actually buys.",
         sections: [
           { h: "Why cameras need intelligence", p: [
@@ -8329,7 +8329,7 @@ export const ARTICLES: Article[] = [
           ],
       },
       uz: {
-        title: "ZKTeco yoki Hikvision: SKUD va ish vaqtini hisobga olish uchun biometriya",
+        title: "ZKTeco yoki Hikvision: SKUD va ish vaqtini hisobga olish uchun biometriya", seoTitle: "ZKTeco yoki Hikvision: SKUD va davomat uchun biometriya",
         excerpt: "Ikki brendning biometrik terminallarini taqqoslaymiz: barmoq izi, yuz, ish vaqtini hisobga olish va integratsiya — oʻtish joyi va ofis uchun nimani tanlash.",
         sections: [
           { h: "ZKTecoʻning kuchli tomonlari", p: [
@@ -8361,7 +8361,7 @@ export const ARTICLES: Article[] = [
           ],
       },
       en: {
-        title: "ZKTeco or Hikvision: Biometrics for Access Control and Time Attendance",
+        title: "ZKTeco or Hikvision: Biometrics for Access Control and Time Attendance", seoTitle: "ZKTeco or Hikvision: biometrics for access and attendance",
         excerpt: "Comparing biometric terminals from both brands: fingerprint, face, time attendance and integration — what to pick for your entrance and office.",
         sections: [
           { h: "ZKTeco's strengths", p: [
@@ -8393,7 +8393,7 @@ export const ARTICLES: Article[] = [
           ],
       },
       tr: {
-        title: "ZKTeco mu Hikvision mı: Geçiş Kontrolü ve Mesai Takibi İçin Biyometri",
+        title: "ZKTeco mu Hikvision mı: Geçiş Kontrolü ve Mesai Takibi İçin Biyometri", seoTitle: "ZKTeco mu Hikvision mı: geçiş ve mesai için biyometri",
         excerpt: "İki markanın biyometrik terminallerinin karşılaştırması: parmak izi, yüz, mesai takibi ve entegrasyon — giriş ve ofis için hangisi.",
         sections: [
           { h: "ZKTeco'nun güçlü yönleri", p: [
@@ -8499,7 +8499,7 @@ export const ARTICLES: Article[] = [
           ],
       },
       uz: {
-        title: "PoE-kommutator yoki quvvat bloklari: kameralar uchun nima amaliyroq",
+        title: "PoE-kommutator yoki quvvat bloklari: kameralar uchun nima amaliyroq", seoTitle: "PoE-kommutator yoki quvvat bloklari: kameralar uchun qaysi",
         excerpt: "IP-kameralarni quvvatlashning ikki usuli — iqtisod va ishonchlilikni hisoblaymiz: qachon 12V bloklar yetarli, qachon PoE birinchi kundan oʻzini oqlaydi.",
         sections: [
           { h: "IP-kameralar qanday quvvatlanadi", p: [
@@ -8664,7 +8664,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Telefon orqali videokuzatuv: kameralarni masofadan qanday koʻrish",
+        title: "Telefon orqali videokuzatuv: kameralarni masofadan qanday koʻrish", seoTitle: "Telefon orqali videokuzatuv: kameralarni masofadan koʻrish",
         excerpt: "Smartfondan kameralarni koʻrishni qanday sozlash: nima kerak, qaysi ilovalardan foydalanish va kamera boshqa shahardan «koʻrinmasa» nima qilish kerak.",
         sections: [
           { h: "Bu qanday ishlaydi", p: [
@@ -8857,7 +8857,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Hikvision IP-kamerasini qanday ulash: bosqichma-bosqich yoʻriqnoma",
+        title: "Hikvision IP-kamerasini qanday ulash: bosqichma-bosqich yoʻriqnoma", seoTitle: "Hikvision IP-kamerasini ulash: bosqichma-bosqich yoʻriqnoma",
         excerpt: "Hikvision IP-kamerasini noldan ulaymiz: quvvat va kabel, SADP orqali aktivatsiya, Hik-Connect va registratorga qoʻshish, yangi boshlovchilarning odatiy xatolari.",
         sections: [
           { h: "Nima kerak boʻladi", p: [
@@ -9054,7 +9054,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Videoregistratorni qanday tanlash: NVR yoki DVR, kanallar, disklar",
+        title: "Videoregistratorni qanday tanlash: NVR yoki DVR, kanallar, disklar", seoTitle: "Videoregistrator tanlash: NVR yoki DVR, kanallar, disklar",
         excerpt: "Videoregistrator tanlashni koʻrib chiqamiz: NVR DVRʼdan nimasi bilan farq qiladi, nechta kanal va qanday qattiq disk olish kerak, PoE-portlar nima uchun kerak.",
         sections: [
           { h: "NVR yoki DVR: farqi nimada", p: [
@@ -9267,7 +9267,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Uy va kvartira uchun kamera: qanday tanlash va nimalarga eʼtibor berish",
+        title: "Uy va kvartira uchun kamera: qanday tanlash va nimalarga eʼtibor berish", seoTitle: "Uy va kvartira uchun kamera: qanday tanlash kerak",
         excerpt: "Wi-Fi yoki simli, ichki yoki tashqi, bulutga yoki kartaga yozish — uy, kvartira va podez uchun kamerani ortiqcha toʻlovsiz tanlaymiz.",
         sections: [
           { h: "Tanlashni nimadan boshlash", p: [
@@ -9895,7 +9895,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Binoning kuchsiz tok tizimlari: nimalar kiradi va qanday loyihalanadi",
+        title: "Binoning kuchsiz tok tizimlari: nimalar kiradi va qanday loyihalanadi", seoTitle: "Binoning kuchsiz tok tizimlari: tarkibi va loyihalash",
         excerpt: "Videokuzatuv, SKUD, yongʻin signalizatsiyasi, tarmoqlar va telefoniya — ofis yoki binoning kuchsiz tok tizimlari nimadan iborat va nega ular birga loyihalanadi.",
         sections: [
           { h: "«Kuchsiz tok» nima", p: [
@@ -10444,7 +10444,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       uz: {
-        title: "Kamera ustanovka narxi: videokuzatuv oʻrnatish bosqichlari (Toshkent)",
+        title: "Kamera ustanovka narxi: videokuzatuv oʻrnatish bosqichlari (Toshkent)", seoTitle: "Kamera ustanovka narxi: videokuzatuv oʻrnatish (Toshkent)",
         excerpt: "Kamera oʻrnatish qanday boradi: obyektni koʻrish, kameralar sonini aniqlash, kabel yotqizish, sozlash va telefondan koʻrish. Narx nimalardan tashkil topadi.",
         sections: [
           { h: "Ishlar qanday boshlanadi", p: [
@@ -10484,7 +10484,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Установка видеонаблюдения: этапы работ и из чего складывается цена",
+        title: "Установка видеонаблюдения: этапы работ и из чего складывается цена", seoTitle: "Установка видеонаблюдения: этапы работ и цена в Ташкенте",
         excerpt: "Как проходит установка камер: обследование объекта, подбор количества камер, прокладка кабеля, настройка и просмотр с телефона — и из чего складывается стоимость.",
         sections: [
           { h: "С чего начинаются работы", p: [
@@ -11423,7 +11423,7 @@ export const ARTICLES: Article[] = [
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       uz: {
-        title: "Yongʻin xavfsizligi: biznes uchun talablar, tizimlar va narxlar",
+        title: "Yongʻin xavfsizligi: biznes uchun talablar, tizimlar va narxlar", seoTitle: "Yongʻin xavfsizligi: biznes uchun talablar va narxlar",
         excerpt: "Obyekt uchun yongʻin xavfsizligi nimadan iborat: signalizatsiya, ovozli ogohlantirish, oʻt oʻchirgichlar. Tekshiruvga nima kerak va bularning barchasi qancha turadi.",
         sections: [
           { h: "Yongʻin xavfsizligi tizimi nimadan iborat", p: [
@@ -11534,7 +11534,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "İşletmeler için Yangın Güvenliği: Sistemler, Şartlar ve Fiyatlar",
+        title: "İşletmeler için Yangın Güvenliği: Sistemler, Şartlar ve Fiyatlar", seoTitle: "İşletmeler için yangın güvenliği: sistemler ve fiyatlar",
         excerpt: "İşletme yangın güvenliği nelerden oluşur: alarm, sesli tahliye, yangın tüpleri. Denetimde neler sorulur ve Taşkent'te tüm bunlar ne kadar tutar.",
         sections: [
           { h: "Yangın güvenliği sistemi nelerden oluşur", p: [
