@@ -329,12 +329,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ
       ══════════════════════════════════════════════════════ */}
       <section className="container-page py-14 sm:py-16">
+        {/* Единственный H1 главной — о компании и городе (ТЗ AX, 08.10.2026). Раньше H1 был
+            заголовком первого слайда карусели «Видеонаблюдение под ключ»: главная спорила
+            с /solutions/cctv, а компании и города в H1 не было. */}
         <div className="text-center mb-10">
           <p className="text-xs font-black uppercase tracking-widest text-brand-700 mb-2">{t("whatWeDo")}</p>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">{t("directionsTitle")}</h2>
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight [text-wrap:balance]">{t("h1")}</h1>
           <p className="mt-3 text-slate-500 max-w-xl mx-auto text-sm">
             {t("directionsSubtitle")}
           </p>
+          <h2 className="mt-8 text-xl sm:text-2xl font-black text-slate-900 tracking-tight">{t("directionsTitle")}</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

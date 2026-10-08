@@ -218,21 +218,14 @@ export function HeroCarousel({
                           SAT Solutions
                         </span>
 
-                        {i === 0 ? (
-                          <h1
-                            className={`mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-white line-clamp-3 drop-shadow-[0_4px_20px_rgba(0,0,0,0.45)] [text-wrap:balance] ${sIsFallback ? "font-aria" : ""}`}
-                            suppressHydrationWarning
-                          >
-                            {sTitle}
-                          </h1>
-                        ) : (
-                          <h2
-                            className={`mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-white line-clamp-3 drop-shadow-[0_4px_20px_rgba(0,0,0,0.45)] [text-wrap:balance] ${sIsFallback ? "font-aria" : ""}`}
-                            suppressHydrationWarning
-                          >
-                            {sTitle}
-                          </h2>
-                        )}
+                        {/* Заголовки слайдов — обычный текст, не H1/H2: H1 главной стоит в блоке
+                            «Что мы делаем», а 17 слайдов давали 17 скрытых заголовков (ТЗ AX). */}
+                        <p
+                          className={`mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight text-white line-clamp-3 drop-shadow-[0_4px_20px_rgba(0,0,0,0.45)] [text-wrap:balance] ${sIsFallback ? "font-aria" : ""}`}
+                          suppressHydrationWarning
+                        >
+                          {sTitle}
+                        </p>
 
                         <p
                           className="mt-4 sm:mt-5 mx-auto max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-white/85 line-clamp-2 sm:line-clamp-3 [text-wrap:balance]"

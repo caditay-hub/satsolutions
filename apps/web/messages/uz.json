@@ -83,6 +83,7 @@
     "statsCameras": "oʻrnatilgan kamera",
     "statsBrands": "katalogdagi brend",
     "whatWeDo": "Biz nima qilamiz",
+    "h1": "SAT Solutions — Toshkentda xavfsizlik tizimlari",
     "directionsTitle": "Faoliyat yoʻnalishlari",
     "directionsSubtitle": "Kuchsiz tok tizimlarining toʻliq spektri — loyihalashdan texnik xizmatgacha",
     "catalogLabel": "Katalog",
@@ -150,7 +151,7 @@
     },
     "heroSlides": [
       {
-        "title": "Biz tayyor video kuzatuvni taʼminlaymiz",
+        "title": "Videokuzatuv toʻliq tayyor holda",
         "text": "Hikvision va Dahua IP-kameralari, NVR-serverlar, videoanalitika va 24/7 bulutli monitoring",
         "buttons": [
           "Kameralar",
