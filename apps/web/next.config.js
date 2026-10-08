@@ -42,6 +42,18 @@ const nextConfig = {
       { protocol: "http", hostname: "127.0.0.1", port: "4000" }
     ]
   },
+  // Русская версия без префикса: /x → /ru/x. Раньше это делал middleware next-intl, но на
+  // переписанном в middleware пути Next не пишет ISR (см. src/middleware.ts). afterFiles —
+  // ПОСЛЕ статики и собственных маршрутов (sitemap.xml, robots, merchant-feed, /api …),
+  // поэтому файлы и обработчики не задеваются.
+  async rewrites() {
+    return {
+      afterFiles: [
+        { source: "/", destination: "/ru" },
+        { source: "/:path((?!(?:uz|en|tr|zh|ru|_next|api)(?:/|$)).+)", destination: "/ru/:path" },
+      ],
+    };
+  },
   async redirects() {
     return [
       // Русская версия без префикса: /ru и /ru/<путь> → постоянный 308 (08.10.2026).

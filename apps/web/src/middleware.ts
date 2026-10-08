@@ -123,8 +123,19 @@ export default function middleware(req: NextRequest) {
   }
   const uz = uzAutoRedirect(req);
   if (uz) return uz;
+  // Русская версия (без префикса) идёт МИМО next-intl: его middleware переписывает
+  // /x → /ru/x, а на переписанном в middleware пути Next не пишет ISR-кэш — каждая
+  // русская карточка товара рендерилась заново (Cache-Control: no-store), тогда как
+  // uz/en/tr/zh брались из кэша (проверено на локальной prod-сборке 08.10.2026).
+  // Тот же /x → /ru/x теперь делает rewrites() в next.config.js (afterFiles) — с ним ISR
+  // работает. Язык страница получает из params/setRequestLocale; без заголовка
+  // next-intl падает на defaultLocale — это и есть ru.
+  if (!RU_SKIP_RE.test(req.nextUrl.pathname)) return NextResponse.next();
   return intlMiddleware(req);
 }
+
+// Пути С языковым префиксом — их по-прежнему обрабатывает next-intl
+const RU_SKIP_RE = /^\/(uz|en|tr|zh|ru)(\/|$)/;
 
 export const config = {
   // Применяем ко всем путям, кроме api, статики, файлов с расширением и служебных
