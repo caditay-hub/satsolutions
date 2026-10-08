@@ -9,7 +9,7 @@ import { useTranslations } from "next-intl";
    Закрытие: крестик, клик по фону, Esc, кнопка «Назад» на телефоне. Листание стрелками.
    Оверлей — через portal в body: внутри контента transform/opacity анимаций-обёрток
    ломают fixed-позиционирование (лайтбокс «залипал» под шапкой и был полупрозрачным). */
-export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: string; gridClass?: string }) {
+export function Lightbox({ images, alt, gridClass, badge }: { images: string[]; alt: string; gridClass?: string; badge?: string | null }) {
   const t = useTranslations("common");
   const list = images.filter(Boolean);
   const [open, setOpen] = useState<number | null>(null);
@@ -69,6 +69,11 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
               className="object-contain p-2 transition-transform duration-500 group-hover:scale-105"
               unoptimized
             />
+            {badge ? (
+              <span className="pointer-events-none absolute bottom-2.5 left-2.5 z-[5] rounded-md bg-slate-900/70 px-2 py-1 text-[11px] font-semibold leading-none tracking-wide text-white">
+                {badge}
+              </span>
+            ) : null}
           </button>
         ))}
       </div>
@@ -114,6 +119,11 @@ export function Lightbox({ images, alt, gridClass }: { images: string[]; alt: st
             className="max-h-[90vh] max-w-[92vw] rounded-lg bg-white object-contain"
             onClick={(e) => e.stopPropagation()}
           />
+          {badge ? (
+            <div className="pointer-events-none absolute left-4 top-4 rounded-md bg-white/15 px-2.5 py-1.5 text-xs font-semibold tracking-wide text-white">
+              {badge}
+            </div>
+          ) : null}
           {list.length > 1 && (
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/15 px-3 py-1 text-sm font-semibold text-white">
               {open + 1} / {list.length}

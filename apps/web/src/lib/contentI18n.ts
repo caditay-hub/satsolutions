@@ -13,6 +13,9 @@ type ProjectTr = {
   clientTasks?: string;
   location?: string;
   items?: WorkItem[];
+  /** SEO-заголовок и описание для выдачи (RU — поля seoTitle/seoDescription в БД). */
+  seoTitle?: string;
+  seoDescription?: string;
 };
 
 // ─── Категории портфолио (по slug) ────────────────────────────────────────────
@@ -25,6 +28,46 @@ const CATEGORY: Record<string, Record<Loc, string>> = {
 
 // ─── Проекты портфолио (по slug) ──────────────────────────────────────────────
 const PROJECT: Record<string, Record<Loc, ProjectTr>> = {
+  // ЖК TowerUp, 2-я очередь: ВОЛС между 8 домами (08.10.2026). Картинки — иллюстрации (lib/illustrative).
+  "zhk-towerup-vols-mezhdu-domami": {
+    uz: {
+      title: "TowerUp turar-joy majmuasi — 8 ta uy oʻrtasida optik aloqa liniyasi va videokuzatuv tuguni",
+      seoTitle: "TowerUp TJM: 8 ta uy oʻrtasida optik tola liniyasi, Toshkent",
+      seoDescription: "SAT Solutions keysi: TowerUp TJMda 8 ta uy oʻrtasida 849 m osma optik kabel, reflektometr bilan tekshirilgan 24 ta payvand, 28 TB arxivli videokuzatuv tuguni.",
+      location: "Toshkent, Sergeli tumani",
+      excerpt: "Toshkentdagi TowerUp turar-joy majmuasining ikkinchi navbati: SAT Solutions sakkizta turar-joy binosi oʻrtasida 849 m osma optik kabel yotqizdi va markaziy videokuzatuv tugunini yigʻdi — reflektometr bilan tekshirilgan 24 ta payvand, 8 ta optik kross, 28 TB arxiv.",
+      clientTasks: "Ikkinchi navbatdagi sakkizta yangi uyning (2/9–2/16 blok-seksiyalar) videokuzatuvini bitta tizimga birlashtirish: har bir uydan signalni markaziy tugungacha yoʻqotishlarsiz va xalaqitlarsiz yetkazish, umumiy arxiv va elektr uzilishlaridan himoya bilan.",
+      content: "TowerUp turar-joy majmuasining ikkinchi navbati — Toshkentda, TKAD boʻylab «Yangi Oʻzbekiston» massividagi sakkizta koʻp qavatli turar-joy binosi (2/9–2/16 blok-seksiyalar). Har bir uyning videokuzatuvini bitta markaziy tugunga birlashtirish kerak edi, uylar orasidagi va tugungacha boʻlgan masofa esa yuzlab metrni tashkil etadi. Mis tarmoq kabelining chegarasi 100 m, bu masofaga u yaramaydi, shuning uchun aloqa optik tolada qurildi.\nQiyinchilik nimada edi:\n— trassa uylar orasidan havo orqali oʻtdi: kabel balandlikda poʻlat trosga osildi, yoʻlning bir qismi kabel kanalizatsiyasi orqali oʻtdi;\n— ishlar faol qurilish maydonida olib borildi, shuning uchun kabel alohida metall ustunlarga mahkamlandi;\n— tolaning har bir ulanishi soʻnishga tekshiruvdan oʻtishi kerak edi.\nNima qilindi:\n— 4 tolali 849 m osma optik kabel yotqizildi; loyihada 1 307 m koʻzda tutilgan edi — amalda kamroq kerak boʻldi va buyurtmachi haqiqiy hajm uchun toʻladi;\n— kabelni osish uchun 8 ta metall ustun, tugunda esa kabel lotoklari oʻrnatildi;\n— tolalar 24 joyda payvandlandi, har bir payvandning soʻnishi reflektometr bilan tekshirildi;\n— har bir uyga devorga oʻrnatiladigan optik kross qoʻyildi, liniyalar uchlariga 20 km gacha masofaga moʻljallangan 16 ta SFP-modul oʻrnatildi;\n— markaziy tugun yigʻildi: 8 portli 19\" optik kross, 12U devor shkafi, boshqariladigan kommutator, 28 TB arxivli 32 kanalli Dahua registratori va 3 kVA quvvatli onlayn UPS.\nNatija:\n— sakkiz uyning har biri markaziy tugunga oʻz optik liniyasi bilan ulangan: binolar orasidagi masofa va elektromagnit xalaqitlar videoga taʼsir qilmaydi;\n— barcha uylardagi yozuvlar bitta arxivga tushadi, elektr oʻchganda tugun UPS hisobiga ishlashda davom etadi;\n— ishlar ijro hujjatlari bilan birga 2 va 3-shakldagi dalolatnomalar boʻyicha topshirildi; keyingi bosqichda ushbu liniyaga uylarning videokuzatuvi — 24 ta kamera ulandi.",
+    },
+    en: {
+      title: "TowerUp residential complex — fiber-optic link between 8 buildings and a CCTV hub",
+      seoTitle: "Fiber-optic link between 8 apartment buildings in Tashkent",
+      seoDescription: "SAT Solutions case: 849 m of aerial fiber between 8 TowerUp apartment buildings, 24 fusion splices tested with an OTDR, a CCTV hub with a 28 TB archive.",
+      location: "Tashkent, Sergeli district",
+      excerpt: "Phase two of the TowerUp residential complex in Tashkent: SAT Solutions laid 849 m of aerial fiber-optic cable between eight apartment buildings and built a central video surveillance hub — 24 fusion splices tested with an OTDR, 8 optical distribution boxes, a 28 TB archive.",
+      clientTasks: "Bring the video surveillance of eight new phase-two buildings (block sections 2/9–2/16) into one system: deliver the signal from every building to the central hub without loss or interference, with a shared archive and protection against power outages.",
+      content: "Phase two of the TowerUp residential complex is eight high-rise apartment buildings (block sections 2/9–2/16) in the Yangi Uzbekiston area along the Tashkent Ring Road. The video surveillance of every building had to be brought into one central hub, while the distances between the buildings and to the hub run to hundreds of metres. Copper network cable is limited to 100 m, so it could not do the job — the link was built on fiber.\nWhat made it difficult:\n— the route ran overhead between the buildings: the cable was hung on a steel messenger wire at height, with part of the way through underground cable ducts;\n— the work was done on an active construction site, so the cable was fixed to dedicated metal poles;\n— every fiber joint had to pass an attenuation test.\nWhat we did:\n— laid 849 m of 4-fiber aerial optical cable; the design called for 1,307 m — less was needed in practice, and the customer paid for the actual length;\n— installed 8 metal poles for the aerial run and cable trays at the hub;\n— made 24 fusion splices and checked the loss of each one with an OTDR;\n— fitted a wall-mounted optical distribution box in every building and 16 SFP modules rated for up to 20 km at the line ends;\n— assembled the central hub: a 19\" 8-port fiber patch panel, a 12U wall cabinet, a managed switch, a 32-channel Dahua recorder with a 28 TB archive and a 3 kVA online UPS.\nResult:\n— each of the eight buildings is connected to the central hub by its own fiber line: distance and interference between the buildings do not affect the video;\n— recordings from all buildings go to a single archive, and during a power cut the hub keeps running on the UPS;\n— the work was handed over under Form 2 and Form 3 acceptance certificates with as-built documentation; at the next stage the video surveillance of the buildings — 24 cameras — was connected to this line.",
+    },
+    tr: {
+      title: "TowerUp konut kompleksi — 8 bina arasında fiber optik hat ve video gözetim merkezi",
+      seoTitle: "Taşkent'te 8 apartman arasında fiber optik hat kurulumu",
+      seoDescription: "SAT Solutions projesi: TowerUp konut kompleksinde 8 bina arasında 849 m havai fiber, OTDR ile test edilen 24 füzyon ek ve 28 TB arşivli video gözetim merkezi.",
+      location: "Taşkent, Sergeli ilçesi",
+      excerpt: "Taşkent'teki TowerUp konut kompleksinin ikinci etabı: SAT Solutions sekiz apartman binası arasına 849 m havai fiber optik kablo çekti ve merkezi video gözetim düğümünü kurdu — OTDR ile test edilen 24 füzyon ek, 8 optik dağıtım kutusu, 28 TB arşiv.",
+      clientTasks: "İkinci etabın sekiz yeni binasının (blok 2/9–2/16) video gözetimini tek sistemde birleştirmek: her binadan merkezi düğüme sinyali kayıpsız ve parazitsiz ulaştırmak, ortak arşiv kurmak ve elektrik kesintilerine karşı koruma sağlamak.",
+      content: "TowerUp konut kompleksinin ikinci etabı, Taşkent çevre yolu boyunca Yangi Özbekistan bölgesinde yer alan sekiz çok katlı apartman binasından (blok 2/9–2/16) oluşuyor. Her binanın video gözetimi tek bir merkezi düğümde toplanmalıydı; binalar arasındaki ve düğüme kadar olan mesafeler ise yüzlerce metreyi buluyor. Bakır ağ kablosunun sınırı 100 m olduğu için burada çözüm olamazdı, bu yüzden bağlantı fiber optik üzerine kuruldu.\nZorluk neydi:\n— hat binalar arasında havadan geçti: kablo yükseklikte çelik taşıyıcı tele asıldı, yolun bir kısmı yer altı kablo kanalından geçti;\n— çalışmalar aktif bir şantiyede yürütüldü, bu nedenle kablo ayrı metal direklere sabitlendi;\n— her fiber ekinin zayıflama testinden geçmesi gerekiyordu.\nNeler yaptık:\n— 4 lifli 849 m havai fiber optik kablo çektik; projede 1.307 m öngörülmüştü — uygulamada daha azı yetti ve müşteri gerçek uzunluğun bedelini ödedi;\n— askı için 8 metal direk, düğümde ise kablo tavaları kurduk;\n— 24 füzyon ek yaptık ve her birinin kaybını OTDR ile ölçtük;\n— her binaya duvar tipi optik dağıtım kutusu, hat uçlarına 20 km'ye kadar mesafe için 16 SFP modül yerleştirdik;\n— merkezi düğümü kurduk: 8 portlu 19\" fiber patch panel, 12U duvar kabini, yönetilebilir switch, 28 TB arşivli 32 kanallı Dahua kayıt cihazı ve 3 kVA online UPS.\nSonuç:\n— sekiz binanın her biri merkezi düğüme kendi fiber hattıyla bağlı: binalar arası mesafe ve parazit görüntüyü etkilemiyor;\n— tüm binaların kayıtları tek arşive gidiyor, elektrik kesildiğinde düğüm UPS ile çalışmaya devam ediyor;\n— işler, uygulama dokümantasyonuyla birlikte 2 ve 3 numaralı form tutanaklarıyla teslim edildi; bir sonraki aşamada bu hatta binaların video gözetimi — 24 kamera — bağlandı.",
+    },
+    zh: {
+      title: "TowerUp 住宅小区——8 栋楼之间的光纤通信线路与视频监控中心节点",
+      seoTitle: "塔什干 8 栋住宅楼之间的光纤线路敷设案例",
+      seoDescription: "SAT Solutions 案例：在 TowerUp 住宅小区 8 栋楼之间架设 849 米光缆，24 个熔接点经 OTDR 测试，建成存储 28 TB 的视频监控中心节点。",
+      location: "塔什干，谢尔盖利区",
+      excerpt: "塔什干 TowerUp 住宅小区二期：SAT Solutions 在八栋住宅楼之间架设了 849 米架空光缆，并搭建了视频监控中心节点——24 个熔接点均经 OTDR 测试，8 台光纤配线箱，录像存储 28 TB。",
+      clientTasks: "将二期八栋新楼（2/9–2/16 号楼）的视频监控整合为一个系统：把每栋楼的信号无损耗、无干扰地传到中心节点，统一存储录像，并防止停电造成中断。",
+      content: "TowerUp 住宅小区二期由八栋高层住宅楼（2/9–2/16 号楼）组成，位于塔什干环城公路沿线的 Yangi Uzbekiston 片区。每栋楼的视频监控需要汇聚到一个中心节点，而楼与楼之间以及到节点的距离达数百米。铜质网线的传输极限为 100 米，无法满足要求，因此采用光纤组网。\n难点在哪里：\n— 线路在楼宇之间架空敷设：光缆挂在高处的钢绞线上，部分路段走地下电缆管道；\n— 施工在正在建设的工地上进行，因此光缆固定在专设的金属立杆上；\n— 每个光纤接点都必须通过衰减测试。\n我们做了什么：\n— 敷设 849 米 4 芯架空光缆；设计用量为 1307 米——实际用量更少，客户按实际长度付款；\n— 安装 8 根架空用金属立杆，并在节点处安装电缆桥架；\n— 完成 24 个光纤熔接点，每个接点的损耗均用 OTDR 检测；\n— 每栋楼安装一台壁挂式光纤配线箱，线路两端配 16 个传输距离 20 公里的 SFP 模块；\n— 搭建中心节点：19 英寸 8 口光纤配线架、12U 壁挂机柜、网管型交换机、大华 32 路录像机（存储 28 TB）以及 3 kVA 在线式 UPS。\n成果：\n— 八栋楼各自通过独立的光纤线路连接中心节点：楼间距离和电磁干扰不影响视频；\n— 所有楼的录像存入同一存储，停电时节点由 UPS 继续供电；\n— 工程按 2 号和 3 号表格验收单并附竣工资料完成交付；下一阶段在该线路上接入了各楼的视频监控——24 台摄像机。",
+    },
+  },
+
   "uzum-videonablyudenie-skladov-i-punktov-vydachi": {
     uz: {
       title: "Uzum — omborlar va buyurtma topshirish punktlarida videokuzatuv",
@@ -299,6 +342,12 @@ export function localizeCategoryName(slug: string | null | undefined, name: stri
 
 /** «Состав решения» кейса (поле equipmentSupply в БД — только RU): строки через перевод строки. 14.09.2026. */
 const EQUIPMENT: Record<string, Record<Loc, string>> = {
+  "zhk-towerup-vols-mezhdu-domami": {
+    uz: "Osma optik kabel, 4 tola — 849 m\nDevorga oʻrnatiladigan optik krosslar — 8 dona (har bir uyga bittadan)\n8 ta SC-portli 19\" optik kross\n1310 nm SFP-modullar, 20 km gacha — 16 dona\nDahua DHI-NVR4232-4KS3 videoregistratori, 32 kanal\n14 TB qattiq disklar — 2 dona (28 TB arxiv)\nPixietech PXT-S2790G-8TX boshqariladigan kommutatori\n12U devor shkafi, 3 kVA onlayn UPS",
+    en: "Aerial fiber-optic cable, 4 fibers — 849 m\nWall-mounted optical distribution boxes — 8 pcs (one per building)\n19\" fiber patch panel, 8 SC ports\n1310 nm SFP modules, up to 20 km — 16 pcs\nDahua DHI-NVR4232-4KS3 recorder, 32 channels\n14 TB hard drives — 2 pcs (28 TB archive)\nPixietech PXT-S2790G-8TX managed switch\n12U wall cabinet, 3 kVA online UPS",
+    tr: "Havai fiber optik kablo, 4 lif — 849 m\nDuvar tipi optik dağıtım kutuları — 8 adet (her binaya bir)\n8 SC portlu 19\" fiber patch panel\n1310 nm SFP modüller, 20 km'ye kadar — 16 adet\nDahua DHI-NVR4232-4KS3 kayıt cihazı, 32 kanal\n14 TB sabit diskler — 2 adet (28 TB arşiv)\nPixietech PXT-S2790G-8TX yönetilebilir switch\n12U duvar kabini, 3 kVA online UPS",
+    zh: "架空光缆，4 芯——849 米\n壁挂式光纤配线箱——8 台（每栋楼一台）\n19 英寸光纤配线架，8 个 SC 口\n1310 nm SFP 模块，传输距离 20 公里——16 个\n大华 DHI-NVR4232-4KS3 录像机，32 路\n14 TB 硬盘——2 块（存储 28 TB）\nPixietech PXT-S2790G-8TX 网管型交换机\n12U 壁挂机柜，3 kVA 在线式 UPS",
+  },
   "montazh-servernoy-komnaty": {
     uz: "Perforatsiyalangan eshikli server shkaflari\nKabel lotoklari va trassalari\nSKS va lokal tarmoq (LVS)\nStoykalarning elektr taʼminoti\nKabellarni markirovkalash va yotqizish",
     en: "Server cabinets with perforated doors\nCable trays and routes\nStructured cabling and LAN\nRack power supply\nCable labeling and routing",
@@ -342,6 +391,16 @@ const EQUIPMENT: Record<string, Record<Loc, string>> = {
     zh: "大华\n海康威视\nIP 楼宇对讲\n网络设备\n门禁系统\nLCD 视频墙",
   },
 };
+
+/** SEO-заголовок/описание кейса: RU — из БД, остальные языки — из перевода (если задан). */
+export function portfolioSeo(
+  p: { slug: string; seoTitle?: string | null; seoDescription?: string | null },
+  locale: string
+): { title: string | null; description: string | null } {
+  if (!isLoc(locale)) return { title: p.seoTitle || null, description: p.seoDescription || null };
+  const tr = PROJECT[p.slug]?.[locale];
+  return { title: tr?.seoTitle ?? null, description: tr?.seoDescription ?? null };
+}
 
 /** Накладывает перевод на проект портфолио (по slug). RU/неизвестные — без изменений. */
 export function localizePortfolioProject<T extends { slug: string; items?: any }>(p: T, locale: string): T {

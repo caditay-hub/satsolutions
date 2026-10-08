@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { resolveImageUrl } from "@/lib/image";
+import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
 import { getPortfolio, getPortfolioCategories } from "@/lib/api";
 import { Pagination } from "@/components/Pagination";
 import { getTranslations } from "next-intl/server";
@@ -117,6 +118,7 @@ export default async function PortfolioPage({
                     {t("noImage")}
                   </div>
                 )}
+                <IllustrationBadge label={illustrationLabel(p.slug, locale)} />
                 {cat ? (
                   <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-slate-800 shadow-sm backdrop-blur">
                     {localizeCategoryName(cat.slug, cat.name, locale)}

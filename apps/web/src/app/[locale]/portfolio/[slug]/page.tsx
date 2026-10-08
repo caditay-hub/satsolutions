@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { clampDesc } from "@/lib/seoText";
+import { clampDesc, titleWithBrand } from "@/lib/seoText";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPortfolioBySlug, getPortfolioCategories, getProductBySlug, getSitePage } from "@/lib/api";
@@ -14,7 +14,8 @@ import { BackButton } from "@/components/BackButton";
 import { PortfolioWorksAccordion } from "@/components/PortfolioWorksAccordion";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
-import { localizePortfolioProject, localizeCategoryName } from "@/lib/contentI18n";
+import { localizePortfolioProject, localizeCategoryName, portfolioSeo } from "@/lib/contentI18n";
+import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
 import { withOgUrl } from "@/lib/metadata";
 
 const DATE_LOCALE: Record<string, string> = {
@@ -23,12 +24,12 @@ const DATE_LOCALE: Record<string, string> = {
 
 // Подписи блоков перелинковки (кейс → каталог и услуги). Отдельный словарь, а не
 // messages/*.json: строки нужны только здесь и в 5 локалях сразу.
-const LINK_UI: Record<string, { equipment: string; equipmentHint: string; services: string; all: string }> = {
-  ru: { equipment: "Оборудование на объекте", equipmentHint: "Позиции того же класса, что применялись на проекте — с актуальными ценами.", services: "Услуги по этому направлению", all: "Весь каталог" },
-  uz: { equipment: "Obyektdagi uskunalar", equipmentHint: "Loyihada qo‘llanilgan turdagi pozitsiyalar — dolzarb narxlar bilan.", services: "Ushbu yo‘nalish bo‘yicha xizmatlar", all: "Butun katalog" },
-  en: { equipment: "Equipment used on site", equipmentHint: "Same-class items as installed on this project, with current prices.", services: "Related services", all: "Full catalogue" },
-  tr: { equipment: "Sahada kullanılan ekipman", equipmentHint: "Projede kullanılanla aynı sınıftaki ürünler, güncel fiyatlarla.", services: "İlgili hizmetler", all: "Tüm katalog" },
-  zh: { equipment: "项目所用设备", equipmentHint: "与本项目同类的产品，价格为最新价。", services: "相关服务", all: "全部产品" },
+const LINK_UI: Record<string, { equipment: string; equipmentHint: string; services: string; all: string; related: string }> = {
+  ru: { equipment: "Оборудование на объекте", equipmentHint: "Позиции того же класса, что применялись на проекте — с актуальными ценами.", services: "Услуги по этому направлению", all: "Весь каталог", related: "Ещё на этом объекте" },
+  uz: { equipment: "Obyektdagi uskunalar", equipmentHint: "Loyihada qo‘llanilgan turdagi pozitsiyalar — dolzarb narxlar bilan.", services: "Ushbu yo‘nalish bo‘yicha xizmatlar", all: "Butun katalog", related: "Ushbu obyektdagi boshqa ishlar" },
+  en: { equipment: "Equipment used on site", equipmentHint: "Same-class items as installed on this project, with current prices.", services: "Related services", all: "Full catalogue", related: "More work on this site" },
+  tr: { equipment: "Sahada kullanılan ekipman", equipmentHint: "Projede kullanılanla aynı sınıftaki ürünler, güncel fiyatlarla.", services: "İlgili hizmetler", all: "Tüm katalog", related: "Bu sahadaki diğer işler" },
+  zh: { equipment: "项目所用设备", equipmentHint: "与本项目同类的产品，价格为最新价。", services: "相关服务", all: "全部产品", related: "该项目的其他工程" },
 };
 
 type ContentBlock = { type: "p"; text: string } | { type: "ul"; items: string[] };
@@ -56,7 +57,7 @@ function ProjectContent({ text }: { text: string }) {
     <div className="space-y-4 text-base leading-relaxed text-slate-700">
       {blocks.map((b, i) =>
         b.type === "p" ? (
-          <p key={i} className={b.text.endsWith(":") && blocks[i + 1]?.type === "ul" ? "font-bold text-slate-900" : undefined}>
+          <p key={i} className={/[:：]$/.test(b.text) && blocks[i + 1]?.type === "ul" ? "font-bold text-slate-900" : undefined}>
             {b.text}
           </p>
         ) : (
@@ -85,16 +86,20 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
   try {
     const { item: rawItem } = await getPortfolioBySlug(slug);
     const item = localizePortfolioProject(rawItem, locale);
-    // RU: приоритет seoTitle/seoDescription из БД (заточены под поисковые запросы);
-    // остальные локали — локализованный title/excerpt (переводы seo-полей нет).
-    const title = (locale === "ru" && rawItem.seoTitle) || item.title;
-    const description = (locale === "ru" && rawItem.seoDescription) || item.excerpt || item.title;
+    // SEO-заголовок: RU — seoTitle/seoDescription из БД, остальные локали — перевод
+    // seo-полей из contentI18n (если есть), иначе локализованный title/excerpt.
+    // Бренд — через titleWithBrand (absolute): шаблон макета приписывал « — SAT Solutions»
+    // и к seoTitle, где бренд уже есть («…кейс SAT Solutions — SAT Solutions», 08.10.2026).
+    const seo = portfolioSeo(rawItem, locale);
+    const title = seo.title || item.title;
+    const description = seo.description || item.excerpt || item.title;
+    const fullTitle = /SAT Solutions/.test(title) ? title : titleWithBrand(title);
     const img = resolveImageUrl(item.coverImageUrl);
     return {
-      title,
+      title: { absolute: fullTitle },
       description: clampDesc(description),
       alternates: hreflangAlternates(`/portfolio/${item.slug}`, locale),
-      openGraph: { title, description, ...(img ? { images: [{ url: img }] } : {}) }
+      openGraph: { title: fullTitle, description, ...(img ? { images: [{ url: img }] } : {}) }
     };
   } catch {
     return { title: t("projectFallback") };
@@ -116,6 +121,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
     const img = resolveImageUrl(item.coverImageUrl);
     const works = item.items ?? [];
     const gallery = (item.galleryImageUrls ?? []).map((u) => resolveImageUrl(u)).filter(Boolean) as string[];
+    const illus = illustrationLabel(slug, locale);
 
     // Перелинковка кейса: оборудование того же класса + профильные услуги/отрасли.
     // Кейсы — доверенные страницы, отсюда вес идёт на коммерческие разделы.
@@ -139,6 +145,14 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
         }
       }
     }
+    // Другие кейсы на том же объекте — взаимная ссылка (ЖК TowerUp: безопасность ↔ ВОЛС)
+    const related = (
+      await Promise.all(
+        (links?.related ?? []).map((s) =>
+          getPortfolioBySlug(s).then((r) => localizePortfolioProject(r.item, locale)).catch(() => null)
+        )
+      )
+    ).filter(Boolean) as { slug: string; title: string; coverImageUrl?: string | null }[];
     const caseServices = (links?.services ?? [])
       .filter((k) => serviceByKey[k])
       .map((k) => ({ key: k, label: getServiceSeo(locale, k)?.h1 ?? serviceByKey[k].title }));
@@ -192,7 +206,8 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
         <div className="grid gap-8 lg:grid-cols-2">
           <div>
             {img ? (
-              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <IllustrationBadge label={illus} />
                 <Image
                   alt={item.title}
                   src={img}
@@ -261,7 +276,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
           </div>
         ) : null}
 
-        {works.length || gallery.length ? <PortfolioWorksAccordion works={works} images={gallery} /> : null}
+        {works.length || gallery.length ? <PortfolioWorksAccordion works={works} images={gallery} badge={illus} /> : null}
 
         {caseProducts.length > 0 && (
           <section className="mt-12 border-t border-slate-200 pt-8">
@@ -281,6 +296,31 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
               {caseProducts.map((p: any) => (
                 <ProductCard key={p.id} p={p} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
               ))}
+            </div>
+          </section>
+        )}
+
+        {related.length > 0 && (
+          <section className="mt-10 border-t border-slate-200 pt-6">
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700">{linkUi.related}</p>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {related.map((r) => {
+                const rimg = resolveImageUrl(r.coverImageUrl ?? null);
+                return (
+                  <Link
+                    key={r.slug}
+                    href={`/portfolio/${r.slug}`}
+                    className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-300"
+                  >
+                    {rimg ? (
+                      <span className="relative block h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-100">
+                        <Image src={rimg} alt={r.title} fill sizes="96px" className="object-cover" />
+                      </span>
+                    ) : null}
+                    <span className="text-sm font-bold text-slate-900 group-hover:text-brand-700">{r.title}</span>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         )}

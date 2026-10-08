@@ -71,10 +71,12 @@ function Chevron({ open }: { open: boolean }) {
 
 export function PortfolioWorksAccordion({
   works,
-  images
+  images,
+  badge
 }: {
   works: WorkItem[];
   images: string[]; // resolved absolute/relative URLs
+  badge?: string | null; // «Иллюстрация» — для кейсов с генерированными картинками (lib/illustrative)
 }) {
   const [openIndices, setOpenIndices] = useState<number[]>([]);
   const t = useTranslations("portfolio");
@@ -163,7 +165,7 @@ export function PortfolioWorksAccordion({
       {extraImages.length ? (
         <div className="mt-8">
           <div className="text-lg font-bold text-slate-900 mb-4">{t("extraImages")}</div>
-          <Lightbox images={extraImages} alt={t("projectPhoto")} gridClass="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" />
+          <Lightbox images={extraImages} alt={t("projectPhoto")} gridClass="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" badge={badge} />
         </div>
       ) : null}
     </div>

@@ -8,6 +8,7 @@ import { NewArrivalsTicker } from "@/components/Cards";
 import { localizeProductName } from "@/lib/productI18n";
 import { priceInfo } from "@/lib/product";
 import { resolveImageUrl } from "@/lib/image";
+import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
@@ -649,6 +650,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                       <div className="flex h-full items-center justify-center bg-slate-200 text-sm font-bold text-slate-500">{t("noImage")}</div>
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <IllustrationBadge label={illustrationLabel(p.slug, locale)} />
                   </div>
                   <div className="p-5 bg-white flex flex-col gap-1">
                     <h3 className="font-black text-slate-900 text-sm line-clamp-1 group-hover:text-brand-700 transition-colors">{p.title}</h3>

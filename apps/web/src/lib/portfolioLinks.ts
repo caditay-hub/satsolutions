@@ -7,8 +7,9 @@
 // и внутренняя перелинковка на коммерческие страницы.
 //
 // products — slug'и карточек (проверены в каталоге); services — ключи /solutions/<key>.
+// related — другие кейсы на том же объекте (взаимная ссылка «Ещё на этом объекте»).
 // Если кейса нет в карте, блоки просто не рендерятся.
-export type PortfolioLinks = { products: string[]; services: string[] };
+export type PortfolioLinks = { products: string[]; services: string[]; related?: string[] };
 
 export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
   // ЖК Tower Up: домофония, камеры в лифтах и по периметру, шлагбаумы, парковка
@@ -22,6 +23,20 @@ export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
       "hik-ds-d5027f2-2p2",
     ],
     services: ["residential", "intercom", "cctv", "barrier", "anpr", "parking"],
+    related: ["zhk-towerup-vols-mezhdu-domami"],
+  },
+
+  // ЖК TowerUp, 2-я очередь: ВОЛС между 8 домами + центральный узел видеонаблюдения (08.10.2026)
+  "zhk-towerup-vols-mezhdu-domami": {
+    products: [
+      "pxt-pxt-p-2-6-04",
+      "pxt-odf-kross-8-port-prostoy",
+      "pxt-pxt-sfp-w35-20",
+      "dahua-dhi-nvr4232-4ks3",
+      "pxt-pxt-s2790g-8tx",
+    ],
+    services: ["fiber", "network", "residential", "cctv", "server"],
+    related: ["zhk-tower-up-intellektualnaya-sistema-bezopasnosti-i-videomonitoringa"],
   },
 
   // Серверная под ключ: шкафы, СКС, электропитание

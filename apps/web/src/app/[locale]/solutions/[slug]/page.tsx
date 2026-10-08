@@ -8,6 +8,7 @@ import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeProduct, localizeProductName } from "@/lib/productI18n";
 import { getServiceBySlug, getPortfolio, getProductsCached } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
+import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
 import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 import { ProjectQuoteForm } from "@/components/ProjectQuoteForm";
@@ -423,6 +424,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                 {img ? (
                   <Image src={img} alt={c.title} fill sizes="(max-width:640px) 100vw, 25vw" className="object-cover" unoptimized />
                 ) : null}
+                <IllustrationBadge label={illustrationLabel(c.slug, locale)} />
               </div>
               <div className="p-3 text-sm font-semibold text-slate-900 group-hover:text-brand-700">{c.title}</div>
             </Link>
