@@ -105,10 +105,11 @@ export default async function RootLayout({
       contactType: "customer service",
     },
     // Профили компании — Google связывает их с сайтом (knowledge panel, бренд-выдача).
+    // Только существующие и официальные (ТЗ AY, 08.10.2026): t.me/satsolutionsuz убран — такого
+    // аккаунта нет, Telegram-канала у компании нет; бот заявок — не профиль компании.
     sameAs: [
       "https://www.instagram.com/satsolutionsuz/",
       "https://www.linkedin.com/company/sat-solutions-uz",
-      "https://t.me/satsolutionsuz",
       "https://yandex.ru/maps/org/161031857568",
       "https://maps.google.com/?cid=15605896518310441449",
     ],
