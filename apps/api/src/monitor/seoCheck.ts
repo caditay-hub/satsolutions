@@ -90,6 +90,9 @@ const LEGACY: [string, string][] = [
   ["/solutions/videonablyudenie", "/solutions/cctv"],
   ["/contacts", "/contact"],
   ["/uz/support", "/uz/contact"],
+  ["/ru", "/"],
+  ["/ru/contact", "/contact"],
+  ["/ru/products/type/ip-kamery", "/products/type/ip-kamery"],
 ];
 
 // ── Анализ одной страницы ────────────────────────────────────────────────────

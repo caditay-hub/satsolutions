@@ -44,6 +44,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Русская версия без префикса: /ru и /ru/<путь> → постоянный 308 (08.10.2026).
+      // Раньше их снимал next-intl временным 307, а для Google это сигнал НЕ переносить
+      // адрес в индексе; ссылки с /ru/ остались от старого сайта. Редиректы next.config
+      // срабатывают только на входящий URL — внутренний rewrite next-intl «/» → «/ru» не задевают.
+      { source: "/ru", destination: "/", permanent: true },
+      { source: "/ru/:path*", destination: "/:path*", permanent: true },
       // Страница «Партнёры» удалена (06.07.2026) — 301 на «О компании» на всех локалях
       { source: "/partners", destination: "/about", permanent: true },
       { source: "/partner", destination: "/about", permanent: true },
