@@ -76,8 +76,13 @@ async function main() {
   // Admin API is mounted under /admin (auth-protected inside router)
   app.use("/admin", adminRouter);
 
-  app.get("/openapi.json", (_req, res) => res.json(openapi));
-  app.use("/docs", swaggerUi.serve, swaggerUi.setup(openapi));
+  // Swagger только для разработки (ТЗ BA, 08.10.2026): на проде им никто не пользовался —
+  // по логам только наши проверки и сканеры, — а заготовка показывала вход в админку
+  // (/auth/login) и служебные /admin/*. На проде оба адреса отдают обычный 404.
+  if (env.NODE_ENV !== "production") {
+    app.get("/openapi.json", (_req, res) => res.json(openapi));
+    app.use("/docs", swaggerUi.serve, swaggerUi.setup(openapi));
+  }
 
   app.use((_req, res) => res.status(404).json({ error: "Not found" }));
 
