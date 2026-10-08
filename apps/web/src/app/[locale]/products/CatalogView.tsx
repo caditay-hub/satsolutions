@@ -18,7 +18,8 @@ const HUB_ARTICLES_UI: Record<string, string> = {
   tr: "İlgili makaleler",
   zh: "相关文章",
 };
-import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, getBrandTypePairs, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
+import { getProducts, getProductFacets, getSitePage, getSmartSearch, getSearchCases, getBrandTypePairs, getCategories, type SmartSearchDto, type CaseHitDto } from "@/lib/api";
+import { categoryTargetPath } from "@/lib/categoryTarget";
 import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { resolveImageUrl } from "@/lib/image";
 import { localizePortfolioProject } from "@/lib/contentI18n";
@@ -162,6 +163,8 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
   // «Похожие товары» под smart-выдачей: при точном запросе модели API отдаёт
   // related (ИИ-подборка из тех же разделов); иначе добираем из категорий выдачи.
+  // Чипы «Уточнить» ведут на чистый раздел (/products/type/…), а не на фильтр ?category= (ТЗ BO)
+  const refineCats = smart?.sections?.length ? await getCategories().then((r) => r.categories).catch(() => null) : null;
   let similar: import("@/lib/api").ProductDto[] = [];
   if (smart) {
     if (smart.related && smart.related.length > 0) {
@@ -449,7 +452,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               {smart.sections.map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/products?category=${encodeURIComponent(s.slug)}`}
+                  href={(refineCats && categoryTargetPath(refineCats, s.slug)) || `/products?category=${encodeURIComponent(s.slug)}`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-brand-300 bg-white px-3 py-1 text-xs font-bold text-brand-700 hover:bg-brand-600 hover:text-white transition-colors"
                 >
                   {s.name}

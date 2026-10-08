@@ -10,8 +10,9 @@ import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { CatalogView } from "./CatalogView";
 import { withOgUrl } from "@/lib/metadata";
+import { categoryTargetPath } from "@/lib/categoryTarget";
 
-// canonical: при активном ТОЛЬКО фильтре категории указываем на индексируемую /categories/[slug]
+// canonical: при активном ТОЛЬКО фильтре категории указываем на конечный раздел (lib/categoryTarget)
 // (иначе главная/чипы «Уточнить» распыляли бы вес на служебный /products?category=)
 async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale } = await params;
@@ -27,8 +28,8 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
   if (onlyCategory) {
     try {
       const { categories } = await getCategories();
-      const cur = categories.find((c) => c.slug === category || c.id === category);
-      if (cur) canonical = `/categories/${cur.slug}`;
+      // сразу на конечный раздел, а не на /categories/<slug> (тот редиректит)
+      canonical = categoryTargetPath(categories, category as string) ?? "/products";
     } catch {
       // ignore
     }

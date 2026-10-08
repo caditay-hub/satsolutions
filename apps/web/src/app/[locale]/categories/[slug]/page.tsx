@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
-import { typeSlug } from "@/lib/typeSlug";
-import { deadCategoryTarget } from "@/lib/deadCategories";
+import { categoryTargetPath } from "@/lib/categoryTarget";
 import { withOgUrl } from "@/lib/metadata";
 
 // Единый каталог: брендовые страницы категорий схлопнуты на страницу типа
@@ -23,22 +22,13 @@ export default async function CategoryRedirectPage({ params }: { params: Promise
   // она без префикса).
   const go = (path: string): never => permanentRedirect(locale === "ru" ? path : `/${locale}${path}`);
 
+  // API отдаёт только категории С товарами: пустые разделы старой таксономии раньше давали
+  // 404 (1145 штук в GSC) — теперь ведут на ближайшую живую страницу. Правило общее с
+  // canonical фильтра и чипами поиска (lib/categoryTarget.ts).
   const { categories } = await getCategories();
-  const current = categories.find((c) => c.slug === slug);
-  if (!current) {
-    // API отдаёт только категории С товарами, поэтому пустые разделы старой
-    // таксономии сюда не доходят. Раньше это был 404 (1145 штук в GSC) — теперь
-    // уводим на ближайшую живую страницу, чтобы не жечь краулинговый бюджет.
-    const target = deadCategoryTarget(slug);
-    if (target) go(target);
-    notFound();
-  }
-
-  const hasChildren = categories.some((c) => c.parentId === current.id);
-  if (hasChildren) {
-    go("/categories");
-  }
-  go(`/products/type/${typeSlug(current.name)}`);
+  const target = categoryTargetPath(categories, slug);
+  if (target) go(target);
+  notFound();
 }
 
 // og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
