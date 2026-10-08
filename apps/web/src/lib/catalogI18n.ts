@@ -74,7 +74,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "PON-оборудование": { uz: "PON uskunalari", en: "PON equipment", tr: "PON ekipmanları", zh: "PON设备" },
   "Оптические коммутаторы": { uz: "Optik kommutatorlar", en: "Optical switches", tr: "Optik switchler", zh: "光交换机" },
   "Wi-Fi точки доступа": { uz: "Wi-Fi kirish nuqtalari", en: "Wi-Fi access points", tr: "Wi-Fi erişim noktaları", zh: "Wi-Fi接入点" },
-  "Радиомосты": { uz: "Radiokoʻpriklar", en: "Radio bridges", tr: "Radyo köprüleri", zh: "无线网桥" },
+  "Радиомосты": { uz: "Radiokoʻpriklar", en: "Radio bridges", tr: "Radyo köprüleri", zh: "无线电网桥" },
   "Точки доступа и роутеры": { uz: "Kirish nuqtalari va routerlar", en: "Access points & routers", tr: "Erişim noktaları ve routerlar", zh: "接入点与路由器" },
   "Mesh-системы": { uz: "Mesh tizimlar", en: "Mesh systems", tr: "Mesh sistemler", zh: "Mesh系统" },
   "Беспроводные мосты": { uz: "Simsiz koʻpriklar", en: "Wireless bridges", tr: "Kablosuz köprüler", zh: "无线网桥" },

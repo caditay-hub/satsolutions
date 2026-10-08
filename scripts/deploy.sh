@@ -235,4 +235,21 @@ echo "    живая сборка сходится: $CSS -> 200"
 (cd /var/www/satweb/apps/api && npx tsx src/monitor/sitemapSubmit.ts) || echo "    (переотправка sitemap не удалась — не критично)"
 (cd /var/www/satweb/apps/api && npx tsx src/monitor/indexNow.ts) || echo "    (IndexNow не удался — не критично)"
 
+# 9) seo:check quick (ТЗ BE/BF/BG, 08.10.2026): защищённые URL из seo-critical-urls.json,
+#    маршруты-эталоны, старые адреса → ожидаемый редирект, sitemap и robots.txt (~1,5 мин).
+#    Сервер один, поэтому новая сборка проверяется уже на живом сайте: откатить её
+#    скрипт не может, но поднимает тревогу. В Telegram пишет только при CRITICAL или
+#    новом HIGH. При CRITICAL деплой отдаёт код 3 (после строки DONE — сайт при этом
+#    работает новой сборкой, см. отчёт выше в логе).
+echo "==> [9] seo:check quick"
+SEO_RC=0   # set -e: ненулевой код ловим через ||, иначе скрипт оборвётся до DONE
+(cd /var/www/satweb/apps/api && timeout 600 npx tsx src/monitor/seoCheck.ts --mode=quick --local --notify=deploy) || SEO_RC=$?
+case "$SEO_RC" in
+  0) echo "    seo:check: CRITICAL нет" ;;
+  1) echo "    !! seo:check: есть CRITICAL — см. отчёт выше и Telegram" ;;
+  *) echo "    (seo:check не отработал, код $SEO_RC — не критично для деплоя)" ;;
+esac
+
 echo "==> [satweb deploy] DONE $(date -u +%FT%TZ)"
+[ "$SEO_RC" = "1" ] && exit 3
+exit 0

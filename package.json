@@ -14,7 +14,8 @@
     "typecheck": "npm run typecheck -w @satsolutions/api && npm run typecheck -w @satsolutions/web && npm run typecheck -w @satsolutions/admin",
     "deploy": "ssh satweb-prod \"bash /root/deploy-satweb.sh\"",
     "deploy:push-bootstrap": "scp scripts/deploy-bootstrap.sh satweb-prod:/root/deploy-satweb.sh",
-    "deploy:log": "ssh satweb-prod \"tail -n 200 /root/deploy-last.log\""
+    "deploy:log": "ssh satweb-prod \"tail -n 200 /root/deploy-last.log\"",
+    "seo:check": "ssh satweb-prod \"cd /var/www/satweb/apps/api && npx tsx src/monitor/seoCheck.ts --local\""
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

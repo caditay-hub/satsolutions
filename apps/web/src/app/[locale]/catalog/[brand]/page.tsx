@@ -59,7 +59,13 @@ async function generateMetadataBase({
   // но «Найдено: 0» не индексируем (05.10.2026: Eltex, Teltonika)
   const emptyBrand = brandRow?.productCount === 0;
   const baseDesc = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
-  const description = stockCount >= 5 ? `${tc("brandInStock", { count: stockCount })} ${baseDesc}` : baseDesc;
+  // Название бренда — первым словом (seo:check 07.10.2026): clampDesc оставляет только первую
+  // фразу, и у всех 155 страниц брендов в выдаче было одно «В наличии N моделей — …» без
+  // бренда, а бренды с равным числом моделей получали дословно одинаковые описания.
+  const brandLabel = localizeBrandName(brand.toLowerCase(), cfg.displayName, locale);
+  const stockLead = tc("brandInStock", { count: stockCount });
+  const leadBody = locale === "ru" || locale === "tr" ? stockLead.charAt(0).toLocaleLowerCase(locale) + stockLead.slice(1) : stockLead;
+  const description = stockCount >= 5 ? `${brandLabel}${locale === "zh" ? "：" : ": "}${leadBody} ${baseDesc}` : baseDesc;
   return {
     title: metaTitle,
     description: clampDesc(description),
