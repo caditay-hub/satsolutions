@@ -189,7 +189,8 @@ export async function catalogEntries(): Promise<SitemapEntry[]> {
       alternates: { languages: langAlternates(`/catalog/${b.slug}`) },
     }));
 
-  const pairRoutes: SitemapEntry[] = pairs.map((p: any) => {
+  // Пары «Прочее × тип» в карту не подаём: их canonical — раздел типа (catalog/[brand]/[type]).
+  const pairRoutes: SitemapEntry[] = pairs.filter((p: any) => String(p.brand).toLowerCase() !== "prochee").map((p: any) => {
     const path = `/catalog/${p.brand}/${typeSlug(p.type)}`;
     return {
       url: `${SITE_URL}${path}`,

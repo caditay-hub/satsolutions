@@ -6,6 +6,7 @@ import { getBrands, getBrandTypePairs } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
+import { typeHubHref } from "@/lib/groupCanonical";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { routing } from "@/i18n/routing";
@@ -55,7 +56,10 @@ async function generateMetadataBase({
   return {
     title,
     description: clampDesc(description),
-    alternates: hreflangAlternates(`/catalog/${brandSlug}/${type}`, locale),
+    // «Прочее» — не бренд, а сборная полка комплектующих. Его пары («Прочее × коммутаторы»)
+    // перебивали в выдаче полноценные разделы типов: по «коммутатор» Google брал пару на 11
+    // товаров вместо раздела на 325 (разбор 09.10.2026). Canonical + hreflang — на раздел типа.
+    alternates: brandSlug === "prochee" ? hreflangAlternates(typeHubHref(type), locale) : hreflangAlternates(`/catalog/${brandSlug}/${type}`, locale),
     openGraph: { title, description, locale: ogLocale(locale), images: ["/og.png"] },
     robots: catalogRobots(sp),
   };

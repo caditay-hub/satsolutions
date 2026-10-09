@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
-import { getCategories } from "@/lib/api";
+import { getCategories, getProductFacets } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
-import { typeSeoFor, typeLandingFor } from "@/lib/typeSeo";
+import { typeSeoFor, typeLandingFor, needsPrices, fillPrices, type PriceRange } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { deadTypeTarget } from "@/lib/deadCategories";
@@ -30,6 +30,17 @@ async function resolveTypeName(slug: string): Promise<string | null> {
   }
 }
 
+// Вилка цен раздела для «[[ … {min} … ]]» в SEO-текстах (typeSeo.ts). Фасеты кэшируются
+// на 5 мин, как и сам список; при сбое API фрагменты с ценой просто выпадают.
+async function priceRangeFor(typeName: string): Promise<PriceRange> {
+  try {
+    const f = await getProductFacets(typeName);
+    return f?.price && f.price.min > 0 ? { min: f.price.min, max: f.price.max } : null;
+  } catch {
+    return null;
+  }
+}
+
 async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string; slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const sp = (await searchParams) ?? {};
@@ -39,8 +50,9 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
   const locName = localizeCatName(name, locale);
   // Приоритетные типы: кастомные title/description под реальные запросы (typeSeo.ts)
   const custom = typeSeoFor(slug, locale);
-  const title = custom?.title ?? `${locName} — ${t("product.titleBuy")}`;
-  const description = custom?.description ?? t("product.typeDesc", { type: locName });
+  const range = custom && needsPrices(custom.title, custom.description) ? await priceRangeFor(name) : null;
+  const title = custom?.title ? fillPrices(custom.title, locale, range) : `${locName} — ${t("product.titleBuy")}`;
+  const description = custom?.description ? fillPrices(custom.description, locale, range) : t("product.typeDesc", { type: locName });
   return {
     title,
     description,
@@ -89,7 +101,12 @@ export default async function ProductTypePage({ params, searchParams }: { params
   // type и __clean задаём принудительно: type — из slug, __clean=1 глушит 301 обратно сюда.
   // Контент-лендинг приоритетных типов (SEO-план 31.08): интро+лонгрид+FAQ на 5 языках
   // едет существующим каналом pairSeo → блок с FAQPage-схемой внизу листинга.
-  const landing = typeLandingFor(slug, locale);
+  const rawLanding = typeLandingFor(slug, locale);
+  const lrange = rawLanding && needsPrices(rawLanding.intro, ...rawLanding.long, ...rawLanding.faq.flat()) ? await priceRangeFor(name) : null;
+  const fp = (x: string) => fillPrices(x, locale, lrange);
+  const landing = rawLanding
+    ? { intro: fp(rawLanding.intro), long: rawLanding.long.map(fp), faq: rawLanding.faq.map(([q, a]) => [fp(q), fp(a)] as [string, string]) }
+    : null;
   const view = await CatalogView({
     params: Promise.resolve({ locale }),
     searchParams: Promise.resolve({ ...sp, type: name, __clean: "1" }),
