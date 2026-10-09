@@ -207,6 +207,11 @@ async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalid
     try {
       res = await fetch(`${apiBaseUrl()}${path}`, {
         ...init,
+        // Повтор — со своим signal: иначе Next (dedupe-fetch) в пределах одного рендера
+        // отдаёт запомненный ПРОВАЛ первой попытки, и все повторы уходят впустую (замер
+        // 09.10: карточка ждала 21 с и всё равно 500). signal — штатный способ обойти
+        // запоминание; кэш данных (revalidate) он не отключает.
+        ...(attempt > 0 ? { signal: AbortSignal.timeout(20000) } : {}),
         headers: {
           ...(init?.headers ?? {})
         }
