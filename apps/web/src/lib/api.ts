@@ -205,12 +205,14 @@ async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalid
     const last = !canRetry || attempt >= API_RETRY_DELAYS_MS.length;
     let res: Response;
     try {
-      res = await fetch(`${apiBaseUrl()}${path}`, {
+      // Повтор — по ДРУГОМУ адресу (`_r=N`, API лишний параметр игнорирует): внутри Next
+      // провал запоминается по ключу запроса (dedupe-fetch, кэш данных), и повтор по тому же
+      // адресу мгновенно получал ту же ошибку — 6 попыток подряд UND_ERR_SOCKET, хотя API
+      // давно поднялся (замер 09.10). Другой адрес = другой ключ на всех уровнях кэша.
+      const url = attempt > 0 ? `${apiBaseUrl()}${path}${path.includes("?") ? "&" : "?"}_r=${attempt + 1}` : `${apiBaseUrl()}${path}`;
+      res = await fetch(url, {
         ...init,
-        // Повтор — со своим signal: иначе Next (dedupe-fetch) в пределах одного рендера
-        // отдаёт запомненный ПРОВАЛ первой попытки, и все повторы уходят впустую (замер
-        // 09.10: карточка ждала 21 с и всё равно 500). signal — штатный способ обойти
-        // запоминание; кэш данных (revalidate) он не отключает.
+        // и свой signal (тайм-аут 20 с) — заодно выключает dedupe-fetch для повтора
         ...(attempt > 0 ? { signal: AbortSignal.timeout(20000) } : {}),
         headers: {
           ...(init?.headers ?? {})
@@ -218,8 +220,7 @@ async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalid
       });
     } catch (e) {
       // process.stderr, а не console: console.* вырезается в проде (compiler.removeConsole)
-      if (canRetry) process.stderr.write(`[apiFetch] ${new Date().toISOString()} ${path} попытка ${attempt + 1}: ${(e as any)?.cause?.code ?? ""} ${(e as any)?.name ?? ""} ${String((e as any)?.message ?? e).slice(0, 120)}
-`);
+      if (canRetry) process.stderr.write(`[apiFetch] ${new Date().toISOString()} ${path} попытка ${attempt + 1}: ${(e as any)?.cause?.code ?? ""} ${(e as any)?.name ?? ""} ${String((e as any)?.message ?? e).slice(0, 120)}\n`);
       if (last || !isTransientNetError(e)) throw e;
       await new Promise((r) => setTimeout(r, API_RETRY_DELAYS_MS[attempt]));
       continue;
