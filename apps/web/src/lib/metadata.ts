@@ -78,7 +78,8 @@ export function createMetadata(overrides?: Partial<Metadata>): Metadata {
         // Подтверждение владения для Bing Webmaster Tools (кабинет заведён 10.09.2026).
         // Тег нужен постоянно: Bing периодически перепроверяет владение и снимает сайт,
         // если подтверждение исчезло. Индекс Bing — источник ответов поиска ChatGPT и Copilot.
-        verification: { other: { "msvalidate.01": "8B426810555837A71D264757187B02D2" } },
+        // Ahrefs Webmaster Tools (09.10.2026): бесплатный аудит и ссылочный профиль; тег тоже не удалять.
+        verification: { other: { "msvalidate.01": "8B426810555837A71D264757187B02D2", "ahrefs-site-verification": "db4a4c401a23703d68b780e598c8c75ddbfaaf46d0b944bc6711a8bf27983e6f" } },
         formatDetection: {
             email: false,
             address: false,
