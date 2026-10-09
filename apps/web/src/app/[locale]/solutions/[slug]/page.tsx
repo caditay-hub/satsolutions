@@ -24,6 +24,7 @@ import { SmartHomeDevices } from "@/components/SmartHomeDevices";
 import { H3cEquipment } from "@/components/H3cEquipment";
 import { DataCenterDetails } from "@/components/DataCenterDetails";
 import { RelatedServices } from "@/components/RelatedServices";
+import { RelatedHubs } from "@/components/RelatedHubs";
 import { ServiceAppLink } from "@/components/ServiceAppLink";
 import { WorkTerms } from "@/components/WorkTerms";
 import { ServicePackages } from "@/components/ServicePackages";
@@ -663,6 +664,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
         {/* Смежные услуги — перелинковка внутри «семьи» (сети / серверы) */}
         <RelatedServices current={svc.key} locale={locale} />
+
+        {/* Оборудование и бренды кластера (lib/relatedHubs.ts) */}
+        <RelatedHubs path={`/solutions/${svc.key}`} locale={locale} bare />
 
         {/* Услуги: витрина оборудования и кейсы — выше, рядом с предложением.
             Проекты и отрасли — в одном ряду, только если есть оба блока.

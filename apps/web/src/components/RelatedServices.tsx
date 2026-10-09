@@ -6,6 +6,8 @@ import { getTranslations } from "next-intl/server";
 const FAMILIES: string[][] = [
   ["network", "wifi", "fiber", "radiobridge", "mikrotik"],
   ["server", "servers", "virtualization"],
+  // СКУД-кластер (09.10.2026): турникет и замок — исполнительные устройства СКУД
+  ["access", "turnstile", "locks"],
 ];
 
 // locale приходит пропом от страницы: без него getTranslations читает заголовки → динамика

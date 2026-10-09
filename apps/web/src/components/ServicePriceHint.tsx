@@ -1,10 +1,10 @@
 import { Link } from "@/i18n/navigation";
-import { servicePrices } from "@/lib/servicePrices";
+import { servicePricesLive } from "@/lib/servicePrices";
 
 // Ценовой ориентир на странице услуги: ключи «… цена / narxi» ведут сюда, и до этого
 // блока страница не отвечала на вопрос «сколько», отправляя человека обратно в выдачу.
-export function ServicePriceHint({ k, locale }: { k: string; locale: string }) {
-  const block = servicePrices(k, locale);
+export async function ServicePriceHint({ k, locale }: { k: string; locale: string }) {
+  const block = await servicePricesLive(k, locale);
   if (!block) return null;
 
   return (

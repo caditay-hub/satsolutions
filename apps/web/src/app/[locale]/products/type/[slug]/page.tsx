@@ -13,6 +13,7 @@ import { routing } from "@/i18n/routing";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { ogLocale } from "@/lib/ogLocale";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
+import { RelatedHubs } from "@/components/RelatedHubs";
 import { CatalogView } from "../../CatalogView";
 import { withOgUrl } from "@/lib/metadata";
 
@@ -126,6 +127,7 @@ export default async function ProductTypePage({ params, searchParams }: { params
   return (
     <>
       {view}
+      <RelatedHubs path={`/products/type/${slug}`} locale={locale} />
       <CategoryServiceLink typeName={name} locale={locale} />
     </>
   );

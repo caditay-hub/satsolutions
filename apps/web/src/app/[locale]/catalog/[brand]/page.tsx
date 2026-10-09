@@ -12,6 +12,7 @@ import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { CatalogView } from "../../products/CatalogView";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CategoryServiceLink } from "@/components/CategoryServiceLink";
+import { RelatedHubs } from "@/components/RelatedHubs";
 import { serviceForCategory } from "@/lib/servicesData";
 import { withOgUrl } from "@/lib/metadata";
 
@@ -141,6 +142,7 @@ export default async function BrandCatalogPage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {view}
+      <RelatedHubs path={`/catalog/${brandSlug}`} locale={locale} />
       <CategoryServiceLink typeName={dominantType} locale={locale} />
     </>
   );
