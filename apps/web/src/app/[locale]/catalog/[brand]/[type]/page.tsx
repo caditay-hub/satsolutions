@@ -87,6 +87,11 @@ export default async function BrandTypePage({
   const pair = await resolvePair(brandSlug, type);
   if (!pair) {
     const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+    // Шлагбаумы выделены из «Турникетов и шлагбаумов» (09.10.2026): у брендов, где в паре
+    // были одни шлагбаумы (Dahua), связка «турникеты» исчезла — ведём на их шлагбаумы.
+    if (type === "turnikety-i-shlagbaumy" && (await resolvePair(brandSlug, "shlagbaumy").catch(() => null))) {
+      permanentRedirect(`${lp}/catalog/${brandSlug}/shlagbaumy`);
+    }
     permanentRedirect(`${lp}/catalog/${brandSlug}`);
   }
 

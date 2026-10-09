@@ -120,7 +120,9 @@ function analyze(path: string, r: Resp, add: (sev: Sev, code: string, url: strin
   if (!canon) add(crit("HIGH"), "canonical-missing", path);
   else {
     const c = rel(canon).replace(/\/$/, "") || "/"; const me = path.replace(/\/$/, "") || "/";
-    if (c !== me && !path.includes("?")) add(crit("HIGH"), "canonical-not-self", path, "→ " + canon);
+    // /catalog/prochee/<тип> — canonical на раздел типа по замыслу (09.10.2026): «Прочее» не бренд
+    const prochee = /^(\/(uz|en|tr|zh))?\/catalog\/prochee\/[^/]+$/.test(me) && /\/products\/type\//.test(c);
+    if (c !== me && !path.includes("?") && !prochee) add(crit("HIGH"), "canonical-not-self", path, "→ " + canon);
   }
   const miss = [...LOCALES, "x-default"].filter((l) => !hl.includes(l));
   if (miss.length) add("MEDIUM", "hreflang-incomplete", path, "нет: " + miss.join(","));
