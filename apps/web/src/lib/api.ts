@@ -189,10 +189,11 @@ function apiBaseUrl() {
 
 // Повтор чтения на сервере, пока API перезапускается (09.10.2026). deploy.sh делает
 // `pm2 restart sat-api` (fork, без бесшовной смены): пару секунд :4005 отвечает
-// ECONNREFUSED, и некэшированные карточки отдавали 500 — 40 раз за 02–08.10. Паузы
-// 0,3+0,7+1,5+2,5 с перекрывают запуск API. Повторяем только GET и только сеть/502–504:
-// 404 и прочие ответы API — настоящие, их не повторяем; формы/заказы (POST) — никогда.
-const API_RETRY_DELAYS_MS = [300, 700, 1500, 2500];
+// ECONNREFUSED, и некэшированные карточки отдавали 500 — 40 раз за 02–08.10. API
+// поднимается до ~7 с (замер на деплое 09.10), паузы 0,3+0,7+1,5+3+5 = 10,5 с это перекрывают.
+// Повторяем только GET и только сеть/502–504: 404 и прочие ответы API — настоящие,
+// их не повторяем; формы/заказы (POST) — никогда.
+const API_RETRY_DELAYS_MS = [300, 700, 1500, 3000, 5000];
 const isTransientNetError = (e: unknown) => {
   const s = `${(e as any)?.message ?? ""} ${(e as any)?.cause?.code ?? ""} ${(e as any)?.cause?.message ?? ""}`;
   return /ECONNREFUSED|ECONNRESET|EPIPE|ETIMEDOUT|UND_ERR|fetch failed|socket hang up/i.test(s);

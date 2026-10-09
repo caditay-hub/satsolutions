@@ -144,8 +144,8 @@ fi
 echo "    сборка полная (BUILD_ID $(cat "$W/BUILD_ID"))"
 
 # 5) Перезапуск ТОЛЬКО satweb-приложений (CRM/боты не трогаем).
-#    sat-api остаётся на restart: fork-режим, node dist/index.js, поднимается за доли
-#    секунды. sat-web/sat-admin с 09.09.2026 живут в cluster_mode (см.
+#    sat-api остаётся на restart: fork-режим, node dist/index.js. Поднимается НЕ мгновенно —
+#    до ~7 с до ответа /health (замер 09.10.2026), поэтому ниже ждём /health. sat-web/sat-admin с 09.09.2026 живут в cluster_mode (см.
 #    scripts/ecosystem.satweb.config.js), поэтому им — reload: новый воркер поднимается,
 #    отдаёт `listening`, и только потом гаснет старый. Это убирает окно 502 на каждом
 #    деплое (за 03.09 их было 280, за 08.09 — 229, все внутри окон рестарта).
