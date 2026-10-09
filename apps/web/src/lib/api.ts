@@ -217,6 +217,7 @@ async function apiFetch<T>(path: string, init?: RequestInit & { next?: { revalid
         }
       });
     } catch (e) {
+      if (canRetry) console.warn(`[apiFetch] ${path} попытка ${attempt + 1}: ${(e as any)?.cause?.code ?? ""} ${(e as any)?.name ?? ""} ${String((e as any)?.message ?? e).slice(0, 120)}`);
       if (last || !isTransientNetError(e)) throw e;
       await new Promise((r) => setTimeout(r, API_RETRY_DELAYS_MS[attempt]));
       continue;
