@@ -585,7 +585,9 @@ export function serviceForCategory(name: string | null | undefined): ServiceItem
   const n = (name ?? "").toLowerCase();
   if (!n) return null;
   let key: string | null = null;
-  if (/шлагбаум/.test(n)) key = "barrier";
+  // «Турникеты и шлагбаумы» после выделения «Шлагбаумов» (09.10.2026) — раздел турникетов
+  if (/турникет/.test(n)) key = "turnstile";
+  else if (/шлагбаум/.test(n)) key = "barrier";
   else if (/камер|регистратор|nvr|dvr|видеонаблюд/.test(n)) key = "cctv";
   else if (/домофон|вызывн|внутренн.*монитор/.test(n)) key = "intercom";
   else if (/скуд|турникет|считыват|замок|терминал.*доступ|контрол.*доступ/.test(n)) key = "access";

@@ -44,6 +44,7 @@ const CAT_NAMES: Record<string, Loc> = {
   "Системы распознавания номеров (ANPR)": { uz: "Raqam tanish tizimlari (ANPR)", en: "License plate recognition (ANPR)", tr: "Plaka tanıma sistemleri (ANPR)", zh: "车牌识别系统 (ANPR)" },
   "Терминалы и считыватели": { uz: "Terminallar va oʻqish qurilmalari", en: "Terminals & readers", tr: "Terminaller ve okuyucular", zh: "终端与读卡器" },
   "Турникеты и шлагбаумы": { uz: "Turniketlar va shlagbaumlar", en: "Turnstiles & barriers", tr: "Turnikeler ve bariyerler", zh: "闸机与道闸" },
+  "Шлагбаумы": { uz: "Shlagbaumlar", en: "Barrier gates", tr: "Bariyerler", zh: "道闸" },
   "Замки и СКУД": { uz: "Qulflar va SKUD", en: "Locks & access control", tr: "Kilitler ve geçiş kontrolü", zh: "门锁与门禁" },
   "Биометрические терминалы": { uz: "Biometrik terminallar", en: "Biometric terminals", tr: "Biyometrik terminaller", zh: "生物识别终端" },
   "Терминалы доступа": { uz: "Kirish terminallari", en: "Access terminals", tr: "Geçiş terminalleri", zh: "门禁终端" },

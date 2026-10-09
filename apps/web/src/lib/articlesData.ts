@@ -4559,7 +4559,7 @@ export const ARTICLES: Article[] = [
     date: "2026-08-31",
     updated: "2026-09-09",
     related: ["barrier", "parking"],
-    hubs: ["turnikety-i-shlagbaumy"],
+    hubs: ["shlagbaumy"],
     loc: {
       ru: {
         title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для двора и парковки: виды, автоматика, цена",
@@ -6739,7 +6739,7 @@ export const ARTICLES: Article[] = [
     date: "2026-07-17",
     updated: "2026-09-09",
     related: ["barrier", "anpr", "gates"],
-    hubs: ["turnikety-i-shlagbaumy", "ip-kamery"],
+    hubs: ["shlagbaumy", "ip-kamery"],
     loc: {
       ru: {
         title: "Шлагбаум с распознаванием номеров: как это работает",
@@ -7084,7 +7084,7 @@ export const ARTICLES: Article[] = [
     date: "2026-07-17",
     updated: "2026-09-09",
     related: ["gates", "barrier"],
-    hubs: ["turnikety-i-shlagbaumy"],
+    hubs: ["shlagbaumy"],
     loc: {
       ru: {
         title: "Автоматические ворота: откатные, распашные или секционные",
@@ -12015,7 +12015,7 @@ export const ARTICLES: Article[] = [
     date: "2026-08-26",
     updated: "2026-09-09",
     related: ["barrier", "gates", "anpr"],
-    hubs: ["turnikety-i-shlagbaumy"],
+    hubs: ["shlagbaumy"],
     loc: {
       uz: {
         title: "Shlagbaum narxi qancha? Toshkentda oʻrnatish bilan",
