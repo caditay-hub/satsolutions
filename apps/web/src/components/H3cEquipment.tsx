@@ -55,7 +55,9 @@ export async function H3cEquipment({ locale }: { locale: string }) {
 
       <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {EQUIPMENT.map((e) => {
-          const href = e.rep ? `/products/${e.rep}` : (e.href ?? "/catalog/h3c");
+          const path = e.rep ? `/products/${e.rep}` : (e.href ?? "/catalog/h3c");
+          // язык в адрес подставляем сами: next/link его не знает (uz/en/tr/zh вели на ru, обход 09.10.2026)
+          const href = locale === "ru" ? path : `/${locale}${path}`;
           const img = e.rep ? resolveImageUrl(imgBySlug[e.rep]) : null;
           return (
             <Link

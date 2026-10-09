@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { clampDesc, titleWithBrand } from "@/lib/seoText";
 import Link from "next/link";
+
+// Ссылки страницы — обычный next/link (Link из next-intl уводит маршрут в динамику), поэтому
+// язык подставляем в адрес сами: без этого uz/en/tr/zh-кейсы вели на русские страницы (обход 09.10.2026).
+const locPath = (locale: string, path: string) => (locale === "ru" ? path : `/${locale}${path}`);
 import { notFound } from "next/navigation";
 import { getPortfolioBySlug, getPortfolioCategories, getProductBySlug, getSitePage } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
@@ -286,7 +290,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
                 <p className="mt-1.5 max-w-2xl text-sm text-slate-600">{linkUi.equipmentHint}</p>
               </div>
               <Link
-                href="/products"
+                href={locPath(locale, "/products")}
                 className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
               >
                 {linkUi.all} →
@@ -309,7 +313,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
                 return (
                   <Link
                     key={r.slug}
-                    href={`/portfolio/${r.slug}`}
+                    href={locPath(locale, `/portfolio/${r.slug}`)}
                     className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-300"
                   >
                     {rimg ? (
@@ -332,7 +336,7 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
               {caseServices.map((s) => (
                 <Link
                   key={s.key}
-                  href={`/solutions/${s.key}`}
+                  href={locPath(locale, `/solutions/${s.key}`)}
                   className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
                 >
                   {s.label}

@@ -11,6 +11,9 @@ import { getServiceSeo } from "@/lib/serviceSeo";
  * (ru/uz/en), иначе локализованное название услуги (tr/zh). Передаёт целевой
  * странице ссылочный вес и релевантный анкор → ускоряет обход и ранжирование.
  *
+ * Язык в адрес подставляем сами: next/link его не знает, и до 09.10.2026 плашка на
+ * uz/en/tr/zh-страницах вела на русскую услугу (544 ссылки в обходе).
+ *
  * Возвращает null, если для типа нет профильной услуги — тогда ничего не рендерим.
  */
 export async function CategoryServiceLink({
@@ -27,7 +30,7 @@ export async function CategoryServiceLink({
   return (
     <div className="container-page pb-10">
       <Link
-        href={`/solutions/${svc.key}`}
+        href={locale === "ru" ? `/solutions/${svc.key}` : `/${locale}/solutions/${svc.key}`}
         className="flex items-center gap-3 rounded-xl border border-brand-200 bg-brand-50/50 p-4 transition-colors hover:bg-brand-50"
       >
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>

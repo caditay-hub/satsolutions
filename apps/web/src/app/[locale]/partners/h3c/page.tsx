@@ -316,7 +316,7 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
                 return (
                   <Link
                     key={p.id}
-                    href={`/products/${p.slug}`}
+                    href={locPath(locale, `/products/${p.slug}`)}
                     className="group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white transition-shadow hover:shadow-md"
                   >
                     <div className="flex aspect-[4/3] items-center justify-center border-b border-slate-100 bg-white p-3">
@@ -344,7 +344,7 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
               })}
             </div>
             <div className="mt-5">
-              <Link href={`/catalog/h3c`} className="tap text-sm font-semibold text-brand-700 hover:underline">{d.catalog} →</Link>
+              <Link href={locPath(locale, `/catalog/h3c`)} className="tap text-sm font-semibold text-brand-700 hover:underline">{d.catalog} →</Link>
             </div>
           </section>
         )}
@@ -352,18 +352,18 @@ export default async function H3CPartnerPage({ params }: { params: Promise<{ loc
         <div className="mt-10 max-w-3xl">
           <div className="text-sm font-bold uppercase tracking-wider text-brand-600">{d.linksTitle}</div>
           <ul className="mt-3 flex flex-col gap-2.5 text-sm font-semibold">
-            <li><Link href={`/catalog/h3c`} className="tap text-brand-700 hover:underline">{d.catalog} →</Link></li>
-            <li><Link href={`/portfolio/${CASE_SLUG}`} className="tap text-brand-700 hover:underline">{d.caseLink} →</Link></li>
-            <li><Link href={`/solutions/server`} className="tap text-brand-700 hover:underline">{d.svcServer} →</Link></li>
-            <li><Link href={`/solutions/virtualization`} className="tap text-brand-700 hover:underline">{d.svcVirt} →</Link></li>
-            <li><Link href={`/solutions/network`} className="tap text-brand-700 hover:underline">{d.svcNet} →</Link></li>
+            <li><Link href={locPath(locale, `/catalog/h3c`)} className="tap text-brand-700 hover:underline">{d.catalog} →</Link></li>
+            <li><Link href={locPath(locale, `/portfolio/${CASE_SLUG}`)} className="tap text-brand-700 hover:underline">{d.caseLink} →</Link></li>
+            <li><Link href={locPath(locale, `/solutions/server`)} className="tap text-brand-700 hover:underline">{d.svcServer} →</Link></li>
+            <li><Link href={locPath(locale, `/solutions/virtualization`)} className="tap text-brand-700 hover:underline">{d.svcVirt} →</Link></li>
+            <li><Link href={locPath(locale, `/solutions/network`)} className="tap text-brand-700 hover:underline">{d.svcNet} →</Link></li>
           </ul>
         </div>
 
         <div className="mt-10 max-w-3xl rounded-2xl border border-brand-100 bg-gradient-to-br from-brand-50 to-slate-50 p-6">
           <div className="text-lg font-bold text-slate-900">{d.ctaTitle}</div>
           <p className="mt-1 text-sm text-slate-600">{d.ctaText}</p>
-          <Link href={`/contact`} className="btn-primary mt-4 !bg-brand-700 hover:!bg-brand-800">{d.ctaBtn}</Link>
+          <Link href={locPath(locale, `/contact`)} className="btn-primary mt-4 !bg-brand-700 hover:!bg-brand-800">{d.ctaBtn}</Link>
         </div>
       </div>
     </div>
