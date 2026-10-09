@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { fillLiveMins } from "@/lib/typeSeo";
 import { ARTICLES, articleBySlug, articleImg, relatedArticles } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
@@ -72,11 +73,14 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
   if (!article || !body) return { title: "Blog" };
   // Обложка статьи вместо общего /og.png: у каждой из статей есть свой кадр 1200×630
   const cover = `${SITE_URL}${articleImg(slug)}`;
+  // seoTitle/seoDesc могут содержать живые цены «{{min:Раздел}}»; не получилось — обычные title/excerpt
+  const seoTitle = body.seoTitle ? (await fillLiveMins(body.seoTitle, locale)) ?? body.title : body.title;
+  const seoDesc = body.seoDesc ? (await fillLiveMins(body.seoDesc, locale)) ?? body.excerpt : body.excerpt;
   return {
-    title: { absolute: titleWithBrand(body.seoTitle ?? body.title) },
-    description: clampDesc(body.excerpt),
+    title: { absolute: titleWithBrand(seoTitle) },
+    description: clampDesc(seoDesc),
     alternates: hreflangAlternates(`/blog/${slug}`, locale),
-    openGraph: { type: "article", title: body.title, description: clampDesc(body.excerpt), locale: ogLocale(locale), images: [cover], publishedTime: article.date },
+    openGraph: { type: "article", title: body.title, description: clampDesc(seoDesc), locale: ogLocale(locale), images: [cover], publishedTime: article.date },
   };
 }
 

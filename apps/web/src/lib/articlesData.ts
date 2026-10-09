@@ -10,7 +10,8 @@ export type ArticleSection = { h: string; p: string[] };
 export type ArticleFaqItem = { q: string; a: string };
 // faq → блок «Частые вопросы» + FAQPage JSON-LD на странице статьи (rich-сниппеты)
 // seoTitle — короткий заголовок для выдачи (≤62 знаков), когда title длиннее и обрезался бы
-export type ArticleBody = { title: string; seoTitle?: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
+// seoDesc — описание для выдачи вместо excerpt. В seoTitle/seoDesc допустимы «{{min:Раздел}}» — живая цена (typeSeo.fillLiveMins)
+export type ArticleBody = { title: string; seoTitle?: string; seoDesc?: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
 
 // Обложка статьи: /blog-img/<slug>.jpg в public (карточка списка + фон шапки статьи)
 export const articleImg = (slug: string) => `/blog-img/${slug}.jpg`;
@@ -10267,17 +10268,17 @@ export const ARTICLES: Article[] = [
   {
     slug: "kamera-narxlari",
     date: "2026-08-20",
-    updated: "2026-09-09",
+    updated: "2026-10-09",
     related: ["cctv"],
     hubs: ["ip-kamery"],
     loc: {
       uz: {
-        title: "Kamera narxlari 2026: videokuzatuv qancha turadi",
+        title: "Kamera narxlari 2026: videokuzatuv qancha turadi", seoTitle: "Kamera narxlari Toshkentda: IP-kamera {{min:IP-камеры}}dan", seoDesc: "Videokuzatuv kameralari narxlari: IP-kamera {{min:IP-камеры}}dan, NVR registrator {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar va tayyor toʻplamlar. Toshkentdagi ombordan, kafolat va oʻrnatish bilan.",
         excerpt: "Toshkentda videokuzatuv kameralari narxlari: mini kameradan professional IP-kameragacha, toʻplam narxi, oʻrnatish qiymati va nimaga pul toʻlash arziydi.",
         sections: [
           { h: "Kamera narxi nimaga bogʻliq", p: [
             "Narxni toʻrt narsa belgilaydi: aniqlik (2–8 Mp), korpus turi (ichki, koʻcha, aylanuvchi PTZ), tungi koʻrish texnologiyasi va brend. Xitoyning nomsiz modeli bilan Hikvision yoki Dahua oʻrtasidagi farq — kafolat, dasturiy taʼminot sifati va bir necha yillik ishonchli ishlash.",
-            "Eng arzon Wi-Fi kameralar 197 900 soʻmdan boshlanadi (Tapo TC60, Tapo C201), shu sinfdagi aylanuvchi modellar — 221 900 soʻmdan. Simli 2 Mp IP-kameralar 234 900 soʻmdan (HiLook HL-IPC-T221HE-UC), 4 Mp — 395 900 soʻmdan (HiLook HL-IPC-T241H-UC); IP-kameralar toifasining oʻrtasi — taxminan 964 900 soʻm. Optik zumli koʻcha PTZ kameralari 580 900 soʻmdan boshlanadi va uch milliondan yuqoriga chiqadi. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
+            "Eng arzon Wi-Fi kameralar 197 900 soʻmdan boshlanadi (Tapo TC60, Tapo C201), shu sinfdagi aylanuvchi modellar — 221 900 soʻmdan. Simli 2 Mp IP-kameralar 209 900 soʻmdan (HiLook HL-IPC-T221HE-UC), 4 Mp — 395 900 soʻmdan (HiLook HL-IPC-T241H-UC); IP-kameralar toifasining oʻrtasi — taxminan 964 900 soʻm. Optik zumli koʻcha PTZ kameralari 580 900 soʻmdan boshlanadi va uch milliondan yuqoriga chiqadi. Narxlar 2026-yil oktyabr holatiga, montajsiz.",
           ] },
           { h: "Mini kameralar: nima uchun arzon", p: [
             "«Mini kamera narxlari» soʻrovi boʻyicha odatda kichik Wi-Fi kameralar topiladi — ular uy ichida, bolalar yoki xodimlarni kuzatish uchun qulay. Narxi past, lekin cheklovlari bor: kuchsiz tungi yoritish, xotira kartasiga bogʻliqlik va Wi-Fi sifatiga sezgirlik.",
@@ -10295,21 +10296,21 @@ export const ARTICLES: Article[] = [
             "Uch narsaga tejamang: asosiy zonalardagi kamera sifati (kirish, kassa), registrator diski (videokuzatuv uchun maxsus seriya) va montaj. Qolganida kelishuv mumkin: brend, arxiv chuqurligi, qoʻshimcha funksiyalar.",
             "Katalogda uch mingdan ortiq pozitsiya bor — kameralar, registratorlar, disklar va sarf materiallari, narxlar soʻmda va kafolat bilan; aniq modelning mavjudligini tanlash paytida aniqlaymiz. Vazifangizni ayting — byudjetga mos toʻplamni tanlab, aniq narxni hisoblab beramiz.",
           ] },
-        { h: "2026-yil sentyabr: katalogdan real narx orientirlari", p: ["Toshkentdagi omborimizdagi joriy «...dan» narxlar: Wi-Fi kamera — 197 900 soʻmdan, 2 Mp IP-kamera — 234 900 soʻmdan, aylanuvchi mini-PTZ — 221 900 soʻmdan, 4 Mp IP-kamera — 395 900 soʻmdan, NVR registrator — 308 900 soʻmdan. Bular katalogdagi eng arzon modellari; brend va funksiyalarga qarab narx yuqoriroq boʻladi.", "Toʻplam narxini taxminan hisoblash oson: kameralar + registrator + har kameraga 8–12 metr kabel va quvvat. Toʻrtta 2 Mp kamera 234 900 soʻmdan va 320 900 soʻmlik registrator — uskuna boʻyicha 1 260 500 soʻm, ustiga 704 900 soʻmdan disk va ishlar. Aniq smeta uchun obyekt rejasini yuboring: soʻrovga ish kuni davomida javob beramiz."] }],
+        { h: "2026-yil oktyabr: katalogdan real narx orientirlari", p: ["Toshkentdagi omborimizdagi joriy «...dan» narxlar: Wi-Fi kamera — 197 900 soʻmdan, 2 Mp IP-kamera — 209 900 soʻmdan, aylanuvchi mini-PTZ — 221 900 soʻmdan, 4 Mp IP-kamera — 395 900 soʻmdan, NVR registrator — 308 900 soʻmdan. Bular katalogdagi eng arzon modellari; brend va funksiyalarga qarab narx yuqoriroq boʻladi.", "Toʻplam narxini taxminan hisoblash oson: kameralar + registrator + har kameraga 8–12 metr kabel va quvvat. Toʻrtta 2 Mp kamera 209 900 soʻmdan va 320 900 soʻmlik registrator — uskuna boʻyicha 1 160 500 soʻm, ustiga 704 900 soʻmdan disk va ishlar. Aniq smeta uchun obyekt rejasini yuboring: soʻrovga ish kuni davomida javob beramiz."] }],
         faq: [{ q: "Kamera oʻrnatish narxi qancha?", a: "Oʻrnatish kameralar soni va kabel uzunligiga bogʻliq: bitta kamera montaji oʻrtacha 150–300 ming soʻm, 4 kamerali toʻplam toʻliq tayyor holda — smetaga qarab. Muhandis chiqishi va hisob-kitob bepul." },
-          { q: "Eng arzon kamera qancha turadi?", a: "Ichki Wi-Fi kamera Tapo TC60 yoki C201 — 197 900 soʻm. Simli koʻcha IP-kamerasi 2 Mp 234 900 soʻmdan, 4 Mp 395 900 soʻmdan boshlanadi. Narxlar 2026-yil sentyabr holatiga, montajsiz." },
+          { q: "Eng arzon kamera qancha turadi?", a: "Ichki Wi-Fi kamera Tapo TC60 yoki C201 — 197 900 soʻm. Simli koʻcha IP-kamerasi 2 Mp 209 900 soʻmdan, 4 Mp 395 900 soʻmdan boshlanadi. Narxlar 2026-yil oktyabr holatiga, montajsiz." },
           { q: "4 kameradan iborat toʻplam qancha boʻladi?", a: "Uskuna, registrator, disk, kabel va montaj bilan birga — obyektga bogʻliq. Muhandis chiqib, bepul smeta tuzib beradi." },
           { q: "Registrator shartmi?", a: "1–2 kamera uchun xotira kartasi yetarli. 3+ kamera va uzoq arxiv kerak boʻlsa — registrator arzonroq va ishonchliroq." },
           { q: "Kafolat bormi?", a: "Ha, barcha uskunaga rasmiy kafolat va montaj ishlariga kafolat beramiz." },
         { q: "Nega narxlar «...dan» koʻrsatilgan?", a: "Kamera narxi ruxsat, brend va funksiyalarga (ColorVu, ANPR, PTZ) bogʻliq. «...dan» — katalogdagi eng arzon joriy model; aniq narxlar katalogda, smeta bepul." }],
       },
       ru: {
-        title: "Цены на камеры видеонаблюдения в Ташкенте: от чего зависят",
+        title: "Цены на камеры видеонаблюдения в Ташкенте: от чего зависят", seoTitle: "Цены на камеры видеонаблюдения: IP-камера от {{min:IP-камеры}}", seoDesc: "Сколько стоят камеры видеонаблюдения в Ташкенте: IP-камера от {{min:IP-камеры}}, регистратор NVR от {{min:IP-видеорегистраторы (NVR)}}, Wi-Fi камеры и готовые комплекты. Со склада, с гарантией и монтажом.",
         excerpt: "Сколько стоят камеры видеонаблюдения в Ташкенте: мини-камеры, уличные IP-камеры, готовые комплекты и монтаж — и на чём не стоит экономить.",
         sections: [
           { h: "От чего зависит цена камеры", p: [
             "Цену определяют четыре вещи: разрешение (2–8 Мп), тип корпуса (внутренняя, уличная, поворотная PTZ), технология ночной съёмки и бренд. Разница между безымянной моделью и Hikvision или Dahua — это гарантия, качество прошивки и годы стабильной работы.",
-            "Самые доступные Wi-Fi камеры начинаются с 197 900 сум (Tapo TC60, Tapo C201), поворотные модели того же класса — с 221 900 сум. Проводные IP-камеры 2 Мп стартуют с 234 900 сум (HiLook HL-IPC-T221HE-UC), 4 Мп — с 395 900 сум (HiLook HL-IPC-T241H-UC); середина категории IP-камер — около 964 900 сум. Уличные PTZ с оптическим зумом начинаются с 580 900 сум и уходят выше трёх миллионов. Цены каталога на сентябрь 2026, без монтажа.",
+            "Самые доступные Wi-Fi камеры начинаются с 197 900 сум (Tapo TC60, Tapo C201), поворотные модели того же класса — с 221 900 сум. Проводные IP-камеры 2 Мп стартуют с 209 900 сум (HiLook HL-IPC-T221HE-UC), 4 Мп — с 395 900 сум (HiLook HL-IPC-T241H-UC); середина категории IP-камер — около 964 900 сум. Уличные PTZ с оптическим зумом начинаются с 580 900 сум и уходят выше трёх миллионов. Цены каталога на октябрь 2026, без монтажа.",
           ] },
           { h: "Мини-камеры: почему дёшево", p: [
             "Под «мини-камерами» обычно понимают компактные Wi-Fi модели для дома — присмотр за ребёнком, комнатой, персоналом. Цена низкая, но есть ограничения: слабая ночная подсветка, зависимость от карты памяти и качества Wi-Fi.",
@@ -10327,21 +10328,21 @@ export const ARTICLES: Article[] = [
             "Три вещи, где экономия выходит боком: качество камер в ключевых зонах (вход, касса), жёсткий диск регистратора (специальная серия для видеонаблюдения) и монтаж. В остальном можно выбирать: бренд, глубину архива, дополнительные функции.",
             "В каталоге более трёх тысяч позиций — камеры, регистраторы, диски и расходники, цены в сумах и с гарантией; наличие конкретной модели уточняем при подборе. Опишите задачу — подберём комплект под бюджет и посчитаем точную стоимость.",
           ] },
-        { h: "Сентябрь 2026: реальные ориентиры цен из каталога", p: ["Актуальные цены «от» со склада в Ташкенте: Wi-Fi камера — от 197 900 сум, IP-камера 2 Мп — от 234 900, поворотная мини-PTZ — от 221 900, IP-камера 4 Мп — от 395 900, регистратор NVR — от 308 900 сум. Это самые доступные модели каталога; бренд и функции поднимают цену выше.", "Комплект прикидывается просто: камеры + регистратор + по 8–12 метров кабеля и питание на каждую точку. Четыре камеры 2 Мп по 234 900 сум и регистратор за 320 900 сум — это 1 260 500 сум по оборудованию, плюс диск от 704 900 сум и работы. За точной сметой пришлите план объекта: на заявку отвечаем в течение рабочего дня."] }],
+        { h: "Октябрь 2026: реальные ориентиры цен из каталога", p: ["Актуальные цены «от» со склада в Ташкенте: Wi-Fi камера — от 197 900 сум, IP-камера 2 Мп — от 209 900, поворотная мини-PTZ — от 221 900, IP-камера 4 Мп — от 395 900, регистратор NVR — от 308 900 сум. Это самые доступные модели каталога; бренд и функции поднимают цену выше.", "Комплект прикидывается просто: камеры + регистратор + по 8–12 метров кабеля и питание на каждую точку. Четыре камеры 2 Мп по 209 900 сум и регистратор за 320 900 сум — это 1 160 500 сум по оборудованию, плюс диск от 704 900 сум и работы. За точной сметой пришлите план объекта: на заявку отвечаем в течение рабочего дня."] }],
         faq: [{ q: "Сколько стоит установка одной камеры?", a: "Монтаж зависит от числа камер и длины кабеля: одна камера — в среднем 150–300 тысяч сум, комплект из 4 камер под ключ — по смете. Выезд инженера и расчёт бесплатные." },
-          { q: "Сколько стоит самая недорогая камера?", a: "Внутренняя Wi-Fi камера Tapo TC60 или C201 — 197 900 сум. Проводная уличная IP-камера 2 Мп начинается с 234 900 сум, 4 Мп — с 395 900 сум. Цены каталога на сентябрь 2026, без монтажа." },
+          { q: "Сколько стоит самая недорогая камера?", a: "Внутренняя Wi-Fi камера Tapo TC60 или C201 — 197 900 сум. Проводная уличная IP-камера 2 Мп начинается с 209 900 сум, 4 Мп — с 395 900 сум. Цены каталога на октябрь 2026, без монтажа." },
           { q: "Во сколько обойдётся комплект из 4 камер?", a: "Зависит от объекта: оборудование, регистратор, диск, кабель и монтаж. Инженер выезжает и составляет смету бесплатно." },
           { q: "Обязателен ли регистратор?", a: "Для 1–2 камер достаточно карты памяти. От 3 камер и при необходимости длинного архива регистратор дешевле и надёжнее." },
           { q: "Есть ли гарантия?", a: "Да, на всё оборудование — официальная гарантия, на монтажные работы — гарантия компании." },
         { q: "Почему цены указаны «от»?", a: "Цена камеры зависит от разрешения, бренда и функций (ColorVu, ANPR, PTZ). «От» — самая доступная актуальная модель каталога; точные цены в каталоге, смета бесплатна." }],
       },
       en: {
-        title: "CCTV Camera Prices in Tashkent: What Drives the Cost",
+        title: "CCTV Camera Prices in Tashkent: What Drives the Cost", seoTitle: "Security camera prices in Tashkent: IP from {{min:IP-камеры}}", seoDesc: "How much CCTV costs in Tashkent: IP cameras from {{min:IP-камеры}}, NVR recorders from {{min:IP-видеорегистраторы (NVR)}}, Wi-Fi cameras and ready kits. In stock, with warranty and installation.",
         excerpt: "How much CCTV cameras cost in Tashkent: mini cameras, outdoor IP cameras, ready-made kits and installation — and where cutting corners backfires.",
         sections: [
           { h: "What determines the price of a camera", p: [
             "Four factors set the price: resolution (2–8 MP), housing type (indoor, outdoor, PTZ), night-vision technology and the brand. The gap between a no-name model and Hikvision or Dahua comes down to warranty, firmware quality and years of trouble-free operation.",
-            "The most affordable Wi-Fi cameras start at 197 900 UZS (Tapo TC60, Tapo C201), and pan-tilt models of the same class at 221 900 UZS. Wired 2 MP IP cameras begin at 234 900 UZS (HiLook HL-IPC-T221HE-UC) and 4 MP ones at 395 900 UZS (HiLook HL-IPC-T241H-UC); the middle of the IP camera category sits around 964 900 UZS. Outdoor PTZ cameras with optical zoom start at 580 900 UZS and run well past three million. Catalogue prices as of September 2026, installation not included.",
+            "The most affordable Wi-Fi cameras start at 197 900 UZS (Tapo TC60, Tapo C201), and pan-tilt models of the same class at 221 900 UZS. Wired 2 MP IP cameras begin at 209 900 UZS (HiLook HL-IPC-T221HE-UC) and 4 MP ones at 395 900 UZS (HiLook HL-IPC-T241H-UC); the middle of the IP camera category sits around 964 900 UZS. Outdoor PTZ cameras with optical zoom start at 580 900 UZS and run well past three million. Catalogue prices as of October 2026, installation not included.",
           ] },
           { h: "Mini cameras: why they are cheap", p: [
             "\"Mini cameras\" usually means compact Wi-Fi models for the home — keeping an eye on a child, a room or staff. The price is low, but so are the capabilities: weak night illumination, reliance on a memory card and on your Wi-Fi quality.",
@@ -10359,22 +10360,22 @@ export const ARTICLES: Article[] = [
             "Three places where saving money backfires: camera quality in key zones (entrance, till), the recorder's hard drive (use a surveillance-rated series) and the installation itself. Everything else is negotiable: brand, archive depth, extra features.",
             "The catalogue holds over three thousand items — cameras, recorders, drives and consumables, priced in UZS and covered by warranty; availability of a particular model is confirmed while we put the kit together. Describe your task and we will match a kit to your budget and calculate the exact cost.",
           ] },
-        { h: "September 2026: real price anchors from the catalogue", p: ["Current from-prices from Tashkent stock: a Wi-Fi camera from 197,900 UZS, a 2 MP IP camera from 234,900, a mini PTZ from 221,900, a 4 MP IP camera from 395,900, an NVR from 308,900 UZS. These are the most affordable catalogue models; brand and features raise the price.", "A kit is easy to estimate: cameras + a recorder + 8–12 metres of cable and power per point. Four 2 MP cameras at 234 900 UZS each plus a recorder at 320 900 UZS come to 1 260 500 UZS of equipment, with a drive from 704 900 UZS and the labour on top. Send the floor plan for an exact quote: we reply to requests within the working day."] }],
+        { h: "October 2026: real price anchors from the catalogue", p: ["Current from-prices from Tashkent stock: a Wi-Fi camera from 197,900 UZS, a 2 MP IP camera from 234,900, a mini PTZ from 221,900, a 4 MP IP camera from 395,900, an NVR from 308,900 UZS. These are the most affordable catalogue models; brand and features raise the price.", "A kit is easy to estimate: cameras + a recorder + 8–12 metres of cable and power per point. Four 2 MP cameras at 209 900 UZS each plus a recorder at 320 900 UZS come to 1 160 500 UZS of equipment, with a drive from 704 900 UZS and the labour on top. Send the floor plan for an exact quote: we reply to requests within the working day."] }],
         faq: [
           { q: "How much does installing one camera cost?", a: "Installation depends on the number of cameras and cable length: a single camera averages 150,000–300,000 UZS, a turnkey 4-camera kit is priced by estimate. The engineer's visit and calculation are free." },
-          { q: "How much is the cheapest camera?", a: "An indoor Wi-Fi camera, the Tapo TC60 or C201, costs 197 900 UZS. A wired outdoor 2 MP IP camera starts at 234 900 UZS and a 4 MP one at 395 900 UZS. Catalogue prices as of September 2026, installation not included." },
+          { q: "How much is the cheapest camera?", a: "An indoor Wi-Fi camera, the Tapo TC60 or C201, costs 197 900 UZS. A wired outdoor 2 MP IP camera starts at 209 900 UZS and a 4 MP one at 395 900 UZS. Catalogue prices as of October 2026, installation not included." },
           { q: "What will a 4-camera kit cost?", a: "It depends on the site: equipment, recorder, hard drive, cable and installation. An engineer visits and prepares the estimate free of charge." },
           { q: "Is a recorder mandatory?", a: "For 1–2 cameras a memory card is enough. From 3 cameras up, or when you need long footage retention, a recorder is cheaper and more reliable." },
           { q: "Is there a warranty?", a: "Yes — all equipment carries an official manufacturer warranty, and installation work is covered by our company warranty." },
         { q: "Why are prices shown as from?", a: "A camera's price depends on resolution, brand and features (ColorVu, ANPR, PTZ). The from-price is the most affordable current model; exact prices are in the catalogue, quotes are free." }],
       },
       tr: {
-        title: "Taşkent'te Güvenlik Kamerası Fiyatları Neye Bağlı?",
+        title: "Taşkent'te Güvenlik Kamerası Fiyatları Neye Bağlı?", seoTitle: "Taşkent kamera fiyatları: IP kamera {{min:IP-камеры}}dan", seoDesc: "Taşkent'te güvenlik kamerası fiyatları: IP kamera {{min:IP-камеры}}dan, NVR kayıt cihazı {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar ve hazır setler. Stoktan, garantili ve kurulumlu.",
         excerpt: "Taşkent'te güvenlik kameraları ne kadar: mini kameralar, dış mekân IP kameralar, hazır setler ve montaj — ve nereden kısmamak gerektiği.",
         sections: [
           { h: "Kamera fiyatını ne belirler", p: [
             "Fiyatı dört etken belirler: çözünürlük (2–8 MP), gövde tipi (iç mekân, dış mekân, PTZ), gece görüş teknolojisi ve marka. İsimsiz bir modelle Hikvision veya Dahua arasındaki fark garanti, yazılım kalitesi ve yıllarca sorunsuz çalışmadır.",
-            "En uygun Wi-Fi kameralar 197 900 UZS'den başlar (Tapo TC60, Tapo C201); aynı sınıftaki hareketli modeller 221 900 UZS'den. Kablolu 2 MP IP kameralar 234 900 UZS'den (HiLook HL-IPC-T221HE-UC), 4 MP olanlar 395 900 UZS'den (HiLook HL-IPC-T241H-UC) başlar; IP kamera kategorisinin ortası yaklaşık 964 900 UZS'dir. Optik zoomlu dış mekân PTZ kameraları 580 900 UZS'den başlar ve üç milyonun epey üzerine çıkar. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
+            "En uygun Wi-Fi kameralar 197 900 UZS'den başlar (Tapo TC60, Tapo C201); aynı sınıftaki hareketli modeller 221 900 UZS'den. Kablolu 2 MP IP kameralar 209 900 UZS'den (HiLook HL-IPC-T221HE-UC), 4 MP olanlar 395 900 UZS'den (HiLook HL-IPC-T241H-UC) başlar; IP kamera kategorisinin ortası yaklaşık 964 900 UZS'dir. Optik zoomlu dış mekân PTZ kameraları 580 900 UZS'den başlar ve üç milyonun epey üzerine çıkar. Fiyatlar Ekim 2026 katalog fiyatlarıdır, montaj hariç.",
           ] },
           { h: "Mini kameralar: neden ucuz", p: [
             "\"Mini kamera\" denince genellikle ev için kompakt Wi-Fi modeller anlaşılır — çocuğu, odayı veya personeli izlemek için. Fiyatı düşüktür ama sınırları vardır: zayıf gece aydınlatması, hafıza kartına ve Wi-Fi kalitesine bağımlılık.",
@@ -10392,22 +10393,22 @@ export const ARTICLES: Article[] = [
             "Tasarrufun geri teptiği üç nokta: kritik bölgelerdeki (giriş, kasa) kamera kalitesi, kayıt cihazının sabit diski (güvenlik kamerası için özel seri) ve montaj. Gerisi tercihe kalmıştır: marka, arşiv süresi, ek özellikler.",
             "Katalogda üç binden fazla kalem var — kameralar, kayıt cihazları, diskler ve sarf malzemeleri; fiyatlar UZS cinsinden ve garantilidir, belirli bir modelin bulunurluğunu seti kurarken teyit ederiz. İhtiyacınızı anlatın — bütçenize uygun seti seçip kesin fiyatı hesaplayalım.",
           ] },
-        { h: "Eylül 2026: katalogdan gerçek fiyat çapaları", p: ["Taşkent stoğundan güncel başlangıç fiyatları: Wi-Fi kamera 197.900 UZS'den, 2 MP IP kamera 234.900'den, mini PTZ 221.900'den, 4 MP IP kamera 395.900'den, NVR 308.900 UZS'den. Bunlar katalogun en uygun modelleri; marka ve özellikler fiyatı yükseltir.", "Seti kestirmek kolaydır: kameralar + kayıt cihazı + nokta başına 8–12 metre kablo ve besleme. Dört adet 2 MP kamera (her biri 234 900 UZS) ve 320 900 UZS'lik kayıt cihazı, ekipman olarak 1 260 500 UZS eder; üstüne 704 900 UZS'den disk ve işçilik gelir. Kesin teklif için planı gönderin: taleplere iş günü içinde dönüş yaparız."] }],
+        { h: "Ekim 2026: katalogdan gerçek fiyat çapaları", p: ["Taşkent stoğundan güncel başlangıç fiyatları: Wi-Fi kamera 197.900 UZS'den, 2 MP IP kamera 234.900'den, mini PTZ 221.900'den, 4 MP IP kamera 395.900'den, NVR 308.900 UZS'den. Bunlar katalogun en uygun modelleri; marka ve özellikler fiyatı yükseltir.", "Seti kestirmek kolaydır: kameralar + kayıt cihazı + nokta başına 8–12 metre kablo ve besleme. Dört adet 2 MP kamera (her biri 209 900 UZS) ve 320 900 UZS'lik kayıt cihazı, ekipman olarak 1 160 500 UZS eder; üstüne 704 900 UZS'den disk ve işçilik gelir. Kesin teklif için planı gönderin: taleplere iş günü içinde dönüş yaparız."] }],
         faq: [
           { q: "Bir kameranın montajı ne kadar?", a: "Montaj, kamera sayısına ve kablo uzunluğuna bağlıdır: tek kamera ortalama 150.000–300.000 UZS, 4 kameralık anahtar teslim set keşif sonrası fiyatlandırılır. Mühendis ziyareti ve hesaplama ücretsizdir." },
-          { q: "En ucuz kamera ne kadar?", a: "İç mekân Wi-Fi kamera Tapo TC60 veya C201 197 900 UZS'dir. Kablolu dış mekân 2 MP IP kamera 234 900 UZS'den, 4 MP olanı 395 900 UZS'den başlar. Eylül 2026 katalog fiyatları, montaj hariç." },
+          { q: "En ucuz kamera ne kadar?", a: "İç mekân Wi-Fi kamera Tapo TC60 veya C201 197 900 UZS'dir. Kablolu dış mekân 2 MP IP kamera 209 900 UZS'den, 4 MP olanı 395 900 UZS'den başlar. Ekim 2026 katalog fiyatları, montaj hariç." },
           { q: "4 kameralık set kaça mal olur?", a: "Mekâna bağlıdır: ekipman, kayıt cihazı, disk, kablo ve montaj. Mühendis ücretsiz keşfe gelir ve fiyat teklifini hazırlar." },
           { q: "Kayıt cihazı şart mı?", a: "1–2 kamera için hafıza kartı yeterlidir. 3 kameradan itibaren ve uzun arşiv gerektiğinde kayıt cihazı hem daha ucuz hem daha güvenilirdir." },
           { q: "Garanti var mı?", a: "Evet, tüm ekipmanda resmi garanti, montaj işlerinde ise şirket garantisi vardır." },
         { q: "Fiyatlar neden başlangıç olarak verildi?", a: "Kamera fiyatı çözünürlük, marka ve özelliklere bağlıdır. Başlangıç fiyatı katalogdaki en uygun güncel modeldir; kesin fiyatlar katalogda, teklif ücretsizdir." }],
       },
       zh: {
-        title: "塔什干监控摄像头价格：由哪些因素决定",
+        title: "塔什干监控摄像头价格：由哪些因素决定", seoTitle: "塔什干监控摄像机价格：网络摄像机{{min:IP-камеры}}起", seoDesc: "塔什干监控摄像机多少钱：网络摄像机{{min:IP-камеры}}起，NVR录像机{{min:IP-видеорегистраторы (NVR)}}起，另有Wi-Fi摄像机与成套方案。现货供应，含质保与安装。",
         excerpt: "塔什干监控摄像头多少钱：迷你摄像头、室外IP摄像头、成套方案与安装费用，以及哪些环节不该省钱。",
         sections: [
           { h: "摄像头价格由什么决定", p: [
             "价格取决于四个因素：分辨率（2–8 MP）、外壳类型（室内、室外、PTZ云台）、夜视技术和品牌。杂牌产品与Hikvision、Dahua之间的差距，体现在质保、固件质量和多年稳定运行上。",
-            "最便宜的 Wi-Fi 摄像机从 197 900 苏姆起（Tapo TC60、Tapo C201），同级别的云台机型从 221 900 苏姆起。有线 200 万像素 IP 摄像机从 234 900 苏姆起（HiLook HL-IPC-T221HE-UC），400 万像素从 395 900 苏姆起（HiLook HL-IPC-T241H-UC）；IP 摄像机品类的中位价约 964 900 苏姆。带光学变焦的室外球机从 580 900 苏姆起，高端型号远超三百万。以上为 2026 年 9 月目录价，不含施工。",
+            "最便宜的 Wi-Fi 摄像机从 197 900 苏姆起（Tapo TC60、Tapo C201），同级别的云台机型从 221 900 苏姆起。有线 200 万像素 IP 摄像机从 209 900 苏姆起（HiLook HL-IPC-T221HE-UC），400 万像素从 395 900 苏姆起（HiLook HL-IPC-T241H-UC）；IP 摄像机品类的中位价约 964 900 苏姆。带光学变焦的室外球机从 580 900 苏姆起，高端型号远超三百万。以上为 2026 年 10 月目录价，不含施工。",
           ] },
           { h: "迷你摄像头为什么便宜", p: [
             "所谓“迷你摄像头”，通常指家用的小型Wi-Fi机型——用来照看孩子、房间或店员。价格虽低，但局限明显：夜视补光弱，依赖存储卡，还受Wi-Fi信号质量影响。",
@@ -10425,10 +10426,10 @@ export const ARTICLES: Article[] = [
             "三个省钱容易吃亏的环节：关键区域（入口、收银台）的摄像头品质、录像机硬盘（应选监控专用系列）以及安装施工。其余方面可以灵活取舍：品牌、录像保存时长、附加功能。",
             "目录中有三千多个条目——摄像机、录像机、硬盘和辅材，以苏姆计价并提供质保；具体型号的现货情况会在配单时确认。告诉我们您的需求——我们会按预算配好方案并核算准确报价。",
           ] },
-        { h: "2026年9月：目录里的真实价格参照", p: ["塔什干现货的当前起价：Wi-Fi摄像机197,900苏姆起，2MP IP摄像机234,900起，迷你球机221,900起，4MP IP摄像机395,900起，NVR录像机308,900苏姆起。这些是目录中最实惠的型号；品牌和功能会抬高价格。", "套装很好估算：摄像机＋录像机＋每点 8–12 米线缆和供电。四台 200 万像素摄像机各 234 900 苏姆，加一台 320 900 苏姆的录像机，设备合计 1 260 500 苏姆，再加 704 900 苏姆起的硬盘和人工。要精确报价请发来平面图：收到需求会在一个工作日内答复。"] }],
+        { h: "2026年10月：目录里的真实价格参照", p: ["塔什干现货的当前起价：Wi-Fi摄像机197,900苏姆起，2MP IP摄像机234,900起，迷你球机221,900起，4MP IP摄像机395,900起，NVR录像机308,900苏姆起。这些是目录中最实惠的型号；品牌和功能会抬高价格。", "套装很好估算：摄像机＋录像机＋每点 8–12 米线缆和供电。四台 200 万像素摄像机各 209 900 苏姆，加一台 320 900 苏姆的录像机，设备合计 1 160 500 苏姆，再加 704 900 苏姆起的硬盘和人工。要精确报价请发来平面图：收到需求会在一个工作日内答复。"] }],
         faq: [
           { q: "安装一台摄像头多少钱？", a: "安装费取决于摄像头数量和布线长度：单台摄像头平均15万–30万苏姆，4台摄像头的整套交钥匙方案按报价单计算。工程师上门与核算免费。" },
-          { q: "最便宜的摄像头多少钱？", a: "室内 Wi-Fi 摄像机 Tapo TC60 或 C201 为 197 900 苏姆。有线室外 200 万像素 IP 摄像机从 234 900 苏姆起，400 万像素从 395 900 苏姆起。以上为 2026 年 9 月目录价，不含施工。" },
+          { q: "最便宜的摄像头多少钱？", a: "室内 Wi-Fi 摄像机 Tapo TC60 或 C201 为 197 900 苏姆。有线室外 200 万像素 IP 摄像机从 209 900 苏姆起，400 万像素从 395 900 苏姆起。以上为 2026 年 10 月目录价，不含施工。" },
           { q: "4台摄像头的整套方案要多少钱？", a: "取决于现场情况：设备、录像机、硬盘、线缆和安装。工程师免费上门并出具报价单。" },
           { q: "必须配录像机吗？", a: "1–2台摄像头用存储卡即可。3台以上或需要较长录像保存期时，录像机更划算也更可靠。" },
           { q: "有质保吗？", a: "有。所有设备均提供官方质保，安装工程由公司提供质保。" },
