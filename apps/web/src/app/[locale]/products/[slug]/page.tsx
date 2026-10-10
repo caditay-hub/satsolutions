@@ -20,7 +20,7 @@ import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
 import { serviceForCategory } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
-import { articlesForService } from "@/lib/articlesData";
+import { articlesForService, articlesForProduct } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
 // Заголовок блока описания (h2): без него разделы описания (h3) шли сразу после H1 — пропуск уровня
@@ -456,7 +456,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     // sku/mpn — только настоящий артикул: один токен без пробелов, без разметки/кавычек,
     // ≤50 симв. Описательные «коды» (Болид/Рубеж, «Tp-Link RackMount Kit-D226» и т.п.)
     // Google отвергает как «недопустимое значение sku» — для них поля опускаем (необязательные).
-    const skuRaw = (modelCode ?? "").trim();
+    // «DS-2CD1043G2-IUF 2.8mm» → «DS-2CD1043G2-IUF(2.8mm)»: так артикул с объективом пишет сам
+    // производитель, а пробел отбрасывал sku/mpn у 81 камеры (10.10.2026). Описательные коды не трогаем.
+    const skuRaw = (modelCode ?? "").trim().replace(/^(\S+)\s+(\d+(?:[.,]\d+)?)\s?(?:mm|MM|мм)$/, (_m, base: string, f: string) => `${base}(${f.replace(",", ".")}mm)`);
     const skuVal = skuRaw.length > 0 && skuRaw.length <= 50 && !/[\s<>"]/.test(skuRaw) ? skuRaw : null;
     const productLd = {
       "@context": "https://schema.org",
@@ -721,7 +723,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             {/* Статьи по теме: товар → блог (перелинковка, краулинг статей) */}
             {(() => {
               const relSvc = serviceForCategory(categoryInfo?.name);
-              let arts = articlesForService(relSvc?.key, locale, 3, slug);
+              let arts = articlesForProduct(relSvc?.key, brandInfo?.slug, locale, 3, slug);
               // Узкие сетевые услуги отделены от network 02.10.2026; статей по ним мало
               // (по радиомостам нет вовсе) — тогда показываем сетевые, как раньше
               if (!arts.length && relSvc && ["radiobridge", "wifi", "telephony", "fiber"].includes(relSvc.key)) arts = articlesForService("network", locale, 3, slug);
