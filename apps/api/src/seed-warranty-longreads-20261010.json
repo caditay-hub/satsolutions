@@ -1,0 +1,244 @@
+{
+ "hik-hd-cameras": {
+  "ru": {
+   "old": "Точные условия уточняйте у менеджера при оформлении заказа; компания также обеспечивает гарантийный сервис на выполненные монтажные работы.",
+   "new": "Точные условия уточняйте у менеджера при оформлении заказа; на выполненные монтажные работы компания даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "Aniq shartlarni buyurtma rasmiylashtirishda menejerdan aniqlang; kompaniya bajarilgan montaj ishlariga ham kafolat xizmatini taʼminlaydi.",
+   "new": "Aniq shartlarni buyurtma rasmiylashtirishda menejerdan aniqlang; bajarilgan montaj ishlariga kompaniya 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "Check the exact terms with a manager when placing an order; the company also provides a warranty service for the installation work performed.",
+   "new": "Check the exact terms with a manager when placing an order; the company gives a 3-year warranty on the installation work performed."
+  },
+  "tr": {
+   "old": "Kesin koşulları sipariş verirken yöneticiye danışın; şirket ayrıca gerçekleştirilen montaj işleri için garanti servisi de sağlar.",
+   "new": "Kesin koşulları sipariş verirken yöneticiye danışın; şirket, gerçekleştirilen montaj işlerine 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "确切条款请在下单时向经理咨询；公司还为所完成的安装工程提供质保服务。",
+   "new": "确切条款请在下单时向经理咨询；公司为所完成的安装工程提供 3 年质保。"
+  }
+ },
+ "hik-intercoms": {
+  "ru": {
+   "old": "SAT Solutions дополнительно гарантирует качество монтажных и пусконаладочных работ.",
+   "new": "На монтажные и пусконаладочные работы SAT Solutions даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "SAT Solutions qoʻshimcha ravishda montaj va ishga tushirish-sozlash ishlari sifatini kafolatlaydi.",
+   "new": "Montaj va ishga tushirish-sozlash ishlariga SAT Solutions 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "SAT Solutions additionally guarantees the quality of installation and commissioning work.",
+   "new": "SAT Solutions gives a 3-year warranty on installation and commissioning work."
+  },
+  "tr": {
+   "old": "SAT Solutions ayrıca montaj ve devreye alma işlerinin kalitesini garanti eder.",
+   "new": "SAT Solutions, montaj ve devreye alma işlerine 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "SAT Solutions还额外保证安装和调试工程的质量。",
+   "new": "SAT Solutions 为安装和调试工程提供 3 年质保。"
+  }
+ },
+ "rubezh-detectors": {
+  "ru": {
+   "old": "На монтажные работы SAT Solutions предоставляет собственную гарантию; подробные условия уточняйте у менеджера при заключении договора.",
+   "new": "На монтажные работы SAT Solutions даёт гарантию 3 года; остальные условия уточняйте у менеджера при заключении договора."
+  },
+  "uz": {
+   "old": "Montaj ishlariga SAT Solutions oʻz kafolatini beradi; batafsil shartlarni shartnoma tuzishda menejerdan aniqlang.",
+   "new": "Montaj ishlariga SAT Solutions 3 yil kafolat beradi; qolgan shartlarni shartnoma tuzishda menejerdan aniqlang."
+  },
+  "en": {
+   "old": "SAT Solutions provides its own warranty on installation work; check the detailed terms with a manager when concluding a contract.",
+   "new": "SAT Solutions gives a 3-year warranty on installation work; check the other terms with a manager when concluding a contract."
+  },
+  "tr": {
+   "old": "Montaj işleri için SAT Solutions kendi garantisini sağlar; ayrıntılı koşulları sözleşme yaparken yöneticiye danışın.",
+   "new": "Montaj işlerine SAT Solutions 3 yıl garanti verir; diğer koşulları sözleşme yaparken yöneticiye danışın."
+  },
+  "zh": {
+   "old": "SAT Solutions为安装工程提供自有质保；详细条款请在签订合同时向经理咨询。",
+   "new": "SAT Solutions为安装工程提供 3 年质保；其他条款请在签订合同时向经理咨询。"
+  }
+ },
+ "avigilon-specialty": {
+  "ru": {
+   "old": "Кроме того, SAT Solutions предоставляет гарантию на выполненные монтажные и пусконаладочные работы.",
+   "new": "Кроме того, на выполненные монтажные и пусконаладочные работы SAT Solutions даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "Bundan tashqari, SAT Solutions bajarilgan montaj va ishga tushirish ishlariga kafolat beradi.",
+   "new": "Bundan tashqari, bajarilgan montaj va ishga tushirish ishlariga SAT Solutions 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "In addition, SAT Solutions provides a warranty on the completed installation and commissioning work.",
+   "new": "In addition, SAT Solutions gives a 3-year warranty on the completed installation and commissioning work."
+  },
+  "tr": {
+   "old": "Ayrıca SAT Solutions, gerçekleştirilen montaj ve devreye alma çalışmalarına garanti sağlar.",
+   "new": "Ayrıca SAT Solutions, gerçekleştirilen montaj ve devreye alma çalışmalarına 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "此外，SAT Solutions还为所完成的安装和调试工作提供保修。",
+   "new": "此外，SAT Solutions还为所完成的安装和调试工作提供 3 年保修。"
+  }
+ },
+ "tapo-cameras": {
+  "ru": {
+   "old": "На монтажные работы SAT Solutions предоставляет собственную гарантию — условия обсуждаются при заключении договора.",
+   "new": "На монтажные работы SAT Solutions даёт гарантию 3 года — она фиксируется в договоре."
+  },
+  "uz": {
+   "old": "Oʻrnatish ishlariga SAT Solutions oʻz kafolatini beradi — shartlar shartnoma tuzishda muhokama qilinadi.",
+   "new": "Oʻrnatish ishlariga SAT Solutions 3 yil kafolat beradi — u shartnomada belgilanadi."
+  },
+  "en": {
+   "old": "For installation work, SAT Solutions provides its own warranty, the terms are discussed when concluding the contract.",
+   "new": "SAT Solutions gives a 3-year warranty on installation work, fixed in the contract."
+  },
+  "tr": {
+   "old": "Montaj işleri için SAT Solutions kendi garantisini sunar — koşullar sözleşme yapılırken görüşülür.",
+   "new": "Montaj işlerine SAT Solutions 3 yıl garanti verir — bu süre sözleşmede belirtilir."
+  },
+  "zh": {
+   "old": "SAT Solutions 为安装工程提供自有质保——条件在签订合同时商定。",
+   "new": "SAT Solutions 为安装工程提供 3 年质保，并写入合同。"
+  }
+ },
+ "indoor-monitors": {
+  "ru": {
+   "old": "SAT Solutions предоставляет дополнительную гарантию на монтажные работы и берёт на себя постгарантийное обслуживание смонтированных нами систем.",
+   "new": "На монтажные работы SAT Solutions даёт гарантию 3 года и берёт на себя постгарантийное обслуживание смонтированных нами систем."
+  },
+  "uz": {
+   "old": "SAT Solutions montaj ishlariga qoʻshimcha kafolat beradi va oʻzi montaj qilgan tizimlarga kafolatdan keyingi xizmat koʻrsatishni oʻz zimmasiga oladi.",
+   "new": "SAT Solutions montaj ishlariga 3 yil kafolat beradi va oʻzi montaj qilgan tizimlarga kafolatdan keyingi xizmat koʻrsatishni oʻz zimmasiga oladi."
+  },
+  "en": {
+   "old": "SAT Solutions provides an additional warranty on installation work and takes on post-warranty maintenance of the systems it has installed.",
+   "new": "SAT Solutions gives a 3-year warranty on installation work and takes on post-warranty maintenance of the systems it has installed."
+  },
+  "tr": {
+   "old": "SAT Solutions, montaj çalışmalarına ek garanti sağlar ve kendi kurduğu sistemlerin garanti sonrası bakımını üstlenir.",
+   "new": "SAT Solutions, montaj çalışmalarına 3 yıl garanti verir ve kendi kurduğu sistemlerin garanti sonrası bakımını üstlenir."
+  },
+  "zh": {
+   "old": "SAT Solutions对安装工作提供额外保修，并承担由我们安装的系统在保修期后的维护服务。",
+   "new": "SAT Solutions对安装工作提供 3 年保修，并承担由我们安装的系统在保修期后的维护服务。"
+  }
+ },
+ "bolid-misc": {
+  "ru": {
+   "old": "SAT Solutions дополнительно обеспечивает гарантию на выполненные монтажные и пусконаладочные работы.",
+   "new": "На выполненные монтажные и пусконаладочные работы SAT Solutions даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "SAT Solutions qoʻshimcha ravishda bajarilgan montaj va ishga tushirish-sozlash ishlariga kafolat beradi.",
+   "new": "Bajarilgan montaj va ishga tushirish-sozlash ishlariga SAT Solutions 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "SAT Solutions additionally provides a warranty on the installation and commissioning work performed.",
+   "new": "SAT Solutions gives a 3-year warranty on the installation and commissioning work performed."
+  },
+  "tr": {
+   "old": "SAT Solutions ayrıca yapılan montaj ve devreye alma işleri için garanti sağlar.",
+   "new": "SAT Solutions, yapılan montaj ve devreye alma işlerine 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "SAT Solutions 另外为所完成的安装和调试工作提供保修。",
+   "new": "SAT Solutions 为所完成的安装和调试工作提供 3 年保修。"
+  }
+ },
+ "prochee-pa": {
+  "ru": {
+   "old": "На монтажные работы SAT Solutions также предоставляет гарантию.",
+   "new": "На монтажные работы SAT Solutions даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "Montaj ishlariga SAT Solutions ham kafolat beradi.",
+   "new": "Montaj ishlariga SAT Solutions 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "SAT Solutions also provides a warranty on installation work.",
+   "new": "SAT Solutions also gives a 3-year warranty on installation work."
+  },
+  "tr": {
+   "old": "Montaj işleri için de SAT Solutions garanti sağlar.",
+   "new": "Montaj işlerine de SAT Solutions 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "SAT Solutions还为安装工程提供质保。",
+   "new": "SAT Solutions还为安装工程提供 3 年质保。"
+  }
+ },
+ "avigilon-bullet": {
+  "ru": {
+   "old": "При монтаже нашими специалистами гарантия распространяется и на работы по установке.",
+   "new": "При монтаже нашими специалистами на работы по установке действует гарантия 3 года."
+  },
+  "uz": {
+   "old": "Bizning mutaxassislarimiz tomonidan oʻrnatilganda kafolat oʻrnatish ishlariga ham tarqaladi.",
+   "new": "Bizning mutaxassislarimiz oʻrnatganda oʻrnatish ishlariga 3 yil kafolat amal qiladi."
+  },
+  "en": {
+   "old": "When installed by our specialists, the warranty also extends to the installation work.",
+   "new": "When installed by our specialists, the installation work is covered by a 3-year warranty."
+  },
+  "tr": {
+   "old": "Uzmanlarımız tarafından montaj yapıldığında garanti kurulum işlerini de kapsar.",
+   "new": "Uzmanlarımız tarafından montaj yapıldığında kurulum işlerine 3 yıl garanti uygulanır."
+  },
+  "zh": {
+   "old": "由我们的专家安装时，质保也涵盖安装工程。",
+   "new": "由我们的专家安装时，安装工程享有 3 年质保。"
+  }
+ },
+ "ptz-cameras": {
+  "ru": {
+   "old": "Для объектов, где выполнялся монтаж, предоставляется дополнительная гарантия на выполненные работы.",
+   "new": "Для объектов, где выполнялся монтаж, на выполненные работы действует гарантия 3 года."
+  },
+  "uz": {
+   "old": "Montaj bajarilgan obyektlar uchun bajarilgan ishlarga qoʻshimcha kafolat beriladi.",
+   "new": "Montaj bajarilgan obyektlarda bajarilgan ishlarga 3 yil kafolat beriladi."
+  },
+  "en": {
+   "old": "For sites where installation was performed, an additional warranty on the work carried out is provided.",
+   "new": "For sites where we performed the installation, the work carried out is covered by a 3-year warranty."
+  },
+  "tr": {
+   "old": "Kurulumun yapıldığı tesisler için gerçekleştirilen işlere ek garanti verilir.",
+   "new": "Kurulumun yapıldığı tesislerde gerçekleştirilen işlere 3 yıl garanti verilir."
+  },
+  "zh": {
+   "old": "对于由我们实施安装的场所，还额外提供对所完成作业的质保。",
+   "new": "对于由我们实施安装的场所，所完成的作业享有 3 年质保。"
+  }
+ },
+ "network-cameras": {
+  "ru": {
+   "old": "На выполненные монтажные и пусконаладочные работы SAT Solutions предоставляет собственную гарантию.",
+   "new": "На выполненные монтажные и пусконаладочные работы SAT Solutions даёт гарантию 3 года."
+  },
+  "uz": {
+   "old": "Bajarilgan montaj va ishga tushirish-sozlash ishlariga SAT Solutions oʻz kafolatini beradi.",
+   "new": "Bajarilgan montaj va ishga tushirish-sozlash ishlariga SAT Solutions 3 yil kafolat beradi."
+  },
+  "en": {
+   "old": "SAT Solutions provides its own warranty on the installation and commissioning work performed.",
+   "new": "SAT Solutions gives a 3-year warranty on the installation and commissioning work performed."
+  },
+  "tr": {
+   "old": "SAT Solutions, yapılan kurulum ve devreye alma işleri için kendi garantisini verir.",
+   "new": "SAT Solutions, yapılan kurulum ve devreye alma işlerine 3 yıl garanti verir."
+  },
+  "zh": {
+   "old": "对于已完成的安装及调试工作，SAT Solutions 提供自有保修。",
+   "new": "对于已完成的安装及调试工作，SAT Solutions 提供 3 年保修。"
+  }
+ }
+}
