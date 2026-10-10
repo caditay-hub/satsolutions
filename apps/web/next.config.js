@@ -36,8 +36,15 @@ const nextConfig = {
     // оптимизатора (7 с) и давали 504 на /_next/image.
     formats: ["image/webp"],
     minimumCacheTTL: 31536000,
+    // Только свои источники (10.10.2026). Раньше стояло hostname "**" — /_next/image тянул и
+    // пересжимал картинку с ЛЮБОГО сайта: открытый прокси на нашем CPU и вход для уязвимостей
+    // оптимизатора. По логу nginx за 7 дней 11 888 из 11 890 запросов — api.satsolutions.uz;
+    // Dahua — 52 обложки категорий (categories.coverImageUrl) с их CDN.
     remotePatterns: [
-      { protocol: "https", hostname: "**" },
+      { protocol: "https", hostname: "api.satsolutions.uz" },
+      { protocol: "https", hostname: "satsolutions.uz" },
+      { protocol: "https", hostname: "materialfile.dahuasecurity.com" },
+      { protocol: "https", hostname: "material.dahuasecurity.com" },
       { protocol: "http", hostname: "localhost", port: "4000" },
       { protocol: "http", hostname: "127.0.0.1", port: "4000" }
     ]
