@@ -26,6 +26,20 @@ const UI: Record<string, { blog: string; home: string; related: string; hubsLabe
 };
 
 // Названия товарных хабов для чипов «Каталог по теме» (слаг = /products/type/<slug>)
+const BRAND_NAMES: Record<string, { lat: string; zh: string }> = {
+  hikvision: { lat: "Hikvision", zh: "海康威视" },
+  dahua: { lat: "Dahua", zh: "大华" },
+};
+function brandAnchor(n: { lat: string; zh: string }, locale: string): string {
+  switch (locale) {
+    case "uz": return `${n.lat} kameralari`;
+    case "en": return `${n.lat} cameras`;
+    case "tr": return `${n.lat} kameraları`;
+    case "zh": return `${n.zh}摄像机`;
+    default: return `Камеры ${n.lat}`;
+  }
+}
+
 const HUB_LABELS: Record<string, Record<string, string>> = {
   // Подписи как в catalogI18n.ts. izveschateli и pribory-i-moduli стояли в hubs двух статей,
   // но без подписи фильтр ниже их молча выкидывал (AF, 07.10.2026)
@@ -108,13 +122,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
   // Три слага склеены с одноимённой группой (GROUP_CANONICAL): /products/type/<slug>
   // отдаёт по ним 308. Ведём сразу на группу, чтобы не гонять читателя и робота
   // через редирект.
-  const hubs = (article.hubs ?? [])
-    .filter((h) => HUB_LABELS[h])
-    .map((h) => ({
-      href: GROUP_CANONICAL[h] ? `/products/group/${GROUP_CANONICAL[h]}` : `/products/type/${h}`,
-      slug: h,
-      label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru,
-    }));
+  // Бренд-каталог первым (10.10.2026): по «hikvision» английская /en/catalog/hikvision стояла
+  // на 8,9, русская — на 23: из русского контента на русскую страницу бренда не вело ни одной
+  // ссылки. Анкор «Камеры <Бренд>» — ровно так ищут.
+  const brandHubs = (article.brands ?? [])
+    .filter((b) => BRAND_NAMES[b])
+    .map((b) => ({ href: `/catalog/${b}`, slug: `brand-${b}`, label: brandAnchor(BRAND_NAMES[b], locale) }));
+  const hubs = [
+    ...brandHubs,
+    ...(article.hubs ?? [])
+      .filter((h) => HUB_LABELS[h])
+      .map((h) => ({
+        href: GROUP_CANONICAL[h] ? `/products/group/${GROUP_CANONICAL[h]}` : `/products/type/${h}`,
+        slug: h,
+        label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru,
+      })),
+  ];
 
   const articleLd = {
     "@context": "https://schema.org",

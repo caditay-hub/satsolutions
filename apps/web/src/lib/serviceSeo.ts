@@ -33,7 +33,7 @@ const ru: Record<string, ServiceSeo> = {
   cctv: {
     // «системы видеонаблюдения» — QS 1/10 в Ads: запрос обязан быть в H1/title (методика LT)
     h1: "Системы видеонаблюдения в Ташкенте — установка под ключ",
-    title: "Системы видеонаблюдения в Ташкенте — установка камер | SAT",
+    title: "Установка видеонаблюдения в Ташкенте[[ — от {price}]] | SAT",
     desc: "Системы видеонаблюдения под ключ в Ташкенте: установка IP и аналоговых камер, бесплатный выезд, проект, монтаж, удалённый доступ с телефона. Гарантия и сервис.",
   },
   analytics: {
@@ -49,12 +49,12 @@ const ru: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Системы контроля доступа (СКУД) в Ташкенте",
-    title: "СКУД в Ташкенте — установка систем контроля доступа | SAT",
+    title: "Установка СКУД в Ташкенте[[ — от {price}]] | SAT",
     desc: "Монтаж СКУД в Ташкенте под ключ: турникеты, электронные замки, считыватели карт, доступ по лицу (Face ID), учёт рабочего времени. Монтаж и сервис по Узбекистану.",
   },
   fire: {
     h1: "Монтаж пожарной сигнализации в Ташкенте",
-    title: "Пожарная сигнализация в Ташкенте — монтаж АПС и СОУЭ | SAT",
+    title: "Пожарная сигнализация в Ташкенте — монтаж[[ от {price}]] | SAT",
     desc: "Проектирование и монтаж пожарной сигнализации (АПС) и СОУЭ в Ташкенте: датчики, оповещение, автоматика. Сдача проекта, гарантия и обслуживание по всему Узбекистану.",
   },
   pa: {
@@ -68,12 +68,12 @@ const ru: Record<string, ServiceSeo> = {
     // (590/мес) страницы конкурировали друг с другом — услуга 27,0, каталог 47,0.
     // Каталог берёт «домофон», услуга — «установку домофона».
     h1: "Установка домофонов в Ташкенте",
-    title: "Установка домофона в Ташкенте — монтаж IP-домофонов | SAT",
+    title: "Установка домофона в Ташкенте[[ — от {price}]] | SAT",
     desc: "Установка домофонов в Ташкенте: IP- и видеодомофоны для дома, офиса и ЖК, вызов на смартфон, интеграция со СКУД. Монтаж и сервис по всему Узбекистану.",
   },
   turnstile: {
     h1: "Турникеты в Ташкенте — установка под ключ",
-    title: "Турникеты в Ташкенте — продажа и установка проходных | SAT",
+    title: "Турникеты в Ташкенте[[ от {{min:Турникеты и шлагбаумы}}]] — продажа и установка | SAT",
     desc: "Продажа и установка турникетов в Ташкенте: проходные, калитки, интеграция со СКУД и учётом рабочего времени. Монтаж и обслуживание по всему Узбекистану.",
   },
   barrier: {
@@ -268,7 +268,7 @@ const uz: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "Toshkentda videokuzatuv oʻrnatish",
-    title: "Toshkentda videokuzatuv oʻrnatish — kamera montaji | SAT",
+    title: "Toshkentda videokuzatuv oʻrnatish[[ — {price}dan]] | SAT",
     desc: "Toshkentda videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: bepul chiqish, loyiha, IP va analog tizimlar montaji, telefondan kirish. Kafolat va servis.",
   },
   analytics: {
@@ -278,12 +278,12 @@ const uz: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "SKUD tizimi Toshkentda — kirishni boshqarish",
-    title: "SKUD tizimi Toshkentda — oʻrnatish va narxi | SAT",
+    title: "SKUD tizimi Toshkentda — oʻrnatish[[ {price}dan]] | SAT",
     desc: "Toshkentda SKUD montaji: turniketlar, elektron qulflar, karta oʻquvchilar, yuz boʻyicha kirish va biometriya, ish vaqti hisobi. Montaj va servis mamlakat boʻylab.",
   },
   fire: {
     h1: "Yongʻin xavfsizligi tizimlari Toshkentda — montaj",
-    title: "Yongʻin xavfsizligi va signalizatsiyasi Toshkentda | SAT",
+    title: "Yongʻin signalizatsiyasi Toshkentda — montaj[[ {price}dan]] | SAT",
     desc: "Toshkentda yongʻin signalizatsiyasi (APS) va SOUE loyihalash hamda montaji: datchiklar, ogohlantirish, avtomatika. Loyihani topshirish, kafolat va xizmat koʻrsatish.",
   },
   pa: {
@@ -293,12 +293,12 @@ const uz: Record<string, ServiceSeo> = {
   },
   intercom: {
     h1: "Toshkentda domofon oʻrnatish",
-    title: "Toshkentda domofon oʻrnatish — IP-domofon montaji | SAT",
+    title: "Toshkentda domofon oʻrnatish[[ — {price}dan]] | SAT",
     desc: "Toshkentda domofon oʻrnatish: uy, ofis va TJM uchun IP va video domofonlar, smartfonga qoʻngʻiroq, SKUD bilan integratsiya. Montaj va servis mamlakat boʻylab.",
   },
   turnstile: {
     h1: "Toshkentda turniketlar — toʻliq tayyor holda montaj",
-    title: "Turniketlar Toshkentda — sotish va oʻrnatish | SAT",
+    title: "Turniketlar Toshkentda[[ {{min:Турникеты и шлагбаумы}}dan]] — sotish va oʻrnatish | SAT",
     desc: "Toshkentda turniketlarni sotish va oʻrnatish: oʻtish yoʻlaklari, kalitkalar, SKUD va ish vaqti hisobi bilan integratsiya. Montaj va xizmat mamlakat boʻylab.",
   },
   barrier: {
@@ -492,7 +492,7 @@ const en: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "CCTV Installation Company in Tashkent, Uzbekistan",
-    title: "CCTV Installation in Tashkent — Cameras & Service | SAT",
+    title: "CCTV Installation in Tashkent[[ — from {price}]] | SAT",
     desc: "Turnkey CCTV camera installation in Tashkent: free site survey, design, IP and analog system setup, remote access from your phone. Warranty and service.",
   },
   analytics: {
@@ -502,12 +502,12 @@ const en: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Access Control Systems in Tashkent",
-    title: "Access Control in Tashkent — Turnstiles & Locks | SAT",
+    title: "Access Control Installation in Tashkent[[ — from {price}]] | SAT",
     desc: "Turnkey access control (ACS) in Tashkent: turnstiles, electronic locks, card readers, face recognition and biometrics, time and attendance. Installation and service.",
   },
   fire: {
     h1: "Fire Alarm System Design & Installation in Uzbekistan",
-    title: "Fire Alarm Design & Installation in Tashkent | SAT",
+    title: "Fire Alarm Installation in Tashkent[[ — from {price}]] | SAT",
     desc: "Fire alarm and voice evacuation design and installation in Tashkent: detectors, notification, automation. Project handover, warranty and maintenance in Uzbekistan.",
   },
   pa: {
@@ -517,12 +517,12 @@ const en: Record<string, ServiceSeo> = {
   },
   intercom: {
     h1: "Intercom Installation in Tashkent",
-    title: "Intercoms in Tashkent — IP & Video Intercom Setup | SAT",
+    title: "Intercom Installation in Tashkent[[ — from {price}]] | SAT",
     desc: "Intercom installation in Tashkent: IP and video intercoms for homes, offices and residential complexes, call to smartphone, ACS integration. Warranty and service.",
   },
   turnstile: {
     h1: "Turnstiles in Tashkent — Turnkey Installation",
-    title: "Turnstiles in Tashkent — Sales and Installation | SAT",
+    title: "Turnstiles in Tashkent[[ from {{min:Турникеты и шлагбаумы}}]] — Sales & Installation | SAT",
     desc: "Turnstile sales and installation in Tashkent: full-height and tripod turnstiles, gates, integration with access control and time tracking. Service across Uzbekistan.",
   },
   barrier: {
@@ -711,7 +711,7 @@ const tr: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "Taşkent'te güvenlik kamerası sistemi — anahtar teslim",
-    title: "Taşkent'te Güvenlik Kamerası Sistemi Kurulumu | SAT",
+    title: "Taşkent'te Güvenlik Kamerası Kurulumu[[ — {price}'den]] | SAT",
     desc: "Taşkent'te anahtar teslim güvenlik kamerası sistemleri: ücretsiz keşif, proje, IP ve analog kamera montajı, telefondan uzaktan erişim. Garanti ve servis.",
   },
   analytics: {
@@ -726,12 +726,12 @@ const tr: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Taşkent'te geçiş kontrol sistemleri — anahtar teslim",
-    title: "Taşkent'te Geçiş Kontrol Sistemi Kurulumu | SAT",
+    title: "Taşkent'te Geçiş Kontrol Kurulumu[[ — {price}'den]] | SAT",
     desc: "Taşkent'te geçiş kontrol sistemi montajı: turnikeler, elektronik kilitler, kart okuyucular, Face ID ve biyometri, personel devam takibi. Kurulum ve servis.",
   },
   fire: {
     h1: "Taşkent'te yangın alarm sistemi montajı",
-    title: "Taşkent'te Yangın Alarm Sistemi Montajı | SAT",
+    title: "Taşkent'te Yangın Alarm Montajı[[ — {price}'den]] | SAT",
     desc: "Taşkent'te yangın alarm ve sesli uyarı sistemi projelendirme ve montajı: dedektörler, ihbar, otomasyon. Proje teslimi, garanti ve Özbekistan genelinde bakım.",
   },
   pa: {
@@ -741,12 +741,12 @@ const tr: Record<string, ServiceSeo> = {
   },
   intercom: {
     h1: "Taşkent'te diafon ve IP interkom kurulumu",
-    title: "Taşkent'te Diafon Kurulumu — IP Diafon | SAT",
+    title: "Taşkent'te Diafon Kurulumu[[ — {price}'den]] | SAT",
     desc: "Taşkent'te diafon kurulumu: ev, ofis ve siteler için IP ve görüntülü diafonlar, akıllı telefona çağrı, geçiş kontrol entegrasyonu. Montaj, servis ve garanti.",
   },
   turnstile: {
     h1: "Taşkent'te turnike kurulumu — anahtar teslim",
-    title: "Taşkent'te Turnike Satışı ve Kurulumu | SAT",
+    title: "Taşkent'te Turnike[[ {{min:Турникеты и шлагбаумы}}'dan]] — Satış ve Kurulum | SAT",
     desc: "Taşkent'te turnike satışı ve montajı: geçiş turnikeleri, engelli kapıları, geçiş kontrol ve personel devam takibi entegrasyonu. Özbekistan genelinde kurulum.",
   },
   barrier: {
@@ -934,7 +934,7 @@ const zh: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "塔什干视频监控系统 — 整套安装服务",
-    title: "塔什干视频监控系统 — 摄像头安装 | SAT",
+    title: "塔什干视频监控安装[[ — {price}起]] | SAT",
     desc: "在塔什干及乌兹别克斯坦全境提供视频监控整套解决方案：免费上门勘察、方案设计、IP 与模拟摄像头安装、手机远程查看设置，并提供长期质保与售后服务。",
   },
   analytics: {
@@ -949,12 +949,12 @@ const zh: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "塔什干门禁系统安装与调试",
-    title: "塔什干门禁系统安装 — 门禁工程 | SAT",
+    title: "塔什干门禁系统安装[[ — {price}起]] | SAT",
     desc: "在塔什干承接门禁系统整套安装：闸机、电子锁、读卡器、人脸识别（Face ID）与生物识别、考勤管理。乌兹别克斯坦全境提供方案设计、施工安装与售后服务。",
   },
   fire: {
     h1: "塔什干火灾报警系统安装",
-    title: "塔什干火灾报警系统安装工程 | SAT",
+    title: "塔什干火灾报警系统安装[[ — {price}起]] | SAT",
     desc: "塔什干火灾报警系统与应急广播疏散系统的设计与安装：探测器、声光报警、联动控制。提供工程验收交付、质保以及乌兹别克斯坦全境的维保服务。",
   },
   pa: {
@@ -964,12 +964,12 @@ const zh: Record<string, ServiceSeo> = {
   },
   intercom: {
     h1: "塔什干楼宇对讲系统安装",
-    title: "塔什干楼宇对讲安装 — IP 可视对讲 | SAT",
+    title: "塔什干楼宇对讲安装[[ — {price}起]] | SAT",
     desc: "塔什干楼宇对讲安装：适用于住宅、办公与小区的 IP 可视对讲，呼叫可直达手机，并能与门禁系统联动。乌兹别克斯坦全境提供安装与售后服务。",
   },
   turnstile: {
     h1: "塔什干闸机安装 — 整套交付",
-    title: "塔什干闸机销售与安装 — 通道闸机 | SAT",
+    title: "塔什干闸机[[ {{min:Турникеты и шлагбаумы}}起]] — 销售与安装 | SAT",
     desc: "塔什干闸机销售与安装：三辊闸、摆闸与平开门通道，可与门禁系统和考勤管理系统联动。乌兹别克斯坦全境提供安装、调试与长期维护服务。",
   },
   barrier: {

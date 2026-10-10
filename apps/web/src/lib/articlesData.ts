@@ -21,6 +21,7 @@ export type Article = {
   updated?: string;          // ISO — дата последней правки текста; идёт в dateModified
   related: string[];         // ключи услуг для перелинковки (serviceByKey)
   hubs?: string[];           // слаги товарных хабов /products/type/<slug> — «Каталог по теме»
+  brands?: string[];         // слаги брендов /catalog/<brand> — ссылка «Камеры <Бренд>» в том же блоке
   art?: "guest" | "house" | "attendance";        // рисованная схема внутри статьи (ArticleArt)
   appHref?: "/apps/uy" | "/apps/davomat";        // ссылка на страницу нашего приложения
   seeAlso?: string[];                            // слаги статей для блока «Читайте также»
@@ -34,6 +35,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-10-10",
     related: ["cctv", "intercom"],
     hubs: ["ip-videoregistratory-nvr", "ip-kamery"],
+    brands: ["hikvision"],
     loc: {
       ru: {
         title: "Hik-Connect: как скачать приложение и подключить камеру Hikvision к телефону", seoTitle: "Hik-Connect: скачать и подключить камеру Hikvision",
@@ -73,6 +75,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-10-10",
     related: ["cctv"],
     hubs: ["ip-videoregistratory-nvr", "ip-kamery"],
+    brands: ["dahua"],
     loc: {
       ru: {
         title: "DMSS и SmartPSS: как смотреть камеры Dahua с телефона и компьютера", seoTitle: "DMSS и SmartPSS: камеры Dahua на телефоне и ПК",
@@ -4011,6 +4014,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    brands: ["hikvision"],
     loc: {
       ru: {
         title: "Забыли пароль от камеры или регистратора Hikvision: что делать",
@@ -4805,6 +4809,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-09",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    brands: ["hikvision"],
     loc: {
       ru: {
         title: "iVMS-4200: как скачать и настроить программу Hikvision для просмотра камер",
@@ -5513,7 +5518,7 @@ export const ARTICLES: Article[] = [
     hubs: ["zamki-i-skud", "terminaly-i-schityvateli", "turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Что такое СКУД: как работает система контроля доступа",
+        title: "Что такое СКУД: как работает система контроля доступа", seoDesc: "Что такое СКУД простыми словами: из чего состоит система контроля доступа, карты, отпечаток или лицо, связка с учётом времени и видео. С чего начать.",
         excerpt: "Объясняем простыми словами, из чего состоит система контроля и управления доступом, какие бывают способы идентификации, что она умеет в связке с учётом времени и видео — и с чего начать внедрение.",
         sections: [
           { h: "Как это работает", p: [
@@ -5541,7 +5546,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKUD nima: kirishni nazorat qilish tizimi qanday ishlaydi",
+        title: "SKUD nima: kirishni nazorat qilish tizimi qanday ishlaydi", seoDesc: "SKUD nima, oddiy tilda: kirishni nazorat qilish tizimi nimalardan iborat, karta, barmoq izi yoki yuz, ish vaqti hisobi va video bilan bogʻlash.",
         excerpt: "Oddiy soʻzlar bilan tushuntiramiz: kirishni nazorat qilish tizimi nimalardan iborat, qanday identifikatsiya usullari bor, vaqt hisobi va video bilan bogʻlanishda nimalarga qodir — va joriy etishni nimadan boshlash kerak.",
         sections: [
           { h: "Bu qanday ishlaydi", p: [
@@ -5569,7 +5574,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "What Is an Access Control System and How It Works",
+        title: "What Is an Access Control System and How It Works", seoDesc: "What an access control system is, in plain words: its parts, cards vs fingerprint vs face, links to time tracking and video, and where to start.",
         excerpt: "In plain words: what an access control system consists of, which identification methods exist, what it can do together with time attendance and CCTV — and how to start.",
         sections: [
           { h: "How it works", p: [
@@ -5597,7 +5602,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Geçiş Kontrol Sistemi (PDKS) Nedir ve Nasıl Çalışır",
+        title: "Geçiş Kontrol Sistemi (PDKS) Nedir ve Nasıl Çalışır", seoDesc: "Geçiş kontrol sistemi nedir: bileşenleri, kart, parmak izi veya yüz tanıma, mesai takibi ve kamera entegrasyonu, nereden başlanır.",
         excerpt: "Sade bir dille: geçiş kontrol sistemi nelerden oluşur, hangi kimlik doğrulama yöntemleri vardır, mesai takibi ve kameralarla birlikte neler yapar — ve nereden başlanır.",
         sections: [
           { h: "Nasıl çalışır", p: [
@@ -5625,7 +5630,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "什么是门禁系统：在乌兹别克斯坦如何落地",
+        title: "什么是门禁系统：在乌兹别克斯坦如何落地", seoDesc: "门禁系统是什么：由哪些部分组成，刷卡、指纹还是人脸识别，如何与考勤和视频联动，以及从哪里开始部署。",
         excerpt: "用大白话讲清楚：门禁系统由什么组成、有哪些识别方式、与考勤和视频联动能做什么——以及从哪里开始部署。",
         sections: [
           { h: "它如何工作", p: [
@@ -5971,7 +5976,7 @@ export const ARTICLES: Article[] = [
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Сколько стоит СКУД: цена системы контроля доступа",
+        title: "Сколько стоит СКУД: цена системы контроля доступа", seoDesc: "Сколько стоит СКУД в Ташкенте: комплект на одну дверь — около 1,45 млн сум по оборудованию, офис и проходная с турникетом, карты против биометрии.",
         excerpt: "Из чего складывается цена СКУД: считаем комплект на одну дверь, офис и проходную с турникетом. Чем отличаются бюджеты карточной и биометрической систем — и где спрятаны расходы, о которых забывают.",
         sections: [
           { h: "Считаем на примере одной двери", p: [
@@ -5999,7 +6004,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi",
+        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi", seoTitle: "SKUD tizimi narxi: bir eshik, ofis va prohodnaya", seoDesc: "SKUD tizimi narxi Toshkentda: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli prohodnaya, karta yoki biometriya.",
         excerpt: "SKUD narxi nimadan yigʻiladi: bitta eshik, ofis va turniketli prohodnaya toʻplamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
         sections: [
           { h: "Bitta eshik misolida hisoblaymiz", p: [
@@ -6027,7 +6032,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "How Much Does Access Control Cost",
+        title: "How Much Does Access Control Cost", seoDesc: "Access control cost in Tashkent: a single-door kit is about 1.45M UZS in equipment; office and turnstile entrance budgets, cards vs biometrics.",
         excerpt: "What builds the price of an access control system: a single door, an office, and a turnstile entrance. How card and biometric budgets differ — and where the forgotten costs hide.",
         sections: [
           { h: "Starting with one door", p: [
@@ -6055,7 +6060,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Geçiş Kontrol Sistemi Ne Kadar Tutar",
+        title: "Geçiş Kontrol Sistemi Ne Kadar Tutar", seoDesc: "Taşkent'te geçiş kontrol sistemi fiyatı: tek kapı seti ekipmanla yaklaşık 1,45 milyon som; ofis ve turnikeli giriş, kart ve biyometri karşılaştırması.",
         excerpt: "PDKS fiyatını ne oluşturur: tek kapı, ofis ve turnikeli giriş hesabı. Kartlı ve biyometrik bütçeler nasıl ayrışır — ve unutulan masraflar nerede saklanır.",
         sections: [
           { h: "Tek kapıyla başlayalım", p: [
@@ -6083,7 +6088,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "在乌兹别克斯坦装一套门禁系统要多少钱",
+        title: "在乌兹别克斯坦装一套门禁系统要多少钱", seoDesc: "塔什干门禁系统价格：单门套装设备约145万苏姆；办公室与闸机门岗预算，刷卡与生物识别对比。",
         excerpt: "门禁系统的价格由什么构成：单扇门、办公室和带闸机的门岗各怎么算。刷卡与生物识别的预算差在哪——以及常被遗忘的开销藏在何处。",
         sections: [
           { h: "从一扇门算起", p: [
@@ -10736,7 +10741,7 @@ export const ARTICLES: Article[] = [
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Сколько стоит турникет с установкой в Ташкенте",
+        title: "Сколько стоит турникет с установкой в Ташкенте", seoTitle: "Сколько стоит турникет в Ташкенте: трипод от 4,33 млн сум", seoDesc: "Цены на турникеты в Ташкенте в 2026 году: трипод от 4,33 млн сум, распашной, полноростовой, с Face ID. Из чего складывается цена под ключ и где сэкономить.",
         excerpt: "Цены на турникеты в 2026 году: трипод, распашной, полноростовой и с Face ID. Из чего складывается стоимость под ключ и на чём можно сэкономить.",
         sections: [
           { h: "Типы турникетов и порядок цен", p: [
@@ -10771,7 +10776,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Turniket narxi qancha? Toshkentda oʻrnatish bilan",
+        title: "Turniket narxi qancha? Toshkentda oʻrnatish bilan", seoTitle: "Turniket narxi Toshkentda: tripod 4,33 mln soʻmdan", seoDesc: "Toshkentda turniket narxlari 2026: tripod 4,33 mln soʻmdan, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
         excerpt: "2026-yilda turniket narxlari: tripod, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
         sections: [
           { h: "Turniket turlari va narxlar tartibi", p: [
@@ -10806,7 +10811,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Turnstile Price in Tashkent: Supply and Installation Costs",
+        title: "Turnstile Price in Tashkent: Supply and Installation Costs", seoTitle: "Turnstile price in Tashkent: tripod from 4.33M UZS", seoDesc: "Turnstile prices in Tashkent for 2026: tripods from 4.33M UZS, swing, full-height and Face ID models. What a turnkey install costs and where to save.",
         excerpt: "Turnstile prices in 2026: tripod, swing, full-height and Face ID options. What a turnkey installation costs and where you can save.",
         sections: [
           { h: "Turnstile types and price ranges", p: [
@@ -10841,7 +10846,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te Turnike Fiyatları: Montaj Dahil Maliyetler",
+        title: "Taşkent'te Turnike Fiyatları: Montaj Dahil Maliyetler", seoTitle: "Taşkent turnike fiyatları: tripod 4,33 milyon somdan", seoDesc: "Taşkent'te 2026 turnike fiyatları: tripod 4,33 milyon somdan, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim maliyet ve tasarruf noktaları.",
         excerpt: "2026 turnike fiyatları: tripod, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim kurulum neye mal olur, nereden tasarruf edilir.",
         sections: [
           { h: "Turnike türleri ve fiyat aralıkları", p: [
@@ -10876,7 +10881,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干闸机价格：设备与安装费用指南",
+        title: "塔什干闸机价格：设备与安装费用指南", seoTitle: "塔什干闸机价格：三辊闸433万苏姆起", seoDesc: "2026年塔什干闸机价格：三辊闸433万苏姆起，另有摆闸、全高闸与人脸识别方案。交钥匙安装费用构成与省钱要点。",
         excerpt: "2026年闸机价格：三辊闸、摆闸、全高闸及人脸识别方案。交钥匙安装的费用构成与省钱要点。",
         sections: [
           { h: "闸机类型与价格区间", p: [

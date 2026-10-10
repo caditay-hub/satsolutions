@@ -31,6 +31,7 @@ import { ServicePackages } from "@/components/ServicePackages";
 import { ServicePriceHint } from "@/components/ServicePriceHint";
 import { ServiceInstallPrices } from "@/components/ServiceInstallPrices";
 import { installPrices, fmtSum } from "@/lib/installPrices";
+import { fillLiveMins } from "@/lib/typeSeo";
 import { Lightbox } from "@/components/Lightbox";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
@@ -113,6 +114,19 @@ async function priceLead(key: string, locale: string): Promise<string | null> {
   }
 }
 
+// Цена в title/description услуги (10.10.2026): на 4–10 месте CTR был ~1 %, цена в сниппете —
+// главный повод кликнуть. «{price}» — первая строка прайса монтажа (тот же, что в блоке «Сколько
+// стоит»), «{{min:Раздел}}» — живая минимальная цена раздела каталога. Фрагмент в [[…]] выпадает
+// целиком, если цену получить не удалось, — заголовок без дыры.
+async function fillServiceSeo(text: string, key: string, locale: string): Promise<string> {
+  const MISS = "\u0000";
+  const w = installPrices(key)?.works?.[0];
+  let s = text.replace(/\{price\}/g, w ? fmtSum(w.price, locale) : MISS);
+  if (s.includes("{{min:")) s = (await fillLiveMins(s, locale)) ?? s.replace(/\{\{min:[^}]+\}\}/g, MISS);
+  s = s.replace(/\[\[([^\]]*)\]\]/g, (_m, inner: string) => (inner.includes(MISS) ? "" : inner));
+  return s.replaceAll(MISS, "");
+}
+
 async function generateMetadataBase({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
   const svc = serviceByKey[slug];
@@ -122,12 +136,12 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     const intro = ts(`${svc.key}.intro`);
     // Гео-коммерческий SEO-оверлей (город + интент) — приоритет над генерик-title/intro
     const seo = getServiceSeo(locale, svc.key);
-    const metaTitle = seo ? `${seo.title}` : `${title} — SAT Solutions`;
+    const metaTitle = seo ? await fillServiceSeo(seo.title, svc.key, locale) : `${title} — SAT Solutions`;
     // Описание в выдаче начинается с цены из прайса монтажа (07.10.2026): по запросам с «цена»
     // при позиции ~7 кликов не было (0 из 95 показов). Цена берётся из того же прайса, что блок
     // «Сколько стоит» на странице, — меняется прайс, меняется и описание.
     const lead = await priceLead(svc.key, locale);
-    const metaDesc = `${lead ? lead + (locale === "zh" ? "" : " ") : ""}${seo?.desc ?? intro}`; // в китайском без пробела между фразами
+    const metaDesc = `${lead ? lead + (locale === "zh" ? "" : " ") : ""}${seo?.desc ? await fillServiceSeo(seo.desc, svc.key, locale) : intro}`; // в китайском без пробела между фразами
     return {
       title: { absolute: metaTitle },
       description: metaDesc,
