@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { Sentry } from "./sentry.js";
 import compression from "compression";
 import cors from "cors";
 import express from "express";
@@ -87,6 +88,7 @@ async function main() {
   app.use((_req, res) => res.status(404).json({ error: "Not found" }));
 
   app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+    Sentry.captureException(err);
     // eslint-disable-next-line no-console
     console.error(err);
     res.status(500).json({ error: "Internal Server Error" });
@@ -106,7 +108,9 @@ async function main() {
   });
 }
 
-main().catch((e) => {
+main().catch(async (e) => {
+  Sentry.captureException(e);
+  await Sentry.flush(2000);
   // eslint-disable-next-line no-console
   console.error(e);
   process.exit(1);

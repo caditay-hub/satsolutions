@@ -21,6 +21,7 @@ import { ServiceCategory } from "../models/ServiceCategory.js";
 import { sequelize } from "../db.js";
 import { flipLayout } from "../lib/kbLayout.js";
 import { parseLimit, parsePositiveInt } from "../utils/pagination.js";
+import { Sentry } from "../sentry.js";
 
 // Нормализация значений характеристик: схлопывает регистр, пробелы, пробел между числом
 // и единицей («6 кВ»→«6кв») и транслитерирует кириллицу в латиницу — так «6 кВ» = «6KV» = «6kV».
@@ -1322,6 +1323,8 @@ publicRouter.post("/service-requests", formLimiter, async (req, res) => {
       }
     });
   } catch (error) {
+    // Падение приёма заявки = потерянный клиент — пусть Sentry сразу сообщит.
+    Sentry.captureException(error, { tags: { flow: "service-request" } });
     console.error("Error creating service request:", error);
     res.status(500).json({ error: "Failed to create service request" });
   }
