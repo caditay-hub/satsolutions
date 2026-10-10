@@ -245,9 +245,9 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       zh: "塔什干无线Wi-Fi监控摄像机 — Tapo、海康威视",
     },
     desc: {
-      ru: "Wi-Fi камеры для дома и офиса: Tapo, Hikvision, Dahua, ZKTeco. Поворотные, с записью на SD-карту и в облако, двусторонней связью. Настройка приложения. Цены в Ташкенте, гарантия.",
-      uz: "Uy va ofis uchun Wi-Fi kameralar: Tapo, Hikvision, Dahua, ZKTeco. Burar, SD-karta va bulutga yozadigan, ikki tomonlama aloqali. Ilovani sozlash. Toshkentda narxlar, kafolat.",
-      en: "Wi-Fi cameras for home and office: Tapo, Hikvision, Dahua, ZKTeco. Pan-tilt models, SD-card and cloud recording, two-way audio. App setup included. Tashkent prices, warranty.",
+      ru: "Wi-Fi камеры для дома и офиса в Ташкенте: Tapo, Hikvision, Dahua, ZKTeco. Поворотные, запись на SD-карту и в облако, двусторонняя связь. Настройка, гарантия.",
+      uz: "Toshkentda uy va ofis uchun Wi-Fi kameralar: Tapo, Hikvision, Dahua, ZKTeco. Burar modellar, SD-karta va bulutga yozish, ikki tomonlama aloqa. Sozlash, kafolat.",
+      en: "Wi-Fi cameras for home and office in Tashkent: Tapo, Hikvision, Dahua, ZKTeco. Pan-tilt models, SD-card and cloud recording, two-way audio. Setup, warranty.",
       tr: "Ev ve ofis için Wi-Fi güvenlik kameraları: Tapo, Hikvision, Dahua, ZKTeco. Döner modeller, SD kart ve bulut kaydı, çift yönlü ses, uygulama kurulumu, garanti.",
       zh: "家庭与办公用Wi-Fi无线监控摄像机：Tapo、海康威视、大华、中控智慧。云台旋转，支持SD卡与云端录像、双向语音，含App配置。塔什干报价与质保。",
     },
