@@ -10,6 +10,7 @@ import { getGroupSeo } from "@/lib/groupSeo";
 import { ogLocale } from "@/lib/ogLocale";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { CatalogView } from "../../CatalogView";
+import { WorkTerms } from "@/components/WorkTerms";
 import { withOgUrl } from "@/lib/metadata";
 
 export const revalidate = 300;
@@ -82,6 +83,13 @@ export default async function ProductGroupPage({ params, searchParams }: { param
           ...(seo ? { seoH1: seo.h1, intro: seo.intro, long: seo.long, serviceHref: seo.serviceHref, serviceLabel: seo.serviceLabel } : {}),
         },
       } as any)}
+      {/* Условия работы на группах с профильной услугой (видеонаблюдение, домофония…) —
+          сюда ведёт реклама, см. CategoryServiceLink (10.10.2026) */}
+      {seo?.serviceHref ? (
+        <div className="container-page pb-10">
+          <WorkTerms locale={locale} />
+        </div>
+      ) : null}
     </>
   );
 }

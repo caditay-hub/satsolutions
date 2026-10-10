@@ -129,7 +129,7 @@ export default async function BrandTypePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {view}
-      <CategoryServiceLink typeName={pair.typeName} locale={locale} />
+      <CategoryServiceLink typeName={pair.typeName} locale={locale} terms />
     </>
   );
 }

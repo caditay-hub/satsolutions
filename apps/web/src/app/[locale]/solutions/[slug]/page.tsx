@@ -280,7 +280,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // если перевода нет (например, у отраслевых страниц).
   let faq: { q: string; a: string }[] = [];
   try {
-    const tr = ts.raw(`${svc.key}.faq`) as { q: string; a: string }[];
+    const tr = (ts.has(`${svc.key}.faq`) ? ts.raw(`${svc.key}.faq`) : null) as { q: string; a: string }[] | null;
     if (Array.isArray(tr)) faq = tr.filter((f) => f?.q && f?.a);
   } catch { /* перевода нет */ }
   if (faq.length === 0 && locale === "ru") faq = SERVICE_FAQ[svc.key] ?? [];
@@ -303,8 +303,10 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const heroPrice = priceBlock?.rows[priceBlock.rows.length - 1] ?? null;
   const heroMinPrice = heroPrice ? Number(heroPrice.price.replace(/\D/g, "")) || null : null;
   let hasPackages = false;
+  // has() до raw(): next-intl пишет MISSING_MESSAGE в лог через onError даже внутри try/catch —
+  // у gates пакетов нет, и это давало 50–130 строк ошибок в день на 5 языках (аудит 10.10.2026).
   try {
-    const pk = ts.raw(`${svc.key}.details.packages`);
+    const pk = ts.has(`${svc.key}.details.packages`) ? ts.raw(`${svc.key}.details.packages`) : null;
     hasPackages = Array.isArray(pk) && pk.length > 0 && !["network", "server"].includes(svc.key);
   } catch { /* пакетов нет */ }
   const hasPrices = hasPackages || !!priceBlock;

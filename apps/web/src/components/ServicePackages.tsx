@@ -15,8 +15,9 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
   const ts = await getTranslations({ locale, namespace: "services" });
   const tp = await getTranslations({ locale, namespace: "solutionsPage" });
   let packages: Pkg[] = [];
+  // has() до raw(): next-intl пишет MISSING_MESSAGE в лог даже внутри try/catch (gates, 10.10.2026)
   try {
-    const raw = ts.raw(`${k}.details.packages`) as Pkg[];
+    const raw = (ts.has(`${k}.details.packages`) ? ts.raw(`${k}.details.packages`) : null) as Pkg[] | null;
     if (Array.isArray(raw)) packages = raw.filter((p) => p?.name && Array.isArray(p.items));
   } catch { /* пакетов нет — блок не показываем */ }
   if (!packages.length) return null;

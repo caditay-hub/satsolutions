@@ -128,7 +128,7 @@ export default async function ProductTypePage({ params, searchParams }: { params
     <>
       {view}
       <RelatedHubs path={`/products/type/${slug}`} locale={locale} />
-      <CategoryServiceLink typeName={name} locale={locale} />
+      <CategoryServiceLink typeName={name} locale={locale} terms />
     </>
   );
 }
