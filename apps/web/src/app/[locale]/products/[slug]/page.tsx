@@ -86,6 +86,7 @@ import { ProductCard } from "@/components/Cards";
 import { OrderButton } from "@/components/OrderButton";
 import { ProductGallery } from "@/components/ProductGallery";
 import { priceInfo, productIcon, isNewProduct } from "@/lib/product";
+import PRODUCT_SEO from "@/data/productSeoI18n.json";
 
 function pickRate(data: any): number | null {
   const v = data?.usdToUzs;
@@ -150,8 +151,11 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     // шаблон — но переводов у них нет, поэтому только на RU. Цену в них не держим:
     // она уезжает при каждой переоценке, живой хвост добавляется ниже.
     const isRu = locale === routing.defaultLocale;
-    const seoTitle = (isRu && product.seoTitle?.trim()) || "";
-    const seoDesc = (isRu && product.seoDescription?.trim()) || "";
+    // Оверлей data/productSeoI18n.json (10.10.2026) — ручные title/description на ВСЕХ 5 языках
+    // для карточек с показами без кликов; приоритет над полями БД (те только RU). Цены в нём нет.
+    const ov = (PRODUCT_SEO as Record<string, Record<string, { title?: string; desc?: string }>>)[product.slug]?.[locale];
+    const seoTitle = ov?.title || (isRu && product.seoTitle?.trim()) || "";
+    const seoDesc = ov?.desc || (isRu && product.seoDescription?.trim()) || "";
     // Бренд и код модели — в начало описания, если их там нет (07.10.2026). У 3180 из 3248
     // товаров есть код модели, но в описании он был лишь у 927: модели одной серии (Tapo
     // C510W/C520WS, 6 турникетов ZKTeco, поворотные Hikvision…) получали одинаковый сниппет.
@@ -165,7 +169,8 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     const body0 = cleanSnippet(loc.shortDescription || "");
     const mc = (product.modelCode || "").trim();
     let modelLead = "";
-    if (!seoDesc && mc && body0 && !squash(body0).includes(squash(mc))) {
+    // Кириллический код (ОП-5, коды Рубежа) в uz/en/tr/zh-сниппете не ставим: «ОП-5: 5 l hajmli…»
+    if (!seoDesc && mc && body0 && !squash(body0).includes(squash(mc)) && (isRu || !/[а-яё]/i.test(mc))) {
       let brandName = "";
       try {
         const { brands } = await getBrands();

@@ -40,9 +40,14 @@ export const RELATED_HUBS: Record<string, string[]> = {
   "/solutions/fire": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid"],
   "/solutions/alarm": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid"],
   "/solutions/network": ["/products/group/setevoe-oborudovanie", "/products/type/kommutatory", "/catalog/mikrotik", "/catalog/tplink"],
-  "/solutions/access": ["/products/group/kontrol-dostupa", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/products/type/turnikety-i-shlagbaumy", "/catalog/zkteco"],
+  "/solutions/access": ["/products/group/kontrol-dostupa", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/products/type/turnikety-i-shlagbaumy", "/products/type/shlagbaumy", "/catalog/zkteco"],
   "/solutions/turnstile": ["/products/type/turnikety-i-shlagbaumy", "/products/group/kontrol-dostupa", "/catalog/zkteco"],
   "/solutions/barrier": ["/products/type/shlagbaumy", "/catalog/hikvision", "/catalog/zkteco"],
+  // Раздел «Шлагбаумы» выделен 09.10.2026 (880 + 390 запросов в месяц) — ссылки со смежных
+  // услуг въезда: распознавание номеров, парковка, ворота (10.10.2026)
+  "/solutions/anpr": ["/products/type/shlagbaumy", "/products/type/ip-kamery", "/catalog/hikvision"],
+  "/solutions/parking": ["/products/type/shlagbaumy", "/products/type/ip-kamery", "/catalog/hikvision"],
+  "/solutions/gates": ["/products/type/shlagbaumy", "/catalog/hikvision"],
   "/solutions/locks": ["/products/type/zamki-i-skud", "/products/group/kontrol-dostupa"],
   "/solutions/intercom": ["/products/group/domofoniya", "/catalog/hikvision"],
   // разделы каталога ↔ соседние разделы и бренды

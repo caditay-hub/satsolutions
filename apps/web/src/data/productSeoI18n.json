@@ -1,0 +1,28 @@
+{
+  "pro-ognetushitel-op-5-rif-original-bolshoi": {
+    "ru": { "title": "Огнетушитель ОП-5 порошковый РИФ — цена и наличие в Ташкенте", "desc": "Огнетушитель ОП-5 РИФ: порошковый, 5 л, оригинальное исполнение для офиса, магазина и склада. Доставка по Ташкенту, счёт с НДС." },
+    "uz": { "title": "Oʻt oʻchirgich OP-5 kukunli RIF — Toshkentda narxi", "desc": "OP-5 RIF oʻt oʻchirgichi: kukunli, 5 litr, original ijro — ofis, doʻkon va ombor uchun. Toshkent boʻylab yetkazib berish, QQS bilan hisob." },
+    "en": { "title": "OP-5 Powder Fire Extinguisher RIF — Price in Tashkent", "desc": "OP-5 RIF fire extinguisher: dry powder, 5 L, original version for offices, shops and warehouses. Delivery across Tashkent, VAT invoice." },
+    "tr": { "title": "OP-5 Tozlu Yangın Söndürücü RIF — Taşkent Fiyatı", "desc": "OP-5 RIF yangın söndürücü: kuru kimyevi tozlu, 5 L, ofis, mağaza ve depo için orijinal model. Taşkent içi teslimat, KDV'li fatura." },
+    "zh": { "title": "OP-5 干粉灭火器 RIF — 塔什干价格与现货", "desc": "OP-5 RIF 干粉灭火器：5 升，原装版本，适用于办公室、商店与仓库。塔什干市内配送，可开含税发票。" }
+  },
+  "pro-v380-pro-povorotnaya-kamera-s-tremya-obektivom": {
+    "ru": { "title": "V380 Pro — поворотная камера с тремя объективами, Ташкент", "desc": "Камера V380 Pro с тремя объективами: панорама и детальный обзор одновременно, управление и запись через приложение V380 Pro на телефоне." },
+    "uz": { "title": "V380 Pro kamera — uchta obyektivli, aylanuvchi, Toshkent", "desc": "Uchta obyektivli V380 Pro kamera: keng manzara va batafsil koʻrinish bir vaqtda, telefondagi V380 Pro ilovasi orqali boshqaruv va yozuv." },
+    "en": { "title": "V380 Pro PTZ Camera with Three Lenses — Tashkent", "desc": "V380 Pro camera with three lenses: panorama and close-up view at once, control and recording via the V380 Pro app on your phone." },
+    "tr": { "title": "V380 Pro Üç Lensli Dönen Kamera — Taşkent", "desc": "Üç lensli V380 Pro kamera: geniş açı ve yakın görüntü aynı anda, telefondaki V380 Pro uygulamasıyla kontrol ve kayıt." },
+    "zh": { "title": "V380 Pro 三镜头云台摄像机 — 塔什干", "desc": "V380 Pro 三镜头摄像机：全景与细节画面同时呈现，通过手机 V380 Pro 应用控制与录像。" }
+  },
+  "pro-lezhachii-policeiskii-standart-yellow-500-350-50": {
+    "uz": { "title": "Yoʻl tezligini cheklagich seksiyasi, sariq, 500×350×50 mm", "desc": "Sariq rezina seksiya 500×350×50 mm: qora seksiya bilan navbatlashib, yoʻlakni uzoqdan koʻrinadigan qiladi. Asfalt yoki betonga ankerlar bilan mahkamlanadi." },
+    "en": { "title": "Speed Bump Section, Yellow, 500×350×50 mm — Tashkent", "desc": "Yellow rubber speed bump section 500×350×50 mm: alternates with black sections for a high-visibility strip. Anchored into asphalt or concrete." },
+    "tr": { "title": "Hız Kesici Modülü, Sarı, 500×350×50 mm — Taşkent", "desc": "Sarı kauçuk hız kesici modülü 500×350×50 mm: siyah modüllerle dönüşümlü dizilerek şeridi uzaktan görünür kılar. Asfalta veya betona ankrajla sabitlenir." },
+    "zh": { "title": "减速带模块 黄色 500×350×50 毫米 — 塔什干", "desc": "黄色橡胶减速带模块 500×350×50 毫米：与黑色模块交替排列，远处清晰可见。用膨胀螺栓固定在沥青或混凝土路面上。" }
+  },
+  "pro-lezhachii-policeiskii-standart-black-500-350-50": {
+    "uz": { "title": "Yoʻl tezligini cheklagich seksiyasi, qora, 500×350×50 mm", "desc": "Qora rezina seksiya 500×350×50 mm: yoʻlak kengligiga qarab istalgan uzunlikda yigʻiladi, sariq seksiyalar bilan navbatlashadi. Shikastlangan seksiya alohida almashtiriladi." },
+    "en": { "title": "Speed Bump Section, Black, 500×350×50 mm — Tashkent", "desc": "Black rubber speed bump section 500×350×50 mm: assembled to any lane width, alternating with yellow sections. A damaged section is replaced on its own." },
+    "tr": { "title": "Hız Kesici Modülü, Siyah, 500×350×50 mm — Taşkent", "desc": "Siyah kauçuk hız kesici modülü 500×350×50 mm: şerit genişliğine göre istenen uzunlukta kurulur, sarı modüllerle dönüşümlü dizilir. Hasarlı modül tek başına değiştirilir." },
+    "zh": { "title": "减速带模块 黑色 500×350×50 毫米 — 塔什干", "desc": "黑色橡胶减速带模块 500×350×50 毫米：可按车道宽度拼装任意长度，与黄色模块交替排列。损坏的模块可单独更换。" }
+  }
+}
