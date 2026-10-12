@@ -2395,7 +2395,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "kamery-domofony-novostroyki-uzbekistan",
     date: "2026-09-10",
-    updated: "2026-09-10",
+    updated: "2026-10-12",
     related: ["cctv", "intercom"],
     hubs: ["ip-kamery", "domofoniya", "ip-videoregistratory-nvr"],
     loc: {
@@ -2420,8 +2420,8 @@ export const ARTICLES: Article[] = [
             "Лифтовая камера — отдельная история. Кабина движется, поэтому нужен либо гибкий шлейф в лифтовой петле, либо беспроводной канал, и это согласуется с лифтовой организацией на стадии проекта. Заложить такую камеру задним числом дороже, чем предусмотреть сразу: тянуть трассу в шахте по готовому дому никто не любит.",
           ] },
           { h: "Сколько это стоит по каталогу", p: [
-            "Посчитаем дом на три подъезда с одним лифтом в каждом — пятнадцать камер и три вызывные панели. По ценам каталога на сентябрь 2026, без монтажа: пятнадцать цилиндрических IP-камер 2 Мп HiLook HL-IPC-B121HE-UC по 258 900 — 3 883 500 сум; три вызывные панели Dahua DHI-VTO2111D-P-S2 по 661 900 — 1 985 700 сум; три PoE-коммутатора Hikvision DS-3E0310HP-E по 741 900 — 2 225 700 сум; шестнадцатиканальный регистратор Hikvision DS-7616NI-K1 — 1 112 900 сум; жёсткий диск Seagate SkyHawk на 4 ТБ — 1 694 900 сум.",
-            "Итого 10 902 700 сум по оборудованию. Если в доме сто восемь квартир, это около 101 тысячи сум на квартиру — меньше стоимости одной входной двери. На фоне цены квадратного метра сумма практически незаметна, и именно поэтому спор с требованием обходится дороже, чем его выполнение.",
+            "Посчитаем дом на три подъезда с одним лифтом в каждом — пятнадцать камер и три вызывные панели. По ценам каталога на октябрь 2026, без монтажа: пятнадцать цилиндрических IP-камер 2 Мп HiLook HL-IPC-B121HE-UC по 221 900 — 3 328 500 сум; три вызывные панели Dahua DHI-VTO2111D-P-S2 по 661 900 — 1 985 700 сум; три PoE-коммутатора Hikvision DS-3E0310HP-E по 679 900 — 2 039 700 сум; шестнадцатиканальный регистратор Hikvision DS-7616NI-K1 — 1 484 900 сум; жёсткий диск Seagate SkyHawk на 4 ТБ — 1 768 900 сум.",
+            "Итого 10 607 700 сум по оборудованию. Если в доме сто восемь квартир, это около 98 тысяч сум на квартиру — меньше стоимости одной входной двери. На фоне цены квадратного метра сумма практически незаметна, и именно поэтому спор с требованием обходится дороже, чем его выполнение.",
           ] },
           { h: "Что мы берём на себя", p: [
             "SAT Solutions проектирует, поставляет и монтирует ровно этот состав: подъездное и дворовое видеонаблюдение, камеры в лифтах, IP-домофонию с переадресацией вызова на смартфон и серверную часть с архивом. Работаем по всему Узбекистану, оборудование идёт официальными каналами с гарантией производителя и сертификатами — теми самыми, которые понадобятся при передаче общего имущества управляющей организации.",
@@ -2450,8 +2450,8 @@ export const ARTICLES: Article[] = [
             "Lift kamerasi — alohida masala. Kabina harakatlanadi, shuning uchun lift halqasida moslashuvchan shleyf yoki simsiz kanal kerak, bu esa loyiha bosqichida lift tashkiloti bilan kelishiladi. Bunday kamerani keyinchalik qoʻshish qimmatroq: tayyor uyda shaxtada trassa tortishni hech kim yoqtirmaydi.",
           ] },
           { h: "Katalog boʻyicha qancha turadi", p: [
-            "Har birida bitta lift boʻlgan uch podyezdli uyni hisoblaymiz — oʻn beshta kamera va uchta chaqiruv paneli. 2026-yil sentyabr katalog narxlari boʻyicha, montajsiz: oʻn beshta silindrik IP-kamera 2 Mp HiLook HL-IPC-B121HE-UC, donasi 258 900 dan — 3 883 500 soʻm; uchta chaqiruv paneli Dahua DHI-VTO2111D-P-S2, donasi 661 900 dan — 1 985 700 soʻm; uchta PoE-kommutator Hikvision DS-3E0310HP-E, donasi 741 900 dan — 2 225 700 soʻm; oʻn olti kanalli registrator Hikvision DS-7616NI-K1 — 1 112 900 soʻm; 4 TB li Seagate SkyHawk qattiq diski — 1 694 900 soʻm.",
-            "Uskuna boʻyicha jami 10 902 700 soʻm. Uyda bir yuz sakkiz kvartira boʻlsa, bu bitta kvartiraga taxminan 101 ming soʻm — bitta kirish eshigidan ham arzon. Kvadrat metr narxi fonida bu deyarli sezilmaydi, shuning uchun talab bilan bahslashish uni bajarishdan qimmatga tushadi.",
+            "Har birida bitta lift boʻlgan uch podyezdli uyni hisoblaymiz — oʻn beshta kamera va uchta chaqiruv paneli. 2026-yil oktyabr katalog narxlari boʻyicha, montajsiz: oʻn beshta silindrik IP-kamera 2 Mp HiLook HL-IPC-B121HE-UC, donasi 221 900 dan — 3 328 500 soʻm; uchta chaqiruv paneli Dahua DHI-VTO2111D-P-S2, donasi 661 900 dan — 1 985 700 soʻm; uchta PoE-kommutator Hikvision DS-3E0310HP-E, donasi 679 900 dan — 2 039 700 soʻm; oʻn olti kanalli registrator Hikvision DS-7616NI-K1 — 1 484 900 soʻm; 4 TB li Seagate SkyHawk qattiq diski — 1 768 900 soʻm.",
+            "Uskuna boʻyicha jami 10 607 700 soʻm. Uyda bir yuz sakkiz kvartira boʻlsa, bu bitta kvartiraga taxminan 98 ming soʻm — bitta kirish eshigidan ham arzon. Kvadrat metr narxi fonida bu deyarli sezilmaydi, shuning uchun talab bilan bahslashish uni bajarishdan qimmatga tushadi.",
           ] },
           { h: "Biz nimani oʻz zimmamizga olamiz", p: [
             "SAT Solutions aynan shu tarkibni loyihalaydi, yetkazib beradi va montaj qiladi: podyezd va hovli videokuzatuvi, liftlardagi kameralar, chaqiruvni smartfonga yoʻnaltiruvchi IP-domofoniya va arxivli server qismi. Butun Oʻzbekiston boʻylab ishlaymiz, uskuna rasmiy kanallar orqali ishlab chiqaruvchi kafolati va sertifikatlari bilan keladi — aynan ular umumiy mol-mulkni boshqaruvchiga topshirishda kerak boʻladi.",
@@ -2480,8 +2480,8 @@ export const ARTICLES: Article[] = [
             "The lift camera is a story of its own. The car moves, so it needs either a flexible cable in the travelling loop or a wireless link, and this is agreed with the lift contractor at the design stage. Adding such a camera afterwards costs more: nobody enjoys pulling a route through a shaft in a finished building.",
           ] },
           { h: "What it costs from the catalogue", p: [
-            "Take a building with three entrances and one lift in each — fifteen cameras and three door stations. At catalogue prices as of September 2026, installation excluded: fifteen HiLook HL-IPC-B121HE-UC 2 MP bullet IP cameras at 258 900 each for 3 883 500 UZS; three Dahua DHI-VTO2111D-P-S2 door stations at 661 900 each for 1 985 700 UZS; three Hikvision DS-3E0310HP-E PoE switches at 741 900 each for 2 225 700 UZS; a sixteen-channel Hikvision DS-7616NI-K1 recorder at 1 112 900 UZS; and a 4 TB Seagate SkyHawk drive at 1 694 900 UZS.",
-            "That is 10 902 700 UZS of equipment. For a building of one hundred and eight flats it works out at roughly 101 thousand UZS per flat — less than a single entrance door. Against the price of a square metre the sum is barely visible, which is why arguing with the requirement costs more than meeting it.",
+            "Take a building with three entrances and one lift in each — fifteen cameras and three door stations. At catalogue prices as of October 2026, installation excluded: fifteen HiLook HL-IPC-B121HE-UC 2 MP bullet IP cameras at 221 900 each for 3 328 500 UZS; three Dahua DHI-VTO2111D-P-S2 door stations at 661 900 each for 1 985 700 UZS; three Hikvision DS-3E0310HP-E PoE switches at 679 900 each for 2 039 700 UZS; a sixteen-channel Hikvision DS-7616NI-K1 recorder at 1 484 900 UZS; and a 4 TB Seagate SkyHawk drive at 1 768 900 UZS.",
+            "That is 10 607 700 UZS of equipment. For a building of one hundred and eight flats it works out at roughly 98 thousand UZS per flat — less than a single entrance door. Against the price of a square metre the sum is barely visible, which is why arguing with the requirement costs more than meeting it.",
           ] },
           { h: "What we take on", p: [
             "SAT Solutions designs, supplies and installs exactly this scope: entrance and yard surveillance, cameras in lifts, IP intercoms that forward the call to a smartphone, and the server side with the archive. We work across Uzbekistan; equipment arrives through official channels with the manufacturer's warranty and certificates — the very ones needed when common property is handed to the managing organisation.",
@@ -2510,8 +2510,8 @@ export const ARTICLES: Article[] = [
             "Asansör kamerası ayrı bir konu. Kabin hareket ettiği için ya asansör askı halkasında esnek kablo ya da kablosuz bağlantı gerekir; bu da proje aşamasında asansör firmasıyla mutabık kalınır. Böyle bir kamerayı sonradan eklemek daha pahalıdır: bitmiş binada kuyudan güzergâh çekmeyi kimse sevmez.",
           ] },
           { h: "Katalog üzerinden maliyeti", p: [
-            "Her birinde bir asansör bulunan üç girişli bir bina alalım — on beş kamera ve üç kapı paneli. Eylül 2026 katalog fiyatlarıyla, montaj hariç: on beş adet HiLook HL-IPC-B121HE-UC 2 MP silindirik IP kamera tanesi 258 900'den 3 883 500 UZS; üç adet Dahua DHI-VTO2111D-P-S2 kapı paneli tanesi 661 900'den 1 985 700 UZS; üç adet Hikvision DS-3E0310HP-E PoE switch tanesi 741 900'den 2 225 700 UZS; on altı kanallı Hikvision DS-7616NI-K1 kayıt cihazı 1 112 900 UZS; 4 TB Seagate SkyHawk disk 1 694 900 UZS.",
-            "Ekipman toplamı 10 902 700 UZS. Yüz sekiz daireli bir binada bu, daire başına yaklaşık 101 bin UZS eder — tek bir giriş kapısından ucuz. Metrekare fiyatının yanında tutar neredeyse görünmez; bu yüzden zorunlulukla tartışmak onu yerine getirmekten pahalıya gelir.",
+            "Her birinde bir asansör bulunan üç girişli bir bina alalım — on beş kamera ve üç kapı paneli. Ekim 2026 katalog fiyatlarıyla, montaj hariç: on beş adet HiLook HL-IPC-B121HE-UC 2 MP silindirik IP kamera tanesi 221 900'den 3 328 500 UZS; üç adet Dahua DHI-VTO2111D-P-S2 kapı paneli tanesi 661 900'den 1 985 700 UZS; üç adet Hikvision DS-3E0310HP-E PoE switch tanesi 679 900'den 2 039 700 UZS; on altı kanallı Hikvision DS-7616NI-K1 kayıt cihazı 1 484 900 UZS; 4 TB Seagate SkyHawk disk 1 768 900 UZS.",
+            "Ekipman toplamı 10 607 700 UZS. Yüz sekiz daireli bir binada bu, daire başına yaklaşık 98 bin UZS eder — tek bir giriş kapısından ucuz. Metrekare fiyatının yanında tutar neredeyse görünmez; bu yüzden zorunlulukla tartışmak onu yerine getirmekten pahalıya gelir.",
           ] },
           { h: "Biz neyi üstleniyoruz", p: [
             "SAT Solutions tam olarak bu kapsamı projelendirir, tedarik eder ve kurar: giriş ve bahçe gözetimi, asansör kameraları, çağrıyı akıllı telefona yönlendiren IP diafon ve arşivli sunucu tarafı. Özbekistan genelinde çalışıyoruz; ekipman resmi kanallardan, üretici garantisi ve sertifikalarıyla gelir — ortak mülk yönetim kuruluşuna devredilirken gereken belgeler tam da bunlardır.",
@@ -2540,8 +2540,8 @@ export const ARTICLES: Article[] = [
             "电梯摄像机是单独的一件事。轿厢在移动，因此需要随行电缆或无线通道，这要在设计阶段与电梯单位协调。事后加装成本更高：在建成的楼里往井道内敷线，谁都不乐意。",
           ] },
           { h: "按目录算多少钱", p: [
-            "以三个单元、每单元一部电梯的楼为例——十五台摄像机、三台门口机。按 2026 年 9 月目录价，不含施工：十五台 HiLook HL-IPC-B121HE-UC 200 万像素筒型 IP 摄像机每台 258 900、合计 3 883 500 苏姆；三台大华 DHI-VTO2111D-P-S2 门口机每台 661 900、合计 1 985 700 苏姆；三台海康 DS-3E0310HP-E PoE 交换机每台 741 900、合计 2 225 700 苏姆；十六路海康 DS-7616NI-K1 录像机 1 112 900 苏姆；4 TB 希捷 SkyHawk 硬盘 1 694 900 苏姆。",
-            "设备合计 10 902 700 苏姆。若楼内有一百零八套住宅，折合每套约 10.1 万苏姆——比一扇入户门还便宜。与每平方米的售价相比几乎看不见，因此与这项要求较劲比满足它更贵。",
+            "以三个单元、每单元一部电梯的楼为例——十五台摄像机、三台门口机。按 2026 年 10 月目录价，不含施工：十五台 HiLook HL-IPC-B121HE-UC 200 万像素筒型 IP 摄像机每台 221 900、合计 3 328 500 苏姆；三台大华 DHI-VTO2111D-P-S2 门口机每台 661 900、合计 1 985 700 苏姆；三台海康 DS-3E0310HP-E PoE 交换机每台 679 900、合计 2 039 700 苏姆；十六路海康 DS-7616NI-K1 录像机 1 484 900 苏姆；4 TB 希捷 SkyHawk 硬盘 1 768 900 苏姆。",
+            "设备合计 10 607 700 苏姆。若楼内有一百零八套住宅，折合每套约 9.8 万苏姆——比一扇入户门还便宜。与每平方米的售价相比几乎看不见，因此与这项要求较劲比满足它更贵。",
           ] },
           { h: "我们承担什么", p: [
             "SAT Solutions 正是按这一范围做设计、供货和施工：单元与院区视频监控、电梯轿厢摄像机、可将呼叫转至手机的 IP 可视对讲，以及带存档的服务器端。我们服务于乌兹别克斯坦全境，设备经官方渠道供应，附制造商质保与合格证书——正是向管理机构移交共有财产时所需要的那些文件。",
@@ -2549,7 +2549,7 @@ export const ARTICLES: Article[] = [
           ] },
                   { h: "在乌兹别克斯坦落地：开发商要提前做什么", p: [
             "这项要求从设计阶段就生效：图纸中若没有各单元门、电梯轿厢和楼间场地的摄像机以及入口可视对讲，设计文件不得进入鉴定环节；房屋建成后设备未装，竣工验收同样不予通过。在当地做住宅开发的中国企业，宜在报审之前就把这部分单独列项。",
-            "设备费在总造价中占比很小。按2026年9月目录价，三个单元、每单元一部电梯的楼盘，15台摄像机、3台门口机、3台PoE交换机与16路录像机合计约1090万苏姆，108套住宅摊下来每套约10万苏姆。设备可由塔什干现货发往全国工地。",
+            "设备费在总造价中占比很小。按2026年10月目录价，三个单元、每单元一部电梯的楼盘，15台摄像机、3台门口机、3台PoE交换机与16路录像机合计约1061万苏姆，108套住宅摊下来每套约9.8万苏姆。设备可由塔什干现货发往全国工地。",
           ] },
         ],
       },
@@ -4647,10 +4647,11 @@ export const ARTICLES: Article[] = [
   {
     slug: "sbros-parolya-hikvision",
     date: "2026-09-03",
-    updated: "2026-09-09",
+    updated: "2026-10-12",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     brands: ["hikvision"],
+    seeAlso: ["sadp-hikvision"],
     loc: {
       ru: {
         title: "Забыли пароль от камеры или регистратора Hikvision: что делать",
@@ -4661,7 +4662,7 @@ export const ARTICLES: Article[] = [
             "Все способы ниже — штатные, от производителя, и работают только при физическом доступе к устройству в одной сети с компьютером. Речь только о вашем собственном оборудовании: доступ к чужим камерам — уголовная статья.",
           ] },
           { h: "Способ 1: код на привязанную почту", p: [
-            "Если при активации устройства вы указали e-mail для восстановления — задача на пять минут. В веб-интерфейсе или в SADP нажмите «Forgot password»: устройство предложит отправить код подтверждения на привязанную почту.",
+            "Если при активации устройства вы указали e-mail для восстановления — задача на пять минут. В веб-интерфейсе или в SADP нажмите «Forgot password»: устройство предложит отправить код подтверждения на привязанную почту. С апреля 2026 года Hikvision больше не выпускает обновления SADP и рекомендует вместо неё утилиту HiTools Delivery.",
             "Вводите код — задаёте новый пароль. Это самый быстрый путь, и именно поэтому мы всегда привязываем почту при монтаже: проверьте, возможно ваш монтажник сделал так же.",
           ] },
           { h: "Способ 2: файл запроса через SADP", p: [
@@ -4696,7 +4697,7 @@ export const ARTICLES: Article[] = [
             "Quyidagi barcha usullar shtatniy, ishlab chiqaruvchidan va faqat qurilmaga jismoniy kirish hamda kompyuter bilan bitta tarmoqda ishlaydi. Gap faqat oʻz uskunangiz haqida: begona kameralarga kirish — jinoiy modda.",
           ] },
           { h: "1-usul: bogʻlangan pochtaga kod", p: [
-            "Agar qurilmani faollashtirishda tiklash uchun e-mail koʻrsatgan boʻlsangiz — vazifa besh daqiqalik. Veb-interfeys yoki SADP da «Forgot password» ni bosing: qurilma bogʻlangan pochtaga tasdiqlash kodini yuborishni taklif qiladi.",
+            "Agar qurilmani faollashtirishda tiklash uchun e-mail koʻrsatgan boʻlsangiz — vazifa besh daqiqalik. Veb-interfeys yoki SADP da «Forgot password» ni bosing: qurilma bogʻlangan pochtaga tasdiqlash kodini yuborishni taklif qiladi. 2026-yil apreldan boshlab Hikvision SADP uchun yangilanish chiqarishni toʻxtatdi va uning oʻrniga HiTools Delivery utilitasini tavsiya qiladi.",
             "Kodni kiritasiz — yangi parol qoʻyasiz. Bu eng tez yoʻl, shuning uchun biz montajda doim pochtani bogʻlaymiz: tekshiring, balki montajchingiz ham shunday qilgandir.",
           ] },
           { h: "2-usul: SADP orqali soʻrov fayli", p: [
@@ -4731,7 +4732,7 @@ export const ARTICLES: Article[] = [
             "Every method below is official, from the manufacturer, and works only with physical access to the device on the same network as your computer. This is strictly about your own equipment: accessing someone else's cameras is a criminal offense.",
           ] },
           { h: "Method 1: a code to the linked email", p: [
-            "If you entered a recovery e-mail when activating the device, this is a five-minute task. In the web interface or SADP click 'Forgot password': the device offers to send a verification code to the linked email.",
+            "If you entered a recovery e-mail when activating the device, this is a five-minute task. In the web interface or SADP click 'Forgot password': the device offers to send a verification code to the linked email. Since April 2026 Hikvision no longer releases SADP updates and recommends the HiTools Delivery utility instead.",
             "Enter the code — set a new password. It is the fastest path, which is why we always link an email during installation: check, your installer may have done the same.",
           ] },
           { h: "Method 2: a request file via SADP", p: [
@@ -4766,7 +4767,7 @@ export const ARTICLES: Article[] = [
             "Aşağıdaki tüm yöntemler resmîdir, üreticidendir ve yalnızca cihaza fiziksel erişimle, bilgisayarla aynı ağda çalışır. Konu yalnızca kendi ekipmanınız: başkasının kameralarına erişim suçtur.",
           ] },
           { h: "Yöntem 1: bağlı e-postaya kod", p: [
-            "Cihazı etkinleştirirken kurtarma e-postası girdiyseniz iş beş dakikalıktır. Web arayüzünde veya SADP'de 'Forgot password'a basın: cihaz bağlı e-postaya doğrulama kodu göndermeyi önerir.",
+            "Cihazı etkinleştirirken kurtarma e-postası girdiyseniz iş beş dakikalıktır. Web arayüzünde veya SADP'de 'Forgot password'a basın: cihaz bağlı e-postaya doğrulama kodu göndermeyi önerir. Nisan 2026'dan itibaren Hikvision SADP için güncelleme yayınlamıyor ve onun yerine HiTools Delivery aracını öneriyor.",
             "Kodu girer, yeni şifre koyarsınız. En hızlı yol budur; bu yüzden montajda e-postayı hep bağlarız — kontrol edin, montajcınız da yapmış olabilir.",
           ] },
           { h: "Yöntem 2: SADP ile istek dosyası", p: [
@@ -4801,7 +4802,7 @@ export const ARTICLES: Article[] = [
             "下面的方法全部是官方方案，且都要求物理接触设备、与电脑同网段。这里说的只是您自己的设备：入侵他人摄像机是刑事犯罪。",
           ] },
           { h: "方法一：绑定邮箱收验证码", p: [
-            "如果激活设备时填过找回邮箱，这就是五分钟的事。在网页界面或SADP点“Forgot password”，设备会向绑定邮箱发送验证码。",
+            "如果激活设备时填过找回邮箱，这就是五分钟的事。在网页界面或SADP点“Forgot password”，设备会向绑定邮箱发送验证码。自2026年4月起，海康威视已停止更新SADP，并推荐改用HiTools Delivery工具。",
             "输入验证码、设置新密码即可。这是最快的路，所以我们施工时总会绑定邮箱——查一下，您的安装方可能也这么做了。",
           ] },
           { h: "方法二：SADP导出请求文件", p: [
@@ -9536,9 +9537,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "kak-podklyuchit-ip-kameru-hikvision",
     date: "2026-07-29",
-    updated: "2026-09-09",
+    updated: "2026-10-12",
     related: ["cctv", "network"],
     hubs: ["ip-kamery", "kommutatory"],
+    seeAlso: ["sadp-hikvision"],
     loc: {
       ru: {
         title: "Как подключить IP-камеру Hikvision: пошаговая инструкция",
@@ -9546,7 +9548,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "Что понадобится", p: [
             "Сама камера, кабель витая пара (UTP cat5e или выше), источник питания — PoE-коммутатор, PoE-инжектор или блок 12 В, и компьютер либо смартфон для настройки. Если камер несколько, сразу берите PoE-коммутатор: питание и данные пойдут по одному кабелю, без розеток у каждой камеры.",
-            "Для настройки с компьютера скачайте бесплатную утилиту SADP с сайта Hikvision — она находит все камеры в сети и показывает их IP-адреса.",
+            "Для настройки с компьютера скачайте бесплатную утилиту SADP с сайта Hikvision — она находит все камеры в сети и показывает их IP-адреса. С апреля 2026 года Hikvision больше не выпускает обновления SADP и рекомендует вместо неё утилиту HiTools Delivery.",
           ] },
           { h: "Шаг 1. Подключаем кабель и питание", p: [
             "Обожмите витую пару разъёмами RJ45 по стандарту T568B с обеих сторон и соедините камеру с PoE-портом коммутатора. Через 30–60 секунд камера загрузится — на разъёме замигает индикатор линка. Максимальная длина кабеля для PoE — 100 метров; на большие расстояния ставят удлинители PoE или оптику.",
@@ -9582,7 +9584,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "Nima kerak boʻladi", p: [
             "Kameraning oʻzi, vitaya para kabeli (UTP cat5e yoki yuqori), quvvat manbai — PoE-kommutator, PoE-injektor yoki 12 V blok, hamda sozlash uchun kompyuter yoki smartfon. Kameralar bir nechta boʻlsa, darhol PoE-kommutator oling: quvvat va maʼlumot bitta kabel orqali boradi.",
-            "Kompyuterdan sozlash uchun Hikvision saytidan bepul SADP dasturini yuklab oling — u tarmoqdagi barcha kameralarni topib, IP-manzillarini koʻrsatadi.",
+            "Kompyuterdan sozlash uchun Hikvision saytidan bepul SADP dasturini yuklab oling — u tarmoqdagi barcha kameralarni topib, IP-manzillarini koʻrsatadi. 2026-yil apreldan boshlab Hikvision SADP uchun yangilanish chiqarishni toʻxtatdi va uning oʻrniga HiTools Delivery utilitasini tavsiya qiladi.",
           ] },
           { h: "1-qadam. Kabel va quvvatni ulaymiz", p: [
             "Vitaya parani ikki tomondan T568B standarti boʻyicha RJ45 ulagichlar bilan siqib, kamerani kommutatorning PoE-portiga ulang. 30–60 soniyadan keyin kamera yuklanadi — ulagichda link indikatori miltillaydi. PoE uchun kabelning maksimal uzunligi — 100 metr.",
@@ -9618,7 +9620,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "What you'll need", p: [
             "The camera itself, a twisted-pair cable (UTP cat5e or higher), a power source — a PoE switch, PoE injector or a 12 V adapter — and a computer or smartphone for setup. If you have several cameras, go straight for a PoE switch: power and data run over a single cable, with no power outlet needed at each camera.",
-            "For setup from a computer, download the free SADP utility from the Hikvision website — it discovers every camera on the network and shows their IP addresses.",
+            "For setup from a computer, download the free SADP utility from the Hikvision website — it discovers every camera on the network and shows their IP addresses. Since April 2026 Hikvision no longer releases SADP updates and recommends the HiTools Delivery utility instead.",
           ] },
           { h: "Step 1. Cable and power", p: [
             "Terminate the twisted pair with RJ45 connectors using the T568B standard on both ends and connect the camera to a PoE port on the switch. The camera boots in 30–60 seconds — the link indicator on the connector starts blinking. The maximum cable run for PoE is 100 meters; for longer distances use PoE extenders or fiber.",
@@ -9654,7 +9656,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "Neler gerekli", p: [
             "Kameranın kendisi, çift bükümlü kablo (UTP cat5e veya üzeri), bir güç kaynağı — PoE switch, PoE enjektör veya 12 V adaptör — ve kurulum için bir bilgisayar ya da akıllı telefon. Birden fazla kamera varsa doğrudan PoE switch alın: güç ve veri tek kablodan gider, her kameranın yanında prize gerek kalmaz.",
-            "Bilgisayardan kurulum için Hikvision'un sitesinden ücretsiz SADP aracını indirin — ağdaki tüm kameraları bulur ve IP adreslerini gösterir.",
+            "Bilgisayardan kurulum için Hikvision'un sitesinden ücretsiz SADP aracını indirin — ağdaki tüm kameraları bulur ve IP adreslerini gösterir. Nisan 2026'dan itibaren Hikvision SADP için güncelleme yayınlamıyor ve onun yerine HiTools Delivery aracını öneriyor.",
           ] },
           { h: "Adım 1. Kablo ve güç bağlantısı", p: [
             "Çift bükümlü kabloyu her iki uçtan T568B standardına göre RJ45 konnektörlerle sıkın ve kamerayı switch'in PoE portuna bağlayın. Kamera 30–60 saniyede açılır — konnektördeki link göstergesi yanıp sönmeye başlar. PoE için maksimum kablo uzunluğu 100 metredir; daha uzun mesafelerde PoE uzatıcı veya fiber kullanılır.",
@@ -9690,7 +9692,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "需要准备什么", p: [
             "摄像机本身、双绞线网线（UTP cat5e 或以上）、供电设备——PoE 交换机、PoE 供电器或 12 V 电源适配器——以及用于调试的电脑或手机。如果摄像机不止一台，建议直接选 PoE 交换机：供电和数据走同一根网线，无需在每台摄像机旁布置电源插座。",
-            "用电脑调试时，请从 Hikvision 官网下载免费的 SADP 工具——它能找到网络中的所有摄像机并显示其 IP 地址。",
+            "用电脑调试时，请从 Hikvision 官网下载免费的 SADP 工具——它能找到网络中的所有摄像机并显示其 IP 地址。自2026年4月起，海康威视已停止更新SADP，并推荐改用HiTools Delivery工具。",
           ] },
           { h: "第一步：接线和供电", p: [
             "按 T568B 标准在网线两端压接 RJ45 水晶头，把摄像机接到交换机的 PoE 端口。30–60 秒后摄像机完成启动——接口上的链路指示灯开始闪烁。PoE 的最大传输距离为 100 米；更远的距离需要使用 PoE 延长器或光纤。",
@@ -11159,7 +11161,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "videokuzatuv-ornatish-narxi",
     date: "2026-07-30",
-    updated: "2026-09-09",
+    updated: "2026-10-12",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
@@ -11176,7 +11178,7 @@ export const ARTICLES: Article[] = [
             "Oʻrtacha uy yoki doʻkon obyekti bir kunda tugaydi, katta obyektlar — bir necha kun.",
           ] },
           { h: "Narx nimalardan tashkil topadi", p: [
-            "Uskuna (kameralar, registrator, disk), sarf materiallari (kabel, gofra, konnektorlar, quvvat bloklari) va ishchi soatlar. Katalog boʻyicha uskuna shunday hisoblanadi: 2 Mp IP-kamera — 234 900 soʻmdan, 4 Mp — 395 900 soʻmdan, 4 kanalli registrator — 320 900 soʻmdan, 8 kanalli — 469 900 soʻmdan, Seagate SkyHawk 1 TB disk — 704 900 soʻm, 2 TB — 927 900 soʻm. Sarf materiallari: UTP cat.5e metri — 6 170 soʻm, RJ-45 konnektori — 670 soʻm, besh portli PoE-kommutator Dahua PFS3005-5ET-L — 51 090 soʻm. Tayyor taʼmirdagi obyektda montaj qimmatroq: trassalarni yashirish qiyin. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
+            "Uskuna (kameralar, registrator, disk), sarf materiallari (kabel, gofra, konnektorlar, quvvat bloklari) va ishchi soatlar. Katalog boʻyicha uskuna shunday hisoblanadi: 2 Mp IP-kamera — 209 900 soʻmdan, 4 Mp — 370 900 soʻmdan, 4 kanalli registrator — 320 900 soʻmdan, 8 kanalli — 407 900 soʻmdan, Seagate SkyHawk 1 TB disk — 704 900 soʻm, 2 TB — 951 900 soʻm. Sarf materiallari: UTP cat.5e metri — 6 090 soʻm, RJ-45 konnektori — 690 soʻm, toʻrt PoE portli PoE-kommutator Linkff FF-B42A — 110 900 soʻm. Tayyor taʼmirdagi obyektda montaj qimmatroq: trassalarni yashirish qiyin. Narxlar 2026-yil oktyabr holatiga, montajsiz.",
             "Alohida hisoblanadi: ustunga oʻrnatish, uzun koʻcha trassalari, optik aloqa va koʻcha shkaflari — bular hovli va ishlab chiqarish obyektlarida uchraydi.",
           ] },
           { h: "Sozlash va telefondan koʻrish", p: [
@@ -11192,7 +11194,7 @@ export const ARTICLES: Article[] = [
             "Toʻgʻri tartib boshqa: avval bepul chiqish va zonalar vazifalariga hisob, keyin toʻliq smeta — kameralar, registrator, disk, kabel, montaj va yashirin toʻlovlarsiz telefonlarni sozlash. Shunda tizim birinchi qishgacha emas, yillab ishlaydi.",
           ] },
           { h: "Tizimni kengaytirish uchun zaxira", p: [
-            "Tizim deyarli har doim kengaytiriladi: bir yildan keyin ombor, avtoturargoh yoki ikkinchi kirish qoʻshiladi. Boshidagi farqni oʻlchash mumkin: 8 kanalli registrator 469 900 soʻmdan, 16 kanalli 803 900 soʻmdan — yaʼni kanallar boʻyicha ikki barobar zaxira 334 000 soʻmga tushadi. Toʻlib ketgan qurilmani almashtirish esa yangi toʻplam narxiga va qayta sozlashga tushadi.",
+            "Tizim deyarli har doim kengaytiriladi: bir yildan keyin ombor, avtoturargoh yoki ikkinchi kirish qoʻshiladi. Boshidagi farqni oʻlchash mumkin: 8 kanalli registrator 407 900 soʻmdan, 16 kanalli 679 900 soʻmdan — yaʼni kanallar boʻyicha ikki barobar zaxira 272 000 soʻmga tushadi. Toʻlib ketgan qurilmani almashtirish esa yangi toʻplam narxiga va qayta sozlashga tushadi.",
             "Xuddi shu narsa PoE-kommutatordagi boʻsh portlarga, quvvat blokidagi zaxiraga va disk uchun ikkinchi uyaga ham tegishli. Kelajakdagi trassalar uchun boʻsh quvur yoki gofra alohida yotqiziladi — tayyor kanaldan kabel tortish pardozlangan devorni shtroblashdan arzonroq.",
           ] },
         ],
@@ -11216,7 +11218,7 @@ export const ARTICLES: Article[] = [
             "Средний объект — дом или магазин — закрывается за один день, крупные объекты требуют нескольких дней.",
           ] },
           { h: "Из чего складывается цена", p: [
-            "Оборудование (камеры, регистратор, диск), расходные материалы (кабель, гофра, коннекторы, блоки питания) и работы. По каталогу оборудование считается так: IP-камера 2 Мп — от 234 900 сум, 4 Мп — от 395 900 сум, 4-канальный регистратор — от 320 900 сум, 8-канальный — от 469 900 сум, диск Seagate SkyHawk 1 ТБ — 704 900 сум, 2 ТБ — 927 900 сум. Расходники: метр UTP cat.5e — 6 170 сум, коннектор RJ-45 — 670 сум, PoE-коммутатор Dahua PFS3005-5ET-L на пять портов — 51 090 сум. На объекте с готовым ремонтом монтаж дороже: трассы сложнее спрятать. Цены каталога на сентябрь 2026, без монтажа.",
+            "Оборудование (камеры, регистратор, диск), расходные материалы (кабель, гофра, коннекторы, блоки питания) и работы. По каталогу оборудование считается так: IP-камера 2 Мп — от 209 900 сум, 4 Мп — от 370 900 сум, 4-канальный регистратор — от 320 900 сум, 8-канальный — от 407 900 сум, диск Seagate SkyHawk 1 ТБ — 704 900 сум, 2 ТБ — 951 900 сум. Расходники: метр UTP cat.5e — 6 090 сум, коннектор RJ-45 — 690 сум, PoE-коммутатор Linkff FF-B42A на четыре PoE-порта — 110 900 сум. На объекте с готовым ремонтом монтаж дороже: трассы сложнее спрятать. Цены каталога на октябрь 2026, без монтажа.",
             "Отдельно считаются установка на столбы, длинные уличные трассы, оптика и уличные шкафы — это встречается на дворовых и производственных объектах.",
           ] },
           { h: "Настройка и просмотр с телефона", p: [
@@ -11232,7 +11234,7 @@ export const ARTICLES: Article[] = [
             "Правильный порядок другой: сначала бесплатный выезд и расчёт под задачи зон, затем смета целиком — камеры, регистратор, диск, кабель, монтаж и настройка телефонов без скрытых доплат. Так система работает годами, а не до первой зимы.",
           ] },
           { h: "Запас под расширение системы", p: [
-            "Систему почти всегда достраивают: через год добавляют склад, парковку или второй вход. Разница на старте измерима: 8-канальный регистратор стоит от 469 900 сум, 16-канальный — от 803 900 сум, то есть запас вдвое по каналам обходится в 334 000 сум. Замена под завязку заполненного устройства обходится в стоимость нового комплекта с перенастройкой.",
+            "Систему почти всегда достраивают: через год добавляют склад, парковку или второй вход. Разница на старте измерима: 8-канальный регистратор стоит от 407 900 сум, 16-канальный — от 679 900 сум, то есть запас вдвое по каналам обходится в 272 000 сум. Замена под завязку заполненного устройства обходится в стоимость нового комплекта с перенастройкой.",
             "То же касается свободных портов на PoE-коммутаторе, запаса по мощности блока питания и второй корзины под диск. Отдельно закладывают пустые трубы или гофру на будущие трассы — протянуть кабель в готовый канал дешевле, чем штробить отделанные стены.",
           ] },
         ],
@@ -11256,7 +11258,7 @@ export const ARTICLES: Article[] = [
             "An average site — a house or a shop — is completed in a single day; large sites take several days.",
           ] },
           { h: "What makes up the price", p: [
-            "Equipment (cameras, recorder, hard drive), consumables (cable, conduit, connectors, power supplies) and labour. From the catalogue the equipment side reads: a 2 MP IP camera from 234 900 UZS, a 4 MP one from 395 900 UZS, a 4-channel recorder from 320 900 UZS, an 8-channel one from 469 900 UZS, a 1 TB Seagate SkyHawk at 704 900 UZS and a 2 TB at 927 900 UZS. Consumables: a metre of UTP cat.5e at 6 170 UZS, an RJ-45 connector at 670 UZS, a five-port PoE switch Dahua PFS3005-5ET-L at 51 090 UZS. On a site with a finished interior, installation costs more: cable routes are harder to conceal. Catalogue prices as of September 2026, installation not included.",
+            "Equipment (cameras, recorder, hard drive), consumables (cable, conduit, connectors, power supplies) and labour. From the catalogue the equipment side reads: a 2 MP IP camera from 209 900 UZS, a 4 MP one from 370 900 UZS, a 4-channel recorder from 320 900 UZS, an 8-channel one from 407 900 UZS, a 1 TB Seagate SkyHawk at 704 900 UZS and a 2 TB at 951 900 UZS. Consumables: a metre of UTP cat.5e at 6 090 UZS, an RJ-45 connector at 690 UZS, a four-port PoE switch Linkff FF-B42A at 110 900 UZS. On a site with a finished interior, installation costs more: cable routes are harder to conceal. Catalogue prices as of October 2026, installation not included.",
             "Pole mounting, long outdoor runs, fibre optics and outdoor cabinets are priced separately — these come up on yards and industrial sites.",
           ] },
           { h: "Configuration and mobile viewing", p: [
@@ -11272,7 +11274,7 @@ export const ARTICLES: Article[] = [
             "The right order is different: first a free survey and a calculation per zone task, then a complete estimate — cameras, recorder, disk, cable, installation and phone setup with no hidden charges. That way the system works for years, not until the first winter.",
           ] },
           { h: "Headroom for future expansion", p: [
-            "A system is almost always extended: a year later a warehouse, a car park or a second entrance is added. The gap at the start is measurable: an 8-channel recorder starts at 469 900 UZS and a 16-channel one at 803 900 UZS, so doubling the channel headroom costs 334 000 UZS. Replacing a fully loaded unit, by contrast, costs as much as a new kit plus reconfiguration.",
+            "A system is almost always extended: a year later a warehouse, a car park or a second entrance is added. The gap at the start is measurable: an 8-channel recorder starts at 407 900 UZS and a 16-channel one at 679 900 UZS, so doubling the channel headroom costs 272 000 UZS. Replacing a fully loaded unit, by contrast, costs as much as a new kit plus reconfiguration.",
             "The same applies to free ports on the PoE switch, headroom in the power supply, and a second drive bay. Empty conduit for future routes is laid separately — pulling cable through a ready channel is cheaper than chasing finished walls.",
           ] },
         ],
@@ -11296,7 +11298,7 @@ export const ARTICLES: Article[] = [
             "Ortalama bir mekân — ev veya mağaza — bir günde tamamlanır; büyük projeler birkaç gün sürer.",
           ] },
           { h: "Fiyat nelerden oluşur", p: [
-            "Ekipman (kameralar, kayıt cihazı, disk), sarf malzemeleri (kablo, spiral boru, konnektörler, güç kaynakları) ve işçilik. Katalogda ekipman tarafı şöyle: 2 MP IP kamera 234 900 UZS'den, 4 MP olanı 395 900 UZS'den, 4 kanallı kayıt cihazı 320 900 UZS'den, 8 kanallı 469 900 UZS'den, 1 TB Seagate SkyHawk 704 900 UZS, 2 TB 927 900 UZS. Sarf malzemeleri: UTP cat.5e metresi 6 170 UZS, RJ-45 konnektörü 670 UZS, beş portlu PoE switch Dahua PFS3005-5ET-L 51 090 UZS. Dekorasyonu bitmiş mekânda montaj daha pahalıdır: güzergâhları gizlemek zorlaşır. Eylül 2026 katalog fiyatları, montaj hariç.",
+            "Ekipman (kameralar, kayıt cihazı, disk), sarf malzemeleri (kablo, spiral boru, konnektörler, güç kaynakları) ve işçilik. Katalogda ekipman tarafı şöyle: 2 MP IP kamera 209 900 UZS'den, 4 MP olanı 370 900 UZS'den, 4 kanallı kayıt cihazı 320 900 UZS'den, 8 kanallı 407 900 UZS'den, 1 TB Seagate SkyHawk 704 900 UZS, 2 TB 951 900 UZS. Sarf malzemeleri: UTP cat.5e metresi 6 090 UZS, RJ-45 konnektörü 690 UZS, dört PoE portlu PoE switch Linkff FF-B42A 110 900 UZS. Dekorasyonu bitmiş mekânda montaj daha pahalıdır: güzergâhları gizlemek zorlaşır. Ekim 2026 katalog fiyatları, montaj hariç.",
             "Direğe montaj, uzun dış mekân hatları, fiber optik ve dış mekân panoları ayrıca hesaplanır — bunlara avlu ve sanayi tesislerinde rastlanır.",
           ] },
           { h: "Yapılandırma ve telefondan izleme", p: [
@@ -11312,7 +11314,7 @@ export const ARTICLES: Article[] = [
             "Doğru sıra farklıdır: önce ücretsiz keşif ve bölge görevlerine göre hesap, sonra komple teklif — kameralar, kayıt cihazı, disk, kablo, montaj ve gizli ücretsiz telefon kurulumu. Böylece sistem ilk kışa kadar değil, yıllarca çalışır.",
           ] },
           { h: "Genişleme için pay bırakmak", p: [
-            "Sistem neredeyse her zaman büyütülür: bir yıl sonra depo, otopark ya da ikinci bir giriş eklenir. Baştaki fark ölçülebilir: 8 kanallı kayıt cihazı 469 900 UZS'den, 16 kanallı 803 900 UZS'den başlar; yani kanal payını ikiye katlamak 334 000 UZS tutar. Dolmuş bir cihazı değiştirmek ise yeni bir set ile yeniden yapılandırma bedeline mal olur.",
+            "Sistem neredeyse her zaman büyütülür: bir yıl sonra depo, otopark ya da ikinci bir giriş eklenir. Baştaki fark ölçülebilir: 8 kanallı kayıt cihazı 407 900 UZS'den, 16 kanallı 679 900 UZS'den başlar; yani kanal payını ikiye katlamak 272 000 UZS tutar. Dolmuş bir cihazı değiştirmek ise yeni bir set ile yeniden yapılandırma bedeline mal olur.",
             "Aynısı PoE anahtardaki boş portlar, güç kaynağındaki yedek kapasite ve ikinci disk yuvası için de geçerlidir. Gelecekteki güzergâhlar için boş boru veya spiral ayrıca döşenir; hazır kanaldan kablo çekmek, bitmiş duvarı kırmaktan ucuzdur.",
           ] },
         ],
@@ -11336,7 +11338,7 @@ export const ARTICLES: Article[] = [
             "普通项目——住宅或商铺——一天即可完工，大型项目需要数天。",
           ] },
           { h: "价格由哪些部分构成", p: [
-            "设备（摄像头、录像机、硬盘）、耗材（线缆、波纹管、接头、电源）和施工费。按目录，设备部分是这样：200 万像素 IP 摄像机 234 900 苏姆起，400 万像素 395 900 苏姆起，4 路录像机 320 900 苏姆起，8 路 469 900 苏姆起，1 TB 希捷 SkyHawk 704 900 苏姆，2 TB 927 900 苏姆。耗材：UTP cat.5e 每米 6 170 苏姆，RJ-45 水晶头 670 苏姆，五口 PoE 交换机大华 PFS3005-5ET-L 51 090 苏姆。已装修完的场所安装费更高：走线更难隐藏。以上为 2026 年 9 月目录价，不含施工。",
+            "设备（摄像头、录像机、硬盘）、耗材（线缆、波纹管、接头、电源）和施工费。按目录，设备部分是这样：200 万像素 IP 摄像机 209 900 苏姆起，400 万像素 370 900 苏姆起，4 路录像机 320 900 苏姆起，8 路 407 900 苏姆起，1 TB 希捷 SkyHawk 704 900 苏姆，2 TB 951 900 苏姆。耗材：UTP cat.5e 每米 6 090 苏姆，RJ-45 水晶头 690 苏姆，四口 PoE 交换机 Linkff FF-B42A 110 900 苏姆。已装修完的场所安装费更高：走线更难隐藏。以上为 2026 年 10 月目录价，不含施工。",
             "立杆安装、室外长距离布线、光纤和室外机柜单独计价——这些常见于院区和工业场所。",
           ] },
           { h: "系统调试与手机查看", p: [
@@ -11352,11 +11354,11 @@ export const ARTICLES: Article[] = [
             "正确的顺序是另一种：先免费勘测、按各区任务核算，然后整套报价——摄像机、录像机、硬盘、线缆、施工和手机配置，没有隐藏加价。这样系统才能用上几年，而不是撑到第一个冬天。",
           ] },
           { h: "为后续扩容留出余量", p: [
-            "系统几乎都会继续扩建：一年后要加仓库、停车场或第二个出入口。前期的差价是可以算清的：8 路录像机 469 900 苏姆起，16 路 803 900 苏姆起，也就是说把通道余量翻一倍只需 334 000 苏姆。而更换一台已经插满的设备，花费相当于一整套新设备加上重新调试。",
+            "系统几乎都会继续扩建：一年后要加仓库、停车场或第二个出入口。前期的差价是可以算清的：8 路录像机 407 900 苏姆起，16 路 679 900 苏姆起，也就是说把通道余量翻一倍只需 272 000 苏姆。而更换一台已经插满的设备，花费相当于一整套新设备加上重新调试。",
             "PoE 交换机的空余端口、电源的功率余量和第二个硬盘位同理。未来线路的空管或波纹管要一并预埋——从现成管路里穿线，比在装修好的墙上重新开槽便宜得多。",
           ] },
                   { h: "塔什干的价格构成与现场条件", p: [
-            "2026 年 9 月的目录价，不含安装：200 万像素 IP 摄像机 234 900 苏姆起，400 万像素 395 900 苏姆起，四路硬盘录像机 320 900 苏姆起，八路 469 900 苏姆起，希捷 SkyHawk 1 TB 硬盘 704 900 苏姆；耗材方面五类网线每米 6 170 苏姆，水晶头 670 苏姆。",
+            "2026 年 10 月的目录价，不含安装：200 万像素 IP 摄像机 209 900 苏姆起，400 万像素 370 900 苏姆起，四路硬盘录像机 320 900 苏姆起，八路 407 900 苏姆起，希捷 SkyHawk 1 TB 硬盘 704 900 苏姆；耗材方面五类网线每米 6 090 苏姆，水晶头 690 苏姆。",
             "工程师上门勘察和报价免费，住宅或门店通常一天完成；已经装修好的场地布线更费工，价格相应提高。立杆安装、长距离户外线路、光缆和户外机箱单独计算。设备从塔什干仓库发货，配送覆盖全国，录像按乌兹别克斯坦现行个人数据规定保存在本地录像机上。",
           ] },
         ],

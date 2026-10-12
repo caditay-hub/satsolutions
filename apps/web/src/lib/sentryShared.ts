@@ -28,6 +28,10 @@ const stripQuery = (url?: string) => (url ? url.split("?")[0] : url);
 
 export function scrubEvent(event: ErrorEvent): ErrorEvent | null {
   if (typeof navigator !== "undefined" && BOT_UA.test(navigator.userAgent)) return null;
+  // Страница без <head>/<body> — DOM разобрал чужой скрипт. 10.10.2026 headless-Firefox с облачных
+  // адресов (1322 запроса за 50 мин, поддельный Referer bing.com) вырезал head — React и AOS падали,
+  // 57 событий «document.head is null». У живого посетителя head и body есть всегда.
+  if (typeof document !== "undefined" && (!document.head || !document.body)) return null;
   const ua = event.request?.headers?.["user-agent"] ?? event.request?.headers?.["User-Agent"];
   if (ua && BOT_UA.test(ua)) return null;
 

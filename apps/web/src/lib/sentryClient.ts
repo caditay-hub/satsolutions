@@ -14,6 +14,9 @@ export function startSentry() {
       "ResizeObserver loop completed with undelivered notifications",
       "Non-Error promise rejection captured",
       /^Script error\.?$/,
+      // DOM разобран чужим скриптом (скрейпер 10.10.2026, см. sentryShared.scrubEvent)
+      /React expected a <head> element/,
+      /document\.head is null/,
     ],
     // Расширения браузера и чужие счётчики — не наши ошибки.
     denyUrls: [

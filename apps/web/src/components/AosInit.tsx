@@ -14,6 +14,8 @@ export function AosInit() {
       if (!mounted) return;
 
       const runInit = () => {
+        // Без <body> AOS падает на setAttribute (Sentry WEB-2, 10.10.2026: скрейпер вырезал DOM)
+        if (!document.body) return;
         mod.default.init({
           duration: 800,
           easing: "ease-in-out",
@@ -44,6 +46,7 @@ export function AosInit() {
     (async () => {
       const mod = await import("aos");
       requestAnimationFrame(() => {
+        if (!document.body) return;
         mod.default.refresh();
       });
     })();
