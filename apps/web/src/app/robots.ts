@@ -22,14 +22,16 @@ import type { MetadataRoute } from "next";
 // /products/type/<slug>, а под Disallow Google редиректа не видел и держал 300+ таких адресов
 // в «404»/«переадресации» и «проиндексировано, несмотря на блокировку». Сочетания с
 // category/brand/chars и т.д. по-прежнему закрыты правилами этих параметров.
+//
+// 12.10.2026 открыты "category", "brand", "perPage": адреса с ними попали в индекс до запрета
+// (21.09) — GSC прислал «Проиндексировано, несмотря на блокировку в robots.txt». Страницы отдают
+// noindex,follow, но под Disallow Google этого не видит и держит их в выдаче. Открыли, чтобы он
+// перечитал noindex и выкинул их; когда отчёт очистится (~1–2 мес.), запрет можно вернуть.
 const FACET_PARAMS = [
-  "category",
-  "brand",
   "chars",
   "priceMin",
   "priceMax",
   "sort",
-  "perPage",
   "view",
   "mp",
   "technology",
@@ -38,7 +40,8 @@ const FACET_PARAMS = [
   "search",
 ];
 
-const facetRules = FACET_PARAMS.flatMap((p) => [`/*?${p}=`, `/*&${p}=`]);
+// _rsc — служебные данные Next.js для переходов в браузере, а не страницы (10.10.2026)
+const facetRules = [...FACET_PARAMS, "_rsc"].flatMap((p) => [`/*?${p}=`, `/*&${p}=`]);
 
 export default function robots(): MetadataRoute.Robots {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
