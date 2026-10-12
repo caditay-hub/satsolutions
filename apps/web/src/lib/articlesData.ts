@@ -3499,7 +3499,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-sks-za-tochku",
     date: "2026-09-04",
-    updated: "2026-09-09",
+    updated: "2026-10-12",
     related: ["network", "slabotochnye-sistemy"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
@@ -3512,8 +3512,8 @@ export const ARTICLES: Article[] = [
             "Но сравнивать можно только одинаковый состав: «точка» у одного подрядчика включает кабель-канал и тестирование, у другого — голый кабель. Отсюда и разброс цен в разы.",
           ] },
           { h: "Из чего складывается цена точки", p: [
-            "Материалы: кабель (35–60 метров на точку в среднем офисе), розетка, модуль патч-панели, кабель-канал или лоток, патч-корды с двух сторон. По каталогу метр внутреннего UTP cat.5e стоит 6 170 сум, внешнего — 5 910 сум, экранированного FTP cat.5e — 7 320 сум, UTP cat.6 — 8 250 сум; коннектор RJ-45 cat.5e — 670 сум, cat.6 — 980 сум, экранированный cat.6 — 2 210 сум; накладная розетка — 8 910 сум, коммутационный шнур 0,15 м — 9 600 сум. То есть только кабель на сорокапятиметровую точку в cat.5e — около 277 650 сум. Работа: прокладка, врезка, расшивка с двух концов, маркировка. И то, о чём забывают: тестирование каждой линии и исполнительная документация.",
-            "Доли примерно такие: 40–50% материалы, 40–50% работа, остальное — документация и накладные. Переход на Cat6 считается точно: 45 метров × (8 250 − 6 170) = 93 600 сум разницы по кабелю на точку, плюс более дорогие коннекторы (980 против 670 сум). В общей смете точки это те самые 10–15% — за них вы получаете запас до 10 гигабит на коротких линиях.",
+            "Материалы: кабель (35–60 метров на точку в среднем офисе), розетка, модуль патч-панели, кабель-канал или лоток, патч-корды с двух сторон. По каталогу метр внутреннего UTP cat.5e стоит 6 090 сум, внешнего — 5 890 сум, экранированного FTP cat.5e — 7 290 сум, UTP cat.6 — 8 190 сум; коннектор RJ-45 cat.5e — 690 сум, cat.6 — 1 190 сум, экранированный cat.6 — 2 190 сум; накладная розетка — 22 690 сум, коммутационный шнур 0,15 м — 9 590 сум. То есть только кабель на сорокапятиметровую точку в cat.5e — около 274 050 сум. Работа: прокладка, врезка, расшивка с двух концов, маркировка. И то, о чём забывают: тестирование каждой линии и исполнительная документация.",
+            "Доли примерно такие: 40–50% материалы, 40–50% работа, остальное — документация и накладные. Переход на Cat6 считается точно: 45 метров × (8 190 − 6 090) = 94 500 сум разницы по кабелю на точку, плюс более дорогие коннекторы (1 190 против 690 сум). В общей смете точки это те самые 10–15% — за них вы получаете запас до 10 гигабит на коротких линиях.",
           ] },
           { h: "Почему разброс цен в разы", p: [
             "Первое — состояние объекта: тянуть по открытым лоткам стройки и штробить готовый ремонт — разные вселенные по трудозатратам. Второе — длина трасс: точка в 20 метрах от шкафа и точка в 70 метрах стоят по-разному, хотя в смете обе «точки».",
@@ -3529,7 +3529,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Посчитаем ваш офис", p: [
             "Пришлите план помещения с рабочими местами — вернём смету с планом трасс, спецификацией и ценой за точку в вашем составе работ. Прикинуть порядок бюджета можно в онлайн-калькуляторе на сайте, выезд инженера по Ташкенту бесплатный.",
-            "Монтируем СКС с тестированием каждой линии и исполнительной документацией; кабель, шкафы, панели и коммутаторы поставляем сами — от неуправляемого Wi-Tek WK-S205 за 61 790 сум и Hikvision DS-3E0108D-E на восемь портов за 98 990 сум до PoE-моделей Dahua PFS3008-8GT-L за 134 900 сум.",
+            "Монтируем СКС с тестированием каждой линии и исполнительной документацией; кабель, шкафы, панели и коммутаторы поставляем сами — от неуправляемого Wi-Tek WK-S205 за 61 790 сум и Hikvision DS-3E0108D-E на восемь портов за 95 190 сум до PoE-моделей Dahua S3010-8ET2ET-60 за 321 900 сум.",
           ] },
         ],
         faq: [
@@ -3547,8 +3547,8 @@ export const ARTICLES: Article[] = [
             "Lekin faqat bir xil tarkibni solishtirish mumkin: bir pudratchida «nuqta» kabel-kanal va testlashni oʻz ichiga oladi, boshqasida — yalangʻoch kabel. Narxlar farqi ham shundan.",
           ] },
           { h: "Nuqta narxi nimadan yigʻiladi", p: [
-            "Materiallar: kabel (oʻrtacha ofisda nuqtaga 35–60 metr), rozetka, patch-panel moduli, kabel-kanal yoki lotok, ikki tomondan patch-kordlar. Katalog boʻyicha ichki UTP cat.5e ning metri 6 170 soʻm, tashqisi — 5 910 soʻm, ekranlangan FTP cat.5e — 7 320 soʻm, UTP cat.6 — 8 250 soʻm; RJ-45 konnektori cat.5e — 670 soʻm, cat.6 — 980 soʻm, ekranlangan cat.6 — 2 210 soʻm; ustama rozetka — 8 910 soʻm, 0,15 m kommutatsiya shnuri — 9 600 soʻm. Yaʼni qirq besh metrli nuqtaga faqat cat.5e kabelning oʻzi taxminan 277 650 soʻm. Ish: yotqizish, oʻrnatish, ikki uchdan rasshivka, markirovka. Va unutiladigani: har liniyani testlash va ijro hujjatlari.",
-            "Ulushlar taxminan: 40–50% materiallar, 40–50% ish, qolgani hujjatlar va ustama. Cat6 ga oʻtish aniq hisoblanadi: 45 metr × (8 250 − 6 170) = nuqtaga kabel boʻyicha 93 600 soʻm farq, ustiga qimmatroq konnektorlar (980 va 670 soʻm). Nuqtaning umumiy smetasida bu oʻsha 10–15% ni beradi — evaziga qisqa liniyalarda 10 gigabitgacha zaxira.",
+            "Materiallar: kabel (oʻrtacha ofisda nuqtaga 35–60 metr), rozetka, patch-panel moduli, kabel-kanal yoki lotok, ikki tomondan patch-kordlar. Katalog boʻyicha ichki UTP cat.5e ning metri 6 090 soʻm, tashqisi — 5 890 soʻm, ekranlangan FTP cat.5e — 7 290 soʻm, UTP cat.6 — 8 190 soʻm; RJ-45 konnektori cat.5e — 690 soʻm, cat.6 — 1 190 soʻm, ekranlangan cat.6 — 2 190 soʻm; ustama rozetka — 22 690 soʻm, 0,15 m kommutatsiya shnuri — 9 590 soʻm. Yaʼni qirq besh metrli nuqtaga faqat cat.5e kabelning oʻzi taxminan 274 050 soʻm. Ish: yotqizish, oʻrnatish, ikki uchdan rasshivka, markirovka. Va unutiladigani: har liniyani testlash va ijro hujjatlari.",
+            "Ulushlar taxminan: 40–50% materiallar, 40–50% ish, qolgani hujjatlar va ustama. Cat6 ga oʻtish aniq hisoblanadi: 45 metr × (8 190 − 6 090) = nuqtaga kabel boʻyicha 94 500 soʻm farq, ustiga qimmatroq konnektorlar (1 190 va 690 soʻm). Nuqtaning umumiy smetasida bu oʻsha 10–15% ni beradi — evaziga qisqa liniyalarda 10 gigabitgacha zaxira.",
           ] },
           { h: "Nega narxlar farqi bir necha baravar", p: [
             "Birinchisi — obyekt holati: qurilishning ochiq lotoklari boʻylab tortish va tayyor taʼmirni shtroblash — mehnat boʻyicha turli olamlar. Ikkinchisi — trassalar uzunligi: shkafdan 20 metrdagi nuqta va 70 metrdagisi har xil turadi, garchi smetada ikkalasi ham «nuqta».",
@@ -3564,7 +3564,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Ofisingizni hisoblaymiz", p: [
             "Ish oʻrinlari bilan xona planini yuboring — trassalar plani, spetsifikatsiya va sizning ish tarkibingizda nuqta narxi bilan smeta qaytaramiz. Byudjet tartibini saytdagi onlayn-kalkulyatorda chamalash mumkin, Toshkent boʻylab muhandis chiqishi bepul.",
-            "SKSni har liniyani testlash va ijro hujjatlari bilan montaj qilamiz; kabel, shkaflar, panellar va kommutatorlarni oʻzimiz yetkazamiz — 61 790 soʻmlik boshqarilmaydigan Wi-Tek WK-S205 va 98 990 soʻmlik sakkiz portli Hikvision DS-3E0108D-E dan 134 900 soʻmlik PoE model Dahua PFS3008-8GT-L gacha.",
+            "SKSni har liniyani testlash va ijro hujjatlari bilan montaj qilamiz; kabel, shkaflar, panellar va kommutatorlarni oʻzimiz yetkazamiz — 61 790 soʻmlik boshqarilmaydigan Wi-Tek WK-S205 va 95 190 soʻmlik sakkiz portli Hikvision DS-3E0108D-E dan 321 900 soʻmlik PoE model Dahua S3010-8ET2ET-60 gacha.",
           ] },
         ],
         faq: [
@@ -3582,8 +3582,8 @@ export const ARTICLES: Article[] = [
             "But only identical scope compares: one contractor's 'point' includes trunking and testing, another's is bare cable. That is where the multi-fold spread comes from.",
           ] },
           { h: "What makes up the point price", p: [
-            "Materials: cable (35–60 metres per point in an average office), an outlet, a patch panel module, trunking or tray, patch cords on both ends. Catalogue prices: a metre of indoor UTP cat.5e is 6 170 UZS, outdoor 5 910 UZS, shielded FTP cat.5e 7 320 UZS and UTP cat.6 8 250 UZS; an RJ-45 cat.5e connector is 670 UZS, cat.6 980 UZS, shielded cat.6 2 210 UZS; a surface outlet is 8 910 UZS and a 0.15 m patch cord 9 600 UZS. So the cable alone for a 45-metre point in cat.5e comes to about 277 650 UZS. Labour: routing, mounting, termination at both ends, labelling. And the parts people forget: testing every line and as-built documentation.",
-            "The shares are roughly 40–50% materials, 40–50% labour, the rest documentation and overhead. The move to Cat6 can be costed exactly: 45 metres × (8 250 − 6 170) = 93 600 UZS more cable per point, plus dearer connectors (980 against 670 UZS). Across the whole point that is the familiar 10–15% — and in return you get headroom to 10 gigabit on short runs.",
+            "Materials: cable (35–60 metres per point in an average office), an outlet, a patch panel module, trunking or tray, patch cords on both ends. Catalogue prices: a metre of indoor UTP cat.5e is 6 090 UZS, outdoor 5 890 UZS, shielded FTP cat.5e 7 290 UZS and UTP cat.6 8 190 UZS; an RJ-45 cat.5e connector is 690 UZS, cat.6 1 190 UZS, shielded cat.6 2 190 UZS; a surface outlet is 22 690 UZS and a 0.15 m patch cord 9 590 UZS. So the cable alone for a 45-metre point in cat.5e comes to about 274 050 UZS. Labour: routing, mounting, termination at both ends, labelling. And the parts people forget: testing every line and as-built documentation.",
+            "The shares are roughly 40–50% materials, 40–50% labour, the rest documentation and overhead. The move to Cat6 can be costed exactly: 45 metres × (8 190 − 6 090) = 94 500 UZS more cable per point, plus dearer connectors (1 190 against 690 UZS). Across the whole point that is the familiar 10–15% — and in return you get headroom to 10 gigabit on short runs.",
           ] },
           { h: "Why quotes differ several-fold", p: [
             "First, site condition: pulling along open construction trays versus chasing a finished renovation are different universes of labor. Second, run lengths: a point 20 meters from the cabinet and one 70 meters away cost differently, though both are 'points' in the quote.",
@@ -3599,7 +3599,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Let us price your office", p: [
             "Send the floor plan with workplaces — we return an estimate with a route plan, a specification and a per-point price in your scope. Ballpark the budget in the online calculator on our site; the engineer's visit is free in Tashkent.",
-            "We build SCS with every line tested and as-built documentation; cable, cabinets, panels and switches are supplied by us — from the unmanaged Wi-Tek WK-S205 at 61 790 UZS and the eight-port Hikvision DS-3E0108D-E at 98 990 UZS to PoE models such as the Dahua PFS3008-8GT-L at 134 900 UZS.",
+            "We build SCS with every line tested and as-built documentation; cable, cabinets, panels and switches are supplied by us — from the unmanaged Wi-Tek WK-S205 at 61 790 UZS and the eight-port Hikvision DS-3E0108D-E at 95 190 UZS to PoE models such as the Dahua S3010-8ET2ET-60 at 321 900 UZS.",
           ] },
         ],
         faq: [
@@ -3617,8 +3617,8 @@ export const ARTICLES: Article[] = [
             "Ama yalnızca aynı kapsam karşılaştırılır: birinin 'noktası' kanal ve testi içerir, ötekininki çıplak kablodur. Katbekat fark buradan doğar.",
           ] },
           { h: "Nokta fiyatı neyden oluşur", p: [
-            "Malzeme: kablo (ortalama ofiste nokta başına 35–60 metre), priz, patch panel modülü, kanal veya tava, iki uçta patch kordlar. Katalog fiyatları: iç mekân UTP cat.5e metresi 6 170 UZS, dış mekân 5 910 UZS, ekranlı FTP cat.5e 7 320 UZS, UTP cat.6 8 250 UZS; RJ-45 cat.5e konnektörü 670 UZS, cat.6 980 UZS, ekranlı cat.6 2 210 UZS; sıva üstü priz 8 910 UZS, 0,15 m patch kord 9 600 UZS. Yani 45 metrelik bir noktada yalnızca cat.5e kablo yaklaşık 277 650 UZS tutar. İşçilik: çekim, montaj, iki uçta sonlandırma, etiketleme. Ve unutulanlar: her hattın testi ve uygulama dokümantasyonu.",
-            "Paylar kabaca %40–50 malzeme, %40–50 işçilik, kalanı doküman ve genel gider. Cat6'ya geçiş tam olarak hesaplanabilir: 45 metre × (8 250 − 6 170) = nokta başına kabloda 93 600 UZS fark, üstüne daha pahalı konnektörler (980'e karşı 670 UZS). Noktanın toplam bedelinde bu, bilinen %10–15'i yapar — karşılığında kısa hatlarda 10 gigabite pay kalır.",
+            "Malzeme: kablo (ortalama ofiste nokta başına 35–60 metre), priz, patch panel modülü, kanal veya tava, iki uçta patch kordlar. Katalog fiyatları: iç mekân UTP cat.5e metresi 6 090 UZS, dış mekân 5 890 UZS, ekranlı FTP cat.5e 7 290 UZS, UTP cat.6 8 190 UZS; RJ-45 cat.5e konnektörü 690 UZS, cat.6 1 190 UZS, ekranlı cat.6 2 190 UZS; sıva üstü priz 22 690 UZS, 0,15 m patch kord 9 590 UZS. Yani 45 metrelik bir noktada yalnızca cat.5e kablo yaklaşık 274 050 UZS tutar. İşçilik: çekim, montaj, iki uçta sonlandırma, etiketleme. Ve unutulanlar: her hattın testi ve uygulama dokümantasyonu.",
+            "Paylar kabaca %40–50 malzeme, %40–50 işçilik, kalanı doküman ve genel gider. Cat6'ya geçiş tam olarak hesaplanabilir: 45 metre × (8 190 − 6 090) = nokta başına kabloda 94 500 UZS fark, üstüne daha pahalı konnektörler (1 190'e karşı 690 UZS). Noktanın toplam bedelinde bu, bilinen %10–15'i yapar — karşılığında kısa hatlarda 10 gigabite pay kalır.",
           ] },
           { h: "Teklifler neden katbekat farklı", p: [
             "Birincisi saha durumu: inşaatın açık tavalarından çekmekle bitmiş tadilatta kanal açmak, işçilikte ayrı evrenlerdir. İkincisi hat boyları: kabine 20 metredeki nokta ile 70 metredeki farklı tutar; teklifte ikisi de 'nokta'dır.",
@@ -3634,7 +3634,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Ofisinizi fiyatlandıralım", p: [
             "Çalışma yerleriyle kat planını gönderin — hat planı, spesifikasyon ve sizin kapsamınızda nokta fiyatıyla keşif döneriz. Bütçenin kabasını sitedeki online hesaplayıcıda alın; Taşkent'te mühendis ziyareti ücretsiz.",
-            "SCS'yi her hattı test ederek ve uygulama dokümantasyonuyla kuruyoruz; kablo, kabinler, paneller ve switch'leri biz tedarik ederiz — 61 790 UZS'lik yönetilemeyen Wi-Tek WK-S205 ve 98 990 UZS'lik sekiz portlu Hikvision DS-3E0108D-E'den 134 900 UZS'lik PoE model Dahua PFS3008-8GT-L'ye kadar.",
+            "SCS'yi her hattı test ederek ve uygulama dokümantasyonuyla kuruyoruz; kablo, kabinler, paneller ve switch'leri biz tedarik ederiz — 61 790 UZS'lik yönetilemeyen Wi-Tek WK-S205 ve 95 190 UZS'lik sekiz portlu Hikvision DS-3E0108D-E'den 321 900 UZS'lik PoE model Dahua S3010-8ET2ET-60'ye kadar.",
           ] },
         ],
         faq: [
@@ -3652,8 +3652,8 @@ export const ARTICLES: Article[] = [
             "但只有同口径才能比：有的承包商“点位”含线槽和测试，有的只有裸线。几倍的价差就是这么来的。",
           ] },
           { h: "点位价格的构成", p: [
-            "材料：线缆（普通办公室每点位平均 35–60 米）、面板插座、配线架模块、线槽或桥架、两端跳线。目录价：室内 UTP cat.5e 每米 6 170 苏姆，室外 5 910 苏姆，屏蔽 FTP cat.5e 7 320 苏姆，UTP cat.6 8 250 苏姆；RJ-45 水晶头 cat.5e 670 苏姆、cat.6 980 苏姆、屏蔽 cat.6 2 210 苏姆；明装面板 8 910 苏姆，0.15 米跳线 9 600 苏姆。也就是说，一条 45 米的 cat.5e 点位仅线缆就约 277 650 苏姆。人工：敷设、安装、两端打线、标签。还有常被忘掉的：每条链路的测试和竣工文档。",
-            "占比大致是：材料 40–50%、人工 40–50%，其余是文档和管理费。换成 Cat6 可以精确算：45 米 ×（8 250 − 6 170）= 每点位线缆多 93 600 苏姆，再加更贵的水晶头（980 对 670 苏姆）。摊到整个点位就是常说的 10–15%——换来的是短链路上到万兆的余量。",
+            "材料：线缆（普通办公室每点位平均 35–60 米）、面板插座、配线架模块、线槽或桥架、两端跳线。目录价：室内 UTP cat.5e 每米 6 090 苏姆，室外 5 890 苏姆，屏蔽 FTP cat.5e 7 290 苏姆，UTP cat.6 8 190 苏姆；RJ-45 水晶头 cat.5e 690 苏姆、cat.6 1 190 苏姆、屏蔽 cat.6 2 190 苏姆；明装面板 22 690 苏姆，0.15 米跳线 9 590 苏姆。也就是说，一条 45 米的 cat.5e 点位仅线缆就约 274 050 苏姆。人工：敷设、安装、两端打线、标签。还有常被忘掉的：每条链路的测试和竣工文档。",
+            "占比大致是：材料 40–50%、人工 40–50%，其余是文档和管理费。换成 Cat6 可以精确算：45 米 ×（8 190 − 6 090）= 每点位线缆多 94 500 苏姆，再加更贵的水晶头（1 190 对 690 苏姆）。摊到整个点位就是常说的 10–15%——换来的是短链路上到万兆的余量。",
           ] },
           { h: "报价为什么差几倍", p: [
             "其一是现场条件：沿工地敞开桥架敷设与在精装房开槽，是两个人工世界。其二是线路长度：离机柜20米的点位和70米的成本不同，报价单里却都叫“点位”。",
@@ -3669,10 +3669,10 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "帮您的办公室算一算", p: [
             "把带工位的平面图发来——我们回传线路图、清单和按您口径的点位单价。预算量级可先在网站的在线计算器里估，塔什干范围工程师上门免费。",
-            "我们施工的布线每条链路都测试、交付竣工文档；线缆、机柜、配线架和交换机由我方供货——从 61 790 苏姆的非网管 Wi-Tek WK-S205、98 990 苏姆的八口海康 DS-3E0108D-E，到 134 900 苏姆的 PoE 型号大华 PFS3008-8GT-L。",
+            "我们施工的布线每条链路都测试、交付竣工文档；线缆、机柜、配线架和交换机由我方供货——从 61 790 苏姆的非网管 Wi-Tek WK-S205、95 190 苏姆的八口海康 DS-3E0108D-E，到 321 900 苏姆的 PoE 型号大华 S3010-8ET2ET-60。",
           ] },
                   { h: "塔什干的点位造价与本地材料行情", p: [
-            "按本地目录价算，点位材料成本很透明：室内 UTP cat.5e 每米 6 170 苏姆，cat.6 每米 8 250 苏姆，明装信息面板 8 910 苏姆。按平均 45 米一个点位计，仅 cat.5e 线缆一项就约 277 650 苏姆；升级到 cat.6，每个点位再多出约 93 600 苏姆。以上为 2026 年 9 月目录价，不含安装，工料各占一半左右是本地的常见比例。",
+            "按本地目录价算，点位材料成本很透明：室内 UTP cat.5e 每米 6 090 苏姆，cat.6 每米 8 190 苏姆，明装信息面板 22 690 苏姆。按平均 45 米一个点位计，仅 cat.5e 线缆一项就约 274 050 苏姆；升级到 cat.6，每个点位再多出约 94 500 苏姆。以上为 2026 年 10 月目录价，不含安装，工料各占一半左右是本地的常见比例。",
             "在塔什干比价时要先统一口径：同样叫「一个点位」，有的报价含线槽、逐条测试和竣工资料，有的只含裸线。中资工厂和仓库的项目多在土建阶段就把线布好，比装修完成后再开槽便宜得多。塔什干市内的工程师上门勘察和报价不收费，线缆、机柜、配线架和交换机由我们自己供货。",
           ] },
         ],
@@ -12338,7 +12338,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "lokal-tarmoq-narxi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-12",
     related: ["network", "wifi", "fiber"],
     hubs: ["kommutatory", "wi-fi-tochki-dostupa"],
     loc: {
@@ -12355,7 +12355,7 @@ export const ARTICLES: Article[] = [
             "Kabel toifasi ham rol oʻynaydi: Cat5e koʻp ofislar uchun yetarli, Cat6 esa tezroq va kelajakka zaxira bilan. Server shkafi, kommutator darajasi va Wi-Fi qamrovi ham smetaga kiradi.",
           ] },
           { h: "Oʻrtacha narxlar", p: [
-            "Amalda hisob ish oʻrni boʻyicha yuritiladi va nuqta materiallarini katalog boʻyicha yoyish oson: 40 metr UTP cat.5e, metri 6 170 soʻmdan — 246 800 soʻm, ustama rozetka — 8 910 soʻm, ikkita RJ-45 konnektori — 1 340 soʻm, kommutatsiya shnuri — 9 600 soʻm; bitta nuqtaga jami taxminan 266 650 soʻm material, ustiga ishlar. Cat.5e oʻrniga cat.6 kabel qismini 330 000 soʻmgacha koʻtaradi. 10–15 oʻrinli ofisning aktiv qismi: Hikvision DS-3E0108D-E kommutatori — 98 990 soʻm, PoE modeli Dahua PFS3008-8GT-L — 134 900 soʻm, Ruijie RG-EW300 PRO marshrutizatori — 235 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
+            "Amalda hisob ish oʻrni boʻyicha yuritiladi va nuqta materiallarini katalog boʻyicha yoyish oson: 40 metr UTP cat.5e, metri 6 090 soʻmdan — 243 600 soʻm, ustama rozetka — 22 690 soʻm, ikkita RJ-45 konnektori — 1 380 soʻm, kommutatsiya shnuri — 9 590 soʻm; bitta nuqtaga jami taxminan 277 260 soʻm material, ustiga ishlar. Cat.5e oʻrniga cat.6 kabel qismini 327 600 soʻmgacha koʻtaradi. 10–15 oʻrinli ofisning aktiv qismi: Hikvision DS-3E0108D-E kommutatori — 95 190 soʻm, PoE modeli Dahua S3010-8ET2ET-60 — 321 900 soʻm, Ruijie RG-EW300 PRO marshrutizatori — 235 900 soʻm. Narxlar 2026-yil oktyabr holatiga, montajsiz.",
             "Muhandisning chiqishi va smeta bepul: rejani koʻrib, trassalarni oʻlchab, aniq narxni beramiz. Kabel, rozetkalar va kommutatorlarni oʻzimiz yetkazamiz — 61 790 soʻmlik besh portli boshqarilmaydigan Wi-Tek WK-S205 dan boshqariladigan modellargacha, ularda toifa medianasi taxminan 1 917 900 soʻm.",
           ] },
           { h: "Optika qachon kerak", p: [
@@ -12372,8 +12372,8 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Bitta ish oʻrni qancha turadi?", a: "Trassa 40 metr boʻlganda nuqta materiallari: kabel 246 800 soʻm, rozetka 8 910 soʻm, ikkita konnektor 1 340 soʻm, patch-kord 9 600 soʻm — taxminan 266 650 soʻm. Ishlar alohida hisoblanadi va trassa uzunligi hamda obyekt holatiga bogʻliq; smeta bepul." },
-          { q: "10 kishilik ofis tarmogʻi qancha boʻladi?", a: "Yigirmata nuqta (har oʻringa ikkitadan) — taxminan 5 333 000 soʻm material, ustiga 98 990 soʻmdan kommutator, 235 900 soʻmdan marshrutizator, shkaf va ishlar. Muhandis chiqib, reja boʻyicha aniq smeta beradi; soʻrovga ish kuni davomida javob beramiz." },
+          { q: "Bitta ish oʻrni qancha turadi?", a: "Trassa 40 metr boʻlganda nuqta materiallari: kabel 243 600 soʻm, rozetka 22 690 soʻm, ikkita konnektor 1 380 soʻm, patch-kord 9 590 soʻm — taxminan 277 260 soʻm. Ishlar alohida hisoblanadi va trassa uzunligi hamda obyekt holatiga bogʻliq; smeta bepul." },
+          { q: "10 kishilik ofis tarmogʻi qancha boʻladi?", a: "Yigirmata nuqta (har oʻringa ikkitadan) — taxminan 5 545 000 soʻm material, ustiga 95 190 soʻmdan kommutator, 235 900 soʻmdan marshrutizator, shkaf va ishlar. Muhandis chiqib, reja boʻyicha aniq smeta beradi; soʻrovga ish kuni davomida javob beramiz." },
           { q: "Cat5e yoki Cat6 — qaysi birini tanlash kerak?", a: "Oddiy ofis uchun Cat5e yetarli. Katta fayllar, video va kelajakka zaxira kerak boʻlsa — Cat6 tavsiya qilamiz, farqi katta emas." },
           { q: "Wi-Fi ham qoʻshib berasizmi?", a: "Ha, tarmoq loyihasida Wi-Fi nuqtalarini qamrov boʻyicha rejalashtiramiz — ofisning har burchagida barqaror signal boʻladi." },
           { q: "Ish qancha vaqt oladi?", a: "Kichik ofis — 1–3 kun. Katta obyektlarda muddat loyihaga bogʻliq va smetada koʻrsatiladi." },
@@ -12392,7 +12392,7 @@ export const ARTICLES: Article[] = [
             "Категория кабеля тоже играет роль: Cat5e достаточно большинству офисов, Cat6 быстрее и с запасом на будущее. Серверный шкаф, класс коммутатора и покрытие Wi-Fi также входят в смету.",
           ] },
           { h: "Средние цены", p: [
-            "На практике считают по рабочим местам, и материалы точки легко разложить по каталогу: 40 метров UTP cat.5e по 6 170 сум — 246 800 сум, накладная розетка — 8 910 сум, два коннектора RJ-45 — 1 340 сум, коммутационный шнур — 9 600 сум; итого около 266 650 сум материалов на одну точку, к которым добавляются работы. Cat.6 вместо cat.5e поднимает кабельную часть до 330 000 сум. Активная часть офиса на 10–15 мест: коммутатор Hikvision DS-3E0108D-E — 98 990 сум, PoE-модель Dahua PFS3008-8GT-L — 134 900 сум, маршрутизатор Ruijie RG-EW300 PRO — 235 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
+            "На практике считают по рабочим местам, и материалы точки легко разложить по каталогу: 40 метров UTP cat.5e по 6 090 сум — 243 600 сум, накладная розетка — 22 690 сум, два коннектора RJ-45 — 1 380 сум, коммутационный шнур — 9 590 сум; итого около 277 260 сум материалов на одну точку, к которым добавляются работы. Cat.6 вместо cat.5e поднимает кабельную часть до 327 600 сум. Активная часть офиса на 10–15 мест: коммутатор Hikvision DS-3E0108D-E — 95 190 сум, PoE-модель Dahua S3010-8ET2ET-60 — 321 900 сум, маршрутизатор Ruijie RG-EW300 PRO — 235 900 сум. Цены каталога на октябрь 2026, без монтажа.",
             "Выезд инженера и смета бесплатные: посмотрим план, промерим трассы и назовём точную цену. Кабель, розетки и коммутаторы поставляем сами — от неуправляемого Wi-Tek WK-S205 на пять портов за 61 790 сум до управляемых моделей, где медиана категории около 1 917 900 сум.",
           ] },
           { h: "Когда нужна оптика", p: [
@@ -12409,8 +12409,8 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Сколько стоит одно рабочее место?", a: "Материалы точки при трассе 40 метров: кабель 246 800 сум, розетка 8 910 сум, два коннектора 1 340 сум, патч-корд 9 600 сум — около 266 650 сум. Работы считаются отдельно и зависят от длины трасс и состояния объекта; смета бесплатная." },
-          { q: "Сколько стоит сеть на офис из 10 человек?", a: "Двадцать точек (по две на место) — около 5 333 000 сум материалов, плюс коммутатор от 98 990 сум, маршрутизатор от 235 900 сум, шкаф и работы. Инженер выезжает и считает точную смету по плану; на заявку отвечаем в течение рабочего дня." },
+          { q: "Сколько стоит одно рабочее место?", a: "Материалы точки при трассе 40 метров: кабель 243 600 сум, розетка 22 690 сум, два коннектора 1 380 сум, патч-корд 9 590 сум — около 277 260 сум. Работы считаются отдельно и зависят от длины трасс и состояния объекта; смета бесплатная." },
+          { q: "Сколько стоит сеть на офис из 10 человек?", a: "Двадцать точек (по две на место) — около 5 545 000 сум материалов, плюс коммутатор от 95 190 сум, маршрутизатор от 235 900 сум, шкаф и работы. Инженер выезжает и считает точную смету по плану; на заявку отвечаем в течение рабочего дня." },
           { q: "Cat5e или Cat6 — что выбрать?", a: "Для обычного офиса достаточно Cat5e. Если гоняете большие файлы, видео и хотите запас на будущее — рекомендуем Cat6, разница в цене небольшая." },
           { q: "Wi-Fi тоже сделаете?", a: "Да, в проекте сети планируем точки Wi-Fi по покрытию — стабильный сигнал в каждом углу офиса." },
           { q: "Сколько времени занимает работа?", a: "Небольшой офис — 1–3 дня. На крупных объектах срок зависит от проекта и указывается в смете." },
@@ -12429,7 +12429,7 @@ export const ARTICLES: Article[] = [
             "Cable category matters too: Cat5e is enough for most offices, Cat6 is faster with headroom. The server cabinet, switch class and Wi-Fi coverage also go into the estimate.",
           ] },
           { h: "Average prices", p: [
-            "In practice the count is per workplace, and the materials for a point break down straight from the catalogue: 40 metres of UTP cat.5e at 6 170 UZS each is 246 800 UZS, a surface socket 8 910 UZS, two RJ-45 connectors 1 340 UZS and a patch cord 9 600 UZS — about 266 650 UZS of materials per point, with labour on top. Cat.6 instead of cat.5e raises the cable part to roughly 330 000 UZS. The active side of a 10–15 seat office: a Hikvision DS-3E0108D-E switch at 98 990 UZS, the PoE Dahua PFS3008-8GT-L at 134 900 UZS, a Ruijie RG-EW300 PRO router at 235 900 UZS. Catalogue prices as of September 2026, installation not included.",
+            "In practice the count is per workplace, and the materials for a point break down straight from the catalogue: 40 metres of UTP cat.5e at 6 090 UZS each is 243 600 UZS, a surface socket 22 690 UZS, two RJ-45 connectors 1 380 UZS and a patch cord 9 590 UZS — about 277 260 UZS of materials per point, with labour on top. Cat.6 instead of cat.5e raises the cable part to roughly 327 600 UZS. The active side of a 10–15 seat office: a Hikvision DS-3E0108D-E switch at 95 190 UZS, the PoE Dahua S3010-8ET2ET-60 at 321 900 UZS, a Ruijie RG-EW300 PRO router at 235 900 UZS. Catalogue prices as of October 2026, installation not included.",
             "The engineer's visit and the estimate are free: we look at the plan, measure the runs and name the exact price. Cable, sockets and switches are supplied by us — from the five-port unmanaged Wi-Tek WK-S205 at 61 790 UZS up to managed models, where the category median is around 1 917 900 UZS.",
           ] },
           { h: "When fibre is needed", p: [
@@ -12446,8 +12446,8 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "How much does one workplace cost?", a: "The materials for a point on a 40-metre run: cable 246 800 UZS, socket 8 910 UZS, two connectors 1 340 UZS, patch cord 9 600 UZS — about 266 650 UZS. Labour is quoted separately and depends on run lengths and the state of the site; the estimate is free." },
-          { q: "What does a 10-person office network cost?", a: "Twenty points (two per seat) come to about 5 333 000 UZS of materials, plus a switch from 98 990 UZS, a router from 235 900 UZS, the cabinet and the labour. An engineer visits and prepares the exact estimate from the plan; we reply to requests within the working day." },
+          { q: "How much does one workplace cost?", a: "The materials for a point on a 40-metre run: cable 243 600 UZS, socket 22 690 UZS, two connectors 1 380 UZS, patch cord 9 590 UZS — about 277 260 UZS. Labour is quoted separately and depends on run lengths and the state of the site; the estimate is free." },
+          { q: "What does a 10-person office network cost?", a: "Twenty points (two per seat) come to about 5 545 000 UZS of materials, plus a switch from 95 190 UZS, a router from 235 900 UZS, the cabinet and the labour. An engineer visits and prepares the exact estimate from the plan; we reply to requests within the working day." },
           { q: "Cat5e or Cat6?", a: "Cat5e is enough for a regular office. For heavy files, video and future headroom we recommend Cat6 — the price difference is small." },
           { q: "Will you add Wi-Fi too?", a: "Yes, we plan Wi-Fi points for coverage within the network design — stable signal in every corner." },
           { q: "How long does the work take?", a: "A small office — 1–3 days. Larger sites follow the design; the timeline is stated in the estimate." },
@@ -12466,7 +12466,7 @@ export const ARTICLES: Article[] = [
             "Kablo kategorisi de önemlidir: çoğu ofise Cat5e yeter, Cat6 daha hızlı ve geleceğe dönüktür. Kabin, switch sınıfı ve Wi-Fi kapsaması da teklife girer.",
           ] },
           { h: "Ortalama fiyatlar", p: [
-            "Pratikte hesap nokta başınadır ve bir noktanın malzemesi katalogdan doğrudan çıkar: 40 metre UTP cat.5e, metresi 6 170 UZS'den 246 800 UZS; sıva üstü priz 8 910 UZS; iki RJ-45 konnektörü 1 340 UZS; patch kord 9 600 UZS — nokta başına yaklaşık 266 650 UZS malzeme, üstüne işçilik. Cat.5e yerine cat.6, kablo kısmını yaklaşık 330 000 UZS'ye çıkarır. 10–15 kişilik ofisin aktif tarafı: Hikvision DS-3E0108D-E switch 98 990 UZS, PoE'li Dahua PFS3008-8GT-L 134 900 UZS, Ruijie RG-EW300 PRO router 235 900 UZS. Eylül 2026 katalog fiyatları, montaj hariç.",
+            "Pratikte hesap nokta başınadır ve bir noktanın malzemesi katalogdan doğrudan çıkar: 40 metre UTP cat.5e, metresi 6 090 UZS'den 243 600 UZS; sıva üstü priz 22 690 UZS; iki RJ-45 konnektörü 1 380 UZS; patch kord 9 590 UZS — nokta başına yaklaşık 277 260 UZS malzeme, üstüne işçilik. Cat.5e yerine cat.6, kablo kısmını yaklaşık 327 600 UZS'ye çıkarır. 10–15 kişilik ofisin aktif tarafı: Hikvision DS-3E0108D-E switch 95 190 UZS, PoE'li Dahua S3010-8ET2ET-60 134 900 UZS, Ruijie RG-EW300 PRO router 235 900 UZS. Ekim 2026 katalog fiyatları, montaj hariç.",
             "Keşif ve teklif ücretsizdir: planı inceler, güzergâhları ölçer ve kesin fiyatı veririz. Kablo, priz ve switch'leri biz tedarik ederiz — 61 790 UZS'lik beş portlu yönetilemeyen Wi-Tek WK-S205'ten, kategori medyanı yaklaşık 1 917 900 UZS olan yönetilebilir modellere kadar.",
           ] },
           { h: "Fiber ne zaman gerekir", p: [
@@ -12483,8 +12483,8 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Bir çalışma noktası ne kadar?", a: "40 metrelik bir güzergâhta noktanın malzemesi: kablo 246 800 UZS, priz 8 910 UZS, iki konnektör 1 340 UZS, patch kord 9 600 UZS — yaklaşık 266 650 UZS. İşçilik ayrıca fiyatlanır ve güzergâh uzunluğuna ve mekânın durumuna bağlıdır; teklif ücretsizdir." },
-          { q: "10 kişilik ofis ağı ne kadar?", a: "Yirmi nokta (kişi başına iki) yaklaşık 5 333 000 UZS malzeme eder; üstüne 98 990 UZS'den switch, 235 900 UZS'den router, kabin ve işçilik. Mühendis keşfe gelir ve plandan kesin teklifi hazırlar; taleplere iş günü içinde dönüş yaparız." },
+          { q: "Bir çalışma noktası ne kadar?", a: "40 metrelik bir güzergâhta noktanın malzemesi: kablo 243 600 UZS, priz 22 690 UZS, iki konnektör 1 380 UZS, patch kord 9 590 UZS — yaklaşık 277 260 UZS. İşçilik ayrıca fiyatlanır ve güzergâh uzunluğuna ve mekânın durumuna bağlıdır; teklif ücretsizdir." },
+          { q: "10 kişilik ofis ağı ne kadar?", a: "Yirmi nokta (kişi başına iki) yaklaşık 5 545 000 UZS malzeme eder; üstüne 95 190 UZS'den switch, 235 900 UZS'den router, kabin ve işçilik. Mühendis keşfe gelir ve plandan kesin teklifi hazırlar; taleplere iş günü içinde dönüş yaparız." },
           { q: "Cat5e mi Cat6 mı?", a: "Normal ofise Cat5e yeter. Büyük dosya, video ve gelecek payı için Cat6 öneririz — fiyat farkı azdır." },
           { q: "Wi-Fi de yapıyor musunuz?", a: "Evet, ağ projesinde Wi-Fi noktalarını kapsamaya göre planlarız — her köşede stabil sinyal." },
           { q: "İş ne kadar sürer?", a: "Küçük ofis — 1–3 gün. Büyük tesislerde süre projeye bağlıdır, teklifte belirtilir." },
@@ -12503,7 +12503,7 @@ export const ARTICLES: Article[] = [
             "线缆类别也有影响：Cat5e 满足多数办公室，Cat6 更快且有余量。机柜、交换机级别和 Wi-Fi 覆盖也计入报价。",
           ] },
           { h: "平均价格", p: [
-            "实际按工位计价，而一个点位的材料可以直接按目录拆开：40 米 UTP cat.5e，每米 6 170 苏姆，合 246 800 苏姆；明装面板 8 910 苏姆；两个 RJ-45 水晶头 1 340 苏姆；跳线 9 600 苏姆——每点位材料约 266 650 苏姆，另加人工。把 cat.5e 换成 cat.6，线缆部分升到约 330 000 苏姆。10–15 工位办公室的有源部分：海康 DS-3E0108D-E 交换机 98 990 苏姆，PoE 型号大华 PFS3008-8GT-L 134 900 苏姆，锐捷 RG-EW300 PRO 路由器 235 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
+            "实际按工位计价，而一个点位的材料可以直接按目录拆开：40 米 UTP cat.5e，每米 6 090 苏姆，合 243 600 苏姆；明装面板 22 690 苏姆；两个 RJ-45 水晶头 1 380 苏姆；跳线 9 590 苏姆——每点位材料约 277 260 苏姆，另加人工。把 cat.5e 换成 cat.6，线缆部分升到约 327 600 苏姆。10–15 工位办公室的有源部分：海康 DS-3E0108D-E 交换机 95 190 苏姆，PoE 型号大华 S3010-8ET2ET-60 134 900 苏姆，锐捷 RG-EW300 PRO 路由器 235 900 苏姆。以上为 2026 年 10 月目录价，不含施工。",
             "工程师上门和报价免费：看图纸、量路由、给出准确价格。线缆、插座和交换机由我方供货——从 61 790 苏姆的五口非网管 Wi-Tek WK-S205，到网管型号（该品类中位价约 1 917 900 苏姆）。",
           ] },
           { h: "何时需要光纤", p: [
@@ -12519,13 +12519,13 @@ export const ARTICLES: Article[] = [
             "小型办公室通常 1–3 天完工。与法人单位按增值税合同合作，施工享保修。",
           ] },
                   { h: "塔什干办公室的实际预算与工期", p: [
-            "按 2026 年 9 月目录价（不含安装），一个 40 米走线的点位材料约 266 650 苏姆，其中线缆就占 246 800 苏姆，其余是面板、水晶头和跳线；换成 cat.6，线缆部分升到约 330 000 苏姆。有源设备里，海康威视 DS-3E0108D-E 交换机 98 990 苏姆，带 PoE 的 Dahua PFS3008-8GT-L 为 134 900 苏姆。办公室一般按每个工位两个点位估算，材料底价乘一遍就出来了。",
+            "按 2026 年 10 月目录价（不含安装），一个 40 米走线的点位材料约 277 260 苏姆，其中线缆就占 243 600 苏姆，其余是面板、水晶头和跳线；换成 cat.6，线缆部分升到约 327 600 苏姆。有源设备里，海康威视 DS-3E0108D-E 交换机 95 190 苏姆，带 PoE 的 Dahua S3010-8ET2ET-60 为 321 900 苏姆。办公室一般按每个工位两个点位估算，材料底价乘一遍就出来了。",
             "工期上，塔什干一间小办公室通常 1–3 天交付；毛坯或土建阶段布线最省钱，装修完成后再开槽、上线槽会明显拉长工时。我们与法人签合同并按增值税结算，工程提供质保，上门勘察和报价免费。厂区跨楼或超过 90 米的段落改用光纤，熔接后出具反射仪测试报告。",
           ] },
         ],
         faq: [
-          { q: "一个工位多少钱？", a: "按 40 米路由计，点位材料为：线缆 246 800 苏姆、面板 8 910 苏姆、两个水晶头 1 340 苏姆、跳线 9 600 苏姆——合计约 266 650 苏姆。人工另计，取决于路由长度和现场状况；报价免费。" },
-          { q: "10 人办公室的网络多少钱？", a: "二十个点位（每人两个）材料约 5 333 000 苏姆，另加 98 990 苏姆起的交换机、235 900 苏姆起的路由器、机柜和人工。工程师上门并按图纸出准确预算；收到需求会在一个工作日内答复。" },
+          { q: "一个工位多少钱？", a: "按 40 米路由计，点位材料为：线缆 243 600 苏姆、面板 22 690 苏姆、两个水晶头 1 380 苏姆、跳线 9 590 苏姆——合计约 277 260 苏姆。人工另计，取决于路由长度和现场状况；报价免费。" },
+          { q: "10 人办公室的网络多少钱？", a: "二十个点位（每人两个）材料约 5 545 000 苏姆，另加 95 190 苏姆起的交换机、235 900 苏姆起的路由器、机柜和人工。工程师上门并按图纸出准确预算；收到需求会在一个工作日内答复。" },
           { q: "选 Cat5e 还是 Cat6？", a: "普通办公室 Cat5e 足够。传大文件、视频或留余量建议 Cat6，差价不大。" },
           { q: "也做 Wi-Fi 吗？", a: "是，网络设计中按覆盖规划 Wi-Fi 热点——每个角落信号稳定。" },
           { q: "施工需要多久？", a: "小型办公室 1–3 天。大型场所按设计定，报价中注明。" },

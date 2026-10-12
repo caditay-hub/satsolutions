@@ -1,0 +1,37 @@
+{
+  "893c5afd-3641-4524-9992-c31723244303": {
+    "ru": { "name": "Коммутатор Dahua PFS3005-5ET-L, 5 портов 100 Мбит/с" },
+    "uz": { "name": "Kommutator Dahua PFS3005-5ET-L, 5 port 100 Mbit/s" },
+    "en": { "name": "Dahua PFS3005-5ET-L switch, 5 × 100 Mbps ports" },
+    "tr": { "name": "Dahua PFS3005-5ET-L switch, 5 port 100 Mbps" },
+    "zh": { "name": "Dahua PFS3005-5ET-L 交换机，5 口百兆" }
+  },
+  "cee10f75-b402-44d6-9539-1c70dd39acba": {
+    "ru": { "name": "Коммутатор Dahua PFS3005-5GT-L, 5 гигабитных портов", "shortDescription": "Неуправляемый коммутатор, 5 портов Ethernet до 1 Гбит/с, пропускная способность 10 Гбит/с." },
+    "uz": { "name": "Kommutator Dahua PFS3005-5GT-L, 5 ta gigabit port", "shortDescription": "Boshqarilmaydigan kommutator, 5 ta Ethernet port 1 Gbit/s gacha, oʻtkazuvchanlik 10 Gbit/s." },
+    "en": { "name": "Dahua PFS3005-5GT-L switch, 5 Gigabit ports", "shortDescription": "Unmanaged switch, 5 Ethernet ports up to 1 Gbps, 10 Gbps switching capacity." },
+    "tr": { "name": "Dahua PFS3005-5GT-L switch, 5 gigabit port", "shortDescription": "Yönetilemeyen switch, 1 Gbps'e kadar 5 Ethernet portu, 10 Gbps anahtarlama kapasitesi." },
+    "zh": { "name": "Dahua PFS3005-5GT-L 交换机，5 口千兆", "shortDescription": "非网管交换机，5 个以太网端口，最高 1 Gbps，交换容量 10 Gbps。" }
+  },
+  "31647f12-7da9-43a9-b609-1441d5f7d2c5": {
+    "ru": { "name": "Коммутатор Dahua PFS3008-8ET-L, 8 портов 100 Мбит/с" },
+    "uz": { "name": "Kommutator Dahua PFS3008-8ET-L, 8 port 100 Mbit/s" },
+    "en": { "name": "Dahua PFS3008-8ET-L switch, 8 × 100 Mbps ports" },
+    "tr": { "name": "Dahua PFS3008-8ET-L switch, 8 port 100 Mbps" },
+    "zh": { "name": "Dahua PFS3008-8ET-L 交换机，8 口百兆" }
+  },
+  "6bd5579f-d281-4b37-8825-026fb1bd1370": {
+    "ru": { "name": "Коммутатор Dahua PFS3008-8GT-L, 8 портов", "shortDescription": "Неуправляемый коммутатор Dahua на 8 портов Ethernet для небольших сетей и систем видеонаблюдения." },
+    "uz": { "name": "Kommutator Dahua PFS3008-8GT-L, 8 port", "shortDescription": "Kichik tarmoqlar va videokuzatuv tizimlari uchun 8 ta Ethernet portli boshqarilmaydigan Dahua kommutatori." },
+    "en": { "name": "Dahua PFS3008-8GT-L switch, 8 ports", "shortDescription": "Unmanaged 8-port Dahua Ethernet switch for small networks and CCTV systems." },
+    "tr": { "name": "Dahua PFS3008-8GT-L switch, 8 port", "shortDescription": "Küçük ağlar ve kamera sistemleri için 8 Ethernet portlu yönetilemeyen Dahua switch." },
+    "zh": { "name": "Dahua PFS3008-8GT-L 交换机，8 口", "shortDescription": "Dahua 8 口非网管以太网交换机，适用于小型网络和视频监控系统。" }
+  },
+  "64500096-c753-4588-87ce-74e4df6dbc3e": {
+    "ru": { "name": "Коммутатор Dahua SF1008L, 8 портов 100 Мбит/с" },
+    "uz": { "name": "Kommutator Dahua SF1008L, 8 port 100 Mbit/s" },
+    "en": { "name": "Dahua SF1008L switch, 8 × 100 Mbps ports" },
+    "tr": { "name": "Dahua SF1008L switch, 8 port 100 Mbps" },
+    "zh": { "name": "Dahua SF1008L 交换机，8 口百兆" }
+  }
+}
