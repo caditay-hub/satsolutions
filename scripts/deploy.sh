@@ -80,6 +80,21 @@ if [ -d /var/www/satweb/apps/web/.next/static ]; then
   echo "    статика прошлой сборки сохранена: $(du -sh "$PREV_STATIC" 2>/dev/null | cut -f1 || echo -)"
 fi
 
+# 3d) Постоянный архив статики, который nginx отдаёт сам (location ^~ /_next/static/ →
+#    root /var/www/satweb-static/next-root, try_files → Next). Причина (12.10.2026): между
+#    очисткой .next (3b) и рестартом после сборки — 5–8 минут — старый процесс Next
+#    раздаёт страницы со ссылками на старые чанки, а на диске их уже нет: посетители, в том
+#    числе с рекламы, получали 400/404 на CSS/JS и страницу без стилей (логи 02.10 и 06.10).
+#    Кладём сюда статику и ДО очистки, и после сборки (cp -rn: существующее не трогаем,
+#    mtime у новых копий — момент копирования), старше 14 дней — удаляем; чего нет в
+#    архиве, nginx берёт у Next, так что чистка безопасна.
+STATIC_ARCHIVE=/var/www/satweb-static/next-root/_next/static
+mkdir -p "$STATIC_ARCHIVE"
+if [ -d /var/www/satweb/apps/web/.next/static ]; then
+  cp -rn /var/www/satweb/apps/web/.next/static/. "$STATIC_ARCHIVE"/ 2>/dev/null || true
+  echo "    статика текущей сборки — в архиве nginx ($(du -sh "$STATIC_ARCHIVE" 2>/dev/null | cut -f1 || echo -))"
+fi
+
 clean_next_keep_cache /var/www/satweb/apps/web/.next
 clean_next_keep_cache /var/www/satweb/apps/admin/.next
 echo "    .next очищен, cache/ сохранён: \
@@ -123,6 +138,14 @@ if [ -d "$PREV_STATIC" ] && [ -d /var/www/satweb/apps/web/.next/static ]; then
   cp -an "$PREV_STATIC"/. /var/www/satweb/apps/web/.next/static/ 2>/dev/null || true
   rm -rf "$PREV_STATIC"
   echo "    статика прошлой сборки возвращена рядом с новой (старые вкладки не ломаются)"
+fi
+# 4a3) Новая статика — в архив nginx (см. 3d) ДО рестарта: новые страницы сразу находят
+#    свои чанки на диске. Чистка архива от файлов старше 14 дней.
+if [ -d /var/www/satweb/apps/web/.next/static ]; then
+  cp -rn /var/www/satweb/apps/web/.next/static/. "$STATIC_ARCHIVE"/ 2>/dev/null || true
+  find "$STATIC_ARCHIVE" -type f -mtime +14 -delete 2>/dev/null || true
+  find "$STATIC_ARCHIVE" -mindepth 1 -type d -empty -delete 2>/dev/null || true
+  echo "    новая статика — в архиве nginx ($(du -sh "$STATIC_ARCHIVE" 2>/dev/null | cut -f1 || echo -))"
 fi
 
 # 4b) Проверка полноты сборки. Оборванный `next build` оставляет .next без

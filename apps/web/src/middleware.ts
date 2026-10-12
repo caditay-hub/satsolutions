@@ -42,8 +42,26 @@ const LEGACY_CATEGORY_REDIRECTS: Record<string, string> = {
 // Googlebot начнёт видеть редиректы вместо русских канонических страниц), ручной выбор языка
 // (cookie NEXT_LOCALE от переключателя) всегда важнее автоопределения. Редирект 307 —
 // временный: канонические URL остаются русскими.
-const BOT_RE = /bot|crawler|spider|crawl|slurp|googlebot|bingbot|yandex|duckduck|baidu|facebookexternal|applebot|petal|ahrefs|semrush|lighthouse|headless|monitoring|preview|curl|wget|python|go-http/i;
+// «google» — служебные агенты Google без «bot» в имени (Google-Ads-Creatives-Assistant, GoogleOther,
+// Google-InspectionTool, Mediapartners-Google…): 12.10.2026 они получали 307 на /uz.
+const BOT_RE = /bot|crawler|spider|crawl|slurp|google|adsbot|mediapartners|bingbot|yandex|duckduck|baidu|facebookexternal|applebot|petal|ahrefs|semrush|lighthouse|headless|monitoring|preview|curl|wget|python|go-http/i;
 const LOCALE_PREFIX_RE = new RegExp(`^/(${localeAlt})(/|$)`);
+
+// Клик по рекламе: автопометка Google (gclid/gbraid/wbraid/gad_source) или суффикс кампании
+// utm_medium=cpc. Объявления на русском и ведут на русские страницы — перебрасывать на /uz нельзя:
+// модератор Google открывал посадочную с узбекским языком браузера, получал узбекскую страницу
+// и отклонял объявление как UNSUPPORTED_LANGUAGE (…324 «Видеонаблюдение — монтаж», 09.10.2026);
+// живые клиенты с узбекским телефоном тоже попадали с русского объявления на узбекскую страницу.
+function isAdClick(req: NextRequest) {
+  const sp = req.nextUrl.searchParams;
+  return sp.has("gclid") || sp.has("gbraid") || sp.has("wbraid") || sp.has("gad_source") || sp.get("utm_medium") === "cpc";
+}
+
+// Служебные запросы клиентской навигации Next (RSC). Редирект такого запроса на /uz ломал
+// переходы на уже открытой русской странице (в логах — 307 на ?_rsc=… с рекламных визитов).
+function isRscRequest(req: NextRequest) {
+  return req.nextUrl.searchParams.has("_rsc") || req.headers.get("rsc") === "1" || req.headers.has("next-router-prefetch");
+}
 
 function prefersUz(req: NextRequest) {
   // Берём только САМЫЙ приоритетный язык браузера: «uz» где-то в хвосте списка не считается.
@@ -55,6 +73,8 @@ function uzAutoRedirect(req: NextRequest) {
   const p = req.nextUrl.pathname;
   if (LOCALE_PREFIX_RE.test(p)) return null;                 // уже на нерусской версии
   if (req.cookies.get("NEXT_LOCALE")) return null;           // язык выбран вручную — уважаем
+  if (isRscRequest(req)) return null;                        // клиентская навигация — не трогаем
+  if (isAdClick(req)) return null;                           // клик по русскому объявлению — остаёмся на ru
   if (BOT_RE.test(req.headers.get("user-agent") || "")) return null;
   if (!prefersUz(req)) return null;
   const url = new URL(`/uz${p === "/" ? "" : p}${req.nextUrl.search}`, req.url);
@@ -123,6 +143,9 @@ export default function middleware(req: NextRequest) {
   }
   const uz = uzAutoRedirect(req);
   if (uz) return uz;
+  // После клика по рекламе закрепляем русский той же cookie, что ставит ручной переключатель:
+  // иначе следующий же переход (без gclid в адресе) перебросил бы посетителя на /uz.
+  const pinRu = isAdClick(req) && prefersUz(req) && !req.cookies.get("NEXT_LOCALE") && !LOCALE_PREFIX_RE.test(req.nextUrl.pathname);
   // Русская версия (без префикса) идёт МИМО next-intl: его middleware переписывает
   // /x → /ru/x, а на переписанном в middleware пути Next не пишет ISR-кэш — каждая
   // русская карточка товара рендерилась заново (Cache-Control: no-store), тогда как
@@ -130,7 +153,11 @@ export default function middleware(req: NextRequest) {
   // Тот же /x → /ru/x теперь делает rewrites() в next.config.js (afterFiles) — с ним ISR
   // работает. Язык страница получает из params/setRequestLocale; без заголовка
   // next-intl падает на defaultLocale — это и есть ru.
-  if (!RU_SKIP_RE.test(req.nextUrl.pathname)) return NextResponse.next();
+  if (!RU_SKIP_RE.test(req.nextUrl.pathname)) {
+    const res = NextResponse.next();
+    if (pinRu) res.cookies.set("NEXT_LOCALE", "ru", { path: "/", maxAge: 60 * 60 * 24 * 30, sameSite: "lax" });
+    return res;
+  }
   return intlMiddleware(req);
 }
 
