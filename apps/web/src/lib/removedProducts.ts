@@ -3,6 +3,11 @@
 // чтобы очистить индекс, вернуть вес и не отдавать пользователю тупик. Снимок GSC от 2026-07-01.
 // slug (без /products/) → brand-slug для /catalog/<brand>.
 export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
+  // 2026-10-13: дубли сняты после сверки с розницей дистрибьютора (решение владельца):
+  // hAP lite RB941-2nD — третья карточка того же роутера; Рубеж-2ОП (R1) — снят с производства,
+  // строка прайса оказалась копией R3-прибора; то же изделие R1 продаётся в комплекте с ключом HASP.
+  "mkt-hap-lite-rb941-2nd-mikrotik-router": "/products/mkt-rb941-2nd",
+  "rbz-rubezh-2op-pribor-priemno-kontrolnyi-ohranno-pozharnyi-adresnyi-ppkop-011249-2-1": "/products/rbz-rubezh-2op-s-klyuchom-hasp-pribor-priemno-kontrolnyi-ohranno-pozharnyi-adresnyi-ppkop-011249-2-1-fires",
   // 2026-09-22: снята по решению владельца — карточка без бренда с ошибочной ценой 18 490 сум.
   "pro-balonchik-5mpx": "/products/type/ip-kamery",
   "pro-balonchik-8mpx": "/products/type/ip-kamery",

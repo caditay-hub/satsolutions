@@ -1,0 +1,162 @@
+[
+  {
+    "slug": "rbz-amp-4-r3",
+    "id": "f2b5b1c5-42c9-42bb-8ee7-3918c271f584",
+    "new": {
+      "price": 1249900,
+      "supplier": null,
+      "supplierCode": null,
+      "published": true
+    },
+    "old": {
+      "price": 2325900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "АМП-4-R3",
+      "published": true
+    }
+  },
+  {
+    "slug": "rbz-rubezh-2op-prot-r3-s-klyuchom-hasp-propribor-priemno-kontrolnyi-i-upravleniya-ohranno-pozharnyi-adresnyi",
+    "id": "ab62cd41-2250-40f0-8d37-12ec90ebd37d",
+    "new": {
+      "price": 11686900,
+      "supplier": null,
+      "supplierCode": null,
+      "published": true
+    },
+    "old": {
+      "price": 19799900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "Рубеж-2ОП прот.R3 с ключом HASP ProПрибор приёмно-контрольный и управления охранно-пожарный адресный",
+      "published": true
+    }
+  },
+  {
+    "slug": "rbz-ipr-513-10-rubezh",
+    "id": "38af5826-ea18-447f-9e95-b807089d170c",
+    "new": {
+      "price": 48090,
+      "supplier": null,
+      "supplierCode": null,
+      "published": true
+    },
+    "old": {
+      "price": 61790.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "ИПР 513-10 Рубеж",
+      "published": true
+    }
+  },
+  {
+    "slug": "rbz-ppkopu-r3-rubezh-2op",
+    "id": "a300512b-69c4-49c8-a039-9b701309ffe7",
+    "new": {
+      "price": 8942900,
+      "supplier": "hikvision-premium",
+      "supplierCode": "ППКОПУ R3-Рубеж-2ОП",
+      "published": true
+    },
+    "old": {
+      "price": 0.0,
+      "supplier": "",
+      "supplierCode": "",
+      "published": true
+    }
+  },
+  {
+    "slug": "pro-sfp-lc20km",
+    "id": "afe28b8e-6946-47fb-a3ab-90d34e17914a",
+    "new": {
+      "price": 122900,
+      "supplier": null,
+      "supplierCode": null,
+      "published": true
+    },
+    "old": {
+      "price": 209900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "SFP LC20km",
+      "published": true
+    }
+  },
+  {
+    "slug": "pro-ks-4",
+    "id": "2d0eb472-ed20-4d72-a658-9e9497e31722",
+    "new": {
+      "price": 6090,
+      "supplier": null,
+      "supplierCode": null,
+      "published": true
+    },
+    "old": {
+      "price": 20990.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "КС-4",
+      "published": true
+    }
+  },
+  {
+    "slug": "tapo-tapo-ke100",
+    "id": "ecfa11f8-df65-4458-94c9-a2b96fad50d2",
+    "new": {
+      "price": 258900,
+      "supplier": "hikvision-premium",
+      "supplierCode": "Tapo KE100 (умный термостат)",
+      "published": true
+    },
+    "old": {
+      "price": 283900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "Tapo KE100",
+      "published": true
+    }
+  },
+  {
+    "slug": "mkt-rb941-2nd",
+    "id": "35d35799-4cc2-4982-860c-34ea2ccf5234",
+    "new": {
+      "price": 370900,
+      "supplier": "hikvision-premium",
+      "supplierCode": "HAP LITE RB941-2ND MIKROTIK ROUTER",
+      "published": true
+    },
+    "old": {
+      "price": 377900.0,
+      "supplier": "ekom",
+      "supplierCode": "MikroTik RB941-2nD hAP lite",
+      "published": true
+    }
+  },
+  {
+    "slug": "mkt-hap-lite-rb941-2nd-mikrotik-router",
+    "id": "3cd0085a-6618-40e4-8fce-c9392802b1d6",
+    "new": {
+      "price": null,
+      "supplier": "",
+      "supplierCode": "",
+      "published": false
+    },
+    "old": {
+      "price": 377900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "HAP LITE RB941-2ND MIKROTIK ROUTER",
+      "published": true
+    }
+  },
+  {
+    "slug": "rbz-rubezh-2op-pribor-priemno-kontrolnyi-ohranno-pozharnyi-adresnyi-ppkop-011249-2-1",
+    "id": "8b0cd6da-66d4-447b-9f84-21bfd9b795cf",
+    "new": {
+      "price": null,
+      "supplier": "",
+      "supplierCode": "",
+      "published": false
+    },
+    "old": {
+      "price": 4578900.0,
+      "supplier": "hikvision-premium",
+      "supplierCode": "Рубеж-2ОП Прибор приёмно-контрольный охранно-пожарный адресный ППКОП 011249-2-1",
+      "published": true
+    }
+  }
+]
