@@ -6004,5 +6004,173 @@
     "en": "Device type",
     "tr": "Cihaz tipi",
     "zh": "设备类型"
+  },
+  "Протокол АЛС": {
+    "uz": "Liniya protokoli",
+    "en": "Loop protocol",
+    "tr": "Hat protokolü",
+    "zh": "回路协议"
+  },
+  "АЛС": {
+    "uz": "Manzilli liniyalar",
+    "en": "Addressable loops",
+    "tr": "Adresli hatlar",
+    "zh": "编址回路"
+  },
+  "Сеть приборов": {
+    "uz": "Asboblar tarmogʻi",
+    "en": "Panel network",
+    "tr": "Panel ağı",
+    "zh": "控制器联网"
+  },
+  "Линейка": {
+    "uz": "Seriya",
+    "en": "Product line",
+    "tr": "Seri",
+    "zh": "产品系列"
+  },
+  "Сеть R3-Link": {
+    "uz": "R3-Link tarmogʻi",
+    "en": "R3-Link network",
+    "tr": "R3-Link ağı",
+    "zh": "R3-Link 网络"
+  },
+  "СКУД": {
+    "uz": "Kirishni nazorat qilish",
+    "en": "Access control",
+    "tr": "Geçiş kontrolü",
+    "zh": "门禁"
+  },
+  "Извещатели": {
+    "uz": "Izveshatellar",
+    "en": "Detectors",
+    "tr": "Dedektörler",
+    "zh": "探测器"
+  },
+  "Контроль шлейфов": {
+    "uz": "Shleyf nazorati",
+    "en": "Loop supervision",
+    "tr": "Hat denetimi",
+    "zh": "回路监测"
+  },
+  "Типы шлейфов": {
+    "uz": "Shleyf turlari",
+    "en": "Loop types",
+    "tr": "Hat tipleri",
+    "zh": "回路类型"
+  },
+  "Wiegand": {
+    "uz": "Wiegand",
+    "en": "Wiegand",
+    "tr": "Wiegand",
+    "zh": "Wiegand"
+  },
+  "Занимаемые адреса": {
+    "uz": "Egallaydigan manzillar",
+    "en": "Addresses occupied",
+    "tr": "Kapladığı adres",
+    "zh": "占用地址"
+  },
+  "Входы (шлейфы)": {
+    "uz": "Kirishlar (shleyflar)",
+    "en": "Inputs (loops)",
+    "tr": "Girişler (hatlar)",
+    "zh": "输入（回路）"
+  },
+  "Типы шлейфа": {
+    "uz": "Shleyf turlari",
+    "en": "Loop types",
+    "tr": "Hat tipleri",
+    "zh": "回路类型"
+  },
+  "Датчиков на шлейф": {
+    "uz": "Shleyfdagi datchiklar",
+    "en": "Sensors per loop",
+    "tr": "Hat başına sensör",
+    "zh": "每路传感器数量"
+  },
+  "Линия до датчика": {
+    "uz": "Datchikkacha liniya",
+    "en": "Line to the sensor",
+    "tr": "Sensöre kadar hat",
+    "zh": "到传感器线路"
+  },
+  "Напряжение шлейфа": {
+    "uz": "Shleyf kuchlanishi",
+    "en": "Loop voltage",
+    "tr": "Hat gerilimi",
+    "zh": "回路电压"
+  },
+  "Сопротивление в режиме «Пожар»": {
+    "uz": "«Yongʻin» rejimidagi qarshilik",
+    "en": "Resistance in “Fire” mode",
+    "tr": "“Yangın” modunda direnç",
+    "zh": "“火警”状态内阻"
+  },
+  "Усилие нажатия": {
+    "uz": "Bosish kuchi",
+    "en": "Actuation force",
+    "tr": "Basma kuvveti",
+    "zh": "按压力"
+  },
+  "Сброс": {
+    "uz": "Tiklash",
+    "en": "Reset",
+    "tr": "Sıfırlama",
+    "zh": "复位"
+  },
+  "Изолятор КЗ": {
+    "uz": "QT izolyatori",
+    "en": "Short-circuit isolator",
+    "tr": "Kısa devre izolatörü",
+    "zh": "短路隔离器"
+  },
+  "Работа изолятора": {
+    "uz": "Izolyator ishi",
+    "en": "Isolator operation",
+    "tr": "İzolatör çalışması",
+    "zh": "隔离器动作方式"
+  },
+  "Работа в паре": {
+    "uz": "Juftlikda ishlash",
+    "en": "Pairing",
+    "tr": "Çift çalışma",
+    "zh": "配对使用"
+  },
+  "Чувствительность приёмника": {
+    "uz": "Qabul qilgich sezgirligi",
+    "en": "Receiver sensitivity",
+    "tr": "Alıcı hassasiyeti",
+    "zh": "接收灵敏度"
+  },
+  "Количество клемм": {
+    "uz": "Klemmalar soni",
+    "en": "Number of terminals",
+    "tr": "Terminal sayısı",
+    "zh": "端子数量"
+  },
+  "Клеммная колодка": {
+    "uz": "Klemma kolodkasi",
+    "en": "Terminal block",
+    "tr": "Terminal bloğu",
+    "zh": "端子排"
+  },
+  "Тип клемм": {
+    "uz": "Klemma turi",
+    "en": "Terminal type",
+    "tr": "Terminal tipi",
+    "zh": "端子类型"
+  },
+  "Хаб": {
+    "uz": "Hab",
+    "en": "Hub",
+    "tr": "Hub",
+    "zh": "网关"
+  },
+  "Лицензия RouterOS": {
+    "uz": "RouterOS litsenziyasi",
+    "en": "RouterOS license",
+    "tr": "RouterOS lisansı",
+    "zh": "RouterOS 许可证"
   }
 }
