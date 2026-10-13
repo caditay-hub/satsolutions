@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "pro-sfp-lc20km",
+    "id": "afe28b8e-6946-47fb-a3ab-90d34e17914a",
+    "new": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc20km-p1.webp?v=1",
+      "galleryImageUrls": null
+    },
+    "old": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc20km-xl.webp?v=1781836340",
+      "galleryImageUrls": null
+    }
+  },
+  {
+    "slug": "pro-sfp-lc3km",
+    "id": "3e8eb323-a145-4a65-8007-053eb7cc0a4a",
+    "new": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc3km-p1.webp?v=1",
+      "galleryImageUrls": [
+        "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc3km-p2.webp",
+        "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc3km-p3.webp"
+      ]
+    },
+    "old": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-lc3km-xl.webp?v=1781836340",
+      "galleryImageUrls": null
+    }
+  },
+  {
+    "slug": "pro-sfp-sc20km",
+    "id": "782aa475-d849-401d-b574-9077c10c165c",
+    "new": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-sc20km-p1.webp?v=1",
+      "galleryImageUrls": [
+        "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-sc20km-p2.webp",
+        "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-sc20km-p3.webp"
+      ]
+    },
+    "old": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/prochee/products/pro-sfp-sc20km-xl.webp?v=1781836340",
+      "galleryImageUrls": null
+    }
+  },
+  {
+    "slug": "hik-hk-sfp-1-25g-20-1310-df",
+    "id": "9d8e9304-4744-4a23-a5b1-3628c0f80818",
+    "new": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/hik/products/hik-hk-sfp-1-25g-20-1310-df-p1.webp?v=1",
+      "galleryImageUrls": null
+    },
+    "old": {
+      "coverImageUrl": "https://api.satsolutions.uz/uploads/hik/products/hik-hk-sfp-1-25g-20-1310-df-xl.webp?v=1782063973",
+      "galleryImageUrls": null
+    }
+  }
+]
