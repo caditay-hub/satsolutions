@@ -143,8 +143,8 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   };
   const smartItems: SmartItem[] = smart ? items.map(toSmartItem) : [];
 
-  // Кейсы портфолио и решения по запросу: «бодикамера» — товаров нет, но есть кейс
-  // (у StreetParking). Показываем блок с описанием при ЛЮБОМ поиске, особенно при 0 товаров.
+  // Кейсы портфолио и решения по запросу: «бодикамера» — товар один (DS-MCW406), зато есть
+  // кейс StreetParking и услуга /solutions/bodycam. Показываем блок с описанием при ЛЮБОМ поиске, особенно при 0 товаров.
   let caseHits: CaseHitDto[] = [];
   if (q) {
     try {

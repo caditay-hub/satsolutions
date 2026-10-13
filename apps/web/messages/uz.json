@@ -324,6 +324,40 @@
     "faq": "Savol-javob"
   },
   "services": {
+    "bodycam": {
+      "title": "Xodimlar uchun bodikameralar",
+      "desc": "Dala jamoalari uchun tanaga taqiladigan kameralar, dok-stansiyalar va dastur: smena yozuvi va arxiv qoʻlda koʻchirmasdan.",
+      "intro": "Daladagi xodimlar — inspektorlar, parkovka nazoratchilari, qoʻriqchilar, kuryerlar uchun bodikameralarni yetkazib beramiz va joriy qilamiz. Kameralar, yozuvlarni avtomatik koʻchiradigan dok-stansiyalar, sizning serveringizdagi videoarxiv va dispetcher dasturi — mijozlarimizda 300 ta Dahua kamerasi allaqachon ishlamoqda.",
+      "works": [
+        "Vazifaga mos kamera tanlash: ruxsat, smenaga yetadigan akkumulyator, 4G, GPS, IP67/IP68 himoya",
+        "Xodimlar va smenalar soniga qarab dok-stansiyalar va xotira hajmini hisoblash",
+        "Dok-stansiyalar, server va videoarxivni Oʻzbekiston hududida oʻrnatish",
+        "Dasturni sozlash: jonli video, xarita, guruh aloqasi, arxivdan qidirish, kirish huquqlari",
+        "Foydalanish reglamenti, xodimlarni oʻqitish va kafolat servisi"
+      ],
+      "faq": [
+        {
+          "q": "Bodikamera quvvatlantirmasdan qancha ishlaydi?",
+          "a": "Model va akkumulyatorga bogʻliq. Dahua DH-MPT230 3200 mA·soat tashqi akkumulyator bilan 10 soatgacha ishlaydi — bu toʻliq smena. Kamera smenalar orasida dok-stansiyada quvvatlanadi va shu vaqtda yozuvlar ham koʻchiriladi."
+        },
+        {
+          "q": "Yozuvni USB orqali tashlash mumkin boʻlsa, dok-stansiya nimaga kerak?",
+          "a": "Dok-stansiya bir vaqtda 8 tagacha kamerani quvvatlaydi va yozuvlarni markaziy arxivga oʻzi koʻchiradi, operatorsiz. 10 tadan ortiq kamerada qoʻlda koʻchirish alohida ishga va yoʻqolgan yozuvlar manbaiga aylanadi — dok bu vazifani toʻliq yechadi."
+        },
+        {
+          "q": "Kameradagi videoni real vaqtda koʻrish mumkinmi?",
+          "a": "Ha, 4G li modellarda. Dispetcher jonli videoni va xodimning xaritadagi joylashuvini koʻradi, PTT tugmasi orqali guruh bilan gaplashadi, xodim esa bitta tugma bilan SOS signalini beradi."
+        },
+        {
+          "q": "Arxiv qayerda saqlanadi va bu qonuniymi?",
+          "a": "Arxiv Oʻzbekiston ichidagi serverda — sizning serveringizda yoki ajratilgan xotirada saqlanadi. Shaxsga doir maʼlumotlar toʻgʻrisidagi qonun (OʻRQ-547) fuqarolar maʼlumotlarini mamlakat hududida saqlashni talab qiladi. Reglament tuzishga yordam beramiz: saqlash muddati, arxivga ruxsati borlar roʻyxati, xodim va mijozlarni yozuv haqida xabardor qilish."
+        },
+        {
+          "q": "Bodikameralarni joriy qilish qancha turadi?",
+          "a": "Narx xodimlar soni, smenalar, arxiv saqlash muddati va 4G kerakligiga bogʻliq. Ariza qoldiring — jamoangiz uchun kamera, dok-stansiya va dastur toʻplamini hisoblab beramiz."
+        }
+      ]
+    },
     "cctv": {
       "title": "Videokuzatuv",
       "desc": "Har qanday miqyosdagi obyekt uchun IP, analog va bulutli tizimlar.",

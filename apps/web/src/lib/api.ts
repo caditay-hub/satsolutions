@@ -419,7 +419,7 @@ export async function getProductTypes(brand?: string) {
   return apiFetch<{ types: ProductTypeDto[] }>(`/product-types${qs}`, { next: { revalidate: 300 } });
 }
 
-// Кейсы портфолио + решения в поиске: «бодикамера» без товаров должна выдавать кейс
+// Кейсы портфолио + решения в поиске: «бодикамера» (товар один) должна выдавать и кейс
 export type CaseHitDto = {
   title: string;
   slug: string;

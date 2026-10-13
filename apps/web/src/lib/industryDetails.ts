@@ -35,8 +35,8 @@ export const INDUSTRY_SERVICES: Record<string, string[]> = {
   medical: ["cctv", "access", "fire", "pa"],
   hotel: ["locks", "cctv", "access", "fire"],
   fuel: ["cctv", "anpr", "perimeter", "fire"],
-  parking: ["intellektualnoe-upravlenie-parkingom", "anpr", "barrier", "cctv"],
-  city: ["cctv", "analytics", "server", "videowall"],
+  parking: ["intellektualnoe-upravlenie-parkingom", "anpr", "barrier", "cctv", "bodycam"],
+  city: ["cctv", "analytics", "server", "videowall", "bodycam"],
   bus: ["cctv", "analytics"],
   construction: ["cctv", "perimeter", "access", "radiobridge"],
 };

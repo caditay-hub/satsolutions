@@ -62,6 +62,8 @@ function Icon({ name }: { name: string }) {
       return (<svg {...common}><rect x="3" y="5" width="18" height="11" rx="2" /><path d="M3 11h18" /><circle cx="7.5" cy="18" r="1.6" /><circle cx="16.5" cy="18" r="1.6" /><path d="M6 8h4" /></svg>);
     case "city":
       return (<svg {...common}><rect x="3" y="9" width="6" height="11" /><rect x="11" y="4" width="6" height="16" /><path d="M5 12h2M5 15h2M13 7h2M13 11h2M13 15h2" /></svg>);
+    case "bodycam":
+      return (<svg {...common}><rect x="7" y="3" width="10" height="16" rx="2" /><circle cx="12" cy="9" r="2.6" /><path d="M10 15h4M12 19v2" /></svg>);
     case "parking":
       return (<svg {...common}><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M9 17V8h3.5a3 3 0 0 1 0 6H9" /></svg>);
     case "retail":

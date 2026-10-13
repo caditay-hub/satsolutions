@@ -64,14 +64,13 @@ export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
     services: ["warehouse", "cctv", "analytics", "retail", "network"],
   },
 
-  // StreetParking: 150+ бодикамер Dahua с ПО DSS Pro
+  // StreetParking: бодикамеры Dahua DH-MPT230 с док-станциями и ПО DSS Pro. MPT230/EEC300 в каталоге
+  // нет — ведём на нательную камеру каталога и на услугу «Боди-камеры» (13.10.2026; до этого здесь
+  // стояли ANPR-камера, NVR и диск, к кейсу отношения не имевшие).
+  // Первая услуга — основная: /solutions/bodycam показывает этот кейс первым.
   "sistema-videonablyudeniya-na-bodikamerah-dahua": {
-    products: [
-      "dahua-dhi-itc413-pw4d-iz1",
-      "dahua-dhi-nvr4216-4ks3",
-      "pro-ds20hkvs-vx1-original-hdd-2tb",
-    ],
-    services: ["parking", "cctv", "anpr", "analytics", "city"],
+    products: ["hik-ds-mcw406-64g-gps-wifi"],
+    services: ["bodycam", "parking", "cctv", "city", "analytics"],
   },
 
   // Завод Damira Beverages: 112 точек СКУД, турникеты, распознавание лиц, ANPR

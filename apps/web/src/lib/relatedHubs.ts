@@ -47,6 +47,7 @@ export const RELATED_HUBS: Record<string, string[]> = {
   // услуг въезда: распознавание номеров, парковка, ворота (10.10.2026)
   "/solutions/anpr": ["/products/type/shlagbaumy", "/products/type/ip-kamery", "/catalog/hikvision"],
   "/solutions/parking": ["/products/type/shlagbaumy", "/products/type/ip-kamery", "/catalog/hikvision"],
+  "/solutions/bodycam": ["/catalog/dahua", "/catalog/hikvision"],
   "/solutions/gates": ["/products/type/shlagbaumy", "/catalog/hikvision"],
   "/solutions/locks": ["/products/type/zamki-i-skud", "/products/group/kontrol-dostupa"],
   "/solutions/intercom": ["/products/group/domofoniya", "/catalog/hikvision"],

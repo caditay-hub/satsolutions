@@ -12,6 +12,24 @@ export type ServiceExtra = { heading: string; paragraphs: string[]; links?: { la
 export type ServiceContent = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[]; extra?: ServiceExtra[] };
 
 const ru: Record<string, ServiceContent> = {
+  bodycam: {
+    heading: "Боди-камеры для бизнеса: как работает система и что в неё входит",
+    paragraphs: [
+      "Боди-камера, она же бодикамера или нательный видеорегистратор, — это камера на груди сотрудника, которая записывает его рабочую смену со звуком. Её ставят там, где работа идёт не в офисе, а на улице и у клиента: контролёры парковок, инспекторы, охрана, курьеры, инкассация, выездной сервис. Запись снимает споры «слово против слова», дисциплинирует обе стороны разговора и даёт доказательство, если ситуация дошла до разбирательства.",
+      "Сама камера — только треть системы. Вторая треть — док-станция: в неё сотрудник ставит камеру в конце смены, и станция одновременно заряжает её и выгружает все записи в центральный архив. Одна станция принимает до 8 камер, поэтому при парке в 100 камер нужен десяток станций. Без доков запись приходится снимать вручную по кабелю, и на практике часть файлов теряется или не выгружается вовсе.",
+      "Третья треть — программа. Платформа Dahua DSS Pro или ваша действующая система видеоуправления показывает диспетчеру статусы всех камер, заряд и ход выгрузки, ищет записи по дате, сотруднику и участку. У камер с 4G добавляется живое видео, положение сотрудника на карте, кнопка SOS и групповая голосовая связь по кнопке PTT — камера заменяет рацию.",
+      "При выборе камеры смотрим на пять параметров. Разрешение: Full HD достаточно для лиц на расстоянии разговора, 2K читает номера автомобилей и документы. Аккумулятор: камера должна держать всю смену, а у DH-MPT230 с внешней батареей это до 10 часов. Защита IP67–IP68 — работа под дождём и в пыли. ИК-подсветка до 10 м — смена после заката. GPS и 4G — если диспетчеру нужно видеть людей на карте в реальном времени.",
+      "Видео с людьми в кадре — это персональные данные. Закон Узбекистана о персональных данных (ЗРУ-547) требует хранить данные граждан на серверах внутри страны, поэтому архив мы разворачиваем на вашем сервере или в хранилище на территории Узбекистана. Вместе с системой передаём шаблон регламента: кто носит камеру, когда запись обязательна, сколько хранится архив и кто к нему допущен; сотрудников знакомят с ним под подпись, а клиентов предупреждают знаком «ведётся видеозапись».",
+      "Внедрение идёт в три шага. Пилот: 10–15 камер на одном участке, где обкатываются регламент, смены и работа доков. Затем расчёт полного парка и хранилища по итогам пилота — сколько часов реально пишет одна камера в день и сколько дней хранить архив. И только после этого тираж на всю команду с обучением сотрудников и диспетчеров.",
+      "Опыт у нас практический. Для оператора городских парковок StreetParking мы поставили 100 камер Dahua DH-MPT230 с док-станциями DH-EEC300D8-N1 и платформой DSS Pro — контролёры берут заряженную камеру в начале смены и ставят её в док в конце, а архив собирается сам. Для Узэнергоинспекции — 200 камер DH-MPT230 и 15 док-станций DH-EEC400-D с подключением к действующему серверу заказчика: живое видео, распознавание лиц и номеров, групповая связь. Для небольших команд в каталоге есть нательная камера Hikvision DS-MCW406 с памятью 64 ГБ, GPS и Wi-Fi.",
+    ],
+    links: [
+      { label: "Кейс StreetParking: 100 бодикамер Dahua", href: "/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua" },
+      { label: "Статья: как выбрать и внедрить боди-камеры", href: "/blog/bodikamery-dlya-biznesa" },
+      { label: "Нательная камера Hikvision DS-MCW406", href: "/products/hik-ds-mcw406-64g-gps-wifi" },
+      { label: "Парковки торговых и жилых комплексов", href: "/solutions/parking" },
+    ],
+  },
   "sistemnaya-integraciya": {
     heading: "Системная интеграция безопасности и ИТ-инфраструктуры в Ташкенте",
     paragraphs: [
@@ -521,6 +539,24 @@ const ru: Record<string, ServiceContent> = {
 };
 
 const uz: Record<string, ServiceContent> = {
+  bodycam: {
+    heading: "Biznes uchun bodikameralar: tizim qanday ishlaydi va unga nimalar kiradi",
+    paragraphs: [
+      "Bodikamera — tanaga taqiladigan videoregistrator: xodimning koʻkragiga mahkamlanadi va ish smenasini ovozi bilan yozib boradi. U ish ofisda emas, koʻchada va mijoz oldida boʻladigan joylarda qoʻllanadi: parkovka nazoratchilari, inspektorlar, qoʻriqlash, kuryerlar, inkassatsiya, koʻchma servis. Yozuv «soʻzga qarshi soʻz» bahslarini yopadi, suhbatning ikkala tomonini intizomga chaqiradi va vaziyat koʻrib chiqishgacha yetsa, dalil boʻlib xizmat qiladi.",
+      "Kameraning oʻzi tizimning faqat uchdan biri. Ikkinchi qismi — dok-stansiya: smena oxirida xodim kamerani unga qoʻyadi, stansiya esa bir vaqtning oʻzida uni quvvatlaydi va barcha yozuvlarni markaziy arxivga koʻchiradi. Bitta stansiya 8 tagacha kamerani qabul qiladi, shuning uchun 100 ta kamerali park uchun oʻnga yaqin stansiya kerak. Dok boʻlmasa, yozuvlarni kabel orqali qoʻlda olishga toʻgʻri keladi va amalda fayllarning bir qismi yoʻqoladi yoki umuman koʻchirilmay qoladi.",
+      "Uchinchi qismi — dastur. Dahua DSS Pro platformasi yoki sizdagi mavjud videoboshqaruv tizimi dispetcherga barcha kameralar holatini, quvvat darajasini va koʻchirish jarayonini koʻrsatadi, yozuvlarni sana, xodim va hudud boʻyicha qidiradi. 4G li kameralarda jonli video, xodimning xaritadagi joylashuvi, SOS tugmasi va PTT tugmasi orqali guruh ovozli aloqasi qoʻshiladi — kamera ratsiya vazifasini ham bajaradi.",
+      "Kamera tanlashda beshta koʻrsatkichga qaraymiz. Ruxsat: Full HD suhbat masofasidagi yuzlar uchun yetarli, 2K esa avtomobil raqamlari va hujjatlarni oʻqiydi. Akkumulyator: kamera butun smenaga yetishi kerak, DH-MPT230 da tashqi batareya bilan bu 10 soatgacha. IP67–IP68 himoya — yomgʻir va changda ishlash. 10 m gacha IQ yoritish — kun botgandan keyingi smena. GPS va 4G — dispetcher odamlarni xaritada real vaqtda koʻrishi kerak boʻlsa.",
+      "Kadrda odamlar boʻlgan video — shaxsga doir maʼlumot. Oʻzbekistonning shaxsga doir maʼlumotlar toʻgʻrisidagi qonuni (OʻRQ-547) fuqarolar maʼlumotlarini mamlakat ichidagi serverlarda saqlashni talab qiladi, shu sababli arxivni sizning serveringizda yoki Oʻzbekiston hududidagi xotirada oʻrnatamiz. Tizim bilan birga reglament namunasini topshiramiz: kamerani kim taqadi, yozuv qachon majburiy, arxiv qancha saqlanadi va unga kimlar kira oladi; xodimlar u bilan imzo qoʻyib tanishadi, mijozlar esa «videoyozuv olib borilmoqda» belgisi orqali ogohlantiriladi.",
+      "Joriy qilish uch bosqichda oʻtadi. Sinov: bitta hududda 10–15 ta kamera, unda reglament, smenalar va doklar ishi sinab koʻriladi. Keyin sinov natijalari boʻyicha toʻliq park va xotira hisoblanadi — bitta kamera kuniga amalda necha soat yozadi va arxivni necha kun saqlash kerak. Shundan keyingina butun jamoaga xodim va dispetcherlarni oʻqitish bilan kengaytiriladi.",
+      "Tajribamiz amaliy. Shahar parkovkalari operatori StreetParking uchun 100 ta Dahua DH-MPT230 kamerasini DH-EEC300D8-N1 dok-stansiyalari va DSS Pro platformasi bilan yetkazib berdik — nazoratchilar smena boshida quvvatlangan kamerani oladi, oxirida dokka qoʻyadi, arxiv esa oʻzi yigʻiladi. Oʻzenergoinspeksiya uchun — 200 ta DH-MPT230 kamerasi va 15 ta DH-EEC400-D dok-stansiyasi, buyurtmachining mavjud serveriga ulangan holda: jonli video, yuz va raqamlarni tanish, guruh aloqasi. Kichik jamoalar uchun katalogda 64 GB xotirali, GPS va Wi-Fi li Hikvision DS-MCW406 bodikamerasi bor.",
+    ],
+    links: [
+      { label: "StreetParking keysi: 100 ta Dahua bodikamerasi", href: "/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua" },
+      { label: "Maqola: bodikameralarni qanday tanlash va joriy qilish", href: "/blog/bodikamery-dlya-biznesa" },
+      { label: "Hikvision DS-MCW406 bodikamerasi", href: "/products/hik-ds-mcw406-64g-gps-wifi" },
+      { label: "Savdo va turar-joy majmualari parkovkalari", href: "/solutions/parking" },
+    ],
+  },
   "sistemnaya-integraciya": {
     heading: "Toshkentda xavfsizlik va IT-infratuzilmaning tizimli integratsiyasi",
     paragraphs: [
@@ -1028,6 +1064,24 @@ const uz: Record<string, ServiceContent> = {
 // страниц, остальные ключи догоняем следующей партией — фолбэк на null
 // оставляет страницу без блока, а не с машинным переводом.
 const en: Record<string, ServiceContent> = {
+  bodycam: {
+    heading: "Body cameras for business: how the system works and what it includes",
+    paragraphs: [
+      "A body camera, or body-worn video recorder, clips to an employee's chest and records the working shift with sound. It belongs wherever work happens on the street and in front of customers rather than in an office: parking enforcement, inspectors, security, couriers, cash collection, field service. The recording ends word-against-word disputes, keeps both sides of the conversation polite and provides evidence if a situation ever reaches a formal review.",
+      "The camera itself is only a third of the system. The second third is the docking station: at the end of the shift the employee drops the camera into it, and the station charges it while uploading every recording to the central archive. One station takes up to 8 cameras, so a fleet of 100 needs around a dozen. Without docks, footage has to be pulled over a cable by hand, and in practice some files get lost or never uploaded at all.",
+      "The final third is software. The Dahua DSS Pro platform, or the video management system you already run, shows the dispatcher the status, charge and upload progress of every camera and searches recordings by date, employee and area. 4G cameras add live video, the officer's position on a map, an SOS button and push-to-talk group voice — the camera doubles as a radio.",
+      "We choose a camera on five criteria. Resolution: Full HD is enough for faces at conversation distance, 2K reads licence plates and documents. Battery: the camera must last the whole shift — the DH-MPT230 with its external battery manages up to 10 hours. IP67–IP68 protection for rain and dust. IR illumination up to 10 m for shifts after dark. GPS and 4G if the dispatcher needs to see people on a map in real time.",
+      "Video showing identifiable people is personal data. Uzbekistan's personal data law (ZRU-547) requires citizens' data to be stored on servers inside the country, so we deploy the archive on your server or on storage located in Uzbekistan. Along with the system we hand over a policy template: who wears a camera, when recording is mandatory, how long the archive is kept and who may access it; staff sign to confirm they have read it, and customers are informed by a \"video recording in progress\" badge.",
+      "Rollout takes three steps. A pilot of 10–15 cameras on one site, where the policy, shifts and docks are tested in real work. Then sizing of the full fleet and storage from the pilot data — how many hours one camera actually records per day and how many days the archive must be kept. Only then the rollout to the whole team, with training for staff and dispatchers.",
+      "Our experience is hands-on. For the city parking operator StreetParking we supplied 100 Dahua DH-MPT230 cameras with DH-EEC300D8-N1 docking stations and the DSS Pro platform: officers take a charged camera at the start of a shift, return it to the dock at the end, and the archive builds itself. For Uzenergoinspeksiya — 200 DH-MPT230 cameras and 15 DH-EEC400-D docking stations connected to the client's existing server: live video, face and plate recognition, group talk. For smaller teams our catalogue offers the Hikvision DS-MCW406 body camera with 64 GB memory, GPS and Wi-Fi.",
+    ],
+    links: [
+      { label: "StreetParking case: 100 Dahua body cameras", href: "/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua" },
+      { label: "Article: how to choose and roll out body cameras", href: "/blog/bodikamery-dlya-biznesa" },
+      { label: "Hikvision DS-MCW406 body camera", href: "/products/hik-ds-mcw406-64g-gps-wifi" },
+      { label: "Parking for shopping and residential complexes", href: "/solutions/parking" },
+    ],
+  },
   "sistemnaya-integraciya": {
     heading: "Security and IT system integration in Tashkent",
     paragraphs: [
@@ -1530,6 +1584,24 @@ const en: Record<string, ServiceContent> = {
 };
 
 const tr: Record<string, ServiceContent> = {
+  bodycam: {
+    heading: "İşletmeler için vücut kameraları: sistem nasıl çalışır ve neler içerir",
+    paragraphs: [
+      "Vücut kamerası, çalışanın göğsüne takılan ve vardiyayı sesiyle birlikte kaydeden bir video kayıt cihazıdır. İşin ofiste değil sokakta ve müşterinin karşısında yapıldığı her yerde kullanılır: otopark denetimi, müfettişler, güvenlik, kuryeler, para nakli, saha servisi. Kayıt «söz söze karşı» tartışmalarını bitirir, konuşmanın iki tarafını da disipline eder ve olay resmi incelemeye varırsa delil olur.",
+      "Kameranın kendisi sistemin yalnızca üçte biridir. İkinci parça yerleştirme istasyonudur: vardiya sonunda çalışan kamerayı istasyona koyar, istasyon da onu şarj ederken tüm kayıtları merkezi arşive aktarır. Bir istasyon 8 kameraya kadar alır; 100 kameralık bir filo için yaklaşık on istasyon gerekir. İstasyon olmadan kayıtlar kabloyla elle alınır ve pratikte dosyaların bir kısmı kaybolur ya da hiç aktarılmaz.",
+      "Üçüncü parça yazılımdır. Dahua DSS Pro platformu ya da halihazırda kullandığınız video yönetim sistemi, operatöre tüm kameraların durumunu, şarjını ve aktarım ilerlemesini gösterir; kayıtları tarihe, çalışana ve bölgeye göre arar. 4G kameralarda canlı görüntü, personelin haritadaki konumu, SOS tuşu ve bas-konuş grup telsizi eklenir — kamera telsizin yerini de tutar.",
+      "Kamera seçerken beş ölçüte bakıyoruz. Çözünürlük: Full HD konuşma mesafesindeki yüzler için yeterlidir, 2K plakaları ve belgeleri okur. Batarya: kamera tüm vardiyayı çıkarmalıdır; harici bataryalı DH-MPT230'da bu 10 saate kadardır. IP67–IP68 koruma yağmur ve toz için. 10 m'ye kadar IR aydınlatma gün batımından sonraki vardiyalar için. Operatörün personeli haritada canlı görmesi gerekiyorsa GPS ve 4G.",
+      "Kimliği belirlenebilir kişilerin yer aldığı video kişisel veridir. Özbekistan'ın kişisel veriler kanunu (ZRU-547) vatandaş verilerinin ülke içindeki sunucularda saklanmasını şart koşar; bu yüzden arşivi sizin sunucunuzda ya da Özbekistan'daki bir depolamada kuruyoruz. Sistemle birlikte bir yönetmelik şablonu teslim ediyoruz: kamerayı kim takar, kayıt ne zaman zorunludur, arşiv ne kadar saklanır ve kimler erişebilir; çalışanlar okuduklarını imzayla onaylar, müşteriler ise «video kaydı yapılmaktadır» rozetiyle bilgilendirilir.",
+      "Devreye alma üç adımda ilerler. Pilot: tek bir bölgede 10–15 kamera; yönetmelik, vardiyalar ve istasyonlar gerçek işte denenir. Ardından pilot verilerine göre tam filo ve depolama hesaplanır — bir kamera günde gerçekte kaç saat kayıt yapıyor ve arşiv kaç gün tutulmalı. Ancak bundan sonra personel ve operatör eğitimiyle birlikte tüm ekibe yayılır.",
+      "Deneyimimiz sahadan gelir. Şehir otopark işletmecisi StreetParking için DH-EEC300D8-N1 istasyonları ve DSS Pro platformuyla birlikte 100 adet Dahua DH-MPT230 kamera tedarik ettik: görevliler vardiya başında şarjlı kamerayı alır, sonunda istasyona bırakır, arşiv kendiliğinden oluşur. Özenergoinspeksiya için ise müşterinin mevcut sunucusuna bağlı 200 adet DH-MPT230 kamera ve 15 adet DH-EEC400-D istasyon: canlı görüntü, yüz ve plaka tanıma, grup telsiz. Küçük ekipler için katalogda 64 GB hafızalı, GPS ve Wi-Fi'lı Hikvision DS-MCW406 vücut kamerası bulunuyor.",
+    ],
+    links: [
+      { label: "StreetParking projesi: 100 Dahua vücut kamerası", href: "/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua" },
+      { label: "Makale: vücut kamerası nasıl seçilir ve devreye alınır", href: "/blog/bodikamery-dlya-biznesa" },
+      { label: "Hikvision DS-MCW406 vücut kamerası", href: "/products/hik-ds-mcw406-64g-gps-wifi" },
+      { label: "AVM ve konut siteleri için otopark", href: "/solutions/parking" },
+    ],
+  },
   "sistemnaya-integraciya": {
     heading: "Taşkent'te güvenlik ve BT sistem entegrasyonu",
     paragraphs: [
@@ -2032,6 +2104,24 @@ const tr: Record<string, ServiceContent> = {
 };
 
 const zh: Record<string, ServiceContent> = {
+  bodycam: {
+    heading: "企业执法记录仪：系统如何运作、包含哪些部分",
+    paragraphs: [
+      "执法记录仪，也叫随身摄像机或胸前记录仪，佩戴在员工胸前，带声音记录整个工作班次。凡是工作不在办公室、而在街头和客户面前进行的岗位都适用：停车管理、稽查员、安保、快递、押运、上门服务。录像终结了“各执一词”的争执，让对话双方都更守规矩，一旦事情进入正式调查，它就是证据。",
+      "摄像机本身只是系统的三分之一。第二部分是采集站：班次结束时员工把记录仪插入采集站，采集站在充电的同时把全部录像上传到中心档案。一台采集站可容纳 8 台记录仪，因此 100 台的规模大约需要十台采集站。没有采集站，就只能用数据线手动导出，实际上总有一部分文件丢失或根本没有上传。",
+      "第三部分是软件。大华 DSS Pro 平台或您现有的视频管理系统，可向调度员显示每台记录仪的状态、电量和上传进度，并按日期、员工和区域检索录像。4G 记录仪还增加了实时视频、人员地图定位、SOS 按键以及一键通集群语音——记录仪同时充当对讲机。",
+      "选型时我们看五项指标。分辨率：全高清足以看清对话距离内的人脸，2K 能读出车牌和证件。电池：必须撑满整个班次，DH-MPT230 配外置电池可达 10 小时。IP67–IP68 防护，适应雨天和粉尘。最远 10 米红外补光，适用于日落后的班次。如果调度员需要实时在地图上看到人员，就需要 GPS 和 4G。",
+      "画面中出现可识别人员的视频属于个人数据。乌兹别克斯坦《个人数据法》（ZRU-547）要求公民数据存储在境内服务器上，因此我们把档案部署在您的服务器或位于乌兹别克斯坦的存储上。随系统一并交付制度模板：谁佩戴记录仪、何时必须录像、档案保存多久、谁有权访问；员工签字确认已阅读，并通过“正在录像”标识告知顾客。",
+      "部署分三步进行。试点：在一个区域投入 10–15 台记录仪，在实际工作中检验制度、班次和采集站。然后根据试点数据测算完整规模和存储——一台记录仪每天实际录多少小时、档案需保存多少天。之后才推广到整个团队，并培训员工和调度员。",
+      "我们的经验来自实践。我们为城市停车运营商 StreetParking 供应了 100 台大华 DH-MPT230 记录仪，配套 DH-EEC300D8-N1 采集站和 DSS Pro 平台：管理员上班时取走充满电的记录仪，下班时放回采集站，档案自动生成。为乌兹别克斯坦能源监察局供应了 200 台 DH-MPT230 和 15 台 DH-EEC400-D 采集站，接入客户现有服务器：实时视频、人脸和车牌识别、集群对讲。小型团队可选择目录中的海康 DS-MCW406 记录仪，带 64 GB 存储、GPS 和 Wi-Fi。",
+    ],
+    links: [
+      { label: "StreetParking 案例：100 台大华执法记录仪", href: "/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua" },
+      { label: "文章：如何选择和部署执法记录仪", href: "/blog/bodikamery-dlya-biznesa" },
+      { label: "海康 DS-MCW406 执法记录仪", href: "/products/hik-ds-mcw406-64g-gps-wifi" },
+      { label: "商场与住宅小区停车场", href: "/solutions/parking" },
+    ],
+  },
   "sistemnaya-integraciya": {
     heading: "塔什干安防与 IT 系统集成",
     paragraphs: [

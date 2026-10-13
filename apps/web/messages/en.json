@@ -324,6 +324,40 @@
     "faq": "FAQ"
   },
   "services": {
+    "bodycam": {
+      "title": "Body cameras for staff",
+      "desc": "Body-worn cameras, docking stations and software for field teams: shift recording and an archive with no manual uploads.",
+      "intro": "We supply and roll out body cameras for field staff — inspectors, parking enforcement officers, security guards, couriers. Cameras, docking stations that upload recordings automatically, a video archive on your own server and dispatcher software: 300 Dahua cameras are already in service with our clients.",
+      "works": [
+        "Camera selection for the task: resolution, full-shift battery, 4G, GPS, IP67/IP68 protection",
+        "Sizing docking stations and storage to your headcount and shifts",
+        "Installing docks, server and video archive inside Uzbekistan",
+        "Software setup: live view, map, group talk, archive search, access rights",
+        "Usage policy, staff training and warranty service"
+      ],
+      "faq": [
+        {
+          "q": "How long does a body camera run on one charge?",
+          "a": "It depends on the model and battery. The Dahua DH-MPT230 with its 3200 mAh external battery runs for up to 10 hours — a full shift. It charges in the docking station between shifts, while its recordings are uploaded."
+        },
+        {
+          "q": "Why a docking station if footage can be copied over USB?",
+          "a": "A docking station charges up to 8 cameras at once and uploads their recordings to the central archive by itself, with no operator. With a fleet of 10+ cameras, manual copying becomes a separate job and a source of lost footage — the dock removes that task entirely."
+        },
+        {
+          "q": "Can we watch the camera feed live?",
+          "a": "Yes, with 4G models. The dispatcher sees live video and the officer's position on a map, talks to the group via the PTT button, and the officer can raise an SOS alert with one press."
+        },
+        {
+          "q": "Where is the archive stored, and is it legal?",
+          "a": "The archive stays on a server inside Uzbekistan — yours or dedicated storage. The personal data law (ZRU-547) requires citizens' data to be stored in the country. We help draft the policy: retention period, who may access the archive, and how staff and customers are informed about recording."
+        },
+        {
+          "q": "How much does a body camera rollout cost?",
+          "a": "It depends on headcount, shifts, archive retention and whether you need 4G. Leave a request — we will size the set of cameras, docks and software for your team."
+        }
+      ]
+    },
     "cctv": {
       "title": "Video surveillance",
       "desc": "IP, analog and cloud systems for sites of any scale.",

@@ -6,7 +6,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { existsSync } from "node:fs";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { localizeProduct, localizeProductName } from "@/lib/productI18n";
-import { getServiceBySlug, getPortfolio, getProductsCached } from "@/lib/api";
+import { getServiceBySlug, getPortfolio, getPortfolioBySlug, getProductsCached, getProductBySlug } from "@/lib/api";
+import { PORTFOLIO_LINKS } from "@/lib/portfolioLinks";
 import { resolveImageUrl } from "@/lib/image";
 import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
 import { SolutionDetailsClient } from "@/components/SolutionDetailsClient";
@@ -226,9 +227,19 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     obsluzhivanie: ["prochee-ognetushiteli", "bolid-detectors", "prochee-fire"],
     "sistemnaya-integraciya": ["hik-nvr", "pxt-server", "hik-access-terminals"],
   };
+  // Товары поштучно — где профильного раздела каталога нет (боди-камеры: одна карточка, 13.10.2026)
+  const EQUIP_SLUGS: Record<string, string[]> = {
+    bodycam: ["hik-ds-mcw406-64g-gps-wifi"],
+  };
   let equipment: any[] = [];
   const cats = EQUIP_CATS[svc.key];
-  if (cats) {
+  if (EQUIP_SLUGS[svc.key]) {
+    const got = await Promise.all(EQUIP_SLUGS[svc.key].map((s) => getProductBySlug(s).then((r) => r.product).catch(() => null)));
+    equipment = got.filter((p: any) => p?.coverImageUrl).map((p: any) => {
+      const loc = localizeProduct(p, locale);
+      return { ...p, name: loc.name, shortDescription: loc.shortDescription };
+    });
+  } else if (cats) {
     const chunks = await Promise.all(
       cats.map((c) => getProductsCached(1, 4, { category: c }).then((r) => r.items ?? []).catch(() => []))
     );
@@ -267,7 +278,12 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // Кейсы (услуга→портфолио) — несколько реализованных проектов
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
   try {
-    const { items } = await getPortfolio(1, 3);
+    // Профильные кейсы (у которых эта услуга — основная в portfolioLinks) идут первыми,
+    // остаток — свежие проекты. Иначе на «Боди-камерах» стояли бы три случайных объекта (13.10.2026).
+    const ownSlugs = Object.entries(PORTFOLIO_LINKS).filter(([, v]) => v.services[0] === svc.key).map(([k]) => k).slice(0, 3);
+    const own = (await Promise.all(ownSlugs.map((s) => getPortfolioBySlug(s).then((r) => r.item).catch(() => null)))).filter(Boolean);
+    const { items: fresh } = await getPortfolio(1, 3);
+    const items = [...own, ...fresh.filter((p) => !ownSlugs.includes(p.slug))].slice(0, 3);
     // названия кейсов приходят из БД по-русски — прогоняем через оверлей переводов
     cases = items.map((p) => localizePortfolioProject(p as any, locale)).map((p: any) => ({ slug: p.slug, title: p.title, coverImageUrl: p.coverImageUrl }));
   } catch {

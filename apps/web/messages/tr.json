@@ -324,6 +324,40 @@
     "faq": "SSS"
   },
   "services": {
+    "bodycam": {
+      "title": "Personel için vücut kameraları",
+      "desc": "Saha ekipleri için vücut kameraları, yerleştirme istasyonları ve yazılım: vardiya kaydı ve elle aktarım gerektirmeyen arşiv.",
+      "intro": "Sahadaki personel — denetçiler, otopark görevlileri, güvenlik, kuryeler — için vücut kameraları tedarik ediyor ve devreye alıyoruz. Kameralar, kayıtları otomatik aktaran yerleştirme istasyonları, kendi sunucunuzdaki video arşivi ve operatör yazılımı: müşterilerimizde 300 Dahua kamera şu anda çalışıyor.",
+      "works": [
+        "Göreve uygun kamera seçimi: çözünürlük, vardiya boyu batarya, 4G, GPS, IP67/IP68 koruma",
+        "Personel ve vardiya sayısına göre istasyon ve depolama hesabı",
+        "İstasyonların, sunucunun ve video arşivinin Özbekistan içinde kurulumu",
+        "Yazılım ayarı: canlı görüntü, harita, grup telsiz, arşivde arama, erişim yetkileri",
+        "Kullanım yönetmeliği, personel eğitimi ve garanti servisi"
+      ],
+      "faq": [
+        {
+          "q": "Vücut kamerası tek şarjla ne kadar çalışır?",
+          "a": "Modele ve bataryaya bağlıdır. Dahua DH-MPT230, 3200 mAh harici bataryasıyla 10 saate kadar çalışır — bu tam bir vardiyadır. Kamera vardiyalar arasında istasyonda şarj olur, kayıtlar da bu sırada aktarılır."
+        },
+        {
+          "q": "Kayıtlar USB ile alınabiliyorsa istasyon neden gerekli?",
+          "a": "İstasyon aynı anda 8 kameraya kadar şarj eder ve kayıtları operatör olmadan merkezi arşive kendisi aktarır. 10 ve üzeri kamerada elle aktarım ayrı bir işe ve kayıp görüntülerin kaynağına dönüşür — istasyon bu işi tamamen üstlenir."
+        },
+        {
+          "q": "Kamera görüntüsü canlı izlenebilir mi?",
+          "a": "Evet, 4G modellerde. Operatör canlı görüntüyü ve personelin haritadaki konumunu görür, PTT tuşuyla grupla konuşur; personel ise tek tuşla SOS sinyali verebilir."
+        },
+        {
+          "q": "Arşiv nerede saklanır, bu yasal mı?",
+          "a": "Arşiv Özbekistan içindeki bir sunucuda — sizin sunucunuzda ya da ayrılmış depolamada — tutulur. Kişisel veriler kanunu (ZRU-547) vatandaş verilerinin ülke içinde saklanmasını şart koşar. Yönetmeliği hazırlamaya yardım ediyoruz: saklama süresi, arşive erişebilecekler, personel ve müşterilerin kayıt hakkında bilgilendirilmesi."
+        },
+        {
+          "q": "Vücut kamerası projesinin maliyeti nedir?",
+          "a": "Personel sayısına, vardiyalara, arşiv saklama süresine ve 4G gerekip gerekmediğine bağlıdır. Talep bırakın — ekibiniz için kamera, istasyon ve yazılım setini hesaplayalım."
+        }
+      ]
+    },
     "cctv": {
       "title": "Video gözetim",
       "desc": "Her ölçekte tesis için IP, analog ve bulut sistemleri.",
