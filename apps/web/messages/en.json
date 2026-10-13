@@ -337,6 +337,10 @@
       ],
       "faq": [
         {
+          "q": "Are a body camera, body-worn camera and wearable camera the same thing?",
+          "a": "Yes, these are names for the same device. \"Body camera\" and \"bodycam\" are the everyday terms, \"body-worn camera\" is the more formal one often used in tenders, and \"wearable camera\" or \"personal video recorder\" stresses that the camera is assigned to one employee. What sets it apart from an action camera is physical record and SOS buttons, a battery that lasts the whole shift, a rugged housing and automatic upload of footage to the archive through a docking station."
+        },
+        {
           "q": "How long does a body camera run on one charge?",
           "a": "It depends on the model and battery. The Dahua DH-MPT230 with its 3200 mAh external battery runs for up to 10 hours — a full shift. It charges in the docking station between shifts, while its recordings are uploaded."
         },

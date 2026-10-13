@@ -33,8 +33,44 @@ const DEFAULT_LOCALE = "ru";
 // с ним обесцениваются честные даты соседних URL в том же файле.
 export const CONTENT_RELEASE = new Date("2026-09-18T00:00:00.000Z");
 
-/** @deprecated историческое имя — им пользуется индекс /sitemap.xml. */
-export const GENERATED = CONTENT_RELEASE;
+// Дата последней правки текста статичной услуги /solutions/<key> — ПРАВИТЬ ВРУЧНУЮ вместе
+// с текстом услуги (serviceContent.ts, serviceSeo.ts, servicesData.ts, industryDetails.ts,
+// messages/*.json → services.<key>).
+// Зачем: до 13.10.2026 у всех услуг в карте стоял CONTENT_RELEASE. IndexNow
+// (apps/api/src/monitor/indexNow.ts) после деплоя шлёт в Bing и Яндекс только новые адреса
+// и те, у кого сменился lastmod, — переписанная услуга туда не уходила, а Google видел дату
+// релиза 18.09 и не спешил её переобходить.
+// Даты ниже сняты 13.10.2026 по git blame этих файлов: последний коммит, менявший блок услуги.
+// Ключа нет — действует CONTENT_RELEASE. Правите ту же услугу повторно в день, когда её
+// дата уже ушла на прод, — ставьте со временем ("2026-10-13T18:00:00+05:00"): IndexNow
+// сравнивает lastmod строкой, и та же дата второй раз адрес не отправит.
+export const SERVICE_UPDATED: Record<string, string> = {
+  bodycam: "2026-10-13",
+  parking: "2026-10-13", // в блок услуг отрасли добавлены боди-камеры
+  city: "2026-10-13", // то же
+  cctv: "2026-10-10",
+  access: "2026-10-10",
+  fire: "2026-10-10",
+  intercom: "2026-10-10",
+  turnstile: "2026-10-10",
+  servers: "2026-10-05",
+  "slabotochnye-sistemy": "2026-10-02",
+  wifi: "2026-10-02",
+  server: "2026-10-02",
+  locks: "2026-10-02",
+  videowall: "2026-10-02",
+  bank: "2026-09-22",
+};
+
+// Кейсы портфолио: lastmod = updatedAt из БД, он честный для правок в админке и сид-скриптов.
+// Но переводы кейса (contentI18n.ts) и его связи с услугами и товарами (portfolioLinks.ts)
+// живут в коде и updatedAt не трогают. Поправили их — впишите сюда slug и дату (со временем,
+// если в этот день кейс уже выкатывался), иначе IndexNow правку не отправит.
+export const PORTFOLIO_UPDATED: Record<string, string> = {
+  // кейс → статья «Боди-камеры для бизнеса» (portfolioLinks.ts); updatedAt в БД — 13.10 09:52 UTC,
+  // поэтому время позже него, иначе дата не сменится и IndexNow ссылку не отправит
+  "sistema-videonablyudeniya-na-bodikamerah-dahua": "2026-10-13T17:00:00+05:00",
+};
 
 /** Самая свежая из дат; пусто/мусор → дата релиза контента. */
 function newestDate(values: Iterable<string | null | undefined>): Date {
@@ -45,6 +81,23 @@ function newestDate(values: Iterable<string | null | undefined>): Date {
   }
   return ms ? new Date(ms) : CONTENT_RELEASE;
 }
+
+/** lastmod статичной услуги: её дата из SERVICE_UPDATED, но не раньше релиза контента. */
+function serviceLastmod(key: string): Date {
+  return newestDate([CONTENT_RELEASE.toISOString(), SERVICE_UPDATED[key]]);
+}
+
+/**
+ * @deprecated историческое имя — им пользуется индекс /sitemap.xml.
+ * Самая свежая из дат, заданных в коде: релиз контента, услуги, статьи, кейсы. Раньше здесь
+ * был просто CONTENT_RELEASE, и индекс карт месяцами объявлял 18.09, хотя разделы менялись.
+ */
+export const GENERATED = newestDate([
+  CONTENT_RELEASE.toISOString(),
+  ...Object.values(SERVICE_UPDATED),
+  ...Object.values(PORTFOLIO_UPDATED),
+  ...ARTICLES.map((a) => a.updated ?? a.date),
+]);
 
 export function langAlternates(path: string) {
   const languages: Record<string, string> = {};
@@ -112,7 +165,7 @@ export async function pagesEntries(): Promise<SitemapEntry[]> {
 
   const staticServiceRoutes: SitemapEntry[] = ALL_SERVICES.map((s) => ({
     url: `${SITE_URL}/solutions/${s.key}`,
-    lastModified: CONTENT_RELEASE,
+    lastModified: serviceLastmod(s.key), // реальная дата правки, см. SERVICE_UPDATED
     changeFrequency: "monthly",
     priority: 0.7,
     alternates: { languages: langAlternates(`/solutions/${s.key}`) },
@@ -299,7 +352,8 @@ export async function contentEntries(): Promise<SitemapEntry[]> {
   const { items: portfolio } = await getPortfolio(1, 1000).catch(() => ({ items: [] as any[] }));
   const portfolioRoutes: SitemapEntry[] = portfolio.map((p: any) => ({
     url: `${SITE_URL}/portfolio/${p.slug}`,
-    lastModified: new Date(p.updatedAt),
+    // правка в БД (updatedAt) или в коде кейса (PORTFOLIO_UPDATED) — что свежее
+    lastModified: newestDate([p.updatedAt, PORTFOLIO_UPDATED[p.slug]]),
     changeFrequency: "monthly",
     priority: 0.5,
     alternates: { languages: langAlternates(`/portfolio/${p.slug}`) },

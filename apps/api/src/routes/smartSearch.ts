@@ -5,6 +5,8 @@ import { Product } from "../models/Product.js";
 import { Brand } from "../models/Brand.js";
 import { matchI18nProductIds } from "../lib/productI18nIndex.js";
 import { flipLayout } from "../lib/kbLayout.js";
+import { analyzeSearchQuery, type QueryAnalysis } from "../lib/searchSynonyms.js";
+import { searchStaticServices } from "../lib/staticServicesIndex.js";
 
 export const smartSearchRouter = Router();
 
@@ -45,9 +47,48 @@ function buildTokenMatch(q: string) {
   const likeF = qf ? `%${qf}%` : NEVER;
   const i18nIds = matchI18nProductIds(q, 200);
   const ids = i18nIds.length ? i18nIds : [NIL_UUID]; // sentinel-UUID: пустой '' роняет каст
+  const repl: Record<string, any> = { like, likeF, ids };
+
+  // Понятие с синонимами («бодикамера», «нагрудный видеорегистратор» = нательная камера):
+  // товар подходит, если в имени/модели есть ЛЮБОЙ вариант понятия; прочие слова запроса
+  // («купить», «для охраны») не обязательны и только поднимают ранг. См. lib/searchSynonyms.ts.
+  const syn = analyzeSearchQuery(q);
+  if (syn) {
+    const groups = syn.concepts.map(
+      (c, ci) =>
+        "(" +
+        c.product
+          .map((v, vi) => {
+            repl[`cp${ci}_${vi}`] = `%${v}%`;
+            return `p.name ILIKE :cp${ci}_${vi} OR p."modelCode" ILIKE :cp${ci}_${vi}`;
+          })
+          .join(" OR ") +
+        ")",
+    );
+    const conceptCond = groups.join(" AND ");
+    const soft = tokenize(syn.rest);
+    const softScore = soft.length
+      ? soft
+          .map((t, i) => {
+            repl[`cs${i}`] = `%${t}%`;
+            return `(CASE WHEN p.name ILIKE :cs${i} OR p."modelCode" ILIKE :cs${i} THEN 1 ELSE 0 END)`;
+          })
+          .join(" + ")
+      : "0";
+    const variants = syn.concepts.map((c) => c.product);
+    return {
+      where: `p.published AND (${conceptCond} OR p.id IN (:ids))`,
+      rank: `((CASE WHEN ${conceptCond} THEN 2 ELSE 0 END) + ${softScore})`,
+      repl,
+      concept: true,
+      // «сильное» совпадение — в имени/модели есть вариант каждого понятия
+      isStrong: (hay: string) => variants.every((vs) => vs.some((v) => hay.includes(v))),
+      i18nSet: new Set(i18nIds),
+    };
+  }
+
   const tokens = tokenize(q);
   const tokensF = qf ? tokenize(qf) : [];
-  const repl: Record<string, any> = { like, likeF, ids };
   const allTokens = (toks: string[], prefix: string) =>
     toks.length
       ? "(" +
@@ -64,7 +105,17 @@ function buildTokenMatch(q: string) {
   const where = `p.published AND (${tokCond} OR ${tokCondF} OR p.id IN (:ids))`;
   // ранг: точная фраза целиком > все токены > токены в другой раскладке > i18n
   const rank = `(CASE WHEN p.name ILIKE :like OR p."modelCode" ILIKE :like THEN 3 WHEN ${tokCond} THEN 2 WHEN ${tokCondF} THEN 1 ELSE 0 END)`;
-  return { where, rank, repl, tokens, tokensF, i18nSet: new Set(i18nIds) };
+  return {
+    where,
+    rank,
+    repl,
+    concept: false,
+    // «сильное» совпадение — в имени/модели есть ВСЕ токены (или все токены другой раскладки)
+    isStrong: (hay: string) =>
+      (tokens.length > 0 && tokens.every((t) => hay.includes(t))) ||
+      (tokensF.length > 0 && tokensF.every((t) => hay.includes(t))),
+    i18nSet: new Set(i18nIds),
+  };
 }
 
 async function directSearch(q: string, limit: number) {
@@ -88,16 +139,12 @@ async function directSearch(q: string, limit: number) {
     `SELECT count(*)::int AS c FROM products p WHERE ${m.where}`,
     { type: QueryTypes.SELECT, replacements: m.repl },
   )) as any[];
-  // «сильное» совпадение — в имени/модели есть ВСЕ токены (или i18n / другая раскладка)
+  // «сильное» совпадение — в имени/модели есть ВСЕ токены (или i18n / другая раскладка / понятие)
   const strong = rows.filter((r) => {
     const hay = `${r.name} ${r.modelCode || ""}`.toLowerCase();
-    return (
-      m.i18nSet.has(r.id) ||
-      (m.tokens.length > 0 && m.tokens.every((t) => hay.includes(t))) ||
-      (m.tokensF.length > 0 && m.tokensF.every((t) => hay.includes(t)))
-    );
+    return m.i18nSet.has(r.id) || m.isStrong(hay);
   }).length;
-  return { rows, count: cnt[0]?.c ?? rows.length, strong };
+  return { rows, count: cnt[0]?.c ?? rows.length, strong, concept: m.concept };
 }
 
 async function catalogContext() {
@@ -225,19 +272,36 @@ function stemRu(t: string): string {
   return t.replace(/(ами|ями|ого|его|ому|ему|ыми|ими|ах|ях|ам|ям|ов|ев|ой|ей|ый|ий|ая|яя|ое|ее|ые|ие|ом|ем|у|ю|а|я|ы|и|е|о)$/i, "");
 }
 
-async function searchCases(qRaw: string, limit = 6) {
+// Две записи таблицы services — старые адреса, которые 301-редиректят на статичные страницы;
+// статичную услугу-цель второй раз не показываем.
+const LEGACY_SOLUTION_TARGET: Record<string, string> = { "umniy-avtobus": "bus", parkovka: "parking" };
+
+async function searchCases(qRaw: string, limit = 6, locale?: string) {
   const q = norm(qRaw);
-  const tokens = tokenize(q).map(stemRu).filter((t) => t.length >= 2);
-  if (!tokens.length) return [];
-  const qf = flipLayout(q);
-  const tokensF = qf ? tokenize(qf).map(stemRu).filter((t) => t.length >= 2) : [];
+  const syn: QueryAnalysis | null = analyzeSearchQuery(q);
   const repl: Record<string, any> = { lim: limit };
-  const arr = (toks: string[], pfx: string) =>
-    toks.map((t, i) => { repl[`${pfx}${i}`] = `%${t}%`; return `:${pfx}${i}`; });
-  const pats = arr(tokens, "ct");
-  const patsF = tokensF.length ? arr(tokensF, "cf") : null;
   const hay = `(title || ' ' || COALESCE(excerpt,'') || ' ' || COALESCE(content,''))`;
-  const cond = `(${hay} ILIKE ALL(ARRAY[${pats.join(",")}]::text[])${patsF ? ` OR ${hay} ILIKE ALL(ARRAY[${patsF.join(",")}]::text[])` : ""})`;
+  let cond: string;
+  if (syn) {
+    // понятие с синонимами: в тексте кейса/решения есть любой вариант каждого понятия,
+    // остальные слова запроса не обязательны (как и в поиске товаров)
+    cond = syn.concepts
+      .map((c, ci) => {
+        const pats = c.text.map((v, vi) => { repl[`cc${ci}_${vi}`] = `%${v}%`; return `:cc${ci}_${vi}`; });
+        return `${hay} ILIKE ANY(ARRAY[${pats.join(",")}]::text[])`;
+      })
+      .join(" AND ");
+  } else {
+    const tokens = tokenize(q).map(stemRu).filter((t) => t.length >= 2);
+    if (!tokens.length) return [];
+    const qf = flipLayout(q);
+    const tokensF = qf ? tokenize(qf).map(stemRu).filter((t) => t.length >= 2) : [];
+    const arr = (toks: string[], pfx: string) =>
+      toks.map((t, i) => { repl[`${pfx}${i}`] = `%${t}%`; return `:${pfx}${i}`; });
+    const pats = arr(tokens, "ct");
+    const patsF = tokensF.length ? arr(tokensF, "cf") : null;
+    cond = `(${hay} ILIKE ALL(ARRAY[${pats.join(",")}]::text[])${patsF ? ` OR ${hay} ILIKE ALL(ARRAY[${patsF.join(",")}]::text[])` : ""})`;
+  }
   const rows = (await sequelize.query(
     `SELECT * FROM (
        SELECT title, slug, excerpt, "coverImageUrl", 'portfolio' AS kind
@@ -248,14 +312,26 @@ async function searchCases(qRaw: string, limit = 6) {
      ) x ORDER BY kind LIMIT :lim`, // kind ASC: portfolio (кейсы) раньше solution
     { type: QueryTypes.SELECT, replacements: repl },
   )) as any[];
-  return rows;
+
+  // Статичные страницы услуг (/solutions/<key>, тексты из apps/web/messages): до 13.10.2026
+  // их в поиске не было вовсе, и «бодикамера» давала кейс без услуги. Кейсы по-прежнему
+  // первыми, но услуга не вытесняется ими целиком: при лимите 2 (подсказки) — кейс + услуга.
+  const shown = new Set(rows.filter((r) => r.kind === "solution").map((r) => LEGACY_SOLUTION_TARGET[r.slug] ?? r.slug));
+  const stat = searchStaticServices(q, syn, Math.min(2, limit), locale).filter((s) => !shown.has(s.slug));
+  if (!stat.length) return rows;
+  const keepDb = Math.max(limit - stat.length, Math.ceil(limit / 2));
+  return [...rows.slice(0, keepDb), ...stat].slice(0, limit);
 }
+
+const LOCALES = new Set(["ru", "uz", "en", "tr", "zh"]);
+const pickLocale = (v: unknown) => (typeof v === "string" && LOCALES.has(v) ? v : undefined);
 
 smartSearchRouter.get("/search-cases", async (req, res) => {
   try {
     const q = typeof req.query.q === "string" ? req.query.q : "";
     if (!q || q.trim().length < 2) return res.json({ cases: [] });
-    res.json({ cases: await searchCases(q) });
+    // locale (необязательно) — язык названий статичных услуг; без него русский + поле loc
+    res.json({ cases: await searchCases(q, 6, pickLocale(req.query.locale)) });
   } catch (e) {
     console.error("search-cases error", e);
     res.json({ cases: [] });
@@ -304,7 +380,7 @@ smartSearchRouter.get("/search-suggest", async (req, res) => {
         `SELECT name, slug FROM brands b WHERE published AND (name ILIKE :like OR name ILIKE :likeF) AND EXISTS (SELECT 1 FROM products p WHERE p."brandId" = b.id AND p.published) ORDER BY "sortOrder" LIMIT 3`,
         { type: QueryTypes.SELECT, replacements: { like, likeF } },
       ),
-      searchCases(q, 2).catch(() => []),
+      searchCases(q, 2, pickLocale(req.query.locale)).catch(() => []),
     ]);
     res.json({ products, types, brands, cases });
   } catch (e) {
@@ -322,6 +398,11 @@ smartSearchRouter.get("/search-smart", async (req, res) => {
   // 1) обычный поиск; ИИ зовём, если СИЛЬНЫХ (по имени/модели) совпадений мало
   const direct = await directSearch(q, limit);
   if (direct.strong >= DIRECT_ENOUGH) {
+    return res.json({ mode: "direct", total: direct.count, items: direct.rows });
+  }
+  // Запрос узнан по синонимам («бодикамера», «нагрудный видеорегистратор») и товары нашлись —
+  // ИИ не зовём: он уводил такие запросы в сетевые регистраторы, и это лишний платный вызов.
+  if (direct.concept && direct.strong > 0) {
     return res.json({ mode: "direct", total: direct.count, items: direct.rows });
   }
 

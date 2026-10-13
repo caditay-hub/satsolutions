@@ -337,6 +337,10 @@
       ],
       "faq": [
         {
+          "q": "Vücut kamerası ile yaka kamerası aynı şey mi?",
+          "a": "Evet, ikisi de aynı cihazın adıdır. «Vücut kamerası» genel terimdir, «yaka kamerası» cihazın göğse ya da yakaya takıldığını vurgular; «giyilebilir kamera» ve «kişisel kamera» ise kameranın tek bir çalışana zimmetlendiğini anlatır. Aksiyon kamerasından farkları: fiziksel kayıt ve SOS tuşları, tüm vardiyaya yeten batarya, dayanıklı gövde ve kayıtların istasyon üzerinden arşive otomatik aktarılması."
+        },
+        {
           "q": "Vücut kamerası tek şarjla ne kadar çalışır?",
           "a": "Modele ve bataryaya bağlıdır. Dahua DH-MPT230, 3200 mAh harici bataryasıyla 10 saate kadar çalışır — bu tam bir vardiyadır. Kamera vardiyalar arasında istasyonda şarj olur, kayıtlar da bu sırada aktarılır."
         },

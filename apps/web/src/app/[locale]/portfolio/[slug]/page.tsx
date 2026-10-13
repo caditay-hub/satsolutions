@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { getPortfolioBySlug, getPortfolioCategories, getProductBySlug, getSitePage } from "@/lib/api";
 import { ProductCard } from "@/components/Cards";
 import { portfolioLinks } from "@/lib/portfolioLinks";
+import { articleBySlug, articleImg } from "@/lib/articlesData";
 import { serviceByKey } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { localizeProductName } from "@/lib/productI18n";
@@ -28,12 +29,12 @@ const DATE_LOCALE: Record<string, string> = {
 
 // Подписи блоков перелинковки (кейс → каталог и услуги). Отдельный словарь, а не
 // messages/*.json: строки нужны только здесь и в 5 локалях сразу.
-const LINK_UI: Record<string, { equipment: string; equipmentHint: string; services: string; all: string; related: string }> = {
-  ru: { equipment: "Оборудование на объекте", equipmentHint: "Позиции того же класса, что применялись на проекте — с актуальными ценами.", services: "Услуги по этому направлению", all: "Весь каталог", related: "Ещё на этом объекте" },
-  uz: { equipment: "Obyektdagi uskunalar", equipmentHint: "Loyihada qo‘llanilgan turdagi pozitsiyalar — dolzarb narxlar bilan.", services: "Ushbu yo‘nalish bo‘yicha xizmatlar", all: "Butun katalog", related: "Ushbu obyektdagi boshqa ishlar" },
-  en: { equipment: "Equipment used on site", equipmentHint: "Same-class items as installed on this project, with current prices.", services: "Related services", all: "Full catalogue", related: "More work on this site" },
-  tr: { equipment: "Sahada kullanılan ekipman", equipmentHint: "Projede kullanılanla aynı sınıftaki ürünler, güncel fiyatlarla.", services: "İlgili hizmetler", all: "Tüm katalog", related: "Bu sahadaki diğer işler" },
-  zh: { equipment: "项目所用设备", equipmentHint: "与本项目同类的产品，价格为最新价。", services: "相关服务", all: "全部产品", related: "该项目的其他工程" },
+const LINK_UI: Record<string, { equipment: string; equipmentHint: string; services: string; all: string; related: string; articles: string }> = {
+  ru: { equipment: "Оборудование на объекте", equipmentHint: "Позиции того же класса, что применялись на проекте — с актуальными ценами.", services: "Услуги по этому направлению", all: "Весь каталог", related: "Ещё на этом объекте", articles: "Статьи по теме" },
+  uz: { equipment: "Obyektdagi uskunalar", equipmentHint: "Loyihada qoʻllanilgan turdagi pozitsiyalar — dolzarb narxlar bilan.", services: "Ushbu yoʻnalish boʻyicha xizmatlar", all: "Butun katalog", related: "Ushbu obyektdagi boshqa ishlar", articles: "Mavzu boʻyicha maqolalar" },
+  en: { equipment: "Equipment used on site", equipmentHint: "Same-class items as installed on this project, with current prices.", services: "Related services", all: "Full catalogue", related: "More work on this site", articles: "Related articles" },
+  tr: { equipment: "Sahada kullanılan ekipman", equipmentHint: "Projede kullanılanla aynı sınıftaki ürünler, güncel fiyatlarla.", services: "İlgili hizmetler", all: "Tüm katalog", related: "Bu sahadaki diğer işler", articles: "İlgili makaleler" },
+  zh: { equipment: "项目所用设备", equipmentHint: "与本项目同类的产品，价格为最新价。", services: "相关服务", all: "全部产品", related: "该项目的其他工程", articles: "相关文章" },
 };
 
 type ContentBlock = { type: "p"; text: string } | { type: "ul"; items: string[] };
@@ -160,6 +161,12 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
     const caseServices = (links?.services ?? [])
       .filter((k) => serviceByKey[k])
       .map((k) => ({ key: k, label: getServiceSeo(locale, k)?.h1 ?? serviceByKey[k].title }));
+    // Статьи по теме кейса (кейс → блог, 13.10.2026): заголовок — из статьи на языке страницы;
+    // статьи без перевода на этот язык не выводим (её страницы на нём нет — была бы 404).
+    const caseArticles = (links?.articles ?? [])
+      .map((s) => articleBySlug[s])
+      .filter((a) => a?.loc[locale])
+      .map((a) => ({ slug: a.slug, title: a.loc[locale].title, excerpt: a.loc[locale].excerpt }));
     const cat = item.portfolioCategoryId
       ? categories.find((c) => c.id === item.portfolioCategoryId)
       : undefined;
@@ -340,6 +347,29 @@ export default async function PortfolioDetailsPage({ params }: { params: Promise
                   className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
                 >
                   {s.label}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {caseArticles.length > 0 && (
+          <section className="mt-10 border-t border-slate-200 pt-6">
+            <p className="text-xs font-black uppercase tracking-widest text-brand-700">{linkUi.articles}</p>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              {caseArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={locPath(locale, `/blog/${a.slug}`)}
+                  className="group flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-3 transition-colors hover:border-brand-300"
+                >
+                  <span className="relative block h-16 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-100">
+                    <Image src={articleImg(a.slug)} alt={a.title} fill sizes="96px" className="object-cover" />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-sm font-bold text-slate-900 group-hover:text-brand-700">{a.title}</span>
+                    {a.excerpt ? <span className="mt-1 line-clamp-2 block text-xs text-slate-600">{a.excerpt}</span> : null}
+                  </span>
                 </Link>
               ))}
             </div>

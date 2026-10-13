@@ -4,15 +4,16 @@ import OVERLAY from "@/data/serviceCaseI18n.json";
 // Решения из таблицы site-БД `services` попадают в поиск (/search-cases) и
 // показываются карточками в каталоге. В БД они только по-русски, поэтому
 // накрываем их оверлеем по slug — так же, как товары и лонгриды категорий.
+// Статичные услуги /solutions/<key> API отдаёт с полем loc — переводами из messages
+// (services.<key>.title/desc) на всех пяти языках; для них оверлей не нужен (13.10.2026).
 type Loc = { title?: string; excerpt?: string };
 const MAP = OVERLAY as Record<string, Record<string, Loc>>;
 
-export function localizeServiceCase<T extends { slug: string; title: string; excerpt?: string | null }>(
-  c: T,
-  locale: string
-): T {
+export function localizeServiceCase<
+  T extends { slug: string; title: string; excerpt?: string | null; loc?: Record<string, Loc> }
+>(c: T, locale: string): T {
   if (locale === routing.defaultLocale) return c;
-  const e = MAP[c.slug]?.[locale];
+  const e = c.loc?.[locale] ?? MAP[c.slug]?.[locale];
   if (!e) return c;
   return {
     ...c,

@@ -8,8 +8,10 @@
 //
 // products — slug'и карточек (проверены в каталоге); services — ключи /solutions/<key>.
 // related — другие кейсы на том же объекте (взаимная ссылка «Ещё на этом объекте»).
+// articles — слаги статей блога (articlesData.ts) для блока «Статьи по теме»; статья без
+// перевода на язык страницы на этом языке не выводится.
 // Если кейса нет в карте, блоки просто не рендерятся.
-export type PortfolioLinks = { products: string[]; services: string[]; related?: string[] };
+export type PortfolioLinks = { products: string[]; services: string[]; related?: string[]; articles?: string[] };
 
 export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
   // ЖК Tower Up: домофония, камеры в лифтах и по периметру, шлагбаумы, парковка
@@ -68,9 +70,11 @@ export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
   // нет — ведём на нательную камеру каталога и на услугу «Боди-камеры» (13.10.2026; до этого здесь
   // стояли ANPR-камера, NVR и диск, к кейсу отношения не имевшие).
   // Первая услуга — основная: /solutions/bodycam показывает этот кейс первым.
+  // Статья «Боди-камеры для бизнеса» написана по опыту этого кейса — ссылка кейс → статья (13.10.2026).
   "sistema-videonablyudeniya-na-bodikamerah-dahua": {
     products: ["hik-ds-mcw406-64g-gps-wifi"],
     services: ["bodycam", "parking", "cctv", "city", "analytics"],
+    articles: ["bodikamery-dlya-biznesa"],
   },
 
   // Завод Damira Beverages: 112 точек СКУД, турникеты, распознавание лиц, ANPR

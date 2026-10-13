@@ -613,3 +613,19 @@ export function serviceForCategory(name: string | null | undefined): ServiceItem
   else if (/коммутатор|маршрутизатор|витая пара|скс|шкаф|кабель/.test(n)) key = "network";
   return key ? serviceByKey[key] ?? null : null;
 }
+
+// Услуга по НАЗВАНИЮ товара — проверяется раньше категории (13.10.2026). Нательная камера
+// Hikvision DS-MCW406 лежит в «Проектном оборудовании», serviceForCategory для неё давал null,
+// и карточка не ссылалась ни на /solutions/bodycam, ни на статьи о боди-камерах. Правила узкие:
+// по всем 3260 товарам каталога на 13.10.2026 под них попадает только DS-MCW406.
+// «Нательный / нагрудный» — только рядом с «камера / (видео)регистратор»: голое «нагрудн»
+// цепляло бы, например, нагрудный микрофон. Первое совпадение выигрывает.
+const SERVICE_BY_NAME: Array<[RegExp, string]> = [
+  [/(?:нательн|нагрудн)[а-яё]*\s+(?:камер|(?:видео)?регистратор)|(?:^|[^а-яё])боди[\s-]?камер|body[\s-]?(?:cam|worn)|\bMCW4\d|\bMPT2\d/i, "bodycam"],
+];
+export function serviceForProductName(name: string | null | undefined): ServiceItem | null {
+  const n = name ?? "";
+  if (!n) return null;
+  const key = SERVICE_BY_NAME.find(([re]) => re.test(n))?.[1];
+  return key ? serviceByKey[key] ?? null : null;
+}

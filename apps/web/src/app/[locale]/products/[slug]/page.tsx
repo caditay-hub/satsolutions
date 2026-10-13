@@ -18,8 +18,9 @@ import { ogLocale } from "@/lib/ogLocale";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { RichDescription } from "@/components/RichDescription";
 import { parseRichDescription } from "@/lib/richDescription";
-import { serviceForCategory } from "@/lib/servicesData";
+import { serviceForCategory, serviceForProductName } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
+import { WorkTerms } from "@/components/WorkTerms";
 import { articlesForService, articlesForProduct } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» (инлайн, как UI-строки блога — не раздуваем messages)
@@ -304,6 +305,12 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     }
     // Крошка бренда: внутри типа (пара) если есть, иначе страница бренда
     const brandCrumbHref = brandInfo ? (pairHref ?? `/catalog/${brandInfo.slug}`) : null;
+
+    // Профильная услуга карточки: сначала по названию товара, потом по категории (13.10.2026).
+    // Нательная камера DS-MCW406 лежит в «Проектном оборудовании» — по категории услуги нет,
+    // по названию это боди-камеры (/solutions/bodycam) и статьи о них.
+    const svcByName = serviceForProductName(product.name);
+    const relSvc = svcByName ?? serviceForCategory(categoryInfo?.name);
 
     const characteristics = localizeCharacteristics(product.id, product.characteristics ?? {}, locale);
     // «Цена» в характеристиках — служебный маркер «по запросу», не показываем в таблице
@@ -703,7 +710,6 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             <RichDescription text={locDescription} />
 
             {(() => {
-              const relSvc = serviceForCategory(categoryInfo?.name);
               if (!relSvc) return null;
               // Анкор — keyword-rich H1 услуги («Установка видеонаблюдения в Ташкенте»),
               // как на страницах каталога (CategoryServiceLink). Карточек товаров 3000+,
@@ -718,7 +724,7 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-100 text-xl">🛠</span>
                   <span className="flex-1">
                     <span className="block text-xs font-bold uppercase tracking-wider text-brand-700">{t("product.turnkey")}</span>
-                    <span className="block text-sm font-semibold text-slate-900">{anchor} — {t("product.designInstall")}</span>
+                    <span className="block text-sm font-semibold text-slate-900">{/[—–]/.test(anchor) ? anchor : `${anchor} — ${t("product.designInstall")}`}</span>
                   </span>
                   <span className="shrink-0 font-bold text-brand-600">→</span>
                 </Link>
@@ -727,7 +733,6 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
 
             {/* Статьи по теме: товар → блог (перелинковка, краулинг статей) */}
             {(() => {
-              const relSvc = serviceForCategory(categoryInfo?.name);
               let arts = articlesForProduct(relSvc?.key, brandInfo?.slug, locale, 3, slug);
               // Узкие сетевые услуги отделены от network 02.10.2026; статей по ним мало
               // (по радиомостам нет вовсе) — тогда показываем сетевые, как раньше
@@ -750,6 +755,11 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
             })()}
           </div>
         </div>
+
+        {/* «Условия работы» (гарантия, свой штат, договор и НДС, лицензии) — общий блок страниц
+            услуг (WorkTerms). На карточке — только когда услуга определена по названию товара
+            (сейчас боди-камера DS-MCW406, 13.10.2026): её берут вместе с внедрением. */}
+        {svcByName && <WorkTerms locale={locale} className="mt-8" />}
 
         {/* Help banner — "Need help choosing?" */}
         <div className="mt-8 rounded-xl bg-gradient-to-br from-red-50 to-orange-50 border border-red-100 p-4 sm:p-6 flex flex-wrap items-center gap-4">

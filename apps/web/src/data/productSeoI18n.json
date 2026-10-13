@@ -24,5 +24,12 @@
     "en": { "title": "Speed Bump Section, Black, 500×350×50 mm — Tashkent", "desc": "Black rubber speed bump section 500×350×50 mm: assembled to any lane width, alternating with yellow sections. A damaged section is replaced on its own." },
     "tr": { "title": "Hız Kesici Modülü, Siyah, 500×350×50 mm — Taşkent", "desc": "Siyah kauçuk hız kesici modülü 500×350×50 mm: şerit genişliğine göre istenen uzunlukta kurulur, sarı modüllerle dönüşümlü dizilir. Hasarlı modül tek başına değiştirilir." },
     "zh": { "title": "减速带模块 黑色 500×350×50 毫米 — 塔什干", "desc": "黑色橡胶减速带模块 500×350×50 毫米：可按车道宽度拼装任意长度，与黄色模块交替排列。损坏的模块可单独更换。" }
+  },
+  "hik-ds-mcw406-64g-gps-wifi": {
+    "ru": { "title": "Боди-камера Hikvision DS-MCW406 2K с GPS — купить в Ташкенте", "desc": "Бодикамера Hikvision DS-MCW406 — нагрудный видеорегистратор 2K: 64 ГБ, GPS, Wi-Fi, ИК до 10 м, IP67." },
+    "uz": { "title": "Bodikamera Hikvision DS-MCW406 2K, GPS — Toshkentda sotib olish", "desc": "Bodikamera (body kamera) Hikvision DS-MCW406: koʻkrakka taqiladigan 2K videoregistrator, 64 GB, GPS, Wi-Fi, IP67." },
+    "en": { "title": "Hikvision DS-MCW406 2K Body Camera with GPS — Buy in Tashkent", "desc": "Hikvision DS-MCW406 bodycam: 2K body-worn video recorder with 64 GB storage, GPS, Wi-Fi, 10 m IR, IP67." },
+    "tr": { "title": "Vücut Kamerası Hikvision DS-MCW406 2K, GPS — Taşkent Fiyatı", "desc": "Hikvision DS-MCW406 yaka kamerası: 2K vücut kamerası, 64 GB bellek, GPS, Wi-Fi, 10 m IR, IP67 koruma." },
+    "zh": { "title": "海康威视 Hikvision DS-MCW406 2K 执法记录仪 — 塔什干价格", "desc": "海康威视 DS-MCW406 执法记录仪：2K 穿戴式摄像机，64 GB 存储，GPS、Wi-Fi，红外 10 m，IP67 防护。" }
   }
 }

@@ -8,11 +8,18 @@
 
 - [Все услуги](https://satsolutions.uz/solutions): монтаж и обслуживание слаботочных систем под ключ
 - [Видеонаблюдение](https://satsolutions.uz/solutions/cctv): установка IP-камер, регистраторов, удалённый просмотр
+- [Видеоаналитика и ИИ](https://satsolutions.uz/solutions/analytics), [распознавание автономеров](https://satsolutions.uz/solutions/anpr): распознавание лиц и номеров, подсчёт людей, въезд и парковки
+- [Боди-камеры для сотрудников](https://satsolutions.uz/solutions/bodycam): нательные видеорегистраторы, док-станции, архив, внедрение; опыт 350 камер
 - [Контроль доступа (СКУД)](https://satsolutions.uz/solutions/access): турникеты, биометрия, карты
+- [Турникеты и проходные](https://satsolutions.uz/solutions/turnstile), [учёт рабочего времени](https://satsolutions.uz/solutions/attendance): биометрия, табель с выгрузкой в 1С
 - [Пожарная сигнализация](https://satsolutions.uz/solutions/fire): проект, монтаж, СОУЭ, гослицензии
+- [Охранные системы для бизнеса](https://satsolutions.uz/solutions/ohrannye-sistemy), [охранная сигнализация для дома](https://satsolutions.uz/solutions/alarm), [периметр](https://satsolutions.uz/solutions/perimeter)
 - [Домофония](https://satsolutions.uz/solutions/intercom)
+- [Шлагбаумы и автоматика](https://satsolutions.uz/solutions/barrier), [умный паркинг](https://satsolutions.uz/solutions/intellektualnoe-upravlenie-parkingom): въезд по номерам, датчики мест, оплата
 - [Сети и СКС](https://satsolutions.uz/solutions/network), [Wi-Fi](https://satsolutions.uz/solutions/wifi), [оптика](https://satsolutions.uz/solutions/fiber)
+- [Серверные и ЦОД](https://satsolutions.uz/solutions/server), [серверы под заказ](https://satsolutions.uz/solutions/servers): стойки, ИБП, охлаждение; H3C UniServer, Supermicro, СХД
 - [Серверы и виртуализация H3C](https://satsolutions.uz/partners/h3c): UniServer, H3C CAS, партнёрство
+- [Слаботочные системы](https://satsolutions.uz/solutions/slabotochnye-sistemy), [проектирование](https://satsolutions.uz/solutions/proektirovanie), [техобслуживание](https://satsolutions.uz/solutions/obsluzhivanie): весь слаботочный контур одним подрядчиком, рабочие проекты по нормам РУз, договор ТО
 
 ## Каталог
 
@@ -23,7 +30,9 @@
 ## Информация
 
 - [Блог](https://satsolutions.uz/blog): как выбрать оборудование, сколько стоит установка — экспертные статьи
+- [Боди-камеры для бизнеса: как выбрать и внедрить](https://satsolutions.uz/blog/bodikamery-dlya-biznesa): выбор камеры, аккумулятор на смену, док-станции, ПО и закон о персональных данных — опыт 350 камер
 - [Портфолио](https://satsolutions.uz/portfolio): реализованные проекты
+- [Кейс: 150 боди-камер Dahua для StreetParking](https://satsolutions.uz/portfolio/sistema-videonablyudeniya-na-bodikamerah-dahua): камеры DH-MPT230, док-станции DH-EEC300D8-N1, платформа DSS Pro
 - [Доставка и оплата](https://satsolutions.uz/delivery): по Ташкенту 1–2 дня, по Узбекистану 2–5 дней
 - [Возврат](https://satsolutions.uz/returns): 14 дней по закону РУз
 - [Контакты](https://satsolutions.uz/contact)

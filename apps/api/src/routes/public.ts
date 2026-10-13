@@ -2,6 +2,7 @@ import { Router } from "express";
 import rateLimit from "express-rate-limit";
 import { Op } from "sequelize";
 import { matchI18nProductIds } from "../lib/productI18nIndex.js";
+import { conceptProductVariants } from "../lib/searchSynonyms.js";
 import { Category } from "../models/Category.js";
 import { Brand } from "../models/Brand.js";
 import { Post } from "../models/Post.js";
@@ -236,6 +237,11 @@ publicRouter.get("/products", async (req, res) => {
     // саджест это умеет через productI18nIndex, полная выдача обязана совпадать с ним
     const i18nIds = matchI18nProductIds(q, 500);
     if (i18nIds.length) or.push({ id: { [Op.in]: i18nIds } });
+    // Синонимы понятий: «бодикамера», «боди камера», «нагрудный видеорегистратор» —
+    // это «Нательный видеорегистратор…» в имени товара (lib/searchSynonyms.ts, 13.10.2026)
+    for (const v of conceptProductVariants(q)) {
+      or.push({ name: { [Op.iLike]: `%${v}%` } }, { modelCode: { [Op.iLike]: `%${v}%` } });
+    }
     where[Op.or] = or;
   }
 
@@ -467,6 +473,12 @@ publicRouter.get("/products", async (req, res) => {
           { modelCode: { [Op.iLike]: `%${q}%` } },
           sequelize.literal(`"Product"."categoryId" IN (SELECT id FROM categories WHERE name ILIKE '%${qOrig}%')`),
           sequelize.literal(`"Product"."brandId" IN (SELECT id FROM brands WHERE published = true AND name ILIKE '%${qOrig}%')`),
+          // нашлось по синониму оригинала («бодикамера») — это не ошибка раскладки,
+          // иначе фронт написал бы «показаны результаты по запросу «,jlbrfvthf»»
+          ...conceptProductVariants(q, { flip: false }).flatMap((v) => [
+            { name: { [Op.iLike]: `%${v}%` } },
+            { modelCode: { [Op.iLike]: `%${v}%` } },
+          ]),
         ],
       },
     });
@@ -550,6 +562,10 @@ publicRouter.get("/product-facets", async (req, res) => {
   if (brandSlugs.length) repl.brandSlugs = brandSlugs;
   if (q) repl.q = `%${q}%`;
   if (qf) repl.qf = `%${qf}%`;
+  // синонимы понятий — те же, что в /products, иначе по «бодикамера» фасеты были бы пустыми
+  const qSyn = q ? conceptProductVariants(q) : [];
+  qSyn.forEach((v, i) => { repl[`qs${i}`] = `%${v}%`; });
+  const qSynSql = qSyn.map((_, i) => ` OR p.name ILIKE :qs${i} OR p."modelCode" ILIKE :qs${i}`).join("");
 
   let usdToUzs = 1;
   try { const site = await SitePage.findOne({ where: { key: "site" } }); usdToUzs = pickRate(site?.data) ?? 1; } catch { /* ignore */ }
@@ -586,7 +602,7 @@ publicRouter.get("/product-facets", async (req, res) => {
     const c = ["p.published = true"];
     if (opts?.type !== false && catIds.length) c.push(`p."categoryId" IN (:catIds)`);
     if (opts?.brand !== false && brandSlugs.length) c.push(`p."brandId" IN (SELECT id FROM brands WHERE published = true AND LOWER(slug) IN (:brandSlugs))`);
-    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q${qf ? ` OR p.name ILIKE :qf OR p."modelCode" ILIKE :qf` : ""})`);
+    if (q) c.push(`(p.name ILIKE :q OR p."modelCode" ILIKE :q${qf ? ` OR p.name ILIKE :qf OR p."modelCode" ILIKE :qf` : ""}${qSynSql})`);
     if (opts?.chars !== false) c.push(...charsExists());
     if (opts?.price !== false) c.push(...priceConds());
     return c.join(" AND ");

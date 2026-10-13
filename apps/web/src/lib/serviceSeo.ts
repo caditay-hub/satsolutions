@@ -12,8 +12,8 @@ export type ServiceSeo = { h1: string; title: string; desc: string };
 const ru: Record<string, ServiceSeo> = {
   bodycam: {
     h1: "Боди-камеры для сотрудников в Ташкенте — поставка и внедрение",
-    title: "Боди-камеры (бодикамеры) для бизнеса — внедрение | SAT",
-    desc: "Нательные камеры Dahua и Hikvision для инспекторов, охраны и парковок: док-станции с автовыгрузкой, архив в Узбекистане, ПО диспетчера. 350 камер у заказчиков.",
+    title: "Боди-камеры (бодикамеры) в Ташкенте — поставка и внедрение | SAT",
+    desc: "Нагрудные видеорегистраторы Dahua и Hikvision для инспекторов, охраны и парковок: док-станции с автовыгрузкой, архив в Узбекистане. 350 камер у заказчиков.",
   },
   "sistemnaya-integraciya": {
     h1: "Системная интеграция в Ташкенте — безопасность и ИТ в одном комплексе",
@@ -248,8 +248,8 @@ const ru: Record<string, ServiceSeo> = {
 const uz: Record<string, ServiceSeo> = {
   bodycam: {
     h1: "Toshkentda xodimlar uchun bodikameralar — yetkazib berish va joriy qilish",
-    title: "Bodikameralar biznes uchun — joriy qilish | SAT",
-    desc: "Inspektorlar, qoʻriqchilar va parkovkalar uchun Dahua va Hikvision bodikameralari: avtomatik koʻchiruvchi dok-stansiyalar, arxiv Oʻzbekistonda, dispetcher dasturi.",
+    title: "Toshkentda bodikameralar — yetkazib berish va joriy qilish | SAT",
+    desc: "Inspektor va qoʻriqchilar uchun Dahua va Hikvision bodikameralari: yozuvlarni oʻzi yuklaydigan dok-stansiyalar, arxiv Oʻzbekistonda. 350 ta kamera ishlamoqda.",
   },
   "sistemnaya-integraciya": {
     h1: "Toshkentda tizimli integratsiya — xavfsizlik va IT yagona kompleksda",
@@ -477,8 +477,8 @@ const uz: Record<string, ServiceSeo> = {
 const en: Record<string, ServiceSeo> = {
   bodycam: {
     h1: "Body cameras for staff in Tashkent — supply and rollout",
-    title: "Body Cameras for Business in Uzbekistan — Rollout | SAT",
-    desc: "Dahua and Hikvision body-worn cameras for inspectors, security and parking: auto-upload docking stations, archive kept in Uzbekistan, dispatcher software.",
+    title: "Body Cameras in Tashkent — Supply and Rollout | SAT",
+    desc: "Dahua and Hikvision body-worn cameras for inspectors, security and parking: auto-upload docking stations, archive kept in Uzbekistan. 350 cameras in use.",
   },
   "sistemnaya-integraciya": {
     h1: "System Integration in Tashkent — Security and IT in One Complex",
@@ -706,8 +706,8 @@ const en: Record<string, ServiceSeo> = {
 const tr: Record<string, ServiceSeo> = {
   bodycam: {
     h1: "Taşkent'te personel için vücut kameraları — tedarik ve kurulum",
-    title: "İşletmeler için Vücut Kameraları — Özbekistan | SAT",
-    desc: "Denetçiler, güvenlik ve otoparklar için Dahua ve Hikvision vücut kameraları: otomatik aktarımlı istasyonlar, Özbekistan'da arşiv, operatör yazılımı.",
+    title: "Taşkent'te Vücut Kameraları — Tedarik ve Kurulum | SAT",
+    desc: "Denetçiler, güvenlik ve otoparklar için Dahua ve Hikvision vücut kameraları: otomatik aktarımlı istasyonlar, Özbekistan'da arşiv. 350 kamera kullanımda.",
   },
   "sistemnaya-integraciya": {
     h1: "Taşkent'te Sistem Entegrasyonu — Güvenlik ve BT Tek Komplekste",
@@ -934,7 +934,7 @@ const tr: Record<string, ServiceSeo> = {
 const zh: Record<string, ServiceSeo> = {
   bodycam: {
     h1: "塔什干员工执法记录仪——供货与部署",
-    title: "企业执法记录仪（随身摄像机）部署 | 乌兹别克斯坦 SAT",
+    title: "塔什干执法记录仪——供货与部署 | SAT",
     desc: "面向稽查、安保和停车场的大华、海康随身执法记录仪：自动上传采集站，档案存放在乌兹别克斯坦，配套调度软件。客户处已有 350 台在用。",
   },
   "sistemnaya-integraciya": {

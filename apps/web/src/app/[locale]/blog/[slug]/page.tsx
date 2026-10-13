@@ -65,6 +65,27 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
   "terminaly-i-schityvateli": { ru: "Терминалы и считыватели", uz: "Terminallar va oʻqigichlar", en: "Terminals and readers", tr: "Terminaller ve okuyucular", zh: "门禁终端与读卡器" },
 };
 
+// Блок «Товар из статьи» (Article.products): прямая ссылка статья → карточка товара.
+// Название задаётся подписью здесь, без запроса к API; слаг без подписи не выводится.
+// Заведено 13.10.2026: из статьи про боди-камеры на единственную нательную камеру
+// каталога не вело ни одной ссылки, товар оставался сиротой.
+const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
+  ru: { head: "Товар из статьи", cta: "Цена и характеристики в каталоге" },
+  uz: { head: "Maqolada tilga olingan mahsulot", cta: "Narxi va xususiyatlari katalogda" },
+  en: { head: "Product from this article", cta: "Price and specifications in the catalog" },
+  tr: { head: "Makalede geçen ürün", cta: "Fiyat ve özellikler katalogda" },
+  zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
+};
+const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "hik-ds-mcw406-64g-gps-wifi": {
+    ru: "Боди-камера (нательный видеорегистратор) Hikvision DS-MCW406/64G/GPS/WIFI",
+    uz: "Bodikamera (tanaga taqiladigan videoregistrator) Hikvision DS-MCW406/64G/GPS/WIFI",
+    en: "Hikvision DS-MCW406/64G/GPS/WIFI body-worn camera",
+    tr: "Hikvision DS-MCW406/64G/GPS/WIFI vücut kamerası (yaka kamerası)",
+    zh: "海康威视 DS-MCW406/64G/GPS/WIFI 执法记录仪",
+  },
+};
+
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 // Формат даты публикации по локалям (Intl хочет BCP-47, у нас коды короткие)
 const DATE_LOCALE: Record<string, string> = { ru: "ru-RU", uz: "uz-UZ", en: "en-US", tr: "tr-TR", zh: "zh-CN" };
@@ -138,6 +159,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
         label: HUB_LABELS[h][locale] ?? HUB_LABELS[h].ru,
       })),
   ];
+
+  const productUi = PRODUCT_UI[locale] ?? PRODUCT_UI.ru;
+  const products = (article.products ?? [])
+    .filter((p) => PRODUCT_LABELS[p])
+    .map((p) => ({ slug: p, label: PRODUCT_LABELS[p][locale] ?? PRODUCT_LABELS[p].ru }));
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -244,6 +270,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
               </section>
             ))}
           </div>
+
+          {/* Товар, о котором говорится в тексте, — сразу после разделов, до FAQ */}
+          {products.length > 0 && (
+            <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
+              <p className="text-[11px] font-black uppercase tracking-widest text-brand-600">{productUi.head}</p>
+              <ul className="mt-3 space-y-3">
+                {products.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/products/${p.slug}`} className="group block">
+                      <span className="block text-sm sm:text-base font-bold leading-snug text-slate-900 group-hover:text-brand-700">{p.label}</span>
+                      <span className="mt-1 block text-xs sm:text-sm font-bold text-brand-700">{productUi.cta} →</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {article.appHref && (
             <InView className="mt-8">
