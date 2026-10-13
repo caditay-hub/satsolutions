@@ -326,8 +326,8 @@
   "services": {
     "bodycam": {
       "title": "Body cameras for staff",
-      "desc": "Body-worn cameras, docking stations and software for field teams: shift recording and an archive with no manual uploads.",
-      "intro": "We supply and roll out body cameras for field staff — inspectors, parking enforcement officers, security guards, couriers. Cameras, docking stations that upload recordings automatically, a video archive on your own server and dispatcher software: 350 Dahua cameras are already in service with our clients.",
+      "desc": "Body cameras, docking stations and software: open recording of the shift, oversight of the work and an archive with automatic upload.",
+      "intro": "We supply and roll out body cameras for staff on duty: inspectors, parking enforcement officers, security guards, couriers, cash-in-transit crews. The camera openly records the whole shift — oversight of the work and protection for the employee against unfounded complaints. Docking stations that upload recordings automatically, an archive on your own server and dispatcher software: 350 Dahua cameras are already in service with our clients.",
       "works": [
         "Camera selection for the task: resolution, full-shift battery, 4G, GPS, IP67/IP68 protection",
         "Sizing docking stations and storage to your headcount and shifts",
