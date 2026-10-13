@@ -327,7 +327,7 @@
     "bodycam": {
       "title": "Xodimlar uchun bodikameralar",
       "desc": "Dala jamoalari uchun tanaga taqiladigan kameralar, dok-stansiyalar va dastur: smena yozuvi va arxiv qoʻlda koʻchirmasdan.",
-      "intro": "Daladagi xodimlar — inspektorlar, parkovka nazoratchilari, qoʻriqchilar, kuryerlar uchun bodikameralarni yetkazib beramiz va joriy qilamiz. Kameralar, yozuvlarni avtomatik koʻchiradigan dok-stansiyalar, sizning serveringizdagi videoarxiv va dispetcher dasturi — mijozlarimizda 300 ta Dahua kamerasi allaqachon ishlamoqda.",
+      "intro": "Daladagi xodimlar — inspektorlar, parkovka nazoratchilari, qoʻriqchilar, kuryerlar uchun bodikameralarni yetkazib beramiz va joriy qilamiz. Kameralar, yozuvlarni avtomatik koʻchiradigan dok-stansiyalar, sizning serveringizdagi videoarxiv va dispetcher dasturi — mijozlarimizda 350 ta Dahua kamerasi allaqachon ishlamoqda.",
       "works": [
         "Vazifaga mos kamera tanlash: ruxsat, smenaga yetadigan akkumulyator, 4G, GPS, IP67/IP68 himoya",
         "Xodimlar va smenalar soniga qarab dok-stansiyalar va xotira hajmini hisoblash",

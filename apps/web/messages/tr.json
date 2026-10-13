@@ -327,7 +327,7 @@
     "bodycam": {
       "title": "Personel için vücut kameraları",
       "desc": "Saha ekipleri için vücut kameraları, yerleştirme istasyonları ve yazılım: vardiya kaydı ve elle aktarım gerektirmeyen arşiv.",
-      "intro": "Sahadaki personel — denetçiler, otopark görevlileri, güvenlik, kuryeler — için vücut kameraları tedarik ediyor ve devreye alıyoruz. Kameralar, kayıtları otomatik aktaran yerleştirme istasyonları, kendi sunucunuzdaki video arşivi ve operatör yazılımı: müşterilerimizde 300 Dahua kamera şu anda çalışıyor.",
+      "intro": "Sahadaki personel — denetçiler, otopark görevlileri, güvenlik, kuryeler — için vücut kameraları tedarik ediyor ve devreye alıyoruz. Kameralar, kayıtları otomatik aktaran yerleştirme istasyonları, kendi sunucunuzdaki video arşivi ve operatör yazılımı: müşterilerimizde 350 Dahua kamera şu anda çalışıyor.",
       "works": [
         "Göreve uygun kamera seçimi: çözünürlük, vardiya boyu batarya, 4G, GPS, IP67/IP68 koruma",
         "Personel ve vardiya sayısına göre istasyon ve depolama hesabı",

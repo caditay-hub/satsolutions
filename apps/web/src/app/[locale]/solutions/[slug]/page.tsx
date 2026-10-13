@@ -59,15 +59,19 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 // вдвое легче, главный блок появляется раньше (AO, 07.10.2026). Нет копии (новая услуга,
 // локальная разработка) — остаётся JPEG, страница не ломается.
 const SERVICES_IMG_DIR = process.env.SERVICES_IMG_DIR || "/var/www/satweb/apps/api/uploads/services-page";
+// Версия медиа услуги в URL: файлы отдаются с кэшем на год, и замена фото под тем же адресом
+// не доходит до браузеров. Меняете фото/ролик услуги — поднимите её номер (13.10.2026).
+const MEDIA_VER: Record<string, number> = { bodycam: 12 };
+const mv = (key: string) => MEDIA_VER[key] ?? 11;
 function heroSrc(key: string) {
   let webp = false;
   try { webp = existsSync(`${SERVICES_IMG_DIR}/${key}.webp`); } catch { webp = false; }
-  return `${IMG_BASE}/${key}.${webp ? "webp" : "jpg"}?v=11`;
+  return `${IMG_BASE}/${key}.${webp ? "webp" : "jpg"}?v=${mv(key)}`;
 }
 // Ролик первого экрана — если рядом с фото лежит <key>.mp4 (и облегчённый <key>-m.mp4 для телефона).
 // Фото остаётся постером и LCP; ролик ложится поверх, только пока блок виден (13.10.2026, bodycam).
 function heroVideo(key: string): string | null {
-  try { return existsSync(`${SERVICES_IMG_DIR}/${key}.mp4`) ? `${IMG_BASE}/${key}.mp4?v=1` : null; } catch { return null; }
+  try { return existsSync(`${SERVICES_IMG_DIR}/${key}.mp4`) ? `${IMG_BASE}/${key}.mp4?v=${mv(key)}` : null; } catch { return null; }
 }
 
 // Подводка абзаца SEO-текста: первое предложение (или часть до двоеточия / тире)
@@ -189,7 +193,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const isInd = svc.group === "industry";
   const isReference = REFERENCE_ONLY.has(svc.key);
   // Отраслевые: первое фото галереи уходит в секцию «Специфика объекта» — в галерее не дублируем
-  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=11`).slice(isInd ? 1 : 0);
+  const gallery = Array.from({ length: svc.gallery }, (_, i) => `${IMG_BASE}/${svc.key}-${i + 1}.jpg?v=${mv(svc.key)}`).slice(isInd ? 1 : 0);
   // Полоса цифр и цветная полоса формы — только на отраслевых (вариант А «журнальный ритм»)
   const tst = isInd ? await getTranslations({ locale, namespace: "industryStats" }) : null;
   const tpf = isInd ? await getTranslations({ locale, namespace: "projectForm" }) : null;
