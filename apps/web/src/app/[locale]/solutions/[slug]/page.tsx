@@ -34,6 +34,7 @@ import { ServiceInstallPrices } from "@/components/ServiceInstallPrices";
 import { installPrices, fmtSum } from "@/lib/installPrices";
 import { fillLiveMins } from "@/lib/typeSeo";
 import { Lightbox } from "@/components/Lightbox";
+import { AutoPlayVideo } from "@/components/AutoPlayVideo";
 import { serviceByKey, SERVICE_FAQ } from "@/lib/servicesData";
 import { getServiceSeo } from "@/lib/serviceSeo";
 import { getServiceContent } from "@/lib/serviceContent";
@@ -62,6 +63,11 @@ function heroSrc(key: string) {
   let webp = false;
   try { webp = existsSync(`${SERVICES_IMG_DIR}/${key}.webp`); } catch { webp = false; }
   return `${IMG_BASE}/${key}.${webp ? "webp" : "jpg"}?v=11`;
+}
+// Ролик первого экрана — если рядом с фото лежит <key>.mp4 (и облегчённый <key>-m.mp4 для телефона).
+// Фото остаётся постером и LCP; ролик ложится поверх, только пока блок виден (13.10.2026, bodycam).
+function heroVideo(key: string): string | null {
+  try { return existsSync(`${SERVICES_IMG_DIR}/${key}.mp4`) ? `${IMG_BASE}/${key}.mp4?v=1` : null; } catch { return null; }
 }
 
 // Подводка абзаца SEO-текста: первое предложение (или часть до двоеточия / тире)
@@ -548,6 +554,9 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                 fetchPriority="high"
                 unoptimized
               />
+              {heroVideo(svc.key) && (
+                <AutoPlayVideo className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden" src={heroVideo(svc.key) as string} />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030e18] via-[#030e18]/55 to-transparent lg:hidden" aria-hidden />
             </div>
             <div className="relative z-10 self-end pb-5 [grid-area:media] lg:self-end lg:pb-0 lg:[grid-area:title]">
