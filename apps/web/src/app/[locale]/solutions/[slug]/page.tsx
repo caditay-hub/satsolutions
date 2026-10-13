@@ -61,7 +61,7 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 const SERVICES_IMG_DIR = process.env.SERVICES_IMG_DIR || "/var/www/satweb/apps/api/uploads/services-page";
 // Версия медиа услуги в URL: файлы отдаются с кэшем на год, и замена фото под тем же адресом
 // не доходит до браузеров. Меняете фото/ролик услуги — поднимите её номер (13.10.2026).
-const MEDIA_VER: Record<string, number> = { bodycam: 12 };
+const MEDIA_VER: Record<string, number> = { bodycam: 13 };
 const mv = (key: string) => MEDIA_VER[key] ?? 11;
 function heroSrc(key: string) {
   let webp = false;
