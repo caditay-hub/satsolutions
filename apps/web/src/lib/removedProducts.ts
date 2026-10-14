@@ -124,6 +124,8 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   "pxt-trb255000000": "/products/type/pxt-switches",
   "pxt-trm250000000": "/products/type/pxt-switches",
   "pxt-tsw10000000": "/products/type/pxt-switches",
+  // Переименован 2026-10-14: кросс на 8 портов настенный IP20, а не уличный.
+  "pxt-odf-kross-ulichnyi-8-port": "/products/pxt-odf-kross-nastennyi-8-port",
   // Удалены 2026-07-01 как непроверённые (нет фото, модель не гуглится, сомнит. цена) → бренд KANIHAD.
   "knd-vi-mt227": "kanihad",
   "knd-vi-hw10": "kanihad",

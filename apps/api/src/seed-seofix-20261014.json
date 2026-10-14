@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "dahua-wbk5-30ac-05p",
+    "id": "6f056fb9-3cd1-40d3-848a-f16de8d862cc",
+    "old": {
+      "seoTitle": "Купить беспроводной мост Dahua WBK5-30AC-05P до 5 км, купить в Ташкенте"
+    },
+    "new": {
+      "seoTitle": "Беспроводной мост Dahua WBK5-30AC-05P до 5 км — купить в Ташкенте"
+    }
+  },
+  {
+    "slug": "dahua-wbk5-45ac-03p",
+    "id": "0374f0ea-fd45-4d0f-8c9a-91499d1e6401",
+    "old": {
+      "seoTitle": "Купить беспроводной мост Dahua WBK5-45AC-03P до 3 км, купить в Ташкенте"
+    },
+    "new": {
+      "seoTitle": "Беспроводной мост Dahua WBK5-45AC-03P до 3 км — купить в Ташкенте"
+    }
+  },
+  {
+    "slug": "dahua-wbk5-90ac-01p",
+    "id": "a9fceea4-9433-4afd-8126-e2805468258b",
+    "old": {
+      "seoTitle": "Купить беспроводной мост Dahua WBK5-90AC-01P до 1 км, купить в Ташкенте"
+    },
+    "new": {
+      "seoTitle": "Беспроводной мост Dahua WBK5-90AC-01P до 1 км — купить в Ташкенте"
+    }
+  },
+  {
+    "slug": "hik-ds-2cd1047g3-liuf-2-8mm",
+    "id": "282e0a6d-5cc9-4a44-8d3d-1987bae963ed",
+    "old": {
+      "seoTitle": "DS-2CD1047G3-LIUF — купить камеру 4МП Hikvision, купить в Ташкенте"
+    },
+    "new": {
+      "seoTitle": "DS-2CD1047G3-LIUF — камера 4 Мп Hikvision, купить в Ташкенте"
+    }
+  },
+  {
+    "slug": "pxt-odf-kross-ulichnyi-8-port",
+    "id": "5b57e33a-0d4e-40ae-b800-3c8800c58d49",
+    "old": {
+      "slug": "pxt-odf-kross-ulichnyi-8-port",
+      "modelCode": "ODF kross Уличный 8 port"
+    },
+    "new": {
+      "slug": "pxt-odf-kross-nastennyi-8-port",
+      "modelCode": "ODF kross Настенный 8 port"
+    }
+  }
+]
