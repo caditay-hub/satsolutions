@@ -88,6 +88,8 @@ const nextConfig = {
       // Точечные маппинги URL, которые ДО СИХ ПОР ранжируются (из GSC 14.07) — ВЫШЕ общих правил:
       { source: "/category/sistemy_videonablyudeniya", destination: "/products/group/videonablyudenie", permanent: true },
       { source: "/category/sistemy_hraneniya_dannyh", destination: "/products/type/servernoe-oborudovanie", permanent: true },
+      // старый раздел шлагбаумов ещё в выдаче («шлагбаум с камерой», поз. 10) — в раздел, а не в общий каталог (14.10.2026)
+      { source: "/category/dlia_slagbaumov_27", destination: "/products/type/shlagbaumy", permanent: true },
       { source: "/en/product/show/:slug(kamera-videonabliudeniia-hikvision-ds-2cd1083g2-liu.*)", destination: "/products/hik-ds-2cd1083g2-liu-2-8mm", permanent: true },
       { source: "/product/show/:slug(kamera-videonabliudeniia-hikvision-ds-2cd1083g2-liu.*)", destination: "/products/hik-ds-2cd1083g2-liu-2-8mm", permanent: true },
       { source: "/public/en/product/show/:slug(videoregistrator-dhi-nvr1108hs-s3h.*)", destination: "/products/dahua-dhi-nvr1108hs-s3-h", permanent: true },

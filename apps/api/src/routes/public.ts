@@ -424,6 +424,11 @@ publicRouter.get("/products", async (req, res) => {
     where[Op.and] = [...(Array.isArray(where[Op.and]) ? where[Op.and] : []), ...conds];
   }
 
+  // Аксессуары к основным товарам раздела (стрелы и пульты шлагбаумов, створки турникетов).
+  // Регистрозависимо (~), чтобы не зависеть от локали БД для кириллицы.
+  const accessoryLastExpr = sequelize.literal(
+    `CASE WHEN "Product"."name" ~ '^(Стрела шлагбаума|Пульт для шлагбаума|Пульт управления шлагбаумом|Плата при[её]мника|Радар обнаружения (движения|транспорта)|Антипадающий радар|Детектор транспорта|Индуктивная петля|Модуль управления шлагбаумом|Створки для турникета)' THEN 1 ELSE 0 END`
+  );
   // Category lookup expression (for grouping products by category in default sort)
   const categoryNameExpr = sequelize.literal(
     `(SELECT name FROM categories WHERE id = "Product"."categoryId")`
@@ -444,8 +449,11 @@ publicRouter.get("/products", async (req, res) => {
                 // по дате ДОБАВЛЕНИЯ: правка цены/описания (updatedAt) не должна
                 // поднимать старый товар в «Новинки»
                 ? [["createdAt", "DESC"]]
-                // default: by category, then by name — logical grouping
-                : [[categoryNameExpr, "ASC"], ["name", "ASC"]];
+                // default: by category, then by name — logical grouping.
+                // Внутри раздела аксессуары — после основных товаров: в «Шлагбаумах» по алфавиту
+                // первыми шли радары, петли и пульты, а настоящие шлагбаумы — с 20-й позиции
+                // (реклама и поиск приводят сюда за шлагбаумом; разбор 14.10.2026).
+                : [[categoryNameExpr, "ASC"], [accessoryLastExpr, "ASC"], ["name", "ASC"]];
   // Последний ключ — id: у товаров с одинаковой ценой/датой загрузки (партии)/названием
   // порядок иначе случайный, и при выдаче порциями (каталог подгружается при прокрутке,
   // 07.10.2026) товары повторялись на соседних страницах или пропадали.

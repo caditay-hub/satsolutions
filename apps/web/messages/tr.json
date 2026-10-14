@@ -1541,20 +1541,36 @@
         "Otomasyon ve güvenlik fotoseli montajı",
         "Kontrol ve kumanda ayarı",
         "ANPR ve geçiş kontrolü entegrasyonu",
-        "Devreye alma ve bakım"
+        "Devreye alma ve personel eğitimi"
       ],
       "faq": [
         {
+          "q": "Kurulum dahil bariyer ne kadar?",
+          "a": "Kurulum ve ayar 1.500.000 UZS'den başlar. Bariyerin kendisi katalog fiyatındadır: avlu için temel modelden yoğun girişler için hızlı modellere kadar. Direk altı temel, kablo döşeme ve endüksiyon döngüsü sahaya göre hesaplanır; fiyatlı teklifi bir iş günü içinde gönderiyoruz."
+        },
+        {
           "q": "Hangi bariyerleri kuruyorsunuz?",
-          "a": "Otopark ve girişler için çeşitli kol uzunluklarında ve yoğunluk sınıflarında otomatik bariyerler — trafiğe göre seçiyoruz."
+          "a": "3–6 m kollu Hikvision, ZKTeco, Dahua ve KANIHAD bariyerler: avlular için konut tipi, siteler, iş merkezleri ve fabrika girişleri için yoğun kullanım modelleri. Geçiş genişliğine ve günlük araç sayısına göre seçiyoruz."
         },
         {
-          "q": "Plakaya göre açılabilir mi?",
-          "a": "Evet, plaka tanıma (ANPR) ve geçiş kontrolle entegre ederek otomatik geçiş sağlıyoruz."
+          "q": "Kurulum ne kadar sürer?",
+          "a": "Standart bir giriş 1 gün sürer: direk, kol, bağlantı ve kumanda ayarı. Plaka tanımalı site veya iş merkezi otoparkı 1–3 gün, fabrika girişi projeye göre planlanır."
         },
         {
-          "q": "Kumanda ve kontrol nasıl?",
-          "a": "Kumanda, kart, buton, mobil uygulama ve beyaz listeye göre otomatik kontrol mümkündür."
+          "q": "Bariyer plakaya göre açılabilir mi?",
+          "a": "Evet: plaka tanıma (ANPR) kamerası kurup geçiş kontrolüne bağlıyoruz — beyaz listedeki araçlar durmadan girer, her geçiş fotoğrafla kayda geçer."
+        },
+        {
+          "q": "Bariyer başka nasıl kontrol edilir?",
+          "a": "Kumanda, kart veya anahtarlık, güvenlik kulübesindeki buton, Wi-Fi modülüyle telefondan ve misafirler için QR kodla."
+        },
+        {
+          "q": "Elektrik kesilirse ne olur?",
+          "a": "Kol, kilit açma anahtarıyla elle kaldırılabilir; kesintisiz çalışma için akü veya UPS takıyoruz, bariyer elektrik olmadan da açılmaya devam eder."
+        },
+        {
+          "q": "Garanti nedir?",
+          "a": "Ekipmanda üreticinin resmi garantisi, işçilikte 3 yıl."
         }
       ],
       "details": {
@@ -1616,7 +1632,7 @@
             "s": "kumandalar, kartlar, plaka tanıma, geçiş yetkileri"
           },
           {
-            "t": "Teslim ve servis",
+            "t": "Teslim",
             "s": "güvenlik ekibini eğitiyoruz; ekipman ve işçilik garantili"
           }
         ],

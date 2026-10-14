@@ -88,7 +88,9 @@ export async function ServicePackages({ k, locale }: { k: string; locale: string
         <div className="mt-12">
           <p className="text-xs font-black uppercase tracking-widest text-brand-700">{ts(`${k}.details.brandsLabel`)}</p>
           <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts(`${k}.details.brandsTitle`)}</h2>
-          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{brandsText}</p>
+          {/* тексты во всех 42 услугах ×5 заканчиваются двоеточием под список брендов, которого
+              в блоке нет — текст обрывался на «…с гарантией:» (14.10.2026) */}
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{brandsText.replace(/\s*([:：])\s*$/, (_, c) => (c === "：" ? "。" : "."))}</p>
         </div>
       ) : null}
     </div>

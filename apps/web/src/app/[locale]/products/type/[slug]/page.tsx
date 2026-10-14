@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { getCategories, getProductFacets } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
-import { typeSeoFor, typeLandingFor, needsPrices, fillPrices, type PriceRange } from "@/lib/typeSeo";
+import { typeSeoFor, typeH1For, typeLandingFor, needsPrices, fillPrices, type PriceRange } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
 import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { deadTypeTarget } from "@/lib/deadCategories";
@@ -114,6 +114,7 @@ export default async function ProductTypePage({ params, searchParams }: { params
     listPath: `/products/type/${slug}`,
     listFixed: ["type"],
     pathType: name, // тип закодирован в ПУТИ — отдаём фильтру, чтобы «Тип» был отмечен и работал
+    typeH1: typeH1For(slug, locale),
     pairSeo: landing
       ? {
           heading: localizeCatName(name, locale),

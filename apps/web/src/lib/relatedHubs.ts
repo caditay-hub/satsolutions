@@ -16,8 +16,13 @@ export const HUB_LABELS: Record<string, L5> = {
   "/products/type/ip-videoregistratory-nvr": { ru: "IP-видеорегистраторы (NVR)", uz: "IP-videoregistratorlar (NVR)", en: "IP recorders (NVR)", tr: "IP kayıt cihazları (NVR)", zh: "网络录像机（NVR）" },
   "/products/type/videoregistratory-dvr": { ru: "Видеорегистраторы DVR для аналоговых камер", uz: "Analog kameralar uchun DVR videoregistratorlar", en: "DVR recorders for analog cameras", tr: "Analog kameralar için DVR kayıt cihazları", zh: "模拟摄像机用DVR录像机" },
   "/products/type/ptz-kamery": { ru: "PTZ-камеры", uz: "PTZ-kameralar", en: "PTZ cameras", tr: "PTZ kameralar", zh: "PTZ云台摄像机" },
-  "/products/type/turnikety-i-shlagbaumy": { ru: "Турникеты и шлагбаумы", uz: "Turniketlar va shlagbaumlar", en: "Turnstiles and barriers", tr: "Turnikeler ve bariyerler", zh: "闸机与道闸" },
+  // раздел с 09.10.2026 только про турникеты (название — catalogI18n, 14.10.2026)
+  "/products/type/turnikety-i-shlagbaumy": { ru: "Турникеты", uz: "Turniketlar", en: "Turnstiles", tr: "Turnikeler", zh: "闸机" },
   "/products/type/shlagbaumy": { ru: "Шлагбаумы", uz: "Shlagbaumlar", en: "Barrier gates", tr: "Bariyerler", zh: "道闸" },
+  // шлагбаумы по брендам: страницы Hikvision и Dahua Google не знал — на них была одна ссылка (14.10.2026)
+  "/catalog/hikvision/shlagbaumy": { ru: "Шлагбаумы Hikvision", uz: "Hikvision shlagbaumlari", en: "Hikvision barrier gates", tr: "Hikvision bariyerleri", zh: "海康威视道闸" },
+  "/catalog/zkteco/shlagbaumy": { ru: "Шлагбаумы ZKTeco", uz: "ZKTeco shlagbaumlari", en: "ZKTeco barrier gates", tr: "ZKTeco bariyerleri", zh: "中控智慧道闸" },
+  "/catalog/dahua/shlagbaumy": { ru: "Шлагбаумы Dahua", uz: "Dahua shlagbaumlari", en: "Dahua barrier gates", tr: "Dahua bariyerleri", zh: "大华道闸" },
   "/products/type/zamki-i-skud": { ru: "Замки для СКУД", uz: "Kirish nazorati qulflari", en: "Access control locks", tr: "Geçiş kontrol kilitleri", zh: "门禁电锁" },
   "/products/type/terminaly-i-schityvateli": { ru: "Терминалы и считыватели", uz: "Terminallar va oʻquvchilar", en: "Terminals and readers", tr: "Terminaller ve okuyucular", zh: "门禁终端与读卡器" },
   "/products/type/kommutatory": { ru: "Коммутаторы", uz: "Kommutatorlar", en: "Network switches", tr: "Ağ anahtarları", zh: "交换机" },
@@ -42,7 +47,7 @@ export const RELATED_HUBS: Record<string, string[]> = {
   "/solutions/network": ["/products/group/setevoe-oborudovanie", "/products/type/kommutatory", "/catalog/mikrotik", "/catalog/tplink"],
   "/solutions/access": ["/products/group/kontrol-dostupa", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/products/type/turnikety-i-shlagbaumy", "/products/type/shlagbaumy", "/catalog/zkteco"],
   "/solutions/turnstile": ["/products/type/turnikety-i-shlagbaumy", "/products/group/kontrol-dostupa", "/catalog/zkteco"],
-  "/solutions/barrier": ["/products/type/shlagbaumy", "/catalog/hikvision", "/catalog/zkteco"],
+  "/solutions/barrier": ["/products/type/shlagbaumy", "/catalog/hikvision/shlagbaumy", "/catalog/zkteco/shlagbaumy", "/catalog/dahua/shlagbaumy"],
   // Раздел «Шлагбаумы» выделен 09.10.2026 (880 + 390 запросов в месяц) — ссылки со смежных
   // услуг въезда: распознавание номеров, парковка, ворота (10.10.2026)
   "/solutions/anpr": ["/products/type/shlagbaumy", "/products/type/ip-kamery", "/catalog/hikvision"],
@@ -56,13 +61,16 @@ export const RELATED_HUBS: Record<string, string[]> = {
   "/products/type/ip-videoregistratory-nvr": ["/products/type/ip-kamery", "/products/type/videoregistratory-dvr", "/catalog/hikvision", "/catalog/dahua"],
   "/products/type/videoregistratory-dvr": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/catalog/hikvision", "/catalog/dahua"],
   "/products/type/turnikety-i-shlagbaumy": ["/products/type/shlagbaumy", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/catalog/zkteco"],
-  "/products/type/shlagbaumy": ["/products/type/turnikety-i-shlagbaumy", "/catalog/hikvision", "/catalog/zkteco", "/catalog/dahua"],
+  "/products/type/shlagbaumy": ["/catalog/hikvision/shlagbaumy", "/catalog/zkteco/shlagbaumy", "/catalog/dahua/shlagbaumy", "/products/type/turnikety-i-shlagbaumy"],
   "/products/type/zamki-i-skud": ["/products/type/terminaly-i-schityvateli", "/products/type/turnikety-i-shlagbaumy"],
   "/products/type/kommutatory": ["/products/group/setevoe-oborudovanie", "/catalog/mikrotik", "/catalog/tplink"],
   "/catalog/rubezh": ["/catalog/bolid", "/products/group/ohranno-pozharnaya"],
   "/catalog/bolid": ["/catalog/rubezh", "/products/group/ohranno-pozharnaya"],
   "/catalog/mercusys": ["/products/group/setevoe-oborudovanie", "/catalog/tplink"],
   "/catalog/hilook": ["/products/type/ip-kamery", "/catalog/hikvision"],
+  "/catalog/hikvision": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/catalog/hikvision/shlagbaumy"],
+  "/catalog/dahua": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/catalog/dahua/shlagbaumy"],
+  "/catalog/zkteco": ["/catalog/zkteco/shlagbaumy", "/products/type/turnikety-i-shlagbaumy", "/products/type/terminaly-i-schityvateli"],
 };
 
 export function relatedHubsFor(path: string, locale: string): { href: string; label: string }[] {

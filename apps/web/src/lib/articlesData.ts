@@ -4523,7 +4523,7 @@ export const ARTICLES: Article[] = [
         sections: [
           { h: "Narx nimadan yigʻiladi", p: [
             "Qoʻriqlash signalizatsiyasi smetasi — toʻrt qism: nazorat paneli (tizim miyasi), datchiklar (harakat, ochilish, oyna sinishi), ogohlantirish (sirena, ilova, xohishga qarab qoʻriqlash pulti) va montaj. Panel va datchiklar — uskuna narxining asosiy qismi.",
-            "Bosh tanlov — simli yoki simsiz tizim. Simsiz temir boʻyicha qimmatroq, lekin shtrobsiz yarim kunda oʻrnatiladi: tayyor taʼmir uchun deyarli doim foydaliroq. Simli uskunada arzonroq va batareykalar boʻyicha abadiy, lekin kabel yotqizishni talab qiladi — uni taʼmir bosqichida qoʻyishadi.",
+            "Bosh tanlov — simli yoki simsiz tizim. Simsiz temir boʻyicha qimmatroq, lekin shtrobsiz yarim kunda oʻrnatiladi: tayyor taʼmir uchun deyarli doim foydaliroq. Simli uskunada arzonroq va batareyalar boʻyicha abadiy, lekin kabel yotqizishni talab qiladi — uni taʼmir bosqichida qoʻyishadi.",
           ] },
           { h: "Kvartira va uy", p: [
             "Kvartira uchun bazaviy toʻplam: panel, ikki-uchta harakat datchigi, kirish eshigiga ochilish datchiklari, sirena. Boshqaruv — brelokdan yoki ilovadan, trevoga bildirishnomalari telefonga keladi. Katalog boʻyicha pulda bu shunday koʻrinadi: tayyor komplekt Hikvision AX PRO DS-PWA64-Kit-WB — 2 189 900 soʻm. Xuddi shu funksiyalarni donalab yigʻish qimmatroq tushadi: DS-PWA64-L-WB xabi — 1 335 900 soʻm, simsiz harakat datchigi DS-PDC15-EG2-WB — 395 900 soʻm, magnit ochilish datchigi DS-PDMCS-EG2-WB — 197 900 soʻm, koʻcha sirenasi DS-PS1-E-WB — 791 900 soʻm, brelok DS-PT-M1 — 30 890 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -5295,16 +5295,16 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-dlya-dvora-i-parkovki",
     date: "2026-08-31",
-    updated: "2026-09-09",
+    updated: "2026-10-14",
     related: ["barrier", "parking"],
     hubs: ["shlagbaumy"],
     loc: {
       ru: {
-        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для двора и парковки: виды, автоматика, цена",
+        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для парковки и двора: виды, автоматика, цена",
         excerpt: "Стрела на 3–6 метров, интенсивность, управление с пульта, телефона или по номеру машины: разбираем, какой шлагбаум подходит двору, офису и ТЦ, и что входит в честную смету.",
-        sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, гарантия и сервис. Пришлите фото и ширину проезда — на заявку отвечаем в течение рабочего дня."] },  { h: "Монтаж, зима и обслуживание", p: [
+        sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, с гарантией. Пришлите фото и ширину проезда — на заявку отвечаем в течение рабочего дня."] },  { h: "Монтаж, зима и обслуживание", p: [
             "Правильный монтаж — половина срока службы: фундамент или закладная под тумбу, фотоэлементы и петлевой детектор, чтобы стрела никогда не опустилась на автомобиль, заземление и аккуратная подводка питания. Для двора с постоянным потоком берите интенсивный привод: бытовой на тысячах циклов в день живёт один сезон.",
-            "Зимой шлагбаум сдаёт экзамен: плавный старт не даёт рвать примёрзшую стрелу, а сезонная смазка сохраняет механику. Зимние режимы настраиваем при установке, а по договору обслуживаем шлагбаумы, которые смонтировали сами: смазка, регулировки, батарейки в пультах и фотоэлементах.",
+            "Зимой шлагбаум сдаёт экзамен: плавный старт не даёт рвать примёрзшую стрелу, а сезонная смазка сохраняет механику. Зимние режимы настраиваем при установке, а дальше шлагбауму нужны сезонная смазка, регулировки и свежие батарейки в пультах и фотоэлементах.",
           ] },
           { h: "Безопасность проезда и защита от удара", p: [
             "Стрела опускается на движущийся автомобиль, если нет фотоэлементов или индуктивной петли. Фотоэлементы ставят по обе стороны проезда на высоте 50–60 см, петлю закладывают в асфальт до укладки верхнего слоя — переделка потом обходится дороже самого шлагбаума.",
@@ -5314,11 +5314,11 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
       uz: {
-        title: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Hovli va parkovka uchun shlagbaum: turlari, avtomatika, narxi",
+        title: "Hovli va avtoturargoh uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Avtoturargoh va hovli uchun shlagbaum: turlari, avtomatika, narxi",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini koʻrib chiqamiz.",
-        sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va zakladnoylar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish, kafolat va servis. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
-            "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki zakladnoy, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va petlevoy detektor, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
-            "Qishda shlagbaum imtihon topshiradi: silliq start muzlagan strelani yulishga yoʻl qoʻymaydi, mavsumiy moy mexanikani saqlaydi. Qishki rejimlarni oʻrnatish paytida sozlaymiz, shartnoma boʻyicha esa oʻzimiz montaj qilgan shlagbaumlarga xizmat koʻrsatamiz: moylash, sozlashlar, pult va fotoelement batareykalari.",
+        sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va oʻrnatma detallar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish va kafolat. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
+            "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki oʻrnatma detal, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va induksion halqa detektori, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
+            "Qishda shlagbaum imtihon topshiradi: silliq start muzlagan strelani yulishga yoʻl qoʻymaydi, mavsumiy moy mexanikani saqlaydi. Qishki rejimlarni oʻrnatish paytida sozlaymiz, keyin esa shlagbaumga mavsumiy moylash, sozlash hamda pult va fotoelementlarga yangi batareya kerak boʻladi.",
           ] },
           { h: "Xavfsiz oʻtish va urilishdan himoya", p: [
             "Fotoelementlar yoki induktiv halqa boʻlmasa, strela harakatdagi avtomobil ustiga tushadi. Fotoelementlar oʻtish yoʻlining ikki tomoniga 50–60 sm balandlikda oʻrnatiladi, halqa esa asfaltning ustki qatlami yotqizilishidan oldin joylanadi — keyin qayta qilish shlagbaumning oʻzidan qimmatga tushadi.",
@@ -5328,11 +5328,11 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Shlagbaum oʻrnatish bilan qancha turadi?", a: "Strela uzunligi, privod intensivligi va boshqaruv usuliga bogʻliq: hovli uchun bazaviy toʻplam arzonroq, ANPR li intensiv qimmatroq. Muhandis chiqishi va smeta bepul." }, { q: "Svet oʻchganda nima qilish kerak?", a: "Privodlarda qoʻlda ochish bor — strela kalit bilan koʻtariladi. Yaxshisi kichik UPS qoʻying: shlagbaum oʻchishlarni yashovchilar ishtirokisiz oʻtkazadi." }, { q: "Hovlida shlagbaumni kelishish kerakmi?", a: "Koʻp kvartirali uy hovlisi uchun mulkdorlar qarori va tuman xizmatlari bilan kelishuv kerak — maxsus texnika oʻtishi saqlanishi shart. Kelishuv uchun oʻrnatish sxemasini tayyorlashda yordam beramiz." }],
       },
       en: {
-        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes", seoTitle: "Barrier gate for a yard or car park: types, automation, price",
+        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes", seoTitle: "Barrier gate for a car park or yard: types, automation, price",
         excerpt: "A 3–6 m boom, duty cycle, control by remote, phone or plate recognition: which barrier fits a yard, an office or a mall, and what belongs in an honest estimate.",
-        sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty and service. Send a photo and the opening width — we reply to requests within the working day."] },  { h: "Installation, winter and service", p: [
+        sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty. Send a photo and the opening width — we reply to requests within the working day."] },  { h: "Installation, winter and service", p: [
             "Proper installation is half the lifespan: a foundation or embed under the cabinet, photocells and a loop detector so the boom never drops onto a car, earthing and neat power routing. For a yard with constant flow take an intensive drive: a domestic one at thousands of cycles a day lasts one season.",
-            "In winter the barrier sits its exam: a soft start keeps it from tearing a frozen boom, and seasonal grease preserves the mechanics. We configure winter modes at installation, and under contract we service the barriers we installed ourselves: lubrication, adjustments, batteries in remotes and photocells.",
+            "In winter the barrier sits its exam: a soft start keeps it from tearing a frozen boom, and seasonal grease preserves the mechanics. We configure winter modes at installation; after that a barrier needs seasonal lubrication, adjustments and fresh batteries in remotes and photocells.",
           ] },
           { h: "Safety devices and impact protection", p: [
             "Without photocells or an induction loop the boom will drop onto a moving car. Photocells go on both sides of the lane at a height of 50–60 cm, and the loop is set into the asphalt before the top layer is laid — redoing it later costs more than the barrier itself.",
@@ -5342,11 +5342,11 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "How much is a barrier with installation?", a: "It depends on boom length, drive duty and the control method: a base yard kit costs less, an intensive ANPR setup more. The engineer visit and the estimate are free." }, { q: "What happens during a power cut?", a: "Drives have a manual release — the boom lifts with a key. Better, add a small UPS so the barrier rides through outages on its own." }, { q: "Does a residential yard barrier need approvals?", a: "A block-of-flats yard needs an owners' decision and district approvals — emergency vehicle access must remain. We help prepare the installation scheme for approval." }],
       },
       tr: {
-        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir", seoTitle: "Avlu ve otopark için bariyer: tipler, otomasyon, fiyat",
+        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir", seoTitle: "Otopark ve avlu için bariyer: tipler, otomasyon, fiyat",
         excerpt: "3–6 m kol, kullanım yoğunluğu, kumanda, telefon veya plaka tanımayla kontrol: avluya, ofise ve AVM'ye hangi bariyer uyar, dürüst teklif neleri kapsar.",
-        sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garanti ve servisle. Fotoğraf ve açıklık genişliğini gönderin — taleplere iş günü içinde dönüş yaparız."] },  { h: "Montaj, kış ve bakım", p: [
+        sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garantiyle. Fotoğraf ve açıklık genişliğini gönderin — taleplere iş günü içinde dönüş yaparız."] },  { h: "Montaj, kış ve bakım", p: [
             "Doğru montaj ömrün yarısıdır: gövde altına temel veya ankraj, kolun asla araca inmemesi için fotoseller ve loop dedektörü, topraklama ve düzenli güç hattı. Sürekli akışlı avluya yoğun tip motor alın: günde binlerce çevrimde ev tipi bir sezon dayanır.",
-            "Kışın bariyer sınava girer: yumuşak kalkış donmuş kolu koparmayı önler, mevsimlik gres mekaniği korur. Kış modlarını kurulumda ayarlarız; sözleşmeyle ise kendi kurduğumuz bariyerlerin bakımını yaparız: yağlama, ayarlar, kumanda ve fotosel pilleri.",
+            "Kışın bariyer sınava girer: yumuşak kalkış donmuş kolu koparmayı önler, mevsimlik gres mekaniği korur. Kış modlarını kurulumda ayarlarız; sonrasında bariyerin mevsimlik yağlamaya, ayara ve kumanda ile fotosellerde yeni pillere ihtiyacı olur.",
           ] },
           { h: "Geçiş güvenliği ve çarpma koruması", p: [
             "Fotosel veya indüktif loop yoksa kol hareket hâlindeki aracın üzerine iner. Fotoseller geçiş yolunun iki yanına 50–60 cm yükseklikte konur, loop ise asfaltın üst tabakası serilmeden önce yerleştirilir; sonradan yapılan düzeltme bariyerin kendisinden pahalıya gelir.",
@@ -5358,9 +5358,9 @@ export const ARTICLES: Article[] = [
       zh: {
         title: "塔什干小区与停车场道闸：类型、自动化与价格构成",
         excerpt: "3–6米栏杆、使用强度、遥控/电话/车牌识别控制：哪种道闸适合小区、写字楼和商场，一份实在的报价应包含什么。",
-        sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修与维保。发来现场照片和通道宽度——收到需求会在一个工作日内答复。"] },  { h: "安装、过冬与维保", p: [
+        sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修。发来现场照片和通道宽度——收到需求会在一个工作日内答复。"] },  { h: "安装、过冬与维保", p: [
             "正确的安装占寿命的一半：机箱下打基础或预埋，红外对射加地感线圈保证闸杆永不砸车，接地和规整的供电走线。车流不断的院区要选重载电机：家用型每天数千次循环只能撑一季。",
-            "冬天是道闸的考场：缓启动避免硬拽冻住的闸杆，换季润滑保护机械。冬季模式在安装时调好；按合同维保的，是我们自己安装的道闸：润滑、调校、更换遥控器和对射的电池。",
+            "冬天是道闸的考场：缓启动避免硬拽冻住的闸杆，换季润滑保护机械。冬季模式在安装时调好；之后道闸需要季节性润滑、调校，并更换遥控器和对射的电池。",
           ] },
           { h: "通行安全与防砸保护", p: [
             "没有红外对射或地感线圈，闸杆会砸在正在通行的车上。对射探头装在车道两侧、离地50–60厘米处，地感线圈要在沥青面层摊铺之前埋设——事后返工的花费会超过道闸本身。",
@@ -6210,7 +6210,7 @@ export const ARTICLES: Article[] = [
             "Asosiy qiymat «kartali eshik»da emas, boshqariluvchanlikda: kirish zonalar va jadval boʻyicha sozlanadi. Buxgalteriya oʻzinikilarga 8 dan 20 gacha ochiq, ombor — faqat omborchilarga, serverxona — ikki adminga. Xodim ketdi — ruxsatnomasi bir tugma bilan bloklanadi, mexanik kalitlar dunyosidagidek qulflarni almashtirish shart emas.",
           ] },
           { h: "Tizim nimalardan iborat", p: [
-            "Bitta eshikka minimal tarkib: kontroller (tizim miyasi), eshik yonidagi oʻqigich, elektromagnit yoki elektromexanik qulf, chiqish tugmasi, dovodchik va zaxira akkumulyatorli quvvat bloki — eshik svet oʻchganda ham ishlashi uchun. Prohodnayada qulf oʻrniga turniket, kirishda shlagbaum turadi.",
+            "Bitta eshikka minimal tarkib: kontroller (tizim miyasi), eshik yonidagi oʻqigich, elektromagnit yoki elektromexanik qulf, chiqish tugmasi, dovodchik va zaxira akkumulyatorli quvvat bloki — eshik svet oʻchganda ham ishlashi uchun. Oʻtkazish punktida qulf oʻrniga turniket, kirishda shlagbaum turadi.",
             "Keyin tizim yadroni almashtirmasdan oʻsadi: tarmoq kontrollerlari oʻnlab eshiklarni umumiy jurnalli bitta bazaga birlashtiradi, dastur huquqlarni guruhlar boʻyicha beradi, mehmonlarga vaqtinchalik ruxsatnomalar yoziladi. Uy yoki kichik ofisga umuman kompyutersiz avtonom toʻplam yetarli boʻlishi mumkin.",
           ] },
           { h: "Karta, barmoq yoki yuz", p: [
@@ -6219,7 +6219,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Tizimni oqlaydigan bogʻlanishlar", p: [
             "SKUD kamdan-kam yolgʻiz yashaydi. Ish vaqti hisobi bilan bogʻlanishda oʻsha terminal soat va kechikishlarni sanaydi, tabel kadrchisiz 1C ga ketadi. Videokuzatuv bilan har oʻtish yozuvga bogʻlanadi — «kim kirgan» bahsi bir daqiqada hal boʻladi. Yongʻin signalizatsiyasi bilan bogʻlanish majburiy: trevogada evakuatsiya yoʻllaridagi eshiklar avtomatik ochiladi.",
-            "Boshlash oʻylagandan oson: kontroller va oʻqigichli bitta eshik bir kunda oʻrnatiladi. Obyektga bepul chiqamiz, oʻtish nuqtalarini hisoblaymiz va byudjetga mos tarkibni taklif qilamiz — ofisning bitta eshigidan turniketli zavod prohodnayasigacha. Uskuna Toshkentdagi ombordan, kafolat va xizmat butun Oʻzbekiston boʻylab.",
+            "Boshlash oʻylagandan oson: kontroller va oʻqigichli bitta eshik bir kunda oʻrnatiladi. Obyektga bepul chiqamiz, oʻtish nuqtalarini hisoblaymiz va byudjetga mos tarkibni taklif qilamiz — ofisning bitta eshigidan turniketli zavod oʻtkazish punktigacha. Uskuna Toshkentdagi ombordan, kafolat va xizmat butun Oʻzbekiston boʻylab.",
           ] },
         ],
         faq: [
@@ -6660,15 +6660,15 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi", seoTitle: "SKUD tizimi narxi: bir eshik, ofis va prohodnaya", seoDesc: "SKUD tizimi narxi Toshkentda: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli prohodnaya, karta yoki biometriya.",
-        excerpt: "SKUD narxi nimadan yigʻiladi: bitta eshik, ofis va turniketli prohodnaya toʻplamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
+        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi", seoTitle: "SKUD tizimi narxi: bir eshik, ofis va oʻtkazish punkti", seoDesc: "SKUD tizimi narxi Toshkentda: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli oʻtkazish punkti, karta yoki biometriya.",
+        excerpt: "SKUD narxi nimadan yigʻiladi: bitta eshik, ofis va turniketli oʻtkazish punkti toʻplamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
         sections: [
           { h: "Bitta eshik misolida hisoblaymiz", p: [
             "Eshikka minimal toʻplam: kontroller, oʻqigich, elektromagnit yoki elektromexanik qulf, chiqish tugmasi, dovodchik va akkumulyatorli quvvat bloki. Katalog boʻyicha bu shunday yigʻiladi: Dahua DHI-ASC2202B-D kontrolleri — 763 900 soʻm, DHI-ASR2100H oʻqigichi — 145 900 soʻm, 280 kg elektromagnit qulf KANIHAD ML-280AS — 184 900 soʻm, chiqish tugmasi Hikvision DS-K7P01 — 110 900 soʻm, dovodchik ML-S203 — 246 900 soʻm; uskuna boʻyicha jami taxminan 1 452 500 soʻm, ustiga quvvat bloki va ishlar. Mifare kartasi DS-K7M102-M — 7 390 soʻm, ularni haqiqatan pachka-pachka olishadi. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
             "Narx identifikatsiya usulidan oʻsadi va farq katalogda aniq koʻrinadi: karta oʻqigich — 145 900–184 900 soʻm, barmoq izli terminal Hikvision DS-K1T804EF — 791 900 soʻm, yuzni tanish — ZKTeco SenseFace 2A uchun 877 900 soʻm va Hikvision DS-K1T343MX uchun 1 050 900 soʻm. Yaʼni kartadan yuzga oʻtish eshikka taxminan 700–900 ming soʻm qoʻshadi, lekin kartalarning oʻzini, berilishini, yoʻqolishini va «men uchun belgilab qoʻy»ni olib tashlaydi.",
           ] },
-          { h: "Ofis, prohodnaya, korxona", p: [
-            "3–5 eshikli ofis — bu allaqachon tarmoq tizimi: kontrollerlar bitta bazaga birlashadi, huquqlar bir oynadan guruhlar boʻyicha beriladi. Byudjet chiziqli oʻsmaydi: dastur va server umumiy, har yangi eshik faqat oʻz temir toʻplamini qoʻshadi. Turniketli prohodnaya — alohida liga: tripod-turniketning oʻzi, ikki tomondan oʻqigichlar, kontroller va ish vaqti hisobiga ulanish.",
+          { h: "Ofis, oʻtkazish punkti, korxona", p: [
+            "3–5 eshikli ofis — bu allaqachon tarmoq tizimi: kontrollerlar bitta bazaga birlashadi, huquqlar bir oynadan guruhlar boʻyicha beriladi. Byudjet chiziqli oʻsmaydi: dastur va server umumiy, har yangi eshik faqat oʻz temir toʻplamini qoʻshadi. Turniketli oʻtkazish punkti — alohida liga: tripod-turniketning oʻzi, ikki tomondan oʻqigichlar, kontroller va ish vaqti hisobiga ulanish.",
             "Korxonada oldindan kam oʻylanadigan pozitsiyalar qoʻshiladi: antipassbek, rejimli zonalarga shlyuzlar, zaxiralangan quvvat, evakuatsiya eshiklarini ochish uchun yongʻin signalizatsiyasi bilan integratsiya — u meʼyorlar boʻyicha majburiy. Aynan shuning uchun korxona smetasi «eshik uchun prays» boʻyicha emas, loyiha boʻyicha hisoblanadi.",
           ] },
           { h: "Unutiladigan yashirin xarajatlar", p: [
@@ -6676,7 +6676,7 @@ export const ARTICLES: Article[] = [
             "Ikkinchisi — administratorlik. Yangi xodimlarni kim kiritadi, ketganlarni kim bloklaydi? Tizimni sizning administratoringiz buni daqiqalarda qiladigan qilib sozlaymiz va uni oʻrgatamiz. Uchinchisi — xizmat: quvvat bloklaridagi akkumulyatorlar 2–3 yil yashaydi, ularni reglament boʻyicha almashtirish oʻtirib qolgan zaxira tufayli eng band soatda ochiq qolgan eshikdan arzon.",
           ] },
           { h: "Sifatni yoʻqotmasdan qanday tejash", p: [
-            "Ishlaydigan usullar: ikkinchi darajali eshiklarga biometriya oʻrniga kartalar, jurnal talab qilinmaydigan xonalarga avtonom kontrollerlar, bosqichma-bosqich joriy etish — avval prohodnaya va serverxona, keyin kabinetlar. ZKTeco uskunasi funksionallik uchun eng yaxshi narxni, Hikvision video bilan chuqur integratsiyani beradi.",
+            "Ishlaydigan usullar: ikkinchi darajali eshiklarga biometriya oʻrniga kartalar, jurnal talab qilinmaydigan xonalarga avtonom kontrollerlar, bosqichma-bosqich joriy etish — avval oʻtkazish punkti va serverxona, keyin kabinetlar. ZKTeco uskunasi funksionallik uchun eng yaxshi narxni, Hikvision video bilan chuqur integratsiyani beradi.",
             "Ishlamaydiganlari: akkumulyatorsiz quvvat blokida tejash (har svet miltillashida eshik toʻxtaydi), ogʻir eshiklarga arzon qulflar, «hozircha dovodchiksiz». Ogʻir eshikka qulf oqibatlarga nisbatan arzon turadi: KANIHAD ML-380A — 246 900 soʻm, 500 kg ML-500A — 494 900 soʻm, 100 kg gacha polotnoga dovodchik ML-S505 — 370 900 soʻm. Smetani bepul chiqishdan keyin hisoblaymiz: vazifa va byudjetga mos tarkib, uskunani oʻzimiz yetkazamiz, kafolat texnikaga ham montajga ham tegishli, xizmat koʻrsatish esa — oʻzimiz montaj qilgan tizimlarga shartnoma asosida.",
           ] },
         ],
@@ -6836,7 +6836,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Maʼlumotlarning ish haqiga yoʻli", p: [
             "Hisob uchun hisob maʼnosiz — maʼlumotlar ish haqi hisobigacha yetib borishi kerak. Tabelni 1C va hisob tizimlariga yuklashni sozlaymiz: ishlangan soatlar, qayta ishlash va tungilar qoʻl koʻchirishsiz va «inson omili» xatolarisiz hisobga tushadi. Hisobotlar — boʻlim, obyekt va loyihalar boʻyicha.",
-            "Joriy etish ishni toʻxtatmaydi: prohodnayadagi terminallar — bir kun montaj, xodimlarni kiritish — yana bir kun (katta shtatlarda roʻyxatni 1C yoki Excel dan import qilamiz). Kadrchi va administratorni oʻrgatamiz, keyin tizim oʻz kuchi bilan yashaydi. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va qoʻllab-quvvatlash butun Oʻzbekiston boʻylab.",
+            "Joriy etish ishni toʻxtatmaydi: oʻtkazish punktidagi terminallar — bir kun montaj, xodimlarni kiritish — yana bir kun (katta shtatlarda roʻyxatni 1C yoki Excel dan import qilamiz). Kadrchi va administratorni oʻrgatamiz, keyin tizim oʻz kuchi bilan yashaydi. Chiqish va hisob bepul, uskuna Toshkentdagi ombordan, kafolat va qoʻllab-quvvatlash butun Oʻzbekiston boʻylab.",
           ] },
           { h: "Biometriya qayerda nosozlik beradi", p: [
             "Barmoq izi qoʻl terisi eskirgan xodimlarda — qurilish, ombor, oshxona — yomon oʻqiladi. Toʻgʻridan-toʻgʻri quyosh tushadigan oʻtish joyida yuzni aniqlash ham adashadi: qarshi yorugʻlik ekspozitsiyani oʻzgartiradi. Yechim oddiy — bir nechta identifikatsiya usuliga ega terminal (yuz, karta, PIN), ustiga kichik soyabon yoki qurilmani derazadan burib oʻrnatish.",
@@ -7341,23 +7341,23 @@ export const ARTICLES: Article[] = [
       },
       uz: {
         title: "Turniketni qanday tanlash: tripod, rotorli yoki spidgeyt",
-        excerpt: "Turniket turlarini vazifalarga qarab koʻrib chiqamiz: qayerda tripod yetadi, qachon toʻliq boʻyli rotorli kerak, biznes-markazlarga spidgeytlar nega — va prohodnaya narxi aslida nimadan yigʻiladi.",
+        excerpt: "Turniket turlarini vazifalarga qarab koʻrib chiqamiz: qayerda tripod yetadi, qachon toʻliq boʻyli rotorli kerak, biznes-markazlarga spidgeytlar nega — va oʻtkazish punkti narxi aslida nimadan yigʻiladi.",
         sections: [
           { h: "Turniket turi — u nimaning oldini olishi kerakligidan", p: [
-            "Tripod — uch aylanadigan shtanga — ofislar va kichik korxonalar prohodnayalari uchun eng keng tarqalgan va arzon turniket. U oqimni «bittadan» intizomga soladi va oʻtishlarni yaxshi sanaydi, lekin ustidan sakrash jismonan mumkin — tripod yonida qoʻriq yoki konserj bor joyda ishlaydi.",
-            "Toʻliq boʻyli rotorli turniket oʻtishni jismonan istisno qiladi: konstruksiya odam boʻyi, oshib oʻtib boʻlmaydi. Uning joyi — zavod perimetrlari, qurilish maydonchalari, stadionlar, doimiy qoʻriqsiz uzoq prohodnayalar. Spidgeytlar — shisha tavaqali tezkor kalitkalar — biznes-markazlar va qabulxonalar tanlovi: chiroyli, tez, polosaga daqiqasiga 30 kishigacha oqim.",
+            "Tripod — uch aylanadigan shtanga — ofislar va kichik korxonalar oʻtkazish punktlari uchun eng keng tarqalgan va arzon turniket. U oqimni «bittadan» intizomga soladi va oʻtishlarni yaxshi sanaydi, lekin ustidan sakrash jismonan mumkin — tripod yonida qoʻriq yoki konserj bor joyda ishlaydi.",
+            "Toʻliq boʻyli rotorli turniket oʻtishni jismonan istisno qiladi: konstruksiya odam boʻyi, oshib oʻtib boʻlmaydi. Uning joyi — zavod perimetrlari, qurilish maydonchalari, stadionlar, doimiy qoʻriqsiz uzoq oʻtkazish punktlari. Spidgeytlar — shisha tavaqali tezkor kalitkalar — biznes-markazlar va qabulxonalar tanlovi: chiroyli, tez, polosaga daqiqasiga 30 kishigacha oqim.",
           ] },
           { h: "Identifikatsiya va oʻtkazish qobiliyati", p: [
             "Identifikatsiya usulini oqim belgilaydi. Karta va breloklar arzon va odatiy, lekin ertalabki toʻlqin «kartani sumkadan ol»ga qadaladi. Yuzni tanish yurib ketayotganda oʻtkazadi — terminal xodimni soniya ulushida taniydi, qoʻllar boʻsh. QR-kodlar bir martalik mehmonlarga qulay: ruxsatnoma tashrifdan oldin telefonga keladi.",
-            "Choʻqqi yukni halol hisoblang: 500 kishilik smena 20 daqiqada kirsa, bir necha polosa yoki tez biometriya kerak, aks holda koʻchada navbat kafolatlangan. Tanlovda oqimni modellashtiramiz va prohodnayangizga nechta polosa kerakligini toʻgʻri aytamiz.",
+            "Choʻqqi yukni halol hisoblang: 500 kishilik smena 20 daqiqada kirsa, bir necha polosa yoki tez biometriya kerak, aks holda koʻchada navbat kafolatlangan. Tanlovda oqimni modellashtiramiz va oʻtkazish punktingizga nechta polosa kerakligini toʻgʻri aytamiz.",
           ] },
-          { h: "Prohodnayaga turniketdan tashqari nima kiradi", p: [
+          { h: "Oʻtkazish punktiga turniketdan tashqari nima kiradi", p: [
             "Turniketning oʻzi — smetaning yarmi. Unga ikki tomondan oʻqigichlar, SKUD kontrolleri, zaxirali quvvat bloki, koridor hosil qiluvchi toʻsiqlar va majburiy tavaqali kalitka kerak — imkoniyati cheklanganlar, katta yuklar va evakuatsiya uchun. Yongʻin trevogasida turniketlar avtomatik ochilishi shart — bu meʼyor talabi, yongʻin signalizatsiyasi bilan bogʻlanish loyihaga kiritiladi.",
-            "Integratsiyalar prohodnayani maʼlumot manbaiga aylantiradi: ish vaqti hisobi bilan bogʻlanish tabelni 1C ga beradi, videokuzatuv bilan — har oʻtishni yozuvga bogʻlaydi, antipassbek oʻsha ruxsatnoma bilan ikkinchi odamni kiritmaydi.",
+            "Integratsiyalar oʻtkazish punktini maʼlumot manbaiga aylantiradi: ish vaqti hisobi bilan bogʻlanish tabelni 1C ga beradi, videokuzatuv bilan — har oʻtishni yozuvga bogʻlaydi, antipassbek oʻsha ruxsatnoma bilan ikkinchi odamni kiritmaydi.",
           ] },
           { h: "Narx va joriy etish", p: [
             "Byudjet turga bogʻliq: tripod — eng arzon, spidgeyt mexanika va shisha hisobiga bir necha barobar qimmat, rotorli — bajarilishiga qarab ular orasida. Polga ankerlash bilan montaj, ishga tushirish va huquqlarni sozlashni qoʻshing. Isitishli koʻcha bajarilishi — pavilonsiz KPP uchun alohida qator.",
-            "Toshkentdagi ombordan ZKTeco va Hikvision turniketlarini oʻrnatamiz: chiqish, oqim va dizaynga tanlash, bir-ikki kunda montaj, SKUD va vaqt hisobi bilan integratsiya, kafolat va xizmat butun Oʻzbekiston boʻylab. Prohodnaya hisobi — bepul.",
+            "Toshkentdagi ombordan ZKTeco va Hikvision turniketlarini oʻrnatamiz: chiqish, oqim va dizaynga tanlash, bir-ikki kunda montaj, SKUD va vaqt hisobi bilan integratsiya, kafolat va xizmat butun Oʻzbekiston boʻylab. Oʻtkazish punkti hisobi — bepul.",
           ] },
           { h: "Xizmat koʻrsatish va mexanizm resursi", p: [
             "Turniket resursi millionlab oʻtishlarda hisoblanadi va eʼlon qilingan raqamga u faqat reglament boʻyicha xizmat koʻrsatilganda chidaydi. Yarim yilda bir marta polga mahkamlash boltlari, demper mexanizmining moylanishi, toʻsiq richaglarining yeyilishi va quvvat uzilganda erkin oʻtish rejimi tekshiriladi — bu rejimni yongʻin xavfsizligi talab qiladi.",
@@ -7367,8 +7367,8 @@ export const ARTICLES: Article[] = [
         faq: [
           { q: "50 xodimli ofisga qanday turniket qoʻyish kerak?", a: "Odatda yuzni tanish yoki kartali bitta tripod plyus kalitka yetadi. Bunday toʻplam ertalabki oqimni navbatsiz ushlaydi va vaqt hisobini yopadi." },
           { q: "Mehmonlar va kuryerlar bilan nima qilish kerak?", a: "Telefonga bir martalik QR-ruxsatnomalar, resepshenga chaqiruv tugmasi yoki qoʻriq nazoratida kalitkadan oʻtish. Mehmon stsenariylari «ortiqcha» kartalar tarqatmasdan SKUDda sozlanadi." },
-          { q: "Tripodni aylanib oʻtish mumkinmi va bunga qarshi nima qilish kerak?", a: "Tripod ustidan sakrash jismonan mumkin. Bu kritik joylarda trevogali oshib oʻtish datchiklari, prohodnayaga kamera yoki toʻliq boʻyli rotorli turniket qoʻyiladi — u aylanib oʻtishni konstruktiv istisno qiladi." },
-          { q: "Yongʻinda prohodnaya qanday ishlaydi?", a: "Yongʻin signalizatsiyasi signali boʻyicha turniketlar ochiladi, tripod shtangalari yigʻiladi (antipanika), kalitkalar ochiladi. Bu bogʻlanish majburiy va obyekt topshirishda tekshiriladi." },
+          { q: "Tripodni aylanib oʻtish mumkinmi va bunga qarshi nima qilish kerak?", a: "Tripod ustidan sakrash jismonan mumkin. Bu kritik joylarda trevogali oshib oʻtish datchiklari, oʻtkazish punktiga kamera yoki toʻliq boʻyli rotorli turniket qoʻyiladi — u aylanib oʻtishni konstruktiv istisno qiladi." },
+          { q: "Yongʻinda oʻtkazish punkti qanday ishlaydi?", a: "Yongʻin signalizatsiyasi signali boʻyicha turniketlar ochiladi, tripod shtangalari yigʻiladi (antipanika), kalitkalar ochiladi. Bu bogʻlanish majburiy va obyekt topshirishda tekshiriladi." },
         ],
       },
       en: {
@@ -7476,7 +7476,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-anpr",
     date: "2026-07-17",
-    updated: "2026-09-09",
+    updated: "2026-10-14",
     related: ["barrier", "anpr", "gates"],
     hubs: ["shlagbaumy", "ip-kamery"],
     loc: {
@@ -7498,7 +7498,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Точность распознавания — вопрос монтажа", p: [
             "Камера с честными 99 % распознавания легко превращается в 80 % кривым монтажом: слишком острый угол к полосе, встречный свет фар, номер перекрывается соседней машиной. Мы ставим камеру под правильным углом и на правильной высоте, с ИК-подсветкой для ночи — и проверяем на реальном потоке, включая грязные и транзитные номера.",
-            "Комплекты Hikvision и Dahua со склада в Ташкенте, монтаж въезда за один-два дня, настройка списков и обучение охраны: добавлять и удалять номера вы будете сами. Гарантия и обслуживание по всему Узбекистану; выезд и расчёт бесплатны.",
+            "Комплекты Hikvision и Dahua со склада в Ташкенте, монтаж въезда за один-два дня, настройка списков и обучение охраны: добавлять и удалять номера вы будете сами. Гарантия на оборудование и работы; выезд и расчёт бесплатны.",
           ] },
           { h: "Перебои питания, пыль и зима", p: [
             "Автоматический въезд остаётся уязвимым к отключениям электричества: без ИБП стрела замирает в закрытом положении и двор блокируется. Источник бесперебойного питания на контроллер и привод плюс механическая разблокировка ключом решают вопрос за считаные проценты бюджета проекта.",
@@ -7521,7 +7521,7 @@ export const ARTICLES: Article[] = [
             "Pult va breloklar hech qayerga ketmaydi — ular iflos raqam yoki mehmon mashinasi uchun zaxira usul boʻlib qoladi. Lekin asosiy oqim «raqam boʻyicha» boradi va kirishdagi navbat yoʻqoladi: mashina umuman toʻxtamaydi.",
           ] },
           { h: "Toʻplam tarkibi", p: [
-            "Minimal kirish: intensiv privodli shlagbaum, ANPR-kamera, roʻyxatli kontroller, fotoelementlar va petlevoy detektor — strela mashinaga tushmasligi uchun. Turar-joy hovlisiga shu yetadi. Keyin toʻplam vazifalarga qarab oʻsadi: mehmonlarga chaqiruv paneli, tor oʻtish joyiga svetofor, jurnal ikki tomonni koʻrishi kerak boʻlsa chiqishga ikkinchi kamera.",
+            "Minimal kirish: intensiv privodli shlagbaum, ANPR-kamera, roʻyxatli kontroller, fotoelementlar va induksion halqa detektori — strela mashinaga tushmasligi uchun. Turar-joy hovlisiga shu yetadi. Keyin toʻplam vazifalarga qarab oʻsadi: mehmonlarga chaqiruv paneli, tor oʻtish joyiga svetofor, jurnal ikki tomonni koʻrishi kerak boʻlsa chiqishga ikkinchi kamera.",
             "Shlagbaum oʻtish kengligi va intensivligiga tanlanadi: TJM va biznes-markazga kuniga minglab siklga hamda sovuq va issiqda ishlashga moʻljallangan privod kerak. Intensiv kirishdagi maishiy model bir mavsum yashaydi — bu tejashning eng koʻp uchraydigan xatosi.",
           ] },
           { h: "Roʻyxatlar va stsenariylar: aholi, mehmonlar, qarzdorlar", p: [
@@ -7530,7 +7530,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Tanish aniqligi — montaj masalasi", p: [
             "Halol 99 % taniydigan kamera qiyshiq montaj bilan osongina 80 % ga aylanadi: polosaga oʻta oʻtkir burchak, qarshi fara nuri, raqamni qoʻshni mashina toʻsib qoʻyishi. Kamerani toʻgʻri burchak va balandlikka, kecha uchun IK-yoritish bilan oʻrnatamiz — va real oqimda tekshiramiz, iflos va tranzit raqamlar bilan birga.",
-            "Toshkentdagi ombordan Hikvision va Dahua toʻplamlari, kirish montaji bir-ikki kun, roʻyxatlarni sozlash va qoʻriqni oʻrgatish: raqam qoʻshish va oʻchirishni oʻzingiz qilasiz. Kafolat va xizmat butun Oʻzbekiston boʻylab; chiqish va hisob bepul.",
+            "Toshkentdagi ombordan Hikvision va Dahua toʻplamlari, kirish montaji bir-ikki kun, roʻyxatlarni sozlash va qoʻriqni oʻrgatish: raqam qoʻshish va oʻchirishni oʻzingiz qilasiz. Uskuna va ishlarga kafolat; chiqish va hisob bepul.",
           ] },
           { h: "Quvvat uzilishi, chang va qish", p: [
             "Avtomatik kirish elektr uzilishlariga zaif boʻlib qoladi: UPS boʻlmasa strela yopiq holatda qotib qoladi va hovli berkiladi. Kontroller hamda yuritma uchun uzluksiz quvvat manbai va kalit bilan mexanik ochish bu masalani loyiha byudjetining bir necha foizi evaziga hal qiladi.",
@@ -7562,7 +7562,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Accuracy is an installation question", p: [
             "A camera with an honest 99 % recognition rate easily becomes 80 % through poor installation: too sharp an angle to the lane, oncoming headlights, a plate blocked by the next car. We mount the camera at the right angle and height, with IR for the night — and test on real traffic, dirty and transit plates included.",
-            "Hikvision and Dahua kits from Tashkent stock, entrance installation in one or two days, list setup and guard training: you will add and remove plates yourself. Warranty and service across Uzbekistan; the survey and quote are free.",
+            "Hikvision and Dahua kits from Tashkent stock, entrance installation in one or two days, list setup and guard training: you will add and remove plates yourself. Warranty on equipment and works; the survey and quote are free.",
           ] },
           { h: "Power cuts, dust and winter", p: [
             "An automatic entrance stays vulnerable to power cuts: without a UPS the boom freezes in the closed position and the yard is blocked. A UPS for the controller and the drive, plus a mechanical key release, solve this for a few per cent of the project budget.",
@@ -7594,7 +7594,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Doğruluk bir montaj sorusudur", p: [
             "Dürüst %99 tanıyan kamera, kötü montajla kolayca %80'e düşer: şeride fazla keskin açı, karşı far ışığı, yandaki araçça kapatılan plaka. Kamerayı doğru açı ve yüksekliğe, gece için IR ile monte eder ve gerçek trafikte test ederiz — kirli ve transit plakalar dahil.",
-            "Taşkent stoğundan Hikvision ve Dahua setleri, giriş montajı bir-iki gün, liste ayarları ve güvenlik eğitimi: plakaları kendiniz ekleyip sileceksiniz. Tüm Özbekistan'da garanti ve servis; keşif ve teklif ücretsiz.",
+            "Taşkent stoğundan Hikvision ve Dahua setleri, giriş montajı bir-iki gün, liste ayarları ve güvenlik eğitimi: plakaları kendiniz ekleyip sileceksiniz. Ekipman ve işçilikte garanti; keşif ve teklif ücretsiz.",
           ] },
           { h: "Elektrik kesintisi, toz ve kış", p: [
             "Otomatik giriş elektrik kesintilerine karşı savunmasız kalır: UPS yoksa kol kapalı konumda kilitlenir ve avlu tıkanır. Kumanda kartı ile motor için bir UPS ve anahtarla mekanik boşa alma, proje bütçesinin yüzde birkaçına bu sorunu çözer.",
@@ -7626,7 +7626,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "识别率是安装问题", p: [
             "标称99%识别率的摄像机，安装不当轻松跌到80%：对车道角度太斜、逆着车灯、号牌被邻车遮挡。我们把摄像机装在正确的角度和高度、配夜间红外——并用真实车流验证，包括脏污和外地号牌。",
-            "海康威视和大华套件塔什干现货，入口一至两天装完，配置名单并培训门卫：添加、删除号牌您自己就能做。质保和维保覆盖全乌兹别克斯坦；勘测和报价免费。",
+            "海康威视和大华套件塔什干现货，入口一至两天装完，配置名单并培训门卫：添加、删除号牌您自己就能做。设备与施工均有质保；勘测和报价免费。",
           ] },
           { h: "断电、粉尘与冬季运行", p: [
             "自动出入口对停电很敏感：没有 UPS 时，栏杆会停在关闭位置，整个院子被堵死。为控制器和驱动器配一台 UPS，再加上钥匙机械解锁，只占项目预算的百分之几就能解决问题。",
@@ -8576,7 +8576,7 @@ export const ARTICLES: Article[] = [
         ],
         faq: [
           { q: "Eski kameralarga analitika qoʻshsa boʻladimi?", a: "Texnik jihatdan server dasturi munosib ruxsatli istalgan kamera oqimini tahlil qiladi, lekin natija kameraning oʻziga borib taqaladi: ruxsat, rakurs, yorugʻlikka sezgirlik. Bunday vazifani modernizatsiya sifatida hal qilamiz: obyekt auditi, kalit kameralarni almashtirish va zarur boʻlsa analitika serveri kiritilgan spetsifikatsiya. Kafolat oʻzimiz yetkazgan va montaj qilgan uskunaga tegishli." },
-          { q: "Tanish bazasida nechta yuz boʻlishi mumkin?", a: "Terminallar bortda minglab shablon ushlaydi, server platformalari — yuz minglab. 500 xodimli prohodnayaga terminal yetadi; obyektlar tarmogʻi va katta roʻyxatlar — server vazifasi." },
+          { q: "Tanish bazasida nechta yuz boʻlishi mumkin?", a: "Terminallar bortda minglab shablon ushlaydi, server platformalari — yuz minglab. 500 xodimli oʻtkazish punktiga terminal yetadi; obyektlar tarmogʻi va katta roʻyxatlar — server vazifasi." },
           { q: "Niqob yoki koʻzoynakda tanish ishlaydimi?", a: "Zamonaviy algoritmlar oddiy koʻzoynakli va qisman yopilgan yuzni taniydi; tibbiy niqob aniqlikni pasaytiradi — bunday sharoitga qoʻshimcha omil sozlanadi: karta yoki QR." },
           { q: "Maxfiylik va qonuniylik bilan nima?", a: "Baza shablonni ham, roʻyxatga olish fotosuratini ham saqlashidan, yaʼni shaxsiy maʼlumotlar toʻplami ekanidan kelib chiqish kerak. Talablar shundan: xodimlarning yozma roziligi, administratorlar doirasining cheklanishi, kirishning jurnalga yozilishi, saqlash muddati va ishdan boʻshaganda profilni oʻchirish. Shu tartibni qurishga va xodimlar hamda tashrif buyuruvchilarni xabardor qilishni toʻgʻri rasmiylashtirishga yordam beramiz." },
         ],
@@ -9083,7 +9083,7 @@ export const ARTICLES: Article[] = [
             "Muhim amaliy jihat — 1C va kadr tizimlari bilan integratsiya: ikkala marka ham integratsiyalanadi, lekin ishlar tarkibi farq qiladi, shuning uchun hisobot talablarini uskuna tanlashdan OLDIN belgilash kerak.",
           ] },
           { h: "Narxlar va bizning amaliy tanlovimiz", p: [
-            "Byudjet boʻyicha ZKTeco «eshik + vaqt hisobi» klassikasida yutadi: terminallar taqqoslanadigan aniqlikda arzonroq, 50–500 kishilik prohodnayaga bu eng koʻp tanlov. Hikvision biometriya katta tizimning qismi boʻlgan joyda oʻzinikini oladi: kameralar, domofonlar va turniketlar bilan yagona platforma, qoʻriq uchun bitta jurnal va bitta interfeys.",
+            "Byudjet boʻyicha ZKTeco «eshik + vaqt hisobi» klassikasida yutadi: terminallar taqqoslanadigan aniqlikda arzonroq, 50–500 kishilik oʻtkazish punktiga bu eng koʻp tanlov. Hikvision biometriya katta tizimning qismi boʻlgan joyda oʻzinikini oladi: kameralar, domofonlar va turniketlar bilan yagona platforma, qoʻriq uchun bitta jurnal va bitta interfeys.",
             "Amaliyotimiz: ofis va ishlab chiqarishlar narx/funksiya nisbatida koʻproq ZKTeco oladi, rivojlangan Hikvision videokuzatuvli obyektlar — oʻsha vendor terminallarini. Ikkala variant Toshkentdagi ombordan; obyektga olib kelamiz, tanish tezligini jonli koʻrsatamiz va toʻplamni bepul hisoblaymiz.",
           ] },
           { h: "Kengaytirish va tizim mosligi", p: [
@@ -9097,7 +9097,7 @@ export const ARTICLES: Article[] = [
           faq: [
             { q: "ZKTeco va Hikvision terminallari 1C va oylik tizimlari bilan ishlaydimi?", a: "Ha, ikkalasida ham SDK va hodisalarni yuklash bor; ish vaqti hisobi maʼlumotlari 1C yoki kadrlar tizimiga uzatiladi. Biz bunday integratsiyalarni qilamiz — konfiguratsiyangizni aniqlashtiring." },
             { q: "Yuzni tanish qorongʻida va niqobda ishlaydimi?", a: "Ikkala markaning zamonaviy terminallari IK-yoritishdan foydalanadi va yuzni qorongʻida taniydi; tibbiy niqob bilan katta modellar ishlaydi, lekin aniqlik pastroq — yuzni karta yoki barmoq izi bilan birlashtirish ishonchliroq." },
-            { q: "Bitta terminal nechta xodimni koʻtaradi?", a: "Bazaviy modellar 500–3000 yuz shablonini saqlaydi, kattalari — oʻn minglab. Yuzlab odamlik prohodnoyda tanish tezligi muhimroq: terminal oqimni navbatsiz oʻtkazishi kerak, buni tanlashda tekshiramiz." },
+            { q: "Bitta terminal nechta xodimni koʻtaradi?", a: "Bazaviy modellar 500–3000 yuz shablonini saqlaydi, kattalari — oʻn minglab. Yuzlab odamlik oʻtkazish punktida tanish tezligi muhimroq: terminal oqimni navbatsiz oʻtkazishi kerak, buni tanlashda tekshiramiz." },
           ],
       },
       en: {
@@ -11451,9 +11451,9 @@ export const ARTICLES: Article[] = [
           { h: "Keyingi qadam", p: [
             "Katalogdagi turniket va shlagbaumlarni koʻring — narxlar soʻmda. Oʻtish punktingizni tasvirlab bering (xodimlar soni, eshik kengligi, vaqt hisobi kerakmi) — spetsifikatsiya bilan 2–3 variant taklif qilamiz. Soʻrovga ish kuni davomida javob beramiz.",
           ] },
-          { h: "Prohodnayani yaratadigan montaj va bogʻlamlar", p: [
-            "Atrofisiz turniket — shunchaki mexanika: prohodnayani ishchi qiladigan narsalar — polga ankerlash, toʻsiqlar, imkoniyati cheklanganlar va yuklar uchun kalitka, zaxiralangan quvvat va SKUD bilan bogʻlam. Yongʻin trevogasi signali boʻyicha plankalar yigʻiladi, kalitkalar ochiladi — bu bogʻlam meʼyorlar boʻyicha majburiy va loyihaga kiritiladi.",
-            "Vaqt hisobi bilan integratsiya prohodnayani 1C uchun tabel manbaiga aylantiradi, oʻtishlarni videoyozuvga bogʻlash bahslarni yopadi. Prohodnayalarni bir-ikki kunda montaj qilamiz, qoʻriq va administratorni oʻrgatamiz, keyin esa oʻzimiz montaj qilgan prohodnayalarni shartnoma boʻyicha yuritamiz.",
+          { h: "Oʻtkazish punktini yaratadigan montaj va bogʻlamlar", p: [
+            "Atrofisiz turniket — shunchaki mexanika: oʻtkazish punktini ishchi qiladigan narsalar — polga ankerlash, toʻsiqlar, imkoniyati cheklanganlar va yuklar uchun kalitka, zaxiralangan quvvat va SKUD bilan bogʻlam. Yongʻin trevogasi signali boʻyicha plankalar yigʻiladi, kalitkalar ochiladi — bu bogʻlam meʼyorlar boʻyicha majburiy va loyihaga kiritiladi.",
+            "Vaqt hisobi bilan integratsiya oʻtkazish punktini 1C uchun tabel manbaiga aylantiradi, oʻtishlarni videoyozuvga bogʻlash bahslarni yopadi. Oʻtkazish punktlarini bir-ikki kunda montaj qilamiz, qoʻriq va administratorni oʻrgatamiz, keyin esa oʻzimiz montaj qilgan oʻtkazish punktlarini shartnoma boʻyicha yuritamiz.",
           ] },
           { h: "Shartnomagacha smetada nimani aniqlash kerak", p: [
             "Imzolashdan oldin smetada besh pozitsiya tekshiriladi: oʻquvchilar turi va soni, hisob dasturi litsenziyalari, turniket ostidagi stoyka yoki tumba, kabel va uni yotqizish hamda ishga tushirish-sozlash. Aynan shu satrlar koʻpincha montajdan keyin qoʻshiladi.",
@@ -12189,7 +12189,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Qanday buyurtma qilinadi", p: [
             "Ish tartibi oddiy: muhandis chiqadi, obyektni oʻlchaydi, loyiha va smeta tayyorlaydi. Montaj kichik obyektda 1–3 kun. Ishdan soʻng hujjatlar toʻliq topshiriladi: aktlar, sxemalar, jurnal — tekshiruvga tayyor holda.",
-            "Yuridik shaxslar bilan shartnoma, hisob-faktura va NDS bilan ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati beriladi.",
+            "Yuridik shaxslar bilan shartnoma, hisob-faktura va QQS bilan ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati beriladi.",
           ] },
         ],
         faq: [
@@ -12197,7 +12197,7 @@ export const ARTICLES: Article[] = [
           { q: "Tekshiruvga nima tayyorlash kerak?", a: "Ishlaydigan signalizatsiya, muddati oʻtmagan oʻt oʻchirgichlar, boʻsh evakuatsiya yoʻllari va hujjatlar: loyiha, xizmat shartnomasi, oʻt oʻchirgichlar jurnali. Yetishmayotganini bir chiqishda aniqlab beramiz." },
           { q: "Oʻt oʻchirgich qancha turadi?", a: "Kukunli OP-4 — 122 900 soʻm, OP-5 — 141 900 soʻm, OP-8 — 184 900 soʻm, OP-10 — 246 900 soʻm; uglekislotali OU-5 — 543 900 soʻm. Katalogda mavjud, soni boʻyicha maydon va xona toifasiga qarab maslahat beramiz." },
           { q: "Montaj qancha vaqt oladi?", a: "Kichik ofis — 1–3 kun. Ombor va katta obyektlarda muddat loyihaga bogʻliq, smetada aniq koʻrsatiladi." },
-          { q: "Hujjatlar bilan yordam berasizmi?", a: "Ha: loyiha, montaj aktlari, sxemalar va jurnal — toʻliq topshiriladi. Yuridik shaxslar bilan NDS va shartnoma asosida ishlaymiz." },
+          { q: "Hujjatlar bilan yordam berasizmi?", a: "Ha: loyiha, montaj aktlari, sxemalar va jurnal — toʻliq topshiriladi. Yuridik shaxslar bilan QQS va shartnoma asosida ishlaymiz." },
         ],
       },
       ru: {
@@ -12387,7 +12387,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Ish bosqichlari", p: [
             "Birinchi bosqich — loyiha: ish oʻrinlari, trassalar va shkaf joyi rejada belgilanadi. Keyin montaj: kabel yotqizish, rozetkalar, patch-panel va kommutatorni ulash. Oxirida har bir liniya testdan oʻtkaziladi va sxemalar bilan topshiriladi.",
-            "Kichik ofis odatda 1–3 kunda tayyor boʻladi. Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz, ishlarga kafolat beramiz.",
+            "Kichik ofis odatda 1–3 kunda tayyor boʻladi. Yuridik shaxslar bilan shartnoma va QQS asosida ishlaymiz, ishlarga kafolat beramiz.",
           ] },
         ],
         faq: [
@@ -12584,7 +12584,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Qayerdan olish va qanday buyurtma qilish", p: [
             "Katalogimizda elektromagnit va aqlli qulflar, SKUD oʻquvchilari va aksessuarlar bor — narxlar soʻmda. Vazifangizni ayting: kvartira, ofis yoki kalitka — mos variantlarni tanlab, oʻrnatish bilan aniq narxni hisoblaymiz.",
-            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
+            "Yuridik shaxslar bilan shartnoma va QQS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
           ] },
         ],
         faq: [
@@ -12753,7 +12753,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-narxi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-14",
     related: ["barrier", "gates", "anpr"],
     hubs: ["shlagbaumy"],
     loc: {
@@ -12762,36 +12762,36 @@ export const ARTICLES: Article[] = [
         excerpt: "Toshkentda avtomatik shlagbaum narxlari: strela uzunligi, pult va raqam aniqlash (ANPR) bilan. Oʻrnatish qancha turadi va hovli, avtoturargoh, KPP uchun nimani tanlash kerak.",
         sections: [
           { h: "Shlagbaum narxi nimaga bogʻliq", p: [
-            "Asosiy omillar: strela uzunligi (3 dan 6 metrgacha), ishlash intensivligi (hovli yoki band avtoturargoh) va brend. Katalog boʻyicha hovli uchun bazaviy shlagbaum — KANIHAD KND-BGM350, 3 773 900 soʻm; oʻrta segment — ZKTeco BGM400 4 701 900 soʻm, Dahua DHI-IPMECD-1052 4 847 900 soʻm, ZKTeco CMP200 4 949 900 soʻm. Intensiv KPP uchun ZKTeco BGM500 7 052 900 soʻmga yoki premium BGM1060 9 899 900 soʻmga olinadi; past oʻtimlar uchun buklanuvchi strelali PB4130 — 6 929 900 soʻm. Almashtirish uchun alohida strela (Dahua IPMECD-0152-M30) — 597 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
-            "Boshqaruv usuli ham narxga taʼsir qiladi va bu yerda farq yaqqol koʻrinadi: pult 43 290 dan 246 900 soʻmgacha, Wi-Fi boshqaruv moduli AU-WNKG-WIFI — 247 900 soʻm, karta oʻqigich — 145 900 soʻmdan. Avtoraqamni taniydigan kamera ZKTeco E-LPRC500 — 6 186 900 soʻm, yaʼni shlagbaumning oʻzi narxida; transportni aniqlovchi radar ZKTeco VR10 Pro — 2 040 900 soʻm. ANPR eng qulayi, lekin aynan u kirish byudjetini ikki barobar oshiradi.",
+            "Asosiy omillar: strela uzunligi (3 dan 6 metrgacha), ishlash intensivligi (hovli yoki band avtoturargoh) va brend. Katalog boʻyicha hovli uchun bazaviy shlagbaum — KANIHAD KND-BGM350, 4 082 900 soʻm; oʻrta segment — ZKTeco BGM400 4 701 900 soʻm, Dahua DHI-IPMECD-1052 4 847 900 soʻm, ZKTeco CMP200 4 949 900 soʻm. Intensiv KPP uchun ZKTeco BGM500 7 052 900 soʻmga yoki premium BGM1060 9 899 900 soʻmga olinadi; past oʻtimlar uchun buklanuvchi strelali PB4130 — 6 929 900 soʻm. Almashtirish uchun alohida strela (Dahua IPMECD-0152-M30) — 597 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
+            "Boshqaruv usuli ham narxga taʼsir qiladi va bu yerda farq yaqqol koʻrinadi: pult 43 290 dan 246 900 soʻmgacha, Wi-Fi boshqaruv moduli AU-WNKG-WIFI — 246 900 soʻm, karta oʻqigich — 145 900 soʻmdan. Avtoraqamni taniydigan kamera ZKTeco E-LPRC500 — 6 186 900 soʻm, yaʼni shlagbaumning oʻzi narxida; transportni aniqlovchi radar ZKTeco VR10 Pro — 2 040 900 soʻm. ANPR eng qulayi, lekin aynan u kirish byudjetini ikki barobar oshiradi.",
           ] },
           { h: "Hovli, avtoturargoh va KPP uchun tanlov", p: [
             "TJM hovlisi uchun odatiy yechim — 4–6 metrli strela, pultlar va telefondan ochish. Avtoturargohga chiptali yoki raqam aniqlaydigan tizim mos: kirish avtomatik, hisob yuritiladi. Korxona KPPsida shlagbaum SKUD bilan bogʻlanadi — faqat ruxsat etilgan transport kiradi.",
             "Raqam aniqlash (ANPR) bilan doimiy mashinalar roʻyxat boʻyicha oʻzi kiradi — qorovul tugma bosmaydi, mehmonlar esa qoʻngʻiroq orqali. Bu hovli va ofis markazlarida eng koʻp soʻraladigan konfiguratsiya.",
           ] },
           { h: "Oʻrnatish qancha turadi", p: [
-            "Montaj narxiga poydevor (fundament), elektr taʼminoti, privodni sozlash va xavfsizlik datchiklari kiradi. Standart oʻrnatish odatda 1 kun oladi. Muhandisning chiqishi va smeta bepul — joyni koʻrib, strela uzunligi va privod kuchini toʻgʻri tanlaymiz.",
+            "Shlagbaumni oʻrnatish va sozlash — 1 500 000 soʻmdan. Ustun ostidagi poydevor, kabel yotqizish va induksion halqa alohida, obyektga qarab hisoblanadi. Standart oʻrnatish odatda 1 kun oladi. Muhandisning chiqishi va smeta bepul — joyni koʻrib, strela uzunligi va privod kuchini toʻgʻri tanlaymiz.",
             "Tejashning toʻgʻri yoʻli — loyihani boshidan toʻgʻri qilish: notoʻgʻri tanlangan kuchsiz privod band kirishda tez ishdan chiqadi va qimmatga tushadi.",
           ] },
           { h: "Qayerdan olish", p: [
-            "Katalogda 3 773 900 soʻmdan boshlanadigan shlagbaumlar, strelalar, pultlar, Wi-Fi modullar va ANPR kameralari bor — narxlar soʻmda. Kirish turini ayting (hovli, avtoturargoh, KPP) — mos variantni tanlab, oʻrnatish bilan aniq narxni hisoblaymiz. Soʻrovga ish kuni davomida javob beramiz.",
-            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
+            "Katalogda 4 082 900 soʻmdan boshlanadigan shlagbaumlar, strelalar, pultlar, Wi-Fi modullar va ANPR kameralari bor — narxlar soʻmda. Kirish turini ayting (hovli, avtoturargoh, KPP) — mos variantni tanlab, oʻrnatish bilan aniq narxni hisoblaymiz. Soʻrovga ish kuni davomida javob beramiz.",
+            "Yuridik shaxslar bilan shartnoma va QQS asosida ishlaymiz. Uskunaga rasmiy kafolat, montajga kompaniya kafolati.",
           ] },
           { h: "Yashirin xarajat moddalari", p: [
-            "Kirish smetasida shlagbaumdan tashqari montajda eslanadigan pozitsiyalar yashaydi: poydevor yoki zakladnoy, quvvat kirishi, strela kapotga yotmasligi uchun fotoelementlar va petlevoy detektor. TJMga mehmonlar uchun chaqiruv paneli va ANPR-kamera qoʻshing — ularsiz qoʻriq «domofonga qoʻngʻiroq» bilan ishlashda davom etadi.",
+            "Kirish smetasida shlagbaumdan tashqari montajda eslanadigan pozitsiyalar yashaydi: poydevor yoki oʻrnatma detal, quvvat kirishi, strela kapotga yotmasligi uchun fotoelementlar va induksion halqa detektori. TJMga mehmonlar uchun chaqiruv paneli va ANPR-kamera qoʻshing — ularsiz qoʻriq «domofonga qoʻngʻiroq» bilan ishlashda davom etadi.",
             "Boshqaruv usulida tejash oqilona (pultlar ANPR dan arzon), lekin privod sinfida emas: intensiv kirishdagi maishiy shlagbaum — mavsumdan keyin almashtirish degani. Kirish guruhini toʻliq hisoblaymiz va ishlar boshlanishidan oldin toʻliq narxni aytamiz.",
           ] },
           { h: "Xizmat reglamenti va resurs", p: [
             "Shlagbaum resursi sikllarda hisoblanadi: maishiy modellar sutkasiga bir necha yuz ochilishga moʻljallangan, intensiv turlari esa bir necha barobar koʻproq. Turar-joy majmuasi kirish yoʻli uchun strela uzunligidan koʻra intensivlik zaxirasi muhimroq.",
-            "Xizmat koʻrsatish reduktorni moylash, muvozanat prujinasini rostlash va fotoelementlarni changdan tozalashdan iborat — yiliga ikki marta. SAT Solutionsʼda bunday chiqish kirish kontrolleri va brelok qabul qilgichlarini tekshirish bilan birga rejalashtiriladi.",
+            "Xizmat koʻrsatish reduktorni moylash, muvozanat prujinasini rostlash va fotoelementlarni changdan tozalashdan iborat — yiliga ikki marta.",
           ] },
         ],
         faq: [
-          { q: "Eng arzon shlagbaum qancha turadi?", a: "KANIHAD KND-BGM350 — uskuna uchun 3 773 900 soʻm. Intensivlik boʻyicha keyingi pogʻona — ZKTeco BGM400, 4 701 900 soʻm. Poydevor, quvvat tortish, fotoelementlar va montaj obyekt boʻyicha hisoblanadi, smeta bepul." },
-          { q: "Raqam aniqlash (ANPR) bilan qancha boʻladi?", a: "Shlagbaumga ANPR kamerasi ZKTeco E-LPRC500 — 6 186 900 soʻm, zarur boʻlsa transport radari VR10 Pro — 2 040 900 soʻm va sozlash qoʻshiladi. KND-BGM350 bilan bunday kirish uskuna boʻyicha taxminan 9 960 800 soʻm turadi. Doimiy mashinalar roʻyxat boʻyicha avtomatik kiradi — hovli va ofislar uchun eng qulay yechim." },
+          { q: "Eng arzon shlagbaum qancha turadi?", a: "KANIHAD KND-BGM350 — uskuna uchun 4 082 900 soʻm. Intensivlik boʻyicha keyingi pogʻona — ZKTeco BGM400, 4 701 900 soʻm. Oʻrnatish va sozlash — 1 500 000 soʻmdan; poydevor, kabel va halqa obyektga qarab hisoblanadi, smeta bepul." },
+          { q: "Raqam aniqlash (ANPR) bilan qancha boʻladi?", a: "Shlagbaumga ANPR kamerasi ZKTeco E-LPRC500 — 6 186 900 soʻm, zarur boʻlsa transport radari VR10 Pro — 2 040 900 soʻm va sozlash qoʻshiladi. KND-BGM350 bilan bunday kirish uskuna boʻyicha taxminan 10 269 800 soʻm turadi. Doimiy mashinalar roʻyxat boʻyicha avtomatik kiradi — hovli va ofislar uchun eng qulay yechim." },
           { q: "Oʻrnatish qancha vaqt oladi?", a: "Standart oʻrnatish — 1 kun: poydevor, privod montaji, sozlash. Murakkab obyektlarda muddat smetada koʻrsatiladi." },
           { q: "Pult yoʻqolsa nima qilamiz?", a: "Yangi pultni dasturlab beramiz, yoʻqolganini tizimdan oʻchiramiz. Telefon orqali ochishni ham sozlash mumkin — pult umuman kerak boʻlmaydi." },
-          { q: "Kafolat bormi?", a: "Ha: uskunaga rasmiy kafolat, montaj ishlariga kompaniya kafolati. Servis va ehtiyot qismlar Toshkentda." },
+          { q: "Kafolat bormi?", a: "Ha: uskunaga ishlab chiqaruvchining rasmiy kafolati, ishlarga — 3 yil. Ehtiyot qismlar va strelalar — katalogda." },
         ],
       },
       ru: {
@@ -12799,19 +12799,19 @@ export const ARTICLES: Article[] = [
         excerpt: "Цены на автоматические шлагбаумы в Ташкенте: длина стрелы, пульты и распознавание номеров (ANPR). Сколько стоит установка и что выбрать для двора, парковки и КПП.",
         sections: [
           { h: "От чего зависит цена шлагбаума", p: [
-            "Главные факторы: длина стрелы (от 3 до 6 метров), интенсивность работы (двор или загруженная парковка) и бренд. По каталогу базовый шлагбаум для двора — KANIHAD KND-BGM350 за 3 773 900 сум; средний сегмент — ZKTeco BGM400 за 4 701 900 сум, Dahua DHI-IPMECD-1052 за 4 847 900 сум, ZKTeco CMP200 за 4 949 900 сум. Для интенсивного КПП берут ZKTeco BGM500 за 7 052 900 сум или премиальный BGM1060 за 9 899 900 сум; складная стрела для низких проездов PB4130 — 6 929 900 сум. Отдельная стрела на замену (Dahua IPMECD-0152-M30) стоит 597 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
-            "Способ управления тоже влияет, и разброс здесь наглядный: пульт стоит от 43 290 до 246 900 сум, модуль управления по Wi-Fi AU-WNKG-WIFI — 247 900 сум, считыватель карт — от 145 900 сум. Камера распознавания номеров ZKTeco E-LPRC500 — 6 186 900 сум, то есть по цене самого шлагбаума; радар обнаружения транспорта ZKTeco VR10 Pro — 2 040 900 сум. ANPR удобнее всего, но именно он и удваивает бюджет въезда.",
+            "Главные факторы: длина стрелы (от 3 до 6 метров), интенсивность работы (двор или загруженная парковка) и бренд. По каталогу базовый шлагбаум для двора — KANIHAD KND-BGM350 за 4 082 900 сум; средний сегмент — ZKTeco BGM400 за 4 701 900 сум, Dahua DHI-IPMECD-1052 за 4 847 900 сум, ZKTeco CMP200 за 4 949 900 сум. Для интенсивного КПП берут ZKTeco BGM500 за 7 052 900 сум или премиальный BGM1060 за 9 899 900 сум; складная стрела для низких проездов PB4130 — 6 929 900 сум. Отдельная стрела на замену (Dahua IPMECD-0152-M30) стоит 597 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
+            "Способ управления тоже влияет, и разброс здесь наглядный: пульт стоит от 43 290 до 246 900 сум, модуль управления по Wi-Fi AU-WNKG-WIFI — 246 900 сум, считыватель карт — от 145 900 сум. Камера распознавания номеров ZKTeco E-LPRC500 — 6 186 900 сум, то есть по цене самого шлагбаума; радар обнаружения транспорта ZKTeco VR10 Pro — 2 040 900 сум. ANPR удобнее всего, но именно он и удваивает бюджет въезда.",
           ] },
           { h: "Что выбрать для двора, парковки и КПП", p: [
             "Для двора ЖК типовое решение — стрела 4–6 метров, пульты и открытие с телефона. Парковке подходит система с билетами или распознаванием номеров: въезд автоматический, ведётся учёт. На КПП предприятия шлагбаум связывается со СКУД — заезжает только разрешённый транспорт.",
             "С распознаванием номеров (ANPR) постоянные машины въезжают сами по списку — охранник не жмёт кнопку, гости въезжают по звонку. Это самая востребованная конфигурация для дворов и офисных центров.",
           ] },
           { h: "Сколько стоит установка", p: [
-            "В цену монтажа входят фундамент, подводка питания, настройка привода и датчики безопасности. Стандартная установка обычно занимает 1 день. Выезд инженера и смета бесплатные — осмотрим место и правильно подберём длину стрелы и мощность привода.",
+            "Установка и настройка шлагбаума — от 1 500 000 сум. Фундамент или закладная под стойку, прокладка кабеля и индукционная петля считаются отдельно, по объекту. Стандартная установка обычно занимает 1 день. Выезд инженера и смета бесплатные — осмотрим место и правильно подберём длину стрелы и мощность привода.",
             "Правильная экономия — сразу верный проект: слабый привод на загруженном въезде быстро выходит из строя и обходится дороже.",
           ] },
           { h: "Где купить", p: [
-            "В каталоге — шлагбаумы от 3 773 900 сум, стрелы, пульты, Wi-Fi-модули и ANPR-камеры, цены в сумах. Опишите въезд (двор, парковка, КПП) — подберём вариант и посчитаем точную цену с установкой. На заявку отвечаем в течение рабочего дня.",
+            "В каталоге — шлагбаумы от 4 082 900 сум, стрелы, пульты, Wi-Fi-модули и ANPR-камеры, цены в сумах. Опишите въезд (двор, парковка, КПП) — подберём вариант и посчитаем точную цену с установкой. На заявку отвечаем в течение рабочего дня.",
             "С юрлицами работаем по договору с НДС. На оборудование — официальная гарантия, на монтаж — гарантия компании.",
           ] },
           { h: "Скрытые статьи расходов", p: [
@@ -12820,15 +12820,15 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Регламент обслуживания и ресурс", p: [
             "Ресурс шлагбаума считают в циклах: бытовые модели рассчитаны на несколько сотен открываний в сутки, интенсивные — на кратно большее число. Для въезда жилого комплекса запас по интенсивности важнее длины стрелы.",
-            "Обслуживание сводится к смазке редуктора, регулировке пружины балансировки и очистке фотоэлементов от пыли — дважды в год. В SAT Solutions такой выезд планируют вместе с проверкой контроллера доступа и приёмников брелоков.",
+            "Обслуживание сводится к смазке редуктора, регулировке пружины балансировки и очистке фотоэлементов от пыли — дважды в год.",
           ] },
         ],
         faq: [
-          { q: "Сколько стоит самый недорогой шлагбаум?", a: "KANIHAD KND-BGM350 — 3 773 900 сум за оборудование. Следующая ступень по интенсивности — ZKTeco BGM400 за 4 701 900 сум. Фундамент, подводка питания, фотоэлементы и монтаж считаются по объекту, смета бесплатная." },
-          { q: "Сколько стоит шлагбаум с распознаванием номеров?", a: "К шлагбауму добавляется камера ANPR ZKTeco E-LPRC500 — 6 186 900 сум, при необходимости радар обнаружения транспорта VR10 Pro — 2 040 900 сум, плюс настройка. С KND-BGM350 такой въезд стоит около 9 960 800 сум по оборудованию. Постоянные машины въезжают автоматически по списку — самое удобное решение для дворов и офисов." },
+          { q: "Сколько стоит самый недорогой шлагбаум?", a: "KANIHAD KND-BGM350 — 4 082 900 сум за оборудование. Следующая ступень по интенсивности — ZKTeco BGM400 за 4 701 900 сум. Установка и настройка — от 1 500 000 сум; фундамент, кабель и петля считаются по объекту, смета бесплатная." },
+          { q: "Сколько стоит шлагбаум с распознаванием номеров?", a: "К шлагбауму добавляется камера ANPR ZKTeco E-LPRC500 — 6 186 900 сум, при необходимости радар обнаружения транспорта VR10 Pro — 2 040 900 сум, плюс настройка. С KND-BGM350 такой въезд стоит около 10 269 800 сум по оборудованию. Постоянные машины въезжают автоматически по списку — самое удобное решение для дворов и офисов." },
           { q: "Сколько занимает установка?", a: "Стандартная установка — 1 день: фундамент, монтаж привода, настройка. На сложных объектах срок указывается в смете." },
           { q: "Что делать, если потерялся пульт?", a: "Запрограммируем новый, потерянный удалим из системы. Можно настроить открытие с телефона — пульт вообще не понадобится." },
-          { q: "Есть ли гарантия?", a: "Да: на оборудование — официальная гарантия, на монтаж — гарантия компании. Сервис и запчасти в Ташкенте." },
+          { q: "Есть ли гарантия?", a: "Да: на оборудование — официальная гарантия производителя, на работы — 3 года. Запчасти и стрелы — в каталоге." },
         ],
       },
       en: {
@@ -12836,19 +12836,19 @@ export const ARTICLES: Article[] = [
         excerpt: "Automatic barrier prices in Tashkent: boom length, remotes and plate recognition (ANPR). What installation costs and what to choose for a yard, a car park and a checkpoint.",
         sections: [
           { h: "What drives the barrier price", p: [
-            "Main factors: boom length (3 to 6 metres), duty cycle (a yard or a busy car park) and the brand. From the catalogue, the basic yard barrier is the KANIHAD KND-BGM350 at 3 773 900 UZS; the middle segment is the ZKTeco BGM400 at 4 701 900 UZS, the Dahua DHI-IPMECD-1052 at 4 847 900 UZS and the ZKTeco CMP200 at 4 949 900 UZS. A busy checkpoint takes the ZKTeco BGM500 at 7 052 900 UZS or the premium BGM1060 at 9 899 900 UZS; the folding-boom PB4130 for low clearances is 6 929 900 UZS. A replacement boom (Dahua IPMECD-0152-M30) costs 597 900 UZS. Catalogue prices as of September 2026, installation not included.",
-            "The control method matters too, and the spread is easy to see: a remote costs between 43 290 and 246 900 UZS, the AU-WNKG-WIFI Wi-Fi control module 247 900 UZS, and a card reader from 145 900 UZS. The ZKTeco E-LPRC500 plate recognition camera is 6 186 900 UZS — as much as the barrier itself — and the ZKTeco VR10 Pro vehicle radar 2 040 900 UZS. ANPR is the most convenient option, and it is also what doubles the budget for an entrance.",
+            "Main factors: boom length (3 to 6 metres), duty cycle (a yard or a busy car park) and the brand. From the catalogue, the basic yard barrier is the KANIHAD KND-BGM350 at 4 082 900 UZS; the middle segment is the ZKTeco BGM400 at 4 701 900 UZS, the Dahua DHI-IPMECD-1052 at 4 847 900 UZS and the ZKTeco CMP200 at 4 949 900 UZS. A busy checkpoint takes the ZKTeco BGM500 at 7 052 900 UZS or the premium BGM1060 at 9 899 900 UZS; the folding-boom PB4130 for low clearances is 6 929 900 UZS. A replacement boom (Dahua IPMECD-0152-M30) costs 597 900 UZS. Catalogue prices as of September 2026, installation not included.",
+            "The control method matters too, and the spread is easy to see: a remote costs between 43 290 and 246 900 UZS, the AU-WNKG-WIFI Wi-Fi control module 246 900 UZS, and a card reader from 145 900 UZS. The ZKTeco E-LPRC500 plate recognition camera is 6 186 900 UZS — as much as the barrier itself — and the ZKTeco VR10 Pro vehicle radar 2 040 900 UZS. ANPR is the most convenient option, and it is also what doubles the budget for an entrance.",
           ] },
           { h: "Yard, car park or checkpoint", p: [
             "For a residential yard the typical setup is a 4–6 m boom, remotes and phone opening. A car park suits a ticket or plate-recognition system with automatic entry and accounting. At a company checkpoint the barrier ties into access control — only authorised vehicles enter.",
             "With ANPR regular cars enter by whitelist — the guard presses nothing, guests enter on request. It is the most demanded configuration for yards and office centres.",
           ] },
           { h: "What installation costs", p: [
-            "The installation price covers the foundation, power feed, drive setup and safety sensors. A standard install takes about a day. The engineer's visit and estimate are free — we size the boom and the drive correctly on site.",
+            "Installing and setting up a barrier starts at 1 500 000 UZS. The base under the post, cable runs and the induction loop are priced separately, per site. A standard install takes about a day. The engineer's visit and estimate are free — we size the boom and the drive correctly on site.",
             "The right way to save is a correct design from the start: an undersized drive on a busy entrance fails quickly and costs more.",
           ] },
           { h: "Where to buy", p: [
-            "Barriers from 3 773 900 UZS, booms, remotes, Wi-Fi modules and ANPR cameras are in the catalogue, priced in UZS. Describe the entrance (yard, car park, checkpoint) and we will pick an option and quote the exact installed price. We reply to requests within the working day.",
+            "Barriers from 4 082 900 UZS, booms, remotes, Wi-Fi modules and ANPR cameras are in the catalogue, priced in UZS. Describe the entrance (yard, car park, checkpoint) and we will pick an option and quote the exact installed price. We reply to requests within the working day.",
             "We work with legal entities under VAT contracts. Official warranty on equipment, company warranty on installation.",
           ] },
           { h: "The hidden cost lines", p: [
@@ -12857,15 +12857,15 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Service schedule and duty cycle", p: [
             "A barrier's life is measured in cycles: domestic models are rated for a few hundred openings per day, while intensive-duty units handle several times more. For a residential complex entrance, headroom in the duty rating matters more than boom length.",
-            "Maintenance comes down to greasing the gearbox, adjusting the balance spring and cleaning dust off the photocells, twice a year. SAT Solutions schedules such a visit together with a check of the access controller and the remote receivers.",
+            "Maintenance comes down to greasing the gearbox, adjusting the balance spring and cleaning dust off the photocells, twice a year.",
           ] },
         ],
         faq: [
-          { q: "How much is the cheapest barrier?", a: "The KANIHAD KND-BGM350 costs 3 773 900 UZS as hardware. The next step up in duty cycle is the ZKTeco BGM400 at 4 701 900 UZS. Foundation, power supply, photocells and installation are priced per site; the estimate is free." },
-          { q: "What does ANPR add?", a: "The ZKTeco E-LPRC500 plate recognition camera at 6 186 900 UZS on top of the barrier price, the VR10 Pro vehicle radar at 2 040 900 UZS where it is needed, plus configuration. Paired with a KND-BGM350 such an entrance comes to about 9 960 800 UZS of hardware. Regular cars enter automatically by whitelist — the most convenient option for yards and offices." },
+          { q: "How much is the cheapest barrier?", a: "The KANIHAD KND-BGM350 costs 4 082 900 UZS as hardware. The next step up in duty cycle is the ZKTeco BGM400 at 4 701 900 UZS. Installation and setup start at 1 500 000 UZS; the base, cabling and loop are priced per site, and the estimate is free." },
+          { q: "What does ANPR add?", a: "The ZKTeco E-LPRC500 plate recognition camera at 6 186 900 UZS on top of the barrier price, the VR10 Pro vehicle radar at 2 040 900 UZS where it is needed, plus configuration. Paired with a KND-BGM350 such an entrance comes to about 10 269 800 UZS of hardware. Regular cars enter automatically by whitelist — the most convenient option for yards and offices." },
           { q: "How long does installation take?", a: "A standard install — 1 day: foundation, drive, setup. Complex sites are stated in the estimate." },
           { q: "What if a remote is lost?", a: "We program a new one and delete the lost one from the system. Phone opening can be set up so remotes are not needed at all." },
-          { q: "Is there a warranty?", a: "Yes: official warranty on equipment and company warranty on installation. Service and parts in Tashkent." },
+          { q: "Is there a warranty?", a: "Yes: the manufacturer's official warranty on equipment and 3 years on our works. Spare parts and booms are in the catalogue." },
         ],
       },
       tr: {
@@ -12873,19 +12873,19 @@ export const ARTICLES: Article[] = [
         excerpt: "Taşkent'te otomatik bariyer fiyatları: kol uzunluğu, kumandalar ve plaka tanıma (ANPR). Montaj ne kadar, avlu, otopark ve giriş için hangisi seçilmeli.",
         sections: [
           { h: "Bariyer fiyatını ne belirler", p: [
-            "Ana etkenler: kol uzunluğu (3–6 metre), kullanım yoğunluğu (avlu mu, yoğun otopark mı) ve marka. Katalogdan: avlu için temel bariyer KANIHAD KND-BGM350 3 773 900 UZS; orta segment ZKTeco BGM400 4 701 900 UZS, Dahua DHI-IPMECD-1052 4 847 900 UZS, ZKTeco CMP200 4 949 900 UZS. Yoğun giriş için ZKTeco BGM500 7 052 900 UZS veya premium BGM1060 9 899 900 UZS alınır; alçak geçişler için katlanır kollu PB4130 6 929 900 UZS. Yedek kol (Dahua IPMECD-0152-M30) 597 900 UZS. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
-            "Kontrol yöntemi de fiyata yansır ve fark açıkça görülür: kumanda 43 290 ile 246 900 UZS arasında, AU-WNKG-WIFI Wi-Fi kontrol modülü 247 900 UZS, kart okuyucu 145 900 UZS'den başlar. ZKTeco E-LPRC500 plaka tanıma kamerası 6 186 900 UZS — yani bariyerin kendisi kadar; ZKTeco VR10 Pro araç radarı 2 040 900 UZS. ANPR en konforlusudur, giriş bütçesini ikiye katlayan da odur.",
+            "Ana etkenler: kol uzunluğu (3–6 metre), kullanım yoğunluğu (avlu mu, yoğun otopark mı) ve marka. Katalogdan: avlu için temel bariyer KANIHAD KND-BGM350 4 082 900 UZS; orta segment ZKTeco BGM400 4 701 900 UZS, Dahua DHI-IPMECD-1052 4 847 900 UZS, ZKTeco CMP200 4 949 900 UZS. Yoğun giriş için ZKTeco BGM500 7 052 900 UZS veya premium BGM1060 9 899 900 UZS alınır; alçak geçişler için katlanır kollu PB4130 6 929 900 UZS. Yedek kol (Dahua IPMECD-0152-M30) 597 900 UZS. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
+            "Kontrol yöntemi de fiyata yansır ve fark açıkça görülür: kumanda 43 290 ile 246 900 UZS arasında, AU-WNKG-WIFI Wi-Fi kontrol modülü 246 900 UZS, kart okuyucu 145 900 UZS'den başlar. ZKTeco E-LPRC500 plaka tanıma kamerası 6 186 900 UZS — yani bariyerin kendisi kadar; ZKTeco VR10 Pro araç radarı 2 040 900 UZS. ANPR en konforlusudur, giriş bütçesini ikiye katlayan da odur.",
           ] },
           { h: "Avlu, otopark ve giriş için seçim", p: [
             "Site avlusu için tipik çözüm: 4–6 m kol, kumandalar ve telefonla açma. Otoparka biletli veya plaka tanımalı sistem uygundur. İşletme girişinde bariyer geçiş kontrolüne bağlanır — yalnızca izinli araçlar girer.",
             "ANPR ile kayıtlı araçlar listeden otomatik girer, misafirler talep üzerine. Avlular ve ofis merkezlerinde en çok istenen konfigürasyon budur.",
           ] },
           { h: "Montaj ne kadar", p: [
-            "Montaj fiyatına temel, güç hattı, motor ayarı ve güvenlik sensörleri girer. Standart montaj yaklaşık bir gün sürer. Keşif ve teklif ücretsizdir — kol boyunu ve motor gücünü yerinde doğru seçeriz.",
+            "Bariyerin kurulumu ve ayarı 1 500 000 UZS'den başlar. Direk altı temel, kablo döşeme ve endüksiyon döngüsü sahaya göre ayrıca hesaplanır. Standart montaj yaklaşık bir gün sürer. Keşif ve teklif ücretsizdir — kol boyunu ve motor gücünü yerinde doğru seçeriz.",
             "Doğru tasarruf baştan doğru projedir: yoğun girişte zayıf motor çabuk bozulur ve pahalıya patlar.",
           ] },
           { h: "Nereden alınır", p: [
-            "Katalogda 3 773 900 UZS'den başlayan bariyerler, kollar, kumandalar, Wi-Fi modülleri ve ANPR kameraları UZS fiyatlarıyla yer alır. Girişi anlatın (avlu, otopark, kontrol noktası) — seçeneği belirleyip montajlı kesin fiyatı hesaplayalım. Taleplere iş günü içinde dönüş yaparız.",
+            "Katalogda 4 082 900 UZS'den başlayan bariyerler, kollar, kumandalar, Wi-Fi modülleri ve ANPR kameraları UZS fiyatlarıyla yer alır. Girişi anlatın (avlu, otopark, kontrol noktası) — seçeneği belirleyip montajlı kesin fiyatı hesaplayalım. Taleplere iş günü içinde dönüş yaparız.",
             "Tüzel kişilerle KDV'li sözleşmeyle çalışırız. Ekipmanda resmi, montajda şirket garantisi.",
           ] },
           { h: "Gizli masraf kalemleri", p: [
@@ -12894,15 +12894,15 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Bakım programı ve çevrim ömrü", p: [
             "Bariyerin ömrü çevrim sayısıyla ölçülür: konut tipi modeller günde birkaç yüz açılışa göre tasarlanır, yoğun kullanım modelleri bunun katlarını kaldırır. Bir sitenin girişinde kol uzunluğundan çok yoğunluk payı önemlidir.",
-            "Bakım; redüktörün yağlanması, denge yayının ayarı ve fotoselin tozdan temizlenmesinden ibarettir, yılda iki kez. SAT Solutions bu ziyareti geçiş kontrol ünitesinin ve kumanda alıcılarının kontrolüyle birlikte planlar.",
+            "Bakım; redüktörün yağlanması, denge yayının ayarı ve fotoselin tozdan temizlenmesinden ibarettir, yılda iki kez.",
           ] },
         ],
         faq: [
-          { q: "En ucuz bariyer ne kadar?", a: "KANIHAD KND-BGM350 ekipman olarak 3 773 900 UZS'dir. Yoğunlukta bir üst basamak ZKTeco BGM400, 4 701 900 UZS. Temel, besleme, fotosel ve montaj sahaya göre hesaplanır; teklif ücretsizdir." },
-          { q: "Plaka tanıma ne ekler?", a: "Bariyer fiyatına ZKTeco E-LPRC500 plaka tanıma kamerası 6 186 900 UZS, gerekiyorsa VR10 Pro araç radarı 2 040 900 UZS ve yapılandırma eklenir. KND-BGM350 ile böyle bir giriş, ekipman olarak yaklaşık 9 960 800 UZS tutar. Kayıtlı araçlar listeden otomatik girer — avlular için en pratik çözüm." },
+          { q: "En ucuz bariyer ne kadar?", a: "KANIHAD KND-BGM350 ekipman olarak 4 082 900 UZS'dir. Yoğunlukta bir üst basamak ZKTeco BGM400, 4 701 900 UZS. Kurulum ve ayar 1 500 000 UZS'den; temel, kablo ve döngü sahaya göre hesaplanır, teklif ücretsizdir." },
+          { q: "Plaka tanıma ne ekler?", a: "Bariyer fiyatına ZKTeco E-LPRC500 plaka tanıma kamerası 6 186 900 UZS, gerekiyorsa VR10 Pro araç radarı 2 040 900 UZS ve yapılandırma eklenir. KND-BGM350 ile böyle bir giriş, ekipman olarak yaklaşık 10 269 800 UZS tutar. Kayıtlı araçlar listeden otomatik girer — avlular için en pratik çözüm." },
           { q: "Montaj ne kadar sürer?", a: "Standart montaj — 1 gün: temel, motor, ayar. Karmaşık tesislerde süre teklifte belirtilir." },
           { q: "Kumanda kaybolursa?", a: "Yenisini programlar, kaybolanı sistemden sileriz. Telefonla açma da ayarlanabilir — kumandaya hiç gerek kalmaz." },
-          { q: "Garanti var mı?", a: "Evet: ekipmanda resmi, montajda şirket garantisi. Servis ve yedek parça Taşkent'te." },
+          { q: "Garanti var mı?", a: "Evet: ekipmanda üreticinin resmi garantisi, işçilikte 3 yıl. Yedek parça ve kollar katalogda." },
         ],
       },
       zh: {
@@ -12910,19 +12910,19 @@ export const ARTICLES: Article[] = [
         excerpt: "塔什干自动道闸价格：闸杆长度、遥控器和车牌识别（ANPR）。安装多少钱，院区、停车场和门岗该怎么选。",
         sections: [
           { h: "道闸价格由什么决定", p: [
-            "主要因素：闸杆长度（3–6 米）、使用强度（院区还是繁忙停车场）和品牌。按目录，院区基础道闸是 KANIHAD KND-BGM350，3 773 900 苏姆；中间档为 ZKTeco BGM400 4 701 900 苏姆、大华 DHI-IPMECD-1052 4 847 900 苏姆、ZKTeco CMP200 4 949 900 苏姆。高频门岗选 ZKTeco BGM500 7 052 900 苏姆或高配 BGM1060 9 899 900 苏姆；净空受限处用折叠杆的 PB4130，6 929 900 苏姆。单独更换的闸杆（大华 IPMECD-0152-M30）597 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
-            "控制方式也影响价格，差距一目了然：遥控器 43 290 至 246 900 苏姆，AU-WNKG-WIFI 无线控制模块 247 900 苏姆，读卡器 145 900 苏姆起。ZKTeco E-LPRC500 车牌识别摄像机 6 186 900 苏姆——相当于一台道闸本身；ZKTeco VR10 Pro 车辆检测雷达 2 040 900 苏姆。车牌识别最方便，同时也正是它让入口预算翻倍。",
+            "主要因素：闸杆长度（3–6 米）、使用强度（院区还是繁忙停车场）和品牌。按目录，院区基础道闸是 KANIHAD KND-BGM350，4 082 900 苏姆；中间档为 ZKTeco BGM400 4 701 900 苏姆、大华 DHI-IPMECD-1052 4 847 900 苏姆、ZKTeco CMP200 4 949 900 苏姆。高频门岗选 ZKTeco BGM500 7 052 900 苏姆或高配 BGM1060 9 899 900 苏姆；净空受限处用折叠杆的 PB4130，6 929 900 苏姆。单独更换的闸杆（大华 IPMECD-0152-M30）597 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
+            "控制方式也影响价格，差距一目了然：遥控器 43 290 至 246 900 苏姆，AU-WNKG-WIFI 无线控制模块 246 900 苏姆，读卡器 145 900 苏姆起。ZKTeco E-LPRC500 车牌识别摄像机 6 186 900 苏姆——相当于一台道闸本身；ZKTeco VR10 Pro 车辆检测雷达 2 040 900 苏姆。车牌识别最方便，同时也正是它让入口预算翻倍。",
           ] },
           { h: "院区、停车场和门岗怎么选", p: [
             "住宅院区的典型方案：4–6 米闸杆、遥控器和手机开闸。停车场适合取票或车牌识别系统，自动进出并记账。企业门岗的道闸接入门禁——只放行授权车辆。",
             "有 ANPR 时常驻车辆按白名单自动进入——保安无需按键，访客按请求放行。这是院区和写字楼最受欢迎的配置。",
           ] },
           { h: "安装费用", p: [
-            "安装价格包含基础、供电、电机调试和安全传感器。标准安装约一天。工程师上门和报价免费——现场正确选定杆长和电机功率。",
+            "道闸安装与调试 1 500 000 苏姆起。立柱基础、线缆敷设和地感线圈按现场另行计算。标准安装约一天。工程师上门和报价免费——现场正确选定杆长和电机功率。",
             "省钱的正确方式是一开始就做对设计：繁忙入口配弱电机很快损坏，反而更贵。",
           ] },
           { h: "在哪购买", p: [
-            "目录中有 3 773 900 苏姆起的道闸，以及闸杆、遥控器、Wi-Fi 模块和车牌识别摄像机，均以苏姆计价。说明入口情况（院区、停车场、门岗），我们选型并给出含安装的准确报价。收到需求会在一个工作日内答复。",
+            "目录中有 4 082 900 苏姆起的道闸，以及闸杆、遥控器、Wi-Fi 模块和车牌识别摄像机，均以苏姆计价。说明入口情况（院区、停车场、门岗），我们选型并给出含安装的准确报价。收到需求会在一个工作日内答复。",
             "与法人单位按增值税合同合作。设备官方保修，安装公司保修。",
           ] },
           { h: "隐藏的费用项", p: [
@@ -12931,15 +12931,15 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "维保周期与开合寿命", p: [
             "道闸的寿命按开合次数计算：家用型按每天数百次设计，重载型可承受数倍的量。小区入口选型时，开合强度的余量比闸杆长度更值得关注。",
-            "维保内容就是给减速机加注润滑、调整平衡弹簧、清除光电对射上的积灰，一年两次。SAT Solutions 会把这类上门与门禁控制器、遥控接收模块的检查安排在一起。",
+            "维保内容就是给减速机加注润滑、调整平衡弹簧、清除光电对射上的积灰，一年两次。",
           ] },
         ],
         faq: [
-          { q: "最便宜的道闸多少钱？", a: "KANIHAD KND-BGM350 设备价 3 773 900 苏姆。按使用强度往上一档是 ZKTeco BGM400，4 701 900 苏姆。基础、供电、光电对射和施工按现场核算，报价免费。" },
-          { q: "加车牌识别贵多少？", a: "在道闸价格上加 ZKTeco E-LPRC500 车牌识别摄像机 6 186 900 苏姆，需要时再加 VR10 Pro 车辆雷达 2 040 900 苏姆，另有调试。配 KND-BGM350 时，这样一个入口的设备费约 9 960 800 苏姆。常驻车辆按白名单自动进入——院区最实用的方案。" },
+          { q: "最便宜的道闸多少钱？", a: "KANIHAD KND-BGM350 设备价 4 082 900 苏姆。按使用强度往上一档是 ZKTeco BGM400，4 701 900 苏姆。安装调试 1 500 000 苏姆起；基础、线缆和地感线圈按现场核算，报价免费。" },
+          { q: "加车牌识别贵多少？", a: "在道闸价格上加 ZKTeco E-LPRC500 车牌识别摄像机 6 186 900 苏姆，需要时再加 VR10 Pro 车辆雷达 2 040 900 苏姆，另有调试。配 KND-BGM350 时，这样一个入口的设备费约 10 269 800 苏姆。常驻车辆按白名单自动进入——院区最实用的方案。" },
           { q: "安装要多久？", a: "标准安装 1 天：基础、电机、调试。复杂场所在报价中注明。" },
           { q: "遥控器丢了怎么办？", a: "编程新遥控器并从系统删除丢失的。也可设置手机开闸——完全不需要遥控器。" },
-          { q: "有保修吗？", a: "有：设备官方保修，安装公司保修。塔什干本地服务和配件。" },
+          { q: "有保修吗？", a: "有：设备享有厂家官方保修，施工质保3年。配件和闸杆可在目录中选购。" },
         ],
       },
     },
@@ -12974,7 +12974,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Qanday buyurtma qilinadi", p: [
             "Vazifani ayting: nechta odam, nechta kirish, tabel qayerga yuklanadi. Mos terminallarni tanlab, oʻrnatish bilan aniq narxni hisoblaymiz. Soʻrovga ish kuni davomida javob beramiz.",
-            "Yuridik shaxslar bilan shartnoma va NDS asosida ishlaymiz. Uskunaga rasmiy kafolat, oʻrnatishga kompaniya kafolati.",
+            "Yuridik shaxslar bilan shartnoma va QQS asosida ishlaymiz. Uskunaga rasmiy kafolat, oʻrnatishga kompaniya kafolati.",
           ] },
           { h: "Maʼlumotlar yoʻli: terminaldan ish haqigacha", p: [
             "Hisob qiymati maʼlumotlar hisob-kitobgacha yetganda ochiladi: tabelni 1C ga yuklash qoʻl koʻchirish va xatolarni olib tashlaydi, boʻlimlar boʻyicha hisobotlar istalgan davr uchun kechikish va qayta ishlashlarni koʻrsatadi. Rahbar kun manzarasini oy oxirida emas, real vaqtda koʻradi.",
@@ -13384,7 +13384,7 @@ export const ARTICLES: Article[] = [
             "Intensiv kirishlarda sanoat darajasidagi privodlar qoʻyiladi — ular kuniga yuzlab siklga va qizib ketmasdan uzoq uzluksiz ishlashga moʻljallangan.",
           ] },
           { h: "Oʻrnatish qanday oʻtadi", p: [
-            "Darvozani avtomatlashtirish ishlari bir tartibda boradi: privod uchun zakladnoy yoki maydoncha, quvvat tortish, privod va reykani oʻrnatish, fotoelementlar va signal chirogʻini montaj qilish, pultlarni dasturlash hamda revers bilan kuchni sozlash. Oxirgi qadam — qoʻlda ochish mexanizmini va toʻliq ochilish-yopilish siklini tekshirish.",
+            "Darvozani avtomatlashtirish ishlari bir tartibda boradi: privod uchun oʻrnatma detal yoki maydoncha, quvvat tortish, privod va reykani oʻrnatish, fotoelementlar va signal chirogʻini montaj qilish, pultlarni dasturlash hamda revers bilan kuchni sozlash. Oxirgi qadam — qoʻlda ochish mexanizmini va toʻliq ochilish-yopilish siklini tekshirish.",
             "Montaj sifati alohida tekshiriladi: surma darvozalarda reykaning tekisligi, tavaqalilarda yelkaning oʻqdoshligi, fotoelementlar mahkamligi va ularning oʻrnatish balandligi — tizza emas, bamper darajasida. Shu bosqichdagi xatolar keyinchalik oʻz-oʻzidan revers va shesternya yeyilishi koʻrinishida chiqadi.",
           ] },
           { h: "Avtomatika buyurtmasidagi tez-tez xatolar", p: [
@@ -13403,7 +13403,7 @@ export const ARTICLES: Article[] = [
           { q: "Mavjud darvozaga oʻrnatish mumkinmi?", a: "Ha, koʻp hollarda darvozani almashtirish shart emas — privod mavjud darvozaga oʻrnatiladi. Moslikni uchta parametr belgilaydi: tavaqa massasi, kengligi va mexanika holati (roliklar, oshiq-moshiqlar, geometriya)." },
           { q: "Telefondan ochish boʻladimi?", a: "Ha: pultdan tashqari avtomatika ilova orqali yoki GSM-modul yordamida qoʻngʻiroq bilan ochishni qoʻllab-quvvatlaydi. Uni SKUD va raqam tanish bilan ham bogʻlash mumkin." },
           { q: "Svet oʻchsa darvoza ochiladimi?", a: "Privodlarda mexanik razblokirovka bor — kalit bilan ochib, darvozani qoʻlda ochish mumkin. Zaxira quvvat (UPS) ham qoʻyish mumkin." },
-          { q: "Oʻrnatish ishlari nimalardan iborat?", a: "Privod uchun zakladnoy yoki maydoncha, quvvat tortish, privod va reyka montaji, fotoelementlar va signal chirogʻini oʻrnatish, pultlarni dasturlash hamda revers bilan kuchni sozlash. Yakunda qoʻlda ochish mexanizmi tekshiriladi." },
+          { q: "Oʻrnatish ishlari nimalardan iborat?", a: "Privod uchun oʻrnatma detal yoki maydoncha, quvvat tortish, privod va reyka montaji, fotoelementlar va signal chirogʻini oʻrnatish, pultlarni dasturlash hamda revers bilan kuchni sozlash. Yakunda qoʻlda ochish mexanizmi tekshiriladi." },
         ],
       },
       ru: {
@@ -13639,7 +13639,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Toʻliq tayyor holda montaj", p: [
             "Tarmoqni toʻliq qilamiz: loyiha va optik byudjet hisobi, kabel yotqizish, reflektometr oʻlchovlari bilan tola payvandlash, boks va splitterlar montaji, OLT sozlash, ONU ulash va muhandisingizni oʻqitish.",
-            "Tarmoq pasporti va sxemalar bilan topshiramiz. Yuridik shaxs bilan shartnoma, NDS, uskuna va ishlarga kafolat.",
+            "Tarmoq pasporti va sxemalar bilan topshiramiz. Yuridik shaxs bilan shartnoma, QQS, uskuna va ishlarga kafolat.",
           ] },
         ],
         faq: [
@@ -13863,6 +13863,10 @@ const BRAND_PINNED: Record<string, string[]> = {
   hilook: ["hik-connect-skachat-podklyuchit", "ivms-4200-skachat-nastroit"],
   dahua: ["dmss-smartpss-dahua"],
 };
+// Статья, которая первой стоит на карточках товаров услуги: у шлагбаумов случайный подбор
+// ставил «QR-пропуск», а покупателю шлагбаума нужен ответ «сколько стоит» (14.10.2026).
+const PRODUCT_SERVICE_PINNED: Record<string, string> = { barrier: "shlagbaum-narxi" };
+
 export function articlesForProduct(serviceKey: string | null | undefined, brandSlug: string | null | undefined, locale: string, limit = 3, seed?: string): Article[] {
   const brand = (brandSlug ?? "").toLowerCase();
   // статьи о программе чужого бренда не показываем (Hik-Connect на карточке Dahua — ошибка)
@@ -13871,7 +13875,11 @@ export function articlesForProduct(serviceKey: string | null | undefined, brandS
   let pins = serviceKey === "cctv" || serviceKey === "intercom" ? BRAND_PINNED[brand] ?? [] : [];
   if (serviceKey === "intercom") pins = pins.slice(0, 1); // домофонам — только мобильное приложение
   const avail = pins.map((sl) => articleBySlug[sl]).filter((a): a is Article => Boolean(a && a.loc[locale]));
-  if (!avail.length) return base.slice(0, limit);
+  if (!avail.length) {
+    const sp = articleBySlug[PRODUCT_SERVICE_PINNED[serviceKey ?? ""] ?? ""];
+    if (sp?.loc[locale]) return [sp, ...base.filter((a) => a.slug !== sp.slug)].slice(0, limit);
+    return base.slice(0, limit);
+  }
   const pin = avail[seed ? seedHash(seed) % avail.length : 0];
   return [pin, ...base.filter((a) => a.slug !== pin.slug)].slice(0, limit);
 }
@@ -13881,6 +13889,7 @@ export function articlesForProduct(serviceKey: string | null | undefined, brandS
 // 17 статей при 6 местах; kamera-narxlari — главная статья блога по Узбекистану.
 const SERVICE_PINNED: Record<string, string[]> = {
   access: ["chto-takoe-skud", "skolko-stoit-skud"],
+  barrier: ["shlagbaum-narxi", "shlagbaum-dlya-dvora-i-parkovki"],
   cctv: ["kamera-narxlari", "skolko-stoit-videonablyudenie"],
 };
 

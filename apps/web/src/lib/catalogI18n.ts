@@ -43,7 +43,9 @@ const CAT_NAMES: Record<string, Loc> = {
   "PTZ — поворотные камеры": { uz: "PTZ — aylanuvchi kameralar", en: "PTZ — pan-tilt cameras", tr: "PTZ — döner kameralar", zh: "PTZ — 旋转摄像机" },
   "Системы распознавания номеров (ANPR)": { uz: "Raqam tanish tizimlari (ANPR)", en: "License plate recognition (ANPR)", tr: "Plaka tanıma sistemleri (ANPR)", zh: "车牌识别系统 (ANPR)" },
   "Терминалы и считыватели": { uz: "Terminallar va oʻqish qurilmalari", en: "Terminals & readers", tr: "Terminaller ve okuyucular", zh: "终端与读卡器" },
-  "Турникеты и шлагбаумы": { uz: "Turniketlar va shlagbaumlar", en: "Turnstiles & barriers", tr: "Turnikeler ve bariyerler", zh: "闸机与道闸" },
+  // 14.10.2026: шлагбаумы с 09.10 в своём разделе — здесь только турникеты, а название сбивало
+  // поиск («zkteco шлагбаум» Google отдавал турникетной странице). Slug в БД прежний.
+  "Турникеты и шлагбаумы": { ru: "Турникеты", uz: "Turniketlar", en: "Turnstiles", tr: "Turnikeler", zh: "闸机" },
   "Шлагбаумы": { uz: "Shlagbaumlar", en: "Barrier gates", tr: "Bariyerler", zh: "道闸" },
   "Замки и СКУД": { uz: "Qulflar va SKUD", en: "Locks & access control", tr: "Kilitler ve geçiş kontrolü", zh: "门锁与门禁" },
   "Биометрические терминалы": { uz: "Biometrik terminallar", en: "Biometric terminals", tr: "Biyometrik terminaller", zh: "生物识别终端" },

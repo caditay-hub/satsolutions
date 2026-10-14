@@ -17,7 +17,7 @@ import { ClientsStrip } from "@/components/ClientsStrip";
 import { IndustryDetailsBlock, ServiceIndustriesBlock } from "@/components/IndustryDetailsBlock";
 import { ContactButtons } from "@/components/ContactButtons";
 import { SectionNav, MobileContactBar, type SectionNavItem } from "@/components/ServicePageNav";
-import { servicePrices } from "@/lib/servicePrices";
+import { servicePricesLive } from "@/lib/servicePrices";
 import { getIndustryDetails, industriesForService } from "@/lib/industryDetails";
 import { ServiceScheme } from "@/components/ServiceScheme";
 import { NetworkDetails } from "@/components/NetworkDetails";
@@ -204,7 +204,6 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   // принимает, поэтому спрашиваем по одной и мешаем бренды между собой.
   const EQUIP_CATS: Record<string, string[]> = {
     turnstile: ["zkteco-turnstiles", "hik-turnstiles", "kanihad-turnstiles"],
-    barrier: ["zkteco-barriers", "hik-turnstiles"],
     access: ["access-control", "access-controllers"],
     locks: ["zkteco-locks", "kanihad-locks"],
     // По этим услугам реклама получала «посадочная ниже среднего»: человек ищет
@@ -219,10 +218,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     "ohrannye-sistemy": ["hik-axpro", "bolid-detectors", "detectors"],
     pa: ["prochee-pa", "rubezh-sirens", "bolid-sirens"],
     perimeter: ["thermal-cameras", "hik-ip-cameras", "hik-project"],
-    anpr: ["hik-ip-cameras", "zkteco-barriers"],
     "intellektualnoe-upravlenie-parkingom": ["zkteco-barriers", "hik-turnstiles", "displei-hik"],
     attendance: ["hik-access-terminals", "zkteco-terminals"],
-    gates: ["zkteco-barriers", "kanihad-turnstiles"],
     analytics: ["hik-ip-cameras", "hik-nvr"],
     videowall: ["displei-hik", "displei", "hik-nvr"],
     network: ["pxt-scs", "pxt-switches", "pxt-racks"],
@@ -238,8 +235,19 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     "sistemnaya-integraciya": ["hik-nvr", "pxt-server", "hik-access-terminals"],
   };
   // Товары поштучно — где профильного раздела каталога нет (боди-камеры: одна карточка, 13.10.2026)
+  // или раздел смешанный. Шлагбаумы ушли в свой раздел 09.10, а «zkteco-barriers» остался с
+  // приводом ворот и билетным терминалом: на «Шлагбаумах» в витрине не было ни одного шлагбаума,
+  // Ads оценивал посадочную как «среднюю» на всех 13 ключах (разбор 14.10.2026).
+  const BARRIERS = ["hik-ds-tmg4b0-la-6m-o-std-4", "hik-ds-tmg320-ll", "zkt-zkteco-shlagbaum-bgm500-series", "dahua-dhi-ipmecd-1052-lm30-t15"];
+  const ANPR_CAMS = ["hik-ds-tcg406-e", "zkt-e-lprc500"];
+  const PARKING = ["hik-ds-tvl224-4-5y", "hik-ds-tpm400-fp-4t", "zkt-zkteco-terminal-vydachi-biletov-tbm01", ...ANPR_CAMS, BARRIERS[0], BARRIERS[2], "pro-apl-02-parkovka-ohrana"];
   const EQUIP_SLUGS: Record<string, string[]> = {
     bodycam: ["hik-ds-mcw406-64g-gps-wifi"],
+    barrier: [...BARRIERS, "knd-kanihad-shlagbaum-knd-bgm350-l", "zkt-zkteco-shlagbaum-oranzhevyi-cmp200", "zkt-zkteco-shlagbaum-pb4130", "zkt-bgm1060-left"],
+    anpr: [...ANPR_CAMS, "hik-ds-tcg205-e-s-12v-poe", "dahua-dhi-itc413-pw4d-iz1", BARRIERS[1], BARRIERS[2], "zkt-radar-vr10-pro", "hik-l1300-r117"],
+    parking: PARKING,
+    "intellektualnoe-upravlenie-parkingom": PARKING,
+    gates: ["zkt-zkteco-avtomatika-dlya-vorot-zk-sw400dc"],
   };
   let equipment: any[] = [];
   const cats = EQUIP_CATS[svc.key];
@@ -289,8 +297,14 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   let cases: { slug: string; title: string; coverImageUrl: string | null }[] = [];
   try {
     // Профильные кейсы (у которых эта услуга — основная в portfolioLinks) идут первыми,
-    // остаток — свежие проекты. Иначе на «Боди-камерах» стояли бы три случайных объекта (13.10.2026).
-    const ownSlugs = Object.entries(PORTFOLIO_LINKS).filter(([, v]) => v.services[0] === svc.key).map(([k]) => k).slice(0, 3);
+    // за ними — где услуга есть в составе работ, остаток — свежие проекты. Иначе на «Боди-камерах»
+    // стояли бы три случайных объекта (13.10.2026), а ЖК Tower Up со шлагбаумами Dahua не попадал
+    // на «Шлагбаумы»: основная услуга у него — residential (14.10.2026).
+    const links = Object.entries(PORTFOLIO_LINKS);
+    const ownSlugs = [
+      ...links.filter(([, v]) => v.services[0] === svc.key),
+      ...links.filter(([, v]) => v.services[0] !== svc.key && v.services.includes(svc.key)),
+    ].map(([k]) => k).slice(0, 3);
     const own = (await Promise.all(ownSlugs.map((s) => getPortfolioBySlug(s).then((r) => r.item).catch(() => null)))).filter(Boolean);
     const { items: fresh } = await getPortfolio(1, 3);
     const items = [...own, ...fresh.filter((p) => !ownSlugs.includes(p.slug))].slice(0, 3);
@@ -325,7 +339,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 
   // Цена «от» для первого экрана и разметки — последняя строка ценового блока
   // (у cctv: «Готовый комплект с монтажом — от 4 000 000 сум»). Блок есть не у всех услуг.
-  const priceBlock = servicePrices(svc.key, locale);
+  // живые цены: у шлагбаумов «с установкой» = цена базовой модели + монтаж, а прайс меняется
+  const priceBlock = await servicePricesLive(svc.key, locale);
   const heroPrice = priceBlock?.rows[priceBlock.rows.length - 1] ?? null;
   const heroMinPrice = heroPrice ? Number(heroPrice.price.replace(/\D/g, "")) || null : null;
   let hasPackages = false;

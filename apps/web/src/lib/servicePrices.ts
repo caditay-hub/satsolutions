@@ -9,7 +9,9 @@
 // сверены по прод-БД 21.08.2026. При заметном изменении прайса обновлять здесь же.
 // live — имя раздела каталога: цена «от» берётся из его фасетов при отрисовке (09.10.2026,
 // у IP-камер здесь стояло «от 234 900» при живых 209 900). price — запасная, если API не ответил.
-export type PriceRow = { label: string; price: string; href: string; live?: string };
+// liveSlug — цена конкретной карточки (+ add): у шлагбаумов минимум раздела — пульт за 43 290,
+// поэтому «от» берём с базовой модели, а «с установкой» = её цена + монтаж (14.10.2026).
+export type PriceRow = { label: string; price: string; href: string; live?: string; liveSlug?: string; add?: number };
 export type ServicePriceBlock = { title: string; rows: PriceRow[]; note: string };
 
 type Loc = "ru" | "uz" | "en" | "tr" | "zh";
@@ -20,8 +22,61 @@ const CCTV_LINKS = {
   kits: "/kits",
 };
 const SERVER_LINK = "/products/type/servernoe-oborudovanie";
+// Шлагбаумы: монтаж «от 1 500 000» — установка и настройка (решение владельца 14.10.2026; реальная
+// продажа 16.02.2026 — 1 500 000 с НДС). Фундамент, кабель и индукционная петля — по объекту.
+const BARRIER_LINK = "/products/type/shlagbaumy";
+const BARRIER_ORDER = "/solutions/barrier#order";
+const BARRIER_BASE = "knd-kanihad-shlagbaum-knd-bgm350-l";
+const BARRIER_MOUNT = 1500000;
 
 const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
+  barrier: {
+    ru: {
+      title: "Сколько стоит шлагбаум с установкой",
+      rows: [
+        { label: "Шлагбаум — оборудование", price: "от 4 082 900 сум", href: BARRIER_LINK, liveSlug: BARRIER_BASE },
+        { label: "Установка и настройка", price: "от 1 500 000 сум", href: BARRIER_ORDER },
+        { label: "Шлагбаум с установкой", price: "от 5 582 900 сум", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
+      ],
+      note: "Оборудование — по ценам каталога, монтаж — установка и настройка шлагбаума. Фундамент под стойку, прокладка кабеля и индукционная петля считаются по объекту: пришлите ширину проезда и сколько машин проезжает за день — вернём смету в течение рабочего дня.",
+    },
+    uz: {
+      title: "Oʻrnatish bilan shlagbaum qancha turadi",
+      rows: [
+        { label: "Shlagbaum — uskuna", price: "4 082 900 soʻmdan", href: BARRIER_LINK, liveSlug: BARRIER_BASE },
+        { label: "Oʻrnatish va sozlash", price: "1 500 000 soʻmdan", href: BARRIER_ORDER },
+        { label: "Oʻrnatish bilan shlagbaum", price: "5 582 900 soʻmdan", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
+      ],
+      note: "Uskuna — katalog narxlarida, montaj — shlagbaumni oʻrnatish va sozlash. Ustun ostidagi poydevor, kabel yotqizish va induksion halqa obyektga qarab hisoblanadi: kirish yoʻli kengligini va kuniga qancha mashina oʻtishini yuboring — ish kuni davomida smeta yuboramiz.",
+    },
+    en: {
+      title: "What a barrier gate with installation costs",
+      rows: [
+        { label: "Barrier gate — hardware", price: "from 4,082,900 UZS", href: BARRIER_LINK, liveSlug: BARRIER_BASE },
+        { label: "Installation and setup", price: "from 1,500,000 UZS", href: BARRIER_ORDER },
+        { label: "Barrier gate, installed", price: "from 5,582,900 UZS", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
+      ],
+      note: "Hardware is priced from the catalogue; installation covers mounting and setting up the barrier. The base under the post, cable runs and the induction loop are quoted per site: send us the lane width and how many cars pass per day, and we will return a quote within one working day.",
+    },
+    tr: {
+      title: "Kurulum dahil bariyer ne kadar",
+      rows: [
+        { label: "Bariyer — ekipman", price: "4.082.900 UZS'den", href: BARRIER_LINK, liveSlug: BARRIER_BASE },
+        { label: "Kurulum ve ayar", price: "1.500.000 UZS'den", href: BARRIER_ORDER },
+        { label: "Kurulum dahil bariyer", price: "5.582.900 UZS'den", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
+      ],
+      note: "Ekipman katalog fiyatlarıyla, montaj bariyerin kurulumunu ve ayarını kapsar. Direk altı temel, kablo döşeme ve endüksiyon döngüsü sahaya göre hesaplanır: geçiş genişliğini ve günde kaç aracın geçtiğini gönderin, bir iş günü içinde teklif iletelim.",
+    },
+    zh: {
+      title: "道闸含安装多少钱",
+      rows: [
+        { label: "道闸设备", price: "4 082 900 苏姆起", href: BARRIER_LINK, liveSlug: BARRIER_BASE },
+        { label: "安装与调试", price: "1 500 000 苏姆起", href: BARRIER_ORDER },
+        { label: "道闸含安装", price: "5 582 900 苏姆起", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
+      ],
+      note: "设备按目录价格计算，安装费包含道闸的安装与调试。立柱基础、线缆敷设和地感线圈按现场另行报价：请告知车道宽度和每日车流量，我们将在一个工作日内提供报价。",
+    },
+  },
   cctv: {
     ru: {
       title: "Сколько стоит оборудование",
@@ -135,8 +190,17 @@ function fromPrice(n: number, loc: string): string {
 export async function servicePricesLive(serviceKey: string, locale: string): Promise<ServicePriceBlock | null> {
   const block = servicePrices(serviceKey, locale);
   if (!block) return null;
-  const { getProductFacets } = await import("@/lib/api");
+  const { getProductFacets, getProductBySlug } = await import("@/lib/api");
   const rows = await Promise.all(block.rows.map(async (r) => {
+    if (r.liveSlug) {
+      try {
+        const { product } = await getProductBySlug(r.liveSlug);
+        const p = Number(product?.price) || 0;
+        return p > 0 ? { ...r, price: fromPrice(p + (r.add ?? 0), locale) } : r;
+      } catch {
+        return r;
+      }
+    }
     if (!r.live) return r;
     try {
       const f = await getProductFacets(r.live);

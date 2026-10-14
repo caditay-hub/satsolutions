@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "pro-aktiv-dlya-shlagbaum-abo-20m-bezprovodnoi",
+    "id": "521d5684-14f1-4ee0-a8b1-bbeedecb8893",
+    "new": { "name": "Беспроводной привод для шлагбаума ABO-20M" },
+    "old": { "name": "Привод для шлагбаума Актив для шлагбаум ABO-20M (безпроводной)" }
+  },
+  {
+    "slug": "pro-apl-02-parkovka-ohrana",
+    "id": "0ed0bb31-9ad0-43c1-9f14-14f5a3ea7068",
+    "new": { "categoryId": "5b3d5135-39b7-447a-ab65-91ac03fc03f2" },
+    "old": { "categoryId": "9ba9078d-b1e3-4c85-8f81-da21b5319fce" }
+  },
+  {
+    "slug": "pro-apl-x4-parkovka-ohrana",
+    "id": "218a7a0d-1650-401a-870d-5ee79d1ce96b",
+    "new": { "categoryId": "5b3d5135-39b7-447a-ab65-91ac03fc03f2" },
+    "old": { "categoryId": "9ba9078d-b1e3-4c85-8f81-da21b5319fce" }
+  }
+]

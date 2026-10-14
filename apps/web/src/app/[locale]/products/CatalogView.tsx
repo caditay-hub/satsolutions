@@ -11,6 +11,8 @@ import { Link } from "@/i18n/navigation";
 import { articlesForHub } from "@/lib/articlesData";
 
 // Заголовок блока «Статьи по теме» на хабах типов (инлайн — не раздуваем messages)
+// Второй текстовый блок раздела (контент-лендинг типа под лонгридом категории)
+const CHOOSE_UI: Record<string, string> = { ru: "как выбрать", uz: "qanday tanlash kerak", en: "how to choose", tr: "nasıl seçilir", zh: "选购要点" };
 const HUB_ARTICLES_UI: Record<string, string> = {
   ru: "Статьи по теме",
   uz: "Mavzu boʻyicha maqolalar",
@@ -56,7 +58,7 @@ const CATALOG_SCOPED_PAGE = 60;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [] }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [], typeH1 }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; /** H1 раздела вместо голого имени типа (typeSeo TYPE_H1) */ typeH1?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -325,7 +327,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             <Image src={brandLanding.logoUrl} alt={brandLanding.name} fill className="object-contain object-left" sizes="120px" />
           </span>
         ) : null}
-        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? localizeCatName(type as string, locale) : groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : brandLanding ? (brandLanding.seoH1 ?? brandLanding.name) : tnav("products")}</h1>
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? (typeH1 ?? localizeCatName(type as string, locale)) : groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : brandLanding ? (brandLanding.seoH1 ?? brandLanding.name) : tnav("products")}</h1>
         <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {formatNumber(total)}</span>
       </div>
 
@@ -561,7 +563,8 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
           ) : null}
           {pairBlock ? (
             <section id="pair-guide" className="mt-12 scroll-mt-24 border-t border-slate-200 pt-8">
-              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{pairBlock.heading} — {tc("guideSuffix")}</h2>
+              {/* при лонгриде категории выше — свой заголовок, иначе два одинаковых H2 (14.10.2026) */}
+              <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">{pairBlock.heading} — {typeLongDesc?.trim() ? (CHOOSE_UI[locale] ?? CHOOSE_UI.ru) : tc("guideSuffix")}</h2>
               <div className="max-w-3xl">
                 <RichDescription text={pairBlock.intro + (pairBlock.faq.length ? "\n\n" + pairBlock.faq.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n") : "")} />
               </div>

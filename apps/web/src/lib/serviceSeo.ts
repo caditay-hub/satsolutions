@@ -82,9 +82,11 @@ const ru: Record<string, ServiceSeo> = {
     desc: "Продажа и установка турникетов в Ташкенте: проходные, калитки, интеграция со СКУД и учётом рабочего времени. Монтаж и обслуживание по всему Узбекистану.",
   },
   barrier: {
-    h1: "Шлагбаумы в Ташкенте — установка и автоматика",
-    title: "Шлагбаумы в Ташкенте — установка автоматических | SAT",
-    desc: "Автоматические шлагбаумы в Ташкенте: цена с установкой, монтаж, пульты и распознавание номеров (ANPR). Въезды, парковки и дворы по всему Узбекистану. Гарантия.",
+    // 14.10.2026: страница услуги — под «установку», «цену/купить» забирает каталог шлагбаумов
+    // (раньше оба title начинались с «Шлагбаумы в Ташкенте —», услуга получала 0 показов)
+    h1: "Установка шлагбаумов в Ташкенте — для парковок, дворов и ЖК",
+    title: "Установка шлагбаумов в Ташкенте — для парковки и двора | SAT",
+    desc: "Установка шлагбаумов в Ташкенте: монтаж и настройка от 1 500 000 сум, подбор под ширину проезда, пульты, открытие с телефона и по номеру (ANPR). Выезд инженера бесплатно, гарантия на работы 3 года.",
   },
   alarm: {
     h1: "Охранная сигнализация для квартиры и дома в Ташкенте",
@@ -312,9 +314,9 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda turniketlarni sotish va oʻrnatish: oʻtish yoʻlaklari, kalitkalar, SKUD va ish vaqti hisobi bilan integratsiya. Montaj va xizmat mamlakat boʻylab.",
   },
   barrier: {
-    h1: "Toshkentda shlagbaumlar — oʻrnatish va avtomatika",
-    title: "Shlagbaum narxi va oʻrnatish Toshkentda — avtomatik | SAT",
-    desc: "Toshkentda avtomatik shlagbaumlar: sotish, montaj, pultlar va avtoraqamni aniqlash (ANPR). Kirish yoʻllari, avtoturargoh va hovlilarga oʻrnatish. Kafolat.",
+    h1: "Toshkentda shlagbaum oʻrnatish — avtoturargoh, hovli va turar-joy majmualari uchun",
+    title: "Shlagbaum oʻrnatish Toshkentda — avtoturargoh va hovli | SAT",
+    desc: "Toshkentda shlagbaum oʻrnatish: montaj va sozlash 1 500 000 soʻmdan, kirish yoʻli kengligiga qarab tanlov, pultlar, telefondan va raqam boʻyicha (ANPR) ochish. Muhandis chiqishi bepul, ishlarga 3 yil kafolat.",
   },
   alarm: {
     h1: "Toshkentda kvartira va uy uchun qoʻriqlash signalizatsiyasi",
@@ -541,9 +543,9 @@ const en: Record<string, ServiceSeo> = {
     desc: "Turnstile sales and installation in Tashkent: full-height and tripod turnstiles, gates, integration with access control and time tracking. Service across Uzbekistan.",
   },
   barrier: {
-    h1: "Barrier Gates in Tashkent — Installation & Automation",
-    title: "Barrier Gates in Tashkent — Automatic Barriers | SAT",
-    desc: "Automatic barrier gates in Tashkent: sales, installation, remotes and license plate recognition (ANPR). Entrances, parking and courtyards across Uzbekistan.",
+    h1: "Barrier Gate Installation in Tashkent — Car Parks, Yards and Residential Complexes",
+    title: "Barrier Gate Installation in Tashkent — Parking & Yards | SAT",
+    desc: "Barrier gate installation in Tashkent: mounting and setup from 1,500,000 UZS, sized to the lane, remotes, opening by phone or number plate (ANPR). Free engineer visit, 3-year warranty on works.",
   },
   alarm: {
     h1: "Home and Apartment Security Alarms in Tashkent",
@@ -770,9 +772,9 @@ const tr: Record<string, ServiceSeo> = {
     desc: "Taşkent'te turnike satışı ve montajı: geçiş turnikeleri, engelli kapıları, geçiş kontrol ve personel devam takibi entegrasyonu. Özbekistan genelinde kurulum.",
   },
   barrier: {
-    h1: "Taşkent'te bariyer kurulumu ve otomasyonu",
-    title: "Taşkent'te Otomatik Bariyer Kurulumu | SAT",
-    desc: "Taşkent'te otomatik bariyerler: kurulum dahil fiyat, montaj, kumandalar ve plaka tanıma (ANPR). Girişler, otoparklar ve siteler için kurulum, garanti.",
+    h1: "Taşkent'te bariyer kurulumu — otoparklar, avlular ve siteler",
+    title: "Taşkent'te Bariyer Kurulumu — Otopark ve Site Girişi | SAT",
+    desc: "Taşkent'te bariyer kurulumu: montaj ve ayar 1.500.000 UZS'den, geçişe göre seçim, kumandalar, telefondan ve plakayla (ANPR) açma. Ücretsiz keşif, işçilikte 3 yıl garanti.",
   },
   alarm: {
     h1: "Taşkent'te ev ve daire için hırsız alarm sistemi",
@@ -998,9 +1000,9 @@ const zh: Record<string, ServiceSeo> = {
     desc: "塔什干闸机销售与安装：三辊闸、摆闸与平开门通道，可与门禁系统和考勤管理系统联动。乌兹别克斯坦全境提供安装、调试与长期维护服务。",
   },
   barrier: {
-    h1: "塔什干道闸安装与自动化控制",
-    title: "塔什干道闸安装 — 自动道闸工程 | SAT",
-    desc: "塔什干自动道闸：含安装报价、设备销售与施工、遥控器及车牌识别（ANPR）。适用于出入口、停车场和小区，乌兹别克斯坦全境提供安装服务。",
+    h1: "塔什干道闸安装 — 停车场、院落与住宅小区出入口",
+    title: "塔什干道闸安装 — 停车场与小区出入口 | SAT",
+    desc: "塔什干道闸安装：安装调试1 500 000苏姆起，按车道宽度选型，支持遥控器、手机开闸与车牌识别（ANPR）。免费上门勘察，施工质保3年。",
   },
   alarm: {
     h1: "塔什干公寓与住宅防盗报警安装",

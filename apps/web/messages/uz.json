@@ -506,7 +506,7 @@
           },
           {
             "name": "Yuz va raqam tanish",
-            "for": "Prohodnaya, parking, savdo markazi",
+            "for": "Oʻtkazish punkti, parking, savdo markazi",
             "items": [
               "Yuzlar: oq/qora roʻyxatlar, foto boʻyicha qidiruv",
               "Raqamlar: oq roʻyxat boʻyicha avto-kirish",
@@ -1541,20 +1541,36 @@
         "Avtomatika va xavfsizlik fotoelementlarini montaj qilish",
         "Boshqaruv va pultlarni sozlash",
         "ANPR va SKUD bilan integratsiya",
-        "Ishga tushirish va xizmat koʻrsatish"
+        "Ishga tushirish va qorovulni oʻqitish"
       ],
       "faq": [
         {
-          "q": "Qaysi shlagbaumlarni oʻrnataysiz?",
-          "a": "Avtomatik shlagbaumlar sayyohlik joy va kirishlari uchun turli uzunlikdagi strelalar va ish intensivligi bilan — oqim uchun tanlayemiz."
+          "q": "Oʻrnatish bilan shlagbaum qancha turadi?",
+          "a": "Oʻrnatish va sozlash — 1 500 000 soʻmdan. Shlagbaumning oʻzi katalog narxida: hovli uchun bazaviy modeldan gavjum kirish yoʻllari uchun tezkor modellargacha. Ustun ostidagi poydevor, kabel yotqizish va induksion halqa obyektga qarab hisoblanadi — narxli smetani ish kuni davomida yuboramiz."
         },
         {
-          "q": "Avtomobil raqami boʻyicha ochish mumkinmi?",
-          "a": "Ha, avtonomberilish (ANPR) aniqlash tizimi va SKUD bilan integrasiya qilamiz avtomatik proezd uchun."
+          "q": "Qaysi shlagbaumlarni oʻrnatasiz?",
+          "a": "Strelasi 3 metrdan 6 metrgacha boʻlgan Hikvision, ZKTeco, Dahua va KANIHAD shlagbaumlari: hovli uchun maishiy modellar, turar-joy majmuasi va biznes-markaz avtoturargohlari hamda korxona kirish punktlari uchun intensiv modellar. Kirish yoʻli kengligi va kuniga oʻtadigan mashinalar soniga qarab tanlaymiz."
         },
         {
-          "q": "Boshqaruv va pultlar haqida nima?",
-          "a": "Boshqarish pultlardan, kortochka, tugma, ilova orqali va oq roʻyxat boʻyicha avtomatik ravishda mumkin."
+          "q": "Oʻrnatish qancha vaqt oladi?",
+          "a": "Oddiy kirish yoʻli — 1 kun: ustun, strela, ulash, pultlarni sozlash. Raqam aniqlash tizimi bilan turar-joy majmuasi yoki biznes-markaz avtoturargohi — 1–3 kun, korxona kirish punkti — loyiha boʻyicha."
+        },
+        {
+          "q": "Shlagbaumni avtomobil raqami boʻyicha ochish mumkinmi?",
+          "a": "Ha: raqamni aniqlash kamerasini (ANPR) oʻrnatamiz va uni SKUD bilan bogʻlaymiz — oq roʻyxatdagi mashinalar toʻxtamasdan kiradi, har bir oʻtish surat bilan jurnalga yoziladi."
+        },
+        {
+          "q": "Shlagbaumni yana qanday boshqarish mumkin?",
+          "a": "Pult, karta yoki brelok, qoʻriqlash postidagi tugma, Wi-Fi modul orqali telefondan va mehmonlar uchun QR-kod bilan."
+        },
+        {
+          "q": "Elektr oʻchsa nima boʻladi?",
+          "a": "Strelani qulfdan chiqarish kaliti bilan qoʻlda koʻtarish mumkin, uzluksiz ishlash uchun esa akkumulyator yoki UPS oʻrnatamiz — elektr boʻlmaganda ham shlagbaum ochilaveradi."
+        },
+        {
+          "q": "Qanday kafolat beriladi?",
+          "a": "Uskunaga ishlab chiqaruvchining rasmiy kafolati, ishlarga — 3 yil."
         }
       ],
       "details": {
@@ -1616,7 +1632,7 @@
             "s": "pultlar, kartalar, raqam aniqlash, oʻtish huquqlari"
           },
           {
-            "t": "Topshirish va xizmat",
+            "t": "Obyektni topshirish",
             "s": "qorovulni oʻqitamiz; uskuna va ishlarga kafolat"
           }
         ],
@@ -2216,7 +2232,7 @@
         },
         {
           "q": "Maktabda montajni qachon qilgan maʼqul?",
-          "a": "Asosiy ishlarni taʼtillarga rejalashtiramiz: 2–4 haftada prohodnaya va kameralarni ulgurib oʻrnatamiz. Oʻquv vaqtida faqat kelishuv boʻyicha jim ishlar mumkin."
+          "a": "Asosiy ishlarni taʼtillarga rejalashtiramiz: 2–4 haftada oʻtkazish punkti va kameralarni ulgurib oʻrnatamiz. Oʻquv vaqtida faqat kelishuv boʻyicha jim ishlar mumkin."
         }
       ],
       "details": {
@@ -2225,7 +2241,7 @@
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
-            "name": "Maktab prohodnayasi",
+            "name": "Maktab oʻtkazish punkti",
             "for": "Maktab, litsey, kollej",
             "items": [
               "Ertalabki oqimga turniketlar",
@@ -2250,7 +2266,7 @@
             "name": "Xavfsizlik kompleksi",
             "for": "Oʻquv muassasasi — toʻliq tayyor yechim",
             "items": [
-              "Prohodnaya + kameralar + yongʻin + ogohlantirish",
+              "Oʻtkazish punkti + kameralar + yongʻin + ogohlantirish",
               "Pultga trevoga tugmasi",
               "Byudjet xaridlari uchun hujjatlar",
               "Shartnoma boʻyicha xizmat"
@@ -2318,7 +2334,7 @@
         "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
         "packages": [
           {
-            "name": "Prohodnaya va smenalar hisobi",
+            "name": "Oʻtkazish punkti va smenalar hisobi",
             "for": "Zavod, sex, kombinat",
             "items": [
               "Karta yoki biometrli turniketlar",
@@ -3199,7 +3215,7 @@
           }
         ],
         "stagesLabel": "Qanday ishlaymiz",
-        "stagesTitle": "Odamlar oqimidan prohodnayagacha — 5 qadam",
+        "stagesTitle": "Odamlar oqimidan oʻtkazish punktigacha — 5 qadam",
         "stages": [
           {
             "t": "Oqim hisobi",

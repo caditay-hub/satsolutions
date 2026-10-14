@@ -92,6 +92,12 @@ export default async function BrandTypePage({
     if (type === "turnikety-i-shlagbaumy" && (await resolvePair(brandSlug, "shlagbaumy").catch(() => null))) {
       permanentRedirect(`${lp}/catalog/${brandSlug}/shlagbaumy`);
     }
+    // Шлагбаумов бренда меньше трёх (KANIHAD — две модели): человек искал шлагбаум, а не бренд —
+    // ведём в раздел шлагбаумов, где эти модели есть. Старые адреса KANIHAD собирали показы по
+    // шлагбаумным запросам и уводили на страницу бренда (разбор 14.10.2026).
+    if (type === "shlagbaumy" || (type === "turnikety-i-shlagbaumy" && brandSlug === "kanihad")) {
+      permanentRedirect(`${lp}/products/type/shlagbaumy`);
+    }
     permanentRedirect(`${lp}/catalog/${brandSlug}`);
   }
 
