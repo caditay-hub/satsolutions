@@ -14,6 +14,30 @@ export function clip(text: string, max = 160): string {
 }
 
 /**
+ * Как clip, но режет по концу предложения (14.10.2026): у ~2 600 товаров на каждом языке
+ * сниппет обрывался «…» посреди фразы перед хвостом с ценой. Порядок: последнее целое
+ * предложение (не короче 45% лимита) → последняя запятая/точка с запятой/тире у самого
+ * конца (≥75%, чтобы не съедать характеристики) с точкой → обрезка по слову с «…».
+ */
+export function clipSentence(text: string, max = 160): string {
+    const t = (text || "").replace(/\s+/g, " ").trim();
+    if (t.length <= max) return t;
+    const cut = t.slice(0, max);
+    let end = -1;
+    for (const m of cut.matchAll(/[.!?。！？](?=\s|$)|[。！？]/g)) {
+        const e = (m.index ?? 0) + m[0].length;
+        if (e >= max * 0.45) end = e;
+    }
+    if (end > 0) return cut.slice(0, end).trim();
+    let sep = -1;
+    for (const m of cut.matchAll(/[,;，；]\s|\s[—–-]\s|：|:\s/g)) {
+        if ((m.index ?? 0) >= max * 0.75) sep = m.index ?? 0;
+    }
+    if (sep > 0) return cut.slice(0, sep).replace(/[\s,;:–—-]+$/, "") + (/[一-鿿]/.test(cut) ? "。" : ".");
+    return clip(t, max);
+}
+
+/**
  * og:url = canonical страницы. Обёртка для generateMetadata каждой страницы (05.10.2026):
  * у ~1960 страниц og:url не было вовсе — openGraph страницы целиком заменяет openGraph
  * layout (Next не сливает его по полям), а url в нём никто не ставил.

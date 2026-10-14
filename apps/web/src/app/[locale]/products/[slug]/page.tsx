@@ -9,7 +9,7 @@ import { ReviewForm } from "@/components/ReviewForm";
 import { CrossSellClick } from "@/components/CrossSellClick";
 import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { createMetadata, clip, withOgUrl } from "@/lib/metadata";
+import { createMetadata, clipSentence, withOgUrl } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
@@ -154,6 +154,8 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     const isRu = locale === routing.defaultLocale;
     // Оверлей data/productSeoI18n.json (10.10.2026) — ручные title/description на ВСЕХ 5 языках
     // для карточек с показами без кликов; приоритет над полями БД (те только RU). Цены в нём нет.
+    // 14.10.2026: добавлены переводы uz/en/tr/zh всех 327 ручных RU seoTitle/seoDescription
+    // (на этих языках раньше стоял шаблон). Правишь ручное SEO товара в БД — правь и оверлей.
     const ov = (PRODUCT_SEO as Record<string, Record<string, { title?: string; desc?: string }>>)[product.slug]?.[locale];
     const seoTitle = ov?.title || (isRu && product.seoTitle?.trim()) || "";
     const seoDesc = ov?.desc || (isRu && product.seoDescription?.trim()) || "";
@@ -181,7 +183,7 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
       const label = brandName && !squash(mc).includes(squash(brandName)) ? `${brandName} ${mc}` : mc;
       modelLead = label + (locale === "zh" ? "：" : ": ");
     }
-    let body = clip(seoDesc || (body0 ? modelLead + body0 : loc.name), 158 - tail.length);
+    let body = clipSentence(seoDesc || (body0 ? modelLead + body0 : loc.name), 158 - tail.length);
     // перед хвостом с ценой — точка («…IP-kamera Narxi:» читалось как одно предложение)
     if (!/[.!?…。！？]$/.test(body)) body += locale === "zh" ? "。" : ".";
     const desc = body + tail;
