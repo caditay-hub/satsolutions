@@ -42,6 +42,7 @@ import { SmartResultsView, type SmartItem } from "./SmartResultsView";
 import { BRAND_CONFIG } from "@/lib/brandConfig";
 import { slimProduct } from "@/lib/catalogSlim";
 import { InfiniteProducts } from "@/components/catalog/InfiniteProducts";
+import { KitsStrip } from "@/components/catalog/KitsStrip";
 
 // Размер «страницы» для голого каталога /products (тысячи позиций, постранично).
 // На страницах раздела/фильтра (тип/бренд/категория/поиск/характеристики/цена) товары
@@ -505,6 +506,7 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                   perPage={perPage}
                   view={view}
                   params={{ category, brand, q, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }}
+                  insert={!q && type && /камер|видеорегистратор|nvr|dvr/i.test(type) ? <KitsStrip locale={locale} /> : undefined}
                 />
               ) : view === "list" ? (
                 <div className="flex flex-col gap-2.5">

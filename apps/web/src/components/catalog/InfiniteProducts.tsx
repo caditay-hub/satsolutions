@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, Fragment } from "react";
 import { useLocale } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { CatalogCard } from "@/components/CatalogCard";
@@ -18,7 +18,7 @@ export type InfiniteItem = { p: ProductDto; name: string };
 const STATE_TTL = 30 * 60 * 1000;
 
 export function InfiniteProducts({
-  initial, total, page, perPage, view, params,
+  initial, total, page, perPage, view, params, insert, insertAfter = 4,
 }: {
   initial: InfiniteItem[];
   total: number;
@@ -27,6 +27,9 @@ export function InfiniteProducts({
   view: "grid" | "list";
   /** фильтры раздела в том виде, в каком их берёт API (type, brand, chars…) */
   params: Record<string, string | undefined>;
+  /** блок внутри сетки после первых insertAfter товаров (комплекты в каталоге камер, 14.10.2026) */
+  insert?: React.ReactNode;
+  insertAfter?: number;
 }) {
   const locale = useLocale();
   const [items, setItems] = useState<InfiniteItem[]>(initial);
@@ -149,11 +152,21 @@ export function InfiniteProducts({
     <div onClickCapture={onClickCapture}>
       {view === "list" ? (
         <div className="flex flex-col gap-2.5">
-          {items.map(({ p, name }) => <CatalogRow key={p.id} p={p} name={name} />)}
+          {items.map(({ p, name }, i) => (
+            <Fragment key={p.id}>
+              <CatalogRow p={p} name={name} />
+              {insert && i === Math.min(insertAfter, items.length) - 1 ? insert : null}
+            </Fragment>
+          ))}
         </div>
       ) : (
         <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-          {items.map(({ p, name }) => <CatalogCard key={p.id} p={p} name={name} />)}
+          {items.map(({ p, name }, i) => (
+            <Fragment key={p.id}>
+              <CatalogCard p={p} name={name} />
+              {insert && i === Math.min(insertAfter, items.length) - 1 ? <div className="col-span-full">{insert}</div> : null}
+            </Fragment>
+          ))}
         </div>
       )}
       {!loadedAll ? (
