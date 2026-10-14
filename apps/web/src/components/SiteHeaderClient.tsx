@@ -28,12 +28,12 @@ const MENU_LABEL: Record<string, { open: string; close: string }> = {
   zh: { open: "打开菜单", close: "关闭菜单" },
 };
 
-const ABOUT_MENU: Record<string, { all: string; apps: string; uy: string; davomat: string; blog: string; reviews: string; zkteco: string; h3c: string; tenders: string; company: string; products: string }> = {
-  ru: { all: "О компании", apps: "Приложения SAT", uy: "SAT Uy — жителям ЖК", davomat: "SAT Davomat — учёт времени", blog: "Блог", reviews: "Отзывы", zkteco: "Партнёр ZKTeco", h3c: "Партнёр H3C", tenders: "Поставки и тендеры", company: "Компания", products: "Наши продукты" },
-  uz: { all: "Kompaniya haqida", apps: "SAT ilovalari", uy: "SAT Uy — TJM aholisiga", davomat: "SAT Davomat — ish vaqti", blog: "Blog", reviews: "Sharhlar", zkteco: "ZKTeco hamkori", h3c: "H3C hamkori", tenders: "Yetkazish va tenderlar", company: "Kompaniya", products: "Bizning mahsulotlar" },
-  en: { all: "About us", apps: "SAT apps", uy: "SAT Uy — for residents", davomat: "SAT Davomat — time tracking", blog: "Blog", reviews: "Reviews", zkteco: "ZKTeco partner", h3c: "H3C partner", tenders: "Supply and tenders", company: "Company", products: "Our products" },
-  tr: { all: "Hakkımızda", apps: "SAT uygulamaları", uy: "SAT Uy — site sakinlerine", davomat: "SAT Davomat — mesai takibi", blog: "Blog", reviews: "Yorumlar", zkteco: "ZKTeco ortağı", h3c: "H3C ortağı", tenders: "Tedarik ve ihaleler", company: "Şirket", products: "Ürünlerimiz" },
-  zh: { all: "关于我们", apps: "SAT 应用", uy: "SAT Uy——面向住户", davomat: "SAT Davomat——考勤", blog: "博客", reviews: "客户评价", zkteco: "ZKTeco 合作伙伴", h3c: "H3C 合作伙伴", tenders: "供货与招标", company: "公司", products: "我们的产品" },
+const ABOUT_MENU: Record<string, { all: string; apps: string; uy: string; davomat: string; parking: string; blog: string; reviews: string; zkteco: string; h3c: string; tenders: string; company: string; products: string }> = {
+  ru: { all: "О компании", apps: "Приложения SAT", uy: "SAT Uy — жителям ЖК", davomat: "SAT Davomat — учёт времени", parking: "SAT Parking — платная парковка", blog: "Блог", reviews: "Отзывы", zkteco: "Партнёр ZKTeco", h3c: "Партнёр H3C", tenders: "Поставки и тендеры", company: "Компания", products: "Наши продукты" },
+  uz: { all: "Kompaniya haqida", apps: "SAT ilovalari", uy: "SAT Uy — TJM aholisiga", davomat: "SAT Davomat — ish vaqti", parking: "SAT Parking — pullik avtoturargoh", blog: "Blog", reviews: "Sharhlar", zkteco: "ZKTeco hamkori", h3c: "H3C hamkori", tenders: "Yetkazish va tenderlar", company: "Kompaniya", products: "Bizning mahsulotlar" },
+  en: { all: "About us", apps: "SAT apps", uy: "SAT Uy — for residents", davomat: "SAT Davomat — time tracking", parking: "SAT Parking — paid parking", blog: "Blog", reviews: "Reviews", zkteco: "ZKTeco partner", h3c: "H3C partner", tenders: "Supply and tenders", company: "Company", products: "Our products" },
+  tr: { all: "Hakkımızda", apps: "SAT uygulamaları", uy: "SAT Uy — site sakinlerine", davomat: "SAT Davomat — mesai takibi", parking: "SAT Parking — ücretli otopark", blog: "Blog", reviews: "Yorumlar", zkteco: "ZKTeco ortağı", h3c: "H3C ortağı", tenders: "Tedarik ve ihaleler", company: "Şirket", products: "Ürünlerimiz" },
+  zh: { all: "关于我们", apps: "SAT 应用", uy: "SAT Uy——面向住户", davomat: "SAT Davomat——考勤", parking: "SAT Parking——收费停车", blog: "博客", reviews: "客户评价", zkteco: "ZKTeco 合作伙伴", h3c: "H3C 合作伙伴", tenders: "供货与招标", company: "公司", products: "我们的产品" },
 };
 
 const nav = [
@@ -256,7 +256,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
   // «О компании»: свои приложения и страницы компании в одном меню
   const am = ABOUT_MENU[locale] ?? ABOUT_MENU.ru;
   const aboutGroups: NavDropGroup[] = [
-    { label: am.products, items: [{ title: am.apps, href: "/apps" }, { title: am.uy, href: "/apps/uy" }, { title: am.davomat, href: "/apps/davomat" }] },
+    { label: am.products, items: [{ title: am.apps, href: "/apps" }, { title: am.uy, href: "/apps/uy" }, { title: am.davomat, href: "/apps/davomat" }, { title: am.parking, href: "/apps/parking" }] },
     { label: am.company, items: [{ title: am.blog, href: "/blog" }, { title: am.reviews, href: "/reviews" }, { title: am.zkteco, href: "/partners/zkteco" }, { title: am.h3c, href: "/partners/h3c" }, { title: am.tenders, href: "/tenders" }] },
   ];
 

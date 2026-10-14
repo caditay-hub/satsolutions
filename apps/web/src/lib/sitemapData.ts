@@ -45,11 +45,12 @@ export const CONTENT_RELEASE = new Date("2026-09-18T00:00:00.000Z");
 // дата уже ушла на прод, — ставьте со временем ("2026-10-13T18:00:00+05:00"): IndexNow
 // сравнивает lastmod строкой, и та же дата второй раз адрес не отправит.
 export const SERVICE_UPDATED: Record<string, string> = {
-  // шлагбаумы: цена с установкой, title/H1, FAQ, витрина и кейсы; витрины смежных въездных услуг (14.10.2026)
-  barrier: "2026-10-14T18:00:00+05:00",
-  anpr: "2026-10-14T18:00:00+05:00",
-  parking: "2026-10-14T18:00:00+05:00",
-  "intellektualnoe-upravlenie-parkingom": "2026-10-14T18:00:00+05:00",
+  // шлагбаумы: цена с установкой, title/H1, FAQ, витрина и кейсы; витрины смежных въездных услуг (14.10.2026);
+  // вечером 14.10 — блок SAT Parking на въездных услугах
+  barrier: "2026-10-14T21:00:00+05:00",
+  anpr: "2026-10-14T21:00:00+05:00",
+  parking: "2026-10-14T21:00:00+05:00",
+  "intellektualnoe-upravlenie-parkingom": "2026-10-14T21:00:00+05:00",
   gates: "2026-10-14T18:00:00+05:00",
   bodycam: "2026-10-13T21:00:00+05:00",
   city: "2026-10-13", // в блок услуг отрасли добавлены боди-камеры
@@ -152,8 +153,8 @@ const STATIC_ROUTES = [
   // /export — хаб экспортного направления: даёт входящие ссылки страницам стран,
   // которые до этого были достижимы только из карты сайта.
   "/export", "/export/tajikistan", "/export/turkmenistan",
-  // Свои приложения: хаб и две продуктовые страницы (контент в lib/appsContent.ts)
-  "/apps", "/apps/uy", "/apps/davomat",
+  // Свои приложения: хаб и три продуктовые страницы (контент в lib/appsContent.ts, appsParkingContent.ts)
+  "/apps", "/apps/uy", "/apps/davomat", "/apps/parking",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking

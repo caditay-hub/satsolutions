@@ -1,4 +1,4 @@
-// Общая разметка страниц приложений (/apps/uy, /apps/davomat): экраны, возможности, кому подходит,
+// Общая разметка страниц приложений (/apps/uy, /apps/davomat, /apps/parking): экраны, возможности, кому подходит,
 // как подключаем, техника, вопросы и заявка. Тексты приходят готовым словарём локали.
 import { Link } from "@/i18n/navigation";
 import type { AppPage } from "@/lib/appsContent";
@@ -20,6 +20,25 @@ const DAVOMAT_SHOTS = [
   "/apps-img/shots/shot-late.jpg",
   "/apps-img/shots/shot-export.jpg",
 ];
+// SAT Parking (14.10.2026): снимки с демо-объекта на тестовых данных — оплата водителя, пост охраны,
+// обзор кабинета, журнал проездов
+const PARKING_SHOTS = [
+  "/apps-img/shots/shot-parking-pay.jpg",
+  "/apps-img/shots/shot-parking-guard.jpg",
+  "/apps-img/shots/shot-parking-cabinet.jpg",
+  "/apps-img/shots/shot-parking-journal.jpg",
+];
+type AppKey = "uy" | "davomat" | "parking";
+// Фото и снимки, которые различаются у приложений: фон первого экрана, снимок на нём, фотополоса,
+// рамка экранов (телефоны / окна / вперемешку), смежные услуги и статьи
+const APP_MEDIA: Record<AppKey, { shots: string[]; hero: string; heroShot: number; band: string; frame: string; services: string[]; articles: string[] }> = {
+  uy: { shots: UY_SHOTS, hero: "/apps-img/uy-hero.jpg", heroShot: 0, band: "/apps-img/uy-yard.jpg", frame: "aspect-[3/4]",
+    services: ["intercom", "access", "barrier", "residential"], articles: ["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr"] },
+  davomat: { shots: DAVOMAT_SHOTS, hero: "/apps-img/davomat-hero.jpg", heroShot: 1, band: "/apps-img/davomat-check.jpg", frame: "aspect-[4/3]",
+    services: ["attendance", "turnstile", "access", "barrier"], articles: ["uchet-rabochego-vremeni-po-litsu"] },
+  parking: { shots: PARKING_SHOTS, hero: "/apps-img/parking-hero.jpg", heroShot: 0, band: "/apps-img/parking-band.jpg", frame: "aspect-square",
+    services: ["barrier", "anpr", "intellektualnoe-upravlenie-parkingom", "parking"], articles: ["shlagbaum-anpr", "shlagbaum-narxi"] },
+};
 
 export function AppProductPage({
   d,
@@ -30,11 +49,12 @@ export function AppProductPage({
 }: {
   d: AppPage;
   locale: string;
-  otherHref: "/apps/uy" | "/apps/davomat";
-  app: "uy" | "davomat";
+  otherHref: "/apps/uy" | "/apps/davomat" | "/apps/parking";
+  app: AppKey;
   download?: { label: string; href: string };
 }) {
-  const shots = app === "uy" ? UY_SHOTS : DAVOMAT_SHOTS;
+  const m = APP_MEDIA[app];
+  const shots = m.shots;
   const uy = app === "uy" ? UY_EXTRAS[locale] ?? UY_EXTRAS.ru : null;
   const dav = app === "davomat" ? DAVOMAT_EXTRAS[locale] ?? DAVOMAT_EXTRAS.ru : null;
   const c = CRUMBS[locale] ?? CRUMBS.ru;
@@ -52,7 +72,7 @@ export function AppProductPage({
       {/* Первый экран — широкая фотополоса: текст поверх снимка, телефоны сверху. */}
       <section className="relative mt-3 overflow-hidden rounded-3xl bg-slate-900">
         <img
-          src={app === "uy" ? "/apps-img/uy-hero.jpg" : "/apps-img/davomat-hero.jpg"}
+          src={m.hero}
           alt={name}
           className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
@@ -64,8 +84,8 @@ export function AppProductPage({
           </div>
           <div className="grid w-full max-w-md gap-4 sm:grid-cols-2 lg:max-w-none lg:grid-cols-1 lg:gap-5">
             <img
-              src={app === "uy" ? "/apps-img/shots/shot-doors.jpg" : "/apps-img/shots/shot-timesheet.jpg"}
-              alt={`${name} — ${d.screens[app === "uy" ? 0 : 1] ?? d.screensTitle}`}
+              src={shots[m.heroShot]}
+              alt={`${name} — ${d.screens[m.heroShot] ?? d.screensTitle}`}
               className="mx-auto w-64 rounded-2xl object-cover shadow-2xl sm:w-72 lg:w-80"
             />
           </div>
@@ -77,7 +97,7 @@ export function AppProductPage({
         {d.screens.map((s, i) => (
           <div key={s} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4 text-center">
             {/* одна рамка на все четыре снимка: телефоны и окна кабинета стоят ровно */}
-            <div className={`flex items-center justify-center overflow-hidden rounded-xl bg-white p-2 ${app === "uy" ? "aspect-[3/4]" : "aspect-[4/3]"}`}>
+            <div className={`flex items-center justify-center overflow-hidden rounded-xl bg-white p-2 ${m.frame}`}>
               <img src={shots[i] ?? shots[0]} alt={`${name} — ${s}`} loading="lazy" className="max-h-full w-auto rounded-lg object-contain" />
             </div>
             <div className="mt-3 text-sm font-medium text-slate-700">{s}</div>
@@ -110,7 +130,7 @@ export function AppProductPage({
 
       {uy && <EventFeed d={uy} />}
 
-      <PhotoBand src={app === "uy" ? "/apps-img/uy-yard.jpg" : "/apps-img/davomat-check.jpg"} alt={name} />
+      <PhotoBand src={m.band} alt={name} />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.howTitle}</h2>
       <ol className="mt-6 grid sm:grid-cols-2 gap-5">
@@ -137,10 +157,8 @@ export function AppProductPage({
 
       <AppCrossLinks
         locale={locale}
-        services={app === "uy" ? ["intercom", "access", "barrier", "residential"] : ["attendance", "turnstile", "access", "barrier"]}
-        articles={app === "uy"
-          ? ["prilozhenie-dlya-zhiteley-zhk", "gostevoy-propusk-po-qr"]
-          : ["uchet-rabochego-vremeni-po-litsu"]}
+        services={m.services}
+        articles={m.articles}
       />
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.faqTitle}</h2>

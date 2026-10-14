@@ -3,6 +3,7 @@ import { resolveImageUrl } from "@/lib/image";
 import { ARTICLES, articleImg } from "@/lib/articlesData";
 import { UY } from "@/lib/appsUyContent";
 import { DAVOMAT } from "@/lib/appsDavomatContent";
+import { PARKING } from "@/lib/appsParkingContent";
 
 // Image Sitemap: фото товаров для Google Картинок (страница товара + его cover-изображение).
 // Пересобирается раз в сутки; в robots.ts объявлен рядом с основным sitemap.
@@ -28,6 +29,9 @@ export async function GET() {
     ["/apps/davomat", ["/apps-img/davomat-hero.jpg", "/apps-img/davomat-check.jpg", "/apps-img/davomat-report.jpg",
       "/apps-img/shots/shot-now.jpg", "/apps-img/shots/shot-timesheet.jpg", "/apps-img/shots/shot-late.jpg",
       "/apps-img/shots/shot-export.jpg"], DAVOMAT.ru.h1.split(" — ")[0]],
+    ["/apps/parking", ["/apps-img/parking-hero.jpg", "/apps-img/parking-band.jpg",
+      "/apps-img/shots/shot-parking-pay.jpg", "/apps-img/shots/shot-parking-guard.jpg", "/apps-img/shots/shot-parking-cabinet.jpg",
+      "/apps-img/shots/shot-parking-journal.jpg"], PARKING.ru.h1.split(" — ")[0]],
   ];
   const pageEntries = appShots
     .map(([path, imgs, title]) =>

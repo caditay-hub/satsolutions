@@ -1,4 +1,4 @@
-// Хаб собственных приложений SAT: SAT Uy (жителям ЖК и УК) и SAT Davomat (учёт рабочего времени).
+// Хаб собственных приложений SAT: SAT Uy (жителям ЖК и УК), SAT Davomat (учёт рабочего времени) и SAT Parking (платная парковка, 14.10.2026).
 // Контент — lib/appsContent.ts (5 локалей). SEO: ItemList приложений + FAQPage, hreflang, ссылки на страницы продуктов.
 import type { Metadata } from "next";
 import { clampDesc } from "@/lib/seoText";
@@ -39,6 +39,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
         itemListElement: [
           { "@type": "ListItem", position: 1, name: d.uy.title, description: d.uy.tagline, url: "https://satsolutions.uz/apps/uy" },
           { "@type": "ListItem", position: 2, name: d.davomat.title, description: d.davomat.tagline, url: "https://satsolutions.uz/apps/davomat" },
+          { "@type": "ListItem", position: 3, name: d.parking.title, description: d.parking.tagline, url: "https://satsolutions.uz/apps/parking" },
         ],
       },
       { "@type": "FAQPage", mainEntity: d.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) },
@@ -55,6 +56,7 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
   const cards = [
     { ...d.uy, href: "/apps/uy" as const },
     { ...d.davomat, href: "/apps/davomat" as const },
+    { ...d.parking, href: "/apps/parking" as const },
   ];
 
   const hub = HUB_EXTRAS[locale] ?? HUB_EXTRAS.ru;
@@ -85,14 +87,14 @@ export default async function AppsPage({ params }: { params: Promise<{ locale: s
       </section>
 
       <h2 className="mt-12 text-2xl font-semibold text-slate-900">{d.cardsTitle}</h2>
-      <div className="mt-6 grid md:grid-cols-2 gap-5">
+      <div className="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {cards.map((c) => (
           <div key={c.title} className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6">
             {/* Кадры разной формы (телефон вертикальный, ноутбук горизонтальный) приводим
                 к одной рамке 16:10 — иначе карточки стоят неровно. */}
             <div className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-xl bg-gradient-to-b from-slate-50 to-slate-100 p-3">
               <img
-                src={c.href === "/apps/uy" ? "/apps-img/shots/shot-guest.jpg" : "/apps-img/shots/shot-now.jpg"}
+                src={c.href === "/apps/uy" ? "/apps-img/shots/shot-guest.jpg" : c.href === "/apps/parking" ? "/apps-img/shots/shot-parking-pay.jpg" : "/apps-img/shots/shot-now.jpg"}
                 alt={c.title}
                 loading="lazy"
                 className="max-h-full w-auto rounded-lg object-contain"

@@ -65,6 +65,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
   const appsLabel = ({ ru: "Приложения SAT", uz: "SAT ilovalari", en: "SAT apps", tr: "SAT uygulamaları", zh: "SAT 应用" } as Record<string, string>)[locale] ?? "Приложения SAT";
   const uyLabel = ({ ru: "SAT Uy — жителям ЖК", uz: "SAT Uy — TJM aholisiga", en: "SAT Uy — for residents", tr: "SAT Uy — site sakinlerine", zh: "SAT Uy——面向住户" } as Record<string, string>)[locale] ?? "SAT Uy — жителям ЖК";
   const davomatLabel = ({ ru: "SAT Davomat — учёт времени", uz: "SAT Davomat — ish vaqti hisobi", en: "SAT Davomat — time tracking", tr: "SAT Davomat — mesai takibi", zh: "SAT Davomat——考勤" } as Record<string, string>)[locale] ?? "SAT Davomat — учёт времени";
+  const parkingLabel = ({ ru: "SAT Parking — платная парковка", uz: "SAT Parking — pullik avtoturargoh", en: "SAT Parking — paid parking", tr: "SAT Parking — ücretli otopark", zh: "SAT Parking——收费停车" } as Record<string, string>)[locale] ?? "SAT Parking — платная парковка";
   const reviewsLabel = ({ ru: "Отзывы", uz: "Sharhlar", en: "Reviews", tr: "Yorumlar", zh: "客户评价" } as Record<string, string>)[locale] ?? "Отзывы";
   const partnersLabel = ({ ru: "Партнёрам и СМИ", uz: "Hamkorlar va OAV", en: "Partners and media", tr: "Ortaklar ve basın", zh: "合作伙伴与媒体" } as Record<string, string>)[locale] ?? "Партнёрам и СМИ";
   const tendersLabel = ({ ru: "Поставки и тендеры", uz: "Yetkazib berish va tenderlar", en: "Supply and tenders", tr: "Tedarik ve ihaleler", zh: "供货与招标" } as Record<string, string>)[locale] ?? "Поставки и тендеры";
@@ -117,6 +118,7 @@ export async function SiteFooter({ locale }: { locale: string }) {
               <li><Link href="/apps" className="hover:text-brand-700">{appsLabel}</Link></li>
               <li><Link href="/apps/uy" className="hover:text-brand-700">{uyLabel}</Link></li>
               <li><Link href="/apps/davomat" className="hover:text-brand-700">{davomatLabel}</Link></li>
+              <li><Link href="/apps/parking" className="hover:text-brand-700">{parkingLabel}</Link></li>
             </ul>
           </div>
 

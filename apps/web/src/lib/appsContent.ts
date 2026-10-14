@@ -13,6 +13,7 @@ export type AppsHub = {
   cardsTitle: string;
   uy: { title: string; tagline: string; bullets: string[]; link: string };
   davomat: { title: string; tagline: string; bullets: string[]; link: string };
+  parking: { title: string; tagline: string; bullets: string[]; link: string };
   whyTitle: string;
   why: Item[];
   faqTitle: string;
@@ -57,11 +58,11 @@ export const CRUMBS: Record<string, { home: string; apps: string }> = {
 
 export const HUB: Record<string, AppsHub> = {
   ru: {
-    metaTitle: "Приложения SAT: для жителей ЖК и учёта рабочего времени",
-    metaDesc: "Собственные приложения SAT Solutions: SAT Uy — подъезд с телефона, гости по QR, заявки и счета для жителей ЖК и кабинет управляющей компании; SAT Davomat — учёт рабочего времени по лицу с табелем и выгрузкой в 1С.",
+    metaTitle: "Приложения SAT: для жителей ЖК, учёта рабочего времени и платной парковки",
+    metaDesc: "Собственные приложения SAT Solutions: SAT Uy — подъезд с телефона, гости по QR, заявки и счета для жителей ЖК и кабинет управляющей компании; SAT Davomat — учёт рабочего времени по лицу с табелем и выгрузкой в 1С; SAT Parking — платная парковка без кассира с оплатой через Payme и Click.",
     h1: "Приложения SAT",
-    intro: "Мы не только монтируем оборудование, но и пишем программы, которые им управляют. Два приложения работают с техникой, которая уже стоит на объекте: домофонами, терминалами распознавания лиц, контроллерами дверей и шлагбаумов.",
-    cardsTitle: "Два приложения",
+    intro: "Мы не только монтируем оборудование, но и пишем программы, которые им управляют. Наши приложения работают с техникой, которая уже стоит на объекте: домофонами, терминалами распознавания лиц, камерами распознавания номеров, контроллерами дверей и шлагбаумов.",
+    cardsTitle: "Три приложения",
     uy: {
       title: "SAT Uy",
       tagline: "Жителям жилого комплекса и управляющей компании",
@@ -84,6 +85,17 @@ export const HUB: Record<string, AppsHub> = {
       ],
       link: "Подробно о SAT Davomat",
     },
+    parking: {
+      title: "SAT Parking",
+      tagline: "Платная парковка без кассира",
+      bullets: [
+        "Въезд по номеру: камера читает госномер, шлагбаум открывается сам",
+        "Оплата на выезде через Payme или Click по QR-коду",
+        "Деньги сразу на кассу владельца, чек от его имени",
+        "Кабинет владельца и пост охраны; подключаем первые объекты",
+      ],
+      link: "Подробно о SAT Parking",
+    },
     whyTitle: "Почему это работает лучше коробочных программ",
     why: [
       { t: "Своя разработка", d: "Мы сами пишем и сопровождаем код, поэтому дорабатываем приложение под правила вашего объекта." },
@@ -101,11 +113,11 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Оставить заявку",
   },
   uz: {
-    metaTitle: "SAT ilovalari: TJM aholisi va ish vaqti hisobi uchun",
-    metaDesc: "SAT Solutions ilovalari: SAT Uy — yoʻlakni telefondan ochish, mehmonlar uchun QR, arizalar va hisob, boshqaruv kompaniyasi kabineti; SAT Davomat — yuz orqali ish vaqtini hisobga olish, tabel va 1Cga yuklash.",
+    metaTitle: "SAT ilovalari: TJM aholisi, ish vaqti hisobi va pullik avtoturargoh uchun",
+    metaDesc: "SAT Solutions ilovalari: SAT Uy — yoʻlakni telefondan ochish, mehmonlar uchun QR, arizalar va hisob, boshqaruv kompaniyasi kabineti; SAT Davomat — yuz orqali ish vaqtini hisobga olish, tabel va 1Cga yuklash; SAT Parking — Payme va Click orqali toʻlovli kassirsiz pullik avtoturargoh.",
     h1: "SAT ilovalari",
-    intro: "Biz uskunani oʻrnatibgina qolmay, uni boshqaradigan dasturlarni ham yozamiz. Ikkala ilova obyektda allaqachon turgan texnika bilan ishlaydi: domofonlar, yuzni tanish terminallari, eshik va shlagbaum kontrollerlari.",
-    cardsTitle: "Ikkita ilova",
+    intro: "Biz uskunani oʻrnatibgina qolmay, uni boshqaradigan dasturlarni ham yozamiz. Ilovalarimiz obyektda allaqachon turgan texnika bilan ishlaydi: domofonlar, yuzni tanish terminallari, raqamni aniqlash kameralari, eshik va shlagbaum kontrollerlari.",
+    cardsTitle: "Uchta ilova",
     uy: {
       title: "SAT Uy",
       tagline: "Turar joy majmuasi aholisi va boshqaruv kompaniyasi uchun",
@@ -128,6 +140,17 @@ export const HUB: Record<string, AppsHub> = {
       ],
       link: "SAT Davomat haqida batafsil",
     },
+    parking: {
+      title: "SAT Parking",
+      tagline: "Kassirsiz pullik avtoturargoh",
+      bullets: [
+        "Raqam boʻyicha kirish: kamera davlat raqamini oʻqiydi, shlagbaum oʻzi ochiladi",
+        "Chiqishda QR-kod orqali Payme yoki Click bilan toʻlov",
+        "Pul toʻgʻridan-toʻgʻri egasining kassasiga, chek uning nomidan",
+        "Egasining kabineti va qoʻriqlash posti; birinchi obyektlarni ulayapmiz",
+      ],
+      link: "SAT Parking haqida batafsil",
+    },
     whyTitle: "Nega bu tayyor dasturlardan qulayroq",
     why: [
       { t: "Oʻz ishlanmamiz", d: "Kodni oʻzimiz yozamiz va qoʻllab-quvvatlaymiz, shuning uchun ilovani obyekt qoidalariga moslaymiz." },
@@ -145,11 +168,11 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Ariza qoldirish",
   },
   en: {
-    metaTitle: "SAT apps: resident app and workforce time tracking",
-    metaDesc: "In-house apps by SAT Solutions: SAT Uy — open the entrance from a phone, guest QR passes, requests and bills for residents plus a management company dashboard; SAT Davomat — face-based time tracking with timesheets and 1C export.",
+    metaTitle: "SAT apps: resident app, workforce time tracking and paid parking",
+    metaDesc: "In-house apps by SAT Solutions: SAT Uy — open the entrance from a phone, guest QR passes, requests and bills for residents plus a management company dashboard; SAT Davomat — face-based time tracking with timesheets and 1C export; SAT Parking — paid parking without a cashier, with Payme and Click payments.",
     h1: "SAT apps",
-    intro: "We install hardware and we write the software that runs it. Both apps work with equipment already installed on site: intercoms, face recognition terminals, door and barrier controllers.",
-    cardsTitle: "Two apps",
+    intro: "We install hardware and we write the software that runs it. Our apps work with equipment already installed on site: intercoms, face recognition terminals, number plate recognition cameras, door and barrier controllers.",
+    cardsTitle: "Three apps",
     uy: {
       title: "SAT Uy",
       tagline: "For residents and the management company",
@@ -172,6 +195,17 @@ export const HUB: Record<string, AppsHub> = {
       ],
       link: "More about SAT Davomat",
     },
+    parking: {
+      title: "SAT Parking",
+      tagline: "Paid parking without a cashier",
+      bullets: [
+        "Entry by number plate: the camera reads the plate, the barrier opens by itself",
+        "Payment at the exit with Payme or Click via a QR code",
+        "Money goes straight to the owner's account, receipt in the owner's name",
+        "Owner dashboard and security post; now onboarding first sites",
+      ],
+      link: "More about SAT Parking",
+    },
     whyTitle: "Why this beats off-the-shelf software",
     why: [
       { t: "Built in-house", d: "We write and maintain the code ourselves, so we adapt the app to the rules of your site." },
@@ -189,11 +223,11 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Request a demo",
   },
   tr: {
-    metaTitle: "SAT uygulamaları: site sakinleri ve mesai takibi",
-    metaDesc: "SAT Solutions’ın kendi uygulamaları: SAT Uy — kapıyı telefondan açma, misafir için QR geçiş, talepler ve faturalar, yönetim şirketi paneli; SAT Davomat — yüzle devam takibi, puantaj ve 1C aktarımı.",
+    metaTitle: "SAT uygulamaları: site sakinleri, mesai takibi ve ücretli otopark",
+    metaDesc: "SAT Solutions’ın kendi uygulamaları: SAT Uy — kapıyı telefondan açma, misafir için QR geçiş, talepler ve faturalar, yönetim şirketi paneli; SAT Davomat — yüzle devam takibi, puantaj ve 1C aktarımı; SAT Parking — Payme ve Click ödemeli kasiyersiz ücretli otopark.",
     h1: "SAT uygulamaları",
-    intro: "Yalnızca donanım kurmuyoruz, onu çalıştıran yazılımı da biz yazıyoruz. Her iki uygulama da sahada hâlihazırda bulunan cihazlarla çalışır: interkomlar, yüz tanıma terminalleri, kapı ve bariyer kontrolörleri.",
-    cardsTitle: "İki uygulama",
+    intro: "Yalnızca donanım kurmuyoruz, onu çalıştıran yazılımı da biz yazıyoruz. Uygulamalarımız sahada hâlihazırda bulunan cihazlarla çalışır: interkomlar, yüz tanıma terminalleri, plaka tanıma kameraları, kapı ve bariyer kontrolörleri.",
+    cardsTitle: "Üç uygulama",
     uy: {
       title: "SAT Uy",
       tagline: "Site sakinleri ve yönetim şirketi için",
@@ -216,6 +250,17 @@ export const HUB: Record<string, AppsHub> = {
       ],
       link: "SAT Davomat hakkında ayrıntı",
     },
+    parking: {
+      title: "SAT Parking",
+      tagline: "Kasiyersiz ücretli otopark",
+      bullets: [
+        "Plakayla giriş: kamera plakayı okur, bariyer kendiliğinden açılır",
+        "Çıkışta QR kodla Payme veya Click ile ödeme",
+        "Para doğrudan sahibinin kasasına, fiş onun adına",
+        "Sahip paneli ve güvenlik noktası; ilk tesisleri bağlıyoruz",
+      ],
+      link: "SAT Parking hakkında",
+    },
     whyTitle: "Hazır yazılımlara göre avantajı",
     why: [
       { t: "Kendi geliştirmemiz", d: "Kodu biz yazıyor ve sürdürüyoruz; uygulamayı sahanızın kurallarına göre uyarlıyoruz." },
@@ -233,11 +278,11 @@ export const HUB: Record<string, AppsHub> = {
     ctaButton: "Talep gönderin",
   },
   zh: {
-    metaTitle: "SAT 应用：小区住户与考勤管理",
-    metaDesc: "SAT Solutions 自研应用：SAT Uy——手机开门、访客二维码通行、报修与账单，物业管理后台；SAT Davomat——人脸考勤、考勤表与导出到 1C。",
+    metaTitle: "SAT 应用：小区住户、考勤管理与收费停车",
+    metaDesc: "SAT Solutions 自研应用：SAT Uy——手机开门、访客二维码通行、报修与账单，物业管理后台；SAT Davomat——人脸考勤、考勤表与导出到 1C；SAT Parking——支持 Payme 与 Click 支付的无人收费停车场。",
     h1: "SAT 应用",
-    intro: "我们不仅安装设备，也自己编写运行这些设备的软件。两款应用都可对接现场已有设备：楼宇对讲、人脸识别终端、门禁与道闸控制器。",
-    cardsTitle: "两款应用",
+    intro: "我们不仅安装设备，也自己编写运行这些设备的软件。我们的应用均可对接现场已有设备：楼宇对讲、人脸识别终端、车牌识别摄像机、门禁与道闸控制器。",
+    cardsTitle: "三款应用",
     uy: {
       title: "SAT Uy",
       tagline: "面向小区住户与物业公司",
@@ -259,6 +304,17 @@ export const HUB: Record<string, AppsHub> = {
         "一个后台管理多个场所与部门",
       ],
       link: "了解 SAT Davomat",
+    },
+    parking: {
+      title: "SAT Parking",
+      tagline: "无人收费停车场",
+      bullets: [
+        "车牌识别入场：摄像机读取车牌，道闸自动抬杆",
+        "出场扫码，用 Payme 或 Click 付款",
+        "款项直达业主账户，票据以业主名义开具",
+        "业主后台与岗亭值守；正在接入首批场地",
+      ],
+      link: "了解 SAT Parking",
     },
     whyTitle: "相比成品软件的优势",
     why: [
