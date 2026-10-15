@@ -87,10 +87,60 @@ function trimDangling(s: string): string {
     return out.replace(/[\s,;:–—(-]+$/, "");
 }
 
+// Код модели: цифра + латинская буква в одном слове (DS-2CD1047G2H, RB912R-2nD, PXT-PLC-M-1x4),
+// но не единица измерения (4МП, 2.8mm, 15U, 180кг, 1200Вт) и не «L2»/«Wi-Fi 6».
+const MEASURE_RE = /^\(?\d+([.,]\d+)?[-–]?\d*(мп|mp|мм|mm|м|m|u|кг|kg|w|вт|в|v|a|а|ач|ah|гб|gb|тб|tb|ггц|ghz|мгц|mhz|гбит|gbit|мбит|mbit|дб|db|км|km|к|k|p|п|нм|nm|°|%|x|х|шт|pcs|ch|ms)?[)\.,;:]*$/i;
+function isModelToken(tok: string): boolean {
+    const t = tok.replace(/[()[\],;:]/g, "");
+    if (t.length < 4) return false;
+    // артикулы без цифр: PXT-OCC-SC, MPO-MPO, SC/UPC — заглавные латинские сегменты через дефис или слэш
+    if (/^[A-Z0-9]{2,}([-/][A-Z0-9]{1,})+$/.test(t) && /[A-Z]/.test(t) && t.length >= 5) return true;
+    if (!/\d/.test(t) || !/[A-Za-z]/.test(t)) return false;
+    if (MEASURE_RE.test(t)) return false;
+    return true;
+}
+/** Обрезка, сохраняющая числовой хвост («…шириной 800 мм, глубиной 1200 мм», «…, высота 2U»):
+ *  у товаров без кода модели различия сидят именно в размерах в конце, и обычная обрезка
+ *  справа делала карточки одинаковыми. Снимаем слова головы справа, хвост (с описательного
+ *  слова перед первым числом) не трогаем. null — если так не помещается. */
+function tailPreservingCut(words: string[], max: number): string | null {
+    const di = words.findIndex((x, i) => i >= 1 && /\d/.test(x));
+    if (di < 1) return null;
+    const tailFrom = di - 1;
+    const tail = words.slice(tailFrom).join(" ");
+    if (visualLength(tail) > max * 0.9) return null;
+    let head = words.slice(0, tailFrom);
+    while (head.length > 0) {
+        const h = trimDangling(head.join(" "));
+        if (h && visualLength(`${h} ${tail}`) <= max) return `${h} ${tail}`;
+        head = h ? h.split(" ").slice(0, -1) : head.slice(0, -1);
+    }
+    return null;
+}
+/** Индекс (в словах) первого кода модели в строке, либо -1. */
+function modelWordIndex(words: string[]): number {
+    return words.findIndex(isModelToken);
+}
+
+/** Обрезка по слову слева направо до max, без многоточия (его дорисует сам поисковик). */
+function wordCut(s: string, max: number): string {
+    let cut = "";
+    for (const ch of s) {
+        if (visualLength(cut + ch) > max) break;
+        cut += ch;
+    }
+    const sp = cut.lastIndexOf(" ");
+    return trimDangling(sp > max * 0.6 ? cut.slice(0, sp) : cut);
+}
+
 /** Заголовок ≤ TITLE_MAX (по ширине): полный текст + « — SAT Solutions» → полный + « | SAT» →
  *  полный без бренда → часть до последней естественной границы, в которую бренд ещё влезает →
- *  обрезка по слову без многоточия. Бренд в конце снимается и приписывается заново; если бренд
- *  уже внутри текста (главная, страницы партнёров) — второй раз не добавляется. */
+ *  обрезка по слову. Бренд в конце снимается и приписывается заново; если бренд уже внутри
+ *  текста (главная, страницы партнёров) — второй раз не добавляется.
+ *  Код модели неприкосновенен: по артикулам идёт основной трафик карточек (56,7 тыс. показов за
+ *  90 дней), и обрезка «…4МП Hikvision» делала 148 карточек RU одинаковыми. Если граница срезает
+ *  код — вместо этого снимаем описательные слова слева («Цилиндрическая IP-камера 4МП Hikvision
+ *  DS-2CD1047G2H-LIUF/SRB(2.8mm)» → «IP-камера 4МП Hikvision DS-2CD1047G2H-LIUF/SRB(2.8mm)»). */
 export function fitTitle(text: string, max = TITLE_MAX): string {
     const core = (text || "").replace(/\s+/g, " ").trim().replace(BRAND_TAIL, "").trim();
     if (!core) return (text || "").trim();
@@ -103,25 +153,53 @@ export function fitTitle(text: string, max = TITLE_MAX): string {
         return s;
     };
     if (w(core) <= max) return withBrand(core);
-    // границы: берём самую длинную часть, которая помещается
+    const words = core.split(" ");
+    const mi = modelWordIndex(words);
+    const model = mi >= 0 ? words[mi] : "";
+    // границы: берём самую длинную часть, которая помещается (и не теряет код модели)
     let best = "";
     for (const sep of TITLE_SEPS) {
         let i = core.indexOf(sep);
         while (i !== -1) {
             const part = core.slice(0, i).trim();
-            if (i > 15 && w(part) <= max && w(part) > w(best)) best = part;
+            if (i > 15 && w(part) <= max && w(part) > w(best) && (!model || part.includes(model))) best = part;
             i = core.indexOf(sep, i + 1);
         }
     }
     if (best) return withBrand(best);
-    // границ нет — по слову (без многоточия: его дорисует сам поисковик)
-    let cut = "";
-    for (const ch of core) {
-        if (w(cut + ch) > max) break;
-        cut += ch;
+    if (mi >= 0) {
+        // база — часть до первой границы, если код модели в ней, иначе весь текст
+        let base = core;
+        let firstSep = -1;
+        for (const sep of TITLE_SEPS) {
+            const i = core.indexOf(sep);
+            if (i > 0 && (firstSep === -1 || i < firstSep)) firstSep = i;
+        }
+        if (firstSep > 0 && core.slice(0, firstSep).includes(model)) base = core.slice(0, firstSep).trim();
+        const bw = base.split(" ");
+        const bmi = bw.indexOf(model);
+        // снимаем описательные слова слева, пока не поместится; код модели и его хвост не трогаем
+        let from = 0;
+        while (from < bmi && w(bw.slice(from).join(" ")) > max) from++;
+        let rest = bw.slice(from);
+        // не начинать с обрывка скобки «(внутренняя станция)»
+        while (rest.length > 1 && rest[0].startsWith("(") && rest.indexOf(rest.find((x) => x.endsWith(")")) ?? "") >= 0 && !rest[0].endsWith(")")) {
+            const close = rest.findIndex((x) => x.endsWith(")"));
+            if (close < 0 || close >= rest.length - 1) break;
+            rest = rest.slice(close + 1);
+        }
+        let out = rest.join(" ");
+        if (w(out) > max) out = wordCut(out, max); // сам код с хвостом длиннее лимита — режем хвост
+        if (from > 0 && out && /^[a-zа-яё]/.test(out)) out = out[0].toUpperCase() + out.slice(1);
+        return withBrand(out);
     }
-    const sp = cut.lastIndexOf(" ");
-    return withBrand(trimDangling(sp > max * 0.6 ? cut.slice(0, sp) : cut));
+    // без кода модели: сначала попытка сохранить числовой хвост, иначе обрезка по слову
+    let base = core;
+    for (const sep of TITLE_SEPS) {
+        const i = core.indexOf(sep);
+        if (i > 15 && (base === core || i < base.length)) base = core.slice(0, i).trim();
+    }
+    return withBrand(tailPreservingCut(base.split(" "), max) ?? wordCut(core, max));
 }
 
 /** Описание ≤ DESC_MAX знаков: по концу предложения, иначе по запятой у конца, иначе по слову.
