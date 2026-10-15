@@ -31,7 +31,7 @@ const DEFAULT_LOCALE = "ru";
 // при заметной правке этих страниц. Почему не new Date(): lastmod, который менялся на
 // каждой сборке, хотя страница не менялась, Google перестаёт учитывать вовсе — и вместе
 // с ним обесцениваются честные даты соседних URL в том же файле.
-export const CONTENT_RELEASE = new Date("2026-09-18T00:00:00.000Z");
+export const CONTENT_RELEASE = new Date("2026-10-15T00:00:00.000Z"); // 15.10: подгонка title/description всех страниц (metadata.ts fitMeta)
 
 // Дата последней правки текста статичной услуги /solutions/<key> — ПРАВИТЬ ВРУЧНУЮ вместе
 // с текстом услуги (serviceContent.ts, serviceSeo.ts, servicesData.ts, industryDetails.ts,

@@ -44,8 +44,111 @@ export function clipSentence(text: string, max = 160): string {
  * Страницам без своего openGraph собираем его здесь же: иначе подстановка одного url
  * затёрла бы унаследованные из layout title/описание/картинку.
  */
+// ── Длина сниппета (15.10.2026) ────────────────────────────────────────────────────────────
+// Google обрезает заголовок примерно на 60 знаках (по ширине: иероглиф ≈ две латинские буквы),
+// описание — на ~155. По seo:check длинных заголовков было 346, описаний 224; на позициях 6–8
+// сервисные запросы («установка домофона в ташкенте цена» 101 показ, «турникет» 105) давали
+// 0 кликов. Подгонка здесь, в общей обёртке, покрывает все 38 страниц с generateMetadata.
+// Заголовок: своё многоточие не ставим — режем по естественной границе (двоеточие, тире,
+// вертикальная черта), бренд приписываем только если помещается; описание — по концу предложения.
+const CJK_RE = /[\u3040-\u30ff\u3400-\u9fff\uff00-\uffef]/;
+const BRAND_TAIL = /\s*[—–|-]\s*SAT(?:\s+Solutions)?\s*$/i;
+const HAS_BRAND = /\bSAT\b/;
+const TITLE_SEPS = [" — ", " – ", ": ", "：", " | ", " - "];
+// служебные слова, на которых заголовок обрывать нельзя («…программу Hikvision для»)
+const FUNC_WORDS = new Set(["и", "или", "а", "в", "во", "на", "с", "со", "к", "ко", "о", "об", "у", "за", "из", "от", "до", "по", "под", "при", "для", "без", "над", "про", "не",
+    "va", "yoki", "uchun", "bilan", "da", "dan", "ga", "ni", "ning", "haqida", "the", "a", "an", "and", "or", "of", "for", "with", "in", "on", "to", "at", "by", "from", "ve", "veya", "için", "ile", "bir", "&"]);
+const CONJ_WORDS = new Set(["и", "или", "va", "yoki", "and", "or", "ve", "veya", "&", "с", "with", "bilan", "ile"]);
+export const TITLE_MAX = 60;
+export const DESC_MAX = 160;
+
+/** Ширина строки в «латинских» знаках: иероглиф и полноширинный знак считаем за два. */
+export function visualLength(s: string): number {
+    let n = 0;
+    for (const ch of s) n += CJK_RE.test(ch) ? 2 : 1;
+    return n;
+}
+
+/** Снять с конца служебные слова и висящие «… and fire» (союз + одно слово). */
+function trimDangling(s: string): string {
+    const words = s.replace(/[\s,;:–—(-]+$/, "").split(" ");
+    for (;;) {
+        if (words.length < 2) break;
+        const last = words[words.length - 1].toLowerCase();
+        if (FUNC_WORDS.has(last)) { words.pop(); continue; }
+        const prev = words[words.length - 2].toLowerCase();
+        if (CONJ_WORDS.has(prev) && words.length > 3) { words.pop(); words.pop(); continue; }
+        break;
+    }
+    let out = words.join(" ");
+    // незакрытая скобка «(Mesh» — обрезаем до неё
+    const open = out.lastIndexOf("(");
+    if (open > 0 && out.indexOf(")", open) === -1) out = out.slice(0, open);
+    return out.replace(/[\s,;:–—(-]+$/, "");
+}
+
+/** Заголовок ≤ TITLE_MAX (по ширине): полный текст + « — SAT Solutions» → полный + « | SAT» →
+ *  полный без бренда → часть до последней естественной границы, в которую бренд ещё влезает →
+ *  обрезка по слову без многоточия. Бренд в конце снимается и приписывается заново; если бренд
+ *  уже внутри текста (главная, страницы партнёров) — второй раз не добавляется. */
+export function fitTitle(text: string, max = TITLE_MAX): string {
+    const core = (text || "").replace(/\s+/g, " ").trim().replace(BRAND_TAIL, "").trim();
+    if (!core) return (text || "").trim();
+    const w = visualLength;
+    const branded = HAS_BRAND.test(core);
+    const withBrand = (s: string) => {
+        if (branded) return s;
+        if (w(s) + " — SAT Solutions".length <= max) return `${s} — SAT Solutions`;
+        if (w(s) + " | SAT".length <= max) return `${s} | SAT`;
+        return s;
+    };
+    if (w(core) <= max) return withBrand(core);
+    // границы: берём самую длинную часть, которая помещается
+    let best = "";
+    for (const sep of TITLE_SEPS) {
+        let i = core.indexOf(sep);
+        while (i !== -1) {
+            const part = core.slice(0, i).trim();
+            if (i > 15 && w(part) <= max && w(part) > w(best)) best = part;
+            i = core.indexOf(sep, i + 1);
+        }
+    }
+    if (best) return withBrand(best);
+    // границ нет — по слову (без многоточия: его дорисует сам поисковик)
+    let cut = "";
+    for (const ch of core) {
+        if (w(cut + ch) > max) break;
+        cut += ch;
+    }
+    const sp = cut.lastIndexOf(" ");
+    return withBrand(trimDangling(sp > max * 0.6 ? cut.slice(0, sp) : cut));
+}
+
+/** Описание ≤ DESC_MAX знаков: по концу предложения, иначе по запятой у конца, иначе по слову.
+ *  160, а не 155: у карточек товара описание собирается как текст + хвост с ценой ровно до 158,
+ *  и лимит 155 срезал бы у них именно цену. Иероглифы не удваиваем: китайские описания
+ *  товаров тоже заканчиваются ценой, а потерь от длинного description у Google нет. */
+export function fitDesc(text: string, max = DESC_MAX): string {
+    const t = (text || "").replace(/\s+/g, " ").trim();
+    return t.length <= max ? t : clipSentence(t, max);
+}
+
+/** Применить fitTitle/fitDesc к <title> и meta description страницы; og/twitter не трогаем. */
+function fitMeta<T extends Metadata>(m: T): T {
+    let out: Metadata = m;
+    const t = m.title as any;
+    if (typeof t === "string") out = { ...out, title: { absolute: fitTitle(t) } };
+    else if (t && typeof t === "object" && typeof t.absolute === "string") out = { ...out, title: { ...t, absolute: fitTitle(t.absolute) } };
+    if (typeof m.description === "string") out = { ...out, description: fitDesc(m.description) };
+    return out as T;
+}
+
 export function withOgUrl<T extends Metadata | null | undefined>(m: T): T {
     if (!m) return m;
+    return withOgUrlInner(fitMeta(m as Metadata)) as T;
+}
+
+function withOgUrlInner(m: Metadata): Metadata {
     const c = m.alternates?.canonical as string | URL | { url: string | URL } | null | undefined;
     const url = c && typeof c === "object" && "url" in c ? c.url : c;
     if (!url) return m;
