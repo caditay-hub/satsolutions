@@ -115,15 +115,15 @@ export const REMOVED_PRODUCT_REDIRECTS: Record<string, string> = {
   "rje-rg-nbs6002-x-x": "/products/rje-rg-nbs6002",
   "zkt-zkteco-speedface-v3l-qr-terminal-raspoznavaniya-lic": "/products/zkt-zkteco-speedface-v3l-terminal-raspoznavaniya-lic",
   "zkt-zkteco-speedface-v3l-rfid-terminal-raspoznavaniya-lic": "/products/zkt-zkteco-speedface-v3l-terminal-raspoznavaniya-lic",
-  // Teltonika снят с продажи 2026-07-27 (товаров нет в наличии) → страницы типов (бренд-страница опустела).
-  "pxt-rut24006e000": "/products/type/mikrotik-routers",
-  "pxt-rut955t033b0": "/products/type/mikrotik-routers",
-  "pxt-rutx08000000": "/products/type/mikrotik-routers",
-  "pxt-rutx10000000": "/products/type/mikrotik-routers",
-  "pxt-rutx12000000": "/products/type/mikrotik-routers",
-  "pxt-trb255000000": "/products/type/pxt-switches",
-  "pxt-trm250000000": "/products/type/pxt-switches",
-  "pxt-tsw10000000": "/products/type/pxt-switches",
+  // Teltonika снят с продажи 2026-07-27 (товаров нет в наличии) → живые страницы типов «Маршрутизаторы»/«Коммутаторы» (бренд-страница пустая; старые типы mikrotik-routers/pxt-switches сами редиректят — цепочка убрана 02.10).
+  "pxt-rut24006e000": "/products/type/marshrutizatory",
+  "pxt-rut955t033b0": "/products/type/marshrutizatory",
+  "pxt-rutx08000000": "/products/type/marshrutizatory",
+  "pxt-rutx10000000": "/products/type/marshrutizatory",
+  "pxt-rutx12000000": "/products/type/marshrutizatory",
+  "pxt-trb255000000": "/products/type/marshrutizatory",
+  "pxt-trm250000000": "/products/type/marshrutizatory",
+  "pxt-tsw10000000": "/products/type/kommutatory",
   // Переименован 2026-10-14: кросс на 8 портов настенный IP20, а не уличный.
   "pxt-odf-kross-ulichnyi-8-port": "/products/pxt-odf-kross-nastennyi-8-port",
   // Удалены 2026-07-01 как непроверённые (нет фото, модель не гуглится, сомнит. цена) → бренд KANIHAD.
