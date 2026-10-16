@@ -960,6 +960,7 @@ publicRouter.post("/feedback", formLimiter, async (req, res) => {
         phone: created.phone,
         email: created.email,
         message: created.message,
+        gclid: gclid || null, // в CRM бот заводит обращение сразу — gclid нужен для офлайн-конверсий
         createdAt: String(created.createdAt || new Date().toISOString())
       };
 
@@ -1099,6 +1100,7 @@ publicRouter.post("/orders", formLimiter, async (req, res) => {
       name: custName || '',
       comment: comment || '',
       phone: String(created.phone || ''),
+      gclid: orderGclid || null,
       status: String(created.status || ''),
       totalAmount: Number(created.totalAmount || 0),
       currency: String(created.currency || ''),
