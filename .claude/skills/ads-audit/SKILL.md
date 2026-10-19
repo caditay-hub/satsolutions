@@ -1,13 +1,13 @@
 ---
 name: ads-audit
-description: Аудит и управление рекламой — Google Ads (REST v22) и Яндекс.Директ (API v5). Использовать при «проверь кампании/запросы/минус-слова», «как реклама», «поменяй бюджет/объявления», перед запуском кампаний.
+description: Аудит и управление рекламой — Google Ads (REST v24) и Яндекс.Директ (API v5). Использовать при «проверь кампании/запросы/минус-слова», «как реклама», «поменяй бюджет/объявления», перед запуском кампаний.
 ---
 
 # Реклама: Google Ads + Яндекс.Директ
 
 ## Доступ и версия API
 - CID **6700450278**, MCC 7453694082 (header `login-customer-id`), OAuth `/root/.gads_oauth.json` + dev token `/root/.gads_dev_token`.
-- **API v22.** ⚠️ v21 ЗАКРЫТА (404) — из-за неё падал блок Ads в мониторинге 07.09.2026. Живые версии проверять пробой: POST на `/vNN/customers/<CID>/googleAds:searchStream` → 401 = версия жива, 404 = закрыта.
+- **API v24** (с 19.10.2026). ⚠️ v22 отвечает «Version v22 is deprecated. Requests to this version will be blocked» — 127 скриптов /root, оба монитора и apps/api переведены на v24 (бэкап /root/v22_backup_1019). В v23+ нет `campaign.start_date`/`end_date` — запрос с ними даёт UNRECOGNIZED_FIELD. v21 закрыта с 07.09.2026. Живые версии проверять пробой: POST на `/vNN/customers/<CID>/googleAds:searchStream` → 401 = версия жива, 404 = закрыта.
 - Скрипты пишутся ЛОКАЛЬНО и шлются `scp` — heredoc через ssh рвёт длинные скрипты с кавычками.
 
 ## СОСТОЯНИЕ АККАУНТА (08.09.2026)
@@ -29,7 +29,7 @@ description: Аудит и управление рекламой — Google Ads 
 2. **`campaign.primary_status_reasons`** — `["AD_GROUPS_PAUSED"]` мгновенно находит кампании-пустышки (включена, а все группы на паузе). Проверять ПЕРЕД любой правкой кампании, иначе работа уходит в пустоту.
 3. **`campaign_conversion_goal`** — ⚠️ ставками управляет ОН, а не галочка `primary_for_goal` у действия. Прецедент: «Telegram (клик)» имел `primary_for_goal=false` и `include_in_conversions_metric=false` (в UI «вторичный»), но категория CONTACT была biddable на уровне кампании → клики по иконке давали **55% сигнала Shopping и 43% «Услуг»**. Проверять цели кампании, не флаг действия.
 4. Полный аудит: `node /root/sat-analytics/deep_audit.cjs` — 16 секций, вывод в файл, читать секциями. ⚠️ Включает REMOVED-кампании: фильтровать.
-5. `recommendation` по RSA ПУСТ (0 строк) — не полагаться. Поля `recommendation.responsive_search_ad_recommendation.ad` в v22 НЕТ.
+5. `recommendation` по RSA ПУСТ (0 строк) — не полагаться. Поля `recommendation.responsive_search_ad_recommendation.ad` в v22/v24 НЕТ.
 
 ## Грабли GAQL
 Несовместимые поля дают НЕ ошибку, а **пустой результат** — ловится сравнением с урезанным запросом:
