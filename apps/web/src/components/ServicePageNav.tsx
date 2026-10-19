@@ -13,7 +13,8 @@ import { RequestQuoteButton } from "@/components/RequestQuoteButton";
 const PHONE = "+998978626699";
 const PHONE_HUMAN = "+998 97 862 66 99";
 // бот, а не личный аккаунт: обращение сразу заводит тему менеджеров и карточку в CRM
-const TELEGRAM = "https://t.me/SAT_zayavki_online_bot";
+// Telegram рабочего номера (19.10.2026): подключён к боту заявок через Telegram Business — переписка идёт в CRM
+const TELEGRAM = "https://t.me/sales_satsolutions";
 
 function PhoneIcon() {
   return (
