@@ -60,7 +60,7 @@ const ru: Record<string, ServiceSeo> = {
   fire: {
     h1: "Монтаж пожарной сигнализации в Ташкенте",
     title: "Пожарная сигнализация в Ташкенте — монтаж[[ от {price}]] | SAT",
-    desc: "Проектирование и монтаж пожарной сигнализации (АПС) и СОУЭ в Ташкенте: датчики, оповещение, автоматика. Сдача проекта, гарантия и обслуживание по всему Узбекистану.",
+    desc: "Монтаж, наладка и обслуживание пожарной сигнализации (АПС), СОУЭ и автоматического пожаротушения в Ташкенте. Гарантия 3 года на работы, свой штат.",
   },
   pa: {
     h1: "Системы оповещения и трансляции в Ташкенте",
@@ -296,7 +296,7 @@ const uz: Record<string, ServiceSeo> = {
   fire: {
     h1: "Yongʻin xavfsizligi tizimlari Toshkentda — montaj",
     title: "Yongʻin signalizatsiyasi Toshkentda — montaj[[ {price}dan]] | SAT",
-    desc: "Toshkentda yongʻin signalizatsiyasi (APS) va SOUE loyihalash hamda montaji: datchiklar, ogohlantirish, avtomatika. Loyihani topshirish, kafolat va xizmat koʻrsatish.",
+    desc: "Toshkentda yongʻin signalizatsiyasi (APS), SOUE va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va xizmat koʻrsatish. Ishlarga 3 yil kafolat.",
   },
   pa: {
     h1: "Toshkentda ogohlantirish va translyatsiya tizimlari",
@@ -523,9 +523,9 @@ const en: Record<string, ServiceSeo> = {
     desc: "Turnkey access control (ACS) in Tashkent: turnstiles, electronic locks, card readers, face recognition and biometrics, time and attendance. Installation and service.",
   },
   fire: {
-    h1: "Fire Alarm System Design & Installation in Uzbekistan",
+    h1: "Fire Alarm and Fire Suppression Installation in Uzbekistan",
     title: "Fire Alarm Installation in Tashkent[[ — from {price}]] | SAT",
-    desc: "Fire alarm and voice evacuation design and installation in Tashkent: detectors, notification, automation. Project handover, warranty and maintenance in Uzbekistan.",
+    desc: "Installation, commissioning and maintenance of fire alarms, voice evacuation and automatic fire suppression in Tashkent. 3-year warranty, in-house team.",
   },
   pa: {
     h1: "Public Address and Voice Evacuation in Tashkent",
@@ -754,7 +754,7 @@ const tr: Record<string, ServiceSeo> = {
   fire: {
     h1: "Taşkent'te yangın alarm sistemi montajı",
     title: "Taşkent'te Yangın Alarm Montajı[[ — {price}'den]] | SAT",
-    desc: "Taşkent'te yangın alarm ve sesli uyarı sistemi projelendirme ve montajı: dedektörler, ihbar, otomasyon. Proje teslimi, garanti ve Özbekistan genelinde bakım.",
+    desc: "Taşkent'te yangın alarmı, sesli tahliye ve otomatik söndürme sistemlerinin kurulumu, devreye alınması ve bakımı. İşçilikte 3 yıl garanti, kendi ekibimiz.",
   },
   pa: {
     h1: "Taşkent'te seslendirme ve anons sistemleri",
@@ -982,7 +982,7 @@ const zh: Record<string, ServiceSeo> = {
   fire: {
     h1: "塔什干火灾报警系统安装",
     title: "塔什干火灾报警系统安装[[ — {price}起]] | SAT",
-    desc: "塔什干火灾报警系统与应急广播疏散系统的设计与安装：探测器、声光报警、联动控制。提供工程验收交付、质保以及乌兹别克斯坦全境的维保服务。",
+    desc: "塔什干火灾报警、应急广播与自动灭火系统的安装、调试和维保：探测器、声光报警、联动控制。安装工程质保 3 年，自有施工团队。",
   },
   pa: {
     h1: "塔什干公共广播与应急疏散广播",
