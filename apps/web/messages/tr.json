@@ -1036,26 +1036,26 @@
     "fire": {
       "title": "Yangın alarmı & tahliye",
       "desc": "Erken algılama, uyarı ve tahliye yönetimi.",
-      "intro": "Otomatik yangın alarmı ile uyarı ve tahliye yönetim sistemleri — gerekli ruhsatlarla, standartlara uygun tasarım ve kurulum.",
+      "intro": "Otomatik yangın alarmı, tahliye anonsu ve otomatik söndürme sistemleri — standartlara uygun kurulum, devreye alma ve bakım.",
       "works": [
-        "Yürürlükteki normlara göre yangın alarmı ve tahliye projesi",
+        "Otomatik söndürme sistemi kurulumu",
         "Dedektör, panel ve siren montajı",
         "Bölge ve tahliye senaryoları ayarı",
-        "Denetim kurumlarına teslim",
+        "As-built belgelerle teslim",
         "Periyodik bakım"
       ],
       "faq": [
         {
           "q": "Yangın alarmı zorunlu mu?",
-          "a": "Çoğu ticari ve kamusal tesis için yangın alarmı ve anons sistemi mevzuat gereği zorunludur. Gereksinimlere uygun tasarlıyoruz."
+          "a": "Çoğu ticari ve kamusal tesis için yangın alarmı ve anons sistemi mevzuat gereği zorunludur. Sistemi tesisinizin gereksinimlerine göre seçiyoruz."
         },
         {
           "q": "Hangi ekipmanları kullanıyorsunuz?",
           "a": "Bolid, Rubezh ve diğer üreticilerin adresli ve konvansiyonel sistemleri — tesisin tipine ve alanına göre seçiyoruz."
         },
         {
-          "q": "Proje ve teslim yapıyor musunuz?",
-          "a": "Evet, tasarım, montaj ve devreye almayı yapıyor, sistemin denetim kurumlarına teslimine yardımcı oluyoruz."
+          "q": "İşlerinize neler dahil?",
+          "a": "Yangın alarmı ve otomatik söndürme sistemlerinin kurulumu, devreye alınması ve bakımı; tesis as-built belgelerle teslim edilir."
         },
         {
           "q": "Periyodik bakım gerekli mi?",
@@ -1074,7 +1074,7 @@
               "Konvansiyonel alarm: duman ve ısı dedektörleri, siren",
               "Rubezh veya Altay panelleri — uygun fiyatlı ve sertifikalı",
               "«Çıkış» levhaları, çıkışlarda yangın butonları",
-              "Tesis yangın denetiminden geçer"
+              "Sistem Acil Durumlar Bakanlığı denetimine hazır"
             ],
             "term": "Süre: 1–3 gün"
           },
@@ -1085,7 +1085,7 @@
               "Bolid veya Rubezh adresli sistem — panel her dedektörü görür",
               "Tahliye anonsu: sirenler, levhalar, kaçış yönlendirmeleri",
               "Durum bilgisinin güvenlik noktasına aktarılması",
-              "Lisanslı uzmanlarca proje ve as-built belgeler"
+              "Projeye göre montaj + as-built belgeler"
             ],
             "term": "Süre: 1–3 hafta"
           },
@@ -1096,21 +1096,21 @@
               "Adresli analog sistem: lineer ve aspiratörlü dedektörler",
               "Sesli tahliye anonsu (3–5. tip): Rupor, bölgesel yayın",
               "Duman tahliyesi ve söndürme kontrolü",
-              "Proje, onaylar, denetime teslim — bizden"
+              "Projeye göre montaj ve devreye alma, as-built belgeler"
             ],
             "term": "Süre: projeye göre, 1 aydan itibaren"
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "Denetimden resmî teslime — 5 adım",
+        "stagesTitle": "Keşiften teslime — 5 adım",
         "stages": [
           {
             "t": "Keşif",
             "s": "tesis ve mevzuat gereklerinin incelenmesi — ücretsiz"
           },
           {
-            "t": "Proje",
-            "s": "yangın alarmı ve tahliye anons bölümleri, spesifikasyon, lisanslar"
+            "t": "Seçim",
+            "s": "tesis projesine göre ekipman ve spesifikasyon"
           },
           {
             "t": "Montaj",
@@ -1118,7 +1118,7 @@
           },
           {
             "t": "Devreye alma",
-            "s": "her dedektörün testi, denetime teslim"
+            "s": "her dedektörün testi, tesisin teslimi"
           },
           {
             "t": "Bakım",

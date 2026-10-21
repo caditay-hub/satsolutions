@@ -1036,26 +1036,26 @@
     "fire": {
       "title": "Yongʻin signalizatsiyasi va SOUE",
       "desc": "Erta aniqlash, ogohlantirish va evakuatsiyani boshqarish.",
-      "intro": "Avtomatik yongʻin signalizatsiyasi hamda ogohlantirish va evakuatsiyani boshqarish tizimlari — meʼyorlar boʻyicha, kerakli ruxsatnomalar bilan loyihalash va oʻrnatish.",
+      "intro": "Avtomatik yongʻin signalizatsiyasi, ogohlantirish va avtomatik yongʻin oʻchirish tizimlari — meʼyorlar boʻyicha montaj, sozlash va xizmat koʻrsatish.",
       "works": [
-        "Amaldagi meʼyorlar boʻyicha AYS va SOUE loyihasi",
+        "Avtomatik yongʻin oʻchirish tizimini montaj qilish",
         "Izveshchatel, panel va ogohlantirgichlarni montaj qilish",
         "Zona va evakuatsiya senariylarini sozlash",
-        "Nazorat organlariga topshirish",
+        "Obyektni ijro hujjatlari bilan topshirish",
         "Reglamentli xizmat koʻrsatish"
       ],
       "faq": [
         {
           "q": "Yondaloq chiqindi signalizatsiyasi majburiyami?",
-          "a": "Koʻpchilik tijorat va ijtimoiy obʼektlar uchun yondaloq signalizatsiyasi va ogohlantirishlar normalarga koʻra majburiy. Biz talablarni hisobga olgan holda loyihalashtiraman."
+          "a": "Koʻpchilik tijorat va ijtimoiy obyektlar uchun yongʻin signalizatsiyasi va ogohlantirish meʼyorlarga koʻra majburiy. Tizim tarkibini obyektingiz uchun meʼyor talablariga qarab tanlaymiz."
         },
         {
           "q": "Siz qanday uskunalardan foydalanasiz?",
           "a": "Bolid, Rubezh va boshqa ishlab chiqaruvchilarning manzilli va boshbogʻi tizimlari — obʼekt turi va maydoni boʻyicha tanlab olamiz."
         },
         {
-          "q": "Loyiha va topshirish qilasizmi?",
-          "a": "Ha, biz loyihalashtirish, oʻrnatish, ishga tushirish va tizimnni nadzor organlarining sertifikatsiyasiga yordam beramiz."
+          "q": "Ishlaringizga nimalar kiradi?",
+          "a": "Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish, obyektni ijro hujjatlari bilan topshirish."
         },
         {
           "q": "Texnik xizmat koʻrsatish kerakmi?",
@@ -1074,7 +1074,7 @@
               "Chegara signalizatsiyasi: tutun va issiqlik datchiklari, sirena",
               "Rubej yoki Oltoy asboblari — arzon va sertifikatlangan",
               "«Chiqish» tablosi, chiqishlar yonida qoʻl izveshchatellari",
-              "Obyekt yongʻin nazorati tekshiruvidan oʻtadi"
+              "Tizim FVV tekshiruviga tayyor"
             ],
             "term": "Muddat: 1–3 kun"
           },
@@ -1085,7 +1085,7 @@
               "Bolid yoki Rubej adresli tizimi — panel har datchikni koʻradi",
               "SOUE ogohlantirishi: sirenalar, tablolar, evakuatsiya koʻrsatkichlari",
               "Holatni qoʻriqlash postiga chiqarish",
-              "Litsenziyali mutaxassislar loyihasi + ijro hujjatlari"
+              "Loyiha boʻyicha montaj + ijro hujjatlari"
             ],
             "term": "Muddat: 1–3 hafta"
           },
@@ -1096,21 +1096,21 @@
               "Adresli-analog tizim: chiziqli va aspiratsion izveshchatellar",
               "Nutqiy ogohlantirish (SOUE 3–5): Rupor, zonali translyatsiya",
               "Tutun chiqarish va oʻt oʻchirishni boshqarish",
-              "Loyiha, kelishish, inspeksiyaga topshirish — oʻzimiz"
+              "Loyiha boʻyicha montaj va sozlash, ijro hujjatlari"
             ],
             "term": "Muddat: loyiha boʻyicha, 1 oydan"
           }
         ],
         "stagesLabel": "Qanday ishlaymiz",
-        "stagesTitle": "Audit­dan inspeksiya topshiruvigacha — 5 qadam",
+        "stagesTitle": "Koʻrikdan obyektni topshirishgacha — 5 qadam",
         "stages": [
           {
             "t": "Tekshiruv",
             "s": "obyekt va meʼyor talablari auditi — bepul"
           },
           {
-            "t": "Loyiha",
-            "s": "APS va SOUE boʻlimlari, spetsifikatsiya, litsenziyalar"
+            "t": "Tanlash",
+            "s": "obyekt loyihasi boʻyicha uskunalar va spetsifikatsiya"
           },
           {
             "t": "Montaj",
@@ -1118,7 +1118,7 @@
           },
           {
             "t": "Ishga tushirish",
-            "s": "har izveshchatelni tekshirish, inspeksiyaga topshirish"
+            "s": "har bir izveshchatelni tekshirish, obyektni topshirish"
           },
           {
             "t": "Xizmat koʻrsatish",

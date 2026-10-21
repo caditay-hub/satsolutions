@@ -1036,26 +1036,26 @@
     "fire": {
       "title": "Fire alarm & evacuation",
       "desc": "Early detection, alerting and evacuation control.",
-      "intro": "Automatic fire alarms and evacuation warning and control systems — designed and installed to standards with the required licenses.",
+      "intro": "Automatic fire alarms, evacuation warning and automatic fire suppression — installed, commissioned and maintained to standards.",
       "works": [
-        "Fire alarm and evacuation system design to standards",
+        "Automatic fire suppression installation",
         "Installation of detectors, panels and sounders",
         "Configuring zones and evacuation scenarios",
-        "Handover to supervisory authorities",
+        "Handover with as-built documentation",
         "Scheduled maintenance"
       ],
       "faq": [
         {
           "q": "Is fire alarm system mandatory?",
-          "a": "For most commercial and public facilities, fire alarm and notification systems are required by regulations. We design in compliance with all applicable standards."
+          "a": "For most commercial and public facilities, fire alarm and notification systems are required by regulations. We select the system to meet the requirements for your facility."
         },
         {
           "q": "What equipment do you use?",
           "a": "Addressable and conventional fire alarm systems from Bolid, Rubezh, and other leading manufacturers — we select the right solution based on your facility type and size."
         },
         {
-          "q": "Do you handle design and commissioning?",
-          "a": "Yes, we provide full service: design, installation, system commissioning, and assistance with regulatory inspections and approvals."
+          "q": "What does your work include?",
+          "a": "Installation, commissioning and maintenance of fire alarms and automatic fire suppression, with handover and as-built documentation."
         },
         {
           "q": "Is maintenance required?",
@@ -1074,7 +1074,7 @@
               "Conventional alarm: smoke and heat detectors, sounder",
               "Rubezh or Altai panels — affordable and certified",
               "EXIT signs, manual call points at exits",
-              "The site passes fire inspection"
+              "System ready for Emergency Ministry inspection"
             ],
             "term": "Time: 1–3 days"
           },
@@ -1085,7 +1085,7 @@
               "Bolid or Rubezh addressable system — the panel sees every detector",
               "Evacuation alerting: sounders, signs, escape route lights",
               "Status output to the security desk",
-              "Design by licensed specialists + as-built documents"
+              "Installation to the design + as-built documents"
             ],
             "term": "Time: 1–3 weeks"
           },
@@ -1096,21 +1096,21 @@
               "Analogue addressable system: beam and aspirating detectors",
               "Voice evacuation: Rupor, zoned announcements",
               "Smoke extraction and suppression control",
-              "Design, approvals, inspection handover — on us"
+              "Installation and commissioning to the design, as-built documents"
             ],
             "term": "Time: per project, from 1 month"
           }
         ],
         "stagesLabel": "How we work",
-        "stagesTitle": "From audit to inspection handover — 5 steps",
+        "stagesTitle": "From survey to handover — 5 steps",
         "stages": [
           {
             "t": "Survey",
             "s": "site and code requirements audit — free"
           },
           {
-            "t": "Design",
-            "s": "alarm and evacuation sections, specification, licenses"
+            "t": "Selection",
+            "s": "equipment and specification to the site design"
           },
           {
             "t": "Installation",
@@ -1118,7 +1118,7 @@
           },
           {
             "t": "Commissioning",
-            "s": "every detector tested, inspection handover"
+            "s": "every detector tested, site handover"
           },
           {
             "t": "Maintenance",
