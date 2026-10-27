@@ -21,6 +21,7 @@ import { FeedbackMessage } from "../models/FeedbackMessage.js";
 import { ServiceCategory } from "../models/ServiceCategory.js";
 import { sequelize } from "../db.js";
 import { flipLayout } from "../lib/kbLayout.js";
+import { CATALOG_TYPE_ORDER, SERIES_RANK_SQL } from "../lib/catalogOrder.js";
 import { parseLimit, parsePositiveInt } from "../utils/pagination.js";
 import { Sentry } from "../sentry.js";
 
@@ -168,6 +169,30 @@ publicRouter.get("/partners", async (_req, res) => {
   const partners = await Partner.findAll({ where: { published: true }, order: [["sortOrder", "ASC"], ["name", "ASC"]] });
   res.json({ partners });
 });
+
+// Приоритет категорий для сортировки «по умолчанию» (lib/catalogOrder.ts): CASE по categoryId,
+// категории-дети наследуют приоритет родителя, остальные — в конец. Кэш 5 минут, чтобы не читать
+// все категории на каждый запрос списка (27.10.2026).
+let catOrderCache: { sql: string; at: number } | null = null;
+async function categoryOrderSql(): Promise<string> {
+  if (catOrderCache && Date.now() - catOrderCache.at < 300_000) return catOrderCache.sql;
+  const cats = await Category.findAll({ attributes: ["id", "name", "parentId"] });
+  const rank = new Map(CATALOG_TYPE_ORDER.map((n, i) => [n.toLowerCase(), i]));
+  const byId = new Map(cats.map((c) => [c.id, c]));
+  const prio = (c: { name: string; parentId: string | null }, depth = 0): number => {
+    const r = rank.get(String(c.name).toLowerCase());
+    if (r !== undefined) return r;
+    const p = c.parentId ? byId.get(c.parentId) : null;
+    return p && depth < 5 ? prio(p, depth + 1) : 999;
+  };
+  const when = cats
+    .filter((c) => /^[0-9a-f-]{36}$/i.test(c.id) && prio(c) < 999)
+    .map((c) => `WHEN '${c.id}' THEN ${prio(c)}`)
+    .join(" ");
+  const sql = when ? `CASE "Product"."categoryId" ${when} ELSE 999 END` : "0";
+  catOrderCache = { sql, at: Date.now() };
+  return sql;
+}
 
 publicRouter.get("/products", async (req, res) => {
   const page = parsePositiveInt(req.query.page, 1);
@@ -435,6 +460,10 @@ publicRouter.get("/products", async (req, res) => {
   const categoryNameExpr = sequelize.literal(
     `(SELECT name FROM categories WHERE id = "Product"."categoryId")`
   );
+  // Порядок категорий как в меню раздела (IP-камеры → NVR → …), а не по алфавиту; внутри категории
+  // ходовые серии вперёд, проектные/спец — после (lib/catalogOrder.ts, решение владельца 27.10.2026)
+  const categoryOrderExpr = sequelize.literal(await categoryOrderSql());
+  const seriesRankExpr = sequelize.literal(SERIES_RANK_SQL);
 
   const order: any[] =
     sort === "price_asc"
@@ -451,11 +480,12 @@ publicRouter.get("/products", async (req, res) => {
                 // по дате ДОБАВЛЕНИЯ: правка цены/описания (updatedAt) не должна
                 // поднимать старый товар в «Новинки»
                 ? [["createdAt", "DESC"]]
-                // default: by category, then by name — logical grouping.
-                // Внутри раздела аксессуары — после основных товаров: в «Шлагбаумах» по алфавиту
-                // первыми шли радары, петли и пульты, а настоящие шлагбаумы — с 20-й позиции
-                // (реклама и поиск приводят сюда за шлагбаумом; разбор 14.10.2026).
-                : [[categoryNameExpr, "ASC"], [accessoryLastExpr, "ASC"], ["name", "ASC"]];
+                // default: категория в порядке меню раздела (27.10.2026: до этого — алфавит, и в
+                // «Видеонаблюдении» 95 регистраторов шли раньше 249 камер), затем имя категории
+                // (дети после родителя), аксессуары — после основных товаров (в «Шлагбаумах» по
+                // алфавиту первыми шли радары, петли и пульты; разбор 14.10.2026), затем ходовые
+                // серии раньше проектных, затем имя.
+                : [[categoryOrderExpr, "ASC"], [categoryNameExpr, "ASC"], [accessoryLastExpr, "ASC"], [seriesRankExpr, "ASC"], ["name", "ASC"]];
   // Последний ключ — id: у товаров с одинаковой ценой/датой загрузки (партии)/названием
   // порядок иначе случайный, и при выдаче порциями (каталог подгружается при прокрутке,
   // 07.10.2026) товары повторялись на соседних страницах или пропадали.
