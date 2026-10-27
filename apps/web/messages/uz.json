@@ -365,10 +365,10 @@
     "cctv": {
       "title": "Videokuzatuv",
       "desc": "Har qanday miqyosdagi obyekt uchun IP, analog va bulutli tizimlar.",
-      "intro": "Videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: kichik ofisdan tortib oʻnlab kamerali va kunu-tun monitoringli tarqoq obyektlargacha boʻlgan tizimlarni loyihalaymiz va montaj qilamiz.",
+      "intro": "Videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: kichik ofisdan tortib oʻnlab kamerali va kunu-tun monitoringli tarqoq obyektlargacha boʻlgan tizimlarni tanlab beramiz va montaj qilamiz.",
       "works": [
         "Obyekt auditi va vazifaga mos kameralarni tanlash",
-        "Loyihalash va joylashtirish sxemasi",
+        "Kameralarni joylashtirish sxemasi va spetsifikatsiya",
         "Kameralar, registratorlar (NVR/DVR) va kabel tarmogʻini oʻrnatish",
         "Yozib olish, masofaviy kirish va videoanalitikani sozlash",
         "Ishga tushirish, oʻqitish va kafolat xizmati"
@@ -376,7 +376,15 @@
       "faq": [
         {
           "q": "Videokuzatuv oʻrnatish qancha turadi?",
-          "a": "Xarajat kameralar soniga, asbob-uskunaning turlatiga va oʻrnatishning murakkabligiga bogʻliq. Biz bepul obʼektga chiqamiz, smeta hisoblaymiz va tijorat taklifini tayyorlaymiz."
+          "a": "Montaj — har bir kamera uchun 155 000 soʻmdan: ichki 155 000, koʻcha 180 000, aylanuvchi 310 000; har bir kamerani sozlash 77 000, 16 kameragacha registrator 280 000, kabel metri 7 000 soʻm. 4 kameralik tipik uy — ishlar uchun 2,1–2,63 mln soʻm, uskuna alohida hisoblanadi. Aniq smetani muhandisning bepul chiqishidan keyin tayyorlaymiz."
+        },
+        {
+          "q": "Bitta kamerani oʻrnatish qancha turadi?",
+          "a": "Ichki kamera montaji — 155 000 soʻm, koʻcha kamerasi — 180 000, aylanuvchi (PTZ) — 310 000; kamerani sozlash va ishga tushirish — 77 000. 16 kameragacha registrator — tizim uchun 280 000 soʻm, 16 dan ortiq — 450 000. Kabel — metri 7 000 soʻm. Uskuna alohida hisoblanadi, narxlar — katalogda."
+        },
+        {
+          "q": "Xususiy uy hovlisi uchun videokuzatuvga nima kerak?",
+          "a": "Odatda kirish, hovli va perimetrga infraqizil yoritishli 2–4 ta koʻcha kamerasi, 2–4 haftalik arxiv uchun diskli registrator yoki kabel tortib boʻlmaydigan joyda kartaga yozadigan Wi-Fi kameralar, telefondan koʻrish va harakat haqida bildirishnomalar. 4 kameralik tipik toʻplam montaji — ishlar uchun 2,1–2,63 mln soʻm; montaj bir kun oladi."
         },
         {
           "q": "IP-kameralar analogligidan qanday farq qiladi?",
@@ -654,7 +662,7 @@
       "desc": "Turniketlar, oʻqigichlar, elektron qulflar va oʻtish nuqtalari.",
       "intro": "Obyektga kirishni cheklaymiz va hisobga olamiz: turniketlar, elektron qulflar, karta oʻqigichlar va biometriya, hududlar va vaqt boʻyicha moslashuvchan kirish huquqlari.",
       "works": [
-        "Kirish nuqtalari va zonalarni loyihalash",
+        "Oʻtish nuqtalari va kirish zonalari sxemasi",
         "Turniket, qulf, oʻqigichlarni montaj qilish",
         "Huquq, jadval va kirish darajalarini sozlash",
         "Videokuzatuv va vaqt hisobi bilan integratsiya",
@@ -662,8 +670,16 @@
       ],
       "faq": [
         {
-          "q": "Kirishni boshqarish tizimi (SKUD) nimalardan iborat?",
-          "a": "Kontroller, karta oʻqigichlar yoki biometrik terminallar, elektromagnit/elektromekanik qulflar, turniketlar va kirishga ruxsat berish huquqlarini boshqarish uchun dastur."
+          "q": "SKUD nima — sodda tilda?",
+          "a": "Bu elektron oʻtish punkti: kalit oʻrniga karta, kod, barmoq izi yoki yuz. Oʻqigich kodni kontrollerga uzatadi, kontroller huquqlarni tekshirib qulf yoki turniketni ochadi, har bir oʻtish esa vaqti va ismi bilan jurnalga yoziladi."
+        },
+        {
+          "q": "SKUD tarkibiga nimalar kiradi?",
+          "a": "Kontroller, karta oʻqigichlar yoki biometrik terminallar (barmoq izi, yuz), ijro qurilmalari — elektromagnit yoki elektromexanik qulflar, turniketlar, kalitkalar, shlagbaumlar, — chiqish tugmalari va dovodchiklar, zaxirali quvvat bloki va huquqlarni boshqarish dasturi. Bitta eshik uchun oʻqigichli avtonom kontroller yetadi; oʻqigich montaji — 85 000 soʻmdan."
+        },
+        {
+          "q": "Maktabga SKUD oʻrnatish mumkinmi?",
+          "a": "Ha. Maktab uchun tipik sxema: kirishda turniketlar, oʻquvchilar va xodimlarga kartalar, xodimlar uchun yuzni taniydigan terminal, bolaning kirib-chiqishi haqida ota-onaga Telegram yoki SMS orqali xabar, yongʻin signali paytida turniketlarning avtomatik ochilishi. Turniketli oʻtish punktini 2–5 kunda oʻrnatamiz."
         },
         {
           "q": "Ishchilar ish vaqtini hisoblab turish mumkinmi?",

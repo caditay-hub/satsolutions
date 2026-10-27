@@ -38,8 +38,8 @@ const ru: Record<string, ServiceSeo> = {
   cctv: {
     // «системы видеонаблюдения» — QS 1/10 в Ads: запрос обязан быть в H1/title (методика LT)
     h1: "Системы видеонаблюдения в Ташкенте — установка под ключ",
-    title: "Установка видеонаблюдения в Ташкенте[[ — от {price}]] | SAT",
-    desc: "Системы видеонаблюдения под ключ в Ташкенте: установка IP и аналоговых камер, бесплатный выезд, проект, монтаж, удалённый доступ с телефона. Гарантия и сервис.",
+    title: "Установка видеонаблюдения в Ташкенте — монтаж 1–3 дня | SAT",
+    desc: "Монтаж камеры от 155 000 сум, уличной — 180 000. Hikvision и Dahua, свой штат, гарантия 3 года на работы, выезд в день заявки. Цены на все работы на странице.",
   },
   analytics: {
     h1: "Видеоаналитика и распознавание лиц в Ташкенте",
@@ -54,8 +54,8 @@ const ru: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Системы контроля доступа (СКУД) в Ташкенте",
-    title: "Установка СКУД в Ташкенте[[ — от {price}]] | SAT",
-    desc: "Монтаж СКУД в Ташкенте под ключ: турникеты, электронные замки, считыватели карт, доступ по лицу (Face ID), учёт рабочего времени. Монтаж и сервис по Узбекистану.",
+    title: "СКУД в Ташкенте: системы контроля доступа, установка | SAT",
+    desc: "СКУД под ключ в Ташкенте: турникеты, замки, считыватели, Face ID. Монтаж от 85 000 сум за считыватель, свой штат, гарантия 3 года на работы.",
   },
   fire: {
     h1: "Монтаж пожарной сигнализации в Ташкенте",
@@ -280,8 +280,8 @@ const uz: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "Toshkentda videokuzatuv oʻrnatish",
-    title: "Toshkentda videokuzatuv oʻrnatish[[ — {price}dan]] | SAT",
-    desc: "Toshkentda videokuzatuv kameralarini toʻliq tayyor holda oʻrnatamiz: bepul chiqish, loyiha, IP va analog tizimlar montaji, telefondan kirish. Kafolat va servis.",
+    title: "Toshkentda videokuzatuv oʻrnatish: montaj 1–3 kunda | SAT",
+    desc: "Kamera montaji 155 000 soʻmdan, koʻcha kamerasi — 180 000. Hikvision va Dahua, oʻz jamoamiz, ishlarga 3 yil kafolat, ariza kuni chiqamiz. Narxlar sahifada.",
   },
   analytics: {
     h1: "Toshkentda videoanalitika va yuzni tanish",
@@ -290,8 +290,8 @@ const uz: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "SKUD tizimi Toshkentda — kirishni boshqarish",
-    title: "SKUD tizimi Toshkentda — oʻrnatish[[ {price}dan]] | SAT",
-    desc: "Toshkentda SKUD montaji: turniketlar, elektron qulflar, karta oʻquvchilar, yuz boʻyicha kirish va biometriya, ish vaqti hisobi. Montaj va servis mamlakat boʻylab.",
+    title: "SKUD Toshkentda: kirishni nazorat qilish, oʻrnatish | SAT",
+    desc: "Toshkentda SKUD toʻliq tayyor holda: turniketlar, qulflar, oʻqigichlar, Face ID. Montaj oʻqigich uchun 85 000 soʻmdan, oʻz jamoamiz, ishlarga 3 yil kafolat.",
   },
   fire: {
     h1: "Yongʻin xavfsizligi tizimlari Toshkentda — montaj",
@@ -509,8 +509,8 @@ const en: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "CCTV Installation Company in Tashkent, Uzbekistan",
-    title: "CCTV Installation in Tashkent[[ — from {price}]] | SAT",
-    desc: "Turnkey CCTV camera installation in Tashkent: free site survey, design, IP and analog system setup, remote access from your phone. Warranty and service.",
+    title: "CCTV Installation in Tashkent: Fitted in 1–3 Days | SAT",
+    desc: "Camera installation from 155,000 UZS, outdoor — 180,000. Hikvision and Dahua, in-house team, 3-year warranty on work, same-day site visit. Prices on the page.",
   },
   analytics: {
     h1: "Video Analytics and AI in Tashkent",
@@ -519,8 +519,8 @@ const en: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Access Control Systems in Tashkent",
-    title: "Access Control Installation in Tashkent[[ — from {price}]] | SAT",
-    desc: "Turnkey access control (ACS) in Tashkent: turnstiles, electronic locks, card readers, face recognition and biometrics, time and attendance. Installation and service.",
+    title: "Access Control in Tashkent: ACS Systems, Installation | SAT",
+    desc: "Turnkey access control in Tashkent: turnstiles, locks, readers, Face ID. Installation from 85,000 UZS per reader, in-house team, 3-year warranty on work.",
   },
   fire: {
     h1: "Fire Alarm and Fire Suppression Installation in Uzbekistan",
@@ -733,8 +733,8 @@ const tr: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "Taşkent'te güvenlik kamerası sistemi — anahtar teslim",
-    title: "Taşkent'te Güvenlik Kamerası Kurulumu[[ — {price}'den]] | SAT",
-    desc: "Taşkent'te anahtar teslim güvenlik kamerası sistemleri: ücretsiz keşif, proje, IP ve analog kamera montajı, telefondan uzaktan erişim. Garanti ve servis.",
+    title: "Taşkent'te Kamera Sistemi Kurulumu: 1–3 Günde Montaj | SAT",
+    desc: "Kamera montajı 155.000 UZS'den, dış mekân — 180.000. Hikvision ve Dahua, kendi ekibimiz, işçilikte 3 yıl garanti, aynı gün keşif. Tüm işçilik fiyatları sayfada.",
   },
   analytics: {
     h1: "Taşkent'te video analitik ve yüz tanıma",
@@ -748,8 +748,8 @@ const tr: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "Taşkent'te geçiş kontrol sistemleri — anahtar teslim",
-    title: "Taşkent'te Geçiş Kontrol Kurulumu[[ — {price}'den]] | SAT",
-    desc: "Taşkent'te geçiş kontrol sistemi montajı: turnikeler, elektronik kilitler, kart okuyucular, Face ID ve biyometri, personel devam takibi. Kurulum ve servis.",
+    title: "Taşkent'te Geçiş Kontrol (PDKS) Sistemleri ve Kurulum | SAT",
+    desc: "Taşkent'te anahtar teslim geçiş kontrolü: turnike, kilit, okuyucu, Face ID. Montaj okuyucu başına 85.000 UZS'den, kendi ekibimiz, işçilikte 3 yıl garanti.",
   },
   fire: {
     h1: "Taşkent'te yangın alarm sistemi montajı",
@@ -961,8 +961,8 @@ const zh: Record<string, ServiceSeo> = {
   },
   cctv: {
     h1: "塔什干视频监控系统 — 整套安装服务",
-    title: "塔什干视频监控安装[[ — {price}起]] | SAT",
-    desc: "在塔什干及乌兹别克斯坦全境提供视频监控整套解决方案：免费上门勘察、方案设计、IP 与模拟摄像头安装、手机远程查看设置，并提供长期质保与售后服务。",
+    title: "塔什干视频监控安装：1–3 天完成施工 | SAT",
+    desc: "摄像机安装 155 000 苏姆起，室外 180 000。海康威视与大华，自有施工团队，安装工程质保 3 年，当天上门勘察。全部工费见本页。",
   },
   analytics: {
     h1: "塔什干视频智能分析与人脸识别",
@@ -976,8 +976,8 @@ const zh: Record<string, ServiceSeo> = {
   },
   access: {
     h1: "塔什干门禁系统安装与调试",
-    title: "塔什干门禁系统安装[[ — {price}起]] | SAT",
-    desc: "在塔什干承接门禁系统整套安装：闸机、电子锁、读卡器、人脸识别（Face ID）与生物识别、考勤管理。乌兹别克斯坦全境提供方案设计、施工安装与售后服务。",
+    title: "塔什干门禁系统：选型与安装 | SAT",
+    desc: "塔什干门禁系统整套安装：闸机、电子锁、读卡器、人脸识别。读卡器安装 85 000 苏姆起，自有施工团队，安装工程质保 3 年。",
   },
   fire: {
     h1: "塔什干火灾报警系统安装",

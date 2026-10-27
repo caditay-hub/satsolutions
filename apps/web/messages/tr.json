@@ -365,10 +365,10 @@
     "cctv": {
       "title": "Video gözetim",
       "desc": "Her ölçekte tesis için IP, analog ve bulut sistemleri.",
-      "intro": "Anahtar teslim güvenlik kamerası kurulumu: küçük ofisten onlarca kameralı ve 7/24 izlemeli dağıtık tesislere kadar her ölçekte sistem tasarlıyor ve kuruyoruz.",
+      "intro": "Anahtar teslim güvenlik kamerası kurulumu: küçük ofisten onlarca kameralı ve 7/24 izlemeli dağıtık tesislere kadar her ölçekte sistem seçiyor ve kuruyoruz.",
       "works": [
         "Saha denetimi ve ihtiyaca göre kamera seçimi",
-        "Tasarım ve yerleşim şeması",
+        "Kamera yerleşim şeması ve malzeme listesi",
         "Kamera, kayıt cihazı (NVR/DVR) ve kablolama montajı",
         "Kayıt, uzaktan erişim ve analitik ayarları",
         "Devreye alma, eğitim ve garanti hizmeti"
@@ -376,7 +376,15 @@
       "faq": [
         {
           "q": "Güvenlik kamerası kurulumu ne kadar tutar?",
-          "a": "Maliyet kamera sayısına, ekipman tipine ve montaj zorluğuna bağlıdır. Tesise ücretsiz gelir, keşif yapar ve teklif hazırlarız."
+          "a": "Montaj kamera başına 155.000 UZS'den başlar: iç mekân 155.000, dış mekân 180.000, PTZ 310.000; her kameranın ayarı 77.000, 16 kameraya kadar kayıt cihazı 280.000, kablo metresi 7.000 UZS. Tipik 4 kameralı ev — işçilik 2,1–2,63 milyon UZS; ekipman ayrıca fiyatlanır. Kesin teklif ücretsiz mühendis keşfinden sonra hazırlanır."
+        },
+        {
+          "q": "Tek kamera kurulumu ne kadar?",
+          "a": "İç mekân kamera montajı — 155.000 UZS, dış mekân — 180.000, PTZ — 310.000; kamera ayarı ve devreye alma — 77.000. 16 kameraya kadar kayıt cihazı — sistem başına 280.000 UZS, 16 üzeri — 450.000. Kablo — metresi 7.000 UZS. Ekipman ayrıca fiyatlanır, fiyatlar katalogda."
+        },
+        {
+          "q": "Müstakil evin dış mekânında kamera için ne gerekir?",
+          "a": "Genelde giriş, avlu ve çevre için kızılötesi aydınlatmalı 2–4 dış mekân kamerası, 2–4 haftalık arşiv için diskli kayıt cihazı ya da kablo çekilemeyen yerde karta kayıt yapan Wi-Fi kameralar, telefondan izleme ve hareket bildirimleri. Tipik 4 kameralı set montajı — işçilik 2,1–2,63 milyon UZS; montaj bir gün sürer."
         },
         {
           "q": "IP kameralar analog kameralardan farkı nedir?",
@@ -654,7 +662,7 @@
       "desc": "Turnikeler, okuyucular, elektronik kilitler ve kontrol noktaları.",
       "intro": "Tesise erişimi sınırlandırır ve kayıt altına alırız: turnikeler, elektronik kilitler, kart okuyucular ve biyometri, bölge ve zamana göre esnek erişim hakları.",
       "works": [
-        "Geçiş noktaları ve bölgelerin tasarımı",
+        "Geçiş noktaları ve bölgelerin yerleşim şeması",
         "Turnike, kilit ve okuyucu montajı",
         "Yetki, program ve erişim seviyeleri ayarı",
         "Gözetim ve zaman takibi ile entegrasyon",
@@ -662,8 +670,16 @@
       ],
       "faq": [
         {
-          "q": "Geçiş kontrol sistemine (PDKS) neler dahildir?",
-          "a": "Kontrolörler, kart okuyucular veya biyometrik terminaller, elektromanyetik/elektromekanik kilitler, turnikeler ve erişim haklarını yöneten yazılım."
+          "q": "Geçiş kontrol sistemi (PDKS) basitçe nedir?",
+          "a": "Elektronik bir kapı görevlisidir: anahtar yerine kart, kod, parmak izi veya yüz kullanılır. Okuyucu kodu kontrolöre iletir, kontrolör yetkileri kontrol edip kilidi veya turnikeyi açar, her geçiş saat ve isimle kayda geçer."
+        },
+        {
+          "q": "Geçiş kontrol sistemi nelerden oluşur?",
+          "a": "Kontrolör, kart okuyucular veya biyometrik terminaller (parmak izi, yüz), tahrik elemanları — elektromanyetik veya elektromekanik kilitler, turnikeler, kapılar, bariyerler — çıkış butonları ve kapı kapatıcılar, yedekli güç kaynağı ve yetki yönetim yazılımı. Tek kapı için okuyuculu bağımsız kontrolör yeter; okuyucu montajı 85.000 UZS'den başlar."
+        },
+        {
+          "q": "Okula geçiş kontrol sistemi kurulabilir mi?",
+          "a": "Evet. Okul için tipik düzen: girişte turnikeler, öğrenci ve personele kart, personel için yüz tanıma terminali, çocuğun giriş-çıkışında velilere Telegram veya SMS bildirimi, yangın alarmında turnikelerin otomatik açılması. Turnikeli girişi 2–5 günde kurarız."
         },
         {
           "q": "Mesai takibi yapılabilir mi?",

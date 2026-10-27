@@ -58,7 +58,7 @@ const CATALOG_SCOPED_PAGE = 60;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [], typeH1 }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; /** H1 раздела вместо голого имени типа (typeSeo TYPE_H1) */ typeH1?: string; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [], typeH1 }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string; links?: { label: string; href: string }[] }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; /** H1 раздела вместо голого имени типа (typeSeo TYPE_H1) */ typeH1?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -276,9 +276,12 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
   const typeFaq = typeLongDesc ? parseRichDescription(typeLongDesc).faq : [];
   // Google засчитывает ОДНУ FAQPage на страницу: у хаба типа вопросов два источника
   // (тип-лендинг и категорийный лонгрид), раньше уходили две схемы и вторая пропадала.
-  // Порядок: лендинг → лонгрид → бренд; дубли снимаем по тексту вопроса.
+  // Порядок: лендинг → лонгрид → хаб группы → бренд; дубли снимаем по тексту вопроса.
+  // FAQ хаба группы (groupSeo.long, секция «## FAQ») раньше рисовался RichDescription, но в
+  // разметку не попадал (26.10.2026).
+  const groupFaq = groupLanding?.long ? parseRichDescription(groupLanding.long).faq : [];
   const faqSeen = new Set<string>();
-  const faqAll = [...(pairBlock?.faq ?? []), ...typeFaq, ...(brandSeo?.faq ?? [])].filter((f) => {
+  const faqAll = [...(pairBlock?.faq ?? []), ...typeFaq, ...groupFaq, ...(brandSeo?.faq ?? [])].filter((f) => {
     const key = f.q.trim().toLowerCase();
     if (!key || faqSeen.has(key)) return false;
     faqSeen.add(key);
@@ -559,6 +562,14 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
               <div className="max-w-3xl">
                 <RichDescription text={groupLanding.long} />
               </div>
+              {/* Ссылки на профильные услуги под текстом (groupSeo.links) — как content.links на страницах услуг */}
+              {groupLanding.links?.length ? (
+                <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+                  {groupLanding.links.map((l) => (
+                    <Link key={l.href} href={l.href as any} className="tap text-sm font-semibold text-brand-700 underline-offset-2 hover:underline">{l.label} →</Link>
+                  ))}
+                </div>
+              ) : null}
             </section>
           ) : null}
           {pairBlock ? (

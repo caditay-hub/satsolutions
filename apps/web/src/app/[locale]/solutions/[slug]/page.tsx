@@ -152,7 +152,12 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     // при позиции ~7 кликов не было (0 из 95 показов). Цена берётся из того же прайса, что блок
     // «Сколько стоит» на странице, — меняется прайс, меняется и описание.
     const lead = await priceLead(svc.key, locale);
-    const metaDesc = `${lead ? lead + (locale === "zh" ? "" : " ") : ""}${seo?.desc ? await fillServiceSeo(seo.desc, svc.key, locale) : intro}`; // в китайском без пробела между фразами
+    const descBody = seo?.desc ? await fillServiceSeo(seo.desc, svc.key, locale) : intro;
+    // 26.10.2026: если description сам называет цену (cctv, access — «от 155 000 сум»), авто-префикс
+    // не приписываем: иначе цена шла дважды и обрезка до 160 съедала конец. Проверка — число вида
+    // «155 000» или слово валюты на языке страницы.
+    const hasPrice = /\d{2,3}[\s\u00a0\u202f]?\d{3}|сум|soʻm|so'm|UZS|\bTL\b|苏姆|索姆/.test(descBody);
+    const metaDesc = `${lead && !hasPrice ? lead + (locale === "zh" ? "" : " ") : ""}${descBody}`; // в китайском без пробела между фразами
     return {
       title: { absolute: metaTitle },
       description: metaDesc,

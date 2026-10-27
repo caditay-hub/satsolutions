@@ -14,6 +14,12 @@ function safeTrim(v: unknown, max: number) {
 }
 
 // Сообщение для виджета, админки и бота: картинка и вложение (голосовое, видео, файл) идут рядом с текстом.
+// gclid — необязательная метка клика Google Ads от виджета; невалидную молча отбрасываем.
+function chatGclid(v: unknown): string | null {
+  const s = safeTrim(v, 200);
+  return /^[\w.-]{10,200}$/.test(s) ? s : null;
+}
+
 function msgDto(m: ChatMessage) {
   return { id: m.id, conversationId: m.conversationId, sender: m.sender, text: m.text, imageUrl: m.imageUrl ?? null, attachment: m.attachment ?? null, createdAt: m.createdAt };
 }
@@ -80,6 +86,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const name = safeTrim(payload?.name, 200) || null;
       const phone = safeTrim(payload?.phone, 32) || null;
       const page = safeTrim(payload?.page, 300) || null;
+      const gclid = chatGclid(payload?.gclid);
 
       // Restore existing conversation (and its history) for this visitor, regardless of status.
       const conversation = await ChatConversation.findOne({ where: { visitorId } });
@@ -93,6 +100,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       if (name && !conversation.name) patch.name = name;
       if (phone && !conversation.phone) patch.phone = phone;
       if (page) patch.page = page;
+      if (gclid && !conversation.gclid) patch.gclid = gclid;
       if (Object.keys(patch).length) await conversation.update(patch);
 
       socket.data.conversationId = conversation.id;
@@ -124,6 +132,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
       const name = safeTrim(payload?.name, 200) || null;
       const phone = safeTrim(payload?.phone, 32) || null;
       const page = safeTrim(payload?.page, 300) || null;
+      const gclid = chatGclid(payload?.gclid);
       const imageUrl = chatImageUrl(payload?.imageUrl);
       const attachment = chatAttachment(payload?.attachment);
       if (!text && !imageUrl && !attachment) return;
@@ -141,6 +150,9 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           await conversation.update({ status: "OPEN" } as any);
           wasReopened = true;
         }
+        if (conversation && gclid && !conversation.gclid) {
+          await conversation.update({ gclid } as any);
+        }
       } else if (visitorId && visitorId.length >= 10) {
         const result = await sequelize.transaction(async (t) => {
           const existing = await ChatConversation.findOne({ where: { visitorId }, transaction: t });
@@ -151,6 +163,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
             if (name && !existing.name) patch.name = name;
             if (phone && !existing.phone) patch.phone = phone;
             if (page) patch.page = page;
+            if (gclid && !existing.gclid) patch.gclid = gclid;
             if (Object.keys(patch).length) await existing.update(patch, { transaction: t });
             return { conversation: existing, isNew: false, reopened };
           }
@@ -161,6 +174,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
               phone,
               email: null,
               page,
+              gclid,
               status: "OPEN",
               lastMessageAt: null
             } as any,
@@ -223,6 +237,7 @@ export function createSocketServer(server: HttpServer, origins: string[]) {
           phone: conversation.phone,
           email: conversation.email,
           page: conversation.page,
+          gclid: conversation.gclid ?? null,
           status: conversation.status,
           lastMessageAt: conversation.lastMessageAt,
           unreadCount: conversation.unreadCount,

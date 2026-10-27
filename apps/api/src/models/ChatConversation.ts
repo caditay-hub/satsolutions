@@ -10,6 +10,7 @@ export class ChatConversation extends Model<InferAttributes<ChatConversation>, I
   declare phone: string | null;
   declare email: string | null;
   declare page: string | null;
+  declare gclid: string | null;
   declare status: ChatConversationStatus;
   declare lastMessageAt: Date | null;
   declare unreadCount: number;
@@ -25,6 +26,7 @@ ChatConversation.init(
     phone: { type: DataTypes.STRING(32), allowNull: true },
     email: { type: DataTypes.STRING(200), allowNull: true },
     page: { type: DataTypes.STRING(300), allowNull: true },
+    gclid: { type: DataTypes.STRING(200), allowNull: true },
     status: { type: DataTypes.STRING(20), allowNull: false, defaultValue: "OPEN" },
     lastMessageAt: { type: DataTypes.DATE, allowNull: true },
     unreadCount: { type: DataTypes.INTEGER, allowNull: false, defaultValue: 0 },

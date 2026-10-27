@@ -15,6 +15,7 @@ import type { Socket } from "socket.io-client";
 
 const PHONE_OPTIONAL: Record<string, string> = { ru: "необязательно", uz: "ixtiyoriy", en: "optional", tr: "isteğe bağlı", zh: "可选" };
 import { trackConversion } from "@/lib/gtag";
+import { getGclid } from "@/lib/gclid";
 import { AttachmentView, parseAttachment, useVoiceRecorder, type ChatAttachment } from "@/components/ChatAttachments";
 
 type Msg = {
@@ -322,7 +323,8 @@ export function ChatWidget() {
             visitorId: getVisitorId(),
             name: p?.name || null,
             phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
-            page: currentPage()
+            page: currentPage(),
+            gclid: getGclid() || undefined
           });
         });
 
@@ -389,7 +391,8 @@ export function ChatWidget() {
               visitorId: getVisitorId(),
               name: p?.name || null,
               phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
-              page: currentPage()
+              page: currentPage(),
+              gclid: getGclid() || undefined
             });
           } catch {
             // ignore
@@ -501,7 +504,8 @@ export function ChatWidget() {
     const extra = {
       name: p?.name || null,
       phone: p?.phone ? `+998${digitsOnly(p.phone)}` : null,
-      page: currentPage()
+      page: currentPage(),
+      gclid: getGclid() || undefined
     };
     const cid = conversationIdRef.current;
     if (cid) {
@@ -605,7 +609,8 @@ export function ChatWidget() {
         visitorId: getVisitorId(),
         name: p.name,
         phone: `+998${p.phone}`,
-        page: currentPage()
+        page: currentPage(),
+        gclid: getGclid() || undefined
       });
     }
   }

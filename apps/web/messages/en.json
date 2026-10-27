@@ -365,10 +365,10 @@
     "cctv": {
       "title": "Video surveillance",
       "desc": "IP, analog and cloud systems for sites of any scale.",
-      "intro": "Turnkey CCTV camera installation: we design and install video surveillance of any scale — from a small office to distributed sites with dozens of cameras and 24/7 monitoring.",
+      "intro": "Turnkey CCTV camera installation: we select and install video surveillance of any scale — from a small office to distributed sites with dozens of cameras and 24/7 monitoring.",
       "works": [
         "Site audit and camera selection for your needs",
-        "Design and camera placement layout",
+        "Camera placement layout and bill of materials",
         "Installation of cameras, recorders (NVR/DVR) and cabling",
         "Configuration of recording, remote access and analytics",
         "Commissioning, training and warranty service"
@@ -376,7 +376,15 @@
       "faq": [
         {
           "q": "How much does it cost to install video surveillance?",
-          "a": "The cost depends on the number of cameras, equipment type, and installation complexity. We conduct free site surveys, prepare estimates, and provide quotes."
+          "a": "Installation starts at 155,000 UZS per camera: indoor 155,000, outdoor 180,000, PTZ 310,000; setup of each camera 77,000, a recorder for up to 16 cameras 280,000, cable 7,000 UZS per metre. A typical four-camera house costs 2.1–2.63 million UZS in labour; equipment is priced separately. The exact estimate follows a free engineer's visit."
+        },
+        {
+          "q": "How much does it cost to install one camera?",
+          "a": "Indoor camera installation — 155,000 UZS, outdoor — 180,000, PTZ — 310,000; camera setup and commissioning — 77,000. A recorder for up to 16 cameras — 280,000 UZS per system, over 16 — 450,000. Cable — 7,000 UZS per metre. Equipment is priced separately; prices are in the catalogue."
+        },
+        {
+          "q": "What is needed for outdoor CCTV at a private house?",
+          "a": "Usually two to four outdoor cameras with infrared illumination covering the gate, yard and perimeter, a recorder with a disk for two to four weeks of archive or Wi-Fi cameras recording to a card where cable cannot be run, plus phone viewing with motion alerts. A typical four-camera set installed costs 2.1–2.63 million UZS in labour and takes one day."
         },
         {
           "q": "What is the difference between IP cameras and analog cameras?",
@@ -654,7 +662,7 @@
       "desc": "Turnstiles, readers, electronic locks and checkpoints.",
       "intro": "We restrict and track access to a site: turnstiles, electronic locks, card readers and biometrics, flexible access rights by zone and time.",
       "works": [
-        "Design of access points and zones",
+        "Layout of access points and zones",
         "Installation of turnstiles, locks, readers",
         "Configuring rights, schedules and access levels",
         "Integration with surveillance and time tracking",
@@ -662,8 +670,16 @@
       ],
       "faq": [
         {
-          "q": "What is included in an access control system?",
-          "a": "Controllers, card readers or biometric terminals, electromagnetic/electromechanical locks, turnstiles, and software for managing access rights."
+          "q": "What is access control in simple terms?",
+          "a": "It is an electronic gatekeeper: instead of a key you use a card, a code, a fingerprint or your face. The reader passes the code to the controller, the controller checks the rights and opens the lock or turnstile, and every pass is logged with time and name."
+        },
+        {
+          "q": "What does an access control system consist of?",
+          "a": "A controller, card readers or biometric terminals (fingerprint, face), actuators — electromagnetic or electromechanical locks, turnstiles, gates, barriers — exit buttons and door closers, a power supply with backup, and software for managing rights. A single door needs only a standalone controller with a reader; reader installation starts at 85,000 UZS."
+        },
+        {
+          "q": "Can access control be installed in a school?",
+          "a": "Yes. A typical school setup: turnstiles at the entrance, cards for pupils and staff, a face recognition terminal for personnel, notifications to parents by Telegram or SMS when a child enters or leaves, and automatic release of the turnstiles on fire alarm. A turnstile entrance takes 2–5 days to install."
         },
         {
           "q": "Can we track working hours?",
