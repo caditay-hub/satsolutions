@@ -61,7 +61,12 @@ const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 const SERVICES_IMG_DIR = process.env.SERVICES_IMG_DIR || "/var/www/satweb/apps/api/uploads/services-page";
 // Версия медиа услуги в URL: файлы отдаются с кэшем на год, и замена фото под тем же адресом
 // не доходит до браузеров. Меняете фото/ролик услуги — поднимите её номер (13.10.2026).
-const MEDIA_VER: Record<string, number> = { bodycam: 13 };
+// 27.10.2026: фото первого экрана восьми услуг пережаты (960 px, WebP q78, −30…−40 %) — номер поднят,
+// чтобы браузеры с годовым кэшем взяли новые файлы (пакет 2, LCP на телефоне).
+const MEDIA_VER: Record<string, number> = {
+  bodycam: 13,
+  intercom: 12, barrier: 12, turnstile: 12, fire: 12, servers: 12, telephony: 12, smarthome: 12, videowall: 12,
+};
 const mv = (key: string) => MEDIA_VER[key] ?? 11;
 function heroSrc(key: string) {
   let webp = false;
@@ -627,7 +632,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Состав работ — компактным чек-листом во всю ширину */}
         <section id="sostav" className="mt-6 scroll-mt-32 lg:scroll-mt-44 lg:mt-8">
           <p className="text-xs font-black uppercase tracking-widest text-brand-700">{t("whatInc")}</p>
-          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{t("worksTitle")}</h2>
+          <h2 className="mt-1 text-xl sm:text-2xl font-black tracking-tight text-slate-900">{ts.has(`${svc.key}.worksTitle`) ? ts(`${svc.key}.worksTitle`) : t("worksTitle")}</h2>
           <ul className="mt-4 grid gap-x-8 gap-y-2.5 rounded-2xl bg-slate-50 p-4 sm:grid-cols-2 lg:grid-cols-3 lg:p-5">
             {works.map((w) => (
               <li key={w} className="flex items-start gap-2.5 text-sm font-semibold leading-snug text-slate-800">

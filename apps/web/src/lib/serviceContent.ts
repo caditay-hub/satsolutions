@@ -80,7 +80,7 @@ const ru: Record<string, ServiceContent> = {
     ],
   },
   cctv: {
-    heading: "Установка видеонаблюдения под ключ в Ташкенте и по Узбекистану",
+    heading: "Системы видеонаблюдения под ключ в Ташкенте и по Узбекистану",
     paragraphs: [
       "SAT Solutions подбирает и монтирует системы видеонаблюдения для объектов любого масштаба — от квартиры и небольшого магазина до заводов, складов и распределённых сетей филиалов. Мы работаем с IP- и аналоговыми (HDCVI/TVI) камерами, устанавливаем видеорегистраторы NVR и DVR, настраиваем локальный и облачный архив, а также удалённый просмотр камер с телефона и компьютера из любой точки.",
       "Установка камер видеонаблюдения начинается с бесплатного выезда инженера на объект: определяем зоны обзора, точки подключения и оптимальное количество камер, после чего готовим смету и коммерческое предложение. В работу входит прокладка кабельных трасс, монтаж оборудования, пусконаладка, настройка детекции движения и видеоаналитики, обучение персонала.",
@@ -124,7 +124,7 @@ const ru: Record<string, ServiceContent> = {
     heading: "Монтаж пожарной сигнализации, СОУЭ и пожаротушения в Ташкенте",
     paragraphs: [
       "Автоматическая пожарная сигнализация (АПС) обнаруживает возгорание на ранней стадии по дыму, теплу или пламени и запускает систему оповещения и управления эвакуацией (СОУЭ). SAT Solutions выполняет поставку, монтаж, наладку и техническое обслуживание пожарной сигнализации и установок автоматического пожаротушения для офисов, магазинов, складов, производств и общественных зданий в соответствии с нормами пожарной безопасности Узбекистана.",
-      "В систему входят пожарные извещатели (дымовые, тепловые, ручные), приёмно-контрольные приборы, звуковые и световые оповещатели, а при необходимости — автоматика управления дымоудалением, пожаротушением и инженерными системами здания. Состав системы определяется назначением, площадью и этажностью здания, а не пожеланиями заказчика — это первое, что проверяет экспертиза.",
+      "В систему входят пожарные извещатели (дымовые, тепловые, ручные), приёмно-контрольные приборы, звуковые и световые оповещатели, а при необходимости — автоматика управления дымоудалением, пожаротушением и инженерными системами здания. Приборы и извещатели ставим Рубеж и Болид — обе линейки лежат на нашем складе в Ташкенте. Состав системы определяется назначением, площадью и этажностью здания, а не пожеланиями заказчика — это первое, что проверяет экспертиза.",
       "Обслуживание пожарной сигнализации в Узбекистане регулируется постановлением Кабинета Министров № 649 от 20 октября 2020 года: техническое обслуживание ведётся по годовому плану с учётом документации изготовителя — фиксированной нормы «раз в квартал» в республике нет, график считается под конкретное оборудование. Мы ведём регламентное обслуживание смонтированных нами систем по договору и держим журнал в состоянии, к которому у инспекции не будет вопросов.",
       "Сигнализация обнаруживает пожар, а тушит его установка автоматического пожаротушения (АУПТ) — это отдельная система, которую мы монтируем, налаживаем и обслуживаем вместе с АПС. Газовое пожаротушение применяют там, где вода и порошок уничтожат имущество: серверные, ЦОД, архивы, электрощитовые — состав вытесняет кислород, не оставляя следов на оборудовании. Порошковые модули дешевле и подходят для складов, гаражей, производственных и подсобных помещений. Водяные и спринклерные системы ставят на больших площадях, где важна не сохранность техники, а локализация огня.",
       "Пожарная безопасность — область, где документы значат столько же, сколько монтаж. Мы монтируем систему по проекту, проводим наладку и передаём объект с исполнительной документацией. Для действующих объектов делаем обследование: часто выясняется, что извещатели стоят с нарушением зон контроля, шлейфы перегружены, а прибор годами не проходил регламентного обслуживания.",
@@ -182,10 +182,19 @@ const ru: Record<string, ServiceContent> = {
       "Турникеты организуют упорядоченный и контролируемый проход на объект: сотрудники и посетители проходят по картам, QR-кодам, отпечатку пальца или распознаванию лица, а система фиксирует каждый вход и выход. SAT Solutions поставляет и устанавливает турникеты для бизнес-центров, заводов, стадионов, школ, фитнес-клубов и проходных предприятий.",
       "Мы работаем с турникетами-триподами, роторными и полноростовыми турникетами, скоростными проходами (speed gate) и калитками для маломобильных посетителей. Турникет объединяется со СКУД и учётом рабочего времени в единую систему: доступ настраивается по зонам и расписанию, а отработанные часы автоматически попадают в табель.",
       "Подбираем модель под проходимость и дизайн объекта, монтируем под ключ в Ташкенте и по всему Узбекистану, интегрируем с существующей системой безопасности. Даём гарантию на оборудование и работы, берём проходную на сервисное обслуживание.",
-      "Турникеты различаются по проходимости и по тому, что должны предотвратить. Трипод — самый распространённый и недорогой вариант для офиса и проходной небольшого предприятия: он фиксирует проход по одному, но перелезть через него теоретически можно. Роторный турникет полного роста ставят на периметр, стройплощадку и завод, где проход должен быть исключён физически. Скоростные калитки (спидгейты) выбирают для бизнес-центров и приёмных, где важны вид и скорость потока, а рядом обязательно ставят широкую калитку для маломобильных посетителей и проноса груза.",
       "Идентификация подбирается под порядок на объекте, а не наоборот. Турникет с Face ID пропускает по лицу за доли секунды и не требует ничего доставать из кармана — это удобно там, где поток идёт волнами в начале смены. Карты и брелоки дешевле и проще в выдаче, отпечаток пальца исключает передачу пропуска другому, QR-код удобен для разовых посетителей. Все варианты работают в одной системе: турникет связывается со СКУД и учётом рабочего времени, события прохода привязываются к видеозаписи, а повторный вход по одному пропуску блокируется (антипассбэк).",
       "В стоимость проходной входит не только сам турникет: нужны считыватели, контроллер, блок питания с резервом, ограждения или дополнительная калитка, монтаж, пусконаладка и настройка ПО с правами доступа. Цена турникета зависит от типа, материала корпуса и способа идентификации — трипод для офиса и роторный турникет на периметр отличаются в разы. Мы считаем комплект целиком, чтобы не оказалось, что оборудование куплено, а система не работает. Шлагбаумы и въездные группы — отдельная услуга, их считаем вместе с парковочным комплексом.",
       "Электронная проходная — это турникет, контроллер и терминал в одной системе, и цену турникета с монтажом мы называем сразу по трём вещам: тип турникета (трипод, калитка, створчатый или полноростовый), способ прохода (карта, отпечаток или турникет с Face ID) и число проходов в час. Расценки на работы и оборудование из каталога собраны в разделе «Сколько стоит» выше, а точную смету готовим после бесплатного выезда.",
+    ],
+    extra: [
+      {
+        heading: "Трипод, роторный, полноростовой — что выбрать",
+        paragraphs: [
+          "Трипод турникет — самый распространённый и недорогой вариант для офиса, учебного заведения и проходной небольшого предприятия: три штанги пропускают по одному человеку, 20–30 проходов в минуту, ставится на ровный пол. Перелезть через него теоретически можно, поэтому рядом ставят охрану или ограждение. Триподы ZKTeco, KANIHAD, Dahua и Hikvision — в каталоге.",
+          "Роторный турникет — полуростовой или полноростовой барабан с вращающимися лопастями: он не даёт пройти вдвоём по одному пропуску и выдерживает поток на проходной завода и стройплощадки. Полноростовой турникет (роторный полного роста) перекрывает проход физически, работает на улице в любую погоду и ставится на периметр, КПП и режимные объекты — там, где проход должен быть исключён, а не только учтён.",
+          "Скоростные проходы (спидгейты) со стеклянными створками выбирают для бизнес-центров, банков и приёмных: до 60 человек в минуту, аккуратный вид, распознавание лиц и карты; рядом обязательно ставится широкая калитка для маломобильных посетителей и проноса груза. Выбор начинается с двух вопросов — сколько человек проходит в пиковые минуты и что турникет должен предотвратить, — а дальше считаем комплект целиком: турникет, считыватели, контроллер, ограждения и монтаж.",
+        ],
+      },
     ],
   },
   "alarm": {
@@ -325,6 +334,7 @@ const ru: Record<string, ServiceContent> = {
       "SAT Solutions поставляет серверное оборудование под конкретную задачу, а не «что есть на складе»: мы собираем конфигурацию под реальную нагрузку и отвечаем за то, чтобы она эту нагрузку держала. Работаем с платформами H3C UniServer и Supermicro — партнёр H3C в Узбекистане, — поставляем системы хранения данных, дисковые полки, память, накопители, RAID-контроллеры и сетевые карты; оборудование других вендоров возим под заказ. Купить сервер в Ташкенте можно и готовой платформой, и решением, собранным под вас, с установленной операционной системой.",
       "Сервер для 1С подбирается иначе, чем файловый: здесь решают частота ядер, объём оперативной памяти и скорость дисковой подсистемы, поэтому под базы ставим NVMe-накопители и RAID-контроллер с кэшем на запись, а число ядер считаем по количеству одновременных сеансов. Сервер для офиса — задача шире и легче: контроллер домена, файловое хранилище, почта, резервные копии, иногда видеоархив. Такую конфигурацию собираем на одной машине с запасом под виртуализацию, чтобы через год не покупать вторую.",
       "Под виртуализацию и кластеры ресурсы считаем с учётом отказоустойчивости: два-три узла, общее хранилище и резерв по памяти на случай выхода узла из строя. Отдельная тема — СХД: если данные растут быстрее, чем диски внутри сервера, дешевле поставить систему хранения с расширяемыми полками, чем менять сервер целиком. Для видеоархива ёмкость считаем по числу камер, битрейту и глубине хранения, а не на глаз — ошибка здесь означает либо переплату, либо потерю записей.",
+      "NAS-сервер и СХД решают разные задачи, хотя оба хранят данные. NAS-сервер — сетевое хранилище для файлов небольшого офиса, резервных копий и видеоархива на несколько камер: подключается к обычной сети и обходится дешевле сервера. СХД (система хранения данных) нужна там, где диски должны работать с несколькими серверами одновременно — под кластер виртуализации, базы 1С с сотнями пользователей или видеоархив на десятки камер: полки расширяются без остановки, контроллеры и питание задублированы. Мы подбираем между NAS-сервером, дисками внутри сервера и СХД по объёму данных, скорости роста и требованию работать без простоя; NAS-серверы и СХД поставляем H3C — мы партнёр производителя в Узбекистане — в Ташкенте с монтажом и настройкой RAID.",
       "В поставку входит не только железо. Мы монтируем оборудование в стойку, настраиваем RAID, ставим операционную систему или гипервизор, переносим данные и сервисы со старого парка, оформляем гарантию вендора и при необходимости заключаем сервисный контракт со сроком реакции. Поставляем по всему Узбекистану и готовим документы как для обычной закупки, так и для тендера.",
       "Серверу нужно место: стойка, бесперебойное питание, охлаждение и кабельная система. Если серверной комнаты или ЦОД ещё нет, мы проектируем и строим её отдельной услугой — стойки, ИБП, прецизионное кондиционирование, СКС, контроль доступа и мониторинг микроклимата. Для небольшого офиса это один шкаф с ИБП, для предприятия — помещение с резервированием питания и охлаждения.",
       "Стоимость серверного оборудования зависит от конфигурации, срока гарантии и того, нужна ли миграция с действующих серверов. Мы считаем два-три варианта — минимальный рабочий, оптимальный и с запасом на три года — и показываем, чем они отличаются не только ценой. Расчёт бесплатный: пришлите задачу, число пользователей и объём данных, вернёмся с конфигурацией, ценой и сроком поставки.",
@@ -357,7 +367,7 @@ const ru: Record<string, ServiceContent> = {
   "telephony": {
     heading: "IP-телефония и офисная АТС в Ташкенте",
     paragraphs: [
-      "IP-телефония заменяет устаревшие аналоговые линии связью через интернет: многоканальные номера, внутренние добавочные, голосовое меню и запись разговоров. SAT Solutions внедряет офисные АТС для компаний любого размера — от пяти сотрудников до колл-центров на десятки операторов, с объединением филиалов в единую сеть связи.",
+      "IP-телефония — её называют и «айпи телефония», и VoIP — заменяет устаревшие аналоговые линии связью через интернет: многоканальные номера, внутренние добавочные, голосовое меню и запись разговоров. SAT Solutions внедряет офисные АТС для компаний любого размера — от пяти сотрудников до колл-центров на десятки операторов, с объединением филиалов в единую сеть связи.",
       "Что меняется для клиента, который вам звонит: занято больше не бывает. Многоканальный номер принимает все вызовы сразу, голосовое меню (IVR) разводит их по отделам — «нажмите один для отдела продаж», — а если менеджер не взял трубку, звонок уходит коллеге, на мобильный или в очередь с музыкой вместо гудков. Пропущенные фиксируются с номером — перезвонить можно каждому.",
       "Что меняется для руководителя: телефония становится измеримой. Запись разговоров снимает споры «кто что сказал» и превращается в инструмент обучения новых менеджеров. Статистика показывает, сколько звонков принято и упущено, кто сколько говорит, в какие часы пик нагрузки. Интеграция с CRM подтягивает карточку клиента при входящем и пишет каждый разговор в историю сделки.",
       "Внутренняя связь перестаёт стоить денег. Добавочные номера между сотрудниками, офисами и филиалами бесплатны, где бы они ни находились: звонок из Ташкента в наманганский филиал — это внутренний вызов по короткому номеру. Сотрудник в командировке остаётся на связи через приложение на смартфоне со своим рабочим номером — клиент не замечает разницы.",
@@ -391,6 +401,15 @@ const ru: Record<string, ServiceContent> = {
       "Живёт электронный замок дольше, чем кажется: у качественных моделей ресурс исчисляется сотнями тысяч циклов, а слабое место обычно не механика, а питание и монтаж. Поэтому в комплект мы всегда закладываем резервный аккумулятор, а умным замкам настраиваем уведомление о разряде батарей заранее. По Ташкенту делаем монтаж за один выезд, по гарантии меняем блок целиком, не оставляя дверь без защиты.",
       "Смарт-замок на входную дверь квартиры, замок для офиса с картами и учётом сотрудников, кодовый замок на подъездную дверь для ТСЖ — три разные задачи с разным оборудованием, и мы подбираем под дверь, а не под каталог. На металлическую и деревянную дверь ставим врезные и накладные модели, на стеклянную — электромагнитные с кронштейном, в подъезде — антивандальные панели с кодом и ключами-таблетками.",
     ],
+    extra: [
+      {
+        heading: "Smart-замок и кодовый замок на дверь",
+        paragraphs: [
+          "Smart-замок на входную дверь квартиры или дома открывается отпечатком, кодом, картой и из приложения, а механический ключ остаётся запасным. Он ведёт журнал открытий, выдаёт временные коды гостям и мастерам, предупреждает о разряде батарей заранее; модели в каталоге — KANIHAD TK-серии, ZKTeco и Tapo. Кодовый замок на дверь подъезда или склада проще: антивандальная панель с кодом и ключами-таблетками, без приложения и батарей, с питанием от сети и резервным аккумулятором. Для стеклянной двери офиса ставим электромагнитный замок с кронштейном, для калитки — модель в защищённом исполнении.",
+          "Электромеханический замок запирает дверь ригелем, как обычный врезной или накладной замок, только засов двигает электропривод по команде домофона, считывателя или кнопки. Без питания он остаётся закрытым и открывается механическим ключом, поэтому его ставят на входные двери частных домов, калитки с домофоном, подъезды и помещения с ценностями — там, где дверь должна быть заперта и при отключении света. Электромагнитный замок устроен наоборот: он держит дверь силой магнита только пока подано питание и при обесточивании открывается, что требуется на путях эвакуации, в офисах и на стеклянных дверях. Усилие электромеханического замка не зависит от напряжения, но ему нужна точная установка: перекос двери в несколько миллиметров мешает ригелю войти в ответную часть, поэтому монтаж начинаем с проверки полотна и петель. Электромеханические замки ставим под заказ.",
+        ],
+      },
+    ],
   },
   videowall: {
     heading: "Видеостены под ключ в Ташкенте",
@@ -410,8 +429,16 @@ const ru: Record<string, ServiceContent> = {
     heading: "Системы безопасности для гостиниц и отелей в Ташкенте",
     paragraphs: [
       "Гостиница отличается от офиса тем, что через неё каждый день проходят незнакомые люди, и система должна пускать их ровно туда, куда положено, и ровно на срок проживания. Основа — гостиничные замки с картами, связанные с системой заселения: карта выдаётся на стойке, работает до даты выезда и открывает только свой номер и общие зоны вроде лифта, фитнеса или паркинга. Персоналу выдаются служебные карты с отдельными правами, а руководство видит журнал: кто и когда открывал дверь.",
-      "Видеонаблюдение в гостинице ставится в лобби, коридорах, у лифтов, на входах, парковке и в служебных зонах — в номерах камер не бывает никогда. Отдельный участок — пожарная безопасность: автоматическая пожарная сигнализация и система оповещения об эвакуации в местах размещения людей обязательны, а замки на путях эвакуации должны разблокироваться по сигналу пожарной автоматики. Это закладывается в проект сразу, потому что переделывать после сдачи дороже.",
-      "Мы делаем гостиницу комплектом: замки и СКУД, видеонаблюдение, пожарная сигнализация и оповещение, Wi-Fi для гостей с отдельным гостевым сегментом сети, шлагбаум и распознавание номеров на въезде. Работаем и на действующих объектах: монтаж ведём поэтажно, чтобы не закрывать гостиницу целиком. Проектируем, поставляем, монтируем и берём на обслуживание по Ташкенту и всему Узбекистану.",
+      "Видеонаблюдение в гостинице ставится в лобби, коридорах, у лифтов, на входах, парковке и в служебных зонах — в номерах камер не бывает никогда. Отдельный участок — пожарная безопасность: автоматическая пожарная сигнализация и система оповещения об эвакуации в местах размещения людей обязательны, а замки на путях эвакуации должны разблокироваться по сигналу пожарной автоматики. Это закладывается с самого начала, потому что переделывать после сдачи дороже.",
+      "Мы делаем гостиницу комплектом: замки и СКУД, видеонаблюдение, пожарная сигнализация и оповещение, Wi-Fi для гостей с отдельным гостевым сегментом сети, шлагбаум и распознавание номеров на въезде. Работаем и на действующих объектах: монтаж ведём поэтажно, чтобы не закрывать гостиницу целиком. Подбираем, поставляем, монтируем и берём на обслуживание по Ташкенту и всему Узбекистану.",
+    ],
+    extra: [
+      {
+        heading: "Электронные замки для гостиниц: карты, пин, мобильный ключ",
+        paragraphs: [
+          "Электронные замки для гостиниц открываются картой, пин-кодом или мобильным ключом в телефоне гостя, а механический ключ остаётся у администратора на аварийный случай. Карта и мобильный ключ выпускаются при заселении и перестают работать в дату выезда; пин-код удобен для апартаментов без стойки — гость получает его в сообщении и заселяется сам. Замки автономные, работают от батарей и не требуют проводки к номеру, а события «кто и когда открывал дверь» читаются с замка мастер-картой или, у сетевых моделей, собираются автоматически. Горничные и техники ходят по служебным картам с отдельными правами, а при связке с системой управления отелем ключи выпускаются прямо из программы заселения.",
+        ],
+      },
     ],
   },
   school: {
@@ -608,7 +635,7 @@ const uz: Record<string, ServiceContent> = {
     ],
   },
   cctv: {
-    heading: "Toshkent va Oʻzbekiston boʻylab toʻliq tayyor videokuzatuv oʻrnatish",
+    heading: "Toshkent va Oʻzbekiston boʻylab toʻliq tayyor videokuzatuv tizimlari",
     paragraphs: [
       "SAT Solutions har qanday miqyosdagi obyektlar uchun videokuzatuv tizimlarini tanlab beradi va oʻrnatadi — kvartira va kichik doʻkondan tortib zavodlar, omborlar va filiallar tarmogʻigacha. Biz IP va analog (HDCVI/TVI) kameralar bilan ishlaymiz, NVR va DVR videoregistratorlarini oʻrnatamiz, lokal va bulutli arxivni hamda telefon va kompyuterdan masofaviy koʻrishni sozlaymiz.",
       "Videokuzatuv kameralarini oʻrnatish muhandisning obyektga bepul chiqishidan boshlanadi: koʻrish zonalari, ulanish nuqtalari va kameralarning maqbul sonini aniqlaymiz, soʻng smeta va tijorat taklifini tayyorlaymiz. Ishga kabel trassalarini yotqizish, uskunani montaj qilish, ishga tushirish, harakatni aniqlash va videotahlilni sozlash, xodimlarni oʻqitish kiradi.",
@@ -652,7 +679,7 @@ const uz: Record<string, ServiceContent> = {
     heading: "Toshkentda yongʻin signalizatsiyasi, SOUE va yongʻin oʻchirish tizimlari montaji",
     paragraphs: [
       "Avtomatik yongʻin signalizatsiyasi (APS) yongʻinni tutun, issiqlik yoki alanga boʻyicha erta bosqichda aniqlaydi va ogohlantirish hamda evakuatsiyani boshqarish tizimini (SOUE) ishga tushiradi. SAT Solutions ofislar, doʻkonlar, omborlar, ishlab chiqarish va jamoat binolari uchun yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish qurilmalarini Oʻzbekiston yongʻin xavfsizligi normalariga muvofiq yetkazib berish, montaj qilish, sozlash va ularga texnik xizmat koʻrsatishni bajaradi.",
-      "Tizimga yongʻin datchiklari (tutun, issiqlik, qoʻl), qabul-nazorat qurilmalari, ovozli va yorugʻlik ogohlantirgichlari, zarur boʻlganda esa tutunni chiqarish, yongʻinni oʻchirish va binoning muhandislik tizimlarini boshqarish avtomatikasi kiradi. Tizim tarkibi buyurtmachining xohishi bilan emas, binoning vazifasi, maydoni va qavatlar soni bilan belgilanadi — ekspertiza birinchi navbatda shuni tekshiradi.",
+      "Tizimga yongʻin datchiklari (tutun, issiqlik, qoʻl), qabul-nazorat qurilmalari, ovozli va yorugʻlik ogohlantirgichlari, zarur boʻlganda esa tutunni chiqarish, yongʻinni oʻchirish va binoning muhandislik tizimlarini boshqarish avtomatikasi kiradi. Asboblar va izveshchatellarni Rubej va Bolid dan oʻrnatamiz — ikkala liniya Toshkentdagi omborimizda bor. Tizim tarkibi buyurtmachining xohishi bilan emas, binoning vazifasi, maydoni va qavatlar soni bilan belgilanadi — ekspertiza birinchi navbatda shuni tekshiradi.",
       "Oʻzbekistonda yongʻin signalizatsiyasiga xizmat koʻrsatish Vazirlar Mahkamasining 2020-yil 20-oktabrdagi 649-sonli qarori bilan tartibga solinadi: texnik xizmat ishlab chiqaruvchi hujjatlarini hisobga olgan holda yillik reja boʻyicha olib boriladi — respublikada «choraklikda bir marta» degan qatʼiy meʼyor yoʻq, jadval aniq uskunaga qarab hisoblanadi. Biz oʻzimiz montaj qilgan tizimlarga shartnoma asosida reglament xizmat koʻrsatamiz va jurnalni inspeksiyada savol tugʻdirmaydigan holatda saqlaymiz.",
       "Signalizatsiya yongʻinni aniqlaydi, oʻchirishni esa avtomatik yongʻin oʻchirish qurilmasi (AUPT) bajaradi — bu alohida tizim, biz uni yongʻin signalizatsiyasi bilan birga montaj qilamiz, sozlaymiz va unga xizmat koʻrsatamiz. Gazli yongʻin oʻchirish suv va kukun mol-mulkni yoʻq qiladigan joylarda qoʻllanadi: server xonalari, maʼlumot markazlari, arxivlar, elektr shchitxonalar — tarkib kislorodni siqib chiqaradi va uskunada iz qoldirmaydi. Kukunli modullar arzonroq va omborlar, garajlar, ishlab chiqarish xonalari uchun mos. Suvli va sprinkler tizimlar katta maydonlarga qoʻyiladi.",
       "Yongʻin xavfsizligi — hujjatlar montaj bilan bir xil ahamiyatga ega soha. Biz tizimni loyiha boʻyicha montaj qilamiz, sozlaymiz va obyektni ijro hujjatlari bilan topshiramiz. Amaldagi obyektlar uchun koʻrik oʻtkazamiz: koʻpincha izlagichlar nazorat zonalarini buzgan holda turgani, shleyflar ortiqcha yuklangani va qurilma yillar davomida reglament xizmatidan oʻtmagani maʼlum boʻladi.",
@@ -710,10 +737,19 @@ const uz: Record<string, ServiceContent> = {
       "Turniketlar obyektga tartibli va nazorat qilinadigan oʻtishni tashkil etadi: xodimlar va tashrifchilar kartalar, QR-kodlar, barmoq izi yoki yuzni aniqlash orqali oʻtadi, tizim esa har bir kirish va chiqishni qayd etadi. SAT Solutions biznes-markazlar, zavodlar, stadionlar, maktablar, fitnes-klublar va korxona oʻtish joylari uchun turniketlarni yetkazib beradi va oʻrnatadi.",
       "Biz tripod, rotorli va toʻliq boʻyli turniketlar, tezkor oʻtish yoʻlaklari (speed gate) va nogiron tashrifchilar uchun kalitkalar bilan ishlaymiz. Turniket SKUD va ish vaqtini hisobga olish bilan yagona tizimga birlashadi: kirish zonalar va jadval boʻyicha sozlanadi, ishlangan soatlar esa avtomatik tabelga tushadi.",
       "Modelni obyektning oʻtkazuvchanligi va dizayniga qarab tanlaymiz, Toshkentda va butun Oʻzbekiston boʻylab toʻliq tayyor holda montaj qilamiz, mavjud xavfsizlik tizimi bilan integratsiya qilamiz. Uskuna va ishlarga kafolat beramiz, oʻtish joyini servis xizmatiga olamiz.",
-      "Turniketlar oʻtkazuvchanligi va nimani oldini olishi kerakligi bilan farq qiladi. Tripod — ofis va kichik korxona nazorat punkti uchun eng keng tarqalgan va arzon variant: u oʻtishni birma-bir qayd etadi, lekin nazariy jihatdan oshib oʻtish mumkin. Toʻliq boʻyli rotorli turniket perimetr, qurilish maydoni va zavodga qoʻyiladi, u yerda oʻtish jismonan istisno qilinishi kerak. Tezkor darvozachalar (spidgeytlar) biznes-markazlar va qabulxonalar uchun tanlanadi, ular yonida nogironlar va yuk uchun keng darvozacha albatta boʻladi.",
       "Identifikatsiya obyektdagi tartibga qarab tanlanadi. Face ID li turniket yuz boʻyicha soniyaning ulushida oʻtkazadi va choʻntakdan hech narsa olishni talab qilmaydi — smena boshida oqim toʻlqin boʻlib kelganda bu qulay. Kartalar va breloklar arzonroq va berish osonroq, barmoq izi propuskni boshqaga berishni istisno qiladi, QR-kod bir martalik mehmonlar uchun qulay. Barcha variantlar bitta tizimda ishlaydi: turniket SKUD va ish vaqti hisobi bilan bogʻlanadi, oʻtish hodisalari videoyozuvga bogʻlanadi, bitta propusk boʻyicha takroriy kirish bloklanadi (antipassbek).",
       "Nazorat punkti narxiga turniketning oʻzi emas, balki oʻquvchilar, kontroller, zaxirali quvvat bloki, toʻsiqlar yoki qoʻshimcha darvozacha, montaj, ishga tushirish va kirish huquqlari bilan dasturiy taʼminotni sozlash ham kiradi. Turniket narxi turiga, korpus materialiga va identifikatsiya usuliga bogʻliq — ofis uchun tripod va perimetr uchun rotorli turniket bir necha barobar farq qiladi. Biz toʻplamni butunlay hisoblaymiz. Shlagbaumlar va kirish guruhlari — alohida xizmat, ularni parkovka majmuasi bilan birga hisoblaymiz.",
       "Elektron oʻtish punkti — bu turniket, kontroller va terminalning yagona tizimi, montaj bilan turniket narxini esa uchta narsaga qarab darhol aytamiz: turniket turi (tripod, darvozacha, qanotli yoki toʻliq boʻyli), oʻtish usuli (karta, barmoq izi yoki Face ID li turniket) va soatiga oʻtishlar soni. Ishlar narxlari va katalogdagi uskuna yuqoridagi «qancha turadi» boʻlimida, aniq smetani bepul chiqishdan soʻng tayyorlaymiz.",
+    ],
+    extra: [
+      {
+        heading: "Tripod, rotorli, toʻliq boʻyli — qaysi birini tanlash",
+        paragraphs: [
+          "Tripod turniket — ofis, oʻquv muassasasi va kichik korxona oʻtish punkti uchun eng keng tarqalgan va arzon variant: uchta shtanga odamlarni birma-bir oʻtkazadi, daqiqasiga 20–30 oʻtish, tekis polga oʻrnatiladi. Ustidan oshib oʻtish nazariy jihatdan mumkin, shuning uchun yoniga qoʻriqchi yoki toʻsiq qoʻyiladi. ZKTeco, KANIHAD, Dahua va Hikvision tripodlari — katalogda.",
+          "Rotorli turniket — aylanadigan parraklari boʻlgan yarim yoki toʻliq boʻyli baraban: u bitta ruxsatnoma bilan ikki kishining oʻtishiga yoʻl qoʻymaydi va zavod hamda qurilish maydonchasi oʻtish punktidagi oqimga bardosh beradi. Toʻliq boʻyli turniket (toʻliq boʻyli rotorli) oʻtishni jismonan toʻsadi, koʻchada istalgan ob-havoda ishlaydi va perimetr, nazorat-oʻtkazish punkti va rejimli obyektlarga — oʻtish faqat hisobga olinishi emas, umuman istisno qilinishi kerak joylarga oʻrnatiladi.",
+          "Shisha tavaqali tezkor oʻtish yoʻlaklari (speed gate) biznes-markazlar, banklar va qabulxonalar uchun tanlanadi: daqiqasiga 60 kishigacha, chiroyli koʻrinish, yuz va karta boʻyicha tanish; yoniga harakati cheklangan tashrifchilar va yuk olib oʻtish uchun keng kalitka albatta qoʻyiladi. Tanlov ikki savoldan boshlanadi — eng gavjum daqiqalarda qancha odam oʻtadi va turniket nimaning oldini olishi kerak, — keyin toʻplamni butunlay hisoblaymiz: turniket, oʻqigichlar, kontroller, toʻsiqlar va montaj.",
+        ],
+      },
     ],
   },
   "alarm": {
@@ -846,6 +882,7 @@ const uz: Record<string, ServiceContent> = {
       "SAT Solutions server uskunalarini «omborda nima boʻlsa, shuni» tamoyili boʻyicha emas, aniq vazifaga moslab yetkazib beradi: konfiguratsiyani real yuklamaga qarab yigʻamiz va uning shu yuklamani koʻtarishi uchun javob beramiz. H3C UniServer va Supermicro platformalari bilan ishlaymiz — Oʻzbekistonda H3C hamkorimiz, — maʼlumot saqlash tizimlari, disk tokchalari, xotira, saqlagichlar, RAID-kontroller va tarmoq kartalarini yetkazamiz; boshqa vendorlar uskunasini buyurtma asosida olib kelamiz. Toshkentda serverni tayyor platforma sifatida ham, operatsion tizimi oʻrnatilgan holda siz uchun yigʻilgan yechim sifatida ham sotib olish mumkin.",
       "1C uchun server fayl serveridan boshqacha tanlanadi: bu yerda yadro chastotasi, tezkor xotira hajmi va disk quyi tizimining tezligi hal qiladi, shuning uchun bazalar uchun NVMe disklar va yozuvga keshli RAID-kontroller qoʻyamiz, yadrolar sonini esa bir vaqtda ishlaydigan seanslar soniga qarab hisoblaymiz. Ofis uchun server — vazifa kengroq va yengilroq: domen kontrolleri, fayl ombori, pochta, zaxira nusxalar, baʼzan videoarxiv. Bunday konfiguratsiyani bitta mashinada virtualizatsiya uchun zaxira qoldirib yigʻamiz.",
       "Virtualizatsiya va klasterlar uchun resurslarni xatolarga chidamlilikni hisobga olib hisoblaymiz: ikki-uch tugun, umumiy ombor va tugun ishdan chiqqan holatga xotira zaxirasi. Alohida mavzu — maʼlumot saqlash tizimlari: agar maʼlumot server ichidagi disklardan tezroq oʻssa, serverni butunlay almashtirgandan koʻra kengaytiriladigan tokchali saqlash tizimini qoʻyish arzonroq. Videoarxiv uchun sigʻimni kamera soni, bitreyt va saqlash chuqurligiga qarab hisoblaymiz, taxminan emas.",
+      "NAS-server va maʼlumot saqlash tizimi (SXD) ikkalasi ham maʼlumot saqlasa-da, turli vazifalarni hal qiladi. NAS-server — kichik ofis fayllari, zaxira nusxalar va bir necha kamerali videoarxiv uchun tarmoq xotirasi: oddiy tarmoqqa ulanadi va serverdan arzonroq tushadi. SXD disklar bir vaqtda bir necha server bilan ishlashi kerak joyda zarur — virtualizatsiya klasteri, yuzlab foydalanuvchili 1C bazalari yoki oʻnlab kamerali videoarxiv uchun: polkalar toʻxtatmasdan kengaytiriladi, kontrollerlar va quvvat zaxiralangan. Biz NAS-server, server ichidagi disklar va SXD oʻrtasida maʼlumot hajmi, oʻsish tezligi va toʻxtovsiz ishlash talabiga qarab tanlaymiz; NAS-server va SXD ni H3C dan yetkazib beramiz — biz Oʻzbekistonda ishlab chiqaruvchining hamkorimiz — Toshkentda montaj va RAID sozlash bilan.",
       "Yetkazib berishga faqat temir kirmaydi. Uskunani stoykaga oʻrnatamiz, RAID ni sozlaymiz, operatsion tizim yoki gipervizorni qoʻyamiz, maʼlumot va servislarni eski parkdan koʻchiramiz, vendor kafolatini rasmiylashtiramiz va zarur boʻlsa javob berish muddati koʻrsatilgan servis shartnomasini tuzamiz. Butun Oʻzbekiston boʻylab yetkazamiz, hujjatlarni oddiy xarid uchun ham, tender uchun ham tayyorlaymiz.",
       "Serverga joy kerak: stoyka, uzluksiz quvvat, sovitish va kabel tizimi. Agar server xonasi yoki maʼlumot markazi hali boʻlmasa, uni alohida xizmat sifatida loyihalaymiz va quramiz — stoykalar, UPS, aniq konditsionerlash, strukturali kabel tizimi, kirish nazorati va mikroiqlim monitoringi bilan. Kichik ofis uchun bu UPS li bitta shkaf, korxona uchun — quvvat va sovitish zaxirasi boʻlgan xona.",
       "Server uskunalarining narxi konfiguratsiyaga, kafolat muddatiga va amaldagi serverlardan koʻchirish kerakmi-yoʻqmi shunga bogʻliq. Biz ikki-uch variantni hisoblaymiz — minimal ishchi, optimal va uch yilga zaxirali — va ular narxdan tashqari nimasi bilan farq qilishini koʻrsatamiz. Hisob-kitob bepul: vazifani, foydalanuvchilar sonini va maʼlumot hajmini yuboring, konfiguratsiya, narx va yetkazib berish muddati bilan qaytamiz.",
@@ -878,7 +915,7 @@ const uz: Record<string, ServiceContent> = {
   "telephony": {
     heading: "Toshkentda IP-telefoniya va ofis ATS",
     paragraphs: [
-      "IP-telefoniya eskirgan analog liniyalarni internet orqali aloqa bilan almashtiradi: koʻp kanalli raqamlar, ichki qoʻshimcha raqamlar, ovozli menyu va suhbatlar yozuvi. SAT Solutions istalgan hajmdagi kompaniyalar uchun ofis ATS larini joriy etadi — besh xodimdan oʻnlab operatorli call-markazlargacha, filiallarni yagona aloqa tarmogʻiga birlashtirish bilan.",
+      "IP-telefoniya (aypi telefoniya, VoIP) eskirgan analog liniyalarni internet orqali aloqa bilan almashtiradi: koʻp kanalli raqamlar, ichki qoʻshimcha raqamlar, ovozli menyu va suhbatlar yozuvi. SAT Solutions istalgan hajmdagi kompaniyalar uchun ofis ATS larini joriy etadi — besh xodimdan oʻnlab operatorli call-markazlargacha, filiallarni yagona aloqa tarmogʻiga birlashtirish bilan.",
       "Sizga qoʻngʻiroq qilayotgan mijoz uchun nima oʻzgaradi: band boʻlish endi yoʻq. Koʻp kanalli raqam barcha qoʻngʻiroqlarni birdan qabul qiladi, ovozli menyu (IVR) ularni boʻlimlarga ajratadi — «savdo boʻlimi uchun birni bosing», — menejer goʻshakni olmasa, qoʻngʻiroq hamkasbga, mobil raqamga yoki gudok oʻrniga musiqali navbatga oʻtadi. Oʻtkazib yuborilganlar raqam bilan qayd etiladi — har biriga qayta qoʻngʻiroq qilish mumkin.",
       "Rahbar uchun nima oʻzgaradi: telefoniya oʻlchanadigan boʻladi. Suhbatlar yozuvi «kim nima dedi» bahslarini yopadi va yangi menejerlarni oʻqitish quroliga aylanadi. Statistika nechta qoʻngʻiroq qabul qilingani va oʻtkazib yuborilgani, kim qancha gaplashishi, qaysi soatlar eng yuklanganini koʻrsatadi. CRM bilan integratsiya kiruvchida mijoz kartochkasini ochadi va har suhbatni bitim tarixiga yozadi.",
       "Ichki aloqa pul turmay qoʻyadi. Xodimlar, ofislar va filiallar orasidagi qoʻshimcha raqamlar qayerda boʻlishidan qatʼi nazar bepul: Toshkentdan Namangan filialiga qoʻngʻiroq — qisqa raqamli ichki chaqiruv. Xizmat safaridagi xodim smartfondagi ilova orqali oʻz ish raqami bilan aloqada qoladi — mijoz farqni sezmaydi.",
@@ -912,6 +949,15 @@ const uz: Record<string, ServiceContent> = {
       "Elektron qulf koʻringandan uzoqroq yashaydi: sifatli modellarda resurs yuz minglab tsikllar bilan oʻlchanadi, zaif joy esa odatda mexanika emas, quvvat va montaj. Shuning uchun komplektga doim zaxira akkumulyator kiritamiz, aqlli qulflarga esa batareya zaryadsizlanishi haqida oldindan bildirishnoma sozlaymiz. Toshkent boʻylab montajni bir chiqishda qilamiz, kafolat boʻyicha blokni butunlay almashtiramiz — eshikni himoyasiz qoldirmasdan.",
       "Kvartira kirish eshigiga smart-qulf, xodimlarni hisobga oladigan kartali ofis qulfi, uy-joy mulkdorlari shirkati uchun podyezd eshigiga kodli qulf — bu uch xil vazifa va uch xil uskuna, biz esa katalogga emas, eshikka qarab tanlaymiz. Metall va yogʻoch eshikka oʻrnatma va ustki modellarni, shisha eshikka kronshteynli elektromagnit qulfni, podyezdga kod va kalit-tabletkali vandalga chidamli panellarni oʻrnatamiz.",
     ],
+    extra: [
+      {
+        heading: "Smart-qulf va eshikka kodli qulf",
+        paragraphs: [
+          "Kvartira yoki uy kirish eshigiga smart-qulf barmoq izi, kod, karta va ilova orqali ochiladi, mexanik kalit esa zaxira sifatida qoladi. U ochilishlar jurnalini yuritadi, mehmon va ustalarga vaqtinchalik kod beradi, batareya zaryadi tugashidan oldin ogohlantiradi; katalogdagi modellar — KANIHAD TK seriyasi, ZKTeco va Tapo. Podʼezd yoki ombor eshigiga kodli qulf soddaroq: kod va «tabletka» kalitli antivandal panel, ilovasiz va batareyasiz, tarmoqdan quvvatlanadi va zaxira akkumulyatori bor. Ofisning shisha eshigiga kronshteynli elektromagnit qulf, kalitkaga esa himoyalangan ijrodagi modelni oʻrnatamiz.",
+          "Elektromexanik qulf eshikni oddiy oʻrnatma yoki ustma qulf kabi rigel bilan yopadi, faqat zulfinni domofon, oʻqigich yoki tugma buyrugʻi bilan elektr yuritma suradi. Quvvatsiz u yopiq qoladi va mexanik kalit bilan ochiladi, shu bois u xususiy uylarning kirish eshiklariga, domofonli kalitkalarga, podʼezdlarga va qimmatbaho narsalar saqlanadigan xonalarga — svet oʻchganda ham eshik qulflangan boʻlishi kerak joylarga oʻrnatiladi. Elektromagnit qulf aksincha ishlaydi: eshikni faqat quvvat berilganda magnit kuchi bilan ushlab turadi va tok uzilganda ochiladi — bu evakuatsiya yoʻllarida, ofislarda va shisha eshiklarda talab qilinadi. Elektromexanik qulfning kuchi kuchlanishga bogʻliq emas, lekin unga aniq oʻrnatish kerak: eshikning bir necha millimetr qiyshayishi rigelning javob qismiga kirishiga xalaqit beradi, shuning uchun montajni eshik tavaqasi va ilgaklarini tekshirishdan boshlaymiz. Elektromexanik qulflarni buyurtma asosida oʻrnatamiz.",
+        ],
+      },
+    ],
   },
   videowall: {
     heading: "Toshkentda videostenalar toʻliq tayyor holda",
@@ -931,8 +977,16 @@ const uz: Record<string, ServiceContent> = {
     heading: "Toshkentda mehmonxonalar uchun xavfsizlik tizimlari",
     paragraphs: [
       "Mehmonxona ofisdan shu bilan farq qiladiki, undan har kuni notanish odamlar oʻtadi va tizim ularni faqat kerakli joyga va faqat yashash muddatiga kiritishi kerak. Asosi — joylashtirish tizimi bilan bogʻlangan kartali mehmonxona qulflari: karta qabulxonada beriladi, chiqish sanasigacha ishlaydi va faqat oʻz xonasini hamda lift, fitnes, parkovka kabi umumiy zonalarni ochadi. Xodimlarga alohida huquqli xizmat kartalari beriladi, rahbariyat esa jurnalni koʻradi.",
-      "Mehmonxonada videokuzatuv lobbi, koridorlar, liftlar oldi, kirish joylari, parkovka va xizmat zonalariga qoʻyiladi — xonalarda kamera hech qachon boʻlmaydi. Alohida yoʻnalish — yongʻin xavfsizligi: odamlar joylashadigan joylarda avtomatik yongʻin signalizatsiyasi va evakuatsiya haqida xabar berish tizimi majburiy, evakuatsiya yoʻllaridagi qulflar esa yongʻin avtomatikasi signali boʻyicha blokdan chiqishi kerak. Bu darhol loyihaga kiritiladi.",
-      "Mehmonxonani toʻliq komplekt bilan jihozlaymiz: qulflar va SKUD, videokuzatuv, yongʻin signalizatsiyasi va xabar berish, mehmonlar uchun alohida tarmoq segmenti bilan Wi-Fi, kirishda shlagbaum va raqamlarni tanish. Amaldagi obyektlarda ham ishlaymiz: mehmonxonani butunlay yopmaslik uchun montajni qavatma-qavat olib boramiz. Loyihalaymiz, yetkazamiz, oʻrnatamiz va xizmat koʻrsatishga olamiz.",
+      "Mehmonxonada videokuzatuv lobbi, koridorlar, liftlar oldi, kirish joylari, parkovka va xizmat zonalariga qoʻyiladi — xonalarda kamera hech qachon boʻlmaydi. Alohida yoʻnalish — yongʻin xavfsizligi: odamlar joylashadigan joylarda avtomatik yongʻin signalizatsiyasi va evakuatsiya haqida xabar berish tizimi majburiy, evakuatsiya yoʻllaridagi qulflar esa yongʻin avtomatikasi signali boʻyicha blokdan chiqishi kerak. Bu boshidanoq hisobga olinadi.",
+      "Mehmonxonani toʻliq komplekt bilan jihozlaymiz: qulflar va SKUD, videokuzatuv, yongʻin signalizatsiyasi va xabar berish, mehmonlar uchun alohida tarmoq segmenti bilan Wi-Fi, kirishda shlagbaum va raqamlarni tanish. Amaldagi obyektlarda ham ishlaymiz: mehmonxonani butunlay yopmaslik uchun montajni qavatma-qavat olib boramiz. Uskunani tanlaymiz, yetkazamiz, oʻrnatamiz va xizmat koʻrsatishga olamiz.",
+    ],
+    extra: [
+      {
+        heading: "Mehmonxonalar uchun elektron qulflar: karta, PIN, mobil kalit",
+        paragraphs: [
+          "Mehmonxonalar uchun elektron qulflar karta, PIN-kod yoki mehmon telefonidagi mobil kalit bilan ochiladi, mexanik kalit esa favqulodda holat uchun administratorda qoladi. Karta va mobil kalit joylashtirishda beriladi va chiqish kunida ishlamay qoladi; PIN-kod stoykasiz apartamentlar uchun qulay — mehmon uni xabarda oladi va oʻzi joylashadi. Qulflar avtonom, batareyadan ishlaydi va xonaga sim tortishni talab qilmaydi, «eshikni kim va qachon ochgan» hodisalari qulfdan master-karta bilan oʻqiladi yoki tarmoqli modellarda avtomatik yigʻiladi. Farroshlar va texniklar alohida huquqli xizmat kartalari bilan yuradi, mehmonxona boshqaruv tizimi bilan bogʻlanganda esa kalitlar toʻgʻridan-toʻgʻri joylashtirish dasturidan chiqariladi.",
+        ],
+      },
     ],
   },
   school: {
@@ -1134,7 +1188,7 @@ const en: Record<string, ServiceContent> = {
     ],
   },
   "cctv": {
-    heading: "CCTV Installation in Tashkent and across Uzbekistan",
+    heading: "Turnkey CCTV Systems in Tashkent and across Uzbekistan",
     paragraphs: [
       "SAT Solutions selects and installs video surveillance for sites of any scale — from an apartment or a small shop to factories, warehouses and distributed branch networks. We work with IP and analog (HDCVI/TVI) cameras, install NVR and DVR recorders, configure local and cloud archives, and set up remote viewing from a phone or computer anywhere in the world.",
       "Installation starts with a free engineer's visit: we define viewing zones, connection points and the optimal number of cameras, then prepare an estimate and a quote. The work includes cable routing, equipment installation, commissioning, motion detection and video analytics setup, and staff training.",
@@ -1167,6 +1221,7 @@ const en: Record<string, ServiceContent> = {
       "SAT Solutions supplies server hardware for the specific task, not \"whatever is in stock\": we build the configuration for the real workload and answer for it carrying that workload. We work with H3C UniServer and Supermicro platforms — the company is an H3C partner in Uzbekistan — and supply storage systems, disk shelves, memory, drives, RAID controllers and network cards; hardware from other vendors is brought in to order. In Tashkent you can buy a server both as a ready platform and as a build tailored to you, with the operating system installed.",
       "A server for accounting software is sized differently from a file server: core clock speed, RAM volume and disk subsystem speed decide here, so databases get NVMe drives and a RAID controller with write cache, and core count follows the number of concurrent sessions. An office server is a broader, lighter task: domain controller, file storage, mail, backups, sometimes a video archive. We build such a configuration on one machine with virtualization headroom, so a second box is not needed a year later.",
       "For virtualization and clusters we size resources with fault tolerance in mind: two or three nodes, shared storage and memory reserve for a node failure. Storage is its own topic: when data grows faster than the disks inside the server, an expandable storage system is cheaper than replacing the server. Video archive capacity is calculated from camera count, bitrate and retention — not by eye: a mistake here means either overpaying or losing footage.",
+      "A NAS server and a storage array (SAN) solve different tasks, although both store data. A NAS server is network storage for a small office's files, backups and a video archive of a few cameras: it plugs into an ordinary network and costs less than a server. A storage array is needed where the disks must serve several servers at once — a virtualization cluster, 1C databases with hundreds of users or a video archive of dozens of cameras: shelves expand without downtime, controllers and power supplies are duplicated. We choose between a NAS server, disks inside the server and a storage array by data volume, growth rate and the uptime requirement; the NAS servers and storage arrays we supply are H3C — we are the manufacturer's partner in Uzbekistan — delivered in Tashkent with installation and RAID setup.",
       "The delivery is more than hardware. We rack the equipment, configure RAID, install the OS or hypervisor, migrate data and services from the old fleet, register the vendor warranty and, if needed, sign a service contract with response times. We deliver across Uzbekistan and prepare documents for both regular procurement and tenders.",
       "A server needs a home: a rack, uninterruptible power, cooling and cabling. If there is no server room yet, we design and build it as a separate service — racks, UPS, precision cooling, structured cabling, access control and climate monitoring. For a small office that is one cabinet with a UPS; for an enterprise, a room with redundant power and cooling.",
       "The cost depends on the configuration, warranty term and whether migration from existing servers is needed. We prepare two or three options — minimal working, optimal, and with three years of headroom — and show how they differ beyond price. The calculation is free: send the task, user count and data volume, and we return with a configuration, price and delivery time.",
@@ -1189,7 +1244,7 @@ const en: Record<string, ServiceContent> = {
     heading: "Fire Alarm, Voice Evacuation and Fire Suppression Installation in Tashkent",
     paragraphs: [
       "An automatic fire alarm detects a fire at an early stage by smoke, heat or flame and triggers the voice evacuation system. SAT Solutions supplies, installs, commissions and maintains fire alarms and automatic fire suppression systems for offices, shops, warehouses, factories and public buildings in accordance with Uzbekistan's fire safety codes.",
-      "A system includes fire detectors (smoke, heat, manual call points), control panels, sounders and beacons, and where required — automation controlling smoke extraction, suppression and the building's engineering systems. What the system must contain is set by the building's use, area and number of storeys rather than by the client's wishes — and that is the first thing the review checks.",
+      "A system includes fire detectors (smoke, heat, manual call points), control panels, sounders and beacons, and where required — automation controlling smoke extraction, suppression and the building's engineering systems. We fit Rubezh and Bolid panels and detectors — both ranges are held in our Tashkent warehouse. What the system must contain is set by the building's use, area and number of storeys rather than by the client's wishes — and that is the first thing the review checks.",
       "Fire alarm maintenance in Uzbekistan is governed by Cabinet of Ministers Resolution No. 649 of 20 October 2020: servicing follows an annual plan based on the manufacturer's documentation — there is no fixed \"once a quarter\" rule in the country; the schedule is derived from the actual equipment. We provide scheduled maintenance under contract for the systems we installed and keep the logbook in a state that leaves an inspector nothing to ask about.",
       "An alarm detects a fire; extinguishing it is the job of an automatic suppression system — a separate system that we install, commission and maintain together with the alarm. Gas suppression is used where water and powder would destroy the assets: server rooms, data centers, archives, switchrooms — the agent displaces oxygen and leaves no trace on equipment. Powder modules are cheaper and suit warehouses, garages, production and utility rooms. Water and sprinkler systems cover large areas where containing the fire matters more than preserving equipment.",
       "In fire safety, the documents mean as much as the installation. We install the system to the design, commission it and hand the site over with as-built documentation. For operating sites we run surveys: it often turns out detectors violate coverage zones, loops are overloaded, and the panel has gone years without scheduled maintenance.",
@@ -1429,7 +1484,7 @@ const en: Record<string, ServiceContent> = {
   "telephony": {
     heading: "IP Telephony and Office PBX in Tashkent",
     paragraphs: [
-      "IP telephony replaces obsolete analog lines with communication over the internet: multi-channel numbers, internal extensions, voice menus and call recording. SAT Solutions deploys office PBX systems for companies of any size — from five employees to call centers with dozens of operators, uniting branches into a single communications network.",
+      "IP telephony, also known as VoIP, replaces obsolete analog lines with communication over the internet: multi-channel numbers, internal extensions, voice menus and call recording. SAT Solutions deploys office PBX systems for companies of any size — from five employees to call centers with dozens of operators, uniting branches into a single communications network.",
       "What changes for the client who calls you: the line is never busy again. A multi-channel number takes all calls at once, a voice menu (IVR) routes them to departments — \"press one for sales\" — and if a manager does not pick up, the call goes to a colleague, a mobile, or a queue with music instead of beeps. Missed calls are logged with the number — every one can be called back.",
       "What changes for the owner: telephony becomes measurable. Call recording ends the \"who said what\" disputes and doubles as a training tool for new managers. Statistics show how many calls were taken and lost, who talks how much, and which hours carry the peak load. CRM integration pops the client card on an incoming call and writes every conversation into the deal history.",
       "Internal calls stop costing money. Extensions between employees, offices and branches are free wherever they are: a call from Tashkent to the Namangan branch is an internal call by short number. An employee on a business trip stays reachable through a smartphone app with their office number — the client never notices the difference.",
@@ -1467,10 +1522,19 @@ const en: Record<string, ServiceContent> = {
       "Turnstiles organise orderly, controlled entry: employees and visitors pass by card, QR code, fingerprint or facial recognition, and the system logs every entry and exit. SAT Solutions supplies and installs turnstiles for business centers, factories, stadiums, schools, fitness clubs and factory checkpoints.",
       "We work with tripod, rotor and full-height turnstiles, speed gates and accessibility gates. A turnstile joins access control and time attendance into one system: access is set by zone and schedule, and worked hours flow into the timesheet automatically.",
       "We match the model to the throughput and design of the site, install turnkey across Tashkent and Uzbekistan, and integrate with the existing security system. Hardware and installation carry a warranty; the entrance goes onto service support.",
-      "Turnstiles differ by throughput and by what they must prevent. A tripod is the most common and affordable option for an office or a small factory checkpoint: it enforces one-by-one passage, though it can theoretically be climbed over. A full-height rotor turnstile goes on perimeters, construction sites and factories where passage must be physically impossible. Speed gates suit business centers and lobbies where looks and flow speed matter, with a wide accessibility gate always installed alongside for wheelchair users and deliveries.",
       "Identification should follow the site's rules, not the other way around. A Face ID turnstile passes people in a fraction of a second with nothing to take out of a pocket — convenient where the flow comes in waves at shift start. Cards and fobs are cheaper and easier to issue, a fingerprint rules out pass sharing, QR codes suit one-time visitors. All options run in one system: the turnstile links to access control and attendance, passages tie to video, and re-entry on the same pass is blocked (anti-passback).",
       "The entrance costs more than the turnstile alone: readers, a controller, backed-up power, railings or an extra gate, installation, commissioning and software setup with access rights. The price depends on the type, body material and identification method — an office tripod and a perimeter rotor differ severalfold. We quote the complete kit so it never turns out the hardware is bought but the system does not work. Barriers and vehicle entrances are a separate service, quoted with the parking complex.",
       "An electronic checkpoint is a turnstile, a controller and a terminal in one system, and we quote the price of a turnstile with installation from three things: the turnstile type (tripod, gate, flap or full-height), the way of passing (card, fingerprint or a turnstile with Face ID) and the number of passes per hour. Labour rates and catalogue equipment are collected in the “What it costs” section above; the exact estimate follows a free site visit.",
+    ],
+    extra: [
+      {
+        heading: "Tripod, rotor or full-height — which to choose",
+        paragraphs: [
+          "A tripod turnstile is the most common and affordable option for an office, a school or the entrance of a small plant: three arms let people through one at a time, 20–30 passes a minute, fitted to a level floor. In theory it can be climbed over, so a guard or a railing stands next to it. Tripods by ZKTeco, KANIHAD, Dahua and Hikvision are in the catalogue.",
+          "A rotor turnstile is a half- or full-height drum with rotating vanes: it stops two people passing on one credential and copes with the flow at a factory or construction-site gate. A full-height turnstile (a full-height rotor) blocks the passage physically, works outdoors in any weather and goes on perimeters, checkpoints and restricted sites — where passage must be prevented, not just recorded.",
+          "Speed gates with glass wings are chosen for business centres, banks and reception areas: up to 60 people a minute, a neat look, face recognition and cards; a wide gate for visitors with limited mobility and for carrying goods always stands beside them. The choice starts with two questions — how many people pass in the peak minutes and what the turnstile must prevent — and then we price the set as a whole: turnstile, readers, controller, railings and installation.",
+        ],
+      },
     ],
   },
   "locks": {
@@ -1485,6 +1549,15 @@ const en: Record<string, ServiceContent> = {
           "The scenario defines the choice better than the budget. An apartment or house suits a smart lock with a fingerprint and an app: no keys, temporary guest codes, a notification on every opening. An office needs the lock as part of access control — with staff cards, an entry log and time-based rights. A hotel or serviced apartments — a card system tied to check-in: the card lives until the check-out date. For gates and street doors, protected models resistant to dust, moisture and temperature swings are the pick.",
       "An electronic lock lives longer than it seems: quality models are rated for hundreds of thousands of cycles, and the weak spot is usually not the mechanics but power and installation. So we always include a backup battery in the kit and configure smart locks to warn about low batteries in advance. In Tashkent we install in one visit and replace a unit whole under warranty, never leaving the door unprotected.",
       "A smart lock on a flat’s front door, an office lock with cards and staff records, a code lock on an apartment-block entrance for the homeowners’ association — three different tasks with different hardware, and we choose for the door, not for the catalogue. Metal and wooden doors get mortise and surface-mounted models, glass doors get magnetic locks with a bracket, and entrances get vandal-proof panels with a code and key fobs.",
+    ],
+    extra: [
+      {
+        heading: "Smart lock and keypad lock for the door",
+        paragraphs: [
+          "A smart lock on the front door of a flat or house opens by fingerprint, code, card and from an app, while the mechanical key stays as a backup. It keeps a log of openings, issues temporary codes to guests and tradesmen and warns about low batteries in advance; the models in our catalogue are the KANIHAD TK series, ZKTeco and Tapo. A keypad lock for a stairwell or warehouse door is simpler: a vandal-resistant panel with a code and key fobs, no app or batteries, mains-powered with a backup battery. For a glass office door we fit an electromagnetic lock with a bracket, for a gate — a weatherproof model.",
+          "An electromechanical lock bolts the door the way an ordinary mortise or rim lock does, except that the bolt is moved by an electric actuator on a command from the intercom, reader or button. Without power it stays locked and opens with a mechanical key, which is why it goes on front doors of private houses, gates with an intercom, stairwells and rooms with valuables — wherever the door must stay locked during a power cut. An electromagnetic lock works the other way round: it holds the door by magnetic force only while powered and releases when the power fails, which is required on escape routes, in offices and on glass doors. The holding force of an electromechanical lock does not depend on voltage, but it needs precise fitting: a door sagging by a few millimetres stops the bolt entering the strike, so installation starts with checking the leaf and hinges. Electromechanical locks are supplied to order.",
+        ],
+      },
     ],
   },
   "barrier": {
@@ -1518,8 +1591,16 @@ const en: Record<string, ServiceContent> = {
     heading: "Security systems for hotels in Tashkent",
     paragraphs: [
       "A hotel differs from an office in that strangers walk through it every day, and the system must let them exactly where they belong and exactly for the length of their stay. The core is hotel card locks tied to the check-in system: a card is issued at the desk, works until the check-out date and opens only its own room and shared zones such as the elevator, gym or parking. Staff carry service cards with separate rights, and management sees the log: who opened which door and when.",
-      "CCTV in a hotel goes into the lobby, corridors, elevators, entrances, parking and service areas — never into the rooms. A separate layer is fire safety: an automatic fire alarm and an evacuation announcement system are mandatory in accommodation facilities, and locks on evacuation routes must release on a signal from the fire automation. This goes into the design from the start, because reworking after commissioning costs more.",
-      "We deliver a hotel as a package: locks and access control, CCTV, fire alarm and voice evacuation, guest Wi-Fi on a separate network segment, a barrier with plate recognition at the entrance. We also work on operating hotels: installation goes floor by floor so the property never closes entirely. We design, supply, install and maintain across Tashkent and all of Uzbekistan.",
+      "CCTV in a hotel goes into the lobby, corridors, elevators, entrances, parking and service areas — never into the rooms. A separate layer is fire safety: an automatic fire alarm and an evacuation announcement system are mandatory in accommodation facilities, and locks on evacuation routes must release on a signal from the fire automation. This is settled from the start, because reworking after commissioning costs more.",
+      "We deliver a hotel as a package: locks and access control, CCTV, fire alarm and voice evacuation, guest Wi-Fi on a separate network segment, a barrier with plate recognition at the entrance. We also work on operating hotels: installation goes floor by floor so the property never closes entirely. We select, supply, install and maintain across Tashkent and all of Uzbekistan.",
+    ],
+    extra: [
+      {
+        heading: "Electronic locks for hotels: cards, PIN, mobile key",
+        paragraphs: [
+          "Electronic locks for hotels open with a card, a PIN code or a mobile key on the guest's phone, while a mechanical key stays with the front desk for emergencies. The card and the mobile key are issued at check-in and stop working on the check-out date; a PIN code suits apartments without a reception — the guest receives it by message and checks in alone. The locks are standalone, run on batteries and need no wiring to the room, and the “who opened the door and when” events are read from the lock with a master card or, on networked models, collected automatically. Housekeeping and technicians use staff cards with separate rights, and when linked to the hotel management system the keys are issued straight from the check-in software.",
+        ],
+      },
     ],
   },
   "school": {
@@ -1855,7 +1936,7 @@ const tr: Record<string, ServiceContent> = {
   "telephony": {
     heading: "Taşkent'te IP Telefon ve Ofis Santrali (PBX)",
     paragraphs: [
-      "IP telefon, eski analog hatları internet üzerinden iletişimle değiştirir: çok kanallı numaralar, dahili numaralar, sesli menü ve görüşme kaydı. SAT Solutions her ölçekte şirket için ofis santrali kurar — beş çalışandan onlarca operatörlü çağrı merkezlerine kadar, şubeleri tek iletişim ağında birleştirerek.",
+      "IP telefon (VoIP), eski analog hatları internet üzerinden iletişimle değiştirir: çok kanallı numaralar, dahili numaralar, sesli menü ve görüşme kaydı. SAT Solutions her ölçekte şirket için ofis santrali kurar — beş çalışandan onlarca operatörlü çağrı merkezlerine kadar, şubeleri tek iletişim ağında birleştirerek.",
       "Sizi arayan müşteri için değişen şu: hat artık asla meşgul değil. Çok kanallı numara tüm aramaları aynı anda alır, sesli menü (IVR) departmanlara yönlendirir — «satış için bire basın» — yönetici açmazsa arama meslektaşa, cebe veya bip yerine müzikli kuyruğa gider. Cevapsızlar numarayla kaydedilir — hepsi geri aranabilir.",
       "Patron için değişen şu: telefon ölçülebilir olur. Görüşme kaydı «kim ne dedi» tartışmalarını bitirir ve yeni yöneticilerin eğitim aracına dönüşür. İstatistik kaç aramanın alındığını ve kaçırıldığını, kimin ne kadar konuştuğunu, yükün hangi saatlerde zirve yaptığını gösterir. CRM entegrasyonu gelen aramada müşteri kartını açar ve her görüşmeyi fırsat geçmişine yazar.",
       "Dahili görüşmeler para tutmaz olur. Çalışanlar, ofisler ve şubeler arasındaki dahililer nerede olurlarsa olsunlar ücretsizdir: Taşkent'ten Namangan şubesine arama, kısa numarayla dahili çağrıdır. Seyahatteki çalışan telefonundaki uygulamayla iş numarasından ulaşılabilir kalır — müşteri farkı fark etmez.",
@@ -1888,7 +1969,7 @@ const tr: Record<string, ServiceContent> = {
     ],
   },
   "cctv": {
-    heading: "Taşkent'te ve Özbekistan Genelinde Kamera Sistemi Kurulumu",
+    heading: "Taşkent'te ve Özbekistan Genelinde Anahtar Teslim Kamera Sistemleri",
     paragraphs: [
       "SAT Solutions her ölçekte tesis için görüntülü güvenlik sistemi seçer ve kurar — daire ve küçük mağazadan fabrikalara, depolara ve dağıtık şube ağlarına kadar. IP ve analog (HDCVI/TVI) kameralarla çalışır, NVR ve DVR kayıt cihazları kurar, yerel ve bulut arşivi yapılandırır, telefon ve bilgisayardan dünyanın her yerinden uzaktan izleme ayarlarız.",
       "Kurulum, mühendisin ücretsiz keşfiyle başlar: görüş bölgelerini, bağlantı noktalarını ve optimum kamera sayısını belirler, ardından keşif özeti ve ticari teklif hazırlarız. İşin kapsamında kablo güzergâhları, ekipman montajı, devreye alma, hareket algılama ve video analitik ayarları ile personel eğitimi vardır.",
@@ -1919,7 +2000,7 @@ const tr: Record<string, ServiceContent> = {
     heading: "Taşkent'te Yangın Alarmı, Sesli Tahliye ve Söndürme Sistemi Kurulumu",
     paragraphs: [
       "Otomatik yangın alarmı, yangını duman, ısı veya alevden erken aşamada algılar ve sesli tahliye sistemini tetikler. SAT Solutions ofisler, mağazalar, depolar, fabrikalar ve kamu binaları için yangın alarmı ve otomatik söndürme sistemlerini Özbekistan yangın güvenliği normlarına uygun olarak tedarik eder, kurar, devreye alır ve bakımını yapar.",
-      "Sistem; yangın dedektörleri (duman, ısı, buton), kontrol panelleri, sesli-ışıklı uyarı cihazları ve gerektiğinde duman tahliyesi, söndürme ve bina tesisatını yöneten otomasyondan oluşur. Sistemin kapsamını müşterinin isteği değil, binanın kullanım amacı, alanı ve kat sayısı belirler — denetimin ilk baktığı şey de budur.",
+      "Sistem; yangın dedektörleri (duman, ısı, buton), kontrol panelleri, sesli-ışıklı uyarı cihazları ve gerektiğinde duman tahliyesi, söndürme ve bina tesisatını yöneten otomasyondan oluşur. Panel ve dedektörlerde Rubezh ve Bolid kullanırız — iki seri de Taşkent depomuzda bulunur. Sistemin kapsamını müşterinin isteği değil, binanın kullanım amacı, alanı ve kat sayısı belirler — denetimin ilk baktığı şey de budur.",
       "Özbekistan'da yangın alarmı bakımı, 20 Ekim 2020 tarihli 649 sayılı Bakanlar Kurulu kararıyla düzenlenir: bakım, üretici dokümantasyonu esas alınarak yıllık plana göre yürütülür — ülkede «üç ayda bir» diye sabit bir norm yoktur, program somut ekipmana göre hesaplanır. Kendi kurduğumuz sistemlerin periyodik bakımını sözleşmeyle yürütür ve denetçiye soracak bir şey bırakmayan bir kayıt defteri tutarız.",
       "Alarm yangını algılar; söndürmek otomatik söndürme sisteminin işidir — alarmla birlikte kurduğumuz, devreye aldığımız ve bakımını yaptığımız ayrı bir sistem. Gazlı söndürme, su ve tozun varlıkları yok edeceği yerlerde kullanılır: sistem odaları, veri merkezleri, arşivler, pano odaları — gaz oksijeni iter ve ekipmanda iz bırakmaz. Toz modüller daha ucuzdur; depo, garaj, üretim ve servis alanlarına uyar. Su ve sprinkler sistemleri, ekipmandan çok yangının sınırlanmasının önemli olduğu büyük alanlara kurulur.",
       "Yangın güvenliğinde belgeler montaj kadar önemlidir. Sistemi projeye göre kurar, devreye alır ve tesisi as-built dokümantasyonla teslim ederiz. Çalışan tesislerde etüt yaparız: çoğu kez dedektörlerin kapsama bölgelerini ihlal ettiği, hatların aşırı yüklendiği ve panelin yıllardır bakım görmediği ortaya çıkar.",
@@ -1977,10 +2058,19 @@ const tr: Record<string, ServiceContent> = {
       "Turnikeler düzenli ve kontrollü geçiş sağlar: çalışanlar ve ziyaretçiler kart, QR kod, parmak izi veya yüz tanımayla geçer; sistem her giriş-çıkışı kaydeder. SAT Solutions iş merkezleri, fabrikalar, stadyumlar, okullar, spor salonları ve fabrika girişleri için turnike tedarik eder ve kurar.",
       "Tripod, rotor ve boy turnikeleri, hızlı geçitler (speed gate) ve engelli kapılarıyla çalışırız. Turnike; geçiş kontrolü ve mesai takibini tek sistemde birleştirir: erişim bölge ve programa göre ayarlanır, çalışılan saatler puantaja otomatik akar.",
       "Modeli tesisin geçiş yoğunluğuna ve tasarımına göre seçer, Taşkent ve Özbekistan genelinde anahtar teslim kurar, mevcut güvenlik sistemine entegre ederiz. Donanım ve montaj garantilidir; giriş servis desteğine alınır.",
-      "Turnikeler geçiş kapasitesine ve neyi önlemeleri gerektiğine göre ayrılır. Tripod, ofis ve küçük fabrika girişi için en yaygın ve ekonomik seçenektir: teker teker geçişi zorlar ama üzerinden teorik olarak atlanabilir. Boy turnikesi; çevre hatlarına, şantiyelere ve geçişin fiziksel olarak imkânsız olması gereken fabrikalara konur. Speed gate'ler görünümün ve akış hızının önemli olduğu iş merkezleri içindir; yanına tekerlekli sandalye ve yük geçişi için geniş kapı mutlaka eklenir.",
       "Kimlik doğrulama tesisin düzenine uymalıdır, tersi değil. Face ID'li turnike cepten bir şey çıkarmadan saniyenin kesrinde geçirir — akışın vardiya başında dalga dalga geldiği yerde rahattır. Kart ve anahtarlık daha ucuz ve kolay dağıtılır, parmak izi kart paylaşımını keser, QR tek seferlik ziyaretçiye uygundur. Hepsi tek sistemde çalışır: turnike geçiş kontrolü ve mesaiyle bağlanır, geçişler videoya bağlanır, aynı kartla ikinci giriş engellenir (anti-passback).",
       "Girişin maliyeti turnikeden ibaret değildir: okuyucular, kontrolör, yedekli güç, korkuluklar veya ek kapı, montaj, devreye alma ve yetkilerle yazılım ayarı gerekir. Fiyat; tipe, gövde malzemesine ve kimlik doğrulama yöntemine bağlıdır — ofis tripodu ile çevre rotoru kat kat farklıdır. Seti komple fiyatlandırırız ki donanım alınmış ama sistem çalışmıyor durumu yaşanmasın. Bariyerler ve araç girişleri ayrı hizmettir; otopark kompleksiyle birlikte fiyatlanır.",
       "Elektronik geçiş noktası tek sistemde turnike, kontrolör ve terminaldir; montajlı turnike fiyatını üç şeye göre hemen söyleriz: turnike tipi (tripod, kapı, kanatlı veya tam boy), geçiş yöntemi (kart, parmak izi veya Face ID’li turnike) ve saatte geçiş sayısı. İşçilik fiyatları ve katalog ekipmanı yukarıdaki “ne kadar” bölümünde; kesin metraj ücretsiz keşiften sonra hazırlanır.",
+    ],
+    extra: [
+      {
+        heading: "Tripod, rotorlu veya tam boy — hangisi seçilmeli",
+        paragraphs: [
+          "Tripod turnike; ofis, okul ve küçük bir tesisin girişi için en yaygın ve ekonomik seçenektir: üç kol insanları tek tek geçirir, dakikada 20–30 geçiş, düz zemine kurulur. Üzerinden atlamak teorik olarak mümkündür, bu yüzden yanında güvenlik görevlisi veya korkuluk bulunur. ZKTeco, KANIHAD, Dahua ve Hikvision tripodları katalogda.",
+          "Rotorlu turnike, dönen kanatlı yarım veya tam boy bir tamburdur: tek kartla iki kişinin geçmesini engeller ve fabrika ile şantiye girişindeki akışa dayanır. Tam boy turnike (tam boy rotorlu) geçişi fiziksel olarak kapatır, dış ortamda her havada çalışır ve çevre hattına, kontrol noktalarına ve kısıtlı tesislere — geçişin yalnızca kaydedilmesi değil, tamamen engellenmesi gereken yerlere — kurulur.",
+          "Cam kanatlı hızlı geçişler (speed gate) iş merkezleri, bankalar ve resepsiyonlar için seçilir: dakikada 60 kişiye kadar, düzgün görünüm, yüz tanıma ve kart; yanında hareket kısıtlı ziyaretçiler ve yük taşıma için geniş bir kapı mutlaka bulunur. Seçim iki soruyla başlar — yoğun dakikalarda kaç kişi geçiyor ve turnike neyi engellemeli — sonra seti bütün olarak hesaplarız: turnike, okuyucular, kontrolör, korkuluklar ve montaj.",
+        ],
+      },
     ],
   },
   "locks": {
@@ -1995,6 +2085,15 @@ const tr: Record<string, ServiceContent> = {
           "Senaryo, seçimi bütçeden daha iyi belirler. Daireye ve eve parmak izli, uygulamalı akıllı kilit uyar: anahtarsız, misafirlere geçici kodlu, her açılışta bildirimli. Ofise kilit, geçiş kontrolünün parçası olarak gerekir — personel kartları, geçiş kaydı ve zamana bağlı yetkilerle. Otele ve apart dairelere — check-in'e bağlı kart sistemi: kart, çıkış tarihine kadar yaşar. Bahçe kapısı ve dış kapılara toza, neme ve sıcaklık farklarına dayanıklı korumalı modeller alınır.",
       "Elektronik kilit sanıldığından uzun yaşar: kaliteli modellerin ömrü yüz binlerce çevrimle ölçülür; zayıf nokta genelde mekanik değil, besleme ve montajdır. Bu yüzden sete her zaman yedek akü koyar, akıllı kilitlerde pil azalınca önceden uyarı ayarlarız. Taşkent'te montajı tek seferde yapar, garantide üniteyi bütün olarak değiştiririz — kapıyı korumasız bırakmadan.",
       "Daire giriş kapısına akıllı kilit, kartlı ve personel kayıtlı ofis kilidi, site yönetimi için apartman giriş kapısına şifreli kilit — farklı donanım gerektiren üç ayrı iş; biz kataloğa değil kapıya göre seçiyoruz. Metal ve ahşap kapıya gömme ve yüzeye monte modeller, cam kapıya braketli manyetik kilit, apartman girişine şifre ve anahtar etiketli darbeye dayanıklı paneller kuruyoruz.",
+    ],
+    extra: [
+      {
+        heading: "Akıllı kilit ve kapıya şifreli kilit",
+        paragraphs: [
+          "Daire veya ev giriş kapısındaki akıllı kilit parmak izi, şifre, kart ve uygulamayla açılır; mekanik anahtar yedek olarak kalır. Açılış günlüğü tutar, misafir ve ustalara geçici şifre verir, pil bitmeden önce uyarır; katalogdaki modeller KANIHAD TK serisi, ZKTeco ve Tapo. Apartman girişi veya depo kapısına şifreli kilit daha sadedir: şifreli ve anahtarlıklı vandal korumalı panel, uygulama ve pil olmadan, şebekeden beslenir ve yedek aküsü vardır. Ofisin cam kapısına braketli elektromanyetik kilit, bahçe kapısına ise dış ortama dayanıklı model takarız.",
+          "Elektromekanik kilit kapıyı sıradan gömme veya aplike kilit gibi sürgüyle kilitler; farkı, sürgüyü diyafon, okuyucu veya butondan gelen komutla elektrikli tahrikin hareket ettirmesidir. Enerji kesilince kilitli kalır ve mekanik anahtarla açılır; bu yüzden müstakil evlerin giriş kapılarına, diyafonlu bahçe kapılarına, apartman girişlerine ve değerli eşya bulunan odalara — elektrik kesintisinde de kapının kilitli kalması gereken yerlere — takılır. Elektromanyetik kilit tersine çalışır: kapıyı yalnızca enerji varken mıknatıs kuvvetiyle tutar, enerji kesilince açılır; kaçış yollarında, ofislerde ve cam kapılarda istenen budur. Elektromekanik kilidin tutma kuvveti gerilime bağlı değildir, ancak hassas montaj ister: kapının birkaç milimetre sarkması sürgünün karşılığa girmesini engeller, bu nedenle montaja kanat ve menteşeleri kontrol ederek başlarız. Elektromekanik kilitleri sipariş üzerine tedarik ederiz.",
+        ],
+      },
     ],
   },
   "barrier": {
@@ -2030,6 +2129,7 @@ const tr: Record<string, ServiceContent> = {
       "SAT Solutions sunucu donanımını «depoda ne varsa» değil, somut göreve göre tedarik eder: yapılandırmayı gerçek yüke göre kurar ve bu yükü taşımasından sorumlu oluruz. H3C UniServer ve Supermicro platformlarıyla çalışırız — şirket Özbekistan'da H3C iş ortağıdır — depolama sistemleri, disk rafları, bellek, sürücüler, RAID denetleyicileri ve ağ kartları tedarik ederiz; diğer üreticilerin donanımı siparişe göre getirilir. Taşkent'te sunucu hem hazır platform hem size göre toplanmış, işletim sistemi kurulu çözüm olarak alınabilir.",
       "Muhasebe yazılımı sunucusu dosya sunucusundan farklı boyutlandırılır: burada çekirdek frekansı, RAM ve disk hızı belirleyicidir; bu yüzden veritabanlarına NVMe sürücüler ve yazma önbellekli RAID denetleyici koyar, çekirdek sayısını eşzamanlı oturum sayısına göre hesaplarız. Ofis sunucusu daha geniş ama hafif bir görevdir: etki alanı denetleyicisi, dosya deposu, posta, yedekler, bazen video arşivi. Böyle yapılandırmayı sanallaştırma payıyla tek makinede kurarız — bir yıl sonra ikinci makine gerekmesin.",
       "Sanallaştırma ve kümeler için kaynakları dayanıklılık payıyla hesaplarız: iki-üç düğüm, ortak depolama ve düğüm arızası için bellek rezervi. Depolama ayrı konudur: veri, sunucunun içindeki disklerden hızlı büyüyorsa, genişletilebilir depolama sistemi sunucuyu değiştirmekten ucuzdur. Video arşivi kapasitesi göz kararı değil; kamera sayısı, bit hızı ve saklama süresinden hesaplanır — buradaki hata ya fazla ödeme ya kayıt kaybı demektir.",
+      "NAS sunucusu ile depolama sistemi (SAN) ikisi de veri saklasa da farklı işleri çözer. NAS sunucusu küçük bir ofisin dosyaları, yedekleri ve birkaç kameralık video arşivi için ağ depolamasıdır: sıradan ağa bağlanır ve sunucudan daha ucuza gelir. Depolama sistemi, disklerin aynı anda birkaç sunucuya hizmet etmesi gereken yerde gerekir — sanallaştırma kümesi, yüzlerce kullanıcılı 1C veritabanları veya onlarca kameralık video arşivi: raflar duruş olmadan genişletilir, kontrolörler ve güç kaynakları yedeklidir. NAS sunucusu, sunucu içi diskler ve depolama sistemi arasında veri hacmine, büyüme hızına ve kesintisiz çalışma gereksinimine göre seçim yaparız; NAS sunucularını ve depolama sistemlerini H3C'den tedarik ederiz — Özbekistan'da üreticinin iş ortağıyız — Taşkent'te montaj ve RAID ayarıyla teslim ederiz.",
       "Teslimat donanımdan ibaret değildir. Ekipmanı kabine monte eder, RAID'i yapılandırır, işletim sistemini veya hipervizörü kurar, eski filodan veri ve servisleri taşır, üretici garantisini kaydeder ve gerekirse yanıt süreli servis sözleşmesi yaparız. Tüm Özbekistan'a teslim eder, hem normal alım hem ihale için evrak hazırlarız.",
       "Sunucuya yer gerekir: kabin, kesintisiz güç, soğutma ve kablolama. Sistem odası henüz yoksa ayrı hizmet olarak tasarlar ve kurarız — kabinler, UPS, hassas soğutma, yapısal kablolama, geçiş kontrolü ve iklim izleme. Küçük ofis için bu, UPS'li tek kabin; işletme için yedekli güç ve soğutmalı bir odadır.",
       "Maliyet; yapılandırmaya, garanti süresine ve mevcut sunuculardan taşıma gerekip gerekmediğine bağlıdır. İki-üç seçenek hazırlarız — asgari çalışan, optimal ve üç yıl paylı — ve yalnız fiyatla değil neyle ayrıştıklarını gösteririz. Hesaplama ücretsizdir: görevi, kullanıcı sayısını ve veri hacmini gönderin; yapılandırma, fiyat ve teslim süresiyle dönelim.",
@@ -2039,8 +2139,16 @@ const tr: Record<string, ServiceContent> = {
     heading: "Taşkent'te oteller için güvenlik sistemleri",
     paragraphs: [
       "Otel, ofisten şu yönden ayrılır: içinden her gün tanımadık insanlar geçer ve sistem onları tam olması gereken yere, tam konaklama süresi kadar sokmalıdır. Temel, check-in sistemine bağlı kartlı otel kilitleridir: kart resepsiyonda verilir, çıkış tarihine kadar çalışır ve yalnızca kendi odasını ve asansör, spor salonu veya otopark gibi ortak alanları açar. Personel ayrı yetkili servis kartları taşır; yönetim ise kaydı görür: kim, hangi kapıyı, ne zaman açtı.",
-      "Otelde kameralar lobiye, koridorlara, asansör önlerine, girişlere, otoparka ve servis alanlarına kurulur — odalara asla. Ayrı bir katman yangın güvenliğidir: konaklama tesislerinde otomatik yangın alarmı ve tahliye anons sistemi zorunludur; tahliye yollarındaki kilitler yangın otomasyonunun sinyaliyle açılmalıdır. Bu, en baştan projeye konur; teslimden sonra değiştirmek daha pahalıya gelir.",
-      "Oteli paket hâlinde teslim ediyoruz: kilitler ve geçiş kontrolü, kamera sistemi, yangın alarmı ve sesli tahliye, ayrı ağ segmentinde misafir Wi-Fi'ı, girişte plaka tanımalı bariyer. Faal otellerde de çalışıyoruz: montaj kat kat ilerler, otel hiçbir zaman tümüyle kapanmaz. Taşkent ve tüm Özbekistan'da projelendiriyor, tedarik ediyor, kuruyor ve bakımını üstleniyoruz.",
+      "Otelde kameralar lobiye, koridorlara, asansör önlerine, girişlere, otoparka ve servis alanlarına kurulur — odalara asla. Ayrı bir katman yangın güvenliğidir: konaklama tesislerinde otomatik yangın alarmı ve tahliye anons sistemi zorunludur; tahliye yollarındaki kilitler yangın otomasyonunun sinyaliyle açılmalıdır. Bu, en baştan planlanır; teslimden sonra değiştirmek daha pahalıya gelir.",
+      "Oteli paket hâlinde teslim ediyoruz: kilitler ve geçiş kontrolü, kamera sistemi, yangın alarmı ve sesli tahliye, ayrı ağ segmentinde misafir Wi-Fi'ı, girişte plaka tanımalı bariyer. Faal otellerde de çalışıyoruz: montaj kat kat ilerler, otel hiçbir zaman tümüyle kapanmaz. Taşkent ve tüm Özbekistan'da ekipman seçimini yapıyor, tedarik ediyor, kuruyor ve bakımını üstleniyoruz.",
+    ],
+    extra: [
+      {
+        heading: "Oteller için elektronik kilitler: kart, PIN, mobil anahtar",
+        paragraphs: [
+          "Oteller için elektronik kilitler kart, PIN kodu veya misafirin telefonundaki mobil anahtarla açılır; mekanik anahtar acil durumlar için resepsiyonda kalır. Kart ve mobil anahtar giriş sırasında verilir ve çıkış tarihinde çalışmayı durdurur; PIN kodu resepsiyonsuz apartlar için uygundur — misafir kodu mesajla alır ve kendi başına yerleşir. Kilitler bağımsızdır, pille çalışır ve odaya kablo gerektirmez; “kapıyı kim, ne zaman açtı” olayları kilitten master kartla okunur ya da ağ bağlantılı modellerde otomatik toplanır. Kat görevlileri ve teknisyenler ayrı yetkili personel kartlarıyla dolaşır; otel yönetim sistemiyle bağlandığında anahtarlar doğrudan giriş yazılımından üretilir.",
+        ],
+      },
     ],
   },
   "school": {
@@ -2376,7 +2484,7 @@ const zh: Record<string, ServiceContent> = {
   "telephony": {
     heading: "塔什干IP电话与办公电话交换机",
     paragraphs: [
-      "IP电话用互联网通信取代陈旧的模拟线路：多通道号码、内部分机、语音菜单和通话录音。SAT Solutions 为各种规模的公司部署办公电话系统——从五人的小公司到几十名坐席的呼叫中心，并把各分支机构并入统一的通信网络。",
+      "IP 电话（VoIP 网络电话）用互联网通信取代陈旧的模拟线路：多通道号码、内部分机、语音菜单和通话录音。SAT Solutions 为各种规模的公司部署办公电话系统——从五人的小公司到几十名坐席的呼叫中心，并把各分支机构并入统一的通信网络。",
       "对打电话来的客户，变化是：再也不会占线。多通道号码同时接起所有来电，语音菜单（IVR）把它们分流到各部门——「销售部请按1」——经理没接听时，来电转给同事、转到手机，或进入以音乐代替忙音的排队。未接来电连号码一起记录——每一个都能回拨。",
       "对管理者，变化是：电话变得可度量。通话录音终结「谁说过什么」的争执，还能用作新员工的培训教材。统计报表显示接起和漏接的数量、谁通话多长、哪些时段负载最高。与CRM集成后，来电自动弹出客户卡片，每次通话写入成交历史。",
       "内部通话不再花钱。员工、办公室和分支机构之间的分机互拨免费，无论身在何处：从塔什干打到纳曼干分公司，只是拨个短号的内部呼叫。出差员工通过手机应用用自己的工作号码保持在线——客户察觉不到区别。",
@@ -2409,7 +2517,7 @@ const zh: Record<string, ServiceContent> = {
     ],
   },
   "cctv": {
-    heading: "塔什干及乌兹别克斯坦全境视频监控安装",
+    heading: "塔什干及乌兹别克斯坦全境视频监控系统整套交付",
     paragraphs: [
       "SAT Solutions 为各种规模的场所选型并安装视频监控——从公寓、小商铺到工厂、仓库和多地分支网络。我们使用IP和模拟（HDCVI/TVI）摄像机，安装NVR和DVR录像机，配置本地和云端存储，并开通手机和电脑的异地远程观看。",
       "安装从工程师免费上门开始：确定监控区域、接线点和最优摄像机数量，然后出预算和商务报价。工作内容包括线缆敷设、设备安装、调试、移动侦测和视频分析配置以及人员培训。",
@@ -2440,7 +2548,7 @@ const zh: Record<string, ServiceContent> = {
     heading: "塔什干火灾报警、应急广播与灭火系统安装",
     paragraphs: [
       "自动火灾报警系统通过烟雾、温度或火焰在早期发现火情，并启动语音疏散广播系统。SAT Solutions 按乌兹别克斯坦消防规范为办公楼、商店、仓库、工厂和公共建筑提供火灾报警系统和自动灭火系统的供货、安装、调试与维保。",
-      "系统包括火灾探测器（感烟、感温、手动报警按钮）、报警控制器、声光警报器，必要时还有控制排烟、灭火和楼宇机电系统的联动自动化。系统要包含什么，由建筑的用途、面积和层数决定，而不是由业主的意愿决定——这也是审查最先核对的一项。",
+      "系统包括火灾探测器（感烟、感温、手动报警按钮）、报警控制器、声光警报器，必要时还有控制排烟、灭火和楼宇机电系统的联动自动化。主机和探测器我们采用 Rubezh 和 Bolid——两个系列都在塔什干仓库有现货。系统要包含什么，由建筑的用途、面积和层数决定，而不是由业主的意愿决定——这也是审查最先核对的一项。",
       "在乌兹别克斯坦，火灾报警系统的维保由2020年10月20日第649号内阁决议规范：维护按年度计划、依据制造商文件开展——本国并没有「每季度一次」的固定规定，周期按具体设备核算。我方安装的系统由我方按合同做定期维保，并把台账维持在检查人员挑不出问题的状态。",
       "报警系统负责发现火情，扑灭它的是自动灭火系统——那是一套独立系统，我们与报警系统一起安装、调试和维保。气体灭火用在水和干粉会毁掉资产的地方：机房、数据中心、档案室、配电室——药剂排挤氧气，对设备不留痕迹。干粉模块更便宜，适合仓库、车库、生产和辅助用房。水灭火和喷淋用于大面积场所——那里控制火势比保全设备更重要。",
       "在消防领域，文件与施工同等重要。我们按设计图纸施工、调试，并携竣工文档交付。对在用建筑我们做检查：常常发现探测器布点违反保护区要求、回路超载、控制器多年未做定期维护。",
@@ -2498,10 +2606,19 @@ const zh: Record<string, ServiceContent> = {
       "闸机让通行井然有序、全程受控：员工和访客凭刷卡、二维码、指纹或人脸识别通过，系统记录每次进出。SAT Solutions 为商务中心、工厂、体育场、学校、健身房和厂区门岗供应并安装闸机。",
       "我们经营三辊闸、全高转闸、速通门（speed gate）和无障碍通道门。闸机与门禁、考勤合为一体：按区域和时间表设置权限，工时自动进入考勤表。",
       "按现场客流量和装修风格选型，在塔什干及全乌兹别克斯坦一站式安装，并与现有安防系统集成。设备和施工带质保，通道纳入维保。",
-      "闸机按通行能力和要防住什么来区分。三辊闸是办公室和小型厂区门岗最常见、最实惠的选择：强制一人一杆，但理论上可以翻越。全高转闸用于周界、工地和必须物理杜绝通行的工厂。速通门适合讲究形象和通行速度的商务中心和大堂，旁边必须加装供轮椅和货物通过的宽通道门。",
       "识别方式要迁就现场的管理制度，而不是反过来。人脸识别闸机瞬间放行、无需从口袋掏任何东西——适合换班时人流成浪涌来的场合。卡和钥匙扣更便宜、发放容易；指纹杜绝借卡；二维码适合一次性访客。所有方式都在一套系统里：闸机与门禁和考勤联动，通行绑定录像，同一凭证重复进入被拦截（防尾随反复用）。",
       "通道的成本不止闸机本身：还有读卡器、控制器、带后备的电源、护栏或加装的边门、安装调试和带权限配置的软件。价格取决于类型、机身材质和识别方式——办公室三辊闸和周界全高闸相差数倍。我们按整套报价，避免「设备买了、系统跑不起来」。道闸和车辆出入口是另一项服务，与停车系统一并核算。",
       "电子门岗是闸机、控制器和终端组成的一套系统，含安装的闸机价格我们按三项即时报出：闸机类型（三辊闸、通道门、翼闸或全高闸）、通行方式（刷卡、指纹或带 Face ID 的闸机）以及每小时通行人数。工费和目录设备见上方\"多少钱\"栏目，精确预算在免费勘查后出具。",
+    ],
+    extra: [
+      {
+        heading: "三辊闸、转闸、全高闸——怎么选",
+        paragraphs: [
+          "三辊闸是办公室、学校和小型工厂门岗最常见、最经济的选择：三根横杆逐人放行，每分钟 20–30 人，安装在平整地面上。理论上可以翻越，所以旁边会安排保安或护栏。目录中有 ZKTeco、KANIHAD、Dahua 和海康威视的三辊闸。",
+          "转闸是带旋转叶片的半高或全高转筒：一张卡无法两人同行，能承受工厂和工地门岗的人流。全高闸（全高转闸）从物理上封闭通道，可在室外全天候工作，用于周界、检查站和涉密场所——需要彻底阻止而不只是记录通行的地方。",
+          "带玻璃翼门的速通门适合商务中心、银行和接待区：每分钟最多 60 人，外观整洁，支持人脸识别和刷卡；旁边必须配一条供行动不便访客和搬运货物使用的宽通道门。选型从两个问题开始——高峰几分钟有多少人通过、闸机要防止什么——然后整体核算：闸机、读卡器、控制器、护栏和安装。",
+        ],
+      },
     ],
   },
   "locks": {
@@ -2516,6 +2633,15 @@ const zh: Record<string, ServiceContent> = {
           "场景比预算更能决定选型。公寓和住宅适合带指纹和App的智能锁：无钥匙、访客临时密码、每次开门都有通知。办公室的锁要作为门禁的一部分——员工刷卡、通行日志、分时段权限。酒店和公寓式酒店用与入住系统联动的卡锁：卡片有效期到退房为止。院门和临街门要选防护型号，耐粉尘、潮湿和温差。",
       "电子锁比想象中耐用：优质型号的寿命以几十万次计，薄弱环节通常不是机械，而是供电和安装。所以套装里我们必配后备电池，智能锁则设好电量不足的提前提醒。塔什干范围一次上门装好，保修期内整件更换——不会让门处于无防护状态。",
       "公寓入户门的智能锁、带刷卡和员工记录的办公室门锁、业委会的单元门密码锁——三种任务、三种设备，我们按门选型而不是按目录选型。金属门和木门装嵌入式或明装型号，玻璃门装带支架的电磁锁，单元门装带密码和钥匙扣的防破坏面板。",
+    ],
+    extra: [
+      {
+        heading: "智能锁与密码门锁",
+        paragraphs: [
+          "公寓或住宅入户门的智能锁可用指纹、密码、卡片和手机 App 开启，机械钥匙作为备用。它记录开门日志，为客人和维修人员发放临时密码，并提前提醒电量不足；目录中的型号有 KANIHAD TK 系列、ZKTeco 和 Tapo。单元门或仓库门的密码锁更简单：带密码和钥匙扣的防破坏面板，无需 App 和电池，市电供电并配备备用电池。办公室玻璃门我们安装带支架的电磁锁，院门则选用防护型号。",
+          "电机锁（电控机械锁）像普通的插芯锁或外装锁一样用锁舌锁门，区别在于锁舌由电动机构按对讲机、读卡器或按钮的指令驱动。断电时它保持锁闭，可用机械钥匙打开，因此适合独栋住宅的入户门、带对讲的院门、单元门和存放贵重物品的房间——凡是停电时门也必须锁住的地方。电磁锁则相反：只有供电时才用磁力吸住门，断电即释放，这是疏散通道、办公室和玻璃门所要求的。电机锁的锁闭力不取决于电压，但需要精确安装：门扇下沉几毫米就会让锁舌对不上锁扣，所以安装从检查门扇和铰链开始。电机锁按订单供货安装。",
+        ],
+      },
     ],
   },
   "barrier": {
@@ -2551,6 +2677,7 @@ const zh: Record<string, ServiceContent> = {
       "SAT Solutions 按具体任务供应服务器，而不是「仓库里有什么卖什么」：配置按真实负载搭建，并对它扛得住负载负责。我们主营新华三 UniServer 和 Supermicro 平台——公司是 H3C 在乌兹别克斯坦的合作伙伴——同时供应存储系统、硬盘柜、内存、硬盘、RAID卡和网卡；其他厂商的设备按订单调货。在塔什干买服务器，既可以买现成平台，也可以按需定制并预装操作系统。",
       "跑财务/ERP的服务器与文件服务器选型思路不同：这里起决定作用的是核心主频、内存容量和磁盘子系统速度，所以数据库配NVMe盘和带写缓存的RAID卡，核心数按并发会话数计算。办公服务器的任务更宽泛也更轻：域控、文件存储、邮件、备份，有时还有录像。这类配置我们放在一台机器上并留出虚拟化余量——免得一年后再买第二台。",
       "虚拟化和集群按容错来核算资源：两到三个节点、共享存储、为节点故障预留内存。存储是单独的话题：数据增长快过服务器内置硬盘时，上可扩展的存储系统比换服务器便宜。录像容量按摄像机数量、码率和保存天数计算，而不是拍脑袋——这里算错，要么多花钱、要么丢录像。",
+      "NAS 服务器和存储阵列（SAN）虽然都用来存数据，但解决的任务不同。NAS 服务器是小型办公室文件、备份和几路摄像机录像的网络存储：接入普通网络，成本低于服务器。存储阵列用于磁盘需要同时服务多台服务器的场景——虚拟化集群、数百用户的 1C 数据库或几十路摄像机的录像归档：扩展柜可不停机扩容，控制器和电源均为冗余。我们根据数据量、增长速度和不停机要求，在 NAS 服务器、服务器内置磁盘和存储阵列之间选型；NAS 服务器和存储阵列我们供应 H3C——我们是该厂商在乌兹别克斯坦的合作伙伴——在塔什干供货并完成安装与 RAID 配置。",
       "交付不只是硬件。我们上架安装、配置RAID、装系统或虚拟化平台、从旧设备迁移数据和业务、登记原厂质保，需要时签订带响应时限的服务合同。全乌兹别克斯坦供货，常规采购和招投标的文件都能配齐。",
       "服务器需要一个家：机柜、不间断电源、制冷和布线。如果机房还没有，我们作为单独服务设计建设——机柜、UPS、精密空调、综合布线、门禁和温湿度监控。小办公室是一柜加UPS；企业则是供电制冷双冗余的机房。",
       "费用取决于配置、质保年限以及是否需要从现有服务器迁移。我们出两三个方案——最低可用、最优、三年余量——并说明它们除价格外的差别。测算免费：把任务、用户数和数据量发来，我们回复配置、价格和交期。",
@@ -2560,8 +2687,16 @@ const zh: Record<string, ServiceContent> = {
     heading: "塔什干酒店安防系统",
     paragraphs: [
       "酒店与办公楼的区别在于每天都有陌生人进出，系统必须让他们只去该去的地方、只在入住期限内通行。核心是与入住系统联动的酒店门锁：前台发卡，用到退房日期为止，只能打开自己的房间和电梯、健身房、停车场等公共区域。员工持有单独权限的工作卡，管理层可查看日志：谁在何时开了哪扇门。",
-      "酒店的监控装在大堂、走廊、电梯口、出入口、停车场和后勤区——客房内永远不装。另一层是消防安全：住宿场所必须配自动火灾报警和疏散广播系统，疏散通道上的门锁要能随消防自动信号解锁。这些从设计阶段就要落实，验收后返工代价更高。",
-      "我们整体交付酒店项目：门锁与门禁、视频监控、火灾报警与语音疏散、独立网段的客用Wi-Fi、入口车牌识别道闸。营业中的酒店也能做：逐层施工，酒店无需整体停业。设计、供货、安装、维保，覆盖塔什干及全乌兹别克斯坦。",
+      "酒店的监控装在大堂、走廊、电梯口、出入口、停车场和后勤区——客房内永远不装。另一层是消防安全：住宿场所必须配自动火灾报警和疏散广播系统，疏散通道上的门锁要能随消防自动信号解锁。这些从一开始就要落实，验收后返工代价更高。",
+      "我们整体交付酒店项目：门锁与门禁、视频监控、火灾报警与语音疏散、独立网段的客用Wi-Fi、入口车牌识别道闸。营业中的酒店也能做：逐层施工，酒店无需整体停业。选型、供货、安装、维保，覆盖塔什干及全乌兹别克斯坦。",
+    ],
+    extra: [
+      {
+        heading: "酒店电子锁：房卡、密码、手机钥匙",
+        paragraphs: [
+          "酒店电子锁可用房卡、密码或客人手机中的移动钥匙开启，机械钥匙留在前台以备应急。房卡和移动钥匙在入住时发放，退房日期自动失效；密码适合无前台的公寓式酒店——客人通过短信收到密码即可自助入住。门锁为独立供电，使用电池，无需向客房布线；“谁在何时开门”的记录可用主卡从锁中读取，网络型则自动汇总。客房服务和技术人员使用带独立权限的员工卡；与酒店管理系统对接后，钥匙可直接从入住软件签发。",
+        ],
+      },
     ],
   },
   "school": {

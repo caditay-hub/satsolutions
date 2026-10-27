@@ -373,6 +373,7 @@
         "Kayıt, uzaktan erişim ve analitik ayarları",
         "Devreye alma, eğitim ve garanti hizmeti"
       ],
+      "worksTitle": "Kamera sistemi montajı: neler dahil",
       "faq": [
         {
           "q": "Güvenlik kamerası kurulumu ne kadar tutar?",
@@ -406,7 +407,7 @@
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Üç tipik kamera sistemi",
-        "pkgNote": "Her tesisi ayrı hesaplıyoruz: mekânı anlatın veya planı gönderin — kesin keşifli teklifi bir iş günü içinde göndeririz.",
+        "pkgNote": "Ev için kamera sistemi çoğunlukla kapıya veya girişe bakan tek bir güvenlik kamerasıyla başlar: karta kayıt yapan Wi-Fi kamera bir saatte kurulur; müstakil ev için çevreye telefondan izlenen iki-dört dış mekân kamerası ekleriz. Mağaza, ofis ve depo için sistemleri aşağıdaki şemalara göre kurarız. Her tesisi ayrı hesaplıyoruz: mekânı anlatın veya planı gönderin — kesin keşifli teklifi bir iş günü içinde göndeririz.",
         "packages": [
           {
             "name": "Ev veya daire",
@@ -1067,7 +1068,7 @@
         },
         {
           "q": "Hangi ekipmanları kullanıyorsunuz?",
-          "a": "Bolid, Rubezh ve diğer üreticilerin adresli ve konvansiyonel sistemleri — tesisin tipine ve alanına göre seçiyoruz."
+          "a": "Rubezh, Bolid ve diğer üreticilerin adresli ve konvansiyonel sistemleri — tesisin tipine ve alanına göre seçiyoruz."
         },
         {
           "q": "İşlerinize neler dahil?",
@@ -1098,7 +1099,7 @@
             "name": "Ofis binası, okul, klinik",
             "for": "Katlı ve sürekli personelli bina",
             "items": [
-              "Bolid veya Rubezh adresli sistem — panel her dedektörü görür",
+              "Rubezh veya Bolid adresli sistem — panel her dedektörü görür",
               "Tahliye anonsu: sirenler, levhalar, kaçış yönlendirmeleri",
               "Durum bilgisinin güvenlik noktasına aktarılması",
               "Projeye göre montaj + as-built belgeler"
@@ -1142,8 +1143,8 @@
           }
         ],
         "brandsLabel": "Ekipman",
-        "brandsTitle": "Paneller ve dedektörler — Taşkent depomuzdan",
-        "brandsText": "Bolid ve Rubezh — garantili sertifikalı ekipman, paneller ve dedektörler her zaman stokta:"
+        "brandsTitle": "Taşkent'te Rubezh ve Bolid: stoktan paneller ve dedektörler",
+        "brandsText": "Rubezh ve Bolid — garantili sertifikalı ekipman, paneller ve dedektörler her zaman stokta:"
       }
     },
     "network": {
@@ -1629,7 +1630,7 @@
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "Talepten çalışan bariyere — 5 adım",
+        "stagesTitle": "Bariyer kurulumu: aşamalar ve süreler — 5 adım",
         "stages": [
           {
             "t": "Mühendis keşfi",
@@ -3405,6 +3406,7 @@
         "Şubeleri ve uzak çalışanları birleştirme",
         "Kurulum, eğitim ve destek"
       ],
+      "worksTitle": "Taşkent'te IP telefon: neler dahil",
       "faq": [
         {
           "q": "IP telefon klasik telefondan neden daha iyi?",
@@ -3534,7 +3536,7 @@
       ],
       "details": {
         "pkgLabel": "Standart çözümler",
-        "pkgTitle": "Üç standart sunucu konfigürasyonu",
+        "pkgTitle": "Taşkent'te göreve uygun sunucu: üç standart konfigürasyon",
         "pkgNote": "İşe göre hesaplıyoruz: yükü anlatın — 1C’de kaç kullanıcı, ne kadar veri, kesintisiz çalışma gerekiyor mu — bir iş günü içinde teklif dönelim.",
         "packages": [
           {
@@ -5541,10 +5543,10 @@
     "pkgUnit": "montaj işçiliği, ekipman hariç",
     "title": {
       "cctv": "Taşkent'te kamera sistemi montajı ne kadar",
-      "intercom": "Taşkent'te montajlı interkom ne kadar",
+      "intercom": "Taşkent'te interkom: montaj dahil fiyat",
       "locks": "Montajlı elektronik kilit ne kadar",
       "access": "Taşkent'te montajlı geçiş kontrol sistemi ne kadar",
-      "fire": "Montajlı yangın alarm sistemi ne kadar"
+      "fire": "Yangın alarm sistemi kurulumu: fiyat"
     },
     "lead": "Montaj işçiliği tek bir fiyat listesine göredir; hesaplayıcımız da aynı listeyi kullanır. Ekipman ve kablo ayrı hesaplanır; aşağıda kataloğumuzdaki en düşük fiyatlar var.",
     "worksTitle": "Montaj işçilik fiyatları",

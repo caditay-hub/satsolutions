@@ -28,6 +28,13 @@ const BARRIER_LINK = "/products/type/shlagbaumy";
 const BARRIER_ORDER = "/solutions/barrier#order";
 const BARRIER_BASE = "knd-kanihad-shlagbaum-knd-bgm350-l";
 const BARRIER_MOUNT = 1500000;
+// Турникеты (27.10.2026): цены — живые с трёх карточек каталога, минимум раздела (комплектующая Hikvision) не годится.
+// Монтаж, считыватели и контроллер — по смете после осмотра проходной, поэтому строки «установка» нет.
+// Порядок от дорогого к дешёвому намеренно: heroPrice и minPrice в JSON-LD берут последнюю строку (трипод).
+const TURNSTILE_LINK = "/products/type/turnikety-i-shlagbaumy";
+const TURNSTILE_FULL = "hik-ds-k3h4410-120";
+const TURNSTILE_SPEED = "zkt-zkteco-turniket-steklyannyi-seredina-saturn-s1200";
+const TURNSTILE_TRIPOD = "zkt-zkteco-turniket-tripod-ts1000-plus";
 
 const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
   barrier: {
@@ -75,6 +82,53 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
         { label: "道闸含安装", price: "5 582 900 苏姆起", href: BARRIER_LINK, liveSlug: BARRIER_BASE, add: BARRIER_MOUNT },
       ],
       note: "设备按目录价格计算，安装费包含道闸的安装与调试。立柱基础、线缆敷设和地感线圈按现场另行报价：请告知车道宽度和每日车流量，我们将在一个工作日内提供报价。",
+    },
+  },
+  turnstile: {
+    ru: {
+      title: "Турникет: цена в Ташкенте",
+      rows: [
+        { label: "Полноростовой турникет — оборудование", price: "от 70 289 900 сум", href: TURNSTILE_LINK, liveSlug: TURNSTILE_FULL },
+        { label: "Скоростной проход (speed gate)", price: "от 8 042 900 сум", href: TURNSTILE_LINK, liveSlug: TURNSTILE_SPEED },
+        { label: "Турникет-трипод — оборудование", price: "от 4 330 900 сум", href: TURNSTILE_LINK, liveSlug: TURNSTILE_TRIPOD },
+      ],
+      note: "Цены — на оборудование из каталога, живые. Монтаж, считыватели, контроллер и калитка — по смете после осмотра проходной: пришлите число проходов в час и тип идентификации — вернём смету в течение рабочего дня.",
+    },
+    uz: {
+      title: "Turniket: Toshkentda narxi",
+      rows: [
+        { label: "Toʻliq boʻyli turniket — uskuna", price: "70 289 900 soʻmdan", href: TURNSTILE_LINK, liveSlug: TURNSTILE_FULL },
+        { label: "Tezkor oʻtish yoʻlagi (speed gate)", price: "8 042 900 soʻmdan", href: TURNSTILE_LINK, liveSlug: TURNSTILE_SPEED },
+        { label: "Tripod turniket — uskuna", price: "4 330 900 soʻmdan", href: TURNSTILE_LINK, liveSlug: TURNSTILE_TRIPOD },
+      ],
+      note: "Narxlar — katalogdagi uskunaning joriy narxlari. Montaj, oʻqigichlar, kontroller va kalitka oʻtish punktini koʻrib chiqqandan keyin smeta boʻyicha hisoblanadi: soatiga oʻtishlar sonini va identifikatsiya turini yuboring — ish kuni davomida smeta qaytaramiz.",
+    },
+    en: {
+      title: "Turnstile: price in Tashkent",
+      rows: [
+        { label: "Full-height turnstile — hardware", price: "from 70,289,900 UZS", href: TURNSTILE_LINK, liveSlug: TURNSTILE_FULL },
+        { label: "Speed gate", price: "from 8,042,900 UZS", href: TURNSTILE_LINK, liveSlug: TURNSTILE_SPEED },
+        { label: "Tripod turnstile — hardware", price: "from 4,330,900 UZS", href: TURNSTILE_LINK, liveSlug: TURNSTILE_TRIPOD },
+      ],
+      note: "Live catalogue prices for the hardware. Installation, readers, controller and the gate are quoted after a site survey of the entrance: send the number of passes per hour and the identification type, and we will return an estimate within one working day.",
+    },
+    tr: {
+      title: "Turnike: Taşkent'te fiyat",
+      rows: [
+        { label: "Tam boy turnike — ekipman", price: "70.289.900 UZS'den", href: TURNSTILE_LINK, liveSlug: TURNSTILE_FULL },
+        { label: "Hızlı geçiş (speed gate)", price: "8.042.900 UZS'den", href: TURNSTILE_LINK, liveSlug: TURNSTILE_SPEED },
+        { label: "Tripod turnike — ekipman", price: "4.330.900 UZS'den", href: TURNSTILE_LINK, liveSlug: TURNSTILE_TRIPOD },
+      ],
+      note: "Fiyatlar katalogdaki ekipmanın güncel fiyatlarıdır. Montaj, okuyucular, kontrolör ve kapı, geçiş noktası keşfinden sonra teklifle hesaplanır: saatteki geçiş sayısını ve tanımlama türünü gönderin, bir iş günü içinde teklif iletelim.",
+    },
+    zh: {
+      title: "闸机：塔什干价格",
+      rows: [
+        { label: "全高闸——设备", price: "70 289 900 苏姆起", href: TURNSTILE_LINK, liveSlug: TURNSTILE_FULL },
+        { label: "速通门", price: "8 042 900 苏姆起", href: TURNSTILE_LINK, liveSlug: TURNSTILE_SPEED },
+        { label: "三辊闸——设备", price: "4 330 900 苏姆起", href: TURNSTILE_LINK, liveSlug: TURNSTILE_TRIPOD },
+      ],
+      note: "以上为目录中设备的实时价格。安装、读卡器、控制器和通道门在现场勘察门岗后按预算单独报价：请告知每小时通行人数和识别方式，我们将在一个工作日内回复预算。",
     },
   },
   cctv: {

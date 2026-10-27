@@ -36,8 +36,10 @@ const ru: Record<string, ServiceSeo> = {
     desc: "Монтаж слаботочных систем под ключ в Ташкенте: видеонаблюдение, СКУД, пожарная сигнализация, СКС, домофония. Сдача с документами, субподряд для строек, гарантия.",
   },
   cctv: {
-    // «системы видеонаблюдения» — QS 1/10 в Ads: запрос обязан быть в H1/title (методика LT)
-    h1: "Системы видеонаблюдения в Ташкенте — установка под ключ",
+    // 27.10.2026: H1 под «камера установка» (278/мес) и «установка камер видеонаблюдения» (85).
+    // «Системы видеонаблюдения» (0 показов за 30 дн.) остаётся в H2: serviceContent.cctv.heading
+    // и services.cctv.details.pkgTitle «Три типовые системы видеонаблюдения».
+    h1: "Установка камер видеонаблюдения в Ташкенте",
     title: "Установка видеонаблюдения в Ташкенте — монтаж 1–3 дня | SAT",
     desc: "Монтаж камеры от 155 000 сум, уличной — 180 000. Hikvision и Dahua, свой штат, гарантия 3 года на работы, выезд в день заявки. Цены на все работы на странице.",
   },
@@ -279,7 +281,7 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda server uskunalari: 1C, ofis va virtualizatsiya uchun buyurtma serverlari, stoykalar, UPS, tarmoq uskunalari. Yetkazib berish va montaj mamlakat boʻylab.",
   },
   cctv: {
-    h1: "Toshkentda videokuzatuv oʻrnatish",
+    h1: "Toshkentda videokuzatuv kameralarini oʻrnatish",
     title: "Toshkentda videokuzatuv oʻrnatish: montaj 1–3 kunda | SAT",
     desc: "Kamera montaji 155 000 soʻmdan, koʻcha kamerasi — 180 000. Hikvision va Dahua, oʻz jamoamiz, ishlarga 3 yil kafolat, ariza kuni chiqamiz. Narxlar sahifada.",
   },
@@ -508,7 +510,7 @@ const en: Record<string, ServiceSeo> = {
     desc: "Server hardware in Tashkent: custom-built servers for 1C, office and virtualization, racks, UPS and network equipment. Configuration, supply and installation.",
   },
   cctv: {
-    h1: "CCTV Installation Company in Tashkent, Uzbekistan",
+    h1: "CCTV Camera Installation in Tashkent, Uzbekistan",
     title: "CCTV Installation in Tashkent: Fitted in 1–3 Days | SAT",
     desc: "Camera installation from 155,000 UZS, outdoor — 180,000. Hikvision and Dahua, in-house team, 3-year warranty on work, same-day site visit. Prices on the page.",
   },
@@ -732,7 +734,7 @@ const tr: Record<string, ServiceSeo> = {
     desc: "Taşkent'te anahtar teslim zayıf akım montajı: CCTV, geçiş kontrolü, yangın alarmı, yapısal kablolama, interkom. Evraklı teslim, inşaatlara taşeronluk, garanti.",
   },
   cctv: {
-    h1: "Taşkent'te güvenlik kamerası sistemi — anahtar teslim",
+    h1: "Taşkent'te Güvenlik Kamerası Kurulumu",
     title: "Taşkent'te Kamera Sistemi Kurulumu: 1–3 Günde Montaj | SAT",
     desc: "Kamera montajı 155.000 UZS'den, dış mekân — 180.000. Hikvision ve Dahua, kendi ekibimiz, işçilikte 3 yıl garanti, aynı gün keşif. Tüm işçilik fiyatları sayfada.",
   },
@@ -960,7 +962,7 @@ const zh: Record<string, ServiceSeo> = {
     desc: "塔什干交钥匙弱电安装：视频监控、门禁、消防报警、综合布线、对讲。设计、施工、资料交付。承接建筑分包。提供保修。",
   },
   cctv: {
-    h1: "塔什干视频监控系统 — 整套安装服务",
+    h1: "塔什干监控摄像机安装",
     title: "塔什干视频监控安装：1–3 天完成施工 | SAT",
     desc: "摄像机安装 155 000 苏姆起，室外 180 000。海康威视与大华，自有施工团队，安装工程质保 3 年，当天上门勘察。全部工费见本页。",
   },

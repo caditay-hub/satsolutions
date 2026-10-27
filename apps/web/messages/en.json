@@ -373,6 +373,7 @@
         "Configuration of recording, remote access and analytics",
         "Commissioning, training and warranty service"
       ],
+      "worksTitle": "CCTV installation: what is included",
       "faq": [
         {
           "q": "How much does it cost to install video surveillance?",
@@ -406,7 +407,7 @@
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Three typical CCTV systems",
-        "pkgNote": "Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within one business day.",
+        "pkgNote": "Home CCTV most often starts with a single surveillance camera at the door or gate: a Wi-Fi camera recording to a card is fitted within an hour, and for a private house we add two to four outdoor cameras around the perimeter with viewing on your phone. For shops, offices and warehouses we build systems to the layouts below. Every site is quoted individually: describe the premises or send a plan — we return a quote with an exact estimate within one business day.",
         "packages": [
           {
             "name": "House or flat",
@@ -1067,7 +1068,7 @@
         },
         {
           "q": "What equipment do you use?",
-          "a": "Addressable and conventional fire alarm systems from Bolid, Rubezh, and other leading manufacturers — we select the right solution based on your facility type and size."
+          "a": "Addressable and conventional fire alarm systems from Rubezh, Bolid, and other leading manufacturers — we select the right solution based on your facility type and size."
         },
         {
           "q": "What does your work include?",
@@ -1098,7 +1099,7 @@
             "name": "Office building, school, clinic",
             "for": "Multi-floor building with permanent staff",
             "items": [
-              "Bolid or Rubezh addressable system — the panel sees every detector",
+              "Rubezh or Bolid addressable system — the panel sees every detector",
               "Evacuation alerting: sounders, signs, escape route lights",
               "Status output to the security desk",
               "Installation to the design + as-built documents"
@@ -1142,8 +1143,8 @@
           }
         ],
         "brandsLabel": "Equipment",
-        "brandsTitle": "Panels and detectors — from our Tashkent warehouse",
-        "brandsText": "Bolid and Rubezh — certified equipment with warranty, panels and detectors always in stock:"
+        "brandsTitle": "Rubezh and Bolid in Tashkent: panels and detectors from stock",
+        "brandsText": "Rubezh and Bolid — certified equipment with warranty, panels and detectors always in stock:"
       }
     },
     "network": {
@@ -1629,7 +1630,7 @@
           }
         ],
         "stagesLabel": "How we work",
-        "stagesTitle": "From request to a working barrier — 5 steps",
+        "stagesTitle": "Barrier gate installation: stages and timing — 5 steps",
         "stages": [
           {
             "t": "Engineer visit",
@@ -3405,6 +3406,7 @@
         "Uniting branches and remote employees",
         "Setup, training and support"
       ],
+      "worksTitle": "IP telephony in Tashkent: what is included",
       "faq": [
         {
           "q": "How is IP telephony better than regular phone service?",
@@ -3534,7 +3536,7 @@
       ],
       "details": {
         "pkgLabel": "Standard solutions",
-        "pkgTitle": "Three standard server configurations",
+        "pkgTitle": "A server in Tashkent for your workload: three standard configurations",
         "pkgNote": "We size it to the job: describe the load — how many 1C users, how much data, whether you need it to run without downtime — and we return a quote within one business day.",
         "packages": [
           {
@@ -5541,10 +5543,10 @@
     "pkgUnit": "installation work, equipment not included",
     "title": {
       "cctv": "What CCTV installation costs in Tashkent",
-      "intercom": "What an intercom with installation costs in Tashkent",
+      "intercom": "Intercom in Tashkent: price with installation",
       "locks": "What an electronic lock with installation costs",
       "access": "What an access control system with installation costs in Tashkent",
-      "fire": "What a fire alarm with installation costs"
+      "fire": "Fire alarm installation: price"
     },
     "lead": "Installation rates follow one price list — the same one behind our calculator. Equipment and cable are priced separately; below are the lowest prices from our catalogue.",
     "worksTitle": "Installation rates",

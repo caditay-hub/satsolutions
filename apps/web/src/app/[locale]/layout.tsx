@@ -296,6 +296,10 @@ export default async function RootLayout({
           [suppressHydrationWarning] { visibility: visible !important; }
         `}} />
         <link rel="dns-prefetch" href={apiBase} />
+        {/* Два preconnect к API намеренно: <img> первого экрана (фото услуги — LCP) идёт по
+            обычному соединению, fetch() с CORS — по анонимному; браузер их не объединяет,
+            и preconnect с crossOrigin картинке не помогал (27.10.2026). */}
+        <link rel="preconnect" href={apiBase} />
         <link rel="preconnect" href={apiBase} crossOrigin="anonymous" />
         <meta name="language" content={META_LANGUAGE[locale] ?? "Russian"} />
         <meta name="geo.region" content="UZ" />

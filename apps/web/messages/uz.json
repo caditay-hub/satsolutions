@@ -373,6 +373,7 @@
         "Yozib olish, masofaviy kirish va videoanalitikani sozlash",
         "Ishga tushirish, oʻqitish va kafolat xizmati"
       ],
+      "worksTitle": "Videokuzatuv montaji: nimalar kiradi",
       "faq": [
         {
           "q": "Videokuzatuv oʻrnatish qancha turadi?",
@@ -406,7 +407,7 @@
       "details": {
         "pkgLabel": "Namunaviy yechimlar",
         "pkgTitle": "Uchta namunaviy videokuzatuv tizimi",
-        "pkgNote": "Har bir obyektni alohida hisoblaymiz: xonani taʼriflab bering yoki rejani yuboring — bir ish kuni ichida aniq smeta bilan KP qaytaramiz.",
+        "pkgNote": "Uy uchun videokuzatuv koʻpincha kirish yoki darvozaga qaragan bitta kuzatuv kamerasidan boshlanadi: kartaga yozadigan Wi-Fi kamera bir soatda oʻrnatiladi, xususiy uy uchun esa perimetr boʻylab telefondan koʻriladigan ikki-toʻrtta koʻcha kamerasini qoʻshamiz. Doʻkon, ofis va ombor uchun tizimlarni quyidagi sxemalar boʻyicha yigʻamiz. Har bir obyektni alohida hisoblaymiz: xonani taʼriflab bering yoki rejani yuboring — bir ish kuni ichida aniq smeta bilan KP qaytaramiz.",
         "packages": [
           {
             "name": "Uy yoki kvartira",
@@ -1067,7 +1068,7 @@
         },
         {
           "q": "Siz qanday uskunalardan foydalanasiz?",
-          "a": "Bolid, Rubezh va boshqa ishlab chiqaruvchilarning manzilli va boshbogʻi tizimlari — obʼekt turi va maydoni boʻyicha tanlab olamiz."
+          "a": "Rubezh, Bolid va boshqa ishlab chiqaruvchilarning manzilli va boshbogʻi tizimlari — obʼekt turi va maydoni boʻyicha tanlab olamiz."
         },
         {
           "q": "Ishlaringizga nimalar kiradi?",
@@ -1098,7 +1099,7 @@
             "name": "Ofis binosi, maktab, klinika",
             "for": "Qavatli va doimiy xodimli bino",
             "items": [
-              "Bolid yoki Rubej adresli tizimi — panel har datchikni koʻradi",
+              "Rubej yoki Bolid adresli tizimi — panel har datchikni koʻradi",
               "SOUE ogohlantirishi: sirenalar, tablolar, evakuatsiya koʻrsatkichlari",
               "Holatni qoʻriqlash postiga chiqarish",
               "Loyiha boʻyicha montaj + ijro hujjatlari"
@@ -1142,8 +1143,8 @@
           }
         ],
         "brandsLabel": "Uskuna",
-        "brandsTitle": "Asboblar va izveshchatellar — Toshkent omboridan",
-        "brandsText": "Bolid va Rubej — kafolatli sertifikatlangan uskuna, asboblar va datchiklar doim mavjud:"
+        "brandsTitle": "Toshkentda Rubej va Bolid: asboblar va izveshchatellar ombordan",
+        "brandsText": "Rubej va Bolid — kafolatli sertifikatlangan uskuna, asboblar va datchiklar doim mavjud:"
       }
     },
     "network": {
@@ -1629,7 +1630,7 @@
           }
         ],
         "stagesLabel": "Qanday ishlaymiz",
-        "stagesTitle": "Arizadan ishlaydigan shlagbaumgacha — 5 qadam",
+        "stagesTitle": "Shlagbaum oʻrnatish: bosqichlar va muddatlar — 5 qadam",
         "stages": [
           {
             "t": "Muhandis chiqishi",
@@ -3405,6 +3406,7 @@
         "Filiallar va masofaviy xodimlarni birlashtirish",
         "Sozlash, oʻqitish va qoʻllab-quvvatlash"
       ],
+      "worksTitle": "Toshkentda IP telefoniya: nimalar kiradi",
       "faq": [
         {
           "q": "IP-telefoniyaning oddiy telefoniyadan nima bilan yaxshiroq?",
@@ -3534,7 +3536,7 @@
       ],
       "details": {
         "pkgLabel": "Tipik yechimlar",
-        "pkgTitle": "Serverlarning uchta tipik konfiguratsiyasi",
+        "pkgTitle": "Toshkentda vazifaga mos server: uchta tipik konfiguratsiya",
         "pkgNote": "Vazifaga qarab hisoblaymiz: yuklamani tasvirlab bering — 1C da nechta foydalanuvchi, maʼlumot hajmi, toʻxtovsiz ishlash kerakmi — ish kuni davomida taklif qaytaramiz.",
         "packages": [
           {
@@ -5541,10 +5543,10 @@
     "pkgUnit": "montaj ishlari, uskunasiz",
     "title": {
       "cctv": "Toshkentda videokuzatuv oʻrnatish qancha turadi",
-      "intercom": "Toshkentda domofon oʻrnatish bilan qancha turadi",
+      "intercom": "Toshkentda domofon: oʻrnatish bilan narxi",
       "locks": "Elektron qulf oʻrnatish bilan qancha turadi",
       "access": "Toshkentda kirishni nazorat qilish tizimi (SKUD) oʻrnatish bilan qancha turadi",
-      "fire": "Yongʻin signalizatsiyasi montaj bilan qancha turadi"
+      "fire": "Yongʻin signalizatsiyasini oʻrnatish: narxi"
     },
     "lead": "Montaj ishlari narxlari — yagona prayskurant boʻyicha, u kalkulyatorga ham kiritilgan. Uskuna va kabel alohida hisoblanadi, quyida — katalogimizdagi eng past narxlar.",
     "worksTitle": "Montaj ishlari narxlari",
