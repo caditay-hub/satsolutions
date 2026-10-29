@@ -13,7 +13,7 @@
 - [Контроль доступа (СКУД)](https://satsolutions.uz/solutions/access): турникеты, биометрия, карты
 - [Турникеты и проходные](https://satsolutions.uz/solutions/turnstile), [учёт рабочего времени](https://satsolutions.uz/solutions/attendance): биометрия, табель с выгрузкой в 1С
 - [Пожарная сигнализация](https://satsolutions.uz/solutions/fire): проект, монтаж, СОУЭ, гослицензии
-- [Охранные системы для бизнеса](https://satsolutions.uz/solutions/ohrannye-sistemy), [охранная сигнализация для дома](https://satsolutions.uz/solutions/alarm), [периметр](https://satsolutions.uz/solutions/perimeter)
+- [Охранная сигнализация для дома и бизнеса](https://satsolutions.uz/solutions/alarm), [периметр](https://satsolutions.uz/solutions/perimeter)
 - [Домофония](https://satsolutions.uz/solutions/intercom)
 - [Шлагбаумы и автоматика](https://satsolutions.uz/solutions/barrier), [умный паркинг](https://satsolutions.uz/solutions/intellektualnoe-upravlenie-parkingom): въезд по номерам, датчики мест, оплата
 - [Сети и СКС](https://satsolutions.uz/solutions/network), [Wi-Fi](https://satsolutions.uz/solutions/wifi), [оптика](https://satsolutions.uz/solutions/fiber)

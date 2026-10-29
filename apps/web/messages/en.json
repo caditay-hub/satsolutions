@@ -958,15 +958,15 @@
       }
     },
     "alarm": {
-      "title": "Home intruder alarm",
-      "desc": "Wireless kits for apartments, private houses and country homes.",
-      "intro": "An intruder alarm for the home: a wireless kit for an apartment, private house or country home — motion and door contacts, glass-break and water-leak detectors, a siren and alerts to your phone. Installed in a day, with no wall chasing and no damage to your finishes.",
+      "title": "Security alarm systems",
+      "desc": "Wireless kits for the home, wired systems and monitored response for business.",
+      "intro": "Security alarm systems for apartments, houses, offices, warehouses and shops: wireless Hikvision AX PRO kits with no wall chasing for the home, wired and hybrid Bolid loops with partitions by department for business, a cashier's panic button, output to a monitoring station and integration with access control and CCTV.",
       "works": [
-        "A wireless kit chosen to match your floor plan",
-        "Motion, door, glass-break and water-leak detectors",
-        "Night and away modes, pet-immune detection",
-        "Phone alerts, battery backup and a GSM channel",
-        "One-day installation and a walkthrough for the whole family"
+        "Site survey, kit selection and division into alarm partitions",
+        "Motion, door, glass-break and water-leak detectors; Bolid loops and wireless Hikvision AX PRO",
+        "Night and away modes, pet immunity; rights by department and shift, full event log",
+        "Phone alerts, battery backup and a GSM channel; panic button and output to a monitoring station",
+        "Integration with access control and CCTV, installation in 1–2 days, training and a maintenance contract"
       ],
       "faq": [
         {
@@ -980,6 +980,18 @@
         {
           "q": "What happens if the power or the internet goes down?",
           "a": "The hub runs for several hours on its backup battery, and the detectors work for years on their own batteries and report a low charge themselves. If the internet drops, the alarm goes out over the GSM channel — to the owner's phone and to trusted contacts."
+        },
+        {
+          "q": "How do you split security between departments and shifts?",
+          "a": "The site is divided into partitions: sales floor and back room, warehouse and office, leased units separately. Each partition has its own rights and its own list of staff allowed to arm and disarm it, and the log shows who did it and when."
+        },
+        {
+          "q": "What does connection to a monitoring station give?",
+          "a": "A physical response: an alarm sends a patrol crew from the security company, and the callout and its time are recorded. The response procedure — who comes, within what time and what they check — is written into the contract with the security company; we are responsible for transmitting the signal and for its reliability."
+        },
+        {
+          "q": "Why link the alarm to access control and CCTV?",
+          "a": "So that an event can be examined instead of guessed at. A trigger is tied to the video recording, arming is tied to the entrance — the last employee leaves and the site arms itself. A log with video becomes evidence when a shortage or an incident is investigated."
         }
       ],
       "details": {
@@ -4065,99 +4077,6 @@
             "s": "for chains — every station from the office"
           }
         ]
-      }
-    },
-    "ohrannye-sistemy": {
-      "title": "Intruder alarm systems for business",
-      "desc": "Site alarms, monitored response, integration with access control.",
-      "intro": "Intruder alarm systems for offices, warehouses, shops and production sites: wired and hybrid loops, partitions by department and shift, a cashier's panic button, output to a monitoring station and integration with access control and CCTV.",
-      "works": [
-        "Site survey and division into alarm partitions",
-        "Wired and hybrid loops, Bolid and Hikvision panels",
-        "Rights by department and shift, full event log",
-        "Output to a monitoring station and an agreed response procedure",
-        "Integration with access control and CCTV, maintenance contract"
-      ],
-      "faq": [
-        {
-          "q": "How do you split security between departments and shifts?",
-          "a": "The site is divided into partitions: sales floor and back room, warehouse and office, leased units separately. Each partition has its own rights and its own list of staff allowed to arm and disarm it, and the log shows who did it and when."
-        },
-        {
-          "q": "What does connection to a monitoring station give?",
-          "a": "A physical response: an alarm sends a patrol crew from the security company, and the callout and its time are recorded. The response procedure — who comes, within what time and what they check — is written into the contract with the security company; we are responsible for transmitting the signal and for its reliability."
-        },
-        {
-          "q": "Why link the alarm to access control and CCTV?",
-          "a": "So that an event can be examined instead of guessed at. A trigger is tied to the video recording, arming is tied to the entrance — the last employee leaves and the site arms itself. A log with video becomes evidence when a shortage or an incident is investigated."
-        }
-      ],
-      "details": {
-        "pkgLabel": "Typical solutions",
-        "pkgTitle": "Three typical alarm kits",
-        "pkgNote": "Every site is priced individually: describe the task or send a plan — we will return a quote with an exact estimate within one business day.",
-        "packages": [
-          {
-            "name": "Apartment or house",
-            "for": "Home, dacha",
-            "items": [
-              "Motion and opening sensors",
-              "Arming from a fob or the phone",
-              "A siren and notifications on alarm",
-              "Wireless installation without chasing"
-            ],
-            "term": "Time: 1 day"
-          },
-          {
-            "name": "Office or store",
-            "for": "Commercial premises",
-            "items": [
-              "Motion, glass-break and opening sensors",
-              "Separate arming by zone",
-              "A video link: an alarm with a frame",
-              "Output to a security company's station"
-            ],
-            "term": "Time: 1–2 days"
-          },
-          {
-            "name": "A site with a perimeter",
-            "for": "Warehouse, plant, depot",
-            "items": [
-              "Perimeter and indoor protection",
-              "Panic buttons at the posts",
-              "Backup power for hours of operation",
-              "An arming and disarming log"
-            ],
-            "term": "Time: per design"
-          }
-        ],
-        "stagesLabel": "How we work",
-        "stagesTitle": "From request to a protected site — 5 steps",
-        "stages": [
-          {
-            "t": "Engineer's visit",
-            "s": "intrusion zones, sensor points — free"
-          },
-          {
-            "t": "Choosing the kit",
-            "s": "wired or wireless, an estimate"
-          },
-          {
-            "t": "Installation",
-            "s": "sensors, panel, siren — in a day"
-          },
-          {
-            "t": "Setup",
-            "s": "the app, zones, users"
-          },
-          {
-            "t": "Handover and service",
-            "s": "trigger tests, warranty, maintenance"
-          }
-        ],
-        "brandsLabel": "Equipment",
-        "brandsTitle": "Panels and sensors we trust",
-        "brandsText": "Hikvision AX PRO for wireless protection; wired systems for large sites — from stock:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {

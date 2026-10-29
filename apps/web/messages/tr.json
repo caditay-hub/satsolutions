@@ -958,15 +958,15 @@
       }
     },
     "alarm": {
-      "title": "Ev için hırsız alarmı",
-      "desc": "Daire, müstakil ev ve yazlık için kablosuz setler.",
-      "intro": "Konut için hırsız alarmı: daire, müstakil ev veya yazlık için kablosuz set — hareket ve kapı sensörleri, cam kırılma ve su kaçağı dedektörleri, siren ve telefona bildirim. Montaj bir günde, duvar kırmadan ve dekorasyona zarar vermeden.",
+      "title": "Hırsız alarm sistemleri",
+      "desc": "Ev için kablosuz setler, işletmeler için kablolu sistemler ve merkezi izleme.",
+      "intro": "Daire, müstakil ev, ofis, depo ve mağaza için hırsız alarm sistemleri: konut için duvar kırmadan kurulan kablosuz Hikvision AX PRO setleri, işletmeler için birimlere göre bölümlenmiş kablolu ve hibrit Bolid hatları, kasiyer panik butonu, izleme merkezine bağlantı ve geçiş kontrolü ile kamera entegrasyonu.",
       "works": [
-        "Kat planına uygun kablosuz set seçimi",
-        "Hareket, kapı, cam kırılma ve su kaçağı dedektörleri",
-        "«Gece» ve «evde yok» modları, evcil hayvan bağışıklığı",
-        "Telefona bildirim, yedek besleme ve GSM kanalı",
-        "Bir günde montaj ve tüm aileye kullanım eğitimi"
+        "Keşif, set seçimi ve tesisin alarm bölümlerine ayrılması",
+        "Hareket, kapı, cam kırılma ve su kaçağı dedektörleri; Bolid hatları ve kablosuz Hikvision AX PRO",
+        "«Gece» ve «evde yok» modları, evcil hayvan bağışıklığı; birim ve vardiyaya göre yetkiler, olay kaydı",
+        "Telefona bildirim, yedek besleme ve GSM kanalı; panik butonu ve izleme merkezine bağlantı",
+        "Geçiş kontrolü ve kamera entegrasyonu, 1–2 günde montaj, eğitim ve bakım sözleşmesi"
       ],
       "faq": [
         {
@@ -980,6 +980,18 @@
         {
           "q": "Elektrik ve internet kesilirse ne olur?",
           "a": "Hub yedek aküyle birkaç saat çalışır; dedektörler kendi pilleriyle yıllarca çalışır ve pil zayıfladığında kendileri haber verir. İnternet koptuğunda alarm GSM kanalından gider — ev sahibinin ve güvendiği kişilerin telefonuna."
+        },
+        {
+          "q": "Güvenliği birimler ve vardiyalar arasında nasıl ayırırsınız?",
+          "a": "Tesis bölümlere ayrılır: satış alanı ve depo odası, ambar ve ofis, kiralık üniteler ayrı ayrı. Her bölümün kendi yetkileri ve onu kurup çözebilecek personel listesi vardır; kayıt defteri bunu kimin ne zaman yaptığını gösterir."
+        },
+        {
+          "q": "İzleme merkezine bağlanmak ne sağlar?",
+          "a": "Fiziksel müdahale: alarmda güvenlik şirketinin ekibi yola çıkar, çıkış ve saati kayda geçer. Müdahale prosedürü — kimin geleceği, hangi sürede ve neyi kontrol edeceği — güvenlik şirketiyle yapılan sözleşmede yazılır; biz sinyalin iletiminden ve güvenilirliğinden sorumluyuz."
+        },
+        {
+          "q": "Alarmı geçiş kontrolü ve kamerayla neden bağlamalı?",
+          "a": "Olayı tahmin etmek yerine inceleyebilmek için. Tetiklenme video kaydıyla eşleşir, kurma ise turnikeye bağlanır: son çalışan çıkar, tesis kendini kurar. Videolu kayıt, bir açık veya olay incelendiğinde belge yerine geçer."
         }
       ],
       "details": {
@@ -4065,99 +4077,6 @@
             "s": "zincirlere — tüm istasyonlar ofisten"
           }
         ]
-      }
-    },
-    "ohrannye-sistemy": {
-      "title": "İşletmeler için hırsız alarm sistemleri",
-      "desc": "Tesis alarmı, merkezi izleme, geçiş kontrol entegrasyonu.",
-      "intro": "Ofis, depo, mağaza ve üretim tesisleri için hırsız alarm sistemleri: kablolu ve hibrit hatlar, birim ve vardiyaya göre bölümler, kasiyer panik butonu, izleme merkezine bağlantı ve geçiş kontrolü ile kamera entegrasyonu.",
-      "works": [
-        "Keşif ve alarm bölümlerine ayırma",
-        "Kablolu ve hibrit hatlar, Bolid ve Hikvision panelleri",
-        "Birim ve vardiyaya göre yetkiler, olay kaydı",
-        "İzleme merkezine bağlantı ve müdahale prosedürü",
-        "Geçiş kontrolü ve kamera entegrasyonu, bakım sözleşmesi"
-      ],
-      "faq": [
-        {
-          "q": "Güvenliği birimler ve vardiyalar arasında nasıl ayırırsınız?",
-          "a": "Tesis bölümlere ayrılır: satış alanı ve depo odası, ambar ve ofis, kiralık üniteler ayrı ayrı. Her bölümün kendi yetkileri ve onu kurup çözebilecek personel listesi vardır; kayıt defteri bunu kimin ne zaman yaptığını gösterir."
-        },
-        {
-          "q": "İzleme merkezine bağlanmak ne sağlar?",
-          "a": "Fiziksel müdahale: alarmda güvenlik şirketinin ekibi yola çıkar, çıkış ve saati kayda geçer. Müdahale prosedürü — kimin geleceği, hangi sürede ve neyi kontrol edeceği — güvenlik şirketiyle yapılan sözleşmede yazılır; biz sinyalin iletiminden ve güvenilirliğinden sorumluyuz."
-        },
-        {
-          "q": "Alarmı geçiş kontrolü ve kamerayla neden bağlamalı?",
-          "a": "Olayı tahmin etmek yerine inceleyebilmek için. Tetiklenme video kaydıyla eşleşir, kurma ise turnikeye bağlanır: son çalışan çıkar, tesis kendini kurar. Videolu kayıt, bir açık veya olay incelendiğinde belge yerine geçer."
-        }
-      ],
-      "details": {
-        "pkgLabel": "Tip çözümler",
-        "pkgTitle": "Üç tip alarm seti",
-        "pkgNote": "Her saha ayrı hesaplanır: görevi anlatın veya planı gönderin — bir iş günü içinde kesin keşifli teklif döneriz.",
-        "packages": [
-          {
-            "name": "Daire veya ev",
-            "for": "Konut, yazlık",
-            "items": [
-              "Hareket ve açılma sensörleri",
-              "Kumandadan veya telefondan kurma",
-              "Alarmda siren ve bildirimler",
-              "Kanal açmadan kablosuz montaj"
-            ],
-            "term": "Süre: 1 gün"
-          },
-          {
-            "name": "Ofis veya mağaza",
-            "for": "Ticari mekân",
-            "items": [
-              "Hareket, cam kırılması, açılma sensörleri",
-              "Bölge bazlı ayrı kurma",
-              "Video bağı: kareli alarm",
-              "Güvenlik şirketi merkezine aktarım"
-            ],
-            "term": "Süre: 1–2 gün"
-          },
-          {
-            "name": "Çevreli saha",
-            "for": "Depo, üretim, tesis",
-            "items": [
-              "Çevre ve iç mekân koruması",
-              "Noktalarda panik butonları",
-              "Saatlerce yedek güç",
-              "Kurma-çözme kaydı"
-            ],
-            "term": "Süre: projeye göre"
-          }
-        ],
-        "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "Talepten korunan sahaya — 5 adım",
-        "stages": [
-          {
-            "t": "Mühendis ziyareti",
-            "s": "giriş bölgeleri, sensör noktaları — ücretsiz"
-          },
-          {
-            "t": "Set seçimi",
-            "s": "kablolu veya kablosuz, keşif"
-          },
-          {
-            "t": "Montaj",
-            "s": "sensörler, panel, siren — bir günde"
-          },
-          {
-            "t": "Ayar",
-            "s": "uygulama, bölgeler, kullanıcılar"
-          },
-          {
-            "t": "Teslim ve servis",
-            "s": "tetikleme testleri, garanti, bakım"
-          }
-        ],
-        "brandsLabel": "Ekipman",
-        "brandsTitle": "Güvendiğimiz paneller ve sensörler",
-        "brandsText": "Kablosuz koruma için Hikvision AX PRO; büyük sahalara kablolu sistemler — stoktan:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {

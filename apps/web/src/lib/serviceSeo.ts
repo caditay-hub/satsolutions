@@ -90,15 +90,13 @@ const ru: Record<string, ServiceSeo> = {
     title: "Установка шлагбаумов в Ташкенте — для парковки и двора | SAT",
     desc: "Установка шлагбаумов в Ташкенте: монтаж и настройка от 1 500 000 сум, подбор под ширину проезда, пульты, открытие с телефона и по номеру (ANPR). Выезд инженера бесплатно, гарантия на работы 3 года.",
   },
+  // 27.10.2026: страницы «сигнализация для дома» (alarm) и «охранные системы для бизнеса»
+  // (ohrannye-sistemy) слиты в одну — по запросу «охранная сигнализация» Google не показывал
+  // ни одну из двух. Старый адрес → 308 на /solutions/alarm (middleware.ts).
   alarm: {
-    h1: "Охранная сигнализация для квартиры и дома в Ташкенте",
-    title: "Сигнализация для квартиры и дома в Ташкенте | SAT",
-    desc: "Беспроводная охранная сигнализация для квартиры, частного дома и дачи: датчики движения и открытия, сирена, уведомления на телефон. Установка за день без штробления.",
-  },
-  "ohrannye-sistemy": {
-    h1: "Охранные системы для офиса, склада и производства — Ташкент",
-    title: "Охранные системы для бизнеса в Ташкенте | SAT",
-    desc: "Охранные системы для офисов, складов, магазинов и производства: проводные и гибридные шлейфы, вывод на пультовую охрану, интеграция со СКУД и видеонаблюдением.",
+    h1: "Охранная сигнализация в Ташкенте: квартира, дом, офис, склад",
+    title: "Охранная сигнализация в Ташкенте — дом и бизнес | SAT",
+    desc: "Беспроводные комплекты для квартиры и дома, проводные и гибридные системы для офиса и склада, вывод на пульт охраны, связка со СКУД и видеонаблюдением.",
   },
   perimeter: {
     h1: "Охрана периметра объекта в Ташкенте",
@@ -321,14 +319,9 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda shlagbaum oʻrnatish: montaj va sozlash 1 500 000 soʻmdan, kirish yoʻli kengligiga qarab tanlov, pultlar, telefondan va raqam boʻyicha (ANPR) ochish. Muhandis chiqishi bepul, ishlarga 3 yil kafolat.",
   },
   alarm: {
-    h1: "Toshkentda kvartira va uy uchun qoʻriqlash signalizatsiyasi",
-    title: "Kvartira va uy uchun signalizatsiya Toshkentda | SAT",
-    desc: "Kvartira, xususiy uy va dala hovli uchun simsiz signalizatsiya: harakat va ochilish datchiklari, sirena, telefonga xabar. Bir kunda shtrobasiz oʻrnatiladi.",
-  },
-  "ohrannye-sistemy": {
-    h1: "Ofis, ombor va ishlab chiqarish uchun qoʻriqlash tizimlari",
-    title: "Biznes uchun qoʻriqlash tizimlari Toshkentda | SAT",
-    desc: "Ofis, ombor, doʻkon va ishlab chiqarish uchun qoʻriqlash tizimlari: simli va gibrid shleyflar, pultli qoʻriqlashga chiqarish, SKUD va videokuzatuvga integratsiya.",
+    h1: "Toshkentda qoʻriqlash signalizatsiyasi: kvartira, uy, ofis, ombor",
+    title: "Qoʻriqlash signalizatsiyasi Toshkentda — uy va biznes | SAT",
+    desc: "Kvartira va uy uchun simsiz toʻplamlar, ofis, ombor va doʻkon uchun simli va gibrid tizimlar, pult qoʻriqlashiga chiqarish, SKUD va videokuzatuv bilan bogʻlash.",
   },
   perimeter: {
     h1: "Toshkentda obyekt perimetrini qoʻriqlash",
@@ -550,14 +543,9 @@ const en: Record<string, ServiceSeo> = {
     desc: "Barrier gate installation in Tashkent: mounting and setup from 1,500,000 UZS, sized to the lane, remotes, opening by phone or number plate (ANPR). Free engineer visit, 3-year warranty on works.",
   },
   alarm: {
-    h1: "Home and Apartment Security Alarms in Tashkent",
-    title: "Home Security Alarm in Tashkent — Apartments | SAT",
-    desc: "Wireless security alarms for apartments, houses and dachas in Tashkent: motion and door sensors, siren, alerts to your phone. Fitted in a day, no wall chasing.",
-  },
-  "ohrannye-sistemy": {
-    h1: "Security Systems for Offices, Warehouses and Plants",
-    title: "Business Security Systems in Tashkent | SAT",
-    desc: "Security systems for offices, warehouses, shops and production: wired and hybrid loops, connection to a monitoring station, integration with access control and CCTV.",
+    h1: "Security Alarm Systems in Tashkent: Home, Office, Warehouse",
+    title: "Security Alarm in Tashkent — Home and Business | SAT",
+    desc: "Wireless alarm kits for homes, wired and hybrid systems for offices, warehouses and shops, monitoring station link, integration with access control and CCTV.",
   },
   perimeter: {
     h1: "Perimeter Protection in Tashkent",
@@ -779,14 +767,9 @@ const tr: Record<string, ServiceSeo> = {
     desc: "Taşkent'te bariyer kurulumu: montaj ve ayar 1.500.000 UZS'den, geçişe göre seçim, kumandalar, telefondan ve plakayla (ANPR) açma. Ücretsiz keşif, işçilikte 3 yıl garanti.",
   },
   alarm: {
-    h1: "Taşkent'te ev ve daire için hırsız alarm sistemi",
-    title: "Taşkent'te Ev ve Daire Alarm Sistemi | SAT",
-    desc: "Daire, müstakil ev ve yazlık için kablosuz hırsız alarmı: hareket ve kapı sensörleri, siren, telefona bildirim. Kırım dökümsüz, bir günde kurulum. Taşkent geneli.",
-  },
-  "ohrannye-sistemy": {
-    h1: "Ofis, depo ve üretim için güvenlik sistemleri",
-    title: "Taşkent'te İşletmeler için Güvenlik Sistemleri | SAT",
-    desc: "Ofis, depo, mağaza ve üretim için güvenlik sistemleri: kablolu ve hibrit hatlar, izleme merkezine bağlantı, geçiş kontrol ve kamera sistemiyle entegrasyon.",
+    h1: "Taşkent'te Hırsız Alarm Sistemi: Daire, Ev, Ofis, Depo",
+    title: "Taşkent'te Hırsız Alarm Sistemi — Ev ve İşletme | SAT",
+    desc: "Daire ve ev için kablosuz alarm setleri, ofis, depo ve mağaza için kablolu ve hibrit sistemler, izleme merkezine bağlantı, geçiş kontrol ve kamera entegrasyonu.",
   },
   perimeter: {
     h1: "Taşkent'te tesis çevre güvenliği",
@@ -1007,14 +990,9 @@ const zh: Record<string, ServiceSeo> = {
     desc: "塔什干道闸安装：安装调试1 500 000苏姆起，按车道宽度选型，支持遥控器、手机开闸与车牌识别（ANPR）。免费上门勘察，施工质保3年。",
   },
   alarm: {
-    h1: "塔什干公寓与住宅防盗报警安装",
-    title: "塔什干公寓与住宅防盗报警系统 | SAT",
-    desc: "面向公寓、独栋住宅与别墅的无线防盗报警：红外移动探测器、门磁开关、警号，报警推送到手机。免开槽布线，一天内完成安装。",
-  },
-  "ohrannye-sistemy": {
-    h1: "面向企业与项目现场的安防报警系统",
-    title: "塔什干企业安防报警系统工程 | SAT",
-    desc: "面向办公室、仓库、门店与生产车间的安防报警系统：有线与混合防区、接入联网报警中心、与门禁及视频监控联动，配套处警流程。",
+    h1: "塔什干安防报警系统：公寓、住宅、办公室、仓库",
+    title: "塔什干安防报警系统安装 — 住宅与企业 | SAT",
+    desc: "公寓与住宅用无线报警套装，办公室、仓库与门店用有线及混合防区系统，接入联网报警中心，与门禁和视频监控联动。塔什干全城安装，一个工作日内报价。",
   },
   perimeter: {
     h1: "塔什干周界防范系统",

@@ -762,13 +762,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "indeks-cen-slabotochnye-sistemy-tashkent-2026",
     date: "2026-09-21",
-    updated: "2026-09-21",
-    related: ["cctv", "access", "fire", "network"],
+    updated: "2026-10-27",
+    related: ["slabotochnye-sistemy", "cctv", "access", "fire", "network"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr", "terminaly-i-schityvateli", "izveschateli", "kommutatory"],
     seeAlso: ["skolko-stoit-videonablyudenie", "skolko-stoit-skud", "skolko-stoit-sks-za-tochku", "kamery-domofony-novostroyki-uzbekistan"],
     loc: {
       ru: {
-        title: "Сколько стоят видеонаблюдение, СКУД и пожарная сигнализация в Ташкенте: индекс цен SAT Solutions, сентябрь 2026",
+        title: "Индекс цен SAT Solutions, сентябрь 2026: из чего складывается смета на видеонаблюдение, СКУД и пожарную сигнализацию",
         excerpt: "Медианные цены оборудования по 3 200 позициям каталога и стоимость работ по прайсу для шести типовых объектов — от магазина 200 м² до производства 1 500 м². Все цифры с датой и методикой, можно цитировать.",
         summary: [
           "IP-камера — 965 тыс. сум (медиана по 246 моделям), регистратор NVR — 1,55 млн, считыватель СКУД — 1,24 млн, дымовой извещатель — 222 тыс.",
@@ -814,7 +814,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Toshkentda videokuzatuv, SKUD va yongʻin signalizatsiyasi qancha turadi: SAT Solutions narx indeksi, 2026-yil sentabr",
+        title: "SAT Solutions narx indeksi, 2026-yil sentabr: videokuzatuv, SKUD va yongʻin signalizatsiyasi smetasi nimadan iborat",
         excerpt: "Katalogdagi 3 200 pozitsiya boʻyicha uskunalarning median narxlari va oltita tipik obyekt — 200 m² doʻkondan 1 500 m² ishlab chiqarishgacha — uchun ishlar narxi. Barcha raqamlar sana va metodika bilan, iqtibos keltirish mumkin.",
         summary: [
           "IP-kamera — 965 ming soʻm (246 model boʻyicha mediana), NVR registrator — 1,55 mln, SKUD oʻqigichi — 1,24 mln, tutun datchigi — 222 ming",
@@ -860,7 +860,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "How much do video surveillance, access control and fire alarms cost in Tashkent: SAT Solutions price index, September 2026",
+        title: "SAT Solutions price index, September 2026: what makes up the budget for video surveillance, access control and fire alarms",
         excerpt: "Median equipment prices across 3,200 catalogue items and labour costs from our price list for six typical sites — from a 200 m² shop to a 1,500 m² plant. Every figure is dated and sourced; quote freely.",
         summary: [
           "IP camera — 965k UZS (median of 246 models), NVR — 1.55m, access-control reader — 1.24m, smoke detector — 222k",
@@ -906,7 +906,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te video gözetim, geçiş kontrol ve yangın alarmı ne kadar: SAT Solutions fiyat endeksi, Eylül 2026",
+        title: "SAT Solutions fiyat endeksi, Eylül 2026: video gözetim, geçiş kontrol ve yangın alarmı bütçesini ne oluşturur",
         excerpt: "Katalogdaki 3.200 ürün için medyan ekipman fiyatları ve fiyat listemize göre altı tipik tesis — 200 m² mağazadan 1.500 m² fabrikaya — için işçilik maliyeti. Her rakam tarihli ve kaynaklı; alıntılanabilir.",
         summary: [
           "IP kamera — 965 bin UZS (246 modelin medyanı), NVR — 1,55 mln, geçiş kontrol okuyucu — 1,24 mln, duman dedektörü — 222 bin",
@@ -952,7 +952,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干视频监控、门禁和火灾报警要多少钱：SAT Solutions 价格指数，2026 年 9 月",
+        title: "SAT Solutions 价格指数，2026 年 9 月：视频监控、门禁和火灾报警的预算由什么构成",
         excerpt: "基于目录中 3,200 种产品的设备中位价，以及按价目表计算的六类典型场所（从 200 m² 商店到 1,500 m² 工厂）施工费用。每个数字均注明日期和来源，可引用。",
         summary: [
           "IP 摄像机 — 96.5 万苏姆（246 个型号中位数），NVR — 155 万，门禁读卡器 — 124 万，烟感探测器 — 22.2 万",
@@ -3518,12 +3518,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-sks-za-tochku",
     date: "2026-09-04",
-    updated: "2026-10-12",
+    updated: "2026-10-27",
     related: ["network", "slabotochnye-sistemy"],
     hubs: ["kommutatory", "telekommunikacionnye-shkafy"],
     loc: {
       ru: {
-        title: "Сколько стоит СКС за точку и что входит в эту цену",
+        title: "Из чего складывается цена СКС за точку и что в неё входит",
         excerpt: "Разбираем цену структурированной кабельной сети «за точку»: что входит, почему разброс в разы, как сравнивать сметы подрядчиков и на чём нельзя экономить.",
         sections: [
           { h: "Что такое «точка» и почему это удобная единица", p: [
@@ -3558,7 +3558,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKS nuqtasi qancha turadi va bu narxga nima kiradi",
+        title: "SKS nuqtasi narxi nimadan iborat va unga nima kiradi",
         excerpt: "Strukturali kabel tarmogʻining «nuqta» narxini tahlil qilamiz: nima kiradi, nega farq bir necha baravar, pudratchilar smetalarini qanday solishtirish va nimada tejash mumkin emas.",
         sections: [
           { h: "«Nuqta» nima va nega bu qulay birlik", p: [
@@ -3593,7 +3593,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "What structured cabling costs per point and what that price includes",
+        title: "What makes up the per-point price of structured cabling and what it includes",
         excerpt: "Breaking down the per-point price of a structured cabling system: what is included, why quotes differ several-fold, how to compare contractors and where saving backfires.",
         sections: [
           { h: "What a 'point' is and why it is a handy unit", p: [
@@ -3628,7 +3628,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Yapısal kablolama nokta başına kaça mal olur ve fiyata ne girer",
+        title: "Yapısal kablolamada nokta fiyatını ne belirler ve fiyata ne girer",
         excerpt: "Yapısal kablolamanın 'nokta başına' fiyatını ayrıştırıyoruz: neler dahil, teklifler neden katbekat farklı, yükleniciler nasıl karşılaştırılır ve nerede tasarruf geri teper.",
         sections: [
           { h: "'Nokta' nedir ve neden kullanışlı bir birim", p: [
@@ -3663,7 +3663,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干综合布线每个点位多少钱，报价里包含什么",
+        title: "综合布线每个点位的价格由什么构成，报价里包含什么",
         excerpt: "拆解结构化布线“按点位”的价格：包含哪些内容、为什么报价能差几倍、如何比较承包商报价、哪些地方省钱会翻车。",
         sections: [
           { h: "什么是“点位”、为什么好用", p: [
@@ -4478,12 +4478,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "signalizatsiya-narxi",
     date: "2026-09-03",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["alarm", "cctv"],
     hubs: ["ohrannaya-signalizaciya", "izveschateli"],
     loc: {
       ru: {
-        title: "Сколько стоит охранная сигнализация для дома и магазина",
+        title: "Из чего складывается цена охранной сигнализации для дома и магазина",
         excerpt: "Из чего складывается цена охранной сигнализации в Ташкенте: датчики, панель, монтаж, пультовая охрана. Ориентиры по типам объектов и на чём можно сэкономить без потери защиты.",
         sections: [
           { h: "Из чего складывается цена", p: [
@@ -4518,7 +4518,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Uy va doʻkon uchun qoʻriqlash signalizatsiyasi qancha turadi",
+        title: "Uy va doʻkon uchun qoʻriqlash signalizatsiyasi narxi nimadan iborat",
         excerpt: "Toshkentda qoʻriqlash signalizatsiyasi narxi nimadan yigʻiladi: datchiklar, panel, montaj, pult qoʻriqlovi. Obyekt turlari boʻyicha moʻljallar va himoyani yoʻqotmasdan nimada tejash mumkin.",
         sections: [
           { h: "Narx nimadan yigʻiladi", p: [
@@ -4553,7 +4553,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "What a burglar alarm costs for a home or a store",
+        title: "What makes up the price of a burglar alarm for a home or a store",
         excerpt: "What makes up the price of an intrusion alarm in Tashkent: sensors, panel, installation, central monitoring. Reference points by site type and where you can save without losing protection.",
         sections: [
           { h: "What the price is made of", p: [
@@ -4588,7 +4588,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Ev ve mağaza için hırsız alarmı ne kadar tutar",
+        title: "Ev ve mağaza için hırsız alarmı fiyatını ne belirler",
         excerpt: "Taşkent'te hırsız alarmı fiyatı neyden oluşur: sensörler, panel, montaj, merkez bağlantısı. Saha türüne göre referanslar ve korumadan ödün vermeden nerede tasarruf edilir.",
         sections: [
           { h: "Fiyat neyden oluşur", p: [
@@ -4623,7 +4623,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干防盗报警系统价格：住宅与商铺各要多少钱",
+        title: "防盗报警系统价格由什么构成：住宅与商铺的差别",
         excerpt: "塔什干防盗报警的价格构成：探测器、主机、安装、联网接警。按场所类型给出参考，以及哪些地方能省钱而不牺牲防护。",
         sections: [
           { h: "价格由什么构成", p: [
@@ -5295,12 +5295,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-dlya-dvora-i-parkovki",
     date: "2026-08-31",
-    updated: "2026-10-14",
+    updated: "2026-10-27",
     related: ["barrier", "parking"],
     hubs: ["shlagbaumy"],
     loc: {
       ru: {
-        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для парковки и двора: виды, автоматика, цена",
+        title: "Шлагбаум для двора и парковки: виды, автоматика и из чего складывается цена", seoTitle: "Шлагбаум для двора и парковки: виды и из чего цена",
         excerpt: "Стрела на 3–6 метров, интенсивность, управление с пульта, телефона или по номеру машины: разбираем, какой шлагбаум подходит двору, офису и ТЦ, и что входит в честную смету.",
         sections: [{ h: "Какие бывают шлагбаумы", p: ["Главные параметры — длина стрелы и интенсивность. Для двора на 3–4 метра проезда хватает базового привода с «включённостью» 50 %: открылся-закрылся несколько сотен раз в день. Бизнес-центру и ТЦ нужен интенсивный привод (70–100 %), рассчитанный на тысячи циклов, — иначе редуктор не доживёт до конца гарантии.", "Стрелы бывают круглые, прямоугольные и со светодиодной подсветкой; для длинных проездов ставят складные. В холодном климате смотрите на подогрев блока — зимой дешёвые приводы замерзают."] }, { h: "Управление: пульт, телефон, ANPR", p: ["Базовый вариант — брелоки: дёшево, но брелоки теряются и передаются посторонним. Звонок с телефона удобнее: номер жильца в белом списке, звонок бесплатный — шлагбаум открылся. Вершина удобства — камера распознавания номеров (ANPR): свои машины проезжают без остановки, гости по звонку охраннику, и каждый проезд записан с фото.", "ANPR окупается на объектах от 50 машин: исчезают очереди на въезде и спор «кто открыл». Интеграция со СКУД добавляет общий журнал: кто и когда въехал — видно в одной системе с проходами через двери."] }, { h: "Из чего складывается цена", p: ["Честная смета — это привод со стрелой, фундамент и закладные, петля индукции или фотоэлементы безопасности (чтобы стрела не легла на крышу), блок управления и выбранный способ доступа. На нестабильной сети добавьте ИБП — обесточенный шлагбаум блокирует весь двор.", "Мы ставим шлагбаумы ZKTeco и Hikvision со склада в Ташкенте: монтаж под ключ за один-два дня, с гарантией. Пришлите фото и ширину проезда — на заявку отвечаем в течение рабочего дня."] },  { h: "Монтаж, зима и обслуживание", p: [
             "Правильный монтаж — половина срока службы: фундамент или закладная под тумбу, фотоэлементы и петлевой детектор, чтобы стрела никогда не опустилась на автомобиль, заземление и аккуратная подводка питания. Для двора с постоянным потоком берите интенсивный привод: бытовой на тысячах циклов в день живёт один сезон.",
@@ -5314,7 +5314,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
       uz: {
-        title: "Hovli va avtoturargoh uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Avtoturargoh va hovli uchun shlagbaum: turlari, avtomatika, narxi",
+        title: "Hovli va avtoturargoh uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Hovli va avtoturargoh uchun shlagbaum: narxi nimadan iborat",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini koʻrib chiqamiz.",
         sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va oʻrnatma detallar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish va kafolat. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
             "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki oʻrnatma detal, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va induksion halqa detektori, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
@@ -5328,7 +5328,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Shlagbaum oʻrnatish bilan qancha turadi?", a: "Strela uzunligi, privod intensivligi va boshqaruv usuliga bogʻliq: hovli uchun bazaviy toʻplam arzonroq, ANPR li intensiv qimmatroq. Muhandis chiqishi va smeta bepul." }, { q: "Svet oʻchganda nima qilish kerak?", a: "Privodlarda qoʻlda ochish bor — strela kalit bilan koʻtariladi. Yaxshisi kichik UPS qoʻying: shlagbaum oʻchishlarni yashovchilar ishtirokisiz oʻtkazadi." }, { q: "Hovlida shlagbaumni kelishish kerakmi?", a: "Koʻp kvartirali uy hovlisi uchun mulkdorlar qarori va tuman xizmatlari bilan kelishuv kerak — maxsus texnika oʻtishi saqlanishi shart. Kelishuv uchun oʻrnatish sxemasini tayyorlashda yordam beramiz." }],
       },
       en: {
-        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes", seoTitle: "Barrier gate for a car park or yard: types, automation, price",
+        title: "A barrier gate for a yard or car park: types, automation and what a fair quote includes", seoTitle: "Barrier gate for a yard or car park: what shapes the price",
         excerpt: "A 3–6 m boom, duty cycle, control by remote, phone or plate recognition: which barrier fits a yard, an office or a mall, and what belongs in an honest estimate.",
         sections: [{ h: "Barrier types", p: ["The key parameters are boom length and duty cycle. A 3–4 m yard entrance is fine with a base drive at 50 % duty — a few hundred cycles a day. A business centre or mall needs an intensive drive (70–100 %) built for thousands of cycles, or the gearbox will not outlive the warranty.", "Booms come round, rectangular and LED-lit; long openings take folding booms. In cold climates check for cabinet heating — budget drives freeze in winter."] }, { h: "Control: remote, phone, ANPR", p: ["Remotes are the base option: cheap, but they get lost and passed around. A phone call is better: a resident's number in the whitelist, a free call — the barrier opens. The top of convenience is plate recognition (ANPR): registered cars pass without stopping, guests are let in by the guard, every pass is logged with a photo.", "ANPR pays off from about 50 cars: entrance queues disappear along with the who-opened-it disputes. Access-control integration adds one journal for gates and doors alike."] }, { h: "What makes up the price", p: ["An honest quote covers the drive with the boom, the foundation, an induction loop or safety photocells, the control unit and your chosen access method. On an unstable grid add a small UPS — a dead barrier blocks the whole yard.", "We install ZKTeco and Hikvision barriers from Tashkent stock: turnkey in one-two days, with warranty. Send a photo and the opening width — we reply to requests within the working day."] },  { h: "Installation, winter and service", p: [
             "Proper installation is half the lifespan: a foundation or embed under the cabinet, photocells and a loop detector so the boom never drops onto a car, earthing and neat power routing. For a yard with constant flow take an intensive drive: a domestic one at thousands of cycles a day lasts one season.",
@@ -5342,7 +5342,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "How much is a barrier with installation?", a: "It depends on boom length, drive duty and the control method: a base yard kit costs less, an intensive ANPR setup more. The engineer visit and the estimate are free." }, { q: "What happens during a power cut?", a: "Drives have a manual release — the boom lifts with a key. Better, add a small UPS so the barrier rides through outages on its own." }, { q: "Does a residential yard barrier need approvals?", a: "A block-of-flats yard needs an owners' decision and district approvals — emergency vehicle access must remain. We help prepare the installation scheme for approval." }],
       },
       tr: {
-        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir", seoTitle: "Otopark ve avlu için bariyer: tipler, otomasyon, fiyat",
+        title: "Avlu ve otopark için bariyer: tipler, otomasyon ve fiyat neyi içerir", seoTitle: "Avlu ve otopark için bariyer: fiyatı ne belirler",
         excerpt: "3–6 m kol, kullanım yoğunluğu, kumanda, telefon veya plaka tanımayla kontrol: avluya, ofise ve AVM'ye hangi bariyer uyar, dürüst teklif neleri kapsar.",
         sections: [{ h: "Bariyer tipleri", p: ["Ana parametreler kol uzunluğu ve yoğunluktur. 3–4 m'lik avlu girişine %50 yoğunluklu taban sürücü yeter. İş merkezi ve AVM binlerce çevrime dayanan yoğun sürücü (%70–100) ister — yoksa redüktör garantiyi çıkaramaz.", "Kollar yuvarlak, dikdörtgen ve LED ışıklı olur; uzun açıklıklara katlanır kol konur. Soğuk iklimde kabin ısıtmasına bakın — ucuz sürücüler kışın donar."] }, { h: "Kontrol: kumanda, telefon, ANPR", p: ["Kumanda taban seçenektir: ucuzdur ama kaybolur, elden ele geçer. Telefon araması daha iyidir: beyaz listedeki numaradan ücretsiz arama — bariyer açılır. Konforun zirvesi plaka tanıma (ANPR): kayıtlı araçlar durmadan geçer, misafirleri güvenlik alır, her geçiş fotoğrafla kayıtlıdır.", "ANPR yaklaşık 50 araçtan itibaren kendini öder: giriş kuyrukları ve «kim açtı» tartışması biter. Geçiş kontrolü entegrasyonu kapı ve bariyeri tek günlükte birleştirir."] }, { h: "Fiyat neyi içerir", p: ["Dürüst teklif; kol ve sürücüyü, temeli, güvenlik için indüksiyon halkası veya fotoseli, kontrol ünitesini ve seçtiğiniz erişim yolunu kapsar. Dengesiz şebekede küçük bir UPS ekleyin — elektriksiz bariyer bütün avluyu kilitler.", "Taşkent stoğundan ZKTeco ve Hikvision bariyerleri kurarız: bir-iki günde anahtar teslim, garantiyle. Fotoğraf ve açıklık genişliğini gönderin — taleplere iş günü içinde dönüş yaparız."] },  { h: "Montaj, kış ve bakım", p: [
             "Doğru montaj ömrün yarısıdır: gövde altına temel veya ankraj, kolun asla araca inmemesi için fotoseller ve loop dedektörü, topraklama ve düzenli güç hattı. Sürekli akışlı avluya yoğun tip motor alın: günde binlerce çevrimde ev tipi bir sezon dayanır.",
@@ -5356,7 +5356,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Kurulumla bariyer ne kadar?", a: "Kol uzunluğu, sürücü yoğunluğu ve kontrol yöntemine bağlıdır: avlu için taban set daha ucuz, ANPR'li yoğun set daha pahalıdır. Keşif ve teklif ücretsizdir." }, { q: "Elektrik kesilince ne olur?", a: "Sürücülerde manuel açma vardır — kol anahtarla kalkar. En iyisi küçük bir UPS eklemek: bariyer kesintileri kendi başına atlatır." }, { q: "Site avlusunda bariyer izin ister mi?", a: "Apartman avlusu için kat malikleri kararı ve ilçe onayları gerekir — acil araç geçişi korunmalıdır. Onay için kurulum şemasını hazırlamaya yardım ederiz." }],
       },
       zh: {
-        title: "塔什干小区与停车场道闸：类型、自动化与价格构成",
+        title: "小区与停车场道闸：类型、自动化与价格构成",
         excerpt: "3–6米栏杆、使用强度、遥控/电话/车牌识别控制：哪种道闸适合小区、写字楼和商场，一份实在的报价应包含什么。",
         sections: [{ h: "道闸有哪些类型", p: ["关键参数是栏杆长度和使用强度。3–4米的小区入口用50%占空比的基础机芯即可——每天几百次起落。写字楼和商场需要高强度机芯（70–100%），可承受数千次循环，否则减速箱撑不过保修期。", "栏杆有圆形、方形和LED发光款；较宽通道用折叠杆。寒冷地区注意机箱加热——便宜机芯冬天会冻住。"] }, { h: "控制方式：遥控、电话、车牌识别", p: ["遥控是基础方案：便宜，但遥控器会丢、会外借。电话开闸更方便：住户号码进白名单，免费拨打即开。最省心的是车牌识别（ANPR）：登记车辆不停车通行，访客由保安放行，每次通行都有照片记录。", "车位50个以上ANPR就回本：入口不再排队，也没有「谁开的门」之争。与门禁集成后，门和闸的通行记录在同一系统。"] }, { h: "价格由什么构成", p: ["实在的报价包括：机芯与栏杆、基础与预埋、防砸地感线圈或光电、控制器及所选的开闸方式。电网不稳的地方加配小UPS——断电的道闸会堵住整个院子。", "我们从塔什干现货安装中控智慧和海康威视道闸：一两天交钥匙，含保修。发来现场照片和通道宽度——收到需求会在一个工作日内答复。"] },  { h: "安装、过冬与维保", p: [
             "正确的安装占寿命的一半：机箱下打基础或预埋，红外对射加地感线圈保证闸杆永不砸车，接地和规整的供电走线。车流不断的院区要选重载电机：家用型每天数千次循环只能撑一季。",
@@ -5859,12 +5859,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-videonablyudenie",
     date: "2026-07-17",
-    updated: "2026-10-10",
+    updated: "2026-10-27",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       ru: {
-        title: "Сколько стоит видеонаблюдение: из чего складывается цена",
+        title: "Из чего складывается цена видеонаблюдения: камеры, регистратор, монтаж",
         excerpt: "Разбираем стоимость системы видеонаблюдения по частям: камеры, регистратор, диск, кабель и монтаж. Ориентиры цен для квартиры, магазина и склада — и на чём можно сэкономить без потери качества.",
         sections: [
           { h: "Из чего складывается цена", p: [
@@ -5892,7 +5892,7 @@ export const ARTICLES: Article[] = [
          { q: "Сколько стоит установить одну камеру видеонаблюдения?", a: "Монтаж и настройка одной внутренней камеры по прайсу — 232 000 сум, уличной — 257 000, но минимальный заказ на монтаж — 560 000 сум. С Wi-Fi камерой из каталога за 197 900 сум одна камера под ключ выходит около 758 000 сум, с IP-камерой, регистратором и диском — около 1,9 млн." }, { q: "Выгодно ли ставить сразу две камеры вместо одной?", a: "Да. Пока работы укладываются в минимальный заказ 560 000 сум, вторая камера почти не увеличивает стоимость монтажа: две Wi-Fi камеры под ключ обходятся около 1,03 млн сум против 758 000 за одну. К тому же четырёхканальный регистратор позволяет добавлять камеры без его замены." }],
       },
       uz: {
-        title: "Videokuzatuv qancha turadi: narx nimalardan tashkil topadi",
+        title: "Videokuzatuv narxi nimadan iborat: kameralar, registrator, montaj",
         excerpt: "Videokuzatuv tizimi narxini qismlarga ajratamiz: kameralar, registrator, disk, kabel va montaj. Kvartira, doʻkon va ombor uchun narx moʻljallari — hamda sifatni yoʻqotmasdan qayerda tejash mumkin.",
         sections: [
           { h: "Narx nimalardan tashkil topadi", p: [
@@ -5920,7 +5920,7 @@ export const ARTICLES: Article[] = [
          { q: "1 ta kamera oʻrnatish qancha turadi?", a: "Narxnoma boʻyicha bitta ichki kamerani oʻrnatish va sozlash — 232 000 soʻm, tashqi kamerani — 257 000, lekin montaj uchun minimal buyurtma — 560 000 soʻm. Katalogdagi 197 900 soʻmlik Wi-Fi kamera bilan bitta kamera toʻliq tayyor holda taxminan 758 000 soʻmga, registrator va diskli IP-kamera bilan esa taxminan 1,9 mln soʻmga tushadi." }, { q: "Bitta emas, birdaniga ikkita kamera qoʻygan foydaliroqmi?", a: "Ha. Ishlar 560 000 soʻmlik minimal buyurtma doirasida qolar ekan, ikkinchi kamera montaj narxini deyarli oshirmaydi: ikkita Wi-Fi kamera toʻliq tayyor holda taxminan 1,03 mln soʻm, bittasi esa 758 000 soʻm. Buning ustiga toʻrt kanalli registrator kameralarni uni almashtirmasdan qoʻshib borishga imkon beradi." }],
       },
       en: {
-        title: "How Much Does CCTV Cost: What Makes Up the Price",
+        title: "What Makes Up the Price of CCTV: Cameras, Recorder, Installation",
         excerpt: "Breaking the cost of a surveillance system into parts: cameras, recorder, disk, cabling and installation. Budget guides for an apartment, a shop and a warehouse — and where to save without losing quality.",
         sections: [
           { h: "What makes up the price", p: [
@@ -5948,7 +5948,7 @@ export const ARTICLES: Article[] = [
          { q: "How much does it cost to install one CCTV camera?", a: "Installing and configuring one indoor camera costs 232 000 UZS on our price list and an outdoor one 257 000, but the minimum installation order is 560 000 UZS. With a Wi-Fi camera from the catalogue at 197 900 UZS, one camera fully installed comes to about 758 000 UZS; with an IP camera, a recorder and a drive, about 1.9 million." }, { q: "Is it better to install two cameras instead of one?", a: "Yes. As long as the work stays within the 560 000 UZS minimum order, a second camera barely raises the installation cost: two Wi-Fi cameras fully installed come to about 1.03 million UZS versus 758 000 for one. A four-channel recorder also lets you add cameras later without replacing it." }],
       },
       tr: {
-        title: "Kamera Sistemi Ne Kadar Tutar: Fiyat Neyden Oluşur",
+        title: "Kamera Sistemi Fiyatını Ne Belirler: Kameralar, Kayıt Cihazı, Montaj",
         excerpt: "Güvenlik kamerası sisteminin maliyetini parçalara ayırıyoruz: kameralar, kayıt cihazı, disk, kablo ve montaj. Daire, mağaza ve depo için bütçe rehberi — ve kaliteden ödün vermeden nerede tasarruf edilir.",
         sections: [
           { h: "Fiyat neyden oluşur", p: [
@@ -5976,7 +5976,7 @@ export const ARTICLES: Article[] = [
          { q: "Tek bir güvenlik kamerası kurulumu ne kadar?", a: "Fiyat listemize göre bir iç mekân kamerasının montajı ve ayarı 232 000 UZS, dış mekân kamerasınınki 257 000'dir, ancak montajda asgari sipariş 560 000 UZS'dir. Katalogdaki 197 900 UZS'lik Wi-Fi kamerayla tek kamera anahtar teslim yaklaşık 758 000 UZS, IP kamera, kayıt cihazı ve diskle yaklaşık 1,9 milyon UZS tutar." }, { q: "Bir yerine iki kamera taktırmak daha mı avantajlı?", a: "Evet. İşçilik 560 000 UZS'lik asgari sipariş sınırında kaldıkça ikinci kamera montaj maliyetini neredeyse artırmaz: iki Wi-Fi kamera anahtar teslim yaklaşık 1,03 milyon UZS, tek kamera ise 758 000 UZS'dir. Ayrıca dört kanallı kayıt cihazı, cihazı değiştirmeden sonradan kamera eklemeye imkân verir." }],
       },
       zh: {
-        title: "在乌兹别克斯坦安装视频监控要花多少钱",
+        title: "视频监控价格由什么构成：摄像机、录像机与施工",
         excerpt: "把监控系统的费用拆开看：摄像机、录像机、硬盘、线缆和施工。公寓、商店和仓库的预算参考——以及哪里可以省钱而不牺牲质量。",
         sections: [
           { h: "价格由什么构成", p: [
@@ -6627,12 +6627,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "skolko-stoit-skud",
     date: "2026-07-17",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["access", "turnstile", "attendance"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Сколько стоит СКУД: цена системы контроля доступа", seoDesc: "Сколько стоит СКУД в Ташкенте: комплект на одну дверь — около 1,45 млн сум по оборудованию, офис и проходная с турникетом, карты против биометрии.",
+        title: "Из чего складывается цена СКУД: считаем систему контроля доступа по частям", seoDesc: "Из чего складывается цена СКУД: комплект на одну дверь — около 1,45 млн сум по оборудованию, офис и проходная с турникетом, карты против биометрии.",
         excerpt: "Из чего складывается цена СКУД: считаем комплект на одну дверь, офис и проходную с турникетом. Чем отличаются бюджеты карточной и биометрической систем — и где спрятаны расходы, о которых забывают.",
         sections: [
           { h: "Считаем на примере одной двери", p: [
@@ -6660,7 +6660,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKUD qancha turadi: kirishni nazorat qilish tizimi narxi", seoTitle: "SKUD tizimi narxi: bir eshik, ofis va oʻtkazish punkti", seoDesc: "SKUD tizimi narxi Toshkentda: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli oʻtkazish punkti, karta yoki biometriya.",
+        title: "SKUD narxi nimadan iborat: kirishni nazorat qilish tizimini qismlarga ajratamiz", seoTitle: "SKUD narxi nimadan iborat: eshik, ofis, oʻtkazish punkti", seoDesc: "SKUD narxi nimadan iborat: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli oʻtkazish punkti, karta yoki biometriya.",
         excerpt: "SKUD narxi nimadan yigʻiladi: bitta eshik, ofis va turniketli oʻtkazish punkti toʻplamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
         sections: [
           { h: "Bitta eshik misolida hisoblaymiz", p: [
@@ -6688,7 +6688,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "How Much Does Access Control Cost", seoDesc: "Access control cost in Tashkent: a single-door kit is about 1.45M UZS in equipment; office and turnstile entrance budgets, cards vs biometrics.",
+        title: "What Makes Up the Price of Access Control", seoDesc: "What makes up access control cost: a single-door kit is about 1.45M UZS in equipment; office and turnstile entrance budgets, cards vs biometrics.",
         excerpt: "What builds the price of an access control system: a single door, an office, and a turnstile entrance. How card and biometric budgets differ — and where the forgotten costs hide.",
         sections: [
           { h: "Starting with one door", p: [
@@ -6716,7 +6716,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Geçiş Kontrol Sistemi Ne Kadar Tutar", seoDesc: "Taşkent'te geçiş kontrol sistemi fiyatı: tek kapı seti ekipmanla yaklaşık 1,45 milyon som; ofis ve turnikeli giriş, kart ve biyometri karşılaştırması.",
+        title: "Geçiş Kontrol Sistemi Fiyatını Ne Belirler", seoDesc: "Geçiş kontrol sistemi fiyatı neyden oluşur: tek kapı seti ekipmanla yaklaşık 1,45 milyon som; ofis ve turnikeli giriş, kart ve biyometri karşılaştırması.",
         excerpt: "PDKS fiyatını ne oluşturur: tek kapı, ofis ve turnikeli giriş hesabı. Kartlı ve biyometrik bütçeler nasıl ayrışır — ve unutulan masraflar nerede saklanır.",
         sections: [
           { h: "Tek kapıyla başlayalım", p: [
@@ -6744,7 +6744,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "在乌兹别克斯坦装一套门禁系统要多少钱", seoDesc: "塔什干门禁系统价格：单门套装设备约145万苏姆；办公室与闸机门岗预算，刷卡与生物识别对比。",
+        title: "门禁系统价格由什么构成：单门、办公室与门岗", seoDesc: "门禁系统价格构成：单门套装设备约145万苏姆；办公室与闸机门岗预算，刷卡与生物识别对比。",
         excerpt: "门禁系统的价格由什么构成：单扇门、办公室和带闸机的门岗各怎么算。刷卡与生物识别的预算差在哪——以及常被遗忘的开销藏在何处。",
         sections: [
           { h: "从一扇门算起", p: [
@@ -11180,12 +11180,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "videokuzatuv-ornatish-narxi",
     date: "2026-07-30",
-    updated: "2026-10-12",
+    updated: "2026-10-27",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
     loc: {
       uz: {
-        title: "Kamera ustanovka narxi: videokuzatuv oʻrnatish bosqichlari (Toshkent)", seoTitle: "Kamera ustanovka narxi: videokuzatuv oʻrnatish (Toshkent)",
+        title: "Kamera oʻrnatish narxi nimadan iborat: videokuzatuv oʻrnatish bosqichlari", seoTitle: "Kamera oʻrnatish narxi nimadan iborat: ish bosqichlari",
         excerpt: "Kamera oʻrnatish qanday boradi: obyektni koʻrish, kameralar sonini aniqlash, kabel yotqizish, sozlash va telefondan koʻrish. Narx nimalardan tashkil topadi.",
         sections: [
           { h: "Ishlar qanday boshlanadi", p: [
@@ -11225,7 +11225,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Установка видеонаблюдения: этапы работ и из чего складывается цена", seoTitle: "Установка видеонаблюдения: этапы работ и цена в Ташкенте",
+        title: "Установка видеонаблюдения: этапы работ и из чего складывается цена", seoTitle: "Установка видеонаблюдения: этапы и из чего складывается цена",
         excerpt: "Как проходит установка камер: обследование объекта, подбор количества камер, прокладка кабеля, настройка и просмотр с телефона — и из чего складывается стоимость.",
         sections: [
           { h: "С чего начинаются работы", p: [
@@ -11265,7 +11265,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "CCTV Installation Cost: Work Stages and Price Breakdown",
+        title: "What Makes Up CCTV Installation Cost: Work Stages and Price Breakdown",
         excerpt: "How camera installation works: site survey, choosing the number of cameras, cabling, configuration and mobile viewing — and what makes up the cost.",
         sections: [
           { h: "Where the work begins", p: [
@@ -11305,7 +11305,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Kamera Kurulum Fiyatı: Montaj Aşamaları ve Maliyet",
+        title: "Kamera Kurulum Fiyatını Ne Belirler: Montaj Aşamaları ve Maliyet",
         excerpt: "Kamera kurulumu nasıl ilerler: keşif, kamera sayısının belirlenmesi, kablo çekimi, yapılandırma ve telefondan izleme — fiyat nelerden oluşur.",
         sections: [
           { h: "İşler nereden başlar", p: [
@@ -11345,7 +11345,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干视频监控安装价格：施工流程与费用构成",
+        title: "视频监控安装价格由什么构成：施工流程与费用",
         excerpt: "摄像头安装如何进行：现场勘察、确定摄像头数量、布线施工、系统调试与手机远程查看——以及费用由哪些部分构成。",
         sections: [
           { h: "工程从哪里开始", p: [
@@ -11393,13 +11393,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "turniket-narxi",
     date: "2026-08-20",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["turnstile", "access"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       ru: {
-        title: "Сколько стоит турникет с установкой в Ташкенте", seoTitle: "Сколько стоит турникет в Ташкенте: трипод от 4,33 млн сум", seoDesc: "Цены на турникеты в Ташкенте в 2026 году: трипод от 4,33 млн сум, распашной, полноростовой, с Face ID. Из чего складывается цена под ключ и где сэкономить.",
-        excerpt: "Цены на турникеты в 2026 году: трипод, распашной, полноростовой и с Face ID. Из чего складывается стоимость под ключ и на чём можно сэкономить.",
+        title: "Что влияет на стоимость турникета с установкой: разбор по статьям", seoTitle: "Из чего складывается цена турникета: трипод от 4,33 млн", seoDesc: "Из чего складывается цена турникета в 2026 году: трипод от 4,33 млн сум, распашной, полноростовой, с Face ID. Что входит в стоимость под ключ и где сэкономить.",
+        excerpt: "Разбираем стоимость турникетов 2026 года по статьям: трипод, распашной, полноростовой и с Face ID. Из чего складывается стоимость под ключ и на чём можно сэкономить.",
         sections: [
           { h: "Типы турникетов и порядок цен", p: [
             "Турникет-трипод — самый доступный вариант для офиса и проходной: KANIHAD KND-SB121 и ZKTeco TS1000 Plus стоят 4 330 900 сум, ZKTeco Saturn T1000 — 4 577 900 сум, Hikvision DS-K3G200LX-R — 5 196 900 сум. Скоростные проходы (speed gate) со стеклянными створками дороже, но не в разы: ZKTeco Saturn S1200 — 8 042 900 сум, Hikvision DS-K3B220LX — 9 280 900 сум, старшие модели с широким проёмом — от 12,7 до 18,2 млн сум. Полноростовый револьверный турникет для периметра и стадионов Hikvision DS-K3H4410-120 — 70 289 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
@@ -11433,8 +11433,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Turniket narxi qancha? Toshkentda oʻrnatish bilan", seoTitle: "Turniket narxi Toshkentda: tripod 4,33 mln soʻmdan", seoDesc: "Toshkentda turniket narxlari 2026: tripod 4,33 mln soʻmdan, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
-        excerpt: "2026-yilda turniket narxlari: tripod, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
+        title: "Turniket narxiga nima taʼsir qiladi: oʻrnatish bilan hisob", seoTitle: "Turniket narxi nimadan iborat: tripod 4,33 mln soʻmdan", seoDesc: "Turniket narxiga nima taʼsir qiladi (2026): tripod 4,33 mln soʻmdan, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
+        excerpt: "2026-yilda turniket narxiga nima taʼsir qiladi: tripod, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
         sections: [
           { h: "Turniket turlari va narxlar tartibi", p: [
             "Tripod turniket — ofis va oʻtish punkti uchun eng arzon variant: KANIHAD KND-SB121 va ZKTeco TS1000 Plus 4 330 900 soʻm, ZKTeco Saturn T1000 — 4 577 900 soʻm, Hikvision DS-K3G200LX-R — 5 196 900 soʻm. Shisha qanotli tezkor oʻtishlar (speed gate) qimmatroq, lekin bir necha barobar emas: ZKTeco Saturn S1200 — 8 042 900 soʻm, Hikvision DS-K3B220LX — 9 280 900 soʻm, keng oʻtimli katta modellar — 12,7 dan 18,2 mln soʻmgacha. Perimetr va stadionlar uchun toʻliq boʻyli aylanma turniket Hikvision DS-K3H4410-120 — 70 289 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -11468,8 +11468,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Turnstile Price in Tashkent: Supply and Installation Costs", seoTitle: "Turnstile price in Tashkent: tripod from 4.33M UZS", seoDesc: "Turnstile prices in Tashkent for 2026: tripods from 4.33M UZS, swing, full-height and Face ID models. What a turnkey install costs and where to save.",
-        excerpt: "Turnstile prices in 2026: tripod, swing, full-height and Face ID options. What a turnkey installation costs and where you can save.",
+        title: "What Makes Up the Price of a Turnstile: Supply and Installation Costs", seoTitle: "What makes up turnstile price: tripod from 4.33M UZS", seoDesc: "What makes up turnstile prices in 2026: tripods from 4.33M UZS, swing, full-height and Face ID models. What a turnkey install costs and where to save.",
+        excerpt: "What drives turnstile prices in 2026: tripod, swing, full-height and Face ID options. What a turnkey installation costs and where you can save.",
         sections: [
           { h: "Turnstile types and price ranges", p: [
             "A tripod turnstile is the most affordable option for an office entrance: the KANIHAD KND-SB121 and ZKTeco TS1000 Plus cost 4 330 900 UZS, the ZKTeco Saturn T1000 4 577 900 UZS and the Hikvision DS-K3G200LX-R 5 196 900 UZS. Speed gates with glass wings cost more, though not several times more: the ZKTeco Saturn S1200 is 8 042 900 UZS and the Hikvision DS-K3B220LX 9 280 900 UZS, while wide-aisle models run from 12.7 to 18.2 million UZS. The full-height rotor turnstile for perimeters and stadiums, Hikvision DS-K3H4410-120, is 70 289 900 UZS. Catalogue prices as of September 2026, installation not included.",
@@ -11503,8 +11503,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te Turnike Fiyatları: Montaj Dahil Maliyetler", seoTitle: "Taşkent turnike fiyatları: tripod 4,33 milyon somdan", seoDesc: "Taşkent'te 2026 turnike fiyatları: tripod 4,33 milyon somdan, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim maliyet ve tasarruf noktaları.",
-        excerpt: "2026 turnike fiyatları: tripod, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim kurulum neye mal olur, nereden tasarruf edilir.",
+        title: "Turnike Fiyatını Ne Belirler: Montaj Dahil Maliyet Kalemleri", seoTitle: "Turnike fiyatını ne belirler: tripod 4,33 milyon somdan", seoDesc: "2026'da turnike fiyatını ne belirler: tripod 4,33 milyon somdan, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim maliyet ve tasarruf noktaları.",
+        excerpt: "2026'da turnike fiyatını ne belirler: tripod, kanatlı, tam boy ve Face ID'li modeller. Anahtar teslim kurulum neye mal olur, nereden tasarruf edilir.",
         sections: [
           { h: "Turnike türleri ve fiyat aralıkları", p: [
             "Tripod turnike, ofis girişi için en ekonomik çözümdür: KANIHAD KND-SB121 ve ZKTeco TS1000 Plus 4 330 900 UZS, ZKTeco Saturn T1000 4 577 900 UZS, Hikvision DS-K3G200LX-R 5 196 900 UZS. Cam kanatlı hızlı geçişler daha pahalıdır ama kat kat değil: ZKTeco Saturn S1200 8 042 900 UZS, Hikvision DS-K3B220LX 9 280 900 UZS; geniş geçişli üst modeller 12,7–18,2 milyon UZS aralığındadır. Çevre ve stadyumlar için tam boy döner turnike Hikvision DS-K3H4410-120 ise 70 289 900 UZS. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
@@ -11538,8 +11538,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干闸机价格：设备与安装费用指南", seoTitle: "塔什干闸机价格：三辊闸433万苏姆起", seoDesc: "2026年塔什干闸机价格：三辊闸433万苏姆起，另有摆闸、全高闸与人脸识别方案。交钥匙安装费用构成与省钱要点。",
-        excerpt: "2026年闸机价格：三辊闸、摆闸、全高闸及人脸识别方案。交钥匙安装的费用构成与省钱要点。",
+        title: "闸机价格由什么构成：设备与安装费用拆解", seoTitle: "闸机价格由什么构成：三辊闸433万苏姆起", seoDesc: "2026年闸机价格由什么构成：三辊闸433万苏姆起，另有摆闸、全高闸与人脸识别方案。交钥匙安装费用构成与省钱要点。",
+        excerpt: "2026年影响闸机价格的因素：三辊闸、摆闸、全高闸及人脸识别方案。交钥匙安装的费用构成与省钱要点。",
         sections: [
           { h: "闸机类型与价格区间", p: [
             "三辊闸是办公楼入口最经济的方案：KANIHAD KND-SB121 与 ZKTeco TS1000 Plus 为 4 330 900 苏姆，ZKTeco Saturn T1000 为 4 577 900 苏姆，海康 DS-K3G200LX-R 为 5 196 900 苏姆。玻璃翼闸（速通门）更贵，但并非贵出数倍：ZKTeco Saturn S1200 为 8 042 900 苏姆，海康 DS-K3B220LX 为 9 280 900 苏姆，宽通道的高配型号在 1270 万至 1820 万苏姆之间。用于周界和体育场的全高旋转闸海康 DS-K3H4410-120 为 70 289 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
@@ -11577,13 +11577,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "domofon-narxi",
     date: "2026-08-20",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["intercom", "locks"],
     hubs: ["domofoniya"],
     loc: {
       ru: {
-        title: "Сколько стоит домофон с установкой в Ташкенте",
-        excerpt: "Цены на аудио- и видеодомофоны в 2026 году: квартира, частный дом, офис и многоквартирный дом. Стоимость установки и что влияет на смету.",
+        title: "Из чего складывается цена домофона с установкой",
+        excerpt: "Из чего складывается цена аудио- и видеодомофона в 2026 году: квартира, частный дом, офис и многоквартирный дом. Стоимость установки и что влияет на смету.",
         sections: [
           { h: "Порядок цен на домофоны", p: [
             "Самый доступный порог — автономный видеодомофон Babyphone DD3 за 370 900 сум, но это решение «на одну дверь без развития». Комплект «вызывная панель + монитор» Hikvision начинается с 865 900 сум (DS-KIS202T) и растёт до 1 088 900 сум (DS-KIS205T с монитором побольше). IP-видеодомофон с переадресацией звонка на смартфон — 1 236 900 сум за DS-KIS302-P, 1 286 900 сум за DS-KIS303-P и 1 422 900 сум за DS-KIS313-P; комплект Dahua DHI-KTH01 — 1 357 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
@@ -11617,8 +11617,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Domofon narxi qancha? Toshkentda oʻrnatish bilan",
-        excerpt: "2026-yilda audio va video domofonlar narxi: kvartira, hovli, ofis va koʻp qavatli uy uchun. Oʻrnatish qiymati va smetaga nima taʼsir qiladi.",
+        title: "Domofon narxi nimadan iborat: oʻrnatish bilan hisob",
+        excerpt: "2026-yilda audio va video domofon narxi nimadan iborat: kvartira, hovli, ofis va koʻp qavatli uy uchun. Oʻrnatish qiymati va smetaga nima taʼsir qiladi.",
         sections: [
           { h: "Domofon narxlari tartibi", p: [
             "Eng arzon chegara — 370 900 soʻmlik avtonom videodomofon Babyphone DD3, lekin bu «bitta eshik, rivoji yoʻq» yechim. Hikvisionning «chaqiruv paneli + monitor» toʻplami 865 900 soʻmdan (DS-KIS202T) boshlanadi va 1 088 900 soʻmgacha koʻtariladi (kattaroq monitorli DS-KIS205T). Qoʻngʻiroqni smartfonga yoʻnaltiruvchi IP-videodomofon — DS-KIS302-P 1 236 900 soʻm, DS-KIS303-P 1 286 900 soʻm, DS-KIS313-P 1 422 900 soʻm; Dahua DHI-KTH01 toʻplami — 1 357 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -11652,8 +11652,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Intercom Price in Tashkent: Audio, Video and IP Systems",
-        excerpt: "Audio and video intercom prices in 2026 for apartments, houses and offices. Installation costs and what drives the estimate.",
+        title: "What Makes Up the Price of an Intercom: Audio, Video and IP Systems",
+        excerpt: "What makes up audio and video intercom prices in 2026 for apartments, houses and offices. Installation costs and what drives the estimate.",
         sections: [
           { h: "Intercom price ranges", p: [
             "The lowest entry point is the standalone Babyphone DD3 video intercom at 370 900 UZS, though it is a one-door solution with nowhere to grow. A Hikvision door station + monitor kit starts at 865 900 UZS (DS-KIS202T) and reaches 1 088 900 UZS (DS-KIS205T with a larger monitor). An IP video intercom that forwards calls to your smartphone costs 1 236 900 UZS for the DS-KIS302-P, 1 286 900 UZS for the DS-KIS303-P and 1 422 900 UZS for the DS-KIS313-P; the Dahua DHI-KTH01 kit is 1 357 900 UZS. Catalogue prices as of September 2026, installation not included.",
@@ -11687,8 +11687,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te İnterkom (Diafon) Fiyatları ve Montaj",
-        excerpt: "2026 sesli ve görüntülü diafon fiyatları: daire, müstakil ev ve ofis için. Montaj maliyeti ve teklifi neler etkiler.",
+        title: "İnterkom (Diafon) Fiyatını Ne Belirler: Cihaz ve Montaj",
+        excerpt: "2026'da sesli ve görüntülü diafon fiyatını ne belirler: daire, müstakil ev ve ofis için. Montaj maliyeti ve teklifi neler etkiler.",
         sections: [
           { h: "Diafon fiyat aralıkları", p: [
             "En alt giriş noktası 370 900 UZS'lik bağımsız görüntülü diafon Babyphone DD3'tür; ancak tek kapılık, büyütülemeyen bir çözümdür. Hikvision'ın kapı paneli + monitör seti 865 900 UZS'den (DS-KIS202T) başlar ve 1 088 900 UZS'ye (daha büyük monitörlü DS-KIS205T) çıkar. Aramayı akıllı telefona yönlendiren IP görüntülü diafon: DS-KIS302-P 1 236 900 UZS, DS-KIS303-P 1 286 900 UZS, DS-KIS313-P 1 422 900 UZS; Dahua DHI-KTH01 seti 1 357 900 UZS. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
@@ -11722,8 +11722,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干可视对讲机价格：设备与安装",
-        excerpt: "2026年音频与可视对讲价格：公寓、别墅与办公室方案。安装费用及影响报价的因素。",
+        title: "可视对讲机价格由什么构成：设备与安装",
+        excerpt: "2026年音频与可视对讲价格由什么构成：公寓、别墅与办公室方案。安装费用及影响报价的因素。",
         sections: [
           { h: "对讲机价格区间", p: [
             "最低入门是 370 900 苏姆的独立可视对讲 Babyphone DD3，但它只管一扇门、没有扩展余地。海康「门口机＋室内机」套装从 865 900 苏姆起（DS-KIS202T），到 1 088 900 苏姆（屏幕更大的 DS-KIS205T）。可把呼叫转到手机的 IP 可视对讲：DS-KIS302-P 1 236 900 苏姆，DS-KIS303-P 1 286 900 苏姆，DS-KIS313-P 1 422 900 苏姆；大华 DHI-KTH01 套装 1 357 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
@@ -11761,13 +11761,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-signalizatsiyasi-narxi",
     date: "2026-08-20",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       ru: {
-        title: "Сколько стоит пожарная сигнализация в Ташкенте",
-        excerpt: "Цена пожарной сигнализации под ключ в 2026 году: за точку и за объект, адресная и безадресная система, проект, монтаж и сдача МЧС.",
+        title: "Как считать бюджет пожарной сигнализации: за точку и за объект",
+        excerpt: "Из чего складывается бюджет пожарной сигнализации под ключ в 2026 году: за точку и за объект, адресная и безадресная система, проект, монтаж и сдача МЧС.",
         sections: [
           { h: "От чего зависит цена", p: [
             "Стоимость складывается из проекта, оборудования (приёмно-контрольный прибор, извещатели, оповещатели, кабель) и монтажа. Главные множители — площадь объекта, высота потолков и тип системы: безадресная дешевле и подходит небольшим помещениям, адресная (Рубеж, Болид, Dahua) — стандарт для офисов, магазинов и складов, где важно видеть точное место срабатывания.",
@@ -11807,8 +11807,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Yongʻin signalizatsiyasi narxi qancha? Toshkentda",
-        excerpt: "2026-yilda yongʻin signalizatsiyasini toʻliq tayyor holda oʻrnatish narxi: nuqta va obyekt boʻyicha, manzilli va manzilsiz tizim, loyiha, montaj va FVVʼga topshirish.",
+        title: "Yongʻin signalizatsiyasi byudjetini qanday hisoblash: nuqta va obyekt boʻyicha",
+        excerpt: "2026-yilda yongʻin signalizatsiyasi narxi nimadan iborat: nuqta va obyekt boʻyicha, manzilli va manzilsiz tizim, loyiha, montaj va FVVʼga topshirish.",
         sections: [
           { h: "Narx nimaga bogʻliq", p: [
             "Qiymat loyiha, uskuna (qabul-nazorat pribori, xabar bergichlar, ogohlantirgichlar, kabel) va montajdan iborat. Asosiy omillar — obyekt maydoni, ship balandligi va tizim turi: manzilsiz tizim arzonroq va kichik xonalarga mos, manzilli (Rubej, Bolid, Dahua) — ofis, doʻkon va omborlar standarti, chunki qaysi datchik ishlaganini aniq koʻrsatadi.",
@@ -11848,8 +11848,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Fire Alarm System Price in Tashkent: Turnkey Costs",
-        excerpt: "Fire alarm cost in 2026: per detector and per site, addressable vs conventional, design, installation and handover to fire authorities.",
+        title: "How to Budget a Fire Alarm System: Per Detector and Per Site",
+        excerpt: "What makes up fire alarm cost in 2026: per detector and per site, addressable vs conventional, design, installation and handover to fire authorities.",
         sections: [
           { h: "What drives the price", p: [
             "The cost combines design, equipment (control panel, detectors, sounders, cable) and installation. Key multipliers are floor area, ceiling height and system type: conventional is cheaper and fits small premises; addressable (Rubezh, Bolid, Dahua) is the standard for offices, shops and warehouses where the exact alarm point matters.",
@@ -11889,8 +11889,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te Yangın Alarm Sistemi Fiyatları",
-        excerpt: "2026 anahtar teslim yangın alarmı maliyeti: nokta ve tesis bazında, adresli/adressiz sistem, proje, montaj ve itfaiye teslimi.",
+        title: "Yangın Alarm Sistemi Bütçesi Nasıl Hesaplanır: Nokta ve Tesis Bazında",
+        excerpt: "2026'da yangın alarmı maliyetini ne belirler: nokta ve tesis bazında, adresli/adressiz sistem, proje, montaj ve itfaiye teslimi.",
         sections: [
           { h: "Fiyatı ne belirler", p: [
             "Maliyet; proje, ekipman (kontrol paneli, dedektörler, sirenler, kablo) ve montajdan oluşur. Ana çarpanlar: alan, tavan yüksekliği ve sistem tipi. Adressiz sistem küçük mekânlara uygun ve ucuzdur; adresli (Rubezh, Bolid, Dahua) ofis, mağaza ve depoların standardıdır — alarmın tam yerini gösterir.",
@@ -11930,8 +11930,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干火灾报警系统价格：交钥匙费用",
-        excerpt: "2026年火灾报警造价：按点位与项目计价，总线制与多线制对比，设计、施工及消防验收。",
+        title: "火灾报警系统预算怎么算：按点位与按项目",
+        excerpt: "2026年火灾报警造价由什么构成：按点位与项目计价，总线制与多线制对比，设计、施工及消防验收。",
         sections: [
           { h: "价格由什么决定", p: [
             "费用由设计、设备（控制主机、探测器、声光报警器、线缆）和施工构成。关键因素是面积、层高和系统类型：多线制便宜、适合小场所；总线制（Rubezh、Bolid、大华）是办公、商铺和仓库的标准——能精确显示报警点位。",
@@ -11975,13 +11975,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "videoregistrator-narxi",
     date: "2026-08-20",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["cctv"],
     hubs: ["ip-videoregistratory-nvr", "zhestkie-diski"],
     loc: {
       ru: {
-        title: "Сколько стоит видеорегистратор для камер в Ташкенте",
-        excerpt: "Цены на NVR и DVR в 2026 году: 4, 8 и 16 каналов, с PoE и без, сколько добавит жёсткий диск и как не ошибиться с выбором под свои камеры.",
+        title: "Из чего складывается цена видеорегистратора для камер: NVR и DVR",
+        excerpt: "Что влияет на цену NVR и DVR в 2026 году: 4, 8 и 16 каналов, с PoE и без, сколько добавит жёсткий диск и как не ошибиться с выбором под свои камеры.",
         sections: [
           { h: "Порядок цен: NVR и DVR", p: [
             "Сетевые регистраторы (NVR) для IP-камер по каталогу: 4-канальные — от 320 900 сум (Hikvision DS-7104NI-S1/W) до 664 900 сум (Dahua DHI-NVR4104-4KS2/L); 8-канальные — от 469 900 сум (HiLook HL-NVR-108H-D) до 843 900 сум (Dahua DHI-NVR4108-4KS2/L); 16-канальные — от 803 900 сум (HiLook HL-NVR-116MH-C, Hikvision DS-7604NI-Q1) до 1 112 900 сум (Hikvision DS-7616NI-K1). Самая нижняя точка входа — двухканальный Wi-Fi-регистратор Hikvision DS-7102NI-S1/W за 308 900 сум, но он оправдан ровно под две камеры. Модель со встроенным PoE-коммутатором — Hikvision DS-7108NI-Q1/8P за 828 900 сум: дороже обычного восьмиканальника, зато убирает из сметы отдельный свитч и блоки питания, и для 4–8 камер это чаще всего выгоднее. Цены каталога на сентябрь 2026, без монтажа.",
@@ -12015,8 +12015,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Videoregistrator narxi qancha? NVR va DVR, Toshkent",
-        excerpt: "2026-yilda NVR va DVR narxlari: 4, 8 va 16 kanal, PoE bilan va usiz, qattiq disk qancha qoʻshadi va kameralarga mos registratorni qanday tanlash.",
+        title: "Videoregistrator narxi nimadan iborat: NVR va DVR",
+        excerpt: "2026-yilda NVR va DVR narxiga nima taʼsir qiladi: 4, 8 va 16 kanal, PoE bilan va usiz, qattiq disk qancha qoʻshadi va kameralarga mos registratorni qanday tanlash.",
         sections: [
           { h: "Narxlar tartibi: NVR va DVR", p: [
             "IP-kameralar uchun tarmoq registratorlari (NVR) katalog boʻyicha: 4 kanalli — 320 900 soʻmdan (Hikvision DS-7104NI-S1/W) 664 900 soʻmgacha (Dahua DHI-NVR4104-4KS2/L); 8 kanalli — 469 900 soʻmdan (HiLook HL-NVR-108H-D) 843 900 soʻmgacha (Dahua DHI-NVR4108-4KS2/L); 16 kanalli — 803 900 soʻmdan (HiLook HL-NVR-116MH-C, Hikvision DS-7604NI-Q1) 1 112 900 soʻmgacha (Hikvision DS-7616NI-K1). Eng quyi kirish nuqtasi — ikki kanalli Wi-Fi registrator Hikvision DS-7102NI-S1/W, 308 900 soʻm, lekin u aynan ikkita kameraga oqlanadi. Ichki PoE kommutatorli model — Hikvision DS-7108NI-Q1/8P, 828 900 soʻm: oddiy sakkiz kanallidan qimmat, ammo smetadan alohida switch va quvvat bloklarini olib tashlaydi, 4–8 kamera uchun koʻpincha shu foydali. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -12050,8 +12050,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "NVR and DVR Price in Tashkent: Video Recorder Costs",
-        excerpt: "NVR and DVR prices in 2026: 4, 8 and 16 channels, with or without PoE, what the hard drive adds and how to match a recorder to your cameras.",
+        title: "What Makes Up the Price of an NVR or DVR: Video Recorder Cost Breakdown",
+        excerpt: "What drives NVR and DVR prices in 2026: 4, 8 and 16 channels, with or without PoE, what the hard drive adds and how to match a recorder to your cameras.",
         sections: [
           { h: "Price ranges: NVR and DVR", p: [
             "Network recorders (NVR) for IP cameras, catalogue prices: 4-channel — from 320 900 UZS (Hikvision DS-7104NI-S1/W) to 664 900 UZS (Dahua DHI-NVR4104-4KS2/L); 8-channel — from 469 900 UZS (HiLook HL-NVR-108H-D) to 843 900 UZS (Dahua DHI-NVR4108-4KS2/L); 16-channel — from 803 900 UZS (HiLook HL-NVR-116MH-C, Hikvision DS-7604NI-Q1) to 1 112 900 UZS (Hikvision DS-7616NI-K1). The lowest entry point is the two-channel Wi-Fi recorder Hikvision DS-7102NI-S1/W at 308 900 UZS, but it only makes sense for exactly two cameras. The model with a built-in PoE switch is the Hikvision DS-7108NI-Q1/8P at 828 900 UZS: dearer than a plain eight-channel unit, yet it removes a separate switch and power supplies from the estimate, which usually pays off for 4–8 cameras. Catalogue prices as of September 2026, installation not included.",
@@ -12085,8 +12085,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te NVR ve DVR Kayıt Cihazı Fiyatları",
-        excerpt: "2026 NVR/DVR fiyatları: 4, 8 ve 16 kanal, PoE seçenekleri, hard diskin maliyeti ve kameralara uygun cihaz seçimi.",
+        title: "NVR ve DVR Kayıt Cihazı Fiyatını Ne Belirler",
+        excerpt: "2026'da NVR/DVR fiyatını ne belirler: 4, 8 ve 16 kanal, PoE seçenekleri, hard diskin maliyeti ve kameralara uygun cihaz seçimi.",
         sections: [
           { h: "Fiyat aralıkları: NVR ve DVR", p: [
             "IP kameralar için ağ kayıt cihazları (NVR), katalog fiyatları: 4 kanal — 320 900 UZS'den (Hikvision DS-7104NI-S1/W) 664 900 UZS'ye (Dahua DHI-NVR4104-4KS2/L); 8 kanal — 469 900 UZS'den (HiLook HL-NVR-108H-D) 843 900 UZS'ye (Dahua DHI-NVR4108-4KS2/L); 16 kanal — 803 900 UZS'den (HiLook HL-NVR-116MH-C, Hikvision DS-7604NI-Q1) 1 112 900 UZS'ye (Hikvision DS-7616NI-K1). En alt giriş noktası, 308 900 UZS'lik iki kanallı Wi-Fi kayıt cihazı Hikvision DS-7102NI-S1/W'dir; ancak tam olarak iki kamera için anlamlıdır. Dahili PoE switch'li model Hikvision DS-7108NI-Q1/8P, 828 900 UZS: sade sekiz kanallıdan pahalı, ama keşiften ayrı switch ve adaptörleri çıkarır; 4–8 kamerada çoğu zaman avantajlıdır. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
@@ -12120,8 +12120,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干录像机价格：NVR与DVR选购指南",
-        excerpt: "2026年NVR/DVR价格：4路、8路、16路，带PoE与否，硬盘要加多少钱，以及如何按摄像机选型。",
+        title: "录像机价格由什么构成：NVR与DVR选购指南",
+        excerpt: "2026年NVR/DVR价格由什么决定：4路、8路、16路，带PoE与否，硬盘要加多少钱，以及如何按摄像机选型。",
         sections: [
           { h: "价格区间：NVR与DVR", p: [
             "IP 摄像机用网络录像机（NVR），按目录价：4 路——320 900 苏姆（海康 DS-7104NI-S1/W）至 664 900 苏姆（大华 DHI-NVR4104-4KS2/L）；8 路——469 900 苏姆（HiLook HL-NVR-108H-D）至 843 900 苏姆（大华 DHI-NVR4108-4KS2/L）；16 路——803 900 苏姆（HiLook HL-NVR-116MH-C、海康 DS-7604NI-Q1）至 1 112 900 苏姆（海康 DS-7616NI-K1）。最低入门是 308 900 苏姆的两路 Wi-Fi 录像机海康 DS-7102NI-S1/W，但它只适合正好两台摄像机。内置 PoE 交换机的型号是海康 DS-7108NI-Q1/8P，828 900 苏姆：比普通八路机贵，却能从预算里去掉独立交换机和电源，4–8 路时通常更划算。以上为 2026 年 9 月目录价，不含施工。",
@@ -12159,12 +12159,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-xavfsizligi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     loc: {
       uz: {
-        title: "Yongʻin xavfsizligi: biznes uchun talablar, tizimlar va narxlar", seoTitle: "Yongʻin xavfsizligi: biznes uchun talablar va narxlar",
+        title: "Yongʻin xavfsizligi: biznes uchun talablar, tizimlar va byudjet", seoTitle: "Yongʻin xavfsizligi: biznes uchun talablar va byudjet",
         excerpt: "Obyekt uchun yongʻin xavfsizligi nimadan iborat: signalizatsiya, ovozli ogohlantirish, oʻt oʻchirgichlar. Tekshiruvga nima kerak va bularning barchasi qancha turadi.",
         sections: [
           { h: "Yongʻin xavfsizligi tizimi nimadan iborat", p: [
@@ -12201,7 +12201,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Пожарная безопасность объекта: системы, требования и цены",
+        title: "Пожарная безопасность объекта: системы, требования и бюджет",
         excerpt: "Из чего состоит пожарная безопасность бизнеса: сигнализация, оповещение, огнетушители. Что спросят на проверке и сколько это стоит в Ташкенте.",
         sections: [
           { h: "Из чего состоит система пожарной безопасности", p: [
@@ -12238,7 +12238,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Fire Safety for Business: Systems, Requirements and Prices",
+        title: "Fire Safety for Business: Systems, Requirements and Budget",
         excerpt: "What business fire safety consists of: alarm systems, voice evacuation, extinguishers. What inspectors check and what it all costs in Tashkent.",
         sections: [
           { h: "What a fire safety system consists of", p: [
@@ -12275,7 +12275,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "İşletmeler için Yangın Güvenliği: Sistemler, Şartlar ve Fiyatlar", seoTitle: "İşletmeler için yangın güvenliği: sistemler ve fiyatlar",
+        title: "İşletmeler için Yangın Güvenliği: Sistemler, Şartlar ve Bütçe", seoTitle: "İşletmeler için yangın güvenliği: sistemler ve bütçe",
         excerpt: "İşletme yangın güvenliği nelerden oluşur: alarm, sesli tahliye, yangın tüpleri. Denetimde neler sorulur ve Taşkent'te tüm bunlar ne kadar tutar.",
         sections: [
           { h: "Yangın güvenliği sistemi nelerden oluşur", p: [
@@ -12312,7 +12312,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "乌兹别克斯坦企业消防安全：系统、规范要求与价格",
+        title: "乌兹别克斯坦企业消防安全：系统、规范要求与预算",
         excerpt: "企业消防安全包括什么：报警系统、语音疏散、灭火器。检查时会查什么，在塔什干这一切要花多少钱。",
         sections: [
           { h: "消防安全系统的组成", p: [
@@ -12357,13 +12357,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "lokal-tarmoq-narxi",
     date: "2026-08-26",
-    updated: "2026-10-12",
+    updated: "2026-10-27",
     related: ["network", "wifi", "fiber"],
     hubs: ["kommutatory", "wi-fi-tochki-dostupa"],
     loc: {
       uz: {
-        title: "Lokal tarmoq oʻrnatish: ofis uchun narxi va bosqichlar",
-        excerpt: "Ofisda kompyuter tarmogʻi (SKS) qancha turadi: kabel, rozetkalar, kommutator va Wi-Fi. Narx nimaga bogʻliq va ish qanday bosqichlarda bajariladi.",
+        title: "Lokal tarmoq oʻrnatish: ofis uchun narx nimadan iborat va bosqichlar",
+        excerpt: "Ofisda kompyuter tarmogʻi (SKS) narxi nimadan iborat: kabel, rozetkalar, kommutator va Wi-Fi. Narx nimaga bogʻliq va ish qanday bosqichlarda bajariladi.",
         sections: [
           { h: "Lokal tarmoq nimadan iborat", p: [
             "Ofis tarmogʻi — bu strukturali kabel tizimi (SKS): har bir ish oʻrniga vitaya para kabeli, rozetkalar, patch-panel va server shkafi. Markazida kommutator turadi, internetni router taqsimlaydi, simsiz qurilmalar uchun Wi-Fi nuqtalari qoʻshiladi.",
@@ -12399,8 +12399,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Монтаж локальной сети в офисе: цена и этапы",
-        excerpt: "Сколько стоит компьютерная сеть (СКС) в офисе: кабель, розетки, коммутатор и Wi-Fi. От чего зависит цена и как идёт работа по этапам.",
+        title: "Монтаж локальной сети в офисе: из чего складывается цена и этапы работ",
+        excerpt: "Из чего складывается цена компьютерной сети (СКС) в офисе: кабель, розетки, коммутатор и Wi-Fi. От чего зависит цена и как идёт работа по этапам.",
         sections: [
           { h: "Из чего состоит локальная сеть", p: [
             "Офисная сеть — это структурированная кабельная система (СКС): витая пара к каждому рабочему месту, розетки, патч-панель и серверный шкаф. В центре — коммутатор, интернет раздаёт маршрутизатор, для беспроводных устройств добавляются точки Wi-Fi.",
@@ -12436,8 +12436,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Office Network Installation: Price and Stages",
-        excerpt: "What a structured cabling system (LAN) costs for an office: cable, sockets, switch and Wi-Fi. What drives the price and how the work proceeds.",
+        title: "Office Network Installation: What Makes Up the Price and the Work Stages",
+        excerpt: "What makes up the price of a structured cabling system (LAN) for an office: cable, sockets, switch and Wi-Fi. What drives the price and how the work proceeds.",
         sections: [
           { h: "What a local network consists of", p: [
             "An office network is a structured cabling system: twisted-pair cable to every workplace, sockets, a patch panel and a server cabinet. A switch sits at the centre, a router distributes the internet, and Wi-Fi points cover wireless devices.",
@@ -12473,8 +12473,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Ofiste Yerel Ağ Kurulumu: Fiyat ve Aşamalar",
-        excerpt: "Ofiste bilgisayar ağı (SKS) ne kadar tutar: kablo, prizler, switch ve Wi-Fi. Fiyatı ne belirler, iş hangi aşamalarla ilerler.",
+        title: "Ofiste Yerel Ağ Kurulumu: Fiyatı Ne Belirler ve Aşamalar",
+        excerpt: "Ofiste bilgisayar ağı (SKS) fiyatını ne belirler: kablo, prizler, switch ve Wi-Fi. Fiyatı ne belirler, iş hangi aşamalarla ilerler.",
         sections: [
           { h: "Yerel ağ nelerden oluşur", p: [
             "Ofis ağı yapısal kablolama sistemidir: her çalışma noktasına çift bükümlü kablo, prizler, patch panel ve sunucu kabini. Merkezde switch, interneti router dağıtır, kablosuz cihazlar için Wi-Fi noktaları eklenir.",
@@ -12510,8 +12510,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干办公室局域网布线：价格与施工流程",
-        excerpt: "办公室综合布线（局域网）要花多少钱：线缆、插座、交换机和 Wi-Fi。价格由什么决定，施工分哪些阶段。",
+        title: "办公室局域网布线：价格由什么构成与施工流程",
+        excerpt: "办公室综合布线（局域网）的价格由什么构成：线缆、插座、交换机和 Wi-Fi。价格由什么决定，施工分哪些阶段。",
         sections: [
           { h: "局域网的组成", p: [
             "办公网络是一套综合布线系统：每个工位的双绞线、插座、配线架和机柜。核心是交换机，路由器分配互联网，无线设备由 Wi-Fi 热点覆盖。",
@@ -12555,12 +12555,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "eshik-qulfi-narxi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["locks", "access", "intercom"],
     loc: {
       uz: {
-        title: "Eshik qulfi narxlari: elektron, kodli va aqlli qulflar",
-        excerpt: "Toshkentda eshik qulflari qancha turadi: elektromagnit, elektromexanik, kodli va aqlli (smart) qulflar. Kvartira, ofis va kalitka uchun nimani tanlash kerak.",
+        title: "Eshik qulfi narxi nimadan iborat: elektron, kodli va aqlli qulflar",
+        excerpt: "Eshik qulfi narxiga nima taʼsir qiladi: elektromagnit, elektromexanik, kodli va aqlli (smart) qulflar. Kvartira, ofis va kalitka uchun nimani tanlash kerak.",
         sections: [
           { h: "Qulf turlari va narxlar tartibi", p: [
             "Elektron qulflarning toʻrt asosiy turi bor. Elektromagnit — eng arzoni, ofis va podyezd eshiklari uchun: 180 kg KANIHAD ML-180AS — 147 900 soʻm, 280 kg ML-280AS — 184 900 soʻm, ML-380A — 246 900 soʻm, 500 kg ML-500A — 494 900 soʻm; unga chiqish tugmasi (110 900 soʻm) va dovodchik (ML-S203 uchun 246 900 soʻm, 100 kg gacha polotnoga ML-S505 uchun 370 900 soʻm) kerak. Elektromexanik — kalitka va tashqi eshiklarga, svet oʻchsa ham yopiq qoladi. Kodli qulf klaviatura bilan ochiladi, aqlli (smart) qulf esa telefon, barmoq izi yoki karta bilan. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -12596,8 +12596,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Цены на дверные замки: электронные, кодовые и smart",
-        excerpt: "Сколько стоят дверные замки в Ташкенте: электромагнитные, электромеханические, кодовые и умные (smart). Что выбрать для квартиры, офиса и калитки.",
+        title: "Из чего складывается цена дверного замка: электронные, кодовые и smart",
+        excerpt: "Что влияет на цену дверных замков: электромагнитные, электромеханические, кодовые и умные (smart). Что выбрать для квартиры, офиса и калитки.",
         sections: [
           { h: "Типы замков и порядок цен", p: [
             "У электронных замков четыре основных типа. Электромагнитный — самый доступный, для офисных и подъездных дверей: KANIHAD ML-180AS на 180 кг — 147 900 сум, ML-280AS на 280 кг — 184 900 сум, ML-380A — 246 900 сум, ML-500A на 500 кг — 494 900 сум; к нему нужны кнопка выхода (110 900 сум) и доводчик (246 900 сум за ML-S203, 370 900 сум за ML-S505 под полотно до 100 кг). Электромеханический — для калиток и уличных дверей, остаётся запертым при отключении света. Кодовый открывается с клавиатуры, умный (smart) — телефоном, отпечатком или картой. Цены каталога на сентябрь 2026, без монтажа.",
@@ -12633,8 +12633,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Door Lock Prices: Electronic, Coded and Smart",
-        excerpt: "What door locks cost in Tashkent: electromagnetic, electromechanical, coded and smart. What to choose for a flat, an office and a gate.",
+        title: "What Makes Up the Price of a Door Lock: Electronic, Coded and Smart",
+        excerpt: "What drives door lock prices: electromagnetic, electromechanical, coded and smart. What to choose for a flat, an office and a gate.",
         sections: [
           { h: "Lock types and price ranges", p: [
             "Electronic locks come in four main types. Electromagnetic — the most affordable, for office and entrance doors: the 180 kg KANIHAD ML-180AS at 147 900 UZS, the 280 kg ML-280AS at 184 900 UZS, the ML-380A at 246 900 UZS and the 500 kg ML-500A at 494 900 UZS; it also needs an exit button (110 900 UZS) and a closer (246 900 UZS for the ML-S203, 370 900 UZS for the ML-S505 rated to 100 kg). Electromechanical — for gates and outdoor doors, stays locked in a blackout. Coded opens from a keypad, smart — by phone, fingerprint or card. Catalogue prices as of September 2026, installation not included.",
@@ -12670,8 +12670,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Kapı Kilidi Fiyatları: Elektronik, Şifreli ve Akıllı",
-        excerpt: "Taşkent'te kapı kilitleri ne kadar: elektromanyetik, elektromekanik, şifreli ve akıllı. Daire, ofis ve bahçe kapısı için hangisi seçilmeli.",
+        title: "Kapı Kilidi Fiyatını Ne Belirler: Elektronik, Şifreli ve Akıllı",
+        excerpt: "Kapı kilidi fiyatını ne belirler: elektromanyetik, elektromekanik, şifreli ve akıllı. Daire, ofis ve bahçe kapısı için hangisi seçilmeli.",
         sections: [
           { h: "Kilit tipleri ve fiyat aralıkları", p: [
             "Elektronik kilitler dört ana tiptedir. Elektromanyetik — en uygunu, ofis ve bina girişleri için: 180 kg KANIHAD ML-180AS 147 900 UZS, 280 kg ML-280AS 184 900 UZS, ML-380A 246 900 UZS, 500 kg ML-500A 494 900 UZS; yanına çıkış butonu (110 900 UZS) ve kapı kapatıcı (ML-S203 için 246 900 UZS, 100 kg'a kadar ML-S505 için 370 900 UZS) gerekir. Elektromekanik — bahçe kapıları ve dış kapılar için, elektrik kesilse de kilitli kalır. Şifreli tuş takımıyla, akıllı kilit telefon, parmak izi veya kartla açılır. Eylül 2026 katalog fiyatları, montaj hariç.",
@@ -12707,8 +12707,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干门锁价格：电子锁、密码锁与智能锁",
-        excerpt: "塔什干门锁价格：电磁锁、电机锁、密码锁和智能锁。公寓、办公室和院门该怎么选。",
+        title: "门锁价格由什么构成：电子锁、密码锁与智能锁",
+        excerpt: "门锁价格由什么决定：电磁锁、电机锁、密码锁和智能锁。公寓、办公室和院门该怎么选。",
         sections: [
           { h: "门锁类型与价格区间", p: [
             "电子锁有四种主要类型。电磁锁最实惠，适合办公室和楼道门：180 公斤级 KANIHAD ML-180AS 147 900 苏姆，280 公斤级 ML-280AS 184 900 苏姆，ML-380A 246 900 苏姆，500 公斤级 ML-500A 494 900 苏姆；还需配出门按钮（110 900 苏姆）和闭门器（ML-S203 246 900 苏姆，适配 100 公斤门扇的 ML-S505 370 900 苏姆）。电机锁适合院门和室外门，断电时保持锁闭。密码锁用键盘开启，智能锁用手机、指纹或卡片。以上为 2026 年 9 月目录价，不含施工。",
@@ -12753,13 +12753,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "shlagbaum-narxi",
     date: "2026-08-26",
-    updated: "2026-10-14",
+    updated: "2026-10-27",
     related: ["barrier", "gates", "anpr"],
     hubs: ["shlagbaumy"],
     loc: {
       uz: {
-        title: "Shlagbaum narxi qancha? Toshkentda oʻrnatish bilan",
-        excerpt: "Toshkentda avtomatik shlagbaum narxlari: strela uzunligi, pult va raqam aniqlash (ANPR) bilan. Oʻrnatish qancha turadi va hovli, avtoturargoh, KPP uchun nimani tanlash kerak.",
+        title: "Shlagbaum narxi nimadan iborat: oʻrnatish bilan hisob",
+        excerpt: "Avtomatik shlagbaum narxiga nima taʼsir qiladi: strela uzunligi, pult va raqam aniqlash (ANPR) bilan. Oʻrnatish qancha turadi va hovli, avtoturargoh, KPP uchun nimani tanlash kerak.",
         sections: [
           { h: "Shlagbaum narxi nimaga bogʻliq", p: [
             "Asosiy omillar: strela uzunligi (3 dan 6 metrgacha), ishlash intensivligi (hovli yoki band avtoturargoh) va brend. Katalog boʻyicha hovli uchun bazaviy shlagbaum — KANIHAD KND-BGM350, 4 082 900 soʻm; oʻrta segment — ZKTeco BGM400 4 701 900 soʻm, Dahua DHI-IPMECD-1052 4 847 900 soʻm, ZKTeco CMP200 4 949 900 soʻm. Intensiv KPP uchun ZKTeco BGM500 7 052 900 soʻmga yoki premium BGM1060 9 899 900 soʻmga olinadi; past oʻtimlar uchun buklanuvchi strelali PB4130 — 6 929 900 soʻm. Almashtirish uchun alohida strela (Dahua IPMECD-0152-M30) — 597 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
@@ -12795,8 +12795,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Сколько стоит шлагбаум с установкой в Ташкенте",
-        excerpt: "Цены на автоматические шлагбаумы в Ташкенте: длина стрелы, пульты и распознавание номеров (ANPR). Сколько стоит установка и что выбрать для двора, парковки и КПП.",
+        title: "Из чего складывается цена шлагбаума с установкой",
+        excerpt: "Что влияет на цену автоматического шлагбаума: длина стрелы, пульты и распознавание номеров (ANPR). Сколько стоит установка и что выбрать для двора, парковки и КПП.",
         sections: [
           { h: "От чего зависит цена шлагбаума", p: [
             "Главные факторы: длина стрелы (от 3 до 6 метров), интенсивность работы (двор или загруженная парковка) и бренд. По каталогу базовый шлагбаум для двора — KANIHAD KND-BGM350 за 4 082 900 сум; средний сегмент — ZKTeco BGM400 за 4 701 900 сум, Dahua DHI-IPMECD-1052 за 4 847 900 сум, ZKTeco CMP200 за 4 949 900 сум. Для интенсивного КПП берут ZKTeco BGM500 за 7 052 900 сум или премиальный BGM1060 за 9 899 900 сум; складная стрела для низких проездов PB4130 — 6 929 900 сум. Отдельная стрела на замену (Dahua IPMECD-0152-M30) стоит 597 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
@@ -12832,8 +12832,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Barrier Gate Price in Tashkent: Supply and Installation",
-        excerpt: "Automatic barrier prices in Tashkent: boom length, remotes and plate recognition (ANPR). What installation costs and what to choose for a yard, a car park and a checkpoint.",
+        title: "What Makes Up the Price of a Barrier Gate: Supply and Installation",
+        excerpt: "What drives automatic barrier prices: boom length, remotes and plate recognition (ANPR). What installation costs and what to choose for a yard, a car park and a checkpoint.",
         sections: [
           { h: "What drives the barrier price", p: [
             "Main factors: boom length (3 to 6 metres), duty cycle (a yard or a busy car park) and the brand. From the catalogue, the basic yard barrier is the KANIHAD KND-BGM350 at 4 082 900 UZS; the middle segment is the ZKTeco BGM400 at 4 701 900 UZS, the Dahua DHI-IPMECD-1052 at 4 847 900 UZS and the ZKTeco CMP200 at 4 949 900 UZS. A busy checkpoint takes the ZKTeco BGM500 at 7 052 900 UZS or the premium BGM1060 at 9 899 900 UZS; the folding-boom PB4130 for low clearances is 6 929 900 UZS. A replacement boom (Dahua IPMECD-0152-M30) costs 597 900 UZS. Catalogue prices as of September 2026, installation not included.",
@@ -12869,8 +12869,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Taşkent'te Bariyer Fiyatları: Ürün ve Montaj",
-        excerpt: "Taşkent'te otomatik bariyer fiyatları: kol uzunluğu, kumandalar ve plaka tanıma (ANPR). Montaj ne kadar, avlu, otopark ve giriş için hangisi seçilmeli.",
+        title: "Bariyer Fiyatını Ne Belirler: Ürün ve Montaj",
+        excerpt: "Otomatik bariyer fiyatını ne belirler: kol uzunluğu, kumandalar ve plaka tanıma (ANPR). Montaj ne kadar, avlu, otopark ve giriş için hangisi seçilmeli.",
         sections: [
           { h: "Bariyer fiyatını ne belirler", p: [
             "Ana etkenler: kol uzunluğu (3–6 metre), kullanım yoğunluğu (avlu mu, yoğun otopark mı) ve marka. Katalogdan: avlu için temel bariyer KANIHAD KND-BGM350 4 082 900 UZS; orta segment ZKTeco BGM400 4 701 900 UZS, Dahua DHI-IPMECD-1052 4 847 900 UZS, ZKTeco CMP200 4 949 900 UZS. Yoğun giriş için ZKTeco BGM500 7 052 900 UZS veya premium BGM1060 9 899 900 UZS alınır; alçak geçişler için katlanır kollu PB4130 6 929 900 UZS. Yedek kol (Dahua IPMECD-0152-M30) 597 900 UZS. Fiyatlar Eylül 2026 katalog fiyatlarıdır, montaj hariç.",
@@ -12906,8 +12906,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干道闸价格：设备与安装",
-        excerpt: "塔什干自动道闸价格：闸杆长度、遥控器和车牌识别（ANPR）。安装多少钱，院区、停车场和门岗该怎么选。",
+        title: "道闸价格由什么构成：设备与安装",
+        excerpt: "自动道闸价格由什么决定：闸杆长度、遥控器和车牌识别（ANPR）。安装多少钱，院区、停车场和门岗该怎么选。",
         sections: [
           { h: "道闸价格由什么决定", p: [
             "主要因素：闸杆长度（3–6 米）、使用强度（院区还是繁忙停车场）和品牌。按目录，院区基础道闸是 KANIHAD KND-BGM350，4 082 900 苏姆；中间档为 ZKTeco BGM400 4 701 900 苏姆、大华 DHI-IPMECD-1052 4 847 900 苏姆、ZKTeco CMP200 4 949 900 苏姆。高频门岗选 ZKTeco BGM500 7 052 900 苏姆或高配 BGM1060 9 899 900 苏姆；净空受限处用折叠杆的 PB4130，6 929 900 苏姆。单独更换的闸杆（大华 IPMECD-0152-M30）597 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
@@ -12948,13 +12948,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "davomat-tizimi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["attendance", "access"],
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       uz: {
-        title: "Davomat tizimi: maktab, ofis va zavod uchun narxi",
-        excerpt: "Biometrik davomat tizimi qancha turadi: Face ID terminallar, kartalar, avtomatik tabel va 1C ga yuklash. Maktab, ofis va ishlab chiqarish uchun yechimlar.",
+        title: "Davomat tizimi: maktab, ofis va zavod uchun narx nimadan iborat",
+        excerpt: "Biometrik davomat tizimi narxi nimadan iborat: Face ID terminallar, kartalar, avtomatik tabel va 1C ga yuklash. Maktab, ofis va ishlab chiqarish uchun yechimlar.",
         sections: [
           { h: "Davomat tizimi qanday ishlaydi", p: [
             "Kirish joyiga terminal oʻrnatiladi: xodim yoki oʻquvchi yuz (Face ID), barmoq izi yoki karta bilan belgilanadi. Tizim kelish-ketish vaqtini avtomatik yozadi, kechikish va erta ketishlarni koʻrsatadi, tabelni oʻzi tuzadi.",
@@ -12994,8 +12994,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Система учёта посещаемости: цены для школы, офиса и завода",
-        excerpt: "Сколько стоит биометрическая система учёта посещаемости: терминалы Face ID, карты, автоматический табель и выгрузка в 1С. Решения для школ, офисов и производств.",
+        title: "Система учёта посещаемости: из чего складывается цена для школы, офиса и завода",
+        excerpt: "Из чего складывается цена биометрической системы учёта посещаемости: терминалы Face ID, карты, автоматический табель и выгрузка в 1С. Решения для школ, офисов и производств.",
         sections: [
           { h: "Как работает система учёта посещаемости", p: [
             "На входе ставится терминал: сотрудник или ученик отмечается лицом (Face ID), отпечатком или картой. Система автоматически пишет время прихода и ухода, показывает опоздания и ранние уходы, сама формирует табель.",
@@ -13035,8 +13035,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Attendance System: Prices for Schools, Offices and Factories",
-        excerpt: "What a biometric attendance system costs: Face ID terminals, cards, automatic timesheets and 1C export. Solutions for schools, offices and manufacturing.",
+        title: "Attendance System: What Makes Up the Price for Schools, Offices and Factories",
+        excerpt: "What makes up the price of a biometric attendance system: Face ID terminals, cards, automatic timesheets and 1C export. Solutions for schools, offices and manufacturing.",
         sections: [
           { h: "How an attendance system works", p: [
             "A terminal goes at the entrance: an employee or pupil checks in by face (Face ID), fingerprint or card. The system logs arrival and departure times automatically, flags lateness and builds the timesheet itself.",
@@ -13076,8 +13076,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Yoklama Sistemi: Okul, Ofis ve Fabrika İçin Fiyatlar",
-        excerpt: "Biyometrik yoklama sistemi ne kadar: Face ID terminaller, kartlar, otomatik puantaj ve 1C aktarımı. Okul, ofis ve üretim için çözümler.",
+        title: "Yoklama Sistemi: Okul, Ofis ve Fabrika İçin Fiyatı Ne Belirler",
+        excerpt: "Biyometrik yoklama sistemi fiyatını ne belirler: Face ID terminaller, kartlar, otomatik puantaj ve 1C aktarımı. Okul, ofis ve üretim için çözümler.",
         sections: [
           { h: "Yoklama sistemi nasıl çalışır", p: [
             "Girişe terminal konur: çalışan veya öğrenci yüz (Face ID), parmak izi veya kartla kaydolur. Sistem geliş-gidiş saatlerini otomatik yazar, gecikmeleri gösterir, puantajı kendisi oluşturur.",
@@ -13117,8 +13117,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干考勤系统价格：学校、办公室与工厂",
-        excerpt: "生物识别考勤系统多少钱：Face ID 终端、刷卡、自动考勤表和 1C 导出。适用于学校、办公室和制造业的方案。",
+        title: "考勤系统价格由什么构成：学校、办公室与工厂",
+        excerpt: "生物识别考勤系统价格由什么构成：Face ID 终端、刷卡、自动考勤表和 1C 导出。适用于学校、办公室和制造业的方案。",
         sections: [
           { h: "考勤系统如何工作", p: [
             "入口安装终端：员工或学生刷脸（Face ID）、指纹或卡片签到。系统自动记录到离时间，标记迟到，自动生成考勤表。",
@@ -13166,12 +13166,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "aqlli-uy-narxi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["smarthome", "cctv", "locks"],
     loc: {
       uz: {
-        title: "Aqlli uy narxi: tizim qancha turadi va nimadan boshlash kerak",
-        excerpt: "Toshkentda aqlli uy tizimi narxlari: yoritish, pardalar, iqlim, videokuzatuv va aqlli qulflar bitta ilovada. Nimadan boshlash arzon va qanday kengaytirish mumkin.",
+        title: "Aqlli uy narxi nimadan iborat va nimadan boshlash kerak",
+        excerpt: "Aqlli uy tizimi narxi nimadan iborat: yoritish, pardalar, iqlim, videokuzatuv va aqlli qulflar bitta ilovada. Nimadan boshlash arzon va qanday kengaytirish mumkin.",
         sections: [
           { h: "Aqlli uy nimalardan iborat", p: [
             "Aqlli uy — bu bitta ilovadan boshqariladigan qurilmalar toʻplami: yoritish va rozetkalar, pardalar, konditsioner boshqaruvi, videokuzatuv, aqlli qulf va datchiklar (suv toshqini, tutun, harakat).",
@@ -13207,8 +13207,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Сколько стоит умный дом: цены и с чего начать",
-        excerpt: "Цены на систему умного дома в Ташкенте: свет, шторы, климат, видеонаблюдение и умные замки в одном приложении. С чего дёшево начать и как расширять.",
+        title: "Из чего складывается цена умного дома и с чего начать",
+        excerpt: "Из чего складывается цена системы умного дома: свет, шторы, климат, видеонаблюдение и умные замки в одном приложении. С чего дёшево начать и как расширять.",
         sections: [
           { h: "Из чего состоит умный дом", p: [
             "Умный дом — это набор устройств, управляемых из одного приложения: свет и розетки, шторы, управление кондиционером, видеонаблюдение, умный замок и датчики (протечка, дым, движение).",
@@ -13244,8 +13244,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Smart Home Cost: Prices and Where to Start",
-        excerpt: "Smart home system prices in Tashkent: lighting, curtains, climate, CCTV and smart locks in one app. Where to start cheaply and how to expand.",
+        title: "What Makes Up the Cost of a Smart Home and Where to Start",
+        excerpt: "What makes up smart home system prices: lighting, curtains, climate, CCTV and smart locks in one app. Where to start cheaply and how to expand.",
         sections: [
           { h: "What a smart home consists of", p: [
             "A smart home is a set of devices run from one app: lighting and sockets, curtains, air-conditioner control, CCTV, a smart lock and sensors (leak, smoke, motion).",
@@ -13281,8 +13281,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Akıllı Ev Ne Kadar Tutar: Fiyatlar ve Nereden Başlamalı",
-        excerpt: "Taşkent'te akıllı ev fiyatları: aydınlatma, perdeler, iklim, kameralar ve akıllı kilit tek uygulamada. Ucuza nereden başlanır, nasıl genişletilir.",
+        title: "Akıllı Ev Fiyatını Ne Belirler ve Nereden Başlamalı",
+        excerpt: "Akıllı ev fiyatını ne belirler: aydınlatma, perdeler, iklim, kameralar ve akıllı kilit tek uygulamada. Ucuza nereden başlanır, nasıl genişletilir.",
         sections: [
           { h: "Akıllı ev nelerden oluşur", p: [
             "Akıllı ev tek uygulamadan yönetilen cihazlar bütünüdür: aydınlatma ve prizler, perdeler, klima kontrolü, kameralar, akıllı kilit ve sensörler (su kaçağı, duman, hareket).",
@@ -13318,8 +13318,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "塔什干智能家居多少钱：价格与入门方案",
-        excerpt: "塔什干智能家居系统价格：灯光、窗帘、空调、监控和智能锁集成在一个 App。从哪里开始最省钱，如何逐步扩展。",
+        title: "智能家居价格由什么构成：费用拆解与入门方案",
+        excerpt: "智能家居系统价格由什么构成：灯光、窗帘、空调、监控和智能锁集成在一个 App。从哪里开始最省钱，如何逐步扩展。",
         sections: [
           { h: "智能家居的组成", p: [
             "智能家居是一套由一个 App 管理的设备：灯光和插座、窗帘、空调控制、监控、智能锁和传感器（漏水、烟雾、移动）。",
@@ -13363,13 +13363,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "avtomatik-darvoza-narxi",
     date: "2026-08-26",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["gates", "barrier", "anpr"],
     hubs: ["shlagbaumy"],
     loc: {
       uz: {
-        title: "Avtomatik darvoza: privod narxi va oʻrnatish",
-        excerpt: "Darvozani avtomatlashtirish qancha turadi: suriladigan va ochiladigan darvozalar uchun privodlar, pultlar, telefondan ochish. Mavjud darvozaga oʻrnatish mumkinmi.",
+        title: "Avtomatik darvoza: privod narxi nimadan iborat va oʻrnatish",
+        excerpt: "Darvozani avtomatlashtirish narxi nimadan iborat: suriladigan va ochiladigan darvozalar uchun privodlar, pultlar, telefondan ochish. Mavjud darvozaga oʻrnatish mumkinmi.",
         sections: [
           { h: "Qanday darvozalarni avtomatlashtirish mumkin", p: [
             "Ikki asosiy tur: suriladigan (otkatnoy) va ochiladigan (raspashnoy) darvozalar. Har biriga oʻz privodi bor: suriladigan darvozaga tishli reyka bilan bitta privod, ochiladiganga har tavaqaga bittadan.",
@@ -13407,8 +13407,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       ru: {
-        title: "Автоматические ворота: цена привода и установка",
-        excerpt: "Сколько стоит автоматизация ворот: приводы для откатных и распашных ворот, пульты, открытие с телефона. Можно ли поставить автоматику на существующие ворота.",
+        title: "Автоматические ворота: из чего складывается цена привода и установки",
+        excerpt: "Из чего складывается цена автоматизации ворот: приводы для откатных и распашных ворот, пульты, открытие с телефона. Можно ли поставить автоматику на существующие ворота.",
         sections: [
           { h: "Какие ворота можно автоматизировать", p: [
             "Два основных типа: откатные и распашные ворота. У каждого свой привод: откатным нужен один привод с зубчатой рейкой, распашным — по приводу на каждую створку.",
@@ -13446,8 +13446,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "Automatic Gates: Drive Price and Installation",
-        excerpt: "What gate automation costs: drives for sliding and swing gates, remotes, phone opening. Can a drive go on your existing gates.",
+        title: "Automatic Gates: What Makes Up the Price of the Drive and Installation",
+        excerpt: "What makes up the cost of gate automation: drives for sliding and swing gates, remotes, phone opening. Can a drive go on your existing gates.",
         sections: [
           { h: "Which gates can be automated", p: [
             "Two main types: sliding and swing gates. Each takes its own drive: a sliding gate needs one drive with a gear rack, swing gates take a drive per leaf.",
@@ -13485,8 +13485,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "Otomatik Kapılar: Motor Fiyatı ve Montaj",
-        excerpt: "Kapı otomasyonu ne kadar: yana kayar ve çift kanat kapılar için motorlar, kumandalar, telefonla açma. Mevcut kapıya motor takılır mı.",
+        title: "Otomatik Kapılar: Motor Fiyatını Ne Belirler ve Montaj",
+        excerpt: "Kapı otomasyonu fiyatını ne belirler: yana kayar ve çift kanat kapılar için motorlar, kumandalar, telefonla açma. Mevcut kapıya motor takılır mı.",
         sections: [
           { h: "Hangi kapılar otomatikleştirilir", p: [
             "İki ana tip: yana kayar ve çift kanat kapılar. Her birinin kendi motoru vardır: kayar kapıya kremayerli tek motor, çift kanada kanat başına birer motor.",
@@ -13524,8 +13524,8 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "乌兹别克斯坦的自动大门：驱动器价格与安装",
-        excerpt: "大门自动化要花多少钱：平移门和对开门电机、遥控器、手机开门。现有大门能否加装电机。",
+        title: "自动大门价格由什么构成：驱动器与安装",
+        excerpt: "大门自动化价格由什么构成：平移门和对开门电机、遥控器、手机开门。现有大门能否加装电机。",
         sections: [
           { h: "哪些大门可以自动化", p: [
             "两种主要类型：平移门和对开门。各配各的电机：平移门用一台带齿条的电机，对开门每扇一台。",
@@ -13572,12 +13572,12 @@ export const ARTICLES: Article[] = [
   {
     slug: "gpon-uzbekistan",
     date: "2026-08-27",
-    updated: "2026-09-09",
+    updated: "2026-10-27",
     related: ["fiber", "network"],
     hubs: ["pon-oborudovanie", "optika-i-aksessuary"],
     loc: {
       ru: {
-        title: "GPON: как устроена оптическая сеть и сколько стоит её построить",
+        title: "GPON: как устроена оптическая сеть и из чего складывается стоимость её строительства",
         excerpt: "Что такое GPON и XPON, из чего состоит сеть — OLT, сплиттеры, ONU, — кому она нужна и сколько стоит оборудование и монтаж в Ташкенте.",
         sections: [
           { h: "Что такое GPON простыми словами", p: [
@@ -13614,7 +13614,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "GPON: optik tarmoq qanday ishlaydi va uni qurish qancha turadi",
+        title: "GPON: optik tarmoq qanday ishlaydi va uni qurish narxi nimadan iborat",
         excerpt: "GPON va XPON nima, tarmoq nimadan iborat — OLT, splitterlar, ONU — kimga kerak va Toshkentda uskuna hamda montaj qancha turadi.",
         sections: [
           { h: "GPON oddiy tilda nima", p: [
@@ -13651,7 +13651,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       en: {
-        title: "GPON: How a Passive Optical Network Works and What It Costs",
+        title: "GPON: How a Passive Optical Network Works and What Makes Up Its Cost",
         excerpt: "What GPON and XPON are, what the network consists of — OLT, splitters, ONU — who needs it and what equipment and installation cost in Tashkent.",
         sections: [
           { h: "GPON in plain words", p: [
@@ -13688,7 +13688,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       tr: {
-        title: "GPON: Pasif Optik Ağ Nasıl Çalışır ve Maliyeti Nedir",
+        title: "GPON: Pasif Optik Ağ Nasıl Çalışır ve Maliyetini Ne Belirler",
         excerpt: "GPON ve XPON nedir, ağ nelerden oluşur — OLT, splitterlar, ONU — kimin işine yarar, Taşkent'te ekipman ve montaj ne kadar tutar.",
         sections: [
           { h: "Sade dille GPON", p: [
@@ -13725,7 +13725,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       zh: {
-        title: "GPON 在乌兹别克斯坦：无源光网络原理与建设成本",
+        title: "GPON 在乌兹别克斯坦：无源光网络原理与建设成本构成",
         excerpt: "什么是 GPON 和 XPON，网络由什么组成——OLT、分光器、ONU——谁需要它，在塔什干设备和施工要多少钱。",
         sections: [
           { h: "通俗理解 GPON", p: [
@@ -13887,10 +13887,24 @@ export function articlesForProduct(serviceKey: string | null | undefined, brandS
 // Статьи, закреплённые за страницей услуги: ответ на головной запрос темы. «Что такое СКУД»
 // стоит на 8–10 месте по «скуд»/«скуд это», а на /solutions/access не выводилась — у СКУД
 // 17 статей при 6 местах; kamera-narxlari — главная статья блога по Узбекистану.
+// 27.10.2026: ценовые статьи перенацелены на «из чего складывается цена», чтобы не спорить
+// в выдаче со страницами услуг за «цена / стоимость / narxi»; взамен страница услуги должна
+// показывать свою ценовую статью первой — читатель получает и услугу, и разбор цены в одном месте.
 const SERVICE_PINNED: Record<string, string[]> = {
   access: ["chto-takoe-skud", "skolko-stoit-skud"],
   barrier: ["shlagbaum-narxi", "shlagbaum-dlya-dvora-i-parkovki"],
-  cctv: ["kamera-narxlari", "skolko-stoit-videonablyudenie"],
+  cctv: ["kamera-narxlari", "skolko-stoit-videonablyudenie", "videokuzatuv-ornatish-narxi", "videoregistrator-narxi"],
+  intercom: ["domofon-narxi"],
+  fire: ["yongin-signalizatsiyasi-narxi", "yongin-xavfsizligi"],
+  alarm: ["signalizatsiya-narxi"],
+  locks: ["eshik-qulfi-narxi"],
+  turnstile: ["turniket-narxi"],
+  smarthome: ["aqlli-uy-narxi"],
+  gates: ["avtomatik-darvoza-narxi"],
+  attendance: ["davomat-tizimi"],
+  network: ["skolko-stoit-sks-za-tochku", "lokal-tarmoq-narxi"],
+  fiber: ["gpon-uzbekistan"],
+  "slabotochnye-sistemy": ["indeks-cen-slabotochnye-sistemy-tashkent-2026"],
 };
 
 // Блок статей на странице услуги: закреплённые → те, для которых эта услуга главная

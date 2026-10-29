@@ -14,8 +14,11 @@ const REMOVED_RE = new RegExp(`^(?:/(${localeAlt}))?/products/([^/]+)/?$`);
 const OLDSITE_RE = new RegExp(`^(?:/public)?(?:/(${localeAlt}|ru))?/(product/show|products/filter|category|brand)(/.+)?$`);
 
 // Дубли услуг из БД → 308 на каноническую (найдено техпрогоном 19.07: задвоение «Охранные системы»).
+// 27.10.2026: «Охранные системы для бизнеса» (ohrannye-sistemy) слита с «сигнализацией для дома» —
+// единая страница /solutions/alarm «для дома и бизнеса»; оба старых адреса → 308 на неё (локаль сохраняется).
 const REMOVED_SERVICE_REDIRECTS: Record<string, string> = {
-  "ohrannye-sistemy-2": "ohrannye-sistemy",
+  "ohrannye-sistemy": "alarm",
+  "ohrannye-sistemy-2": "alarm",
 };
 const SVC_RE = new RegExp(`^(?:/(${localeAlt}))?/solutions/([^/]+)/?$`);
 

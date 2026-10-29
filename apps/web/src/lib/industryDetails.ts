@@ -28,8 +28,9 @@ export type IndustryDetails = {
 export const INDUSTRY_SERVICES: Record<string, string[]> = {
   industry: ["cctv", "access", "fire", "network", "perimeter", "attendance"],
   warehouse: ["cctv", "access", "fire", "network", "anpr"],
-  bank: ["cctv", "access", "ohrannye-sistemy", "attendance", "turnstile"],
-  retail: ["cctv", "ohrannye-sistemy", "access", "analytics"],
+  // 27.10.2026: «ohrannye-sistemy» слита в alarm (одна страница сигнализации для дома и бизнеса)
+  bank: ["cctv", "access", "alarm", "attendance", "turnstile"],
+  retail: ["cctv", "alarm", "access", "analytics"],
   residential: ["intercom", "cctv", "alarm", "barrier", "locks"],
   school: ["turnstile", "access", "cctv", "pa"],
   medical: ["cctv", "access", "fire", "pa"],

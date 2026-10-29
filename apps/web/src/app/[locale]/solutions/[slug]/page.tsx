@@ -224,8 +224,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     servers: ["pxt-server"],
     // 03.09: витрина на ВСЕ услуги, где в тексте описано оборудование (перелинковка
     // услуга → товары каталога с фото/описанием/ценой).
+    // 27.10.2026: «ohrannye-sistemy» слита в alarm (витрины совпадали: AX PRO, Болид, извещатели)
     alarm: ["hik-axpro", "bolid-detectors", "detectors"],
-    "ohrannye-sistemy": ["hik-axpro", "bolid-detectors", "detectors"],
     pa: ["prochee-pa", "rubezh-sirens", "bolid-sirens"],
     perimeter: ["thermal-cameras", "hik-ip-cameras", "hik-project"],
     "intellektualnoe-upravlenie-parkingom": ["zkteco-barriers", "hik-turnstiles", "displei-hik"],

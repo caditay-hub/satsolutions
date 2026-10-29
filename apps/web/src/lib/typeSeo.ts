@@ -44,11 +44,11 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
   "turnikety-i-shlagbaumy": {
     // 09.10.2026: шлагбаумы вынесены в свой раздел (shlagbaumy) — этот раздел про турникеты
     title: {
-      ru: "Турникеты для проходной в Ташкенте — купить с установкой",
-      uz: "Oʻtish punkti uchun turniketlar Toshkentda — oʻrnatish bilan",
-      en: "Turnstiles in Tashkent — Tripod, Swing & Full-Height, Installed",
-      tr: "Taşkent'te turnike — tripod, kanatlı ve boy turnike, montajlı",
-      zh: "塔什干闸机 — 三辊闸、摆闸、全高闸含安装",
+      ru: "Турникеты — каталог: триподы, калитки, полноростовые, цены",
+      uz: "Turniketlar — katalog: tripod, kalitka, toʻliq balandlikdagi",
+      en: "Turnstiles Catalogue — Tripod, Swing & Full-Height, Prices",
+      tr: "Turnike Kataloğu — Tripod, Kanatlı ve Boy Turnike, Fiyat",
+      zh: "闸机目录 — 三辊闸、摆闸、全高闸，价格",
     },
     desc: {
       ru: "Турникеты-триподы, распашные калитки и полноростовые турникеты ZKTeco и Hikvision: считыватели карт, отпечатка и лица, интеграция со СКУД и учётом времени. Склад в Ташкенте, монтаж под ключ.",

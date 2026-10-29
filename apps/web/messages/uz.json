@@ -958,15 +958,15 @@
       }
     },
     "alarm": {
-      "title": "Uy uchun qoʻriqlash signalizatsiyasi",
-      "desc": "Kvartira, xususiy uy va dala hovli uchun simsiz toʻplamlar.",
-      "intro": "Turar joy uchun qoʻriqlash signalizatsiyasi: kvartira, xususiy uy yoki dala hovli uchun simsiz toʻplam — harakat va ochilish, oyna sinishi va suv oqishi datchiklari, sirena hamda telefonga xabarnomalar. Montaj bir kunda, devorni oʻymasdan va taʼmirni buzmasdan.",
+      "title": "Qoʻriqlash signalizatsiyasi",
+      "desc": "Uy uchun simsiz toʻplamlar, biznes uchun simli tizimlar va pultli qoʻriqlash.",
+      "intro": "Kvartira, xususiy uy, ofis, ombor va doʻkon uchun qoʻriqlash signalizatsiyasi: turar joyga devorni oʻymasdan oʻrnatiladigan simsiz Hikvision AX PRO toʻplamlari, biznesga boʻlinmalar boʻyicha boʻlimlarga ajratilgan simli va gibrid Bolid shleyflari, kassir uchun trevoga tugmasi, pultli qoʻriqlashga chiqarish hamda SKUD va videokuzatuv bilan integratsiya.",
       "works": [
-        "Xonadon rejasiga mos simsiz toʻplam tanlash",
-        "Harakat, ochilish, oyna sinishi va suv oqishi datchiklari",
-        "«Tun» va «uydan chiqdik» rejimlari, uy hayvonlariga sezmaslik",
-        "Telefonga xabarnomalar, zaxira quvvat va GSM-kanal",
-        "Bir kunda montaj va oila aʼzolarini oʻqitish"
+        "Obyektni tekshirish, toʻplam tanlash va qoʻriqlash boʻlimlariga ajratish",
+        "Harakat, ochilish, oyna sinishi va suv oqishi datchiklari; Bolid shleyflari va simsiz Hikvision AX PRO",
+        "«Tun» va «uydan chiqdik» rejimlari, uy hayvonlariga sezmaslik; boʻlinma va smenalar boʻyicha huquqlar, hodisalar jurnali",
+        "Telefonga xabarnomalar, zaxira quvvat va GSM-kanal; trevoga tugmasi va pultli qoʻriqlashga chiqarish",
+        "SKUD va videokuzatuv bilan integratsiya, 1–2 kunda montaj, oʻqitish va xizmat shartnomasi"
       ],
       "faq": [
         {
@@ -980,6 +980,18 @@
         {
           "q": "Svet va internet oʻchsa nima boʻladi?",
           "a": "Xab zaxira akkumulyatorda bir necha soat ishlaydi, datchiklar oʻz batareyasida bir necha yil turadi va quvvati tugayotganini oʻzi xabar qiladi. Internet uzilganda trevoga GSM-kanal orqali ketadi — egasining va ishonchli shaxslarning telefoniga."
+        },
+        {
+          "q": "Qoʻriqlashni boʻlinmalar va smenalar orasida qanday ajratish mumkin?",
+          "a": "Obyekt boʻlimlarga ajratiladi: savdo zali va yordamchi xona, ombor va ofis, ijaraga berilgan seksiyalar alohida. Har bir boʻlimning oʻz huquqlari va uni qoʻriqlashga qoʻyish hamda olishga haqli xodimlar roʻyxati bor, jurnal esa buni kim va qachon qilganini koʻrsatadi."
+        },
+        {
+          "q": "Pultli qoʻriqlashga chiqarish nima beradi?",
+          "a": "Jismoniy javobni: trevoga boʻyicha qoʻriqlash korxonasining ekipaji yetib keladi, chiqish fakti va vaqti qayd etiladi. Javob berish reglamenti — kim chiqadi, qancha vaqtda va nimani tekshiradi — qoʻriqlash kompaniyasi bilan shartnomada yoziladi; biz signalni uzatish va uning ishonchliligi uchun javob beramiz."
+        },
+        {
+          "q": "Signalizatsiyani SKUD va videokuzatuv bilan bogʻlash nega kerak?",
+          "a": "Hodisani taxmin qilmasdan tahlil qilish uchun. Ishga tushish videoyozuvga bogʻlanadi, qoʻriqlashga qoʻyish esa oʻtish nuqtasiga: oxirgi xodim chiqdi — obyekt oʻzi qoʻriqlashga tushdi. Video bilan jurnal kamomad yoki hodisani tekshirishda hujjatga aylanadi."
         }
       ],
       "details": {
@@ -4065,99 +4077,6 @@
             "s": "tarmoqlarga — barcha stansiyalar ofisdan"
           }
         ]
-      }
-    },
-    "ohrannye-sistemy": {
-      "title": "Biznes uchun qoʻriqlash tizimlari",
-      "desc": "Obyekt signalizatsiyasi, pultli qoʻriqlash, SKUD bilan integratsiya.",
-      "intro": "Ofis, ombor, doʻkon va ishlab chiqarish uchun qoʻriqlash tizimlari: simli va gibrid shlayflar, boʻlinma va smenalar boʻyicha alohida qoʻriqlash boʻlimlari, kassir uchun trevoga tugmasi, pultli qoʻriqlashga chiqarish hamda SKUD va videokuzatuv bilan integratsiya.",
-      "works": [
-        "Obyektni tekshirish va qoʻriqlash boʻlimlariga ajratish",
-        "Simli va gibrid shlayflar, Bolid va Hikvision asboblari",
-        "Boʻlinma va smenalar boʻyicha huquqlar, hodisalar jurnali",
-        "Pultli qoʻriqlashga chiqarish va javob berish reglamenti",
-        "SKUD va videokuzatuv bilan integratsiya, xizmat shartnomasi"
-      ],
-      "faq": [
-        {
-          "q": "Qoʻriqlashni boʻlinmalar va smenalar orasida qanday ajratish mumkin?",
-          "a": "Obyekt boʻlimlarga ajratiladi: savdo zali va yordamchi xona, ombor va ofis, ijaraga berilgan seksiyalar alohida. Har bir boʻlimning oʻz huquqlari va uni qoʻriqlashga qoʻyish hamda olishga haqli xodimlar roʻyxati bor, jurnal esa buni kim va qachon qilganini koʻrsatadi."
-        },
-        {
-          "q": "Pultli qoʻriqlashga chiqarish nima beradi?",
-          "a": "Jismoniy javobni: trevoga boʻyicha qoʻriqlash korxonasining ekipaji yetib keladi, chiqish fakti va vaqti qayd etiladi. Javob berish reglamenti — kim chiqadi, qancha vaqtda va nimani tekshiradi — qoʻriqlash kompaniyasi bilan shartnomada yoziladi; biz signalni uzatish va uning ishonchliligi uchun javob beramiz."
-        },
-        {
-          "q": "Signalizatsiyani SKUD va videokuzatuv bilan bogʻlash nega kerak?",
-          "a": "Hodisani taxmin qilmasdan tahlil qilish uchun. Ishga tushish videoyozuvga bogʻlanadi, qoʻriqlashga qoʻyish esa oʻtish nuqtasiga: oxirgi xodim chiqdi — obyekt oʻzi qoʻriqlashga tushdi. Video bilan jurnal kamomad yoki hodisani tekshirishda hujjatga aylanadi."
-        }
-      ],
-      "details": {
-        "pkgLabel": "Tipik yechimlar",
-        "pkgTitle": "Uch tipovoy qoʻriqlash komplekti",
-        "pkgNote": "Har obyektni alohida hisoblaymiz: vazifani yozing yoki planni yuboring — bir ish kuni ichida aniq smetali tijorat taklifini qaytaramiz.",
-        "packages": [
-          {
-            "name": "Kvartira yoki uy",
-            "for": "Turar joy, dala hovli",
-            "items": [
-              "Harakat va ochilish datchiklari",
-              "Brelok yoki telefondan qoʻyish",
-              "Trevogada sirena va bildirishnomalar",
-              "Shtrobsiz simsiz montaj"
-            ],
-            "term": "Muddat: 1 kun"
-          },
-          {
-            "name": "Ofis yoki doʻkon",
-            "for": "Tijorat xonasi",
-            "items": [
-              "Harakat, oyna sinishi, ochilish datchiklari",
-              "Zonalar boʻyicha alohida qoʻyish",
-              "Video bilan bogʻlam: kadrli trevoga",
-              "Qoʻriqlash kompaniyasi pultiga chiqarish"
-            ],
-            "term": "Muddat: 1–2 kun"
-          },
-          {
-            "name": "Perimetrli obyekt",
-            "for": "Ombor, ishlab chiqarish, baza",
-            "items": [
-              "Perimetr va xonalar qoʻriqlovi",
-              "Postlarda trevoga tugmalari",
-              "Ish soatlariga zaxira quvvat",
-              "Qoʻyish va olishlar jurnali"
-            ],
-            "term": "Muddat: loyiha boʻyicha"
-          }
-        ],
-        "stagesLabel": "Qanday ishlaymiz",
-        "stagesTitle": "Arizadan qoʻriqlanadigan obyektgacha — 5 qadam",
-        "stages": [
-          {
-            "t": "Muhandis chiqishi",
-            "s": "kirish zonalari, datchik nuqtalari — bepul"
-          },
-          {
-            "t": "Komplekt tanlash",
-            "s": "simli yoki simsiz, smeta"
-          },
-          {
-            "t": "Montaj",
-            "s": "datchiklar, panel, sirena — bir kunda"
-          },
-          {
-            "t": "Sozlash",
-            "s": "ilova, zonalar, foydalanuvchilar"
-          },
-          {
-            "t": "Topshirish va servis",
-            "s": "ishga tushish testi, kafolat, TX"
-          }
-        ],
-        "brandsLabel": "Uskunalar",
-        "brandsTitle": "Ishonadigan panellar va datchiklar",
-        "brandsText": "Hikvision AX PRO — simsiz qoʻriqlash; yirik obyektlarga simli tizimlar — ombordan:"
       }
     },
     "intellektualnoe-upravlenie-parkingom": {
