@@ -330,7 +330,9 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             <Image src={brandLanding.logoUrl} alt={brandLanding.name} fill className="object-contain object-left" sizes="120px" />
           </span>
         ) : null}
-        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{isTypePage ? (typeH1 ?? localizeCatName(type as string, locale)) : groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : brandLanding ? (brandLanding.seoH1 ?? brandLanding.name) : tnav("products")}</h1>
+        {/* Группа из одного типа (Умный дом, IP-телефония, Дисплеи) считается тип-страницей — её H1 всё равно
+            берём из оверлея группы, иначе на странице стояло голое имя типа при каталожном title (29.10.2026) */}
+        <h1 className="text-xl sm:text-2xl font-black tracking-tight">{groupLanding ? (groupLanding.seoH1 ?? groupLanding.name) : isTypePage ? (typeH1 ?? localizeCatName(type as string, locale)) : brandLanding ? (brandLanding.seoH1 ?? brandLanding.name) : tnav("products")}</h1>
         <span className="text-xs text-slate-500 font-bold uppercase tracking-wider">{tc("found")}: {formatNumber(total)}</span>
       </div>
 
