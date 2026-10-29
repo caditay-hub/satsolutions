@@ -33,6 +33,525 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "kamery-v-chastnyh-shkolah-2026",
+    "date": "2026-10-29",
+    "related": [
+      "cctv",
+      "school",
+      "alarm",
+      "obsluzhivanie"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr"
+    ],
+    "brands": [
+      "hikvision"
+    ],
+    "seeAlso": [
+      "videonablyudenie-personalnye-dannye-uzbekistan",
+      "skolko-stoit-videonablyudenie",
+      "normy-slabotochnye-sistemy-uzbekistan"
+    ],
+    "products": [
+      "hik-ds-2cd2143g2-iu-2-8mm-o-std",
+      "hik-ds-7616nxi-k2",
+      "pro-seagate-skyhawk-hdd-6tb-dubai"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Камеры в частных школах и детсадах с 1 июля 2026: звук, онлайн и 6 месяцев архива — что требуется и как уложиться",
+        "seoTitle": "Камеры в частных школах с 1 июля 2026: требования и решение",
+        "seoDesc": "ПКМ № 271 от 21.05.2026: частные школы, детсады и учебные центры — камеры внутри и снаружи, запись звука, онлайн, архив 6 месяцев. Что ставить и как считать.",
+        "excerpt": "С 1 июля 2026 года наличие камер видеонаблюдения со звуком, онлайн-трансляцией и архивом не меньше шести месяцев стало лицензионным требованием для негосударственных школ, детских садов и учебных центров. Разбираем, что именно требует постановление, сколько камер и дисков нужно школе на 300 учеников и детсаду на 100 детей, как считать архив и во что это обходится.",
+        "sections": [
+          {
+            "h": "Что изменилось с 1 июля 2026 года",
+            "p": [
+              "Постановление Кабинета Министров № 271 от 21 мая 2026 года внесло изменения в Единое положение о лицензировании отдельных видов деятельности через специальную электронную систему (утверждено ПКМ № 80 от 21 февраля 2022 года). Для негосударственных образовательных организаций появилось новое лицензионное требование: здания и помещения, где оказываются образовательные услуги, должны быть оборудованы внутренними и наружными камерами видеонаблюдения с возможностью онлайн-трансляции и функцией записи звука, а записи должны храниться не менее шести месяцев.",
+              "Требование действует с 1 июля 2026 года и распространяется и на работающие организации, и на новые. Поскольку это именно лицензионное требование, его несоблюдение по Закону «О лицензировании, разрешительных и уведомительных процедурах» может стать основанием для аннулирования лицензии на образовательную деятельность. Под негосударственными образовательными организациями на практике понимаются частные школы, детские сады, учебные центры и курсы, работающие по лицензии.",
+              "Через два месяца вышло второе постановление — ПКМ № 425 от 31 июля 2026 года «О мерах по дальнейшему совершенствованию системы безопасности государственных и негосударственных образовательных учреждений», оно действует с 1 августа 2026 года. Там речь уже обо всех учебных заведениях: охранная сигнализация, тревожные кнопки, видеонаблюдение и их техническое обслуживание, физическая и техническая охрана на договорной основе в рамках концепции «Безопасное образование» (ПП-360 от 29 ноября 2025 года). Ответственность за безопасность возложена на руководство учреждения. Точные формулировки обоих документов стоит сверить по своей ситуации в национальной базе законодательства — ниже мы разбираем техническую сторону."
+            ]
+          },
+          {
+            "h": "Четыре требования и что каждое значит на практике",
+            "p": [
+              "Камеры внутри и снаружи. Внутри — учебные помещения, коридоры, холлы, столовая, спортзал; снаружи — входы, двор, площадки, периметр и парковка. Слепых зон в местах, где находятся дети, быть не должно, при этом в раздевалках, санузлах и медицинском кабинете камеры не ставятся — это ограничение закона о персональных данных, а не постановления.",
+              "Запись звука. Нужна камера со встроенным микрофоном или с аудиовходом под внешний микрофон. У Hikvision встроенный микрофон обозначается буквой U в конце индекса (например, DS-2CD2143G2-IU), у Dahua — суффиксами S или SA. Мало купить такую камеру: звуковой поток нужно включить в настройках регистратора, иначе архив будет без звука, а при проверке это обнаружится первым делом.",
+              "Онлайн-трансляция. Это возможность смотреть камеры в реальном времени не только с монитора охраны, а через интернет — с телефона директора, завуча или ответственного за безопасность. Технически это приложение регистратора (Hik-Connect, DMSS) или серверная система для нескольких филиалов; нужен стабильный интернет с запасом исходящей скорости и настроенные права доступа.",
+              "Архив шесть месяцев. Самое дорогое требование: 182 дня записи со всех камер. Объём зависит от разрешения, кодека и режима записи, поэтому ниже отдельный раздел с расчётом."
+            ]
+          },
+          {
+            "h": "Сколько камер нужно школе и детскому саду",
+            "p": [
+              "Частная школа на 250–300 учеников: 12 классов, 3–4 коридора по этажам, 2 входа, столовая, спортзал, двор и периметр — обычно 22–26 камер. Детский сад на 100 детей: 6 групповых комнат, коридоры, вход, пищеблок, игровая площадка — 10–14 камер. Учебный центр на несколько аудиторий укладывается в 6–10 камер. Это ориентир по типовым планировкам; точное число даёт осмотр.",
+              "Внутри ставятся купольные камеры 4 Мп с объективом 2,8 мм и микрофоном: угол обзора около 100° закрывает класс с одной точки. На входах — цилиндрические камеры с цветной ночной съёмкой, чтобы лица были различимы вечером. На дворе и периметре — уличные камеры 4 Мп в антивандальном корпусе, при необходимости с ИК-подсветкой на 30–50 м.",
+              "Все камеры питаются по PoE от коммутатора, поэтому к каждой идёт один кабель витой пары. Для школы на 24 камеры это один-два PoE-коммутатора на 16–24 порта и один регистратор на 32 канала или два на 16."
+            ]
+          },
+          {
+            "h": "Главный вопрос — как уместить шесть месяцев архива",
+            "p": [
+              "Объём архива считается просто: битрейт камеры умножаем на секунды в сутках и на 182 дня, делим на 8 — получаем байты. Камера 4 Мп с кодеком H.265 при постоянной записи даёт около 2 Мбит/с, это примерно 21 ГБ в сутки и около 3,9 ТБ за полгода на одну камеру. В школе камеры нужны в основном в учебные часы, а H.265+ сильно сжимает статичную картинку пустого класса, поэтому реальный расход обычно 1,5–2,5 ТБ на камеру за полгода.",
+              "Для школы на 24 камеры это 40–60 ТБ: регистратор на 8 дисков или два регистратора на 16 каналов с четырьмя дисками по 10–12 ТБ каждый. Детскому саду на 12 камер хватит одного регистратора на 16 каналов с четырьмя дисками по 6–8 ТБ, то есть 24–32 ТБ. Учебный центр на 8 камер — регистратор на 8 каналов и два диска по 8–10 ТБ.",
+              "Диски берутся только серии для видеонаблюдения — Seagate SkyHawk или WD Purple: они рассчитаны на круглосуточную запись с нескольких потоков, обычные диски для компьютера в регистраторе выходят из строя за год-полтора. Регистратор настраивается на перезапись по кругу с глубиной 190 дней, а раз в месяц проверяется, что самая старая запись действительно старше шести месяцев."
+            ]
+          },
+          {
+            "h": "Онлайн-доступ и звук: что настроить, чтобы не было проблем",
+            "p": [
+              "Для онлайн-просмотра регистратор подключается к интернету; приложение показывает камеры по дополнительному потоку низкого разрешения, поэтому даже на 24 камеры достаточно исходящей скорости 8–10 Мбит/с. Права настраиваются по ролям: директор видит всё, воспитатель — только свою группу, охрана — входы и периметр. Пароли по умолчанию меняются при запуске, прошивки обновляются — это вопрос и безопасности, и закона о персональных данных.",
+              "Запись звука делает камеры источником персональных данных ещё в большей степени, чем видео. Об этом уведомляют сотрудников и родителей, на входах вешают таблички о видеонаблюдении с записью звука, а внутренний регламент описывает, кто и зачем имеет доступ к записям и как они выдаются по запросу. Подробнее — в нашей статье о видеонаблюдении и персональных данных.",
+              "Тревожная кнопка и охранная сигнализация из ПКМ № 425 ставятся на тот же щит, что и регистратор: кнопка у охраны и в кабинете директора, извещатели на входах и в помещениях, где хранятся ценности. Один подрядчик на видеонаблюдение, сигнализацию и обслуживание избавляет от спора «чья это зона», когда что-то не работает."
+            ]
+          },
+          {
+            "h": "Во что это обходится",
+            "p": [
+              "Цены оборудования — из нашего каталога, они обновляются и меняются: купольная камера 4 Мп с микрофоном Hikvision DS-2CD2143G2-IU — от 914 900 сум, цилиндрическая 4 Мп DS-2CD1043G2-LIU — от 568 900 сум, регистратор на 16 каналов DS-7616NXI-K2 — от 1 731 900 сум, диск для видеонаблюдения SkyHawk 6 ТБ — от 2 721 900 сум. Монтаж одной камеры с прокладкой кабеля в коробе — 155 000–180 000 сум, пусконаладка регистратора, звука и онлайн-доступа входит в работы.",
+              "Детский сад на 12 камер по этим ценам укладывается примерно в 22–27 млн сум с дисками на полгода архива и монтажом; школа на 24 камеры — в 42–55 млн сум в зависимости от доли уличных камер и глубины архива. Это ориентиры по типовому проекту; смету по вашему зданию мы возвращаем в течение рабочего дня после осмотра.",
+              "На чём экономить нельзя: на дисках (обычные вместо серии для видеонаблюдения), на микрофонах (камеры без звука не закрывают требование) и на запасе архива (ставить ровно 182 дня опасно — любой простой камеры съедает запас). На чём можно: внутри классов достаточно 4 Мп, а не 8, а во двор не нужны поворотные камеры."
+            ]
+          },
+          {
+            "h": "Порядок работ, чтобы уложиться в срок",
+            "p": [
+              "Первый шаг — осмотр здания и схема расстановки: где камеры, где коммутаторы и регистратор, как идут трассы. Второй — смета с расчётом архива под ваше число камер. Третий — монтаж: школу на 24 камеры бригада делает за 3–4 рабочих дня, детский сад — за 2 дня, учебный центр — за день. Четвёртый — настройка звука, онлайн-доступа и глубины архива, проверка записи по каждой камере.",
+              "При сдаче вы получаете схему, список оборудования с серийными номерами, настроенные приложения на телефонах ответственных и инструкцию для охраны. На монтаж мы даём гарантию 3 года, на оборудование — гарантию производителя от одного до трёх лет.",
+              "Дальше — договор обслуживания: ПКМ № 425 прямо требует техническое обслуживание систем безопасности. По договору мы проверяем камеры, диски и глубину архива, обновляем прошивки и ведём журнал — то, что в первую очередь смотрят при проверке."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Касается ли требование государственных школ?",
+            "a": "ПКМ № 271 о лицензионном требовании касается негосударственных организаций. Для государственных и негосударственных учреждений действует ПКМ № 425 от 31 июля 2026 года: охранная сигнализация, тревожные кнопки, видеонаблюдение и их обслуживание — без привязки к лицензии."
+          },
+          {
+            "q": "У нас уже стоят камеры без звука. Их нужно менять?",
+            "a": "Не обязательно все. Проверяем, есть ли у камер аудиовход или встроенный микрофон, пишет ли регистратор звук и хватает ли дисков на полгода. Чаще всего дооснащаются камеры в классах, добавляются диски и настраивается онлайн-доступ, а уличные камеры остаются."
+          },
+          {
+            "q": "Можно ли хранить архив в облаке?",
+            "a": "Можно, но полгода записи с двух десятков камер в облаке стоит дороже дисков уже за первый год. Обычно архив держат на регистраторе в здании, а облако или приложение используют для онлайн-просмотра."
+          },
+          {
+            "q": "Сколько интернета нужно для онлайн-трансляции?",
+            "a": "Приложение показывает камеры по второму потоку низкого разрешения, поэтому на 24 камеры хватает 8–10 Мбит/с исходящей скорости. Важнее стабильность канала и резервный маршрут, если интернет пропадёт."
+          },
+          {
+            "q": "Кто может смотреть записи?",
+            "a": "Это определяет внутренний регламент организации по закону о персональных данных: руководство, ответственный за безопасность, охрана в рамках своих задач. Сотрудников и родителей уведомляют о видеонаблюдении с записью звука, на входах размещаются таблички."
+          },
+          {
+            "q": "Что будет, если не успеть?",
+            "a": "Наличие камер с указанными функциями — лицензионное требование, а несоблюдение лицензионных требований по закону может стать основанием для аннулирования лицензии. Детский сад оснащается за 2 рабочих дня, школа — за 3–4, поэтому успеть реально и сейчас."
+          }
+        ],
+        "summary": [
+          "С 1 июля 2026 года камеры внутри и снаружи, запись звука, онлайн-трансляция и архив 6 месяцев — лицензионное требование для частных школ, детсадов и учебных центров (ПКМ № 271).",
+          "ПКМ № 425 с 1 августа 2026 года добавляет охранную сигнализацию, тревожные кнопки и обслуживание систем для всех учебных заведений.",
+          "Школе на 300 учеников нужно 22–26 камер и 40–60 ТБ архива, детсаду на 100 детей — 10–14 камер и 24–32 ТБ; диски только серии для видеонаблюдения.",
+          "Камеры со звуком: индекс с буквой U у Hikvision, S/SA у Dahua; звук включается в регистраторе отдельно.",
+          "Детсад — 22–27 млн сум, школа — 42–55 млн сум с монтажом; монтаж 2–4 дня, гарантия на работы 3 года, дальше договор обслуживания."
+        ]
+      },
+      "uz": {
+        "title": "2026-yil 1-iyuldan xususiy maktab va bogʻchalarda kameralar: ovoz, onlayn va 6 oylik arxiv — nima talab qilinadi va qanday ulgurish mumkin",
+        "seoTitle": "Xususiy maktablarda kameralar 2026: talablar va yechim",
+        "seoDesc": "VMQ № 271, 21.05.2026: xususiy maktab, bogʻcha va oʻquv markazlari — ichki va tashqi kameralar, ovoz yozish, onlayn, 6 oylik arxiv. Nima oʻrnatish kerak.",
+        "excerpt": "2026-yil 1-iyuldan ovoz yozadigan, onlayn koʻrsatadigan va kamida olti oylik arxivga ega videokuzatuv kameralari nodavlat maktab, bogʻcha va oʻquv markazlari uchun litsenziya talabiga aylandi. Qaror aynan nimani talab qiladi, 300 oʻquvchili maktab va 100 bolali bogʻchaga nechta kamera va disk kerak, arxivni qanday hisoblash va bu qancha turadi — tahlil qilamiz.",
+        "sections": [
+          {
+            "h": "2026-yil 1-iyuldan nima oʻzgardi",
+            "p": [
+              "Vazirlar Mahkamasining 2026-yil 21-maydagi № 271-qarori maxsus elektron tizim orqali ayrim faoliyat turlarini litsenziyalash toʻgʻrisidagi Yagona nizomga (2022-yil 21-fevraldagi VMQ № 80 bilan tasdiqlangan) oʻzgartirishlar kiritdi. Nodavlat taʼlim tashkilotlari uchun yangi litsenziya talabi paydo boʻldi: taʼlim xizmatlari koʻrsatiladigan bino va xonalar onlayn translyatsiya imkoniyati va ovoz yozish funksiyasiga ega ichki va tashqi videokuzatuv kameralari bilan jihozlanishi, yozuvlar esa kamida olti oy saqlanishi kerak.",
+              "Talab 2026-yil 1-iyuldan amal qiladi va ham ishlab turgan, ham yangi tashkilotlarga taalluqli. Bu aynan litsenziya talabi boʻlgani uchun unga rioya qilmaslik «Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida»gi Qonunga koʻra taʼlim faoliyati litsenziyasini bekor qilishga asos boʻlishi mumkin. Amalda nodavlat taʼlim tashkilotlari deganda litsenziya asosida ishlaydigan xususiy maktablar, bogʻchalar, oʻquv markazlari va kurslar tushuniladi.",
+              "Ikki oydan keyin ikkinchi hujjat chiqdi — 2026-yil 31-iyuldagi VMQ № 425 «Davlat va nodavlat taʼlim muassasalari xavfsizlik tizimini yanada takomillashtirish chora-tadbirlari toʻgʻrisida», u 2026-yil 1-avgustdan amal qiladi. Unda gap barcha oʻquv yurtlari haqida: qoʻriqlash signalizatsiyasi, xavotir tugmalari, videokuzatuv va ularga texnik xizmat koʻrsatish, «Xavfsiz taʼlim» konsepsiyasi (2025-yil 29-noyabrdagi PQ-360) doirasida shartnoma asosida jismoniy va texnik qoʻriqlash. Xavfsizlik uchun javobgarlik muassasa rahbariyatiga yuklatilgan. Ikkala hujjatning aniq matnini oʻz holatingiz boʻyicha milliy qonunchilik bazasida tekshirib chiqish maqsadga muvofiq — quyida texnik tomonini koʻrib chiqamiz."
+            ]
+          },
+          {
+            "h": "Toʻrtta talab va ularning amaldagi maʼnosi",
+            "p": [
+              "Ichki va tashqi kameralar. Ichkarida — oʻquv xonalari, koridorlar, xollar, oshxona, sport zali; tashqarida — kirishlar, hovli, maydonchalar, perimetr va avtoturargoh. Bolalar boʻladigan joylarda koʻr nuqtalar boʻlmasligi kerak, shu bilan birga kiyinish xonalari, sanitariya xonalari va tibbiyot xonasiga kamera oʻrnatilmaydi — bu qaror emas, shaxsiy maʼlumotlar toʻgʻrisidagi qonun chekovi.",
+              "Ovoz yozish. Oʻrnatilgan mikrofonli yoki tashqi mikrofon uchun audio kirishli kamera kerak. Hikvisionda oʻrnatilgan mikrofon indeks oxiridagi U harfi bilan belgilanadi (masalan, DS-2CD2143G2-IU), Dahuada — S yoki SA qoʻshimchalari bilan. Bunday kamerani sotib olishning oʻzi kam: ovoz oqimini registrator sozlamalarida yoqish kerak, aks holda arxiv ovozsiz boʻladi va tekshiruvda bu birinchi navbatda aniqlanadi.",
+              "Onlayn translyatsiya. Bu kameralarni faqat qoʻriqlash monitoridan emas, internet orqali — direktor, oʻquv ishlari boʻyicha oʻrinbosar yoki xavfsizlik uchun masʼul xodim telefonidan real vaqtda koʻrish imkoniyati. Texnik jihatdan bu registrator ilovasi (Hik-Connect, DMSS) yoki bir nechta filial uchun server tizimi; chiquvchi tezlik zaxirasiga ega barqaror internet va sozlangan kirish huquqlari kerak.",
+              "Olti oylik arxiv. Eng qimmat talab: barcha kameralardan 182 kunlik yozuv. Hajm ruxsat, kodek va yozish rejimiga bogʻliq, shuning uchun quyida hisob-kitob bilan alohida boʻlim bor."
+            ]
+          },
+          {
+            "h": "Maktab va bogʻchaga nechta kamera kerak",
+            "p": [
+              "250–300 oʻquvchili xususiy maktab: 12 ta sinf, qavatlar boʻyicha 3–4 koridor, 2 ta kirish, oshxona, sport zali, hovli va perimetr — odatda 22–26 ta kamera. 100 bolali bogʻcha: 6 ta guruh xonasi, koridorlar, kirish, oshxona bloki, oʻyin maydonchasi — 10–14 ta kamera. Bir nechta auditoriyali oʻquv markazi 6–10 ta kameraga sigʻadi. Bu tipik rejalar boʻyicha moʻljal; aniq sonini koʻrik beradi.",
+              "Ichkariga 2,8 mm obyektivli va mikrofonli 4 Mp gumbazli kameralar oʻrnatiladi: 100° atrofidagi koʻrish burchagi sinfni bir nuqtadan qamrab oladi. Kirishlarga — kechqurun yuzlar ajralib turishi uchun rangli tungi suratga olishli silindrik kameralar. Hovli va perimetrga — vandalga chidamli korpusdagi 4 Mp tashqi kameralar, zarur boʻlsa 30–50 m infraqizil yoritish bilan.",
+              "Barcha kameralar kommutatordan PoE orqali quvvatlanadi, shuning uchun har biriga bitta oʻralgan juftlik kabeli boradi. 24 kamerali maktab uchun bu 16–24 portli bir-ikkita PoE-kommutator va bitta 32 kanalli yoki ikkita 16 kanalli registrator."
+            ]
+          },
+          {
+            "h": "Asosiy masala — olti oylik arxivni qanday sigʻdirish",
+            "p": [
+              "Arxiv hajmi oddiy hisoblanadi: kamera bitreytini sutkadagi soniyalarga va 182 kunga koʻpaytirib, 8 ga boʻlamiz — baytlar chiqadi. H.265 kodekli 4 Mp kamera doimiy yozishda taxminan 2 Mbit/s beradi, bu sutkasiga qariyb 21 GB va bitta kamera uchun yarim yilda 3,9 TB atrofida. Maktabda kameralar asosan dars soatlarida kerak, H.265+ esa boʻsh sinfning statik tasvirini kuchli siqadi, shuning uchun haqiqiy sarf odatda bir kameraga yarim yilda 1,5–2,5 TB.",
+              "24 kamerali maktab uchun bu 40–60 TB: 8 diskli registrator yoki har birida 10–12 TB li toʻrttadan diskli ikkita 16 kanalli registrator. 12 kamerali bogʻchaga 6–8 TB li toʻrtta diskli bitta 16 kanalli registrator yetadi, yaʼni 24–32 TB. 8 kamerali oʻquv markazi — 8 kanalli registrator va 8–10 TB li ikkita disk.",
+              "Disklar faqat videokuzatuv seriyasidan olinadi — Seagate SkyHawk yoki WD Purple: ular bir nechta oqimdan kecha-kunduz yozishga moʻljallangan, kompyuter uchun oddiy disklar registratorda bir-bir yarim yilda ishdan chiqadi. Registrator 190 kunlik chuqurlik bilan aylanma qayta yozishga sozlanadi, oyiga bir marta eng eski yozuv haqiqatan ham olti oydan eskiroq ekani tekshiriladi."
+            ]
+          },
+          {
+            "h": "Onlayn kirish va ovoz: muammo boʻlmasligi uchun nimani sozlash kerak",
+            "p": [
+              "Onlayn koʻrish uchun registrator internetga ulanadi; ilova kameralarni past ruxsatli qoʻshimcha oqim orqali koʻrsatadi, shuning uchun hatto 24 kameraga ham 8–10 Mbit/s chiquvchi tezlik yetarli. Huquqlar rollar boʻyicha sozlanadi: direktor hammasini koʻradi, tarbiyachi — faqat oʻz guruhini, qoʻriqlash — kirishlar va perimetrni. Standart parollar ishga tushirishda almashtiriladi, dasturiy taʼminot yangilanadi — bu ham xavfsizlik, ham shaxsiy maʼlumotlar toʻgʻrisidagi qonun masalasi.",
+              "Ovoz yozish kameralarni videodan ham koʻproq shaxsiy maʼlumotlar manbaiga aylantiradi. Bu haqda xodimlar va ota-onalar xabardor qilinadi, kirishlarga ovoz yozishli videokuzatuv haqida lavhalar osiladi, ichki reglamentda esa kim va nima uchun yozuvlarga kira olishi va ular soʻrov boʻyicha qanday berilishi yoziladi. Batafsil — videokuzatuv va shaxsiy maʼlumotlar haqidagi maqolamizda.",
+              "VMQ № 425 dagi xavotir tugmasi va qoʻriqlash signalizatsiyasi registrator bilan bir shchitga oʻrnatiladi: tugma qoʻriqlashda va direktor xonasida, datchiklar kirishlarda va qimmatbaho narsalar saqlanadigan xonalarda. Videokuzatuv, signalizatsiya va xizmat koʻrsatish uchun bitta pudratchi biror narsa ishlamay qolganda «bu kimning zonasi» degan bahsdan qutqaradi."
+            ]
+          },
+          {
+            "h": "Bu qancha turadi",
+            "p": [
+              "Uskuna narxlari — katalogimizdan, ular yangilanadi va oʻzgaradi: mikrofonli 4 Mp gumbazli kamera Hikvision DS-2CD2143G2-IU — 914 900 soʻmdan, 4 Mp silindrik DS-2CD1043G2-LIU — 568 900 soʻmdan, 16 kanalli registrator DS-7616NXI-K2 — 1 731 900 soʻmdan, videokuzatuv uchun SkyHawk 6 TB disk — 2 721 900 soʻmdan. Kabelni korobda yotqizish bilan bitta kamerani oʻrnatish — 155 000–180 000 soʻm, registrator, ovoz va onlayn kirishni ishga tushirish ishlarga kiradi.",
+              "12 kamerali bogʻcha bu narxlarda yarim yillik arxiv disklari va montaj bilan taxminan 22–27 mln soʻmga sigʻadi; 24 kamerali maktab — tashqi kameralar ulushi va arxiv chuqurligiga qarab 42–55 mln soʻmga. Bu tipik loyiha boʻyicha moʻljallar; binongiz boʻyicha smetani koʻrikdan keyin ish kuni davomida yuboramiz.",
+              "Nimada tejab boʻlmaydi: disklarda (videokuzatuv seriyasi oʻrniga oddiy), mikrofonlarda (ovozsiz kameralar talabni yopmaydi) va arxiv zaxirasida (roppa-rosa 182 kun qoʻyish xavfli — kameraning har qanday toʻxtashi zaxirani yeydi). Nimada mumkin: sinflar ichida 8 emas, 4 Mp yetadi, hovliga esa burilma kameralar kerak emas."
+            ]
+          },
+          {
+            "h": "Muddatga ulgurish uchun ishlar tartibi",
+            "p": [
+              "Birinchi qadam — binoni koʻrikdan oʻtkazish va joylashtirish sxemasi: kameralar qayerda, kommutatorlar va registrator qayerda, trassalar qanday oʻtadi. Ikkinchisi — kameralar soningizga mos arxiv hisobi bilan smeta. Uchinchisi — montaj: 24 kamerali maktabni brigada 3–4 ish kunida, bogʻchani 2 kunda, oʻquv markazini bir kunda qiladi. Toʻrtinchisi — ovoz, onlayn kirish va arxiv chuqurligini sozlash, har bir kamera boʻyicha yozuvni tekshirish.",
+              "Topshirishda siz sxema, seriya raqamlari bilan uskunalar roʻyxati, masʼul xodimlar telefonlarida sozlangan ilovalar va qoʻriqlash uchun yoʻriqnoma olasiz. Montajga 3 yil kafolat beramiz, uskunaga — ishlab chiqaruvchining bir yildan uch yilgacha kafolati.",
+              "Keyin — xizmat koʻrsatish shartnomasi: VMQ № 425 xavfsizlik tizimlariga texnik xizmat koʻrsatishni toʻgʻridan-toʻgʻri talab qiladi. Shartnoma boʻyicha kameralar, disklar va arxiv chuqurligini tekshiramiz, dasturiy taʼminotni yangilaymiz va jurnal yuritamiz — tekshiruvda birinchi navbatda shular koʻriladi."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Talab davlat maktablariga ham tegishlimi?",
+            "a": "Litsenziya talabi haqidagi VMQ № 271 nodavlat tashkilotlarga tegishli. Davlat va nodavlat muassasalar uchun 2026-yil 31-iyuldagi VMQ № 425 amal qiladi: qoʻriqlash signalizatsiyasi, xavotir tugmalari, videokuzatuv va ularga xizmat koʻrsatish — litsenziyaga bogʻlanmagan holda."
+          },
+          {
+            "q": "Bizda ovozsiz kameralar oʻrnatilgan. Ularni almashtirish kerakmi?",
+            "a": "Hammasini shart emas. Kameralarda audio kirish yoki oʻrnatilgan mikrofon bor-yoʻqligini, registrator ovoz yozishini va disklar yarim yilga yetishini tekshiramiz. Koʻpincha sinflardagi kameralar qoʻshimcha jihozlanadi, disklar qoʻshiladi va onlayn kirish sozlanadi, tashqi kameralar esa qoladi."
+          },
+          {
+            "q": "Arxivni bulutda saqlash mumkinmi?",
+            "a": "Mumkin, lekin yigirmatacha kameradan yarim yillik yozuv bulutda birinchi yildayoq disklardan qimmat turadi. Odatda arxiv binodagi registratorda saqlanadi, bulut yoki ilova esa onlayn koʻrish uchun ishlatiladi."
+          },
+          {
+            "q": "Onlayn translyatsiya uchun qancha internet kerak?",
+            "a": "Ilova kameralarni past ruxsatli ikkinchi oqim orqali koʻrsatadi, shuning uchun 24 kameraga 8–10 Mbit/s chiquvchi tezlik yetadi. Kanal barqarorligi va internet uzilganda zaxira yoʻl muhimroq."
+          },
+          {
+            "q": "Yozuvlarni kim koʻra oladi?",
+            "a": "Buni tashkilotning shaxsiy maʼlumotlar toʻgʻrisidagi qonunga asoslangan ichki reglamenti belgilaydi: rahbariyat, xavfsizlik uchun masʼul xodim, oʻz vazifalari doirasida qoʻriqlash. Xodimlar va ota-onalar ovoz yozishli videokuzatuv haqida xabardor qilinadi, kirishlarga lavhalar qoʻyiladi."
+          },
+          {
+            "q": "Ulgurmasak nima boʻladi?",
+            "a": "Koʻrsatilgan funksiyali kameralarning mavjudligi — litsenziya talabi, litsenziya talablariga rioya qilmaslik esa qonunga koʻra litsenziyani bekor qilishga asos boʻlishi mumkin. Bogʻcha 2 ish kunida, maktab 3–4 kunda jihozlanadi, shuning uchun hozir ham ulgurish mumkin."
+          }
+        ],
+        "summary": [
+          "2026-yil 1-iyuldan ichki va tashqi kameralar, ovoz yozish, onlayn translyatsiya va 6 oylik arxiv — xususiy maktab, bogʻcha va oʻquv markazlari uchun litsenziya talabi (VMQ № 271).",
+          "2026-yil 1-avgustdan VMQ № 425 barcha oʻquv yurtlari uchun qoʻriqlash signalizatsiyasi, xavotir tugmalari va tizimlarga xizmat koʻrsatishni qoʻshadi.",
+          "300 oʻquvchili maktabga 22–26 kamera va 40–60 TB arxiv, 100 bolali bogʻchaga 10–14 kamera va 24–32 TB kerak; disklar faqat videokuzatuv seriyasidan.",
+          "Ovozli kameralar: Hikvisionda U harfli indeks, Dahuada S/SA; ovoz registratorda alohida yoqiladi.",
+          "Bogʻcha — 22–27 mln soʻm, maktab — montaj bilan 42–55 mln soʻm; montaj 2–4 kun, ishlarga 3 yil kafolat, keyin xizmat koʻrsatish shartnomasi."
+        ]
+      },
+      "en": {
+        "title": "Cameras in Private Schools and Kindergartens from 1 July 2026: Audio, Online Viewing and a 6-Month Archive — What Is Required and How to Comply",
+        "seoTitle": "Cameras in Private Schools from 1 July 2026: Requirements",
+        "seoDesc": "Resolution No. 271 of 21.05.2026: private schools and kindergartens need indoor/outdoor cameras with audio, online viewing and a 6-month archive. What to buy.",
+        "excerpt": "From 1 July 2026, video surveillance cameras with audio recording, online viewing and an archive of at least six months became a licensing requirement for non-state schools, kindergartens and learning centres in Uzbekistan. We explain what the resolution demands, how many cameras and disks a 300-pupil school and a 100-child kindergarten need, how to size the archive and what it costs.",
+        "sections": [
+          {
+            "h": "What changed on 1 July 2026",
+            "p": [
+              "Cabinet of Ministers Resolution No. 271 of 21 May 2026 amended the Unified Regulation on licensing certain activities through a special electronic system (approved by Resolution No. 80 of 21 February 2022). Non-state educational organisations received a new licensing requirement: buildings and premises where educational services are provided must be equipped with indoor and outdoor video surveillance cameras capable of online streaming and audio recording, and recordings must be kept for at least six months.",
+              "The requirement applies from 1 July 2026 to existing and new organisations alike. Because it is a licensing requirement, non-compliance may, under the Law on Licensing, Permitting and Notification Procedures, become grounds for revoking the educational licence. In practice, non-state educational organisations means private schools, kindergartens, learning centres and courses operating under a licence.",
+              "Two months later a second document followed — Resolution No. 425 of 31 July 2026 on further improving the security system of state and non-state educational institutions, in force from 1 August 2026. It covers all educational institutions: intruder alarms, panic buttons, video surveillance and their maintenance, plus contracted physical and technical guarding under the Safe Education concept (Presidential Resolution No. 360 of 29 November 2025). Responsibility for safety rests with the institution's management. Check the exact wording of both documents for your own case in the national legislation database; below we cover the technical side."
+            ]
+          },
+          {
+            "h": "Four requirements and what each means in practice",
+            "p": [
+              "Indoor and outdoor cameras. Indoors: classrooms, corridors, halls, canteen, gym; outdoors: entrances, yard, playgrounds, perimeter and parking. There must be no blind spots where children are, while changing rooms, toilets and the medical room are not filmed — a restriction of the personal data law, not of the resolution.",
+              "Audio recording. You need a camera with a built-in microphone or an audio input for an external one. Hikvision marks a built-in microphone with the letter U at the end of the model code (for example DS-2CD2143G2-IU); Dahua uses the S or SA suffixes. Buying such a camera is not enough: the audio stream has to be enabled in the recorder settings, otherwise the archive is silent — and that is the first thing an inspection finds.",
+              "Online streaming. The ability to watch cameras in real time not only from the guard's monitor but over the internet — from the phone of the principal, deputy head or safety officer. Technically this is the recorder's app (Hik-Connect, DMSS) or a server platform for several branches; it needs a stable internet connection with spare upload speed and properly configured access rights.",
+              "A six-month archive. The most expensive requirement: 182 days of recording from every camera. The volume depends on resolution, codec and recording mode, so there is a separate section with the maths below."
+            ]
+          },
+          {
+            "h": "How many cameras a school and a kindergarten need",
+            "p": [
+              "A private school for 250–300 pupils: 12 classrooms, 3–4 corridors across the floors, 2 entrances, canteen, gym, yard and perimeter — usually 22–26 cameras. A kindergarten for 100 children: 6 group rooms, corridors, entrance, kitchen block, playground — 10–14 cameras. A learning centre with several rooms fits into 6–10 cameras. These are benchmarks for typical layouts; a survey gives the exact number.",
+              "Indoors we install 4 MP dome cameras with a 2.8 mm lens and a microphone: a viewing angle of about 100° covers a classroom from one point. At entrances — bullet cameras with colour night vision so faces are recognisable in the evening. In the yard and along the perimeter — 4 MP outdoor cameras in vandal-proof housings, with 30–50 m infrared illumination where needed.",
+              "All cameras are powered over PoE from the switch, so each gets a single twisted-pair cable. For a 24-camera school that means one or two 16–24-port PoE switches and one 32-channel recorder or two 16-channel ones."
+            ]
+          },
+          {
+            "h": "The main question — fitting six months of archive",
+            "p": [
+              "Archive size is simple to calculate: camera bitrate multiplied by the seconds in a day and by 182 days, divided by 8, gives bytes. A 4 MP camera with H.265 at continuous recording produces about 2 Mbit/s, which is roughly 21 GB a day and about 3.9 TB per camera for half a year. In a school cameras matter mostly during lessons, and H.265+ compresses the static picture of an empty classroom heavily, so real consumption is usually 1.5–2.5 TB per camera per half year.",
+              "For a 24-camera school that is 40–60 TB: an 8-bay recorder or two 16-channel recorders with four 10–12 TB disks each. A 12-camera kindergarten needs one 16-channel recorder with four 6–8 TB disks, i.e. 24–32 TB. An 8-camera learning centre — an 8-channel recorder and two 8–10 TB disks.",
+              "Use only surveillance-class disks — Seagate SkyHawk or WD Purple: they are built for round-the-clock recording of several streams, while ordinary desktop disks fail in a recorder within a year or so. The recorder is set to loop recording with a 190-day depth, and once a month you check that the oldest recording is indeed older than six months."
+            ]
+          },
+          {
+            "h": "Online access and audio: what to configure to avoid trouble",
+            "p": [
+              "For online viewing the recorder is connected to the internet; the app shows cameras via a low-resolution sub-stream, so even 24 cameras need only 8–10 Mbit/s of upload. Rights are set by role: the principal sees everything, a teacher only their group, security the entrances and perimeter. Default passwords are changed at commissioning and firmware is updated — a matter of both security and the personal data law.",
+              "Audio recording makes cameras a source of personal data even more than video. Staff and parents are notified, signs about video surveillance with audio recording are placed at entrances, and an internal policy defines who may access recordings, why, and how they are released on request. More in our article on video surveillance and personal data.",
+              "The panic button and intruder alarm from Resolution No. 425 go on the same rack as the recorder: a button at the guard post and in the principal's office, detectors at entrances and in rooms where valuables are kept. One contractor for video surveillance, alarm and maintenance avoids the argument over whose zone it is when something stops working."
+            ]
+          },
+          {
+            "h": "What it costs",
+            "p": [
+              "Equipment prices are from our catalogue and change over time: a 4 MP dome camera with microphone Hikvision DS-2CD2143G2-IU from 914,900 UZS, a 4 MP bullet DS-2CD1043G2-LIU from 568,900 UZS, a 16-channel recorder DS-7616NXI-K2 from 1,731,900 UZS, a 6 TB SkyHawk surveillance disk from 2,721,900 UZS. Installing one camera with cable in trunking costs 155,000–180,000 UZS; commissioning the recorder, audio and online access is included in the work.",
+              "At these prices a 12-camera kindergarten comes to roughly 22–27 million UZS including disks for a six-month archive and installation; a 24-camera school to 42–55 million UZS depending on the share of outdoor cameras and archive depth. These are benchmarks for a typical project; we return a quote for your building within one business day after the survey.",
+              "Where not to save: on disks (desktop instead of surveillance class), on microphones (cameras without audio do not meet the requirement) and on archive headroom (exactly 182 days is risky — any camera downtime eats the margin). Where you can: 4 MP is enough inside classrooms rather than 8, and the yard does not need PTZ cameras."
+            ]
+          },
+          {
+            "h": "Work sequence to meet the deadline",
+            "p": [
+              "Step one — a building survey and a camera layout: where the cameras, switches and recorder go and how the cable routes run. Step two — a quote with the archive calculated for your number of cameras. Step three — installation: a crew fits a 24-camera school in 3–4 working days, a kindergarten in 2 days, a learning centre in a day. Step four — configuring audio, online access and archive depth, and checking recording on every camera.",
+              "At handover you receive the layout, an equipment list with serial numbers, the apps configured on the phones of responsible staff and instructions for the guards. We give a 3-year warranty on installation; equipment carries the manufacturer's warranty of one to three years.",
+              "Then a maintenance contract: Resolution No. 425 explicitly requires maintenance of security systems. Under the contract we check cameras, disks and archive depth, update firmware and keep the logbook — the first things an inspection looks at."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does the requirement apply to state schools?",
+            "a": "Resolution No. 271 on the licensing requirement concerns non-state organisations. State and non-state institutions fall under Resolution No. 425 of 31 July 2026: intruder alarms, panic buttons, video surveillance and their maintenance — not tied to a licence."
+          },
+          {
+            "q": "We already have cameras without audio. Do we need to replace them?",
+            "a": "Not necessarily all of them. We check whether the cameras have an audio input or built-in microphone, whether the recorder records audio and whether the disks last six months. Most often classroom cameras are upgraded, disks are added and online access is configured, while outdoor cameras stay."
+          },
+          {
+            "q": "Can the archive be kept in the cloud?",
+            "a": "It can, but six months of recordings from two dozen cameras in the cloud costs more than disks already in the first year. The archive usually stays on the recorder in the building, while the cloud or app is used for online viewing."
+          },
+          {
+            "q": "How much internet does online streaming need?",
+            "a": "The app shows cameras via a low-resolution second stream, so 24 cameras need 8–10 Mbit/s of upload. Channel stability and a backup route if the internet drops matter more."
+          },
+          {
+            "q": "Who may view the recordings?",
+            "a": "That is defined by the organisation's internal policy under the personal data law: management, the safety officer, security within their duties. Staff and parents are notified about video surveillance with audio recording, and signs are placed at entrances."
+          },
+          {
+            "q": "What if we do not make it in time?",
+            "a": "Cameras with the listed functions are a licensing requirement, and non-compliance with licensing requirements may, under the law, become grounds for revoking the licence. A kindergarten is equipped in 2 working days and a school in 3–4, so it is still realistic to comply now."
+          }
+        ],
+        "summary": [
+          "From 1 July 2026, indoor and outdoor cameras, audio recording, online streaming and a 6-month archive are a licensing requirement for private schools, kindergartens and learning centres (Resolution No. 271).",
+          "Resolution No. 425, from 1 August 2026, adds intruder alarms, panic buttons and system maintenance for all educational institutions.",
+          "A 300-pupil school needs 22–26 cameras and 40–60 TB of archive; a 100-child kindergarten 10–14 cameras and 24–32 TB; surveillance-class disks only.",
+          "Cameras with audio: the letter U in Hikvision model codes, S/SA for Dahua; audio is enabled separately in the recorder.",
+          "Kindergarten 22–27 million UZS, school 42–55 million UZS including installation; 2–4 days of work, 3-year workmanship warranty, then a maintenance contract."
+        ]
+      },
+      "tr": {
+        "title": "1 Temmuz 2026'dan itibaren özel okul ve anaokullarında kameralar: ses, çevrim içi izleme ve 6 aylık arşiv — ne isteniyor ve nasıl yetişilir",
+        "seoTitle": "Özel okullarda kameralar 2026: şartlar ve çözüm",
+        "seoDesc": "21.05.2026 tarihli 271 sayılı karar: özel okul ve anaokullarında iç ve dış kameralar, ses kaydı, çevrim içi izleme, 6 aylık arşiv. Ne kurulur, nasıl hesaplanır.",
+        "excerpt": "1 Temmuz 2026'dan itibaren ses kaydı yapan, çevrim içi izlenebilen ve en az altı aylık arşivi olan güvenlik kameraları Özbekistan'daki özel okul, anaokulu ve eğitim merkezleri için lisans şartı oldu. Kararın tam olarak ne istediğini, 300 öğrencili bir okul ile 100 çocuklu bir anaokulunun kaç kamera ve diske ihtiyaç duyduğunu, arşivin nasıl hesaplandığını ve maliyetini açıklıyoruz.",
+        "sections": [
+          {
+            "h": "1 Temmuz 2026'da ne değişti",
+            "p": [
+              "Bakanlar Kurulu'nun 21 Mayıs 2026 tarihli 271 sayılı kararı, belirli faaliyet türlerinin özel elektronik sistem üzerinden lisanslanmasına ilişkin Birleşik Yönetmeliği (21 Şubat 2022 tarihli 80 sayılı kararla onaylanmıştır) değiştirdi. Devlet dışı eğitim kuruluşları için yeni bir lisans şartı getirildi: eğitim hizmeti verilen bina ve mekânlar, çevrim içi yayın imkânı ve ses kaydı işlevi olan iç ve dış güvenlik kameralarıyla donatılmalı, kayıtlar en az altı ay saklanmalıdır.",
+              "Şart 1 Temmuz 2026'dan itibaren hem faal hem de yeni kuruluşlar için geçerlidir. Bu bir lisans şartı olduğundan, uyulmaması Lisanslama, İzin ve Bildirim Usulleri Hakkında Kanun'a göre eğitim lisansının iptaline gerekçe olabilir. Uygulamada devlet dışı eğitim kuruluşları, lisansla çalışan özel okullar, anaokulları, eğitim merkezleri ve kurslardır.",
+              "İki ay sonra ikinci belge geldi — devlet ve devlet dışı eğitim kurumlarının güvenlik sisteminin daha da iyileştirilmesine ilişkin 31 Temmuz 2026 tarihli 425 sayılı karar, 1 Ağustos 2026'dan itibaren yürürlükte. Bu belge tüm eğitim kurumlarını kapsıyor: hırsız alarmı, panik butonları, kamera sistemi ve bunların bakımı, Güvenli Eğitim konsepti (29 Kasım 2025 tarihli 360 sayılı Cumhurbaşkanı kararı) çerçevesinde sözleşmeli fiziki ve teknik koruma. Güvenlik sorumluluğu kurum yönetimine verildi. Her iki belgenin tam metnini kendi durumunuz için ulusal mevzuat veri tabanından kontrol edin; aşağıda teknik tarafı ele alıyoruz."
+            ]
+          },
+          {
+            "h": "Dört şart ve pratikte anlamı",
+            "p": [
+              "İç ve dış kameralar. İçeride: derslikler, koridorlar, holler, yemekhane, spor salonu; dışarıda: girişler, bahçe, oyun alanları, çevre ve otopark. Çocukların bulunduğu yerlerde kör nokta olmamalı; soyunma odaları, tuvaletler ve revir ise çekilmez — bu kararın değil, kişisel veriler kanununun sınırlamasıdır.",
+              "Ses kaydı. Dahili mikrofonlu ya da harici mikrofon için ses girişli kamera gerekir. Hikvision'da dahili mikrofon model kodunun sonundaki U harfiyle gösterilir (örneğin DS-2CD2143G2-IU); Dahua'da S veya SA ekleriyle. Böyle bir kamerayı almak yetmez: ses akışı kayıt cihazının ayarlarında açılmalıdır, aksi hâlde arşiv sessiz olur ve denetimde ilk bu fark edilir.",
+              "Çevrim içi yayın. Kameraları yalnızca güvenlik monitöründen değil, internet üzerinden — müdürün, müdür yardımcısının veya güvenlik sorumlusunun telefonundan gerçek zamanlı izleyebilmek. Teknik olarak bu, kayıt cihazının uygulaması (Hik-Connect, DMSS) ya da birden fazla şube için sunucu sistemidir; yedek yükleme hızı olan kararlı bir internet ve doğru ayarlanmış erişim hakları gerekir.",
+              "Altı aylık arşiv. En pahalı şart: tüm kameralardan 182 günlük kayıt. Hacim çözünürlüğe, kodeğe ve kayıt moduna bağlıdır; bu yüzden aşağıda hesaplamalı ayrı bir bölüm var."
+            ]
+          },
+          {
+            "h": "Bir okul ve bir anaokulu için kaç kamera gerekir",
+            "p": [
+              "250–300 öğrencili özel okul: 12 derslik, katlarda 3–4 koridor, 2 giriş, yemekhane, spor salonu, bahçe ve çevre — genellikle 22–26 kamera. 100 çocuklu anaokulu: 6 grup odası, koridorlar, giriş, mutfak bloğu, oyun alanı — 10–14 kamera. Birkaç derslikli eğitim merkezi 6–10 kameraya sığar. Bunlar tipik planlar için referanstır; kesin sayıyı keşif verir.",
+              "İçeriye 2,8 mm lensli ve mikrofonlu 4 MP dome kameralar kurulur: yaklaşık 100° görüş açısı bir dersliği tek noktadan kapsar. Girişlere akşam yüzlerin seçilebilmesi için renkli gece görüşlü bullet kameralar. Bahçe ve çevreye vandal korumalı 4 MP dış kameralar, gerekirse 30–50 m kızılötesi aydınlatmayla.",
+              "Tüm kameralar switch'ten PoE ile beslenir, bu yüzden her birine tek bir bükümlü çift kablo gider. 24 kameralı bir okul için bu, bir-iki adet 16–24 portlu PoE switch ve bir 32 kanallı ya da iki 16 kanallı kayıt cihazı demektir."
+            ]
+          },
+          {
+            "h": "Asıl soru — altı aylık arşiv nasıl sığdırılır",
+            "p": [
+              "Arşiv hacmi basitçe hesaplanır: kamera bit hızını gündeki saniyeyle ve 182 günle çarpıp 8'e bölünce bayt elde edilir. H.265 kodekli 4 MP bir kamera sürekli kayıtta yaklaşık 2 Mbit/s üretir; bu günde yaklaşık 21 GB ve kamera başına altı ayda yaklaşık 3,9 TB'dir. Okulda kameralar esas olarak ders saatlerinde gerekir ve H.265+ boş sınıfın sabit görüntüsünü güçlü sıkıştırır; bu yüzden gerçek tüketim genellikle kamera başına altı ayda 1,5–2,5 TB'dir.",
+              "24 kameralı okul için bu 40–60 TB demektir: 8 diskli bir kayıt cihazı ya da her birinde 10–12 TB'lik dört disk bulunan iki 16 kanallı cihaz. 12 kameralı anaokuluna 6–8 TB'lik dört diskli bir 16 kanallı kayıt cihazı yeter, yani 24–32 TB. 8 kameralı eğitim merkezi — 8 kanallı kayıt cihazı ve 8–10 TB'lik iki disk.",
+              "Diskler yalnızca güvenlik kamerası serisinden alınır — Seagate SkyHawk veya WD Purple: birden fazla akışın kesintisiz kaydı için tasarlanmıştır; sıradan masaüstü diskler kayıt cihazında bir-bir buçuk yılda bozulur. Kayıt cihazı 190 gün derinlikte döngüsel kayda ayarlanır ve ayda bir en eski kaydın gerçekten altı aydan eski olduğu kontrol edilir."
+            ]
+          },
+          {
+            "h": "Çevrim içi erişim ve ses: sorun yaşamamak için neler ayarlanmalı",
+            "p": [
+              "Çevrim içi izleme için kayıt cihazı internete bağlanır; uygulama kameraları düşük çözünürlüklü alt akışla gösterir, bu yüzden 24 kamera için bile 8–10 Mbit/s yükleme hızı yeter. Haklar rollere göre ayarlanır: müdür her şeyi görür, öğretmen yalnızca kendi grubunu, güvenlik girişleri ve çevreyi. Varsayılan parolalar devreye almada değiştirilir, yazılımlar güncellenir — bu hem güvenlik hem de kişisel veriler kanunu meselesidir.",
+              "Ses kaydı, kameraları videodan da fazla kişisel veri kaynağı yapar. Personel ve veliler bilgilendirilir, girişlere sesli kayıtlı kamera uyarı levhaları asılır, iç yönetmelik kayıtlara kimin neden erişebileceğini ve talep üzerine nasıl verileceğini tanımlar. Ayrıntılar kamera sistemleri ve kişisel veriler hakkındaki yazımızda.",
+              "425 sayılı karardaki panik butonu ve hırsız alarmı, kayıt cihazıyla aynı panoya kurulur: buton güvenlikte ve müdür odasında, dedektörler girişlerde ve değerli eşyaların saklandığı odalarda. Kamera, alarm ve bakım için tek yüklenici, bir şey çalışmadığında kimin sorumluluğunda tartışmasını ortadan kaldırır."
+            ]
+          },
+          {
+            "h": "Maliyeti ne kadar",
+            "p": [
+              "Ekipman fiyatları kataloğumuzdan alınmıştır ve zamanla değişir: mikrofonlu 4 MP dome kamera Hikvision DS-2CD2143G2-IU 914.900 UZS'den, 4 MP bullet DS-2CD1043G2-LIU 568.900 UZS'den, 16 kanallı kayıt cihazı DS-7616NXI-K2 1.731.900 UZS'den, 6 TB SkyHawk güvenlik diski 2.721.900 UZS'den. Kanal içinde kablo çekimiyle bir kameranın montajı 155.000–180.000 UZS; kayıt cihazı, ses ve çevrim içi erişimin devreye alınması işçiliğe dahildir.",
+              "Bu fiyatlarla 12 kameralı bir anaokulu altı aylık arşiv diskleri ve montaj dahil yaklaşık 22–27 milyon UZS'ye; 24 kameralı okul dış kamera oranına ve arşiv derinliğine göre 42–55 milyon UZS'ye çıkar. Bunlar tipik proje için referanstır; binanız için teklifi keşiften sonra bir iş günü içinde veriyoruz.",
+              "Nereden tasarruf edilmez: disklerden (güvenlik serisi yerine masaüstü), mikrofonlardan (sessiz kameralar şartı karşılamaz) ve arşiv payından (tam 182 gün riskli — kameranın her duruşu payı yer). Nereden edilebilir: dersliklerde 8 değil 4 MP yeter, bahçeye PTZ kamera gerekmez."
+            ]
+          },
+          {
+            "h": "Süreye yetişmek için iş sırası",
+            "p": [
+              "İlk adım — bina keşfi ve yerleşim şeması: kameralar, switch'ler ve kayıt cihazı nerede, kablo güzergâhları nasıl. İkincisi — kamera sayınıza göre hesaplanmış arşivli teklif. Üçüncüsü — montaj: 24 kameralı okulu ekip 3–4 iş gününde, anaokulunu 2 günde, eğitim merkezini bir günde yapar. Dördüncüsü — ses, çevrim içi erişim ve arşiv derinliğinin ayarlanması, her kamerada kaydın kontrolü.",
+              "Teslimde şema, seri numaralı ekipman listesi, sorumluların telefonlarına kurulmuş uygulamalar ve güvenlik için talimat alırsınız. Montaja 3 yıl garanti veriyoruz; ekipmanda üreticinin bir ila üç yıllık garantisi geçerlidir.",
+              "Ardından bakım sözleşmesi: 425 sayılı karar güvenlik sistemlerinin bakımını açıkça ister. Sözleşme kapsamında kameraları, diskleri ve arşiv derinliğini kontrol eder, yazılımları günceller ve defter tutarız — denetimde ilk bakılanlar bunlardır."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Şart devlet okullarını da kapsıyor mu?",
+            "a": "Lisans şartına ilişkin 271 sayılı karar devlet dışı kuruluşları kapsar. Devlet ve devlet dışı kurumlar için 31 Temmuz 2026 tarihli 425 sayılı karar geçerlidir: hırsız alarmı, panik butonları, kamera sistemi ve bakımı — lisansa bağlı olmadan."
+          },
+          {
+            "q": "Sessiz kameralarımız zaten kurulu. Değiştirmek gerekir mi?",
+            "a": "Hepsini değil. Kameralarda ses girişi ya da dahili mikrofon olup olmadığını, kayıt cihazının ses kaydedip kaydetmediğini ve disklerin altı aya yetip yetmediğini kontrol ederiz. Çoğunlukla dersliklerdeki kameralar tamamlanır, disk eklenir ve çevrim içi erişim ayarlanır; dış kameralar kalır."
+          },
+          {
+            "q": "Arşiv bulutta tutulabilir mi?",
+            "a": "Tutulabilir, ama yirmi kadar kameranın altı aylık kaydı bulutta daha ilk yıl disklerden pahalıya gelir. Arşiv genellikle binadaki kayıt cihazında kalır; bulut veya uygulama çevrim içi izleme için kullanılır."
+          },
+          {
+            "q": "Çevrim içi yayın için ne kadar internet gerekir?",
+            "a": "Uygulama kameraları düşük çözünürlüklü ikinci akışla gösterir; 24 kamera için 8–10 Mbit/s yükleme yeter. Hattın kararlılığı ve internet kesilirse yedek yol daha önemlidir."
+          },
+          {
+            "q": "Kayıtları kim izleyebilir?",
+            "a": "Bunu kuruluşun kişisel veriler kanununa dayanan iç yönetmeliği belirler: yönetim, güvenlik sorumlusu, görevleri çerçevesinde güvenlik personeli. Personel ve veliler sesli kayıtlı kamera sistemi hakkında bilgilendirilir, girişlere levha asılır."
+          },
+          {
+            "q": "Yetişemezsek ne olur?",
+            "a": "Belirtilen işlevlere sahip kameraların varlığı lisans şartıdır; lisans şartlarına uyulmaması kanuna göre lisansın iptaline gerekçe olabilir. Anaokulu 2 iş gününde, okul 3–4 günde donatılır; şimdi de yetişmek mümkün."
+          }
+        ],
+        "summary": [
+          "1 Temmuz 2026'dan itibaren iç ve dış kameralar, ses kaydı, çevrim içi yayın ve 6 aylık arşiv, özel okul, anaokulu ve eğitim merkezleri için lisans şartıdır (271 sayılı karar).",
+          "1 Ağustos 2026'dan itibaren 425 sayılı karar tüm eğitim kurumları için hırsız alarmı, panik butonu ve sistem bakımı ekler.",
+          "300 öğrencili okula 22–26 kamera ve 40–60 TB arşiv, 100 çocuklu anaokuluna 10–14 kamera ve 24–32 TB gerekir; yalnızca güvenlik serisi diskler.",
+          "Sesli kameralar: Hikvision'da U harfli model kodu, Dahua'da S/SA; ses kayıt cihazında ayrıca açılır.",
+          "Anaokulu 22–27 milyon UZS, okul montaj dahil 42–55 milyon UZS; 2–4 gün montaj, işçilikte 3 yıl garanti, ardından bakım sözleşmesi."
+        ]
+      },
+      "zh": {
+        "title": "2026年7月1日起私立学校与幼儿园的摄像机要求：录音、在线观看与6个月存档——需要什么、如何达标",
+        "seoTitle": "2026年私立学校摄像机新规：要求与方案",
+        "seoDesc": "2026年5月21日第271号决议：私立学校、幼儿园与培训中心须配备室内外摄像机，带录音、在线观看、6个月存档。装什么、怎么算。",
+        "excerpt": "自2026年7月1日起，带录音、可在线观看且存档不少于六个月的视频监控摄像机成为乌兹别克斯坦非国立学校、幼儿园和培训中心的许可条件。我们解读决议的具体要求，300名学生的学校与100名儿童的幼儿园各需多少摄像机和硬盘，如何计算存档容量以及费用。",
+        "sections": [
+          {
+            "h": "2026年7月1日起有何变化",
+            "p": [
+              "内阁2026年5月21日第271号决议修改了《通过专用电子系统对特定活动进行许可的统一条例》（经2022年2月21日第80号决议批准）。非国立教育机构新增一项许可条件：提供教育服务的建筑与场所必须配备具有在线直播功能和录音功能的室内外视频监控摄像机，录像须保存不少于六个月。",
+              "该要求自2026年7月1日起生效，适用于已运营和新设立的机构。由于这是许可条件，根据《许可、准许与告知程序法》，不遵守可能成为吊销教育许可证的依据。实践中，非国立教育机构指凭许可证运营的私立学校、幼儿园、培训中心和课程机构。",
+              "两个月后出台了第二份文件——2026年7月31日第425号决议《关于进一步完善国立与非国立教育机构安全体系的措施》，自2026年8月1日起生效。它涵盖所有教育机构：防盗报警、紧急按钮、视频监控及其维护，以及在“安全教育”理念（2025年11月29日第360号总统决议）框架下的合同制人防与技防。安全责任由机构管理层承担。两份文件的准确表述请结合自身情况在国家法规数据库中核对；下文讨论技术层面。"
+            ]
+          },
+          {
+            "h": "四项要求及其实际含义",
+            "p": [
+              "室内外摄像机。室内：教室、走廊、大厅、食堂、体育馆；室外：出入口、院子、活动场地、围界和停车场。儿童所在之处不应有盲区，而更衣室、卫生间和医务室不得拍摄——这是个人数据法的限制，不是决议的要求。",
+              "录音。需要内置麦克风或带外接麦克风音频输入的摄像机。海康威视以型号末尾的字母U表示内置麦克风（如DS-2CD2143G2-IU），大华以后缀S或SA表示。只买这样的摄像机还不够：必须在录像机设置中开启音频流，否则存档无声——检查时第一个就会发现。",
+              "在线直播。不仅能在保安监视器上，还能通过互联网——在校长、教务主任或安全负责人的手机上实时观看。技术上这是录像机的应用（Hik-Connect、DMSS）或面向多校区的服务器平台；需要上行带宽有余量的稳定网络和配置好的访问权限。",
+              "六个月存档。最昂贵的要求：所有摄像机182天的录像。容量取决于分辨率、编码和录像模式，因此下文单独一节给出计算。"
+            ]
+          },
+          {
+            "h": "学校和幼儿园各需多少摄像机",
+            "p": [
+              "250–300名学生的私立学校：12间教室、各楼层3–4条走廊、2个出入口、食堂、体育馆、院子和围界——通常22–26台。100名儿童的幼儿园：6间班级活动室、走廊、入口、厨房区、游乐场——10–14台。有几间教室的培训中心6–10台即可。以上是典型布局的参考值；准确数量由现场勘察确定。",
+              "室内安装2.8毫米镜头、带麦克风的4MP半球摄像机：约100°的视角可从一点覆盖整间教室。出入口安装带彩色夜视的筒型摄像机，以便晚间也能辨认面孔。院子和围界安装防暴外壳的4MP室外摄像机，必要时配30–50米红外补光。",
+              "所有摄像机由交换机通过PoE供电，因此每台只需一根双绞线。24台摄像机的学校需要一到两台16–24口PoE交换机，以及一台32路或两台16路录像机。"
+            ]
+          },
+          {
+            "h": "核心问题——如何容纳六个月存档",
+            "p": [
+              "存档容量计算很简单：摄像机码率乘以一天的秒数再乘以182天，除以8，得到字节数。H.265编码的4MP摄像机持续录像约2 Mbit/s，即每天约21 GB，每台半年约3.9 TB。学校的摄像机主要在上课时段有用，而H.265+对空教室的静态画面压缩很强，因此实际消耗通常为每台半年1.5–2.5 TB。",
+              "24台摄像机的学校需要40–60 TB：一台8盘位录像机，或两台各配四块10–12 TB硬盘的16路录像机。12台摄像机的幼儿园一台配四块6–8 TB硬盘的16路录像机即可，即24–32 TB。8台摄像机的培训中心——一台8路录像机和两块8–10 TB硬盘。",
+              "硬盘只选监控专用系列——希捷SkyHawk或西数Purple：它们为多路流全天候录像设计，普通电脑硬盘在录像机中一年到一年半就会损坏。录像机设置为190天深度的循环覆盖，每月检查一次最早的录像确实已超过六个月。"
+            ]
+          },
+          {
+            "h": "在线访问与录音：如何配置以免出问题",
+            "p": [
+              "在线观看需将录像机接入互联网；应用通过低分辨率子码流显示画面，因此即使24台摄像机也只需8–10 Mbit/s上行带宽。权限按角色设置：校长看全部，教师只看本班，保安看出入口和围界。调试时更改默认密码并更新固件——这既是安全问题，也是个人数据法的要求。",
+              "录音使摄像机成为比视频更敏感的个人数据来源。应告知员工和家长，在出入口张贴“视频监控含录音”标识，并以内部规程规定谁可以为何目的访问录像、如何按请求提供。详见我们关于视频监控与个人数据的文章。",
+              "第425号决议中的紧急按钮和防盗报警安装在与录像机相同的机柜：按钮设在保安处和校长室，探测器设在出入口和存放贵重物品的房间。视频监控、报警和维护由同一承包商负责，可避免出故障时“这是谁的责任区”的争执。"
+            ]
+          },
+          {
+            "h": "费用是多少",
+            "p": [
+              "设备价格来自我们的目录并会变动：带麦克风的4MP半球摄像机海康威视DS-2CD2143G2-IU 914 900苏姆起，4MP筒型DS-2CD1043G2-LIU 568 900苏姆起，16路录像机DS-7616NXI-K2 1 731 900苏姆起，6 TB SkyHawk监控硬盘2 721 900苏姆起。一台摄像机含线槽布线的安装费155 000–180 000苏姆，录像机、录音和在线访问的调试包含在工程内。",
+              "按此价格，12台摄像机的幼儿园含六个月存档硬盘和安装约22–27百万苏姆；24台摄像机的学校视室外摄像机比例和存档深度约42–55百万苏姆。以上为典型项目参考值；现场勘察后一个工作日内提供您建筑的报价。",
+              "不可节省之处：硬盘（用普通盘替代监控盘）、麦克风（无声摄像机不满足要求）、存档余量（正好182天有风险——任何停机都会吃掉余量）。可节省之处：教室内4MP足够，无需8MP；院子不需要云台摄像机。"
+            ]
+          },
+          {
+            "h": "按期达标的工作顺序",
+            "p": [
+              "第一步——现场勘察与布点方案：摄像机、交换机、录像机的位置和线路走向。第二步——按您的摄像机数量计算存档的报价。第三步——安装：24台摄像机的学校3–4个工作日，幼儿园2天，培训中心1天。第四步——配置录音、在线访问和存档深度，逐台检查录像。",
+              "交付时您将获得方案图、带序列号的设备清单、负责人手机上已配置的应用和保安操作说明。安装工程质保3年，设备享受厂家一至三年质保。",
+              "随后签订维护合同：第425号决议明确要求对安全系统进行维护。按合同我们检查摄像机、硬盘和存档深度，更新固件并记录台账——这是检查时最先查看的内容。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "该要求适用于公立学校吗？",
+            "a": "关于许可条件的第271号决议针对非国立机构。国立与非国立机构适用2026年7月31日第425号决议：防盗报警、紧急按钮、视频监控及其维护——与许可证无关。"
+          },
+          {
+            "q": "我们已装有无录音功能的摄像机，需要更换吗？",
+            "a": "不一定全部更换。我们检查摄像机是否有音频输入或内置麦克风、录像机是否录音、硬盘是否够六个月。通常是为教室摄像机补配、增加硬盘并配置在线访问，室外摄像机保留。"
+          },
+          {
+            "q": "存档可以放在云端吗？",
+            "a": "可以，但二十多台摄像机六个月的录像放在云端，第一年就比硬盘贵。通常存档保存在楼内录像机上，云端或应用用于在线观看。"
+          },
+          {
+            "q": "在线直播需要多少带宽？",
+            "a": "应用通过低分辨率第二码流显示画面，24台摄像机8–10 Mbit/s上行即可。更重要的是线路稳定和断网时的备用线路。"
+          },
+          {
+            "q": "谁可以查看录像？",
+            "a": "由机构依据个人数据法制定的内部规程决定：管理层、安全负责人、职责范围内的保安。员工和家长须被告知含录音的视频监控，出入口张贴标识。"
+          },
+          {
+            "q": "来不及怎么办？",
+            "a": "具备上述功能的摄像机是许可条件，依法不遵守许可条件可能成为吊销许可证的依据。幼儿园2个工作日、学校3–4天即可完成，现在动手仍来得及。"
+          }
+        ],
+        "summary": [
+          "自2026年7月1日起，室内外摄像机、录音、在线直播和6个月存档是私立学校、幼儿园和培训中心的许可条件（第271号决议）。",
+          "自2026年8月1日起，第425号决议为所有教育机构增加防盗报警、紧急按钮和系统维护要求。",
+          "300名学生的学校需22–26台摄像机和40–60 TB存档，100名儿童的幼儿园需10–14台和24–32 TB；只用监控专用硬盘。",
+          "带录音的摄像机：海康威视型号含字母U，大华为S/SA；录音需在录像机中单独开启。",
+          "幼儿园22–27百万苏姆，学校含安装42–55百万苏姆；施工2–4天，工程质保3年，随后签维护合同。"
+        ]
+      }
+    }
+  },
+  {
       slug: "bodikamery-dlya-biznesa",
       date: "2026-10-13",
       updated: "2026-10-13T21:00:00+05:00",
@@ -5314,7 +5833,7 @@ export const ARTICLES: Article[] = [
         faq: [{ q: "Сколько стоит шлагбаум с установкой?", a: "Зависит от длины стрелы, интенсивности привода и способа управления: базовый комплект для двора дешевле, интенсивный с ANPR — дороже. Выезд инженера и смета бесплатны." }, { q: "Что делать при отключении света?", a: "У приводов есть расблокировка — стрела поднимается вручную ключом. Лучше сразу поставить небольшой ИБП: шлагбаум переживает отключения без участия жильцов." }, { q: "Нужно ли согласовывать шлагбаум во дворе?", a: "Для двора многоквартирного дома нужно решение собственников и согласование с районными службами — проезд спецтехники обязан сохраняться. Помогаем подготовить схему установки для согласования." }],
       },
       uz: {
-        title: "Hovli va avtoturargoh uchun shlagbaum: turlari, avtomatika va narx nimadan iborat", seoTitle: "Hovli va avtoturargoh uchun shlagbaum: narxi nimadan iborat",
+        title: "Shlagbaum nima va qanday ishlaydi: hovli va avtoturargoh uchun turlari", seoTitle: "Shlagbaum nima: turlari, avtomatika, hovli uchun tanlash",
         excerpt: "3–6 metrlik strela, intensivlik, pult, telefon yoki avtoraqam orqali boshqarish: hovli, ofis va savdo markaziga qaysi shlagbaum mosligini va halol smetaga nima kirishini koʻrib chiqamiz.",
         sections: [{ h: "Shlagbaumlar qanday boʻladi", p: ["Asosiy parametrlar — strela uzunligi va intensivlik. 3–4 metrlik hovli oʻtish joyiga 50 % «yoqiqlik»dagi bazaviy privod yetadi. Biznes-markaz va savdo markaziga minglab tsiklga moʻljallangan intensiv privod (70–100 %) kerak — aks holda reduktor kafolat oxirigacha yetmaydi.", "Strelalar dumaloq, toʻrtburchak va LED yoritishli boʻladi; uzun oʻtish joylariga buklanadigan oʻrnatiladi. Sovuq iqlimda blok isitishiga qarang — qishda arzon privodlar muzlaydi."] }, { h: "Boshqaruv: pult, telefon, ANPR", p: ["Bazaviy variant — brelok: arzon, lekin breloklar yoʻqoladi va begonalarga oʻtadi. Telefon qoʻngʻirogʻi qulayroq: yashovchi raqami oq roʻyxatda, qoʻngʻiroq bepul — shlagbaum ochildi. Qulaylik choʻqqisi — avtoraqamni tanish kamerasi (ANPR): oʻz mashinalari toʻxtamasdan oʻtadi, mehmonlar qoʻriqchi ruxsati bilan, har bir oʻtish foto bilan yozilgan.", "ANPR 50 tadan ortiq mashinali obyektlarda oʻzini oqlaydi: kirishda navbatlar yoʻqoladi. SKUD bilan integratsiya umumiy jurnal beradi: kim qachon kirgani eshik oʻtishlari bilan bitta tizimda koʻrinadi."] }, { h: "Narx nimadan iborat", p: ["Halol smeta — strelali privod, poydevor va oʻrnatma detallar, xavfsizlik induksiya halqasi yoki fotoelementlar, boshqaruv bloki va tanlangan kirish usuli. Beqaror tarmoqda UPS qoʻshing — toksiz shlagbaum butun hovlini bloklaydi.", "Biz Toshkentdagi ombordan ZKTeco va Hikvision shlagbaumlarini oʻrnatamiz: bir-ikki kunda toʻliq tayyor holda topshirish va kafolat. Oʻtish joyi fotosi va kengligini yuboring — soʻrovga ish kuni davomida javob beramiz."] },  { h: "Montaj, qish va xizmat", p: [
             "Toʻgʻri montaj — xizmat muddatining yarmi: tumba ostiga poydevor yoki oʻrnatma detal, strela hech qachon mashinaga tushmasligi uchun fotoelementlar va induksion halqa detektori, yerga ulash va ozoda quvvat kirishi. Doimiy oqimli hovliga intensiv privod oling: kuniga minglab sikllarda maishiysi bir mavsum yashaydi.",
@@ -6660,7 +7179,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "SKUD narxi nimadan iborat: kirishni nazorat qilish tizimini qismlarga ajratamiz", seoTitle: "SKUD narxi nimadan iborat: eshik, ofis, oʻtkazish punkti", seoDesc: "SKUD narxi nimadan iborat: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli oʻtkazish punkti, karta yoki biometriya.",
+        title: "SKUD tizimi nima va qancha turadi: eshik, ofis, oʻtkazish punkti", seoTitle: "SKUD tizimi: narxi, tarkibi — eshik, ofis, oʻtkazish punkti", seoDesc: "SKUD narxi nimadan iborat: bitta eshik uchun toʻplam — uskunalar boʻyicha taxminan 1,45 mln soʻm, ofis va turniketli oʻtkazish punkti, karta yoki biometriya.",
         excerpt: "SKUD narxi nimadan yigʻiladi: bitta eshik, ofis va turniketli oʻtkazish punkti toʻplamini hisoblaymiz. Kartali va biometrik tizimlar byudjetlari nimasi bilan farq qiladi — va unutiladigan xarajatlar qayerda yashiringan.",
         sections: [
           { h: "Bitta eshik misolida hisoblaymiz", p: [
@@ -9598,7 +10117,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Hikvision IP-kamerasini qanday ulash: bosqichma-bosqich yoʻriqnoma", seoTitle: "Hikvision IP-kamerasini ulash: bosqichma-bosqich yoʻriqnoma",
+        title: "Hikvision kamerani telefonga qanday ulash: bosqichma-bosqich", seoTitle: "Hikvision kamerani telefonga ulash: yoʻriqnoma",
         excerpt: "Hikvision IP-kamerasini noldan ulaymiz: quvvat va kabel, SADP orqali aktivatsiya, Hik-Connect va registratorga qoʻshish, yangi boshlovchilarning odatiy xatolari.",
         sections: [
           { h: "Nima kerak boʻladi", p: [
@@ -11013,7 +11532,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery"],
     loc: {
       uz: {
-        title: "Kamera narxlari 2026: videokuzatuv qancha turadi", seoTitle: "Kamera narxlari Toshkentda: IP-kamera {{min:IP-камеры}}dan", seoDesc: "Videokuzatuv kameralari narxlari: IP-kamera {{min:IP-камеры}}dan, NVR registrator {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar va tayyor toʻplamlar. Toshkentdagi ombordan, kafolat va oʻrnatish bilan.",
+        title: "Kamera narxlari 2026: IP, Wi-Fi va PTZ kameralar Toshkentda qancha turadi", seoTitle: "Kamera narxlari 2026 — IP-kamera {{min:IP-камеры}}dan, oʻrnatish bilan", seoDesc: "Videokuzatuv kameralari narxlari: IP-kamera {{min:IP-камеры}}dan, NVR registrator {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar va tayyor toʻplamlar. Toshkentdagi ombordan, kafolat va oʻrnatish bilan.",
         excerpt: "Toshkentda videokuzatuv kameralari narxlari: mini kameradan professional IP-kameragacha, toʻplam narxi, oʻrnatish qiymati va nimaga pul toʻlash arziydi.",
         sections: [
           { h: "Kamera narxi nimaga bogʻliq", p: [
@@ -11433,7 +11952,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Turniket narxiga nima taʼsir qiladi: oʻrnatish bilan hisob", seoTitle: "Turniket narxi nimadan iborat: tripod 4,33 mln soʻmdan", seoDesc: "Turniket narxiga nima taʼsir qiladi (2026): tripod 4,33 mln soʻmdan, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
+        title: "Turniket narxlari: tripod 4,33 mln soʻmdan — nimadan iborat", seoTitle: "Turniket narxlari 2026: tripod, kalitka, toʻliq balandlik", seoDesc: "Turniket narxiga nima taʼsir qiladi (2026): tripod 4,33 mln soʻmdan, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
         excerpt: "2026-yilda turniket narxiga nima taʼsir qiladi: tripod, qanotli, toʻliq boʻyli va Face ID bilan. Narx nimadan iborat va qayerda tejash mumkin.",
         sections: [
           { h: "Turniket turlari va narxlar tartibi", p: [
@@ -11617,7 +12136,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       uz: {
-        title: "Domofon narxi nimadan iborat: oʻrnatish bilan hisob",
+        title: "Domofon narxi (damafon narxi): nimadan iborat va qancha turadi", seoTitle: "Domofon narxi 2026: kvartira, uy, podyezd — oʻrnatish bilan",
         excerpt: "2026-yilda audio va video domofon narxi nimadan iborat: kvartira, hovli, ofis va koʻp qavatli uy uchun. Oʻrnatish qiymati va smetaga nima taʼsir qiladi.",
         sections: [
           { h: "Domofon narxlari tartibi", p: [
@@ -12559,7 +13078,7 @@ export const ARTICLES: Article[] = [
     related: ["locks", "access", "intercom"],
     loc: {
       uz: {
-        title: "Eshik qulfi narxi nimadan iborat: elektron, kodli va aqlli qulflar",
+        title: "Eshik qulfi narxi: elektron, kodli va aqlli qulflar qancha turadi", seoTitle: "Eshik qulfi narxi 2026: elektron, kodli, aqlli qulflar",
         excerpt: "Eshik qulfi narxiga nima taʼsir qiladi: elektromagnit, elektromexanik, kodli va aqlli (smart) qulflar. Kvartira, ofis va kalitka uchun nimani tanlash kerak.",
         sections: [
           { h: "Qulf turlari va narxlar tartibi", p: [
@@ -12758,7 +13277,7 @@ export const ARTICLES: Article[] = [
     hubs: ["shlagbaumy"],
     loc: {
       uz: {
-        title: "Shlagbaum narxi nimadan iborat: oʻrnatish bilan hisob",
+        title: "Shlagbaum narxi: uskuna, oʻrnatish va nimadan iborat", seoTitle: "Shlagbaum narxi 2026: oʻrnatish bilan 5,5 mln soʻmdan",
         excerpt: "Avtomatik shlagbaum narxiga nima taʼsir qiladi: strela uzunligi, pult va raqam aniqlash (ANPR) bilan. Oʻrnatish qancha turadi va hovli, avtoturargoh, KPP uchun nimani tanlash kerak.",
         sections: [
           { h: "Shlagbaum narxi nimaga bogʻliq", p: [
@@ -12953,7 +13472,7 @@ export const ARTICLES: Article[] = [
     hubs: ["turnikety-i-shlagbaumy"],
     loc: {
       uz: {
-        title: "Davomat tizimi: maktab, ofis va zavod uchun narx nimadan iborat",
+        title: "Davomat tizimi qanday ishlaydi va qancha turadi: maktab, ofis, zavod", seoTitle: "Davomat tizimi: yuz, karta, ilova — maktab va ofis uchun",
         excerpt: "Biometrik davomat tizimi narxi nimadan iborat: Face ID terminallar, kartalar, avtomatik tabel va 1C ga yuklash. Maktab, ofis va ishlab chiqarish uchun yechimlar.",
         sections: [
           { h: "Davomat tizimi qanday ishlaydi", p: [
@@ -13170,7 +13689,7 @@ export const ARTICLES: Article[] = [
     related: ["smarthome", "cctv", "locks"],
     loc: {
       uz: {
-        title: "Aqlli uy narxi nimadan iborat va nimadan boshlash kerak",
+        title: "Aqlli uy loyihasi va narxi: nimadan boshlash kerak", seoTitle: "Aqlli uy narxi 2026: loyiha, uskunalar, nimadan boshlash",
         excerpt: "Aqlli uy tizimi narxi nimadan iborat: yoritish, pardalar, iqlim, videokuzatuv va aqlli qulflar bitta ilovada. Nimadan boshlash arzon va qanday kengaytirish mumkin.",
         sections: [
           { h: "Aqlli uy nimalardan iborat", p: [

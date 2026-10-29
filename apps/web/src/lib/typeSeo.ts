@@ -252,6 +252,39 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       zh: "家庭与办公用Wi-Fi无线监控摄像机：Tapo、海康威视、大华、中控智慧。云台旋转，支持SD卡与云端录像、双向语音，含App配置。塔什干报价与质保。",
     },
   },
+  // 29.10.2026: uz-запросы «ptz kamera», «sksish» показывали шаблонный title с CTR ~0 — свои заголовки на 5 языках
+  "ptz-kamery": {
+    title: {
+      ru: "PTZ-камеры — поворотные камеры, цены в Ташкенте | SAT",
+      uz: "PTZ kamera narxi Toshkentda — burilma kameralar katalogi | SAT",
+      en: "PTZ Cameras in Tashkent — Pan-Tilt-Zoom Models and Prices | SAT",
+      tr: "Taşkent'te PTZ Kameralar — Dönebilen Kameralar, Fiyatlar | SAT",
+      zh: "塔什干 PTZ 球机 — 云台摄像机型号与价格 | SAT",
+    },
+    desc: {
+      ru: "Поворотные PTZ-камеры Hikvision и Dahua: оптический зум, автотрекинг, уличное исполнение. Цены в каталоге, подбор под периметр и парковку, монтаж в Ташкенте.",
+      uz: "Hikvision va Dahua burilma PTZ kameralari: optik zum, avtokuzatuv, tashqi ijro. Katalogda narxlar, perimetr va avtoturargoh uchun tanlash, Toshkentda montaj.",
+      en: "Hikvision and Dahua PTZ cameras: optical zoom, auto-tracking, outdoor housings. Catalogue prices, selection for perimeters and parking, installation in Tashkent.",
+      tr: "Hikvision ve Dahua PTZ kameralar: optik zoom, otomatik takip, dış ortam gövdesi. Katalog fiyatları, çevre ve otopark için seçim, Taşkent'te montaj.",
+      zh: "海康威视与大华 PTZ 球机：光学变焦、自动跟踪、室外防护。目录含价格，面向周界与停车场选型，塔什干安装。",
+    },
+  },
+  "sks-vitaya-para": {
+    title: {
+      ru: "СКС и витая пара — кабель, патч-панели, розетки в Ташкенте | SAT",
+      uz: "SKS kabel va oʻralgan juftlik — Toshkentda narxlar | SAT",
+      en: "Structured Cabling and Twisted Pair in Tashkent — Cable, Panels | SAT",
+      tr: "Taşkent'te Yapısal Kablolama ve Bükümlü Çift — Kablo, Panel | SAT",
+      zh: "塔什干综合布线与双绞线 — 网线、配线架、插座 | SAT",
+    },
+    desc: {
+      ru: "Витая пара cat.5e и cat.6, патч-панели, розетки, патч-корды и шкафы для СКС. Цены в каталоге, монтаж сети офиса под ключ в Ташкенте.",
+      uz: "Cat.5e va cat.6 oʻralgan juftlik, patch-panellar, rozetkalar, patch-kordlar va SKS uchun shkaflar. Katalogda narxlar, Toshkentda ofis tarmogʻini toʻliq tayyor holda montaj qilish.",
+      en: "Cat.5e and cat.6 twisted pair, patch panels, outlets, patch cords and cabinets for structured cabling. Catalogue prices, turnkey office network installation in Tashkent.",
+      tr: "Cat.5e ve cat.6 bükümlü çift, patch paneller, prizler, patch kablolar ve kabinetler. Katalog fiyatları, Taşkent'te anahtar teslim ofis ağı montajı.",
+      zh: "Cat.5e 与 cat.6 双绞线、配线架、插座、跳线与机柜。目录含价格，塔什干办公室网络整体施工。",
+    },
+  },
 };
 
 /**
@@ -310,6 +343,21 @@ const TYPE_H1: Record<string, LocText> = {
     en: "Barrier Gates in Tashkent — Prices and Stock",
     tr: "Taşkent'te Bariyerler — Fiyatlar ve Stok",
     zh: "塔什干道闸 — 价格与现货",
+  },
+  // 29.10.2026: H1 под uz-запросы «ptz kamera», «sksish»
+  "ptz-kamery": {
+    ru: "PTZ-камеры: поворотные камеры — цены и модели",
+    uz: "PTZ kameralar: burilma kameralar narxlari va modellari",
+    en: "PTZ cameras: pan-tilt-zoom models and prices",
+    tr: "PTZ kameralar: dönebilen kamera modelleri ve fiyatları",
+    zh: "PTZ 球机：云台摄像机型号与价格",
+  },
+  "sks-vitaya-para": {
+    ru: "СКС: витая пара, патч-панели, розетки",
+    uz: "SKS: oʻralgan juftlik, patch-panellar, rozetkalar",
+    en: "Structured cabling: twisted pair, patch panels, outlets",
+    tr: "Yapısal kablolama: bükümlü çift, patch paneller, prizler",
+    zh: "综合布线：双绞线、配线架、插座",
   },
 };
 export function typeH1For(slug: string, locale: string): string | undefined {

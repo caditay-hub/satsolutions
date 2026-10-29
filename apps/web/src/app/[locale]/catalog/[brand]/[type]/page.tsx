@@ -107,7 +107,8 @@ export default async function BrandTypePage({
 
   const brandName = localizeBrandName(brandSlug, cfg.displayName, locale);
   const locType = localizeCatName(pair.typeName, locale);
-  const h1 = `${locType} ${brandName}`;
+  // «Прочее» — не бренд: H1 «Aqlli uy Butlovchi qismlar va aksessuarlar» читался как склейка (29.10.2026)
+  const h1 = brandSlug === "prochee" ? locType : `${locType} ${brandName}`;
   const seo = getPairSeo(brandSlug, type, locale);
   const tc = await getTranslations({ locale, namespace: "catalog" });
   const breadcrumbLd = {

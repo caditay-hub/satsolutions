@@ -77,6 +77,27 @@ const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
 };
 const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "hik-ds-2cd2143g2-iu-2-8mm-o-std": {
+    ru: "Купольная IP-камера 4 Мп с микрофоном Hikvision DS-2CD2143G2-IU",
+    uz: "Mikrofonli 4 Mp gumbazli IP-kamera Hikvision DS-2CD2143G2-IU",
+    en: "Hikvision DS-2CD2143G2-IU 4 MP dome camera with microphone",
+    tr: "Mikrofonlu 4 MP dome IP kamera Hikvision DS-2CD2143G2-IU",
+    zh: "海康威视 DS-2CD2143G2-IU 4MP 带麦克风半球网络摄像机",
+  },
+  "hik-ds-7616nxi-k2": {
+    ru: "IP-видеорегистратор на 16 каналов Hikvision DS-7616NXI-K2",
+    uz: "16 kanalli IP-videoregistrator Hikvision DS-7616NXI-K2",
+    en: "Hikvision DS-7616NXI-K2 16-channel NVR",
+    tr: "16 kanallı NVR Hikvision DS-7616NXI-K2",
+    zh: "海康威视 DS-7616NXI-K2 16路网络录像机",
+  },
+  "pro-seagate-skyhawk-hdd-6tb-dubai": {
+    ru: "Жёсткий диск для видеонаблюдения Seagate SkyHawk 6 ТБ",
+    uz: "Videokuzatuv uchun qattiq disk Seagate SkyHawk 6 TB",
+    en: "Seagate SkyHawk 6 TB surveillance hard drive",
+    tr: "Seagate SkyHawk 6 TB güvenlik kamerası diski",
+    zh: "希捷 SkyHawk 6 TB 监控硬盘",
+  },
   "hik-ds-mcw406-64g-gps-wifi": {
     ru: "Боди-камера (нательный видеорегистратор) Hikvision DS-MCW406/64G/GPS/WIFI",
     uz: "Bodikamera (tanaga taqiladigan videoregistrator) Hikvision DS-MCW406/64G/GPS/WIFI",
