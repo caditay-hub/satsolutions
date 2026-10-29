@@ -11532,7 +11532,7 @@ export const ARTICLES: Article[] = [
     hubs: ["ip-kamery"],
     loc: {
       uz: {
-        title: "Kamera narxlari 2026: IP, Wi-Fi va PTZ kameralar Toshkentda qancha turadi", seoTitle: "Kamera narxlari 2026 — IP-kamera {{min:IP-камеры}}dan, oʻrnatish bilan", seoDesc: "Videokuzatuv kameralari narxlari: IP-kamera {{min:IP-камеры}}dan, NVR registrator {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar va tayyor toʻplamlar. Toshkentdagi ombordan, kafolat va oʻrnatish bilan.",
+        title: "Kamera narxlari 2026: IP, Wi-Fi va PTZ kameralar Toshkentda qancha turadi", seoTitle: "Kamera narxlari 2026: IP-kamera {{min:IP-камеры}}dan", seoDesc: "Videokuzatuv kameralari narxlari: IP-kamera {{min:IP-камеры}}dan, NVR registrator {{min:IP-видеорегистраторы (NVR)}}dan, Wi-Fi kameralar va tayyor toʻplamlar. Toshkentdagi ombordan, kafolat va oʻrnatish bilan.",
         excerpt: "Toshkentda videokuzatuv kameralari narxlari: mini kameradan professional IP-kameragacha, toʻplam narxi, oʻrnatish qiymati va nimaga pul toʻlash arziydi.",
         sections: [
           { h: "Kamera narxi nimaga bogʻliq", p: [
