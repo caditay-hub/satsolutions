@@ -33,6 +33,555 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "zashchita-ip-kamer-ot-vzloma",
+    "date": "2026-10-30",
+    "related": [
+      "cctv",
+      "mikrotik",
+      "obsluzhivanie"
+    ],
+    "hubs": [
+      "ip-videoregistratory-nvr",
+      "kommutatory"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "sadp-hikvision",
+      "hik-connect-skachat-podklyuchit",
+      "videonablyudenie-personalnye-dannye-uzbekistan"
+    ],
+    "products": [
+      "tpl-tp-link-sg2210p",
+      "tpl-tp-link-er605",
+      "pxt-rb760igs"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Как защитить IP-камеры и регистратор от взлома: пароли, обновления, VLAN — на примере уязвимостей 2025 года",
+        "seoTitle": "Как защитить IP-камеры от взлома: пароли, прошивки, VLAN",
+        "seoDesc": "Уязвимости камер Dahua и Hikvision 2025 года и что с ними делать: закрыть порты, сменить пароли, обновить прошивки, вынести камеры в VLAN. Чек-лист на 15 минут.",
+        "excerpt": "В 2025 году производители выпустили исправления новых уязвимостей камер, а злоумышленники продолжали массово атаковать устройства со старыми прошивками и заводскими паролями. Разбираем, что произошло, почему под удар попадают не новые камеры, а забытые и открытые в интернет, и как за 15 минут закрыть главные дыры: порты, пароли, обновления и отдельную сеть для камер.",
+        "sections": [
+          {
+            "h": "Зачем взламывают камеры и что теряет владелец",
+            "p": [
+              "Камера и регистратор — это маленькие компьютеры с операционной системой, сетевым интерфейсом и паролем. Если они доступны из интернета и не обновляются, их находят автоматическими сканерами за часы. Цели у злоумышленников разные: посмотреть или выгрузить видео, включить устройство в ботнет для атак на чужие сайты, использовать камеру как точку входа во внутреннюю сеть офиса или просто стереть архив.",
+              "Для владельца это не абстрактный риск. Утечка записей с людьми — нарушение закона о персональных данных, ответственность за которое несёт оператор системы, то есть вы. Взломанный регистратор может перестать писать как раз в ту ночь, когда запись нужна. А камера в ботнете съедает интернет-канал и иногда приводит к блокировке вашего IP-адреса провайдером."
+            ]
+          },
+          {
+            "h": "Что случилось в 2025 году",
+            "p": [
+              "Летом 2025 года Dahua опубликовала бюллетень о двух уязвимостях: CVE-2025-31700 в обработчике протокола ONVIF и CVE-2025-31701 в обработчике загрузки файлов. Обе оценены в 8,1 балла из 10: специально сформированный сетевой пакет может привести к сбою камеры, а на части моделей — к выполнению чужого кода. Затронуты массовые серии IPC-1XXX, IPC-2XXX, IPC-WX, IPC-ECXX, поворотные SD3A и SD2A; прошивки с датой сборки после 16 апреля 2025 года уязвимостям не подвержены. Исправления выложены в центре загрузок производителя, а устройствам с облачным обновлением они приходят автоматически.",
+              "У Hikvision в сентябре 2025 года исследователи зафиксировали новую волну попыток эксплуатации старых уязвимостей: CVE-2017-7921, исправленной ещё в 2017 году, и CVE-2021-36260, исправленной в сентябре 2021 года. Обе оценены в 9,8 балла. Атакующие перебирали заводские и слабые пароли и искали устройства с прошивками, которые не обновлялись годами.",
+              "Вывод из обеих историй один: под удар попадают не новые камеры, а необновлённые и выставленные в интернет напрямую. Производители закрывают дыры, но исправление ничего не меняет, пока его не установили. Дальше — пять мер, которые закрывают подавляющую часть риска."
+            ]
+          },
+          {
+            "h": "Правило первое: камера не должна смотреть в интернет",
+            "p": [
+              "Самая частая ошибка — проброс портов на роутере, чтобы смотреть камеры с телефона: веб-интерфейс регистратора становится доступен любому сканеру в мире. Вторая — включённый на роутере UPnP, через который камера сама открывает себе порты. Именно эти две вещи производители и исследователи советуют выключить в первую очередь.",
+              "Удалённый просмотр делается иначе. Первый вариант — облако производителя: Hik-Connect у Hikvision или DMSS у Dahua. Соединение инициирует само устройство, порты на роутере открывать не нужно, а видео защищается ключом шифрования. Второй вариант — VPN на роутере: телефон или ноутбук подключается к офисной сети по зашифрованному каналу и видит камеры так же, как изнутри. Для бизнеса с несколькими объектами VPN надёжнее и удобнее.",
+              "Проверить себя просто: зайдите в настройки роутера и посмотрите раздел переадресации портов и UPnP. Если там есть правила на адреса камер или регистратора, а UPnP включён, — это первое, что нужно исправить."
+            ]
+          },
+          {
+            "h": "Пароли и учётные записи",
+            "p": [
+              "Новые камеры Hikvision и Dahua не работают с заводским паролем — их нужно активировать, задав свой. Но в старых системах до сих пор встречаются admin/12345 и пароли, которые монтажник записал маркером на регистраторе. Пароль должен быть длинным, из букв, цифр и символов, и разным для регистратора и облачного аккаунта.",
+              "Под администратором не работают каждый день. Охране и сотрудникам создают отдельные учётные записи с правами только на просмотр нужных камер; подрядчику выдают временный доступ и забирают его после работ. Включите блокировку после нескольких неверных попыток входа — тогда перебор паролей, которым пользовались атакующие в 2025 году, становится бесполезным.",
+              "Отдельно — ключ шифрования для облака (у Hikvision его называют кодом верификации). Его не оставляют заводским и не печатают на наклейке. Сменить пароль и ключ можно в веб-интерфейсе устройства или через утилиту SADP; как это сделать, мы подробно разбирали в статье про SADP."
+            ]
+          },
+          {
+            "h": "Обновления прошивок",
+            "p": [
+              "Обе волны атак 2025 года на Hikvision били по уязвимостям четырёх- и восьмилетней давности. Значит, устройства, которые взломали, не обновлялись ни разу. Проверяйте версию прошивки раз в квартал — она видна в веб-интерфейсе, в SADP и в приложении, — и сравнивайте с последней на сайте производителя.",
+              "Прошивку берут только из официального центра загрузок под точную модель и аппаратную ревизию либо ставят через облачное обновление. Прошивки с форумов и из мессенджеров — отдельный риск. Перед обновлением регистратора выгружают конфигурацию, а на очень старом оборудовании обновляют последовательно, через промежуточные версии, как указывает производитель.",
+              "Для камер, на которые обновлений больше не выпускают, решение одно: изолировать их в отдельной сети без выхода в интернет или заменить. Стоимость новой массовой IP-камеры обычно меньше, чем цена инцидента с утечкой записей."
+            ]
+          },
+          {
+            "h": "Отдельная сеть для камер: VLAN",
+            "p": [
+              "Камерам незачем видеть бухгалтерию, а компьютерам бухгалтерии — камеры. Поэтому видеонаблюдение выносят в отдельную подсеть или VLAN: камеры общаются только с регистратором, регистратор — единственное устройство, которое выходит наружу и в офисную сеть. Если взломают ноутбук сотрудника, до камер он не дотянется, и наоборот.",
+              "Технически VLAN настраивается на управляемом или «смарт» PoE-коммутаторе и на роутере. Ещё проще для небольших объектов — регистратор со встроенными PoE-портами: камеры, подключённые к ним, оказываются во внутренней сети регистратора и вообще не видны из офисной. На роутере добавляют правило, запрещающее камерам выход в интернет: обновления и облако работают через регистратор.",
+              "Из каталога для этого подходят, например, смарт-коммутатор TP-Link SG2210P с VLAN и ACL, VPN-маршрутизатор TP-Link ER605 и маршрутизатор MikroTik hEX S. Настройку роутеров и сетей под видеонаблюдение мы делаем как отдельную услугу."
+            ]
+          },
+          {
+            "h": "Что ещё выключить и что включить",
+            "p": [
+              "Выключите сервисы, которыми не пользуетесь: Telnet и SSH, UPnP на самой камере, облачный P2P, если доступ идёт через VPN. Обратите внимание: одна из уязвимостей Dahua 2025 года находилась в обработчике ONVIF — если ONVIF не нужен для подключения к стороннему регистратору, его лучше отключить, а если нужен, задайте для него отдельного пользователя с паролем.",
+              "Включите HTTPS вместо HTTP для веб-интерфейса, синхронизацию времени по NTP — без точного времени журналы событий бесполезны при разборе — и периодически просматривайте журнал входов: незнакомые IP-адреса, неизвестные пользователи и изменённые настройки — первый признак, что кто-то уже внутри.",
+              "Если признаки взлома есть, порядок такой: отключить устройство от интернета, обновить прошивку, сбросить настройки, задать новые пароли для всех учётных записей и ключ шифрования, проверить роутер на открытые порты."
+            ]
+          },
+          {
+            "h": "Чек-лист на 15 минут и кто за это отвечает",
+            "p": [
+              "Пять пунктов, которые закрывают основной риск: на роутере нет проброса портов на камеры и выключен UPnP; у регистратора и облачного аккаунта длинные разные пароли, у сотрудников — свои учётные записи без прав администратора; прошивки камер и регистратора не старше последних версий производителя; камеры в отдельной сети без выхода в интернет; лишние сервисы выключены, журнал входов просматривается.",
+              "По закону о персональных данных за защиту записей отвечает владелец системы, поэтому эти пункты стоит закрепить во внутреннем регламенте: кто меняет пароли, кто проверяет обновления, кто имеет доступ к архиву. Подробнее — в нашей статье о видеонаблюдении и персональных данных.",
+              "Если систему ставили давно или разными подрядчиками, проще заказать проверку: инженер пройдёт по чек-листу, обновит прошивки, вынесет камеры в отдельную сеть и настроит удалённый доступ без открытых портов. Дальше это входит в договор обслуживания: обновления и проверка журналов по графику. Смету по числу ваших устройств возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Смотреть камеры через Hik-Connect или DMSS безопасно?",
+            "a": "Безопаснее, чем проброс портов: соединение инициирует само устройство, и порты на роутере открывать не нужно. Используйте сложный пароль аккаунта и смените ключ шифрования устройства с заводского."
+          },
+          {
+            "q": "Как понять, что камеру уже взломали?",
+            "a": "В журнале входов появляются незнакомые IP-адреса и пользователи, меняются настройки, камера сама перезагружается, а интернет в офисе заметно тормозит. В этом случае отключите устройство от интернета, обновите прошивку, сбросьте настройки и задайте новые пароли."
+          },
+          {
+            "q": "Зачем обновлять, если всё работает?",
+            "a": "Атаки 2025 года на Hikvision шли по уязвимостям, исправленным в 2017 и 2021 годах: взломали именно те устройства, которые работали и ни разу не обновлялись."
+          },
+          {
+            "q": "Что делать со старыми камерами, для которых нет обновлений?",
+            "a": "Изолировать их в отдельной сети без выхода в интернет, с доступом только через регистратор или VPN, либо заменить. Новая массовая IP-камера обычно дешевле последствий утечки."
+          },
+          {
+            "q": "Камеры какого производителя безопаснее?",
+            "a": "Уязвимости находят у всех крупных производителей, и важнее не марка, а то, выпускает ли производитель исправления и устанавливаете ли вы их. У Hikvision и Dahua есть публичные бюллетени безопасности и центры загрузок."
+          },
+          {
+            "q": "Нужен ли отдельный коммутатор для VLAN?",
+            "a": "Нужен управляемый или смарт-коммутатор с поддержкой VLAN либо регистратор со встроенными PoE-портами, который сам изолирует камеры. Для небольших объектов второго варианта часто достаточно."
+          }
+        ],
+        "summary": [
+          "В 2025 году Dahua исправила уязвимости CVE-2025-31700 и CVE-2025-31701 (прошивки со сборкой после 16.04.2025 не затронуты), а на Hikvision шла новая волна атак по уязвимостям 2017 и 2021 годов.",
+          "Под удар попадают необновлённые устройства, открытые в интернет через проброс портов и UPnP.",
+          "Удалённый доступ — через облако производителя или VPN, без открытых портов; пароли длинные и разные, сотрудникам — свои учётные записи.",
+          "Прошивки — раз в квартал из официального источника; камеры — в отдельной сети или VLAN без выхода в интернет.",
+          "За защиту записей по закону отвечает владелец системы; проверку и обновления удобно включить в договор обслуживания."
+        ]
+      },
+      "uz": {
+        "title": "IP-kameralar va registratorni buzib kirishdan qanday himoya qilish: parollar, yangilanishlar, VLAN — 2025-yil zaifliklari misolida",
+        "seoTitle": "IP-kameralarni buzib kirishdan himoya qilish: parollar, VLAN",
+        "seoDesc": "Dahua va Hikvision kameralarining 2025-yil zaifliklari: portlarni yopish, parolni almashtirish, proshivkani yangilash, VLANga ajratish. 15 daqiqalik roʻyxat.",
+        "excerpt": "2025-yilda ishlab chiqaruvchilar kameralarning yangi zaifliklari uchun tuzatishlar chiqardi, buzgʻunchilar esa eski proshivkali va zavod parolli qurilmalarga ommaviy hujum qilishda davom etdi. Nima boʻlganini, nega xavf ostida yangi emas, balki unutilgan va internetga ochiq kameralar qolishini va asosiy teshiklarni — portlar, parollar, yangilanishlar va kameralar uchun alohida tarmoqni 15 daqiqada qanday yopishni koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Kameralar nega buziladi va egasi nimani yoʻqotadi",
+            "p": [
+              "Kamera va registrator — operatsion tizimi, tarmoq interfeysi va paroli bor kichik kompyuterlar. Agar ular internetdan ochiq boʻlsa va yangilanmasa, avtomatik skanerlar ularni bir necha soatda topadi. Buzgʻunchilarning maqsadlari turlicha: videoni koʻrish yoki yuklab olish, qurilmani boshqa saytlarga hujum qilish uchun botnetga qoʻshish, kamerani ofisning ichki tarmogʻiga kirish nuqtasi sifatida ishlatish yoki shunchaki arxivni oʻchirish.",
+              "Egasi uchun bu mavhum xavf emas. Odamlar tushgan yozuvlarning sizib chiqishi — shaxsiy maʼlumotlar toʻgʻrisidagi qonunni buzish boʻlib, uning uchun tizim operatori, yaʼni siz javob berasiz. Buzilgan registrator aynan yozuv kerak boʻlgan kechada yozishni toʻxtatishi mumkin. Botnetdagi kamera esa internet kanalini yeydi va baʼzan provayder IP-manzilingizni bloklashiga olib keladi."
+            ]
+          },
+          {
+            "h": "2025-yilda nima boʻldi",
+            "p": [
+              "2025-yil yozida Dahua ikki zaiflik haqida byulleten eʼlon qildi: ONVIF protokoli ishlov beruvchisidagi CVE-2025-31700 va fayllarni yuklash ishlov beruvchisidagi CVE-2025-31701. Ikkalasi 10 balldan 8,1 ga baholangan: maxsus tuzilgan tarmoq paketi kameraning ishdan chiqishiga, baʼzi modellarda esa begona kodning bajarilishiga olib kelishi mumkin. Ommaviy IPC-1XXX, IPC-2XXX, IPC-WX, IPC-ECXX seriyalari, burilma SD3A va SD2A taʼsirlangan; yigʻilish sanasi 2025-yil 16-apreldan keyingi proshivkalar zaif emas. Tuzatishlar ishlab chiqaruvchining yuklab olish markazida joylangan, bulutli yangilanishga ega qurilmalarga esa ular avtomatik keladi.",
+              "Hikvisionda 2025-yil sentyabrida tadqiqotchilar eski zaifliklardan foydalanishga urinishlarning yangi toʻlqinini qayd etdi: 2017-yilda tuzatilgan CVE-2017-7921 va 2021-yil sentyabrida tuzatilgan CVE-2021-36260. Ikkalasi 9,8 ballga baholangan. Hujumchilar zavod va kuchsiz parollarni terib koʻrdi va yillar davomida yangilanmagan proshivkali qurilmalarni qidirdi.",
+              "Ikkala voqeadan xulosa bitta: xavf ostida yangi kameralar emas, balki yangilanmagan va internetga toʻgʻridan-toʻgʻri ochilganlar qoladi. Ishlab chiqaruvchilar teshiklarni yopadi, lekin tuzatish oʻrnatilmaguncha hech narsani oʻzgartirmaydi. Keyin — xavfning katta qismini yopadigan beshta chora."
+            ]
+          },
+          {
+            "h": "Birinchi qoida: kamera internetga qaramasligi kerak",
+            "p": [
+              "Eng koʻp uchraydigan xato — telefondan kameralarni koʻrish uchun routerda port yoʻnaltirish: registratorning veb-interfeysi dunyodagi har qanday skanerga ochiq boʻlib qoladi. Ikkinchisi — routerda yoqilgan UPnP, u orqali kamera oʻziga oʻzi port ochadi. Ishlab chiqaruvchilar va tadqiqotchilar aynan shu ikki narsani birinchi navbatda oʻchirishni maslahat beradi.",
+              "Masofadan koʻrish boshqacha qilinadi. Birinchi variant — ishlab chiqaruvchi buluti: Hikvisionda Hik-Connect yoki Dahuada DMSS. Ulanishni qurilmaning oʻzi boshlaydi, routerda port ochish kerak emas, video esa shifrlash kaliti bilan himoyalanadi. Ikkinchi variant — routerdagi VPN: telefon yoki noutbuk ofis tarmogʻiga shifrlangan kanal orqali ulanadi va kameralarni ichkaridan koʻrgandek koʻradi. Bir nechta obyektli biznes uchun VPN ishonchliroq va qulayroq.",
+              "Oʻzingizni tekshirish oson: router sozlamalariga kirib, port yoʻnaltirish va UPnP boʻlimini koʻring. Agar u yerda kameralar yoki registrator manzillariga qoidalar boʻlsa va UPnP yoqilgan boʻlsa — tuzatish kerak boʻlgan birinchi narsa shu."
+            ]
+          },
+          {
+            "h": "Parollar va hisob qaydnomalari",
+            "p": [
+              "Yangi Hikvision va Dahua kameralari zavod paroli bilan ishlamaydi — ularni oʻz parolingizni berib faollashtirish kerak. Lekin eski tizimlarda hali ham admin/12345 va montajchi registratorga marker bilan yozib qoʻygan parollar uchraydi. Parol uzun, harf, raqam va belgilardan iborat va registrator hamda bulut akkaunti uchun har xil boʻlishi kerak.",
+              "Har kuni administrator ostida ishlanmaydi. Qoʻriqlash va xodimlarga faqat kerakli kameralarni koʻrish huquqiga ega alohida hisob qaydnomalari yaratiladi; pudratchiga vaqtinchalik kirish beriladi va ishlardan keyin qaytarib olinadi. Bir necha notoʻgʻri kirish urinishidan keyin bloklashni yoqing — shunda 2025-yilda hujumchilar foydalangan parollarni terib koʻrish befoyda boʻladi.",
+              "Alohida — bulut uchun shifrlash kaliti (Hikvisionda u tasdiqlash kodi deb ataladi). U zavod holatida qoldirilmaydi va yorliqqa chop etilmaydi. Parol va kalitni qurilmaning veb-interfeysida yoki SADP utilitasi orqali almashtirish mumkin; buni qanday qilish kerakligini SADP haqidagi maqolada batafsil koʻrib chiqqanmiz."
+            ]
+          },
+          {
+            "h": "Proshivkani yangilash",
+            "p": [
+              "2025-yilda Hikvisionga qilingan ikkala hujum toʻlqini toʻrt va sakkiz yillik zaifliklarga qaratilgan edi. Demak, buzilgan qurilmalar bir marta ham yangilanmagan. Proshivka versiyasini har chorakda tekshiring — u veb-interfeysda, SADPda va ilovada koʻrinadi — va ishlab chiqaruvchi saytidagi oxirgisi bilan solishtiring.",
+              "Proshivka faqat aniq model va apparat reviziyasi uchun rasmiy yuklab olish markazidan olinadi yoki bulutli yangilanish orqali oʻrnatiladi. Forumlar va messenjerlardagi proshivkalar — alohida xavf. Registratorni yangilashdan oldin konfiguratsiya yuklab olinadi, juda eski uskunada esa ishlab chiqaruvchi koʻrsatganidek oraliq versiyalar orqali ketma-ket yangilanadi.",
+              "Endi yangilanish chiqarilmaydigan kameralar uchun yechim bitta: ularni internetga chiqishi yoʻq alohida tarmoqda izolyatsiya qilish yoki almashtirish. Yangi ommaviy IP-kamera narxi odatda yozuvlar sizib chiqishi bilan bogʻliq hodisa narxidan kam."
+            ]
+          },
+          {
+            "h": "Kameralar uchun alohida tarmoq: VLAN",
+            "p": [
+              "Kameralarga buxgalteriyani koʻrish kerak emas, buxgalteriya kompyuterlariga esa kameralarni. Shuning uchun videokuzatuv alohida pastki tarmoq yoki VLANga chiqariladi: kameralar faqat registrator bilan aloqa qiladi, registrator esa tashqariga va ofis tarmogʻiga chiqadigan yagona qurilma. Agar xodim noutbukini buzishsa, u kameralarga yeta olmaydi va aksincha.",
+              "Texnik jihatdan VLAN boshqariladigan yoki «smart» PoE-kommutatorda va routerda sozlanadi. Kichik obyektlar uchun yanada osonrogʻi — oʻrnatilgan PoE-portli registrator: ularga ulangan kameralar registratorning ichki tarmogʻida boʻladi va ofis tarmogʻidan umuman koʻrinmaydi. Routerga kameralarning internetga chiqishini taqiqlovchi qoida qoʻshiladi: yangilanishlar va bulut registrator orqali ishlaydi.",
+              "Buning uchun katalogdan, masalan, VLAN va ACLga ega TP-Link SG2210P smart-kommutatori, TP-Link ER605 VPN-routeri va MikroTik hEX S routeri mos keladi. Videokuzatuv uchun routerlar va tarmoqlarni sozlashni alohida xizmat sifatida bajaramiz."
+            ]
+          },
+          {
+            "h": "Yana nimani oʻchirish va nimani yoqish kerak",
+            "p": [
+              "Foydalanmaydigan xizmatlarni oʻchiring: Telnet va SSH, kameraning oʻzidagi UPnP, kirish VPN orqali boʻlsa bulutli P2P. Eʼtibor bering: Dahuaning 2025-yildagi zaifliklaridan biri ONVIF ishlov beruvchisida edi — agar ONVIF uchinchi tomon registratoriga ulanish uchun kerak boʻlmasa, uni oʻchirgan maʼqul, kerak boʻlsa, unga parolli alohida foydalanuvchi bering.",
+              "Veb-interfeys uchun HTTP oʻrniga HTTPSni, NTP orqali vaqt sinxronizatsiyasini yoqing — aniq vaqtsiz hodisalar jurnallari tahlilda foydasiz — va vaqti-vaqti bilan kirishlar jurnalini koʻrib turing: notanish IP-manzillar, nomaʼlum foydalanuvchilar va oʻzgargan sozlamalar — kimdir allaqachon ichkarida ekanining birinchi belgisi.",
+              "Agar buzish belgilari boʻlsa, tartib shunday: qurilmani internetdan uzish, proshivkani yangilash, sozlamalarni tiklash, barcha hisob qaydnomalari uchun yangi parollar va shifrlash kalitini berish, routerni ochiq portlarga tekshirish."
+            ]
+          },
+          {
+            "h": "15 daqiqalik roʻyxat va buning uchun kim javob beradi",
+            "p": [
+              "Asosiy xavfni yopadigan beshta band: routerda kameralarga port yoʻnaltirish yoʻq va UPnP oʻchirilgan; registrator va bulut akkauntida uzun va har xil parollar, xodimlarda administrator huquqisiz oʻz hisob qaydnomalari bor; kameralar va registrator proshivkalari ishlab chiqaruvchining oxirgi versiyalaridan eski emas; kameralar internetga chiqishi yoʻq alohida tarmoqda; ortiqcha xizmatlar oʻchirilgan, kirishlar jurnali koʻrib turiladi.",
+              "Shaxsiy maʼlumotlar toʻgʻrisidagi qonunga koʻra yozuvlarni himoya qilish uchun tizim egasi javob beradi, shuning uchun bu bandlarni ichki reglamentda mustahkamlash kerak: parollarni kim almashtiradi, yangilanishlarni kim tekshiradi, arxivga kim kira oladi. Batafsil — videokuzatuv va shaxsiy maʼlumotlar haqidagi maqolamizda.",
+              "Agar tizim ancha oldin yoki turli pudratchilar tomonidan oʻrnatilgan boʻlsa, tekshiruv buyurtma qilish osonroq: muhandis roʻyxat boʻyicha oʻtadi, proshivkalarni yangilaydi, kameralarni alohida tarmoqqa chiqaradi va ochiq portlarsiz masofaviy kirishni sozlaydi. Keyin bu xizmat koʻrsatish shartnomasiga kiradi: jadval boʻyicha yangilanishlar va jurnallarni tekshirish. Qurilmalaringiz soni boʻyicha smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Kameralarni Hik-Connect yoki DMSS orqali koʻrish xavfsizmi?",
+            "a": "Port yoʻnaltirishdan xavfsizroq: ulanishni qurilmaning oʻzi boshlaydi va routerda port ochish kerak emas. Akkauntga murakkab parol qoʻying va qurilmaning shifrlash kalitini zavod holatidan almashtiring."
+          },
+          {
+            "q": "Kamera allaqachon buzilganini qanday bilish mumkin?",
+            "a": "Kirishlar jurnalida notanish IP-manzillar va foydalanuvchilar paydo boʻladi, sozlamalar oʻzgaradi, kamera oʻzi qayta yuklanadi, ofisdagi internet sezilarli sekinlashadi. Bunday holda qurilmani internetdan uzing, proshivkani yangilang, sozlamalarni tiklang va yangi parollar bering."
+          },
+          {
+            "q": "Hammasi ishlab tursa, nega yangilash kerak?",
+            "a": "2025-yilda Hikvisionga hujumlar 2017 va 2021-yillarda tuzatilgan zaifliklar boʻyicha borgan: aynan ishlab turgan va bir marta ham yangilanmagan qurilmalar buzilgan."
+          },
+          {
+            "q": "Yangilanishi yoʻq eski kameralar bilan nima qilish kerak?",
+            "a": "Ularni internetga chiqishi yoʻq, faqat registrator yoki VPN orqali kiriladigan alohida tarmoqda izolyatsiya qilish yoki almashtirish. Yangi ommaviy IP-kamera odatda sizib chiqish oqibatlaridan arzon."
+          },
+          {
+            "q": "Qaysi ishlab chiqaruvchining kameralari xavfsizroq?",
+            "a": "Zaifliklar barcha yirik ishlab chiqaruvchilarda topiladi, muhimi marka emas, balki ishlab chiqaruvchi tuzatishlar chiqaradimi va siz ularni oʻrnatasizmi. Hikvision va Dahuada ochiq xavfsizlik byulletenlari va yuklab olish markazlari bor."
+          },
+          {
+            "q": "VLAN uchun alohida kommutator kerakmi?",
+            "a": "VLANni qoʻllab-quvvatlaydigan boshqariladigan yoki smart-kommutator yoki kameralarni oʻzi izolyatsiya qiladigan oʻrnatilgan PoE-portli registrator kerak. Kichik obyektlar uchun koʻpincha ikkinchi variant yetarli."
+          }
+        ],
+        "summary": [
+          "2025-yilda Dahua CVE-2025-31700 va CVE-2025-31701 zaifliklarini tuzatdi (16.04.2025 dan keyin yigʻilgan proshivkalar taʼsirlanmagan), Hikvisionga esa 2017 va 2021-yil zaifliklari boʻyicha yangi hujum toʻlqini boʻldi.",
+          "Xavf ostida port yoʻnaltirish va UPnP orqali internetga ochilgan yangilanmagan qurilmalar qoladi.",
+          "Masofaviy kirish — ishlab chiqaruvchi buluti yoki VPN orqali, ochiq portlarsiz; parollar uzun va har xil, xodimlarga — oʻz hisob qaydnomalari.",
+          "Proshivkalar — har chorakda rasmiy manbadan; kameralar — internetga chiqishi yoʻq alohida tarmoq yoki VLANda.",
+          "Qonunga koʻra yozuvlarni himoya qilish uchun tizim egasi javob beradi; tekshiruv va yangilanishlarni xizmat koʻrsatish shartnomasiga kiritish qulay."
+        ]
+      },
+      "en": {
+        "title": "How to Protect IP Cameras and Recorders from Hacking: Passwords, Updates, VLAN — Lessons from the 2025 Vulnerabilities",
+        "seoTitle": "How to Protect IP Cameras from Hacking: Passwords, VLAN",
+        "seoDesc": "Dahua and Hikvision camera vulnerabilities of 2025 and what to do: close ports, change passwords, update firmware, put cameras in a VLAN. A 15-minute checklist.",
+        "excerpt": "In 2025 manufacturers released fixes for new camera vulnerabilities, while attackers kept mass-targeting devices with old firmware and default passwords. We explain what happened, why it is forgotten, internet-exposed cameras rather than new ones that get hit, and how to close the main holes in 15 minutes: ports, passwords, updates and a separate network for cameras.",
+        "sections": [
+          {
+            "h": "Why cameras get hacked and what the owner loses",
+            "p": [
+              "A camera and a recorder are small computers with an operating system, a network interface and a password. If they are reachable from the internet and never updated, automated scanners find them within hours. Attackers have different goals: to watch or download video, to enlist the device in a botnet attacking other sites, to use the camera as an entry point into the office network, or simply to wipe the archive.",
+              "For the owner this is not an abstract risk. A leak of footage showing people breaches personal data law, and the system operator — you — is responsible. A hacked recorder may stop recording on exactly the night the footage is needed. And a camera in a botnet eats the internet channel and sometimes gets your IP address blocked by the provider."
+            ]
+          },
+          {
+            "h": "What happened in 2025",
+            "p": [
+              "In summer 2025 Dahua published an advisory on two vulnerabilities: CVE-2025-31700 in the ONVIF protocol handler and CVE-2025-31701 in the file upload handler. Both are rated 8.1 out of 10: a specially crafted network packet can crash the camera and, on some models, lead to remote code execution. The affected series include the mass-market IPC-1XXX, IPC-2XXX, IPC-WX, IPC-ECXX and the SD3A and SD2A PTZ cameras; firmware built after 16 April 2025 is not affected. Fixes are available in the manufacturer's download centre, and devices with cloud upgrades receive them automatically.",
+              "For Hikvision, in September 2025 researchers recorded a new wave of exploitation attempts against old vulnerabilities: CVE-2017-7921, fixed back in 2017, and CVE-2021-36260, fixed in September 2021. Both are rated 9.8. The attackers tried default and weak passwords and looked for devices whose firmware had not been updated for years.",
+              "The lesson from both stories is the same: it is not new cameras that get hit, but unpatched ones exposed directly to the internet. Manufacturers close the holes, but a fix changes nothing until it is installed. Below are five measures that remove most of the risk."
+            ]
+          },
+          {
+            "h": "Rule one: the camera must not face the internet",
+            "p": [
+              "The most common mistake is port forwarding on the router so cameras can be viewed from a phone: the recorder's web interface becomes reachable by every scanner in the world. The second is UPnP left on at the router, through which the camera opens ports for itself. These are exactly the two things manufacturers and researchers advise turning off first.",
+              "Remote viewing is done differently. Option one is the manufacturer's cloud: Hik-Connect for Hikvision or DMSS for Dahua. The device itself initiates the connection, no router ports need opening, and video is protected by an encryption key. Option two is a VPN on the router: a phone or laptop joins the office network over an encrypted tunnel and sees the cameras as if from inside. For a business with several sites, a VPN is more reliable and convenient.",
+              "Checking yourself is easy: open the router settings and look at port forwarding and UPnP. If there are rules pointing to the cameras or recorder and UPnP is on, that is the first thing to fix."
+            ]
+          },
+          {
+            "h": "Passwords and user accounts",
+            "p": [
+              "New Hikvision and Dahua cameras do not work with a default password — they must be activated with your own. Yet older systems still have admin/12345 and passwords the installer wrote on the recorder with a marker. A password should be long, mixing letters, digits and symbols, and different for the recorder and the cloud account.",
+              "Nobody should work as administrator every day. Guards and staff get separate accounts with view-only rights to the cameras they need; a contractor gets temporary access that is withdrawn after the job. Turn on lockout after several failed login attempts — then the password guessing attackers used in 2025 becomes useless.",
+              "Separately, there is the cloud encryption key (Hikvision calls it the verification code). It is not left at the default or printed on a sticker. The password and key can be changed in the device's web interface or with the SADP tool; we covered how in detail in our SADP article."
+            ]
+          },
+          {
+            "h": "Firmware updates",
+            "p": [
+              "Both 2025 attack waves on Hikvision exploited vulnerabilities four and eight years old. That means the hacked devices had never been updated. Check the firmware version every quarter — it is shown in the web interface, in SADP and in the app — and compare it with the latest on the manufacturer's site.",
+              "Firmware is taken only from the official download centre for the exact model and hardware revision, or installed via cloud upgrade. Firmware from forums and messengers is a risk of its own. Before updating a recorder, export its configuration, and on very old equipment update step by step through intermediate versions as the manufacturer specifies.",
+              "For cameras that no longer receive updates there is only one answer: isolate them in a separate network with no internet access, or replace them. A new mass-market IP camera usually costs less than a footage-leak incident."
+            ]
+          },
+          {
+            "h": "A separate network for cameras: VLAN",
+            "p": [
+              "Cameras have no reason to see accounting, and accounting computers have no reason to see the cameras. So video surveillance is moved into a separate subnet or VLAN: cameras talk only to the recorder, and the recorder is the only device that reaches outside and the office network. If an employee's laptop is compromised, it cannot reach the cameras, and vice versa.",
+              "Technically, a VLAN is set up on a managed or smart PoE switch and on the router. Even simpler for small sites is a recorder with built-in PoE ports: cameras connected to them sit on the recorder's internal network and are invisible from the office network altogether. A router rule forbids cameras from reaching the internet; updates and cloud access go through the recorder.",
+              "Suitable items from our catalogue include the TP-Link SG2210P smart switch with VLAN and ACL, the TP-Link ER605 VPN router and the MikroTik hEX S router. We configure routers and networks for video surveillance as a separate service."
+            ]
+          },
+          {
+            "h": "What else to turn off and what to turn on",
+            "p": [
+              "Turn off services you do not use: Telnet and SSH, UPnP on the camera itself, cloud P2P if access goes through a VPN. Note that one of the 2025 Dahua vulnerabilities was in the ONVIF handler — if ONVIF is not needed to connect to a third-party recorder, it is better disabled; if it is needed, give it a separate user with a password.",
+              "Turn on HTTPS instead of HTTP for the web interface and NTP time sync — without accurate time, event logs are useless in an investigation — and review the login log periodically: unfamiliar IP addresses, unknown users and changed settings are the first sign someone is already inside.",
+              "If there are signs of a breach, the order is: disconnect the device from the internet, update the firmware, reset the settings, set new passwords for all accounts and a new encryption key, and check the router for open ports."
+            ]
+          },
+          {
+            "h": "A 15-minute checklist and who is responsible",
+            "p": [
+              "Five points that remove the main risk: no port forwarding to cameras on the router and UPnP off; long, different passwords on the recorder and cloud account, and staff using their own non-admin accounts; camera and recorder firmware at the manufacturer's latest versions; cameras on a separate network with no internet access; unused services off and the login log reviewed.",
+              "Under personal data law the system owner is responsible for protecting recordings, so these points belong in an internal policy: who changes passwords, who checks updates, who has archive access. More in our article on video surveillance and personal data.",
+              "If the system was installed long ago or by different contractors, it is easier to order an audit: an engineer works through the checklist, updates firmware, moves cameras into a separate network and sets up remote access without open ports. After that it becomes part of a maintenance contract: scheduled updates and log checks. We return a quote for your number of devices within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Is it safe to view cameras through Hik-Connect or DMSS?",
+            "a": "Safer than port forwarding: the device itself initiates the connection and no router ports are opened. Use a strong account password and change the device's encryption key from the default."
+          },
+          {
+            "q": "How can I tell a camera has already been hacked?",
+            "a": "Unfamiliar IP addresses and users appear in the login log, settings change, the camera reboots by itself and office internet slows noticeably. In that case disconnect the device from the internet, update the firmware, reset the settings and set new passwords."
+          },
+          {
+            "q": "Why update if everything works?",
+            "a": "The 2025 attacks on Hikvision used vulnerabilities fixed in 2017 and 2021: the devices that were hacked were exactly those that kept working and were never updated."
+          },
+          {
+            "q": "What about old cameras that no longer get updates?",
+            "a": "Isolate them on a separate network with no internet access, reachable only through the recorder or a VPN, or replace them. A new mass-market IP camera is usually cheaper than the consequences of a leak."
+          },
+          {
+            "q": "Which manufacturer's cameras are safer?",
+            "a": "Vulnerabilities are found in every major brand; what matters is not the brand but whether the manufacturer releases fixes and whether you install them. Hikvision and Dahua both have public security advisories and download centres."
+          },
+          {
+            "q": "Do I need a separate switch for a VLAN?",
+            "a": "You need a managed or smart switch with VLAN support, or a recorder with built-in PoE ports that isolates the cameras itself. For small sites the second option is often enough."
+          }
+        ],
+        "summary": [
+          "In 2025 Dahua fixed CVE-2025-31700 and CVE-2025-31701 (firmware built after 16.04.2025 is not affected), and Hikvision devices faced a new attack wave using 2017 and 2021 vulnerabilities.",
+          "Unpatched devices exposed to the internet through port forwarding and UPnP are the ones that get hit.",
+          "Remote access goes through the manufacturer's cloud or a VPN with no open ports; passwords are long and different, and staff have their own accounts.",
+          "Firmware is checked quarterly from the official source; cameras sit on a separate network or VLAN without internet access.",
+          "By law the system owner is responsible for protecting recordings; audits and updates fit neatly into a maintenance contract."
+        ]
+      },
+      "tr": {
+        "title": "IP Kameraları ve Kayıt Cihazını Hacklenmeye Karşı Koruma: Parolalar, Güncellemeler, VLAN — 2025 Açıkları Örneğiyle",
+        "seoTitle": "IP Kameraları Hacklenmeye Karşı Koruma: Parola, VLAN",
+        "seoDesc": "Dahua ve Hikvision kameraların 2025 açıkları ve yapılması gerekenler: portları kapatın, parolaları değiştirin, yazılımı güncelleyin, kameraları VLAN'a alın.",
+        "excerpt": "2025'te üreticiler kameraların yeni açıkları için düzeltmeler yayımladı, saldırganlar ise eski yazılımlı ve varsayılan parolalı cihazlara toplu saldırmayı sürdürdü. Ne olduğunu, hedefin neden yeni kameralar değil unutulmuş ve internete açık kameralar olduğunu ve ana açıkların — portlar, parolalar, güncellemeler ve kameralar için ayrı ağ — 15 dakikada nasıl kapatılacağını açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Kameralar neden hacklenir ve sahibi ne kaybeder",
+            "p": [
+              "Kamera ve kayıt cihazı; işletim sistemi, ağ arayüzü ve parolası olan küçük bilgisayarlardır. İnternetten erişilebilir ve hiç güncellenmiyorsa otomatik tarayıcılar onları birkaç saat içinde bulur. Saldırganların amaçları farklıdır: videoyu izlemek veya indirmek, cihazı başka sitelere saldıran bir botnete katmak, kamerayı ofisin iç ağına giriş noktası olarak kullanmak ya da sadece arşivi silmek.",
+              "Sahibi için bu soyut bir risk değildir. İnsanların göründüğü kayıtların sızması kişisel veriler kanununun ihlalidir ve bundan sistem operatörü, yani siz sorumlusunuz. Hacklenen kayıt cihazı tam da kaydın gerektiği gece kaydı durdurabilir. Botnetteki kamera ise internet hattını tüketir ve bazen sağlayıcının IP adresinizi engellemesine yol açar."
+            ]
+          },
+          {
+            "h": "2025'te ne oldu",
+            "p": [
+              "2025 yazında Dahua iki açıkla ilgili bir bülten yayımladı: ONVIF protokol işleyicisindeki CVE-2025-31700 ve dosya yükleme işleyicisindeki CVE-2025-31701. Her ikisi de 10 üzerinden 8,1 puanla derecelendirildi: özel hazırlanmış bir ağ paketi kamerayı çökertebilir, bazı modellerde ise uzaktan kod çalıştırılmasına yol açabilir. Yaygın IPC-1XXX, IPC-2XXX, IPC-WX, IPC-ECXX serileri ile SD3A ve SD2A PTZ kameralar etkilendi; 16 Nisan 2025'ten sonra derlenen yazılımlar etkilenmiyor. Düzeltmeler üreticinin indirme merkezinde, bulut güncellemeli cihazlara ise otomatik geliyor.",
+              "Hikvision tarafında Eylül 2025'te araştırmacılar eski açıkları istismar girişimlerinde yeni bir dalga kaydetti: 2017'de düzeltilen CVE-2017-7921 ve Eylül 2021'de düzeltilen CVE-2021-36260. Her ikisi de 9,8 puan. Saldırganlar varsayılan ve zayıf parolaları denedi, yıllardır güncellenmemiş yazılımlı cihazları aradı.",
+              "Her iki olaydan çıkan ders aynı: hedef yeni kameralar değil, güncellenmemiş ve doğrudan internete açılmış olanlardır. Üreticiler açıkları kapatır ama düzeltme kurulmadıkça hiçbir şeyi değiştirmez. Aşağıda riskin büyük kısmını kapatan beş önlem var."
+            ]
+          },
+          {
+            "h": "Birinci kural: kamera internete bakmamalı",
+            "p": [
+              "En yaygın hata, kameraları telefondan izlemek için routerda port yönlendirmedir: kayıt cihazının web arayüzü dünyadaki her tarayıcıya açık hâle gelir. İkincisi routerda açık bırakılan UPnP'dir; kamera bunun üzerinden kendine port açar. Üreticiler ve araştırmacılar tam olarak bu ikisinin önce kapatılmasını öneriyor.",
+              "Uzaktan izleme farklı yapılır. Birinci seçenek üreticinin bulutudur: Hikvision'da Hik-Connect, Dahua'da DMSS. Bağlantıyı cihazın kendisi başlatır, routerda port açmaya gerek yoktur, video şifreleme anahtarıyla korunur. İkinci seçenek routerdaki VPN'dir: telefon veya dizüstü ofis ağına şifreli bir tünelle bağlanır ve kameraları içeriden görüyormuş gibi görür. Birden çok tesisi olan işletme için VPN daha güvenilir ve kullanışlıdır.",
+              "Kontrol etmek kolay: router ayarlarını açın, port yönlendirme ve UPnP bölümüne bakın. Kameralara veya kayıt cihazına yönlendirilmiş kurallar varsa ve UPnP açıksa, ilk düzeltilecek şey budur."
+            ]
+          },
+          {
+            "h": "Parolalar ve kullanıcı hesapları",
+            "p": [
+              "Yeni Hikvision ve Dahua kameralar varsayılan parolayla çalışmaz; kendi parolanızla etkinleştirilmeleri gerekir. Ancak eski sistemlerde hâlâ admin/12345 ve kurulumcunun kayıt cihazına kalemle yazdığı parolalar görülür. Parola uzun olmalı, harf, rakam ve sembol içermeli, kayıt cihazı ve bulut hesabı için farklı olmalıdır.",
+              "Kimse her gün yönetici olarak çalışmamalıdır. Güvenlik görevlileri ve personel için yalnızca gerekli kameraları izleme yetkisi olan ayrı hesaplar açılır; yükleniciye geçici erişim verilir ve iş bitince geri alınır. Birkaç hatalı denemeden sonra hesap kilidini açın; böylece 2025'te saldırganların kullandığı parola deneme işe yaramaz.",
+              "Ayrıca bulut şifreleme anahtarı var (Hikvision buna doğrulama kodu der). Varsayılan bırakılmaz ve etikete basılmaz. Parola ve anahtar cihazın web arayüzünden veya SADP aracıyla değiştirilebilir; nasıl yapılacağını SADP yazımızda ayrıntılı anlattık."
+            ]
+          },
+          {
+            "h": "Yazılım güncellemeleri",
+            "p": [
+              "2025'teki her iki Hikvision saldırı dalgası da dört ve sekiz yıllık açıkları kullandı. Demek ki hacklenen cihazlar hiç güncellenmemişti. Yazılım sürümünü her çeyrekte kontrol edin — web arayüzünde, SADP'de ve uygulamada görünür — ve üreticinin sitesindeki son sürümle karşılaştırın.",
+              "Yazılım yalnızca tam model ve donanım revizyonu için resmî indirme merkezinden alınır ya da bulut güncellemesiyle kurulur. Forumlardan ve mesajlaşma uygulamalarından gelen yazılımlar ayrı bir risktir. Kayıt cihazını güncellemeden önce yapılandırma dışa aktarılır, çok eski donanımda ise üreticinin belirttiği gibi ara sürümlerden geçerek adım adım güncellenir.",
+              "Artık güncelleme almayan kameralar için tek çözüm var: internet erişimi olmayan ayrı bir ağda izole etmek ya da değiştirmek. Yeni yaygın bir IP kamera genellikle kayıt sızıntısı olayından daha ucuzdur."
+            ]
+          },
+          {
+            "h": "Kameralar için ayrı ağ: VLAN",
+            "p": [
+              "Kameraların muhasebeyi, muhasebe bilgisayarlarının da kameraları görmesine gerek yok. Bu yüzden kamera sistemi ayrı bir alt ağa veya VLAN'a alınır: kameralar yalnızca kayıt cihazıyla konuşur, kayıt cihazı dışarıya ve ofis ağına çıkan tek cihazdır. Bir çalışanın dizüstüsü ele geçirilse kameralara ulaşamaz, tersi de geçerli.",
+              "Teknik olarak VLAN, yönetilebilir veya akıllı bir PoE switch'te ve routerda ayarlanır. Küçük tesisler için daha da basiti dahili PoE portlu kayıt cihazıdır: bu portlara bağlanan kameralar kayıt cihazının iç ağında kalır ve ofis ağından hiç görünmez. Routera kameraların internete çıkmasını yasaklayan bir kural eklenir; güncellemeler ve bulut kayıt cihazı üzerinden çalışır.",
+              "Kataloğumuzdan bunun için örneğin VLAN ve ACL destekli TP-Link SG2210P akıllı switch, TP-Link ER605 VPN router ve MikroTik hEX S router uygundur. Kamera sistemleri için router ve ağ yapılandırmasını ayrı bir hizmet olarak yapıyoruz."
+            ]
+          },
+          {
+            "h": "Başka neyi kapatmalı, neyi açmalı",
+            "p": [
+              "Kullanmadığınız servisleri kapatın: Telnet ve SSH, kameradaki UPnP, erişim VPN üzerindense bulut P2P. Dikkat: Dahua'nın 2025 açıklarından biri ONVIF işleyicisindeydi — ONVIF üçüncü taraf kayıt cihazına bağlanmak için gerekmiyorsa kapatmak daha iyidir; gerekiyorsa ona parolalı ayrı bir kullanıcı tanımlayın.",
+              "Web arayüzü için HTTP yerine HTTPS'yi, NTP saat senkronizasyonunu açın — doğru saat olmadan olay kayıtları incelemede işe yaramaz — ve giriş kayıtlarını düzenli olarak gözden geçirin: tanımadık IP adresleri, bilinmeyen kullanıcılar ve değişmiş ayarlar birinin zaten içeride olduğunun ilk işaretidir.",
+              "Hacklenme belirtileri varsa sıra şöyle: cihazı internetten ayırın, yazılımı güncelleyin, ayarları sıfırlayın, tüm hesaplar için yeni parolalar ve şifreleme anahtarı belirleyin, routerı açık portlar için kontrol edin."
+            ]
+          },
+          {
+            "h": "15 dakikalık kontrol listesi ve sorumluluk",
+            "p": [
+              "Ana riski kapatan beş madde: routerda kameralara port yönlendirme yok ve UPnP kapalı; kayıt cihazında ve bulut hesabında uzun ve farklı parolalar var, personel yönetici yetkisi olmayan kendi hesaplarını kullanıyor; kamera ve kayıt cihazı yazılımları üreticinin son sürümlerinde; kameralar internet erişimi olmayan ayrı bir ağda; gereksiz servisler kapalı ve giriş kayıtları izleniyor.",
+              "Kişisel veriler kanununa göre kayıtların korunmasından sistem sahibi sorumludur; bu yüzden bu maddeler iç yönetmelikte yer almalı: parolaları kim değiştirir, güncellemeleri kim kontrol eder, arşive kim erişir. Ayrıntılar kamera sistemleri ve kişisel veriler hakkındaki yazımızda.",
+              "Sistem uzun zaman önce ya da farklı yükleniciler tarafından kurulduysa denetim yaptırmak daha kolaydır: mühendis listeyi uygular, yazılımları günceller, kameraları ayrı ağa alır ve açık port olmadan uzaktan erişimi kurar. Ardından bu bakım sözleşmesinin parçası olur: planlı güncellemeler ve kayıt kontrolleri. Cihaz sayınıza göre teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Kameraları Hik-Connect veya DMSS ile izlemek güvenli mi?",
+            "a": "Port yönlendirmeden daha güvenli: bağlantıyı cihazın kendisi başlatır ve routerda port açılmaz. Hesap için güçlü bir parola kullanın ve cihazın şifreleme anahtarını varsayılandan değiştirin."
+          },
+          {
+            "q": "Kameranın hacklendiğini nasıl anlarım?",
+            "a": "Giriş kayıtlarında tanımadık IP adresleri ve kullanıcılar görünür, ayarlar değişir, kamera kendiliğinden yeniden başlar, ofis interneti belirgin şekilde yavaşlar. Bu durumda cihazı internetten ayırın, yazılımı güncelleyin, ayarları sıfırlayın ve yeni parolalar belirleyin."
+          },
+          {
+            "q": "Her şey çalışıyorsa neden güncelleyeyim?",
+            "a": "2025'teki Hikvision saldırıları 2017 ve 2021'de düzeltilen açıkları kullandı: hacklenenler tam da çalışmaya devam eden ve hiç güncellenmemiş cihazlardı."
+          },
+          {
+            "q": "Güncelleme almayan eski kameralar ne olacak?",
+            "a": "Onları internet erişimi olmayan, yalnızca kayıt cihazı veya VPN üzerinden erişilen ayrı bir ağda izole edin ya da değiştirin. Yeni yaygın bir IP kamera genellikle sızıntının sonuçlarından ucuzdur."
+          },
+          {
+            "q": "Hangi üreticinin kameraları daha güvenli?",
+            "a": "Açıklar tüm büyük markalarda bulunur; önemli olan marka değil, üreticinin düzeltme yayımlayıp yayımlamadığı ve sizin onları kurup kurmadığınızdır. Hikvision ve Dahua'nın herkese açık güvenlik bültenleri ve indirme merkezleri var."
+          },
+          {
+            "q": "VLAN için ayrı switch gerekir mi?",
+            "a": "VLAN destekli yönetilebilir veya akıllı bir switch ya da kameraları kendisi izole eden dahili PoE portlu bir kayıt cihazı gerekir. Küçük tesisler için çoğu zaman ikinci seçenek yeterlidir."
+          }
+        ],
+        "summary": [
+          "2025'te Dahua CVE-2025-31700 ve CVE-2025-31701 açıklarını düzeltti (16.04.2025'ten sonra derlenen yazılımlar etkilenmiyor), Hikvision cihazlarına ise 2017 ve 2021 açıklarıyla yeni bir saldırı dalgası geldi.",
+          "Hedef olan, port yönlendirme ve UPnP ile internete açılmış güncellenmemiş cihazlardır.",
+          "Uzaktan erişim üreticinin bulutu veya VPN üzerinden, açık port olmadan; parolalar uzun ve farklı, personelin kendi hesapları var.",
+          "Yazılımlar her çeyrekte resmî kaynaktan kontrol edilir; kameralar internet erişimi olmayan ayrı ağda veya VLAN'da durur.",
+          "Kanuna göre kayıtların korunmasından sistem sahibi sorumludur; denetim ve güncellemeler bakım sözleşmesine kolayca eklenir."
+        ]
+      },
+      "zh": {
+        "title": "如何保护网络摄像机和录像机免遭入侵：密码、升级、VLAN——以2025年漏洞为例",
+        "seoTitle": "如何防止网络摄像机被入侵：密码、固件与VLAN",
+        "seoDesc": "大华与海康2025年摄像机漏洞及应对：关闭端口、更换密码、升级固件、把摄像机放进VLAN。15分钟检查清单。",
+        "excerpt": "2025年，厂商为摄像机新漏洞发布了修复，而攻击者仍在大规模攻击旧固件、默认密码的设备。本文讲解发生了什么、为什么被攻破的不是新摄像机而是被遗忘、直接暴露在公网的设备，以及如何在15分钟内堵上主要漏洞：端口、密码、升级和摄像机专用网络。",
+        "sections": [
+          {
+            "h": "摄像机为何被入侵，业主会损失什么",
+            "p": [
+              "摄像机和录像机都是带操作系统、网络接口和密码的小型计算机。如果它们可从公网访问且从不升级，自动扫描器几小时内就能找到。攻击者目的各异：观看或下载视频、把设备拉入僵尸网络攻击其他网站、把摄像机当作进入办公内网的跳板，或者干脆删除录像。",
+              "对业主来说这不是抽象风险。含有人员画面的录像泄露违反个人数据法，责任由系统运营者——也就是您——承担。被入侵的录像机可能恰好在需要录像的那一夜停止录制。而沦为僵尸网络一员的摄像机会占用带宽，有时还会导致运营商封禁您的IP地址。"
+            ]
+          },
+          {
+            "h": "2025年发生了什么",
+            "p": [
+              "2025年夏天，大华发布了两个漏洞的安全公告：ONVIF协议处理模块中的CVE-2025-31700和文件上传处理模块中的CVE-2025-31701。两者评分均为8.1分（满分10分）：特制的网络数据包可使摄像机崩溃，在部分型号上可导致远程代码执行。受影响的有大众化的IPC-1XXX、IPC-2XXX、IPC-WX、IPC-ECXX系列以及SD3A、SD2A球机；编译日期在2025年4月16日之后的固件不受影响。修复程序已发布在厂家下载中心，支持云升级的设备会自动收到。",
+              "海康方面，2025年9月研究人员记录到针对旧漏洞的新一轮利用尝试：2017年已修复的CVE-2017-7921和2021年9月修复的CVE-2021-36260，两者评分均为9.8分。攻击者尝试默认密码和弱密码，并寻找多年未升级固件的设备。",
+              "两件事的教训相同：被攻破的不是新摄像机，而是未升级、直接暴露在公网的设备。厂商会修补漏洞，但补丁不安装就毫无作用。下面五项措施可以消除绝大部分风险。"
+            ]
+          },
+          {
+            "h": "第一条规则：摄像机不能直接面向公网",
+            "p": [
+              "最常见的错误是为了用手机看监控而在路由器上做端口映射：录像机的网页界面对全世界的扫描器开放。第二是路由器上开着UPnP，摄像机借此自己打开端口。厂商和研究人员建议首先关闭的正是这两项。",
+              "远程查看应换一种方式。方案一是厂家云平台：海康的Hik-Connect或大华的DMSS。连接由设备主动发起，无需在路由器上开端口，视频由加密密钥保护。方案二是路由器上的VPN：手机或电脑通过加密通道接入办公网，像在内部一样查看摄像机。对于多个站点的企业，VPN更可靠也更方便。",
+              "自查很简单：打开路由器设置，查看端口转发和UPnP。如果有指向摄像机或录像机的规则且UPnP开启，这就是首先要修正的地方。"
+            ]
+          },
+          {
+            "h": "密码与用户账号",
+            "p": [
+              "新的海康和大华摄像机不能使用默认密码——必须设置自己的密码激活。但老系统里仍能见到admin/12345，以及安装工用记号笔写在录像机上的密码。密码应足够长，包含字母、数字和符号，录像机与云账号的密码要不同。",
+              "日常不应使用管理员账号。为保安和员工建立只能查看所需摄像机的独立账号；给承包商临时权限，完工后收回。开启多次登录失败后锁定——这样2025年攻击者使用的密码爆破就失去作用。",
+              "另外还有云平台的加密密钥（海康称为验证码）。不要保留出厂值，也不要印在标签上。密码和密钥可在设备网页界面或SADP工具中修改；具体方法见我们关于SADP的文章。"
+            ]
+          },
+          {
+            "h": "固件升级",
+            "p": [
+              "2025年针对海康的两波攻击利用的都是四年和八年前的漏洞。这说明被攻破的设备一次都没有升级过。请每季度检查一次固件版本——网页界面、SADP和应用中都能看到——并与厂家网站上的最新版本对比。",
+              "固件只能从官方下载中心按准确型号和硬件版本下载，或通过云升级安装。论坛和聊天软件里流传的固件本身就是风险。升级录像机前先导出配置，非常老旧的设备要按厂家说明经由中间版本逐级升级。",
+              "对于不再提供升级的摄像机只有一个办法：把它们隔离在无法访问公网的独立网络中，或者更换。一台新的大众化网络摄像机通常比一次录像泄露事件的代价低。"
+            ]
+          },
+          {
+            "h": "摄像机专用网络：VLAN",
+            "p": [
+              "摄像机没有理由看到财务，财务电脑也没有理由看到摄像机。因此视频监控应放入独立子网或VLAN：摄像机只与录像机通信，录像机是唯一与外网和办公网相连的设备。即使员工电脑被攻破，也接触不到摄像机，反之亦然。",
+              "技术上，VLAN在网管型或智能型PoE交换机和路由器上配置。小型项目更简单的做法是使用自带PoE口的录像机：接在这些端口上的摄像机处于录像机的内部网络，办公网根本看不到。在路由器上再加一条禁止摄像机访问公网的规则；升级和云服务都经由录像机进行。",
+              "我们目录中适合的设备有：支持VLAN和ACL的TP-Link SG2210P智能交换机、TP-Link ER605 VPN路由器和MikroTik hEX S路由器。为视频监控配置路由器和网络是我们的一项独立服务。"
+            ]
+          },
+          {
+            "h": "还应关闭什么、开启什么",
+            "p": [
+              "关闭不用的服务：Telnet和SSH、摄像机本身的UPnP、如果通过VPN访问则关闭云P2P。注意：大华2025年的漏洞之一就在ONVIF处理模块——如果不需要用ONVIF接入第三方录像机，最好关闭；如果需要，为其设置单独的带密码用户。",
+              "网页界面用HTTPS代替HTTP，开启NTP时间同步——没有准确时间，事件日志在调查时毫无用处——并定期查看登录日志：陌生IP、未知用户和被修改的设置，是有人已经进入的第一个信号。",
+              "如有被入侵迹象，处理顺序是：断开设备公网连接、升级固件、恢复出厂设置、为所有账号设置新密码和新加密密钥、检查路由器是否有开放端口。"
+            ]
+          },
+          {
+            "h": "15分钟检查清单与责任归属",
+            "p": [
+              "消除主要风险的五项：路由器上没有指向摄像机的端口映射且UPnP关闭；录像机和云账号使用不同的长密码，员工使用无管理员权限的个人账号；摄像机和录像机固件为厂家最新版本；摄像机处于无公网访问的独立网络；多余服务已关闭，登录日志有人查看。",
+              "根据个人数据法，保护录像的责任在系统所有者，因此这些要点应写入内部规程：谁更换密码、谁检查升级、谁可访问录像。详见我们关于视频监控与个人数据的文章。",
+              "如果系统安装已久或由不同承包商安装，委托检查更省事：工程师按清单逐项检查、升级固件、把摄像机移入独立网络，并配置无需开放端口的远程访问。之后纳入维护合同：按计划升级并检查日志。按您的设备数量，我们在一个工作日内提供报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "通过Hik-Connect或DMSS看监控安全吗？",
+            "a": "比端口映射安全：连接由设备主动发起，路由器无需开放端口。请为账号设置强密码，并修改设备的出厂加密密钥。"
+          },
+          {
+            "q": "如何判断摄像机已被入侵？",
+            "a": "登录日志出现陌生IP和用户、设置被改动、摄像机自行重启、办公网明显变慢。此时应断开设备公网连接、升级固件、恢复出厂设置并设置新密码。"
+          },
+          {
+            "q": "设备运行正常，为什么还要升级？",
+            "a": "2025年针对海康的攻击利用的是2017年和2021年已修复的漏洞：被攻破的正是那些一直在运行却从未升级的设备。"
+          },
+          {
+            "q": "不再提供升级的老摄像机怎么办？",
+            "a": "把它们隔离在无法访问公网、只能经由录像机或VPN访问的独立网络中，或者更换。新的大众化网络摄像机通常比泄露的后果便宜。"
+          },
+          {
+            "q": "哪家厂商的摄像机更安全？",
+            "a": "所有大厂都会被发现漏洞；关键不在品牌，而在厂商是否发布修复、您是否安装。海康和大华都有公开的安全公告和下载中心。"
+          },
+          {
+            "q": "做VLAN需要单独的交换机吗？",
+            "a": "需要支持VLAN的网管型或智能型交换机，或者自带PoE口、能自行隔离摄像机的录像机。小型项目通常第二种就够了。"
+          }
+        ],
+        "summary": [
+          "2025年大华修复了CVE-2025-31700和CVE-2025-31701（2025年4月16日后编译的固件不受影响），海康设备则遭遇利用2017和2021年漏洞的新一轮攻击。",
+          "被攻破的是通过端口映射和UPnP暴露在公网、且未升级的设备。",
+          "远程访问通过厂家云或VPN进行，不开放端口；密码长且各不相同，员工使用个人账号。",
+          "每季度从官方渠道检查固件；摄像机放在无公网访问的独立网络或VLAN中。",
+          "依法由系统所有者负责保护录像；检查和升级可方便地纳入维护合同。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "kamera-noch-v-cvete-colorvu-wizcolor",
     "date": "2026-10-30",
     "related": [

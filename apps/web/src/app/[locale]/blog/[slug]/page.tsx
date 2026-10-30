@@ -77,6 +77,9 @@ const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
 };
 const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "tpl-tp-link-sg2210p": {"ru": "Смарт-коммутатор PoE с VLAN TP-Link SG2210P", "uz": "VLANli smart PoE-kommutator TP-Link SG2210P", "en": "TP-Link SG2210P smart PoE switch with VLAN", "tr": "VLAN destekli akıllı PoE switch TP-Link SG2210P", "zh": "TP-Link SG2210P 支持VLAN的智能PoE交换机"},
+  "tpl-tp-link-er605": {"ru": "VPN-маршрутизатор TP-Link ER605", "uz": "VPN-router TP-Link ER605", "en": "TP-Link ER605 VPN router", "tr": "VPN router TP-Link ER605", "zh": "TP-Link ER605 VPN路由器"},
+  "pxt-rb760igs": {"ru": "Маршрутизатор MikroTik hEX S RB760iGS", "uz": "MikroTik hEX S RB760iGS routeri", "en": "MikroTik hEX S RB760iGS router", "tr": "MikroTik hEX S RB760iGS router", "zh": "MikroTik hEX S RB760iGS 路由器"},
   "hik-ds-2cd1027g2h-liu-2-8mm": {
     ru: "Цилиндрическая IP-камера 2 Мп ColorVu с умной подсветкой Hikvision DS-2CD1027G2H-LIU",
     uz: "Aqlli yoritishli 2 Mp ColorVu silindrik IP-kamera Hikvision DS-2CD1027G2H-LIU",
