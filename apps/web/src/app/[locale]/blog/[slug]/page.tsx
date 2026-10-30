@@ -69,6 +69,8 @@ const HUB_LABELS: Record<string, Record<string, string>> = {
 // Название задаётся подписью здесь, без запроса к API; слаг без подписи не выводится.
 // Заведено 13.10.2026: из статьи про боди-камеры на единственную нательную камеру
 // каталога не вело ни одной ссылки, товар оставался сиротой.
+// Кнопка на раздел готовых комплектов (/kits) для статей с kits: true
+const KITS_LINK: Record<string, string> = { ru: "Готовые комплекты с ценой", uz: "Narxi bilan tayyor toʻplamlar", en: "Ready-made kits with prices", tr: "Fiyatı belli hazır setler", zh: "明码标价的成品套装" };
 const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   ru: { head: "Товар из статьи", cta: "Цена и характеристики в каталоге" },
   uz: { head: "Maqolada tilga olingan mahsulot", cta: "Narxi va xususiyatlari katalogda" },
@@ -77,6 +79,10 @@ const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
 };
 const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "hil-hl-ipc-b140ha-luc-2-8mm": {"ru": "Уличная IP-камера 4 Мп HiLook HL-IPC-B140HA-LUC", "uz": "4 Mp tashqi IP-kamera HiLook HL-IPC-B140HA-LUC", "en": "HiLook HL-IPC-B140HA-LUC 4 MP outdoor IP camera", "tr": "4 MP dış IP kamera HiLook HL-IPC-B140HA-LUC", "zh": "HiLook HL-IPC-B140HA-LUC 400万像素室外网络摄像机"},
+  "hik-ds-7108ni-q1-8p": {"ru": "IP-видеорегистратор на 8 каналов с PoE Hikvision DS-7108NI-Q1/8P", "uz": "PoE li 8 kanalli IP-videoregistrator Hikvision DS-7108NI-Q1/8P", "en": "Hikvision DS-7108NI-Q1/8P 8-channel PoE NVR", "tr": "PoE'li 8 kanallı NVR Hikvision DS-7108NI-Q1/8P", "zh": "海康威视 DS-7108NI-Q1/8P 8路PoE网络录像机"},
+  "pro-seagate-skyhawk-hdd-2tb-dubai": {"ru": "Жёсткий диск для видеонаблюдения Seagate SkyHawk 2 ТБ", "uz": "Videokuzatuv uchun qattiq disk Seagate SkyHawk 2 TB", "en": "Seagate SkyHawk 2 TB surveillance hard drive", "tr": "Kamera sistemleri için sabit disk Seagate SkyHawk 2 TB", "zh": "希捷 SkyHawk 2TB 监控硬盘"},
+  "hik-nks424w0h": {"ru": "Wi-Fi комплект видеонаблюдения Hikvision NKS424W0H (2 камеры 4 Мп)", "uz": "Wi-Fi videokuzatuv toʻplami Hikvision NKS424W0H (2 ta 4 Mp kamera)", "en": "Hikvision NKS424W0H Wi-Fi CCTV kit (2 × 4 MP cameras)", "tr": "Wi-Fi kamera seti Hikvision NKS424W0H (2 adet 4 MP kamera)", "zh": "海康威视 NKS424W0H Wi-Fi监控套装（2台400万像素摄像机）"},
   "tpl-tp-link-sg2210p": {"ru": "Смарт-коммутатор PoE с VLAN TP-Link SG2210P", "uz": "VLANli smart PoE-kommutator TP-Link SG2210P", "en": "TP-Link SG2210P smart PoE switch with VLAN", "tr": "VLAN destekli akıllı PoE switch TP-Link SG2210P", "zh": "TP-Link SG2210P 支持VLAN的智能PoE交换机"},
   "tpl-tp-link-er605": {"ru": "VPN-маршрутизатор TP-Link ER605", "uz": "VPN-router TP-Link ER605", "en": "TP-Link ER605 VPN router", "tr": "VPN router TP-Link ER605", "zh": "TP-Link ER605 VPN路由器"},
   "pxt-rb760igs": {"ru": "Маршрутизатор MikroTik hEX S RB760iGS", "uz": "MikroTik hEX S RB760iGS routeri", "en": "MikroTik hEX S RB760iGS router", "tr": "MikroTik hEX S RB760iGS router", "zh": "MikroTik hEX S RB760iGS 路由器"},
@@ -366,6 +372,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
                 ))}
               </ul>
             </div>
+          )}
+
+          {article.kits && (
+            <p className="mt-8 rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm sm:text-base">
+              <Link href="/kits" className="font-bold text-brand-700 hover:underline">
+                {KITS_LINK[locale] ?? KITS_LINK.ru} →
+              </Link>
+            </p>
           )}
 
           {article.appHref && (

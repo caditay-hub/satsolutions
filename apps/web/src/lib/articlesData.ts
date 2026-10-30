@@ -24,6 +24,7 @@ export type Article = {
   brands?: string[];         // слаги брендов /catalog/<brand> — ссылка «Камеры <Бренд>» в том же блоке
   art?: "guest" | "house" | "attendance";        // рисованная схема внутри статьи (ArticleArt)
   appHref?: "/apps/uy" | "/apps/davomat";        // ссылка на страницу нашего приложения
+  kits?: boolean;                                // кнопка на /kits — готовые комплекты с ценой
   seeAlso?: string[];                            // слаги статей для блока «Читайте также»
   // слаги карточек /products/<slug> — блок «Товар из статьи» после текста. Без запроса к API:
   // подпись берётся из PRODUCT_LABELS на странице статьи, слаг без подписи не выводится
@@ -32,6 +33,527 @@ export type Article = {
 };
 
 export const ARTICLES: Article[] = [
+  {
+    "slug": "komplekt-videonablyudeniya-kak-vybrat",
+    "date": "2026-10-30",
+    "related": [
+      "cctv"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr",
+      "zhestkie-diski"
+    ],
+    "brands": [
+      "hikvision",
+      "hilook"
+    ],
+    "seeAlso": [
+      "kamera-dlya-doma",
+      "kak-rasschitat-disk-dlya-videonablyudeniya",
+      "skolko-stoit-videonablyudenie",
+      "zashchita-ip-kamer-ot-vzloma"
+    ],
+    "kits": true,
+    "products": [
+      "hil-hl-ipc-b140ha-luc-2-8mm",
+      "hik-ds-7108ni-q1-8p",
+      "pro-seagate-skyhawk-hdd-2tb-dubai",
+      "hik-nks424w0h"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Комплект видеонаблюдения для дома и магазина: что входит, как посчитать камеры и архив",
+        "seoTitle": "Комплект видеонаблюдения: что входит и как выбрать",
+        "seoDesc": "Комплект видеонаблюдения для дома и магазина: Wi-Fi или PoE, сколько камер нужно, 2 или 4 Мп, какой диск под архив и пример сметы на 4 камеры с монтажом.",
+        "excerpt": "Комплект видеонаблюдения бывает трёх видов: коробка с Wi-Fi-камерами, набор IP-камер с PoE-регистратором и система под ключ с монтажом. Разбираем, что лежит в коробке и чего там нет, как посчитать камеры по зонам для дома и магазина, какое разрешение и объектив выбрать, на сколько дней хватит диска — и сколько стоит комплект на 4 камеры с работой.",
+        "sections": [
+          {
+            "h": "Какие бывают комплекты",
+            "p": [
+              "Под словами «комплект видеонаблюдения» продают три разные вещи. Первая — коробочный Wi-Fi-набор: две камеры, которые пишут на карту памяти и подключаются к приложению на телефоне. Вторая — набор из IP-камер и сетевого регистратора с PoE-портами: камеры подключаются одним кабелем, запись идёт на жёсткий диск. Третья — комплект под ключ: то же оборудование плюс кабель, крепёж, монтаж и настройка просмотра с телефона.",
+              "Разница не только в цене. Коробка подходит для квартиры или небольшой точки, где нужно две камеры и нет желания тянуть кабель. Для частного дома с двором, магазина или офиса нужна система с регистратором: она стабильнее, держит больше камер и хранит архив отдельно от камер, так что запись не пропадёт, если камеру снимут или повредят."
+            ]
+          },
+          {
+            "h": "Что лежит в коробке и чего там нет",
+            "p": [
+              "В Wi-Fi-наборе Hikvision серии NKS — две камеры 2 или 4 Мп, блоки питания и крепёж; регистратора нет, запись идёт на карту microSD до 512 ГБ, которую обычно покупают отдельно. В наборе с регистратором — камеры и регистратор, но часто без жёсткого диска: его подбирают под нужную глубину архива.",
+              "Почти никогда в коробку не входят кабель и коннекторы, монтажные коробки, кабель-канал, источник бесперебойного питания для регистратора и подключение к интернету. Эти позиции и определяют, будет ли система работать через год так же, как в день установки, поэтому их стоит сразу заложить в смету, а не докупать потом."
+            ]
+          },
+          {
+            "h": "Wi-Fi или провод с PoE",
+            "p": [
+              "Wi-Fi-камера ставится быстро, но «без проводов» она только по сигналу: к каждой камере всё равно нужна розетка или кабель питания. Сигнал ослабевает через бетонные стены и на расстоянии от роутера, а при нескольких камерах сеть начинает тормозить. Это хороший выбор для 1–2 камер в квартире или маленьком офисе.",
+              "PoE — питание по тому же кабелю витой пары, по которому идёт видео. Один кабель длиной до 100 метров даёт камере и сеть, и электричество, а регистратор со встроенными PoE-портами, например Hikvision DS-7108NI-Q1/8P на 8 камер, питает их сам. Такая система не зависит от Wi-Fi, её легко расширить, и камеры работают, пока работает регистратор. Для дома с двором, магазина и офиса мы ставим именно её."
+            ]
+          },
+          {
+            "h": "Сколько камер нужно дому",
+            "p": [
+              "Камеры считают не по площади, а по зонам, где что-то происходит. Для частного дома типовой набор такой: калитка или ворота — камера на уровне лица, чтобы видеть, кто пришёл; входная дверь; двор и место для машины; задний двор или глухая сторона дома, откуда могут перелезть через забор. Это 4–5 камер.",
+              "Камера над воротами под самой крышей покажет макушку, а не лицо, поэтому камеру для опознания ставят на высоте 2–2,5 метра и не дальше 4–5 метров от места, где останавливается человек. Обзорную камеру на двор, наоборот, вешают выше, чтобы она видела всю площадку. Регистратор берут с запасом каналов: на 8 камер при 4–5 установленных, чтобы потом добавить камеру на улицу или в гараж без замены оборудования."
+            ]
+          },
+          {
+            "h": "Сколько камер нужно магазину и офису",
+            "p": [
+              "Магазину до 100 м² обычно хватает 4–5 камер: вход — с лицом каждого посетителя; касса — камера сверху, чтобы видеть руки кассира, купюры и экран; торговый зал — одна-две обзорные камеры; служебный вход или склад, где чаще всего пропадает товар. Если торговых залов несколько, каждый считается отдельно.",
+              "В офисе камеры ставят на вход и ресепшен, в коридоры, на кассу или бухгалтерию и в серверную. Камеры в кабинетах сотрудников — отдельный вопрос: по закону о персональных данных людей нужно предупредить о видеосъёмке, а в местах, где ожидается приватность, камеры не ставят. Подробнее об этом — в нашей статье о видеонаблюдении и персональных данных."
+            ]
+          },
+          {
+            "h": "2 или 4 Мп и какой объектив",
+            "p": [
+              "Для дома и магазина оптимальны камеры 4 Мп: разница в цене с 2 Мп небольшая, а запас деталей при увеличении записи заметный. 2 Мп достаточно для коридора или склада, где нужно видеть сам факт движения. Камеры 8 Мп нужны редко: они вдвое увеличивают объём архива и требуют регистратора и диска мощнее.",
+              "Объектив 2,8 мм даёт широкий обзор, около 100 градусов, но лицо по нему уверенно опознаётся только вблизи: по таблицам производителя для камеры 4 Мп — примерно до 5 метров. Для длинного двора или въезда берут объектив 4–6 мм или вариофокальный. Ночью решает подсветка: у массовых уличных камер инфракрасная подсветка добивает на 20–30 метров, а если нужен цвет ночью, выбирают камеры с цветной ночной съёмкой — о них мы писали отдельно."
+            ]
+          },
+          {
+            "h": "Архив: на сколько дней хватит диска",
+            "p": [
+              "Объём архива зависит от числа камер, разрешения и того, что происходит в кадре. Камера 4 Мп со сжатием H.265 пишет 2–4 Мбит/с — это 20–45 ГБ в сутки. Четыре таких камеры занимают 85–175 ГБ в сутки, значит диск 1 ТБ хранит запись примерно 6–12 дней, а 2 ТБ — 11–23 дня. Умный кодек H.265+ и запись по движению растягивают архив, но закладывать в расчёт максимальную экономию не стоит.",
+              "Для дома и магазина разумный минимум — две недели архива: часто о краже или споре узнают не в тот же день. Для 4 камер это диск 2 ТБ, для 8 камер на месяц — 6–8 ТБ. Диск берут специальный, для видеонаблюдения, например Seagate SkyHawk: он рассчитан на запись круглые сутки. Подробный расчёт с таблицей — в статье о том, как рассчитать жёсткий диск."
+            ]
+          },
+          {
+            "h": "Сколько стоит комплект на 4 камеры с монтажом",
+            "p": [
+              "Пример по ценам нашего каталога на 30 октября 2026 года: четыре уличные IP-камеры HiLook HL-IPC-B140HA-LUC 4 Мп с защитой IP67 — 4 × 407 900 = 1 631 600 сум; регистратор Hikvision DS-7108NI-Q1/8P на 8 каналов с PoE — 828 900; диск Seagate SkyHawk 2 ТБ — 951 900; 80 метров кабеля витой пары — 487 200. Оборудование — 3 899 600 сум.",
+              "Работы по прайсу: монтаж четырёх уличных камер — 720 000, пусконаладка — 308 000, настройка просмотра с телефона — 170 000; итого 1 198 000. Вся система под ключ — около 5,1 млн сум, с диском 1 ТБ — около 4,85 млн. Wi-Fi-набор из двух камер стоит от 1 286 900 сум без монтажа. Цены меняются; кабель зависит от расстояний на объекте.",
+              "Готовые комплекты для дома, магазина, офиса и склада с ценой «от» собраны в разделе «Комплекты». На работы даём гарантию 3 года, на оборудование — от 1 до 3 лет по гарантии производителя. Чтобы посчитать комплект под ваш объект, оставьте заявку на странице видеонаблюдения — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Можно ли установить комплект самому?",
+            "a": "Wi-Fi-набор — да, достаточно розетки и приложения. Систему с регистратором тоже можно, но основная работа — проложить кабель, обжать коннекторы, правильно выставить камеры и настроить запись и доступ с телефона; от этого зависит, будет ли видно лица и сохранится ли архив."
+          },
+          {
+            "q": "Можно ли потом добавить камеры?",
+            "a": "Да, если регистратор взят с запасом каналов. Поэтому для 4–5 камер берут регистратор на 8 каналов: новые камеры подключаются без замены основы."
+          },
+          {
+            "q": "Работает ли видеонаблюдение без интернета?",
+            "a": "Да, запись на регистратор идёт без интернета. Интернет нужен только для просмотра с телефона и уведомлений."
+          },
+          {
+            "q": "Что будет при отключении света?",
+            "a": "Без резервного питания система выключится и запись остановится. Регистратор и PoE-камеры подключают через источник бесперебойного питания — тогда они продолжают работать при отключениях."
+          },
+          {
+            "q": "Могут ли смотреть камеры несколько человек?",
+            "a": "Да, в приложении Hik-Connect можно дать доступ нескольким телефонам, у каждого — свои права: кому-то только просмотр нужных камер, кому-то и архив."
+          },
+          {
+            "q": "Какая гарантия на комплект?",
+            "a": "На наши работы — 3 года, на оборудование — от 1 до 3 лет, по гарантии производителя конкретной модели."
+          }
+        ],
+        "summary": [
+          "Комплекты бывают трёх видов: Wi-Fi-набор с картой памяти, IP-камеры с PoE-регистратором и система под ключ с монтажом.",
+          "В коробку обычно не входят кабель, коннекторы, ИБП и часто жёсткий диск — их стоит сразу заложить в смету.",
+          "Дому и магазину до 100 м² обычно нужно 4–5 камер; регистратор берут на 8 каналов с запасом.",
+          "Оптимум — камеры 4 Мп; объектив 2,8 мм опознаёт лицо примерно до 5 метров; для 4 камер на две недели архива нужен диск 2 ТБ.",
+          "Система на 4 камеры 4 Мп под ключ — около 5,1 млн сум по ценам 30.10.2026; гарантия на работы 3 года."
+        ]
+      },
+      "uz": {
+        "title": "Uy va doʻkon uchun videokuzatuv toʻplami: nima kiradi, kameralar va arxivni qanday hisoblash kerak",
+        "seoTitle": "Videokuzatuv toʻplami: nima kiradi va qanday tanlash kerak",
+        "seoDesc": "Uy va doʻkon uchun videokuzatuv toʻplami: Wi-Fi yoki PoE, nechta kamera kerak, 2 yoki 4 Mp, arxiv uchun qaysi disk va montaj bilan 4 kameralik smeta namunasi.",
+        "excerpt": "Videokuzatuv toʻplami uch xil boʻladi: Wi-Fi kameralar solingan quti, PoE-registratorli IP-kameralar toʻplami va montaj bilan toʻliq tayyor holda tizim. Qutida nima borligini va nima yoʻqligini, uy va doʻkon uchun kameralarni zonalar boʻyicha qanday hisoblashni, qaysi ruxsat va obyektivni tanlashni, disk necha kunga yetishini va ish bilan birga 4 kameralik toʻplam qancha turishini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Qanday toʻplamlar boʻladi",
+            "p": [
+              "«Videokuzatuv toʻplami» degan nom ostida uch xil narsa sotiladi. Birinchisi — qutidagi Wi-Fi toʻplam: xotira kartasiga yozadigan va telefondagi ilovaga ulanadigan ikki kamera. Ikkinchisi — IP-kameralar va PoE-portli tarmoq registratoridan iborat toʻplam: kameralar bitta kabel bilan ulanadi, yozuv qattiq diskka boradi. Uchinchisi — toʻliq tayyor holda toʻplam: oʻsha uskunalar va qoʻshimcha ravishda kabel, mahkamlagichlar, montaj va telefondan koʻrishni sozlash.",
+              "Farq faqat narxda emas. Quti ikki kamera kerak boʻlgan va kabel tortishni istamagan kvartira yoki kichik nuqta uchun mos. Hovlili xususiy uy, doʻkon yoki ofis uchun registratorli tizim kerak: u barqarorroq, koʻproq kamerani koʻtaradi va arxivni kameralardan alohida saqlaydi, shuning uchun kamerani yechib olishsa yoki shikastlashsa ham yozuv yoʻqolmaydi."
+            ]
+          },
+          {
+            "h": "Qutida nima bor va nima yoʻq",
+            "p": [
+              "Hikvision NKS seriyali Wi-Fi toʻplamida — 2 yoki 4 Mp li ikki kamera, quvvat bloklari va mahkamlagichlar; registrator yoʻq, yozuv odatda alohida sotib olinadigan 512 GB gacha microSD kartaga boradi. Registratorli toʻplamda — kameralar va registrator, lekin koʻpincha qattiq disksiz: u kerakli arxiv chuqurligiga qarab tanlanadi.",
+              "Qutiga deyarli hech qachon kabel va konnektorlar, montaj qutilari, kabel-kanal, registrator uchun uzluksiz quvvat manbai va internetga ulanish kirmaydi. Aynan shu pozitsiyalar tizim bir yildan keyin ham oʻrnatilgan kundagidek ishlashini belgilaydi, shuning uchun ularni keyin sotib olmasdan, darhol smetaga kiritgan maʼqul."
+            ]
+          },
+          {
+            "h": "Wi-Fi yoki PoE bilan kabel",
+            "p": [
+              "Wi-Fi kamera tez oʻrnatiladi, lekin u faqat signal boʻyicha «simsiz»: har bir kameraga baribir rozetka yoki quvvat kabeli kerak. Signal beton devorlar orqali va routerdan uzoqlashganda zaiflashadi, bir nechta kamerada esa tarmoq sekinlasha boshlaydi. Bu kvartira yoki kichik ofisda 1–2 kamera uchun yaxshi tanlov.",
+              "PoE — video oʻtadigan oʻsha oʻralgan juftlik kabeli orqali quvvat. 100 metrgacha boʻlgan bitta kabel kameraga ham tarmoqni, ham elektr quvvatini beradi, oʻrnatilgan PoE-portli registrator, masalan 8 kameralik Hikvision DS-7108NI-Q1/8P, ularni oʻzi quvvatlaydi. Bunday tizim Wi-Figa bogʻliq emas, uni kengaytirish oson va kameralar registrator ishlab turguncha ishlaydi. Hovlili uy, doʻkon va ofis uchun aynan shuni oʻrnatamiz."
+            ]
+          },
+          {
+            "h": "Uyga nechta kamera kerak",
+            "p": [
+              "Kameralar maydon boʻyicha emas, biror narsa sodir boʻladigan zonalar boʻyicha hisoblanadi. Xususiy uy uchun odatiy toʻplam shunday: kichik eshik yoki darvoza — kim kelganini koʻrish uchun yuz balandligidagi kamera; kirish eshigi; hovli va mashina turadigan joy; orqa hovli yoki uyning devor oshib oʻtish mumkin boʻlgan berk tomoni. Bu 4–5 kamera.",
+              "Darvoza ustida tom ostidagi kamera yuzni emas, tepani koʻrsatadi, shuning uchun tanib olish kamerasi 2–2,5 metr balandlikda va odam toʻxtaydigan joydan 4–5 metrdan uzoq boʻlmagan masofada oʻrnatiladi. Hovli uchun umumiy koʻrinish kamerasi esa aksincha, butun maydonni koʻrishi uchun balandroq osiladi. Registrator kanallar zaxirasi bilan olinadi: 4–5 ta oʻrnatilgan kamera uchun 8 kanalli, keyinchalik koʻcha yoki garaj uchun kamerani uskunani almashtirmasdan qoʻshish uchun."
+            ]
+          },
+          {
+            "h": "Doʻkon va ofisga nechta kamera kerak",
+            "p": [
+              "100 m² gacha boʻlgan doʻkonga odatda 4–5 kamera yetadi: kirish — har bir tashrif buyuruvchining yuzi bilan; kassa — kassir qoʻllari, kupyuralar va ekranni koʻrish uchun tepadan kamera; savdo zali — bir-ikkita umumiy koʻrinish kamerasi; tovar koʻpincha yoʻqoladigan xizmat kirish joyi yoki ombor. Savdo zallari bir nechta boʻlsa, har biri alohida hisoblanadi.",
+              "Ofisda kameralar kirish va qabulxonaga, yoʻlaklarga, kassa yoki buxgalteriyaga va server xonasiga oʻrnatiladi. Xodimlar kabinetlaridagi kameralar — alohida masala: shaxsiy maʼlumotlar toʻgʻrisidagi qonunga koʻra odamlarni videoyozuv haqida ogohlantirish kerak, shaxsiy hayot daxlsizligi kutiladigan joylarga esa kamera qoʻyilmaydi. Batafsil — videokuzatuv va shaxsiy maʼlumotlar haqidagi maqolamizda."
+            ]
+          },
+          {
+            "h": "2 yoki 4 Mp va qaysi obyektiv",
+            "p": [
+              "Uy va doʻkon uchun 4 Mp li kameralar maqbul: 2 Mp bilan narx farqi kichik, yozuvni kattalashtirganda tafsilotlar zaxirasi esa sezilarli. 2 Mp harakatning oʻzini koʻrish kifoya boʻlgan yoʻlak yoki ombor uchun yetarli. 8 Mp li kameralar kamdan-kam kerak: ular arxiv hajmini ikki baravar oshiradi va kuchliroq registrator hamda disk talab qiladi.",
+              "2,8 mm obyektiv keng, taxminan 100 darajali koʻrinish beradi, lekin u bilan yuz faqat yaqindan ishonchli tanib olinadi: ishlab chiqaruvchi jadvallariga koʻra 4 Mp li kamera uchun — taxminan 5 metrgacha. Uzun hovli yoki kirish yoʻli uchun 4–6 mm yoki varifokal obyektiv olinadi. Tunda yoritish hal qiladi: ommaviy tashqi kameralarda infraqizil yoritish 20–30 metrga yetadi, tunda rang kerak boʻlsa, rangli tungi suratga oluvchi kameralar tanlanadi — ular haqida alohida yozganmiz."
+            ]
+          },
+          {
+            "h": "Arxiv: disk necha kunga yetadi",
+            "p": [
+              "Arxiv hajmi kameralar soniga, ruxsatga va kadrda nima sodir boʻlishiga bogʻliq. H.265 siqishli 4 Mp kamera 2–4 Mbit/s yozadi — bu sutkasiga 20–45 GB. Shunday toʻrtta kamera sutkasiga 85–175 GB egallaydi, demak 1 TB disk yozuvni taxminan 6–12 kun, 2 TB esa 11–23 kun saqlaydi. Aqlli H.265+ kodeki va harakat boʻyicha yozish arxivni uzaytiradi, lekin hisobga maksimal tejamni kiritmagan maʼqul.",
+              "Uy va doʻkon uchun oqilona minimum — ikki haftalik arxiv: oʻgʻirlik yoki nizo haqida koʻpincha oʻsha kuni bilishmaydi. 4 kamera uchun bu 2 TB disk, bir oylik 8 kamera uchun — 6–8 TB. Disk videokuzatuv uchun maxsus olinadi, masalan Seagate SkyHawk: u kecha-kunduz yozishga moʻljallangan. Jadvalli batafsil hisob — qattiq diskni qanday hisoblash haqidagi maqolada."
+            ]
+          },
+          {
+            "h": "Montaj bilan 4 kameralik toʻplam qancha turadi",
+            "p": [
+              "Katalogimizning 2026-yil 30-oktyabrdagi narxlari boʻyicha namuna: IP67 himoyali toʻrtta tashqi HiLook HL-IPC-B140HA-LUC 4 Mp IP-kamerasi — 4 × 407 900 = 1 631 600 soʻm; PoE ga ega 8 kanalli Hikvision DS-7108NI-Q1/8P registratori — 828 900; Seagate SkyHawk 2 TB disk — 951 900; 80 metr oʻralgan juftlik kabeli — 487 200. Uskunalar — 3 899 600 soʻm.",
+              "Prays boʻyicha ishlar: toʻrtta tashqi kamera montaji — 720 000, ishga tushirish va sozlash — 308 000, telefondan koʻrishni sozlash — 170 000; jami 1 198 000. Butun tizim toʻliq tayyor holda — taxminan 5,1 mln soʻm, 1 TB disk bilan — taxminan 4,85 mln. Ikki kameralik Wi-Fi toʻplam montajsiz 1 286 900 soʻmdan turadi. Narxlar oʻzgaradi; kabel obyektdagi masofalarga bogʻliq.",
+              "Uy, doʻkon, ofis va ombor uchun narxi koʻrsatilgan tayyor toʻplamlar «Toʻplamlar» boʻlimida jamlangan. Ishlarga 3 yil, uskunalarga esa ishlab chiqaruvchi kafolati boʻyicha 1 yildan 3 yilgacha kafolat beramiz. Obyektingiz uchun toʻplamni hisoblash uchun videokuzatuv sahifasida ariza qoldiring — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Toʻplamni oʻzim oʻrnatsam boʻladimi?",
+            "a": "Wi-Fi toʻplamni — ha, rozetka va ilova yetarli. Registratorli tizimni ham mumkin, lekin asosiy ish — kabel yotqizish, konnektorlarni siqish, kameralarni toʻgʻri yoʻnaltirish, yozuv va telefondan kirishni sozlash; yuzlar koʻrinishi va arxiv saqlanishi shunga bogʻliq."
+          },
+          {
+            "q": "Keyin kamera qoʻshish mumkinmi?",
+            "a": "Ha, agar registrator kanallar zaxirasi bilan olingan boʻlsa. Shuning uchun 4–5 kamera uchun 8 kanalli registrator olinadi: yangi kameralar asosni almashtirmasdan ulanadi."
+          },
+          {
+            "q": "Videokuzatuv internetsiz ishlaydimi?",
+            "a": "Ha, registratorga yozish internetsiz boradi. Internet faqat telefondan koʻrish va bildirishnomalar uchun kerak."
+          },
+          {
+            "q": "Elektr oʻchsa nima boʻladi?",
+            "a": "Zaxira quvvatsiz tizim oʻchadi va yozuv toʻxtaydi. Registrator va PoE-kameralar uzluksiz quvvat manbai orqali ulanadi — shunda ular elektr oʻchganda ham ishlashda davom etadi."
+          },
+          {
+            "q": "Kameralarni bir necha kishi koʻra oladimi?",
+            "a": "Ha, Hik-Connect ilovasida bir nechta telefonga kirish berish mumkin, har birida oʻz huquqlari: kimgadir faqat kerakli kameralarni koʻrish, kimgadir arxiv ham."
+          },
+          {
+            "q": "Toʻplamga qanday kafolat bor?",
+            "a": "Bizning ishlarimizga — 3 yil, uskunalarga — aniq model ishlab chiqaruvchisining kafolati boʻyicha 1 yildan 3 yilgacha."
+          }
+        ],
+        "summary": [
+          "Toʻplamlar uch xil boʻladi: xotira kartali Wi-Fi toʻplam, PoE-registratorli IP-kameralar va montaj bilan toʻliq tayyor holda tizim.",
+          "Qutiga odatda kabel, konnektorlar, UPS va koʻpincha qattiq disk kirmaydi — ularni darhol smetaga kiritgan maʼqul.",
+          "100 m² gacha uy va doʻkonga odatda 4–5 kamera kerak; registrator zaxira bilan 8 kanalli olinadi.",
+          "Maqbuli — 4 Mp kameralar; 2,8 mm obyektiv yuzni taxminan 5 metrgacha taniydi; 4 kameraning ikki haftalik arxivi uchun 2 TB disk kerak.",
+          "4 Mp li 4 kameralik tizim toʻliq tayyor holda — 30.10.2026 narxlarida taxminan 5,1 mln soʻm; ishlarga kafolat 3 yil."
+        ]
+      },
+      "en": {
+        "title": "A CCTV Kit for Home and Shop: What It Includes and How to Count Cameras and Storage",
+        "seoTitle": "CCTV Kit: What It Includes and How to Choose One",
+        "seoDesc": "A CCTV kit for home and shop: Wi-Fi or PoE, how many cameras, 2 or 4 MP, which drive for the archive, and a sample quote for 4 cameras with installation.",
+        "excerpt": "A CCTV kit comes in three forms: a box of Wi-Fi cameras, a set of IP cameras with a PoE recorder, and a turnkey system with installation. We explain what is in the box and what is not, how to count cameras by zone for a home and a shop, which resolution and lens to choose, how many days a drive will hold — and what a 4-camera kit costs with labour.",
+        "sections": [
+          {
+            "h": "What kinds of kits there are",
+            "p": [
+              "Three different things are sold as a “CCTV kit”. The first is a boxed Wi-Fi set: two cameras that record to a memory card and connect to a phone app. The second is a set of IP cameras and a network recorder with PoE ports: the cameras connect with a single cable and recording goes to a hard drive. The third is a turnkey kit: the same hardware plus cable, mounts, installation and phone viewing set up for you.",
+              "The difference is not only price. A box suits a flat or a small outlet that needs two cameras and no cable runs. A private house with a yard, a shop or an office needs a system with a recorder: it is more stable, handles more cameras and keeps the archive separate from the cameras, so the footage survives if a camera is taken down or damaged."
+            ]
+          },
+          {
+            "h": "What is in the box — and what is not",
+            "p": [
+              "A Hikvision NKS-series Wi-Fi set contains two 2 or 4 MP cameras, power adapters and mounts; there is no recorder, and footage goes to a microSD card of up to 512 GB, usually bought separately. A recorder set contains cameras and a recorder, but often no hard drive: it is chosen for the archive depth you need.",
+              "The box almost never includes cable and connectors, junction boxes, trunking, an uninterruptible power supply for the recorder or an internet connection. Yet these items decide whether the system works a year later as well as on the day it was installed, so they belong in the quote from the start rather than as later purchases."
+            ]
+          },
+          {
+            "h": "Wi-Fi or cable with PoE",
+            "p": [
+              "A Wi-Fi camera goes up quickly, but it is “wireless” only for the signal: every camera still needs a socket or a power cable. The signal weakens through concrete walls and with distance from the router, and with several cameras the network starts to lag. It is a good choice for 1–2 cameras in a flat or small office.",
+              "PoE delivers power over the same twisted-pair cable that carries the video. One cable up to 100 metres gives the camera both network and power, and a recorder with built-in PoE ports, such as the 8-camera Hikvision DS-7108NI-Q1/8P, powers them itself. Such a system does not depend on Wi-Fi, is easy to extend, and the cameras run as long as the recorder does. This is what we install for houses with yards, shops and offices."
+            ]
+          },
+          {
+            "h": "How many cameras a house needs",
+            "p": [
+              "Cameras are counted not by area but by the zones where things happen. A typical set for a private house: the gate or wicket — a camera at face height to see who has come; the front door; the yard and parking spot; the back yard or blind side of the house where someone could climb the fence. That is 4–5 cameras.",
+              "A camera above the gate right under the roof shows the top of a head, not a face, so the identification camera is mounted at 2–2.5 metres and no more than 4–5 metres from where a person stops. An overview camera for the yard, by contrast, goes higher to see the whole area. The recorder is chosen with spare channels: 8 channels for 4–5 installed cameras, so a camera for the street or garage can be added later without replacing hardware."
+            ]
+          },
+          {
+            "h": "How many cameras a shop and an office need",
+            "p": [
+              "A shop up to 100 m² usually needs 4–5 cameras: the entrance — with every visitor’s face; the till — a camera above to see the cashier’s hands, banknotes and the screen; the sales floor — one or two overview cameras; the staff entrance or stockroom, where goods most often go missing. If there are several sales rooms, each is counted separately.",
+              "In an office, cameras cover the entrance and reception, corridors, the cash desk or accounts, and the server room. Cameras in staff offices are a separate matter: under personal data law people must be informed about filming, and cameras are not placed where privacy is expected. More on this in our article on video surveillance and personal data."
+            ]
+          },
+          {
+            "h": "2 or 4 MP, and which lens",
+            "p": [
+              "For a home or shop, 4 MP cameras are the sweet spot: the price gap to 2 MP is small, while the extra detail when zooming into footage is noticeable. 2 MP is enough for a corridor or warehouse where you only need to see that movement happened. 8 MP cameras are rarely needed: they double the archive size and require a more powerful recorder and drive.",
+              "A 2.8 mm lens gives a wide view of about 100 degrees, but it identifies a face reliably only up close: according to manufacturer tables for a 4 MP camera, up to about 5 metres. For a long yard or driveway, a 4–6 mm or varifocal lens is used. At night lighting decides: on mass-market outdoor cameras infrared reaches 20–30 metres, and if you need colour at night, choose colour night vision cameras — we covered them in a separate article."
+            ]
+          },
+          {
+            "h": "Storage: how many days a drive will hold",
+            "p": [
+              "Archive size depends on the number of cameras, resolution and what happens in the frame. A 4 MP camera with H.265 compression records 2–4 Mbit/s — 20–45 GB per day. Four such cameras use 85–175 GB per day, so a 1 TB drive holds roughly 6–12 days and a 2 TB drive 11–23 days. The smart H.265+ codec and motion recording stretch the archive, but it is unwise to count on maximum savings.",
+              "For a home or shop a sensible minimum is two weeks of archive: a theft or dispute is often discovered days later. For 4 cameras that means a 2 TB drive; for 8 cameras for a month, 6–8 TB. The drive should be a surveillance model such as Seagate SkyHawk, built for round-the-clock recording. A detailed calculation with a table is in our article on sizing a hard drive."
+            ]
+          },
+          {
+            "h": "What a 4-camera kit with installation costs",
+            "p": [
+              "An example at our catalogue prices on 30 October 2026: four outdoor HiLook HL-IPC-B140HA-LUC 4 MP IP cameras rated IP67 — 4 × 407,900 = 1,631,600 UZS; a Hikvision DS-7108NI-Q1/8P 8-channel PoE recorder — 828,900; a Seagate SkyHawk 2 TB drive — 951,900; 80 metres of twisted-pair cable — 487,200. Hardware: 3,899,600 UZS.",
+              "Labour at our rates: mounting four outdoor cameras — 720,000, commissioning — 308,000, phone viewing set-up — 170,000; total 1,198,000. The whole turnkey system comes to about 5.1 million UZS, or about 4.85 million with a 1 TB drive. A two-camera Wi-Fi set starts at 1,286,900 UZS without installation. Prices change; cable depends on distances on site.",
+              "Ready-made kits for home, shop, office and warehouse with starting prices are collected in our Kits section. We give a 3-year warranty on our work, and 1 to 3 years on hardware under the manufacturer’s warranty. To have a kit calculated for your site, leave a request on our CCTV page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Can I install a kit myself?",
+            "a": "A Wi-Fi set, yes — a socket and the app are enough. A recorder system is possible too, but the real work is running cable, crimping connectors, aiming cameras correctly and setting up recording and phone access; whether faces are visible and the archive is kept depends on it."
+          },
+          {
+            "q": "Can I add cameras later?",
+            "a": "Yes, if the recorder has spare channels. That is why an 8-channel recorder is chosen for 4–5 cameras: new cameras connect without replacing the core."
+          },
+          {
+            "q": "Does CCTV work without internet?",
+            "a": "Yes, recording to the recorder works without internet. Internet is needed only for phone viewing and notifications."
+          },
+          {
+            "q": "What happens during a power cut?",
+            "a": "Without backup power the system shuts down and recording stops. The recorder and PoE cameras are connected through an uninterruptible power supply, so they keep running during outages."
+          },
+          {
+            "q": "Can several people view the cameras?",
+            "a": "Yes, the Hik-Connect app can give access to several phones, each with its own rights: some see only certain cameras live, others the archive too."
+          },
+          {
+            "q": "What warranty does the kit have?",
+            "a": "3 years on our work, and 1 to 3 years on hardware under the warranty of the specific model’s manufacturer."
+          }
+        ],
+        "summary": [
+          "Kits come in three forms: a Wi-Fi set with a memory card, IP cameras with a PoE recorder, and a turnkey system with installation.",
+          "The box usually lacks cable, connectors, a UPS and often a hard drive — put them in the quote from the start.",
+          "A house or a shop up to 100 m² usually needs 4–5 cameras; choose an 8-channel recorder for headroom.",
+          "4 MP cameras are the sweet spot; a 2.8 mm lens identifies faces up to about 5 metres; two weeks of archive for 4 cameras needs a 2 TB drive.",
+          "A turnkey 4-camera 4 MP system costs about 5.1 million UZS at 30.10.2026 prices; work is under a 3-year warranty."
+        ]
+      },
+      "tr": {
+        "title": "Ev ve Mağaza için Kamera Seti: Neler Dahil, Kamera Sayısı ve Arşiv Nasıl Hesaplanır",
+        "seoTitle": "Güvenlik Kamerası Seti: İçeriği ve Nasıl Seçilir",
+        "seoDesc": "Ev ve mağaza için kamera seti: Wi-Fi mi PoE mi, kaç kamera gerekir, 2 mi 4 MP mi, arşiv için hangi disk ve montajlı 4 kameralık örnek teklif.",
+        "excerpt": "Güvenlik kamerası seti üç türlüdür: Wi-Fi kameralı kutu, PoE kayıt cihazlı IP kamera seti ve montajlı anahtar teslim sistem. Kutuda neyin olup neyin olmadığını, ev ve mağaza için kameraların bölgelere göre nasıl sayılacağını, hangi çözünürlük ve objektifin seçileceğini, diskin kaç gün yeteceğini ve işçilikle 4 kameralık bir setin fiyatını açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Hangi set türleri var",
+            "p": [
+              "“Kamera seti” adıyla üç farklı şey satılır. Birincisi kutulu Wi-Fi setidir: hafıza kartına kayıt yapan ve telefon uygulamasına bağlanan iki kamera. İkincisi IP kameralar ve PoE portlu ağ kayıt cihazından oluşan settir: kameralar tek kabloyla bağlanır, kayıt sabit diske gider. Üçüncüsü anahtar teslim settir: aynı donanım artı kablo, montaj malzemesi, kurulum ve telefondan izlemenin ayarlanması.",
+              "Fark yalnızca fiyatta değildir. Kutu, iki kamera gereken ve kablo çekmek istemeyen bir daire veya küçük bir nokta için uygundur. Bahçeli müstakil ev, mağaza veya ofis için kayıt cihazlı sistem gerekir: daha kararlıdır, daha çok kamera kaldırır ve arşivi kameralardan ayrı tutar; kamera sökülse veya zarar görse bile kayıt kaybolmaz."
+            ]
+          },
+          {
+            "h": "Kutuda ne var, ne yok",
+            "p": [
+              "Hikvision NKS serisi Wi-Fi setinde 2 veya 4 MP iki kamera, güç adaptörleri ve montaj malzemesi bulunur; kayıt cihazı yoktur, kayıt genellikle ayrı satın alınan 512 GB'a kadar microSD karta gider. Kayıt cihazlı sette kameralar ve kayıt cihazı vardır ama çoğu zaman sabit disk yoktur: disk istenen arşiv süresine göre seçilir.",
+              "Kutuya neredeyse hiçbir zaman kablo ve konnektörler, buat kutuları, kablo kanalı, kayıt cihazı için kesintisiz güç kaynağı ve internet bağlantısı dahil değildir. Oysa sistemin bir yıl sonra da kurulduğu günkü gibi çalışıp çalışmayacağını bu kalemler belirler; bu yüzden sonradan alınmak yerine baştan teklife eklenmelidir."
+            ]
+          },
+          {
+            "h": "Wi-Fi mi, PoE'li kablo mu",
+            "p": [
+              "Wi-Fi kamera hızlı takılır ama yalnızca sinyal açısından “kablosuz”dur: her kameraya yine de priz veya güç kablosu gerekir. Sinyal beton duvarlardan geçerken ve routerdan uzaklaştıkça zayıflar, birkaç kamerada ağ yavaşlamaya başlar. Dairede veya küçük ofiste 1–2 kamera için iyi bir seçimdir.",
+              "PoE, görüntünün geçtiği aynı bükümlü çift kablo üzerinden güç verir. 100 metreye kadar tek kablo kameraya hem ağ hem elektrik sağlar; dahili PoE portlu kayıt cihazı, örneğin 8 kameralık Hikvision DS-7108NI-Q1/8P, kameraları kendisi besler. Böyle bir sistem Wi-Fi'ye bağlı değildir, kolay genişler ve kameralar kayıt cihazı çalıştığı sürece çalışır. Bahçeli ev, mağaza ve ofis için kurduğumuz sistem budur."
+            ]
+          },
+          {
+            "h": "Bir eve kaç kamera gerekir",
+            "p": [
+              "Kameralar alana göre değil, bir şeylerin olduğu bölgelere göre sayılır. Müstakil ev için tipik set şöyledir: bahçe kapısı veya giriş kapısı — kimin geldiğini görmek için yüz hizasında kamera; ev kapısı; bahçe ve araç yeri; arka bahçe ya da çitin aşılabileceği kör cephe. Bu 4–5 kameradır.",
+              "Kapının üstünde çatının hemen altındaki kamera yüzü değil başın tepesini gösterir; bu yüzden tanıma kamerası 2–2,5 metre yüksekliğe ve kişinin durduğu yerden en fazla 4–5 metre uzağa takılır. Bahçeyi gören genel kamera ise tam tersine tüm alanı görmesi için daha yükseğe asılır. Kayıt cihazı yedek kanallı alınır: 4–5 kurulu kamera için 8 kanal; böylece sokak veya garaj için kamera sonradan donanım değiştirmeden eklenir."
+            ]
+          },
+          {
+            "h": "Mağaza ve ofise kaç kamera gerekir",
+            "p": [
+              "100 m²'ye kadar bir mağazaya genellikle 4–5 kamera yeter: giriş — her ziyaretçinin yüzüyle; kasa — kasiyerin ellerini, banknotları ve ekranı görmek için üstten kamera; satış alanı — bir-iki genel kamera; malların en çok kaybolduğu personel girişi veya depo. Birden çok satış salonu varsa her biri ayrı sayılır.",
+              "Ofiste kameralar girişe ve resepsiyona, koridorlara, kasa veya muhasebeye ve sunucu odasına konur. Çalışan odalarındaki kameralar ayrı bir konudur: kişisel veriler kanununa göre insanlara kayıt yapıldığı bildirilmelidir ve mahremiyet beklenen yerlere kamera konmaz. Ayrıntılar kamera sistemleri ve kişisel veriler hakkındaki yazımızda."
+            ]
+          },
+          {
+            "h": "2 mi 4 MP mi, hangi objektif",
+            "p": [
+              "Ev ve mağaza için en uygunu 4 MP kameralardır: 2 MP ile fiyat farkı küçük, kayıt büyütüldüğünde detay farkı belirgindir. Yalnızca hareketin olduğunu görmenin yettiği koridor veya depo için 2 MP yeterlidir. 8 MP kameralara nadiren ihtiyaç olur: arşiv hacmini iki katına çıkarır, daha güçlü kayıt cihazı ve disk gerektirir.",
+              "2,8 mm objektif yaklaşık 100 derece geniş açı verir ama yüzü yalnızca yakından güvenilir şekilde tanır: üretici tablolarına göre 4 MP kamera için yaklaşık 5 metreye kadar. Uzun bir bahçe veya giriş yolu için 4–6 mm ya da varifokal objektif alınır. Gece aydınlatma belirleyicidir: yaygın dış kameralarda kızılötesi 20–30 metreye ulaşır; gece renk gerekiyorsa gece renkli görüntü veren kameralar seçilir — onları ayrı bir yazıda anlattık."
+            ]
+          },
+          {
+            "h": "Arşiv: disk kaç gün yeter",
+            "p": [
+              "Arşiv hacmi kamera sayısına, çözünürlüğe ve karede olanlara bağlıdır. H.265 sıkıştırmalı 4 MP kamera 2–4 Mbit/s kaydeder — günde 20–45 GB. Böyle dört kamera günde 85–175 GB kullanır; yani 1 TB disk kaydı yaklaşık 6–12 gün, 2 TB disk 11–23 gün saklar. Akıllı H.265+ kodek ve harekete göre kayıt arşivi uzatır ama hesaba en yüksek tasarrufu katmak doğru değildir.",
+              "Ev ve mağaza için makul alt sınır iki haftalık arşivdir: hırsızlık veya anlaşmazlık çoğu zaman aynı gün fark edilmez. 4 kamera için bu 2 TB disk, bir aylık 8 kamera için 6–8 TB demektir. Disk, Seagate SkyHawk gibi kamera sistemlerine özel olmalıdır: kesintisiz kayıt için tasarlanmıştır. Tablolu ayrıntılı hesap, sabit disk hesaplama yazımızda."
+            ]
+          },
+          {
+            "h": "Montajlı 4 kameralık set ne kadar",
+            "p": [
+              "30 Ekim 2026 katalog fiyatlarımızla örnek: IP67 korumalı dört dış HiLook HL-IPC-B140HA-LUC 4 MP IP kamera — 4 × 407.900 = 1.631.600 UZS; PoE'li 8 kanallı Hikvision DS-7108NI-Q1/8P kayıt cihazı — 828.900; Seagate SkyHawk 2 TB disk — 951.900; 80 metre bükümlü çift kablo — 487.200. Donanım: 3.899.600 UZS.",
+              "Fiyat listemize göre işçilik: dört dış kameranın montajı — 720.000, devreye alma — 308.000, telefondan izleme kurulumu — 170.000; toplam 1.198.000. Anahtar teslim sistemin tamamı yaklaşık 5,1 milyon UZS, 1 TB diskle yaklaşık 4,85 milyon tutar. İki kameralı Wi-Fi seti montajsız 1.286.900 UZS'den başlar. Fiyatlar değişir; kablo tesisteki mesafelere bağlıdır.",
+              "Ev, mağaza, ofis ve depo için başlangıç fiyatlı hazır setler “Setler” bölümümüzde. İşçiliğe 3 yıl, donanıma üretici garantisine göre 1 ila 3 yıl garanti veriyoruz. Tesisiniz için set hesaplatmak isterseniz kamera sistemleri sayfamızdan talep bırakın — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Seti kendim kurabilir miyim?",
+            "a": "Wi-Fi setini evet — priz ve uygulama yeterli. Kayıt cihazlı sistem de mümkün ama asıl iş kablo çekmek, konnektör sıkmak, kameraları doğru yönlendirmek, kaydı ve telefondan erişimi ayarlamaktır; yüzlerin görünüp arşivin saklanması buna bağlıdır."
+          },
+          {
+            "q": "Sonradan kamera eklenebilir mi?",
+            "a": "Evet, kayıt cihazı yedek kanallı alındıysa. Bu yüzden 4–5 kamera için 8 kanallı kayıt cihazı alınır: yeni kameralar ana donanım değişmeden bağlanır."
+          },
+          {
+            "q": "Kamera sistemi internetsiz çalışır mı?",
+            "a": "Evet, kayıt cihazına kayıt internetsiz yapılır. İnternet yalnızca telefondan izleme ve bildirimler için gerekir."
+          },
+          {
+            "q": "Elektrik kesilince ne olur?",
+            "a": "Yedek güç olmadan sistem kapanır ve kayıt durur. Kayıt cihazı ve PoE kameralar kesintisiz güç kaynağı üzerinden bağlanır; böylece kesintilerde çalışmaya devam ederler."
+          },
+          {
+            "q": "Kameraları birkaç kişi izleyebilir mi?",
+            "a": "Evet, Hik-Connect uygulamasında birden çok telefona erişim verilebilir, her birinin kendi yetkisi olur: kimi yalnızca belirli kameraları canlı izler, kimi arşive de erişir."
+          },
+          {
+            "q": "Setin garantisi nedir?",
+            "a": "İşçiliğimize 3 yıl, donanıma ise ilgili modelin üretici garantisine göre 1 ila 3 yıl."
+          }
+        ],
+        "summary": [
+          "Setler üç türlüdür: hafıza kartlı Wi-Fi seti, PoE kayıt cihazlı IP kameralar ve montajlı anahtar teslim sistem.",
+          "Kutuda genellikle kablo, konnektör, UPS ve çoğu zaman sabit disk yoktur — bunları baştan teklife ekleyin.",
+          "100 m²'ye kadar ev ve mağazaya genellikle 4–5 kamera gerekir; kayıt cihazı yedekli 8 kanal alınır.",
+          "En uygunu 4 MP kameralardır; 2,8 mm objektif yüzü yaklaşık 5 metreye kadar tanır; 4 kameranın iki haftalık arşivi için 2 TB disk gerekir.",
+          "4 MP 4 kameralı anahtar teslim sistem 30.10.2026 fiyatlarıyla yaklaşık 5,1 milyon UZS; işçilik 3 yıl garantili."
+        ]
+      },
+      "zh": {
+        "title": "家庭与商铺监控套装：包含什么，如何计算摄像机数量与录像存储",
+        "seoTitle": "监控套装包含什么、如何选择",
+        "seoDesc": "家庭与商铺监控套装：Wi-Fi还是PoE、需要几台摄像机、200万还是400万像素、录像用什么硬盘，以及4路含安装的报价示例。",
+        "excerpt": "监控套装分三种：装有Wi-Fi摄像机的盒装套装、带PoE录像机的网络摄像机套装，以及含安装的交钥匙系统。本文讲解盒子里有什么、缺什么，家庭和商铺如何按区域计算摄像机数量，选什么分辨率和镜头，硬盘能存多少天，以及4路套装连同施工要多少钱。",
+        "sections": [
+          {
+            "h": "套装有哪几种",
+            "p": [
+              "以“监控套装”名义出售的其实是三种东西。第一种是盒装Wi-Fi套装：两台摄像机，录像存到存储卡，连接手机应用。第二种是网络摄像机加带PoE口的网络录像机：摄像机用一根网线连接，录像存入硬盘。第三种是交钥匙套装：同样的设备，再加线缆、支架、安装以及手机查看的设置。",
+              "区别不只是价格。盒装套装适合只需两台摄像机、不想布线的公寓或小店。带院子的独栋住宅、商铺或办公室需要带录像机的系统：更稳定、能接更多摄像机，并且录像与摄像机分开保存，即使摄像机被拆或损坏，录像也不会丢。"
+            ]
+          },
+          {
+            "h": "盒子里有什么、缺什么",
+            "p": [
+              "海康NKS系列Wi-Fi套装包含两台200万或400万像素摄像机、电源适配器和支架；没有录像机，录像存到最大512GB的microSD卡，存储卡通常需另购。带录像机的套装包含摄像机和录像机，但常常不含硬盘：硬盘按所需的保存天数选配。",
+              "盒子里几乎从不包含线缆和水晶头、接线盒、线槽、录像机用的不间断电源以及网络接入。而正是这些决定了系统一年后能否像安装当天一样正常工作，所以应从一开始就列入报价，而不是事后再补买。"
+            ]
+          },
+          {
+            "h": "Wi-Fi还是PoE布线",
+            "p": [
+              "Wi-Fi摄像机安装快，但只是信号“无线”：每台摄像机仍需插座或电源线。信号穿过混凝土墙或远离路由器时会变弱，摄像机一多网络就会卡顿。适合公寓或小办公室里的1–2台摄像机。",
+              "PoE是通过传输视频的同一根双绞线供电。一根最长100米的网线同时给摄像机提供网络和电力，自带PoE口的录像机（如8路的海康DS-7108NI-Q1/8P）可直接为摄像机供电。这种系统不依赖Wi-Fi，扩展方便，只要录像机在运行，摄像机就在工作。带院子的住宅、商铺和办公室，我们安装的就是这种系统。"
+            ]
+          },
+          {
+            "h": "住宅需要几台摄像机",
+            "p": [
+              "摄像机不是按面积算，而是按有事情发生的区域算。独栋住宅的典型配置：院门或大门——装在脸部高度，看清来人；入户门；院子和停车位；后院或可能翻墙的背面。共4–5台。",
+              "装在大门上方屋檐下的摄像机只能拍到头顶，看不到脸，所以用于辨认的摄像机装在2–2.5米高，距离人停留的位置不超过4–5米。看全院的全景摄像机则相反，要装得更高以覆盖整个区域。录像机要留余量：装4–5台摄像机就选8路，日后为街道或车库加摄像机时无需更换设备。"
+            ]
+          },
+          {
+            "h": "商铺和办公室需要几台摄像机",
+            "p": [
+              "100平方米以内的商铺通常需要4–5台：入口——拍清每位顾客的脸；收银台——从上方拍收银员的手、钞票和屏幕；卖场——一到两台全景；员工通道或库房，这里最容易丢货。若有多个卖场，各自单独计算。",
+              "办公室的摄像机装在入口和前台、走廊、收银或财务室以及机房。员工办公室内装摄像机是另一回事：根据个人数据法，须告知人员正在录像，在应保护隐私的场所不安装摄像机。详见我们关于视频监控与个人数据的文章。"
+            ]
+          },
+          {
+            "h": "200万还是400万像素，选什么镜头",
+            "p": [
+              "家庭和商铺最合适的是400万像素摄像机：与200万像素差价不大，放大录像时的细节优势却很明显。只需看到有人走动的走廊或仓库，200万像素就够了。800万像素很少需要：录像量翻倍，还需要更强的录像机和硬盘。",
+              "2.8毫米镜头视角宽，约100度，但只有在近处才能可靠辨认人脸：按厂家对400万像素摄像机的数据，大约5米以内。长院子或车道应选4–6毫米或变焦镜头。夜间看补光：大众室外机红外可达20–30米；若夜里也要彩色，就选全彩夜视摄像机——我们另有文章专门介绍。"
+            ]
+          },
+          {
+            "h": "存储：硬盘能存多少天",
+            "p": [
+              "录像量取决于摄像机数量、分辨率和画面内容。采用H.265压缩的400万像素摄像机码流为2–4 Mbit/s，即每天20–45 GB。四台这样的摄像机每天占用85–175 GB，所以1TB硬盘约可存6–12天，2TB约11–23天。智能编码H.265+和移动侦测录像能延长保存时间，但不宜按最大节省量来计算。",
+              "家庭和商铺合理的下限是两周录像：盗窃或纠纷往往不是当天发现的。4台摄像机需要2TB硬盘，8台存一个月需要6–8TB。硬盘要选监控专用型号，如希捷SkyHawk，专为全天候录像设计。带表格的详细计算见我们关于如何计算硬盘容量的文章。"
+            ]
+          },
+          {
+            "h": "4路套装含安装要多少钱",
+            "p": [
+              "按我们目录2026年10月30日价格举例：四台IP67防护的室外HiLook HL-IPC-B140HA-LUC 400万像素网络摄像机——4 × 407 900 = 1 631 600 苏姆；海康DS-7108NI-Q1/8P 8路PoE录像机——828 900；希捷SkyHawk 2TB硬盘——951 900；80米双绞线——487 200。设备合计3 899 600苏姆。",
+              "按价目表的施工费：四台室外摄像机安装——720 000，调试——308 000，手机查看设置——170 000；合计1 198 000。整套交钥匙系统约510万苏姆，换1TB硬盘约485万。两台摄像机的Wi-Fi套装不含安装1 286 900苏姆起。价格会变动；线缆用量取决于现场距离。",
+              "适用于家庭、商铺、办公室和仓库、标有起价的成品套装汇总在“套装”栏目。施工质保3年，设备按厂家质保1至3年。如需按您的场地测算套装，请在视频监控页面留言——我们在一个工作日内回复报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "可以自己安装套装吗？",
+            "a": "Wi-Fi套装可以，有插座和应用即可。带录像机的系统也可以，但主要工作是布线、压水晶头、正确调整摄像机角度以及设置录像和手机访问；能否看清人脸、录像能否保存都取决于此。"
+          },
+          {
+            "q": "以后可以加摄像机吗？",
+            "a": "可以，前提是录像机留有通道余量。所以4–5台摄像机选8路录像机：新摄像机接入无需更换主机。"
+          },
+          {
+            "q": "没有网络监控能用吗？",
+            "a": "能，录像机录像不需要网络。网络只用于手机查看和消息推送。"
+          },
+          {
+            "q": "停电会怎样？",
+            "a": "没有备用电源，系统会关机，录像中断。录像机和PoE摄像机通过不间断电源供电，停电时就能继续工作。"
+          },
+          {
+            "q": "可以多人查看摄像机吗？",
+            "a": "可以，在Hik-Connect应用中可给多部手机开通权限，各自权限不同：有的只能实时看指定摄像机，有的还能看回放。"
+          },
+          {
+            "q": "套装有什么质保？",
+            "a": "我们的施工质保3年，设备按具体型号厂家质保1至3年。"
+          }
+        ],
+        "summary": [
+          "套装分三种：带存储卡的Wi-Fi套装、带PoE录像机的网络摄像机套装，以及含安装的交钥匙系统。",
+          "盒子里通常没有线缆、水晶头、UPS，常常也没有硬盘——应一开始就列入报价。",
+          "100平方米以内的住宅和商铺通常需要4–5台摄像机；录像机选8路留余量。",
+          "400万像素最合适；2.8毫米镜头约5米内可辨认人脸；4台摄像机存两周需要2TB硬盘。",
+          "4台400万像素交钥匙系统按2026年10月30日价格约510万苏姆；施工质保3年。"
+        ]
+      }
+    }
+  },
   {
     "slug": "zashchita-ip-kamer-ot-vzloma",
     "date": "2026-10-30",
