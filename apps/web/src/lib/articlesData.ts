@@ -34,6 +34,520 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "signalizatsiya-dlya-doma-kak-ustroena",
+    "date": "2026-10-30",
+    "related": [
+      "alarm"
+    ],
+    "hubs": [
+      "ohrannaya-signalizaciya",
+      "izveschateli"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "ohrannaya-signalizatsiya-kak-vybrat",
+      "signalizatsiya-narxi",
+      "umnyy-dom-s-chego-nachat",
+      "komplekt-videonablyudeniya-kak-vybrat"
+    ],
+    "products": [
+      "hik-ds-pwa64-kit-wb",
+      "hik-ds-pdpc12p-eg2-wb",
+      "hik-ds-ps1-e-wb",
+      "dahua-dhi-arc3800h-w2-868"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Сигнализация для дома: как устроена беспроводная, гибридная и проводная система и что реально защищает",
+        "seoTitle": "Сигнализация для дома: как устроена и что защищает",
+        "seoDesc": "Как работает охранная сигнализация для дома: радиоканал с шифрованием, резервная связь и питание, зоны охраны, датчики с камерой. AX PRO, AirShield, цены.",
+        "excerpt": "Охранная сигнализация защищает не сиреной, а тем, что успевает сработать раньше, чем вор окажется внутри, и сообщить об этом, даже если в доме отключили свет и интернет. Разбираем, как устроена профессиональная беспроводная система, чем она отличается от дешёвого GSM-комплекта, что дают гибрид и провод, какие зоны и датчики действительно защищают дом и сколько стоит такой комплект.",
+        "sections": [
+          {
+            "h": "Как работает охранная система",
+            "p": [
+              "Любая сигнализация — это датчики, панель и каналы оповещения. Датчики фиксируют открытие двери, движение в комнате или звон разбитого стекла, панель решает, тревога это или нет, и сообщает о ней: включает сирену, присылает уведомление в приложение, при необходимости передаёт сигнал охранной организации.",
+              "Панель знает режим охраны. Уходя, вы ставите дом на полную охрану; ночью — на частичную, когда работают датчики дверей и окон, а датчики движения в спальнях выключены; приходя, снимаете с охраны брелоком, картой или из приложения. Правильные режимы — половина пользы: систему, которая мешает жить, перестают включать."
+            ]
+          },
+          {
+            "h": "Радиоканал: что отличает охрану от игрушки",
+            "p": [
+              "Беспроводные датчики профессиональной системы общаются с панелью по двустороннему защищённому радиоканалу. У Hikvision AX PRO по спецификации это двусторонняя связь с шифрованием AES-128 и сменой частот: сигнал нельзя подделать или записать и воспроизвести, а панель подтверждает каждое сообщение датчика.",
+              "Панель постоянно контролирует связь с датчиками: если датчик сняли, разбили или у него садится батарея, владелец получает уведомление. Дешёвые GSM-комплекты часто работают иначе: датчик передаёт сигнал в одну сторону и без шифрования, и панель не знает, жив ли он. Внешне это похожие коробки, но защищают они по-разному."
+            ]
+          },
+          {
+            "h": "Связь и питание: что будет, если отключат свет и интернет",
+            "p": [
+              "Первое, что может сделать злоумышленник, — обесточить дом или перерезать кабель интернета. Поэтому у охранной панели есть встроенный аккумулятор и несколько каналов связи. Например, хаб Dahua AirShield ARC3800H-W2 подключается по Ethernet и Wi-Fi с автоматическим резервированием и имеет встроенный аккумулятор, а модель ARC3800H-FW2 добавляет канал 4G через SIM-карту.",
+              "Для частного дома разумная схема — основной канал через домашний интернет и резервный через мобильную сеть: даже если роутер выключат, тревога уйдёт по 4G. Беспроводные датчики работают от своих батарей годами и от электросети не зависят вовсе."
+            ]
+          },
+          {
+            "h": "Беспроводная, гибридная или проводная",
+            "p": [
+              "Беспроводная система ставится на готовый ремонт за день без штробления: это стандарт для квартиры и уже построенного дома. Проводная — датчики на кабеле, без батареек и радиоканала; её закладывают на этапе стройки, а для офисов и складов собирают на приборах вроде Болид Сигнал-20П, который принимает и охранные, и пожарные шлейфы.",
+              "Гибрид объединяет оба подхода в одной панели. У Hikvision это линейка AX HYBRID PRO: проводная шина для датчиков, заложенных в стены, плюс беспроводные устройства там, куда кабель тянуть дорого или поздно. Для дома, где часть кабелей уже проложена при стройке, гибрид позволяет использовать их и докупить радиодатчики для гаража или летней кухни."
+            ]
+          },
+          {
+            "h": "Какие зоны и датчики реально защищают дом",
+            "p": [
+              "Главный принцип — ловить вора до того, как он внутри. Поэтому основа — периметр: датчики открытия на входной двери, двери во двор и окнах первого этажа и датчики разбития стекла в комнатах с большими окнами. Второй рубеж — датчики движения внутри, в коридоре и на лестнице, через которые нельзя пройти мимо.",
+              "Если в доме собака или кошка, берут датчики с иммунитетом к животным — у беспроводных датчиков AX PRO он рассчитан на питомца до 30 кг. Уличные датчики во дворе ставят осторожно: ветки, птицы и кошки соседей дают ложные тревоги, и уличный периметр лучше закрывать камерами с ИИ-фильтром человек/машина, а сигнализацию — на дверях и окнах. Отдельная полезная зона — датчик протечки на кухне и в санузле: он срабатывает чаще, чем охранный."
+            ]
+          },
+          {
+            "h": "Подтверждение тревоги фотографией",
+            "p": [
+              "Самая неприятная часть охраны — ложные тревоги: сработал датчик, вы в другом конце города и не знаете, ехать или нет. Датчик движения со встроенной камерой решает это: при срабатывании он делает снимок с ИК-подсветкой и присылает его в приложение вместе с тревогой. В линейке AX PRO такой датчик — DS-PDPC12P-EG2-WB, есть версия с цветной съёмкой.",
+              "Второй вариант — связать сигнализацию с камерами видеонаблюдения. Хаб Dahua AirShield по данным производителя подтягивает видео с IP-камер той же сети и сохраняет короткий ролик тревоги, AX PRO работает с камерами Hikvision. Владелец за секунды видит, кот это или человек, и решает, звонить ли в охрану."
+            ]
+          },
+          {
+            "h": "Кто реагирует на тревогу",
+            "p": [
+              "Есть три уровня реакции. Сирена пугает и привлекает внимание соседей, но сама по себе дом не защищает — её ставят снаружи на видном месте и внутри, чтобы находиться в доме было невыносимо громко. Уведомление в приложение приходит мгновенно, но зависит от того, увидите ли вы телефон.",
+              "Третий уровень — договор с охранной организацией: тревога уходит на пульт, и на место выезжает группа. Сравнение вариантов «телефон или пульт» мы подробно разбирали в статье о выборе охранной сигнализации. Для дома часто достаточно связки «сирена + приложение + фото с датчика», а пульт подключают, когда дом часто пустует."
+            ]
+          },
+          {
+            "h": "Сколько стоит сигнализация для дома",
+            "p": [
+              "Цены каталога на 30 октября 2026 года, без монтажа: беспроводной комплект Hikvision AX PRO DS-PWA64-Kit-WB — 2 189 900 сум; дополнительный датчик открытия — 197 900; датчик движения с иммунитетом к животным — 494 900; датчик разбития стекла — 395 900; датчик движения с камерой — 939 900; уличная сирена IP65 на 110 дБ — 791 900; датчик протечки — 419 900. Хаб Dahua AirShield ARC3800H-W2 — 1 357 900, версия с 4G — 2 376 900.",
+              "Пример для частного дома: комплект AX PRO, ещё три датчика открытия на двери и окна, датчик движения с камерой и уличная сирена — около 4,5 млн сум за оборудование. Монтаж беспроводной системы в доме обычно занимает один день, настройка приложения для всей семьи входит в работы. На работы даём гарантию 3 года. Расчёт под план вашего дома можно заказать на странице охранной сигнализации — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Сработает ли сигнализация, если отключат свет?",
+            "a": "Да, если у панели есть аккумулятор, а у датчиков — свои батареи. Беспроводные датчики от сети не зависят, а резервный канал 4G передаст тревогу, даже если роутер обесточен."
+          },
+          {
+            "q": "Можно ли поставить сигнализацию без штробления?",
+            "a": "Да, беспроводная система ставится на готовый ремонт за день: датчики крепятся на стены и рамы, кабель нужен только к панели питания."
+          },
+          {
+            "q": "Будет ли срабатывать на кошку или собаку?",
+            "a": "Датчики с иммунитетом к животным не реагируют на питомца до определённого веса — у беспроводных датчиков AX PRO до 30 кг. Их ставят по инструкции производителя, на нужной высоте."
+          },
+          {
+            "q": "Сколько служат батарейки в датчиках?",
+            "a": "Обычно годы, в зависимости от модели и числа срабатываний. Панель заранее сообщает о разряде батареи конкретного датчика, поэтому замену планируют, а не обнаруживают после кражи."
+          },
+          {
+            "q": "Чем охранная панель отличается от датчиков умного дома?",
+            "a": "Охранная панель контролирует связь с каждым датчиком, имеет аккумулятор, резервные каналы связи и может передавать тревогу охранной организации. Датчики умного дома удобны для уведомлений и сценариев, но охранную задачу решает панель."
+          },
+          {
+            "q": "Можно ли объединить сигнализацию с камерами?",
+            "a": "Да: AX PRO работает с камерами Hikvision, Dahua AirShield — с IP-камерами Dahua в той же сети. При тревоге в приложение приходит снимок или короткий ролик."
+          }
+        ],
+        "summary": [
+          "Сигнализация защищает тем, что срабатывает на периметре до проникновения и сообщает о тревоге, даже если отключили свет и интернет.",
+          "Профессиональный радиоканал — двусторонний и с шифрованием (у AX PRO AES-128), панель контролирует связь с каждым датчиком.",
+          "Аккумулятор в панели и резервный канал 4G нужны, чтобы тревога ушла и без электричества и домашнего интернета.",
+          "Основа защиты — датчики открытия и разбития стекла на периметре плюс датчики движения внутри; датчик с камерой подтверждает тревогу снимком.",
+          "Комплект для частного дома на AX PRO с датчиком-камерой и уличной сиреной — около 4,5 млн сум за оборудование по ценам 30.10.2026."
+        ]
+      },
+      "uz": {
+        "title": "Uy uchun signalizatsiya: simsiz, gibrid va simli tizim qanday tuzilgan va nima haqiqatan himoya qiladi",
+        "seoTitle": "Uy signalizatsiyasi: qanday tuzilgan va nima himoya qiladi",
+        "seoDesc": "Uy signalizatsiyasi qanday ishlaydi: shifrlangan radiokanal, zaxira aloqa va quvvat, qoʻriqlash zonalari, kamerali datchiklar. AX PRO, AirShield, narxlar.",
+        "excerpt": "Qoʻriqlash signalizatsiyasi sirena bilan emas, oʻgʻri ichkariga kirguncha ishga tushishi va bu haqda uyda elektr va internet oʻchirilgan boʻlsa ham xabar berishi bilan himoya qiladi. Professional simsiz tizim qanday tuzilganini, u arzon GSM-toʻplamdan nimasi bilan farq qilishini, gibrid va sim nima berishini, qaysi zonalar va datchiklar uyni haqiqatan himoya qilishini va bunday toʻplam qancha turishini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Qoʻriqlash tizimi qanday ishlaydi",
+            "p": [
+              "Har qanday signalizatsiya — datchiklar, panel va xabar berish kanallari. Datchiklar eshik ochilishini, xonadagi harakatni yoki singan oyna jarangini qayd etadi, panel bu xavotirmi yoki yoʻqmi hal qiladi va bu haqda xabar beradi: sirenani yoqadi, ilovaga bildirishnoma yuboradi, zarurat boʻlsa signalni qoʻriqlash tashkilotiga uzatadi.",
+              "Panel qoʻriqlash rejimini biladi. Ketayotganda uyni toʻliq qoʻriqlashga qoʻyasiz; tunda — eshik va derazalar datchiklari ishlaydigan, yotoqxonalardagi harakat datchiklari esa oʻchirilgan qisman qoʻriqlashga; kelganda brelok, karta yoki ilova orqali qoʻriqlashdan olasiz. Toʻgʻri rejimlar — foydaning yarmi: yashashga xalaqit beradigan tizimni yoqmay qoʻyishadi."
+            ]
+          },
+          {
+            "h": "Radiokanal: qoʻriqlashni oʻyinchoqdan nima ajratadi",
+            "p": [
+              "Professional tizimning simsiz datchiklari panel bilan ikki tomonlama himoyalangan radiokanal orqali aloqa qiladi. Hikvision AX PRO da spetsifikatsiyaga koʻra bu AES-128 shifrlash va chastotani almashtirish bilan ikki tomonlama aloqa: signalni soxtalashtirib yoki yozib olib takrorlab boʻlmaydi, panel esa datchikning har bir xabarini tasdiqlaydi.",
+              "Panel datchiklar bilan aloqani doimiy nazorat qiladi: agar datchik yechib olinsa, sindirilsa yoki batareyasi tugayotgan boʻlsa, egasi bildirishnoma oladi. Arzon GSM-toʻplamlar koʻpincha boshqacha ishlaydi: datchik signalni bir tomonga va shifrlashsiz uzatadi, panel esa u tirikmi yoki yoʻqmi bilmaydi. Tashqi tomondan bular oʻxshash qutilar, lekin turlicha himoya qiladi."
+            ]
+          },
+          {
+            "h": "Aloqa va quvvat: elektr va internet oʻchirilsa nima boʻladi",
+            "p": [
+              "Buzgʻunchi birinchi qilishi mumkin boʻlgan narsa — uyni elektrsiz qoldirish yoki internet kabelini kesish. Shuning uchun qoʻriqlash panelida oʻrnatilgan akkumulyator va bir nechta aloqa kanali bor. Masalan, Dahua AirShield ARC3800H-W2 habi Ethernet va Wi-Fi orqali avtomatik zaxiralash bilan ulanadi va oʻrnatilgan akkumulyatorga ega, ARC3800H-FW2 modeli esa SIM-karta orqali 4G kanalini qoʻshadi.",
+              "Xususiy uy uchun oqilona sxema — asosiy kanal uy interneti orqali, zaxira kanal mobil tarmoq orqali: router oʻchirilsa ham xavotir 4G orqali ketadi. Simsiz datchiklar yillab oʻz batareyalaridan ishlaydi va elektr tarmogʻiga umuman bogʻliq emas."
+            ]
+          },
+          {
+            "h": "Simsiz, gibrid yoki simli",
+            "p": [
+              "Simsiz tizim tayyor taʼmirga bir kunda devorni buzmasdan oʻrnatiladi: bu kvartira va allaqachon qurilgan uy uchun standart. Simli — kabeldagi, batareyasiz va radiokanalsiz datchiklar; u qurilish bosqichida koʻzda tutiladi, ofis va omborlar uchun esa qoʻriqlash va yongʻin shleyflarini qabul qiladigan Bolid Signal-20P kabi asboblarda yigʻiladi.",
+              "Gibrid ikkala yondashuvni bitta panelda birlashtiradi. Hikvisionda bu AX HYBRID PRO liniyasi: devorlarga yotqizilgan datchiklar uchun simli shina va kabel tortish qimmat yoki kech boʻlgan joylarda simsiz qurilmalar. Kabellarning bir qismi qurilishda yotqizilgan uy uchun gibrid ulardan foydalanish va garaj yoki yozgi oshxona uchun radiodatchiklar sotib olish imkonini beradi."
+            ]
+          },
+          {
+            "h": "Qaysi zonalar va datchiklar uyni haqiqatan himoya qiladi",
+            "p": [
+              "Asosiy tamoyil — oʻgʻrini u ichkariga kirgunga qadar ushlash. Shuning uchun asos — perimetr: kirish eshigi, hovliga chiqish eshigi va birinchi qavat derazalaridagi ochilish datchiklari hamda katta derazali xonalardagi oyna sinishi datchiklari. Ikkinchi chegara — ichkaridagi, yonidan oʻtib boʻlmaydigan yoʻlak va zinapoyadagi harakat datchiklari.",
+              "Uyda it yoki mushuk boʻlsa, hayvonlarga immunitetli datchiklar olinadi — AX PRO simsiz datchiklarida u 30 kg gacha boʻlgan uy hayvoniga moʻljallangan. Hovlidagi tashqi datchiklar ehtiyotkorlik bilan qoʻyiladi: shoxlar, qushlar va qoʻshnilarning mushuklari yolgʻon xavotir beradi, tashqi perimetrni odam/mashina sunʼiy intellekt filtrli kameralar bilan, signalizatsiyani esa eshik va derazalarda yopgan maʼqul. Alohida foydali zona — oshxona va sanuzeldagi suv oqishi datchigi: u qoʻriqlash datchigidan koʻra tez-tez ishga tushadi."
+            ]
+          },
+          {
+            "h": "Xavotirni surat bilan tasdiqlash",
+            "p": [
+              "Qoʻriqlashning eng yoqimsiz qismi — yolgʻon xavotirlar: datchik ishga tushdi, siz shaharning narigi chetidasiz va borish kerakmi-yoʻqmi bilmaysiz. Oʻrnatilgan kamerali harakat datchigi buni hal qiladi: ishga tushganda u IQ-yoritish bilan surat oladi va uni xavotir bilan birga ilovaga yuboradi. AX PRO liniyasida bunday datchik — DS-PDPC12P-EG2-WB, rangli suratga oluvchi versiyasi ham bor.",
+              "Ikkinchi variant — signalizatsiyani videokuzatuv kameralari bilan bogʻlash. Dahua AirShield habi ishlab chiqaruvchi maʼlumotiga koʻra oʻsha tarmoqdagi IP-kameralardan videoni oladi va xavotirning qisqa rolikini saqlaydi, AX PRO Hikvision kameralari bilan ishlaydi. Egasi bir necha soniyada mushukmi yoki odammi koʻradi va qoʻriqlashga qoʻngʻiroq qilish-qilmaslikni hal qiladi."
+            ]
+          },
+          {
+            "h": "Xavotirga kim javob beradi",
+            "p": [
+              "Javobning uch darajasi bor. Sirena qoʻrqitadi va qoʻshnilar eʼtiborini tortadi, lekin oʻzi uyni himoya qilmaydi — uni tashqarida koʻrinadigan joyga va ichkariga, uyda boʻlish chidab boʻlmas darajada baland boʻlishi uchun qoʻyishadi. Ilovaga bildirishnoma bir zumda keladi, lekin telefonni koʻrishingizga bogʻliq.",
+              "Uchinchi daraja — qoʻriqlash tashkiloti bilan shartnoma: xavotir pultga ketadi va joyga guruh chiqadi. «Telefon yoki pult» variantlarini solishtirishni qoʻriqlash signalizatsiyasini tanlash haqidagi maqolada batafsil koʻrib chiqqanmiz. Uy uchun koʻpincha «sirena + ilova + datchikdan surat» bogʻlami yetarli, pult esa uy tez-tez boʻsh qolganda ulanadi."
+            ]
+          },
+          {
+            "h": "Uy uchun signalizatsiya qancha turadi",
+            "p": [
+              "Katalog narxlari 2026-yil 30-oktyabr holatiga, montajsiz: Hikvision AX PRO DS-PWA64-Kit-WB simsiz toʻplami — 2 189 900 soʻm; qoʻshimcha ochilish datchigi — 197 900; hayvonlarga immunitetli harakat datchigi — 494 900; oyna sinishi datchigi — 395 900; kamerali harakat datchigi — 939 900; IP65 himoyali 110 dB tashqi sirena — 791 900; suv oqishi datchigi — 419 900. Dahua AirShield ARC3800H-W2 habi — 1 357 900, 4G li versiyasi — 2 376 900.",
+              "Xususiy uy uchun namuna: AX PRO toʻplami, eshik va derazalar uchun yana uchta ochilish datchigi, kamerali harakat datchigi va tashqi sirena — uskunalar uchun taxminan 4,5 mln soʻm. Uyda simsiz tizim montaji odatda bir kun davom etadi, butun oila uchun ilovani sozlash ishlarga kiradi. Ishlarga 3 yil kafolat beramiz. Uyingiz rejasi boʻyicha hisobni qoʻriqlash signalizatsiyasi sahifasida buyurtma qilish mumkin — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Elektr oʻchirilsa signalizatsiya ishlaydimi?",
+            "a": "Ha, agar panelda akkumulyator, datchiklarda esa oʻz batareyalari boʻlsa. Simsiz datchiklar tarmoqqa bogʻliq emas, zaxira 4G kanali router elektrsiz qolgan boʻlsa ham xavotirni uzatadi."
+          },
+          {
+            "q": "Signalizatsiyani devorni buzmasdan oʻrnatish mumkinmi?",
+            "a": "Ha, simsiz tizim tayyor taʼmirga bir kunda oʻrnatiladi: datchiklar devor va romlarga mahkamlanadi, kabel faqat panel quvvati uchun kerak."
+          },
+          {
+            "q": "Mushuk yoki itga ishga tushadimi?",
+            "a": "Hayvonlarga immunitetli datchiklar maʼlum vazngacha boʻlgan uy hayvoniga javob bermaydi — AX PRO simsiz datchiklarida 30 kg gacha. Ular ishlab chiqaruvchi yoʻriqnomasiga koʻra kerakli balandlikda qoʻyiladi."
+          },
+          {
+            "q": "Datchiklardagi batareyalar qancha xizmat qiladi?",
+            "a": "Odatda yillab, model va ishga tushishlar soniga qarab. Panel muayyan datchik batareyasi tugayotgani haqida oldindan xabar beradi, shuning uchun almashtirish oʻgʻirlikdan keyin aniqlanmaydi, rejalashtiriladi."
+          },
+          {
+            "q": "Qoʻriqlash paneli aqlli uy datchiklaridan nimasi bilan farq qiladi?",
+            "a": "Qoʻriqlash paneli har bir datchik bilan aloqani nazorat qiladi, akkumulyator va zaxira aloqa kanallariga ega va xavotirni qoʻriqlash tashkilotiga uzata oladi. Aqlli uy datchiklari bildirishnomalar va stsenariylar uchun qulay, lekin qoʻriqlash vazifasini panel hal qiladi."
+          },
+          {
+            "q": "Signalizatsiyani kameralar bilan birlashtirish mumkinmi?",
+            "a": "Ha: AX PRO Hikvision kameralari bilan, Dahua AirShield esa oʻsha tarmoqdagi Dahua IP-kameralari bilan ishlaydi. Xavotirda ilovaga surat yoki qisqa rolik keladi."
+          }
+        ],
+        "summary": [
+          "Signalizatsiya kirishdan oldin perimetrda ishga tushishi va elektr hamda internet oʻchirilgan boʻlsa ham xavotir haqida xabar berishi bilan himoya qiladi.",
+          "Professional radiokanal ikki tomonlama va shifrlangan (AX PRO da AES-128), panel har bir datchik bilan aloqani nazorat qiladi.",
+          "Paneldagi akkumulyator va zaxira 4G kanali xavotir elektr va uy internetisiz ham ketishi uchun kerak.",
+          "Himoya asosi — perimetrdagi ochilish va oyna sinishi datchiklari hamda ichkaridagi harakat datchiklari; kamerali datchik xavotirni surat bilan tasdiqlaydi.",
+          "Kamerali datchik va tashqi sirenali AX PRO asosidagi xususiy uy toʻplami — 30.10.2026 narxlarida uskunalar uchun taxminan 4,5 mln soʻm."
+        ]
+      },
+      "en": {
+        "title": "A Home Alarm System: How Wireless, Hybrid and Wired Systems Work and What Really Protects",
+        "seoTitle": "Home Alarm System: How It Works and What Protects",
+        "seoDesc": "How a home alarm works: an encrypted radio link, backup communication and power, protection zones, camera detectors. AX PRO, AirShield and prices.",
+        "excerpt": "An alarm protects not with its siren but by triggering before a burglar is inside and reporting it even if the power and internet have been cut. We explain how a professional wireless system works, how it differs from a cheap GSM kit, what hybrid and wired systems offer, which zones and detectors actually protect a house, and what such a kit costs.",
+        "sections": [
+          {
+            "h": "How an alarm system works",
+            "p": [
+              "Every alarm consists of detectors, a control panel and notification channels. Detectors register a door opening, movement in a room or the sound of breaking glass; the panel decides whether it is an alarm and reports it: it sounds the siren, sends a notification to the app and, if required, passes the signal to a security company.",
+              "The panel knows the arming mode. When you leave, you arm the whole house; at night, a partial mode keeps door and window detectors active while bedroom motion detectors are off; when you come back, you disarm with a key fob, card or the app. Getting the modes right is half the value: people stop arming a system that gets in their way."
+            ]
+          },
+          {
+            "h": "The radio link: what separates protection from a toy",
+            "p": [
+              "The wireless detectors of a professional system talk to the panel over a two-way, protected radio link. For Hikvision AX PRO the specification lists two-way communication with AES-128 encryption and frequency hopping: the signal cannot be forged or recorded and replayed, and the panel acknowledges every message from a detector.",
+              "The panel constantly supervises its link with every detector: if a detector is removed, smashed or its battery runs low, the owner is notified. Cheap GSM kits often work differently: the detector transmits one way and without encryption, and the panel has no idea whether it is still alive. The boxes look alike, but they protect differently."
+            ]
+          },
+          {
+            "h": "Communication and power: what if the power and internet are cut",
+            "p": [
+              "The first thing an intruder may do is cut the power or the internet cable. That is why an alarm panel has a built-in battery and several communication channels. For example, the Dahua AirShield ARC3800H-W2 hub connects over Ethernet and Wi-Fi with automatic failover and has a built-in battery, while the ARC3800H-FW2 model adds a 4G channel via a SIM card.",
+              "For a private house a sensible set-up is a main channel over home internet and a backup over the mobile network: even if the router is switched off, the alarm goes out over 4G. Wireless detectors run on their own batteries for years and do not depend on mains power at all."
+            ]
+          },
+          {
+            "h": "Wireless, hybrid or wired",
+            "p": [
+              "A wireless system goes into a finished interior in a day without chasing walls: it is the standard for a flat or an already built house. A wired system uses cabled detectors with no batteries or radio link; it is planned during construction, and for offices and warehouses it is built on panels such as the Bolid Signal-20P, which takes both intrusion and fire loops.",
+              "A hybrid combines both approaches in one panel. At Hikvision this is the AX HYBRID PRO line: a wired bus for detectors built into the walls, plus wireless devices where running cable is too costly or too late. For a house where some cable was laid during construction, a hybrid lets you use it and add radio detectors for the garage or summer kitchen."
+            ]
+          },
+          {
+            "h": "Which zones and detectors really protect a house",
+            "p": [
+              "The key principle is to catch the burglar before they are inside. So the foundation is the perimeter: opening detectors on the front door, the yard door and ground-floor windows, and glass-break detectors in rooms with large windows. The second line is motion detectors inside, in the hallway and on the stairs, which nobody can get past.",
+              "If there is a dog or cat, pet-immune detectors are used — on AX PRO wireless detectors immunity is rated for a pet up to 30 kg. Outdoor detectors in the yard are placed with care: branches, birds and neighbours’ cats cause false alarms, so the outdoor perimeter is better covered by cameras with a human/vehicle AI filter, with the alarm on doors and windows. Another useful zone is a leak detector in the kitchen and bathroom: it triggers more often than the intrusion detectors."
+            ]
+          },
+          {
+            "h": "Confirming an alarm with a photo",
+            "p": [
+              "The most annoying part of security is false alarms: a detector trips, you are across town and do not know whether to go. A motion detector with a built-in camera solves this: when it triggers, it takes an infrared-lit photo and sends it to the app with the alarm. In the AX PRO line this detector is the DS-PDPC12P-EG2-WB, and there is a colour version.",
+              "The second option is to link the alarm with CCTV cameras. According to the manufacturer, the Dahua AirShield hub pulls video from IP cameras on the same network and saves a short alarm clip, and AX PRO works with Hikvision cameras. The owner sees within seconds whether it is a cat or a person and decides whether to call security."
+            ]
+          },
+          {
+            "h": "Who responds to an alarm",
+            "p": [
+              "There are three levels of response. A siren scares and draws the neighbours’ attention, but on its own it does not protect the house — one goes outside in a visible place and one inside, so that staying in the house is unbearably loud. An app notification arrives instantly, but depends on whether you see your phone.",
+              "The third level is a contract with a security company: the alarm goes to a monitoring centre and a response team is dispatched. We compared “phone or monitoring” in detail in our article on choosing an intruder alarm. For a home, a combination of siren, app and detector photo is often enough, and monitoring is added when the house is often empty."
+            ]
+          },
+          {
+            "h": "What a home alarm costs",
+            "p": [
+              "Catalogue prices on 30 October 2026, excluding installation: the Hikvision AX PRO DS-PWA64-Kit-WB wireless kit — 2,189,900 UZS; an extra opening detector — 197,900; a pet-immune motion detector — 494,900; a glass-break detector — 395,900; a motion detector with camera — 939,900; an IP65 outdoor siren at 110 dB — 791,900; a leak detector — 419,900. The Dahua AirShield ARC3800H-W2 hub is 1,357,900, the 4G version 2,376,900.",
+              "An example for a private house: the AX PRO kit, three more opening detectors for doors and windows, a motion detector with camera and an outdoor siren — about 4.5 million UZS for the hardware. Installing a wireless system in a house usually takes one day, and setting up the app for the whole family is part of the work. Our work carries a 3-year warranty. A calculation for your floor plan can be ordered on our intruder alarm page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Will the alarm work if the power is cut?",
+            "a": "Yes, if the panel has a battery and the detectors have their own. Wireless detectors do not depend on mains power, and a backup 4G channel sends the alarm even if the router is off."
+          },
+          {
+            "q": "Can an alarm be installed without chasing walls?",
+            "a": "Yes, a wireless system goes into a finished interior in a day: detectors are fixed to walls and frames, and cable is needed only for the panel’s power."
+          },
+          {
+            "q": "Will it trigger on a cat or dog?",
+            "a": "Pet-immune detectors ignore a pet up to a certain weight — up to 30 kg for AX PRO wireless detectors. They are mounted at the height the manufacturer specifies."
+          },
+          {
+            "q": "How long do detector batteries last?",
+            "a": "Usually years, depending on the model and how often it triggers. The panel warns in advance that a specific detector’s battery is low, so replacement is planned rather than discovered after a break-in."
+          },
+          {
+            "q": "How is an alarm panel different from smart-home sensors?",
+            "a": "An alarm panel supervises its link with every detector, has a battery and backup communication channels, and can pass alarms to a security company. Smart-home sensors are handy for notifications and scenes, but the security job is done by the panel."
+          },
+          {
+            "q": "Can the alarm be combined with cameras?",
+            "a": "Yes: AX PRO works with Hikvision cameras, and Dahua AirShield with Dahua IP cameras on the same network. On an alarm, a photo or short clip arrives in the app."
+          }
+        ],
+        "summary": [
+          "An alarm protects by triggering at the perimeter before entry and reporting even when power and internet have been cut.",
+          "A professional radio link is two-way and encrypted (AES-128 on AX PRO), and the panel supervises every detector.",
+          "A battery in the panel and a backup 4G channel make sure the alarm goes out without mains power or home internet.",
+          "Protection rests on opening and glass-break detectors on the perimeter plus motion detectors inside; a camera detector confirms the alarm with a photo.",
+          "A private-house kit on AX PRO with a camera detector and outdoor siren costs about 4.5 million UZS for hardware at 30.10.2026 prices."
+        ]
+      },
+      "tr": {
+        "title": "Ev için Alarm Sistemi: Kablosuz, Hibrit ve Kablolu Sistem Nasıl Çalışır, Gerçekte Ne Korur",
+        "seoTitle": "Ev Alarm Sistemi: Nasıl Çalışır ve Neyi Korur",
+        "seoDesc": "Ev alarm sistemi nasıl çalışır: şifreli radyo hattı, yedek iletişim ve güç, koruma bölgeleri, kameralı dedektörler. AX PRO, AirShield ve fiyatlar.",
+        "excerpt": "Alarm sistemi sireniyle değil, hırsız içeri girmeden devreye girmesi ve evde elektrik ile internet kesilse bile bunu bildirmesiyle korur. Profesyonel kablosuz sistemin nasıl çalıştığını, ucuz GSM setinden farkını, hibrit ve kablolu sistemin ne sağladığını, hangi bölge ve dedektörlerin evi gerçekten koruduğunu ve böyle bir setin fiyatını açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Alarm sistemi nasıl çalışır",
+            "p": [
+              "Her alarm dedektörler, panel ve bildirim kanallarından oluşur. Dedektörler kapının açılmasını, odadaki hareketi veya kırılan camın sesini algılar; panel bunun alarm olup olmadığına karar verir ve bildirir: sireni çalıştırır, uygulamaya bildirim gönderir, gerekirse sinyali güvenlik şirketine iletir.",
+              "Panel kurulum modunu bilir. Çıkarken evi tam kuruluma alırsınız; gece kısmi kurulumda kapı ve pencere dedektörleri çalışır, yatak odalarındaki hareket dedektörleri kapalı olur; dönünce kumanda, kart veya uygulamayla devreden çıkarırsınız. Doğru modlar faydanın yarısıdır: yaşamı zorlaştıran bir sistem kurulmamaya başlar."
+            ]
+          },
+          {
+            "h": "Radyo hattı: korumayı oyuncaktan ayıran şey",
+            "p": [
+              "Profesyonel sistemin kablosuz dedektörleri panelle çift yönlü, korumalı bir radyo hattı üzerinden haberleşir. Hikvision AX PRO'da teknik özelliklere göre bu, AES-128 şifreleme ve frekans atlamalı çift yönlü iletişimdir: sinyal taklit edilemez ya da kaydedilip tekrar oynatılamaz, panel her dedektör mesajını onaylar.",
+              "Panel her dedektörle bağlantıyı sürekli denetler: dedektör sökülür, kırılır veya pili zayıflarsa sahibi bildirim alır. Ucuz GSM setleri çoğu zaman farklı çalışır: dedektör sinyali tek yönlü ve şifresiz gönderir, panel onun çalışıp çalışmadığını bilmez. Dışarıdan benzer kutulardır ama farklı korurlar."
+            ]
+          },
+          {
+            "h": "İletişim ve güç: elektrik ve internet kesilirse",
+            "p": [
+              "Bir hırsızın ilk yapabileceği şey evin elektriğini kesmek veya internet kablosunu koparmaktır. Bu yüzden alarm panelinde dahili batarya ve birden çok iletişim kanalı vardır. Örneğin Dahua AirShield ARC3800H-W2 hub'ı Ethernet ve Wi-Fi ile otomatik yedeklemeli bağlanır ve dahili bataryaya sahiptir; ARC3800H-FW2 modeli SIM kartla 4G kanalı ekler.",
+              "Müstakil ev için makul düzen, ana kanalın ev interneti, yedek kanalın mobil ağ olmasıdır: router kapatılsa bile alarm 4G ile gider. Kablosuz dedektörler yıllarca kendi pilleriyle çalışır ve şebekeye hiç bağlı değildir."
+            ]
+          },
+          {
+            "h": "Kablosuz, hibrit veya kablolu",
+            "p": [
+              "Kablosuz sistem bitmiş mekâna bir günde, duvar kırmadan kurulur: daire ve hazır ev için standarttır. Kablolu sistemde dedektörler kabloya bağlıdır, pil ve radyo hattı yoktur; inşaat aşamasında planlanır, ofis ve depolarda ise hem hırsız hem yangın hatlarını kabul eden Bolid Signal-20P gibi panellerle kurulur.",
+              "Hibrit, iki yaklaşımı tek panelde birleştirir. Hikvision'da bu AX HYBRID PRO serisidir: duvarlara gömülü dedektörler için kablolu veri yolu, kablo çekmenin pahalı ya da geç olduğu yerlerde kablosuz cihazlar. İnşaatta kablonun bir kısmı döşenmiş bir evde hibrit, bu kabloları kullanıp garaj veya yazlık mutfak için radyo dedektörleri eklemeyi sağlar."
+            ]
+          },
+          {
+            "h": "Evi gerçekten koruyan bölgeler ve dedektörler",
+            "p": [
+              "Temel ilke hırsızı içeri girmeden yakalamaktır. Bu yüzden temel çevredir: giriş kapısı, bahçe kapısı ve zemin kat pencerelerindeki açılma dedektörleri ile büyük pencereli odalardaki cam kırılma dedektörleri. İkinci hat, yanından geçilemeyen koridor ve merdivendeki iç hareket dedektörleridir.",
+              "Evde köpek veya kedi varsa evcil hayvan bağışıklıklı dedektörler alınır — AX PRO kablosuz dedektörlerinde 30 kg'a kadar hayvan için tasarlanmıştır. Bahçedeki dış dedektörler dikkatle konur: dallar, kuşlar ve komşu kedileri yanlış alarm verir; dış çevreyi insan/araç yapay zekâ filtreli kameralarla, alarmı ise kapı ve pencerelerde kapatmak daha iyidir. Ayrıca faydalı bir bölge de mutfak ve banyodaki su kaçağı dedektörüdür: hırsız dedektöründen daha sık devreye girer."
+            ]
+          },
+          {
+            "h": "Alarmı fotoğrafla doğrulamak",
+            "p": [
+              "Güvenliğin en can sıkıcı yanı yanlış alarmlardır: dedektör tetiklendi, siz şehrin öbür ucundasınız ve gitmeli misiniz bilmiyorsunuz. Dahili kameralı hareket dedektörü bunu çözer: tetiklendiğinde kızılötesi aydınlatmalı fotoğraf çeker ve alarmla birlikte uygulamaya gönderir. AX PRO serisinde bu dedektör DS-PDPC12P-EG2-WB'dir, renkli çeken sürümü de vardır.",
+              "İkinci seçenek alarmı güvenlik kameralarıyla bağlamaktır. Üreticiye göre Dahua AirShield hub'ı aynı ağdaki IP kameralardan görüntü alır ve kısa bir alarm klibi saklar; AX PRO Hikvision kameralarıyla çalışır. Sahibi saniyeler içinde kedi mi insan mı görür ve güvenliği arayıp aramamaya karar verir."
+            ]
+          },
+          {
+            "h": "Alarma kim müdahale eder",
+            "p": [
+              "Üç müdahale seviyesi vardır. Siren korkutur ve komşuların dikkatini çeker ama tek başına evi korumaz — biri dışarıda görünür bir yere, biri içeriye konur ki evde kalmak dayanılmaz derecede gürültülü olsun. Uygulama bildirimi anında gelir ama telefonu görüp görmemenize bağlıdır.",
+              "Üçüncü seviye bir güvenlik şirketiyle sözleşmedir: alarm izleme merkezine gider ve olay yerine ekip çıkar. “Telefon mu izleme merkezi mi” karşılaştırmasını alarm seçimi yazımızda ayrıntılı yaptık. Ev için çoğu zaman siren, uygulama ve dedektör fotoğrafı yeterlidir; ev sık sık boş kalıyorsa izleme merkezi eklenir."
+            ]
+          },
+          {
+            "h": "Ev alarm sistemi ne kadar",
+            "p": [
+              "30 Ekim 2026 katalog fiyatları, montaj hariç: Hikvision AX PRO DS-PWA64-Kit-WB kablosuz set — 2.189.900 UZS; ek açılma dedektörü — 197.900; evcil hayvan bağışıklıklı hareket dedektörü — 494.900; cam kırılma dedektörü — 395.900; kameralı hareket dedektörü — 939.900; IP65 korumalı 110 dB dış siren — 791.900; su kaçağı dedektörü — 419.900. Dahua AirShield ARC3800H-W2 hub — 1.357.900, 4G sürümü — 2.376.900.",
+              "Müstakil ev için örnek: AX PRO seti, kapı ve pencereler için üç ek açılma dedektörü, kameralı hareket dedektörü ve dış siren — donanım için yaklaşık 4,5 milyon UZS. Evde kablosuz sistem montajı genellikle bir gün sürer, tüm aile için uygulama kurulumu işçiliğe dahildir. İşçiliğe 3 yıl garanti veriyoruz. Ev planınıza göre hesabı alarm sistemi sayfamızdan isteyebilirsiniz — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Elektrik kesilirse alarm çalışır mı?",
+            "a": "Evet, panelde batarya, dedektörlerde kendi pilleri varsa. Kablosuz dedektörler şebekeye bağlı değildir, yedek 4G kanalı router kapalıyken bile alarmı iletir."
+          },
+          {
+            "q": "Alarm duvar kırmadan kurulabilir mi?",
+            "a": "Evet, kablosuz sistem bitmiş mekâna bir günde kurulur: dedektörler duvar ve kasalara sabitlenir, kablo yalnızca panelin beslemesi için gerekir."
+          },
+          {
+            "q": "Kedi veya köpeğe tepki verir mi?",
+            "a": "Evcil hayvan bağışıklıklı dedektörler belirli ağırlığa kadar hayvana tepki vermez — AX PRO kablosuz dedektörlerinde 30 kg'a kadar. Üreticinin belirttiği yüksekliğe takılırlar."
+          },
+          {
+            "q": "Dedektör pilleri ne kadar dayanır?",
+            "a": "Genellikle yıllarca, modele ve tetiklenme sayısına bağlı olarak. Panel belirli bir dedektörün pilinin azaldığını önceden bildirir; değişim hırsızlıktan sonra fark edilmez, planlanır."
+          },
+          {
+            "q": "Alarm paneli akıllı ev sensörlerinden nasıl farklıdır?",
+            "a": "Alarm paneli her dedektörle bağlantıyı denetler, bataryası ve yedek iletişim kanalları vardır, alarmı güvenlik şirketine iletebilir. Akıllı ev sensörleri bildirim ve senaryolar için kullanışlıdır ama güvenlik işini panel yapar."
+          },
+          {
+            "q": "Alarm kameralarla birleştirilebilir mi?",
+            "a": "Evet: AX PRO Hikvision kameralarıyla, Dahua AirShield aynı ağdaki Dahua IP kameralarıyla çalışır. Alarmda uygulamaya fotoğraf veya kısa klip gelir."
+          }
+        ],
+        "summary": [
+          "Alarm, girişten önce çevrede devreye girip elektrik ve internet kesilse bile alarmı bildirerek korur.",
+          "Profesyonel radyo hattı çift yönlü ve şifrelidir (AX PRO'da AES-128), panel her dedektörü denetler.",
+          "Paneldeki batarya ve yedek 4G kanalı, alarmın elektrik ve ev interneti olmadan da gitmesini sağlar.",
+          "Korumanın temeli çevredeki açılma ve cam kırılma dedektörleri ile içerideki hareket dedektörleridir; kameralı dedektör alarmı fotoğrafla doğrular.",
+          "Kameralı dedektör ve dış sirenli AX PRO tabanlı müstakil ev seti, 30.10.2026 fiyatlarıyla donanım için yaklaşık 4,5 milyon UZS."
+        ]
+      },
+      "zh": {
+        "title": "家用报警系统：无线、混合与有线系统如何工作，什么才真正起保护作用",
+        "seoTitle": "家用报警系统：工作原理与真正有效的防护",
+        "seoDesc": "家用防盗报警如何工作：加密无线链路、备用通信与电源、防区划分、带摄像头的探测器。AX PRO、AirShield与价格。",
+        "excerpt": "防盗报警靠的不是警号，而是在窃贼进屋之前就触发，并且即使家里被断电断网也能把警情发出去。本文讲解专业无线系统如何工作、与廉价GSM套装有何不同、混合与有线系统有什么优势、哪些防区和探测器真正能保护住宅，以及这样一套系统的价格。",
+        "sections": [
+          {
+            "h": "报警系统如何工作",
+            "p": [
+              "任何报警系统都由探测器、报警主机和通知通道组成。探测器感知门被打开、房间内有人移动或玻璃破碎的声音，主机判断是否为警情并发出通知：拉响警号、向应用推送消息，必要时把信号传给安保公司。",
+              "主机知道布防模式。出门时全屋布防；夜间用局部布防，门窗探测器工作，卧室的移动探测器关闭；回家时用遥控器、卡片或应用撤防。模式设置得当就成功了一半：妨碍生活的系统，人们会干脆不开。"
+            ]
+          },
+          {
+            "h": "无线链路：专业设备与玩具的区别",
+            "p": [
+              "专业系统的无线探测器通过双向加密的无线链路与主机通信。按规格，海康AX PRO采用AES-128加密和跳频的双向通信：信号无法伪造，也无法录下重放，主机会确认探测器发来的每条消息。",
+              "主机持续监测与每个探测器的连接：探测器被拆、被砸或电池电量不足时，业主会收到通知。廉价GSM套装往往不同：探测器单向发送且不加密，主机并不知道它是否还在工作。外观相似的盒子，防护能力却大不相同。"
+            ]
+          },
+          {
+            "h": "通信与电源：被断电断网怎么办",
+            "p": [
+              "入侵者首先可能做的就是切断电源或剪断网线。因此报警主机内置电池并有多条通信通道。例如大华AirShield ARC3800H-W2主机通过以太网和Wi-Fi接入并自动切换备份，内置电池；ARC3800H-FW2型号还增加了插SIM卡的4G通道。",
+              "独栋住宅的合理方案是：主通道走家庭宽带，备用通道走移动网络——即使路由器被关掉，警情也能通过4G发出。无线探测器靠自身电池可工作多年，完全不依赖市电。"
+            ]
+          },
+          {
+            "h": "无线、混合还是有线",
+            "p": [
+              "无线系统一天即可在已装修的房屋中完成安装，无需开槽：这是公寓和已建成住宅的标准选择。有线系统的探测器接在线缆上，没有电池和无线链路，需在施工阶段预埋；办公室和仓库常用Bolid Signal-20P这类可同时接入防盗和消防回路的主机。",
+              "混合系统把两种方式集成在一台主机上。海康的AX HYBRID PRO系列即是如此：有线总线连接预埋在墙内的探测器，布线成本高或已来不及的地方使用无线设备。对于施工时已敷设部分线缆的住宅，混合系统既能利用这些线，又能为车库或夏季厨房加装无线探测器。"
+            ]
+          },
+          {
+            "h": "哪些防区和探测器真正能保护住宅",
+            "p": [
+              "核心原则是在窃贼进屋之前发现他。所以基础是周界：入户门、通往院子的门和一楼窗户的门磁，以及大窗房间的玻璃破碎探测器。第二道防线是室内的移动探测器，装在绕不过去的走廊和楼梯处。",
+              "家里有猫狗时，选用防宠物探测器——AX PRO无线探测器可忽略30公斤以下的宠物。院子里的室外探测器要谨慎安装：树枝、鸟和邻居家的猫会造成误报，室外周界更适合用带人车识别的AI摄像机，报警则放在门窗上。另一个有用的防区是厨房和卫生间的漏水探测器：它触发的次数比防盗探测器还多。"
+            ]
+          },
+          {
+            "h": "用照片确认警情",
+            "p": [
+              "安防中最恼人的是误报：探测器响了，你在城市另一头，不知道该不该赶回去。带摄像头的移动探测器能解决这个问题：触发时它在红外补光下拍照，并随警情一起推送到应用。AX PRO系列中这种探测器是DS-PDPC12P-EG2-WB，还有彩色拍摄版本。",
+              "第二种方式是把报警与监控摄像机联动。据厂家介绍，大华AirShield主机可调取同一网络内IP摄像机的视频并保存一段警情短片，AX PRO则与海康摄像机配合。业主几秒钟就能看清是猫还是人，再决定是否通知安保。"
+            ]
+          },
+          {
+            "h": "谁来响应警情",
+            "p": [
+              "响应分三个层级。警号能吓阻并引起邻居注意，但本身并不能保护房屋——一个装在室外显眼处，一个装在室内，让人在屋里待不下去。应用推送即时送达，但取决于你是否看到手机。",
+              "第三个层级是与安保公司签约：警情送到监控中心，派出处警人员。“手机还是监控中心”的对比，我们在如何选择防盗报警的文章中详细讲过。对住宅来说，“警号＋应用＋探测器照片”往往就够了，房子经常空置时再接入监控中心。"
+            ]
+          },
+          {
+            "h": "家用报警系统要多少钱",
+            "p": [
+              "2026年10月30日目录价格，不含安装：海康AX PRO DS-PWA64-Kit-WB无线套装——2 189 900苏姆；增配门磁——197 900；防宠物移动探测器——494 900；玻璃破碎探测器——395 900；带摄像头的移动探测器——939 900；IP65、110分贝室外警号——791 900；漏水探测器——419 900。大华AirShield ARC3800H-W2主机——1 357 900，4G版——2 376 900。",
+              "独栋住宅示例：AX PRO套装，再加三个门窗门磁、一个带摄像头的移动探测器和一个室外警号——设备约450万苏姆。住宅无线系统安装通常一天完成，为全家设置应用包含在施工中。施工质保3年。可在防盗报警页面按您的户型申请测算——我们在一个工作日内回复报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "断电后报警还能工作吗？",
+            "a": "能，只要主机有电池、探测器有自带电池。无线探测器不依赖市电，备用4G通道在路由器断电时也能发出警情。"
+          },
+          {
+            "q": "不开槽能装报警吗？",
+            "a": "能，无线系统一天即可装进已装修的房屋：探测器固定在墙面和窗框上，只有主机供电需要线缆。"
+          },
+          {
+            "q": "猫狗会触发报警吗？",
+            "a": "防宠物探测器会忽略一定重量以下的宠物——AX PRO无线探测器为30公斤以下，需按厂家要求的高度安装。"
+          },
+          {
+            "q": "探测器电池能用多久？",
+            "a": "通常数年，取决于型号和触发次数。主机会提前提示具体哪个探测器电量不足，因此更换是有计划的，而不是被盗后才发现。"
+          },
+          {
+            "q": "报警主机和智能家居传感器有什么区别？",
+            "a": "报警主机监测与每个探测器的连接，有电池和备用通信通道，并可把警情传给安保公司。智能家居传感器适合做通知和场景联动，但防盗任务要靠报警主机。"
+          },
+          {
+            "q": "报警能和摄像机联动吗？",
+            "a": "能：AX PRO与海康摄像机配合，大华AirShield与同一网络内的大华IP摄像机配合。报警时应用会收到照片或短视频。"
+          }
+        ],
+        "summary": [
+          "报警系统的价值在于在进屋前于周界触发，并且断电断网也能发出警情。",
+          "专业无线链路为双向加密（AX PRO为AES-128），主机监测每个探测器。",
+          "主机电池和备用4G通道确保没有市电和家庭宽带时警情也能发出。",
+          "防护基础是周界的门磁和玻璃破碎探测器，加上室内移动探测器；带摄像头的探测器用照片确认警情。",
+          "基于AX PRO、含摄像头探测器和室外警号的独栋住宅套装，按2026年10月30日价格设备约450万苏姆。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "videodomofon-dlya-kvartiry-ip-sip-dvuhprovodnoy",
     "date": "2026-10-30",
     "related": [
