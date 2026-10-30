@@ -353,12 +353,12 @@ export const KITS: Kit[] = [
     loc: {
       ru: {
         title: "Комплект видеонаблюдения для склада",
-        tagline: "8 камер на зоны приёмки, отгрузки и стеллажи, месяц архива и доступ для нескольких сотрудников.",
+        tagline: "8 камер на зоны приёмки, отгрузки и стеллажи, архив 1–2 недели с расширением до месяца и доступ для нескольких сотрудников.",
         audience: "Склад, цех, база: ворота, рампы, проходы, периметр.",
         includes: [
           "8 IP-камер 4 Мп (уличные и внутренние, ИК до 30 м)",
           "IP-видеорегистратор на 8–16 каналов с PoE",
-          "Жёсткий диск 2 ТБ (архив до месяца)",
+          "Жёсткий диск 2 ТБ (архив 1–2 недели; на месяц — диск 6–8 ТБ за доплату)",
           "Кабельные трассы, шкаф, питание",
           "Доступ с телефонов для руководителя и охраны",
         ],
@@ -373,12 +373,12 @@ export const KITS: Kit[] = [
       },
       uz: {
         title: "Ombor uchun videokuzatuv toʻplami",
-        tagline: "Qabul, joʻnatish va stellajlar uchun 8 kamera, bir oylik arxiv va bir nechta xodim uchun kirish.",
+        tagline: "Qabul, joʻnatish va stellajlar uchun 8 kamera, bir oygacha kengaytiriladigan 1–2 haftalik arxiv va bir nechta xodim uchun kirish.",
         audience: "Ombor, sex, baza: darvozalar, rampalar, yoʻlaklar, perimetr.",
         includes: [
           "8 ta IP-kamera 4 Mp (koʻcha va ichki, IK 30 m gacha)",
           "PoE bilan 8–16 kanalli IP-videoregistrator",
-          "2 TB qattiq disk (bir oygacha arxiv)",
+          "2 TB qattiq disk (1–2 haftalik arxiv; bir oy uchun — qoʻshimcha toʻlov evaziga 6–8 TB disk)",
           "Kabel trassalari, shkaf, quvvat",
           "Rahbar va qoʻriqlash uchun telefondan kirish",
         ],
@@ -393,12 +393,12 @@ export const KITS: Kit[] = [
       },
       en: {
         title: "Warehouse CCTV Kit",
-        tagline: "Eight cameras over receiving, dispatch and racking, a month of archive and multi-user access.",
+        tagline: "Eight cameras over receiving, dispatch and racking, a 1–2 week archive expandable to a month, and multi-user access.",
         audience: "Warehouse, workshop, depot: gates, ramps, aisles, perimeter.",
         includes: [
           "8 IP cameras 4 MP (outdoor and indoor, IR up to 30 m)",
           "8–16 channel PoE NVR",
-          "2 TB hard drive (up to a month of archive)",
+          "2 TB hard drive (1–2 weeks of archive; a 6–8 TB drive for a month at extra cost)",
           "Cable runs, cabinet, power",
           "Phone access for manager and security",
         ],
@@ -413,12 +413,12 @@ export const KITS: Kit[] = [
       },
       tr: {
         title: "Depo için Kamera Seti",
-        tagline: "Mal kabul, sevkiyat ve raflara 8 kamera, bir aylık arşiv, çok kullanıcılı erişim.",
+        tagline: "Mal kabul, sevkiyat ve raflara 8 kamera, bir aya kadar genişletilebilen 1–2 haftalık arşiv, çok kullanıcılı erişim.",
         audience: "Depo, atölye, tesis: kapılar, rampalar, koridorlar, çevre.",
         includes: [
           "8 IP kamera 4 MP (iç/dış, 30 m IR)",
           "8–16 kanallı PoE NVR",
-          "2 TB disk (bir aya kadar arşiv)",
+          "2 TB disk (1–2 haftalık arşiv; bir ay için ek ücretle 6–8 TB disk)",
           "Kablo hatları, kabinet, güç",
           "Yönetici ve güvenlik için telefon erişimi",
         ],
@@ -433,12 +433,12 @@ export const KITS: Kit[] = [
       },
       zh: {
         title: "仓库监控套装",
-        tagline: "收货、发货与货架区8台摄像机，一个月存档，多人访问权限。",
+        tagline: "收货、发货与货架区8台摄像机，存档1–2周、可扩展至一个月，多人访问权限。",
         audience: "仓库、车间、基地：大门、装卸台、通道、周界。",
         includes: [
           "8台400万像素IP摄像机（室内外，红外30米）",
           "8–16路PoE NVR",
-          "2TB硬盘（存档最长一个月）",
+          "2TB硬盘（存档1–2周；存一个月需加价换6–8TB硬盘）",
           "线缆桥架、机柜、供电",
           "经理与保安手机查看权限",
         ],
