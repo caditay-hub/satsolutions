@@ -33,6 +33,551 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "kamera-noch-v-cvete-colorvu-wizcolor",
+    "date": "2026-10-30",
+    "related": [
+      "cctv",
+      "perimeter",
+      "anpr"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "analogovye-kamery"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "ii-v-kamere-acusense-wizsense",
+      "kak-vybrat-kameru-videonablyudeniya",
+      "kamera-dlya-doma"
+    ],
+    "products": [
+      "hik-ds-2cd1027g2h-liu-2-8mm",
+      "hik-ds-2cd2047g2-lu-2-8mm-c-o-std",
+      "dahua-ipc-hfw1239s-a-led-s5",
+      "dahua-ipc-hdw2449t-s-il"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Камера видит ночью в цвете: ColorVu, WizColor и умная подсветка — как это устроено и когда не переплачивать",
+        "seoTitle": "Камера с цветной ночной съёмкой: ColorVu и WizColor",
+        "seoDesc": "Почему ночью камеры снимают в чёрно-белом и как ColorVu, WizColor и умная подсветка дают цвет: светосила, сенсор, режимы, ошибки выбора и цены в Ташкенте.",
+        "excerpt": "Обычная камера ночью включает инфракрасную подсветку и переходит в чёрно-белый режим: человек виден, а цвет машины или одежды — нет. Камеры ColorVu у Hikvision и Full-color, WizColor у Dahua снимают в цвете благодаря светосильному объективу, чувствительному сенсору и тёплой подсветке. Разбираем, как это работает, чем отличаются режимы подсветки, где цвет ночью действительно нужен и сколько стоят такие камеры.",
+        "sections": [
+          {
+            "h": "Почему ночью камера показывает чёрно-белую картинку",
+            "p": [
+              "Днём камера закрывает сенсор специальным фильтром, который отсекает инфракрасный свет, — так цвета получаются естественными. Когда темнеет, фильтр уходит в сторону, включаются инфракрасные светодиоды, и камера переходит в чёрно-белый режим. Человеческий глаз этот свет не видит, а сенсор видит хорошо, поэтому картинка остаётся чёткой даже в полной темноте.",
+              "Цена такого решения — потеря цвета. В ночном архиве видно, что во двор заехала машина, но не видно, красная она или серая; виден человек, но не цвет его куртки. При разборе кражи или ДТП у парковки именно цвет часто оказывается главным признаком, по которому ищут на других камерах и описывают нарушителя."
+            ]
+          },
+          {
+            "h": "Три способа получить цвет ночью",
+            "p": [
+              "Первый способ — собрать больше света. Объектив с большой светосилой и сенсор с крупными пикселями дают цветную картинку там, где обычная камера уже переключилась бы в чёрно-белое: при уличных фонарях, подсветке фасада, свете из окон. Подсветка камере в этом случае не нужна вовсе.",
+              "Второй способ — добавить видимый свет. Камера включает тёплую белую подсветку, обычно с цветовой температурой около 3000 K, и снимает в цвете даже в полной темноте. Это надёжно, но свет виден всем: он освещает двор, может мешать соседям и привлекает насекомых.",
+              "Третий способ — умная подсветка. По умолчанию работает невидимый инфракрасный свет и камера снимает в чёрно-белом, а когда в кадре появляется человек или машина, включается белый свет и запись идёт в цвете. Одновременно это работает как отпугивание: нарушитель видит, что его заметили. У Hikvision режим называется Smart Hybrid Light, у Dahua такие модели помечены буквами IL в индексе."
+            ]
+          },
+          {
+            "h": "Как устроена камера ColorVu и WizColor изнутри",
+            "p": [
+              "Главная деталь — светосила объектива, её обозначают числом диафрагмы F. Чем меньше число, тем больше света попадает на сенсор, причём зависимость квадратичная: объектив F1.0 собирает примерно в 2,5 раза больше света, чем обычный для массовых камер F1.6. Камеры ColorVu у Hikvision используют объективы F1.0, а в новом поколении Dahua WizColor 2.0, представленном 15 апреля 2026 года, объектив F0.8 по данным производителя собирает ещё в 1,6 раза больше света, чем F1.0.",
+              "Вторая деталь — сенсор. Чем крупнее пиксель, тем больше света он ловит и тем меньше шума на тёмной картинке. В старших моделях ставят сенсоры формата 1/1,8 дюйма вместо массовых 1/2,8–1/3 дюйма. В WizColor 2.0 Dahua заявляет пиксель размером 4 микрометра — примерно в 1,9 раза больше по площади, чем в прошлом поколении.",
+              "Третья деталь — обработка изображения. Процессор камеры подавляет шум, восстанавливает цвета и резкость движущихся объектов; в новых поколениях обеих марок эту работу выполняет нейросетевой ISP, обученный на больших наборах ночных кадров. Именно поэтому две камеры с одинаковым разрешением ночью могут давать совершенно разную картинку."
+            ]
+          },
+          {
+            "h": "ColorVu у Hikvision: как читать индекс модели",
+            "p": [
+              "У IP-камер Hikvision признак ColorVu обычно стоит в числовой части индекса: цифра 7 после разрешения означает цветную ночную линейку. Например, DS-2CD2047G2-LU — 4 Мп ColorVu с тёплой подсветкой 3000 K и микрофоном, DS-2CD2347G2-LU — такая же купольная, DS-2CD2387G2 — 8 Мп. Модели с буквами LI и H в индексе, например DS-2CD1027G2H-LIU, сочетают ColorVu с умной гибридной подсветкой.",
+              "Камеры с цифрой 3 в той же позиции (DS-2CD1043G2-LIU) — это не ColorVu, а обычные камеры, у которых есть Smart Hybrid Light: ночью они снимают в чёрно-белом с инфракрасной подсветкой и переходят на цвет, когда включается белый свет по событию. В карточках каталога эти различия указаны в строке подсветки.",
+              "Для старых аналоговых систем есть ColorVu и в формате HD: например, DS-2CE12DF3T-F подключается к существующему видеорегистратору по коаксиальному кабелю. Это самый недорогой способ получить цвет ночью без замены всей системы."
+            ]
+          },
+          {
+            "h": "Full-color и WizColor у Dahua",
+            "p": [
+              "У Dahua цветные ночные камеры долго выпускались под названием Full-color: в индексе их выдаёт пометка LED, например IPC-HFW1239S-A-LED-S5 — 2 Мп уличная камера с белой подсветкой до 30 метров и микрофоном. В 2025 году линейку переименовали и расширили под маркой WizColor: появились модели 4K, поворотные, с вариофокальным объективом, аналоговые HDCVI и с 4G-модемом.",
+              "Модели с буквами IL в индексе (например, IPC-HDW2449T-S-IL) имеют двойную подсветку: инфракрасную и белую, и умеют включать белый свет только при появлении человека или машины. Серия TiOC объединяет цветную ночную съёмку с активным сдерживанием: при нарушении камера включает сирену и мигающий свет.",
+              "WizColor 2.0, представленный в апреле 2026 года, — это следующее поколение: объектив F0.8, пиксель 4 микрометра и нейросетевая обработка AI-ISP 2.0, которая по словам производителя уменьшает размытие движущихся объектов ночью. Такие камеры появляются в продаже постепенно; в нашем каталоге массово представлены Full-color и модели с двойной подсветкой."
+            ]
+          },
+          {
+            "h": "Где цвет ночью действительно нужен, а где — нет",
+            "p": [
+              "Цвет ночью окупается там, где важно описать человека или машину: въезды и парковки, дворы жилых комплексов, магазины и склады с ночной разгрузкой, частный дом, двор которого освещён фонарями. Вместе с ИИ-фильтром человек/машина цветная камера даёт и меньше ложных тревог, и лучшую картинку для разбора.",
+              "Где цвет не нужен или неудобен: длинный тёмный периметр без освещения — белая подсветка у массовых моделей обычно добивает на 20–40 метров, а инфракрасная на 30–60 метров и дальше; окна спален напротив камеры — постоянный белый свет будет мешать; номера машин — для их чтения нужны специальные камеры распознавания номеров, а белая подсветка, наоборот, засвечивает номерной знак.",
+              "Разумная схема для двора или территории: камеры ColorVu на въездах и у входов, где есть фонари, умная гибридная подсветка там, где света нет, а на шлагбауме — отдельная камера распознавания номеров."
+            ]
+          },
+          {
+            "h": "Типичные ошибки при выборе",
+            "p": [
+              "Ждать цвета в полной темноте без подсветки. Даже F1.0 нужен хоть какой-то свет; если на объекте темно, камера либо включит белую подсветку, либо перейдёт в чёрно-белый режим — проверьте, что выбранный режим вас устраивает.",
+              "Ставить камеру с постоянной белой подсветкой под окнами. Через неделю жильцы попросят её выключить. Для жилых дворов выбирают умный режим, когда свет загорается только по событию.",
+              "Смотреть только на мегапиксели. 8 Мп с маленьким сенсором ночью часто проигрывают 4 Мп с сенсором 1/1,8 дюйма. Сравнивайте светосилу, размер сенсора и примеры ночной записи, а не только разрешение."
+            ]
+          },
+          {
+            "h": "Сколько стоят камеры с цветной ночной съёмкой",
+            "p": [
+              "Цены из нашего каталога на 30 октября 2026 года, они меняются: аналоговая ColorVu Hikvision DS-2CE12DF3T-F — от 122 900 сум; Dahua IPC-HDW2449T-S-IL 4 Мп с двойной подсветкой — от 474 900 сум; Dahua IPC-HFW1239S-A-LED-S5 2 Мп Full-color — от 549 900 сум; Hikvision DS-2CD1027G2H-LIU 2 Мп ColorVu с умной подсветкой — от 574 900 сум; Hikvision DS-2CD1047G2-L 4 Мп ColorVu — от 766 900 сум; Hikvision DS-2CD2047G2-LU 4 Мп с сенсором 1/1,8 дюйма и микрофоном — от 1 112 900 сум.",
+              "Цветная камера обычно дороже обычной того же разрешения на 20–50 %. Разница окупается при первом же разборе ночного инцидента, когда нужно описать машину или человека. Подобрать камеры под освещение вашего объекта, с выездом инженера и примером ночной картинки, можно на странице видеонаблюдения — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Чем ColorVu отличается от обычной камеры с белой подсветкой?",
+            "a": "ColorVu сначала пытается снять в цвете без подсветки за счёт объектива F1.0 и чувствительного сенсора, а тёплый свет включает только когда света совсем мало. Обычная камера с белой подсветкой без неё цвета не даёт и светит постоянно."
+          },
+          {
+            "q": "Будет ли камера снимать в цвете в полной темноте?",
+            "a": "Только с включённой белой подсветкой. Без неё в полной темноте любая камера переходит в чёрно-белый режим с инфракрасной подсветкой."
+          },
+          {
+            "q": "Не будет ли свет мешать соседям?",
+            "a": "Выбирайте умный режим: по умолчанию работает невидимый инфракрасный свет, а белый включается на несколько секунд только при появлении человека или машины."
+          },
+          {
+            "q": "Видно ли номер машины ночью?",
+            "a": "Обычная цветная камера номер ночью часто не читает: белая подсветка засвечивает световозвращающий номерной знак. Для номеров ставят специальные камеры распознавания номеров."
+          },
+          {
+            "q": "Можно ли совместить цветную ночную съёмку и ИИ?",
+            "a": "Да, и это лучшая пара: в линейках Hikvision и Dahua есть модели с ColorVu или WizColor и фильтром человек/машина. ИИ отсекает ложные тревоги, а умная подсветка включается именно на человека или машину."
+          },
+          {
+            "q": "Подойдёт ли цветная камера к старому регистратору?",
+            "a": "Для аналоговых систем есть HD-камеры ColorVu, они подключаются к существующему регистратору по коаксиальному кабелю. Для IP-систем подходят любые IP-камеры, совместимые с вашим регистратором."
+          }
+        ],
+        "summary": [
+          "Ночью обычная камера переходит в чёрно-белый режим с инфракрасной подсветкой и теряет цвет машины и одежды.",
+          "Цвет ночью дают три приёма: светосильный объектив и чувствительный сенсор, тёплая белая подсветка или умный режим, когда белый свет включается только по событию.",
+          "F1.0 собирает примерно в 2,5 раза больше света, чем F1.6; Dahua WizColor 2.0 (апрель 2026) — F0.8 и пиксель 4 мкм.",
+          "Hikvision: цифра 7 в индексе — ColorVu, LI/H — умная гибридная подсветка; Dahua: LED — Full-color, IL — двойная подсветка.",
+          "Цвет ночью нужен на въездах, парковках и во дворах с фонарями; для номеров машин нужны отдельные камеры; цветные камеры дороже обычных на 20–50 %."
+        ]
+      },
+      "uz": {
+        "title": "Kamera tunda rangli koʻradi: ColorVu, WizColor va aqlli yoritish — qanday ishlaydi va qachon ortiqcha toʻlamaslik kerak",
+        "seoTitle": "Tunda rangli suratga oluvchi kamera: ColorVu va WizColor",
+        "seoDesc": "Kamera tunda nega oq-qora suratga oladi, ColorVu, WizColor va aqlli yoritish rangni qanday beradi: obyektiv, sensor, rejimlar, xatolar va narxlar.",
+        "excerpt": "Oddiy kamera tunda infraqizil yoritishni yoqadi va oq-qora rejimga oʻtadi: odam koʻrinadi, lekin mashina yoki kiyimning rangi koʻrinmaydi. Hikvision ColorVu hamda Dahua Full-color va WizColor kameralari yorugʻlik kuchi yuqori obyektiv, sezgir sensor va iliq yoritish tufayli rangli suratga oladi. Bu qanday ishlashini, yoritish rejimlari qanday farq qilishini, tunda rang qayerda haqiqatan kerakligini va bunday kameralar qancha turishini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Kamera nega tunda oq-qora tasvir koʻrsatadi",
+            "p": [
+              "Kunduzi kamera sensorni infraqizil nurni kesib tashlaydigan maxsus filtr bilan yopadi — shu tufayli ranglar tabiiy chiqadi. Qorongʻi tushganda filtr chetga suriladi, infraqizil svetodiodlar yonadi va kamera oq-qora rejimga oʻtadi. Inson koʻzi bu nurni koʻrmaydi, sensor esa yaxshi koʻradi, shuning uchun tasvir toʻliq qorongʻida ham aniq qoladi.",
+              "Bunday yechimning bahosi — rangning yoʻqolishi. Tungi arxivda hovliga mashina kirgani koʻrinadi, lekin u qizilmi yoki kulrangmi — koʻrinmaydi; odam koʻrinadi, ammo kurtkasining rangi yoʻq. Avtoturargoh yonidagi oʻgʻirlik yoki YTHni tahlil qilishda aynan rang koʻpincha boshqa kameralarda qidirish va buzgʻunchini tavsiflash uchun asosiy belgi boʻladi."
+            ]
+          },
+          {
+            "h": "Tunda rang olishning uch usuli",
+            "p": [
+              "Birinchi usul — koʻproq yorugʻlik yigʻish. Yorugʻlik kuchi katta obyektiv va yirik pikselli sensor oddiy kamera allaqachon oq-qoraga oʻtadigan joyda rangli tasvir beradi: koʻcha chiroqlari, fasad yoritgichi, derazalardan tushgan yorugʻlikda. Bu holda kameraga yoritish umuman kerak emas.",
+              "Ikkinchi usul — koʻrinadigan yorugʻlik qoʻshish. Kamera odatda taxminan 3000 K rang haroratidagi iliq oq yoritishni yoqadi va toʻliq qorongʻida ham rangli suratga oladi. Bu ishonchli, lekin yorugʻlik hammaga koʻrinadi: hovlini yoritadi, qoʻshnilarga xalaqit berishi va hasharotlarni jalb qilishi mumkin.",
+              "Uchinchi usul — aqlli yoritish. Standart holatda koʻrinmas infraqizil nur ishlaydi va kamera oq-qora suratga oladi, kadrda odam yoki mashina paydo boʻlganda esa oq yorugʻlik yonadi va yozuv rangli boʻladi. Bir vaqtning oʻzida bu choʻchitish vazifasini ham bajaradi: buzgʻunchi uni payqashganini koʻradi. Hikvisionda bu rejim Smart Hybrid Light deb ataladi, Dahuada bunday modellar indeksda IL harflari bilan belgilanadi."
+            ]
+          },
+          {
+            "h": "ColorVu va WizColor kamerasi ichkaridan qanday tuzilgan",
+            "p": [
+              "Asosiy qism — obyektivning yorugʻlik kuchi, u F diafragma soni bilan belgilanadi. Son qanchalik kichik boʻlsa, sensorga shunchalik koʻp yorugʻlik tushadi, bogʻliqlik esa kvadratik: F1.0 obyektiv ommaviy kameralar uchun odatiy F1.6 ga nisbatan taxminan 2,5 baravar koʻp yorugʻlik yigʻadi. Hikvision ColorVu kameralari F1.0 obyektivlardan foydalanadi, 2026-yil 15-aprelda taqdim etilgan Dahua WizColor 2.0 ning yangi avlodida esa F0.8 obyektiv ishlab chiqaruvchi maʼlumotiga koʻra F1.0 ga nisbatan yana 1,6 baravar koʻp yorugʻlik yigʻadi.",
+              "Ikkinchi qism — sensor. Piksel qanchalik yirik boʻlsa, u shunchalik koʻp yorugʻlik ushlaydi va qorongʻi tasvirda shovqin shunchalik kam boʻladi. Kattaroq modellarda ommaviy 1/2,8–1/3 dyuym oʻrniga 1/1,8 dyuym formatdagi sensorlar qoʻyiladi. WizColor 2.0 da Dahua 4 mikrometrli pikselni bayon qiladi — oldingi avlodga nisbatan maydoni taxminan 1,9 baravar katta.",
+              "Uchinchi qism — tasvirga ishlov berish. Kamera protsessori shovqinni bostiradi, ranglar va harakatlanayotgan obyektlarning aniqligini tiklaydi; ikkala brendning yangi avlodlarida bu ishni koʻp sonli tungi kadrlarda oʻqitilgan neyrotarmoqli ISP bajaradi. Aynan shuning uchun bir xil ruxsatdagi ikki kamera tunda butunlay boshqa tasvir berishi mumkin."
+            ]
+          },
+          {
+            "h": "Hikvisionda ColorVu: model indeksini qanday oʻqish kerak",
+            "p": [
+              "Hikvision IP-kameralarida ColorVu belgisi odatda indeksning raqamli qismida turadi: ruxsatdan keyingi 7 raqami rangli tungi liniyani bildiradi. Masalan, DS-2CD2047G2-LU — 3000 K iliq yoritish va mikrofonli 4 Mp ColorVu, DS-2CD2347G2-LU — xuddi shunday gumbazli, DS-2CD2387G2 — 8 Mp. Indeksida LI va H harflari boʻlgan modellar, masalan DS-2CD1027G2H-LIU, ColorVu ni aqlli gibrid yoritish bilan birlashtiradi.",
+              "Xuddi shu oʻrinda 3 raqami boʻlgan kameralar (DS-2CD1043G2-LIU) ColorVu emas, balki Smart Hybrid Light ga ega oddiy kameralar: tunda ular infraqizil yoritish bilan oq-qora suratga oladi va oq yorugʻlik hodisa boʻyicha yonganda rangga oʻtadi. Katalog kartochkalarida bu farqlar yoritish qatorida koʻrsatilgan.",
+              "Eski analog tizimlar uchun HD formatida ham ColorVu bor: masalan, DS-2CE12DF3T-F mavjud videoregistratorga koaksial kabel orqali ulanadi. Bu butun tizimni almashtirmasdan tunda rang olishning eng arzon usuli."
+            ]
+          },
+          {
+            "h": "Dahuada Full-color va WizColor",
+            "p": [
+              "Dahuada tungi rangli kameralar uzoq vaqt Full-color nomi bilan chiqarildi: indeksda ularni LED belgisi koʻrsatadi, masalan IPC-HFW1239S-A-LED-S5 — 30 metrgacha oq yoritishli va mikrofonli 2 Mp tashqi kamera. 2025-yilda liniya WizColor markasi ostida qayta nomlandi va kengaytirildi: 4K, burilma, varifokal obyektivli, analog HDCVI va 4G-modemli modellar paydo boʻldi.",
+              "Indeksida IL harflari boʻlgan modellar (masalan, IPC-HDW2449T-S-IL) ikki xil yoritishga ega: infraqizil va oq, va oq yorugʻlikni faqat odam yoki mashina paydo boʻlganda yoqa oladi. TiOC seriyasi tungi rangli suratga olishni faol toʻsqinlik bilan birlashtiradi: buzilishda kamera sirena va miltillovchi chiroqni yoqadi.",
+              "2026-yil aprelida taqdim etilgan WizColor 2.0 — keyingi avlod: F0.8 obyektiv, 4 mikrometrli piksel va ishlab chiqaruvchi soʻziga koʻra tunda harakatlanayotgan obyektlarning xiralashuvini kamaytiradigan AI-ISP 2.0 neyrotarmoqli ishlov. Bunday kameralar sotuvda asta-sekin paydo boʻlmoqda; katalogimizda Full-color va ikki xil yoritishli modellar keng taqdim etilgan."
+            ]
+          },
+          {
+            "h": "Tunda rang qayerda haqiqatan kerak, qayerda — yoʻq",
+            "p": [
+              "Tunda rang odam yoki mashinani tavsiflash muhim boʻlgan joylarda oʻzini oqlaydi: kirish yoʻllari va avtoturargohlar, turar-joy majmualari hovlilari, tungi yuk tushiriladigan doʻkon va omborlar, hovlisi chiroqlar bilan yoritilgan xususiy uy. Odam/mashina sunʼiy intellekt filtri bilan birga rangli kamera ham kamroq yolgʻon signal, ham tahlil uchun yaxshiroq tasvir beradi.",
+              "Rang kerak boʻlmagan yoki noqulay joylar: yoritilmagan uzun qorongʻi perimetr — ommaviy modellarda oq yoritish odatda 20–40 metrgacha, infraqizil esa 30–60 metr va undan uzoqqa yetadi; kamera roʻparasidagi yotoqxona derazalari — doimiy oq yorugʻlik xalaqit beradi; mashina raqamlari — ularni oʻqish uchun maxsus raqam tanish kameralari kerak, oq yoritish esa aksincha, raqam belgisini yoritib yuboradi.",
+              "Hovli yoki hudud uchun oqilona sxema: chiroqlar bor kirish yoʻllari va eshiklar yonida ColorVu kameralari, yorugʻlik yoʻq joyda aqlli gibrid yoritish, shlagbaumda esa alohida raqam tanish kamerasi."
+            ]
+          },
+          {
+            "h": "Tanlashdagi odatiy xatolar",
+            "p": [
+              "Yoritishsiz toʻliq qorongʻida rang kutish. Hatto F1.0 ga ham qandaydir yorugʻlik kerak; agar obyektda qorongʻi boʻlsa, kamera yo oq yoritishni yoqadi, yo oq-qora rejimga oʻtadi — tanlangan rejim sizga mos kelishini tekshiring.",
+              "Doimiy oq yoritishli kamerani derazalar ostiga qoʻyish. Bir haftadan keyin aholi uni oʻchirishni soʻraydi. Turar-joy hovlilari uchun yorugʻlik faqat hodisa boʻyicha yonadigan aqlli rejim tanlanadi.",
+              "Faqat megapiksellarga qarash. Kichik sensorli 8 Mp tunda koʻpincha 1/1,8 dyuym sensorli 4 Mp dan yutqazadi. Faqat ruxsatni emas, yorugʻlik kuchi, sensor oʻlchami va tungi yozuv namunalarini solishtiring."
+            ]
+          },
+          {
+            "h": "Tunda rangli suratga oluvchi kameralar qancha turadi",
+            "p": [
+              "Narxlar katalogimizdan, 2026-yil 30-oktyabr holatiga, ular oʻzgaradi: analog ColorVu Hikvision DS-2CE12DF3T-F — 122 900 soʻmdan; ikki xil yoritishli 4 Mp Dahua IPC-HDW2449T-S-IL — 474 900 soʻmdan; 2 Mp Full-color Dahua IPC-HFW1239S-A-LED-S5 — 549 900 soʻmdan; aqlli yoritishli 2 Mp ColorVu Hikvision DS-2CD1027G2H-LIU — 574 900 soʻmdan; 4 Mp ColorVu Hikvision DS-2CD1047G2-L — 766 900 soʻmdan; 1/1,8 dyuym sensorli va mikrofonli 4 Mp Hikvision DS-2CD2047G2-LU — 1 112 900 soʻmdan.",
+              "Rangli kamera odatda xuddi shu ruxsatdagi oddiy kameradan 20–50 % qimmat. Farq mashina yoki odamni tavsiflash kerak boʻlgan birinchi tungi hodisa tahlilidayoq oʻzini oqlaydi. Obyektingiz yoritilishiga mos kameralarni muhandis chiqishi va tungi tasvir namunasi bilan videokuzatuv sahifasida tanlash mumkin — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "ColorVu oq yoritishli oddiy kameradan nimasi bilan farq qiladi?",
+            "a": "ColorVu avval F1.0 obyektiv va sezgir sensor hisobiga yoritishsiz rangli suratga olishga harakat qiladi, iliq yorugʻlikni esa yorugʻlik juda kam boʻlgandagina yoqadi. Oq yoritishli oddiy kamera usiz rang bermaydi va doimiy yoritadi."
+          },
+          {
+            "q": "Kamera toʻliq qorongʻida rangli suratga oladimi?",
+            "a": "Faqat oq yoritish yoqilgan holda. Usiz toʻliq qorongʻida har qanday kamera infraqizil yoritishli oq-qora rejimga oʻtadi."
+          },
+          {
+            "q": "Yorugʻlik qoʻshnilarga xalaqit bermaydimi?",
+            "a": "Aqlli rejimni tanlang: standart holatda koʻrinmas infraqizil nur ishlaydi, oq yorugʻlik esa faqat odam yoki mashina paydo boʻlganda bir necha soniyaga yonadi."
+          },
+          {
+            "q": "Tunda mashina raqami koʻrinadimi?",
+            "a": "Oddiy rangli kamera tunda raqamni koʻpincha oʻqiy olmaydi: oq yoritish nur qaytaruvchi raqam belgisini yoritib yuboradi. Raqamlar uchun maxsus raqam tanish kameralari qoʻyiladi."
+          },
+          {
+            "q": "Tungi rangli suratga olish va sunʼiy intellektni birlashtirish mumkinmi?",
+            "a": "Ha, bu eng yaxshi juftlik: Hikvision va Dahua liniyalarida ColorVu yoki WizColor va odam/mashina filtriga ega modellar bor. Sunʼiy intellekt yolgʻon signallarni kesadi, aqlli yoritish esa aynan odam yoki mashinada yonadi."
+          },
+          {
+            "q": "Rangli kamera eski registratorga mos keladimi?",
+            "a": "Analog tizimlar uchun ColorVu HD-kameralari bor, ular mavjud registratorga koaksial kabel orqali ulanadi. IP-tizimlar uchun registratoringizga mos har qanday IP-kamera toʻgʻri keladi."
+          }
+        ],
+        "summary": [
+          "Tunda oddiy kamera infraqizil yoritishli oq-qora rejimga oʻtadi va mashina hamda kiyim rangini yoʻqotadi.",
+          "Tunda rangni uch usul beradi: yorugʻlik kuchi yuqori obyektiv va sezgir sensor, iliq oq yoritish yoki oq yorugʻlik faqat hodisa boʻyicha yonadigan aqlli rejim.",
+          "F1.0 F1.6 ga nisbatan taxminan 2,5 baravar koʻp yorugʻlik yigʻadi; Dahua WizColor 2.0 (2026-yil aprel) — F0.8 va 4 mkm piksel.",
+          "Hikvision: indeksdagi 7 raqami — ColorVu, LI/H — aqlli gibrid yoritish; Dahua: LED — Full-color, IL — ikki xil yoritish.",
+          "Tunda rang kirish yoʻllari, avtoturargohlar va chiroqli hovlilarda kerak; mashina raqamlari uchun alohida kameralar kerak; rangli kameralar oddiylaridan 20–50 % qimmat."
+        ]
+      },
+      "en": {
+        "title": "A Camera That Sees in Colour at Night: ColorVu, WizColor and Smart Lighting — How It Works and When Not to Overpay",
+        "seoTitle": "Colour Night Vision Cameras: ColorVu and WizColor",
+        "seoDesc": "Why cameras film in black and white at night and how ColorVu, WizColor and smart lighting deliver colour: aperture, sensor, light modes, mistakes, prices.",
+        "excerpt": "At night an ordinary camera switches on its infrared illuminator and goes black and white: you can see a person but not the colour of a car or jacket. Hikvision ColorVu and Dahua Full-color and WizColor cameras record in colour thanks to a fast lens, a sensitive sensor and warm lighting. We explain how it works, how the lighting modes differ, where colour at night really matters and what these cameras cost.",
+        "sections": [
+          {
+            "h": "Why a camera shows a black-and-white picture at night",
+            "p": [
+              "In daylight the camera covers its sensor with a filter that blocks infrared light, which keeps colours natural. When it gets dark the filter moves aside, infrared LEDs switch on and the camera goes black and white. The human eye cannot see this light, but the sensor sees it well, so the picture stays sharp even in total darkness.",
+              "The price is the loss of colour. The night archive shows that a car drove into the yard but not whether it was red or grey; it shows a person but not the colour of their jacket. When investigating a theft or a collision near a car park, colour is often the main attribute used to search other cameras and describe the offender."
+            ]
+          },
+          {
+            "h": "Three ways to get colour at night",
+            "p": [
+              "The first way is to gather more light. A fast lens and a sensor with large pixels produce a colour picture where an ordinary camera would already have switched to black and white: under street lights, facade lighting or light from windows. In this case the camera needs no illuminator at all.",
+              "The second way is to add visible light. The camera switches on a warm white light, usually around 3000 K, and records in colour even in total darkness. It is reliable, but the light is visible to everyone: it lights up the yard, can disturb neighbours and attracts insects.",
+              "The third way is smart lighting. By default invisible infrared light is used and the camera records in black and white; when a person or vehicle appears, the white light switches on and recording turns to colour. At the same time this works as a deterrent: the intruder sees they have been noticed. Hikvision calls this mode Smart Hybrid Light; Dahua marks such models with the letters IL in the model code."
+            ]
+          },
+          {
+            "h": "How a ColorVu or WizColor camera works inside",
+            "p": [
+              "The key part is the lens aperture, given by the f-number. The smaller the number, the more light reaches the sensor, and the relationship is quadratic: an F1.0 lens gathers roughly 2.5 times more light than the F1.6 typical of mass-market cameras. Hikvision ColorVu cameras use F1.0 lenses, while in Dahua's new WizColor 2.0 generation, unveiled on 15 April 2026, the F0.8 lens gathers, according to the manufacturer, another 1.6 times more light than F1.0.",
+              "The second part is the sensor. The larger the pixel, the more light it catches and the less noise there is in a dark picture. Higher-end models use 1/1.8-inch sensors instead of the mass-market 1/2.8–1/3 inch. For WizColor 2.0 Dahua states a 4-micrometre pixel — about 1.9 times the area of the previous generation.",
+              "The third part is image processing. The camera's processor suppresses noise and restores colour and the sharpness of moving objects; in the latest generations of both brands this is done by a neural-network ISP trained on large sets of night footage. That is why two cameras with the same resolution can give completely different pictures at night."
+            ]
+          },
+          {
+            "h": "Hikvision ColorVu: how to read the model code",
+            "p": [
+              "On Hikvision IP cameras ColorVu is usually shown in the numeric part of the code: a 7 after the resolution digits denotes the colour night line. For example, the DS-2CD2047G2-LU is a 4 MP ColorVu with 3000 K warm light and a microphone, the DS-2CD2347G2-LU is the dome version and the DS-2CD2387G2 is 8 MP. Models with LI and H in the code, such as the DS-2CD1027G2H-LIU, combine ColorVu with smart hybrid lighting.",
+              "Cameras with a 3 in the same position (DS-2CD1043G2-LIU) are not ColorVu but ordinary cameras with Smart Hybrid Light: at night they record in black and white with infrared light and switch to colour when the white light turns on for an event. Our catalogue cards show these differences in the lighting line.",
+              "For older analogue systems there is ColorVu in HD format too: for example, the DS-2CE12DF3T-F connects to an existing recorder over coaxial cable. This is the cheapest way to get colour at night without replacing the whole system."
+            ]
+          },
+          {
+            "h": "Dahua Full-color and WizColor",
+            "p": [
+              "Dahua sold its colour night cameras for a long time under the Full-color name; the code gives them away with LED, for example the IPC-HFW1239S-A-LED-S5 — a 2 MP outdoor camera with white light up to 30 metres and a microphone. In 2025 the line was renamed and expanded under the WizColor brand: 4K, pan-tilt, varifocal, analogue HDCVI and 4G models appeared.",
+              "Models with IL in the code (for example the IPC-HDW2449T-S-IL) have dual lighting, infrared and white, and can switch on the white light only when a person or vehicle appears. The TiOC series combines colour night imaging with active deterrence: on intrusion the camera triggers a siren and flashing light.",
+              "WizColor 2.0, unveiled in April 2026, is the next generation: an F0.8 lens, a 4-micrometre pixel and AI-ISP 2.0 neural processing which, according to the manufacturer, reduces motion blur at night. Such cameras are reaching the market gradually; our catalogue mainly carries Full-color and dual-light models."
+            ]
+          },
+          {
+            "h": "Where colour at night really matters — and where it does not",
+            "p": [
+              "Colour at night pays off where it matters to describe a person or vehicle: entrances and car parks, residential courtyards, shops and warehouses with night deliveries, and a private house whose yard is lit by street lights. Combined with a human/vehicle AI filter, a colour camera gives both fewer false alarms and a better picture for investigation.",
+              "Where colour is unnecessary or inconvenient: a long dark perimeter with no lighting — white light on mass-market models usually reaches 20–40 metres, while infrared reaches 30–60 metres and beyond; bedroom windows opposite the camera — constant white light will disturb people; licence plates — reading them needs dedicated plate-recognition cameras, and white light actually washes out the plate.",
+              "A sensible layout for a yard or site: ColorVu cameras at entrances and doors where there are street lights, smart hybrid lighting where there is no light, and a separate plate-recognition camera at the barrier."
+            ]
+          },
+          {
+            "h": "Common mistakes when choosing",
+            "p": [
+              "Expecting colour in total darkness without lighting. Even F1.0 needs some light; if the site is dark, the camera will either switch on the white light or go black and white — make sure the chosen mode suits you.",
+              "Putting a camera with constant white light under windows. Within a week residents will ask for it to be switched off. For residential yards choose the smart mode, where the light comes on only for an event.",
+              "Looking only at megapixels. An 8 MP camera with a small sensor often loses at night to a 4 MP one with a 1/1.8-inch sensor. Compare aperture, sensor size and night footage samples, not just resolution."
+            ]
+          },
+          {
+            "h": "What colour night vision cameras cost",
+            "p": [
+              "Prices from our catalogue as of 30 October 2026, subject to change: analogue ColorVu Hikvision DS-2CE12DF3T-F from 122,900 UZS; Dahua IPC-HDW2449T-S-IL 4 MP with dual lighting from 474,900 UZS; Dahua IPC-HFW1239S-A-LED-S5 2 MP Full-color from 549,900 UZS; Hikvision DS-2CD1027G2H-LIU 2 MP ColorVu with smart lighting from 574,900 UZS; Hikvision DS-2CD1047G2-L 4 MP ColorVu from 766,900 UZS; Hikvision DS-2CD2047G2-LU 4 MP with a 1/1.8-inch sensor and microphone from 1,112,900 UZS.",
+              "A colour camera usually costs 20–50 % more than an ordinary one of the same resolution. The difference pays back at the first night incident where a car or person has to be described. You can choose cameras for your site's lighting, with an engineer's visit and a sample of night footage, on our CCTV page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "How does ColorVu differ from an ordinary camera with white light?",
+            "a": "ColorVu first tries to record in colour without lighting thanks to its F1.0 lens and sensitive sensor, and switches on the warm light only when there is very little light. An ordinary camera with white light gives no colour without it and keeps the light on constantly."
+          },
+          {
+            "q": "Will the camera record in colour in total darkness?",
+            "a": "Only with the white light on. Without it, in total darkness any camera switches to black and white with infrared lighting."
+          },
+          {
+            "q": "Will the light disturb neighbours?",
+            "a": "Choose the smart mode: by default invisible infrared light is used, and the white light comes on for a few seconds only when a person or vehicle appears."
+          },
+          {
+            "q": "Can you see a licence plate at night?",
+            "a": "An ordinary colour camera often cannot read a plate at night: white light washes out the retro-reflective plate. Dedicated plate-recognition cameras are used for plates."
+          },
+          {
+            "q": "Can colour night imaging be combined with AI?",
+            "a": "Yes, and it is the best pairing: Hikvision and Dahua both have models with ColorVu or WizColor and a human/vehicle filter. The AI cuts false alarms, and smart lighting switches on precisely for a person or vehicle."
+          },
+          {
+            "q": "Will a colour camera work with an old recorder?",
+            "a": "For analogue systems there are ColorVu HD cameras that connect to the existing recorder over coaxial cable. For IP systems any IP camera compatible with your recorder will do."
+          }
+        ],
+        "summary": [
+          "At night an ordinary camera switches to black and white with infrared light and loses the colour of cars and clothing.",
+          "Colour at night comes from three techniques: a fast lens and sensitive sensor, warm white light, or a smart mode where white light comes on only for an event.",
+          "F1.0 gathers roughly 2.5 times more light than F1.6; Dahua WizColor 2.0 (April 2026) has F0.8 and a 4 µm pixel.",
+          "Hikvision: a 7 in the code means ColorVu, LI/H means smart hybrid light; Dahua: LED means Full-color, IL means dual lighting.",
+          "Colour at night matters at entrances, car parks and lit yards; licence plates need separate cameras; colour cameras cost 20–50 % more than ordinary ones."
+        ]
+      },
+      "tr": {
+        "title": "Gece Renkli Gören Kamera: ColorVu, WizColor ve Akıllı Aydınlatma — Nasıl Çalışır, Ne Zaman Fazla Ödememeli",
+        "seoTitle": "Gece Renkli Görüntü Veren Kameralar: ColorVu ve WizColor",
+        "seoDesc": "Kameralar gece neden siyah-beyaz çeker, ColorVu, WizColor ve akıllı aydınlatma rengi nasıl verir: diyafram, sensör, ışık modları, seçim hataları ve fiyatlar.",
+        "excerpt": "Sıradan kamera gece kızılötesi aydınlatmayı açar ve siyah-beyaz moda geçer: insan görünür ama aracın ya da ceketin rengi görünmez. Hikvision ColorVu ile Dahua Full-color ve WizColor kameralar, ışık toplama gücü yüksek objektif, hassas sensör ve sıcak aydınlatma sayesinde renkli kayıt yapar. Nasıl çalıştığını, aydınlatma modlarının farkını, gece rengin nerede gerçekten gerektiğini ve bu kameraların fiyatını açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Kamera gece neden siyah-beyaz görüntü verir",
+            "p": [
+              "Gündüz kamera, sensörün önünü kızılötesi ışığı kesen bir filtreyle kapatır; böylece renkler doğal çıkar. Hava kararınca filtre kenara çekilir, kızılötesi LED'ler yanar ve kamera siyah-beyaz moda geçer. İnsan gözü bu ışığı görmez, sensör ise iyi görür; bu yüzden görüntü zifiri karanlıkta da net kalır.",
+              "Bunun bedeli rengin kaybolmasıdır. Gece arşivinde bahçeye bir araç girdiği görünür ama kırmızı mı gri mi olduğu görünmez; insan görünür ama ceketinin rengi görünmez. Otopark yanındaki bir hırsızlık veya kaza incelenirken diğer kameralarda arama yapmak ve faili tarif etmek için en önemli özellik çoğu zaman renktir."
+            ]
+          },
+          {
+            "h": "Gece renk elde etmenin üç yolu",
+            "p": [
+              "Birinci yol daha fazla ışık toplamaktır. Işık toplama gücü yüksek objektif ve büyük pikselli sensör, sıradan kameranın çoktan siyah-beyaza geçeceği yerde renkli görüntü verir: sokak lambaları, cephe aydınlatması, pencerelerden gelen ışık altında. Bu durumda kameranın hiç aydınlatmaya ihtiyacı olmaz.",
+              "İkinci yol görünür ışık eklemektir. Kamera genellikle 3000 K civarında sıcak beyaz ışık yakar ve zifiri karanlıkta da renkli kayıt yapar. Güvenilirdir ama ışık herkese görünür: bahçeyi aydınlatır, komşuları rahatsız edebilir ve böcekleri çeker.",
+              "Üçüncü yol akıllı aydınlatmadır. Varsayılan olarak görünmez kızılötesi ışık çalışır ve kamera siyah-beyaz kayıt yapar; karede insan veya araç belirdiğinde beyaz ışık yanar ve kayıt renkli olur. Aynı anda caydırıcı işlev görür: izinsiz giren fark edildiğini görür. Hikvision bu moda Smart Hybrid Light der; Dahua bu modelleri kodda IL harfleriyle işaretler."
+            ]
+          },
+          {
+            "h": "ColorVu ve WizColor kamera içeriden nasıl çalışır",
+            "p": [
+              "Ana unsur objektifin ışık toplama gücüdür ve F diyafram sayısıyla gösterilir. Sayı ne kadar küçükse sensöre o kadar çok ışık düşer; ilişki kareseldir: F1.0 objektif, yaygın kameralardaki F1.6'ya göre yaklaşık 2,5 kat daha fazla ışık toplar. Hikvision ColorVu kameralar F1.0 objektif kullanır; 15 Nisan 2026'da tanıtılan Dahua WizColor 2.0'ın yeni neslinde ise F0.8 objektif, üreticiye göre F1.0'a kıyasla 1,6 kat daha fazla ışık toplar.",
+              "İkinci unsur sensördür. Piksel ne kadar büyükse o kadar çok ışık yakalar ve karanlık görüntüde parazit o kadar az olur. Üst modellerde yaygın 1/2,8–1/3 inç yerine 1/1,8 inç sensör kullanılır. Dahua, WizColor 2.0 için 4 mikrometre piksel belirtiyor — önceki nesle göre alan olarak yaklaşık 1,9 kat büyük.",
+              "Üçüncü unsur görüntü işlemedir. Kameranın işlemcisi paraziti bastırır, renkleri ve hareketli nesnelerin netliğini geri kazandırır; her iki markanın yeni nesillerinde bu işi büyük gece görüntüsü setleriyle eğitilmiş yapay sinir ağı tabanlı ISP yapar. Aynı çözünürlükteki iki kameranın gece bambaşka görüntü vermesinin nedeni budur."
+            ]
+          },
+          {
+            "h": "Hikvision ColorVu: model kodu nasıl okunur",
+            "p": [
+              "Hikvision IP kameralarda ColorVu genellikle kodun sayısal kısmında belirtilir: çözünürlük rakamlarından sonra gelen 7, renkli gece serisini gösterir. Örneğin DS-2CD2047G2-LU, 3000 K sıcak ışıklı ve mikrofonlu 4 MP ColorVu'dur; DS-2CD2347G2-LU aynısının dome sürümü, DS-2CD2387G2 ise 8 MP'dir. Kodunda LI ve H bulunan modeller, örneğin DS-2CD1027G2H-LIU, ColorVu'yu akıllı hibrit aydınlatmayla birleştirir.",
+              "Aynı konumda 3 bulunan kameralar (DS-2CD1043G2-LIU) ColorVu değil, Smart Hybrid Light'lı sıradan kameralardır: gece kızılötesiyle siyah-beyaz kayıt yapar, olayda beyaz ışık yanınca renge geçer. Katalog kartlarımızda bu farklar aydınlatma satırında yazılıdır.",
+              "Eski analog sistemler için HD formatında ColorVu da vardır: örneğin DS-2CE12DF3T-F mevcut kayıt cihazına koaksiyel kabloyla bağlanır. Tüm sistemi değiştirmeden gece renk elde etmenin en ucuz yoludur."
+            ]
+          },
+          {
+            "h": "Dahua Full-color ve WizColor",
+            "p": [
+              "Dahua renkli gece kameralarını uzun süre Full-color adıyla sattı; kodda LED ifadesi bunları ele verir, örneğin IPC-HFW1239S-A-LED-S5 — 30 metreye kadar beyaz ışıklı ve mikrofonlu 2 MP dış kamera. 2025'te seri WizColor markasıyla yeniden adlandırıldı ve genişletildi: 4K, dönebilen, varifokal, analog HDCVI ve 4G modemli modeller çıktı.",
+              "Kodunda IL bulunan modeller (örneğin IPC-HDW2449T-S-IL) çift aydınlatmaya sahiptir — kızılötesi ve beyaz — ve beyaz ışığı yalnızca insan veya araç belirdiğinde yakabilir. TiOC serisi renkli gece görüntüsünü aktif caydırıcılıkla birleştirir: izinsiz girişte kamera siren ve yanıp sönen ışık devreye sokar.",
+              "Nisan 2026'da tanıtılan WizColor 2.0 bir sonraki nesildir: F0.8 objektif, 4 mikrometre piksel ve üreticiye göre gece hareket bulanıklığını azaltan AI-ISP 2.0 yapay zekâ işleme. Bu kameralar piyasaya kademeli olarak geliyor; kataloğumuzda ağırlıklı olarak Full-color ve çift aydınlatmalı modeller var."
+            ]
+          },
+          {
+            "h": "Gece renk nerede gerçekten gerekir, nerede gerekmez",
+            "p": [
+              "Gece renk, bir insanı veya aracı tarif etmenin önemli olduğu yerlerde kendini öder: girişler ve otoparklar, site avluları, gece mal kabulü olan mağaza ve depolar, bahçesi sokak lambalarıyla aydınlanan müstakil ev. İnsan/araç yapay zekâ filtresiyle birlikte renkli kamera hem daha az yanlış alarm hem de inceleme için daha iyi görüntü verir.",
+              "Rengin gereksiz ya da sakıncalı olduğu yerler: aydınlatmasız uzun karanlık çevre — yaygın modellerde beyaz ışık genellikle 20–40 metreye, kızılötesi 30–60 metre ve ötesine ulaşır; kameranın karşısındaki yatak odası pencereleri — sürekli beyaz ışık rahatsız eder; araç plakaları — okumak için özel plaka tanıma kameraları gerekir, beyaz ışık ise plakayı parlatıp okunmaz hâle getirir.",
+              "Bir bahçe veya alan için makul düzen: lambaların olduğu girişlerde ve kapılarda ColorVu kameralar, ışık olmayan yerlerde akıllı hibrit aydınlatma, bariyerde ise ayrı bir plaka tanıma kamerası."
+            ]
+          },
+          {
+            "h": "Seçimde sık yapılan hatalar",
+            "p": [
+              "Aydınlatma olmadan zifiri karanlıkta renk beklemek. F1.0'ın bile biraz ışığa ihtiyacı vardır; alan karanlıksa kamera ya beyaz ışığı yakar ya da siyah-beyaza geçer — seçilen modun size uyduğundan emin olun.",
+              "Sürekli beyaz ışıklı kamerayı pencerelerin altına koymak. Bir hafta içinde sakinler kapatılmasını ister. Konut avluları için ışığın yalnızca olayda yandığı akıllı mod seçilir.",
+              "Yalnızca megapiksele bakmak. Küçük sensörlü 8 MP kamera gece çoğu zaman 1/1,8 inç sensörlü 4 MP'ye yenilir. Yalnızca çözünürlüğü değil, diyaframı, sensör boyutunu ve gece kayıt örneklerini karşılaştırın."
+            ]
+          },
+          {
+            "h": "Gece renkli kameralar ne kadar",
+            "p": [
+              "Fiyatlar 30 Ekim 2026 itibarıyla kataloğumuzdan alınmıştır ve değişebilir: analog ColorVu Hikvision DS-2CE12DF3T-F 122.900 UZS'den; çift aydınlatmalı 4 MP Dahua IPC-HDW2449T-S-IL 474.900 UZS'den; 2 MP Full-color Dahua IPC-HFW1239S-A-LED-S5 549.900 UZS'den; akıllı aydınlatmalı 2 MP ColorVu Hikvision DS-2CD1027G2H-LIU 574.900 UZS'den; 4 MP ColorVu Hikvision DS-2CD1047G2-L 766.900 UZS'den; 1/1,8 inç sensörlü ve mikrofonlu 4 MP Hikvision DS-2CD2047G2-LU 1.112.900 UZS'den.",
+              "Renkli kamera genellikle aynı çözünürlükteki sıradan kameradan %20–50 daha pahalıdır. Fark, bir aracın veya insanın tarif edilmesi gereken ilk gece olayında kendini öder. Tesisinizin aydınlatmasına uygun kameraları, mühendis ziyareti ve gece görüntü örneğiyle kamera sistemleri sayfamızda seçebilirsiniz — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "ColorVu, beyaz ışıklı sıradan kameradan nasıl farklıdır?",
+            "a": "ColorVu önce F1.0 objektif ve hassas sensör sayesinde aydınlatmasız renkli kayıt yapmaya çalışır, sıcak ışığı yalnızca ışık çok az olduğunda yakar. Beyaz ışıklı sıradan kamera ışık olmadan renk vermez ve sürekli yakar."
+          },
+          {
+            "q": "Kamera zifiri karanlıkta renkli kayıt yapar mı?",
+            "a": "Yalnızca beyaz ışık açıkken. Işık olmadan zifiri karanlıkta her kamera kızılötesi aydınlatmalı siyah-beyaz moda geçer."
+          },
+          {
+            "q": "Işık komşuları rahatsız eder mi?",
+            "a": "Akıllı modu seçin: varsayılan olarak görünmez kızılötesi ışık çalışır, beyaz ışık yalnızca insan veya araç belirdiğinde birkaç saniye yanar."
+          },
+          {
+            "q": "Gece araç plakası görünür mü?",
+            "a": "Sıradan renkli kamera gece plakayı çoğu zaman okuyamaz: beyaz ışık yansıtıcı plakayı parlatır. Plakalar için özel plaka tanıma kameraları kullanılır."
+          },
+          {
+            "q": "Renkli gece görüntüsü yapay zekâyla birleştirilebilir mi?",
+            "a": "Evet, en iyi eşleşme budur: Hikvision ve Dahua serilerinde ColorVu veya WizColor ile insan/araç filtresi olan modeller var. Yapay zekâ yanlış alarmları keser, akıllı aydınlatma da tam insan veya araçta yanar."
+          },
+          {
+            "q": "Renkli kamera eski kayıt cihazına uyar mı?",
+            "a": "Analog sistemler için mevcut kayıt cihazına koaksiyel kabloyla bağlanan ColorVu HD kameralar var. IP sistemler için kayıt cihazınızla uyumlu her IP kamera uygundur."
+          }
+        ],
+        "summary": [
+          "Gece sıradan kamera kızılötesi aydınlatmayla siyah-beyaza geçer ve araç ile kıyafet rengini kaybeder.",
+          "Gece rengi üç yöntem verir: ışık toplama gücü yüksek objektif ve hassas sensör, sıcak beyaz ışık ya da beyaz ışığın yalnızca olayda yandığı akıllı mod.",
+          "F1.0, F1.6'ya göre yaklaşık 2,5 kat daha fazla ışık toplar; Dahua WizColor 2.0 (Nisan 2026) F0.8 ve 4 µm piksele sahip.",
+          "Hikvision: koddaki 7 ColorVu, LI/H akıllı hibrit ışık demektir; Dahua: LED Full-color, IL çift aydınlatma demektir.",
+          "Gece renk girişlerde, otoparklarda ve aydınlatılmış avlularda gerekir; plakalar için ayrı kamera gerekir; renkli kameralar sıradanlardan %20–50 pahalıdır."
+        ]
+      },
+      "zh": {
+        "title": "夜间也能看清颜色的摄像机：ColorVu、WizColor与智能补光——原理与如何不多花冤枉钱",
+        "seoTitle": "夜间全彩摄像机：ColorVu与WizColor详解",
+        "seoDesc": "为什么摄像机夜里拍黑白画面，ColorVu、WizColor与智能补光如何实现彩色：光圈、传感器、补光模式、选购误区与价格。",
+        "excerpt": "普通摄像机夜间会打开红外补光并切换到黑白模式：能看到人，却看不到车辆或衣服的颜色。海康ColorVu与大华全彩、WizColor摄像机凭借大光圈镜头、高感光传感器和暖光补光实现彩色录像。本文讲解其原理、各补光模式的区别、夜间彩色真正需要的场景以及价格。",
+        "sections": [
+          {
+            "h": "为什么摄像机夜里是黑白画面",
+            "p": [
+              "白天摄像机用滤光片挡住红外光，使色彩自然。天黑后滤光片移开，红外LED点亮，摄像机切换到黑白模式。人眼看不见这种光，传感器却看得很清楚，所以即使全黑画面也依然清晰。",
+              "代价是失去颜色。夜间录像能看到有车开进院子，却看不出是红色还是灰色；能看到人，却看不到外套的颜色。调查停车场旁的盗窃或剐蹭时，颜色往往是在其他摄像机中检索、描述嫌疑人的首要特征。"
+            ]
+          },
+          {
+            "h": "夜间获得彩色的三种方法",
+            "p": [
+              "第一种是收集更多光线。大光圈镜头配大像素传感器，在普通摄像机早已切换黑白的场景下依然能出彩色画面：路灯、外墙照明、窗户透出的光都可以。此时摄像机完全不需要补光。",
+              "第二种是增加可见光。摄像机打开色温约3000K的暖白光补光，即使全黑也能彩色录像。这种方式可靠，但光线人人可见：照亮院子、可能打扰邻居、还会招虫子。",
+              "第三种是智能补光。默认使用不可见的红外光、录黑白画面；画面中出现人或车时，白光亮起、录像转为彩色。同时还能起到威慑作用：入侵者知道自己被发现了。海康称此模式为Smart Hybrid Light（智能混合补光），大华在型号中用IL标注这类产品。"
+            ]
+          },
+          {
+            "h": "ColorVu与WizColor摄像机的内部原理",
+            "p": [
+              "关键在于镜头光圈，用F值表示。数字越小，进入传感器的光越多，且呈平方关系：F1.0镜头的进光量约为大众机型常见F1.6的2.5倍。海康ColorVu摄像机采用F1.0镜头；大华于2026年4月15日发布的新一代WizColor 2.0采用F0.8镜头，厂家称其进光量比F1.0再多1.6倍。",
+              "第二是传感器。像素越大，捕获的光越多，暗光画面噪点越少。高端型号采用1/1.8英寸传感器，而大众机型多为1/2.8–1/3英寸。大华称WizColor 2.0像素尺寸为4微米，面积约为上一代的1.9倍。",
+              "第三是图像处理。摄像机处理器负责降噪、还原色彩和运动目标的清晰度；两家品牌的新一代产品均由基于大量夜间画面训练的神经网络ISP完成这项工作。这就是为什么分辨率相同的两台摄像机，夜间画面可能截然不同。"
+            ]
+          },
+          {
+            "h": "海康ColorVu：如何看懂型号",
+            "p": [
+              "海康网络摄像机的ColorVu标识通常在型号的数字部分：分辨率数字后的7代表全彩夜视系列。例如DS-2CD2047G2-LU是4MP ColorVu，带3000K暖光和麦克风；DS-2CD2347G2-LU是同款半球；DS-2CD2387G2是8MP。型号中带LI和H的，如DS-2CD1027G2H-LIU，则把ColorVu与智能混合补光结合在一起。",
+              "同一位置是3的摄像机（DS-2CD1043G2-LIU）不是ColorVu，而是带Smart Hybrid Light的普通摄像机：夜间用红外录黑白，事件触发白光时转为彩色。我们目录卡片的补光一栏写明了这些区别。",
+              "老式模拟系统也有HD格式的ColorVu：例如DS-2CE12DF3T-F通过同轴电缆接入现有录像机。这是不更换整套系统就获得夜间彩色的最便宜方式。"
+            ]
+          },
+          {
+            "h": "大华全彩与WizColor",
+            "p": [
+              "大华的夜间彩色摄像机长期以“全彩”（Full-color）命名，型号中的LED即是标识，例如IPC-HFW1239S-A-LED-S5——200万像素室外机，白光补光达30米，带麦克风。2025年该系列更名为WizColor并扩充：推出4K、云台、变焦、模拟HDCVI和4G型号。",
+              "型号带IL的（如IPC-HDW2449T-S-IL）为双光补光——红外加白光，可只在出现人或车时开启白光。TiOC系列将全彩夜视与主动威慑结合：发生入侵时摄像机启动警笛和闪光。",
+              "2026年4月发布的WizColor 2.0是下一代：F0.8镜头、4微米像素，以及厂家称可减少夜间运动拖影的AI-ISP 2.0神经网络处理。这类摄像机正逐步上市；我们目录主要供应全彩和双光型号。"
+            ]
+          },
+          {
+            "h": "哪里真正需要夜间彩色，哪里不需要",
+            "p": [
+              "需要描述人或车的地方，夜间彩色最有价值：出入口和停车场、小区院落、夜间卸货的门店和仓库，以及院子有路灯照明的独栋住宅。配合人/车AI过滤，彩色摄像机既能减少误报，又能为调查提供更好的画面。",
+              "不需要或不方便的地方：没有照明的长距离黑暗周界——大众机型白光补光一般只有20–40米，红外可达30–60米甚至更远；摄像机对面是卧室窗户——常亮白光会扰民；车牌——识读车牌需要专用车牌识别摄像机，白光反而会使车牌过曝。",
+              "院子或园区的合理方案：有路灯的出入口和门口用ColorVu，没有光的地方用智能混合补光，道闸处另配一台车牌识别摄像机。"
+            ]
+          },
+          {
+            "h": "选购常见误区",
+            "p": [
+              "期待无补光的全黑环境也有彩色。即使F1.0也需要一点光；现场全黑时，摄像机要么开白光，要么转黑白——请确认所选模式适合您。",
+              "把常亮白光摄像机装在窗户下。一周内住户就会要求关掉。住宅院落应选择只在事件发生时亮灯的智能模式。",
+              "只看像素数。小传感器的800万像素机夜间常常不如1/1.8英寸传感器的400万像素机。请对比光圈、传感器尺寸和夜间录像样片，而不只是分辨率。"
+            ]
+          },
+          {
+            "h": "夜间全彩摄像机多少钱",
+            "p": [
+              "价格取自我们目录（2026年10月30日），会有变动：模拟ColorVu海康DS-2CE12DF3T-F 122 900苏姆起；双光4MP大华IPC-HDW2449T-S-IL 474 900苏姆起；200万像素全彩大华IPC-HFW1239S-A-LED-S5 549 900苏姆起；带智能补光的200万像素ColorVu海康DS-2CD1027G2H-LIU 574 900苏姆起；4MP ColorVu海康DS-2CD1047G2-L 766 900苏姆起；1/1.8英寸传感器带麦克风的4MP海康DS-2CD2047G2-LU 1 112 900苏姆起。",
+              "彩色摄像机通常比同分辨率普通机贵20–50%。在第一次需要描述车辆或人员的夜间事件中，这笔差价就能体现价值。您可在我们的视频监控页面按现场照明选型，工程师上门并提供夜间画面样片——一个工作日内提供报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "ColorVu和带白光的普通摄像机有什么区别？",
+            "a": "ColorVu先依靠F1.0镜头和高感光传感器在无补光下尝试彩色成像，只有光线极弱时才开启暖光。带白光的普通摄像机没有补光就出不了彩色，而且常亮。"
+          },
+          {
+            "q": "全黑环境下摄像机能拍彩色吗？",
+            "a": "只有开启白光时可以。没有白光时，任何摄像机在全黑环境下都会切换为红外黑白模式。"
+          },
+          {
+            "q": "灯光会不会打扰邻居？",
+            "a": "选择智能模式：默认使用不可见红外光，只有出现人或车时白光才亮几秒钟。"
+          },
+          {
+            "q": "夜里能看清车牌吗？",
+            "a": "普通彩色摄像机夜间往往读不出车牌：白光会使反光车牌过曝。车牌识别需使用专用车牌识别摄像机。"
+          },
+          {
+            "q": "夜间全彩能和AI结合吗？",
+            "a": "可以，而且是最佳组合：海康和大华都有带ColorVu或WizColor及人/车过滤的型号。AI剔除误报，智能补光正好在人或车出现时亮起。"
+          },
+          {
+            "q": "彩色摄像机能接旧录像机吗？",
+            "a": "模拟系统有ColorVu HD摄像机，可通过同轴电缆接入现有录像机。网络系统选用与您录像机兼容的任意网络摄像机即可。"
+          }
+        ],
+        "summary": [
+          "夜间普通摄像机切换为红外黑白模式，看不到车辆和衣服的颜色。",
+          "夜间彩色靠三种手段：大光圈镜头加高感光传感器、暖白光补光，或只在事件时亮白光的智能模式。",
+          "F1.0的进光量约为F1.6的2.5倍；大华WizColor 2.0（2026年4月）为F0.8、4微米像素。",
+          "海康：型号中的7代表ColorVu，LI/H代表智能混合补光；大华：LED代表全彩，IL代表双光。",
+          "出入口、停车场和有照明的院落需要夜间彩色；车牌需另配摄像机；彩色摄像机比普通机贵20–50%。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "ii-v-kamere-acusense-wizsense",
     "date": "2026-10-30",
     "related": [

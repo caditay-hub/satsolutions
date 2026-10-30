@@ -77,6 +77,34 @@ const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
 };
 const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "hik-ds-2cd1027g2h-liu-2-8mm": {
+    ru: "Цилиндрическая IP-камера 2 Мп ColorVu с умной подсветкой Hikvision DS-2CD1027G2H-LIU",
+    uz: "Aqlli yoritishli 2 Mp ColorVu silindrik IP-kamera Hikvision DS-2CD1027G2H-LIU",
+    en: "Hikvision DS-2CD1027G2H-LIU 2 MP ColorVu bullet with smart hybrid light",
+    tr: "Akıllı aydınlatmalı 2 MP ColorVu bullet IP kamera Hikvision DS-2CD1027G2H-LIU",
+    zh: "海康威视 DS-2CD1027G2H-LIU 200万像素 ColorVu 智能混合补光筒机",
+  },
+  "hik-ds-2cd2047g2-lu-2-8mm-c-o-std": {
+    ru: "Цилиндрическая IP-камера 4 Мп ColorVu с микрофоном Hikvision DS-2CD2047G2-LU",
+    uz: "Mikrofonli 4 Mp ColorVu silindrik IP-kamera Hikvision DS-2CD2047G2-LU",
+    en: "Hikvision DS-2CD2047G2-LU 4 MP ColorVu bullet with microphone",
+    tr: "Mikrofonlu 4 MP ColorVu bullet IP kamera Hikvision DS-2CD2047G2-LU",
+    zh: "海康威视 DS-2CD2047G2-LU 4MP ColorVu 带麦克风筒机",
+  },
+  "dahua-ipc-hfw1239s-a-led-s5": {
+    ru: "Цилиндрическая IP-камера 2 Мп Full-color Dahua IPC-HFW1239S-A-LED-S5",
+    uz: "2 Mp Full-color silindrik IP-kamera Dahua IPC-HFW1239S-A-LED-S5",
+    en: "Dahua IPC-HFW1239S-A-LED-S5 2 MP Full-color bullet camera",
+    tr: "2 MP Full-color bullet IP kamera Dahua IPC-HFW1239S-A-LED-S5",
+    zh: "大华 IPC-HFW1239S-A-LED-S5 200万像素全彩筒机",
+  },
+  "dahua-ipc-hdw2449t-s-il": {
+    ru: "Купольная IP-камера 4 Мп с двойной подсветкой Dahua IPC-HDW2449T-S-IL",
+    uz: "Ikki xil yoritishli 4 Mp gumbazli IP-kamera Dahua IPC-HDW2449T-S-IL",
+    en: "Dahua IPC-HDW2449T-S-IL 4 MP dome camera with dual lighting",
+    tr: "Çift aydınlatmalı 4 MP dome IP kamera Dahua IPC-HDW2449T-S-IL",
+    zh: "大华 IPC-HDW2449T-S-IL 4MP 双光半球摄像机",
+  },
   "hik-ds-2cd2043g2-li2u-2-8mm": {
     ru: "Цилиндрическая IP-камера 4 Мп с AcuSense Hikvision DS-2CD2043G2-LI2U",
     uz: "AcuSense bilan 4 Mp silindrik IP-kamera Hikvision DS-2CD2043G2-LI2U",
