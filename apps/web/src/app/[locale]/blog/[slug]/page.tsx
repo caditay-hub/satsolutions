@@ -77,6 +77,34 @@ const PRODUCT_UI: Record<string, { head: string; cta: string }> = {
   zh: { head: "文中提到的产品", cta: "在产品目录中查看价格和参数" },
 };
 const PRODUCT_LABELS: Record<string, Record<string, string>> = {
+  "hik-ds-2cd2043g2-li2u-2-8mm": {
+    ru: "Цилиндрическая IP-камера 4 Мп с AcuSense Hikvision DS-2CD2043G2-LI2U",
+    uz: "AcuSense bilan 4 Mp silindrik IP-kamera Hikvision DS-2CD2043G2-LI2U",
+    en: "Hikvision DS-2CD2043G2-LI2U 4 MP AcuSense bullet camera",
+    tr: "AcuSense'li 4 MP bullet IP kamera Hikvision DS-2CD2043G2-LI2U",
+    zh: "海康威视 DS-2CD2043G2-LI2U 4MP AcuSense 筒型网络摄像机",
+  },
+  "hik-ds-2cd2087g3-li2uy-sl-2-8mm": {
+    ru: "IP-камера 8 Мп с AcuSense, стробоскопом и голосом Hikvision DS-2CD2087G3-LI2UY/SL",
+    uz: "AcuSense, stroboskop va ovozli 8 Mp IP-kamera Hikvision DS-2CD2087G3-LI2UY/SL",
+    en: "Hikvision DS-2CD2087G3-LI2UY/SL 8 MP AcuSense camera with strobe and voice",
+    tr: "AcuSense, flaş ve sesli 8 MP IP kamera Hikvision DS-2CD2087G3-LI2UY/SL",
+    zh: "海康威视 DS-2CD2087G3-LI2UY/SL 8MP AcuSense 爆闪语音摄像机",
+  },
+  "dahua-ipc-hfw2849t-as-il": {
+    ru: "Цилиндрическая IP-камера 8 Мп Dahua IPC-HFW2849T-AS-IL",
+    uz: "8 Mp silindrik IP-kamera Dahua IPC-HFW2849T-AS-IL",
+    en: "Dahua IPC-HFW2849T-AS-IL 8 MP bullet camera",
+    tr: "8 MP bullet IP kamera Dahua IPC-HFW2849T-AS-IL",
+    zh: "大华 IPC-HFW2849T-AS-IL 8MP 筒型网络摄像机",
+  },
+  "hik-ds-7608nxi-k2": {
+    ru: "IP-видеорегистратор с AcuSense на 8 каналов Hikvision DS-7608NXI-K2",
+    uz: "AcuSense bilan 8 kanalli IP-videoregistrator Hikvision DS-7608NXI-K2",
+    en: "Hikvision DS-7608NXI-K2 8-channel AcuSense NVR",
+    tr: "AcuSense'li 8 kanallı NVR Hikvision DS-7608NXI-K2",
+    zh: "海康威视 DS-7608NXI-K2 8路 AcuSense 网络录像机",
+  },
   "hik-ds-2cd2143g2-iu-2-8mm-o-std": {
     ru: "Купольная IP-камера 4 Мп с микрофоном Hikvision DS-2CD2143G2-IU",
     uz: "Mikrofonli 4 Mp gumbazli IP-kamera Hikvision DS-2CD2143G2-IU",

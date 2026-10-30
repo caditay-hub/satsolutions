@@ -33,6 +33,536 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "ii-v-kamere-acusense-wizsense",
+    "date": "2026-10-30",
+    "related": [
+      "cctv",
+      "analytics",
+      "perimeter"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "videoanalitika-raspoznavanie-lic",
+      "kak-vybrat-kameru-videonablyudeniya",
+      "kamery-v-chastnyh-shkolah-2026"
+    ],
+    "products": [
+      "hik-ds-2cd2043g2-li2u-2-8mm",
+      "hik-ds-2cd2087g3-li2uy-sl-2-8mm",
+      "dahua-ipc-hfw2849t-as-il",
+      "hik-ds-7608nxi-k2"
+    ],
+    "loc": {
+      "ru": {
+        "title": "ИИ в камере: как AcuSense и WizSense отличают человека от кошки и машины — и почему исчезают ложные тревоги",
+        "seoTitle": "ИИ в камере видеонаблюдения: AcuSense и WizSense",
+        "seoDesc": "Как камера с ИИ отличает человека и машину от тени, ветки и кошки: AcuSense у Hikvision, WizSense у Dahua, модели 2025 года, настройка и цены.",
+        "excerpt": "Обычная детекция движения реагирует на любые изменения картинки: тень, ветку, дождь, фары, кошку. Камера с ИИ сначала понимает, что в кадре, и поднимает тревогу только на человека или машину. Разбираем, как работают AcuSense и WizSense, что нового появилось в 2025 году, как настроить, чтобы ИИ не ошибался, и сколько стоят такие камеры.",
+        "sections": [
+          {
+            "h": "Почему обычная камера будит вас по ночам",
+            "p": [
+              "Классическая детекция движения сравнивает соседние кадры и считает, сколько пикселей изменилось. Если изменений больше порога — тревога. Камере всё равно, что именно сдвинулось: человек у забора, тень от облака, ветка под ветром, капли дождя, свет фар на стене, кошка во дворе или мотылёк, прилетевший на инфракрасную подсветку прямо перед объективом.",
+              "В итоге владелец частного дома получает десятки уведомлений за ночь, охранник на складе привыкает игнорировать сигналы, а архив заполняется «событиями», среди которых невозможно найти настоящее. Снижать чувствительность — значит пропустить человека, который идёт медленно или далеко. Именно эту проблему решают камеры с аналитикой на борту."
+            ]
+          },
+          {
+            "h": "Как камера с ИИ понимает, что в кадре человек",
+            "p": [
+              "В камере стоит отдельный нейропроцессор, а в нём — нейросеть, обученная на большом количестве размеченных кадров. Работа идёт в два шага. Сначала сеть находит в кадре движущийся объект. Затем классифицирует его: человек, транспорт или «прочее». Правило тревоги срабатывает только на те классы, которые вы выбрали.",
+              "Важно, что вся обработка идёт внутри камеры: не нужен сервер, облако или постоянный интернет. Регистратор получает уже готовое событие с пометкой «человек» или «машина», а приложение на телефоне присылает уведомление с кадром. Классификация работает и ночью в инфракрасном режиме, хотя точность в темноте зависит от подсветки и расстояния до объекта."
+            ]
+          },
+          {
+            "h": "AcuSense у Hikvision: что умеет и как узнать по модели",
+            "p": [
+              "AcuSense — название технологии Hikvision. Она добавляет фильтр «человек / транспорт» к обычной детекции движения (у производителя это называется Motion Detection 2.0) и к умным правилам: пересечение линии, вторжение в зону, вход и выход из области. Ветки, тени и животные отбрасываются, тревогу получают только нужные классы.",
+              "Вторая польза — поиск по архиву. В регистраторе или приложении можно отфильтровать запись: «показать только людей у ворот за прошлую ночь». Вместо многочасового просмотра — несколько минут. У моделей с пометкой Live Guard (в индексе часто /SL) камера сама реагирует на нарушителя: включает красно-синий стробоскоп и проигрывает голосовое предупреждение — в каталоге это, например, DS-2CD2087G3-LI2UY/SL.",
+              "В каталоге AcuSense встречается в камерах второй серии (DS-2CD2xxxG2 и G3, например DS-2CD2043G2-LI2U), а в массовой первой серии (DS-2CD1043G2-LIU) есть упрощённая детекция людей и транспорта. Для камер без ИИ есть другой путь: регистраторы Hikvision с буквами NXI в индексе (DS-7608NXI-K2, DS-7616NXI-K2) сами классифицируют события от обычных камер. Число каналов, на которых регистратор это делает, ограничено — его нужно смотреть в паспорте конкретной модели."
+            ]
+          },
+          {
+            "h": "WizSense у Dahua: SMD Plus и защита периметра",
+            "p": [
+              "У Dahua аналогичная линейка называется WizSense. Базовая функция — SMD Plus, умная детекция движения: камера анализирует форму объекта и отправляет тревогу, только когда в кадре человек или машина. Включается она одной настройкой, без рисования сложных правил. В паспортах производитель указывает долю ложных срабатываний SMD Plus на уровне 1–2 %; это заявление производителя, а не независимый тест.",
+              "Для охраны территории есть Perimeter Protection — пересечение линии и вторжение в зону с фильтром, который отсекает срабатывания от животных, листвы и бликов. Модели с активным сдерживанием (в индексе встречается AS или PV) при нарушении включают сирену и подсветку. В каталоге это, например, 8-мегапиксельная Dahua IPC-HFW2849T-AS-IL.",
+              "В младших сериях Dahua классификация урезана или отсутствует, поэтому при выборе смотрите в паспорте строки SMD Plus и Perimeter Protection, а не только разрешение."
+            ]
+          },
+          {
+            "h": "Что нового в 2025 году: «большие модели» в камерах",
+            "p": [
+              "Следующий шаг — камеры на «больших» нейросетевых моделях, обученных на гораздо большем объёме данных. Hikvision 1 июля 2025 года выпустила серию DeepinViewX на моделях Guanlan: аналитика работает на дистанции до 60 метров ночью у одних моделей и до 120 метров у трёхобъективных. Производитель заявляет до 90 % меньше ложных тревог по сравнению с обычными ИИ-камерами — по собственным лабораторным тестам.",
+              "Dahua в марте 2025 года представила вторую версию своих моделей Xinghan, а в сентябре обновила линейку. Такие камеры точнее различают людей и машины на большом расстоянии, в дождь и при сложном освещении, но относятся к проектному сегменту: их ставят на длинные периметры, промышленные территории и склады. Для дома, магазина и офиса массовых AcuSense и WizSense достаточно."
+            ]
+          },
+          {
+            "h": "Как настроить, чтобы ИИ не ошибался",
+            "p": [
+              "Нейросеть видит только то, что даёт ей объектив. Человек должен занимать в кадре достаточно места: камеру с объективом 2,8 мм не стоит ставить на периметр длиной 60 метров — дальний край она увидит, но не классифицирует. Высота установки — обычно 2,5–4 метра, угол — так, чтобы человек был виден в полный рост, а не сверху.",
+              "Зоны правил рисуются только там, где реально может пройти нарушитель: проезжую часть за забором и соседский двор исключают. Камеру не направляют прямо на солнце и фонари. Паутина перед объективом ночью светится в инфракрасной подсветке и мешает анализу, поэтому раз в сезон камеры чистят.",
+              "После монтажа систему проверяют вживую: человек проходит по зонам днём и ночью, а инженер смотрит, какие события пришли и с какой пометкой. Так ловятся мёртвые зоны и лишние правила до того, как вы начнёте полагаться на уведомления."
+            ]
+          },
+          {
+            "h": "Где это окупается, а где не нужно",
+            "p": [
+              "Частный дом: уведомление на телефон приходит, только когда во дворе человек, а не кошка или ветка. Склад и стройплощадка ночью: охрана получает реальные тревоги, а камера со стробоскопом отпугивает нарушителя ещё до приезда. Магазин и офис: поиск по архиву «люди у входа после закрытия» занимает минуты. Жилой комплекс: периметр и парковка с фильтром машин.",
+              "Где ИИ не обязателен: камера над кассой, в коридоре офиса или в классе, где запись смотрят только при разборе инцидента. Там важнее разрешение, звук и архив, а классификация просто не используется. Разумная схема — ИИ на периметре и входах, обычные камеры внутри и регистратор, который умеет искать по человеку и машине."
+            ]
+          },
+          {
+            "h": "Сколько стоят камеры с ИИ",
+            "p": [
+              "Цены из нашего каталога на 30 октября 2026 года, они меняются: цилиндрическая камера 4 Мп с детекцией людей и транспорта Hikvision DS-2CD1043G2-LIU — от 568 900 сум; 4 Мп с AcuSense DS-2CD2043G2-LI2U — от 908 900 сум; 8 Мп с AcuSense, цветной ночной съёмкой, стробоскопом и голосом DS-2CD2087G3-LI2UY/SL — от 2 164 900 сум; Dahua IPC-HFW2849T-AS-IL 8 Мп — от 1 225 900 сум; регистратор с AcuSense на 8 каналов DS-7608NXI-K2 — от 1 484 900 сум.",
+              "Разница с обычной камерой того же разрешения — обычно 30–60 %. Окупается она не в сумах, а во времени: меньше пустых выездов охраны, меньше часов просмотра архива и меньше шансов пропустить настоящее событие среди сотни ложных. Подобрать камеры и правила под ваш объект можно на странице видеонаблюдения или в видеоаналитике — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Можно ли добавить ИИ к уже установленным камерам?",
+            "a": "Да, через регистратор с аналитикой: у Hikvision это модели с буквами NXI в индексе (AcuSense), у Dahua — регистраторы с SMD Plus. Они классифицируют события от обычных камер, но на ограниченном числе каналов — его указывают в паспорте регистратора."
+          },
+          {
+            "q": "Отличает ли камера кошку или собаку от человека?",
+            "a": "Да, животные попадают в класс «прочее» и тревогу не вызывают. Ошибки возможны, когда объект далеко, плохо освещён или виден частично, поэтому важны правильный объектив и угол установки."
+          },
+          {
+            "q": "Работает ли ИИ ночью?",
+            "a": "Работает и в инфракрасном режиме, и с цветной подсветкой. Точность ночью зависит от подсветки и расстояния: в паспорте указывают дальность, на которой камера уверенно классифицирует человека."
+          },
+          {
+            "q": "Нужен ли сервер или интернет?",
+            "a": "Нет. Анализ идёт внутри камеры или регистратора. Интернет нужен только для уведомлений на телефон и удалённого просмотра."
+          },
+          {
+            "q": "Распознаёт ли такая камера лица?",
+            "a": "Нет, AcuSense и WizSense определяют класс объекта — человек или машина, — но не узнают конкретного человека. Распознавание лиц — отдельная функция и отдельные камеры; об этом наша статья про видеоаналитику и распознавание лиц."
+          },
+          {
+            "q": "Насколько меньше станет ложных тревог?",
+            "a": "Производители приводят цифры по своим тестам: Dahua указывает в паспортах SMD Plus 1–2 % ложных срабатываний, Hikvision для DeepinViewX — до 90 % меньше ложных тревог относительно обычных ИИ-камер. На практике результат зависит от настройки зон, высоты и освещения."
+          }
+        ],
+        "summary": [
+          "Обычная детекция движения реагирует на любое изменение пикселей: тени, ветки, дождь, фары, животных.",
+          "Камера с ИИ сначала находит объект, затем классифицирует его как человека, транспорт или прочее и поднимает тревогу только на нужные классы — всё внутри камеры.",
+          "AcuSense (Hikvision): фильтр человек/машина, поиск по архиву, Live Guard со стробоскопом; регистраторы NXI добавляют ИИ обычным камерам.",
+          "WizSense (Dahua): SMD Plus и Perimeter Protection; модели AS/PV с активным сдерживанием; в 2025 году появились камеры на «больших моделях» для длинных периметров.",
+          "Камеры с ИИ дороже обычных на 30–60 %, окупаются временем охраны и поиска; правильные объектив, высота и зоны важнее модели."
+        ]
+      },
+      "uz": {
+        "title": "Kameradagi sunʼiy intellekt: AcuSense va WizSense odamni mushuk va mashinadan qanday ajratadi — va yolgʻon signallar nega yoʻqoladi",
+        "seoTitle": "Kamerada sunʼiy intellekt: AcuSense va WizSense",
+        "seoDesc": "Sunʼiy intellektli kamera odam va mashinani soya, shox va mushukdan qanday ajratadi: Hikvision AcuSense, Dahua WizSense, 2025-yil modellari, sozlash va narxlar.",
+        "excerpt": "Oddiy harakat detektori tasvirdagi har qanday oʻzgarishga javob beradi: soya, shox, yomgʻir, fara, mushuk. Sunʼiy intellektli kamera avval kadrda nima borligini tushunadi va faqat odam yoki mashinaga signal beradi. AcuSense va WizSense qanday ishlashini, 2025-yilda nima yangilik paydo boʻlganini, sunʼiy intellekt xato qilmasligi uchun qanday sozlashni va bunday kameralar qancha turishini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Oddiy kamera nega sizni tunda uygʻotadi",
+            "p": [
+              "Klassik harakat detektori qoʻshni kadrlarni solishtiradi va qancha piksel oʻzgarganini hisoblaydi. Oʻzgarish chegaradan oshsa — signal. Kamera uchun aynan nima siljiganining farqi yoʻq: devor yonidagi odammi, bulut soyasimi, shamolda tebranayotgan shoxmi, yomgʻir tomchilarimi, devordagi fara nurimi, hovlidagi mushukmi yoki obyektiv oldidagi infraqizil yoritishga uchib kelgan kapalakmi.",
+              "Natijada xususiy uy egasi bir kechada oʻnlab bildirishnoma oladi, ombordagi qoʻriqchi signallarni eʼtiborsiz qoldirishga oʻrganadi, arxiv esa haqiqiysini topib boʻlmaydigan «hodisalar» bilan toʻladi. Sezgirlikni pasaytirish — sekin yoki uzoqdan yurgan odamni oʻtkazib yuborish demakdir. Aynan shu muammoni bortida analitikasi bor kameralar hal qiladi."
+            ]
+          },
+          {
+            "h": "Sunʼiy intellektli kamera kadrda odam borligini qanday tushunadi",
+            "p": [
+              "Kamerada alohida neyroprotsessor, unda esa koʻp sonli belgilangan kadrlarda oʻqitilgan neyrotarmoq bor. Ish ikki bosqichda boradi. Avval tarmoq kadrdagi harakatlanayotgan obyektni topadi. Keyin uni tasniflaydi: odam, transport yoki «boshqa». Signal qoidasi faqat siz tanlagan sinflarga ishlaydi.",
+              "Muhimi, butun ishlov kamera ichida boradi: server, bulut yoki doimiy internet kerak emas. Registrator «odam» yoki «mashina» belgisi bilan tayyor hodisani oladi, telefondagi ilova esa kadr bilan bildirishnoma yuboradi. Tasniflash tunda infraqizil rejimda ham ishlaydi, lekin qorongʻida aniqlik yoritish va obyektgacha boʻlgan masofaga bogʻliq."
+            ]
+          },
+          {
+            "h": "Hikvisionda AcuSense: nimalarni qila oladi va modeldan qanday bilish mumkin",
+            "p": [
+              "AcuSense — Hikvision texnologiyasining nomi. U oddiy harakat detektoriga (ishlab chiqaruvchida bu Motion Detection 2.0 deb ataladi) va aqlli qoidalarga — chiziqni kesib oʻtish, zonaga bostirib kirish, hududga kirish va chiqishga «odam / transport» filtrini qoʻshadi. Shoxlar, soyalar va hayvonlar chiqarib tashlanadi, signalni faqat kerakli sinflar oladi.",
+              "Ikkinchi foyda — arxiv boʻyicha qidiruv. Registrator yoki ilovada yozuvni filtrlash mumkin: «kecha tunda darvoza yonidagi faqat odamlarni koʻrsat». Koʻp soatlik koʻrish oʻrniga bir necha daqiqa. Live Guard belgili modellarda (indeksda koʻpincha /SL) kamera buzgʻunchiga oʻzi javob beradi: qizil-koʻk stroboskopni yoqadi va ovozli ogohlantirishni eshittiradi — katalogda bu, masalan, DS-2CD2087G3-LI2UY/SL.",
+              "Katalogda AcuSense ikkinchi seriya kameralarida uchraydi (DS-2CD2xxxG2 va G3, masalan DS-2CD2043G2-LI2U), ommaviy birinchi seriyada (DS-2CD1043G2-LIU) esa odam va transportni soddalashtirilgan aniqlash bor. Sunʼiy intellektsiz kameralar uchun boshqa yoʻl bor: indeksida NXI harflari boʻlgan Hikvision registratorlari (DS-7608NXI-K2, DS-7616NXI-K2) oddiy kameralardagi hodisalarni oʻzi tasniflaydi. Registrator buni bajaradigan kanallar soni cheklangan — uni aniq modelning pasportida koʻrish kerak."
+            ]
+          },
+          {
+            "h": "Dahuada WizSense: SMD Plus va perimetrni himoya qilish",
+            "p": [
+              "Dahuada shunga oʻxshash liniya WizSense deb ataladi. Asosiy funksiya — SMD Plus, aqlli harakat detektori: kamera obyekt shaklini tahlil qiladi va kadrda odam yoki mashina boʻlgandagina signal yuboradi. U murakkab qoidalar chizmasdan, bitta sozlama bilan yoqiladi. Pasportlarda ishlab chiqaruvchi SMD Plus yolgʻon ishga tushish ulushini 1–2 % darajasida koʻrsatadi; bu mustaqil sinov emas, ishlab chiqaruvchining bayonoti.",
+              "Hududni qoʻriqlash uchun Perimeter Protection bor — hayvonlar, barglar va yaltirashdan ishga tushishni kesib tashlaydigan filtrli chiziqni kesish va zonaga bostirib kirish. Faol toʻsqinlik qiluvchi modellar (indeksda AS yoki PV uchraydi) buzilishda sirena va yoritishni yoqadi. Katalogda bu, masalan, 8 megapikselli Dahua IPC-HFW2849T-AS-IL.",
+              "Dahuaning kichik seriyalarida tasniflash qisqartirilgan yoki yoʻq, shuning uchun tanlashda faqat ruxsatni emas, pasportdagi SMD Plus va Perimeter Protection qatorlarini ham koʻring."
+            ]
+          },
+          {
+            "h": "2025-yilda nima yangilik: kameralarda «katta modellar»",
+            "p": [
+              "Keyingi qadam — ancha katta hajmdagi maʼlumotlarda oʻqitilgan «katta» neyrotarmoq modellaridagi kameralar. Hikvision 2025-yil 1-iyulda Guanlan modellaridagi DeepinViewX seriyasini chiqardi: analitika baʼzi modellarda tunda 60 metrgacha, uch obyektivlilarda esa 120 metrgacha masofada ishlaydi. Ishlab chiqaruvchi oddiy sunʼiy intellektli kameralarga nisbatan 90 % gacha kamroq yolgʻon signal borligini oʻz laboratoriya sinovlari boʻyicha bayon qiladi.",
+              "Dahua 2025-yil martida Xinghan modellarining ikkinchi versiyasini taqdim etdi, sentyabrda esa liniyani yangiladi. Bunday kameralar odam va mashinalarni katta masofada, yomgʻirda va murakkab yoritishda aniqroq ajratadi, lekin loyiha segmentiga kiradi: ular uzun perimetrlar, sanoat hududlari va omborlarga oʻrnatiladi. Uy, doʻkon va ofis uchun ommaviy AcuSense va WizSense yetarli."
+            ]
+          },
+          {
+            "h": "Sunʼiy intellekt xato qilmasligi uchun qanday sozlash kerak",
+            "p": [
+              "Neyrotarmoq faqat obyektiv bergan narsani koʻradi. Odam kadrda yetarlicha joy egallashi kerak: 2,8 mm obyektivli kamerani 60 metrlik perimetrga qoʻymaslik kerak — u uzoq chetini koʻradi, lekin tasniflamaydi. Oʻrnatish balandligi odatda 2,5–4 metr, burchak — odam yuqoridan emas, toʻliq boʻyi bilan koʻrinadigan qilib.",
+              "Qoidalar zonalari faqat buzgʻunchi haqiqatan oʻtishi mumkin boʻlgan joylarda chiziladi: devor ortidagi yoʻl va qoʻshni hovli chiqarib tashlanadi. Kamera toʻgʻridan-toʻgʻri quyosh va chiroqlarga qaratilmaydi. Tunda obyektiv oldidagi oʻrgimchak toʻri infraqizil yoritishda yaltiraydi va tahlilga xalaqit beradi, shuning uchun kameralar har mavsumda tozalanadi.",
+              "Montajdan keyin tizim jonli tekshiriladi: odam kunduzi va tunda zonalar boʻylab yuradi, muhandis esa qanday hodisalar va qanday belgi bilan kelganini koʻradi. Shunday qilib, bildirishnomalarga tayanishni boshlashingizdan oldin oʻlik zonalar va ortiqcha qoidalar aniqlanadi."
+            ]
+          },
+          {
+            "h": "Qayerda oʻzini oqlaydi, qayerda kerak emas",
+            "p": [
+              "Xususiy uy: telefonga bildirishnoma faqat hovlida mushuk yoki shox emas, odam boʻlganda keladi. Ombor va qurilish maydonchasi tunda: qoʻriqlash haqiqiy signallarni oladi, stroboskopli kamera esa buzgʻunchini yetib kelishdan oldin choʻchitadi. Doʻkon va ofis: «yopilgandan keyin kirish yonidagi odamlar» boʻyicha arxiv qidiruvi bir necha daqiqa oladi. Turar-joy majmuasi: mashinalar filtri bilan perimetr va avtoturargoh.",
+              "Sunʼiy intellekt majburiy boʻlmagan joylar: kassa ustidagi, ofis koridoridagi yoki sinfdagi kamera, bu yerda yozuv faqat hodisani tahlil qilishda koʻriladi. U yerda ruxsat, ovoz va arxiv muhimroq, tasniflash esa shunchaki ishlatilmaydi. Oqilona sxema — perimetr va kirishlarda sunʼiy intellekt, ichkarida oddiy kameralar va odam va mashina boʻyicha qidira oladigan registrator."
+            ]
+          },
+          {
+            "h": "Sunʼiy intellektli kameralar qancha turadi",
+            "p": [
+              "Narxlar katalogimizdan, 2026-yil 30-oktyabr holatiga, ular oʻzgaradi: odam va transportni aniqlaydigan 4 Mp silindrik kamera Hikvision DS-2CD1043G2-LIU — 568 900 soʻmdan; AcuSense bilan 4 Mp DS-2CD2043G2-LI2U — 908 900 soʻmdan; AcuSense, rangli tungi suratga olish, stroboskop va ovoz bilan 8 Mp DS-2CD2087G3-LI2UY/SL — 2 164 900 soʻmdan; Dahua IPC-HFW2849T-AS-IL 8 Mp — 1 225 900 soʻmdan; AcuSense bilan 8 kanalli registrator DS-7608NXI-K2 — 1 484 900 soʻmdan.",
+              "Xuddi shu ruxsatdagi oddiy kamera bilan farq odatda 30–60 %. U soʻmda emas, vaqtda oʻzini oqlaydi: qoʻriqlashning boʻsh chiqishlari kamroq, arxivni koʻrish soatlari kamroq va yuzta yolgʻon signal orasida haqiqiy hodisani oʻtkazib yuborish ehtimoli kamroq. Obyektingizga kameralar va qoidalarni videokuzatuv yoki videoanalitika sahifasida tanlash mumkin — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Oʻrnatilgan kameralarga sunʼiy intellekt qoʻshish mumkinmi?",
+            "a": "Ha, analitikali registrator orqali: Hikvisionda bu indeksida NXI harflari boʻlgan modellar (AcuSense), Dahuada — SMD Plus bilan registratorlar. Ular oddiy kameralardagi hodisalarni tasniflaydi, lekin cheklangan kanallar sonida — u registrator pasportida koʻrsatiladi."
+          },
+          {
+            "q": "Kamera mushuk yoki itni odamdan ajratadimi?",
+            "a": "Ha, hayvonlar «boshqa» sinfiga tushadi va signal chaqirmaydi. Obyekt uzoqda, yomon yoritilgan yoki qisman koʻringanda xatolar boʻlishi mumkin, shuning uchun toʻgʻri obyektiv va oʻrnatish burchagi muhim."
+          },
+          {
+            "q": "Sunʼiy intellekt tunda ishlaydimi?",
+            "a": "Infraqizil rejimda ham, rangli yoritish bilan ham ishlaydi. Tundagi aniqlik yoritish va masofaga bogʻliq: pasportda kamera odamni ishonchli tasniflaydigan masofa koʻrsatiladi."
+          },
+          {
+            "q": "Server yoki internet kerakmi?",
+            "a": "Yoʻq. Tahlil kamera yoki registrator ichida boradi. Internet faqat telefonga bildirishnomalar va masofadan koʻrish uchun kerak."
+          },
+          {
+            "q": "Bunday kamera yuzlarni taniydimi?",
+            "a": "Yoʻq, AcuSense va WizSense obyekt sinfini — odam yoki mashinani aniqlaydi, lekin aniq odamni tanimaydi. Yuzni tanish — alohida funksiya va alohida kameralar; bu haqda videoanalitika va yuzni tanish haqidagi maqolamiz."
+          },
+          {
+            "q": "Yolgʻon signallar qanchalik kamayadi?",
+            "a": "Ishlab chiqaruvchilar oʻz sinovlari boʻyicha raqamlar keltiradi: Dahua pasportlarda SMD Plus uchun 1–2 % yolgʻon ishga tushishni, Hikvision DeepinViewX uchun oddiy sunʼiy intellektli kameralarga nisbatan 90 % gacha kamroq yolgʻon signalni koʻrsatadi. Amalda natija zonalar, balandlik va yoritishning sozlanishiga bogʻliq."
+          }
+        ],
+        "summary": [
+          "Oddiy harakat detektori piksellardagi har qanday oʻzgarishga javob beradi: soyalar, shoxlar, yomgʻir, faralar, hayvonlar.",
+          "Sunʼiy intellektli kamera avval obyektni topadi, keyin uni odam, transport yoki boshqa deb tasniflaydi va faqat kerakli sinflarga signal beradi — hammasi kamera ichida.",
+          "AcuSense (Hikvision): odam/mashina filtri, arxiv boʻyicha qidiruv, stroboskopli Live Guard; NXI registratorlari oddiy kameralarga sunʼiy intellekt qoʻshadi.",
+          "WizSense (Dahua): SMD Plus va Perimeter Protection; faol toʻsqinlik qiluvchi AS/PV modellari; 2025-yilda uzun perimetrlar uchun «katta modellar»dagi kameralar paydo boʻldi.",
+          "Sunʼiy intellektli kameralar oddiylaridan 30–60 % qimmat, qoʻriqlash va qidiruv vaqti bilan oʻzini oqlaydi; model emas, toʻgʻri obyektiv, balandlik va zonalar muhimroq."
+        ]
+      },
+      "en": {
+        "title": "AI in the Camera: How AcuSense and WizSense Tell a Person from a Cat or a Car — and Why False Alarms Disappear",
+        "seoTitle": "AI in Security Cameras: AcuSense and WizSense Explained",
+        "seoDesc": "How an AI camera tells people and vehicles from shadows, branches and cats: Hikvision AcuSense, Dahua WizSense, 2025 models, setup tips and prices.",
+        "excerpt": "Ordinary motion detection reacts to any change in the picture: a shadow, a branch, rain, headlights, a cat. An AI camera first understands what is in the frame and raises an alarm only for a person or a vehicle. We explain how AcuSense and WizSense work, what is new in 2025, how to set them up so the AI does not miss, and what such cameras cost.",
+        "sections": [
+          {
+            "h": "Why an ordinary camera wakes you up at night",
+            "p": [
+              "Classic motion detection compares consecutive frames and counts how many pixels changed. Above the threshold, it raises an alarm. The camera does not care what moved: a person by the fence, a cloud shadow, a branch in the wind, raindrops, headlights on a wall, a cat in the yard or a moth drawn to the infrared light right in front of the lens.",
+              "As a result, a homeowner gets dozens of notifications a night, a warehouse guard learns to ignore alarms, and the archive fills with events in which the real one cannot be found. Lowering sensitivity means missing a person who walks slowly or far away. This is exactly the problem cameras with on-board analytics solve."
+            ]
+          },
+          {
+            "h": "How an AI camera knows there is a person in the frame",
+            "p": [
+              "The camera has a dedicated neural processor running a network trained on a large number of labelled frames. It works in two steps. First, the network finds a moving object in the frame. Then it classifies it: human, vehicle or other. The alarm rule fires only for the classes you selected.",
+              "Crucially, all processing happens inside the camera: no server, cloud or permanent internet is needed. The recorder receives a ready event tagged human or vehicle, and the phone app sends a notification with a snapshot. Classification also works at night in infrared mode, although accuracy in the dark depends on illumination and distance to the object."
+            ]
+          },
+          {
+            "h": "Hikvision AcuSense: what it does and how to spot it in the model code",
+            "p": [
+              "AcuSense is Hikvision's name for the technology. It adds a human/vehicle filter to ordinary motion detection (the manufacturer calls it Motion Detection 2.0) and to smart rules: line crossing, intrusion, region entrance and exit. Branches, shadows and animals are discarded, and only the chosen classes trigger alarms.",
+              "The second benefit is archive search. In the recorder or app you can filter footage: show only people at the gate last night. Minutes instead of hours of viewing. Models marked Live Guard (often /SL in the code) respond to an intruder themselves: they switch on a red-blue strobe and play a voice warning — in our catalogue, for example, the DS-2CD2087G3-LI2UY/SL.",
+              "In our catalogue AcuSense appears in the series 2 cameras (DS-2CD2xxxG2 and G3, for example the DS-2CD2043G2-LI2U), while the mass-market series 1 (DS-2CD1043G2-LIU) has simplified human and vehicle detection. For cameras without AI there is another route: Hikvision recorders with NXI in the model code (DS-7608NXI-K2, DS-7616NXI-K2) classify events from ordinary cameras themselves. The number of channels on which the recorder does this is limited — check the datasheet of the specific model."
+            ]
+          },
+          {
+            "h": "Dahua WizSense: SMD Plus and perimeter protection",
+            "p": [
+              "Dahua's equivalent line is called WizSense. The basic function is SMD Plus, smart motion detection: the camera analyses the object's shape and sends an alarm only when a person or vehicle is in the frame. It is enabled with a single setting, without drawing complex rules. In datasheets the manufacturer states an SMD Plus false-alarm rate of 1–2 %; this is a manufacturer claim, not an independent test.",
+              "For guarding a site there is Perimeter Protection — line crossing and intrusion with a filter that cuts out triggers from animals, leaves and glare. Models with active deterrence (AS or PV in the code) switch on a siren and lights when a rule is violated. In our catalogue this is, for example, the 8-megapixel Dahua IPC-HFW2849T-AS-IL.",
+              "Junior Dahua series have reduced or no classification, so when choosing, look for the SMD Plus and Perimeter Protection lines in the datasheet, not just the resolution."
+            ]
+          },
+          {
+            "h": "What is new in 2025: large models in cameras",
+            "p": [
+              "The next step is cameras running large neural models trained on far more data. On 1 July 2025 Hikvision released the DeepinViewX series based on its Guanlan models: analytics work at up to 60 metres at night on some models and up to 120 metres on triple-lens versions. The manufacturer claims up to 90 % fewer false alarms than conventional AI cameras, based on its own lab tests.",
+              "In March 2025 Dahua presented the second version of its Xinghan models and refreshed the line in September. Such cameras distinguish people and vehicles more accurately at long range, in rain and in difficult light, but they belong to the project segment: long perimeters, industrial sites and warehouses. For a home, shop or office, mass-market AcuSense and WizSense are enough."
+            ]
+          },
+          {
+            "h": "How to set it up so the AI does not make mistakes",
+            "p": [
+              "The network sees only what the lens gives it. A person must occupy enough of the frame: a camera with a 2.8 mm lens should not cover a 60-metre perimeter — it will see the far end but not classify it. Mounting height is usually 2.5–4 metres, angled so that a person is seen full-height rather than from above.",
+              "Rule zones are drawn only where an intruder can actually pass: the road beyond the fence and the neighbour's yard are excluded. The camera is not pointed straight at the sun or street lights. Spider webs in front of the lens glow under infrared at night and disrupt analysis, so cameras are cleaned every season.",
+              "After installation the system is tested live: a person walks through the zones by day and by night while the engineer checks which events arrived and with which tag. This catches blind spots and unnecessary rules before you start relying on notifications."
+            ]
+          },
+          {
+            "h": "Where it pays off and where it is not needed",
+            "p": [
+              "A private house: the phone notification arrives only when there is a person in the yard, not a cat or a branch. A warehouse or construction site at night: security gets real alarms, and a strobe camera scares off an intruder before anyone arrives. A shop or office: searching the archive for people at the entrance after closing takes minutes. A residential complex: perimeter and parking with a vehicle filter.",
+              "Where AI is not essential: a camera above the till, in an office corridor or in a classroom, where footage is viewed only when investigating an incident. There, resolution, audio and archive matter more, and classification simply goes unused. A sensible design is AI on the perimeter and entrances, ordinary cameras inside, and a recorder that can search by person and vehicle."
+            ]
+          },
+          {
+            "h": "What AI cameras cost",
+            "p": [
+              "Prices from our catalogue as of 30 October 2026, subject to change: a 4 MP bullet with human and vehicle detection, Hikvision DS-2CD1043G2-LIU, from 568,900 UZS; a 4 MP AcuSense DS-2CD2043G2-LI2U from 908,900 UZS; an 8 MP AcuSense camera with colour night vision, strobe and voice, DS-2CD2087G3-LI2UY/SL, from 2,164,900 UZS; Dahua IPC-HFW2849T-AS-IL 8 MP from 1,225,900 UZS; an 8-channel AcuSense recorder DS-7608NXI-K2 from 1,484,900 UZS.",
+              "The difference from an ordinary camera of the same resolution is usually 30–60 %. It pays back in time rather than money: fewer wasted security call-outs, fewer hours of archive review and less chance of missing the real event among a hundred false ones. You can choose cameras and rules for your site on our CCTV or video analytics page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Can AI be added to cameras that are already installed?",
+            "a": "Yes, through a recorder with analytics: for Hikvision these are models with NXI in the code (AcuSense), for Dahua recorders with SMD Plus. They classify events from ordinary cameras, but on a limited number of channels — stated in the recorder's datasheet."
+          },
+          {
+            "q": "Does the camera tell a cat or dog from a person?",
+            "a": "Yes, animals fall into the other class and do not trigger alarms. Mistakes are possible when the object is far away, poorly lit or partly visible, so the right lens and mounting angle matter."
+          },
+          {
+            "q": "Does the AI work at night?",
+            "a": "It works in infrared mode and with colour illumination. Night accuracy depends on lighting and distance: the datasheet states the range at which the camera reliably classifies a person."
+          },
+          {
+            "q": "Is a server or internet connection needed?",
+            "a": "No. Analysis runs inside the camera or recorder. Internet is needed only for phone notifications and remote viewing."
+          },
+          {
+            "q": "Does such a camera recognise faces?",
+            "a": "No, AcuSense and WizSense determine the object class — person or vehicle — but do not identify a specific person. Face recognition is a separate function and separate cameras; see our article on video analytics and face recognition."
+          },
+          {
+            "q": "How many fewer false alarms will there be?",
+            "a": "Manufacturers quote figures from their own tests: Dahua states 1–2 % false alarms for SMD Plus in datasheets, Hikvision up to 90 % fewer false alarms for DeepinViewX compared with conventional AI cameras. In practice the result depends on how zones, height and lighting are set up."
+          }
+        ],
+        "summary": [
+          "Ordinary motion detection reacts to any pixel change: shadows, branches, rain, headlights, animals.",
+          "An AI camera first finds an object, then classifies it as a person, vehicle or other and alarms only on the chosen classes — all inside the camera.",
+          "AcuSense (Hikvision): human/vehicle filter, archive search, Live Guard with strobe; NXI recorders add AI to ordinary cameras.",
+          "WizSense (Dahua): SMD Plus and Perimeter Protection; AS/PV models with active deterrence; in 2025 cameras on large models appeared for long perimeters.",
+          "AI cameras cost 30–60 % more than ordinary ones and pay back in guard and search time; the right lens, height and zones matter more than the model."
+        ]
+      },
+      "tr": {
+        "title": "Kamerada Yapay Zekâ: AcuSense ve WizSense İnsanı Kediden ve Arabadan Nasıl Ayırır — Yanlış Alarmlar Neden Kaybolur",
+        "seoTitle": "Güvenlik Kamerasında Yapay Zekâ: AcuSense ve WizSense",
+        "seoDesc": "Yapay zekâlı kamera insanı ve aracı gölgeden, daldan ve kediden nasıl ayırır: Hikvision AcuSense, Dahua WizSense, 2025 modelleri, ayar ve fiyatlar.",
+        "excerpt": "Sıradan hareket algılama görüntüdeki her değişikliğe tepki verir: gölge, dal, yağmur, far, kedi. Yapay zekâlı kamera önce karede ne olduğunu anlar ve yalnızca insan ya da araç için alarm verir. AcuSense ve WizSense'in nasıl çalıştığını, 2025'te nelerin yeni olduğunu, yapay zekânın hata yapmaması için nasıl ayarlanacağını ve bu kameraların fiyatını açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Sıradan kamera sizi neden gece uyandırır",
+            "p": [
+              "Klasik hareket algılama ardışık kareleri karşılaştırır ve kaç pikselin değiştiğini sayar. Eşik aşılırsa alarm. Kamera neyin hareket ettiğiyle ilgilenmez: çit yanındaki insan, bulut gölgesi, rüzgârda sallanan dal, yağmur damlaları, duvardaki far ışığı, bahçedeki kedi ya da objektifin hemen önündeki kızılötesi ışığa gelen güve.",
+              "Sonuçta ev sahibi bir gecede onlarca bildirim alır, depo bekçisi alarmları görmezden gelmeye alışır, arşiv de gerçeğinin bulunamadığı olaylarla dolar. Hassasiyeti düşürmek, yavaş ya da uzaktan yürüyen insanı kaçırmak demektir. Kamera üzerinde analitiği olan modeller tam olarak bu sorunu çözer."
+            ]
+          },
+          {
+            "h": "Yapay zekâlı kamera karede insan olduğunu nasıl anlar",
+            "p": [
+              "Kamerada ayrı bir sinir ağı işlemcisi ve onun üzerinde çok sayıda etiketli karede eğitilmiş bir ağ bulunur. İş iki adımda yürür. Önce ağ karedeki hareketli nesneyi bulur. Sonra onu sınıflandırır: insan, araç ya da diğer. Alarm kuralı yalnızca seçtiğiniz sınıflar için çalışır.",
+              "Önemli olan, tüm işlemin kamera içinde yapılmasıdır: sunucu, bulut ya da sürekli internet gerekmez. Kayıt cihazı insan veya araç etiketli hazır olayı alır, telefondaki uygulama da kareyle bildirim gönderir. Sınıflandırma gece kızılötesi modda da çalışır; ancak karanlıkta doğruluk aydınlatmaya ve nesneye uzaklığa bağlıdır."
+            ]
+          },
+          {
+            "h": "Hikvision AcuSense: neler yapar ve model kodundan nasıl anlaşılır",
+            "p": [
+              "AcuSense, Hikvision'ın teknolojisinin adıdır. Sıradan hareket algılamaya (üretici buna Motion Detection 2.0 der) ve akıllı kurallara — çizgi geçişi, alana izinsiz giriş, bölgeye giriş ve çıkış — insan/araç filtresi ekler. Dallar, gölgeler ve hayvanlar elenir; alarmı yalnızca seçilen sınıflar alır.",
+              "İkinci fayda arşivde aramadır. Kayıt cihazında veya uygulamada kaydı filtreleyebilirsiniz: dün gece kapıdaki yalnızca insanları göster. Saatler yerine dakikalar. Live Guard işaretli modeller (kodda çoğunlukla /SL) izinsiz girişe kendileri tepki verir: kırmızı-mavi flaşı yakar ve sesli uyarı çalar — kataloğumuzda örneğin DS-2CD2087G3-LI2UY/SL.",
+              "Kataloğumuzda AcuSense, 2. seri kameralarda (DS-2CD2xxxG2 ve G3, örneğin DS-2CD2043G2-LI2U) bulunur; yaygın 1. seride (DS-2CD1043G2-LIU) ise basitleştirilmiş insan ve araç algılama vardır. Yapay zekâsız kameralar için başka bir yol var: model kodunda NXI bulunan Hikvision kayıt cihazları (DS-7608NXI-K2, DS-7616NXI-K2) sıradan kameralardan gelen olayları kendileri sınıflandırır. Bunu yaptıkları kanal sayısı sınırlıdır — ilgili modelin veri sayfasına bakın."
+            ]
+          },
+          {
+            "h": "Dahua WizSense: SMD Plus ve çevre koruma",
+            "p": [
+              "Dahua'nın benzer serisinin adı WizSense'tir. Temel işlev SMD Plus, yani akıllı hareket algılamadır: kamera nesnenin şeklini analiz eder ve yalnızca karede insan veya araç olduğunda alarm gönderir. Karmaşık kurallar çizmeden tek bir ayarla açılır. Veri sayfalarında üretici SMD Plus yanlış alarm oranını %1–2 olarak belirtir; bu bağımsız bir test değil, üretici beyanıdır.",
+              "Alan koruması için Perimeter Protection vardır — hayvan, yaprak ve parlamalardan kaynaklanan tetiklemeleri ayıklayan filtreli çizgi geçişi ve izinsiz giriş. Aktif caydırıcı modeller (kodda AS veya PV görülür) kural ihlalinde siren ve ışık yakar. Kataloğumuzda bu, örneğin 8 megapiksel Dahua IPC-HFW2849T-AS-IL'dir.",
+              "Dahua'nın alt serilerinde sınıflandırma kısıtlı ya da yoktur; bu yüzden seçerken yalnızca çözünürlüğe değil, veri sayfasındaki SMD Plus ve Perimeter Protection satırlarına da bakın."
+            ]
+          },
+          {
+            "h": "2025'te ne yeni: kameralarda büyük modeller",
+            "p": [
+              "Sonraki adım, çok daha fazla veriyle eğitilmiş büyük sinir ağı modelleriyle çalışan kameralar. Hikvision 1 Temmuz 2025'te Guanlan modellerine dayanan DeepinViewX serisini çıkardı: analitik bazı modellerde gece 60 metreye, üç objektifli sürümlerde 120 metreye kadar çalışır. Üretici, kendi laboratuvar testlerine göre sıradan yapay zekâlı kameralara kıyasla %90'a kadar daha az yanlış alarm olduğunu belirtiyor.",
+              "Dahua Mart 2025'te Xinghan modellerinin ikinci sürümünü tanıttı, Eylül'de seriyi yeniledi. Bu kameralar insanları ve araçları uzun mesafede, yağmurda ve zor ışıkta daha doğru ayırır; ancak proje segmentindedir: uzun çevreler, sanayi alanları ve depolar. Ev, mağaza ve ofis için yaygın AcuSense ve WizSense yeterlidir."
+            ]
+          },
+          {
+            "h": "Yapay zekâ hata yapmasın diye nasıl ayarlanır",
+            "p": [
+              "Ağ yalnızca objektifin verdiğini görür. İnsan karede yeterince yer kaplamalıdır: 2,8 mm objektifli kamera 60 metrelik çevreye konmamalıdır — uzak ucu görür ama sınıflandırmaz. Montaj yüksekliği genellikle 2,5–4 metre, açı ise insanın yukarıdan değil boydan görüneceği şekilde.",
+              "Kural bölgeleri yalnızca izinsiz girenin gerçekten geçebileceği yerlere çizilir: çitin ötesindeki yol ve komşu bahçesi hariç tutulur. Kamera doğrudan güneşe ve sokak lambalarına çevrilmez. Objektif önündeki örümcek ağı gece kızılötesinde parlar ve analizi bozar; bu yüzden kameralar her mevsim temizlenir.",
+              "Kurulumdan sonra sistem canlı test edilir: bir kişi gündüz ve gece bölgelerde yürür, mühendis de hangi olayların hangi etiketle geldiğine bakar. Böylece bildirimlere güvenmeye başlamadan önce kör noktalar ve gereksiz kurallar yakalanır."
+            ]
+          },
+          {
+            "h": "Nerede kendini öder, nerede gerekmez",
+            "p": [
+              "Müstakil ev: telefon bildirimi yalnızca bahçede kedi ya da dal değil, insan olduğunda gelir. Gece depo ve şantiye: güvenlik gerçek alarmlar alır, flaşlı kamera da izinsiz gireni kimse gelmeden korkutur. Mağaza ve ofis: kapanıştan sonra girişteki insanlar araması dakikalar sürer. Site: araç filtreli çevre ve otopark.",
+              "Yapay zekânın şart olmadığı yerler: kasanın üstündeki, ofis koridorundaki veya sınıftaki kamera; kayıtlar yalnızca olay incelemesinde izlenir. Orada çözünürlük, ses ve arşiv daha önemlidir, sınıflandırma ise hiç kullanılmaz. Makul düzen: çevre ve girişlerde yapay zekâ, içeride sıradan kameralar ve insana ve araca göre arama yapabilen bir kayıt cihazı."
+            ]
+          },
+          {
+            "h": "Yapay zekâlı kameralar ne kadar",
+            "p": [
+              "Fiyatlar 30 Ekim 2026 itibarıyla kataloğumuzdan alınmıştır ve değişebilir: insan ve araç algılamalı 4 MP bullet Hikvision DS-2CD1043G2-LIU 568.900 UZS'den; 4 MP AcuSense DS-2CD2043G2-LI2U 908.900 UZS'den; renkli gece görüşlü, flaşlı ve sesli 8 MP AcuSense DS-2CD2087G3-LI2UY/SL 2.164.900 UZS'den; Dahua IPC-HFW2849T-AS-IL 8 MP 1.225.900 UZS'den; 8 kanallı AcuSense kayıt cihazı DS-7608NXI-K2 1.484.900 UZS'den.",
+              "Aynı çözünürlükteki sıradan kameraya göre fark genellikle %30–60'tır. Parayla değil zamanla geri döner: daha az boşa güvenlik çıkışı, daha az arşiv izleme saati ve yüz yanlış alarm arasında gerçek olayı kaçırma ihtimalinin azalması. Tesisiniz için kameraları ve kuralları kamera sistemleri veya video analitik sayfamızda seçebilirsiniz — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Kurulu kameralara yapay zekâ eklenebilir mi?",
+            "a": "Evet, analitikli kayıt cihazıyla: Hikvision'da model kodunda NXI bulunanlar (AcuSense), Dahua'da SMD Plus'lı kayıt cihazları. Sıradan kameralardan gelen olayları sınıflandırırlar ama sınırlı sayıda kanalda — bu, kayıt cihazının veri sayfasında belirtilir."
+          },
+          {
+            "q": "Kamera kediyi veya köpeği insandan ayırır mı?",
+            "a": "Evet, hayvanlar diğer sınıfına düşer ve alarm vermez. Nesne uzaktaysa, kötü aydınlatılmışsa veya kısmen görünüyorsa hata olabilir; bu yüzden doğru objektif ve montaj açısı önemlidir."
+          },
+          {
+            "q": "Yapay zekâ gece çalışır mı?",
+            "a": "Kızılötesi modda da, renkli aydınlatmayla da çalışır. Gece doğruluğu aydınlatmaya ve mesafeye bağlıdır: veri sayfasında kameranın insanı güvenle sınıflandırdığı mesafe yazılır."
+          },
+          {
+            "q": "Sunucu veya internet gerekir mi?",
+            "a": "Hayır. Analiz kamera veya kayıt cihazı içinde yapılır. İnternet yalnızca telefon bildirimleri ve uzaktan izleme için gerekir."
+          },
+          {
+            "q": "Böyle bir kamera yüz tanır mı?",
+            "a": "Hayır, AcuSense ve WizSense nesnenin sınıfını — insan veya araç — belirler ama belirli bir kişiyi tanımaz. Yüz tanıma ayrı bir işlev ve ayrı kameralardır; video analitik ve yüz tanıma yazımıza bakın."
+          },
+          {
+            "q": "Yanlış alarmlar ne kadar azalır?",
+            "a": "Üreticiler kendi testlerine göre rakam verir: Dahua veri sayfalarında SMD Plus için %1–2 yanlış alarm, Hikvision DeepinViewX için sıradan yapay zekâlı kameralara göre %90'a kadar daha az yanlış alarm belirtir. Pratikte sonuç bölge, yükseklik ve aydınlatma ayarına bağlıdır."
+          }
+        ],
+        "summary": [
+          "Sıradan hareket algılama her piksel değişikliğine tepki verir: gölgeler, dallar, yağmur, farlar, hayvanlar.",
+          "Yapay zekâlı kamera önce nesneyi bulur, sonra insan, araç veya diğer olarak sınıflandırır ve yalnızca seçilen sınıflarda alarm verir — hepsi kamera içinde.",
+          "AcuSense (Hikvision): insan/araç filtresi, arşivde arama, flaşlı Live Guard; NXI kayıt cihazları sıradan kameralara yapay zekâ ekler.",
+          "WizSense (Dahua): SMD Plus ve Perimeter Protection; aktif caydırıcı AS/PV modelleri; 2025'te uzun çevreler için büyük modelli kameralar çıktı.",
+          "Yapay zekâlı kameralar sıradan olanlardan %30–60 pahalıdır, güvenlik ve arama zamanıyla geri döner; modelden çok doğru objektif, yükseklik ve bölgeler önemlidir."
+        ]
+      },
+      "zh": {
+        "title": "摄像机里的AI：AcuSense与WizSense如何区分人、猫和车——误报为何消失",
+        "seoTitle": "监控摄像机AI：AcuSense与WizSense详解",
+        "seoDesc": "AI摄像机如何把人和车与阴影、树枝、猫区分开：海康AcuSense、大华WizSense、2025年新品、调试要点与价格。",
+        "excerpt": "普通移动侦测会对画面中的任何变化做出反应：阴影、树枝、雨、车灯、猫。AI摄像机先理解画面里是什么，只对人或车报警。本文讲解AcuSense与WizSense的工作原理、2025年有哪些新变化、如何调试避免AI误判，以及这类摄像机的价格。",
+        "sections": [
+          {
+            "h": "为什么普通摄像机半夜吵醒你",
+            "p": [
+              "传统移动侦测比较相邻帧，统计有多少像素发生变化，超过阈值就报警。摄像机不关心到底是什么在动：围墙边的人、云影、风中的树枝、雨滴、墙上的车灯、院子里的猫，或者飞到镜头前红外灯上的飞蛾。",
+              "结果是，房主一夜收到几十条推送，仓库保安习惯性忽略报警，录像里塞满“事件”，真正的那一条却找不到。降低灵敏度又会漏掉走得慢或离得远的人。带机内分析的摄像机正是为解决这个问题而生。"
+            ]
+          },
+          {
+            "h": "AI摄像机如何判断画面里有人",
+            "p": [
+              "摄像机内有独立的神经网络处理器，运行在大量标注帧上训练过的网络。工作分两步：先在画面中找到移动目标，再对其分类——人、车或“其他”。报警规则只对您选定的类别生效。",
+              "关键是所有处理都在摄像机内完成：不需要服务器、云端或持续联网。录像机收到的是已标注“人”或“车”的事件，手机应用推送带截图的通知。夜间红外模式下分类同样有效，但暗光下的准确度取决于补光和目标距离。"
+            ]
+          },
+          {
+            "h": "海康AcuSense：能做什么、如何从型号识别",
+            "p": [
+              "AcuSense是海康威视的技术名称。它为普通移动侦测（厂家称为Motion Detection 2.0）以及智能规则——越界、区域入侵、进入/离开区域——加上“人/车”过滤。树枝、阴影和动物被剔除，只有选定类别才会报警。",
+              "第二个好处是录像检索。在录像机或应用中可以筛选：“只看昨晚大门口的人”。几分钟代替几小时回放。标有Live Guard的型号（型号中常见/SL）会主动应对入侵者：开启红蓝爆闪并播放语音警告——我们目录中例如DS-2CD2087G3-LI2UY/SL。",
+              "目录中AcuSense出现在2系列摄像机上（DS-2CD2xxxG2与G3，例如DS-2CD2043G2-LI2U），大众化的1系列（DS-2CD1043G2-LIU）则具备简化的人车侦测。对没有AI的摄像机还有另一条路：型号含NXI的海康录像机（DS-7608NXI-K2、DS-7616NXI-K2）可自行对普通摄像机的事件分类。录像机能做此处理的通道数有限——请查看具体型号的规格书。"
+            ]
+          },
+          {
+            "h": "大华WizSense：SMD Plus与周界防范",
+            "p": [
+              "大华的同类产品线叫WizSense。基础功能是SMD Plus智能移动侦测：摄像机分析目标形状，只有画面中出现人或车时才发送报警，一个开关即可启用，无需绘制复杂规则。规格书中厂家标注SMD Plus误报率为1–2%；这是厂家声明，并非独立测试。",
+              "看护场地则用Perimeter Protection周界防范——带过滤的越界与区域入侵，剔除动物、树叶和强光引起的触发。带主动威慑的型号（型号中见AS或PV）在规则被触发时启动警笛和灯光。我们目录中例如800万像素的大华IPC-HFW2849T-AS-IL。",
+              "大华入门系列的分类功能被削减或没有，因此选型时不要只看分辨率，要在规格书里找SMD Plus和Perimeter Protection两项。"
+            ]
+          },
+          {
+            "h": "2025年新变化：摄像机里的“大模型”",
+            "p": [
+              "下一步是运行在大规模神经网络模型上的摄像机，训练数据量大得多。海康威视于2025年7月1日发布基于观澜大模型的DeepinViewX系列：部分型号夜间分析距离达60米，三目型号达120米。厂家称，据其实验室测试，误报比普通AI摄像机最多减少90%。",
+              "大华于2025年3月发布星汉大模型第二版，9月更新产品线。这类摄像机在远距离、雨天和复杂光线下区分人和车更准确，但属于工程项目档：用于长周界、工业园区和仓库。家庭、门店和办公室用大众化的AcuSense和WizSense就足够。"
+            ]
+          },
+          {
+            "h": "如何调试，让AI少犯错",
+            "p": [
+              "神经网络只能看到镜头给它的画面。人必须在画面中占足够比例：2.8毫米镜头的摄像机不应看60米长的周界——远端看得见却分不了类。安装高度通常2.5–4米，角度要让人以全身而非俯视的方式出现。",
+              "规则区域只画在入侵者真正可能经过的地方：围墙外的道路和邻居院子要排除。摄像机不要正对太阳和路灯。镜头前的蜘蛛网在夜间红外下会发亮、干扰分析，因此每季度都要清洁摄像机。",
+              "安装后要现场测试：一人白天和夜里分别走过各区域，工程师查看收到了哪些事件、带什么标签。这样在您开始依赖推送之前，就能发现盲区和多余规则。"
+            ]
+          },
+          {
+            "h": "哪里值得用，哪里不必要",
+            "p": [
+              "独栋住宅：只有院子里有人时手机才收到通知，猫和树枝不会。夜间仓库和工地：保安收到的是真实报警，带爆闪的摄像机在人赶到前就吓退入侵者。门店和办公室：检索“打烊后入口的人”只需几分钟。小区：带车辆过滤的周界和停车场。",
+              "AI并非必需的地方：收银台上方、办公室走廊或教室里的摄像机，录像只在事后调查时才看。那里分辨率、录音和存档更重要，分类功能根本用不上。合理的方案是：周界和出入口用AI，室内用普通摄像机，再配一台能按人和车检索的录像机。"
+            ]
+          },
+          {
+            "h": "AI摄像机多少钱",
+            "p": [
+              "价格取自我们目录（2026年10月30日），会有变动：带人车侦测的4MP筒机海康DS-2CD1043G2-LIU 568 900苏姆起；4MP AcuSense DS-2CD2043G2-LI2U 908 900苏姆起；带彩色夜视、爆闪和语音的8MP AcuSense DS-2CD2087G3-LI2UY/SL 2 164 900苏姆起；大华IPC-HFW2849T-AS-IL 8MP 1 225 900苏姆起；8路AcuSense录像机DS-7608NXI-K2 1 484 900苏姆起。",
+              "与同分辨率普通摄像机相比，通常贵30–60%。回报不在钱而在时间：更少的保安空跑、更少的回放时长，以及在上百条误报中漏掉真实事件的可能性更小。您可在我们的视频监控或视频分析页面为项目选型——一个工作日内提供报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "已经安装的摄像机能加AI吗？",
+            "a": "可以，通过带分析功能的录像机：海康是型号含NXI的AcuSense录像机，大华是带SMD Plus的录像机。它们能对普通摄像机的事件分类，但通道数有限——见录像机规格书。"
+          },
+          {
+            "q": "摄像机能把猫狗和人区分开吗？",
+            "a": "能，动物归入“其他”类，不会报警。目标太远、光线差或只露出一部分时可能出错，因此镜头和安装角度很重要。"
+          },
+          {
+            "q": "AI夜里能用吗？",
+            "a": "红外模式和彩色补光下都能用。夜间准确度取决于补光和距离：规格书会标注摄像机能稳定识别人的距离。"
+          },
+          {
+            "q": "需要服务器或网络吗？",
+            "a": "不需要。分析在摄像机或录像机内完成。网络只用于手机推送和远程查看。"
+          },
+          {
+            "q": "这种摄像机能识别人脸吗？",
+            "a": "不能，AcuSense和WizSense只判断目标类别——人或车——不识别具体是谁。人脸识别是另一项功能、另一类摄像机；详见我们关于视频分析与人脸识别的文章。"
+          },
+          {
+            "q": "误报会少多少？",
+            "a": "厂家给出的是自测数据：大华规格书标注SMD Plus误报率1–2%，海康称DeepinViewX比普通AI摄像机误报最多减少90%。实际效果取决于区域、高度和光线的设置。"
+          }
+        ],
+        "summary": [
+          "普通移动侦测对任何像素变化都有反应：阴影、树枝、雨、车灯、动物。",
+          "AI摄像机先找到目标，再分类为人、车或其他，只对选定类别报警——全部在摄像机内完成。",
+          "AcuSense（海康）：人/车过滤、录像检索、带爆闪的Live Guard；NXI录像机为普通摄像机加上AI。",
+          "WizSense（大华）：SMD Plus与Perimeter Protection；带主动威慑的AS/PV型号；2025年出现面向长周界的大模型摄像机。",
+          "AI摄像机比普通机贵30–60%，以保安和检索时间回本；镜头、高度和区域设置比型号更重要。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "kamery-v-chastnyh-shkolah-2026",
     "date": "2026-10-29",
     "related": [
