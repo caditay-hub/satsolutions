@@ -34,6 +34,530 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "videodomofon-dlya-kvartiry-ip-sip-dvuhprovodnoy",
+    "date": "2026-10-30",
+    "related": [
+      "intercom",
+      "telephony"
+    ],
+    "hubs": [
+      "domofoniya"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "ip-domofon-hikvision-zvonok-na-telefon",
+      "trubka-domofona-zamena",
+      "videodomofon-dlya-chastnogo-doma",
+      "kamery-domofony-novostroyki-uzbekistan"
+    ],
+    "products": [
+      "hik-ds-kis302-p",
+      "hik-ds-kv6113-pe1-c-o-std",
+      "hik-ds-kh6320-wte1-o-std",
+      "tapo-tapo-d230s1"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Видеодомофон для квартиры и подъезда: четырёхпроводной, двухпроводной, IP или SIP — как устроен и как подключить к телефону",
+        "seoTitle": "Видеодомофон: 4-проводной, двухпроводной, IP или SIP",
+        "seoDesc": "Как устроены видеодомофоны: четырёхпроводной, гибрид, двухпроводной, IP и SIP. Что выбрать для квартиры, подъезда и офиса и как вывести звонок на телефон.",
+        "excerpt": "Видеодомофоны отличаются не экраном, а тем, что идёт по проводам: четыре жилы аналога, две жилы цифровой системы, витая пара IP или звонок по протоколу SIP. Разбираем, как устроен каждый тип, когда можно оставить старый кабель, как получить звонок на телефон без перекладки проводов, что реально поставить в квартире многоэтажного дома и сколько это стоит.",
+        "sections": [
+          {
+            "h": "Из чего состоит любой видеодомофон",
+            "p": [
+              "Любая система — это вызывная панель с камерой и кнопкой у двери, внутренний монитор в квартире или доме, замок с блоком питания и линия между ними. Разница между типами домофонов — в том, что и как передаётся по этой линии: аналоговый сигнал по четырём жилам, цифровой по двум, сетевые пакеты по витой паре или звонок по протоколу IP-телефонии.",
+              "От типа линии зависят три вещи, которые важны владельцу: можно ли использовать уже проложенный кабель, сколько мониторов и панелей можно подключить и придёт ли звонок на телефон, когда дома никого нет. Ниже — пять типов систем по порядку, от самой простой к самой гибкой."
+            ]
+          },
+          {
+            "h": "Четырёхпроводной аналоговый домофон",
+            "p": [
+              "Классика для частного дома: по четырём жилам идут питание панели, звук, видео и общий провод. Система работает без сети и настроек, панель и монитор соединяются напрямую, а современные модели передают картинку в HD по технологии HD-TVI. Пример — комплект Hikvision DS-KIS202T с панелью 2 Мп и монитором 7 дюймов, от 865 900 сум.",
+              "Ограничение одно, но важное: аналоговый монитор звонит только сам себе. Если дома никого нет, гость позвонит в пустоту — на телефон вызов не уйдёт. Для дачи или дома, где кто-то всегда на месте, этого достаточно; для тех, кто весь день на работе, — уже нет."
+            ]
+          },
+          {
+            "h": "Гибрид: старый кабель, звонок на телефон",
+            "p": [
+              "Гибридный комплект сохраняет аналоговую панель на четырёх жилах, но внутренний монитор подключается к домашней сети — по Wi-Fi или кабелю — и работает с приложением Hik-Connect. Вызов приходит и на монитор, и на смартфон: можно поговорить с курьером и открыть калитку с работы. Перекладывать кабель до калитки не нужно.",
+              "Это самый частый сценарий замены старого домофона в частном доме: провода уже лежат, а звонок на телефон нужен. В каталоге такие комплекты — Hikvision DS-KIS302-P от 1 236 900 сум и DS-KIS312-P с панелью 2 Мп от 1 298 900 сум. Подключение к телефону настраивается так же, как у IP-домофонов, — об этом наша отдельная инструкция по Hik-Connect."
+            ]
+          },
+          {
+            "h": "Двухпроводной цифровой домофон",
+            "p": [
+              "В двухпроводной системе питание, звук, видео и команды идут всего по двум жилам: сигнал оцифрован, а распределитель и общий блок питания раздают его по мониторам. Главный плюс — можно использовать уже проложенную двухжильную линию старого звонка или аудиодомофона, не штробя стены после ремонта. Двухпроводные комплекты выпускают крупные производители, у Hikvision это серия DS-KIS70x.",
+              "Двухпроводные системы удобны и для небольших многоквартирных домов: к одной панели через распределители подключаются десятки мониторов, а современные модели тоже умеют переводить вызов на смартфон. Минус — оборудование одной системы не смешивается с другими марками, поэтому расширять её придётся теми же компонентами."
+            ]
+          },
+          {
+            "h": "IP-домофон: витая пара и PoE",
+            "p": [
+              "В IP-системе панель и мониторы — сетевые устройства, подключённые витой парой к коммутатору, часто с питанием по PoE по тому же кабелю. Количество мониторов и панелей почти не ограничено, к системе добавляются камеры видеонаблюдения и контроль доступа, а вызов уходит на монитор, пост охраны и смартфоны через облако производителя — без белого IP-адреса и проброса портов.",
+              "Пример комплекта для квартиры или дома: вызывная панель Hikvision DS-KV6113-PE1(C) с камерой 2 Мп и считывателем карт — 822 900 сум, монитор DS-KH6320-WTE1 с Wi-Fi и PoE — 964 900 сум. IP-домофон — выбор для новой проводки, ремонта, офиса и жилого комплекса, где важны масштаб и интеграция с камерами."
+            ]
+          },
+          {
+            "h": "SIP: домофон как телефонный абонент",
+            "p": [
+              "SIP — стандартный протокол IP-телефонии. Панель с поддержкой SIP регистрируется на офисной IP-АТС или SIP-сервере как обычный телефонный абонент и звонит на любой SIP-телефон, программу-софтфон на компьютере или смартфоне, на ресепшен или пост охраны. Облако производителя для этого не нужно, а внутри локальной сети связь работает и без интернета.",
+              "SIP указан в спецификациях IP-панелей Dahua серии VTO и, например, монитора ZKTeco VT07-B01; поддержка зависит от модели и версии прошивки, поэтому её проверяют до покупки. Такой домофон выбирают офисы, гостиницы и бизнес-центры, где уже есть IP-телефония: вызов с двери приходит на те же телефоны, что и звонки клиентов. Настройку IP-АТС мы делаем как отдельную услугу."
+            ]
+          },
+          {
+            "h": "Что можно поставить в квартире многоэтажного дома",
+            "p": [
+              "Владелец квартиры отвечает только за свою дверь, поэтому вариантов три. Первый — оставить подъездный домофон и заменить трубку на видеомонитор с модулем сопряжения: он звонит от подъездной панели и показывает гостя, если в подъезде видеопанель. Как подобрать совместимое устройство, мы разбирали в статье о замене трубки домофона.",
+              "Второй — своя панель у двери квартиры. Проще всего беспроводной видеозвонок: Tapo D230S1 с разрешением 2K работает от аккумулятора до 180 дней, пишет на карту памяти до 512 ГБ и присылает вызов на телефон; стоит от 976 900 сум. Дверь он не открывает — это звонок с камерой, а не домофон с замком. Если нужен замок и монитор в квартире, ставят IP-комплект.",
+              "Третий — модернизация всего подъезда или дома: решение принимают ТСЖ или управляющая компания. Для этого подходят IP-системы и двухпроводные системы для многоквартирных домов; в новостройках с 1 мая 2026 года камеры и домофоны закладываются в проект по постановлению ПП-48 — подробнее в нашей статье о новостройках."
+            ]
+          },
+          {
+            "h": "Как выбрать тип и подключить звонок на телефон",
+            "p": [
+              "Простое правило: лежат четыре жилы и нужен звонок на телефон — гибридный комплект; есть только две жилы, а штробить нельзя — двухпроводная система; делаете ремонт, строите дом или оснащаете офис — IP-домофон; в офисе уже работает IP-АТС — IP-панель с поддержкой SIP. Для квартиры без своей панели — монитор с модулем сопряжения или беспроводной видеозвонок.",
+              "Звонок на телефон приходит тремя путями: через облачное приложение производителя (Hik-Connect у Hikvision, DMSS у Dahua), через SIP на телефоны офисной АТС или через приложение беспроводного видеозвонка. Во всех случаях стоит дать доступ нескольким членам семьи или сотрудникам, каждому со своими правами.",
+              "Мы подбираем и устанавливаем домофоны всех этих типов под ключ: панель, монитор, замок, линию и настройку звонка на телефоны. На работы даём гарантию 3 года. Расчёт под вашу дверь, подъезд или офис можно заказать на странице домофонии — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Можно ли оставить старый кабель домофона?",
+            "a": "Да, если тип системы подходит к линии: на четырёх жилах ставят аналоговый или гибридный комплект, на двух — двухпроводную систему. Для IP нужна витая пара."
+          },
+          {
+            "q": "Работает ли видеодомофон без интернета?",
+            "a": "Панель, монитор и замок работают локально и без интернета. Интернет нужен только для звонка на смартфон через облако; SIP-вызов внутри офисной сети проходит и без него."
+          },
+          {
+            "q": "Сколько телефонов может получать вызов?",
+            "a": "В приложении Hik-Connect или DMSS доступ дают нескольким пользователям, у каждого свои права. Через SIP вызов можно направить на группу офисных телефонов."
+          },
+          {
+            "q": "Чем видеозвонок отличается от видеодомофона?",
+            "a": "Видеозвонок — это камера с кнопкой и аккумулятором, вызов приходит только в приложение, замок он не открывает. Видеодомофон работает с монитором в квартире и управляет замком двери или калитки."
+          },
+          {
+            "q": "Что будет с домофоном при отключении света?",
+            "a": "Без резервного питания панель и монитор выключатся. Блок питания с аккумулятором держит домофон и замок в работе при отключениях; беспроводной видеозвонок работает от своей батареи."
+          },
+          {
+            "q": "Какой тип выбрать для офиса?",
+            "a": "IP-домофон: вызов идёт на ресепшен, пост охраны и смартфоны, система объединяется с камерами и СКУД. Если в офисе есть IP-АТС, выбирайте панель с поддержкой SIP."
+          }
+        ],
+        "summary": [
+          "Типы видеодомофонов различаются линией: четыре жилы аналога, две жилы цифровой системы, витая пара IP или протокол SIP.",
+          "Аналоговый монитор не переводит вызов на телефон; гибридный комплект сохраняет четырёхпроводную панель и добавляет звонок на смартфон.",
+          "Двухпроводная система использует уже проложенные две жилы и подходит для модернизации без штробления.",
+          "IP-домофон масштабируется и объединяется с камерами и СКУД; SIP позволяет звонить с двери на телефоны офисной АТС без облака.",
+          "В квартире многоэтажного дома — монитор с модулем сопряжения, беспроводной видеозвонок или IP-комплект; модернизацию подъезда решает ТСЖ или УК."
+        ]
+      },
+      "uz": {
+        "title": "Kvartira va podyezd uchun videodomofon: toʻrt simli, ikki simli, IP yoki SIP — qanday tuzilgan va telefonga qanday ulanadi",
+        "seoTitle": "Videodomofon: toʻrt simli, ikki simli, IP yoki SIP",
+        "seoDesc": "Videodomofonlar qanday tuzilgan: toʻrt simli, gibrid, ikki simli, IP va SIP. Kvartira, podyezd va ofis uchun tanlov va qoʻngʻiroqni telefonga chiqarish.",
+        "excerpt": "Videodomofonlar ekrani bilan emas, simlar orqali nima oʻtishi bilan farq qiladi: analogning toʻrt simi, raqamli tizimning ikki simi, IP ning oʻralgan juftligi yoki SIP protokoli boʻyicha qoʻngʻiroq. Har bir tur qanday tuzilganini, eski kabelni qachon qoldirish mumkinligini, simlarni qayta yotqizmasdan telefonga qoʻngʻiroqni qanday olishni, koʻp qavatli uydagi kvartiraga aslida nima qoʻyish mumkinligini va bu qancha turishini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Har qanday videodomofon nimadan iborat",
+            "p": [
+              "Har qanday tizim — eshik yonidagi kamera va tugmali chaqiruv paneli, kvartira yoki uydagi ichki monitor, quvvat blokli qulf va ular orasidagi liniya. Domofon turlari orasidagi farq — bu liniya orqali nima va qanday uzatilishida: toʻrt sim orqali analog signal, ikki sim orqali raqamli signal, oʻralgan juftlik orqali tarmoq paketlari yoki IP-telefoniya protokoli boʻyicha qoʻngʻiroq.",
+              "Liniya turiga egasi uchun muhim boʻlgan uch narsa bogʻliq: allaqachon yotqizilgan kabeldan foydalanish mumkinmi, nechta monitor va panel ulash mumkin va uyda hech kim boʻlmaganda qoʻngʻiroq telefonga keladimi. Quyida — eng oddiysidan eng moslashuvchanigacha tartib bilan besh turdagi tizim."
+            ]
+          },
+          {
+            "h": "Toʻrt simli analog domofon",
+            "p": [
+              "Xususiy uy uchun klassika: toʻrt sim orqali panel quvvati, ovoz, video va umumiy sim oʻtadi. Tizim tarmoq va sozlashlarsiz ishlaydi, panel va monitor toʻgʻridan-toʻgʻri ulanadi, zamonaviy modellar esa tasvirni HD-TVI texnologiyasi boʻyicha HD sifatda uzatadi. Misol — 2 Mp panelli va 7 dyuymli monitorli Hikvision DS-KIS202T toʻplami, 865 900 soʻmdan.",
+              "Cheklov bitta, lekin muhim: analog monitor faqat oʻzi jiringlaydi. Uyda hech kim boʻlmasa, mehmon boʻshliqqa qoʻngʻiroq qiladi — chaqiruv telefonga ketmaydi. Dala hovli yoki doim kimdir boʻladigan uy uchun bu yetarli; kun boʻyi ishda boʻladiganlar uchun esa yoʻq."
+            ]
+          },
+          {
+            "h": "Gibrid: eski kabel, telefonga qoʻngʻiroq",
+            "p": [
+              "Gibrid toʻplam toʻrt simli analog panelni saqlab qoladi, lekin ichki monitor uy tarmogʻiga — Wi-Fi yoki kabel orqali — ulanadi va Hik-Connect ilovasi bilan ishlaydi. Chaqiruv ham monitorga, ham smartfonga keladi: kuryer bilan gaplashish va kichik eshikni ishdan turib ochish mumkin. Kichik eshikkacha kabelni qayta yotqizish shart emas.",
+              "Bu xususiy uyda eski domofonni almashtirishning eng koʻp uchraydigan stsenariysi: simlar allaqachon yotqizilgan, telefonga qoʻngʻiroq esa kerak. Katalogda bunday toʻplamlar — Hikvision DS-KIS302-P 1 236 900 soʻmdan va 2 Mp panelli DS-KIS312-P 1 298 900 soʻmdan. Telefonga ulash IP-domofonlardagi kabi sozlanadi — bu haqda Hik-Connect boʻyicha alohida yoʻriqnomamiz bor."
+            ]
+          },
+          {
+            "h": "Ikki simli raqamli domofon",
+            "p": [
+              "Ikki simli tizimda quvvat, ovoz, video va buyruqlar atigi ikki sim orqali oʻtadi: signal raqamlashtirilgan, taqsimlagich va umumiy quvvat bloki uni monitorlarga tarqatadi. Asosiy afzallik — eski qoʻngʻiroq yoki audiodomofonning allaqachon yotqizilgan ikki simli liniyasidan taʼmirdan keyin devorlarni buzmasdan foydalanish mumkin. Ikki simli toʻplamlarni yirik ishlab chiqaruvchilar chiqaradi, Hikvisionda bu DS-KIS70x seriyasi.",
+              "Ikki simli tizimlar kichik koʻp kvartirali uylar uchun ham qulay: bitta panelga taqsimlagichlar orqali oʻnlab monitorlar ulanadi, zamonaviy modellar esa chaqiruvni smartfonga ham oʻtkaza oladi. Kamchiligi — bitta tizim uskunasi boshqa markalar bilan aralashmaydi, shuning uchun uni oʻsha komponentlar bilan kengaytirishga toʻgʻri keladi."
+            ]
+          },
+          {
+            "h": "IP-domofon: oʻralgan juftlik va PoE",
+            "p": [
+              "IP-tizimda panel va monitorlar — kommutatorga oʻralgan juftlik bilan ulangan tarmoq qurilmalari, koʻpincha oʻsha kabel orqali PoE quvvati bilan. Monitorlar va panellar soni deyarli cheklanmagan, tizimga videokuzatuv kameralari va kirishni nazorat qilish qoʻshiladi, chaqiruv esa monitorga, qoʻriqlash postiga va ishlab chiqaruvchi buluti orqali smartfonlarga ketadi — oq IP-manzil va port yoʻnaltirishsiz.",
+              "Kvartira yoki uy uchun toʻplam namunasi: 2 Mp kamerali va karta oʻquvchili Hikvision DS-KV6113-PE1(C) chaqiruv paneli — 822 900 soʻm, Wi-Fi va PoE ga ega DS-KH6320-WTE1 monitori — 964 900 soʻm. IP-domofon — yangi simlar, taʼmir, ofis va koʻlam hamda kameralar bilan integratsiya muhim boʻlgan turar-joy majmuasi uchun tanlov."
+            ]
+          },
+          {
+            "h": "SIP: telefon abonenti sifatidagi domofon",
+            "p": [
+              "SIP — IP-telefoniyaning standart protokoli. SIP ni qoʻllab-quvvatlaydigan panel ofis IP-ATS yoki SIP-serverida oddiy telefon abonenti sifatida roʻyxatdan oʻtadi va istalgan SIP-telefonga, kompyuter yoki smartfondagi softfon dasturiga, qabulxona yoki qoʻriqlash postiga qoʻngʻiroq qiladi. Buning uchun ishlab chiqaruvchi buluti kerak emas, mahalliy tarmoq ichida aloqa internetsiz ham ishlaydi.",
+              "SIP Dahua VTO seriyali IP-panellari va, masalan, ZKTeco VT07-B01 monitori spetsifikatsiyalarida koʻrsatilgan; qoʻllab-quvvatlash model va proshivka versiyasiga bogʻliq, shuning uchun u xariddan oldin tekshiriladi. Bunday domofonni IP-telefoniya allaqachon bor ofislar, mehmonxonalar va biznes-markazlar tanlaydi: eshikdan chaqiruv mijozlar qoʻngʻiroqlari keladigan telefonlarga keladi. IP-ATS ni sozlashni alohida xizmat sifatida bajaramiz."
+            ]
+          },
+          {
+            "h": "Koʻp qavatli uydagi kvartiraga nima qoʻyish mumkin",
+            "p": [
+              "Kvartira egasi faqat oʻz eshigi uchun javob beradi, shuning uchun variantlar uchta. Birinchisi — podyezd domofonini qoldirib, trubkani moslashtirish modulli videomonitorga almashtirish: u podyezd panelidan jiringlaydi va podyezdda videopanel boʻlsa, mehmonni koʻrsatadi. Mos qurilmani qanday tanlashni domofon trubkasini almashtirish haqidagi maqolada koʻrib chiqqanmiz.",
+              "Ikkinchisi — kvartira eshigi yonida oʻz paneli. Eng oddiysi simsiz videoqoʻngʻiroq: 2K ruxsatli Tapo D230S1 akkumulyatordan 180 kungacha ishlaydi, 512 GB gacha xotira kartasiga yozadi va chaqiruvni telefonga yuboradi; narxi 976 900 soʻmdan. U eshikni ochmaydi — bu qulfli domofon emas, kamerali qoʻngʻiroq. Kvartirada qulf va monitor kerak boʻlsa, IP-toʻplam qoʻyiladi.",
+              "Uchinchisi — butun podyezd yoki uyni modernizatsiya qilish: qarorni XUJMSh yoki boshqaruv kompaniyasi qabul qiladi. Buning uchun IP-tizimlar va koʻp kvartirali uylar uchun ikki simli tizimlar mos keladi; yangi binolarda 2026-yil 1-maydan kameralar va domofonlar PQ-48 qaroriga koʻra loyihaga kiritiladi — batafsil yangi binolar haqidagi maqolamizda."
+            ]
+          },
+          {
+            "h": "Turni qanday tanlash va qoʻngʻiroqni telefonga ulash",
+            "p": [
+              "Oddiy qoida: toʻrt sim yotibdi va telefonga qoʻngʻiroq kerak — gibrid toʻplam; faqat ikki sim bor, devorni buzish mumkin emas — ikki simli tizim; taʼmir qilyapsiz, uy quryapsiz yoki ofisni jihozlayapsiz — IP-domofon; ofisda IP-ATS allaqachon ishlayapti — SIP ni qoʻllab-quvvatlaydigan IP-panel. Oʻz paneli boʻlmagan kvartira uchun — moslashtirish modulli monitor yoki simsiz videoqoʻngʻiroq.",
+              "Telefonga qoʻngʻiroq uch yoʻl bilan keladi: ishlab chiqaruvchining bulutli ilovasi orqali (Hikvisionda Hik-Connect, Dahuada DMSS), SIP orqali ofis ATS telefonlariga yoki simsiz videoqoʻngʻiroq ilovasi orqali. Barcha hollarda bir nechta oila aʼzosi yoki xodimga, har biriga oʻz huquqlari bilan kirish bergan maʼqul.",
+              "Bu turlarning barchasidagi domofonlarni toʻliq tayyor holda tanlaymiz va oʻrnatamiz: panel, monitor, qulf, liniya va telefonlarga qoʻngʻiroqni sozlash. Ishlarga 3 yil kafolat beramiz. Eshigingiz, podyezdingiz yoki ofisingiz uchun hisobni domofoniya sahifasida buyurtma qilish mumkin — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Eski domofon kabelini qoldirish mumkinmi?",
+            "a": "Ha, agar tizim turi liniyaga mos kelsa: toʻrt simga analog yoki gibrid toʻplam, ikki simga — ikki simli tizim qoʻyiladi. IP uchun oʻralgan juftlik kerak."
+          },
+          {
+            "q": "Videodomofon internetsiz ishlaydimi?",
+            "a": "Panel, monitor va qulf mahalliy va internetsiz ishlaydi. Internet faqat bulut orqali smartfonga qoʻngʻiroq uchun kerak; ofis tarmogʻi ichidagi SIP-chaqiruv usiz ham oʻtadi."
+          },
+          {
+            "q": "Chaqiruvni nechta telefon qabul qila oladi?",
+            "a": "Hik-Connect yoki DMSS ilovasida bir nechta foydalanuvchiga, har biriga oʻz huquqlari bilan kirish beriladi. SIP orqali chaqiruvni ofis telefonlari guruhiga yoʻnaltirish mumkin."
+          },
+          {
+            "q": "Videoqoʻngʻiroq videodomofondan nimasi bilan farq qiladi?",
+            "a": "Videoqoʻngʻiroq — tugmali va akkumulyatorli kamera, chaqiruv faqat ilovaga keladi, u qulfni ochmaydi. Videodomofon kvartiradagi monitor bilan ishlaydi va eshik yoki kichik eshik qulfini boshqaradi."
+          },
+          {
+            "q": "Elektr oʻchganda domofon bilan nima boʻladi?",
+            "a": "Zaxira quvvatsiz panel va monitor oʻchadi. Akkumulyatorli quvvat bloki elektr oʻchganda domofon va qulfni ishlatib turadi; simsiz videoqoʻngʻiroq oʻz batareyasidan ishlaydi."
+          },
+          {
+            "q": "Ofis uchun qaysi turni tanlash kerak?",
+            "a": "IP-domofon: chaqiruv qabulxonaga, qoʻriqlash postiga va smartfonlarga boradi, tizim kameralar va SKUD bilan birlashadi. Ofisda IP-ATS boʻlsa, SIP ni qoʻllab-quvvatlaydigan panelni tanlang."
+          }
+        ],
+        "summary": [
+          "Videodomofon turlari liniya bilan farq qiladi: analogning toʻrt simi, raqamli tizimning ikki simi, IP ning oʻralgan juftligi yoki SIP protokoli.",
+          "Analog monitor chaqiruvni telefonga oʻtkazmaydi; gibrid toʻplam toʻrt simli panelni saqlaydi va smartfonga qoʻngʻiroq qoʻshadi.",
+          "Ikki simli tizim allaqachon yotqizilgan ikki simdan foydalanadi va devorni buzmasdan modernizatsiya uchun mos.",
+          "IP-domofon kengayadi va kameralar hamda SKUD bilan birlashadi; SIP eshikdan ofis ATS telefonlariga bulutsiz qoʻngʻiroq qilish imkonini beradi.",
+          "Koʻp qavatli uydagi kvartirada — moslashtirish modulli monitor, simsiz videoqoʻngʻiroq yoki IP-toʻplam; podyezdni modernizatsiya qilishni XUJMSh yoki boshqaruv kompaniyasi hal qiladi."
+        ]
+      },
+      "en": {
+        "title": "Video Intercom for a Flat and an Entrance: 4-Wire, 2-Wire, IP or SIP — How It Works and How to Get Calls on Your Phone",
+        "seoTitle": "Video Intercom: 4-Wire, 2-Wire, IP or SIP Explained",
+        "seoDesc": "How video intercoms work: 4-wire, hybrid, 2-wire, IP and SIP. What to choose for a flat, an entrance or an office, and how to get door calls on your phone.",
+        "excerpt": "Video intercoms differ not by the screen but by what runs through the wires: four analogue conductors, two conductors of a digital system, IP twisted pair or a call over the SIP protocol. We explain how each type works, when the old cable can stay, how to get calls on a phone without rewiring, what can actually be installed in a flat in an apartment block, and what it costs.",
+        "sections": [
+          {
+            "h": "What any video intercom consists of",
+            "p": [
+              "Every system is a door station with a camera and a button, an indoor monitor in the flat or house, a lock with its power supply, and a line between them. The difference between intercom types lies in what travels along that line and how: an analogue signal over four conductors, a digital one over two, network packets over twisted pair, or a call over an IP telephony protocol.",
+              "The line type decides three things that matter to the owner: whether existing cable can be reused, how many monitors and stations can be connected, and whether a call reaches the phone when nobody is home. Below are five system types in order, from the simplest to the most flexible."
+            ]
+          },
+          {
+            "h": "4-wire analogue intercom",
+            "p": [
+              "The classic for a private house: four conductors carry station power, audio, video and a common wire. The system works without a network or set-up, the station and monitor connect directly, and modern models transmit HD pictures using HD-TVI. An example is the Hikvision DS-KIS202T kit with a 2 MP station and a 7-inch monitor, from 865,900 UZS.",
+              "There is one important limitation: an analogue monitor rings only itself. If nobody is home, the visitor calls into the void — the call does not go to a phone. That is enough for a country house or a home where someone is always in; for people at work all day it is not."
+            ]
+          },
+          {
+            "h": "Hybrid: old cable, calls on the phone",
+            "p": [
+              "A hybrid kit keeps an analogue door station on four conductors, but the indoor monitor joins the home network — over Wi-Fi or cable — and works with the Hik-Connect app. The call reaches both the monitor and the smartphone: you can talk to a courier and open the gate from work. No new cable to the gate is needed.",
+              "This is the most common way to replace an old intercom in a private house: the wires are already there, and phone calls are wanted. Our catalogue has the Hikvision DS-KIS302-P from 1,236,900 UZS and the DS-KIS312-P with a 2 MP station from 1,298,900 UZS. Phone calls are set up as for IP intercoms — see our separate Hik-Connect guide."
+            ]
+          },
+          {
+            "h": "2-wire digital intercom",
+            "p": [
+              "In a 2-wire system, power, audio, video and commands all travel over just two conductors: the signal is digitised, and a distributor with a shared power supply feeds it to the monitors. The main advantage is that an existing two-conductor line from an old doorbell or audio intercom can be reused without chasing walls after a renovation. Major manufacturers make 2-wire kits; at Hikvision it is the DS-KIS70x series.",
+              "2-wire systems also suit small apartment buildings: dozens of monitors connect to one station through distributors, and modern models can forward calls to a smartphone too. The downside is that one system’s equipment does not mix with other brands, so it has to be extended with the same components."
+            ]
+          },
+          {
+            "h": "IP intercom: twisted pair and PoE",
+            "p": [
+              "In an IP system the station and monitors are network devices connected to a switch with twisted pair, often powered over the same cable by PoE. The number of monitors and stations is almost unlimited, CCTV cameras and access control can be added, and calls go to the monitor, the security desk and smartphones through the manufacturer’s cloud — with no public IP address or port forwarding.",
+              "A sample kit for a flat or house: a Hikvision DS-KV6113-PE1(C) door station with a 2 MP camera and card reader — 822,900 UZS, and a DS-KH6320-WTE1 monitor with Wi-Fi and PoE — 964,900 UZS. An IP intercom is the choice for new wiring, a renovation, an office, or a residential complex where scale and camera integration matter."
+            ]
+          },
+          {
+            "h": "SIP: the intercom as a phone extension",
+            "p": [
+              "SIP is the standard IP telephony protocol. A SIP-capable station registers on an office IP PBX or SIP server like an ordinary phone extension and calls any SIP phone, a softphone app on a computer or smartphone, the reception desk or the security post. No manufacturer cloud is needed, and within the local network the call works without internet.",
+              "SIP is listed in the specifications of Dahua VTO-series IP stations and, for example, the ZKTeco VT07-B01 monitor; support depends on the model and firmware version, so it is checked before purchase. Offices, hotels and business centres with IP telephony choose this type: a door call reaches the same phones as customer calls. We configure IP PBXs as a separate service."
+            ]
+          },
+          {
+            "h": "What you can install in a flat in an apartment block",
+            "p": [
+              "A flat owner is responsible only for their own door, so there are three options. The first is to keep the building intercom and replace the handset with a video monitor with an interface module: it rings from the entrance panel and shows the visitor if the entrance has a video panel. How to choose a compatible unit is covered in our article on replacing an intercom handset.",
+              "The second is your own station at the flat door. The simplest is a wireless video doorbell: the Tapo D230S1 with 2K resolution runs on its battery for up to 180 days, records to a memory card of up to 512 GB and sends the call to your phone; it costs from 976,900 UZS. It does not open the door — it is a doorbell with a camera, not an intercom with a lock. If you need a lock and a monitor in the flat, an IP kit is installed.",
+              "The third is upgrading the whole entrance or building: the decision belongs to the homeowners’ association or the management company. IP systems and 2-wire multi-apartment systems suit this; in new buildings, since 1 May 2026 cameras and intercoms are planned into the project under resolution PP-48 — more in our article on new buildings."
+            ]
+          },
+          {
+            "h": "How to choose a type and get calls on your phone",
+            "p": [
+              "A simple rule: four conductors are in place and you want phone calls — a hybrid kit; there are only two conductors and you cannot chase walls — a 2-wire system; you are renovating, building a house or fitting out an office — an IP intercom; the office already runs an IP PBX — an IP station with SIP support. For a flat without its own station — a monitor with an interface module or a wireless video doorbell.",
+              "Calls reach the phone in three ways: through the manufacturer’s cloud app (Hik-Connect for Hikvision, DMSS for Dahua), through SIP to office PBX phones, or through the wireless doorbell’s app. In every case it is worth giving access to several family members or staff, each with their own rights.",
+              "We select and install intercoms of all these types on a turnkey basis: station, monitor, lock, line and phone call set-up. Our work carries a 3-year warranty. A calculation for your door, entrance or office can be ordered on our intercom page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Can the old intercom cable stay?",
+            "a": "Yes, if the system type matches the line: on four conductors an analogue or hybrid kit is installed, on two — a 2-wire system. IP needs twisted pair."
+          },
+          {
+            "q": "Does a video intercom work without internet?",
+            "a": "The station, monitor and lock work locally without internet. Internet is needed only for smartphone calls via the cloud; a SIP call within the office network goes through without it."
+          },
+          {
+            "q": "How many phones can receive the call?",
+            "a": "In the Hik-Connect or DMSS app, access is given to several users, each with their own rights. Over SIP, the call can be routed to a group of office phones."
+          },
+          {
+            "q": "How is a video doorbell different from a video intercom?",
+            "a": "A video doorbell is a camera with a button and a battery; the call goes only to the app, and it does not open a lock. A video intercom works with a monitor in the flat and controls the door or gate lock."
+          },
+          {
+            "q": "What happens to the intercom in a power cut?",
+            "a": "Without backup power the station and monitor shut down. A power supply with a battery keeps the intercom and lock working during outages; a wireless doorbell runs on its own battery."
+          },
+          {
+            "q": "Which type should an office choose?",
+            "a": "An IP intercom: calls go to reception, the security post and smartphones, and the system combines with cameras and access control. If the office has an IP PBX, choose a station with SIP support."
+          }
+        ],
+        "summary": [
+          "Video intercom types differ by line: four analogue conductors, two conductors of a digital system, IP twisted pair, or the SIP protocol.",
+          "An analogue monitor does not forward calls to a phone; a hybrid kit keeps the 4-wire station and adds smartphone calls.",
+          "A 2-wire system reuses two existing conductors and suits upgrades without chasing walls.",
+          "An IP intercom scales and combines with cameras and access control; SIP lets the door call office PBX phones without a cloud.",
+          "In a flat in an apartment block: a monitor with an interface module, a wireless video doorbell or an IP kit; upgrading the entrance is up to the association or management company."
+        ]
+      },
+      "tr": {
+        "title": "Daire ve Apartman Girişi için Görüntülü Diyafon: 4 Telli, 2 Telli, IP veya SIP — Nasıl Çalışır, Telefona Nasıl Bağlanır",
+        "seoTitle": "Görüntülü Diyafon: 4 Telli, 2 Telli, IP veya SIP",
+        "seoDesc": "Görüntülü diyafonlar nasıl çalışır: 4 telli, hibrit, 2 telli, IP ve SIP. Daire, apartman ve ofis için hangisi seçilir, kapı çağrısı telefona nasıl alınır.",
+        "excerpt": "Görüntülü diyafonlar ekranla değil, kablolardan ne geçtiğiyle ayrılır: analog sistemin dört teli, dijital sistemin iki teli, IP'nin bükümlü çifti ya da SIP protokolüyle arama. Her türün nasıl çalıştığını, eski kablonun ne zaman kalabileceğini, kablo yenilemeden telefona çağrının nasıl alınacağını, apartmandaki bir daireye gerçekte ne takılabileceğini ve maliyetini açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Her görüntülü diyafon nelerden oluşur",
+            "p": [
+              "Her sistem; kapıda kameralı ve butonlu bir dış ünite, daire veya evde bir iç monitör, güç kaynaklı bir kilit ve aralarındaki hattan oluşur. Diyafon türleri arasındaki fark, bu hattan neyin ve nasıl iletildiğidir: dört tel üzerinden analog sinyal, iki tel üzerinden dijital sinyal, bükümlü çift üzerinden ağ paketleri ya da IP telefon protokolüyle arama.",
+              "Hat türü, sahibi için önemli üç şeyi belirler: mevcut kablo kullanılabilir mi, kaç monitör ve dış ünite bağlanabilir ve evde kimse yokken çağrı telefona gelir mi. Aşağıda en basitinden en esnekine doğru beş sistem türü var."
+            ]
+          },
+          {
+            "h": "4 telli analog diyafon",
+            "p": [
+              "Müstakil ev için klasik: dört telden dış ünite beslemesi, ses, görüntü ve ortak hat geçer. Sistem ağ ve ayar olmadan çalışır, dış ünite ve monitör doğrudan bağlanır; modern modeller görüntüyü HD-TVI teknolojisiyle HD iletir. Örnek: 2 MP dış üniteli ve 7 inç monitörlü Hikvision DS-KIS202T seti, 865.900 UZS'den.",
+              "Tek ama önemli bir sınır var: analog monitör yalnızca kendisini çaldırır. Evde kimse yoksa ziyaretçi boşluğa çalar — çağrı telefona gitmez. Yazlık ya da sürekli birinin bulunduğu bir ev için yeterlidir; bütün gün işte olanlar için değildir."
+            ]
+          },
+          {
+            "h": "Hibrit: eski kablo, telefona çağrı",
+            "p": [
+              "Hibrit set, dört telli analog dış üniteyi korur ama iç monitör ev ağına — Wi-Fi veya kabloyla — bağlanır ve Hik-Connect uygulamasıyla çalışır. Çağrı hem monitöre hem akıllı telefona gelir: kuryeyle konuşup bahçe kapısını işten açabilirsiniz. Bahçe kapısına yeni kablo çekmek gerekmez.",
+              "Müstakil evde eski diyafonu değiştirmenin en yaygın yolu budur: kablolar zaten var, telefona çağrı isteniyor. Kataloğumuzda Hikvision DS-KIS302-P 1.236.900 UZS'den ve 2 MP dış üniteli DS-KIS312-P 1.298.900 UZS'den. Telefona bağlantı IP diyafonlardaki gibi ayarlanır — ayrıntılar Hik-Connect rehberimizde."
+            ]
+          },
+          {
+            "h": "2 telli dijital diyafon",
+            "p": [
+              "2 telli sistemde besleme, ses, görüntü ve komutlar yalnızca iki telden geçer: sinyal dijitaldir, dağıtıcı ve ortak güç kaynağı onu monitörlere dağıtır. Asıl avantajı, eski zil veya sesli diyafonun mevcut iki telli hattının tadilattan sonra duvar kırmadan kullanılabilmesidir. 2 telli setleri büyük üreticiler yapar; Hikvision'da bu DS-KIS70x serisidir.",
+              "2 telli sistemler küçük apartmanlar için de uygundur: tek dış üniteye dağıtıcılar üzerinden onlarca monitör bağlanır, modern modeller çağrıyı akıllı telefona da aktarabilir. Dezavantajı, bir sistemin ekipmanının başka markalarla karışmamasıdır; genişletme aynı bileşenlerle yapılır."
+            ]
+          },
+          {
+            "h": "IP diyafon: bükümlü çift ve PoE",
+            "p": [
+              "IP sistemde dış ünite ve monitörler, bir switch'e bükümlü çiftle bağlanan ağ cihazlarıdır ve çoğu zaman aynı kablodan PoE ile beslenir. Monitör ve dış ünite sayısı neredeyse sınırsızdır, sisteme güvenlik kameraları ve geçiş kontrolü eklenir; çağrı monitöre, güvenlik noktasına ve üreticinin bulutu üzerinden akıllı telefonlara gider — sabit IP adresi ve port yönlendirme gerekmez.",
+              "Daire veya ev için örnek set: 2 MP kameralı ve kart okuyuculu Hikvision DS-KV6113-PE1(C) dış ünite — 822.900 UZS, Wi-Fi ve PoE'li DS-KH6320-WTE1 monitör — 964.900 UZS. IP diyafon; yeni kablolama, tadilat, ofis ve ölçek ile kamera entegrasyonunun önemli olduğu siteler için tercihtir."
+            ]
+          },
+          {
+            "h": "SIP: telefon dahilisi olarak diyafon",
+            "p": [
+              "SIP, IP telefonun standart protokolüdür. SIP destekli dış ünite, ofisteki IP santrale veya SIP sunucusuna sıradan bir dahili gibi kaydolur ve herhangi bir SIP telefonu, bilgisayar ya da telefondaki softphone uygulamasını, resepsiyonu veya güvenlik noktasını arar. Bunun için üretici bulutu gerekmez, yerel ağ içinde arama internetsiz de çalışır.",
+              "SIP, Dahua VTO serisi IP dış ünitelerin ve örneğin ZKTeco VT07-B01 monitörün teknik özelliklerinde yer alır; destek modele ve yazılım sürümüne bağlıdır, bu yüzden satın almadan önce kontrol edilir. IP telefonu olan ofisler, oteller ve iş merkezleri bu türü seçer: kapı çağrısı müşteri aramalarının geldiği telefonlara düşer. IP santral kurulumunu ayrı bir hizmet olarak yapıyoruz."
+            ]
+          },
+          {
+            "h": "Apartmandaki bir daireye ne takılabilir",
+            "p": [
+              "Daire sahibi yalnızca kendi kapısından sorumludur, bu yüzden üç seçenek vardır. Birincisi apartman diyafonunu bırakıp ahizeyi arayüz modüllü bir görüntülü monitörle değiştirmek: apartman panelinden çalar ve girişte görüntülü panel varsa ziyaretçiyi gösterir. Uyumlu cihazın nasıl seçileceğini diyafon ahizesi değişimi yazımızda anlattık.",
+              "İkincisi daire kapısında kendi ünitenizdir. En basiti kablosuz görüntülü kapı zilidir: 2K çözünürlüklü Tapo D230S1 bataryayla 180 güne kadar çalışır, 512 GB'a kadar hafıza kartına kaydeder ve çağrıyı telefona gönderir; fiyatı 976.900 UZS'den başlar. Kapıyı açmaz — kilitli bir diyafon değil, kameralı bir zildir. Dairede kilit ve monitör gerekiyorsa IP set kurulur.",
+              "Üçüncüsü tüm girişin veya binanın yenilenmesidir: kararı site yönetimi verir. Bunun için IP sistemler ve apartmanlara yönelik 2 telli sistemler uygundur; yeni binalarda 1 Mayıs 2026'dan itibaren kameralar ve diyafonlar PP-48 kararına göre projeye dahil edilir — ayrıntılar yeni binalar yazımızda."
+            ]
+          },
+          {
+            "h": "Tür nasıl seçilir, çağrı telefona nasıl alınır",
+            "p": [
+              "Basit kural: dört tel var ve telefona çağrı isteniyor — hibrit set; yalnızca iki tel var ve duvar kırılamıyor — 2 telli sistem; tadilat, ev inşaatı veya ofis donanımı — IP diyafon; ofiste IP santral zaten çalışıyor — SIP destekli IP dış ünite. Kendi ünitesi olmayan daire için — arayüz modüllü monitör veya kablosuz görüntülü zil.",
+              "Çağrı telefona üç yolla gelir: üreticinin bulut uygulamasıyla (Hikvision'da Hik-Connect, Dahua'da DMSS), SIP ile ofis santralinin telefonlarına ya da kablosuz zilin uygulamasıyla. Her durumda birkaç aile üyesine veya çalışana, her birine kendi yetkisiyle erişim vermek iyi olur.",
+              "Bu türlerin tümündeki diyafonları anahtar teslim seçip kuruyoruz: dış ünite, monitör, kilit, hat ve telefona çağrı ayarı. İşçiliğe 3 yıl garanti veriyoruz. Kapınız, girişiniz veya ofisiniz için hesabı diyafon sayfamızdan isteyebilirsiniz — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Eski diyafon kablosu kalabilir mi?",
+            "a": "Evet, sistem türü hatta uyuyorsa: dört telde analog veya hibrit set, iki telde 2 telli sistem kurulur. IP için bükümlü çift gerekir."
+          },
+          {
+            "q": "Görüntülü diyafon internetsiz çalışır mı?",
+            "a": "Dış ünite, monitör ve kilit yerel olarak internetsiz çalışır. İnternet yalnızca bulut üzerinden telefona çağrı için gerekir; ofis ağı içindeki SIP araması internetsiz de geçer."
+          },
+          {
+            "q": "Çağrıyı kaç telefon alabilir?",
+            "a": "Hik-Connect veya DMSS uygulamasında birden çok kullanıcıya, her birine kendi yetkisiyle erişim verilir. SIP ile çağrı bir ofis telefonu grubuna yönlendirilebilir."
+          },
+          {
+            "q": "Görüntülü zil diyafondan nasıl farklıdır?",
+            "a": "Görüntülü zil butonlu ve bataryalı bir kameradır; çağrı yalnızca uygulamaya gelir ve kilit açmaz. Görüntülü diyafon dairedeki monitörle çalışır ve kapı ya da bahçe kapısı kilidini yönetir."
+          },
+          {
+            "q": "Elektrik kesilince diyafona ne olur?",
+            "a": "Yedek güç olmadan dış ünite ve monitör kapanır. Bataryalı güç kaynağı kesintilerde diyafonu ve kilidi çalışır tutar; kablosuz zil kendi bataryasıyla çalışır."
+          },
+          {
+            "q": "Ofis için hangi tür seçilmeli?",
+            "a": "IP diyafon: çağrı resepsiyona, güvenlik noktasına ve telefonlara gider, sistem kameralar ve geçiş kontrolüyle birleşir. Ofiste IP santral varsa SIP destekli dış ünite seçin."
+          }
+        ],
+        "summary": [
+          "Görüntülü diyafon türleri hatla ayrılır: analog dört tel, dijital iki tel, IP bükümlü çift veya SIP protokolü.",
+          "Analog monitör çağrıyı telefona aktarmaz; hibrit set dört telli dış üniteyi korur ve telefona çağrı ekler.",
+          "2 telli sistem mevcut iki teli kullanır, duvar kırmadan yenileme için uygundur.",
+          "IP diyafon ölçeklenir, kameralar ve geçiş kontrolüyle birleşir; SIP kapıdan ofis santrali telefonlarına bulutsuz arama sağlar.",
+          "Apartman dairesinde: arayüz modüllü monitör, kablosuz görüntülü zil veya IP set; girişin yenilenmesine site yönetimi karar verir."
+        ]
+      },
+      "zh": {
+        "title": "公寓与单元门可视对讲：四线、两线、IP还是SIP——原理与如何把呼叫接到手机",
+        "seoTitle": "可视对讲：四线、两线、IP与SIP怎么选",
+        "seoDesc": "可视对讲的原理：四线、混合、两线、IP与SIP。公寓、单元门和办公室该怎么选，门口呼叫如何转到手机。",
+        "excerpt": "可视对讲的区别不在屏幕，而在线路里传的是什么：模拟系统的四芯线、数字系统的两芯线、IP的双绞线，或通过SIP协议呼叫。本文讲解每种类型的原理、旧线缆何时可以保留、不重新布线如何把呼叫接到手机、楼房里的公寓实际能装什么，以及价格。",
+        "sections": [
+          {
+            "h": "任何可视对讲都由什么组成",
+            "p": [
+              "任何系统都由门口带摄像头和按键的门口机、公寓或住宅内的室内机、带电源的门锁，以及连接它们的线路组成。各类对讲的区别在于线路上传什么、怎么传：四芯线传模拟信号，两芯线传数字信号，双绞线传网络数据包，或通过IP电话协议呼叫。",
+              "线路类型决定业主关心的三件事：能否利用已敷设的线缆，能接多少台室内机和门口机，以及家里没人时呼叫能否到达手机。下面按从简单到灵活的顺序介绍五种系统。"
+            ]
+          },
+          {
+            "h": "四线模拟对讲",
+            "p": [
+              "独栋住宅的经典方案：四芯线分别传门口机电源、音频、视频和公共线。系统无需网络和设置即可工作，门口机与室内机直连，现代型号通过HD-TVI技术传输高清画面。例如海康DS-KIS202T套装，含200万像素门口机和7英寸室内机，865 900苏姆起。",
+              "唯一但重要的限制是：模拟室内机只会自己响铃。家里没人时访客等于白按——呼叫不会转到手机。对于别墅或总有人在家的住宅这就够了；对于整天上班的人则不够。"
+            ]
+          },
+          {
+            "h": "混合型：旧线缆，手机接听",
+            "p": [
+              "混合套装保留四线模拟门口机，但室内机通过Wi-Fi或网线接入家庭网络并配合Hik-Connect应用使用。呼叫同时到达室内机和手机：在单位也能与快递员通话并打开院门。无需重新布线到院门。",
+              "这是独栋住宅更换旧对讲最常见的方案：线已经有了，又需要手机接听。我们目录中有海康DS-KIS302-P，1 236 900苏姆起，以及带200万像素门口机的DS-KIS312-P，1 298 900苏姆起。手机接听的设置与IP对讲相同——详见我们的Hik-Connect使用指南。"
+            ]
+          },
+          {
+            "h": "两线数字对讲",
+            "p": [
+              "两线系统的电源、音频、视频和控制指令只用两根芯线传输：信号经过数字化，由分配器和统一电源分送到各室内机。最大优点是可以利用旧门铃或音频对讲已敷设的两芯线，装修后无需开槽。各大厂商都有两线套装，海康为DS-KIS70x系列。",
+              "两线系统也适合小型多户住宅：通过分配器，一台门口机可接数十台室内机，现代型号同样能把呼叫转到手机。缺点是同一系统的设备不能与其他品牌混用，扩展只能用同系列组件。"
+            ]
+          },
+          {
+            "h": "IP对讲：双绞线与PoE",
+            "p": [
+              "IP系统中，门口机和室内机都是网络设备，用双绞线接入交换机，常通过同一根网线PoE供电。室内机和门口机数量几乎不受限，可接入监控摄像机和门禁，呼叫经厂家云平台送达室内机、保安岗和手机——无需公网IP和端口映射。",
+              "公寓或住宅示例：海康DS-KV6113-PE1(C)门口机，200万像素摄像头并带刷卡——822 900苏姆；带Wi-Fi和PoE的DS-KH6320-WTE1室内机——964 900苏姆。IP对讲适合新布线、装修、办公室，以及重视规模和与摄像机联动的住宅小区。"
+            ]
+          },
+          {
+            "h": "SIP：把对讲当作电话分机",
+            "p": [
+              "SIP是IP电话的标准协议。支持SIP的门口机像普通分机一样注册到办公室IP-PBX或SIP服务器，可呼叫任意SIP话机、电脑或手机上的软电话、前台或保安岗。无需厂家云平台，局域网内不联网也能通话。",
+              "大华VTO系列IP门口机以及ZKTeco VT07-B01室内机等的规格中列有SIP；是否支持取决于型号和固件版本，购买前需确认。已有IP电话的办公室、酒店和商务中心会选择这种方式：门口呼叫直接打到与客户来电相同的电话上。IP-PBX配置是我们的一项独立服务。"
+            ]
+          },
+          {
+            "h": "楼房里的公寓能装什么",
+            "p": [
+              "公寓业主只负责自家的门，所以有三种选择。其一，保留单元门对讲，把听筒换成带接口模块的可视室内机：它随单元门口机响铃，若单元门是可视门口机还能看到访客。如何选择兼容设备，见我们关于更换对讲听筒的文章。",
+              "其二，在入户门安装自己的设备。最简单的是无线可视门铃：2K分辨率的Tapo D230S1电池续航最长180天，录像存入最大512GB存储卡，并把呼叫推送到手机，976 900苏姆起。它不能开门——这是带摄像头的门铃，而不是带锁的对讲。如需门锁和室内机，就安装IP套装。",
+              "其三，整栋或整个单元升级：由业主委员会或物业公司决定。可选IP系统或面向多户住宅的两线系统；根据PP-48号决议，自2026年5月1日起新建住宅须在设计中纳入摄像机和对讲——详见我们关于新建住宅的文章。"
+            ]
+          },
+          {
+            "h": "如何选型并把呼叫接到手机",
+            "p": [
+              "简单规则：已有四芯线且需要手机接听——选混合套装；只有两芯线又不能开槽——选两线系统；正在装修、建房或装修办公室——选IP对讲；办公室已有IP-PBX——选支持SIP的IP门口机。没有自家门口机的公寓——选带接口模块的室内机或无线可视门铃。",
+              "呼叫到达手机有三种途径：厂家云应用（海康Hik-Connect、大华DMSS）、通过SIP到办公室交换机的话机，或无线门铃自己的应用。无论哪种，都建议给几位家庭成员或员工开通权限，各自权限不同。",
+              "以上各类对讲我们都提供交钥匙选型与安装：门口机、室内机、门锁、线路以及手机呼叫设置。施工质保3年。可在对讲页面为您的入户门、单元门或办公室申请测算——我们在一个工作日内回复报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "旧对讲线能保留吗？",
+            "a": "可以，只要系统类型与线路匹配：四芯线装模拟或混合套装，两芯线装两线系统。IP需要双绞线。"
+          },
+          {
+            "q": "可视对讲没有网络能用吗？",
+            "a": "门口机、室内机和门锁在本地无需网络即可工作。网络只用于经云平台的手机呼叫；办公网内的SIP呼叫不联网也能接通。"
+          },
+          {
+            "q": "可以有几部手机接听？",
+            "a": "在Hik-Connect或DMSS应用中可给多个用户开通权限，各自权限不同。通过SIP可把呼叫转到一组办公电话。"
+          },
+          {
+            "q": "可视门铃和可视对讲有什么区别？",
+            "a": "可视门铃是带按键和电池的摄像头，呼叫只到应用，不能开锁。可视对讲配合室内机使用，并控制门或院门的锁。"
+          },
+          {
+            "q": "停电时对讲会怎样？",
+            "a": "没有备用电源，门口机和室内机会断电。带蓄电池的电源可在停电时保持对讲和门锁工作；无线门铃靠自带电池运行。"
+          },
+          {
+            "q": "办公室该选哪种？",
+            "a": "IP对讲：呼叫到前台、保安岗和手机，系统可与摄像机和门禁联动。若办公室有IP-PBX，选支持SIP的门口机。"
+          }
+        ],
+        "summary": [
+          "可视对讲按线路区分：模拟四芯线、数字两芯线、IP双绞线或SIP协议。",
+          "模拟室内机不能把呼叫转到手机；混合套装保留四线门口机并增加手机接听。",
+          "两线系统利用已有的两芯线，适合无需开槽的升级。",
+          "IP对讲可扩展并与摄像机、门禁联动；SIP让门口机无需云平台即可呼叫办公室交换机的话机。",
+          "楼房公寓可选带接口模块的室内机、无线可视门铃或IP套装；单元门升级由业委会或物业决定。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "komplekt-videonablyudeniya-kak-vybrat",
     "date": "2026-10-30",
     "related": [
