@@ -34,6 +34,517 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "umnyy-zamok-kak-ustroen-batareya-vhodnaya-dver",
+    "date": "2026-11-02",
+    "related": [
+      "locks",
+      "access"
+    ],
+    "hubs": [
+      "zamki-i-skud"
+    ],
+    "brands": [],
+    "seeAlso": [
+      "elektronnyj-zamok-na-dver-kak-vybrat",
+      "eshik-qulfi-narxi",
+      "videodomofon-dlya-kvartiry-ip-sip-dvuhprovodnoy",
+      "umnyy-dom-s-chego-nachat"
+    ],
+    "products": [
+      "tapo-tapo-dl105",
+      "knd-tk-d1-pro",
+      "knd-tk-606a-tw",
+      "zkt-zkteco-hbl400-elektronnyi-biometricheskii-zamok-s-raspoznavaniem-lic"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Умный замок на входную дверь: как он открывает дверь, что будет при разряде батареи и какой выбрать",
+        "seoTitle": "Умный замок: как устроен и что будет при разряде",
+        "seoDesc": "Как умный замок открывает дверь: отпечаток, код, карта, приложение. Что будет при разряде батареи, подойдёт ли к вашей двери, какой поставить в квартиру и дом.",
+        "excerpt": "Умный замок открывает дверь по отпечатку, коду, карте или из приложения, но главный вопрос у всех один: что будет, если сядет батарея. Разбираем, как замок устроен внутри, как он узнаёт палец, почему разряженный замок не запирает хозяина снаружи, подойдёт ли он к вашей двери и какой замок ставить на квартиру, дом и офис.",
+        "sections": [
+          {
+            "h": "Как умный замок открывает дверь",
+            "p": [
+              "Умный замок состоит из двух частей. Снаружи — панель с тем, что вас узнаёт: сканер отпечатка, клавиатура для кода, считыватель карт, у некоторых моделей камера для распознавания лица. Внутри — блок с электроникой, батареей и маленьким мотором, который поворачивает ригель или механизм замка. Узнал владельца — мотор открыл; дверь закрылась — замок запер её сам или по нажатию кнопки.",
+              "Поэтому снаружи нет ничего, через что можно добраться до управления: батарея и мотор находятся с внутренней стороны двери. Механический ключ при этом остаётся как резервный способ: у большинства моделей под крышкой на наружной панели есть обычная личинка."
+            ]
+          },
+          {
+            "h": "Как замок узнаёт палец, код и телефон",
+            "p": [
+              "Сканеры отпечатков в замках обычно ёмкостные: они считывают рисунок папиллярных линий по электрическим свойствам кожи, а не по картинке, поэтому фотография пальца их не обманет. У Tapo DL105 по данным производителя распознавание занимает меньше половины секунды, в память помещается 100 отпечатков и 200 кодов.",
+              "Код вводится на клавиатуре; хорошие замки после нескольких неверных попыток блокируют ввод, чтобы код нельзя было подобрать. Карты работают как пропуск в офисе. Приложение открывает дверь по Bluetooth рядом с ней или через интернет издалека, позволяет выдать гостю временный код и показывает журнал: кто и когда открывал дверь."
+            ]
+          },
+          {
+            "h": "Что будет, если сядет батарея",
+            "p": [
+              "Это главный страх, и он напрасный. Замок заранее предупреждает о разряде — сигналом на панели и уведомлением в приложении, обычно за недели до того, как батарея сядет совсем. Срок работы зависит от модели и числа открытий: у Tapo DL105 со съёмным аккумулятором производитель заявляет до года по лабораторным тестам, а заряжается он через USB Type-C, как телефон.",
+              "Если предупреждение проигнорировали, остаются запасные пути: механический ключ из комплекта и у многих моделей разъём для аварийного питания снаружи — к нему подключают пауэрбанк и открывают дверь отпечатком или кодом. Есть ли такой разъём у конкретной модели, проверяют по характеристикам до покупки. Замки на батарейках AA или AAA, например KANIHAD, просто получают новый комплект элементов."
+            ]
+          },
+          {
+            "h": "Что будет без интернета и при отключении света",
+            "p": [
+              "Умный замок квартиры работает от своей батареи, поэтому отключение электричества в доме на него не влияет. Отпечаток, код и карта работают локально, без интернета: связь нужна только для удалённого открытия, уведомлений и журнала в приложении.",
+              "Иначе ведут себя замки систем контроля доступа, которые питаются от сети: электромагнитный замок без питания открывается, электромеханический остаётся запертым, поэтому их ставят с блоком питания и аккумулятором. Подробно разница между этими типами — в нашей статье о выборе электронного замка."
+            ]
+          },
+          {
+            "h": "Подойдёт ли умный замок к вашей двери",
+            "p": [
+              "Это вопрос, который стоит решить до покупки. Замки бывают разной конструкции: одни ставятся на уже врезанный ригель, другие заменяют наружную и внутреннюю накладки целиком и работают с врезным механизмом определённого типа. У каждой модели есть диапазон толщины полотна: у Tapo DL105 — 35–55 мм, у ZKTeco HBL400 — 45–60 мм.",
+              "Металлические входные двери часто требуют доработки посадочных отверстий, а у замков для стеклянных дверей своя конструкция. Поэтому инженер сначала смотрит дверь или её фото: толщину, тип врезного замка, сторону открывания и место под внутренний блок. Так замок встаёт с первого раза, а дверь закрывается без усилия — от этого зависит, сможет ли мотор запереть её сам."
+            ]
+          },
+          {
+            "h": "Что даёт замок, кроме открывания",
+            "p": [
+              "Временные коды — главное удобство для посуточной аренды, уборки, мастеров и курьеров: код действует в заданное время и сам перестаёт работать. Журнал открываний показывает, когда пришёл ребёнок из школы или во сколько ушла домработница. Автозапирание исключает ситуацию «забыли закрыть»: замок запирает дверь сам через заданное время.",
+              "Замок легко связать с остальной системой дома: открыть дверь из приложения видеодомофона, получить уведомление вместе с сигнализацией, добавить в сценарии умного дома. Замки с модулем Tuya Wi-Fi, например KANIHAD TK-606A-TW, работают в общей экосистеме Tuya с датчиками и розетками."
+            ]
+          },
+          {
+            "h": "Какой замок ставить на квартиру, дом и офис",
+            "p": [
+              "Квартира: умный замок с отпечатком, кодом и механическим ключом, подобранный под вашу дверь. Если в доме есть умный дом на Tuya — модель с Tuya Wi-Fi; если важна долгая автономность без замены батареек — модель со съёмным аккумулятором. Частный дом: на входную дверь — такой же умный замок, на калитку — электромеханический замок в уличном исполнении с открыванием от домофона.",
+              "Офис и коммерческие помещения: электромагнитный или электромеханический замок со считывателем карт и системой контроля доступа, где доступ уволенного сотрудника отзывается одним действием. Для кабинетов руководителя и серверной — биометрия: замок ZKTeco HBL400 распознаёт лицо на расстоянии до 1 метра, отпечаток и карту."
+            ]
+          },
+          {
+            "h": "Сколько стоят умные замки",
+            "p": [
+              "Цены каталога на 2 ноября 2026 года, без монтажа: KANIHAD TK-605A с картой и кодом — 679 900 сум; KANIHAD TK-606A-TW с отпечатком и Tuya Wi-Fi — 729 900; Tapo DL105 с отпечатком, кодом, приложением и аккумулятором — 989 900; KANIHAD TK-N1 Pro — 1 050 900; KANIHAD TK-D1 Pro с ресурсом 300 000 циклов — 1 607 900; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900.",
+              "Стоимость установки зависит от двери: на подготовленную дверь замок ставится за час-два, металлическая дверь с нестандартной врезкой требует доработки. Подбираем замок под вашу дверь по фото, устанавливаем и настраиваем приложение для всей семьи; на работы даём гарантию 3 года. Заявку можно оставить на странице электронных замков — ответим в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Можно ли открыть умный замок, если села батарея?",
+            "a": "Да: механическим ключом из комплекта, а у многих моделей — подключив пауэрбанк к разъёму аварийного питания снаружи. Кроме того, замок заранее предупреждает о разряде."
+          },
+          {
+            "q": "Работает ли умный замок без интернета?",
+            "a": "Да, отпечаток, код и карта работают локально. Интернет нужен только для удалённого открытия, уведомлений и журнала в приложении."
+          },
+          {
+            "q": "Можно ли обмануть сканер отпечатка?",
+            "a": "Ёмкостные сканеры считывают рисунок по электрическим свойствам кожи, поэтому фото или распечатка пальца не срабатывают. После нескольких неверных попыток хорошие замки блокируют ввод."
+          },
+          {
+            "q": "Подойдёт ли замок к металлической двери?",
+            "a": "Чаще всего да, но нужно проверить толщину полотна, тип врезного замка и место под внутренний блок. Инженер оценит дверь по фото и подскажет модель."
+          },
+          {
+            "q": "Можно ли дать гостю временный доступ?",
+            "a": "Да, в приложении создают код с ограниченным сроком действия: он сам перестаёт работать в заданное время."
+          },
+          {
+            "q": "Сколько служат батарейки или аккумулятор?",
+            "a": "От нескольких месяцев до года — зависит от модели и числа открываний. У Tapo DL105 производитель заявляет до года от одного заряда по лабораторным тестам."
+          }
+        ],
+        "summary": [
+          "Умный замок узнаёт владельца снаружи (отпечаток, код, карта, лицо), а мотор, батарея и электроника находятся с внутренней стороны двери.",
+          "О разряде замок предупреждает заранее; на крайний случай есть механический ключ и у многих моделей разъём для аварийного питания снаружи.",
+          "Отпечаток, код и карта работают без интернета и при отключении света; интернет нужен для удалённого открытия и журнала.",
+          "До покупки проверяют дверь: толщину полотна, тип врезного механизма, место под внутренний блок.",
+          "Умные замки в каталоге — от 679 900 сум; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900 сум (цены 02.11.2026)."
+        ]
+      },
+      "uz": {
+        "title": "Kirish eshigi uchun aqlli qulf: eshikni qanday ochadi, batareya tugasa nima boʻladi va qaysi birini tanlash kerak",
+        "seoTitle": "Aqlli qulf: qanday tuzilgan va batareya tugasa nima boʻladi",
+        "seoDesc": "Aqlli qulf eshikni qanday ochadi: barmoq izi, kod, karta, ilova. Batareya tugasa nima boʻladi, eshikka mos keladimi, kvartira va uyga qaysi biri.",
+        "excerpt": "Aqlli qulf eshikni barmoq izi, kod, karta yoki ilova orqali ochadi, lekin hammaning asosiy savoli bitta: batareya tugasa nima boʻladi. Qulf ichkaridan qanday tuzilganini, barmoqni qanday taniydi, nega zaryadi tugagan qulf egasini tashqarida qoldirmasligini, eshigingizga mos keladimi va kvartira, uy va ofisga qaysi qulfni qoʻyish kerakligini koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Aqlli qulf eshikni qanday ochadi",
+            "p": [
+              "Aqlli qulf ikki qismdan iborat. Tashqarida — sizni taniydigan narsalar bilan panel: barmoq izi skaneri, kod uchun klaviatura, karta oʻquvchisi, baʼzi modellarda yuzni tanish uchun kamera. Ichkarida — elektronika, batareya va rigel yoki qulf mexanizmini buradigan kichik motor bloki. Egasini tanidi — motor ochdi; eshik yopildi — qulf uni oʻzi yoki tugma bosilganda qulfladi.",
+              "Shuning uchun tashqarida boshqaruvga yetib boradigan hech narsa yoʻq: batareya va motor eshikning ichki tomonida. Mexanik kalit esa zaxira usul sifatida qoladi: koʻpchilik modellarda tashqi paneldagi qopqoq ostida oddiy lichinka bor."
+            ]
+          },
+          {
+            "h": "Qulf barmoq, kod va telefonni qanday taniydi",
+            "p": [
+              "Qulflardagi barmoq izi skanerlari odatda sigʻimli: ular papillyar chiziqlar naqshini rasm boʻyicha emas, terining elektr xossalari boʻyicha oʻqiydi, shuning uchun barmoq surati ularni aldamaydi. Tapo DL105 da ishlab chiqaruvchi maʼlumotiga koʻra tanish yarim soniyadan kam vaqt oladi, xotiraga 100 ta barmoq izi va 200 ta kod sigʻadi.",
+              "Kod klaviaturada teriladi; yaxshi qulflar bir necha notoʻgʻri urinishdan keyin kodni terib topib boʻlmasligi uchun kiritishni bloklaydi. Kartalar ofisdagi ruxsatnoma kabi ishlaydi. Ilova eshikni yonida Bluetooth orqali yoki uzoqdan internet orqali ochadi, mehmonga vaqtinchalik kod berish imkonini beradi va jurnalni koʻrsatadi: eshikni kim va qachon ochgan."
+            ]
+          },
+          {
+            "h": "Batareya tugasa nima boʻladi",
+            "p": [
+              "Bu asosiy qoʻrquv va u asossiz. Qulf zaryad tugayotgani haqida oldindan ogohlantiradi — paneldagi signal va ilovadagi bildirishnoma bilan, odatda batareya butunlay tugashidan bir necha hafta oldin. Ishlash muddati model va ochishlar soniga bogʻliq: yechiladigan akkumulyatorli Tapo DL105 uchun ishlab chiqaruvchi laboratoriya sinovlari boʻyicha bir yilgacha deb bayon qiladi, u telefon kabi USB Type-C orqali zaryadlanadi.",
+              "Agar ogohlantirishga eʼtibor berilmagan boʻlsa, zaxira yoʻllar qoladi: toʻplamdagi mexanik kalit va koʻp modellarda tashqarida avariya quvvati uchun ulagich — unga pauerbank ulanadi va eshik barmoq izi yoki kod bilan ochiladi. Muayyan modelda bunday ulagich bormi, xariddan oldin xususiyatlar boʻyicha tekshiriladi. AA yoki AAA batareyali qulflar, masalan KANIHAD, shunchaki yangi element toʻplamini oladi."
+            ]
+          },
+          {
+            "h": "Internetsiz va elektr oʻchganda nima boʻladi",
+            "p": [
+              "Kvartiraning aqlli qulfi oʻz batareyasidan ishlaydi, shuning uchun uyda elektr oʻchishi unga taʼsir qilmaydi. Barmoq izi, kod va karta mahalliy, internetsiz ishlaydi: aloqa faqat masofadan ochish, bildirishnomalar va ilovadagi jurnal uchun kerak.",
+              "Tarmoqdan quvvatlanadigan kirishni nazorat qilish tizimlari qulflari boshqacha ishlaydi: elektromagnit qulf quvvatsiz ochiladi, elektromexanik qulf esa yopiq qoladi, shuning uchun ular akkumulyatorli quvvat bloki bilan qoʻyiladi. Bu turlar orasidagi farq batafsil — elektron qulf tanlash haqidagi maqolamizda."
+            ]
+          },
+          {
+            "h": "Aqlli qulf eshigingizga mos keladimi",
+            "p": [
+              "Bu xariddan oldin hal qilish kerak boʻlgan savol. Qulflar turli tuzilishda boʻladi: biri allaqachon oʻyib oʻrnatilgan rigelga qoʻyiladi, boshqalari tashqi va ichki qoplamalarni butunlay almashtiradi va maʼlum turdagi oʻyma mexanizm bilan ishlaydi. Har bir modelning eshik qalinligi oraligʻi bor: Tapo DL105 da — 35–55 mm, ZKTeco HBL400 da — 45–60 mm.",
+              "Metall kirish eshiklari koʻpincha oʻrnatish teshiklarini moslashtirishni talab qiladi, shisha eshiklar uchun qulflar esa oʻzgacha tuzilgan. Shuning uchun muhandis avval eshikni yoki uning suratini koʻradi: qalinligi, oʻyma qulf turi, ochilish tomoni va ichki blok uchun joy. Shunda qulf birinchi marta oʻrnatiladi, eshik esa kuch sarflamasdan yopiladi — motor uni oʻzi qulflay olishi bunga bogʻliq."
+            ]
+          },
+          {
+            "h": "Qulf ochishdan tashqari nima beradi",
+            "p": [
+              "Vaqtinchalik kodlar — kunlik ijara, tozalash, ustalar va kuryerlar uchun asosiy qulaylik: kod belgilangan vaqtda amal qiladi va oʻzi ishlamay qoladi. Ochishlar jurnali bola maktabdan qachon kelganini yoki uy yordamchisi soat nechada ketganini koʻrsatadi. Avtomatik qulflash «yopishni unutdik» holatini istisno qiladi: qulf belgilangan vaqtdan keyin eshikni oʻzi qulflaydi.",
+              "Qulfni uyning qolgan tizimi bilan bogʻlash oson: eshikni videodomofon ilovasidan ochish, signalizatsiya bilan birga bildirishnoma olish, aqlli uy stsenariylariga qoʻshish. Tuya Wi-Fi modulli qulflar, masalan KANIHAD TK-606A-TW, datchiklar va rozetkalar bilan umumiy Tuya ekotizimida ishlaydi."
+            ]
+          },
+          {
+            "h": "Kvartira, uy va ofisga qaysi qulfni qoʻyish kerak",
+            "p": [
+              "Kvartira: eshigingizga moslab tanlangan barmoq izi, kod va mexanik kalitli aqlli qulf. Uyda Tuya asosidagi aqlli uy boʻlsa — Tuya Wi-Fi li model; batareyalarni almashtirmasdan uzoq avtonomlik muhim boʻlsa — yechiladigan akkumulyatorli model. Xususiy uy: kirish eshigiga — xuddi shunday aqlli qulf, kichik eshikka — domofondan ochiladigan tashqi ijrodagi elektromexanik qulf.",
+              "Ofis va tijorat binolari: karta oʻquvchisi va kirishni nazorat qilish tizimiga ega elektromagnit yoki elektromexanik qulf, unda ishdan ketgan xodimning kirishi bitta harakat bilan bekor qilinadi. Rahbar xonasi va server xonasi uchun — biometriya: ZKTeco HBL400 qulfi yuzni 1 metrgacha masofada, barmoq izi va kartani taniydi."
+            ]
+          },
+          {
+            "h": "Aqlli qulflar qancha turadi",
+            "p": [
+              "Katalog narxlari 2026-yil 2-noyabr holatiga, montajsiz: karta va kodli KANIHAD TK-605A — 679 900 soʻm; barmoq izi va Tuya Wi-Fi li KANIHAD TK-606A-TW — 729 900; barmoq izi, kod, ilova va akkumulyatorli Tapo DL105 — 989 900; KANIHAD TK-N1 Pro — 1 050 900; 300 000 sikl resursli KANIHAD TK-D1 Pro — 1 607 900; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900.",
+              "Oʻrnatish narxi eshikka bogʻliq: tayyorlangan eshikka qulf bir-ikki soatda qoʻyiladi, nostandart oʻymali metall eshik esa moslashtirishni talab qiladi. Qulfni eshigingizga surat boʻyicha tanlaymiz, oʻrnatamiz va butun oila uchun ilovani sozlaymiz; ishlarga 3 yil kafolat beramiz. Arizani elektron qulflar sahifasida qoldirish mumkin — ish kuni davomida javob beramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Batareya tugasa aqlli qulfni ochish mumkinmi?",
+            "a": "Ha: toʻplamdagi mexanik kalit bilan, koʻp modellarda esa tashqaridagi avariya quvvati ulagichiga pauerbank ulab. Bundan tashqari, qulf zaryad tugayotgani haqida oldindan ogohlantiradi."
+          },
+          {
+            "q": "Aqlli qulf internetsiz ishlaydimi?",
+            "a": "Ha, barmoq izi, kod va karta mahalliy ishlaydi. Internet faqat masofadan ochish, bildirishnomalar va ilovadagi jurnal uchun kerak."
+          },
+          {
+            "q": "Barmoq izi skanerini aldash mumkinmi?",
+            "a": "Sigʻimli skanerlar naqshni terining elektr xossalari boʻyicha oʻqiydi, shuning uchun barmoqning surati yoki bosma nusxasi ishlamaydi. Bir necha notoʻgʻri urinishdan keyin yaxshi qulflar kiritishni bloklaydi."
+          },
+          {
+            "q": "Qulf metall eshikka mos keladimi?",
+            "a": "Koʻpincha ha, lekin eshik qalinligi, oʻyma qulf turi va ichki blok uchun joyni tekshirish kerak. Muhandis eshikni surat boʻyicha baholaydi va model tavsiya qiladi."
+          },
+          {
+            "q": "Mehmonga vaqtinchalik kirish berish mumkinmi?",
+            "a": "Ha, ilovada amal qilish muddati cheklangan kod yaratiladi: u belgilangan vaqtda oʻzi ishlamay qoladi."
+          },
+          {
+            "q": "Batareya yoki akkumulyator qancha xizmat qiladi?",
+            "a": "Bir necha oydan bir yilgacha — model va ochishlar soniga bogʻliq. Tapo DL105 uchun ishlab chiqaruvchi laboratoriya sinovlari boʻyicha bir zaryaddan bir yilgacha deb bayon qiladi."
+          }
+        ],
+        "summary": [
+          "Aqlli qulf egasini tashqarida taniydi (barmoq izi, kod, karta, yuz), motor, batareya va elektronika esa eshikning ichki tomonida joylashgan.",
+          "Qulf zaryad tugayotgani haqida oldindan ogohlantiradi; eng oxirgi holat uchun mexanik kalit va koʻp modellarda tashqarida avariya quvvati ulagichi bor.",
+          "Barmoq izi, kod va karta internetsiz va elektr oʻchganda ham ishlaydi; internet masofadan ochish va jurnal uchun kerak.",
+          "Xariddan oldin eshik tekshiriladi: qalinligi, oʻyma mexanizm turi, ichki blok uchun joy.",
+          "Katalogdagi aqlli qulflar — 679 900 soʻmdan; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900 soʻm (narxlar 02.11.2026)."
+        ]
+      },
+      "en": {
+        "title": "A Smart Lock for Your Front Door: How It Opens the Door, What Happens When the Battery Dies, and Which to Choose",
+        "seoTitle": "Smart Lock: How It Works and What If the Battery Dies",
+        "seoDesc": "How a smart lock opens the door: fingerprint, code, card, app. What happens when the battery dies, whether it fits your door, which suits a flat or house.",
+        "excerpt": "A smart lock opens the door by fingerprint, code, card or app, but everyone asks the same question first: what happens if the battery dies. We explain how the lock works inside, how it recognises a finger, why a flat battery does not lock the owner out, whether it will fit your door, and which lock to choose for a flat, a house and an office.",
+        "sections": [
+          {
+            "h": "How a smart lock opens the door",
+            "p": [
+              "A smart lock has two parts. Outside is a panel with whatever recognises you: a fingerprint sensor, a keypad for a code, a card reader and, on some models, a camera for face recognition. Inside is a unit with the electronics, battery and a small motor that turns the bolt or lock mechanism. It recognises the owner — the motor unlocks; the door closes — the lock locks it by itself or at the press of a button.",
+              "So there is nothing outside that gives access to the controls: the battery and motor sit on the inner side of the door. A mechanical key remains as a backup: most models have an ordinary cylinder hidden under a cover on the outer panel."
+            ]
+          },
+          {
+            "h": "How the lock recognises a finger, a code and a phone",
+            "p": [
+              "Fingerprint sensors in locks are usually capacitive: they read the ridge pattern through the electrical properties of the skin rather than from an image, so a photo of a finger will not fool them. For the Tapo DL105 the manufacturer states recognition in under half a second and memory for 100 fingerprints and 200 codes.",
+              "A code is entered on the keypad; good locks block entry after several wrong attempts so the code cannot be guessed. Cards work like an office pass. The app opens the door over Bluetooth nearby or over the internet from afar, lets you give a guest a temporary code, and shows a log of who opened the door and when."
+            ]
+          },
+          {
+            "h": "What happens when the battery dies",
+            "p": [
+              "This is the main fear, and it is unfounded. The lock warns about a low battery in advance — with a signal on the panel and a notification in the app, usually weeks before the battery is completely flat. Battery life depends on the model and the number of openings: for the Tapo DL105 with its removable battery the manufacturer states up to a year in lab tests, and it charges over USB Type-C like a phone.",
+              "If the warning is ignored, there are fallbacks: the mechanical key supplied with the lock and, on many models, an outside emergency power port — you plug in a power bank and open the door with a fingerprint or code. Whether a given model has this port is checked in the specifications before buying. Locks running on AA or AAA batteries, such as KANIHAD models, simply get a fresh set of cells."
+            ]
+          },
+          {
+            "h": "What happens without internet or mains power",
+            "p": [
+              "A flat’s smart lock runs on its own battery, so a power cut in the building does not affect it. Fingerprint, code and card work locally, without internet: connectivity is needed only for remote opening, notifications and the app log.",
+              "Access-control locks powered from the mains behave differently: an electromagnetic lock opens without power and an electromechanical one stays locked, so they are installed with a power supply and battery. The difference between these types is covered in our article on choosing an electronic lock."
+            ]
+          },
+          {
+            "h": "Will a smart lock fit your door",
+            "p": [
+              "This should be settled before buying. Locks differ in design: some fit onto an existing mortise bolt, others replace the outer and inner trims completely and work with a specific type of mortise mechanism. Every model has a door thickness range: 35–55 mm for the Tapo DL105, 45–60 mm for the ZKTeco HBL400.",
+              "Metal front doors often need their mounting holes adapted, and locks for glass doors have a design of their own. So an engineer first looks at the door or a photo of it: thickness, mortise lock type, opening direction and space for the inner unit. That way the lock fits first time and the door closes without effort — which determines whether the motor can lock it by itself."
+            ]
+          },
+          {
+            "h": "What a lock offers beyond opening",
+            "p": [
+              "Temporary codes are the main convenience for short-term rentals, cleaners, tradespeople and couriers: a code works during a set time and then stops by itself. The opening log shows when a child got home from school or when the housekeeper left. Auto-lock rules out “we forgot to lock it”: the lock locks the door by itself after a set time.",
+              "The lock is easy to tie into the rest of the home: open the door from the video intercom app, get a notification together with the alarm, add it to smart-home scenes. Locks with a Tuya Wi-Fi module, such as the KANIHAD TK-606A-TW, work in the shared Tuya ecosystem with sensors and sockets."
+            ]
+          },
+          {
+            "h": "Which lock for a flat, a house and an office",
+            "p": [
+              "Flat: a smart lock with fingerprint, code and mechanical key, chosen to fit your door. If you already run a Tuya smart home — a model with Tuya Wi-Fi; if long autonomy without changing batteries matters — a model with a removable rechargeable battery. Private house: the same kind of smart lock on the front door, and an outdoor-rated electromechanical lock on the gate, opened from the intercom.",
+              "Offices and commercial premises: an electromagnetic or electromechanical lock with a card reader and an access-control system, where a departing employee’s access is revoked in one action. For a director’s office or server room — biometrics: the ZKTeco HBL400 recognises a face at up to 1 metre, plus fingerprint and card."
+            ]
+          },
+          {
+            "h": "What smart locks cost",
+            "p": [
+              "Catalogue prices on 2 November 2026, excluding installation: KANIHAD TK-605A with card and code — 679,900 UZS; KANIHAD TK-606A-TW with fingerprint and Tuya Wi-Fi — 729,900; Tapo DL105 with fingerprint, code, app and rechargeable battery — 989,900; KANIHAD TK-N1 Pro — 1,050,900; KANIHAD TK-D1 Pro rated for 300,000 cycles — 1,607,900; the biometric ZKTeco HBL400 with face recognition — 2,993,900.",
+              "Installation cost depends on the door: on a prepared door the lock goes on in an hour or two, while a metal door with a non-standard mortise needs adapting. We choose a lock for your door from a photo, install it and set up the app for the whole family; our work carries a 3-year warranty. You can leave a request on our electronic locks page — we reply within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Can a smart lock be opened if the battery is dead?",
+            "a": "Yes: with the mechanical key supplied, and on many models by plugging a power bank into the outside emergency power port. The lock also warns about a low battery in advance."
+          },
+          {
+            "q": "Does a smart lock work without internet?",
+            "a": "Yes, fingerprint, code and card work locally. Internet is needed only for remote opening, notifications and the app log."
+          },
+          {
+            "q": "Can the fingerprint sensor be fooled?",
+            "a": "Capacitive sensors read the pattern through the skin’s electrical properties, so a photo or printout of a finger does not work. Good locks also block entry after several wrong attempts."
+          },
+          {
+            "q": "Will the lock fit a metal door?",
+            "a": "Usually yes, but the door thickness, mortise lock type and space for the inner unit need checking. An engineer will assess the door from a photo and suggest a model."
+          },
+          {
+            "q": "Can I give a guest temporary access?",
+            "a": "Yes, the app creates a code with a limited validity period: it stops working by itself at the set time."
+          },
+          {
+            "q": "How long do the batteries last?",
+            "a": "From several months to a year, depending on the model and number of openings. For the Tapo DL105 the manufacturer states up to a year per charge in lab tests."
+          }
+        ],
+        "summary": [
+          "A smart lock recognises the owner outside (fingerprint, code, card, face), while the motor, battery and electronics sit on the inner side of the door.",
+          "The lock warns about a low battery in advance; as a last resort there is a mechanical key and, on many models, an outside emergency power port.",
+          "Fingerprint, code and card work without internet and during power cuts; internet is needed for remote opening and the log.",
+          "Before buying, check the door: thickness, mortise mechanism type and space for the inner unit.",
+          "Smart locks in our catalogue start at 679,900 UZS; the biometric ZKTeco HBL400 with face recognition costs 2,993,900 UZS (prices 02.11.2026)."
+        ]
+      },
+      "tr": {
+        "title": "Giriş Kapısı için Akıllı Kilit: Kapıyı Nasıl Açar, Pil Bitince Ne Olur, Hangisi Seçilmeli",
+        "seoTitle": "Akıllı Kilit: Nasıl Çalışır, Pil Bitince Ne Olur",
+        "seoDesc": "Akıllı kilit kapıyı nasıl açar: parmak izi, kod, kart, uygulama. Pil bitince ne olur, kapınıza uyar mı, daire ve eve hangisi takılmalı.",
+        "excerpt": "Akıllı kilit kapıyı parmak izi, kod, kart veya uygulamayla açar ama herkesin ilk sorusu aynıdır: pil biterse ne olur. Kilidin içeriden nasıl çalıştığını, parmağı nasıl tanıdığını, pili biten kilidin neden sahibini dışarıda bırakmadığını, kapınıza uyup uymayacağını ve daire, ev ve ofis için hangi kilidin seçileceğini açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Akıllı kilit kapıyı nasıl açar",
+            "p": [
+              "Akıllı kilit iki parçadan oluşur. Dışarıda sizi tanıyan şeylerin olduğu panel vardır: parmak izi okuyucu, kod için tuş takımı, kart okuyucu, bazı modellerde yüz tanıma kamerası. İçeride elektronik, pil ve sürgüyü ya da kilit mekanizmasını çeviren küçük bir motorun bulunduğu ünite vardır. Sahibini tanıdı — motor açtı; kapı kapandı — kilit kendiliğinden ya da bir tuşa basınca kilitledi.",
+              "Bu yüzden dışarıda kontrole ulaşılabilecek bir şey yoktur: pil ve motor kapının iç tarafındadır. Mekanik anahtar yedek yöntem olarak kalır: çoğu modelde dış paneldeki kapağın altında normal bir silindir bulunur."
+            ]
+          },
+          {
+            "h": "Kilit parmağı, kodu ve telefonu nasıl tanır",
+            "p": [
+              "Kilitlerdeki parmak izi okuyucular genellikle kapasitiftir: parmak izi desenini görüntüden değil, derinin elektriksel özelliklerinden okur; bu yüzden parmak fotoğrafı onları kandıramaz. Üreticiye göre Tapo DL105'te tanıma yarım saniyeden kısa sürer, belleğe 100 parmak izi ve 200 kod sığar.",
+              "Kod tuş takımında girilir; iyi kilitler birkaç hatalı denemeden sonra kodun tahmin edilmemesi için girişi kilitler. Kartlar ofis giriş kartı gibi çalışır. Uygulama kapıyı yakından Bluetooth ile ya da uzaktan internetle açar, misafire geçici kod vermeyi sağlar ve kapıyı kimin ne zaman açtığını gösteren kayıt tutar."
+            ]
+          },
+          {
+            "h": "Pil bitince ne olur",
+            "p": [
+              "Bu en büyük korkudur ve yersizdir. Kilit pil zayıfladığını önceden bildirir — panelde bir sinyal ve uygulamada bildirimle, genellikle pil tamamen bitmeden haftalar önce. Kullanım süresi modele ve açma sayısına bağlıdır: çıkarılabilir bataryalı Tapo DL105 için üretici laboratuvar testlerine göre bir yıla kadar belirtiyor ve telefon gibi USB Type-C ile şarj ediliyor.",
+              "Uyarı göz ardı edilirse yedek yollar kalır: kutudan çıkan mekanik anahtar ve birçok modelde dışarıda acil güç girişi — buraya powerbank takılır ve kapı parmak izi veya kodla açılır. Belirli bir modelde bu girişin olup olmadığı satın almadan önce özelliklerden kontrol edilir. KANIHAD gibi AA veya AAA pilli kilitlere yalnızca yeni pil takılır."
+            ]
+          },
+          {
+            "h": "İnternetsiz ve elektrik kesintisinde ne olur",
+            "p": [
+              "Dairenin akıllı kilidi kendi piliyle çalışır, bu yüzden binadaki elektrik kesintisi onu etkilemez. Parmak izi, kod ve kart yerel olarak, internetsiz çalışır: bağlantı yalnızca uzaktan açma, bildirimler ve uygulamadaki kayıt için gerekir.",
+              "Şebekeden beslenen geçiş kontrol kilitleri farklı davranır: elektromanyetik kilit enerjisiz kalınca açılır, elektromekanik kilit kilitli kalır; bu yüzden güç kaynağı ve bataryayla kurulurlar. Bu türler arasındaki fark, elektronik kilit seçimi yazımızda ayrıntılı anlatılıyor."
+            ]
+          },
+          {
+            "h": "Akıllı kilit kapınıza uyar mı",
+            "p": [
+              "Bu, satın almadan önce çözülmesi gereken sorudur. Kilitlerin tasarımı farklıdır: bazıları mevcut gömme sürgüye takılır, bazıları dış ve iç aynalığı tamamen değiştirir ve belirli tipte gömme mekanizmayla çalışır. Her modelin bir kapı kalınlığı aralığı vardır: Tapo DL105'te 35–55 mm, ZKTeco HBL400'de 45–60 mm.",
+              "Metal giriş kapıları çoğu zaman montaj deliklerinin uyarlanmasını gerektirir, cam kapı kilitlerinin ise kendine özgü tasarımı vardır. Bu yüzden mühendis önce kapıya veya fotoğrafına bakar: kalınlık, gömme kilit tipi, açılma yönü ve iç ünite için yer. Böylece kilit ilk seferde oturur, kapı zorlanmadan kapanır — motorun kapıyı kendisi kilitleyip kilitleyemeyeceği buna bağlıdır."
+            ]
+          },
+          {
+            "h": "Kilit açmanın ötesinde ne sağlar",
+            "p": [
+              "Geçici kodlar günlük kiralama, temizlik, ustalar ve kuryeler için en büyük kolaylıktır: kod belirlenen sürede geçerlidir ve sonra kendiliğinden devre dışı kalır. Açma kaydı çocuğun okuldan ne zaman geldiğini ya da yardımcının saat kaçta çıktığını gösterir. Otomatik kilitleme “kilitlemeyi unuttuk” durumunu ortadan kaldırır: kilit belirlenen süre sonra kapıyı kendisi kilitler.",
+              "Kilit evin diğer sistemlerine kolayca bağlanır: kapıyı görüntülü diyafon uygulamasından açmak, alarmla birlikte bildirim almak, akıllı ev senaryolarına eklemek. Tuya Wi-Fi modüllü kilitler, örneğin KANIHAD TK-606A-TW, sensörler ve prizlerle ortak Tuya ekosisteminde çalışır."
+            ]
+          },
+          {
+            "h": "Daire, ev ve ofise hangi kilit",
+            "p": [
+              "Daire: kapınıza göre seçilmiş, parmak izi, kod ve mekanik anahtarlı akıllı kilit. Evde Tuya tabanlı akıllı ev varsa Tuya Wi-Fi'li bir model; pil değiştirmeden uzun özerklik önemliyse çıkarılabilir şarjlı bataryalı bir model. Müstakil ev: giriş kapısına aynı türde akıllı kilit, bahçe kapısına diyafondan açılan dış mekân tipi elektromekanik kilit.",
+              "Ofis ve ticari alanlar: kart okuyuculu ve geçiş kontrol sistemli elektromanyetik veya elektromekanik kilit; ayrılan çalışanın erişimi tek işlemle iptal edilir. Yönetici odası ve sunucu odası için biyometri: ZKTeco HBL400 kilidi yüzü 1 metreye kadar mesafeden, parmak izini ve kartı tanır."
+            ]
+          },
+          {
+            "h": "Akıllı kilitler ne kadar",
+            "p": [
+              "2 Kasım 2026 katalog fiyatları, montaj hariç: kartlı ve kodlu KANIHAD TK-605A — 679.900 UZS; parmak izli ve Tuya Wi-Fi'li KANIHAD TK-606A-TW — 729.900; parmak izi, kod, uygulama ve şarjlı bataryalı Tapo DL105 — 989.900; KANIHAD TK-N1 Pro — 1.050.900; 300.000 döngü ömürlü KANIHAD TK-D1 Pro — 1.607.900; yüz tanımalı biyometrik ZKTeco HBL400 — 2.993.900.",
+              "Montaj maliyeti kapıya bağlıdır: hazır bir kapıya kilit bir-iki saatte takılır, standart dışı gömme kilitli metal kapı uyarlama gerektirir. Kapınıza uygun kilidi fotoğraftan seçiyor, takıyor ve tüm aile için uygulamayı kuruyoruz; işçiliğe 3 yıl garanti veriyoruz. Talebinizi elektronik kilitler sayfamızdan bırakabilirsiniz — bir iş günü içinde yanıtlıyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Pil bitmişse akıllı kilit açılabilir mi?",
+            "a": "Evet: kutudan çıkan mekanik anahtarla, birçok modelde ise dışarıdaki acil güç girişine powerbank takarak. Ayrıca kilit pil zayıfladığını önceden bildirir."
+          },
+          {
+            "q": "Akıllı kilit internetsiz çalışır mı?",
+            "a": "Evet, parmak izi, kod ve kart yerel olarak çalışır. İnternet yalnızca uzaktan açma, bildirimler ve uygulamadaki kayıt için gerekir."
+          },
+          {
+            "q": "Parmak izi okuyucu kandırılabilir mi?",
+            "a": "Kapasitif okuyucular deseni derinin elektriksel özelliklerinden okur; bu yüzden parmağın fotoğrafı veya çıktısı işe yaramaz. İyi kilitler birkaç hatalı denemeden sonra girişi de kilitler."
+          },
+          {
+            "q": "Kilit metal kapıya uyar mı?",
+            "a": "Çoğu zaman evet, ancak kapı kalınlığı, gömme kilit tipi ve iç ünite için yer kontrol edilmelidir. Mühendis kapıyı fotoğraftan değerlendirir ve model önerir."
+          },
+          {
+            "q": "Misafire geçici erişim verilebilir mi?",
+            "a": "Evet, uygulamada geçerlilik süresi sınırlı bir kod oluşturulur: belirlenen zamanda kendiliğinden çalışmaz hâle gelir."
+          },
+          {
+            "q": "Piller veya batarya ne kadar dayanır?",
+            "a": "Modele ve açma sayısına bağlı olarak birkaç aydan bir yıla kadar. Tapo DL105 için üretici laboratuvar testlerine göre tek şarjla bir yıla kadar belirtiyor."
+          }
+        ],
+        "summary": [
+          "Akıllı kilit sahibini dışarıda tanır (parmak izi, kod, kart, yüz); motor, pil ve elektronik kapının iç tarafındadır.",
+          "Kilit pil zayıfladığını önceden bildirir; son çare olarak mekanik anahtar ve birçok modelde dışarıda acil güç girişi vardır.",
+          "Parmak izi, kod ve kart internetsiz ve elektrik kesintisinde de çalışır; internet uzaktan açma ve kayıt için gerekir.",
+          "Satın almadan önce kapı kontrol edilir: kalınlık, gömme mekanizma tipi, iç ünite için yer.",
+          "Katalogdaki akıllı kilitler 679.900 UZS'den başlar; yüz tanımalı biyometrik ZKTeco HBL400 2.993.900 UZS (fiyatlar 02.11.2026)."
+        ]
+      },
+      "zh": {
+        "title": "入户门智能锁：如何开门、电池没电怎么办、该怎么选",
+        "seoTitle": "智能锁原理与电池没电怎么办",
+        "seoDesc": "智能锁如何开门：指纹、密码、卡片、应用。电池没电会怎样，是否适配你家的门，公寓和住宅该装哪种。",
+        "excerpt": "智能锁可用指纹、密码、卡片或应用开门，但大家的第一个问题都一样：电池没电怎么办。本文讲解智能锁的内部结构、如何识别指纹、为什么没电也不会把主人锁在门外、是否适配你家的门，以及公寓、住宅和办公室该选哪种锁。",
+        "sections": [
+          {
+            "h": "智能锁如何开门",
+            "p": [
+              "智能锁由两部分组成。门外是识别你的面板：指纹识别器、密码键盘、读卡器，部分型号还有人脸识别摄像头。门内是装有电子元件、电池和小电机的模块，电机负责转动锁舌或锁体机构。识别到主人——电机开锁；门关上——锁自动或按键后上锁。",
+              "因此门外没有任何可以接触到控制部分的地方：电池和电机都在门的内侧。机械钥匙作为备用方式保留：大多数型号在外面板的盖板下有普通锁芯。"
+            ]
+          },
+          {
+            "h": "锁如何识别指纹、密码和手机",
+            "p": [
+              "智能锁的指纹识别器通常是电容式的：它通过皮肤的电学特性读取指纹纹路，而不是看图像，所以手指照片骗不过它。据厂家数据，Tapo DL105识别时间不到0.5秒，可存储100枚指纹和200组密码。",
+              "密码在键盘上输入；好的锁在连续输错几次后会锁定输入，防止被试出密码。卡片的用法与办公室门禁卡相同。应用可在门边通过蓝牙开门，或远程通过互联网开门，还能给访客发临时密码，并显示开门记录：谁在什么时间开过门。"
+            ]
+          },
+          {
+            "h": "电池没电会怎样",
+            "p": [
+              "这是最大的担心，其实大可不必。锁会提前提示电量不足——面板上有信号，应用里有通知，通常在电池彻底耗尽前数周。续航取决于型号和开门次数：对于可拆卸电池的Tapo DL105，厂家按实验室测试标称最长一年，并像手机一样通过USB Type-C充电。",
+              "如果忽略了提示，还有备用办法：随锁附带的机械钥匙，以及许多型号门外的应急供电接口——接上充电宝，再用指纹或密码开门。具体型号是否有该接口，购买前查看规格即可。使用AA或AAA电池的锁（如KANIHAD）只需换一组新电池。"
+            ]
+          },
+          {
+            "h": "没有网络或停电时会怎样",
+            "p": [
+              "公寓的智能锁靠自带电池工作，所以楼里停电对它没有影响。指纹、密码和卡片在本地工作，不需要网络：只有远程开门、推送通知和应用里的记录才需要联网。",
+              "由市电供电的门禁锁则不同：电磁锁断电即开，电控锁断电保持锁闭，所以要配带蓄电池的电源。这几类锁的区别，详见我们关于如何选择电子锁的文章。"
+            ]
+          },
+          {
+            "h": "智能锁适配你家的门吗",
+            "p": [
+              "这个问题应在购买前解决。锁的结构不同：有的装在已有的嵌入式锁舌上，有的整体替换内外面板，并配合特定类型的锁体工作。每个型号都有适用门厚范围：Tapo DL105为35–55毫米，ZKTeco HBL400为45–60毫米。",
+              "金属入户门常需要改开安装孔，玻璃门用锁则有专门的结构。因此工程师会先看门或门的照片：厚度、锁体类型、开门方向以及内侧模块的安装位置。这样锁一次装好，门关起来也不费力——电机能否自动上锁就取决于此。"
+            ]
+          },
+          {
+            "h": "除了开门，智能锁还能做什么",
+            "p": [
+              "临时密码对短租、保洁、维修工和快递最方便：密码只在设定时间内有效，到期自动失效。开门记录能看到孩子几点放学到家、家政几点离开。自动上锁杜绝“忘了锁门”：锁会在设定时间后自动锁门。",
+              "智能锁很容易与家里其他系统联动：在可视对讲应用里开门，与报警一起收到通知，加入智能家居场景。带涂鸦（Tuya）Wi-Fi模块的锁，如KANIHAD TK-606A-TW，可与传感器、插座在同一个涂鸦生态中工作。"
+            ]
+          },
+          {
+            "h": "公寓、住宅和办公室该装哪种锁",
+            "p": [
+              "公寓：按你家门选型的智能锁，具备指纹、密码和机械钥匙。家里已有涂鸦智能家居就选带涂鸦Wi-Fi的型号；看重长续航、不想换电池就选可拆卸充电电池的型号。独栋住宅：入户门装同类智能锁，院门装室外型电控锁，由对讲开启。",
+              "办公室和商业场所：电磁锁或电控锁配读卡器和门禁系统，员工离职一键取消权限。总经理办公室和机房可用生物识别：ZKTeco HBL400可在1米内识别人脸，也支持指纹和卡片。"
+            ]
+          },
+          {
+            "h": "智能锁多少钱",
+            "p": [
+              "2026年11月2日目录价格，不含安装：KANIHAD TK-605A（刷卡、密码）——679 900苏姆；KANIHAD TK-606A-TW（指纹、涂鸦Wi-Fi）——729 900；Tapo DL105（指纹、密码、应用、充电电池）——989 900；KANIHAD TK-N1 Pro——1 050 900；寿命30万次的KANIHAD TK-D1 Pro——1 607 900；带人脸识别的生物识别锁ZKTeco HBL400——2 993 900。",
+              "安装费用取决于门：已开好孔的门一两个小时即可装好，非标锁体的金属门需要改造。我们根据照片为你家的门选锁、安装，并为全家设置应用；施工质保3年。可在电子锁页面提交需求——我们在一个工作日内回复。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "电池没电还能打开智能锁吗？",
+            "a": "能：用随锁附带的机械钥匙，许多型号还可在门外应急接口接充电宝开门。此外锁会提前提示电量不足。"
+          },
+          {
+            "q": "智能锁没有网络能用吗？",
+            "a": "能，指纹、密码和卡片在本地工作。网络只用于远程开门、推送通知和应用记录。"
+          },
+          {
+            "q": "指纹识别能被骗过吗？",
+            "a": "电容式识别器通过皮肤电学特性读取纹路，手指照片或打印件无效。好的锁在连续输错后还会锁定输入。"
+          },
+          {
+            "q": "金属门能装吗？",
+            "a": "大多可以，但需确认门厚、锁体类型和内侧模块的安装位置。工程师可根据照片评估并推荐型号。"
+          },
+          {
+            "q": "能给访客临时权限吗？",
+            "a": "能，在应用中生成有效期有限的密码，到时自动失效。"
+          },
+          {
+            "q": "电池能用多久？",
+            "a": "几个月到一年不等，取决于型号和开门次数。Tapo DL105厂家按实验室测试标称单次充电最长一年。"
+          }
+        ],
+        "summary": [
+          "智能锁在门外识别主人（指纹、密码、卡片、人脸），电机、电池和电子元件位于门内侧。",
+          "锁会提前提示电量不足；万不得已还有机械钥匙，许多型号门外有应急供电接口。",
+          "指纹、密码和卡片无需网络、停电也能用；网络用于远程开门和记录。",
+          "购买前要检查门：厚度、锁体类型、内侧模块位置。",
+          "目录中的智能锁679 900苏姆起；带人脸识别的ZKTeco HBL400为2 993 900苏姆（2026年11月2日价格）。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "signalizatsiya-dlya-doma-kak-ustroena",
     "date": "2026-10-30",
     "related": [
