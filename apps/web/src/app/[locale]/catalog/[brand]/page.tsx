@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { clampDesc } from "@/lib/seoText";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
+import { hiddenBrandTarget } from "@/lib/hiddenBrands";
 import { getTranslations } from "next-intl/server";
 import { getBrands, getBrandTypePairs } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
@@ -58,7 +59,13 @@ async function generateMetadataBase({
   const stockCount = brandRow?.productCount ?? 0;
   // Бренд без опубликованных товаров: страница остаётся (вернутся товары — вернётся в индекс),
   // но «Найдено: 0» не индексируем (05.10.2026: Eltex, Teltonika)
-  const emptyBrand = brandRow?.productCount === 0;
+  // Бренд, пропавший из списка (все товары сняты, 02.11.2026: Tapo, HiLook, Mercusys, Tuya), — тоже пустой;
+  // brands.length > 0 — чтобы сбой API не закрыл от индекса все бренды разом
+  const emptyBrand = brands.length > 0 && (!brandRow || brandRow.productCount === 0);
+  if (emptyBrand) {
+    const hidden = hiddenBrandTarget(brand, locale);
+    if (hidden) redirect(hidden);
+  }
   const baseDesc = localizeBrandDesc(brand.toLowerCase(), cfg.description, locale);
   // Название бренда — первым словом (seo:check 07.10.2026): clampDesc оставляет только первую
   // фразу, и у всех 155 страниц брендов в выдаче было одно «В наличии N моделей — …» без
@@ -94,6 +101,10 @@ export default async function BrandCatalogPage({
 
   const { brands } = await getBrands().catch(() => ({ brands: [] }));
   const brandInfo = brands.find((b) => b.slug.toLowerCase() === brandSlug);
+  if (brands.length > 0 && (!brandInfo || brandInfo.productCount === 0)) {
+    const hidden = hiddenBrandTarget(brandSlug, locale);
+    if (hidden) redirect(hidden);
+  }
   const logoUrl = brandInfo?.logoImageUrl ? resolveImageUrl(brandInfo.logoImageUrl) : null;
 
   const brandName = localizeBrandName(brandSlug, cfg.displayName, locale);

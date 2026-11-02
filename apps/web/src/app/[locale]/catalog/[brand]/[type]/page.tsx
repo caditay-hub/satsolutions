@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { clampDesc } from "@/lib/seoText";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
+import { hiddenBrandTarget } from "@/lib/hiddenBrands";
 import { getTranslations } from "next-intl/server";
 import { getBrands, getBrandTypePairs } from "@/lib/api";
 import { resolveImageUrl } from "@/lib/image";
@@ -98,6 +99,9 @@ export default async function BrandTypePage({
     if (type === "shlagbaumy" || (type === "turnikety-i-shlagbaumy" && brandSlug === "kanihad")) {
       permanentRedirect(`${lp}/products/type/shlagbaumy`);
     }
+    // временно снятый бренд → раздел того же типа у других брендов (307), а не пустой бренд
+    const hidden = hiddenBrandTarget(brandSlug, locale, typeHubHref(type));
+    if (hidden) redirect(hidden);
     permanentRedirect(`${lp}/catalog/${brandSlug}`);
   }
 

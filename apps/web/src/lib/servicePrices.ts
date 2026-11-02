@@ -369,63 +369,8 @@ const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
       note: "设备价格来自目录并自动更新。线路费用取决于路由长度、敷设方式（管道、杆路、楼内）和熔接点数量。发来地图上的接入点，我们在一个工作日内报价。",
     },
   },
-  smarthome: {
-    ru: {
-      title: "Сколько стоит оборудование умного дома",
-      rows: [
-        { label: "Хаб Tapo H200: центр сценариев", price: "от 333 900 сум", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-h200" },
-        { label: "Умный выключатель Tapo S210", price: "от 172 900 сум", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-s210" },
-        { label: "Датчик движения Tapo T100", price: "от 122 900 сум", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t100" },
-        { label: "Датчик открытия двери и окна Tapo T110", price: "от 110 900 сум", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t110" },
-        { label: "Стартовый набор для квартиры: хаб, два датчика и выключатель", price: "от 740 000 сум", href: "/products/group/umnyy-dom" },
-      ],
-      note: "Цены — из каталога, обновляются автоматически. Стартовый набор для квартиры (хаб, два датчика и выключатель) выходит около 740 000 сум; сценарии «ушли из дома», «ночь» и уведомления настраиваем при монтаже. Пришлите план квартиры — вернём смету в течение рабочего дня.",
-    },
-    uz: {
-      title: "Aqlli uy uskunalari qancha turadi",
-      rows: [
-        { label: "Tapo H200 habi: ssenariylar markazi", price: "333 900 soʻmdan", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-h200" },
-        { label: "Aqlli vyklyuchatel Tapo S210", price: "172 900 soʻmdan", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-s210" },
-        { label: "Harakat datchigi Tapo T100", price: "122 900 soʻmdan", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t100" },
-        { label: "Eshik va deraza ochilish datchigi Tapo T110", price: "110 900 soʻmdan", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t110" },
-        { label: "Kvartira uchun boshlangʻich toʻplam: hab, ikki datchik va vyklyuchatel", price: "740 000 soʻmdan", href: "/products/group/umnyy-dom" },
-      ],
-      note: "Narxlar — katalogdan, avtomatik yangilanadi. Kvartira uchun boshlangʻich toʻplam (hab, ikki datchik va vyklyuchatel) taxminan 740 000 soʻm; «uydan chiqdik», «tun» ssenariylari va xabarnomalarni montajda sozlaymiz. Kvartira rejasini yuboring — ish kuni davomida smeta yuboramiz.",
-    },
-    en: {
-      title: "What smart home equipment costs",
-      rows: [
-        { label: "Tapo H200 hub: automation centre", price: "from 333,900 UZS", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-h200" },
-        { label: "Tapo S210 smart switch", price: "from 172,900 UZS", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-s210" },
-        { label: "Tapo T100 motion sensor", price: "from 122,900 UZS", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t100" },
-        { label: "Tapo T110 door and window sensor", price: "from 110,900 UZS", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t110" },
-        { label: "Apartment starter set: hub, two sensors and a switch", price: "from 740,000 UZS", href: "/products/group/umnyy-dom" },
-      ],
-      note: "Prices come from the catalogue and update automatically. A starter set for an apartment (hub, two sensors and a switch) is about 740,000 UZS; the away, night and alert scenes are configured at installation. Send a floor plan and we return a quote within one business day.",
-    },
-    tr: {
-      title: "Akıllı ev ekipmanları ne kadar",
-      rows: [
-        { label: "Tapo H200 hub: senaryo merkezi", price: "333.900 UZS'den", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-h200" },
-        { label: "Tapo S210 akıllı anahtar", price: "172.900 UZS'den", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-s210" },
-        { label: "Tapo T100 hareket sensörü", price: "122.900 UZS'den", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t100" },
-        { label: "Tapo T110 kapı ve pencere sensörü", price: "110.900 UZS'den", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t110" },
-        { label: "Daire başlangıç seti: hub, iki sensör ve anahtar", price: "740.000 UZS'den", href: "/products/group/umnyy-dom" },
-      ],
-      note: "Fiyatlar katalogdan gelir ve otomatik güncellenir. Daire için başlangıç seti (hub, iki sensör ve anahtar) yaklaşık 740.000 UZS; evden çıkış, gece ve bildirim senaryoları montajda ayarlanır. Daire planını gönderin, bir iş günü içinde teklif verelim.",
-    },
-    zh: {
-      title: "智能家居设备价格",
-      rows: [
-        { label: "Tapo H200 网关：场景中枢", price: "333 900 苏姆起", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-h200" },
-        { label: "Tapo S210 智能开关", price: "172 900 苏姆起", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-s210" },
-        { label: "Tapo T100 人体移动传感器", price: "122 900 苏姆起", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t100" },
-        { label: "Tapo T110 门窗传感器", price: "110 900 苏姆起", href: "/products/group/umnyy-dom", liveSlug: "tapo-tapo-t110" },
-        { label: "公寓入门套装：网关、两个传感器和一个开关", price: "740 000 苏姆起", href: "/products/group/umnyy-dom" },
-      ],
-      note: "价格来自目录并自动更新。公寓入门套装（网关、两个传感器和一个开关）约 740 000 苏姆；离家、夜间与通知场景在安装时配置。发来户型图，我们在一个工作日内报价。",
-    },
-  },
+  // smarthome: блок цен из товаров Tapo убран 02.11.2026 — бренд временно снят с продажи, цены умного дома
+  // по смете (решение владельца). Вернутся товары — блок восстановить из git (коммит до этой правки).
   gates: {
     ru: {
       title: "Сколько стоит автоматика для ворот",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
+import { hiddenProductTarget } from "@/lib/hiddenBrands";
 import { routing } from "@/i18n/routing";
 import { getProductBySlug, getProductsCached, getSitePage, getBrands, getCategories, getSearchSuggestCached, getProductReviews, getProductQuestions, getBrandTypePairs } from "@/lib/api";
 import { typeSlug } from "@/lib/typeSlug";
@@ -127,6 +128,9 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     if (!product) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      // временно снятые бренды (Tapo/HiLook/Mercusys) → близкий раздел, 307
+      const hidden = hiddenProductTarget(slug, locale);
+      if (hidden) redirect(hidden);
       const brandPath = deadSlugBrandPath(slug, locale);
       if (brandPath) permanentRedirect(brandPath);
       notFound();
@@ -206,6 +210,9 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      // временно снятые бренды (Tapo/HiLook/Mercusys) → близкий раздел, 307
+      const hidden = hiddenProductTarget(slug, locale);
+      if (hidden) redirect(hidden);
       const brandPath = deadSlugBrandPath(slug, locale);
       if (brandPath) permanentRedirect(brandPath);
       notFound();
@@ -231,6 +238,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
     if (msg.includes("404")) {
       const recovered = await recoverProductSlug(slug);
       if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+      // временно снятые бренды (Tapo/HiLook/Mercusys) → близкий раздел, 307
+      const hidden = hiddenProductTarget(slug, locale);
+      if (hidden) redirect(hidden);
       const brandPath = deadSlugBrandPath(slug, locale);
       if (brandPath) permanentRedirect(brandPath);
       notFound();
@@ -244,6 +254,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
   if (!product) {
     const recovered = await recoverProductSlug(slug);
     if (recovered) permanentRedirect(`${locale === routing.defaultLocale ? "" : `/${locale}`}/products/${recovered}`);
+    // временно снятые бренды (Tapo/HiLook/Mercusys) → близкий раздел, 307
+    const hidden = hiddenProductTarget(slug, locale);
+    if (hidden) redirect(hidden);
     const brandPath = deadSlugBrandPath(slug, locale);
     if (brandPath) permanentRedirect(brandPath);
     notFound();

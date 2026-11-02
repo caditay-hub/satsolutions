@@ -549,6 +549,7 @@ export const ARTICLES: Article[] = [
   {
     "slug": "umnyy-zamok-kak-ustroen-batareya-vhodnaya-dver",
     "date": "2026-11-02",
+    "updated": "2026-11-02",
     "related": [
       "locks",
       "access"
@@ -564,7 +565,7 @@ export const ARTICLES: Article[] = [
       "umnyy-dom-s-chego-nachat"
     ],
     "products": [
-      "tapo-tapo-dl105",
+      "zkt-zkteco-zamok-gl300w",
       "knd-tk-d1-pro",
       "knd-tk-606a-tw",
       "zkt-zkteco-hbl400-elektronnyi-biometricheskii-zamok-s-raspoznavaniem-lic"
@@ -586,15 +587,15 @@ export const ARTICLES: Article[] = [
           {
             "h": "Как замок узнаёт палец, код и телефон",
             "p": [
-              "Сканеры отпечатков в замках обычно ёмкостные: они считывают рисунок папиллярных линий по электрическим свойствам кожи, а не по картинке, поэтому фотография пальца их не обманет. У Tapo DL105 по данным производителя распознавание занимает меньше половины секунды, в память помещается 100 отпечатков и 200 кодов.",
+              "Сканеры отпечатков в замках обычно ёмкостные: они считывают рисунок папиллярных линий по электрическим свойствам кожи, а не по картинке, поэтому фотография пальца их не обманет. Например, KANIHAD TK-606A-TW хранит до 100 отпечатков, 100 карт и 100 кодов.",
               "Код вводится на клавиатуре; хорошие замки после нескольких неверных попыток блокируют ввод, чтобы код нельзя было подобрать. Карты работают как пропуск в офисе. Приложение открывает дверь по Bluetooth рядом с ней или через интернет издалека, позволяет выдать гостю временный код и показывает журнал: кто и когда открывал дверь."
             ]
           },
           {
             "h": "Что будет, если сядет батарея",
             "p": [
-              "Это главный страх, и он напрасный. Замок заранее предупреждает о разряде — сигналом на панели и уведомлением в приложении, обычно за недели до того, как батарея сядет совсем. Срок работы зависит от модели и числа открытий: у Tapo DL105 со съёмным аккумулятором производитель заявляет до года по лабораторным тестам, а заряжается он через USB Type-C, как телефон.",
-              "Если предупреждение проигнорировали, остаются запасные пути: механический ключ из комплекта и у многих моделей разъём для аварийного питания снаружи — к нему подключают пауэрбанк и открывают дверь отпечатком или кодом. Есть ли такой разъём у конкретной модели, проверяют по характеристикам до покупки. Замки на батарейках AA или AAA, например KANIHAD, просто получают новый комплект элементов."
+              "Это главный страх, и он напрасный. Замок заранее предупреждает о разряде — сигналом на панели и уведомлением в приложении, обычно за недели до того, как батарея сядет совсем. Срок работы зависит от модели и числа открытий: замки KANIHAD работают от батареек AA или AAA, а у ZKTeco HBL400 встроенный литий-ионный аккумулятор на 4,2 А·ч, который заряжают, а не меняют.",
+              "Если предупреждение проигнорировали, остаются запасные пути: механический ключ из комплекта и у многих моделей разъём для аварийного питания снаружи — к нему подключают пауэрбанк и открывают дверь отпечатком или кодом. Есть ли такой разъём у конкретной модели, проверяют по характеристикам до покупки. Замки на батарейках просто получают новый комплект элементов."
             ]
           },
           {
@@ -607,7 +608,7 @@ export const ARTICLES: Article[] = [
           {
             "h": "Подойдёт ли умный замок к вашей двери",
             "p": [
-              "Это вопрос, который стоит решить до покупки. Замки бывают разной конструкции: одни ставятся на уже врезанный ригель, другие заменяют наружную и внутреннюю накладки целиком и работают с врезным механизмом определённого типа. У каждой модели есть диапазон толщины полотна: у Tapo DL105 — 35–55 мм, у ZKTeco HBL400 — 45–60 мм.",
+              "Это вопрос, который стоит решить до покупки. Замки бывают разной конструкции: одни ставятся на уже врезанный ригель, другие заменяют наружную и внутреннюю накладки целиком и работают с врезным механизмом определённого типа. У каждой модели есть диапазон толщины полотна: например, ZKTeco HBL400 рассчитан на двери толщиной 45–60 мм, а ZKTeco GL300W — на стеклянные полотна 10–12 мм.",
               "Металлические входные двери часто требуют доработки посадочных отверстий, а у замков для стеклянных дверей своя конструкция. Поэтому инженер сначала смотрит дверь или её фото: толщину, тип врезного замка, сторону открывания и место под внутренний блок. Так замок встаёт с первого раза, а дверь закрывается без усилия — от этого зависит, сможет ли мотор запереть её сам."
             ]
           },
@@ -621,14 +622,14 @@ export const ARTICLES: Article[] = [
           {
             "h": "Какой замок ставить на квартиру, дом и офис",
             "p": [
-              "Квартира: умный замок с отпечатком, кодом и механическим ключом, подобранный под вашу дверь. Если в доме есть умный дом на Tuya — модель с Tuya Wi-Fi; если важна долгая автономность без замены батареек — модель со съёмным аккумулятором. Частный дом: на входную дверь — такой же умный замок, на калитку — электромеханический замок в уличном исполнении с открыванием от домофона.",
+              "Квартира: умный замок с отпечатком, кодом и механическим ключом, подобранный под вашу дверь. Если в доме есть умный дом на Tuya — модель с Tuya Wi-Fi; если важна долгая автономность без замены батареек — модель со встроенным аккумулятором. Частный дом: на входную дверь — такой же умный замок, на калитку — электромеханический замок в уличном исполнении с открыванием от домофона.",
               "Офис и коммерческие помещения: электромагнитный или электромеханический замок со считывателем карт и системой контроля доступа, где доступ уволенного сотрудника отзывается одним действием. Для кабинетов руководителя и серверной — биометрия: замок ZKTeco HBL400 распознаёт лицо на расстоянии до 1 метра, отпечаток и карту."
             ]
           },
           {
             "h": "Сколько стоят умные замки",
             "p": [
-              "Цены каталога на 2 ноября 2026 года, без монтажа: KANIHAD TK-605A с картой и кодом — 679 900 сум; KANIHAD TK-606A-TW с отпечатком и Tuya Wi-Fi — 729 900; Tapo DL105 с отпечатком, кодом, приложением и аккумулятором — 989 900; KANIHAD TK-N1 Pro — 1 050 900; KANIHAD TK-D1 Pro с ресурсом 300 000 циклов — 1 607 900; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900.",
+              "Цены каталога на 2 ноября 2026 года, без монтажа: KANIHAD TK-606A-TW с отпечатком и Tuya Wi-Fi — 729 900 сум; KANIHAD TK-605A с картой и кодом — 741 900; KANIHAD TK-N1 Pro — 1 050 900; ZKTeco GL300W для стеклянных дверей — 1 558 900; KANIHAD TK-D1 Pro с ресурсом 300 000 циклов — 1 607 900; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900.",
               "Стоимость установки зависит от двери: на подготовленную дверь замок ставится за час-два, металлическая дверь с нестандартной врезкой требует доработки. Подбираем замок под вашу дверь по фото, устанавливаем и настраиваем приложение для всей семьи; на работы даём гарантию 3 года. Заявку можно оставить на странице электронных замков — ответим в течение рабочего дня."
             ]
           }
@@ -656,7 +657,7 @@ export const ARTICLES: Article[] = [
           },
           {
             "q": "Сколько служат батарейки или аккумулятор?",
-            "a": "От нескольких месяцев до года — зависит от модели и числа открываний. У Tapo DL105 производитель заявляет до года от одного заряда по лабораторным тестам."
+            "a": "От нескольких месяцев до года — зависит от модели и числа открываний. Замок заранее предупреждает о разряде, поэтому батарейки меняют по сигналу, а не вслепую."
           }
         ],
         "summary": [
@@ -664,7 +665,7 @@ export const ARTICLES: Article[] = [
           "О разряде замок предупреждает заранее; на крайний случай есть механический ключ и у многих моделей разъём для аварийного питания снаружи.",
           "Отпечаток, код и карта работают без интернета и при отключении света; интернет нужен для удалённого открытия и журнала.",
           "До покупки проверяют дверь: толщину полотна, тип врезного механизма, место под внутренний блок.",
-          "Умные замки в каталоге — от 679 900 сум; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900 сум (цены 02.11.2026)."
+          "Умные замки в каталоге — от 729 900 сум; биометрический ZKTeco HBL400 с распознаванием лица — 2 993 900 сум (цены 02.11.2026)."
         ]
       },
       "uz": {
@@ -683,15 +684,15 @@ export const ARTICLES: Article[] = [
           {
             "h": "Qulf barmoq, kod va telefonni qanday taniydi",
             "p": [
-              "Qulflardagi barmoq izi skanerlari odatda sigʻimli: ular papillyar chiziqlar naqshini rasm boʻyicha emas, terining elektr xossalari boʻyicha oʻqiydi, shuning uchun barmoq surati ularni aldamaydi. Tapo DL105 da ishlab chiqaruvchi maʼlumotiga koʻra tanish yarim soniyadan kam vaqt oladi, xotiraga 100 ta barmoq izi va 200 ta kod sigʻadi.",
+              "Qulflardagi barmoq izi skanerlari odatda sigʻimli: ular papillyar chiziqlar naqshini rasm boʻyicha emas, terining elektr xossalari boʻyicha oʻqiydi, shuning uchun barmoq surati ularni aldamaydi. Masalan, KANIHAD TK-606A-TW 100 tagacha barmoq izi, 100 ta karta va 100 ta kodni saqlaydi.",
               "Kod klaviaturada teriladi; yaxshi qulflar bir necha notoʻgʻri urinishdan keyin kodni terib topib boʻlmasligi uchun kiritishni bloklaydi. Kartalar ofisdagi ruxsatnoma kabi ishlaydi. Ilova eshikni yonida Bluetooth orqali yoki uzoqdan internet orqali ochadi, mehmonga vaqtinchalik kod berish imkonini beradi va jurnalni koʻrsatadi: eshikni kim va qachon ochgan."
             ]
           },
           {
             "h": "Batareya tugasa nima boʻladi",
             "p": [
-              "Bu asosiy qoʻrquv va u asossiz. Qulf zaryad tugayotgani haqida oldindan ogohlantiradi — paneldagi signal va ilovadagi bildirishnoma bilan, odatda batareya butunlay tugashidan bir necha hafta oldin. Ishlash muddati model va ochishlar soniga bogʻliq: yechiladigan akkumulyatorli Tapo DL105 uchun ishlab chiqaruvchi laboratoriya sinovlari boʻyicha bir yilgacha deb bayon qiladi, u telefon kabi USB Type-C orqali zaryadlanadi.",
-              "Agar ogohlantirishga eʼtibor berilmagan boʻlsa, zaxira yoʻllar qoladi: toʻplamdagi mexanik kalit va koʻp modellarda tashqarida avariya quvvati uchun ulagich — unga pauerbank ulanadi va eshik barmoq izi yoki kod bilan ochiladi. Muayyan modelda bunday ulagich bormi, xariddan oldin xususiyatlar boʻyicha tekshiriladi. AA yoki AAA batareyali qulflar, masalan KANIHAD, shunchaki yangi element toʻplamini oladi."
+              "Bu asosiy qoʻrquv va u asossiz. Qulf zaryad tugayotgani haqida oldindan ogohlantiradi — paneldagi signal va ilovadagi bildirishnoma bilan, odatda batareya butunlay tugashidan bir necha hafta oldin. Ishlash muddati model va ochishlar soniga bogʻliq: KANIHAD qulflari AA yoki AAA batareyalardan ishlaydi, ZKTeco HBL400 da esa 4,2 A·soatli oʻrnatilgan litiy-ion akkumulyator bor, uni almashtirmaydi, zaryadlaydi.",
+              "Agar ogohlantirishga eʼtibor berilmagan boʻlsa, zaxira yoʻllar qoladi: toʻplamdagi mexanik kalit va koʻp modellarda tashqarida avariya quvvati uchun ulagich — unga pauerbank ulanadi va eshik barmoq izi yoki kod bilan ochiladi. Muayyan modelda bunday ulagich bormi, xariddan oldin xususiyatlar boʻyicha tekshiriladi. Batareyali qulflar shunchaki yangi element toʻplamini oladi."
             ]
           },
           {
@@ -704,7 +705,7 @@ export const ARTICLES: Article[] = [
           {
             "h": "Aqlli qulf eshigingizga mos keladimi",
             "p": [
-              "Bu xariddan oldin hal qilish kerak boʻlgan savol. Qulflar turli tuzilishda boʻladi: biri allaqachon oʻyib oʻrnatilgan rigelga qoʻyiladi, boshqalari tashqi va ichki qoplamalarni butunlay almashtiradi va maʼlum turdagi oʻyma mexanizm bilan ishlaydi. Har bir modelning eshik qalinligi oraligʻi bor: Tapo DL105 da — 35–55 mm, ZKTeco HBL400 da — 45–60 mm.",
+              "Bu xariddan oldin hal qilish kerak boʻlgan savol. Qulflar turli tuzilishda boʻladi: biri allaqachon oʻyib oʻrnatilgan rigelga qoʻyiladi, boshqalari tashqi va ichki qoplamalarni butunlay almashtiradi va maʼlum turdagi oʻyma mexanizm bilan ishlaydi. Har bir modelning eshik qalinligi oraligʻi bor: masalan, ZKTeco HBL400 45–60 mm qalinlikdagi eshiklarga, ZKTeco GL300W esa 10–12 mm li shisha eshiklarga moʻljallangan.",
               "Metall kirish eshiklari koʻpincha oʻrnatish teshiklarini moslashtirishni talab qiladi, shisha eshiklar uchun qulflar esa oʻzgacha tuzilgan. Shuning uchun muhandis avval eshikni yoki uning suratini koʻradi: qalinligi, oʻyma qulf turi, ochilish tomoni va ichki blok uchun joy. Shunda qulf birinchi marta oʻrnatiladi, eshik esa kuch sarflamasdan yopiladi — motor uni oʻzi qulflay olishi bunga bogʻliq."
             ]
           },
@@ -718,14 +719,14 @@ export const ARTICLES: Article[] = [
           {
             "h": "Kvartira, uy va ofisga qaysi qulfni qoʻyish kerak",
             "p": [
-              "Kvartira: eshigingizga moslab tanlangan barmoq izi, kod va mexanik kalitli aqlli qulf. Uyda Tuya asosidagi aqlli uy boʻlsa — Tuya Wi-Fi li model; batareyalarni almashtirmasdan uzoq avtonomlik muhim boʻlsa — yechiladigan akkumulyatorli model. Xususiy uy: kirish eshigiga — xuddi shunday aqlli qulf, kichik eshikka — domofondan ochiladigan tashqi ijrodagi elektromexanik qulf.",
+              "Kvartira: eshigingizga moslab tanlangan barmoq izi, kod va mexanik kalitli aqlli qulf. Uyda Tuya asosidagi aqlli uy boʻlsa — Tuya Wi-Fi li model; batareyalarni almashtirmasdan uzoq avtonomlik muhim boʻlsa — oʻrnatilgan akkumulyatorli model. Xususiy uy: kirish eshigiga — xuddi shunday aqlli qulf, kichik eshikka — domofondan ochiladigan tashqi ijrodagi elektromexanik qulf.",
               "Ofis va tijorat binolari: karta oʻquvchisi va kirishni nazorat qilish tizimiga ega elektromagnit yoki elektromexanik qulf, unda ishdan ketgan xodimning kirishi bitta harakat bilan bekor qilinadi. Rahbar xonasi va server xonasi uchun — biometriya: ZKTeco HBL400 qulfi yuzni 1 metrgacha masofada, barmoq izi va kartani taniydi."
             ]
           },
           {
             "h": "Aqlli qulflar qancha turadi",
             "p": [
-              "Katalog narxlari 2026-yil 2-noyabr holatiga, montajsiz: karta va kodli KANIHAD TK-605A — 679 900 soʻm; barmoq izi va Tuya Wi-Fi li KANIHAD TK-606A-TW — 729 900; barmoq izi, kod, ilova va akkumulyatorli Tapo DL105 — 989 900; KANIHAD TK-N1 Pro — 1 050 900; 300 000 sikl resursli KANIHAD TK-D1 Pro — 1 607 900; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900.",
+              "Katalog narxlari 2026-yil 2-noyabr holatiga, montajsiz: barmoq izi va Tuya Wi-Fi li KANIHAD TK-606A-TW — 729 900 soʻm; karta va kodli KANIHAD TK-605A — 741 900; KANIHAD TK-N1 Pro — 1 050 900; shisha eshiklar uchun ZKTeco GL300W — 1 558 900; 300 000 sikl resursli KANIHAD TK-D1 Pro — 1 607 900; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900.",
               "Oʻrnatish narxi eshikka bogʻliq: tayyorlangan eshikka qulf bir-ikki soatda qoʻyiladi, nostandart oʻymali metall eshik esa moslashtirishni talab qiladi. Qulfni eshigingizga surat boʻyicha tanlaymiz, oʻrnatamiz va butun oila uchun ilovani sozlaymiz; ishlarga 3 yil kafolat beramiz. Arizani elektron qulflar sahifasida qoldirish mumkin — ish kuni davomida javob beramiz."
             ]
           }
@@ -753,7 +754,7 @@ export const ARTICLES: Article[] = [
           },
           {
             "q": "Batareya yoki akkumulyator qancha xizmat qiladi?",
-            "a": "Bir necha oydan bir yilgacha — model va ochishlar soniga bogʻliq. Tapo DL105 uchun ishlab chiqaruvchi laboratoriya sinovlari boʻyicha bir zaryaddan bir yilgacha deb bayon qiladi."
+            "a": "Bir necha oydan bir yilgacha — model va ochishlar soniga bogʻliq. Qulf zaryad tugayotgani haqida oldindan ogohlantiradi, shuning uchun batareyalar signal boʻyicha almashtiriladi."
           }
         ],
         "summary": [
@@ -761,7 +762,7 @@ export const ARTICLES: Article[] = [
           "Qulf zaryad tugayotgani haqida oldindan ogohlantiradi; eng oxirgi holat uchun mexanik kalit va koʻp modellarda tashqarida avariya quvvati ulagichi bor.",
           "Barmoq izi, kod va karta internetsiz va elektr oʻchganda ham ishlaydi; internet masofadan ochish va jurnal uchun kerak.",
           "Xariddan oldin eshik tekshiriladi: qalinligi, oʻyma mexanizm turi, ichki blok uchun joy.",
-          "Katalogdagi aqlli qulflar — 679 900 soʻmdan; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900 soʻm (narxlar 02.11.2026)."
+          "Katalogdagi aqlli qulflar — 729 900 soʻmdan; yuzni taniydigan biometrik ZKTeco HBL400 — 2 993 900 soʻm (narxlar 02.11.2026)."
         ]
       },
       "en": {
@@ -780,15 +781,15 @@ export const ARTICLES: Article[] = [
           {
             "h": "How the lock recognises a finger, a code and a phone",
             "p": [
-              "Fingerprint sensors in locks are usually capacitive: they read the ridge pattern through the electrical properties of the skin rather than from an image, so a photo of a finger will not fool them. For the Tapo DL105 the manufacturer states recognition in under half a second and memory for 100 fingerprints and 200 codes.",
+              "Fingerprint sensors in locks are usually capacitive: they read the ridge pattern through the electrical properties of the skin rather than from an image, so a photo of a finger will not fool them. For example, the KANIHAD TK-606A-TW stores up to 100 fingerprints, 100 cards and 100 codes.",
               "A code is entered on the keypad; good locks block entry after several wrong attempts so the code cannot be guessed. Cards work like an office pass. The app opens the door over Bluetooth nearby or over the internet from afar, lets you give a guest a temporary code, and shows a log of who opened the door and when."
             ]
           },
           {
             "h": "What happens when the battery dies",
             "p": [
-              "This is the main fear, and it is unfounded. The lock warns about a low battery in advance — with a signal on the panel and a notification in the app, usually weeks before the battery is completely flat. Battery life depends on the model and the number of openings: for the Tapo DL105 with its removable battery the manufacturer states up to a year in lab tests, and it charges over USB Type-C like a phone.",
-              "If the warning is ignored, there are fallbacks: the mechanical key supplied with the lock and, on many models, an outside emergency power port — you plug in a power bank and open the door with a fingerprint or code. Whether a given model has this port is checked in the specifications before buying. Locks running on AA or AAA batteries, such as KANIHAD models, simply get a fresh set of cells."
+              "This is the main fear, and it is unfounded. The lock warns about a low battery in advance — with a signal on the panel and a notification in the app, usually weeks before the battery is completely flat. Battery life depends on the model and the number of openings: KANIHAD locks run on AA or AAA batteries, while the ZKTeco HBL400 has a built-in 4.2 Ah lithium-ion battery that is recharged rather than replaced.",
+              "If the warning is ignored, there are fallbacks: the mechanical key supplied with the lock and, on many models, an outside emergency power port — you plug in a power bank and open the door with a fingerprint or code. Whether a given model has this port is checked in the specifications before buying. Battery-powered locks simply get a fresh set of cells."
             ]
           },
           {
@@ -801,7 +802,7 @@ export const ARTICLES: Article[] = [
           {
             "h": "Will a smart lock fit your door",
             "p": [
-              "This should be settled before buying. Locks differ in design: some fit onto an existing mortise bolt, others replace the outer and inner trims completely and work with a specific type of mortise mechanism. Every model has a door thickness range: 35–55 mm for the Tapo DL105, 45–60 mm for the ZKTeco HBL400.",
+              "This should be settled before buying. Locks differ in design: some fit onto an existing mortise bolt, others replace the outer and inner trims completely and work with a specific type of mortise mechanism. Every model has a door thickness range: for example, the ZKTeco HBL400 is designed for doors 45–60 mm thick and the ZKTeco GL300W for glass panels of 10–12 mm.",
               "Metal front doors often need their mounting holes adapted, and locks for glass doors have a design of their own. So an engineer first looks at the door or a photo of it: thickness, mortise lock type, opening direction and space for the inner unit. That way the lock fits first time and the door closes without effort — which determines whether the motor can lock it by itself."
             ]
           },
@@ -815,14 +816,14 @@ export const ARTICLES: Article[] = [
           {
             "h": "Which lock for a flat, a house and an office",
             "p": [
-              "Flat: a smart lock with fingerprint, code and mechanical key, chosen to fit your door. If you already run a Tuya smart home — a model with Tuya Wi-Fi; if long autonomy without changing batteries matters — a model with a removable rechargeable battery. Private house: the same kind of smart lock on the front door, and an outdoor-rated electromechanical lock on the gate, opened from the intercom.",
+              "Flat: a smart lock with fingerprint, code and mechanical key, chosen to fit your door. If you already run a Tuya smart home — a model with Tuya Wi-Fi; if long autonomy without changing batteries matters — a model with a built-in rechargeable battery. Private house: the same kind of smart lock on the front door, and an outdoor-rated electromechanical lock on the gate, opened from the intercom.",
               "Offices and commercial premises: an electromagnetic or electromechanical lock with a card reader and an access-control system, where a departing employee’s access is revoked in one action. For a director’s office or server room — biometrics: the ZKTeco HBL400 recognises a face at up to 1 metre, plus fingerprint and card."
             ]
           },
           {
             "h": "What smart locks cost",
             "p": [
-              "Catalogue prices on 2 November 2026, excluding installation: KANIHAD TK-605A with card and code — 679,900 UZS; KANIHAD TK-606A-TW with fingerprint and Tuya Wi-Fi — 729,900; Tapo DL105 with fingerprint, code, app and rechargeable battery — 989,900; KANIHAD TK-N1 Pro — 1,050,900; KANIHAD TK-D1 Pro rated for 300,000 cycles — 1,607,900; the biometric ZKTeco HBL400 with face recognition — 2,993,900.",
+              "Catalogue prices on 2 November 2026, excluding installation: KANIHAD TK-606A-TW with fingerprint and Tuya Wi-Fi — 729,900 UZS; KANIHAD TK-605A with card and code — 741,900; KANIHAD TK-N1 Pro — 1,050,900; ZKTeco GL300W for glass doors — 1,558,900; KANIHAD TK-D1 Pro rated for 300,000 cycles — 1,607,900; the biometric ZKTeco HBL400 with face recognition — 2,993,900.",
               "Installation cost depends on the door: on a prepared door the lock goes on in an hour or two, while a metal door with a non-standard mortise needs adapting. We choose a lock for your door from a photo, install it and set up the app for the whole family; our work carries a 3-year warranty. You can leave a request on our electronic locks page — we reply within one business day."
             ]
           }
@@ -850,7 +851,7 @@ export const ARTICLES: Article[] = [
           },
           {
             "q": "How long do the batteries last?",
-            "a": "From several months to a year, depending on the model and number of openings. For the Tapo DL105 the manufacturer states up to a year per charge in lab tests."
+            "a": "From several months to a year, depending on the model and number of openings. The lock warns about a low battery in advance, so batteries are changed on its signal rather than blindly."
           }
         ],
         "summary": [
@@ -858,7 +859,7 @@ export const ARTICLES: Article[] = [
           "The lock warns about a low battery in advance; as a last resort there is a mechanical key and, on many models, an outside emergency power port.",
           "Fingerprint, code and card work without internet and during power cuts; internet is needed for remote opening and the log.",
           "Before buying, check the door: thickness, mortise mechanism type and space for the inner unit.",
-          "Smart locks in our catalogue start at 679,900 UZS; the biometric ZKTeco HBL400 with face recognition costs 2,993,900 UZS (prices 02.11.2026)."
+          "Smart locks in our catalogue start at 729,900 UZS; the biometric ZKTeco HBL400 with face recognition costs 2,993,900 UZS (prices 02.11.2026)."
         ]
       },
       "tr": {
@@ -877,15 +878,15 @@ export const ARTICLES: Article[] = [
           {
             "h": "Kilit parmağı, kodu ve telefonu nasıl tanır",
             "p": [
-              "Kilitlerdeki parmak izi okuyucular genellikle kapasitiftir: parmak izi desenini görüntüden değil, derinin elektriksel özelliklerinden okur; bu yüzden parmak fotoğrafı onları kandıramaz. Üreticiye göre Tapo DL105'te tanıma yarım saniyeden kısa sürer, belleğe 100 parmak izi ve 200 kod sığar.",
+              "Kilitlerdeki parmak izi okuyucular genellikle kapasitiftir: parmak izi desenini görüntüden değil, derinin elektriksel özelliklerinden okur; bu yüzden parmak fotoğrafı onları kandıramaz. Örneğin KANIHAD TK-606A-TW 100 parmak izi, 100 kart ve 100 koda kadar saklar.",
               "Kod tuş takımında girilir; iyi kilitler birkaç hatalı denemeden sonra kodun tahmin edilmemesi için girişi kilitler. Kartlar ofis giriş kartı gibi çalışır. Uygulama kapıyı yakından Bluetooth ile ya da uzaktan internetle açar, misafire geçici kod vermeyi sağlar ve kapıyı kimin ne zaman açtığını gösteren kayıt tutar."
             ]
           },
           {
             "h": "Pil bitince ne olur",
             "p": [
-              "Bu en büyük korkudur ve yersizdir. Kilit pil zayıfladığını önceden bildirir — panelde bir sinyal ve uygulamada bildirimle, genellikle pil tamamen bitmeden haftalar önce. Kullanım süresi modele ve açma sayısına bağlıdır: çıkarılabilir bataryalı Tapo DL105 için üretici laboratuvar testlerine göre bir yıla kadar belirtiyor ve telefon gibi USB Type-C ile şarj ediliyor.",
-              "Uyarı göz ardı edilirse yedek yollar kalır: kutudan çıkan mekanik anahtar ve birçok modelde dışarıda acil güç girişi — buraya powerbank takılır ve kapı parmak izi veya kodla açılır. Belirli bir modelde bu girişin olup olmadığı satın almadan önce özelliklerden kontrol edilir. KANIHAD gibi AA veya AAA pilli kilitlere yalnızca yeni pil takılır."
+              "Bu en büyük korkudur ve yersizdir. Kilit pil zayıfladığını önceden bildirir — panelde bir sinyal ve uygulamada bildirimle, genellikle pil tamamen bitmeden haftalar önce. Kullanım süresi modele ve açma sayısına bağlıdır: KANIHAD kilitleri AA veya AAA pille çalışır, ZKTeco HBL400'de ise değiştirilmeyen, şarj edilen 4,2 Ah dahili lityum iyon batarya vardır.",
+              "Uyarı göz ardı edilirse yedek yollar kalır: kutudan çıkan mekanik anahtar ve birçok modelde dışarıda acil güç girişi — buraya powerbank takılır ve kapı parmak izi veya kodla açılır. Belirli bir modelde bu girişin olup olmadığı satın almadan önce özelliklerden kontrol edilir. Pilli kilitlere yalnızca yeni pil takılır."
             ]
           },
           {
@@ -898,7 +899,7 @@ export const ARTICLES: Article[] = [
           {
             "h": "Akıllı kilit kapınıza uyar mı",
             "p": [
-              "Bu, satın almadan önce çözülmesi gereken sorudur. Kilitlerin tasarımı farklıdır: bazıları mevcut gömme sürgüye takılır, bazıları dış ve iç aynalığı tamamen değiştirir ve belirli tipte gömme mekanizmayla çalışır. Her modelin bir kapı kalınlığı aralığı vardır: Tapo DL105'te 35–55 mm, ZKTeco HBL400'de 45–60 mm.",
+              "Bu, satın almadan önce çözülmesi gereken sorudur. Kilitlerin tasarımı farklıdır: bazıları mevcut gömme sürgüye takılır, bazıları dış ve iç aynalığı tamamen değiştirir ve belirli tipte gömme mekanizmayla çalışır. Her modelin bir kapı kalınlığı aralığı vardır: örneğin ZKTeco HBL400 45–60 mm kalınlığındaki kapılar, ZKTeco GL300W ise 10–12 mm cam paneller içindir.",
               "Metal giriş kapıları çoğu zaman montaj deliklerinin uyarlanmasını gerektirir, cam kapı kilitlerinin ise kendine özgü tasarımı vardır. Bu yüzden mühendis önce kapıya veya fotoğrafına bakar: kalınlık, gömme kilit tipi, açılma yönü ve iç ünite için yer. Böylece kilit ilk seferde oturur, kapı zorlanmadan kapanır — motorun kapıyı kendisi kilitleyip kilitleyemeyeceği buna bağlıdır."
             ]
           },
@@ -912,14 +913,14 @@ export const ARTICLES: Article[] = [
           {
             "h": "Daire, ev ve ofise hangi kilit",
             "p": [
-              "Daire: kapınıza göre seçilmiş, parmak izi, kod ve mekanik anahtarlı akıllı kilit. Evde Tuya tabanlı akıllı ev varsa Tuya Wi-Fi'li bir model; pil değiştirmeden uzun özerklik önemliyse çıkarılabilir şarjlı bataryalı bir model. Müstakil ev: giriş kapısına aynı türde akıllı kilit, bahçe kapısına diyafondan açılan dış mekân tipi elektromekanik kilit.",
+              "Daire: kapınıza göre seçilmiş, parmak izi, kod ve mekanik anahtarlı akıllı kilit. Evde Tuya tabanlı akıllı ev varsa Tuya Wi-Fi'li bir model; pil değiştirmeden uzun özerklik önemliyse dahili şarjlı bataryalı bir model. Müstakil ev: giriş kapısına aynı türde akıllı kilit, bahçe kapısına diyafondan açılan dış mekân tipi elektromekanik kilit.",
               "Ofis ve ticari alanlar: kart okuyuculu ve geçiş kontrol sistemli elektromanyetik veya elektromekanik kilit; ayrılan çalışanın erişimi tek işlemle iptal edilir. Yönetici odası ve sunucu odası için biyometri: ZKTeco HBL400 kilidi yüzü 1 metreye kadar mesafeden, parmak izini ve kartı tanır."
             ]
           },
           {
             "h": "Akıllı kilitler ne kadar",
             "p": [
-              "2 Kasım 2026 katalog fiyatları, montaj hariç: kartlı ve kodlu KANIHAD TK-605A — 679.900 UZS; parmak izli ve Tuya Wi-Fi'li KANIHAD TK-606A-TW — 729.900; parmak izi, kod, uygulama ve şarjlı bataryalı Tapo DL105 — 989.900; KANIHAD TK-N1 Pro — 1.050.900; 300.000 döngü ömürlü KANIHAD TK-D1 Pro — 1.607.900; yüz tanımalı biyometrik ZKTeco HBL400 — 2.993.900.",
+              "2 Kasım 2026 katalog fiyatları, montaj hariç: parmak izli ve Tuya Wi-Fi'li KANIHAD TK-606A-TW — 729.900 UZS; kartlı ve kodlu KANIHAD TK-605A — 741.900; KANIHAD TK-N1 Pro — 1.050.900; cam kapılar için ZKTeco GL300W — 1.558.900; 300.000 döngü ömürlü KANIHAD TK-D1 Pro — 1.607.900; yüz tanımalı biyometrik ZKTeco HBL400 — 2.993.900.",
               "Montaj maliyeti kapıya bağlıdır: hazır bir kapıya kilit bir-iki saatte takılır, standart dışı gömme kilitli metal kapı uyarlama gerektirir. Kapınıza uygun kilidi fotoğraftan seçiyor, takıyor ve tüm aile için uygulamayı kuruyoruz; işçiliğe 3 yıl garanti veriyoruz. Talebinizi elektronik kilitler sayfamızdan bırakabilirsiniz — bir iş günü içinde yanıtlıyoruz."
             ]
           }
@@ -947,7 +948,7 @@ export const ARTICLES: Article[] = [
           },
           {
             "q": "Piller veya batarya ne kadar dayanır?",
-            "a": "Modele ve açma sayısına bağlı olarak birkaç aydan bir yıla kadar. Tapo DL105 için üretici laboratuvar testlerine göre tek şarjla bir yıla kadar belirtiyor."
+            "a": "Modele ve açma sayısına bağlı olarak birkaç aydan bir yıla kadar. Kilit pil zayıfladığını önceden bildirir; piller bu uyarıyla değiştirilir."
           }
         ],
         "summary": [
@@ -955,7 +956,7 @@ export const ARTICLES: Article[] = [
           "Kilit pil zayıfladığını önceden bildirir; son çare olarak mekanik anahtar ve birçok modelde dışarıda acil güç girişi vardır.",
           "Parmak izi, kod ve kart internetsiz ve elektrik kesintisinde de çalışır; internet uzaktan açma ve kayıt için gerekir.",
           "Satın almadan önce kapı kontrol edilir: kalınlık, gömme mekanizma tipi, iç ünite için yer.",
-          "Katalogdaki akıllı kilitler 679.900 UZS'den başlar; yüz tanımalı biyometrik ZKTeco HBL400 2.993.900 UZS (fiyatlar 02.11.2026)."
+          "Katalogdaki akıllı kilitler 729.900 UZS'den başlar; yüz tanımalı biyometrik ZKTeco HBL400 2.993.900 UZS (fiyatlar 02.11.2026)."
         ]
       },
       "zh": {
@@ -974,15 +975,15 @@ export const ARTICLES: Article[] = [
           {
             "h": "锁如何识别指纹、密码和手机",
             "p": [
-              "智能锁的指纹识别器通常是电容式的：它通过皮肤的电学特性读取指纹纹路，而不是看图像，所以手指照片骗不过它。据厂家数据，Tapo DL105识别时间不到0.5秒，可存储100枚指纹和200组密码。",
+              "智能锁的指纹识别器通常是电容式的：它通过皮肤的电学特性读取指纹纹路，而不是看图像，所以手指照片骗不过它。例如KANIHAD TK-606A-TW可存储最多100枚指纹、100张卡和100组密码。",
               "密码在键盘上输入；好的锁在连续输错几次后会锁定输入，防止被试出密码。卡片的用法与办公室门禁卡相同。应用可在门边通过蓝牙开门，或远程通过互联网开门，还能给访客发临时密码，并显示开门记录：谁在什么时间开过门。"
             ]
           },
           {
             "h": "电池没电会怎样",
             "p": [
-              "这是最大的担心，其实大可不必。锁会提前提示电量不足——面板上有信号，应用里有通知，通常在电池彻底耗尽前数周。续航取决于型号和开门次数：对于可拆卸电池的Tapo DL105，厂家按实验室测试标称最长一年，并像手机一样通过USB Type-C充电。",
-              "如果忽略了提示，还有备用办法：随锁附带的机械钥匙，以及许多型号门外的应急供电接口——接上充电宝，再用指纹或密码开门。具体型号是否有该接口，购买前查看规格即可。使用AA或AAA电池的锁（如KANIHAD）只需换一组新电池。"
+              "这是最大的担心，其实大可不必。锁会提前提示电量不足——面板上有信号，应用里有通知，通常在电池彻底耗尽前数周。续航取决于型号和开门次数：KANIHAD的锁使用AA或AAA电池，而ZKTeco HBL400内置4.2 Ah锂离子电池，充电即可，无需更换。",
+              "如果忽略了提示，还有备用办法：随锁附带的机械钥匙，以及许多型号门外的应急供电接口——接上充电宝，再用指纹或密码开门。具体型号是否有该接口，购买前查看规格即可。电池供电的锁只需换一组新电池。"
             ]
           },
           {
@@ -995,7 +996,7 @@ export const ARTICLES: Article[] = [
           {
             "h": "智能锁适配你家的门吗",
             "p": [
-              "这个问题应在购买前解决。锁的结构不同：有的装在已有的嵌入式锁舌上，有的整体替换内外面板，并配合特定类型的锁体工作。每个型号都有适用门厚范围：Tapo DL105为35–55毫米，ZKTeco HBL400为45–60毫米。",
+              "这个问题应在购买前解决。锁的结构不同：有的装在已有的嵌入式锁舌上，有的整体替换内外面板，并配合特定类型的锁体工作。每个型号都有适用门厚范围：例如ZKTeco HBL400适用于45–60毫米厚的门，ZKTeco GL300W适用于10–12毫米的玻璃门。",
               "金属入户门常需要改开安装孔，玻璃门用锁则有专门的结构。因此工程师会先看门或门的照片：厚度、锁体类型、开门方向以及内侧模块的安装位置。这样锁一次装好，门关起来也不费力——电机能否自动上锁就取决于此。"
             ]
           },
@@ -1009,14 +1010,14 @@ export const ARTICLES: Article[] = [
           {
             "h": "公寓、住宅和办公室该装哪种锁",
             "p": [
-              "公寓：按你家门选型的智能锁，具备指纹、密码和机械钥匙。家里已有涂鸦智能家居就选带涂鸦Wi-Fi的型号；看重长续航、不想换电池就选可拆卸充电电池的型号。独栋住宅：入户门装同类智能锁，院门装室外型电控锁，由对讲开启。",
+              "公寓：按你家门选型的智能锁，具备指纹、密码和机械钥匙。家里已有涂鸦智能家居就选带涂鸦Wi-Fi的型号；看重长续航、不想换电池就选内置充电电池的型号。独栋住宅：入户门装同类智能锁，院门装室外型电控锁，由对讲开启。",
               "办公室和商业场所：电磁锁或电控锁配读卡器和门禁系统，员工离职一键取消权限。总经理办公室和机房可用生物识别：ZKTeco HBL400可在1米内识别人脸，也支持指纹和卡片。"
             ]
           },
           {
             "h": "智能锁多少钱",
             "p": [
-              "2026年11月2日目录价格，不含安装：KANIHAD TK-605A（刷卡、密码）——679 900苏姆；KANIHAD TK-606A-TW（指纹、涂鸦Wi-Fi）——729 900；Tapo DL105（指纹、密码、应用、充电电池）——989 900；KANIHAD TK-N1 Pro——1 050 900；寿命30万次的KANIHAD TK-D1 Pro——1 607 900；带人脸识别的生物识别锁ZKTeco HBL400——2 993 900。",
+              "2026年11月2日目录价格，不含安装：KANIHAD TK-606A-TW（指纹、涂鸦Wi-Fi）——729 900苏姆；KANIHAD TK-605A（刷卡、密码）——741 900；KANIHAD TK-N1 Pro——1 050 900；玻璃门用ZKTeco GL300W——1 558 900；寿命30万次的KANIHAD TK-D1 Pro——1 607 900；带人脸识别的生物识别锁ZKTeco HBL400——2 993 900。",
               "安装费用取决于门：已开好孔的门一两个小时即可装好，非标锁体的金属门需要改造。我们根据照片为你家的门选锁、安装，并为全家设置应用；施工质保3年。可在电子锁页面提交需求——我们在一个工作日内回复。"
             ]
           }
@@ -1044,7 +1045,7 @@ export const ARTICLES: Article[] = [
           },
           {
             "q": "电池能用多久？",
-            "a": "几个月到一年不等，取决于型号和开门次数。Tapo DL105厂家按实验室测试标称单次充电最长一年。"
+            "a": "几个月到一年不等，取决于型号和开门次数。锁会提前提示电量不足，按提示更换电池即可。"
           }
         ],
         "summary": [
@@ -1052,7 +1053,7 @@ export const ARTICLES: Article[] = [
           "锁会提前提示电量不足；万不得已还有机械钥匙，许多型号门外有应急供电接口。",
           "指纹、密码和卡片无需网络、停电也能用；网络用于远程开门和记录。",
           "购买前要检查门：厚度、锁体类型、内侧模块位置。",
-          "目录中的智能锁679 900苏姆起；带人脸识别的ZKTeco HBL400为2 993 900苏姆（2026年11月2日价格）。"
+          "目录中的智能锁729 900苏姆起；带人脸识别的ZKTeco HBL400为2 993 900苏姆（2026年11月2日价格）。"
         ]
       }
     }
@@ -1574,6 +1575,7 @@ export const ARTICLES: Article[] = [
   {
     "slug": "videodomofon-dlya-kvartiry-ip-sip-dvuhprovodnoy",
     "date": "2026-10-30",
+    "updated": "2026-11-02",
     "related": [
       "intercom",
       "telephony"
@@ -1594,8 +1596,7 @@ export const ARTICLES: Article[] = [
     "products": [
       "hik-ds-kis302-p",
       "hik-ds-kv6113-pe1-c-o-std",
-      "hik-ds-kh6320-wte1-o-std",
-      "tapo-tapo-d230s1"
+      "hik-ds-kh6320-wte1-o-std"
     ],
     "loc": {
       "ru": {
@@ -1650,7 +1651,7 @@ export const ARTICLES: Article[] = [
             "h": "Что можно поставить в квартире многоэтажного дома",
             "p": [
               "Владелец квартиры отвечает только за свою дверь, поэтому вариантов три. Первый — оставить подъездный домофон и заменить трубку на видеомонитор с модулем сопряжения: он звонит от подъездной панели и показывает гостя, если в подъезде видеопанель. Как подобрать совместимое устройство, мы разбирали в статье о замене трубки домофона.",
-              "Второй — своя панель у двери квартиры. Проще всего беспроводной видеозвонок: Tapo D230S1 с разрешением 2K работает от аккумулятора до 180 дней, пишет на карту памяти до 512 ГБ и присылает вызов на телефон; стоит от 976 900 сум. Дверь он не открывает — это звонок с камерой, а не домофон с замком. Если нужен замок и монитор в квартире, ставят IP-комплект.",
+              "Второй — своя панель у двери квартиры. Проще всего беспроводной видеозвонок: он работает от аккумулятора, пишет на карту памяти и присылает вызов на телефон; модель подбираем под дверь. Дверь он не открывает — это звонок с камерой, а не домофон с замком. Если нужен замок и монитор в квартире, ставят IP-комплект.",
               "Третий — модернизация всего подъезда или дома: решение принимают ТСЖ или управляющая компания. Для этого подходят IP-системы и двухпроводные системы для многоквартирных домов; в новостройках с 1 мая 2026 года камеры и домофоны закладываются в проект по постановлению ПП-48 — подробнее в нашей статье о новостройках."
             ]
           },
@@ -1749,7 +1750,7 @@ export const ARTICLES: Article[] = [
             "h": "Koʻp qavatli uydagi kvartiraga nima qoʻyish mumkin",
             "p": [
               "Kvartira egasi faqat oʻz eshigi uchun javob beradi, shuning uchun variantlar uchta. Birinchisi — podyezd domofonini qoldirib, trubkani moslashtirish modulli videomonitorga almashtirish: u podyezd panelidan jiringlaydi va podyezdda videopanel boʻlsa, mehmonni koʻrsatadi. Mos qurilmani qanday tanlashni domofon trubkasini almashtirish haqidagi maqolada koʻrib chiqqanmiz.",
-              "Ikkinchisi — kvartira eshigi yonida oʻz paneli. Eng oddiysi simsiz videoqoʻngʻiroq: 2K ruxsatli Tapo D230S1 akkumulyatordan 180 kungacha ishlaydi, 512 GB gacha xotira kartasiga yozadi va chaqiruvni telefonga yuboradi; narxi 976 900 soʻmdan. U eshikni ochmaydi — bu qulfli domofon emas, kamerali qoʻngʻiroq. Kvartirada qulf va monitor kerak boʻlsa, IP-toʻplam qoʻyiladi.",
+              "Ikkinchisi — kvartira eshigi yonida oʻz paneli. Eng oddiysi simsiz videoqoʻngʻiroq: u akkumulyatordan ishlaydi, xotira kartasiga yozadi va chaqiruvni telefonga yuboradi; modelni eshikka moslab tanlaymiz. U eshikni ochmaydi — bu qulfli domofon emas, kamerali qoʻngʻiroq. Kvartirada qulf va monitor kerak boʻlsa, IP-toʻplam qoʻyiladi.",
               "Uchinchisi — butun podyezd yoki uyni modernizatsiya qilish: qarorni XUJMSh yoki boshqaruv kompaniyasi qabul qiladi. Buning uchun IP-tizimlar va koʻp kvartirali uylar uchun ikki simli tizimlar mos keladi; yangi binolarda 2026-yil 1-maydan kameralar va domofonlar PQ-48 qaroriga koʻra loyihaga kiritiladi — batafsil yangi binolar haqidagi maqolamizda."
             ]
           },
@@ -1848,7 +1849,7 @@ export const ARTICLES: Article[] = [
             "h": "What you can install in a flat in an apartment block",
             "p": [
               "A flat owner is responsible only for their own door, so there are three options. The first is to keep the building intercom and replace the handset with a video monitor with an interface module: it rings from the entrance panel and shows the visitor if the entrance has a video panel. How to choose a compatible unit is covered in our article on replacing an intercom handset.",
-              "The second is your own station at the flat door. The simplest is a wireless video doorbell: the Tapo D230S1 with 2K resolution runs on its battery for up to 180 days, records to a memory card of up to 512 GB and sends the call to your phone; it costs from 976,900 UZS. It does not open the door — it is a doorbell with a camera, not an intercom with a lock. If you need a lock and a monitor in the flat, an IP kit is installed.",
+              "The second is your own station at the flat door. The simplest is a wireless video doorbell: it runs on a battery, records to a memory card and sends the call to your phone; we choose the model to suit the door. It does not open the door — it is a doorbell with a camera, not an intercom with a lock. If you need a lock and a monitor in the flat, an IP kit is installed.",
               "The third is upgrading the whole entrance or building: the decision belongs to the homeowners’ association or the management company. IP systems and 2-wire multi-apartment systems suit this; in new buildings, since 1 May 2026 cameras and intercoms are planned into the project under resolution PP-48 — more in our article on new buildings."
             ]
           },
@@ -1947,7 +1948,7 @@ export const ARTICLES: Article[] = [
             "h": "Apartmandaki bir daireye ne takılabilir",
             "p": [
               "Daire sahibi yalnızca kendi kapısından sorumludur, bu yüzden üç seçenek vardır. Birincisi apartman diyafonunu bırakıp ahizeyi arayüz modüllü bir görüntülü monitörle değiştirmek: apartman panelinden çalar ve girişte görüntülü panel varsa ziyaretçiyi gösterir. Uyumlu cihazın nasıl seçileceğini diyafon ahizesi değişimi yazımızda anlattık.",
-              "İkincisi daire kapısında kendi ünitenizdir. En basiti kablosuz görüntülü kapı zilidir: 2K çözünürlüklü Tapo D230S1 bataryayla 180 güne kadar çalışır, 512 GB'a kadar hafıza kartına kaydeder ve çağrıyı telefona gönderir; fiyatı 976.900 UZS'den başlar. Kapıyı açmaz — kilitli bir diyafon değil, kameralı bir zildir. Dairede kilit ve monitör gerekiyorsa IP set kurulur.",
+              "İkincisi daire kapısında kendi ünitenizdir. En basiti kablosuz görüntülü kapı zilidir: bataryayla çalışır, hafıza kartına kaydeder ve çağrıyı telefona gönderir; modeli kapıya göre seçiyoruz. Kapıyı açmaz — kilitli bir diyafon değil, kameralı bir zildir. Dairede kilit ve monitör gerekiyorsa IP set kurulur.",
               "Üçüncüsü tüm girişin veya binanın yenilenmesidir: kararı site yönetimi verir. Bunun için IP sistemler ve apartmanlara yönelik 2 telli sistemler uygundur; yeni binalarda 1 Mayıs 2026'dan itibaren kameralar ve diyafonlar PP-48 kararına göre projeye dahil edilir — ayrıntılar yeni binalar yazımızda."
             ]
           },
@@ -2046,7 +2047,7 @@ export const ARTICLES: Article[] = [
             "h": "楼房里的公寓能装什么",
             "p": [
               "公寓业主只负责自家的门，所以有三种选择。其一，保留单元门对讲，把听筒换成带接口模块的可视室内机：它随单元门口机响铃，若单元门是可视门口机还能看到访客。如何选择兼容设备，见我们关于更换对讲听筒的文章。",
-              "其二，在入户门安装自己的设备。最简单的是无线可视门铃：2K分辨率的Tapo D230S1电池续航最长180天，录像存入最大512GB存储卡，并把呼叫推送到手机，976 900苏姆起。它不能开门——这是带摄像头的门铃，而不是带锁的对讲。如需门锁和室内机，就安装IP套装。",
+              "其二，在入户门安装自己的设备。最简单的是无线可视门铃：靠电池工作，录像存入存储卡，并把呼叫推送到手机；型号按门的情况选配。它不能开门——这是带摄像头的门铃，而不是带锁的对讲。如需门锁和室内机，就安装IP套装。",
               "其三，整栋或整个单元升级：由业主委员会或物业公司决定。可选IP系统或面向多户住宅的两线系统；根据PP-48号决议，自2026年5月1日起新建住宅须在设计中纳入摄像机和对讲——详见我们关于新建住宅的文章。"
             ]
           },
@@ -2098,6 +2099,7 @@ export const ARTICLES: Article[] = [
   {
     "slug": "komplekt-videonablyudeniya-kak-vybrat",
     "date": "2026-10-30",
+    "updated": "2026-11-02",
     "related": [
       "cctv"
     ],
@@ -2107,8 +2109,7 @@ export const ARTICLES: Article[] = [
       "zhestkie-diski"
     ],
     "brands": [
-      "hikvision",
-      "hilook"
+      "hikvision"
     ],
     "seeAlso": [
       "kamera-dlya-doma",
@@ -2116,9 +2117,8 @@ export const ARTICLES: Article[] = [
       "skolko-stoit-videonablyudenie",
       "zashchita-ip-kamer-ot-vzloma"
     ],
-    "kits": true,
     "products": [
-      "hil-hl-ipc-b140ha-luc-2-8mm",
+      "hik-ds-2cd1043g2-i-2-8mm",
       "hik-ds-7108ni-q1-8p",
       "pro-seagate-skyhawk-hdd-2tb-dubai",
       "hik-nks424w0h"
@@ -2182,8 +2182,8 @@ export const ARTICLES: Article[] = [
           {
             "h": "Сколько стоит комплект на 4 камеры с монтажом",
             "p": [
-              "Пример по ценам нашего каталога на 30 октября 2026 года: четыре уличные IP-камеры HiLook HL-IPC-B140HA-LUC 4 Мп с защитой IP67 — 4 × 407 900 = 1 631 600 сум; регистратор Hikvision DS-7108NI-Q1/8P на 8 каналов с PoE — 828 900; диск Seagate SkyHawk 2 ТБ — 951 900; 80 метров кабеля витой пары — 487 200. Оборудование — 3 899 600 сум.",
-              "Работы по прайсу: монтаж четырёх уличных камер — 720 000, пусконаладка — 308 000, настройка просмотра с телефона — 170 000; итого 1 198 000. Вся система под ключ — около 5,1 млн сум, с диском 1 ТБ — около 4,85 млн. Wi-Fi-набор из двух камер стоит от 1 286 900 сум без монтажа. Цены меняются; кабель зависит от расстояний на объекте.",
+              "Пример по ценам нашего каталога на 2 ноября 2026 года: четыре уличные IP-камеры Hikvision DS-2CD1043G2-I 4 Мп с защитой IP67 и подсветкой EXIR — 4 × 469 900 = 1 879 600 сум; регистратор Hikvision DS-7108NI-Q1/8P на 8 каналов с PoE — 828 900; диск Seagate SkyHawk 2 ТБ — 951 900; 80 метров кабеля витой пары — 487 200. Оборудование — 4 147 600 сум.",
+              "Работы по прайсу: монтаж четырёх уличных камер — 720 000, пусконаладка — 308 000, настройка просмотра с телефона — 170 000; итого 1 198 000. Вся система под ключ — около 5,35 млн сум, с диском 1 ТБ — около 5,1 млн. Wi-Fi-набор из двух камер стоит от 1 286 900 сум без монтажа. Цены меняются; кабель зависит от расстояний на объекте.",
               "Готовые комплекты для дома, магазина, офиса и склада с ценой «от» собраны в разделе «Комплекты». На работы даём гарантию 3 года, на оборудование — от 1 до 3 лет по гарантии производителя. Чтобы посчитать комплект под ваш объект, оставьте заявку на странице видеонаблюдения — смету возвращаем в течение рабочего дня."
             ]
           }
@@ -2219,7 +2219,7 @@ export const ARTICLES: Article[] = [
           "В коробку обычно не входят кабель, коннекторы, ИБП и часто жёсткий диск — их стоит сразу заложить в смету.",
           "Дому и магазину до 100 м² обычно нужно 4–5 камер; регистратор берут на 8 каналов с запасом.",
           "Оптимум — камеры 4 Мп; объектив 2,8 мм опознаёт лицо примерно до 5 метров; для 4 камер на две недели архива нужен диск 2 ТБ.",
-          "Система на 4 камеры 4 Мп под ключ — около 5,1 млн сум по ценам 30.10.2026; гарантия на работы 3 года."
+          "Система на 4 камеры 4 Мп под ключ — около 5,35 млн сум по ценам 02.11.2026; гарантия на работы 3 года."
         ]
       },
       "uz": {
@@ -2280,8 +2280,8 @@ export const ARTICLES: Article[] = [
           {
             "h": "Montaj bilan 4 kameralik toʻplam qancha turadi",
             "p": [
-              "Katalogimizning 2026-yil 30-oktyabrdagi narxlari boʻyicha namuna: IP67 himoyali toʻrtta tashqi HiLook HL-IPC-B140HA-LUC 4 Mp IP-kamerasi — 4 × 407 900 = 1 631 600 soʻm; PoE ga ega 8 kanalli Hikvision DS-7108NI-Q1/8P registratori — 828 900; Seagate SkyHawk 2 TB disk — 951 900; 80 metr oʻralgan juftlik kabeli — 487 200. Uskunalar — 3 899 600 soʻm.",
-              "Prays boʻyicha ishlar: toʻrtta tashqi kamera montaji — 720 000, ishga tushirish va sozlash — 308 000, telefondan koʻrishni sozlash — 170 000; jami 1 198 000. Butun tizim toʻliq tayyor holda — taxminan 5,1 mln soʻm, 1 TB disk bilan — taxminan 4,85 mln. Ikki kameralik Wi-Fi toʻplam montajsiz 1 286 900 soʻmdan turadi. Narxlar oʻzgaradi; kabel obyektdagi masofalarga bogʻliq.",
+              "Katalogimizning 2026-yil 2-noyabrdagi narxlari boʻyicha namuna: IP67 himoyali va EXIR yoritishli toʻrtta tashqi Hikvision DS-2CD1043G2-I 4 Mp IP-kamerasi — 4 × 469 900 = 1 879 600 soʻm; PoE ga ega 8 kanalli Hikvision DS-7108NI-Q1/8P registratori — 828 900; Seagate SkyHawk 2 TB disk — 951 900; 80 metr oʻralgan juftlik kabeli — 487 200. Uskunalar — 4 147 600 soʻm.",
+              "Prays boʻyicha ishlar: toʻrtta tashqi kamera montaji — 720 000, ishga tushirish va sozlash — 308 000, telefondan koʻrishni sozlash — 170 000; jami 1 198 000. Butun tizim toʻliq tayyor holda — taxminan 5,35 mln soʻm, 1 TB disk bilan — taxminan 5,1 mln. Ikki kameralik Wi-Fi toʻplam montajsiz 1 286 900 soʻmdan turadi. Narxlar oʻzgaradi; kabel obyektdagi masofalarga bogʻliq.",
               "Uy, doʻkon, ofis va ombor uchun narxi koʻrsatilgan tayyor toʻplamlar «Toʻplamlar» boʻlimida jamlangan. Ishlarga 3 yil, uskunalarga esa ishlab chiqaruvchi kafolati boʻyicha 1 yildan 3 yilgacha kafolat beramiz. Obyektingiz uchun toʻplamni hisoblash uchun videokuzatuv sahifasida ariza qoldiring — smetani ish kuni davomida yuboramiz."
             ]
           }
@@ -2317,7 +2317,7 @@ export const ARTICLES: Article[] = [
           "Qutiga odatda kabel, konnektorlar, UPS va koʻpincha qattiq disk kirmaydi — ularni darhol smetaga kiritgan maʼqul.",
           "100 m² gacha uy va doʻkonga odatda 4–5 kamera kerak; registrator zaxira bilan 8 kanalli olinadi.",
           "Maqbuli — 4 Mp kameralar; 2,8 mm obyektiv yuzni taxminan 5 metrgacha taniydi; 4 kameraning ikki haftalik arxivi uchun 2 TB disk kerak.",
-          "4 Mp li 4 kameralik tizim toʻliq tayyor holda — 30.10.2026 narxlarida taxminan 5,1 mln soʻm; ishlarga kafolat 3 yil."
+          "4 Mp li 4 kameralik tizim toʻliq tayyor holda — 02.11.2026 narxlarida taxminan 5,35 mln soʻm; ishlarga kafolat 3 yil."
         ]
       },
       "en": {
@@ -2378,8 +2378,8 @@ export const ARTICLES: Article[] = [
           {
             "h": "What a 4-camera kit with installation costs",
             "p": [
-              "An example at our catalogue prices on 30 October 2026: four outdoor HiLook HL-IPC-B140HA-LUC 4 MP IP cameras rated IP67 — 4 × 407,900 = 1,631,600 UZS; a Hikvision DS-7108NI-Q1/8P 8-channel PoE recorder — 828,900; a Seagate SkyHawk 2 TB drive — 951,900; 80 metres of twisted-pair cable — 487,200. Hardware: 3,899,600 UZS.",
-              "Labour at our rates: mounting four outdoor cameras — 720,000, commissioning — 308,000, phone viewing set-up — 170,000; total 1,198,000. The whole turnkey system comes to about 5.1 million UZS, or about 4.85 million with a 1 TB drive. A two-camera Wi-Fi set starts at 1,286,900 UZS without installation. Prices change; cable depends on distances on site.",
+              "An example at our catalogue prices on 2 November 2026: four outdoor Hikvision DS-2CD1043G2-I 4 MP IP cameras rated IP67 with EXIR night lighting — 4 × 469,900 = 1,879,600 UZS; a Hikvision DS-7108NI-Q1/8P 8-channel PoE recorder — 828,900; a Seagate SkyHawk 2 TB drive — 951,900; 80 metres of twisted-pair cable — 487,200. Hardware: 4,147,600 UZS.",
+              "Labour at our rates: mounting four outdoor cameras — 720,000, commissioning — 308,000, phone viewing set-up — 170,000; total 1,198,000. The whole turnkey system comes to about 5.35 million UZS, or about 5.1 million with a 1 TB drive. A two-camera Wi-Fi set starts at 1,286,900 UZS without installation. Prices change; cable depends on distances on site.",
               "Ready-made kits for home, shop, office and warehouse with starting prices are collected in our Kits section. We give a 3-year warranty on our work, and 1 to 3 years on hardware under the manufacturer’s warranty. To have a kit calculated for your site, leave a request on our CCTV page — we return a quote within one business day."
             ]
           }
@@ -2415,7 +2415,7 @@ export const ARTICLES: Article[] = [
           "The box usually lacks cable, connectors, a UPS and often a hard drive — put them in the quote from the start.",
           "A house or a shop up to 100 m² usually needs 4–5 cameras; choose an 8-channel recorder for headroom.",
           "4 MP cameras are the sweet spot; a 2.8 mm lens identifies faces up to about 5 metres; two weeks of archive for 4 cameras needs a 2 TB drive.",
-          "A turnkey 4-camera 4 MP system costs about 5.1 million UZS at 30.10.2026 prices; work is under a 3-year warranty."
+          "A turnkey 4-camera 4 MP system costs about 5.35 million UZS at 02.11.2026 prices; work is under a 3-year warranty."
         ]
       },
       "tr": {
@@ -2476,8 +2476,8 @@ export const ARTICLES: Article[] = [
           {
             "h": "Montajlı 4 kameralık set ne kadar",
             "p": [
-              "30 Ekim 2026 katalog fiyatlarımızla örnek: IP67 korumalı dört dış HiLook HL-IPC-B140HA-LUC 4 MP IP kamera — 4 × 407.900 = 1.631.600 UZS; PoE'li 8 kanallı Hikvision DS-7108NI-Q1/8P kayıt cihazı — 828.900; Seagate SkyHawk 2 TB disk — 951.900; 80 metre bükümlü çift kablo — 487.200. Donanım: 3.899.600 UZS.",
-              "Fiyat listemize göre işçilik: dört dış kameranın montajı — 720.000, devreye alma — 308.000, telefondan izleme kurulumu — 170.000; toplam 1.198.000. Anahtar teslim sistemin tamamı yaklaşık 5,1 milyon UZS, 1 TB diskle yaklaşık 4,85 milyon tutar. İki kameralı Wi-Fi seti montajsız 1.286.900 UZS'den başlar. Fiyatlar değişir; kablo tesisteki mesafelere bağlıdır.",
+              "2 Kasım 2026 katalog fiyatlarımızla örnek: IP67 korumalı ve EXIR gece aydınlatmalı dört dış Hikvision DS-2CD1043G2-I 4 MP IP kamera — 4 × 469.900 = 1.879.600 UZS; PoE'li 8 kanallı Hikvision DS-7108NI-Q1/8P kayıt cihazı — 828.900; Seagate SkyHawk 2 TB disk — 951.900; 80 metre bükümlü çift kablo — 487.200. Donanım: 4.147.600 UZS.",
+              "Fiyat listemize göre işçilik: dört dış kameranın montajı — 720.000, devreye alma — 308.000, telefondan izleme kurulumu — 170.000; toplam 1.198.000. Anahtar teslim sistemin tamamı yaklaşık 5,35 milyon UZS, 1 TB diskle yaklaşık 5,1 milyon tutar. İki kameralı Wi-Fi seti montajsız 1.286.900 UZS'den başlar. Fiyatlar değişir; kablo tesisteki mesafelere bağlıdır.",
               "Ev, mağaza, ofis ve depo için başlangıç fiyatlı hazır setler “Setler” bölümümüzde. İşçiliğe 3 yıl, donanıma üretici garantisine göre 1 ila 3 yıl garanti veriyoruz. Tesisiniz için set hesaplatmak isterseniz kamera sistemleri sayfamızdan talep bırakın — teklifi bir iş günü içinde veriyoruz."
             ]
           }
@@ -2513,7 +2513,7 @@ export const ARTICLES: Article[] = [
           "Kutuda genellikle kablo, konnektör, UPS ve çoğu zaman sabit disk yoktur — bunları baştan teklife ekleyin.",
           "100 m²'ye kadar ev ve mağazaya genellikle 4–5 kamera gerekir; kayıt cihazı yedekli 8 kanal alınır.",
           "En uygunu 4 MP kameralardır; 2,8 mm objektif yüzü yaklaşık 5 metreye kadar tanır; 4 kameranın iki haftalık arşivi için 2 TB disk gerekir.",
-          "4 MP 4 kameralı anahtar teslim sistem 30.10.2026 fiyatlarıyla yaklaşık 5,1 milyon UZS; işçilik 3 yıl garantili."
+          "4 MP 4 kameralı anahtar teslim sistem 02.11.2026 fiyatlarıyla yaklaşık 5,35 milyon UZS; işçilik 3 yıl garantili."
         ]
       },
       "zh": {
@@ -2574,8 +2574,8 @@ export const ARTICLES: Article[] = [
           {
             "h": "4路套装含安装要多少钱",
             "p": [
-              "按我们目录2026年10月30日价格举例：四台IP67防护的室外HiLook HL-IPC-B140HA-LUC 400万像素网络摄像机——4 × 407 900 = 1 631 600 苏姆；海康DS-7108NI-Q1/8P 8路PoE录像机——828 900；希捷SkyHawk 2TB硬盘——951 900；80米双绞线——487 200。设备合计3 899 600苏姆。",
-              "按价目表的施工费：四台室外摄像机安装——720 000，调试——308 000，手机查看设置——170 000；合计1 198 000。整套交钥匙系统约510万苏姆，换1TB硬盘约485万。两台摄像机的Wi-Fi套装不含安装1 286 900苏姆起。价格会变动；线缆用量取决于现场距离。",
+              "按我们目录2026年11月2日价格举例：四台IP67防护、带EXIR红外补光的室外海康威视DS-2CD1043G2-I 400万像素网络摄像机——4 × 469 900 = 1 879 600 苏姆；海康DS-7108NI-Q1/8P 8路PoE录像机——828 900；希捷SkyHawk 2TB硬盘——951 900；80米双绞线——487 200。设备合计4 147 600苏姆。",
+              "按价目表的施工费：四台室外摄像机安装——720 000，调试——308 000，手机查看设置——170 000；合计1 198 000。整套交钥匙系统约535万苏姆，换1TB硬盘约510万。两台摄像机的Wi-Fi套装不含安装1 286 900苏姆起。价格会变动；线缆用量取决于现场距离。",
               "适用于家庭、商铺、办公室和仓库、标有起价的成品套装汇总在“套装”栏目。施工质保3年，设备按厂家质保1至3年。如需按您的场地测算套装，请在视频监控页面留言——我们在一个工作日内回复报价。"
             ]
           }
@@ -2611,7 +2611,7 @@ export const ARTICLES: Article[] = [
           "盒子里通常没有线缆、水晶头、UPS，常常也没有硬盘——应一开始就列入报价。",
           "100平方米以内的住宅和商铺通常需要4–5台摄像机；录像机选8路留余量。",
           "400万像素最合适；2.8毫米镜头约5米内可辨认人脸；4台摄像机存两周需要2TB硬盘。",
-          "4台400万像素交钥匙系统按2026年10月30日价格约510万苏姆；施工质保3年。"
+          "4台400万像素交钥匙系统按2026年11月2日价格约535万苏姆；施工质保3年。"
         ]
       }
     }
