@@ -16,11 +16,23 @@ function lp(locale: string) {
   return locale === LOCALE_DEFAULT ? "" : `/${locale}`;
 }
 
+// Комплектующие, снятые в ту же чистку 02.11.2026 (HDMI, безымянная мелочь < 100 тыс.), у которых были
+// показы в Google (seo-critical-urls.json) — иначе 404. Ведём в раздел того же назначения.
+const REMOVED_ITEM_TARGET: Record<string, string> = {
+  "pxt-ksvpp-5e-2h2h0-52": "/products/type/sks-vitaya-para",            // кабель КСВПП cat.5e, 254 показа
+  "pro-soedinitelnye-klemmy-skotch-lok": "/products/type/sks-vitaya-para",
+  "pro-smk": "/products/type/izveschateli",                               // магнитоконтактный СМК
+  "pro-pulsoksimetr": "/products",                                        // профильного раздела нет
+};
+
 // Карточка снятого товара → раздел того же назначения (по префиксу слага)
 export function hiddenProductTarget(slug: string, locale: string): string | null {
   const s = slug.toLowerCase();
-  let to: string | null = null;
-  if (s.startsWith("hil-") || s.startsWith("hilook-")) to = HIDDEN_BRAND_TARGET.hilook;
+  let to: string | null = REMOVED_ITEM_TARGET[s] ?? null;
+  if (to) return `${lp(locale)}${to}`;
+  // HDMI-кабели и удлинители (42 шт. сняты целиком): HDMI соединяет регистратор с монитором
+  if (/^pro-hdmi-/.test(s)) to = "/products/group/videonablyudenie";
+  else if (s.startsWith("hil-") || s.startsWith("hilook-")) to = HIDDEN_BRAND_TARGET.hilook;
   else if (s.startsWith("mcs-") || s.startsWith("mercusys-")) to = HIDDEN_BRAND_TARGET.mercusys;
   else if (s.startsWith("tapo-")) {
     if (/^tapo-tapo-c\d/.test(s)) to = "/products/group/videonablyudenie";   // камеры C…
