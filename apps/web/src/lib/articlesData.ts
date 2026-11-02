@@ -34,6 +34,519 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    "slug": "besprovodnaya-pozharnaya-signalizatsiya-radiokanal",
+    "date": "2026-11-02",
+    "related": [
+      "fire",
+      "obsluzhivanie"
+    ],
+    "hubs": [
+      "pozharnaya-bezopasnost",
+      "pribory-i-moduli",
+      "izveschateli"
+    ],
+    "brands": [],
+    "seeAlso": [
+      "pozharnaya-signalizatsiya-vidy",
+      "pozharnaya-signalizatsiya-dlya-biznesa-trebovaniya",
+      "yongin-signalizatsiyasi-narxi",
+      "obsluzhivanie-pozharnoy-signalizacii-uzbekistan"
+    ],
+    "products": [
+      "bld-s2000r-ost-isp-01-vyhod",
+      "bld-s2000-kdl",
+      "rbz-ppkopu-r3-rubezh-2op",
+      "bld-dip-34a-03-bolid"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Беспроводная адресная пожарная сигнализация: как работает радиоканал Рубеж R3 и Болид С2000Р и когда он выгоднее кабеля",
+        "seoTitle": "Беспроводная пожарная сигнализация: радиоканал R3 и С2000Р",
+        "seoDesc": "Как устроена радиоканальная адресная пожарная сигнализация: расширители, ретрансляторы, контроль связи, батареи. Когда радио выгоднее кабеля и как сочетать их.",
+        "excerpt": "Радиоканальная пожарная сигнализация ставится без кабельных трасс: извещатели работают от батарей и связываются с адресной линией по радио. Разбираем, как устроен радиоканал у Рубеж R3 и Болид С2000Р, что нового появилось в 2025–2026 годах, где радио экономит деньги и время, где кабель надёжнее и дешевле и как совместить их в одной системе.",
+        "sections": [
+          {
+            "h": "Адресная система и место радиоканала в ней",
+            "p": [
+              "Адресная пожарная сигнализация устроена так: прибор управляет адресной линией, на которой каждый извещатель имеет свой номер. При срабатывании прибор показывает не «сработал шлейф», а конкретное помещение и датчик, следит за запылённостью камер и сам сообщает о неисправностях. Разницу между пороговыми, адресными и адресно-аналоговыми системами мы разбирали в статье о видах пожарной сигнализации.",
+              "В радиоканальной системе часть извещателей подключена к той же адресной линии не проводом, а по радио — через радиорасширитель. Для прибора они выглядят как обычные адресные устройства: у них есть номер, состояние и журнал. Меняется только способ доставки сигнала от датчика до линии."
+            ]
+          },
+          {
+            "h": "Как устроен радиоканал",
+            "p": [
+              "Центр радиочасти — радиорасширитель, который ставится на адресную линию и держит связь с радиоустройствами вокруг. У Болид это С2000Р-АРР125: по данным производителя, он подключает до 125 радиоустройств серии С2000Р к контроллеру линии С2000-КДЛ и постоянно контролирует связь с каждым. У Рубеж R3 эту роль выполняет РРС-250-R3 — расширитель линии или ретранслятор.",
+              "Извещатели работают от батарей. Связь двусторонняя и контролируемая: если датчик сняли, он вышел из строя или у него садится батарея, прибор фиксирует неисправность так же, как обрыв провода в проводной системе. Там, где сигнал не добивает, ставят ретрансляторы: у системы Рубеж R3 производитель заявляет до 10 уровней ретрансляции и дальность до 1 000 метров на открытом пространстве, у Болид радиоповторитель С2000-РПИ исп.02 рассчитан не менее чем на 1 200 метров на открытой местности."
+            ]
+          },
+          {
+            "h": "Что нового в 2025–2026 годах",
+            "p": [
+              "Рубеж в 2025 году показал радиоканальную систему R3 для жилых зданий сложной планировки: по данным производителя, до 250 радиоустройств на одной адресной линии, до 500 на прибор и до 4 000 в системе, частота 868 МГц. В 2026 году в составе R3 представлено новое радиорешение с автоматическим построением сети и сроком службы извещателей до 10 лет от одного комплекта батарей; новые устройства поддерживаются в программе FireSec NT.",
+              "Болид обновил радиоканальную линейку С2000Р: радиорасширитель С2000Р-АРР125 на 125 устройств сменил прежнюю модель на 32 устройства, появились радиоповторитель С2000-РПИ исп.02 и радиоканальное световое табло «Выход» С2000Р-ОСТ. Для владельца это означает, что радиосистемы стали ёмче, а замена батарей — реже."
+            ]
+          },
+          {
+            "h": "Когда радио выгоднее кабеля",
+            "p": [
+              "Радиоканал окупается там, где дорого или нельзя прокладывать кабель. Готовый ремонт с дорогой отделкой, натяжными или подвесными потолками сложной формы, мрамор и дерево — штробить и восстанавливать отделку выходит дороже разницы в цене извещателей. Исторические здания и музеи, где вмешательство в стены ограничено. Работающие гостиницы, офисы и магазины: монтаж радиосистемы идёт быстрее и почти без пыли, объект не останавливают.",
+              "Второй сценарий — удалённые помещения и расширение. Склад через двор, пристройка, второй корпус: вместо траншеи или воздушной трассы — радиоповторитель. Если к существующей адресной системе нужно добавить несколько помещений после перепланировки, радиорасширитель на той же линии решает задачу без новых трасс."
+            ]
+          },
+          {
+            "h": "Когда кабель надёжнее и дешевле",
+            "p": [
+              "На стройке и при капитальном ремонте кабель почти всегда выгоднее: проводной адресный извещатель дешевле радиоканального, а трассу всё равно закладывают вместе с остальными сетями. Проводным датчикам не нужны батареи, поэтому в обслуживании нет их плановой замены. Например, проводной адресно-аналоговый дымовой извещатель Болид ДИП-34А-03 в каталоге стоит 218 900 сум.",
+              "Радиоканал чувствителен к среде: металлоконструкции, железобетон, стеллажи с металлом и мощные источники помех ослабляют сигнал. Поэтому перед радиоканальной системой проводят радиообследование объекта — проверяют, где сигнал устойчив, а где нужны ретрансляторы. На больших однотипных площадях вроде складов и цехов проводная система чаще оказывается проще и дешевле."
+            ]
+          },
+          {
+            "h": "Гибрид: провод и радио в одной системе",
+            "p": [
+              "Выбирать одно из двух не обязательно. Радиорасширитель встаёт на ту же адресную линию, что и проводные извещатели, поэтому основное здание можно сделать на кабеле, а отделанный холл, переговорные и пристройку — на радио. Прибор, журнал событий, пульт и оповещение остаются общими.",
+              "Пример на оборудовании из каталога: контроллер линии Болид С2000-КДЛ на 127 адресных устройств (1 026 900 сум) обслуживает проводные извещатели ДИП-34А и радиорасширитель С2000Р-АРР125 для радиоустройств. Для системы Рубеж основа — прибор R3-Рубеж-2ОП с двумя адресными линиями до 250 устройств на каждую (8 942 900 сум), к линии подключается радиорасширитель РРС-250-R3."
+            ]
+          },
+          {
+            "h": "Что учесть заранее",
+            "p": [
+              "Батареи. Прибор предупреждает о разряде каждого радиоизвещателя заранее, но замену нужно включить в годовой план обслуживания — так же, как проверку дымовых камер и тест оповещения. Срок службы батарей зависит от модели и условий; у новых устройств Рубеж R3 производитель заявляет до 10 лет. Об обслуживании пожарной сигнализации по требованиям Узбекистана — в нашей отдельной статье.",
+              "Документация. Решение о радиоканале закладывают в проект системы с учётом требований ШНК 2.04.09-2007 и условий конкретного объекта, а исполнительная документация отражает и проводные, и радиоустройства. Оборудование должно быть сертифицировано, а монтаж выполняет организация с разрешительными документами на этот вид работ."
+            ]
+          },
+          {
+            "h": "Сколько стоит и как заказать",
+            "p": [
+              "Радиоканальный извещатель дороже проводного, но на объектах с отделкой экономия на прокладке трасс и восстановлении стен перекрывает разницу. Цены каталога на 2 ноября 2026 года: радиоканальное табло «Выход» Болид С2000Р-ОСТ исп.01 — 679 900 сум, контроллер линии С2000-КДЛ — 1 026 900 сум, проводной дымовой извещатель ДИП-34А-03 — 218 900 сум, прибор R3-Рубеж-2ОП — 8 942 900 сум. Радиоизвещатели и радиорасширители Рубеж R3 и Болид С2000Р поставляем под заказ под конкретный объект.",
+              "Мы обследуем объект, считаем вариант на кабеле, на радио и гибридный, чтобы было видно, где радио действительно экономит, монтируем, настраиваем и сдаём систему с документацией. На работы даём гарантию 3 года. Расчёт можно заказать на странице пожарной сигнализации — смету возвращаем в течение рабочего дня."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Надёжна ли беспроводная пожарная сигнализация?",
+            "a": "Связь у адресных радиосистем двусторонняя и контролируемая: если извещатель пропал из сети или у него садится батарея, прибор фиксирует неисправность. Надёжность обеспечивают радиообследование объекта и ретрансляторы там, где сигнал слабый."
+          },
+          {
+            "q": "Как часто менять батареи в радиоизвещателях?",
+            "a": "Зависит от модели и условий; прибор заранее сообщает о разряде каждого извещателя. У новых устройств Рубеж R3 производитель заявляет до 10 лет от одного комплекта батарей. Замену включают в годовой план обслуживания."
+          },
+          {
+            "q": "Можно ли добавить радиоизвещатели к существующей проводной системе?",
+            "a": "Да, если система поддерживает радиорасширители: у Болид это С2000Р-АРР125 на линии С2000-КДЛ, у Рубеж R3 — РРС-250-R3. Радиоустройства встают на ту же адресную линию."
+          },
+          {
+            "q": "Дороже ли радиосистема проводной?",
+            "a": "Оборудование дороже, но на объектах с готовой отделкой экономия на прокладке трасс и восстановлении стен часто перекрывает разницу. На стройке проводная система обычно дешевле."
+          },
+          {
+            "q": "Что мешает радиосигналу?",
+            "a": "Металлоконструкции, железобетон, металлические стеллажи и мощные источники помех. Поэтому до монтажа проводят радиообследование и ставят ретрансляторы там, где это нужно."
+          },
+          {
+            "q": "Поставляете ли вы радиоканальное оборудование?",
+            "a": "Да, радиоизвещатели и радиорасширители Рубеж R3 и Болид С2000Р поставляем под заказ под конкретный объект, вместе с монтажом и наладкой."
+          }
+        ],
+        "summary": [
+          "В радиоканальной адресной системе извещатели на батареях подключаются к адресной линии по радио через радиорасширитель и видны прибору как обычные адресные устройства.",
+          "Связь двусторонняя и контролируемая; дальность увеличивают ретрансляторами — у Рубеж R3 до 10 уровней ретрансляции по данным производителя.",
+          "Новинки 2025–2026: Рубеж R3 до 4 000 устройств в системе и извещатели до 10 лет от батарей; Болид С2000Р-АРР125 на 125 устройств.",
+          "Радио выгоднее на объектах с готовой отделкой, в работающих зданиях и для удалённых помещений; кабель — на стройке и больших однотипных площадях.",
+          "Провод и радио совмещаются на одной адресной линии; радиооборудование Рубеж R3 и Болид С2000Р поставляем под заказ."
+        ]
+      },
+      "uz": {
+        "title": "Simsiz manzilli yongʻin signalizatsiyasi: Rubej R3 va Bolid S2000R radiokanali qanday ishlaydi va qachon kabeldan foydaliroq",
+        "seoTitle": "Simsiz yongʻin signalizatsiyasi: R3 va S2000R radiokanali",
+        "seoDesc": "Radiokanalli manzilli yongʻin signalizatsiyasi qanday tuzilgan: kengaytirgichlar, retranslyatorlar, aloqa nazorati, batareya. Radio qachon kabeldan foydali.",
+        "excerpt": "Radiokanalli yongʻin signalizatsiyasi kabel trassalarisiz oʻrnatiladi: xabar beruvchilar batareyadan ishlaydi va manzilli liniya bilan radio orqali bogʻlanadi. Rubej R3 va Bolid S2000R da radiokanal qanday tuzilganini, 2025–2026-yillarda nima yangilik paydo boʻlganini, radio qayerda pul va vaqtni tejashini, kabel qayerda ishonchliroq va arzonroq ekanini va ularni bitta tizimda qanday birlashtirishni koʻrib chiqamiz.",
+        "sections": [
+          {
+            "h": "Manzilli tizim va undagi radiokanalning oʻrni",
+            "p": [
+              "Manzilli yongʻin signalizatsiyasi shunday tuzilgan: asbob manzilli liniyani boshqaradi, unda har bir xabar beruvchining oʻz raqami bor. Ishga tushganda asbob «shleyf ishga tushdi» emas, aniq xona va datchikni koʻrsatadi, kameralar changlanishini kuzatadi va nosozliklar haqida oʻzi xabar beradi. Chegara, manzilli va manzilli-analog tizimlar orasidagi farqni yongʻin signalizatsiyasi turlari haqidagi maqolada koʻrib chiqqanmiz.",
+              "Radiokanalli tizimda xabar beruvchilarning bir qismi oʻsha manzilli liniyaga sim bilan emas, radio orqali — radiokengaytirgich orqali ulanadi. Asbob uchun ular oddiy manzilli qurilmalar kabi koʻrinadi: ularning raqami, holati va jurnali bor. Faqat signalni datchikdan liniyagacha yetkazish usuli oʻzgaradi."
+            ]
+          },
+          {
+            "h": "Radiokanal qanday tuzilgan",
+            "p": [
+              "Radio qismining markazi — manzilli liniyaga oʻrnatiladigan va atrofdagi radioqurilmalar bilan aloqani ushlab turadigan radiokengaytirgich. Bolidda bu S2000R-ARR125: ishlab chiqaruvchi maʼlumotiga koʻra u S2000R seriyasidagi 125 tagacha radioqurilmani S2000-KDL liniya kontrolleriga ulaydi va har biri bilan aloqani doimiy nazorat qiladi. Rubej R3 da bu vazifani RRS-250-R3 — liniya kengaytirgichi yoki retranslyator bajaradi.",
+              "Xabar beruvchilar batareyalardan ishlaydi. Aloqa ikki tomonlama va nazorat qilinadigan: agar datchik yechib olinsa, ishdan chiqsa yoki batareyasi tugayotgan boʻlsa, asbob nosozlikni simli tizimdagi sim uzilishi kabi qayd etadi. Signal yetib bormaydigan joyda retranslyatorlar qoʻyiladi: Rubej R3 tizimi uchun ishlab chiqaruvchi 10 tagacha retranslyatsiya darajasi va ochiq maydonda 1 000 metrgacha masofani bayon qiladi, Bolidning S2000-RPI isp.02 radiotakrorlagichi ochiq joyda kamida 1 200 metrga moʻljallangan."
+            ]
+          },
+          {
+            "h": "2025–2026-yillarda nima yangilik",
+            "p": [
+              "Rubej 2025-yilda murakkab rejali turar-joy binolari uchun R3 radiokanalli tizimini koʻrsatdi: ishlab chiqaruvchi maʼlumotiga koʻra bitta manzilli liniyada 250 tagacha, asbobga 500 tagacha va tizimda 4 000 tagacha radioqurilma, chastota 868 MGs. 2026-yilda R3 tarkibida tarmoqni avtomatik quradigan va xabar beruvchilar bitta batareya toʻplamidan 10 yilgacha xizmat qiladigan yangi radioyechim taqdim etildi; yangi qurilmalar FireSec NT dasturida qoʻllab-quvvatlanadi.",
+              "Bolid S2000R radiokanalli liniyasini yangiladi: 125 qurilmaga moʻljallangan S2000R-ARR125 radiokengaytirgichi 32 qurilmali avvalgi modelni almashtirdi, S2000-RPI isp.02 radiotakrorlagichi va S2000R-OST «Chiqish» radiokanalli yorugʻlik tablosi paydo boʻldi. Egasi uchun bu radiotizimlar sigʻimliroq, batareyalarni almashtirish esa kamroq boʻlib qolganini anglatadi."
+            ]
+          },
+          {
+            "h": "Radio qachon kabeldan foydaliroq",
+            "p": [
+              "Radiokanal kabel yotqizish qimmat yoki mumkin boʻlmagan joyda oʻzini oqlaydi. Qimmat pardozli tayyor taʼmir, murakkab shakldagi tortma yoki osma shiftlar, marmar va yogʻoch — devorni buzish va pardozni tiklash xabar beruvchilar narxidagi farqdan qimmatroq tushadi. Devorlarga aralashuv cheklangan tarixiy binolar va muzeylar. Ishlab turgan mehmonxonalar, ofislar va doʻkonlar: radiotizim montaji tezroq va deyarli changsiz boradi, obyekt toʻxtatilmaydi.",
+              "Ikkinchi stsenariy — uzoqdagi xonalar va kengaytirish. Hovli orqali ombor, qoʻshimcha bino, ikkinchi korpus: transheya yoki havo trassasi oʻrniga — radiotakrorlagich. Mavjud manzilli tizimga qayta rejalashdan keyin bir nechta xona qoʻshish kerak boʻlsa, oʻsha liniyadagi radiokengaytirgich vazifani yangi trassalarsiz hal qiladi."
+            ]
+          },
+          {
+            "h": "Kabel qachon ishonchliroq va arzonroq",
+            "p": [
+              "Qurilishda va kapital taʼmirda kabel deyarli har doim foydaliroq: simli manzilli xabar beruvchi radiokanallidan arzon, trassa esa baribir boshqa tarmoqlar bilan birga yotqiziladi. Simli datchiklarga batareya kerak emas, shuning uchun xizmat koʻrsatishda ularni rejali almashtirish yoʻq. Masalan, katalogda Bolid DIP-34A-03 simli manzilli-analog tutun xabar beruvchisi 218 900 soʻm turadi.",
+              "Radiokanal muhitga sezgir: metall konstruksiyalar, temir-beton, metalli stellajlar va kuchli xalaqit manbalari signalni zaiflashtiradi. Shuning uchun radiokanalli tizimdan oldin obyektni radiotekshiruvdan oʻtkazishadi — signal qayerda barqaror, qayerda retranslyatorlar kerakligini tekshirishadi. Omborlar va sexlar kabi katta bir xil maydonlarda simli tizim koʻpincha oddiyroq va arzonroq boʻladi."
+            ]
+          },
+          {
+            "h": "Gibrid: bitta tizimda sim va radio",
+            "p": [
+              "Ikkisidan birini tanlash shart emas. Radiokengaytirgich simli xabar beruvchilar bilan oʻsha manzilli liniyaga oʻrnatiladi, shuning uchun asosiy binoni kabelda, pardozlangan zal, majlislar xonalari va qoʻshimcha binoni esa radioda qilish mumkin. Asbob, hodisalar jurnali, pult va ogohlantirish umumiyligicha qoladi.",
+              "Katalogdagi uskunalar misolida: 127 manzilli qurilmaga moʻljallangan Bolid S2000-KDL liniya kontrolleri (1 026 900 soʻm) DIP-34A simli xabar beruvchilarga va radioqurilmalar uchun S2000R-ARR125 radiokengaytirgichiga xizmat qiladi. Rubej tizimi uchun asos — har biriga 250 tagacha qurilma ulanadigan ikkita manzilli liniyali R3-Rubej-2OP asbobi (8 942 900 soʻm), liniyaga RRS-250-R3 radiokengaytirgichi ulanadi."
+            ]
+          },
+          {
+            "h": "Oldindan nimani hisobga olish kerak",
+            "p": [
+              "Batareyalar. Asbob har bir radioxabar beruvchining zaryadi tugayotgani haqida oldindan ogohlantiradi, lekin almashtirishni yillik xizmat koʻrsatish rejasiga kiritish kerak — tutun kameralarini tekshirish va ogohlantirish testi kabi. Batareyalar xizmat muddati model va sharoitga bogʻliq; Rubej R3 ning yangi qurilmalari uchun ishlab chiqaruvchi 10 yilgacha deb bayon qiladi. Oʻzbekiston talablari boʻyicha yongʻin signalizatsiyasiga xizmat koʻrsatish haqida — alohida maqolamizda.",
+              "Hujjatlar. Radiokanal haqidagi qaror tizim loyihasiga SHNK 2.04.09-2007 talablari va aniq obyekt sharoitlarini hisobga olgan holda kiritiladi, ijro hujjatlari esa simli va radioqurilmalarni ham aks ettiradi. Uskuna sertifikatlangan boʻlishi kerak, montajni esa ushbu ish turi uchun ruxsat hujjatlariga ega tashkilot bajaradi."
+            ]
+          },
+          {
+            "h": "Qancha turadi va qanday buyurtma qilish",
+            "p": [
+              "Radiokanalli xabar beruvchi simlidan qimmat, lekin pardozli obyektlarda trassa yotqizish va devorlarni tiklashdagi tejam farqni qoplaydi. Katalog narxlari 2026-yil 2-noyabr holatiga: Bolid S2000R-OST isp.01 «Chiqish» radiokanalli tablosi — 679 900 soʻm, S2000-KDL liniya kontrolleri — 1 026 900 soʻm, DIP-34A-03 simli tutun xabar beruvchisi — 218 900 soʻm, R3-Rubej-2OP asbobi — 8 942 900 soʻm. Rubej R3 va Bolid S2000R radioxabar beruvchilari va radiokengaytirgichlarini aniq obyekt uchun buyurtma asosida yetkazib beramiz.",
+              "Obyektni tekshiramiz, radio haqiqatan qayerda tejashini koʻrsatish uchun kabelli, radioli va gibrid variantni hisoblaymiz, montaj qilamiz, sozlaymiz va tizimni hujjatlar bilan topshiramiz. Ishlarga 3 yil kafolat beramiz. Hisobni yongʻin signalizatsiyasi sahifasida buyurtma qilish mumkin — smetani ish kuni davomida yuboramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Simsiz yongʻin signalizatsiyasi ishonchlimi?",
+            "a": "Manzilli radiotizimlarda aloqa ikki tomonlama va nazorat qilinadigan: xabar beruvchi tarmoqdan yoʻqolsa yoki batareyasi tugayotgan boʻlsa, asbob nosozlikni qayd etadi. Ishonchlilikni obyektni radiotekshiruvdan oʻtkazish va signal zaif joylardagi retranslyatorlar taʼminlaydi."
+          },
+          {
+            "q": "Radioxabar beruvchilarda batareyalarni qanchalik tez-tez almashtirish kerak?",
+            "a": "Model va sharoitga bogʻliq; asbob har bir xabar beruvchining zaryadi tugayotgani haqida oldindan xabar beradi. Rubej R3 ning yangi qurilmalari uchun ishlab chiqaruvchi bitta batareya toʻplamidan 10 yilgacha deb bayon qiladi. Almashtirish yillik xizmat koʻrsatish rejasiga kiritiladi."
+          },
+          {
+            "q": "Mavjud simli tizimga radioxabar beruvchilarni qoʻshish mumkinmi?",
+            "a": "Ha, agar tizim radiokengaytirgichlarni qoʻllab-quvvatlasa: Bolidda bu S2000-KDL liniyasidagi S2000R-ARR125, Rubej R3 da — RRS-250-R3. Radioqurilmalar oʻsha manzilli liniyaga oʻrnatiladi."
+          },
+          {
+            "q": "Radiotizim simlidan qimmatmi?",
+            "a": "Uskuna qimmatroq, lekin tayyor pardozli obyektlarda trassa yotqizish va devorlarni tiklashdagi tejam koʻpincha farqni qoplaydi. Qurilishda simli tizim odatda arzonroq."
+          },
+          {
+            "q": "Radiosignalga nima xalaqit beradi?",
+            "a": "Metall konstruksiyalar, temir-beton, metall stellajlar va kuchli xalaqit manbalari. Shuning uchun montajdan oldin radiotekshiruv oʻtkaziladi va kerakli joylarga retranslyatorlar qoʻyiladi."
+          },
+          {
+            "q": "Radiokanalli uskunani yetkazib berasizmi?",
+            "a": "Ha, Rubej R3 va Bolid S2000R radioxabar beruvchilari va radiokengaytirgichlarini aniq obyekt uchun buyurtma asosida, montaj va sozlash bilan birga yetkazib beramiz."
+          }
+        ],
+        "summary": [
+          "Radiokanalli manzilli tizimda batareyali xabar beruvchilar manzilli liniyaga radiokengaytirgich orqali radio bilan ulanadi va asbobga oddiy manzilli qurilmalar kabi koʻrinadi.",
+          "Aloqa ikki tomonlama va nazorat qilinadigan; masofa retranslyatorlar bilan oshiriladi — Rubej R3 da ishlab chiqaruvchi maʼlumotiga koʻra 10 tagacha retranslyatsiya darajasi.",
+          "2025–2026 yangiliklari: Rubej R3 tizimda 4 000 tagacha qurilma va batareyadan 10 yilgacha ishlaydigan xabar beruvchilar; 125 qurilmali Bolid S2000R-ARR125.",
+          "Radio tayyor pardozli obyektlarda, ishlab turgan binolarda va uzoqdagi xonalar uchun foydaliroq; kabel — qurilishda va katta bir xil maydonlarda.",
+          "Sim va radio bitta manzilli liniyada birlashtiriladi; Rubej R3 va Bolid S2000R radiouskunasini buyurtma asosida yetkazib beramiz."
+        ]
+      },
+      "en": {
+        "title": "Wireless Addressable Fire Alarms: How the Rubezh R3 and Bolid S2000R Radio Links Work and When They Beat Cable",
+        "seoTitle": "Wireless Fire Alarm: How R3 and S2000R Radio Links Work",
+        "seoDesc": "How a radio addressable fire alarm works: expanders, repeaters, link supervision, batteries. When radio beats cable and how to combine both in one system.",
+        "excerpt": "A radio fire alarm goes in without cable runs: detectors run on batteries and talk to the addressable loop by radio. We explain how the radio link works in Rubezh R3 and Bolid S2000R, what is new in 2025–2026, where radio saves money and time, where cable is more reliable and cheaper, and how to combine them in one system.",
+        "sections": [
+          {
+            "h": "An addressable system and where radio fits in",
+            "p": [
+              "An addressable fire alarm works like this: a control panel runs an addressable loop on which every detector has its own number. When triggered, the panel shows not “zone in alarm” but the exact room and device, monitors chamber contamination and reports faults by itself. We covered the difference between conventional, addressable and analogue addressable systems in our article on fire alarm types.",
+              "In a radio system some detectors are connected to the same addressable loop not by wire but by radio — through a radio expander. To the panel they look like ordinary addressable devices: each has a number, a status and a log. Only the way the signal travels from the detector to the loop changes."
+            ]
+          },
+          {
+            "h": "How the radio link works",
+            "p": [
+              "At the heart of the radio part is a radio expander installed on the addressable loop that keeps in touch with the radio devices around it. At Bolid this is the S2000R-ARR125: according to the manufacturer it connects up to 125 S2000R radio devices to the S2000-KDL loop controller and constantly supervises the link with each. In Rubezh R3 the role is played by the RRS-250-R3 — a loop expander or repeater.",
+              "Detectors run on batteries. The link is two-way and supervised: if a detector is removed, fails or its battery runs low, the panel registers a fault just as it would a broken wire in a wired system. Where the signal does not reach, repeaters are added: for Rubezh R3 the manufacturer states up to 10 levels of repeating and a range of up to 1,000 metres in open space, and Bolid’s S2000-RPI ver.02 radio repeater is rated for at least 1,200 metres in open terrain."
+            ]
+          },
+          {
+            "h": "What is new in 2025–2026",
+            "p": [
+              "In 2025 Rubezh showed its R3 radio system for residential buildings with complex layouts: according to the manufacturer, up to 250 radio devices per addressable loop, up to 500 per panel and up to 4,000 per system, at 868 MHz. In 2026 a new radio solution was introduced within R3 with automatic network building and detector service life of up to 10 years on one set of batteries; the new devices are supported in FireSec NT software.",
+              "Bolid updated its S2000R radio line: the S2000R-ARR125 radio expander for 125 devices replaced the previous 32-device model, and the S2000-RPI ver.02 radio repeater and the S2000R-OST radio “Exit” sign were added. For the owner this means radio systems now hold more devices and batteries need changing less often."
+            ]
+          },
+          {
+            "h": "When radio beats cable",
+            "p": [
+              "Radio pays off where cable is expensive or impossible to run. A finished interior with costly finishes, stretch or suspended ceilings of complex shape, marble and wood — chasing walls and restoring the finish costs more than the price gap between detectors. Historic buildings and museums where work on the walls is restricted. Operating hotels, offices and shops: a radio system goes in faster and with almost no dust, and the site keeps working.",
+              "The second scenario is remote rooms and extensions. A warehouse across the yard, an annex, a second building: a radio repeater instead of a trench or an overhead run. If a few rooms must be added to an existing addressable system after a re-layout, a radio expander on the same loop solves it without new cable runs."
+            ]
+          },
+          {
+            "h": "When cable is more reliable and cheaper",
+            "p": [
+              "During construction and major refurbishment cable almost always wins: a wired addressable detector costs less than a radio one, and the route is laid together with the other services anyway. Wired detectors need no batteries, so maintenance has no scheduled battery replacement. For example, the wired analogue addressable Bolid DIP-34A-03 smoke detector costs 218,900 UZS in our catalogue.",
+              "Radio is sensitive to its environment: steel structures, reinforced concrete, metal racking and strong sources of interference weaken the signal. That is why a radio survey of the site is carried out before a radio system — to check where the signal is stable and where repeaters are needed. On large uniform areas such as warehouses and workshops, a wired system usually turns out simpler and cheaper."
+            ]
+          },
+          {
+            "h": "Hybrid: wire and radio in one system",
+            "p": [
+              "You do not have to choose one or the other. A radio expander sits on the same addressable loop as the wired detectors, so the main building can be cabled while the finished lobby, meeting rooms and annex go on radio. The panel, event log, monitoring and voice alarm remain shared.",
+              "An example with equipment from our catalogue: the Bolid S2000-KDL loop controller for 127 addressable devices (1,026,900 UZS) serves wired DIP-34A detectors and an S2000R-ARR125 radio expander for the radio devices. For a Rubezh system the core is the R3-Rubezh-2OP panel with two addressable loops of up to 250 devices each (8,942,900 UZS), with an RRS-250-R3 radio expander connected to the loop."
+            ]
+          },
+          {
+            "h": "What to plan in advance",
+            "p": [
+              "Batteries. The panel warns in advance when any radio detector’s battery runs low, but replacement belongs in the annual maintenance plan — just like checking smoke chambers and testing the voice alarm. Battery life depends on the model and conditions; for new Rubezh R3 devices the manufacturer states up to 10 years. Fire alarm maintenance under Uzbek requirements is covered in a separate article of ours.",
+              "Documentation. The radio decision is written into the system design in line with ShNK 2.04.09-2007 and the conditions of the specific site, and the as-built documentation covers both wired and radio devices. Equipment must be certified, and installation is carried out by an organisation holding the permits for this type of work."
+            ]
+          },
+          {
+            "h": "What it costs and how to order",
+            "p": [
+              "A radio detector costs more than a wired one, but on finished sites the savings on cable runs and wall restoration cover the difference. Catalogue prices on 2 November 2026: the Bolid S2000R-OST ver.01 radio “Exit” sign — 679,900 UZS, the S2000-KDL loop controller — 1,026,900 UZS, the wired DIP-34A-03 smoke detector — 218,900 UZS, the R3-Rubezh-2OP panel — 8,942,900 UZS. Rubezh R3 and Bolid S2000R radio detectors and expanders are supplied to order for the specific site.",
+              "We survey the site and price a cabled, a radio and a hybrid option so you can see where radio really saves money, then install, commission and hand over the system with documentation. Our work carries a 3-year warranty. A calculation can be ordered on our fire alarm page — we return a quote within one business day."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Is a wireless fire alarm reliable?",
+            "a": "Addressable radio systems use a two-way, supervised link: if a detector drops off the network or its battery runs low, the panel registers a fault. Reliability comes from a radio survey of the site and repeaters where the signal is weak."
+          },
+          {
+            "q": "How often do radio detector batteries need changing?",
+            "a": "It depends on the model and conditions; the panel warns in advance about each detector’s battery. For new Rubezh R3 devices the manufacturer states up to 10 years on one set. Replacement goes into the annual maintenance plan."
+          },
+          {
+            "q": "Can radio detectors be added to an existing wired system?",
+            "a": "Yes, if the system supports radio expanders: at Bolid this is the S2000R-ARR125 on the S2000-KDL loop, at Rubezh R3 the RRS-250-R3. Radio devices join the same addressable loop."
+          },
+          {
+            "q": "Is a radio system more expensive than a wired one?",
+            "a": "The equipment costs more, but on finished sites the savings on cable runs and wall restoration often cover the difference. In new construction a wired system is usually cheaper."
+          },
+          {
+            "q": "What interferes with the radio signal?",
+            "a": "Steel structures, reinforced concrete, metal racking and strong interference sources. That is why a radio survey is done before installation and repeaters are added where needed."
+          },
+          {
+            "q": "Do you supply radio fire alarm equipment?",
+            "a": "Yes, Rubezh R3 and Bolid S2000R radio detectors and expanders are supplied to order for the specific site, together with installation and commissioning."
+          }
+        ],
+        "summary": [
+          "In a radio addressable system, battery detectors connect to the addressable loop by radio through a radio expander and appear to the panel as ordinary addressable devices.",
+          "The link is two-way and supervised; range is extended with repeaters — up to 10 repeating levels in Rubezh R3 according to the manufacturer.",
+          "New in 2025–2026: Rubezh R3 with up to 4,000 devices per system and detectors lasting up to 10 years on batteries; Bolid S2000R-ARR125 for 125 devices.",
+          "Radio wins on finished sites, in operating buildings and for remote rooms; cable wins in new construction and on large uniform areas.",
+          "Wire and radio combine on one addressable loop; Rubezh R3 and Bolid S2000R radio equipment is supplied to order."
+        ]
+      },
+      "tr": {
+        "title": "Kablosuz Adresli Yangın Alarmı: Rubezh R3 ve Bolid S2000R Radyo Hattı Nasıl Çalışır, Ne Zaman Kablodan Avantajlı",
+        "seoTitle": "Kablosuz Yangın Alarmı: R3 ve S2000R Radyo Hattı",
+        "seoDesc": "Radyo hatlı adresli yangın alarmı nasıl çalışır: genişleticiler, tekrarlayıcılar, hat denetimi, piller. Radyo ne zaman kablodan avantajlı, nasıl birleşir.",
+        "excerpt": "Radyo hatlı yangın alarmı kablo güzergâhı olmadan kurulur: dedektörler pille çalışır ve adresli hatla radyo üzerinden haberleşir. Rubezh R3 ve Bolid S2000R'de radyo hattının nasıl çalıştığını, 2025–2026'da nelerin yeni olduğunu, radyonun nerede para ve zaman kazandırdığını, kablonun nerede daha güvenilir ve ucuz olduğunu ve ikisinin tek sistemde nasıl birleştirileceğini açıklıyoruz.",
+        "sections": [
+          {
+            "h": "Adresli sistem ve radyo hattının yeri",
+            "p": [
+              "Adresli yangın alarmı şöyle çalışır: panel, her dedektörün kendi numarası olan adresli bir hattı yönetir. Tetiklendiğinde panel “hat alarmda” değil, tam odayı ve cihazı gösterir, odacık kirliliğini izler ve arızaları kendisi bildirir. Konvansiyonel, adresli ve analog adresli sistemler arasındaki farkı yangın alarmı türleri yazımızda anlattık.",
+              "Radyo hatlı sistemde dedektörlerin bir kısmı aynı adresli hatta kabloyla değil, radyo genişletici üzerinden radyoyla bağlanır. Panel için bunlar sıradan adresli cihazlar gibidir: numarası, durumu ve kaydı vardır. Yalnızca sinyalin dedektörden hatta ulaşma yolu değişir."
+            ]
+          },
+          {
+            "h": "Radyo hattı nasıl çalışır",
+            "p": [
+              "Radyo kısmının merkezi, adresli hatta takılan ve çevresindeki radyo cihazlarla bağlantıyı sürdüren radyo genişleticidir. Bolid'de bu S2000R-ARR125'tir: üreticiye göre 125'e kadar S2000R radyo cihazını S2000-KDL hat kontrolörüne bağlar ve her biriyle bağlantıyı sürekli denetler. Rubezh R3'te bu görevi RRS-250-R3 — hat genişletici veya tekrarlayıcı — üstlenir.",
+              "Dedektörler pille çalışır. Bağlantı çift yönlü ve denetimlidir: dedektör sökülür, arızalanır veya pili zayıflarsa panel bunu kablolu sistemdeki kablo kopması gibi arıza olarak kaydeder. Sinyalin ulaşmadığı yerlere tekrarlayıcı konur: Rubezh R3 için üretici 10 seviyeye kadar tekrarlama ve açık alanda 1.000 metreye kadar menzil belirtiyor; Bolid'in S2000-RPI ver.02 radyo tekrarlayıcısı açık arazide en az 1.200 metre için tasarlanmıştır."
+            ]
+          },
+          {
+            "h": "2025–2026'da neler yeni",
+            "p": [
+              "Rubezh 2025'te karmaşık planlı konut binaları için R3 radyo sistemini tanıttı: üreticiye göre bir adresli hatta 250'ye, panel başına 500'e ve sistemde 4.000'e kadar radyo cihazı, 868 MHz frekans. 2026'da R3 içinde ağı otomatik kuran ve dedektörlerin tek pil setiyle 10 yıla kadar çalıştığı yeni bir radyo çözümü sunuldu; yeni cihazlar FireSec NT yazılımında destekleniyor.",
+              "Bolid S2000R radyo serisini yeniledi: 125 cihazlık S2000R-ARR125 radyo genişletici önceki 32 cihazlık modelin yerini aldı, S2000-RPI ver.02 radyo tekrarlayıcı ve S2000R-OST radyo hatlı “Çıkış” levhası eklendi. Sahibi için bu, radyo sistemlerin daha fazla cihaz taşıdığı ve pil değişiminin seyrekleştiği anlamına gelir."
+            ]
+          },
+          {
+            "h": "Radyo ne zaman kablodan avantajlıdır",
+            "p": [
+              "Radyo, kablo çekmenin pahalı veya imkânsız olduğu yerde kendini öder. Pahalı kaplamalı bitmiş mekân, karmaşık biçimli gergi veya asma tavanlar, mermer ve ahşap — duvar kırıp kaplamayı onarmak dedektör fiyat farkından pahalıya gelir. Duvara müdahalenin kısıtlı olduğu tarihî binalar ve müzeler. Çalışan oteller, ofisler ve mağazalar: radyo sistem montajı daha hızlı ve neredeyse tozsuz ilerler, tesis durmaz.",
+              "İkinci senaryo uzak odalar ve genişlemedir. Avlunun öbür ucundaki depo, ek bina, ikinci blok: hendek veya hava hattı yerine radyo tekrarlayıcı. Mevcut adresli sisteme yerleşim değişikliğinden sonra birkaç oda eklenmesi gerekiyorsa aynı hattaki radyo genişletici işi yeni güzergâh olmadan çözer."
+            ]
+          },
+          {
+            "h": "Kablo ne zaman daha güvenilir ve ucuz",
+            "p": [
+              "İnşaatta ve büyük tadilatta kablo neredeyse her zaman avantajlıdır: kablolu adresli dedektör radyolu olandan ucuzdur, güzergâh zaten diğer tesisatla birlikte döşenir. Kablolu dedektörlerin pile ihtiyacı yoktur, bu yüzden bakımda planlı pil değişimi olmaz. Örneğin kablolu analog adresli Bolid DIP-34A-03 duman dedektörü kataloğumuzda 218.900 UZS'dir.",
+              "Radyo hattı ortama duyarlıdır: çelik konstrüksiyonlar, betonarme, metal raflar ve güçlü parazit kaynakları sinyali zayıflatır. Bu yüzden radyo sistemden önce tesisin radyo etüdü yapılır — sinyalin nerede kararlı olduğu, nerede tekrarlayıcı gerektiği kontrol edilir. Depo ve atölye gibi büyük tek tip alanlarda kablolu sistem çoğu zaman daha basit ve ucuzdur."
+            ]
+          },
+          {
+            "h": "Hibrit: tek sistemde kablo ve radyo",
+            "p": [
+              "İkisinden birini seçmek zorunlu değildir. Radyo genişletici kablolu dedektörlerle aynı adresli hatta takılır; böylece ana bina kablolu, kaplamalı lobi, toplantı odaları ve ek bina radyolu yapılabilir. Panel, olay kaydı, izleme ve sesli anons ortak kalır.",
+              "Kataloğumuzdaki ekipmanla örnek: 127 adresli cihazlık Bolid S2000-KDL hat kontrolörü (1.026.900 UZS) kablolu DIP-34A dedektörlere ve radyo cihazlar için S2000R-ARR125 radyo genişleticiye hizmet eder. Rubezh sistemi için temel, her biri 250 cihaza kadar iki adresli hatlı R3-Rubezh-2OP panelidir (8.942.900 UZS); hatta RRS-250-R3 radyo genişletici bağlanır."
+            ]
+          },
+          {
+            "h": "Önceden nelere dikkat edilmeli",
+            "p": [
+              "Piller. Panel her radyo dedektörün pilinin zayıfladığını önceden bildirir ama değişim, duman odacıklarının kontrolü ve anons testi gibi yıllık bakım planına alınmalıdır. Pil ömrü modele ve koşullara bağlıdır; yeni Rubezh R3 cihazları için üretici 10 yıla kadar belirtiyor. Özbekistan gerekliliklerine göre yangın alarmı bakımı ayrı bir yazımızda.",
+              "Dokümantasyon. Radyo kararı, ŞNK 2.04.09-2007 gereklilikleri ve tesisin koşulları dikkate alınarak sistem projesine işlenir; uygulama dokümantasyonu kablolu ve radyo cihazları birlikte gösterir. Ekipman sertifikalı olmalı, montajı bu iş türü için izin belgelerine sahip bir kuruluş yapmalıdır."
+            ]
+          },
+          {
+            "h": "Ne kadar tutar, nasıl sipariş edilir",
+            "p": [
+              "Radyo dedektör kablolusundan pahalıdır ama kaplamalı tesislerde kablo güzergâhı ve duvar onarımından gelen tasarruf farkı kapatır. 2 Kasım 2026 katalog fiyatları: Bolid S2000R-OST ver.01 radyo “Çıkış” levhası — 679.900 UZS, S2000-KDL hat kontrolörü — 1.026.900 UZS, kablolu DIP-34A-03 duman dedektörü — 218.900 UZS, R3-Rubezh-2OP paneli — 8.942.900 UZS. Rubezh R3 ve Bolid S2000R radyo dedektörlerini ve genişleticilerini belirli tesis için siparişe göre tedarik ediyoruz.",
+              "Tesisi inceliyor, radyonun gerçekten nerede tasarruf sağladığını görmeniz için kablolu, radyolu ve hibrit seçeneği fiyatlandırıyor, ardından montaj, devreye alma ve dokümantasyonla teslim yapıyoruz. İşçiliğe 3 yıl garanti veriyoruz. Hesabı yangın alarmı sayfamızdan isteyebilirsiniz — teklifi bir iş günü içinde veriyoruz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Kablosuz yangın alarmı güvenilir mi?",
+            "a": "Adresli radyo sistemlerde bağlantı çift yönlü ve denetimlidir: dedektör ağdan düşer veya pili zayıflarsa panel arıza kaydeder. Güvenilirliği tesisin radyo etüdü ve sinyalin zayıf olduğu yerlerdeki tekrarlayıcılar sağlar."
+          },
+          {
+            "q": "Radyo dedektör pilleri ne sıklıkla değiştirilir?",
+            "a": "Modele ve koşullara bağlıdır; panel her dedektörün pili için önceden uyarır. Yeni Rubezh R3 cihazları için üretici tek setle 10 yıla kadar belirtiyor. Değişim yıllık bakım planına alınır."
+          },
+          {
+            "q": "Mevcut kablolu sisteme radyo dedektör eklenebilir mi?",
+            "a": "Evet, sistem radyo genişleticileri destekliyorsa: Bolid'de S2000-KDL hattındaki S2000R-ARR125, Rubezh R3'te RRS-250-R3. Radyo cihazlar aynı adresli hatta bağlanır."
+          },
+          {
+            "q": "Radyo sistem kablolu sistemden pahalı mı?",
+            "a": "Ekipman daha pahalıdır ama bitmiş tesislerde kablo güzergâhı ve duvar onarımından gelen tasarruf çoğu zaman farkı kapatır. İnşaatta kablolu sistem genellikle daha ucuzdur."
+          },
+          {
+            "q": "Radyo sinyaline ne engel olur?",
+            "a": "Çelik konstrüksiyonlar, betonarme, metal raflar ve güçlü parazit kaynakları. Bu yüzden montajdan önce radyo etüdü yapılır ve gereken yerlere tekrarlayıcı konur."
+          },
+          {
+            "q": "Radyo hatlı ekipman tedarik ediyor musunuz?",
+            "a": "Evet, Rubezh R3 ve Bolid S2000R radyo dedektörlerini ve genişleticilerini belirli tesis için siparişe göre, montaj ve devreye almayla birlikte tedarik ediyoruz."
+          }
+        ],
+        "summary": [
+          "Radyo hatlı adresli sistemde pilli dedektörler adresli hatta radyo genişletici üzerinden radyoyla bağlanır ve panele sıradan adresli cihaz gibi görünür.",
+          "Bağlantı çift yönlü ve denetimlidir; menzil tekrarlayıcılarla artırılır — üreticiye göre Rubezh R3'te 10 seviyeye kadar tekrarlama.",
+          "2025–2026 yenilikleri: sistemde 4.000 cihaza kadar ve pille 10 yıla kadar çalışan dedektörlerle Rubezh R3; 125 cihazlık Bolid S2000R-ARR125.",
+          "Radyo bitmiş tesislerde, çalışan binalarda ve uzak odalarda; kablo inşaatta ve büyük tek tip alanlarda avantajlıdır.",
+          "Kablo ve radyo tek adresli hatta birleşir; Rubezh R3 ve Bolid S2000R radyo ekipmanını siparişe göre tedarik ediyoruz."
+        ]
+      },
+      "zh": {
+        "title": "无线编址火灾报警：Rubezh R3与Bolid S2000R无线链路如何工作，何时比布线更划算",
+        "seoTitle": "无线火灾报警：R3与S2000R无线链路原理",
+        "seoDesc": "无线编址火灾报警如何工作：扩展器、中继器、链路监测、电池。无线何时比布线更划算，以及两者如何结合。",
+        "excerpt": "无线火灾报警无需敷设线缆：探测器靠电池工作，通过无线与编址回路通信。本文讲解Rubezh R3和Bolid S2000R的无线链路原理、2025–2026年有哪些新产品、无线在哪里省钱省时、布线在哪里更可靠更便宜，以及如何在一套系统中结合两者。",
+        "sections": [
+          {
+            "h": "编址系统与无线链路的位置",
+            "p": [
+              "编址火灾报警的工作方式是：控制器管理一条编址回路，回路上每个探测器都有自己的地址。报警时控制器显示的不是“某回路报警”，而是具体房间和设备，还会监测烟室污染并自动报告故障。区域型、编址型和模拟量编址型系统的区别，见我们关于火灾报警类型的文章。",
+              "在无线系统中，部分探测器不是用导线，而是通过无线扩展器以无线方式接入同一条编址回路。对控制器来说它们与普通编址设备无异：有地址、状态和记录，改变的只是信号从探测器到回路的传输方式。"
+            ]
+          },
+          {
+            "h": "无线链路如何工作",
+            "p": [
+              "无线部分的核心是安装在编址回路上的无线扩展器，它与周围的无线设备保持通信。Bolid的产品是S2000R-ARR125：据厂家介绍，它可将最多125个S2000R系列无线设备接入S2000-KDL回路控制器，并持续监测与每个设备的连接。在Rubezh R3中，这一角色由RRS-250-R3承担——可作回路扩展器或中继器。",
+              "探测器靠电池工作。链路为双向且受监测：探测器被拆、损坏或电量不足时，控制器会像有线系统断线一样记录故障。信号覆盖不到的地方加装中继器：Rubezh R3厂家标称最多10级中继、开阔空间传输距离最远1000米；Bolid的S2000-RPI 02版无线中继器在开阔地带不少于1200米。"
+            ]
+          },
+          {
+            "h": "2025–2026年有哪些新变化",
+            "p": [
+              "Rubezh在2025年展示了面向复杂户型住宅的R3无线系统：据厂家数据，每条编址回路最多250个无线设备，每台控制器最多500个，整个系统最多4000个，频率868 MHz。2026年R3又推出新的无线方案，可自动组网，探测器一套电池最长可用10年；新设备在FireSec NT软件中获得支持。",
+              "Bolid更新了S2000R无线系列：125设备的S2000R-ARR125无线扩展器取代了原先32设备的型号，并新增S2000-RPI 02版无线中继器和S2000R-OST无线“出口”指示牌。对业主而言，这意味着无线系统容量更大、换电池的频率更低。"
+            ]
+          },
+          {
+            "h": "无线何时比布线更划算",
+            "p": [
+              "在布线昂贵或无法布线的地方，无线最能体现价值。已完成的高档装修、造型复杂的软膜或吊顶、大理石和木饰面——开槽再修复饰面的费用超过探测器的差价。墙体施工受限的历史建筑和博物馆。正在营业的酒店、办公室和商店：无线系统安装更快、几乎无粉尘，无需停业。",
+              "第二种场景是偏远房间和扩建。院子另一头的仓库、附属建筑、第二栋楼：用无线中继器代替挖沟或架空线路。若改造后需要在现有编址系统中增加几个房间，在同一回路上加装无线扩展器即可，无需新布线。"
+            ]
+          },
+          {
+            "h": "布线何时更可靠更便宜",
+            "p": [
+              "在新建和大修工程中，布线几乎总是更划算：有线编址探测器比无线的便宜，线路本来就和其他管线一起敷设。有线探测器不需要电池，维护时也无需定期换电池。例如，我们目录中的有线模拟量编址感烟探测器Bolid DIP-34A-03为218 900苏姆。",
+              "无线链路对环境敏感：钢结构、钢筋混凝土、金属货架和强干扰源都会削弱信号。因此安装无线系统前要做现场无线勘测，确认哪里信号稳定、哪里需要中继器。在仓库、车间等大面积同类空间，有线系统通常更简单也更便宜。"
+            ]
+          },
+          {
+            "h": "混合方案：有线与无线在同一系统",
+            "p": [
+              "不必二选一。无线扩展器与有线探测器接在同一条编址回路上，因此主楼可以布线，而装修好的大堂、会议室和附属建筑采用无线。控制器、事件记录、监控和语音疏散广播保持统一。",
+              "以我们目录中的设备为例：支持127个编址设备的Bolid S2000-KDL回路控制器（1 026 900苏姆）同时连接有线DIP-34A探测器和用于无线设备的S2000R-ARR125无线扩展器。Rubezh系统的核心是R3-Rubezh-2OP控制器，两条编址回路每条最多250个设备（8 942 900苏姆），回路上接入RRS-250-R3无线扩展器。"
+            ]
+          },
+          {
+            "h": "需要提前考虑什么",
+            "p": [
+              "电池。控制器会提前提示每个无线探测器电量不足，但更换应纳入年度维护计划——与检查烟室、测试广播一样。电池寿命取决于型号和使用条件；Rubezh R3新设备厂家标称最长10年。关于乌兹别克斯坦要求下的火灾报警维护，见我们的专门文章。",
+              "文件。是否采用无线，应结合ShNK 2.04.09-2007的要求和具体现场条件写入系统设计，竣工文件中同时体现有线和无线设备。设备须经认证，安装须由具备该类工程许可文件的单位实施。"
+            ]
+          },
+          {
+            "h": "价格与如何订购",
+            "p": [
+              "无线探测器比有线的贵，但在已装修的场所，节省的布线和墙面修复费用可抵消差价。2026年11月2日目录价格：Bolid S2000R-OST 01版无线“出口”指示牌——679 900苏姆，S2000-KDL回路控制器——1 026 900苏姆，有线DIP-34A-03感烟探测器——218 900苏姆，R3-Rubezh-2OP控制器——8 942 900苏姆。Rubezh R3和Bolid S2000R无线探测器及扩展器按具体项目订货供应。",
+              "我们勘测现场，分别测算有线、无线和混合方案，让您看清无线在哪里真正省钱，然后安装、调试并连同文件一起交付。施工质保3年。可在火灾报警页面申请测算——我们在一个工作日内回复报价。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "无线火灾报警可靠吗？",
+            "a": "编址无线系统采用双向受监测链路：探测器掉线或电量不足时，控制器会记录故障。可靠性来自现场无线勘测以及在信号弱处加装中继器。"
+          },
+          {
+            "q": "无线探测器多久换一次电池？",
+            "a": "取决于型号和条件；控制器会提前提示每个探测器的电量。Rubezh R3新设备厂家标称一套电池最长10年。更换纳入年度维护计划。"
+          },
+          {
+            "q": "能在现有有线系统中加装无线探测器吗？",
+            "a": "可以，只要系统支持无线扩展器：Bolid为S2000-KDL回路上的S2000R-ARR125，Rubezh R3为RRS-250-R3。无线设备接入同一条编址回路。"
+          },
+          {
+            "q": "无线系统比有线贵吗？",
+            "a": "设备更贵，但在已装修场所，节省的布线和墙面修复费用往往能抵消差价。新建工程中有线系统通常更便宜。"
+          },
+          {
+            "q": "什么会干扰无线信号？",
+            "a": "钢结构、钢筋混凝土、金属货架和强干扰源。因此安装前要做无线勘测，并在需要处加装中继器。"
+          },
+          {
+            "q": "你们供应无线火灾报警设备吗？",
+            "a": "供应，Rubezh R3和Bolid S2000R无线探测器及扩展器按具体项目订货，并提供安装和调试。"
+          }
+        ],
+        "summary": [
+          "无线编址系统中，电池供电的探测器经无线扩展器接入编址回路，对控制器而言与普通编址设备相同。",
+          "链路双向受监测；通过中继器扩大覆盖——据厂家数据Rubezh R3最多10级中继。",
+          "2025–2026年新品：Rubezh R3系统最多4000个设备、探测器电池最长10年；Bolid S2000R-ARR125支持125个设备。",
+          "已装修场所、营业中的建筑和偏远房间适合无线；新建工程和大面积同类空间适合布线。",
+          "有线与无线可在同一编址回路结合；Rubezh R3和Bolid S2000R无线设备按订单供应。"
+        ]
+      }
+    }
+  },
+  {
     "slug": "umnyy-zamok-kak-ustroen-batareya-vhodnaya-dver",
     "date": "2026-11-02",
     "related": [
