@@ -1,456 +1,716 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-11-02",
  "rule": "UZ за 90 дней: ≥2 клика или ≥100 показов + коммерческие хабы (главные, услуги, группы, бренды); только живые и индексируемые",
  "urls": [
   {
-   "url": "/products/dahua-ipc-hfw5442e-zhe",
-   "clicks": 12,
-   "imp": 64
-  },
-  {
-   "url": "/products/rbz-ip-212-141-rubezh",
-   "clicks": 9,
-   "imp": 169
-  },
-  {
-   "url": "/products/hik-ds-7764ni-m4",
-   "clicks": 9,
-   "imp": 162
-  },
-  {
-   "url": "/products/hik-ds-2cd2687g2ht-lizs-2-8-12mm-ef",
-   "clicks": 9,
-   "imp": 62
+   "url": "/products/pro-ipc-9800c-pro-tester-ip-kamery",
+   "clicks": 22,
+   "imp": 250
   },
   {
    "url": "/products/hik-ds-96128nxi-s16",
-   "clicks": 9,
-   "imp": 57
-  },
-  {
-   "url": "/products/dahua-ipc-hdw2449t-s-pro",
-   "clicks": 9,
-   "imp": 31
-  },
-  {
-   "url": "/products/pro-ipc-9800c-pro-tester-ip-kamery",
-   "clicks": 8,
-   "imp": 164
+   "clicks": 19,
+   "imp": 94
   },
   {
    "url": "/products/pro-v380-pro-povorotnaya-kamera-s-tremya-obektivom",
-   "clicks": 6,
-   "imp": 542
+   "clicks": 14,
+   "imp": 1011
+  },
+  {
+   "url": "/products/dahua-ipc-hfw5442e-zhe",
+   "clicks": 13,
+   "imp": 69
+  },
+  {
+   "url": "/products/type/besprovodnye-kamery",
+   "clicks": 10,
+   "imp": 660
+  },
+  {
+   "url": "/products/hik-ds-k1t673dx",
+   "clicks": 10,
+   "imp": 291
+  },
+  {
+   "url": "/products/rbz-ip-212-141-rubezh",
+   "clicks": 10,
+   "imp": 265
+  },
+  {
+   "url": "/products/hik-ds-tmg320-ll-b",
+   "clicks": 10,
+   "imp": 107
+  },
+  {
+   "url": "/products/hik-ds-2cd2687g2ht-lizs-2-8-12mm-ef",
+   "clicks": 10,
+   "imp": 71
+  },
+  {
+   "url": "/products/dahua-ipc-hdw2449t-s-pro",
+   "clicks": 10,
+   "imp": 41
+  },
+  {
+   "url": "/blog/ivms-4200-skachat-nastroit",
+   "clicks": 9,
+   "imp": 504
+  },
+  {
+   "url": "/blog/hik-connect-skachat-podklyuchit",
+   "clicks": 9,
+   "imp": 430
+  },
+  {
+   "url": "/blog/sbros-parolya-hikvision",
+   "clicks": 9,
+   "imp": 183
+  },
+  {
+   "url": "/products/hik-ids-tcm403-bi-g-poe-0832",
+   "clicks": 9,
+   "imp": 69
+  },
+  {
+   "url": "/calculator",
+   "clicks": 8,
+   "imp": 250
+  },
+  {
+   "url": "/products/hik-ds-7764ni-m4",
+   "clicks": 8,
+   "imp": 245
+  },
+  {
+   "url": "/blog/sadp-hikvision",
+   "clicks": 8,
+   "imp": 212
+  },
+  {
+   "url": "/products/hik-ids-7732nxi-m4-x",
+   "clicks": 8,
+   "imp": 47
+  },
+  {
+   "url": "/uz/blog/kamera-narxlari",
+   "clicks": 7,
+   "imp": 1193
+  },
+  {
+   "url": "/products/hik-ds-3e1510p-ei",
+   "clicks": 7,
+   "imp": 211
+  },
+  {
+   "url": "/products/hik-ds-2cfsp4-4g-2-8mm",
+   "clicks": 7,
+   "imp": 169
+  },
+  {
+   "url": "/products/hik-ds-d2055ul-0a",
+   "clicks": 7,
+   "imp": 105
+  },
+  {
+   "url": "/products/hik-ds-2cd1343g2-liuf-sl-2-8mm",
+   "clicks": 7,
+   "imp": 75
+  },
+  {
+   "url": "/products/hik-ds-tmg035",
+   "clicks": 7,
+   "imp": 64
   },
   {
    "url": "/uz/products/pro-lezhachii-policeiskii-standart-yellow-500-350-50",
    "clicks": 6,
-   "imp": 134
+   "imp": 192
   },
   {
-   "url": "/products/hik-ds-tmg320-ll-b",
+   "url": "/products/hik-ds-2cd3641g2-izs-2-7-13-5mm-o-std",
    "clicks": 6,
-   "imp": 91
+   "imp": 142
+  },
+  {
+   "url": "/products/hik-ds-kv6114-wbe1",
+   "clicks": 6,
+   "imp": 117
+  },
+  {
+   "url": "/products/rbz-opop-124-r3-svetozvukovoi-adresnyi-belo-krasnyi",
+   "clicks": 6,
+   "imp": 113
+  },
+  {
+   "url": "/uz/blog/v380-pro-prilozhenie",
+   "clicks": 6,
+   "imp": 103
   },
   {
    "url": "/products/dahua-dhi-asi6213s-pw",
    "clicks": 6,
-   "imp": 76
+   "imp": 96
+  },
+  {
+   "url": "/products/dahua-sd49425db-hny",
+   "clicks": 6,
+   "imp": 57
+  },
+  {
+   "url": "/products/hik-ds-7732nxi-i4-vpro",
+   "clicks": 6,
+   "imp": 43
+  },
+  {
+   "url": "/products/hik-ds-k3b501sx-l-m",
+   "clicks": 6,
+   "imp": 42
+  },
+  {
+   "url": "/products/hik-ds-k1t673dwx",
+   "clicks": 6,
+   "imp": 36
+  },
+  {
+   "url": "/products/hik-ds-kis610-p",
+   "clicks": 6,
+   "imp": 28
+  },
+  {
+   "url": "/products/hik-ds-k3g501cx-r-m-dm55",
+   "clicks": 6,
+   "imp": 25
+  },
+  {
+   "url": "/products/dahua-dhi-itc431-rw1f-irl8",
+   "clicks": 5,
+   "imp": 243
+  },
+  {
+   "url": "/about",
+   "clicks": 5,
+   "imp": 234
+  },
+  {
+   "url": "/uz/blog/turniket-narxi",
+   "clicks": 5,
+   "imp": 119
+  },
+  {
+   "url": "/products/rbz-r3-rubezh-biu",
+   "clicks": 5,
+   "imp": 87
+  },
+  {
+   "url": "/products/hik-ds-3wf1000-ei-2n-o-std",
+   "clicks": 5,
+   "imp": 86
+  },
+  {
+   "url": "/products/rbz-ip-212-64-r3-w1-03-s-ploschadkoi-pod-ekran-3k",
+   "clicks": 5,
+   "imp": 79
   },
   {
    "url": "/products/rbz-am-4-r3",
-   "clicks": 6,
-   "imp": 74
-  },
-  {
-   "url": "/products/hik-ids-tcm403-bi-g-poe-0832",
-   "clicks": 6,
-   "imp": 60
-  },
-  {
-   "url": "/products/hik-ds-kv6114-wbe1",
    "clicks": 5,
-   "imp": 83
+   "imp": 77
   },
   {
-   "url": "/products/hik-ds-d2055ul-0a",
+   "url": "/products/rbz-iz-1-r3",
    "clicks": 5,
-   "imp": 74
+   "imp": 75
   },
   {
    "url": "/products/hik-ds-3e1510p-si",
    "clicks": 5,
+   "imp": 71
+  },
+  {
+   "url": "/products/pro-raciya-baofeng-888s-v-komplekte-2sht-naushnik",
+   "clicks": 5,
+   "imp": 62
+  },
+  {
+   "url": "/products/hik-ds-k5671-zu",
+   "clicks": 5,
    "imp": 53
   },
   {
-   "url": "/products/hik-ds-tmg035",
+   "url": "/products/hik-ds-k2604t",
    "clicks": 5,
-   "imp": 49
+   "imp": 51
   },
   {
-   "url": "/products/dahua-sd49425db-hny",
+   "url": "/products/hik-ds-tmg320-lr",
    "clicks": 5,
    "imp": 34
   },
   {
-   "url": "/products/hik-ids-7732nxi-m4-x",
+   "url": "/products/hik-ds-kab673-fbqr",
    "clicks": 5,
-   "imp": 30
+   "imp": 29
   },
   {
-   "url": "/products/tapo-tapo-c460",
+   "url": "/en/products/hik-ds-k1t673dx",
    "clicks": 5,
    "imp": 28
   },
   {
-   "url": "/products/tapo-tapo-d230s1",
+   "url": "/products/dahua-pfs3110-8et-96",
    "clicks": 5,
    "imp": 25
   },
   {
-   "url": "/products/hik-ds-k3g501cx-r-m-dm55",
+   "url": "/en/products/hik-ds-3e1510p-ei",
    "clicks": 5,
-   "imp": 24
+   "imp": 18
   },
   {
-   "url": "/products/type/besprovodnye-kamery",
+   "url": "/en/catalog/hikvision/besprovodnye-kamery",
    "clicks": 4,
-   "imp": 380
+   "imp": 392
   },
   {
-   "url": "/products/hik-ds-3e1510p-ei",
+   "url": "/products/hik-ids-2cd7a46g0-p-izhs-8-32mm-c",
    "clicks": 4,
-   "imp": 170
+   "imp": 187
   },
   {
    "url": "/products/hik-ds-kv9503-wbe1",
    "clicks": 4,
-   "imp": 137
+   "imp": 183
   },
   {
-   "url": "/blog/sbros-parolya-hikvision",
+   "url": "/products/hik-ds-9664ni-m8",
    "clicks": 4,
-   "imp": 107
+   "imp": 177
+  },
+  {
+   "url": "/products/hik-ds-k1t673tdx",
+   "clicks": 4,
+   "imp": 169
+  },
+  {
+   "url": "/en/products/hik-ds-2cd1043g2-liu-2-8mm",
+   "clicks": 4,
+   "imp": 143
+  },
+  {
+   "url": "/products/bld-s2000-bki-blok-kontrolya-i-indikacii",
+   "clicks": 4,
+   "imp": 140
+  },
+  {
+   "url": "/uz/blog/domofon-narxi",
+   "clicks": 4,
+   "imp": 133
+  },
+  {
+   "url": "/products/hik-ds-2se4c425mwg-e-14f0",
+   "clicks": 4,
+   "imp": 121
+  },
+  {
+   "url": "/products/hik-ds-3e0106mp-e-m",
+   "clicks": 4,
+   "imp": 108
+  },
+  {
+   "url": "/products/hik-ds-tcg406-e",
+   "clicks": 4,
+   "imp": 95
+  },
+  {
+   "url": "/products/hik-ds-3e1526p-si-24p2f",
+   "clicks": 4,
+   "imp": 85
+  },
+  {
+   "url": "/products/hik-ds-7764ni-k4",
+   "clicks": 4,
+   "imp": 83
   },
   {
    "url": "/products/hik-ds-tmg320-ll",
    "clicks": 4,
-   "imp": 71
-  },
-  {
-   "url": "/products/hik-ds-2cd1343g2-liuf-sl-2-8mm",
-   "clicks": 4,
-   "imp": 59
+   "imp": 80
   },
   {
    "url": "/products/hik-ds-6908udi-c",
    "clicks": 4,
-   "imp": 50
+   "imp": 76
   },
   {
-   "url": "/products/hik-ds-k3b501sx-l-m",
+   "url": "/products/rbz-rm-1-r3",
    "clicks": 4,
-   "imp": 27
+   "imp": 70
   },
   {
-   "url": "/en/products/hik-ds-k1t673dx",
+   "url": "/products/bld-shps-24-isp-10",
    "clicks": 4,
-   "imp": 24
+   "imp": 65
+  },
+  {
+   "url": "/products/hik-ds-tcg405-e",
+   "clicks": 4,
+   "imp": 59
+  },
+  {
+   "url": "/products/hik-ds-3e0518p-e-m",
+   "clicks": 4,
+   "imp": 56
+  },
+  {
+   "url": "/products/hik-ds-3wr4g3n-o-std-eu",
+   "clicks": 4,
+   "imp": 52
+  },
+  {
+   "url": "/products/bld-s2000-ar2-isp-02",
+   "clicks": 4,
+   "imp": 48
+  },
+  {
+   "url": "/products/hik-ds-2cd2087g3-li2uy-sl-2-8mm",
+   "clicks": 4,
+   "imp": 48
+  },
+  {
+   "url": "/products/pro-seagate-skyhawk-hdd-4tb-dubai",
+   "clicks": 4,
+   "imp": 45
+  },
+  {
+   "url": "/products/pxt-nf-8601s",
+   "clicks": 4,
+   "imp": 40
+  },
+  {
+   "url": "/products/pxt-fujikura-86s",
+   "clicks": 4,
+   "imp": 39
+  },
+  {
+   "url": "/en/products/dahua-ipc-pts2649c-3e3z-4gb20",
+   "clicks": 4,
+   "imp": 37
+  },
+  {
+   "url": "/products/hik-ds-dn4655w-u",
+   "clicks": 4,
+   "imp": 36
+  },
+  {
+   "url": "/products/hik-ds-tcg205-e-s-12v-poe",
+   "clicks": 4,
+   "imp": 34
+  },
+  {
+   "url": "/products/hik-ds-3wf0ec-5act-b",
+   "clicks": 4,
+   "imp": 30
   },
   {
    "url": "/products/hik-ds-k2m061",
    "clicks": 4,
-   "imp": 24
-  },
-  {
-   "url": "/products/tapo-tapo-c211",
-   "clicks": 4,
-   "imp": 20
-  },
-  {
-   "url": "/products/dahua-pfs3110-8et-96",
-   "clicks": 4,
-   "imp": 19
+   "imp": 29
   },
   {
    "url": "/products/hik-ds-2cd2043g2-li-2-8mm",
    "clicks": 4,
-   "imp": 17
-  },
-  {
-   "url": "/products/hik-ds-kis610-p",
-   "clicks": 4,
-   "imp": 15
-  },
-  {
-   "url": "/products/hik-ds-k1t673dwx",
-   "clicks": 4,
-   "imp": 14
-  },
-  {
-   "url": "/products/dahua-dhi-ls550ucm-bf",
-   "clicks": 4,
-   "imp": 13
-  },
-  {
-   "url": "/products/dahua-ipc-hfw5442h-z4he",
-   "clicks": 4,
-   "imp": 7
-  },
-  {
-   "url": "/products/dahua-asi7213s-w",
-   "clicks": 3,
-   "imp": 296
-  },
-  {
-   "url": "/products/pro-pulsoksimetr",
-   "clicks": 3,
-   "imp": 237
-  },
-  {
-   "url": "/products/dahua-dhi-itc431-rw1f-irl8",
-   "clicks": 3,
-   "imp": 197
-  },
-  {
-   "url": "/about",
-   "clicks": 3,
-   "imp": 183
-  },
-  {
-   "url": "/products/hik-ids-2cd7a46g0-p-izhs-8-32mm-c",
-   "clicks": 3,
-   "imp": 138
-  },
-  {
-   "url": "/products/hik-ds-2cd3641g2-izs-2-7-13-5mm-o-std",
-   "clicks": 3,
-   "imp": 126
-  },
-  {
-   "url": "/products/pxt-u7-pro",
-   "clicks": 3,
-   "imp": 125
-  },
-  {
-   "url": "/products/hik-ds-2cfsp4-4g-2-8mm",
-   "clicks": 3,
-   "imp": 124
-  },
-  {
-   "url": "/products/bld-s2000-bki-blok-kontrolya-i-indikacii",
-   "clicks": 3,
-   "imp": 109
-  },
-  {
-   "url": "/products/hik-ds-k1t673tdx",
-   "clicks": 3,
-   "imp": 81
-  },
-  {
-   "url": "/products/hik-ds-2de5432iwg-e",
-   "clicks": 3,
-   "imp": 76
-  },
-  {
-   "url": "/products/hik-ds-3e0110mp-e-m",
-   "clicks": 3,
-   "imp": 72
-  },
-  {
-   "url": "/products/rbz-opop-124-r3-svetozvukovoi-adresnyi-belo-krasnyi",
-   "clicks": 3,
-   "imp": 70
-  },
-  {
-   "url": "/products/hik-ds-3wf1000-ei-2n-o-std",
-   "clicks": 3,
-   "imp": 65
-  },
-  {
-   "url": "/products/pro-hdmi-5-m",
-   "clicks": 3,
-   "imp": 63
-  },
-  {
-   "url": "/products/pro-smk",
-   "clicks": 3,
-   "imp": 62
-  },
-  {
-   "url": "/products/hik-ds-ups2000",
-   "clicks": 3,
-   "imp": 61
-  },
-  {
-   "url": "/products/rbz-r3-rubezh-biu",
-   "clicks": 3,
-   "imp": 58
-  },
-  {
-   "url": "/products/hik-ds-tcg405-e",
-   "clicks": 3,
-   "imp": 52
-  },
-  {
-   "url": "/products/rbz-ip-212-64-r3-w1-03-s-ploschadkoi-pod-ekran-3k",
-   "clicks": 3,
-   "imp": 48
-  },
-  {
-   "url": "/products/bld-s2000-ar2-isp-02",
-   "clicks": 3,
-   "imp": 46
-  },
-  {
-   "url": "/products/hik-ds-2cd2686g2-izs-2-8-12mm-c-o-std",
-   "clicks": 3,
-   "imp": 45
-  },
-  {
-   "url": "/products/hik-ds-3e1510p-si-8p2f-o-std",
-   "clicks": 3,
-   "imp": 45
-  },
-  {
-   "url": "/products/hik-ds-6916udi-b-std",
-   "clicks": 3,
-   "imp": 43
-  },
-  {
-   "url": "/products/bld-shps-24-isp-10",
-   "clicks": 3,
-   "imp": 41
-  },
-  {
-   "url": "/products/hik-ds-3e1526p-si-24p2f",
-   "clicks": 3,
-   "imp": 41
-  },
-  {
-   "url": "/products/hik-ds-ups1000",
-   "clicks": 3,
-   "imp": 35
-  },
-  {
-   "url": "/products/pro-lizhachii-policeiskii-premium-size-600-x-470-x-30mm",
-   "clicks": 3,
-   "imp": 35
-  },
-  {
-   "url": "/products/hik-ds-2cfs04-4g-2-8mm",
-   "clicks": 3,
-   "imp": 33
-  },
-  {
-   "url": "/products/pro-soedinitelnye-klemmy-skotch-lok",
-   "clicks": 3,
-   "imp": 32
-  },
-  {
-   "url": "/products/hik-ds-3e1518p-si-16p2f",
-   "clicks": 3,
-   "imp": 31
-  },
-  {
-   "url": "/products/hik-ds-2cd2087g3-li2uy-sl-2-8mm",
-   "clicks": 3,
-   "imp": 30
-  },
-  {
-   "url": "/products/rbz-rm-1-r3",
-   "clicks": 3,
-   "imp": 28
-  },
-  {
-   "url": "/products/wtk-wi-tek-wk-ps310-poe-8-2-gb",
-   "clicks": 3,
-   "imp": 28
-  },
-  {
-   "url": "/products/hik-ds-tcg205-e-s-12v-poe",
-   "clicks": 3,
-   "imp": 26
-  },
-  {
-   "url": "/products/pxt-fujikura-86s",
-   "clicks": 3,
-   "imp": 26
-  },
-  {
-   "url": "/products/hik-ds-2df8c435mhs-delw",
-   "clicks": 3,
-   "imp": 25
-  },
-  {
-   "url": "/products/hik-ds-kab673-fbqr",
-   "clicks": 3,
    "imp": 24
   },
   {
-   "url": "/products/hik-ds-kv6114-e1",
-   "clicks": 3,
+   "url": "/products/ubnt-u6-plus-ubiquiti-accesspoint",
+   "clicks": 4,
    "imp": 24
   },
   {
    "url": "/products/dahua-dhi-nvr1104hs-s3-h",
-   "clicks": 3,
-   "imp": 18
+   "clicks": 4,
+   "imp": 23
   },
   {
-   "url": "/products/dahua-dhi-nvr1108hs-s3-h",
-   "clicks": 3,
-   "imp": 18
+   "url": "/en/products/hik-ds-7616nxi-k2",
+   "clicks": 4,
+   "imp": 19
   },
   {
-   "url": "/products/pro-hdmi-kvm-120m",
-   "clicks": 3,
+   "url": "/en/products/hik-ds-3e1318p-ei-m-o-std",
+   "clicks": 4,
    "imp": 18
   },
   {
    "url": "/products/dahua-dhi-scp3044a-bz",
-   "clicks": 3,
-   "imp": 16
+   "clicks": 4,
+   "imp": 18
   },
   {
-   "url": "/products/hik-ds-2df8c442ixg-elw",
-   "clicks": 3,
-   "imp": 15
+   "url": "/products/pro-ipc-5100c-plus-tester-ip-kamery",
+   "clicks": 4,
+   "imp": 17
   },
   {
-   "url": "/products/tpl-tp-link-eap723",
-   "clicks": 3,
-   "imp": 14
+   "url": "/products/dahua-sd8c260pa1-hnf",
+   "clicks": 4,
+   "imp": 11
   },
   {
-   "url": "/products/ubnt-u6-plus-ubiquiti-accesspoint",
-   "clicks": 3,
-   "imp": 14
+   "url": "/products/hik-ds-k4dc104",
+   "clicks": 4,
+   "imp": 9
   },
   {
-   "url": "/en/products/hik-ds-7616nxi-k2",
+   "url": "/products/dahua-dhi-asi3213a-w",
    "clicks": 3,
-   "imp": 13
+   "imp": 624
   },
   {
-   "url": "/products/hik-ds-d5043uc",
+   "url": "/products/pro-ognetushitel-op-5-rif-original-bolshoi",
    "clicks": 3,
-   "imp": 13
+   "imp": 436
+  },
+  {
+   "url": "/products/dahua-asi7213s-w",
+   "clicks": 3,
+   "imp": 320
+  },
+  {
+   "url": "/products/hik-ds-k3g200lx-r",
+   "clicks": 3,
+   "imp": 144
+  },
+  {
+   "url": "/products/pxt-u7-pro",
+   "clicks": 3,
+   "imp": 143
+  },
+  {
+   "url": "/products/hik-ds-3e0110mp-e-m",
+   "clicks": 3,
+   "imp": 114
+  },
+  {
+   "url": "/products/hik-ds-k1t671m-o-std",
+   "clicks": 3,
+   "imp": 107
+  },
+  {
+   "url": "/products/hik-ds-ups2000",
+   "clicks": 3,
+   "imp": 79
+  },
+  {
+   "url": "/blog/yongin-signalizatsiyasi-narxi",
+   "clicks": 3,
+   "imp": 71
+  },
+  {
+   "url": "/products/pro-ds-wd101purx-original-hdd-10tb",
+   "clicks": 3,
+   "imp": 65
+  },
+  {
+   "url": "/products/pro-ds-wd10purx-78-original-hdd-1tb",
+   "clicks": 3,
+   "imp": 62
+  },
+  {
+   "url": "/products/hik-ds-6916udi-b-std",
+   "clicks": 3,
+   "imp": 59
+  },
+  {
+   "url": "/products/hik-ds-2de2c400iwg-k-4g-c09s20-2-8mm",
+   "clicks": 3,
+   "imp": 56
+  },
+  {
+   "url": "/products/rbz-am-1-r3",
+   "clicks": 3,
+   "imp": 53
+  },
+  {
+   "url": "/products/hik-ds-3wf02-5ac-d",
+   "clicks": 3,
+   "imp": 48
+  },
+  {
+   "url": "/products/hik-ds-3e1518p-si-16p2f",
+   "clicks": 3,
+   "imp": 44
+  },
+  {
+   "url": "/products/hik-ds-k1ta70mi-t-o-std",
+   "clicks": 3,
+   "imp": 43
+  },
+  {
+   "url": "/products/pro-lizhachii-policeiskii-premium-size-600-x-470-x-30mm",
+   "clicks": 3,
+   "imp": 41
+  },
+  {
+   "url": "/products/hik-ds-k1t681dbwx",
+   "clicks": 3,
+   "imp": 37
+  },
+  {
+   "url": "/products/pro-ventil-pozharnyi-latunnyi-du-50",
+   "clicks": 3,
+   "imp": 37
   },
   {
    "url": "/products/hik-ds-7608ni-m2",
    "clicks": 3,
-   "imp": 11
+   "imp": 35
+  },
+  {
+   "url": "/products/pro-ds-wd62purx-78-original-hdd-6tb",
+   "clicks": 3,
+   "imp": 32
+  },
+  {
+   "url": "/products/pro-ds80hkvs-vx1-original-hdd-8tb",
+   "clicks": 3,
+   "imp": 32
+  },
+  {
+   "url": "/en/products/hik-ds-k1t671mf-o-std",
+   "clicks": 3,
+   "imp": 30
+  },
+  {
+   "url": "/products/hik-ds-kv6114-e1",
+   "clicks": 3,
+   "imp": 30
+  },
+  {
+   "url": "/products/hik-ds-2df8c835mhs-delw",
+   "clicks": 3,
+   "imp": 29
+  },
+  {
+   "url": "/products/tpl-tp-link-ds108gp",
+   "clicks": 3,
+   "imp": 28
+  },
+  {
+   "url": "/uz/blog/router-sozlash",
+   "clicks": 3,
+   "imp": 28
+  },
+  {
+   "url": "/products/hik-l1300-r117",
+   "clicks": 3,
+   "imp": 27
+  },
+  {
+   "url": "/products/tpl-tp-link-sg5452xmpp",
+   "clicks": 3,
+   "imp": 27
+  },
+  {
+   "url": "/products/hik-ds-k7p01",
+   "clicks": 3,
+   "imp": 26
+  },
+  {
+   "url": "/products/hik-ds-2df8c442ixg1-elw",
+   "clicks": 3,
+   "imp": 24
+  },
+  {
+   "url": "/products/dahua-dhi-nvr1108hs-s3-h",
+   "clicks": 3,
+   "imp": 23
+  },
+  {
+   "url": "/en/products/hik-ds-kv9503-wbe1",
+   "clicks": 3,
+   "imp": 22
+  },
+  {
+   "url": "/products/hik-ds-a71024r",
+   "clicks": 3,
+   "imp": 22
+  },
+  {
+   "url": "/products/hik-ds-2cd2143g2-is-2-8mm",
+   "clicks": 3,
+   "imp": 21
+  },
+  {
+   "url": "/products/tpl-tp-link-eap723",
+   "clicks": 3,
+   "imp": 21
+  },
+  {
+   "url": "/products/pro-seagate-skyhawk-hdd-500gb-dubai",
+   "clicks": 3,
+   "imp": 19
+  },
+  {
+   "url": "/products/hik-ds-2df8c442ixg-elw",
+   "clicks": 3,
+   "imp": 17
+  },
+  {
+   "url": "/products/rbz-ivepr-12-2-rs-r3-isp-2h17-br-istochnik-vtorichnogo-elektropitaniya-rezervirovannyi-adresnyi",
+   "clicks": 3,
+   "imp": 17
+  },
+  {
+   "url": "/products/zkt-bgm1060-right",
+   "clicks": 3,
+   "imp": 15
+  },
+  {
+   "url": "/products/dahua-dhi-nvr4232-ei",
+   "clicks": 3,
+   "imp": 14
+  },
+  {
+   "url": "/products/hik-ds-d5043uc",
+   "clicks": 3,
+   "imp": 14
+  },
+  {
+   "url": "/products/rje-rg-est310-v2",
+   "clicks": 3,
+   "imp": 14
+  },
+  {
+   "url": "/en/products/hik-ds-2df8c835mhs-delw",
+   "clicks": 3,
+   "imp": 13
+  },
+  {
+   "url": "/products/dahua-dhi-ls490ucm-ef",
+   "clicks": 3,
+   "imp": 13
+  },
+  {
+   "url": "/products/dahua-ipc-hfw3849t1-as-pv",
+   "clicks": 3,
+   "imp": 13
+  },
+  {
+   "url": "/products/zkt-radar-vr10-pro",
+   "clicks": 3,
+   "imp": 13
+  },
+  {
+   "url": "/blog/ip-kvm-udlinitel",
+   "clicks": 3,
+   "imp": 12
   },
   {
    "url": "/en/products/hik-ds-kab673-bqr-o-neu",
    "clicks": 3,
-   "imp": 10
-  },
-  {
-   "url": "/products/hik-ds-2de2c200mwg-w-2-8mm",
-   "clicks": 3,
-   "imp": 10
+   "imp": 12
   },
   {
    "url": "/products/pxt-mtc20f1045s1rc48br",
@@ -458,379 +718,629 @@
    "imp": 10
   },
   {
-   "url": "/products/hik-ds-2cd2143g2-is-2-8mm",
+   "url": "/en/products/dahua-pfs3226-24et-240",
    "clicks": 3,
-   "imp": 9
+   "imp": 7
   },
   {
-   "url": "/products/pro-seagate-skyhawk-hdd-500gb-dubai",
+   "url": "/en/products/hik-ds-2cd2043g2-li2u-2-8mm",
    "clicks": 3,
-   "imp": 8
+   "imp": 7
   },
   {
-   "url": "/products/pxt-pxt-rj-45s-s6",
+   "url": "/products/hik-ds-vp41d-c-hw5l",
+   "clicks": 3,
+   "imp": 7
+  },
+  {
+   "url": "/products/hik-ds-1604zj-p",
+   "clicks": 3,
+   "imp": 5
+  },
+  {
+   "url": "/products/dahua-dhi-asr1200e",
+   "clicks": 3,
+   "imp": 4
+  },
+  {
+   "url": "/products/hik-ds-kh2230t",
+   "clicks": 3,
+   "imp": 4
+  },
+  {
+   "url": "/products/hik-ds-k5033tmw-d",
    "clicks": 3,
    "imp": 3
   },
   {
-   "url": "/uz/blog/kamera-narxlari",
+   "url": "/en/blog/hik-connect-skachat-podklyuchit",
    "clicks": 2,
-   "imp": 596
+   "imp": 388
   },
   {
-   "url": "/products/pxt-ksvpp-5e-2h2h0-52",
+   "url": "/products/type/shlagbaumy",
    "clicks": 2,
-   "imp": 254
+   "imp": 194
   },
   {
-   "url": "/en/catalog/hikvision/besprovodnye-kamery",
+   "url": "/products/type/ognetushiteli",
    "clicks": 2,
-   "imp": 228
+   "imp": 169
   },
   {
-   "url": "/products/hik-ds-k1t673dx",
+   "url": "/products/pro-usilitel-gsm-dlya-sotovyi",
    "clicks": 2,
-   "imp": 183
+   "imp": 160
   },
   {
-   "url": "/products/hik-ds-9664ni-m8",
+   "url": "/products/hik-ds-7608ni-k1-std-c",
+   "clicks": 2,
+   "imp": 142
+  },
+  {
+   "url": "/products/dahua-ipc-hdw1839t-a-il",
+   "clicks": 2,
+   "imp": 133
+  },
+  {
+   "url": "/products/hik-ds-7616nxi-k1",
+   "clicks": 2,
+   "imp": 130
+  },
+  {
+   "url": "/products/hik-ds-ups3000",
+   "clicks": 2,
+   "imp": 129
+  },
+  {
+   "url": "/uz/blog/shlagbaum-narxi",
    "clicks": 2,
    "imp": 121
   },
   {
-   "url": "/products/hik-ds-3e0106mp-e-m",
+   "url": "/products/hik-ds-7732nxi-k4-d",
    "clicks": 2,
-   "imp": 82
-  },
-  {
-   "url": "/products/hik-ds-k3g200lx-r",
-   "clicks": 2,
-   "imp": 80
-  },
-  {
-   "url": "/products/hik-ds-k1t671m-o-std",
-   "clicks": 2,
-   "imp": 73
-  },
-  {
-   "url": "/products/hik-ds-2sf8c442mxg1-elw-26-f0",
-   "clicks": 2,
-   "imp": 63
+   "imp": 120
   },
   {
    "url": "/products/rbz-ppkopu-r3-rubezh-2op",
    "clicks": 2,
-   "imp": 61
+   "imp": 109
   },
   {
-   "url": "/products/hik-ds-7732nxi-k4-d",
+   "url": "/uz/blog/eshik-qulfi-narxi",
    "clicks": 2,
-   "imp": 60
+   "imp": 101
   },
   {
-   "url": "/products/rbz-iz-1-r3",
+   "url": "/products/hik-ds-3e1326p-ei-m-o-std",
    "clicks": 2,
-   "imp": 56
+   "imp": 95
   },
   {
-   "url": "/products/bld-rip-12-isp-50-rip-12-3-17m1-r-rs",
+   "url": "/products/dahua-ipc-hdw1439v-a-il",
    "clicks": 2,
-   "imp": 54
+   "imp": 93
   },
   {
-   "url": "/products/hik-ds-3e1506p-ei-m",
+   "url": "/products/hik-ids-2cd7146g0-izs-2-8-12mm",
    "clicks": 2,
-   "imp": 52
+   "imp": 90
+  },
+  {
+   "url": "/products/hik-ds-2de5432iwg-e",
+   "clicks": 2,
+   "imp": 87
   },
   {
    "url": "/products/rbz-ipr-513-11ikz-a-r3",
    "clicks": 2,
-   "imp": 52
+   "imp": 79
   },
   {
-   "url": "/en/catalog/hilook/ip-kamery",
+   "url": "/products/rbz-rm-4-r3",
    "clicks": 2,
-   "imp": 51
+   "imp": 78
   },
   {
-   "url": "/products/pro-zamok-6-klyuch-andel",
+   "url": "/products/pro-k68-detektor-skrytyh-kamer-i-zhuchkov",
    "clicks": 2,
-   "imp": 51
-  },
-  {
-   "url": "/en/products/hik-ds-2cd1343g2-liu-2-8mm",
-   "clicks": 2,
-   "imp": 47
-  },
-  {
-   "url": "/products/hik-ds-k3b220lx-r",
-   "clicks": 2,
-   "imp": 46
-  },
-  {
-   "url": "/products/rbz-am-1-r3",
-   "clicks": 2,
-   "imp": 46
-  },
-  {
-   "url": "/products/hik-ds-2de2c400iwg-w-2-8mm-w",
-   "clicks": 2,
-   "imp": 44
-  },
-  {
-   "url": "/products/hik-ds-2se7c432mw-aeb-14f1-p3",
-   "clicks": 2,
-   "imp": 42
-  },
-  {
-   "url": "/products/hik-ds-2se7c432mwg-eb-26-f0",
-   "clicks": 2,
-   "imp": 42
-  },
-  {
-   "url": "/products/hik-ds-3e1526p-si",
-   "clicks": 2,
-   "imp": 42
-  },
-  {
-   "url": "/products/hik-ds-3wr4g3n-o-std-eu",
-   "clicks": 2,
-   "imp": 38
-  },
-  {
-   "url": "/uz/blog/domofon-narxi",
-   "clicks": 2,
-   "imp": 38
-  },
-  {
-   "url": "/products/hik-ds-k4h258s",
-   "clicks": 2,
-   "imp": 37
-  },
-  {
-   "url": "/products/hik-ds-km9503",
-   "clicks": 2,
-   "imp": 37
-  },
-  {
-   "url": "/products/hik-ds-k3g501x-r-m",
-   "clicks": 2,
-   "imp": 36
-  },
-  {
-   "url": "/products/pxt-nf-8601s",
-   "clicks": 2,
-   "imp": 33
+   "imp": 76
   },
   {
    "url": "/products/bld-shps-12-isp-10",
    "clicks": 2,
-   "imp": 32
+   "imp": 72
   },
   {
-   "url": "/products/hik-ds-k1t804bmf-o-std",
+   "url": "/products/hik-ds-2de4425iw-de-o-std-s6",
    "clicks": 2,
-   "imp": 31
+   "imp": 72
   },
   {
-   "url": "/products/hik-ds-k3b211lx-lr",
+   "url": "/products/hik-ds-2sf8c442mxg1-elw-26-f0",
    "clicks": 2,
-   "imp": 30
+   "imp": 70
   },
   {
-   "url": "/en/products/pxt-pxt-s2780g-24t-poe",
+   "url": "/products/bld-briz-blok-razvetvitelno-izoliruyushchii",
    "clicks": 2,
-   "imp": 29
+   "imp": 69
+  },
+  {
+   "url": "/products/bld-s2000-sp4-220",
+   "clicks": 2,
+   "imp": 67
+  },
+  {
+   "url": "/products/hik-ds-k3b220lx-r",
+   "clicks": 2,
+   "imp": 67
+  },
+  {
+   "url": "/products/pro-zamok-6-klyuch-andel",
+   "clicks": 2,
+   "imp": 66
+  },
+  {
+   "url": "/uz/blog/hik-connect-skachat-podklyuchit",
+   "clicks": 2,
+   "imp": 66
+  },
+  {
+   "url": "/en/products/hik-ds-2cd1343g2-liu-2-8mm",
+   "clicks": 2,
+   "imp": 65
+  },
+  {
+   "url": "/products/bld-rip-12-isp-50-rip-12-3-17m1-r-rs",
+   "clicks": 2,
+   "imp": 64
   },
   {
    "url": "/products/hik-ds-3e1310p-ei",
    "clicks": 2,
-   "imp": 29
+   "imp": 63
   },
   {
-   "url": "/en/products/dahua-ipc-pts2649c-3e3z-4gb20",
+   "url": "/blog/domofon-narxi",
    "clicks": 2,
-   "imp": 28
+   "imp": 62
   },
   {
-   "url": "/products/hik-ids-tcm403-bi-g-poe-2812",
+   "url": "/catalog/hikvision/turnikety-i-shlagbaumy",
    "clicks": 2,
-   "imp": 28
+   "imp": 60
   },
   {
-   "url": "/products/hik-ds-1600ki-b",
+   "url": "/products/hik-ds-3e1506p-ei-m",
    "clicks": 2,
-   "imp": 27
+   "imp": 59
   },
   {
-   "url": "/products/mcs-mercusys-mr80x",
+   "url": "/products/hik-ds-7616nxi-k2",
    "clicks": 2,
-   "imp": 27
+   "imp": 58
   },
   {
-   "url": "/products/pro-ds-wd101purx-original-hdd-10tb",
+   "url": "/products/dahua-ipc-hfw2449tl-s-pro",
    "clicks": 2,
-   "imp": 27
+   "imp": 55
+  },
+  {
+   "url": "/products/hik-ds-2se7c432mwg-eb-26-f0",
+   "clicks": 2,
+   "imp": 55
+  },
+  {
+   "url": "/products/hik-ds-kis603-p-b-o-std",
+   "clicks": 2,
+   "imp": 55
+  },
+  {
+   "url": "/products/dahua-ipc-hfw2441t-zs",
+   "clicks": 2,
+   "imp": 54
+  },
+  {
+   "url": "/products/hik-ds-3e1510p-si-8p2f-o-std",
+   "clicks": 2,
+   "imp": 53
+  },
+  {
+   "url": "/products/hik-ds-km9503",
+   "clicks": 2,
+   "imp": 53
+  },
+  {
+   "url": "/en/catalog/dahua",
+   "clicks": 2,
+   "imp": 52
+  },
+  {
+   "url": "/uz/blog/chto-takoe-skud",
+   "clicks": 2,
+   "imp": 50
+  },
+  {
+   "url": "/products/rbz-ip-101-29-pr-r3-w1-03-s-ploschadkoi-pod-ekran-3k",
+   "clicks": 2,
+   "imp": 48
+  },
+  {
+   "url": "/blog/turniket-narxi",
+   "clicks": 2,
+   "imp": 47
+  },
+  {
+   "url": "/products/hik-ds-3e1526p-si",
+   "clicks": 2,
+   "imp": 47
   },
   {
    "url": "/products/hik-ds-2cd1047g2-luf-2-8mm",
    "clicks": 2,
-   "imp": 26
+   "imp": 46
   },
   {
-   "url": "/products/hik-ds-tmg320-lr",
+   "url": "/products/hik-ds-7608ni-q2",
    "clicks": 2,
-   "imp": 25
+   "imp": 45
   },
   {
-   "url": "/products/hil-hl-ipc-b140ha-luc-2-8mm",
+   "url": "/products/hik-ids-tcm403-bi-g-poe-2812",
    "clicks": 2,
-   "imp": 25
+   "imp": 45
   },
   {
-   "url": "/en/products/hik-ds-k1t341cm",
+   "url": "/products/hik-ds-2se7c432mw-aeb-14f1-p3",
    "clicks": 2,
-   "imp": 24
+   "imp": 44
   },
   {
-   "url": "/products/bld-server-orion-pro-isp-512",
+   "url": "/products/hik-ds-k1t804bmf-o-std",
    "clicks": 2,
-   "imp": 23
+   "imp": 44
   },
   {
-   "url": "/products/pro-hdmi-10-m-ploskii",
+   "url": "/products/pro-ds-wd20purx-78-original-hdd-2tb",
    "clicks": 2,
-   "imp": 23
+   "imp": 44
   },
   {
-   "url": "/products/tapo-tapo-c200c",
+   "url": "/products/hik-ds-k3g501x-r-m",
    "clicks": 2,
-   "imp": 23
+   "imp": 43
+  },
+  {
+   "url": "/products/hik-ds-3t0506hp-e-hs",
+   "clicks": 2,
+   "imp": 42
+  },
+  {
+   "url": "/products/hik-ds-k1t344mbwx-qre1",
+   "clicks": 2,
+   "imp": 42
+  },
+  {
+   "url": "/products/hik-ds-k4h258s",
+   "clicks": 2,
+   "imp": 42
+  },
+  {
+   "url": "/en/products/pxt-pxt-s2780g-24t-poe",
+   "clicks": 2,
+   "imp": 41
+  },
+  {
+   "url": "/products/pxt-cp-7811-3pcc-k9",
+   "clicks": 2,
+   "imp": 41
+  },
+  {
+   "url": "/products/hik-ds-k2m0016a",
+   "clicks": 2,
+   "imp": 40
+  },
+  {
+   "url": "/en/products/hik-ds-2cd1047g2h-liu-2-8mm",
+   "clicks": 2,
+   "imp": 39
+  },
+  {
+   "url": "/products/hik-ds-2cd2387g2-lu-2-8mm-c",
+   "clicks": 2,
+   "imp": 39
+  },
+  {
+   "url": "/products/hik-ds-k3b501sx-r-m",
+   "clicks": 2,
+   "imp": 39
+  },
+  {
+   "url": "/products/hik-ds-7608nxi-k2",
+   "clicks": 2,
+   "imp": 38
+  },
+  {
+   "url": "/en/products/hik-ids-2cd7a46g0-p-izhs-8-32mm-c",
+   "clicks": 2,
+   "imp": 37
+  },
+  {
+   "url": "/products/pro-bbp-20",
+   "clicks": 2,
+   "imp": 37
+  },
+  {
+   "url": "/products/hik-ds-2cd2686g2-izs-2-8-12mm-c-o-std",
+   "clicks": 2,
+   "imp": 36
+  },
+  {
+   "url": "/products/dahua-dhi-nvr5232-ei",
+   "clicks": 2,
+   "imp": 35
+  },
+  {
+   "url": "/products/hik-ds-2cfs04-4g-2-8mm",
+   "clicks": 2,
+   "imp": 34
+  },
+  {
+   "url": "/products/hik-ds-96256nxi-s24r-std",
+   "clicks": 2,
+   "imp": 33
   },
   {
    "url": "/products/dahua-cs4010-8et-60",
    "clicks": 2,
-   "imp": 22
+   "imp": 32
   },
   {
-   "url": "/products/pro-ipc-5100c-plus-tester-ip-kamery",
+   "url": "/products/hik-ds-ups1000",
    "clicks": 2,
-   "imp": 22
+   "imp": 32
   },
   {
-   "url": "/products/hik-ds-3e0528hp-e",
+   "url": "/products/wtk-wi-tek-wk-ps310-poe-8-2-gb",
    "clicks": 2,
-   "imp": 21
+   "imp": 31
   },
   {
-   "url": "/products/tapo-tapo-c216",
+   "url": "/products/hik-ds-1600ki-b",
    "clicks": 2,
-   "imp": 21
-  },
-  {
-   "url": "/en/products/hik-ids-tcm403-bi-g-poe-0832",
-   "clicks": 2,
-   "imp": 20
-  },
-  {
-   "url": "/products/pro-hdmi-optika-30-m",
-   "clicks": 2,
-   "imp": 20
-  },
-  {
-   "url": "/products/hik-ds-2df8c442ixg1-elw",
-   "clicks": 2,
-   "imp": 19
-  },
-  {
-   "url": "/products/wtk-wi-tek-wk-ps305-poe-4-1-gb",
-   "clicks": 2,
-   "imp": 19
-  },
-  {
-   "url": "/products/dahua-pfm920i-6un-cn",
-   "clicks": 2,
-   "imp": 18
-  },
-  {
-   "url": "/products/hik-ds-xs06-p",
-   "clicks": 2,
-   "imp": 18
-  },
-  {
-   "url": "/products/pro-ds80hkvs-vx1-original-hdd-8tb",
-   "clicks": 2,
-   "imp": 17
-  },
-  {
-   "url": "/products/pro-seagate-skyhawk-hdd-4tb-dubai",
-   "clicks": 2,
-   "imp": 17
-  },
-  {
-   "url": "/en/products/pro-raciya-baofeng-888s-v-komplekte-2sht-naushnik",
-   "clicks": 2,
-   "imp": 16
-  },
-  {
-   "url": "/products/hil-hl-ipc-b121he-uc-2-8mm",
-   "clicks": 2,
-   "imp": 16
+   "imp": 30
   },
   {
    "url": "/products/hik-ds-2de2c400iwg-k-4g-c05s10-2-8mm",
    "clicks": 2,
-   "imp": 14
+   "imp": 30
+  },
+  {
+   "url": "/blog/servernaya-komnata",
+   "clicks": 2,
+   "imp": 29
+  },
+  {
+   "url": "/en/products/hik-ds-k1t341cm",
+   "clicks": 2,
+   "imp": 29
+  },
+  {
+   "url": "/products/hik-ds-3e0528hp-e",
+   "clicks": 2,
+   "imp": 28
+  },
+  {
+   "url": "/products/hik-ds-2cd1063g2-liuf-sl-2-8mm",
+   "clicks": 2,
+   "imp": 27
+  },
+  {
+   "url": "/products/hik-ds-2cd2t87g2p-lsu-sl-4mm-c",
+   "clicks": 2,
+   "imp": 26
+  },
+  {
+   "url": "/products/pxt-nf-859gt",
+   "clicks": 2,
+   "imp": 26
+  },
+  {
+   "url": "/en/products/hik-ds-tcg406-e",
+   "clicks": 2,
+   "imp": 25
+  },
+  {
+   "url": "/en/products/hik-ids-tcm403-bi-g-poe-0832",
+   "clicks": 2,
+   "imp": 25
+  },
+  {
+   "url": "/en/products/tpl-tp-link-tl-sg1008d",
+   "clicks": 2,
+   "imp": 25
+  },
+  {
+   "url": "/products/bld-server-orion-pro-isp-512",
+   "clicks": 2,
+   "imp": 25
+  },
+  {
+   "url": "/products/hik-ds-1275zj-s-sus",
+   "clicks": 2,
+   "imp": 25
+  },
+  {
+   "url": "/products/hik-ds-xs06-p",
+   "clicks": 2,
+   "imp": 24
+  },
+  {
+   "url": "/products/rbz-r3-ms-e",
+   "clicks": 2,
+   "imp": 23
+  },
+  {
+   "url": "/products/hik-ds-3wf0ec-2nt",
+   "clicks": 2,
+   "imp": 22
+  },
+  {
+   "url": "/en/products/hik-ds-96256nxi-s24r-std",
+   "clicks": 2,
+   "imp": 21
+  },
+  {
+   "url": "/en/products/hik-ds-ups1000",
+   "clicks": 2,
+   "imp": 21
+  },
+  {
+   "url": "/en/products/pro-ipc-9800c-pro-tester-ip-kamery",
+   "clicks": 2,
+   "imp": 21
   },
   {
    "url": "/products/hik-ds-7104hqhi-k1-std-c-s-rus",
    "clicks": 2,
-   "imp": 14
+   "imp": 21
   },
   {
-   "url": "/products/rje-rg-ew6000gx",
+   "url": "/products/hik-ds-kis302-p",
    "clicks": 2,
-   "imp": 14
+   "imp": 21
   },
   {
-   "url": "/products/dahua-sd8c260pa1-hnf",
+   "url": "/products/pro-raciya-baofeng-999s-v-komplekte-2sht-naushnik",
    "clicks": 2,
-   "imp": 13
+   "imp": 21
+  },
+  {
+   "url": "/products/rbz-amp-4",
+   "clicks": 2,
+   "imp": 21
   },
   {
    "url": "/products/tpl-cpe710",
    "clicks": 2,
-   "imp": 13
+   "imp": 21
   },
   {
-   "url": "/en/products/hik-ds-3e1510p-ei",
+   "url": "/products/hik-ds-3e0516-e",
    "clicks": 2,
-   "imp": 12
+   "imp": 20
   },
   {
-   "url": "/en/products/hik-ds-kv9503-wbe1",
+   "url": "/en/products/hik-ds-2cd1067g3-liu-2-8mm",
    "clicks": 2,
-   "imp": 12
+   "imp": 19
   },
   {
-   "url": "/products/dahua-ipc-hfw3849t1-as-pv",
+   "url": "/en/products/pro-raciya-baofeng-888s-v-komplekte-2sht-naushnik",
    "clicks": 2,
-   "imp": 12
+   "imp": 19
+  },
+  {
+   "url": "/products/hik-ds-2se3c410mwg-e-14-2-8mm-o-std",
+   "clicks": 2,
+   "imp": 19
+  },
+  {
+   "url": "/en/products/hik-ds-kh9570-wte1o-std-s",
+   "clicks": 2,
+   "imp": 18
+  },
+  {
+   "url": "/products/mkt-rb5009ug-s-in-mikrotik-router",
+   "clicks": 2,
+   "imp": 18
+  },
+  {
+   "url": "/products/hik-ds-k1t671tmw",
+   "clicks": 2,
+   "imp": 17
+  },
+  {
+   "url": "/products/hik-ds-kh9570-wte1o-std-s",
+   "clicks": 2,
+   "imp": 17
   },
   {
    "url": "/products/hik-ds-2cd1t47g3-liu-2-8mm",
    "clicks": 2,
-   "imp": 12
+   "imp": 16
   },
   {
-   "url": "/products/pro-hdmi-4k-15m",
+   "url": "/products/pro-datchik-rk-410-pr-roiscok",
    "clicks": 2,
-   "imp": 12
+   "imp": 16
   },
   {
-   "url": "/products/h3c-msr2600-6-x1",
+   "url": "/blog/shlagbaum-anpr",
    "clicks": 2,
-   "imp": 11
+   "imp": 15
+  },
+  {
+   "url": "/en/products/dahua-dhi-itc431-rw1f-irl8",
+   "clicks": 2,
+   "imp": 15
+  },
+  {
+   "url": "/en/products/hik-ds-7732nxi-k4-d",
+   "clicks": 2,
+   "imp": 15
+  },
+  {
+   "url": "/en/products/hik-ds-k3g200lx-r",
+   "clicks": 2,
+   "imp": 15
+  },
+  {
+   "url": "/en/products/hik-ids-2cd7a26g0-p-izhs-2-8-12mm",
+   "clicks": 2,
+   "imp": 15
+  },
+  {
+   "url": "/products/hik-ds-kab673-bqr-o-neu",
+   "clicks": 2,
+   "imp": 15
+  },
+  {
+   "url": "/en/products/hik-ds-3e1510p-si",
+   "clicks": 2,
+   "imp": 14
+  },
+  {
+   "url": "/products/pxt-ccr2004-16g-2s",
+   "clicks": 2,
+   "imp": 14
+  },
+  {
+   "url": "/en/products/hik-ds-3wf02-5ac-d",
+   "clicks": 2,
+   "imp": 13
+  },
+  {
+   "url": "/en/products/pro-seagate-skyhawk-hdd-10tb-dubai",
+   "clicks": 2,
+   "imp": 13
+  },
+  {
+   "url": "/products/dahua-dhi-nvr616h-128-xi",
+   "clicks": 2,
+   "imp": 13
+  },
+  {
+   "url": "/products/hik-ds-3wap6230-eio-std",
+   "clicks": 2,
+   "imp": 13
+  },
+  {
+   "url": "/products/pxt-gxt5-10kirt5uxln",
+   "clicks": 2,
+   "imp": 12
   },
   {
    "url": "/products/hik-ds-kh8381-wte1-o-std",
@@ -838,57 +1348,87 @@
    "imp": 11
   },
   {
-   "url": "/products/hil-hl-ipc-t221he-uc-2-8mm",
+   "url": "/products/wtk-wi-tek-wk-ps206-poe-4-2-mb",
    "clicks": 2,
    "imp": 11
   },
   {
-   "url": "/products/mkt-rb5009ug-s-in-mikrotik-router",
+   "url": "/products/zkt-zkteco-eface10-terminal-raspoznavaniya-lic",
    "clicks": 2,
    "imp": 11
   },
   {
-   "url": "/products/pro-ds-wd62purx-78-original-hdd-6tb",
+   "url": "/products/zkt-zkteco-turniket-steklyannyi-seredina-saturn-s1200",
    "clicks": 2,
    "imp": 11
   },
   {
-   "url": "/products/rbz-r3-ms-e",
-   "clicks": 2,
-   "imp": 11
-  },
-  {
-   "url": "/en/products/pro-seagate-skyhawk-hdd-10tb-dubai",
+   "url": "/en/products/hik-ds-2cd1343g2-i-2-8mm",
    "clicks": 2,
    "imp": 10
   },
   {
-   "url": "/products/pro-wifi-router-linkff-ff-ap3a",
+   "url": "/en/products/hik-ds-3e1526p-si-24p2f",
    "clicks": 2,
    "imp": 10
   },
   {
-   "url": "/products/rbz-ivepr-12-2-rs-r3-isp-2h17-br-istochnik-vtorichnogo-elektropitaniya-rezervirovannyi-adresnyi",
+   "url": "/en/products/hik-ds-7764ni-k4",
    "clicks": 2,
    "imp": 10
   },
   {
-   "url": "/products/rje-rg-rap72",
+   "url": "/products/hik-ds-2de2c200mwg-w-2-8mm",
    "clicks": 2,
    "imp": 10
   },
   {
-   "url": "/uz/catalog/hilook/ip-kamery",
+   "url": "/products/hik-ds-7732ni-k4-std",
    "clicks": 2,
    "imp": 10
   },
   {
-   "url": "/en/products/hik-ds-7732nxi-k4-d",
+   "url": "/products/hik-ds-k3b411bx-dp65-2",
+   "clicks": 2,
+   "imp": 10
+  },
+  {
+   "url": "/products/hik-nks422w03h",
+   "clicks": 2,
+   "imp": 10
+  },
+  {
+   "url": "/products/rje-rg-ew6000gx",
+   "clicks": 2,
+   "imp": 10
+  },
+  {
+   "url": "/products/tpl-tp-link-eap235-wall",
+   "clicks": 2,
+   "imp": 10
+  },
+  {
+   "url": "/en/products/pxt-nf-8209",
    "clicks": 2,
    "imp": 9
   },
   {
-   "url": "/products/dahua-dhi-nvr616h-128-xi",
+   "url": "/en/products/pxt-snr-s2985g-24tc",
+   "clicks": 2,
+   "imp": 9
+  },
+  {
+   "url": "/products/hik-ds-2cd6425g1-30-2-8mm-8m-o-std",
+   "clicks": 2,
+   "imp": 9
+  },
+  {
+   "url": "/products/hik-ds-kis303-p",
+   "clicks": 2,
+   "imp": 9
+  },
+  {
+   "url": "/products/mkt-c52ig-5haxd2haxd-tc",
    "clicks": 2,
    "imp": 9
   },
@@ -898,24 +1438,24 @@
    "imp": 9
   },
   {
-   "url": "/products/pxt-ccr2004-16g-2s",
+   "url": "/uz/products/hik-ds-kv6114-e1",
    "clicks": 2,
    "imp": 9
   },
   {
-   "url": "/products/zkt-zkteco-turniket-steklyannyi-seredina-saturn-s1200",
+   "url": "/products/h3c-msr2600-6-x1",
    "clicks": 2,
    "imp": 8
   },
   {
-   "url": "/uz/products/hik-ds-kv6114-e1",
+   "url": "/products/hik-ds-kis312-p",
    "clicks": 2,
    "imp": 8
   },
   {
-   "url": "/en/products/dahua-dhi-itc431-rw1f-irl8",
+   "url": "/products/hik-ds-ksd24-p650-2pcs-c",
    "clicks": 2,
-   "imp": 7
+   "imp": 8
   },
   {
    "url": "/en/products/zkt-zkteco-qr50bm-schityvatel-qr",
@@ -923,22 +1463,22 @@
    "imp": 7
   },
   {
-   "url": "/products/hik-ds-kis312-p",
-   "clicks": 2,
-   "imp": 7
-  },
-  {
-   "url": "/products/tpl-tp-link-eap235-wall",
-   "clicks": 2,
-   "imp": 7
-  },
-  {
    "url": "/products/mkt-wapr-2nd-ec200a-eu",
+   "clicks": 2,
+   "imp": 7
+  },
+  {
+   "url": "/products/hik-ds-2td6267-100c4l-wy",
    "clicks": 2,
    "imp": 6
   },
   {
-   "url": "/products/pro-hdmi-4k-10m",
+   "url": "/products/hik-ds-kab673-s1",
+   "clicks": 2,
+   "imp": 6
+  },
+  {
+   "url": "/products/pro-datchik-aktiv-150",
    "clicks": 2,
    "imp": 6
   },
@@ -953,17 +1493,12 @@
    "imp": 5
   },
   {
-   "url": "/en/products/hik-ds-7764ni-k4",
+   "url": "/products/mkt-css106-5g-1s",
    "clicks": 2,
    "imp": 5
   },
   {
-   "url": "/products/dahua-dhi-asr1200e",
-   "clicks": 2,
-   "imp": 5
-  },
-  {
-   "url": "/products/wtk-wi-tek-wk-ps206-poe-4-2-mb",
+   "url": "/products/wtk-wi-tek-wk-ps227gf-poe-24-2-1sfp",
    "clicks": 2,
    "imp": 5
   },
@@ -973,27 +1508,7 @@
    "imp": 4
   },
   {
-   "url": "/products/hik-ds-7732ni-k4-std",
-   "clicks": 2,
-   "imp": 4
-  },
-  {
-   "url": "/products/hik-ds-k4dc104",
-   "clicks": 2,
-   "imp": 4
-  },
-  {
-   "url": "/products/hik-ds-vp41d-c-hw5l",
-   "clicks": 2,
-   "imp": 4
-  },
-  {
-   "url": "/products/pro-datchik-aktiv-150",
-   "clicks": 2,
-   "imp": 4
-  },
-  {
-   "url": "/products/wtk-wi-tek-wk-ps227gf-poe-24-2-1sfp",
+   "url": "/products/tpl-tp-link-ne210-outdoor",
    "clicks": 2,
    "imp": 3
   },
@@ -1003,89 +1518,144 @@
    "imp": 2
   },
   {
-   "url": "/products/dahua-dhi-asi3213a-w",
+   "url": "/products/dahua-ipc-hfw1839tc-a-il",
    "clicks": 1,
-   "imp": 538
+   "imp": 396
   },
   {
    "url": "/products/dahua-dhi-nvr5464-ei",
    "clicks": 1,
-   "imp": 371
-  },
-  {
-   "url": "/products/dahua-ipc-hfw1839tc-a-il",
-   "clicks": 1,
-   "imp": 338
-  },
-  {
-   "url": "/products/hik-ds-2cd2346g2p-isu-sl-2-8mm-c",
-   "clicks": 1,
-   "imp": 184
+   "imp": 345
   },
   {
    "url": "/products/type/ip-videoregistratory-nvr",
    "clicks": 1,
-   "imp": 179
+   "imp": 238
+  },
+  {
+   "url": "/products/hik-ds-2cd2346g2p-isu-sl-2-8mm-c",
+   "clicks": 1,
+   "imp": 230
   },
   {
    "url": "/products/hik-ds-7632nxi-k2",
    "clicks": 1,
-   "imp": 134
+   "imp": 202
   },
   {
-   "url": "/products/pro-ulichnyi-schit",
+   "url": "/products/hik-ds-k1t671mf-o-std",
    "clicks": 1,
-   "imp": 129
+   "imp": 201
   },
   {
-   "url": "/products/dahua-dhi-nvr5464-ei2",
+   "url": "/products/hik-ds-7608nxi-k1",
    "clicks": 1,
-   "imp": 119
+   "imp": 185
+  },
+  {
+   "url": "/blog/dmss-smartpss-dahua",
+   "clicks": 1,
+   "imp": 166
   },
   {
    "url": "/uz/products/pro-lezhachii-policeiskii-standart-black-500-350-50",
    "clicks": 1,
-   "imp": 111
+   "imp": 163
   },
   {
-   "url": "/products/dahua-ipc-hdw1839t-a-il",
+   "url": "/products/hik-ds-k1t343mfwx",
    "clicks": 1,
-   "imp": 110
+   "imp": 152
+  },
+  {
+   "url": "/products/pro-ulichnyi-schit",
+   "clicks": 1,
+   "imp": 151
   },
   {
    "url": "/products/hik-ds-2cd1343g2-liu-2-8mm",
    "clicks": 1,
-   "imp": 103
+   "imp": 148
+  },
+  {
+   "url": "/products/hik-ds-7604nxi-k1",
+   "clicks": 1,
+   "imp": 129
+  },
+  {
+   "url": "/products/hik-ds-k1t344mx-e1",
+   "clicks": 1,
+   "imp": 112
+  },
+  {
+   "url": "/en/products/pro-patch-panel-6-kategoriya",
+   "clicks": 1,
+   "imp": 110
+  },
+  {
+   "url": "/blog/ip-domofon-hikvision-zvonok-na-telefon",
+   "clicks": 1,
+   "imp": 107
+  },
+  {
+   "url": "/products/hik-ds-k1t343mwx",
+   "clicks": 1,
+   "imp": 102
+  },
+  {
+   "url": "/products/hik-ds-2cd1047g3h-liu",
+   "clicks": 1,
+   "imp": 101
+  },
+  {
+   "url": "/products/bld-dip-34a-03-bolid",
+   "clicks": 1,
+   "imp": 100
   },
   {
    "url": "/products/type/proektnoe-oborudovanie",
    "clicks": 0,
-   "imp": 3616
+   "imp": 3687
   },
   {
    "url": "/products/type/ip-kamery",
    "clicks": 0,
-   "imp": 715
+   "imp": 779
   },
   {
    "url": "/products/hik-ds-96128ni-i16-std",
    "clicks": 0,
-   "imp": 536
+   "imp": 557
   },
   {
    "url": "/en/products/pro-poe-kommutator-6-2",
    "clicks": 0,
-   "imp": 250
+   "imp": 364
   },
   {
-   "url": "/products/pro-ognetushitel-op-5-rif-original-bolshoi",
+   "url": "/tr/products/pro-poe-kommutator-9-2",
    "clicks": 0,
-   "imp": 228
+   "imp": 274
   },
   {
-   "url": "/uz/products/tapo-tapo-dl105",
+   "url": "/products/type/videoregistratory-dvr",
    "clicks": 0,
-   "imp": 223
+   "imp": 271
+  },
+  {
+   "url": "/blog/gpon-uzbekistan",
+   "clicks": 0,
+   "imp": 262
+  },
+  {
+   "url": "/en/products/pxt-pi-154-1a",
+   "clicks": 0,
+   "imp": 231
+  },
+  {
+   "url": "/products/dahua-dhi-itc413-pw4d-iz1",
+   "clicks": 0,
+   "imp": 231
   },
   {
    "url": "/blog/chto-takoe-skud",
@@ -1093,59 +1663,79 @@
    "imp": 220
   },
   {
-   "url": "/en/products/pxt-pi-154-1a",
+   "url": "/uz/blog/davomat-tizimi",
    "clicks": 0,
-   "imp": 220
+   "imp": 196
   },
   {
-   "url": "/products/type/videoregistratory-dvr",
+   "url": "/en/products/pxt-opticheskii-svarochnyi-apparat-ai-9",
    "clicks": 0,
-   "imp": 217
+   "imp": 194
   },
   {
-   "url": "/products/dahua-dhi-itc413-pw4d-iz1",
+   "url": "/catalog/dahua/videoregistratory-dvr",
    "clicks": 0,
-   "imp": 208
+   "imp": 180
   },
   {
-   "url": "/calculator",
+   "url": "/products/bld-s2000-kdl",
    "clicks": 0,
-   "imp": 151
+   "imp": 152
   },
   {
-   "url": "/products/hik-ds-k1t671mf-o-std",
+   "url": "/products/new",
    "clicks": 0,
-   "imp": 142
-  },
-  {
-   "url": "/blog/gpon-uzbekistan",
-   "clicks": 0,
-   "imp": 138
+   "imp": 139
   },
   {
    "url": "/products/pxt-cp-7841-3pcc-k9",
    "clicks": 0,
-   "imp": 125
+   "imp": 132
+  },
+  {
+   "url": "/uz/blog/aqlli-uy-narxi",
+   "clicks": 0,
+   "imp": 128
+  },
+  {
+   "url": "/products/hik-ds-8632ni-i8",
+   "clicks": 0,
+   "imp": 127
   },
   {
    "url": "/categories",
    "clicks": 0,
-   "imp": 119
+   "imp": 126
   },
   {
    "url": "/uz/blog/kamera-dlya-doma",
    "clicks": 0,
-   "imp": 116
+   "imp": 124
   },
   {
-   "url": "/products/hik-ds-k1t343mfwx",
+   "url": "/products/type/telekommunikacionnye-shkafy",
    "clicks": 0,
-   "imp": 115
+   "imp": 120
   },
   {
    "url": "/blog/signalizatsiya-narxi",
    "clicks": 0,
-   "imp": 107
+   "imp": 119
+  },
+  {
+   "url": "/catalog/mikrotik/sfp-moduli-i-transivery",
+   "clicks": 0,
+   "imp": 119
+  },
+  {
+   "url": "/products/hik-ds-k1t341cm",
+   "clicks": 0,
+   "imp": 117
+  },
+  {
+   "url": "/en/products/pro-poe-kommutator-9-2",
+   "clicks": 0,
+   "imp": 100
   },
   {
    "url": "/",
@@ -1213,22 +1803,12 @@
    "imp": 0
   },
   {
-   "url": "/catalog/hilook",
-   "clicks": 0,
-   "imp": 0
-  },
-  {
    "url": "/catalog/huawei",
    "clicks": 0,
    "imp": 0
   },
   {
    "url": "/catalog/kanihad",
-   "clicks": 0,
-   "imp": 0
-  },
-  {
-   "url": "/catalog/mercusys",
    "clicks": 0,
    "imp": 0
   },
@@ -1273,17 +1853,7 @@
    "imp": 0
   },
   {
-   "url": "/catalog/tapo",
-   "clicks": 0,
-   "imp": 0
-  },
-  {
    "url": "/catalog/tplink",
-   "clicks": 0,
-   "imp": 0
-  },
-  {
-   "url": "/catalog/tuya",
    "clicks": 0,
    "imp": 0
   },
@@ -1429,6 +1999,11 @@
   },
   {
    "url": "/solutions/barrier",
+   "clicks": 0,
+   "imp": 0
+  },
+  {
+   "url": "/solutions/bodycam",
    "clicks": 0,
    "imp": 0
   },
