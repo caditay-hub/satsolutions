@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
+import { hiddenTypeTarget } from "@/lib/hiddenBrands";
 import { getTranslations } from "next-intl/server";
 import { getCategories, getProductFacets } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { typeSlug } from "@/lib/typeSlug";
 import { typeSeoFor, typeH1For, typeLandingFor, needsPrices, fillPrices, type PriceRange } from "@/lib/typeSeo";
 import { TYPE_REDIRECTS } from "@/lib/typeRedirects";
-import { GROUP_CANONICAL } from "@/lib/groupCanonical";
+import { GROUP_CANONICAL, typeHubHref } from "@/lib/groupCanonical";
 import { deadTypeTarget } from "@/lib/deadCategories";
 import { catalogRobots } from "@/lib/catalogRobots";
 import { routing } from "@/i18n/routing";
@@ -71,7 +72,8 @@ export default async function ProductTypePage({ params, searchParams }: { params
   const to = TYPE_REDIRECTS[slug];
   if (to) {
     const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
-    permanentRedirect(`${lp}/products/type/${to}`);
+    // сразу на конечный адрес: слитый в склеенный с группой тип (Видеодомофоны → Домофония) — на группу, без цепочки 308→308
+    permanentRedirect(`${lp}${typeHubHref(to)}`);
   }
   // Три слага заведены и как группа, и как тип, и обе страницы показывают один и тот
   // же набор товаров с одним и тем же лонгридом. Они конкурировали между собой в
@@ -88,6 +90,9 @@ export default async function ProductTypePage({ params, searchParams }: { params
     // Живого типа нет — но Google знает эти слаги по исчезнувшим разделам старой
     // таксономии (70 адресов в логах). Проверяем ПОСЛЕ резолва: так рабочий тип
     // не может случайно попасть под редирект.
+    // раздел опустел после временного снятия бренда (02.11.2026) — 307 на соседний, пока пуст
+    const hidden = hiddenTypeTarget(slug, locale);
+    if (hidden) redirect(hidden);
     const dead = deadTypeTarget(slug);
     if (dead) {
       const lp = locale !== routing.defaultLocale ? `/${locale}` : "";

@@ -203,13 +203,14 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "umnye-zamki": "/products/type/zamki-i-skud",
   "upravlenie-inzhenernym-oborudovaniem": "/catalog/rubezh",
   "verhniy-uroven": "/catalog/rubezh",
-  "videodomofonnye-aksessuary": "/products/type/domofoniya",
+  "videodomofonnye-aksessuary": "/products/group/domofoniya",
   "videoregistratory": "/products/type/ip-videoregistratory-nvr",
   "videosteny": "/products/type/displei-i-monitory",
   "vzryvozaschischennoe-oborudovanie": "/catalog/rubezh",
   "vzryvozaschischennye-kamery": "/products/type/ip-kamery",
   "zaryadnye-stancii-dlya-elektromobiley": "/categories",
   "zhestkie-diski-dlya-videonablyudeniya": "/products/type/zhestkie-diski",
+  "ptz-kameralar": "/products/type/ptz-kamery", // узбекский слаг из GSC (02.11.2026)
 };
 
 /** Куда увести /products/type/<slug>, если живого типа с таким слагом нет. */

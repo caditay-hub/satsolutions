@@ -25,21 +25,55 @@ const REMOVED_ITEM_TARGET: Record<string, string> = {
   "pro-pulsoksimetr": "/products",                                        // профильного раздела нет
 };
 
-// Карточка снятого товара → раздел того же назначения (по префиксу слага)
+// Снятые товары без бренда (pro-…) и Pixietech (pxt-…) с показами в Google: раздел по словам в слаге
+// (аудит 02.11.2026, ~300 адресов, ≈2 800 показов за 90 дней — Claude outputs/redirekty-audit-2026-11-02).
+// Порядок важен: первое совпадение побеждает.
+const ITEM_RULES: [RegExp, string][] = [
+  [/^pxt-rb\d/, "/products/type/marshrutizatory"],                         // MikroTik hEX под Pixietech
+  [/^pxt-odf/, "/products/type/optika-i-aksessuary"],                      // оптические кроссы
+  [/hdmi/, "/products/group/videonablyudenie"],                            // HDMI соединяет регистратор с монитором
+  [/tester|obzhim|nozh|otv[eo]rt|nasadk|ploskogub|kusachk|schipcy|zachistk|kleshch|instrument/, "/products/type/instrumenty"],
+  [/(^|-)foc(-|$)|optik|fiber|(^|-)(sc|lc)-(sc|lc)(-|$)|patchkord-dublex|pigt/, "/products/type/optika-i-aksessuary"],
+  [/ksv|utp|ftp|vitoi|rj-?45|rozetochn|patch-kabel|kolpoch|lan-adapter|skotch-lok/, "/products/type/sks-vitaya-para"],
+  [/kabelnaya-klipsa|homut|chupik|samorez|izolent|gofr|gibkii-perehod|germetichn|(^|-)boks-|korobk|kronsht|kreplen|zaschita-uglov/, "/products/type/kronshteyny-i-aksessuary"],
+  [/(^|-)kabel-|(^|-)ks-\d|pvs|pugnp|trp|kspv|p-274/, "/products/type/kabel"],
+  [/(^|-)ibp-|akkum|udlinitel|shteker|bns/, "/products/type/ibp-i-elektropitanie"],
+  [/organaizer/, "/products/type/telekommunikacionnye-shkafy"],
+  [/knopk|exit|karta|brelok/, "/products/type/zamki-i-skud"],
+  [/ipr|smk|datchik|izvesh|teplovoi|dymovoi|strob/, "/products/type/izveschateli"],
+  [/sprinkler/, "/products/type/pozharnaya-bezopasnost"],
+  [/dinamik/, "/products/type/opoveschenie"],
+  [/pult|shlagb|lezhach/, "/products/type/shlagbaumy"],
+  [/poe-splitter|swich|wifi/, "/products/group/setevoe-oborudovanie"],
+];
+
+// Карточка снятого товара → раздел того же назначения (по префиксу и словам слага)
 export function hiddenProductTarget(slug: string, locale: string): string | null {
   const s = slug.toLowerCase();
   let to: string | null = REMOVED_ITEM_TARGET[s] ?? null;
-  if (to) return `${lp(locale)}${to}`;
-  // HDMI-кабели и удлинители (42 шт. сняты целиком): HDMI соединяет регистратор с монитором
-  if (/^pro-hdmi-/.test(s)) to = "/products/group/videonablyudenie";
-  else if (s.startsWith("hil-") || s.startsWith("hilook-")) to = HIDDEN_BRAND_TARGET.hilook;
-  else if (s.startsWith("mcs-") || s.startsWith("mercusys-")) to = HIDDEN_BRAND_TARGET.mercusys;
-  else if (s.startsWith("tapo-")) {
-    if (/^tapo-tapo-c\d/.test(s)) to = "/products/group/videonablyudenie";   // камеры C…
-    else if (/^tapo-tapo-dl\d/.test(s)) to = "/products/type/zamki-i-skud";  // замки DL…
-    else if (/^tapo-tapo-d\d/.test(s)) to = "/products/group/domofoniya";    // видеозвонки D…
-    else to = "/solutions/smarthome";                                         // хаб, датчики, розетки
+  if (!to) {
+    if (/^(hil|hlk|hilook)-/.test(s)) to = HIDDEN_BRAND_TARGET.hilook;      // hlk- — старый префикс HiLook
+    else if (/^(mcs|mrc|mercusys)-/.test(s)) to = HIDDEN_BRAND_TARGET.mercusys; // mrc- — старый префикс Mercusys
+    else if (s.startsWith("tapo-")) {
+      if (/^tapo-tapo-c\d/.test(s)) to = "/products/group/videonablyudenie";   // камеры C…
+      else if (/^tapo-tapo-dl\d/.test(s)) to = "/products/type/zamki-i-skud";  // замки DL…
+      else if (/^tapo-tapo-d\d/.test(s)) to = "/products/group/domofoniya";    // видеозвонки D…
+      else to = "/solutions/smarthome";                                         // хаб, датчики, розетки
+    } else if (/^(pro|pxt)-/.test(s)) {
+      to = ITEM_RULES.find(([rx]) => rx.test(s))?.[1]
+        ?? (s.startsWith("pxt-") ? "/catalog/pixietech" : "/products");     // без профильного раздела — каталог
+    } else if (/transiver/.test(s)) to = "/products/type/sfp-moduli-i-transivery";
+    else if (s.startsWith("knd-")) to = "/catalog/kanihad";
   }
+  return to ? `${lp(locale)}${to}` : null;
+}
+
+// Тип (раздел), опустевший после снятия бренда: временно — на соседний раздел, пока пуст.
+export const HIDDEN_TYPE_TARGET: Record<string, string> = {
+  "usiliteli-signala": "/products/type/wi-fi-tochki-dostupa", // были только репитеры Mercusys
+};
+export function hiddenTypeTarget(slug: string, locale: string): string | null {
+  const to = HIDDEN_TYPE_TARGET[(slug || "").toLowerCase()];
   return to ? `${lp(locale)}${to}` : null;
 }
 
