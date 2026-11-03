@@ -501,10 +501,10 @@
     "zh": { "title": "Hikvision DS-2CD3641G2-IZS 4MP变焦 塔什干", "desc": "Hikvision 4MP 网络摄像机，2.7–13.5 毫米电动镜头，自动对焦：可远程调整视角。" }
   },
   "hik-ds-2cd6825g0-c-ivs-2mm-b": {
-    "uz": { "title": "Hikvision DS-2CD6825G0/C-IVS — 4MP odam sanash kamerasi, Toshkent", "desc": "Ikki obyektivli 4 MP tashrif buyuruvchilarni sanash kamerasi: kirish va chiqishni alohida sanash, boʻy filtri, PoE." },
-    "en": { "title": "Hikvision DS-2CD6825G0/C-IVS — 4MP People Counting Camera", "desc": "Dual-lens 4 MP people counting camera: separate entry and exit counts, height filter, PoE." },
-    "tr": { "title": "Hikvision DS-2CD6825G0/C-IVS — 4MP Kişi Sayma Kamerası, Taşkent", "desc": "Çift lensli 4 MP ziyaretçi sayma kamerası: giriş ve çıkışı ayrı sayar, boy filtresi, PoE." },
-    "zh": { "title": "Hikvision DS-2CD6825G0/C-IVS 客流统计", "desc": "Hikvision 双目 4MP 客流统计摄像机：进出分别计数，身高过滤，PoE。" }
+    "uz": { "title": "Hikvision DS-2CD6825G0/C-IVS — 2MP odam sanash kamerasi, Toshkent", "desc": "Ikki obyektivli 2 MP (1920×1080) tashrif buyuruvchilarni sanash kamerasi: kirish va chiqishni alohida sanash, boʻy filtri, PoE." },
+    "en": { "title": "Hikvision DS-2CD6825G0/C-IVS — 2MP People Counting Camera", "desc": "Dual-lens 2 MP (1920×1080) people counting camera: separate entry and exit counts, height filter, PoE." },
+    "tr": { "title": "Hikvision DS-2CD6825G0/C-IVS — 2MP Kişi Sayma Kamerası, Taşkent", "desc": "Çift lensli 2 MP (1920×1080) ziyaretçi sayma kamerası: giriş ve çıkışı ayrı sayar, boy filtresi, PoE." },
+    "zh": { "title": "Hikvision DS-2CD6825G0/C-IVS 客流统计", "desc": "Hikvision 双目 2MP（1920×1080） 客流统计摄像机：进出分别计数，身高过滤，PoE。" }
   },
   "hik-ds-2cfsp4-4g-2-8mm": {
     "uz": { "title": "Hikvision DS-2CFSP4/4G — quyosh panelli 4G kamera, Toshkent", "desc": "Avtonom 4 MP PTZ-kamera: 8 Vt quyosh paneli, 9000 mAh batareya, 4G LTE va Wi-Fi, IP66. Rozetkasiz ishlaydi." },
