@@ -77,6 +77,34 @@ export function hiddenTypeTarget(slug: string, locale: string): string | null {
   return to ? `${lp(locale)}${to}` : null;
 }
 
+// Старые адреса /categories/<slug> разделов снятых брендов. Категории без опубликованных товаров
+// API не отдаёт, поэтому /categories/[slug] их не находит и с 02.11.2026 отвечала 404 (GSC: 18 адресов,
+// Googlebot ходил на них по 2–11 раз за две недели; до снятия — 308 на тип категории). Ведём туда же,
+// куда ведут карточки и пары этих брендов: 307, пока бренд пуст. Цели — живые разделы с товарами
+// других брендов (проверено 03.11.2026), без цепочек через опустевшие типы.
+export const HIDDEN_CATEGORY_TARGET: Record<string, string> = {
+  "hilook-ip-cameras": "/products/type/ip-kamery",
+  "hilook-nvr": "/products/type/ip-videoregistratory-nvr",
+  "hilook-switches": "/products/type/kommutatory",
+  "mercusys-routers": "/products/type/marshrutizatory",
+  "mercusys-mesh": "/products/type/wi-fi-tochki-dostupa",
+  "mercusys-extenders": "/products/type/wi-fi-tochki-dostupa", // «Усилители сигнала» пусты (HIDDEN_TYPE_TARGET)
+  "mercusys-usb": "/products/type/wi-fi-tochki-dostupa",
+  "tapo-cameras": "/products/type/besprovodnye-kamery",
+  "tapo-doorbells": "/products/group/domofoniya",
+  "tapo-smart-home": "/solutions/smarthome", // в группе «Умный дом» после снятия осталось 3 товара
+};
+export function hiddenCategoryTarget(slug: string, locale: string): string | null {
+  const s = (slug || "").toLowerCase();
+  let to: string | null = HIDDEN_CATEGORY_TARGET[s] ?? null;
+  if (!to) {
+    // неизвестный раздел снятого бренда — на цель бренда
+    const brand = Object.keys(HIDDEN_BRAND_TARGET).find((b) => s.startsWith(`${b}-`));
+    if (brand) to = HIDDEN_BRAND_TARGET[brand];
+  }
+  return to ? `${lp(locale)}${to}` : null;
+}
+
 // Страница бренда / пары бренда: куда вести, если бренд пуст. typePath — раздел типа для пар
 // «бренд × тип» (typeHubHref: склеенные с группой типы — сразу на группу).
 export function hiddenBrandTarget(brand: string, locale: string, typePath?: string): string | null {

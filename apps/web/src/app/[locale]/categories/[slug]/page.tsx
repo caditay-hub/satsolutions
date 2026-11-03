@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { getCategories } from "@/lib/api";
 import { categoryTargetPath } from "@/lib/categoryTarget";
+import { hiddenCategoryTarget } from "@/lib/hiddenBrands";
 import { withOgUrl } from "@/lib/metadata";
 
 // Единый каталог: брендовые страницы категорий схлопнуты на страницу типа
@@ -28,6 +29,11 @@ export default async function CategoryRedirectPage({ params }: { params: Promise
   const { categories } = await getCategories();
   const target = categoryTargetPath(categories, slug);
   if (target) go(target);
+  // Разделы временно снятых брендов (Tapo/HiLook/Mercusys, 02.11.2026): категория без товаров из API
+  // не приходит, а адрес жив в Google — временный 307 на соседний раздел, как у карточек (lib/hiddenBrands.ts).
+  // Вернутся товары — категория снова найдётся выше, и до этой строки дело не дойдёт.
+  const hidden = hiddenCategoryTarget(slug, locale);
+  if (hidden) redirect(hidden);
   notFound();
 }
 
