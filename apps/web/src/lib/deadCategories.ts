@@ -137,7 +137,7 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "dss-express": "/catalog/dahua",
   "dss-pro": "/catalog/dahua",
   "dymoudalenie": "/catalog/rubezh",
-  "dymovye-izveschateli": "/catalog/bolid",
+  "dymovye-izveschateli": "/products/type/izveschateli", // 09.11.2026: был /catalog/bolid — живой тип «Извещатели» точнее
   "fisheye-kamery": "/products/type/ip-kamery",
   "hdcvi-aksessuary": "/products/type/kronshteyny-i-aksessuary",
   "intellektualnye-vychisleniya": "/categories",
@@ -145,7 +145,7 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "interaktivnye-doski": "/products/type/displei-i-monitory",
   "izolyatory-linii": "/catalog/bolid",
   "kamery": "/products/type/ip-kamery",
-  "karty-pamyati": "/catalog/hikvision",
+  "karty-pamyati": "/products/type/zhestkie-diski", // 09.11.2026: был /catalog/hikvision, как у sd-karty-…
   "klaviatury-upravleniya": "/products/type/pribory-i-moduli",
   "kommercheskie-zaryadnye-stancii": "/categories",
   "kontrol-dostupa": "/products/type/kontrollery-dostupa",
@@ -157,17 +157,17 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "mobilnye-dvr-nvr": "/products/type/videoregistratory-dvr",
   "mobilnye-stoyki": "/products/type/kronshteyny-i-aksessuary",
   "monitory-dlya-videonablyudeniya": "/products/type/displei-i-monitory",
-  "monitory-videonablyudeniya": "/catalog/hikvision",
+  "monitory-videonablyudeniya": "/products/type/displei-i-monitory", // 09.11.2026: как у monitory-dlya-videonablyudeniya
   "nakopiteli": "/products/type/zhestkie-diski",
   "oblachnye-servisy-dolynk": "/catalog/dahua",
   "oblako-dolynk": "/catalog/dahua",
   "obnaruzhenie-pozharov": "/products/type/pozharnaya-bezopasnost",
   "ohrannaya-signalizaciya": "/catalog/rubezh",
-  "opoveschateli": "/catalog/bolid",
+  "opoveschateli": "/products/type/opoveschenie", // 09.11.2026: был /catalog/bolid, как у sireny-i-opoveschateli
   "pitanie": "/catalog/rubezh",
   "pozharnaya-signalizaciya": "/products/type/pozharnaya-bezopasnost",
   "pozharotushenie": "/products/type/pozharnaya-bezopasnost",
-  "pozharotushenie-modulnoe": "/catalog/rubezh",
+  "pozharotushenie-modulnoe": "/products/type/pozharnaya-bezopasnost", // 09.11.2026: как у pozharotushenie
   "preobrazovateli-interfeysa": "/catalog/bolid",
   "priemno-kontrolnye-pribory": "/catalog/bolid",
   "prochee-oborudovanie": "/catalog/bolid",
@@ -177,8 +177,8 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "pt-kamery": "/products/type/ptz-kamery",
   "ptz-speed-dome": "/products/type/ptz-kamery",
   "pxt-switches": "/catalog/pixietech",
-  "ruchnye-pozharnye-izveschateli": "/catalog/bolid",
-  "ruchnye-teplovizory": "/categories",
+  "ruchnye-pozharnye-izveschateli": "/products/type/izveschateli", // 09.11.2026: был /catalog/bolid
+  "ruchnye-teplovizory": "/products/type/teplovizionnye-produkty", // 09.11.2026: был индекс /categories — живой тип тепловизоров
   "sd-karty-dlya-videonablyudeniya": "/products/type/zhestkie-diski",
   "setevye-ip-kamery": "/products/type/ip-kamery",
   "setevye-videodekodery": "/catalog/hikvision",
@@ -190,10 +190,10 @@ const DEAD_TYPE_SLUGS: Record<string, string> = {
   "soue-1-2-tip": "/catalog/rubezh",
   "soue-3-tip-na-nizkoomnyh-dinamikah": "/catalog/rubezh",
   "sredniy-uroven": "/catalog/rubezh",
-  "ssd-nakopiteli": "/catalog/hikvision",
-  "teplovizionnye-izmeritelnye": "/categories",
+  "ssd-nakopiteli": "/products/type/zhestkie-diski", // 09.11.2026: был /catalog/hikvision, как у nakopiteli
+  "teplovizionnye-izmeritelnye": "/products/type/teplovizionnye-produkty", // 09.11.2026: был /categories
   "teplovizionnye-kamery": "/products/type/ip-kamery",
-  "teplovizionnye-moduli-oem": "/categories",
+  "teplovizionnye-moduli-oem": "/products/type/teplovizionnye-produkty", // 09.11.2026: был /categories
   "teplovizionnye-produkty": "/categories",
   "terminaly-raspoznavaniya-lic": "/products/type/terminaly-i-schityvateli",
   "tochki-dostupa-wi-fi": "/products/type/wi-fi-tochki-dostupa",

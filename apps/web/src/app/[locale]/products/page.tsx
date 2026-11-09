@@ -42,7 +42,9 @@ async function generateMetadataBase({ params, searchParams }: { params: Promise<
   // Поэтому noindex+follow: Google перестаёт индексировать адреса-с-параметрами и ранжирует постоянные
   // страницы товаров (/products/<slug>) и /categories/[slug]. См. canonical выше.
   const isBarePage1 = !sp.page || sp.page === "1";
-  const hasOtherFilters = !!(sp.brand || sp.q || sp.perPage || sp.sort || sp.chars || sp.priceMin || sp.priceMax || sp.technology || sp.installationType || sp.mp || sp.view);
+  // 09.11.2026: + search — /products?search=… отдавал index,follow с hreflang (canonical /products):
+  // строка поиска из шапки сайта; в catalogRobots.ts search уже считается фильтром, здесь его не было.
+  const hasOtherFilters = !!(sp.brand || sp.q || sp.search || sp.perPage || sp.sort || sp.chars || sp.priceMin || sp.priceMax || sp.technology || sp.installationType || sp.mp || sp.view);
   const isBare = !category && !type && isBarePage1 && !hasOtherFilters;
   // 05.10.2026: /products?type=X тоже noindex (canonical на /products/type/X остаётся) —
   // индексируется сама страница типа, а не её дубль с параметром (и ?type= закрыт в robots.txt)

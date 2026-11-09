@@ -381,7 +381,10 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
       {/* SEO-перелинковка бренд↔категория: чипы на страницы /catalog/[brand]/[type] (связки ≥3 товаров) */}
       {onlyBrand && brand && typeFacets && (typeFacets.types?.filter((t) => t.count >= 3 && pairExists(brand, t.name)).length ?? 0) > 0 ? (
         <div className="mb-4 flex flex-wrap gap-1.5 max-lg:-mx-4 max-lg:flex-nowrap max-lg:overflow-x-auto max-lg:px-4 max-lg:pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {typeFacets.types.filter((t) => t.count >= 3 && pairExists(brand, t.name)).slice(0, 14).map((t) => (
+          {/* 09.11.2026: без .slice(0, 14) — у Dahua 20 связок, у Hikvision 19 (все в sitemap), хвост из 5–6 страниц
+              не получал ни одной ссылки с бренда: в URL Inspection «URL is unknown to Google» / referringUrls = 0
+              (/catalog/dahua/besprovodnye-mosty, /catalog/hikvision/shlagbaumy). На телефоне строка листается. */}
+          {typeFacets.types.filter((t) => t.count >= 3 && pairExists(brand, t.name)).map((t) => (
             <Link key={t.name} href={`/catalog/${brand}/${typeSlug(t.name)}`}
               className="shrink-0 whitespace-nowrap rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-[12px] font-semibold text-slate-600 hover:border-brand-300 hover:text-brand-700 transition-colors max-lg:py-2">
               {localizeCatName(t.name, locale)} {brandLanding!.name} <span className="text-slate-500">({t.count})</span>
