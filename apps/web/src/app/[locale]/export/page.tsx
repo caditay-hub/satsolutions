@@ -22,7 +22,7 @@ type Dict = {
 const D: Record<string, Dict> = {
   ru: {
     metaTitle: "Экспорт систем безопасности из Узбекистана | SAT Solutions",
-    metaDesc: "Поставки оборудования безопасности из Ташкента в страны Центральной Азии: Таджикистан и Туркменистан. Видеонаблюдение, СКУД, пожарная сигнализация, сети — 3000+ позиций со склада, экспортный контракт и документы.",
+    metaDesc: "Поставки оборудования безопасности из Ташкента в страны Центральной Азии: Таджикистан и Туркменистан. Видеонаблюдение, СКУД, пожарная сигнализация, сети — более 2 500 позиций в каталоге, экспортный контракт и документы.",
     h1: "Экспорт оборудования безопасности из Узбекистана",
     intro: "SAT Solutions отгружает системы безопасности и сетевое оборудование подрядчикам и компаниям соседних стран со своего склада в Ташкенте. Более 3000 позиций Hikvision, Dahua, ZKTeco, MikroTik, TP-Link и H3C в наличии — без многонедельного ожидания поставки из Китая. Работаем по экспортному контракту с полным пакетом документов.",
     countriesTitle: "Куда поставляем",
@@ -45,9 +45,9 @@ const D: Record<string, Dict> = {
   },
   uz: {
     metaTitle: "Oʻzbekistondan xavfsizlik tizimlari eksporti | SAT Solutions",
-    metaDesc: "Toshkentdan Markaziy Osiyo davlatlariga xavfsizlik uskunalari yetkazib berish: Tojikiston va Turkmaniston. Videokuzatuv, SKUD, yongʻin signalizatsiyasi, tarmoqlar — omborda 3000+ pozitsiya, eksport shartnomasi va hujjatlar.",
+    metaDesc: "Toshkentdan Markaziy Osiyo davlatlariga xavfsizlik uskunalari yetkazib berish: Tojikiston va Turkmaniston. Videokuzatuv, SKUD, yongʻin signalizatsiyasi, tarmoqlar — katalogda 2 500 dan ortiq pozitsiya, eksport shartnomasi va hujjatlar.",
     h1: "Oʻzbekistondan xavfsizlik uskunalari eksporti",
-    intro: "SAT Solutions qoʻshni davlatlarning pudratchi va kompaniyalariga xavfsizlik tizimlari hamda tarmoq uskunalarini Toshkentdagi oʻz omboridan joʻnatadi. Hikvision, Dahua, ZKTeco, MikroTik, TP-Link va H3C boʻyicha 3000 dan ortiq pozitsiya mavjud — Xitoydan haftalab kutish shart emas. Ish eksport shartnomasi va toʻliq hujjatlar paketi asosida olib boriladi.",
+    intro: "SAT Solutions qoʻshni davlatlarning pudratchi va kompaniyalariga xavfsizlik tizimlari hamda tarmoq uskunalarini Toshkentdagi oʻz omboridan joʻnatadi. Hikvision, Dahua, ZKTeco, MikroTik, TP-Link va H3C boʻyicha katalogda 2 500 dan ortiq pozitsiya bor — Xitoydan haftalab kutish shart emas. Ish eksport shartnomasi va toʻliq hujjatlar paketi asosida olib boriladi.",
     countriesTitle: "Qayerga yetkazamiz",
     countries: [
       { slug: "tajikistan", name: "Tojikiston", cities: "Dushanbe, Xoʻjand, Boxtar", delivery: "Toshkentdagi ombordan avtoyetkazish: Xoʻjandgacha 1–2 kun, Dushanbegacha 2–3 kun." },
@@ -68,7 +68,7 @@ const D: Record<string, Dict> = {
   },
   en: {
     metaTitle: "Security Equipment Export from Uzbekistan | SAT Solutions",
-    metaDesc: "Security equipment supply from Tashkent to Central Asia: Tajikistan and Turkmenistan. CCTV, access control, fire alarm and networking — 3000+ items in stock, export contract and full document package.",
+    metaDesc: "Security equipment supply from Tashkent to Central Asia: Tajikistan and Turkmenistan. CCTV, access control, fire alarm and networking — 2,500+ items in the catalogue, export contract and full document package.",
     h1: "Security equipment export from Uzbekistan",
     intro: "SAT Solutions ships security systems and networking equipment to contractors and companies in neighbouring countries from its own warehouse in Tashkent. Over 3000 items from Hikvision, Dahua, ZKTeco, MikroTik, TP-Link and H3C are in stock — no multi-week wait for a shipment from China. We work under an export contract with a full set of documents.",
     countriesTitle: "Where we ship",
@@ -91,7 +91,7 @@ const D: Record<string, Dict> = {
   },
   tr: {
     metaTitle: "Özbekistan'dan Güvenlik Ekipmanı İhracatı | SAT Solutions",
-    metaDesc: "Taşkent'ten Orta Asya'ya güvenlik ekipmanı tedariki: Tacikistan ve Türkmenistan. Kamera sistemleri, geçiş kontrol, yangın alarmı ve ağ ürünleri — stokta 3000+ kalem, ihracat sözleşmesi ve tam evrak.",
+    metaDesc: "Taşkent'ten Orta Asya'ya güvenlik ekipmanı tedariki: Tacikistan ve Türkmenistan. Kamera sistemleri, geçiş kontrol, yangın alarmı ve ağ ürünleri — katalogda 2.500+ kalem, ihracat sözleşmesi ve tam evrak.",
     h1: "Özbekistan'dan güvenlik ekipmanı ihracatı",
     intro: "SAT Solutions, komşu ülkelerdeki müteahhit ve şirketlere güvenlik sistemleri ile ağ ekipmanını Taşkent'teki kendi deposundan sevk eder. Hikvision, Dahua, ZKTeco, MikroTik, TP-Link ve H3C'den 3000'den fazla kalem stokta — Çin'den haftalarca sevkiyat beklemeye gerek yok. Çalışma, tam evrak paketiyle ihracat sözleşmesi üzerinden yürür.",
     countriesTitle: "Nereye sevk ediyoruz",
@@ -114,7 +114,7 @@ const D: Record<string, Dict> = {
   },
   zh: {
     metaTitle: "从乌兹别克斯坦出口安防设备 | SAT Solutions",
-    metaDesc: "从塔什干向中亚国家供应安防设备：塔吉克斯坦和土库曼斯坦。视频监控、门禁、火灾报警与网络设备——现货3000多个型号，出口合同与全套单证。",
+    metaDesc: "从塔什干向中亚国家供应安防设备：塔吉克斯坦和土库曼斯坦。视频监控、门禁、火灾报警与网络设备——目录中2500多个型号，出口合同与全套单证。",
     h1: "从乌兹别克斯坦出口安防设备",
     intro: "SAT Solutions 从塔什干自有仓库向周边国家的承包商和公司发运安防系统与网络设备。海康威视、大华、ZKTeco、MikroTik、TP-Link 和 H3C 现货型号超过3000个——无需等待数周的中国发货。以出口合同方式合作，单证齐全。",
     countriesTitle: "供货国家",

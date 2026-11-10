@@ -137,8 +137,8 @@
         "Oʻzbekistonda Dahua Technology rasmiy strategik tizim integratori. Ishlab chiqaruvchidan toʻgʻridan-toʻgʻri yetkazib berish."
       ],
       "licensed": [
-        "Litsenziyalangan kompaniya",
-        "Milliy gvardiya (qoʻriqlash) va FVV (yongʻin xavfsizligi) litsenziyalari. Faoliyat qonun doirasida."
+        "Davlat ruxsatnomalari",
+        "Milliy gvardiya (qoʻriqlash) va FVV (yongʻin xavfsizligi) ruxsatnomalari. Faoliyat qonun doirasida."
       ],
       "fullcycle": [
         "Toʻliq ish sikli",
@@ -4265,7 +4265,7 @@
           }
         ],
         "brandsLabel": "Uskunalar",
-        "brandsTitle": "Toshkentdagi omborda uch ming pozitsiya",
+        "brandsTitle": "Katalogda 2 500 dan ortiq pozitsiya, keng talabdagilari Toshkent omborida",
         "brandsText": "Hikvision, Dahua, Bolid, Rubej, ZKTeco, MikroTik, TP-Link, H3C — kabel, shkaflar va uskunalar mavjud:"
       }
     },
@@ -4704,6 +4704,10 @@
     "message": "Xabar",
     "msgPlaceholder": "Savolingizni yozing...",
     "comment": "Izoh: miqdor, muddat va h.k.",
+    "companyOpt": "Kompaniya / STIR (ixtiyoriy)",
+    "specAttach": "📎 Spetsifikatsiya yoki texnik topshiriqni biriktiring (PDF, Excel, DWG — 20 MB gacha)",
+    "specTooBig": "Fayl 20 MB dan katta. Uni sales@satsolutions.uz manziliga yoki Telegramga yuboring.",
+    "specFailed": "Fayl yuklanmadi. Arizani faylsiz yuboring yoki faylni sales@satsolutions.uz manziliga joʻnating.",
     "needPlaceholder": "Ehtiyojingizni yozing...",
     "send": "Yuborish",
     "sendRequest": "Ariza yuborish",
@@ -4760,7 +4764,7 @@
   },
   "about": {
     "title": "Kompaniya haqida",
-    "licenses": "Litsenziyalar",
+    "licenses": "Ruxsatnomalar",
     "certificates": "Sertifikatlar va avtorizatsiyalar",
     "partners": "Hamkorlar",
     "allPartners": "Barcha hamkorlar →",
@@ -4775,13 +4779,13 @@
     "brandsNote": "Biz hamkorlik qiladigan rasmiy brendlar va hamkorlar",
     "lic": {
       "lic-security": {
-        "title": "Qoʻriqlash tizimlari litsenziyasi",
+        "title": "Qoʻriqlash tizimlari ruxsatnomasi",
         "subtitle": "Tasdiq №1554491 • Faol",
         "issuedBy": "Oʻzbekiston Respublikasi Milliy gvardiyasi",
         "description": "Qoʻriqlash texnik vositalari va tizimlarini montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish"
       },
       "lic-fire": {
-        "title": "Yongʻin tizimlari litsenziyasi",
+        "title": "Yongʻin tizimlari ruxsatnomasi",
         "subtitle": "Tasdiq №913518 • Faol",
         "issuedBy": "Oʻzbekiston Respublikasi Favqulodda vaziyatlar vazirligi",
         "description": "Avtomatik yongʻin oʻchirish va yongʻin signalizatsiyasi tizimlarini montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish"
@@ -5452,9 +5456,9 @@
     "quoteD": "Koʻrikdan soʻng smeta va tijorat taklifini bir ish kuni ichida tayyorlaymiz. Hisob-kitob hech qanday majburiyat yuklamaydi.",
     "docsT": "Shartnoma, QQS, hujjatlar",
     "docsD": "Yuridik shaxs bilan shartnoma, hisob-faktura, QQS bilan ishlash, dalolatnomalar va ijro hujjatlari. Jismoniy shaxslar bilan ham ishlaymiz.",
-    "licenseT": "Ishlarga litsenziyalar",
-    "licenseD": "Qoʻriqlash tizimlari montaji — Oʻzbekiston Respublikasi Milliy gvardiyasi litsenziyasi № 1554491. Yongʻin signalizatsiyasi va ogohlantirish — FVV litsenziyasi № 913518.",
-    "licenseLink": "Litsenziyalarni koʻrish"
+    "licenseT": "Ishlarga ruxsatnomalar",
+    "licenseD": "Qoʻriqlash tizimlari montaji — Oʻzbekiston Respublikasi Milliy gvardiyasi ruxsatnomasi № 1554491. Yongʻin signalizatsiyasi va ogohlantirish — FVV ruxsatnomasi № 913518.",
+    "licenseLink": "Ruxsatnomalarni koʻrish"
   },
   "installPrices": {
     "label": "Narxlar",

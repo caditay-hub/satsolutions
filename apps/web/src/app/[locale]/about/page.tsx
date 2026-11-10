@@ -39,7 +39,7 @@ const DOC_BASE = "https://api.satsolutions.uz/uploads/documents";
 const LICENSES = [
   {
     id: "lic-security",
-    title: "Лицензия на охранные системы",
+    title: "Разрешение на охранные системы",
     subtitle: "Подтверждение №1554491 • Активный",
     issuedBy: "Национальная гвардия Республики Узбекистан",
     description: "Монтаж, наладка, ремонт и техническое обслуживание технических средств и систем охраны",
@@ -54,7 +54,7 @@ const LICENSES = [
   },
   {
     id: "lic-fire",
-    title: "Лицензия на пожарные системы",
+    title: "Разрешение на пожарные системы",
     subtitle: "Подтверждение №913518 • Активный",
     issuedBy: "Министерство по чрезвычайным ситуациям РУз",
     description: "Монтаж, наладка, ремонт и ТО систем автоматического пожаротушения и пожарной сигнализации",
@@ -355,7 +355,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
         <div className="container-page space-y-12 !pt-10 !pb-12">
 
-          {/* ── Лицензии ── */}
+          {/* ── Разрешения ── */}
           <section>
             <Reveal>
               <SectionHeading
