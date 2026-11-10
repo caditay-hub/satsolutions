@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { installPrices, packageRange, fmtSum } from "@/lib/installPrices";
+import { installPrices, packageRange, turnkeyFrom, fmtSum } from "@/lib/installPrices";
 
 /**
  * «Сколько стоит установка … в Ташкенте» — раздел на страницах видеонаблюдения, домофонов,
@@ -14,6 +14,7 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
   const t = await getTranslations({ locale, namespace: "installPrices" });
   const title = t(`title.${k}`);
   const pkgs = data.pkgs.map((p) => ({ k: p.k, ...packageRange(p) }));
+  const turnkey = (data.turnkey ?? []).map((x) => ({ k: x.k, from: turnkeyFrom(x) }));
 
   return (
     <section className="mt-12" aria-labelledby={`install-prices-${k}`}>
@@ -70,6 +71,21 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
           ))}
         </div>
       </div>
+      {/* Под ключ: оборудование + монтаж (10.11.2026) */}
+      {turnkey.length ? (
+        <div className="mt-6 rounded-2xl border border-brand-200 bg-brand-50/60 p-5">
+          <div className="text-sm font-black text-slate-900">{t("turnkeyTitle")}</div>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            {turnkey.map((x) => (
+              <div key={x.k} className="rounded-xl border border-brand-200 bg-white p-4">
+                <div className="text-[13px] font-semibold leading-snug text-slate-600">{t(`turnkey.${x.k}`)}</div>
+                <div className="mt-2 text-lg font-black tabular-nums text-slate-900">{t("from") ? `${t("from")} ` : ""}{fmtSum(x.from, locale)}{t("fromSuffix")}</div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-xs leading-relaxed text-slate-500">{t("turnkeyNote")}</p>
+        </div>
+      ) : null}
       <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
         {t("note")}{" "}
         <Link href="/calculator" className="font-semibold text-brand-700 underline-offset-2 hover:underline">{t("calcLink")}</Link>

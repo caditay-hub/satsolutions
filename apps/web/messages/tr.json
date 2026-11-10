@@ -777,7 +777,7 @@
       "faq": [
         {
           "q": "Taşkent'te diafon montajı ne kadar tutar?",
-          "a": "Daire veya müstakil ev için fiyat setin (zil paneli ve monitör) bedeliyle başlar, üzerine montaj eklenir; toplam modele bağlıdır: analog set daha ucuz, kayıt ve telefondan kapı açma özellikli IP görüntülü diafon daha pahalıdır. Apartman için fiyat abone sayısına göre hesaplanır. Kısa bir görüşmenin ardından hesabı göndeririz — genellikle aynı gün."
+          "a": "Daire veya müstakil ev için fiyat setin (zil paneli ve monitör) bedeliyle başlar, üzerine montaj eklenir; toplam modele bağlıdır: analog set daha ucuz, kayıt ve telefondan kapı açma özellikli IP görüntülü diafon daha pahalıdır. Apartman için fiyat abone sayısına göre hesaplanır. Kısa bir görüşmenin ardından hesabı göndeririz — genellikle aynı gün. Daire veya ev için anahtar teslim tahmin: 1.425.900 UZS'den — katalogdan görüntülü diafon seti ve montaj."
         },
         {
           "q": "Daireye hangi diafon: analog mu, IP mi?",
@@ -794,6 +794,10 @@
         {
           "q": "Montajdan sonra diafona servis veriyor musunuz?",
           "a": "Evet: kendi kurduğumuz diafon sistemlerini sözleşmeyle yürütürüz — programlı kontroller, tedarik ettiğimiz ekipmana garanti, panel, monitör ve kilitlerin yedek havuzundan değişimi. Başka bir yüklenicinin kurduğu sistemi denetimden geçirerek işe alırız: şemayı çıkarır, eksik listesi hazırlar, ekipman değişimiyle modernizasyonu fiyatlandırırız — sonrasında tesis periyodik bakıma alınır. Çoğu zaman panel ve ahizeler mevcut tesisat korunarak değiştirilir."
+        },
+        {
+          "q": "Diafonu montajsız satın alabilir miyim?",
+          "a": "Evet. Görüntülü diafon setlerini, zil panellerini ve monitörleri montajsız da satıyor, Taşkent'e ve tüm Özbekistan'a teslim ediyoruz. Setin hemen çalışması için uyumlu panel ve monitör seçmenize yardımcı oluyoruz."
         }
       ],
       "details": {
@@ -861,7 +865,7 @@
         ],
         "brandsLabel": "Ekipman",
         "brandsTitle": "Diyafon ve kilitler — Taşkent’te stokta",
-        "brandsText": "Hikvision ve Tapo — işe ve bütçeye göre seçiyoruz, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
+        "brandsText": "Hikvision ve Dahua — işe ve bütçeye göre seçiyoruz, tüm ekipmanı garantiyle kendimiz tedarik ediyoruz:"
       }
     },
     "attendance": {
@@ -3275,7 +3279,7 @@
     "locks": {
       "title": "Elektronik ve Akıllı Kilitler",
       "desc": "Elektromanyetik, elektromekanik ve akıllı kilitler: kart, kod, parmak izi.",
-      "intro": "Elektronik kilit kuruyoruz: ofis ve girişler için elektromanyetik ve elektromekanik, kod, kart, parmak izi ve telefon kontrollü akıllı kilitler.",
+      "intro": "Daire ve ev giriş kapılarına akıllı kilit kuruyoruz — parmak izi, şifre, kart ve telefonla kontrol — ayrıca ofisler ve apartman girişleri için elektromanyetik ve elektromekanik kilitler.",
       "works": [
         "Kapıya ve çalışma düzenine göre kilit seçimi",
         "Montaj ve diafon veya geçiş kontrole bağlantı",
@@ -3302,7 +3306,11 @@
         },
         {
           "q": "Kurulumla kilit ne kadar tutar?",
-          "a": "Basit elektromanyetikten biyometrik akıllı kilide — bütçeler farklı. Kapıyı ve görevi söyleyin — fiyat verelim."
+          "a": "Montajlı akıllı giriş kapısı kilidi anahtar teslim 1.289.900 UZS'den başlar: katalogdan kilit 729.900 UZS'den ve işçilik 560.000 UZS'den (bir akıllı kilidin montajı 350.000 UZS, servis için en düşük sipariş 560.000 UZS). Çıkış butonu ve kapı kapatıcılı ofis manyetik kilidini yukarıdaki işçilik fiyatlarıyla hesaplıyoruz. Kesin fiyatı kapıyı gördükten sonra veriyoruz."
+        },
+        {
+          "q": "Kilidi montajsız satın alabilir miyim?",
+          "a": "Evet. Katalogdaki kilitleri montajsız da satıyor, Taşkent'e ve tüm Özbekistan'a teslim ediyoruz. Sonradan montaj gerekirse gelip takıyoruz."
         }
       ],
       "details": {
@@ -5508,7 +5516,8 @@
       "ppk": "Panel montajı ve programlama",
       "siren": "Siren montajı",
       "exitSign": "“Çıkış” tabelası montajı",
-      "pnrLoop": "Hat devreye alma"
+      "pnrLoop": "Hat devreye alma",
+      "smartLock": "Giriş kapısına akıllı kilit montajı"
     },
     "equip": {
       "ipCam": "IP kameralar",
@@ -5525,7 +5534,9 @@
       "smokeDet": "Duman dedektörleri",
       "manualDet": "Manuel ihbar butonları",
       "alert": "Sirenler ve flaşörler",
-      "device": "Paneller ve modüller"
+      "device": "Paneller ve modüller",
+      "videoKit": "Görüntülü interkom setleri (panel + monitör)",
+      "smartLock": "Giriş kapısı için akıllı kilitler"
     },
     "pkg": {
       "cctv4": "4 kamera — ev veya daire, 150 m²",
@@ -5540,9 +5551,16 @@
       "acs10bio": "Fabrika: on kapı, biyometri",
       "fire150": "Ofis 150 m²",
       "fire300": "Mağaza 300 m²",
-      "fire1000": "Depo 1.000 m²"
+      "fire1000": "Depo 1.000 m²",
+      "lockSmart1": "Daire: giriş kapısına akıllı kilit"
     },
-    "fromSuffix": "'den"
+    "fromSuffix": "'den",
+    "turnkeyTitle": "Anahtar teslim: ekipman ve montaj",
+    "turnkey": {
+      "tkIntr1": "Daire veya ev: montajlı görüntülü interkom seti",
+      "tkLock1": "Daire: giriş kapısına montajlı akıllı kilit"
+    },
+    "turnkeyNote": "10.11.2026 itibarıyla tahmin: katalogdaki en uygun ekipman ve en düşük işçilik bedeli. Kesin fiyatı kapıyı ve girişi gördükten sonra veriyoruz."
   },
   "clients": {
     "title": "Müşterilerimiz arasında",
@@ -5608,7 +5626,8 @@
     "opt": {
       "acs": {
         "card": "Kart",
-        "bio": "Biyometri"
+        "bio": "Biyometri",
+        "smart": "Akıllı kilit"
       },
       "intr": {
         "one": "Bireysel",
@@ -5683,7 +5702,8 @@
       "fenceCable": "Çite titreşim kablosu",
       "irBarrier": "Çevrede IR bariyer",
       "cableOpen": "Kablo çekimi",
-      "cableTray": "Güzergâha kablo çekimi"
+      "cableTray": "Güzergâha kablo çekimi",
+      "smartLock": "Akıllı kilit montajı"
     },
     "ctaTitle": "Kesin teklif alın",
     "ctaSub": "Parametrelerinizle teklifi göndeririz. Keşif ücretsizdir.",

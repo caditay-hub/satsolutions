@@ -14,7 +14,9 @@ import { PRICE, calc, initialState, applyDefaults, type CalcState, type ObjectKe
 export type WorkRow = { k: string; price: number; per: "pc" | "m" | "set" };
 export type EquipRow = { k: string; price: number; href: string };
 export type PkgSpec = { k: string; obj: ObjectKey; area: number; on: Partial<CalcState["on"]>; v: Partial<Record<keyof CalcState["v"], Record<string, number | string>>> };
-export type InstallPrices = { works: WorkRow[]; equip: EquipRow[]; pkgs: PkgSpec[] };
+/** Ориентир «под ключ»: минимальная цена оборудования из каталога + ориентир по работам (решение владельца 10.11.2026). */
+export type TurnkeySpec = { k: string; equipFrom: number; pkg: PkgSpec };
+export type InstallPrices = { works: WorkRow[]; equip: EquipRow[]; pkgs: PkgSpec[]; turnkey?: TurnkeySpec[] };
 
 const CATALOG = {
   ipCams: "/products/type/ip-kamery",
@@ -54,6 +56,8 @@ const ACS_PKGS: PkgSpec[] = [
   { k: "acs10bio", obj: "prod", area: 1500, on: { acs: true }, v: { acs: { doors: 10, kind: "bio" } } },
 ];
 
+const LOCK_SMART1: PkgSpec = { k: "lockSmart1", obj: "house", area: 100, on: { acs: true }, v: { acs: { doors: 1, kind: "smart" } } };
+
 const DATA: Record<string, InstallPrices> = {
   cctv: {
     works: [
@@ -86,6 +90,8 @@ const DATA: Record<string, InstallPrices> = {
       { k: "cableOpen", price: PRICE.cableOpen, per: "m" },
     ],
     equip: [
+      // комплект видеодомофона (панель + монитор): Hikvision DS-KIS202T, сверено по прод-БД 10.11.2026
+      { k: "videoKit", price: 865_900, href: CATALOG.intercom },
       { k: "videoIntercom", price: 370_900, href: CATALOG.intercom },
       { k: "ipIntercom", price: 407_900, href: CATALOG.intercom },
       { k: "panel", price: 661_900, href: CATALOG.panels },
@@ -96,8 +102,18 @@ const DATA: Record<string, InstallPrices> = {
       { k: "intr2", obj: "office", area: 300, on: { intr: true }, v: { intr: { kind: "one", mon: 2 } } },
       { k: "intr20", obj: "resid", area: 600, on: { intr: true }, v: { intr: { kind: "multi", mon: 20 } } },
     ],
+    turnkey: [
+      { k: "tkIntr1", equipFrom: 865_900, pkg: { k: "intr1", obj: "house", area: 100, on: { intr: true }, v: { intr: { kind: "one", mon: 1 } } } },
+    ],
   },
-  locks: { works: ACS_WORKS, equip: ACS_EQUIP, pkgs: ACS_PKGS },
+  // Замки: спрос — умный замок на входную дверь квартиры, поэтому он первым в работах, оборудовании и ориентирах (10.11.2026)
+  locks: {
+    works: [{ k: "smartLock", price: PRICE.smartLock, per: "pc" }, ...ACS_WORKS],
+    // умный замок KANIHAD TK-606A-TW — минимальная цена в каталоге, сверено по прод-БД 10.11.2026
+    equip: [{ k: "smartLock", price: 729_900, href: CATALOG.locks }, ...ACS_EQUIP],
+    pkgs: [LOCK_SMART1, ...ACS_PKGS.slice(0, 3)],
+    turnkey: [{ k: "tkLock1", equipFrom: 729_900, pkg: LOCK_SMART1 }],
+  },
   access: { works: ACS_WORKS, equip: ACS_EQUIP, pkgs: ACS_PKGS },
   fire: {
     works: [
@@ -138,6 +154,11 @@ export function packageRange(spec: PkgSpec): { low: number; high: number } {
   const r = calc(st);
   const round = (n: number) => Math.round(n / 10_000) * 10_000;
   return { low: round(r.low), high: round(r.high) };
+}
+
+/** «Под ключ, от»: оборудование из каталога + нижняя граница ориентира по работам. */
+export function turnkeyFrom(t: TurnkeySpec): number {
+  return t.equipFrom + packageRange(t.pkg).low;
 }
 
 /** Число в сумах в формате локали: 155 000 сум / 155,000 UZS / 155.000 UZS. */

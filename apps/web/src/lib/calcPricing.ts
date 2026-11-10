@@ -15,6 +15,7 @@ export const PRICE = {
   nvr: 280_000, nvrBig: 450_000, pnrCam: 43_000, remote: 170_000,
   reader: 85_000, bio: 170_000, ctrl: 215_000, lockMag: 110_000,
   exitBtn: 43_000, closer: 100_000, pnrDoor: 110_000,
+  smartLock: 350_000, // умный замок на входную дверь: врезка и настройка (решение владельца 10.11.2026)
   panelOne: 135_000, panelMulti: 280_000, monitor: 135_000, floorSw: 70_000,
   smoke: 65_000, ipr: 55_000, ppk: 360_000, siren: 70_000, exitSign: 55_000, pnrLoop: 145_000,
   outlet: 23_000, patchPort: 11_000, rack: 170_000, swUn: 70_000, swMan: 215_000, wifi: 110_000,
@@ -51,7 +52,7 @@ export const SYSTEMS: { id: SystemKey; fields: Field[] }[] = [
   ] },
   { id: "acs", fields: [
     { k: "doors", type: "num", def: (o) => o.doors, max: 60 },
-    { k: "kind",  type: "seg", opts: ["card", "bio"], def: () => "card" },
+    { k: "kind",  type: "seg", opts: ["card", "bio", "smart"], def: () => "card" },
   ] },
   { id: "intr", fields: [
     { k: "kind", type: "seg", opts: ["one", "multi"], def: () => "one" },
@@ -137,9 +138,15 @@ export function calc(st: CalcState): CalcResult {
   if (st.on.acs) {
     const d = n(v.acs.doors);
     if (d) {
-      const rd = v.acs.kind === "bio" ? PRICE.bio : PRICE.reader;
-      const s = d * (rd + PRICE.lockMag + PRICE.exitBtn + PRICE.closer + PRICE.pnrDoor) + Math.ceil(d / 4) * PRICE.ctrl;
-      lines.push({ key: "acs", sum: s, qty: d }); sum += s; cableM += d * runLen * 0.8; points += d;
+      // умный замок автономный: без считывателя, контроллера и кабеля — только врезка и настройка
+      if (v.acs.kind === "smart") {
+        const s = d * PRICE.smartLock;
+        lines.push({ key: "acs", sum: s, qty: d }); sum += s; points += d;
+      } else {
+        const rd = v.acs.kind === "bio" ? PRICE.bio : PRICE.reader;
+        const s = d * (rd + PRICE.lockMag + PRICE.exitBtn + PRICE.closer + PRICE.pnrDoor) + Math.ceil(d / 4) * PRICE.ctrl;
+        lines.push({ key: "acs", sum: s, qty: d }); sum += s; cableM += d * runLen * 0.8; points += d;
+      }
     }
   }
   if (st.on.intr) {
@@ -200,7 +207,9 @@ export function unitRates(st: CalcState, r: CalcResult): { key: string; price: n
   if (st.on.acs && n(st.v.acs.doors))
     out.push(st.v.acs.kind === "bio"
       ? { key: "bio", price: PRICE.bio, unit: "pc" }
-      : { key: "reader", price: PRICE.reader, unit: "pc" });
+      : st.v.acs.kind === "smart"
+        ? { key: "smartLock", price: PRICE.smartLock, unit: "pc" }
+        : { key: "reader", price: PRICE.reader, unit: "pc" });
   if (st.on.intr && n(st.v.intr.mon)) out.push({ key: "monitor", price: PRICE.monitor, unit: "pc" });
   if (st.on.fire) out.push({ key: "smoke", price: PRICE.smoke, unit: "pc" });
   if (st.on.lan && n(st.v.lan.ports)) out.push({ key: "outlet", price: PRICE.outlet + PRICE.patchPort, unit: "pc" });

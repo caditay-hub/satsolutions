@@ -258,6 +258,11 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     parking: PARKING,
     "intellektualnoe-upravlenie-parkingom": PARKING,
     gates: ["zkt-zkteco-avtomatika-dlya-vorot-zk-sw400dc"],
+    // Домофоны: ищут «домофон для дома / Hikvision / купить» — показываем готовые комплекты и вызывные
+    // панели, а не внутренние станции без экрана (разбор запросов и решение владельца 10.11.2026)
+    intercom: ["hik-ds-kis202t-o-std", "hik-ds-kis212", "hik-ds-kis302-p", "hik-ds-kis303-p", "hik-ds-kis603-p-b-o-std", "dahua-dhi-kth01", "hik-ds-kv6113-pe1-c-o-std", "dahua-dhi-vto2311r-wp"],
+    // Замки: спрос — умный замок на входную дверь квартиры; офисные магнитные замки и доводчики — в хвосте
+    locks: ["knd-tk-606a-tw", "knd-tk-605a", "knd-tk-n1-pro", "knd-tk-d1-pro", "zkt-zkteco-hbl400-elektronnyi-biometricheskii-zamok-s-raspoznavaniem-lic", "zkt-zkteco-zamok-gl300w", "zkt-zkteco-steklyannyi-zamok-gdl-f618", "knd-zamok-280kg-magnitnyi-ml-280as"],
   };
   let equipment: any[] = [];
   const cats = EQUIP_CATS[svc.key];

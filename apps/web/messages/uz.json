@@ -777,7 +777,7 @@
       "faq": [
         {
           "q": "Toshkentda domofon oʻrnatish qancha turadi?",
-          "a": "Kvartira yoki xususiy uy uchun narx toʻplam (chaqiruv paneli va monitor) qiymatidan boshlanadi, ustiga montaj qoʻshiladi; yakuniy summa modelga bogʻliq: analog toʻplam arzonroq, yozuv va smartfondan ochish imkoniyatli IP-videodomofon qimmatroq. Koʻp kvartirali uy uchun narx abonentlar soniga qarab hisoblanadi. Qisqa suhbatdan soʻng hisobni yuboramiz — odatda oʻsha kuni."
+          "a": "Kvartira yoki xususiy uy uchun narx toʻplam (chaqiruv paneli va monitor) qiymatidan boshlanadi, ustiga montaj qoʻshiladi; yakuniy summa modelga bogʻliq: analog toʻplam arzonroq, yozuv va smartfondan ochish imkoniyatli IP-videodomofon qimmatroq. Koʻp kvartirali uy uchun narx abonentlar soniga qarab hisoblanadi. Qisqa suhbatdan soʻng hisobni yuboramiz — odatda oʻsha kuni. Kvartira yoki uy uchun toʻliq yechim moʻljali — 1 425 900 soʻmdan: katalogdagi videodomofon toʻplami va montaj."
         },
         {
           "q": "Kvartiraga qaysi domofon: analogmi yoki IP?",
@@ -794,6 +794,10 @@
         {
           "q": "Oʻrnatgandan keyin domofonga xizmat koʻrsatasizmi?",
           "a": "Ha: oʻzimiz montaj qilgan domofoniyani shartnoma boʻyicha yuritamiz — reglament tekshiruvlar, yetkazib berilgan uskunaga kafolat, panel, monitor va qulflarni almashtirish fondidan almashtirish. Boshqa pudratchi yigʻgan tizimni audit orqali ishga olamiz: sxemani olamiz, nuqson vedomostini tuzamiz va uskuna almashtiriladigan modernizatsiyani hisoblaymiz — undan keyin obyekt reglamentga tushadi. Koʻpincha panel va trubkalar mavjud simlarni saqlagan holda almashtiriladi."
+        },
+        {
+          "q": "Domofonni oʻrnatishsiz sotib olsa boʻladimi?",
+          "a": "Ha. Videodomofon toʻplamlari, chaqiruv panellari va monitorlarni montajsiz ham sotamiz, Toshkent va butun Oʻzbekiston boʻylab yetkazib beramiz. Toʻplam darhol ishlashi uchun mos panel va monitorni tanlashga yordam beramiz."
         }
       ],
       "details": {
@@ -861,7 +865,7 @@
         ],
         "brandsLabel": "Uskunalar",
         "brandsTitle": "Domofon va qulflar — Toshkentdagi omborda",
-        "brandsText": "Hikvision va Tapo — vazifa va byudjetga qarab tanlaymiz, barcha uskunani oʻzimiz kafolat bilan yetkazamiz:"
+        "brandsText": "Hikvision va Dahua — vazifa va byudjetga qarab tanlaymiz, barcha uskunani oʻzimiz kafolat bilan yetkazamiz:"
       }
     },
     "attendance": {
@@ -3275,7 +3279,7 @@
     "locks": {
       "title": "Elektron va aqlli qulflar",
       "desc": "Elektromagnit, elektromexanik va smart-qulflar: karta, kod, barmoq izi.",
-      "intro": "Elektron qulflarni oʻrnatamiz: ofis va podyezdlar uchun elektromagnit va elektromexanik, kod, karta, barmoq izi va telefondan boshqariladigan aqlli qulflar.",
+      "intro": "Kvartira va uy kirish eshigiga aqlli qulflarni oʻrnatamiz — barmoq izi, kod, karta va telefondan boshqarish bilan, shuningdek ofis va podyezdlar uchun elektromagnit va elektromexanik qulflarni.",
       "works": [
         "Eshik va ish rejimiga mos qulf tanlash",
         "Oʻrnatish va domofon yoki SKUD-ga ulash",
@@ -3302,7 +3306,11 @@
         },
         {
           "q": "Qulf va oʻrnatish qancha turadi?",
-          "a": "Oddiy elektromagnitli qulfdan biometrik smart-qulfgacha — byujetlar turlicha. Qaysi eshik va vazifa ekanligini ayting — narxni aytamiz."
+          "a": "Kirish eshigiga aqlli qulf oʻrnatish bilan — toʻliq yechim 1 289 900 soʻmdan: katalogdagi qulf 729 900 soʻmdan va ishlar 560 000 soʻmdan (bitta aqlli qulfni oʻrnatish — 350 000 soʻm, chiqish uchun eng kam buyurtma — 560 000 soʻm). Chiqish tugmasi va yopgichli ofis elektromagnit qulfini yuqoridagi ishlar narxnomasi boʻyicha hisoblaymiz. Aniq narxni eshikni koʻrgandan keyin aytamiz."
+        },
+        {
+          "q": "Qulfni oʻrnatishsiz sotib olsa boʻladimi?",
+          "a": "Ha. Katalogdagi qulflarni montajsiz ham sotamiz, Toshkent va butun Oʻzbekiston boʻylab yetkazib beramiz. Keyinroq oʻrnatish kerak boʻlsa — kelib oʻrnatib beramiz."
         }
       ],
       "details": {
@@ -5508,7 +5516,8 @@
       "ppk": "Qurilmani oʻrnatish va dasturlash",
       "siren": "Ogohlantirgich montaji",
       "exitSign": "«Chiqish» tablosi montaji",
-      "pnrLoop": "Shleyfni ishga tushirish"
+      "pnrLoop": "Shleyfni ishga tushirish",
+      "smartLock": "Kirish eshigiga aqlli qulf oʻrnatish"
     },
     "equip": {
       "ipCam": "IP-kameralar",
@@ -5525,7 +5534,9 @@
       "smokeDet": "Tutun datchiklari",
       "manualDet": "Qoʻl datchiklari",
       "alert": "Ogohlantirgichlar",
-      "device": "Qurilmalar va modullar"
+      "device": "Qurilmalar va modullar",
+      "videoKit": "Videodomofon toʻplamlari (panel + monitor)",
+      "smartLock": "Kirish eshigi uchun aqlli qulflar"
     },
     "pkg": {
       "cctv4": "4 kamera — uy yoki kvartira, 150 m²",
@@ -5540,9 +5551,16 @@
       "acs10bio": "Ishlab chiqarish: oʻnta eshik, biometriya",
       "fire150": "Ofis 150 m²",
       "fire300": "Doʻkon 300 m²",
-      "fire1000": "Ombor 1 000 m²"
+      "fire1000": "Ombor 1 000 m²",
+      "lockSmart1": "Kvartira: kirish eshigiga aqlli qulf"
     },
-    "fromSuffix": "dan"
+    "fromSuffix": "dan",
+    "turnkeyTitle": "Toʻliq yechim: uskuna va montaj",
+    "turnkey": {
+      "tkIntr1": "Kvartira yoki uy: videodomofon toʻplami oʻrnatish bilan",
+      "tkLock1": "Kvartira: kirish eshigiga aqlli qulf oʻrnatish bilan"
+    },
+    "turnkeyNote": "10.11.2026 holatiga moʻljal: katalogdagi eng arzon uskuna va ishlarning eng kam narxi. Aniq narxni eshik va kirish joyini koʻrgandan keyin aytamiz."
   },
   "clients": {
     "title": "Bizning buyurtmachilarimiz",
@@ -5608,7 +5626,8 @@
     "opt": {
       "acs": {
         "card": "Karta",
-        "bio": "Biometriya"
+        "bio": "Biometriya",
+        "smart": "Aqlli qulf"
       },
       "intr": {
         "one": "Individual",
@@ -5683,7 +5702,8 @@
       "fenceCable": "Toʻsiqqa vibrokabel",
       "irBarrier": "Perimetrda IQ-toʻsiq",
       "cableOpen": "Kabel yotqizish",
-      "cableTray": "Trassaga kabel tortish"
+      "cableTray": "Trassaga kabel tortish",
+      "smartLock": "Aqlli qulf oʻrnatish"
     },
     "ctaTitle": "Aniq hisob-kitob olish",
     "ctaSub": "Sizning parametrlaringiz bilan smeta yuboramiz. Muhandis chiqishi — bepul.",
