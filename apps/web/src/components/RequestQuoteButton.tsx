@@ -191,7 +191,7 @@ export function RequestQuoteButton({
                     className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020] resize-none"
                   />
                   <label className="block cursor-pointer rounded-lg border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-600 hover:border-[#e02020]">
-                    <span className="block truncate">{file ? `📎 ${file.name}` : t("specAttach")}</span>
+                    <span className={file ? "block truncate" : "block"}>{file ? `📎 ${file.name}` : t("specAttach")}</span>
                     <input
                       type="file"
                       name="spec"
