@@ -49,7 +49,7 @@ type Dict = {
 const D: Record<string, Dict> = {
   ru: {
     metaTitle: (c) => `Поставки оборудования безопасности в ${c.ru.dat} | SAT Solutions`,
-    metaDesc: (c) => `Экспорт систем безопасности в ${c.ru.dat} из Узбекистана: видеонаблюдение Hikvision и Dahua, СКУД, пожарные системы, сети MikroTik — 3000+ позиций со склада в Ташкенте, экспортный контракт, инвойс, доставка. ${c.ru.cities}.`,
+    metaDesc: (c) => `Экспорт систем безопасности в ${c.ru.dat} из Узбекистана: видеонаблюдение Hikvision и Dahua, СКУД, пожарные системы, сети MikroTik — более 2 500 позиций в каталоге, ходовое — на складе в Ташкенте, экспортный контракт, инвойс, доставка. ${c.ru.cities}.`,
     h1: (c) => `Поставки оборудования безопасности в ${c.ru.dat}`,
     intro: (c) => `SAT Solutions поставляет системы безопасности и сетевое оборудование компаниям и подрядчикам из ${c.ru.gen}: видеонаблюдение, СКУД, пожарную сигнализацию, серверы и сети. Отгружаем со своего склада в Ташкенте — более 3000 позиций Hikvision, Dahua, ZKTeco, MikroTik, TP-Link, H3C в наличии, без ожидания поставки из Китая. Работаем по экспортному контракту с полным пакетом документов.`,
     whyTitle: "Почему закупаться у нас",
@@ -72,9 +72,9 @@ const D: Record<string, Dict> = {
   },
   uz: {
     metaTitle: (c) => `${c.uz.name}ga xavfsizlik uskunalari taʼminoti | SAT Solutions`,
-    metaDesc: (c) => `Oʻzbekistondan ${c.uz.name}ga xavfsizlik tizimlari eksporti: Hikvision va Dahua videokuzatuv, SKUD, yongʻin tizimlari, MikroTik tarmoqlari — Toshkent omboridan 3000+ pozitsiya, eksport kontrakti, invoys, yetkazib berish. ${c.uz.cities}.`,
+    metaDesc: (c) => `Oʻzbekistondan ${c.uz.name}ga xavfsizlik tizimlari eksporti: Hikvision va Dahua videokuzatuv, SKUD, yongʻin tizimlari, MikroTik tarmoqlari — katalogda 2 500 dan ortiq pozitsiya, keng talabdagilari Toshkent omborida, eksport kontrakti, invoys, yetkazib berish. ${c.uz.cities}.`,
     h1: (c) => `${c.uz.name}ga xavfsizlik uskunalari taʼminoti`,
-    intro: (c) => `SAT Solutions ${c.uz.name}dagi kompaniya va pudratchilarga xavfsizlik tizimlari va tarmoq uskunalarini yetkazadi: videokuzatuv, SKUD, yongʻin signalizatsiyasi, serverlar va tarmoqlar. Toshkentdagi omborimizdan joʻnatamiz — Hikvision, Dahua, ZKTeco, MikroTik, TP-Link, H3C dan 3000 dan ortiq pozitsiya mavjud. Eksport kontrakti va toʻliq hujjatlar paketi bilan ishlaymiz.`,
+    intro: (c) => `SAT Solutions ${c.uz.name}dagi kompaniya va pudratchilarga xavfsizlik tizimlari va tarmoq uskunalarini yetkazadi: videokuzatuv, SKUD, yongʻin signalizatsiyasi, serverlar va tarmoqlar. Toshkentdagi omborimizdan joʻnatamiz — Hikvision, Dahua, ZKTeco, MikroTik, TP-Link, H3C boʻyicha katalogda 2 500 dan ortiq pozitsiya bor. Eksport kontrakti va toʻliq hujjatlar paketi bilan ishlaymiz.`,
     whyTitle: "Nega bizdan xarid qilish kerak",
     why: (c) => [
       { t: "Ombor dengiz ortida emas, yonida", d: `${c.uz.delivery} Ombor pozitsiyalari toʻlov kunida joʻnatiladi — Xitoydan toʻgʻridan-toʻgʻri buyurtmadagi haftalab kutishga qarshi.` },
@@ -95,7 +95,7 @@ const D: Record<string, Dict> = {
   },
   en: {
     metaTitle: (c) => `Security equipment supply to ${c.en.name} | SAT Solutions`,
-    metaDesc: (c) => `Export of security systems to ${c.en.name} from Uzbekistan: Hikvision and Dahua CCTV, access control, fire systems, MikroTik networking — 3,000+ items from our Tashkent warehouse, export contract, invoice, delivery. ${c.en.cities}.`,
+    metaDesc: (c) => `Export of security systems to ${c.en.name} from Uzbekistan: Hikvision and Dahua CCTV, access control, fire systems, MikroTik networking — 2,500+ catalogue items, fast movers in our Tashkent warehouse, export contract, invoice, delivery. ${c.en.cities}.`,
     h1: (c) => `Security equipment supply to ${c.en.name}`,
     intro: (c) => `SAT Solutions supplies security systems and networking equipment to companies and contractors in ${c.en.name}: CCTV, access control, fire alarm, servers and networks. We ship from our own Tashkent warehouse — over 3,000 items by Hikvision, Dahua, ZKTeco, MikroTik, TP-Link and H3C in stock, with no waiting for shipments from China. We work under an export contract with a full document package.`,
     whyTitle: "Why buy from us",
@@ -118,7 +118,7 @@ const D: Record<string, Dict> = {
   },
   tr: {
     metaTitle: (c) => `${c.tr.name}'a güvenlik ekipmanı tedariki | SAT Solutions`,
-    metaDesc: (c) => `Özbekistan'dan ${c.tr.name}'a güvenlik sistemleri ihracatı: Hikvision ve Dahua kameralar, geçiş kontrolü, yangın sistemleri, MikroTik ağ — Taşkent depomuzdan 3.000+ kalem, ihracat sözleşmesi, fatura, teslimat. ${c.tr.cities}.`,
+    metaDesc: (c) => `Özbekistan'dan ${c.tr.name}'a güvenlik sistemleri ihracatı: Hikvision ve Dahua kameralar, geçiş kontrolü, yangın sistemleri, MikroTik ağ — katalogda 2.500+ kalem, hızlı dönenler Taşkent depomuzda, ihracat sözleşmesi, fatura, teslimat. ${c.tr.cities}.`,
     h1: (c) => `${c.tr.name}'a güvenlik ekipmanı tedariki`,
     intro: (c) => `SAT Solutions, ${c.tr.name}'daki şirket ve yüklenicilere güvenlik sistemleri ve ağ ekipmanı tedarik eder: kameralar, geçiş kontrolü, yangın alarmı, sunucular ve ağlar. Kendi Taşkent depomuzdan sevk ediyoruz — Hikvision, Dahua, ZKTeco, MikroTik, TP-Link ve H3C'den 3.000'i aşkın kalem stokta. İhracat sözleşmesi ve tam evrak paketiyle çalışıyoruz.`,
     whyTitle: "Neden bizden almalısınız",
@@ -141,9 +141,9 @@ const D: Record<string, Dict> = {
   },
   zh: {
     metaTitle: (c) => `向${c.zh.name}供应安防设备 | SAT Solutions`,
-    metaDesc: (c) => `从乌兹别克斯坦向${c.zh.name}出口安防系统：海康和大华监控、门禁、消防系统、MikroTik网络——塔什干仓库3000多种现货，出口合同、形式发票、运输。${c.zh.cities}。`,
+    metaDesc: (c) => `从乌兹别克斯坦向${c.zh.name}出口安防系统：海康和大华监控、门禁、消防系统、MikroTik网络——目录中2500多种产品，常用型号塔什干仓库现货，出口合同、形式发票、运输。${c.zh.cities}。`,
     h1: (c) => `向${c.zh.name}供应安防设备`,
-    intro: (c) => `SAT Solutions为${c.zh.name}的公司和承包商供应安防系统和网络设备：视频监控、门禁、火灾报警、服务器和网络。从塔什干自有仓库发货——海康、大华、中控、MikroTik、TP-Link、H3C共3000多种现货，无需等待中国发货。按出口合同操作，单据齐全。`,
+    intro: (c) => `SAT Solutions为${c.zh.name}的公司和承包商供应安防系统和网络设备：视频监控、门禁、火灾报警、服务器和网络。从塔什干自有仓库发货——海康、大华、中控、MikroTik、TP-Link、H3C目录共2500多种产品，常用型号现货，无需等待中国发货。按出口合同操作，单据齐全。`,
     whyTitle: "为什么选择我们",
     why: (c) => [
       { t: "仓库就在隔壁，不在海外", d: `${c.zh.delivery} 现货当天付款当天发——相比直接从中国订货的数周等待。` },

@@ -137,8 +137,8 @@
         "Özbekistan'da Dahua Technology resmi stratejik sistem entegratörü. Üreticiden doğrudan tedarik."
       ],
       "licensed": [
-        "Lisanslı şirket",
-        "Milli Muhafız (güvenlik) ve Acil Durumlar Bakanlığı (yangın) lisansları. Yasalara tam uyumlu."
+        "Milli Muhafız ve Acil Durumlar izinleri",
+        "Milli Muhafız (güvenlik) ve Acil Durumlar Bakanlığı (yangın) izin belgeleri. Yasalara tam uyumlu."
       ],
       "fullcycle": [
         "Tam iş döngüsü",
@@ -4265,7 +4265,7 @@
           }
         ],
         "brandsLabel": "Ekipman",
-        "brandsTitle": "Taşkent depomuzda üç bin kalem",
+        "brandsTitle": "Katalogda 2.500+ kalem, hızlı dönenler Taşkent depomuzda",
         "brandsText": "Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik, TP-Link, H3C — kablo, kabin ve ekipman stokta:"
       }
     },
@@ -4704,6 +4704,10 @@
     "message": "Mesaj",
     "msgPlaceholder": "Sorunuzu yazın...",
     "comment": "Yorum: miktar, süre vb.",
+    "companyOpt": "Şirket / Vergi no (isteğe bağlı)",
+    "specAttach": "📎 Şartname veya teknik şartname ekleyin (PDF, Excel, DWG — 20 MB'a kadar)",
+    "specTooBig": "Dosya 20 MB'tan büyük. Lütfen sales@satsolutions.uz adresine veya Telegram'dan gönderin.",
+    "specFailed": "Dosya yüklenemedi. Talebi dosyasız gönderin veya dosyayı sales@satsolutions.uz adresine iletin.",
     "needPlaceholder": "İhtiyacınızı açıklayın...",
     "send": "Gönder",
     "sendRequest": "Talep gönder",
@@ -4760,7 +4764,7 @@
   },
   "about": {
     "title": "Hakkımızda",
-    "licenses": "Lisanslar",
+    "licenses": "İzin belgeleri",
     "certificates": "Sertifikalar ve yetkilendirmeler",
     "partners": "Ortaklar",
     "allPartners": "Tüm ortaklar →",
@@ -4775,13 +4779,13 @@
     "brandsNote": "Birlikte çalıştığımız resmi markalar ve ortaklar",
     "lic": {
       "lic-security": {
-        "title": "Güvenlik sistemleri lisansı",
+        "title": "Güvenlik sistemleri izin belgesi",
         "subtitle": "Onay No. 1554491 • Aktif",
         "issuedBy": "Özbekistan Cumhuriyeti Milli Muhafızları",
         "description": "Güvenlik teknik araçları ve sistemlerinin montajı, devreye alınması, onarımı ve bakımı"
       },
       "lic-fire": {
-        "title": "Yangın sistemleri lisansı",
+        "title": "Yangın sistemleri izin belgesi",
         "subtitle": "Onay No. 913518 • Aktif",
         "issuedBy": "Özbekistan Acil Durumlar Bakanlığı",
         "description": "Otomatik yangın söndürme ve yangın alarm sistemlerinin montajı, devreye alınması, onarımı ve bakımı"
@@ -5452,9 +5456,9 @@
     "quoteD": "Keşiften sonra metraj ve ticari teklifi bir iş günü içinde hazırlıyoruz. Hesaplama hiçbir yükümlülük getirmez.",
     "docsT": "Sözleşme, KDV, evrak",
     "docsD": "Tüzel kişiyle sözleşme, fatura, KDV'li çalışma, tutanaklar ve as-built dokümantasyon. Bireysel müşterilerle de çalışıyoruz.",
-    "licenseT": "Lisanslı çalışma",
-    "licenseD": "Güvenlik sistemleri montajı — Özbekistan Ulusal Muhafızları lisansı No. 1554491. Yangın alarm ve tahliye sistemleri — Acil Durumlar Bakanlığı lisansı No. 913518.",
-    "licenseLink": "Lisansları görüntüle"
+    "licenseT": "İşler için izin belgeleri",
+    "licenseD": "Güvenlik sistemleri montajı — Özbekistan Ulusal Muhafızları izin belgesi No. 1554491. Yangın alarm ve tahliye sistemleri — Acil Durumlar Bakanlığı izin belgesi No. 913518.",
+    "licenseLink": "İzin belgelerini görüntüle"
   },
   "installPrices": {
     "label": "Fiyatlar",

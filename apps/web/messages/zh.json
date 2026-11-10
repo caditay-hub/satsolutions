@@ -137,8 +137,8 @@
         "乌兹别克斯坦Dahua官方战略系统集成商，厂家直供。"
       ],
       "licensed": [
-        "持牌公司",
-        "国民警卫队（安防）与紧急情况部（消防）许可，合规经营。"
+        "国民卫队与紧急情况部许可文件",
+        "国民警卫队（安防）与紧急情况部（消防）许可文件，合规经营。"
       ],
       "fullcycle": [
         "全流程服务",
@@ -4265,7 +4265,7 @@
           }
         ],
         "brandsLabel": "设备",
-        "brandsTitle": "塔什干仓库三千种现货",
+        "brandsTitle": "目录2500多种产品，常用型号塔什干现货",
         "brandsText": "海康、大华、Bolid、Rubezh、中控、MikroTik、TP-Link、H3C——线缆、机柜和设备现货："
       }
     },
@@ -4704,6 +4704,10 @@
     "message": "留言",
     "msgPlaceholder": "请输入您的问题…",
     "comment": "备注：数量、周期等",
+    "companyOpt": "公司 / 税号（选填）",
+    "specAttach": "📎 附上设备清单或技术要求（PDF、Excel、DWG，最大 20 MB）",
+    "specTooBig": "文件超过 20 MB，请发送至 sales@satsolutions.uz 或通过 Telegram 发送。",
+    "specFailed": "文件上传失败。可先提交不带文件的申请，或将文件发送至 sales@satsolutions.uz。",
     "needPlaceholder": "描述您的需求…",
     "send": "发送",
     "sendRequest": "提交申请",
@@ -4760,7 +4764,7 @@
   },
   "about": {
     "title": "关于我们",
-    "licenses": "许可证",
+    "licenses": "许可文件",
     "certificates": "证书与授权",
     "partners": "合作伙伴",
     "allPartners": "所有合作伙伴 →",
@@ -4775,13 +4779,13 @@
     "brandsNote": "我们合作的官方品牌与伙伴",
     "lic": {
       "lic-security": {
-        "title": "安防系统许可证",
+        "title": "安防系统许可文件",
         "subtitle": "确认 №1554491 • 有效",
         "issuedBy": "乌兹别克斯坦共和国国民警卫队",
         "description": "安防技术设备及系统的安装、调试、维修与维护"
       },
       "lic-fire": {
-        "title": "消防系统许可证",
+        "title": "消防系统许可文件",
         "subtitle": "确认 №913518 • 有效",
         "issuedBy": "乌兹别克斯坦紧急情况部",
         "description": "自动灭火与火灾报警系统的安装、调试、维修与维护"
@@ -5452,9 +5456,9 @@
     "quoteD": "勘查后一个工作日内出具预算和商务报价。报价不构成任何义务。",
     "docsT": "合同、增值税与文件",
     "docsD": "与法人签订合同，开具发票，含增值税结算，提供验收单和竣工文件。同时服务个人客户。",
-    "licenseT": "持证施工",
-    "licenseD": "安防系统安装——乌兹别克斯坦国民近卫军许可证 No. 1554491；火灾报警与疏散系统——紧急情况部许可证 No. 913518。",
-    "licenseLink": "查看许可证"
+    "licenseT": "施工许可文件",
+    "licenseD": "安防系统安装——乌兹别克斯坦国民近卫军许可文件 No. 1554491；火灾报警与疏散系统——紧急情况部许可文件 No. 913518。",
+    "licenseLink": "查看许可文件"
   },
   "installPrices": {
     "label": "价格",

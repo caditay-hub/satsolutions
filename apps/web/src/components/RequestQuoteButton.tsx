@@ -28,6 +28,9 @@ export function RequestQuoteButton({
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
+  const [company, setCompany] = useState("");
+  const [file, setFile] = useState<File | null>(null);
+  const [fileErr, setFileErr] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
   const titleId = useId();
   const closeModal = useCallback(() => setOpen(false), []);
@@ -38,7 +41,23 @@ export function RequestQuoteButton({
     e.preventDefault();
     setSending(true);
     setFailed(false);
+    setFileErr(null);
     try {
+      // Спецификация грузится тем же путём, что файлы в чате; в заявку уходит ссылка на файл
+      let specLine = "";
+      if (file) {
+        const fd = new FormData();
+        fd.append("kind", "file");
+        fd.append("file", file, file.name || "spec");
+        const u = await fetch("https://api.satsolutions.uz/chat/upload-file", { method: "POST", body: fd });
+        const j = await u.json().catch(() => null);
+        if (!u.ok || typeof j?.attachment?.url !== "string") {
+          setFileErr(u.status === 413 ? t("specTooBig") : t("specFailed"));
+          setSending(false);
+          return;
+        }
+        specLine = `\nСпецификация: ${j.attachment.url} (${file.name})`;
+      }
       const r = await fetch("https://api.satsolutions.uz/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -46,7 +65,7 @@ export function RequestQuoteButton({
           name: name || "Гость",
           phone,
           email: email || undefined,
-          message: `Запрос КП по товару: ${productName}\n${comment ? "\n" + comment : ""}`,
+          message: `Запрос КП по товару: ${productName}${company.trim() ? `\nКомпания / ИНН: ${company.trim()}` : ""}${specLine}\n${comment ? "\n" + comment : ""}`,
           gclid: getGclid() || undefined,
         }),
       });
@@ -153,6 +172,15 @@ export function RequestQuoteButton({
                     onChange={(e) => setEmail(e.target.value)}
                     className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020]"
                   />
+                  <input
+                    name="company"
+                    autoComplete="organization"
+                    aria-label={t("companyOpt")}
+                    placeholder={t("companyOpt")}
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020]"
+                  />
                   <textarea
                     name="comment"
                     aria-label={t("comment")}
@@ -162,6 +190,22 @@ export function RequestQuoteButton({
                     onChange={(e) => setComment(e.target.value)}
                     className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:border-[#e02020] resize-none"
                   />
+                  <label className="block cursor-pointer rounded-lg border border-dashed border-slate-300 px-3 py-2 text-sm text-slate-600 hover:border-[#e02020]">
+                    <span className={file ? "block truncate" : "block"}>{file ? `📎 ${file.name}` : t("specAttach")}</span>
+                    <input
+                      type="file"
+                      name="spec"
+                      accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.dwg,.dxf,.zip,.rar,.7z,.jpg,.jpeg,.png"
+                      className="sr-only"
+                      onChange={(e) => {
+                        const f = e.target.files?.[0] ?? null;
+                        setFileErr(null);
+                        if (f && f.size > 20 * 1024 * 1024) { setFile(null); setFileErr(t("specTooBig")); return; }
+                        setFile(f);
+                      }}
+                    />
+                  </label>
+                  {fileErr ? <div role="alert" className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800">{fileErr}</div> : null}
                   {failed ? <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">{t("errFallback")}</div> : null}
                   <button
                     type="submit"

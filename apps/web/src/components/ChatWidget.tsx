@@ -163,6 +163,8 @@ export function ChatWidget() {
   const rec = useVoiceRecorder(120);
   useEffect(() => { if (rec.denied) setError(tw("micDenied")); }, [rec.denied]); // eslint-disable-line react-hooks/exhaustive-deps
   const profileRef = useRef<Profile | null>(null);
+  // Телефон для конверсии «Онлайн-чат»: отправляем в Google только после chat:ready, то есть когда сервер принял диалог.
+  const pendingChatPhoneRef = useRef<string | null>(null);
   profileRef.current = profile;
 
   const listRef = useRef<HTMLDivElement | null>(null);
@@ -344,6 +346,10 @@ export function ChatWidget() {
 
         socket.on("chat:ready", (p: any) => {
           const cid = typeof p?.conversation?.id === "string" ? p.conversation.id : null;
+          if (cid && pendingChatPhoneRef.current) {
+            trackConversion("chat", { user: { phone: pendingChatPhoneRef.current } });
+            pendingChatPhoneRef.current = null;
+          }
           conversationIdRef.current = cid;
           setConversationId(cid);
           setConversationStatus(p?.conversation?.status === "CLOSED" ? "CLOSED" : "OPEN");
@@ -598,8 +604,9 @@ export function ChatWidget() {
     // Телефон необязателен — достаточно имени. Если телефон есть (9 цифр) — прикладываем к конверсии.
     if (name.length < 2) return;
     const p: Profile = { name, phone: phoneRest };
-    // Лид из онлайн-чата — конверсия в Google Ads (только при первом заполнении профиля).
-    if (!profileRef.current) trackConversion("chat", phoneRest.length >= 9 ? { user: { phone: `+998${phoneRest}` } } : undefined);
+    // Лид из онлайн-чата — конверсия в Google Ads только при первом заполнении профиля с телефоном (9 цифр);
+    // сама отправка — в обработчике chat:ready, после того как сервер принял диалог.
+    if (!profileRef.current && phoneRest.length >= 9) pendingChatPhoneRef.current = `+998${phoneRest}`;
     saveProfile(p);
     setProfile(p);
     // Re-announce profile so an existing conversation gets the name/phone attached.

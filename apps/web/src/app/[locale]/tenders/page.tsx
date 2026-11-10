@@ -1,5 +1,5 @@
 // «Поставки и тендеры» — посадочная для снабженцев и тендерных отделов: закупки
-// оборудования и работ у лицензированного поставщика. Контент 5 локалей инлайном
+// оборудования и работ у поставщика с разрешениями Нацгвардии и МЧС. Контент 5 локалей инлайном
 // (по образцу /international). SEO: FAQPage + Service LD. Ключи: «поставщик систем
 // безопасности», «тендер видеонаблюдение», «закупка оборудования безопасности».
 import type { Metadata } from "next";
@@ -20,15 +20,15 @@ type Dict = {
 const D: Record<string, Dict> = {
   ru: {
     metaTitle: "Поставки и тендеры — оборудование систем безопасности | SAT Solutions",
-    metaDesc: "Поставщик систем безопасности для тендеров и корпоративных закупок: 3000+ позиций со склада в Ташкенте, КП и спецификации под тендер за 24 часа, лицензии, счёт с НДС, договор поставки, доставка по Узбекистану.",
+    metaDesc: "Поставщик систем безопасности для тендеров и корпоративных закупок: более 2 500 позиций в каталоге, КП и спецификации под тендер за 24 часа, разрешения, счёт с НДС, договор поставки, доставка по Узбекистану.",
     h1: "Поставки оборудования и участие в тендерах",
-    intro: "SAT Solutions — поставщик и монтажный подрядчик для корпоративных закупок и тендеров: видеонаблюдение, пожарная сигнализация, СКУД, сети и серверы. Готовим коммерческие предложения и спецификации под требования закупки, поставляем со своего склада в Ташкенте и выполняем работы по лицензиям Национальной гвардии и МЧС РУз.",
+    intro: "SAT Solutions — поставщик и монтажный подрядчик для корпоративных закупок и тендеров: видеонаблюдение, пожарная сигнализация, СКУД, сети и серверы. Готовим коммерческие предложения и спецификации под требования закупки, поставляем со своего склада в Ташкенте и выполняем работы по разрешениям Национальной гвардии и МЧС РУз.",
     whyTitle: "Что получает тендерный отдел",
     why: [
       { t: "КП и спецификация за 24 часа", d: "Считаем по вашей спецификации, ТЗ или дефектной ведомости. Предложим аналоги при дефиците позиций — с обоснованием соответствия." },
-      { t: "3000+ позиций со склада", d: "Hikvision, Dahua, ZKTeco, Болид, Рубеж, TP-Link, MikroTik, H3C. Складские позиции отгружаем в день оплаты, остальное — короткими сроками поставки." },
+      { t: "Более 2 500 позиций в каталоге", d: "Hikvision, Dahua, ZKTeco, Болид, Рубеж, TP-Link, MikroTik, H3C. Складские позиции отгружаем в день оплаты, остальное — короткими сроками поставки." },
       { t: "Полный пакет документов", d: "Договор поставки или подряда, счёт с НДС, накладные и акты, сертификаты и паспорта на оборудование, гарантийные обязательства." },
-      { t: "Лицензии на работы", d: "Монтаж охранных систем — лицензия Национальной гвардии; пожарная сигнализация и оповещение — лицензия МЧС. Сдаём объекты надзорным органам." },
+      { t: "Разрешения на работы", d: "Монтаж охранных систем — разрешение Национальной гвардии; пожарная сигнализация и оповещение — разрешение МЧС. Сдаём объекты надзорным органам." },
     ],
     factsTitle: "Реквизиты для тендерной документации",
     facts: [
@@ -47,19 +47,19 @@ const D: Record<string, Dict> = {
     ctaTitle: "Пришлите спецификацию — вернём КП за 24 часа",
     ctaText: "sales@satsolutions.uz или форма на странице контактов. Приложите спецификацию, ТЗ или проект — предложение подготовит инженер, а не менеджер по прайсу.",
     ctaButton: "Отправить запрос",
-    docsLink: "Лицензии и сертификаты — на странице «О компании»",
+    docsLink: "Разрешения и сертификаты — на странице «О компании»",
   },
   uz: {
     metaTitle: "Taʼminot va tenderlar — xavfsizlik tizimlari uskunalari | SAT Solutions",
-    metaDesc: "Tender va korporativ xaridlar uchun xavfsizlik tizimlari yetkazib beruvchisi: Toshkentdagi ombordan 3000+ pozitsiya, 24 soatda tender uchun KP va spetsifikatsiya, litsenziyalar, QQS li hisob, yetkazib berish.",
+    metaDesc: "Tender va korporativ xaridlar uchun xavfsizlik tizimlari yetkazib beruvchisi: katalogda 2 500 dan ortiq pozitsiya, 24 soatda tender uchun KP va spetsifikatsiya, ruxsatnomalar, QQS li hisob, yetkazib berish.",
     h1: "Uskunalar taʼminoti va tenderlarda ishtirok",
-    intro: "SAT Solutions — korporativ xaridlar va tenderlar uchun yetkazib beruvchi va montaj pudratchisi: videokuzatuv, yongʻin signalizatsiyasi, SKUD, tarmoq va serverlar. Xarid talablariga mos tijorat takliflari va spetsifikatsiyalar tayyorlaymiz, Toshkentdagi omborimizdan yetkazamiz va Milliy gvardiya hamda FVV litsenziyalari boʻyicha ishlarni bajaramiz.",
+    intro: "SAT Solutions — korporativ xaridlar va tenderlar uchun yetkazib beruvchi va montaj pudratchisi: videokuzatuv, yongʻin signalizatsiyasi, SKUD, tarmoq va serverlar. Xarid talablariga mos tijorat takliflari va spetsifikatsiyalar tayyorlaymiz, Toshkentdagi omborimizdan yetkazamiz va Milliy gvardiya hamda FVV ruxsatnomalari boʻyicha ishlarni bajaramiz.",
     whyTitle: "Tender boʻlimi nima oladi",
     why: [
       { t: "24 soatda KP va spetsifikatsiya", d: "Sizning spetsifikatsiya, TV yoki nuqson vedomosti boʻyicha hisoblaymiz. Yetishmagan pozitsiyalarga asoslangan analoglar taklif qilamiz." },
-      { t: "Ombordan 3000+ pozitsiya", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, TP-Link, MikroTik, H3C. Ombor pozitsiyalari toʻlov kunida joʻnatiladi." },
+      { t: "Katalogda 2 500 dan ortiq pozitsiya", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, TP-Link, MikroTik, H3C. Ombor pozitsiyalari toʻlov kunida joʻnatiladi." },
       { t: "Toʻliq hujjatlar paketi", d: "Taʼminot yoki pudrat shartnomasi, QQS li hisob, nakladnoy va aktlar, uskunalarga sertifikat va pasportlar, kafolat majburiyatlari." },
-      { t: "Ishlarga litsenziyalar", d: "Qoʻriqlash tizimlari montaji — Milliy gvardiya litsenziyasi; yongʻin signalizatsiyasi — FVV litsenziyasi. Obyektlarni nazorat organlariga topshiramiz." },
+      { t: "Ishlarga ruxsatnomalar", d: "Qoʻriqlash tizimlari montaji — Milliy gvardiya ruxsatnomasi; yongʻin signalizatsiyasi — FVV ruxsatnomasi. Obyektlarni nazorat organlariga topshiramiz." },
     ],
     factsTitle: "Tender hujjatlari uchun rekvizitlar",
     facts: [
@@ -78,19 +78,19 @@ const D: Record<string, Dict> = {
     ctaTitle: "Spetsifikatsiyani yuboring — 24 soatda KP qaytaramiz",
     ctaText: "sales@satsolutions.uz yoki kontaktlar sahifasidagi forma. Spetsifikatsiya, TV yoki loyihani ilova qiling — taklifni prays menejeri emas, muhandis tayyorlaydi.",
     ctaButton: "Soʻrov yuborish",
-    docsLink: "Litsenziya va sertifikatlar — «Kompaniya haqida» sahifasida",
+    docsLink: "Ruxsatnoma va sertifikatlar — «Kompaniya haqida» sahifasida",
   },
   en: {
     metaTitle: "Procurement & Tenders — Security Equipment Supply | SAT Solutions",
-    metaDesc: "Security systems supplier for tenders and corporate procurement in Uzbekistan: 3,000+ items in Tashkent stock, quotations and BOQs within 24 hours, state licenses, VAT invoicing, delivery nationwide.",
+    metaDesc: "Security systems supplier for tenders and corporate procurement in Uzbekistan: 2,500+ catalogue items, quotations and BOQs within 24 hours, state permits, VAT invoicing, delivery nationwide.",
     h1: "Equipment supply and tender participation",
-    intro: "SAT Solutions is a supplier and installation contractor for corporate procurement and tenders: CCTV, fire alarm, access control, networks and servers. We prepare quotations and specifications to procurement requirements, ship from our own Tashkent warehouse and carry out works under National Guard and MES licenses.",
+    intro: "SAT Solutions is a supplier and installation contractor for corporate procurement and tenders: CCTV, fire alarm, access control, networks and servers. We prepare quotations and specifications to procurement requirements, ship from our own Tashkent warehouse and carry out works under National Guard and MES permits.",
     whyTitle: "What the procurement team gets",
     why: [
       { t: "Quotation and BOQ within 24 hours", d: "We price your specification, brief or defect list, and propose justified equivalents for unavailable items." },
-      { t: "3,000+ items in stock", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, TP-Link, MikroTik, H3C. Stock items ship on the day of payment." },
+      { t: "2,500+ catalogue items", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, TP-Link, MikroTik, H3C. Stock items ship on the day of payment." },
       { t: "Full document package", d: "Supply or works contract, VAT invoices, delivery notes and acts, equipment certificates and passports, warranty obligations." },
-      { t: "Licensed works", d: "Security systems — National Guard license; fire alarm and evacuation — MES license. We hand facilities over to the authorities." },
+      { t: "Installation permits", d: "Security systems — National Guard permit; fire alarm and evacuation — MES permit. We hand facilities over to the authorities." },
     ],
     factsTitle: "Details for tender documentation",
     facts: [
@@ -109,19 +109,19 @@ const D: Record<string, Dict> = {
     ctaTitle: "Send the specification — a quotation comes back within 24 hours",
     ctaText: "sales@satsolutions.uz or the contact form. Attach the specification, brief or design — an engineer prepares the offer, not a price-list manager.",
     ctaButton: "Send a request",
-    docsLink: "Licenses and certificates — on the About page",
+    docsLink: "Permits and certificates — on the About page",
   },
   tr: {
     metaTitle: "Tedarik ve İhaleler — Güvenlik Ekipmanı | SAT Solutions",
-    metaDesc: "Özbekistan'da ihale ve kurumsal satın almalar için güvenlik sistemleri tedarikçisi: Taşkent stoğunda 3.000+ kalem, 24 saatte teklif ve keşif, devlet lisansları, KDV faturası, ülke geneli teslimat.",
+    metaDesc: "Özbekistan'da ihale ve kurumsal satın almalar için güvenlik sistemleri tedarikçisi: katalogda 2.500+ kalem, 24 saatte teklif ve keşif, devlet izin belgeleri, KDV faturası, ülke geneli teslimat.",
     h1: "Ekipman tedariki ve ihale katılımı",
-    intro: "SAT Solutions, kurumsal satın almalar ve ihaleler için tedarikçi ve montaj yüklenicisidir: CCTV, yangın alarmı, geçiş kontrolü, ağlar ve sunucular. Satın alma şartlarına uygun teklif ve şartnameler hazırlar, Taşkent'teki kendi depomuzdan sevk eder, Ulusal Muhafız ve Acil Durumlar Bakanlığı lisanslarıyla işleri yürütürüz.",
+    intro: "SAT Solutions, kurumsal satın almalar ve ihaleler için tedarikçi ve montaj yüklenicisidir: CCTV, yangın alarmı, geçiş kontrolü, ağlar ve sunucular. Satın alma şartlarına uygun teklif ve şartnameler hazırlar, Taşkent'teki kendi depomuzdan sevk eder, Ulusal Muhafız ve Acil Durumlar Bakanlığı izin belgeleriyle işleri yürütürüz.",
     whyTitle: "Satın alma ekibi ne kazanır",
     why: [
       { t: "24 saatte teklif ve keşif", d: "Şartnamenize veya eksik listenize göre fiyatlandırırız; bulunmayan kalemlere gerekçeli muadiller öneririz." },
-      { t: "Stokta 3.000+ kalem", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, TP-Link, MikroTik, H3C. Stok kalemleri ödeme günü sevk edilir." },
+      { t: "Katalogda 2.500+ kalem", d: "Hikvision, Dahua, ZKTeco, Bolid, Rubezh, TP-Link, MikroTik, H3C. Stok kalemleri ödeme günü sevk edilir." },
       { t: "Tam evrak paketi", d: "Tedarik veya iş sözleşmesi, KDV faturaları, irsaliye ve tutanaklar, ekipman sertifikaları, garanti taahhütleri." },
-      { t: "Lisanslı işler", d: "Güvenlik sistemleri — Ulusal Muhafız lisansı; yangın alarmı — Acil Durumlar Bakanlığı lisansı. Tesisleri makamlara teslim ederiz." },
+      { t: "İşler için izin belgeleri", d: "Güvenlik sistemleri — Ulusal Muhafız izin belgesi; yangın alarmı — Acil Durumlar Bakanlığı izin belgesi. Tesisleri makamlara teslim ederiz." },
     ],
     factsTitle: "İhale dosyası için bilgiler",
     facts: [
@@ -140,19 +140,19 @@ const D: Record<string, Dict> = {
     ctaTitle: "Şartnameyi gönderin — teklif 24 saatte gelsin",
     ctaText: "sales@satsolutions.uz veya iletişim formu. Şartname veya projeyi ekleyin — teklifi fiyat listesi görevlisi değil mühendis hazırlar.",
     ctaButton: "Talep gönder",
-    docsLink: "Lisans ve sertifikalar — Hakkımızda sayfasında",
+    docsLink: "İzin belgeleri ve sertifikalar — Hakkımızda sayfasında",
   },
   zh: {
     metaTitle: "采购与投标——安防设备供应 | SAT Solutions",
-    metaDesc: "乌兹别克斯坦招投标与企业采购的安防系统供应商：塔什干现货 3000+ 种，24 小时内出报价与清单，持国家执照，开增值税发票，全国配送。",
+    metaDesc: "乌兹别克斯坦招投标与企业采购的安防系统供应商：目录中 2500 多种产品，24 小时内出报价与清单，持国家许可文件，开增值税发票，全国配送。",
     h1: "设备供应与投标参与",
-    intro: "SAT Solutions 是面向企业采购与招投标的供应商与安装承包商：视频监控、消防报警、门禁、网络与服务器。按采购要求编制报价与规格书，从塔什干自有仓库发货，并持国民卫队与紧急情况部执照施工。",
+    intro: "SAT Solutions 是面向企业采购与招投标的供应商与安装承包商：视频监控、消防报警、门禁、网络与服务器。按采购要求编制报价与规格书，从塔什干自有仓库发货，并持国民卫队与紧急情况部许可文件施工。",
     whyTitle: "采购部门得到什么",
     why: [
       { t: "24 小时出报价与清单", d: "按您的规格书、任务书或缺陷清单计价；缺货品目提供有依据的替代方案。" },
-      { t: "现货 3000+ 种", d: "海康威视、大华、中控智慧、Bolid、Rubezh、TP-Link、MikroTik、H3C。现货当天付款当天发货。" },
+      { t: "目录 2500 多种", d: "海康威视、大华、中控智慧、Bolid、Rubezh、TP-Link、MikroTik、H3C。现货当天付款当天发货。" },
       { t: "全套单据", d: "供货或施工合同、增值税发票、送货单与验收单、设备证书与说明书、保修承诺。" },
-      { t: "持照施工", d: "安防系统——国民卫队执照；消防报警与疏散——紧急情况部执照。协助向主管部门交付。" },
+      { t: "施工许可文件", d: "安防系统——国民卫队许可文件；消防报警与疏散——紧急情况部许可文件。协助向主管部门交付。" },
     ],
     factsTitle: "投标文件所需信息",
     facts: [
@@ -171,7 +171,7 @@ const D: Record<string, Dict> = {
     ctaTitle: "发来规格书——24 小时内回报价",
     ctaText: "sales@satsolutions.uz 或联系页表单。附上规格书、任务书或设计——由工程师而非报价员为您编制方案。",
     ctaButton: "发送询价",
-    docsLink: "执照与证书——见公司简介页",
+    docsLink: "许可文件与证书——见公司简介页",
   },
 };
 

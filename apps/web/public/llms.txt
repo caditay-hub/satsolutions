@@ -1,6 +1,6 @@
 # SAT Solutions
 
-> Системный интегратор в Ташкенте (Узбекистан): установка видеонаблюдения, СКУД, пожарной сигнализации, домофонов, корпоративных сетей и серверной инфраструктуры под ключ. Каталог 3000+ товаров (Hikvision, Dahua, ZKTeco, MikroTik, H3C, Ruijie и др.) с ценами. Лицензии Нацгвардии и МЧС РУз. Партнёр H3C (серверы, виртуализация H3C CAS). Сайт на 5 языках: русский (основной, без префикса), узбекский /uz, английский /en, турецкий /tr, китайский /zh.
+> Системный интегратор в Ташкенте (Узбекистан): установка видеонаблюдения, СКУД, пожарной сигнализации, домофонов, корпоративных сетей и серверной инфраструктуры под ключ. Каталог: более 2 500 товаров (Hikvision, Dahua, ZKTeco, MikroTik, H3C, Ruijie и др.) с ценами. Разрешения Нацгвардии и МЧС РУз. Партнёр H3C (серверы, виртуализация H3C CAS). Сайт на 5 языках: русский (основной, без префикса), узбекский /uz, английский /en, турецкий /tr, китайский /zh.
 
 Контакты: +998 97 862-66-99 · sales@satsolutions.uz · Ташкент, ул. Катта Дархон, 5 · Пн–Пт 9:00–18:00.
 
@@ -12,7 +12,7 @@
 - [Боди-камеры для сотрудников](https://satsolutions.uz/solutions/bodycam): нательные видеорегистраторы, док-станции, архив, внедрение; опыт 350 камер
 - [Контроль доступа (СКУД)](https://satsolutions.uz/solutions/access): турникеты, биометрия, карты
 - [Турникеты и проходные](https://satsolutions.uz/solutions/turnstile), [учёт рабочего времени](https://satsolutions.uz/solutions/attendance): биометрия, табель с выгрузкой в 1С
-- [Пожарная сигнализация](https://satsolutions.uz/solutions/fire): проект, монтаж, СОУЭ, гослицензии
+- [Пожарная сигнализация](https://satsolutions.uz/solutions/fire): проект, монтаж, СОУЭ, разрешение МЧС
 - [Охранная сигнализация для дома и бизнеса](https://satsolutions.uz/solutions/alarm), [периметр](https://satsolutions.uz/solutions/perimeter)
 - [Домофония](https://satsolutions.uz/solutions/intercom)
 - [Шлагбаумы и автоматика](https://satsolutions.uz/solutions/barrier), [умный паркинг](https://satsolutions.uz/solutions/intellektualnoe-upravlenie-parkingom): въезд по номерам, датчики мест, оплата
@@ -23,7 +23,7 @@
 
 ## Каталог
 
-- [Каталог товаров](https://satsolutions.uz/products): 3000+ позиций с ценами в сумах
+- [Каталог товаров](https://satsolutions.uz/products): более 2 500 позиций с ценами в сумах
 - [Бренды](https://satsolutions.uz/catalog): Hikvision, Dahua, ZKTeco, MikroTik, H3C и ещё 30+
 - [Категории](https://satsolutions.uz/categories): камеры, коммутаторы, СКУД, пожарная безопасность
 

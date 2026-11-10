@@ -137,8 +137,8 @@
         "Official strategic system integrator of Dahua Technology in Uzbekistan. Direct supply from manufacturers."
       ],
       "licensed": [
-        "Licensed company",
-        "National Guard (security) and Emergency Ministry (fire safety) licenses. Fully compliant operations."
+        "National Guard and Emergency Ministry permits",
+        "National Guard (security) and Emergency Ministry (fire safety) permits. Fully compliant operations."
       ],
       "fullcycle": [
         "Full work cycle",
@@ -4265,7 +4265,7 @@
           }
         ],
         "brandsLabel": "Equipment",
-        "brandsTitle": "Three thousand items in our Tashkent warehouse",
+        "brandsTitle": "2,500+ catalogue items, fast movers in our Tashkent warehouse",
         "brandsText": "Hikvision, Dahua, Bolid, Rubezh, ZKTeco, MikroTik, TP-Link, H3C — cable, cabinets and equipment in stock:"
       }
     },
@@ -4704,6 +4704,10 @@
     "message": "Message",
     "msgPlaceholder": "Write your question...",
     "comment": "Comment: quantity, timeline, etc.",
+    "companyOpt": "Company / Tax ID (optional)",
+    "specAttach": "📎 Attach a specification or brief (PDF, Excel, DWG — up to 20 MB)",
+    "specTooBig": "The file is larger than 20 MB. Please send it to sales@satsolutions.uz or via Telegram.",
+    "specFailed": "The file did not upload. Send the request without it or email it to sales@satsolutions.uz.",
     "needPlaceholder": "Describe your need...",
     "send": "Send",
     "sendRequest": "Send request",
@@ -4760,7 +4764,7 @@
   },
   "about": {
     "title": "About us",
-    "licenses": "Licenses",
+    "licenses": "Permits",
     "certificates": "Certificates and authorizations",
     "partners": "Partners",
     "allPartners": "All partners →",
@@ -4775,13 +4779,13 @@
     "brandsNote": "Official brands and partners we work with",
     "lic": {
       "lic-security": {
-        "title": "License for security systems",
+        "title": "Permit for security systems",
         "subtitle": "Confirmation No. 1554491 • Active",
         "issuedBy": "National Guard of the Republic of Uzbekistan",
         "description": "Installation, commissioning, repair and maintenance of security equipment and systems"
       },
       "lic-fire": {
-        "title": "License for fire safety systems",
+        "title": "Permit for fire safety systems",
         "subtitle": "Confirmation No. 913518 • Active",
         "issuedBy": "Ministry of Emergency Situations of Uzbekistan",
         "description": "Installation, commissioning, repair and maintenance of automatic fire-suppression and fire-alarm systems"
@@ -5452,9 +5456,9 @@
     "quoteD": "After the survey we prepare an estimate and a commercial proposal within one business day. No obligation.",
     "docsT": "Contract, VAT, paperwork",
     "docsD": "Contract with a legal entity, invoice, VAT-compliant billing, acceptance acts and as-built documentation. We also work with private clients.",
-    "licenseT": "Licensed work",
-    "licenseD": "Security systems installation — National Guard of Uzbekistan licence No. 1554491. Fire alarm and evacuation systems — Ministry of Emergency Situations licence No. 913518.",
-    "licenseLink": "View licences"
+    "licenseT": "Installation permits",
+    "licenseD": "Security systems installation — National Guard of Uzbekistan permit No. 1554491. Fire alarm and evacuation systems — Ministry of Emergency Situations permit No. 913518.",
+    "licenseLink": "View permits"
   },
   "installPrices": {
     "label": "Prices",

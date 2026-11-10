@@ -1,5 +1,5 @@
 // Общий FAQ компании — «вопросные» запросы (как заказать, оплата, гарантия,
-// доставка, лицензии) + хаб перелинковки на услуги/каталог/тендеры. Контент
+// доставка, разрешения) + хаб перелинковки на услуги/каталог/тендеры. Контент
 // 5 локалей инлайном (по образцу /tenders). SEO: FAQPage LD со всеми вопросами.
 // Сервисные FAQ живут на страницах услуг — здесь только общие вопросы, без дублей.
 import type { Metadata } from "next";
@@ -21,7 +21,7 @@ type Dict = {
 const D: Record<string, Dict> = {
   ru: {
     metaTitle: "Частые вопросы — заказ, оплата, гарантия, монтаж | SAT Solutions",
-    metaDesc: "Ответы на частые вопросы о работе SAT Solutions: как заказать монтаж и получить КП, способы оплаты и документы для юрлиц, лицензии, сроки монтажа, гарантия и обслуживание, доставка по Узбекистану.",
+    metaDesc: "Ответы на частые вопросы о работе SAT Solutions: как заказать монтаж и получить КП, способы оплаты и документы для юрлиц, разрешения, сроки монтажа, гарантия и обслуживание, доставка по Узбекистану.",
     h1: "Частые вопросы",
     intro: "Собрали ответы на вопросы, которые задают чаще всего — о заказе, оплате, сроках, гарантии и документах. Вопросы по конкретным системам (видеонаблюдение, СКУД, пожарная сигнализация) — на страницах услуг.",
     groups: [
@@ -34,7 +34,7 @@ const D: Record<string, Dict> = {
       { title: "Оплата и документы", items: [
         { q: "Какие способы оплаты вы принимаете?", a: "Юридические лица платят перечислением по счёту с НДС. Частные клиенты — наличными или картой. Для тендерных поставок следуем условиям закупочной документации." },
         { q: "Какие документы получает юридическое лицо?", a: "Договор поставки или подряда, счёт-фактуру с НДС, накладные и акты выполненных работ, паспорта и сертификаты на оборудование, гарантийные обязательства — полный пакет для бухгалтерии." },
-        { q: "У вас есть лицензии на работы?", a: "Да: монтаж охранных систем — лицензия Национальной гвардии РУз, пожарная сигнализация и оповещение — лицензия МЧС. Объекты сдаём надзорным органам с исполнительной документацией." },
+        { q: "У вас есть разрешения на работы?", a: "Да: монтаж охранных систем — разрешение Национальной гвардии РУз, пожарная сигнализация и оповещение — разрешение МЧС. Объекты сдаём надзорным органам с исполнительной документацией." },
       ]},
       { title: "Монтаж и сроки", items: [
         { q: "Сколько времени занимает монтаж?", a: "Квартира или небольшой дом — обычно один день. Офис или магазин — от одного до трёх дней. Крупные объекты — по графику проекта, который фиксируем в договоре." },
@@ -65,7 +65,7 @@ const D: Record<string, Dict> = {
   },
   uz: {
     metaTitle: "Tez-tez soʻraladigan savollar — buyurtma, toʻlov, kafolat | SAT Solutions",
-    metaDesc: "SAT Solutions ishi haqida savollarga javoblar: montajga buyurtma va KP olish, toʻlov usullari va yuridik shaxslar hujjatlari, litsenziyalar, montaj muddatlari, kafolat va xizmat, Oʻzbekiston boʻylab yetkazib berish.",
+    metaDesc: "SAT Solutions ishi haqida savollarga javoblar: montajga buyurtma va KP olish, toʻlov usullari va yuridik shaxslar hujjatlari, ruxsatnomalar, montaj muddatlari, kafolat va xizmat, Oʻzbekiston boʻylab yetkazib berish.",
     h1: "Tez-tez soʻraladigan savollar",
     intro: "Eng koʻp beriladigan savollarga javoblarni yigʻdik — buyurtma, toʻlov, muddatlar, kafolat va hujjatlar haqida. Muayyan tizimlar boʻyicha savollar (videokuzatuv, SKUD, yongʻin signalizatsiyasi) — xizmatlar sahifalarida.",
     groups: [
@@ -73,12 +73,12 @@ const D: Record<string, Dict> = {
         { q: "Montajga qanday buyurtma berish yoki KP olish mumkin?", a: "Saytda ariza qoldiring, Telegramga yozing yoki qoʻngʻiroq qiling. Muhandis obyektga keladi, smeta hisoblaydi va KP tayyorlaydi — odatda bir ish kuni ichida. Tipik vazifalarga obyekt tavsifi yoki telefon orqali plan yetarli." },
         { q: "Muhandis chiqishi va hisob-kitob qancha turadi?", a: "Toshkent boʻylab — bepul: obyektni koʻrish, oʻlchovlar, smeta va tijorat taklifi hech narsaga majbur qilmaydi. Viloyatlarga chiqishni alohida kelishamiz." },
         { q: "Jismoniy shaxslar bilan ishlaysizmi yoki faqat kompaniyalar bilanmi?", a: "Ikkalasi bilan ham. Xususiy mijozlarga — uy kameralari, domofonlar, aqlli qulflar va signalizatsiyalar; yuridik shaxslarga — toʻliq hujjat aylanmasi: shartnoma, QQS li hisob, aktlar." },
-        { q: "Uskunalar narxini qayerda koʻrish mumkin?", a: "Saytdagi katalogda — Toshkentdagi ombordan dolzarb narxlar bilan 3000 dan ortiq pozitsiya. Montaj narxi obyektga bogʻliq va koʻrikdan keyin yoki planingiz boʻyicha smeta bilan hisoblanadi." },
+        { q: "Uskunalar narxini qayerda koʻrish mumkin?", a: "Saytdagi katalogda — dolzarb narxlar bilan 2 500 dan ortiq pozitsiya, keng talabdagilari Toshkentdagi omborda. Montaj narxi obyektga bogʻliq va koʻrikdan keyin yoki planingiz boʻyicha smeta bilan hisoblanadi." },
       ]},
       { title: "Toʻlov va hujjatlar", items: [
         { q: "Qanday toʻlov usullarini qabul qilasiz?", a: "Yuridik shaxslar QQS li hisob boʻyicha oʻtkazma bilan toʻlaydi. Xususiy mijozlar — naqd yoki karta bilan. Tender taʼminotlarida xarid hujjatlari shartlariga amal qilamiz." },
         { q: "Yuridik shaxs qanday hujjatlar oladi?", a: "Taʼminot yoki pudrat shartnomasi, QQS li hisob-faktura, nakladnoy va bajarilgan ishlar aktlari, uskunalarga pasport va sertifikatlar, kafolat majburiyatlari — buxgalteriya uchun toʻliq paket." },
-        { q: "Ishlarga litsenziyalaringiz bormi?", a: "Ha: qoʻriqlash tizimlari montaji — OʻzR Milliy gvardiyasi litsenziyasi, yongʻin signalizatsiyasi va ogohlantirish — FVV litsenziyasi. Obyektlarni ijro hujjatlari bilan nazorat organlariga topshiramiz." },
+        { q: "Ishlarga ruxsatnomalaringiz bormi?", a: "Ha: qoʻriqlash tizimlari montaji — OʻzR Milliy gvardiyasi ruxsatnomasi, yongʻin signalizatsiyasi va ogohlantirish — FVV ruxsatnomasi. Obyektlarni ijro hujjatlari bilan nazorat organlariga topshiramiz." },
       ]},
       { title: "Montaj va muddatlar", items: [
         { q: "Montaj qancha vaqt oladi?", a: "Kvartira yoki kichik uy — odatda bir kun. Ofis yoki doʻkon — bir kundan uch kungacha. Yirik obyektlar — shartnomada belgilangan loyiha grafigi boʻyicha." },
@@ -92,7 +92,7 @@ const D: Record<string, Dict> = {
         { q: "Boshqalar oʻrnatgan tizimni xizmatga olasizmi?", a: "Shartnoma boʻyicha oʻzimiz montaj qilgan tizimlarni yuritamiz. Boshqalar oʻrnatgan tizimni tekshiramiz: holatini baholaymiz, nuqson vedomostini tuzamiz va modernizatsiyani hisoblaymiz — uskuna bizniki bilan almashtirilgach, tizim reglamentga oʻtadi." },
       ]},
       { title: "Uskunalar va hamkorliklar", items: [
-        { q: "Qaysi brendlar bilan ishlaysiz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, MikroTik, TP-Link, H3C va boshqalar — Toshkentdagi ombordan 3000 dan ortiq pozitsiya. Biz Oʻzbekistonda H3C hamkori va Dahua integratorimiz." },
+        { q: "Qaysi brendlar bilan ishlaysiz?", a: "Hikvision, Dahua, ZKTeco, Bolid, Rubej, MikroTik, TP-Link, H3C va boshqalar — katalogda 2 500 dan ortiq pozitsiya, keng talabdagilari Toshkentdagi omborda. Biz Oʻzbekistonda H3C hamkori va Dahua integratorimiz." },
         { q: "Tender va korporativ xaridlarda qatnashasizmi?", a: "Ha: xarid talablariga KP va spetsifikatsiyalarni 24 soatda tayyorlaymiz, shartnoma boʻyicha yetkazamiz, toʻliq hujjatlar paketini beramiz. Batafsil — «Taʼminot va tenderlar» sahifasida." },
       ]},
     ],
@@ -109,7 +109,7 @@ const D: Record<string, Dict> = {
   },
   en: {
     metaTitle: "FAQ — ordering, payment, warranty, installation | SAT Solutions",
-    metaDesc: "Answers to frequent questions about SAT Solutions: how to order installation and get a quote, payment methods and documents for companies, licenses, installation timelines, warranty and service, delivery across Uzbekistan.",
+    metaDesc: "Answers to frequent questions about SAT Solutions: how to order installation and get a quote, payment methods and documents for companies, permits, installation timelines, warranty and service, delivery across Uzbekistan.",
     h1: "Frequently asked questions",
     intro: "The questions we hear most often — about ordering, payment, timelines, warranty and paperwork. Questions about specific systems (CCTV, access control, fire alarm) live on the service pages.",
     groups: [
@@ -122,7 +122,7 @@ const D: Record<string, Dict> = {
       { title: "Payment and documents", items: [
         { q: "What payment methods do you accept?", a: "Companies pay by bank transfer against a VAT invoice. Private clients — cash or card. For tender supplies we follow the terms of the procurement documentation." },
         { q: "What documents does a company receive?", a: "A supply or works contract, a VAT invoice, waybills and acts of completed works, equipment passports and certificates, warranty obligations — the full package for accounting." },
-        { q: "Are you licensed?", a: "Yes: security system installation — a license of the National Guard of Uzbekistan; fire alarm and voice notification — a license of the Ministry of Emergency Situations. We hand sites over to the supervising authorities with as-built documentation." },
+        { q: "Do you have permits for this work?", a: "Yes: security system installation — a permit from the National Guard of Uzbekistan; fire alarm and voice notification — a permit from the Ministry of Emergency Situations. We hand sites over to the supervising authorities with as-built documentation." },
       ]},
       { title: "Installation and timelines", items: [
         { q: "How long does installation take?", a: "An apartment or a small house — usually one day. An office or store — one to three days. Large sites follow the project schedule fixed in the contract." },
@@ -153,7 +153,7 @@ const D: Record<string, Dict> = {
   },
   tr: {
     metaTitle: "SSS — sipariş, ödeme, garanti, montaj | SAT Solutions",
-    metaDesc: "SAT Solutions hakkında sık sorulan sorulara yanıtlar: montaj siparişi ve teklif alma, ödeme yöntemleri ve şirketler için evraklar, lisanslar, montaj süreleri, garanti ve servis, Özbekistan geneli teslimat.",
+    metaDesc: "SAT Solutions hakkında sık sorulan sorulara yanıtlar: montaj siparişi ve teklif alma, ödeme yöntemleri ve şirketler için evraklar, izin belgeleri, montaj süreleri, garanti ve servis, Özbekistan geneli teslimat.",
     h1: "Sık sorulan sorular",
     intro: "En sık duyduğumuz soruları topladık — sipariş, ödeme, süreler, garanti ve evrak hakkında. Belirli sistemlerle ilgili sorular (kamera, geçiş kontrolü, yangın alarmı) hizmet sayfalarındadır.",
     groups: [
@@ -166,7 +166,7 @@ const D: Record<string, Dict> = {
       { title: "Ödeme ve evraklar", items: [
         { q: "Hangi ödeme yöntemlerini kabul ediyorsunuz?", a: "Şirketler KDV'li faturayla havale öder. Bireysel müşteriler nakit veya kartla. Tender teslimatlarında ihale dokümantasyonunun şartlarına uyarız." },
         { q: "Şirket hangi evrakları alır?", a: "Tedarik veya iş sözleşmesi, KDV'li fatura, irsaliyeler ve iş tutanakları, ekipman pasaport ve sertifikaları, garanti taahhütleri — muhasebe için tam paket." },
-        { q: "Lisanslarınız var mı?", a: "Evet: güvenlik sistemi montajı — Özbekistan Ulusal Muhafızları lisansı; yangın alarmı ve anons — Acil Durumlar Bakanlığı lisansı. Sahaları uygulama dokümanlarıyla denetim makamlarına teslim ederiz." },
+        { q: "İzin belgeleriniz var mı?", a: "Evet: güvenlik sistemi montajı — Özbekistan Ulusal Muhafızları izin belgesi; yangın alarmı ve anons — Acil Durumlar Bakanlığı izin belgesi. Sahaları uygulama dokümanlarıyla denetim makamlarına teslim ederiz." },
       ]},
       { title: "Montaj ve süreler", items: [
         { q: "Montaj ne kadar sürer?", a: "Daire veya küçük ev — genelde bir gün. Ofis veya mağaza — bir ila üç gün. Büyük sahalar sözleşmede sabitlenen proje takvimine göre ilerler." },
@@ -197,7 +197,7 @@ const D: Record<string, Dict> = {
   },
   zh: {
     metaTitle: "常见问题——下单、付款、保修、安装 | SAT Solutions",
-    metaDesc: "关于SAT Solutions的常见问题解答：如何预约安装和获取报价、付款方式与企业单据、资质许可、施工周期、保修与维保、乌兹别克斯坦全境配送。",
+    metaDesc: "关于SAT Solutions的常见问题解答：如何预约安装和获取报价、付款方式与企业单据、许可文件、施工周期、保修与维保、乌兹别克斯坦全境配送。",
     h1: "常见问题",
     intro: "这里汇总了客户问得最多的问题——下单、付款、周期、保修和单据。关于具体系统（视频监控、门禁、火灾报警）的问题请见各服务页面。",
     groups: [
@@ -205,12 +205,12 @@ const D: Record<string, Dict> = {
         { q: "如何预约安装或获取报价？", a: "在网站留言、写Telegram或来电即可。工程师上门勘察、核算预算并出具报价——通常一个工作日内。典型项目只需描述场地或电话里给个平面图就够。" },
         { q: "工程师上门和核算收费吗？", a: "塔什干范围内免费：勘察、测量、预算和报价均不构成任何义务。外地上门另行商定。" },
         { q: "你们只服务企业还是也接个人客户？", a: "两者都接。个人客户——家用摄像机、对讲、智能锁和报警；企业客户——完整单据流：合同、增值税发票、验收单。" },
-        { q: "在哪里能看到设备价格？", a: "网站目录里——塔什干仓库现货3000多种，价格实时。安装费取决于场地，勘察后或按您的图纸出预算。" },
+        { q: "在哪里能看到设备价格？", a: "网站目录里——目录中2500多种产品，价格实时，常用型号塔什干仓库现货。安装费取决于场地，勘察后或按您的图纸出预算。" },
       ]},
       { title: "付款与单据", items: [
         { q: "接受哪些付款方式？", a: "企业按增值税发票转账；个人客户现金或刷卡。投标供货按采购文件条款执行。" },
         { q: "企业能拿到哪些单据？", a: "供货或施工合同、增值税发票、送货单和完工验收单、设备合格证和证书、保修承诺——财务所需的全套。" },
-        { q: "你们有施工资质吗？", a: "有：安防系统安装——乌兹别克斯坦国民卫队许可；火灾报警和广播——紧急情况部许可。项目连同竣工文档移交监管部门验收。" },
+        { q: "你们有施工许可文件吗？", a: "有：安防系统安装——乌兹别克斯坦国民卫队许可文件；火灾报警和广播——紧急情况部许可文件。项目连同竣工文档移交监管部门验收。" },
       ]},
       { title: "施工与周期", items: [
         { q: "安装需要多长时间？", a: "公寓或小型住宅通常一天；办公室或商店一到三天；大型项目按合同中约定的进度执行。" },
@@ -224,7 +224,7 @@ const D: Record<string, Dict> = {
         { q: "别家装的系统你们接维保吗？", a: "维保合同只承接由我方施工的系统。别家装的系统我们可以做检测：查状态、列缺陷清单并核算改造费用——设备更换为我方供货后，系统即可纳入定期维保。" },
       ]},
       { title: "设备与合作", items: [
-        { q: "你们做哪些品牌？", a: "海康、大华、中控、Bolid、Rubezh、MikroTik、TP-Link、H3C等——塔什干仓库3000多种现货。我们是H3C在乌兹别克斯坦的合作伙伴和大华集成商。" },
+        { q: "你们做哪些品牌？", a: "海康、大华、中控、Bolid、Rubezh、MikroTik、TP-Link、H3C等——目录中2500多种产品，常用型号塔什干仓库现货。我们是H3C在乌兹别克斯坦的合作伙伴和大华集成商。" },
         { q: "参与投标和企业采购吗？", a: "参与：24小时内按采购要求出报价和清单，按合同供货，提供全套单据。详见«供货与投标»页面。" },
       ]},
     ],
