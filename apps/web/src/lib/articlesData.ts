@@ -1611,7 +1611,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912. Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
               "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
-              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 (уведомление представлено 23.07.2025) — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба оформлены в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
+              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 от 23.07.2025 — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба оформлены в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
               "Работаем с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота.",
               "Сертификаты соответствия и паспорта на модели — по запросу; формы 2 и 3 — по запросу заказчика; систему передаём с исполнительной документацией и учётными записями под роспись.",
               "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
@@ -1833,7 +1833,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions — «SUPPLY AND TRANSPORTATION» MCHJ brendi, STIR 308603912. Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
               "Uskunalarni yetkazib berish va montaj: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofoniya, SKS va LHT, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
-              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (xabarnoma 2025-yil 23-iyulda taqdim etilgan) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirishni montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; ikkalasi ham Vazirlar Mahkamasining 2022-yil 25-fevraldagi 88-son qaroriga koʻra xabardor qilish tartibida rasmiylashtirilgan.",
+              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (23.07.2025) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirishni montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; ikkalasi ham Vazirlar Mahkamasining 2022-yil 25-fevraldagi 88-son qaroriga koʻra xabardor qilish tartibida rasmiylashtirilgan.",
               "QQS bilan ishlaymiz; elektron hisob-fakturalarni (EHF) elektron hujjat aylanishi operatori orqali chiqaramiz.",
               "Muvofiqlik sertifikatlari va modellar pasportlari — soʻrov boʻyicha; 2- va 3-shakllar — buyurtmachining soʻroviga koʻra; tizimni ijro hujjatlari va imzo bilan topshiriladigan hisob yozuvlari bilan topshiramiz.",
               "Montaj ishlariga 3 yil kafolat; uskunalarga ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
@@ -2055,7 +2055,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions is a brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912. Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
               "Equipment supply and installation: CCTV, access control and turnstiles, time attendance, intruder and fire alarms, intercoms, structured cabling and LAN, Wi-Fi, fibre, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
-              "Documents on the \"About\" page: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 (notification filed on 23.07.2025) — installation, commissioning and maintenance of fire alarms and automatic fire suppression; both issued under the notification procedure of Resolution No. 88 of 25.02.2022.",
+              "Documents on the \"About\" page: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 of 23 July 2025 — installation, commissioning and maintenance of fire alarms and automatic fire suppression; both issued under the notification procedure of Resolution No. 88 of 25.02.2022.",
               "We work with VAT; e-invoices (ESF) are issued through an electronic document-exchange operator.",
               "Certificates of conformity and model data sheets on request; Forms 2 and 3 at the client's request; the system is handed over with as-built documentation and accounts against signature.",
               "3-year warranty on installation works; manufacturer's warranty of 1 to 3 years on equipment.",
@@ -2277,7 +2277,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır, vergi numarası 308603912. Taşkent, Katta Darhon Caddesi 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
               "Ekipman tedariki ve montaj: video gözetim, geçiş kontrol ve turnikeler, mesai takibi, hırsız ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber optik, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
-              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, ayarı ve teknik bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (bildirim 23.07.2025'te sunuldu) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve teknik bakımı; her ikisi de 25.02.2022 tarihli ve 88 sayılı karara göre bildirim usulüyle düzenlenmiştir.",
+              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, ayarı ve teknik bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve teknik bakımı; her ikisi de 25.02.2022 tarihli ve 88 sayılı karara göre bildirim usulüyle düzenlenmiştir.",
               "KDV ile çalışıyoruz; elektronik faturaları (ESF) elektronik belge değişimi operatörü üzerinden düzenliyoruz.",
               "Uygunluk sertifikaları ve model teknik föyleri talep üzerine; Form 2 ve Form 3 müşterinin talebi üzerine; sistem uygulama belgeleri ve imza karşılığı devredilen hesaplarla teslim edilir.",
               "Montaj işlerine 3 yıl garanti; ekipmana üreticinin 1 ila 3 yıllık garantisi.",
@@ -2499,7 +2499,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌，税号308603912。塔什干，Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
               "设备供货与安装：视频监控、门禁与闸机、考勤、入侵报警与火灾报警、楼宇对讲、综合布线与局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
-              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（告知于2025年7月23日提交）——火灾报警和自动灭火系统的安装、调试和维护；两者均依照2022年2月25日第88号决议的告知制度办理。",
+              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（2025年7月23日）——火灾报警和自动灭火系统的安装、调试和维护；两者均依照2022年2月25日第88号决议的告知制度办理。",
               "我们按增值税运作；电子发票（ESF）通过电子文件交换运营商开具。",
               "合格证书和型号规格书可应要求提供；第2号和第3号表应业主要求出具；系统移交时附竣工资料，账户签字移交。",
               "安装工程质保3年；设备享受厂家1至3年质保。",
@@ -2776,7 +2776,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912. Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
               "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
-              "Документы: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 (уведомление от 23.07.2025) — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба — в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
+              "Документы: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 от 23.07.2025 — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба — в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
               "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
               "Каталог satsolutions.uz — более 2 500 позиций; собственный склад в Ташкенте, ходовые позиции в наличии. Работаем с НДС, цены в сумах с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота."
             ]
@@ -3029,7 +3029,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions — «SUPPLY AND TRANSPORTATION» MChJ brendi, STIR 308603912. Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
               "Uskunalarni yetkazib berish va montaj: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofoniya, SKS va LVS, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
-              "Hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (xabarnoma 23.07.2025) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish; ikkalasi ham VMQning 25.02.2022 dagi 88-son qaroriga koʻra xabardor qilish tartibida.",
+              "Hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (23.07.2025) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish; ikkalasi ham VMQning 25.02.2022 dagi 88-son qaroriga koʻra xabardor qilish tartibida.",
               "Montaj ishlariga 3 yil kafolat; uskunaga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
               "satsolutions.uz katalogi — 2 500 dan ortiq pozitsiya; Toshkentda oʻz omborimiz bor, koʻp soʻraladigan pozitsiyalar mavjud. QQS bilan ishlaymiz, narxlar soʻmda, QQS bilan; elektron hisob-fakturalarni (ESF) elektron hujjat almashinuvi operatori orqali rasmiylashtiramiz."
             ]
@@ -3282,7 +3282,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions is the brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912. Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
               "Equipment supply and installation: video surveillance, access control and turnstiles, time attendance, intrusion and fire alarm, intercom, structured cabling and LAN, Wi-Fi, fibre, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
-              "Documents: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 (notification of 23.07.2025) — installation, commissioning and maintenance of fire alarm and automatic fire suppression systems; both under the notification procedure of CM Resolution No. 88 of 25.02.2022.",
+              "Documents: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 of 23 July 2025 — installation, commissioning and maintenance of fire alarm and automatic fire suppression systems; both under the notification procedure of CM Resolution No. 88 of 25.02.2022.",
               "3-year warranty on installation works; equipment carries the manufacturer’s warranty of 1 to 3 years.",
               "satsolutions.uz catalogue: more than 2,500 items; own warehouse in Tashkent, fast-moving items in stock. We work with VAT, prices in UZS including VAT; e-invoices (ESF) are issued through an electronic document-exchange operator."
             ]
@@ -3535,7 +3535,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır; vergi numarası 308603912. Taşkent, Katta Darhon Sokağı 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
               "Ekipman tedariki ve montaj: video gözetim, geçiş kontrol ve turnikeler, mesai takibi, alarm ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
-              "Belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, devreye alınması ve bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025 tarihli bildirim) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı; her ikisi de 25.02.2022 tarihli 88 sayılı BK kararı kapsamında bildirim usulüyle.",
+              "Belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, devreye alınması ve bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı; her ikisi de 25.02.2022 tarihli 88 sayılı BK kararı kapsamında bildirim usulüyle.",
               "Montaj işlerine 3 yıl garanti; ekipmana üreticinin 1 ila 3 yıllık garantisi.",
               "satsolutions.uz kataloğu: 2.500'den fazla ürün; Taşkent'te kendi depomuz var, çok satan ürünler stokta. KDV ile çalışıyoruz, fiyatlar UZS cinsinden ve KDV dahil; e-faturalar (ESF) bir elektronik belge değişim operatörü üzerinden düzenlenir."
             ]
@@ -3788,7 +3788,7 @@ export const ARTICLES: Article[] = [
             "ul": [
               "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌，纳税人识别号308603912。塔什干Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
               "设备供货与安装：视频监控、门禁与闸机、考勤、入侵与火灾报警、楼宇对讲、综合布线与局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
-              "文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（2025年7月23日通知）——火灾报警和自动灭火系统的安装、调试和维护；两者均依据2022年2月25日内阁第88号决议的通知程序办理。",
+              "文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（2025年7月23日）——火灾报警和自动灭火系统的安装、调试和维护；两者均依据2022年2月25日内阁第88号决议的通知程序办理。",
               "安装施工质保3年；设备享受厂商1至3年质保。",
               "satsolutions.uz产品目录：2500多种商品；在塔什干设有自有仓库，常用商品有现货。我们含增值税开展业务，价格以苏姆计并含增值税；电子发票（ESF）通过电子文档交换运营商开具。"
             ]
@@ -6283,7 +6283,7 @@ export const ARTICLES: Article[] = [
               "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
               "Каталог satsolutions.uz: более 2 500 позиций, в том числе Hikvision, Dahua и ZKTeco; цены в сумах с НДС. Собственный склад в Ташкенте, ходовые позиции в наличии.",
               "Поставляем обе марки — Hikvision и Dahua; сертификат Dahua «Authorized Strategic System Integrator» на 2026 год (действует 01.01–31.12.2026) — на странице «О компании».",
-              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 (монтаж, наладка и техобслуживание технических средств охраны); разрешение МЧС № 913518, уведомление от 23.07.2025 (монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения) — уведомительный порядок по ПКМ № 88 от 25.02.2022.",
+              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 (монтаж, наладка и техобслуживание технических средств охраны); разрешение МЧС № 913518 от 23.07.2025 (монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения) — уведомительный порядок по ПКМ № 88 от 25.02.2022.",
               "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет. Работаем с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота.",
               "Пришлите ТЗ на sales@satsolutions.uz — подготовим КП со спецификацией и ведомостью работ; КП — в течение 24 часов."
             ]
@@ -6490,7 +6490,7 @@ export const ARTICLES: Article[] = [
               "Uskunalar yetkazib berish va oʻrnatish: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofon, SKS va LVS, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
               "satsolutions.uz katalogi: 2 500 dan ortiq pozitsiya, jumladan Hikvision, Dahua va ZKTeco; narxlar soʻmda, QQS bilan. Toshkentda oʻz omborimiz bor, xaridorgir pozitsiyalar omborda mavjud.",
               "Ikkala marka — Hikvision va Dahua — yetkazib beriladi; Dahua’ning 2026-yil uchun «Authorized Strategic System Integrator» sertifikati (01.01–31.12.2026 amal qiladi) — «Kompaniya haqida» sahifasida.",
-              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi (qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish); FVVning 913518-son ruxsatnomasi, xabarnoma 23.07.2025 (yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish) — VMQning 2022-yil 25-fevraldagi 88-son qaroriga muvofiq xabardor qilish tartibida.",
+              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi (qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish); FVVning 913518-son ruxsatnomasi (23.07.2025) (yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish) — VMQning 2022-yil 25-fevraldagi 88-son qaroriga muvofiq xabardor qilish tartibida.",
               "Montaj ishlariga 3 yil kafolat; uskunalarga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati. QQS bilan ishlaymiz; elektron hisob-fakturalar (EHF) elektron hujjat almashinuvi operatori orqali rasmiylashtiriladi.",
               "Texnik topshiriqni sales@satsolutions.uz manziliga yuboring — spetsifikatsiya va ishlar qaydnomasi bilan tijorat taklifini tayyorlaymiz; tijorat taklifi — 24 soat ichida."
             ]
@@ -6697,7 +6697,7 @@ export const ARTICLES: Article[] = [
               "Equipment supply and installation: video surveillance, access control and turnstiles, time attendance, intruder and fire alarms, intercom, structured cabling and LAN, Wi-Fi, fibre optics, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
               "satsolutions.uz catalogue: more than 2,500 items, including Hikvision, Dahua and ZKTeco; prices in UZS including VAT. Our own warehouse in Tashkent, fast-moving items in stock.",
               "We supply both brands — Hikvision and Dahua; the Dahua «Authorized Strategic System Integrator» certificate for 2026 (valid 01.01–31.12.2026) is on the «About» page.",
-              "Documents on the «About» page: National Guard permit No. 1554491 (installation, commissioning and maintenance of security equipment); Ministry of Emergency Situations permit No. 913518, notification of 23.07.2025 (installation, commissioning and maintenance of fire alarm and automatic fire extinguishing systems) — under the notification procedure of Cabinet of Ministers Resolution No. 88 of 25.02.2022.",
+              "Documents on the «About» page: National Guard permit No. 1554491 (installation, commissioning and maintenance of security equipment); Ministry of Emergency Situations permit No. 913518 of 23 July 2025 (installation, commissioning and maintenance of fire alarm and automatic fire extinguishing systems) — under the notification procedure of Cabinet of Ministers Resolution No. 88 of 25.02.2022.",
               "3-year warranty on installation works; equipment carries the manufacturer's warranty of 1 to 3 years. We work with VAT; e-invoices (ESF) are issued through an electronic document-exchange operator.",
               "Send your specification to sales@satsolutions.uz — we will prepare a quotation with an equipment specification and a schedule of works; quotations within 24 hours."
             ]
@@ -6904,7 +6904,7 @@ export const ARTICLES: Article[] = [
               "Ekipman tedariki ve kurulum: video gözetim, geçiş kontrolü ve turnikeler, personel devam takibi, hırsız ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber optik, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
               "satsolutions.uz kataloğu: 2.500'den fazla ürün, bunların arasında Hikvision, Dahua ve ZKTeco; fiyatlar UZS cinsinden, KDV dahil. Taşkent'te kendi depomuz var, çok satan ürünler stokta.",
               "Her iki markayı da tedarik ediyoruz — Hikvision ve Dahua; Dahua'nın 2026 yılına ait «Authorized Strategic System Integrator» sertifikası (01.01–31.12.2026 arasında geçerli) «Hakkımızda» sayfasında.",
-              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 (güvenlik teknik araçlarının montajı, devreye alınması ve bakımı); Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518, bildirim tarihi 23.07.2025 (yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı) — Bakanlar Kurulu'nun 25.02.2022 tarihli 88 sayılı Kararı uyarınca bildirim usulüyle.",
+              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 (güvenlik teknik araçlarının montajı, devreye alınması ve bakımı); Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025) (yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı) — Bakanlar Kurulu'nun 25.02.2022 tarihli 88 sayılı Kararı uyarınca bildirim usulüyle.",
               "Montaj işçiliğine 3 yıl garanti; ekipmanda üreticinin 1 ila 3 yıllık garantisi. KDV ile çalışıyoruz; e-faturalar (ESF) bir elektronik belge değişim operatörü üzerinden düzenlenir.",
               "Teknik şartnamenizi sales@satsolutions.uz adresine gönderin — ekipman listesi ve iş kalemleri cetveliyle teklif hazırlayalım; teklif 24 saat içinde."
             ]
@@ -7111,7 +7111,7 @@ export const ARTICLES: Article[] = [
               "设备供应与安装：视频监控、门禁和闸机、考勤、防盗和火灾报警、对讲、综合布线和局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
               "satsolutions.uz目录：2500多种商品，包括海康威视、大华和ZKTeco；价格以苏姆计，含增值税。我们在塔什干有自有仓库，常用型号有现货。",
               "海康威视和大华两个品牌我们都供货；大华2026年度“Authorized Strategic System Integrator”证书（有效期2026年1月1日至12月31日）展示在“关于我们”页面。",
-              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号（安防技术设备的安装、调试和维护）；紧急情况部许可文件第913518号，通知日期2025年7月23日（火灾报警和自动灭火系统的安装、调试和维护）——依据2022年2月25日内阁第88号决议的通知程序。",
+              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号（安防技术设备的安装、调试和维护）；紧急情况部许可文件第913518号（2025年7月23日）（火灾报警和自动灭火系统的安装、调试和维护）——依据2022年2月25日内阁第88号决议的通知程序。",
               "安装工程质保3年；设备享受厂商1至3年质保。我们按含增值税方式结算；电子发票（ESF）通过电子文档交换运营商开具。",
               "请将技术规格书发送至sales@satsolutions.uz——我们将准备附设备清单和工程量清单的报价；报价在24小时内提供。"
             ]
