@@ -1,0 +1,4187 @@
+{
+ "version": "cd-equip-1",
+ "generatedAt": "2026-11-10",
+ "method": "Характеристики со страницы производителя и из PDF-datasheet той же модели; verified — совпали в обоих документах. Предел диска в отсеке при расхождении — меньшее значение, потребление — большее. Цены и наличие — из API на момент расчёта.",
+ "totals": {
+  "recorders": {
+   "verified": 79,
+   "review": 8
+  },
+  "switches": {
+   "verified": 29,
+   "review": 9
+  },
+  "ups": 5,
+  "hdds": 22,
+  "cameraPower": {
+   "verified": 218,
+   "review": 51,
+   "noData": 8
+  }
+ },
+ "recorders": [
+  {
+   "slug": "dahua-xvr1b04-i-t",
+   "brand": "Dahua",
+   "model": "XVR1B04-I/T",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/hdcvi-products/hdcvi-recorders/cooper-i-series/xvr1b04-i/t",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/82992/datasheet/DH-XVR1B04-IT_S0_datasheet_20260511.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b04-i",
+   "brand": "Dahua",
+   "model": "XVR1B04-I",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/th/products/HDCVI-Recorders/Cooper-I-Series/XVR1B04-I=V2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR1B04-I_V2_datasheet_20240229.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b04h-i",
+   "brand": "Dahua",
+   "model": "XVR1B04H-I",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 4,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr1b04h-i",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR1B04H-I_datasheet_20220530.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7104hghi-m1",
+   "brand": "Hikvision",
+   "model": "DS-7104HGHI-M1",
+   "kind": "dvr",
+   "status": "needs_review",
+   "channels": 4,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 4,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 16,
+   "notes": [
+    "channels: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/Value-Series/ds-7104hghi-m1/",
+   "sourcePdf": null,
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b08-i",
+   "brand": "Dahua",
+   "model": "XVR1B08-I",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr1b08-i=v2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR1B08-I_V2_datasheet_20240229.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7108hghi-k1",
+   "brand": "Hikvision",
+   "model": "DS-7108HGHI-K1",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 4,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 17,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/Turbo-HD-Products/DVR/Value-Series/ds-7108hghi-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000018279/Datasheet-of_DS-7108HGHI-K1_20241212.pdf",
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b08-i-t",
+   "brand": "Dahua",
+   "model": "XVR1B08-I/T",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/hdcvi-products/hdcvi-recorders/cooper-i-series/xvr1b08-i/t",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/82993/datasheet/DH-XVR1B08-IT_S0_datasheet_20260511.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7108hghi-m1-c",
+   "brand": "Hikvision",
+   "model": "DS-7108HGHI-M1(C)",
+   "kind": "dvr",
+   "status": "needs_review",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 4,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 17,
+   "notes": [
+    "channels: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/Value-Series/ds-7108hghi-m1/",
+   "sourcePdf": null,
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr5104c-i3",
+   "brand": "Dahua",
+   "model": "XVR5104C-I3",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr5104c-i3=v3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR5104C-I3_V3_datasheet_20241112.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b08h-i",
+   "brand": "Dahua",
+   "model": "XVR1B08H-I",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr1b08h-i",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR1B08H-I_datasheet_20220620.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr5108c-i3",
+   "brand": "Dahua",
+   "model": "XVR5108C-I3",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr5108c-i3=v3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR5108C-I3_V3_datasheet_20241112.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b16-i",
+   "brand": "Dahua",
+   "model": "XVR1B16-I",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr1b16-i",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR1B16-I_datasheet_20220530.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr1b16-i-t",
+   "brand": "Dahua",
+   "model": "XVR1B16-I/T",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/hdcvi-products/hdcvi-recorders/cooper-i-series/xvr1b16-i/t",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/83443/datasheet/XVR1B16-I_T_S0_datasheet_20260511.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ids-7108hqhi-m1-s",
+   "brand": "Hikvision",
+   "model": "IDS-7108HQHI-M1/S",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 12,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/Value-Series/ids-7108hqhi-m1-s/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000060310/Datasheet-of-iDS-7108HQHI-M1_S_V4.70.180_20241212.pdf",
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ids-7208hqhi-m1-s",
+   "brand": "Hikvision",
+   "model": "iDS-7208HQHI-M1/S",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 18,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/AcuSense-Series/iDS-7208HQHI-M1-S/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000007977/Datasheet-of-iDS-7208HQHI-M1_S_V4.71.000_20230621.pdf",
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7116hghi-m1-std-f",
+   "brand": "Hikvision",
+   "model": "DS-7116HGHI-M1(STD)(F)",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 7,
+   "notes": [
+    "maxTbPerBay: страница 6, PDF 10 — взято меньшее"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/Value-Series/ds-7116hghi-m1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000058569/Datasheet-of_DS-7116HGHI-M1_V4.70.160_20230822.pdf",
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ids-7116hqhi-m1-s",
+   "brand": "Hikvision",
+   "model": "iDS-7116HQHI-M1/S",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 24,
+   "notes": [
+    "powerW: страница 24, PDF 15 — взято большее"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/Turbo-HD-Products/DVR/Value-Series/ids-7116hqhi-m1-s/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000058561/Datasheet-of-iDS-7116HQHI-M1_S_V4.71.000_20231218.pdf",
+   "cat": "hik-dvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr5116hs-i3",
+   "brand": "Dahua",
+   "model": "XVR5116HS-I3",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 12,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr5116hs-i3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR5116HS-I3_datasheet_20241114.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-xvr5232an-i3",
+   "brand": "Dahua",
+   "model": "XVR5232AN-I3",
+   "kind": "dvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": null,
+   "maxMP": null,
+   "bays": 2,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 16,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/hdcvi-recorders/xvr5232an-i3=v2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/XVR5232AN-I3_V2_datasheet_20241114.pdf",
+   "cat": "hdcvi-recorders",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7104ni-q1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7104NI-Q1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 40,
+   "maxMP": 6,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Value-Series/ds-7104ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000614/Datasheet-of-DS-7104NI-Q1_Value-7-Series-NVR_V4.73.200_20230404.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7108ni-q1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7108NI-Q1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 60,
+   "maxMP": 6,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Value-Series/ds-7108ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000618/Datasheet-of-DS-7108NI-Q1_Value-7-Series-NVR_V4.73.200_20230404.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7108ni-q1-std-d",
+   "brand": "Hikvision",
+   "model": "DS-7108NI-Q1(STD)(D)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 60,
+   "maxMP": 6,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Value-Series/ds-7108ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000618/Datasheet-of-DS-7108NI-Q1_Value-7-Series-NVR_V4.73.200_20230404.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2104-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR2104-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr2-series/nvr2104-4ks3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2104-4KS3_S0_datasheet_20241119.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4104-4ks2-l",
+   "brand": "Dahua",
+   "model": "DHI-NVR4104-4KS2/L",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr4104-4ks2/l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR4104-4KS2_L_datasheet_20220315.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2108-s3",
+   "brand": "Dahua",
+   "model": "DHI-NVR2108-S3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr2108-s3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2108-S3_datasheet_20220110.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7604ni-k1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7604NI-K1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 40,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7604ni-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000025332/Datasheet-of-DS-7604NI-K1-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7604ni-q1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7604NI-Q1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 40,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7604ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000561/Datasheet-of-DS-7604NI-Q1-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7108ni-q1-8p",
+   "brand": "Hikvision",
+   "model": "DS-7108NI-Q1/8P",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 60,
+   "maxMP": 6,
+   "bays": 1,
+   "maxTbPerBay": 6,
+   "poePorts": 8,
+   "poeBudgetW": 75,
+   "poeAt": true,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Value-Series/ds-7108ni-q1-8p-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000620/Datasheet-of-DS-7108NI-Q1_8P_M_Value-7-Series-NVR_V4.73.200_20230404.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4108-4ks2-l",
+   "brand": "Dahua",
+   "model": "DHI-NVR4108-4KS2/L",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr4108-4ks2/l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR4108-4KS2_L_datasheet_20220315.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2108-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR2108-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr2-series/nvr2108-4ks3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2108-4KS3_S0_datasheet_20241119.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608ni-q1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7608NI-Q1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000569/Datasheet-of-DS-7608NI-Q1-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2116-s3",
+   "brand": "Dahua",
+   "model": "DHI-NVR2116-S3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr2116-s3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2116-S3_datasheet_20220110.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4116-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR4116-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr4-series/nvr4116-4ks3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/76197/datasheet/NVR4116-4KS3_S0_datasheet_20251203.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7604nxi-k1",
+   "brand": "Hikvision",
+   "model": "DS-7604NXI-K1",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 40,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7604nxi-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000058881/DS-7604NXI-K1%E6%A0%87%E9%85%8D-%E5%8D%B0%E5%BA%A6%E5%88%B6%E9%80%A0SKD_Datasheet_20250718.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2116-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR2116-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 72,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr2-series/nvr2116-4ks3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2116-4KS3_S0_datasheet_20241119.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2104hs-i2",
+   "brand": "Dahua",
+   "model": "DHI-NVR2104HS-I2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr2-i2-series/nvr2104hs-i2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2104HS-I2_datasheet_20220614.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616ni-q1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7616NI-Q1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616ni-q1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000578/Datasheet-of-DS-7616NI-Q1-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr2108hs-i2",
+   "brand": "Dahua",
+   "model": "DHI-NVR2108HS-I2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr2-i2-series/nvr2108hs-i2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR2108HS-I2_datasheet_20220614.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4116-4ks2-l",
+   "brand": "Dahua",
+   "model": "DHI-NVR4116-4KS2/L",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr4116-4ks2/l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR4116-4KS2_L_datasheet_20220315.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4104-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR4104-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 4,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 3,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr4-series/nvr4104-4ks3-l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/87942/datasheet/DHI-NVR4104-4KS3-L_S0_datasheet_20260630_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608ni-q2",
+   "brand": "Hikvision",
+   "model": "DS-7608NI-Q2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 2,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608ni-q2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000571/Datasheet-of-DS-7608NI-Q2-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4108-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR4108-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 3,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr4-series/nvr4108-4ks3-l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/87946/datasheet/DHI-NVR4108-4KS3-L_S0_datasheet_20260630_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4216-4ks2-l",
+   "brand": "Dahua",
+   "model": "DHI-NVR4216-4KS2/L",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 8,
+   "bays": 2,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/discontinued-products/network-recorders/nvr4216-4ks2/l",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR4216-4KS2_L_datasheet_20220315.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608nxi-k1",
+   "brand": "Hikvision",
+   "model": "DS-7608NXI-K1",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608nxi-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000058879/Datasheet-of-DS-7608NXI-K1_V4.71.100_20221012.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608ni-k1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7608NI-K1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 8,
+   "bays": 1,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608ni-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000043526/Datasheet-of-DS-7608NI-K1-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4216-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR4216-4KS3",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 16,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.dahuasecurity.com/in/products/network-products/network-recorders/lite-series/nvr4-4ks3-series/2hdd/nvr4216-4ks3",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616ni-q2-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7616NI-Q2(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 8,
+   "bays": 2,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616ni-q2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000579/Datasheet-of-DS-7616NI-Q2-NVRD_V4.71.200_20221031.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608nxi-k2",
+   "brand": "Hikvision",
+   "model": "DS-7608NXI-K2",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608nxi-k2/",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616nxi-k1",
+   "brand": "Hikvision",
+   "model": "DS-7616NXI-K1",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616nxi-k1/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000058877/DS-7616NXI-K1STDB1x8T_Datasheet_20261016.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616ni-k1-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7616NI-K1(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 12,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616ni-k1-4k/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000185946/DS-7616NI-K1_4K_Datasheet_20260518.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616nxi-k1-vpro",
+   "brand": "Hikvision",
+   "model": "DS-7616NXI-K1/VPro",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 1,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/vpro-series/ds-7616nxi-k1-vpro/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000148408/DS-7616NXI-K1_VPro_Datasheet_20261012.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616ni-k2-std",
+   "brand": "Hikvision",
+   "model": "DS-7616NI-K2(STD)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 12,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616ni-k2-4k/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000185949/DS-7616NI-K2_4K_Datasheet_20260514.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616nxi-k2",
+   "brand": "Hikvision",
+   "model": "DS-7616NXI-K2",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616nxi-k2/",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4232-4ks3",
+   "brand": "Dahua",
+   "model": "DHI-NVR4232-4KS3",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/lite-series/nvr4-series/nvr4232-4ks3",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/76087/datasheet/NVR4232-4KS3_S0_datasheet_20251129.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4232-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR4232-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 180,
+   "maxMP": 16,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-4-ei-series/nvr4232-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/57617/datasheet/DHI-NVR4232-EI_S0_datasheet_20261030_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608nxi-i2-s-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7608NXI-I2/S(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 80,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7608nxi-i2-s/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/sm000060183/DS-7608NXI-I2_SC_Datasheet_20260817.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7632nxi-k2",
+   "brand": "Hikvision",
+   "model": "DS-7632NXI-K2",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 32,
+   "bandwidthMbps": 256,
+   "maxMP": 12,
+   "bays": 2,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7632nxi-k2/",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7716ni-q4-std",
+   "brand": "Hikvision",
+   "model": "DS-7716NI-Q4(STD)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 8,
+   "bays": 4,
+   "maxTbPerBay": 8,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7716ni-q4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000595/Datasheet-of-DS-7716NI-Q4-NVR_V4.31.500_20221009.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7716nxi-k4",
+   "brand": "Hikvision",
+   "model": "DS-7716NXI-K4",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 12,
+   "bays": 4,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 20,
+   "notes": [
+    "maxTbPerBay: страница 16, PDF 10 — взято меньшее"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7716nxi-k4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000059582/Datasheet-of-DS-7716NXI-K4_V4.74.000_20230104.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608ni-m2",
+   "brand": "Hikvision",
+   "model": "DS-7608NI-M2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 128,
+   "maxMP": 32,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-7608ni-m2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000060963/DS-7608NI-M2_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7608nxi-i2-8p",
+   "brand": "Hikvision",
+   "model": "DS-7608NXI-I2/8P/VPro",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 8,
+   "bandwidthMbps": 96,
+   "maxMP": 32,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 8,
+   "poeBudgetW": 120,
+   "poeAt": true,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/vpro-series/ds-7608nxi-i2-8p-vpro/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000156565/DS-7608NXI-I2_8P_VPro_Datasheet_20261008.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7732nxi-k4-d",
+   "brand": "Hikvision",
+   "model": "DS-7732NXI-K4(D)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 256,
+   "maxMP": 12,
+   "bays": 4,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 20,
+   "notes": [
+    "maxTbPerBay: страница 16, PDF 10 — взято меньшее"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7732nxi-k4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000059583/Datasheet-of-DS-7732NXI-K4_V4.74.000_20230104.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5232-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR5232-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-5-ei-series/nvr5232-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/soft/20260130/DHI-NVR5232-EI_S0_datasheet_20260109.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7716ni-i4-b-std",
+   "brand": "Hikvision",
+   "model": "DS-7716NI-I4(B)(STD)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 20,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7716ni-i4-b-/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000000591/Datasheet-of-DS-7700NI-I4B_NVR_V4.61.000-20220430.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616nxi-i2-s-std-c",
+   "brand": "Hikvision",
+   "model": "DS-7616NXI-I2/S(STD)(C)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 32,
+   "bays": 2,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7616nxi-i2-s/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/sm000060188/DS-7616NXI-I2_S_Datasheet_20260817.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7616ni-m2",
+   "brand": "Hikvision",
+   "model": "DS-7616NI-M2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 256,
+   "maxMP": 32,
+   "bays": 2,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-7616ni-m2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000060965/DS-7616NI-M2_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4432-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR4432-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 180,
+   "maxMP": 16,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-4-ei-series/nvr4432-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/65657/datasheet/DHI-NVR4432-EI_S0_datasheet_20261030_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7732ni-i4-b-std",
+   "brand": "Hikvision",
+   "model": "DS-7732NI-I4(B)(STD)",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 32,
+   "bandwidthMbps": 320,
+   "maxMP": 12,
+   "bays": 4,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 20,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7732ni-i4-24p/",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7716ni-m4",
+   "brand": "Hikvision",
+   "model": "DS-7716NI-M4",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 256,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-7716ni-m4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000060960/DS-7716NI-M4_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7732nxi-i4-s-std",
+   "brand": "Hikvision",
+   "model": "DS-7732NXI-I4/S(STD)",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 16,
+   "bandwidthMbps": 160,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 10,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7732nxi-i4-s/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/sm000060179/DS-7732NXI-I4_SC_Datasheet_20260810.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7732ni-m4",
+   "brand": "Hikvision",
+   "model": "DS-7732NI-M4",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 320,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-7732ni-m4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000060962/DS-7732NI-M4_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr4832-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR4832-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 180,
+   "maxMP": 16,
+   "bays": 8,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-4-ei-series/nvr4832-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/65677/datasheet/DHI-NVR4832-EI_S0_datasheet_20261030_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-8632nxi-k8",
+   "brand": "Hikvision",
+   "model": "DS-8632NXI-K8",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 256,
+   "maxMP": 16,
+   "bays": 8,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-8632nxi-k8-e-/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000170633/DS-8632NXI-K8ENEU_IO16+9_Datasheet_20261104.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5464-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR5464-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-5-ei-series/nvr5464-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/NVR5464-EI_S0_datasheet_20240625.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7764ni-k4",
+   "brand": "Hikvision",
+   "model": "DS-7764NI-K4",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 320,
+   "maxMP": 12,
+   "bays": 4,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Pro-Series/ds-7764ni-k4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000163216/DS-7764NI-K4%E4%B8%AD%E6%80%A7_Datasheet_20250804.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5432-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR5432-EI",
+   "kind": "nvr",
+   "status": "needs_review",
+   "channels": 32,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [
+    "channels: только в странице",
+    "bandwidthMbps: только в странице",
+    "maxMP: только в странице",
+    "bays: только в странице",
+    "maxTbPerBay: только в странице",
+    "poePorts: только в странице"
+   ],
+   "sourcePage": "https://www.dahuasecurity.com/in/products/network-products/network-recorders/wizsense-series/nvr-5-ei-series/4hdd/dhi-nvr5432-ei",
+   "sourcePdf": null,
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5832-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR5832-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 8,
+   "maxTbPerBay": 26,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/uk/products/network-products/network-recorders/wizsense-series/nvr-5-ei2-series/nvr5832-ei2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/83536/datasheet/DHI-NVR5832-EI2_S0_datasheet_20260626_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7764ni-m4",
+   "brand": "Hikvision",
+   "model": "DS-7764NI-M4",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 400,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 15,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-7764ni-m4/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000067968/DS-7764NI-M4_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5464-ei2",
+   "brand": "Dahua",
+   "model": "DHI-NVR5464-EI2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 26,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-5-ei2-series/nvr5464-ei2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/83532/datasheet/DHI-NVR5464-EI2_S0_datasheet_20260626_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5864-ei",
+   "brand": "Dahua",
+   "model": "DHI-NVR5864-EI",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 8,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/cz/products/network-products/network-recorders/wizsense-series/nvr-5-ei-series/nvr5864-ei",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/soft/20260130/DHI-NVR5864-EI_S0_datasheet_202601121.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-9632ni-m8",
+   "brand": "Hikvision",
+   "model": "DS-9632NI-M8",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 320,
+   "maxMP": 32,
+   "bays": 8,
+   "maxTbPerBay": 16,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [
+    "maxTbPerBay: страница 20, PDF 16 — взято меньшее"
+   ],
+   "sourcePage": "https://www.hikvision.com/europe/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-9632ni-m8/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000000742/DS-9632NI-M8_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-7732nxi-i4-vpro",
+   "brand": "Hikvision",
+   "model": "DS-7732NXI-I4/VPro",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 384,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/vpro-series/ds-7732nxi-i4-vpro/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000156573/DS-7732NXI-I4_VPro_Datasheet_20261008.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "dahua-dhi-nvr5864-ei2",
+   "brand": "Dahua",
+   "model": "DHI-NVR5864-EI2",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 200,
+   "maxMP": 32,
+   "bays": 8,
+   "maxTbPerBay": 26,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.dahuasecurity.com/products/network-products/network-recorders/wizsense-series/nvr-5-ei2-series/nvr5864-ei2",
+   "sourcePdf": "https://materialfile.dahuasecurity.com/uploads/cpq/83538/datasheet/DHI-NVR5864-EI2_S0_datasheet_20260626_English.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ids-7732nxi-m4-x",
+   "brand": "Hikvision",
+   "model": "iDS-7732NXI-M4/X",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 320,
+   "maxMP": 32,
+   "bays": 4,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/deepinmind-intelligence/deepinmind-edge/ids-7732nxi-m4-x/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000065356/iDS-7732NXI-M4_X_Datasheet_20260917.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-9664ni-m8",
+   "brand": "Hikvision",
+   "model": "DS-9664NI-M8",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 400,
+   "maxMP": 32,
+   "bays": 8,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-9664ni-m8/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000000746/DS-9664NI-M8_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-9632ni-m16",
+   "brand": "Hikvision",
+   "model": "DS-9632NI-M16",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 32,
+   "bandwidthMbps": 320,
+   "maxMP": 32,
+   "bays": 16,
+   "maxTbPerBay": 14,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [
+    "maxTbPerBay: страница 20, PDF 14 — взято меньшее"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-9632ni-m16/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000000740/DS-9632NI-M16_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-9664ni-m16",
+   "brand": "Hikvision",
+   "model": "DS-9664NI-M16",
+   "kind": "nvr",
+   "status": "verified",
+   "channels": 64,
+   "bandwidthMbps": 400,
+   "maxMP": 32,
+   "bays": 16,
+   "maxTbPerBay": 20,
+   "poePorts": 0,
+   "poeBudgetW": null,
+   "poeAt": false,
+   "powerW": 50,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/IP-Products/Network-Video-Recorders/Ultra-Series/ds-9664ni-m16/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000000744/DS-9664NI-M16_Datasheet_20261020.pdf",
+   "cat": "hik-nvr",
+   "checkedAt": "2026-11-10"
+  }
+ ],
+ "switches": [
+  {
+   "slug": "hik-ds-3e0105p-e-m-b-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E0105P-E/M(B)(O-STD)",
+   "status": "needs_review",
+   "poePorts": 4,
+   "budgetW": 35,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 3,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0105p-e-m-b-/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1105p-ei-m",
+   "brand": "Hikvision",
+   "model": "DS-3E1105P-EI/M",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 45,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1105p-ei-m-v2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000072780/DS-3E1105P-EI_M-V2_Datasheet_20260725.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0505p-e-m",
+   "brand": "Hikvision",
+   "model": "DS-3E0505P-E/M",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 35,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 3,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0505p-e-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000007570/DS-3E0505P-E_M_Datasheet_20240307.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1505p-ei-m",
+   "brand": "Hikvision",
+   "model": "DS-3E1505P-EI/M",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 45,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 1,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1505p-ei-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000081860/DS-3E1505P-EI_M_Datasheet_20260716.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1106p-ei-m-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E1106P-EI/M(O-STD)",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 45,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 1.8,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1106p-ei-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000085162/DS-3E1106P-EI_M_Datasheet_20260803.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1506p-ei-m",
+   "brand": "Hikvision",
+   "model": "DS-3E1506P-EI/M",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 45,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 1.8,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1506p-ei-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000112293/DS-3E1506P-EI_M_Datasheet_20260803.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0310p-e-m-b-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E0310P-E/M(B)(O-STD)",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 60,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/transmission/Network-Switches/unmanaged-switch/ds-3e0310p-e-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000019322/DS-3E0310P-E_M_Datasheet_20240307.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0109p-e-m-b-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E0109P-E/M(B)(O-STD)",
+   "status": "needs_review",
+   "poePorts": 8,
+   "budgetW": 80,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 6,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0109p-e-m-c-/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0505hp-e",
+   "brand": "Hikvision",
+   "model": "DS-3E0505HP-E",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 60,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0505hp-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000011310/DS-3E0505HP-E_Datasheet_20240315.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0510p-e-m",
+   "brand": "Hikvision",
+   "model": "DS-3E0510P-E/M",
+   "status": "needs_review",
+   "poePorts": 8,
+   "budgetW": 58,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 7,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0510p-e-m/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1309p-ei",
+   "brand": "Hikvision",
+   "model": "DS-3E1309P-EI",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1309p-ei/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000158303/DS-3E1309P-EI_Datasheet_20260725.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1310p-ei",
+   "brand": "Hikvision",
+   "model": "DS-3E1310P-EI",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1310p-ei--b-/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000040349/DS-3E1310P-EI-B_Datasheet_20260803.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0310hp-e-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E0310HP-E(O-STD)",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0310hp-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000008117/DS-3E0310HP-E_Datasheet_20240308.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1510p-ei",
+   "brand": "Hikvision",
+   "model": "DS-3E1510P-EI",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 2.7,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1510p-ei/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000034948/DS-3E1510P-EI_Datasheet_20260725.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3t0506hp-e-hs",
+   "brand": "Hikvision",
+   "model": "DS-3T0506HP-E/HS",
+   "status": "verified",
+   "poePorts": 4,
+   "budgetW": 65,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/industrial-switch/ds-3t0506hp-e-hs/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000018640/DS-3T0506HP-E_HS_Datasheet_20250402.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1318p-ei-m-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E1318P-EI/M(O-STD)",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 130,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1318p-ei-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000072782/DS-3E1318P-EI_M_Datasheet_20260624.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3t0510hp-e-hs",
+   "brand": "Hikvision",
+   "model": "DS-3T0510HP-E/HS",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/industrial-switch/ds-3t0510hp-e-hs/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000018641/DS-3T0510HP-E_HS_Datasheet_20251111.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0318p-e-m-b-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E0318P-E/M(B)(O-STD)",
+   "status": "needs_review",
+   "poePorts": 16,
+   "budgetW": 135,
+   "at": true,
+   "hiPoe": false,
+   "powerW": null,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0318p-e-m/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0318p-e-m",
+   "brand": "Hikvision",
+   "model": "DS-3E0318P-E/M",
+   "status": "needs_review",
+   "poePorts": 16,
+   "budgetW": 135,
+   "at": true,
+   "hiPoe": false,
+   "powerW": null,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0318p-e-m/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1510p-si-8p2f-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E1510P-SI-8P2F(O-STD)",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1510p-si-8p2f/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000168043/DS-3E1510P-SI-8P2F_Datasheet_20260706.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1510p-si",
+   "brand": "Hikvision",
+   "model": "DS-3E1510P-SI",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 110,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 7,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1510p-si/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000043337/DS-3E1510P-SI_Datasheet_20241009.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0518p-e-m",
+   "brand": "Hikvision",
+   "model": "DS-3E0518P-E/M",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 125,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 25,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0518p-e-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000007572/DS-3E0518P-E_M_Datasheet_20240308.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1318p-ei",
+   "brand": "Hikvision",
+   "model": "DS-3E1318P-EI",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 230,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1318p-ei/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000158305/DS-3E1318P-EI_Datasheet_20260104.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0326p-e-m-c",
+   "brand": "Hikvision",
+   "model": "DS-3E0326P-E/M(C)",
+   "status": "needs_review",
+   "poePorts": 24,
+   "budgetW": 230,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0326p-e-m-c-/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1310p-si",
+   "brand": "Hikvision",
+   "model": "DS-3E1310P-SI",
+   "status": "verified",
+   "poePorts": 8,
+   "budgetW": 125,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 5,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1310p-si-o-std-v2/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000043334/DS-3E1310P-SI_Datasheet_20240426.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1518p-ei-m",
+   "brand": "Hikvision",
+   "model": "DS-3E1518P-EI/M",
+   "status": "needs_review",
+   "poePorts": 16,
+   "budgetW": 130,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1518p-ei-m-o-std-/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1326p-ei",
+   "brand": "Hikvision",
+   "model": "DS-3E1326P-EI",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1326p-ei/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000034939/DS-3E1326P-EI-B_Datasheet_20260725.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1326p-ei-m-o-std",
+   "brand": "Hikvision",
+   "model": "DS-3E1326P-EI/M(O-STD)",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 230,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1326p-ei-m/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000072783/DS-3E1326P-EI_M_Datasheet_20260624.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0526p-e",
+   "brand": "Hikvision",
+   "model": "DS-3E0526P-E",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/transmission/Network-Switches/unmanaged-switch/ds-3e0526p-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000008121/DS-3E0526P-E_Datasheet_20240307.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0518p-e",
+   "brand": "Hikvision",
+   "model": "DS-3E0518P-E",
+   "status": "needs_review",
+   "poePorts": 16,
+   "budgetW": 230,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0518p-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000008120/DS-3E0518P-E_Datasheet_20240307.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0520hp-e",
+   "brand": "Hikvision",
+   "model": "DS-3E0520HP-E",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 225,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 25,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0520hp-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000011312/DS-3E0520HP-E_Datasheet_20240308.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1518p-si-16p2f",
+   "brand": "Hikvision",
+   "model": "DS-3E1518P-SI-16P2F",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 230,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 10,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1518p-si-16p2f/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000168044/DS-3E1518P-SI-16P2F_Datasheet_20261102.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1518p-si",
+   "brand": "Hikvision",
+   "model": "DS-3E1518P-SI",
+   "status": "verified",
+   "poePorts": 16,
+   "budgetW": 225,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 25,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1518p-si/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000043338/DS-3E1518P-SI_Datasheet_20240425.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e2528p-b",
+   "brand": "Hikvision",
+   "model": "DS-3E2528P(B)",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/transmission/Network-Switches/project-switches/ds-3e2528p/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000009043/DS-3E2528PB_Datasheet_20250604.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e0528hp-e",
+   "brand": "Hikvision",
+   "model": "DS-3E0528HP-E",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": true,
+   "powerW": 30,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0528hp-e/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000011313/DS-3E0528HP-E_Datasheet_20250424.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1526p-si-24p2f",
+   "brand": "Hikvision",
+   "model": "DS-3E1526P-SI-24P2F",
+   "status": "verified",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 20,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1526p-si-24p2f/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000168045/DS-3E1526P-SI-24P2F_Datasheet_20261102.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e1526p-si",
+   "brand": "Hikvision",
+   "model": "DS-3E1526P-SI",
+   "status": "needs_review",
+   "poePorts": 24,
+   "budgetW": 370,
+   "at": true,
+   "hiPoe": false,
+   "powerW": 30,
+   "notes": [
+    "poePorts: только в странице",
+    "budgetW: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/transmission/Network-Switches/smart-managed-series/ds-3e1526p-si/",
+   "sourcePdf": null,
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-3e2752p-h-b",
+   "brand": "Hikvision",
+   "model": "DS-3E2752P-H(B)",
+   "status": "verified",
+   "poePorts": 48,
+   "budgetW": 476,
+   "at": true,
+   "hiPoe": false,
+   "powerW": null,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/transmission/Network-Switches/project-switches/ds-3e2752p-h-b-/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/m000183120/DS-3E2752P-HB_Datasheet_20260529.pdf",
+   "cat": "hik-switches",
+   "checkedAt": "2026-11-10"
+  }
+ ],
+ "ups": [
+  {
+   "slug": "hik-ds-ups600",
+   "model": "DS-UPS600",
+   "status": "needs_review",
+   "w": 360,
+   "va": 600,
+   "notes": [
+    "va: только в странице",
+    "w: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/premises-distribution-system/ups/back-up-type-ups/ds-ups600/",
+   "sourcePdf": null,
+   "cat": "hik-ups",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-ups1000",
+   "model": "DS-UPS1000",
+   "status": "needs_review",
+   "w": 600,
+   "va": 1000,
+   "notes": [
+    "va: только в странице",
+    "w: только в странице"
+   ],
+   "sourcePage": "https://www.hikvision.com/en/products/premises-distribution-system/ups/back-up-type-ups/ds-ups1000/",
+   "sourcePdf": null,
+   "cat": "hik-ups",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-ups1000-r-eu",
+   "model": "DS-UPS1000-R",
+   "status": "verified",
+   "w": 600,
+   "va": 1000,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/europe/products/premises-distribution-system/ups/back-up-type-ups/ds-ups1000-r/",
+   "sourcePdf": "https://assets.hikvision.com/prd/normal/all/doc/sm000104040/DS-UPS1000-R_EU_Datasheet_20250825.pdf",
+   "cat": "hik-ups",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-ups2000",
+   "model": "DS-UPS2000",
+   "status": "verified",
+   "w": 1200,
+   "va": 2000,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/premises-distribution-system/ups/back-up-type-ups/ds-ups2000/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/sm000090507/DS-UPS2000_GER_Datasheet_20240112.pdf",
+   "cat": "hik-ups",
+   "checkedAt": "2026-11-10"
+  },
+  {
+   "slug": "hik-ds-ups3000",
+   "model": "DS-UPS3000",
+   "status": "verified",
+   "w": 1800,
+   "va": 3000,
+   "notes": [],
+   "sourcePage": "https://www.hikvision.com/en/products/premises-distribution-system/ups/back-up-type-ups/ds-ups3000/",
+   "sourcePdf": "https://assets.hikvision.com/prd/public/all/doc/m000086221/DS-UPS3000_EU_Datasheet_20240731.pdf",
+   "cat": "hik-ups",
+   "checkedAt": "2026-11-10"
+  }
+ ],
+ "hdds": [
+  {
+   "slug": "pro-seagate-skyhawk-hdd-500gb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-500gb (DUBAI)",
+   "tb": 0.5,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-1tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-1TB (DUBAI)",
+   "tb": 1,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-2tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-2TB (DUBAI)",
+   "tb": 2,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd10purx-78-original-hdd-1tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD10PURX-78 (Original) HDD-1tb",
+   "tb": 1,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds20hkvs-vx1-original-hdd-2tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения DS20HKVS-VX1 (Original) HDD-2tb",
+   "tb": 2,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd20purx-78-original-hdd-2tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD20PURX-78 (Original) HDD-2tb",
+   "tb": 2,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd30purx-78-original-hdd-3tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD30PURX-78 (Original) HDD-3tb",
+   "tb": 3,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-4tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-4TB (DUBAI)",
+   "tb": 4,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-6tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-6TB (DUBAI)",
+   "tb": 6,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd40purx-78-original-hdd-4tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD40PURX-78 (Original) HDD-4tb",
+   "tb": 4,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds40hkvs-vx1-original-hdd-4tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения DS40HKVS-VX1 (Original) HDD-4tb",
+   "tb": 4,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds60hkvs-vx1-original-hdd-6tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения DS60HKVS-VX1 (Original) HDD-6tb",
+   "tb": 6,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd62purx-78-original-hdd-6tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD62PURX-78 (Original) HDD-6tb",
+   "tb": 6,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pxt-mg10ada800e",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск Toshiba Enterprise 8TB 7.2k SATA 6Gb/s 3.5\"",
+   "tb": 8,
+   "surveillance": false,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds-wd101purx-original-hdd-10tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS WD101PURX (Original) HDD-10tb",
+   "tb": 10,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-8tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-8TB (DUBAI)",
+   "tb": 8,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pxt-mg09aca14te",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск Toshiba Enterprise 14TB 7.2k SATA 6Gb/s 3.5\"",
+   "tb": 14,
+   "surveillance": false,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-seagate-skyhawk-hdd-10tb-dubai",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск для видеонаблюдения SEAGATE SKYHAWK HDD-10TB (DUBAI)",
+   "tb": 10,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds80hkvs-vx1-original-hdd-8tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск (HDD) DS80HKVS-VX1 (Original) HDD-8tb",
+   "tb": 8,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pxt-mg09aca18te",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск Toshiba Enterprise 18TB 7.2k SATA 6Gb/s 3.5\"",
+   "tb": 18,
+   "surveillance": false,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pro-ds120hkai-vx1-original-hdd-12tb",
+   "cat": "prochee-hdd",
+   "name": "Жёсткий диск для видеонаблюдения DS120HKAI-VX1 (Original) HDD-12tb",
+   "tb": 12,
+   "surveillance": true,
+   "status": "verified",
+   "notes": []
+  },
+  {
+   "slug": "pxt-mg10aca20te",
+   "cat": "prochee-hdd",
+   "name": "Жесткий диск Toshiba Enterprise 20TB 7.2k SATA 6Gb/s 3.5\"",
+   "tb": 20,
+   "surveillance": false,
+   "status": "verified",
+   "notes": []
+  }
+ ],
+ "cables": [
+  {
+   "slug": "knd-kabel-utp-kanihad-5-kateg-vnutrennyi-oranzhevyi-4-2-0-5-305-metr",
+   "outdoor": false,
+   "meters": 305,
+   "cat": "kanihad-cables"
+  },
+  {
+   "slug": "knd-kabel-utp-kanihad-6-kateg-naruzhnyi-chernyi-4-2-0-56-305-metr",
+   "outdoor": true,
+   "meters": 305,
+   "cat": "kanihad-cables"
+  }
+ ],
+ "rj45": {
+  "slug": "pxt-pxt-rj-45",
+  "cat": "pxt-scs"
+ },
+ "gofra": {
+  "slug": "pro-gofrirovannyi-shlang-25-50metr",
+  "meters": 50,
+  "cat": "prochee-accessories"
+ },
+ "cameraPower": {
+  "hik-ds-2cd1343g2-liuf-sl-2-8mm": {
+   "w": 9.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2443g2-iw-2-8mm-w": {
+   "w": 4.56,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2841t-zs": {
+   "w": 9.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2431dg-4g-sp-eau-b": {
+   "w": 4.9,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2143g2-lis2u-2-8mm": {
+   "w": 8.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1043g2-iuf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de4425iwg1-eo-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2ce12df3t-f-2-8mm": {
+   "w": 4.2,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1323g0e-i-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2c400mwg-e-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2387g3-li2uy-2-8mm-o-std": {
+   "w": 11,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a26g0-p-izhs-8-32mm-c-o-std": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1027g2h-liuf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g2h-liuf-srb-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g3h-liuf-sl": {
+   "w": 12.1,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1t47g3-liuf-2-8mm": {
+   "w": 10.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2421g0-i-2-8mm-c-o-std": {
+   "w": 8.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2443g2-i-2-8mm-o-std": {
+   "w": 6.8,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g2-lu-2-8mm-c-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2347g2h-liu-2-8mm-ef": {
+   "w": 6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de4425iw-de-o-std-s6": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2027g2-l-2-8mm-c": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd6425g1-30-2-8mm-8m-o-std": {
+   "w": 3.65,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2t63g2-4i-2-8mm-o-std": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2387g2h-liu-2-8mm-ef": {
+   "w": 8,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw1230ds-saw": {
+   "w": 4.1,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd2643g2-lizs2u-sl-2-8-12mm": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd6825g0-c-ivs-2mm-b": {
+   "w": 8.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2c200mwg-w-2-8mm": {
+   "w": 9,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ids-2cd7a26g0-p-izhs-2-8-12mm": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cv2121g2-idw-2-8mm-w": {
+   "w": 10,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g3h-liu": {
+   "w": 12.1,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g3-liuf-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw3849t1-zas-pv": {
+   "w": 9.8,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1347g0-l-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2087g3-li2uy-sl-2-8mm": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1b47g3-liu-2-8mm": {
+   "w": 10.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1643g2-iz-2-8-12mm": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd20123g2-liuy-sl-2-8mm-o-std": {
+   "w": 19,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t43g2-4i-2-8mm": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g2h-liu-2-8mm-ef": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-pt1239h-pv": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-pt1439h-pv": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a46g2-v-xzhsy-2-8-12mm-o-std": {
+   "w": 23.1,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2783g2-izs-2-8-12mm-o-std": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-pt2449c1-s-pv-pro": {
+   "w": 3.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-sd2c400na-b-pv-pro": {
+   "w": 3.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g2-lu-sl-4mm-c-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2849tl-s-pro": {
+   "w": 6.1,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1383g0-i-2-8mm-c": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1123g0e-i-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2347g2-l-2-8mm-c": {
+   "w": 7.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2183g2-i-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2063g2-li-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce10df3t-pf-2-8mm-o-std": {
+   "w": 2.9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de4225iw-de-o-std-t5": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2787g2ht-lizs-2-8-12mm": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de4215iw-de-o-std-t5": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2ce16d0t-itpfs-2-8mm-o-std": {
+   "w": 2.7,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cv2041g2-idw-2-8mm-d-o-std-fus": {
+   "w": 6,
+   "poe": "none",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw5442e-zhe": {
+   "w": 15.2,
+   "poe": "at",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd3047g2-ls-4mm-c": {
+   "w": 8.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t47g2-lsu-sl-4mm-c": {
+   "w": 9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2143g2-i-2-8mm-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1083g0-i-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2df8c442ixg1-elw": {
+   "w": 60,
+   "poe": "bt",
+   "status": "verified"
+  },
+  "hik-ds-2cv1043g2-lidwf-2-8mm-b": {
+   "w": 6.5,
+   "poe": "none",
+   "status": "verified"
+  },
+  "dahua-hac-hfw1209clp-led": {
+   "w": 3.3,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de7a432iw-aeb": {
+   "w": 42,
+   "poe": "hipoe",
+   "status": "verified"
+  },
+  "hik-ds-2df5232x-ael-t5": {
+   "w": 60,
+   "poe": "hipoe",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd3121g0-i-2-8mm-c": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2ce16d0t-exipf-2-8mm": {
+   "w": 3.3,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1147g2-luf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cv2141g2-idw-2-8mm-w": {
+   "w": 10,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1047g2-l-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t123g2-lis2uy-srb-2-8mm-o-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cv1023g2-lidwf-2-8mm-b": {
+   "w": 6.5,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2de2a404iwg1-e-w": {
+   "w": 11.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-dhi-itc413-pw4d-iz1": {
+   "w": 20,
+   "poe": "at",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw1239tl1-a-il": {
+   "w": 7.8,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1027g2h-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1043g2-liuf-sl-2-8mm": {
+   "w": 9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2043g2-iu-2-8mm": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2543g2-i-2-8mm": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1643g0e-iz-2-8-12mm": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2087g2-l-2-8mm-c": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2d25g1-d-nf-3-7mm-o-std": {
+   "w": 1.5,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1143g2-liu-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd20123g2-liuy-srb-2-8mm-o-std": {
+   "w": 11.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a46g0-p-izhsy-2-8-12mm": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t86g2-2i-4mm-c-o-std": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce72df3t-f-2-8mm-o-std": {
+   "w": 4.2,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de7432iw-ae-o-std-s5": {
+   "w": 42,
+   "poe": "hipoe",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1147g2h-liuf-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1063g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd3t86g2-4is-2-8mm-h": {
+   "w": 16,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2043g2-li2u-black-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2643g2-izs-2-8-12mm-o-std": {
+   "w": 15,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g2h-liu-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g3-liu-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g3-liuf-srb-2-8mm-new": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1323g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1023g0e-i-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1067g3-liuf-sl-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1323g0-iuf-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-h3a": {
+   "w": 3.6,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1b47g3-liuf-2-8mm": {
+   "w": 10.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-p4f-pv-4g": {
+   "w": 3,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1027g2-l-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1t47g3-liu-2-8mm": {
+   "w": 10.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-t2a-led": {
+   "w": 5.8,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1053g0-i-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1083g2-liuf-sl-2-8mm": {
+   "w": 9.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1067g3-liu-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2023g2-iu-2-8mm-d": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2083g2-li2u-srb-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2143g2-li-2-8mm": {
+   "w": 8.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2083g2-iu-2-8mm": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd23123g2-lis2uy-srb": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2de2a604iwg1-eo-std": {
+   "w": 9.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2686g2-izs-2-8-12mm-c-o-std": {
+   "w": 15,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cv2021g2-idw-2-8mm-w": {
+   "w": 9,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2xe6045g0-i-4mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2xe6146f-hs-2-8mm": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce76d0t-exipf-2-8mm-o-std": {
+   "w": 3.3,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ids-tcv900-he-1140-h1-af": {
+   "w": 32,
+   "poe": "none",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw1439tl1-a-il": {
+   "w": 7.7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hdw1230t1-a": {
+   "w": 4.1,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw1230t1-s5": {
+   "w": 4.6,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw1439v-a-il": {
+   "w": 5.7,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1067g2h-liu-2-8mm": {
+   "w": 8,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2043g2-li2u-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2687g2ht-lizs-2-8-12mm-ef": {
+   "w": 18,
+   "poe": "at",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2543g2-is-2-8mm-black": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hdw2849t-s-il": {
+   "w": 5.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw3441em-s-s2": {
+   "w": 7.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw2449s-s-il": {
+   "w": 5.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2087g2-lu-2-8mm-c": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw5442e-ze": {
+   "w": 12.3,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd1047g3h-liuf-srb-2-8mm-o-std": {
+   "w": 12.1,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2449t-as-il": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw2441t-zs": {
+   "w": 10.1,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2ce17d0t-it1f-2-8mm-c": {
+   "w": 2.2,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a46g0-p-izhs-8-32mm-c": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw3441e-as-s2": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw3849t1-as-pv": {
+   "w": 11.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2483g2-i-2-8mm": {
+   "w": 6.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1067g3-liuf-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1043g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2347g2-lu-2-8mm-c-o-std": {
+   "w": 7.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2566g2-i-2-8mm-c-o-std": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1083g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw1230ds1-saw": {
+   "w": 4.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw5442e-z4e": {
+   "w": 10.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2087g2h-liu-2-8mm-ef": {
+   "w": 8.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2143g2-is-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2387g2-lu-2-8mm-c": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2183g2-lis2u-2-8mm": {
+   "w": 10,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g3-li2uy-srb-2-8mm-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2083g2-i-2-8mm-o-std": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1043g2-i-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2063g2-i-2-8mm-o-std": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1023g0-iuf-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2147g2-lsu-2-8mm-c": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t86g2-4i-2-8mm": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2143g2-iu-black-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1063g2-liuf-sl-2-8mm": {
+   "w": 9.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t47g2-l-4mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1143g2-iuf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de5425iw-ae-o-std-t5": {
+   "w": 24,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2de2c400mwg-w-4mm": {
+   "w": 9,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2643g2-lizs2u-2-8-12mm": {
+   "w": 15,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1043g2-liduf-4g-sl-2-8mm": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1327g0-l-2-8mm-c-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2085g1-i-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce10df0t-pf-2-8mm-o-std": {
+   "w": 2.4,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t123g2-lis2uy-sl-2-8mm-o-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t43g2-2i-4mm-o-std": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2d25g1-d-nf-2-8mm-o-std": {
+   "w": 1.5,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de2c400mwg-4g-2-8mm": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2df8242ix-aelw-o-std-t5": {
+   "w": 60,
+   "poe": "hipoe",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2683g2-izs-2-8-12mm": {
+   "w": 15,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2163g2-i-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2083g2-li2u-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t46g2-2i-2-8mm-c": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t46g2-4i-2-8mm-c": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de5225iw-ae-o-std-s5": {
+   "w": 30,
+   "poe": "hipoe",
+   "status": "needs_review"
+  },
+  "hik-ids-2cd7146g0-izs-2-8-12mm": {
+   "w": 12.5,
+   "poe": "at",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2849s-s-il": {
+   "w": 5.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw1239v-a-il": {
+   "w": 5.6,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a26g0-izhsy-2-8-12mm": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw2849t-as-il": {
+   "w": 8.3,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t63g2-2li-2-8mm": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t63g0-i5-4mm-o-std": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2663g2-izs-2-8-12mm": {
+   "w": 15,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g2-luf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2c400mw-de-f0-s7": {
+   "w": 10.8,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2463g2-i-2-8mm-o-std": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw3441e-s-s2": {
+   "w": 7.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2t83g0-i5-4mm-o-std": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce16h0t-itpfs-2-8mm-o-std": {
+   "w": 3.7,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2ce16h0t-itpf-2-8mm-o-std-c": {
+   "w": 4.3,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd2443g0-iw-2-8mm-w": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2c200mwg-e-2-8mm": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2043g2-li-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd3641g2-izs-2-7-13-5mm-o-std": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1663g2-lizu-2-8-12mm-o-std": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2c200mwg-4g-2-8mm": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd1343g2-iuf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd23123g2-lis2uy-sl-2-8mm-o-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd2543g2-is-2-8mm": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1083g2-liuf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1027g2-luf-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2746g2-izs": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-f2c-led": {
+   "w": 5.3,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2df8c435mhs-delw": {
+   "w": 62,
+   "poe": "hipoe",
+   "status": "verified"
+  },
+  "dahua-ipc-hdbw3849r1-zas-pv": {
+   "w": 10.1,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2t86g2-2i-2-8mm-c": {
+   "w": 12,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1653g0-iz-2-8-12mm-o-std": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-sd2a400hb-gn-agq-pv-sp-eau": {
+   "w": 10,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-sd6ce245gb-hnr": {
+   "w": 13,
+   "poe": "at",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2063g2-li2u-black-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-sd3d216nb-gny": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1023g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2de2a404iwg1-e-o-std": {
+   "w": 9.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2043g2-i-2-8mm-o-std": {
+   "w": 7,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g2-l-2-8mm-c-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t63g2-2i-2-8mm": {
+   "w": 12.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1343g2-liu-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2183g2-li-2-8mm": {
+   "w": 10,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1047g2h-liuf-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cv1f43g2-lidwf-2-8mm-b": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de5432iwg-e": {
+   "w": 24,
+   "poe": "at",
+   "status": "verified"
+  },
+  "dahua-ipc-hdw1230dt-saw": {
+   "w": 4.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw1431t1-a": {
+   "w": 3.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw1839t-a-il": {
+   "w": 4.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw2449t-s-il": {
+   "w": 5.2,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2543g0-i-2-8mm-o-std": {
+   "w": 10,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2183g2-iu-2-8mm-o-std": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-sd4e425gb-hnr-a-pv1": {
+   "w": 7,
+   "poe": "at",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hdw3849h-as-pv": {
+   "w": 8.2,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2ce12df0t-f-2-8mm-o-std": {
+   "w": 4,
+   "poe": null,
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2t65g1-i8-2-8mm-o-std": {
+   "w": 12.9,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-ipc-hfw1230s1-a": {
+   "w": 4.1,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd5ac5g0-izhs-2-8-12mm-b-o-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw1430ds-saw": {
+   "w": 4.1,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cd2t47g2-l-2-8mm-c-o-std": {
+   "w": 10.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2df8225ix-ael-o-std-t5": {
+   "w": 60,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "dahua-ipc-hfw3441dg-as-4g-eau-b": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "needs_review"
+  },
+  "hik-ds-2cd2685g0-izs-2-8-12mm-o-std": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2ce76d0t-itpfs-2-8mm-o-std": {
+   "w": 2.7,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2ce76h0t-itpf-2-8mm-o-std-c": {
+   "w": 4.3,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2ce76h0t-itpfs-2-8mm": {
+   "w": 3.7,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2de4415iw-de-o-std-t5": {
+   "w": 18,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2df8c442ixg-elw": {
+   "w": 62,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2df8c835mhs-delw": {
+   "w": 62,
+   "poe": "hipoe",
+   "status": "verified"
+  },
+  "hik-ids-2cd7a46g0-izhs-2-8-12mm-c": {
+   "w": 16.8,
+   "poe": "at",
+   "status": "verified"
+  },
+  "hik-ds-2cd1153g0-i-2-8mm-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2143g2-iu-2-8mm-o-std": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2083g2-li-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd2047g2-lu-sl-2-8mm-c": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1343g2-i-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1123g2-liu-2-8mm": {
+   "w": 7.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1143g2-i-2-8mm": {
+   "w": 6.5,
+   "poe": "af",
+   "status": "verified"
+  },
+  "hik-ds-2cd1023g2-liduf-4g-sl-2-8mm": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "hik-ds-2cv1f23g2-lidwf-2-8mm-b": {
+   "w": 9,
+   "poe": "none",
+   "status": "verified"
+  },
+  "dahua-sd6al445gb-hnv-ir": {
+   "w": 13,
+   "poe": "hipoe",
+   "status": "verified"
+  },
+  "hik-ds-tcg406-e": {
+   "w": 10,
+   "poe": "af",
+   "status": "verified"
+  },
+  "dahua-dhi-itc431-rw1f-irl8": {
+   "w": 13,
+   "poe": "af",
+   "status": "verified"
+  }
+ }
+}

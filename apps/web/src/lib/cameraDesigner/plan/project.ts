@@ -9,6 +9,7 @@
 import { LIMITS, inRange, isNum, rad, deg, varifocalAt } from "../optics";
 import { ENGINE_VERSION, PROFILES, type StandardKey } from "../standards";
 import type { CamPose, Segment, Vec2 } from "./geometry";
+import { DEFAULT_SETTINGS, type EstSettings } from "../estimate/estimate";
 
 export const PLAN_FORMAT = "sat-camera-plan";
 export const PLAN_VERSION = 1;
@@ -61,6 +62,8 @@ export type PlanCamera = {
   zoom: number;
   vi: number;
   spec: CamSpec;
+  /** Уличная установка (смета: расценка монтажа и уличный кабель). */
+  outdoor?: boolean;
 };
 
 export type PlanBg =
@@ -80,6 +83,9 @@ export type PlanProject = {
   walls: Segment[];
   zones: Vec2[][];
   showOverlap: boolean;
+  /** Шкаф с регистратором (этап D): от него считается длина кабеля до камер. */
+  rack: Vec2 | null;
+  est: EstSettings;
   updatedAt: string;
 };
 
@@ -88,8 +94,20 @@ export function emptyProject(): PlanProject {
     format: PLAN_FORMAT, version: PLAN_VERSION, engine: ENGINE_VERSION,
     std: "2014", profileId: PROFILES["2014"].id, all: false,
     targetM: 1.6, bg: null, cams: [], walls: [], zones: [], showOverlap: true,
+    rack: null, est: { ...DEFAULT_SETTINGS },
     updatedAt: new Date(0).toISOString(),
   };
+}
+
+/** Средняя длина кабеля на камеру, если шкаф не отмечен (как ручной режим сметы). */
+export const DEFAULT_CABLE_M = 30;
+
+/**
+ * Длина кабеля от шкафа до камеры: трасса вдоль стен (по осям, а не по прямой), подъём к камере
+ * (высота установки − 1 м уровня шкафа), 1 м на подключение и 10 % запаса.
+ */
+export function cableRun(c: { x: number; y: number; mountM: number }, rack: Vec2): number {
+  return (Math.abs(c.x - rack.x) + Math.abs(c.y - rack.y) + Math.max(0, c.mountM - 1) + 1) * 1.1;
 }
 
 /** Границы плана в метрах; null — масштаб картинки ещё не задан. */
@@ -190,7 +208,19 @@ function parseCam(x: unknown): PlanCamera | null {
   const spec = parseSpec(o.spec);
   if (!id || n === null || !p || mountM === null || panDeg === null || tiltDeg === null || zoom === null || vi === null || !spec) return null;
   if (!Number.isInteger(n) || !Number.isInteger(vi) || vi >= spec.variants.length) return null;
-  return { id, n, x: p.x, y: p.y, mountM, panDeg, tiltDeg, zoom, vi, spec };
+  return { id, n, x: p.x, y: p.y, mountM, panDeg, tiltDeg, zoom, vi, spec, ...(o.outdoor === true ? { outdoor: true } : {}) };
+}
+
+/** Настройки сметы: необязательное поле (проекты этапа C его не содержат) — по умолчанию DEFAULT_SETTINGS. */
+export function parseEst(x: unknown): EstSettings {
+  const o = (x ?? {}) as Record<string, unknown>;
+  const days = num(o.days, [1, 365]);
+  return {
+    days: days !== null && Number.isInteger(days) ? days : DEFAULT_SETTINGS.days,
+    mode: o.mode === "motion" ? "motion" : "continuous",
+    codec: o.codec === "h264" ? "h264" : "h265",
+    trace: o.trace === "ready" ? "ready" : "need",
+  };
 }
 
 function parseBg(x: unknown): PlanBg | null | undefined {
@@ -243,6 +273,8 @@ export function parseProject(x: unknown): PlanProject | null {
     engine: str(o.engine, 40) ?? ENGINE_VERSION,
     std, profileId: PROFILES[std].id, all: o.all === true, targetM, bg, cams, walls, zones,
     showOverlap: o.showOverlap !== false,
+    rack: o.rack === null || o.rack === undefined ? null : pt(o.rack),
+    est: parseEst(o.est),
     updatedAt: str(o.updatedAt, 40) ?? new Date(0).toISOString(),
   };
 }
@@ -259,5 +291,6 @@ export function rescaleProject(p: PlanProject, k: number): PlanProject {
     cams: p.cams.map((c) => ({ ...c, x: c.x * k, y: c.y * k })),
     walls: p.walls.map(([a, b]) => [s(a), s(b)] as Segment),
     zones: p.zones.map((z) => z.map(s)),
+    rack: p.rack ? s(p.rack) : null,
   };
 }

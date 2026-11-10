@@ -10,7 +10,7 @@ import type { Vec2 } from "@/lib/cameraDesigner/plan/geometry";
 import type { PlanProject } from "@/lib/cameraDesigner/plan/project";
 import { PlanVectors, type Draft, type Selection } from "./PlanVectors";
 
-export type Tool = "select" | "camera" | "wall" | "zone" | "scale";
+export type Tool = "select" | "camera" | "wall" | "zone" | "scale" | "rack";
 type Bounds = { x: number; y: number; w: number; h: number };
 type View = { s: number; ox: number; oy: number };
 
@@ -39,6 +39,7 @@ export function PlanCanvas(p: {
   onDraftCursor: (pt: Vec2 | null) => void;
   onDraftFinish: () => void;
   onDragging: (on: boolean) => void;
+  onRack: (x: number, y: number) => void;
 }) {
   const wrap = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
@@ -54,8 +55,11 @@ export function PlanCanvas(p: {
     const measure = () => { if (el.clientWidth > 0) setSize({ w: el.clientWidth, h: el.clientHeight || 520, measured: true }); };
     const ro = new ResizeObserver(measure);
     ro.observe(el);
+    // в фоновой вкладке ResizeObserver молчит — перемеряем ещё по resize и при возврате на вкладку
+    window.addEventListener("resize", measure);
+    document.addEventListener("visibilitychange", measure);
     measure();
-    return () => ro.disconnect();
+    return () => { ro.disconnect(); window.removeEventListener("resize", measure); document.removeEventListener("visibilitychange", measure); };
   }, []);
 
   const fit = useCallback(() => {
@@ -113,7 +117,8 @@ export function PlanCanvas(p: {
 
   function onDown(e: React.PointerEvent<SVGSVGElement>) {
     if (e.button !== 0 && e.pointerType === "mouse") return;
-    svg.current!.setPointerCapture(e.pointerId);
+    // захват может бросить исключение (неактивный указатель) — без него просто теряем перетаскивание за край
+    try { svg.current!.setPointerCapture(e.pointerId); } catch { /* без захвата */ }
     pointers.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pointers.current.size === 2) {
       const [a, b] = [...pointers.current.values()];
@@ -187,7 +192,10 @@ export function PlanCanvas(p: {
     if (d.mode === "pan" && !d.moved) {
       const q = toPlan(e.clientX, e.clientY);
       const t = e.target as Element;
-      if (p.tool === "camera" && p.armed) {
+      if (p.tool === "rack") {
+        const c = clamp(q);
+        p.onRack(c.x, c.y);
+      } else if (p.tool === "camera" && p.armed) {
         const inside = q.x >= B.x && q.x <= B.x + B.w && q.y >= B.y && q.y <= B.y + B.h;
         if (inside) p.onPlace(q.x, q.y);
       } else if (p.tool === "wall" || p.tool === "zone" || p.tool === "scale") {

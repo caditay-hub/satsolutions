@@ -9,6 +9,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useState, type ReactNode } from "react";
 import type { CdPlanUi } from "@/lib/cameraDesigner/planContent";
+import type { CdEstUi } from "@/lib/cameraDesigner/estContent";
 import type { LevelCode } from "@/lib/cameraDesigner/standards";
 
 const CameraPlanner = dynamic(() => import("@/components/planner/CameraPlanner").then((m) => m.CameraPlanner), {
@@ -19,6 +20,7 @@ const CameraPlanner = dynamic(() => import("@/components/planner/CameraPlanner")
 export function CameraDesignerTabs(p: {
   children: ReactNode;
   plan: CdPlanUi;
+  est: CdEstUi;
   levels: Record<LevelCode, { name: string }>;
   ruLevels: Record<LevelCode, string>;
   locale: string;
@@ -56,7 +58,7 @@ export function CameraDesignerTabs(p: {
       {/* калькулятор не размонтируем: его состояние живёт, пока клиент работает с планом */}
       <div role="tabpanel" id="cd-panel-calc" aria-labelledby="cd-tab-calc" hidden={tab !== "calc"}>{p.children}</div>
       <div role="tabpanel" id="cd-panel-plan" aria-labelledby="cd-tab-plan" hidden={tab !== "plan"}>
-        {planMounted ? <CameraPlanner ui={p.plan} levels={p.levels} ruLevels={p.ruLevels} locale={p.locale} /> : null}
+        {planMounted ? <CameraPlanner ui={p.plan} est={p.est} levels={p.levels} ruLevels={p.ruLevels} locale={p.locale} /> : null}
       </div>
     </div>
   );

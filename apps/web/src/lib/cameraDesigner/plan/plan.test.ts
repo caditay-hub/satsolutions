@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { analyze } from "./analysis";
 import { aimDistance, band, blindRadius, depthEdge, frameOf, inPolygon, polygonArea, sample, segmentsCross, tiltForAim, visible, type CamPose, type Vec2 } from "./geometry";
-import { emptyProject, isPlanImageUrl, opticsAt, parseProject, poseOf, rescaleProject, type CamSpec, type PlanCamera } from "./project";
+import { cableRun, emptyProject, isPlanImageUrl, opticsAt, parseProject, poseOf, rescaleProject, type CamSpec, type PlanCamera } from "./project";
 import { depthAtGround, depthForPpm, opticsFromFov, sideGeometry, varifocalAt } from "../optics";
 
 const T = 1.6;
@@ -170,6 +170,18 @@ describe("файл проекта", () => {
     expect(bad({ zones: [[{ x: 0, y: 0 }, { x: 1, y: 1 }]] })).toBeNull();
     expect(bad({ targetM: 9 })).toBeNull();
     expect(parseProject(null)).toBeNull();
+  });
+
+  it("файл этапа C (без шкафа и настроек сметы) открывается с настройками по умолчанию", () => {
+    const old = JSON.parse(JSON.stringify(proj)) as Record<string, unknown>;
+    delete old.rack; delete old.est;
+    const back = parseProject(old)!;
+    expect(back.rack).toBeNull();
+    expect(back.est).toEqual({ days: 30, mode: "continuous", codec: "h265", trace: "need" });
+  });
+
+  it("длина кабеля от шкафа: по осям + подъём + 1 м, запас 10 %", () => {
+    expect(cableRun({ x: 10, y: 5, mountM: 3 }, { x: 0, y: 0 })).toBeCloseTo((10 + 5 + 2 + 1) * 1.1, 9);
   });
 
   it("картинка плана — только data:-URL изображения", () => {

@@ -23,15 +23,24 @@ import type { CdPlanUi } from "@/lib/cameraDesigner/planContent";
 import { analyze, type AnalysisInput, type AnalysisResult } from "@/lib/cameraDesigner/plan/analysis";
 import { blindRadius, frameOf, inPolygon, tiltForAim, dist, type Segment, type Vec2 } from "@/lib/cameraDesigner/plan/geometry";
 import {
-  PLAN_LIMITS, emptyProject, isPlanImageUrl, isZoom, opticsAt, parseProject, planBounds, poseOf, rescaleProject,
+  DEFAULT_CABLE_M, PLAN_LIMITS, cableRun, emptyProject, isPlanImageUrl, isZoom, opticsAt, parseEst, parseProject, planBounds, poseOf, rescaleProject,
   type CamSpec, type PlanCamera, type PlanProject,
 } from "@/lib/cameraDesigner/plan/project";
+import { DEFAULT_SETTINGS, type EstSettings } from "@/lib/cameraDesigner/estimate/estimate";
+import type { CdEstUi } from "@/lib/cameraDesigner/estContent";
+import { EstimatePanel, type EstInput, type EstView } from "./EstimatePanel";
+import { KpSheet, kpDate } from "./KpSheet";
 import type { PlanCameraInfo, PlanCatalogCamera } from "@/app/api/camera-designer/cameras/route";
 import { PlanCanvas, type Tool } from "./PlanCanvas";
 import { PlanVectors, type Draft, type Selection } from "./PlanVectors";
 import { download, idbClear, idbLoad, idbSave, loadImage, loadRaster, openPdf, renderPdfPage, sniff, type PlanImage } from "./planIO";
 
-type Props = { ui: CdPlanUi; levels: Record<LevelCode, { name: string }>; ruLevels: Record<LevelCode, string>; locale: string };
+type Props = { ui: CdPlanUi; est: CdEstUi; levels: Record<LevelCode, { name: string }>; ruLevels: Record<LevelCode, string>; locale: string };
+
+/** Смета без плана (этап D): камеры из каталога списком, средняя длина кабеля и высота. */
+type ManualRow = { cam: PlanCatalogCamera; qty: number; outdoor: boolean };
+type ManualState = { rows: ManualRow[]; mountM: number; cableM: number; est: EstSettings };
+const emptyManual = (): ManualState => ({ rows: [], mountM: 3, cableM: DEFAULT_CABLE_M, est: { ...DEFAULT_SETTINGS } });
 
 const RES = [[1920, 1080], [2560, 1440], [2688, 1520], [2560, 1944], [2880, 1620], [3200, 1800], [3840, 2160], [4000, 3000]] as const;
 const FILE_FORMAT = "sat-camera-plan-file";
@@ -78,7 +87,7 @@ function Num(p: { id: string; label: string; value: number; min: number; max: nu
 
 /* ─────────── основной компонент ─────────── */
 
-export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
+export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
   const { num, dec } = makeFmt(locale);
   const [project, setProject] = useState<PlanProject>(emptyProject);
   const [bgUrl, setBgUrl] = useState<string | null>(null);
@@ -96,6 +105,8 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
   const [gridH, setGridH] = useState(30);
   const [fitKey, setFitKey] = useState("0");
   const [dragging, setDragging] = useState(false);
+  /** Смета без плана (этап D) — отдельный экран вместо стартового. */
+  const [manualOn, setManualOn] = useState(false);
   const fileInput = useRef<HTMLInputElement>(null);
   const projInput = useRef<HTMLInputElement>(null);
 
@@ -376,11 +387,11 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
   const [catalog, setCatalog] = useState<{ status: "idle" | "loading" | "ok" | "error"; list: PlanCatalogCamera[] }>({ status: "idle", list: [] });
   const [q, setQ] = useState("");
   useEffect(() => {
-    if (tool !== "camera" || catalog.status !== "idle") return;
+    if ((tool !== "camera" && !manualOn) || catalog.status !== "idle") return;
     setCatalog({ status: "loading", list: [] });
     fetch("/api/camera-designer/cameras").then((r) => (r.ok ? r.json() : Promise.reject())).then((j: { cameras: PlanCatalogCamera[] }) => setCatalog({ status: "ok", list: j.cameras }))
       .catch(() => setCatalog({ status: "error", list: [] }));
-  }, [tool, catalog.status]);
+  }, [tool, catalog.status, manualOn]);
   const found = useMemo(() => {
     const s = norm(q);
     const list = s ? catalog.list.filter((c) => norm(`${c.brand}${c.model}`).includes(s) || norm(c.model).includes(s)) : catalog.list;
@@ -442,6 +453,67 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
   }, [project.cams, info, ui.customRow, num]);
   const total = rows.reduce((s, r) => s + (r.priceNum ? r.priceNum * r.qty : 0), 0);
   const allPriced = rows.length > 0 && rows.every((r) => r.priceNum);
+
+  /* ── смета (этап D): камеры плана или ручной список ── */
+  const [manual, setManual] = useState<ManualState | null>(null);
+  useEffect(() => {
+    idbLoad("manual").then((v) => {
+      const o = v as Partial<ManualState> | undefined;
+      if (!o || !Array.isArray(o.rows)) return;
+      // строки — снимок из каталога; берём только корректные
+      const rowsOk = o.rows.filter((r) => r && r.cam && typeof r.cam.slug === "string" && Number.isInteger(r.qty) && r.qty >= 1 && r.qty <= PLAN_LIMITS.cams && r.cam.nx > 0 && r.cam.ny > 0);
+      setManual({ rows: rowsOk, mountM: Number(o.mountM) > 0 && Number(o.mountM) <= 100 ? Number(o.mountM) : 3, cableM: Number(o.cableM) > 0 && Number(o.cableM) <= 1000 ? Number(o.cableM) : DEFAULT_CABLE_M, est: parseEst(o.est) });
+    }).catch(() => {});
+  }, []);
+  useEffect(() => {
+    if (!manual) return;
+    const t = setTimeout(() => { idbSave(manual, "manual").catch(() => setStorageWarn(true)); }, 800);
+    return () => clearTimeout(t);
+  }, [manual]);
+  const man = manual ?? emptyManual();
+  const setMan = (f: (m: ManualState) => ManualState) => setManual((m) => f(m ?? emptyManual()));
+  // названия и цены камер ручного списка — тем же запросом, что и для камер плана
+  const manualSlugs = useMemo(() => [...new Set(man.rows.map((r) => r.cam.slug))].sort().join(","), [man.rows]);
+  useEffect(() => {
+    const need = manualSlugs.split(",").filter((s) => s && !info[s]);
+    if (!need.length) return;
+    const t = setTimeout(() => {
+      fetch(`/api/camera-designer/cameras?slugs=${encodeURIComponent(need.join(","))}&locale=${locale}`)
+        .then((r) => (r.ok ? r.json() : Promise.reject())).then((j: { info: PlanCameraInfo[] }) => setInfo((m) => ({ ...m, ...Object.fromEntries(j.info.map((x) => [x.slug, x])) })))
+        .catch(() => {});
+    }, 300);
+    return () => clearTimeout(t);
+  }, [manualSlugs, info, locale]);
+
+  const camKey = (c: PlanCamera) => c.spec.slug ?? `custom:${opticsAt(c.spec, c.vi, 0)?.hfovDeg}:${c.spec.nx}x${c.spec.ny}`;
+  const estInputs = useMemo<EstInput[]>(() => {
+    if (manualOn) {
+      return man.rows.flatMap((r, i) => Array.from({ length: r.qty }, (): EstInput => ({
+        key: r.cam.slug, slug: r.cam.slug, brand: r.cam.brand, nx: r.cam.nx, ny: r.cam.ny,
+        kind: r.cam.kind === "analog" ? "analog" : r.cam.lensType === "ptz" ? "ptz" : "ip",
+        outdoor: r.outdoor, mountM: man.mountM, cableM: man.cableM,
+        label: `${i + 1}. ${r.cam.model}`, name: info[r.cam.slug]?.name ?? `${r.cam.brand} ${r.cam.model}`,
+      })));
+    }
+    return [...project.cams].sort((a, b) => a.n - b.n).map((c): EstInput => ({
+      key: camKey(c), slug: c.spec.slug, brand: c.spec.brand, nx: c.spec.nx, ny: c.spec.ny,
+      kind: c.spec.analog ? "analog" : c.spec.lensType === "ptz" ? "ptz" : "ip",
+      outdoor: !!c.outdoor, mountM: c.mountM,
+      cableM: project.rack ? cableRun(c, project.rack) : DEFAULT_CABLE_M,
+      label: camLabel(c.n),
+      name: rows.find((r) => r.key === camKey(c))?.name ?? c.spec.model,
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [manualOn, man, project.cams, project.rack, rows, info]);
+  const camPrices = useMemo(() => {
+    const out: Record<string, number | null> = {};
+    for (const c of estInputs) out[c.key] = c.slug ? info[c.slug]?.priceNum ?? null : null;
+    return out;
+  }, [estInputs, info]);
+  const [estView, setEstView] = useState<EstView | null>(null);
+  const money = useCallback((v: string) => fill(ui.money, { v }), [ui.money]);
+  const estSettings = manualOn ? man.est : project.est;
+  const setEstSettings = (s: EstSettings) => (manualOn ? setMan((m) => ({ ...m, est: s })) : patch((p) => ({ ...p, est: s })));
 
   /* ── экспорт: картинка плана целиком ── */
   async function composeCanvas(): Promise<HTMLCanvasElement | null> {
@@ -521,13 +593,22 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
     download(new Blob([body], { type: "application/json" }), `sat-plan-${today()}.satplan`);
   }
   const [printImg, setPrintImg] = useState<string | null>(null);
+  const [printKind, setPrintKind] = useState<"plan" | "kp" | null>(null);
   async function printPlan() {
     const c = await composeCanvas();
-    if (c) setPrintImg(c.toDataURL("image/jpeg", 0.92));
+    if (c) { setPrintKind("plan"); setPrintImg(c.toDataURL("image/jpeg", 0.92)); }
   }
+  /** КП: та же печать браузером; картинка плана — если смета построена по плану. */
+  async function printKp() {
+    if (!estView) return;
+    const c = !manualOn && calibrated ? await composeCanvas() : null;
+    setPrintKind("kp");
+    setPrintImg(c ? c.toDataURL("image/jpeg", 0.88) : "none");
+  }
+  const kpNo = useMemo(() => `SAT-CD-${today().replace(/-/g, "")}-${uid().slice(0, 4).toUpperCase()}`, [printImg]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!printImg) return;
-    const done = () => setPrintImg(null);
+    const done = () => { setPrintImg(null); setPrintKind(null); };
     window.addEventListener("afterprint", done, { once: true });
     const t = setTimeout(() => window.print(), 150);
     return () => { clearTimeout(t); window.removeEventListener("afterprint", done); };
@@ -565,6 +646,31 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
     }
     if (project.walls.length) lines.push(`Стены: ${project.walls.length} отрезков`);
     if (planUrl) lines.push("", `План: ${planUrl}`);
+    lines.push(...estimateText());
+    return lines.join("\n");
+  }
+
+  /** Смета в тексте заявки — по-русски, её читает инженер в CRM. */
+  function estimateText(): string[] {
+    if (!estView) return [];
+    const ru = makeFmt("ru").num;
+    const r = estView.r;
+    const out = ["", `Смета (архив ${estSettings.days} сут., ${estSettings.mode === "motion" ? "по движению" : "круглосуточно"}, ${estSettings.codec === "h264" ? "H.264" : "H.265"}; ${ru(r.storageTb, 1)} ТБ):`];
+    // строки r.lines и estView.rows идут в одном порядке; slug — чтобы инженер нашёл товар в каталоге
+    r.lines.forEach((l, i) => {
+      const nm = estView.rows[i]?.name ?? l.kind;
+      out.push(`${nm}${l.slug ? ` [${l.slug}]` : ""} × ${l.qty}${l.sum !== null ? ` = ${ru(l.sum, 0)}` : estView.rows[i]?.engineer ? " — подберёт инженер" : " — по запросу"}`);
+    });
+    out.push(`Оборудование: ${ru(r.totals.equipment, 0)} сум; работы ${ru(r.totals.laborLow, 0)}–${ru(r.totals.laborHigh, 0)} сум`);
+    if (r.warnings.length) out.push(`Предупреждения: ${r.warnings.map((w) => w.code).join(", ")}`);
+    return out;
+  }
+
+  function manualLeadText() {
+    const ru = makeFmt("ru").num;
+    const lines = [`🧾 Заявка: смета без плана (${locale})`, "", `Камеры (${estInputs.length}), высота ${ru(man.mountM)} м, кабель в среднем ${ru(man.cableM)} м:`];
+    for (const r of man.rows) lines.push(`${r.cam.brand} ${r.cam.model} × ${r.qty}${r.outdoor ? " (улица)" : ""} — ${SITE}/products/${r.cam.slug}`);
+    lines.push(...estimateText());
     return lines.join("\n");
   }
 
@@ -573,7 +679,7 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
     if (!phone.trim()) return;
     setSending(true); setFailed("");
     let planUrl: string | null = null;
-    if (attach) {
+    if (attach && !manualOn) {
       try {
         const c = await composeCanvas();
         let blob = c ? await new Promise<Blob | null>((r) => c.toBlob(r, "image/jpeg", 0.85)) : null;
@@ -595,12 +701,12 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
       const res = await fetch("https://api.satsolutions.uz/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: name || "Гость", phone, message: leadText(planUrl), gclid: getGclid() || undefined }),
+        body: JSON.stringify({ name: name || "Гость", phone, message: manualOn ? manualLeadText() : leadText(planUrl), gclid: getGclid() || undefined }),
       });
       if (!res.ok) throw new Error("bad status");
       setSent(true);
       const ph = phone.startsWith("+") ? phone : `+998${phone.replace(/\D/g, "").slice(-9)}`;
-      trackConversion("lead", { user: { phone: ph }, placement: "camera_planner" });
+      trackConversion("lead", { user: { phone: ph }, placement: manualOn ? "camera_estimate" : "camera_planner" });
     } catch {
       setFailed("send");
     }
@@ -608,11 +714,81 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
   }
 
   /* ── разметка ── */
+  const pct = (v: number) => `${Math.round(v * 100)} %`;
+  const zonesRes = result?.r.zones ?? [];
   if (!restored) return <div className={`${card} text-sm text-slate-500`}>{ui.loading}</div>;
 
   const hint = !calibrated && project.bg ? ui.hint.scaleNeeded
+    : tool === "rack" ? est.rackHint
     : tool === "camera" ? (armed ? ui.hint.place : ui.hint.pick)
     : tool === "wall" ? ui.hint.wall : tool === "zone" ? ui.hint.zone : tool === "scale" ? ui.hint.scale : ui.hint.select;
+
+  if ((!project.bg || !bounds) && manualOn) {
+    const totalQty = man.rows.reduce((a, r) => a + r.qty, 0);
+    const addRow = (c: PlanCatalogCamera) => {
+      if (totalQty >= PLAN_LIMITS.cams) { setError(fill(ui.limitCams, { n: String(PLAN_LIMITS.cams) })); return; }
+      setMan((m) => {
+        const i = m.rows.findIndex((r) => r.cam.slug === c.slug);
+        if (i >= 0) return { ...m, rows: m.rows.map((r, j) => (j === i ? { ...r, qty: r.qty + 1 } : r)) };
+        return { ...m, rows: [...m.rows, { cam: c, qty: 1, outdoor: c.lensType === "ptz" }] };
+      });
+    };
+    return (
+      <div className="space-y-4" onPointerEnter={() => { active.current = true; }}>
+        <div className={card}>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-base font-black text-slate-900">{est.manualTitle}</h2>
+            <button type="button" className={btnCls} onClick={() => setManualOn(false)}>← {est.backToPlan}</button>
+          </div>
+          <p className="mt-1 text-xs leading-relaxed text-slate-600">{est.manualHint}</p>
+          <div className="mt-3 grid gap-4 lg:grid-cols-2">
+            <div>
+              <input type="search" className={inputCls} placeholder={ui.search} value={q} onChange={(e) => setQ(e.target.value)} aria-label={ui.search} />
+              <div className="mt-2 max-h-72 space-y-1 overflow-y-auto pr-1">
+                {catalog.status === "loading" ? <p className="text-xs text-slate-500">{ui.loadingList}</p> : null}
+                {catalog.status === "error" ? <p className="text-xs text-amber-700">{ui.listError}</p> : null}
+                {catalog.status === "ok" && !found.length ? <p className="text-xs text-slate-500">{ui.searchEmpty}</p> : null}
+                {found.map((c) => (
+                  <div key={c.slug} className="flex items-center justify-between gap-2 rounded-lg border border-slate-200 px-2.5 py-2 text-xs">
+                    <span className="min-w-0">
+                      <span className="block truncate font-bold text-slate-900">{c.brand} {c.model}</span>
+                      <span className="block text-[11px] text-slate-500">{ui.lens[c.lensType]} · {num((c.nx * c.ny) / 1e6, 1)} MP{c.status === "needs_review" ? ` · ${ui.review}` : ""}</span>
+                    </span>
+                    <button type="button" className={btnCls} onClick={() => addRow(c)}>{est.manualAdd}</button>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div>
+              {man.rows.length ? (
+                <table className="w-full text-xs">
+                  <thead><tr className="border-b border-slate-200 text-left text-[10px] font-bold uppercase tracking-wide text-slate-500"><th className="py-1.5 pr-2">{ui.colModel}</th><th className="py-1.5 pr-2">{est.qty}</th><th className="py-1.5 pr-2">{est.outdoor}</th><th /></tr></thead>
+                  <tbody>
+                    {man.rows.map((r, i) => (
+                      <tr key={r.cam.slug} className="border-b border-slate-100 last:border-0">
+                        <td className="py-1.5 pr-2 font-semibold text-slate-800">{info[r.cam.slug]?.name ?? `${r.cam.brand} ${r.cam.model}`}</td>
+                        <td className="py-1.5 pr-2">
+                          <input type="number" min={1} max={PLAN_LIMITS.cams} value={r.qty} aria-label={est.qty} className="w-16 rounded-lg border border-slate-300 px-2 py-1.5 tabular-nums"
+                            onChange={(e) => { const v = Math.round(Number(e.target.value)); if (v >= 1 && totalQty - r.qty + v <= PLAN_LIMITS.cams) setMan((m) => ({ ...m, rows: m.rows.map((x, j) => (j === i ? { ...x, qty: v } : x)) })); }} />
+                        </td>
+                        <td className="py-1.5 pr-2"><input type="checkbox" checked={r.outdoor} aria-label={est.outdoor} className="h-4 w-4 accent-brand-600" onChange={(e) => setMan((m) => ({ ...m, rows: m.rows.map((x, j) => (j === i ? { ...x, outdoor: e.target.checked } : x)) }))} /></td>
+                        <td className="py-1.5 text-right"><button type="button" className="text-[11px] font-semibold text-red-600 hover:underline" onClick={() => setMan((m) => ({ ...m, rows: m.rows.filter((_, j) => j !== i) }))}>{est.remove}</button></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              ) : <p className="text-xs text-slate-500">{est.empty}</p>}
+              <p className="mt-2 text-[11px] text-slate-500">{est.outdoorHint}</p>
+            </div>
+          </div>
+          {error ? <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{error}</p> : null}
+        </div>
+        {estimateBlock()}
+        <div className="max-w-md">{leadBlock()}</div>
+        {printBlock()}
+      </div>
+    );
+  }
 
   if (!project.bg || !bounds) {
     return (
@@ -632,7 +808,7 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
             <button type="button" className={btnCls} onClick={() => setPdf(null)}>{ui.cancel}</button>
           </div>
         ) : (
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
+          <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-xl border border-slate-200 p-4">
               <button type="button" className={`${primaryCls} w-full`} disabled={busy} onClick={() => fileInput.current?.click()}>{busy ? ui.loading : ui.upload}</button>
               <p className="mt-2 text-center text-[11px] text-slate-500">{ui.uploadHint}</p>
@@ -651,6 +827,10 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
               <input ref={projInput} type="file" className="sr-only" accept=".satplan,application/json"
                 onChange={(e) => { onProjectFile(e.target.files?.[0]); e.target.value = ""; }} />
             </div>
+            <div className="rounded-xl border border-slate-200 p-4">
+              <button type="button" className={`${btnCls} w-full`} onClick={() => { setManualOn(true); setError(null); }}>{est.manualStart}</button>
+              <p className="mt-2 text-center text-[11px] text-slate-500">{est.manualHint}</p>
+            </div>
           </div>
         )}
         {error ? <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{error}</p> : null}
@@ -665,9 +845,6 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
       {label}
     </button>
   );
-  const pct = (v: number) => `${Math.round(v * 100)} %`;
-  const zonesRes = result?.r.zones ?? [];
-
   return (
     <div className="space-y-4" onPointerEnter={() => { active.current = true; }} onPointerLeave={() => { active.current = false; }} onFocus={() => { active.current = true; }}>
       {/* панель инструментов */}
@@ -678,6 +855,7 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
           {toolBtn("wall", ui.tools.wall)}
           {toolBtn("zone", ui.tools.zone)}
           {project.bg.kind === "image" ? toolBtn("scale", ui.tools.scale) : null}
+          {toolBtn("rack", est.rackTool, !calibrated)}
         </div>
         <div className="ml-auto flex flex-wrap gap-1.5">
           <button type="button" className={btnCls} onClick={saveFile}>{ui.save}</button>
@@ -709,6 +887,7 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
             onAim={aimCam} onPlace={placeCamera}
             onDraftPoint={draftPoint} onDraftCursor={(pt) => setDraft((d) => (d ? { ...d, cursor: pt } : tool === "wall" || tool === "zone" || tool === "scale" ? null : d))}
             onDraftFinish={finishDraft} onDragging={setDragging}
+            onRack={(x, y) => { patch((p) => ({ ...p, rack: { x, y } })); setTool("select"); }}
           />
           <p className="mt-2 text-[11px] leading-relaxed text-slate-500"><b>{ui.approx}.</b> {ui.disclaimer}</p>
         </div>
@@ -888,38 +1067,78 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
             </div>
           ) : null}
 
-          {/* заявка */}
-          <div className={card}>
-            <div className={h3}>{ui.leadTitle}</div>
-            {sent ? (
-              <div className="mt-2 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900"><b>{ui.sentTitle}.</b> {ui.sentText}</div>
-            ) : (
-              <form onSubmit={submit} className="mt-2 space-y-2">
-                <p className="text-xs leading-relaxed text-slate-600">{ui.leadText}</p>
-                <div>
-                  <label htmlFor="cp-n" className="mb-1 block text-xs font-semibold text-slate-600">{ui.name}</label>
-                  <input id="cp-n" className={inputCls} autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} maxLength={80} />
-                </div>
-                <div>
-                  <label htmlFor="cp-p" className="mb-1 block text-xs font-semibold text-slate-600">{ui.phone}</label>
-                  <input id="cp-p" className={inputCls} type="tel" autoComplete="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} maxLength={30} />
-                </div>
-                <label className="flex items-start gap-2 text-xs text-slate-700">
-                  <input type="checkbox" checked={attach} onChange={(e) => setAttach(e.target.checked)} className="mt-0.5 h-4 w-4 accent-brand-600" />
-                  <span>{ui.attach}<span className="block text-[11px] text-slate-500">{ui.attachHint}</span></span>
-                </label>
-                <button type="submit" className={`${primaryCls} w-full`} disabled={sending || !phone.trim()}>{sending ? ui.sending : ui.send}</button>
-                {failed ? <p role="alert" className="text-xs font-semibold text-red-600">{failed === "attach" ? ui.attachFailed : ui.failed}</p> : null}
-              </form>
-            )}
-          </div>
+          {leadBlock()}
         </div>
       </div>
 
-      {/* печать: только картинка плана, таблицы и методика */}
-      {printImg ? (
-        <>
-          <style>{"@media print{body *{visibility:hidden!important}#cd-print,#cd-print *{visibility:visible!important}#cd-print{position:absolute;left:0;top:0;width:100%;display:block!important}}"}</style>
+      {estimateBlock()}
+      {printBlock()}
+    </div>
+  );
+
+  /* ── смета под планом / в ручном режиме ── */
+  function estimateBlock() {
+    const cableNote = manualOn ? (
+      <div className="grid max-w-md grid-cols-2 gap-2">
+        <Num id="em-m" label={est.mountAvg} value={man.mountM} min={0.3} max={100} dec={dec} onChange={(v) => setMan((m) => ({ ...m, mountM: v }))} />
+        <Num id="em-c" label={est.cableAvg} value={man.cableM} min={1} max={1000} dec={dec} onChange={(v) => setMan((m) => ({ ...m, cableM: v }))} />
+      </div>
+    ) : (
+      <p className="rounded-lg bg-slate-50 px-3 py-2 text-xs leading-relaxed text-slate-600">
+        {project.rack ? est.rackHint : fill(est.rackNone, { m: String(DEFAULT_CABLE_M) })}{" "}
+        {!project.rack && calibrated ? <button type="button" className="font-semibold text-brand-700 hover:underline" onClick={() => setTool("rack")}>{est.rackTool} →</button> : null}
+      </p>
+    );
+    return (
+      <EstimatePanel ui={est} locale={locale} cams={estInputs} camPrices={camPrices} settings={estSettings} onSettings={setEstSettings}
+        money={money} cableNote={cableNote} onView={setEstView} onKp={printKp} />
+    );
+  }
+
+  /* ── заявка ── */
+  function leadBlock() {
+    return (
+      <div className={card}>
+        <div className={h3}>{ui.leadTitle}</div>
+        {sent ? (
+          <div className="mt-2 rounded-xl bg-emerald-50 p-3 text-sm text-emerald-900"><b>{ui.sentTitle}.</b> {ui.sentText}</div>
+        ) : (
+          <form onSubmit={submit} className="mt-2 space-y-2">
+            <p className="text-xs leading-relaxed text-slate-600">{ui.leadText}</p>
+            <div>
+              <label htmlFor="cp-n" className="mb-1 block text-xs font-semibold text-slate-600">{ui.name}</label>
+              <input id="cp-n" className={inputCls} autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} maxLength={80} />
+            </div>
+            <div>
+              <label htmlFor="cp-p" className="mb-1 block text-xs font-semibold text-slate-600">{ui.phone}</label>
+              <input id="cp-p" className={inputCls} type="tel" autoComplete="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} maxLength={30} />
+            </div>
+            {!manualOn ? (
+              <label className="flex items-start gap-2 text-xs text-slate-700">
+                <input type="checkbox" checked={attach} onChange={(e) => setAttach(e.target.checked)} className="mt-0.5 h-4 w-4 accent-brand-600" />
+                <span>{ui.attach}<span className="block text-[11px] text-slate-500">{ui.attachHint}</span></span>
+              </label>
+            ) : null}
+            <button type="submit" className={`${primaryCls} w-full`} disabled={sending || !phone.trim()}>{sending ? ui.sending : ui.send}</button>
+            {failed ? <p role="alert" className="text-xs font-semibold text-red-600">{failed === "attach" ? ui.attachFailed : ui.failed}</p> : null}
+          </form>
+        )}
+      </div>
+    );
+  }
+
+  /* ── печать: план или коммерческое предложение ── */
+  function printBlock() {
+    if (!printImg) return null;
+    return (
+      <>
+        <style>{"@media print{body *{visibility:hidden!important}#cd-print,#cd-print *{visibility:visible!important}#cd-print{position:absolute;left:0;top:0;width:100%;display:block!important}}"}</style>
+        {printKind === "kp" && estView ? (
+          <div id="cd-print" className="hidden bg-white p-4 text-black">
+            <KpSheet ui={est} locale={locale} view={estView} no={kpNo} date={kpDate(locale, today())} planImg={printImg === "none" ? null : printImg}
+              cams={manualOn ? [] : estInputs.map((c) => ({ label: c.label, name: c.name }))} money={money} />
+          </div>
+        ) : (
           <div id="cd-print" className="hidden bg-white p-4 text-black">
             <h1 className="text-xl font-black">{ui.printTitle}</h1>
             <p className="text-xs">SAT Solutions · satsolutions.uz · {fill(ui.printDate, { d: today() })}</p>
@@ -942,10 +1161,10 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
             <p className="mt-3 text-[10px]">{fill(ui.printMethod, { p: PROFILES[project.std].title, e: ENGINE_VERSION, t: num(project.targetM) })}</p>
             <p className="mt-1 text-[10px]">{ui.disclaimer}</p>
           </div>
-        </>
-      ) : null}
-    </div>
-  );
+        )}
+      </>
+    );
+  }
 
   /* ── редактор выбранной камеры ── */
   function camEditor(c: PlanCamera) {
@@ -1020,6 +1239,10 @@ export function CameraPlanner({ ui, levels, ruLevels, locale }: Props) {
         {zoom && c.zoom > 0 && c.zoom < 1 ? <p className="mt-2 text-[11px] text-slate-500">{ui.estimate}</p> : null}
         {c.spec.distortion ? <p className="mt-1 text-[11px] text-amber-700">{ui.distortion}</p> : null}
         {c.spec.analog ? <p className="mt-1 text-[11px] text-slate-500">{ui.analog}</p> : null}
+        <label className="mt-2 flex items-start gap-2 text-xs text-slate-700">
+          <input type="checkbox" checked={!!c.outdoor} onChange={(e) => updateCam(c.id, (x) => ({ ...x, outdoor: e.target.checked }))} className="mt-0.5 h-4 w-4 accent-brand-600" />
+          <span>{est.outdoor}<span className="block text-[11px] text-slate-500">{est.outdoorHint}</span></span>
+        </label>
         <div className="mt-3 flex gap-1.5">
           <button type="button" className={btnCls} onClick={() => duplicateCam(c)}>{ui.duplicate}</button>
           <button type="button" className={btnCls} onClick={removeSelected}>{ui.remove}</button>

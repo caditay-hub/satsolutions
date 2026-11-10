@@ -68,6 +68,18 @@ export function PlanVectors(p: {
         );
       })}
 
+      {/* шкаф и трассы кабеля до камер (по осям — так же считает смета) */}
+      {pr.rack ? (
+        <g pointerEvents="none">
+          {pr.cams.map((c) => (
+            <polyline key={`r${c.id}`} points={`${pr.rack!.x},${pr.rack!.y} ${c.x},${pr.rack!.y} ${c.x},${c.y}`} fill="none" stroke="#64748b"
+              strokeOpacity={0.55} strokeWidth={1} strokeDasharray="3 3" vectorEffect="non-scaling-stroke" />
+          ))}
+          <rect x={pr.rack.x - 9 * k} y={pr.rack.y - 9 * k} width={18 * k} height={18 * k} rx={3 * k} fill="#334155" stroke="#fff" strokeWidth={2} vectorEffect="non-scaling-stroke" />
+          <path d={`M ${pr.rack.x - 5 * k} ${pr.rack.y - 3 * k} h ${10 * k} M ${pr.rack.x - 5 * k} ${pr.rack.y + 1 * k} h ${10 * k} M ${pr.rack.x - 5 * k} ${pr.rack.y + 5 * k} h ${10 * k}`} stroke="#fff" strokeWidth={1.5} vectorEffect="non-scaling-stroke" />
+        </g>
+      ) : null}
+
       {pr.cams.map((c) => {
         const pose = poseOf(c);
         const fr = pose ? frameOf(pose, pr.targetM) : null;

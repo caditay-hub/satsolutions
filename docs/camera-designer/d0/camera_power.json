@@ -1,0 +1,5649 @@
+[
+ {
+  "slug": "hik-ds-2cd1343g2-liuf-sl-2-8mm",
+  "model": "DS-2CD1343G2-LIUF/SL 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  },
+  "pdf": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2443g2-iw-2-8mm-w",
+  "model": "DS-2CD2443G2-IW 2.8MM W",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 4.56,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 4.56,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.56,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2841t-zs",
+  "model": "IPC-HFW2841T-ZS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9.6,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 9.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2431dg-4g-sp-eau-b",
+  "model": "IPC-HFW2431DG-4G-SP-EAU-B",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.9,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 4.9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-lis2u-2-8mm",
+  "model": "DS-2CD2143G2-LIS2U 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  },
+  "pdf": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw7842h-z-s2",
+  "model": "IPC-HFW7842H-Z-S2",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd1043g2-iuf-2-8mm",
+  "model": "DS-2CD1043G2-IUF 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2de4425iwg1-eo-std",
+  "model": "DS-2DE4425IWG1-E",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1639tc-a-il",
+  "model": "IPC-HFW1639TC-A-IL",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce12df3t-f-2-8mm",
+  "model": "DS-2CE12DF3T-F 2.8MM",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 4.2,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1323g0e-i-2-8mm-c-o-std",
+  "model": "DS-2CD1323G0E-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c400mwg-e-2-8mm",
+  "model": "DS-2DE2C400MWG-E 2.8mm",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2387g3-li2uy-2-8mm-o-std",
+  "model": "DS-2CD2387G3-LI2UY(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 11,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 11,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 11
+  },
+  "pdf": {
+   "maxW": 11,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 11
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a26g0-p-izhs-8-32mm-c-o-std",
+  "model": "iDS-2CD7A26G0/P-IZHS(8-32mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1027g2h-liuf-2-8mm",
+  "model": "DS-2CD1027G2H-LIUF 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g2h-liuf-srb-2-8mm-o-std",
+  "model": "DS-2CD1047G2H-LIUF/SRB(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3h-liuf-sl",
+  "model": "DS-2CD1047G3H-LIUF/SL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.1,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  },
+  "pdf": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1t47g3-liuf-2-8mm",
+  "model": "DS-2CD1T47G3-LIUF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  },
+  "pdf": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2421g0-i-2-8mm-c-o-std",
+  "model": "DS-2CD2421G0-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 8.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.9
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2443g2-i-2-8mm-o-std",
+  "model": "DS-2CD2443G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.8,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.8
+  },
+  "pdf": {
+   "maxW": 6.8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.8
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g2-lu-2-8mm-c-o-std",
+  "model": "DS-2CD2047G2-LU(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2347g2h-liu-2-8mm-ef",
+  "model": "DS-2CD2347G2H-LIU(2.8mm)(eF)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6
+  },
+  "pdf": {
+   "maxW": 6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6
+  }
+ },
+ {
+  "slug": "hik-ds-2de4425iw-de-o-std-s6",
+  "model": "DS-2DE4425IW-DE(O-STD)(S6)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2027g2-l-2-8mm-c",
+  "model": "DS-2CD2027G2-L 2.8MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd6425g1-30-2-8mm-8m-o-std",
+  "model": "DS-2CD6425G1-30(2.8mm)8m(O-STD)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 3.65,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 3.65,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 3.65
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2t63g2-4i-2-8mm-o-std",
+  "model": "DS-2CD2T63G2-4I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2387g2h-liu-2-8mm-ef",
+  "model": "DS-2CD2387G2H-LIU(2.8mm)(eF)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8
+  },
+  "pdf": {
+   "maxW": 8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1230ds-saw",
+  "model": "IPC-HFW1230DS-SAW",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 4.1,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.1,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.1,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2643g2-lizs2u-sl-2-8-12mm",
+  "model": "DS-2CD2643G2-LIZS2U/SL(2.8-12mm)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cd6825g0-c-ivs-2mm-b",
+  "model": "DS-2CD6825G0/C-IVS(2mm)(B)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.3,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.3
+  },
+  "pdf": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c200mwg-w-2-8mm",
+  "model": "DS-2DE2C200MWG/W 2.8MM",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 9,
+  "std": null,
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a26g0-p-izhs-2-8-12mm",
+  "model": "IDS-2CD7A26G0/P-IZHS 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "hik-ds-2cv2121g2-idw-2-8mm-w",
+  "model": "DS-2CV2121G2-IDW 2.8MM W",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 10,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 10,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3h-liu",
+  "model": "DS-2CD1047G3H-LIU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.1,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  },
+  "pdf": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3-liuf-2-8mm",
+  "model": "DS-2CD1047G3-LIUF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3849t1-zas-pv",
+  "model": "IPC-HFW3849T1-ZAS-PV",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 9.8,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 9.8,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1347g0-l-2-8mm-c-o-std",
+  "model": "DS-2CD1347G0-L(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2087g3-li2uy-sl-2-8mm",
+  "model": "DS-2CD2087G3-LI2UY/SL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1b47g3-liu-2-8mm",
+  "model": "DS-2CD1B47G3-LIU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  },
+  "pdf": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1643g2-iz-2-8-12mm",
+  "model": "DS-2CD1643G2-IZ 2.8-12mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  },
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  }
+ },
+ {
+  "slug": "hik-ds-2cd20123g2-liuy-sl-2-8mm-o-std",
+  "model": "DS-2CD20123G2-LIUY/SL(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 19,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 19,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 19
+  },
+  "pdf": {
+   "maxW": 19,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 19
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t43g2-4i-2-8mm",
+  "model": "DS-2CD2T43G2-4I 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g2h-liu-2-8mm-ef",
+  "model": "DS-2CD2047G2H-LIU 2.8MM EF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "dahua-ipc-pt1239h-pv",
+  "model": "DH-IPC-PT1239H-PV",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-pt1439h-pv",
+  "model": "DH-IPC-PT1439H-PV",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a46g2-v-xzhsy-2-8-12mm-o-std",
+  "model": "iDS-2CD7A46G2/V-XZHSY(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 23.1,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 23.1,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 23.1
+  },
+  "pdf": {
+   "maxW": 23.1,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 23.1
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2783g2-izs-2-8-12mm-o-std",
+  "model": "DS-2CD2783G2-IZS(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-pt2449c1-s-pv-pro",
+  "model": "DH-IPC-PT2449C1-S-PV-PRO",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 3.6,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 3.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-sd2c400na-b-pv-pro",
+  "model": "SD2C400NA-B-PV-PRO",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 3.6,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 3.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g2-lu-sl-4mm-c-o-std",
+  "model": "DS-2CD2047G2-LU/SL(4mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2849tl-s-pro",
+  "model": "DH-IPC-HFW2849TL-S-PRO",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.1,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 6.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1383g0-i-2-8mm-c",
+  "model": "DS-2CD1383G0-I 2.8MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1123g0e-i-2-8mm-c-o-std",
+  "model": "DS-2CD1123G0E-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2347g2-l-2-8mm-c",
+  "model": "DS-2CD2347G2-L(2.8mm)(C)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.6,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.6
+  },
+  "pdf": {
+   "maxW": 7.6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.6
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2183g2-i-2-8mm-o-std",
+  "model": "DS-2CD2183G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2063g2-li-2-8mm",
+  "model": "DS-2CD2063G2-LI 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2ce10df3t-pf-2-8mm-o-std",
+  "model": "DS-2CE10DF3T-PF(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 2.9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 2.9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de4225iw-de-o-std-t5",
+  "model": "DS-2DE4225IW-DE(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2787g2ht-lizs-2-8-12mm",
+  "model": "DS-2CD2787G2HT-LIZS 2.8-12mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  },
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  }
+ },
+ {
+  "slug": "hik-ds-2de4215iw-de-o-std-t5",
+  "model": "DS-2DE4215IW-DE(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce16d0t-itpfs-2-8mm-o-std",
+  "model": "DS-2CE16D0T-ITPFS(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 2.7,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 2.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cv2041g2-idw-2-8mm-d-o-std-fus",
+  "model": "DS-2CV2041G2-IDW(2.8mm)(D)(O-STD)/FUS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw5442e-zhe",
+  "model": "IPC-HFW5442E-ZHE",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 15.2,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 12.3,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 15.2,
+   "std": "at",
+   "cls": null,
+   "poeOnly": 15.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd3047g2-ls-4mm-c",
+  "model": "DS-2CD3047G2-LS 4MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  },
+  "pdf": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t47g2-lsu-sl-4mm-c",
+  "model": "DS-2CD2T47G2-LSU/SL 4MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-i-2-8mm-o-std",
+  "model": "DS-2CD2143G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1083g0-i-2-8mm-c-o-std",
+  "model": "DS-2CD1083G0-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2df8c442ixg1-elw",
+  "model": "DS-2DF8C442IXG1-ELW",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 60,
+  "std": "bt",
+  "cls": 6,
+  "page": {
+   "maxW": 60,
+   "std": "bt",
+   "cls": 6,
+   "poeOnly": 60
+  },
+  "pdf": {
+   "maxW": 60,
+   "std": "bt",
+   "cls": 6,
+   "poeOnly": 60
+  }
+ },
+ {
+  "slug": "hik-ds-2cv1043g2-lidwf-2-8mm-b",
+  "model": "DS-2CV1043G2-LIDWF 2.8mm B",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 6.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-hac-hfw1209clp-led",
+  "model": "HAC-HFW1209CLP-LED",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 3.3,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 3.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de7a432iw-aeb",
+  "model": "DS-2DE7A432IW-AEB",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 42,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 42,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 42,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2df5232x-ael-t5",
+  "model": "DS-2DF5232X-AEL T5",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 60,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 60,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": 40
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd3121g0-i-2-8mm-c",
+  "model": "DS-2CD3121G0-I 2.8MM C",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": null,
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce16d0t-exipf-2-8mm",
+  "model": "DS-2CE16D0T-EXIPF",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 3.3,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 3.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1147g2-luf-2-8mm",
+  "model": "DS-2CD1147G2-LUF 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cv2141g2-idw-2-8mm-w",
+  "model": "DS-2CV2141G2-IDW 2.8MM W",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 10,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 10,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g2-l-2-8mm",
+  "model": "DS-2CD1047G2-L",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t123g2-lis2uy-srb-2-8mm-o-std",
+  "model": "DS-2CD2T123G2-LIS2UY/SRB(2.8mm)(O-STD",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cv1023g2-lidwf-2-8mm-b",
+  "model": "DS-2CV1023G2-LIDWF 2.8MM B",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 6.5,
+  "std": null,
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 6.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de2a404iwg1-e-w",
+  "model": "DS-2DE2A404IWG1-E/W",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 11.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 11.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 11.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-dhi-itc413-pw4d-iz1",
+  "model": "DHI-ITC413-PW4D-IZ1",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 20,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 20,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 20
+  },
+  "pdf": {
+   "maxW": 20,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 20
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1239tl1-a-il",
+  "model": "IPC-HFW1239TL1-A-IL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.8,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.8,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 7.8,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1027g2h-liu-2-8mm",
+  "model": "DS-2CD1027G2H-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1043g2-liuf-sl-2-8mm",
+  "model": "DS-2CD1043G2-LIUF/SL 2.8mm",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2043g2-iu-2-8mm",
+  "model": "DS-2CD2043G2-IU 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2543g2-i-2-8mm",
+  "model": "DS-2CD2543G2-I(2.8mm)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1643g0e-iz-2-8-12mm",
+  "model": "DS-2CD1643G0E-IZ 2.8-12mm",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": null,
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  }
+ },
+ {
+  "slug": "hik-ds-2cfsp4-4g-2-8mm",
+  "model": "DS-2CFSP4/4G 2.8mm",
+  "kind": "ptz",
+  "status": "no_data",
+  "maxW": null,
+  "std": null,
+  "cls": null,
+  "page": null,
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2087g2-l-2-8mm-c",
+  "model": "DS-2CD2087G2-L 2.8mm C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2d25g1-d-nf-3-7mm-o-std",
+  "model": "DS-2CD2D25G1-D/NF(3.7mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 1.5,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 1.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 1.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1143g2-liu-2-8mm",
+  "model": "DS-2CD1143G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd20123g2-liuy-srb-2-8mm-o-std",
+  "model": "DS-2CD20123G2-LIUY/SRB(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 11.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 11.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 11.5
+  },
+  "pdf": {
+   "maxW": 11.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 11.5
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a46g0-p-izhsy-2-8-12mm",
+  "model": "IDS-2CD7A46G0/P-IZHSY 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t86g2-2i-4mm-c-o-std",
+  "model": "DS-2CD2T86G2-2I(4mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2ce72df3t-f-2-8mm-o-std",
+  "model": "DS-2CE72DF3T-F(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 4.2,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de7432iw-ae-o-std-s5",
+  "model": "DS-2DE7432IW-AE(O-STD)(S5)",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 42,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 42,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": 42
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd1147g2h-liuf-2-8mm-o-std",
+  "model": "DS-2CD1147G2H-LIUF(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1063g2-liu-2-8mm",
+  "model": "DS-2CD1063G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd3t86g2-4is-2-8mm-h",
+  "model": "DS-2CD3T86G2-4IS 2.8MM H",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16
+  },
+  "pdf": {
+   "maxW": 16,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2043g2-li2u-black-2-8mm",
+  "model": "DS-2CD2043G2-LI2U BLACK 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2643g2-izs-2-8-12mm-o-std",
+  "model": "DS-2CD2643G2-IZS(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 15,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g2h-liu-2-8mm",
+  "model": "DS-2CD1047G2H-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3-liu-2-8mm",
+  "model": "DS-2CD1047G3-LIU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3-liuf-srb-2-8mm-new",
+  "model": "DS-2CD1047G3-LIUF/SRB",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1323g2-liu-2-8mm",
+  "model": "DS-2CD1323G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1023g0e-i-2-8mm-c-o-std",
+  "model": "DS-2CD1023G0E-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1067g3-liuf-sl-2-8mm",
+  "model": "DS-2CD1067G3-LIUF/SL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1323g0-iuf-2-8mm-c-o-std",
+  "model": "DS-2CD1323G0-IUF(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2xs2t47g1-ldh-4g-c18s40-4mm",
+  "model": "DS-2XS2T47G1-LDH/4G/C18S40 4MM",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-h3a",
+  "model": "H3A",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 3.6,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 3.6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1b47g3-liuf-2-8mm",
+  "model": "DS-2CD1B47G3-LIUF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  },
+  "pdf": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  }
+ },
+ {
+  "slug": "dahua-p4f-pv-4g",
+  "model": "P4F-PV-4G",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 3,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd1027g2-l-2-8mm",
+  "model": "DS-2CD1027G2-L",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1t47g3-liu-2-8mm",
+  "model": "DS-2CD1T47G3-LIU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  },
+  "pdf": {
+   "maxW": 10.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.2
+  }
+ },
+ {
+  "slug": "dahua-t2a-led",
+  "model": "T2A-LED",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 5.8,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 5.8,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 5.8,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1053g0-i-2-8mm-c-o-std",
+  "model": "DS-2CD1053G0-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1083g2-liuf-sl-2-8mm",
+  "model": "DS-2CD1083G2-LIUF/SL 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  },
+  "pdf": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1067g3-liu-2-8mm",
+  "model": "DS-2CD1067G3-LIU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2023g2-iu-2-8mm-d",
+  "model": "DS-2CD2023G2-IU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2083g2-li2u-srb-2-8mm-o-std",
+  "model": "DS-2CD2083G2-LI2U/SRB(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-li-2-8mm",
+  "model": "DS-2CD2143G2-LI 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  },
+  "pdf": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2083g2-iu-2-8mm",
+  "model": "DS-2CD2083G2-IU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  },
+  "pdf": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd23123g2-lis2uy-srb",
+  "model": "DS-2CD23123G2-LIS2UY/SRB 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2de2a604iwg1-eo-std",
+  "model": "DS-2DE2A604IWG1-E",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 9.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 9.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2686g2-izs-2-8-12mm-c-o-std",
+  "model": "DS-2CD2686G2-IZS(2.8-12mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 15,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  }
+ },
+ {
+  "slug": "hik-ds-2cv2021g2-idw-2-8mm-w",
+  "model": "DS-2CV2021G2-IDW 2.8MM W",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 9,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2xe6045g0-i-4mm",
+  "model": "DS-2XE6045G0-I",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2xe6146f-hs-2-8mm",
+  "model": "DS-2XE6146F-HS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "hik-ds-2ce76d0t-exipf-2-8mm-o-std",
+  "model": "DS-2CE76D0T-EXIPF(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "needs_review",
+  "maxW": 3.3,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 3.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ids-tcv900-he-1140-h1-af",
+  "model": "iDS-TCV900-HE/1140/H1(AF)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 32,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 32,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 32,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1439tl1-a-il",
+  "model": "IPC-HFW1439TL1-A-IL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.7,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.7,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 7.7,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3449t1-as-pv",
+  "model": "IPC-HFW3449T1-AS-PV",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1230t1-a",
+  "model": "IPC-HDW1230T1-A",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.1,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 4.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1230t1-s5",
+  "model": "IPC-HDW1230T1-S5",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.6,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 4.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1439v-a-il",
+  "model": "IPC-HDW1439V-A-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 5.7,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 5.7,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1067g2h-liu-2-8mm",
+  "model": "DS-2CD1067G2H-LIU 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8
+  },
+  "pdf": {
+   "maxW": 8,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2043g2-li2u-2-8mm",
+  "model": "DS-2CD2043G2-LI2U 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2687g2ht-lizs-2-8-12mm-ef",
+  "model": "DS-2CD2687G2HT-LIZS(2.8-12mm)(eF)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2543g2-is-2-8mm-black",
+  "model": "DS-2CD2543G2-IS(2.8mm)(BLACK)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw2849t-s-il",
+  "model": "IPC-HDW2849T-S-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 5.9,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 5.9,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "dahua-ipc-hdw3441em-s-s2",
+  "model": "IPC-HDW3441EM-S-S2",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 7.9,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.9,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 7.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2449s-s-il",
+  "model": "IPC-HFW2449S-S-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 5.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 5.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.4,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2087g2-lu-2-8mm-c",
+  "model": "DS-2CD2087G2-LU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw5442e-ze",
+  "model": "IPC-HFW5442E-ZE",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 12.3,
+  "std": "af",
+  "cls": 0,
+  "page": {
+   "maxW": 12.3,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": 0,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g3h-liuf-srb-2-8mm-o-std",
+  "model": "DS-2CD1047G3H-LIUF/SRB(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.1,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  },
+  "pdf": {
+   "maxW": 12.1,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.1
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2449t-as-il",
+  "model": "IPC-HFW2449T-AS-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2441t-zs",
+  "model": "IPC-HFW2441T-ZS",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 10.1,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 8.7,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce17d0t-it1f-2-8mm-c",
+  "model": "DS-2CE17D0T-IT1F 2.8MM C",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 2.2,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 2.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a46g0-p-izhs-8-32mm-c",
+  "model": "IDS-2CD7A46G0/P-IZHS 8-32MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3441e-as-s2",
+  "model": "IPC-HFW3441E-AS-S2",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 5.9,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3849t1-as-pv",
+  "model": "IPC-HFW3849T1-AS-PV",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 11.8,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 11.8,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 11.8,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2483g2-i-2-8mm",
+  "model": "DS-2CD2483G2-I 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.9
+  },
+  "pdf": {
+   "maxW": 6.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.9
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1067g3-liuf-2-8mm",
+  "model": "DS-2CD1067G3-LIUF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1043g2-liu-2-8mm",
+  "model": "DS-2CD1043G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2347g2-lu-2-8mm-c-o-std",
+  "model": "DS-2CD2347G2-LU(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.6,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.6
+  },
+  "pdf": {
+   "maxW": 7.6,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.6
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2566g2-i-2-8mm-c-o-std",
+  "model": "DS-2CD2566G2-I(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1083g2-liu-2-8mm",
+  "model": "DS-2CD1083G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1230ds1-saw",
+  "model": "IPC-HFW1230DS1-SAW",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 4.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw5442e-z4e",
+  "model": "IPC-HFW5442E-Z4E",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 10.9,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 10.9,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.9
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2087g2h-liu-2-8mm-ef",
+  "model": "DS-2CD2087G2H-LIU 2.8MM EF",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  },
+  "pdf": {
+   "maxW": 8.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 8.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-is-2-8mm",
+  "model": "DS-2CD2143G2-IS 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2387g2-lu-2-8mm-c",
+  "model": "DS-2CD2387G2-LU",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2183g2-lis2u-2-8mm",
+  "model": "DS-2CD2183G2-LIS2U 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10
+  },
+  "pdf": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g3-li2uy-srb-2-8mm-o-std",
+  "model": "DS-2CD2047G3-LI2UY/SRB(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2083g2-i-2-8mm-o-std",
+  "model": "DS-2CD2083G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  },
+  "pdf": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1043g2-i-2-8mm",
+  "model": "DS-2CD1043G2-I",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2063g2-i-2-8mm-o-std",
+  "model": "DS-2CD2063G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  },
+  "pdf": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.2
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1023g0-iuf-2-8mm-c-o-std",
+  "model": "DS-2CD1023G0-IUF(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2147g2-lsu-2-8mm-c",
+  "model": "DS-2CD2147G2-LSU 2.8MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t86g2-4i-2-8mm",
+  "model": "DS-2CD2T86G2-4I",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-iu-black-2-8mm",
+  "model": "DS-2CD2143G2-IU BLACK 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1063g2-liuf-sl-2-8mm",
+  "model": "DS-2CD1063G2-LIUF/SL 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  },
+  "pdf": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t47g2-l-4mm",
+  "model": "DS-2CD2T47G2-L 4MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1143g2-iuf-2-8mm",
+  "model": "DS-2CD1143G2-IUF 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2de5425iw-ae-o-std-t5",
+  "model": "DS-2DE5425IW-AE(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 24,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 24,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 24,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c400mwg-w-4mm",
+  "model": "DS-2DE2C400MWG/W 4mm",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 9,
+  "std": null,
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2643g2-lizs2u-2-8-12mm",
+  "model": "DS-2CD2643G2-LIZS2U 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 15,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1043g2-liduf-4g-sl-2-8mm",
+  "model": "DS-2CD1043G2-LIDUF/4G/SL 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1327g0-l-2-8mm-c-o-std",
+  "model": "DS-2CD1327G0-L(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2085g1-i-2-8mm-o-std",
+  "model": "DS-2CD2085G1-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce10df0t-pf-2-8mm-o-std",
+  "model": "DS-2CE10DF0T-PF(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 2.4,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 2.4,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.4,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t123g2-lis2uy-sl-2-8mm-o-std",
+  "model": "DS-2CD2T123G2-LIS2UY/SL(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t43g2-2i-4mm-o-std",
+  "model": "DS-2CD2T43G2-2I(4mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2d25g1-d-nf-2-8mm-o-std",
+  "model": "DS-2CD2D25G1-D/NF(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 1.5,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 1.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 1.5,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c400mwg-4g-2-8mm",
+  "model": "DS-2DE2C400MWG-4G 2.8MM",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2df8242ix-aelw-o-std-t5",
+  "model": "DS-2DF8242IX-AELW(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 60,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 60,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": 50
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2683g2-izs-2-8-12mm",
+  "model": "DS-2CD2683G2-IZS 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 15,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2163g2-i-2-8mm-o-std",
+  "model": "DS-2CD2163G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2083g2-li2u-2-8mm",
+  "model": "DS-2CD2083G2-LI2U 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t46g2-2i-2-8mm-c",
+  "model": "DS-2CD2T46G2-2I 2.8mm C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t46g2-4i-2-8mm-c",
+  "model": "DS-2CD2T46G2-4I 2.8MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2de5225iw-ae-o-std-s5",
+  "model": "DS-2DE5225IW-AE(O-STD)(S5)",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 30,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 30,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": 30
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ids-2cd7146g0-izs-2-8-12mm",
+  "model": "iDS-2CD7146G0-IZS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 12.5,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2849s-s-il",
+  "model": "IPC-HFW2849S-S-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 5.9,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 5.9,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "dahua-ipc-hdw1239v-a-il",
+  "model": "IPC-HDW1239V-A-IL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 5.6,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 5.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 5.6,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a26g0-izhsy-2-8-12mm",
+  "model": "IDS-2CD7A26G0-IZHSY 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw2849t-as-il",
+  "model": "IPC-HFW2849T-AS-IL",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.3,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 8.3,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 8.3,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t63g2-2li-2-8mm",
+  "model": "DS-2CD2T63G2-2LI 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t63g0-i5-4mm-o-std",
+  "model": "DS-2CD2T63G0-I5(4mm)(O-STD)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2663g2-izs-2-8-12mm",
+  "model": "DS-2CD2663G2-IZS 2.8-12MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 15,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g2-luf-2-8mm",
+  "model": "DS-2CD1047G2-LUF 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c400mw-de-f0-s7",
+  "model": "DS-2DE2C400MW-DE F0 S7",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 10.8,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.8,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.8
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2463g2-i-2-8mm-o-std",
+  "model": "DS-2CD2463G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3441e-s-s2",
+  "model": "IPC-HFW3441E-S-S2",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 7.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 7.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2t83g0-i5-4mm-o-std",
+  "model": "DS-2CD2T83G0-I5(4mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  },
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  }
+ },
+ {
+  "slug": "hik-ds-2ce16h0t-itpfs-2-8mm-o-std",
+  "model": "DS-2CE16H0T-ITPFS(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 3.7,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 3.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce16h0t-itpf-2-8mm-o-std-c",
+  "model": "DS-2CE16H0T-ITPF(2.8mm)(O-STD)(C)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 4.3,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2443g0-iw-2-8mm-w",
+  "model": "DS-2CD2443G0-IW 2.8MM W",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c200mwg-e-2-8mm",
+  "model": "DS-2DE2C200MWG-E 2.8MM",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2043g2-li-2-8mm",
+  "model": "DS-2CD2043G2-LI 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd3641g2-izs-2-7-13-5mm-o-std",
+  "model": "DS-2CD3641G2-IZS(2.7-13.5mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1663g2-lizu-2-8-12mm-o-std",
+  "model": "DS-2CD1663G2-LIZU(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2de2c200mwg-4g-2-8mm",
+  "model": "DS-2DE2C200MWG-4G 2.8MM",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1343g2-iuf-2-8mm",
+  "model": "DS-2CD1343G2-IUF 2.8mm",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd23123g2-lis2uy-sl-2-8mm-o-std",
+  "model": "DS-2CD23123G2-LIS2UY/SL(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2543g2-is-2-8mm",
+  "model": "DS-2CD2543G2-IS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1083g2-liuf-2-8mm",
+  "model": "DS-2CD1083G2-LIUF 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1027g2-luf-2-8mm",
+  "model": "DS-2CD1027G2-LUF 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2746g2-izs",
+  "model": "DS-2CD2746G2-IZS",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "dahua-f2c-led",
+  "model": "F2C-LED",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 5.3,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 5.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 5.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2df8c435mhs-delw",
+  "model": "DS-2DF8C435MHS-DELW",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 62,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 62,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 62,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdbw3849r1-zas-pv",
+  "model": "IPC-HDBW3849R1-ZAS-PV",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 10.1,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t86g2-2i-2-8mm-c",
+  "model": "DS-2CD2T86G2-2I(2.8mm)(C)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  },
+  "pdf": {
+   "maxW": 12,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1653g0-iz-2-8-12mm-o-std",
+  "model": "DS-2CD1653G0-IZ(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.9
+  },
+  "pdf": null
+ },
+ {
+  "slug": "dahua-sd2a400hb-gn-agq-pv-sp-eau",
+  "model": "SD2A400HB-GN-AGQ-PV-SP-EAU",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 10,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2sf8c442mxg1-elw-26-f0",
+  "model": "DS-2SF8C442MXG1-ELW/26 F0",
+  "kind": "ptz",
+  "status": "no_data",
+  "maxW": null,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-sd6ce245gb-hnr",
+  "model": "SD6CE245GB-HNR",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 13,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 13,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2063g2-li2u-black-2-8mm",
+  "model": "DS-2CD2063G2-LI2U BLACK 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "dahua-sd3d216nb-gny",
+  "model": "SD3D216NB-GNY",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1023g2-liu-2-8mm",
+  "model": "DS-2CD1023G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de2a404iwg1-e-o-std",
+  "model": "DS-2DE2A404IWG1-E(O-STD)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 9.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 9.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2043g2-i-2-8mm-o-std",
+  "model": "DS-2CD2043G2-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  },
+  "pdf": {
+   "maxW": 7,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g2-l-2-8mm-c-o-std",
+  "model": "DS-2CD2047G2-L(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t63g2-2i-2-8mm",
+  "model": "DS-2CD2T63G2-2I 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  },
+  "pdf": {
+   "maxW": 12.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 12.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1343g2-liu-2-8mm",
+  "model": "DS-2CD1343G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2183g2-li-2-8mm",
+  "model": "DS-2CD2183G2-LI 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10
+  },
+  "pdf": {
+   "maxW": 9.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 9.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1047g2h-liuf-2-8mm",
+  "model": "DS-2CD1047G2H-LIUF 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cfs04-4g-2-8mm",
+  "model": "DS-2CFS04/4G 2.8MM",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cv1f43g2-lidwf-2-8mm-b",
+  "model": "DS-2CV1F43G2-LIDWF 2.8mm B",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de5432iwg-e",
+  "model": "DS-2DE5432IWG-E",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 24,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 24,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 24,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1230dt-saw",
+  "model": "IPC-HDW1230DT-SAW",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 4.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.2,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1431t1-a",
+  "model": "IPC-HDW1431T1-A",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 3.5,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 3.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw1839t-a-il",
+  "model": "IPC-HDW1839T-A-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.5,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": null,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hdw2449t-s-il",
+  "model": "IPC-HDW2449T-S-IL",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 5.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 5.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.4,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2543g0-i-2-8mm-o-std",
+  "model": "DS-2CD2543G0-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 10,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10
+  },
+  "pdf": {
+   "maxW": 10,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 10
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2183g2-iu-2-8mm-o-std",
+  "model": "DS-2CD2183G2-IU(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "dahua-sd4e425gb-hnr-a-pv1",
+  "model": "SD4E425GB-HNR-A-PV1",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 7,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 7,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "dahua-ipc-hdw3849h-as-pv",
+  "model": "IPC-HDW3849H-AS-PV",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 8.2,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 8.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 8.2,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce12df0t-f-2-8mm-o-std",
+  "model": "DS-2CE12DF0T-F(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "needs_review",
+  "maxW": 4,
+  "std": null,
+  "cls": null,
+  "page": {
+   "maxW": 4,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": null
+ },
+ {
+  "slug": "hik-ds-2cd2t65g1-i8-2-8mm-o-std",
+  "model": "DS-2CD2T65G1-I8(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 12.9,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 12.9,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1230s1-a",
+  "model": "IPC-HFW1230S1-A",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 4.1,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": 4.1,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd5ac5g0-izhs-2-8-12mm-b-o-std",
+  "model": "DS-2CD5AC5G0-IZHS(2.8-12mm)(B)(O-STD)",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 15,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 15
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1430ds-saw",
+  "model": "IPC-HFW1430DS-SAW",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 4.1,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.1,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.1,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2t47g2-l-2-8mm-c-o-std",
+  "model": "DS-2CD2T47G2-L(2.8mm)(C)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10.5,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  },
+  "pdf": {
+   "maxW": 10.5,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 10.5
+  }
+ },
+ {
+  "slug": "hik-ds-2df8225ix-ael-o-std-t5",
+  "model": "DS-2DF8225IX-AEL(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "needs_review",
+  "maxW": 60,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 60,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": 50
+  },
+  "pdf": {
+   "maxW": 60,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 50
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw1839tc-a-il",
+  "model": "IPC-HFW1839TC-A-IL",
+  "kind": "ip",
+  "status": "no_data",
+  "maxW": null,
+  "std": "af",
+  "cls": null,
+  "page": null,
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-ipc-hfw3441dg-as-4g-eau-b",
+  "model": "IPC-HFW3441DG-AS-4G-EAU-B",
+  "kind": "ip",
+  "status": "needs_review",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": null,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2685g0-izs-2-8-12mm-o-std",
+  "model": "DS-2CD2685G0-IZS(2.8-12mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 18
+  }
+ },
+ {
+  "slug": "hik-ds-2ce76d0t-itpfs-2-8mm-o-std",
+  "model": "DS-2CE76D0T-ITPFS(2.8mm)(O-STD)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 2.7,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 2.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 2.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce76h0t-itpf-2-8mm-o-std-c",
+  "model": "DS-2CE76H0T-ITPF(2.8mm)(O-STD)(C)",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 4.3,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 4.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 4.3,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2ce76h0t-itpfs-2-8mm",
+  "model": "DS-2CE76H0T-ITPFS",
+  "kind": "analog",
+  "status": "verified",
+  "maxW": 3.7,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 3.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 3.7,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2de4415iw-de-o-std-t5",
+  "model": "DS-2DE4415IW-DE(O-STD)(T5)",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 18,
+  "std": "at",
+  "cls": null,
+  "page": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 18,
+   "std": "at",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2df8c442ixg-elw",
+  "model": "DS-2DF8C442IXG-ELW",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 62,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 62,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 51
+  },
+  "pdf": {
+   "maxW": 62,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 51
+  }
+ },
+ {
+  "slug": "hik-ds-2df8c835mhs-delw",
+  "model": "DS-2DF8C835MHS-DELW",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 62,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 62,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 62,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ids-2cd7a46g0-izhs-2-8-12mm-c",
+  "model": "IDS-2CD7A46G0-IZHS 2.8-12MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 16.8,
+  "std": "at",
+  "cls": 4,
+  "page": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  },
+  "pdf": {
+   "maxW": 16.8,
+   "std": "at",
+   "cls": 4,
+   "poeOnly": 16.8
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1153g0-i-2-8mm-o-std",
+  "model": "DS-2CD1153G0-I(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2143g2-iu-2-8mm-o-std",
+  "model": "DS-2CD2143G2-IU(2.8mm)(O-STD)",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2083g2-li-2-8mm",
+  "model": "DS-2CD2083G2-LI 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd2047g2-lu-sl-2-8mm-c",
+  "model": "DS-2CD2047G2-LU/SL 2.8MM C",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1343g2-i-2-8mm",
+  "model": "DS-2CD1343G2-I",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1123g2-liu-2-8mm",
+  "model": "DS-2CD1123G2-LIU 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 7.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  },
+  "pdf": {
+   "maxW": 7.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 7.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1143g2-i-2-8mm",
+  "model": "DS-2CD1143G2-I",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 6.5,
+  "std": "af",
+  "cls": 3,
+  "page": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  },
+  "pdf": {
+   "maxW": 6.5,
+   "std": "af",
+   "cls": 3,
+   "poeOnly": 6.5
+  }
+ },
+ {
+  "slug": "hik-ds-2cd1023g2-liduf-4g-sl-2-8mm",
+  "model": "DS-2CD1023G2-LIDUF/4G/SL 2.8MM",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-2cv1f23g2-lidwf-2-8mm-b",
+  "model": "DS-2CV1F23G2-LIDWF 2.8mm B",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 9,
+  "std": "none",
+  "cls": null,
+  "page": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 9,
+   "std": null,
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-sd6al445gb-hnv-ir",
+  "model": "SD6AL445GB-HNV-IR",
+  "kind": "ptz",
+  "status": "verified",
+  "maxW": 13,
+  "std": "hipoe",
+  "cls": null,
+  "page": {
+   "maxW": 13,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 13,
+   "std": "hipoe",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "hik-ds-tcg406-e",
+  "model": "DS-TCG406-E",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 10,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 10,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  },
+  "pdf": {
+   "maxW": 10,
+   "std": "af",
+   "cls": null,
+   "poeOnly": null
+  }
+ },
+ {
+  "slug": "dahua-dhi-itc431-rw1f-irl8",
+  "model": "DHI-ITC431-RW1F-IRL8",
+  "kind": "ip",
+  "status": "verified",
+  "maxW": 13,
+  "std": "af",
+  "cls": null,
+  "page": {
+   "maxW": 13,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 13
+  },
+  "pdf": {
+   "maxW": 13,
+   "std": "af",
+   "cls": null,
+   "poeOnly": 13
+  }
+ }
+]

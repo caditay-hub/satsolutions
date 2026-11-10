@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { CONTENT } from "./content";
 import { CATALOG_CONTENT } from "./catalogContent";
 import { PLAN_CONTENT } from "./planContent";
+import { EST_CONTENT } from "./estContent";
 import { PROFILES } from "./standards";
 
 // Все пять словарей — одной формы: те же ключи, те же подстановки {…}, те же длины списков.
@@ -38,6 +39,17 @@ describe("тексты калькулятора на пяти языках", () 
     const base = flat(PLAN_CONTENT.ru);
     for (const loc of ["uz", "en", "tr", "zh"]) {
       const x = flat(PLAN_CONTENT[loc]);
+      expect(Object.keys(x).sort()).toEqual(Object.keys(base).sort());
+      for (const k of Object.keys(base)) {
+        expect(holes(x[k]), `${loc}.${k}`).toBe(holes(base[k]));
+        expect(String(x[k]).trim(), `${loc}.${k} пустой`).not.toBe("");
+      }
+    }
+  });
+  it("словарь сметы и КП — той же формы на всех языках", () => {
+    const base = flat(EST_CONTENT.ru);
+    for (const loc of ["uz", "en", "tr", "zh"]) {
+      const x = flat(EST_CONTENT[loc]);
       expect(Object.keys(x).sort()).toEqual(Object.keys(base).sort());
       for (const k of Object.keys(base)) {
         expect(holes(x[k]), `${loc}.${k}`).toBe(holes(base[k]));

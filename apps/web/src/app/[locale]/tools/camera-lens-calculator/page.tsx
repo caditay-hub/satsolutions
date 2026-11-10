@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { CameraLensCalculator } from "@/components/CameraLensCalculator";
 import { CameraDesignerTabs } from "@/components/CameraDesignerTabs";
 import { planContentFor } from "@/lib/cameraDesigner/planContent";
+import { estContentFor } from "@/lib/cameraDesigner/estContent";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { compute, DEFAULT_INPUT } from "@/lib/cameraDesigner/calculate";
 import { contentFor } from "@/lib/cameraDesigner/content";
@@ -113,7 +114,7 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
         </header>
 
         <div className="mt-8">
-          <CameraDesignerTabs plan={planContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
+          <CameraDesignerTabs plan={planContentFor(locale)} est={estContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
             <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
           </CameraDesignerTabs>
         </div>

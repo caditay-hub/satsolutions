@@ -98,21 +98,22 @@ function db(): Promise<IDBDatabase> {
   });
 }
 
-export async function idbSave(v: unknown): Promise<void> {
+/** key: «current» — проект плана, «manual» — смета без плана. */
+export async function idbSave(v: unknown, key = KEY): Promise<void> {
   const d = await db();
   await new Promise<void>((res, rej) => {
     const tx = d.transaction(STORE, "readwrite");
-    tx.objectStore(STORE).put(v, KEY);
+    tx.objectStore(STORE).put(v, key);
     tx.oncomplete = () => res();
     tx.onerror = () => rej(tx.error);
   });
   d.close();
 }
 
-export async function idbLoad(): Promise<unknown> {
+export async function idbLoad(key = KEY): Promise<unknown> {
   const d = await db();
   const v = await new Promise<unknown>((res, rej) => {
-    const r = d.transaction(STORE, "readonly").objectStore(STORE).get(KEY);
+    const r = d.transaction(STORE, "readonly").objectStore(STORE).get(key);
     r.onsuccess = () => res(r.result);
     r.onerror = () => rej(r.error);
   });
