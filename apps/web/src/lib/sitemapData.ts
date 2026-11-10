@@ -158,6 +158,8 @@ const STATIC_ROUTES = [
   "/export", "/export/tajikistan", "/export/turkmenistan",
   // Свои приложения: хаб и три продуктовые страницы (контент в lib/appsContent.ts, appsParkingContent.ts)
   "/apps", "/apps/uy", "/apps/davomat", "/apps/parking",
+  // Калькулятор объектива (SAT Camera Designer, 10.11.2026): контент в lib/cameraDesigner/content.ts
+  "/tools/camera-lens-calculator",
 ];
 
 // umniy-avtobus/parkovka 301-редиректят на статичные /solutions/bus|parking

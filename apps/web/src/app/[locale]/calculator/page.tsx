@@ -7,6 +7,7 @@ import { hreflangAlternates } from "@/lib/hreflang";
 import { PRICE } from "@/lib/calcPricing";
 import { ogLocale } from "@/lib/ogLocale";
 import { withOgUrl } from "@/lib/metadata";
+import { contentFor } from "@/lib/cameraDesigner/content";
 
 async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -295,6 +296,11 @@ export default async function CalculatorPage({ params }: { params: Promise<{ loc
                 {ts(`${k}.title`)} →
               </Link>
             ))}
+            {/* посчитал стоимость монтажа — подбери объектив и угол обзора камер */}
+            <Link href="/tools/camera-lens-calculator"
+              className="rounded-xl border border-brand-200 bg-brand-50 px-4 py-3 text-sm font-semibold text-brand-800 transition-colors hover:border-brand-400">
+              {contentFor(locale).crumbs.tool} →
+            </Link>
           </div>
         </section>
       </div>
