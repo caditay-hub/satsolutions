@@ -22,6 +22,10 @@ export function KpSheet(p: { ui: CdEstUi; locale: string; view: EstView; no: str
   const { num } = makeFmt(p.locale);
   const m = (v: number) => p.money(num(v, 0));
   const cell = "border border-slate-300 px-2 py-1";
+  // одинаковые колонки в обеих таблицах — «Кол-во», «Цена», «Сумма» стоят друг под другом
+  const cols = (
+    <colgroup><col style={{ width: "48%" }} /><col style={{ width: "10%" }} /><col style={{ width: "18%" }} /><col style={{ width: "24%" }} /></colgroup>
+  );
   return (
     <div className="text-[11px] leading-snug text-black">
       <div className="flex items-start justify-between gap-4 border-b-2 border-slate-800 pb-2">
@@ -37,19 +41,22 @@ export function KpSheet(p: { ui: CdEstUi; locale: string; view: EstView; no: str
       <div className="text-xs">{ui.kpSub}</div>
       <div className="mt-1 text-[10px] text-slate-600">{fill(ui.kpNo, { n: p.no, d: p.date })}</div>
 
-      <table className="mt-3 w-full border-collapse">
+      <table className="mt-3 w-full table-fixed border-collapse">
+        {cols}
         <thead><tr className="bg-slate-100 font-bold"><td className={cell}>{ui.equipTitle}</td><td className={`${cell} text-right`}>{ui.colQty}</td><td className={`${cell} text-right`}>{ui.colPrice}</td><td className={`${cell} text-right`}>{ui.colSum}</td></tr></thead>
         <tbody>
           {view.rows.map((r, i) => (
             <tr key={i}><td className={cell}>{r.name}</td><td className={`${cell} whitespace-nowrap text-right`}>{r.qty} {r.unit}</td>
-              <td className={`${cell} whitespace-nowrap text-right`}>{r.engineer ? ui.engineer : r.price ? num(r.price, 0) : ui.onRequest}</td>
+              {/* «подберёт инженер» / «по запросу» переносятся: в узкую колонку цены не помещаются */}
+              <td className={`${cell} text-right ${r.engineer || !r.price ? "" : "whitespace-nowrap"}`}>{r.engineer ? ui.engineer : r.price ? num(r.price, 0) : ui.onRequest}</td>
               <td className={`${cell} whitespace-nowrap text-right`}>{r.sum !== null ? num(r.sum, 0) : "—"}</td></tr>
           ))}
           <tr className="font-bold"><td className={cell} colSpan={3}>{ui.equipTotal}</td><td className={`${cell} whitespace-nowrap text-right`}>{m(view.r.totals.equipment)}</td></tr>
         </tbody>
       </table>
 
-      <table className="mt-3 w-full border-collapse">
+      <table className="mt-3 w-full table-fixed border-collapse">
+        {cols}
         <thead><tr className="bg-slate-100 font-bold"><td className={cell}>{ui.laborTitle}</td><td className={`${cell} text-right`}>{ui.colQty}</td><td className={`${cell} text-right`}>{ui.colPrice}</td><td className={`${cell} text-right`}>{ui.colSum}</td></tr></thead>
         <tbody>
           {view.labor.map((l, i) => (
@@ -57,7 +64,7 @@ export function KpSheet(p: { ui: CdEstUi; locale: string; view: EstView; no: str
               <td className={`${cell} whitespace-nowrap text-right`}>{num(l.price, 0)}</td><td className={`${cell} whitespace-nowrap text-right`}>{num(l.sum, 0)}</td></tr>
           ))}
           <tr className="font-bold"><td className={cell} colSpan={3}>{ui.laborTotal}{view.r.totals.kHigh > 1 ? ` (×${num(view.r.totals.kHigh, 1)})` : ""}</td>
-            <td className={`${cell} whitespace-nowrap text-right`}>{fill(ui.range, { a: num(view.r.totals.laborLow, 0), b: m(view.r.totals.laborHigh) })}</td></tr>
+            <td className={`${cell} text-right`}>{fill(ui.range, { a: num(view.r.totals.laborLow, 0), b: m(view.r.totals.laborHigh) })}</td></tr>
         </tbody>
       </table>
 

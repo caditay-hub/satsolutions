@@ -301,6 +301,8 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
       id: uid(), n: project.cams.reduce((m, c) => Math.max(m, c.n), 0) + 1,
       x, y, mountM, panDeg: Math.round(pan), tiltDeg: Math.round(tiltForAim(mountM, project.targetM, aimD) * 10) / 10,
       zoom: 0, vi: 0, spec: armed,
+      // как в смете без плана: поворотная камера по умолчанию уличная (флажок в редакторе снимается)
+      ...(armed.lensType === "ptz" ? { outdoor: true } : {}),
     };
     patch((p) => ({ ...p, cams: [...p.cams, cam] }));
     setSelected({ type: "cam", id: cam.id });
