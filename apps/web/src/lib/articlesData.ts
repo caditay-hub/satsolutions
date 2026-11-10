@@ -6,12 +6,28 @@
 // Рендер: /blog (список) + /blog/<slug> (статья, Article + BreadcrumbList JSON-LD).
 // Локаль без контента статьи → её нет в списке и detail отдаёт 404 (чистый hreflang).
 
-export type ArticleSection = { h: string; p: string[] };
+// Таблицы и нумерованные шаги внутри раздела (10.11.2026): ИИ-поиск охотнее цитирует
+// таблицу и пронумерованный список, чем тот же факт, размазанный по абзацу.
+// table — одна таблица или несколько; at / olAt / ulAt — после скольких абзацев p[]
+// вставить блок (0 — перед первым абзацем; по умолчанию — после всех). На одной позиции
+// порядок вывода: ol → таблицы → ul. Разделы без этих полей рендерятся как раньше.
+export type ArticleTable = { head: string[]; rows: string[][]; caption?: string; at?: number };
+export type ArticleSection = {
+  h: string;
+  p: string[];
+  table?: ArticleTable | ArticleTable[];
+  ol?: string[];
+  olAt?: number;
+  ul?: string[];
+  ulAt?: number;
+};
 export type ArticleFaqItem = { q: string; a: string };
+// Скачиваемый файл к статье (шаблон ТЗ и т. п.): кнопка после разделов, файл в public/docs
+export type ArticleDownload = { href: string; label: string; note?: string };
 // faq → блок «Частые вопросы» + FAQPage JSON-LD на странице статьи (rich-сниппеты)
 // seoTitle — короткий заголовок для выдачи (≤62 знаков), когда title длиннее и обрезался бы
 // seoDesc — описание для выдачи вместо excerpt. В seoTitle/seoDesc допустимы «{{min:Раздел}}» — живая цена (typeSeo.fillLiveMins)
-export type ArticleBody = { title: string; seoTitle?: string; seoDesc?: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[] };
+export type ArticleBody = { title: string; seoTitle?: string; seoDesc?: string; excerpt: string; sections: ArticleSection[]; faq?: ArticleFaqItem[]; summary?: string[]; download?: ArticleDownload };
 
 // Обложка статьи: /blog-img/<slug>.jpg в public (карточка списка + фон шапки статьи)
 export const articleImg = (slug: string) => `/blog-img/${slug}.jpg`;
@@ -33,6 +49,7107 @@ export type Article = {
 };
 
 export const ARTICLES: Article[] = [
+  {
+    "slug": "komplektatsiya-obekta-slabotochnymi-sistemami",
+    "date": "2026-11-10",
+    "updated": "2026-11-10",
+    "related": [
+      "slabotochnye-sistemy",
+      "cctv",
+      "access",
+      "network"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr",
+      "kommutatory",
+      "telekommunikacionnye-shkafy"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "tehnicheskoe-zadanie-na-videonablyudenie",
+      "kak-vybrat-postavshchika-videonablyudeniya-skud",
+      "indeks-cen-slabotochnye-sistemy-tashkent-2026",
+      "kak-rasschitat-disk-dlya-videonablyudeniya",
+      "montazh-sks",
+      "slabotochnye-sistemy"
+    ],
+    "products": [
+      "hik-ds-7732ni-k4-std",
+      "hik-ds-3e1526p-si-24p2f"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Как заказать комплектацию объекта слаботочными системами: спецификация, ведомость, документы и этапы",
+        "seoTitle": "Комплектация объекта слаботочными системами: как заказать",
+        "seoDesc": "Что прислать для КП, как проверить спецификацию до закупки, этапы поставки и монтажа и какие документы получает заказчик: договор, ЭСФ, акты.",
+        "excerpt": "Что прислать поставщику для расчёта, как проверить спецификацию до закупки, из каких этапов состоит комплектация объекта видеонаблюдением, СКУД, пожарной сигнализацией и сетью и какие документы заказчик получает в конце.",
+        "summary": [
+          "Комплектация объекта — это поставка всего оборудования и материалов слаботочных систем по спецификации или рабочей документации заказчика, при необходимости вместе с монтажом и пусконаладкой.",
+          "Чтобы получить точное коммерческое предложение, пришлите спецификацию или ведомость объёмов с моделями или характеристиками и количеством, планы объекта, требования к архиву и интеграции и укажите, нужен ли монтаж.",
+          "Дальше идут проверка совместимости, КП, договор со спецификацией, поставка, монтаж и сдача с актами, электронными счетами-фактурами и исполнительной документацией."
+        ],
+        "sections": [
+          {
+            "h": "Что такое комплектация объекта и чем она отличается от покупки по прайсу?",
+            "p": [
+              "Покупка по прайсу — это отдельные позиции: камера, регистратор, коммутатор. Комплектация — поставка всего, что нужно, чтобы система заработала на конкретном объекте: оборудование, кабель, шкафы, электропитание, расходные материалы, лицензии программного обеспечения, а при заказе работ — монтаж, пусконаладка и документы для сдачи. Главная разница — в ответственности: при комплектации поставщик отвечает за то, что позиции совместимы между собой и в спецификации ничего не забыто.",
+              "Четыре термина встречаются в любом запросе. Спецификация — перечень позиций с моделью или характеристиками, единицей измерения и количеством. Ведомость объёмов (в международной практике — bill of quantities, BOQ) — перечень работ и материалов с объёмами: метры кабеля, число точек, монтаж каждой единицы. Рабочая документация — схемы и планы, по которым ведётся монтаж. Коммерческое предложение (КП) — ответ поставщика с ценой по каждой строке спецификации.",
+              "Комплектацию заказывают застройщики и генподрядчики под сдачу дома или корпуса, снабженцы предприятий под модернизацию склада, цеха или проходной, а также монтажные организации, которые ведут работы сами и закупают оборудование одним пакетом под объект."
+            ]
+          },
+          {
+            "h": "Что прислать поставщику, чтобы получить точное коммерческое предложение?",
+            "p": [
+              "Точность КП определяется исходными данными. Минимальный пакет — спецификация и планы; всё остальное сокращает число уточняющих вопросов и риск замен после подписания договора.",
+              "Если спецификации ещё нет, а есть только задача — «закрыть видеонаблюдением склад на 1 200 м²» или «поставить проходную на четыре турникета», — начинают с неё: по планам и обследованию объекта составляют перечень оборудования, и после согласования он становится спецификацией к договору."
+            ],
+            "table": {
+              "head": [
+                "Что прислать",
+                "Что в нём должно быть",
+                "Зачем"
+              ],
+              "rows": [
+                [
+                  "Спецификация или ведомость объёмов (Excel или PDF)",
+                  "модель или характеристики, единица измерения, количество по каждой системе",
+                  "основа расчёта и построчного сравнения предложений"
+                ],
+                [
+                  "Планы этажей или рабочая документация",
+                  "расположение камер, считывателей, извещателей, шкафов, трассы",
+                  "проверка длин линий, числа портов и метража кабеля"
+                ],
+                [
+                  "Состав работ",
+                  "только поставка / поставка и монтаж / монтаж и пусконаладка",
+                  "от него зависят разделы КП и комплект документов"
+                ],
+                [
+                  "Требования к архиву",
+                  "глубина записи в днях, где хранится архив",
+                  "расчёт дисков и регистраторов"
+                ],
+                [
+                  "Существующее оборудование",
+                  "бренды, модели, программная платформа",
+                  "совместимость при расширении системы"
+                ],
+                [
+                  "График объекта",
+                  "этапы стройки и сроки по каждой системе",
+                  "поставка частями под график"
+                ],
+                [
+                  "Требования к документам",
+                  "договор, НДС, ЭСФ, акты, исполнительная документация, формы заказчика",
+                  "состав закрывающего пакета"
+                ],
+                [
+                  "Ответственный",
+                  "имя, телефон, e-mail",
+                  "быстрые уточнения по спецификации"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Модель или характеристики: как писать позиции спецификации?",
+            "p": [
+              "Корпоративному заказчику проще всего указывать точную модель и артикул: так предложения разных поставщиков сравниваются построчно. Если модель допускает замену, рядом указывают параметры, по которым замена считается равноценной: разрешение, объектив и угол обзора, дальность подсветки, класс защиты корпуса, кодек, питание по PoE, а для регистратора — число каналов, число отсеков для дисков и входящий поток в Мбит/с.",
+              "Для государственных заказчиков правило задано законом. Часть третья статьи 34 Закона «О государственных закупках» № ЗРУ-684 от 22.04.2021 (в редакции ЗРУ-1005 от 27.11.2024, действует с 01.03.2025) не допускает в описании закупки товарный знак, модель или производителя, кроме закупок через электронный магазин и случаев, когда иначе точно описать товар нельзя; тогда в описание обязательно включают слова «или аналог», за исключением случаев несовместимости товаров. Закон продолжают менять, поэтому редакцию проверяют на дату закупки.",
+              "Количество пишут в тех единицах, в которых товар поставляется: камеры и регистраторы — в штуках, кабель — в метрах или бухтах по 305 м, шкафы — в штуках с высотой в юнитах. Для регистраторов и коммутаторов разумно сразу заложить запас по каналам и портам — около четверти сверх текущей потребности (так закладываем мы в своих спецификациях), чтобы при расширении не менять устройство целиком."
+            ]
+          },
+          {
+            "h": "Что проверяют в спецификации до расчёта?",
+            "p": [
+              "Ошибка в спецификации дороже всего обходится после поставки, когда оборудование уже на объекте. Поэтому до расчёта спецификацию сверяют по семи пунктам.",
+              "По каждому найденному расхождению поставщик задаёт вопрос или предлагает вариант и пишет, чем он отличается от исходной позиции. Решение остаётся за заказчиком, итоговая спецификация прикладывается к договору."
+            ],
+            "ol": [
+              "Совместимость камер и регистратора: кодек, число каналов и входящий поток. Например, 32-канальный регистратор Hikvision DS-7732NI-K4 принимает до 256 Мбит/с: 32 камеры по 4 Мбит/с занимают 128 Мбит/с, по 8 Мбит/с — весь поток.",
+              "Бюджет PoE: суммарное потребление камер на коммутаторе сравнивают с его бюджетом питания — у 24-портового Hikvision DS-3E1526P-SI-24P2F это 370 Вт.",
+              "Длина линий: данные и питание по витой паре передаются на расстояние до 100 м от коммутатора; для дальних точек закладывают оптику или выносной коммутатор.",
+              "Диски: число отсеков регистратора и объём архива по формуле «битрейт × секунды в сутках × дни ÷ 8».",
+              "Электропитание: источник бесперебойного питания для шкафа с регистратором и коммутаторами.",
+              "Кабель и материалы: метраж, лотки, гофра, коннекторы, патч-панели — то, чего чаще всего нет в спецификации оборудования.",
+              "Программное обеспечение: лицензии каналов центральной платформы, если объектом управляют с сервера, и интеграция со СКУД или учётом рабочего времени."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Из каких этапов состоит комплектация объекта?",
+            "p": [
+              "Длительность поставки и монтажа зависит от объёма и от того, насколько готова спецификация. Поставку частями согласуют заранее, чтобы оборудование приходило к началу соответствующих работ, а не хранилось на стройке месяцами."
+            ],
+            "ol": [
+              "Запрос: спецификация, планы и требования к документам — на sales@satsolutions.uz или через страницу «Поставки и тендеры».",
+              "Разбор: проверка спецификации по семи пунктам, вопросы заказчику, при необходимости — выезд на объект.",
+              "Коммерческое предложение: в течение 24 часов — цена по каждой строке, отдельно оборудование и работы, перечень того, что не вошло.",
+              "Договор: предмет, спецификация как приложение, порядок поставки, приёмки и гарантии.",
+              "Поставка: целиком или частями под график объекта, с накладными и ЭСФ.",
+              "Монтаж и пусконаладка, если они заказаны: прокладка трасс, установка, настройка, проверка каждой точки.",
+              "Сдача: акт выполненных работ, исполнительная документация, передача учётных записей и паролей под подпись, обучение персонала.",
+              "Гарантия и обслуживание: гарантия производителя на оборудование, гарантия подрядчика на работы, при необходимости — договор технического обслуживания."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Какие документы получает заказчик?",
+            "p": [
+              "SAT Solutions работает с НДС: электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота, поэтому принять поставку в учёт можно без ожидания бумажных оригиналов. Форму 2 (ведомость ресурсов) и Форму 3 (справку о стоимости работ) по сметным правилам заказчика выдаём по его требованию. Исполнительную документацию сдаём так: схемы, перечень оборудования с серийными номерами, сетевые адреса, а учётные записи передаём под подпись. Сертификаты соответствия и паспорта моделей предоставляем по запросу."
+            ],
+            "table": {
+              "head": [
+                "Этап",
+                "Документ",
+                "Для чего"
+              ],
+              "rows": [
+                [
+                  "Расчёт",
+                  "Коммерческое предложение",
+                  "согласование бюджета, сравнение поставщиков"
+                ],
+                [
+                  "Договор",
+                  "Договор и спецификация-приложение",
+                  "фиксирует модели, количество, цену и гарантию"
+                ],
+                [
+                  "Оплата",
+                  "Счёт",
+                  "основание для платежа"
+                ],
+                [
+                  "Поставка",
+                  "Накладная и электронный счёт-фактура (ЭСФ)",
+                  "приход оборудования, бухгалтерский и налоговый учёт"
+                ],
+                [
+                  "Поставка",
+                  "Гарантийные талоны, паспорта и инструкции производителя",
+                  "гарантийные обращения"
+                ],
+                [
+                  "Монтаж",
+                  "Акт выполненных работ",
+                  "закрытие работ"
+                ],
+                [
+                  "Сдача",
+                  "Исполнительная документация: схемы, перечень оборудования с серийными номерами, сетевые адреса, учётные записи, переданные под подпись",
+                  "эксплуатация и будущие расширения"
+                ],
+                [
+                  "По требованию заказчика",
+                  "Формы по сметным правилам заказчика (Форма 2 и Форма 3): ведомость ресурсов и справка о стоимости работ",
+                  "сдача работ бухгалтерии или техническому надзору"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Только поставка или поставка с монтажом: что выбрать?",
+            "p": [
+              "Поставка без монтажа подходит, когда у заказчика или генподрядчика есть своя монтажная организация: она получает оборудование по спецификации и ведёт работы по своему графику. Заказчик в этом случае получает гарантию производителя на оборудование от одного до трёх лет, а за решение на объекте и качество монтажа отвечает тот, кто монтирует.",
+              "Поставка с монтажом одним подрядчиком собирает ответственность в одних руках: кто поставил оборудование, тот его и настраивает, и при отказе не возникает спора, что виновато — камера или кабель. В SAT Solutions монтаж ведёт собственный штат — 3 инженера и 15 монтажников, на монтажные работы даём гарантию 3 года; на оборудование действует гарантия производителя от 1 до 3 лет."
+            ],
+            "table": {
+              "head": [
+                "Критерий",
+                "Только поставка",
+                "Поставка и монтаж"
+              ],
+              "rows": [
+                [
+                  "Кто отвечает за совместимость",
+                  "поставщик — за позиции спецификации, монтажная организация — за решение на объекте",
+                  "один подрядчик за всю систему"
+                ],
+                [
+                  "Гарантия",
+                  "производителя на оборудование, 1–3 года",
+                  "производителя на оборудование и 3 года на монтажные работы"
+                ],
+                [
+                  "Документы",
+                  "договор, накладные, ЭСФ, гарантийные талоны",
+                  "то же плюс акты работ и исполнительная документация"
+                ],
+                [
+                  "Когда выбирают",
+                  "есть своя монтажная служба или генподрядчик",
+                  "нужна сдача готовой системы целиком"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Как формируется цена комплектации?",
+            "p": [
+              "Цена складывается из трёх частей: оборудование, материалы и работы. Оборудование считают по ценам каталога на дату КП: на satsolutions.uz — более 2 500 позиций с ценами в сумах (цены на 09.11.2026), ходовые позиции в наличии на собственном складе в Ташкенте. Работаем с НДС. Материалы — кабель, лотки, крепёж, расходники — считают по ведомости объёмов, и именно здесь спецификации чаще всего оказываются неполными. Работы считают по расценкам за единицу.",
+              "Пример расценок SAT Solutions на видеонаблюдение на 09.11.2026: монтаж внутренней камеры — 155 000 сум, уличной — 180 000, настройка и пусконаладка камеры — 77 000, установка и настройка регистратора свыше 16 камер — 450 000 за систему, прокладка кабеля — 7 000 сум за метр внутри здания и 10 000 по фасаду и улице. На крупных объектах кабельные трассы нередко стоят больше, чем монтаж самих камер: в расчёте системы на 32 камеры прокладка 1 440 м кабеля — это около 11,5 млн из 19,8 млн сум работ, примерно 58 %.",
+              "При сравнении предложений смотрите не только на итог. Уточните, на какой срок действительна цена, входят ли в неё материалы и пусконаладка, сколько дней архива дают выбранные диски и что записано в разделе «не входит». Медианные цены по типам оборудования и стоимость работ для шести типовых объектов собраны в индексе цен SAT Solutions."
+            ]
+          },
+          {
+            "h": "О компании",
+            "p": [],
+            "ul": [
+              "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912; Ташкент, ул. Катта Дархон, 5.",
+              "Видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и серверные: поставка оборудования и монтаж. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
+              "Разрешение Национальной гвардии № 1554491 (монтаж, наладка и техобслуживание технических средств охраны) и разрешение МЧС № 913518 (монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения) — документы на странице «О компании».",
+              "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
+              "Каталог: более 2 500 позиций с ценами в сумах (цены на 09.11.2026); собственный склад в Ташкенте, ходовые позиции в наличии.",
+              "Работаем с НДС; ЭСФ выставляем через оператора электронного документооборота. Контакты: +998 97 862-66-99, sales@satsolutions.uz, Пн–Пт 9:00–18:00."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Можно ли заказать комплектацию без монтажа?",
+            "a": "Да. Поставку по спецификации заказывают отдельно от работ: оборудование поставляется по договору со спецификацией, накладными и ЭСФ, монтаж ведёт ваша монтажная организация. Гарантия на оборудование — гарантия производителя от 1 до 3 лет."
+          },
+          {
+            "q": "Что делать, если спецификации ещё нет?",
+            "a": "Начать с задачи и планов объекта. По ним составляют перечень оборудования и ведомость объёмов, которые после согласования становятся спецификацией к договору."
+          },
+          {
+            "q": "Можно ли поставлять оборудование частями?",
+            "a": "Да, поставку часто делят по этапам стройки. Состав каждой партии и сроки фиксируют в договоре или графике поставки."
+          },
+          {
+            "q": "Как сравнить КП разных поставщиков?",
+            "a": "Построчно: модель или характеристики, количество, гарантия, состав работ, метраж кабеля, глубина архива и перечень того, что не вошло. Сравнение одних итоговых сумм без этого вводит в заблуждение."
+          },
+          {
+            "q": "Можно ли указать в спецификации конкретный бренд?",
+            "a": "Корпоративный заказчик вправе указывать модели. Государственный заказчик по части третьей статьи 34 Закона № ЗРУ-684 указывает товарный знак или модель только в исключительных случаях и тогда добавляет «или аналог», кроме случаев несовместимости товаров."
+          },
+          {
+            "q": "Какие документы нужны бухгалтерии заказчика?",
+            "a": "Договор со спецификацией, счёт, накладная, электронный счёт-фактура и акт выполненных работ, если были работы. SAT Solutions работает с НДС и выставляет ЭСФ через оператора электронного документооборота."
+          },
+          {
+            "q": "Какая гарантия на оборудование и на работы?",
+            "a": "На оборудование — гарантия производителя от 1 до 3 лет, на монтажные работы SAT Solutions — 3 года."
+          }
+        ]
+      },
+      "uz": {
+        "title": "Obyektni kuchsiz tok tizimlari bilan butlashga qanday buyurtma beriladi: spetsifikatsiya, qaydnoma, hujjatlar va bosqichlar",
+        "seoTitle": "Obyektni kuchsiz tok tizimlari bilan butlash tartibi",
+        "seoDesc": "Tijorat taklifi uchun nima yuboriladi, spetsifikatsiya qanday tekshiriladi, yetkazib berish bosqichlari va buyurtmachi oladigan hujjatlar.",
+        "excerpt": "Hisob-kitob uchun yetkazib beruvchiga nima yuboriladi, xariddan oldin spetsifikatsiya qanday tekshiriladi, obyektni videokuzatuv, SKUD, yongʻin signalizatsiyasi va tarmoq bilan butlash qanday bosqichlardan iborat va oxirida buyurtmachi qanday hujjatlarni oladi.",
+        "summary": [
+          "Obyektni butlash — buyurtmachining spetsifikatsiyasi yoki ishchi hujjatlari asosida kuchsiz tok tizimlari uchun kerak boʻlgan barcha uskuna va materiallarni yetkazib berish, zarur boʻlsa, montaj va ishga tushirish-sozlash ishlari bilan birga.",
+          "Aniq tijorat taklifi olish uchun modellari yoki tavsiflari va miqdori koʻrsatilgan spetsifikatsiya yoki hajmlar qaydnomasini, obyekt rejalarini, arxiv va integratsiya boʻyicha talablarni yuboring hamda montaj kerak-kerakmasligini yozing.",
+          "Keyin moslik tekshiriladi, tijorat taklifi tayyorlanadi, spetsifikatsiya ilova qilingan shartnoma tuziladi, uskunalar yetkazib beriladi, montaj qilinadi va tizim dalolatnomalar, elektron hisob-fakturalar hamda ijro hujjatlari bilan topshiriladi."
+        ],
+        "sections": [
+          {
+            "h": "Obyektni butlash nima va u narxlar roʻyxati boʻyicha xariddan nimasi bilan farq qiladi?",
+            "p": [
+              "Narxlar roʻyxati boʻyicha xarid — bu alohida pozitsiyalar: kamera, videoregistrator, kommutator. Butlash esa tizim aynan shu obyektda ishlashi uchun kerak boʻlgan hamma narsani yetkazib berishdir: uskunalar, kabel, shkaflar, elektr taʼminoti, sarf materiallari, dasturiy taʼminot litsenziyalari, ishlar ham buyurtma qilingan boʻlsa — montaj, ishga tushirish-sozlash va topshirish hujjatlari. Asosiy farq masʼuliyatda: butlashda yetkazib beruvchi pozitsiyalar bir-biriga mos kelishi va spetsifikatsiyada hech narsa unutilmagani uchun javob beradi.",
+              "Har qanday soʻrovda toʻrtta atama uchraydi. Spetsifikatsiya — modeli yoki tavsiflari, oʻlchov birligi va miqdori koʻrsatilgan pozitsiyalar roʻyxati. Hajmlar qaydnomasi (xalqaro amaliyotda bill of quantities, BOQ) — ishlar va materiallarning hajmlari bilan roʻyxati: kabel metrlari, nuqtalar soni, har bir birlikni montaj qilish. Ishchi hujjatlar — montaj olib boriladigan sxemalar va rejalar. Tijorat taklifi — yetkazib beruvchining spetsifikatsiyaning har bir qatori boʻyicha narx koʻrsatilgan javobi.",
+              "Butlashga quruvchi kompaniyalar va bosh pudratchilar uy yoki binoni topshirish uchun, korxonalarning taʼminot boʻyicha mutaxassislari ombor, sex yoki oʻtish punktini modernizatsiya qilish uchun, shuningdek, ishlarni oʻzi bajaradigan va obyekt uchun uskunani bitta paketda xarid qiladigan montaj tashkilotlari buyurtma beradi."
+            ]
+          },
+          {
+            "h": "Aniq tijorat taklifi olish uchun yetkazib beruvchiga nima yuborish kerak?",
+            "p": [
+              "Tijorat taklifining aniqligi boshlangʻich maʼlumotlarga bogʻliq. Eng kam paket — spetsifikatsiya va rejalar; qolganlari aniqlashtiruvchi savollar sonini va shartnoma imzolangandan keyin almashtirishlar xavfini kamaytiradi.",
+              "Agar spetsifikatsiya hali yoʻq boʻlib, faqat vazifa boʻlsa — masalan, «1 200 m² omborni videokuzatuv bilan qamrab olish» yoki «toʻrtta turniketli oʻtish punkti oʻrnatish», — ishni shundan boshlashadi: rejalar va obyekt koʻrigi asosida uskunalar roʻyxati tuziladi, kelishilgandan keyin u shartnomaga ilova qilinadigan spetsifikatsiyaga aylanadi."
+            ],
+            "table": {
+              "head": [
+                "Nima yuboriladi",
+                "Unda nima boʻlishi kerak",
+                "Nima uchun"
+              ],
+              "rows": [
+                [
+                  "Spetsifikatsiya yoki hajmlar qaydnomasi (Excel yoki PDF)",
+                  "har bir tizim boʻyicha model yoki tavsiflar, oʻlchov birligi, miqdor",
+                  "hisob-kitob va takliflarni qatorma-qator solishtirish asosi"
+                ],
+                [
+                  "Qavat rejalari yoki ishchi hujjatlar",
+                  "kameralar, oʻquvchi qurilmalar, xabar bergichlar, shkaflar joylashuvi, trassalar",
+                  "liniyalar uzunligi, portlar soni va kabel metrajini tekshirish"
+                ],
+                [
+                  "Ishlar tarkibi",
+                  "faqat yetkazib berish / yetkazib berish va montaj / montaj va ishga tushirish-sozlash",
+                  "tijorat taklifi boʻlimlari va hujjatlar toʻplami shunga bogʻliq"
+                ],
+                [
+                  "Arxivga talablar",
+                  "yozuv chuqurligi kunlarda, arxiv qayerda saqlanadi",
+                  "disklar va videoregistratorlarni hisoblash"
+                ],
+                [
+                  "Mavjud uskunalar",
+                  "brendlar, modellar, dasturiy platforma",
+                  "tizimni kengaytirishda moslik"
+                ],
+                [
+                  "Obyekt jadvali",
+                  "qurilish bosqichlari va har bir tizim muddatlari",
+                  "jadvalga mos ravishda qismlab yetkazib berish"
+                ],
+                [
+                  "Hujjatlarga talablar",
+                  "shartnoma, QQS, elektron hisob-faktura, dalolatnomalar, ijro hujjatlari, buyurtmachi shakllari",
+                  "yopuvchi hujjatlar toʻplami tarkibi"
+                ],
+                [
+                  "Masʼul shaxs",
+                  "ism, telefon, e-mail",
+                  "spetsifikatsiya boʻyicha tezkor aniqlashtirishlar"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Model yoki tavsiflar: spetsifikatsiya pozitsiyalari qanday yoziladi?",
+            "p": [
+              "Korporativ buyurtmachi uchun eng qulayi — aniq model va artikulni koʻrsatish: shunda turli yetkazib beruvchilarning takliflari qatorma-qator solishtiriladi. Agar model almashtirilishi mumkin boʻlsa, uning yoniga almashtirish teng qiymatli hisoblanadigan parametrlar yoziladi: ruxsat, obyektiv va koʻrish burchagi, yoritish masofasi, korpus himoya klassi, kodek, PoE orqali taʼminot, videoregistrator uchun esa kanallar soni, disk joylari soni va Mbit/s dagi kiruvchi oqim.",
+              "Davlat buyurtmachilari uchun qoida qonunda belgilangan. Oʻzbekiston Respublikasining 2021-yil 22-apreldagi OʻRQ-684-son «Davlat xaridlari toʻgʻrisida»gi Qonuni 34-moddasining uchinchi qismi (2024-yil 27-noyabrdagi OʻRQ-1005-son Qonun tahririda, 2025-yil 1-martdan amalda) xarid tavsifida tovar belgisi, model yoki ishlab chiqaruvchini koʻrsatishga yoʻl qoʻymaydi; bundan elektron doʻkon orqali xaridlar va tovarni boshqa aniq usulda tavsiflab boʻlmaydigan holatlar mustasno — bunday holda tavsifga «yoki analogi» soʻzlari albatta kiritiladi, tovarlar mos kelmaydigan holatlar bundan mustasno. Qonunga oʻzgartirishlar kiritilishda davom etmoqda, shuning uchun tahrir xarid sanasida tekshiriladi.",
+              "Miqdor tovar yetkazib beriladigan birliklarda yoziladi: kameralar va videoregistratorlar — dona, kabel — metr yoki 305 metrlik gʻaltak, shkaflar — dona, balandligi yunitlarda. Videoregistrator va kommutatorlar uchun kanallar va portlar boʻyicha zaxirani darhol, joriy ehtiyojdan taxminan chorak koʻproq qilib koʻzda tutish oqilona (oʻz spetsifikatsiyalarimizda biz zaxirani shunday belgilaymiz) — shunda tizim kengayganda qurilmani butunlay almashtirish kerak boʻlmaydi."
+            ]
+          },
+          {
+            "h": "Hisob-kitobdan oldin spetsifikatsiyada nimalar tekshiriladi?",
+            "p": [
+              "Spetsifikatsiyadagi xato eng qimmatga uskuna obyektga yetkazib berilgandan keyin tushadi. Shuning uchun hisob-kitobdan oldin spetsifikatsiya yetti band boʻyicha tekshiriladi.",
+              "Topilgan har bir nomuvofiqlik boʻyicha yetkazib beruvchi savol beradi yoki variant taklif qilib, uning dastlabki pozitsiyadan farqini yozadi. Qaror buyurtmachida qoladi, yakuniy spetsifikatsiya shartnomaga ilova qilinadi."
+            ],
+            "ol": [
+              "Kameralar va videoregistrator mosligi: kodek, kanallar soni va kiruvchi oqim. Masalan, 32 kanalli Hikvision DS-7732NI-K4 videoregistratori 256 Mbit/s gacha qabul qiladi: 4 Mbit/s dan 32 ta kamera 128 Mbit/s ni egallaydi, 8 Mbit/s dan esa butun oqimni.",
+              "PoE quvvat byudjeti: kommutatordagi kameralarning umumiy isteʼmoli uning quvvat byudjeti bilan solishtiriladi — 24 portli Hikvision DS-3E1526P-SI-24P2F da bu 370 Vt.",
+              "Liniyalar uzunligi: oʻralgan juftlik orqali maʼlumot va quvvat kommutatordan 100 m gacha uzatiladi; uzoq nuqtalar uchun optika yoki chiqarma kommutator koʻzda tutiladi.",
+              "Disklar: videoregistratordagi disk joylari soni va arxiv hajmi «bitreyt × sutkadagi soniyalar × kunlar ÷ 8» formulasi boʻyicha.",
+              "Elektr taʼminoti: videoregistrator va kommutatorlar turgan shkaf uchun uzluksiz quvvat manbai.",
+              "Kabel va materiallar: metraj, lotoklar, gofra, konnektorlar, patch-panellar — uskunalar spetsifikatsiyasida koʻpincha yoʻq boʻladigan narsalar.",
+              "Dasturiy taʼminot: obyekt serverdan boshqarilsa, markaziy platforma kanallari litsenziyalari hamda SKUD yoki ish vaqtini hisobga olish bilan integratsiya."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Obyektni butlash qanday bosqichlardan iborat?",
+            "p": [
+              "Yetkazib berish va montaj davomiyligi hajmga va spetsifikatsiya qanchalik tayyorligiga bogʻliq. Qismlab yetkazib berish oldindan kelishiladi — uskuna qurilishda oylab saqlanib yotmasdan, tegishli ishlar boshlanishiga yetib kelishi kerak."
+            ],
+            "ol": [
+              "Soʻrov: spetsifikatsiya, rejalar va hujjatlarga talablar — sales@satsolutions.uz manziliga yoki «Yetkazib berish va tenderlar» sahifasi orqali.",
+              "Tahlil: spetsifikatsiyani yetti band boʻyicha tekshirish, buyurtmachiga savollar, zarur boʻlsa — obyektga chiqish.",
+              "Tijorat taklifi: 24 soat ichida — har bir qator boʻyicha narx, uskunalar va ishlar alohida, kirmagan narsalar roʻyxati.",
+              "Shartnoma: predmet, ilova sifatida spetsifikatsiya, yetkazib berish, qabul qilish va kafolat tartibi.",
+              "Yetkazib berish: toʻliq yoki obyekt jadvaliga koʻra qismlab, yuk xatlari va elektron hisob-fakturalar bilan.",
+              "Montaj va ishga tushirish-sozlash, agar buyurtma qilingan boʻlsa: trassalarni yotqizish, oʻrnatish, sozlash, har bir nuqtani tekshirish.",
+              "Topshirish: bajarilgan ishlar dalolatnomasi, ijro hujjatlari, hisob yozuvlari va parollarni imzo qoʻydirib topshirish, xodimlarni oʻqitish.",
+              "Kafolat va xizmat koʻrsatish: uskunaga ishlab chiqaruvchi kafolati, ishlarga pudratchi kafolati, kerak boʻlsa — texnik xizmat koʻrsatish shartnomasi."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Buyurtmachi qanday hujjatlarni oladi?",
+            "p": [
+              "SAT Solutions QQS bilan ishlaydi: elektron hisob-fakturalarni elektron hujjat aylanishi operatori orqali yuboramiz, shuning uchun yetkazib berishni qogʻoz asl nusxalarni kutmasdan hisobga olish mumkin. Buyurtmachining smeta qoidalari boʻyicha 2-shakl (resurslar qaydnomasi) va 3-shaklni (ishlar qiymati maʼlumotnomasi) buyurtmachi talabiga koʻra beramiz. Ijro hujjatlarini shunday topshiramiz: sxemalar, seriya raqamlari koʻrsatilgan uskunalar roʻyxati, tarmoq manzillari, hisob yozuvlari esa imzo qoʻydirib topshiriladi. Muvofiqlik sertifikatlari va modellar pasportlarini soʻrov boʻyicha taqdim etamiz."
+            ],
+            "table": {
+              "head": [
+                "Bosqich",
+                "Hujjat",
+                "Nima uchun"
+              ],
+              "rows": [
+                [
+                  "Hisob-kitob",
+                  "Tijorat taklifi",
+                  "byudjetni kelishish, yetkazib beruvchilarni solishtirish"
+                ],
+                [
+                  "Shartnoma",
+                  "Shartnoma va ilova-spetsifikatsiya",
+                  "modellar, miqdor, narx va kafolatni qayd etadi"
+                ],
+                [
+                  "Toʻlov",
+                  "Hisob",
+                  "toʻlov uchun asos"
+                ],
+                [
+                  "Yetkazib berish",
+                  "Yuk xati va elektron hisob-faktura",
+                  "uskunani kirim qilish, buxgalteriya va soliq hisobi"
+                ],
+                [
+                  "Yetkazib berish",
+                  "Ishlab chiqaruvchining kafolat taloni, pasporti va yoʻriqnomalari",
+                  "kafolat boʻyicha murojaatlar"
+                ],
+                [
+                  "Montaj",
+                  "Bajarilgan ishlar dalolatnomasi",
+                  "ishlarni yopish"
+                ],
+                [
+                  "Topshirish",
+                  "Ijro hujjatlari: sxemalar, seriya raqamlari koʻrsatilgan uskunalar roʻyxati, tarmoq manzillari, imzo qoʻydirib topshirilgan hisob yozuvlari",
+                  "foydalanish va keyingi kengaytirishlar"
+                ],
+                [
+                  "Buyurtmachi talabiga koʻra",
+                  "Buyurtmachining smeta qoidalari boʻyicha shakllar (2-shakl va 3-shakl): resurslar qaydnomasi va ishlar qiymati maʼlumotnomasi",
+                  "ishlarni buxgalteriya yoki texnik nazoratga topshirish"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Faqat yetkazib berish yoki montaj bilan birga: qaysi birini tanlash kerak?",
+            "p": [
+              "Montajsiz yetkazib berish buyurtmachi yoki bosh pudratchida oʻz montaj tashkiloti boʻlganda mos keladi: u spetsifikatsiya boʻyicha uskunani oladi va ishlarni oʻz jadvali boʻyicha olib boradi. Bu holda buyurtmachi uskunaga ishlab chiqaruvchining bir yildan uch yilgacha kafolatini oladi, obyektdagi yechim va montaj sifati uchun esa montajni bajargan tomon javob beradi.",
+              "Montaj bilan birga bitta pudratchidan yetkazib berish masʼuliyatni bir qoʻlga jamlaydi: uskunani kim yetkazgan boʻlsa, sozlaydigan ham oʻsha, nosozlik yuz berganda kamera aybdormi yoki kabelmi, degan bahs chiqmaydi. SAT Solutions montajni oʻz shtati bilan bajaradi — 3 muhandis va 15 montajchi — va montaj ishlariga 3 yil kafolat beradi; uskunaga ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati amal qiladi."
+            ],
+            "table": {
+              "head": [
+                "Mezon",
+                "Faqat yetkazib berish",
+                "Yetkazib berish va montaj"
+              ],
+              "rows": [
+                [
+                  "Moslik uchun kim javob beradi",
+                  "yetkazib beruvchi — spetsifikatsiya pozitsiyalari uchun, montaj tashkiloti — obyektdagi yechim uchun",
+                  "butun tizim uchun bitta pudratchi"
+                ],
+                [
+                  "Kafolat",
+                  "uskunaga ishlab chiqaruvchi kafolati, 1–3 yil",
+                  "uskunaga ishlab chiqaruvchi kafolati va montaj ishlariga 3 yil"
+                ],
+                [
+                  "Hujjatlar",
+                  "shartnoma, yuk xatlari, elektron hisob-fakturalar, kafolat talonlari",
+                  "shular va qoʻshimcha ravishda ishlar dalolatnomalari hamda ijro hujjatlari"
+                ],
+                [
+                  "Qachon tanlanadi",
+                  "oʻz montaj xizmati yoki bosh pudratchi bor",
+                  "tayyor tizimni toʻliq topshirish kerak"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Butlash narxi qanday shakllanadi?",
+            "p": [
+              "Narx uch qismdan iborat: uskunalar, materiallar va ishlar. Uskunalar tijorat taklifi sanasidagi katalog narxlari boʻyicha hisoblanadi: satsolutions.uz saytida soʻmdagi narxlari bilan 2 500 dan ortiq pozitsiya bor (narxlar 09.11.2026 holatiga), ommabop pozitsiyalar Toshkentdagi oʻz omborimizda mavjud. QQS bilan ishlaymiz. Materiallar — kabel, lotoklar, mahkamlash vositalari, sarf materiallari — hajmlar qaydnomasi boʻyicha hisoblanadi va aynan shu yerda spetsifikatsiyalar koʻpincha toʻliq boʻlmay chiqadi. Ishlar birlik uchun narxlar boʻyicha hisoblanadi.",
+              "SAT Solutions narxlari boʻyicha videokuzatuv ishlariga misol (09.11.2026 holatiga): ichki kamerani montaj qilish — 155 000 soʻm, tashqi kamerani — 180 000, kamerani sozlash va ishga tushirish — 77 000, 16 tadan ortiq kamera uchun videoregistratorni oʻrnatish va sozlash — tizim uchun 450 000, kabel yotqizish — bino ichida metri 7 000 soʻm, fasad va koʻcha boʻylab — 10 000 soʻm. Yirik obyektlarda kabel trassalari koʻpincha kameralar montajidan qimmatroq turadi: 32 kamerali tizim hisobida 1 440 m kabel yotqizish 19,8 mln soʻmlik ishlarning taxminan 11,5 mln soʻmini, yaʼni qariyb 58 foizini tashkil qiladi.",
+              "Takliflarni solishtirganda faqat yakuniy summaga qaramang. Narx qancha muddatga amal qilishini, unga materiallar va ishga tushirish-sozlash kiradimi, tanlangan disklar necha kunlik arxivni beradi va «kirmaydi» boʻlimida nima yozilganini aniqlang. Uskuna turlari boʻyicha median narxlar va oltita namunaviy obyekt uchun ishlar narxi SAT Solutions narxlar indeksida jamlangan."
+            ]
+          },
+          {
+            "h": "Kompaniya haqida",
+            "p": [],
+            "ul": [
+              "SAT Solutions — «SUPPLY AND TRANSPORTATION» MChJ brendi, STIR 308603912; Toshkent, Katta Darxon koʻchasi, 5.",
+              "Videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofon, SKS va server xonalari: uskunalarni yetkazib berish va montaj. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
+              "Milliy gvardiyaning 1554491-son ruxsatnomasi (qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish) va FVVning 913518-son ruxsatnomasi (yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish) — hujjatlar «Kompaniya haqida» sahifasida.",
+              "Montaj ishlariga 3 yil kafolat; uskunaga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
+              "Katalog: soʻmdagi narxlari bilan 2 500 dan ortiq pozitsiya (narxlar 09.11.2026 holatiga); Toshkentda oʻz omborimiz bor, ommabop pozitsiyalar mavjud.",
+              "QQS bilan ishlaymiz; elektron hisob-fakturalar — elektron hujjat aylanishi operatori orqali. Aloqa: +998 97 862-66-99, sales@satsolutions.uz, Du–Ju 9:00–18:00."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Montajsiz butlashga buyurtma berish mumkinmi?",
+            "a": "Ha. Spetsifikatsiya boʻyicha yetkazib berish ishlardan alohida buyurtma qilinadi: uskunalar spetsifikatsiya, yuk xatlari va elektron hisob-fakturalar bilan shartnoma asosida yetkaziladi, montajni sizning montaj tashkilotingiz bajaradi. Uskunaga kafolat — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati."
+          },
+          {
+            "q": "Spetsifikatsiya hali boʻlmasa, nima qilish kerak?",
+            "a": "Vazifa va obyekt rejalaridan boshlash kerak. Ular asosida uskunalar roʻyxati va hajmlar qaydnomasi tuziladi, kelishilgandan keyin ular shartnomaga ilova qilinadigan spetsifikatsiyaga aylanadi."
+          },
+          {
+            "q": "Uskunani qismlab yetkazib berish mumkinmi?",
+            "a": "Ha, yetkazib berish koʻpincha qurilish bosqichlariga boʻlinadi. Har bir partiya tarkibi va muddatlari shartnomada yoki yetkazib berish jadvalida qayd etiladi."
+          },
+          {
+            "q": "Turli yetkazib beruvchilarning tijorat takliflarini qanday solishtirish kerak?",
+            "a": "Qatorma-qator: model yoki tavsiflar, miqdor, kafolat, ishlar tarkibi, kabel metraji, arxiv chuqurligi va kirmagan narsalar roʻyxati. Bularsiz faqat yakuniy summalarni solishtirish chalgʻitadi."
+          },
+          {
+            "q": "Spetsifikatsiyada aniq brendni koʻrsatish mumkinmi?",
+            "a": "Korporativ buyurtmachi modellarni koʻrsatishga haqli. Davlat buyurtmachisi OʻRQ-684-son Qonun 34-moddasining uchinchi qismiga koʻra tovar belgisi yoki modelni faqat istisno holatlarda koʻrsatadi va bunda «yoki analogi» soʻzlarini qoʻshadi, tovarlar mos kelmaydigan holatlar bundan mustasno."
+          },
+          {
+            "q": "Buyurtmachi buxgalteriyasiga qanday hujjatlar kerak?",
+            "a": "Spetsifikatsiya ilova qilingan shartnoma, hisob, yuk xati, elektron hisob-faktura va ishlar bajarilgan boʻlsa, bajarilgan ishlar dalolatnomasi. SAT Solutions QQS bilan ishlaydi va elektron hisob-fakturalarni elektron hujjat aylanishi operatori orqali yuboradi."
+          },
+          {
+            "q": "Uskunaga va ishlarga qanday kafolat beriladi?",
+            "a": "Uskunaga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati, SAT Solutions montaj ishlariga — 3 yil."
+          }
+        ]
+      },
+      "en": {
+        "title": "How to order a low-voltage systems fit-out for a facility in Uzbekistan: specification, BOQ, documents and stages",
+        "seoTitle": "Low-voltage systems fit-out in Tashkent: how to order",
+        "seoDesc": "What to send for a quote, how a specification is checked before purchase, supply and installation stages and the documents the customer receives.",
+        "excerpt": "What to send a supplier for a quote, how a specification is checked before purchase, what stages a CCTV, access control, fire alarm and network fit-out goes through, and which documents the customer receives at the end.",
+        "summary": [
+          "A facility fit-out is the supply of all equipment and materials for the low-voltage systems according to the customer's specification or working drawings, together with installation and commissioning when required.",
+          "To get an accurate quotation, send a specification or bill of quantities with models or characteristics and quantities, floor plans, archive and integration requirements, and state whether installation is needed.",
+          "The process then runs through a compatibility check, the quotation, a contract with the specification attached, delivery, installation and handover with acceptance certificates, e-invoices and as-built documentation."
+        ],
+        "sections": [
+          {
+            "h": "What is a facility fit-out and how is it different from buying from a price list?",
+            "p": [
+              "Buying from a price list means individual items: a camera, a recorder, a switch. A fit-out is the supply of everything a system needs to work at a specific site: equipment, cable, racks, power supply, consumables, software licences and, when works are ordered, installation, commissioning and handover documents. The key difference is responsibility: in a fit-out the supplier answers for the items being compatible with each other and for nothing being missing from the specification.",
+              "Four terms appear in every request. A specification is a list of items with model or characteristics, unit of measure and quantity. A bill of quantities (BOQ) lists works and materials with volumes: metres of cable, number of points, installation of each unit. Working drawings are the diagrams and plans the installation follows. A commercial proposal (quotation) is the supplier's reply with a price for every line of the specification.",
+              "Fit-outs are ordered by developers and general contractors handing over a building, by procurement managers of enterprises upgrading a warehouse, a workshop or an entrance checkpoint, and by installation contractors who do the works themselves and buy the equipment for a site in one package."
+            ]
+          },
+          {
+            "h": "What should you send a supplier to get an accurate quotation?",
+            "p": [
+              "The accuracy of a quotation depends on the input data. The minimum package is a specification and plans; everything else reduces clarifying questions and the risk of substitutions after the contract is signed.",
+              "If there is no specification yet and only a task — \"cover a 1,200 m² warehouse with CCTV\" or \"install an entrance with four turnstiles\" — the work starts from that: an equipment list is drawn up from the plans and a site survey, and once agreed it becomes the specification attached to the contract."
+            ],
+            "table": {
+              "head": [
+                "What to send",
+                "What it should contain",
+                "Why"
+              ],
+              "rows": [
+                [
+                  "Specification or bill of quantities (Excel or PDF)",
+                  "model or characteristics, unit of measure, quantity for each system",
+                  "basis for the calculation and line-by-line comparison of offers"
+                ],
+                [
+                  "Floor plans or working drawings",
+                  "locations of cameras, readers, detectors, racks, cable routes",
+                  "checking line lengths, port count and cable metres"
+                ],
+                [
+                  "Scope of works",
+                  "supply only / supply and installation / installation and commissioning",
+                  "defines the sections of the quotation and the document set"
+                ],
+                [
+                  "Archive requirements",
+                  "recording depth in days, where the archive is stored",
+                  "sizing disks and recorders"
+                ],
+                [
+                  "Existing equipment",
+                  "brands, models, software platform",
+                  "compatibility when extending a system"
+                ],
+                [
+                  "Site schedule",
+                  "construction stages and deadlines for each system",
+                  "delivery in batches to the schedule"
+                ],
+                [
+                  "Document requirements",
+                  "contract, VAT, e-invoices (ESF), certificates of completed works, as-built documentation, customer forms",
+                  "content of the closing package"
+                ],
+                [
+                  "Contact person",
+                  "name, phone, e-mail",
+                  "quick clarifications on the specification"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Model or characteristics: how should specification lines be written?",
+            "p": [
+              "For a corporate customer the simplest option is the exact model and part number: offers from different suppliers can then be compared line by line. If a substitute is acceptable, list next to the model the parameters that make a substitute equivalent: resolution, lens and field of view, illumination range, enclosure protection class, codec, PoE power and, for a recorder, number of channels, number of disk bays and incoming bandwidth in Mbit/s.",
+              "For state customers the rule is set by law. Part three of Article 34 of the Law of the Republic of Uzbekistan No. ZRU-684 of 22 April 2021 \"On Public Procurement\" (as amended by Law No. ZRU-1005 of 27 November 2024, in force since 1 March 2025) does not allow a trademark, model or manufacturer in the description of a procurement, except for purchases through the e-shop and cases where the goods cannot be described precisely in any other way; in those cases the words \"or equivalent\" must be included, unless the goods would be incompatible. The law keeps being amended, so check the version in force on the procurement date.",
+              "Quantities are written in the units the goods are supplied in: cameras and recorders in pieces, cable in metres or 305 m reels, racks in pieces with the height in rack units. For recorders and switches it makes sense to plan a reserve of channels and ports straight away — about a quarter above the current need, which is how we plan it in our own specifications — so that the device does not have to be replaced when the system grows."
+            ]
+          },
+          {
+            "h": "What is checked in a specification before pricing?",
+            "p": [
+              "A specification error is most expensive after delivery, when the equipment is already on site. That is why the specification is checked against seven points before pricing.",
+              "For every discrepancy found, the supplier either asks a question or proposes an option and states how it differs from the original line. The decision stays with the customer, and the final specification is attached to the contract."
+            ],
+            "ol": [
+              "Camera and recorder compatibility: codec, channel count and incoming bandwidth. For example, the 32-channel Hikvision DS-7732NI-K4 recorder accepts up to 256 Mbit/s: 32 cameras at 4 Mbit/s take 128 Mbit/s, at 8 Mbit/s they take the whole bandwidth.",
+              "PoE budget: the total consumption of the cameras on a switch is compared with its power budget — 370 W for the 24-port Hikvision DS-3E1526P-SI-24P2F.",
+              "Line length: data and power over twisted pair reach up to 100 m from the switch; distant points need fibre or a remote switch.",
+              "Disks: the number of recorder bays and the archive volume by the formula \"bitrate × seconds per day × days ÷ 8\".",
+              "Power: an uninterruptible power supply for the rack with the recorder and switches.",
+              "Cable and materials: metres, trays, conduit, connectors, patch panels — what is most often missing from an equipment specification.",
+              "Software: channel licences for a central platform if the site is managed from a server, and integration with access control or time attendance."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "What stages does a facility fit-out go through?",
+            "p": [
+              "How long delivery and installation take depends on the volume and on how complete the specification is. Batch deliveries are agreed in advance so that equipment arrives when the related works start rather than sitting on a construction site for months."
+            ],
+            "ol": [
+              "Request: specification, plans and document requirements — to sales@satsolutions.uz or via the \"Supply and tenders\" page.",
+              "Review: checking the specification against the seven points, questions to the customer, a site visit if needed.",
+              "Quotation: within 24 hours — price for every line, equipment and works separately, a list of what is not included.",
+              "Contract: subject, specification as an annex, delivery, acceptance and warranty terms.",
+              "Delivery: in full or in batches to the site schedule, with delivery notes and e-invoices.",
+              "Installation and commissioning, if ordered: laying cable routes, mounting, configuration, testing every point.",
+              "Handover: certificate of completed works, as-built documentation, transfer of accounts and passwords against signature, staff training.",
+              "Warranty and maintenance: the manufacturer's warranty on equipment, the contractor's warranty on works and, if needed, a maintenance contract."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Which documents does the customer receive?",
+            "p": [
+              "SAT Solutions works with VAT: e-invoices (ESF) are issued through an electronic document-exchange operator, so the delivery can be booked without waiting for paper originals. Form 2 (resource statement) and Form 3 (statement of the cost of works) under the customer's estimating rules are issued at the customer's request. As-built documentation is handed over as follows: diagrams, an equipment list with serial numbers, network addresses, and accounts handed over against signature. Certificates of conformity and model passports are provided on request."
+            ],
+            "table": {
+              "head": [
+                "Stage",
+                "Document",
+                "Purpose"
+              ],
+              "rows": [
+                [
+                  "Pricing",
+                  "Commercial proposal",
+                  "budget approval, comparing suppliers"
+                ],
+                [
+                  "Contract",
+                  "Contract and specification annex",
+                  "fixes models, quantities, price and warranty"
+                ],
+                [
+                  "Payment",
+                  "Invoice",
+                  "basis for payment"
+                ],
+                [
+                  "Delivery",
+                  "Delivery note and electronic invoice (ESF)",
+                  "receiving the equipment, accounting and tax records"
+                ],
+                [
+                  "Delivery",
+                  "Manufacturer's warranty cards, passports and manuals",
+                  "warranty claims"
+                ],
+                [
+                  "Installation",
+                  "Certificate of completed works",
+                  "closing the works"
+                ],
+                [
+                  "Handover",
+                  "As-built documentation: diagrams, equipment list with serial numbers, network addresses, accounts handed over against signature",
+                  "operation and future extensions"
+                ],
+                [
+                  "At the customer's request",
+                  "Forms under the customer's estimating rules (Form 2 and Form 3): resource statement and statement of the cost of works",
+                  "submitting works to accounting or technical supervision"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Supply only or supply with installation: which should you choose?",
+            "p": [
+              "Supply without installation suits a customer or general contractor with its own installation team: it receives the equipment by specification and works to its own schedule. In this case the customer gets the manufacturer's warranty on the equipment of one to three years, while the on-site solution and installation quality are the responsibility of whoever installs it.",
+              "Supply with installation by one contractor puts responsibility in one pair of hands: whoever supplied the equipment also configures it, and a failure does not turn into an argument over whether the camera or the cable is to blame. SAT Solutions installs with its own staff — 3 engineers and 15 installers — and gives a 3-year warranty on installation works; the manufacturer's warranty of 1 to 3 years applies to the equipment."
+            ],
+            "table": {
+              "head": [
+                "Criterion",
+                "Supply only",
+                "Supply and installation"
+              ],
+              "rows": [
+                [
+                  "Who is responsible for compatibility",
+                  "the supplier for the specification lines, the installer for the on-site solution",
+                  "one contractor for the whole system"
+                ],
+                [
+                  "Warranty",
+                  "manufacturer's warranty on equipment, 1–3 years",
+                  "manufacturer's warranty on equipment and 3 years on installation works"
+                ],
+                [
+                  "Documents",
+                  "contract, delivery notes, e-invoices, warranty cards",
+                  "the same plus certificates of works and as-built documentation"
+                ],
+                [
+                  "When it is chosen",
+                  "own installation team or a general contractor",
+                  "a finished system must be handed over as a whole"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "How is the price of a fit-out formed?",
+            "p": [
+              "The price has three parts: equipment, materials and works. Equipment is priced at catalogue prices on the date of the quotation: satsolutions.uz lists more than 2,500 items with prices in UZS (prices as of 9 November 2026), and fast-moving items are in stock at our own warehouse in Tashkent. We work with VAT. Materials — cable, trays, fixings, consumables — are priced from the bill of quantities, and this is exactly where specifications most often turn out to be incomplete. Works are priced at unit rates.",
+              "An example of SAT Solutions CCTV rates as of 9 November 2026: installing an indoor camera — 155,000 UZS, an outdoor camera — 180,000, camera configuration and commissioning — 77,000, installing and configuring a recorder for more than 16 cameras — 450,000 per system, cable laying — 7,000 UZS per metre inside a building and 10,000 along a facade or outdoors. On large sites cable routes often cost more than mounting the cameras: in the calculation for a 32-camera system, laying 1,440 m of cable accounts for about 11.5 million of the 19.8 million UZS of works, roughly 58%.",
+              "When comparing offers, look beyond the total. Ask how long the price is valid, whether materials and commissioning are included, how many days of archive the chosen disks provide and what is written under \"not included\". Median prices by equipment type and the cost of works for six typical sites are collected in the SAT Solutions price index."
+            ]
+          },
+          {
+            "h": "About the company",
+            "p": [],
+            "ul": [
+              "SAT Solutions is a brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912; 5 Katta Darkhon Street, Tashkent.",
+              "CCTV, access control and turnstiles, time attendance, intrusion and fire alarm, intercom, structured cabling and server rooms: equipment supply and installation. Installation by our own staff: 3 engineers and 15 installers.",
+              "National Guard permit No. 1554491 (installation, adjustment and maintenance of technical security equipment) and Ministry of Emergency Situations permit No. 913518 (installation, adjustment and maintenance of fire alarm and automatic fire extinguishing systems) — documents on the \"About\" page.",
+              "3-year warranty on installation works; the manufacturer's warranty of 1 to 3 years on equipment.",
+              "Catalogue: more than 2,500 items with prices in UZS (prices as of 9 November 2026); own warehouse in Tashkent, fast-moving items in stock.",
+              "We work with VAT; e-invoices are issued through an electronic document-exchange operator. Contacts: +998 97 862-66-99, sales@satsolutions.uz, Mon–Fri 9:00–18:00."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Can I order a fit-out without installation?",
+            "a": "Yes. Supply by specification is ordered separately from works: the equipment is supplied under a contract with the specification, delivery notes and e-invoices, and your installation contractor does the works. The equipment is covered by the manufacturer's warranty of 1 to 3 years."
+          },
+          {
+            "q": "What if there is no specification yet?",
+            "a": "Start from the task and the floor plans. An equipment list and a bill of quantities are drawn up from them, and once agreed they become the specification attached to the contract."
+          },
+          {
+            "q": "Can the equipment be delivered in batches?",
+            "a": "Yes, deliveries are often split by construction stage. The content and timing of each batch are fixed in the contract or the delivery schedule."
+          },
+          {
+            "q": "How should quotations from different suppliers be compared?",
+            "a": "Line by line: model or characteristics, quantity, warranty, scope of works, cable metres, archive depth and the list of what is not included. Comparing only the totals without this is misleading."
+          },
+          {
+            "q": "Can a specific brand be named in the specification?",
+            "a": "A corporate customer is free to name models. A state customer, under part three of Article 34 of Law No. ZRU-684, names a trademark or model only in exceptional cases and then adds \"or equivalent\", unless the goods would be incompatible."
+          },
+          {
+            "q": "Which documents does the customer's accounting department need?",
+            "a": "The contract with the specification, the invoice, the delivery note, the electronic invoice (ESF) and, if works were performed, the certificate of completed works. SAT Solutions works with VAT and issues e-invoices through an electronic document-exchange operator."
+          },
+          {
+            "q": "What warranty applies to equipment and works?",
+            "a": "The manufacturer's warranty of 1 to 3 years on equipment and a 3-year SAT Solutions warranty on installation works."
+          }
+        ]
+      },
+      "tr": {
+        "title": "Bir tesis için zayıf akım sistemleri donatımı nasıl sipariş edilir: şartname, metraj cetveli, belgeler ve aşamalar",
+        "seoTitle": "Zayıf akım sistemleri tesis donatımı: nasıl sipariş edilir",
+        "seoDesc": "Teklif için ne gönderilir, şartname satın almadan önce nasıl kontrol edilir, tedarik ve montaj aşamaları ve müşterinin aldığı belgeler.",
+        "excerpt": "Fiyat için tedarikçiye ne gönderilir, şartname satın almadan önce nasıl kontrol edilir, bir tesisin kamera, geçiş kontrol, yangın alarmı ve ağ ile donatımı hangi aşamalardan oluşur ve sonunda müşteri hangi belgeleri alır.",
+        "summary": [
+          "Tesis donatımı, zayıf akım sistemleri için gereken tüm ekipman ve malzemenin müşterinin şartnamesine veya uygulama projesine göre, gerektiğinde montaj ve devreye alma ile birlikte tedarik edilmesidir.",
+          "Doğru bir teklif almak için model veya teknik özellik ve miktar içeren şartnameyi ya da metraj cetvelini, tesis planlarını, arşiv ve entegrasyon gereksinimlerini gönderin ve montaj gerekip gerekmediğini belirtin.",
+          "Ardından uyumluluk kontrolü, teklif, şartnamesi eklenmiş sözleşme, teslimat, montaj ve tutanaklar, e-faturalar ve uygulama sonrası dokümantasyonla teslim gelir."
+        ],
+        "sections": [
+          {
+            "h": "Tesis donatımı nedir ve fiyat listesinden alımdan farkı nedir?",
+            "p": [
+              "Fiyat listesinden alım tek tek kalemlerdir: kamera, kayıt cihazı, switch. Donatım ise sistemin belirli bir tesiste çalışması için gereken her şeyin tedarikidir: ekipman, kablo, kabinler, enerji beslemesi, sarf malzemeleri, yazılım lisansları ve işler de sipariş edildiyse montaj, devreye alma ve teslim belgeleri. Asıl fark sorumluluktadır: donatımda tedarikçi kalemlerin birbiriyle uyumlu olmasından ve şartnamede hiçbir şeyin unutulmamasından sorumludur.",
+              "Her talepte dört terim geçer. Şartname (spesifikasyon) — model veya teknik özellik, ölçü birimi ve miktar içeren kalem listesidir. Metraj cetveli (uluslararası uygulamada bill of quantities, BOQ) — iş ve malzemelerin miktarlarıyla listesidir: kablo metresi, nokta sayısı, her birimin montajı. Uygulama projesi — montajın yapıldığı şemalar ve planlardır. Ticari teklif — tedarikçinin şartnamenin her satırı için fiyat verdiği cevaptır.",
+              "Donatımı binayı teslim edecek müteahhitler ve ana yükleniciler, depo, atölye veya giriş noktasını modernize eden işletmelerin satın alma uzmanları ve işleri kendisi yapıp ekipmanı tesis için tek paket halinde alan montaj firmaları sipariş eder."
+            ]
+          },
+          {
+            "h": "Doğru bir teklif almak için tedarikçiye ne gönderilmeli?",
+            "p": [
+              "Teklifin doğruluğu başlangıç verilerine bağlıdır. Asgari paket şartname ve planlardır; diğer her şey ek soruları ve sözleşme imzalandıktan sonra kalem değişikliği riskini azaltır.",
+              "Henüz şartname yoksa ve yalnızca bir görev varsa — örneğin \"1.200 m² depoyu kamerayla kapsamak\" veya \"dört turnikeli bir giriş kurmak\" — işe oradan başlanır: planlar ve tesis keşfine göre ekipman listesi hazırlanır, onaylandıktan sonra sözleşmeye eklenen şartnameye dönüşür."
+            ],
+            "table": {
+              "head": [
+                "Ne gönderilir",
+                "İçinde ne olmalı",
+                "Neden"
+              ],
+              "rows": [
+                [
+                  "Şartname veya metraj cetveli (Excel ya da PDF)",
+                  "her sistem için model veya özellikler, ölçü birimi, miktar",
+                  "hesabın ve tekliflerin satır satır karşılaştırılmasının temeli"
+                ],
+                [
+                  "Kat planları veya uygulama projesi",
+                  "kamera, okuyucu, dedektör, kabin yerleri, kablo güzergâhları",
+                  "hat uzunluğu, port sayısı ve kablo metrajının kontrolü"
+                ],
+                [
+                  "İş kapsamı",
+                  "yalnız tedarik / tedarik ve montaj / montaj ve devreye alma",
+                  "teklif bölümleri ve belge seti buna bağlıdır"
+                ],
+                [
+                  "Arşiv gereksinimleri",
+                  "gün cinsinden kayıt derinliği, arşivin saklandığı yer",
+                  "disk ve kayıt cihazı hesabı"
+                ],
+                [
+                  "Mevcut ekipman",
+                  "markalar, modeller, yazılım platformu",
+                  "sistem genişletilirken uyumluluk"
+                ],
+                [
+                  "Tesis takvimi",
+                  "inşaat aşamaları ve her sistem için süreler",
+                  "takvime göre parça parça teslimat"
+                ],
+                [
+                  "Belge gereksinimleri",
+                  "sözleşme, KDV, e-fatura (ESF), tutanaklar, uygulama sonrası dokümantasyon, müşteri formları",
+                  "kapanış belge setinin içeriği"
+                ],
+                [
+                  "Sorumlu kişi",
+                  "ad, telefon, e-posta",
+                  "şartname üzerine hızlı netleştirmeler"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Model mi teknik özellik mi: şartname kalemleri nasıl yazılır?",
+            "p": [
+              "Kurumsal müşteri için en kolayı tam model ve ürün kodunu yazmaktır: böylece farklı tedarikçilerin teklifleri satır satır karşılaştırılır. Model değiştirilebiliyorsa yanına muadilin eşdeğer sayılacağı parametreler yazılır: çözünürlük, lens ve görüş açısı, aydınlatma mesafesi, gövde koruma sınıfı, kodek, PoE ile besleme ve kayıt cihazı için kanal sayısı, disk yuvası sayısı ve Mbit/s cinsinden giriş bant genişliği.",
+              "Kamu alıcıları için kural kanunla belirlenmiştir. Özbekistan Cumhuriyeti'nin 22 Nisan 2021 tarihli ve ZRU-684 sayılı \"Kamu Alımları Hakkında\" Kanunu'nun 34. maddesinin üçüncü fıkrası (27 Kasım 2024 tarihli ZRU-1005 sayılı Kanun ile değişik, 1 Mart 2025'ten beri yürürlükte) alım tanımında marka, model veya üreticiye yer verilmesine izin vermez; elektronik mağaza üzerinden yapılan alımlar ve malın başka şekilde yeterince kesin tanımlanamadığı durumlar istisnadır — bu durumda tanıma \"veya muadili\" ibaresi mutlaka eklenir, malların uyumsuz olduğu durumlar hariç. Kanunda değişiklikler sürüyor; bu yüzden alım tarihindeki metin kontrol edilir.",
+              "Miktarlar malın tedarik edildiği birimlerle yazılır: kameralar ve kayıt cihazları adet, kablo metre veya 305 m'lik makara, kabinler adet ve U cinsinden yükseklik ile. Kayıt cihazları ve switch'ler için kanal ve port yedeğini baştan, mevcut ihtiyacın yaklaşık dörtte biri kadar fazla planlamak mantıklıdır (kendi şartnamelerimizde biz de böyle planlıyoruz); böylece sistem büyüdüğünde cihazı tamamen değiştirmek gerekmez."
+            ]
+          },
+          {
+            "h": "Fiyatlandırmadan önce şartnamede neler kontrol edilir?",
+            "p": [
+              "Şartname hatası en pahalıya teslimattan sonra, ekipman sahadayken patlar. Bu yüzden fiyatlandırmadan önce şartname yedi maddeye göre kontrol edilir.",
+              "Bulunan her uyumsuzlukta tedarikçi ya soru sorar ya da bir seçenek önerip ilk kalemden farkını yazar. Karar müşteride kalır; nihai şartname sözleşmeye eklenir."
+            ],
+            "ol": [
+              "Kamera ve kayıt cihazı uyumu: kodek, kanal sayısı ve giriş bant genişliği. Örneğin 32 kanallı Hikvision DS-7732NI-K4 kayıt cihazı 256 Mbit/s'ye kadar kabul eder: 4 Mbit/s'lik 32 kamera 128 Mbit/s kullanır, 8 Mbit/s'de ise bant genişliğinin tamamını.",
+              "PoE bütçesi: switch üzerindeki kameraların toplam tüketimi switch'in güç bütçesiyle karşılaştırılır — 24 portlu Hikvision DS-3E1526P-SI-24P2F'de bu 370 W'tır.",
+              "Hat uzunluğu: bükümlü çift kabloyla veri ve güç switch'ten 100 m'ye kadar iletilir; uzak noktalar için fiber veya uzak switch planlanır.",
+              "Diskler: kayıt cihazındaki yuva sayısı ve \"bit hızı × günlük saniye × gün ÷ 8\" formülüne göre arşiv hacmi.",
+              "Enerji: kayıt cihazı ve switch'lerin bulunduğu kabin için kesintisiz güç kaynağı.",
+              "Kablo ve malzemeler: metraj, kablo kanalları, spiral boru, konnektörler, patch paneller — ekipman şartnamesinde en sık eksik olanlar.",
+              "Yazılım: tesis bir sunucudan yönetiliyorsa merkezi platformun kanal lisansları ve geçiş kontrol ya da personel devam takibiyle entegrasyon."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Tesis donatımı hangi aşamalardan oluşur?",
+            "p": [
+              "Teslimat ve montajın süresi hacme ve şartnamenin ne kadar hazır olduğuna bağlıdır. Parçalı teslimat önceden kararlaştırılır; ekipman şantiyede aylarca beklemek yerine ilgili işler başlarken gelir."
+            ],
+            "ol": [
+              "Talep: şartname, planlar ve belge gereksinimleri — sales@satsolutions.uz adresine veya \"Tedarik ve ihaleler\" sayfası üzerinden.",
+              "İnceleme: şartnamenin yedi maddeye göre kontrolü, müşteriye sorular, gerekirse tesis ziyareti.",
+              "Ticari teklif: 24 saat içinde — her satır için fiyat, ekipman ve işler ayrı, dahil olmayanların listesi.",
+              "Sözleşme: konu, ek olarak şartname, teslimat, kabul ve garanti düzeni.",
+              "Teslimat: tamamen veya tesis takvimine göre parça parça, irsaliye ve e-faturalarla.",
+              "Montaj ve devreye alma, sipariş edildiyse: güzergâhların döşenmesi, kurulum, ayar, her noktanın testi.",
+              "Teslim: yapılan işler tutanağı, uygulama sonrası dokümantasyon, hesap ve şifrelerin imza karşılığında devri, personel eğitimi.",
+              "Garanti ve bakım: ekipmanda üretici garantisi, işlerde yüklenici garantisi, gerekirse teknik bakım sözleşmesi."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Müşteri hangi belgeleri alır?",
+            "p": [
+              "SAT Solutions KDV ile çalışır: elektronik faturaları (ESF) bir elektronik belge değişimi operatörü üzerinden düzenleriz; böylece teslimat kâğıt asılları beklenmeden kayda alınabilir. Müşterinin keşif kurallarına göre Form 2'yi (kaynak cetveli) ve Form 3'ü (iş bedeli hesap belgesi) müşterinin talebi üzerine düzenleriz. Uygulama sonrası dokümantasyonu şöyle teslim ederiz: şemalar, seri numaralı ekipman listesi, ağ adresleri; hesaplar ise imza karşılığında devredilir. Uygunluk sertifikalarını ve model pasaportlarını talep üzerine sağlarız."
+            ],
+            "table": {
+              "head": [
+                "Aşama",
+                "Belge",
+                "Ne için"
+              ],
+              "rows": [
+                [
+                  "Fiyatlandırma",
+                  "Ticari teklif",
+                  "bütçe onayı, tedarikçi karşılaştırması"
+                ],
+                [
+                  "Sözleşme",
+                  "Sözleşme ve ek şartname",
+                  "modelleri, miktarları, fiyatı ve garantiyi sabitler"
+                ],
+                [
+                  "Ödeme",
+                  "Fatura (hesap)",
+                  "ödeme dayanağı"
+                ],
+                [
+                  "Teslimat",
+                  "İrsaliye ve elektronik fatura (ESF)",
+                  "ekipmanın girişi, muhasebe ve vergi kaydı"
+                ],
+                [
+                  "Teslimat",
+                  "Üreticinin garanti belgeleri, pasaportları ve kılavuzları",
+                  "garanti başvuruları"
+                ],
+                [
+                  "Montaj",
+                  "Yapılan işler tutanağı",
+                  "işlerin kapatılması"
+                ],
+                [
+                  "Teslim",
+                  "Uygulama sonrası dokümantasyon: şemalar, seri numaralı ekipman listesi, ağ adresleri, imza karşılığında devredilen hesaplar",
+                  "işletme ve sonraki genişlemeler"
+                ],
+                [
+                  "Müşteri talebiyle",
+                  "Müşterinin keşif kurallarına göre formlar (Form 2 ve Form 3): kaynak cetveli ve iş bedeli hesap belgesi",
+                  "işlerin muhasebeye veya teknik denetime teslimi"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Yalnız tedarik mi, montajla birlikte tedarik mi: hangisi seçilmeli?",
+            "p": [
+              "Montajsız tedarik, müşterinin veya ana yüklenicinin kendi montaj ekibi olduğunda uygundur: ekipmanı şartnameye göre alır ve işleri kendi takvimine göre yürütür. Bu durumda müşteri ekipman için bir ila üç yıllık üretici garantisi alır; sahadaki çözümden ve montaj kalitesinden montajı yapan taraf sorumludur.",
+              "Tek yükleniciden montajlı tedarik sorumluluğu tek elde toplar: ekipmanı kim tedarik ettiyse onu ayarlayan da odur ve arızada kamera mı kablo mu suçlu tartışması çıkmaz. SAT Solutions montajı kendi kadrosuyla yapar — 3 mühendis ve 15 montaj teknisyeni — ve montaj işlerine 3 yıl garanti verir; ekipmanda 1 ila 3 yıllık üretici garantisi geçerlidir."
+            ],
+            "table": {
+              "head": [
+                "Kriter",
+                "Yalnız tedarik",
+                "Tedarik ve montaj"
+              ],
+              "rows": [
+                [
+                  "Uyumluluktan kim sorumlu",
+                  "tedarikçi şartname kalemlerinden, montaj firması sahadaki çözümden",
+                  "tüm sistemden tek yüklenici"
+                ],
+                [
+                  "Garanti",
+                  "ekipmanda üretici garantisi, 1–3 yıl",
+                  "ekipmanda üretici garantisi ve montaj işlerinde 3 yıl"
+                ],
+                [
+                  "Belgeler",
+                  "sözleşme, irsaliyeler, e-faturalar, garanti belgeleri",
+                  "bunlara ek olarak iş tutanakları ve uygulama sonrası dokümantasyon"
+                ],
+                [
+                  "Ne zaman seçilir",
+                  "kendi montaj ekibi veya ana yüklenici var",
+                  "hazır sistemin bütün olarak teslimi gerekiyor"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Donatım fiyatı nasıl oluşur?",
+            "p": [
+              "Fiyat üç bölümden oluşur: ekipman, malzeme ve işler. Ekipman teklif tarihindeki katalog fiyatlarıyla hesaplanır: satsolutions.uz'da UZS fiyatlı 2.500'den fazla ürün yer alır (fiyatlar 9 Kasım 2026 itibarıyla); sık satılan ürünler Taşkent'teki kendi depomuzda stokta bulunur. KDV ile çalışıyoruz. Malzemeler — kablo, kablo kanalları, bağlantı elemanları, sarf malzemeleri — metraj cetveline göre hesaplanır ve şartnameler en sık tam da burada eksik çıkar. İşler birim fiyatlarla hesaplanır.",
+              "SAT Solutions'ın 9 Kasım 2026 itibarıyla kamera sistemi fiyatlarına örnek: iç mekân kamerası montajı — 155.000 UZS, dış mekân kamerası — 180.000, kamera ayarı ve devreye alma — 77.000, 16'dan fazla kamera için kayıt cihazı kurulumu ve ayarı — sistem başına 450.000, kablo döşeme — bina içinde metre başına 7.000 UZS, cephede ve dış mekânda 10.000 UZS. Büyük tesislerde kablo güzergâhları çoğu zaman kameraların montajından daha pahalıya gelir: 32 kameralı bir sistem hesabında 1.440 m kablo döşemesi 19,8 milyon UZS'lik işin yaklaşık 11,5 milyonunu, yani yaklaşık %58'ini oluşturur.",
+              "Teklifleri karşılaştırırken yalnızca toplama bakmayın. Fiyatın ne kadar süre geçerli olduğunu, malzeme ve devreye almanın dahil olup olmadığını, seçilen disklerin kaç günlük arşiv sağladığını ve \"dahil değildir\" bölümünde ne yazdığını sorun. Ekipman türlerine göre medyan fiyatlar ve altı tipik tesis için iş bedelleri SAT Solutions fiyat endeksinde toplanmıştır."
+            ]
+          },
+          {
+            "h": "Şirket hakkında",
+            "p": [],
+            "ul": [
+              "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır, vergi no. 308603912; Taşkent, Katta Darkhon Caddesi, 5.",
+              "Kamera sistemleri, geçiş kontrol ve turnikeler, personel devam takibi, hırsız ve yangın alarmı, diafon, yapısal kablolama ve sunucu odaları: ekipman tedariki ve montaj. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
+              "Ulusal Muhafız izin belgesi No. 1554491 (teknik güvenlik araçlarının montajı, ayarı ve bakımı) ve Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve bakımı) — belgeler \"Hakkımızda\" sayfasında.",
+              "Montaj işlerinde 3 yıl garanti; ekipmanda 1 ila 3 yıllık üretici garantisi.",
+              "Katalog: UZS fiyatlı 2.500'den fazla ürün (fiyatlar 9 Kasım 2026 itibarıyla); Taşkent'te kendi depomuz, sık satılan ürünler stokta.",
+              "KDV ile çalışıyoruz; e-faturalar bir elektronik belge değişimi operatörü üzerinden düzenlenir. İletişim: +998 97 862-66-99, sales@satsolutions.uz, Pzt–Cum 9:00–18:00."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Montajsız donatım sipariş edilebilir mi?",
+            "a": "Evet. Şartnameye göre tedarik işlerden ayrı sipariş edilir: ekipman şartname, irsaliye ve e-faturalarla sözleşme kapsamında teslim edilir, montajı sizin montaj firmanız yapar. Ekipmanda 1 ila 3 yıllık üretici garantisi geçerlidir."
+          },
+          {
+            "q": "Henüz şartname yoksa ne yapılmalı?",
+            "a": "Görevden ve tesis planlarından başlanmalı. Bunlara göre ekipman listesi ve metraj cetveli hazırlanır, onaylandıktan sonra sözleşmeye eklenen şartnameye dönüşür."
+          },
+          {
+            "q": "Ekipman parça parça teslim edilebilir mi?",
+            "a": "Evet, teslimat çoğu zaman inşaat aşamalarına bölünür. Her partinin içeriği ve süresi sözleşmede veya teslimat takviminde sabitlenir."
+          },
+          {
+            "q": "Farklı tedarikçilerin teklifleri nasıl karşılaştırılmalı?",
+            "a": "Satır satır: model veya özellikler, miktar, garanti, iş kapsamı, kablo metrajı, arşiv derinliği ve dahil olmayanların listesi. Bunlar olmadan yalnızca toplamları karşılaştırmak yanıltıcıdır."
+          },
+          {
+            "q": "Şartnamede belirli bir marka yazılabilir mi?",
+            "a": "Kurumsal müşteri modelleri yazmakta serbesttir. Kamu alıcısı ZRU-684 sayılı Kanun'un 34. maddesinin üçüncü fıkrasına göre marka veya modeli yalnızca istisnai durumlarda yazar ve bu durumda \"veya muadili\" ibaresini ekler; malların uyumsuz olduğu durumlar hariçtir."
+          },
+          {
+            "q": "Müşterinin muhasebesi hangi belgelere ihtiyaç duyar?",
+            "a": "Şartnameli sözleşme, fatura, irsaliye, elektronik fatura (ESF) ve iş yapıldıysa yapılan işler tutanağı. SAT Solutions KDV ile çalışır ve e-faturaları bir elektronik belge değişimi operatörü üzerinden düzenler."
+          },
+          {
+            "q": "Ekipman ve işler için garanti nedir?",
+            "a": "Ekipmanda 1 ila 3 yıllık üretici garantisi, montaj işlerinde SAT Solutions'ın 3 yıllık garantisi."
+          }
+        ]
+      },
+      "zh": {
+        "title": "如何为项目订购弱电系统成套供货：规格清单、工程量清单、单据与流程",
+        "seoTitle": "塔什干弱电系统项目成套供货：如何下单",
+        "seoDesc": "报价需提供哪些资料、采购前如何核查规格清单、供货与安装分哪些阶段、客户最终会拿到哪些单据：合同、电子发票、验收单与竣工资料。",
+        "excerpt": "报价需要向供应商提供哪些资料、采购前如何核查规格清单、监控、门禁、火灾报警和网络系统的项目成套供货分哪些阶段，以及客户最终会拿到哪些单据。",
+        "summary": [
+          "项目成套供货，是指按照客户的规格清单或施工图，供应弱电系统所需的全部设备和材料，必要时同时完成安装与调试。",
+          "要获得准确报价，请发送注明型号或技术参数及数量的规格清单或工程量清单、项目平面图、录像存储与系统集成要求，并说明是否需要安装。",
+          "之后依次为：兼容性核查、报价、附规格清单的合同、供货、安装，以及附验收单、电子发票和竣工资料的移交。"
+        ],
+        "sections": [
+          {
+            "h": "什么是项目成套供货？它与按价目表采购有什么区别？",
+            "p": [
+              "按价目表采购买的是单件商品：摄像机、录像机、交换机。成套供货则是供应系统在具体项目上运行所需的一切：设备、线缆、机柜、供电、耗材、软件授权；如同时委托施工，还包括安装、调试和移交单据。最主要的区别在于责任：成套供货时，供应商要对各项设备之间的兼容性以及规格清单没有遗漏负责。",
+              "每份询价都会用到四个术语。规格清单——列明型号或技术参数、计量单位和数量的设备清单。工程量清单（国际上称 bill of quantities，BOQ）——列明工程和材料数量的清单：线缆米数、点位数量、每个单元的安装。施工图——施工所依据的系统图和平面图。商务报价——供应商针对规格清单每一行给出价格的答复。",
+              "订购成套供货的通常是：为楼栋交付做准备的开发商和总包单位、为仓库、车间或出入口改造而采购的企业采购人员，以及自行施工、按项目一次性打包采购设备的安装公司。"
+            ]
+          },
+          {
+            "h": "为获得准确报价，应向供应商提供哪些资料？",
+            "p": [
+              "报价的准确度取决于原始资料。最低限度是规格清单和平面图；其余资料可以减少反复确认，降低合同签订后更换型号的风险。",
+              "如果还没有规格清单，只有任务——例如“为 1200 平方米的仓库覆盖视频监控”或“建设一个配有四台闸机的出入口”——就从任务入手：根据平面图和现场勘察编制设备清单，经确认后作为合同所附的规格清单。"
+            ],
+            "table": {
+              "head": [
+                "提供什么",
+                "应包含的内容",
+                "用途"
+              ],
+              "rows": [
+                [
+                  "规格清单或工程量清单（Excel 或 PDF）",
+                  "各系统的型号或参数、计量单位、数量",
+                  "报价计算和逐行比较各家报价的基础"
+                ],
+                [
+                  "楼层平面图或施工图",
+                  "摄像机、读卡器、探测器、机柜位置及线缆路由",
+                  "核查线路长度、端口数量和线缆米数"
+                ],
+                [
+                  "工作范围",
+                  "仅供货 / 供货加安装 / 安装与调试",
+                  "决定报价的组成和单据范围"
+                ],
+                [
+                  "录像存储要求",
+                  "存储天数、录像存放位置",
+                  "计算硬盘和录像机配置"
+                ],
+                [
+                  "现有设备",
+                  "品牌、型号、软件平台",
+                  "系统扩容时的兼容性"
+                ],
+                [
+                  "项目进度",
+                  "施工阶段及各系统的时间节点",
+                  "按进度分批供货"
+                ],
+                [
+                  "单据要求",
+                  "合同、增值税、电子发票（ESF）、验收单、竣工资料、客户自有表格",
+                  "结算单据的组成"
+                ],
+                [
+                  "联系人",
+                  "姓名、电话、邮箱",
+                  "就规格清单快速沟通"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "写型号还是写参数：规格清单应该怎么写？",
+            "p": [
+              "对企业客户而言，最简便的是写明准确型号和料号，这样各家供应商的报价可以逐行对比。如果允许替换，应在型号旁注明判定替代品等效的参数：分辨率、镜头与视场角、补光距离、外壳防护等级、编码格式、PoE 供电；录像机还要写通道数、硬盘位数量和以 Mbit/s 计的接入带宽。",
+              "对国家采购单位，规则由法律规定。乌兹别克斯坦共和国2021年4月22日第ZRU-684号《国家采购法》第34条第三款（经2024年11月27日第ZRU-1005号法律修订，自2025年3月1日起施行）规定，采购说明中不得列入商标、型号或制造商，通过电子商店进行的采购以及无法用其他方式准确描述商品的情形除外；在这些情形下，说明中必须加上“或同等产品”字样，商品不兼容的情形除外。该法仍在不断修订，请按采购当日有效的版本核对。",
+              "数量应按供货单位填写：摄像机和录像机按台，线缆按米或 305 米一卷，机柜按台并注明 U 数。录像机和交换机最好一开始就预留通道和端口余量——比当前需求多约四分之一（我们自己的规格清单也按此预留）——这样系统扩容时不必整机更换。"
+            ]
+          },
+          {
+            "h": "报价前要核查规格清单的哪些内容？",
+            "p": [
+              "规格清单的错误，在设备已经到场之后代价最高。因此报价前要按七项核查规格清单。",
+              "对发现的每一处不一致，供应商会提出问题，或给出替代方案并写明与原项的差异。决定权在客户，最终规格清单作为合同附件。"
+            ],
+            "ol": [
+              "摄像机与录像机的兼容性：编码格式、通道数和接入带宽。例如，32 路的海康威视 DS-7732NI-K4 录像机最大接入 256 Mbit/s：32 台 4 Mbit/s 的摄像机占用 128 Mbit/s，若每台 8 Mbit/s 则占满全部带宽。",
+              "PoE 功率预算：将交换机上摄像机的总功耗与交换机的供电预算对比——24 口的海康威视 DS-3E1526P-SI-24P2F 为 370 瓦。",
+              "线路长度：双绞线传输数据和供电的距离为交换机起 100 米以内；更远的点位需要光纤或远端交换机。",
+              "硬盘：录像机硬盘位数量，以及按“码率 × 每天秒数 × 天数 ÷ 8”公式计算的存储容量。",
+              "供电：为放置录像机和交换机的机柜配置不间断电源（UPS）。",
+              "线缆与材料：米数、桥架、波纹管、水晶头、配线架——设备规格清单中最常漏掉的部分。",
+              "软件：如果项目由服务器统一管理，需要中心平台的通道授权，以及与门禁或考勤系统的集成。"
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "项目成套供货分为哪些阶段？",
+            "p": [
+              "供货和安装所需时间取决于工程量以及规格清单的完备程度。分批供货需提前约定，使设备在相关工程开工时到场，而不是在工地堆放数月。"
+            ],
+            "ol": [
+              "询价：将规格清单、平面图和单据要求发送至 sales@satsolutions.uz 或通过“供货与招标”页面提交。",
+              "审核：按七项核查规格清单，向客户提问，必要时现场勘察。",
+              "商务报价：24 小时内提供，逐行报价，设备与施工分列，并列出不包含的内容。",
+              "合同：标的、作为附件的规格清单、供货、验收和保修条款。",
+              "供货：一次性或按项目进度分批供货，附送货单和电子发票。",
+              "安装与调试（如委托）：敷设线路、安装、配置、逐点测试。",
+              "移交：完工验收单、竣工资料、账户和密码签字移交、人员培训。",
+              "保修与维护：设备享有厂家保修，施工享有承包方保修，需要时签订技术维护合同。"
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "客户会拿到哪些单据？",
+            "p": [
+              "SAT Solutions 按含增值税方式结算：电子发票（ESF）通过电子文件交换运营商开具，因此客户无需等待纸质原件即可将到货入账。按客户造价规则编制的表2（资源明细表）和表3（工程造价说明），我们应客户要求出具。竣工资料按以下方式移交：系统图、带序列号的设备清单、网络地址，账户签字移交。我们可按需提供产品合格证书和型号技术说明书。"
+            ],
+            "table": {
+              "head": [
+                "阶段",
+                "单据",
+                "用途"
+              ],
+              "rows": [
+                [
+                  "报价",
+                  "商务报价",
+                  "预算审批、比较供应商"
+                ],
+                [
+                  "合同",
+                  "合同及规格清单附件",
+                  "明确型号、数量、价格和保修"
+                ],
+                [
+                  "付款",
+                  "账单",
+                  "付款依据"
+                ],
+                [
+                  "供货",
+                  "送货单和电子发票（ESF）",
+                  "设备入库、会计与税务核算"
+                ],
+                [
+                  "供货",
+                  "厂家保修卡、产品说明书和使用手册",
+                  "保修申请"
+                ],
+                [
+                  "安装",
+                  "完工验收单",
+                  "工程结算"
+                ],
+                [
+                  "移交",
+                  "竣工资料：系统图、带序列号的设备清单、网络地址、签字移交的账户",
+                  "运维及后续扩容"
+                ],
+                [
+                  "应客户要求",
+                  "按客户造价规则编制的表格（表2和表3）：资源明细表和工程造价说明",
+                  "向财务或技术监理提交工程"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "仅供货，还是供货加安装：该怎么选？",
+            "p": [
+              "如果客户或总包单位有自己的安装队伍，适合选择不含安装的供货：对方按规格清单收货，按自己的进度施工。这种情况下，客户获得厂家提供的一至三年设备保修，现场方案和安装质量由施工方负责。",
+              "由同一家承包商负责供货和安装，责任集中在一方：谁供应设备，谁就负责调试；出现故障时，不会出现“是摄像机的问题还是线缆的问题”的争执。SAT Solutions 由自有团队施工——3名工程师和15名安装技师，安装工程保修 3 年；设备享有 1 至 3 年的厂家保修。"
+            ],
+            "table": {
+              "head": [
+                "对比项",
+                "仅供货",
+                "供货加安装"
+              ],
+              "rows": [
+                [
+                  "谁对兼容性负责",
+                  "供应商对规格清单各项负责，安装公司对现场方案负责",
+                  "一家承包商对整个系统负责"
+                ],
+                [
+                  "保修",
+                  "设备厂家保修 1–3 年",
+                  "设备厂家保修，另加安装工程 3 年保修"
+                ],
+                [
+                  "单据",
+                  "合同、送货单、电子发票、保修卡",
+                  "以上全部，另加工程验收单和竣工资料"
+                ],
+                [
+                  "适用情形",
+                  "有自己的安装团队或总包单位",
+                  "需要整体交付一套完整可用的系统"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "成套供货的价格是如何构成的？",
+            "p": [
+              "价格由三部分组成：设备、材料和施工。设备按报价当日的目录价格计算：satsolutions.uz 上有2500多种以苏姆标价的商品（价格截至 2026 年 11 月 9 日），常用型号在塔什干自有仓库现货供应。我们按含增值税方式结算。材料——线缆、桥架、紧固件、耗材——按工程量清单计算，而规格清单最常出现遗漏的恰恰是这一部分。施工按单价计算。",
+              "以 SAT Solutions 截至 2026 年 11 月 9 日的视频监控施工单价为例：室内摄像机安装 155 000 苏姆，室外摄像机 180 000 苏姆，单台摄像机配置与调试 77 000 苏姆，16 路以上录像机安装与配置每套 450 000 苏姆，线缆敷设室内每米 7 000 苏姆、外墙及室外每米 10 000 苏姆。在大型项目中，线缆敷设的费用往往高于摄像机本身的安装：在 32 台摄像机系统的测算中，敷设 1440 米线缆约占 1980 万苏姆施工费中的 1150 万，约 58%。",
+              "比较报价时不要只看总价。要问清价格的有效期、是否包含材料和调试、所选硬盘能保存多少天录像，以及“不包含”一栏写了什么。各类设备的中位价格和六类典型项目的施工费用，汇总在 SAT Solutions 价格指数中。"
+            ]
+          },
+          {
+            "h": "关于公司",
+            "p": [],
+            "ul": [
+              "SAT Solutions 是 SUPPLY AND TRANSPORTATION 有限责任公司的品牌，纳税人识别号 308603912；塔什干 Katta Darkhon 街 5 号。",
+              "视频监控、门禁与闸机、考勤、防盗与火灾报警、楼宇对讲、综合布线与机房：设备供货与安装。安装由自有团队完成：3名工程师和15名安装技师。",
+              "国民近卫军许可文件第1554491号（技术防范设备的安装、调试与维护）和紧急情况部许可文件第913518号（火灾报警与自动灭火系统的安装、调试与维护）——文件见“关于我们”页面。",
+              "安装工程保修 3 年；设备享有 1 至 3 年的厂家保修。",
+              "产品目录：2500多种以苏姆标价的商品（价格截至 2026 年 11 月 9 日）；塔什干设有自有仓库，常用型号现货供应。",
+              "按含增值税方式结算，电子发票通过电子文件交换运营商开具。联系方式：+998 97 862-66-99，sales@satsolutions.uz，周一至周五 9:00–18:00。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "可以只订购成套供货、不含安装吗？",
+            "a": "可以。按规格清单供货可与施工分开订购：设备依据附规格清单的合同供应，附送货单和电子发票，由贵方的安装公司施工。设备享有 1 至 3 年的厂家保修。"
+          },
+          {
+            "q": "还没有规格清单怎么办？",
+            "a": "从任务和项目平面图入手。据此编制设备清单和工程量清单，确认后作为合同所附的规格清单。"
+          },
+          {
+            "q": "设备可以分批供货吗？",
+            "a": "可以，供货常按施工阶段分批进行。每批的内容和时间在合同或供货计划中约定。"
+          },
+          {
+            "q": "如何比较不同供应商的报价？",
+            "a": "逐行比较：型号或参数、数量、保修、施工范围、线缆米数、录像存储天数以及不包含的内容。不看这些、只比总价，容易得出错误结论。"
+          },
+          {
+            "q": "规格清单中可以写明具体品牌吗？",
+            "a": "企业客户可以自行写明型号。国家采购单位根据第ZRU-684号法律第34条第三款，仅在例外情形下写明商标或型号，并须加上“或同等产品”字样，商品不兼容的情形除外。"
+          },
+          {
+            "q": "客户的财务部门需要哪些单据？",
+            "a": "附规格清单的合同、账单、送货单、电子发票（ESF），如有施工还需完工验收单。SAT Solutions 按含增值税方式结算，通过电子文件交换运营商开具电子发票。"
+          },
+          {
+            "q": "设备和施工的保修期是多久？",
+            "a": "设备享有 1 至 3 年的厂家保修，SAT Solutions 对安装工程提供 3 年保修。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "kak-vybrat-postavshchika-videonablyudeniya-skud",
+    "date": "2026-11-10",
+    "updated": "2026-11-10",
+    "related": [
+      "cctv",
+      "access",
+      "slabotochnye-sistemy"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "terminaly-i-schityvateli",
+      "ip-videoregistratory-nvr"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "komplektatsiya-obekta-slabotochnymi-sistemami",
+      "tehnicheskoe-zadanie-na-videonablyudenie",
+      "skolko-stoit-videonablyudenie",
+      "skolko-stoit-skud",
+      "videonablyudenie-personalnye-dannye-uzbekistan",
+      "indeks-cen-slabotochnye-sistemy-tashkent-2026"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Как выбрать поставщика видеонаблюдения и СКУД в Узбекистане: чек-лист снабженца и документы",
+        "seoTitle": "Поставщик видеонаблюдения и СКУД: чек-лист снабженца",
+        "seoDesc": "Как проверить поставщика камер и СКУД в Узбекистане: ИНН и ЭСФ, документы Нацгвардии и МЧС, КП по моделям, гарантия, акты. 12 пунктов для снабженца.",
+        "excerpt": "Чек-лист для снабженца предприятия: что проверить у поставщика камер, регистраторов, турникетов и терминалов доступа до запроса КП, какие документы он выдаёт на каждом этапе, как сравнить предложения и что записать в договор.",
+        "summary": [
+          "Поставщика видеонаблюдения и СКУД в Узбекистане проверяют по пяти пунктам: юрлицо с ИНН, работа с НДС и электронными счетами-фактурами (ЭСФ) через оператора ЭДО; разрешительные документы на монтаж — Национальной гвардии для охранных систем и МЧС для пожарных; коммерческое предложение с точной моделью в каждой строке; письменная гарантия отдельно на работы и на оборудование; полный пакет закрывающих документов.",
+          "Предложения сравнивают построчно, а не по итоговой сумме."
+        ],
+        "sections": [
+          {
+            "h": "Что проверить у поставщика до запроса коммерческого предложения?",
+            "p": [
+              "Первая проверка занимает десять минут и снимает большую часть рисков. Поставщик должен быть юридическим лицом с ИНН, которое выставляет электронные счета-фактуры (ЭСФ) через оператора электронного документооборота (ЭДО). Для предприятия, работающего с НДС, это не формальность: без ЭСФ бухгалтерия не может нормально учесть закупку, и разбираться с поставщиком приходится уже после оплаты. Название юрлица, ИНН и адрес обычно указаны в подвале сайта или в реквизитах КП — сверьте их с договором и счётом.",
+              "Вторая проверка — профиль работ. Видеонаблюдение и СКУД — это не только поставка коробок: камеры нужно разместить, проложить кабель, настроить регистратор, архив, права доступа и связку с турникетами. Уточните, кто выполняет монтаж — собственные сотрудники поставщика или привлечённая бригада — и кто отвечает перед вами за результат целиком. Когда поставка и монтаж разделены между двумя компаниями, спор «виновато оборудование или монтаж» при первой же неисправности становится вашей проблемой.",
+              "Третья — прозрачность цен. Поставщик, у которого цены моделей опубликованы в каталоге, позволяет заранее сверить порядок бюджета и понять, из чего собрано предложение. Попросите, чтобы в КП стояли артикулы производителя, а не описания вида «камера 4 Мп уличная»: только по артикулу можно проверить характеристики, гарантию и совместимость."
+            ]
+          },
+          {
+            "h": "Какие документы поставщик выдаёт на каждом этапе закупки?",
+            "p": [
+              "На строительных объектах заказчик часто требует свой формат закрывающих документов: локальную ресурсную ведомость и справку о стоимости выполненных работ (формы 2 и 3), ведомость объёмов, исполнительную документацию со штампом «выполнено по проекту». Обсудите формат до подписания договора — переделывать документы после сдачи дольше, чем сразу составить их в нужном виде. SAT Solutions выдаёт формы 2 и 3 по запросу заказчика.",
+              "У SAT Solutions документы устроены так. Мы работаем с НДС: электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота. Сертификаты соответствия и паспорта на модели предоставляем по запросу — заказчик вправе их потребовать, и мы подготовим их для объекта или тендера. Систему передаём с исполнительной документацией: схемы, перечень оборудования с серийными номерами, сетевые адреса и учётные записи, переданные под роспись.",
+              "Пароли администратора — отдельный пункт. Система, пароли которой знает только подрядчик, фактически вам не принадлежит. Требуйте передать учётные записи администратора по акту и сменить их при вводе в эксплуатацию."
+            ],
+            "table": {
+              "head": [
+                "Этап",
+                "Документ",
+                "Зачем он нужен"
+              ],
+              "rows": [
+                [
+                  "Запрос цены",
+                  "Коммерческое предложение: модель, артикул, количество, цена за единицу, состав работ",
+                  "Основа для сравнения и для спецификации к договору"
+                ],
+                [
+                  "Договор",
+                  "Договор поставки и монтажа + спецификация в приложении",
+                  "Фиксирует модели, цену, сроки, порядок приёмки и гарантию"
+                ],
+                [
+                  "Оплата",
+                  "Счёт на оплату",
+                  "Платёжный документ по договору"
+                ],
+                [
+                  "Отгрузка",
+                  "Накладная и ЭСФ через оператора ЭДО",
+                  "Учёт товара и НДС"
+                ],
+                [
+                  "Поставка",
+                  "Документы производителя на модели: паспорта, инструкции, сертификаты соответствия — по запросу, если они нужны для объекта или тендера",
+                  "Экспертиза, тендерная документация, внутренний аудит"
+                ],
+                [
+                  "Сдача работ",
+                  "Акт выполненных работ и ЭСФ на работы",
+                  "Закрытие договора"
+                ],
+                [
+                  "Передача системы",
+                  "Исполнительная документация: схемы, перечень оборудования с серийными номерами, IP-адреса, учётные записи администратора, переданные под роспись",
+                  "Эксплуатация, гарантия, расширение системы"
+                ],
+                [
+                  "Гарантия",
+                  "Гарантийный талон или гарантийное письмо с перечнем оборудования и сроками",
+                  "Основание для гарантийной замены"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Какие разрешительные документы нужны для монтажа охранных и пожарных систем в 2026 году?",
+            "p": [
+              "Монтаж, наладка и техобслуживание технических средств охраны и пожарной автоматики в Узбекистане ведутся в уведомительном порядке по постановлению Кабинета Министров № 88 от 25.02.2022. По охранным системам уведомление принимает Национальная гвардия, по пожарной сигнализации и автоматическому пожаротушению — МЧС. Организация получает подтверждение о получении уведомления с номером, и этот номер можно проверить в открытом реестре государственных услуг по лицензированию и уведомлениям. Постановление № 880 от 27.10.2018, на которое до сих пор ссылаются многие тексты, утратило силу 1 марта 2022 года.",
+              "С 1 марта 2026 года вступил в силу Закон ЗРУ-1099 от 27.11.2025, который вводит лицензию МЧС на монтаж и техобслуживание пожарной сигнализации и автоматического пожаротушения. По последней проверке (20.10.2026) порядок выдачи лицензии утверждён не был, и на портале лицензирования по этим видам работ было доступно только уведомление. Пока порядок не утверждён, проверяют действующее подтверждение уведомления МЧС, после утверждения — наличие лицензии. Статус проверяйте на license.gov.uz на дату закупки.",
+              "Если в объём входят охранная сигнализация, тревожные кнопки или пожарная автоматика, запросите номера разрешительных документов до подписания договора и сверьте, что виды работ в документе совпадают с вашим объёмом: монтаж, наладка, техобслуживание. У SAT Solutions это разрешение Национальной гвардии № 1554491 и разрешение МЧС № 913518; оба опубликованы на странице «О компании»."
+            ]
+          },
+          {
+            "h": "Как сравнить коммерческие предложения разных поставщиков?",
+            "p": [
+              "Сравнение по итоговой сумме почти всегда вводит в заблуждение: дешевле оказывается то КП, в котором меньше дисков, нет кабеля или не учтена часть работ. Сведите предложения в одну таблицу и сравнивайте строки.",
+              "Пример того, как работы влияют на смету. По расценкам на странице услуги «Видеонаблюдение» (цены на 09.11.2026) монтаж внутренней камеры стоит 155 000 сум, уличной — 180 000, настройка и пусконаладка каждой камеры — 77 000, прокладка кабеля — 7 000 сум за метр. На объекте из 32 камер с 1 440 м кабеля одна только прокладка трасс — 10 080 000 сум, больше, чем монтаж всех камер вместе (5 160 000). В нашем расчёте для такого объекта работы составили 22,5 % бюджета. КП, в котором кабель «включён» одной строкой без метража, проверить невозможно."
+            ],
+            "table": {
+              "head": [
+                "Критерий",
+                "Что проверить",
+                "Почему это важно"
+              ],
+              "rows": [
+                [
+                  "Модель и артикул",
+                  "Точный код производителя у каждой позиции",
+                  "«Аналог» без кода сравнить невозможно"
+                ],
+                [
+                  "Количество",
+                  "Камеры, регистраторы, диски, коммутаторы, кабель в метрах",
+                  "Недосчитанный кабель возвращается доплатой"
+                ],
+                [
+                  "Глубина архива",
+                  "Сколько суток записи даёт заложенная ёмкость дисков при указанном битрейте",
+                  "Разница в дисках — это разница и в цене, и в результате"
+                ],
+                [
+                  "Питание",
+                  "Бюджет PoE коммутаторов против потребления камер, наличие ИБП",
+                  "Перегруженный PoE даёт перезагрузки камер"
+                ],
+                [
+                  "Состав работ",
+                  "Монтаж, прокладка кабеля, пусконаладка, удалённый доступ, обучение",
+                  "Работы — заметная часть бюджета"
+                ],
+                [
+                  "Гарантия",
+                  "Срок отдельно на работы и на оборудование",
+                  "Гарантия без срока в договоре не работает"
+                ],
+                [
+                  "Что не включено",
+                  "Расходные материалы, высотные работы, лицензии ПО, интеграции",
+                  "Главные источники доплат"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Что записать в договор поставки и монтажа?",
+            "p": [],
+            "ol": [
+              "Предмет и спецификация: модели, артикулы, количество и цена каждой позиции — в приложении к договору.",
+              "Цена и валюта: цена в сумах; если у части позиций есть привязка к валюте, заранее согласуйте, фиксируется ли цена на дату договора или пересчитывается на дату оплаты.",
+              "Сроки поставки, монтажа и сдачи, а также что считается задержкой по причинам на стороне заказчика — неготовность помещений, отсутствие доступа.",
+              "Порядок приёмки: проверка изображения каждой камеры, записи, глубины архива, удалённого доступа и работы точек доступа; подписание акта.",
+              "Гарантия: срок отдельно на работы и на оборудование, порядок обращения и срок реакции.",
+              "Передача документации и паролей: перечень исполнительных документов и акт передачи учётных записей.",
+              "Гарантийная замена: кто демонтирует и монтирует оборудование, кто отвозит его в сервис, как долго система работает без него.",
+              "Ответственность сторон и порядок разрешения споров."
+            ]
+          },
+          {
+            "h": "Какие признаки в предложении должны насторожить?",
+            "p": [
+              "Ни один из этих признаков сам по себе не означает плохого поставщика, но каждый требует уточнения до оплаты:"
+            ],
+            "ul": [
+              "в КП нет артикулов, только описания вида «камера 4 Мп»;",
+              "«аналог» или «эквивалент» указан без характеристик и кода модели;",
+              "поставщик не выставляет ЭСФ или предлагает оформить часть суммы иначе;",
+              "гарантия обещана устно и не записана в договоре;",
+              "для охранной или пожарной части нет номера разрешительного документа;",
+              "в составе сдачи нет акта и исполнительной документации;",
+              "архив обещан «на месяц» без расчёта битрейта и ёмкости дисков;",
+              "база лиц и отпечатков СКУД предлагается в зарубежном облаке. Статья 27-1 Закона ЗРУ-547 «О персональных данных» в редакции ЗРУ-1125 от 26.03.2026 требует хранить биометрические данные на территории Узбекистана, а шаблоны лиц и отпечатков в терминалах доступа — это биометрия по статье 26 того же закона."
+            ]
+          },
+          {
+            "h": "Чек-лист снабженца: 12 пунктов перед подписанием договора",
+            "p": [],
+            "ol": [
+              "Юрлицо, ИНН и адрес совпадают в КП, договоре и счёте.",
+              "Поставщик выставляет ЭСФ через оператора ЭДО, работа с НДС подтверждена.",
+              "Для охранной и пожарной части есть номера разрешительных документов Нацгвардии и МЧС, виды работ совпадают с объёмом.",
+              "В КП у каждой позиции точная модель и артикул производителя.",
+              "Кабель указан в метрах, работы — отдельными строками.",
+              "Глубина архива рассчитана: число камер × битрейт × сутки.",
+              "Бюджет PoE и мощность ИБП посчитаны под реальную нагрузку.",
+              "Гарантия на работы и на оборудование записана отдельно и со сроками.",
+              "Для биометрии СКУД указано место хранения базы — в Узбекистане.",
+              "Определены состав исполнительной документации и формат закрывающих документов.",
+              "Предусмотрена передача паролей администратора по акту.",
+              "Порядок гарантийной замены и срок реакции записаны в договоре."
+            ]
+          },
+          {
+            "h": "О компании",
+            "p": [],
+            "ul": [
+              "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912. Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
+              "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
+              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 (уведомление представлено 23.07.2025) — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба оформлены в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
+              "Работаем с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота.",
+              "Сертификаты соответствия и паспорта на модели — по запросу; формы 2 и 3 — по запросу заказчика; систему передаём с исполнительной документацией и учётными записями под роспись.",
+              "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
+              "Каталог satsolutions.uz: более 2 500 позиций, цены в сумах с НДС. Собственный склад в Ташкенте, ходовые позиции в наличии.",
+              "Пришлите ТЗ — подготовим КП со спецификацией и ведомостью работ; КП — в течение 24 часов. Спецификации и запросы для закупки принимаются через страницу «Поставки и тендеры»."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Нужна ли поставщику видеонаблюдения и сигнализации лицензия в Узбекистане в 2026 году?",
+            "a": "Монтаж и обслуживание охранных систем и пожарной автоматики ведутся в уведомительном порядке по ПКМ № 88 от 25.02.2022: охранные системы — Национальная гвардия, пожарные — МЧС. Закон ЗРУ-1099, вступивший в силу 01.03.2026, вводит лицензию МЧС на пожарную сигнализацию и автоматическое пожаротушение; по последней проверке (20.10.2026) порядок её выдачи утверждён не был — статус проверяйте на license.gov.uz на дату закупки. Запросите номер документа и проверьте его в открытом реестре. У SAT Solutions — разрешение Национальной гвардии № 1554491 и разрешение МЧС № 913518."
+          },
+          {
+            "q": "Можно ли купить оборудование у одного поставщика, а монтаж заказать у другого?",
+            "a": "Можно: поставка без монтажа — обычная схема для монтажных организаций. Важно разделить гарантию в договорах: за оборудование отвечает поставщик, за работы — монтажник, а при неисправности сначала устанавливают, чья это зона. Если нужен один ответственный, заказывайте поставку и монтаж комплектом."
+          },
+          {
+            "q": "Какие документы на оборудование можно запросить у поставщика?",
+            "a": "Паспорта и инструкции производителя, перечень с серийными номерами и, если они требуются для вашего объекта или тендера, сертификаты соответствия на конкретные модели. Требование к сертификатам лучше сразу указать в техническом задании, чтобы поставщики учли его в предложении. SAT Solutions предоставляет сертификаты соответствия и паспорта на модели по запросу."
+          },
+          {
+            "q": "Какая гарантия на видеонаблюдение и СКУД считается нормальной?",
+            "a": "Главное — письменная гарантия с раздельными сроками на работы и на оборудование. У SAT Solutions гарантия на монтажные работы — 3 года, на оборудование действует гарантия производителя от 1 до 3 лет."
+          },
+          {
+            "q": "Где должна храниться база лиц и отпечатков СКУД?",
+            "a": "На территории Узбекистана. Шаблоны лиц и отпечатков — биометрические данные (ст. 26 ЗРУ-547), а статья 27-1 в редакции ЗРУ-1125 от 26.03.2026 обязывает хранить биометрию в республике. Локальный сервер или терминалы на объекте это требование закрывают."
+          }
+        ]
+      },
+      "uz": {
+        "title": "Oʻzbekistonda videokuzatuv va SKUD taʼminotchisini qanday tanlash kerak: xarid mutaxassisi uchun nazorat roʻyxati va hujjatlar",
+        "seoTitle": "Videokuzatuv va SKUD taʼminotchisini tanlash: roʻyxat",
+        "seoDesc": "Kamera va SKUD taʼminotchisini tekshirish: STIR va EHF, Milliy gvardiya va FVV hujjatlari, modelli taklif, kafolat, dalolatnomalar — 12 band.",
+        "excerpt": "Korxona xarid mutaxassisi uchun nazorat roʻyxati: tijorat taklifi soʻrashdan oldin kamera, videoregistrator, turniket va kirish terminallari taʼminotchisida nimani tekshirish kerak, u har bir bosqichda qaysi hujjatlarni beradi, takliflarni qanday solishtirish va shartnomaga nimalarni yozish kerak.",
+        "summary": [
+          "Oʻzbekistonda videokuzatuv va kirishni nazorat qilish tizimi (SKUD) taʼminotchisi beshta band boʻyicha tekshiriladi: STIRga ega yuridik shaxs, QQS bilan ishlash va elektron hisob-fakturalarni (EHF) elektron hujjat aylanishi (EHA) operatori orqali chiqarish; montaj uchun ruxsat hujjatlari — qoʻriqlash tizimlari boʻyicha Milliy gvardiya, yongʻin tizimlari boʻyicha Favqulodda vaziyatlar vazirligi (FVV) hujjati; har bir qatorida aniq model koʻrsatilgan tijorat taklifi; ishlar va uskunalar uchun alohida yozma kafolat; yopuvchi hujjatlarning toʻliq toʻplami.",
+          "Takliflar umumiy summa boʻyicha emas, qatorma-qator solishtiriladi."
+        ],
+        "sections": [
+          {
+            "h": "Tijorat taklifini soʻrashdan oldin taʼminotchida nimani tekshirish kerak?",
+            "p": [
+              "Birinchi tekshiruv oʻn daqiqa vaqt oladi va xatarlarning katta qismini bartaraf etadi. Taʼminotchi STIRga ega, elektron hisob-fakturalarni (EHF) elektron hujjat aylanishi (EHA) operatori orqali chiqaradigan yuridik shaxs boʻlishi kerak. QQS bilan ishlaydigan korxona uchun bu shunchaki rasmiyatchilik emas: EHFsiz buxgalteriya xaridni toʻgʻri hisobga ololmaydi va taʼminotchi bilan masalani toʻlovdan keyin hal qilishga toʻgʻri keladi. Yuridik shaxs nomi, STIR va manzil odatda sayt pastki qismida yoki tijorat taklifi rekvizitlarida koʻrsatiladi — ularni shartnoma va hisob bilan solishtiring.",
+              "Ikkinchi tekshiruv — ishlar yoʻnalishi. Videokuzatuv va SKUD faqat qutilarni yetkazib berish emas: kameralarni joylashtirish, kabel tortish, videoregistrator, arxiv, kirish huquqlari va turniketlar bilan bogʻlanishni sozlash kerak. Montajni kim bajarishini — taʼminotchining oʻz xodimlarimi yoki jalb qilingan brigadami — va natija uchun sizning oldingizda toʻliq kim javob berishini aniqlang. Yetkazib berish va montaj ikki kompaniya oʻrtasida boʻlinsa, birinchi nosozlikdayoq «uskuna aybdormi yoki montaj» degan bahs sizning muammoingizga aylanadi.",
+              "Uchinchisi — narxlarning ochiqligi. Model narxlari katalogda eʼlon qilingan taʼminotchi budjet tartibini oldindan solishtirish va taklif nimadan tuzilganini tushunish imkonini beradi. Tijorat taklifida «4 Mp koʻcha kamerasi» kabi taʼriflar emas, ishlab chiqaruvchi artikullari boʻlishini soʻrang: xususiyatlar, kafolat va moslikni faqat artikul boʻyicha tekshirish mumkin."
+            ]
+          },
+          {
+            "h": "Taʼminotchi xaridning har bir bosqichida qanday hujjatlar beradi?",
+            "p": [
+              "Qurilish obyektlarida buyurtmachi koʻpincha yopuvchi hujjatlarning oʻz shaklini talab qiladi: mahalliy resurs qaydnomasi va bajarilgan ishlar qiymati maʼlumotnomasi (2- va 3-shakllar), hajmlar qaydnomasi, «loyiha boʻyicha bajarildi» muhri bosilgan ijro hujjatlari. Shaklni shartnoma imzolanishidan oldin kelishib oling — hujjatlarni topshirilgandan keyin qayta tuzish ularni darhol kerakli koʻrinishda tayyorlashdan koʻra koʻproq vaqt oladi. SAT Solutions buyurtmachining soʻroviga koʻra 2- va 3-shakllarni rasmiylashtirib beradi.",
+              "SAT Solutionsda hujjatlar quyidagicha. Biz QQS bilan ishlaymiz: elektron hisob-fakturalarni (EHF) elektron hujjat aylanishi operatori orqali chiqaramiz. Muvofiqlik sertifikatlari va modellar pasportlarini soʻrov boʻyicha taqdim etamiz — buyurtmachi ularni talab qilishga haqli, biz esa ularni obyekt yoki tender uchun tayyorlab beramiz. Tizimni ijro hujjatlari bilan topshiramiz: sxemalar, seriya raqamlari bilan uskunalar roʻyxati, tarmoq manzillari va imzo bilan topshiriladigan hisob yozuvlari.",
+              "Administrator parollari — alohida band. Parollarini faqat pudratchi biladigan tizim amalda sizga tegishli emas. Administrator hisob yozuvlarini dalolatnoma bilan topshirishni va ekspluatatsiyaga kiritishda ularni almashtirishni talab qiling."
+            ],
+            "table": {
+              "head": [
+                "Bosqich",
+                "Hujjat",
+                "Nima uchun kerak"
+              ],
+              "rows": [
+                [
+                  "Narx soʻrovi",
+                  "Tijorat taklifi: model, artikul, miqdor, birlik narxi, ishlar tarkibi",
+                  "Solishtirish va shartnoma spetsifikatsiyasi uchun asos"
+                ],
+                [
+                  "Shartnoma",
+                  "Yetkazib berish va montaj shartnomasi + ilovadagi spetsifikatsiya",
+                  "Modellar, narx, muddatlar, qabul qilish tartibi va kafolatni qayd etadi"
+                ],
+                [
+                  "Toʻlov",
+                  "Toʻlov uchun hisob",
+                  "Shartnoma boʻyicha toʻlov hujjati"
+                ],
+                [
+                  "Joʻnatish",
+                  "Yuk xati va EHA operatori orqali EHF",
+                  "Tovar va QQS hisobi"
+                ],
+                [
+                  "Yetkazib berish",
+                  "Ishlab chiqaruvchi hujjatlari: pasportlar, yoʻriqnomalar, muvofiqlik sertifikatlari — obyekt yoki tender uchun kerak boʻlsa, soʻrov boʻyicha",
+                  "Ekspertiza, tender hujjatlari, ichki audit"
+                ],
+                [
+                  "Ishlarni topshirish",
+                  "Bajarilgan ishlar dalolatnomasi va ishlar boʻyicha EHF",
+                  "Shartnomani yopish"
+                ],
+                [
+                  "Tizimni topshirish",
+                  "Ijro hujjatlari: sxemalar, seriya raqamlari bilan uskunalar roʻyxati, IP-manzillar, imzo bilan topshirilgan administrator hisob yozuvlari",
+                  "Ekspluatatsiya, kafolat, tizimni kengaytirish"
+                ],
+                [
+                  "Kafolat",
+                  "Uskunalar roʻyxati va muddatlari koʻrsatilgan kafolat taloni yoki kafolat xati",
+                  "Kafolat boʻyicha almashtirish uchun asos"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "2026-yilda qoʻriqlash va yongʻin tizimlarini montaj qilish uchun qanday ruxsat hujjatlari kerak?",
+            "p": [
+              "Oʻzbekistonda qoʻriqlash texnik vositalari va yongʻin avtomatikasini montaj qilish, sozlash va texnik xizmat koʻrsatish Vazirlar Mahkamasining 2022-yil 25-fevraldagi 88-son qaroriga muvofiq xabardor qilish tartibida amalga oshiriladi. Qoʻriqlash tizimlari boʻyicha xabarnomani Milliy gvardiya, yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish boʻyicha — FVV qabul qiladi. Tashkilot raqamli xabarnoma qabul qilinganligi toʻgʻrisidagi tasdiqnomani oladi va bu raqamni litsenziyalash va xabardor qilish boʻyicha davlat xizmatlarining ochiq reyestrida tekshirish mumkin. Koʻp matnlar haligacha tayanadigan Vazirlar Mahkamasining 2018-yil 27-oktabrdagi 880-son qarori 2022-yil 1-martdan kuchini yoʻqotgan.",
+              "2025-yil 27-noyabrdagi OʻRQ-1099-son Qonun 2026-yil 1-martdan kuchga kirdi; u yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirishni montaj qilish va ularga texnik xizmat koʻrsatish uchun FVV litsenziyasini joriy etadi. Soʻnggi tekshiruvga koʻra (2026-yil 20-oktabr) litsenziya berish tartibi tasdiqlanmagan edi va litsenziyalash portalida bu ishlar boʻyicha faqat xabarnoma mavjud edi. Tartib tasdiqlanmaguncha amaldagi FVV xabarnomasi tasdiqnomasi, tasdiqlangandan keyin esa litsenziya mavjudligi tekshiriladi. Holatni xarid sanasida license.gov.uz portalida tekshiring.",
+              "Agar ishlar hajmiga qoʻriqlash signalizatsiyasi, xavf tugmalari yoki yongʻin avtomatikasi kirsa, shartnoma imzolanishidan oldin ruxsat hujjatlari raqamlarini soʻrang va hujjatdagi ish turlari sizning hajmingizga mos kelishini solishtiring: montaj, sozlash, texnik xizmat koʻrsatish. SAT Solutionsda bular Milliy gvardiyaning 1554491-son ruxsatnomasi va FVVning 913518-son ruxsatnomasi; ikkalasi ham «Kompaniya haqida» sahifasida eʼlon qilingan."
+            ]
+          },
+          {
+            "h": "Turli taʼminotchilarning tijorat takliflarini qanday solishtirish kerak?",
+            "p": [
+              "Umumiy summa boʻyicha solishtirish deyarli har doim chalgʻitadi: disklar kamroq, kabel yoʻq yoki ishlarning bir qismi hisobga olinmagan taklif arzonroq chiqadi. Takliflarni bitta jadvalga jamlang va qatorlarni solishtiring.",
+              "Ishlar smetaga qanday taʼsir qilishiga misol. «Videokuzatuv» xizmati sahifasidagi narxlarga koʻra (narxlar 2026-yil 9-noyabr holatiga) ichki kamerani montaj qilish 155 000 soʻm, koʻcha kamerasini — 180 000, har bir kamerani sozlash va ishga tushirish — 77 000, kabel tortish — metriga 7 000 soʻm turadi. 1 440 m kabelli 32 kameralik obyektda faqat trassalarni yotqizish 10 080 000 soʻm boʻladi — bu barcha kameralar montajidan (5 160 000) koʻproq. Bunday obyekt uchun bizning hisobimizda ishlar budjetning 22,5 foizini tashkil etdi. Kabel metrajsiz bitta qatorda «kiritilgan» taklifni tekshirib boʻlmaydi."
+            ],
+            "table": {
+              "head": [
+                "Mezon",
+                "Nimani tekshirish kerak",
+                "Nima uchun muhim"
+              ],
+              "rows": [
+                [
+                  "Model va artikul",
+                  "Har bir pozitsiyada ishlab chiqaruvchining aniq kodi",
+                  "Kodsiz «analog»ni solishtirib boʻlmaydi"
+                ],
+                [
+                  "Miqdor",
+                  "Kameralar, videoregistratorlar, disklar, kommutatorlar, metrdagi kabel",
+                  "Kam hisoblangan kabel qoʻshimcha toʻlov boʻlib qaytadi"
+                ],
+                [
+                  "Arxiv chuqurligi",
+                  "Koʻrsatilgan bitreytda disklar sigʻimi necha sutkalik yozuvni beradi",
+                  "Disklardagi farq — narxdagi ham, natijadagi ham farq"
+                ],
+                [
+                  "Taʼminot",
+                  "Kommutatorlar PoE budjeti va kameralar isteʼmoli, UPS mavjudligi",
+                  "Ortiqcha yuklangan PoE kameralarni qayta yuklaydi"
+                ],
+                [
+                  "Ishlar tarkibi",
+                  "Montaj, kabel tortish, ishga tushirish-sozlash ishlari, masofaviy kirish, oʻqitish",
+                  "Ishlar budjetning sezilarli qismi"
+                ],
+                [
+                  "Kafolat",
+                  "Ishlar va uskunalar uchun alohida muddat",
+                  "Shartnomada muddati yoʻq kafolat ishlamaydi"
+                ],
+                [
+                  "Nima kirmagan",
+                  "Sarf materiallari, balandlikdagi ishlar, dastur litsenziyalari, integratsiyalar",
+                  "Qoʻshimcha toʻlovlarning asosiy manbalari"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Yetkazib berish va montaj shartnomasiga nimalarni yozish kerak?",
+            "p": [],
+            "ol": [
+              "Predmet va spetsifikatsiya: har bir pozitsiyaning modeli, artikuli, miqdori va narxi — shartnoma ilovasida.",
+              "Narx va valyuta: narx soʻmda; agar ayrim pozitsiyalar valyutaga bogʻlangan boʻlsa, narx shartnoma sanasida qayd etiladimi yoki toʻlov sanasida qayta hisoblanadimi — oldindan kelishib oling.",
+              "Yetkazib berish, montaj va topshirish muddatlari, shuningdek buyurtmachi tomonidagi sabablar bilan kechikish nima hisoblanishi — xonalarning tayyor emasligi, kirish imkoni yoʻqligi.",
+              "Qabul qilish tartibi: har bir kamera tasviri, yozuv, arxiv chuqurligi, masofaviy kirish va kirish nuqtalari ishini tekshirish; dalolatnomani imzolash.",
+              "Kafolat: ishlar va uskunalar uchun alohida muddat, murojaat tartibi va javob berish muddati.",
+              "Hujjatlar va parollarni topshirish: ijro hujjatlari roʻyxati va hisob yozuvlarini topshirish dalolatnomasi.",
+              "Kafolat boʻyicha almashtirish: uskunani kim demontaj va montaj qiladi, servisga kim olib boradi, tizim usiz qancha vaqt ishlaydi.",
+              "Tomonlarning javobgarligi va nizolarni hal qilish tartibi."
+            ]
+          },
+          {
+            "h": "Taklifdagi qaysi belgilar ogohlantirishi kerak?",
+            "p": [
+              "Bu belgilarning hech biri oʻz-oʻzidan yomon taʼminotchini anglatmaydi, lekin har biri toʻlovdan oldin aniqlik kiritishni talab qiladi:"
+            ],
+            "ul": [
+              "tijorat taklifida artikullar yoʻq, faqat «4 Mp kamera» kabi taʼriflar bor;",
+              "«analog» yoki «ekvivalent» xususiyatlar va model kodisiz koʻrsatilgan;",
+              "taʼminotchi EHF chiqarmaydi yoki summaning bir qismini boshqacha rasmiylashtirishni taklif qiladi;",
+              "kafolat ogʻzaki vaʼda qilingan va shartnomaga yozilmagan;",
+              "qoʻriqlash yoki yongʻin qismi uchun ruxsat hujjati raqami yoʻq;",
+              "topshirish tarkibida dalolatnoma va ijro hujjatlari yoʻq;",
+              "arxiv bitreyt va disklar sigʻimi hisobisiz «bir oyga» deb vaʼda qilingan;",
+              "SKUD yuzlar va barmoq izlari bazasi xorijiy bulutda taklif qilinmoqda. «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547-son Qonunning 2026-yil 26-martdagi OʻRQ-1125-son Qonun tahriridagi 27-1-moddasi biometrik maʼlumotlarni Oʻzbekiston hududida saqlashni talab qiladi, kirish terminallaridagi yuz va barmoq izi shablonlari esa shu qonunning 26-moddasiga koʻra biometrik maʼlumotlardir."
+            ]
+          },
+          {
+            "h": "Xarid mutaxassisi uchun nazorat roʻyxati: shartnoma imzolashdan oldin 12 band",
+            "p": [],
+            "ol": [
+              "Yuridik shaxs, STIR va manzil tijorat taklifi, shartnoma va hisobda bir xil.",
+              "Taʼminotchi EHFni EHA operatori orqali chiqaradi, QQS bilan ishlash tasdiqlangan.",
+              "Qoʻriqlash va yongʻin qismi uchun Milliy gvardiya va FVV ruxsat hujjatlari raqamlari bor, ish turlari hajmga mos.",
+              "Tijorat taklifida har bir pozitsiyaning aniq modeli va ishlab chiqaruvchi artikuli bor.",
+              "Kabel metrda, ishlar alohida qatorlarda koʻrsatilgan.",
+              "Arxiv chuqurligi hisoblangan: kameralar soni × bitreyt × sutka.",
+              "PoE budjeti va UPS quvvati real yuklama boʻyicha hisoblangan.",
+              "Ishlar va uskunalar kafolati alohida va muddatlari bilan yozilgan.",
+              "SKUD biometriyasi uchun baza saqlanadigan joy koʻrsatilgan — Oʻzbekistonda.",
+              "Ijro hujjatlari tarkibi va yopuvchi hujjatlar shakli belgilangan.",
+              "Administrator parollarini dalolatnoma bilan topshirish nazarda tutilgan.",
+              "Kafolat boʻyicha almashtirish tartibi va javob berish muddati shartnomaga yozilgan."
+            ]
+          },
+          {
+            "h": "Kompaniya haqida",
+            "p": [],
+            "ul": [
+              "SAT Solutions — «SUPPLY AND TRANSPORTATION» MCHJ brendi, STIR 308603912. Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
+              "Uskunalarni yetkazib berish va montaj: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofoniya, SKS va LHT, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
+              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (xabarnoma 2025-yil 23-iyulda taqdim etilgan) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirishni montaj qilish, sozlash va ularga texnik xizmat koʻrsatish; ikkalasi ham Vazirlar Mahkamasining 2022-yil 25-fevraldagi 88-son qaroriga koʻra xabardor qilish tartibida rasmiylashtirilgan.",
+              "QQS bilan ishlaymiz; elektron hisob-fakturalarni (EHF) elektron hujjat aylanishi operatori orqali chiqaramiz.",
+              "Muvofiqlik sertifikatlari va modellar pasportlari — soʻrov boʻyicha; 2- va 3-shakllar — buyurtmachining soʻroviga koʻra; tizimni ijro hujjatlari va imzo bilan topshiriladigan hisob yozuvlari bilan topshiramiz.",
+              "Montaj ishlariga 3 yil kafolat; uskunalarga ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
+              "satsolutions.uz katalogi: 2 500 dan ortiq pozitsiya, narxlar soʻmda, QQS bilan. Toshkentda oʻz omborimiz bor, koʻp soʻraladigan pozitsiyalar omborda mavjud.",
+              "Texnik topshiriqni yuboring — spetsifikatsiya va ishlar qaydnomasi bilan tijorat taklifini tayyorlaymiz; tijorat taklifi — 24 soat ichida. Xarid uchun spetsifikatsiyalar va soʻrovlar «Yetkazib berish va tenderlar» sahifasi orqali qabul qilinadi."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "2026-yilda Oʻzbekistonda videokuzatuv va signalizatsiya taʼminotchisiga litsenziya kerakmi?",
+            "a": "Qoʻriqlash tizimlari va yongʻin avtomatikasini montaj qilish va ularga xizmat koʻrsatish Vazirlar Mahkamasining 2022-yil 25-fevraldagi 88-son qaroriga koʻra xabardor qilish tartibida amalga oshiriladi: qoʻriqlash tizimlari — Milliy gvardiya, yongʻin tizimlari — FVV. 2026-yil 1-martdan kuchga kirgan OʻRQ-1099-son Qonun yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish uchun FVV litsenziyasini joriy etadi; soʻnggi tekshiruvga koʻra (2026-yil 20-oktabr) uni berish tartibi tasdiqlanmagan edi — holatni xarid sanasida license.gov.uz portalida tekshiring. Hujjat raqamini soʻrang va uni ochiq reyestrda tekshiring. SAT Solutionsda — Milliy gvardiyaning 1554491-son ruxsatnomasi va FVVning 913518-son ruxsatnomasi."
+          },
+          {
+            "q": "Uskunani bir taʼminotchidan sotib olib, montajni boshqasiga buyurtma qilsa boʻladimi?",
+            "a": "Boʻladi: montajsiz yetkazib berish — montaj tashkilotlari uchun odatiy sxema. Muhimi, kafolatni shartnomalarda ajratish: uskuna uchun taʼminotchi, ishlar uchun montajchi javob beradi, nosozlik yuz berganda esa avval bu kimning sohasi ekani aniqlanadi. Bitta masʼul kerak boʻlsa, yetkazib berish va montajni birgalikda buyurtma qiling."
+          },
+          {
+            "q": "Taʼminotchidan uskunaga qanday hujjatlarni soʻrash mumkin?",
+            "a": "Ishlab chiqaruvchi pasportlari va yoʻriqnomalari, seriya raqamlari bilan roʻyxat va, agar obyektingiz yoki tender uchun talab qilinsa, aniq modellarga muvofiqlik sertifikatlari. Sertifikatlarga qoʻyiladigan talabni darhol texnik topshiriqda koʻrsatgan maʼqul — shunda taʼminotchilar uni taklifda hisobga oladi. SAT Solutions muvofiqlik sertifikatlari va modellar pasportlarini soʻrov boʻyicha taqdim etadi."
+          },
+          {
+            "q": "Videokuzatuv va SKUD uchun qanday kafolat meʼyoriy hisoblanadi?",
+            "a": "Asosiysi — ishlar va uskunalar uchun alohida muddatli yozma kafolat. SAT Solutionsda montaj ishlariga kafolat — 3 yil, uskunalarga ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati amal qiladi."
+          },
+          {
+            "q": "SKUD yuzlar va barmoq izlari bazasi qayerda saqlanishi kerak?",
+            "a": "Oʻzbekiston hududida. Yuz va barmoq izi shablonlari — biometrik maʼlumotlar (OʻRQ-547-son Qonun, 26-modda), 2026-yil 26-martdagi OʻRQ-1125-son Qonun tahriridagi 27-1-modda esa biometriyani respublikada saqlashni majburiy qiladi. Obyektdagi lokal server yoki terminallar bu talabni bajaradi."
+          }
+        ]
+      },
+      "en": {
+        "title": "How to Choose a CCTV and Access Control Supplier in Uzbekistan: a Procurement Checklist and Document List",
+        "seoTitle": "CCTV & Access Control Supplier in Uzbekistan: Checklist",
+        "seoDesc": "How to vet a CCTV and access control supplier in Uzbekistan: TIN, VAT e-invoices, National Guard and Emergencies documents, model-level quotes, warranty, acts.",
+        "excerpt": "A checklist for a corporate procurement manager: what to check with a supplier of cameras, recorders, turnstiles and access terminals before requesting a quote, which documents the supplier issues at each stage, how to compare offers and what to put in the contract.",
+        "summary": [
+          "A CCTV and access control supplier in Uzbekistan is vetted on five points: a legal entity with a taxpayer identification number (TIN) that works with VAT and issues electronic invoices (ESF) through an EDI operator; installation permit documents — from the National Guard for security systems and from the Ministry of Emergency Situations for fire systems; a commercial quote with an exact model on every line; a written warranty with separate terms for works and for equipment; and a complete set of closing documents.",
+          "Compare quotes line by line, not by the total."
+        ],
+        "sections": [
+          {
+            "h": "What should you check before requesting a quote?",
+            "p": [
+              "The first check takes ten minutes and removes most of the risk. The supplier must be a legal entity with a TIN that issues electronic invoices (ESF) through an electronic document interchange (EDI) operator. For a company that works with VAT this is not a formality: without an ESF the accounting department cannot record the purchase properly, and the issue has to be sorted out with the supplier after payment. The legal name, TIN and address are usually shown in the website footer or in the quote's details — match them against the contract and the invoice.",
+              "The second check is the scope of work. CCTV and access control are not just boxes to deliver: cameras have to be positioned, cable laid, the recorder, archive, access rights and turnstile integration configured. Ask who does the installation — the supplier's own staff or a hired crew — and who is accountable to you for the result as a whole. When supply and installation are split between two companies, the \"is it the equipment or the installation\" dispute becomes your problem at the first fault.",
+              "The third is price transparency. A supplier that publishes model prices in a catalogue lets you sanity-check the budget in advance and see what the quote is built from. Ask for manufacturer part numbers in the quote rather than descriptions such as \"4 MP outdoor camera\": specifications, warranty and compatibility can only be verified by part number."
+            ]
+          },
+          {
+            "h": "Which documents does the supplier issue at each stage?",
+            "p": [
+              "On construction projects the client often requires its own format of closing documents: a local resource statement and a certificate of the cost of completed works (Forms 2 and 3), a bill of quantities, and as-built documentation stamped \"completed as per design\". Agree on the format before signing — redoing documents after handover takes longer than preparing them correctly the first time. SAT Solutions issues Forms 2 and 3 at the client's request.",
+              "This is how documents work at SAT Solutions. We work with VAT: e-invoices (ESF) are issued through an electronic document-exchange operator. We provide certificates of conformity and model data sheets on request — the client is entitled to ask for them, and we prepare them for the site or tender. We hand the system over with as-built documentation: diagrams, an equipment list with serial numbers, network addresses and accounts handed over against signature.",
+              "Administrator passwords are a separate point. A system whose passwords only the contractor knows does not really belong to you. Require the administrator accounts to be handed over by a signed act and changed at commissioning."
+            ],
+            "table": {
+              "head": [
+                "Stage",
+                "Document",
+                "Why it matters"
+              ],
+              "rows": [
+                [
+                  "Price request",
+                  "Commercial quote: model, part number, quantity, unit price, scope of works",
+                  "Basis for comparison and for the contract specification"
+                ],
+                [
+                  "Contract",
+                  "Supply and installation contract + specification annex",
+                  "Fixes models, price, timing, acceptance procedure and warranty"
+                ],
+                [
+                  "Payment",
+                  "Invoice for payment",
+                  "Payment document under the contract"
+                ],
+                [
+                  "Shipment",
+                  "Delivery note and ESF via the EDI operator",
+                  "Goods and VAT accounting"
+                ],
+                [
+                  "Delivery",
+                  "Manufacturer documents for the models: data sheets, manuals, certificates of conformity — on request, if required for the site or tender",
+                  "Expert review, tender file, internal audit"
+                ],
+                [
+                  "Handover of works",
+                  "Certificate of completed works and ESF for works",
+                  "Closing the contract"
+                ],
+                [
+                  "System handover",
+                  "As-built documentation: diagrams, equipment list with serial numbers, IP addresses, administrator accounts handed over against signature",
+                  "Operation, warranty, future expansion"
+                ],
+                [
+                  "Warranty",
+                  "Warranty card or warranty letter listing equipment and terms",
+                  "Basis for warranty replacement"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Which permits are needed to install security and fire systems in 2026?",
+            "p": [
+              "Installation, commissioning and maintenance of security equipment and fire automation in Uzbekistan are carried out under a notification procedure set by Cabinet of Ministers Resolution No. 88 of 25 February 2022. For security systems the notification is filed with the National Guard; for fire alarms and automatic fire suppression — with the Ministry of Emergency Situations. The company receives a numbered confirmation of the notification, and that number can be checked in the open public register of licensing and notification services. Resolution No. 880 of 27 October 2018, still quoted by many texts, lost force on 1 March 2022.",
+              "Law No. ZRU-1099 of 27 November 2025 entered into force on 1 March 2026; it introduces a Ministry of Emergency Situations licence for the installation and maintenance of fire alarms and automatic fire suppression. As of the latest check (20 October 2026) the procedure for issuing the licence had not been approved, and the licensing portal offered only the notification for these works. Until the procedure is approved, the current Emergencies Ministry notification confirmation is checked; after approval, the licence. Check the status on license.gov.uz on the date of your purchase.",
+              "If the scope includes intruder alarms, panic buttons or fire automation, ask for the permit document numbers before signing and check that the types of work in the document match your scope: installation, commissioning, maintenance. SAT Solutions holds National Guard permit No. 1554491 and Ministry of Emergency Situations permit No. 913518; both are published on the \"About\" page."
+            ]
+          },
+          {
+            "h": "How do you compare quotes from different suppliers?",
+            "p": [
+              "Comparing totals is almost always misleading: the cheaper quote is usually the one with fewer disks, no cable or part of the works missing. Put the quotes into one table and compare line by line.",
+              "An example of how works affect the estimate. Under the rates on the \"Video surveillance\" service page (prices as of 9 November 2026), mounting an indoor camera costs 155 000 UZS, an outdoor one 180 000, setup and commissioning of each camera 77 000, and cable laying 7 000 UZS per metre. On a site with 32 cameras and 1 440 m of cable, cable laying alone comes to 10 080 000 UZS — more than mounting all the cameras together (5 160 000). In our calculation for such a site, works made up 22.5% of the budget. A quote where cable is \"included\" as one line without metres cannot be checked."
+            ],
+            "table": {
+              "head": [
+                "Criterion",
+                "What to check",
+                "Why it matters"
+              ],
+              "rows": [
+                [
+                  "Model and part number",
+                  "Exact manufacturer code on every item",
+                  "An \"equivalent\" without a code cannot be compared"
+                ],
+                [
+                  "Quantity",
+                  "Cameras, recorders, disks, switches, cable in metres",
+                  "Under-counted cable comes back as an extra charge"
+                ],
+                [
+                  "Archive depth",
+                  "How many days of recording the disk capacity gives at the stated bitrate",
+                  "A difference in disks is a difference in both price and result"
+                ],
+                [
+                  "Power",
+                  "Switch PoE budget versus camera consumption, UPS",
+                  "Overloaded PoE makes cameras reboot"
+                ],
+                [
+                  "Scope of works",
+                  "Mounting, cable laying, commissioning, remote access, training",
+                  "Works are a noticeable share of the budget"
+                ],
+                [
+                  "Warranty",
+                  "Separate terms for works and equipment",
+                  "A warranty without a term in the contract does not work"
+                ],
+                [
+                  "Exclusions",
+                  "Consumables, work at height, software licences, integrations",
+                  "The main sources of extra charges"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "What should the supply and installation contract include?",
+            "p": [],
+            "ol": [
+              "Subject and specification: model, part number, quantity and price of every item — in an annex to the contract.",
+              "Price and currency: price in UZS; if some items are linked to a foreign currency, agree in advance whether the price is fixed on the contract date or recalculated on the payment date.",
+              "Delivery, installation and handover dates, and what counts as a delay caused by the client — premises not ready, no access.",
+              "Acceptance procedure: checking the image of every camera, recording, archive depth, remote access and access points; signing the act.",
+              "Warranty: separate terms for works and equipment, how to file a claim and the response time.",
+              "Handover of documents and passwords: list of as-built documents and an act transferring the accounts.",
+              "Warranty replacement: who dismounts and remounts the equipment, who takes it to the service centre, how long the system runs without it.",
+              "Liability of the parties and dispute resolution."
+            ]
+          },
+          {
+            "h": "Which signs in a quote should raise questions?",
+            "p": [
+              "None of these signs alone means a bad supplier, but each needs clarification before payment:"
+            ],
+            "ul": [
+              "the quote has no part numbers, only descriptions like \"4 MP camera\";",
+              "an \"analogue\" or \"equivalent\" is listed without specifications and model code;",
+              "the supplier does not issue an ESF or suggests documenting part of the amount differently;",
+              "the warranty is promised verbally and is not in the contract;",
+              "there is no permit document number for the security or fire part;",
+              "the handover package has no certificate of completion and no as-built documentation;",
+              "the archive is promised \"for a month\" without a bitrate and disk capacity calculation;",
+              "the database of faces and fingerprints for access control is offered in a foreign cloud. Article 27-1 of Law No. ZRU-547 \"On Personal Data\", as amended by Law No. ZRU-1125 of 26 March 2026, requires biometric data to be stored in Uzbekistan, and face and fingerprint templates in access terminals are biometric data under Article 26 of the same law."
+            ]
+          },
+          {
+            "h": "Procurement checklist: 12 points before signing the contract",
+            "p": [],
+            "ol": [
+              "Legal entity, TIN and address match in the quote, contract and invoice.",
+              "The supplier issues ESFs through an EDI operator; VAT handling is confirmed.",
+              "For the security and fire part there are National Guard and Emergencies Ministry permit document numbers, and the types of work match the scope.",
+              "Every item in the quote has an exact model and manufacturer part number.",
+              "Cable is given in metres, works as separate lines.",
+              "Archive depth is calculated: number of cameras × bitrate × days.",
+              "PoE budget and UPS capacity are calculated for the real load.",
+              "Warranty for works and for equipment is written separately and with terms.",
+              "For access control biometrics, the database location is specified — in Uzbekistan.",
+              "The set of as-built documents and the format of closing documents are defined.",
+              "Handover of administrator passwords by act is provided for.",
+              "The warranty replacement procedure and response time are written into the contract."
+            ]
+          },
+          {
+            "h": "About the company",
+            "p": [],
+            "ul": [
+              "SAT Solutions is a brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912. Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
+              "Equipment supply and installation: CCTV, access control and turnstiles, time attendance, intruder and fire alarms, intercoms, structured cabling and LAN, Wi-Fi, fibre, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
+              "Documents on the \"About\" page: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 (notification filed on 23.07.2025) — installation, commissioning and maintenance of fire alarms and automatic fire suppression; both issued under the notification procedure of Resolution No. 88 of 25.02.2022.",
+              "We work with VAT; e-invoices (ESF) are issued through an electronic document-exchange operator.",
+              "Certificates of conformity and model data sheets on request; Forms 2 and 3 at the client's request; the system is handed over with as-built documentation and accounts against signature.",
+              "3-year warranty on installation works; manufacturer's warranty of 1 to 3 years on equipment.",
+              "satsolutions.uz catalogue: more than 2,500 items, prices in UZS including VAT. Own warehouse in Tashkent, fast-moving items in stock.",
+              "Send us your technical specification — we will prepare a quote with a specification and a statement of works; quotes within 24 hours. Specifications and procurement requests are accepted via the \"Supply and tenders\" page."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Does a CCTV and alarm supplier need a licence in Uzbekistan in 2026?",
+            "a": "Installation and maintenance of security systems and fire automation are carried out under the notification procedure of Cabinet of Ministers Resolution No. 88 of 25 February 2022: security systems — National Guard, fire systems — Ministry of Emergency Situations. Law No. ZRU-1099, in force since 1 March 2026, introduces a Ministry of Emergency Situations licence for fire alarms and automatic fire suppression; as of the latest check (20 October 2026) the procedure for issuing it had not been approved — check the status on license.gov.uz on the date of purchase. Ask for the document number and check it in the open register. SAT Solutions holds National Guard permit No. 1554491 and Ministry of Emergency Situations permit No. 913518."
+          },
+          {
+            "q": "Can you buy equipment from one supplier and order installation from another?",
+            "a": "Yes: supply without installation is a common arrangement for installation contractors. What matters is splitting the warranty in the contracts: the supplier is responsible for the equipment, the installer for the works, and at a fault you first establish whose area it is. If you want a single accountable party, order supply and installation together."
+          },
+          {
+            "q": "Which equipment documents can you request from the supplier?",
+            "a": "Manufacturer data sheets and manuals, a list with serial numbers and, if your site or tender requires them, certificates of conformity for specific models. It is best to put the certificate requirement straight into the technical specification so that suppliers include it in their offers. SAT Solutions provides certificates of conformity and model data sheets on request."
+          },
+          {
+            "q": "What warranty on CCTV and access control is considered normal?",
+            "a": "The key is a written warranty with separate terms for works and equipment. At SAT Solutions the warranty on installation works is 3 years; equipment is covered by the manufacturer's warranty of 1 to 3 years."
+          },
+          {
+            "q": "Where should the face and fingerprint database for access control be stored?",
+            "a": "In Uzbekistan. Face and fingerprint templates are biometric data (Article 26 of ZRU-547), and Article 27-1 as amended by ZRU-1125 of 26 March 2026 makes storing biometrics in the country mandatory. A local server or terminals on site meet this requirement."
+          }
+        ]
+      },
+      "tr": {
+        "title": "Özbekistan'da CCTV ve geçiş kontrol tedarikçisi nasıl seçilir: satın alma kontrol listesi ve belgeler",
+        "seoTitle": "Özbekistan'da CCTV ve geçiş kontrol tedarikçisi seçimi",
+        "seoDesc": "Özbekistan'da kamera ve geçiş kontrol tedarikçisini kontrol edin: vergi no, KDV e-fatura, Ulusal Muhafız ve OHB belgeleri, model bazlı teklif, garanti.",
+        "excerpt": "Kurumsal satın alma uzmanı için kontrol listesi: teklif istemeden önce kamera, kayıt cihazı, turnike ve geçiş terminali tedarikçisinde neler kontrol edilmeli, tedarikçi her aşamada hangi belgeleri verir, teklifler nasıl karşılaştırılır ve sözleşmeye neler yazılır.",
+        "summary": [
+          "Özbekistan'da video gözetim ve geçiş kontrol sistemi (SKUD) tedarikçisi beş noktada kontrol edilir: vergi kimlik numarası (STIR) olan, KDV ile çalışan ve elektronik faturaları (ESF) elektronik belge değişimi (EBD) operatörü üzerinden düzenleyen bir tüzel kişi; montaj izin belgeleri — güvenlik sistemleri için Ulusal Muhafız'dan, yangın sistemleri için Olağanüstü Durumlar Bakanlığı'ndan (OHB); her satırında tam model bulunan ticari teklif; işler ve ekipman için ayrı süreli yazılı garanti; eksiksiz kapanış belgeleri seti.",
+          "Teklifler toplam tutara göre değil, satır satır karşılaştırılır."
+        ],
+        "sections": [
+          {
+            "h": "Teklif istemeden önce tedarikçide neleri kontrol etmelisiniz?",
+            "p": [
+              "İlk kontrol on dakika sürer ve risklerin büyük bölümünü ortadan kaldırır. Tedarikçi, vergi kimlik numarası olan ve elektronik faturaları (ESF) elektronik belge değişimi (EBD) operatörü üzerinden düzenleyen bir tüzel kişi olmalıdır. KDV ile çalışan bir işletme için bu bir formalite değildir: ESF olmadan muhasebe alımı doğru şekilde kayda alamaz ve sorun ödemeden sonra tedarikçiyle çözülmek zorunda kalır. Tüzel kişinin unvanı, vergi numarası ve adresi genellikle sitenin alt kısmında veya teklifteki bilgilerde yer alır — bunları sözleşme ve faturayla karşılaştırın.",
+              "İkinci kontrol iş kapsamıdır. Video gözetim ve geçiş kontrol yalnızca kutu teslimatı değildir: kameraların yerleştirilmesi, kablonun çekilmesi, kayıt cihazının, arşivin, erişim yetkilerinin ve turnike bağlantısının ayarlanması gerekir. Montajı kimin yaptığını — tedarikçinin kendi personeli mi yoksa dışarıdan bir ekip mi — ve sonucun tamamından size karşı kimin sorumlu olduğunu netleştirin. Tedarik ve montaj iki şirket arasında bölündüğünde, ilk arızada «suç ekipmanda mı montajda mı» tartışması sizin sorununuz olur.",
+              "Üçüncüsü fiyat şeffaflığıdır. Model fiyatlarını katalogda yayımlayan bir tedarikçi, bütçenin büyüklüğünü önceden kontrol etmenize ve teklifin neyden oluştuğunu görmenize olanak tanır. Teklifte «4 MP dış mekân kamerası» gibi tanımlar yerine üretici parça numaralarının yer almasını isteyin: teknik özellikler, garanti ve uyumluluk yalnızca parça numarasıyla doğrulanabilir."
+            ]
+          },
+          {
+            "h": "Tedarikçi satın almanın her aşamasında hangi belgeleri verir?",
+            "p": [
+              "İnşaat projelerinde müşteri çoğu zaman kendi kapanış belgesi formatını ister: yerel kaynak cetveli ve yapılan işlerin maliyet belgesi (Form 2 ve Form 3), metraj cetveli, «projeye uygun yapılmıştır» kaşeli uygulama belgeleri. Formatı sözleşmeden önce kararlaştırın — belgeleri teslimden sonra yeniden hazırlamak, ilk seferde doğru hazırlamaktan daha uzun sürer. SAT Solutions, Form 2 ve Form 3'ü müşterinin talebi üzerine düzenler.",
+              "SAT Solutions'ta belgeler şöyle işler. KDV ile çalışıyoruz: elektronik faturaları (ESF) elektronik belge değişimi operatörü üzerinden düzenliyoruz. Uygunluk sertifikalarını ve model teknik föylerini talep üzerine sağlıyoruz — müşteri bunları isteme hakkına sahiptir, biz de tesis veya ihale için hazırlıyoruz. Sistemi uygulama belgeleriyle devrediyoruz: şemalar, seri numaralı ekipman listesi, ağ adresleri ve imza karşılığı devredilen hesaplar.",
+              "Yönetici şifreleri ayrı bir konudur. Şifrelerini yalnızca yüklenicinin bildiği bir sistem fiilen size ait değildir. Yönetici hesaplarının tutanakla devredilmesini ve devreye almada değiştirilmesini şart koşun."
+            ],
+            "table": {
+              "head": [
+                "Aşama",
+                "Belge",
+                "Neden gerekli"
+              ],
+              "rows": [
+                [
+                  "Fiyat talebi",
+                  "Ticari teklif: model, parça numarası, miktar, birim fiyat, iş kapsamı",
+                  "Karşılaştırma ve sözleşme şartnamesi için temel"
+                ],
+                [
+                  "Sözleşme",
+                  "Tedarik ve montaj sözleşmesi + ekte şartname",
+                  "Modelleri, fiyatı, süreleri, kabul usulünü ve garantiyi sabitler"
+                ],
+                [
+                  "Ödeme",
+                  "Ödeme faturası (proforma)",
+                  "Sözleşmeye göre ödeme belgesi"
+                ],
+                [
+                  "Sevkiyat",
+                  "İrsaliye ve EBD operatörü üzerinden ESF",
+                  "Mal ve KDV muhasebesi"
+                ],
+                [
+                  "Teslimat",
+                  "Modellere ait üretici belgeleri: teknik föyler, kılavuzlar, uygunluk sertifikaları — tesis veya ihale için gerekiyorsa talep üzerine",
+                  "Bilirkişi incelemesi, ihale dosyası, iç denetim"
+                ],
+                [
+                  "İşlerin teslimi",
+                  "Yapılan işler tutanağı ve işler için ESF",
+                  "Sözleşmenin kapatılması"
+                ],
+                [
+                  "Sistemin devri",
+                  "Uygulama (as-built) belgeleri: şemalar, seri numaralı ekipman listesi, IP adresleri, imza karşılığı devredilen yönetici hesapları",
+                  "İşletme, garanti, genişletme"
+                ],
+                [
+                  "Garanti",
+                  "Ekipman listesi ve süreleri yazılı garanti belgesi veya garanti mektubu",
+                  "Garanti kapsamında değişim için dayanak"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "2026'da güvenlik ve yangın sistemlerinin montajı için hangi izin belgeleri gerekir?",
+            "p": [
+              "Özbekistan'da güvenlik teknik araçlarının ve yangın otomasyonunun montajı, ayarı ve teknik bakımı, Bakanlar Kurulu'nun 25 Şubat 2022 tarihli ve 88 sayılı kararıyla belirlenen bildirim usulüne göre yürütülür. Güvenlik sistemleri için bildirimi Ulusal Muhafız, yangın alarmı ve otomatik yangın söndürme için Olağanüstü Durumlar Bakanlığı kabul eder. Kuruluş, numaralı bir bildirim alındı onayı alır ve bu numara lisans ve bildirim hizmetlerinin açık kamu sicilinde kontrol edilebilir. Pek çok metnin hâlâ atıf yaptığı 27 Ekim 2018 tarihli ve 880 sayılı karar 1 Mart 2022'de yürürlükten kalkmıştır.",
+              "27 Kasım 2025 tarihli ve ZRU-1099 sayılı Kanun 1 Mart 2026'da yürürlüğe girdi; kanun, yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı ve bakımı için Olağanüstü Durumlar Bakanlığı lisansı getiriyor. Son kontrole göre (20 Ekim 2026) lisansın veriliş usulü onaylanmamıştı ve lisans portalında bu işler için yalnızca bildirim mevcuttu. Usul onaylanana kadar geçerli OHB bildirim onayı, onaylandıktan sonra ise lisansın varlığı kontrol edilir. Durumu satın alma tarihinde license.gov.uz üzerinden kontrol edin.",
+              "Kapsamda hırsız alarmı, panik butonları veya yangın otomasyonu varsa, sözleşmeden önce izin belgesi numaralarını isteyin ve belgedeki iş türlerinin kapsamınızla örtüştüğünü kontrol edin: montaj, ayar, teknik bakım. SAT Solutions'ta bunlar Ulusal Muhafız izin belgesi No. 1554491 ve Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518'dir; ikisi de «Hakkımızda» sayfasında yayımlanmıştır."
+            ]
+          },
+          {
+            "h": "Farklı tedarikçilerin teklifleri nasıl karşılaştırılır?",
+            "p": [
+              "Toplam tutara göre karşılaştırma neredeyse her zaman yanıltır: daha ucuz çıkan teklif genellikle daha az disk içeren, kablosu olmayan veya işlerin bir kısmını hesaba katmayan tekliftir. Teklifleri tek bir tabloda toplayın ve satırları karşılaştırın.",
+              "İşlerin keşfe etkisine bir örnek. «Video gözetim» hizmet sayfasındaki fiyatlara göre (fiyatlar 9 Kasım 2026 itibarıyla) iç mekân kamerasının montajı 155 000 UZS, dış mekân kamerasınınki 180 000, her kameranın ayarı ve devreye alınması 77 000, kablo çekimi metre başına 7 000 UZS'dir. 32 kameralı ve 1 440 m kablolu bir tesiste yalnızca kablo güzergâhlarının döşenmesi 10 080 000 UZS tutar — bu, tüm kameraların montajından (5 160 000) fazladır. Böyle bir tesis için yaptığımız hesapta işler bütçenin %22,5'ini oluşturdu. Kablonun metrajsız tek satırda «dahil» edildiği bir teklifi kontrol etmek mümkün değildir."
+            ],
+            "table": {
+              "head": [
+                "Kriter",
+                "Ne kontrol edilmeli",
+                "Neden önemli"
+              ],
+              "rows": [
+                [
+                  "Model ve parça numarası",
+                  "Her kalemde üreticinin tam kodu",
+                  "Kodsuz «muadil» karşılaştırılamaz"
+                ],
+                [
+                  "Miktar",
+                  "Kameralar, kayıt cihazları, diskler, anahtarlar, metre cinsinden kablo",
+                  "Eksik hesaplanan kablo ek ödeme olarak geri döner"
+                ],
+                [
+                  "Arşiv derinliği",
+                  "Belirtilen bit hızında disk kapasitesinin kaç günlük kayıt sağladığı",
+                  "Disk farkı hem fiyat hem sonuç farkıdır"
+                ],
+                [
+                  "Güç",
+                  "Anahtarların PoE bütçesi ile kamera tüketimi, UPS",
+                  "Aşırı yüklenen PoE kameraları yeniden başlatır"
+                ],
+                [
+                  "İş kapsamı",
+                  "Montaj, kablo çekimi, devreye alma, uzaktan erişim, eğitim",
+                  "İşler bütçenin hissedilir bir payıdır"
+                ],
+                [
+                  "Garanti",
+                  "İşler ve ekipman için ayrı süre",
+                  "Sözleşmede süresi olmayan garanti işlemez"
+                ],
+                [
+                  "Kapsam dışı",
+                  "Sarf malzemeleri, yüksekte çalışma, yazılım lisansları, entegrasyonlar",
+                  "Ek ödemelerin başlıca kaynakları"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Tedarik ve montaj sözleşmesine neler yazılmalı?",
+            "p": [],
+            "ol": [
+              "Konu ve şartname: her kalemin modeli, parça numarası, miktarı ve fiyatı — sözleşme ekinde.",
+              "Fiyat ve para birimi: fiyat UZS cinsinden; bazı kalemler dövize bağlıysa, fiyatın sözleşme tarihinde mi sabitleneceğini yoksa ödeme tarihinde mi yeniden hesaplanacağını önceden kararlaştırın.",
+              "Teslimat, montaj ve teslim süreleri ile müşteriden kaynaklanan gecikmenin ne sayılacağı — mekânların hazır olmaması, erişim olmaması.",
+              "Kabul usulü: her kameranın görüntüsünün, kaydın, arşiv derinliğinin, uzaktan erişimin ve geçiş noktalarının kontrolü; tutanağın imzalanması.",
+              "Garanti: işler ve ekipman için ayrı süreler, başvuru usulü ve yanıt süresi.",
+              "Belgelerin ve şifrelerin devri: uygulama belgeleri listesi ve hesapların devir tutanağı.",
+              "Garanti kapsamında değişim: ekipmanı kimin söküp takacağı, servise kimin götüreceği, sistemin onsuz ne kadar çalışacağı.",
+              "Tarafların sorumluluğu ve uyuşmazlıkların çözüm yolu."
+            ]
+          },
+          {
+            "h": "Teklifteki hangi işaretler soru işareti yaratmalı?",
+            "p": [
+              "Bu işaretlerin hiçbiri tek başına kötü bir tedarikçi anlamına gelmez, ancak her biri ödemeden önce açıklama gerektirir:"
+            ],
+            "ul": [
+              "teklifte parça numarası yok, yalnızca «4 MP kamera» gibi tanımlar var;",
+              "«muadil» veya «eşdeğer» teknik özellik ve model kodu olmadan yazılmış;",
+              "tedarikçi ESF düzenlemiyor veya tutarın bir kısmını farklı belgelemeyi öneriyor;",
+              "garanti sözlü olarak vaat edilmiş ve sözleşmeye yazılmamış;",
+              "güvenlik veya yangın kısmı için izin belgesi numarası yok;",
+              "teslim paketinde tutanak ve uygulama belgeleri yok;",
+              "arşiv bit hızı ve disk kapasitesi hesabı olmadan «bir aylık» diye vaat edilmiş;",
+              "geçiş kontrolüne ait yüz ve parmak izi veritabanı yurt dışındaki bir bulutta öneriliyor. «Kişisel Veriler Hakkında» ZRU-547 sayılı Kanun'un, 26 Mart 2026 tarihli ve ZRU-1125 sayılı Kanun ile değişik 27-1. maddesi biyometrik verilerin Özbekistan topraklarında saklanmasını şart koşar; geçiş terminallerindeki yüz ve parmak izi şablonları ise aynı kanunun 26. maddesine göre biyometrik veridir."
+            ]
+          },
+          {
+            "h": "Satın alma kontrol listesi: sözleşme imzalamadan önce 12 madde",
+            "p": [],
+            "ol": [
+              "Tüzel kişi, vergi numarası ve adres teklifte, sözleşmede ve faturada aynı.",
+              "Tedarikçi ESF'yi EBD operatörü üzerinden düzenliyor, KDV ile çalıştığı teyit edilmiş.",
+              "Güvenlik ve yangın kısmı için Ulusal Muhafız ve OHB izin belgesi numaraları var, iş türleri kapsamla örtüşüyor.",
+              "Teklifteki her kalemde tam model ve üretici parça numarası var.",
+              "Kablo metre olarak, işler ayrı satırlar hâlinde belirtilmiş.",
+              "Arşiv derinliği hesaplanmış: kamera sayısı × bit hızı × gün.",
+              "PoE bütçesi ve UPS gücü gerçek yüke göre hesaplanmış.",
+              "İşler ve ekipman garantisi ayrı ayrı ve süreleriyle yazılmış.",
+              "Geçiş kontrol biyometrisi için veritabanının yeri belirtilmiş — Özbekistan'da.",
+              "Uygulama belgelerinin kapsamı ve kapanış belgelerinin formatı belirlenmiş.",
+              "Yönetici şifrelerinin tutanakla devri öngörülmüş.",
+              "Garanti kapsamında değişim usulü ve yanıt süresi sözleşmeye yazılmış."
+            ]
+          },
+          {
+            "h": "Şirket hakkında",
+            "p": [],
+            "ul": [
+              "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır, vergi numarası 308603912. Taşkent, Katta Darhon Caddesi 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
+              "Ekipman tedariki ve montaj: video gözetim, geçiş kontrol ve turnikeler, mesai takibi, hırsız ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber optik, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
+              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, ayarı ve teknik bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (bildirim 23.07.2025'te sunuldu) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve teknik bakımı; her ikisi de 25.02.2022 tarihli ve 88 sayılı karara göre bildirim usulüyle düzenlenmiştir.",
+              "KDV ile çalışıyoruz; elektronik faturaları (ESF) elektronik belge değişimi operatörü üzerinden düzenliyoruz.",
+              "Uygunluk sertifikaları ve model teknik föyleri talep üzerine; Form 2 ve Form 3 müşterinin talebi üzerine; sistem uygulama belgeleri ve imza karşılığı devredilen hesaplarla teslim edilir.",
+              "Montaj işlerine 3 yıl garanti; ekipmana üreticinin 1 ila 3 yıllık garantisi.",
+              "satsolutions.uz kataloğu: 2.500'den fazla ürün, fiyatlar UZS cinsinden ve KDV dahil. Taşkent'te kendi depomuz var, çok satan ürünler stokta.",
+              "Teknik şartnamenizi gönderin — şartname ve iş cetveliyle teklif hazırlayalım; teklif 24 saat içinde. Satın alma için şartnameler ve talepler «Tedarik ve ihaleler» sayfası üzerinden kabul edilir."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "2026'da Özbekistan'da CCTV ve alarm tedarikçisinin lisansa ihtiyacı var mı?",
+            "a": "Güvenlik sistemleri ve yangın otomasyonunun montajı ve bakımı, Bakanlar Kurulu'nun 25 Şubat 2022 tarihli ve 88 sayılı kararına göre bildirim usulüyle yürütülür: güvenlik sistemleri — Ulusal Muhafız, yangın sistemleri — Olağanüstü Durumlar Bakanlığı. 1 Mart 2026'da yürürlüğe giren ZRU-1099 sayılı Kanun yangın alarmı ve otomatik yangın söndürme için OHB lisansı getiriyor; son kontrole göre (20 Ekim 2026) veriliş usulü onaylanmamıştı — durumu satın alma tarihinde license.gov.uz üzerinden kontrol edin. Belge numarasını isteyin ve açık sicilde kontrol edin. SAT Solutions'ta Ulusal Muhafız izin belgesi No. 1554491 ve Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 bulunur."
+          },
+          {
+            "q": "Ekipmanı bir tedarikçiden alıp montajı başka birine yaptırmak mümkün mü?",
+            "a": "Mümkün: montajsız tedarik, montaj firmaları için olağan bir düzendir. Önemli olan garantiyi sözleşmelerde ayırmaktır: ekipmandan tedarikçi, işlerden montajcı sorumludur; arızada önce bunun kimin alanı olduğu belirlenir. Tek bir sorumlu istiyorsanız tedarik ve montajı birlikte sipariş edin."
+          },
+          {
+            "q": "Tedarikçiden ekipmana ilişkin hangi belgeler istenebilir?",
+            "a": "Üreticinin teknik föyleri ve kılavuzları, seri numaralı liste ve tesisiniz veya ihale için gerekiyorsa belirli modellere ait uygunluk sertifikaları. Sertifika şartını doğrudan teknik şartnameye yazmak en iyisidir; böylece tedarikçiler bunu tekliflerinde dikkate alır. SAT Solutions uygunluk sertifikalarını ve model teknik föylerini talep üzerine sağlar."
+          },
+          {
+            "q": "CCTV ve geçiş kontrol için hangi garanti normal kabul edilir?",
+            "a": "Asıl önemli olan işler ve ekipman için ayrı süreli yazılı garantidir. SAT Solutions'ta montaj işlerine garanti 3 yıldır; ekipman için üreticinin 1 ila 3 yıllık garantisi geçerlidir."
+          },
+          {
+            "q": "Geçiş kontrolüne ait yüz ve parmak izi veritabanı nerede saklanmalı?",
+            "a": "Özbekistan'da. Yüz ve parmak izi şablonları biyometrik veridir (ZRU-547, madde 26); 26 Mart 2026 tarihli ZRU-1125 ile değişik 27-1. madde ise biyometrinin ülkede saklanmasını zorunlu kılar. Tesisteki yerel sunucu veya terminaller bu şartı karşılar."
+          }
+        ]
+      },
+      "zh": {
+        "title": "在乌兹别克斯坦如何选择视频监控和门禁供应商：采购核查清单与文件",
+        "seoTitle": "乌兹别克斯坦视频监控与门禁供应商怎么选：采购清单",
+        "seoDesc": "采购人员如何核查乌兹别克斯坦视频监控和门禁供应商：税号与增值税电子发票、国民近卫军和紧急情况部文件、按型号报价、书面质保与验收文件，共12项。",
+        "excerpt": "写给企业采购人员的核查清单：在索取报价之前应核查摄像机、录像机、闸机和门禁终端供应商的哪些方面，供应商在每个阶段提供哪些文件，如何比较报价，合同中应写明哪些条款。",
+        "summary": [
+          "在乌兹别克斯坦选择视频监控和门禁系统供应商，应核查五点：具有纳税人识别号（税号）、按增值税运作并通过电子文件交换（EDI）运营商开具电子发票（ESF）的法人；安装许可文件——安防系统由国民近卫军出具，消防系统由紧急情况部出具；每一行都写明确切型号的商务报价；工程与设备分别约定期限的书面质保；完整的结算交付文件。",
+          "比较报价要逐行比较，而不是只看总价。"
+        ],
+        "sections": [
+          {
+            "h": "索取报价之前应核查供应商的哪些方面？",
+            "p": [
+              "第一项核查只需十分钟，却能排除大部分风险。供应商应是具有税号、通过电子文件交换（EDI）运营商开具电子发票（ESF）的法人。对于按增值税运作的企业来说，这不是形式：没有ESF，财务部门无法正常入账，问题只能在付款之后再与供应商交涉。法人名称、税号和地址通常写在网站页脚或报价的公司信息中——请与合同和付款单核对。",
+              "第二项核查是工作范围。视频监控和门禁不只是送货：需要布置摄像机、敷设线缆，配置录像机、存储、权限以及与闸机的联动。请弄清楚安装由谁完成——供应商自有员工还是外请施工队——以及由谁对整体结果向您负责。如果供货和安装分属两家公司，第一次出现故障时，“是设备的问题还是安装的问题”这一争议就会落到您身上。",
+              "第三项是价格透明度。在目录中公开型号价格的供应商，能让您提前核对预算量级，看清报价由哪些部分构成。请要求报价中写明厂家料号，而不是“4MP室外摄像机”这类描述：只有凭料号才能核实参数、质保和兼容性。"
+            ]
+          },
+          {
+            "h": "供应商在采购的每个阶段提供哪些文件？",
+            "p": [
+              "在建设项目中，业主往往要求使用自己的结算文件格式：地方资源清单和已完工程造价证明（第2号和第3号表）、工程量清单（BOQ），以及加盖“按设计完成”章的竣工资料。请在签订合同之前商定格式——交付后再重做文件，比一开始就按要求编制更费时间。SAT Solutions可应业主要求出具第2号和第3号表。",
+              "在SAT Solutions，文件是这样安排的。我们按增值税运作：电子发票（ESF）通过电子文件交换运营商开具。合格证书和型号规格书可应要求提供——业主有权索取，我们会为项目或招标准备好。系统移交时附竣工资料：图纸、带序列号的设备清单、网络地址，以及签字移交的账户。",
+              "管理员密码是单独一项。只有承包方知道密码的系统，实际上并不属于您。应要求通过签字移交单交出管理员账户，并在投入使用时更改密码。"
+            ],
+            "table": {
+              "head": [
+                "阶段",
+                "文件",
+                "用途"
+              ],
+              "rows": [
+                [
+                  "询价",
+                  "商务报价：型号、料号、数量、单价、工程内容",
+                  "比较报价和编制合同规格书的依据"
+                ],
+                [
+                  "合同",
+                  "供货与安装合同 + 附件规格书",
+                  "固定型号、价格、期限、验收程序和质保"
+                ],
+                [
+                  "付款",
+                  "付款发票（账单）",
+                  "合同项下的付款凭证"
+                ],
+                [
+                  "发货",
+                  "送货单及通过EDI运营商开具的ESF",
+                  "货物和增值税核算"
+                ],
+                [
+                  "到货",
+                  "厂家对各型号的文件：规格书、说明书、合格证书——如项目或招标需要，可应要求提供",
+                  "专家审查、招标文件、内部审计"
+                ],
+                [
+                  "工程交付",
+                  "完工验收单及工程部分的ESF",
+                  "合同结算"
+                ],
+                [
+                  "系统移交",
+                  "竣工资料：图纸、带序列号的设备清单、IP地址、签字移交的管理员账户",
+                  "运维、质保、日后扩展"
+                ],
+                [
+                  "质保",
+                  "列明设备和期限的质保卡或质保函",
+                  "质保更换的依据"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "2026年安装安防和消防系统需要哪些许可文件？",
+            "p": [
+              "在乌兹别克斯坦，安防技术设备和消防自动化系统的安装、调试和维护，依照内阁2022年2月25日第88号决议实行告知（备案）制度。安防系统的告知由国民近卫军受理，火灾报警和自动灭火系统由紧急情况部受理。企业会获得带编号的告知受理确认书，该编号可在许可与告知政务服务公开登记册中查询。许多文章至今仍引用的内阁2018年10月27日第880号决议，已于2022年3月1日失效。",
+              "2025年11月27日第ZRU-1099号法律已于2026年3月1日生效，该法引入紧急情况部对火灾报警和自动灭火系统安装与维护的许可证。据最近一次核查（2026年10月20日），许可证发放程序尚未批准，许可门户网站上这些工作只能办理告知。在程序批准之前，核查的是有效的紧急情况部告知确认书；批准之后则核查许可证。请在采购当日通过license.gov.uz核实状态。",
+              "如果工作范围包括入侵报警、紧急按钮或消防自动化，请在签订合同前索取许可文件编号，并核对文件中的工作类型是否与您的范围一致：安装、调试、维护。SAT Solutions持有国民近卫军许可文件第1554491号和紧急情况部许可文件第913518号，均公布在“关于我们”页面上。"
+            ]
+          },
+          {
+            "h": "如何比较不同供应商的商务报价？",
+            "p": [
+              "按总价比较几乎总会产生误导：更便宜的报价往往是硬盘更少、没有线缆或漏算了部分工程的那一份。请把各家报价汇总到一张表中逐行比较。",
+              "工程费用如何影响预算的一个例子。根据“视频监控”服务页面上的报价（价格截至2026年11月9日），室内摄像机安装155 000苏姆，室外摄像机180 000苏姆，每台摄像机设置和调试77 000苏姆，线缆敷设每米7 000苏姆。在一个有32台摄像机、1 440米线缆的项目中，仅布线一项就达10 080 000苏姆，超过全部摄像机安装费用之和（5 160 000苏姆）。在我们对此类项目的测算中，工程费用占预算的22.5%。把线缆作为一行“已包含”而不写米数的报价，是无法核实的。"
+            ],
+            "table": {
+              "head": [
+                "比较项",
+                "核查内容",
+                "为什么重要"
+              ],
+              "rows": [
+                [
+                  "型号和料号",
+                  "每一项都有厂家确切代码",
+                  "没有代码的“同类替代品”无法比较"
+                ],
+                [
+                  "数量",
+                  "摄像机、录像机、硬盘、交换机、以米计的线缆",
+                  "少算的线缆最终会变成追加费用"
+                ],
+                [
+                  "存储天数",
+                  "在标明的码率下，硬盘容量能保存多少天录像",
+                  "硬盘的差别既是价格的差别，也是效果的差别"
+                ],
+                [
+                  "供电",
+                  "交换机PoE预算与摄像机功耗，是否配UPS",
+                  "PoE过载会导致摄像机反复重启"
+                ],
+                [
+                  "工程内容",
+                  "安装、布线、调试、远程访问、培训",
+                  "工程费用在预算中占相当比例"
+                ],
+                [
+                  "质保",
+                  "工程与设备分别约定期限",
+                  "合同中没有期限的质保不起作用"
+                ],
+                [
+                  "不含项目",
+                  "耗材、高空作业、软件许可、系统集成",
+                  "追加费用的主要来源"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "供货与安装合同中应写明哪些内容？",
+            "p": [],
+            "ol": [
+              "标的和规格书：每一项的型号、料号、数量和价格——写在合同附件中。",
+              "价格和币种：以苏姆计价；如部分项目与外币挂钩，应事先约定价格是按合同日期锁定，还是按付款日期重新计算。",
+              "供货、安装和交付期限，以及哪些情况属于业主原因造成的延误——场地未准备好、无法进入现场等。",
+              "验收程序：检查每台摄像机的画面、录像、存储天数、远程访问和门禁点运行情况；签署验收单。",
+              "质保：工程与设备分别约定期限、报修方式和响应时间。",
+              "文件和密码移交：竣工资料清单和账户移交单。",
+              "质保更换：由谁拆装设备、由谁送修、系统在没有该设备的情况下运行多长时间。",
+              "双方责任和争议解决方式。"
+            ]
+          },
+          {
+            "h": "报价中哪些迹象值得警惕？",
+            "p": [
+              "这些迹象单独出现并不意味着供应商不可靠，但每一项都需要在付款前问清楚："
+            ],
+            "ul": [
+              "报价中没有料号，只有“4MP摄像机”之类的描述；",
+              "写着“同类”或“等效产品”，却没有参数和型号代码；",
+              "供应商不开具ESF，或建议以其他方式处理部分金额；",
+              "质保只是口头承诺，没有写进合同；",
+              "安防或消防部分没有许可文件编号；",
+              "交付内容中没有验收单和竣工资料；",
+              "承诺“存储一个月”，却没有码率和硬盘容量的计算；",
+              "门禁人脸和指纹数据库被建议放在境外云端。经2026年3月26日第ZRU-1125号法律修订的第ZRU-547号《个人数据法》第27-1条要求生物识别数据在乌兹别克斯坦境内存储，而门禁终端中的人脸和指纹模板依该法第26条属于生物识别数据。"
+            ]
+          },
+          {
+            "h": "采购人员核查清单：签订合同前的12项",
+            "p": [],
+            "ol": [
+              "报价、合同和付款单上的法人、税号和地址一致。",
+              "供应商通过EDI运营商开具ESF，已确认按增值税运作。",
+              "安防和消防部分有国民近卫军和紧急情况部许可文件编号，工作类型与范围一致。",
+              "报价中每一项都有确切型号和厂家料号。",
+              "线缆以米计，工程分项列出。",
+              "已计算存储天数：摄像机数量 × 码率 × 天数。",
+              "PoE预算和UPS功率按实际负载计算。",
+              "工程与设备质保分别写明并注明期限。",
+              "门禁生物识别数据库的存放地点已写明——在乌兹别克斯坦境内。",
+              "已确定竣工资料的组成和结算文件的格式。",
+              "约定通过签字移交单交出管理员密码。",
+              "质保更换程序和响应时间已写进合同。"
+            ]
+          },
+          {
+            "h": "关于公司",
+            "p": [],
+            "ul": [
+              "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌，税号308603912。塔什干，Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
+              "设备供货与安装：视频监控、门禁与闸机、考勤、入侵报警与火灾报警、楼宇对讲、综合布线与局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
+              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（告知于2025年7月23日提交）——火灾报警和自动灭火系统的安装、调试和维护；两者均依照2022年2月25日第88号决议的告知制度办理。",
+              "我们按增值税运作；电子发票（ESF）通过电子文件交换运营商开具。",
+              "合格证书和型号规格书可应要求提供；第2号和第3号表应业主要求出具；系统移交时附竣工资料，账户签字移交。",
+              "安装工程质保3年；设备享受厂家1至3年质保。",
+              "satsolutions.uz目录：2500多种商品，价格以苏姆标示，含增值税。在塔什干设有自有仓库，常用型号有现货。",
+              "发送技术任务书——我们将准备附规格书和工程清单的商务报价；报价在24小时内提供。采购规格书和询价可通过“供货与招标”页面提交。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "2026年在乌兹别克斯坦，视频监控和报警系统供应商需要许可证吗？",
+            "a": "安防系统和消防自动化的安装与维护，依照内阁2022年2月25日第88号决议实行告知制度：安防系统——国民近卫军，消防系统——紧急情况部。2026年3月1日生效的第ZRU-1099号法律引入紧急情况部对火灾报警和自动灭火系统的许可证；据最近一次核查（2026年10月20日），其发放程序尚未批准——请在采购当日通过license.gov.uz核实状态。请索取文件编号并在公开登记册中核实。SAT Solutions持有国民近卫军许可文件第1554491号和紧急情况部许可文件第913518号。"
+          },
+          {
+            "q": "可以向一家供应商采购设备，再请另一家负责安装吗？",
+            "a": "可以：只供货不安装是安装公司常用的做法。关键是在合同中划分质保责任：设备由供应商负责，工程由安装方负责，出现故障时首先要判定属于哪一方。如果希望只有一个责任方，就把供货和安装一起委托。"
+          },
+          {
+            "q": "可以向供应商索取哪些设备文件？",
+            "a": "厂家规格书和说明书、带序列号的清单，以及在项目或招标有要求时具体型号的合格证书。最好把证书要求直接写进技术任务书，让供应商在报价时一并考虑。SAT Solutions可应要求提供合格证书和型号规格书。"
+          },
+          {
+            "q": "视频监控和门禁系统怎样的质保算正常？",
+            "a": "关键是书面质保，并对工程和设备分别约定期限。SAT Solutions对安装工程提供3年质保，设备享受厂家1至3年质保。"
+          },
+          {
+            "q": "门禁的人脸和指纹数据库应存放在哪里？",
+            "a": "在乌兹别克斯坦境内。人脸和指纹模板属于生物识别数据（第ZRU-547号法律第26条），而经2026年3月26日第ZRU-1125号法律修订的第27-1条规定生物识别数据必须在本国存储。现场的本地服务器或终端即可满足这一要求。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "tehnicheskoe-zadanie-na-videonablyudenie",
+    "date": "2026-11-10",
+    "updated": "2026-11-10",
+    "related": [
+      "cctv",
+      "slabotochnye-sistemy",
+      "analytics"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr",
+      "zhestkie-diski",
+      "kommutatory"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "byudzhet-videonablyudeniya-predpriyatiya",
+      "kak-rasschitat-disk-dlya-videonablyudeniya",
+      "kamery-domofony-novostroyki-uzbekistan",
+      "kamery-v-chastnyh-shkolah-2026",
+      "videonablyudenie-personalnye-dannye-uzbekistan"
+    ],
+    "products": [
+      "hik-ds-7732ni-k4-std",
+      "hik-ds-2cd2143g2-i-2-8mm-o-std",
+      "hik-ds-2cd2t43g2-4i-2-8mm"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Как составить техническое задание на видеонаблюдение для закупки: структура, параметры и нормы Узбекистана",
+        "seoTitle": "ТЗ на видеонаблюдение для закупки: структура и нормы РУз",
+        "seoDesc": "Из чего состоит ТЗ на видеонаблюдение: параметры камер и NVR, расчёт архива, бренд и «или аналог» по ЗРУ-684, нормы ПП-48 и ПКМ № 271, приёмка.",
+        "excerpt": "Из каких разделов состоит ТЗ на систему видеонаблюдения, какие параметры камер и регистратора указывать, как посчитать архив, можно ли называть бренд в закупке по закону Узбекистана и как описать приёмку так, чтобы её можно было проверить.",
+        "summary": [
+          "Техническое задание на видеонаблюдение описывает результат — что и в какой зоне должно быть видно, сколько дней хранится запись, где лежит архив и кто его смотрит, — и измеримые параметры оборудования, а не бренд.",
+          "Государственному заказчику часть третья статьи 34 Закона ЗРУ-684 «О государственных закупках» запрещает указывать товарный знак и модель, кроме оговорённых случаев, и тогда обязательны слова «или аналог».",
+          "Ещё в ТЗ указывают глубину архива в днях, место хранения данных с учётом статьи 27-1 Закона ЗРУ-547, требования к типу объекта (ПП-48 для новых многоквартирных домов, ПКМ № 271 для негосударственных школ и детсадов) и критерии приёмки."
+        ],
+        "sections": [
+          {
+            "h": "Что такое техническое задание и чем оно отличается от спецификации?",
+            "p": [
+              "Техническое задание (ТЗ) — документ заказчика, который фиксирует требования к результату: какие задачи решает система, на каком объекте, с какими характеристиками и как её принимают. Спецификация — перечень конкретных позиций с количеством: модель камеры, регистратора, дисков, коммутаторов, метры кабеля. Ведомость объёмов работ — список монтажных операций с единицами измерения: метры проложенного кабеля, число установленных камер, пусконаладка каждой точки.",
+              "В закупке эти документы работают вместе, но порядок важен. Сначала пишется ТЗ, по нему участники предлагают свою спецификацию и ведомость, а заказчик сравнивает предложения с требованиями. Если начать сразу со спецификации одного производителя, закупка превращается в сравнение цен на одну модель, а не в выбор лучшего решения задачи. Для государственного заказчика это ещё и вопрос соответствия закону — об этом ниже.",
+              "Хорошее ТЗ можно проверить: каждое требование либо измеряется (мегапиксели, дни архива, метры ИК-подсветки), либо проверяется тестом при приёмке. Формулировки «высокое качество изображения» или «надёжное оборудование» бесполезны — их нельзя ни сравнить, ни принять."
+            ]
+          },
+          {
+            "h": "Из каких разделов состоит ТЗ на видеонаблюдение?",
+            "p": [
+              "Для объекта от десятка камер ТЗ удобно собирать из десяти разделов:",
+              "Разделы 2 и 4 сильнее всего влияют на бюджет: задача «идентификация» на каждом входе и архив на 90 дней вместо 30 меняют смету в разы. Поэтому их согласуют с владельцем объекта и службой безопасности до объявления закупки, а не после получения предложений.",
+              "Готовый шаблон ТЗ в формате DOCX с этой структурой — таблицей параметров, формулой расчёта архива и перечнем приёмочных испытаний — можно скачать на этой странице."
+            ],
+            "ol": [
+              "Объект и цель. Адрес, назначение здания, площадь, этажность, режим работы и то, чего добивается заказчик: контроль периметра, приёмки товара, касс, проходной.",
+              "Зоны и задача в каждой зоне. Обзор — видно, что происходит; различение — видны действия и предметы; идентификация — можно узнать лицо или прочитать номер. Чем выше задача, тем больше пикселей приходится на объект и тем ближе ставится камера.",
+              "Требования к камерам. Разрешение, объектив или угол обзора, ИК-подсветка, исполнение для улицы, аналитика.",
+              "Запись и архив. Режим записи (постоянная, по движению, по расписанию), глубина архива в днях, кодек.",
+              "Хранение и доступ. Где физически лежит архив, кто и с каких устройств его смотрит, как выдаются записи.",
+              "Сеть и питание. PoE, коммутаторы, резервное питание, выделенная сеть видеонаблюдения.",
+              "Интеграция. Со СКУД, охранной сигнализацией, уже работающей системой видеонаблюдения или платформой управления.",
+              "Требования к монтажу. Способ прокладки кабеля (лоток, гофра, короб), высоты установки, маркировка, работа на действующем объекте.",
+              "Документация и обучение. Исполнительные схемы, список оборудования с серийными номерами, учётные записи, инструкция для охраны.",
+              "Приёмка и гарантия. Перечень испытаний, гарантия на оборудование и на работы, порядок гарантийного обращения."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Какие параметры камер и регистратора указывать?",
+            "p": [
+              "Параметр в ТЗ формулируется как минимальное значение или диапазон, а не как модель. Примеры формулировок:",
+              "Последняя строка важнее, чем кажется. У производителей одна и та же функция называется по-разному, и фирменное название технологии в ТЗ фактически означает бренд. Если описать функцию — «детекция пересечения линии и вторжения в зону с классификацией человек/транспорт», — её смогут предложить разные производители, а заказчик проверит её при приёмке.",
+              "Запас по каналам и потоку — тоже требование, а не пожелание. Регистратор, заполненный под завязку, нельзя расширить без замены, а камеры с высоким битрейтом на регистраторе со слабым входящим потоком теряют кадры. Пример: 32 камеры по 4 Мбит/с дают 128 Мбит/с; регистратор с входящим потоком 256 Мбит/с (такой поток у 32-канального Hikvision DS-7732NI-K4 по карточке каталога) держит двукратный запас, а при 8 Мбит/с на камеру работает уже на пределе. Питание по PoE через витую пару ограничено 100 метрами от коммутатора — дальние камеры в ТЗ лучше сразу описывать с оптикой или выносным коммутатором."
+            ],
+            "table": {
+              "head": [
+                "Параметр",
+                "Как сформулировать в ТЗ",
+                "Пример значения"
+              ],
+              "rows": [
+                [
+                  "Разрешение камеры",
+                  "не менее N Мп",
+                  "≥ 4 Мп (2688×1520) для помещений и входов"
+                ],
+                [
+                  "Объектив / угол обзора",
+                  "фокусное расстояние или горизонтальный угол",
+                  "2,8 мм, около 100° для помещения"
+                ],
+                [
+                  "ИК-подсветка",
+                  "дальность не менее N м",
+                  "≥ 30 м внутри, 50–80 м на периметре"
+                ],
+                [
+                  "Исполнение для улицы",
+                  "класс защиты оболочки",
+                  "IP67"
+                ],
+                [
+                  "Кодек",
+                  "поддерживаемые кодеки",
+                  "H.265 / H.265+ и H.264"
+                ],
+                [
+                  "Питание",
+                  "PoE по стандарту",
+                  "IEEE 802.3af или 802.3at"
+                ],
+                [
+                  "Каналы регистратора",
+                  "число IP-каналов с запасом",
+                  "не менее чем на 25 % больше числа камер"
+                ],
+                [
+                  "Входящий поток регистратора",
+                  "Мбит/с",
+                  "не ниже суммарного битрейта камер с запасом"
+                ],
+                [
+                  "Отсеки для дисков",
+                  "число SATA и объём на отсек",
+                  "под расчётный архив, диски серии для видеонаблюдения"
+                ],
+                [
+                  "Аналитика",
+                  "функция, а не торговая марка",
+                  "фильтрация тревог по классам «человек» и «транспорт»"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Как прописать архив и где его хранить?",
+            "p": [
+              "Глубину архива задают в днях при определённом режиме записи, а объём дисков участник рассчитывает сам. Формула для проверки предложений: объём (ТБ) = число камер × битрейт (Мбит/с) × 86 400 × дни / 8 / 1 000 000. Пример: 32 камеры 4 Мп с кодеком H.265 при постоянной записи и битрейте около 2 Мбит/с дают 64 Мбит/с — около 691 ГБ в сутки и около 20,7 ТБ за 30 дней. Битрейт 2 Мбит/с — допущение для типовой сцены; реальное значение зависит от настроек и движения в кадре. Поэтому в ТЗ надёжнее писать «архив не менее 30 суток при постоянной записи всех камер в основном потоке», а при приёмке проверять фактическую глубину. Срок 30 суток для обычного видеонаблюдения в этом примере — это не норма закона, а совет практиков; срок, установленный нормой, есть у отдельных объектов — например, архив не менее 6 месяцев для негосударственных образовательных организаций по ПКМ № 271 (подробнее — в разделе о нормах).",
+              "Место хранения — отдельное требование. Закон ЗРУ-547 «О персональных данных» относит к персональным данным информацию, относящуюся к определённому человеку или позволяющую его идентифицировать (ст. 4), а биометрическими считает данные об анатомических и физиологических особенностях (ст. 26). Статья 27-1 в редакции Закона ЗРУ-1125 от 26.03.2026 обязывает хранить на территории Узбекистана биометрические и генетические данные и данные абонентов операторов связи. Шаблоны лиц в терминалах СКУД и в системах распознавания лиц — биометрия, их база должна находиться в республике.",
+              "Для обычной видеозаписи прямого указания в статье 27-1 нет: прочие персональные данные закон разрешает хранить за рубежом при выполнении одного из условий — признанная адекватная защита в стране, стандартные договорные условия или международные стандарты у оператора. Это не норма закона, а совет практиков: мы рекомендуем консервативный вариант и формулируем его в ТЗ так: «архив хранится на оборудовании, установленном на объекте, или в центре обработки данных на территории Республики Узбекистан; облачный сервис используется для удалённого просмотра». Окончательную формулировку для своего объекта согласуйте с юристом."
+            ]
+          },
+          {
+            "h": "Можно ли указывать бренд и модель в ТЗ?",
+            "p": [
+              "Государственному заказчику — по общему правилу нельзя. Часть третья статьи 34 Закона ЗРУ-684 от 22.04.2021 «О государственных закупках» в редакции Закона ЗРУ-1005 от 27.11.2024 (действует с 01.03.2025) запрещает включать в описание закупки требования или ссылки на конкретный товарный знак, наименование, патент, конструкцию или модель, источник происхождения или производителя. Исключений два: закупки через электронный магазин и случаи, когда нет другого достаточно точного способа описать характеристики. Во втором случае в описание обязательно включаются слова «или аналог» — кроме случаев несовместимости товаров. Закон продолжают менять, поэтому редакцию проверяйте на дату объявления закупки.",
+              "Несовместимость — типичная ситуация при расширении действующей системы. Если на объекте уже работает платформа управления видеонаблюдением одного производителя и новые камеры должны полноценно работать в ней вместе с аналитикой, это обосновывают в ТЗ: описывают существующую систему и функции, которые должны работать без доработок. Тогда указание производителя опирается на требование совместимости, а не на предпочтение.",
+              "Корпоративный заказчик вне государственных закупок свободен в выборе, но и ему нейтральное по бренду ТЗ выгодно: больше участников — честнее сравнение цен. Если ориентир на модель всё же нужен, рабочий приём — указать модель как пример и перечислить измеримые критерии эквивалентности: разрешение, угол обзора, дальность ИК, класс защиты, кодеки, стандарт PoE, функции аналитики, поддержку протокола ONVIF для подключения к регистратору. Аналог, который проходит по всем критериям, принимается; это легко проверить и трудно оспорить."
+            ]
+          },
+          {
+            "h": "Какие нормы учесть для разных объектов?",
+            "p": [
+              "Требование «архив не менее 6 месяцев» для школ — самое затратное. Одна камера 4 Мп при 2 Мбит/с пишет около 21,6 ГБ в сутки и около 3,9 ТБ за 182 дня; 24 камеры при круглосуточной постоянной записи — около 94 ТБ. Запись по расписанию учебного дня и кодек H.265+ снижают объём, поэтому в ТЗ для школы режим записи прописывают явно, а не оставляют на усмотрение участника."
+            ],
+            "table": {
+              "head": [
+                "Объект",
+                "Документ",
+                "Что требуется"
+              ],
+              "rows": [
+                [
+                  "Новые многоквартирные дома",
+                  "ПП-48 от 05.02.2026, п. 11, с 01.05.2026",
+                  "камеры в каждом подъезде, в лифтах и на прилегающей территории, домофоны на входных дверях; без них проект не проходит экспертизу"
+                ],
+                [
+                  "Негосударственные школы, детсады, учебные центры",
+                  "ПКМ № 271 от 21.05.2026, с 01.07.2026",
+                  "камеры внутри и снаружи, запись звука, онлайн-трансляция, архив не менее 6 месяцев — лицензионное требование"
+                ],
+                [
+                  "Все образовательные учреждения",
+                  "ПКМ № 425 от 31.07.2026, с 01.08.2026",
+                  "охранная сигнализация, тревожные кнопки, видеонаблюдение и их техническое обслуживание"
+                ],
+                [
+                  "СКУД и распознавание лиц на любом объекте",
+                  "ЗРУ-547, ст. 26 и 27-1 (ред. ЗРУ-1125 от 26.03.2026)",
+                  "база биометрических данных — на технических средствах в Узбекистане"
+                ],
+                [
+                  "Объект с пожарной автоматикой",
+                  "ШНК 2.04.09-2007",
+                  "пожарная автоматика — по ШНК Узбекистана; российские СП 3.13130.2009 и НПБ 104-03 не применяются"
+                ],
+                [
+                  "Государственная закупка",
+                  "ЗРУ-684, ст. 34 ч. 3",
+                  "описание без товарных знаков; при исключении — «или аналог»"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Как описать приёмку, чтобы её можно было проверить?",
+            "p": [
+              "Раздел приёмки превращает ТЗ в чек-лист. Минимальный набор испытаний:",
+              "Так сдаём объекты и мы: исполнительные схемы, список оборудования с серийными номерами, сетевые адреса и учётные записи передаём заказчику под подпись.",
+              "Отдельной строкой в ТЗ указывают гарантийные сроки на оборудование и на монтажные работы и порядок обращения по гарантии — тогда эти условия попадут в договор, а не останутся устной договорённостью."
+            ],
+            "ol": [
+              "Каждая камера показывает изображение и пишет в архив; список камер в регистраторе совпадает со схемой и спецификацией.",
+              "Фактическая глубина архива соответствует ТЗ: проверяется самая старая запись после выхода системы на полный цикл или расчёт по фактическому потоку.",
+              "Ночное изображение проверено в темноте в каждой уличной зоне; в зонах идентификации лицо или номер различимы.",
+              "Время на камерах и регистраторе синхронизировано, метки времени в архиве корректны.",
+              "Заводские пароли заменены, учётные записи созданы по ролям, прошивки обновлены.",
+              "Удалённый доступ работает по ролям: руководитель, охрана и ИТ видят только назначенные камеры.",
+              "Резервное питание держит регистратор и коммутаторы при отключении сети.",
+              "Переданы исполнительные схемы, список оборудования с серийными номерами, учётные данные администратора и инструкция для охраны."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Какие ошибки в ТЗ встречаются чаще всего?",
+            "p": [
+              "Пришлите ТЗ, спецификацию или рабочую документацию через страницу «Поставки и тендеры» или на sales@satsolutions.uz — подготовим КП со спецификацией и ведомостью работ по вашим требованиям; КП — в течение 24 часов."
+            ],
+            "ol": [
+              "Модель вместо требований: закупка сводится к одной позиции, а у государственного заказчика это противоречит статье 34 ЗРУ-684.",
+              "Нет задачи по зонам: участники предлагают одинаковые камеры на вход и в коридор, и лицо на входе потом не различить.",
+              "Архив указан в терабайтах, а не в днях: объём дисков ничего не говорит о глубине архива при конкретном битрейте.",
+              "Не указано, где лежит архив и кто к нему допущен: это всплывает при первом запросе записи.",
+              "Ссылки на российские СП в части пожарной автоматики вместо ШНК 2.04.09-2007.",
+              "Нет запаса по каналам, портам PoE и мощности: расширение через год требует замены оборудования.",
+              "Нет раздела приёмки: спор о выполнении требований решается на словах."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "О компании",
+            "p": [],
+            "ul": [
+              "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912. Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
+              "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
+              "Документы: разрешение Национальной гвардии № 1554491 — монтаж, наладка и техобслуживание технических средств охраны; разрешение МЧС № 913518 (уведомление от 23.07.2025) — монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения; оба — в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
+              "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
+              "Каталог satsolutions.uz — более 2 500 позиций; собственный склад в Ташкенте, ходовые позиции в наличии. Работаем с НДС, цены в сумах с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Чем ТЗ отличается от спецификации?",
+            "a": "ТЗ описывает требования к результату и параметры, спецификация — конкретные позиции с количеством. В закупке участник составляет спецификацию по ТЗ, а заказчик сверяет её с требованиями."
+          },
+          {
+            "q": "Можно ли в госзакупке указать Hikvision или Dahua?",
+            "a": "По части третьей статьи 34 ЗРУ-684 (ред. ЗРУ-1005, с 01.03.2025) — только при закупке через электронный магазин или когда нет другого точного способа описания. Во втором случае обязательны слова «или аналог», кроме случаев несовместимости товаров."
+          },
+          {
+            "q": "Как указать в ТЗ глубину архива?",
+            "a": "В днях при заданном режиме записи, например «не менее 30 суток при постоянной записи всех камер». Проверка: объём (ТБ) = камеры × Мбит/с × 86 400 × дни / 8 / 1 000 000; 32 камеры по 2 Мбит/с — около 20,7 ТБ за 30 дней. Срок 30 суток для обычного видео — не норма закона, а совет практиков."
+          },
+          {
+            "q": "Можно ли хранить видеоархив в облаке?",
+            "a": "Биометрические данные по статье 27-1 ЗРУ-547 (ред. ЗРУ-1125 от 26.03.2026) хранятся только в Узбекистане. Обычная видеозапись в статье прямо не названа; мы рекомендуем держать архив на объекте или в ЦОД в республике, а облако использовать для просмотра — это не норма закона, а совет практиков."
+          },
+          {
+            "q": "Какой запас по каналам и портам закладывать?",
+            "a": "Не менее 25 % каналов регистратора сверх числа камер, входящий поток с запасом к суммарному битрейту, свободные порты PoE и резерв мощности коммутатора. Так систему можно расширить без замены ядра; так закладываем мы в своих проектах."
+          },
+          {
+            "q": "Нужно ли в ТЗ для новостройки указывать камеры в лифтах?",
+            "a": "Да. По пункту 11 ПП-48 от 05.02.2026 с 01.05.2026 проекты новых многоквартирных домов включают камеры в каждом подъезде, в лифтах и на прилегающей территории и домофоны на входных дверях; без них проект не проходит экспертизу."
+          },
+          {
+            "q": "Что проверять при приёмке системы?",
+            "a": "Запись каждой камеры, фактическую глубину архива, ночное изображение, синхронизацию времени, смену паролей, доступ по ролям, работу от резервного питания и полноту переданной документации."
+          }
+        ],
+        "download": {
+          "href": "/docs/tz-videonablyudenie-shablon-ru.docx",
+          "label": "Скачать шаблон ТЗ на видеонаблюдение (DOCX)",
+          "note": "Таблица параметров, формула архива и перечень приёмочных испытаний — заполните под свой объект."
+        }
+      },
+      "uz": {
+        "title": "Xarid uchun videokuzatuvga texnik topshiriq qanday tuziladi: tuzilma, parametrlar va Oʻzbekiston meʼyorlari",
+        "seoTitle": "Videokuzatuvga texnik topshiriq: tuzilma va meʼyorlar",
+        "seoDesc": "Videokuzatuv texnik topshirigʻi: kamera va NVR parametrlari, arxiv hisobi, OʻRQ-684 boʻyicha brend va «yoki analogi», PQ-48, VMQ № 271, qabul qilish.",
+        "excerpt": "Videokuzatuv tizimiga texnik topshiriq qaysi boʻlimlardan iborat, kamera va registratorning qaysi parametrlarini yozish kerak, arxiv qanday hisoblanadi, Oʻzbekiston qonuniga koʻra xaridda brendni koʻrsatish mumkinmi va qabul qilishni tekshiriladigan qilib qanday tavsiflash kerak.",
+        "summary": [
+          "Videokuzatuvga texnik topshiriq natijani tavsiflaydi — qaysi hududda nima koʻrinishi kerak, yozuv necha kun saqlanadi, arxiv qayerda turadi va uni kim koʻradi — hamda brendni emas, uskunaning oʻlchanadigan parametrlarini belgilaydi.",
+          "Davlat buyurtmachisi uchun «Davlat xaridlari toʻgʻrisida»gi OʻRQ-684-son Qonun 34-moddasining uchinchi qismi tovar belgisi va modelni koʻrsatishni taqiqlaydi, belgilangan istisnolarda esa «yoki analogi» degan soʻzlar majburiy.",
+          "Bundan tashqari, texnik topshiriqda arxiv chuqurligi kunlarda, OʻRQ-547-son Qonunning 27-1-moddasini hisobga olgan holda maʼlumotlar saqlanadigan joy, obyekt turiga oid talablar (yangi koʻp kvartirali uylar uchun PQ-48, nodavlat maktab va bogʻchalar uchun VMQ № 271) va qabul qilish mezonlari koʻrsatiladi."
+        ],
+        "sections": [
+          {
+            "h": "Texnik topshiriq nima va u spetsifikatsiyadan nimasi bilan farq qiladi?",
+            "p": [
+              "Texnik topshiriq — buyurtmachining natijaga qoʻyiladigan talablarni belgilaydigan hujjati: tizim qanday vazifalarni hal qiladi, qaysi obyektda, qanday xususiyatlar bilan va qanday qabul qilinadi. Spetsifikatsiya — aniq pozitsiyalar roʻyxati va ularning soni: kamera, registrator, disklar, kommutatorlar modeli, kabel metrlari. Ishlar hajmlari qaydnomasi — oʻlchov birliklari bilan montaj operatsiyalari roʻyxati: yotqizilgan kabel metrlari, oʻrnatilgan kameralar soni, har bir nuqtani ishga tushirish-sozlash ishlari.",
+              "Xaridda bu hujjatlar birgalikda ishlaydi, lekin ketma-ketlik muhim. Avval texnik topshiriq yoziladi, unga koʻra ishtirokchilar oʻz spetsifikatsiyasi va qaydnomasini taklif qiladi, buyurtmachi esa takliflarni talablar bilan solishtiradi. Agar darhol bitta ishlab chiqaruvchining spetsifikatsiyasidan boshlansa, xarid vazifaning eng yaxshi yechimini tanlash emas, bitta model narxlarini solishtirishga aylanadi. Davlat buyurtmachisi uchun bu yana qonunga muvofiqlik masalasi — bu haqda quyida.",
+              "Yaxshi texnik topshiriqni tekshirish mumkin: har bir talab yo oʻlchanadi (megapiksel, arxiv kunlari, IQ-yoritish metrlari), yo qabul qilishda sinov bilan tekshiriladi. «Yuqori sifatli tasvir» yoki «ishonchli uskuna» kabi iboralar foydasiz — ularni na solishtirib, na qabul qilib boʻladi."
+            ]
+          },
+          {
+            "h": "Videokuzatuvga texnik topshiriq qaysi boʻlimlardan iborat?",
+            "p": [
+              "Oʻnlab kamerali obyekt uchun texnik topshiriqni oʻnta boʻlimdan tuzish qulay:",
+              "Byudjetga eng koʻp 2- va 4-boʻlimlar taʼsir qiladi: har bir kirishda «identifikatsiya» vazifasi va 30 kun oʻrniga 90 kunlik arxiv smetani bir necha baravar oʻzgartiradi. Shuning uchun ular takliflar kelganidan keyin emas, xarid eʼlon qilinishidan oldin obyekt egasi va xavfsizlik xizmati bilan kelishiladi.",
+              "Shu tuzilmadagi tayyor texnik topshiriq shablonini — parametrlar jadvali, arxivni hisoblash formulasi va qabul sinovlari roʻyxati bilan — DOCX formatida shu sahifadan yuklab olishingiz mumkin."
+            ],
+            "ol": [
+              "Obyekt va maqsad. Manzil, binoning vazifasi, maydoni, qavatlar soni, ish tartibi va buyurtmachi nimaga erishmoqchi: perimetr, tovar qabul qilish, kassalar, oʻtish joyi nazorati.",
+              "Hududlar va har bir hududdagi vazifa. Umumiy kuzatuv — nima boʻlayotgani koʻrinadi; farqlash — harakatlar va buyumlar koʻrinadi; identifikatsiya — yuzni tanish yoki raqamni oʻqish mumkin. Vazifa qanchalik yuqori boʻlsa, obyektga shuncha koʻp piksel toʻgʻri kelishi va kamera shuncha yaqin oʻrnatilishi kerak.",
+              "Kameralarga talablar. Ruxsat, obyektiv yoki koʻrish burchagi, IQ-yoritish, koʻcha uchun ijro, analitika.",
+              "Yozuv va arxiv. Yozuv rejimi (doimiy, harakat boʻyicha, jadval boʻyicha), kunlardagi arxiv chuqurligi, kodek.",
+              "Saqlash va kirish. Arxiv jismonan qayerda turadi, uni kim va qaysi qurilmalardan koʻradi, yozuvlar qanday beriladi.",
+              "Tarmoq va elektr taʼminoti. PoE, kommutatorlar, zaxira taʼminot, videokuzatuv uchun alohida tarmoq.",
+              "Integratsiya. Kirishni nazorat qilish tizimi (SKUD), qoʻriqlash signalizatsiyasi, mavjud videokuzatuv tizimi yoki boshqaruv platformasi bilan.",
+              "Montajga talablar. Kabel yotqizish usuli (lotok, gofra, koʻrob), oʻrnatish balandligi, markirovka, ishlab turgan obyektda ishlash.",
+              "Hujjatlar va oʻqitish. Ijro sxemalari, seriya raqamlari bilan uskunalar roʻyxati, hisob yozuvlari, qoʻriqlash xizmati uchun yoʻriqnoma.",
+              "Qabul qilish va kafolat. Sinovlar roʻyxati, uskuna va ishlarga kafolat, kafolat boʻyicha murojaat tartibi."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Kamera va registratorning qaysi parametrlarini koʻrsatish kerak?",
+            "p": [
+              "Texnik topshiriqda parametr model sifatida emas, minimal qiymat yoki diapazon sifatida yoziladi. Namuna iboralar:",
+              "Oxirgi qator koʻringanidan muhimroq. Ishlab chiqaruvchilarda bir xil funksiya turlicha ataladi va texnologiyaning firma nomi texnik topshiriqda amalda brendni bildiradi. Agar funksiya tavsiflansa — «odam/transport tasnifi bilan chiziqni kesib oʻtish va hududga kirishni aniqlash», — uni turli ishlab chiqaruvchilar taklif qila oladi, buyurtmachi esa qabul qilishda tekshiradi.",
+              "Kanallar va oqim boʻyicha zaxira ham istak emas, talab. Toʻliq toʻlgan registratorni almashtirmasdan kengaytirib boʻlmaydi, kiruvchi oqimi kuchsiz registratorda yuqori bitreytli kameralar kadr yoʻqotadi. Misol: har biri 4 Mbit/s boʻlgan 32 kamera 128 Mbit/s beradi; kiruvchi oqimi 256 Mbit/s boʻlgan registrator (katalog kartochkasiga koʻra 32 kanalli Hikvision DS-7732NI-K4 da shunday oqim) ikki baravar zaxira saqlaydi, kamerasiga 8 Mbit/s boʻlganda esa chegarada ishlaydi. Oʻralgan juftlik orqali PoE taʼminoti kommutatordan 100 metr bilan cheklangan — uzoqdagi kameralarni texnik topshiriqda darhol optika yoki chiqarma kommutator bilan tavsiflagan maʼqul."
+            ],
+            "table": {
+              "head": [
+                "Parametr",
+                "Texnik topshiriqda qanday yoziladi",
+                "Qiymat namunasi"
+              ],
+              "rows": [
+                [
+                  "Kamera ruxsati",
+                  "kamida N Mp",
+                  "xonalar va kirishlar uchun ≥ 4 Mp (2688×1520)"
+                ],
+                [
+                  "Obyektiv / koʻrish burchagi",
+                  "fokus masofasi yoki gorizontal burchak",
+                  "2,8 mm, xona uchun taxminan 100°"
+                ],
+                [
+                  "IQ-yoritish",
+                  "masofa kamida N m",
+                  "ichkarida ≥ 30 m, perimetrda 50–80 m"
+                ],
+                [
+                  "Koʻcha uchun ijro",
+                  "qobiq himoya sinfi",
+                  "IP67"
+                ],
+                [
+                  "Kodek",
+                  "qoʻllab-quvvatlanadigan kodeklar",
+                  "H.265 / H.265+ va H.264"
+                ],
+                [
+                  "Taʼminot",
+                  "standart boʻyicha PoE",
+                  "IEEE 802.3af yoki 802.3at"
+                ],
+                [
+                  "Registrator kanallari",
+                  "zaxirali IP-kanallar soni",
+                  "kameralar sonidan kamida 25 % koʻp"
+                ],
+                [
+                  "Registratorning kiruvchi oqimi",
+                  "Mbit/s",
+                  "kameralarning umumiy bitreytidan zaxira bilan past emas"
+                ],
+                [
+                  "Disk joylari",
+                  "SATA soni va bitta joyga hajm",
+                  "hisoblangan arxivga, videokuzatuv seriyasidagi disklar"
+                ],
+                [
+                  "Analitika",
+                  "savdo belgisi emas, funksiya",
+                  "«odam» va «transport» sinflari boʻyicha signal filtrlash"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Arxivni qanday yozish va uni qayerda saqlash kerak?",
+            "p": [
+              "Arxiv chuqurligi muayyan yozuv rejimida kunlarda belgilanadi, disklar hajmini esa ishtirokchi oʻzi hisoblaydi. Takliflarni tekshirish formulasi: hajm (TB) = kameralar soni × bitreyt (Mbit/s) × 86 400 × kunlar / 8 / 1 000 000. Misol: H.265 kodekli, doimiy yozuvda va taxminan 2 Mbit/s bitreytli 32 ta 4 Mp kamera 64 Mbit/s beradi — sutkasiga taxminan 691 GB va 30 kunda taxminan 20,7 TB. 2 Mbit/s bitreyt — odatiy sahna uchun taxmin; haqiqiy qiymat sozlamalar va kadrdagi harakatga bogʻliq. Shuning uchun texnik topshiriqda «barcha kameralar asosiy oqimda doimiy yozganda arxiv kamida 30 sutka» deb yozish, qabul qilishda esa haqiqiy chuqurlikni tekshirish ishonchliroq. Oddiy videokuzatuv uchun bu misoldagi 30 sutka muddati — qonun meʼyori emas, balki amaliyotchilar maslahati; meʼyor bilan belgilangan muddat ayrim obyektlar uchun bor — masalan, VMQ № 271 boʻyicha nodavlat taʼlim tashkilotlarida kamida 6 oylik arxiv (batafsil — meʼyorlar boʻlimida).",
+              "Saqlash joyi — alohida talab. «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547-son Qonun muayyan shaxsga tegishli yoki uni identifikatsiya qilish imkonini beruvchi axborotni shaxsga doir maʼlumotlar deb hisoblaydi (4-modda), anatomik va fiziologik xususiyatlarni tavsiflovchi maʼlumotlarni esa biometrik deb biladi (26-modda). 2026-yil 26-martdagi OʻRQ-1125-son Qonun tahriridagi 27-1-modda biometrik, genetik maʼlumotlarni va aloqa operatorlari abonentlari maʼlumotlarini Oʻzbekiston hududida saqlashni majburiy qiladi. SKUD terminallaridagi va yuzni tanish tizimlaridagi yuz shablonlari — biometriya, ularning bazasi respublikada boʻlishi kerak.",
+              "Oddiy videoyozuv uchun 27-1-moddada toʻgʻridan-toʻgʻri koʻrsatma yoʻq: boshqa shaxsga doir maʼlumotlarni qonun shartlardan biri bajarilganda xorijda saqlashga ruxsat beradi — davlatda tan olingan yetarli himoya, standart shartnoma shartlari yoki operatorda xalqaro standartlar. Bu qonun meʼyori emas, balki amaliyotchilar maslahati: biz ehtiyotkor variantni tavsiya qilamiz va uni texnik topshiriqda shunday yozamiz: «arxiv obyektda oʻrnatilgan uskunada yoki Oʻzbekiston Respublikasi hududidagi maʼlumotlarni qayta ishlash markazida saqlanadi; bulutli xizmat masofadan koʻrish uchun ishlatiladi». Oʻz obyektingiz uchun yakuniy iborani yurist bilan kelishing."
+            ]
+          },
+          {
+            "h": "Texnik topshiriqda brend va modelni koʻrsatish mumkinmi?",
+            "p": [
+              "Davlat buyurtmachisiga umumiy qoidaga koʻra mumkin emas. «Davlat xaridlari toʻgʻrisida»gi 2021-yil 22-apreldagi OʻRQ-684-son Qonun 34-moddasining uchinchi qismi (2024-yil 27-noyabrdagi OʻRQ-1005-son Qonun tahririda, 2025-yil 1-martdan amalda) xarid tavsifiga muayyan tovar belgisi, nomi, patenti, konstruksiyasi yoki modeli, kelib chiqish manbai yoki ishlab chiqaruvchisiga oid talab yoki havolalarni kiritishni taqiqlaydi. Istisnolar ikkita: elektron doʻkon orqali xaridlar va xususiyatlarni tavsiflashning boshqa yetarlicha aniq usuli boʻlmagan holatlar. Ikkinchi holatda tavsifga albatta «yoki analogi» degan soʻzlar kiritiladi (lex.uz dagi ruscha matnda — «или аналог»), tovarlar mos kelmaydigan holatlar bundan mustasno. Qonun oʻzgartirilishda davom etmoqda, shuning uchun tahririni xarid eʼlon qilingan sanaga tekshiring.",
+              "Mos kelmaslik — ishlab turgan tizimni kengaytirishdagi odatiy holat. Agar obyektda bitta ishlab chiqaruvchining videokuzatuvni boshqarish platformasi ishlab turgan boʻlsa va yangi kameralar unda analitika bilan birga toʻliq ishlashi kerak boʻlsa, bu texnik topshiriqda asoslanadi: mavjud tizim va qoʻshimcha ishlovsiz ishlashi kerak boʻlgan funksiyalar tavsiflanadi. Shunda ishlab chiqaruvchini koʻrsatish afzallikka emas, moslik talabiga tayanadi.",
+              "Davlat xaridlaridan tashqaridagi korporativ buyurtmachi tanlashda erkin, lekin unga ham brendga bogʻlanmagan texnik topshiriq foydali: ishtirokchilar koʻp boʻlsa — narxlarni solishtirish halolroq. Agar modelga moʻljal baribir kerak boʻlsa, ishchi usul — modelni namuna sifatida koʻrsatish va oʻlchanadigan ekvivalentlik mezonlarini sanab oʻtish: ruxsat, koʻrish burchagi, IQ masofasi, himoya sinfi, kodeklar, PoE standarti, analitika funksiyalari, registratorga ulash uchun ONVIF protokolini qoʻllab-quvvatlash. Barcha mezonlardan oʻtgan analog qabul qilinadi; buni tekshirish oson va eʼtiroz bildirish qiyin."
+            ]
+          },
+          {
+            "h": "Turli obyektlar uchun qaysi meʼyorlarni hisobga olish kerak?",
+            "p": [
+              "Maktablar uchun «kamida 6 oylik arxiv» talabi eng qimmati. 2 Mbit/s dagi bitta 4 Mp kamera sutkasiga taxminan 21,6 GB va 182 kunda taxminan 3,9 TB yozadi; kecha-kunduz doimiy yozuvda 24 kamera — taxminan 94 TB. Oʻquv kuni jadvali boʻyicha yozish va H.265+ kodeki hajmni kamaytiradi, shuning uchun maktab texnik topshirigʻida yozuv rejimi ishtirokchi ixtiyoriga qoldirilmay, aniq yoziladi."
+            ],
+            "table": {
+              "head": [
+                "Obyekt",
+                "Hujjat",
+                "Nima talab qilinadi"
+              ],
+              "rows": [
+                [
+                  "Yangi koʻp kvartirali uylar",
+                  "PQ-48, 05.02.2026, 11-band, 01.05.2026 dan",
+                  "har bir yoʻlakda, liftlarda va tutash hududda kameralar, kirish eshiklarida domofonlar; ularsiz loyiha ekspertizadan oʻtmaydi"
+                ],
+                [
+                  "Nodavlat maktablar, bogʻchalar, oʻquv markazlari",
+                  "VMQ № 271, 21.05.2026, 01.07.2026 dan",
+                  "ichkarida va tashqarida kameralar, ovoz yozish, onlayn translyatsiya, kamida 6 oylik arxiv — litsenziya talabi"
+                ],
+                [
+                  "Barcha taʼlim muassasalari",
+                  "VMQ № 425, 31.07.2026, 01.08.2026 dan",
+                  "qoʻriqlash signalizatsiyasi, xavotir tugmalari, videokuzatuv va ularga texnik xizmat"
+                ],
+                [
+                  "Istalgan obyektda SKUD va yuzni tanish",
+                  "OʻRQ-547, 26- va 27-1-moddalar (OʻRQ-1125, 26.03.2026 tahriri)",
+                  "biometrik maʼlumotlar bazasi — Oʻzbekistondagi texnik vositalarda"
+                ],
+                [
+                  "Yongʻin avtomatikasi bor obyekt",
+                  "ShNQ 2.04.09-2007",
+                  "yongʻin avtomatikasi — Oʻzbekiston ShNQ boʻyicha; Rossiyaning SP 3.13130.2009 va NPB 104-03 hujjatlari qoʻllanilmaydi"
+                ],
+                [
+                  "Davlat xaridi",
+                  "OʻRQ-684, 34-modda 3-qism",
+                  "tovar belgilarisiz tavsif; istisnoda — «yoki analogi»"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Qabul qilishni tekshirish mumkin boʻlishi uchun uni qanday tavsiflash kerak?",
+            "p": [
+              "Qabul qilish boʻlimi texnik topshiriqni chek-listga aylantiradi. Minimal sinovlar toʻplami:",
+              "Biz ham obyektlarni shunday topshiramiz: ijro sxemalari, seriya raqamlari bilan uskunalar roʻyxati, tarmoq manzillari va hisob yozuvlarini buyurtmachiga imzo evaziga topshiramiz.",
+              "Texnik topshiriqda uskuna va montaj ishlariga kafolat muddatlari hamda kafolat boʻyicha murojaat tartibi alohida qatorda koʻrsatiladi — shunda bu shartlar ogʻzaki kelishuv boʻlib qolmay, shartnomaga kiradi."
+            ],
+            "ol": [
+              "Har bir kamera tasvir koʻrsatadi va arxivga yozadi; registratordagi kameralar roʻyxati sxema va spetsifikatsiyaga mos keladi.",
+              "Arxivning haqiqiy chuqurligi texnik topshiriqqa mos: tizim toʻliq siklga chiqqandan keyin eng eski yozuv tekshiriladi yoki haqiqiy oqim boʻyicha hisoblanadi.",
+              "Har bir koʻcha hududida tungi tasvir qorongʻida tekshirilgan; identifikatsiya hududlarida yuz yoki raqam farqlanadi.",
+              "Kameralar va registratordagi vaqt sinxronlangan, arxivdagi vaqt belgilari toʻgʻri.",
+              "Zavod parollari almashtirilgan, hisob yozuvlari rollar boʻyicha yaratilgan, proshivkalar yangilangan.",
+              "Masofadan kirish rollar boʻyicha ishlaydi: rahbar, qoʻriqlash va IT faqat belgilangan kameralarni koʻradi.",
+              "Tarmoq oʻchganda zaxira taʼminot registrator va kommutatorlarni ushlab turadi.",
+              "Ijro sxemalari, seriya raqamlari bilan uskunalar roʻyxati, administrator hisob maʼlumotlari va qoʻriqlash uchun yoʻriqnoma topshirilgan."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Texnik topshiriqda qaysi xatolar koʻp uchraydi?",
+            "p": [
+              "Texnik topshiriq, spetsifikatsiya yoki ishchi hujjatlarni «Yetkazib berish va tenderlar» sahifasi orqali yoki sales@satsolutions.uz manziliga yuboring — talablaringiz boʻyicha spetsifikatsiya va ishlar qaydnomasi bilan tijorat taklifini tayyorlaymiz; tijorat taklifi — 24 soat ichida."
+            ],
+            "ol": [
+              "Talablar oʻrniga model: xarid bitta pozitsiyaga tushib qoladi, davlat buyurtmachisida esa bu OʻRQ-684 ning 34-moddasiga zid.",
+              "Hududlar boʻyicha vazifa yoʻq: ishtirokchilar kirish va yoʻlakka bir xil kamera taklif qiladi, keyin kirishdagi yuzni farqlab boʻlmaydi.",
+              "Arxiv kunlarda emas, terabaytlarda koʻrsatilgan: disklar hajmi muayyan bitreytda arxiv chuqurligi haqida hech narsa demaydi.",
+              "Arxiv qayerda turishi va unga kim kirishi koʻrsatilmagan: bu yozuv birinchi marta soʻralganda chiqadi.",
+              "Yongʻin avtomatikasi qismida ShNQ 2.04.09-2007 oʻrniga Rossiya SP hujjatlariga havolalar.",
+              "Kanallar, PoE portlari va quvvat boʻyicha zaxira yoʻq: bir yildan keyin kengaytirish uskunani almashtirishni talab qiladi.",
+              "Qabul qilish boʻlimi yoʻq: talablar bajarilgani haqidagi bahs ogʻzaki hal qilinadi."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Kompaniya haqida",
+            "p": [],
+            "ul": [
+              "SAT Solutions — «SUPPLY AND TRANSPORTATION» MChJ brendi, STIR 308603912. Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
+              "Uskunalarni yetkazib berish va montaj: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofoniya, SKS va LVS, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
+              "Hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi — qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish; FVVning 913518-son ruxsatnomasi (xabarnoma 23.07.2025) — yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish; ikkalasi ham VMQning 25.02.2022 dagi 88-son qaroriga koʻra xabardor qilish tartibida.",
+              "Montaj ishlariga 3 yil kafolat; uskunaga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
+              "satsolutions.uz katalogi — 2 500 dan ortiq pozitsiya; Toshkentda oʻz omborimiz bor, koʻp soʻraladigan pozitsiyalar mavjud. QQS bilan ishlaymiz, narxlar soʻmda, QQS bilan; elektron hisob-fakturalarni (ESF) elektron hujjat almashinuvi operatori orqali rasmiylashtiramiz."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Texnik topshiriq spetsifikatsiyadan nimasi bilan farq qiladi?",
+            "a": "Texnik topshiriq natijaga talablar va parametrlarni tavsiflaydi, spetsifikatsiya — soni koʻrsatilgan aniq pozitsiyalarni. Xaridda ishtirokchi spetsifikatsiyani texnik topshiriq boʻyicha tuzadi, buyurtmachi esa uni talablar bilan solishtiradi."
+          },
+          {
+            "q": "Davlat xaridida Hikvision yoki Dahua ni koʻrsatish mumkinmi?",
+            "a": "OʻRQ-684 34-moddasining uchinchi qismiga koʻra (OʻRQ-1005 tahriri, 01.03.2025 dan) — faqat elektron doʻkon orqali xaridda yoki tavsiflashning boshqa aniq usuli boʻlmaganda. Ikkinchi holatda «yoki analogi» soʻzlari majburiy, tovarlar mos kelmaydigan holatlar bundan mustasno."
+          },
+          {
+            "q": "Texnik topshiriqda arxiv chuqurligi qanday koʻrsatiladi?",
+            "a": "Belgilangan yozuv rejimida kunlarda, masalan «barcha kameralar doimiy yozganda kamida 30 sutka». Tekshiruv: hajm (TB) = kameralar × Mbit/s × 86 400 × kunlar / 8 / 1 000 000; har biri 2 Mbit/s dagi 32 kamera — 30 kunda taxminan 20,7 TB. Oddiy video uchun 30 sutka muddati — qonun meʼyori emas, balki amaliyotchilar maslahati."
+          },
+          {
+            "q": "Videoarxivni bulutda saqlash mumkinmi?",
+            "a": "OʻRQ-547 ning 27-1-moddasiga koʻra (OʻRQ-1125, 26.03.2026 tahriri) biometrik maʼlumotlar faqat Oʻzbekistonda saqlanadi. Oddiy videoyozuv moddada toʻgʻridan-toʻgʻri nomlanmagan; arxivni obyektda yoki respublikadagi maʼlumotlar markazida saqlashni, bulutni esa koʻrish uchun ishlatishni tavsiya qilamiz — bu qonun meʼyori emas, balki amaliyotchilar maslahati."
+          },
+          {
+            "q": "Kanallar va portlar boʻyicha qancha zaxira qoʻyish kerak?",
+            "a": "Registrator kanallari kameralar sonidan kamida 25 % koʻp, kiruvchi oqim umumiy bitreytga nisbatan zaxira bilan, boʻsh PoE portlari va kommutator quvvati zaxirasi. Shunda tizimni yadrosini almashtirmasdan kengaytirish mumkin; oʻz loyihalarimizda zaxirani shunday belgilaymiz."
+          },
+          {
+            "q": "Yangi uy uchun texnik topshiriqda liftlardagi kameralarni koʻrsatish kerakmi?",
+            "a": "Ha. 05.02.2026 dagi PQ-48 ning 11-bandiga koʻra 01.05.2026 dan yangi koʻp kvartirali uylar loyihalariga har bir yoʻlakda, liftlarda va tutash hududda kameralar hamda kirish eshiklarida domofonlar kiritiladi; ularsiz loyiha ekspertizadan oʻtmaydi."
+          },
+          {
+            "q": "Tizimni qabul qilishda nimani tekshirish kerak?",
+            "a": "Har bir kameraning yozuvini, arxivning haqiqiy chuqurligini, tungi tasvirni, vaqt sinxronlanishini, parollar almashtirilganini, rollar boʻyicha kirishni, zaxira taʼminotda ishlashni va topshirilgan hujjatlar toʻliqligini."
+          }
+        ],
+        "download": {
+          "href": "/docs/tz-videonablyudenie-shablon-uz.docx",
+          "label": "Videokuzatuv texnik topshirigʻi namunasini yuklab olish (DOCX)",
+          "note": "Parametrlar jadvali, arxiv formulasi va qabul sinovlari roʻyxati — obyektingizga moslab toʻldiring."
+        }
+      },
+      "en": {
+        "title": "How to Write a CCTV Technical Specification for a Tender: Structure, Parameters and Uzbek Regulations",
+        "seoTitle": "CCTV Technical Specification for a Tender in Uzbekistan",
+        "seoDesc": "How to write a CCTV technical specification: camera and NVR parameters, archive sizing, brands and “or equivalent” under ZRU-684, PP-48, acceptance tests.",
+        "excerpt": "What sections a CCTV technical specification needs, which camera and NVR parameters to state, how to size the archive, whether a brand may be named in a tender under Uzbek law, and how to describe acceptance so it can actually be verified.",
+        "summary": [
+          "A CCTV technical specification describes the result — what must be visible in each zone, how many days recordings are kept, where the archive is stored and who views it — and measurable equipment parameters rather than a brand.",
+          "For public buyers, Article 34(3) of Law No. ZRU-684 “On Public Procurement” prohibits naming a trademark or model except in defined cases, and in those cases the words “or equivalent” are mandatory.",
+          "The specification should also state archive depth in days, the data storage location in light of Article 27-1 of Law No. ZRU-547, requirements for the type of facility (PP-48 for new apartment buildings, Cabinet of Ministers Resolution No. 271 for private schools and kindergartens) and acceptance criteria."
+        ],
+        "sections": [
+          {
+            "h": "What is a technical specification and how is it different from a bill of materials?",
+            "p": [
+              "A technical specification is the buyer’s document that sets requirements for the result: which tasks the system solves, at which facility, with which characteristics and how it is accepted. A bill of materials (specification of items) is a list of specific positions with quantities: camera, NVR, disk and switch models, metres of cable. A bill of quantities (BOQ) for works lists installation operations with units: metres of cable laid, number of cameras mounted, commissioning of each point.",
+              "In a tender these documents work together, but the order matters. The technical specification comes first; bidders then propose their own bill of materials and BOQ, and the buyer compares the bids against the requirements. Starting directly from one manufacturer’s item list turns the tender into a price comparison for a single model instead of a search for the best solution. For a public buyer it is also a matter of legal compliance — see below.",
+              "A good specification is verifiable: every requirement is either measurable (megapixels, archive days, metres of IR range) or checked by a test at acceptance. Phrases such as “high image quality” or “reliable equipment” are useless — they can be neither compared nor accepted."
+            ]
+          },
+          {
+            "h": "What sections does a CCTV technical specification consist of?",
+            "p": [
+              "For a facility with a dozen or more cameras, ten sections work well:",
+              "Sections 2 and 4 drive the budget most: an “identification” task at every entrance and a 90-day archive instead of 30 days can change the estimate several times over. That is why they are agreed with the facility owner and the security service before the tender is announced, not after bids arrive.",
+              "A ready DOCX template of the specification with this structure — the parameters table, the archive formula and the acceptance tests — can be downloaded from this page."
+            ],
+            "ol": [
+              "Facility and purpose. Address, building use, floor area, number of floors, operating hours and what the buyer wants to achieve: control of the perimeter, goods receiving, cash desks, the entrance checkpoint.",
+              "Zones and the task in each zone. Overview — you can see what is happening; recognition — actions and objects are visible; identification — a face can be recognised or a plate read. The higher the task, the more pixels must fall on the object and the closer the camera is mounted.",
+              "Camera requirements. Resolution, lens or field of view, IR illumination, outdoor rating, analytics.",
+              "Recording and archive. Recording mode (continuous, motion, schedule), archive depth in days, codec.",
+              "Storage and access. Where the archive physically resides, who views it and from which devices, how recordings are released.",
+              "Network and power. PoE, switches, backup power, a dedicated CCTV network.",
+              "Integration. With access control, intrusion alarm, an existing CCTV system or a management platform.",
+              "Installation requirements. Cable routing method (tray, conduit, trunking), mounting heights, labelling, work in an operating facility.",
+              "Documentation and training. As-built drawings, equipment list with serial numbers, user accounts, instructions for security staff.",
+              "Acceptance and warranty. List of tests, warranty on equipment and on works, warranty claim procedure."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Which camera and NVR parameters should be specified?",
+            "p": [
+              "In a specification a parameter is written as a minimum value or a range, not as a model. Sample wording:",
+              "The last row matters more than it seems. Manufacturers call the same function by different names, and a proprietary technology name in a specification effectively names a brand. Describe the function instead — “line-crossing and intrusion detection with human/vehicle classification” — and different manufacturers can offer it while the buyer checks it at acceptance.",
+              "Headroom in channels and bandwidth is a requirement, not a wish. A fully loaded NVR cannot be expanded without replacement, and high-bitrate cameras on an NVR with weak incoming bandwidth drop frames. Example: 32 cameras at 4 Mbps produce 128 Mbps; an NVR with 256 Mbps incoming bandwidth (the figure listed in the catalogue card of the 32-channel Hikvision DS-7732NI-K4) keeps twofold headroom, while at 8 Mbps per camera it runs at its limit. PoE over twisted pair is limited to 100 metres from the switch, so distant cameras are best specified straight away with fibre or a remote switch."
+            ],
+            "table": {
+              "head": [
+                "Parameter",
+                "How to word it",
+                "Example value"
+              ],
+              "rows": [
+                [
+                  "Camera resolution",
+                  "at least N MP",
+                  "≥ 4 MP (2688×1520) for rooms and entrances"
+                ],
+                [
+                  "Lens / field of view",
+                  "focal length or horizontal angle",
+                  "2.8 mm, about 100° for a room"
+                ],
+                [
+                  "IR illumination",
+                  "range of at least N m",
+                  "≥ 30 m indoors, 50–80 m on the perimeter"
+                ],
+                [
+                  "Outdoor rating",
+                  "enclosure protection class",
+                  "IP67"
+                ],
+                [
+                  "Codec",
+                  "supported codecs",
+                  "H.265 / H.265+ and H.264"
+                ],
+                [
+                  "Power",
+                  "PoE standard",
+                  "IEEE 802.3af or 802.3at"
+                ],
+                [
+                  "NVR channels",
+                  "number of IP channels with headroom",
+                  "at least 25 % more than the number of cameras"
+                ],
+                [
+                  "NVR incoming bandwidth",
+                  "Mbps",
+                  "not lower than the total camera bitrate plus headroom"
+                ],
+                [
+                  "Disk bays",
+                  "number of SATA bays and capacity per bay",
+                  "sized to the calculated archive, surveillance-grade disks"
+                ],
+                [
+                  "Analytics",
+                  "a function, not a trade name",
+                  "alarm filtering by “human” and “vehicle” classes"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "How should the archive be specified, and where should it be stored?",
+            "p": [
+              "Archive depth is set in days for a defined recording mode, and the bidder calculates disk capacity. The formula for checking bids: capacity (TB) = number of cameras × bitrate (Mbps) × 86,400 × days / 8 / 1,000,000. Example: 32 cameras at 4 MP with H.265, continuous recording and a bitrate of about 2 Mbps give 64 Mbps — about 691 GB per day and about 20.7 TB over 30 days. The 2 Mbps bitrate is an assumption for a typical scene; the real value depends on settings and motion in the frame. It is therefore safer to write “archive of at least 30 days with continuous recording of all cameras in the main stream” and to check the actual depth at acceptance. For ordinary CCTV the 30-day period in this example is not a legal requirement but practitioners’ advice; a period set by a regulation exists for certain facilities — for example, an archive of at least 6 months for private educational organisations under CM Resolution No. 271 (see the section on regulations).",
+              "Storage location is a separate requirement. Law No. ZRU-547 “On Personal Data” defines personal data as information relating to a specific person or allowing that person to be identified (Art. 4), and biometric data as data describing anatomical and physiological features (Art. 26). Article 27-1, as amended by Law No. ZRU-1125 of 26 March 2026, requires biometric data, genetic data and data of telecom operators’ subscribers to be stored on the territory of Uzbekistan. Face templates in access-control terminals and face-recognition systems are biometrics, so their database must reside in the country.",
+              "For ordinary video recordings Article 27-1 contains no direct instruction: other personal data may be stored abroad if one of the conditions is met — recognised adequate protection in the destination country, standard contractual clauses, or international standards applied by the operator. This is not a legal requirement but practitioners’ advice: we recommend the conservative option and word it in the specification as follows: “the archive is stored on equipment installed at the facility or in a data centre on the territory of the Republic of Uzbekistan; a cloud service is used for remote viewing.” Agree the final wording for your facility with a lawyer."
+            ]
+          },
+          {
+            "h": "Can a brand and model be named in the specification?",
+            "p": [
+              "For a public buyer, as a general rule, no. Article 34(3) of Law No. ZRU-684 of 22 April 2021 “On Public Procurement”, as amended by Law No. ZRU-1005 of 27 November 2024 (in force from 1 March 2025), prohibits including in a procurement description requirements for or references to a specific trademark or name, patent, design or model, source of origin or manufacturer. There are two exceptions: purchases through the electronic shop, and cases where there is no other sufficiently precise way to describe the characteristics. In the second case the description must include the words “or equivalent”, except where goods are incompatible. The law continues to be amended, so check the version in force on the date the tender is announced.",
+              "Incompatibility is a typical situation when an existing system is expanded. If the facility already runs a video management platform from one manufacturer and the new cameras must work fully in it together with analytics, the specification has to justify this: describe the existing system and the functions that must work without modifications. Naming the manufacturer then rests on a compatibility requirement rather than on preference.",
+              "A corporate buyer outside public procurement is free to choose, but a brand-neutral specification benefits it too: more bidders mean a fairer price comparison. If a reference model is still needed, a practical approach is to name the model as an example and list measurable equivalence criteria: resolution, field of view, IR range, protection class, codecs, PoE standard, analytics functions, ONVIF support for connecting to the NVR. An equivalent that meets every criterion is accepted — easy to verify and hard to dispute."
+            ]
+          },
+          {
+            "h": "Which regulations apply to different types of facilities?",
+            "p": [
+              "The “archive of at least 6 months” requirement for schools is the most expensive one. A single 4 MP camera at 2 Mbps records about 21.6 GB per day and about 3.9 TB over 182 days; 24 cameras recording continuously around the clock need about 94 TB. Recording on a school-day schedule and the H.265+ codec reduce the volume, so a school specification states the recording mode explicitly instead of leaving it to the bidder."
+            ],
+            "table": {
+              "head": [
+                "Facility",
+                "Document",
+                "Requirement"
+              ],
+              "rows": [
+                [
+                  "New apartment buildings",
+                  "PP-48 of 05.02.2026, item 11, from 01.05.2026",
+                  "cameras in every entrance, in lifts and on the adjacent territory, intercoms on entrance doors; without them the design does not pass state review"
+                ],
+                [
+                  "Private schools, kindergartens, training centres",
+                  "CM Resolution No. 271 of 21.05.2026, from 01.07.2026",
+                  "cameras inside and outside, audio recording, online streaming, archive of at least 6 months — a licensing requirement"
+                ],
+                [
+                  "All educational institutions",
+                  "CM Resolution No. 425 of 31.07.2026, from 01.08.2026",
+                  "intrusion alarm, panic buttons, video surveillance and their maintenance"
+                ],
+                [
+                  "Access control and face recognition at any facility",
+                  "ZRU-547, Art. 26 and 27-1 (as amended by ZRU-1125 of 26.03.2026)",
+                  "the biometric database is kept on technical means located in Uzbekistan"
+                ],
+                [
+                  "Facility with fire automation",
+                  "ShNK 2.04.09-2007",
+                  "fire automation follows Uzbekistan’s ShNK; Russian SP 3.13130.2009 and NPB 104-03 do not apply"
+                ],
+                [
+                  "Public procurement",
+                  "ZRU-684, Art. 34(3)",
+                  "description without trademarks; where the exception applies — “or equivalent”"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "How should acceptance be described so that it can be verified?",
+            "p": [
+              "The acceptance section turns the specification into a checklist. A minimum set of tests:",
+              "This is also how we hand over our projects: as-built drawings, the equipment list with serial numbers, network addresses and user accounts are handed to the customer against signature.",
+              "Warranty periods for equipment and for installation works, and the warranty claim procedure, are stated as a separate line in the specification — then these terms go into the contract instead of remaining a verbal agreement."
+            ],
+            "ol": [
+              "Every camera shows an image and records to the archive; the camera list in the NVR matches the drawing and the bill of materials.",
+              "The actual archive depth meets the specification: the oldest recording is checked once the system completes a full cycle, or depth is calculated from the actual bitrate.",
+              "Night images are checked in darkness in every outdoor zone; faces or plates are distinguishable in identification zones.",
+              "Time on cameras and the NVR is synchronised, and archive timestamps are correct.",
+              "Factory passwords are changed, user accounts are created by role, firmware is updated.",
+              "Remote access works by role: management, security and IT see only their assigned cameras.",
+              "Backup power keeps the NVR and switches running during a mains outage.",
+              "As-built drawings, the equipment list with serial numbers, administrator credentials and instructions for security staff have been handed over."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "What are the most common mistakes in a specification?",
+            "p": [
+              "Send your technical specification, bill of materials or working documentation through the “Supply and Tenders” page or to sales@satsolutions.uz — we will prepare a commercial proposal with an equipment list and a bill of quantities for works based on your requirements; the proposal comes within 24 hours."
+            ],
+            "ol": [
+              "A model instead of requirements: the tender shrinks to one item, and for a public buyer this contradicts Article 34 of ZRU-684.",
+              "No task per zone: bidders offer the same cameras for the entrance and the corridor, and the face at the entrance cannot be made out.",
+              "Archive stated in terabytes rather than days: disk capacity says nothing about archive depth at a given bitrate.",
+              "No statement of where the archive is kept and who has access: this surfaces at the first request for a recording.",
+              "References to Russian SP rules for fire automation instead of ShNK 2.04.09-2007.",
+              "No headroom in channels, PoE ports and power: expansion a year later requires replacing equipment.",
+              "No acceptance section: disputes about whether requirements were met are settled verbally."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "About the company",
+            "p": [],
+            "ul": [
+              "SAT Solutions is the brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912. Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
+              "Equipment supply and installation: video surveillance, access control and turnstiles, time attendance, intrusion and fire alarm, intercom, structured cabling and LAN, Wi-Fi, fibre, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
+              "Documents: National Guard permit No. 1554491 — installation, commissioning and maintenance of security equipment; Ministry of Emergency Situations permit No. 913518 (notification of 23.07.2025) — installation, commissioning and maintenance of fire alarm and automatic fire suppression systems; both under the notification procedure of CM Resolution No. 88 of 25.02.2022.",
+              "3-year warranty on installation works; equipment carries the manufacturer’s warranty of 1 to 3 years.",
+              "satsolutions.uz catalogue: more than 2,500 items; own warehouse in Tashkent, fast-moving items in stock. We work with VAT, prices in UZS including VAT; e-invoices (ESF) are issued through an electronic document-exchange operator."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "How is a technical specification different from a bill of materials?",
+            "a": "The technical specification sets requirements for the result and parameters; the bill of materials lists specific items with quantities. In a tender the bidder prepares the bill of materials from the specification, and the buyer checks it against the requirements."
+          },
+          {
+            "q": "Can Hikvision or Dahua be named in a public tender?",
+            "a": "Under Article 34(3) of ZRU-684 (as amended by ZRU-1005, from 1 March 2025) — only for purchases through the electronic shop or when there is no other precise way to describe the item. In the second case the words “or equivalent” are mandatory, except where goods are incompatible."
+          },
+          {
+            "q": "How should archive depth be stated in the specification?",
+            "a": "In days for a defined recording mode, for example “at least 30 days with continuous recording of all cameras”. Check: capacity (TB) = cameras × Mbps × 86,400 × days / 8 / 1,000,000; 32 cameras at 2 Mbps need about 20.7 TB for 30 days. For ordinary video the 30-day period is not a legal requirement but practitioners’ advice."
+          },
+          {
+            "q": "Can the video archive be stored in the cloud?",
+            "a": "Under Article 27-1 of ZRU-547 (as amended by ZRU-1125 of 26.03.2026), biometric data is stored only in Uzbekistan. Ordinary video is not named directly in the article; we recommend keeping the archive at the facility or in a data centre in the country and using the cloud for viewing — this is not a legal requirement but practitioners’ advice."
+          },
+          {
+            "q": "How much headroom should be planned for channels and ports?",
+            "a": "At least 25 % more NVR channels than cameras, incoming bandwidth with headroom over the total bitrate, free PoE ports and spare switch power. The system can then be expanded without replacing its core; this is the headroom we plan in our own projects."
+          },
+          {
+            "q": "Must a specification for a new apartment building include cameras in lifts?",
+            "a": "Yes. Under item 11 of PP-48 of 5 February 2026, from 1 May 2026 designs of new apartment buildings include cameras in every entrance, in lifts and on the adjacent territory, plus intercoms on entrance doors; without them the design does not pass state review."
+          },
+          {
+            "q": "What should be checked when accepting the system?",
+            "a": "Recording from every camera, actual archive depth, night images, time synchronisation, changed passwords, role-based access, operation on backup power and completeness of the handed-over documentation."
+          }
+        ],
+        "download": {
+          "href": "/docs/cctv-technical-specification-template-en.docx",
+          "label": "Download the CCTV technical specification template (DOCX)",
+          "note": "Parameters table, archive formula and acceptance tests — fill it in for your site."
+        }
+      },
+      "tr": {
+        "title": "İhale İçin Video Gözetim Teknik Şartnamesi Nasıl Hazırlanır: Yapı, Parametreler ve Özbekistan Normları",
+        "seoTitle": "CCTV Teknik Şartnamesi: Yapı ve Özbekistan Normları",
+        "seoDesc": "Video gözetim teknik şartnamesi: kamera ve NVR parametreleri, arşiv hesabı, ZRU-684'e göre marka ve “veya muadili”, PP-48, PKM 271 ve kabul testleri.",
+        "excerpt": "Video gözetim teknik şartnamesi hangi bölümlerden oluşur, kamera ve kayıt cihazının hangi parametreleri yazılmalı, arşiv nasıl hesaplanır, Özbekistan mevzuatına göre ihalede marka belirtilebilir mi ve kabul, gerçekten doğrulanabilecek şekilde nasıl tanımlanır.",
+        "summary": [
+          "Video gözetim teknik şartnamesi sonucu tanımlar — hangi bölgede neyin görünmesi gerektiğini, kaydın kaç gün saklanacağını, arşivin nerede duracağını ve kimin izleyeceğini — ve marka yerine ekipmanın ölçülebilir parametrelerini belirler.",
+          "Kamu alıcıları için ZRU-684 sayılı “Kamu Alımları Hakkında” Kanunun 34. maddesinin üçüncü fıkrası, belirtilen istisnalar dışında ticari marka ve model belirtilmesini yasaklar; bu istisnalarda “veya muadili” ifadesi zorunludur.",
+          "Şartnamede ayrıca arşiv derinliği gün olarak, ZRU-547 sayılı Kanunun 27-1. maddesi dikkate alınarak verilerin saklanacağı yer, tesis türüne özgü gereklilikler (yeni çok daireli konutlar için PP-48, özel okul ve anaokulları için 271 sayılı Bakanlar Kurulu kararı) ve kabul kriterleri yer alır."
+        ],
+        "sections": [
+          {
+            "h": "Teknik şartname nedir ve malzeme listesinden farkı nedir?",
+            "p": [
+              "Teknik şartname, alıcının sonuca ilişkin gereklilikleri belirlediği belgedir: sistem hangi görevleri çözer, hangi tesiste, hangi özelliklerle ve nasıl kabul edilir. Malzeme listesi (spesifikasyon), belirli kalemlerin miktarlarıyla birlikte listesidir: kamera, kayıt cihazı, disk ve switch modelleri, kablo metrajı. İşler için metraj cetveli (BOQ) ise montaj işlemlerini birimleriyle listeler: döşenen kablo metresi, monte edilen kamera sayısı, her noktanın devreye alınması.",
+              "İhalede bu belgeler birlikte çalışır, ancak sıra önemlidir. Önce teknik şartname yazılır; teklif verenler buna göre kendi malzeme listesini ve metraj cetvelini sunar, alıcı ise teklifleri gerekliliklerle karşılaştırır. Doğrudan tek bir üreticinin malzeme listesiyle başlamak, ihaleyi en iyi çözümün seçimi yerine tek bir modelin fiyat karşılaştırmasına dönüştürür. Kamu alıcısı için bu aynı zamanda mevzuata uyum meselesidir — aşağıda açıklanıyor.",
+              "İyi bir şartname doğrulanabilir: her gereklilik ya ölçülür (megapiksel, arşiv günü, IR menzili metre olarak) ya da kabulde bir testle kontrol edilir. “Yüksek görüntü kalitesi” veya “güvenilir ekipman” gibi ifadeler işe yaramaz — ne karşılaştırılabilir ne de kabul edilebilir."
+            ]
+          },
+          {
+            "h": "Video gözetim teknik şartnamesi hangi bölümlerden oluşur?",
+            "p": [
+              "On ve daha fazla kameralı bir tesis için şartnameyi on bölümden kurmak pratiktir:",
+              "Bütçeyi en çok 2. ve 4. bölümler etkiler: her girişte “tanımlama” görevi ve 30 yerine 90 günlük arşiv, keşif bedelini birkaç kat değiştirebilir. Bu nedenle bunlar teklifler geldikten sonra değil, ihale ilan edilmeden önce tesis sahibi ve güvenlik birimiyle netleştirilir.",
+              "Bu yapıda hazır bir DOCX teknik şartname şablonu — parametre tablosu, arşiv hesap formülü ve kabul testleriyle — bu sayfadan indirilebilir."
+            ],
+            "ol": [
+              "Tesis ve amaç. Adres, binanın kullanım amacı, alan, kat sayısı, çalışma düzeni ve alıcının ulaşmak istediği hedef: çevre, mal kabulü, kasalar, giriş kontrol noktası.",
+              "Bölgeler ve her bölgedeki görev. Genel gözlem — ne olduğu görülür; ayırt etme — hareketler ve nesneler görülür; tanımlama — yüz tanınabilir veya plaka okunabilir. Görev ne kadar yüksekse nesneye düşen piksel o kadar fazla olmalı ve kamera o kadar yakına monte edilmelidir.",
+              "Kamera gereklilikleri. Çözünürlük, lens veya görüş açısı, IR aydınlatma, dış ortam koruması, analitik.",
+              "Kayıt ve arşiv. Kayıt modu (sürekli, harekete göre, takvime göre), gün olarak arşiv derinliği, kodek.",
+              "Saklama ve erişim. Arşivin fiziksel olarak nerede durduğu, kimin hangi cihazlardan izlediği, kayıtların nasıl verildiği.",
+              "Ağ ve enerji. PoE, switchler, yedek güç, video gözetim için ayrılmış ağ.",
+              "Entegrasyon. Geçiş kontrol sistemi, alarm, mevcut video gözetim sistemi veya yönetim platformu ile.",
+              "Montaj gereklilikleri. Kablo döşeme yöntemi (kablo tavası, spiral boru, kanal), montaj yükseklikleri, etiketleme, faal bir tesiste çalışma.",
+              "Dokümantasyon ve eğitim. Uygulama (as-built) çizimleri, seri numaralı ekipman listesi, kullanıcı hesapları, güvenlik personeli için talimat.",
+              "Kabul ve garanti. Test listesi, ekipman ve işler için garanti, garanti başvuru prosedürü."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Kamera ve kayıt cihazının hangi parametreleri belirtilmeli?",
+            "p": [
+              "Şartnamede parametre model olarak değil, asgari değer veya aralık olarak yazılır. Örnek ifadeler:",
+              "Son satır göründüğünden daha önemlidir. Üreticiler aynı fonksiyonu farklı adlarla anar ve şartnamedeki tescilli teknoloji adı fiilen bir markayı belirtmek anlamına gelir. Bunun yerine fonksiyonu tanımlayın — “insan/araç sınıflandırmalı çizgi geçme ve bölgeye izinsiz giriş algılama” — böylece farklı üreticiler bunu sunabilir, alıcı da kabulde kontrol eder.",
+              "Kanal ve bant genişliği yedeği bir dilek değil, gerekliliktir. Tamamen dolu bir kayıt cihazı değiştirilmeden genişletilemez; giriş bant genişliği zayıf bir kayıt cihazında yüksek bit hızlı kameralar kare kaybeder. Örnek: 4 Mbit/s'lik 32 kamera 128 Mbit/s üretir; 256 Mbit/s giriş bant genişliğine sahip bir kayıt cihazı (32 kanallı Hikvision DS-7732NI-K4'ün katalog kartında belirtilen değer) iki kat yedek bırakır, kamera başına 8 Mbit/s'de ise sınırında çalışır. Bükümlü çift kablo üzerinden PoE, switchten itibaren 100 metreyle sınırlıdır; uzaktaki kameraları şartnamede baştan fiber veya uzak switch ile tanımlamak daha doğrudur."
+            ],
+            "table": {
+              "head": [
+                "Parametre",
+                "Şartnamede nasıl yazılır",
+                "Örnek değer"
+              ],
+              "rows": [
+                [
+                  "Kamera çözünürlüğü",
+                  "en az N MP",
+                  "odalar ve girişler için ≥ 4 MP (2688×1520)"
+                ],
+                [
+                  "Lens / görüş açısı",
+                  "odak uzaklığı veya yatay açı",
+                  "2,8 mm, oda için yaklaşık 100°"
+                ],
+                [
+                  "IR aydınlatma",
+                  "en az N m menzil",
+                  "içeride ≥ 30 m, çevrede 50–80 m"
+                ],
+                [
+                  "Dış ortam koruması",
+                  "koruma sınıfı",
+                  "IP67"
+                ],
+                [
+                  "Kodek",
+                  "desteklenen kodekler",
+                  "H.265 / H.265+ ve H.264"
+                ],
+                [
+                  "Güç",
+                  "standarda göre PoE",
+                  "IEEE 802.3af veya 802.3at"
+                ],
+                [
+                  "Kayıt cihazı kanalları",
+                  "yedekli IP kanal sayısı",
+                  "kamera sayısından en az %25 fazla"
+                ],
+                [
+                  "Kayıt cihazı giriş bant genişliği",
+                  "Mbit/s",
+                  "toplam kamera bit hızından yedekle birlikte düşük olmamalı"
+                ],
+                [
+                  "Disk yuvaları",
+                  "SATA sayısı ve yuva başına kapasite",
+                  "hesaplanan arşive göre, video gözetim serisi diskler"
+                ],
+                [
+                  "Analitik",
+                  "ticari ad değil, fonksiyon",
+                  "“insan” ve “araç” sınıflarına göre alarm filtreleme"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Arşiv nasıl tanımlanmalı ve nerede saklanmalı?",
+            "p": [
+              "Arşiv derinliği belirli bir kayıt modu için gün olarak belirlenir, disk kapasitesini ise teklif veren hesaplar. Teklifleri kontrol etme formülü: kapasite (TB) = kamera sayısı × bit hızı (Mbit/s) × 86.400 × gün / 8 / 1.000.000. Örnek: H.265 kodekli, sürekli kayıtta ve yaklaşık 2 Mbit/s bit hızındaki 32 adet 4 MP kamera 64 Mbit/s üretir — günde yaklaşık 691 GB ve 30 günde yaklaşık 20,7 TB. 2 Mbit/s tipik bir sahne için varsayımdır; gerçek değer ayarlara ve karedeki harekete bağlıdır. Bu yüzden şartnamede “tüm kameraların ana akışta sürekli kaydında en az 30 günlük arşiv” yazmak ve kabulde gerçek derinliği kontrol etmek daha güvenlidir. Sıradan video gözetim için bu örnekteki 30 günlük süre yasal bir norm değil, uygulayıcıların tavsiyesidir; mevzuatla belirlenmiş süre belirli tesisler için vardır — örneğin 271 sayılı BK kararına göre özel eğitim kuruluşlarında en az 6 aylık arşiv (ayrıntılar normlar bölümünde).",
+              "Saklama yeri ayrı bir gerekliliktir. ZRU-547 sayılı “Kişisel Veriler Hakkında” Kanun, belirli bir kişiye ilişkin veya onun tanımlanmasını sağlayan bilgiyi kişisel veri sayar (md. 4), anatomik ve fizyolojik özellikleri tanımlayan verileri ise biyometrik veri olarak kabul eder (md. 26). 26.03.2026 tarihli ve ZRU-1125 sayılı Kanunla değişik 27-1. madde, biyometrik ve genetik verilerin ve telekom operatörü abonelerinin verilerinin Özbekistan topraklarında saklanmasını zorunlu kılar. Geçiş kontrol terminallerindeki ve yüz tanıma sistemlerindeki yüz şablonları biyometridir; veri tabanları ülke içinde bulunmalıdır.",
+              "Sıradan video kayıtları için 27-1. maddede doğrudan bir hüküm yoktur: diğer kişisel veriler, koşullardan biri sağlanırsa yurt dışında saklanabilir — hedef ülkede tanınmış yeterli koruma, standart sözleşme hükümleri veya operatörün uyguladığı uluslararası standartlar. Bu yasal bir norm değil, uygulayıcıların tavsiyesidir: biz temkinli seçeneği öneriyor ve şartnamede şöyle yazıyoruz: “arşiv, tesiste kurulu ekipmanda veya Özbekistan Cumhuriyeti topraklarındaki bir veri merkezinde saklanır; bulut hizmeti uzaktan izleme için kullanılır.” Tesisiniz için nihai ifadeyi bir hukukçuyla netleştirin."
+            ]
+          },
+          {
+            "h": "Şartnamede marka ve model belirtilebilir mi?",
+            "p": [
+              "Kamu alıcısı için genel kural olarak hayır. 22.04.2021 tarihli ve ZRU-684 sayılı “Kamu Alımları Hakkında” Kanunun 34. maddesinin üçüncü fıkrası (27.11.2024 tarihli ve ZRU-1005 sayılı Kanunla değişik, 01.03.2025'ten itibaren yürürlükte), alım tanımına belirli bir ticari marka veya ad, patent, tasarım veya model, menşe kaynağı ya da üreticiye ilişkin gereklilik veya atıf eklenmesini yasaklar. İki istisna vardır: elektronik mağaza üzerinden yapılan alımlar ve özellikleri tanımlamanın yeterince kesin başka bir yolunun bulunmadığı durumlar. İkinci durumda tanıma “veya muadili” ifadesi mutlaka eklenir; malların uyumsuzluğu halleri hariçtir. Kanun değiştirilmeye devam ediyor; bu nedenle ihalenin ilan tarihindeki metni kontrol edin.",
+              "Uyumsuzluk, mevcut bir sistemin genişletilmesinde tipik bir durumdur. Tesiste bir üreticinin video yönetim platformu zaten çalışıyorsa ve yeni kameraların analitikle birlikte bu platformda tam çalışması gerekiyorsa, bu şartnamede gerekçelendirilir: mevcut sistem ve ek geliştirme olmadan çalışması gereken fonksiyonlar tanımlanır. Böylece üreticinin belirtilmesi tercihe değil, uyumluluk gerekliliğine dayanır.",
+              "Kamu alımları dışındaki kurumsal alıcı seçiminde serbesttir, ancak markadan bağımsız bir şartname ona da fayda sağlar: daha fazla teklif veren, daha adil bir fiyat karşılaştırması demektir. Yine de bir referans model gerekiyorsa pratik yol, modeli örnek olarak yazmak ve ölçülebilir eşdeğerlik kriterlerini sıralamaktır: çözünürlük, görüş açısı, IR menzili, koruma sınıfı, kodekler, PoE standardı, analitik fonksiyonlar, kayıt cihazına bağlanmak için ONVIF desteği. Tüm kriterleri karşılayan muadil kabul edilir — kontrolü kolay, itiraz edilmesi zordur."
+            ]
+          },
+          {
+            "h": "Farklı tesis türleri için hangi normlar dikkate alınmalı?",
+            "p": [
+              "Okullar için “en az 6 aylık arşiv” şartı en maliyetli olanıdır. 2 Mbit/s'deki tek bir 4 MP kamera günde yaklaşık 21,6 GB ve 182 günde yaklaşık 3,9 TB kaydeder; günün her saati sürekli kayıt yapan 24 kamera yaklaşık 94 TB gerektirir. Ders günü takvimine göre kayıt ve H.265+ kodek hacmi azaltır; bu yüzden okul şartnamesinde kayıt modu teklif verene bırakılmaz, açıkça yazılır."
+            ],
+            "table": {
+              "head": [
+                "Tesis",
+                "Belge",
+                "Gereklilik"
+              ],
+              "rows": [
+                [
+                  "Yeni çok daireli konutlar",
+                  "PP-48, 05.02.2026, madde 11, 01.05.2026'dan itibaren",
+                  "her girişte, asansörlerde ve çevre alanda kameralar, giriş kapılarında diyafon; bunlar olmadan proje ekspertizden geçmez"
+                ],
+                [
+                  "Özel okullar, anaokulları, eğitim merkezleri",
+                  "271 sayılı BK kararı, 21.05.2026, 01.07.2026'dan itibaren",
+                  "içeride ve dışarıda kameralar, ses kaydı, çevrimiçi yayın, en az 6 aylık arşiv — lisans şartı"
+                ],
+                [
+                  "Tüm eğitim kurumları",
+                  "425 sayılı BK kararı, 31.07.2026, 01.08.2026'dan itibaren",
+                  "alarm, panik butonları, video gözetim ve bunların bakımı"
+                ],
+                [
+                  "Her tesiste geçiş kontrol ve yüz tanıma",
+                  "ZRU-547, md. 26 ve 27-1 (ZRU-1125, 26.03.2026 değişikliği)",
+                  "biyometrik veri tabanı Özbekistan'daki teknik araçlarda tutulur"
+                ],
+                [
+                  "Yangın otomasyonu olan tesis",
+                  "ŞNK 2.04.09-2007",
+                  "yangın otomasyonu Özbekistan ŞNK'sına göre; Rusya'nın SP 3.13130.2009 ve NPB 104-03 belgeleri uygulanmaz"
+                ],
+                [
+                  "Kamu alımı",
+                  "ZRU-684, md. 34 f. 3",
+                  "ticari markasız tanım; istisnada — “veya muadili”"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "Kabul, doğrulanabilecek şekilde nasıl tanımlanır?",
+            "p": [
+              "Kabul bölümü şartnameyi bir kontrol listesine dönüştürür. Asgari test seti:",
+              "Biz de projeleri böyle teslim ediyoruz: uygulama çizimleri, seri numaralı ekipman listesi, ağ adresleri ve kullanıcı hesapları müşteriye imza karşılığında teslim edilir.",
+              "Ekipman ve montaj işleri için garanti süreleri ile garanti başvuru prosedürü şartnamede ayrı bir satır olarak belirtilir — böylece bu koşullar sözlü mutabakat olarak kalmaz, sözleşmeye girer."
+            ],
+            "ol": [
+              "Her kamera görüntü verir ve arşive kayıt yapar; kayıt cihazındaki kamera listesi çizim ve malzeme listesiyle örtüşür.",
+              "Gerçek arşiv derinliği şartnameye uygundur: sistem tam döngüye ulaştıktan sonra en eski kayıt kontrol edilir veya gerçek bit hızına göre hesaplanır.",
+              "Gece görüntüsü her dış bölgede karanlıkta kontrol edilmiştir; tanımlama bölgelerinde yüz veya plaka seçilebilir.",
+              "Kameralar ve kayıt cihazındaki saat senkronize, arşivdeki zaman damgaları doğrudur.",
+              "Fabrika şifreleri değiştirilmiş, kullanıcı hesapları rollere göre oluşturulmuş, yazılımlar güncellenmiştir.",
+              "Uzaktan erişim rollere göre çalışır: yönetim, güvenlik ve BT yalnızca kendilerine atanmış kameraları görür.",
+              "Şebeke kesintisinde yedek güç kayıt cihazını ve switchleri çalışır tutar.",
+              "Uygulama çizimleri, seri numaralı ekipman listesi, yönetici erişim bilgileri ve güvenlik personeli talimatı teslim edilmiştir."
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "Şartnamelerde en sık hangi hatalar görülür?",
+            "p": [
+              "Teknik şartnamenizi, malzeme listenizi veya uygulama projenizi “Tedarik ve İhaleler” sayfası üzerinden ya da sales@satsolutions.uz adresine gönderin — gerekliliklerinize göre ekipman listesi ve işler için metraj cetveliyle ticari teklif hazırlarız; teklifi 24 saat içinde iletiriz."
+            ],
+            "ol": [
+              "Gereklilikler yerine model: ihale tek bir kaleme indirgenir; kamu alıcısında bu ZRU-684'ün 34. maddesine aykırıdır.",
+              "Bölgelere göre görev yok: teklif verenler giriş ve koridor için aynı kameraları önerir, girişteki yüz sonra seçilemez.",
+              "Arşiv gün yerine terabayt olarak belirtilmiş: disk kapasitesi belirli bir bit hızında arşiv derinliği hakkında hiçbir şey söylemez.",
+              "Arşivin nerede tutulduğu ve kimin erişebildiği yazılmamış: bu, ilk kayıt talebinde ortaya çıkar.",
+              "Yangın otomasyonu kısmında ŞNK 2.04.09-2007 yerine Rusya SP belgelerine atıf.",
+              "Kanallarda, PoE portlarında ve güçte yedek yok: bir yıl sonra genişletme ekipman değişimini gerektirir.",
+              "Kabul bölümü yok: gerekliliklerin karşılanıp karşılanmadığı tartışması sözlü olarak çözülür."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Şirket hakkında",
+            "p": [],
+            "ul": [
+              "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır; vergi numarası 308603912. Taşkent, Katta Darhon Sokağı 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
+              "Ekipman tedariki ve montaj: video gözetim, geçiş kontrol ve turnikeler, mesai takibi, alarm ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
+              "Belgeler: Ulusal Muhafız izin belgesi No. 1554491 — güvenlik teknik araçlarının montajı, devreye alınması ve bakımı; Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025 tarihli bildirim) — yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı; her ikisi de 25.02.2022 tarihli 88 sayılı BK kararı kapsamında bildirim usulüyle.",
+              "Montaj işlerine 3 yıl garanti; ekipmana üreticinin 1 ila 3 yıllık garantisi.",
+              "satsolutions.uz kataloğu: 2.500'den fazla ürün; Taşkent'te kendi depomuz var, çok satan ürünler stokta. KDV ile çalışıyoruz, fiyatlar UZS cinsinden ve KDV dahil; e-faturalar (ESF) bir elektronik belge değişim operatörü üzerinden düzenlenir."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Teknik şartname malzeme listesinden nasıl ayrılır?",
+            "a": "Teknik şartname sonuca ilişkin gereklilikleri ve parametreleri, malzeme listesi ise miktarlarıyla belirli kalemleri tanımlar. İhalede teklif veren malzeme listesini şartnameye göre hazırlar, alıcı da gerekliliklerle karşılaştırır."
+          },
+          {
+            "q": "Kamu ihalesinde Hikvision veya Dahua belirtilebilir mi?",
+            "a": "ZRU-684'ün 34. maddesinin üçüncü fıkrasına göre (ZRU-1005 değişikliği, 01.03.2025'ten itibaren) — yalnızca elektronik mağaza üzerinden alımda veya başka kesin bir tanım yolu yoksa. İkinci durumda “veya muadili” ifadesi zorunludur; malların uyumsuzluğu halleri hariçtir."
+          },
+          {
+            "q": "Şartnamede arşiv derinliği nasıl belirtilir?",
+            "a": "Belirli bir kayıt modu için gün olarak, örneğin “tüm kameraların sürekli kaydında en az 30 gün”. Kontrol: kapasite (TB) = kamera × Mbit/s × 86.400 × gün / 8 / 1.000.000; 2 Mbit/s'lik 32 kamera 30 gün için yaklaşık 20,7 TB gerektirir. Sıradan video için 30 günlük süre yasal bir norm değil, uygulayıcıların tavsiyesidir."
+          },
+          {
+            "q": "Video arşivi bulutta saklanabilir mi?",
+            "a": "ZRU-547'nin 27-1. maddesine göre (ZRU-1125, 26.03.2026 değişikliği) biyometrik veriler yalnızca Özbekistan'da saklanır. Sıradan video maddede doğrudan anılmaz; arşivi tesiste veya ülkedeki bir veri merkezinde tutmanızı, bulutu ise izleme için kullanmanızı öneriyoruz — bu yasal bir norm değil, uygulayıcıların tavsiyesidir."
+          },
+          {
+            "q": "Kanallar ve portlar için ne kadar yedek planlanmalı?",
+            "a": "Kamera sayısından en az %25 fazla kayıt cihazı kanalı, toplam bit hızına göre yedekli giriş bant genişliği, boş PoE portları ve switch gücü yedeği. Böylece sistem çekirdeği değiştirilmeden genişletilebilir; kendi projelerimizde yedeği böyle planlıyoruz."
+          },
+          {
+            "q": "Yeni konut şartnamesinde asansör kameraları belirtilmeli mi?",
+            "a": "Evet. 05.02.2026 tarihli PP-48'in 11. maddesine göre 01.05.2026'dan itibaren yeni çok daireli konut projeleri her girişte, asansörlerde ve çevre alanda kameraları ve giriş kapılarında diyafonları içerir; bunlar olmadan proje ekspertizden geçmez."
+          },
+          {
+            "q": "Sistemin kabulünde neler kontrol edilmeli?",
+            "a": "Her kameranın kaydı, gerçek arşiv derinliği, gece görüntüsü, saat senkronizasyonu, şifrelerin değiştirilmesi, rol bazlı erişim, yedek güçte çalışma ve teslim edilen dokümantasyonun eksiksizliği."
+          }
+        ],
+        "download": {
+          "href": "/docs/cctv-teknik-sartname-sablonu-tr.docx",
+          "label": "Video gözetim teknik şartname şablonunu indirin (DOCX)",
+          "note": "Parametre tablosu, arşiv formülü ve kabul testleri — tesisinize göre doldurun."
+        }
+      },
+      "zh": {
+        "title": "采购用视频监控技术任务书怎么写：结构、参数与乌兹别克斯坦规范",
+        "seoTitle": "视频监控技术任务书怎么写：结构、参数与当地规范",
+        "seoDesc": "采购用视频监控技术任务书怎么写：摄像机与录像机参数、存储天数计算、ZRU-684关于品牌与“或同等产品”的规定、PP-48、验收清单。",
+        "excerpt": "视频监控技术任务书由哪些部分组成、摄像机和录像机写哪些参数、如何计算存储、按乌兹别克斯坦法律采购时能否写明品牌，以及如何把验收写成可以核查的条款。",
+        "summary": [
+          "视频监控技术任务书描述的是结果——每个区域需要看清什么、录像保存多少天、存储放在哪里、由谁查看——以及设备可量化的参数，而不是品牌。",
+          "对国家采购方而言，乌兹别克斯坦《国家采购法》（ZRU-684）第34条第三款禁止写明商标和型号，规定的例外情形下则必须加注“或同等产品”。",
+          "技术任务书还应写明以天数计的存储时长、依据ZRU-547号法律第27-1条确定的数据存放地点、针对设施类型的要求（新建多层住宅适用总统令PP-48，私立学校和幼儿园适用内阁第271号决议）以及验收标准。"
+        ],
+        "sections": [
+          {
+            "h": "什么是技术任务书，它与设备清单有何不同？",
+            "p": [
+              "技术任务书是采购方对结果提出要求的文件：系统解决哪些任务、用于哪个设施、具备哪些特性、如何验收。设备清单（规格表）是带数量的具体条目：摄像机、录像机、硬盘、交换机的型号以及电缆米数。工程量清单（BOQ）列出带计量单位的安装工序：敷设电缆米数、安装摄像机数量、每个点位的调试。",
+              "在采购中这些文件共同发挥作用，但顺序很重要。先写技术任务书，投标方据此提出各自的设备清单和工程量清单，采购方再将投标与要求逐项对照。如果一开始就拿某一家厂商的设备清单，采购就变成了同一型号的比价，而不是挑选最佳方案。对国家采购方来说，这还关系到是否合法——详见下文。",
+              "好的技术任务书是可核查的：每一项要求要么可以量化（像素、存储天数、红外距离米数），要么能在验收时通过测试检查。“图像质量高”“设备可靠”之类的表述没有用处——既无法比较，也无法验收。"
+            ]
+          },
+          {
+            "h": "视频监控技术任务书由哪些部分组成？",
+            "p": [
+              "对于十台摄像机以上的项目，技术任务书可以按十个部分编写：",
+              "对预算影响最大的是第2和第4部分：每个出入口都要求“识别”、存储90天而不是30天，会让预算相差数倍。因此这两部分应在发布采购之前，而不是在收到报价之后，与业主和安保部门确定。",
+              "按此结构编写的DOCX格式技术任务书模板（含参数表、存储计算公式和验收测试清单）可在本页面下载。"
+            ],
+            "ol": [
+              "设施与目标。 地址、建筑用途、面积、层数、运营时间，以及采购方想达到的目的：周界、收货、收银台、出入口的管控。",
+              "区域及各区域任务。 概览——看清发生了什么；辨别——看清动作和物品；识别——能认出人脸或读出车牌。任务等级越高，目标所占像素越多，摄像机安装位置也越近。",
+              "摄像机要求。 分辨率、镜头或视场角、红外补光、室外防护等级、智能分析。",
+              "录像与存储。 录像模式（连续、移动侦测、按计划）、以天数计的存储时长、编码格式。",
+              "存储与访问。 存储在物理上放在哪里、由谁通过哪些设备查看、录像如何调取提供。",
+              "网络与供电。 PoE、交换机、备用电源、独立的视频监控网络。",
+              "集成。 与门禁系统、入侵报警、现有视频监控系统或管理平台的集成。",
+              "安装要求。 布线方式（桥架、波纹管、线槽）、安装高度、标识，以及在运营中的设施内施工。",
+              "文档与培训。 竣工图、带序列号的设备清单、用户账户、安保人员操作说明。",
+              "验收与质保。 测试清单、设备和施工的质保、质保报修流程。"
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "摄像机和录像机应写明哪些参数？",
+            "p": [
+              "技术任务书中的参数应写成最低值或范围，而不是型号。表述示例：",
+              "最后一行比看上去更重要。不同厂商对同一功能的叫法不同，在技术任务书中写厂商的技术名称，实际上就等于指定了品牌。改为描述功能——“带人/车分类的越线和区域入侵检测”——不同厂商都能提供，采购方也能在验收时核查。",
+              "通道和带宽的余量是要求，不是愿望。满负荷的录像机不更换就无法扩容；接入带宽不足的录像机接上高码率摄像机会丢帧。举例：32台摄像机每台4 Mbps，合计128 Mbps；接入带宽256 Mbps的录像机（目录卡片中32路海康威视DS-7732NI-K4的参数）留有两倍余量，而每台8 Mbps时就已到上限。通过双绞线的PoE供电距离交换机不超过100米，远处的摄像机最好在技术任务书中直接写明采用光纤或远端交换机。"
+            ],
+            "table": {
+              "head": [
+                "参数",
+                "技术任务书写法",
+                "示例值"
+              ],
+              "rows": [
+                [
+                  "摄像机分辨率",
+                  "不低于N百万像素",
+                  "室内和出入口 ≥ 4MP（2688×1520）"
+                ],
+                [
+                  "镜头/视场角",
+                  "焦距或水平视角",
+                  "2.8毫米，室内约100°"
+                ],
+                [
+                  "红外补光",
+                  "距离不小于N米",
+                  "室内 ≥ 30米，周界50–80米"
+                ],
+                [
+                  "室外防护",
+                  "外壳防护等级",
+                  "IP67"
+                ],
+                [
+                  "编码",
+                  "支持的编码格式",
+                  "H.265 / H.265+ 和 H.264"
+                ],
+                [
+                  "供电",
+                  "PoE标准",
+                  "IEEE 802.3af 或 802.3at"
+                ],
+                [
+                  "录像机通道",
+                  "留有余量的IP通道数",
+                  "比摄像机数量多至少25%"
+                ],
+                [
+                  "录像机接入带宽",
+                  "Mbps",
+                  "不低于全部摄像机码率之和并留余量"
+                ],
+                [
+                  "硬盘位",
+                  "SATA盘位数及单盘容量",
+                  "按计算的存储量配置，使用监控级硬盘"
+                ],
+                [
+                  "智能分析",
+                  "写功能，不写商品名",
+                  "按“人”“车”分类过滤报警"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "存储应如何写明？存放在哪里？",
+            "p": [
+              "存储时长按指定录像模式以天数规定，硬盘容量由投标方自行计算。核查报价的公式：容量（TB）＝摄像机数量 × 码率（Mbps）× 86 400 × 天数 ÷ 8 ÷ 1 000 000。示例：32台4MP摄像机，H.265编码、连续录像、码率约2 Mbps，合计64 Mbps——每天约691 GB，30天约20.7 TB。2 Mbps是典型场景的假设值，实际码率取决于设置和画面中的运动。因此技术任务书中更稳妥的写法是“所有摄像机主码流连续录像，存储不少于30天”，并在验收时核查实际存储天数。本示例中普通视频监控的30天存储期不是法律规定，而是从业者的建议；部分类型设施的存储期限由规范规定——例如依据内阁第271号决议，私立教育机构的存储不少于6个月（详见规范部分）。",
+              "存放地点是单独的一项要求。乌兹别克斯坦《个人数据法》（ZRU-547）将与特定个人相关或可识别该个人的信息视为个人数据（第4条），将描述人体解剖和生理特征的数据视为生物识别数据（第26条）。经2026年3月26日第ZRU-1125号法律修订的第27-1条规定，生物识别数据、基因数据以及电信运营商用户数据必须存储在乌兹别克斯坦境内。门禁终端和人脸识别系统中的人脸模板属于生物识别数据，其数据库必须位于境内。",
+              "对于普通视频录像，第27-1条没有直接规定：其他个人数据在满足以下条件之一时可在境外存储——目的国被认定为提供充分保护、采用标准合同条款，或运营方遵守国际标准。这不是法律规定，而是从业者的建议：我们建议采用稳妥方案，并在技术任务书中写为：“录像存储在设施内安装的设备上，或乌兹别克斯坦共和国境内的数据中心；云服务用于远程查看。”具体项目的最终表述请与律师确认。"
+            ]
+          },
+          {
+            "h": "技术任务书中可以写明品牌和型号吗？",
+            "p": [
+              "对国家采购方而言，原则上不可以。2021年4月22日第ZRU-684号《国家采购法》第34条第三款（经2024年11月27日第ZRU-1005号法律修订，自2025年3月1日起施行）禁止在采购描述中写入针对特定商标或名称、专利、结构或型号、原产地或制造商的要求或引用。例外有两种：通过电子商店进行的采购，以及没有其他足够准确的方式描述特性的情形。后一种情形下，描述中必须加入“或同等产品”字样，商品不兼容的情形除外。该法仍在修订中，请以采购公告发布之日的有效文本为准。",
+              "不兼容是扩建现有系统时的典型情形。如果设施内已运行某一厂商的视频管理平台，新摄像机须连同智能分析在该平台中完整运行，就应在技术任务书中说明理由：描述现有系统以及无需二次开发即应正常工作的功能。这样指定厂商依据的是兼容性要求，而非偏好。",
+              "国家采购之外的企业采购方可以自由选择，但不绑定品牌的技术任务书对其同样有利：投标方越多，比价越公平。如果确实需要参考型号，可行的做法是把型号作为示例，并列出可量化的等效标准：分辨率、视场角、红外距离、防护等级、编码格式、PoE标准、智能分析功能、支持ONVIF协议接入录像机。满足全部标准的同等产品即予接受——易于核查，也难以争议。"
+            ]
+          },
+          {
+            "h": "不同类型的设施应考虑哪些规范？",
+            "p": [
+              "学校“存储不少于6个月”的要求成本最高。一台4MP摄像机在2 Mbps码率下每天约录21.6 GB，182天约3.9 TB；24台摄像机全天连续录像约需94 TB。按教学日计划录像和使用H.265+编码可降低容量，因此学校的技术任务书应明确写出录像模式，而不是交由投标方自行决定。"
+            ],
+            "table": {
+              "head": [
+                "设施",
+                "文件",
+                "要求"
+              ],
+              "rows": [
+                [
+                  "新建多层住宅",
+                  "总统令PP-48（2026年2月5日）第11项，自2026年5月1日起",
+                  "每个单元门厅、电梯及周边区域安装摄像机，单元入口门安装对讲；缺少这些，项目无法通过审查"
+                ],
+                [
+                  "私立学校、幼儿园、培训中心",
+                  "内阁第271号决议（2026年5月21日），自2026年7月1日起",
+                  "室内外摄像机、录音、在线直播、存储不少于6个月——属于许可条件"
+                ],
+                [
+                  "所有教育机构",
+                  "内阁第425号决议（2026年7月31日），自2026年8月1日起",
+                  "入侵报警、紧急按钮、视频监控及其维护"
+                ],
+                [
+                  "任何设施的门禁与人脸识别",
+                  "ZRU-547第26条和第27-1条（经2026年3月26日ZRU-1125修订）",
+                  "生物识别数据库存放在乌兹别克斯坦境内的技术设备上"
+                ],
+                [
+                  "设有消防自动化的设施",
+                  "ShNK 2.04.09-2007",
+                  "消防自动化按乌兹别克斯坦ShNK执行；俄罗斯SP 3.13130.2009和NPB 104-03不适用"
+                ],
+                [
+                  "国家采购",
+                  "ZRU-684第34条第三款",
+                  "描述中不写商标；适用例外时注明“或同等产品”"
+                ]
+              ],
+              "at": 0
+            }
+          },
+          {
+            "h": "验收应如何描述才能核查？",
+            "p": [
+              "验收部分把技术任务书变成一份检查清单。最低测试项：",
+              "我们交付项目也是这样做的：竣工图、带序列号的设备清单、网络地址和账户均签字移交给客户。",
+              "设备和施工的质保期限以及质保报修流程，应在技术任务书中单列一行——这样这些条件会写进合同，而不是停留在口头约定。"
+            ],
+            "ol": [
+              "每台摄像机都有画面并写入存储；录像机中的摄像机列表与图纸和设备清单一致。",
+              "实际存储天数符合技术任务书：系统完成一个完整循环后核查最早的录像，或按实际码率计算。",
+              "每个室外区域在黑暗条件下检查夜间画面；识别区域能看清人脸或车牌。",
+              "摄像机和录像机时间同步，存储中的时间戳正确。",
+              "出厂密码已更改，按角色创建账户，固件已更新。",
+              "远程访问按角色运行：管理层、安保和IT只能看到分配给自己的摄像机。",
+              "市电中断时，备用电源能维持录像机和交换机运行。",
+              "已移交竣工图、带序列号的设备清单、管理员账户信息以及安保人员操作说明。"
+            ],
+            "olAt": 1
+          },
+          {
+            "h": "技术任务书中最常见的错误有哪些？",
+            "p": [
+              "请通过“供货与招标”页面或发送至sales@satsolutions.uz提交技术任务书、设备清单或施工图——我们将按您的要求准备附有设备清单和工程量清单的商务报价，24小时内发出。"
+            ],
+            "ol": [
+              "用型号代替要求：采购只剩一个条目，对国家采购方而言这与ZRU-684第34条相抵触。",
+              "没有按区域规定任务：投标方给出入口和走廊配同样的摄像机，事后出入口的人脸看不清。",
+              "存储以TB而不是天数表示：在特定码率下，硬盘容量说明不了能存多少天。",
+              "未写明存储放在哪里、谁有权访问：第一次调取录像时问题就会暴露。",
+              "消防自动化部分引用俄罗斯SP，而不是ShNK 2.04.09-2007。",
+              "通道、PoE端口和功率没有余量：一年后扩容就得更换设备。",
+              "没有验收部分：是否满足要求只能口头争论。"
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "关于公司",
+            "p": [],
+            "ul": [
+              "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌，纳税人识别号308603912。塔什干Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
+              "设备供货与安装：视频监控、门禁与闸机、考勤、入侵与火灾报警、楼宇对讲、综合布线与局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
+              "文件：国民近卫军许可文件第1554491号——安防技术设备的安装、调试和维护；紧急情况部许可文件第913518号（2025年7月23日通知）——火灾报警和自动灭火系统的安装、调试和维护；两者均依据2022年2月25日内阁第88号决议的通知程序办理。",
+              "安装施工质保3年；设备享受厂商1至3年质保。",
+              "satsolutions.uz产品目录：2500多种商品；在塔什干设有自有仓库，常用商品有现货。我们含增值税开展业务，价格以苏姆计并含增值税；电子发票（ESF）通过电子文档交换运营商开具。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "技术任务书和设备清单有什么区别？",
+            "a": "技术任务书规定结果要求和参数，设备清单列出带数量的具体条目。采购中投标方依据技术任务书编制设备清单，采购方再与要求逐项核对。"
+          },
+          {
+            "q": "国家采购中能否写明海康威视或大华？",
+            "a": "根据ZRU-684第34条第三款（经ZRU-1005修订，自2025年3月1日起）——仅限通过电子商店采购，或没有其他准确描述方式的情形。后一种情形必须注明“或同等产品”，商品不兼容的情形除外。"
+          },
+          {
+            "q": "技术任务书中如何规定存储时长？",
+            "a": "按指定录像模式以天数规定，例如“所有摄像机连续录像不少于30天”。核查公式：容量（TB）＝摄像机数 × Mbps × 86 400 × 天数 ÷ 8 ÷ 1 000 000；32台每台2 Mbps，30天约需20.7 TB。普通视频的30天存储期不是法律规定，而是从业者的建议。"
+          },
+          {
+            "q": "视频存储可以放在云端吗？",
+            "a": "根据ZRU-547第27-1条（经2026年3月26日ZRU-1125修订），生物识别数据只能存储在乌兹别克斯坦境内。普通视频该条未直接列明；我们建议把录像存放在设施内或境内数据中心，云端用于查看——这不是法律规定，而是从业者的建议。"
+          },
+          {
+            "q": "通道和端口应预留多少余量？",
+            "a": "录像机通道比摄像机数量多至少25%，接入带宽相对总码率留有余量，并预留空闲PoE端口和交换机功率。这样无需更换核心设备即可扩容；我们自己的项目就按这个余量设计。"
+          },
+          {
+            "q": "新建住宅的技术任务书需要写明电梯摄像机吗？",
+            "a": "需要。根据2026年2月5日总统令PP-48第11项，自2026年5月1日起新建多层住宅项目须包括每个单元门厅、电梯和周边区域的摄像机以及单元入口门对讲；缺少这些，项目无法通过审查。"
+          },
+          {
+            "q": "系统验收时应检查什么？",
+            "a": "每台摄像机的录像、实际存储天数、夜间画面、时间同步、密码是否更改、按角色访问、备用电源下的运行，以及移交文档是否齐全。"
+          }
+        ],
+        "download": {
+          "href": "/docs/cctv-technical-specification-template-zh.docx",
+          "label": "下载视频监控技术任务书模板（DOCX）",
+          "note": "包含参数表、录像容量公式和验收测试清单，可按项目填写。"
+        }
+      }
+    }
+  },
+  {
+    "slug": "byudzhet-videonablyudeniya-predpriyatiya",
+    "date": "2026-11-10",
+    "updated": "2026-11-10",
+    "related": [
+      "cctv",
+      "industry",
+      "warehouse"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr",
+      "zhestkie-diski",
+      "kommutatory",
+      "ibp-i-elektropitanie"
+    ],
+    "brands": [
+      "hikvision"
+    ],
+    "seeAlso": [
+      "tehnicheskoe-zadanie-na-videonablyudenie",
+      "kak-rasschitat-disk-dlya-videonablyudeniya",
+      "indeks-cen-slabotochnye-sistemy-tashkent-2026",
+      "skolko-kamer-nuzhno-skladu",
+      "poe-kommutator-ili-bloki-pitaniya"
+    ],
+    "products": [
+      "hik-ds-2cd2143g2-i-2-8mm-o-std",
+      "hik-ds-2cd2t43g2-4i-2-8mm",
+      "hik-ds-7732ni-k4-std",
+      "pro-seagate-skyhawk-hdd-6tb-dubai",
+      "hik-ds-3e1526p-si-24p2f"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Сколько стоит видеонаблюдение для предприятия на 32 камеры и из чего складывается бюджет?",
+        "seoTitle": "Видеонаблюдение для предприятия на 32 камеры: бюджет 2026",
+        "seoDesc": "Смета на 32 камеры 4 Мп по ценам каталога на 10.11.2026: ≈85,1 млн сум. Доли камер, дисков, сети и работ, формула архива и где снизить бюджет.",
+        "excerpt": "Разбираем смету видеонаблюдения предприятия на 32 камеры по ценам каталога на 10.11.2026: доли камер, дисков, сети, расходных материалов и работ, формула архива, цена терабайта, время работы ИБП и способы снизить бюджет без потери качества.",
+        "summary": [
+          "По ценам каталога satsolutions.uz на 10.11.2026 и нашим расценкам на работы система на 32 IP-камеры 4 Мп с архивом около месяца обходится примерно в 85,1 млн сум: оборудование — около 63,1 млн, расходные материалы — около 2,2 млн, работы — около 19,8 млн.",
+          "Крупнейшие статьи — камеры (около 36 %), диски для архива (около 13 %) и сеть (около 13 %), а внутри работ больше половины (58 %) приходится на прокладку кабеля.",
+          "Сильнее всего бюджет двигает произведение глубины архива на битрейт камер."
+        ],
+        "sections": [
+          {
+            "h": "Из каких частей состоит бюджет видеонаблюдения предприятия?",
+            "p": [
+              "Бюджет системы видеонаблюдения складывается из шести групп: камеры; регистратор (NVR) или сервер; диски для архива; сеть — PoE-коммутаторы и кабель; электропитание и шкаф — ИБП и телекоммуникационный шкаф; работы — монтаж, прокладка трасс, пусконаладка и настройка доступа. Отдельно идут расходные материалы — патч-панели, патч-корды, коннекторы, гофра, лотки и крепёж. В примере ниже патч-панели, патч-корды, коннекторы и гофра посчитаны ориентиром по ценам каталога, а лотки и крепёж считаются по проекту кабельных трасс после осмотра здания.",
+              "Три термина, без которых смету не прочитать. Битрейт — объём видеопотока одной камеры в мегабитах в секунду; от него зависит, сколько терабайт нужно на архив. Глубина архива — сколько суток записи хранится до перезаписи по кругу. PoE (Power over Ethernet) — питание камеры по той же витой паре, по которой идёт видео, поэтому к каждой камере тянут один кабель.",
+              "Ниже — доли статей для типового объекта на 32 камеры (полный расчёт в следующем разделе).",
+              "Регистратор, вокруг которого обычно идёт больше всего споров, — всего около 3 % бюджета. Диски стоят в четыре с лишним раза дороже регистратора, ИБП со шкафом — больше чем в три раза. Поэтому экономия «на регистраторе» почти не меняет итог, а решение о глубине архива меняет его заметно. В пересчёте на одну камеру система обходится примерно в 2,66 млн сум с учётом всего оборудования, расходных материалов и работ — по этой цифре удобно сравнивать предложения разного объёма."
+            ],
+            "table": {
+              "head": [
+                "Статья",
+                "Сумма, сум",
+                "Доля"
+              ],
+              "rows": [
+                [
+                  "Камеры (32 шт.)",
+                  "30 780 800",
+                  "36,2 %"
+                ],
+                [
+                  "Диски для архива (4 × 6 ТБ)",
+                  "10 887 600",
+                  "12,8 %"
+                ],
+                [
+                  "Сеть: PoE-коммутаторы и кабель",
+                  "10 837 200",
+                  "12,7 %"
+                ],
+                [
+                  "Шкаф и ИБП",
+                  "8 161 800",
+                  "9,6 %"
+                ],
+                [
+                  "Регистратор на 32 канала",
+                  "2 474 900",
+                  "2,9 %"
+                ],
+                [
+                  "Расходные материалы (ориентир)",
+                  "2 208 580",
+                  "2,6 %"
+                ],
+                [
+                  "Работы",
+                  "19 764 000",
+                  "23,2 %"
+                ],
+                [
+                  "Итого",
+                  "85 114 880",
+                  "100 %"
+                ]
+              ],
+              "at": 3
+            }
+          },
+          {
+            "h": "Пример: сколько стоит система на 32 камеры по ценам каталога?",
+            "p": [
+              "Объект — склад или производственный корпус, конфигурация типовая для таких объектов: 24 внутренние купольные камеры по залам и проходам, 8 уличных цилиндрических — на периметр, ворота и рампы. Регистратор, коммутаторы и ИБП стоят в одном настенном шкафу. Средняя длина трассы — 40 м до внутренней камеры и 60 м до уличной, всего 960 + 480 = 1 440 м кабеля.",
+              "Всего — 85 114 880 сум: оборудование 63 142 300, расходные материалы 2 208 580, работы 19 764 000. Цены оборудования — каталог satsolutions.uz на 09.11.2026, перепроверены 10.11.2026 и не изменились; цены меняются. Цены расходных материалов — каталог на 10.11.2026, количество — наша оценка. Расценки на работы — со страницы услуги «Видеонаблюдение» на 09.11.2026; прокладка кабеля по фасаду и улице — 10 000 сум за метр (на 10.11.2026). Линии к 8 уличным камерам (8 × 60 = 480 м) посчитаны по уличной расценке, 960 м к внутренним камерам — по 7 000 сум за метр. Кабельные лотки и крепёж, а также особые условия — работа на большой высоте или по готовой отделке — считаются по проекту трасс после осмотра объекта. Шесть бухт кабеля (1 830 м) взяты с запасом на обрезки и разводку в шкафу.",
+              "Сколько проработает ИБП. Нагрузку считаем по документации Hikvision: DS-2CD2143G2-I потребляет по PoE до 6,5 Вт, DS-2CD2T43G2-4I — до 12,5 Вт, итого 24 × 6,5 + 8 × 12,5 = 256 Вт. Регистратор с четырьмя дисками и собственная электроника двух коммутаторов — по нашему допущению около 100 Вт; с потерями на преобразование PoE всего получается около 400 Вт. Встроенная батарея онлайн-ИБП на 2 кВА — обычно 4 × 12 В 9 А·ч, около 430 Вт·ч; точную ёмкость берут из паспорта ИБП. При таком токе разряда и с учётом КПД инвертора полезно используется примерно половина — около 215 Вт·ч. Время работы: 215 Вт·ч ÷ 400 Вт ≈ 0,5 ч, то есть около 30 минут. Для автономии 1–2 часа выбирают ИБП с внешним батарейным блоком.",
+              "Модели выбраны как типовые для такой задачи, а не как единственно возможные. Та же структура сметы получится и на оборудовании Dahua — например, с 32-канальным регистратором DHI-NVR5232-EI за 3 394 900 сум; доли статей при этом почти не меняются."
+            ],
+            "table": [
+              {
+                "caption": "Оборудование",
+                "head": [
+                  "Позиция",
+                  "Кол-во",
+                  "Цена, сум",
+                  "Сумма, сум"
+                ],
+                "rows": [
+                  [
+                    "Купольная IP-камера 4 Мп Hikvision DS-2CD2143G2-I (2,8 мм), ИК до 30 м, AcuSense, PoE",
+                    "24",
+                    "890 900",
+                    "21 381 600"
+                  ],
+                  [
+                    "Цилиндрическая IP-камера 4 Мп Hikvision DS-2CD2T43G2-4I (2,8 мм), ИК до 80 м",
+                    "8",
+                    "1 174 900",
+                    "9 399 200"
+                  ],
+                  [
+                    "Регистратор Hikvision DS-7732NI-K4(STD): 32 канала, 4 SATA, входящий поток 256 Мбит/с, 1.5U",
+                    "1",
+                    "2 474 900",
+                    "2 474 900"
+                  ],
+                  [
+                    "Диск для видеонаблюдения Seagate SkyHawk 6 ТБ",
+                    "4",
+                    "2 721 900",
+                    "10 887 600"
+                  ],
+                  [
+                    "PoE-коммутатор Hikvision DS-3E1526P-SI-24P2F: 24 PoE + 2 SFP, бюджет 370 Вт",
+                    "2",
+                    "4 082 900",
+                    "8 165 800"
+                  ],
+                  [
+                    "Настенный шкаф 15U 600×600",
+                    "1",
+                    "1 422 900",
+                    "1 422 900"
+                  ],
+                  [
+                    "ИБП Pixietech On-line 2 кВА",
+                    "1",
+                    "6 738 900",
+                    "6 738 900"
+                  ],
+                  [
+                    "Кабель UTP кат. 5e внутренний, бухта 305 м",
+                    "4",
+                    "432 900",
+                    "1 731 600"
+                  ],
+                  [
+                    "Кабель UTP кат. 6 наружный, бухта 305 м",
+                    "2",
+                    "469 900",
+                    "939 800"
+                  ],
+                  [
+                    "Итого оборудование",
+                    "",
+                    "",
+                    "63 142 300"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Расходные материалы (ориентир)",
+                "head": [
+                  "Позиция",
+                  "Кол-во",
+                  "Цена, сум",
+                  "Сумма, сум"
+                ],
+                "rows": [
+                  [
+                    "Патч-панель 24 порта, кат. 5",
+                    "2",
+                    "234 900",
+                    "469 800"
+                  ],
+                  [
+                    "Патч-корд кат. 6 UTP 0,5 м",
+                    "32",
+                    "20 990",
+                    "671 680"
+                  ],
+                  [
+                    "Коннектор RJ-45 кат. 5e (Pixietech)",
+                    "100",
+                    "690",
+                    "69 000"
+                  ],
+                  [
+                    "Гофрированный шланг 25 мм, бухта 50 м — около трети трасс",
+                    "9",
+                    "110 900",
+                    "998 100"
+                  ],
+                  [
+                    "Итого расходные материалы",
+                    "",
+                    "",
+                    "2 208 580"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Работы",
+                "head": [
+                  "Работа",
+                  "Кол-во",
+                  "Расценка, сум",
+                  "Сумма, сум"
+                ],
+                "rows": [
+                  [
+                    "Монтаж внутренней камеры",
+                    "24",
+                    "155 000",
+                    "3 720 000"
+                  ],
+                  [
+                    "Монтаж уличной камеры",
+                    "8",
+                    "180 000",
+                    "1 440 000"
+                  ],
+                  [
+                    "Настройка и пусконаладка камеры",
+                    "32",
+                    "77 000",
+                    "2 464 000"
+                  ],
+                  [
+                    "Установка и настройка регистратора (свыше 16 камер)",
+                    "1",
+                    "450 000",
+                    "450 000"
+                  ],
+                  [
+                    "Настройка удалённого доступа с телефона",
+                    "1",
+                    "170 000",
+                    "170 000"
+                  ],
+                  [
+                    "Прокладка кабеля внутри здания, м",
+                    "960",
+                    "7 000",
+                    "6 720 000"
+                  ],
+                  [
+                    "Прокладка кабеля по фасаду и улице, м",
+                    "480",
+                    "10 000",
+                    "4 800 000"
+                  ],
+                  [
+                    "Итого работы",
+                    "",
+                    "",
+                    "19 764 000"
+                  ]
+                ],
+                "at": 1
+              }
+            ]
+          },
+          {
+            "h": "Как рассчитать объём архива?",
+            "p": [
+              "Объём архива считается по формуле: V (ТБ) = N × B × 86 400 × D ÷ 8 ÷ 1 000 000. Здесь N — число камер, B — битрейт одной камеры в Мбит/с, D — глубина архива в днях, 86 400 — секунд в сутках; деление на 8 переводит биты в байты, а на 1 000 000 — мегабайты в терабайты.",
+              "Расчёт для примера по шагам:",
+              "На битрейт влияют пять вещей. Разрешение: больше пикселей — больше поток. Кодек: H.265 экономнее H.264, а H.265+ дополнительно сжимает статичную картинку пустого зала. Сцена: движение, листва, дождь и шум матрицы ночью увеличивают поток. Частота кадров: 25 кадров в секунду дают заметно больший объём, чем 12. Режим записи: запись по движению или по событиям аналитики вместо постоянной сокращает архив в зонах, где большую часть суток ничего не происходит. Практическое правило — через неделю после запуска посмотреть фактический битрейт в регистраторе и пересчитать архив.",
+              "RAID 5 на четырёх дисках отдаёт под архив ёмкость трёх, зато переживает отказ одного диска без потери записи. Поддерживает ли конкретный регистратор RAID, проверяют по документации производителя. Если глубина архива задана нормой — например, не менее 6 месяцев для негосударственных образовательных организаций по ПКМ № 271 от 21.05.2026, — расчёт начинают с этой цифры, а не с бюджета."
+            ],
+            "table": {
+              "head": [
+                "Вариант",
+                "Суммарный поток",
+                "В сутки",
+                "Глубина на 24 ТБ",
+                "Нужно на 30 дней"
+              ],
+              "rows": [
+                [
+                  "2 Мбит/с на камеру, диски без RAID",
+                  "64 Мбит/с",
+                  "≈691 ГБ",
+                  "≈34 дня",
+                  "≈20,7 ТБ"
+                ],
+                [
+                  "2 Мбит/с, RAID 5 (полезно 18 ТБ)",
+                  "64 Мбит/с",
+                  "≈691 ГБ",
+                  "≈26 дней",
+                  "≈20,7 ТБ"
+                ],
+                [
+                  "4 Мбит/с на камеру, без RAID",
+                  "128 Мбит/с",
+                  "≈1,38 ТБ",
+                  "≈17 дней",
+                  "≈41,5 ТБ"
+                ],
+                [
+                  "8 Мбит/с на камеру (предел регистратора)",
+                  "256 Мбит/с",
+                  "≈2,76 ТБ",
+                  "≈9 дней",
+                  "≈82,9 ТБ"
+                ]
+              ],
+              "at": 2
+            },
+            "ol": [
+              "Суммарный поток: 32 камеры × 2 Мбит/с = 64 Мбит/с. 2 Мбит/с — типичная настройка камеры 4 Мп с кодеком H.265 при постоянной записи; с этим значением мы ведём расчёт, а фактический битрейт сверяют с настройками на объекте.",
+              "За сутки: 64 × 86 400 ÷ 8 = 691 200 МБ, то есть около 691 ГБ (21,6 ГБ на одну камеру).",
+              "За 30 дней: 691 ГБ × 30 ≈ 20,7 ТБ.",
+              "Ёмкость в примере: 4 диска × 6 ТБ = 24 ТБ, то есть 24 ÷ 0,691 ≈ 34 дня записи.",
+              "Проверка регистратора: 64 Мбит/с при допустимых 256 Мбит/с — запас по входящему потоку есть."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "Почему диск 8 ТБ дороже за терабайт и какой объём выбрать?",
+            "p": [
+              "Цена диска растёт с ёмкостью неравномерно. По каталогу на 09.11.2026 терабайт в дисках на 4 и 6 ТБ стоит почти одинаково, а в диске на 8 ТБ — в 1,6 раза дороже.",
+              "Четыре диска по 8 ТБ стоят 23 263 600 сум против 10 887 600 за четыре по 6 ТБ: дополнительные 8 ТБ (12 суток архива) обходятся в 12 376 000 сум. Если месяц архива укладывается в 24 ТБ, выгоднее брать диски на 6 ТБ. Прежде чем выбрать диски на 8 ТБ, по документации производителя проверяют максимальный объём диска, который поддерживает конкретный регистратор.",
+              "Ограничение — число отсеков. У регистратора DS-7732NI-K4 их четыре, поэтому максимальный архив равен «4 × объём диска»; максимальный поддерживаемый объём одного диска смотрят в документации производителя. Если нужно больше, варианты такие: регистратор с бо́льшим числом отсеков, второй регистратор на часть камер или снижение битрейта. Диски берут только серии для видеонаблюдения — они рассчитаны на круглосуточную запись нескольких потоков; подробнее о расчёте — в статье о выборе диска для видеонаблюдения."
+            ],
+            "table": {
+              "head": [
+                "Диск",
+                "Цена, сум",
+                "Цена за 1 ТБ",
+                "4 диска — ёмкость",
+                "Глубина при 64 Мбит/с"
+              ],
+              "rows": [
+                [
+                  "Seagate SkyHawk 4 ТБ",
+                  "1 768 900",
+                  "≈442 тыс.",
+                  "16 ТБ",
+                  "≈23 дня"
+                ],
+                [
+                  "Seagate SkyHawk 6 ТБ",
+                  "2 721 900",
+                  "≈454 тыс.",
+                  "24 ТБ",
+                  "≈34 дня"
+                ],
+                [
+                  "Seagate SkyHawk 8 ТБ",
+                  "5 815 900",
+                  "≈727 тыс.",
+                  "32 ТБ",
+                  "≈46 дней"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Сколько стоит сеть и почему важен лимит 100 метров?",
+            "p": [
+              "Сеть в примере — 10 837 200 сум, или 12,7 % бюджета: два коммутатора по 24 PoE-порта и кабель. На каждый коммутатор приходится 16 камер, ещё 8 портов остаются в запасе, а два оптических порта SFP позволяют связать коммутаторы с серверной или с выносными шкафами по оптике.",
+              "Бюджет PoE у выбранного коммутатора — 370 Вт на все порты. Перед закупкой суммируют максимальное потребление камер по документации производителя — ночью, с включённой ИК-подсветкой, оно выше дневного — и оставляют запас. Так коммутатор не отключает порты в самый неудобный момент. Проверка для примера: на первом коммутаторе 16 купольных камер — около 104 Вт, на втором 8 купольных и 8 уличных — около 152 Вт; оба значения с большим запасом укладываются в 370 Вт.",
+              "Витая пара по стандарту Ethernet рассчитана на расстояние до 100 м от порта коммутатора до камеры. Дальние точки — ворота, угол забора, соседний корпус — подключают через выносной коммутатор в промежуточном шкафу с оптическим каналом до серверной. На больших складах и производствах коммутаторы ставят ближе к группам камер: трассы короче, а магистраль по оптике дешевле десятков длинных медных линий. Камеры выносят в отдельную виртуальную сеть (VLAN), чтобы офисные компьютеры их не видели, — об этом подробно в статье о защите IP-камер от взлома."
+            ]
+          },
+          {
+            "h": "Почему прокладка кабеля стоит больше монтажа камер?",
+            "p": [
+              "В примере прокладка кабеля — 11 520 000 сум из 19 764 000, то есть 58 % всех работ, тогда как монтаж всех 32 камер — 5 160 000 сум. Внутри здания расценка — 7 000 сум за метр, по фасаду и улице — 10 000 сум; в примере по уличной расценке посчитаны линии к 8 уличным камерам (480 м). Но главное не в расценке: длина трасс на большом объекте растёт быстрее числа камер — каждая новая камера стоит дальше от шкафа, чем предыдущая.",
+              "Стоимость трасс меняют условия здания. Готовые кабельные лотки или подвесной потолок упрощают прокладку; открытые стены и потолки требуют гофры или кабель-канала; большая высота цеха требует подъёмных средств; уличные участки по фасаду и между корпусами — защищённого кабеля и крепежа. Поэтому две системы с одинаковым числом камер могут отличаться по работам в разы.",
+              "Снизить эту статью помогают три решения: поставить коммутаторы ближе к группам камер, использовать существующие лотки и проложить трассы видеонаблюдения вместе с другими слаботочными системами здания — локальной сетью и контролем доступа — в общих каналах."
+            ]
+          },
+          {
+            "h": "Что увеличивает и что снижает бюджет без потери качества?",
+            "p": [
+              "На трёх вещах экономить нельзя. Диски — только серии для видеонаблюдения: компьютерные диски не рассчитаны на круглосуточную запись. ИБП — при перебое питания регистратор и коммутаторы продолжают работу, а запись не прерывается. Исполнительная документация — схема, список оборудования с серийными номерами, сетевые адреса и учётные записи: так мы сдаём систему, комплект передаём заказчику под подпись. Без неё любое расширение начинается с обследования."
+            ],
+            "ol": [
+              "Разделите зоны на обзорные и идентификационные. Для залов и проходов достаточно 4 Мп с объективом 2,8 мм; для лиц на проходной и номеров на въезде ставят отдельные камеры с подходящим объективом в нужной точке, а не повышают разрешение всем камерам.",
+              "Берите 4 Мп вместо 8 Мп там, где этого хватает: поток и архив меньше, диски дешевле.",
+              "Включайте запись по движению или по событиям аналитики (например, AcuSense — фильтр «человек/машина») в зонах без постоянной активности: архив растёт медленнее.",
+              "Выбирайте диски на 6 ТБ вместо 8 ТБ, если отсеков хватает: терабайт дешевле в 1,6 раза.",
+              "Закладывайте запас портов сразу: два коммутатора на 24 порта в примере оставляют свободными 16 портов из 48. Регистратор на 32 канала в примере занят полностью, поэтому, если ожидается рост, запас каналов закладывают при выборе регистратора.",
+              "Стройте систему поэтапно: сначала периметр, въезд и зоны ценностей, затем остальное — по той же схеме и на том же оборудовании."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Как получить точную смету под свой объект?",
+            "p": [
+              "Первую оценку даёт калькулятор на сайте. План или спецификацию можно отправить через страницу «Поставки и тендеры» или на sales@satsolutions.uz. Смета возвращается в той же структуре, что и пример выше: оборудование построчно, работы по расценкам, расходные материалы отдельной строкой — так видно, за что именно вы платите. Пришлите ТЗ — подготовим КП со спецификацией и ведомостью работ в течение 24 часов."
+            ],
+            "ol": [
+              "Подготовьте поэтажный план или схему территории и отметьте зоны наблюдения.",
+              "Для каждой зоны укажите задачу: общий обзор, распознавание лица или номера автомобиля.",
+              "Назовите требуемую глубину архива и режим записи; если глубина задана нормой или внутренним регламентом, укажите документ.",
+              "Опишите условия: есть ли лотки и подвесной потолок, где будет шкаф, есть ли резервное питание.",
+              "Укажите высоты монтажа и уличные участки.",
+              "Перечислите требования к платформе: один бренд, связка с контролем доступа, просмотр с телефона, несколько площадок."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "О компании",
+            "p": [],
+            "ul": [
+              "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION», ИНН 308603912. Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
+              "Видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные: поставка оборудования и монтаж; монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
+              "Документы: разрешение Национальной гвардии № 1554491 (монтаж, наладка и техобслуживание технических средств охраны); разрешение МЧС № 913518 от 23.07.2025 (монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения) — оба в уведомительном порядке по ПКМ № 88 от 25.02.2022.",
+              "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет.",
+              "Каталог satsolutions.uz: более 2 500 позиций; цены в сумах с НДС — работаем с НДС. Собственный склад в Ташкенте, ходовые позиции в наличии. Электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота.",
+              "Все цены в статье — каталог и расценки satsolutions.uz: оборудование на 09.11.2026 (оборудование сметы перепроверено 10.11.2026), расходные материалы и расценка на прокладку по фасаду — на 10.11.2026."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Сколько стоит видеонаблюдение на 32 камеры для предприятия?",
+            "a": "По ценам каталога satsolutions.uz на 10.11.2026 и расценкам на работы — около 85,1 млн сум: 63,1 млн оборудование, 2,2 млн расходные материалы и 19,8 млн работы, для 32 камер 4 Мп с архивом около месяца. Кабельные лотки, крепёж и особые условия монтажа считаются после осмотра."
+          },
+          {
+            "q": "Сколько стоит одна камера в такой системе?",
+            "a": "Около 2,66 млн сум на точку, если разделить всю смету — камеры, регистратор, диски, сеть, ИБП, расходные материалы и работы — на 32 камеры. Сама купольная камера 4 Мп в примере стоит 890 900 сум, уличная — 1 174 900 сум."
+          },
+          {
+            "q": "Сколько терабайт нужно на 32 камеры на месяц?",
+            "a": "Около 20,7 ТБ при 2 Мбит/с на камеру (4 Мп, H.265, постоянная запись) и около 41,5 ТБ при 4 Мбит/с. Формула: число камер × битрейт × 86 400 × дни ÷ 8 ÷ 1 000 000."
+          },
+          {
+            "q": "Что дороже — оборудование или монтаж?",
+            "a": "Оборудование: вместе с расходными материалами в примере это около 76,8 % бюджета, работы — около 23,2 %. Внутри работ 58 % приходится на прокладку кабеля, поэтому длина трасс влияет на смету сильнее, чем число камер."
+          },
+          {
+            "q": "Можно ли хранить архив в облаке вместо дисков?",
+            "a": "Технически можно, но месяц записи с 32 камер — это более 20 ТБ и постоянный исходящий канал. По ст. 27-1 закона ЗРУ-547 (в ред. ЗРУ-1125 от 26.03.2026) биометрические данные, например шаблоны лиц в СКУД, хранятся только в Узбекистане; для обычной видеозаписи прямого указания нет, но надёжнее держать архив на регистраторе в здании или на сервере в республике — это не норма закона, а совет практиков."
+          },
+          {
+            "q": "Можно ли собрать такую систему на Dahua?",
+            "a": "Да, структура сметы та же: камеры, регистратор на 32 канала (например, DHI-NVR5232-EI за 3 394 900 сум), диски, PoE-коммутаторы и работы по тем же расценкам. Как выбрать бренд под объект, мы разбираем в отдельной статье о Hikvision и Dahua."
+          },
+          {
+            "q": "Какая гарантия на систему?",
+            "a": "На монтажные работы — 3 года, на оборудование — гарантия производителя от 1 до 3 лет в зависимости от модели."
+          }
+        ]
+      },
+      "uz": {
+        "title": "Korxona uchun 32 kamerali videokuzatuv qancha turadi va byudjet nimalardan tashkil topadi?",
+        "seoTitle": "Korxona uchun 32 kamerali videokuzatuv: byudjet 2026",
+        "seoDesc": "10.11.2026 katalog narxlarida 32 ta 4 Mp kamera ≈85,1 mln soʻm. Kamera, disk, tarmoq va ishlar ulushi, arxiv formulasi va tejash yoʻllari.",
+        "excerpt": "Korxonaning 32 kamerali videokuzatuv smetasini 10.11.2026 dagi katalog narxlarida tahlil qilamiz: kamera, disk, tarmoq, sarf materiallari va ishlar ulushi, arxiv formulasi, terabayt narxi, UPS ishlash vaqti va sifatni yoʻqotmasdan byudjetni kamaytirish yoʻllari.",
+        "summary": [
+          "satsolutions.uz katalogining 10.11.2026 holatidagi narxlari va bizning ish narxlarimiz boʻyicha 4 Mp li 32 ta IP-kamera va taxminan bir oylik arxivga ega tizim taxminan 85,1 mln soʻm turadi: uskunalar — taxminan 63,1 mln, sarf materiallari — taxminan 2,2 mln, ishlar — taxminan 19,8 mln.",
+          "Eng katta moddalar — kameralar (taxminan 36 %), arxiv uchun disklar (taxminan 13 %) va tarmoq (taxminan 13 %), ishlarning yarmidan koʻpi (58 %) esa kabel yotqizishga toʻgʻri keladi.",
+          "Byudjetni eng koʻp oʻzgartiradigan omil — arxiv chuqurligi bilan kameralar bitreytining koʻpaytmasi."
+        ],
+        "sections": [
+          {
+            "h": "Korxona videokuzatuvi byudjeti qanday qismlardan iborat?",
+            "p": [
+              "Videokuzatuv tizimi byudjeti olti guruhdan tashkil topadi: kameralar; videoregistrator (NVR) yoki server; arxiv uchun disklar; tarmoq — PoE-kommutatorlar va kabel; elektr taʼminoti va shkaf — UPS hamda telekommunikatsiya shkafi; ishlar — montaj, trassa yotqizish, ishga tushirish-sozlash ishlari va masofaviy kirishni sozlash. Sarf materiallari — patch-panellar, patch-kordlar, konnektorlar, gofra, lotoklar va mahkamlagichlar — alohida hisoblanadi. Quyidagi misolda patch-panellar, patch-kordlar, konnektorlar va gofra katalog narxlari boʻyicha taxminiy hisoblangan, lotoklar va mahkamlagichlar esa bino koʻrikdan oʻtkazilgandan keyin kabel trassalari loyihasi boʻyicha hisoblanadi.",
+              "Smetani tushunish uchun uchta atama kerak. Bitreyt — bitta kameraning videooqimi hajmi, sekundiga megabitlarda; arxiv uchun necha terabayt kerakligi shunga bogʻliq. Arxiv chuqurligi — yozuv aylanma tarzda ustidan yozilgunga qadar necha sutka saqlanishi. PoE (Power over Ethernet) — kamerani video uzatiladigan oʻsha oʻralgan juftlik kabeli orqali quvvatlantirish, shuning uchun har bir kameraga bitta kabel tortiladi.",
+              "Quyida 32 kamerali odatiy obyekt uchun moddalar ulushi keltirilgan (toʻliq hisob keyingi boʻlimda).",
+              "Odatda eng koʻp bahs videoregistrator atrofida boʻladi, ammo u byudjetning atigi 3 foizga yaqinini tashkil etadi. Disklar registratordan toʻrt baravardan koʻproq, UPS va shkaf esa uch baravardan koʻproq qimmat. Shuning uchun «registratorda tejash» yakuniy summani deyarli oʻzgartirmaydi, arxiv chuqurligi boʻyicha qaror esa sezilarli oʻzgartiradi. Barcha uskunalar, sarf materiallari va ishlar bilan birga bitta kameraga taxminan 2,66 mln soʻm toʻgʻri keladi — turli hajmdagi takliflarni shu koʻrsatkich bilan solishtirish qulay."
+            ],
+            "table": {
+              "head": [
+                "Modda",
+                "Summa, soʻm",
+                "Ulush"
+              ],
+              "rows": [
+                [
+                  "Kameralar (32 dona)",
+                  "30 780 800",
+                  "36,2 %"
+                ],
+                [
+                  "Arxiv uchun disklar (4 × 6 TB)",
+                  "10 887 600",
+                  "12,8 %"
+                ],
+                [
+                  "Tarmoq: PoE-kommutatorlar va kabel",
+                  "10 837 200",
+                  "12,7 %"
+                ],
+                [
+                  "Shkaf va UPS",
+                  "8 161 800",
+                  "9,6 %"
+                ],
+                [
+                  "32 kanalli videoregistrator",
+                  "2 474 900",
+                  "2,9 %"
+                ],
+                [
+                  "Sarf materiallari (taxminiy)",
+                  "2 208 580",
+                  "2,6 %"
+                ],
+                [
+                  "Ishlar",
+                  "19 764 000",
+                  "23,2 %"
+                ],
+                [
+                  "Jami",
+                  "85 114 880",
+                  "100 %"
+                ]
+              ],
+              "at": 3
+            }
+          },
+          {
+            "h": "Misol: katalog narxlarida 32 kamerali tizim qancha turadi?",
+            "p": [
+              "Obyekt — ombor yoki ishlab chiqarish binosi, konfiguratsiya bunday obyektlar uchun odatiy: zallar va yoʻlaklarda 24 ta ichki gumbazsimon kamera, perimetr, darvoza va rampalarda 8 ta tashqi silindrsimon kamera. Registrator, kommutatorlar va UPS bitta devorga oʻrnatiladigan shkafda turadi. Trassaning oʻrtacha uzunligi ichki kameragacha 40 m, tashqi kameragacha 60 m, jami 960 + 480 = 1 440 m kabel.",
+              "Hammasi boʻlib — 85 114 880 soʻm: uskunalar 63 142 300, sarf materiallari 2 208 580, ishlar 19 764 000. Uskunalar narxi — satsolutions.uz katalogi, 09.11.2026 holatiga, 10.11.2026 da qayta tekshirilgan va oʻzgarmagan; narxlar oʻzgarib turadi. Sarf materiallari narxi — 10.11.2026 dagi katalog, miqdori — bizning bahomiz. Ish narxlari — 09.11.2026 dagi «Videokuzatuv» xizmati sahifasidan; fasad va koʻcha boʻylab kabel yotqizish — metri 10 000 soʻm (10.11.2026 holatiga). 8 ta tashqi kameragacha boʻlgan liniyalar (8 × 60 = 480 m) tashqi narxda, ichki kameralargacha boʻlgan 960 m esa metri 7 000 soʻmdan hisoblangan. Kabel lotoklari va mahkamlagichlar, shuningdek, alohida sharoitlar — katta balandlikda yoki tayyor pardozlangan yuza boʻylab ishlash — obyekt koʻrikdan oʻtkazilgandan keyin trassalar loyihasi boʻyicha hisoblanadi. Oltita oʻram kabel (1 830 m) kesish va shkaf ichidagi ulanishlar uchun zaxira bilan olingan.",
+              "UPS qancha vaqt ishlaydi. Yuklamani Hikvision hujjatlari boʻyicha hisoblaymiz: DS-2CD2143G2-I PoE orqali 6,5 Vt gacha, DS-2CD2T43G2-4I esa 12,5 Vt gacha isteʼmol qiladi, jami 24 × 6,5 + 8 × 12,5 = 256 Vt. Toʻrt diskli registrator va ikki kommutatorning oʻz elektronikasi — bizning taxminimizcha, taxminan 100 Vt; PoE oʻzgartirishdagi yoʻqotishlar bilan jami taxminan 400 Vt chiqadi. 2 kVA li onlayn UPSning ichki batareyasi odatda 4 × 12 V 9 A·soat, yaʼni taxminan 430 Vt·soat; aniq sigʻim UPS pasportidan olinadi. Bunday razryad tokida va invertor FIK hisobga olinganda uning taxminan yarmi — taxminan 215 Vt·soat ishlatiladi. Ishlash vaqti: 215 Vt·soat ÷ 400 Vt ≈ 0,5 soat, yaʼni taxminan 30 daqiqa. 1–2 soatlik avtonom ishlash uchun tashqi batareya bloki ulanadigan UPS tanlanadi.",
+              "Modellar bunday vazifa uchun odatiy namunalar sifatida tanlangan, yagona variant sifatida emas. Xuddi shunday smeta tuzilmasi Dahua uskunalarida ham chiqadi — masalan, 3 394 900 soʻmlik DHI-NVR5232-EI 32 kanalli registratori bilan; moddalar ulushi bunda deyarli oʻzgarmaydi."
+            ],
+            "table": [
+              {
+                "caption": "Uskunalar",
+                "head": [
+                  "Pozitsiya",
+                  "Soni",
+                  "Narxi, soʻm",
+                  "Summa, soʻm"
+                ],
+                "rows": [
+                  [
+                    "Gumbazsimon IP-kamera 4 Mp Hikvision DS-2CD2143G2-I (2,8 mm), IK 30 m gacha, AcuSense, PoE",
+                    "24",
+                    "890 900",
+                    "21 381 600"
+                  ],
+                  [
+                    "Silindrsimon IP-kamera 4 Mp Hikvision DS-2CD2T43G2-4I (2,8 mm), IK 80 m gacha",
+                    "8",
+                    "1 174 900",
+                    "9 399 200"
+                  ],
+                  [
+                    "Hikvision DS-7732NI-K4(STD) registratori: 32 kanal, 4 SATA, kiruvchi oqim 256 Mbit/s, 1.5U",
+                    "1",
+                    "2 474 900",
+                    "2 474 900"
+                  ],
+                  [
+                    "Videokuzatuv uchun disk Seagate SkyHawk 6 TB",
+                    "4",
+                    "2 721 900",
+                    "10 887 600"
+                  ],
+                  [
+                    "PoE-kommutator Hikvision DS-3E1526P-SI-24P2F: 24 PoE + 2 SFP, quvvat byudjeti 370 Vt",
+                    "2",
+                    "4 082 900",
+                    "8 165 800"
+                  ],
+                  [
+                    "Devorga oʻrnatiladigan shkaf 15U 600×600",
+                    "1",
+                    "1 422 900",
+                    "1 422 900"
+                  ],
+                  [
+                    "UPS Pixietech On-line 2 kVA",
+                    "1",
+                    "6 738 900",
+                    "6 738 900"
+                  ],
+                  [
+                    "UTP 5e toifali ichki kabel, 305 m oʻram",
+                    "4",
+                    "432 900",
+                    "1 731 600"
+                  ],
+                  [
+                    "UTP 6 toifali tashqi kabel, 305 m oʻram",
+                    "2",
+                    "469 900",
+                    "939 800"
+                  ],
+                  [
+                    "Uskunalar jami",
+                    "",
+                    "",
+                    "63 142 300"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Sarf materiallari (taxminiy)",
+                "head": [
+                  "Pozitsiya",
+                  "Soni",
+                  "Narxi, soʻm",
+                  "Summa, soʻm"
+                ],
+                "rows": [
+                  [
+                    "Patch-panel 24 port, 5-toifa",
+                    "2",
+                    "234 900",
+                    "469 800"
+                  ],
+                  [
+                    "Patch-kord 6-toifa UTP 0,5 m",
+                    "32",
+                    "20 990",
+                    "671 680"
+                  ],
+                  [
+                    "RJ-45 konnektor 5e toifa (Pixietech)",
+                    "100",
+                    "690",
+                    "69 000"
+                  ],
+                  [
+                    "Gofrlangan shlang 25 mm, 50 m oʻram — trassalarning taxminan uchdan bir qismi uchun",
+                    "9",
+                    "110 900",
+                    "998 100"
+                  ],
+                  [
+                    "Sarf materiallari jami",
+                    "",
+                    "",
+                    "2 208 580"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Ishlar",
+                "head": [
+                  "Ish",
+                  "Soni",
+                  "Narx, soʻm",
+                  "Summa, soʻm"
+                ],
+                "rows": [
+                  [
+                    "Ichki kamera montaji",
+                    "24",
+                    "155 000",
+                    "3 720 000"
+                  ],
+                  [
+                    "Tashqi kamera montaji",
+                    "8",
+                    "180 000",
+                    "1 440 000"
+                  ],
+                  [
+                    "Kamerani sozlash va ishga tushirish",
+                    "32",
+                    "77 000",
+                    "2 464 000"
+                  ],
+                  [
+                    "Registratorni oʻrnatish va sozlash (16 tadan ortiq kamera)",
+                    "1",
+                    "450 000",
+                    "450 000"
+                  ],
+                  [
+                    "Telefondan masofaviy kirishni sozlash",
+                    "1",
+                    "170 000",
+                    "170 000"
+                  ],
+                  [
+                    "Bino ichida kabel yotqizish, m",
+                    "960",
+                    "7 000",
+                    "6 720 000"
+                  ],
+                  [
+                    "Fasad va koʻcha boʻylab kabel yotqizish, m",
+                    "480",
+                    "10 000",
+                    "4 800 000"
+                  ],
+                  [
+                    "Ishlar jami",
+                    "",
+                    "",
+                    "19 764 000"
+                  ]
+                ],
+                "at": 1
+              }
+            ]
+          },
+          {
+            "h": "Arxiv hajmini qanday hisoblash kerak?",
+            "p": [
+              "Arxiv hajmi quyidagi formula bilan hisoblanadi: V (TB) = N × B × 86 400 × D ÷ 8 ÷ 1 000 000. Bu yerda N — kameralar soni, B — bitta kameraning Mbit/s dagi bitreyti, D — arxiv chuqurligi (kun), 86 400 — bir sutkadagi sekundlar; 8 ga boʻlish bitlarni baytlarga, 1 000 000 ga boʻlish esa megabaytlarni terabaytlarga aylantiradi.",
+              "Misol uchun bosqichma-bosqich hisob:",
+              "Bitreytga beshta omil taʼsir qiladi. Ruxsat: piksel qancha koʻp boʻlsa, oqim shuncha katta. Kodek: H.265 H.264 ga qaraganda tejamkor, H.265+ esa boʻsh zalning harakatsiz tasvirini qoʻshimcha siqadi. Sahna: harakat, barglar, yomgʻir va tungi matritsa shovqini oqimni oshiradi. Kadr chastotasi: sekundiga 25 kadr 12 kadrga qaraganda sezilarli katta hajm beradi. Yozuv rejimi: doimiy yozuv oʻrniga harakat yoki analitika hodisalari boʻyicha yozish sutkaning koʻp qismida hech narsa sodir boʻlmaydigan zonalarda arxivni qisqartiradi. Amaliy qoida — ishga tushirilgandan bir hafta oʻtib registratordagi haqiqiy bitreytni koʻrib, arxivni qayta hisoblash.",
+              "Toʻrt diskdagi RAID 5 arxiv uchun uchta diskning sigʻimini beradi, ammo bitta disk ishdan chiqqanda ham yozuv yoʻqolmaydi. Muayyan registrator RAIDni qoʻllab-quvvatlashi ishlab chiqaruvchi hujjatlari boʻyicha tekshiriladi. Agar arxiv chuqurligi meʼyor bilan belgilangan boʻlsa — masalan, Vazirlar Mahkamasining 21.05.2026 dagi 271-son qaroriga koʻra nodavlat taʼlim tashkilotlari uchun kamida 6 oy, — hisob byudjetdan emas, shu raqamdan boshlanadi."
+            ],
+            "table": {
+              "head": [
+                "Variant",
+                "Umumiy oqim",
+                "Bir sutkada",
+                "24 TB dagi chuqurlik",
+                "30 kun uchun kerak"
+              ],
+              "rows": [
+                [
+                  "Kameraga 2 Mbit/s, RAIDsiz",
+                  "64 Mbit/s",
+                  "≈691 GB",
+                  "≈34 kun",
+                  "≈20,7 TB"
+                ],
+                [
+                  "2 Mbit/s, RAID 5 (foydali 18 TB)",
+                  "64 Mbit/s",
+                  "≈691 GB",
+                  "≈26 kun",
+                  "≈20,7 TB"
+                ],
+                [
+                  "Kameraga 4 Mbit/s, RAIDsiz",
+                  "128 Mbit/s",
+                  "≈1,38 TB",
+                  "≈17 kun",
+                  "≈41,5 TB"
+                ],
+                [
+                  "Kameraga 8 Mbit/s (registrator chegarasi)",
+                  "256 Mbit/s",
+                  "≈2,76 TB",
+                  "≈9 kun",
+                  "≈82,9 TB"
+                ]
+              ],
+              "at": 2
+            },
+            "ol": [
+              "Umumiy oqim: 32 kamera × 2 Mbit/s = 64 Mbit/s. 2 Mbit/s — doimiy yozuvda H.265 kodekli 4 Mp kamera uchun odatiy sozlama; hisobni shu qiymat bilan olib boramiz, haqiqiy bitreyt esa obyektdagi sozlamalar bilan solishtiriladi.",
+              "Bir sutkada: 64 × 86 400 ÷ 8 = 691 200 MB, yaʼni taxminan 691 GB (bitta kamera uchun 21,6 GB).",
+              "30 kunda: 691 GB × 30 ≈ 20,7 TB.",
+              "Misoldagi sigʻim: 4 disk × 6 TB = 24 TB, yaʼni 24 ÷ 0,691 ≈ 34 kunlik yozuv.",
+              "Registratorni tekshirish: ruxsat etilgan 256 Mbit/s ga nisbatan 64 Mbit/s — kiruvchi oqim boʻyicha zaxira bor."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "Nega 8 TB disk terabayt hisobida qimmatroq va qaysi hajmni tanlash kerak?",
+            "p": [
+              "Disk narxi sigʻimga qarab notekis oshadi. 09.11.2026 dagi katalog boʻyicha 4 va 6 TB disklarda bir terabayt deyarli bir xil turadi, 8 TB diskda esa 1,6 baravar qimmat.",
+              "8 TB li toʻrtta disk 23 263 600 soʻm, 6 TB li toʻrttasi esa 10 887 600 soʻm turadi: qoʻshimcha 8 TB (12 sutkalik arxiv) 12 376 000 soʻmga tushadi. Agar bir oylik arxiv 24 TB ga sigʻsa, 6 TB li disklarni olish foydaliroq. 8 TB li disklarni tanlashdan oldin muayyan registrator qoʻllab-quvvatlaydigan maksimal disk hajmi ishlab chiqaruvchi hujjatlari boʻyicha tekshiriladi.",
+              "Cheklov — disk joylari soni. DS-7732NI-K4 registratorida ular toʻrtta, shuning uchun maksimal arxiv «4 × disk hajmi»ga teng; bitta diskning qoʻllab-quvvatlanadigan maksimal hajmi ishlab chiqaruvchi hujjatlarida koʻrsatiladi. Koʻproq kerak boʻlsa, variantlar: disk joylari koʻproq registrator, kameralarning bir qismi uchun ikkinchi registrator yoki bitreytni pasaytirish. Faqat videokuzatuv seriyasidagi disklar olinadi — ular bir nechta oqimni kecha-kunduz yozishga moʻljallangan; hisob haqida batafsil — videokuzatuv uchun disk tanlash haqidagi maqolada."
+            ],
+            "table": {
+              "head": [
+                "Disk",
+                "Narxi, soʻm",
+                "1 TB narxi",
+                "4 disk — sigʻim",
+                "64 Mbit/s da chuqurlik"
+              ],
+              "rows": [
+                [
+                  "Seagate SkyHawk 4 TB",
+                  "1 768 900",
+                  "≈442 ming",
+                  "16 TB",
+                  "≈23 kun"
+                ],
+                [
+                  "Seagate SkyHawk 6 TB",
+                  "2 721 900",
+                  "≈454 ming",
+                  "24 TB",
+                  "≈34 kun"
+                ],
+                [
+                  "Seagate SkyHawk 8 TB",
+                  "5 815 900",
+                  "≈727 ming",
+                  "32 TB",
+                  "≈46 kun"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Tarmoq qancha turadi va nega 100 metr chegarasi muhim?",
+            "p": [
+              "Misoldagi tarmoq — 10 837 200 soʻm yoki byudjetning 12,7 foizi: 24 PoE-portli ikkita kommutator va kabel. Har bir kommutatorga 16 ta kamera ulanadi, yana 8 ta port zaxirada qoladi, ikkita SFP optik porti esa kommutatorlarni server xonasi yoki tashqi shkaflar bilan optika orqali bogʻlash imkonini beradi.",
+              "Tanlangan kommutatorning PoE byudjeti — barcha portlar uchun 370 Vt. Xariddan oldin ishlab chiqaruvchi hujjatlari boʻyicha kameralarning maksimal isteʼmoli jamlanadi — kechasi IK yoritgich yoqilganda u kunduzgidan yuqori — va zaxira qoldiriladi. Shunda kommutator eng noqulay paytda portlarni oʻchirib qoʻymaydi. Misol uchun tekshiruv: birinchi kommutatorda 16 ta gumbazsimon kamera — taxminan 104 Vt, ikkinchisida 8 ta gumbazsimon va 8 ta silindrsimon kamera — taxminan 152 Vt; ikkalasi ham 370 Vt ichiga katta zaxira bilan sigʻadi.",
+              "Ethernet standartiga koʻra oʻralgan juftlik kabeli kommutator portidan kameragacha 100 m masofaga moʻljallangan. Uzoq nuqtalar — darvoza, devor burchagi, qoʻshni bino — server xonasigacha optik kanalga ega oraliq shkafdagi tashqi kommutator orqali ulanadi. Katta omborlar va ishlab chiqarish obyektlarida kommutatorlar kameralar guruhiga yaqinroq oʻrnatiladi: trassalar qisqaradi, optik magistral esa oʻnlab uzun mis liniyalardan arzonroq. Kameralar alohida virtual tarmoqqa (VLAN) chiqariladi, toki ofis kompyuterlari ularni koʻrmasin — bu haqda IP-kameralarni buzib kirishdan himoya qilish haqidagi maqolada batafsil."
+            ]
+          },
+          {
+            "h": "Nega kabel yotqizish kameralar montajidan qimmat?",
+            "p": [
+              "Misolda kabel yotqizish 19 764 000 soʻmdan 11 520 000 soʻmni, yaʼni barcha ishlarning 58 foizini tashkil etadi, 32 ta kameraning hammasini oʻrnatish esa 5 160 000 soʻm. Bino ichida narx metri 7 000 soʻm, fasad va koʻcha boʻylab — 10 000 soʻm; misolda 8 ta tashqi kameragacha boʻlgan liniyalar (480 m) tashqi narxda hisoblangan. Ammo asosiy omil narxda emas: katta obyektda trassalar uzunligi kameralar sonidan tezroq oʻsadi — har bir yangi kamera shkafdan oldingisiga qaraganda uzoqroqda turadi.",
+              "Trassalar narxini bino sharoitlari oʻzgartiradi. Tayyor kabel lotoklari yoki osma shift yotqizishni osonlashtiradi; ochiq devor va shiftlar gofra yoki kabel-kanalni talab qiladi; sexning katta balandligi koʻtarish vositalarini talab qiladi; fasad boʻylab va binolar orasidagi tashqi uchastkalar — himoyalangan kabel va mahkamlagich. Shuning uchun kameralar soni bir xil boʻlgan ikki tizim ishlar boʻyicha bir necha baravar farq qilishi mumkin.",
+              "Bu moddani kamaytirishga uchta yechim yordam beradi: kommutatorlarni kameralar guruhiga yaqinroq qoʻyish, mavjud lotoklardan foydalanish va videokuzatuv trassalarini binoning boshqa kam tokli tizimlari — mahalliy tarmoq va kirishni nazorat qilish tizimi bilan umumiy kanallarda yotqizish."
+            ]
+          },
+          {
+            "h": "Byudjetni nima oshiradi va sifatni yoʻqotmasdan nima kamaytiradi?",
+            "p": [
+              "Uchta narsada tejab boʻlmaydi. Disklar — faqat videokuzatuv seriyasidan: kompyuter disklari kecha-kunduz yozishga moʻljallanmagan. UPS — elektr uzilganda registrator va kommutatorlar ishlashda davom etadi, yozuv toʻxtamaydi. Ijro hujjatlari — sxema, seriya raqamlari bilan uskunalar roʻyxati, tarmoq manzillari va hisob qaydnomalari: tizimni biz shunday topshiramiz — hujjatlar toʻplami buyurtmachiga imzo qoʻydirilib beriladi. Ularsiz har qanday kengaytirish tekshiruvdan boshlanadi."
+            ],
+            "ol": [
+              "Zonalarni umumiy kuzatuv va identifikatsiya zonalariga ajrating. Zal va yoʻlaklar uchun 2,8 mm obyektivli 4 Mp yetarli; nazorat-oʻtkazish punktidagi yuzlar va kirishdagi avtomobil raqamlari uchun barcha kameralar ruxsatini oshirish oʻrniga kerakli nuqtaga mos obyektivli alohida kameralar qoʻyiladi.",
+              "Yetarli boʻlgan joylarda 8 Mp oʻrniga 4 Mp oling: oqim va arxiv kichikroq, disklar arzonroq.",
+              "Doimiy faollik boʻlmagan zonalarda harakat yoki analitika hodisalari boʻyicha yozuvni yoqing (masalan, AcuSense — «odam/mashina» filtri): arxiv sekinroq oʻsadi.",
+              "Disk joylari yetarli boʻlsa, 8 TB oʻrniga 6 TB li disklarni tanlang: terabayt 1,6 baravar arzon.",
+              "Portlar zaxirasini darhol koʻzda tuting: misoldagi 24 portli ikkita kommutator 48 portdan 16 tasini boʻsh qoldiradi. Misoldagi 32 kanalli registrator toʻliq band, shuning uchun oʻsish kutilsa, kanallar zaxirasi registratorni tanlashda koʻzda tutiladi.",
+              "Tizimni bosqichma-bosqich quring: avval perimetr, kirish va qimmatbaho buyumlar zonalari, keyin qolganlari — oʻsha sxema va oʻsha uskunalarda."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Oʻz obyektingiz uchun aniq smetani qanday olish mumkin?",
+            "p": [
+              "Birinchi baholashni saytdagi kalkulyator beradi. Reja yoki spetsifikatsiyani «Yetkazib berish va tenderlar» sahifasi orqali yoki sales@satsolutions.uz manziliga yuborish mumkin. Smeta yuqoridagi misol bilan bir xil tuzilmada qaytariladi: uskunalar qatorma-qator, ishlar narxlar boʻyicha, sarf materiallari alohida qatorda — shunday qilib nima uchun pul toʻlayotganingiz aniq koʻrinadi. Texnik topshiriqni yuboring — 24 soat ichida spetsifikatsiya va ishlar qaydnomasi bilan tijorat taklifini tayyorlaymiz."
+            ],
+            "ol": [
+              "Qavatlar rejasi yoki hudud sxemasini tayyorlang va kuzatuv zonalarini belgilang.",
+              "Har bir zona uchun vazifani koʻrsating: umumiy kuzatuv, yuzni yoki avtomobil raqamini aniqlash.",
+              "Kerakli arxiv chuqurligi va yozuv rejimini ayting; agar chuqurlik meʼyor yoki ichki reglament bilan belgilangan boʻlsa, hujjatni koʻrsating.",
+              "Sharoitlarni tasvirlang: lotoklar va osma shift bormi, shkaf qayerda boʻladi, zaxira elektr taʼminoti bormi.",
+              "Montaj balandliklari va tashqi uchastkalarni koʻrsating.",
+              "Platformaga talablarni sanab oʻting: bitta brend, kirishni nazorat qilish tizimi bilan bogʻlash, telefondan koʻrish, bir nechta maydon."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Kompaniya haqida",
+            "p": [],
+            "ul": [
+              "SAT Solutions — «SUPPLY AND TRANSPORTATION» MCHJ brendi, STIR 308603912. Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
+              "Videokuzatuv, kirishni nazorat qilish tizimi va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofon, SKS va LVS, Wi-Fi, optika, server xonalari: uskunalarni yetkazib berish va oʻrnatish; montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
+              "Hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi (qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish); FVVning 23.07.2025 dagi 913518-son ruxsatnomasi (yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish) — ikkalasi ham Vazirlar Mahkamasining 25.02.2022 dagi 88-son qaroriga muvofiq xabardor qilish tartibida.",
+              "Montaj ishlariga 3 yil kafolat; uskunalarga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati.",
+              "satsolutions.uz katalogi: 2 500 dan ortiq pozitsiya; narxlar soʻmda, QQS bilan — QQS bilan ishlaymiz. Toshkentda oʻz omborimiz bor, koʻp soʻraladigan pozitsiyalar mavjud. Elektron hisob-fakturalarni (ESF) elektron hujjat almashinuvi operatori orqali rasmiylashtiramiz.",
+              "Maqoladagi barcha narxlar — satsolutions.uz katalogi va ish narxlari: uskunalar 09.11.2026 holatiga (smetadagi uskunalar 10.11.2026 da qayta tekshirilgan), sarf materiallari va fasad boʻylab kabel yotqizish narxi — 10.11.2026 holatiga."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Korxona uchun 32 kamerali videokuzatuv qancha turadi?",
+            "a": "satsolutions.uz katalogining 10.11.2026 dagi narxlari va ish narxlari boʻyicha — taxminan 85,1 mln soʻm: 63,1 mln uskunalar, 2,2 mln sarf materiallari va 19,8 mln ishlar, taxminan bir oylik arxivli 32 ta 4 Mp kamera uchun. Kabel lotoklari, mahkamlagichlar va montajning alohida sharoitlari koʻrikdan keyin hisoblanadi."
+          },
+          {
+            "q": "Bunday tizimda bitta kamera qancha turadi?",
+            "a": "Butun smeta — kameralar, registrator, disklar, tarmoq, UPS, sarf materiallari va ishlar — 32 kameraga boʻlinsa, bir nuqtaga taxminan 2,66 mln soʻm. Misoldagi 4 Mp gumbazsimon kameraning oʻzi 890 900 soʻm, tashqi kamera — 1 174 900 soʻm."
+          },
+          {
+            "q": "32 kamera uchun bir oyga necha terabayt kerak?",
+            "a": "Kameraga 2 Mbit/s da (4 Mp, H.265, doimiy yozuv) taxminan 20,7 TB, 4 Mbit/s da esa taxminan 41,5 TB. Formula: kameralar soni × bitreyt × 86 400 × kunlar ÷ 8 ÷ 1 000 000."
+          },
+          {
+            "q": "Nima qimmatroq — uskunami yoki montajmi?",
+            "a": "Uskuna: sarf materiallari bilan birga misolda u byudjetning taxminan 76,8 foizi, ishlar — taxminan 23,2 foizi. Ishlar ichida 58 foiz kabel yotqizishga toʻgʻri keladi, shuning uchun trassalar uzunligi smetaga kameralar sonidan koʻra kuchliroq taʼsir qiladi."
+          },
+          {
+            "q": "Arxivni disklar oʻrniga bulutda saqlash mumkinmi?",
+            "a": "Texnik jihatdan mumkin, ammo 32 kameradan bir oylik yozuv — 20 TB dan ortiq va doimiy chiquvchi kanal. OʻRQ-547-son Qonunning 27-1-moddasiga koʻra (26.03.2026 dagi OʻRQ-1125-son Qonun tahririda) biometrik maʼlumotlar, masalan SKUDdagi yuz shablonlari, faqat Oʻzbekistonda saqlanadi; oddiy videoyozuv uchun toʻgʻridan-toʻgʻri koʻrsatma yoʻq, lekin arxivni binodagi registratorda yoki respublikadagi serverda saqlash ishonchliroq — bu qonun normasi emas, amaliyotchilar maslahati."
+          },
+          {
+            "q": "Bunday tizimni Dahua uskunalarida yigʻish mumkinmi?",
+            "a": "Ha, smeta tuzilmasi bir xil: kameralar, 32 kanalli registrator (masalan, 3 394 900 soʻmlik DHI-NVR5232-EI), disklar, PoE-kommutatorlar va oʻsha narxlardagi ishlar. Obyekt uchun brendni qanday tanlash haqida Hikvision va Dahua toʻgʻrisidagi alohida maqolada yozganmiz."
+          },
+          {
+            "q": "Tizimga qanday kafolat beriladi?",
+            "a": "Montaj ishlariga — 3 yil, uskunalarga — modelga qarab ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati."
+          }
+        ]
+      },
+      "en": {
+        "title": "How much does video surveillance cost for a 32-camera business, and what makes up the budget?",
+        "seoTitle": "CCTV Cost for a 32-Camera Business in Tashkent (2026)",
+        "seoDesc": "A 32-camera 4 MP system at 10 Nov 2026 catalog prices: ≈85.1 million UZS. Shares of cameras, storage, network and labour, archive formula, where to save.",
+        "excerpt": "We break down a 32-camera CCTV estimate for a business at catalog prices of 10 November 2026: shares of cameras, disks, network, consumables and labour, the archive formula, price per terabyte, UPS runtime and ways to cut the budget without losing quality.",
+        "summary": [
+          "At satsolutions.uz catalog prices as of 10 November 2026 and our labour rates, a system of 32 IP cameras at 4 MP with about one month of archive costs roughly 85.1 million UZS: about 63.1 million for equipment, about 2.2 million for consumables and about 19.8 million for works.",
+          "The largest lines are cameras (about 36%), archive disks (about 13%) and the network (about 13%), and more than half of the works (58%) is cable laying.",
+          "What moves the budget most is archive depth multiplied by camera bitrate."
+        ],
+        "sections": [
+          {
+            "h": "What parts make up a business CCTV budget?",
+            "p": [
+              "A video surveillance budget consists of six groups: cameras; a network video recorder (NVR) or server; archive disks; the network — PoE switches and cable; power and enclosure — a UPS and a network cabinet; and works — installation, cable routes, commissioning and remote-access setup. Consumables — patch panels, patch cords, connectors, corrugated conduit, cable trays and fixings — are counted separately. In the example below, patch panels, patch cords, connectors and conduit are included as an estimate at catalog prices, while cable trays and fixings are priced from the cable-route design after a site survey.",
+              "Three terms are needed to read an estimate. Bitrate is the size of one camera's video stream in megabits per second; it determines how many terabytes the archive needs. Archive depth is how many days of recording are kept before they are overwritten in a loop. PoE (Power over Ethernet) means the camera is powered over the same twisted pair that carries video, so each camera needs a single cable.",
+              "Below are the shares for a typical 32-camera site (the full calculation is in the next section).",
+              "The recorder, which usually attracts the most debate, is only about 3% of the budget. The disks cost more than four times as much as the recorder, and the UPS with the cabinet more than three times. Saving \"on the recorder\" therefore barely changes the total, while the decision on archive depth changes it noticeably. Per camera, the system costs about 2.66 million UZS including all equipment, consumables and works — a convenient figure for comparing proposals of different size."
+            ],
+            "table": {
+              "head": [
+                "Line",
+                "Amount, UZS",
+                "Share"
+              ],
+              "rows": [
+                [
+                  "Cameras (32 pcs)",
+                  "30 780 800",
+                  "36.2%"
+                ],
+                [
+                  "Archive disks (4 × 6 TB)",
+                  "10 887 600",
+                  "12.8%"
+                ],
+                [
+                  "Network: PoE switches and cable",
+                  "10 837 200",
+                  "12.7%"
+                ],
+                [
+                  "Cabinet and UPS",
+                  "8 161 800",
+                  "9.6%"
+                ],
+                [
+                  "32-channel recorder",
+                  "2 474 900",
+                  "2.9%"
+                ],
+                [
+                  "Consumables (estimate)",
+                  "2 208 580",
+                  "2.6%"
+                ],
+                [
+                  "Works",
+                  "19 764 000",
+                  "23.2%"
+                ],
+                [
+                  "Total",
+                  "85 114 880",
+                  "100%"
+                ]
+              ],
+              "at": 3
+            }
+          },
+          {
+            "h": "Example: how much does a 32-camera system cost at catalog prices?",
+            "p": [
+              "The site is a warehouse or production building, in a configuration typical for such sites: 24 indoor dome cameras covering halls and aisles and 8 outdoor bullet cameras for the perimeter, gates and loading ramps. The recorder, switches and UPS sit in one wall-mounted cabinet. The average route is 40 m to an indoor camera and 60 m to an outdoor one, giving 960 + 480 = 1 440 m of cable.",
+              "Grand total: 85 114 880 UZS — equipment 63 142 300, consumables 2 208 580, works 19 764 000. Equipment prices are from the satsolutions.uz catalog as of 9 November 2026, re-checked on 10 November 2026 and unchanged; prices change over time. Consumable prices are from the catalog as of 10 November 2026, and the quantities are our estimate. Labour rates are from the \"Video surveillance\" service page as of 9 November 2026; cable laying on façades and outdoors is 10 000 UZS per metre (as of 10 November 2026). The lines to the 8 outdoor cameras (8 × 60 = 480 m) are priced at the outdoor rate, and the 960 m to the indoor cameras at 7 000 UZS per metre. Cable trays and fixings, as well as special conditions such as work at great height or over finished interiors, are priced from the cable-route design after a site survey. Six cable reels (1 830 m) allow a margin for offcuts and cabinet wiring.",
+              "How long the UPS will run. We take the load from Hikvision datasheets: the DS-2CD2143G2-I draws up to 6.5 W over PoE and the DS-2CD2T43G2-4I up to 12.5 W, so 24 × 6.5 + 8 × 12.5 = 256 W. The recorder with four disks and the two switches' own electronics are assumed at about 100 W; with PoE conversion losses, the total comes to about 400 W. The built-in battery of a 2 kVA online UPS is typically 4 × 12 V 9 Ah, about 430 Wh; the exact capacity is taken from the UPS passport. At this discharge rate and with inverter efficiency, about half of it is usable — about 215 Wh. Runtime: 215 Wh ÷ 400 W ≈ 0.5 h, i.e. about 30 minutes. For 1–2 hours of autonomy, a UPS with an external battery pack is chosen.",
+              "The models were chosen as typical for this task, not as the only possible option. The same estimate structure applies to Dahua equipment — for example, with the 32-channel DHI-NVR5232-EI recorder at 3 394 900 UZS; the shares hardly change."
+            ],
+            "table": [
+              {
+                "caption": "Equipment",
+                "head": [
+                  "Item",
+                  "Qty",
+                  "Price, UZS",
+                  "Amount, UZS"
+                ],
+                "rows": [
+                  [
+                    "Dome IP camera 4 MP Hikvision DS-2CD2143G2-I (2.8 mm), IR up to 30 m, AcuSense, PoE",
+                    "24",
+                    "890 900",
+                    "21 381 600"
+                  ],
+                  [
+                    "Bullet IP camera 4 MP Hikvision DS-2CD2T43G2-4I (2.8 mm), IR up to 80 m",
+                    "8",
+                    "1 174 900",
+                    "9 399 200"
+                  ],
+                  [
+                    "Recorder Hikvision DS-7732NI-K4(STD): 32 channels, 4 SATA, 256 Mbps incoming, 1.5U",
+                    "1",
+                    "2 474 900",
+                    "2 474 900"
+                  ],
+                  [
+                    "Surveillance disk Seagate SkyHawk 6 TB",
+                    "4",
+                    "2 721 900",
+                    "10 887 600"
+                  ],
+                  [
+                    "PoE switch Hikvision DS-3E1526P-SI-24P2F: 24 PoE + 2 SFP, 370 W budget",
+                    "2",
+                    "4 082 900",
+                    "8 165 800"
+                  ],
+                  [
+                    "Wall cabinet 15U 600×600",
+                    "1",
+                    "1 422 900",
+                    "1 422 900"
+                  ],
+                  [
+                    "UPS Pixietech On-line 2 kVA",
+                    "1",
+                    "6 738 900",
+                    "6 738 900"
+                  ],
+                  [
+                    "Indoor UTP Cat 5e cable, 305 m reel",
+                    "4",
+                    "432 900",
+                    "1 731 600"
+                  ],
+                  [
+                    "Outdoor UTP Cat 6 cable, 305 m reel",
+                    "2",
+                    "469 900",
+                    "939 800"
+                  ],
+                  [
+                    "Equipment total",
+                    "",
+                    "",
+                    "63 142 300"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Consumables (estimate)",
+                "head": [
+                  "Item",
+                  "Qty",
+                  "Price, UZS",
+                  "Amount, UZS"
+                ],
+                "rows": [
+                  [
+                    "Patch panel, 24 ports, Cat 5",
+                    "2",
+                    "234 900",
+                    "469 800"
+                  ],
+                  [
+                    "Patch cord Cat 6 UTP, 0.5 m",
+                    "32",
+                    "20 990",
+                    "671 680"
+                  ],
+                  [
+                    "RJ-45 connector Cat 5e (Pixietech)",
+                    "100",
+                    "690",
+                    "69 000"
+                  ],
+                  [
+                    "Corrugated conduit 25 mm, 50 m coil — about a third of the routes",
+                    "9",
+                    "110 900",
+                    "998 100"
+                  ],
+                  [
+                    "Consumables total",
+                    "",
+                    "",
+                    "2 208 580"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Works",
+                "head": [
+                  "Work",
+                  "Qty",
+                  "Rate, UZS",
+                  "Amount, UZS"
+                ],
+                "rows": [
+                  [
+                    "Indoor camera installation",
+                    "24",
+                    "155 000",
+                    "3 720 000"
+                  ],
+                  [
+                    "Outdoor camera installation",
+                    "8",
+                    "180 000",
+                    "1 440 000"
+                  ],
+                  [
+                    "Camera setup and commissioning",
+                    "32",
+                    "77 000",
+                    "2 464 000"
+                  ],
+                  [
+                    "Recorder installation and setup (over 16 cameras)",
+                    "1",
+                    "450 000",
+                    "450 000"
+                  ],
+                  [
+                    "Remote access setup for phones",
+                    "1",
+                    "170 000",
+                    "170 000"
+                  ],
+                  [
+                    "Cable laying inside the building, m",
+                    "960",
+                    "7 000",
+                    "6 720 000"
+                  ],
+                  [
+                    "Cable laying on façades and outdoors, m",
+                    "480",
+                    "10 000",
+                    "4 800 000"
+                  ],
+                  [
+                    "Works total",
+                    "",
+                    "",
+                    "19 764 000"
+                  ]
+                ],
+                "at": 1
+              }
+            ]
+          },
+          {
+            "h": "How do you calculate the archive size?",
+            "p": [
+              "The archive size is calculated with the formula V (TB) = N × B × 86 400 × D ÷ 8 ÷ 1 000 000, where N is the number of cameras, B the bitrate of one camera in Mbps, D the archive depth in days and 86 400 the seconds in a day; dividing by 8 converts bits to bytes and dividing by 1 000 000 converts megabytes to terabytes.",
+              "Step-by-step calculation for the example:",
+              "Five things affect bitrate. Resolution: more pixels mean a bigger stream. Codec: H.265 is more efficient than H.264, and H.265+ further compresses the static picture of an empty hall. Scene: motion, foliage, rain and sensor noise at night raise the stream. Frame rate: 25 frames per second produce noticeably more data than 12. Recording mode: recording on motion or on analytics events instead of continuously shrinks the archive in zones where nothing happens most of the day. A practical rule is to check the actual bitrate in the recorder a week after start-up and recalculate the archive.",
+              "RAID 5 on four disks gives the capacity of three to the archive but survives the failure of one disk without losing recordings. Whether a particular recorder supports RAID is checked in the manufacturer's documentation. If the archive depth is set by a regulation — for example, at least 6 months for non-state educational organisations under Cabinet of Ministers Resolution No. 271 of 21 May 2026 — the calculation starts from that figure, not from the budget."
+            ],
+            "table": {
+              "head": [
+                "Option",
+                "Total stream",
+                "Per day",
+                "Depth on 24 TB",
+                "Needed for 30 days"
+              ],
+              "rows": [
+                [
+                  "2 Mbps per camera, no RAID",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈34 days",
+                  "≈20.7 TB"
+                ],
+                [
+                  "2 Mbps, RAID 5 (18 TB usable)",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈26 days",
+                  "≈20.7 TB"
+                ],
+                [
+                  "4 Mbps per camera, no RAID",
+                  "128 Mbps",
+                  "≈1.38 TB",
+                  "≈17 days",
+                  "≈41.5 TB"
+                ],
+                [
+                  "8 Mbps per camera (recorder limit)",
+                  "256 Mbps",
+                  "≈2.76 TB",
+                  "≈9 days",
+                  "≈82.9 TB"
+                ]
+              ],
+              "at": 2
+            },
+            "ol": [
+              "Total stream: 32 cameras × 2 Mbps = 64 Mbps. 2 Mbps is a typical setting for a 4 MP camera with H.265 on continuous recording; we use it in the calculation, and the actual bitrate is checked against the settings on site.",
+              "Per day: 64 × 86 400 ÷ 8 = 691 200 MB, i.e. about 691 GB (21.6 GB per camera).",
+              "For 30 days: 691 GB × 30 ≈ 20.7 TB.",
+              "Capacity in the example: 4 disks × 6 TB = 24 TB, i.e. 24 ÷ 0.691 ≈ 34 days of recording.",
+              "Recorder check: 64 Mbps against the permitted 256 Mbps — there is headroom on incoming bandwidth."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "Why is an 8 TB disk more expensive per terabyte, and which size should you choose?",
+            "p": [
+              "Disk price does not grow evenly with capacity. In the catalog as of 9 November 2026 a terabyte costs almost the same in 4 TB and 6 TB disks, but 1.6 times more in an 8 TB disk.",
+              "Four 8 TB disks cost 23 263 600 UZS against 10 887 600 for four 6 TB disks: the extra 8 TB (12 days of archive) cost 12 376 000 UZS. If a month of archive fits into 24 TB, 6 TB disks are the better buy. Before choosing 8 TB disks, check in the manufacturer's documentation the maximum disk size the specific recorder supports.",
+              "The limit is the number of drive bays. The DS-7732NI-K4 recorder has four, so the maximum archive equals \"4 × disk size\"; the maximum supported size of a single disk is given in the manufacturer's documentation. If more is needed, the options are a recorder with more bays, a second recorder for part of the cameras, or a lower bitrate. Only surveillance-grade disks are used — they are designed for round-the-clock recording of multiple streams; the calculation is covered in more detail in our article on choosing a disk for video surveillance."
+            ],
+            "table": {
+              "head": [
+                "Disk",
+                "Price, UZS",
+                "Price per 1 TB",
+                "4 disks — capacity",
+                "Depth at 64 Mbps"
+              ],
+              "rows": [
+                [
+                  "Seagate SkyHawk 4 TB",
+                  "1 768 900",
+                  "≈442 thousand",
+                  "16 TB",
+                  "≈23 days"
+                ],
+                [
+                  "Seagate SkyHawk 6 TB",
+                  "2 721 900",
+                  "≈454 thousand",
+                  "24 TB",
+                  "≈34 days"
+                ],
+                [
+                  "Seagate SkyHawk 8 TB",
+                  "5 815 900",
+                  "≈727 thousand",
+                  "32 TB",
+                  "≈46 days"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "How much does the network cost, and why does the 100-metre limit matter?",
+            "p": [
+              "The network in the example is 10 837 200 UZS, or 12.7% of the budget: two switches with 24 PoE ports each plus cable. Each switch serves 16 cameras, 8 more ports stay in reserve, and two SFP optical ports allow the switches to be linked to the server room or remote cabinets over fibre.",
+              "The PoE budget of the chosen switch is 370 W for all ports. Before purchase, add up the maximum consumption of the cameras from the manufacturer's documentation — at night, with IR illumination on, it is higher than in the daytime — and leave a reserve. That way the switch does not shut ports down at the worst moment. Check for the example: the first switch with 16 dome cameras carries about 104 W, the second with 8 dome and 8 bullet cameras about 152 W — both well within 370 W.",
+              "Under the Ethernet standard, twisted pair is designed for up to 100 m from the switch port to the camera. Distant points — a gate, a fence corner, a neighbouring building — are connected through a remote switch in an intermediate cabinet with a fibre link to the server room. In large warehouses and plants, switches are placed closer to camera groups: routes get shorter, and a fibre backbone is cheaper than dozens of long copper lines. Cameras are moved to a separate virtual network (VLAN) so that office computers cannot see them — see our article on protecting IP cameras from hacking."
+            ]
+          },
+          {
+            "h": "Why does cable laying cost more than installing the cameras?",
+            "p": [
+              "In the example, cable laying is 11 520 000 UZS out of 19 764 000, or 58% of all works, while installing all 32 cameras costs 5 160 000 UZS. Inside the building the rate is 7 000 UZS per metre, on façades and outdoors 10 000 UZS; in the example the lines to the 8 outdoor cameras (480 m) are priced at the outdoor rate. But the rate is not the main factor: on a large site route length grows faster than the number of cameras — each new camera is further from the cabinet than the previous one.",
+              "Building conditions change the cost of routes. Existing cable trays or a suspended ceiling make laying easier; open walls and ceilings need conduit or trunking; the great height of a workshop needs lifting equipment; outdoor sections along façades and between buildings need protected cable and fixings. That is why two systems with the same number of cameras can differ several times in the cost of works.",
+              "Three decisions help reduce this line: put switches closer to camera groups, use existing trays, and run CCTV routes together with the building's other low-voltage systems — the local network and access control — in shared channels."
+            ]
+          },
+          {
+            "h": "What raises the budget, and what lowers it without losing quality?",
+            "p": [
+              "Three things should never be cut. Disks — surveillance-grade only: desktop disks are not designed for round-the-clock recording. The UPS — during a power cut the recorder and switches keep working and recording continues. As-built documentation — the layout, the equipment list with serial numbers, network addresses and accounts: this is how we hand over a system, with the set handed to the customer against signature. Without it, any expansion starts with a survey."
+            ],
+            "ol": [
+              "Split zones into overview and identification zones. For halls and aisles, 4 MP with a 2.8 mm lens is enough; for faces at the checkpoint and number plates at the entrance, separate cameras with a suitable lens are placed at the right point instead of raising the resolution of every camera.",
+              "Use 4 MP instead of 8 MP where it is sufficient: smaller stream and archive, cheaper disks.",
+              "Enable recording on motion or analytics events (for example, AcuSense, the \"human/vehicle\" filter) in zones without constant activity: the archive grows more slowly.",
+              "Choose 6 TB disks instead of 8 TB if there are enough bays: a terabyte is 1.6 times cheaper.",
+              "Build in spare ports from the start: the two 24-port switches in the example leave 16 of 48 ports free. The 32-channel recorder in the example is fully used, so if growth is expected, spare channels are planned when the recorder is chosen.",
+              "Build in stages: first the perimeter, entrance and valuables zones, then the rest — on the same scheme and the same equipment."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "How do you get an accurate estimate for your site?",
+            "p": [
+              "The calculator on the website gives a first estimate. A plan or specification can be sent via the \"Supply and tenders\" page or to sales@satsolutions.uz. The estimate comes back in the same structure as the example above: equipment line by line, works at the published rates, consumables on a separate line — so you can see exactly what you are paying for. Send us your technical specification — we will prepare a quotation with an equipment specification and a bill of works within 24 hours."
+            ],
+            "ol": [
+              "Prepare a floor plan or site layout and mark the surveillance zones.",
+              "For each zone, state the task: general overview, face recognition or number-plate recognition.",
+              "State the required archive depth and recording mode; if the depth is set by a regulation or internal policy, name the document.",
+              "Describe the conditions: are there trays and a suspended ceiling, where will the cabinet be, is there backup power.",
+              "Specify installation heights and outdoor sections.",
+              "List platform requirements: a single brand, integration with access control, viewing from phones, multiple sites."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "About the company",
+            "p": [],
+            "ul": [
+              "SAT Solutions is a brand of SUPPLY AND TRANSPORTATION LLC, TIN 308603912. Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
+              "Video surveillance, access control and turnstiles, time attendance, intrusion and fire alarms, intercoms, structured cabling and LAN, Wi-Fi, fibre, server rooms: equipment supply and installation; installation by our own staff: 3 engineers and 15 installers.",
+              "Documents: National Guard permit No. 1554491 (installation, adjustment and maintenance of security equipment); Ministry of Emergency Situations permit No. 913518 of 23 July 2025 (installation, adjustment and maintenance of fire alarm and automatic fire suppression systems) — both under the notification procedure of Cabinet of Ministers Resolution No. 88 of 25 February 2022.",
+              "3-year warranty on installation works; equipment carries the manufacturer's warranty of 1 to 3 years.",
+              "satsolutions.uz catalog: more than 2,500 items; prices in UZS including VAT — we work with VAT. Own warehouse in Tashkent, fast-moving items in stock. E-invoices (ESF) are issued through an electronic document-exchange operator.",
+              "All prices in this article are satsolutions.uz catalog prices and labour rates: equipment as of 9 November 2026 (the estimate's equipment re-checked on 10 November 2026), consumables and the façade cable-laying rate as of 10 November 2026."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "How much does a 32-camera video surveillance system cost for a business?",
+            "a": "At satsolutions.uz catalog prices as of 10 November 2026 and the labour rates — about 85.1 million UZS: 63.1 million for equipment, 2.2 million for consumables and 19.8 million for works, for 32 cameras at 4 MP with about a month of archive. Cable trays, fixings and special installation conditions are priced after a site survey."
+          },
+          {
+            "q": "How much does one camera cost in such a system?",
+            "a": "About 2.66 million UZS per point if the whole estimate — cameras, recorder, disks, network, UPS, consumables and works — is divided by 32 cameras. The 4 MP dome camera itself costs 890 900 UZS in the example, the outdoor one 1 174 900 UZS."
+          },
+          {
+            "q": "How many terabytes do 32 cameras need for a month?",
+            "a": "About 20.7 TB at 2 Mbps per camera (4 MP, H.265, continuous recording) and about 41.5 TB at 4 Mbps. Formula: number of cameras × bitrate × 86 400 × days ÷ 8 ÷ 1 000 000."
+          },
+          {
+            "q": "Which costs more — equipment or installation?",
+            "a": "Equipment: together with consumables it is about 76.8% of the budget in the example, with works at about 23.2%. Within the works, 58% is cable laying, so route length affects the estimate more than the number of cameras."
+          },
+          {
+            "q": "Can the archive be kept in the cloud instead of on disks?",
+            "a": "Technically yes, but a month of recording from 32 cameras is more than 20 TB plus a permanent upstream channel. Under Article 27-1 of Law No. ZRU-547 (as amended by Law No. ZRU-1125 of 26 March 2026), biometric data such as face templates in access control must be stored only in Uzbekistan; there is no direct rule for ordinary video, but keeping the archive on a recorder in the building or on a server in the country is the safer choice — this is not a legal requirement but practitioners' advice."
+          },
+          {
+            "q": "Can such a system be built on Dahua?",
+            "a": "Yes, the estimate structure is the same: cameras, a 32-channel recorder (for example, the DHI-NVR5232-EI at 3 394 900 UZS), disks, PoE switches and works at the same rates. How to choose a brand for a site is covered in our separate article on Hikvision and Dahua."
+          },
+          {
+            "q": "What warranty does the system have?",
+            "a": "3 years on installation works; for equipment, the manufacturer's warranty of 1 to 3 years depending on the model."
+          }
+        ]
+      },
+      "tr": {
+        "title": "32 kameralı bir işletme için video gözetim ne kadar tutar ve bütçe nelerden oluşur?",
+        "seoTitle": "32 Kameralı İşletme İçin CCTV Bütçesi: Taşkent 2026",
+        "seoDesc": "10.11.2026 katalog fiyatlarıyla 32 adet 4 MP kamera ≈85,1 milyon UZS. Kamera, disk, ağ ve işçilik payları, arşiv formülü ve tasarruf noktaları.",
+        "excerpt": "Bir işletmenin 32 kameralı video gözetim keşfini 10.11.2026 katalog fiyatlarıyla inceliyoruz: kamera, disk, ağ, sarf malzemesi ve işçilik payları, arşiv formülü, terabayt fiyatı, UPS çalışma süresi ve kaliteden ödün vermeden bütçeyi düşürmenin yolları.",
+        "summary": [
+          "satsolutions.uz kataloğunun 10.11.2026 tarihli fiyatları ve işçilik birim fiyatlarımızla, 4 MP çözünürlüklü 32 IP kamera ve yaklaşık bir aylık arşivden oluşan bir sistem yaklaşık 85,1 milyon UZS tutar: ekipman yaklaşık 63,1 milyon, sarf malzemeleri yaklaşık 2,2 milyon, işçilik yaklaşık 19,8 milyon.",
+          "En büyük kalemler kameralar (yaklaşık %36), arşiv diskleri (yaklaşık %13) ve ağdır (yaklaşık %13); işçiliğin yarısından fazlası (%58) ise kablo çekimidir.",
+          "Bütçeyi en çok etkileyen şey, arşiv süresi ile kamera bit hızının çarpımıdır."
+        ],
+        "sections": [
+          {
+            "h": "İşletme video gözetim bütçesi hangi kalemlerden oluşur?",
+            "p": [
+              "Video gözetim sistemi bütçesi altı gruptan oluşur: kameralar; ağ video kaydedici (NVR) veya sunucu; arşiv diskleri; ağ — PoE anahtarlar ve kablo; enerji ve kabin — UPS ve iletişim kabini; işçilik — montaj, kablo güzergâhları, devreye alma ve uzaktan erişim ayarı. Sarf malzemeleri — patch paneller, patch kablolar, konnektörler, spiral boru, kablo tavaları ve bağlantı elemanları — ayrıca hesaplanır. Aşağıdaki örnekte patch paneller, patch kablolar, konnektörler ve spiral boru katalog fiyatlarıyla tahmini olarak hesaba katılmıştır; kablo tavaları ve bağlantı elemanları ise keşiften sonra kablo güzergâhı projesine göre hesaplanır.",
+              "Bir keşfi okumak için üç terim gerekir. Bit hızı, bir kameranın video akışının saniyede megabit cinsinden büyüklüğüdür; arşiv için kaç terabayt gerektiğini belirler. Arşiv süresi, kayıtların döngüsel olarak üzerine yazılmadan önce kaç gün saklandığıdır. PoE (Power over Ethernet), kameranın görüntünün geçtiği aynı bükümlü çift kablo üzerinden beslenmesidir; böylece her kameraya tek kablo çekilir.",
+              "Aşağıda 32 kameralı tipik bir tesis için kalem payları verilmiştir (tam hesap bir sonraki bölümde).",
+              "Genellikle en çok tartışılan kaydedici, bütçenin yalnızca %3 kadarıdır. Diskler kaydediciden dört kattan fazla, UPS ile kabin ise üç kattan fazla pahalıdır. Bu yüzden \"kaydediciden tasarruf\" toplamı neredeyse değiştirmez, arşiv süresine ilişkin karar ise belirgin biçimde değiştirir. Tüm ekipman, sarf malzemeleri ve işçilik dahil kamera başına maliyet yaklaşık 2,66 milyon UZS'dir; farklı büyüklükteki teklifleri bu rakamla karşılaştırmak kolaydır."
+            ],
+            "table": {
+              "head": [
+                "Kalem",
+                "Tutar, UZS",
+                "Pay"
+              ],
+              "rows": [
+                [
+                  "Kameralar (32 adet)",
+                  "30 780 800",
+                  "%36,2"
+                ],
+                [
+                  "Arşiv diskleri (4 × 6 TB)",
+                  "10 887 600",
+                  "%12,8"
+                ],
+                [
+                  "Ağ: PoE anahtarlar ve kablo",
+                  "10 837 200",
+                  "%12,7"
+                ],
+                [
+                  "Kabin ve UPS",
+                  "8 161 800",
+                  "%9,6"
+                ],
+                [
+                  "32 kanallı kaydedici",
+                  "2 474 900",
+                  "%2,9"
+                ],
+                [
+                  "Sarf malzemeleri (tahmini)",
+                  "2 208 580",
+                  "%2,6"
+                ],
+                [
+                  "İşçilik",
+                  "19 764 000",
+                  "%23,2"
+                ],
+                [
+                  "Toplam",
+                  "85 114 880",
+                  "%100"
+                ]
+              ],
+              "at": 3
+            }
+          },
+          {
+            "h": "Örnek: katalog fiyatlarıyla 32 kameralı sistem ne kadar tutar?",
+            "p": [
+              "Tesis bir depo veya üretim binasıdır ve yapılandırma bu tür tesisler için tipiktir: salon ve koridorlarda 24 iç mekân dome kamera, çevre, kapılar ve yükleme rampaları için 8 dış mekân bullet kamera. Kaydedici, anahtarlar ve UPS tek bir duvar tipi kabinde durur. Ortalama güzergâh iç kameraya 40 m, dış kameraya 60 m; toplam 960 + 480 = 1 440 m kablo.",
+              "Genel toplam: 85 114 880 UZS — ekipman 63 142 300, sarf malzemeleri 2 208 580, işçilik 19 764 000. Ekipman fiyatları satsolutions.uz kataloğundan, 09.11.2026 tarihlidir; 10.11.2026'da yeniden kontrol edilmiş ve değişmemiştir; fiyatlar zamanla değişir. Sarf malzemesi fiyatları 10.11.2026 tarihli katalogdan alınmıştır, miktarlar bizim tahminimizdir. İşçilik birim fiyatları 09.11.2026 tarihinde \"Video gözetim\" hizmet sayfasından alınmıştır; cephede ve dış mekânda kablo çekimi metre başına 10 000 UZS'dir (10.11.2026 itibarıyla). 8 dış kameraya giden hatlar (8 × 60 = 480 m) dış mekân fiyatıyla, iç kameralara giden 960 m ise metre başına 7 000 UZS ile hesaplanmıştır. Kablo tavaları ve bağlantı elemanları ile çok yüksekte ya da bitmiş iç mekânda çalışma gibi özel koşullar, keşiften sonra güzergâh projesine göre hesaplanır. Altı makara kablo (1 830 m), kesim payı ve kabin içi bağlantılar için yedekli alınmıştır.",
+              "UPS ne kadar dayanır. Yükü Hikvision veri sayfalarına göre hesaplıyoruz: DS-2CD2143G2-I PoE üzerinden en fazla 6,5 W, DS-2CD2T43G2-4I en fazla 12,5 W çeker; toplam 24 × 6,5 + 8 × 12,5 = 256 W. Dört diskli kaydedici ile iki anahtarın kendi elektroniği için varsayımımız yaklaşık 100 W'tır; PoE dönüşüm kayıplarıyla toplam yaklaşık 400 W olur. 2 kVA'lık online UPS'in dahili aküsü genellikle 4 × 12 V 9 Ah, yani yaklaşık 430 Wh'tir; kesin kapasite UPS'in pasaportundan alınır. Bu deşarj akımında ve evirici verimi hesaba katıldığında bunun yaklaşık yarısı, yani yaklaşık 215 Wh kullanılabilir. Çalışma süresi: 215 Wh ÷ 400 W ≈ 0,5 saat, yani yaklaşık 30 dakika. 1–2 saatlik çalışma süresi için harici akü bloklu bir UPS seçilir.",
+              "Modeller bu iş için tipik oldukları için seçilmiştir, tek seçenek oldukları için değil. Aynı keşif yapısı Dahua ekipmanında da çıkar — örneğin 3 394 900 UZS'lik 32 kanallı DHI-NVR5232-EI kaydedici ile; kalem payları neredeyse değişmez."
+            ],
+            "table": [
+              {
+                "caption": "Ekipman",
+                "head": [
+                  "Kalem",
+                  "Adet",
+                  "Fiyat, UZS",
+                  "Tutar, UZS"
+                ],
+                "rows": [
+                  [
+                    "Dome IP kamera 4 MP Hikvision DS-2CD2143G2-I (2,8 mm), IR 30 m'ye kadar, AcuSense, PoE",
+                    "24",
+                    "890 900",
+                    "21 381 600"
+                  ],
+                  [
+                    "Bullet IP kamera 4 MP Hikvision DS-2CD2T43G2-4I (2,8 mm), IR 80 m'ye kadar",
+                    "8",
+                    "1 174 900",
+                    "9 399 200"
+                  ],
+                  [
+                    "Hikvision DS-7732NI-K4(STD) kaydedici: 32 kanal, 4 SATA, 256 Mbps giriş, 1.5U",
+                    "1",
+                    "2 474 900",
+                    "2 474 900"
+                  ],
+                  [
+                    "Güvenlik kamerası diski Seagate SkyHawk 6 TB",
+                    "4",
+                    "2 721 900",
+                    "10 887 600"
+                  ],
+                  [
+                    "PoE anahtar Hikvision DS-3E1526P-SI-24P2F: 24 PoE + 2 SFP, 370 W bütçe",
+                    "2",
+                    "4 082 900",
+                    "8 165 800"
+                  ],
+                  [
+                    "Duvar tipi kabin 15U 600×600",
+                    "1",
+                    "1 422 900",
+                    "1 422 900"
+                  ],
+                  [
+                    "UPS Pixietech On-line 2 kVA",
+                    "1",
+                    "6 738 900",
+                    "6 738 900"
+                  ],
+                  [
+                    "İç mekân UTP Cat 5e kablo, 305 m makara",
+                    "4",
+                    "432 900",
+                    "1 731 600"
+                  ],
+                  [
+                    "Dış mekân UTP Cat 6 kablo, 305 m makara",
+                    "2",
+                    "469 900",
+                    "939 800"
+                  ],
+                  [
+                    "Ekipman toplamı",
+                    "",
+                    "",
+                    "63 142 300"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "Sarf malzemeleri (tahmini)",
+                "head": [
+                  "Kalem",
+                  "Adet",
+                  "Fiyat, UZS",
+                  "Tutar, UZS"
+                ],
+                "rows": [
+                  [
+                    "Patch panel 24 port, Cat 5",
+                    "2",
+                    "234 900",
+                    "469 800"
+                  ],
+                  [
+                    "Patch kablo Cat 6 UTP 0,5 m",
+                    "32",
+                    "20 990",
+                    "671 680"
+                  ],
+                  [
+                    "RJ-45 konnektör Cat 5e (Pixietech)",
+                    "100",
+                    "690",
+                    "69 000"
+                  ],
+                  [
+                    "Spiral boru 25 mm, 50 m makara — güzergâhların yaklaşık üçte biri için",
+                    "9",
+                    "110 900",
+                    "998 100"
+                  ],
+                  [
+                    "Sarf malzemeleri toplamı",
+                    "",
+                    "",
+                    "2 208 580"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "İşçilik",
+                "head": [
+                  "İş",
+                  "Miktar",
+                  "Birim fiyat, UZS",
+                  "Tutar, UZS"
+                ],
+                "rows": [
+                  [
+                    "İç mekân kamera montajı",
+                    "24",
+                    "155 000",
+                    "3 720 000"
+                  ],
+                  [
+                    "Dış mekân kamera montajı",
+                    "8",
+                    "180 000",
+                    "1 440 000"
+                  ],
+                  [
+                    "Kamera ayarı ve devreye alma",
+                    "32",
+                    "77 000",
+                    "2 464 000"
+                  ],
+                  [
+                    "Kaydedici kurulumu ve ayarı (16 kameradan fazla)",
+                    "1",
+                    "450 000",
+                    "450 000"
+                  ],
+                  [
+                    "Telefondan uzaktan erişim ayarı",
+                    "1",
+                    "170 000",
+                    "170 000"
+                  ],
+                  [
+                    "Bina içinde kablo çekimi, m",
+                    "960",
+                    "7 000",
+                    "6 720 000"
+                  ],
+                  [
+                    "Cephede ve dış mekânda kablo çekimi, m",
+                    "480",
+                    "10 000",
+                    "4 800 000"
+                  ],
+                  [
+                    "İşçilik toplamı",
+                    "",
+                    "",
+                    "19 764 000"
+                  ]
+                ],
+                "at": 1
+              }
+            ]
+          },
+          {
+            "h": "Arşiv boyutu nasıl hesaplanır?",
+            "p": [
+              "Arşiv boyutu şu formülle hesaplanır: V (TB) = N × B × 86 400 × D ÷ 8 ÷ 1 000 000. Burada N kamera sayısı, B bir kameranın Mbps cinsinden bit hızı, D gün cinsinden arşiv süresi, 86 400 bir gündeki saniye sayısıdır; 8'e bölmek biti bayta, 1 000 000'a bölmek megabaytı terabayta çevirir.",
+              "Örnek için adım adım hesap:",
+              "Bit hızını beş şey etkiler. Çözünürlük: piksel arttıkça akış büyür. Kodek: H.265, H.264'ten daha verimlidir; H.265+ ise boş bir salonun durağan görüntüsünü ek olarak sıkıştırır. Sahne: hareket, yapraklar, yağmur ve gece sensör gürültüsü akışı artırır. Kare hızı: saniyede 25 kare, 12 kareden belirgin biçimde daha fazla veri üretir. Kayıt modu: sürekli kayıt yerine harekete veya analitik olaylara göre kayıt, günün büyük bölümünde hiçbir şey olmayan bölgelerde arşivi küçültür. Pratik kural: devreye almadan bir hafta sonra kaydedicideki gerçek bit hızına bakıp arşivi yeniden hesaplamak.",
+              "Dört diskte RAID 5, arşive üç diskin kapasitesini verir ama bir diskin arızasında kayıp yaşatmaz. Belirli bir kaydedicinin RAID'i destekleyip desteklemediği üretici belgelerinden kontrol edilir. Arşiv süresi bir mevzuatla belirlenmişse — örneğin Bakanlar Kurulu'nun 21.05.2026 tarihli ve 271 sayılı Kararı uyarınca devlet dışı eğitim kurumları için en az 6 ay — hesap bütçeden değil bu rakamdan başlar."
+            ],
+            "table": {
+              "head": [
+                "Seçenek",
+                "Toplam akış",
+                "Günlük",
+                "24 TB'de süre",
+                "30 gün için gereken"
+              ],
+              "rows": [
+                [
+                  "Kamera başına 2 Mbps, RAID'siz",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈34 gün",
+                  "≈20,7 TB"
+                ],
+                [
+                  "2 Mbps, RAID 5 (kullanılabilir 18 TB)",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈26 gün",
+                  "≈20,7 TB"
+                ],
+                [
+                  "Kamera başına 4 Mbps, RAID'siz",
+                  "128 Mbps",
+                  "≈1,38 TB",
+                  "≈17 gün",
+                  "≈41,5 TB"
+                ],
+                [
+                  "Kamera başına 8 Mbps (kaydedici sınırı)",
+                  "256 Mbps",
+                  "≈2,76 TB",
+                  "≈9 gün",
+                  "≈82,9 TB"
+                ]
+              ],
+              "at": 2
+            },
+            "ol": [
+              "Toplam akış: 32 kamera × 2 Mbps = 64 Mbps. 2 Mbps, sürekli kayıtta H.265 kodekli 4 MP kamera için tipik bir ayardır; hesapta bu değeri kullanıyoruz, gerçek bit hızı ise sahadaki ayarlarla karşılaştırılır.",
+              "Günlük: 64 × 86 400 ÷ 8 = 691 200 MB, yani yaklaşık 691 GB (kamera başına 21,6 GB).",
+              "30 gün için: 691 GB × 30 ≈ 20,7 TB.",
+              "Örnekteki kapasite: 4 disk × 6 TB = 24 TB, yani 24 ÷ 0,691 ≈ 34 günlük kayıt.",
+              "Kaydedici kontrolü: izin verilen 256 Mbps'ye karşı 64 Mbps — giriş bant genişliğinde pay var."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "8 TB disk neden terabayt başına daha pahalı ve hangi boyut seçilmeli?",
+            "p": [
+              "Disk fiyatı kapasiteyle eşit oranda artmaz. 09.11.2026 kataloğunda bir terabayt 4 ve 6 TB disklerde neredeyse aynı fiyattadır, 8 TB diskte ise 1,6 kat daha pahalıdır.",
+              "Dört adet 8 TB disk 23 263 600 UZS, dört adet 6 TB disk ise 10 887 600 UZS tutar: fazladan 8 TB (12 günlük arşiv) 12 376 000 UZS'ye mal olur. Bir aylık arşiv 24 TB'ye sığıyorsa 6 TB diskler daha avantajlıdır. 8 TB disk seçmeden önce, belirli kaydedicinin desteklediği azami disk boyutu üretici belgelerinden kontrol edilir.",
+              "Sınır, disk yuvası sayısıdır. DS-7732NI-K4 kaydedicide dört yuva vardır; bu yüzden azami arşiv \"4 × disk boyutu\"na eşittir; tek bir diskin desteklenen azami boyutu üretici belgelerinde yer alır. Daha fazlası gerekiyorsa seçenekler şunlardır: daha çok yuvalı kaydedici, kameraların bir kısmı için ikinci kaydedici veya daha düşük bit hızı. Yalnızca güvenlik kamerası serisi diskler kullanılır — çok sayıda akışı gece gündüz kaydetmek için tasarlanmışlardır; hesabın ayrıntıları video gözetim için disk seçimi yazımızda."
+            ],
+            "table": {
+              "head": [
+                "Disk",
+                "Fiyat, UZS",
+                "1 TB fiyatı",
+                "4 disk — kapasite",
+                "64 Mbps'de süre"
+              ],
+              "rows": [
+                [
+                  "Seagate SkyHawk 4 TB",
+                  "1 768 900",
+                  "≈442 bin",
+                  "16 TB",
+                  "≈23 gün"
+                ],
+                [
+                  "Seagate SkyHawk 6 TB",
+                  "2 721 900",
+                  "≈454 bin",
+                  "24 TB",
+                  "≈34 gün"
+                ],
+                [
+                  "Seagate SkyHawk 8 TB",
+                  "5 815 900",
+                  "≈727 bin",
+                  "32 TB",
+                  "≈46 gün"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "Ağ ne kadar tutar ve 100 metre sınırı neden önemli?",
+            "p": [
+              "Örnekteki ağ 10 837 200 UZS, yani bütçenin %12,7'sidir: her biri 24 PoE portlu iki anahtar ve kablo. Her anahtara 16 kamera bağlanır, 8 port yedekte kalır; iki SFP optik port ise anahtarları sunucu odasına veya uzak kabinlere fiberle bağlamayı sağlar.",
+              "Seçilen anahtarın PoE bütçesi tüm portlar için 370 W'tır. Satın almadan önce kameraların üretici belgelerindeki azami tüketimi toplanır — geceleri IR aydınlatma açıkken gündüzden yüksektir — ve pay bırakılır. Böylece anahtar en olmadık anda portları kapatmaz. Örnek için kontrol: 16 dome kameralı birinci anahtarda yük yaklaşık 104 W, 8 dome ve 8 bullet kameralı ikinci anahtarda yaklaşık 152 W'tır; ikisi de 370 W'ın rahatça altındadır.",
+              "Ethernet standardına göre bükümlü çift kablo, anahtar portundan kameraya 100 m'ye kadar mesafe için tasarlanmıştır. Uzak noktalar — kapı, çit köşesi, komşu bina — sunucu odasına fiber bağlantısı olan ara kabindeki uzak bir anahtar üzerinden bağlanır. Büyük depolarda ve fabrikalarda anahtarlar kamera gruplarına daha yakın konur: güzergâhlar kısalır, fiber omurga da onlarca uzun bakır hattan daha ucuzdur. Kameralar, ofis bilgisayarları onları görmesin diye ayrı bir sanal ağa (VLAN) alınır — ayrıntılar IP kameraları saldırılara karşı koruma yazımızda."
+            ]
+          },
+          {
+            "h": "Kablo çekimi neden kamera montajından daha pahalı?",
+            "p": [
+              "Örnekte kablo çekimi 19 764 000 UZS'nin 11 520 000 UZS'sini, yani tüm işçiliğin %58'ini oluşturur; 32 kameranın tamamının montajı ise 5 160 000 UZS'dir. Bina içinde birim fiyat metre başına 7 000 UZS, cephede ve dış mekânda 10 000 UZS'dir; örnekte 8 dış kameraya giden hatlar (480 m) dış mekân fiyatıyla hesaplanmıştır. Ancak asıl etken birim fiyat değildir: büyük bir tesiste güzergâh uzunluğu kamera sayısından daha hızlı artar — her yeni kamera kabinden bir öncekinden daha uzaktadır.",
+              "Güzergâh maliyetini bina koşulları belirler. Mevcut kablo tavaları veya asma tavan çekimi kolaylaştırır; açık duvar ve tavanlar spiral boru veya kablo kanalı ister; atölyenin yüksekliği kaldırma ekipmanı gerektirir; cephe boyunca ve binalar arasındaki dış bölümler korumalı kablo ve bağlantı elemanı ister. Bu yüzden aynı sayıda kameraya sahip iki sistemin işçilik maliyeti kat kat farklı olabilir.",
+              "Bu kalemi düşürmeye üç karar yardımcı olur: anahtarları kamera gruplarına yakın koymak, mevcut tavaları kullanmak ve video gözetim güzergâhlarını binanın diğer zayıf akım sistemleriyle — yerel ağ ve geçiş kontrolüyle — ortak kanallarda çekmek."
+            ]
+          },
+          {
+            "h": "Bütçeyi ne artırır, kaliteden ödün vermeden ne düşürür?",
+            "p": [
+              "Üç şeyden kesinlikle tasarruf edilmez. Diskler — yalnızca güvenlik kamerası serisi: masaüstü diskler gece gündüz kayıt için tasarlanmamıştır. UPS — elektrik kesintisinde kaydedici ve anahtarlar çalışmaya devam eder, kayıt kesilmez. Uygulama belgeleri — şema, seri numaralı ekipman listesi, ağ adresleri ve hesaplar: sistemi biz bu şekilde teslim ederiz, belge seti müşteriye imza karşılığında verilir. Bunlar olmadan her genişletme yeniden keşifle başlar."
+            ],
+            "ol": [
+              "Bölgeleri genel izleme ve tanımlama bölgelerine ayırın. Salon ve koridorlar için 2,8 mm lensli 4 MP yeterlidir; giriş kontrol noktasındaki yüzler ve girişteki plakalar için tüm kameraların çözünürlüğünü artırmak yerine doğru noktaya uygun lensli ayrı kameralar konur.",
+              "Yeterli olan yerlerde 8 MP yerine 4 MP kullanın: akış ve arşiv küçülür, diskler ucuzlar.",
+              "Sürekli hareket olmayan bölgelerde harekete veya analitik olaylara göre kaydı açın (örneğin AcuSense, \"insan/araç\" filtresi): arşiv daha yavaş büyür.",
+              "Yuva yeterliyse 8 TB yerine 6 TB disk seçin: terabayt 1,6 kat ucuzdur.",
+              "Port yedeğini baştan planlayın: örnekteki 24 portlu iki anahtar 48 porttan 16'sını boş bırakır. Örnekteki 32 kanallı kaydedici tamamen doludur; büyüme bekleniyorsa kanal yedeği kaydedici seçilirken planlanır.",
+              "Aşamalı kurun: önce çevre, giriş ve değerli eşya bölgeleri, sonra geri kalanı — aynı şema ve aynı ekipmanla."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Kendi tesisiniz için kesin keşif nasıl alınır?",
+            "p": [
+              "İlk tahmini sitedeki hesaplayıcı verir. Plan veya şartname \"Tedarik ve ihaleler\" sayfası üzerinden ya da sales@satsolutions.uz adresine gönderilebilir. Keşif, yukarıdaki örnekle aynı yapıda döner: ekipman satır satır, işçilik birim fiyatlarla, sarf malzemeleri ayrı satırda — böylece neye ödeme yaptığınız açıkça görünür. Teknik şartnamenizi gönderin — 24 saat içinde ürün listesi ve iş kalemleri listesiyle fiyat teklifi hazırlarız."
+            ],
+            "ol": [
+              "Kat planı veya saha şeması hazırlayın ve izleme bölgelerini işaretleyin.",
+              "Her bölge için görevi belirtin: genel izleme, yüz tanıma veya plaka tanıma.",
+              "Gereken arşiv süresini ve kayıt modunu belirtin; süre bir mevzuat veya iç yönetmelikle belirlenmişse belgeyi yazın.",
+              "Koşulları anlatın: tava ve asma tavan var mı, kabin nerede olacak, yedek enerji var mı.",
+              "Montaj yüksekliklerini ve dış bölümleri belirtin.",
+              "Platform gereksinimlerini sıralayın: tek marka, geçiş kontrolüyle entegrasyon, telefondan izleme, birden fazla lokasyon."
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "Şirket hakkında",
+            "p": [],
+            "ul": [
+              "SAT Solutions, SUPPLY AND TRANSPORTATION MChJ'nin markasıdır, vergi no 308603912. Taşkent, Katta Darkhon Caddesi 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
+              "Video gözetim, geçiş kontrolü ve turnikeler, mesai takibi, hırsız ve yangın alarmı, diafon, yapısal kablolama ve LAN, Wi-Fi, fiber, sunucu odaları: ekipman tedariki ve kurulum; montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
+              "Belgeler: Ulusal Muhafız izin belgesi No. 1554491 (güvenlik teknik araçlarının montajı, ayarı ve bakımı); Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518, 23.07.2025 (yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve bakımı) — ikisi de Bakanlar Kurulu'nun 25.02.2022 tarihli ve 88 sayılı Kararı uyarınca bildirim usulüyle.",
+              "Montaj işlerine 3 yıl garanti; ekipmana üreticinin 1 ila 3 yıllık garantisi.",
+              "satsolutions.uz kataloğu: 2.500'den fazla ürün; fiyatlar UZS cinsinden ve KDV dahildir — KDV ile çalışıyoruz. Taşkent'te kendi depomuz var, çok satan ürünler stokta. E-faturaları (ESF) bir elektronik belge değişim operatörü üzerinden düzenliyoruz.",
+              "Yazıdaki tüm fiyatlar satsolutions.uz kataloğu ve işçilik birim fiyatlarıdır: ekipman 09.11.2026 tarihli (keşifteki ekipman 10.11.2026'da yeniden kontrol edildi), sarf malzemeleri ve cephede kablo çekimi fiyatı 10.11.2026 tarihli."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Bir işletme için 32 kameralı video gözetim ne kadar tutar?",
+            "a": "satsolutions.uz kataloğunun 10.11.2026 fiyatları ve işçilik birim fiyatlarıyla yaklaşık 85,1 milyon UZS: 63,1 milyon ekipman, 2,2 milyon sarf malzemesi ve 19,8 milyon işçilik; yaklaşık bir aylık arşivli 32 adet 4 MP kamera için. Kablo tavaları, bağlantı elemanları ve özel montaj koşulları keşiften sonra hesaplanır."
+          },
+          {
+            "q": "Böyle bir sistemde bir kamera ne kadar tutar?",
+            "a": "Tüm keşif — kameralar, kaydedici, diskler, ağ, UPS, sarf malzemeleri ve işçilik — 32 kameraya bölündüğünde nokta başına yaklaşık 2,66 milyon UZS. Örnekteki 4 MP dome kameranın kendisi 890 900 UZS, dış mekân kamerası 1 174 900 UZS'dir."
+          },
+          {
+            "q": "32 kamera için bir ayda kaç terabayt gerekir?",
+            "a": "Kamera başına 2 Mbps'de (4 MP, H.265, sürekli kayıt) yaklaşık 20,7 TB, 4 Mbps'de yaklaşık 41,5 TB. Formül: kamera sayısı × bit hızı × 86 400 × gün ÷ 8 ÷ 1 000 000."
+          },
+          {
+            "q": "Hangisi daha pahalı — ekipman mı, montaj mı?",
+            "a": "Ekipman: sarf malzemeleriyle birlikte örnekte bütçenin yaklaşık %76,8'i, işçilik yaklaşık %23,2'si. İşçiliğin %58'i kablo çekimidir; bu yüzden güzergâh uzunluğu keşfi kamera sayısından daha çok etkiler."
+          },
+          {
+            "q": "Arşiv diskler yerine bulutta tutulabilir mi?",
+            "a": "Teknik olarak evet, ancak 32 kameradan bir aylık kayıt 20 TB'den fazladır ve sürekli bir yükleme kanalı gerektirir. ZRU-547 sayılı Kanunun 27-1. maddesine göre (26.03.2026 tarihli ZRU-1125 sayılı Kanunla değişik), geçiş kontrolündeki yüz şablonları gibi biyometrik veriler yalnızca Özbekistan'da saklanır; sıradan video için doğrudan bir hüküm yoktur, ancak arşivi binadaki kaydedicide veya ülkedeki bir sunucuda tutmak daha güvenlidir — bu bir yasal norm değil, uygulayıcıların tavsiyesidir."
+          },
+          {
+            "q": "Böyle bir sistem Dahua ile kurulabilir mi?",
+            "a": "Evet, keşif yapısı aynıdır: kameralar, 32 kanallı kaydedici (örneğin 3 394 900 UZS'lik DHI-NVR5232-EI), diskler, PoE anahtarlar ve aynı birim fiyatlarla işçilik. Tesis için marka seçimini Hikvision ve Dahua hakkındaki ayrı yazımızda ele alıyoruz."
+          },
+          {
+            "q": "Sisteme hangi garanti verilir?",
+            "a": "Montaj işlerine 3 yıl; ekipmana modele göre üreticinin 1 ila 3 yıllık garantisi."
+          }
+        ]
+      },
+      "zh": {
+        "title": "企业安装32路视频监控要花多少钱？预算由哪些部分构成？",
+        "seoTitle": "企业32路视频监控预算：塔什干2026年价格",
+        "seoDesc": "按2026年11月10日目录价格，32路400万像素企业视频监控约需8511万苏姆，拆解摄像机、硬盘、网络与施工占比及录像容量公式。",
+        "excerpt": "以2026年11月10日目录价格拆解企业32路视频监控报价：摄像机、硬盘、网络、辅材与施工各占多少，录像容量公式，每TB价格，UPS续航时间，以及在不降低质量的前提下压缩预算的方法。",
+        "summary": [
+          "按satsolutions.uz目录2026年11月10日的价格和我们的施工单价计算，一套由32台400万像素IP摄像机组成、录像保存约一个月的系统约需8 511万苏姆：设备约6 314万，辅材约221万，施工约1 976万。",
+          "占比最大的是摄像机（约36%）、录像硬盘（约13%）和网络（约13%），而施工费用中一半以上（58%）是布线。",
+          "对预算影响最大的，是录像保存天数与摄像机码率的乘积。"
+        ],
+        "sections": [
+          {
+            "h": "企业视频监控预算由哪些部分组成？",
+            "p": [
+              "视频监控系统预算由六部分组成：摄像机；网络硬盘录像机（NVR）或服务器；录像硬盘；网络——PoE交换机和线缆；供电与机柜——UPS和网络机柜；施工——安装、布线、调试和远程访问设置。配线架、跳线、水晶头、波纹管、线槽和紧固件等辅材单独计算。下面的示例中，配线架、跳线、水晶头和波纹管按目录价格作了估算；线槽和紧固件则在现场勘察后按走线方案计算。",
+              "读懂报价需要三个术语。码率：单台摄像机视频流的大小，单位为兆比特每秒，决定录像需要多少TB。录像保存天数：录像被循环覆盖前保存的天数。PoE（以太网供电）：摄像机通过传输视频的同一根双绞线供电，因此每台摄像机只需一根线缆。",
+              "以下是典型32路项目的各项占比（完整计算见下一节）。",
+              "通常争论最多的录像机只占预算的约3%。硬盘价格是录像机的四倍多，UPS加机柜是三倍多。因此\"在录像机上省钱\"几乎不影响总价，而录像保存天数的决定会明显改变总价。含全部设备、辅材和施工，每路摄像机约266万苏姆——用这个数字比较不同规模的方案很方便。"
+            ],
+            "table": {
+              "head": [
+                "项目",
+                "金额（苏姆）",
+                "占比"
+              ],
+              "rows": [
+                [
+                  "摄像机（32台）",
+                  "30 780 800",
+                  "36.2%"
+                ],
+                [
+                  "录像硬盘（4 × 6 TB）",
+                  "10 887 600",
+                  "12.8%"
+                ],
+                [
+                  "网络：PoE交换机和线缆",
+                  "10 837 200",
+                  "12.7%"
+                ],
+                [
+                  "机柜和UPS",
+                  "8 161 800",
+                  "9.6%"
+                ],
+                [
+                  "32路录像机",
+                  "2 474 900",
+                  "2.9%"
+                ],
+                [
+                  "辅材（估算）",
+                  "2 208 580",
+                  "2.6%"
+                ],
+                [
+                  "施工",
+                  "19 764 000",
+                  "23.2%"
+                ],
+                [
+                  "合计",
+                  "85 114 880",
+                  "100%"
+                ]
+              ],
+              "at": 3
+            }
+          },
+          {
+            "h": "示例：按目录价格，32路系统要多少钱？",
+            "p": [
+              "项目为仓库或生产厂房，采用此类项目的典型配置：大厅和通道安装24台室内半球摄像机，周界、大门和装卸平台安装8台室外筒型摄像机。录像机、交换机和UPS放在一个壁挂机柜内。平均走线长度：室内摄像机40米，室外摄像机60米，合计960 + 480 = 1 440米线缆。",
+              "总计85 114 880苏姆：设备63 142 300，辅材2 208 580，施工19 764 000。设备价格取自satsolutions.uz目录（2026年11月9日），2026年11月10日复核未变，价格会变动；辅材价格取自2026年11月10日目录，数量为我们的估算；施工单价取自2026年11月9日\"视频监控\"服务页面，外墙及室外布线单价为每米10 000苏姆（2026年11月10日）。通往8台室外摄像机的线路（8 × 60 = 480米）按室外单价计算，通往室内摄像机的960米按每米7 000苏姆计算。线槽和紧固件，以及高空作业或在已装修墙面施工等特殊条件，在现场勘察后按走线方案计算。六箱线缆（1 830米）已留出裁剪和机柜内接线的余量。",
+              "UPS能撑多久。负载按Hikvision产品规格书计算：DS-2CD2143G2-I通过PoE的最大功耗为6.5瓦，DS-2CD2T43G2-4I为12.5瓦，合计24 × 6.5 + 8 × 12.5 = 256瓦。带四块硬盘的录像机和两台交换机自身电路按我们的假设约100瓦；计入PoE转换损耗，总负载约400瓦。2 kVA在线式UPS的内置电池通常为4 × 12 V 9 Ah，约430瓦时，确切容量以UPS技术说明书为准。在这样的放电电流下并考虑逆变器效率，约一半可用，即约215瓦时。续航时间：215瓦时 ÷ 400瓦 ≈ 0.5小时，即约30分钟。如需1–2小时续航，应选择配外置电池组的UPS。",
+              "所选型号是此类任务的典型配置，并非唯一选择。采用Dahua设备，报价结构相同——例如使用3 394 900苏姆的32路录像机DHI-NVR5232-EI，各项占比几乎不变。"
+            ],
+            "table": [
+              {
+                "caption": "设备",
+                "head": [
+                  "项目",
+                  "数量",
+                  "单价（苏姆）",
+                  "金额（苏姆）"
+                ],
+                "rows": [
+                  [
+                    "半球IP摄像机 400万像素 Hikvision DS-2CD2143G2-I（2.8毫米），红外30米，AcuSense，PoE",
+                    "24",
+                    "890 900",
+                    "21 381 600"
+                  ],
+                  [
+                    "筒型IP摄像机 400万像素 Hikvision DS-2CD2T43G2-4I（2.8毫米），红外80米",
+                    "8",
+                    "1 174 900",
+                    "9 399 200"
+                  ],
+                  [
+                    "录像机 Hikvision DS-7732NI-K4(STD)：32路，4个SATA，接入带宽256 Mbps，1.5U",
+                    "1",
+                    "2 474 900",
+                    "2 474 900"
+                  ],
+                  [
+                    "监控专用硬盘 Seagate SkyHawk 6 TB",
+                    "4",
+                    "2 721 900",
+                    "10 887 600"
+                  ],
+                  [
+                    "PoE交换机 Hikvision DS-3E1526P-SI-24P2F：24个PoE口 + 2个SFP，PoE总功率370瓦",
+                    "2",
+                    "4 082 900",
+                    "8 165 800"
+                  ],
+                  [
+                    "壁挂机柜 15U 600×600",
+                    "1",
+                    "1 422 900",
+                    "1 422 900"
+                  ],
+                  [
+                    "UPS Pixietech 在线式 2 kVA",
+                    "1",
+                    "6 738 900",
+                    "6 738 900"
+                  ],
+                  [
+                    "室内UTP超五类线，305米/箱",
+                    "4",
+                    "432 900",
+                    "1 731 600"
+                  ],
+                  [
+                    "室外UTP六类线，305米/箱",
+                    "2",
+                    "469 900",
+                    "939 800"
+                  ],
+                  [
+                    "设备合计",
+                    "",
+                    "",
+                    "63 142 300"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "辅材（估算）",
+                "head": [
+                  "项目",
+                  "数量",
+                  "单价（苏姆）",
+                  "金额（苏姆）"
+                ],
+                "rows": [
+                  [
+                    "配线架 24口，五类",
+                    "2",
+                    "234 900",
+                    "469 800"
+                  ],
+                  [
+                    "六类UTP跳线 0.5米",
+                    "32",
+                    "20 990",
+                    "671 680"
+                  ],
+                  [
+                    "超五类RJ-45水晶头（Pixietech）",
+                    "100",
+                    "690",
+                    "69 000"
+                  ],
+                  [
+                    "波纹管 25毫米，50米/卷——约覆盖三分之一走线",
+                    "9",
+                    "110 900",
+                    "998 100"
+                  ],
+                  [
+                    "辅材合计",
+                    "",
+                    "",
+                    "2 208 580"
+                  ]
+                ],
+                "at": 1
+              },
+              {
+                "caption": "施工",
+                "head": [
+                  "工作",
+                  "数量",
+                  "单价（苏姆）",
+                  "金额（苏姆）"
+                ],
+                "rows": [
+                  [
+                    "室内摄像机安装",
+                    "24",
+                    "155 000",
+                    "3 720 000"
+                  ],
+                  [
+                    "室外摄像机安装",
+                    "8",
+                    "180 000",
+                    "1 440 000"
+                  ],
+                  [
+                    "摄像机设置与调试",
+                    "32",
+                    "77 000",
+                    "2 464 000"
+                  ],
+                  [
+                    "录像机安装与设置（16路以上）",
+                    "1",
+                    "450 000",
+                    "450 000"
+                  ],
+                  [
+                    "手机远程访问设置",
+                    "1",
+                    "170 000",
+                    "170 000"
+                  ],
+                  [
+                    "室内布线，米",
+                    "960",
+                    "7 000",
+                    "6 720 000"
+                  ],
+                  [
+                    "外墙及室外布线，米",
+                    "480",
+                    "10 000",
+                    "4 800 000"
+                  ],
+                  [
+                    "施工合计",
+                    "",
+                    "",
+                    "19 764 000"
+                  ]
+                ],
+                "at": 1
+              }
+            ]
+          },
+          {
+            "h": "如何计算录像容量？",
+            "p": [
+              "录像容量按公式计算：V（TB）= N × B × 86 400 × D ÷ 8 ÷ 1 000 000。其中N为摄像机数量，B为单台摄像机码率（Mbps），D为保存天数，86 400为一天的秒数；除以8把比特换算为字节，除以1 000 000把兆字节换算为TB。",
+              "示例分步计算：",
+              "影响码率的有五个因素。分辨率：像素越多，码流越大。编码：H.265比H.264更省，H.265+还会进一步压缩空旷大厅的静态画面。场景：运动、树叶、雨水和夜间传感器噪点都会增大码流。帧率：每秒25帧的数据量明显大于12帧。录像模式：在一天中大部分时间无事发生的区域，以移动侦测或智能分析事件录像代替连续录像，可缩小录像量。实用做法：系统运行一周后，在录像机中查看实际码率并重新计算容量。",
+              "四块硬盘做RAID 5，可用于录像的是三块硬盘的容量，但一块硬盘故障时录像不丢失。具体录像机是否支持RAID，需查阅厂家文档。如果保存天数由法规规定——例如根据2026年5月21日第271号内阁决议，非国立教育机构至少6个月——计算应从这个数字出发，而不是从预算出发。"
+            ],
+            "table": {
+              "head": [
+                "方案",
+                "总码流",
+                "每天",
+                "24 TB可存天数",
+                "30天所需"
+              ],
+              "rows": [
+                [
+                  "每台2 Mbps，不做RAID",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈34天",
+                  "≈20.7 TB"
+                ],
+                [
+                  "2 Mbps，RAID 5（可用18 TB）",
+                  "64 Mbps",
+                  "≈691 GB",
+                  "≈26天",
+                  "≈20.7 TB"
+                ],
+                [
+                  "每台4 Mbps，不做RAID",
+                  "128 Mbps",
+                  "≈1.38 TB",
+                  "≈17天",
+                  "≈41.5 TB"
+                ],
+                [
+                  "每台8 Mbps（录像机上限）",
+                  "256 Mbps",
+                  "≈2.76 TB",
+                  "≈9天",
+                  "≈82.9 TB"
+                ]
+              ],
+              "at": 2
+            },
+            "ol": [
+              "总码流：32台 × 2 Mbps = 64 Mbps。2 Mbps是400万像素摄像机采用H.265连续录像时的典型设置；计算按此取值，实际码率需与现场设置核对。",
+              "每天：64 × 86 400 ÷ 8 = 691 200 MB，约691 GB（每台21.6 GB）。",
+              "30天：691 GB × 30 ≈ 20.7 TB。",
+              "示例容量：4块 × 6 TB = 24 TB，即24 ÷ 0.691 ≈ 34天录像。",
+              "录像机核对：64 Mbps，允许值256 Mbps——接入带宽有余量。"
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "为什么8 TB硬盘每TB更贵？该选多大容量？",
+            "p": [
+              "硬盘价格并不随容量均匀增长。在2026年11月9日的目录中，4 TB和6 TB硬盘每TB价格几乎相同，8 TB硬盘每TB则贵1.6倍。",
+              "四块8 TB硬盘23 263 600苏姆，四块6 TB硬盘10 887 600苏姆：多出的8 TB（12天录像）要多花12 376 000苏姆。如果一个月录像能放进24 TB，选6 TB硬盘更划算。选用8 TB硬盘之前，需按厂家文档核实该录像机支持的单盘最大容量。",
+              "限制在于盘位数量。DS-7732NI-K4有四个盘位，最大录像容量等于\"4 × 单盘容量\"；单盘支持的最大容量见厂家文档。需要更多容量时，可选择盘位更多的录像机、为部分摄像机增加第二台录像机，或降低码率。只使用监控专用系列硬盘——它们专为多路码流全天候录像设计；详细计算见我们关于监控硬盘选择的文章。"
+            ],
+            "table": {
+              "head": [
+                "硬盘",
+                "价格（苏姆）",
+                "每TB价格",
+                "4块总容量",
+                "64 Mbps下可存天数"
+              ],
+              "rows": [
+                [
+                  "Seagate SkyHawk 4 TB",
+                  "1 768 900",
+                  "≈44.2万",
+                  "16 TB",
+                  "≈23天"
+                ],
+                [
+                  "Seagate SkyHawk 6 TB",
+                  "2 721 900",
+                  "≈45.4万",
+                  "24 TB",
+                  "≈34天"
+                ],
+                [
+                  "Seagate SkyHawk 8 TB",
+                  "5 815 900",
+                  "≈72.7万",
+                  "32 TB",
+                  "≈46天"
+                ]
+              ],
+              "at": 1
+            }
+          },
+          {
+            "h": "网络要多少钱？为什么100米限制很重要？",
+            "p": [
+              "示例中网络费用为10 837 200苏姆，占预算12.7%：两台24口PoE交换机加线缆。每台交换机接16台摄像机，另有8个端口备用；两个SFP光口可通过光纤把交换机连到机房或远端机柜。",
+              "所选交换机的PoE总功率为370瓦。采购前应按厂家文档汇总摄像机最大功耗——夜间开启红外时高于白天——并留出余量，避免交换机在关键时刻关闭端口。以示例核算：第一台交换机接16台半球摄像机，约104瓦；第二台接8台半球和8台筒型摄像机，约152瓦——都远低于370瓦。",
+              "按以太网标准，双绞线从交换机端口到摄像机的距离上限为100米。远端点位——大门、围墙拐角、相邻楼栋——通过中间机柜内的远端交换机接入，并以光纤连回机房。在大型仓库和工厂，交换机靠近摄像机群放置：走线更短，而一条光纤主干比几十条长铜缆更便宜。摄像机划入单独的虚拟局域网（VLAN），让办公电脑无法访问——详见我们关于IP摄像机防入侵的文章。"
+            ]
+          },
+          {
+            "h": "为什么布线比安装摄像机还贵？",
+            "p": [
+              "示例中布线费用为11 520 000苏姆，占19 764 000苏姆施工费的58%，而安装全部32台摄像机仅5 160 000苏姆。室内布线单价为每米7 000苏姆，外墙及室外为每米10 000苏姆；示例中通往8台室外摄像机的线路（480米）按室外单价计算。但关键不在单价：在大型项目中，走线长度增长快于摄像机数量——每新增一台摄像机，离机柜都比上一台更远。",
+              "走线成本取决于建筑条件。已有线槽或吊顶便于布线；裸露的墙面和顶面需要波纹管或线槽；车间层高大需要升降设备；沿外墙和楼栋之间的室外段需要防护型线缆和紧固件。因此，摄像机数量相同的两套系统，施工费可能相差数倍。",
+              "有三种做法可降低这项费用：交换机靠近摄像机群放置；利用现有线槽；把视频监控走线与楼内其他弱电系统——局域网和门禁——在共用通道内一起敷设。"
+            ]
+          },
+          {
+            "h": "哪些因素抬高预算？哪些方法能在不降质量的情况下降低预算？",
+            "p": [
+              "有三样东西不能省。硬盘——只用监控专用系列：台式机硬盘不适合全天候录像。UPS——停电时录像机和交换机继续工作，录像不中断。竣工资料——系统图、带序列号的设备清单、网络地址和账号：我们就是这样交付系统的，整套资料由客户签字接收。没有这些，任何扩容都要从重新勘察开始。"
+            ],
+            "ol": [
+              "区分概览区和识别区。大厅和通道用400万像素、2.8毫米镜头即可；门岗人脸和入口车牌，应在合适点位安装镜头匹配的专用摄像机，而不是提高所有摄像机的分辨率。",
+              "在够用的地方用400万像素代替800万像素：码流和录像更小，硬盘更便宜。",
+              "在没有持续活动的区域启用移动侦测或智能分析事件录像（例如AcuSense\"人/车\"过滤）：录像增长更慢。",
+              "盘位足够时选6 TB而不是8 TB硬盘：每TB便宜1.6倍。",
+              "一开始就预留端口：示例中两台24口交换机在48个端口中留出16个空闲。示例中的32路录像机已满载，如预计扩容，应在选择录像机时预留通道。",
+              "分期建设：先周界、入口和贵重物品区，再扩展其余区域——沿用同一方案和同一设备。"
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "如何获得贵单位项目的准确报价？",
+            "p": [
+              "网站上的计算器可给出初步估算。平面图或规格书可通过\"供货与招标\"页面或发送至sales@satsolutions.uz。报价将按上面示例的同样结构返回：设备逐项列出，施工按单价计算，辅材单列一行——清楚看到每一笔钱花在哪里。发送技术任务书——我们将在24小时内准备附设备规格书和工程量清单的报价。"
+            ],
+            "ol": [
+              "准备楼层平面图或场地示意图，标出监控区域。",
+              "为每个区域说明任务：整体概览、人脸识别或车牌识别。",
+              "说明所需录像保存天数和录像模式；如保存天数由法规或内部制度规定，请注明文件。",
+              "描述现场条件：是否有线槽和吊顶，机柜放在哪里，是否有备用电源。",
+              "注明安装高度和室外段。",
+              "列出平台要求：单一品牌、与门禁联动、手机查看、多个场所。"
+            ],
+            "olAt": 0
+          },
+          {
+            "h": "关于公司",
+            "p": [],
+            "ul": [
+              "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌，纳税人识别号308603912。塔什干，Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
+              "视频监控、门禁与闸机、考勤、防盗与火灾报警、楼宇对讲、综合布线与局域网、Wi-Fi、光纤、机房：设备供货与安装；安装由自有团队完成：3名工程师和15名安装技师。",
+              "资质文件：国民近卫军许可文件第1554491号（安防技术设备的安装、调试和维护）；紧急情况部许可文件第913518号，2025年7月23日（火灾报警及自动灭火系统的安装、调试和维护）——均依据2022年2月25日第88号内阁决议按备案通知程序取得。",
+              "安装工程质保3年；设备享受厂家1至3年质保。",
+              "satsolutions.uz目录：2500多种商品；价格以苏姆计、含增值税——我们是增值税纳税企业。塔什干设有自有仓库，常用商品有现货。电子发票（ESF）通过电子文档交换运营商开具。",
+              "本文所有价格均为satsolutions.uz目录价格及施工单价：设备截至2026年11月9日（报价中的设备已于2026年11月10日复核），辅材和外墙布线单价截至2026年11月10日。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "企业安装32路视频监控要多少钱？",
+            "a": "按satsolutions.uz目录2026年11月10日价格和施工单价计算，约8 511万苏姆：设备6 314万，辅材221万，施工1 976万，适用于32台400万像素摄像机、录像约一个月。线槽、紧固件和特殊安装条件需现场勘察后计算。"
+          },
+          {
+            "q": "这样的系统中每路摄像机多少钱？",
+            "a": "把整份报价——摄像机、录像机、硬盘、网络、UPS、辅材和施工——除以32台，每个点位约266万苏姆。示例中400万像素半球摄像机本身为890 900苏姆，室外摄像机为1 174 900苏姆。"
+          },
+          {
+            "q": "32台摄像机录像一个月需要多少TB？",
+            "a": "每台2 Mbps（400万像素、H.265、连续录像）约需20.7 TB，每台4 Mbps约需41.5 TB。公式：摄像机数量 × 码率 × 86 400 × 天数 ÷ 8 ÷ 1 000 000。"
+          },
+          {
+            "q": "设备和安装哪个更贵？",
+            "a": "设备更贵：示例中设备连同辅材约占预算76.8%，施工约23.2%。施工中58%是布线，因此走线长度对报价的影响大于摄像机数量。"
+          },
+          {
+            "q": "录像能否存云端而不用硬盘？",
+            "a": "技术上可以，但32路一个月的录像超过20 TB，还需要稳定的上行带宽。根据第ZRU-547号法律第27-1条（经2026年3月26日第ZRU-1125号法律修订），生物识别数据（如门禁中的人脸模板）只能存储在乌兹别克斯坦境内；普通视频录像没有直接规定，但把录像存放在楼内录像机或境内服务器上更稳妥——这不是法律规定，而是从业者的建议。"
+          },
+          {
+            "q": "这样的系统能用Dahua搭建吗？",
+            "a": "可以，报价结构相同：摄像机、32路录像机（例如3 394 900苏姆的DHI-NVR5232-EI）、硬盘、PoE交换机以及按相同单价计算的施工。如何为项目选择品牌，请见我们关于Hikvision与Dahua的专文。"
+          },
+          {
+            "q": "系统有什么质保？",
+            "a": "安装工程质保3年；设备按型号享受厂家1至3年质保。"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "hikvision-ili-dahua-dlya-predpriyatiya",
+    "date": "2026-11-10",
+    "updated": "2026-11-10",
+    "related": [
+      "cctv",
+      "analytics",
+      "sistemnaya-integraciya"
+    ],
+    "hubs": [
+      "ip-kamery",
+      "ip-videoregistratory-nvr"
+    ],
+    "brands": [
+      "hikvision",
+      "dahua"
+    ],
+    "seeAlso": [
+      "hikvision-vs-dahua",
+      "byudzhet-videonablyudeniya-predpriyatiya",
+      "ii-v-kamere-acusense-wizsense",
+      "zashchita-ip-kamer-ot-vzloma",
+      "zkteco-vs-hikvision-biometriya"
+    ],
+    "products": [
+      "hik-ds-7732ni-k4-std",
+      "dahua-dhi-nvr5232-ei",
+      "dahua-dss-onebox-h1-128"
+    ],
+    "loc": {
+      "ru": {
+        "title": "Hikvision или Dahua для предприятия: как выбрать платформу под объект на десятки и сотни камер",
+        "seoTitle": "Hikvision или Dahua для предприятия: выбор платформы",
+        "seoDesc": "Объект на 50–500 камер: HikCentral или DSS, интеграция со СКУД, аналитика, смешивание через ONVIF, «или аналог» в закупке, таблица критериев и пилот.",
+        "excerpt": "Объект на 50–500 камер выбирает не бренд камеры, а экосистему на годы вперёд. Разбираем платформы HikCentral и DSS, интеграцию со СКУД, аналитику, смешивание марок, правила закупки и пилот — с таблицей критериев.",
+        "summary": [
+          "Для предприятия выбирают не камеру, а платформу: систему управления видеонаблюдением, интеграцию с СКУД, домофонией и учётом рабочего времени, аналитику, совместимость с уже установленным оборудованием и требования закупки.",
+          "Обе марки закрывают весь набор — камеры, регистраторы, центральные платформы, терминалы доступа, домофоны, — поэтому решение принимают по таблице критериев с весами и по пилоту на собственных сценах объекта.",
+          "Если закупка идёт по Закону «О государственных закупках», техническое задание пишут без привязки к бренду: конкретная модель допускается только со словами «или аналог» (ст. 34 ЗРУ-684)."
+        ],
+        "sections": [
+          {
+            "h": "Чем выбор бренда для предприятия отличается от выбора для дома?",
+            "p": [
+              "Для квартиры, дома или магазина на 4–8 камер вопрос «Hikvision или Dahua» почти всегда решает цена и характеристики конкретной модели — этот случай мы разбирали в статье «Hikvision или Dahua: что выбрать для видеонаблюдения». На заводе, складском комплексе, в бизнес-центре или сети филиалов задача другая. Система строится очередями и годами расширяется, к ней подключают проходные, домофоны, тревожные кнопки и видеостену, а работают с ней десятки пользователей с разными правами. Ошибка здесь стоит уже не разницы в цене камеры, а переделки всей платформы.",
+              "Поэтому корпоративный выбор начинается с вопросов о системе, а не о картинке. Сколько будет регистраторов и площадок? Кто и откуда смотрит видео? Нужна ли единая база пропусков со СКУД? Какие события должны приходить охране и кто на них реагирует? Как вырастет объект через два-три года? Камеры под эти ответы найдутся у обеих марок, и обе есть в каталоге satsolutions.uz, где более 2 500 позиций: собственный склад в Ташкенте, ходовые позиции в наличии."
+            ]
+          },
+          {
+            "h": "Какие платформы управления есть у Hikvision и Dahua и когда нужен сервер?",
+            "p": [
+              "Небольшая система живёт на сетевом видеорегистраторе (NVR): он пишет архив, показывает камеры на мониторе и отдаёт их в мобильное приложение. Один 32-канальный регистратор закрывает типичный корпус или склад. Например, Hikvision DS-7732NI-K4 стоит 2 474 900 сум, Dahua DHI-NVR5232-EI — 3 394 900 сум (цены каталога satsolutions.uz на 09.11.2026, меняются). Это разные модели с разным набором функций, поэтому прямое сравнение их цен некорректно: сравнивают конфигурации, собранные под одну и ту же задачу.",
+              "Когда регистраторов становится больше одного-двух, появляются филиалы, видеостена, журнал действий операторов и роли доступа, нужна центральная платформа — программа управления видеонаблюдением (VMS) на отдельном сервере. У Hikvision это HikCentral Professional, у Dahua — DSS Pro и программно-аппаратный сервер DSS-OneBox (модель DSS-OneBox-H1/128 — 20 374 900 сум, цена каталога на 09.11.2026). По описанию производителей, такие платформы объединяют регистраторы и камеры разных площадок, хранят события, управляют пользователями и подключают модули доступа и домофонии. HikCentral Professional мы поставляем и настраиваем под конфигурацию объекта. На платформе Dahua DSS Pro мы внедряли, например, систему из 150 нательных камер для сотрудников при исполнении обязанностей — кейс опубликован в портфолио.",
+              "Признаки того, что пора закладывать платформу (пороги — по опыту наших инженеров): больше 64 камер или двух регистраторов; несколько зданий или городов; операторский пост с видеостеной; разные уровни доступа (охрана видит всё, начальник цеха — свой участок); требование хранить журнал, кто и что смотрел; интеграция с проходной и учётом рабочего времени. Если про ваш объект верны хотя бы три пункта из шести, сравнивайте платформы, а не камеры."
+            ],
+            "table": {
+              "head": [
+                "Параметр",
+                "Сетевой регистратор (NVR)",
+                "Центральная платформа (HikCentral Professional, DSS Pro)"
+              ],
+              "rows": [
+                [
+                  "Масштаб",
+                  "32–64 канала на устройство",
+                  "десятки регистраторов и несколько площадок"
+                ],
+                [
+                  "Пользователи",
+                  "базовые учётные записи",
+                  "роли, группы, журнал действий (по описанию производителя)"
+                ],
+                [
+                  "Интеграция",
+                  "тревожные входы и выходы",
+                  "модули доступа, домофонии, видеостены (по описанию производителя)"
+                ],
+                [
+                  "Где работает",
+                  "само устройство",
+                  "отдельный сервер или сервер «всё в одном» (OneBox)"
+                ],
+                [
+                  "Когда достаточно",
+                  "один корпус, один пост охраны",
+                  "несколько корпусов, филиалы, операторский центр"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Что важнее для предприятия: камера или экосистема?",
+            "p": [
+              "На корпоративном объекте важнее экосистема. Если в здании уже работают терминалы доступа, домофоны или регистраторы одной марки, новую очередь видеонаблюдения разумно строить в той же экосистеме: одна платформа, одна база пользователей, события доступа и видео в одном окне оператора. Переход на другую марку оправдан, когда старый парк всё равно меняется целиком или когда другая марка закрывает задачу, которую текущая решает хуже.",
+              "Смотрите на подсистемы, которые понадобятся через два-три года: проходная с турникетами, учёт рабочего времени по лицу с выгрузкой табеля в 1С, гостевые пропуска, домофония. У обеих марок есть собственные терминалы распознавания лиц и контроллеры доступа — например, терминал Hikvision DS-K1T343EWX стоит 1 137 900 сум (цена каталога на 09.11.2026). Для СКУД и учёта времени на предприятии рассматривают и отдельную линию ZKTeco — она тоже есть в каталоге; сравнение мы разбирали в статье «ZKTeco или Hikvision: биометрия для СКУД и учёта времени». В этом случае связку видео и доступа проверяют отдельно, ещё на этапе технического задания."
+            ]
+          },
+          {
+            "h": "Как сравнить аналитику Hikvision и Dahua и не переплатить?",
+            "p": [
+              "Аналитика обеих марок решает одну базовую задачу: отличить человека и транспорт от тени, ветки или животного. У Hikvision технология называется AcuSense, у Dahua — WizSense; как они устроены, подробно разобрано в статье «ИИ в камере: как AcuSense и WizSense отличают человека от кошки и машины». Для предприятия это прежде всего меньше ложных тревог на периметре и быстрый поиск по архиву: запрос «люди у ворот после 22:00» вместо нескольких часов просмотра записи.",
+              "Переплачивают обычно в двух случаях. Первый — камеры с аналитикой ставят туда, где запись смотрят только при разборе инцидента: в коридор, бухгалтерию, склад готовой продукции. Второй — покупают распознавание лиц или автомобильных номеров без описанного сценария: кто получает событие и что с ним делает. Рабочее правило: аналитика — на периметре, въездах и входах; обычные камеры — внутри; распознавание лиц и номеров — только под конкретный процесс вроде проходной или въезда по номерам."
+            ]
+          },
+          {
+            "h": "Можно ли смешивать Hikvision и Dahua на одном объекте?",
+            "p": [
+              "Можно, но с ограничениями. Камеры обеих марок поддерживают стандарт ONVIF, поэтому видеопоток и запись работают на регистраторе или платформе другой марки. Фирменные функции — классификация «человек/транспорт» как событие, умный поиск по архиву, настройка правил аналитики с платформы — полноценно работают в родной экосистеме, а через ONVIF передаются частично или не передаются вовсе. В стандарте есть отдельный профиль для метаданных аналитики, но его поддержку проверяют для каждой пары «камера — регистратор» до закупки, а не после монтажа.",
+              "Практичная схема для действующего предприятия: новая очередь строится в одной марке вместе с платформой, а старые камеры другой марки подключаются по ONVIF как «просто видео» до плановой замены. Смешивать марки внутри одной новой очереди без причины невыгодно: экономия на отдельной модели уходит на время настройки и разбор несовместимостей."
+            ]
+          },
+          {
+            "h": "Как учесть правила закупки при выборе марки?",
+            "p": [
+              "Закон Республики Узбекистан «О государственных закупках» № ЗРУ-684 от 22.04.2021 в части третьей статьи 34 (в редакции ЗРУ-1005 от 27.11.2024, действует с 01.03.2025) запрещает включать в описание закупки товарный знак, модель, производителя или источник происхождения. Исключения — закупки через электронный магазин и случаи, когда нет другого достаточно точного способа описать товар; тогда в описании обязательно пишут «или аналог», кроме случаев несовместимости товаров.",
+              "Для выбора бренда это означает две вещи. Первая: техническое задание описывает характеристики и функции — разрешение, кодек, аналитику, интеграцию с платформой, глубину архива, — а не марку, и победить может любая подходящая система. Вторая: при расширении действующей системы исключение о несовместимости позволяет обосновать ту же марку, если новые камеры должны работать с уже установленной платформой и её аналитикой; такое обоснование записывают в ТЗ. Закон продолжают менять, поэтому редакцию проверяют на дату конкретной закупки."
+            ]
+          },
+          {
+            "h": "Как обеспечить кибербезопасность и обновления прошивок?",
+            "p": [
+              "У обеих марок публиковались уязвимости в прошивках — например, CVE-2021-36260 у Hikvision и CVE-2025-31700 и CVE-2025-31701 у Dahua, — и обе выпускали исправления. Для предприятия правильный вопрос — не «какой бренд безопаснее», а «кто и как обслуживает систему»: регламент обновления прошивок, отдельная сеть (VLAN) для камер, закрытые порты, удалённый доступ через облако производителя или VPN, личные учётные записи вместо одной общей. Подробно — в статье «Как защитить IP-камеры и регистратор от взлома».",
+              "Второй вопрос — где лежат данные. По статье 27-1 Закона «О персональных данных» № ЗРУ-547 (в редакции ЗРУ-1125 от 26.03.2026) биометрические данные подлежат обязательному хранению на территории Узбекистана. Шаблоны лиц в терминалах доступа — биометрия, поэтому сервер платформы с базой лиц размещают в Узбекистане. Для обычного видеоархива прямого указания в этой статье нет, но держать его на собственном сервере или регистраторе в стране — самый спокойный вариант."
+            ]
+          },
+          {
+            "h": "Как принять решение: таблица критериев и пилот",
+            "p": [
+              "Чтобы выбор не превратился в спор вкусов, его считают. Каждому критерию дают вес по важности для вашего объекта (в сумме 100), каждую марку оценивают по шкале от 1 до 5, оценку умножают на вес и баллы складывают. Пример весов ниже — у вашего объекта они будут другими.",
+              "Затем проводят пилот. Пилот или демонстрацию на объекте заказчика проводим и мы — по этой же схеме:",
+              "Интегратора выбирают так же — по опыту на платформах обеих марок и по результатам пилота. В каталоге SAT Solutions есть обе марки; HikCentral Professional мы поставляем и настраиваем, а по Dahua у нас сертификат «Authorized Strategic System Integrator» на 2026 год (действует 01.01–31.12.2026, показан на странице «О компании»)."
+            ],
+            "table": {
+              "head": [
+                "Критерий",
+                "Что проверить",
+                "Пример веса"
+              ],
+              "rows": [
+                [
+                  "Платформа управления",
+                  "масштаб, роли, видеостена, журнал действий",
+                  "20"
+                ],
+                [
+                  "Интеграция со СКУД, домофонией, учётом времени",
+                  "нужные модули в одной платформе",
+                  "15"
+                ],
+                [
+                  "Существующий парк",
+                  "что уже установлено и останется работать",
+                  "15"
+                ],
+                [
+                  "Стоимость владения",
+                  "камеры, платформа, лицензии, диски и работы за весь срок",
+                  "15"
+                ],
+                [
+                  "Аналитика",
+                  "человек/транспорт, поиск по архиву, лица и номера под сценарий",
+                  "10"
+                ],
+                [
+                  "Ассортимент нужных моделей",
+                  "уличные, длиннофокусные, панорамные, с микрофоном",
+                  "10"
+                ],
+                [
+                  "Обновления и безопасность",
+                  "регулярность прошивок, централизованное обновление",
+                  "10"
+                ],
+                [
+                  "Требования закупки",
+                  "«или аналог», обоснование совместимости",
+                  "5"
+                ]
+              ],
+              "at": 1
+            },
+            "ol": [
+              "Выберите 2–3 типовые сцены объекта: въезд, периметр ночью, цех или склад.",
+              "Поставьте на каждую сцену по 2–4 камеры обеих марок одного класса и разрешения.",
+              "Запишите обе группы на свои регистраторы с одинаковыми настройками кодека и битрейта.",
+              "Оставьте систему работать две недели в обычном режиме объекта.",
+              "Сравните ночную картинку, число ложных тревог аналитики, удобство поиска по архиву и фактический объём записи в сутки.",
+              "Внесите результаты в таблицу критериев и только после этого считайте полную смету."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "О компании",
+            "p": [],
+            "ul": [
+              "SAT Solutions — бренд ООО «SUPPLY AND TRANSPORTATION» (ИНН 308603912). Ташкент, ул. Катта Дархон, 5; +998 97 862-66-99; sales@satsolutions.uz; Пн–Пт 9:00–18:00.",
+              "Поставка оборудования и монтаж: видеонаблюдение, СКУД и турникеты, учёт рабочего времени, охранная и пожарная сигнализация, домофония, СКС и ЛВС, Wi-Fi, оптика, серверные. Монтаж ведёт собственный штат: 3 инженера и 15 монтажников.",
+              "Каталог satsolutions.uz: более 2 500 позиций, в том числе Hikvision, Dahua и ZKTeco; цены в сумах с НДС. Собственный склад в Ташкенте, ходовые позиции в наличии.",
+              "Поставляем обе марки — Hikvision и Dahua; сертификат Dahua «Authorized Strategic System Integrator» на 2026 год (действует 01.01–31.12.2026) — на странице «О компании».",
+              "Документы на странице «О компании»: разрешение Национальной гвардии № 1554491 (монтаж, наладка и техобслуживание технических средств охраны); разрешение МЧС № 913518, уведомление от 23.07.2025 (монтаж, наладка и техобслуживание пожарной сигнализации и автоматического пожаротушения) — уведомительный порядок по ПКМ № 88 от 25.02.2022.",
+              "Гарантия 3 года на монтажные работы; на оборудование — гарантия производителя от 1 до 3 лет. Работаем с НДС; электронные счета-фактуры (ЭСФ) выставляем через оператора электронного документооборота.",
+              "Пришлите ТЗ на sales@satsolutions.uz — подготовим КП со спецификацией и ведомостью работ; КП — в течение 24 часов."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Что лучше для завода — Hikvision или Dahua?",
+            "a": "Универсального ответа нет: обе марки закрывают камеры, регистраторы, платформы и доступ. Решают существующий парк, нужная платформа и интеграции, стоимость владения и требования закупки — их сводят в таблицу с весами и проверяют пилотом."
+          },
+          {
+            "q": "Когда регистратора уже мало и нужна центральная платформа?",
+            "a": "По опыту наших инженеров — обычно когда камер больше 64 или регистраторов больше двух, при нескольких зданиях, видеостене, ролях доступа, журнале действий операторов или интеграции с проходной. Если совпадают три признака из шести, закладывайте платформу."
+          },
+          {
+            "q": "HikCentral или DSS — в чём разница?",
+            "a": "Это центральные платформы Hikvision (HikCentral Professional) и Dahua (DSS Pro, DSS-OneBox). По описанию производителей обе объединяют регистраторы, пользователей и события и подключают модули доступа. Различия — в составе модулей и условиях лицензирования, их сравнивают по актуальной спецификации под вашу конфигурацию."
+          },
+          {
+            "q": "Можно ли подключить камеры Dahua к регистратору Hikvision и наоборот?",
+            "a": "Да, по стандарту ONVIF работают видео и запись. Фирменная аналитика и умный поиск полноценно работают только в родной экосистеме, поэтому новую очередь лучше строить в одной марке."
+          },
+          {
+            "q": "Можно ли указать в тендере конкретную марку камер?",
+            "a": "По ч. 3 ст. 34 Закона № ЗРУ-684 в описание госзакупки марку и модель не включают, кроме случаев, когда нет иного точного способа описания, — тогда со словами «или аналог». Исключение — несовместимость, например при расширении уже установленной системы."
+          },
+          {
+            "q": "Где по закону хранить базу лиц для СКУД?",
+            "a": "В Узбекистане: ст. 27-1 Закона № ЗРУ-547 в редакции от 26.03.2026 требует хранить биометрические данные на территории республики. Сервер платформы с базой лиц ставят в стране."
+          },
+          {
+            "q": "Почему 32-канальные регистраторы Hikvision и Dahua стоят по-разному?",
+            "a": "В каталоге на 09.11.2026 DS-7732NI-K4 — 2 474 900 сум, DHI-NVR5232-EI — 3 394 900 сум, но это разные модели с разными функциями. Сравнивать нужно полные конфигурации под одну задачу, а не цены отдельных устройств."
+          }
+        ]
+      },
+      "uz": {
+        "title": "Korxona uchun Hikvision yoki Dahua: oʻnlab va yuzlab kamerali obyekt uchun platformani qanday tanlash kerak",
+        "seoTitle": "Korxona uchun Hikvision yoki Dahua: platforma tanlash",
+        "seoDesc": "50–500 kamerali obyekt: HikCentral yoki DSS, SKUD bilan integratsiya, analitika, ONVIF, xaridda «yoki analog», mezonlar jadvali va sinov.",
+        "excerpt": "50–500 kamerali obyekt kamera markasini emas, yillar davomida ishlaydigan ekotizimni tanlaydi. HikCentral va DSS platformalari, SKUD bilan integratsiya, analitika, markalarni aralashtirish, xarid qoidalari va sinov — mezonlar jadvali bilan.",
+        "summary": [
+          "Korxona uchun kamera emas, platforma tanlanadi: videokuzatuvni boshqarish tizimi, SKUD, domofon va ish vaqtini hisobga olish bilan integratsiya, analitika, oʻrnatilgan uskunalar bilan moslik hamda xarid talablari.",
+          "Ikkala marka ham toʻliq toʻplamni beradi — kameralar, videoregistratorlar, markaziy platformalar, kirish terminallari, domofonlar, — shuning uchun qaror vaznli mezonlar jadvali va obyektning oʻz sahnalarida oʻtkazilgan sinov asosida qabul qilinadi.",
+          "Xarid «Davlat xaridlari toʻgʻrisida»gi Qonun boʻyicha oʻtkazilsa, texnik topshiriq markaga bogʻlanmasdan yoziladi: aniq model faqat «yoki analog» soʻzlari bilan koʻrsatiladi (OʻRQ-684, 34-modda)."
+        ],
+        "sections": [
+          {
+            "h": "Korxona uchun marka tanlash uy uchun tanlashdan nimasi bilan farq qiladi?",
+            "p": [
+              "Kvartira, uy yoki 4–8 kamerali doʻkon uchun «Hikvision yoki Dahua» savolini deyarli har doim aniq modelning narxi va xususiyatlari hal qiladi — bu holatni «Hikvision yoki Dahua: videokuzatuv uchun qaysi birini tanlash kerak» maqolasida koʻrib chiqqanmiz. Zavod, ombor majmuasi, biznes-markaz yoki filiallar tarmogʻida vazifa boshqacha. Tizim navbatma-navbat quriladi va yillar davomida kengaytiriladi, unga oʻtish punktlari, domofonlar, xavf tugmalari va videodevor ulanadi, u bilan esa turli huquqlarga ega oʻnlab foydalanuvchilar ishlaydi. Bu yerda xato kamera narxidagi farq bilan emas, butun platformani qayta qurish bilan oʻlchanadi.",
+              "Shuning uchun korporativ tanlov tasvir haqidagi emas, tizim haqidagi savollardan boshlanadi. Nechta videoregistrator va nechta hudud boʻladi? Videoni kim va qayerdan koʻradi? SKUD bilan yagona ruxsatnomalar bazasi kerakmi? Qoʻriqlash xizmatiga qanday hodisalar kelishi va ularga kim javob berishi kerak? Ikki-uch yildan keyin obyekt qanchaga kengayadi? Bu javoblarga mos kameralar ikkala markada ham bor va ikkalasi ham 2 500 dan ortiq pozitsiyali satsolutions.uz katalogida mavjud: Toshkentda oʻz omborimiz bor, xaridorgir pozitsiyalar omborda mavjud."
+            ]
+          },
+          {
+            "h": "Hikvision va Dahua’da qanday boshqaruv platformalari bor va qachon server kerak?",
+            "p": [
+              "Kichik tizim tarmoq videoregistratorida (NVR) ishlaydi: u arxivni yozadi, kameralarni monitorda koʻrsatadi va mobil ilovaga uzatadi. Bitta 32 kanalli videoregistrator odatiy korpus yoki omborni qamraydi. Masalan, Hikvision DS-7732NI-K4 — 2 474 900 soʻm, Dahua DHI-NVR5232-EI — 3 394 900 soʻm (satsolutions.uz katalogi narxlari, 09.11.2026 holatiga, oʻzgarib turadi). Bular turli funksiyalarga ega turli modellar, shuning uchun narxlarini toʻgʻridan-toʻgʻri solishtirish notoʻgʻri: bir xil vazifa uchun yigʻilgan konfiguratsiyalar solishtiriladi.",
+              "Videoregistratorlar bir-ikkitadan koʻpayganda, filiallar, videodevor, operatorlar harakatlari jurnali va kirish rollari paydo boʻlganda markaziy platforma — alohida serverda ishlaydigan videokuzatuvni boshqarish dasturi (VMS) kerak boʻladi. Hikvision’da bu HikCentral Professional, Dahua’da — DSS Pro va dasturiy-apparat server DSS-OneBox (DSS-OneBox-H1/128 modeli — 20 374 900 soʻm, 09.11.2026 holatiga katalog narxi). Ishlab chiqaruvchilar tavsifiga koʻra, bunday platformalar turli hududlardagi videoregistrator va kameralarni birlashtiradi, hodisalarni saqlaydi, foydalanuvchilarni boshqaradi hamda kirish nazorati va domofon modullarini ulaydi. HikCentral Professional’ni biz yetkazib beramiz va obyekt konfiguratsiyasiga moslab sozlaymiz. Masalan, Dahua DSS Pro platformasida oʻz vazifalarini bajarayotgan xodimlar uchun 150 ta tanaga taqiladigan kameradan iborat tizimni joriy qilganmiz — bu loyiha portfolioda eʼlon qilingan.",
+              "Platformani rejalashtirish vaqti kelganining belgilari (chegaralar — muhandislarimiz tajribasiga koʻra): 64 tadan ortiq kamera yoki ikkitadan ortiq videoregistrator; bir nechta bino yoki shahar; videodevorli operator posti; turli kirish darajalari (qoʻriqlash hammasini koʻradi, sex boshligʻi — faqat oʻz uchastkasini); kim nimani koʻrganini jurnalda saqlash talabi; oʻtish punkti va ish vaqtini hisobga olish bilan integratsiya. Agar obyektingizga oltita banddan kamida uchtasi toʻgʻri kelsa, kameralarni emas, platformalarni solishtiring."
+            ],
+            "table": {
+              "head": [
+                "Parametr",
+                "Tarmoq videoregistratori (NVR)",
+                "Markaziy platforma (HikCentral Professional, DSS Pro)"
+              ],
+              "rows": [
+                [
+                  "Koʻlam",
+                  "bitta qurilmada 32–64 kanal",
+                  "oʻnlab videoregistrator va bir nechta hudud"
+                ],
+                [
+                  "Foydalanuvchilar",
+                  "oddiy hisob yozuvlari",
+                  "rollar, guruhlar, harakatlar jurnali (ishlab chiqaruvchi tavsifiga koʻra)"
+                ],
+                [
+                  "Integratsiya",
+                  "xavf signali kirish va chiqishlari",
+                  "kirish nazorati, domofon, videodevor modullari (ishlab chiqaruvchi tavsifiga koʻra)"
+                ],
+                [
+                  "Qayerda ishlaydi",
+                  "qurilmaning oʻzida",
+                  "alohida server yoki «hammasi bittada» server (OneBox)"
+                ],
+                [
+                  "Qachon yetarli",
+                  "bitta korpus, bitta qoʻriqlash posti",
+                  "bir nechta korpus, filiallar, operator markazi"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Korxona uchun nima muhimroq: kamerami yoki ekotizim?",
+            "p": [
+              "Korporativ obyektda ekotizim muhimroq. Agar binoda bir markaning kirish terminallari, domofonlari yoki videoregistratorlari allaqachon ishlayotgan boʻlsa, videokuzatuvning yangi navbatini oʻsha ekotizimda qurish oqilona: bitta platforma, foydalanuvchilarning yagona bazasi, kirish hodisalari va video operatorning bitta oynasida. Boshqa markaga oʻtish eski uskunalar baribir toʻliq almashtirilganda yoki boshqa marka joriy marka yomonroq hal qiladigan vazifani yopganda oʻzini oqlaydi.",
+              "Ikki-uch yildan keyin kerak boʻladigan quyi tizimlarga qarang: turniketli oʻtish punkti, tabelni 1C’ga yuklaydigan yuz boʻyicha ish vaqtini hisobga olish, mehmon ruxsatnomalari, domofon. Ikkala markaning ham oʻz yuzni aniqlash terminallari va kirish kontrollerlari bor — masalan, Hikvision DS-K1T343EWX terminali 1 137 900 soʻm turadi (09.11.2026 holatiga katalog narxi). Korxonada SKUD va ish vaqtini hisobga olish uchun alohida ZKTeco liniyasi ham koʻrib chiqiladi — u ham katalogimizda bor; taqqoslashni «ZKTeco yoki Hikvision: SKUD va ish vaqtini hisobga olish uchun biometriya» maqolasida koʻrib chiqqanmiz. Bunda video va kirish nazorati bogʻlanishi texnik topshiriq bosqichidayoq alohida tekshiriladi."
+            ]
+          },
+          {
+            "h": "Hikvision va Dahua analitikasini qanday solishtirish va ortiqcha toʻlamaslik mumkin?",
+            "p": [
+              "Ikkala markaning analitikasi bitta asosiy vazifani hal qiladi: odam va transportni soya, shox yoki hayvondan ajratish. Hikvision’da bu texnologiya AcuSense, Dahua’da — WizSense deb ataladi; ular qanday ishlashi «Kameradagi sunʼiy intellekt: AcuSense va WizSense odamni mushuk va mashinadan qanday ajratadi» maqolasida batafsil yoritilgan. Korxona uchun bu, avvalo, perimetrdagi soxta xavf signallarining kamayishi va arxivda tez qidiruv: bir necha soatlik yozuvni koʻrish oʻrniga «22:00 dan keyin darvoza oldidagi odamlar» soʻrovi.",
+              "Odatda ikki holatda ortiqcha toʻlanadi. Birinchisi — analitikali kameralar yozuv faqat hodisani tahlil qilishda koʻriladigan joylarga qoʻyiladi: yoʻlak, buxgalteriya, tayyor mahsulot ombori. Ikkinchisi — yuz yoki avtomobil raqamlarini aniqlash tavsiflangan ssenariysiz sotib olinadi: hodisani kim oladi va u bilan nima qiladi. Ishchi qoida: analitika — perimetr, kirish yoʻllari va kirish eshiklarida; oddiy kameralar — ichkarida; yuz va raqamlarni aniqlash — faqat oʻtish punkti yoki raqam boʻyicha kirish kabi aniq jarayon uchun."
+            ]
+          },
+          {
+            "h": "Bitta obyektda Hikvision va Dahua’ni aralashtirish mumkinmi?",
+            "p": [
+              "Mumkin, lekin cheklovlar bilan. Ikkala markaning kameralari ONVIF standartini qoʻllab-quvvatlaydi, shuning uchun videooqim va yozuv boshqa markaning videoregistratori yoki platformasida ishlaydi. Firma funksiyalari — «odam/transport» tasnifining hodisa sifatida kelishi, arxivda aqlli qidiruv, analitika qoidalarini platformadan sozlash — oʻz ekotizimida toʻliq ishlaydi, ONVIF orqali esa qisman uzatiladi yoki umuman uzatilmaydi. Standartda analitika metamaʼlumotlari uchun alohida profil bor, ammo uni har bir «kamera — videoregistrator» juftligi uchun montajdan keyin emas, xariddan oldin tekshirish kerak.",
+              "Ishlayotgan korxona uchun amaliy sxema: yangi navbat platforma bilan birga bitta markada quriladi, boshqa markadagi eski kameralar esa rejali almashtirishgacha ONVIF orqali «oddiy video» sifatida ulanadi. Bitta yangi navbat ichida markalarni sababsiz aralashtirish foydasiz: alohida modeldagi tejamkorlik sozlash va nomuvofiqliklarni bartaraf etishga ketadi."
+            ]
+          },
+          {
+            "h": "Marka tanlashda xarid qoidalarini qanday hisobga olish kerak?",
+            "p": [
+              "Oʻzbekiston Respublikasining 2021-yil 22-apreldagi OʻRQ-684-son «Davlat xaridlari toʻgʻrisida»gi Qonuni 34-moddasining uchinchi qismi (2024-yil 27-noyabrdagi OʻRQ-1005-son Qonun tahririda, 2025-yil 1-martdan amalda) xarid tavsifiga tovar belgisi, model, ishlab chiqaruvchi yoki kelib chiqish manbaini kiritishni taqiqlaydi. Istisnolar — elektron doʻkon orqali xaridlar va tovarni tavsiflashning boshqa yetarlicha aniq usuli boʻlmagan holatlar; bunda tavsifga albatta «yoki analog» soʻzlari yoziladi, tovarlar mos kelmasligi holatlari bundan mustasno.",
+              "Marka tanlash uchun bu ikki narsani anglatadi. Birinchidan, texnik topshiriq markani emas, xususiyat va funksiyalarni — ruxsat, kodek, analitika, platforma bilan integratsiya, arxiv chuqurligini tavsiflaydi va istalgan mos tizim gʻolib boʻlishi mumkin. Ikkinchidan, ishlayotgan tizimni kengaytirishda yangi kameralar oʻrnatilgan platforma va uning analitikasi bilan ishlashi kerak boʻlsa, nomuvofiqlik haqidagi istisno oʻsha markani asoslashga imkon beradi; bunday asoslash texnik topshiriqqa yoziladi. Qonunga oʻzgartirishlar kiritilishda davom etmoqda, shuning uchun tahrir aniq xarid sanasiga tekshiriladi."
+            ]
+          },
+          {
+            "h": "Kiberxavfsizlik va proshivkalarni yangilashni qanday taʼminlash kerak?",
+            "p": [
+              "Ikkala markada ham proshivkalardagi zaifliklar eʼlon qilingan — masalan, Hikvision’da CVE-2021-36260, Dahua’da CVE-2025-31700 va CVE-2025-31701, — va ikkalasi ham tuzatishlar chiqargan. Korxona uchun toʻgʻri savol «qaysi brend xavfsizroq» emas, «tizimga kim va qanday xizmat koʻrsatadi»: proshivkalarni yangilash reglamenti, kameralar uchun alohida tarmoq (VLAN), yopiq portlar, ishlab chiqaruvchi bulutli xizmati yoki VPN orqali masofaviy kirish, bitta umumiy hisob oʻrniga shaxsiy hisob yozuvlari. Batafsil — «IP-kameralar va videoregistratorni buzib kirishdan qanday himoya qilish kerak» maqolasida.",
+              "Ikkinchi savol — maʼlumotlar qayerda saqlanadi. «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547-son Qonunning 27¹-moddasiga (2026-yil 26-martdagi OʻRQ-1125-son Qonun tahririda) koʻra biometrik maʼlumotlar majburiy ravishda Oʻzbekiston hududida saqlanadi. Kirish terminallaridagi yuz shablonlari biometrik maʼlumotdir, shuning uchun yuzlar bazasi joylashgan platforma serveri Oʻzbekistonda oʻrnatiladi. Oddiy videoarxiv uchun bu moddada toʻgʻridan-toʻgʻri koʻrsatma yoʻq, biroq uni mamlakatdagi oʻz serveringiz yoki videoregistratoringizda saqlash eng xotirjam yoʻl."
+            ]
+          },
+          {
+            "h": "Qarorni qanday qabul qilish kerak: mezonlar jadvali va sinov",
+            "p": [
+              "Tanlov didlar bahsiga aylanmasligi uchun u hisoblanadi. Har bir mezonga obyektingiz uchun ahamiyatiga qarab vazn beriladi (jami 100), har bir marka 1 dan 5 gacha shkala boʻyicha baholanadi, baho vaznga koʻpaytiriladi va ballar qoʻshiladi. Quyida vaznlar namunasi berilgan — sizning obyektingizda ular boshqacha boʻladi.",
+              "Keyin sinov oʻtkaziladi. Buyurtmachi obyektida sinov yoki namoyishni biz ham shu sxema boʻyicha oʻtkazamiz:",
+              "Integrator ham xuddi shu tarzda tanlanadi — ikkala marka platformalaridagi tajribasi va sinov natijalariga qarab. SAT Solutions katalogida ikkala marka ham bor; HikCentral Professional’ni yetkazib beramiz va sozlaymiz, Dahua boʻyicha esa 2026-yil uchun «Authorized Strategic System Integrator» sertifikatimiz bor (01.01–31.12.2026 amal qiladi, «Kompaniya haqida» sahifasida koʻrsatilgan)."
+            ],
+            "table": {
+              "head": [
+                "Mezon",
+                "Nimani tekshirish kerak",
+                "Vazn namunasi"
+              ],
+              "rows": [
+                [
+                  "Boshqaruv platformasi",
+                  "koʻlam, rollar, videodevor, harakatlar jurnali",
+                  "20"
+                ],
+                [
+                  "SKUD, domofon, ish vaqtini hisobga olish bilan integratsiya",
+                  "kerakli modullar bitta platformada",
+                  "15"
+                ],
+                [
+                  "Mavjud uskunalar",
+                  "allaqachon oʻrnatilgan va ishlashda davom etadigan qismi",
+                  "15"
+                ],
+                [
+                  "Egalik qilish qiymati",
+                  "butun muddat uchun kameralar, platforma, litsenziyalar, disklar va ishlar",
+                  "15"
+                ],
+                [
+                  "Analitika",
+                  "odam/transport, arxivda qidiruv, ssenariy boʻyicha yuz va raqamlar",
+                  "10"
+                ],
+                [
+                  "Kerakli modellar assortimenti",
+                  "koʻcha, uzoq fokusli, panoramali, mikrofonli",
+                  "10"
+                ],
+                [
+                  "Yangilanishlar va xavfsizlik",
+                  "proshivkalar muntazamligi, markazlashgan yangilash",
+                  "10"
+                ],
+                [
+                  "Xarid talablari",
+                  "«yoki analog», moslikni asoslash",
+                  "5"
+                ]
+              ],
+              "at": 1
+            },
+            "ol": [
+              "Obyektning 2–3 ta odatiy sahnasini tanlang: kirish yoʻli, tungi perimetr, sex yoki ombor.",
+              "Har bir sahnaga ikkala markaning bir xil sinf va ruxsatdagi 2–4 tadan kamerasini qoʻying.",
+              "Ikkala guruhni kodek va bitreyt sozlamalari bir xil boʻlgan oʻz videoregistratorlariga yozing.",
+              "Tizimni ikki hafta davomida obyektning odatiy rejimida ishlating.",
+              "Tungi tasvirni, analitikaning soxta signallari sonini, arxivda qidiruv qulayligini va bir sutkadagi haqiqiy yozuv hajmini solishtiring.",
+              "Natijalarni mezonlar jadvaliga kiriting va shundan keyingina toʻliq smetani hisoblang."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "Kompaniya haqida",
+            "p": [],
+            "ul": [
+              "SAT Solutions — «SUPPLY AND TRANSPORTATION» MChJ brendi (STIR 308603912). Toshkent, Katta Darxon koʻchasi, 5; +998 97 862-66-99; sales@satsolutions.uz; Du–Ju 9:00–18:00.",
+              "Uskunalar yetkazib berish va oʻrnatish: videokuzatuv, SKUD va turniketlar, ish vaqtini hisobga olish, qoʻriqlash va yongʻin signalizatsiyasi, domofon, SKS va LVS, Wi-Fi, optika, server xonalari. Montajni oʻz shtatimiz bajaradi: 3 muhandis va 15 montajchi.",
+              "satsolutions.uz katalogi: 2 500 dan ortiq pozitsiya, jumladan Hikvision, Dahua va ZKTeco; narxlar soʻmda, QQS bilan. Toshkentda oʻz omborimiz bor, xaridorgir pozitsiyalar omborda mavjud.",
+              "Ikkala marka — Hikvision va Dahua — yetkazib beriladi; Dahua’ning 2026-yil uchun «Authorized Strategic System Integrator» sertifikati (01.01–31.12.2026 amal qiladi) — «Kompaniya haqida» sahifasida.",
+              "«Kompaniya haqida» sahifasidagi hujjatlar: Milliy gvardiyaning 1554491-son ruxsatnomasi (qoʻriqlash texnik vositalarini montaj qilish, sozlash va texnik xizmat koʻrsatish); FVVning 913518-son ruxsatnomasi, xabarnoma 23.07.2025 (yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va texnik xizmat koʻrsatish) — VMQning 2022-yil 25-fevraldagi 88-son qaroriga muvofiq xabardor qilish tartibida.",
+              "Montaj ishlariga 3 yil kafolat; uskunalarga — ishlab chiqaruvchining 1 yildan 3 yilgacha kafolati. QQS bilan ishlaymiz; elektron hisob-fakturalar (EHF) elektron hujjat almashinuvi operatori orqali rasmiylashtiriladi.",
+              "Texnik topshiriqni sales@satsolutions.uz manziliga yuboring — spetsifikatsiya va ishlar qaydnomasi bilan tijorat taklifini tayyorlaymiz; tijorat taklifi — 24 soat ichida."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Zavod uchun qaysi biri yaxshi — Hikvision yoki Dahua?",
+            "a": "Universal javob yoʻq: ikkala marka ham kameralar, videoregistratorlar, platformalar va kirish nazoratini qamraydi. Mavjud uskunalar, kerakli platforma va integratsiyalar, egalik qilish qiymati va xarid talablari hal qiladi — ular vaznli jadvalga yigʻiladi va sinov bilan tekshiriladi."
+          },
+          {
+            "q": "Qachon videoregistrator yetmay qoladi va markaziy platforma kerak boʻladi?",
+            "a": "Muhandislarimiz tajribasiga koʻra — odatda kameralar 64 tadan yoki videoregistratorlar ikkitadan oshganda, bir nechta bino, videodevor, kirish rollari, operatorlar harakatlari jurnali yoki oʻtish punkti bilan integratsiya boʻlganda. Oltita belgidan uchtasi mos kelsa, platformani rejalashtiring."
+          },
+          {
+            "q": "HikCentral yoki DSS — farqi nimada?",
+            "a": "Bular Hikvision (HikCentral Professional) va Dahua (DSS Pro, DSS-OneBox) markaziy platformalari. Ishlab chiqaruvchilar tavsifiga koʻra ikkalasi ham videoregistratorlar, foydalanuvchilar va hodisalarni birlashtiradi hamda kirish modullarini ulaydi. Farqlar modullar tarkibi va litsenziyalash shartlarida — ular sizning konfiguratsiyangiz uchun dolzarb spetsifikatsiya boʻyicha solishtiriladi."
+          },
+          {
+            "q": "Dahua kameralarini Hikvision videoregistratoriga ulash mumkinmi yoki aksincha?",
+            "a": "Ha, ONVIF standarti boʻyicha video va yozuv ishlaydi. Firma analitikasi va aqlli qidiruv faqat oʻz ekotizimida toʻliq ishlaydi, shuning uchun yangi navbatni bitta markada qurgan maʼqul."
+          },
+          {
+            "q": "Tenderda kameralarning aniq markasini koʻrsatish mumkinmi?",
+            "a": "OʻRQ-684-son Qonun 34-moddasining 3-qismiga koʻra davlat xaridi tavsifiga marka va model kiritilmaydi, boshqa aniq tavsif usuli boʻlmagan holatlar bundan mustasno — bunda «yoki analog» soʻzlari bilan. Istisno — nomuvofiqlik, masalan, oʻrnatilgan tizimni kengaytirishda."
+          },
+          {
+            "q": "Qonunga koʻra SKUD uchun yuzlar bazasini qayerda saqlash kerak?",
+            "a": "Oʻzbekistonda: OʻRQ-547-son Qonunning 2026-yil 26-mart tahriridagi 27¹-moddasi biometrik maʼlumotlarni respublika hududida saqlashni talab qiladi. Yuzlar bazasi joylashgan platforma serveri mamlakatda oʻrnatiladi."
+          },
+          {
+            "q": "Nega Hikvision va Dahua’ning 32 kanalli videoregistratorlari har xil narxda?",
+            "a": "09.11.2026 holatiga katalogda DS-7732NI-K4 — 2 474 900 soʻm, DHI-NVR5232-EI — 3 394 900 soʻm, ammo bular turli funksiyalarga ega turli modellar. Alohida qurilmalar narxini emas, bir vazifa uchun toʻliq konfiguratsiyalarni solishtirish kerak."
+          }
+        ]
+      },
+      "en": {
+        "title": "Hikvision or Dahua for an Enterprise: How to Choose a Platform for a Site with Dozens or Hundreds of Cameras",
+        "seoTitle": "Hikvision or Dahua for Enterprise: Choosing a Platform",
+        "seoDesc": "A 50–500 camera site: HikCentral or DSS, access control integration, analytics, ONVIF mixing, «or equivalent» in procurement, a criteria table and a pilot.",
+        "excerpt": "A 50–500 camera site is choosing an ecosystem for years ahead, not a camera brand. We cover the HikCentral and DSS platforms, access control integration, analytics, mixing brands, procurement rules and a pilot — with a criteria table.",
+        "summary": [
+          "For an enterprise you choose a platform, not a camera: the video management system, integration with access control, intercom and time attendance, analytics, compatibility with equipment already installed, and procurement rules.",
+          "Both brands cover the full stack — cameras, recorders, central platforms, access terminals and intercoms — so the decision is made with a weighted criteria table and a pilot on the site's own scenes.",
+          "If the purchase falls under the Law on Public Procurement, the specification is written brand-neutral: a specific model may be named only with the words «or equivalent» (Article 34 of ZRU-684)."
+        ],
+        "sections": [
+          {
+            "h": "How is choosing a brand for an enterprise different from choosing one for a home?",
+            "p": [
+              "For a flat, a house or a shop with 4–8 cameras, the «Hikvision or Dahua» question is almost always settled by the price and specifications of a particular model — we covered that case in the article «Hikvision or Dahua: which to choose for video surveillance». At a factory, a warehouse complex, a business centre or a branch network the task is different. The system is built in phases and grows for years; turnstiles, intercoms, panic buttons and a video wall are connected to it, and dozens of users with different rights work in it. A mistake here costs not the price difference of a camera but a rebuild of the whole platform.",
+              "That is why a corporate choice starts with questions about the system rather than the picture. How many recorders and sites will there be? Who watches video, and from where? Is a single credential database shared with access control needed? Which events must reach security, and who responds to them? How will the site grow in two or three years? Both brands have cameras that fit these answers, and both are in the satsolutions.uz catalogue of more than 2,500 items: our own warehouse in Tashkent, fast-moving items in stock."
+            ]
+          },
+          {
+            "h": "What management platforms do Hikvision and Dahua offer, and when do you need a server?",
+            "p": [
+              "A small system lives on a network video recorder (NVR): it records the archive, shows cameras on a monitor and streams them to a mobile app. One 32-channel recorder covers a typical building or warehouse. For example, the Hikvision DS-7732NI-K4 costs 2,474,900 UZS and the Dahua DHI-NVR5232-EI 3,394,900 UZS (satsolutions.uz catalogue prices as of 09.11.2026, subject to change). They are different models with different feature sets, so comparing their prices directly is misleading: you compare configurations built for the same task.",
+              "Once there are more than one or two recorders, or branches, a video wall, an operator action log and access roles appear, you need a central platform — video management software (VMS) on a dedicated server. For Hikvision this is HikCentral Professional; for Dahua it is DSS Pro and the DSS-OneBox hardware-software server (the DSS-OneBox-H1/128 costs 20,374,900 UZS, catalogue price as of 09.11.2026). According to the manufacturers, such platforms unite recorders and cameras across sites, store events, manage users and connect access control and intercom modules. We supply HikCentral Professional and configure it for the site's setup. On Dahua DSS Pro, for example, we deployed a system of 150 body-worn cameras for staff on duty — the case is published in our portfolio.",
+              "Signs that it is time to plan a platform (the thresholds come from our engineers' experience): more than 64 cameras or two recorders; several buildings or cities; an operator post with a video wall; different access levels (security sees everything, a shop-floor manager sees only their area); a requirement to log who viewed what; integration with turnstiles and time attendance. If at least three of these six points apply to your site, compare platforms, not cameras."
+            ],
+            "table": {
+              "head": [
+                "Parameter",
+                "Network video recorder (NVR)",
+                "Central platform (HikCentral Professional, DSS Pro)"
+              ],
+              "rows": [
+                [
+                  "Scale",
+                  "32–64 channels per device",
+                  "dozens of recorders and several sites"
+                ],
+                [
+                  "Users",
+                  "basic accounts",
+                  "roles, groups, action log (per the manufacturer)"
+                ],
+                [
+                  "Integration",
+                  "alarm inputs and outputs",
+                  "access control, intercom, video wall modules (per the manufacturer)"
+                ],
+                [
+                  "Runs on",
+                  "the device itself",
+                  "a dedicated server or an all-in-one server (OneBox)"
+                ],
+                [
+                  "Enough when",
+                  "one building, one security post",
+                  "several buildings, branches, an operator centre"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "What matters more for an enterprise: the camera or the ecosystem?",
+            "p": [
+              "On a corporate site, the ecosystem. If the building already runs access terminals, intercoms or recorders of one brand, it makes sense to build the next CCTV phase in the same ecosystem: one platform, one user database, access events and video in one operator window. Switching brands is justified when the old fleet is being replaced entirely anyway, or when the other brand covers a task the current one handles less well.",
+              "Look at the subsystems you will need in two or three years: a turnstile checkpoint, face-based time attendance with timesheet export to 1C, visitor passes, intercom. Both brands have their own face recognition terminals and access controllers — for example, the Hikvision DS-K1T343EWX terminal costs 1,137,900 UZS (catalogue price as of 09.11.2026). For access control and time attendance, enterprises also consider a separate ZKTeco line — it is also in our catalogue; we compared them in the article «ZKTeco or Hikvision: biometrics for access control and time attendance». In that case the video–access link is checked separately, already at the specification stage."
+            ]
+          },
+          {
+            "h": "How do you compare Hikvision and Dahua analytics without overpaying?",
+            "p": [
+              "Both brands' analytics solve one basic task: telling people and vehicles apart from shadows, branches or animals. Hikvision calls the technology AcuSense, Dahua calls it WizSense; how they work is explained in detail in the article «AI in the camera: how AcuSense and WizSense tell a person from a cat and a car». For an enterprise this means, above all, fewer false alarms on the perimeter and fast archive search: a query «people at the gate after 22:00» instead of hours of footage.",
+              "People usually overpay in two cases. First, cameras with analytics go where footage is watched only when investigating an incident: a corridor, the accounts office, a finished-goods store. Second, face or licence-plate recognition is bought without a described scenario: who receives the event and what they do with it. A working rule: analytics on the perimeter, entrances and gates; ordinary cameras indoors; face and plate recognition only for a specific process such as a checkpoint or plate-based vehicle entry."
+            ]
+          },
+          {
+            "h": "Can you mix Hikvision and Dahua on one site?",
+            "p": [
+              "You can, with limitations. Cameras of both brands support the ONVIF standard, so video streaming and recording work on a recorder or platform of the other brand. Brand-specific functions — person/vehicle classification as an event, smart archive search, configuring analytics rules from the platform — work fully in the native ecosystem, while over ONVIF they are passed partially or not at all. The standard has a separate profile for analytics metadata, but its support should be checked for each camera–recorder pair before purchase, not after installation.",
+              "A practical scheme for an operating enterprise: the new phase is built in one brand together with the platform, and older cameras of the other brand are connected via ONVIF as «plain video» until their scheduled replacement. Mixing brands within one new phase without a reason does not pay off: the saving on a single model is eaten by configuration time and troubleshooting incompatibilities."
+            ]
+          },
+          {
+            "h": "How do you take procurement rules into account when choosing a brand?",
+            "p": [
+              "The Law of the Republic of Uzbekistan No. ZRU-684 of 22 April 2021 «On Public Procurement», Article 34, part three (as amended by ZRU-1005 of 27 November 2024, in force since 1 March 2025), prohibits including a trademark, model, manufacturer or source of origin in a procurement description. The exceptions are purchases through the electronic shop and cases where there is no other sufficiently precise way to describe the goods; then the description must include the words «or equivalent», except where goods are incompatible.",
+              "For brand selection this means two things. First, the specification describes characteristics and functions — resolution, codec, analytics, platform integration, archive depth — not a brand, and any suitable system can win. Second, when expanding an existing system, the incompatibility exception makes it possible to justify the same brand if new cameras must work with the platform already installed and its analytics; this justification is written into the specification. The law keeps being amended, so check the version in force on the date of the specific purchase."
+            ]
+          },
+          {
+            "h": "How do you ensure cybersecurity and firmware updates?",
+            "p": [
+              "Both brands have had published firmware vulnerabilities — for example, CVE-2021-36260 for Hikvision and CVE-2025-31700 and CVE-2025-31701 for Dahua — and both released fixes. For an enterprise the right question is not «which brand is safer» but «who maintains the system and how»: a firmware update routine, a separate network (VLAN) for cameras, closed ports, remote access via the manufacturer's cloud or a VPN, personal accounts instead of one shared login. Details are in the article «How to protect IP cameras and a recorder from hacking».",
+              "The second question is where the data is stored. Under Article 27-1 of the Law «On Personal Data» No. ZRU-547 (as amended by ZRU-1125 of 26 March 2026), biometric data must be stored on the territory of Uzbekistan. Face templates in access terminals are biometric data, so the platform server holding the face database is placed in Uzbekistan. For an ordinary video archive this article gives no direct instruction, but keeping it on your own server or recorder in the country is the safest option."
+            ]
+          },
+          {
+            "h": "How do you make the decision: a criteria table and a pilot",
+            "p": [
+              "To keep the choice from becoming a debate about taste, calculate it. Give each criterion a weight according to its importance for your site (totalling 100), score each brand from 1 to 5, multiply the score by the weight and add up the points. Sample weights are below — yours will differ.",
+              "Then run a pilot. We also run pilots and demonstrations on the customer's site using the same method:",
+              "An integrator is chosen the same way — by its experience with both brands' platforms and by the pilot results. Both brands are in the SAT Solutions catalogue; we supply and configure HikCentral Professional, and for Dahua we hold the «Authorized Strategic System Integrator» certificate for 2026 (valid 01.01–31.12.2026, shown on the «About» page)."
+            ],
+            "table": {
+              "head": [
+                "Criterion",
+                "What to check",
+                "Sample weight"
+              ],
+              "rows": [
+                [
+                  "Management platform",
+                  "scale, roles, video wall, action log",
+                  "20"
+                ],
+                [
+                  "Integration with access control, intercom, time attendance",
+                  "required modules in one platform",
+                  "15"
+                ],
+                [
+                  "Existing fleet",
+                  "what is already installed and will keep working",
+                  "15"
+                ],
+                [
+                  "Total cost of ownership",
+                  "cameras, platform, licences, disks and works over the whole lifetime",
+                  "15"
+                ],
+                [
+                  "Analytics",
+                  "person/vehicle, archive search, faces and plates for a scenario",
+                  "10"
+                ],
+                [
+                  "Range of required models",
+                  "outdoor, long focal length, panoramic, with microphone",
+                  "10"
+                ],
+                [
+                  "Updates and security",
+                  "firmware regularity, centralised updates",
+                  "10"
+                ],
+                [
+                  "Procurement requirements",
+                  "«or equivalent», compatibility justification",
+                  "5"
+                ]
+              ],
+              "at": 1
+            },
+            "ol": [
+              "Pick 2–3 typical scenes on the site: vehicle entrance, perimeter at night, a workshop or a warehouse.",
+              "Install 2–4 cameras of each brand of the same class and resolution on every scene.",
+              "Record both groups to their own recorders with identical codec and bitrate settings.",
+              "Let the system run for two weeks in the site's normal mode.",
+              "Compare night images, the number of analytics false alarms, ease of archive search and the actual recording volume per day.",
+              "Enter the results into the criteria table and only then calculate the full estimate."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "About the company",
+            "p": [],
+            "ul": [
+              "SAT Solutions is a brand of SUPPLY AND TRANSPORTATION LLC (TIN 308603912). Tashkent, 5 Katta Darkhon Street; +998 97 862-66-99; sales@satsolutions.uz; Mon–Fri 9:00–18:00.",
+              "Equipment supply and installation: video surveillance, access control and turnstiles, time attendance, intruder and fire alarms, intercom, structured cabling and LAN, Wi-Fi, fibre optics, server rooms. Installation by our own staff: 3 engineers and 15 installers.",
+              "satsolutions.uz catalogue: more than 2,500 items, including Hikvision, Dahua and ZKTeco; prices in UZS including VAT. Our own warehouse in Tashkent, fast-moving items in stock.",
+              "We supply both brands — Hikvision and Dahua; the Dahua «Authorized Strategic System Integrator» certificate for 2026 (valid 01.01–31.12.2026) is on the «About» page.",
+              "Documents on the «About» page: National Guard permit No. 1554491 (installation, commissioning and maintenance of security equipment); Ministry of Emergency Situations permit No. 913518, notification of 23.07.2025 (installation, commissioning and maintenance of fire alarm and automatic fire extinguishing systems) — under the notification procedure of Cabinet of Ministers Resolution No. 88 of 25.02.2022.",
+              "3-year warranty on installation works; equipment carries the manufacturer's warranty of 1 to 3 years. We work with VAT; e-invoices (ESF) are issued through an electronic document-exchange operator.",
+              "Send your specification to sales@satsolutions.uz — we will prepare a quotation with an equipment specification and a schedule of works; quotations within 24 hours."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Which is better for a factory — Hikvision or Dahua?",
+            "a": "There is no universal answer: both brands cover cameras, recorders, platforms and access control. The decision rests on the existing fleet, the required platform and integrations, total cost of ownership and procurement rules — these go into a weighted table and are tested with a pilot."
+          },
+          {
+            "q": "When is a recorder no longer enough and a central platform needed?",
+            "a": "In our engineers' experience, usually when there are more than 64 cameras or more than two recorders, several buildings, a video wall, access roles, an operator action log or integration with turnstiles. If three of the six signs apply, plan a platform."
+          },
+          {
+            "q": "HikCentral or DSS — what is the difference?",
+            "a": "These are the central platforms of Hikvision (HikCentral Professional) and Dahua (DSS Pro, DSS-OneBox). According to the manufacturers, both unite recorders, users and events and connect access control modules. The differences lie in the module set and licensing terms; compare them using the current specification for your configuration."
+          },
+          {
+            "q": "Can Dahua cameras be connected to a Hikvision recorder, and vice versa?",
+            "a": "Yes, video and recording work via the ONVIF standard. Brand analytics and smart search work fully only in the native ecosystem, so it is better to build a new phase in one brand."
+          },
+          {
+            "q": "Can a tender specify a particular camera brand?",
+            "a": "Under Article 34(3) of Law No. ZRU-684, a public procurement description does not include a brand or model unless there is no other precise way to describe the goods — and then only with the words «or equivalent». The exception is incompatibility, for example when expanding an installed system."
+          },
+          {
+            "q": "Where must an access control face database be stored by law?",
+            "a": "In Uzbekistan: Article 27-1 of Law No. ZRU-547, as amended on 26 March 2026, requires biometric data to be stored on the territory of the republic. The platform server with the face database is installed in the country."
+          },
+          {
+            "q": "Why do 32-channel Hikvision and Dahua recorders cost differently?",
+            "a": "In the catalogue as of 09.11.2026 the DS-7732NI-K4 costs 2,474,900 UZS and the DHI-NVR5232-EI 3,394,900 UZS, but they are different models with different functions. Compare complete configurations for one task, not the prices of individual devices."
+          }
+        ]
+      },
+      "tr": {
+        "title": "Kurumlar için Hikvision mı, Dahua mı: onlarca ve yüzlerce kameralı tesis için platform nasıl seçilir",
+        "seoTitle": "Kurumlar için Hikvision mı Dahua mı: platform seçimi",
+        "seoDesc": "50–500 kameralı tesis: HikCentral mı DSS mi, geçiş kontrolü entegrasyonu, analitik, ONVIF, ihalede «veya muadili», kriter tablosu ve pilot.",
+        "excerpt": "50–500 kameralı bir tesis kamera markası değil, yıllar boyunca çalışacak bir ekosistem seçer. HikCentral ve DSS platformları, geçiş kontrolü entegrasyonu, analitik, markaları karıştırma, satın alma kuralları ve pilot — kriter tablosuyla.",
+        "summary": [
+          "Kurumsal bir tesis için kamera değil platform seçilir: video yönetim sistemi, geçiş kontrolü, diyafon ve personel devam takibiyle entegrasyon, analitik, mevcut ekipmanla uyumluluk ve satın alma kuralları.",
+          "Her iki marka da tüm seti sunar — kameralar, kayıt cihazları, merkezi platformlar, geçiş terminalleri ve diyafonlar — bu yüzden karar ağırlıklı bir kriter tablosu ve tesisin kendi sahnelerinde yapılan bir pilot ile verilir.",
+          "Alım «Kamu Alımları Hakkında» Kanun kapsamındaysa teknik şartname markadan bağımsız yazılır: belirli bir model yalnızca «veya muadili» ifadesiyle anılabilir (ZRU-684, madde 34)."
+        ],
+        "sections": [
+          {
+            "h": "Kurumsal tesis için marka seçimi ev için seçimden nasıl farklıdır?",
+            "p": [
+              "Bir daire, ev ya da 4–8 kameralı bir mağaza için «Hikvision mı, Dahua mı» sorusunu neredeyse her zaman belirli bir modelin fiyatı ve özellikleri çözer — bu durumu «Hikvision mı, Dahua mı: video gözetim için hangisi seçilmeli» makalesinde ele aldık. Bir fabrikada, depo kompleksinde, iş merkezinde ya da şube ağında görev farklıdır. Sistem aşamalar halinde kurulur ve yıllarca büyür; ona turnikeler, diyafonlar, panik butonları ve video duvarı bağlanır, farklı yetkilere sahip onlarca kullanıcı onunla çalışır. Buradaki bir hata, kamera fiyatındaki farkla değil, tüm platformun yeniden kurulmasıyla ölçülür.",
+              "Bu nedenle kurumsal seçim görüntüyle değil, sistemle ilgili sorularla başlar. Kaç kayıt cihazı ve kaç lokasyon olacak? Görüntüyü kim, nereden izleyecek? Geçiş kontrolüyle ortak bir kart/yetki veritabanı gerekli mi? Güvenliğe hangi olaylar gitmeli ve onlara kim müdahale edecek? Tesis iki-üç yıl içinde ne kadar büyüyecek? Bu cevaplara uygun kameralar her iki markada da var ve ikisi de 2.500'den fazla ürün bulunan satsolutions.uz kataloğunda yer alıyor: Taşkent'te kendi depomuz var, çok satan ürünler stokta."
+            ]
+          },
+          {
+            "h": "Hikvision ve Dahua'nın hangi yönetim platformları var ve sunucu ne zaman gerekir?",
+            "p": [
+              "Küçük bir sistem bir ağ video kayıt cihazında (NVR) çalışır: arşivi kaydeder, kameraları monitörde gösterir ve mobil uygulamaya aktarır. 32 kanallı tek bir kayıt cihazı tipik bir binayı veya depoyu karşılar. Örneğin Hikvision DS-7732NI-K4 2.474.900 UZS, Dahua DHI-NVR5232-EI ise 3.394.900 UZS (satsolutions.uz katalog fiyatları, 09.11.2026 itibarıyla, değişebilir). Bunlar farklı özelliklere sahip farklı modellerdir, bu yüzden fiyatlarını doğrudan karşılaştırmak yanıltıcıdır: aynı görev için oluşturulmuş konfigürasyonlar karşılaştırılır.",
+              "Kayıt cihazı sayısı bir-ikiyi aştığında; şubeler, video duvarı, operatör işlem kaydı ve erişim rolleri ortaya çıktığında merkezi bir platforma — ayrı bir sunucuda çalışan video yönetim yazılımına (VMS) — ihtiyaç duyulur. Hikvision'da bu HikCentral Professional, Dahua'da ise DSS Pro ve donanım-yazılım sunucusu DSS-OneBox'tır (DSS-OneBox-H1/128 modeli — 20.374.900 UZS, 09.11.2026 itibarıyla katalog fiyatı). Üreticilerin açıklamalarına göre bu platformlar farklı lokasyonlardaki kayıt cihazlarını ve kameraları birleştirir, olayları saklar, kullanıcıları yönetir ve geçiş kontrolü ile diyafon modüllerini bağlar. HikCentral Professional'ı biz tedarik ediyor ve tesisin konfigürasyonuna göre ayarlıyoruz. Örneğin Dahua DSS Pro platformu üzerinde görev başındaki personel için 150 yaka kamerasından oluşan bir sistem kurduk — proje portföyümüzde yayımlandı.",
+              "Platform planlama zamanının geldiğini gösteren işaretler (eşikler mühendislerimizin deneyimine dayanır): 64'ten fazla kamera veya ikiden fazla kayıt cihazı; birden fazla bina veya şehir; video duvarlı bir operatör noktası; farklı erişim seviyeleri (güvenlik her şeyi görür, üretim şefi yalnızca kendi alanını); kimin neyi izlediğinin kayıt altına alınması gerekliliği; turnike ve personel devam takibiyle entegrasyon. Bu altı maddeden en az üçü tesisiniz için geçerliyse kameraları değil, platformları karşılaştırın."
+            ],
+            "table": {
+              "head": [
+                "Parametre",
+                "Ağ video kayıt cihazı (NVR)",
+                "Merkezi platform (HikCentral Professional, DSS Pro)"
+              ],
+              "rows": [
+                [
+                  "Ölçek",
+                  "cihaz başına 32–64 kanal",
+                  "onlarca kayıt cihazı ve birkaç lokasyon"
+                ],
+                [
+                  "Kullanıcılar",
+                  "temel hesaplar",
+                  "roller, gruplar, işlem kaydı (üretici açıklamasına göre)"
+                ],
+                [
+                  "Entegrasyon",
+                  "alarm giriş ve çıkışları",
+                  "geçiş kontrolü, diyafon, video duvarı modülleri (üretici açıklamasına göre)"
+                ],
+                [
+                  "Nerede çalışır",
+                  "cihazın kendisinde",
+                  "ayrı sunucu veya hepsi bir arada sunucu (OneBox)"
+                ],
+                [
+                  "Ne zaman yeterli",
+                  "tek bina, tek güvenlik noktası",
+                  "birden fazla bina, şubeler, operatör merkezi"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "Kurumsal tesis için hangisi daha önemli: kamera mı, ekosistem mi?",
+            "p": [
+              "Kurumsal bir tesiste ekosistem daha önemlidir. Binada zaten tek bir markanın geçiş terminalleri, diyafonları veya kayıt cihazları çalışıyorsa, video gözetimin yeni aşamasını aynı ekosistemde kurmak mantıklıdır: tek platform, tek kullanıcı veritabanı, geçiş olayları ve görüntü operatörün tek ekranında. Başka bir markaya geçmek, eski ekipman zaten tamamen değişecekse ya da diğer marka mevcut markanın daha zayıf çözdüğü bir görevi karşılıyorsa anlamlıdır.",
+              "İki-üç yıl içinde ihtiyaç duyacağınız alt sistemlere bakın: turnikeli giriş noktası, puantajı 1C'ye aktaran yüz tanımalı personel devam takibi, ziyaretçi kartları, diyafon. Her iki markanın da kendi yüz tanıma terminalleri ve geçiş kontrolörleri vardır — örneğin Hikvision DS-K1T343EWX terminali 1.137.900 UZS (09.11.2026 itibarıyla katalog fiyatı). Kurumlarda geçiş kontrolü ve personel devam takibi için ayrı bir ZKTeco serisi de değerlendirilir — bu seri de kataloğumuzda var; karşılaştırmayı «ZKTeco mu, Hikvision mı: geçiş kontrolü ve devam takibi için biyometri» makalesinde ele aldık. Bu durumda görüntü ve geçiş bağlantısı, daha teknik şartname aşamasında ayrıca kontrol edilir."
+            ]
+          },
+          {
+            "h": "Hikvision ve Dahua analitiği nasıl karşılaştırılır ve fazla ödeme nasıl önlenir?",
+            "p": [
+              "Her iki markanın analitiği tek bir temel görevi çözer: insanı ve aracı gölgeden, daldan veya hayvandan ayırmak. Hikvision bu teknolojiyi AcuSense, Dahua ise WizSense olarak adlandırır; nasıl çalıştıkları «Kamerada yapay zekâ: AcuSense ve WizSense insanı kediden ve arabadan nasıl ayırt eder» makalesinde ayrıntılı anlatılıyor. Kurumsal tesis için bu her şeyden önce çevrede daha az yanlış alarm ve arşivde hızlı arama demektir: saatlerce kayıt izlemek yerine «22:00'den sonra kapıdaki kişiler» sorgusu.",
+              "Fazla ödeme genellikle iki durumda olur. Birincisi, analitikli kameralar kaydın yalnızca bir olay incelenirken izlendiği yerlere konur: koridor, muhasebe, mamul deposu. İkincisi, yüz veya plaka tanıma, tanımlanmış bir senaryo olmadan satın alınır: olayı kim alacak ve onunla ne yapacak. Pratik kural: analitik çevrede, giriş yollarında ve kapılarda; içeride sıradan kameralar; yüz ve plaka tanıma yalnızca turnike girişi veya plakayla araç girişi gibi belirli bir süreç için."
+            ]
+          },
+          {
+            "h": "Aynı tesiste Hikvision ve Dahua karıştırılabilir mi?",
+            "p": [
+              "Karıştırılabilir, ancak sınırlamalarla. Her iki markanın kameraları ONVIF standardını destekler; bu nedenle görüntü akışı ve kayıt diğer markanın kayıt cihazında veya platformunda çalışır. Markaya özgü işlevler — «insan/araç» sınıflandırmasının olay olarak gelmesi, arşivde akıllı arama, analitik kurallarının platformdan ayarlanması — kendi ekosisteminde tam çalışır, ONVIF üzerinden ise kısmen aktarılır ya da hiç aktarılmaz. Standartta analitik meta verileri için ayrı bir profil vardır, ancak bunun desteği her «kamera — kayıt cihazı» çifti için montajdan sonra değil, satın almadan önce kontrol edilmelidir.",
+              "Çalışmakta olan bir işletme için pratik şema: yeni aşama platformla birlikte tek markada kurulur, diğer markanın eski kameraları ise planlı değişime kadar ONVIF üzerinden «sadece görüntü» olarak bağlanır. Yeni bir aşamanın içinde markaları sebepsiz karıştırmak kârlı değildir: tek bir modeldeki tasarruf, ayar süresine ve uyumsuzlukların giderilmesine gider."
+            ]
+          },
+          {
+            "h": "Marka seçerken satın alma kuralları nasıl dikkate alınır?",
+            "p": [
+              "Özbekistan Cumhuriyeti'nin 22 Nisan 2021 tarihli ve ZRU-684 sayılı «Kamu Alımları Hakkında» Kanunu'nun 34. maddesinin üçüncü fıkrası (27 Kasım 2024 tarihli ZRU-1005 sayılı Kanun ile değişik, 1 Mart 2025'ten itibaren yürürlükte), alım tanımına ticari marka, model, üretici veya menşe kaynağı konulmasını yasaklar. İstisnalar elektronik mağaza üzerinden yapılan alımlar ve malı tanımlamanın başka yeterince kesin bir yolunun bulunmadığı durumlardır; bu durumda tanıma mutlaka «veya muadili» ifadesi eklenir, malların uyumsuz olduğu durumlar hariç.",
+              "Marka seçimi için bu iki anlama gelir. Birincisi, teknik şartname markayı değil, özellik ve işlevleri — çözünürlük, kodek, analitik, platform entegrasyonu, arşiv derinliği — tanımlar ve uygun herhangi bir sistem kazanabilir. İkincisi, mevcut bir sistem genişletilirken yeni kameraların kurulu platform ve onun analitiğiyle çalışması gerekiyorsa, uyumsuzluk istisnası aynı markanın gerekçelendirilmesine imkân verir; bu gerekçe teknik şartnameye yazılır. Kanun değiştirilmeye devam ediyor, bu nedenle yürürlükteki metin ilgili alımın tarihine göre kontrol edilir."
+            ]
+          },
+          {
+            "h": "Siber güvenlik ve yazılım güncellemeleri nasıl sağlanır?",
+            "p": [
+              "Her iki markanın yazılımlarında da yayımlanmış güvenlik açıkları olmuştur — örneğin Hikvision'da CVE-2021-36260, Dahua'da CVE-2025-31700 ve CVE-2025-31701 — ve her ikisi de düzeltmeler yayımlamıştır. Kurumsal tesis için doğru soru «hangi marka daha güvenli» değil, «sisteme kim ve nasıl bakım yapıyor» sorusudur: yazılım güncelleme prosedürü, kameralar için ayrı ağ (VLAN), kapalı portlar, üreticinin bulutu veya VPN üzerinden uzaktan erişim, tek ortak hesap yerine kişisel hesaplar. Ayrıntılar «IP kameralar ve kayıt cihazı saldırılara karşı nasıl korunur» makalesinde.",
+              "İkinci soru verilerin nerede tutulduğudur. ZRU-547 sayılı «Kişisel Veriler Hakkında» Kanun'un 27-1. maddesine (26 Mart 2026 tarihli ZRU-1125 sayılı Kanun ile değişik) göre biyometrik veriler zorunlu olarak Özbekistan topraklarında saklanır. Geçiş terminallerindeki yüz şablonları biyometrik veridir; bu nedenle yüz veritabanını barındıran platform sunucusu Özbekistan'a kurulur. Sıradan video arşivi için bu maddede doğrudan bir hüküm yoktur, ancak arşivi ülkedeki kendi sunucunuzda veya kayıt cihazınızda tutmak en sorunsuz seçenektir."
+            ]
+          },
+          {
+            "h": "Karar nasıl verilir: kriter tablosu ve pilot",
+            "p": [
+              "Seçimin bir zevk tartışmasına dönüşmemesi için hesaplanır. Her kritere tesisiniz için önemine göre bir ağırlık verilir (toplam 100), her marka 1'den 5'e kadar puanlanır, puan ağırlıkla çarpılır ve sonuçlar toplanır. Aşağıda örnek ağırlıklar var — sizin tesisinizde farklı olacaktır.",
+              "Ardından pilot yapılır. Müşterinin tesisinde pilot veya demo uygulamasını aynı yöntemle biz de yapıyoruz:",
+              "Entegratör de aynı şekilde seçilir — her iki markanın platformlarındaki deneyimine ve pilot sonuçlarına göre. SAT Solutions kataloğunda her iki marka da var; HikCentral Professional'ı tedarik edip ayarlıyoruz, Dahua için ise 2026 yılına ait «Authorized Strategic System Integrator» sertifikamız var (01.01–31.12.2026 arasında geçerli, «Hakkımızda» sayfasında gösteriliyor)."
+            ],
+            "table": {
+              "head": [
+                "Kriter",
+                "Ne kontrol edilmeli",
+                "Örnek ağırlık"
+              ],
+              "rows": [
+                [
+                  "Yönetim platformu",
+                  "ölçek, roller, video duvarı, işlem kaydı",
+                  "20"
+                ],
+                [
+                  "Geçiş kontrolü, diyafon, devam takibi entegrasyonu",
+                  "gerekli modüller tek platformda",
+                  "15"
+                ],
+                [
+                  "Mevcut ekipman",
+                  "zaten kurulu olan ve çalışmaya devam edecek kısım",
+                  "15"
+                ],
+                [
+                  "Toplam sahip olma maliyeti",
+                  "tüm kullanım süresi için kameralar, platform, lisanslar, diskler ve işçilik",
+                  "15"
+                ],
+                [
+                  "Analitik",
+                  "insan/araç, arşiv araması, senaryoya göre yüz ve plaka",
+                  "10"
+                ],
+                [
+                  "Gerekli model yelpazesi",
+                  "dış mekân, uzun odaklı, panoramik, mikrofonlu",
+                  "10"
+                ],
+                [
+                  "Güncellemeler ve güvenlik",
+                  "yazılım güncelliği, merkezi güncelleme",
+                  "10"
+                ],
+                [
+                  "Satın alma gereklilikleri",
+                  "«veya muadili», uyumluluk gerekçesi",
+                  "5"
+                ]
+              ],
+              "at": 1
+            },
+            "ol": [
+              "Tesisin 2–3 tipik sahnesini seçin: araç girişi, gece çevre hattı, atölye veya depo.",
+              "Her sahneye her iki markadan aynı sınıf ve çözünürlükte 2–4 kamera takın.",
+              "İki grubu, kodek ve bit hızı ayarları aynı olan kendi kayıt cihazlarına kaydedin.",
+              "Sistemi tesisin normal çalışma düzeninde iki hafta çalıştırın.",
+              "Gece görüntüsünü, analitiğin yanlış alarm sayısını, arşivde arama kolaylığını ve günlük gerçek kayıt hacmini karşılaştırın.",
+              "Sonuçları kriter tablosuna girin ve ancak bundan sonra tam maliyet tahminini hesaplayın."
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "Şirket hakkında",
+            "p": [],
+            "ul": [
+              "SAT Solutions, SUPPLY AND TRANSPORTATION LLC'nin markasıdır (vergi no 308603912). Taşkent, Katta Darhon Sokağı 5; +998 97 862-66-99; sales@satsolutions.uz; Pzt–Cum 9:00–18:00.",
+              "Ekipman tedariki ve kurulum: video gözetim, geçiş kontrolü ve turnikeler, personel devam takibi, hırsız ve yangın alarmı, diyafon, yapısal kablolama ve LAN, Wi-Fi, fiber optik, sunucu odaları. Montaj kendi kadromuzla: 3 mühendis ve 15 montaj teknisyeni.",
+              "satsolutions.uz kataloğu: 2.500'den fazla ürün, bunların arasında Hikvision, Dahua ve ZKTeco; fiyatlar UZS cinsinden, KDV dahil. Taşkent'te kendi depomuz var, çok satan ürünler stokta.",
+              "Her iki markayı da tedarik ediyoruz — Hikvision ve Dahua; Dahua'nın 2026 yılına ait «Authorized Strategic System Integrator» sertifikası (01.01–31.12.2026 arasında geçerli) «Hakkımızda» sayfasında.",
+              "«Hakkımızda» sayfasındaki belgeler: Ulusal Muhafız izin belgesi No. 1554491 (güvenlik teknik araçlarının montajı, devreye alınması ve bakımı); Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518, bildirim tarihi 23.07.2025 (yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması ve bakımı) — Bakanlar Kurulu'nun 25.02.2022 tarihli 88 sayılı Kararı uyarınca bildirim usulüyle.",
+              "Montaj işçiliğine 3 yıl garanti; ekipmanda üreticinin 1 ila 3 yıllık garantisi. KDV ile çalışıyoruz; e-faturalar (ESF) bir elektronik belge değişim operatörü üzerinden düzenlenir.",
+              "Teknik şartnamenizi sales@satsolutions.uz adresine gönderin — ekipman listesi ve iş kalemleri cetveliyle teklif hazırlayalım; teklif 24 saat içinde."
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "Bir fabrika için hangisi daha iyi — Hikvision mı, Dahua mı?",
+            "a": "Evrensel bir cevap yok: her iki marka da kameraları, kayıt cihazlarını, platformları ve geçiş kontrolünü kapsar. Kararı mevcut ekipman, gerekli platform ve entegrasyonlar, toplam sahip olma maliyeti ve satın alma kuralları belirler — bunlar ağırlıklı bir tabloda toplanır ve pilotla test edilir."
+          },
+          {
+            "q": "Kayıt cihazı ne zaman yetmez ve merkezi platform gerekir?",
+            "a": "Mühendislerimizin deneyimine göre genellikle kamera sayısı 64'ü veya kayıt cihazı sayısı ikiyi aştığında, birden fazla bina, video duvarı, erişim rolleri, operatör işlem kaydı ya da turnike entegrasyonu olduğunda. Altı işaretten üçü uyuyorsa platform planlayın."
+          },
+          {
+            "q": "HikCentral mı, DSS mi — fark nedir?",
+            "a": "Bunlar Hikvision'ın (HikCentral Professional) ve Dahua'nın (DSS Pro, DSS-OneBox) merkezi platformlarıdır. Üreticilerin açıklamalarına göre her ikisi de kayıt cihazlarını, kullanıcıları ve olayları birleştirir ve geçiş kontrolü modüllerini bağlar. Farklar modül setinde ve lisans koşullarındadır; bunlar konfigürasyonunuz için güncel spesifikasyona göre karşılaştırılır."
+          },
+          {
+            "q": "Dahua kameralar Hikvision kayıt cihazına bağlanabilir mi, ya da tersi?",
+            "a": "Evet, ONVIF standardıyla görüntü ve kayıt çalışır. Markaya özgü analitik ve akıllı arama yalnızca kendi ekosisteminde tam çalışır, bu yüzden yeni bir aşamayı tek markada kurmak daha iyidir."
+          },
+          {
+            "q": "İhalede belirli bir kamera markası belirtilebilir mi?",
+            "a": "ZRU-684 sayılı Kanun'un 34. maddesinin 3. fıkrasına göre kamu alımı tanımına marka ve model konulmaz; başka kesin bir tanım yolu yoksa ancak «veya muadili» ifadesiyle konur. İstisna uyumsuzluktur, örneğin kurulu bir sistemin genişletilmesi."
+          },
+          {
+            "q": "Kanuna göre geçiş kontrolünün yüz veritabanı nerede saklanmalı?",
+            "a": "Özbekistan'da: ZRU-547 sayılı Kanun'un 26 Mart 2026 tarihli değişikliğiyle 27-1. madde biyometrik verilerin cumhuriyet topraklarında saklanmasını şart koşar. Yüz veritabanını barındıran platform sunucusu ülkeye kurulur."
+          },
+          {
+            "q": "Hikvision ve Dahua'nın 32 kanallı kayıt cihazlarının fiyatı neden farklı?",
+            "a": "09.11.2026 itibarıyla katalogda DS-7732NI-K4 2.474.900 UZS, DHI-NVR5232-EI 3.394.900 UZS; ancak bunlar farklı işlevlere sahip farklı modellerdir. Tek tek cihaz fiyatlarını değil, aynı görev için tam konfigürasyonları karşılaştırmak gerekir."
+          }
+        ]
+      },
+      "zh": {
+        "title": "企业选海康威视还是大华：几十到几百路摄像机的项目如何选择平台",
+        "seoTitle": "企业选海康威视还是大华：如何选择监控平台",
+        "seoDesc": "50至500路摄像机的企业项目：HikCentral还是DSS、与门禁集成、智能分析、ONVIF混用、采购中的“或同等产品”、评分表与试点方法。",
+        "excerpt": "50至500路摄像机的项目选择的不是摄像机品牌，而是未来多年使用的生态系统。本文介绍HikCentral与DSS平台、门禁集成、智能分析、品牌混用、采购规则和试点方法，并附评分表。",
+        "summary": [
+          "企业项目选择的不是摄像机，而是平台：视频管理系统、与门禁、对讲和考勤的集成、智能分析、与已安装设备的兼容性以及采购规则。",
+          "两个品牌都能提供完整产品线——摄像机、录像机、中心平台、门禁终端和对讲设备——因此决策应依据加权评分表，并在项目自身场景中进行试点。",
+          "如果采购适用《国家采购法》，技术规格书必须不绑定品牌：只有在注明“或同等产品”时才可写出具体型号（ZRU-684第34条）。"
+        ],
+        "sections": [
+          {
+            "h": "企业选品牌与家庭选品牌有什么不同？",
+            "p": [
+              "对于公寓、住宅或4–8路摄像机的商店来说，“海康威视还是大华”这个问题几乎总是由具体型号的价格和参数决定——这种情况我们在《海康威视还是大华：视频监控选哪个》一文中已经分析过。而在工厂、仓储园区、商务中心或连锁分支机构，任务完全不同。系统分期建设，并在多年内不断扩展；闸机、对讲、紧急按钮和电视墙都要接入，几十个权限不同的用户在系统中工作。在这里，选错的代价不是摄像机的差价，而是整个平台的重建。",
+              "因此，企业选型首先要回答关于系统而不是画面的问题：会有多少台录像机、多少个地点？谁在什么地方看视频？是否需要与门禁共用一套通行权限数据库？哪些事件必须推送给安保，由谁处理？两三年后项目会扩展到什么规模？两个品牌都有满足这些需求的摄像机，而且都在satsolutions.uz目录中——目录共有2500多种商品；我们在塔什干有自有仓库，常用型号有现货。"
+            ]
+          },
+          {
+            "h": "海康威视和大华有哪些管理平台？什么时候需要服务器？",
+            "p": [
+              "小型系统运行在网络硬盘录像机（NVR）上：它录制存储、在显示器上显示画面并推送到手机应用。一台32路录像机可覆盖一栋典型的办公楼或仓库。例如，海康威视DS-7732NI-K4售价2 474 900苏姆，大华DHI-NVR5232-EI售价3 394 900苏姆（satsolutions.uz目录价格，截至2026年11月9日，价格会变动）。这是功能不同的两个型号，因此直接比较价格并不合理：应比较为同一任务配置的完整方案。",
+              "当录像机超过一到两台，出现分支机构、电视墙、操作员操作日志和访问角色时，就需要中心平台——运行在独立服务器上的视频管理软件（VMS）。海康威视的平台是HikCentral Professional，大华的平台是DSS Pro以及软硬件一体服务器DSS-OneBox（DSS-OneBox-H1/128型号售价20 374 900苏姆，为截至2026年11月9日的目录价）。据厂商介绍，这类平台可以统一管理不同地点的录像机和摄像机、存储事件、管理用户，并接入门禁和对讲模块。HikCentral Professional由我们供货，并按项目配置进行调试。例如，我们曾在大华DSS Pro平台上为履行岗位职责的员工部署了由150台执法记录仪组成的系统，该案例已发布在我们的项目案例中。",
+              "需要规划平台的信号（以下阈值来自我们工程师的经验）：摄像机超过64路或录像机超过两台；多栋建筑或多个城市；带电视墙的值班中心；不同的访问级别（安保可查看全部，车间主任只看自己的区域）；要求记录谁查看了什么；与闸机和考勤集成。如果这六条中至少有三条符合您的项目，请比较平台，而不是摄像机。"
+            ],
+            "table": {
+              "head": [
+                "参数",
+                "网络硬盘录像机（NVR）",
+                "中心平台（HikCentral Professional、DSS Pro）"
+              ],
+              "rows": [
+                [
+                  "规模",
+                  "每台设备32–64路",
+                  "数十台录像机和多个地点"
+                ],
+                [
+                  "用户",
+                  "基础账户",
+                  "角色、用户组、操作日志（据厂商介绍）"
+                ],
+                [
+                  "集成",
+                  "报警输入和输出",
+                  "门禁、对讲、电视墙模块（据厂商介绍）"
+                ],
+                [
+                  "运行位置",
+                  "设备本身",
+                  "独立服务器或一体化服务器（OneBox）"
+                ],
+                [
+                  "适用情况",
+                  "一栋楼、一个安保岗",
+                  "多栋楼、分支机构、监控中心"
+                ]
+              ]
+            }
+          },
+          {
+            "h": "对企业来说，更重要的是摄像机还是生态系统？",
+            "p": [
+              "在企业项目中，生态系统更重要。如果楼内已经在使用某一品牌的门禁终端、对讲或录像机，那么新一期视频监控最好在同一生态中建设：一个平台、一套用户数据库，门禁事件和视频显示在操作员的同一个窗口中。只有当旧设备本来就要全部更换，或另一品牌能更好地完成当前品牌的弱项任务时，更换品牌才有意义。",
+              "请考虑两三年后需要的子系统：闸机通道、人脸考勤并将考勤表导出到1C、访客通行证、对讲。两个品牌都有自己的人脸识别终端和门禁控制器——例如海康威视DS-K1T343EWX终端售价1 137 900苏姆（截至2026年11月9日的目录价）。企业在门禁和考勤方面也会考虑单独的ZKTeco产品线——该产品线同样在我们的目录中；我们在《ZKTeco还是海康威视：门禁和考勤的生物识别》一文中做过比较。在这种情况下，视频与门禁的联动需要在编制技术规格书阶段就单独核实。"
+            ]
+          },
+          {
+            "h": "如何比较海康威视和大华的智能分析，避免多花钱？",
+            "p": [
+              "两个品牌的智能分析解决的是同一个基本问题：把人和车辆与阴影、树枝或动物区分开。海康威视称这项技术为AcuSense，大华称为WizSense；其工作原理在《摄像机里的人工智能：AcuSense和WizSense如何区分人、猫和汽车》一文中有详细介绍。对企业而言，这首先意味着周界误报更少、录像检索更快：用“22:00后在大门处的人员”这样的查询代替数小时的回放。",
+              "多花钱通常发生在两种情况。第一，把带智能分析的摄像机装在只有调查事件时才会回看录像的地方：走廊、财务室、成品仓库。第二，在没有明确场景的情况下购买人脸或车牌识别：事件由谁接收、如何处理。实用规则：智能分析用于周界、出入口和大门；室内使用普通摄像机；人脸和车牌识别只用于明确的流程，例如闸机通道或车牌识别进出。"
+            ]
+          },
+          {
+            "h": "同一项目中可以混用海康威视和大华吗？",
+            "p": [
+              "可以，但有限制。两个品牌的摄像机都支持ONVIF标准，因此视频流和录像可以在另一品牌的录像机或平台上工作。品牌专有功能——以事件形式上报“人/车”分类、录像智能检索、从平台配置分析规则——只有在原生生态中才能完整使用，通过ONVIF只能部分传递或完全无法传递。该标准中有专门用于分析元数据的配置文件，但必须在采购前而不是安装后，逐一核实每一组“摄像机—录像机”是否支持。",
+              "对于正在运行的企业，实用方案是：新一期工程与平台一起采用同一品牌建设，另一品牌的旧摄像机通过ONVIF作为“普通视频”接入，直到计划更换。在同一新期工程中无理由混用品牌并不划算：单个型号节省的费用会被调试时间和兼容性排查抵消。"
+            ]
+          },
+          {
+            "h": "选品牌时如何考虑采购规则？",
+            "p": [
+              "乌兹别克斯坦共和国2021年4月22日第ZRU-684号《国家采购法》第34条第三款（经2024年11月27日第ZRU-1005号法律修订，自2025年3月1日起施行）禁止在采购说明中写入商标、型号、制造商或原产地。例外情况是通过电子商店进行的采购，以及没有其他足够准确的方式描述货物的情况；此时说明中必须注明“或同等产品”，货物不兼容的情况除外。",
+              "对品牌选择来说，这意味着两点。第一，技术规格书描述的是参数和功能——分辨率、编码、智能分析、平台集成、存储天数——而不是品牌，任何合适的系统都可能中标。第二，在扩展现有系统时，如果新摄像机必须与已安装的平台及其智能分析配合工作，可以依据不兼容例外条款说明继续采用同一品牌的理由；该理由应写入技术规格书。该法律仍在不断修订，因此应按具体采购日期核对现行文本。"
+            ]
+          },
+          {
+            "h": "如何保障网络安全和固件更新？",
+            "p": [
+              "两个品牌的固件都曾公开过漏洞——例如海康威视的CVE-2021-36260、大华的CVE-2025-31700和CVE-2025-31701——两家也都发布了修复。对企业来说，正确的问题不是“哪个品牌更安全”，而是“谁来维护系统、如何维护”：固件更新制度、摄像机独立网络（VLAN）、关闭端口、通过厂商云服务或VPN进行远程访问、使用个人账户而不是一个共用账户。详见《如何防止IP摄像机和录像机被入侵》一文。",
+              "第二个问题是数据存放在哪里。根据第ZRU-547号《个人数据法》第27-1条（经2026年3月26日第ZRU-1125号法律修订），生物识别数据必须存储在乌兹别克斯坦境内。门禁终端中的人脸模板属于生物识别数据，因此存放人脸库的平台服务器应部署在乌兹别克斯坦。对于普通视频录像，该条没有直接规定，但把录像保存在国内自己的服务器或录像机上是最稳妥的做法。"
+            ]
+          },
+          {
+            "h": "如何做决定：评分表和试点",
+            "p": [
+              "为了避免选型变成个人偏好之争，应当量化计算。根据对项目的重要程度为每项标准设定权重（合计100），按1至5分为每个品牌打分，分数乘以权重后相加。下面是权重示例——您的项目会有所不同。",
+              "然后进行试点。我们也按同样的方法在客户现场开展试点或演示：",
+              "选择集成商也遵循同样的思路——看其在两个品牌平台上的经验和试点结果。SAT Solutions目录中两个品牌都有；HikCentral Professional由我们供货并调试，大华方面我们持有2026年度“Authorized Strategic System Integrator”证书（有效期2026年1月1日至12月31日，展示在“关于我们”页面）。"
+            ],
+            "table": {
+              "head": [
+                "标准",
+                "核查内容",
+                "权重示例"
+              ],
+              "rows": [
+                [
+                  "管理平台",
+                  "规模、角色、电视墙、操作日志",
+                  "20"
+                ],
+                [
+                  "与门禁、对讲、考勤的集成",
+                  "所需模块在同一平台中",
+                  "15"
+                ],
+                [
+                  "现有设备",
+                  "已安装并将继续使用的部分",
+                  "15"
+                ],
+                [
+                  "总拥有成本",
+                  "全生命周期的摄像机、平台、许可、硬盘和施工费用",
+                  "15"
+                ],
+                [
+                  "智能分析",
+                  "人/车、录像检索、按场景的人脸和车牌识别",
+                  "10"
+                ],
+                [
+                  "所需型号的覆盖",
+                  "室外型、长焦、全景、带麦克风",
+                  "10"
+                ],
+                [
+                  "更新与安全",
+                  "固件更新频率、集中升级",
+                  "10"
+                ],
+                [
+                  "采购要求",
+                  "“或同等产品”、兼容性说明",
+                  "5"
+                ]
+              ],
+              "at": 1
+            },
+            "ol": [
+              "选择项目中2–3个典型场景：车辆出入口、夜间周界、车间或仓库。",
+              "在每个场景安装两个品牌同等级、同分辨率的摄像机各2–4台。",
+              "两组摄像机分别录入各自的录像机，编码和码率设置保持一致。",
+              "让系统在项目正常运行状态下工作两周。",
+              "比较夜间画面、智能分析误报次数、录像检索便捷性以及每天实际录像数据量。",
+              "把结果填入评分表，然后再计算完整预算。"
+            ],
+            "olAt": 2
+          },
+          {
+            "h": "关于公司",
+            "p": [],
+            "ul": [
+              "SAT Solutions是SUPPLY AND TRANSPORTATION有限责任公司的品牌（纳税人识别号308603912）。塔什干市Katta Darkhon街5号；+998 97 862-66-99；sales@satsolutions.uz；周一至周五9:00–18:00。",
+              "设备供应与安装：视频监控、门禁和闸机、考勤、防盗和火灾报警、对讲、综合布线和局域网、Wi-Fi、光纤、机房。安装由自有团队完成：3名工程师和15名安装技师。",
+              "satsolutions.uz目录：2500多种商品，包括海康威视、大华和ZKTeco；价格以苏姆计，含增值税。我们在塔什干有自有仓库，常用型号有现货。",
+              "海康威视和大华两个品牌我们都供货；大华2026年度“Authorized Strategic System Integrator”证书（有效期2026年1月1日至12月31日）展示在“关于我们”页面。",
+              "“关于我们”页面上的文件：国民近卫军许可文件第1554491号（安防技术设备的安装、调试和维护）；紧急情况部许可文件第913518号，通知日期2025年7月23日（火灾报警和自动灭火系统的安装、调试和维护）——依据2022年2月25日内阁第88号决议的通知程序。",
+              "安装工程质保3年；设备享受厂商1至3年质保。我们按含增值税方式结算；电子发票（ESF）通过电子文档交换运营商开具。",
+              "请将技术规格书发送至sales@satsolutions.uz——我们将准备附设备清单和工程量清单的报价；报价在24小时内提供。"
+            ]
+          }
+        ],
+        "faq": [
+          {
+            "q": "工厂用海康威视好还是大华好？",
+            "a": "没有通用答案：两个品牌都覆盖摄像机、录像机、平台和门禁。决定因素是现有设备、所需平台和集成、总拥有成本以及采购规则——把它们放进加权评分表，并通过试点验证。"
+          },
+          {
+            "q": "什么时候录像机不够用，需要中心平台？",
+            "a": "根据我们工程师的经验，通常在摄像机超过64路或录像机超过两台、有多栋建筑、电视墙、访问角色、操作员操作日志或需要与闸机集成时。六个信号中符合三个，就应规划平台。"
+          },
+          {
+            "q": "HikCentral和DSS有什么区别？",
+            "a": "它们分别是海康威视（HikCentral Professional）和大华（DSS Pro、DSS-OneBox）的中心平台。据厂商介绍，两者都能统一管理录像机、用户和事件，并接入门禁模块。区别在于模块组成和授权条件，应根据您的配置对照最新规格进行比较。"
+          },
+          {
+            "q": "大华摄像机能接入海康威视录像机吗，反过来呢？",
+            "a": "可以，通过ONVIF标准可实现视频和录像。品牌智能分析和智能检索只有在原生生态中才能完整使用，因此新一期工程最好采用同一品牌。"
+          },
+          {
+            "q": "招标中可以指定摄像机品牌吗？",
+            "a": "根据第ZRU-684号法律第34条第3款，国家采购说明中不写品牌和型号，除非没有其他准确的描述方式——此时只能附带“或同等产品”。例外是不兼容的情况，例如扩展已安装的系统。"
+          },
+          {
+            "q": "按照法律，门禁人脸库应存放在哪里？",
+            "a": "在乌兹别克斯坦境内：第ZRU-547号法律经2026年3月26日修订后的第27-1条要求生物识别数据存储在共和国境内。存放人脸库的平台服务器应部署在国内。"
+          },
+          {
+            "q": "为什么海康威视和大华的32路录像机价格不同？",
+            "a": "截至2026年11月9日，目录中DS-7732NI-K4为2 474 900苏姆，DHI-NVR5232-EI为3 394 900苏姆，但它们是功能不同的两个型号。应比较为同一任务配置的完整方案，而不是单台设备的价格。"
+          }
+        ]
+      }
+    }
+  },
   {
     "slug": "besprovodnaya-pozharnaya-signalizatsiya-radiokanal",
     "date": "2026-11-02",
@@ -13413,9 +20530,11 @@ export const ARTICLES: Article[] = [
   {
     slug: "hikvision-vs-dahua",
     date: "2026-07-19",
-    updated: "2026-09-09",
+    updated: "2026-11-10",
     related: ["cctv"],
     hubs: ["ip-kamery", "ip-videoregistratory-nvr"],
+    // для дома и малого бизнеса; выбор платформы для предприятия — в отдельной статье
+    seeAlso: ["hikvision-ili-dahua-dlya-predpriyatiya"],
     loc: {
       ru: {
         title: "Hikvision или Dahua: что выбрать для видеонаблюдения",

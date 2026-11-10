@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { fillLiveMins } from "@/lib/typeSeo";
 import { ARTICLES, articleBySlug, articleImg, relatedArticles } from "@/lib/articlesData";
+import type { ArticleSection, ArticleTable } from "@/lib/articlesData";
 import { ArticleArt } from "@/components/AppBlocks";
 import { InView } from "@/components/InView";
 import { ARTICLE_UI } from "@/lib/appsExtrasContent";
@@ -181,6 +183,49 @@ const PRODUCT_LABELS: Record<string, Record<string, string>> = {
     tr: "Seagate SkyHawk 6 TB güvenlik kamerası diski",
     zh: "希捷 SkyHawk 6 TB 监控硬盘",
   },
+  // Товары статей под цитирование ИИ (10.11.2026): слаги сверены с API — опубликованы, в наличии
+  "hik-ds-7732ni-k4-std": {
+    ru: "IP-видеорегистратор на 32 канала Hikvision DS-7732NI-K4 (4 SATA, 256 Мбит/с)",
+    uz: "32 kanalli IP-videoregistrator Hikvision DS-7732NI-K4 (4 SATA, 256 Mbit/s)",
+    en: "Hikvision DS-7732NI-K4 32-channel NVR (4 SATA, 256 Mbps)",
+    tr: "32 kanallı NVR Hikvision DS-7732NI-K4 (4 SATA, 256 Mbps)",
+    zh: "海康威视 DS-7732NI-K4 32路网络录像机（4盘位，256 Mbps）",
+  },
+  "hik-ds-3e1526p-si-24p2f": {
+    ru: "PoE-коммутатор на 24 порта Hikvision DS-3E1526P-SI-24P2F (2 SFP, бюджет 370 Вт)",
+    uz: "24 portli PoE-kommutator Hikvision DS-3E1526P-SI-24P2F (2 SFP, 370 Vt)",
+    en: "Hikvision DS-3E1526P-SI-24P2F 24-port PoE switch (2 SFP, 370 W budget)",
+    tr: "24 portlu PoE switch Hikvision DS-3E1526P-SI-24P2F (2 SFP, 370 W bütçe)",
+    zh: "海康威视 DS-3E1526P-SI-24P2F 24口PoE交换机（2个SFP，PoE总功率370瓦）",
+  },
+  "hik-ds-2cd2143g2-i-2-8mm-o-std": {
+    ru: "Купольная IP-камера 4 Мп Hikvision DS-2CD2143G2-I (2,8 мм, ИК до 30 м)",
+    uz: "4 Mp gumbazli IP-kamera Hikvision DS-2CD2143G2-I (2,8 mm, IQ-yoritish 30 m gacha)",
+    en: "Hikvision DS-2CD2143G2-I 4 MP dome IP camera (2.8 mm, IR up to 30 m)",
+    tr: "4 MP dome IP kamera Hikvision DS-2CD2143G2-I (2,8 mm, 30 m'ye kadar IR)",
+    zh: "海康威视 DS-2CD2143G2-I 400万像素半球网络摄像机（2.8毫米，红外30米）",
+  },
+  "hik-ds-2cd2t43g2-4i-2-8mm": {
+    ru: "Цилиндрическая IP-камера 4 Мп Hikvision DS-2CD2T43G2-4I (2,8 мм, ИК до 80 м)",
+    uz: "4 Mp silindrik IP-kamera Hikvision DS-2CD2T43G2-4I (2,8 mm, IQ-yoritish 80 m gacha)",
+    en: "Hikvision DS-2CD2T43G2-4I 4 MP bullet IP camera (2.8 mm, IR up to 80 m)",
+    tr: "4 MP bullet IP kamera Hikvision DS-2CD2T43G2-4I (2,8 mm, 80 m'ye kadar IR)",
+    zh: "海康威视 DS-2CD2T43G2-4I 400万像素筒型网络摄像机（2.8毫米，红外80米）",
+  },
+  "dahua-dhi-nvr5232-ei": {
+    ru: "IP-видеорегистратор на 32 канала Dahua DHI-NVR5232-EI",
+    uz: "32 kanalli IP-videoregistrator Dahua DHI-NVR5232-EI",
+    en: "Dahua DHI-NVR5232-EI 32-channel NVR",
+    tr: "32 kanallı NVR Dahua DHI-NVR5232-EI",
+    zh: "大华 DHI-NVR5232-EI 32路网络录像机",
+  },
+  "dahua-dss-onebox-h1-128": {
+    ru: "Сервер видеонаблюдения «всё в одном» Dahua DSS-OneBox-H1/128",
+    uz: "«Hammasi bitta qurilmada» videokuzatuv serveri Dahua DSS-OneBox-H1/128",
+    en: "Dahua DSS-OneBox-H1/128 all-in-one video surveillance server",
+    tr: "Hepsi bir arada video gözetim sunucusu Dahua DSS-OneBox-H1/128",
+    zh: "大华 DSS-OneBox-H1/128 一体化视频监控服务器",
+  },
   "hik-ds-mcw406-64g-gps-wifi": {
     ru: "Боди-камера (нательный видеорегистратор) Hikvision DS-MCW406/64G/GPS/WIFI",
     uz: "Bodikamera (tanaga taqiladigan videoregistrator) Hikvision DS-MCW406/64G/GPS/WIFI",
@@ -189,6 +234,73 @@ const PRODUCT_LABELS: Record<string, Record<string, string>> = {
     zh: "海康威视 DS-MCW406/64G/GPS/WIFI 执法记录仪",
   },
 };
+
+// Раздел с таблицами / нумерованными шагами / списком (ArticleSection.table|ol|ul, 10.11.2026).
+// Блоки встают после `at` абзацев (по умолчанию — после всех); на одной позиции: ol → таблицы → ul.
+// Таблица — настоящий <table> в контейнере с горизонтальной прокруткой: на телефоне не ломает
+// ширину страницы, а робот и ИИ-поиск получают строки и столбцы как есть.
+const TOTAL_ROW = /^(итого|всего|jami|hammasi|total|grand total|toplam|genel toplam|合计|总计|小计)/i;
+function ArticleTableView({ t }: { t: ArticleTable }) {
+  return (
+    <figure className="my-1">
+      {t.caption && <figcaption className="mb-2 text-sm sm:text-base font-bold text-slate-900">{t.caption}</figcaption>}
+      <div className="overflow-x-auto rounded-xl border border-slate-200">
+        <table className="w-full min-w-[480px] border-collapse text-left text-xs sm:text-sm">
+          <thead className="bg-slate-50">
+            <tr>
+              {t.head.map((c, i) => (
+                <th key={i} scope="col" className="border-b border-slate-200 px-3 py-2 font-bold text-slate-900 align-bottom">{c}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {t.rows.map((r, i) => {
+              const total = TOTAL_ROW.test(r[0] ?? "");
+              return (
+                <tr key={i} className={total ? "bg-slate-50 font-bold text-slate-900" : "text-slate-600 even:bg-slate-50/50"}>
+                  {r.map((c, j) => (
+                    <td key={j} className="border-t border-slate-100 px-3 py-2 align-top leading-relaxed">{c}</td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  );
+}
+function SectionBody({ s }: { s: ArticleSection }) {
+  const tables = s.table ? (Array.isArray(s.table) ? s.table : [s.table]) : [];
+  const n = s.p.length;
+  const out: ReactNode[] = [];
+  for (let k = 0; k <= n; k++) {
+    if (s.ol && (s.olAt ?? n) === k) {
+      out.push(
+        <ol key={`ol${k}`} className="list-decimal space-y-2 pl-6 text-sm sm:text-base leading-relaxed text-slate-600 marker:font-bold marker:text-brand-600">
+          {s.ol.map((li, j) => <li key={j} className="pl-1">{li}</li>)}
+        </ol>,
+      );
+    }
+    tables.forEach((t, j) => {
+      if ((t.at ?? n) === k) out.push(<ArticleTableView key={`t${k}-${j}`} t={t} />);
+    });
+    if (s.ul && (s.ulAt ?? n) === k) {
+      out.push(
+        <ul key={`ul${k}`} className="space-y-2">
+          {s.ul.map((li, j) => (
+            <li key={j} className="flex gap-2 text-sm sm:text-base leading-relaxed text-slate-600">
+              <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+              <span>{li}</span>
+            </li>
+          ))}
+        </ul>,
+      );
+    }
+    if (k < n) out.push(<p key={`p${k}`} className="text-sm sm:text-base leading-relaxed text-slate-600">{s.p[k]}</p>);
+  }
+  return <>{out}</>;
+}
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://satsolutions.uz";
 // Формат даты публикации по локалям (Intl хочет BCP-47, у нас коды короткие)
@@ -354,9 +466,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
               <section key={i}>
                 <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{s.h}</h2>
                 <div className="mt-3 space-y-3">
-                  {s.p.map((para, j) => (
-                    <p key={j} className="text-sm sm:text-base leading-relaxed text-slate-600">{para}</p>
-                  ))}
+                  {s.table || s.ol || s.ul ? (
+                    <SectionBody s={s} />
+                  ) : (
+                    s.p.map((para, j) => (
+                      <p key={j} className="text-sm sm:text-base leading-relaxed text-slate-600">{para}</p>
+                    ))
+                  )}
                 </div>
                 {/* Мост в коммерцию: статьи перехватывают запросы вроде «установка
                     видеонаблюдения» и «скуд», но ведут читателя в никуда. Ссылка с
@@ -374,6 +490,20 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
               </section>
             ))}
           </div>
+
+          {/* Скачиваемый шаблон к статье (Article.loc[*].download) — файл из public/docs */}
+          {body.download && (
+            <div className="mt-8 rounded-xl border border-brand-200 bg-brand-50 p-4 sm:p-5">
+              <a
+                href={body.download.href}
+                download
+                className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brand-500"
+              >
+                <span aria-hidden>↓</span> {body.download.label}
+              </a>
+              {body.download.note && <p className="mt-3 text-sm leading-relaxed text-slate-600">{body.download.note}</p>}
+            </div>
+          )}
 
           {/* Товар, о котором говорится в тексте, — сразу после разделов, до FAQ */}
           {products.length > 0 && (
