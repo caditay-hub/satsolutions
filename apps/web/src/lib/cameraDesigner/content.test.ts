@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CONTENT } from "./content";
+import { CATALOG_CONTENT } from "./catalogContent";
 import { PROFILES } from "./standards";
 
 // Все пять словарей — одной формы: те же ключи, те же подстановки {…}, те же длины списков.
@@ -21,6 +22,17 @@ describe("тексты калькулятора на пяти языках", () 
       }
     });
   }
+  it("словарь подбора и блока карточки — той же формы на всех языках", () => {
+    const base = flat(CATALOG_CONTENT.ru);
+    for (const loc of ["uz", "en", "tr", "zh"]) {
+      const x = flat(CATALOG_CONTENT[loc]);
+      expect(Object.keys(x).sort()).toEqual(Object.keys(base).sort());
+      for (const k of Object.keys(base)) {
+        expect(holes(x[k]), `${loc}.${k}`).toBe(holes(base[k]));
+        expect(String(x[k]).trim(), `${loc}.${k} пустой`).not.toBe("");
+      }
+    }
+  });
   it("у каждого уровня обеих редакций есть название и задача", () => {
     for (const loc of Object.keys(CONTENT)) for (const p of Object.values(PROFILES)) for (const l of p.levels) {
       expect(CONTENT[loc].levels[l.code].name).toBeTruthy();

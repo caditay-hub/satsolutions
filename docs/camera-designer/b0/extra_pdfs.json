@@ -1,0 +1,21 @@
+{
+ "_comment": "B0: официальные PDF-datasheet, найденные поиском (домены производителя) для карточек без PDF на странице. Ключ — подстрока model.",
+ "DS-2CD1043G2-LIUF/SL": "https://assets.hikvision.com/prd/normal/all/doc/m000077130/DS-2CD1043G2-LIUF_SL_Datasheet-20230811.pdf",
+ "DS-2CD1083G2-LIUF/SL": "https://www.hikvision.com/content/dam/hikvision/products/S000000001/S000000002/S000000003/S000000004/OFR010251/M000077132/Data_Sheet/DS-2CD1083G2-LIUF_SL_Datasheet_20230803.pdf",
+ "DS-2CD1063G2-LIUF/SL": "https://assets.hikvision.com/prd/public/all/doc/m000077131/DS-2CD1063G2-LIUF_SL_Datasheet_20230803.pdf",
+ "DS-2DE4225IW-DE(O-STD)(T5)": "https://assets.hikvision.com/prd/normal/all/doc/m000052500/DS-2DE4225IW-DET5_Datasheet_20260918.pdf",
+ "DS-2DE4215IW-DE(O-STD)(T5)": "https://www.hikvision.com/content/dam/hikvision/pl/firmware/DS-2DE4215IW-DET5_Datasheet_20250731.pdf",
+ "DS-2DE5425IW-AE(O-STD)(T5)": "https://assets.hikvision.com/prd/public/all/doc/m000052501/Datasheet-of-DS-2DE5425IW-AET5_V5.7.1_20220704.pdf",
+ "DS-2CD6825G0/C-IVS": "https://assets.hikvision.com/prd/public/all/doc/m000058944/DS-2CD6825G0_C-IVSB_Datasheet_V5.8.0_20230114.pdf",
+ "DS-2DF5232X-AEL": "https://us-legacy.hikvision.com/sites/default/files/data_sheet/datasheet_of_ds-2df5232x-aelt5_20220120.pdf",
+ "DS-2DE5432IWG-E": "https://www.hikvision.com/content/dam/hikvision/usa/data-sheet/value-ip-ptz/Datasheet-of-DS-2DE5432IWG-E_V5.7.4_20240314.pdf",
+ "DS-2DE2C200MWG-E": "https://assets.hikvision.com/prd/public/all/doc/m000114062/DS-2DE2C200MWG-E_Datasheet_20250115.pdf",
+ "DS-2DE2C400MWG-E": "https://assets.hikvision.com/prd/public/all/doc/m000114063/DS-2DE2C400MWG-E_Datasheet_20250115.pdf",
+ "DS-2DE2C200MWG/W": "https://assets.hikvision.com/prd/public/all/doc/m000124640/DS-2DE2C200MWG_W_Datasheet_20240418.pdf",
+ "DS-2DE2C400MWG/W": "https://assets.hikvision.com/prd/public/all/doc/m000124641/DS-2DE2C400MWG_W_Datasheet_20250113.pdf",
+ "_altPages": {
+  "DS-2DE2C400MWG-E": "https://www.hikvision.com/europe/products/IP-Products/PTZ-Cameras/Value-Series/ds-2de2c400mwg-e/",
+  "DS-2DE2C200MWG-E": "https://www.hikvision.com/cis/products/IP-Products/PTZ-Cameras/Value-Series/ds-2de2c200mwg-e/",
+  "DS-2DE2C400MWG/W": "https://www.hikvision.com/mena-en/products/IP-Products/wireless-cameras/wi-fi-series/ds-2de2c400mwg-w/"
+ }
+}

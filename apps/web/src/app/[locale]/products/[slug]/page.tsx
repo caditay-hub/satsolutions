@@ -12,6 +12,7 @@ import { QuestionForm } from "@/components/QuestionForm";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { createMetadata, clipSentence, withOgUrl } from "@/lib/metadata";
 import { localizeProduct, localizeProductName, localizeCharacteristics, localizeDescription } from "@/lib/productI18n";
+import { CameraOpticsBlock } from "@/components/CameraOpticsBlock";
 import { localizeCatName } from "@/lib/catalogI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
 import { displayModelCode } from "@/lib/modelCodeDisplay";
@@ -718,6 +719,9 @@ export default async function ProductDetailsPage({ params }: { params: Promise<{
                 </dl>
               </div>
             )}
+
+            {/* угол обзора и дальности DORI по документации производителя (SAT Camera Designer, этап B) */}
+            <CameraOpticsBlock productId={product.id} locale={locale} />
 
             {locDescription?.trim() ? (
               <h2 className="mt-6 text-lg font-bold tracking-tight">{DESCRIPTION_UI[locale] ?? DESCRIPTION_UI.ru}</h2>

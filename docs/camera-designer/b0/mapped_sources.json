@@ -1,0 +1,128 @@
+{
+ "_comment": "B0: страницы и PDF производителя, найденные поиском (только домены производителя). Ключ — подстрока model; page/pdf — официальные документы. Сверяются тем же извлекателем с проверкой точного кода модели.",
+ "IPC-HFW2841T-ZS": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/WizSense-Series/2-Series/IR/IPC-HFW2841T-ZS",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW2841T-ZS_S0_datasheet_20240316.pdf"
+ },
+ "IPC-HFW1639TC-A-IL": {
+  "page": "https://www.dahuasecurity.com/mena/products/All-Products/Network-Cameras/Entry-Series/IPC-HFW1639TC-A-IL=S6",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW1639TC-A-IL_S6_datasheet_20240702.pdf"
+ },
+ "IPC-HFW1230DS-SAW": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/Wireless-Series/Wi-Fi-Series/2MP/IPC-HFW1230DS-SAW",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW1230DS-SAW_datasheet_20231121.pdf"
+ },
+ "IPC-HFW5442E-ZHE": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/WizMind-S-Series/4MP/IPC-HFW5442E-ZHE=S3",
+  "pdf": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20200927/DH-IPC-HFW5442E-ZHE_Datasheet_20200923.pdf"
+ },
+ "IPC-HFW5442E-Z4E": {
+  "pdf": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20200927/DH-IPC-HFW5442E-Z4E_Datasheet_20200923.pdf"
+ },
+ "IPC-HFW5442E-ZE": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/wizmind-s-series/4mp/ipc-hfw5442e-ze=s3",
+  "pdf": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20190506/DH-IPC-HFW5442E-ZE.pdf"
+ },
+ "IPC-HFW1239TL1-A-IL": {
+  "page": "https://www.dahuasecurity.com/bd/products/All-Products/Dedicated-Products/Project-Exclusive/Network-Cameras/DH-IPC-HFW1239TL1-A-IL",
+  "pdf": "https://materialfile.dahuasecurity.com/uploads/soft/20240911/DH-IPC-HFW1239TL1-A-IL_S0_datasheet_20240407.pdf"
+ },
+ "IPC-HFW1239S1-LED-S5": {
+  "pdf": "https://www.dahuasecurity.com/asset/upload/uploads/soft/20210708/DH-IPC-HFW1239S1-LED-S5-datasheet.pdf",
+  "pdf2": "https://material.dahuasecurity.com/uploads/soft/20231208/DH-IPC-HFW1239S1-LED-S5_datasheet_20210928_RU.pdf"
+ },
+ "IPC-HFW1439TL1-A-IL": {
+  "page": "https://www.dahuasecurity.com/bd/products/All-Products/Dedicated-Products/Project-Exclusive/Network-Cameras/DH-IPC-HFW1439TL1-A-IL",
+  "pdf": "https://materialfile.dahuasecurity.com/uploads/soft/20250422/DH-IPC-HFW1439TL1-A-IL_S0_datasheet_20240907.pdf"
+ },
+ "IPC-HDW1230T1-S5": {
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HDW1230T1-S5_datasheet_20210928.pdf"
+ },
+ "IPC-HDW1439V-A-IL": {
+  "page": "https://www.dahuasecurity.com/mena/products/All-Products/Network-Cameras/Entry-Series/4MP/IPC-HDW1439V-A-IL=S7",
+  "pdf": "https://materialfile.dahuasecurity.com/uploads/soft/20250422/DH-IPC-HDW1439V-A-IL_S0_datasheet_20250215.pdf"
+ },
+ "IPC-HFW2441T-ZS": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/WizSense-Series/2-Series/4MP/IPC-HFW2441T-ZS",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW2441T-ZS_S0_datasheet_20230224.pdf"
+ },
+ "IPC-HDW1431T1-A": {
+  "page": "https://www.dahuasecurity.com/br/products/All-Products/Network-Cameras/Entry-Series/4MP/IPC-HDW1431T1-A-S4=S4",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HDW1431T1-A_S6_datasheet_20240131.pdf"
+ },
+ "IPC-HDW1239V-A-IL": {
+  "page": "https://www.dahuasecurity.com/bd/products/All-Products/Dedicated-Products/Project-Exclusive/Network-Cameras/DH-IPC-HDW1239V-A-IL",
+  "pdf": "https://materialfile.dahuasecurity.com/uploads/soft/20250422/DH-IPC-HDW1239V-A-IL_S0_datasheet_20250122.pdf"
+ },
+ "IPC-HDW1839T-A-IL": {
+  "page": "https://www.dahuasecurity.com/bd/products/All-Products/Network-Cameras/Entry-Series/IPC-HDW1839T-A-IL",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HDW1839T-A-IL_S6_datasheet_20240415.pdf"
+ },
+ "IPC-HFW1230S1-A": {
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW1230S1-A-S5_datasheet_20210929.pdf"
+ },
+ "IPC-HFW1430DS-SAW": {
+  "page": "https://www.dahuasecurity.com/products/network-products/network-cameras/Wireless-Series/Wi-Fi-Series/4MP/IPC-HFW1430DS-SAW",
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW1430DS-SAW_datasheet_20231121.pdf"
+ },
+ "IPC-HFW1839TC-A-IL": {
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HFW1839TC-A-IL_S6_datasheet_20240411.pdf"
+ },
+ "IPC-HDW1230T1-A": {
+  "pdf": "https://material.dahuasecurity.com/uploads/cpq/prm-os-srv-res/smart/datasheetzipfiles/IPC-HDW1230T1-A-S5_datasheet_20210929.pdf"
+ },
+ "DS-2CD2423G2-IW": {
+  "page": "https://www.hikvision.com/sg/products/IP-Products/Network-Cameras/Wi-Fi-Series/ds-2cd2423g2-iw--w-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/m000131940/DS-2CD2423G2-IW-W_Datasheet_20250324.pdf"
+ },
+ "DS-2CD3121G0-I": {
+  "page": "https://www.hikvision.com/my/products/IP-Products/Network-Cameras/Ultra-Series-SmartIP-/DS-2CD3121G0-I/",
+  "pdf": "https://www.hikvision.com/content/dam/hikvision/en/support/regional-materials/bangladesh-/Datasheet_of_DS-2CD3121G0-I_V5.5.70_20180730(1).pdf"
+ },
+ "DS-2CD2027G1-L": {
+  "page": "https://www.hikvision.com/mena-en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2027g1-l/"
+ },
+ "DS-2CV1023G2-LIDWF": {
+  "page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Wi-Fi-Series/ds-2cv1023g2-lidw-f--b-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/m000121864/DS-2CV1023G2-LIDWFB_Datasheet_20241014.pdf"
+ },
+ "DS-2CD1643G0E-IZ": {
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/m000053819/DS-2CD1643G0E-IZ.pdf"
+ },
+ "DS-2CD2566G2-I": {
+  "page": "https://www.hikvision.com/uk/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2566g2-i-s-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/sm000059285/DS-2CD2566G2-IS-C_Datasheet_V5.7.11_20230201.pdf"
+ },
+ "DS-2CD2663G1-IZ": {
+  "page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2663g1-iz-s-/"
+ },
+ "DS-2CD3641G2-IZS": {
+  "page": "https://www.hikvision.com/mena-en/products/IP-Products/Network-Cameras/Ultra-Series-SmartIP-/ds-2cd3641g2-izs/",
+  "pdf": "https://assets.hikvision.com/prd/normal/all/doc/m000067655/DS-2CD3641G2-IZS_Datasheet_20260302.pdf"
+ },
+ "DS-2CD5AC5G0-IZHS": {
+  "page": "https://www.hikvision.com/my/products/IP-Products/Network-Cameras/Ultra-Series-SmartIP-/DS-2CD5AC5G0-IZ-H-S/",
+  "pdf": "https://www.hikvision.com/content/dam/hikvision/es-la/datasheet/ip-cameras/ultra-series-(smartip)/DS-2CD5AC5G0-IZHS2_datasheet_V5.6.0_20190905.pdf"
+ },
+ "DS-2CD1343G2-I": {
+  "page": "https://www.hikvision.com/sa/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd1343g2-i-uf-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/sm000041017/DS-2CD1343G2-IUF_Datasheet_20240828.pdf"
+ },
+ "DS-2CD1343G2-IUF": {
+  "page": "https://www.hikvision.com/sa/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd1343g2-i-uf-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/sm000041017/DS-2CD1343G2-IUF_Datasheet_20240828.pdf"
+ },
+ "DS-2CD2421G0-IW": {
+  "page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2421g0-i-d--w-/"
+ },
+ "DS-2CD2421G0-I": {
+  "page": "https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2421g0-i-d--w-/"
+ },
+ "DS-2CE16H0T-ITPF": {
+  "page": "https://www.hikvision.com/en/products/Turbo-HD-Products/Turbo-HD-Cameras/Value-Series/ds-2ce16h0t-itpf-c-/",
+  "pdf": "https://assets.hikvision.com/prd/public/all/doc/m000008277/DS-2CE16H0T-ITPFC_Datasheet_20240407.pdf"
+ },
+ "DS-2CE72HFT-F": {
+  "page": "https://www.hikvision.com/ph/products/Turbo-HD-Products/Turbo-HD-Cameras/ColorVu-Series/ds-2ce72hft-f/"
+ }
+}

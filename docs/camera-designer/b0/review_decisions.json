@@ -1,0 +1,339 @@
+{
+ "_comment": "B0: ручные решения по карточкам, которые автоматическая сверка отправила на разбор. Ключ — подстрока модели (model). Каждое решение — с причиной; применяет apply_decisions.cjs.",
+ "IPC-HFW2431DG-4G-SP-EAU-B": {
+  "rejectFocal": [
+   "6-6"
+  ],
+  "note": "6 мм: H 52°, V 48° — ошибка производителя (V почти равен H при кадре 16:9), одинаково на странице и в PDF; 2,8 и 3,6 мм совпали в обоих документах"
+ },
+ "IPC-HFW3441DG-AS-4G-EAU-B": {
+  "rejectFocal": [
+   "6-6"
+  ],
+  "note": "то же, что у IPC-HFW2431DG: 6 мм H 52°/V 48° — ошибка источника"
+ },
+ "DS-2CD1027G2H-LIUF": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "115°/60° на 2,8 мм совпали на странице и в PDF; сильная дисторсия, на краях кадра pinhole-расчёт плотности оптимистичен"
+ },
+ "DS-2CD1027G2H-LIU ": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "115°/60° совпали в двух документах; сильная дисторсия"
+ },
+ "DS-2CD1047G2H-LIUF": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "115°/60° совпали в двух документах; сильная дисторсия"
+ },
+ "DS-2CD1047G2H-LIU ": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "115°/60° совпали в двух документах; сильная дисторсия"
+ },
+ "IDS-2CD7A46G0/P-IZHSY": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "2,8–12 мм: 114,5°–41,8° совпали в двух документах; на широком краю сильная дисторсия (V/H 0,65)"
+ },
+ "IDS-2CD7A46G0-IZHS": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "как IDS-2CD7A46G0/P-IZHSY"
+ },
+ "iDS-2CD7146G0-IZS": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "2,8–12 мм: 114,5°–41,8° совпали в двух документах; дисторсия на широком краю"
+ },
+ "DS-TCG406-E": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "2,8–12 мм и 8–32 мм совпали в двух документах; дисторсия на широком краю 2,8–12"
+ },
+ "DS-2CD3T86G2-4IS": {
+  "accept": true,
+  "flag": "wide_distortion",
+  "note": "108°/53° совпали в двух документах; V/H 0,64 — дисторсия широкого объектива"
+ },
+ "DS-2CD2387G2-LU": {
+  "accept": true,
+  "note": "102°/52° (2,8 мм) совпали на странице и в PDF; эквивалентная ширина матрицы меньше номинала 1/1.2″ — объектив с кропом, углы берём паспортные"
+ },
+ "SD2C400NA-B-PV-PRO": {
+  "override": [
+   {
+    "focalMm": [
+     4,
+     4
+    ],
+    "hfovDeg": [
+     97,
+     97
+    ],
+    "vfovDeg": [
+     52,
+     52
+    ],
+    "dfovDeg": [
+     114,
+     114
+    ]
+   }
+  ],
+  "note": "PDF: Focal Length 4 mm, H 97°, V 52°, D 114° — совпадает со страницей (извлекатель не связал фокус)"
+ },
+ "SD3D216NB-GNY": {
+  "override": [
+   {
+    "focalMm": [
+     5,
+     80
+    ],
+    "hfovDeg": [
+     54.4,
+     4.1
+    ],
+    "vfovDeg": [
+     31.4,
+     2.3
+    ],
+    "dfovDeg": [
+     61.3,
+     4.7
+    ]
+   }
+  ],
+  "note": "PDF: 5–80 мм, H 54,4°–4,1°, V 31,4°–2,3°, зум 16× — совпадает со страницей"
+ },
+ "IPC-PTS2649C-3E3Z-4GB20": {
+  "unsupported": "multi_sensor",
+  "note": "два объектива (фиксированный 2,8 мм + поворотный 3,6/8,4 мм)"
+ },
+ "H3D-3F": {
+  "unsupported": "multi_sensor",
+  "note": "многообъективная камера; разные углы на странице и в PDF относятся к разным объективам"
+ },
+ "H5D-5F": {
+  "unsupported": "multi_sensor",
+  "note": "многообъективная камера"
+ },
+ "P5D-5F-PV": {
+  "unsupported": "multi_sensor",
+  "note": "многообъективная камера"
+ },
+ "DS-2SF8C442MXS-DLW": {
+  "unsupported": "multi_sensor",
+  "note": "панорама 190° + PTZ (PanoVu)"
+ },
+ "DS-2SE7C432MWG-EB/26": {
+  "unsupported": "multi_sensor",
+  "note": "панорама 180° + PTZ"
+ },
+ "DS-2CD2345G0P-I": {
+  "unsupported": "fisheye",
+  "note": "объектив 1,68 мм, H 180° — fisheye"
+ },
+ "DS-2CV2121G2-IDW": {
+  "review": true,
+  "note": "на странице два значения для 2,8 мм (92°/50° и 111°/59°), в PDF 92°/50° — ревизию устройства на складе по документам не определить"
+ },
+ "DS-2CV2141G2-IDW": {
+  "review": true,
+  "note": "на странице 95°/53° и 91°/49° для 2,8 мм — разные ревизии"
+ },
+ "DS-2CV2021G2-IDW": {
+  "review": true,
+  "note": "на странице 100°/55° и 111°/59° для 2,8 мм — разные ревизии"
+ },
+ "DS-2CV2041G2-IDW": {
+  "review": true,
+  "note": "на странице 97°/53° и 95°/53° для 2,8 мм — разные ревизии"
+ },
+ "DS-2CD2163G2-I(": {
+  "review": true,
+  "note": "страница 105°/55°, PDF 107°/57° для 2,8 мм — нужен третий документ"
+ },
+ "DS-2CD2346G2P-ISU": {
+  "unsupported": "multi_sensor",
+  "note": "панорамная камера с двумя объективами (G2P, 180°)"
+ },
+ "DS-2CD2T46G2P-ISU": {
+  "unsupported": "multi_sensor",
+  "note": "панорамная камера с двумя объективами (G2P, 180°)"
+ },
+ "DS-2CD2T87G2P-LSU": {
+  "unsupported": "multi_sensor",
+  "note": "панорамная камера с двумя объективами (G2P, 180°)"
+ },
+ "DS-2CD2387G2P-LSU": {
+  "unsupported": "multi_sensor",
+  "note": "панорамная камера с двумя объективами (G2P, 180°)"
+ },
+ "DS-2CD2T45G0P-I": {
+  "unsupported": "fisheye",
+  "note": "объектив 1,68 мм — fisheye"
+ },
+ "DS-2TD4167-50": {
+  "unsupported": "thermal",
+  "note": "тепловизор: пороги IEC 62676-4 к нему не применяются"
+ },
+ "HM-TD2628": {
+  "unsupported": "thermal",
+  "note": "тепловизор"
+ },
+ "Babyphone V30": {
+  "unsupported": "no_vendor",
+  "note": "товар без производителя и datasheet"
+ },
+ "P20 4G": {
+  "unsupported": "no_vendor",
+  "note": "товар без производителя и datasheet"
+ },
+ "TP5 4G": {
+  "unsupported": "no_vendor",
+  "note": "товар без производителя и datasheet"
+ },
+ "V380 PRO": {
+  "unsupported": "no_vendor",
+  "note": "товар без производителя и datasheet"
+ },
+ "K68": {
+  "unsupported": "no_vendor",
+  "note": "товар без производителя и datasheet"
+ },
+ "IPC-PDW5849-A180": {
+  "unsupported": "multi_sensor",
+  "note": "панорама 180° (несколько сенсоров)"
+ },
+ "DHI-ARD2251E-W2": {
+  "unsupported": "not_camera",
+  "note": "беспроводной охранный датчик, не камера с объективом"
+ },
+ "DS-2SE3C410MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "два канала: фиксированный 2,8 мм + PTZ 2,8–12 мм (TandemVu)"
+ },
+ "DS-2SE3C404MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "два канала: фиксированный 2,8 мм + PTZ 2,8–12 мм (TandemVu)"
+ },
+ "DS-2SE3C204MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "два канала: фиксированный 2,8 мм + PTZ 2,8–12 мм (TandemVu)"
+ },
+ "DS-2SE3C210MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "два канала: фиксированный 2,8 мм + PTZ 2,8–12 мм (TandemVu)"
+ },
+ "DS-2CV1F23G2-LIDWF": {
+  "override": [
+   {
+    "focalMm": [
+     2.8,
+     2.8
+    ],
+    "hfovDeg": [
+     96.5,
+     96.5
+    ],
+    "vfovDeg": [
+     52,
+     52
+    ],
+    "dfovDeg": [
+     115.5,
+     115.5
+    ]
+   }
+  ],
+  "note": "страница: 2,8 мм — H 96,5°, V 52°; PDF: «2.8mm: 96.5°, vertical field of view: 52°, diagonal 115.5°» (в PDF пропущена метка горизонтали) — совпадает"
+ },
+ "DS-2CD2T65G1-I8": {
+  "override": [
+   {
+    "focalMm": [
+     2.8,
+     2.8
+    ],
+    "hfovDeg": [
+     99,
+     99
+    ],
+    "vfovDeg": [
+     61,
+     61
+    ],
+    "dfovDeg": [
+     128,
+     128
+    ]
+   }
+  ],
+  "note": "PDF: «2.8 mm, horizontal FOV: 99°, vertical FOV: 61°, diagonal FOV: 128°»; страница пишет «2.8/4/6 mm, horizontal FOV: 99°…» — те же цифры для первого (2,8 мм) варианта"
+ },
+ "DS-2CD1T67G2HP": {
+  "unsupported": "multi_sensor",
+  "note": "панорама 180° (два объектива 2,8 мм)"
+ },
+ "DS-2SE4C215MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "TandemVu: фиксированная камера + PTZ в одном корпусе"
+ },
+ "DS-2SE4C225MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "TandemVu: фиксированная камера + PTZ в одном корпусе"
+ },
+ "DS-2SE4C415MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "TandemVu: фиксированная камера + PTZ в одном корпусе"
+ },
+ "DS-2SE4C425MWG-E": {
+  "unsupported": "multi_sensor",
+  "note": "TandemVu: фиксированная камера + PTZ в одном корпусе"
+ },
+ "DS-2SE7C432MW-AEB": {
+  "unsupported": "multi_sensor",
+  "note": "TandemVu: фиксированная камера + PTZ в одном корпусе"
+ },
+ "SDT6C425-4P-GB-APV-0280": {
+  "unsupported": "multi_sensor",
+  "note": "Dahua SDT …-0280: фиксированный объектив 2,8 мм + поворотная камера"
+ },
+ "SDT6C432-4P-GB-APV-0280": {
+  "unsupported": "multi_sensor",
+  "note": "Dahua SDT …-0280: фиксированный объектив 2,8 мм + поворотная камера"
+ },
+ "SDT8C842-8P-FA-APV-0280": {
+  "unsupported": "multi_sensor",
+  "note": "Dahua SDT …-0280: фиксированный объектив 2,8 мм + поворотная камера"
+ },
+ "DS-2CD2685G0-IZS": {
+  "override": [
+   {
+    "focalMm": [
+     2.8,
+     12
+    ],
+    "hfovDeg": [
+     112,
+     46
+    ],
+    "vfovDeg": [
+     60,
+     26
+    ],
+    "dfovDeg": [
+     133,
+     53
+    ]
+   }
+  ],
+  "note": "страница: «Focal Length 2.8 to 12 mm; Motorized FOV Horizontal field of view: 112° to 46°, Vertical 60° to 26°, Diagonal 133° to 53°» — извлекатель не связал фокус"
+ },
+ "P3D-3F-PV": {
+  "unsupported": "multi_sensor",
+  "note": "многообъективная камера (3F): разные углы относятся к разным объективам"
+ }
+}

@@ -8,6 +8,7 @@ import { CameraLensCalculator } from "@/components/CameraLensCalculator";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { compute, DEFAULT_INPUT } from "@/lib/cameraDesigner/calculate";
 import { contentFor } from "@/lib/cameraDesigner/content";
+import { catalogContentFor } from "@/lib/cameraDesigner/catalogContent";
 import { deg, requiredHfov, requiredNx } from "@/lib/cameraDesigner/optics";
 import { PROFILES } from "@/lib/cameraDesigner/standards";
 import { hreflangAlternates } from "@/lib/hreflang";
@@ -107,7 +108,7 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
         </header>
 
         <div className="mt-8">
-          <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} locale={locale} />
+          <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
         </div>
 
         <section className="mt-12">

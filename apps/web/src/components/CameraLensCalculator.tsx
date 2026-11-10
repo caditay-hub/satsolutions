@@ -15,8 +15,10 @@ import { DEFAULT_INPUT, compute, type CalcInput, type CalcResult, type FieldKey 
 import { parseQuery, toQuery } from "@/lib/cameraDesigner/query";
 import { PROFILES, visibleLevels, type Level, type LevelCode } from "@/lib/cameraDesigner/standards";
 import type { CdContent } from "@/lib/cameraDesigner/content";
+import type { CdCatalogUi } from "@/lib/cameraDesigner/catalogContent";
+import { CameraCatalogMatches, type PickedCamera } from "@/components/CameraCatalogMatches";
 
-type Props = { c: Pick<CdContent, "ui" | "levels" | "numLocale">; locale: string };
+type Props = { c: Pick<CdContent, "ui" | "levels" | "numLocale">; cat: CdCatalogUi; locale: string };
 type Ok = Extract<CalcResult, { status: "ok" }>;
 
 /* ─────────── числа ─────────── */
@@ -283,7 +285,7 @@ function SideView({ r, inp, levels, names, fm, ui }: {
 
 /* ─────────── калькулятор ─────────── */
 
-export function CameraLensCalculator({ c, locale }: Props) {
+export function CameraLensCalculator({ c, cat, locale }: Props) {
   const { ui, levels: names } = c;
   const tf = useTranslations("form");
   const { num, dec } = useMemo(() => makeFmt(locale), [locale]);
@@ -337,6 +339,13 @@ export function CameraLensCalculator({ c, locale }: Props) {
     if (res.optics.estimate) lines.push(ui.badgeEstimate);
     return lines.join("\n");
   }
+
+  /* ── камеры из каталога, отмеченные «В заявку» ── */
+  const [picked, setPicked] = useState<PickedCamera[]>([]);
+  const togglePick = (x: PickedCamera) => setPicked((cur) => (cur.some((y) => y.slug === x.slug) ? cur.filter((y) => y.slug !== x.slug) : [...cur, x]));
+  const pickedText = () => (picked.length
+    ? `\n\n${cat.leadSelected}:\n${picked.map((x) => `• ${x.name}${x.variant ? ` [${x.variant}]` : ""}${x.focalMm !== null ? ` — f ≈ ${num(x.focalMm, 1)} ${ui.units.mm}` : ""} (/products/${x.slug})`).join("\n")}`
+    : "");
   const link = () => `${window.location.origin}${window.location.pathname}?${toQuery(inp)}`;
 
   const [copied, setCopied] = useState<"" | "calc" | "link">("");
@@ -368,7 +377,7 @@ export function CameraLensCalculator({ c, locale }: Props) {
         body: JSON.stringify({
           name: name || "Гость",
           phone,
-          message: `📐 Заявка из калькулятора объектива (${locale})\n\n${body}\n\n${link()}`,
+          message: `📐 Заявка из калькулятора объектива (${locale})\n\n${body}${pickedText()}\n\n${link()}`,
           gclid: getGclid() || undefined,
         }),
       });
@@ -671,6 +680,15 @@ export function CameraLensCalculator({ c, locale }: Props) {
             ))}
           </div>
         </section>
+      ) : null}
+
+      {/* ── камеры каталога под задачу (этап B) ── */}
+      {r.status === "ok" && r.task ? (
+        <CameraCatalogMatches
+          depthM={r.depthM} widthM={inp.w} ppm={r.task.ppm} locale={locale}
+          t={cat} units={{ m: ui.units.m, mm: ui.units.mm, ppm: ui.units.ppm }} num={num}
+          picked={picked} onToggle={togglePick}
+        />
       ) : null}
 
       {/* ── действия и заявка ── */}
