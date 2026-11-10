@@ -5,12 +5,14 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CameraLensCalculator } from "@/components/CameraLensCalculator";
+import { CameraDesignerTabs } from "@/components/CameraDesignerTabs";
+import { planContentFor } from "@/lib/cameraDesigner/planContent";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { compute, DEFAULT_INPUT } from "@/lib/cameraDesigner/calculate";
 import { contentFor } from "@/lib/cameraDesigner/content";
 import { catalogContentFor } from "@/lib/cameraDesigner/catalogContent";
 import { deg, requiredHfov, requiredNx } from "@/lib/cameraDesigner/optics";
-import { PROFILES } from "@/lib/cameraDesigner/standards";
+import { PROFILES, type LevelCode } from "@/lib/cameraDesigner/standards";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { withOgUrl } from "@/lib/metadata";
 import { ogLocale } from "@/lib/ogLocale";
@@ -27,6 +29,9 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     openGraph: { title: c.metaTitle, description: c.metaDesc, locale: ogLocale(locale), images: ["/og.png"] },
   };
 }
+
+// Названия уровней по-русски — для текста заявки с плана (её читает инженер в CRM).
+const RU_LEVELS = Object.fromEntries(Object.entries(contentFor("ru").levels).map(([k, v]) => [k, v.name])) as Record<LevelCode, string>;
 
 const DEC: Record<string, string> = { en: ".", zh: "." };
 /** Число для текста страницы: десятичный разделитель по языку, как в калькуляторе. */
@@ -108,7 +113,9 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
         </header>
 
         <div className="mt-8">
-          <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
+          <CameraDesignerTabs plan={planContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
+            <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
+          </CameraDesignerTabs>
         </div>
 
         <section className="mt-12">

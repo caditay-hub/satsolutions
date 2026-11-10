@@ -13,6 +13,8 @@ import { trackConversion } from "@/lib/gtag";
 import { getGclid } from "@/lib/gclid";
 import { DEFAULT_INPUT, compute, type CalcInput, type CalcResult, type FieldKey } from "@/lib/cameraDesigner/calculate";
 import { parseQuery, toQuery } from "@/lib/cameraDesigner/query";
+import { fill, makeFmt } from "@/lib/cameraDesigner/format";
+import { SHADES, levelColor } from "@/lib/cameraDesigner/palette";
 import { PROFILES, visibleLevels, type Level, type LevelCode } from "@/lib/cameraDesigner/standards";
 import type { CdContent } from "@/lib/cameraDesigner/content";
 import type { CdCatalogUi } from "@/lib/cameraDesigner/catalogContent";
@@ -23,28 +25,7 @@ type Ok = Extract<CalcResult, { status: "ok" }>;
 
 /* ─────────── числа ─────────── */
 
-// Своё форматирование вместо Intl: в Node и в браузере данные локалей (uz, tr) различаются,
-// а разная строка на сервере и клиенте — это ошибка гидратации.
-const SEP: Record<string, { dec: string; grp: string }> = {
-  ru: { dec: ",", grp: " " }, uz: { dec: ",", grp: " " }, tr: { dec: ",", grp: "." },
-  en: { dec: ".", grp: "," }, zh: { dec: ".", grp: "," },
-};
-
-function makeFmt(locale: string) {
-  const s = SEP[locale] ?? SEP.ru;
-  const num = (n: number, frac?: number) => {
-    if (!Number.isFinite(n)) return "∞";
-    const a = Math.abs(n);
-    const f = frac ?? (a >= 100 ? 0 : a >= 10 ? 1 : 2);
-    let [int, dec] = a.toFixed(f).split(".");
-    if (int.length > 3) int = int.replace(/\B(?=(\d{3})+(?!\d))/g, s.grp);
-    if (dec) dec = dec.replace(/0+$/, "");
-    return (n < 0 ? "−" : "") + int + (dec ? s.dec + dec : "");
-  };
-  return { num, dec: s.dec };
-}
-
-const fill = (tpl: string, v: Record<string, string>) => tpl.replace(/\{(\w+)\}/g, (_, k) => v[k] ?? "");
+// makeFmt/fill — lib/cameraDesigner/format.ts (общие с планом объекта)
 
 /* ─────────── поля ─────────── */
 
@@ -111,9 +92,7 @@ const RES = [
   [1920, 1080], [2560, 1440], [2688, 1520], [2560, 1944], [2880, 1620], [3200, 1800], [3840, 2160], [4000, 3000],
 ] as const;
 
-// Цвета уровней: от самого детального (ближе к камере) к самому грубому.
-const SHADES = ["#134e5e", "#1d6a7d", "#2a7b90", "#3f95ab", "#6bb3c5", "#9fd0dc", "#cde9ef"];
-const levelColor = (i: number, n: number) => SHADES[Math.round((i * (SHADES.length - 1)) / Math.max(1, n - 1))];
+// Цвета уровней — lib/cameraDesigner/palette.ts (общие с планом объекта)
 
 function niceStep(raw: number) {
   const p = 10 ** Math.floor(Math.log10(raw));
@@ -301,7 +280,8 @@ export function CameraLensCalculator({ c, cat, locale }: Props) {
   }, []);
   useEffect(() => {
     if (!touched.current) return;
-    window.history.replaceState(window.history.state, "", `${window.location.pathname}?${toQuery(inp)}`);
+    // hash сохраняем: им вкладка «План объекта» отмечает себя в адресе
+    window.history.replaceState(window.history.state, "", `${window.location.pathname}?${toQuery(inp)}${window.location.hash}`);
   }, [inp]);
 
   const set = <K extends keyof CalcInput>(k: K, v: CalcInput[K]) => {
