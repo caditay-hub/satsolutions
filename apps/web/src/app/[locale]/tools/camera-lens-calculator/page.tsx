@@ -1,10 +1,11 @@
 // Проектировщик видеонаблюдения и калькулятор объектива (SAT Camera Designer, этапы A–D, 10.11.2026).
 // Расчёт — lib/cameraDesigner (тот же код на сервере и в браузере), тексты — lib/cameraDesigner/content.ts (5 языков).
 // Параметры из ссылки читает только браузер, canonical — без query.
-// 11.11 (решение владельца): страница под клиента — первый экран с тремя входами и примером,
-// вкладка «План объекта» первой, силуэты уровней, три шага; формулы и стандарт свёрнуты внизу.
+// 11.11, редизайн по второму ТЗ (решения владельца): короткий заголовок «Калькулятор обзора камеры»,
+// сразу под ним рабочая область — режимы «Одна камера» → «Подобрать камеру» → «План объекта»;
+// ниже — силуэты уровней, три шага, FAQ и свёрнутая справка для специалистов. Title для поиска прежний.
 import type { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CameraLensCalculator } from "@/components/CameraLensCalculator";
 import { CameraDesignerTabs } from "@/components/CameraDesignerTabs";
@@ -14,14 +15,13 @@ import { FaqAccordion } from "@/components/FaqAccordion";
 import { compute, DEFAULT_INPUT } from "@/lib/cameraDesigner/calculate";
 import { contentFor } from "@/lib/cameraDesigner/content";
 import { catalogContentFor } from "@/lib/cameraDesigner/catalogContent";
+import { simpleContentFor } from "@/lib/cameraDesigner/simpleContent";
 import { deg, requiredHfov, requiredNx } from "@/lib/cameraDesigner/optics";
 import { PROFILES, type LevelCode } from "@/lib/cameraDesigner/standards";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { withOgUrl } from "@/lib/metadata";
 import { ogLocale } from "@/lib/ogLocale";
-import { DesignerPreviewArt, type DesignerPreviewText } from "@/components/home/DesignerPreview";
 import { StepArt } from "@/components/planner/StepArt";
-import { examplePreview } from "@/lib/cameraDesigner/exampleSummary";
 import { portraitPng } from "@/lib/cameraDesigner/pixelPortrait";
 
 const PATH = "/tools/camera-lens-calculator";
@@ -103,19 +103,12 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
   ] as const;
 
   const h2 = "text-lg font-black text-slate-900 sm:text-xl";
-  const [dp, th] = await Promise.all([examplePreview(locale), getTranslations({ locale, namespace: "home" })]);
-  const dpText = th.raw("designerPreview") as DesignerPreviewText;
-  const exampleHref = `${lp}${PATH}?example=office#plan`;
+  const su = simpleContentFor(locale);
   // уровни DORI редакции 2014 для силуэтов: тот же человек при плотности уровня
   const portraits = (["detect", "observe", "recognize", "identify"] as const).map((code) => {
     const ppm = PROFILES["2014"].levels.find((l) => l.code === code)!.ppm;
     return { code, ppm, src: portraitPng(ppm) };
   });
-  const entries = [
-    { hash: "#plan", t: c.hero.plan, icon: <path d="M3 3h18v18H3zM12 3v9h9M6.5 6.5l4 9M6.5 6.5l10 6" /> },
-    { hash: "#estimate", t: c.hero.est, icon: <path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h5" /> },
-    { hash: "#camera", t: c.hero.cam, icon: <path d="M3 8h12v8H3zM15 11l6-3v8l-6-3M7 16l-2 5M11 16l2 5" /> },
-  ];
   const detailsCls = "group rounded-2xl border border-slate-200 bg-white";
   const summaryCls = "flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-base font-black text-slate-900 [&::-webkit-details-marker]:hidden";
   const chevron = (
@@ -127,55 +120,27 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
   return (
     <div className="bg-slate-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-12">
+      <div className="mx-auto max-w-7xl px-4 py-5 sm:py-8">
         <nav className="crumbs flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
           <Link href="/" className="hover:text-brand-600">{c.crumbs.home}</Link>
           <span>/</span>
           <span className="text-slate-700">{c.crumbs.tool}</span>
         </nav>
 
-        {/* первый экран: что это и три входа; справа — тот же пример, что на главной */}
-        <header className="mt-4 grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
-          <div>
-            <p className="text-[11px] font-black uppercase tracking-widest text-brand-600">{c.hero.kicker}</p>
-            <h1 className="mt-2 text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">{c.h1}</h1>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{c.lead}</p>
-            <div className="mt-5 grid gap-2.5">
-              {entries.map((e) => (
-                <a key={e.hash} href={e.hash}
-                  className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 transition-colors hover:border-brand-400">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
-                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{e.icon}</svg>
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-sm font-black text-slate-900">{e.t[0]}</span>
-                    <span className="block text-xs leading-snug text-slate-600">{e.t[1]}</span>
-                  </span>
-                  <span className="text-lg font-bold text-brand-600 transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
-                </a>
-              ))}
-            </div>
-            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-              {/* обычная ссылка, не Link: нужна полная загрузка, чтобы редактор открыл пример */}
-              <a href={exampleHref} className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-500">
-                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
-                {c.hero.example}
-              </a>
-              <span className="max-w-xs text-[11px] leading-snug text-slate-500">{c.hero.privacy}</span>
-            </div>
-          </div>
-          <a href={exampleHref} className="dp-card block rounded-2xl border border-brand-200 bg-white p-4 shadow-sm transition-colors hover:border-brand-500" aria-label={c.hero.example}>
-            <DesignerPreviewArt t={dpText} coverage={dp.coverage} total={dp.total} />
-          </a>
+        {/* заголовок в одну строку и сразу рабочая область: сцена видна на первом экране */}
+        <header className="mt-3">
+          <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">{c.h1}</h1>
+          <p className="mt-1 text-sm text-slate-600 sm:text-base">{c.lead}</p>
         </header>
 
-        {/* якоря входов: браузер прокручивает к инструменту, вкладку переключает CameraDesignerTabs */}
-        <div id="cd-tool" className="relative mt-10">
-          <span id="plan" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
-          <span id="estimate" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
-          <span id="camera" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
-          <CameraDesignerTabs plan={planContentFor(locale)} est={estContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
-            <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
+        {/* якоря режимов: браузер прокручивает к инструменту, вкладку переключает CameraDesignerTabs */}
+        <div id="cd-tool" className="relative mt-4">
+          <span id="camera" className="absolute -top-24" aria-hidden="true" />
+          <span id="pick" className="absolute -top-24" aria-hidden="true" />
+          <span id="plan" className="absolute -top-24" aria-hidden="true" />
+          <span id="estimate" className="absolute -top-24" aria-hidden="true" />
+          <CameraDesignerTabs tabs={su.tabs} plan={planContentFor(locale)} est={estContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
+            <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} s={su} cat={catalogContentFor(locale).catalog} locale={locale} />
           </CameraDesignerTabs>
         </div>
 

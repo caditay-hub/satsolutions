@@ -51,9 +51,8 @@ export type CdContent = {
   numLocale: string;
   metaTitle: string; metaDesc: string;
   crumbs: { home: string; tool: string };
+  /** Заголовок и одна строка под ним (редизайн 11.11: сразу под ними — рабочая область). */
   h1: string; lead: string;
-  /** Первый экран страницы (11.11): три входа и пример. Пары — [заголовок, пояснение]. */
-  hero: { kicker: string; plan: [string, string]; est: [string, string]; cam: [string, string]; example: string; privacy: string };
   /** Силуэты уровней детализации. */
   levelsSec: { title: string; intro: string };
   /** «Как это работает» — три шага для клиента. */
@@ -82,9 +81,8 @@ const ru: CdContent = {
   metaTitle: "Проект видеонаблюдения онлайн и калькулятор объектива",
   metaDesc: "Расставьте камеры на плане объекта: зоны обзора, покрытие и смета с оборудованием и монтажом. Калькулятор объектива: угол обзора и дальности DORI.",
   crumbs: { home: "Главная", tool: "Проект видеонаблюдения" },
-  h1: "Проект видеонаблюдения онлайн и калькулятор объектива",
-  lead: "Загрузите план объекта или начните с сетки и расставьте камеры из каталога. Сразу видно, где различимо лицо, а где только силуэт, сколько территории закрыто и сколько стоит система с монтажом. Бесплатно, прямо в браузере.",
-  hero: { kicker: "Бесплатно, без регистрации", plan: ["План объекта", "Камеры на плане, зоны обзора и процент покрытия"], est: ["Смета и КП", "Регистратор, диски, кабель и монтаж — смета и коммерческое предложение в PDF"], cam: ["Одна камера", "Угол обзора и что видно на 10, 20 и 30 метрах"], example: "Открыть пример", privacy: "План не покидает ваш компьютер: всё считается в браузере." },
+  h1: "Калькулятор обзора камеры",
+  lead: "Узнайте, что будет видно на расстоянии 5, 10, 20 или 50 метров",
   levelsSec: { title: "Что видно на каждом уровне детализации", intro: "Чем больше пикселей камеры приходится на метр там, где стоит человек, тем больше видно. Так выглядит один и тот же человек на четырёх уровнях стандарта IEC 62676-4." },
   steps: { title: "Как это работает", items: [
     ["Загрузите план", "Картинка, PDF или пустая сетка нужного размера. Масштаб задаётся по одной стене известной длины."],
@@ -209,9 +207,8 @@ const uz: CdContent = {
   metaTitle: "Videokuzatuv loyihasi onlayn va obyektiv kalkulyatori",
   metaDesc: "Kameralarni obyekt rejasiga joylashtiring: koʻrish zonalari, qamrov va uskuna hamda montaj bilan smeta. Obyektiv kalkulyatori: koʻrish burchagi va DORI masofalari.",
   crumbs: { home: "Bosh sahifa", tool: "Videokuzatuv loyihasi" },
-  h1: "Videokuzatuv loyihasi onlayn va obyektiv kalkulyatori",
-  lead: "Obyekt rejasini yuklang yoki toʻrdan boshlang va katalogdagi kameralarni joylashtiring. Qayerda yuz aniq koʻrinishi, qayerda faqat siluet, hududning qancha qismi qamrab olingani va tizim montaj bilan qancha turishi darhol koʻrinadi. Bepul, toʻgʻridan-toʻgʻri brauzerda.",
-  hero: { kicker: "Bepul, roʻyxatdan oʻtmasdan", plan: ["Obyekt rejasi", "Rejadagi kameralar, koʻrish zonalari va qamrov foizi"], est: ["Smeta va tijorat taklifi", "Registrator, disklar, kabel va montaj — smeta va PDF tijorat taklifi"], cam: ["Bitta kamera", "Koʻrish burchagi va 10, 20, 30 metrda nima koʻrinishi"], example: "Namunani ochish", privacy: "Reja kompyuteringizdan chiqmaydi: hammasi brauzerda hisoblanadi." },
+  h1: "Kamera koʻrish kalkulyatori",
+  lead: "5, 10, 20 yoki 50 metr masofada nima koʻrinishini bilib oling",
   levelsSec: { title: "Har bir tafsilot darajasida nima koʻrinadi", intro: "Odam turgan joyda bir metrga kameraning qancha pikseli toʻgʻri kelsa, shuncha koʻp narsa koʻrinadi. IEC 62676-4 standartining toʻrt darajasida bitta odam shunday koʻrinadi." },
   steps: { title: "Bu qanday ishlaydi", items: [
     ["Rejani yuklang", "Rasm, PDF yoki kerakli oʻlchamdagi boʻsh toʻr. Masshtab uzunligi maʼlum bitta devor boʻyicha belgilanadi."],
@@ -336,9 +333,8 @@ const en: CdContent = {
   metaTitle: "Online CCTV Design and Lens Calculator",
   metaDesc: "Place cameras on your floor plan: coverage zones, coverage share and an estimate with equipment and installation. Lens calculator: field of view and DORI distances.",
   crumbs: { home: "Home", tool: "CCTV design" },
-  h1: "Online CCTV design and lens calculator",
-  lead: "Upload a floor plan or start from a grid and place cameras from our catalogue. You see at once where faces are clear and where you only get a silhouette, how much of the area is covered and what the system costs with installation. Free, right in your browser.",
-  hero: { kicker: "Free, no sign-up", plan: ["Site plan", "Cameras on the plan, coverage zones and coverage share"], est: ["Estimate and quote", "Recorder, disks, cable and installation — an estimate and a PDF quotation"], cam: ["Single camera", "Field of view and what you see at 10, 20 and 30 m"], example: "Open the example", privacy: "Your plan never leaves your computer: everything is calculated in the browser." },
+  h1: "Camera view calculator",
+  lead: "See what a camera shows at 5, 10, 20 or 50 metres",
   levelsSec: { title: "What you see at each level of detail", intro: "The more camera pixels fall on each metre where a person stands, the more you see. This is the same person at the four levels of IEC 62676-4." },
   steps: { title: "How it works", items: [
     ["Upload a plan", "An image, a PDF or an empty grid of the right size. Set the scale by one wall of known length."],
@@ -463,9 +459,8 @@ const tr: CdContent = {
   metaTitle: "Çevrimiçi CCTV Projesi ve Lens Hesaplayıcı",
   metaDesc: "Kameraları tesis planına yerleştirin: görüş alanları, kapsama oranı ve ekipman ile montaj dahil maliyet hesabı. Lens hesaplayıcı: görüş açısı ve DORI mesafeleri.",
   crumbs: { home: "Ana sayfa", tool: "CCTV projesi" },
-  h1: "Çevrimiçi CCTV projesi ve lens hesaplayıcı",
-  lead: "Tesis planını yükleyin ya da boş bir ızgarayla başlayın ve katalogdaki kameraları yerleştirin. Yüzün nerede net, nerede yalnızca siluet olarak göründüğünü, alanın ne kadarının kapsandığını ve sistemin montajla ne kadara mal olacağını hemen görürsünüz. Ücretsiz, doğrudan tarayıcıda.",
-  hero: { kicker: "Ücretsiz, kayıt gerekmez", plan: ["Tesis planı", "Plan üzerinde kameralar, görüş alanları ve kapsama oranı"], est: ["Maliyet hesabı ve teklif", "Kayıt cihazı, diskler, kablo ve montaj — maliyet hesabı ve PDF teklif"], cam: ["Tek kamera", "Görüş açısı ve 10, 20, 30 metrede ne göründüğü"], example: "Örneği aç", privacy: "Planınız bilgisayarınızdan çıkmaz: her şey tarayıcıda hesaplanır." },
+  h1: "Kamera görüş hesaplayıcı",
+  lead: "5, 10, 20 veya 50 metrede neyin görüneceğini öğrenin",
   levelsSec: { title: "Her ayrıntı seviyesinde ne görünür", intro: "Kişinin durduğu yerde metre başına düşen kamera pikseli arttıkça daha fazlası görünür. IEC 62676-4 standardının dört seviyesinde aynı kişi böyle görünür." },
   steps: { title: "Nasıl çalışır", items: [
     ["Planı yükleyin", "Görsel, PDF ya da istediğiniz boyutta boş bir ızgara. Ölçek, uzunluğu bilinen bir duvarla belirlenir."],
@@ -590,9 +585,8 @@ const zh: CdContent = {
   metaTitle: "在线视频监控设计与镜头计算器",
   metaDesc: "在平面图上布置摄像机：覆盖区域、覆盖率以及含设备和安装的报价单。镜头计算器：视场角与 DORI 距离。",
   crumbs: { home: "首页", tool: "视频监控设计" },
-  h1: "在线视频监控设计与镜头计算器",
-  lead: "上传现场平面图或从网格开始，布置目录中的摄像机。立即看到哪里能看清人脸、哪里只能看到轮廓，覆盖了多少区域，以及含安装的系统价格。免费，直接在浏览器中使用。",
-  hero: { kicker: "免费，无需注册", plan: ["现场平面图", "平面图布点、覆盖区域与覆盖率"], est: ["报价单与商业报价", "录像机、硬盘、线缆和安装——报价单及 PDF 商业报价"], cam: ["单个摄像机", "视场角，以及 10、20、30 米处能看清什么"], example: "打开示例", privacy: "平面图不会离开您的电脑：所有计算都在浏览器中完成。" },
+  h1: "摄像机视野计算器",
+  lead: "了解在 5、10、20 或 50 米处能看清什么",
   levelsSec: { title: "各细节等级下能看到什么", intro: "人所在位置每米分到的摄像机像素越多，能看到的就越多。这是同一个人在 IEC 62676-4 四个等级下的样子。" },
   steps: { title: "工作原理", items: [
     ["上传平面图", "图片、PDF 或指定尺寸的空白网格。通过一面已知长度的墙设定比例。"],

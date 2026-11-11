@@ -1,16 +1,16 @@
 "use client";
 
 /**
- * Вкладки проектировщика: «План объекта» (этап C) и «Одна камера» (этап A/B).
- * Калькулятор приходит из серверной страницы готовым (его расчёт есть в HTML); редактор плана
- * грузится отдельным чанком. Вкладка отмечается в адресе через hash — query остаётся за калькулятором:
- * #plan — план (по умолчанию, решение владельца 11.11), #estimate — план со сметой без плана,
- * #camera — одна камера; без hash ссылка с параметрами расчёта (?v=…) открывает «Одну камеру».
- * Входы на первом экране страницы — обычные ссылки на эти hash: на странице у инструмента стоят
- * якоря с такими id, поэтому браузер сам прокручивает к нему, а здесь переключается вкладка.
+ * Режимы проектировщика (редизайн 11.11.2026, решение владельца): «Одна камера» → «Подобрать
+ * камеру» → «План объекта». Калькулятор приходит из серверной страницы готовым (его расчёт есть
+ * в HTML) и обслуживает первые два режима — какой из них, он узнаёт из контекста; редактор плана
+ * грузится отдельным чанком. Режим отмечается в адресе через hash — query остаётся за калькулятором:
+ * #camera — одна камера (по умолчанию), #pick — подбор, #plan — план, #estimate — план со сметой
+ * без плана. Без hash: ссылка подбора (?m=task) открывает подбор, остальные — одну камеру.
+ * Меню, главная и разделы каталога ссылаются на #plan и продолжают открывать план.
  */
 import dynamic from "next/dynamic";
-import { useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import type { CdPlanUi } from "@/lib/cameraDesigner/planContent";
 import type { CdEstUi } from "@/lib/cameraDesigner/estContent";
 import type { LevelCode } from "@/lib/cameraDesigner/standards";
@@ -20,25 +20,36 @@ const CameraPlanner = dynamic(() => import("@/components/planner/CameraPlanner")
   loading: () => <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-500">…</div>,
 });
 
+export type CdMode = "camera" | "pick";
+const ModeCtx = createContext<{ mode: CdMode; setMode: (m: CdMode) => void }>({ mode: "camera", setMode: () => {} });
+/** Режим калькулятора: одна камера или подбор. */
+export const useCdMode = () => useContext(ModeCtx);
+
+type Tab = CdMode | "plan";
+const HASH: Record<Tab, string> = { camera: "#camera", pick: "#pick", plan: "#plan" };
+
 export function CameraDesignerTabs(p: {
   children: ReactNode;
+  tabs: Record<Tab, string>;
   plan: CdPlanUi;
   est: CdEstUi;
   levels: Record<LevelCode, { name: string }>;
   ruLevels: Record<LevelCode, string>;
   locale: string;
 }) {
-  const [tab, setTab] = useState<"calc" | "plan">("plan");
+  const [tab, setTab] = useState<Tab>("camera");
   const [planMounted, setPlanMounted] = useState(false);
-  /** Какой экран редактора открыть по входу с первого экрана: план (#plan) или смета без плана (#estimate). */
+  /** Какой экран редактора открыть по входу: план (#plan) или смета без плана (#estimate). */
   const [view, setView] = useState<{ v: "plan" | "estimate"; n: number }>({ v: "plan", n: 0 });
 
   useEffect(() => {
     const sync = (nav: boolean) => {
       const h = window.location.hash;
-      const calc = h === "#camera" || (!h && new URLSearchParams(window.location.search).has("v"));
-      setTab(calc ? "calc" : "plan");
-      if (!calc) setPlanMounted(true);
+      const q = new URLSearchParams(window.location.search);
+      const t: Tab = h === "#plan" || h === "#estimate" || (!h && q.has("example")) ? "plan"
+        : h === "#pick" || (!h && q.get("m") === "task") ? "pick" : "camera";
+      setTab(t);
+      if (t === "plan") setPlanMounted(true);
       if (h === "#estimate" || (nav && h === "#plan")) setView((x) => ({ v: h === "#estimate" ? "estimate" : "plan", n: x.n + 1 }));
     };
     sync(false);
@@ -47,27 +58,32 @@ export function CameraDesignerTabs(p: {
     return () => window.removeEventListener("hashchange", onHash);
   }, []);
 
-  function open(t: "calc" | "plan") {
+  function open(t: Tab) {
     setTab(t);
     if (t === "plan") setPlanMounted(true);
     const { pathname, search } = window.location;
-    window.history.replaceState(window.history.state, "", `${pathname}${search}${t === "plan" ? "#plan" : "#camera"}`);
+    window.history.replaceState(window.history.state, "", `${pathname}${search}${HASH[t]}`);
   }
 
   const tabCls = (on: boolean) =>
-    `min-h-[44px] rounded-xl px-4 py-2 text-sm font-bold transition-colors ${on ? "bg-brand-600 text-white shadow-sm" : "bg-white text-slate-700 hover:text-brand-700"}`;
+    `min-h-[44px] flex-1 rounded-xl px-2 py-1.5 text-[13px] font-bold leading-tight sm:whitespace-nowrap sm:text-sm transition-colors sm:flex-none sm:px-5 ${on ? "bg-white text-brand-700 shadow-sm ring-1 ring-slate-200" : "text-slate-600 hover:text-brand-700"}`;
+  const order: Tab[] = ["camera", "pick", "plan"];
 
   return (
-    <div>
-      <div role="tablist" aria-label={`${p.plan.tabCalc} / ${p.plan.tabPlan}`} className="mb-5 inline-flex gap-1 rounded-2xl border border-slate-200 bg-slate-100 p-1">
-        <button type="button" role="tab" id="cd-tab-plan" aria-selected={tab === "plan"} aria-controls="cd-panel-plan" className={tabCls(tab === "plan")} onClick={() => open("plan")}>{p.plan.tabPlan}</button>
-        <button type="button" role="tab" id="cd-tab-calc" aria-selected={tab === "calc"} aria-controls="cd-panel-calc" className={tabCls(tab === "calc")} onClick={() => open("calc")}>{p.plan.tabCalc}</button>
+    <ModeCtx.Provider value={{ mode: tab === "pick" ? "pick" : "camera", setMode: (m) => open(m) }}>
+      <div role="tablist" aria-label={order.map((t) => p.tabs[t]).join(" / ")} className="mb-4 flex gap-1 rounded-2xl bg-slate-100 p-1 sm:inline-flex">
+        {order.map((t) => (
+          <button key={t} type="button" role="tab" id={`cd-tab-${t}`} aria-selected={tab === t} aria-controls={t === "plan" ? "cd-panel-plan" : "cd-panel-calc"}
+            className={tabCls(tab === t)} onClick={() => open(t)}>
+            {p.tabs[t]}
+          </button>
+        ))}
       </div>
       {/* калькулятор не размонтируем: его состояние живёт, пока клиент работает с планом */}
-      <div role="tabpanel" id="cd-panel-calc" aria-labelledby="cd-tab-calc" hidden={tab !== "calc"}>{p.children}</div>
+      <div role="tabpanel" id="cd-panel-calc" aria-labelledby={`cd-tab-${tab === "pick" ? "pick" : "camera"}`} hidden={tab === "plan"}>{p.children}</div>
       <div role="tabpanel" id="cd-panel-plan" aria-labelledby="cd-tab-plan" hidden={tab !== "plan"}>
         {planMounted ? <CameraPlanner ui={p.plan} est={p.est} levels={p.levels} ruLevels={p.ruLevels} locale={p.locale} view={view} /> : null}
       </div>
-    </div>
+    </ModeCtx.Provider>
   );
 }

@@ -6,38 +6,10 @@
  * image-rendering: pixelated, чтобы пиксели было видно.
  */
 import { deflateSync } from "node:zlib";
+import { HEAD_FRAME, PORTRAIT_BG, paintHead, rasterize } from "./portraitPaint";
 
-const FRAME_W = 0.4; // м
-const FRAME_H = 0.5; // м
-
-type RGB = [number, number, number];
-const BG: RGB = [223, 231, 236], SKIN: RGB = [224, 180, 143], SKIN_D: RGB = [196, 150, 116], HAIR: RGB = [58, 42, 32];
-const EYE: RGB = [34, 34, 34], LIP: RGB = [156, 79, 79], JACKET: RGB = [47, 111, 138], SHIRT: RGB = [241, 245, 249];
-
-const inEl = (x: number, y: number, cx: number, cy: number, rx: number, ry: number) => ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1;
-
-/** Цвет рисунка в точке (м от верхнего края, x — от центра кадра). Порядок проверок = порядок слоёв сверху вниз. */
-function paint(x: number, y: number): RGB {
-  const ax = Math.abs(x);
-  // лицо
-  if (inEl(ax, y, 0.035, 0.175, 0.014, 0.007)) return EYE;
-  if (y > 0.153 && y < 0.161 && ax > 0.02 && ax < 0.052) return HAIR; // брови
-  if (inEl(x, y, 0, 0.24, 0.028, 0.007)) return LIP;
-  if (inEl(x, y, 0.004, 0.205, 0.012, 0.024)) return SKIN_D; // нос
-  // волосы — над лбом и по бокам головы
-  if (inEl(x, y, 0, 0.162, 0.103, 0.13) && (y < 0.125 || (ax > 0.087 && y < 0.17))) return HAIR;
-  if (inEl(x, y, 0, 0.18, 0.095, 0.122)) return SKIN;
-  if (inEl(ax, y, 0.097, 0.183, 0.013, 0.024)) return SKIN_D; // уши
-  // шея
-  if (ax < 0.05 && y > 0.28 && y < 0.36) return SKIN;
-  // плечи: пиджак, белая рубашка вырезом
-  const shoulder = 0.345 + 0.08 * (ax / 0.2) ** 2;
-  if (y > shoulder) {
-    if (ax < 0.06 - (y - 0.345) * 0.35) return SHIRT;
-    return JACKET;
-  }
-  return BG;
-}
+const FRAME_W = HEAD_FRAME.w; // м
+const FRAME_H = HEAD_FRAME.h; // м
 
 let crcTable: Uint32Array | null = null;
 function crc32(buf: Buffer) {
@@ -65,20 +37,14 @@ export function portraitPng(ppm: number): string {
   const hit = memo.get(ppm);
   if (hit) return hit;
   const { w, h } = portraitSize(ppm);
-  const SS = 4; // точек на пиксель по каждой оси
+  // рисунок — общий со сценой «Вид с камеры» (portraitPaint.ts); PNG — RGB без прозрачности
+  const rgba = rasterize(paintHead, FRAME_W, FRAME_H, w, h, PORTRAIT_BG);
   const raw = Buffer.alloc((w * 3 + 1) * h);
   for (let j = 0; j < h; j++) {
     raw[j * (w * 3 + 1)] = 0; // фильтр строки: нет
     for (let i = 0; i < w; i++) {
-      let r = 0, g = 0, b = 0;
-      for (let sj = 0; sj < SS; sj++) for (let si = 0; si < SS; si++) {
-        const x = ((i + (si + 0.5) / SS) / w - 0.5) * FRAME_W;
-        const y = ((j + (sj + 0.5) / SS) / h) * FRAME_H;
-        const c = paint(x, y);
-        r += c[0]; g += c[1]; b += c[2];
-      }
-      const o = j * (w * 3 + 1) + 1 + i * 3, k = SS * SS;
-      raw[o] = Math.round(r / k); raw[o + 1] = Math.round(g / k); raw[o + 2] = Math.round(b / k);
+      const o = j * (w * 3 + 1) + 1 + i * 3, q = (j * w + i) * 4;
+      raw[o] = rgba[q]; raw[o + 1] = rgba[q + 1]; raw[o + 2] = rgba[q + 2];
     }
   }
   const ihdr = Buffer.alloc(13);
