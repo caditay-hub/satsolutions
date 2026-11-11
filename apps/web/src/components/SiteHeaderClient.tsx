@@ -252,6 +252,22 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
     ),
   };
 
+  // Проектировщик видеонаблюдения (решение владельца 11.11) — второй инструмент рядом с калькулятором
+  const designerFeature: NavDropFeature = {
+    title: ({ ru: "Проект видеонаблюдения онлайн", uz: "Videokuzatuv loyihasi onlayn", en: "Online CCTV design", tr: "Çevrimiçi CCTV projesi", zh: "在线视频监控设计" } as Record<string, string>)[locale] ?? "Проект видеонаблюдения онлайн",
+    subtitle: ({ ru: "Камеры на плане, зоны и смета", uz: "Rejadagi kameralar, zonalar va smeta", en: "Cameras on a plan, zones and estimate", tr: "Plan üzerinde kameralar, alanlar ve teklif", zh: "平面图布点、覆盖区域与报价" } as Record<string, string>)[locale] ?? "Камеры на плане, зоны и смета",
+    href: "/tools/camera-lens-calculator#plan",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M12 3v8M12 11h9" />
+        <circle cx="6.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
+        <path d="M7.5 7.5 11 17M7.5 7.5 17 15" opacity=".7" />
+      </svg>
+    ),
+  };
+  const toolFeatures = [calcFeature, designerFeature];
+
   // Выпадашка «Услуги»: системы + отрасли из servicesData (заголовки локализованы messages)
   // «О компании»: свои приложения и страницы компании в одном меню
   const am = ABOUT_MENU[locale] ?? ABOUT_MENU.ru;
@@ -308,7 +324,7 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
               return <CatalogMega key={item.href} />;
             }
             if (item.key === "services") {
-              return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} feature={calcFeature} />;
+              return <NavDropdown key={item.href} label={t(item.key)} href="/solutions" groups={solutionGroups} allLabel={t("allServices")} active={item.href === activeHref} width={300} feature={toolFeatures} />;
             }
             if (item.key === "about") {
               return <NavDropdown key={item.href} label={t(item.key)} href="/about" groups={aboutGroups} allLabel={am.all} active={item.href === activeHref} width={300} />;
@@ -429,15 +445,17 @@ export function SiteHeaderClient({ logoImageUrl = null, portfolioItems = [] }: {
                                 ))}
                               </div>
                             ))}
-                            {/* калькулятор — отдельным блоком со значком, как в десктопной выпадашке */}
-                            <Link href="/calculator" style={{ backgroundColor: "#e02020" }}
-                              className="mx-2 mt-2 flex items-center gap-3 rounded-xl px-3 py-2.5 shadow-sm transition-opacity hover:opacity-90">
-                              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>{calcFeature.icon}</span>
-                              <span className="min-w-0">
-                                <span className="block truncate text-[13px] font-bold text-white">{calcFeature.title}</span>
-                                <span className="block truncate text-[11px] text-white/80">{calcFeature.subtitle}</span>
-                              </span>
-                            </Link>
+                            {/* калькулятор и проектировщик — отдельными блоками со значком, как в десктопной выпадашке */}
+                            {toolFeatures.map((f) => (
+                              <Link key={f.href} href={f.href as any} style={{ backgroundColor: "#e02020" }}
+                                className="mx-2 mt-2 flex items-center gap-3 rounded-xl px-3 py-2.5 shadow-sm transition-opacity hover:opacity-90">
+                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>{f.icon}</span>
+                                <span className="min-w-0">
+                                  <span className="block truncate text-[13px] font-bold text-white">{f.title}</span>
+                                  <span className="block truncate text-[11px] text-white/80">{f.subtitle}</span>
+                                </span>
+                              </Link>
+                            ))}
                           </div>
                         </details>
                       );

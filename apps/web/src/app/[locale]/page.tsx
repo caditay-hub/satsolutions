@@ -25,10 +25,7 @@ import { articlesForLocale, articleImg } from "@/lib/articlesData";
 import { optimizedImg } from "@/lib/imgProxy";
 import { withOgUrl } from "@/lib/metadata";
 import { DesignerPreview, type DesignerPreviewText } from "@/components/home/DesignerPreview";
-import { exampleCoverage } from "@/lib/cameraDesigner/plan/example";
-import { exampleTotal } from "@/lib/cameraDesigner/exampleSummary";
-import { planContentFor } from "@/lib/cameraDesigner/planContent";
-import { makeFmt } from "@/lib/cameraDesigner/format";
+import { examplePreview } from "@/lib/cameraDesigner/exampleSummary";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -203,7 +200,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     { brands },
     { partners },
     { items: newArrivals },
-    dpTotal,
+    dp,
   ] = await Promise.all([
     getPortfolio(1, 3).catch(() => ({ items: [], total: 0 })),
     getBrands().catch(() => ({ brands: [] })),
@@ -211,13 +208,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     // Новинки каталога: 8 последних за 90 дней (блок после «Каталога продукции»)
     getProductsCached(1, 8, { sort: "new", days: 60, hasPrice: true }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
     // смета примера для превью проектировщика: цены каталога на сегодня; при сбое блок без суммы
-    exampleTotal(locale),
+    examplePreview(locale),
   ]);
-  // превью проектировщика: «от» — нижняя граница сметы, округлённая вниз до 10 000 сум
-  const dpFmt = makeFmt(locale);
   const dpText = t.raw("designerPreview") as DesignerPreviewText;
-  const dpMoney = dpTotal ? planContentFor(locale).money.replace("{v}", dpFmt.num(Math.floor(dpTotal / 10000) * 10000, 0)) : null;
-  const dpCoverage = `${Math.round(exampleCoverage() * 100)} %`;
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
 
@@ -589,7 +582,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             </div>
             <div className="order-first lg:order-none">
-              <DesignerPreview t={dpText} coverage={dpCoverage} total={dpMoney} />
+              <DesignerPreview t={dpText} coverage={dp.coverage} total={dp.total} />
             </div>
             </div>
           </div>

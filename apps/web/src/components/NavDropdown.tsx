@@ -29,7 +29,8 @@ export function NavDropdown({
   allLabel: string;
   active?: boolean;
   width?: number;
-  feature?: NavDropFeature;
+  /** Один инструмент или несколько (калькулятор монтажа и проектировщик — рядом). */
+  feature?: NavDropFeature | NavDropFeature[];
 }) {
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -45,6 +46,7 @@ export function NavDropdown({
   const close = () => setOpen(false);
 
   const cols = groups.length > 1;
+  const tools = feature ? (Array.isArray(feature) ? feature : [feature]) : [];
   return (
     <div className="relative" onMouseEnter={show} onMouseLeave={hideSoon}>
       <Link
@@ -96,24 +98,30 @@ export function NavDropdown({
           {/* Вне области прокрутки — иначе на невысоком экране уезжает за край.
               Красный: в бирюзовом меню одноцветная плашка терялась среди пунктов
               и сливалась с кнопкой «Все услуги». */}
-          {feature && (
-            <Link
-              href={feature.href as any}
-              onClick={close}
-              style={{ backgroundColor: "#e02020" }}
-              className="mt-3 flex w-full shrink-0 items-center gap-3 rounded-xl px-3 py-2.5 text-left shadow-sm transition-opacity hover:opacity-90"
-            >
-              {feature.icon && (
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>
-                  {feature.icon}
-                </span>
-              )}
-              <span className="min-w-0">
-                <span className="block truncate text-[13px] font-bold text-white">{feature.title}</span>
-                {feature.subtitle && <span className="block truncate text-[11px] text-white/80">{feature.subtitle}</span>}
-              </span>
-            </Link>
-          )}
+          {tools.length ? (
+            <div className={`mt-3 grid shrink-0 gap-2 ${tools.length > 1 && cols ? "grid-cols-2" : ""}`}>
+              {tools.map((f) => (
+                <Link
+                  key={f.href}
+                  href={f.href as any}
+                  onClick={close}
+                  style={{ backgroundColor: "#e02020" }}
+                  className="flex w-full min-w-0 items-center gap-3 rounded-xl px-3 py-2.5 text-left shadow-sm transition-opacity hover:opacity-90"
+                >
+                  {f.icon && (
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white" style={{ color: "#e02020" }} aria-hidden>
+                      {f.icon}
+                    </span>
+                  )}
+                  {/* две плашки рядом — названия переносятся, а не обрезаются многоточием */}
+                  <span className="min-w-0">
+                    <span className={`block text-[13px] font-bold leading-tight text-white ${tools.length > 1 ? "" : "truncate"}`}>{f.title}</span>
+                    {f.subtitle && <span className={`mt-0.5 block text-[11px] leading-tight text-white/80 ${tools.length > 1 ? "" : "truncate"}`}>{f.subtitle}</span>}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          ) : null}
 
           <Link
             href={href as any}

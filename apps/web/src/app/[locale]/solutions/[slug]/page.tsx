@@ -53,6 +53,8 @@ const REFERENCE_ONLY = new Set(["gates"]);
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { withOgUrl } from "@/lib/metadata";
+import { DesignerPreview, type DesignerPreviewText } from "@/components/home/DesignerPreview";
+import { examplePreview } from "@/lib/cameraDesigner/exampleSummary";
 
 const IMG_BASE = "https://api.satsolutions.uz/uploads/services-page";
 // Фото первого экрана — WebP-копия, если она есть рядом с JPEG (scripts/services-hero-webp.mjs):
@@ -729,6 +731,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           {/* Сколько стоит установка: расценки на работы, оборудование из каталога, ориентир
               для типовых объектов — видеонаблюдение, домофоны, замки, СКУД, пожарная (22.09.2026) */}
           <ServiceInstallPrices k={svc.key} locale={locale} />
+          {/* Видеонаблюдение: рядом с ценами — свой проект на плане (решение владельца 11.11) */}
+          {svc.key === "cctv" ? <CctvDesigner locale={locale} /> : null}
         </div>
 
         {/* Принцип работы */}
@@ -929,4 +933,14 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
 // og:url = canonical (lib/metadata.ts withOgUrl, 05.10.2026)
 export async function generateMetadata(props: Parameters<typeof generateMetadataBase>[0]) {
   return withOgUrl(await generateMetadataBase(props));
+}
+
+/** Блок проектировщика на странице «Видеонаблюдение»: тот же пример и расчёт, что превью на главной. */
+async function CctvDesigner({ locale }: { locale: string }) {
+  const [th, dp] = await Promise.all([getTranslations({ locale, namespace: "home" }), examplePreview(locale)]);
+  return (
+    <div className="mt-8">
+      <DesignerPreview t={th.raw("designerPreview") as DesignerPreviewText} coverage={dp.coverage} total={dp.total} layout="row" />
+    </div>
+  );
 }

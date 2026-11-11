@@ -1,5 +1,7 @@
 import { getProductBySlug } from "@/lib/api";
-import { exampleProject } from "./plan/example";
+import { exampleCoverage, exampleProject } from "./plan/example";
+import { makeFmt } from "./format";
+import { planContentFor } from "./planContent";
 import { cableRun, DEFAULT_CABLE_M } from "./plan/project";
 import { estimate, type EstCam, type PriceMap } from "./estimate/estimate";
 import { loadEquipment } from "./estimate/equipmentData";
@@ -32,4 +34,13 @@ export async function exampleTotal(locale: string): Promise<number | null> {
   } catch {
     return null;
   }
+}
+
+/** Подписи для превью (главная, «Видеонаблюдение»): «96 %» и «от …» — нижняя граница сметы вниз до 10 000 сум. */
+export async function examplePreview(locale: string): Promise<{ coverage: string; total: string | null }> {
+  const total = await exampleTotal(locale);
+  return {
+    coverage: `${Math.round(exampleCoverage() * 100)} %`,
+    total: total ? planContentFor(locale).money.replace("{v}", makeFmt(locale).num(Math.floor(total / 10000) * 10000, 0)) : null,
+  };
 }
