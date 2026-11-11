@@ -130,3 +130,30 @@ export function computeSimple(s: SimpleState) {
   if (r.status !== "ok") return null;
   return { input: i, result: r, summary: summarize(i, r.optics, r.depthM, ppmOf(s.task))! };
 }
+
+/* ─────────── подбор: место установки и типовая камера ─────────── */
+
+export type Place = "street" | "office" | "warehouse" | "parking" | "entrance";
+/** Типичные расстояние, ширина зоны и задача по месту (решение владельца 11.11, клиент меняет). */
+export const PLACES: { key: Place; d: number; w: number; task: SimpleTask; outdoor: boolean }[] = [
+  { key: "street", d: 20, w: 15, task: "actions", outdoor: true },
+  { key: "office", d: 8, w: 6, task: "actions", outdoor: false },
+  { key: "warehouse", d: 20, w: 8, task: "actions", outdoor: false },
+  { key: "parking", d: 25, w: 20, task: "overview", outdoor: true },
+  { key: "entrance", d: 5, w: 3, task: "face", outdoor: true },
+];
+
+/**
+ * Какая типовая камера (матрица 1/2.8", объективы и разрешения простого режима) закрывает задачу:
+ * зона шириной w на глубине d помещается в кадр и плотность не ниже need. Берётся наименьшее
+ * разрешение, а при нём — самый узкий объектив, который ещё охватывает зону (больше пикселей на метр).
+ */
+export function pickTypical(d: number, w: number, need: number): { mp: number; f: number; widthM: number; ppm: number } | null {
+  for (const m of SIMPLE_MP) {
+    const f = [...SIMPLE_LENSES].reverse().find((x) => widthAt(x, d) >= w * (1 - 1e-9));
+    if (f === undefined) return null; // даже 2,8 мм не охватывает зону — одной типовой камерой не закрыть
+    const widthM = widthAt(f, d), ppm = m.nx / widthM;
+    if (ppm >= need * (1 - 1e-9)) return { mp: m.mp, f, widthM, ppm };
+  }
+  return null;
+}

@@ -163,3 +163,14 @@ export function matchCameras(cameras: OpticsCamera[], q: MatchQuery): MatchResul
   out.review.sort(byScore);
   return out;
 }
+
+/**
+ * Степень защиты корпуса из карточки товара (характеристики и название): наибольший код IPxx.
+ * null — в карточке не указана. Для улицы, парковки и входа подходящими считаются IP66 и выше
+ * (решение владельца 11.11): без кода в карточке камера идёт отдельной группой «уточним».
+ */
+export function ipRating(text: string): number | null {
+  const all = [...text.matchAll(/\bIP\s?(6[0-9])\b/gi)].map((m) => Number(m[1]));
+  return all.length ? Math.max(...all) : null;
+}
+export const OUTDOOR_IP = 66;

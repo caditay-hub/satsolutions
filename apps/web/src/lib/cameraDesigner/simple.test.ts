@@ -142,3 +142,24 @@ describe("рисунок человека", () => {
     expect([px[centre], px[centre + 1], px[centre + 2]]).not.toEqual(PORTRAIT_BG);
   });
 });
+
+describe("подбор: типовая камера и защита", () => {
+  it("наименьшее разрешение, при нём — самый узкий объектив, охватывающий зону", async () => {
+    const { pickTypical } = await import("./simple");
+    // вход: 5 м, зона 3 м, лицо 125 → 12 мм даёт 2,24 м < 3, 8 мм — 3,36 м ≥ 3; 1920/3,36 = 572 ≥ 125
+    expect(pickTypical(5, 3, 125)).toMatchObject({ mp: 2, f: 8 });
+    // улица: 20 м, 15 м, 62,5 → 6 мм даёт 17,9 м; 1920/17,9 = 107 ≥ 62,5
+    expect(pickTypical(20, 15, 62.5)).toMatchObject({ mp: 2, f: 6 });
+    // широкая зона: даже 2,8 мм не охватывает 50 м на 20 м
+    expect(pickTypical(20, 50, 25)).toBeNull();
+    // плотность не набрать ни одним разрешением: 2,8 мм на 40 м ≈ 76,7 м, 3840/76,7 = 50 < 125
+    expect(pickTypical(40, 70, 125)).toBeNull();
+  });
+
+  it("IP из карточки: наибольший код, без кода — null", async () => {
+    const { ipRating } = await import("./match");
+    expect(ipRating('{"Защита":"IP67, IK10"}')).toBe(67);
+    expect(ipRating("Цилиндрическая IP-камера 4МП")).toBeNull(); // «IP-камера» — не степень защиты
+    expect(ipRating("IP66 / IP67")).toBe(67);
+  });
+});

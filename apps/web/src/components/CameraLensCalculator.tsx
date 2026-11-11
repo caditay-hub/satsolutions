@@ -21,8 +21,8 @@ import { fill, makeFmt } from "@/lib/cameraDesigner/format";
 import { levelColor } from "@/lib/cameraDesigner/palette";
 import { PROFILES, visibleLevels, type Level } from "@/lib/cameraDesigner/standards";
 import {
-  SIMPLE_DEFAULT, SIMPLE_DIST, SIMPLE_LENSES, SIMPLE_MP, SIMPLE_TASKS,
-  simpleInput, simpleOf, summarize, taskOfLevel, type SimpleState, type SimpleTask,
+  PLACES, SIMPLE_DEFAULT, SIMPLE_DIST, SIMPLE_LENSES, SIMPLE_MP, SIMPLE_TASKS,
+  pickTypical, simpleInput, simpleOf, summarize, taskOfLevel, type Place, type SimpleState, type SimpleTask,
 } from "@/lib/cameraDesigner/simple";
 import type { CdContent } from "@/lib/cameraDesigner/content";
 import type { CdCatalogUi } from "@/lib/cameraDesigner/catalogContent";
@@ -277,6 +277,15 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
     setInp((p) => ({ ...p, std: "2014", all: false, lvl: SIMPLE_TASKS.find((x) => x.key === t)!.lvl }));
   };
   const task = inp.std === "2014" ? taskOfLevel(inp.lvl) : null;
+  /** Подбор: где будет камера — подставляет типичные цифры и включает проверку защиты корпуса. */
+  const [place, setPlace] = useState<Place | null>(null);
+  const choosePlace = (k: Place) => {
+    const pl = PLACES.find((x) => x.key === k)!;
+    touched.current = true;
+    setPlace(k);
+    setInp((p) => ({ ...p, d: pl.d, w: pl.w, std: "2014", all: false, lvl: SIMPLE_TASKS.find((x) => x.key === pl.task)!.lvl }));
+  };
+  const outdoor = !!place && PLACES.find((x) => x.key === place)!.outdoor;
 
   const r = useMemo(() => compute(inp), [inp]);
   const bad = new Set<FieldKey>(r.status === "invalid" ? r.fields : []);
@@ -507,6 +516,10 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
   /* ── левая панель: четыре настройки ── */
   const panel = (
     <div className="grid gap-5 rounded-2xl border border-slate-200 bg-white p-4 sm:p-5">
+      {pick ? (
+        <Chips label={su.pick.place} value={place} onChange={choosePlace} cols="grid-cols-3 sm:grid-cols-5 lg:grid-cols-3"
+          opts={PLACES.map((x) => ({ v: x.key, t: su.pick.places[x.key] }))} />
+      ) : null}
       {!pick ? (
         <Chips label={su.lens} value={simple ? simple.f : null} onChange={(f) => setSimple({ f })}
           opts={SIMPLE_LENSES.map((f) => ({ v: f, t: `${num(f, 1)} ${ui.units.mm}` }))} />
@@ -736,9 +749,35 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
           {r.status === "unsupported" ? <p className="text-sm leading-relaxed text-slate-700">{ui.unsupported}</p> : <p role="alert" className="text-sm text-red-700">{ui.invalid}</p>}
         </div>
       ) : null}
-      {r.status === "ok" && r.task ? (
-        <section className={card}>
-          <h2 className={h2}>{ui.taskTitle}</h2>
+      {r.status === "ok" && r.task && needLevel ? (() => {
+        const typ = pickTypical(inp.d, inp.w, needLevel.ppm);
+        const rows = [
+          fill(su.pick.needAngle, { a: fdeg(r.task.hfovReqDeg), d: fm(inp.d), w: fm(inp.w) }),
+          fill(su.pick.needPx, { t: taskName, n: fppm(needLevel.ppm), nx: num(r.task.nxReq, 0) }),
+        ];
+        return (
+          <section className={card} aria-live="polite">
+            <h2 className={h2}>{su.pick.needT}</h2>
+            <ul className="mt-3 grid gap-2">
+              {rows.map((x) => (
+                <li key={x} className="flex gap-2.5 text-sm leading-relaxed text-slate-800">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />{x}
+                </li>
+              ))}
+            </ul>
+            <div className={`mt-3 rounded-xl border px-3.5 py-3 text-sm font-semibold leading-relaxed ${typ ? "border-emerald-200 bg-emerald-50 text-emerald-900" : "border-amber-200 bg-amber-50 text-amber-900"}`}>
+              {typ
+                ? fill(su.pick.typical, { mp: `${typ.mp} ${su.mpUnit}`, f: fmm(typ.f), d: fm(inp.d), w: fm(typ.widthM), p: fppm(typ.ppm) })
+                : su.pick.typicalNone}
+            </div>
+            <button type="button" aria-expanded={more} onClick={() => setMore((v) => !v)}
+              className="mt-2 inline-flex min-h-[40px] items-center gap-1.5 rounded-lg px-1 text-sm font-bold text-brand-700 hover:text-brand-600">
+              {more ? su.less : su.more}
+              <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform ${more ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </button>
+            {more ? (
+          <div className="mt-2 border-t border-slate-100 pt-3">
+          <h3 className={h2}>{ui.taskTitle}</h3>
           <dl className="mt-3 grid gap-x-4 gap-y-3 sm:grid-cols-2 xl:grid-cols-4">
             <div><dt className="text-[11px] font-semibold text-slate-500">{ui.taskHfov}</dt><dd className="text-lg font-black tabular-nums">{fdeg(r.task.hfovReqDeg)}</dd></div>
             <div><dt className="text-[11px] font-semibold text-slate-500">{ui.taskNx}</dt><dd className="text-lg font-black tabular-nums">{num(r.task.nxReq, 0)} {ui.units.px}</dd></div>
@@ -762,12 +801,20 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
               </div>
             ))}
           </div>
-        </section>
-      ) : null}
+          </div>
+            ) : null}
+          </section>
+        );
+      })() : null}
       {r.status === "ok" && r.task ? (
         <CameraCatalogMatches
-          depthM={r.depthM} widthM={inp.w} ppm={r.task.ppm} locale={locale}
-          t={cat} units={{ m: ui.units.m, mm: ui.units.mm, ppm: ui.units.ppm }} num={num}
+          depthM={r.depthM} widthM={inp.w} ppm={r.task.ppm} locale={locale} outdoor={outdoor}
+          t={cat} pk={su.pick} mpUnit={su.mpUnit} units={{ m: ui.units.m, mm: ui.units.mm, ppm: ui.units.ppm }} num={num}
+          leadContext={() => [
+            place ? `Место: ${PLACES.find((x) => x.key === place)!.key} (${su.pick.places[place]})` : "",
+            `Задача: ${taskName} — ${fppm(r.task!.ppm)} на ${fm(inp.d)}, зона ${fm(inp.w)}; нужен угол ≥ ${fdeg(r.task!.hfovReqDeg)}`,
+            link(),
+          ].filter(Boolean).join("\n")}
           picked={picked} onToggle={togglePick}
         />
       ) : null}

@@ -4,7 +4,7 @@
  * {m} предельная дистанция, {t} задача, {f} объектив, {mp} разрешение, {a} угол, {nx} пиксели.
  * Узбекский — без калек (feedback-uz-no-calques).
  */
-import type { SimpleTask } from "./simple";
+import type { Place, SimpleTask } from "./simple";
 
 export type SimpleUi = {
   tabs: { camera: string; pick: string; plan: string };
@@ -21,6 +21,15 @@ export type SimpleUi = {
   adv_: { narrower: string; moreMp: string; none: string; wider: string; exact: string; customOk: string; customNo: string };
   more: string; less: string;
   pickWidthHint: string;
+  /** Подбор (часть 2): место, что нужно, карточки моделей. Подстановки — как выше, {v} значение. */
+  pick: {
+    place: string; places: Record<Place, string>; outdoorNote: string;
+    needT: string; needAngle: string; needPx: string; typical: string; typicalNone: string;
+    why: string; whyAngle: string; whyDensity: string; ip: string; ipNone: string;
+    noIpTitle: string; noIpNote: string; reviewSummary: string;
+    offer: string; offerName: string; offerPhone: string; offerSend: string; offerSending: string;
+    offerSent: string; offerError: string; addLead: string; addedLead: string;
+  };
 };
 
 const ru: SimpleUi = {
@@ -59,6 +68,33 @@ const ru: SimpleUi = {
   },
   more: "Подробнее", less: "Скрыть",
   pickWidthHint: "Сколько метров по ширине должно попасть в кадр на этом расстоянии",
+  pick: {
+    place: "Где будет камера",
+    places: { street: "Улица", office: "Офис", warehouse: "Склад", parking: "Парковка", entrance: "Вход", },
+    outdoorNote: "Для улицы подходят камеры с защитой корпуса IP66 и выше.",
+    needT: "Что нужно",
+    needAngle: "Угол обзора не уже {a}: на {d} в кадр должно поместиться {w}.",
+    needPx: "Для задачи «{t}» нужно {n} — это от {nx} пикс. по ширине кадра.",
+    typical: "Подойдёт типовая камера {mp} с объективом {f}: на {d} охватит {w}, детализация {p}.",
+    typicalNone: "Одной типовой камерой с фиксированным объективом эту задачу не закрыть — смотрите вариофокальные модели ниже или разделите зону на две камеры.",
+    why: "Почему подходит",
+    whyAngle: "Угол {a}: в кадре {s} при нужных {w}",
+    whyDensity: "{p} при нужных {n} — запас {r}",
+    ip: "Защита {v}",
+    ipNone: "Защита корпуса в карточке не указана",
+    noIpTitle: "Подходят по оптике, защита корпуса не указана — уточним перед заказом",
+    noIpNote: "В карточке нет степени защиты IP. Многие из этих моделей уличные — инженер проверит по документации.",
+    reviewSummary: "Возможно подойдут — данные об угле уточним ({n})",
+    offer: "Получить предложение",
+    offerName: "Имя",
+    offerPhone: "Телефон",
+    offerSend: "Отправить",
+    offerSending: "Отправляем…",
+    offerSent: "Заявка принята — инженер свяжется и пришлёт предложение по этой камере.",
+    offerError: "Не удалось отправить. Позвоните нам или попробуйте ещё раз.",
+    addLead: "+ в общую заявку",
+    addedLead: "✓ в общей заявке",
+  },
 };
 
 const uz: SimpleUi = {
@@ -97,6 +133,33 @@ const uz: SimpleUi = {
   },
   more: "Batafsil", less: "Yashirish",
   pickWidthHint: "Shu masofada kadrga kenglik boʻyicha necha metr tushishi kerak",
+  pick: {
+    place: "Kamera qayerda boʻladi",
+    places: { street: "Koʻcha", office: "Ofis", warehouse: "Ombor", parking: "Avtoturargoh", entrance: "Kirish", },
+    outdoorNote: "Koʻcha uchun korpus himoyasi IP66 va undan yuqori kameralar mos keladi.",
+    needT: "Nima kerak",
+    needAngle: "Koʻrish burchagi {a} dan tor boʻlmasin: {d} masofada kadrga {w} sigʻishi kerak.",
+    needPx: "«{t}» vazifasi uchun {n} kerak — bu kadr kengligi boʻyicha {nx} pikseldan.",
+    typical: "{f} obyektivli oddiy {mp} kamera mos keladi: {d} masofada {w} ni qamraydi, tafsilot {p}.",
+    typicalNone: "Bu vazifani qatʼiy obyektivli bitta oddiy kamera bilan hal qilib boʻlmaydi — quyidagi varifokal modellarni koʻring yoki zonani ikki kameraga boʻling.",
+    why: "Nega mos keladi",
+    whyAngle: "Burchak {a}: kerakli {w} oʻrniga kadrda {s}",
+    whyDensity: "Kerakli {n} oʻrniga {p} — zaxira {r}",
+    ip: "Himoya {v}",
+    ipNone: "Korpus himoyasi kartochkada koʻrsatilmagan",
+    noIpTitle: "Optika boʻyicha mos, korpus himoyasi koʻrsatilmagan — buyurtmadan oldin aniqlaymiz",
+    noIpNote: "Kartochkada IP himoya darajasi yoʻq. Bu modellarning koʻpi koʻcha uchun — muhandis hujjat boʻyicha tekshiradi.",
+    reviewSummary: "Mos kelishi mumkin — burchak maʼlumotini aniqlaymiz ({n})",
+    offer: "Taklif olish",
+    offerName: "Ism",
+    offerPhone: "Telefon",
+    offerSend: "Yuborish",
+    offerSending: "Yuborilmoqda…",
+    offerSent: "Ariza qabul qilindi — muhandis bogʻlanib, shu kamera boʻyicha taklif yuboradi.",
+    offerError: "Yuborib boʻlmadi. Bizga qoʻngʻiroq qiling yoki yana urinib koʻring.",
+    addLead: "+ umumiy arizaga",
+    addedLead: "✓ umumiy arizada",
+  },
 };
 
 const en: SimpleUi = {
@@ -135,6 +198,33 @@ const en: SimpleUi = {
   },
   more: "Details", less: "Hide",
   pickWidthHint: "How many metres across must fit in the frame at this distance",
+  pick: {
+    place: "Where the camera goes",
+    places: { street: "Street", office: "Office", warehouse: "Warehouse", parking: "Car park", entrance: "Entrance", },
+    outdoorNote: "Outdoors you need cameras with IP66 enclosure protection or higher.",
+    needT: "What you need",
+    needAngle: "A field of view of at least {a}: {w} must fit in the frame at {d}.",
+    needPx: "“{t}” needs {n} — that is at least {nx} px across the frame.",
+    typical: "A typical {mp} camera with a {f} lens will do: at {d} it covers {w} with {p}.",
+    typicalNone: "A single typical fixed-lens camera cannot cover this task — see the varifocal models below or split the area between two cameras.",
+    why: "Why it fits",
+    whyAngle: "Angle {a}: {s} in the frame against {w} needed",
+    whyDensity: "{p} against {n} needed — {r} headroom",
+    ip: "Protection {v}",
+    ipNone: "Enclosure protection is not stated on the product page",
+    noIpTitle: "Optically suitable, enclosure protection not stated — we will confirm before ordering",
+    noIpNote: "The product page has no IP rating. Many of these models are outdoor ones — an engineer will check the documentation.",
+    reviewSummary: "May fit — angle data to be confirmed ({n})",
+    offer: "Get a quote",
+    offerName: "Name",
+    offerPhone: "Phone",
+    offerSend: "Send",
+    offerSending: "Sending…",
+    offerSent: "Request received — an engineer will contact you with a quote for this camera.",
+    offerError: "Could not send. Please call us or try again.",
+    addLead: "+ add to the common request",
+    addedLead: "✓ in the common request",
+  },
 };
 
 const tr: SimpleUi = {
@@ -173,6 +263,33 @@ const tr: SimpleUi = {
   },
   more: "Ayrıntılar", less: "Gizle",
   pickWidthHint: "Bu mesafede kadraja kaç metre genişlik girmeli",
+  pick: {
+    place: "Kamera nereye takılacak",
+    places: { street: "Sokak", office: "Ofis", warehouse: "Depo", parking: "Otopark", entrance: "Giriş", },
+    outdoorNote: "Dış mekân için IP66 ve üzeri gövde korumasına sahip kameralar gerekir.",
+    needT: "Ne gerekiyor",
+    needAngle: "Görüş açısı en az {a} olmalı: {d} mesafede kadraja {w} sığmalı.",
+    needPx: "«{t}» için {n} gerekir — bu, kadraj genişliğinde en az {nx} pikseldir.",
+    typical: "{f} lensli tipik bir {mp} kamera yeterli: {d} mesafede {w} kapsar, ayrıntı {p}.",
+    typicalNone: "Bu iş sabit lensli tek bir tipik kamerayla çözülemez — aşağıdaki varifokal modellere bakın ya da alanı iki kameraya bölün.",
+    why: "Neden uygun",
+    whyAngle: "Açı {a}: gereken {w} yerine kadrajda {s}",
+    whyDensity: "Gereken {n} yerine {p} — pay {r}",
+    ip: "Koruma {v}",
+    ipNone: "Ürün sayfasında gövde koruması belirtilmemiş",
+    noIpTitle: "Optik olarak uygun, gövde koruması belirtilmemiş — siparişten önce teyit ederiz",
+    noIpNote: "Ürün sayfasında IP koruma sınıfı yok. Bu modellerin çoğu dış mekân içindir — mühendis belgelerden kontrol eder.",
+    reviewSummary: "Uygun olabilir — açı verileri teyit edilecek ({n})",
+    offer: "Teklif al",
+    offerName: "Ad",
+    offerPhone: "Telefon",
+    offerSend: "Gönder",
+    offerSending: "Gönderiliyor…",
+    offerSent: "Talep alındı — mühendis sizinle iletişime geçip bu kamera için teklif gönderecek.",
+    offerError: "Gönderilemedi. Bizi arayın ya da tekrar deneyin.",
+    addLead: "+ ortak talebe ekle",
+    addedLead: "✓ ortak talepte",
+  },
 };
 
 const zh: SimpleUi = {
@@ -211,6 +328,33 @@ const zh: SimpleUi = {
   },
   more: "详细", less: "收起",
   pickWidthHint: "在该距离处画面需要覆盖多少米宽",
+  pick: {
+    place: "摄像机安装位置",
+    places: { street: "室外街道", office: "办公室", warehouse: "仓库", parking: "停车场", entrance: "出入口", },
+    outdoorNote: "室外需要外壳防护等级 IP66 及以上的摄像机。",
+    needT: "需求",
+    needAngle: "视场角不小于 {a}：在 {d} 处画面需容纳 {w}。",
+    needPx: "“{t}”需要 {n}——即画面水平至少 {nx} 像素。",
+    typical: "典型 {mp} 摄像机配 {f} 镜头即可：在 {d} 处覆盖 {w}，细节 {p}。",
+    typicalNone: "单台定焦典型摄像机无法完成此任务——请看下方变焦型号，或用两台摄像机分区覆盖。",
+    why: "适合原因",
+    whyAngle: "视场角 {a}：画面 {s}，需要 {w}",
+    whyDensity: "{p}，需要 {n}——余量 {r}",
+    ip: "防护 {v}",
+    ipNone: "产品页未注明外壳防护等级",
+    noIpTitle: "光学参数合适，但未注明外壳防护——下单前确认",
+    noIpNote: "产品页没有 IP 防护等级。这些型号很多是室外型——工程师将核对资料。",
+    reviewSummary: "可能合适——视场角数据待确认（{n}）",
+    offer: "获取报价",
+    offerName: "姓名",
+    offerPhone: "电话",
+    offerSend: "发送",
+    offerSending: "发送中…",
+    offerSent: "已收到申请——工程师将联系您并发送该摄像机的报价。",
+    offerError: "发送失败。请致电我们或重试。",
+    addLead: "+ 加入总申请",
+    addedLead: "✓ 已在总申请中",
+  },
 };
 
 const ALL: Record<string, SimpleUi> = { ru, uz, en, tr, zh };
