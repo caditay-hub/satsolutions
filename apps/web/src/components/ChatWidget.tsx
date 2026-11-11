@@ -242,6 +242,8 @@ export function ChatWidget() {
     if (typeof window === "undefined") return;
     if (chatDismissed()) return;
     if (window.matchMedia("(max-width: 767px)").matches) return;
+    // проектировщик видеонаблюдения: окно чата закрывало план и панель камеры (решение владельца 11.11)
+    if (/\/tools\/camera-lens-calculator(\/|$)/.test(window.location.pathname)) return;
     const timer = window.setTimeout(() => setOpen(true), 12000);
     return () => window.clearTimeout(timer);
   }, []);

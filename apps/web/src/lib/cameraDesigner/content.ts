@@ -52,6 +52,14 @@ export type CdContent = {
   metaTitle: string; metaDesc: string;
   crumbs: { home: string; tool: string };
   h1: string; lead: string;
+  /** Первый экран страницы (11.11): три входа и пример. Пары — [заголовок, пояснение]. */
+  hero: { kicker: string; plan: [string, string]; est: [string, string]; cam: [string, string]; example: string; privacy: string };
+  /** Силуэты уровней детализации. */
+  levelsSec: { title: string; intro: string };
+  /** «Как это работает» — три шага для клиента. */
+  steps: { title: string; items: [string, string][] };
+  /** Заголовок свёрнутого справочного блока (формулы, стандарт, допущения). */
+  refTitle: string;
   ui: CdUi;
   levels: Record<LevelCode, { name: string; task: string }>;
   page: CdPage;
@@ -71,11 +79,19 @@ const withExpr = (labels: string[]) => labels.map((label, i) => ({ label, expr: 
 
 const ru: CdContent = {
   numLocale: "ru-RU",
-  metaTitle: "Калькулятор объектива камеры: угол обзора и DORI",
-  metaDesc: "Расчёт угла обзора, ширины сцены и плотности пикселей камеры видеонаблюдения по объективу, разрешению и дистанции. Дальности DORI и уровни IEC 62676-4:2025.",
-  crumbs: { home: "Главная", tool: "Калькулятор объектива" },
-  h1: "Калькулятор объектива видеокамеры: угол обзора, ширина сцены и дальность DORI",
-  lead: "Посчитайте, какую зону видит камера с выбранным объективом, сколько пикселей приходится на метр на нужной дистанции и до какого расстояния хватает детализации для обнаружения, распознавания и идентификации. Расчёт идёт прямо в браузере и сразу отражается на схеме, а ссылкой на него можно поделиться с инженером.",
+  metaTitle: "Проект видеонаблюдения онлайн и калькулятор объектива",
+  metaDesc: "Расставьте камеры на плане объекта: зоны обзора, покрытие и смета с оборудованием и монтажом. Калькулятор объектива: угол обзора и дальности DORI.",
+  crumbs: { home: "Главная", tool: "Проект видеонаблюдения" },
+  h1: "Проект видеонаблюдения онлайн и калькулятор объектива",
+  lead: "Загрузите план объекта или начните с сетки и расставьте камеры из каталога. Сразу видно, где различимо лицо, а где только силуэт, сколько территории закрыто и сколько стоит система с монтажом. Бесплатно, прямо в браузере.",
+  hero: { kicker: "Бесплатно, без регистрации", plan: ["План объекта", "Камеры на плане, зоны обзора и процент покрытия"], est: ["Смета и КП", "Регистратор, диски, кабель и монтаж — смета и коммерческое предложение в PDF"], cam: ["Одна камера", "Угол обзора и что видно на 10, 20 и 30 метрах"], example: "Открыть пример", privacy: "План не покидает ваш компьютер: всё считается в браузере." },
+  levelsSec: { title: "Что видно на каждом уровне детализации", intro: "Чем больше пикселей камеры приходится на метр там, где стоит человек, тем больше видно. Так выглядит один и тот же человек на четырёх уровнях стандарта IEC 62676-4." },
+  steps: { title: "Как это работает", items: [
+    ["Загрузите план", "Картинка, PDF или пустая сетка нужного размера. Масштаб задаётся по одной стене известной длины."],
+    ["Расставьте камеры", "Модели из каталога с углами по документации производителя. Зоны, мёртвые зоны за стенами и покрытие считаются сразу."],
+    ["Получите смету", "Регистратор, диски, коммутаторы, кабель и монтаж по нашему прайсу. Скачайте КП в PDF или отправьте проект инженеру."],
+  ] },
+  refTitle: "Для специалистов: как считается и что говорит стандарт",
   ui: {
     modeDirect: "По параметрам камеры", modeTask: "Под задачу",
     std: "Редакция стандарта", std2014: "IEC 62676-4:2014 (DORI)", std2025: "IEC 62676-4:2025", allLevels: "Все 6 уровней редакции 2014",
@@ -190,11 +206,19 @@ const ru: CdContent = {
 
 const uz: CdContent = {
   numLocale: "uz-Latn-UZ",
-  metaTitle: "Kamera obyektivi kalkulyatori: koʻrish burchagi va DORI",
-  metaDesc: "Videokuzatuv kamerasining koʻrish burchagi, sahna kengligi va piksel zichligini obyektiv, ruxsat va masofa boʻyicha hisoblang. DORI masofalari va IEC 62676-4:2025 darajalari.",
-  crumbs: { home: "Bosh sahifa", tool: "Obyektiv kalkulyatori" },
-  h1: "Videokamera obyektivi kalkulyatori: koʻrish burchagi, sahna kengligi va DORI masofasi",
-  lead: "Tanlangan obyektivli kamera qaysi hududni koʻrishini, kerakli masofada har bir metrga nechta piksel toʻgʻri kelishini va aniqlash, tanib olish hamda shaxsni aniqlash uchun detallar qaysi masofagacha yetishini hisoblang. Hisob brauzerning oʻzida bajariladi va darhol chizmada koʻrinadi, unga havolani muhandisga yuborish mumkin.",
+  metaTitle: "Videokuzatuv loyihasi onlayn va obyektiv kalkulyatori",
+  metaDesc: "Kameralarni obyekt rejasiga joylashtiring: koʻrish zonalari, qamrov va uskuna hamda montaj bilan smeta. Obyektiv kalkulyatori: koʻrish burchagi va DORI masofalari.",
+  crumbs: { home: "Bosh sahifa", tool: "Videokuzatuv loyihasi" },
+  h1: "Videokuzatuv loyihasi onlayn va obyektiv kalkulyatori",
+  lead: "Obyekt rejasini yuklang yoki toʻrdan boshlang va katalogdagi kameralarni joylashtiring. Qayerda yuz aniq koʻrinishi, qayerda faqat siluet, hududning qancha qismi qamrab olingani va tizim montaj bilan qancha turishi darhol koʻrinadi. Bepul, toʻgʻridan-toʻgʻri brauzerda.",
+  hero: { kicker: "Bepul, roʻyxatdan oʻtmasdan", plan: ["Obyekt rejasi", "Rejadagi kameralar, koʻrish zonalari va qamrov foizi"], est: ["Smeta va tijorat taklifi", "Registrator, disklar, kabel va montaj — smeta va PDF tijorat taklifi"], cam: ["Bitta kamera", "Koʻrish burchagi va 10, 20, 30 metrda nima koʻrinishi"], example: "Namunani ochish", privacy: "Reja kompyuteringizdan chiqmaydi: hammasi brauzerda hisoblanadi." },
+  levelsSec: { title: "Har bir tafsilot darajasida nima koʻrinadi", intro: "Odam turgan joyda bir metrga kameraning qancha pikseli toʻgʻri kelsa, shuncha koʻp narsa koʻrinadi. IEC 62676-4 standartining toʻrt darajasida bitta odam shunday koʻrinadi." },
+  steps: { title: "Bu qanday ishlaydi", items: [
+    ["Rejani yuklang", "Rasm, PDF yoki kerakli oʻlchamdagi boʻsh toʻr. Masshtab uzunligi maʼlum bitta devor boʻyicha belgilanadi."],
+    ["Kameralarni joylashtiring", "Ishlab chiqaruvchi hujjatlaridagi burchaklar bilan katalog modellari. Zonalar, devorlar ortidagi koʻrinmas joylar va qamrov darhol hisoblanadi."],
+    ["Smetani oling", "Registrator, disklar, kommutatorlar, kabel va montaj bizning narxnoma boʻyicha. Tijorat taklifini PDF qilib yuklab oling yoki loyihani muhandisga yuboring."],
+  ] },
+  refTitle: "Mutaxassislar uchun: qanday hisoblanadi va standart nima deydi",
   ui: {
     modeDirect: "Kamera parametrlari boʻyicha", modeTask: "Vazifa boʻyicha",
     std: "Standart tahriri", std2014: "IEC 62676-4:2014 (DORI)", std2025: "IEC 62676-4:2025", allLevels: "2014 tahririning barcha 6 darajasi",
@@ -309,11 +333,19 @@ const uz: CdContent = {
 
 const en: CdContent = {
   numLocale: "en-US",
-  metaTitle: "CCTV Lens Calculator: Field of View and DORI",
-  metaDesc: "Calculate the field of view, scene width and pixel density of a security camera from its lens, resolution and distance. DORI distances and IEC 62676-4:2025 levels.",
-  crumbs: { home: "Home", tool: "Lens calculator" },
-  h1: "CCTV lens calculator: field of view, scene width and DORI distances",
-  lead: "Work out what area a camera covers with a given lens, how many pixels fall on each metre at the distance you need, and how far the detail is enough to detect, recognize and identify a person. Everything is calculated in your browser and drawn to scale right away, and you can share a link to the result with an engineer.",
+  metaTitle: "Online CCTV Design and Lens Calculator",
+  metaDesc: "Place cameras on your floor plan: coverage zones, coverage share and an estimate with equipment and installation. Lens calculator: field of view and DORI distances.",
+  crumbs: { home: "Home", tool: "CCTV design" },
+  h1: "Online CCTV design and lens calculator",
+  lead: "Upload a floor plan or start from a grid and place cameras from our catalogue. You see at once where faces are clear and where you only get a silhouette, how much of the area is covered and what the system costs with installation. Free, right in your browser.",
+  hero: { kicker: "Free, no sign-up", plan: ["Site plan", "Cameras on the plan, coverage zones and coverage share"], est: ["Estimate and quote", "Recorder, disks, cable and installation — an estimate and a PDF quotation"], cam: ["Single camera", "Field of view and what you see at 10, 20 and 30 m"], example: "Open the example", privacy: "Your plan never leaves your computer: everything is calculated in the browser." },
+  levelsSec: { title: "What you see at each level of detail", intro: "The more camera pixels fall on each metre where a person stands, the more you see. This is the same person at the four levels of IEC 62676-4." },
+  steps: { title: "How it works", items: [
+    ["Upload a plan", "An image, a PDF or an empty grid of the right size. Set the scale by one wall of known length."],
+    ["Place cameras", "Catalogue models with angles from the manufacturer's documents. Zones, blind spots behind walls and coverage are calculated instantly."],
+    ["Get an estimate", "Recorder, disks, switches, cable and installation at our rates. Download a PDF quotation or send the project to an engineer."],
+  ] },
+  refTitle: "For specialists: how it is calculated and what the standard says",
   ui: {
     modeDirect: "From camera specs", modeTask: "From the task",
     std: "Standard edition", std2014: "IEC 62676-4:2014 (DORI)", std2025: "IEC 62676-4:2025", allLevels: "All 6 levels of the 2014 edition",
@@ -428,11 +460,19 @@ const en: CdContent = {
 
 const tr: CdContent = {
   numLocale: "tr-TR",
-  metaTitle: "Kamera Lens Hesaplayıcı: Görüş Açısı ve DORI",
-  metaDesc: "Güvenlik kamerasının görüş açısını, sahne genişliğini ve piksel yoğunluğunu lens, çözünürlük ve mesafeye göre hesaplayın. DORI mesafeleri ve IEC 62676-4:2025 seviyeleri.",
-  crumbs: { home: "Ana sayfa", tool: "Lens hesaplayıcı" },
-  h1: "Kamera lens hesaplayıcı: görüş açısı, sahne genişliği ve DORI mesafeleri",
-  lead: "Seçilen lensle kameranın hangi alanı gördüğünü, istenen mesafede metre başına kaç piksel düştüğünü ve tespit, tanıma ve kimlik belirleme için ayrıntının hangi mesafeye kadar yettiğini hesaplayın. Hesap doğrudan tarayıcıda yapılır ve hemen ölçekli çizimde görünür; sonucun bağlantısını bir mühendisle paylaşabilirsiniz.",
+  metaTitle: "Çevrimiçi CCTV Projesi ve Lens Hesaplayıcı",
+  metaDesc: "Kameraları tesis planına yerleştirin: görüş alanları, kapsama oranı ve ekipman ile montaj dahil maliyet hesabı. Lens hesaplayıcı: görüş açısı ve DORI mesafeleri.",
+  crumbs: { home: "Ana sayfa", tool: "CCTV projesi" },
+  h1: "Çevrimiçi CCTV projesi ve lens hesaplayıcı",
+  lead: "Tesis planını yükleyin ya da boş bir ızgarayla başlayın ve katalogdaki kameraları yerleştirin. Yüzün nerede net, nerede yalnızca siluet olarak göründüğünü, alanın ne kadarının kapsandığını ve sistemin montajla ne kadara mal olacağını hemen görürsünüz. Ücretsiz, doğrudan tarayıcıda.",
+  hero: { kicker: "Ücretsiz, kayıt gerekmez", plan: ["Tesis planı", "Plan üzerinde kameralar, görüş alanları ve kapsama oranı"], est: ["Maliyet hesabı ve teklif", "Kayıt cihazı, diskler, kablo ve montaj — maliyet hesabı ve PDF teklif"], cam: ["Tek kamera", "Görüş açısı ve 10, 20, 30 metrede ne göründüğü"], example: "Örneği aç", privacy: "Planınız bilgisayarınızdan çıkmaz: her şey tarayıcıda hesaplanır." },
+  levelsSec: { title: "Her ayrıntı seviyesinde ne görünür", intro: "Kişinin durduğu yerde metre başına düşen kamera pikseli arttıkça daha fazlası görünür. IEC 62676-4 standardının dört seviyesinde aynı kişi böyle görünür." },
+  steps: { title: "Nasıl çalışır", items: [
+    ["Planı yükleyin", "Görsel, PDF ya da istediğiniz boyutta boş bir ızgara. Ölçek, uzunluğu bilinen bir duvarla belirlenir."],
+    ["Kameraları yerleştirin", "Üretici belgelerindeki açılarla katalog modelleri. Alanlar, duvar arkasındaki kör noktalar ve kapsama anında hesaplanır."],
+    ["Maliyet hesabını alın", "Kayıt cihazı, diskler, anahtarlar, kablo ve montaj fiyat listemize göre. Teklifi PDF olarak indirin ya da projeyi mühendise gönderin."],
+  ] },
+  refTitle: "Uzmanlar için: nasıl hesaplanır ve standart ne der",
   ui: {
     modeDirect: "Kamera özelliklerine göre", modeTask: "Göreve göre",
     std: "Standart sürümü", std2014: "IEC 62676-4:2014 (DORI)", std2025: "IEC 62676-4:2025", allLevels: "2014 sürümünün 6 seviyesinin tümü",
@@ -547,11 +587,19 @@ const tr: CdContent = {
 
 const zh: CdContent = {
   numLocale: "zh-CN",
-  metaTitle: "监控镜头计算器：视场角与 DORI 距离",
-  metaDesc: "根据镜头、分辨率和距离计算监控摄像机的视场角、画面宽度和像素密度。提供 DORI 距离和 IEC 62676-4:2025 等级。",
-  crumbs: { home: "首页", tool: "镜头计算器" },
-  h1: "监控摄像机镜头计算器：视场角、画面宽度与 DORI 距离",
-  lead: "计算所选镜头下摄像机覆盖的范围、在所需距离上每米分配的像素数，以及探测、识别和辨认人员所需的细节能保持到多远。计算直接在浏览器中完成并立即按比例绘图，结果链接可以发给工程师。",
+  metaTitle: "在线视频监控设计与镜头计算器",
+  metaDesc: "在平面图上布置摄像机：覆盖区域、覆盖率以及含设备和安装的报价单。镜头计算器：视场角与 DORI 距离。",
+  crumbs: { home: "首页", tool: "视频监控设计" },
+  h1: "在线视频监控设计与镜头计算器",
+  lead: "上传现场平面图或从网格开始，布置目录中的摄像机。立即看到哪里能看清人脸、哪里只能看到轮廓，覆盖了多少区域，以及含安装的系统价格。免费，直接在浏览器中使用。",
+  hero: { kicker: "免费，无需注册", plan: ["现场平面图", "平面图布点、覆盖区域与覆盖率"], est: ["报价单与商业报价", "录像机、硬盘、线缆和安装——报价单及 PDF 商业报价"], cam: ["单个摄像机", "视场角，以及 10、20、30 米处能看清什么"], example: "打开示例", privacy: "平面图不会离开您的电脑：所有计算都在浏览器中完成。" },
+  levelsSec: { title: "各细节等级下能看到什么", intro: "人所在位置每米分到的摄像机像素越多，能看到的就越多。这是同一个人在 IEC 62676-4 四个等级下的样子。" },
+  steps: { title: "工作原理", items: [
+    ["上传平面图", "图片、PDF 或指定尺寸的空白网格。通过一面已知长度的墙设定比例。"],
+    ["布置摄像机", "目录型号，视场角取自厂商文档。覆盖区域、墙后盲区和覆盖率即时计算。"],
+    ["获取报价单", "录像机、硬盘、交换机、线缆和安装按我们的价目计算。下载 PDF 商业报价或将项目发送给工程师。"],
+  ] },
+  refTitle: "专业人士参考：计算方法与标准说明",
   ui: {
     modeDirect: "按摄像机参数", modeTask: "按任务",
     std: "标准版本", std2014: "IEC 62676-4:2014（DORI）", std2025: "IEC 62676-4:2025", allLevels: "2014 版全部 6 个等级",

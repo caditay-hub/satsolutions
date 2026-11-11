@@ -36,7 +36,11 @@ import { PlanCanvas, type Tool } from "./PlanCanvas";
 import { PlanVectors, type Draft, type Selection } from "./PlanVectors";
 import { download, idbClear, idbLoad, idbSave, loadImage, loadRaster, openPdf, renderPdfPage, sniff, type PlanImage } from "./planIO";
 
-type Props = { ui: CdPlanUi; est: CdEstUi; levels: Record<LevelCode, { name: string }>; ruLevels: Record<LevelCode, string>; locale: string };
+type Props = {
+  ui: CdPlanUi; est: CdEstUi; levels: Record<LevelCode, { name: string }>; ruLevels: Record<LevelCode, string>; locale: string;
+  /** Вход с первого экрана: «Смета и КП» (#estimate) — смета без плана, «План объекта» (#plan) — план; n растёт с каждым переходом. */
+  view?: { v: "plan" | "estimate"; n: number };
+};
 
 /** Смета без плана (этап D): камеры из каталога списком, средняя длина кабеля и высота. */
 type ManualRow = { cam: PlanCatalogCamera; qty: number; outdoor: boolean };
@@ -88,7 +92,7 @@ function Num(p: { id: string; label: string; value: number; min: number; max: nu
 
 /* ─────────── основной компонент ─────────── */
 
-export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
+export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props) {
   const { num, dec } = makeFmt(locale);
   const [project, setProject] = useState<PlanProject>(emptyProject);
   const [bgUrl, setBgUrl] = useState<string | null>(null);
@@ -108,6 +112,7 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
   const [dragging, setDragging] = useState(false);
   /** Смета без плана (этап D) — отдельный экран вместо стартового. */
   const [manualOn, setManualOn] = useState(false);
+  useEffect(() => { if (view && view.n > 0) { setManualOn(view.v === "estimate"); setError(null); } }, [view]);
   const fileInput = useRef<HTMLInputElement>(null);
   const projInput = useRef<HTMLInputElement>(null);
 

@@ -59,11 +59,8 @@ const CSS = `
 @media (prefers-reduced-motion:reduce){.dp-card svg *{animation:none!important}}
 `;
 
-export function DesignerPreview({ t, coverage, total, layout = "card" }: {
-  t: DesignerPreviewText; coverage: string; total: string | null;
-  /** card — карточка на главной; row — рисунок слева, текст справа (страница «Видеонаблюдение») */
-  layout?: "card" | "row";
-}) {
+/** Только рисунок с анимацией — для первого экрана страницы проектировщика и для карточек ниже. */
+export function DesignerPreviewArt({ t, coverage, total }: { t: DesignerPreviewText; coverage: string; total: string | null }) {
   const cams = exampleCameras();
   const room = (r: ExampleRoom) => ({ storage: t.storage, office: t.office, hall: t.hall })[r.key];
   // подписи помещений — в свободных от зон углах
@@ -73,10 +70,8 @@ export function DesignerPreview({ t, coverage, total, layout = "card" }: {
   // ширина карточки сметы — по самой длинной строке
   const estW = Math.max(138, 20 + Math.max(textW(t.est1, 9.5), textW(t.est2, 9.5), textW(totalText, 11.5)));
   return (
-    <Link href="/tools/camera-lens-calculator?example=office#plan"
-      className={`dp-card group flex h-full flex-col gap-4 rounded-2xl border border-brand-200 bg-white p-5 shadow-sm transition-colors hover:border-brand-500 sm:p-6 ${layout === "row" ? "lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-center lg:gap-8" : ""}`}>
+    <>
       <style>{CSS}</style>
-      <div className="flex flex-col gap-2">
       <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full rounded-xl bg-[#f4fafb]" role="img" aria-label={t.aria}>
         <defs>
           <pattern id="dpGrid" width={S} height={S} patternUnits="userSpaceOnUse"><path d={`M${S} 0H0V${S}`} fill="none" stroke="#e3eef1" strokeWidth="1" /></pattern>
@@ -126,6 +121,20 @@ export function DesignerPreview({ t, coverage, total, layout = "card" }: {
           </g>
         ) : null}
       </svg>
+    </>
+  );
+}
+
+export function DesignerPreview({ t, coverage, total, layout = "card" }: {
+  t: DesignerPreviewText; coverage: string; total: string | null;
+  /** card — карточка на главной; row — рисунок слева, текст справа (страница «Видеонаблюдение») */
+  layout?: "card" | "row";
+}) {
+  return (
+    <Link href="/tools/camera-lens-calculator?example=office#plan"
+      className={`dp-card group flex h-full flex-col gap-4 rounded-2xl border border-brand-200 bg-white p-5 shadow-sm transition-colors hover:border-brand-500 sm:p-6 ${layout === "row" ? "lg:grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-center lg:gap-8" : ""}`}>
+      <div className="flex flex-col gap-2">
+      <DesignerPreviewArt t={t} coverage={coverage} total={total} />
       {/* на телефоне подпись сметы внутри рисунка слишком мелкая — сумма обычным текстом */}
       {total ? <p className="text-xs font-semibold text-slate-600 sm:hidden">{t.totalLine.replace("{v}", total)}</p> : null}
       </div>

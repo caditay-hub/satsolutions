@@ -1,8 +1,10 @@
-// Калькулятор объектива видеокамеры (SAT Camera Designer, этап A, 10.11.2026).
+// Проектировщик видеонаблюдения и калькулятор объектива (SAT Camera Designer, этапы A–D, 10.11.2026).
 // Расчёт — lib/cameraDesigner (тот же код на сервере и в браузере), тексты — lib/cameraDesigner/content.ts (5 языков).
-// Страница статическая: параметры из ссылки читает только браузер, canonical — без query.
+// Параметры из ссылки читает только браузер, canonical — без query.
+// 11.11 (решение владельца): страница под клиента — первый экран с тремя входами и примером,
+// вкладка «План объекта» первой, силуэты уровней, три шага; формулы и стандарт свёрнуты внизу.
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CameraLensCalculator } from "@/components/CameraLensCalculator";
 import { CameraDesignerTabs } from "@/components/CameraDesignerTabs";
@@ -17,6 +19,10 @@ import { PROFILES, type LevelCode } from "@/lib/cameraDesigner/standards";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { withOgUrl } from "@/lib/metadata";
 import { ogLocale } from "@/lib/ogLocale";
+import { DesignerPreviewArt, type DesignerPreviewText } from "@/components/home/DesignerPreview";
+import { StepArt } from "@/components/planner/StepArt";
+import { examplePreview } from "@/lib/cameraDesigner/exampleSummary";
+import { portraitPng } from "@/lib/cameraDesigner/pixelPortrait";
 
 const PATH = "/tools/camera-lens-calculator";
 
@@ -97,6 +103,26 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
   ] as const;
 
   const h2 = "text-lg font-black text-slate-900 sm:text-xl";
+  const [dp, th] = await Promise.all([examplePreview(locale), getTranslations({ locale, namespace: "home" })]);
+  const dpText = th.raw("designerPreview") as DesignerPreviewText;
+  const exampleHref = `${lp}${PATH}?example=office#plan`;
+  // уровни DORI редакции 2014 для силуэтов: тот же человек при плотности уровня
+  const portraits = (["detect", "observe", "recognize", "identify"] as const).map((code) => {
+    const ppm = PROFILES["2014"].levels.find((l) => l.code === code)!.ppm;
+    return { code, ppm, src: portraitPng(ppm) };
+  });
+  const entries = [
+    { hash: "#plan", t: c.hero.plan, icon: <path d="M3 3h18v18H3zM12 3v9h9M6.5 6.5l4 9M6.5 6.5l10 6" /> },
+    { hash: "#estimate", t: c.hero.est, icon: <path d="M6 2h9l5 5v15H6zM14 2v6h6M9 13h8M9 17h5" /> },
+    { hash: "#camera", t: c.hero.cam, icon: <path d="M3 8h12v8H3zM15 11l6-3v8l-6-3M7 16l-2 5M11 16l2 5" /> },
+  ];
+  const detailsCls = "group rounded-2xl border border-slate-200 bg-white";
+  const summaryCls = "flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-base font-black text-slate-900 [&::-webkit-details-marker]:hidden";
+  const chevron = (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
 
   return (
     <div className="bg-slate-50">
@@ -108,98 +134,180 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
           <span className="text-slate-700">{c.crumbs.tool}</span>
         </nav>
 
-        <header className="mt-4 max-w-4xl">
-          <h1 className="text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">{c.h1}</h1>
-          <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{c.lead}</p>
+        {/* первый экран: что это и три входа; справа — тот же пример, что на главной */}
+        <header className="mt-4 grid items-center gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-widest text-brand-600">{c.hero.kicker}</p>
+            <h1 className="mt-2 text-2xl font-black tracking-tight text-slate-900 sm:text-4xl">{c.h1}</h1>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{c.lead}</p>
+            <div className="mt-5 grid gap-2.5">
+              {entries.map((e) => (
+                <a key={e.hash} href={e.hash}
+                  className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3.5 transition-colors hover:border-brand-400">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-700">
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{e.icon}</svg>
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-black text-slate-900">{e.t[0]}</span>
+                    <span className="block text-xs leading-snug text-slate-600">{e.t[1]}</span>
+                  </span>
+                  <span className="text-lg font-bold text-brand-600 transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+                </a>
+              ))}
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+              {/* обычная ссылка, не Link: нужна полная загрузка, чтобы редактор открыл пример */}
+              <a href={exampleHref} className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-500">
+                <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                {c.hero.example}
+              </a>
+              <span className="max-w-xs text-[11px] leading-snug text-slate-500">{c.hero.privacy}</span>
+            </div>
+          </div>
+          <a href={exampleHref} className="dp-card block rounded-2xl border border-brand-200 bg-white p-4 shadow-sm transition-colors hover:border-brand-500" aria-label={c.hero.example}>
+            <DesignerPreviewArt t={dpText} coverage={dp.coverage} total={dp.total} />
+          </a>
         </header>
 
-        <div className="mt-8">
+        {/* якоря входов: браузер прокручивает к инструменту, вкладку переключает CameraDesignerTabs */}
+        <div id="cd-tool" className="relative mt-10">
+          <span id="plan" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
+          <span id="estimate" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
+          <span id="camera" className="absolute -top-28 lg:-top-36" aria-hidden="true" />
           <CameraDesignerTabs plan={planContentFor(locale)} est={estContentFor(locale)} levels={c.levels} ruLevels={RU_LEVELS} locale={locale}>
             <CameraLensCalculator c={{ ui: c.ui, levels: c.levels, numLocale: c.numLocale }} cat={catalogContentFor(locale).catalog} locale={locale} />
           </CameraDesignerTabs>
         </div>
 
-        <section className="mt-12">
-          <h2 className={h2}>{p.howTitle}</h2>
-          <ol className="mt-4 grid gap-3 md:grid-cols-2">
-            {p.how.map((x, i) => (
-              <li key={i} className="flex gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm leading-relaxed text-slate-600">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">{i + 1}</span>
-                <span>{x}</span>
+        {/* силуэты: один и тот же человек при плотности каждого уровня DORI */}
+        <section className="mt-14">
+          <h2 className={h2}>{c.levelsSec.title}</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{c.levelsSec.intro}</p>
+          <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {portraits.map((x) => (
+              <figure key={x.code} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={x.src} alt="" width={400} height={500} className="block aspect-[4/5] h-auto w-full [image-rendering:pixelated]" />
+                <figcaption className="p-3.5">
+                  <span className="block text-sm font-black text-slate-900">{c.levels[x.code].name}</span>
+                  <span className="mt-0.5 block text-xs font-bold tabular-nums text-brand-700">{n(locale, x.ppm)} {u.ppm}</span>
+                  <span className="mt-1 block text-xs leading-snug text-slate-600">{c.levels[x.code].task}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        {/* как это работает — для клиента */}
+        <section className="mt-14">
+          <h2 className={h2}>{c.steps.title}</h2>
+          <ol className="mt-5 grid gap-3 md:grid-cols-3">
+            {c.steps.items.map(([title, text], i) => (
+              <li key={i} className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+                <StepArt step={i as 0 | 1 | 2} />
+                <div className="flex gap-3 p-4">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">{i + 1}</span>
+                  <span>
+                    <span className="block text-sm font-black text-slate-900">{title}</span>
+                    <span className="mt-1 block text-sm leading-relaxed text-slate-600">{text}</span>
+                  </span>
+                </div>
               </li>
             ))}
           </ol>
         </section>
 
-        <section className="mt-12">
-          <h2 className={h2}>{p.formulasTitle}</h2>
-          <p className="mt-3 max-w-4xl text-sm leading-relaxed text-slate-600">{p.formulasIntro}</p>
-          <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {p.formulas.map((f) => (
-              <div key={f.expr} className="rounded-xl border border-slate-200 bg-white px-4 py-3">
-                <div className="text-xs text-slate-500">{f.label}</div>
-                <div className="mt-1 font-mono text-sm font-semibold text-slate-900">{f.expr}</div>
-              </div>
-            ))}
-          </div>
-          <p className="mt-4 max-w-4xl text-sm leading-relaxed text-slate-600">{p.formulasNote}</p>
-          <div className="mt-4 max-w-4xl rounded-2xl border border-brand-100 bg-brand-50 p-4">
-            <div className="text-sm font-black text-slate-900">{p.exampleTitle}</div>
-            <p className="mt-1 text-sm leading-relaxed text-slate-700">{example}</p>
-          </div>
-        </section>
-
-        <section className="mt-12">
-          <h2 className={h2}>{p.standardTitle}</h2>
-          <div className="mt-3 grid gap-x-8 gap-y-3 text-sm leading-relaxed text-slate-600 md:grid-cols-2">
-            {p.standardText.map((x, i) => <p key={i}>{x}</p>)}
-          </div>
-          <div className="mt-5 grid gap-5 lg:grid-cols-2">
-            {(["2014", "2025"] as const).map((k) => (
-              <div key={k} className="rounded-2xl border border-slate-200 bg-white p-4">
-                <div className="text-sm font-black text-slate-900">{PROFILES[k].title}</div>
-                <table className="mt-2 w-full border-collapse text-sm">
-                  <thead>
-                    <tr className="border-b border-slate-200 text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                      <th className="py-2 pr-3">{c.ui.colLevel}</th>
-                      <th className="py-2 pr-3 text-right">{c.ui.colPpm}</th>
-                      <th className="py-2">{p.colTask}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {PROFILES[k].levels.map((l) => (
-                      <tr key={l.code} className="border-b border-slate-100 align-top last:border-0">
-                        <td className="py-2 pr-3 font-semibold text-slate-900">
-                          {c.levels[l.code].name}
-                          {c.levels[l.code].name !== l.en ? <span className="block text-[11px] font-normal text-slate-500">{l.en}</span> : null}
-                        </td>
-                        <td className="whitespace-nowrap py-2 pr-3 text-right tabular-nums text-slate-700">{n(locale, l.ppm)} {u.ppm}</td>
-                        <td className="py-2 text-xs leading-relaxed text-slate-600">{c.levels[l.code].task}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-12">
-          <h2 className={h2}>{p.assumpTitle}</h2>
-          <ul className="mt-4 grid gap-x-8 gap-y-2.5 md:grid-cols-2">
-            {p.assump.map((x, i) => (
-              <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-slate-600">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
-                {x}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="mt-12">
+        <section className="mt-14">
           <h2 className={h2}>{p.faqTitle}</h2>
           <div className="mt-4">
             <FaqAccordion items={p.faq} />
+          </div>
+        </section>
+
+        {/* для специалистов: калькулятор объектива, формулы, стандарт, допущения — свёрнуто, но в HTML */}
+        <section className="mt-14">
+          <h2 className={h2}>{c.refTitle}</h2>
+          <div className="mt-4 grid gap-3">
+            <details className={detailsCls}>
+              <summary className={summaryCls}><h3>{p.howTitle}</h3>{chevron}</summary>
+              <ol className="grid gap-3 px-5 pb-5 md:grid-cols-2">
+                {p.how.map((x, i) => (
+                  <li key={i} className="flex gap-3 rounded-xl bg-slate-50 p-4 text-sm leading-relaxed text-slate-600">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-600 text-xs font-black text-white">{i + 1}</span>
+                    <span>{x}</span>
+                  </li>
+                ))}
+              </ol>
+            </details>
+
+            <details className={detailsCls}>
+              <summary className={summaryCls}><h3>{p.formulasTitle}</h3>{chevron}</summary>
+              <div className="px-5 pb-5">
+                <p className="max-w-4xl text-sm leading-relaxed text-slate-600">{p.formulasIntro}</p>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {p.formulas.map((f) => (
+                    <div key={f.expr} className="rounded-xl border border-slate-200 bg-white px-4 py-3">
+                      <div className="text-xs text-slate-500">{f.label}</div>
+                      <div className="mt-1 font-mono text-sm font-semibold text-slate-900">{f.expr}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 max-w-4xl text-sm leading-relaxed text-slate-600">{p.formulasNote}</p>
+                <div className="mt-4 max-w-4xl rounded-2xl border border-brand-100 bg-brand-50 p-4">
+                  <div className="text-sm font-black text-slate-900">{p.exampleTitle}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-slate-700">{example}</p>
+                </div>
+              </div>
+            </details>
+
+            <details className={detailsCls}>
+              <summary className={summaryCls}><h3>{p.standardTitle}</h3>{chevron}</summary>
+              <div className="px-5 pb-5">
+                <div className="grid gap-x-8 gap-y-3 text-sm leading-relaxed text-slate-600 md:grid-cols-2">
+                  {p.standardText.map((x, i) => <p key={i}>{x}</p>)}
+                </div>
+                <div className="mt-5 grid gap-5 lg:grid-cols-2">
+                  {(["2014", "2025"] as const).map((k) => (
+                    <div key={k} className="rounded-2xl border border-slate-200 bg-white p-4">
+                      <div className="text-sm font-black text-slate-900">{PROFILES[k].title}</div>
+                      <table className="mt-2 w-full border-collapse text-sm">
+                        <thead>
+                          <tr className="border-b border-slate-200 text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                            <th className="py-2 pr-3">{c.ui.colLevel}</th>
+                            <th className="py-2 pr-3 text-right">{c.ui.colPpm}</th>
+                            <th className="py-2">{p.colTask}</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {PROFILES[k].levels.map((l) => (
+                            <tr key={l.code} className="border-b border-slate-100 align-top last:border-0">
+                              <td className="py-2 pr-3 font-semibold text-slate-900">
+                                {c.levels[l.code].name}
+                                {c.levels[l.code].name !== l.en ? <span className="block text-[11px] font-normal text-slate-500">{l.en}</span> : null}
+                              </td>
+                              <td className="whitespace-nowrap py-2 pr-3 text-right tabular-nums text-slate-700">{n(locale, l.ppm)} {u.ppm}</td>
+                              <td className="py-2 text-xs leading-relaxed text-slate-600">{c.levels[l.code].task}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </details>
+
+            <details className={detailsCls}>
+              <summary className={summaryCls}><h3>{p.assumpTitle}</h3>{chevron}</summary>
+              <ul className="grid gap-x-8 gap-y-2.5 px-5 pb-5 md:grid-cols-2">
+                {p.assump.map((x, i) => (
+                  <li key={i} className="flex gap-2.5 text-sm leading-relaxed text-slate-600">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500" />
+                    {x}
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
         </section>
 
