@@ -13,7 +13,7 @@ export type CdPlanUi = {
   hint: { select: string; pick: string; place: string; wall: string; zone: string; scale: string; scaleNeeded: string };
   finish: string; cancel: string;
   zoomIn: string; zoomOut: string; fit: string;
-  save: string; png: string; print: string; reset: string; confirmReset: string;
+  save: string; png: string; print: string; reset: string; confirmReset: string; exampleReplace: string;
   scaleLen: string; scaleApply: string; scaleNow: string; scaleBad: string;
   search: string; searchEmpty: string; loadingList: string; listError: string;
   verified: string; review: string; reviewHint: string;
@@ -64,6 +64,7 @@ const ru: CdPlanUi = {
   zoomIn: "Приблизить", zoomOut: "Отдалить", fit: "Весь план",
   save: "Скачать файл проекта", png: "Картинка PNG", print: "Печать / PDF", reset: "Новый план",
   confirmReset: "Удалить текущий план и камеры из этого браузера?",
+  exampleReplace: "Открыть пример? Текущий план в этом браузере будет заменён.",
   scaleLen: "Длина отрезка, м", scaleApply: "Применить масштаб", scaleNow: "1 м ≈ {px} пикс. плана", scaleBad: "Отметьте две разные точки и введите длину больше нуля.",
   search: "Модель камеры, например 2CD1043", searchEmpty: "Ничего не найдено.", loadingList: "Загружаем каталог…", listError: "Каталог не загрузился. Можно задать свою камеру.",
   verified: "углы подтверждены", review: "нужна проверка", reviewHint: "Углы есть только в одном документе производителя или документы расходятся.",
@@ -125,6 +126,7 @@ const uz: CdPlanUi = {
   zoomIn: "Yaqinlashtirish", zoomOut: "Uzoqlashtirish", fit: "Butun reja",
   save: "Loyiha faylini yuklab olish", png: "PNG rasm", print: "Chop etish / PDF", reset: "Yangi reja",
   confirmReset: "Joriy reja va kameralar shu brauzerdan oʻchirilsinmi?",
+  exampleReplace: "Namuna ochilsinmi? Shu brauzerdagi joriy reja almashtiriladi.",
   scaleLen: "Kesma uzunligi, m", scaleApply: "Masshtabni qoʻllash", scaleNow: "1 m ≈ rejaning {px} pikseli", scaleBad: "Ikki xil nuqtani belgilang va noldan katta uzunlik kiriting.",
   search: "Kamera modeli, masalan 2CD1043", searchEmpty: "Hech narsa topilmadi.", loadingList: "Katalog yuklanmoqda…", listError: "Katalog yuklanmadi. Oʻz kamerangizni kiritishingiz mumkin.",
   verified: "burchaklar tasdiqlangan", review: "tekshirish kerak", reviewHint: "Burchaklar ishlab chiqaruvchining faqat bitta hujjatida bor yoki hujjatlar bir-biridan farq qiladi.",
@@ -186,6 +188,7 @@ const en: CdPlanUi = {
   zoomIn: "Zoom in", zoomOut: "Zoom out", fit: "Whole plan",
   save: "Download project file", png: "PNG image", print: "Print / PDF", reset: "New plan",
   confirmReset: "Delete the current plan and cameras from this browser?",
+  exampleReplace: "Open the example? The current plan in this browser will be replaced.",
   scaleLen: "Segment length, m", scaleApply: "Apply scale", scaleNow: "1 m ≈ {px} plan px", scaleBad: "Mark two different points and enter a length greater than zero.",
   search: "Camera model, e.g. 2CD1043", searchEmpty: "Nothing found.", loadingList: "Loading the catalogue…", listError: "The catalogue did not load. You can enter your own camera.",
   verified: "angles confirmed", review: "needs checking", reviewHint: "The angles appear in only one manufacturer document, or the documents disagree.",
@@ -247,6 +250,7 @@ const tr: CdPlanUi = {
   zoomIn: "Yakınlaştır", zoomOut: "Uzaklaştır", fit: "Tüm plan",
   save: "Proje dosyasını indir", png: "PNG görüntü", print: "Yazdır / PDF", reset: "Yeni plan",
   confirmReset: "Mevcut plan ve kameralar bu tarayıcıdan silinsin mi?",
+  exampleReplace: "Örnek açılsın mı? Bu tarayıcıdaki mevcut plan değiştirilecek.",
   scaleLen: "Doğru parçası uzunluğu, m", scaleApply: "Ölçeği uygula", scaleNow: "1 m ≈ planın {px} pikseli", scaleBad: "İki farklı nokta işaretleyin ve sıfırdan büyük bir uzunluk girin.",
   search: "Kamera modeli, örn. 2CD1043", searchEmpty: "Sonuç bulunamadı.", loadingList: "Katalog yükleniyor…", listError: "Katalog yüklenemedi. Kendi kameranızı girebilirsiniz.",
   verified: "açılar doğrulandı", review: "kontrol gerekli", reviewHint: "Açılar üreticinin yalnızca bir belgesinde var veya belgeler birbirini tutmuyor.",
@@ -308,6 +312,7 @@ const zh: CdPlanUi = {
   zoomIn: "放大", zoomOut: "缩小", fit: "整个平面图",
   save: "下载项目文件", png: "PNG 图片", print: "打印 / PDF", reset: "新平面图",
   confirmReset: "要从此浏览器中删除当前平面图和摄像机吗？",
+  exampleReplace: "打开示例？此浏览器中的当前平面图将被替换。",
   scaleLen: "线段长度（米）", scaleApply: "应用比例尺", scaleNow: "1 米 ≈ 平面图 {px} 像素", scaleBad: "请标出两个不同的点，并输入大于零的长度。",
   search: "摄像机型号，例如 2CD1043", searchEmpty: "未找到结果。", loadingList: "正在加载目录…", listError: "目录未能加载。您可以输入自定义摄像机。",
   verified: "角度已确认", review: "需要核实", reviewHint: "角度仅见于制造商的一份文件，或各文件数据不一致。",

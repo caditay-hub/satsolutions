@@ -305,7 +305,23 @@
     "heroSlide": "Slide",
     "newArrivalsLabel": "Fresh arrivals",
     "newArrivalsTitle": "New in catalog",
-    "newArrivalsAll": "All new arrivals"
+    "newArrivalsAll": "All new arrivals",
+    "designerPreview": {
+      "kicker": "Online CCTV design",
+      "title": "Place cameras on your floor plan and get an estimate right away",
+      "text": "See where faces are clear and where you only get a silhouette. The recorder, disks and installation are picked for you. Free, right in your browser.",
+      "btn": "Start a project",
+      "hint": "This example opens — move and swap the cameras",
+      "covered": "Covered {p}",
+      "est1": "Estimate: 3 cameras, recorder,",
+      "est2": "disk, cable, installation",
+      "total": "from {v}",
+      "totalLine": "Example estimate: from {v}",
+      "storage": "Storage",
+      "office": "Office",
+      "hall": "Sales floor",
+      "aria": "Example: three cameras on a plan of a storage room, office and sales floor, coverage zones and estimate"
+    }
   },
   "footer": {
     "sections": "Sections",
@@ -5772,7 +5788,7 @@
       }
     ],
     "promoTitle": "Not sure what the installation will cost?",
-    "promoText": "Set the number of points — the calculator lays out a site plan and shows the range from our standard price list. One minute, no phone calls.",
+    "promoText": "Set the number of points — the calculator shows the price range from our standard price list. One minute, no phone calls.",
     "promoBtn": "Estimate the cost",
     "promoHead": "Installation works cost calculator",
     "promoHint": "Priced from our standard rate card. Equipment is quoted separately.",

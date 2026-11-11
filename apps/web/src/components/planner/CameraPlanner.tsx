@@ -26,6 +26,7 @@ import {
   DEFAULT_CABLE_M, PLAN_LIMITS, cableRun, emptyProject, isPlanImageUrl, isZoom, opticsAt, parseEst, parseProject, planBounds, poseOf, rescaleProject,
   type CamSpec, type PlanCamera, type PlanProject,
 } from "@/lib/cameraDesigner/plan/project";
+import { exampleProject, isExampleId } from "@/lib/cameraDesigner/plan/example";
 import { DEFAULT_SETTINGS, type EstSettings } from "@/lib/cameraDesigner/estimate/estimate";
 import type { CdEstUi } from "@/lib/cameraDesigner/estContent";
 import { EstimatePanel, type EstInput, type EstView } from "./EstimatePanel";
@@ -115,6 +116,8 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
   /* ── восстановление и автосохранение ── */
   useEffect(() => {
     let alive = true;
+    // ?example=office — пример с превью на главной; свой сохранённый план без спроса не затираем
+    const ex = new URLSearchParams(window.location.search).get("example");
     idbLoad().then((v) => {
       const o = v as { project?: unknown; image?: unknown } | undefined;
       const pr = o ? parseProject(o.project) : null;
@@ -122,9 +125,22 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
         setProject(pr);
         setBgUrl((o!.image as string | null) ?? null);
         setFitKey(uid());
+        return pr.cams.length > 0 || pr.walls.length > 0 || pr.zones.length > 0;
       }
-    }).catch(() => {}).finally(() => alive && setRestored(true));
+      return false;
+    }).catch(() => false).then((hasOwn) => {
+      if (!alive) return;
+      if (isExampleId(ex)) {
+        // параметр убираем: обновление страницы не должно снова подменять план примером
+        const u = new URL(window.location.href);
+        u.searchParams.delete("example");
+        window.history.replaceState(window.history.state, "", `${u.pathname}${u.search}${u.hash}`);
+        if (!hasOwn || window.confirm(ui.exampleReplace)) resetTo(exampleProject(ex), null);
+      }
+      setRestored(true);
+    });
     return () => { alive = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

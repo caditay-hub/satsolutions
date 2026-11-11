@@ -305,7 +305,23 @@
     "heroSlide": "Slayd",
     "newArrivalsLabel": "Yangi kelganlar",
     "newArrivalsTitle": "Katalog yangiliklari",
-    "newArrivalsAll": "Barcha yangiliklar"
+    "newArrivalsAll": "Barcha yangiliklar",
+    "designerPreview": {
+      "kicker": "Videokuzatuv loyihasi onlayn",
+      "title": "Kameralarni rejaga joylashtiring — smeta darhol tayyor",
+      "text": "Qayerda yuz aniq koʻrinadi, qayerda faqat siluet — hammasi koʻrinib turadi. Registrator, disklar va montaj avtomatik tanlanadi. Bepul, toʻgʻridan-toʻgʻri brauzerda.",
+      "btn": "Loyihani boshlash",
+      "hint": "Shu namuna ochiladi — kameralarni surish va almashtirish mumkin",
+      "covered": "Qamrov {p}",
+      "est1": "Smeta: 3 kamera, registrator,",
+      "est2": "disk, kabel, montaj",
+      "total": "{v} dan",
+      "totalLine": "Namuna smetasi: {v} dan",
+      "storage": "Ombor",
+      "office": "Ofis",
+      "hall": "Savdo zali",
+      "aria": "Namuna: ombor, ofis va savdo zali rejasidagi uchta kamera, koʻrish zonalari va smeta"
+    }
   },
   "footer": {
     "sections": "Boʻlimlar",
@@ -5772,7 +5788,7 @@
       }
     ],
     "promoTitle": "Montaj qanchaga tushishini bilmayapsizmi?",
-    "promoText": "Nuqtalar sonini belgilang — kalkulyator obyekt rejasini tuzadi va yagona narxnomamiz boʻyicha oraliqni koʻrsatadi. Bir daqiqa, qoʻngʻiroqsiz.",
+    "promoText": "Nuqtalar sonini belgilang — kalkulyator yagona narxnomamiz boʻyicha narx oraligʻini koʻrsatadi. Bir daqiqa, qoʻngʻiroqsiz.",
     "promoBtn": "Narxni hisoblash",
     "promoHead": "Montaj ishlari narxi kalkulyatori",
     "promoHint": "Yagona narxnoma boʻyicha hisoblaymiz. Uskuna — alohida.",

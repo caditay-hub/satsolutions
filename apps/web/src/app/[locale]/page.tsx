@@ -24,6 +24,11 @@ import { CATALOG_GROUPS } from "@/lib/catalogGroups";
 import { articlesForLocale, articleImg } from "@/lib/articlesData";
 import { optimizedImg } from "@/lib/imgProxy";
 import { withOgUrl } from "@/lib/metadata";
+import { DesignerPreview, type DesignerPreviewText } from "@/components/home/DesignerPreview";
+import { exampleCoverage } from "@/lib/cameraDesigner/plan/example";
+import { exampleTotal } from "@/lib/cameraDesigner/exampleSummary";
+import { planContentFor } from "@/lib/cameraDesigner/planContent";
+import { makeFmt } from "@/lib/cameraDesigner/format";
 
 const SOLUTIONS_IMG = "https://api.satsolutions.uz/uploads/services-page";
 
@@ -198,13 +203,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     { brands },
     { partners },
     { items: newArrivals },
+    dpTotal,
   ] = await Promise.all([
     getPortfolio(1, 3).catch(() => ({ items: [], total: 0 })),
     getBrands().catch(() => ({ brands: [] })),
     getPartners().catch(() => ({ partners: [] })),
     // Новинки каталога: 8 последних за 90 дней (блок после «Каталога продукции»)
     getProductsCached(1, 8, { sort: "new", days: 60, hasPrice: true }).catch(() => ({ items: [], total: 0, page: 1, limit: 8 })),
+    // смета примера для превью проектировщика: цены каталога на сегодня; при сбое блок без суммы
+    exampleTotal(locale),
   ]);
+  // превью проектировщика: «от» — нижняя граница сметы, округлённая вниз до 10 000 сум
+  const dpFmt = makeFmt(locale);
+  const dpText = t.raw("designerPreview") as DesignerPreviewText;
+  const dpMoney = dpTotal ? planContentFor(locale).money.replace("{v}", dpFmt.num(Math.floor(dpTotal / 10000) * 10000, 0)) : null;
+  const dpCoverage = `${Math.round(exampleCoverage() * 100)} %`;
 
   const portfolio = rawPortfolio.map((p) => localizePortfolioProject(p, locale));
 
@@ -529,11 +542,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Link href="/solutions" className="tap inline-flex items-center gap-1.5 text-sm font-bold text-brand-700">{t("allServices")} →</Link>
             </div>
 
-            {/* Калькулятор — единственная точка входа на главной. Значок рисуем
-                узнаваемым (дисплей + клавиши + «=»), чтобы блок читался как
-                калькулятор ещё до чтения заголовка. */}
-            <div className="mt-10 overflow-hidden rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 via-white to-brand-50 shadow-sm">
-              <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-7">
+            {/* Два инструмента рядом (решение владельца 11.11): калькулятор монтажа и превью
+                проектировщика видеонаблюдения. Значок калькулятора рисуем узнаваемым (дисплей +
+                клавиши + «=»), чтобы блок читался как калькулятор ещё до чтения заголовка.
+                На телефоне проектировщик первым, на компьютере — справа. */}
+            <div className="mt-10 grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)]">
+            <div className="overflow-hidden rounded-2xl border border-brand-200 bg-gradient-to-br from-brand-50 via-white to-brand-50 shadow-sm">
+              <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:gap-7 sm:p-7 lg:h-full lg:flex-col lg:items-start">
                 <svg viewBox="0 0 64 64" className="h-20 w-20 shrink-0 sm:h-24 sm:w-24" role="img" aria-label={tcalc("promoHead")}>
                   <rect x="8" y="4" width="48" height="56" rx="8" fill="#fff" stroke="#328fa8" strokeWidth="2.5" />
                   {/* дисплей с «суммой» */}
@@ -564,7 +579,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </div>
                 </div>
 
-                <div className="shrink-0 sm:text-right">
+                <div className="shrink-0 sm:text-right lg:mt-auto lg:text-left">
                   <Link href="/calculator"
                     className="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-500">
                     {tcalc("promoBtn")} →
@@ -572,6 +587,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <p className="mt-2 max-w-[220px] text-[11px] leading-snug text-slate-500">{tcalc("promoHint")}</p>
                 </div>
               </div>
+            </div>
+            <div className="order-first lg:order-none">
+              <DesignerPreview t={dpText} coverage={dpCoverage} total={dpMoney} />
+            </div>
             </div>
           </div>
         </section>

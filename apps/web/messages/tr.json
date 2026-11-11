@@ -305,7 +305,23 @@
     "heroSlide": "Slayt",
     "newArrivalsLabel": "Yeni gelenler",
     "newArrivalsTitle": "Katalog yenilikleri",
-    "newArrivalsAll": "Tüm yenilikler"
+    "newArrivalsAll": "Tüm yenilikler",
+    "designerPreview": {
+      "kicker": "Çevrimiçi CCTV projesi",
+      "title": "Kameraları plana yerleştirin, teklifi hemen alın",
+      "text": "Yüzün nerede net, nerede yalnızca siluet olarak göründüğünü görün. Kayıt cihazı, diskler ve montaj otomatik seçilir. Ücretsiz, doğrudan tarayıcıda.",
+      "btn": "Projeye başla",
+      "hint": "Bu örnek açılır — kameraları taşıyıp değiştirebilirsiniz",
+      "covered": "Kapsama {p}",
+      "est1": "Teklif: 3 kamera, kayıt cihazı,",
+      "est2": "disk, kablo, montaj",
+      "total": "{v} itibaren",
+      "totalLine": "Örnek teklif: {v} itibaren",
+      "storage": "Depo",
+      "office": "Ofis",
+      "hall": "Satış alanı",
+      "aria": "Örnek: depo, ofis ve satış alanı planında üç kamera, görüş alanları ve teklif"
+    }
   },
   "footer": {
     "sections": "Bölümler",
@@ -5772,7 +5788,7 @@
       }
     ],
     "promoTitle": "Montajın ne tutacağını bilmiyor musunuz?",
-    "promoText": "Nokta sayısını girin — hesaplayıcı tesis planını çıkarır ve standart fiyat listemize göre aralığı gösterir. Bir dakika, telefona gerek yok.",
+    "promoText": "Nokta sayısını girin — hesaplayıcı standart fiyat listemize göre fiyat aralığını gösterir. Bir dakika, telefona gerek yok.",
     "promoBtn": "Maliyeti hesapla",
     "promoHead": "Montaj işleri maliyet hesaplayıcısı",
     "promoHint": "Standart fiyat listemize göre. Ekipman ayrıca hesaplanır.",
