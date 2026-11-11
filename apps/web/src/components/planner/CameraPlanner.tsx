@@ -10,7 +10,7 @@
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { flushSync } from "react-dom";
+import { createPortal, flushSync } from "react-dom";
 import { trackConversion } from "@/lib/gtag";
 import { getGclid } from "@/lib/gclid";
 import { compute } from "@/lib/cameraDesigner/calculate";
@@ -1056,7 +1056,8 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
                     <tr key={r.key} className="border-b border-slate-100 align-top last:border-0">
                       <td className="py-1.5 pr-2">
                         {r.slug ? <a href={`${locale === "ru" ? "" : `/${locale}`}/products/${r.slug}`} target="_blank" rel="noopener" className="font-semibold text-brand-700 hover:underline">{r.name}</a> : <span className="font-semibold text-slate-800">{r.name}</span>}
-                        <span className="block text-[11px] text-slate-500">{r.price ? fill(ui.money, { v: r.price }) : r.slug ? ui.onRequest : ""}</span>
+                        {/* цена за штуку — в формате языка страницы, как сумма рядом (строка API отформатирована по-русски) */}
+                        <span className="block text-[11px] text-slate-500">{r.priceNum ? fill(ui.money, { v: num(r.priceNum, 0) }) : r.price ? fill(ui.money, { v: r.price }) : r.slug ? ui.onRequest : ""}</span>
                       </td>
                       <td className="py-1.5 pr-2 text-right tabular-nums">{r.qty}</td>
                       <td className="py-1.5 text-right tabular-nums">{r.priceNum ? num(r.priceNum * r.qty, 0) : "—"}</td>
@@ -1129,12 +1130,14 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
     );
   }
 
-  /* ── печать: план или коммерческое предложение ── */
+  /* ── печать: план или коммерческое предложение ──
+     Лист выносится прямо в body и печатается один: остальное скрыто display:none. Прежний
+     visibility:hidden оставлял высоту страницы — «Сохранить как PDF» давал 7 пустых листов в конце. */
   function printBlock() {
     if (!printImg) return null;
-    return (
+    return createPortal(
       <>
-        <style>{"@media print{body *{visibility:hidden!important}#cd-print,#cd-print *{visibility:visible!important}#cd-print{position:absolute;left:0;top:0;width:100%;display:block!important}}"}</style>
+        <style>{"@media print{body>*:not(#cd-print){display:none!important}#cd-print{display:block!important}}"}</style>
         {printKind === "kp" && estView ? (
           <div id="cd-print" className="hidden bg-white p-4 text-black">
             <KpSheet ui={est} locale={locale} view={estView} no={kpNo} date={kpDate(locale, today())} planImg={printImg === "none" ? null : printImg}
@@ -1164,7 +1167,8 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale }: Props) {
             <p className="mt-1 text-[10px]">{ui.disclaimer}</p>
           </div>
         )}
-      </>
+      </>,
+      document.body,
     );
   }
 
