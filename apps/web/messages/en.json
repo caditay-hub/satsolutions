@@ -293,6 +293,14 @@
           "Learn more",
           "Get a quote"
         ]
+      },
+      {
+        "title": "Online CCTV design",
+        "text": "Cameras on your plan, coverage zones and an estimate with installation — free",
+        "buttons": [
+          "Try it",
+          "Open the example"
+        ]
       }
     ],
     "view": "View →",

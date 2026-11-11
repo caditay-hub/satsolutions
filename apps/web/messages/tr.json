@@ -293,6 +293,14 @@
           "Ayrıntılar",
           "Teklif al"
         ]
+      },
+      {
+        "title": "Çevrimiçi CCTV projesi",
+        "text": "Planda kameralar, görüş alanları ve montaj dahil maliyet hesabı — ücretsiz",
+        "buttons": [
+          "Deneyin",
+          "Örneği aç"
+        ]
       }
     ],
     "view": "Görüntüle →",

@@ -293,6 +293,14 @@
           "Batafsil",
           "Tijorat taklifi"
         ]
+      },
+      {
+        "title": "Videokuzatuv loyihasi onlayn",
+        "text": "Rejadagi kameralar, koʻrish zonalari va montaj bilan smeta — bepul",
+        "buttons": [
+          "Sinab koʻrish",
+          "Namunani ochish"
+        ]
       }
     ],
     "view": "Koʻrish →",
