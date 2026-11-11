@@ -23,12 +23,24 @@ const REMOVED_ITEM_TARGET: Record<string, string> = {
   "pro-soedinitelnye-klemmy-skotch-lok": "/products/type/sks-vitaya-para",
   "pro-smk": "/products/type/izveschateli",                               // магнитоконтактный СМК
   "pro-pulsoksimetr": "/products",                                        // профильного раздела нет
+  // Кабели, снятые 11.11.2026 (224 карточки: патч-корды, оптический кабель, DAC, кабели питания;
+  // решение владельца «все, кроме 7 бухт»). Префиксы не pro-/pxt- — явно:
+  "tpl-sm5220-1m": "/products/type/sfp-moduli-i-transivery",             // DAC TP-Link
+  "tpl-sm5220-3m": "/products/type/sfp-moduli-i-transivery",
+  "knd-kabel-kkv-kanihad-2-0-35-300-metr": "/products/type/kabel",        // в разделе остались бухты витой пары
+  "knd-kabel-pugnp-2-0-35-kanihad-chernaya-1000metr": "/products/type/kabel",
 };
 
 // Снятые товары без бренда (pro-…) и Pixietech (pxt-…) с показами в Google: раздел по словам в слаге
 // (аудит 02.11.2026, ~300 адресов, ≈2 800 показов за 90 дней — Claude outputs/redirekty-audit-2026-11-02).
 // Порядок важен: первое совпадение побеждает.
 const ITEM_RULES: [RegExp, string][] = [
+  // Кабели 11.11.2026: pxt-pxt-pc-… — и оптические патч-корды (upc/apc/mpo/mm/sm), и кабели питания (c13/c19…)
+  [/^pxt-pxt-pc-.*(upc|apc|mpo|-mm|-sm)|^pxt-pigtail|^pxt-pxt-(adss|fttx|p-2-6)|^pro-optika|^pro-sc-apc/, "/products/type/optika-i-aksessuary"],
+  [/^pxt-pxt-(uu|fu)4-|^pxt-patch-kabel/, "/products/type/sks-vitaya-para"],  // медные патч-корды
+  [/^pxt-dac-/, "/products/type/sfp-moduli-i-transivery"],                  // DAC 10G SFP+
+  [/^pxt-pxt-pc-|^pxt-cp-pwr-cord/, "/products/type/ibp-i-elektropitanie"],  // кабели питания IEC/Schuko, Cisco
+  [/^pxt-cbl-sast/, "/products/type/servernoe-oborudovanie"],               // SAS-кабель Supermicro
   [/^pxt-rb\d/, "/products/type/marshrutizatory"],                         // MikroTik hEX под Pixietech
   [/^pxt-odf/, "/products/type/optika-i-aksessuary"],                      // оптические кроссы
   [/hdmi/, "/products/group/videonablyudenie"],                            // HDMI соединяет регистратор с монитором

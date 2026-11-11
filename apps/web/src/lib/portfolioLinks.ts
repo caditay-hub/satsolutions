@@ -31,7 +31,7 @@ export const PORTFOLIO_LINKS: Record<string, PortfolioLinks> = {
   // ЖК TowerUp, 2-я очередь: ВОЛС между 8 домами + центральный узел видеонаблюдения (08.10.2026)
   "zhk-towerup-vols-mezhdu-domami": {
     products: [
-      "pxt-pxt-p-2-6-04",
+      // "pxt-pxt-p-2-6-04" — оптический кабель снят с витрины 11.11.2026 (кабели убраны с сайта)
       "pxt-odf-kross-8-port-prostoy",
       "pxt-pxt-sfp-w35-20",
       "dahua-dhi-nvr4232-4ks3",
