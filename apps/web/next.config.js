@@ -69,6 +69,10 @@ const nextConfig = {
       // срабатывают только на входящий URL — внутренний rewrite next-intl «/» → «/ru» не задевают.
       { source: "/ru", destination: "/", permanent: true },
       { source: "/ru/:path*", destination: "/:path*", permanent: true },
+      // Короткая ссылка на отзыв в Google для клиентов (QR на карточке после сдачи работ), 11.11.2026.
+      // Временный 307: адрес назначения — newReviewUri бизнес-профиля, его можно сменить без перепечатки QR.
+      // В sitemap не входит, своей страницы нет — индексировать нечего.
+      { source: "/otzyv", destination: "https://search.google.com/local/writereview?placeid=ChIJI_QYqnuLrjgR6TFmJzNIk9g", permanent: false },
       // Страница «Партнёры» удалена (06.07.2026) — 301 на «О компании» на всех локалях
       { source: "/partners", destination: "/about", permanent: true },
       { source: "/partner", destination: "/about", permanent: true },

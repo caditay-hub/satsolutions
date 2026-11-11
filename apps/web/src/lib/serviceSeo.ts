@@ -76,12 +76,14 @@ const ru: Record<string, ServiceSeo> = {
     // Каталог берёт «домофон», услуга — «установку домофона».
     h1: "Установка домофонов в Ташкенте",
     title: "Установка домофона в Ташкенте[[ — от {price}]] | SAT",
-    desc: "Установка домофонов в Ташкенте: IP- и видеодомофоны для дома, офиса и ЖК, вызов на смартфон, интеграция со СКУД. Монтаж и сервис по всему Узбекистану.",
+    // 11.11.2026: «домофон для дома» — 112 показов, поз. 8,9, 0 кликов; прежний текст обрезался до «для дома». Цена спереди — авто (priceLead), итог ≤160.
+    desc: "Для квартиры, дома и подъезда: IP- и видеодомофоны, вызов на смартфон, гарантия 3 года на работы.",
   },
   turnstile: {
     h1: "Турникеты в Ташкенте — установка под ключ",
     title: "Турникеты в Ташкенте[[ от {{min:Турникеты и шлагбаумы}}]] — продажа и установка | SAT",
-    desc: "Продажа и установка турникетов в Ташкенте: проходные, калитки, интеграция со СКУД и учётом рабочего времени. Монтаж и обслуживание по всему Узбекистану.",
+    // 11.11.2026: «турникет» поз. 9,0 при 1 клике из 151 — в описании не было ни видов турникетов, ни гарантии.
+    desc: "Трипод, роторные и полноростовые турникеты с установкой в Ташкенте: подключение к СКУД и учёту рабочего времени, свой штат, гарантия 3 года на работы.",
   },
   barrier: {
     // 14.10.2026: страница услуги — под «установку», «цену/купить» забирает каталог шлагбаумов
@@ -306,12 +308,12 @@ const uz: Record<string, ServiceSeo> = {
   intercom: {
     h1: "Toshkentda domofon oʻrnatish",
     title: "Toshkentda domofon oʻrnatish[[ — {price}dan]] | SAT",
-    desc: "Toshkentda domofon oʻrnatish: uy, ofis va TJM uchun IP va video domofonlar, smartfonga qoʻngʻiroq, SKUD bilan integratsiya. Montaj va servis mamlakat boʻylab.",
+    desc: "Kvartira, uy va podyezd uchun IP va video domofonlar, smartfonga qoʻngʻiroq, ishlarga 3 yil kafolat.",
   },
   turnstile: {
     h1: "Toshkentda turniketlar — toʻliq tayyor holda montaj",
     title: "Turniketlar Toshkentda[[ {{min:Турникеты и шлагбаумы}}dan]] — sotish va oʻrnatish | SAT",
-    desc: "Toshkentda turniketlarni sotish va oʻrnatish: oʻtish yoʻlaklari, kalitkalar, SKUD va ish vaqti hisobi bilan integratsiya. Montaj va xizmat mamlakat boʻylab.",
+    desc: "Toshkentda tripod, rotorli va toʻliq balandlikdagi turniketlarni oʻrnatamiz: SKUD va ish vaqti hisobiga ulash, oʻz jamoamiz, ishlarga 3 yil kafolat.",
   },
   barrier: {
     h1: "Toshkentda shlagbaum oʻrnatish — avtoturargoh, hovli va turar-joy majmualari uchun",
@@ -530,12 +532,12 @@ const en: Record<string, ServiceSeo> = {
   intercom: {
     h1: "Intercom Installation in Tashkent",
     title: "Intercom Installation in Tashkent[[ — from {price}]] | SAT",
-    desc: "Intercom installation in Tashkent: IP and video intercoms for homes, offices and residential complexes, call to smartphone, ACS integration. Warranty and service.",
+    desc: "For apartments, houses and entrances: IP and video, calls to smartphone, 3-year warranty on work.",
   },
   turnstile: {
     h1: "Turnstiles in Tashkent — Turnkey Installation",
     title: "Turnstiles in Tashkent[[ from {{min:Турникеты и шлагбаумы}}]] — Sales & Installation | SAT",
-    desc: "Turnstile sales and installation in Tashkent: full-height and tripod turnstiles, gates, integration with access control and time tracking. Service across Uzbekistan.",
+    desc: "Tripod, rotor and full-height turnstiles installed in Tashkent: connected to access control and time tracking, in-house team, 3-year warranty on work.",
   },
   barrier: {
     h1: "Barrier Gate Installation in Tashkent — Car Parks, Yards and Residential Complexes",
@@ -754,12 +756,12 @@ const tr: Record<string, ServiceSeo> = {
   intercom: {
     h1: "Taşkent'te diafon ve IP interkom kurulumu",
     title: "Taşkent'te Diafon Kurulumu[[ — {price}'den]] | SAT",
-    desc: "Taşkent'te diafon kurulumu: ev, ofis ve siteler için IP ve görüntülü diafonlar, akıllı telefona çağrı, geçiş kontrol entegrasyonu. Montaj, servis ve garanti.",
+    desc: "Daire, ev ve apartman girişi için IP ve görüntülü diafon, işçilikte 3 yıl garanti.",
   },
   turnstile: {
     h1: "Taşkent'te turnike kurulumu — anahtar teslim",
     title: "Taşkent'te Turnike[[ {{min:Турникеты и шлагбаумы}}'dan]] — Satış ve Kurulum | SAT",
-    desc: "Taşkent'te turnike satışı ve montajı: geçiş turnikeleri, engelli kapıları, geçiş kontrol ve personel devam takibi entegrasyonu. Özbekistan genelinde kurulum.",
+    desc: "Taşkent'te tripod, döner ve boy turnike kurulumu: geçiş kontrol ve personel devam takibine bağlantı, kendi ekibimiz, işçilikte 3 yıl garanti.",
   },
   barrier: {
     h1: "Taşkent'te bariyer kurulumu — otoparklar, avlular ve siteler",
@@ -977,12 +979,12 @@ const zh: Record<string, ServiceSeo> = {
   intercom: {
     h1: "塔什干楼宇对讲系统安装",
     title: "塔什干楼宇对讲安装[[ — {price}起]] | SAT",
-    desc: "塔什干楼宇对讲安装：适用于住宅、办公与小区的 IP 可视对讲，呼叫可直达手机，并能与门禁系统联动。乌兹别克斯坦全境提供安装与售后服务。",
+    desc: "适用于公寓、独栋住宅与楼道单元门的 IP 可视对讲，呼叫直达手机，安装工程质保 3 年。",
   },
   turnstile: {
     h1: "塔什干闸机安装 — 整套交付",
     title: "塔什干闸机[[ {{min:Турникеты и шлагбаумы}}起]] — 销售与安装 | SAT",
-    desc: "塔什干闸机销售与安装：三辊闸、摆闸与平开门通道，可与门禁系统和考勤管理系统联动。乌兹别克斯坦全境提供安装、调试与长期维护服务。",
+    desc: "塔什干三辊闸、旋转闸与全高闸安装：接入门禁与考勤系统，自有施工团队，安装工程质保 3 年。",
   },
   barrier: {
     h1: "塔什干道闸安装 — 停车场、院落与住宅小区出入口",
