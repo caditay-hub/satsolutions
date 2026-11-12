@@ -89,11 +89,15 @@ export function PlanCanvas(p: {
     });
   }, []);
 
-  // колесо — с passive:false, иначе страница прокручивается вместо масштаба
+  // колесо: масштаб — только с Ctrl (⌘ на Mac), иначе прокручивается страница (решение владельца
+  // 12.11: колёсико над планом увеличивало план вместо прокрутки). Щипок на тачпаде браузер
+  // присылает как wheel с ctrlKey — он по-прежнему масштабирует. passive:false — чтобы отменить
+  // масштаб страницы браузером при Ctrl + колесо.
   useEffect(() => {
     const el = svg.current;
     if (!el) return;
     const onWheel = (e: WheelEvent) => {
+      if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
       const r = el.getBoundingClientRect();
       zoomAt(Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);

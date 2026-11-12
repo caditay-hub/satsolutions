@@ -54,7 +54,7 @@ const ru: CdPlanUi = {
   errStorage: "Браузер не дал сохранить проект — скачайте файл проекта, чтобы не потерять работу.",
   tools: { select: "Выбор", camera: "Камера", wall: "Стена", zone: "Зона охраны", scale: "Масштаб" },
   hint: {
-    select: "Перетащите камеру, чтобы переместить её; синюю точку — чтобы повернуть и наклонить. Колесо мыши или два пальца — масштаб, перетаскивание пустого места — сдвиг.",
+    select: "Перетащите камеру, чтобы переместить её; синюю точку — чтобы повернуть и наклонить. Ctrl + колесо мыши, кнопки «+ −» или два пальца — масштаб, перетаскивание пустого места — сдвиг.",
     pick: "Выберите камеру из каталога или задайте свою.",
     place: "Нажмите на план там, где будет установлена камера.",
     wall: "Отмечайте углы стены по очереди. Двойной щелчок, Enter или «Готово» — закончить, Esc — отменить.",
@@ -117,7 +117,7 @@ const uz: CdPlanUi = {
   errStorage: "Brauzer loyihani saqlashga ruxsat bermadi — ishingiz yoʻqolmasligi uchun loyiha faylini yuklab oling.",
   tools: { select: "Tanlash", camera: "Kamera", wall: "Devor", zone: "Qoʻriqlash zonasi", scale: "Masshtab" },
   hint: {
-    select: "Kamerani koʻchirish uchun uni torting; burish va qiyalatish uchun koʻk nuqtani torting. Sichqoncha gʻildiragi yoki ikki barmoq — masshtab, boʻsh joyni tortish — siljitish.",
+    select: "Kamerani koʻchirish uchun uni torting; burish va qiyalatish uchun koʻk nuqtani torting. Ctrl + sichqoncha gʻildiragi, «+ −» tugmalari yoki ikki barmoq — masshtab, boʻsh joyni tortish — siljitish.",
     pick: "Katalogdan kamera tanlang yoki oʻzingiznikini kiriting.",
     place: "Kamera oʻrnatiladigan joyni rejada bosing.",
     wall: "Devor burchaklarini ketma-ket belgilang. Ikki marta bosish, Enter yoki «Tayyor» — tugatish, Esc — bekor qilish.",
@@ -180,7 +180,7 @@ const en: CdPlanUi = {
   errStorage: "The browser did not allow saving the project — download the project file so you don't lose your work.",
   tools: { select: "Select", camera: "Camera", wall: "Wall", zone: "Protected area", scale: "Scale" },
   hint: {
-    select: "Drag a camera to move it; drag the blue dot to turn and tilt it. Mouse wheel or two fingers to zoom, drag empty space to pan.",
+    select: "Drag a camera to move it; drag the blue dot to turn and tilt it. Ctrl + mouse wheel, the + / − buttons or two fingers to zoom, drag empty space to pan.",
     pick: "Choose a camera from the catalogue or enter your own.",
     place: "Click the plan where the camera will be installed.",
     wall: "Click the wall corners one by one. Double-click, Enter or “Done” to finish, Esc to cancel.",
@@ -243,7 +243,7 @@ const tr: CdPlanUi = {
   errStorage: "Tarayıcı projeyi kaydetmeye izin vermedi — çalışmanızı kaybetmemek için proje dosyasını indirin.",
   tools: { select: "Seç", camera: "Kamera", wall: "Duvar", zone: "Korunan alan", scale: "Ölçek" },
   hint: {
-    select: "Taşımak için kamerayı sürükleyin; döndürmek ve eğmek için mavi noktayı sürükleyin. Fare tekerleği veya iki parmak yakınlaştırır, boş alanı sürüklemek kaydırır.",
+    select: "Taşımak için kamerayı sürükleyin; döndürmek ve eğmek için mavi noktayı sürükleyin. Ctrl + fare tekerleği, + / − düğmeleri veya iki parmak yakınlaştırır, boş alanı sürüklemek kaydırır.",
     pick: "Katalogdan bir kamera seçin veya kendi kameranızı girin.",
     place: "Kameranın takılacağı yere planda tıklayın.",
     wall: "Duvar köşelerini sırayla işaretleyin. Bitirmek için çift tıklama, Enter veya “Tamam”, iptal için Esc.",
@@ -306,7 +306,7 @@ const zh: CdPlanUi = {
   errStorage: "浏览器不允许保存项目——请下载项目文件，以免丢失工作。",
   tools: { select: "选择", camera: "摄像机", wall: "墙", zone: "保护区域", scale: "比例尺" },
   hint: {
-    select: "拖动摄像机可移动它；拖动蓝点可旋转和倾斜。鼠标滚轮或双指缩放，拖动空白处平移。",
+    select: "拖动摄像机可移动它；拖动蓝点可旋转和倾斜。按住 Ctrl 滚动鼠标滚轮、点击 + / − 按钮或双指缩放，拖动空白处平移。",
     pick: "从目录中选择摄像机，或输入自定义摄像机。",
     place: "在平面图上点击摄像机的安装位置。",
     wall: "依次点击墙的转角。双击、回车或“完成”结束，Esc 取消。",
