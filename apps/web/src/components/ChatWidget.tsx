@@ -242,9 +242,12 @@ export function ChatWidget() {
     if (typeof window === "undefined") return;
     if (chatDismissed()) return;
     if (window.matchMedia("(max-width: 767px)").matches) return;
-    // проектировщик видеонаблюдения: окно чата закрывало план и панель камеры (решение владельца 11.11)
-    if (/\/tools\/camera-lens-calculator(\/|$)/.test(window.location.pathname)) return;
-    const timer = window.setTimeout(() => setOpen(true), 12000);
+    // проектировщик видеонаблюдения: окно чата закрывало план и панель камеры (решение владельца 11.11).
+    // Адрес проверяем в момент открытия: виджет живёт между переходами, и таймер, запущенный на
+    // карточке товара, срабатывал уже на калькуляторе (найдено живой проверкой 12.11)
+    const onDesigner = () => /\/tools\/camera-lens-calculator(\/|$)/.test(window.location.pathname);
+    if (onDesigner()) return;
+    const timer = window.setTimeout(() => { if (!onDesigner()) setOpen(true); }, 12000);
     return () => window.clearTimeout(timer);
   }, []);
 

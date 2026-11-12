@@ -14,6 +14,9 @@ export function GlobalBackButton() {
   // usePathname из @/i18n/navigation отдаёт путь БЕЗ префикса локали,
   // поэтому главная на любом языке — это просто "/".
   if (pathname === "/") return null;
+  // калькулятор обзора камеры: кнопка лежала поверх левой панели настроек (живая проверка 12.11);
+  // путь назад там есть в хлебных крошках
+  if (pathname.startsWith("/tools/camera-lens-calculator")) return null;
 
   function goBack() {
     if (typeof window !== "undefined" && window.history.length > 1) {

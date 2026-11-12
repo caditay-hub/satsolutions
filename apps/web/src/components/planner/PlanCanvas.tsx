@@ -63,7 +63,9 @@ export function PlanCanvas(p: {
   }, []);
 
   const fit = useCallback(() => {
-    const s = Math.min(size.w / B.w, size.h / B.h) * 0.94;
+    // поля под кнопки масштаба справа (≈52 px + значок камеры) и линейку снизу: на узком полотне они закрывали
+    // камеры в углах плана (живая проверка 12.11); поля симметричные — план остаётся по центру
+    const s = Math.max(1e-6, Math.min((size.w - 2 * 72) / B.w, (size.h - 2 * 40) / B.h));
     setView({ s, ox: B.x + B.w / 2 - size.w / s / 2, oy: B.y + B.h / 2 - size.h / s / 2 });
   }, [B.x, B.y, B.w, B.h, size.w, size.h]);
 

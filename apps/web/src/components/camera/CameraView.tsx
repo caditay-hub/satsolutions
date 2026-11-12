@@ -137,19 +137,19 @@ export function CameraView(p: {
         </g>
       </svg>
 
-      {/* подписи поверх сцены: ширина кадра на дистанции и лицо в пикселях */}
+      {/* подписи поверх сцены — сверху: снизу справа их закрывала кнопка чата (живая проверка 12.11) */}
       <div className="pointer-events-none absolute left-2 top-2 rounded-lg bg-white/90 px-2.5 py-1 text-[11px] font-bold tabular-nums text-slate-800 shadow-sm sm:left-3 sm:top-3 sm:text-xs">
         {p.frameLabel}
       </div>
       {inFrame && face ? (
-        <figure className="pointer-events-none absolute bottom-2 right-2 overflow-hidden rounded-lg border border-white/80 bg-white shadow-md sm:bottom-3 sm:right-3">
+        <figure className="pointer-events-none absolute right-2 top-2 overflow-hidden rounded-lg border border-white/80 bg-white shadow-md sm:right-3 sm:top-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={face} alt="" className="block h-[60px] w-[48px] sm:h-[120px] sm:w-[96px]" style={{ imageRendering: "pixelated" }} />
           <figcaption className="max-w-[48px] px-0.5 py-0.5 text-center text-[8px] font-bold leading-tight tabular-nums text-slate-700 sm:max-w-[96px] sm:px-1.5 sm:text-[10px]">{p.faceLabel(faceW, faceH)}</figcaption>
         </figure>
       ) : null}
       {!inFrame ? (
-        <div className="absolute inset-x-3 bottom-3 rounded-lg bg-amber-50/95 px-3 py-2 text-xs font-semibold text-amber-900 shadow-sm">{p.outsideLabel}</div>
+        <div role="status" className="absolute inset-x-3 top-12 rounded-lg bg-amber-50/95 px-3 py-2 text-xs font-semibold text-amber-900 shadow-sm sm:top-14 sm:right-auto sm:max-w-[60%]">{p.outsideLabel}</div>
       ) : null}
     </div>
   );

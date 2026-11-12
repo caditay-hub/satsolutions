@@ -20,6 +20,8 @@ export type SimpleUi = {
   resAdvT: string;
   adv_: { narrower: string; moreMp: string; none: string; wider: string; exact: string; customOk: string; customNo: string };
   more: string; less: string;
+  /** Пометка в «Подробнее» у типовой камеры простого режима (не паспорт модели). */
+  typicalBadge: string;
   pickWidthHint: string;
   /** Подбор (часть 2): место, что нужно, карточки моделей. Подстановки — как выше, {v} значение. */
   pick: {
@@ -67,6 +69,7 @@ const ru: SimpleUi = {
     customNo: "Нужен угол обзора не шире {a} или разрешение от {nx} пикс. по ширине.",
   },
   more: "Подробнее", less: "Скрыть",
+  typicalBadge: "Типовая камера 1/2.8\"",
   pickWidthHint: "Сколько метров по ширине должно попасть в кадр на этом расстоянии",
   pick: {
     place: "Где будет камера",
@@ -132,6 +135,7 @@ const uz: SimpleUi = {
     customNo: "Koʻrish burchagi {a} dan keng boʻlmasligi yoki kenglik boʻyicha {nx} pikseldan ruxsat kerak.",
   },
   more: "Batafsil", less: "Yashirish",
+  typicalBadge: "Oddiy kamera 1/2.8\"",
   pickWidthHint: "Shu masofada kadrga kenglik boʻyicha necha metr tushishi kerak",
   pick: {
     place: "Kamera qayerda boʻladi",
@@ -197,6 +201,7 @@ const en: SimpleUi = {
     customNo: "You need a field of view no wider than {a} or a resolution of at least {nx} px across.",
   },
   more: "Details", less: "Hide",
+  typicalBadge: "Typical 1/2.8\" camera",
   pickWidthHint: "How many metres across must fit in the frame at this distance",
   pick: {
     place: "Where the camera goes",
@@ -262,6 +267,7 @@ const tr: SimpleUi = {
     customNo: "Görüş açısı {a} değerinden geniş olmamalı ya da genişlikte en az {nx} piksel çözünürlük gerekir.",
   },
   more: "Ayrıntılar", less: "Gizle",
+  typicalBadge: "Tipik 1/2.8\" kamera",
   pickWidthHint: "Bu mesafede kadraja kaç metre genişlik girmeli",
   pick: {
     place: "Kamera nereye takılacak",
@@ -327,6 +333,7 @@ const zh: SimpleUi = {
     customNo: "需要视场角不宽于 {a}，或水平分辨率不低于 {nx} 像素。",
   },
   more: "详细", less: "收起",
+  typicalBadge: "典型摄像机 1/2.8\"",
   pickWidthHint: "在该距离处画面需要覆盖多少米宽",
   pick: {
     place: "摄像机安装位置",

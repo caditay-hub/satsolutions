@@ -236,6 +236,8 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
     const q = new URLSearchParams(window.location.search);
     if (!q.has("v")) return;
     const i = parseQuery(q);
+    // ссылка без задачи (карточки товаров и ссылки до 12.11) — задача простого режима, а не «детали лица»
+    if (!q.has("lv") && i.std === "2014") i.lvl = "observe";
     setInp(i);
     // камера из ссылки не укладывается в простые настройки — сразу показываем, где она задана
     if (!simpleOf(i)) setAdvOpen(true);
@@ -301,6 +303,7 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
   const [pan, setPan] = useState(0);
   const [stage, setStage] = useState<"cam" | "top">("cam");
   const [more, setMore] = useState(false);
+  const [morePick, setMorePick] = useState(false); // у подбора — свой: раскрытое в «Одной камере» не переносится
   const moveTo = (d: number, x: number) => { set("d", d); setDx(x); };
   // поворот камеры: человек стоит на месте, меняются его дистанция по оси и смещение вбок
   const turn = (deg: number) => {
@@ -557,6 +560,8 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
   );
 
   /* ── сцена и три результата (одна камера) ── */
+  // человек сдвинут на виде сверху за край кадра: та же граница, что у сцены (полуширина на его глубине)
+  const outside = r.status === "ok" && Math.abs(dx) > r.scene.widthM / 2 + 0.3; // +0,3 м: как в CameraView — виден хотя бы краем
   const results = r.status === "ok" && sum ? (() => {
     const a = sum.advice;
     const advice = (() => {
@@ -572,7 +577,7 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
     })();
     const rows = [
       { k: "w", t: su.resWidthT, v: fill(su.resWidth, { d: fm(sum.depthM), w: fm(sum.widthM) }), tone: "slate" },
-      {
+      outside ? { k: "p", t: su.resDetT, tone: "no", v: su.outside } : {
         k: "p", t: su.resDetT, tone: sum.ok ? "ok" : "no",
         v: (sum.ok
           ? fill(su.detOk, { p: fppm(sum.ppm), t: taskName, m: fm(sum.maxDepthM) })
@@ -615,8 +620,8 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
           <div className="rounded-xl border border-slate-200 bg-white p-4">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <h3 className={h2}>{ui.outTitle}</h3>
-              <span className={`rounded-full px-2.5 py-1 text-[11px] font-bold ${r.optics.estimate ? "bg-amber-100 text-amber-800" : "bg-emerald-100 text-emerald-800"}`}>
-                {r.optics.estimate ? ui.badgeEstimate : ui.badgePassport}
+              <span className={`rounded-full px-2.5 py-1 text-[11px] font-bold ${simple ? "bg-slate-100 text-slate-700" : r.optics.estimate ? "bg-amber-100 text-amber-800" : "bg-emerald-100 text-emerald-800"}`}>
+                {simple ? su.typicalBadge : r.optics.estimate ? ui.badgeEstimate : ui.badgePassport}
               </span>
             </div>
             <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-3 sm:grid-cols-3">
@@ -770,12 +775,12 @@ export function CameraLensCalculator({ c, s: su, cat, locale }: Props) {
                 ? fill(su.pick.typical, { mp: `${typ.mp} ${su.mpUnit}`, f: fmm(typ.f), d: fm(inp.d), w: fm(typ.widthM), p: fppm(typ.ppm) })
                 : su.pick.typicalNone}
             </div>
-            <button type="button" aria-expanded={more} onClick={() => setMore((v) => !v)}
+            <button type="button" aria-expanded={morePick} onClick={() => setMorePick((v) => !v)}
               className="mt-2 inline-flex min-h-[40px] items-center gap-1.5 rounded-lg px-1 text-sm font-bold text-brand-700 hover:text-brand-600">
-              {more ? su.less : su.more}
-              <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform ${more ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+              {morePick ? su.less : su.more}
+              <svg viewBox="0 0 24 24" className={`h-4 w-4 transition-transform ${morePick ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
             </button>
-            {more ? (
+            {morePick ? (
           <div className="mt-2 border-t border-slate-100 pt-3">
           <h3 className={h2}>{ui.taskTitle}</h3>
           <dl className="mt-3 grid gap-x-4 gap-y-3 sm:grid-cols-2 xl:grid-cols-4">

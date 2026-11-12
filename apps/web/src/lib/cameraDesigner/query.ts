@@ -77,6 +77,7 @@ export function toQuery(i: CalcInput): string {
   for (const k of keys) q.set(NUMS[k][0], fmt(i[k]));
   if (i.src === "fov" && i.lens === "fixed" && i.vfov !== null) q.set("vf", fmt(i.vfov));
   if (i.geo) q.set("geo", "1");
-  if (i.mode === "task") q.set("lv", i.lvl);
+  // задача — всегда: в обычном режиме ссылка теряла выбор «что нужно видеть» (живая проверка 12.11)
+  q.set("lv", i.lvl);
   return q.toString();
 }

@@ -63,6 +63,8 @@ export function CameraOpticsBlock({ productId, locale }: { productId: string; lo
   const zoom0 = !!f0 && f0[0] !== f0[1];
   const calcInput: CalcInput = {
     ...DEFAULT_INPUT,
+    // задача по умолчанию — как в простом режиме калькулятора: «действия человека»
+    lvl: "observe",
     nx: nx ?? DEFAULT_INPUT.nx, ny: ny ?? DEFAULT_INPUT.ny,
     ...(zoom0 && f0
       ? { lens: "vari", fmin: f0[0], fmax: f0[1], hw: v0.hfovDeg[0], ht: v0.hfovDeg[1], f: f0[0] }
