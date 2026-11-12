@@ -5359,6 +5359,8 @@
     "chooseBrand": "Выберите производителя для просмотра полного каталога",
     "viewCatalog": "Смотреть каталог",
     "itemsShort": "{count} тов.",
+    "itemsCount": "{count, plural, one {# товар} few {# товара} many {# товаров} other {# товара}}",
+    "newBrand": "Новый бренд",
     "itemsInCatalog": "Товаров в каталоге: {count}",
     "itemsInside": "Товаров внутри: {count}",
     "brandsCount": "{count, plural, one {# бренд} few {# бренда} many {# брендов} other {# бренда}}",

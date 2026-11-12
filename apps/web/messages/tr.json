@@ -5359,6 +5359,8 @@
     "chooseBrand": "Tam kataloğu görüntülemek için bir üretici seçin",
     "viewCatalog": "Kataloğu görüntüle",
     "itemsShort": "{count} ürün",
+    "itemsCount": "{count} ürün",
+    "newBrand": "Yeni marka",
     "itemsInCatalog": "Katalogdaki ürünler: {count}",
     "itemsInside": "İçindeki ürünler: {count}",
     "brandsCount": "{count} marka",

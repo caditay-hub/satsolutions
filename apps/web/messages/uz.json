@@ -5359,6 +5359,8 @@
     "chooseBrand": "Toʻliq katalogni koʻrish uchun ishlab chiqaruvchini tanlang",
     "viewCatalog": "Katalogni koʻrish",
     "itemsShort": "{count} ta",
+    "itemsCount": "{count} ta mahsulot",
+    "newBrand": "Yangi brend",
     "itemsInCatalog": "Katalogdagi mahsulotlar: {count}",
     "itemsInside": "Ichidagi mahsulotlar: {count}",
     "brandsCount": "{count} ta brend",

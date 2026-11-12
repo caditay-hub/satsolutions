@@ -5359,6 +5359,8 @@
     "chooseBrand": "选择制造商以查看完整目录",
     "viewCatalog": "查看目录",
     "itemsShort": "{count} 件",
+    "itemsCount": "{count} 件商品",
+    "newBrand": "新品牌",
     "itemsInCatalog": "目录内产品：{count}",
     "itemsInside": "包含产品：{count}",
     "brandsCount": "{count} 个品牌",

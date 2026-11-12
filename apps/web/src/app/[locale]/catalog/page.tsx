@@ -28,113 +28,98 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
   };
 }
 
-// Цвета-акценты по брендам (для остальных — дефолт)
-const BRAND_COLORS: Record<string, string> = {
-  dahua: "#e02020", hikvision: "#e02020", avigilon: "#0F2741",
-  rubezh: "#c8102e", bolid: "#0a3d91", hilook: "#2e9bd6",
-  tplink: "#13C2C2", tapo: "#13C2C2", mercusys: "#d6001c",
-  witek: "#0072BC", kanihad: "#D71920", zkteco: "#00923F",
-  ubiquiti: "#0f1113", mikrotik: "#293239", prochee: "#328fa8",
-};
-
-// Фиксированный порядок витрины: эти бренды всегда первыми (в этом порядке),
-// далее — все остальные по убыванию количества товаров, в самом конце —
-// «Другие бренды» и «Прочее оборудование».
-const PINNED_FRONT = ["hikvision", "dahua", "bolid", "rubezh"];
+// Витрина брендов (12.11.2026, решение владельца: вёрстка «компактная сетка», порядок «по направлениям»).
+// Порядок фиксированный: видеонаблюдение/СКУД → пожарная сигнализация → сети и серверные;
+// бренд, которого здесь нет (новый, > 20 товаров), встаёт после них по убыванию количества;
+// в конце — «Другие бренды» (1..20 товаров) и «Комплектующие и аксессуары».
+const BRAND_ORDER = [
+  "hikvision", "dahua", "zkteco", "kanihad", // видеонаблюдение, СКУД, домофония
+  "bolid", "rubezh", "qr-systems", // пожарная и охранная сигнализация
+  "pixietech", "mikrotik", "tplink", "snr", "ruijie", "witek", "ubiquiti", // сети, Wi-Fi, серверные
+];
 const PINNED_LAST = "prochee";
 
-// Слаги-сборники, у которых нет фирменного лого: показываем оформленную плашку
-// (цветной значок + название + подпись «что внутри»). Pixietech сюда НЕ входит — у него своё лого.
-const TEXT_LABEL_SLUGS = new Set(["prochee"]);
-type CatchAll = { subtitle: string; color: string; icon: "grid" | "plus" };
-const CATCHALL: Record<string, CatchAll> = {
-  prochee: {
-    subtitle: "Комплектующие и аксессуары: кабель, оптика, шкафы, ИБП, инструменты",
-    color: "#2a7b90", // brand-700: подпись на белом читается (контраст 4,9; был 3,7)
-    icon: "grid",
-  },
+// Пропорции файлов логотипов (ширина / высота) — чтобы логотипы в плитках были одного «веса»:
+// площадь одинаковая, широкие — шире, но ниже (Hikvision полоской, Ubiquiti квадратом — больше не бывает).
+// Бренда нет в списке — коробка 140×56 с object-contain. Файлы: /uploads/brands/<slug>-std.png.
+const LOGO_RATIO: Record<string, number> = {
+  hikvision: 456 / 58, dahua: 456 / 136, bolid: 456 / 182, rubezh: 456 / 123, pixietech: 795 / 156,
+  mikrotik: 456 / 111, tplink: 456 / 174, snr: 299 / 87, zkteco: 456 / 115, ruijie: 456 / 136,
+  kanihad: 456 / 68, "qr-systems": 504 / 147, witek: 451 / 166, ubiquiti: 317 / 240,
+  cambium: 308 / 240, cisco: 455 / 240, h3c: 456 / 120, huawei: 238 / 240, vertiv: 456 / 112,
+  fanvil: 456 / 128, finen: 480 / 135, siklu: 240 / 240, "v-sol": 401 / 240, bdcom: 480 / 123,
+  "c-data": 480 / 137, "sibirskiy-arsenal": 400 / 94,
 };
-
-// Иконки для плашек-сборников (Heroicons outline).
-function CatchAllIcon({ kind }: { kind: "grid" | "plus" }) {
-  const d =
-    kind === "plus"
-      ? "M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z"
-      : "M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25A2.25 2.25 0 0113.5 8.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z";
-  return (
-    <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-      <path strokeLinecap="round" strokeLinejoin="round" d={d} />
-    </svg>
-  );
+const LOGO_AREA = 6400; // px², ≈ 150×43 для широкого, 79×60 для квадратного
+const LOGO_MAX_W = 150;
+const LOGO_MAX_H = 60;
+function logoBox(slug: string): { w: number; h: number } {
+  const r = LOGO_RATIO[slug];
+  if (!r) return { w: 140, h: 56 };
+  let h = Math.sqrt(LOGO_AREA / r);
+  let w = h * r;
+  if (w > LOGO_MAX_W) { w = LOGO_MAX_W; h = w / r; }
+  if (h > LOGO_MAX_H) { h = LOGO_MAX_H; w = h * r; }
+  return { w: Math.round(w), h: Math.round(h) };
 }
 
-// Оформленная плашка сборного раздела: цветной значок + имя + подпись.
-function CatchAllVisual({ name, subtitle, color, icon }: { name: string; subtitle?: string; color: string; icon: "grid" | "plus" }) {
-  return (
-    <div className="flex-1 flex flex-col items-center justify-center gap-2 px-4 py-5 min-h-[150px] bg-gradient-to-b from-white to-slate-50">
-      <div
-        className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105"
-        style={{ backgroundColor: color }}
-      >
-        <CatchAllIcon kind={icon} />
-      </div>
-      <span className="text-base sm:text-lg font-black text-slate-900 text-center leading-tight tracking-tight">{name}</span>
-      {subtitle ? (
-        <span className="text-[11px] font-medium text-slate-500 text-center leading-snug line-clamp-2">{subtitle}</span>
-      ) : null}
-    </div>
-  );
+// Пометка «новый бренд» до указанной даты (ISR 300 с — снимется сама).
+const NEW_BRAND_UNTIL: Record<string, string> = { "qr-systems": "2026-12-12" };
+function isNewBrand(slug: string): boolean {
+  const until = NEW_BRAND_UNTIL[slug];
+  return Boolean(until) && new Date().toISOString().slice(0, 10) < until;
 }
 
-// Единая карточка бренда (лого либо крупное название), используется и для «Прочее».
+const TILE =
+  "group relative flex flex-col items-center rounded-xl border border-slate-200 bg-white px-2.5 pt-3.5 pb-3 min-h-[138px] " +
+  "transition-all hover:border-brand-700 hover:shadow-lg hover:-translate-y-px";
+
+// Плитка бренда: логотип одного «веса», название и число товаров под ним.
 async function BrandCard({ b, locale }: { b: BrandDto; locale: string }) {
   const t = await getTranslations({ locale, namespace: "catalog" });
   const slug = b.slug.toLowerCase();
-  const forceText = TEXT_LABEL_SLUGS.has(slug);
-  const logo = !forceText && b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
+  const logo = b.logoImageUrl ? resolveImageUrl(b.logoImageUrl) : null;
   const name = localizeBrandName(slug, b.name, locale);
   const count = b.productCount ?? 0;
-  const color = BRAND_COLORS[slug] ?? "#328fa8";
+  const box = logoBox(slug);
   return (
-    <Link
-      href={`/catalog/${slug}`}
-      className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
-      style={{ "--brand-color": color } as React.CSSProperties}
-    >
-      {count > 0 && (
-        <span
-          className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
-          title={t("itemsInCatalog", { count })}
-        >
-          {t("itemsShort", { count })}
-        </span>
-      )}
-      {forceText && CATCHALL[slug] ? (
-        <CatchAllVisual name={name} subtitle={slug === "prochee" ? t("procheeSubtitle") : CATCHALL[slug].subtitle} color={CATCHALL[slug].color} icon={CATCHALL[slug].icon} />
-      ) : (
-        <div className="flex-1 flex items-center justify-center p-3 bg-white min-h-[150px]">
-          {logo ? (
-            <div className="relative h-32 w-full">
-              <Image src={logo} alt={name} fill className="object-contain" sizes="320px" />
-            </div>
-          ) : (
-            <span className="text-xl sm:text-2xl font-black text-slate-900 text-center leading-tight">{name}</span>
-          )}
-        </div>
-      )}
-      <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
-        <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-          {t("viewCatalog")}
-        </span>
-        <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
+    <Link href={`/catalog/${slug}`} className={TILE}>
+      <div className="flex h-16 w-full items-center justify-center">
+        {logo ? (
+          <div className="relative max-w-full" style={{ width: box.w, height: box.h }}>
+            <Image src={logo} alt={name} fill className="object-contain" sizes="160px" />
+          </div>
+        ) : (
+          <span className="text-lg font-black text-slate-900 text-center leading-tight">{name}</span>
+        )}
       </div>
+      <span className="mt-2 text-[13px] font-bold text-slate-900 text-center leading-tight">{name}</span>
+      {isNewBrand(slug) && (
+        <span className="mt-1 rounded-full bg-[#e02020] px-1.5 py-0.5 text-[9px] font-extrabold uppercase tracking-wider leading-none text-white">
+          {t("newBrand")}
+        </span>
+      )}
+      {count > 0 && <span className="mt-0.5 text-[11px] text-slate-500 text-center">{t("itemsCount", { count })}</span>}
     </Link>
   );
 }
 
-// «Прочее оборудование» раскрыто: чипы категорий внутри (топ по количеству),
+// Значок для плиток-сборников («Другие бренды», «Комплектующие»).
+function CatchAllIcon({ kind, color }: { kind: "grid" | "plus"; color: string }) {
+  const d =
+    kind === "plus"
+      ? "M12 5v14M5 12h14"
+      : "M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z";
+  return (
+    <div className="flex h-11 w-11 items-center justify-center rounded-xl shadow-sm ring-1 ring-black/5" style={{ backgroundColor: color }}>
+      <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+        <path strokeLinecap="round" strokeLinejoin="round" d={d} />
+      </svg>
+    </div>
+  );
+}
+
+// «Комплектующие и аксессуары» раскрыта: чипы категорий внутри (топ по количеству),
 // каждый ведёт сразу на /catalog/prochee/<type> — покупатель видит содержимое
 // «чёрного ящика», а Google получает внутренние ссылки на связки бренд×тип.
 async function ProcheeCard({ b, locale }: { b: BrandDto; locale: string }) {
@@ -147,45 +132,31 @@ async function ProcheeCard({ b, locale }: { b: BrandDto; locale: string }) {
       .sort((a, b2) => b2.count - a.count)
       .slice(0, 8);
   } catch { /* без чипов */ }
-  if (!inside.length) return <BrandCard b={b} locale={locale} />;
 
   const name = localizeBrandName("prochee", b.name, locale);
   const count = b.productCount ?? 0;
-  const color = CATCHALL["prochee"]?.color ?? "#328fa8";
   return (
-    <div className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col">
-      {/* Вся карточка кликабельна (оверлей), чипы — поверх со своими ссылками */}
-      <Link href="/catalog/prochee" className="absolute inset-0 z-0" aria-label={name} />
-      {count > 0 && (
-        <span className="pointer-events-none absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm">
-          {t("itemsShort", { count })}
-        </span>
-      )}
-      <div className="pointer-events-none flex flex-col items-center gap-2 px-4 pt-5 pb-2 bg-gradient-to-b from-white to-slate-50">
-        <div className="flex items-center justify-center w-14 h-14 rounded-2xl shadow-sm ring-1 ring-black/5" style={{ backgroundColor: color }}>
-          <CatchAllIcon kind="grid" />
+    <div className={`${TILE} col-span-2`}>
+      {/* Вся плитка кликабельна (оверлей), чипы — поверх со своими ссылками */}
+      <Link href="/catalog/prochee" className="absolute inset-0 z-0 rounded-xl" aria-label={name} />
+      <div className="pointer-events-none flex h-16 items-center justify-center">
+        <CatchAllIcon kind="grid" color="#2a7b90" />
+      </div>
+      <span className="pointer-events-none mt-2 text-[13px] font-bold text-slate-900 text-center leading-tight">{name}</span>
+      {count > 0 && <span className="pointer-events-none mt-0.5 text-[11px] text-slate-500">{t("itemsCount", { count })}</span>}
+      {inside.length > 0 && (
+        <div className="relative z-10 mt-2 flex flex-wrap justify-center gap-1">
+          {inside.map((p) => (
+            <Link
+              key={p.type}
+              href={`/catalog/prochee/${typeSlug(p.type)}`}
+              className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[10px] font-semibold text-slate-600 transition-colors hover:border-brand-500 hover:text-brand-700"
+            >
+              {localizeCatName(p.type, locale)} · {p.count}
+            </Link>
+          ))}
         </div>
-        <span className="text-base sm:text-lg font-black text-slate-900 text-center leading-tight tracking-tight">{name}</span>
-      </div>
-      <div className="relative z-10 flex flex-wrap justify-center gap-1.5 px-3 pb-4">
-        {inside.map((p) => (
-          <Link
-            key={p.type}
-            href={`/catalog/prochee/${typeSlug(p.type)}`}
-            className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[11px] font-semibold text-slate-600 transition-colors hover:border-brand-500 hover:text-brand-700"
-          >
-            {localizeCatName(p.type, locale)} · {p.count}
-          </Link>
-        ))}
-      </div>
-      <div className="pointer-events-none px-5 py-3 mt-auto flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
-        <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-          {t("viewCatalog")}
-        </span>
-        <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </div>
+      )}
     </div>
   );
 }
@@ -197,19 +168,18 @@ export default async function CatalogIndexPage({ params }: { params: Promise<{ l
   const t = await getTranslations({ locale, namespace: "catalog" });
   // Список брендов — динамический, из БД (published).
   const { brands: dbBrands } = await getBrands().catch(() => ({ brands: [] }));
-  // Крупные бренды — отдельными карточками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
+  // Крупные бренды — отдельными плитками; мелкие (1..20 товаров) сворачиваем в «Другие бренды».
   const { main: mainBrands, small: smallBrands } = splitBrands(dbBrands);
 
   const slugOf = (b: BrandDto) => b.slug.toLowerCase();
-  const front = PINNED_FRONT
+  const ordered = BRAND_ORDER
     .map((s) => mainBrands.find((b) => slugOf(b) === s))
     .filter((b): b is BrandDto => Boolean(b));
-  const procheeBrand = mainBrands.find((b) => slugOf(b) === PINNED_LAST) ?? null;
-  // Остальные — по убыванию количества товаров (Pixietech попадает сюда по своему числу).
-  const middle = mainBrands
-    .filter((b) => !PINNED_FRONT.includes(slugOf(b)) && slugOf(b) !== PINNED_LAST)
+  const rest = mainBrands
+    .filter((b) => !BRAND_ORDER.includes(slugOf(b)) && slugOf(b) !== PINNED_LAST)
     .sort((a, b) => (b.productCount ?? 0) - (a.productCount ?? 0));
-  const orderedBrands = [...front, ...middle];
+  const procheeBrand = mainBrands.find((b) => slugOf(b) === PINNED_LAST) ?? null;
+  const orderedBrands = [...ordered, ...rest];
 
   const smallTotal = smallBrands.reduce((s, b) => s + (b.productCount ?? 0), 0);
   const smallNames = smallBrands.map((b) => localizeBrandName(b.slug, b.name, locale)).join(", ");
@@ -230,37 +200,27 @@ export default async function CatalogIndexPage({ params }: { params: Promise<{ l
         <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">{t("productCatalog")}</h1>
         <p className="mt-1 text-sm text-slate-500">{t("chooseBrand")}</p>
 
-        <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {/* Фикс. фронт + остальные по убыванию количества */}
+        {/* items-start: высокая плитка «Комплектующие» (чипы) не вытягивает соседей по ряду */}
+        <div className="mt-5 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 items-start">
           {orderedBrands.map((b) => (
             <BrandCard key={b.slug.toLowerCase()} b={b} locale={locale} />
           ))}
 
-          {/* Предпоследняя: агрегат «Другие бренды» (1..20 товаров) — единый стиль карточки */}
+          {/* Предпоследняя: агрегат «Другие бренды» (1..20 товаров) */}
           {smallBrands.length > 0 && (
-            <Link
-              href={`/catalog/${OTHER_BRANDS_SLUG}`}
-              className="group relative border-2 border-slate-200 hover:shadow-xl transition-all bg-white overflow-hidden flex flex-col"
-            >
-              <span
-                className="absolute top-2 right-2 z-10 rounded-full bg-slate-900/85 px-2 py-0.5 text-[11px] font-bold leading-none text-white shadow-sm"
-                title={t("itemsInside", { count: smallTotal })}
-              >
-                {t("itemsShort", { count: smallTotal })}
-              </span>
-              <CatchAllVisual name={t("otherBrands")} subtitle={smallNames} color="#475569" icon="plus" />
-              <div className="px-5 py-3 flex items-center justify-between border-t border-slate-100" style={{ backgroundColor: "#fafafa" }}>
-                <span className="text-xs font-bold text-slate-600 group-hover:text-[#e02020] transition-colors uppercase tracking-wider">
-                  {t("brandsCount", { count: smallBrands.length })}
-                </span>
-                <svg className="w-4 h-4 text-slate-300 group-hover:text-[#e02020] transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
+            <Link href={`/catalog/${OTHER_BRANDS_SLUG}`} className={TILE} title={t("itemsInside", { count: smallTotal })}>
+              <div className="flex h-16 items-center justify-center">
+                <CatchAllIcon kind="plus" color="#475569" />
               </div>
+              <span className="mt-2 text-[13px] font-bold text-slate-900 text-center leading-tight">{t("otherBrands")}</span>
+              <span className="mt-0.5 text-[11px] text-slate-500 text-center">
+                {t("brandsCount", { count: smallBrands.length })} · {t("itemsCount", { count: smallTotal })}
+              </span>
+              <span className="mt-1.5 text-[10px] leading-snug text-slate-400 text-center line-clamp-2">{smallNames}</span>
             </Link>
           )}
 
-          {/* Самая последняя: «Прочее оборудование» — раскрыта по содержимому */}
+          {/* Самая последняя: «Комплектующие и аксессуары» — раскрыта по содержимому */}
           {procheeBrand && <ProcheeCard b={procheeBrand} locale={locale} />}
         </div>
       </div>

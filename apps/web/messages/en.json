@@ -5359,6 +5359,8 @@
     "chooseBrand": "Choose a manufacturer to browse the full catalog",
     "viewCatalog": "View catalog",
     "itemsShort": "{count} items",
+    "itemsCount": "{count, plural, one {# item} other {# items}}",
+    "newBrand": "New brand",
     "itemsInCatalog": "Products in catalog: {count}",
     "itemsInside": "Products inside: {count}",
     "brandsCount": "{count, plural, one {# brand} other {# brands}}",
