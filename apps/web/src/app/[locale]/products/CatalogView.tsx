@@ -61,7 +61,7 @@ const CATALOG_SCOPED_PAGE = 60;
 // Реиспользуемый рендер каталога с рабочим фильтром-сайдбаром. Вызывается маршрутом
 // /products, а также страницами типа (/products/type/[slug]) и бренда (/catalog/[brand]) —
 // им нужно зафиксировать scope (type / brand) и передать brandLanding (шапку бренда).
-export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [], typeH1 }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string; links?: { label: string; href: string }[] }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; /** H1 раздела вместо голого имени типа (typeSeo TYPE_H1) */ typeH1?: string; }) {
+export async function CatalogView({ params, searchParams, brandLanding, groupLanding, pathType, pairSeo, skipBreadcrumbLd = false, listPath, listFixed = [], typeH1 }: { params?: Promise<{ locale: string }>; searchParams: Promise<{ page?: string; category?: string; brand?: string; q?: string; sort?: string; mp?: string; technology?: string; installationType?: string; type?: string; perPage?: string; chars?: string; priceMin?: string; priceMax?: string; view?: string }>; brandLanding?: { name: string; seoH1?: string; description?: string; logoUrl?: string | null; docs?: { href: string; label: string }[]; seo?: { intro: string; faq: { q: string; a: string }[] } | null }; groupLanding?: { name: string; idx: number; types: string[]; seoH1?: string; intro?: string; long?: string; serviceHref?: string; serviceLabel?: string; links?: { label: string; href: string }[] }; pathType?: string; pairSeo?: { intro: string; faq: { q: string; a: string }[]; heading: string } | null; /** родительская страница уже отдала BreadcrumbList — второго на странице быть не должно */ skipBreadcrumbLd?: boolean; /** чистый адрес раздела для пагинации (/products/type/x, /catalog/brand…) */ listPath?: string; /** параметры, уже зашитые в путь раздела, — в ссылки пагинации не идут */ listFixed?: string[]; /** H1 раздела вместо голого имени типа (typeSeo TYPE_H1) */ typeH1?: string; }) {
   const sp = await searchParams;
   const { locale } = (await params) ?? { locale: routing.defaultLocale };
   const tc = await getTranslations({ locale, namespace: "catalog" });
@@ -341,6 +341,16 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
 
       {brandLanding?.description ? (
         <p className="mb-4 max-w-3xl text-[14px] leading-relaxed text-slate-500">{brandLanding.description}</p>
+      ) : null}
+      {/* Документы производителя о статусе партнёра (brandConfig.docs) — письмо QR Systems № 85 от 10.11.2026 */}
+      {brandLanding?.docs?.length ? (
+        <p className="mb-4 max-w-3xl text-[14px] leading-relaxed">
+          {brandLanding.docs.map((d) => (
+            <a key={d.href} href={d.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-800">
+              <i className="ti ti-file-type-pdf text-base" aria-hidden /> {d.label}
+            </a>
+          ))}
+        </p>
       ) : null}
 
       {/* Интро hub-страницы группы + мост «купить ↔ установить» на профильную услугу (groupSeo) */}

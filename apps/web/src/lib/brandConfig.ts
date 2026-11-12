@@ -1,6 +1,6 @@
 // Конфиг брендовых страниц каталога: displayName + базовое описание (RU; локализация — brandI18n).
 // Вынесен из /catalog/[brand]/page.tsx, используется также страницами бренд×категория.
-export const BRAND_CONFIG: Record<string, { displayName: string; description: string }> = {
+export const BRAND_CONFIG: Record<string, { displayName: string; description: string; docs?: { href: string; key: "partnerLetter" }[] }> = {
   dahua: {
     displayName: "Dahua Technology",
     description:
@@ -20,6 +20,13 @@ export const BRAND_CONFIG: Record<string, { displayName: string; description: st
     displayName: "Болид",
     description:
       "Болид — российский производитель интегрированных систем охраны ИСО Орион: пожарная и охранная сигнализация, контроль доступа, видеонаблюдение, оповещение.",
+  },
+  "qr-systems": {
+    displayName: "QR Systems",
+    description:
+      "QR Systems — казахстанский производитель адресно-аналоговых систем пожарной сигнализации: приёмно-контрольные приборы ППК-02, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства, модули дымоудаления, реле и расширители. SAT Solutions — официальный партнёр и представитель QR Systems в Узбекистане: поставка, проектирование и монтаж.",
+    // Письмо производителя о статусе официального партнёра (исх. № 85 от 10.11.2026) — ссылка на странице бренда
+    docs: [{ href: "https://api.satsolutions.uz/uploads/docs/qr-systems-partner-letter-2026-11-10.pdf", key: "partnerLetter" }],
   },
   "sibirskiy-arsenal": {
     displayName: "Сибирский Арсенал",

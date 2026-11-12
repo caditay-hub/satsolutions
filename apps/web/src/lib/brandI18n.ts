@@ -30,6 +30,12 @@ const BRAND_DESC: Record<string, Loc> = {
     tr: "Bolid, ISO Orion entegre güvenlik sistemlerinin Rus üreticisidir: yangın ve hırsız alarmı, geçiş kontrolü, video gözetim ve anons.",
     zh: "Bolid 是俄罗斯 ISO Orion 集成安防系统制造商：消防和入侵报警、门禁、视频监控和广播。",
   },
+  "qr-systems": {
+    en: "QR Systems is a Kazakhstani manufacturer of addressable analogue fire alarm systems: PPK-02 control panels, addressable smoke, heat and manual detectors, wireless devices, smoke-extraction modules, relays and expanders. SAT Solutions is the official partner and representative of QR Systems in Uzbekistan: supply, design and installation.",
+    uz: "QR Systems — manzilli-analogli yongʻin signalizatsiyasi tizimlarining qozogʻistonlik ishlab chiqaruvchisi: PPK-02 qabul-nazorat qurilmalari, manzilli tutun, issiqlik va qoʻl izveshatellari, radiokanal qurilmalar, tutun chiqarish modullari, relelar va kengaytirgichlar. SAT Solutions — QR Systems kompaniyasining Oʻzbekistondagi rasmiy hamkori va vakili: yetkazib berish, loyihalash va montaj.",
+    tr: "QR Systems, adresli analog yangın alarm sistemlerinin Kazakistanlı üreticisidir: PPK-02 kontrol panelleri, adresli duman, ısı ve manuel dedektörler, kablosuz cihazlar, duman tahliye modülleri, röleler ve genişleticiler. SAT Solutions, QR Systems'in Özbekistan'daki resmi iş ortağı ve temsilcisidir: tedarik, projelendirme ve montaj.",
+    zh: "QR Systems 是哈萨克斯坦可寻址模拟火灾报警系统制造商：PPK-02 控制主机、可寻址感烟、感温和手动探测器、无线设备、排烟模块、继电器和扩展器。SAT Solutions 是 QR Systems 在乌兹别克斯坦的官方合作伙伴和代表：供货、设计和安装。",
+  },
   "sibirskiy-arsenal": {
     en: "Sibirsky Arsenal is a Russian manufacturer of fire and security alarm control panels: the Grand Magistr and Altai series, notification devices and automation.",
     uz: "Sibirsky Arsenal — qoʻriqlash-yongʻin signalizatsiyasi qabul-nazorat qurilmalarining rossiyalik ishlab chiqaruvchisi: «Grand Magistr» va «Altai» seriyalari, ogohlantirish qurilmalari va avtomatika.",
@@ -227,6 +233,7 @@ const BRAND_NAME: Record<string, Loc> = {
   rubezh: { uz: "Rubezh", en: "Rubezh", tr: "Rubezh", zh: "Rubezh" },
   bolid: { uz: "Bolid", en: "Bolid", tr: "Bolid", zh: "Bolid" },
   "sibirskiy-arsenal": { uz: "Sibirsky Arsenal", en: "Sibirsky Arsenal", tr: "Sibirsky Arsenal", zh: "Sibirsky Arsenal" },
+  "qr-systems": { uz: "QR Systems", en: "QR Systems", tr: "QR Systems", zh: "QR Systems" },
 };
 
 /** Локализованное имя бренда (для названий с кириллицей; настоящие бренды — фолбэк без изменений). */

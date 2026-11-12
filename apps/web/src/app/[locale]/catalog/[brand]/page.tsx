@@ -18,6 +18,16 @@ import { serviceForCategory } from "@/lib/servicesData";
 import { withOgUrl } from "@/lib/metadata";
 
 const SITE = "https://satsolutions.uz";
+// Подписи к документам производителя на странице бренда (brandConfig.docs)
+const PARTNER_DOC_LABEL: Record<"partnerLetter", Record<string, string>> = {
+  partnerLetter: {
+    ru: "Письмо производителя о статусе официального партнёра и представителя в Узбекистане (PDF)",
+    uz: "Ishlab chiqaruvchining Oʻzbekistondagi rasmiy hamkor va vakil maqomi toʻgʻrisidagi xati (PDF)",
+    en: "Manufacturer's letter confirming official partner and representative status in Uzbekistan (PDF)",
+    tr: "Üreticinin Özbekistan'daki resmi iş ortağı ve temsilci statüsünü teyit eden yazısı (PDF)",
+    zh: "制造商关于乌兹别克斯坦官方合作伙伴和代表资格的确认函（PDF）",
+  },
+};
 const locPath = (locale: string, path: string) => `${SITE}${locale === "ru" ? "" : `/${locale}`}${path}`;
 
 // Гео-хвост к H1 бренда: кластер «<бренд> + страна» — самый спросовый и наименее
@@ -133,6 +143,7 @@ export default async function BrandCatalogPage({
       seoH1: `${brandName} ${BRAND_H1_GEO[locale] ?? BRAND_H1_GEO.ru}`,
       description: localizeBrandDesc(brandSlug, cfg.description, locale),
       logoUrl,
+      docs: cfg.docs?.map((d) => ({ href: d.href, label: PARTNER_DOC_LABEL[d.key][locale] ?? PARTNER_DOC_LABEL[d.key].ru })),
       seo: seo ? { intro: seo.intro, faq: seo.faq } : null,
     },
   } as any);
