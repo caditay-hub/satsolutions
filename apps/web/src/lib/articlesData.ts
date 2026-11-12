@@ -13772,6 +13772,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-10",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
+    brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
     loc: {
       ru: {
         title: "Обслуживание пожарной сигнализации в Узбекистане: годовой план вместо «раз в квартал»",
@@ -13800,6 +13801,7 @@ export const ARTICLES: Article[] = [
           { h: "Как это устроено у нас", p: [
             "SAT Solutions обслуживает по договору системы, смонтированные нашими специалистами: составляем годовой план по документации установленного оборудования, ведём журнал работ, готовим документы, которые предъявляются при проверке. Работаем по Ташкенту и регионам.",
             "Если вы принимаете объект и не знаете, какой режим обслуживания вам положен — пришлите состав системы и паспорта оборудования, разберём и посчитаем регламент под ваш случай. Статья описывает нормы в общем виде: конкретные сроки для вашего оборудования определяются его документацией.",
+            "С ноября 2026 года к адресно-аналоговым системам Болид и Рубеж в нашем каталоге добавилась линейка QR Systems — казахстанского производителя, официальным партнёром и представителем которого в Узбекистане является SAT Solutions. В неё входят приборы ППК-02 на 250 и 500 адресов, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства 868 МГц и модули управления — 44 позиции с ценами в сумах собраны в разделе бренда QR Systems.",
           ] },
         ],
       },
@@ -13830,6 +13832,7 @@ export const ARTICLES: Article[] = [
           { h: "Bizda bu qanday tashkil etilgan", p: [
             "SAT Solutions shartnoma boʻyicha mutaxassislarimiz montaj qilgan tizimlarga xizmat koʻrsatadi: oʻrnatilgan uskuna hujjatlari boʻyicha yillik reja tuzamiz, ishlar jurnalini yuritamiz, tekshiruvda taqdim etiladigan hujjatlarni tayyorlaymiz. Toshkent va viloyatlar boʻylab ishlaymiz.",
             "Agar obyektni qabul qilayotgan boʻlsangiz va qanday xizmat rejimi tegishli ekanini bilmasangiz — tizim tarkibi va uskuna pasportlarini yuboring, sizning holatingizga moslab reglamentni hisoblab beramiz. Maqola normalarni umumiy holda tavsiflaydi: uskunangiz uchun aniq muddatlar uning hujjatlari bilan belgilanadi.",
+            "2026-yil noyabridan katalogimizdagi Bolid va Rubej manzilli-analogli tizimlariga QR Systems liniyasi qoʻshildi — bu Qozogʻiston ishlab chiqaruvchisi boʻlib, SAT Solutions uning Oʻzbekistondagi rasmiy hamkori va vakilidir. Liniyaga 250 va 500 manzilli PPK-02 asboblari, manzilli tutun, issiqlik va qoʻl izveshchatellari, 868 MGs radiokanal qurilmalari va boshqaruv modullari kiradi — soʻmdagi narxlari bilan 44 ta pozitsiya QR Systems brendi boʻlimida jamlangan.",
           ] },
         ],
       },
@@ -13860,6 +13863,7 @@ export const ARTICLES: Article[] = [
           { h: "How we do it", p: [
             "SAT Solutions services, under contract, the systems installed by our own specialists: we draw up the annual plan from the documentation of the installed equipment, keep the work log and prepare the documents presented during an inspection. We work in Tashkent and the regions.",
             "If you are accepting a site and are unsure which servicing schedule applies, send us the system composition and the equipment passports and we will work out the routine for your case. This article describes the norms in general terms: the exact intervals for your equipment come from its documentation.",
+            "Since November 2026 the Bolid and Rubezh addressable analogue systems in our catalogue have been joined by the QR Systems range from a Kazakhstan manufacturer, for which SAT Solutions is the official partner and representative in Uzbekistan. It includes PPK-02 control panels for 250 and 500 addresses, addressable smoke, heat and manual call points, 868 MHz wireless devices and control modules — 44 items with prices in UZS are listed in the QR Systems brand section.",
           ] },
         ],
       },
@@ -13890,6 +13894,7 @@ export const ARTICLES: Article[] = [
           { h: "Bizde nasıl yürüyor", p: [
             "SAT Solutions, sözleşme kapsamında kendi uzmanlarımızın kurduğu sistemlere bakım yapar: kurulu ekipmanın belgelerinden yıllık planı hazırlar, iş defterini tutar ve denetimde sunulacak belgeleri düzenler. Taşkent ve bölgelerde çalışıyoruz.",
             "Bir tesisi teslim alıyor ve hangi bakım rejiminin geçerli olduğunu bilmiyorsanız — sistem kapsamını ve ekipman pasaportlarını gönderin, sizin durumunuza göre rutini hesaplayalım. Bu yazı normları genel hatlarıyla anlatır: ekipmanınız için kesin süreler onun belgelerinden gelir.",
+            "Kasım 2026'dan itibaren kataloğumuzdaki Bolid ve Rubezh adresli analog sistemlere, SAT Solutions'ın Özbekistan'daki resmi ortağı ve temsilcisi olduğu Kazakistanlı üreticinin QR Systems serisi eklendi. Seride 250 ve 500 adresli PPK-02 panelleri, adresli duman, ısı ve manuel dedektörler, 868 MHz kablosuz cihazlar ve kontrol modülleri bulunur — som cinsinden fiyatlarıyla 44 ürün QR Systems marka bölümünde yer alır.",
           ] },
         ],
       },
@@ -13920,6 +13925,7 @@ export const ARTICLES: Article[] = [
           { h: "我们是怎么做的", p: [
             "SAT Solutions 按合同为我们自己的专家安装的系统提供维护：依据已安装设备的文件编制年度计划、记录工作日志、准备检查时需出示的文件。我们服务于塔什干及各地区。",
             "如果您正在接收项目、不清楚适用哪种维护制度——请把系统构成和设备护照发给我们，我们会按您的情况核算例行方案。本文以概括方式介绍规范：您设备的确切周期以其文件为准。",
+            "自 2026 年 11 月起，我们目录中的 Bolid 和 Rubezh 可寻址模拟系统之外新增了 QR Systems 系列——这是一家哈萨克斯坦制造商，SAT Solutions 是其在乌兹别克斯坦的官方合作伙伴和代表。该系列包括 250 和 500 地址的 PPK-02 控制主机、可寻址感烟、感温和手动探测器、868 MHz 无线设备以及控制模块——44 款产品均以苏姆标价，集中在 QR Systems 品牌页面。",
           ] },
         ],
       },
@@ -17542,6 +17548,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-09",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
+    brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
     loc: {
       ru: {
         title: "Пожарная сигнализация для бизнеса: что требует инспекция в Узбекистане", seoTitle: "Пожарная сигнализация для бизнеса: требования инспекции",
@@ -17554,6 +17561,7 @@ export const ARTICLES: Article[] = [
           { h: "Пороговая или адресная: в чём разница", p: [
             "Пороговая система — датчики на общем шлейфе: панель видит «тревога на линии 2», но не знает, какой именно датчик сработал. Это дёшево и достаточно для помещений до ~300 м². Приборы Рубеж и Алтай — типовой сертифицированный вариант.",
             "Адресная система знает каждый датчик по имени: панель показывает конкретное помещение, следит за запылённостью камер и сама сообщает о неисправностях. Для зданий со множеством помещений это не роскошь, а требование норм — плюс кратно быстрее реакция и дешевле обслуживание.",
+            "С ноября 2026 года к адресно-аналоговым системам Болид и Рубеж в нашем каталоге добавилась линейка QR Systems — казахстанского производителя, официальным партнёром и представителем которого в Узбекистане является SAT Solutions. В неё входят приборы ППК-02 на 250 и 500 адресов, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства 868 МГц и модули управления — 44 позиции с ценами в сумах собраны в разделе бренда QR Systems.",
           ] },
           { h: "Что проверяет инспектор", p: [
             "Проект и исполнительную документацию от лицензированной организации, сертификаты на оборудование, работоспособность каждого извещателя, звук и видимость оповещателей, таблички «Выход», журнал технического обслуживания. Система без договора на ТО формально считается неработающей.",
@@ -17585,6 +17593,7 @@ export const ARTICLES: Article[] = [
           { h: "Chegara yoki adresli: farqi nimada", p: [
             "Chegara tizimi — umumiy shleyfdagi datchiklar: panel «2-liniyada trevoga»ni koʻradi, lekin aynan qaysi datchik ishlaganini bilmaydi. Bu arzon va ~300 m² gacha xonalar uchun yetarli. Rubej va Oltoy asboblari — namunaviy sertifikatlangan variant.",
             "Adresli tizim har datchikni nomi bilan biladi: panel aniq xonani koʻrsatadi, kameralar changlanishini kuzatadi va nosozliklar haqida oʻzi xabar beradi. Koʻp xonali binolar uchun bu hashamat emas, meʼyor talabi — bundan tashqari reaksiya tezroq va xizmat arzonroq.",
+            "2026-yil noyabridan katalogimizdagi Bolid va Rubej manzilli-analogli tizimlariga QR Systems liniyasi qoʻshildi — bu Qozogʻiston ishlab chiqaruvchisi boʻlib, SAT Solutions uning Oʻzbekistondagi rasmiy hamkori va vakilidir. Liniyaga 250 va 500 manzilli PPK-02 asboblari, manzilli tutun, issiqlik va qoʻl izveshchatellari, 868 MGs radiokanal qurilmalari va boshqaruv modullari kiradi — soʻmdagi narxlari bilan 44 ta pozitsiya QR Systems brendi boʻlimida jamlangan.",
           ] },
           { h: "Inspektor nimani tekshiradi", p: [
             "Litsenziyali tashkilot loyihasi va ijro hujjatlarini, uskuna sertifikatlarini, har izveshchatelning ishlashini, ogohlantirgichlar ovozi va koʻrinishini, «Chiqish» tablolarini, texnik xizmat jurnalini. TO shartnomasisiz tizim rasman ishlamayotgan hisoblanadi.",
@@ -17616,6 +17625,7 @@ export const ARTICLES: Article[] = [
           { h: "Conventional or addressable: the difference", p: [
             "A conventional system has detectors on a shared loop: the panel sees an alarm on line 2 but not which detector fired. It is cheap and sufficient up to ~300 m². Rubezh and Altai panels are the typical certified choice.",
             "An addressable system knows every detector by name: the panel shows the exact room, watches chamber contamination and reports faults itself. For buildings with many rooms it is not a luxury but a code requirement — plus faster response and cheaper maintenance.",
+            "Since November 2026 the Bolid and Rubezh addressable analogue systems in our catalogue have been joined by the QR Systems range from a Kazakhstan manufacturer, for which SAT Solutions is the official partner and representative in Uzbekistan. It includes PPK-02 control panels for 250 and 500 addresses, addressable smoke, heat and manual call points, 868 MHz wireless devices and control modules — 44 items with prices in UZS are listed in the QR Systems brand section.",
           ] },
           { h: "What the inspector checks", p: [
             "Design and as-built documents from a licensed organisation, equipment certificates, operation of every detector, sounder audibility, EXIT signs, the maintenance log. A system without a service contract formally counts as non-operational.",
@@ -17647,6 +17657,7 @@ export const ARTICLES: Article[] = [
           { h: "Konvansiyonel mi adresli mi", p: [
             "Konvansiyonel sistemde dedektörler ortak hattadır: panel «2. hatta alarm» der ama hangi dedektör olduğunu bilmez. Ucuzdur ve ~300 m²'ye kadar yeterlidir. Rubezh ve Altai panelleri tipik sertifikalı seçimdir.",
             "Adresli sistem her dedektörü adıyla bilir: panel tam odayı gösterir, kirlenmeyi izler ve arızayı kendisi bildirir. Çok odalı binalarda bu lüks değil yönetmelik gereğidir.",
+            "Kasım 2026'dan itibaren kataloğumuzdaki Bolid ve Rubezh adresli analog sistemlere, SAT Solutions'ın Özbekistan'daki resmi ortağı ve temsilcisi olduğu Kazakistanlı üreticinin QR Systems serisi eklendi. Seride 250 ve 500 adresli PPK-02 panelleri, adresli duman, ısı ve manuel dedektörler, 868 MHz kablosuz cihazlar ve kontrol modülleri bulunur — som cinsinden fiyatlarıyla 44 ürün QR Systems marka bölümünde yer alır.",
           ] },
           { h: "Müfettiş neyi kontrol eder", p: [
             "Lisanslı kuruluşun projesi ve uygulama belgeleri, ekipman sertifikaları, her dedektörün çalışması, sirenlerin duyulurluğu, ÇIKIŞ levhaları, bakım defteri. Bakım sözleşmesi olmayan sistem resmen çalışmıyor sayılır.",
@@ -17678,6 +17689,7 @@ export const ARTICLES: Article[] = [
           { h: "多线制与总线制的区别", p: [
             "多线制系统的探测器共用回路：主机只知道「2 号回路报警」，不知道具体是哪只探测器。价格低，适合约 300 平米以内的场所。Rubezh 与 Altai 主机是典型的认证选择。",
             "总线制系统认识每一只探测器：主机直接显示具体房间，监测探测器污染并自动上报故障。对多房间建筑而言这不是奢侈品而是规范要求——响应更快，维护更省。",
+            "自 2026 年 11 月起，我们目录中的 Bolid 和 Rubezh 可寻址模拟系统之外新增了 QR Systems 系列——这是一家哈萨克斯坦制造商，SAT Solutions 是其在乌兹别克斯坦的官方合作伙伴和代表。该系列包括 250 和 500 地址的 PPK-02 控制主机、可寻址感烟、感温和手动探测器、868 MHz 无线设备以及控制模块——44 款产品均以苏姆标价，集中在 QR Systems 品牌页面。",
           ] },
           { h: "检查人员查什么", p: [
             "持证单位的设计与竣工文件、设备证书、每只探测器的动作、警报器的声响与可见性、「安全出口」标志、维保记录。没有维保合同的系统在形式上视为不工作。",
@@ -18169,6 +18181,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-09-09",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost"],
+    brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
     loc: {
       ru: {
         title: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая", seoTitle: "Виды пожарной сигнализации: пороговая, адресная, аналоговая",
@@ -18177,6 +18190,7 @@ export const ARTICLES: Article[] = [
           { h: "Три типа систем — в чём разница", p: [
             "Пороговая (неадресная) сигнализация — самая простая и дешёвая: извещатели собраны в шлейфы, и при срабатывании прибор показывает только номер шлейфа. «Тревога во втором шлейфе» означает поиск по всему этажу. Для маленького магазина или офиса из пары комнат этого достаточно; для объекта побольше поиск источника тревоги превращается в проблему.",
             "Адресная система знает каждый извещатель по имени: прибор показывает не шлейф, а конкретную точку — «дым, кабинет 214». Адресно-аналоговая идёт дальше: извещатель постоянно передаёт уровень задымлённости, прибор сам отличает запылённость от возгорания и сообщает о загрязнении датчика заранее. Меньше ложных тревог, выше живучесть линии — стандарт для средних и крупных объектов.",
+            "С ноября 2026 года к адресно-аналоговым системам Болид и Рубеж в нашем каталоге добавилась линейка QR Systems — казахстанского производителя, официальным партнёром и представителем которого в Узбекистане является SAT Solutions. В неё входят приборы ППК-02 на 250 и 500 адресов, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства 868 МГц и модули управления — 44 позиции с ценами в сумах собраны в разделе бренда QR Systems.",
           ] },
           { h: "Какие бывают извещатели", p: [
             "Дымовые оптические — основной тип для офисов, гостиниц и магазинов: реагируют на ранней стадии тления. Тепловые ставят там, где дым и пар в порядке вещей, — кухни, парилки, некоторые цеха: они срабатывают на температуру или скорость её роста. Извещатели пламени ловят открытый огонь за секунды и работают в высоких цехах и на складах ГСМ, где дым до потолка дойдёт слишком поздно.",
@@ -18205,6 +18219,7 @@ export const ARTICLES: Article[] = [
           { h: "Uch xil tizim — farqi nimada", p: [
             "Chegaraviy (manzilsiz) signalizatsiya — eng oddiy va arzon: xabar beruvchilar shleyflarga yigʻilgan, ishga tushganda prib faqat shleyf raqamini koʻrsatadi. «Ikkinchi shleyfda trevoga» butun qavat boʻylab qidiruvni anglatadi. Kichik doʻkon yoki bir juft xonali ofisga bu yetarli; kattaroq obyektda trevoga manbasini topish muammoga aylanadi.",
             "Manzilli tizim har xabar beruvchini nomma-nom biladi: prib shleyfni emas, aniq nuqtani koʻrsatadi — «tutun, 214-xona». Manzilli-analog undan nariga boradi: xabar beruvchi tutun darajasini doimiy uzatadi, prib changni yongʻindan oʻzi farqlaydi va datchik ifloslanishini oldindan aytadi. Yolgʻon trevogalar kam, liniya yashovchanligi yuqori — oʻrta va yirik obyektlar standarti.",
+            "2026-yil noyabridan katalogimizdagi Bolid va Rubej manzilli-analogli tizimlariga QR Systems liniyasi qoʻshildi — bu Qozogʻiston ishlab chiqaruvchisi boʻlib, SAT Solutions uning Oʻzbekistondagi rasmiy hamkori va vakilidir. Liniyaga 250 va 500 manzilli PPK-02 asboblari, manzilli tutun, issiqlik va qoʻl izveshchatellari, 868 MGs radiokanal qurilmalari va boshqaruv modullari kiradi — soʻmdagi narxlari bilan 44 ta pozitsiya QR Systems brendi boʻlimida jamlangan.",
           ] },
           { h: "Xabar beruvchilar qanday boʻladi", p: [
             "Optik tutun datchiklari — ofis, mehmonxona va doʻkonlarning asosiy turi: bijgʻishning erta bosqichida javob beradi. Issiqlik datchiklari tutun va bugʻ odatiy joylarga qoʻyiladi — oshxonalar, bugʻxonalar, ayrim sexlar: ular haroratga yoki uning oʻsish tezligiga ishlaydi. Alanga datchiklari ochiq olovni soniyalarda ushlaydi va tutun shipga juda kech yetadigan baland sexlar va YoQM omborlarida ishlaydi.",
@@ -18233,6 +18248,7 @@ export const ARTICLES: Article[] = [
           { h: "Three system types — the difference", p: [
             "A conventional (non-addressable) alarm is the simplest and cheapest: detectors are grouped into loops, and on activation the panel shows only the loop number. \"Alarm in loop two\" means searching the whole floor. For a small shop or a two-room office that is fine; on anything bigger, locating the alarm source becomes a problem.",
             "An addressable system knows every detector by name: the panel shows not a loop but the exact point — \"smoke, room 214\". Analogue addressable goes further: the detector continuously reports the smoke level, the panel itself tells dust from fire and warns about a dirty detector in advance. Fewer false alarms, higher line survivability — the standard for medium and large sites.",
+            "Since November 2026 the Bolid and Rubezh addressable analogue systems in our catalogue have been joined by the QR Systems range from a Kazakhstan manufacturer, for which SAT Solutions is the official partner and representative in Uzbekistan. It includes PPK-02 control panels for 250 and 500 addresses, addressable smoke, heat and manual call points, 868 MHz wireless devices and control modules — 44 items with prices in UZS are listed in the QR Systems brand section.",
           ] },
           { h: "Detector types", p: [
             "Optical smoke detectors are the workhorse for offices, hotels and shops: they react at the early smoldering stage. Heat detectors go where smoke and steam are normal — kitchens, steam rooms, some workshops: they respond to temperature or its rate of rise. Flame detectors catch open fire within seconds and serve tall workshops and fuel warehouses, where smoke would reach the ceiling too late.",
@@ -18261,6 +18277,7 @@ export const ARTICLES: Article[] = [
           { h: "Üç sistem türü — fark nerede", p: [
             "Konvansiyonel (adressiz) alarm en basit ve en ucuzdur: dedektörler zonlara toplanır, tetiklenince panel yalnız zon numarasını gösterir. «İkinci zonda alarm», bütün katı aramak demektir. Küçük mağaza veya iki odalı ofise yeter; daha büyüğünde alarm kaynağını bulmak soruna dönüşür.",
             "Adresli sistem her dedektörü adıyla bilir: panel zonu değil noktayı gösterir — «duman, oda 214». Analog adresli daha ileri gider: dedektör duman düzeyini sürekli iletir, panel tozu yangından kendisi ayırır ve kirlenen dedektörü önceden haber verir. Daha az yanlış alarm, daha dayanıklı hat — orta ve büyük tesislerin standardı.",
+            "Kasım 2026'dan itibaren kataloğumuzdaki Bolid ve Rubezh adresli analog sistemlere, SAT Solutions'ın Özbekistan'daki resmi ortağı ve temsilcisi olduğu Kazakistanlı üreticinin QR Systems serisi eklendi. Seride 250 ve 500 adresli PPK-02 panelleri, adresli duman, ısı ve manuel dedektörler, 868 MHz kablosuz cihazlar ve kontrol modülleri bulunur — som cinsinden fiyatlarıyla 44 ürün QR Systems marka bölümünde yer alır.",
           ] },
           { h: "Dedektör türleri", p: [
             "Optik duman dedektörleri ofis, otel ve mağazaların ana tipidir: için için yanmanın erken evresinde tepki verir. Isı dedektörleri duman ve buharın olağan olduğu yerlere konur — mutfaklar, buhar odaları, bazı atölyeler: sıcaklığa veya artış hızına çalışır. Alev dedektörleri açık ateşi saniyeler içinde yakalar; dumanın tavana çok geç ulaşacağı yüksek atölyeler ve akaryakıt depoları içindir.",
@@ -18289,6 +18306,7 @@ export const ARTICLES: Article[] = [
           { h: "三种系统的区别", p: [
             "总线制（非编址）报警最简单便宜：探测器串成回路，触发时主机只显示回路号。「二号回路报警」意味着要找遍整层楼。对小商店或两间房的办公室够用；再大一点的场所，定位警源就成了难题。",
             "编址系统认识每一个探测器：主机显示的不是回路而是具体点位——「烟感，214室」。模拟量编址更进一步：探测器持续上报烟雾浓度，主机自己区分灰尘和火情，并提前提示探测器脏污。误报更少、线路存活性更高——是中大型场所的标准。",
+            "自 2026 年 11 月起，我们目录中的 Bolid 和 Rubezh 可寻址模拟系统之外新增了 QR Systems 系列——这是一家哈萨克斯坦制造商，SAT Solutions 是其在乌兹别克斯坦的官方合作伙伴和代表。该系列包括 250 和 500 地址的 PPK-02 控制主机、可寻址感烟、感温和手动探测器、868 MHz 无线设备以及控制模块——44 款产品均以苏姆标价，集中在 QR Systems 品牌页面。",
           ] },
           { h: "探测器有哪些", p: [
             "光电感烟探测器是办公室、酒店和商店的主力：在阴燃早期就有反应。感温探测器装在烟和蒸汽属于常态的地方——厨房、蒸汽间、某些车间：它们对温度或升温速率起爆。火焰探测器几秒内捕捉明火，适合高大车间和油料仓库——那里烟升到天花板就太迟了。",
@@ -23610,6 +23628,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-10-27",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
+    brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
     loc: {
       ru: {
         title: "Как считать бюджет пожарной сигнализации: за точку и за объект",
@@ -23632,6 +23651,7 @@ export const ARTICLES: Article[] = [
           { h: "Адресная или безадресная", p: [
             "Безадресная система показывает только шлейф, где сработал датчик — для помещения из пары комнат этого достаточно и дешевле. Адресная показывает конкретный извещатель, самодиагностируется и экономит кабель — на объектах от 10 помещений она быстро окупает разницу в цене.",
             "Для арендаторов в ТЦ и БЦ часто нужен стык с общей системой здания — согласуем протоколы и оборудование с управляющей компанией.",
+            "С ноября 2026 года к адресно-аналоговым системам Болид и Рубеж в нашем каталоге добавилась линейка QR Systems — казахстанского производителя, официальным партнёром и представителем которого в Узбекистане является SAT Solutions. В неё входят приборы ППК-02 на 250 и 500 адресов, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства 868 МГц и модули управления — 44 позиции с ценами в сумах собраны в разделе бренда QR Systems.",
           ] },
           { h: "Что дальше", p: [
             "Пришлите план помещения или просто площадь и назначение — посчитаем смету по двум вариантам, адресному и безадресному. На заявку отвечаем в течение рабочего дня.",
@@ -23673,6 +23693,7 @@ export const ARTICLES: Article[] = [
           { h: "Manzilli yoki manzilsiz", p: [
             "Manzilsiz tizim faqat qaysi shleyf ishlaganini koʻrsatadi — ikki-uch xonali joy uchun bu yetarli va arzonroq. Manzilli tizim aniq xabar bergichni koʻrsatadi, oʻzini tekshiradi va kabelni tejaydi — 10 va undan ortiq xonali obyektlarda narx farqini tez qoplaydi.",
             "Savdo va biznes markazlaridagi ijarachilar uchun koʻpincha binoning umumiy tizimiga ulanish kerak — protokol va uskunani boshqaruvchi kompaniya bilan kelishamiz.",
+            "2026-yil noyabridan katalogimizdagi Bolid va Rubej manzilli-analogli tizimlariga QR Systems liniyasi qoʻshildi — bu Qozogʻiston ishlab chiqaruvchisi boʻlib, SAT Solutions uning Oʻzbekistondagi rasmiy hamkori va vakilidir. Liniyaga 250 va 500 manzilli PPK-02 asboblari, manzilli tutun, issiqlik va qoʻl izveshchatellari, 868 MGs radiokanal qurilmalari va boshqaruv modullari kiradi — soʻmdagi narxlari bilan 44 ta pozitsiya QR Systems brendi boʻlimida jamlangan.",
           ] },
           { h: "Keyingi qadam", p: [
             "Xona rejasini yoki shunchaki maydon va vazifasini yuboring — ikki variant, manzilli va manzilsiz boʻyicha smeta hisoblaymiz. Soʻrovga ish kuni davomida javob beramiz.",
@@ -23714,6 +23735,7 @@ export const ARTICLES: Article[] = [
           { h: "Addressable or conventional", p: [
             "A conventional system only shows the triggered loop — enough and cheaper for a couple of rooms. An addressable one identifies the exact detector, self-diagnoses and saves cable; from about 10 rooms it quickly pays back the price difference.",
             "Tenants in malls and business centres often need to tie into the building system — we align protocols and equipment with the management company.",
+            "Since November 2026 the Bolid and Rubezh addressable analogue systems in our catalogue have been joined by the QR Systems range from a Kazakhstan manufacturer, for which SAT Solutions is the official partner and representative in Uzbekistan. It includes PPK-02 control panels for 250 and 500 addresses, addressable smoke, heat and manual call points, 868 MHz wireless devices and control modules — 44 items with prices in UZS are listed in the QR Systems brand section.",
           ] },
           { h: "Next step", p: [
             "Send a floor plan, or just the area and purpose, and we will quote two options — addressable and conventional. We reply to requests within the working day.",
@@ -23755,6 +23777,7 @@ export const ARTICLES: Article[] = [
           { h: "Adresli mi adressiz mi", p: [
             "Adressiz sistem sadece tetiklenen hattı gösterir — birkaç odalık yer için yeterli ve daha ucuz. Adresli sistem dedektörü tek tek tanır, kendini test eder ve kablodan tasarruf sağlar; 10+ odalı tesislerde fark hızla amorti olur.",
             "AVM ve iş merkezlerindeki kiracılar için bina ana sistemiyle entegrasyon gerekir — protokolleri yönetimle koordine ederiz.",
+            "Kasım 2026'dan itibaren kataloğumuzdaki Bolid ve Rubezh adresli analog sistemlere, SAT Solutions'ın Özbekistan'daki resmi ortağı ve temsilcisi olduğu Kazakistanlı üreticinin QR Systems serisi eklendi. Seride 250 ve 500 adresli PPK-02 panelleri, adresli duman, ısı ve manuel dedektörler, 868 MHz kablosuz cihazlar ve kontrol modülleri bulunur — som cinsinden fiyatlarıyla 44 ürün QR Systems marka bölümünde yer alır.",
           ] },
           { h: "Sonraki adım", p: [
             "Kat planını veya sadece alan ve kullanım amacını gönderin — adresli ve adressiz olmak üzere iki seçenekli teklif hazırlayalım. Taleplere iş günü içinde dönüş yaparız.",
@@ -23796,6 +23819,7 @@ export const ARTICLES: Article[] = [
           { h: "总线制还是多线制", p: [
             "多线制只显示报警回路——两三个房间够用且便宜。总线制精确到探测器、可自检、省线缆；10个房间以上很快抵消差价。",
             "商场写字楼的租户常需接入大楼总系统——我们与物业协调协议与设备。",
+            "自 2026 年 11 月起，我们目录中的 Bolid 和 Rubezh 可寻址模拟系统之外新增了 QR Systems 系列——这是一家哈萨克斯坦制造商，SAT Solutions 是其在乌兹别克斯坦的官方合作伙伴和代表。该系列包括 250 和 500 地址的 PPK-02 控制主机、可寻址感烟、感温和手动探测器、868 MHz 无线设备以及控制模块——44 款产品均以苏姆标价，集中在 QR Systems 品牌页面。",
           ] },
           { h: "下一步", p: [
             "发来平面图，或告知面积与用途——我们给出总线制与多线制两套报价。收到需求会在一个工作日内答复。",
@@ -24008,6 +24032,7 @@ export const ARTICLES: Article[] = [
     updated: "2026-10-27",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
+    brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
     loc: {
       uz: {
         title: "Yongʻin xavfsizligi: biznes uchun talablar, tizimlar va byudjet", seoTitle: "Yongʻin xavfsizligi: biznes uchun talablar va byudjet",
@@ -24024,6 +24049,7 @@ export const ARTICLES: Article[] = [
           { h: "Yongʻin signalizatsiyasi qancha turadi", p: [
             "Narx xonalar soni va maydonga bogʻliq: datchiklar soni, kabel uzunligi va priborning turi shundan kelib chiqadi. 3–5 xonali ofisni katalog boʻyicha yoyamiz: qabul-nazorat pribori Bolid S2000-4 — 989 900 soʻm, oltita tutun xabar beruvchisi Rubezh IP 212-141, donasi 43 290 soʻmdan — 259 740 soʻm, qoʻl xabar beruvchisi IPR 513-10 — 61 790 soʻm, stroboskopli sirena — 30 890 soʻm, «CHIQISH-EXIT» yorugʻlik tablosi — 49 490 soʻm. Uskuna boʻyicha jami taxminan 1 391 810 soʻm, ustiga kabel va ishlar. Manzilli tizim qimmatroq: liniya kontrolleri S2000-KDL — 1 026 900 soʻm, manzilli tutun datchigi Bolid DIP-34A-03 — 221 900 soʻm, manzilli qoʻl xabar beruvchisi IPR 513-11-A — 122 900 soʻm, shleyf izolyatori IZ-1-R3 — 127 900 soʻm. Narxlar 2026-yil sentyabr holatiga, montajsiz.",
             "Muhandisning chiqishi va smeta bizda bepul: obyektni koʻrib, datchiklarni rejalashtirib, aniq narxni aytamiz. Soʻrovga ish kuni davomida javob beramiz. Rubezh, Bolid va Dahua uskunalari bilan ishlaymiz — priborlar, xabar beruvchilar, ogohlantirgichlar va manzilli modullarni oʻzimiz yetkazamiz.",
+            "2026-yil noyabridan katalogimizdagi Bolid va Rubej manzilli-analogli tizimlariga QR Systems liniyasi qoʻshildi — bu Qozogʻiston ishlab chiqaruvchisi boʻlib, SAT Solutions uning Oʻzbekistondagi rasmiy hamkori va vakilidir. Liniyaga 250 va 500 manzilli PPK-02 asboblari, manzilli tutun, issiqlik va qoʻl izveshchatellari, 868 MGs radiokanal qurilmalari va boshqaruv modullari kiradi — soʻmdagi narxlari bilan 44 ta pozitsiya QR Systems brendi boʻlimida jamlangan.",
           ] },
           { h: "Oʻt oʻchirgichlar: qaysi va qancha", p: [
             "Ofis va doʻkon uchun standart tanlov — 122 900 soʻmlik OP-4 va 141 900 soʻmlik OP-5 kukunli oʻt oʻchirgichlar; hajm boʻyicha keyingilari OP-8 — 184 900 soʻm, OP-10 — 246 900 soʻm. Elektronika koʻp joyda uglekislotali OU-5 qoʻyiladi — 543 900 soʻm. Ombor va sexlar uchun harakatlanuvchi modellar: OP-25 — 803 900 soʻm, OP-50 — 1 298 900 soʻm, OP-100 — 2 474 900 soʻm.",
@@ -24061,6 +24087,7 @@ export const ARTICLES: Article[] = [
           { h: "Сколько стоит пожарная сигнализация", p: [
             "Цена зависит от числа помещений и площади: от этого считаются датчики, кабель и тип прибора. Разложим офис на 3–5 комнат по каталогу: приёмно-контрольный прибор Болид С2000-4 — 989 900 сум, шесть дымовых извещателей Рубеж ИП 212-141 по 43 290 сум — 259 740 сум, ручной извещатель ИПР 513-10 — 61 790 сум, сирена со стробоскопом — 30 890 сум, световое табло «ВЫХОД-EXIT» — 49 490 сум. Итого около 1 391 810 сум по оборудованию плюс кабель и работы. Адресная система дороже: контроллер линии С2000-КДЛ — 1 026 900 сум, адресный дымовой Болид ДИП-34А-03 — 221 900 сум, адресный ручной ИПР 513-11-А — 122 900 сум, изолятор шлейфа ИЗ-1-R3 — 127 900 сум. Цены каталога на сентябрь 2026, без монтажа.",
             "Выезд инженера и смета у нас бесплатные: осмотрим объект, распланируем датчики и назовём точную цену. На заявку отвечаем в течение рабочего дня. Работаем с оборудованием Рубеж, Болид и Dahua — приборы, извещатели, оповещатели и адресные модули поставляем сами.",
+            "С ноября 2026 года к адресно-аналоговым системам Болид и Рубеж в нашем каталоге добавилась линейка QR Systems — казахстанского производителя, официальным партнёром и представителем которого в Узбекистане является SAT Solutions. В неё входят приборы ППК-02 на 250 и 500 адресов, адресные дымовые, тепловые и ручные извещатели, радиоканальные устройства 868 МГц и модули управления — 44 позиции с ценами в сумах собраны в разделе бренда QR Systems.",
           ] },
           { h: "Огнетушители: какие и почём", p: [
             "Стандартный выбор для офиса и магазина — порошковые ОП-4 за 122 900 сум и ОП-5 за 141 900 сум; дальше по объёму ОП-8 — 184 900 сум, ОП-10 — 246 900 сум. Там, где много электроники, ставят углекислотный ОУ-5 — 543 900 сум. Передвижные модели для складов и цехов: ОП-25 — 803 900 сум, ОП-50 — 1 298 900 сум, ОП-100 — 2 474 900 сум.",
@@ -24098,6 +24125,7 @@ export const ARTICLES: Article[] = [
           { h: "What a fire alarm costs", p: [
             "The price depends on the number of rooms and the floor area: they determine the detectors, cable and panel type. Here is a 3–5 room office broken down from the catalogue: a Bolid S2000-4 control panel at 989 900 UZS, six Rubezh IP 212-141 smoke detectors at 43 290 UZS each — 259 740 UZS, an IPR 513-10 manual call point at 61 790 UZS, a strobe sounder at 30 890 UZS and an illuminated EXIT sign at 49 490 UZS: about 1 391 810 UZS of equipment, plus cable and labour. An addressable system costs more: the S2000-KDL loop controller at 1 026 900 UZS, the addressable Bolid DIP-34A-03 smoke detector at 221 900 UZS, the addressable IPR 513-11-A call point at 122 900 UZS and the IZ-1-R3 loop isolator at 127 900 UZS. Catalogue prices as of September 2026, installation not included.",
             "Our engineer's visit and the estimate are free: we survey the site, plan the detectors and give the exact price. We reply to requests within the working day. We work with Rubezh, Bolid and Dahua equipment — panels, detectors, sounders and addressable modules are supplied by us.",
+            "Since November 2026 the Bolid and Rubezh addressable analogue systems in our catalogue have been joined by the QR Systems range from a Kazakhstan manufacturer, for which SAT Solutions is the official partner and representative in Uzbekistan. It includes PPK-02 control panels for 250 and 500 addresses, addressable smoke, heat and manual call points, 868 MHz wireless devices and control modules — 44 items with prices in UZS are listed in the QR Systems brand section.",
           ] },
           { h: "Extinguishers: which and how much", p: [
             "The standard choice for offices and shops is the powder OP-4 at 122 900 UZS and the OP-5 at 141 900 UZS; larger sizes are the OP-8 at 184 900 UZS and the OP-10 at 246 900 UZS. Where there is a lot of electronics a CO2 OU-5 is added at 543 900 UZS. Wheeled units for warehouses and workshops: the OP-25 at 803 900 UZS, the OP-50 at 1 298 900 UZS and the OP-100 at 2 474 900 UZS.",
@@ -24135,6 +24163,7 @@ export const ARTICLES: Article[] = [
           { h: "Yangın alarmı ne kadar tutar", p: [
             "Fiyat oda sayısına ve alana bağlıdır: dedektör sayısı, kablo ve panel tipi buradan çıkar. 3–5 odalı bir ofisi katalogdan açalım: Bolid S2000-4 paneli 989 900 UZS, altı adet Rubezh IP 212-141 duman dedektörü tanesi 43 290 UZS'den 259 740 UZS, IPR 513-10 yangın butonu 61 790 UZS, flaşörlü siren 30 890 UZS, ışıklı «ÇIKIŞ-EXIT» levhası 49 490 UZS — ekipman olarak yaklaşık 1 391 810 UZS, üstüne kablo ve işçilik. Adresli sistem daha pahalıdır: S2000-KDL çevrim kontrolörü 1 026 900 UZS, adresli Bolid DIP-34A-03 duman dedektörü 221 900 UZS, adresli IPR 513-11-A butonu 122 900 UZS, IZ-1-R3 hat izolatörü 127 900 UZS. Eylül 2026 katalog fiyatları, montaj hariç.",
             "Mühendis keşfi ve fiyat teklifi ücretsizdir: sahayı inceler, dedektörleri planlar ve kesin fiyatı veririz. Taleplere iş günü içinde dönüş yaparız. Rubezh, Bolid ve Dahua ekipmanlarıyla çalışırız — paneller, dedektörler, siren ve adresli modülleri biz tedarik ederiz.",
+            "Kasım 2026'dan itibaren kataloğumuzdaki Bolid ve Rubezh adresli analog sistemlere, SAT Solutions'ın Özbekistan'daki resmi ortağı ve temsilcisi olduğu Kazakistanlı üreticinin QR Systems serisi eklendi. Seride 250 ve 500 adresli PPK-02 panelleri, adresli duman, ısı ve manuel dedektörler, 868 MHz kablosuz cihazlar ve kontrol modülleri bulunur — som cinsinden fiyatlarıyla 44 ürün QR Systems marka bölümünde yer alır.",
           ] },
           { h: "Yangın tüpleri: hangisi, ne kadar", p: [
             "Ofis ve mağazalar için standart seçim 122 900 UZS'lik OP-4 ve 141 900 UZS'lik OP-5 toz tüplerdir; hacim büyüdükçe OP-8 184 900 UZS, OP-10 246 900 UZS. Elektroniğin yoğun olduğu yerlere 543 900 UZS'lik CO2 tipi OU-5 eklenir. Depo ve atölyeler için arabalı modeller: OP-25 803 900 UZS, OP-50 1 298 900 UZS, OP-100 2 474 900 UZS.",
@@ -24172,6 +24201,7 @@ export const ARTICLES: Article[] = [
           { h: "火灾报警系统的价格", p: [
             "价格取决于房间数量和面积：由此确定探测器数量、线缆和主机类型。按目录把 3–5 间房的办公室拆开：Bolid S2000-4 主机 989 900 苏姆，六只 Rubezh IP 212-141 感烟探测器每只 43 290 苏姆共 259 740 苏姆，IPR 513-10 手动报警按钮 61 790 苏姆，带闪灯的警笛 30 890 苏姆，「出口-EXIT」灯箱 49 490 苏姆——设备合计约 1 391 810 苏姆，另加线缆和人工。总线制（地址码）系统更贵：S2000-KDL 回路控制器 1 026 900 苏姆，地址型 Bolid DIP-34A-03 感烟探测器 221 900 苏姆，地址型 IPR 513-11-A 手报 122 900 苏姆，IZ-1-R3 回路隔离器 127 900 苏姆。以上为 2026 年 9 月目录价，不含施工。",
             "工程师上门和报价免费：勘察现场、规划探测点位并给出准确价格。收到需求会在一个工作日内答复。我们使用 Rubezh、Bolid 和大华的设备——主机、探测器、声光警报和地址模块均由我方供货。",
+            "自 2026 年 11 月起，我们目录中的 Bolid 和 Rubezh 可寻址模拟系统之外新增了 QR Systems 系列——这是一家哈萨克斯坦制造商，SAT Solutions 是其在乌兹别克斯坦的官方合作伙伴和代表。该系列包括 250 和 500 地址的 PPK-02 控制主机、可寻址感烟、感温和手动探测器、868 MHz 无线设备以及控制模块——44 款产品均以苏姆标价，集中在 QR Systems 品牌页面。",
           ] },
           { h: "灭火器：选哪种、多少钱", p: [
             "办公室和商店的标准选择是 122 900 苏姆的 OP-4 和 141 900 苏姆的 OP-5 干粉灭火器；容量往上是 OP-8 184 900 苏姆、OP-10 246 900 苏姆。电子设备多的场所加配二氧化碳的 OU-5，543 900 苏姆。仓库和车间用推车式：OP-25 803 900 苏姆，OP-50 1 298 900 苏姆，OP-100 2 474 900 苏姆。",

@@ -28,11 +28,22 @@ const UI: Record<string, { blog: string; home: string; related: string; hubsLabe
 };
 
 // Названия товарных хабов для чипов «Каталог по теме» (слаг = /products/type/<slug>)
-const BRAND_NAMES: Record<string, { lat: string; zh: string }> = {
+const BRAND_NAMES: Record<string, { lat: string; zh: string; kind?: "fire" }> = {
   hikvision: { lat: "Hikvision", zh: "海康威视" },
   dahua: { lat: "Dahua", zh: "大华" },
+  // бренд АПС (12.11.2026): анкор «Пожарная сигнализация <Бренд>», а не «Камеры»
+  "qr-systems": { lat: "QR Systems", zh: "QR Systems", kind: "fire" },
 };
-function brandAnchor(n: { lat: string; zh: string }, locale: string): string {
+function brandAnchor(n: { lat: string; zh: string; kind?: "fire" }, locale: string): string {
+  if (n.kind === "fire") {
+    switch (locale) {
+      case "uz": return `${n.lat} yongʻin signalizatsiyasi`;
+      case "en": return `${n.lat} fire alarm`;
+      case "tr": return `${n.lat} yangın alarmı`;
+      case "zh": return `${n.zh} 火灾报警`;
+      default: return `Пожарная сигнализация ${n.lat}`;
+    }
+  }
   switch (locale) {
     case "uz": return `${n.lat} kameralari`;
     case "en": return `${n.lat} cameras`;

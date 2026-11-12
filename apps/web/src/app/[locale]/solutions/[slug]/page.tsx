@@ -222,7 +222,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     // технику/цену, а страница была только про работы. Витрина закрывает разрыв.
     cctv: ["hik-ip-cameras", "network-cameras", "hik-wireless-cameras"],
     intercom: ["hik-intercoms", "indoor-monitors"],
-    fire: ["prochee-fire", "rubezh-detectors", "rubezh-panels"],
+    fire: ["prochee-fire", "rubezh-detectors", "rubezh-panels", "qrs-panels"], // + QR Systems (бренд 12.11.2026)
     servers: ["pxt-server"],
     // 03.09: витрина на ВСЕ услуги, где в тексте описано оборудование (перелинковка
     // услуга → товары каталога с фото/описанием/ценой).

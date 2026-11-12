@@ -34,6 +34,8 @@ export const HUB_LABELS: Record<string, L5> = {
   "/catalog/dahua": { ru: "Dahua", uz: "Dahua", en: "Dahua", tr: "Dahua", zh: "大华" },
   "/catalog/rubezh": { ru: "Рубеж", uz: "Rubezh", en: "Rubezh", tr: "Rubezh", zh: "Rubezh" },
   "/catalog/bolid": { ru: "Болид", uz: "Bolid", en: "Bolid", tr: "Bolid", zh: "Bolid" },
+  // QR Systems — адресно-аналоговая АПС, бренд заведён 12.11.2026; ссылки с услуги и соседних брендов (12.11.2026)
+  "/catalog/qr-systems": { ru: "QR Systems", uz: "QR Systems", en: "QR Systems", tr: "QR Systems", zh: "QR Systems" },
   "/catalog/zkteco": { ru: "ZKTeco", uz: "ZKTeco", en: "ZKTeco", tr: "ZKTeco", zh: "中控智慧 ZKTeco" },
   "/catalog/mikrotik": { ru: "MikroTik", uz: "MikroTik", en: "MikroTik", tr: "MikroTik", zh: "MikroTik" },
   "/catalog/tplink": { ru: "TP-Link", uz: "TP-Link", en: "TP-Link", tr: "TP-Link", zh: "TP-Link" },
@@ -42,7 +44,7 @@ export const HUB_LABELS: Record<string, L5> = {
 export const RELATED_HUBS: Record<string, string[]> = {
   // услуги → оборудование и бренды, на которых строим
   "/solutions/cctv": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/products/type/videoregistratory-dvr", "/products/type/ptz-kamery", "/catalog/hikvision", "/catalog/dahua"],
-  "/solutions/fire": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid"],
+  "/solutions/fire": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid", "/catalog/qr-systems"],
   "/solutions/alarm": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid"],
   "/solutions/network": ["/products/group/setevoe-oborudovanie", "/products/type/kommutatory", "/catalog/mikrotik", "/catalog/tplink"],
   "/solutions/access": ["/products/group/kontrol-dostupa", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/products/type/turnikety-i-shlagbaumy", "/products/type/shlagbaumy", "/catalog/zkteco"],
@@ -64,8 +66,9 @@ export const RELATED_HUBS: Record<string, string[]> = {
   "/products/type/shlagbaumy": ["/catalog/hikvision/shlagbaumy", "/catalog/zkteco/shlagbaumy", "/catalog/dahua/shlagbaumy", "/products/type/turnikety-i-shlagbaumy"],
   "/products/type/zamki-i-skud": ["/products/type/terminaly-i-schityvateli", "/products/type/turnikety-i-shlagbaumy"],
   "/products/type/kommutatory": ["/products/group/setevoe-oborudovanie", "/catalog/mikrotik", "/catalog/tplink"],
-  "/catalog/rubezh": ["/catalog/bolid", "/products/group/ohranno-pozharnaya"],
-  "/catalog/bolid": ["/catalog/rubezh", "/products/group/ohranno-pozharnaya"],
+  "/catalog/rubezh": ["/catalog/bolid", "/catalog/qr-systems", "/products/group/ohranno-pozharnaya"],
+  "/catalog/bolid": ["/catalog/rubezh", "/catalog/qr-systems", "/products/group/ohranno-pozharnaya"],
+  "/catalog/qr-systems": ["/catalog/rubezh", "/catalog/bolid", "/products/group/ohranno-pozharnaya"],
   "/catalog/mercusys": ["/products/group/setevoe-oborudovanie", "/catalog/tplink"],
   "/catalog/hilook": ["/products/type/ip-kamery", "/catalog/hikvision"],
   "/catalog/hikvision": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/catalog/hikvision/shlagbaumy"],
