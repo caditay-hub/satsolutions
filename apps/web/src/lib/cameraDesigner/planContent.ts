@@ -36,6 +36,8 @@ export type CdPlanUi = {
   limitCams: string;
   printTitle: string; printDate: string; printMethod: string;
   units: { m: string; m2: string; mm: string; px: string };
+  /** Раскладка 12.11 (редизайн, часть 3): панель слева, меню «Файл», свёрнутые настройки, строка итога. */
+  layout: { tools: string; file: string; adv: string; advHint: string; sumCams: string; sumCover: string; sumTotal: string };
 };
 
 const ru: CdPlanUi = {
@@ -98,6 +100,7 @@ const ru: CdPlanUi = {
   limitCams: "На плане не больше {n} камер.",
   printTitle: "План видеонаблюдения", printDate: "Сформировано {d}", printMethod: "Методика: {p}, движок {e}. Плотность — горизонтальная, на высоте цели {t} м.",
   units: { m: "м", m2: "м²", mm: "мм", px: "пикс." },
+  layout: { tools: "Инструменты", file: "Файл", adv: "Для специалистов", advHint: "Стандарт IEC 62676-4, все уровни, высота цели", sumCams: "Камер: {n}", sumCover: "Покрытие зоны охраны: {p}", sumTotal: "Камеры: {v}" },
 };
 
 const uz: CdPlanUi = {
@@ -160,6 +163,7 @@ const uz: CdPlanUi = {
   limitCams: "Rejada {n} tadan ortiq kamera boʻlmaydi.",
   printTitle: "Videokuzatuv rejasi", printDate: "Tuzilgan sana: {d}", printMethod: "Uslub: {p}, dvigatel {e}. Zichlik — gorizontal, nishon balandligi {t} m.",
   units: { m: "m", m2: "m²", mm: "mm", px: "piksel" },
+  layout: { tools: "Asboblar", file: "Fayl", adv: "Mutaxassislar uchun", advHint: "IEC 62676-4 standarti, barcha darajalar, nishon balandligi", sumCams: "Kameralar: {n}", sumCover: "Qoʻriqlash zonasi qamrovi: {p}", sumTotal: "Kameralar: {v}" },
 };
 
 const en: CdPlanUi = {
@@ -222,6 +226,7 @@ const en: CdPlanUi = {
   limitCams: "No more than {n} cameras per plan.",
   printTitle: "Video surveillance plan", printDate: "Generated {d}", printMethod: "Method: {p}, engine {e}. Horizontal density at a target height of {t} m.",
   units: { m: "m", m2: "m²", mm: "mm", px: "px" },
+  layout: { tools: "Tools", file: "File", adv: "For specialists", advHint: "IEC 62676-4 standard, all levels, target height", sumCams: "Cameras: {n}", sumCover: "Protected area coverage: {p}", sumTotal: "Cameras: {v}" },
 };
 
 const tr: CdPlanUi = {
@@ -284,6 +289,7 @@ const tr: CdPlanUi = {
   limitCams: "Planda en fazla {n} kamera olabilir.",
   printTitle: "Video gözetim planı", printDate: "Oluşturulma: {d}", printMethod: "Yöntem: {p}, motor {e}. Yatay yoğunluk, hedef yüksekliği {t} m.",
   units: { m: "m", m2: "m²", mm: "mm", px: "piksel" },
+  layout: { tools: "Araçlar", file: "Dosya", adv: "Uzmanlar için", advHint: "IEC 62676-4 standardı, tüm seviyeler, hedef yüksekliği", sumCams: "Kamera: {n}", sumCover: "Koruma alanı kapsamı: {p}", sumTotal: "Kameralar: {v}" },
 };
 
 const zh: CdPlanUi = {
@@ -346,6 +352,7 @@ const zh: CdPlanUi = {
   limitCams: "每张平面图最多 {n} 台摄像机。",
   printTitle: "视频监控平面图", printDate: "生成时间：{d}", printMethod: "方法：{p}，引擎 {e}。水平像素密度，目标高度 {t} 米。",
   units: { m: "米", m2: "平方米", mm: "毫米", px: "像素" },
+  layout: { tools: "工具", file: "文件", adv: "专业设置", advHint: "IEC 62676-4 标准、全部等级、目标高度", sumCams: "摄像机：{n}", sumCover: "防护区覆盖率：{p}", sumTotal: "摄像机：{v}" },
 };
 
 export const PLAN_CONTENT: Record<string, CdPlanUi> = { ru, uz, en, tr, zh };

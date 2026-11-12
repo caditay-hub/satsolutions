@@ -93,7 +93,9 @@ function Num(p: { id: string; label: string; value: number; min: number; max: nu
 /* ─────────── основной компонент ─────────── */
 
 export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props) {
-  const { num, dec } = makeFmt(locale);
+  // один раз на язык: num входит в зависимости таблицы камер → сметы → onView; новая функция на
+  // каждом рендере крутила цикл «смета → setEstView → рендер» (Maximum update depth, 12.11)
+  const { num, dec } = useMemo(() => makeFmt(locale), [locale]);
   const [project, setProject] = useState<PlanProject>(emptyProject);
   const [bgUrl, setBgUrl] = useState<string | null>(null);
   const [restored, setRestored] = useState(false);
@@ -115,6 +117,7 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
   useEffect(() => { if (view && view.n > 0) { setManualOn(view.v === "estimate"); setError(null); } }, [view]);
   const fileInput = useRef<HTMLInputElement>(null);
   const projInput = useRef<HTMLInputElement>(null);
+  const fileMenu = useRef<HTMLDetailsElement>(null);
 
   const patch = useCallback((f: (p: PlanProject) => PlanProject) => setProject((p) => f(p)), []);
 
@@ -493,7 +496,8 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
     const t = setTimeout(() => { idbSave(manual, "manual").catch(() => setStorageWarn(true)); }, 800);
     return () => clearTimeout(t);
   }, [manual]);
-  const man = manual ?? emptyManual();
+  // пустой список — один и тот же объект: man в зависимостях сметы (тот же цикл, что у num)
+  const man = useMemo(() => manual ?? emptyManual(), [manual]);
   const setMan = (f: (m: ManualState) => ManualState) => setManual((m) => f(m ?? emptyManual()));
   // названия и цены камер ручного списка — тем же запросом, что и для камер плана
   const manualSlugs = useMemo(() => [...new Set(man.rows.map((r) => r.cam.slug))].sort().join(","), [man.rows]);
@@ -864,59 +868,105 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
   const toolBtn = (t: Tool, label: string, disabled = false) => (
     <button key={t} type="button" aria-pressed={tool === t} disabled={disabled}
       onClick={() => { setTool(t); setDraft(null); if (t !== "camera") setArmed(null); }}
-      className={`min-h-[40px] rounded-lg border px-3 py-2 text-xs font-semibold transition-colors disabled:opacity-40 ${tool === t ? "border-brand-600 bg-brand-600 text-white" : "border-slate-300 bg-white text-slate-700 hover:border-brand-400"}`}>
+      className={`min-h-[44px] rounded-xl border px-2.5 py-2 text-sm font-bold transition-colors disabled:opacity-40 ${tool === t ? "border-brand-600 bg-brand-600 text-white shadow-sm" : "border-slate-200 bg-white text-slate-800 hover:border-brand-400"}`}>
       {label}
     </button>
   );
+  // меню «Файл»: закрываем после выбора действия
+  const fileAct = (f: () => void) => () => { if (fileMenu.current) fileMenu.current.open = false; f(); };
+  const zoneShare = zonesRes.length ? zonesRes.reduce((s, z) => s + (z.share[0] ?? 0) * z.areaM2, 0) / Math.max(1e-9, zonesRes.reduce((s, z) => s + z.areaM2, 0)) : null;
+  /* Раскладка 12.11 (редизайн, часть 3, решения владельца): панель слева, как у калькулятора, —
+     инструменты и выбранное; полотно справа с меню «Файл»; итоги, смета и заявка — под планом.
+     На телефоне порядок: инструменты → полотно → настройки выбранного (сетка с явными местами). */
   return (
     <div className="space-y-4" onPointerEnter={() => { active.current = true; }} onPointerLeave={() => { active.current = false; }} onFocus={() => { active.current = true; }}>
-      {/* панель инструментов */}
-      <div className="flex flex-wrap items-center gap-2">
-        <div role="group" className="flex flex-wrap gap-1.5">
-          {toolBtn("select", ui.tools.select)}
-          {toolBtn("camera", ui.tools.camera, !calibrated)}
-          {toolBtn("wall", ui.tools.wall)}
-          {toolBtn("zone", ui.tools.zone)}
-          {project.bg.kind === "image" ? toolBtn("scale", ui.tools.scale) : null}
-          {toolBtn("rack", est.rackTool, !calibrated)}
+      <div className="grid gap-4 lg:grid-cols-[320px_minmax(0,1fr)] lg:grid-rows-[auto_1fr] xl:grid-cols-[340px_minmax(0,1fr)]">
+        {/* инструменты */}
+        <div className={`${card} lg:col-start-1 lg:row-start-1`}>
+          <div className={h3}>{ui.layout.tools}</div>
+          <div role="group" aria-label={ui.layout.tools} className="mt-2 grid grid-cols-3 gap-1.5 lg:grid-cols-2">
+            {toolBtn("select", ui.tools.select)}
+            {toolBtn("camera", ui.tools.camera, !calibrated)}
+            {toolBtn("wall", ui.tools.wall)}
+            {toolBtn("zone", ui.tools.zone)}
+            {project.bg.kind === "image" ? toolBtn("scale", ui.tools.scale) : null}
+            {toolBtn("rack", est.rackTool, !calibrated)}
+          </div>
+          <p className={`mt-3 rounded-xl px-3 py-2 text-xs leading-relaxed ${!calibrated ? "bg-amber-50 font-semibold text-amber-900" : "bg-slate-100 text-slate-600"}`} aria-live="polite">{hint}</p>
+          {error ? <p role="alert" className="mt-2 text-sm font-semibold text-red-600">{error}</p> : null}
+          {storageWarn ? <p role="alert" className="mt-2 text-xs font-semibold text-amber-700">{ui.errStorage}</p> : null}
         </div>
-        <div className="ml-auto flex flex-wrap gap-1.5">
-          <button type="button" className={btnCls} onClick={saveFile}>{ui.save}</button>
-          <button type="button" className={btnCls} disabled={!calibrated} onClick={exportPng}>{ui.png}</button>
-          <button type="button" className={btnCls} disabled={!calibrated} onClick={printPlan}>{ui.print}</button>
-          <button type="button" className={btnCls} onClick={newPlan}>{ui.reset}</button>
-        </div>
-      </div>
-      <p className={`rounded-xl px-3 py-2 text-xs leading-relaxed ${!calibrated ? "bg-amber-50 font-semibold text-amber-900" : "bg-slate-100 text-slate-600"}`} aria-live="polite">{hint}</p>
-      {error ? <p role="alert" className="text-sm font-semibold text-red-600">{error}</p> : null}
-      {storageWarn ? <p role="alert" className="text-xs font-semibold text-amber-700">{ui.errStorage}</p> : null}
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_340px]">
-        <div className="relative min-w-0">
-          {/* «Готово / Отмена» — поверх полотна: кнопки в панели сдвигали бы план между щелчками */}
-          {draft && draft.kind !== "scale" ? (
-            <div className="absolute left-2 top-2 z-10 flex gap-1.5">
-              <button type="button" className={`${btnCls} shadow-sm`} onClick={finishDraft}>{ui.finish}</button>
-              <button type="button" className={`${btnCls} shadow-sm`} onClick={() => setDraft(null)}>{ui.cancel}</button>
+        {/* полотно */}
+        <div className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 px-3 py-2">
+              <label className="flex min-h-[40px] cursor-pointer items-center gap-2 text-xs font-semibold text-slate-700">
+                <input type="checkbox" checked={project.showOverlap} onChange={(e) => patch((p) => ({ ...p, showOverlap: e.target.checked }))} className="h-4 w-4 accent-brand-600" />
+                {ui.overlap}
+              </label>
+              <details ref={fileMenu} className="relative">
+                <summary className={`${btnCls} cursor-pointer list-none gap-1.5 [&::-webkit-details-marker]:hidden`}>
+                  {ui.layout.file}
+                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                </summary>
+                <div className="absolute right-0 z-20 mt-1 grid w-52 gap-0.5 rounded-xl border border-slate-200 bg-white p-1 shadow-lg">
+                  {[
+                    { t: ui.save, f: saveFile, off: false },
+                    { t: ui.png, f: exportPng, off: !calibrated },
+                    { t: ui.print, f: printPlan, off: !calibrated },
+                    { t: ui.reset, f: newPlan, off: false },
+                  ].map((x) => (
+                    <button key={x.t} type="button" disabled={x.off} onClick={fileAct(() => { void x.f(); })}
+                      className="min-h-[40px] rounded-lg px-3 text-left text-sm font-semibold text-slate-800 hover:bg-slate-100 disabled:opacity-40">
+                      {x.t}
+                    </button>
+                  ))}
+                </div>
+              </details>
             </div>
-          ) : null}
-          <PlanCanvas
-            project={project} bounds={bounds} bgUrl={bgUrl} heatUrl={heatUrl} heatBounds={result?.bounds ?? null}
-            tool={tool} armed={!!armed} selected={selected} draft={draft} levelsPpm={levelsPpm}
-            camLabel={camLabel} zoneLabel={zoneLabel}
-            labels={{ zoomIn: ui.zoomIn, zoomOut: ui.zoomOut, fit: ui.fit, m: ui.units.m, dec }} fitKey={fitKey}
-            onSelect={setSelected}
-            onMoveCam={(id, x, y) => updateCam(id, (c) => ({ ...c, x, y }))}
-            onAim={aimCam} onPlace={placeCamera}
-            onDraftPoint={draftPoint} onDraftCursor={(pt) => setDraft((d) => (d ? { ...d, cursor: pt } : tool === "wall" || tool === "zone" || tool === "scale" ? null : d))}
-            onDraftFinish={finishDraft} onDragging={setDragging}
-            onRack={(x, y) => { patch((p) => ({ ...p, rack: { x, y } })); setTool("select"); }}
-          />
+            <div className="relative">
+              {/* «Готово / Отмена» — поверх полотна: кнопки в панели сдвигали бы план между щелчками */}
+              {draft && draft.kind !== "scale" ? (
+                <div className="absolute left-2 top-2 z-10 flex gap-1.5">
+                  <button type="button" className={`${btnCls} shadow-sm`} onClick={finishDraft}>{ui.finish}</button>
+                  <button type="button" className={`${btnCls} shadow-sm`} onClick={() => setDraft(null)}>{ui.cancel}</button>
+                </div>
+              ) : null}
+              <PlanCanvas
+                project={project} bounds={bounds} bgUrl={bgUrl} heatUrl={heatUrl} heatBounds={result?.bounds ?? null}
+                tool={tool} armed={!!armed} selected={selected} draft={draft} levelsPpm={levelsPpm}
+                camLabel={camLabel} zoneLabel={zoneLabel}
+                labels={{ zoomIn: ui.zoomIn, zoomOut: ui.zoomOut, fit: ui.fit, m: ui.units.m, dec }} fitKey={fitKey}
+                onSelect={setSelected}
+                onMoveCam={(id, x, y) => updateCam(id, (c) => ({ ...c, x, y }))}
+                onAim={aimCam} onPlace={placeCamera}
+                onDraftPoint={draftPoint} onDraftCursor={(pt) => setDraft((d) => (d ? { ...d, cursor: pt } : tool === "wall" || tool === "zone" || tool === "scale" ? null : d))}
+                onDraftFinish={finishDraft} onDragging={setDragging}
+                onRack={(x, y) => { patch((p) => ({ ...p, rack: { x, y } })); setTool("select"); }}
+              />
+            </div>
+            {/* строка итога и легенда — сразу под полотном */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 border-t border-slate-100 px-3 py-2.5">
+              <span className="text-sm font-black text-slate-900">{fill(ui.layout.sumCams, { n: String(project.cams.length) })}</span>
+              {zoneShare !== null ? <span className="text-sm font-bold text-slate-800">{fill(ui.layout.sumCover, { p: pct(zoneShare) })}</span> : null}
+              {total > 0 ? <span className="text-sm font-bold text-slate-800">{fill(ui.layout.sumTotal, { v: `${allPriced ? "" : "≥ "}${fill(ui.money, { v: num(total, 0) })}` })}</span> : null}
+              <span className="flex flex-wrap gap-x-3 gap-y-1 sm:ml-auto">
+                {[...lv].reverse().map((l, i) => (
+                  <span key={l.code} className="inline-flex items-center gap-1.5 text-[11px] text-slate-600">
+                    <span className="h-3 w-4 shrink-0 rounded-sm" style={{ background: levelColor(i, lv.length), opacity: 0.8 }} />{levels[l.code].name}
+                  </span>
+                ))}
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-slate-600"><span className="h-3 w-4 shrink-0 rounded-sm bg-red-600/60" />{ui.uncovered}</span>
+                {project.showOverlap ? <span className="inline-flex items-center gap-1.5 text-[11px] text-slate-600"><span className="h-3 w-4 shrink-0 rounded-sm" style={{ background: "repeating-linear-gradient(45deg,#1d6a7d 0 3px,#0b2a33 3px 5px)" }} />{ui.overlapLegend}</span> : null}
+              </span>
+            </div>
+          </div>
           <p className="mt-2 text-[11px] leading-relaxed text-slate-500"><b>{ui.approx}.</b> {ui.disclaimer}</p>
         </div>
 
-        <div className="space-y-4">
-          {/* контекстная панель */}
+        {/* выбранное и «Для специалистов» */}
+        <div className="space-y-4 lg:col-start-1 lg:row-start-2">
           {tool === "scale" ? (
             <div className={card}>
               <div className={h3}>{ui.tools.scale}</div>
@@ -979,6 +1029,7 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
           {/* вызов функцией, а не <CamEditor/>: вложенный компонент пересоздавался бы на каждом
               рендере, и поля ввода теряли бы фокус после каждого символа */}
           {tool === "select" && selCam ? camEditor(selCam) : null}
+          {tool === "select" && !selCam && !selected && !project.cams.length ? <p className="rounded-xl bg-slate-50 px-3 py-2.5 text-xs text-slate-500">{ui.noCams}</p> : null}
 
           {tool === "select" && (selected?.type === "wall" || selected?.type === "zone") ? (
             <div className={card}>
@@ -995,77 +1046,80 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
             </div>
           ) : null}
 
-          {/* настройки */}
-          <div className={card}>
-            <div className={h3}>{ui.settings}</div>
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              {(["2014", "2025"] as const).map((k) => (
-                <button key={k} type="button" aria-pressed={project.std === k}
-                  onClick={() => patch((p) => ({ ...p, std: k, profileId: PROFILES[k].id }))}
-                  className={`min-h-[40px] rounded-lg border px-3 py-2 text-xs font-semibold ${project.std === k ? "border-brand-600 bg-brand-600 text-white" : "border-slate-300 bg-white text-slate-700"}`}>
-                  {k === "2014" ? ui.std2014 : ui.std2025}
-                </button>
-              ))}
+          {/* для специалистов: стандарт и высота цели — свёрнуто, как в калькуляторе */}
+          <details className="group rounded-2xl border border-slate-200 bg-slate-50/60">
+            <summary className="flex min-h-[48px] cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
+              <span>
+                <span className="block text-sm font-black text-slate-900">{ui.layout.adv}</span>
+                <span className="block text-[11px] leading-snug text-slate-500">{ui.layout.advHint}</span>
+              </span>
+              <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0 text-slate-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div className="border-t border-slate-200 px-4 pb-4 pt-3">
+              <div className="flex flex-wrap gap-1.5">
+                {(["2014", "2025"] as const).map((k) => (
+                  <button key={k} type="button" aria-pressed={project.std === k}
+                    onClick={() => patch((p) => ({ ...p, std: k, profileId: PROFILES[k].id }))}
+                    className={`min-h-[40px] rounded-lg border px-3 py-2 text-xs font-semibold ${project.std === k ? "border-brand-600 bg-brand-600 text-white" : "border-slate-300 bg-white text-slate-700"}`}>
+                    {k === "2014" ? ui.std2014 : ui.std2025}
+                  </button>
+                ))}
+              </div>
+              {project.std === "2014" ? (
+                <label className="mt-2 flex items-center gap-2 text-xs text-slate-700">
+                  <input type="checkbox" checked={project.all} onChange={(e) => patch((p) => ({ ...p, all: e.target.checked }))} className="h-4 w-4 accent-brand-600" />
+                  {ui.allLevels}
+                </label>
+              ) : null}
+              <div className="mt-3">
+                <Num id="cp-t" label={ui.target} value={project.targetM} min={0} max={3} dec={dec} hint={ui.targetHint}
+                  onChange={(v) => patch((p) => ({ ...p, targetM: v }))} />
+              </div>
+              <ul className="mt-3 space-y-1">
+                {[...lv].reverse().map((l, i) => (
+                  <li key={l.code} className="flex items-center gap-2 text-xs text-slate-700">
+                    <span className="h-3.5 w-5 shrink-0 rounded-sm" style={{ background: levelColor(i, lv.length), opacity: 0.8 }} />
+                    {levels[l.code].name} <span className="text-slate-400">≥ {num(l.ppm)} {ui.units.px}/{ui.units.m}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            {project.std === "2014" ? (
-              <label className="mt-2 flex items-center gap-2 text-xs text-slate-700">
-                <input type="checkbox" checked={project.all} onChange={(e) => patch((p) => ({ ...p, all: e.target.checked }))} className="h-4 w-4 accent-brand-600" />
-                {ui.allLevels}
-              </label>
-            ) : null}
-            <div className="mt-3">
-              <Num id="cp-t" label={ui.target} value={project.targetM} min={0} max={3} dec={dec} hint={ui.targetHint}
-                onChange={(v) => patch((p) => ({ ...p, targetM: v }))} />
-            </div>
-            <label className="mt-2 flex items-center gap-2 text-xs text-slate-700">
-              <input type="checkbox" checked={project.showOverlap} onChange={(e) => patch((p) => ({ ...p, showOverlap: e.target.checked }))} className="h-4 w-4 accent-brand-600" />
-              {ui.overlap}
-            </label>
-          </div>
+          </details>
+        </div>
+      </div>
 
-          {/* легенда и покрытие */}
-          <div className={card}>
-            <div className={h3}>{ui.legend}</div>
-            <ul className="mt-2 space-y-1">
-              {[...lv].reverse().map((l, i) => (
-                <li key={l.code} className="flex items-center gap-2 text-xs text-slate-700">
-                  <span className="h-3.5 w-5 shrink-0 rounded-sm" style={{ background: levelColor(i, lv.length), opacity: 0.8 }} />
-                  {levels[l.code].name} <span className="text-slate-400">≥ {num(l.ppm)} {ui.units.px}/{ui.units.m}</span>
-                </li>
-              ))}
-              <li className="flex items-center gap-2 text-xs text-slate-700"><span className="h-3.5 w-5 shrink-0 rounded-sm bg-red-600/60" />{ui.uncovered}</li>
-              {project.showOverlap ? <li className="flex items-center gap-2 text-xs text-slate-700"><span className="h-3.5 w-5 shrink-0 rounded-sm" style={{ background: "repeating-linear-gradient(45deg,#1d6a7d 0 3px,#0b2a33 3px 5px)" }} />{ui.overlapLegend}</li> : null}
-            </ul>
-            {!project.cams.length ? <p className="mt-2 text-xs text-slate-500">{ui.noCams}</p> : null}
-            <div className="mt-4 border-t border-slate-100 pt-3">
-              <div className="text-xs font-black text-slate-800">{ui.coverTitle}</div>
-              {!project.zones.length ? <p className="mt-1 text-xs text-slate-500">{ui.coverEmpty}</p> : null}
-              {zonesRes.map((z, i) => (
-                <div key={i} className="mt-2 rounded-lg bg-slate-50 p-2.5">
-                  <div className="flex items-baseline justify-between text-xs">
-                    <span className="font-bold text-slate-900">{zoneLabel(i + 1)}</span>
-                    <span className="text-slate-500">{fill(ui.coverArea, { a: num(z.areaM2, 0) })}</span>
-                  </div>
-                  <table className="mt-1 w-full text-xs">
-                    <tbody>
-                      {[...lv].map((l, j) => ({ l, j })).reverse().map(({ l, j }) => (
-                        <tr key={l.code}>
-                          <td className="py-0.5 pr-2 text-slate-600">{levels[l.code].name}</td>
-                          <td className="py-0.5 text-right font-semibold tabular-nums text-slate-900">{pct(z.share[j])}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                  <p className="mt-1 text-[11px] text-slate-500">{fill(ui.coverNone, { p: pct(1 - (z.share[0] ?? 0)) })} · {fill(ui.coverOverlap, { p: pct(z.overlap) })}</p>
+      {/* под планом: покрытие зон и камеры с ценами */}
+      <div className="grid gap-4 md:grid-cols-2">
+        <div className={card}>
+          <div className={h3}>{ui.coverTitle}</div>
+          {!project.zones.length ? <p className="mt-1 text-xs text-slate-500">{ui.coverEmpty}</p> : null}
+          <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2">
+            {zonesRes.map((z, i) => (
+              <div key={i} className="mt-2 rounded-lg bg-slate-50 p-2.5">
+                <div className="flex items-baseline justify-between text-xs">
+                  <span className="font-bold text-slate-900">{zoneLabel(i + 1)}</span>
+                  <span className="text-slate-500">{fill(ui.coverArea, { a: num(z.areaM2, 0) })}</span>
                 </div>
-              ))}
-            </div>
+                <table className="mt-1 w-full text-xs">
+                  <tbody>
+                    {[...lv].map((l, j) => ({ l, j })).reverse().map(({ l, j }) => (
+                      <tr key={l.code}>
+                        <td className="py-0.5 pr-2 text-slate-600">{levels[l.code].name}</td>
+                        <td className="py-0.5 text-right font-semibold tabular-nums text-slate-900">{pct(z.share[j])}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p className="mt-1 text-[11px] text-slate-500">{fill(ui.coverNone, { p: pct(1 - (z.share[0] ?? 0)) })} · {fill(ui.coverOverlap, { p: pct(z.overlap) })}</p>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* камеры и цены */}
+        <div className={card}>
+          <div className={h3}>{ui.tableTitle}</div>
           {rows.length ? (
-            <div className={card}>
-              <div className={h3}>{ui.tableTitle}</div>
+            <>
               <table className="mt-2 w-full text-xs">
                 <thead>
                   <tr className="border-b border-slate-200 text-left text-[10px] font-bold uppercase tracking-wide text-slate-500">
@@ -1088,14 +1142,13 @@ export function CameraPlanner({ ui, est, levels, ruLevels, locale, view }: Props
               </table>
               {total > 0 ? <p className="mt-2 text-right text-xs font-black text-slate-900">{ui.total}: {allPriced ? "" : "≥ "}{fill(ui.money, { v: num(total, 0) })}</p> : null}
               <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{ui.tableNote} <a href={`${locale === "ru" ? "" : `/${locale}`}/calculator`} className="font-semibold text-brand-700 hover:underline">{ui.installLink} →</a></p>
-            </div>
-          ) : null}
-
-          {leadBlock()}
+            </>
+          ) : <p className="mt-1 text-xs text-slate-500">{ui.noCams}</p>}
         </div>
       </div>
 
       {estimateBlock()}
+      <div className="max-w-xl">{leadBlock()}</div>
       {printBlock()}
     </div>
   );

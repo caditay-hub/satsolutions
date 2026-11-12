@@ -216,7 +216,7 @@ export function PlanCanvas(p: {
   const btn = "flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white text-lg font-bold text-slate-700 shadow-sm hover:border-brand-400";
 
   return (
-    <div ref={wrap} className="relative h-[62vh] min-h-[360px] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 lg:h-[70vh]">
+    <div ref={wrap} className="relative h-[62vh] min-h-[360px] w-full overflow-hidden bg-slate-100 lg:h-[calc(100vh-390px)] lg:min-h-[460px]">
       <svg
         ref={svg} viewBox={vb} width={size.w} height={size.h} className="block select-none"
         style={{ touchAction: "none", cursor: p.tool === "select" ? "default" : "crosshair" }}
