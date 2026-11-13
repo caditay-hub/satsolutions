@@ -1,33 +1,42 @@
 import type { Metadata } from "next";
+import { permanentRedirect } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import { getBrands, getProductsCached } from "@/lib/api";
+import { getBrands, getProducts } from "@/lib/api";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { ogLocale } from "@/lib/ogLocale";
 import { localizeProductName } from "@/lib/productI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
-import { NewArrivalCard } from "@/components/Cards";
+import { slimProduct } from "@/lib/catalogSlim";
+import { InfiniteProducts } from "@/components/catalog/InfiniteProducts";
+import { Pagination } from "@/components/Pagination";
+import { routing } from "@/i18n/routing";
 import { withOgUrl } from "@/lib/metadata";
-
-export const revalidate = 300;
 
 // «Новинки»: товары за последние NEW_SECTION_DAYS дней (sort=new). Если свежих
 // мало (затишье в поставках) — страница не пустеет: показываем просто последние
 // поступления без ограничения по дате.
 // 60 дней — как у бейджа «Новинка» (NEW_BADGE_DAYS): раздел показывает ровно то,
 // что помечено бейджем. 90 дней захватывало первичную заливку каталога (июнь).
+// 13.11.2026 (решение владельца): товары подгружаются при прокрутке, как во всём каталоге;
+// номера страниц внизу остаются для поисковиков. Выборка — всегда свежая (no-store): с кэшем
+// данных Next отдавал первому посетителю копию недельной давности, и ?page=3 был пустым.
 const NEW_SECTION_DAYS = 60;
 const PER_PAGE = 24;
 const MIN_ITEMS = 12;
 
-async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams?: Promise<{ page?: string }> }): Promise<Metadata> {
   const { locale } = await params;
+  const sp = (await searchParams) ?? {};
   const t = await getTranslations({ locale, namespace: "newPage" });
+  // page>1 — как в каталоге: noindex,follow (робот идёт по ссылкам на карточки, индексируется первая)
+  const deep = !!sp.page && sp.page !== "1";
   return {
     title: { absolute: t("title") },
     description: t("desc"),
     alternates: hreflangAlternates("/products/new", locale),
     openGraph: { title: t("title"), description: t("desc"), locale: ogLocale(locale), images: ["/og.png"] },
+    ...(deep ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -38,17 +47,21 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
   const t = await getTranslations({ locale, namespace: "newPage" });
   const tnav = await getTranslations({ locale, namespace: "nav" });
   const tm = await getTranslations({ locale, namespace: "catalogMega" });
+  const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
 
-  // Свежие за 90 дней; при затишье — просто последние поступления
-  // выборка детерминирована (страница + «новинки»), пользовательских фильтров нет → кэш 5 мин
-  let data = await getProductsCached(page, PER_PAGE, { sort: "new", days: NEW_SECTION_DAYS, hasPrice: true });
+  // Свежие за NEW_SECTION_DAYS; при затишье — просто последние поступления
+  let filter: { sort: string; days?: number; hasPrice: boolean } = { sort: "new", days: NEW_SECTION_DAYS, hasPrice: true };
+  let data = await getProducts(page, PER_PAGE, filter);
   if (data.total < MIN_ITEMS) {
-    data = await getProductsCached(page, PER_PAGE, { sort: "new", hasPrice: true });
+    filter = { sort: "new", hasPrice: true };
+    data = await getProducts(page, PER_PAGE, filter);
   }
   const { items, total } = data;
+  const pages = Math.max(1, Math.ceil(total / PER_PAGE));
+  // номер страницы, которой нет (старая ссылка ?page=9) → начало списка (решение владельца 13.11)
+  if (page > pages) permanentRedirect(`${lp}/products/new`);
   const { brands } = await getBrands().catch(() => ({ brands: [] as any[] }));
   const brandNameById = new Map(brands.map((b: any) => [b.id, localizeBrandName(b.slug, b.name, locale)]));
-  const pages = Math.max(1, Math.ceil(total / PER_PAGE));
 
   // ItemList — свежая страница со ссылками на новые карточки ускоряет их обход
   const itemList = {
@@ -77,29 +90,20 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
       <h1 className="text-3xl font-black tracking-tight text-slate-900">{t("h1")}</h1>
       <p className="mt-2 max-w-2xl text-sm text-slate-600">{t("sub")}</p>
 
-      <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
-        {items.map((p, i) => (
-          <NewArrivalCard key={p.id} p={p} name={localizeProductName(p, locale)} brandName={(p.brandId && brandNameById.get(p.brandId)) || null} priority={i < 8} />
-        ))}
+      <div className="mt-7">
+        <InfiniteProducts
+          key={page}
+          variant="new"
+          initial={items.map((p) => ({ p: slimProduct(p, false), name: localizeProductName(p, locale), brandName: (p.brandId && brandNameById.get(p.brandId)) || null }))}
+          total={total}
+          page={page}
+          perPage={PER_PAGE}
+          view="grid"
+          params={{ sort: filter.sort, days: filter.days ? String(filter.days) : undefined, hasPrice: "1" }}
+        />
       </div>
 
-      {pages > 1 && (
-        <div className="mt-8 flex items-center justify-center gap-2">
-          {Array.from({ length: pages }, (_, i) => i + 1)
-            .filter((n) => n === 1 || n === pages || Math.abs(n - page) <= 2)
-            .map((n, idx, arr) => (
-              <span key={n} className="flex items-center gap-2">
-                {idx > 0 && n - arr[idx - 1] > 1 ? <span className="text-slate-500">…</span> : null}
-                <Link
-                  href={n === 1 ? "/products/new" : (`/products/new?page=${n}` as any)}
-                  className={`rounded-lg px-3.5 py-2 text-sm font-bold ${n === page ? "bg-brand-600 text-white" : "border border-slate-200 text-slate-700 hover:border-brand-400"}`}
-                >
-                  {n}
-                </Link>
-              </span>
-            ))}
-        </div>
-      )}
+      <Pagination basePath="/products/new" page={page} limit={PER_PAGE} total={total} />
       </div>
     </div>
   );

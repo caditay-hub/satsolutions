@@ -26,8 +26,6 @@ import { GROUP_CANONICAL } from "@/lib/groupCanonical";
 import { resolveImageUrl } from "@/lib/image";
 import { localizePortfolioProject } from "@/lib/contentI18n";
 import { ProductCard } from "@/components/Cards";
-import { CatalogCard } from "@/components/CatalogCard";
-import { CatalogRow } from "@/components/CatalogRow";
 import { localizeProductName } from "@/lib/productI18n";
 import { localizeBrandName } from "@/lib/brandI18n";
 import { ViewToggle } from "@/components/catalog/ViewToggle";
@@ -49,9 +47,11 @@ import { KitsStrip } from "@/components/catalog/KitsStrip";
 // разделы, где в блоке комплектов есть второй путь — проектировщик на плане (решение владельца 11.11)
 const DESIGNER_TYPES = new Set(["ip-kamery", "ptz-kamery", "ip-videoregistratory-nvr"]);
 
-// Размер «страницы» для голого каталога /products (тысячи позиций, постранично).
+// Размер «страницы» для голого каталога /products (тысячи позиций).
 // На страницах раздела/фильтра (тип/бренд/категория/поиск/характеристики/цена) товары
-// подгружаются при прокрутке (InfiniteProducts) порциями по CATALOG_SCOPED_PAGE.
+// подгружаются при прокрутке (InfiniteProducts) порциями по CATALOG_SCOPED_PAGE;
+// с 13.11.2026 так же и голый каталог — порциями по CATALOG_PAGE_BARE (решение владельца:
+// подгрузка на всём сайте одинаковая).
 // Раньше там выводились ВСЕ товары разом (до 1000): HTML группы «Видеонаблюдение» —
 // 1,7 МБ, разбор на телефоне до 4,5 с (замер 06.10.2026). Решение владельца 07.10.2026:
 // подгрузка при прокрутке, без кнопки «Показать ещё».
@@ -121,6 +121,18 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
     const r = await getProducts(page, perPage, { category, brand, q, sort, mp, technology, installationType, type, chars, priceMin, priceMax });
     items = r.items; total = r.total; corrected = r.corrected ?? null;
   } catch { items = []; total = 0; }
+
+  // Номер страницы, которой нет (старая ссылка ?page=40, раздел уменьшился) → начало того же
+  // списка, с теми же фильтрами (решение владельца 13.11.2026). Раньше — пустая страница.
+  if (total > 0 && page > Math.ceil(total / perPage)) {
+    const lp = locale !== routing.defaultLocale ? `/${locale}` : "";
+    const keep = new URLSearchParams();
+    const fixed = new Set(listPath ? listFixed : []);
+    const all: Record<string, string | undefined> = { q, category, brand, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax, view: view === "list" ? "list" : undefined };
+    for (const [k, v] of Object.entries(all)) if (v && !fixed.has(k)) keep.set(k, v);
+    const qs = keep.toString();
+    permanentRedirect(`${lp}${listPath ?? "/products"}${qs ? `?${qs}` : ""}`);
+  }
 
   // Умный поиск: если обычный нашёл мало — спрашиваем ИИ (с кешем на бэке)
   let smart: SmartSearchDto | null = null;
@@ -514,13 +526,11 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                   <ViewToggle view={view} />
                 </div>
               )}
-              {/* верхняя пагинация — только у голого /products; в разделе товары подгружаются при прокрутке */}
-              {!smart && !scoped ? (
-                <Pagination basePath={pagerBase} page={page} limit={perPage} total={total} params={pagerParams} className="mb-4" />
-              ) : null}
+              {/* 13.11.2026 (решение владельца): подгрузка при прокрутке везде, и в голом /products —
+                  верхней пагинации больше нет, номера страниц внизу остаются для поисковиков */}
               {smart ? (
                 <SmartResultsView items={smartItems} related={similar.map(toSmartItem)} usdToUzs={usdToUzs} />
-              ) : scoped ? (
+              ) : (
                 <InfiniteProducts
                   key={`${page}|${view}|${sort ?? ""}|${type ?? ""}|${brand ?? ""}|${category ?? ""}|${q ?? ""}|${sp.chars ?? ""}|${sp.priceMin ?? ""}|${sp.priceMax ?? ""}|${mp ?? ""}|${technology ?? ""}|${installationType ?? ""}`}
                   initial={items.map((p) => ({ p: slimProduct(p, view === "list"), name: localizeProductName(p, locale) }))}
@@ -531,18 +541,6 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
                   params={{ category, brand, q, sort, mp, technology, installationType, type, chars: sp.chars, priceMin: sp.priceMin, priceMax: sp.priceMax }}
                   insert={!q && type && /камер|видеорегистратор|nvr|dvr/i.test(type) ? <KitsStrip locale={locale} designer={DESIGNER_TYPES.has(typeSlug(type))} /> : undefined}
                 />
-              ) : view === "list" ? (
-                <div className="flex flex-col gap-2.5">
-                  {items.map((p) => (
-                    <CatalogRow key={p.id} p={slimProduct(p, true)} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
-                  ))}
-                </div>
-              ) : (
-                <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-                  {items.map((p) => (
-                    <CatalogCard key={p.id} p={slimProduct(p, false)} usdToUzs={usdToUzs} name={localizeProductName(p, locale)} />
-                  ))}
-                </div>
               )}
             </>
           )}

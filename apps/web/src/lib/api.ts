@@ -379,13 +379,16 @@ export async function getServiceBySlug(slug: string) {
   return apiFetch<{ item: ServiceDto }>(`/services/${encodeURIComponent(slug)}`, { next: { revalidate: 60 } });
 }
 
-export async function getPortfolio(page = 1, limit = 12, opts?: { category?: string }) {
+export async function getPortfolio(page = 1, limit = 12, opts?: { category?: string; fresh?: boolean }) {
   const qs = new URLSearchParams({ page: String(page), limit: String(limit) });
   // category filter for portfolio is supported by API, but UI is optional
   if (opts?.category) qs.set("category", opts.category);
-  return apiFetch<{ items: PortfolioDto[]; total: number; page: number; limit: number }>(`/portfolio?${qs}`, {
-    next: { revalidate: 60 }
-  });
+  // fresh (13.11.2026) — для страницы /portfolio: кэш данных Next отдаёт первому посетителю
+  // устаревшую копию, сколь угодно старую (на «Новинках» так получалась пустая страница).
+  // Шапка и главная остаются на кэше: no-store сделал бы динамическими все страницы сайта.
+  return apiFetch<{ items: PortfolioDto[]; total: number; page: number; limit: number }>(`/portfolio?${qs}`,
+    opts?.fresh ? { cache: "no-store" } : { next: { revalidate: 60 } }
+  );
 }
 
 export async function getPortfolioBySlug(slug: string) {

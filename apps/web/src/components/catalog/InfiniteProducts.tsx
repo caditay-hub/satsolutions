@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import type { ProductDto } from "@/lib/api";
 import { CatalogCard } from "@/components/CatalogCard";
 import { CatalogRow } from "@/components/CatalogRow";
+import { NewArrivalCard } from "@/components/Cards";
 
 // Товары раздела подгружаются при прокрутке (решение владельца 07.10.2026, без кнопки
 // «Показать ещё»). Первая порция приходит с сервера в HTML (её видят поисковики), следующие —
@@ -12,13 +13,15 @@ import { CatalogRow } from "@/components/CatalogRow";
 // оставляет обычные ссылки на страницы 2, 3… — по ним робот доходит до всех товаров.
 // «Назад» с карточки товара: помним, сколько порций было загружено и где стоял экран,
 // и восстанавливаем (иначе человек оказывался в начале списка).
+// 13.11.2026 (решение владельца): подгрузка одинаковая на всём сайте — этот же компонент
+// у голого каталога /products и у «Новинок» (variant="new": свои карточки с плашкой «Новинка»).
 
-export type InfiniteItem = { p: ProductDto; name: string };
+export type InfiniteItem = { p: ProductDto; name: string; brandName?: string | null };
 
 const STATE_TTL = 30 * 60 * 1000;
 
 export function InfiniteProducts({
-  initial, total, page, perPage, view, params, insert, insertAfter = 4,
+  initial, total, page, perPage, view, params, insert, insertAfter = 4, variant = "catalog",
 }: {
   initial: InfiniteItem[];
   total: number;
@@ -30,6 +33,8 @@ export function InfiniteProducts({
   /** блок внутри сетки после первых insertAfter товаров (комплекты в каталоге камер, 14.10.2026) */
   insert?: React.ReactNode;
   insertAfter?: number;
+  /** вид карточек: каталог или «Новинки» (бренд над названием, плашка, кнопка «Заказать») */
+  variant?: "catalog" | "new";
 }) {
   const locale = useLocale();
   const [items, setItems] = useState<InfiniteItem[]>(initial);
@@ -46,6 +51,7 @@ export function InfiniteProducts({
 
   const fetchPage = useCallback(async (n: number): Promise<InfiniteItem[] | null> => {
     const qs = new URLSearchParams({ page: String(n), limit: String(perPage), locale, view });
+    if (variant === "new") qs.set("brands", "1");
     for (const [k, v] of Object.entries(params)) if (v) qs.set(k, v);
     try {
       const r = await fetch(`/api/catalog-chunk?${qs}`);
@@ -55,7 +61,7 @@ export function InfiniteProducts({
     } catch {
       return null;
     }
-  }, [locale, view, perPage, params]);
+  }, [locale, view, perPage, params, variant]);
 
   const loadNext = useCallback(async () => {
     if (busy.current || loadedAll) return;
@@ -150,7 +156,13 @@ export function InfiniteProducts({
 
   return (
     <div onClickCapture={onClickCapture}>
-      {view === "list" ? (
+      {variant === "new" ? (
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4">
+          {items.map(({ p, name, brandName }, i) => (
+            <NewArrivalCard key={p.id} p={p} name={name} brandName={brandName ?? null} priority={i < 8} />
+          ))}
+        </div>
+      ) : view === "list" ? (
         <div className="flex flex-col gap-2.5">
           {items.map(({ p, name }, i) => (
             <Fragment key={p.id}>

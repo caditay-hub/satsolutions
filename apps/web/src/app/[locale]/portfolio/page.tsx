@@ -3,8 +3,8 @@ import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 import { resolveImageUrl } from "@/lib/image";
 import { illustrationLabel, IllustrationBadge } from "@/lib/illustrative";
+import { permanentRedirect } from "next/navigation";
 import { getPortfolio, getPortfolioCategories } from "@/lib/api";
-import { Pagination } from "@/components/Pagination";
 import { getTranslations } from "next-intl/server";
 import { hreflangAlternates } from "@/lib/hreflang";
 import { localizeCategoryName, localizePortfolioProject } from "@/lib/contentI18n";
@@ -19,6 +19,8 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
     alternates: hreflangAlternates("/portfolio", locale)
   };
 }
+
+const PORTFOLIO_MAX = 200;
 
 function chipClass(active: boolean) {
   return `rounded-full border px-4 py-1.5 text-sm font-bold transition-colors ${
@@ -40,10 +42,16 @@ export default async function PortfolioPage({
   // Страница остаётся динамической из-за searchParams (?page/?category) — это Next 15.
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "portfolio" });
-  const page = Math.max(1, Number(typeof sp.page === "string" ? sp.page : 1) || 1);
+  // 13.11.2026 (решение владельца — без перелистывания по номерам): кейсов единицы
+  // (8 на 13.11), выводим все сразу. Старые ссылки ?page=N → начало списка (308, тот же фильтр).
+  const page = 1;
   const category = typeof sp.category === "string" ? sp.category : undefined;
-  const [{ items: rawItems, total, limit }, { categories }] = await Promise.all([
-    getPortfolio(page, 12, { category }),
+  if (typeof sp.page === "string" && sp.page) {
+    const lp = locale !== "ru" ? `/${locale}` : "";
+    permanentRedirect(`${lp}/portfolio${category ? `?category=${encodeURIComponent(category)}` : ""}`);
+  }
+  const [{ items: rawItems, limit }, { categories }] = await Promise.all([
+    getPortfolio(page, PORTFOLIO_MAX, { category, fresh: true }),
     getPortfolioCategories()
   ]);
   const items = rawItems.map((p) => localizePortfolioProject(p, locale));
@@ -145,7 +153,6 @@ export default async function PortfolioPage({
           );
         })}
       </div>
-      <Pagination basePath="/portfolio" page={page} limit={limit} total={total} params={{ category }} />
     </div>
   );
 }
