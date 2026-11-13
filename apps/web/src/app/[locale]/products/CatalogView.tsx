@@ -545,7 +545,9 @@ export async function CatalogView({ params, searchParams, brandLanding, groupLan
             </>
           )}
           {smart ? null : (
-            <Pagination basePath={pagerBase} page={page} limit={perPage} total={total} params={pagerParams} />
+            // номера страниц — только для поисковиков (ссылки в HTML), людям не видны: товары
+            // подгружаются при прокрутке (решение владельца 13.11.2026)
+            <Pagination basePath={pagerBase} page={page} limit={perPage} total={total} params={pagerParams} className="sr-only" />
           )}
 
           {/* «Похожие товары» для smart-режима рендерятся внутри SmartResultsView —

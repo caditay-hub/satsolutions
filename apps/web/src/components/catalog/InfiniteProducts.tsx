@@ -63,6 +63,22 @@ export function InfiniteProducts({
     }
   }, [locale, view, perPage, params, variant]);
 
+  // Новые карточки — на месте крутилки, а не над экраном. Якорь прокрутки браузера (scroll
+  // anchoring) держал на месте то, что было на экране, — подвал: карточки вставлялись выше,
+  // крутилка не уходила с экрана, порции грузились одна за другой до конца, а человек видел
+  // только крутилку (жалоба владельца 13.11.2026). На время вставки якорь выключаем.
+  const appendItems = useCallback((got: InfiniteItem[]) => {
+    const els = [document.documentElement, document.body];
+    const prev = els.map((el) => el.style.overflowAnchor);
+    els.forEach((el) => { el.style.overflowAnchor = "none"; });
+    setItems((prevItems) => {
+      const seen = new Set(prevItems.map((x) => x.p.id));
+      return [...prevItems, ...got.filter((x) => !seen.has(x.p.id))];
+    });
+    // вернуть якорь после того, как вставка отрисована
+    window.setTimeout(() => els.forEach((el, i) => { el.style.overflowAnchor = prev[i]; }), 300);
+  }, []);
+
   const loadNext = useCallback(async () => {
     if (busy.current || loadedAll) return;
     busy.current = true;
@@ -70,10 +86,7 @@ export function InfiniteProducts({
     const next = lastPage + 1;
     const got = await fetchPage(next);
     if (got) {
-      setItems((prev) => {
-        const seen = new Set(prev.map((x) => x.p.id));
-        return [...prev, ...got.filter((x) => !seen.has(x.p.id))];
-      });
+      appendItems(got);
       setLastPage(next);
       setFailed(false);
     } else {
@@ -81,7 +94,7 @@ export function InfiniteProducts({
     }
     setLoading(false);
     busy.current = false;
-  }, [fetchPage, lastPage, loadedAll]);
+  }, [fetchPage, lastPage, loadedAll, appendItems]);
 
   // сбой сети — тихо повторяем через несколько секунд (до 3 раз), кнопок не показываем
   useEffect(() => {

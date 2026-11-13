@@ -103,7 +103,9 @@ export default async function NewArrivalsPage({ params, searchParams }: { params
         />
       </div>
 
-      <Pagination basePath="/products/new" page={page} limit={PER_PAGE} total={total} />
+      {/* номера страниц — только для поисковиков (ссылки в HTML), людям не видны: товары
+          подгружаются при прокрутке (решение владельца 13.11.2026) */}
+      <Pagination basePath="/products/new" page={page} limit={PER_PAGE} total={total} className="sr-only" />
       </div>
     </div>
   );
