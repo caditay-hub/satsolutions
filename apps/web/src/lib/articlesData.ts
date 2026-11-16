@@ -13940,13 +13940,13 @@ export const ARTICLES: Article[] = [
   {
     slug: "videonablyudenie-personalnye-dannye-uzbekistan",
     date: "2026-09-10",
-    updated: "2026-10-10",
+    updated: "2026-11-16",
     related: ["cctv", "access"],
     hubs: ["ip-kamery", "zamki-i-skud"],
     loc: {
       ru: {
         title: "Видеонаблюдение и персональные данные: где по закону может лежать архив", seoTitle: "Видеонаблюдение и персональные данные: где хранить архив",
-        excerpt: "Закон РУз «О персональных данных» № ЗРУ-547 требует хранить базы с данными граждан республики на технических средствах в Узбекистане. Что это значит для видеоархива, распознавания лиц и биометрии в СКУД.",
+        excerpt: "Закон РУз «О персональных данных» № ЗРУ-547 в редакции ЗРУ-1125 от 26.03.2026 требует хранить в Узбекистане биометрические данные; остальные данные можно хранить за рубежом только при условиях статьи 27-1. Что это значит для видеоархива, распознавания лиц и биометрии в СКУД.",
         sections: [
           { h: "Почему видеозапись — это персональные данные", p: [
             "Закон Республики Узбекистан «О персональных данных» от 2 июля 2019 года № ЗРУ-547 определяет персональные данные как зафиксированную на электронном, бумажном или ином носителе информацию, относящуюся к определённому физическому лицу или дающую возможность его идентификации. Формулировка «дающую возможность идентификации» и есть ключ: запись, на которой различимо лицо человека, под это определение попадает.",
@@ -13957,11 +13957,11 @@ export const ARTICLES: Article[] = [
             "Разница практическая. Карта доступа обезличена: потерял — выдали новую. Биометрический шаблон изменить нельзя, и утечка такой базы необратима. Именно поэтому к обработке биометрических данных закон предъявляет отдельные требования, и именно поэтому терминал с распознаванием лиц нельзя ставить «просто чтобы было».",
           ] },
           { h: "Статья 27-1: где физически должна лежать база", p: [
-            "Это самое важное для выбора оборудования. Закон дополнен статьёй 27-1 об особых условиях обработки персональных данных граждан Республики Узбекистан. Согласно ей, собственник или оператор при обработке персональных данных граждан республики с использованием информационных технологий, в том числе во всемирной информационной сети Интернет, обязан обеспечить их сбор, систематизацию и хранение в базах персональных данных на технических средствах, физически размещённых на территории Республики Узбекистан и зарегистрированных в установленном порядке в Государственном реестре баз персональных данных.",
+            "Это самое важное для выбора оборудования. Статья 27-1 закона в редакции закона ЗРУ-1125 от 26.03.2026 перечисляет данные, которые подлежат обязательному хранению на территории Республики Узбекистан: биометрические и генетические данные физических лиц, а также данные пользователей услуг операторов связи. Остальные персональные данные можно хранить и обрабатывать за рубежом при одном из условий: страна признана обеспечивающей адекватную защиту; оператор применяет типовые договорные условия или обязательные корпоративные правила, утверждённые уполномоченным органом; либо соблюдает утверждённые им международные стандарты. Шаблоны лиц и отпечатков в СКУД и системах учёта времени — биометрия, поэтому их база должна лежать на технических средствах в Узбекистане.",
             "Уполномоченный государственный орган в этой области — Государственный центр персонализации при Кабинете Министров. Он ведёт Государственный реестр баз персональных данных, выдаёт свидетельство о регистрации базы и в пределах своих полномочий контролирует соблюдение законодательства.",
           ] },
           { h: "Что это значит для облачного видеонаблюдения", p: [
-            "Массовые облачные сервисы производителей камер удобны: поставил камеру, привязал к приложению, смотришь из любой точки. Вопрос в том, где физически лежит запись. Если система идентифицирует граждан Узбекистана, а сервер находится за пределами республики, конструкция вступает в противоречие с требованием о размещении базы на территории страны.",
+            "Массовые облачные сервисы производителей камер удобны: поставил камеру, привязал к приложению, смотришь из любой точки. Вопрос в том, где физически лежит запись. Видеоархив с распознаванием лиц попадает под требование о биометрии, которую статья 27-1 требует хранить в Узбекистане. Обычный архив можно вынести за рубеж только при выполнении одного из условий статьи, и до такого решения лучше получить заключение юриста.",
             "Отсюда наша инженерная позиция, которую мы объясняем каждому заказчику: локальный регистратор или сервер на объекте — это не консерватизм и не попытка продать железо. Удалённый доступ при этом никуда не девается: смотреть с телефона можно и через локальный регистратор, разница только в том, где хранится архив.",
           ] },
           { h: "Что обязан сделать владелец системы", p: [
@@ -13977,7 +13977,7 @@ export const ARTICLES: Article[] = [
       },
       uz: {
         title: "Videokuzatuv va shaxsga doir maʼlumotlar: qonun boʻyicha arxiv qayerda turishi mumkin", seoTitle: "Videokuzatuv va shaxsga doir maʼlumotlar: arxiv qayerda",
-        excerpt: "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547 qonuni respublika fuqarolari maʼlumotlari bazasini Oʻzbekiston hududidagi texnik vositalarda saqlashni talab qiladi. Bu videoarxiv, yuzni tanish va SKUD biometriyasi uchun nimani anglatadi.",
+        excerpt: "26.03.2026 dagi OʻRQ-1125 tahriridagi «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547 qonuni biometrik maʼlumotlarni Oʻzbekistonda saqlashni talab qiladi; boshqa maʼlumotlarni xorijda faqat 27-1-moddadagi shartlar bajarilganda saqlash mumkin. Bu videoarxiv, yuzni tanish va SKUD biometriyasi uchun nimani anglatadi.",
         sections: [
           { h: "Nega videoyozuv shaxsga doir maʼlumot hisoblanadi", p: [
             "Oʻzbekiston Respublikasining 2019-yil 2-iyuldagi «Shaxsga doir maʼlumotlar toʻgʻrisida»gi OʻRQ-547-son qonuni shaxsga doir maʼlumotlarni elektron, qogʻoz yoki boshqa moddiy tashuvchida qayd etilgan, muayyan jismoniy shaxsga taalluqli yoki uni identifikatsiya qilish imkonini beruvchi axborot sifatida belgilaydi. «Identifikatsiya qilish imkonini beruvchi» iborasi kalit boʻlib xizmat qiladi: odamning yuzi ajralib turadigan yozuv shu taʼrifga tushadi.",
@@ -13988,11 +13988,11 @@ export const ARTICLES: Article[] = [
             "Farq amaliy. Kirish kartasi shaxssiz: yoʻqotding — yangisini berishadi. Biometrik shablonni oʻzgartirib boʻlmaydi, bunday baza sizib chiqsa, buni qaytarib boʻlmaydi. Aynan shuning uchun qonun biometrik maʼlumotlarni qayta ishlashga alohida talablar qoʻyadi va aynan shuning uchun yuzni tanish terminalini «shunchaki boʻlsin deb» qoʻyib boʻlmaydi.",
           ] },
           { h: "27-1-modda: baza jismonan qayerda boʻlishi kerak", p: [
-            "Uskuna tanlash uchun eng muhimi shu. Qonun Oʻzbekiston Respublikasi fuqarolarining shaxsga doir maʼlumotlarini qayta ishlashning alohida shartlari haqidagi 27-1-modda bilan toʻldirilgan. Unga koʻra, mulkdor yoki operator respublika fuqarolarining shaxsga doir maʼlumotlarini axborot texnologiyalaridan, jumladan, jahon axborot tarmogʻi Internetdan foydalangan holda qayta ishlashda ularni Oʻzbekiston Respublikasi hududida jismonan joylashgan va belgilangan tartibda Shaxsga doir maʼlumotlar bazalarining davlat reyestrida roʻyxatga olingan texnik vositalardagi bazalarda yigʻish, tizimlashtirish va saqlashni taʼminlashi shart.",
+            "Uskuna tanlash uchun eng muhimi shu. 26.03.2026 dagi OʻRQ-1125 qonuni tahriridagi 27-1-modda Oʻzbekiston Respublikasi hududida majburiy saqlanadigan maʼlumotlarni sanab oʻtadi: jismoniy shaxslarning biometrik va genetik maʼlumotlari, shuningdek aloqa operatorlari xizmatlaridan foydalanuvchilarning maʼlumotlari. Boshqa shaxsga doir maʼlumotlarni xorijda saqlash va qayta ishlash quyidagi shartlardan biri bajarilganda mumkin: davlat yetarli himoyani taʼminlaydi deb tan olingan; operator vakolatli organ tasdiqlagan namunaviy shartnoma shartlari yoki majburiy korporativ qoidalarni qoʻllaydi; yoxud u tasdiqlagan xalqaro standartlarga rioya qiladi. SKUD va ish vaqtini hisobga olish tizimlaridagi yuz va barmoq izi shablonlari — biometriya, shuning uchun ularning bazasi Oʻzbekistondagi texnik vositalarda turishi kerak.",
             "Ushbu sohadagi vakolatli davlat organi — Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi. U Shaxsga doir maʼlumotlar bazalarining davlat reyestrini yuritadi, baza roʻyxatga olingani haqida guvohnoma beradi va oʻz vakolatlari doirasida qonunchilikka rioya etilishini nazorat qiladi.",
           ] },
           { h: "Bulutli videokuzatuv uchun bu nimani anglatadi", p: [
-            "Kamera ishlab chiqaruvchilarining ommaviy bulutli xizmatlari qulay: kamerani qoʻyding, ilovaga bogʻlading, istalgan joydan koʻrasan. Savol shundaki, yozuv jismonan qayerda yotadi. Agar tizim Oʻzbekiston fuqarolarini identifikatsiya qilsa, server esa respublikadan tashqarida boʻlsa, bu qurilma bazani mamlakat hududida joylashtirish talabiga zid keladi.",
+            "Kamera ishlab chiqaruvchilarining ommaviy bulutli xizmatlari qulay: kamerani qoʻyding, ilovaga bogʻlading, istalgan joydan koʻrasan. Savol shundaki, yozuv jismonan qayerda yotadi. Yuzni aniqlaydigan videoarxivga biometriya talabi tegishli, uni 27-1-modda Oʻzbekistonda saqlashni talab qiladi. Oddiy arxivni xorijga faqat moddadagi shartlardan biri bajarilganda chiqarish mumkin, bunday qarordan oldin yurist xulosasini olgan maʼqul.",
             "Bundan har bir buyurtmachiga tushuntiradigan muhandislik pozitsiyamiz kelib chiqadi: obyektdagi lokal registrator yoki server — bu konservatizm ham, temir sotish urinishi ham emas. Masofaviy kirish esa hech qayerga ketmaydi: lokal registrator orqali ham telefondan koʻrish mumkin, farq faqat arxiv qayerda saqlanishida.",
           ] },
           { h: "Tizim egasi nima qilishi shart", p: [
@@ -14008,7 +14008,7 @@ export const ARTICLES: Article[] = [
       },
       en: {
         title: "Video surveillance and personal data: where the archive may legally be stored", seoTitle: "Video surveillance and personal data: where to keep archives",
-        excerpt: "Uzbekistan's Personal Data Law No. ZRU-547 requires databases holding the data of the republic's citizens to be kept on technical facilities located in Uzbekistan. What that means for video archives, face recognition and biometrics in access control.",
+        excerpt: "Uzbekistan's Personal Data Law No. ZRU-547, as amended by ZRU-1125 of 26 March 2026, requires biometric data to be stored in Uzbekistan; other data may be stored abroad only under the conditions of Article 27-1. What that means for video archives, face recognition and biometrics in access control.",
         sections: [
           { h: "Why a video recording counts as personal data", p: [
             "The Law of the Republic of Uzbekistan “On Personal Data” No. ZRU-547 of 2 July 2019 defines personal data as information recorded on an electronic, paper or other medium that relates to a specific individual or makes it possible to identify them. The phrase “makes it possible to identify” is the key: a recording in which a person's face is distinguishable falls under that definition.",
@@ -14019,11 +14019,11 @@ export const ARTICLES: Article[] = [
             "The difference is practical. An access card is impersonal: lose it and you are issued another. A biometric template cannot be changed, and a leak of such a database is irreversible. That is precisely why the law places separate requirements on processing biometric data, and why a face recognition terminal should not be installed simply because it is available.",
           ] },
           { h: "Article 27-1: where the database must physically sit", p: [
-            "This is the part that decides equipment choice. The law was supplemented with Article 27-1 on special conditions for processing the personal data of citizens of the Republic of Uzbekistan. Under it, when processing the personal data of the republic's citizens using information technologies, including over the internet, the owner or operator must ensure their collection, systematisation and storage in personal data databases on technical facilities physically located in the territory of the Republic of Uzbekistan and registered in the established manner in the State Register of Personal Data Databases.",
+            "This is the part that decides equipment choice. Article 27-1, as amended by Law ZRU-1125 of 26 March 2026, lists the data that must be stored in the Republic of Uzbekistan: biometric and genetic data of individuals, and data of users of telecom operators' services. Other personal data may be stored and processed abroad if one of these conditions is met: the destination country is recognised as providing adequate protection; the operator uses standard contractual clauses or binding corporate rules approved by the authorised body; or the operator follows international standards approved by that body. Face and fingerprint templates in access-control and time-attendance systems are biometric data, so their database must sit on hardware in Uzbekistan.",
             "The authorised state body in this area is the State Personalisation Centre under the Cabinet of Ministers. It maintains the State Register of Personal Data Databases, issues the certificate of registration of a database and, within its powers, oversees compliance with the legislation.",
           ] },
           { h: "What this means for cloud video surveillance", p: [
-            "The mass-market cloud services offered by camera manufacturers are convenient: mount the camera, link it to the app, watch from anywhere. The question is where the recording physically resides. If the system identifies citizens of Uzbekistan while the server sits outside the republic, the arrangement runs against the requirement to keep the database within the country.",
+            "The mass-market cloud services offered by camera manufacturers are convenient: mount the camera, link it to the app, watch from anywhere. The question is where the recording physically resides. A video archive with face recognition falls under the biometrics rule, which Article 27-1 requires to be kept in Uzbekistan. An ordinary archive may go abroad only if one of the article's conditions is met; get a lawyer's opinion before making that decision.",
             "Hence our engineering position, which we explain to every client: a local recorder or an on-site server is neither conservatism nor an attempt to sell hardware. Remote access does not disappear — you can still watch from a phone through a local recorder; the only difference is where the archive is kept.",
           ] },
           { h: "What the system owner must do", p: [
@@ -14039,7 +14039,7 @@ export const ARTICLES: Article[] = [
       },
       tr: {
         title: "Video gözetim ve kişisel veriler: arşiv yasal olarak nerede tutulabilir", seoTitle: "Video gözetim ve kişisel veriler: arşiv nerede tutulmalı",
-        excerpt: "Özbekistan'ın ZRU-547 sayılı Kişisel Veriler Kanunu, ülke vatandaşlarının verilerini içeren veri tabanlarının Özbekistan'daki teknik altyapıda tutulmasını zorunlu kılıyor. Bunun video arşivi, yüz tanıma ve geçiş kontrolündeki biyometri için anlamı.",
+        excerpt: "Özbekistan'ın ZRU-547 sayılı Kişisel Veriler Kanunu, 26.03.2026 tarihli ZRU-1125 değişikliğiyle biyometrik verilerin Özbekistan'da saklanmasını zorunlu kılıyor; diğer veriler ancak 27-1. maddedeki koşullarla yurt dışında tutulabilir. Bunun video arşivi, yüz tanıma ve geçiş kontrolündeki biyometri için anlamı.",
         sections: [
           { h: "Video kaydı neden kişisel veri sayılır", p: [
             "Özbekistan Cumhuriyeti'nin 2 Temmuz 2019 tarihli ZRU-547 sayılı «Kişisel Veriler Hakkında» Kanunu, kişisel veriyi elektronik, kâğıt ya da başka bir ortama kaydedilmiş, belirli bir gerçek kişiye ait olan veya onun kimliğinin belirlenmesine imkân veren bilgi olarak tanımlar. «Kimliğin belirlenmesine imkân veren» ifadesi anahtardır: bir kişinin yüzünün seçilebildiği kayıt bu tanıma girer.",
@@ -14050,11 +14050,11 @@ export const ARTICLES: Article[] = [
             "Fark pratiktir. Geçiş kartı kişiliksizdir: kaybedersiniz, yenisi verilir. Biyometrik şablon değiştirilemez ve böyle bir veri tabanının sızması geri alınamaz. Kanunun biyometrik verilerin işlenmesine ayrı şartlar getirmesinin ve yüz tanımalı terminalin «olsun diye» konulmaması gerektiğinin nedeni tam da budur.",
           ] },
           { h: "27-1. madde: veri tabanı fiziken nerede durmalı", p: [
-            "Ekipman seçimini belirleyen kısım burasıdır. Kanuna, Özbekistan Cumhuriyeti vatandaşlarının kişisel verilerinin işlenmesine ilişkin özel şartları düzenleyen 27-1. madde eklenmiştir. Buna göre mal sahibi veya işleyen, ülke vatandaşlarının kişisel verilerini bilgi teknolojilerini, internet dâhil, kullanarak işlerken bunların toplanmasını, sistematize edilmesini ve saklanmasını Özbekistan Cumhuriyeti topraklarında fiziken bulunan ve Kişisel Veri Tabanları Devlet Siciline usulünce kaydedilmiş teknik altyapıdaki veri tabanlarında sağlamak zorundadır.",
+            "Ekipman seçimini belirleyen kısım burasıdır. 26.03.2026 tarihli ZRU-1125 Kanunu ile değişik 27-1. madde, Özbekistan Cumhuriyeti topraklarında saklanması zorunlu verileri sayar: gerçek kişilerin biyometrik ve genetik verileri ile telekom operatörlerinin hizmetlerini kullananların verileri. Diğer kişisel veriler şu koşullardan biri sağlanırsa yurt dışında saklanabilir ve işlenebilir: ülkenin yeterli koruma sağladığı kabul edilmiştir; işleyen, yetkili kurumun onayladığı standart sözleşme hükümlerini veya bağlayıcı şirket kurallarını uygular; ya da bu kurumun onayladığı uluslararası standartlara uyar. Geçiş kontrol ve mesai takip sistemlerindeki yüz ve parmak izi şablonları biyometridir; bu yüzden veri tabanları Özbekistan'daki teknik altyapıda durmalıdır.",
             "Bu alandaki yetkili devlet kurumu Bakanlar Kurulu bünyesindeki Devlet Kişiselleştirme Merkezidir. Kişisel Veri Tabanları Devlet Sicilini tutar, veri tabanının kayıt belgesini verir ve yetkileri çerçevesinde mevzuata uyumu denetler.",
           ] },
           { h: "Bulut tabanlı gözetim için bu ne demek", p: [
-            "Kamera üreticilerinin yaygın bulut hizmetleri kullanışlıdır: kamerayı takarsınız, uygulamaya bağlarsınız, her yerden izlersiniz. Soru, kaydın fiziken nerede durduğudur. Sistem Özbekistan vatandaşlarını teşhis ediyor, sunucu ise ülke dışındaysa, bu kurgu veri tabanının ülke içinde tutulması şartıyla çelişir.",
+            "Kamera üreticilerinin yaygın bulut hizmetleri kullanışlıdır: kamerayı takarsınız, uygulamaya bağlarsınız, her yerden izlersiniz. Soru, kaydın fiziken nerede durduğudur. Yüz tanıma yapan video arşivi biyometri kuralına girer ve 27-1. madde bu verilerin Özbekistan'da saklanmasını ister. Sıradan bir arşiv ancak maddedeki koşullardan biri sağlanırsa yurt dışına taşınabilir; bu karardan önce bir avukatın görüşünü almanız iyi olur.",
             "Her müşteriye anlattığımız mühendislik duruşumuz buradan gelir: sahadaki yerel kayıt cihazı ya da sunucu ne muhafazakârlıktır ne de donanım satma çabası. Uzaktan erişim de ortadan kalkmaz: yerel kayıt cihazı üzerinden de telefondan izlenebilir; tek fark arşivin nerede saklandığıdır.",
           ] },
           { h: "Sistem sahibinin yapması gerekenler", p: [
@@ -14070,7 +14070,7 @@ export const ARTICLES: Article[] = [
       },
       zh: {
         title: "乌兹别克斯坦视频监控与个人数据：录像存档按法律必须放在哪里",
-        excerpt: "乌兹别克斯坦《个人数据法》第 ZRU-547 号要求含有本国公民数据的数据库存放在位于乌兹别克斯坦境内的技术设施上。这对视频存档、人脸识别和门禁生物识别意味着什么。",
+        excerpt: "乌兹别克斯坦《个人数据法》第 ZRU-547 号经 2026 年 3 月 26 日 ZRU-1125 号法律修订后，要求生物识别数据存储在乌兹别克斯坦境内；其他数据只有满足第 27-1 条规定的条件才可存放境外。这对视频存档、人脸识别和门禁生物识别意味着什么。",
         sections: [
           { h: "为什么录像属于个人数据", p: [
             "乌兹别克斯坦共和国 2019 年 7 月 2 日第 ZRU-547 号《个人数据法》将个人数据定义为：记录在电子、纸质或其他载体上，涉及特定自然人或能够使其被识别的信息。「能够使其被识别」正是关键：能辨认出人脸的录像即落入该定义。",
@@ -14081,11 +14081,11 @@ export const ARTICLES: Article[] = [
             "区别是实际存在的。门禁卡不具人身性：丢了就补发一张。生物识别模板无法更改，此类数据库一旦泄露便不可挽回。法律对生物识别数据的处理提出单独要求，正是出于这个原因；人脸识别终端不能「有就装上」，也是出于这个原因。",
           ] },
           { h: "第 27-1 条：数据库在物理上应当放在哪里", p: [
-            "这是决定设备选型的部分。法律增补了关于处理乌兹别克斯坦共和国公民个人数据特别条件的第 27-1 条。据此，所有者或处理者在使用信息技术（包括通过互联网）处理本国公民个人数据时，必须确保其收集、系统化和存储在位于乌兹别克斯坦共和国境内、并按规定程序在个人数据库国家登记册中注册的技术设施上的数据库中。",
+            "这是决定设备选型的部分。经 2026 年 3 月 26 日 ZRU-1125 号法律修订的第 27-1 条，列出了必须存储在乌兹别克斯坦共和国境内的数据：自然人的生物识别数据和基因数据，以及电信运营商服务用户的数据。其他个人数据满足下列条件之一即可在境外存储和处理：目的国被认定提供充分保护；处理者采用授权机关批准的标准合同条款或有约束力的公司规则；或遵守该机关批准的国际标准。门禁和考勤系统中的人脸和指纹模板属于生物识别数据，因此其数据库须存放在乌兹别克斯坦境内的技术设施上。",
             "该领域的授权国家机关是内阁下属的国家个人化中心。它维护个人数据库国家登记册，颁发数据库注册证书，并在职权范围内监督法律的遵守情况。",
           ] },
           { h: "这对云端视频监控意味着什么", p: [
-            "摄像机厂商的大众化云服务很方便：装上摄像机、绑定应用、随处可看。问题在于录像在物理上放在哪里。如果系统识别的是乌兹别克斯坦公民，而服务器位于共和国境外，这套结构就与数据库须存放于境内的要求相抵触。",
+            "摄像机厂商的大众化云服务很方便：装上摄像机、绑定应用、随处可看。问题在于录像在物理上放在哪里。带人脸识别的视频存档适用生物识别规定，第 27-1 条要求此类数据存储在乌兹别克斯坦境内。普通存档只有在满足该条条件之一时才可迁往境外，作此决定前最好先取得律师意见。",
             "我们向每一位客户说明的工程立场由此而来：现场的本地录像机或服务器既不是守旧，也不是为了卖硬件。远程访问并不会消失——通过本地录像机同样可以用手机查看，区别只在于存档放在哪里。",
           ] },
           { h: "系统所有者必须做什么", p: [
@@ -17681,7 +17681,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "pozharnaya-signalizatsiya-dlya-biznesa-trebovaniya",
     date: "2026-08-05",
-    updated: "2026-09-09",
+    updated: "2026-11-16",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
@@ -17705,7 +17705,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Стоимость и жизнь после сдачи", p: [
             "Бюджет складывается из площади и категорий помещений, числа извещателей и шлейфов, типа прибора и состава оповещения. Маленький магазин закрывается пороговой системой за скромные деньги; офисному зданию нужна адресная — дороже на старте, но дешевле в эксплуатации за счёт точной диагностики. Честную смету даёт только выезд: мы считаем бесплатно по вашей планировке.",
-            "После сдачи начинается регламент, и его рамки заданы постановлением Кабинета Министров Республики Узбекистан № 649 от 20.10.2020: по пункту 148 техническое обслуживание и планово-предупредительный ремонт систем противопожарной защиты ведутся по годовому плану, составленному с учётом документации изготовителя оборудования. Пункт 149 обязывает объект в течение 30 дней после ввода системы в эксплуатацию заключить договор с лицензированной организацией, а при расторжении договора — в течение 24 часов уведомить об этом органы МЧС. Проверки извещателей по плану, замена аккумуляторов, записи в журнале ТО — именно журнал инспектор открывает первым. Объекты, которые смонтировали сами, мы берём на регламент с выездами по годовому плану.",
+            "После сдачи начинается регламент, и его рамки заданы постановлением Кабинета Министров Республики Узбекистан № 649 от 20.10.2020: по пункту 148 техническое обслуживание и планово-предупредительный ремонт систем противопожарной защиты ведутся по годовому плану, составленному с учётом документации изготовителя оборудования. Пункт 149: если объект не может обслуживать систему своими специалистами, договор с организацией, имеющей право на этот вид работ, заключается в течение 30 дней после ввода устройств в работу, а при расторжении договора руководитель предприятия в течение 24 часов уведомляет отдел по чрезвычайным ситуациям. Проверки извещателей по плану, замена аккумуляторов, записи в журнале ТО — именно журнал инспектор открывает первым. Объекты, которые смонтировали сами, мы берём на регламент с выездами по годовому плану.",
           ] },
           { h: "Ложные срабатывания и их причины", p: [
             "Основной источник ложных тревог — пыль и насекомые в камере дымового извещателя, а также датчик, поставленный над плитой, у вентиляции или прямо под кондиционером. В производственных зонах с запылённостью вместо дымовых ставят тепловые или аспирационные извещатели.",
@@ -17737,7 +17737,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Narx va topshirilgandan keyingi hayot", p: [
             "Byudjet xonalar maydoni va kategoriyalari, xabar beruvchi va shleyflar soni, prib turi va ogohlantirish tarkibidan yigʻiladi. Kichik doʻkon chegaraviy tizim bilan kamtar pulga yopiladi; ofis binosiga manzilli kerak — startda qimmatroq, lekin aniq diagnostika hisobiga ekspluatatsiyada arzonroq. Halol smetani faqat chiqish beradi: rejangiz boʻyicha bepul hisoblaymiz.",
-            "Topshirilgandan keyin reglament boshlanadi va uning doirasini Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori belgilaydi: 148-bandga koʻra yongʻindan himoya tizimlariga texnik xizmat koʻrsatish va rejali-ogohlantiruvchi taʼmirlash uskuna ishlab chiqaruvchisining hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi. 149-band obyektni tizim ishga tushirilgandan keyin 30 kun ichida litsenziyalangan tashkilot bilan shartnoma tuzishga, shartnoma bekor qilinganda esa 24 soat ichida FVV organlarini xabardor qilishga majbur qiladi. Reja boʻyicha xabar beruvchilarni tekshirish, akkumulyatorlarni almashtirish, TX jurnaliga yozuvlar — inspektor birinchi boʻlib aynan jurnalni ochadi. Oʻzimiz montaj qilgan obyektlarni yillik reja boʻyicha chiqishlar bilan reglamentga olamiz.",
+            "Topshirilgandan keyin reglament boshlanadi va uning doirasini Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori belgilaydi: 148-bandga koʻra yongʻindan himoya tizimlariga texnik xizmat koʻrsatish va rejali-ogohlantiruvchi taʼmirlash uskuna ishlab chiqaruvchisining hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi. 149-band: agar obyekt tizimga oʻz mutaxassislari bilan xizmat koʻrsata olmasa, shu ish turiga huquqi bor tashkilot bilan shartnoma qurilmalar ishga tushirilgandan keyin 30 kun ichida tuziladi, shartnoma bekor qilinganda esa korxona rahbari 24 soat ichida favqulodda vaziyatlar boʻlimini xabardor qiladi. Reja boʻyicha xabar beruvchilarni tekshirish, akkumulyatorlarni almashtirish, TX jurnaliga yozuvlar — inspektor birinchi boʻlib aynan jurnalni ochadi. Oʻzimiz montaj qilgan obyektlarni yillik reja boʻyicha chiqishlar bilan reglamentga olamiz.",
           ] },
           { h: "Yolgʻon ishga tushishlar va ularning sabablari", p: [
             "Yolgʻon signalning asosiy manbai — tutun detektori kamerasidagi chang va hasharotlar, shuningdek plita ustiga, ventilyatsiya yoniga yoki toʻgʻridan-toʻgʻri konditsioner tagiga qoʻyilgan datchik. Changli ishlab chiqarish zonalarida tutun detektorlari oʻrniga issiqlik yoki aspiratsion detektorlar oʻrnatiladi.",
@@ -17769,7 +17769,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "The cost, and life after handover", p: [
             "The budget is built from the area and category of the rooms, the number of detectors and loops, the panel type and the evacuation setup. A small shop is covered by a conventional system for modest money; an office building needs an addressable one — pricier upfront but cheaper to run thanks to precise diagnostics. Only a site visit yields an honest estimate: we calculate free of charge from your floor plan.",
-            "After handover the maintenance schedule begins, and its framework is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020: under clause 148, maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149 obliges the site to sign a contract with a licensed organisation within 30 days of the system being put into operation and, if that contract is terminated, to notify the emergency service authorities within 24 hours. Detector checks against the plan, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. Sites we installed ourselves we take onto that annual schedule.",
+            "After handover the maintenance schedule begins, and its framework is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020: under clause 148, maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149: if the site cannot service the system with its own specialists, it signs a contract with an organisation entitled to this work within 30 days of the devices being put into operation; if that contract is terminated, the head of the enterprise notifies the emergency department within 24 hours. Detector checks against the plan, battery replacement, entries in the maintenance log — the log is the first thing an inspector opens. Sites we installed ourselves we take onto that annual schedule.",
           ] },
           { h: "False alarms and what causes them", p: [
             "The main source of false alarms is dust and insects inside the smoke detector chamber, along with a detector placed above a stove, next to ventilation or directly under an air conditioner. In dusty production areas heat or aspirating detectors are used instead of smoke ones.",
@@ -17801,7 +17801,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "Maliyet ve teslimden sonraki hayat", p: [
             "Bütçe; alanların büyüklüğü ve kategorisi, dedektör ve zon sayısı, panel tipi ve tahliye düzeninden oluşur. Küçük mağaza mütevazı paraya konvansiyonel sistemle kapanır; ofis binasına adresli gerekir — başta pahalı ama hassas teşhis sayesinde işletmede ucuzdur. Dürüst teklifi yalnız keşif verir: kat planınıza göre ücretsiz hesaplarız.",
-            "Teslimden sonra bakım rejimi başlar ve çerçevesini Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı çizer: 148. maddeye göre yangından korunma sistemlerinin bakımı ve planlı önleyici onarımı, ekipman üreticisinin belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür. 149. madde, tesisin sistem işletmeye alındıktan sonra 30 gün içinde lisanslı bir kuruluşla sözleşme yapmasını, sözleşme feshedilirse 24 saat içinde acil durum makamlarına bildirmesini zorunlu kılar. Plana göre dedektör kontrolleri, akü değişimi, bakım defterine kayıtlar — müfettişin ilk açtığı şey o defterdir. Kendi kurduğumuz tesisleri bu yıllık programa alırız.",
+            "Teslimden sonra bakım rejimi başlar ve çerçevesini Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı çizer: 148. maddeye göre yangından korunma sistemlerinin bakımı ve planlı önleyici onarımı, ekipman üreticisinin belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür. 149. madde: tesis sistemin bakımını kendi uzmanlarıyla yapamıyorsa, cihazlar işletmeye alındıktan sonra 30 gün içinde bu iş için yetkili bir kuruluşla sözleşme yapılır; sözleşme feshedilirse işletme yöneticisi 24 saat içinde olağanüstü durumlar birimine bildirir. Plana göre dedektör kontrolleri, akü değişimi, bakım defterine kayıtlar — müfettişin ilk açtığı şey o defterdir. Kendi kurduğumuz tesisleri bu yıllık programa alırız.",
           ] },
           { h: "Hatalı alarmlar ve nedenleri", p: [
             "Hatalı alarmların başlıca kaynağı duman dedektörü haznesindeki toz ve böceklerdir; ocak üstüne, havalandırma yanına veya doğrudan klima altına konan dedektör de aynı sonucu verir. Tozlu üretim alanlarında duman yerine ısı ya da aspirasyonlu dedektör kullanılır.",
@@ -17833,7 +17833,7 @@ export const ARTICLES: Article[] = [
           ] },
           { h: "造价，以及交付之后的日子", p: [
             "预算由房间面积和类别、探测器和回路数量、主机类型及广播构成。小商店用总线制系统花不了多少钱；办公楼需要编址系统——前期贵些，但凭精确诊断在使用中更省。诚实的报价只能来自现场勘测：按您的平面图免费核算。",
-            "交付之后进入维保阶段，其框架由乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议确定：第 148 条要求消防系统的维护保养与计划性预防修理按年度计划执行，年度计划须参照设备制造商的技术文件编制；第 149 条要求项目在系统投入使用后 30 日内与持牌机构签订维保合同，合同解除时须在 24 小时内通知紧急情况部门。按计划检查探测器、更换电池、登记维保台账——检查员第一个翻的就是台账。我们自己安装的项目，按这份年度计划纳入维保。",
+            "交付之后进入维保阶段，其框架由乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议确定：第 148 条要求消防系统的维护保养与计划性预防修理按年度计划执行，年度计划须参照设备制造商的技术文件编制；第 149 条规定：若项目无法由自有专业人员维护系统，须在装置投入运行后 30 日内与有权从事该类工作的机构签订维保合同；合同解除时，企业负责人须在 24 小时内通知紧急情况部门。按计划检查探测器、更换电池、登记维保台账——检查员第一个翻的就是台账。我们自己安装的项目，按这份年度计划纳入维保。",
           ] },
           { h: "误报的常见原因", p: [
             "误报最主要的来源是烟感探测器腔体内的灰尘和虫子，其次是把探测器装在灶台上方、通风口旁或空调正下方。粉尘较大的生产区域应改用感温探测器或吸气式探测器。",
@@ -18314,7 +18314,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "pozharnaya-signalizatsiya-vidy",
     date: "2026-07-17",
-    updated: "2026-09-09",
+    updated: "2026-11-16",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost"],
     brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
@@ -18345,7 +18345,7 @@ export const ARTICLES: Article[] = [
           { q: "Какая сигнализация нужна небольшому магазину?", a: "Обычно достаточно пороговой: прибор на 2–4 шлейфа, дымовые извещатели, ручник у выхода и сирена. Это самый доступный по бюджету вариант, отвечающий нормам." },
           { q: "Чем адресная система лучше пороговой?", a: "Она показывает точное место тревоги — не «шлейф 2», а конкретное помещение. Плюс контроль исправности каждого извещателя: обрыв или снятый датчик виден сразу." },
           { q: "Почему сигнализация «ложно» срабатывает и как это лечится?", a: "Частые причины — пыль в камере извещателя, пар, насекомые. Лечится регламентной чисткой и правильным подбором типа датчика; адресно-аналоговые системы предупреждают о загрязнении заранее." },
-          { q: "Обязательно ли обслуживать сигнализацию после монтажа?", a: "Да, и это прямая норма: постановление Кабинета Министров Республики Узбекистан № 649 от 20.10.2020 требует вести техобслуживание по годовому плану с учётом документации изготовителя (п. 148) и в течение 30 дней после ввода системы заключить договор с лицензированной организацией, а при его расторжении за 24 часа уведомить МЧС (п. 149). Журнал ТО инспектор смотрит первым. Системы, которые смонтировали мы, берём на регламент по договору." },
+          { q: "Обязательно ли обслуживать сигнализацию после монтажа?", a: "Да, и это прямая норма: постановление Кабинета Министров Республики Узбекистан № 649 от 20.10.2020 требует вести техобслуживание по годовому плану с учётом документации изготовителя (п. 148), а если объект не может обслуживать систему своими специалистами — в течение 30 дней после ввода устройств в работу заключить договор с организацией, имеющей право на этот вид работ; при расторжении договора руководитель предприятия за 24 часа уведомляет отдел по ЧС (п. 149). Журнал ТО инспектор смотрит первым. Системы, которые смонтировали мы, берём на регламент по договору." },
         ],
       },
       uz: {
@@ -18374,7 +18374,7 @@ export const ARTICLES: Article[] = [
           { q: "Kichik doʻkonga qanday signalizatsiya kerak?", a: "Odatda chegaraviy yetadi: 2–4 shleyfli prib, tutun datchiklari, chiqish yonida qoʻl tugmasi va sirena. Bu meʼyorlarga javob beradigan eng arzon variant." },
           { q: "Manzilli tizim chegaraviydan nimasi bilan yaxshi?", a: "U trevoganing aniq joyini koʻrsatadi — «2-shleyf» emas, aniq xona. Qoʻshimcha har datchik sozligini nazorat qiladi: uzilish yoki olib qoʻyilgan datchik darhol koʻrinadi." },
           { q: "Signalizatsiya nega «yolgʻon» ishlaydi va buni qanday davolash mumkin?", a: "Tez-tez sabablari — datchik kamerasidagi chang, bugʻ, hasharotlar. Reglament tozalash va datchik turini toʻgʻri tanlash bilan davolanadi; manzilli-analog tizimlar ifloslanish haqida oldindan ogohlantiradi." },
-          { q: "Montajdan keyin signalizatsiyaga xizmat koʻrsatish majburiymi?", a: "Ha, bu bevosita meʼyor: Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori texnik xizmatni ishlab chiqaruvchi hujjatlari inobatga olingan yillik reja boʻyicha yuritishni (148-band) hamda tizim ishga tushirilgandan keyin 30 kun ichida litsenziyalangan tashkilot bilan shartnoma tuzishni, u bekor qilinganda 24 soat ichida FVVni xabardor qilishni (149-band) talab qiladi. TX jurnalini inspektor birinchi boʻlib koʻradi. Oʻzimiz montaj qilgan tizimlarni shartnoma asosida reglamentga olamiz." },
+          { q: "Montajdan keyin signalizatsiyaga xizmat koʻrsatish majburiymi?", a: "Ha, bu bevosita meʼyor: Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori texnik xizmatni ishlab chiqaruvchi hujjatlari inobatga olingan yillik reja boʻyicha yuritishni (148-band) talab qiladi; agar obyekt tizimga oʻz mutaxassislari bilan xizmat koʻrsata olmasa, qurilmalar ishga tushirilgandan keyin 30 kun ichida shu ish turiga huquqi bor tashkilot bilan shartnoma tuziladi, u bekor qilinganda esa korxona rahbari 24 soat ichida FVV boʻlimini xabardor qiladi (149-band). TX jurnalini inspektor birinchi boʻlib koʻradi. Oʻzimiz montaj qilgan tizimlarni shartnoma asosida reglamentga olamiz." },
         ],
       },
       en: {
@@ -18403,7 +18403,7 @@ export const ARTICLES: Article[] = [
           { q: "What alarm does a small shop need?", a: "Usually a conventional one: a 2–4 loop panel, smoke detectors, a call point by the exit and a sounder. The most affordable option that meets the codes." },
           { q: "Why is addressable better than conventional?", a: "It shows the exact alarm location — a specific room, not \"loop 2\". Plus each detector's health is supervised: a break or a removed detector is visible immediately." },
           { q: "Why do alarms trigger falsely and what is the cure?", a: "Common causes are dust in the detector chamber, steam and insects. The cure is scheduled cleaning and the right detector type; analogue addressable systems warn about contamination in advance." },
-          { q: "Is maintenance mandatory after installation?", a: "Yes, and it is a direct requirement: Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020 requires maintenance to follow an annual plan based on the manufacturer's documentation (clause 148) and the site to sign a contract with a licensed organisation within 30 days of commissioning, notifying the emergency service authorities within 24 hours if that contract ends (clause 149). The maintenance log is the first thing an inspector opens. Systems we installed ourselves we take onto a maintenance contract." },
+          { q: "Is maintenance mandatory after installation?", a: "Yes, and it is a direct requirement: Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020 requires maintenance to follow an annual plan based on the manufacturer's documentation (clause 148) and, if the site cannot service the system with its own specialists, a contract with an organisation entitled to this work within 30 days of the devices being put into operation; if that contract ends, the head of the enterprise notifies the emergency department within 24 hours (clause 149). The maintenance log is the first thing an inspector opens. Systems we installed ourselves we take onto a maintenance contract." },
         ],
       },
       tr: {
@@ -18432,7 +18432,7 @@ export const ARTICLES: Article[] = [
           { q: "Küçük mağazaya hangi alarm gerekir?", a: "Genelde konvansiyonel yeter: 2–4 zonlu panel, duman dedektörleri, çıkışta buton ve siren. Normlara uyan en ekonomik seçenek." },
           { q: "Adresli sistem konvansiyonelden neden iyidir?", a: "Alarmın tam yerini gösterir — «zon 2» değil, belirli oda. Ayrıca her dedektörün sağlığı izlenir: kopukluk veya sökülen dedektör anında görünür." },
           { q: "Alarm neden «yanlış» çalar ve çaresi nedir?", a: "Sık nedenler dedektör haznesindeki toz, buhar ve böceklerdir. Çare periyodik temizlik ve doğru dedektör tipidir; analog adresli sistemler kirlenmeyi önceden bildirir." },
-          { q: "Montajdan sonra bakım zorunlu mu?", a: "Evet ve bu doğrudan bir zorunluluktur: Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı, bakımın üretici belgelerine dayalı yıllık plana göre yürütülmesini (madde 148) ve tesisin işletmeye almadan sonraki 30 gün içinde lisanslı bir kuruluşla sözleşme yapmasını, sözleşme sona ererse 24 saat içinde acil durum makamlarını bilgilendirmesini (madde 149) ister. Müfettişin ilk açtığı şey bakım defteridir. Kendi kurduğumuz sistemleri bakım sözleşmesine alırız." },
+          { q: "Montajdan sonra bakım zorunlu mu?", a: "Evet ve bu doğrudan bir zorunluluktur: Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı, bakımın üretici belgelerine dayalı yıllık plana göre yürütülmesini (madde 148) ister; tesis bakımı kendi uzmanlarıyla yapamıyorsa, cihazlar işletmeye alındıktan sonraki 30 gün içinde bu iş için yetkili bir kuruluşla sözleşme yapılır, sözleşme sona ererse işletme yöneticisi 24 saat içinde olağanüstü durumlar birimini bilgilendirir (madde 149). Müfettişin ilk açtığı şey bakım defteridir. Kendi kurduğumuz sistemleri bakım sözleşmesine alırız." },
         ],
       },
       zh: {
@@ -18465,7 +18465,7 @@ export const ARTICLES: Article[] = [
           { q: "小商店需要什么样的报警系统？", a: "通常总线制就够：2–4回路主机、感烟探测器、出口旁的手报和警笛。这是符合规范的最经济方案。" },
           { q: "编址式比总线制好在哪？", a: "它显示报警的精确位置——不是「回路2」而是具体房间。而且每个探测器的健康状态受监控：断线或被摘下的探测器立即可见。" },
           { q: "报警为什么会误报，怎么治？", a: "常见原因是探测器暗室积灰、蒸汽和昆虫。对策是定期清洁和选对探测器类型；模拟量编址系统会提前预警脏污。" },
-          { q: "装完以后必须维保吗？", a: "必须，而且是明文规定：乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议要求维保按参照制造商文件编制的年度计划执行（第 148 条），并要求项目在系统投入使用后 30 日内与持牌机构签订维保合同、合同解除时 24 小时内通知紧急情况部门（第 149 条）。检查员第一个翻的就是维保台账。我们自己安装的系统，按合同纳入维保。" },
+          { q: "装完以后必须维保吗？", a: "必须，而且是明文规定：乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议要求维保按参照制造商文件编制的年度计划执行（第 148 条）；若项目无法由自有专业人员维护，须在装置投入运行后 30 日内与有权从事该类工作的机构签订维保合同，合同解除时由企业负责人在 24 小时内通知紧急情况部门（第 149 条）。检查员第一个翻的就是维保台账。我们自己安装的系统，按合同纳入维保。" },
         ],
       },
     },
@@ -23761,7 +23761,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-signalizatsiyasi-narxi",
     date: "2026-08-20",
-    updated: "2026-10-27",
+    updated: "2026-11-16",
     related: ["fire"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
@@ -23793,7 +23793,7 @@ export const ARTICLES: Article[] = [
             "Пришлите план помещения или просто площадь и назначение — посчитаем смету по двум вариантам, адресному и безадресному. На заявку отвечаем в течение рабочего дня.",
           ] },
           { h: "Обслуживание: без него система не считается", p: [
-            "Смонтированная сигнализация без обслуживания — это просроченный огнетушитель на стене: формально есть, фактически нет. Постановление Кабинета Министров Республики Узбекистан № 649 от 20.10.2020 прямо задаёт порядок: техобслуживание и планово-предупредительный ремонт ведутся по годовому плану, составленному с учётом документации изготовителя (п. 148), а договор с лицензированной организацией заключается в течение 30 дней после ввода системы в эксплуатацию; при расторжении договора МЧС уведомляют в течение 24 часов (п. 149). Журнал ТО инспектор открывает первым. Пыль в камерах извещателей — главный источник ложных тревог, которые отучают персонал реагировать.",
+            "Смонтированная сигнализация без обслуживания — это просроченный огнетушитель на стене: формально есть, фактически нет. Постановление Кабинета Министров Республики Узбекистан № 649 от 20.10.2020 прямо задаёт порядок: техобслуживание и планово-предупредительный ремонт ведутся по годовому плану, составленному с учётом документации изготовителя (п. 148), а если объект не может обслуживать систему своими специалистами, договор с организацией, имеющей право на этот вид работ, заключается в течение 30 дней после ввода устройств в работу; при расторжении договора руководитель предприятия уведомляет отдел по ЧС в течение 24 часов (п. 149). Журнал ТО инспектор открывает первым. Пыль в камерах извещателей — главный источник ложных тревог, которые отучают персонал реагировать.",
             "Мы берём на регламент системы, которые смонтировали сами: чистка и проверка извещателей, тест оповещения, замена аккумуляторов, ведение журнала. Если объект достался с чужой системой, путь один — модернизация: аудит с дефектной ведомостью, замена приборов и извещателей на поставленное нами оборудование, и уже после этого договор на обслуживание.",
           ] },
           { h: "Что уточнить в смете подрядчика", p: [
@@ -23835,7 +23835,7 @@ export const ARTICLES: Article[] = [
             "Xona rejasini yoki shunchaki maydon va vazifasini yuboring — ikki variant, manzilli va manzilsiz boʻyicha smeta hisoblaymiz. Soʻrovga ish kuni davomida javob beramiz.",
           ] },
           { h: "Xizmat: usiz tizim hisobga oʻtmaydi", p: [
-            "Xizmatsiz montaj qilingan signalizatsiya — devordagi muddati oʻtgan oʻt oʻchirgich: rasman bor, amalda yoʻq. Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori tartibni bevosita belgilaydi: texnik xizmat va rejali-ogohlantiruvchi taʼmirlash ishlab chiqaruvchi hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi (148-band), litsenziyalangan tashkilot bilan shartnoma esa tizim ishga tushirilgandan keyin 30 kun ichida tuziladi; shartnoma bekor qilinganda FVV 24 soat ichida xabardor qilinadi (149-band). TX jurnalini inspektor birinchi boʻlib ochadi. Xabar beruvchi kameralaridagi chang — xodimlarni javob berishdan bezdiradigan yolgʻon trevogalarning bosh manbai.",
+            "Xizmatsiz montaj qilingan signalizatsiya — devordagi muddati oʻtgan oʻt oʻchirgich: rasman bor, amalda yoʻq. Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarori tartibni bevosita belgilaydi: texnik xizmat va rejali-ogohlantiruvchi taʼmirlash ishlab chiqaruvchi hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi (148-band), agar obyekt tizimga oʻz mutaxassislari bilan xizmat koʻrsata olmasa, shu ish turiga huquqi bor tashkilot bilan shartnoma qurilmalar ishga tushirilgandan keyin 30 kun ichida tuziladi; shartnoma bekor qilinganda korxona rahbari 24 soat ichida FVV boʻlimini xabardor qiladi (149-band). TX jurnalini inspektor birinchi boʻlib ochadi. Xabar beruvchi kameralaridagi chang — xodimlarni javob berishdan bezdiradigan yolgʻon trevogalarning bosh manbai.",
             "Reglamentga oʻzimiz montaj qilgan tizimlarni olamiz: xabar beruvchilarni tozalash va tekshirish, ogohlantirish testi, akkumulyatorlarni almashtirish, jurnal yuritish. Obyekt begona tizim bilan qolgan boʻlsa, yoʻl bitta — modernizatsiya: nuqson vedomosti bilan audit, asboblar va xabar beruvchilarni oʻzimiz yetkazgan uskunaga almashtirish, shundan keyingina xizmat koʻrsatish shartnomasi.",
           ] },
           { h: "Pudratchi smetasida nimani aniqlash kerak", p: [
@@ -23877,7 +23877,7 @@ export const ARTICLES: Article[] = [
             "Send a floor plan, or just the area and purpose, and we will quote two options — addressable and conventional. We reply to requests within the working day.",
           ] },
           { h: "Maintenance: without it the system does not count", p: [
-            "An installed alarm without maintenance is an expired extinguisher on the wall: formally present, practically absent. Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020 sets the order directly: maintenance and planned preventive repair follow an annual plan drawn up with regard to the manufacturer's documentation (clause 148), and the contract with a licensed organisation is signed within 30 days of the system being commissioned; if it is terminated, the emergency service authorities are notified within 24 hours (clause 149). The maintenance log is the first thing an inspector opens. Dust in detector chambers is the main source of false alarms that teach the staff to ignore the system.",
+            "An installed alarm without maintenance is an expired extinguisher on the wall: formally present, practically absent. Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020 sets the order directly: maintenance and planned preventive repair follow an annual plan drawn up with regard to the manufacturer's documentation (clause 148), and, if the site cannot service the system with its own specialists, a contract with an organisation entitled to this work is signed within 30 days of the devices being put into operation; if it is terminated, the head of the enterprise notifies the emergency department within 24 hours (clause 149). The maintenance log is the first thing an inspector opens. Dust in detector chambers is the main source of false alarms that teach the staff to ignore the system.",
             "We take onto a maintenance schedule the systems we installed ourselves: cleaning and testing detectors, checking the sounders, replacing batteries, keeping the log. If a site comes with someone else's system, the route is an upgrade: an audit with a defect list, replacement of panels and detectors with equipment we supply, and only then a maintenance contract.",
           ] },
           { h: "What to clarify in the contractor's estimate", p: [
@@ -23919,7 +23919,7 @@ export const ARTICLES: Article[] = [
             "Kat planını veya sadece alan ve kullanım amacını gönderin — adresli ve adressiz olmak üzere iki seçenekli teklif hazırlayalım. Taleplere iş günü içinde dönüş yaparız.",
           ] },
           { h: "Bakım: onsuz sistem sayılmaz", p: [
-            "Bakımı olmayan kurulu alarm, duvardaki süresi geçmiş söndürücü gibidir: resmen var, fiilen yok. Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı düzeni doğrudan belirler: bakım ve planlı önleyici onarım, üretici belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür (madde 148); lisanslı kuruluşla sözleşme ise sistem işletmeye alındıktan sonraki 30 gün içinde imzalanır, sözleşme feshedilirse acil durum makamları 24 saat içinde bilgilendirilir (madde 149). Müfettişin ilk açtığı şey bakım defteridir. Dedektör haznelerindeki toz, personeli tepki vermemeye alıştıran yanlış alarmların baş kaynağıdır.",
+            "Bakımı olmayan kurulu alarm, duvardaki süresi geçmiş söndürücü gibidir: resmen var, fiilen yok. Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı düzeni doğrudan belirler: bakım ve planlı önleyici onarım, üretici belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür (madde 148); tesis bakımı kendi uzmanlarıyla yapamıyorsa, bu iş için yetkili bir kuruluşla sözleşme cihazlar işletmeye alındıktan sonraki 30 gün içinde imzalanır; sözleşme feshedilirse işletme yöneticisi 24 saat içinde olağanüstü durumlar birimini bilgilendirir (madde 149). Müfettişin ilk açtığı şey bakım defteridir. Dedektör haznelerindeki toz, personeli tepki vermemeye alıştıran yanlış alarmların baş kaynağıdır.",
             "Bakım programına kendi kurduğumuz sistemleri alırız: dedektör temizliği ve testi, anons denemesi, akü değişimi, defter tutma. Tesis başkasının sistemiyle devralındıysa yol tektir: kusur listeli etüt, panel ve dedektörlerin bizim tedarik ettiğimiz ekipmanla değişimi, ancak ondan sonra bakım sözleşmesi.",
           ] },
           { h: "Yüklenici keşfinde netleştirilecekler", p: [
@@ -23961,7 +23961,7 @@ export const ARTICLES: Article[] = [
             "发来平面图，或告知面积与用途——我们给出总线制与多线制两套报价。收到需求会在一个工作日内答复。",
           ] },
           { h: "维保：没有它系统等于没装", p: [
-            "装好却不维保的报警系统，就像墙上过期的灭火器：形式上有，实际上没有。乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议直接规定了程序：维护保养与计划性预防修理按参照制造商文件编制的年度计划执行（第 148 条）；与持牌机构的维保合同须在系统投入使用后 30 日内签订，合同解除时须在 24 小时内通知紧急情况部门（第 149 条）。检查员第一个翻的就是维保台账。探测器暗室里的灰尘是误报的头号来源——而误报会教会员工对警报无动于衷。",
+            "装好却不维保的报警系统，就像墙上过期的灭火器：形式上有，实际上没有。乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议直接规定了程序：维护保养与计划性预防修理按参照制造商文件编制的年度计划执行（第 148 条）；若项目无法由自有专业人员维护，须在装置投入运行后 30 日内与有权从事该类工作的机构签订维保合同，合同解除时由企业负责人在 24 小时内通知紧急情况部门（第 149 条）。检查员第一个翻的就是维保台账。探测器暗室里的灰尘是误报的头号来源——而误报会教会员工对警报无动于衷。",
             "纳入定期维保的，是我们自己安装的系统：清洁和测试探测器、试验广播、更换电池、登记台账。若接手的场所留着别家的系统，只有一条路——改造：出具缺陷清单的勘察、把主机和探测器换成我方供货的设备，此后才谈维保合同。",
           ] },
           { h: "承包商报价里要问清的项", p: [
@@ -24165,7 +24165,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "yongin-xavfsizligi",
     date: "2026-08-26",
-    updated: "2026-10-27",
+    updated: "2026-11-16",
     related: ["fire", "pa"],
     hubs: ["pozharnaya-bezopasnost", "ognetushiteli"],
     brands: ["qr-systems"], // ссылка «Пожарная сигнализация QR Systems» в «Каталог по теме» (12.11.2026)
@@ -24192,7 +24192,7 @@ export const ARTICLES: Article[] = [
             "Katalogimizda oʻt oʻchirgichlar va yongʻin xavfsizligi vositalari mavjud — narxlar soʻmda, Toshkentda ombordan. Soni boʻyicha maslahat beramiz: maydon va xavf toifasiga qarab nechta va qayerga qoʻyish kerakligini hisoblaymiz.",
           ] },
           { h: "Xizmat koʻrsatish: tizim yashashi kerak", p: [
-            "Tizimni oʻrnatish — ishning yarmi: yongʻin signalizatsiyasi muntazam texnik xizmatni talab qiladi va uning tartibi Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarorida belgilangan. 148-band: yongʻindan himoya tizimlariga texnik xizmat koʻrsatish va rejali-ogohlantiruvchi taʼmirlash uskuna ishlab chiqaruvchisining hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi. 149-band: litsenziyalangan tashkilot bilan shartnoma tizim ishga tushirilgandan keyin 30 kun ichida tuziladi, shartnoma bekor qilinganda esa obyekt 24 soat ichida FVV organlarini xabardor qiladi. Nosozliklar «qachondir» emas, darhol bartaraf etiladi — tekshiruvda inspektor xizmat jurnalini ham koʻradi.",
+            "Tizimni oʻrnatish — ishning yarmi: yongʻin signalizatsiyasi muntazam texnik xizmatni talab qiladi va uning tartibi Oʻzbekiston Respublikasi Vazirlar Mahkamasining 2020-yil 20-oktyabrdagi 649-son qarorida belgilangan. 148-band: yongʻindan himoya tizimlariga texnik xizmat koʻrsatish va rejali-ogohlantiruvchi taʼmirlash uskuna ishlab chiqaruvchisining hujjatlari inobatga olingan yillik reja boʻyicha olib boriladi. 149-band: agar obyekt tizimga oʻz mutaxassislari bilan xizmat koʻrsata olmasa, shu ish turiga huquqi bor tashkilot bilan shartnoma qurilmalar ishga tushirilgandan keyin 30 kun ichida tuziladi, shartnoma bekor qilinganda esa korxona rahbari 24 soat ichida FVV boʻlimini xabardor qiladi. Nosozliklar «qachondir» emas, darhol bartaraf etiladi — tekshiruvda inspektor xizmat jurnalini ham koʻradi.",
             "Datchiklar vaqt oʻtishi bilan changlanadi va yo jim qoladi, yo yolgʻon trevoga beradi — ikkalasi ham xavfli: birinchisi yongʻinni oʻtkazib yuboradi, ikkinchisi xodimlarni sirenani eʼtiborsiz qoldirishga oʻrgatadi. Xizmat shartnomalarini oʻzimiz montaj qilgan tizimlarga tuzamiz: yillik reja boʻyicha tashriflar, datchiklarni tozalash, jurnal yuritish va nosozlikda yetib borish.",
           ] },
           { h: "Qanday buyurtma qilinadi", p: [
@@ -24230,7 +24230,7 @@ export const ARTICLES: Article[] = [
             "Огнетушители и средства пожарной безопасности есть в нашем каталоге — цены в сумах, со склада в Ташкенте. Подскажем по количеству: посчитаем, сколько и куда ставить по площади и категории риска.",
           ] },
           { h: "Обслуживание: система должна жить", p: [
-            "Смонтировать систему — половина дела: пожарная сигнализация требует регулярного технического обслуживания, и его порядок задан постановлением Кабинета Министров Республики Узбекистан № 649 от 20.10.2020. Пункт 148: техобслуживание и планово-предупредительный ремонт систем противопожарной защиты ведутся по годовому плану, составленному с учётом документации изготовителя оборудования. Пункт 149: договор с лицензированной организацией заключается в течение 30 дней после ввода системы в эксплуатацию, а при расторжении договора объект уведомляет органы МЧС в течение 24 часов. Неисправности устраняются не «когда-нибудь», а сразу — на проверке инспектор смотрит и журнал обслуживания.",
+            "Смонтировать систему — половина дела: пожарная сигнализация требует регулярного технического обслуживания, и его порядок задан постановлением Кабинета Министров Республики Узбекистан № 649 от 20.10.2020. Пункт 148: техобслуживание и планово-предупредительный ремонт систем противопожарной защиты ведутся по годовому плану, составленному с учётом документации изготовителя оборудования. Пункт 149: если объект не может обслуживать систему своими специалистами, договор с организацией, имеющей право на этот вид работ, заключается в течение 30 дней после ввода устройств в работу, а при расторжении договора руководитель предприятия уведомляет отдел по ЧС в течение 24 часов. Неисправности устраняются не «когда-нибудь», а сразу — на проверке инспектор смотрит и журнал обслуживания.",
             "Датчики со временем пылятся и начинают либо молчать, либо давать ложные тревоги — обе ситуации опасны: первая пропустит пожар, вторая приучит персонал игнорировать сирену. Договоры на обслуживание мы заключаем на системы, которые смонтировали сами: плановые визиты по годовому плану, чистка датчиков, ведение журнала и выезд при неисправности.",
           ] },
           { h: "Как заказать", p: [
@@ -24268,7 +24268,7 @@ export const ARTICLES: Article[] = [
             "Extinguishers and fire safety equipment are in our catalogue — UZS prices, in stock in Tashkent. We will calculate how many you need and where to place them.",
           ] },
           { h: "Maintenance: the system must stay alive", p: [
-            "Installing the system is half the job: a fire alarm needs regular maintenance, and the order of it is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020. Clause 148: maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149: a contract with a licensed organisation is signed within 30 days of the system being put into operation, and if that contract is terminated the site notifies the emergency service authorities within 24 hours. Faults are fixed immediately, not 'someday' — during an inspection the officer also reads the maintenance log.",
+            "Installing the system is half the job: a fire alarm needs regular maintenance, and the order of it is set by Resolution No. 649 of the Cabinet of Ministers of the Republic of Uzbekistan of 20 October 2020. Clause 148: maintenance and planned preventive repair of fire protection systems follow an annual plan drawn up with regard to the equipment manufacturer's documentation. Clause 149: if the site cannot service the system with its own specialists, a contract with an organisation entitled to this work is signed within 30 days of the devices being put into operation, and if that contract is terminated the head of the enterprise notifies the emergency department within 24 hours. Faults are fixed immediately, not 'someday' — during an inspection the officer also reads the maintenance log.",
             "Detectors gather dust over time and either go silent or raise false alarms — both are dangerous: the first misses a fire, the second teaches staff to ignore the siren. We sign maintenance contracts for the systems we installed ourselves: visits on the annual plan, detector cleaning, log keeping and call-outs on failure.",
           ] },
           { h: "How to order", p: [
@@ -24306,7 +24306,7 @@ export const ARTICLES: Article[] = [
             "Tüpler ve yangın güvenliği ürünleri kataloğumuzda — UZS fiyatlı, Taşkent'te stokta. Alana göre kaç adet ve nereye konulacağını hesaplarız.",
           ] },
           { h: "Bakım: sistem yaşamalı", p: [
-            "Sistemi kurmak işin yarısı: yangın alarmı düzenli bakım ister ve bunun düzenini Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı belirler. Madde 148: yangından korunma sistemlerinin bakımı ve planlı önleyici onarımı, ekipman üreticisinin belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür. Madde 149: lisanslı kuruluşla sözleşme, sistem işletmeye alındıktan sonraki 30 gün içinde imzalanır; sözleşme feshedilirse tesis 24 saat içinde acil durum makamlarını bilgilendirir. Arızalar 'bir ara' değil hemen giderilir — denetimde müfettiş bakım defterine de bakar.",
+            "Sistemi kurmak işin yarısı: yangın alarmı düzenli bakım ister ve bunun düzenini Özbekistan Cumhuriyeti Bakanlar Kurulu'nun 20.10.2020 tarihli 649 sayılı kararı belirler. Madde 148: yangından korunma sistemlerinin bakımı ve planlı önleyici onarımı, ekipman üreticisinin belgeleri dikkate alınarak hazırlanan yıllık plana göre yürütülür. Madde 149: tesis bakımı kendi uzmanlarıyla yapamıyorsa, bu iş için yetkili bir kuruluşla sözleşme cihazlar işletmeye alındıktan sonraki 30 gün içinde imzalanır; sözleşme feshedilirse işletme yöneticisi 24 saat içinde olağanüstü durumlar birimini bilgilendirir. Arızalar 'bir ara' değil hemen giderilir — denetimde müfettiş bakım defterine de bakar.",
             "Dedektörler zamanla tozlanır ve ya susar ya yanlış alarm verir — ikisi de tehlikelidir: ilki yangını kaçırır, ikincisi personeli sireni umursamamaya alıştırır. Bakım sözleşmesini kendi kurduğumuz sistemler için yaparız: yıllık plana göre ziyaretler, dedektör temizliği, defter tutma ve arızada müdahale.",
           ] },
           { h: "Nasıl sipariş verilir", p: [
@@ -24344,7 +24344,7 @@ export const ARTICLES: Article[] = [
             "灭火器和消防器材在我们的目录中——苏姆计价，塔什干现货。我们会按面积计算所需数量和摆放位置。",
           ] },
           { h: "维保：系统必须一直活着", p: [
-            "装好系统只是一半：火灾报警需要定期维保，其程序由乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议规定。第 148 条：消防系统的维护保养与计划性预防修理，按参照设备制造商技术文件编制的年度计划执行。第 149 条：与持牌机构的维保合同须在系统投入使用后 30 日内签订；合同解除时，项目须在 24 小时内通知紧急情况部门。故障要立刻处理而不是“改天”——消防检查时检查员也会翻维保记录。",
+            "装好系统只是一半：火灾报警需要定期维保，其程序由乌兹别克斯坦共和国内阁 2020 年 10 月 20 日第 649 号决议规定。第 148 条：消防系统的维护保养与计划性预防修理，按参照设备制造商技术文件编制的年度计划执行。第 149 条：若项目无法由自有专业人员维护，须在装置投入运行后 30 日内与有权从事该类工作的机构签订维保合同；合同解除时，企业负责人须在 24 小时内通知紧急情况部门。故障要立刻处理而不是“改天”——消防检查时检查员也会翻维保记录。",
             "探测器日久积尘，要么失灵沉默，要么频繁误报——两种都危险：前者漏掉火情，后者让员工习惯性无视警报。维保合同只针对我们自己安装的系统：按年度计划巡检、清洁探测器、登记台账、故障上门。",
           ] },
           { h: "如何订购", p: [
@@ -24352,7 +24352,7 @@ export const ARTICLES: Article[] = [
             "与法人单位按合同和增值税发票合作。设备享官方保修，安装享公司保修。",
           ] },
                   { h: "乌兹别克斯坦的规范与检查重点", p: [
-            "维护义务由乌兹别克斯坦内阁2020年10月20日第649号决议规定：第148条要求按厂家文件编制年度计划开展维护和预防性检修；第149条要求系统投用后30日内与持证单位签订维护合同，合同解除时须在24小时内通知紧急情况部门。检查时会查维护记录本。",
+            "维护义务由乌兹别克斯坦内阁2020年10月20日第649号决议规定：第148条要求按厂家文件编制年度计划开展维护和预防性检修；第149条规定：若无法由自有专业人员维护，须在装置投用后30日内与有权从事该类工作的单位签订维护合同，合同解除时由企业负责人在24小时内通知紧急情况部门。检查时会查维护记录本。",
             "价格按苏姆计：三到五个房间的办公室，设备约1 391 810苏姆，其中С2000-4控制器989 900苏姆，六只感烟探测器合计259 740苏姆；干粉灭火器ОП-4为122 900苏姆。常用的Rubezh和Bolid器材塔什干有现货，与法人单位按合同结算，开具含增值税发票。",
           ] },
         ],
