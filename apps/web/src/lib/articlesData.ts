@@ -20339,7 +20339,7 @@ export const ARTICLES: Article[] = [
     slug: "servernaya-komnata",
     date: "2026-07-17",
     updated: "2026-09-09",
-    related: ["server", "network", "virtualization"],
+    related: ["server", "network", "virtualization", "fire"],
     hubs: ["telekommunikacionnye-shkafy", "ibp-i-elektropitanie"],
     loc: {
       ru: {

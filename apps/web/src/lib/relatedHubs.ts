@@ -26,6 +26,8 @@ export const HUB_LABELS: Record<string, L5> = {
   "/products/type/zamki-i-skud": { ru: "Замки для СКУД", uz: "Kirish nazorati qulflari", en: "Access control locks", tr: "Geçiş kontrol kilitleri", zh: "门禁电锁" },
   "/products/type/terminaly-i-schityvateli": { ru: "Терминалы и считыватели", uz: "Terminallar va oʻquvchilar", en: "Terminals and readers", tr: "Terminaller ve okuyucular", zh: "门禁终端与读卡器" },
   "/products/type/kommutatory": { ru: "Коммутаторы", uz: "Kommutatorlar", en: "Network switches", tr: "Ağ anahtarları", zh: "交换机" },
+  "/products/type/pribory-i-moduli": { ru: "Приборы и модули", uz: "Qurilmalar va modullar", en: "Control panels and modules", tr: "Paneller ve modüller", zh: "主机与模块" },
+  "/products/type/pozharnaya-bezopasnost": { ru: "Пожарная безопасность", uz: "Yongʻin xavfsizligi", en: "Fire safety equipment", tr: "Yangın güvenliği ekipmanı", zh: "消防安全器材" },
   "/products/group/ohranno-pozharnaya": { ru: "Охранно-пожарное оборудование", uz: "Qoʻriqlash va yongʻin uskunalari", en: "Security and fire alarm equipment", tr: "Güvenlik ve yangın alarm ekipmanı", zh: "安防与消防报警设备" },
   "/products/group/setevoe-oborudovanie": { ru: "Сетевое оборудование", uz: "Tarmoq uskunalari", en: "Network equipment", tr: "Ağ ekipmanı", zh: "网络设备" },
   "/products/group/kontrol-dostupa": { ru: "Оборудование контроля доступа", uz: "Kirishni nazorat qilish uskunalari", en: "Access control equipment", tr: "Geçiş kontrol ekipmanı", zh: "门禁设备" },
@@ -44,7 +46,7 @@ export const HUB_LABELS: Record<string, L5> = {
 export const RELATED_HUBS: Record<string, string[]> = {
   // услуги → оборудование и бренды, на которых строим
   "/solutions/cctv": ["/products/type/ip-kamery", "/products/type/ip-videoregistratory-nvr", "/products/type/videoregistratory-dvr", "/products/type/ptz-kamery", "/catalog/hikvision", "/catalog/dahua"],
-  "/solutions/fire": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid", "/catalog/qr-systems"],
+  "/solutions/fire": ["/products/group/ohranno-pozharnaya", "/products/type/pribory-i-moduli", "/products/type/pozharnaya-bezopasnost", "/catalog/rubezh", "/catalog/bolid", "/catalog/qr-systems"],
   "/solutions/alarm": ["/products/group/ohranno-pozharnaya", "/catalog/rubezh", "/catalog/bolid"],
   "/solutions/network": ["/products/group/setevoe-oborudovanie", "/products/type/kommutatory", "/catalog/mikrotik", "/catalog/tplink"],
   "/solutions/access": ["/products/group/kontrol-dostupa", "/products/type/terminaly-i-schityvateli", "/products/type/zamki-i-skud", "/products/type/turnikety-i-shlagbaumy", "/products/type/shlagbaumy", "/catalog/zkteco"],

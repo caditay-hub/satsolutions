@@ -70,6 +70,11 @@ const MEDIA_VER: Record<string, number> = {
   intercom: 12, barrier: 12, turnstile: 12, fire: 12, servers: 12, telephony: 12, smarthome: 12, videowall: 12,
 };
 const mv = (key: string) => MEDIA_VER[key] ?? 11;
+// Кейсы только профильные, без подстановки свежих объектов других направлений (пожарная, 16.11.2026:
+// пожарных кейсов пока нет — блок не выводится).
+const ONLY_OWN_CASES = new Set(["fire"]);
+// Разметка HowTo из этапов работ (details.stages) — пожарная, 16.11.2026.
+const HOWTO_SERVICES = new Set(["fire"]);
 function heroSrc(key: string) {
   let webp = false;
   try { webp = existsSync(`${SERVICES_IMG_DIR}/${key}.webp`); } catch { webp = false; }
@@ -222,7 +227,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     // технику/цену, а страница была только про работы. Витрина закрывает разрыв.
     cctv: ["hik-ip-cameras", "network-cameras", "hik-wireless-cameras"],
     intercom: ["hik-intercoms", "indoor-monitors"],
-    fire: ["prochee-fire", "rubezh-detectors", "rubezh-panels", "qrs-panels"], // + QR Systems (бренд 12.11.2026)
+    // fire — фиксированная витрина в EQUIP_SLUGS (16.11.2026)
     servers: ["pxt-server"],
     // 03.09: витрина на ВСЕ услуги, где в тексте описано оборудование (перелинковка
     // услуга → товары каталога с фото/описанием/ценой).
@@ -264,6 +269,14 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     // панели, а не внутренние станции без экрана (разбор запросов и решение владельца 10.11.2026)
     intercom: ["hik-ds-kis202t-o-std", "hik-ds-kis212", "hik-ds-kis302-p", "hik-ds-kis303-p", "hik-ds-kis603-p-b-o-std", "dahua-dhi-kth01", "hik-ds-kv6113-pe1-c-o-std", "dahua-dhi-vto2311r-wp"],
     // Замки: спрос — умный замок на входную дверь квартиры; офисные магнитные замки и доводчики — в хвосте
+    // Пожарная: приборы и извещатели четырёх брендов владельца (QR Systems, Рубеж, Болид, Гранд Магистр), оповещение
+    // и управление пуском тушения. Модулей, баллонов и оросителей в каталоге нет — «подбираем под проект» (решения 16.11.2026).
+    fire: [
+      "qrs-ppk-02-250-2", "rbz-ppkopu-r3-rubezh-2op", "bld-s2000m", "pro-pribor-grand-magistr-8-versiya-3-1",
+      "rbz-ip-212-141-rubezh", "qrs-ip-212-102-wh", "bld-dip-34a-04",
+      "qrs-or-101", "rbz-opop-124-r3-svetozvukovoi-adresnyi-belo-krasnyi",
+      "bld-s2000-kpb", "bld-udp-513-3am", "qrs-udp-513-102p",
+    ],
     locks: ["knd-tk-606a-tw", "knd-tk-605a", "knd-tk-n1-pro", "knd-tk-d1-pro", "zkt-zkteco-hbl400-elektronnyi-biometricheskii-zamok-s-raspoznavaniem-lic", "zkt-zkteco-zamok-gl300w", "zkt-zkteco-steklyannyi-zamok-gdl-f618", "knd-zamok-280kg-magnitnyi-ml-280as"],
   };
   let equipment: any[] = [];
@@ -288,6 +301,16 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     });
   }
   const equipTitle = ({ ru: "Оборудование, которое мы ставим", uz: "Biz oʻrnatadigan uskunalar", en: "Equipment we install", tr: "Kurduğumuz ekipmanlar", zh: "我们安装的设备" } as Record<string, string>)[locale] ?? "Оборудование, которое мы ставим";
+  const EQUIP_NOTE: Record<string, Record<string, string>> = {
+    fire: {
+      ru: "Модули, баллоны и оросители установок пожаротушения подбираем под проект объекта.",
+      uz: "Yongʻin oʻchirish qurilmalarining modullari, ballonlari va purkagichlarini obyekt loyihasiga qarab tanlaymiz.",
+      en: "Modules, cylinders and sprinkler heads for suppression systems are selected to the site design.",
+      tr: "Söndürme sistemlerinin modülleri, tüpleri ve sprinkler başlıkları tesis projesine göre seçilir.",
+      zh: "灭火系统的模块、钢瓶和喷头按项目设计选型。",
+    },
+  };
+  const equipNote = EQUIP_NOTE[svc.key]?.[locale] ?? null;
   const priceOnReq = ({ ru: "Цена по запросу", uz: "Narxi soʻrov boʻyicha", en: "Price on request", tr: "Fiyat için sorun", zh: "价格面议" } as Record<string, string>)[locale] ?? "Цена по запросу";
 
   const title = ts(`${svc.key}.title`);
@@ -323,8 +346,8 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       ...links.filter(([, v]) => v.services[0] !== svc.key && v.services.includes(svc.key)),
     ].map(([k]) => k).slice(0, 3);
     const own = (await Promise.all(ownSlugs.map((s) => getPortfolioBySlug(s).then((r) => r.item).catch(() => null)))).filter(Boolean);
-    const { items: fresh } = await getPortfolio(1, 3);
-    const items = [...own, ...fresh.filter((p) => !ownSlugs.includes(p.slug))].slice(0, 3);
+    const { items: fresh } = ONLY_OWN_CASES.has(svc.key) ? { items: [] as typeof own } : await getPortfolio(1, 3);
+    const items = [...own, ...fresh.filter((p: any) => !ownSlugs.includes(p.slug))].slice(0, 3);
     // названия кейсов приходят из БД по-русски — прогоняем через оверлей переводов
     cases = items.map((p) => localizePortfolioProject(p as any, locale)).map((p: any) => ({ slug: p.slug, title: p.title, coverImageUrl: p.coverImageUrl }));
   } catch {
@@ -381,7 +404,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
     name: title,
     description: intro,
     serviceType: title,
-    provider: { "@type": "Organization", name: "SAT Solutions", url: siteUrl, telephone: "+998-97-862-66-99" },
+    provider: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "SAT Solutions", url: siteUrl, telephone: "+998-97-862-66-99" },
     areaServed: { "@type": "Country", name: "Узбекистан" },
     url: `${siteUrl}${lp}/solutions/${svc.key}`,
     image: `${IMG_BASE}/${svc.key}.jpg`,
@@ -390,6 +413,18 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       ? { offers: { "@type": "Offer", priceSpecification: { "@type": "PriceSpecification", priceCurrency: "UZS", minPrice: heroMinPrice } } }
       : {}),
   };
+  let howToLd: Record<string, unknown> | null = null;
+  if (HOWTO_SERVICES.has(svc.key) && ts.has(`${svc.key}.details.stages`)) {
+    const st = ts.raw(`${svc.key}.details.stages`) as { t: string; s?: string }[];
+    if (Array.isArray(st) && st.length) {
+      howToLd = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: ts.has(`${svc.key}.details.stagesTitle`) ? ts(`${svc.key}.details.stagesTitle`) : title,
+        step: st.filter((x) => x?.t).map((x, i) => ({ "@type": "HowToStep", position: i + 1, name: x.t, text: x.s ?? x.t })),
+      };
+    }
+  }
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -463,6 +498,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
           </Link>
         ))}
       </div>
+      {equipNote ? <p className="mt-3 text-sm leading-relaxed text-slate-600">{equipNote}</p> : null}
     </section>
   ) : null;
 
@@ -689,7 +725,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
         {/* Дополнительные разделы текста со своим H2 (22.09.2026: видеонаблюдение —
             «Камеры наблюдения для дома, офиса, магазина и склада» под запросы людей) */}
         {content?.extra?.map((x) => (
-          <section key={x.heading} className="mt-12">
+          <section key={x.heading} id={x.id} className={`mt-12${x.id ? " scroll-mt-32 lg:scroll-mt-44" : ""}`}>
             <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">{x.heading}</h2>
             <div className="mt-5 grid grid-cols-1 gap-x-14 gap-y-7 lg:grid-cols-2">
               {x.paragraphs.map((p, i) => {
@@ -702,6 +738,34 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                 );
               })}
             </div>
+            {/* Таблица раздела (16.11.2026: виды пожаротушения). На телефоне — прокрутка внутри рамки,
+                страница шире экрана не становится. */}
+            {x.table ? (
+              <figure className="mt-6">
+                {x.table.caption ? <figcaption className="mb-2 text-sm font-black text-slate-900">{x.table.caption}</figcaption> : null}
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+                  <table className="w-full min-w-[720px] text-left text-sm">
+                    <thead className="bg-slate-50">
+                      <tr>
+                        {x.table.head.map((h) => (
+                          <th key={h} scope="col" className="border-b border-slate-200 px-4 py-3 font-black text-slate-900">{h}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {x.table.rows.map((r, ri) => (
+                        <tr key={ri} className="border-b border-slate-100 align-top last:border-0">
+                          {r.map((c, ci) => ci === 0
+                            ? <th key={ci} scope="row" className="px-4 py-3 font-bold text-slate-900">{c}</th>
+                            : <td key={ci} className="px-4 py-3 leading-relaxed text-slate-600">{c}</td>)}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                {x.table.note ? <p className="mt-2 text-xs leading-relaxed text-slate-500">{x.table.note}</p> : null}
+              </figure>
+            ) : null}
             {x.links?.length ? (
               <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
                 {x.links.map((l) => (
@@ -902,6 +966,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
       </div>
 
       {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
+      {howToLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />}
 
       {/* Финальный призыв — у услуг и только на компьютере (на телефоне контакты уже
           были блоком перед вопросами); у отраслей его заменяет форма расчёта */}

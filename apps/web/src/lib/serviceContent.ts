@@ -7,7 +7,9 @@
 // Фолбэк: нет ключа для локали → блок просто не рендерится (лучше пусто, чем
 // машинный перевод). RU — источник; uz/en догоняются вручную позже.
 
-export type ServiceExtra = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[] };
+export type ServiceTable = { caption?: string; head: string[]; rows: string[][]; note?: string };
+// id — якорь раздела (ссылки вида /solutions/fire#suppression); table — таблица под абзацами (16.11.2026: виды пожаротушения).
+export type ServiceExtra = { id?: string; heading: string; paragraphs: string[]; table?: ServiceTable; links?: { label: string; href: string }[] };
 // extra — необязательные дополнительные разделы со своим H2 (22.09.2026: cctv — «Камеры наблюдения…»).
 export type ServiceContent = { heading: string; paragraphs: string[]; links?: { label: string; href: string }[]; extra?: ServiceExtra[] };
 
@@ -121,29 +123,81 @@ const ru: Record<string, ServiceContent> = {
     ],
   },
   fire: {
-    heading: "Монтаж пожарной сигнализации, СОУЭ и пожаротушения в Ташкенте",
+    // 16.11.2026: «всё в одном» — сигнализация, СОУЭ и пожаротушение (решения владельца В1–В12); бывший абзац о
+    // пожаротушении заменён разделом с таблицей видов, абзац о типах СОУЭ — в своём разделе, обслуживание — один абзац.
+    heading: "Пожарная сигнализация, оповещение и пожаротушение: как устроена защита объекта",
     paragraphs: [
-      "Автоматическая пожарная сигнализация (АПС) обнаруживает возгорание на ранней стадии по дыму, теплу или пламени и запускает систему оповещения и управления эвакуацией (СОУЭ). SAT Solutions выполняет поставку, монтаж, наладку и техническое обслуживание пожарной сигнализации и установок автоматического пожаротушения для офисов, магазинов, складов, производств и общественных зданий в соответствии с нормами пожарной безопасности Узбекистана.",
-      "В систему входят пожарные извещатели (дымовые, тепловые, ручные), приёмно-контрольные приборы, звуковые и световые оповещатели, а при необходимости — автоматика управления дымоудалением, пожаротушением и инженерными системами здания. Приборы и извещатели ставим Рубеж, Болид и QR Systems — все три линейки лежат на нашем складе в Ташкенте. Состав системы определяется назначением, площадью и этажностью здания, а не пожеланиями заказчика — это первое, что проверяет экспертиза.",
+      "Пожарная сигнализация и пожаротушение — это комплекс автоматических систем, который защищает здание в три шага. Пожарная сигнализация (АПС) находит очаг по дыму, теплу или пламени, система оповещения и управления эвакуацией (СОУЭ) выводит людей, а установка автоматического пожаротушения (АУПТ) подавляет огонь в защищаемом помещении. SAT Solutions поставляет оборудование, монтирует, налаживает и обслуживает все три системы для офисов, магазинов, складов, производств и общественных зданий в Ташкенте и по Узбекистану.",
+      "В систему входят пожарные извещатели (дымовые, тепловые, ручные), приёмно-контрольные приборы, звуковые и световые оповещатели, а при необходимости — автоматика управления дымоудалением, пожаротушением и инженерными системами здания. Приборы и извещатели ставим Рубеж, Болид, QR Systems и Гранд Магистр — все четыре линейки лежат на нашем складе в Ташкенте. Состав системы определяется назначением, площадью и этажностью здания, а не пожеланиями заказчика — это первое, что проверяет экспертиза.",
       "Обслуживание пожарной сигнализации в Узбекистане регулируется постановлением Кабинета Министров № 649 от 20 октября 2020 года: техническое обслуживание ведётся по годовому плану с учётом документации изготовителя — фиксированной нормы «раз в квартал» в республике нет, график считается под конкретное оборудование. Мы ведём регламентное обслуживание смонтированных нами систем по договору и держим журнал в состоянии, к которому у инспекции не будет вопросов.",
-      "Сигнализация обнаруживает пожар, а тушит его установка автоматического пожаротушения (АУПТ) — это отдельная система, которую мы монтируем, налаживаем и обслуживаем вместе с АПС. Газовое пожаротушение применяют там, где вода и порошок уничтожат имущество: серверные, ЦОД, архивы, электрощитовые — состав вытесняет кислород, не оставляя следов на оборудовании. Порошковые модули дешевле и подходят для складов, гаражей, производственных и подсобных помещений. Водяные и спринклерные системы ставят на больших площадях, где важна не сохранность техники, а локализация огня.",
       "Пожарная безопасность — область, где документы значат столько же, сколько монтаж. Мы монтируем систему по проекту, проводим наладку и передаём объект с исполнительной документацией. Для действующих объектов делаем обследование: часто выясняется, что извещатели стоят с нарушением зон контроля, шлейфы перегружены, а прибор годами не проходил регламентного обслуживания.",
-      "Стоимость складывается из площади и назначения помещений, числа извещателей и шлейфов, типа прибора, необходимости СОУЭ и автоматики управления дымоудалением. Цена установки пожарной сигнализации для офиса и для склада с высокими стеллажами отличается принципиально — во втором случае меняется и высота установки извещателей, и их тип. После сдачи берём систему на регламентное обслуживание: проверка извещателей, замена АКБ, протоколы — без этого при проверке МЧС будут замечания даже к исправной системе.",
-          "СОУЭ различаются по типам — от простой сирены до речевого оповещения с зонами и управлением потоками эвакуации. Небольшому офису достаточно звуковых оповещателей и табло «Выход»; торговому центру, гостинице или производству с сотнями людей нужно речевое оповещение: записанные сообщения по зонам снижают панику и разводят потоки по разным лестницам. Тип СОУЭ определяется назначением и вместимостью здания по нормам и закладывается в проект — мы монтируем систему именно этого типа и проверяем её по зонам при наладке.",
-          "Пожарная сигнализация раскрывается в связке с другими системами здания. По тревоге разблокируются эвакуационные двери СКУД, отключается общеобменная вентиляция, лифты опускаются на первый этаж, а сигнал уходит на пост охраны и на телефоны ответственных. Эти сценарии мы настраиваем по проекту и проверяем при наладке по каждому шлейфу — потому что на реальном пожаре времени проверять уже не будет.",
+      "Стоимость складывается из площади и назначения помещений, числа извещателей и шлейфов, типа прибора, необходимости СОУЭ и автоматики управления дымоудалением. Цена установки пожарной сигнализации для офиса и для склада с высокими стеллажами отличается принципиально — во втором случае меняется и высота установки извещателей, и их тип. После сдачи берём систему на регламентное обслуживание: проверка извещателей, замена АКБ, протоколы — без этого при проверке МЧС будут замечания даже к исправной системе. Пожаротушение считаем отдельно и только по проекту, после выезда на объект: цена зависит от вида установки, объёма помещений и огнетушащего вещества.",
+      "Пожарная сигнализация раскрывается в связке с другими системами здания. По тревоге разблокируются эвакуационные двери СКУД, отключается общеобменная вентиляция, лифты опускаются на первый этаж, а сигнал уходит на пост охраны и на телефоны ответственных. Эти сценарии мы настраиваем по проекту и проверяем при наладке по каждому шлейфу — потому что на реальном пожаре времени проверять уже не будет.",
+    ],
+    links: [
+      { label: "Виды пожарной сигнализации: пороговая, адресная, адресно-аналоговая", href: "/blog/pozharnaya-signalizatsiya-vidy" },
+      { label: "Беспроводная пожарная сигнализация: как работает радиоканал", href: "/blog/besprovodnaya-pozharnaya-signalizatsiya-radiokanal" },
+      { label: "Как считать бюджет пожарной сигнализации", href: "/blog/yongin-signalizatsiyasi-narxi" },
     ],
     extra: [
       {
-        heading: "Обслуживание пожарной сигнализации по договору",
+        heading: "Оповещение и управление эвакуацией (СОУЭ)",
         paragraphs: [
-          "Противопожарная сигнализация обязана работать каждый день, а не только в день сдачи, поэтому обслуживание пожарной сигнализации — отдельная услуга с договором, графиком и журналом. По договору мы проверяем извещатели и шлейфы, тестируем оповещение и резервное питание, меняем аккумуляторы прибора по сроку, чистим извещатели от пыли и ведём журнал, который первым открывает инспектор МЧС. Работы выполняем по разрешению МЧС № 913518.",
-          "График считается под оборудование объекта, как требует постановление № 649: для небольшого офиса это ежеквартальный выезд, для склада с высокими стеллажами и производства чаще, потому что пыль и перепады температуры выводят извещатели из строя быстрее. Дата каждой проверки, найденные замечания и замены фиксируются в журнале и актах, так что к проверке объект готов всегда.",
-          "Берём на обслуживание не только смонтированные нами системы. Чужую сигнализацию принимаем через обследование: проверяем соответствие проекту, состояние шлейфов и прибора, выдаём перечень замечаний с ценой их устранения. После этого объект переходит на обычный регламент. Ходовые извещатели, аккумуляторы и оповещатели Рубеж и Болид держим на складе в Ташкенте, поэтому замена делается за один выезд.",
-          "Стоимость обслуживания зависит от числа извещателей, шлейфов и приборов на объекте и считается за месяц или за год. Монтаж пожарной сигнализации под ключ и её обслуживание можно заказать одним договором: цену установки видно в разделе «Сколько стоит» выше, а расчёт обслуживания пришлём в течение рабочего дня после осмотра.",
+          "СОУЭ различаются по типам — от простой сирены до речевого оповещения с зонами и управлением потоками эвакуации. Небольшому офису достаточно звуковых оповещателей и табло «Выход»; торговому центру, гостинице или производству с сотнями людей нужно речевое оповещение: записанные сообщения по зонам снижают панику и разводят потоки по разным лестницам. Тип СОУЭ определяется назначением и вместимостью здания по нормам и закладывается в проект — мы монтируем систему именно этого типа и проверяем её по зонам при наладке.",
+          "СОУЭ запускается сигналом пожарной сигнализации и работает вместе с ней. На приборах Рубеж, Болид и QR Systems оповещение настраивается как зоны того же прибора, а речевые системы — прибор Рупор Болид или адресные речевые оповещатели QR Systems — получают команду от прибора. Подробно о трансляции, фоновой музыке и зонах вещания — на странице систем оповещения.",
         ],
         links: [
-          { label: "Обслуживание систем безопасности: как устроен регламент", href: "/solutions/obsluzhivanie" },
-          { label: "Нормы пожарной сигнализации в Узбекистане", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Системы оповещения и трансляции", href: "/solutions/pa" },
+          { label: "Оповещение — оборудование в каталоге", href: "/products/type/opoveschenie" },
+        ],
+      },
+      {
+        id: "suppression",
+        heading: "Автоматическое пожаротушение: виды и где их применяют",
+        paragraphs: [
+          "Сигнализация обнаруживает пожар, а тушит его установка автоматического пожаротушения (АУПТ) — отдельная система со своими баллонами, модулями или трубопроводами, которая получает команду на пуск от приборов пожарной автоматики. Мы монтируем, налаживаем и обслуживаем все основные виды установок: водяные (спринклерные, дренчерные и тонкораспылённые), газовые, порошковые и аэрозольные. Вид выбирают по тому, что горит и что нужно сохранить: людей, оборудование, документы или товар на стеллажах.",
+          "Установка пожаротушения работает только в связке с сигнализацией. Пуск идёт, как правило, по сигналу двух извещателей или вручную — кнопкой «Пуск пожаротушения» у входа в защищаемое помещение. Перед выпуском газа, порошка или аэрозоля включаются табло и сирена, отсчитывается задержка на эвакуацию, закрываются двери и отключается вентиляция. Для управления ставим блоки С2000-КПБ и С2000-СП4 Болид, релейные модули Рубеж и QR Systems, устройства дистанционного пуска. Эти сценарии проверяем при пусконаладке по каждой зоне.",
+          "Проект установки пожаротушения делаем сами или через партнёра-проектировщика, а стоимость называем только по проекту, после выезда на объект: она зависит от вида установки, объёма помещений, огнетушащего вещества и того, что уже есть на объекте. Модули, баллоны и оросители подбираем под проект. Монтаж, наладку и техническое обслуживание установок автоматического пожаротушения выполняем по тому же разрешению МЧС № 913518, что и работы по сигнализации.",
+        ],
+        table: {
+          caption: "Виды автоматического пожаротушения",
+          head: ["Вид", "Чем тушит", "Где применяют", "Плюсы", "Что учесть"],
+          rows: [
+            ["Водяное: спринклерное, дренчерное, тонкораспылённое", "Вода: спринклерные оросители вскрываются от тепла над очагом, дренчерные открываются все сразу по сигналу, тонкораспылённая вода тушит мелкими каплями при малом расходе", "Склады, торговые залы, парковки, гостиницы (спринклер); водяные завесы проёмов и участки с быстрым распространением огня (дренчер); архивы и технические помещения (тонкое распыление)", "Вода дешёвая, тушит и охлаждает; спринклер срабатывает только над очагом; тонкое распыление расходует меньше воды", "Нужен водопровод или резервуар с насосами и трубы по всему помещению; вода портит технику и товар, дренчер даёт большой расход; в неотапливаемых зданиях — сухотрубная схема"],
+            ["Газовое", "Инертный газ или хладон из баллонов: снижает долю кислорода или останавливает горение химически", "Серверные, ЦОД, архивы, электрощитовые", "Не оставляет следов, оборудование работает после тушения", "Помещение должно быть герметичным; перед выпуском люди выходят — нужны задержка пуска, табло, кнопки пуска и остановки; установка и перезаправка дорогие"],
+            ["Порошковое", "Огнетушащий порошок из автономных модулей", "Склады, гаражи, производственные и подсобные помещения, неотапливаемые здания", "Модули без трубопроводов, работают на холоде, недорогой монтаж", "После срабатывания — уборка порошка; облако снижает видимость, люди должны покинуть помещение; для чистых помещений и электроники не подходит"],
+            ["Аэрозольное", "Генераторы выделяют мелкодисперсный аэрозоль, который прерывает горение", "Кабельные помещения, электрощитовые, небольшие технические помещения, отсеки оборудования", "Компактные генераторы, без трубопроводов и баллонов, доступная цена", "Нужно закрытое помещение; генератор нагревается — расстояние до горючих материалов; люди выходят до пуска; после срабатывания оседает налёт"],
+          ],
+          note: "Таблица описывает общие инженерные свойства установок. Какой вид нужен конкретному помещению, определяет проект по ШНК 2.04.09-2007.",
+        },
+        links: [
+          { label: "Проектирование систем безопасности", href: "/solutions/proektirovanie" },
+          { label: "Серверные и ЦОД: газовое пожаротушение в проекте", href: "/solutions/server" },
+          { label: "Серверная комната: требования и типичные ошибки", href: "/blog/servernaya-komnata" },
+          { label: "Безопасность склада", href: "/solutions/warehouse" },
+          { label: "Управление пожаротушением — приборы и модули", href: "/products/type/pribory-i-moduli" },
+        ],
+      },
+      {
+        heading: "Документы и нормы",
+        paragraphs: [
+          "Монтаж, наладку и техническое обслуживание пожарной сигнализации и установок автоматического пожаротушения SAT Solutions выполняет по разрешению МЧС Республики Узбекистан № 913518 (подтверждение о получении уведомления). Скан документа опубликован на странице «О компании». Пожарная автоматика зданий в Узбекистане устанавливается по ШНК 2.04.09-2007: по нему проект определяет, какие системы нужны объекту. Российские СП и НПБ в республике не применяются.",
+          "Обслуживание ведётся по Правилам пожарной безопасности, утверждённым постановлением Кабинета Министров № 649 от 20 октября 2020 года. По пункту 148 регламентные работы на установках пожарной сигнализации и пожаротушения выполняются по годовому плану с учётом документации изготовителя. При сдаче передаём исполнительную документацию, а по договору обслуживания ведём журнал, который инспектор открывает первым.",
+        ],
+        links: [
+          { label: "Документы компании", href: "/about" },
+          { label: "Лицензия на монтаж сигнализации в 2026 году: уведомление и лицензия МЧС", href: "/blog/licenziya-na-montazh-signalizacii-uzbekistan" },
+          { label: "Нормы Узбекистана по пожарной сигнализации: справочник с номерами документов", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Обслуживание пожарной сигнализации: годовой план вместо «раз в квартал»", href: "/blog/obsluzhivanie-pozharnoy-signalizacii-uzbekistan" },
+        ],
+      },
+      {
+        heading: "Обслуживание пожарной сигнализации по договору",
+        paragraphs: [
+          "Противопожарная сигнализация обязана работать каждый день, а не только в день сдачи, поэтому обслуживание пожарной сигнализации — отдельная услуга с договором, графиком и журналом. По договору мы проверяем извещатели и шлейфы, тестируем оповещение и резервное питание, меняем аккумуляторы прибора по сроку, чистим извещатели от пыли и ведём журнал, который первым открывает инспектор МЧС. Постановление № 649 (п. 148) требует годового плана по документации изготовителя, и мы считаем его под оборудование объекта: для небольшого офиса обычно закладываем ежеквартальный выезд, для склада с высокими стеллажами и производства — чаще, потому что пыль и перепады температуры выводят извещатели из строя быстрее. Работы выполняем по разрешению МЧС № 913518 (подтверждение о получении уведомления).",
+        ],
+        links: [
+          { label: "Обслуживание пожарной сигнализации и систем безопасности", href: "/solutions/obsluzhivanie" },
         ],
       },
     ],
@@ -682,29 +736,81 @@ const uz: Record<string, ServiceContent> = {
     ],
   },
   fire: {
-    heading: "Toshkentda yongʻin signalizatsiyasi, SOUE va yongʻin oʻchirish tizimlari montaji",
+    // 16.11.2026: «всё в одном» — сигнализация, СОУЭ и пожаротушение (решения владельца В1–В12); бывший абзац о
+    // пожаротушении заменён разделом с таблицей видов, абзац о типах СОУЭ — в своём разделе, обслуживание — один абзац.
+    heading: "Yongʻin signalizatsiyasi, ogohlantirish va yongʻin oʻchirish: obyekt himoyasi qanday tuzilgan",
     paragraphs: [
-      "Avtomatik yongʻin signalizatsiyasi (APS) yongʻinni tutun, issiqlik yoki alanga boʻyicha erta bosqichda aniqlaydi va ogohlantirish hamda evakuatsiyani boshqarish tizimini (SOUE) ishga tushiradi. SAT Solutions ofislar, doʻkonlar, omborlar, ishlab chiqarish va jamoat binolari uchun yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish qurilmalarini Oʻzbekiston yongʻin xavfsizligi normalariga muvofiq yetkazib berish, montaj qilish, sozlash va ularga texnik xizmat koʻrsatishni bajaradi.",
-      "Tizimga yongʻin datchiklari (tutun, issiqlik, qoʻl), qabul-nazorat qurilmalari, ovozli va yorugʻlik ogohlantirgichlari, zarur boʻlganda esa tutunni chiqarish, yongʻinni oʻchirish va binoning muhandislik tizimlarini boshqarish avtomatikasi kiradi. Asboblar va izveshchatellarni Rubej, Bolid va QR Systems dan oʻrnatamiz — uchala liniya ham Toshkentdagi omborimizda bor. Tizim tarkibi buyurtmachining xohishi bilan emas, binoning vazifasi, maydoni va qavatlar soni bilan belgilanadi — ekspertiza birinchi navbatda shuni tekshiradi.",
+      "Yongʻin signalizatsiyasi va yongʻin oʻchirish — binoni uch bosqichda himoya qiladigan avtomatik tizimlar majmui. Yongʻin signalizatsiyasi (APS) yongʻin oʻchogʻini tutun, issiqlik yoki alanga boʻyicha topadi, ogohlantirish va evakuatsiyani boshqarish tizimi (SOUE) odamlarni olib chiqadi, avtomatik yongʻin oʻchirish qurilmasi (AUPT) esa himoyalangan xonadagi olovni bostiradi. SAT Solutions ofislar, doʻkonlar, omborlar, ishlab chiqarish va jamoat binolari uchun uchala tizimni Toshkentda va butun Oʻzbekiston boʻylab yetkazib beradi, montaj qiladi, sozlaydi va ularga xizmat koʻrsatadi.",
+      "Tizimga yongʻin datchiklari (tutun, issiqlik, qoʻl), qabul-nazorat qurilmalari, ovozli va yorugʻlik ogohlantirgichlari, zarur boʻlganda esa tutunni chiqarish, yongʻinni oʻchirish va binoning muhandislik tizimlarini boshqarish avtomatikasi kiradi. Asboblar va izveshchatellarni Rubej, Bolid, QR Systems va Grand Magistr dan oʻrnatamiz — toʻrttala liniya ham Toshkentdagi omborimizda bor. Tizim tarkibi buyurtmachining xohishi bilan emas, binoning vazifasi, maydoni va qavatlar soni bilan belgilanadi — ekspertiza birinchi navbatda shuni tekshiradi.",
       "Oʻzbekistonda yongʻin signalizatsiyasiga xizmat koʻrsatish Vazirlar Mahkamasining 2020-yil 20-oktabrdagi 649-sonli qarori bilan tartibga solinadi: texnik xizmat ishlab chiqaruvchi hujjatlarini hisobga olgan holda yillik reja boʻyicha olib boriladi — respublikada «choraklikda bir marta» degan qatʼiy meʼyor yoʻq, jadval aniq uskunaga qarab hisoblanadi. Biz oʻzimiz montaj qilgan tizimlarga shartnoma asosida reglament xizmat koʻrsatamiz va jurnalni inspeksiyada savol tugʻdirmaydigan holatda saqlaymiz.",
-      "Signalizatsiya yongʻinni aniqlaydi, oʻchirishni esa avtomatik yongʻin oʻchirish qurilmasi (AUPT) bajaradi — bu alohida tizim, biz uni yongʻin signalizatsiyasi bilan birga montaj qilamiz, sozlaymiz va unga xizmat koʻrsatamiz. Gazli yongʻin oʻchirish suv va kukun mol-mulkni yoʻq qiladigan joylarda qoʻllanadi: server xonalari, maʼlumot markazlari, arxivlar, elektr shchitxonalar — tarkib kislorodni siqib chiqaradi va uskunada iz qoldirmaydi. Kukunli modullar arzonroq va omborlar, garajlar, ishlab chiqarish xonalari uchun mos. Suvli va sprinkler tizimlar katta maydonlarga qoʻyiladi.",
       "Yongʻin xavfsizligi — hujjatlar montaj bilan bir xil ahamiyatga ega soha. Biz tizimni loyiha boʻyicha montaj qilamiz, sozlaymiz va obyektni ijro hujjatlari bilan topshiramiz. Amaldagi obyektlar uchun koʻrik oʻtkazamiz: koʻpincha izlagichlar nazorat zonalarini buzgan holda turgani, shleyflar ortiqcha yuklangani va qurilma yillar davomida reglament xizmatidan oʻtmagani maʼlum boʻladi.",
-      "Narx xonalarning maydoni va vazifasi, izlagichlar va shleyflar soni, qurilma turi, ovozli xabardor qilish tizimi va tutun chiqarishni boshqarish avtomatikasi kerakligiga qarab shakllanadi. Ofis uchun va baland stellajli ombor uchun yongʻin signalizatsiyasini oʻrnatish narxi tubdan farq qiladi — ikkinchi holatda izlagichlarning balandligi ham, turi ham oʻzgaradi. Topshirgandan keyin tizimni reglament xizmatiga olamiz: izlagichlarni tekshirish, akkumulyatorni almashtirish, bayonnomalar.",
-          "SOUE turlari boʻyicha farqlanadi — oddiy sirenadan zonali va evakuatsiya oqimlarini boshqaruvchi nutqli ogohlantirishgacha. Kichik ofisga tovushli ogohlantirgichlar va «Chiqish» tablosi yetadi; yuzlab odamli savdo markazi, mehmonxona yoki ishlab chiqarishga nutqli ogohlantirish kerak: zonalar boʻyicha yozilgan xabarlar vahimani pasaytiradi va oqimlarni turli zinalarga ajratadi. SOUE turi bino vazifasi va sigʻimiga qarab normalar boʻyicha belgilanadi va loyihaga kiritiladi — biz aynan shu turdagi tizimni montaj qilamiz va sozlashda zonalar boʻyicha tekshiramiz.",
-          "Yongʻin signalizatsiyasi bino boshqa tizimlari bilan bogʻlanmada ochiladi. Trevoga boʻyicha SKUD evakuatsiya eshiklari boʻshatiladi, umumiy ventilyatsiya oʻchiriladi, liftlar birinchi qavatga tushadi, signal esa qoʻriqlash postiga va masʼullar telefonlariga ketadi. Bu stsenariylarni loyiha boʻyicha sozlaymiz va har bir shleyf boʻyicha tekshiramiz — chunki haqiqiy yongʻinda tekshirishga vaqt boʻlmaydi.",
+      "Narx xonalarning maydoni va vazifasi, izlagichlar va shleyflar soni, qurilma turi, ovozli xabardor qilish tizimi va tutun chiqarishni boshqarish avtomatikasi kerakligiga qarab shakllanadi. Ofis uchun va baland stellajli ombor uchun yongʻin signalizatsiyasini oʻrnatish narxi tubdan farq qiladi — ikkinchi holatda izlagichlarning balandligi ham, turi ham oʻzgaradi. Topshirgandan keyin tizimni reglament xizmatiga olamiz: izlagichlarni tekshirish, akkumulyatorni almashtirish, bayonnomalar. Yongʻin oʻchirish alohida va faqat loyiha boʻyicha, obyektga borib koʻrgandan keyin hisoblanadi: narx qurilma turiga, xonalar hajmiga va oʻchirish moddasiga bogʻliq.",
+      "Yongʻin signalizatsiyasi bino boshqa tizimlari bilan bogʻlanmada ochiladi. Trevoga boʻyicha SKUD evakuatsiya eshiklari boʻshatiladi, umumiy ventilyatsiya oʻchiriladi, liftlar birinchi qavatga tushadi, signal esa qoʻriqlash postiga va masʼullar telefonlariga ketadi. Bu stsenariylarni loyiha boʻyicha sozlaymiz va har bir shleyf boʻyicha tekshiramiz — chunki haqiqiy yongʻinda tekshirishga vaqt boʻlmaydi.",
+    ],
+    links: [
+      { label: "Yongʻin signalizatsiyasi turlari: chegaraviy, manzilli, manzilli-analog", href: "/blog/pozharnaya-signalizatsiya-vidy" },
+      { label: "Simsiz yongʻin signalizatsiyasi: radiokanal qanday ishlaydi", href: "/blog/besprovodnaya-pozharnaya-signalizatsiya-radiokanal" },
+      { label: "Yongʻin signalizatsiyasi byudjetini qanday hisoblash kerak", href: "/blog/yongin-signalizatsiyasi-narxi" },
     ],
     extra: [
       {
-        heading: "Yongʻin signalizatsiyasiga shartnoma boʻyicha xizmat koʻrsatish",
+        heading: "Ogohlantirish va evakuatsiyani boshqarish (SOUE)",
         paragraphs: [
-          "Yongʻinga qarshi signalizatsiya faqat topshirish kuni emas, har kuni ishlashi shart, shuning uchun yongʻin signalizatsiyasiga xizmat koʻrsatish — shartnoma, jadval va jurnalli alohida xizmat. Shartnoma boʻyicha datchiklar va shleyflarni tekshiramiz, ogohlantirish va zaxira taʼminotni sinaymiz, qurilma akkumulyatorlarini muddati boʻyicha almashtiramiz, datchiklarni changdan tozalaymiz va FVV inspektori birinchi ochadigan jurnalni yuritamiz. Ishlar FVV ruxsatnomasi № 913518 asosida bajariladi.",
-          "649-son qaror talab qilganidek, jadval obyekt uskunasiga qarab tuziladi: kichik ofis uchun bu har chorakda chiqish, baland stellajli ombor va ishlab chiqarish uchun tez-tez, chunki chang va harorat oʻzgarishi datchiklarni tezroq ishdan chiqaradi. Har bir tekshiruv sanasi, aniqlangan kamchiliklar va almashtirishlar jurnal va dalolatnomalarda qayd etiladi — obyekt tekshiruvga doim tayyor.",
-          "Faqat oʻzimiz oʻrnatgan tizimlarni emas, boshqalarnikini ham xizmatga olamiz. Begona signalizatsiyani koʻrikdan oʻtkazib qabul qilamiz: loyihaga muvofiqligini, shleyflar va qurilma holatini tekshiramiz, kamchiliklar roʻyxatini bartaraf etish narxi bilan beramiz. Shundan soʻng obyekt oddiy reglamentga oʻtadi. Rubej va Bolid datchiklari, akkumulyatorlar va ogohlantirgichlarni Toshkentdagi omborda saqlaymiz, shuning uchun almashtirish bir chiqishda bajariladi.",
-          "Xizmat koʻrsatish narxi obyektdagi datchiklar, shleyflar va qurilmalar soniga bogʻliq, oyiga yoki yiliga hisoblanadi. Yongʻin signalizatsiyasini toʻliq tayyor holda oʻrnatish va unga xizmat koʻrsatishni bitta shartnoma bilan buyurtma qilish mumkin: oʻrnatish narxi yuqoridagi «qancha turadi» boʻlimida, xizmat koʻrsatish hisobini koʻrikdan soʻng bir ish kuni ichida yuboramiz.",
+          "SOUE turlari boʻyicha farqlanadi — oddiy sirenadan zonali va evakuatsiya oqimlarini boshqaruvchi nutqli ogohlantirishgacha. Kichik ofisga tovushli ogohlantirgichlar va «Chiqish» tablosi yetadi; yuzlab odamli savdo markazi, mehmonxona yoki ishlab chiqarishga nutqli ogohlantirish kerak: zonalar boʻyicha yozilgan xabarlar vahimani pasaytiradi va oqimlarni turli zinalarga ajratadi. SOUE turi bino vazifasi va sigʻimiga qarab normalar boʻyicha belgilanadi va loyihaga kiritiladi — biz aynan shu turdagi tizimni montaj qilamiz va sozlashda zonalar boʻyicha tekshiramiz.",
+          "SOUE yongʻin signalizatsiyasi signali bilan ishga tushadi va u bilan birga ishlaydi. Rubej, Bolid va QR Systems qurilmalarida ogohlantirish shu qurilmaning zonalari sifatida sozlanadi, nutqli tizimlar — Bolid Rupor qurilmasi yoki QR Systems manzilli nutqli ogohlantirgichlari — buyruqni qurilmadan oladi. Translyatsiya, fon musiqasi va eshittirish zonalari haqida batafsil — ogohlantirish tizimlari sahifasida.",
         ],
         links: [
-          { label: "Xavfsizlik tizimlariga xizmat koʻrsatish: reglament qanday tuzilgan", href: "/solutions/obsluzhivanie" },
-          { label: "Oʻzbekistonda yongʻin signalizatsiyasi normalari", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Ogohlantirish va translyatsiya tizimlari", href: "/solutions/pa" },
+          { label: "Ogohlantirish — katalogdagi uskunalar", href: "/products/type/opoveschenie" },
+        ],
+      },
+      {
+        id: "suppression",
+        heading: "Avtomatik yongʻin oʻchirish: turlari va qayerda qoʻllanadi",
+        paragraphs: [
+          "Signalizatsiya yongʻinni aniqlaydi, uni esa avtomatik yongʻin oʻchirish qurilmasi (AUPT) oʻchiradi — bu oʻz ballonlari, modullari yoki quvurlari boʻlgan alohida tizim boʻlib, ishga tushirish buyrugʻini yongʻin avtomatikasi qurilmalaridan oladi. Biz asosiy turdagi barcha qurilmalarni montaj qilamiz, sozlaymiz va ularga xizmat koʻrsatamiz: suvli (sprinkler, drencher va mayda purkaladigan suv), gazli, kukunli va aerozolli. Tur nima yonishi va nimani saqlab qolish kerakligiga qarab tanlanadi: odamlar, uskunalar, hujjatlar yoki stellajlardagi tovar.",
+          "Yongʻin oʻchirish qurilmasi faqat signalizatsiya bilan birga ishlaydi. Ishga tushirish odatda ikki datchik signali boʻyicha yoki qoʻlda — himoyalangan xona kirishidagi «Yongʻin oʻchirishni ishga tushirish» tugmasi bilan amalga oshiriladi. Gaz, kukun yoki aerozol chiqarilishidan oldin tablo va sirena yonadi, evakuatsiya uchun kechikish hisoblanadi, eshiklar yopiladi va ventilyatsiya oʻchadi. Boshqarish uchun Bolid S2000-KPB va S2000-SP4 bloklari, Rubej va QR Systems rele modullari hamda masofadan ishga tushirish qurilmalarini oʻrnatamiz. Bu stsenariylarni sozlash paytida har bir zona boʻyicha tekshiramiz.",
+          "Yongʻin oʻchirish qurilmasi loyihasini oʻzimiz yoki hamkor loyihachi orqali tayyorlaymiz, narxini esa faqat loyiha boʻyicha, obyektga borib koʻrgandan keyin aytamiz: u qurilma turiga, xonalar hajmiga, oʻchirish moddasiga va obyektda allaqachon nima borligiga bogʻliq. Modullar, ballonlar va purkagichlarni loyihaga qarab tanlaymiz. Avtomatik yongʻin oʻchirish qurilmalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish signalizatsiya ishlari bilan bir xil — FVV ruxsatnomasi № 913518 asosida bajariladi.",
+        ],
+        table: {
+          caption: "Avtomatik yongʻin oʻchirish turlari",
+          head: ["Turi", "Nima bilan oʻchiradi", "Qayerda qoʻllanadi", "Afzalliklari", "Nimani hisobga olish kerak"],
+          rows: [
+            ["Suvli: sprinkler, drencher, mayda purkaladigan suv", "Suv: sprinkler purkagichlari oʻchoq ustida issiqlikdan ochiladi, drencherlar signal boʻyicha birdaniga ochiladi, mayda purkaladigan suv kam sarf bilan mayda tomchilar orqali oʻchiradi", "Omborlar, savdo zallari, avtoturargohlar, mehmonxonalar (sprinkler); eshik-deraza oʻrinlaridagi suv pardalari va olov tez tarqaladigan uchastkalar (drencher); arxivlar va texnik xonalar (mayda purkash)", "Suv arzon, oʻchiradi va sovutadi; sprinkler faqat oʻchoq ustida ishlaydi; mayda purkash kam suv sarflaydi", "Suv quvuri yoki nasosli rezervuar va butun xona boʻylab quvurlar kerak; suv texnika va tovarni buzadi, drencher koʻp suv sarflaydi; isitilmaydigan binolarda — quruq quvurli sxema"],
+            ["Gazli", "Ballonlardagi inert gaz yoki xladon: kislorod ulushini kamaytiradi yoki yonishni kimyoviy toʻxtatadi", "Server xonalari, maʼlumot markazlari, arxivlar, elektr shchitxonalar", "Iz qoldirmaydi, uskuna oʻchirishdan keyin ham ishlayveradi", "Xona germetik boʻlishi kerak; gaz chiqarilishidan oldin odamlar chiqadi — kechikish, tablo, ishga tushirish va toʻxtatish tugmalari kerak; qurilma va qayta toʻldirish qimmat"],
+            ["Kukunli", "Avtonom modullardan chiqadigan oʻt oʻchiruvchi kukun", "Omborlar, garajlar, ishlab chiqarish va yordamchi xonalar, isitilmaydigan binolar", "Quvursiz modullar, sovuqda ishlaydi, montaj arzon", "Ishlagandan keyin kukunni tozalash kerak; bulut koʻrinishni pasaytiradi, odamlar xonadan chiqishi kerak; toza xonalar va elektronika uchun mos emas"],
+            ["Aerozolli", "Generatorlar yonishni toʻxtatadigan mayda dispers aerozol chiqaradi", "Kabel xonalari, elektr shchitxonalar, kichik texnik xonalar, uskuna boʻlimlari", "Ixcham generatorlar, quvur va ballonsiz, qulay narx", "Yopiq xona kerak; generator qiziydi — yonuvchan materiallardan masofa saqlanadi; odamlar ishga tushishdan oldin chiqadi; ishlagandan keyin gʻubor choʻkadi"],
+          ],
+          note: "Jadvalda qurilmalarning umumiy muhandislik xususiyatlari keltirilgan. Muayyan xonaga qaysi tur kerakligini ShNQ 2.04.09-2007 boʻyicha loyiha belgilaydi.",
+        },
+        links: [
+          { label: "Xavfsizlik tizimlarini loyihalash", href: "/solutions/proektirovanie" },
+          { label: "Server xonalari va maʼlumot markazlari", href: "/solutions/server" },
+          { label: "Server xonasi: talablar va xatolar", href: "/blog/servernaya-komnata" },
+          { label: "Ombor xavfsizligi", href: "/solutions/warehouse" },
+          { label: "Yongʻin oʻchirishni boshqarish — qurilmalar va modullar", href: "/products/type/pribory-i-moduli" },
+        ],
+      },
+      {
+        heading: "Hujjatlar va meʼyorlar",
+        paragraphs: [
+          "SAT Solutions yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish qurilmalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatishni Oʻzbekiston Respublikasi FVV ruxsatnomasi № 913518 (xabarnoma qabul qilinganligi toʻgʻrisidagi tasdiqnoma) asosida bajaradi. Hujjat nusxasi «Kompaniya haqida» sahifasida joylashtirilgan. Oʻzbekistonda binolarning yongʻin avtomatikasi ShNQ 2.04.09-2007 boʻyicha oʻrnatiladi: loyiha obyektga qaysi tizimlar kerakligini aynan shu hujjat asosida belgilaydi. Rossiya SP va NPB meʼyorlari respublikada qoʻllanilmaydi.",
+          "Xizmat koʻrsatish Vazirlar Mahkamasining 2020-yil 20-oktabrdagi 649-son qarori bilan tasdiqlangan Yongʻin xavfsizligi qoidalari boʻyicha olib boriladi. 148-bandga koʻra yongʻin signalizatsiyasi va yongʻin oʻchirish qurilmalaridagi reglament ishlari ishlab chiqaruvchi hujjatlarini hisobga olgan holda yillik reja asosida bajariladi. Topshirishda ijro hujjatlarini beramiz, xizmat shartnomasi boʻyicha esa inspektor birinchi ochadigan jurnalni yuritamiz.",
+        ],
+        links: [
+          { label: "Kompaniya hujjatlari", href: "/about" },
+          { label: "2026-yilda signalizatsiya montaji litsenziyasi: xabarnoma va FVV litsenziyasi", href: "/blog/licenziya-na-montazh-signalizacii-uzbekistan" },
+          { label: "Oʻzbekistonning yongʻin signalizatsiyasi meʼyorlari: hujjat raqamlari bilan", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Yongʻin signalizatsiyasiga xizmat koʻrsatish: yillik reja", href: "/blog/obsluzhivanie-pozharnoy-signalizacii-uzbekistan" },
+        ],
+      },
+      {
+        heading: "Yongʻin signalizatsiyasiga shartnoma boʻyicha xizmat koʻrsatish",
+        paragraphs: [
+          "Yongʻinga qarshi signalizatsiya faqat topshirish kuni emas, har kuni ishlashi shart, shuning uchun yongʻin signalizatsiyasiga xizmat koʻrsatish — shartnoma, jadval va jurnalli alohida xizmat. Shartnoma boʻyicha datchiklar va shleyflarni tekshiramiz, ogohlantirish va zaxira taʼminotni sinaymiz, qurilma akkumulyatorlarini muddati boʻyicha almashtiramiz, datchiklarni changdan tozalaymiz va FVV inspektori birinchi ochadigan jurnalni yuritamiz. 649-son qaror (148-band) ishlab chiqaruvchi hujjatlari asosida yillik reja talab qiladi, biz uni obyekt uskunasiga qarab tuzamiz: kichik ofis uchun odatda har chorakda bir chiqish rejalashtiramiz, baland stellajli ombor va ishlab chiqarish uchun tez-tez, chunki chang va harorat oʻzgarishi datchiklarni tezroq ishdan chiqaradi. Ishlar FVV ruxsatnomasi № 913518 (xabarnoma qabul qilinganligi toʻgʻrisidagi tasdiqnoma) asosida bajariladi.",
+        ],
+        links: [
+          { label: "Yongʻin signalizatsiyasi va xavfsizlik tizimlariga xizmat koʻrsatish", href: "/solutions/obsluzhivanie" },
         ],
       },
     ],
@@ -1251,29 +1357,81 @@ const en: Record<string, ServiceContent> = {
     ],
   },
   "fire": {
-    heading: "Fire Alarm, Voice Evacuation and Fire Suppression Installation in Tashkent",
+    // 16.11.2026: «всё в одном» — сигнализация, СОУЭ и пожаротушение (решения владельца В1–В12); бывший абзац о
+    // пожаротушении заменён разделом с таблицей видов, абзац о типах СОУЭ — в своём разделе, обслуживание — один абзац.
+    heading: "Fire alarm, evacuation and suppression: how a building is protected",
     paragraphs: [
-      "An automatic fire alarm detects a fire at an early stage by smoke, heat or flame and triggers the voice evacuation system. SAT Solutions supplies, installs, commissions and maintains fire alarms and automatic fire suppression systems for offices, shops, warehouses, factories and public buildings in accordance with Uzbekistan's fire safety codes.",
-      "A system includes fire detectors (smoke, heat, manual call points), control panels, sounders and beacons, and where required — automation controlling smoke extraction, suppression and the building's engineering systems. We fit Rubezh, Bolid and QR Systems panels and detectors — all three ranges are held in our Tashkent warehouse. What the system must contain is set by the building's use, area and number of storeys rather than by the client's wishes — and that is the first thing the review checks.",
+      "Fire alarm and fire suppression form a set of automatic systems that protect a building in three steps. The fire alarm finds the source by smoke, heat or flame, the voice evacuation system gets people out, and the automatic fire suppression system puts out the fire in the protected room. SAT Solutions supplies, installs, commissions and maintains all three for offices, shops, warehouses, factories and public buildings in Tashkent and across Uzbekistan.",
+      "A system includes fire detectors (smoke, heat, manual call points), control panels, sounders and beacons, and where required — automation controlling smoke extraction, suppression and the building's engineering systems. We fit Rubezh, Bolid, QR Systems and Grand Magistr panels and detectors — all four ranges are held in our Tashkent warehouse. What the system must contain is set by the building's use, area and number of storeys rather than by the client's wishes — and that is the first thing the review checks.",
       "Fire alarm maintenance in Uzbekistan is governed by Cabinet of Ministers Resolution No. 649 of 20 October 2020: servicing follows an annual plan based on the manufacturer's documentation — there is no fixed \"once a quarter\" rule in the country; the schedule is derived from the actual equipment. We provide scheduled maintenance under contract for the systems we installed and keep the logbook in a state that leaves an inspector nothing to ask about.",
-      "An alarm detects a fire; extinguishing it is the job of an automatic suppression system — a separate system that we install, commission and maintain together with the alarm. Gas suppression is used where water and powder would destroy the assets: server rooms, data centers, archives, switchrooms — the agent displaces oxygen and leaves no trace on equipment. Powder modules are cheaper and suit warehouses, garages, production and utility rooms. Water and sprinkler systems cover large areas where containing the fire matters more than preserving equipment.",
       "In fire safety, the documents mean as much as the installation. We install the system to the design, commission it and hand the site over with as-built documentation. For operating sites we run surveys: it often turns out detectors violate coverage zones, loops are overloaded, and the panel has gone years without scheduled maintenance.",
-      "The cost is built from the area and purpose of the rooms, the number of detectors and loops, the panel type, and the need for voice evacuation and smoke extraction control. The price for an office differs fundamentally from a high-bay warehouse — the detector mounting height and type both change. After handover we take the system onto scheduled maintenance: detector checks, battery replacement, reports — without it, an Emergency Ministry inspection will find faults even in a working system.",
-          "Voice evacuation systems differ by type — from a simple siren to zoned voice announcements with evacuation flow control. A small office is fine with sounders and exit signs; a shopping mall, hotel or plant with hundreds of people needs voice notification: pre-recorded zone messages reduce panic and split the flows onto different stairways. The system type is set by the building's purpose and capacity under the codes and fixed in the design — we install exactly that type and test it zone by zone at commissioning.",
-          "A fire alarm shows its worth in concert with the building's other systems. On alarm, the access-control evacuation doors release, general ventilation shuts down, elevators descend to the ground floor, and the signal goes to the guard post and the phones of those responsible. We configure these scenarios to the design and verify them at commissioning loop by loop — because in a real fire there will be no time left to check.",
+      "The cost is built from the area and purpose of the rooms, the number of detectors and loops, the panel type, and the need for voice evacuation and smoke extraction control. The price for an office differs fundamentally from a high-bay warehouse — the detector mounting height and type both change. After handover we take the system onto scheduled maintenance: detector checks, battery replacement, reports — without it, an Emergency Ministry inspection will find faults even in a working system. Fire suppression is priced separately and only per design, after a site visit: the figure depends on the system type, the room volume and the extinguishing agent.",
+      "A fire alarm shows its worth in concert with the building's other systems. On alarm, the access-control evacuation doors release, general ventilation shuts down, elevators descend to the ground floor, and the signal goes to the guard post and the phones of those responsible. We configure these scenarios to the design and verify them at commissioning loop by loop — because in a real fire there will be no time left to check.",
+    ],
+    links: [
+      { label: "Types of fire alarm: conventional, addressable, analogue addressable", href: "/blog/pozharnaya-signalizatsiya-vidy" },
+      { label: "Wireless fire alarm: how the radio link works", href: "/blog/besprovodnaya-pozharnaya-signalizatsiya-radiokanal" },
+      { label: "How to budget a fire alarm", href: "/blog/yongin-signalizatsiyasi-narxi" },
     ],
     extra: [
       {
-        heading: "Fire alarm maintenance under contract",
+        heading: "Voice evacuation and warning systems",
         paragraphs: [
-          "A fire alarm has to work every day, not just on the day of commissioning, so fire alarm maintenance is a separate service with a contract, a schedule and a logbook. Under the contract we check detectors and loops, test the sounders and backup power, replace panel batteries on schedule, clean detectors of dust and keep the logbook that a Ministry of Emergency Situations inspector opens first. The work is done under permit No. 913518.",
-          "The schedule follows the equipment on site, as Resolution No. 649 requires: a quarterly visit for a small office, more often for a high-bay warehouse or a factory, because dust and temperature swings wear detectors out faster. The date of every check, the findings and the replacements are recorded in the logbook and acts, so the site is always ready for an inspection.",
-          "We take on more than the systems we installed ourselves. A third-party alarm is accepted after a survey: we check compliance with the design, the state of the loops and the panel, and issue a list of defects with the cost of fixing them. After that the site moves to the regular schedule. Common Rubezh and Bolid detectors, batteries and sounders are kept in our Tashkent warehouse, so a replacement takes one visit.",
-          "The maintenance fee depends on the number of detectors, loops and panels on site and is quoted per month or per year. Turnkey fire alarm installation and its maintenance can be ordered under one contract: the installation price is in the “What it costs” section above, and we send the maintenance quote within one business day after the survey.",
+          "Voice evacuation systems differ by type — from a simple siren to zoned voice announcements with evacuation flow control. A small office is fine with sounders and exit signs; a shopping mall, hotel or plant with hundreds of people needs voice notification: pre-recorded zone messages reduce panic and split the flows onto different stairways. The system type is set by the building's purpose and capacity under the codes and fixed in the design — we install exactly that type and test it zone by zone at commissioning.",
+          "The evacuation system starts on the fire alarm signal and works as part of it. On Rubezh, Bolid and QR Systems panels, notification is set up as zones of the same panel, while voice systems — the Bolid Rupor unit or QR Systems addressable voice sounders — take their commands from the panel. Public address, background music and broadcast zones are covered on the PA systems page.",
         ],
         links: [
-          { label: "Security systems maintenance: how the schedule works", href: "/solutions/obsluzhivanie" },
-          { label: "Fire alarm regulations in Uzbekistan", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Public address and voice evacuation", href: "/solutions/pa" },
+          { label: "Notification equipment in the catalogue", href: "/products/type/opoveschenie" },
+        ],
+      },
+      {
+        id: "suppression",
+        heading: "Automatic fire suppression: types and where they are used",
+        paragraphs: [
+          "The alarm detects a fire; putting it out is the job of an automatic fire suppression system — a separate installation with its own cylinders, modules or pipework that receives the release command from the fire automation panels. We install, commission and maintain all the main types: water-based (sprinkler, deluge and water mist), gas, powder and aerosol. The type is chosen by what burns and what must be preserved: people, equipment, documents or stock on the racks.",
+          "A suppression system only works together with the alarm. Release usually follows signals from two detectors, or is triggered by hand with the \"Fire suppression release\" button at the entrance to the protected room. Before gas, powder or aerosol is discharged, warning signs and a siren switch on, an evacuation delay counts down, doors close and ventilation shuts off. For control we fit Bolid S2000-KPB and S2000-SP4 units, Rubezh and QR Systems relay modules and manual release devices. We check these scenarios zone by zone during commissioning.",
+          "We prepare the suppression design ourselves or through a partner design firm, and price the system only per design, after a site visit: the cost depends on the system type, the room volume, the extinguishing agent and what is already installed on site. Modules, cylinders and sprinkler heads are selected to the design. Installation, commissioning and maintenance of automatic fire suppression are carried out under the same Ministry of Emergency Situations permit No. 913518 as our fire alarm work.",
+        ],
+        table: {
+          caption: "Types of automatic fire suppression",
+          head: ["Type", "Extinguishes with", "Typical sites", "Advantages", "Things to consider"],
+          rows: [
+            ["Water: sprinkler, deluge, water mist", "Water: sprinkler heads open from the heat above the fire, deluge nozzles all open at once on a signal, water mist puts the fire out with fine droplets and low water use", "Warehouses, sales floors, car parks, hotels (sprinkler); water curtains at openings and areas where fire spreads fast (deluge); archives and technical rooms (water mist)", "Water is cheap, extinguishes and cools; a sprinkler opens only above the fire; water mist uses less water", "Needs a water main or a tank with pumps and pipework across the room; water damages equipment and stock, deluge uses a lot of water; unheated buildings need a dry-pipe layout"],
+            ["Gas", "Inert gas or a halocarbon agent from cylinders: lowers the oxygen share or stops combustion chemically", "Server rooms, data centres, archives, switchrooms", "Leaves no residue; equipment keeps working after discharge", "The room must be airtight; people leave before discharge — a delay, warning signs, release and abort buttons are required; the system and refilling are costly"],
+            ["Powder", "Extinguishing powder from self-contained modules", "Warehouses, garages, production and utility rooms, unheated buildings", "Modules without pipework, work in the cold, low installation cost", "Powder must be cleaned up afterwards; the cloud reduces visibility, people must leave; unsuitable for clean rooms and electronics"],
+            ["Aerosol", "Generators release a fine aerosol that interrupts combustion", "Cable rooms, switchrooms, small technical rooms, equipment compartments", "Compact generators, no pipework or cylinders, affordable", "Needs an enclosed room; the generator heats up — keep distance from combustibles; people leave before release; residue settles afterwards"],
+          ],
+          note: "The table describes general engineering properties. Which type a specific room needs is defined by the design under ShNK 2.04.09-2007.",
+        },
+        links: [
+          { label: "Security systems design", href: "/solutions/proektirovanie" },
+          { label: "Server rooms and data centres", href: "/solutions/server" },
+          { label: "Server room: requirements and common mistakes", href: "/blog/servernaya-komnata" },
+          { label: "Warehouse security", href: "/solutions/warehouse" },
+          { label: "Suppression control: panels and modules", href: "/products/type/pribory-i-moduli" },
+        ],
+      },
+      {
+        heading: "Permits and codes",
+        paragraphs: [
+          "SAT Solutions installs, commissions and maintains fire alarms and automatic fire suppression systems under Ministry of Emergency Situations of Uzbekistan permit No. 913518 (confirmation of notification). A scan is published on the About page. Fire automation in buildings in Uzbekistan follows ShNK 2.04.09-2007: the design uses it to define which systems a site needs. Russian SP and NPB codes do not apply in the republic.",
+          "Maintenance follows the Fire Safety Rules approved by Cabinet of Ministers Resolution No. 649 of 20 October 2020. Under clause 148, scheduled work on fire alarm and fire suppression systems is carried out to an annual plan that takes the manufacturer's documentation into account. At handover we provide as-built documentation, and under a maintenance contract we keep the logbook that an inspector opens first.",
+        ],
+        links: [
+          { label: "Company documents", href: "/about" },
+          { label: "Alarm installation licence in 2026: notification and the Emergencies Ministry licence", href: "/blog/licenziya-na-montazh-signalizacii-uzbekistan" },
+          { label: "Uzbekistan's fire alarm regulations: a reference with document numbers", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Fire alarm servicing: an annual plan, not \"once a quarter\"", href: "/blog/obsluzhivanie-pozharnoy-signalizacii-uzbekistan" },
+        ],
+      },
+      {
+        heading: "Fire alarm maintenance under contract",
+        paragraphs: [
+          "A fire alarm has to work every day, not just on the day of commissioning, so fire alarm maintenance is a separate service with a contract, a schedule and a logbook. Under the contract we check detectors and loops, test the sounders and backup power, replace panel batteries on schedule, clean detectors of dust and keep the logbook that a Ministry of Emergency Situations inspector opens first. Resolution No. 649 (clause 148) requires an annual plan based on the manufacturer's documentation, and we build it around the equipment on site: for a small office we usually plan a quarterly visit, more often for a high-bay warehouse or a factory, because dust and temperature swings wear detectors out faster. The work is done under Ministry of Emergency Situations permit No. 913518 (confirmation of notification).",
+        ],
+        links: [
+          { label: "Fire alarm and security systems maintenance", href: "/solutions/obsluzhivanie" },
         ],
       },
     ],
@@ -2015,29 +2173,81 @@ const tr: Record<string, ServiceContent> = {
     ],
   },
   "fire": {
-    heading: "Taşkent'te Yangın Alarmı, Sesli Tahliye ve Söndürme Sistemi Kurulumu",
+    // 16.11.2026: «всё в одном» — сигнализация, СОУЭ и пожаротушение (решения владельца В1–В12); бывший абзац о
+    // пожаротушении заменён разделом с таблицей видов, абзац о типах СОУЭ — в своём разделе, обслуживание — один абзац.
+    heading: "Yangın alarmı, tahliye ve söndürme: bina nasıl korunur",
     paragraphs: [
-      "Otomatik yangın alarmı, yangını duman, ısı veya alevden erken aşamada algılar ve sesli tahliye sistemini tetikler. SAT Solutions ofisler, mağazalar, depolar, fabrikalar ve kamu binaları için yangın alarmı ve otomatik söndürme sistemlerini Özbekistan yangın güvenliği normlarına uygun olarak tedarik eder, kurar, devreye alır ve bakımını yapar.",
-      "Sistem; yangın dedektörleri (duman, ısı, buton), kontrol panelleri, sesli-ışıklı uyarı cihazları ve gerektiğinde duman tahliyesi, söndürme ve bina tesisatını yöneten otomasyondan oluşur. Panel ve dedektörlerde Rubezh, Bolid ve QR Systems kullanırız — üç seri de Taşkent depomuzda bulunur. Sistemin kapsamını müşterinin isteği değil, binanın kullanım amacı, alanı ve kat sayısı belirler — denetimin ilk baktığı şey de budur.",
+      "Yangın alarmı ve yangın söndürme, binayı üç adımda koruyan otomatik sistemler bütünüdür. Yangın alarm sistemi yangın kaynağını duman, ısı veya alevden tespit eder, sesli uyarı ve tahliye sistemi insanları dışarı çıkarır, otomatik söndürme sistemi ise korunan odadaki yangını bastırır. SAT Solutions bu üç sistemi ofisler, mağazalar, depolar, üretim tesisleri ve kamu binaları için Taşkent'te ve Özbekistan genelinde tedarik eder, kurar, devreye alır ve bakımını yapar.",
+      "Sistem; yangın dedektörleri (duman, ısı, buton), kontrol panelleri, sesli-ışıklı uyarı cihazları ve gerektiğinde duman tahliyesi, söndürme ve bina tesisatını yöneten otomasyondan oluşur. Panel ve dedektörlerde Rubezh, Bolid, QR Systems ve Grand Magistr kullanırız — dört seri de Taşkent depomuzda bulunur. Sistemin kapsamını müşterinin isteği değil, binanın kullanım amacı, alanı ve kat sayısı belirler — denetimin ilk baktığı şey de budur.",
       "Özbekistan'da yangın alarmı bakımı, 20 Ekim 2020 tarihli 649 sayılı Bakanlar Kurulu kararıyla düzenlenir: bakım, üretici dokümantasyonu esas alınarak yıllık plana göre yürütülür — ülkede «üç ayda bir» diye sabit bir norm yoktur, program somut ekipmana göre hesaplanır. Kendi kurduğumuz sistemlerin periyodik bakımını sözleşmeyle yürütür ve denetçiye soracak bir şey bırakmayan bir kayıt defteri tutarız.",
-      "Alarm yangını algılar; söndürmek otomatik söndürme sisteminin işidir — alarmla birlikte kurduğumuz, devreye aldığımız ve bakımını yaptığımız ayrı bir sistem. Gazlı söndürme, su ve tozun varlıkları yok edeceği yerlerde kullanılır: sistem odaları, veri merkezleri, arşivler, pano odaları — gaz oksijeni iter ve ekipmanda iz bırakmaz. Toz modüller daha ucuzdur; depo, garaj, üretim ve servis alanlarına uyar. Su ve sprinkler sistemleri, ekipmandan çok yangının sınırlanmasının önemli olduğu büyük alanlara kurulur.",
       "Yangın güvenliğinde belgeler montaj kadar önemlidir. Sistemi projeye göre kurar, devreye alır ve tesisi as-built dokümantasyonla teslim ederiz. Çalışan tesislerde etüt yaparız: çoğu kez dedektörlerin kapsama bölgelerini ihlal ettiği, hatların aşırı yüklendiği ve panelin yıllardır bakım görmediği ortaya çıkar.",
-      "Maliyet; alanın büyüklüğü ve kullanım amacına, dedektör ve hat sayısına, panel tipine, sesli tahliye ve duman tahliye otomasyonu ihtiyacına göre oluşur. Ofis fiyatıyla yüksek raflı depo fiyatı temelden farklıdır — dedektörün montaj yüksekliği de tipi de değişir. Teslimden sonra sistemi periyodik bakıma alırız: dedektör kontrolleri, akü değişimi, tutanaklar — bunlar olmadan denetim, çalışan sisteme bile kusur bulur.",
-          "Tahliye anons sistemleri tipe göre ayrılır — basit sirenden, bölgeli ve tahliye akışını yöneten sesli anonsa kadar. Küçük ofise sesli uyarıcılar ve çıkış tabelaları yeter; yüzlerce insanın bulunduğu AVM, otel veya fabrikaya sesli anons gerekir: bölge bölge kayıtlı mesajlar paniği azaltır ve akışları farklı merdivenlere ayırır. Sistemin tipini binanın amacı ve kapasitesi normlara göre belirler ve proje bunu sabitler — biz tam bu tipi kurar, devreye almada bölge bölge test ederiz.",
-          "Yangın alarmı, binanın diğer sistemleriyle birlikte değer kazanır. Alarmda geçiş kontrolünün tahliye kapıları açılır, genel havalandırma durur, asansörler zemine iner; sinyal güvenlik noktasına ve sorumluların telefonlarına gider. Bu senaryoları projeye göre ayarlar, devreye almada zon zon doğrularız — çünkü gerçek yangında kontrol edecek zaman kalmaz.",
+      "Maliyet; alanın büyüklüğü ve kullanım amacına, dedektör ve hat sayısına, panel tipine, sesli tahliye ve duman tahliye otomasyonu ihtiyacına göre oluşur. Ofis fiyatıyla yüksek raflı depo fiyatı temelden farklıdır — dedektörün montaj yüksekliği de tipi de değişir. Teslimden sonra sistemi periyodik bakıma alırız: dedektör kontrolleri, akü değişimi, tutanaklar — bunlar olmadan denetim, çalışan sisteme bile kusur bulur. Söndürme sistemleri ayrıca ve yalnızca projeye göre, keşif sonrasında fiyatlandırılır: fiyat sistem tipine, oda hacmine ve söndürücü maddeye bağlıdır.",
+      "Yangın alarmı, binanın diğer sistemleriyle birlikte değer kazanır. Alarmda geçiş kontrolünün tahliye kapıları açılır, genel havalandırma durur, asansörler zemine iner; sinyal güvenlik noktasına ve sorumluların telefonlarına gider. Bu senaryoları projeye göre ayarlar, devreye almada zon zon doğrularız — çünkü gerçek yangında kontrol edecek zaman kalmaz.",
+    ],
+    links: [
+      { label: "Yangın alarm sistemi türleri: konvansiyonel, adresli, analog adresli", href: "/blog/pozharnaya-signalizatsiya-vidy" },
+      { label: "Kablosuz adresli yangın alarmı: radyo hattı nasıl çalışır", href: "/blog/besprovodnaya-pozharnaya-signalizatsiya-radiokanal" },
+      { label: "Yangın alarm sistemi bütçesi nasıl hesaplanır", href: "/blog/yongin-signalizatsiyasi-narxi" },
     ],
     extra: [
       {
-        heading: "Sözleşmeli yangın alarm bakımı",
+        heading: "Sesli uyarı ve tahliye yönetimi",
         paragraphs: [
-          "Yangın alarmı yalnızca teslim günü değil her gün çalışmak zorundadır; bu yüzden yangın alarm bakımı sözleşmesi, takvimi ve kayıt defteri olan ayrı bir hizmettir. Sözleşme kapsamında dedektörleri ve hatları kontrol eder, sirenleri ve yedek beslemeyi test eder, panel akülerini süresinde değiştirir, dedektörleri tozdan temizler ve Acil Durumlar Bakanlığı müfettişinin ilk açtığı kayıt defterini tutarız. İşler 913518 numaralı izin belgesiyle yapılır.",
-          "649 sayılı kararın öngördüğü gibi takvim sahadaki ekipmana göre belirlenir: küçük bir ofis için üç ayda bir ziyaret, yüksek raflı depo ve fabrika için daha sık, çünkü toz ve sıcaklık dalgalanmaları dedektörleri daha hızlı yıpratır. Her kontrolün tarihi, bulgular ve değişimler kayıt defterine ve tutanaklara işlenir; saha denetime her zaman hazırdır.",
-          "Yalnızca kendi kurduğumuz sistemleri değil, başkalarınınkini de bakıma alıyoruz. Yabancı bir alarmı keşifle kabul ederiz: projeye uygunluğu, hatların ve panelin durumunu kontrol eder, giderme maliyetiyle birlikte eksik listesi veririz. Ardından saha olağan takvime geçer. Yaygın Rubezh ve Bolid dedektörleri, aküler ve sirenler Taşkent depomuzda bulunur; değişim tek ziyarette yapılır.",
-          "Bakım ücreti sahadaki dedektör, hat ve panel sayısına bağlıdır; aylık veya yıllık teklif edilir. Anahtar teslim yangın alarm montajı ve bakımı tek sözleşmeyle sipariş edilebilir: montaj fiyatı yukarıdaki “ne kadar” bölümünde, bakım teklifini keşiften sonra bir iş günü içinde göndeririz.",
+          "Tahliye anons sistemleri tipe göre ayrılır — basit sirenden, bölgeli ve tahliye akışını yöneten sesli anonsa kadar. Küçük ofise sesli uyarıcılar ve çıkış tabelaları yeter; yüzlerce insanın bulunduğu AVM, otel veya fabrikaya sesli anons gerekir: bölge bölge kayıtlı mesajlar paniği azaltır ve akışları farklı merdivenlere ayırır. Sistemin tipini binanın amacı ve kapasitesi normlara göre belirler ve proje bunu sabitler — biz tam bu tipi kurar, devreye almada bölge bölge test ederiz.",
+          "Tahliye sistemi yangın alarmının sinyaliyle devreye girer ve onunla birlikte çalışır. Rubezh, Bolid ve QR Systems panellerinde uyarı aynı panelin bölgeleri olarak ayarlanır; sesli sistemler — Bolid Rupor cihazı veya QR Systems adresli sesli uyarıcıları — komutu panelden alır. Anons, fon müziği ve yayın bölgeleri hakkında ayrıntılar seslendirme sistemleri sayfasındadır.",
         ],
         links: [
-          { label: "Güvenlik sistemleri bakımı: takvim nasıl işler", href: "/solutions/obsluzhivanie" },
-          { label: "Özbekistan’da yangın alarm mevzuatı", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Anons ve seslendirme sistemleri", href: "/solutions/pa" },
+          { label: "Katalogda uyarı ekipmanı", href: "/products/type/opoveschenie" },
+        ],
+      },
+      {
+        id: "suppression",
+        heading: "Otomatik yangın söndürme: türleri ve kullanım alanları",
+        paragraphs: [
+          "Alarm yangını algılar; söndürme işini otomatik söndürme sistemi üstlenir. Bu, kendi tüpleri, modülleri veya boru hattı olan ve tetikleme komutunu yangın otomasyonu panellerinden alan ayrı bir tesisattır. Tüm temel türleri kuruyor, devreye alıyor ve bakımını yapıyoruz: sulu (sprinkler, drencher ve su sisi), gazlı, tozlu ve aerosollü. Tür, neyin yandığına ve neyin korunması gerektiğine göre seçilir: insanlar, ekipman, belgeler veya raflardaki ürünler.",
+          "Söndürme sistemi yalnızca alarm sistemiyle birlikte çalışır. Tetikleme genellikle iki dedektörün sinyaliyle ya da korunan odanın girişindeki «Söndürmeyi başlat» butonuyla elle yapılır. Gaz, toz veya aerosol boşaltılmadan önce uyarı tabelaları ve siren devreye girer, tahliye için gecikme sayılır, kapılar kapanır ve havalandırma durur. Kontrol için Bolid S2000-KPB ve S2000-SP4 blokları, Rubezh ve QR Systems röle modülleri ile manuel tetikleme cihazları kuruyoruz. Bu senaryoları devreye alma sırasında bölge bölge test ediyoruz.",
+          "Söndürme sisteminin projesini kendimiz veya iş ortağımız bir proje firması aracılığıyla hazırlıyoruz; fiyatı ise yalnızca projeye göre, keşif sonrasında veriyoruz: maliyet sistem tipine, oda hacmine, söndürücü maddeye ve tesiste zaten bulunanlara bağlıdır. Modülleri, tüpleri ve sprinkler başlıklarını projeye göre seçiyoruz. Otomatik söndürme sistemlerinin montajı, devreye alınması ve bakımı, yangın alarmı işlerimizle aynı Acil Durumlar Bakanlığı izin belgesi No. 913518 kapsamında yapılır.",
+        ],
+        table: {
+          caption: "Otomatik yangın söndürme türleri",
+          head: ["Tür", "Söndürücü madde", "Kullanım alanları", "Avantajları", "Dikkat edilecekler"],
+          rows: [
+            ["Sulu: sprinkler, drencher, su sisi", "Su: sprinkler başlıkları yangının üzerinde ısıyla açılır, drencher nozulları sinyalle hepsi birden açılır, su sisi ince damlalarla ve az suyla söndürür", "Depolar, satış alanları, otoparklar, oteller (sprinkler); açıklıklarda su perdeleri ve yangının hızlı yayıldığı bölgeler (drencher); arşivler ve teknik odalar (su sisi)", "Su ucuzdur, söndürür ve soğutur; sprinkler yalnızca yangının üzerinde açılır; su sisi daha az su kullanır", "Şebeke suyu veya pompalı depo ve tüm odada boru hattı gerekir; su ekipmana ve ürüne zarar verir, drencher çok su harcar; ısıtılmayan binalarda kuru borulu sistem kullanılır"],
+            ["Gazlı", "Tüplerden inert gaz veya halokarbon: oksijen oranını düşürür ya da yanmayı kimyasal olarak durdurur", "Sunucu odaları, veri merkezleri, arşivler, elektrik pano odaları", "İz bırakmaz; ekipman söndürmeden sonra çalışmaya devam eder", "Oda sızdırmaz olmalı; boşaltmadan önce insanlar çıkar — gecikme, uyarı tabelaları, tetikleme ve durdurma butonları gerekir; sistem ve yeniden dolum pahalıdır"],
+            ["Tozlu", "Bağımsız modüllerden söndürme tozu", "Depolar, garajlar, üretim ve yardımcı alanlar, ısıtılmayan binalar", "Borusuz modüller, soğukta çalışır, montajı uygun maliyetli", "Sonrasında toz temizliği gerekir; toz bulutu görüşü azaltır, insanlar odayı terk etmelidir; temiz odalar ve elektronik için uygun değildir"],
+            ["Aerosollü", "Jeneratörler yanmayı kesen ince aerosol üretir", "Kablo odaları, elektrik pano odaları, küçük teknik odalar, ekipman bölmeleri", "Kompakt jeneratörler, boru ve tüp yok, uygun fiyat", "Kapalı oda gerekir; jeneratör ısınır — yanıcı malzemelere mesafe bırakılır; insanlar tetiklemeden önce çıkar; sonrasında kalıntı çöker"],
+          ],
+          note: "Tablo sistemlerin genel mühendislik özelliklerini anlatır. Belirli bir odaya hangi türün gerektiğini ShNK 2.04.09-2007'ye göre hazırlanan proje belirler.",
+        },
+        links: [
+          { label: "Güvenlik sistemleri projelendirme", href: "/solutions/proektirovanie" },
+          { label: "Sunucu odaları ve veri merkezleri", href: "/solutions/server" },
+          { label: "Sistem odası: gereksinimler ve hatalar", href: "/blog/servernaya-komnata" },
+          { label: "Depo güvenliği", href: "/solutions/warehouse" },
+          { label: "Söndürme kontrolü: paneller ve modüller", href: "/products/type/pribory-i-moduli" },
+        ],
+      },
+      {
+        heading: "Belgeler ve mevzuat",
+        paragraphs: [
+          "SAT Solutions yangın alarmı ve otomatik söndürme sistemlerinin montajını, devreye alınmasını ve bakımını Özbekistan Acil Durumlar Bakanlığı izin belgesi No. 913518 (bildirim alındı onayı) kapsamında yapar. Belgenin taraması «Hakkımızda» sayfasında yayınlanmıştır. Özbekistan'da binaların yangın otomasyonu ShNK 2.04.09-2007'ye göre kurulur: proje, tesisin hangi sistemlere ihtiyaç duyduğunu bu belgeye göre belirler. Rus SP ve NPB normları ülkede uygulanmaz.",
+          "Bakım, Bakanlar Kurulu'nun 20 Ekim 2020 tarihli 649 sayılı kararıyla onaylanan Yangın Güvenliği Kuralları'na göre yapılır. 148. maddeye göre yangın alarmı ve söndürme sistemlerindeki periyodik işler, üretici belgeleri dikkate alınarak yıllık plana göre yürütülür. Teslimde as-built belgeleri veriyor, bakım sözleşmesi kapsamında ise denetçinin ilk açtığı kayıt defterini tutuyoruz.",
+        ],
+        links: [
+          { label: "Şirket belgeleri", href: "/about" },
+          { label: "2026'da alarm montajı lisansı: bildirim ve Bakanlık lisansı", href: "/blog/licenziya-na-montazh-signalizacii-uzbekistan" },
+          { label: "Özbekistan'ın yangın alarmı mevzuatı: belge numaralı rehber", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "Yangın alarmı bakımı: «üç ayda bir» değil, yıllık plan", href: "/blog/obsluzhivanie-pozharnoy-signalizacii-uzbekistan" },
+        ],
+      },
+      {
+        heading: "Sözleşmeli yangın alarm bakımı",
+        paragraphs: [
+          "Yangın alarmı yalnızca teslim günü değil her gün çalışmak zorundadır; bu yüzden yangın alarm bakımı sözleşmesi, takvimi ve kayıt defteri olan ayrı bir hizmettir. Sözleşme kapsamında dedektörleri ve hatları kontrol eder, sirenleri ve yedek beslemeyi test eder, panel akülerini süresinde değiştirir, dedektörleri tozdan temizler ve Acil Durumlar Bakanlığı müfettişinin ilk açtığı kayıt defterini tutarız. 649 sayılı karar (madde 148) üretici belgelerine dayalı yıllık plan ister; biz bu planı sahadaki ekipmana göre kurarız: küçük bir ofis için genellikle üç ayda bir ziyaret planlarız, yüksek raflı depo ve fabrika için daha sık, çünkü toz ve sıcaklık dalgalanmaları dedektörleri daha hızlı yıpratır. İşler Acil Durumlar Bakanlığı izin belgesi No. 913518 (bildirim alındı onayı) kapsamında yapılır.",
+        ],
+        links: [
+          { label: "Yangın alarmı ve güvenlik sistemleri bakımı", href: "/solutions/obsluzhivanie" },
         ],
       },
     ],
@@ -2567,29 +2777,81 @@ const zh: Record<string, ServiceContent> = {
     ],
   },
   "fire": {
-    heading: "塔什干火灾报警、应急广播与灭火系统安装",
+    // 16.11.2026: «всё в одном» — сигнализация, СОУЭ и пожаротушение (решения владельца В1–В12); бывший абзац о
+    // пожаротушении заменён разделом с таблицей видов, абзац о типах СОУЭ — в своём разделе, обслуживание — один абзац.
+    heading: "火灾报警、应急广播与自动灭火：建筑如何获得保护",
     paragraphs: [
-      "自动火灾报警系统通过烟雾、温度或火焰在早期发现火情，并启动语音疏散广播系统。SAT Solutions 按乌兹别克斯坦消防规范为办公楼、商店、仓库、工厂和公共建筑提供火灾报警系统和自动灭火系统的供货、安装、调试与维保。",
-      "系统包括火灾探测器（感烟、感温、手动报警按钮）、报警控制器、声光警报器，必要时还有控制排烟、灭火和楼宇机电系统的联动自动化。主机和探测器我们采用 Rubezh、Bolid 和 QR Systems——三个系列都在塔什干仓库有现货。系统要包含什么，由建筑的用途、面积和层数决定，而不是由业主的意愿决定——这也是审查最先核对的一项。",
+      "火灾报警与灭火系统是分三步保护建筑的一组自动系统。火灾报警系统通过烟雾、温度或火焰发现火源，应急广播与疏散指挥系统引导人员撤离，自动灭火系统在受保护的房间内扑灭火焰。SAT Solutions 在塔什干及乌兹别克斯坦全境，为办公楼、商店、仓库、工厂和公共建筑提供这三套系统的供货、安装、调试与维保。",
+      "系统包括火灾探测器（感烟、感温、手动报警按钮）、报警控制器、声光警报器，必要时还有控制排烟、灭火和楼宇机电系统的联动自动化。主机和探测器我们采用 Rubezh、Bolid、QR Systems 和 Grand Magistr——四个系列都在塔什干仓库有现货。系统要包含什么，由建筑的用途、面积和层数决定，而不是由业主的意愿决定——这也是审查最先核对的一项。",
       "在乌兹别克斯坦，火灾报警系统的维保由2020年10月20日第649号内阁决议规范：维护按年度计划、依据制造商文件开展——本国并没有「每季度一次」的固定规定，周期按具体设备核算。我方安装的系统由我方按合同做定期维保，并把台账维持在检查人员挑不出问题的状态。",
-      "报警系统负责发现火情，扑灭它的是自动灭火系统——那是一套独立系统，我们与报警系统一起安装、调试和维保。气体灭火用在水和干粉会毁掉资产的地方：机房、数据中心、档案室、配电室——药剂排挤氧气，对设备不留痕迹。干粉模块更便宜，适合仓库、车库、生产和辅助用房。水灭火和喷淋用于大面积场所——那里控制火势比保全设备更重要。",
       "在消防领域，文件与施工同等重要。我们按设计图纸施工、调试，并携竣工文档交付。对在用建筑我们做检查：常常发现探测器布点违反保护区要求、回路超载、控制器多年未做定期维护。",
-      "费用由房间面积和用途、探测器和回路数量、控制器类型以及是否需要疏散广播和排烟联动构成。办公室与高货架仓库的造价有本质区别——探测器的安装高度和类型都不同。交付后我们承接定期维保：检查探测器、更换电池、出具记录——没有这些，检查机构连正常工作的系统也会开出整改单。",
-          "疏散广播系统分等级——从简单的警笛到分区语音播报加疏散引导。小办公室有声光警号和出口指示就够；数百人流量的商场、酒店或工厂则需要语音疏散：分区播放的预录语音能稳住情绪，把人流引向不同楼梯。系统等级由建筑用途和容纳人数按规范确定并写入设计——我们按该等级施工，并在调试时逐区测试。",
-          "火灾报警的价值在与楼宇其他系统的联动中体现。报警时门禁的疏散门解锁、通风系统停机、电梯降至首层，信号同时发往保安岗和责任人手机。这些联动场景我们按设计配置并在调试时逐回路验证——因为真着火时没有时间再去检查。",
+      "费用由房间面积和用途、探测器和回路数量、控制器类型以及是否需要疏散广播和排烟联动构成。办公室与高货架仓库的造价有本质区别——探测器的安装高度和类型都不同。交付后我们承接定期维保：检查探测器、更换电池、出具记录——没有这些，检查机构连正常工作的系统也会开出整改单。自动灭火系统单独报价，且仅按设计方案、现场勘察后报价：价格取决于系统类型、房间容积和灭火剂。",
+      "火灾报警的价值在与楼宇其他系统的联动中体现。报警时门禁的疏散门解锁、通风系统停机、电梯降至首层，信号同时发往保安岗和责任人手机。这些联动场景我们按设计配置并在调试时逐回路验证——因为真着火时没有时间再去检查。",
+    ],
+    links: [
+      { label: "火灾报警系统类型：非编址、编址与模拟量编址", href: "/blog/pozharnaya-signalizatsiya-vidy" },
+      { label: "无线编址火灾报警：无线链路如何工作", href: "/blog/besprovodnaya-pozharnaya-signalizatsiya-radiokanal" },
+      { label: "火灾报警系统预算怎么算", href: "/blog/yongin-signalizatsiyasi-narxi" },
     ],
     extra: [
       {
-        heading: "火灾报警系统合同维保",
+        heading: "应急广播与疏散指挥系统",
         paragraphs: [
-          "火灾报警系统必须每天正常运行，而不只是在验收当天，因此火灾报警维保是一项有合同、有计划、有记录的独立服务。按合同我们检查探测器和回路，测试报警和备用电源，按期更换主机电池，清除探测器灰尘，并保持紧急情况部检查员首先翻阅的记录本。作业依据紧急情况部许可文件 No. 913518 进行。",
-          "按第 649 号决议要求，计划按现场设备制定：小型办公室每季度上门一次，高货架仓库和工厂则更频繁，因为灰尘和温差会加速探测器损耗。每次检查日期、发现的问题和更换情况均记入记录本和验收单，现场随时可迎接检查。",
-          "我们不仅维保自己安装的系统。第三方报警系统经勘查后接管：核对与设计的符合性、回路和主机状态，出具缺陷清单及整改费用。之后现场转入常规维保计划。常用的 Rubezh 和 Bolid 探测器、电池和报警器在塔什干仓库有现货，更换一次上门即可完成。",
-          "维保费用取决于现场探测器、回路和主机的数量，按月或按年报价。火灾报警系统交钥匙安装与维保可签一份合同：安装价格见上方\"多少钱\"栏目，维保报价在勘查后一个工作日内发送。",
+          "疏散广播系统分等级——从简单的警笛到分区语音播报加疏散引导。小办公室有声光警号和出口指示就够；数百人流量的商场、酒店或工厂则需要语音疏散：分区播放的预录语音能稳住情绪，把人流引向不同楼梯。系统等级由建筑用途和容纳人数按规范确定并写入设计——我们按该等级施工，并在调试时逐区测试。",
+          "疏散系统由火灾报警信号触发，并与报警系统协同工作。在 Rubezh、Bolid 和 QR Systems 主机上，警报按同一主机的分区进行配置；语音系统——Bolid Rupor 设备或 QR Systems 地址式语音警报器——从主机接收指令。公共广播、背景音乐与分区广播详见广播系统页面。",
         ],
         links: [
-          { label: "安防系统维保：维保计划如何运作", href: "/solutions/obsluzhivanie" },
-          { label: "乌兹别克斯坦火灾报警规范", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "公共广播与应急广播", href: "/solutions/pa" },
+          { label: "目录中的警报设备", href: "/products/type/opoveschenie" },
+        ],
+      },
+      {
+        id: "suppression",
+        heading: "自动灭火系统：类型与适用场所",
+        paragraphs: [
+          "报警系统负责发现火情，灭火则由自动灭火系统完成。这是一套独立设施，有自己的钢瓶、模块或管网，并从消防自动化主机接收启动指令。我们承接各主要类型系统的安装、调试与维保：水灭火（自动喷淋、雨淋和细水雾）、气体、干粉和气溶胶。选择哪一类，取决于燃烧物以及需要保护的对象：人员、设备、档案或货架上的货物。",
+          "灭火系统必须与报警系统配合工作。通常由两个探测器的信号触发，或在受保护房间入口处按下「启动灭火」按钮手动启动。喷放气体、干粉或气溶胶之前，警示牌和警报器启动，开始疏散延时倒计时，门关闭，通风停止。控制部分我们采用 Bolid S2000-KPB 和 S2000-SP4 模块、Rubezh 与 QR Systems 继电器模块以及手动启动装置。调试时逐个分区检查这些联动场景。",
+          "灭火系统的设计由我们自行完成或通过合作设计单位完成，价格仅按设计方案、现场勘察后报出：费用取决于系统类型、房间容积、灭火剂以及现场已有设备。模块、钢瓶和喷头按设计选型。自动灭火系统的安装、调试与维保，与火灾报警工程一样，依据紧急情况部许可文件 No. 913518 实施。",
+        ],
+        table: {
+          caption: "自动灭火系统的类型",
+          head: ["类型", "灭火介质", "适用场所", "优点", "注意事项"],
+          rows: [
+            ["水灭火：自动喷淋、雨淋、细水雾", "水：喷淋头在火源上方受热开启，雨淋系统接到信号后全部喷头同时开启，细水雾以微小水滴、少量用水灭火", "仓库、卖场、停车场、酒店（喷淋）；开口处水幕及火势蔓延快的区域（雨淋）；档案室和技术用房（细水雾）", "水成本低，可灭火并降温；喷淋只在火源上方动作；细水雾用水更少", "需要市政供水或带水泵的水池，以及覆盖全室的管网；水会损坏设备和货物，雨淋用水量大；不采暖建筑采用干式系统"],
+            ["气体", "钢瓶中的惰性气体或卤代烷：降低氧气比例或以化学方式中断燃烧", "服务器机房、数据中心、档案室、配电室", "不留痕迹，灭火后设备可继续运行", "房间须密闭；喷放前人员撤离——需要延时、警示牌以及启动和急停按钮；系统和再充装费用较高"],
+            ["干粉", "独立模块喷出灭火干粉", "仓库、车库、生产及辅助用房、不采暖建筑", "模块无需管网，低温下可工作，安装成本低", "动作后需清理干粉；粉雾降低能见度，人员须撤离；不适用于洁净室和电子设备"],
+            ["气溶胶", "发生器释放可中断燃烧的细微气溶胶", "电缆间、配电室、小型技术用房、设备舱", "发生器紧凑，无管网和钢瓶，价格适中", "需要封闭空间；发生器会发热——须与可燃物保持距离；启动前人员撤离；动作后有沉降残留"],
+          ],
+          note: "本表介绍各类系统的一般工程特性。具体房间需要哪一类，由依据 ShNK 2.04.09-2007 编制的设计方案确定。",
+        },
+        links: [
+          { label: "安防系统设计", href: "/solutions/proektirovanie" },
+          { label: "服务器机房与数据中心", href: "/solutions/server" },
+          { label: "机房建设：要求与常见错误", href: "/blog/servernaya-komnata" },
+          { label: "仓库安防", href: "/solutions/warehouse" },
+          { label: "灭火控制：主机与模块", href: "/products/type/pribory-i-moduli" },
+        ],
+      },
+      {
+        heading: "许可文件与规范",
+        paragraphs: [
+          "SAT Solutions 依据乌兹别克斯坦紧急情况部许可文件 No. 913518（告知受理确认书）承接火灾报警与自动灭火系统的安装、调试与维保，扫描件已在「关于我们」页面公开。乌兹别克斯坦建筑消防自动化依据 ShNK 2.04.09-2007 设置：设计方案据此确定项目需要哪些系统。俄罗斯 SP 和 NPB 规范在乌兹别克斯坦不适用。",
+          "维保依据内阁 2020 年 10 月 20 日第 649 号决议批准的《消防安全规则》执行。根据第 148 条，火灾报警与灭火系统的定期维护按年度计划进行，并参考制造商技术文件。交付时我们提供竣工资料；签订维保合同后，负责填写检查人员首先查看的维保记录本。",
+        ],
+        links: [
+          { label: "公司资质文件", href: "/about" },
+          { label: "2026 年报警系统安装许可：告知制度与紧急情况部许可证", href: "/blog/licenziya-na-montazh-signalizacii-uzbekistan" },
+          { label: "乌兹别克斯坦火灾报警法规：附文件编号的参考指南", href: "/blog/normy-slabotochnye-sistemy-uzbekistan" },
+          { label: "火灾报警系统维护：按年度计划，而不是「每季度一次」", href: "/blog/obsluzhivanie-pozharnoy-signalizacii-uzbekistan" },
+        ],
+      },
+      {
+        heading: "火灾报警系统合同维保",
+        paragraphs: [
+          "火灾报警系统必须每天正常运行，而不只是在验收当天，因此火灾报警维保是一项有合同、有计划、有记录的独立服务。按合同我们检查探测器和回路，测试报警和备用电源，按期更换主机电池，清除探测器灰尘，并保持紧急情况部检查员首先翻阅的记录本。第 649 号决议（第 148 条）要求依据制造商文件编制年度计划，我们按现场设备制定：小型办公室通常安排每季度上门一次，高货架仓库和工厂则更频繁，因为灰尘和温差会加速探测器损耗。作业依据紧急情况部许可文件 No. 913518（告知受理确认书）进行。",
+        ],
+        links: [
+          { label: "火灾报警与安防系统维保", href: "/solutions/obsluzhivanie" },
         ],
       },
     ],

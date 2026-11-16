@@ -86,6 +86,10 @@ export async function ServiceInstallPrices({ k, locale }: { k: string; locale: s
           <p className="mt-3 text-xs leading-relaxed text-slate-500">{t("turnkeyNote")}</p>
         </div>
       ) : null}
+      {/* Примечание к прайсу конкретной услуги (16.11.2026: пожарная — расценки только на сигнализацию) */}
+      {t.has(`noteByKey.${k}`) ? (
+        <p className="mt-4 max-w-3xl text-sm font-semibold leading-relaxed text-slate-800">{t(`noteByKey.${k}`)}</p>
+      ) : null}
       <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600">
         {t("note")}{" "}
         <Link href="/calculator" className="font-semibold text-brand-700 underline-offset-2 hover:underline">{t("calcLink")}</Link>

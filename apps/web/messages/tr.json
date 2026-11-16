@@ -1091,45 +1091,70 @@
       }
     },
     "fire": {
-      "title": "Yangın alarmı & tahliye",
-      "desc": "Erken algılama, uyarı ve tahliye yönetimi.",
-      "intro": "Otomatik yangın alarmı, tahliye anonsu ve otomatik söndürme sistemleri — standartlara uygun kurulum, devreye alma ve bakım.",
+      "title": "Yangın alarmı ve söndürme",
+      "desc": "Algılama, uyarı, tahliye ve otomatik yangın söndürme.",
+      "intro": "Yangın alarmı ve yangın söndürme; yangını algılayan, insanları uyaran ve itfaiye gelene kadar alevi söndüren otomatik sistemlerdir. Taşkent'te bu sistemleri Acil Durumlar Bakanlığı izin belgesi No. 913518 kapsamında kuruyor, devreye alıyor ve bakımını yapıyoruz.",
       "works": [
-        "Otomatik söndürme sistemi kurulumu",
-        "Dedektör, panel ve siren montajı",
-        "Bölge ve tahliye senaryoları ayarı",
-        "As-built belgelerle teslim",
-        "Periyodik bakım"
+        "Yangın alarmı montajı: paneller, dedektörler, hatlar",
+        "Sesli tahliye: sirenler, çıkış tabelaları, bölgesel sesli anonslar",
+        "Otomatik söndürme montajı: sulu, gazlı, tozlu, aerosollü",
+        "Senaryolar: söndürmeyi tetikleme, duman tahliyesi, kapı kilitlerinin açılması, asansörler",
+        "Devreye alma, testler ve as-built belgelerle teslim",
+        "Sözleşmeli periyodik bakım"
       ],
       "faq": [
         {
-          "q": "Yangın alarmı zorunlu mu?",
-          "a": "Çoğu ticari ve kamusal tesis için yangın alarmı ve anons sistemi mevzuat gereği zorunludur. Sistemi tesisinizin gereksinimlerine göre seçiyoruz."
+          "q": "Yangın alarmı nedir ve yangın söndürmeden farkı ne?",
+          "a": "Yangın alarmı yangını duman, ısı veya alevden algılar ve sinyal verir: uyarı sistemini başlatır, alarmı güvenlik noktasına iletir, kapıları ve havalandırmayı yönetir. Yangın söndürme ise yangına su, gaz, toz veya aerosol veren ayrı bir tesisattır. Tetikleme komutunu genellikle yangın alarm sisteminden alır."
         },
         {
-          "q": "Hangi ekipmanları kullanıyorsunuz?",
-          "a": "Rubezh, Bolid ve diğer üreticilerin adresli ve konvansiyonel sistemleri — tesisin tipine ve alanına göre seçiyoruz."
+          "q": "Ofis veya mağaza için yangın alarmı zorunlu mu?",
+          "a": "Tesisin hangi sistemlere ihtiyaç duyduğunu, binanın kullanım amacı, alanı ve kat sayısı dikkate alınarak ShNK 2.04.09-2007'ye göre hazırlanan proje belirler. Ticari ve kamu binalarının çoğunda yangın alarmı ve uyarı sistemi zorunlu kapsamdadır. Mekânınız için kesin yanıtı ücretsiz keşiften sonra veriyoruz: projeye, yerleşime ve mevcut ekipmana bakıyoruz."
         },
         {
-          "q": "İşlerinize neler dahil?",
-          "a": "Yangın alarmı ve otomatik söndürme sistemlerinin kurulumu, devreye alınması ve bakımı; tesis as-built belgelerle teslim edilir."
+          "q": "Sunucu odası için hangi söndürme sistemi gerekir?",
+          "a": "Sunucu odaları, veri merkezleri ve arşivler için genellikle gazlı söndürme seçilir: gaz, su ve toz kullanmadan söndürür ve ekipmanda iz bırakmaz. Oda sızdırmaz olmalı, gaz boşaltılmadan önce insanlar dışarı çıkmalıdır; bu nedenle uyarı tabelası, siren, tetikleme gecikmesi ile başlatma ve durdurma butonları kurulur. Nihai seçimi proje belirler."
         },
         {
-          "q": "Periyodik bakım gerekli mi?",
-          "a": "Evet, yangın sistemleri düzenli bakım gerektirir — bakım sözleşmesi yapıyoruz."
+          "q": "Gazlı söndürme insanlar için tehlikeli mi?",
+          "a": "Gaz, insanların çoktan çıktığı odaya verilir. Tetiklemeden önce ışıklı uyarı tabelaları ve siren devreye girer, tahliye için gecikme sayılır, girişte elle başlatma ve durdurma butonları bulunur. Boşaltma sırasında odada kalınmaz; bu yüzden teslimde personeli bilgilendiriyor, tabelaların ve butonların nasıl çalıştığını gösteriyoruz."
+        },
+        {
+          "q": "Depo için hangisi: sprinkler mi, tozlu modüller mi?",
+          "a": "Sprinkler sistemi, yeterli kapasitede su şebekesi olan büyük ve ısıtılan depolara uygundur: başlıklar yalnızca yangının üzerinde açılır. Tozlu modüller suyun olmadığı veya binanın ısıtılmadığı yerlere kurulur: bağımsızdırlar ve boru gerektirmezler, ancak çalıştıktan sonra temizlik gerekir. Kararı ürün türü ve raf yüksekliğine göre proje verir."
+        },
+        {
+          "q": "Yangın söndürme sistemi montajı ne kadar?",
+          "a": "Söndürme sistemlerinin fiyatını yalnızca projeye göre, keşif sonrasında hesaplıyoruz. Fiyat sistem tipine, korunan odaların hacmine, söndürücü maddeye ve hat uzunluğuna bağlıdır. Yangın alarmı montajının kalem kalem fiyatları — dedektörler, paneller, uyarıcılar, kablo — bu sayfadaki «Yangın alarm sistemi kurulumu: fiyat» bölümünde yer alır."
+        },
+        {
+          "q": "Özbekistan'da yangın alarmı ve söndürme sistemlerini kim kurabilir?",
+          "a": "Acil Durumlar Bakanlığı'ndan yangın alarmı ve otomatik söndürme sistemlerinin montajı, devreye alınması ve bakımı için onaylı hakkı olan bir kuruluş. SAT Solutions'ın her iki iş türü için izin belgesi No. 913518 (bildirim alındı onayı) vardır; taraması «Hakkımızda» sayfasında yayınlanmıştır. Sözleşmeden önce yüklenicinin belgesindeki iş türlerinin kapsamınızla örtüştüğünü kontrol edin."
+        },
+        {
+          "q": "Sistemin bakımı ne sıklıkla yapılmalı?",
+          "a": "Özbekistan'da sabit bir «üç ayda bir» kuralı yoktur. Yangın Güvenliği Kuralları'na (20.10.2020 tarihli 649 sayılı karar, 148. madde) göre işler, üretici belgeleri dikkate alınarak yıllık plana göre yürütülür. Ofis için genellikle üç ayda bir ziyaret planlarız; tozlu depolar ve üretim alanları daha sık kontrol ister. Her kontrol kayıt defterine işlenir."
+        },
+        {
+          "q": "Montaj ne kadar sürer?",
+          "a": "300 m²'ye kadar bir mağaza, ofis veya kafede konvansiyonel yangın alarmını 1–3 günde, çok katlı bir binada adresli sistemi 1–3 haftada kuruyoruz. Sesli tahliye ve söndürme sistemli depo, fabrika veya alışveriş merkezi projeye göre, bir aydan başlayan sürede tamamlanır. Tesisinize özel süreyi keşiften sonra bildiriyoruz."
+        },
+        {
+          "q": "Hangi ekipmanları kuruyorsunuz?",
+          "a": "Rubezh, Bolid, QR Systems ve Grand Magistr panel ve dedektörleri: küçük alanlar için konvansiyonel sistemlerden yüzlerce adresli analog adresli sistemlere kadar. Söndürme kontrolü için S2000-KPB ve S2000-SP4 tetikleme blokları, röle modülleri ve manuel tetikleme cihazları kuruyoruz. Çok satan ürünleri Taşkent depomuzda stokta tutuyoruz."
         }
       ],
       "details": {
         "pkgLabel": "Tipik çözümler",
         "pkgTitle": "Üç tesis tipi için yangın alarmı",
-        "pkgNote": "Sistemin içeriğini yangın güvenliği mevzuatı belirler — ücretsiz keşiften sonra tesisinizin tam olarak neye ihtiyacı olduğunu söyler ve keşif bedelini çıkarırız.",
+        "pkgNote": "Sistemin kapsamını yangın güvenliği normları belirler — ücretsiz keşiften sonra tesisinizin tam olarak neye ihtiyaç duyduğunu söyler ve alarm maliyetini hesaplarız; söndürme sistemleri projeye göre fiyatlandırılır.",
         "packages": [
           {
             "name": "Mağaza, ofis, kafe",
             "for": "Yaklaşık 300 m² altı mekân, kiralık format",
             "items": [
               "Konvansiyonel alarm: duman ve ısı dedektörleri, siren",
-              "Rubezh veya Altay panelleri — uygun fiyatlı ve sertifikalı",
+              "Rubezh, Bolid, QR Systems veya Grand Magistr panelleri — sertifikalı ekipman",
               "«Çıkış» levhaları, çıkışlarda yangın butonları",
               "Sistem Acil Durumlar Bakanlığı denetimine hazır"
             ],
@@ -1159,32 +1184,36 @@
           }
         ],
         "stagesLabel": "Nasıl çalışıyoruz",
-        "stagesTitle": "Keşiften teslime — 5 adım",
+        "stagesTitle": "Keşiften teslime — 6 adım",
         "stages": [
           {
             "t": "Keşif",
-            "s": "tesis ve mevzuat gereklerinin incelenmesi — ücretsiz"
+            "s": "odaları ve belgeleri inceliyor, alarm, uyarı ve söndürmenin nerede gerektiğini belirliyoruz — ücretsiz"
           },
           {
-            "t": "Seçim",
-            "s": "tesis projesine göre ekipman ve spesifikasyon"
+            "t": "Proje ve ekipman seçimi",
+            "s": "söndürme projesini kendimiz veya iş ortağımız aracılığıyla hazırlıyoruz; paneller, dedektörler, modüller ve tüpler projeye göre; alarm maliyet tahmini"
           },
           {
             "t": "Montaj",
-            "s": "dedektörler, hatlar, anons cihazları — projeye göre"
+            "s": "hat çekimi; panel, dedektör, uyarıcı, modül veya boru montajı"
           },
           {
-            "t": "Devreye alma",
-            "s": "her dedektörün testi, tesisin teslimi"
+            "t": "Devreye alma ve testler",
+            "s": "her dedektör, uyarı bölgesi ve söndürme tetikleme devresi kontrol edilir"
+          },
+          {
+            "t": "Teslim",
+            "s": "as-built belgeler, personel bilgilendirmesi, kayıt defteri"
           },
           {
             "t": "Bakım",
-            "s": "planlı bakım — sistem her zaman çalışır durumda"
+            "s": "sözleşmeyle yıllık plana göre periyodik bakım (649 sayılı karar)"
           }
         ],
         "brandsLabel": "Ekipman",
-        "brandsTitle": "Taşkent'te Rubezh ve Bolid: stoktan paneller ve dedektörler",
-        "brandsText": "Rubezh ve Bolid — garantili sertifikalı ekipman, paneller ve dedektörler her zaman stokta:"
+        "brandsTitle": "Rubezh, Bolid, QR Systems ve Grand Magistr: Taşkent stoğundan paneller ve dedektörler",
+        "brandsText": "Rubezh, Bolid, QR Systems ve Grand Magistr — garantili sertifikalı ekipman, paneller ve dedektörler Taşkent depomuzda stokta:"
       }
     },
     "network": {
@@ -5586,7 +5615,10 @@
       "tkIntr1": "Daire veya ev: montajlı görüntülü interkom seti",
       "tkLock1": "Daire: giriş kapısına montajlı akıllı kilit"
     },
-    "turnkeyNote": "10.11.2026 itibarıyla tahmin: katalogdaki en uygun ekipman ve en düşük işçilik bedeli. Kesin fiyatı kapıyı ve girişi gördükten sonra veriyoruz."
+    "turnkeyNote": "10.11.2026 itibarıyla tahmin: katalogdaki en uygun ekipman ve en düşük işçilik bedeli. Kesin fiyatı kapıyı ve girişi gördükten sonra veriyoruz.",
+    "noteByKey": {
+      "fire": "Yukarıdaki fiyatlar yangın alarmı içindir. Söndürme sistemleri projeye göre, keşif sonrasında fiyatlandırılır."
+    }
   },
   "clients": {
     "title": "Müşterilerimiz arasında",

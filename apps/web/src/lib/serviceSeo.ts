@@ -59,10 +59,12 @@ const ru: Record<string, ServiceSeo> = {
     title: "СКУД в Ташкенте: системы контроля доступа, установка | SAT",
     desc: "СКУД под ключ в Ташкенте: турникеты, замки, считыватели, Face ID. Монтаж от 85 000 сум за считыватель, свой штат, гарантия 3 года на работы.",
   },
+  // 16.11.2026: «всё в одном» — сигнализация + СОУЭ + пожаротушение (решение владельца, вариант А: пожаротушение
+  // в title вместо цены, цена — в начале description; description сам называет цену, автоподводка priceLead не добавляется).
   fire: {
-    h1: "Монтаж пожарной сигнализации в Ташкенте",
-    title: "Пожарная сигнализация в Ташкенте — монтаж[[ от {price}]] | SAT",
-    desc: "Монтаж, наладка и обслуживание пожарной сигнализации (АПС), СОУЭ и автоматического пожаротушения в Ташкенте. Гарантия 3 года на работы, свой штат.",
+    h1: "Пожарная сигнализация и пожаротушение в Ташкенте",
+    title: "Пожарная сигнализация и пожаротушение в Ташкенте | SAT",
+    desc: "Пожарная сигнализация[[ от {price} за извещатель]], СОУЭ и автоматическое пожаротушение: газ, вода, порошок, аэрозоль. Монтаж, наладка и ТО в Ташкенте.",
   },
   pa: {
     h1: "Системы оповещения и трансляции в Ташкенте",
@@ -296,9 +298,9 @@ const uz: Record<string, ServiceSeo> = {
     desc: "Toshkentda SKUD toʻliq tayyor holda: turniketlar, qulflar, oʻqigichlar, Face ID. Montaj oʻqigich uchun 85 000 soʻmdan, oʻz jamoamiz, ishlarga 3 yil kafolat.",
   },
   fire: {
-    h1: "Yongʻin xavfsizligi tizimlari Toshkentda — montaj",
-    title: "Yongʻin signalizatsiyasi Toshkentda — montaj[[ {price}dan]] | SAT",
-    desc: "Toshkentda yongʻin signalizatsiyasi (APS), SOUE va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va xizmat koʻrsatish. Ishlarga 3 yil kafolat.",
+    h1: "Toshkentda yongʻin signalizatsiyasi va yongʻin oʻchirish tizimlari",
+    title: "Yongʻin signalizatsiyasi va yongʻin oʻchirish Toshkentda",
+    desc: "Yongʻin signalizatsiyasi[[ datchik uchun {price}dan]], SOUE va avtomatik yongʻin oʻchirish: gaz, suv, kukun, aerozol. Toshkentda montaj, sozlash va xizmat.",
   },
   pa: {
     h1: "Toshkentda ogohlantirish va translyatsiya tizimlari",
@@ -520,9 +522,9 @@ const en: Record<string, ServiceSeo> = {
     desc: "Turnkey access control in Tashkent: turnstiles, locks, readers, Face ID. Installation from 85,000 UZS per reader, in-house team, 3-year warranty on work.",
   },
   fire: {
-    h1: "Fire Alarm and Fire Suppression Installation in Uzbekistan",
-    title: "Fire Alarm Installation in Tashkent[[ — from {price}]] | SAT",
-    desc: "Installation, commissioning and maintenance of fire alarms, voice evacuation and automatic fire suppression in Tashkent. 3-year warranty, in-house team.",
+    h1: "Fire Alarm and Fire Suppression Systems in Tashkent",
+    title: "Fire Alarm & Fire Suppression in Tashkent | SAT",
+    desc: "Fire alarms[[ from {price} per detector]], voice evacuation and automatic fire suppression: gas, sprinkler, powder, aerosol. Installed and serviced in Tashkent.",
   },
   pa: {
     h1: "Public Address and Voice Evacuation in Tashkent",
@@ -744,9 +746,9 @@ const tr: Record<string, ServiceSeo> = {
     desc: "Taşkent'te anahtar teslim geçiş kontrolü: turnike, kilit, okuyucu, Face ID. Montaj okuyucu başına 85.000 UZS'den, kendi ekibimiz, işçilikte 3 yıl garanti.",
   },
   fire: {
-    h1: "Taşkent'te yangın alarm sistemi montajı",
-    title: "Taşkent'te Yangın Alarm Montajı[[ — {price}'den]] | SAT",
-    desc: "Taşkent'te yangın alarmı, sesli tahliye ve otomatik söndürme sistemlerinin kurulumu, devreye alınması ve bakımı. İşçilikte 3 yıl garanti, kendi ekibimiz.",
+    h1: "Taşkent'te yangın alarmı ve otomatik söndürme sistemleri",
+    title: "Taşkent'te Yangın Alarmı ve Söndürme Sistemleri | SAT",
+    desc: "Taşkent'te yangın alarmı[[ dedektör başına {price}'den]], sesli tahliye ve otomatik söndürme: gazlı, sprinkler, tozlu, aerosol. Kurulum, devreye alma, bakım.",
   },
   pa: {
     h1: "Taşkent'te seslendirme ve anons sistemleri",
@@ -967,9 +969,9 @@ const zh: Record<string, ServiceSeo> = {
     desc: "塔什干门禁系统整套安装：闸机、电子锁、读卡器、人脸识别。读卡器安装 85 000 苏姆起，自有施工团队，安装工程质保 3 年。",
   },
   fire: {
-    h1: "塔什干火灾报警系统安装",
-    title: "塔什干火灾报警系统安装[[ — {price}起]] | SAT",
-    desc: "塔什干火灾报警、应急广播与自动灭火系统的安装、调试和维保：探测器、声光报警、联动控制。安装工程质保 3 年，自有施工团队。",
+    h1: "塔什干火灾报警与自动灭火系统",
+    title: "塔什干火灾报警与自动灭火系统安装 | SAT",
+    desc: "塔什干火灾报警系统[[每个探测器安装{price}起]]，应急广播与自动灭火：气体、喷淋、干粉、气溶胶。安装、调试与维保，安装工程质保3年。",
   },
   pa: {
     h1: "塔什干公共广播与应急疏散广播",

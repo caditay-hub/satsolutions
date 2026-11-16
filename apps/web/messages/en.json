@@ -1091,45 +1091,70 @@
       }
     },
     "fire": {
-      "title": "Fire alarm & evacuation",
-      "desc": "Early detection, alerting and evacuation control.",
-      "intro": "Automatic fire alarms, evacuation warning and automatic fire suppression — installed, commissioned and maintained to standards.",
+      "title": "Fire alarm & fire suppression",
+      "desc": "Detection, warning, evacuation and automatic fire suppression.",
+      "intro": "Fire alarm and fire suppression are automatic systems that detect a fire, warn people and put out the flames before the fire brigade arrives. We install, commission and maintain them in Tashkent under Ministry of Emergency Situations permit No. 913518.",
       "works": [
-        "Automatic fire suppression installation",
-        "Installation of detectors, panels and sounders",
-        "Configuring zones and evacuation scenarios",
-        "Handover with as-built documentation",
-        "Scheduled maintenance"
+        "Fire alarm installation: control panels, detectors, loops",
+        "Voice evacuation: sounders, exit signs, zoned voice messages",
+        "Automatic fire suppression: water, gas, powder, aerosol",
+        "Scenarios: suppression release, smoke extraction, door release, lifts",
+        "Commissioning, testing and handover with as-built documentation",
+        "Scheduled maintenance under contract"
       ],
       "faq": [
         {
-          "q": "Is fire alarm system mandatory?",
-          "a": "For most commercial and public facilities, fire alarm and notification systems are required by regulations. We select the system to meet the requirements for your facility."
+          "q": "What is a fire alarm and how does it differ from fire suppression?",
+          "a": "A fire alarm detects a fire by smoke, heat or flame and raises the signal: it starts the warning system, sends the alarm to the security post and controls doors and ventilation. Fire suppression is a separate installation that delivers water, gas, powder or aerosol to the fire. It usually receives its release command from the fire alarm."
         },
         {
-          "q": "What equipment do you use?",
-          "a": "Addressable and conventional fire alarm systems from Rubezh, Bolid, and other leading manufacturers — we select the right solution based on your facility type and size."
+          "q": "Is a fire alarm mandatory for an office or a shop?",
+          "a": "Which systems a site needs is defined by the design under ShNK 2.04.09-2007, based on the building's use, floor area and number of storeys. For most commercial and public buildings, a fire alarm and warning system are part of the mandatory scope. We give an exact answer for your premises after a free survey of the design, layout and existing equipment."
         },
         {
-          "q": "What does your work include?",
-          "a": "Installation, commissioning and maintenance of fire alarms and automatic fire suppression, with handover and as-built documentation."
+          "q": "What fire suppression does a server room need?",
+          "a": "Server rooms, data centres and archives usually get gas suppression: gas extinguishes without water or powder and leaves no residue on equipment. The room must be airtight, and people leave before discharge — which is why warning signs, a siren, a release delay and release and abort buttons are installed. The final choice is made in the design."
         },
         {
-          "q": "Is maintenance required?",
-          "a": "Yes, fire safety systems require regular maintenance. We offer service contracts to keep your system in optimal working condition."
+          "q": "Is gas fire suppression dangerous for people?",
+          "a": "Gas is discharged into a room that people have already left. Before release, warning signs and a siren switch on, an evacuation delay counts down, and release and abort buttons sit at the entrance. Nobody may stay inside during discharge, so at handover we brief the staff and show how the signs and buttons work."
+        },
+        {
+          "q": "Sprinklers or powder modules for a warehouse?",
+          "a": "A sprinkler system suits large heated warehouses with a water supply of sufficient capacity: heads open only above the fire. Powder modules go where there is no water or the building is unheated: they are self-contained and need no pipework, but the powder must be cleaned up after discharge. The design decides, taking the stock and rack height into account."
+        },
+        {
+          "q": "How much does fire suppression installation cost?",
+          "a": "Fire suppression is priced only per design, after a site visit. The cost depends on the system type, the volume of the protected rooms, the extinguishing agent and the length of the routes. Itemised fire alarm installation rates — detectors, panels, sounders, cable — are listed on this page in the \"Fire alarm installation: price\" section."
+        },
+        {
+          "q": "Who may install fire alarms and fire suppression in Uzbekistan?",
+          "a": "An organisation with a confirmed right from the Ministry of Emergency Situations to install, commission and maintain fire alarms and automatic fire suppression. SAT Solutions holds permit No. 913518 (confirmation of notification) for both types of work; a scan is published on the About page. Before signing, check that the work types in the contractor's document match your scope."
+        },
+        {
+          "q": "How often does the system need maintenance?",
+          "a": "Uzbekistan has no fixed \"once a quarter\" rule. Under the Fire Safety Rules (Resolution No. 649 of 20 October 2020, clause 148), work follows an annual plan based on the manufacturer's documentation. For an office we usually plan a quarterly visit; dusty warehouses and factories need more frequent checks. Every inspection is recorded in the logbook."
+        },
+        {
+          "q": "How long does installation take?",
+          "a": "A conventional fire alarm in a shop, office or café of up to 300 m² takes 1–3 days to install; an addressable system in a multi-storey building takes 1–3 weeks. A warehouse, factory or shopping centre with voice evacuation and fire suppression is built to the design, from one month. We give the timeline for your site after the survey."
+        },
+        {
+          "q": "What equipment do you install?",
+          "a": "Rubezh, Bolid, QR Systems and Grand Magistr panels and detectors: from conventional systems for small premises to analogue addressable systems with hundreds of addresses. For suppression control we fit S2000-KPB and S2000-SP4 release units, relay modules and manual release devices. Fast-moving items are kept in stock in our Tashkent warehouse."
         }
       ],
       "details": {
         "pkgLabel": "Typical solutions",
         "pkgTitle": "Fire alarm for three types of sites",
-        "pkgNote": "System composition is dictated by fire safety codes — after a free survey we will state exactly what your site needs and price it.",
+        "pkgNote": "The system's scope is dictated by fire safety codes — after a free survey we will tell you exactly what your site needs and prepare the fire alarm estimate; fire suppression is priced per design.",
         "packages": [
           {
             "name": "Shop, office, café",
             "for": "Premises up to ~300 m², rented format",
             "items": [
               "Conventional alarm: smoke and heat detectors, sounder",
-              "Rubezh or Altai panels — affordable and certified",
+              "Rubezh, Bolid, QR Systems or Grand Magistr panels — certified equipment",
               "EXIT signs, manual call points at exits",
               "System ready for Emergency Ministry inspection"
             ],
@@ -1159,32 +1184,36 @@
           }
         ],
         "stagesLabel": "How we work",
-        "stagesTitle": "From survey to handover — 5 steps",
+        "stagesTitle": "From site visit to handover — 6 steps",
         "stages": [
           {
-            "t": "Survey",
-            "s": "site and code requirements audit — free"
+            "t": "Site visit and survey",
+            "s": "we inspect the rooms and documents and identify where alarm, evacuation and suppression are needed — free of charge"
           },
           {
-            "t": "Selection",
-            "s": "equipment and specification to the site design"
+            "t": "Design and equipment selection",
+            "s": "we prepare the suppression design ourselves or through a partner; panels, detectors, modules and cylinders to the design; fire alarm estimate"
           },
           {
             "t": "Installation",
-            "s": "detectors, loops, sounders — per design"
+            "s": "cable routes, panels, detectors, sounders, modules or pipework"
           },
           {
-            "t": "Commissioning",
-            "s": "every detector tested, site handover"
+            "t": "Commissioning and testing",
+            "s": "every detector, warning zone and suppression release circuit checked"
+          },
+          {
+            "t": "Handover",
+            "s": "as-built documentation, staff briefing, logbook"
           },
           {
             "t": "Maintenance",
-            "s": "scheduled service — the system always ready"
+            "s": "scheduled service to an annual plan (Resolution No. 649) under contract"
           }
         ],
         "brandsLabel": "Equipment",
-        "brandsTitle": "Rubezh and Bolid in Tashkent: panels and detectors from stock",
-        "brandsText": "Rubezh and Bolid — certified equipment with warranty, panels and detectors always in stock:"
+        "brandsTitle": "Rubezh, Bolid, QR Systems and Grand Magistr: panels and detectors from stock in Tashkent",
+        "brandsText": "Rubezh, Bolid, QR Systems and Grand Magistr — certified equipment with warranty, panels and detectors in stock in our Tashkent warehouse:"
       }
     },
     "network": {
@@ -5586,7 +5615,10 @@
       "tkIntr1": "Flat or house: video intercom kit, installed",
       "tkLock1": "Flat: smart front-door lock, installed"
     },
-    "turnkeyNote": "Estimate as of 10.11.2026: the most affordable equipment in our catalogue plus the minimum labour charge. We confirm the exact price after seeing the door and the entrance."
+    "turnkeyNote": "Estimate as of 10.11.2026: the most affordable equipment in our catalogue plus the minimum labour charge. We confirm the exact price after seeing the door and the entrance.",
+    "noteByKey": {
+      "fire": "The rates above cover fire alarms. Fire suppression is priced per design, after a site visit."
+    }
   },
   "clients": {
     "title": "Among our clients",

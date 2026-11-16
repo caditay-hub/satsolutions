@@ -74,6 +74,8 @@ export default async function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
+    // @id — на него ссылается provider в разметке Service на страницах услуг (16.11.2026)
+    "@id": `${siteUrl}/#organization`,
     name: site.name,
     alternateName: ["SAT Solutions", "Sat Solutions", "satsolutions", "САТ Солюшнс"],
     url: siteUrl,

@@ -1091,45 +1091,70 @@
       }
     },
     "fire": {
-      "title": "Yongʻin signalizatsiyasi va SOUE",
-      "desc": "Erta aniqlash, ogohlantirish va evakuatsiyani boshqarish.",
-      "intro": "Avtomatik yongʻin signalizatsiyasi, ogohlantirish va avtomatik yongʻin oʻchirish tizimlari — meʼyorlar boʻyicha montaj, sozlash va xizmat koʻrsatish.",
+      "title": "Yongʻin signalizatsiyasi va yongʻin oʻchirish",
+      "desc": "Aniqlash, ogohlantirish, evakuatsiya va avtomatik yongʻin oʻchirish.",
+      "intro": "Yongʻin signalizatsiyasi va yongʻin oʻchirish — yongʻinni aniqlaydigan, odamlarni ogohlantiradigan va oʻt oʻchiruvchilar yetib kelguncha olovni oʻchiradigan avtomatik tizimlar. Ularni Toshkentda FVV ruxsatnomasi № 913518 asosida montaj qilamiz, sozlaymiz va ularga xizmat koʻrsatamiz.",
       "works": [
-        "Avtomatik yongʻin oʻchirish tizimini montaj qilish",
-        "Izveshchatel, panel va ogohlantirgichlarni montaj qilish",
-        "Zona va evakuatsiya senariylarini sozlash",
-        "Obyektni ijro hujjatlari bilan topshirish",
-        "Reglamentli xizmat koʻrsatish"
+        "Yongʻin signalizatsiyasi montaji: qurilmalar, datchiklar, shleyflar",
+        "SOUE ogohlantirish: sirenalar, tablolar, zonalar boʻyicha nutqli xabarlar",
+        "Avtomatik yongʻin oʻchirish montaji: suv, gaz, kukun, aerozol",
+        "Stsenariylar: oʻchirishni ishga tushirish, tutun chiqarish, eshiklarni ochish, liftlar",
+        "Sozlash, sinovlar va obyektni ijro hujjatlari bilan topshirish",
+        "Shartnoma boʻyicha reglamentli xizmat koʻrsatish"
       ],
       "faq": [
         {
-          "q": "Yondaloq chiqindi signalizatsiyasi majburiyami?",
-          "a": "Koʻpchilik tijorat va ijtimoiy obyektlar uchun yongʻin signalizatsiyasi va ogohlantirish meʼyorlarga koʻra majburiy. Tizim tarkibini obyektingiz uchun meʼyor talablariga qarab tanlaymiz."
+          "q": "Yongʻin signalizatsiyasi nima va u yongʻin oʻchirishdan nimasi bilan farq qiladi?",
+          "a": "Yongʻin signalizatsiyasi (APS) yongʻinni tutun, issiqlik yoki alanga boʻyicha aniqlaydi va signal beradi: ogohlantirishni yoqadi, trevogani qoʻriqlash postiga uzatadi, eshiklar va ventilyatsiyani boshqaradi. Yongʻin oʻchirish (AUPT) — oʻchoqqa suv, gaz, kukun yoki aerozol beradigan alohida qurilma. Ishga tushirish buyrugʻini AUPT odatda aynan signalizatsiyadan oladi."
         },
         {
-          "q": "Siz qanday uskunalardan foydalanasiz?",
-          "a": "Rubezh, Bolid va boshqa ishlab chiqaruvchilarning manzilli va boshbogʻi tizimlari — obʼekt turi va maydoni boʻyicha tanlab olamiz."
+          "q": "Ofis yoki doʻkon uchun yongʻin signalizatsiyasi majburiymi?",
+          "a": "Obyektga qaysi tizimlar kerakligini ShNQ 2.04.09-2007 boʻyicha loyiha binoning vazifasi, maydoni va qavatlar sonini hisobga olib belgilaydi. Koʻpchilik tijorat va jamoat binolari uchun signalizatsiya va ogohlantirish majburiy tarkibga kiradi. Xonangiz uchun aniq javobni bepul koʻrikdan keyin beramiz: loyiha, reja va oʻrnatilgan uskunani koʻramiz."
         },
         {
-          "q": "Ishlaringizga nimalar kiradi?",
-          "a": "Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish, obyektni ijro hujjatlari bilan topshirish."
+          "q": "Server xonasiga qanday yongʻin oʻchirish kerak?",
+          "a": "Server xonalari, maʼlumot markazlari va arxivlar uchun odatda gazli yongʻin oʻchirish tanlanadi: gaz suv va kukunsiz oʻchiradi va uskunada iz qoldirmaydi. Xona germetik boʻlishi kerak, gaz chiqarilishidan oldin esa odamlar chiqadi — buning uchun tablo, sirena, kechiktirish hamda ishga tushirish va toʻxtatish tugmalari oʻrnatiladi. Yakuniy tanlovni loyiha belgilaydi."
         },
         {
-          "q": "Texnik xizmat koʻrsatish kerakmi?",
-          "a": "Ha, yondaloq tizimlari muntazam texnik xizmat koʻrsatishni talab qiladi — biz xizmat koʻrsatish shartnomasi tuzamiz."
+          "q": "Gazli yongʻin oʻchirish odamlar uchun xavflimi?",
+          "a": "Gaz odamlar qolmagan xonaga beriladi. Ishga tushishdan oldin yorugʻlik tablolari va sirena yonadi, evakuatsiya uchun kechikish hisoblanadi, kirishda qoʻlda ishga tushirish va toʻxtatish tugmalari turadi. Gaz chiqarilayotganda xonada boʻlish mumkin emas, shuning uchun obyektni topshirishda xodimlarga yoʻriqnoma oʻtkazamiz va tablo hamda tugmalar qanday ishlashini koʻrsatamiz."
+        },
+        {
+          "q": "Ombor uchun nima tanlash kerak: sprinkler yoki kukunli modullar?",
+          "a": "Sprinkler tizimi yetarli quvvatli suv quvuri boʻlgan katta isitiladigan omborlarga mos: purkagichlar faqat oʻchoq ustida ochiladi. Kukunli modullar suv yoʻq yoki bino isitilmaydigan joyda qoʻyiladi: ular avtonom va quvursiz montaj qilinadi, ammo ishlagandan keyin tozalash kerak. Qarorni loyiha tovar turi va stellajlar balandligini hisobga olib qabul qiladi."
+        },
+        {
+          "q": "Yongʻin oʻchirish montaji qancha turadi?",
+          "a": "Yongʻin oʻchirish narxini faqat loyiha boʻyicha, obyektga borib koʻrgandan keyin hisoblaymiz. Narx qurilma turiga, himoyalanadigan xonalar hajmiga, oʻchirish moddasiga va trassalar uzunligiga bogʻliq. Yongʻin signalizatsiyasi montajining har bir pozitsiya boʻyicha narxlari — datchiklar, qurilmalar, ogohlantirgichlar, kabel — shu sahifadagi «Yongʻin signalizatsiyasini oʻrnatish: narxi» boʻlimida."
+        },
+        {
+          "q": "Oʻzbekistonda yongʻin signalizatsiyasi va yongʻin oʻchirishni kim montaj qilishi mumkin?",
+          "a": "Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirishni montaj qilish, sozlash va ularga texnik xizmat koʻrsatish huquqi FVV tomonidan tasdiqlangan tashkilot. SAT Solutions da ikkala ish turiga FVV ruxsatnomasi № 913518 (xabarnoma qabul qilinganligi toʻgʻrisidagi tasdiqnoma) bor, nusxasi «Kompaniya haqida» sahifasida. Shartnomadan oldin pudratchi hujjatidagi ish turlari sizning hajmingizga mos kelishini tekshiring."
+        },
+        {
+          "q": "Tizimga qanchalik tez-tez xizmat koʻrsatish kerak?",
+          "a": "Oʻzbekistonda «choraklikda bir marta» degan qatʼiy meʼyor yoʻq. Yongʻin xavfsizligi qoidalariga (2020-yil 20-oktabrdagi 649-son qaror, 148-band) koʻra ishlar ishlab chiqaruvchi hujjatlarini hisobga olgan holda yillik reja boʻyicha olib boriladi. Ofis uchun odatda har chorakda bir chiqish rejalashtiramiz, changli omborlar va ishlab chiqarish uchun tez-tezroq. Har bir tekshiruv jurnalga yoziladi."
+        },
+        {
+          "q": "Montaj qancha davom etadi?",
+          "a": "300 m² gacha boʻlgan doʻkon, ofis yoki kafeda chegaraviy signalizatsiyani 1–3 kunda, koʻp qavatli binoda manzilli tizimni 1–3 haftada montaj qilamiz. Ogohlantirish va yongʻin oʻchirishli ombor, ishlab chiqarish yoki savdo markazini loyiha boʻyicha, bir oydan boshlab bajaramiz. Obyektingiz boʻyicha muddatni koʻrikdan keyin aytamiz."
+        },
+        {
+          "q": "Qanday uskunalar oʻrnatasiz?",
+          "a": "Rubej, Bolid, QR Systems va Grand Magistr qurilmalari va datchiklari: kichik xonalar uchun chegaraviy tizimlardan yuzlab manzilga moʻljallangan manzilli-analog tizimlargacha. Yongʻin oʻchirishni boshqarish uchun — S2000-KPB va S2000-SP4 ishga tushirish bloklari, rele modullari va masofadan ishga tushirish qurilmalari. Koʻp soʻraladigan pozitsiyalar Toshkentdagi omborimizda turadi."
         }
       ],
       "details": {
         "pkgLabel": "Namunaviy yechimlar",
         "pkgTitle": "Uch turdagi obyekt uchun yongʻin signalizatsiyasi",
-        "pkgNote": "Tizim tarkibini yongʻin xavfsizligi meʼyorlari belgilaydi — bepul tekshiruvdan soʻng obyektingizga aynan nima kerakligini aytamiz va smeta hisoblaymiz.",
+        "pkgNote": "Tizim tarkibini yongʻin xavfsizligi meʼyorlari belgilaydi — bepul koʻrikdan keyin obyektingizga aynan nima kerakligini aytamiz va signalizatsiya smetasini hisoblaymiz; yongʻin oʻchirish — loyiha boʻyicha.",
         "packages": [
           {
             "name": "Doʻkon, ofis, kafe",
             "for": "~300 m² gacha xona, ijara formati",
             "items": [
               "Chegara signalizatsiyasi: tutun va issiqlik datchiklari, sirena",
-              "Rubej yoki Oltoy asboblari — arzon va sertifikatlangan",
+              "Rubej, Bolid, QR Systems yoki Grand Magistr asboblari — sertifikatlangan uskuna",
               "«Chiqish» tablosi, chiqishlar yonida qoʻl izveshchatellari",
               "Tizim FVV tekshiruviga tayyor"
             ],
@@ -1159,32 +1184,36 @@
           }
         ],
         "stagesLabel": "Qanday ishlaymiz",
-        "stagesTitle": "Koʻrikdan obyektni topshirishgacha — 5 qadam",
+        "stagesTitle": "Obyektga borishdan topshirishgacha — 6 qadam",
         "stages": [
           {
-            "t": "Tekshiruv",
-            "s": "obyekt va meʼyor talablari auditi — bepul"
+            "t": "Obyektni koʻrish",
+            "s": "xonalar va hujjatlarni koʻramiz, signalizatsiya, ogohlantirish va oʻchirish qayerda kerakligini aniqlaymiz — bepul"
           },
           {
-            "t": "Tanlash",
-            "s": "obyekt loyihasi boʻyicha uskunalar va spetsifikatsiya"
+            "t": "Loyiha va uskunani tanlash",
+            "s": "yongʻin oʻchirish loyihasini oʻzimiz yoki hamkor orqali tayyorlaymiz; qurilmalar, datchiklar, modullar va ballonlar — loyiha boʻyicha; signalizatsiya smetasi"
           },
           {
             "t": "Montaj",
-            "s": "datchiklar, shleyflar, ogohlantirgichlar — loyiha boʻyicha"
+            "s": "liniyalarni tortish, qurilmalar, datchiklar, ogohlantirgichlar, modullar yoki quvurlarni oʻrnatish"
           },
           {
-            "t": "Ishga tushirish",
-            "s": "har bir izveshchatelni tekshirish, obyektni topshirish"
+            "t": "Sozlash va sinovlar",
+            "s": "har bir datchik, ogohlantirish zonalari va oʻchirishni ishga tushirish zanjirlarini tekshirish"
+          },
+          {
+            "t": "Obyektni topshirish",
+            "s": "ijro hujjatlari, xodimlarga yoʻriqnoma, jurnal"
           },
           {
             "t": "Xizmat koʻrsatish",
-            "s": "reglament TO — tizim doim ish holatida"
+            "s": "shartnoma boʻyicha yillik reja asosida reglamentli xizmat (VMQ № 649)"
           }
         ],
         "brandsLabel": "Uskuna",
-        "brandsTitle": "Toshkentda Rubej va Bolid: asboblar va izveshchatellar ombordan",
-        "brandsText": "Rubej va Bolid — kafolatli sertifikatlangan uskuna, asboblar va datchiklar doim mavjud:"
+        "brandsTitle": "Rubej, Bolid, QR Systems va Grand Magistr: Toshkentdagi ombordan asboblar va datchiklar",
+        "brandsText": "Rubej, Bolid, QR Systems va Grand Magistr — kafolatli sertifikatlangan uskuna, asboblar va datchiklar Toshkentdagi omborda mavjud:"
       }
     },
     "network": {
@@ -5586,7 +5615,10 @@
       "tkIntr1": "Kvartira yoki uy: videodomofon toʻplami oʻrnatish bilan",
       "tkLock1": "Kvartira: kirish eshigiga aqlli qulf oʻrnatish bilan"
     },
-    "turnkeyNote": "10.11.2026 holatiga moʻljal: katalogdagi eng arzon uskuna va ishlarning eng kam narxi. Aniq narxni eshik va kirish joyini koʻrgandan keyin aytamiz."
+    "turnkeyNote": "10.11.2026 holatiga moʻljal: katalogdagi eng arzon uskuna va ishlarning eng kam narxi. Aniq narxni eshik va kirish joyini koʻrgandan keyin aytamiz.",
+    "noteByKey": {
+      "fire": "Yuqoridagi narxlar — yongʻin signalizatsiyasi uchun. Yongʻin oʻchirish loyiha boʻyicha, obyektga borib koʻrgandan keyin hisoblanadi."
+    }
   },
   "clients": {
     "title": "Bizning buyurtmachilarimiz",

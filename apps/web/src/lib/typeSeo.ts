@@ -83,11 +83,11 @@ export const TYPE_SEO: Record<string, { title: LocText; desc: LocText }> = {
       zh: "塔什干消防安全器材 — 消防柜、水带、阀门",
     },
     desc: {
-      ru: "Пожарные шкафы ПШ, рукава «Классик»/«Селект», вентили, спринклеры и знаки в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации по разрешению МЧС. Доставка по Узбекистану.",
-      uz: "PSh yongʻin shkaflari, shlanglar, ventillar, sprinklerlar va belgilar Toshkentda mavjud. Ob'ektlarni FVV talablariga muvofiq jihozlash, FVV ruxsatnomasi bilan yongʻin signalizatsiyasi montaji. Yetkazib berish.",
-      en: "Fire cabinets, delivery hoses, valves, sprinklers and signage in stock in Tashkent. Site outfitting to fire-safety regulations, fire alarm installation under an Emergency Ministry permit. Delivery across Uzbekistan.",
-      tr: "Yangın dolapları, hortumlar, vanalar, sprinkler ve uyarı levhaları Taşkent stoğunda. Tesisin mevzuata göre donatımı, izin belgeli yangın alarmı montajı, teslimat.",
-      zh: "消防柜、消防水带、阀门、喷淋头与安全标识塔什干现货。按消防规范为场所配齐器材，持许可文件承接火灾报警系统的设计与安装。乌兹别克斯坦全境配送与开票。",
+      ru: "Пожарные шкафы ПШ, рукава «Классик»/«Селект», вентили и знаки в наличии в Ташкенте. Комплектация объектов под требования МЧС, монтаж пожарной сигнализации по разрешению МЧС. Доставка по Узбекистану.",
+      uz: "PSh yongʻin shkaflari, shlanglar, ventillar va belgilar Toshkentda mavjud. Ob'ektlarni FVV talablariga muvofiq jihozlash, FVV ruxsatnomasi bilan yongʻin signalizatsiyasi montaji. Yetkazib berish.",
+      en: "Fire cabinets, delivery hoses, valves and signage in stock in Tashkent. Site outfitting to fire-safety regulations, fire alarm installation under an Emergency Ministry permit. Delivery across Uzbekistan.",
+      tr: "Yangın dolapları, hortumlar, vanalar ve uyarı levhaları Taşkent stoğunda. Tesisin mevzuata göre donatımı, izin belgeli yangın alarmı montajı, teslimat.",
+      zh: "消防柜、消防水带、阀门与安全标识塔什干现货。按消防规范为场所配齐器材，持许可文件承接火灾报警系统的设计与安装。乌兹别克斯坦全境配送与开票。",
     },
   },
   "ognetushiteli": {
