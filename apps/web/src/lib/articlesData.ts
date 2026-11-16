@@ -12846,37 +12846,38 @@ export const ARTICLES: Article[] = [
   {
     slug: "normy-slabotochnye-sistemy-uzbekistan",
     date: "2026-09-21",
-    updated: "2026-09-21",
+    updated: "2026-11-16",
     related: ["fire", "cctv", "access", "alarm"],
     hubs: ["izveschateli", "pribory-i-moduli", "ip-kamery", "terminaly-i-schityvateli"],
     seeAlso: ["licenziya-na-montazh-signalizacii-uzbekistan", "obsluzhivanie-pozharnoy-signalizacii-uzbekistan", "videonablyudenie-personalnye-dannye-uzbekistan", "kamery-domofony-novostroyki-uzbekistan"],
     loc: {
       ru: {
         title: "Нормы Узбекистана по видеонаблюдению, СКУД и пожарной сигнализации: справочник с номерами документов",
-        excerpt: "Шесть действующих документов РУз, которые регулируют системы безопасности: кто лицензирует монтаж, как обслуживать пожарную сигнализацию, где хранить видеоархив, что обязательно в новостройках. Только первоисточники, без российских норм.",
+        excerpt: "Семь документов РУз, которые регулируют системы безопасности: кто принимает уведомление и выдаёт лицензию на монтаж, как обслуживать пожарную сигнализацию, где хранить биометрию и видеоархив, что обязательно в новостройках. Только первоисточники, без российских норм.",
         summary: [
-          "Лицензирование монтажа сигнализации — ПКМ № 880 от 27.10.2018: лицензия бессрочная, реестр публичный",
+          "Монтаж пожарной сигнализации и пожаротушения — уведомление МЧС по ПКМ № 88 от 25.02.2022; с 01.03.2026 закон ЗРУ-1099 вводит лицензию МЧС. ПКМ № 880 утратил силу 01.03.2022",
           "Обслуживание пожарной сигнализации — ПКМ № 649 от 20.10.2020, п. 148–149: годовой план, а не «раз в квартал»",
-          "Видеоархив и биометрия — ЗРУ-547, ст. 27-1: базы с данными граждан хранятся на серверах в Узбекистане",
+          "Биометрия — ЗРУ-547, ст. 27-1 в редакции ЗРУ-1125 от 26.03.2026: шаблоны лиц и отпечатков хранятся в Узбекистане",
           "Камеры и домофоны в новостройках — ПП-48 от 05.02.2026, п. 11: обязательны с 1 мая 2026 года",
         ],
         sections: [
           { h: "Почему нельзя пользоваться российскими нормами", p: [
-            "Русскоязычная выдача по любому вопросу о сигнализации или видеонаблюдении отвечает нормами Российской Федерации: «обслуживание раз в квартал», «лицензия МЧС», «СП 3.13130». В Узбекистане действуют свои документы, и они устроены иначе — по срокам, по органам и по обязанностям заказчика. Мы проверяли каждый пункт этого справочника по тексту документа на lex.uz, а не по пересказам.",
-            "Справочник даёт номер документа, дату и ключевой пункт, чтобы на него можно было сослаться в договоре, техническом задании или публикации. По четырём темам есть подробные разборы — ссылки в конце статьи. Дата проверки актуальности — 21 сентября 2026 года.",
+            "Русскоязычная выдача по любому вопросу о сигнализации или видеонаблюдении отвечает нормами Российской Федерации: «обслуживание раз в квартал», «СП 3.13130», «НПБ 104-03». В Узбекистане действуют свои документы, и в них другие сроки, органы и обязанности заказчика. Каждый пункт этого справочника мы проверяли по тексту документа на lex.uz, а не по пересказам.",
+            "Для каждого документа здесь есть номер, дата и ключевой пункт, чтобы на него можно было сослаться в договоре, техническом задании или публикации. По четырём темам есть подробные разборы, ссылки в конце статьи. Дата проверки актуальности — 16 ноября 2026 года. В этой редакции обновлены разделы о разрешительном порядке и о персональных данных.",
           ] },
-          { h: "Лицензирование монтажа: ПКМ № 880 от 27.10.2018", p: [
-            "Постановление Кабинета Министров № 880 регулирует лицензирование деятельности по проектированию, монтажу, наладке, ремонту и техническому обслуживанию средств противопожарной автоматики, охранной, пожарной и охранно-пожарной сигнализации. Лицензирующий орган по постановлению — Министерство внутренних дел, а не МЧС, как отвечают российские источники.",
-            "Лицензия бессрочная, может выдаваться на часть видов работ, реестр лицензий публичный. Требования к подрядчику: в штате не менее двух работников со стажем не менее трёх лет и квалификацией не ниже третьего разряда. Наши документы: подтверждение Национальной гвардии № 1554491 на охранные системы и лицензия МЧС № 913518 на пожарные системы — оба открыты на странице «О компании».",
+          { h: "Разрешительный порядок для монтажа: ПКМ № 88 от 25.02.2022 и закон ЗРУ-1099", p: [
+            "Постановление Кабинета Министров № 880 от 27.10.2018, по которому монтаж сигнализации лицензировало МВД, утратило силу 1 марта 2022 года. С этой даты работы ведутся по уведомлению, по постановлению № 88 от 25.02.2022. Уведомление о монтаже, наладке, ремонте и техобслуживании пожарной сигнализации и автоматического пожаротушения принимает МЧС: приложение 9, в редакции ПКМ № 418 от 13.07.2024. Уведомление по техническим средствам охраны принимает Департамент охраны при МВД: приложение 10, в редакции ПКМ № 94 от 10.03.2026.",
+            "Закон ЗРУ-1099 от 27.11.2025 с 1 марта 2026 года добавил эти же работы с пожарной сигнализацией и автоматическим пожаротушением в перечень лицензируемых видов деятельности (п. 61 приложения 1 к ЗРУ-701). Лицензирующий орган — МЧС, госпошлина — 5 БРВ. На 16.11.2026 порядок выдачи лицензии не утверждён: паспорта в постановлении № 80 нет, приложение 9 постановления № 88 сохраняется. Наши документы открыты на странице «О компании»: разрешение МЧС № 913518 на пожарные системы (подтверждение о получении уведомления от 23.07.2025) и разрешение Национальной гвардии № 1554491 на охранные системы. Подробный разбор — в статье о лицензии на монтаж сигнализации.",
           ] },
           { h: "Обслуживание пожарной сигнализации: ПКМ № 649 от 20.10.2020, п. 148–149", p: [
             "Правила пожарной безопасности, утверждённые постановлением № 649, не содержат нормы «раз в квартал». Пункт 148 в редакции постановления № 153 от 04.04.2022 требует годовой план регламентных работ, составленный по технической документации изготовителя оборудования. Обслуживать систему вправе либо обученные работники самого объекта, либо лицензированная организация.",
-            "Пункт 149 — условный: договор с обслуживающей организацией в течение 30 дней заключается только если специалисты объекта не могут выполнять работы сами, и отсчёт идёт от ввода устройств в работу. При расторжении договора обслуживающая организация уведомляет районный или городской отдел по чрезвычайным ситуациям в течение 24 часов.",
+            "Пункт 149 условный: договор с обслуживающей организацией в течение 30 дней заключается, только если специалисты объекта не могут выполнять работы сами. Отсчёт идёт от ввода устройств в работу. При расторжении договора руководитель предприятия в течение 24 часов уведомляет районный или городской отдел по чрезвычайным ситуациям.",
           ] },
-          { h: "Видеоархив и биометрия: закон ЗРУ-547 от 02.07.2019, ст. 27-1", p: [
-            "Закон «О персональных данных» относит к персональным данным любую информацию, позволяющую идентифицировать человека, — видеозапись с различимым лицом под это определение попадает, а шаблон лица или отпечатка в СКУД считается биометрическими данными, более строгой категорией.",
-            "Статья 27-1 обязывает собирать, систематизировать и хранить базы персональных данных граждан Узбекистана на технических средствах, физически размещённых в республике и зарегистрированных в Государственном реестре баз персональных данных. Уполномоченный орган — Государственный центр персонализации при Кабинете Министров. Практическое следствие: видеоархив и база биометрии должны лежать на регистраторе или сервере в Узбекистане, а не в зарубежном облаке производителя.",
-          ] },
+          { h: "Биометрия и видеоархив: закон ЗРУ-547 от 02.07.2019, ст. 27-1 в редакции ЗРУ-1125", p: [
+            "Закон «О персональных данных» относит к персональным данным любую информацию, позволяющую идентифицировать человека, и видеозапись с различимым лицом под это определение попадает. Биометрические данные по статье 26 — это персональные данные, которые характеризуют анатомические и физиологические особенности человека. К ним относятся шаблоны лица и отпечатков в СКУД и системах учёта рабочего времени.",
+            "Статья 27-1 в редакции закона ЗРУ-1125 от 26.03.2026 обязывает хранить на территории Узбекистана биометрические и генетические данные, а также данные абонентов операторов связи. Остальные персональные данные можно хранить и обрабатывать за рубежом при одном из условий:",
+            "Уполномоченный орган — Государственный центр персонализации при Кабинете Министров. Регистрация баз в Государственном реестре сохранена (ст. 20). Практический вывод: база лиц и отпечатков СКУД должна лежать на сервере или терминалах в Узбекистане. Видеоархив с распознаванием лиц попадает под требование о биометрии. Обычный архив можно вынести за рубеж, только если выполнено одно из условий статьи. До такого решения лучше получить заключение юриста.",
+          ], ul: ["страна признана обеспечивающей адекватную защиту;", "оператор применяет типовые договорные условия или обязательные корпоративные правила, утверждённые уполномоченным органом;", "оператор соблюдает утверждённые им международные стандарты."], ulAt: 2 },
           { h: "Новостройки: ПП-48 от 05.02.2026, п. 11", p: [
             "Постановление Президента № ПП-48 с 1 мая 2026 года требует включать в проекты новых многоквартирных домов камеры видеонаблюдения в каждом подъезде, в лифтах и на прилегающей территории, а также домофоны на входных дверях подъездов.",
             "Без этих систем проект не проходит экспертизу, а дом с неустановленным общим имуществом запрещено принимать в эксплуатацию. Установленное оборудование передаётся управляющей организации как общее имущество, данные о нём вносятся в информационную систему «Mening uyim» платформы «Turarjoy».",
@@ -12895,38 +12896,39 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Кто выдаёт лицензию на монтаж сигнализации в Узбекистане?", a: "По постановлению Кабинета Министров № 880 от 27.10.2018 лицензирующий орган — МВД. Лицензия бессрочная, реестр публичный. Проверяйте подрядчика по реестру, а не по копии документа." },
+          { q: "Кто выдаёт лицензию на монтаж сигнализации в Узбекистане?", a: "По пожарной сигнализации и автоматическому пожаротушению — МЧС. Сейчас это подтверждение уведомления по ПКМ № 88, а с 1 марта 2026 года закон ЗРУ-1099 вводит лицензию МЧС. По охранным системам уведомление принимает Департамент охраны при МВД. Постановление № 880, по которому лицензировало МВД, утратило силу 01.03.2022. Проверяйте подрядчика по реестру на license.gov.uz." },
           { q: "Как часто нужно обслуживать пожарную сигнализацию?", a: "Нормы «раз в квартал» в Узбекистане нет. Пункт 148 Правил пожарной безопасности (ПКМ № 649) требует годовой план регламентных работ по документации изготовителя оборудования." },
-          { q: "Можно ли хранить видеоархив в зарубежном облаке?", a: "Если система идентифицирует граждан Узбекистана, статья 27-1 закона ЗРУ-547 требует хранить базу на технических средствах в республике. Локальный регистратор или сервер в Узбекистане с удалённым доступом закрывает это требование." },
+          { q: "Можно ли хранить видеоархив в зарубежном облаке?", a: "Биометрию, то есть шаблоны лиц и отпечатков, статья 27-1 закона ЗРУ-547 в редакции от 26.03.2026 требует хранить в Узбекистане. Остальные персональные данные можно хранить за рубежом только при одном из условий статьи: адекватная защита в стране, утверждённые договорные условия или международные стандарты. Локальный регистратор или сервер в Узбекистане снимает вопрос целиком." },
           { q: "Обязательны ли камеры в новом жилом доме?", a: "Да, с 1 мая 2026 года по ПП-48: камеры в подъездах, лифтах и на территории плюс домофоны на входных дверях. Без них проект не проходит экспертизу, а дом не принимают в эксплуатацию." },
         ],
       },
       uz: {
         title: "Oʻzbekistonning videokuzatuv, SKUD va yongʻin signalizatsiyasi boʻyicha meʼyorlari: hujjat raqamlari bilan maʼlumotnoma",
-        excerpt: "Xavfsizlik tizimlarini tartibga soluvchi oltita amaldagi OʻzR hujjati: montajni kim litsenziyalaydi, yongʻin signalizatsiyasiga qanday xizmat koʻrsatiladi, videoarxiv qayerda saqlanadi, yangi uylarda nima majburiy. Faqat birlamchi manbalar, Rossiya meʼyorlarisiz.",
+        excerpt: "Xavfsizlik tizimlarini tartibga soluvchi yettita OʻzR hujjati: montaj uchun xabarnomani kim qabul qiladi va litsenziyani kim beradi, yongʻin signalizatsiyasiga qanday xizmat koʻrsatiladi, biometriya va videoarxiv qayerda saqlanadi, yangi uylarda nima majburiy. Faqat birlamchi manbalar, Rossiya meʼyorlarisiz.",
         summary: [
-          "Signalizatsiya montajini litsenziyalash — 27.10.2018 dagi 880-son VMQ: litsenziya muddatsiz, reyestr ochiq",
+          "Yongʻin signalizatsiyasi va yongʻin oʻchirish tizimlari montaji — 25.02.2022 dagi 88-son VMQ boʻyicha FVV xabarnomasi; 01.03.2026 dan OʻRQ-1099 qonuni FVV litsenziyasini kiritdi. 880-son VMQ 01.03.2022 dan kuchini yoʻqotgan",
           "Yongʻin signalizatsiyasiga xizmat koʻrsatish — 20.10.2020 dagi 649-son VMQ, 148–149-bandlar: «chorakda bir» emas, yillik reja",
-          "Videoarxiv va biometriya — OʻRQ-547, 27-1-modda: fuqarolar maʼlumotlari bazalari Oʻzbekistondagi serverlarda saqlanadi",
+          "Biometriya — OʻRQ-547, 26.03.2026 dagi OʻRQ-1125 tahriridagi 27-1-modda: yuz va barmoq izi shablonlari Oʻzbekistonda saqlanadi",
           "Yangi uylarda kamera va domofonlar — 05.02.2026 dagi PQ-48, 11-band: 2026-yil 1-maydan majburiy",
         ],
         sections: [
           { h: "Nega Rossiya meʼyorlaridan foydalanib boʻlmaydi", p: [
-            "Signalizatsiya yoki videokuzatuv haqidagi istalgan savolga rus tilidagi qidiruv Rossiya Federatsiyasi meʼyorlari bilan javob beradi: «chorakda bir xizmat», «FVV litsenziyasi», «SP 3.13130». Oʻzbekistonda oʻz hujjatlari amal qiladi va ular boshqacha tuzilgan — muddatlar, organlar va buyurtmachi majburiyatlari boʻyicha. Biz ushbu maʼlumotnomaning har bir bandini qayta hikoyalar boʻyicha emas, lex.uz dagi hujjat matni boʻyicha tekshirdik.",
-            "Maʼlumotnoma hujjat raqami, sanasi va asosiy bandini beradi — shartnoma, texnik topshiriq yoki nashrda unga havola qilish mumkin boʻlsin. Toʻrtta mavzu boʻyicha batafsil tahlillar bor — havolalar maqola oxirida. Dolzarblik tekshiruvi sanasi — 2026-yil 21-sentabr.",
+            "Signalizatsiya yoki videokuzatuv haqidagi istalgan savolga rus tilidagi qidiruv Rossiya Federatsiyasi meʼyorlari bilan javob beradi: «chorakda bir xizmat», «SP 3.13130», «NPB 104-03». Oʻzbekistonda oʻz hujjatlari amal qiladi, ularda muddatlar, organlar va buyurtmachi majburiyatlari boshqacha. Maʼlumotnomaning har bir bandini qayta hikoyalar boʻyicha emas, lex.uz dagi hujjat matni boʻyicha tekshirdik.",
+            "Har bir hujjat uchun bu yerda raqam, sana va asosiy band bor, shunda unga shartnoma, texnik topshiriq yoki nashrda havola qilish mumkin. Toʻrtta mavzu boʻyicha batafsil tahlillar bor, havolalar maqola oxirida. Dolzarblik tekshiruvi sanasi — 2026-yil 16-noyabr. Ushbu tahrirda ruxsat berish tartibi va shaxsga doir maʼlumotlar haqidagi boʻlimlar yangilandi.",
           ] },
-          { h: "Montajni litsenziyalash: 27.10.2018 dagi 880-son VMQ", p: [
-            "Vazirlar Mahkamasining 880-son qarori yongʻinga qarshi avtomatika, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi vositalarini loyihalash, montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish faoliyatini litsenziyalashni tartibga soladi. Qarorga koʻra litsenziyalovchi organ — Rossiya manbalari javob berganidek FVV emas, Ichki ishlar vazirligi.",
-            "Litsenziya muddatsiz, ishlarning bir qismiga berilishi mumkin, litsenziyalar reyestri ochiq. Pudratchiga talablar: shtatda kamida uch yil stajli va uchinchi razryaddan past boʻlmagan malakali kamida ikki xodim. Bizning hujjatlarimiz: qoʻriqlash tizimlariga Milliy gvardiyaning 1554491-son tasdigʻi va yongʻin tizimlariga FVVning 913518-son litsenziyasi — ikkalasi ham «Kompaniya haqida» sahifasida ochiq.",
+          { h: "Montaj uchun ruxsat berish tartibi: 25.02.2022 dagi 88-son VMQ va OʻRQ-1099 qonuni", p: [
+            "Montajni IIV litsenziyalagan Vazirlar Mahkamasining 27.10.2018 dagi 880-son qarori 2022-yil 1-martda kuchini yoʻqotgan. Shu sanadan ishlar xabardor qilish tartibida, 25.02.2022 dagi 88-son qaror boʻyicha olib boriladi. Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash, taʼmirlash va ularga texnik xizmat koʻrsatish haqidagi xabarnomani FVV qabul qiladi: 9-ilova, 13.07.2024 dagi 418-son VMQ tahririda. Qoʻriqlash texnik vositalari boʻyicha xabarnomani IIV huzuridagi Qoʻriqlash departamenti qabul qiladi: 10-ilova, 10.03.2026 dagi 94-son VMQ tahririda.",
+            "27.11.2025 dagi OʻRQ-1099 qonuni 2026-yil 1-martdan yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish bilan shu ishlarni litsenziyalanadigan faoliyat turlari roʻyxatiga qoʻshdi (OʻRQ-701 qonuni 1-ilovasining 61-bandi). Litsenziyalovchi organ — FVV, davlat boji — 5 BHM. 16.11.2026 holatiga litsenziya berish tartibi tasdiqlanmagan: 80-son VMQda uning pasporti yoʻq, 88-son VMQning 9-ilovasi saqlanib qolgan. Hujjatlarimiz «Kompaniya haqida» sahifasida ochiq: yongʻin tizimlariga FVVning 913518-son ruxsatnomasi (23.07.2025 dagi xabarnoma tasdiqnomasi) va qoʻriqlash tizimlariga Milliy gvardiyaning 1554491-son ruxsatnomasi. Batafsil tahlil — signalizatsiya montaji litsenziyasi haqidagi maqolada.",
           ] },
           { h: "Yongʻin signalizatsiyasiga xizmat koʻrsatish: 20.10.2020 dagi 649-son VMQ, 148–149-bandlar", p: [
             "649-son qaror bilan tasdiqlangan Yongʻin xavfsizligi qoidalarida «chorakda bir» meʼyori yoʻq. 04.04.2022 dagi 153-son qaror tahriridagi 148-band uskuna ishlab chiqaruvchisining texnik hujjatlari asosida tuzilgan yillik reglament ishlari rejasini talab qiladi. Tizimga obyektning oʻzining oʻqitilgan xodimlari yoki litsenziyalangan tashkilot xizmat koʻrsatishi mumkin.",
-            "149-band shartli: xizmat koʻrsatuvchi tashkilot bilan 30 kun ichida shartnoma faqat obyekt mutaxassislari ishlarni oʻzlari bajara olmasa tuziladi va hisob qurilmalar ishga tushirilgan paytdan boshlanadi. Shartnoma bekor qilinganda xizmat koʻrsatuvchi tashkilot 24 soat ichida tuman yoki shahar favqulodda vaziyatlar boʻlimini xabardor qiladi.",
+            "149-band shartli: xizmat koʻrsatuvchi tashkilot bilan 30 kun ichida shartnoma faqat obyekt mutaxassislari ishlarni oʻzlari bajara olmasa tuziladi. Muddat qurilmalar ishga tushirilgan paytdan hisoblanadi. Shartnoma bekor qilinganda korxona rahbari 24 soat ichida tuman yoki shahar favqulodda vaziyatlar boʻlimiga xabar beradi.",
           ] },
-          { h: "Videoarxiv va biometriya: 02.07.2019 dagi OʻRQ-547 qonuni, 27-1-modda", p: [
-            "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi qonun odamni identifikatsiya qilish imkonini beruvchi har qanday axborotni shaxsga doir maʼlumotlarga kiritadi — yuzi ajralib turadigan videoyozuv shu taʼrifga tushadi, SKUDdagi yuz yoki barmoq izi shabloni esa qatʼiyroq toifa — biometrik maʼlumot hisoblanadi.",
-            "27-1-modda Oʻzbekiston fuqarolarining shaxsga doir maʼlumotlari bazalarini respublika hududida jismonan joylashgan va Shaxsga doir maʼlumotlar bazalarining davlat reyestrida roʻyxatga olingan texnik vositalarda yigʻish, tizimlashtirish va saqlashga majbur qiladi. Vakolatli organ — Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi. Amaliy oqibat: videoarxiv va biometriya bazasi ishlab chiqaruvchining xorijiy bulutida emas, Oʻzbekistondagi registrator yoki serverda turishi kerak.",
-          ] },
+          { h: "Biometriya va videoarxiv: 02.07.2019 dagi OʻRQ-547 qonuni, OʻRQ-1125 tahriridagi 27-1-modda", p: [
+            "«Shaxsga doir maʼlumotlar toʻgʻrisida»gi qonun odamni identifikatsiya qilishga imkon beruvchi har qanday axborotni shaxsga doir maʼlumot deb hisoblaydi, yuzi koʻrinib turgan videoyozuv ham shu taʼrifga tushadi. 26-moddaga koʻra biometrik maʼlumotlar — insonning anatomik va fiziologik xususiyatlarini tavsiflovchi shaxsga doir maʼlumotlar. Bularga SKUD va ish vaqtini hisobga olish tizimlaridagi yuz va barmoq izi shablonlari kiradi.",
+            "26.03.2026 dagi OʻRQ-1125 qonuni tahriridagi 27-1-modda biometrik va genetik maʼlumotlarni, shuningdek aloqa operatorlari abonentlarining maʼlumotlarini Oʻzbekiston hududida saqlashni majburiy qiladi. Boshqa shaxsga doir maʼlumotlarni xorijda saqlash va qayta ishlash quyidagi shartlardan biri bajarilganda mumkin:",
+            "Vakolatli organ — Vazirlar Mahkamasi huzuridagi Davlat personallashtirish markazi. Bazalarni Davlat reyestrida roʻyxatdan oʻtkazish saqlanib qolgan (20-modda). Amaliy xulosa: SKUDdagi yuz va barmoq izlari bazasi Oʻzbekistondagi server yoki terminallarda turishi kerak. Yuzni aniqlaydigan videoarxivga biometriya talabi tegishli. Oddiy arxivni xorijga faqat moddadagi shartlardan biri bajarilganda chiqarish mumkin. Bunday qarordan oldin yurist xulosasini olgan maʼqul.",
+          ], ul: ["davlat yetarli himoyani taʼminlaydi deb tan olingan;", "operator vakolatli organ tasdiqlagan namunaviy shartnoma shartlari yoki majburiy korporativ qoidalarni qoʻllaydi;", "operator vakolatli organ tasdiqlagan xalqaro standartlarga rioya qiladi."], ulAt: 2 },
           { h: "Yangi uylar: 05.02.2026 dagi PQ-48, 11-band", p: [
             "Prezidentning PQ-48-son qarori 2026-yil 1-maydan yangi koʻp kvartirali uylar loyihalariga har bir podyezdda, liftlarda va yondosh hududda videokuzatuv kameralarini, shuningdek, podyezd kirish eshiklarida domofonlarni kiritishni talab qiladi.",
             "Bu tizimlarsiz loyiha ekspertizadan oʻtmaydi, umumiy mulki oʻrnatilmagan uyni foydalanishga qabul qilish taqiqlanadi. Oʻrnatilgan uskuna umumiy mulk sifatida boshqaruvchi tashkilotga topshiriladi, u haqidagi maʼlumotlar «Turarjoy» platformasining «Mening uyim» axborot tizimiga kiritiladi.",
@@ -12945,38 +12947,39 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Oʻzbekistonda signalizatsiya montajiga litsenziyani kim beradi?", a: "Vazirlar Mahkamasining 27.10.2018 dagi 880-son qaroriga koʻra litsenziyalovchi organ — IIV. Litsenziya muddatsiz, reyestr ochiq. Pudratchini hujjat nusxasi boʻyicha emas, reyestr boʻyicha tekshiring." },
+          { q: "Oʻzbekistonda signalizatsiya montajiga litsenziyani kim beradi?", a: "Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish boʻyicha — FVV. Hozir bu 88-son VMQ boʻyicha xabarnoma tasdiqnomasi, 2026-yil 1-martdan esa OʻRQ-1099 qonuni FVV litsenziyasini kiritdi. Qoʻriqlash tizimlari boʻyicha xabarnomani IIV huzuridagi Qoʻriqlash departamenti qabul qiladi. IIV litsenziyalagan 880-son qaror 01.03.2022 dan kuchini yoʻqotgan. Pudratchini license.gov.uz dagi reyestr boʻyicha tekshiring." },
           { q: "Yongʻin signalizatsiyasiga qanchalik tez xizmat koʻrsatish kerak?", a: "Oʻzbekistonda «chorakda bir» meʼyori yoʻq. Yongʻin xavfsizligi qoidalarining 148-bandi (649-son VMQ) uskuna ishlab chiqaruvchisi hujjatlari boʻyicha yillik reglament ishlari rejasini talab qiladi." },
-          { q: "Videoarxivni xorijiy bulutda saqlash mumkinmi?", a: "Agar tizim Oʻzbekiston fuqarolarini identifikatsiya qilsa, OʻRQ-547 qonunining 27-1-moddasi bazani respublikadagi texnik vositalarda saqlashni talab qiladi. Masofaviy kirishli Oʻzbekistondagi lokal registrator yoki server bu talabni yopadi." },
+          { q: "Videoarxivni xorijiy bulutda saqlash mumkinmi?", a: "Biometriyani, yaʼni yuz va barmoq izi shablonlarini, 26.03.2026 tahriridagi OʻRQ-547 qonunining 27-1-moddasi Oʻzbekistonda saqlashni talab qiladi. Boshqa shaxsga doir maʼlumotlarni xorijda faqat moddadagi shartlardan biri bajarilganda saqlash mumkin: davlatda yetarli himoya, tasdiqlangan shartnoma shartlari yoki xalqaro standartlar. Oʻzbekistondagi lokal registrator yoki server bu masalani toʻliq yopadi." },
           { q: "Yangi turar-joy uyida kameralar majburiymi?", a: "Ha, 2026-yil 1-maydan PQ-48 boʻyicha: podyezdlar, liftlar va hududda kameralar hamda kirish eshiklarida domofonlar. Ularsiz loyiha ekspertizadan oʻtmaydi, uy foydalanishga qabul qilinmaydi." },
         ],
       },
       en: {
         title: "Uzbekistan's regulations on video surveillance, access control and fire alarms: a reference with document numbers",
-        excerpt: "Six current Uzbek documents that govern security systems: who licenses installation, how fire alarms must be serviced, where video archives may be stored, what is mandatory in new housing. Primary sources only, no Russian norms.",
+        excerpt: "Seven Uzbek documents that govern security systems: who receives the notification and issues the licence for installation, how fire alarms must be serviced, where biometrics and video archives may be stored, what is mandatory in new housing. Primary sources only, no Russian norms.",
         summary: [
-          "Licensing of alarm installation — Cabinet Resolution No. 880 of 27.10.2018: licence is open-ended, register is public",
+          "Fire alarm and suppression installation: Emergencies Ministry notification under Cabinet Resolution No. 88 of 25.02.2022; from 01.03.2026 Law ZRU-1099 introduces an Emergencies Ministry licence. Resolution No. 880 lost force on 01.03.2022",
           "Fire-alarm maintenance — Cabinet Resolution No. 649 of 20.10.2020, cl. 148–149: an annual plan, not “once a quarter”",
-          "Video archive and biometrics — Law ZRU-547, art. 27-1: databases on Uzbek citizens are stored on servers in Uzbekistan",
+          "Biometrics: Law ZRU-547, art. 27-1 as amended by ZRU-1125 of 26.03.2026; face and fingerprint templates are stored in Uzbekistan",
           "Cameras and intercoms in new housing — Presidential Resolution PP-48 of 05.02.2026, cl. 11: mandatory from 1 May 2026",
         ],
         sections: [
           { h: "Why Russian norms cannot be used", p: [
-            "Russian-language search results answer any question about alarms or video surveillance with the norms of the Russian Federation: “service once a quarter”, “licence from the Ministry of Emergencies”, “SP 3.13130”. Uzbekistan has its own documents, and they are structured differently — in deadlines, in authorities and in the client's duties. We checked every item in this reference against the document text on lex.uz, not against retellings.",
-            "The reference gives the document number, date and key clause so that it can be cited in a contract, a technical specification or a publication. Four topics have detailed write-ups — links at the end. Validity checked on 21 September 2026.",
+            "Russian-language search results answer any question about alarms or video surveillance with the norms of the Russian Federation: \"service once a quarter\", \"SP 3.13130\", \"NPB 104-03\". Uzbekistan has its own documents, with different deadlines, authorities and client duties. We checked every item in this reference against the document text on lex.uz, not against retellings.",
+            "For each document this reference gives the number, date and key clause, so it can be cited in a contract, a technical specification or a publication. Four topics have detailed write-ups, linked at the end. Validity checked on 16 November 2026. This edition updates the sections on the permit regime and on personal data.",
           ] },
-          { h: "Installation licensing: Cabinet Resolution No. 880 of 27.10.2018", p: [
-            "Cabinet of Ministers Resolution No. 880 governs the licensing of design, installation, commissioning, repair and maintenance of fire automation, intrusion, fire and combined alarm systems. Under the resolution the licensing authority is the Ministry of Internal Affairs — not the Ministry of Emergency Situations, as Russian sources claim.",
-            "The licence is open-ended, may be issued for part of the work types, and the register of licences is public. Contractor requirements: at least two employees on staff with at least three years' experience and a qualification of grade three or higher. Our documents: National Guard confirmation No. 1554491 for security systems and Ministry of Emergency Situations licence No. 913518 for fire systems — both published on the About page.",
+          { h: "Permit regime for installation: Cabinet Resolution No. 88 of 25.02.2022 and Law ZRU-1099", p: [
+            "Cabinet of Ministers Resolution No. 880 of 27.10.2018, under which the Interior Ministry licensed alarm installation, lost force on 1 March 2022. Since then the work has run on notification under Resolution No. 88 of 25.02.2022. Notifications for the installation, commissioning, repair and maintenance of fire alarms and automatic fire suppression go to the Ministry of Emergency Situations: Annex 9, as amended by Resolution No. 418 of 13.07.2024. Notifications for technical security equipment go to the Security Department under the Interior Ministry: Annex 10, as amended by Resolution No. 94 of 10.03.2026.",
+            "From 1 March 2026, Law ZRU-1099 of 27.11.2025 added the same fire alarm and automatic suppression work to the list of licensed activities (item 61 of Annex 1 to Law ZRU-701). The licensing body is the Emergencies Ministry and the state duty is 5 base calculation units. As of 16.11.2026 the procedure for issuing the licence has not been approved: Resolution No. 80 contains no passport for it, and Annex 9 of Resolution No. 88 remains. Our documents are on the About page: Ministry of Emergency Situations permit No. 913518 for fire systems (confirmation of notification dated 23.07.2025) and National Guard permit No. 1554491 for security systems. For a detailed write-up, see the article on alarm installation licences.",
           ] },
           { h: "Fire-alarm maintenance: Cabinet Resolution No. 649 of 20.10.2020, cl. 148–149", p: [
             "The Fire Safety Rules approved by Resolution No. 649 contain no “once a quarter” norm. Clause 148, as amended by Resolution No. 153 of 04.04.2022, requires an annual plan of scheduled work drawn up from the equipment manufacturer's technical documentation. The system may be serviced either by the site's own trained staff or by a licensed organisation.",
-            "Clause 149 is conditional: a contract with a service organisation within 30 days is required only if the site's specialists cannot do the work themselves, and the period runs from the moment the devices are put into operation. On termination of the contract, the service organisation notifies the district or city emergency department within 24 hours.",
+            "Clause 149 is conditional: a contract with a service organisation within 30 days is required only if the site's specialists cannot do the work themselves. The period runs from the moment the devices are put into operation. If the contract is terminated, the head of the enterprise notifies the district or city emergency department within 24 hours.",
           ] },
-          { h: "Video archive and biometrics: Law ZRU-547 of 02.07.2019, art. 27-1", p: [
-            "The Law on Personal Data treats as personal data any information that allows a person to be identified — a video recording with a recognisable face falls under this definition, and a face or fingerprint template in an access-control system counts as biometric data, a stricter category.",
-            "Article 27-1 requires that databases of personal data of Uzbek citizens be collected, organised and stored on hardware physically located in the republic and registered in the State Register of Personal Data Databases. The competent authority is the State Personalisation Centre under the Cabinet of Ministers. Practical consequence: the video archive and the biometric database must reside on a recorder or server in Uzbekistan, not in a manufacturer's foreign cloud.",
-          ] },
+          { h: "Biometrics and video archives: Law ZRU-547 of 02.07.2019, art. 27-1 as amended by ZRU-1125", p: [
+            "The Law on Personal Data treats as personal data any information that allows a person to be identified, and a video recording with a recognisable face falls under this definition. Under article 26, biometric data are personal data that describe a person's anatomical and physiological features. This includes face and fingerprint templates in access-control and time-attendance systems.",
+            "Article 27-1, as amended by Law ZRU-1125 of 26.03.2026, requires biometric and genetic data, as well as data on telecom subscribers, to be stored in Uzbekistan. Other personal data may be stored and processed abroad if one of these conditions is met:",
+            "The authorised body is the State Personalisation Centre under the Cabinet of Ministers. Registration of databases in the State Register remains (art. 20). In practice, the face and fingerprint database of an access-control system must reside on a server or terminals in Uzbekistan. A video archive with face recognition falls under the biometrics rule. An ordinary archive may go abroad only if one of the article's conditions is met. Get a lawyer's opinion before making that decision.",
+          ], ul: ["the destination country is recognised as providing adequate protection;", "the operator uses standard contractual clauses or binding corporate rules approved by the authorised body;", "the operator follows international standards approved by that body."], ulAt: 2 },
           { h: "New housing: Presidential Resolution PP-48 of 05.02.2026, cl. 11", p: [
             "Presidential Resolution PP-48 requires, from 1 May 2026, that designs for new apartment buildings include video cameras in every entrance hall, in lifts and on the adjacent grounds, plus intercoms on entrance doors.",
             "Without these systems the design does not pass expert review, and a building whose common property is not installed may not be accepted for occupancy. The installed equipment is handed over to the management company as common property, and its details are entered into the “Mening uyim” information system of the “Turarjoy” platform.",
@@ -12995,38 +12998,39 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Who issues the licence for alarm installation in Uzbekistan?", a: "Under Cabinet of Ministers Resolution No. 880 of 27.10.2018 the licensing authority is the Ministry of Internal Affairs. The licence is open-ended and the register is public. Check a contractor against the register, not against a copy of the document." },
+          { q: "Who issues the licence for alarm installation in Uzbekistan?", a: "For fire alarms and automatic suppression, the Ministry of Emergency Situations. Today that means a notification confirmation under Resolution No. 88; from 1 March 2026 Law ZRU-1099 introduces an Emergencies Ministry licence. For security systems, the notification goes to the Security Department under the Interior Ministry. Resolution No. 880, under which the Interior Ministry issued licences, lost force on 01.03.2022. Check a contractor in the register on license.gov.uz." },
           { q: "How often must a fire alarm be serviced?", a: "There is no “once a quarter” norm in Uzbekistan. Clause 148 of the Fire Safety Rules (Resolution No. 649) requires an annual plan of scheduled work based on the equipment manufacturer's documentation." },
-          { q: "May a video archive be stored in a foreign cloud?", a: "If the system identifies Uzbek citizens, article 27-1 of Law ZRU-547 requires the database to be stored on hardware in the republic. A local recorder or server in Uzbekistan with remote access satisfies this requirement." },
+          { q: "May a video archive be stored in a foreign cloud?", a: "Article 27-1 of Law ZRU-547, as amended on 26.03.2026, requires biometrics (face and fingerprint templates) to be stored in Uzbekistan. Other personal data may be stored abroad only if one of the article's conditions is met: adequate protection in the destination country, approved contractual clauses or international standards. A local recorder or server in Uzbekistan avoids the question entirely." },
           { q: "Are cameras mandatory in a new apartment building?", a: "Yes, from 1 May 2026 under PP-48: cameras in entrance halls, lifts and on the grounds, plus intercoms on entrance doors. Without them the design fails expert review and the building is not accepted for occupancy." },
         ],
       },
       tr: {
         title: "Özbekistan'ın video gözetim, geçiş kontrol ve yangın alarmı mevzuatı: belge numaralı rehber",
-        excerpt: "Güvenlik sistemlerini düzenleyen altı yürürlükteki Özbekistan belgesi: montajı kim lisanslar, yangın alarmı nasıl bakılır, video arşivi nerede saklanır, yeni konutlarda ne zorunlu. Yalnızca birincil kaynaklar, Rus normları yok.",
+        excerpt: "Güvenlik sistemlerini düzenleyen yedi Özbekistan belgesi: montaj için bildirimi kim kabul eder ve lisansı kim verir, yangın alarmına nasıl bakım yapılır, biyometri ve video arşivi nerede saklanır, yeni konutlarda ne zorunludur. Yalnızca birincil kaynaklar, Rus normları yok.",
         summary: [
-          "Alarm montajı lisansı — 27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı: lisans süresiz, sicil kamuya açık",
+          "Yangın alarmı ve söndürme montajı: 25.02.2022 tarihli 88 sayılı Karar uyarınca Olağanüstü Durumlar Bakanlığı bildirimi; 01.03.2026'dan itibaren ZRU-1099 Kanunu bu Bakanlığın lisansını getiriyor. 880 sayılı karar 01.03.2022'de yürürlükten kalktı",
           "Yangın alarmı bakımı — 20.10.2020 tarihli 649 sayılı Karar, md. 148–149: «üç ayda bir» değil, yıllık plan",
-          "Video arşivi ve biyometri — ZRU-547 Kanunu, md. 27-1: vatandaş verileri Özbekistan'daki sunucularda saklanır",
+          "Biyometri: ZRU-547 Kanunu, 26.03.2026 tarihli ZRU-1125 ile değişik md. 27-1; yüz ve parmak izi şablonları Özbekistan'da saklanır",
           "Yeni konutlarda kamera ve diafon — 05.02.2026 tarihli PP-48 Cumhurbaşkanı Kararı, md. 11: 1 Mayıs 2026'dan itibaren zorunlu",
         ],
         sections: [
           { h: "Rus normları neden kullanılamaz", p: [
-            "Alarm veya video gözetimle ilgili her soruya Rusça arama sonuçları Rusya Federasyonu normlarıyla yanıt verir: «üç ayda bir bakım», «Acil Durumlar Bakanlığı lisansı», «SP 3.13130». Özbekistan'ın kendi belgeleri vardır ve bunlar süreler, kurumlar ve müşteri yükümlülükleri bakımından farklı kurgulanmıştır. Bu rehberdeki her maddeyi aktarımlara göre değil, lex.uz'daki belge metnine göre kontrol ettik.",
-            "Rehber, sözleşmede, teknik şartnamede veya yayında atıf yapılabilsin diye belge numarası, tarihi ve kilit maddeyi verir. Dört konuda ayrıntılı incelemeler var — bağlantılar makale sonunda. Geçerlilik kontrolü tarihi — 21 Eylül 2026.",
+            "Alarm veya video gözetimle ilgili her soruya Rusça arama sonuçları Rusya Federasyonu normlarıyla yanıt verir: «üç ayda bir bakım», «SP 3.13130», «NPB 104-03». Özbekistan'ın kendi belgeleri vardır ve bunlarda süreler, kurumlar ve müşteri yükümlülükleri farklıdır. Bu rehberdeki her maddeyi aktarımlara göre değil, lex.uz'daki belge metnine göre kontrol ettik.",
+            "Rehber her belge için numara, tarih ve kilit maddeyi verir; böylece sözleşmede, teknik şartnamede veya yayında atıf yapılabilir. Dört konuda ayrıntılı incelemeler var, bağlantılar makale sonunda. Geçerlilik kontrolü tarihi: 16 Kasım 2026. Bu sürümde izin usulü ve kişisel veriler bölümleri güncellendi.",
           ] },
-          { h: "Montaj lisansı: 27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı", p: [
-            "880 sayılı Bakanlar Kurulu Kararı, yangın otomasyonu, hırsız, yangın ve birleşik alarm sistemlerinin tasarımı, montajı, devreye alınması, onarımı ve bakımı faaliyetlerinin lisanslanmasını düzenler. Karara göre lisans veren kurum, Rus kaynaklarının söylediği gibi Acil Durumlar Bakanlığı değil, İçişleri Bakanlığı'dır.",
-            "Lisans süresizdir, iş türlerinin bir kısmı için verilebilir, lisans sicili kamuya açıktır. Yüklenici şartları: kadroda en az üç yıl deneyimli ve en az üçüncü derece nitelikli en az iki çalışan. Belgelerimiz: güvenlik sistemleri için Ulusal Muhafızlar onayı No. 1554491 ve yangın sistemleri için Acil Durumlar Bakanlığı lisansı No. 913518 — ikisi de «Hakkımızda» sayfasında açık.",
+          { h: "Montaj için izin usulü: 25.02.2022 tarihli 88 sayılı Karar ve ZRU-1099 Kanunu", p: [
+            "Alarm montajını İçişleri Bakanlığı üzerinden lisanslayan, Bakanlar Kurulunun 27.10.2018 tarihli 880 sayılı kararı 1 Mart 2022'de yürürlükten kalktı. O tarihten beri işler 25.02.2022 tarihli 88 sayılı karara göre bildirimle yürütülüyor. Yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, devreye alınması, onarımı ve bakımına ilişkin bildirimi Olağanüstü Durumlar Bakanlığı kabul eder: Ek 9, 13.07.2024 tarihli 418 sayılı kararla değişik. Güvenlik teknik araçlarına ilişkin bildirimi İçişleri Bakanlığı Koruma Dairesi kabul eder: Ek 10, 10.03.2026 tarihli 94 sayılı kararla değişik.",
+            "27.11.2025 tarihli ZRU-1099 Kanunu, 1 Mart 2026'dan itibaren yangın alarmı ve otomatik söndürmeyle ilgili aynı işleri lisanslı faaliyetler listesine ekledi (ZRU-701 Kanunu Ek 1, madde 61). Lisans veren makam Olağanüstü Durumlar Bakanlığı, harç 5 temel hesaplama birimidir. 16.11.2026 itibarıyla lisansın veriliş usulü onaylanmadı: 80 sayılı Kararda pasaportu yok, 88 sayılı kararın Ek 9'u yürürlükte. Belgelerimiz «Hakkımızda» sayfasında açık: yangın sistemleri için Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518 (23.07.2025 tarihli bildirim alındı onayı) ve güvenlik sistemleri için Ulusal Muhafız izin belgesi No. 1554491. Ayrıntılı inceleme alarm montaj lisansı makalesinde.",
           ] },
           { h: "Yangın alarmı bakımı: 20.10.2020 tarihli 649 sayılı Karar, md. 148–149", p: [
             "649 sayılı Kararla onaylanan Yangın Güvenliği Kuralları «üç ayda bir» normu içermez. 04.04.2022 tarihli 153 sayılı Kararla değişik 148. madde, ekipman üreticisinin teknik belgelerine göre hazırlanmış yıllık periyodik bakım planı gerektirir. Sisteme tesisin kendi eğitimli personeli ya da lisanslı bir kuruluş bakım yapabilir.",
-            "149. madde koşulludur: bakım kuruluşuyla 30 gün içinde sözleşme yalnızca tesis uzmanları işi kendileri yapamıyorsa gerekir ve süre cihazların işletmeye alınmasından itibaren işler. Sözleşme feshedildiğinde bakım kuruluşu 24 saat içinde ilçe veya il acil durum birimini bilgilendirir.",
+            "149. madde koşulludur: bakım kuruluşuyla 30 gün içinde sözleşme yalnızca tesis uzmanları işi kendileri yapamıyorsa gerekir. Süre cihazların işletmeye alınmasından itibaren işler. Sözleşme feshedildiğinde işletme yöneticisi 24 saat içinde ilçe veya şehir olağanüstü durumlar birimine bildirir.",
           ] },
-          { h: "Video arşivi ve biyometri: 02.07.2019 tarihli ZRU-547 Kanunu, md. 27-1", p: [
-            "Kişisel Veriler Kanunu, bir kişinin tanımlanmasını sağlayan her bilgiyi kişisel veri sayar — yüzü seçilebilen bir video kaydı bu tanıma girer, geçiş kontrol sistemindeki yüz veya parmak izi şablonu ise daha sıkı bir kategori olan biyometrik veri sayılır.",
-            "27-1. madde, Özbekistan vatandaşlarının kişisel veri tabanlarının cumhuriyet topraklarında fiziksel olarak bulunan ve Kişisel Veri Tabanları Devlet Sicili'ne kayıtlı donanımda toplanmasını, düzenlenmesini ve saklanmasını zorunlu kılar. Yetkili kurum, Bakanlar Kurulu bünyesindeki Devlet Kişiselleştirme Merkezi'dir. Pratik sonuç: video arşivi ve biyometri veri tabanı üreticinin yabancı bulutunda değil, Özbekistan'daki kayıt cihazı veya sunucuda bulunmalıdır.",
-          ] },
+          { h: "Biyometri ve video arşivi: 02.07.2019 tarihli ZRU-547 Kanunu, ZRU-1125 ile değişik md. 27-1", p: [
+            "Kişisel Veriler Kanunu bir kişinin tanımlanmasını sağlayan her bilgiyi kişisel veri sayar; yüzü seçilebilen bir video kaydı da bu tanıma girer. 26. maddeye göre biyometrik veriler, kişinin anatomik ve fizyolojik özelliklerini tanımlayan kişisel verilerdir. Geçiş kontrol ve mesai takip sistemlerindeki yüz ve parmak izi şablonları bu kapsamdadır.",
+            "26.03.2026 tarihli ZRU-1125 Kanunu ile değişik 27-1. madde, biyometrik ve genetik verilerin ve telekom operatörü abonelerine ait verilerin Özbekistan'da saklanmasını zorunlu kılar. Diğer kişisel veriler, şu koşullardan biri sağlanırsa yurt dışında saklanabilir ve işlenebilir:",
+            "Yetkili kurum, Bakanlar Kurulu bünyesindeki Devlet Kişiselleştirme Merkezi'dir. Veri tabanlarının Devlet Sicili'ne kaydı devam ediyor (md. 20). Pratikte geçiş kontrol sisteminin yüz ve parmak izi veri tabanı Özbekistan'daki sunucu veya terminallerde bulunmalıdır. Yüz tanıma yapan video arşivi biyometri kuralına girer. Sıradan bir arşiv ancak maddedeki koşullardan biri sağlanırsa yurt dışına taşınabilir. Bu karardan önce bir avukatın görüşünü almanız iyi olur.",
+          ], ul: ["ülkenin yeterli koruma sağladığı kabul edilmiştir;", "operatör, yetkili kurumun onayladığı standart sözleşme hükümlerini veya bağlayıcı şirket kurallarını uygular;", "operatör, bu kurumun onayladığı uluslararası standartlara uyar."], ulAt: 2 },
           { h: "Yeni konutlar: 05.02.2026 tarihli PP-48, md. 11", p: [
             "PP-48 sayılı Cumhurbaşkanı Kararı, 1 Mayıs 2026'dan itibaren yeni apartman projelerine her girişte, asansörlerde ve çevre alanda video kameraların ve giriş kapılarında diafonların dahil edilmesini şart koşar.",
             "Bu sistemler olmadan proje uzman incelemesinden geçmez, ortak mülkü kurulmamış bina iskâna kabul edilemez. Kurulan ekipman ortak mülk olarak yönetim şirketine devredilir, bilgileri «Turarjoy» platformunun «Mening uyim» bilgi sistemine girilir.",
@@ -13045,38 +13049,39 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "Özbekistan'da alarm montajı lisansını kim verir?", a: "27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı'na göre lisans veren kurum İçişleri Bakanlığı'dır. Lisans süresiz, sicil kamuya açıktır. Yükleniciyi belge kopyasıyla değil sicille kontrol edin." },
+          { q: "Özbekistan'da alarm montajı lisansını kim verir?", a: "Yangın alarmı ve otomatik söndürme için Olağanüstü Durumlar Bakanlığı. Bugün bu, 88 sayılı Karar uyarınca bildirim onayı anlamına geliyor; 1 Mart 2026'dan itibaren ZRU-1099 Kanunu bu Bakanlığın lisansını getiriyor. Güvenlik sistemleri için bildirimi İçişleri Bakanlığı Koruma Dairesi kabul eder. İçişleri Bakanlığı'nın lisans verdiği 880 sayılı karar 01.03.2022'de yürürlükten kalktı. Yükleniciyi license.gov.uz'daki sicilden kontrol edin." },
           { q: "Yangın alarmına ne sıklıkla bakım yapılmalı?", a: "Özbekistan'da «üç ayda bir» normu yoktur. Yangın Güvenliği Kuralları'nın 148. maddesi (649 sayılı Karar) ekipman üreticisinin belgelerine göre yıllık periyodik bakım planı gerektirir." },
-          { q: "Video arşivi yabancı bir bulutta saklanabilir mi?", a: "Sistem Özbekistan vatandaşlarını tanımlıyorsa ZRU-547 Kanunu'nun 27-1. maddesi veri tabanının cumhuriyetteki donanımda saklanmasını gerektirir. Uzaktan erişimli, Özbekistan'daki yerel kayıt cihazı veya sunucu bu şartı karşılar." },
+          { q: "Video arşivi yabancı bir bulutta saklanabilir mi?", a: "ZRU-547 Kanunu'nun 26.03.2026 tarihinde değişen 27-1. maddesi, biyometrinin, yani yüz ve parmak izi şablonlarının Özbekistan'da saklanmasını gerektirir. Diğer kişisel veriler ancak maddedeki koşullardan biri sağlanırsa yurt dışında saklanabilir: ülkede yeterli koruma, onaylı sözleşme hükümleri veya uluslararası standartlar. Özbekistan'daki yerel kayıt cihazı veya sunucu bu soruyu tamamen ortadan kaldırır." },
           { q: "Yeni bir apartmanda kameralar zorunlu mu?", a: "Evet, PP-48 uyarınca 1 Mayıs 2026'dan itibaren: girişlerde, asansörlerde ve çevre alanda kameralar ile giriş kapılarında diafonlar. Bunlar olmadan proje uzman incelemesinden geçmez, bina iskâna kabul edilmez." },
         ],
       },
       zh: {
         title: "乌兹别克斯坦视频监控、门禁与火灾报警法规：附文件编号的参考指南",
-        excerpt: "规范安防系统的六份乌兹别克斯坦现行文件：谁颁发安装许可、火灾报警如何维护、视频存档存放于何处、新建住宅必须配备什么。仅基于一手来源，不引用俄罗斯规范。",
+        excerpt: "规范安防系统的七份乌兹别克斯坦文件：安装告知由谁受理、许可证由谁颁发，火灾报警如何维护，生物识别数据和视频存档存放于何处，新建住宅必须配备什么。仅基于一手来源，不引用俄罗斯规范。",
         summary: [
-          "报警系统安装许可 — 2018 年 10 月 27 日第 880 号内阁决议：许可证无期限，登记册公开",
+          "火灾报警与灭火系统安装：依据 2022 年 2 月 25 日第 88 号内阁决议向紧急情况部告知；自 2026 年 3 月 1 日起，ZRU-1099 号法律引入紧急情况部许可证。第 880 号决议已于 2022 年 3 月 1 日失效",
           "火灾报警维护 — 2020 年 10 月 20 日第 649 号内阁决议第 148–149 条：年度计划，而非“每季度一次”",
-          "视频存档与生物识别 — ZRU-547 法第 27-1 条：公民数据库须存储在乌兹别克斯坦境内的服务器上",
+          "生物识别数据：ZRU-547 法第 27-1 条（经 2026 年 3 月 26 日 ZRU-1125 号法律修订），人脸和指纹模板须存储在乌兹别克斯坦境内",
           "新建住宅的摄像机与对讲 — 2026 年 2 月 5 日第 PP-48 号总统决议第 11 条：自 2026 年 5 月 1 日起强制",
         ],
         sections: [
           { h: "为什么不能套用俄罗斯规范", p: [
-            "关于报警或视频监控的任何问题，俄语搜索结果都以俄罗斯联邦的规范作答：“每季度维护一次”“紧急情况部许可证”“SP 3.13130”。乌兹别克斯坦有自己的文件，且在期限、主管机关和客户义务方面结构不同。本指南的每一条我们都按 lex.uz 上的文件原文核对，而非转述。",
-            "指南给出文件编号、日期和关键条款，便于在合同、技术任务书或报道中引用。其中四个主题有详细解读——链接见文末。有效性核对日期：2026 年 9 月 21 日。",
+            "关于报警或视频监控的任何问题，俄语搜索结果都以俄罗斯联邦的规范作答：「每季度维护一次」「SP 3.13130」「NPB 104-03」。乌兹别克斯坦有自己的文件，期限、主管机关和客户义务都不同。本指南的每一条我们都按 lex.uz 上的文件原文核对，而非转述。",
+            "指南为每份文件给出编号、日期和关键条款，便于在合同、技术任务书或报道中引用。其中四个主题有详细解读，链接见文末。有效性核对日期：2026 年 11 月 16 日。本版更新了许可审批制度和个人数据两节。",
           ] },
-          { h: "安装许可：2018 年 10 月 27 日第 880 号内阁决议", p: [
-            "内阁第 880 号决议规范消防自动化、入侵报警、火灾报警及综合报警系统的设计、安装、调试、维修和维护活动的许可。根据该决议，发证机关是内务部，而非俄罗斯来源所称的紧急情况部。",
-            "许可证无期限，可仅针对部分工作类型颁发，许可登记册公开。对承包商的要求：在编员工不少于两人，工龄不少于三年，资质不低于三级。我们的文件：国民近卫军安防系统确认书第 1554491 号和紧急情况部消防系统许可证第 913518 号——均公开于“关于公司”页面。",
+          { h: "安装的许可审批制度：2022 年 2 月 25 日第 88 号决议与 ZRU-1099 号法律", p: [
+            "由内务部颁发报警安装许可的 2018 年 10 月 27 日第 880 号内阁决议，已于 2022 年 3 月 1 日失效。自该日起，相关工作依据 2022 年 2 月 25 日第 88 号决议实行告知制。火灾报警和自动灭火系统安装、调试、维修与维护的告知由紧急情况部受理，见附件 9（经 2024 年 7 月 13 日第 418 号决议修订）。安防技术设备的告知由内务部下属安保局受理，见附件 10（经 2026 年 3 月 10 日第 94 号决议修订）。",
+            "2025 年 11 月 27 日 ZRU-1099 号法律自 2026 年 3 月 1 日起，将上述火灾报警和自动灭火工作列入许可经营活动清单（ZRU-701 法附件 1 第 61 项）。发证机关为紧急情况部，国家规费为 5 个基本计算值。截至 2026 年 11 月 16 日，许可证发放程序尚未批准：第 80 号决议中没有其护照，第 88 号决议附件 9 仍然有效。我们的文件公开于「关于公司」页面：消防系统为紧急情况部许可文件第 913518 号（2025 年 7 月 23 日告知受理确认书），安防系统为国民近卫军许可文件第 1554491 号。详细解读见关于报警系统安装许可的文章。",
           ] },
           { h: "火灾报警维护：2020 年 10 月 20 日第 649 号内阁决议第 148–149 条", p: [
             "第 649 号决议批准的《消防安全规则》不含“每季度一次”的规定。经 2022 年 4 月 4 日第 153 号决议修订的第 148 条要求依据设备制造商技术文件编制年度定期维护计划。系统可由场所自有的受训人员或持证机构维护。",
-            "第 149 条为条件性条款：仅当场所专业人员无法自行完成工作时，才须在 30 天内与维护机构签订合同，期限自设备投入使用之日起算。合同解除时，维护机构须在 24 小时内通知区或市紧急情况部门。",
+            "第 149 条为条件性条款：仅当场所专业人员无法自行完成工作时，才须在 30 天内与维护机构签订合同，期限自设备投入使用之日起算。合同解除时，企业负责人须在 24 小时内通知区或市紧急情况部门。",
           ] },
-          { h: "视频存档与生物识别：2019 年 7 月 2 日 ZRU-547 法第 27-1 条", p: [
-            "《个人数据法》将任何可识别个人的信息视为个人数据——面部可辨的视频记录属于此定义，而门禁系统中的人脸或指纹模板属于更严格的类别：生物识别数据。",
-            "第 27-1 条要求乌兹别克斯坦公民的个人数据库须在实际位于共和国境内并在国家个人数据库登记册登记的技术设备上收集、整理和存储。主管机关是内阁下属的国家个人化中心。实际后果：视频存档和生物识别数据库必须存放在乌兹别克斯坦境内的录像机或服务器上，而非制造商的境外云端。",
-          ] },
+          { h: "生物识别与视频存档：2019 年 7 月 2 日 ZRU-547 法第 27-1 条（ZRU-1125 修订版）", p: [
+            "《个人数据法》将任何可识别个人的信息视为个人数据，面部可辨的视频记录也属于此定义。依第 26 条，生物识别数据是描述个人解剖和生理特征的个人数据，门禁和考勤系统中的人脸和指纹模板都属于这一类。",
+            "经 2026 年 3 月 26 日 ZRU-1125 号法律修订的第 27-1 条，要求生物识别数据、基因数据以及电信运营商用户数据存储在乌兹别克斯坦境内。其他个人数据满足下列条件之一，即可在境外存储和处理：",
+            "授权机关是内阁下属的国家个人化中心。数据库在国家登记册登记的要求仍然保留（第 20 条）。实际结论：门禁系统的人脸和指纹数据库须存放在乌兹别克斯坦境内的服务器或终端上。带人脸识别的视频存档适用生物识别规定。普通存档只有在满足该条条件之一时才可迁往境外，作此决定前最好先取得律师意见。",
+          ], ul: ["目的国被认定提供充分保护；", "运营者采用授权机关批准的标准合同条款或有约束力的公司规则；", "运营者遵守该机关批准的国际标准。"], ulAt: 2 },
           { h: "新建住宅：2026 年 2 月 5 日第 PP-48 号总统决议第 11 条", p: [
             "第 PP-48 号总统决议要求自 2026 年 5 月 1 日起，新建多层住宅的设计须包含每个单元门厅、电梯及周边区域的视频摄像机，以及单元入口门上的对讲系统。",
             "缺少这些系统，设计无法通过审查；共用财产未安装的住宅禁止验收投入使用。安装的设备作为共用财产移交物业管理机构，其信息录入“Turarjoy”平台的“Mening uyim”信息系统。",
@@ -13095,9 +13100,9 @@ export const ARTICLES: Article[] = [
           ] },
         ],
         faq: [
-          { q: "乌兹别克斯坦的报警系统安装许可由谁颁发？", a: "根据 2018 年 10 月 27 日第 880 号内阁决议，发证机关是内务部。许可证无期限，登记册公开。核查承包商请以登记册为准，而非文件复印件。" },
+          { q: "乌兹别克斯坦的报警系统安装许可由谁颁发？", a: "火灾报警和自动灭火由紧急情况部负责。目前这是依第 88 号决议出具的告知受理确认书；自 2026 年 3 月 1 日起，ZRU-1099 号法律引入紧急情况部许可证。安防系统的告知由内务部下属安保局受理。由内务部颁发许可的第 880 号决议已于 2022 年 3 月 1 日失效。核查承包商请以 license.gov.uz 登记册为准。" },
           { q: "火灾报警多久维护一次？", a: "乌兹别克斯坦没有“每季度一次”的规定。《消防安全规则》（第 649 号决议）第 148 条要求依据设备制造商文件编制年度定期维护计划。" },
-          { q: "视频存档可以存放在境外云端吗？", a: "若系统识别乌兹别克斯坦公民，ZRU-547 法第 27-1 条要求数据库存储在共和国境内的技术设备上。带远程访问的本地录像机或境内服务器即可满足该要求。" },
+          { q: "视频存档可以存放在境外云端吗？", a: "经 2026 年 3 月 26 日修订的 ZRU-547 法第 27-1 条，要求生物识别数据（人脸和指纹模板）存储在乌兹别克斯坦境内。其他个人数据只有满足该条条件之一才可存放境外：目的国提供充分保护、采用经批准的合同条款或遵守国际标准。使用境内本地录像机或服务器即可完全避免这一问题。" },
           { q: "新建住宅楼必须安装摄像机吗？", a: "是的，依据 PP-48，自 2026 年 5 月 1 日起：门厅、电梯和周边区域安装摄像机，入口门安装对讲。缺少这些，设计无法通过审查，住宅不予验收。" },
         ],
       },
@@ -14104,158 +14109,289 @@ export const ARTICLES: Article[] = [
   {
     slug: "licenziya-na-montazh-signalizacii-uzbekistan",
     date: "2026-09-10",
-    updated: "2026-09-10",
+    updated: "2026-11-16",
     related: ["fire", "alarm"],
     hubs: ["pozharnaya-bezopasnost", "zamki-i-skud"],
+    seeAlso: ["kak-vybrat-postavshchika-videonablyudeniya-skud", "obsluzhivanie-pozharnoy-signalizacii-uzbekistan", "normy-slabotochnye-sistemy-uzbekistan"],
     loc: {
       ru: {
-        title: "Лицензия на монтаж сигнализации в Узбекистане: кто выдаёт и как проверить подрядчика", seoTitle: "Лицензия на монтаж сигнализации: как проверить подрядчика",
-        excerpt: "Деятельность по проектированию, монтажу и обслуживанию пожарной и охранной сигнализации лицензирует МВД, а не МЧС. Лицензия бессрочная, реестр публичный, требования к штату — в постановлении № 880 от 27.10.2018.",
+        title: "Лицензия на монтаж сигнализации в Узбекистане в 2026 году: уведомление, лицензия МЧС и проверка подрядчика", seoTitle: "Лицензия на монтаж сигнализации 2026: проверка подрядчика", seoDesc: "ПКМ № 880 утратил силу в 2022 году. Пожарная сигнализация — по уведомлению МЧС (ПКМ № 88), с 01.03.2026 закон ЗРУ-1099 вводит лицензию МЧС. Как проверить.",
+        excerpt: "Постановление № 880 о лицензировании через МВД утратило силу 1 марта 2022 года. Сейчас монтаж и обслуживание пожарной сигнализации и автоматического пожаротушения ведутся по уведомлению МЧС (ПКМ № 88 от 25.02.2022). С 1 марта 2026 года закон ЗРУ-1099 вводит на эти работы лицензию МЧС. Что проверить у подрядчика.",
+        summary: [
+          "ПКМ № 880 от 27.10.2018 (лицензирование через МВД) утратил силу 01.03.2022",
+          "Сейчас действует уведомительный порядок по ПКМ № 88 от 25.02.2022. Пожарная сигнализация и автоматическое пожаротушение — МЧС, охранные системы — Департамент охраны при МВД",
+          "С 01.03.2026 закон ЗРУ-1099 вводит лицензию МЧС на монтаж и ТО пожарной сигнализации и пожаротушения; госпошлина — 5 БРВ",
+          "Подрядчика проверяют по номеру документа в открытом реестре на license.gov.uz на дату договора",
+        ],
         sections: [
-          { h: "Лицензию выдаёт МВД, а не МЧС", p: [
-            "Это первое, на чём ошибаются почти все, кто ищет ответ в интернете. Русскоязычные источники отвечают по российской практике, где лицензии на противопожарную деятельность выдаёт МЧС. В Узбекистане иначе: постановление Кабинета Министров от 27 октября 2018 года № 880 прямо определяет, что лицензирование деятельности по проектированию, монтажу, наладке, ремонту и техническому обслуживанию средств противопожарной автоматики, охранной, пожарной и охранно-пожарной сигнализации осуществляется Министерством внутренних дел Республики Узбекистан.",
-            "Практический смысл этой разницы простой: если подрядчик показывает вам лицензию МЧС на монтаж сигнализации, документ выдан не тем органом. Проверять надо реестр лицензирующего органа — по постановлению он размещается на его веб-сайте и открыт для ознакомления.",
+          { h: "Коротко: какой порядок действует в ноябре 2026 года", p: [
+            "До 1 марта 2022 года монтаж, наладку, ремонт и обслуживание пожарной и охранной сигнализации лицензировало Министерство внутренних дел. Основание — постановление Кабинета Министров № 880 от 27.10.2018. Это постановление утратило силу 1 марта 2022 года, но многие тексты в интернете до сих пор на него ссылаются. Из них же идёт тезис «лицензию выдаёт МВД, а не МЧС». Для пожарных систем он сегодня неверен.",
+            "Сейчас действуют два документа. Постановление Кабинета Министров № 88 от 25.02.2022 перевело эти работы в уведомительный порядок. По пожарной сигнализации и автоматическому пожаротушению уведомление принимает МЧС, по охранным системам — Департамент охраны при МВД. Закон ЗРУ-1099 от 27.11.2025 вступил в силу 1 марта 2026 года. Он добавил монтаж и обслуживание пожарной сигнализации и автоматического пожаротушения в перечень лицензируемых видов деятельности, лицензирующий орган — МЧС. Ниже — что это значит для заказчика и как проверить подрядчика на дату договора.",
           ] },
-          { h: "Что именно лицензируется", p: [
-            "Лицензия покрывает пять видов работ с одними и теми же системами: проектирование, монтаж, наладку, ремонт и техническое обслуживание. Системы — средства противопожарной автоматики, охранная, пожарная и охранно-пожарная сигнализация. То есть под лицензирование попадает и проект, и работа руками, и последующий регламент.",
-            "Важная деталь, о которой редко пишут: по заявлению соискателя лицензия может быть выдана на часть лицензируемой деятельности. Компания вправе иметь лицензию только на техническое обслуживание, но не на проектирование. Поэтому корректный вопрос подрядчику звучит не «есть ли у вас лицензия», а «на какие виды работ она выдана».",
+          { h: "Почему постановление № 880 больше не применяется", p: [
+            "Постановление № 880 утверждало Положение о лицензировании деятельности по проектированию, монтажу, наладке, ремонту и техническому обслуживанию средств противопожарной автоматики, охранной, пожарной и охранно-пожарной сигнализации. Лицензирующим органом по нему было МВД. Требования к штату и материальной базе были прописаны в самом положении.",
+            "На lex.uz у документа стоит отметка «Акт утратил силу 01.03.2022»: в этот день вступило в силу постановление № 88 о едином порядке уведомления о начале и прекращении деятельности. Поэтому ссылка на № 880 в договоре, техническом задании или тендерной документации сегодня ничего не подтверждает. Его требования, например к стажу и разряду работников, заменены требованиями нового паспорта деятельности.",
           ] },
-          { h: "Требования к подрядчику, которые стоит знать заказчику", p: [
-            "Положение задаёт минимальный состав специалистов: в постоянном штате юридического лица должно быть не менее двух работников — руководитель работ и исполнитель — со стажем работы по соответствующему профилю не менее трёх лет. Профиль считается по тому же перечню: проектирование, монтаж, наладка, ремонт или техническое обслуживание установок пожаротушения и сигнализации.",
-            "К образованию тоже есть требование. Исполнители работ должны иметь высшее или профессионально-техническое образование либо специальную подготовку по направлениям «электроэнергетика», «электроника и микроэлектроника», «автоматизация и управление», «радиотехника и телекоммуникация» — не ниже третьего разряда. Кроме того, положение отдельно оговаривает материально-техническую базу, необходимую для заявленных работ.",
+          { h: "Уведомительный порядок: постановление № 88 от 25.02.2022", p: [
+            "В постановлении № 88 собраны паспорта видов деятельности, которые ведутся по уведомлению. Приложение 9 (в редакции постановления № 418 от 13.07.2024) — монтаж, наладка, ремонт и техническое обслуживание устройств автоматического пожаротушения и пожарной сигнализации. Уведомление принимает Министерство по чрезвычайным ситуациям. Приложение 10 (в редакции постановления № 94 от 10.03.2026) — те же работы с техническими средствами и системами охраны. Уведомление принимает Департамент охраны при Министерстве внутренних дел.",
+            "Организация подаёт уведомление и получает подтверждение о его получении с номером. Сбор за уведомление по паспорту приложения 9 — 50 % базовой расчётной величины. Срок действия подтверждения в паспорте не установлен. Подтверждение может покрывать один подвид работ или оба, например только пожарную сигнализацию без автоматического пожаротушения. Поэтому спрашивать подрядчика надо не «есть ли у вас документ», а «на какие виды работ и на какое юридическое лицо он выдан».",
           ] },
-          { h: "Лицензия бессрочная, но её могут отозвать", p: [
-            "Лицензия на этот вид деятельности выдаётся без ограничения срока действия. Ежегодно продлевать её не нужно, и дата выдачи сама по себе ни о чём не говорит — документ 2019 года так же действителен, как документ прошлого месяца.",
-            "Зато положение предусматривает приостановление, прекращение действия и аннулирование лицензии за нарушение лицензионных требований, а лицензирующий орган ведёт контроль за их соблюдением. Именно поэтому проверять надо не бумагу на руках у подрядчика, а запись в реестре на момент подписания договора.",
+          { h: "С 1 марта 2026 года: лицензия МЧС по закону ЗРУ-1099", p: [
+            "Закон ЗРУ-1099 от 27.11.2025 вносит изменения в законодательство в связи с совершенствованием лицензионных, разрешительных и уведомительных процедур. Он вступил в силу через три месяца после опубликования, 1 марта 2026 года. Закон дополнил приложение 1 к Закону «О лицензионных, разрешительных и уведомительных процедурах» (ЗРУ-701) пунктом 61: лицензия на монтаж, наладку, ремонт и техническое обслуживание устройств автоматического пожаротушения и пожарной сигнализации, лицензирующий орган — МЧС. Статья 24 Закона «О пожарной безопасности» теперь называется «Лицензирование деятельности в области пожарной безопасности». Госпошлина за лицензию — 5 базовых расчётных величин.",
+            "На 16 ноября 2026 года порядок выдачи этой лицензии не утверждён: в постановлении Кабинета Министров № 80 от 21.02.2022, где собраны паспорта лицензируемых видов деятельности, паспорта этой лицензии нет, а приложение 9 постановления № 88 сохраняется. При проверке 20 октября 2026 года на портале license.gov.uz по этим работам была доступна только услуга уведомления. Переходных положений для организаций, работающих по уведомлению, в тексте закона мы не нашли. Вывод для заказчика: пока порядок не утверждён, проверяют действующее подтверждение уведомления МЧС, после утверждения — лицензию. Статус проверяйте на дату договора.",
           ] },
-          { h: "Зачем это заказчику на практике", p: [
-            "Пожарная сигнализация — часть системы противопожарной защиты объекта, и её принимает инспекция. Работы, выполненные организацией без соответствующей лицензии, создают риск на самом неприятном этапе: когда объект готов, деньги потрачены, а сдача не проходит. Переделка силами лицензированного подрядчика обходится дороже, чем изначально правильный выбор.",
-            "Вторая причина — обслуживание. По правилам пожарной безопасности собственник обязан в течение тридцати дней после ввода систем заключить договор на обслуживание с лицензированной организацией. Если монтаж делал подрядчик без лицензии, договор с ним не закроет это требование.",
+          { h: "Что входит в вид деятельности, а что нет", p: [
+            "И уведомление, и новая лицензия охватывают четыре вида работ: монтаж, наладку, ремонт и техническое обслуживание. Объекты — устройства автоматического пожаротушения и пожарной сигнализации, для охранных систем — технические средства и системы охраны по приложению 10. Пожарная сигнализация и пожаротушение — два разных подвида. В подтверждении указано, какие из них заявлены.",
+            "В постановлении № 880 проектирование было, а в названии вида деятельности по постановлению № 88 и закону ЗРУ-1099 его нет. Если в договоре есть разработка проекта, спросите подрядчика, кто его выполняет и по каким нормам. Сверьте проект с ШНК 2.04.09-2007 «Пожарная автоматика зданий и сооружений»: именно на этот документ ссылается паспорт деятельности.",
+          ] },
+          { h: "Требования к подрядчику по паспорту приложения 9", p: [
+            "Руководитель работ: работает в постоянном штате; имеет высшее образование по направлению «инженерное дело»: электроника и электротехника, информатика и информационные технологии или электротехника; имеет стаж не менее трёх лет и специальную подготовку по монтажу и обслуживанию пожарной автоматики; повышает квалификацию не реже одного раза в четыре года.",
+            "В уведомлении указывают не менее двух исполнителей. Для пожаротушения нужен электро- или газосварщик либо монтажник санитарно-технических систем не ниже 4-го разряда. Для пожарной сигнализации — специалист по электронике и электротехнике не ниже 3-го разряда. Исполнители могут быть в штате или работать по договору, у субподрядчика указывается разряд.",
+            "Паспорт перечисляет и материальную базу:",
+            "Нужны служебное помещение не менее 20 м² и место для хранения оборудования не менее 20 м². Работы ведутся по РДПБ 01-001:2007, 01-002:2007, 01-003:2008, 01-004:2010 и ШНК 2.04.09-2007. Грубое нарушение по паспорту — нет реестра объектов, где выполнялся монтаж, или проектная и иная документация не хранится весь срок эксплуатации.",
+          ], ul: ["комбинированный прибор, мегаомметр и шумомер с действующей метрологической поверкой;", "паяльник, перфоратор и дрель;", "наборы слесарного и электромонтажного инструмента;", "каска и монтажный пояс;", "лестница и стремянка;", "компрессор для работ с пожаротушением;", "сейф для проектно-сметной документации."], ulAt: 3 },
+          { h: "Как проверить подрядчика за пять минут", p: [
+            "Попросите номер подтверждения уведомления (после утверждения порядка — номер лицензии) и найдите его в открытом реестре на license.gov.uz. Сверьте четыре вещи:",
+            "Копия документа в папке подрядчика ничего не доказывает: деятельность могли приостановить или прекратить, а реестр показывает состояние на сегодня. Сохраните выписку или снимок экрана из реестра на дату подписания договора. Это пригодится при приёмке и в споре.",
+          ], ul: ["наименование и ИНН организации совпадают с договором;", "орган — МЧС для пожарных систем, Департамент охраны при МВД (ранее Национальная гвардия) для охранных;", "заявлены нужные вам подвиды работ;", "статус — действующий."], ulAt: 1 },
+          { h: "Зачем это заказчику: обслуживание по пункту 149", p: [
+            "Правила пожарной безопасности (постановление № 649 от 20.10.2020) разрешают обслуживать пожарную автоматику двумя способами: обученными работниками самого объекта или по договору с организацией, имеющей право на этот вид деятельности. Это пункт 148 в редакции постановления № 153 от 04.04.2022. Работы ведутся по годовому плану, составленному по документации изготовителя.",
+            "Пункт 149 условный. Если объект не может своими силами обслуживать установки пожарной автоматики, противодымной защиты и оповещения, договор со специализированной организацией заключается в течение 30 дней после ввода устройств в работу. При расторжении такого договора руководитель предприятия в течение 24 часов уведомляет районный (городской) отдел по чрезвычайным ситуациям. Договор с организацией, у которой нет действующего документа на этот вид работ, требование пункта 149 не закрывает.",
           ] },
           { h: "Наши документы", p: [
-            "SAT Solutions работает с лицензиями на проектирование и монтаж систем безопасности и пожарной автоматики. Мы ведём объект целиком: проект, поставка оборудования официальными каналами, монтаж, пусконаладка, сдача с актами и последующее обслуживание по договору.",
-            "Если вы выбираете подрядчика и хотите сверить документы — попросите у нас копии, мы их предоставим до подписания договора. Это нормальная практика, и заказчику стоит требовать её от любого исполнителя.",
+            "У SAT Solutions два документа, оба открыты на странице «О компании». Пожарные системы — разрешение МЧС № 913518. Это подтверждение о получении уведомления от 23.07.2025 на оба подвида: монтаж, наладку и техобслуживание пожарной сигнализации и автоматического пожаротушения. Охранные системы — разрешение Национальной гвардии № 1554491 на монтаж, наладку и техобслуживание технических средств охраны.",
+            "Копии документов и выписку из реестра мы передаём до подписания договора. Требуйте это от любого исполнителя. Объект ведём целиком: поставка оборудования со склада в Ташкенте, монтаж, пусконаладка, сдача с исполнительной документацией и обслуживание по годовому плану. Когда порядок выдачи лицензии МЧС по закону ЗРУ-1099 утвердят, мы обновим эту статью.",
           ] },
+        ],
+        faq: [
+          { q: "Действует ли постановление № 880 о лицензировании монтажа сигнализации?", a: "Нет. Постановление Кабинета Министров № 880 от 27.10.2018 утратило силу 1 марта 2022 года. С этой даты монтаж и обслуживание пожарной и охранной сигнализации ведутся по уведомлению, по постановлению № 88 от 25.02.2022." },
+          { q: "Кто выдаёт документ на монтаж пожарной сигнализации?", a: "МЧС. Сейчас это подтверждение о получении уведомления по приложению 9 постановления № 88. С 1 марта 2026 года закон ЗРУ-1099 вводит лицензию МЧС на те же работы. На 16.11.2026 порядок её выдачи не утверждён." },
+          { q: "А на охранную сигнализацию?", a: "По приложению 10 постановления № 88 (в редакции от 10.03.2026) уведомление принимает Департамент охраны при МВД. До реорганизации эту функцию выполняла Национальная гвардия, поэтому документы, полученные раньше, могут быть выданы ею." },
+          { q: "Как проверить подрядчика?", a: "Попросите номер документа и проверьте его в реестре на license.gov.uz. Сверьте организацию, ИНН, орган, виды работ и статус «действующий» на дату договора." },
         ],
       },
       uz: {
-        title: "Oʻzbekistonda signalizatsiya montaji litsenziyasi: kim beradi va pudratchini qanday tekshirish kerak",
-        excerpt: "Yongʻin va qoʻriqlash signalizatsiyasini loyihalash, montaj qilish va unga xizmat koʻrsatish faoliyatini FVV emas, IIV litsenziyalaydi. Litsenziya muddatsiz, reyestr ochiq, shtatga talablar — 27.10.2018 dagi 880-son qarorda.",
+        title: "Oʻzbekistonda signalizatsiya montaji litsenziyasi 2026-yilda: xabarnoma, FVV litsenziyasi va pudratchini tekshirish", seoTitle: "Signalizatsiya montaji uchun litsenziya: 2026-yilgi tartib", seoDesc: "880-son VMQ 2022-yilda kuchini yoʻqotgan. Yongʻin signalizatsiyasi — FVV xabarnomasi (88-son VMQ), 2026-yil 1-martdan OʻRQ-1099 FVV litsenziyasini kiritdi.",
+        excerpt: "IIV orqali litsenziyalash haqidagi 880-son qaror 2022-yil 1-martda kuchini yoʻqotgan. Hozir yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish va ularga xizmat koʻrsatish FVV xabarnomasi asosida olib boriladi (25.02.2022 dagi 88-son VMQ). 2026-yil 1-martdan OʻRQ-1099 qonuni bu ishlarga FVV litsenziyasini kiritdi. Pudratchida nimani tekshirish kerak.",
+        summary: [
+          "27.10.2018 dagi 880-son VMQ (IIV orqali litsenziyalash) 01.03.2022 dan kuchini yoʻqotgan",
+          "Hozir 25.02.2022 dagi 88-son VMQ boʻyicha xabardor qilish tartibi amal qiladi. Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish — FVV, qoʻriqlash tizimlari — IIV huzuridagi Qoʻriqlash departamenti",
+          "01.03.2026 dan OʻRQ-1099 qonuni yongʻin signalizatsiyasi va yongʻin oʻchirish tizimlarini montaj qilish va ularga xizmat koʻrsatish uchun FVV litsenziyasini kiritdi; davlat boji — 5 BHM",
+          "Pudratchi shartnoma sanasida license.gov.uz dagi ochiq reyestrda hujjat raqami boʻyicha tekshiriladi",
+        ],
         sections: [
-          { h: "Litsenziyani FVV emas, IIV beradi", p: [
-            "Internetdan javob izlayotganlarning deyarli barchasi shu yerda xato qiladi. Rusiyzabon manbalar Rossiya amaliyoti boʻyicha javob beradi, u yerda yongʻinga qarshi faoliyat litsenziyasini FVV beradi. Oʻzbekistonda boshqacha: Vazirlar Mahkamasining 2018-yil 27-oktabrdagi 880-son qarori toʻgʻridan-toʻgʻri belgilaydiki, yongʻinga qarshi avtomatika, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi vositalarini loyihalash, montaj qilish, sozlash, taʼmirlash va texnik xizmat koʻrsatish faoliyatini litsenziyalash Oʻzbekiston Respublikasi Ichki ishlar vazirligi tomonidan amalga oshiriladi.",
-            "Bu farqning amaliy maʼnosi oddiy: agar pudratchi sizga signalizatsiya montaji uchun FVV litsenziyasini koʻrsatsa, hujjat kerakli organ tomonidan berilmagan. Tekshirish kerak boʻlgan joy — litsenziyalovchi organ reyestri: qarorga koʻra u organning veb-saytida joylashtiriladi va tanishish uchun ochiq.",
+          { h: "Qisqacha: 2026-yil noyabrida qaysi tartib amal qiladi", p: [
+            "2022-yil 1-martgacha yongʻin va qoʻriqlash signalizatsiyasini montaj qilish, sozlash, taʼmirlash va unga xizmat koʻrsatishni Ichki ishlar vazirligi litsenziyalagan. Asos — Vazirlar Mahkamasining 27.10.2018 dagi 880-son qarori. Bu qaror 2022-yil 1-martda kuchini yoʻqotgan, lekin internetdagi koʻp matnlar hanuz unga tayanadi. «Litsenziyani FVV emas, IIV beradi» degan gap ham oʻshalardan tarqalgan. Yongʻin tizimlari uchun bugun bu gap notoʻgʻri.",
+            "Hozir ikki hujjat amal qiladi. Vazirlar Mahkamasining 25.02.2022 dagi 88-son qarori bu ishlarni xabardor qilish tartibiga oʻtkazdi. Yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish boʻyicha xabarnomani Favqulodda vaziyatlar vazirligi, qoʻriqlash tizimlari boʻyicha IIV huzuridagi Qoʻriqlash departamenti qabul qiladi. 27.11.2025 dagi OʻRQ-1099 qonuni 2026-yil 1-martda kuchga kirdi. U yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish qurilmalarini montaj qilish va ularga xizmat koʻrsatishni litsenziyalanadigan faoliyat turlari roʻyxatiga qoʻshdi, litsenziyalovchi organ — FVV. Quyida bu buyurtmachi uchun nimani anglatishi va shartnoma sanasida pudratchini qanday tekshirish haqida.",
           ] },
-          { h: "Aynan nima litsenziyalanadi", p: [
-            "Litsenziya bir xil tizimlar boʻyicha besh turdagi ishni qamrab oladi: loyihalash, montaj, sozlash, taʼmirlash va texnik xizmat koʻrsatish. Tizimlar — yongʻinga qarshi avtomatika vositalari, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi. Yaʼni litsenziyaga loyiha ham, qoʻl mehnati ham, keyingi reglament ham kiradi.",
-            "Kam yoziladigan muhim tafsilot: talabgorning arizasiga koʻra litsenziya litsenziyalanadigan faoliyatning bir qismiga berilishi mumkin. Kompaniya faqat texnik xizmat koʻrsatishga litsenziyaga ega boʻlishi, loyihalashga esa ega boʻlmasligi mumkin. Shuning uchun pudratchiga toʻgʻri savol «litsenziyangiz bormi» emas, «u qaysi ish turlariga berilgan» boʻladi.",
+          { h: "Nega 880-son qaror endi qoʻllanilmaydi", p: [
+            "880-son qaror litsenziyalash nizomini tasdiqlagan. Nizom yongʻinga qarshi avtomatika, qoʻriqlash, yongʻin va qoʻriqlash-yongʻin signalizatsiyasi vositalarini loyihalash, montaj qilish, sozlash, taʼmirlash va ularga texnik xizmat koʻrsatishni qamragan. Unga koʻra litsenziyalovchi organ IIV boʻlgan, shtat va moddiy bazaga talablar nizomning oʻzida yozilgan.",
+            "lex.uz da hujjat «01.03.2022 dan kuchini yoʻqotgan» deb belgilangan. Shu kuni faoliyat boshlanishi va tugatilishi haqida xabardor qilishning yagona tartibi toʻgʻrisidagi 88-son qaror kuchga kirdi. Shuning uchun shartnoma, texnik topshiriq yoki tender hujjatlarida 880-son qarorga havola bugun hech narsani tasdiqlamaydi. Undagi talablar, masalan xodimlarning staji va razryadi, yangi faoliyat pasporti talablari bilan almashtirilgan.",
           ] },
-          { h: "Buyurtmachi bilishi kerak boʻlgan talablar", p: [
-            "Nizom mutaxassislarning minimal tarkibini belgilaydi: yuridik shaxsning doimiy shtatida kamida ikkita xodim — ish rahbari va ijrochi — tegishli profil boʻyicha kamida uch yillik ish stajiga ega boʻlishi kerak. Profil oʻsha roʻyxat boʻyicha hisoblanadi: yongʻin oʻchirish va signalizatsiya qurilmalarini loyihalash, montaj qilish, sozlash, taʼmirlash yoki texnik xizmat koʻrsatish.",
-            "Taʼlimga ham talab bor. Ish ijrochilari oliy yoki kasb-hunar taʼlimiga, yoxud «elektroenergetika», «elektronika va mikroelektronika», «avtomatlashtirish va boshqaruv», «radiotexnika va telekommunikatsiya» yoʻnalishlari boʻyicha maxsus tayyorgarlikka ega boʻlishi kerak — uchinchi razryaddan past boʻlmagan. Bundan tashqari, nizom eʼlon qilingan ishlar uchun zarur moddiy-texnik bazani alohida belgilaydi.",
+          { h: "Xabardor qilish tartibi: 25.02.2022 dagi 88-son qaror", p: [
+            "88-son qarorda xabardor qilish tartibida olib boriladigan faoliyat turlarining pasportlari jamlangan. 9-ilova (13.07.2024 dagi 418-son qaror tahririda) — avtomatik yongʻin oʻchirish va yongʻin signalizatsiyasi qurilmalarini montaj qilish, sozlash, taʼmirlash va ularga texnik xizmat koʻrsatish. Xabarnomani Favqulodda vaziyatlar vazirligi qabul qiladi. 10-ilova (10.03.2026 dagi 94-son qaror tahririda) — qoʻriqlash texnik vositalari va tizimlari bilan xuddi shu ishlar. Xabarnomani Ichki ishlar vazirligi huzuridagi Qoʻriqlash departamenti qabul qiladi.",
+            "Tashkilot xabarnoma yuboradi va raqamli tasdiqnoma oladi: xabarnoma qabul qilingani haqidagi hujjat. 9-ilova pasportiga koʻra xabarnoma uchun yigʻim — bazaviy hisoblash miqdorining 50 foizi. Tasdiqnomaning amal qilish muddati pasportda belgilanmagan. Tasdiqnoma ishlarning bitta yoki ikkala kichik turini qamrashi mumkin, masalan avtomatik yongʻin oʻchirishsiz faqat yongʻin signalizatsiyasini. Shuning uchun pudratchidan «hujjatingiz bormi» emas, «u qaysi ish turlariga va qaysi yuridik shaxsga berilgan» deb soʻrash kerak.",
           ] },
-          { h: "Litsenziya muddatsiz, lekin uni bekor qilish mumkin", p: [
-            "Ushbu faoliyat turiga litsenziya amal qilish muddati cheklanmagan holda beriladi. Uni har yili uzaytirish shart emas, berilgan sana esa oʻzicha hech narsa demaydi — 2019-yilgi hujjat oʻtgan oygi hujjat kabi amal qiladi.",
-            "Buning oʻrniga nizom litsenziya talablari buzilganda uni toʻxtatib turish, amal qilishini tugatish va bekor qilishni nazarda tutadi, litsenziyalovchi organ esa ularga rioya etilishini nazorat qiladi. Aynan shuning uchun pudratchi qoʻlidagi qogʻozni emas, shartnoma imzolash paytidagi reyestrdagi yozuvni tekshirish kerak.",
+          { h: "2026-yil 1-martdan: OʻRQ-1099 qonuni boʻyicha FVV litsenziyasi", p: [
+            "27.11.2025 dagi OʻRQ-1099 qonuni litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillarini takomillashtirish munosabati bilan qonun hujjatlariga oʻzgartish kiritadi. U rasmiy eʼlon qilinganidan uch oy oʻtib, 2026-yil 1-martda kuchga kirdi. Qonun «Litsenziyalash, ruxsat berish va xabardor qilish tartib-taomillari toʻgʻrisida»gi OʻRQ-701 qonunining 1-ilovasiga 61-bandni qoʻshdi: avtomatik yongʻin oʻchirish va yongʻin signalizatsiyasi qurilmalarini montaj qilish, sozlash, taʼmirlash va ularga texnik xizmat koʻrsatish uchun litsenziya, litsenziyalovchi organ — FVV. «Yongʻin xavfsizligi toʻgʻrisida»gi qonunning 24-moddasi endi «Yongʻin xavfsizligi sohasidagi faoliyatni litsenziyalash» deb ataladi. Litsenziya uchun davlat boji — 5 BHM.",
+            "2026-yil 16-noyabr holatiga bu litsenziyani berish tartibi tasdiqlanmagan: litsenziyalanadigan faoliyat turlari pasportlari jamlangan Vazirlar Mahkamasining 21.02.2022 dagi 80-son qarorida bunday litsenziya pasporti yoʻq, 88-son qarorning 9-ilovasi esa saqlanib qolgan. 2026-yil 20-oktabrdagi tekshiruvda license.gov.uz portalida bu ishlar boʻyicha faqat xabarnoma xizmati bor edi. Qonun matnida xabarnoma asosida ishlayotgan tashkilotlar uchun oʻtish qoidalarini topmadik. Buyurtmachi uchun xulosa: tartib tasdiqlanmaguncha amaldagi FVV tasdiqnomasi, tasdiqlangandan keyin litsenziya tekshiriladi. Holatni shartnoma sanasida tekshiring.",
           ] },
-          { h: "Buyurtmachiga bu amalda nima uchun kerak", p: [
-            "Yongʻin signalizatsiyasi obyektning yongʻindan himoya tizimi qismi boʻlib, uni inspeksiya qabul qiladi. Tegishli litsenziyasiz tashkilot bajargan ishlar eng yoqimsiz bosqichda xavf tugʻdiradi: obyekt tayyor, pul sarflangan, topshirish esa oʻtmaydi. Litsenziyali pudratchi kuchi bilan qayta ishlash dastlab toʻgʻri tanlovdan qimmatga tushadi.",
-            "Ikkinchi sabab — xizmat koʻrsatish. Yongʻin xavfsizligi qoidalariga koʻra mulkdor tizimlar ishga tushirilgandan keyin oʻttiz kun ichida litsenziyalangan tashkilot bilan xizmat koʻrsatish shartnomasini tuzishi shart. Agar montajni litsenziyasiz pudratchi qilgan boʻlsa, u bilan tuzilgan shartnoma bu talabni yopmaydi.",
+          { h: "Faoliyat turiga nima kiradi va nima kirmaydi", p: [
+            "Xabarnoma ham, yangi litsenziya ham toʻrt turdagi ishni qamraydi: montaj, sozlash, taʼmirlash va texnik xizmat koʻrsatish. Obyektlar — avtomatik yongʻin oʻchirish va yongʻin signalizatsiyasi qurilmalari, qoʻriqlash tizimlari uchun 10-ilovadagi qoʻriqlash texnik vositalari va tizimlari. Yongʻin signalizatsiyasi va yongʻin oʻchirish — ikki alohida kichik tur. Tasdiqnomada ulardan qaysilari koʻrsatilgani yoziladi.",
+            "880-son qarorda loyihalash bor edi, 88-son qaror va OʻRQ-1099 qonunidagi faoliyat turi nomida esa u yoʻq. Agar shartnomada loyiha ishlab chiqish boʻlsa, uni kim va qaysi meʼyorlar boʻyicha bajarishini pudratchidan soʻrang. Loyihani ShNQ 2.04.09-2007 «Binolar va inshootlarning yongʻin avtomatikasi» bilan solishtiring: faoliyat pasporti aynan shu hujjatga havola qiladi.",
+          ] },
+          { h: "9-ilova pasporti boʻyicha pudratchiga talablar", p: [
+            "Ishlar rahbari: doimiy shtatda ishlaydi; «muhandislik ishi» yoʻnalishi boʻyicha oliy maʼlumotga ega: elektronika va elektrotexnika, informatika va axborot texnologiyalari yoki elektrotexnika; kamida uch yillik stajga va yongʻin avtomatikasini montaj qilish va unga xizmat koʻrsatish boʻyicha maxsus tayyorgarlikka ega; kamida toʻrt yilda bir marta malaka oshiradi.",
+            "Xabarnomada kamida ikki ijrochi koʻrsatiladi. Yongʻin oʻchirish uchun kamida 4-razryadli elektr yoki gaz payvandchi yoxud sanitariya-texnika tizimlari montajchisi kerak. Yongʻin signalizatsiyasi uchun kamida 3-razryadli elektronika va elektrotexnika mutaxassisi kerak. Ijrochilar shtatda boʻlishi yoki shartnoma asosida ishlashi mumkin, subpudratchida razryad koʻrsatiladi.",
+            "Pasport moddiy bazani ham sanab oʻtadi:",
+            "Kamida 20 m² xizmat xonasi va uskunalarni saqlash uchun kamida 20 m² joy kerak. Ishlar RDPB 01-001:2007, 01-002:2007, 01-003:2008, 01-004:2010 va ShNQ 2.04.09-2007 boʻyicha olib boriladi. Pasportga koʻra qoʻpol buzilish — montaj qilingan obyektlar reyestrining yoʻqligi yoki loyiha va boshqa hujjatlarning butun foydalanish muddati davomida saqlanmasligi.",
+          ], ul: ["amaldagi metrologik qiyoslovdan oʻtgan kombinatsiyalangan asbob, megaommetr va shovqin oʻlchagich;", "kavsharlagich, perforator va drel;", "chilangarlik va elektr montaj asboblari toʻplamlari;", "kaska va montaj kamari;", "narvon va ikki tomonlama narvon;", "yongʻin oʻchirish ishlari uchun kompressor;", "loyiha-smeta hujjatlari uchun seyf."], ulAt: 3 },
+          { h: "Pudratchini besh daqiqada qanday tekshirish mumkin", p: [
+            "Tasdiqnoma raqamini (tartib tasdiqlangandan keyin litsenziya raqamini) soʻrang va uni license.gov.uz dagi ochiq reyestrdan toping. Toʻrt narsani solishtiring:",
+            "Pudratchi papkasidagi hujjat nusxasi hech narsani isbotlamaydi: faoliyat toʻxtatilgan yoki tugatilgan boʻlishi mumkin, reyestr esa bugungi holatni koʻrsatadi. Shartnoma imzolangan kundagi reyestr koʻchirmasini yoki ekran suratini saqlab qoʻying. Bu qabul qilishda va nizoda asqotadi.",
+          ], ul: ["tashkilot nomi va STIR shartnomadagiga mos keladi;", "organ — yongʻin tizimlari uchun FVV, qoʻriqlash tizimlari uchun IIV huzuridagi Qoʻriqlash departamenti (ilgari Milliy gvardiya);", "sizga kerakli ish turlari koʻrsatilgan;", "holati — amaldagi."], ulAt: 1 },
+          { h: "Buyurtmachiga bu nima uchun kerak: 149-band boʻyicha xizmat koʻrsatish", p: [
+            "Yongʻin xavfsizligi qoidalari (20.10.2020 dagi 649-son qaror) yongʻin avtomatikasiga ikki usulda xizmat koʻrsatishga ruxsat beradi: obyektning oʻqitilgan xodimlari yoki shu faoliyat turiga huquqi bor tashkilot bilan shartnoma asosida. Bu 04.04.2022 dagi 153-son qaror tahriridagi 148-band. Ishlar ishlab chiqaruvchi hujjatlari asosida tuzilgan yillik reja boʻyicha olib boriladi.",
+            "149-band shartli. Agar obyekt yongʻin avtomatikasi, tutunga qarshi himoya va ogohlantirish qurilmalariga oʻz kuchi bilan xizmat koʻrsata olmasa, ixtisoslashgan tashkilot bilan shartnoma qurilmalar ishga tushirilgandan keyin 30 kun ichida tuziladi. Bunday shartnoma bekor qilinganda korxona rahbari 24 soat ichida tuman (shahar) favqulodda vaziyatlar boʻlimiga xabar beradi. Shu ish turiga amaldagi hujjati yoʻq tashkilot bilan tuzilgan shartnoma 149-band talabini bajarmaydi.",
           ] },
           { h: "Bizning hujjatlarimiz", p: [
-            "SAT Solutions xavfsizlik tizimlari va yongʻin avtomatikasini loyihalash hamda montaj qilish litsenziyalari bilan ishlaydi. Obyektni butunligicha olib boramiz: loyiha, uskunani rasmiy kanallar orqali yetkazib berish, montaj, ishga tushirish, dalolatnomalar bilan topshirish va shartnoma boʻyicha keyingi xizmat koʻrsatish.",
-            "Agar pudratchi tanlayotgan boʻlsangiz va hujjatlarni sverka qilmoqchi boʻlsangiz — bizdan nusxalarini soʻrang, shartnoma imzolashdan oldin taqdim etamiz. Bu odatiy amaliyot va buyurtmachi buni har qanday ijrochidan talab qilishi kerak.",
+            "SAT Solutionsda ikkita hujjat bor, ikkalasi ham «Kompaniya haqida» sahifasida ochiq. Yongʻin tizimlari — FVVning 913518-son ruxsatnomasi. Bu 23.07.2025 dagi tasdiqnoma boʻlib, ikkala kichik turni qamraydi: yongʻin signalizatsiyasi va avtomatik yongʻin oʻchirish tizimlarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish. Qoʻriqlash tizimlari — Milliy gvardiyaning 1554491-son ruxsatnomasi: qoʻriqlash texnik vositalarini montaj qilish, sozlash va ularga texnik xizmat koʻrsatish.",
+            "Hujjatlar nusxalari va reyestr koʻchirmasini shartnoma imzolanishidan oldin beramiz. Buni har qanday ijrochidan talab qiling. Obyektni toʻliq olib boramiz: Toshkentdagi ombordan uskuna yetkazib berish, montaj, ishga tushirish va sozlash, ijro hujjatlari bilan topshirish va yillik reja boʻyicha xizmat koʻrsatish. OʻRQ-1099 qonuni boʻyicha FVV litsenziyasini berish tartibi tasdiqlanganda bu maqolani yangilaymiz.",
           ] },
+        ],
+        faq: [
+          { q: "Signalizatsiya montajini litsenziyalash haqidagi 880-son qaror amal qiladimi?", a: "Yoʻq. Vazirlar Mahkamasining 27.10.2018 dagi 880-son qarori 2022-yil 1-martda kuchini yoʻqotgan. Shu sanadan yongʻin va qoʻriqlash signalizatsiyasini montaj qilish va unga xizmat koʻrsatish xabardor qilish tartibida, 25.02.2022 dagi 88-son qaror boʻyicha olib boriladi." },
+          { q: "Yongʻin signalizatsiyasi montaji uchun hujjatni kim beradi?", a: "FVV. Hozir bu 88-son qarorning 9-ilovasi boʻyicha xabarnoma tasdiqnomasi. OʻRQ-1099 qonuni 2026-yil 1-martdan shu ishlarga FVV litsenziyasini kiritdi. 16.11.2026 holatiga uni berish tartibi tasdiqlanmagan." },
+          { q: "Qoʻriqlash signalizatsiyasi uchun-chi?", a: "88-son qarorning 10-ilovasi boʻyicha (10.03.2026 tahririda) xabarnomani IIV huzuridagi Qoʻriqlash departamenti qabul qiladi. Qayta tashkil etishdan oldin bu vazifani Milliy gvardiya bajargan, shuning uchun avval olingan hujjatlar u tomonidan berilgan boʻlishi mumkin." },
+          { q: "Pudratchini qanday tekshirish kerak?", a: "Hujjat raqamini soʻrang va uni license.gov.uz dagi reyestrda tekshiring. Tashkilot, STIR, organ, ish turlari va shartnoma sanasidagi «amaldagi» holatini solishtiring." },
         ],
       },
       en: {
-        title: "Alarm installation licence in Uzbekistan: who issues it and how to check a contractor", seoTitle: "Alarm installation licence in Uzbekistan: how to verify",
-        excerpt: "Designing, installing and servicing fire and security alarms is licensed by the Ministry of Internal Affairs, not by the Emergencies Ministry. The licence has no expiry date, the register is public, and staffing requirements are set by decree No. 880 of 27.10.2018.",
+        title: "Alarm installation licence in Uzbekistan in 2026: notification, the Emergencies Ministry licence and checking a contractor", seoTitle: "Alarm installation licence in Uzbekistan 2026: how to verify", seoDesc: "Resolution No. 880 lost force in 2022. Fire alarm work now runs on an Emergencies Ministry notification; since 1 March 2026 Law ZRU-1099 adds a licence.",
+        excerpt: "Resolution No. 880, under which the Interior Ministry licensed alarm installation, lost force on 1 March 2022. Installing and servicing fire alarms and automatic fire suppression now runs on a notification to the Ministry of Emergency Situations (Cabinet Resolution No. 88 of 25.02.2022). From 1 March 2026, Law ZRU-1099 introduces an Emergencies Ministry licence for this work. What to check with a contractor.",
+        summary: [
+          "Cabinet Resolution No. 880 of 27.10.2018 (licensing via the Interior Ministry) lost force on 01.03.2022",
+          "The current regime is notification under Cabinet Resolution No. 88 of 25.02.2022. Fire alarms and automatic suppression go to the Ministry of Emergency Situations, security systems to the Security Department under the Interior Ministry",
+          "From 01.03.2026 Law ZRU-1099 introduces an Emergencies Ministry licence for installing and servicing fire alarms and suppression; state duty: 5 base calculation units",
+          "A contractor is checked by document number in the open register on license.gov.uz on the contract date",
+        ],
         sections: [
-          { h: "The licence comes from the Interior Ministry, not the Emergencies Ministry", p: [
-            "This is where almost everyone searching online goes wrong. Russian-language sources answer from Russian practice, where fire-safety activity is licensed by the emergencies authority. Uzbekistan works differently: Cabinet of Ministers Decree No. 880 of 27 October 2018 states directly that licensing of the design, installation, commissioning, repair and maintenance of fire automation, security, fire and combined alarm systems is carried out by the Ministry of Internal Affairs of the Republic of Uzbekistan.",
-            "The practical meaning is simple: if a contractor shows you an emergencies-ministry licence for alarm installation, the document came from the wrong authority. What you check is the register of the licensing body — under the decree it is published on that body's website and open for inspection.",
+          { h: "In short: the rules in force in November 2026", p: [
+            "Until 1 March 2022, the installation, commissioning, repair and maintenance of fire and security alarms were licensed by the Ministry of Internal Affairs. The basis was Cabinet of Ministers Resolution No. 880 of 27.10.2018. That resolution lost force on 1 March 2022, yet many texts online still cite it. The claim that \"the licence comes from the Interior Ministry, not the Emergencies Ministry\" comes from those texts. For fire systems it is wrong today.",
+            "Two documents apply now. Cabinet of Ministers Resolution No. 88 of 25.02.2022 moved this work to a notification procedure. For fire alarms and automatic fire suppression, the notification goes to the Ministry of Emergency Situations; for security systems, to the Security Department under the Interior Ministry. Law ZRU-1099 of 27.11.2025 entered into force on 1 March 2026. It added the installation and servicing of fire alarms and automatic fire suppression to the list of licensed activities, with the Emergencies Ministry as the licensing body. Below: what this means for a client and how to check a contractor on the contract date.",
           ] },
-          { h: "What exactly is licensed", p: [
-            "The licence covers five kinds of work on the same systems: design, installation, commissioning, repair and maintenance. The systems are fire automation equipment and security, fire and combined fire-and-security alarms. In other words, the design, the hands-on work and the later servicing schedule all fall under licensing.",
-            "A detail that is rarely written down: at the applicant's request the licence may be issued for part of the licensed activity. A company may hold a licence for maintenance only and not for design. So the correct question to a contractor is not “do you have a licence” but “which kinds of work is it issued for”.",
+          { h: "Why Resolution No. 880 no longer applies", p: [
+            "Resolution No. 880 approved the Regulation on licensing the design, installation, commissioning, repair and maintenance of fire automation equipment and of security, fire and combined alarm systems. The licensing body under it was the Interior Ministry. Staff and equipment requirements were set in the regulation itself.",
+            "On lex.uz the document is marked \"Act lost force on 01.03.2022\". That day, Resolution No. 88 on the unified procedure for notifying the start and end of an activity took effect. A reference to No. 880 in a contract, technical specification or tender documents therefore proves nothing today. Its requirements, such as staff experience and grade, have been replaced by those of the new activity passport.",
           ] },
-          { h: "Requirements a client should know about", p: [
-            "The regulation sets a minimum team: the permanent staff of the legal entity must include at least two employees — a works manager and an operative — with at least three years of experience in the relevant field. The field is counted against the same list: design, installation, commissioning, repair or maintenance of fire suppression and alarm installations.",
-            "There is an education requirement too. Operatives must hold higher or vocational-technical education, or special training in electrical power engineering, electronics and microelectronics, automation and control, or radio engineering and telecommunications — at grade three or above. The regulation also separately defines the material and technical base required for the declared work.",
+          { h: "The notification procedure: Resolution No. 88 of 25.02.2022", p: [
+            "Resolution No. 88 collects passports for the activities carried out on notification. Annex 9 (as amended by Resolution No. 418 of 13.07.2024) covers the installation, commissioning, repair and maintenance of automatic fire suppression and fire alarm devices. The notification is received by the Ministry of Emergency Situations. Annex 10 (as amended by Resolution No. 94 of 10.03.2026) covers the same work on technical security equipment and systems. That notification is received by the Security Department under the Ministry of Internal Affairs.",
+            "The company files a notification and receives a numbered confirmation of receipt. The fee under the Annex 9 passport is 50% of the base calculation unit. The passport sets no validity period for the confirmation. A confirmation may cover one sub-type of work or both, for example fire alarms only, without automatic suppression. So the right question to a contractor is not \"do you have a document\" but \"which kinds of work and which legal entity is it issued for\".",
           ] },
-          { h: "The licence never expires, but it can be revoked", p: [
-            "A licence for this activity is issued with no limit on its validity period. There is nothing to renew annually, and the issue date on its own tells you nothing — a document from 2019 is as valid as one from last month.",
-            "What the regulation does provide for is suspension, termination and annulment of the licence for breaching licensing requirements, with the licensing body monitoring compliance. That is exactly why you check the register entry at the moment of signing, not the paper in the contractor's folder.",
+          { h: "From 1 March 2026: the Emergencies Ministry licence under Law ZRU-1099", p: [
+            "Law ZRU-1099 of 27.11.2025 amends legislation to improve licensing, permit and notification procedures. It took effect three months after publication, on 1 March 2026. The law added item 61 to Annex 1 of the Law on Licensing, Permit and Notification Procedures (ZRU-701): a licence for the installation, commissioning, repair and maintenance of automatic fire suppression and fire alarm devices, issued by the Emergencies Ministry. Article 24 of the Law on Fire Safety is now titled \"Licensing of activities in the field of fire safety\". The state duty for the licence is 5 base calculation units.",
+            "As of 16 November 2026, the procedure for issuing this licence has not been approved: Cabinet Resolution No. 80 of 21.02.2022, which collects the passports of licensed activities, contains no passport for it, and Annex 9 of Resolution No. 88 remains in force. At the check on 20 October 2026, the license.gov.uz portal offered only the notification service for this work. We found no transitional provisions in the law for companies working on notification. For a client this means: until the procedure is approved, check for a valid Emergencies Ministry notification confirmation; after approval, check for the licence. Check the status on the contract date.",
           ] },
-          { h: "Why this matters in practice", p: [
-            "A fire alarm is part of a site's fire protection system and is accepted by the inspection. Work carried out by an organisation without the relevant licence creates risk at the worst possible moment: the site is finished, the money is spent, and the handover fails. Redoing the work through a licensed contractor costs more than choosing correctly at the start.",
-            "The second reason is servicing. Under the fire safety rules the owner must, within thirty days of the systems being commissioned, conclude a maintenance contract with a licensed organisation. If an unlicensed contractor did the installation, a contract with them will not satisfy that requirement.",
+          { h: "What the activity covers and what it does not", p: [
+            "Both the notification and the new licence cover four kinds of work: installation, commissioning, repair and maintenance. The objects are automatic fire suppression and fire alarm devices; for security systems, the technical security equipment and systems under Annex 10. Fire alarms and fire suppression are two separate sub-types, and the confirmation states which of them were declared.",
+            "Resolution No. 880 included design. The activity name under Resolution No. 88 and Law ZRU-1099 does not. If the contract includes design work, ask the contractor who does it and to which standards. Compare the design with ShNK 2.04.09-2007 \"Fire automation of buildings and structures\": that is the document the activity passport cites.",
+          ] },
+          { h: "Contractor requirements under the Annex 9 passport", p: [
+            "The works manager must: be on permanent staff; hold a higher engineering degree in electronics and electrical engineering, computer science and IT, or electrical engineering; have at least three years' experience and special training in installing and servicing fire automation; take refresher training at least once every four years.",
+            "The notification names at least two operatives. Suppression work needs an electric or gas welder, or a plumbing and sanitary systems fitter, of grade 4 or above. Fire alarm work needs an electronics and electrical specialist of grade 3 or above. Operatives may be on staff or under contract, and a subcontractor's grade must be stated.",
+            "The passport also lists the equipment base:",
+            "An office of at least 20 m² and an equipment storage area of at least 20 m² are required. Work follows RDPB 01-001:2007, 01-002:2007, 01-003:2008, 01-004:2010 and ShNK 2.04.09-2007. The passport classes two failures as gross violations: having no register of the sites where installation was done, and not keeping design and other documents for the system's whole service life.",
+          ], ul: ["a multimeter, megohmmeter and sound level meter with valid metrological verification;", "a soldering iron, rotary hammer and drill;", "locksmith and electrical installation tool kits;", "a helmet and safety harness;", "a ladder and a stepladder;", "a compressor for suppression work;", "a safe for design and estimate documents."], ulAt: 3 },
+          { h: "How to check a contractor in five minutes", p: [
+            "Ask for the notification confirmation number (the licence number once the procedure is approved) and look it up in the open register on license.gov.uz. Compare four things:",
+            "A copy in the contractor's folder proves nothing: the activity may have been suspended or terminated, while the register shows today's status. Save a register extract or a screenshot on the day you sign. It helps at handover and in a dispute.",
+          ], ul: ["the company name and tax ID match the contract;", "the authority is the Emergencies Ministry for fire systems, or the Security Department under the Interior Ministry (formerly the National Guard) for security systems;", "the sub-types of work you need are declared;", "the status is active."], ulAt: 1 },
+          { h: "Why it matters to the client: servicing under clause 149", p: [
+            "The Fire Safety Rules (Resolution No. 649 of 20.10.2020) allow two ways to service fire automation: by the site's own trained staff, or under contract with an organisation entitled to this activity. This is clause 148 as amended by Resolution No. 153 of 04.04.2022. The work follows an annual plan based on the manufacturer's documentation.",
+            "Clause 149 is conditional. If the site cannot service its fire automation, smoke control and warning installations itself, it signs a contract with a specialised organisation within 30 days of the devices being put into operation. If that contract is terminated, the head of the enterprise notifies the district (city) emergency department within 24 hours. A contract with an organisation that holds no valid document for this work does not meet clause 149.",
           ] },
           { h: "Our documents", p: [
-            "SAT Solutions works under licences for the design and installation of security systems and fire automation. We carry the site end to end: design, equipment supplied through official channels, installation, commissioning, handover with certificates and subsequent servicing under contract.",
-            "If you are choosing a contractor and want to check the paperwork, ask us for copies and we will provide them before the contract is signed. This is normal practice, and a client is right to require it of any contractor.",
+            "SAT Solutions holds two documents, both published on the About page. Fire systems: Ministry of Emergency Situations permit No. 913518. It is a confirmation of notification dated 23.07.2025 and covers both sub-types: installation, commissioning and maintenance of fire alarms and automatic fire suppression. Security systems: National Guard permit No. 1554491 for the installation, commissioning and maintenance of technical security equipment.",
+            "We hand over copies of the documents and a register extract before the contract is signed. Ask the same of any contractor. We run the site end to end: equipment from our Tashkent warehouse, installation, commissioning, handover with as-built documentation and servicing to an annual plan. Once the procedure for the Emergencies Ministry licence under Law ZRU-1099 is approved, we will update this article.",
           ] },
+        ],
+        faq: [
+          { q: "Is Resolution No. 880 on licensing alarm installation still in force?", a: "No. Cabinet of Ministers Resolution No. 880 of 27.10.2018 lost force on 1 March 2022. Since then, installing and servicing fire and security alarms has run on notification under Resolution No. 88 of 25.02.2022." },
+          { q: "Who issues the document for fire alarm installation?", a: "The Ministry of Emergency Situations. Today it is a confirmation of notification under Annex 9 of Resolution No. 88. From 1 March 2026, Law ZRU-1099 introduces an Emergencies Ministry licence for the same work. As of 16.11.2026 the procedure for issuing it has not been approved." },
+          { q: "And for security alarms?", a: "Under Annex 10 of Resolution No. 88 (as amended on 10.03.2026), the notification goes to the Security Department under the Interior Ministry. Before the reorganisation this function belonged to the National Guard, so documents obtained earlier may have been issued by it." },
+          { q: "How do I check a contractor?", a: "Ask for the document number and check it in the register on license.gov.uz. Compare the company, tax ID, authority, kinds of work and \"active\" status on the contract date." },
         ],
       },
       tr: {
-        title: "Özbekistan'da alarm montajı lisansı: kim veriyor ve yüklenici nasıl kontrol edilir", seoTitle: "Özbekistan'da alarm montaj lisansı: nasıl kontrol edilir",
-        excerpt: "Yangın ve güvenlik alarmlarının projelendirilmesi, montajı ve bakımı Acil Durumlar Bakanlığı tarafından değil, İçişleri Bakanlığı tarafından lisanslanıyor. Lisans süresizdir, sicil kamuya açıktır, personel şartları 27.10.2018 tarihli 880 sayılı kararda.",
+        title: "Özbekistan'da alarm montajı lisansı 2026: bildirim, Olağanüstü Durumlar Bakanlığı lisansı ve yüklenicinin kontrolü", seoTitle: "Özbekistan'da alarm montaj lisansı 2026: nasıl kontrol edilir", seoDesc: "880 sayılı karar 2022'de yürürlükten kalktı. Yangın alarmı montajı ODB bildirimiyle yapılıyor; 1 Mart 2026'dan itibaren ZRU-1099 Kanunu lisans getiriyor.",
+        excerpt: "Alarm montajını İçişleri Bakanlığı üzerinden lisanslayan 880 sayılı karar 1 Mart 2022'de yürürlükten kalktı. Yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı ve bakımı bugün Olağanüstü Durumlar Bakanlığı'na yapılan bildirimle yürütülüyor (25.02.2022 tarihli 88 sayılı Bakanlar Kurulu Kararı). 1 Mart 2026'dan itibaren ZRU-1099 Kanunu bu işler için Olağanüstü Durumlar Bakanlığı lisansı getiriyor. Yüklenicide neler kontrol edilmeli.",
+        summary: [
+          "27.10.2018 tarihli 880 sayılı Bakanlar Kurulu Kararı (İçişleri Bakanlığı üzerinden lisans) 01.03.2022'de yürürlükten kalktı",
+          "Bugün 25.02.2022 tarihli 88 sayılı Karar uyarınca bildirim usulü geçerli. Yangın alarmı ve otomatik söndürme için Olağanüstü Durumlar Bakanlığı, güvenlik sistemleri için İçişleri Bakanlığı Koruma Dairesi",
+          "01.03.2026'dan itibaren ZRU-1099 Kanunu yangın alarmı ve söndürme sistemlerinin montajı ve bakımı için Olağanüstü Durumlar Bakanlığı lisansı getiriyor; harç: 5 temel hesaplama birimi",
+          "Yüklenici, sözleşme tarihinde license.gov.uz'daki açık sicilde belge numarasıyla kontrol edilir",
+        ],
         sections: [
-          { h: "Lisansı Acil Durumlar Bakanlığı değil, İçişleri Bakanlığı verir", p: [
-            "İnternette cevap arayan hemen herkes tam burada yanılıyor. Rusça kaynaklar Rusya uygulamasına göre cevap veriyor; orada yangın güvenliği faaliyeti lisansını Acil Durumlar Bakanlığı veriyor. Özbekistan'da durum farklı: Bakanlar Kurulunun 27 Ekim 2018 tarihli 880 sayılı kararı doğrudan belirtiyor ki yangın otomasyonu, güvenlik, yangın ve yangın-güvenlik alarm sistemlerinin projelendirilmesi, montajı, devreye alınması, onarımı ve bakımı faaliyetinin lisanslanması Özbekistan Cumhuriyeti İçişleri Bakanlığı tarafından yürütülür.",
-            "Bu farkın pratik anlamı basit: yüklenici size alarm montajı için Acil Durumlar Bakanlığı lisansı gösteriyorsa, belge yanlış makamdan alınmıştır. Kontrol edilecek yer lisans veren makamın sicilidir — karara göre bu sicil o makamın web sitesinde yayımlanır ve incelemeye açıktır.",
+          { h: "Kısaca: Kasım 2026'da hangi usul geçerli", p: [
+            "1 Mart 2022'ye kadar yangın ve güvenlik alarmlarının montajı, devreye alınması, onarımı ve bakımı İçişleri Bakanlığı tarafından lisanslanıyordu. Dayanak, Bakanlar Kurulunun 27.10.2018 tarihli 880 sayılı kararıydı. Bu karar 1 Mart 2022'de yürürlükten kalktı, ancak internetteki pek çok metin hâlâ ona atıf yapıyor. «Lisansı Olağanüstü Durumlar Bakanlığı değil, İçişleri Bakanlığı verir» görüşü de bu metinlerden geliyor. Yangın sistemleri için bugün bu görüş yanlış.",
+            "Bugün iki belge geçerli. Bakanlar Kurulunun 25.02.2022 tarihli 88 sayılı kararı bu işleri bildirim usulüne geçirdi. Yangın alarmı ve otomatik yangın söndürme için bildirimi Olağanüstü Durumlar Bakanlığı, güvenlik sistemleri için İçişleri Bakanlığı Koruma Dairesi kabul eder. 27.11.2025 tarihli ZRU-1099 Kanunu 1 Mart 2026'da yürürlüğe girdi. Kanun, yangın alarmı ve otomatik yangın söndürme sistemlerinin montajını ve bakımını lisanslı faaliyetler listesine ekledi; lisans veren makam Olağanüstü Durumlar Bakanlığı. Aşağıda bunun müşteri için ne anlama geldiğini ve yüklenicinin sözleşme tarihinde nasıl kontrol edileceğini anlatıyoruz.",
           ] },
-          { h: "Tam olarak ne lisanslanıyor", p: [
-            "Lisans, aynı sistemler üzerinde beş tür işi kapsar: projelendirme, montaj, devreye alma, onarım ve bakım. Sistemler ise yangın otomasyonu ekipmanları ile güvenlik, yangın ve yangın-güvenlik alarmlarıdır. Yani hem proje, hem el emeği, hem de sonraki bakım rejimi lisans kapsamındadır.",
-            "Nadiren yazılan önemli bir ayrıntı: başvuru sahibinin talebiyle lisans, lisanslı faaliyetin bir kısmı için verilebilir. Bir şirket yalnızca bakım için lisansa sahip olup projelendirme için olmayabilir. Bu yüzden yükleniciye sorulacak doğru soru «lisansınız var mı» değil, «hangi iş türleri için verilmiş» olmalıdır.",
+          { h: "880 sayılı karar neden artık uygulanmıyor", p: [
+            "880 sayılı karar, yangın otomasyonu ekipmanları ile güvenlik, yangın ve birleşik alarm sistemlerinin projelendirilmesi, montajı, devreye alınması, onarımı ve bakımı faaliyetinin lisanslanmasına dair yönetmeliği onaylıyordu. Bu karara göre lisans veren makam İçişleri Bakanlığıydı. Personel ve altyapı şartları yönetmeliğin kendisinde yazılıydı.",
+            "Belge lex.uz'da «01.03.2022'de yürürlükten kalktı» notuyla yer alıyor. O gün, faaliyete başlama ve faaliyeti sona erdirme bildiriminin tek usulüne dair 88 sayılı karar yürürlüğe girdi. Bu yüzden sözleşmede, teknik şartnamede veya ihale belgelerinde 880 sayılı karara yapılan atıf bugün hiçbir şeyi kanıtlamaz. Kararın şartları, örneğin çalışanların deneyimi ve derecesi, yeni faaliyet pasaportunun şartlarıyla değiştirildi.",
           ] },
-          { h: "Müşterinin bilmesi gereken şartlar", p: [
-            "Yönetmelik asgari ekibi belirler: tüzel kişinin daimi kadrosunda en az iki çalışan — iş sorumlusu ve uygulayıcı — ilgili alanda en az üç yıllık deneyime sahip olmalıdır. Alan aynı listeye göre sayılır: yangın söndürme ve alarm tesislerinin projelendirilmesi, montajı, devreye alınması, onarımı veya bakımı.",
-            "Eğitim şartı da var. Uygulayıcıların yüksek ya da mesleki-teknik eğitimi veya «elektrik enerjisi», «elektronik ve mikroelektronik», «otomasyon ve kontrol», «radyo tekniği ve telekomünikasyon» alanlarında özel eğitimi bulunmalı — üçüncü dereceden aşağı olmamak üzere. Yönetmelik ayrıca beyan edilen işler için gereken maddi-teknik altyapıyı da ayrıca tanımlar.",
+          { h: "Bildirim usulü: 25.02.2022 tarihli 88 sayılı karar", p: [
+            "88 sayılı karar, bildirimle yürütülen faaliyet türlerinin pasaportlarını içerir. Ek 9 (13.07.2024 tarihli 418 sayılı kararla değişik) otomatik yangın söndürme ve yangın alarmı cihazlarının montajını, devreye alınmasını, onarımını ve bakımını kapsar. Bildirimi Olağanüstü Durumlar Bakanlığı kabul eder. Ek 10 (10.03.2026 tarihli 94 sayılı kararla değişik) aynı işleri güvenlik teknik araçları ve sistemleri için düzenler. Bu bildirimi İçişleri Bakanlığı bünyesindeki Koruma Dairesi kabul eder.",
+            "Kuruluş bildirimde bulunur ve numaralı bir bildirim alındı onayı alır. Ek 9 pasaportuna göre bildirim ücreti temel hesaplama biriminin %50'sidir. Pasaportta onayın geçerlilik süresi belirlenmemiştir. Onay tek bir alt türü veya ikisini birden kapsayabilir, örneğin otomatik söndürme olmadan yalnızca yangın alarmını. Bu yüzden yükleniciye «belgeniz var mı» değil, «belge hangi iş türleri ve hangi tüzel kişi için verildi» diye sormak gerekir.",
           ] },
-          { h: "Lisansın süresi yoktur, ama iptal edilebilir", p: [
-            "Bu faaliyet için lisans, geçerlilik süresi sınırlanmadan verilir. Her yıl yenilenecek bir şey yoktur ve veriliş tarihi tek başına bir şey söylemez — 2019 tarihli bir belge, geçen ayki kadar geçerlidir.",
-            "Buna karşılık yönetmelik, lisans şartlarının ihlali hâlinde lisansın askıya alınmasını, sona erdirilmesini ve iptalini öngörür; lisans veren makam da uyumu denetler. İşte tam bu yüzden yüklenicinin elindeki kâğıt değil, sözleşme imzalandığı andaki sicil kaydı kontrol edilir.",
+          { h: "1 Mart 2026'dan itibaren: ZRU-1099 Kanunu ile Olağanüstü Durumlar Bakanlığı lisansı", p: [
+            "27.11.2025 tarihli ZRU-1099 Kanunu, lisans, izin ve bildirim usullerini geliştirmek amacıyla mevzuatta değişiklik yapar. Kanun resmî yayımından üç ay sonra, 1 Mart 2026'da yürürlüğe girdi. Lisans, İzin ve Bildirim Usulleri Kanunu'nun (ZRU-701) Ek 1'ine 61. maddeyi ekledi: otomatik yangın söndürme ve yangın alarmı cihazlarının montajı, devreye alınması, onarımı ve bakımı için lisans; lisans veren makam Olağanüstü Durumlar Bakanlığı. Yangın Güvenliği Kanunu'nun 24. maddesinin başlığı artık «Yangın güvenliği alanındaki faaliyetlerin lisanslanması». Lisans harcı 5 temel hesaplama birimidir.",
+            "16 Kasım 2026 itibarıyla bu lisansın veriliş usulü onaylanmadı: lisanslı faaliyetlerin pasaportlarını içeren 21.02.2022 tarihli 80 sayılı Bakanlar Kurulu Kararı'nda bu lisansın pasaportu yok, 88 sayılı kararın Ek 9'u ise yürürlükte. 20 Ekim 2026'daki kontrolde license.gov.uz portalında bu işler için yalnızca bildirim hizmeti vardı. Kanun metninde bildirimle çalışan kuruluşlar için geçiş hükmü bulamadık. Müşteri için sonuç: usul onaylanana kadar geçerli Olağanüstü Durumlar Bakanlığı bildirim onayı, onaylandıktan sonra lisans kontrol edilir. Durumu sözleşme tarihinde kontrol edin.",
           ] },
-          { h: "Bunun pratikte önemi", p: [
-            "Yangın alarmı, tesisin yangından korunma sisteminin parçasıdır ve denetim tarafından kabul edilir. İlgili lisansı olmayan bir kuruluşun yaptığı işler en kötü anda risk yaratır: tesis bitmiştir, para harcanmıştır, teslim ise geçmez. İşi lisanslı bir yükleniciyle yeniden yapmak, baştan doğru seçim yapmaktan pahalıdır.",
-            "İkinci neden bakımdır. Yangın güvenliği kurallarına göre mal sahibi, sistemler devreye alındıktan sonra otuz gün içinde lisanslı bir kuruluşla bakım sözleşmesi yapmak zorundadır. Montajı lisanssız bir yüklenici yaptıysa, onunla yapılan sözleşme bu şartı karşılamaz.",
+          { h: "Faaliyet neyi kapsar, neyi kapsamaz", p: [
+            "Hem bildirim hem yeni lisans dört tür işi kapsar: montaj, devreye alma, onarım ve bakım. Konu, otomatik yangın söndürme ve yangın alarmı cihazlarıdır; güvenlik sistemleri için Ek 10'daki güvenlik teknik araçları ve sistemleri. Yangın alarmı ve yangın söndürme iki ayrı alt türdür. Onayda bunlardan hangilerinin beyan edildiği yazar.",
+            "880 sayılı kararda projelendirme vardı, 88 sayılı karar ve ZRU-1099 Kanunu'ndaki faaliyet adında ise yok. Sözleşmede proje hazırlama varsa, projeyi kimin ve hangi normlara göre yaptığını yükleniciye sorun. Projeyi ShNK 2.04.09-2007 «Bina ve yapıların yangın otomasyonu» ile karşılaştırın: faaliyet pasaportu tam olarak bu belgeye atıf yapar.",
+          ] },
+          { h: "Ek 9 pasaportuna göre yüklenici şartları", p: [
+            "İş sorumlusu: daimi kadroda çalışır; «mühendislik» alanında yüksek öğrenim görmüştür: elektronik ve elektroteknik, bilişim ve bilgi teknolojileri veya elektroteknik; en az üç yıllık deneyime ve yangın otomasyonunun montajı ve bakımı konusunda özel eğitime sahiptir; en az dört yılda bir mesleki gelişim eğitimi alır.",
+            "Bildirimde en az iki uygulayıcı yer alır. Söndürme işleri için en az 4. derece elektrik ya da gaz kaynakçısı veya sıhhi tesisat montajcısı gerekir. Yangın alarmı için en az 3. derece elektronik ve elektroteknik uzmanı gerekir. Uygulayıcılar kadrolu olabilir veya sözleşmeyle çalışabilir; taşeronun derecesi belirtilir.",
+            "Pasaport maddi altyapıyı da sayar:",
+            "En az 20 m² ofis ve ekipman depolamak için en az 20 m² alan gerekir. İşler RDPB 01-001:2007, 01-002:2007, 01-003:2008, 01-004:2010 ve ShNK 2.04.09-2007'ye göre yürütülür. Pasaport iki durumu ağır ihlal sayar: montaj yapılan tesislerin sicilinin tutulmaması ve proje ile diğer belgelerin işletme süresi boyunca saklanmaması.",
+          ], ul: ["geçerli metrolojik doğrulaması olan kombine ölçü aleti, megaohmmetre ve ses seviyesi ölçer;", "havya, kırıcı-delici ve matkap;", "tesviye ve elektrik montaj takımları;", "baret ve emniyet kemeri;", "merdiven ve çift taraflı merdiven;", "söndürme işleri için kompresör;", "proje ve keşif belgeleri için kasa."], ulAt: 3 },
+          { h: "Yükleniciyi beş dakikada nasıl kontrol edersiniz", p: [
+            "Bildirim onay numarasını (usul onaylandıktan sonra lisans numarasını) isteyin ve license.gov.uz'daki açık sicilde bulun. Dört şeyi karşılaştırın:",
+            "Yüklenicinin dosyasındaki belge kopyası hiçbir şeyi kanıtlamaz: faaliyet askıya alınmış veya sona erdirilmiş olabilir, sicil ise bugünkü durumu gösterir. Sözleşmeyi imzaladığınız gün sicil dökümünü veya ekran görüntüsünü saklayın. Teslimde ve uyuşmazlıkta işe yarar.",
+          ], ul: ["kuruluşun adı ve vergi numarası sözleşmeyle aynı;", "makam yangın sistemleri için Olağanüstü Durumlar Bakanlığı, güvenlik sistemleri için İçişleri Bakanlığı Koruma Dairesi (eskiden Ulusal Muhafız);", "ihtiyacınız olan alt türler beyan edilmiş;", "durum geçerli."], ulAt: 1 },
+          { h: "Müşteri için önemi: 149. maddeye göre bakım", p: [
+            "Yangın Güvenliği Kuralları (20.10.2020 tarihli 649 sayılı Karar) yangın otomasyonunun bakımına iki şekilde izin verir: tesisin eğitimli kendi personeli veya bu faaliyet için yetkisi olan bir kuruluşla yapılan sözleşme. Bu, 04.04.2022 tarihli 153 sayılı kararla değişik 148. maddedir. İşler, üreticinin belgelerine göre hazırlanan yıllık plana göre yürütülür.",
+            "149. madde koşulludur. Tesis yangın otomasyonu, duman kontrol ve uyarı tesisatlarının bakımını kendi imkânlarıyla yapamıyorsa, cihazlar işletmeye alındıktan sonra 30 gün içinde uzman bir kuruluşla sözleşme yapılır. Bu sözleşme feshedildiğinde işletme yöneticisi 24 saat içinde ilçe (şehir) olağanüstü durumlar birimine bildirir. Bu iş için geçerli belgesi olmayan bir kuruluşla yapılan sözleşme 149. maddenin şartını karşılamaz.",
           ] },
           { h: "Bizim belgelerimiz", p: [
-            "SAT Solutions, güvenlik sistemleri ve yangın otomasyonunun projelendirilmesi ve montajı lisanslarıyla çalışır. Tesisi baştan sona yürütürüz: proje, resmi kanallardan ekipman tedariki, montaj, devreye alma, tutanaklarla teslim ve sözleşme kapsamında sonraki bakım.",
-            "Yüklenici seçiyor ve belgeleri karşılaştırmak istiyorsanız bizden kopyalarını isteyin, sözleşme imzalanmadan önce veririz. Bu olağan bir uygulamadır ve müşteri bunu her yükleniciden talep etmelidir.",
+            "SAT Solutions'ın iki belgesi var, ikisi de «Hakkımızda» sayfasında açık. Yangın sistemleri: Olağanüstü Durumlar Bakanlığı izin belgesi No. 913518. Bu belge 23.07.2025 tarihli bildirim alındı onayıdır ve iki alt türü de kapsar: yangın alarmı ve otomatik yangın söndürme sistemlerinin montajı, ayarı ve bakımı. Güvenlik sistemleri: güvenlik teknik araçlarının montajı, ayarı ve bakımı için Ulusal Muhafız izin belgesi No. 1554491.",
+            "Belgelerin kopyalarını ve sicil dökümünü sözleşme imzalanmadan önce veriyoruz. Bunu her yükleniciden isteyin. Tesisi baştan sona yürütüyoruz: Taşkent deposundan ekipman tedariki, montaj, devreye alma, uygulama belgeleriyle teslim ve yıllık plana göre bakım. ZRU-1099 Kanunu'na göre Olağanüstü Durumlar Bakanlığı lisansının veriliş usulü onaylandığında bu makaleyi güncelleyeceğiz.",
           ] },
+        ],
+        faq: [
+          { q: "Alarm montajının lisanslanmasına dair 880 sayılı karar hâlâ geçerli mi?", a: "Hayır. Bakanlar Kurulunun 27.10.2018 tarihli 880 sayılı kararı 1 Mart 2022'de yürürlükten kalktı. O tarihten beri yangın ve güvenlik alarmlarının montajı ve bakımı 25.02.2022 tarihli 88 sayılı karara göre bildirim usulüyle yürütülüyor." },
+          { q: "Yangın alarmı montajı için belgeyi kim verir?", a: "Olağanüstü Durumlar Bakanlığı. Bugün bu belge, 88 sayılı kararın Ek 9'una göre bildirim alındı onayıdır. ZRU-1099 Kanunu 1 Mart 2026'dan itibaren aynı işler için bu Bakanlığın lisansını getiriyor. 16.11.2026 itibarıyla lisansın veriliş usulü onaylanmadı." },
+          { q: "Güvenlik alarmı için durum ne?", a: "88 sayılı kararın Ek 10'una göre (10.03.2026 değişikliği) bildirimi İçişleri Bakanlığı Koruma Dairesi kabul eder. Yeniden yapılanmadan önce bu görev Ulusal Muhafız'daydı; bu yüzden daha önce alınan belgeler onun tarafından verilmiş olabilir." },
+          { q: "Yükleniciyi nasıl kontrol ederim?", a: "Belge numarasını isteyin ve license.gov.uz'daki sicilde kontrol edin. Kuruluşu, vergi numarasını, makamı, iş türlerini ve sözleşme tarihindeki «geçerli» durumunu karşılaştırın." },
         ],
       },
       zh: {
-        title: "乌兹别克斯坦报警系统安装许可证：由谁颁发，如何核查承包商",
-        excerpt: "火灾与安防报警系统的设计、安装和维护由内务部许可，而非紧急情况部。许可证无有效期限制，登记册对外公开，人员要求见 2018 年 10 月 27 日第 880 号决议。",
+        title: "2026 年乌兹别克斯坦报警系统安装许可：告知制度、紧急情况部许可证与承包商核查", seoTitle: "2026 年乌兹别克斯坦报警系统安装许可与承包商核查", seoDesc: "第 880 号决议已于 2022 年失效。火灾报警安装现按向紧急情况部告知办理（第 88 号决议）；自 2026 年 3 月 1 日起，ZRU-1099 号法律引入紧急情况部许可证。",
+        excerpt: "由内务部颁发报警安装许可的第 880 号决议已于 2022 年 3 月 1 日失效。目前，火灾报警和自动灭火系统的安装与维护按向紧急情况部告知的方式开展（2022 年 2 月 25 日第 88 号内阁决议）。自 2026 年 3 月 1 日起，ZRU-1099 号法律为这些工作引入紧急情况部许可证。本文说明应向承包商核查什么。",
+        summary: [
+          "2018 年 10 月 27 日第 880 号内阁决议（由内务部许可）已于 2022 年 3 月 1 日失效",
+          "现行告知制度依据 2022 年 2 月 25 日第 88 号内阁决议：火灾报警和自动灭火由紧急情况部受理，安防系统由内务部下属安保局受理",
+          "自 2026 年 3 月 1 日起，ZRU-1099 号法律对火灾报警和灭火系统的安装与维护实行紧急情况部许可；国家规费为 5 个基本计算值",
+          "签约当日凭文件编号在 license.gov.uz 公开登记册中核查承包商",
+        ],
         sections: [
-          { h: "许可证由内务部颁发，不是紧急情况部", p: [
-            "这是几乎所有在网上查找答案的人都会弄错的地方。俄语资料按俄罗斯的做法作答，那里的消防活动许可由紧急情况部颁发。乌兹别克斯坦不同：内阁 2018 年 10 月 27 日第 880 号决议明确规定，消防自动化装置、安防报警、火灾报警及火灾安防合一报警系统的设计、安装、调试、维修和维护活动的许可，由乌兹别克斯坦共和国内务部实施。",
-            "这一差别的实际含义很简单：如果承包商向您出示紧急情况部颁发的报警安装许可证，那么这份文件出自不该出的机关。应当核查的是许可机关的登记册——按决议规定，它公布在该机关网站上，对外开放查阅。",
+          { h: "简要：2026 年 11 月适用的规则", p: [
+            "2022 年 3 月 1 日之前，火灾和安防报警系统的安装、调试、维修和维护由内务部颁发许可，依据是 2018 年 10 月 27 日第 880 号内阁决议。该决议已于 2022 年 3 月 1 日失效，但网上许多文章至今仍在引用。「许可证由内务部而非紧急情况部颁发」的说法也来自这些文章。就消防系统而言，这一说法如今是错误的。",
+            "目前适用两份文件。2022 年 2 月 25 日第 88 号内阁决议将这些工作改为告知制度：火灾报警和自动灭火的告知由紧急情况部受理，安防系统的告知由内务部下属安保局受理。2025 年 11 月 27 日 ZRU-1099 号法律于 2026 年 3 月 1 日生效。该法将火灾报警和自动灭火系统的安装与维护列入许可经营活动清单，发证机关为紧急情况部。下文说明这对业主意味着什么，以及如何在签约当日核查承包商。",
           ] },
-          { h: "究竟哪些内容需要许可", p: [
-            "许可证涵盖同一批系统上的五类工作：设计、安装、调试、维修和维护。系统包括消防自动化装置以及安防报警、火灾报警和火灾安防合一报警。也就是说，设计、现场施工和后续的维保制度都在许可范围内。",
-            "一个很少被写出来的细节：应申请人请求，许可证可以只针对被许可活动的一部分颁发。一家公司可能只持有维护许可，而没有设计许可。因此向承包商提问的正确方式不是「你们有许可证吗」，而是「它是针对哪些工作类别颁发的」。",
+          { h: "为什么第 880 号决议不再适用", p: [
+            "第 880 号决议批准了一项许可条例，适用于消防自动化设备以及安防报警、火灾报警和综合报警系统的设计、安装、调试、维修和维护。依该决议，发证机关为内务部，人员和物资条件写在条例本身之中。",
+            "lex.uz 上该文件标注为「2022 年 3 月 1 日失效」。同一天，关于开始和终止经营活动统一告知程序的第 88 号决议生效。因此，合同、技术任务书或招标文件中对第 880 号决议的引用如今证明不了任何事。其要求，例如员工工龄和等级，已由新的经营活动护照中的要求取代。",
           ] },
-          { h: "业主应当了解的资质要求", p: [
-            "条例规定了最低人员配置：法人常设编制中应至少有两名员工——工程负责人和执行人——在相应专业方向具有不少于三年的工作经历。专业方向按同一清单计算：灭火与报警装置的设计、安装、调试、维修或维护。",
-            "对学历也有要求。执行人应具有高等或职业技术教育，或在「电力工程」「电子与微电子」「自动化与控制」「无线电技术与电信」方向接受过专门培训，且不低于三级。此外，条例还单独规定了开展所申报工作所必需的物资技术基础。",
+          { h: "告知制度：2022 年 2 月 25 日第 88 号决议", p: [
+            "第 88 号决议汇集了实行告知制的各类经营活动护照。附件 9（经 2024 年 7 月 13 日第 418 号决议修订）涵盖自动灭火和火灾报警装置的安装、调试、维修与维护，告知由紧急情况部受理。附件 10（经 2026 年 3 月 10 日第 94 号决议修订）涵盖安防技术设备和系统的同类工作，告知由内务部下属安保局受理。",
+            "企业提交告知后，会获得带编号的告知受理确认书。按附件 9 护照，告知费用为基本计算值的 50%。护照未规定确认书的有效期。确认书可以只涵盖一个子类，也可以两个都涵盖，例如只有火灾报警而没有自动灭火。因此，应当问承包商的不是「你们有没有文件」，而是「文件针对哪些工作类别、哪个法人颁发」。",
           ] },
-          { h: "许可证无期限，但可以被吊销", p: [
-            "此类活动的许可证在颁发时不限制有效期。无需每年续期，颁发日期本身也说明不了什么——2019 年的文件与上个月的文件同样有效。",
-            "但条例规定了在违反许可要求时中止、终止和吊销许可证，许可机关也对遵守情况进行监督。正因如此，需要核查的是签约当时登记册上的记录，而不是承包商手里的那张纸。",
+          { h: "自 2026 年 3 月 1 日起：ZRU-1099 号法律规定的紧急情况部许可证", p: [
+            "2025 年 11 月 27 日 ZRU-1099 号法律为完善许可、审批和告知程序而修改了相关法律，于正式公布三个月后、即 2026 年 3 月 1 日生效。该法在《许可、审批和告知程序法》（ZRU-701）附件 1 中增加第 61 项：自动灭火和火灾报警装置的安装、调试、维修与维护许可证，发证机关为紧急情况部。《消防安全法》第 24 条现标题为「消防安全领域经营活动的许可」。许可证国家规费为 5 个基本计算值。",
+            "截至 2026 年 11 月 16 日，该许可证的发放程序尚未批准：汇集各类许可经营活动护照的 2022 年 2 月 21 日第 80 号内阁决议中没有这项许可证的护照，第 88 号决议附件 9 仍然有效。2026 年 10 月 20 日核查时，license.gov.uz 门户网站上这些工作只能办理告知。我们在法律文本中没有找到针对按告知制经营企业的过渡条款。对业主而言：程序批准之前，核查有效的紧急情况部告知确认书；批准之后，核查许可证。请以签约当日的状态为准。",
           ] },
-          { h: "这在实务中为何重要", p: [
-            "火灾报警属于项目消防保护系统的一部分，须经检查机关验收。由不具备相应许可的机构完成的工程，会在最难受的时刻带来风险：项目已完工、钱已花出，验收却过不了。由持证承包商返工的代价，高于一开始就选对。",
-            "第二个原因是维保。按消防安全规则，业主须在系统投入使用后三十天内与持牌机构签订维护合同。如果安装由无证承包商完成，与其签订的合同并不能满足这项要求。",
+          { h: "经营活动包括什么、不包括什么", p: [
+            "告知和新许可证都涵盖四类工作：安装、调试、维修和维护。对象为自动灭火和火灾报警装置；安防系统则为附件 10 所列的安防技术设备和系统。火灾报警和灭火是两个不同的子类，确认书上会写明申报了哪些子类。",
+            "第 880 号决议包括设计，而第 88 号决议和 ZRU-1099 号法律中的经营活动名称不包括设计。如果合同含设计工作，请向承包商了解由谁、按什么规范完成。请将设计与 ShNK 2.04.09-2007《建筑物和构筑物消防自动化》进行比对：经营活动护照引用的正是这份文件。",
+          ] },
+          { h: "附件 9 护照对承包商的要求", p: [
+            "工程负责人：在常设编制内；具有「工程」方向的高等学历：电子与电工、信息学与信息技术或电工；具有不少于三年的工作经历，并接受过消防自动化安装与维护专门培训；至少每四年进修一次。",
+            "告知中至少列明两名执行人。灭火工程需要不低于 4 级的电焊工或气焊工，或卫生技术系统安装工；火灾报警需要不低于 3 级的电子与电工专业人员。执行人可以在编，也可以按合同聘用，分包商须注明等级。",
+            "护照还列出了物资条件：",
+            "需有不少于 20 m² 的办公用房，以及不少于 20 m² 的设备存放场所。工作依据 RDPB 01-001:2007、01-002:2007、01-003:2008、01-004:2010 和 ShNK 2.04.09-2007 开展。护照将两种情况列为严重违规：未建立已安装项目登记册，以及未在整个使用期内保存设计及其他文件。",
+          ], ul: ["经有效计量检定的综合仪表、兆欧表和声级计；", "电烙铁、电锤和电钻；", "钳工和电气安装工具套装；", "安全帽和安装安全带；", "梯子和人字梯；", "灭火工程用空压机；", "存放设计预算文件的保险柜。"], ulAt: 3 },
+          { h: "五分钟核查承包商", p: [
+            "索取告知确认书编号（程序批准后为许可证编号），并在 license.gov.uz 公开登记册中查找。核对四项内容：",
+            "承包商文件夹里的复印件证明不了什么：经营活动可能已被暂停或终止，而登记册显示的是当天的状态。请在签约当日保存登记册摘录或截图，验收时和发生争议时都用得上。",
+          ], ul: ["企业名称和纳税人识别号与合同一致；", "机关：消防系统为紧急情况部，安防系统为内务部下属安保局（原为国民近卫军）；", "已申报您需要的子类；", "状态为有效。"], ulAt: 1 },
+          { h: "对业主的意义：第 149 条规定的维护", p: [
+            "《消防安全规则》（2020 年 10 月 20 日第 649 号决议）允许以两种方式维护消防自动化：由场所自有的受训人员维护，或与有权从事该活动的机构签订合同。这是经 2022 年 4 月 4 日第 153 号决议修订的第 148 条。工作按依据制造商文件编制的年度计划开展。",
+            "第 149 条为条件性条款。若场所无法自行维护消防自动化、防排烟和警报装置，须在装置投入运行后 30 天内与专业机构签订合同。该合同解除时，企业负责人须在 24 小时内通知区（市）紧急情况部门。与没有该类工作有效文件的机构签订的合同，不满足第 149 条的要求。",
           ] },
           { h: "我们的资质文件", p: [
-            "SAT Solutions 依据安防系统与消防自动化的设计和安装许可开展工作。我们从头到尾负责项目：设计、经官方渠道供应设备、安装、调试、附验收单据交付，以及后续的合同制维保。",
-            "如果您正在挑选承包商并希望核对文件，请向我们索取副本，我们会在签约前提供。这是通行做法，业主有理由向任何一家承包商提出这一要求。",
+            "SAT Solutions 持有两份文件，均公开于「关于我们」页面。消防系统：紧急情况部许可文件第 913518 号，这是 2025 年 7 月 23 日的告知受理确认书，涵盖两个子类，即火灾报警和自动灭火系统的安装、调试和维护。安防系统：国民近卫军许可文件第 1554491 号，涵盖安防技术设备的安装、调试和维护。",
+            "我们在签约前提供文件副本和登记册摘录，您也应当向任何承包商提出同样要求。我们全程负责项目：从塔什干仓库供应设备、安装、调试、附竣工文件交付，以及按年度计划维护。ZRU-1099 号法律规定的紧急情况部许可证发放程序批准后，我们将更新本文。",
           ] },
+        ],
+        faq: [
+          { q: "关于报警安装许可的第 880 号决议还有效吗？", a: "无效。2018 年 10 月 27 日第 880 号内阁决议已于 2022 年 3 月 1 日失效。自该日起，火灾和安防报警系统的安装与维护依据 2022 年 2 月 25 日第 88 号决议实行告知制。" },
+          { q: "火灾报警安装的文件由谁颁发？", a: "紧急情况部。目前这份文件是依第 88 号决议附件 9 出具的告知受理确认书。自 2026 年 3 月 1 日起，ZRU-1099 号法律为同类工作引入紧急情况部许可证。截至 2026 年 11 月 16 日，其发放程序尚未批准。" },
+          { q: "安防报警呢？", a: "依第 88 号决议附件 10（2026 年 3 月 10 日修订版），告知由内务部下属安保局受理。改组前这项职能属于国民近卫军，因此此前取得的文件可能由其颁发。" },
+          { q: "如何核查承包商？", a: "索取文件编号并在 license.gov.uz 登记册中核查。核对企业、纳税人识别号、机关、工作类别以及签约当日的「有效」状态。" },
         ],
       },
     },
