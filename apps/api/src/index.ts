@@ -20,6 +20,7 @@ import { healthRouter } from "./routes/health.js";
 import { publicRouter } from "./routes/public.js";
 import { chatUploadRouter } from "./routes/chatUpload.js";
 import { smartSearchRouter } from "./routes/smartSearch.js";
+import { telegramClickRouter, startTelegramClickPurge } from "./routes/telegramClick.js";
 import { createSocketServer } from "./chatSocket.js";
 
 const env = getEnv();
@@ -70,6 +71,7 @@ async function main() {
   app.use(publicRouter);
   app.use(chatUploadRouter);
   app.use(smartSearchRouter);
+  app.use(telegramClickRouter);
 
   // Public static files (images)
   app.use("/uploads", express.static(uploadsDir, { maxAge: "365d", immutable: true }));
@@ -101,6 +103,9 @@ async function main() {
   app.set('io', io);
 
   console.log("Socket server initialized and stored in app");
+
+  // Журнал кодов кнопки Telegram: записи старше 90 дней удаляются при старте и раз в сутки
+  startTelegramClickPurge();
 
   server.listen(env.PORT, () => {
     // eslint-disable-next-line no-console

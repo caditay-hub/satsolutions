@@ -1,0 +1,57 @@
+--- a/sat-web-bot/index.js
++++ b/sat-web-bot/index.js
+@@ -871,6 +871,35 @@
+   }
+ });
+ 
++// ── Метка рекламного клика из кнопки Telegram на сайте (решение владельца 16.11.2026) ──
++// Посетителю с меткой клика Google Ads сайт подменяет ссылку Telegram на
++// t.me/SAT_zayavki_online_bot?start=g_<код> и кладёт пару «код → метка» в журнал API сайта.
++// По /start g_<код> забираем метку (подпись — тот же mintToken(), что для /admin-chat) и
++// прикладываем её к диалогу tg:<chatId>: дальше leadRef() отдаёт gclid в CRM с первым же
++// сообщением клиента. Кода нет, он не найден или API недоступен — бот работает как раньше.
++const TG_REF_RE = /^g_([A-Za-z0-9]{8,16})$/;
++async function fetchTgRef(code) {
++  try {
++    const r = await fetch(`${API_INTERNAL_URL}/internal/tg-ref/${code}`, {
++      headers: { Authorization: `Bearer ${mintToken()}` },
++    });
++    if (r.status === 404) return { notFound: true };
++    if (!r.ok) { console.error("[tg-ref] HTTP", r.status); return null; }
++    return await r.json();
++  } catch (e) { console.error("[tg-ref] запрос не прошёл:", e.message); return null; }
++}
++async function attachTgRef(chatId, code) {
++  let ref = await fetchTgRef(code);
++  // запись уходит с сайта в момент нажатия и могла ещё не дойти — одна повторная попытка
++  if (ref && ref.notFound) { await new Promise((res) => setTimeout(res, 3000)); ref = await fetchTgRef(code); }
++  if (!ref || !ref.gclid) { console.log("[tg-ref] код не найден:", code); return false; }
++  // mergeMeta проверяет формат метки и не затирает уже записанные метку и страницу
++  mergeMeta(`tg:${chatId}`, { gclid: ref.gclid, page: ref.page || undefined });
++  saveThreads();
++  console.log("[tg-ref] метка клика приложена к диалогу tg:" + chatId);
++  return true;
++}
++
+ // Карточка компании (по нажатию Start и /info): о компании, часы, контакты + менеджер напрямую.
+ const START_CARD_TEXT =
+   "Здравствуйте! \u{1F44B} Это Telegram-бот SAT Solutions.\n\n" +
+@@ -894,6 +923,10 @@
+ bot.onText(/^\/(start|info)\b/, (msg) => {
+   // Клиент открыл бота \u2192 карточка компании; в группе \u2014 служебное сообщение как раньше
+   if (msg.chat.type === "private") {
++    // /start g_<код> — человек нажал кнопку Telegram на сайте после перехода по рекламе
++    const startParam = (String(msg.text || "").match(/^\/start(?:@\w+)?\s+(\S+)/) || [])[1] || "";
++    const tgRef = startParam.match(TG_REF_RE);
++    if (tgRef) attachTgRef(msg.chat.id, tgRef[1]).catch((e) => console.error("[tg-ref]", e.message));
+     bot.sendMessage(msg.chat.id, START_CARD_TEXT, { reply_markup: START_CARD_KB }).catch(() => {});
+     return;
+   }
+@@ -1831,6 +1864,7 @@
+         info.push(`🌐 Страница: ${esc(String(m.page).split(" | ")[0])}`);
+       }
+       if (pg && pg.source) info.push(`📣 Источник: <b>${esc(pg.source)}</b>`);
++      else if (fromTg && m.gclid) info.push("📣 Источник: <b>Google Ads</b> · кнопка Telegram на сайте");
+       info.push("", fromTg
+         ? "<i>Клиент пишет из Telegram. Отвечайте в этой теме — сообщение уйдёт ему в Telegram. Здесь отвечают только специалисты (ИИ отключён).</i>"
+         : "<i>Отвечайте в этой теме — сообщение уйдёт посетителю на сайт. Пока отвечает ИИ; чтобы взять диалог на себя — напишите ответ, команду /ai_off или нажмите кнопку.</i>");

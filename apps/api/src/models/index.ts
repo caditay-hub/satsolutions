@@ -17,6 +17,7 @@ import { FeedbackMessage } from "./FeedbackMessage.js";
 import { ChatConversation } from "./ChatConversation.js";
 import { ChatMessage } from "./ChatMessage.js";
 import { ServiceCategory } from "./ServiceCategory.js";
+import { TelegramClick } from "./TelegramClick.js";
 import { ServiceRequest, initServiceRequest } from "./ServiceRequest.js";
 import { sequelize } from "../db.js";
 
@@ -84,7 +85,8 @@ export function initModels() {
     ChatMessage,
     ServiceRequest,
     KeyTechnology,
-    ServiceCategory
+    ServiceCategory,
+    TelegramClick
   };
 }
 
@@ -108,6 +110,7 @@ export {
   ChatMessage,
   ServiceRequest,
   KeyTechnology,
-  ServiceCategory
+  ServiceCategory,
+  TelegramClick
 };
 
