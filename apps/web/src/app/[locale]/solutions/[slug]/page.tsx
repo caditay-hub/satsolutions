@@ -65,9 +65,11 @@ const SERVICES_IMG_DIR = process.env.SERVICES_IMG_DIR || "/var/www/satweb/apps/a
 // не доходит до браузеров. Меняете фото/ролик услуги — поднимите её номер (13.10.2026).
 // 27.10.2026: фото первого экрана восьми услуг пережаты (960 px, WebP q78, −30…−40 %) — номер поднят,
 // чтобы браузеры с годовым кэшем взяли новые файлы (пакет 2, LCP на телефоне).
+// 17.11.2026: фото первого экрана пожарной — коллаж оборудования пожаротушения от владельца (насосная,
+// узлы управления, баллоны газового тушения, спринклер, инженер); старое — /root/oldimg_1117 на сервере.
 const MEDIA_VER: Record<string, number> = {
   bodycam: 13,
-  intercom: 12, barrier: 12, turnstile: 12, fire: 12, servers: 12, telephony: 12, smarthome: 12, videowall: 12,
+  intercom: 12, barrier: 12, turnstile: 12, fire: 13, servers: 12, telephony: 12, smarthome: 12, videowall: 12,
 };
 const mv = (key: string) => MEDIA_VER[key] ?? 11;
 // Кейсы только профильные, без подстановки свежих объектов других направлений (пожарная, 16.11.2026:
