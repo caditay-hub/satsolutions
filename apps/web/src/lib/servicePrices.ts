@@ -36,7 +36,50 @@ const TURNSTILE_FULL = "hik-ds-k3h4410-120";
 const TURNSTILE_SPEED = "zkt-zkteco-turniket-steklyannyi-seredina-saturn-s1200";
 const TURNSTILE_TRIPOD = "zkt-zkteco-turniket-tripod-ts1000-plus";
 
+// Боди-камеры: запросы рекламы — «боди камера купить / цена», а на странице услуги не было ни одной
+// цены (разбор рекламы 16.11.2026: посадочная «ниже среднего» на 36 % показов). Цена — живая, из
+// карточки каталога; док-станции и ПО считаются под объект, поэтому цифр по ним нет.
+const BODYCAM_SLUG = "hik-ds-mcw406-64g-gps-wifi";
+const BODYCAM_LINK = `/products/${BODYCAM_SLUG}`;
+
 const DATA: Record<string, Record<Loc, ServicePriceBlock>> = {
+  bodycam: {
+    ru: {
+      title: "Сколько стоит боди-камера",
+      rows: [
+        { label: "Боди-камера Hikvision DS-MCW406: 2K, GPS, Wi-Fi", price: "от 4 243 900 сум", href: BODYCAM_LINK, liveSlug: BODYCAM_SLUG },
+      ],
+      note: "Цена камеры — из каталога, обновляется автоматически. Док-станции, сервер архива и программа диспетчера считаются под число сотрудников и смен: назовите, сколько человек выходит в смену, — подготовим расчёт на весь комплект.",
+    },
+    uz: {
+      title: "Bodikamera qancha turadi",
+      rows: [
+        { label: "Hikvision DS-MCW406 bodikamerasi: 2K, GPS, Wi-Fi", price: "4 243 900 soʻmdan", href: BODYCAM_LINK, liveSlug: BODYCAM_SLUG },
+      ],
+      note: "Kamera narxi katalogdan olinadi va avtomatik yangilanadi. Dok-stansiyalar, arxiv serveri va dispetcher dasturi xodimlar va smenalar soniga qarab hisoblanadi: smenaga necha kishi chiqishini ayting — butun toʻplam boʻyicha hisob-kitob tayyorlaymiz.",
+    },
+    en: {
+      title: "How much does a body camera cost",
+      rows: [
+        { label: "Hikvision DS-MCW406 body camera: 2K, GPS, Wi-Fi", price: "from 4,243,900 UZS", href: BODYCAM_LINK, liveSlug: BODYCAM_SLUG },
+      ],
+      note: "The camera price comes from the catalogue and updates automatically. Docking stations, the archive server and the dispatcher software are sized to the number of employees and shifts: tell us how many people work per shift and we will price the whole set.",
+    },
+    tr: {
+      title: "Vücut kamerası ne kadar",
+      rows: [
+        { label: "Hikvision DS-MCW406 vücut kamerası: 2K, GPS, Wi-Fi", price: "4.243.900 UZS'den", href: BODYCAM_LINK, liveSlug: BODYCAM_SLUG },
+      ],
+      note: "Kamera fiyatı katalogdan gelir ve otomatik güncellenir. Yerleştirme istasyonları, arşiv sunucusu ve operatör yazılımı personel ve vardiya sayısına göre hesaplanır: bir vardiyada kaç kişinin çalıştığını söyleyin, tüm set için fiyat hazırlayalım.",
+    },
+    zh: {
+      title: "执法记录仪多少钱",
+      rows: [
+        { label: "海康威视 DS-MCW406 执法记录仪：2K、GPS、Wi-Fi", price: "4 243 900 苏姆起", href: BODYCAM_LINK, liveSlug: BODYCAM_SLUG },
+      ],
+      note: "记录仪价格来自目录并自动更新。采集站、档案服务器与调度软件按员工和班次数量核算：告诉我们每班有多少人上岗，我们为整套系统报价。",
+    },
+  },
   barrier: {
     ru: {
       title: "Сколько стоит шлагбаум с установкой",

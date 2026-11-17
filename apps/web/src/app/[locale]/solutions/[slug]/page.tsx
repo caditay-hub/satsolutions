@@ -385,6 +385,12 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
   const priceBlock = await servicePricesLive(svc.key, locale);
   const heroPrice = priceBlock?.rows[priceBlock.rows.length - 1] ?? null;
   const heroMinPrice = heroPrice ? Number(heroPrice.price.replace(/\D/g, "")) || null : null;
+  // Порядок «цена → факты → абзац» на телефоне — у боди-камер (17.11.2026, согласие владельца):
+  // в рекламе боди-камер запросы «купить / цена», а цена стояла на 814-м пикселе под длинным
+  // абзацем. Фото прежнее, кнопок связи в первом экране по-прежнему нет (решение 10.09.2026).
+  // На компьютере без изменений. Та же перестановка для cctv — в ветке
+  // exp/ads-rank-landing-first-screen, её выкладка решается после сверки рекламы 01.12.2026.
+  const priceFirst = svc.key === "bodycam";
   let hasPackages = false;
   // has() до raw(): next-intl пишет MISSING_MESSAGE в лог через onError даже внутри try/catch —
   // у gates пакетов нет, и это давало 50–130 строк ошибок в день на 5 языках (аудит 10.10.2026).
@@ -637,11 +643,11 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
               <p className="text-xs font-black uppercase tracking-widest text-cyan-300 lg:text-brand-700">{t("serviceTag")}</p>
               <h1 className="mt-2 text-[26px] font-black leading-tight tracking-tight text-white sm:text-4xl lg:text-slate-900">{h1}</h1>
             </div>
-            <div className="[grid-area:body] lg:self-start">
+            <div className={`[grid-area:body] lg:self-start ${priceFirst ? "max-lg:flex max-lg:flex-col" : ""}`}>
               {stars(false)}
-              <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">{intro}</p>
+              <p className={`mt-4 text-sm leading-relaxed text-slate-600 sm:text-base ${priceFirst ? "max-lg:order-3" : ""}`}>{intro}</p>
               {!isReference && (
-                <div className="mt-4 grid max-w-xl grid-cols-3 overflow-hidden rounded-xl border border-slate-200 text-center">
+                <div className={`mt-4 grid max-w-xl grid-cols-3 overflow-hidden rounded-xl border border-slate-200 text-center ${priceFirst ? "max-lg:order-2" : ""}`}>
                   {([["factVisitV", "factVisitL"], ["factKpV", "factKpL"], ["factWarrantyV", "factWarrantyL"]] as const).map(([v, l], i) => (
                     <div key={v} className={`px-2 py-2.5 ${i ? "border-l border-slate-200" : ""}`}>
                       <div className="text-[15px] font-black text-brand-700 sm:text-base">{t(v)}</div>
@@ -651,7 +657,7 @@ export default async function SolutionDetailsPage({ params }: { params: Promise<
                 </div>
               )}
               {!isReference && (heroPrice || CALC_SERVICES.has(svc.key)) && (
-                <div className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <div className={`mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 ${priceFirst ? "max-lg:order-1" : ""}`}>
                   {heroPrice ? (
                     <>
                       <span className="text-sm font-semibold text-slate-500">{heroPrice.label}</span>
