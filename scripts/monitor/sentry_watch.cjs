@@ -28,6 +28,12 @@ const NOISE = [
 ];
 // Порог «резко участилась»: событий стало вдвое больше, чем при прошлом сообщении, и прибавилось не меньше 10.
 const ESC_FACTOR = 2, ESC_MIN = 10;
+// Рассинхрон сборок в минуты выкладки: у посетителя в браузере осталась страница прежней сборки, и она
+// подгружает части новой (или наоборот). 19.11.2026 одна выкладка дала четыре таких «новых ошибки» от одного
+// посетителя; переходы по сайту при этом работали. О единичных событиях молчим, сообщаем, только если их
+// набралось SKEW_MIN — тогда это уже не момент выкладки, а неисправная сборка.
+const SKEW = /Cannot read properties of undefined \(reading 'call'\)|ChunkLoadError|Loading chunk [\w-]+ failed|Loading CSS chunk/i;
+const SKEW_MIN = 15;
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const scrub = (s) => String(s ?? '').replace(/\+?998[\d\s\-()]{8,}|\b\d{9,}\b/g, '[номер]');
@@ -77,20 +83,25 @@ function card(i, kind) {
     if (APPLY && state.apiFail !== day) { state.apiFail = day; fs.writeFileSync(STATE, JSON.stringify(state, null, 1)); try { await telegram(`<b>⚠️ Контроль ошибок Sentry не работает</b>\nSentry не отвечает на запрос (код ${e.status || 'нет ответа'}). Если код 401 или 403 — токен в /root/.sentry_token отозван или истёк.`); } catch (t) { log(t.message); } }
     return;
   }
-  const out = []; let noise = 0;
+  const out = []; let noise = 0, skew = 0;
   for (const i of issues) {
     const cnt = Number(i.count || 0); const known = state.issues[i.id];
     const isNoise = NOISE.find(([re]) => re.test(i.title || ''));
+    const isSkew = SKEW.test(i.title || '');
     if (!known) {
-      state.issues[i.id] = { shortId: i.shortId, title: scrub(i.title).slice(0, 160), firstSeen: i.firstSeen, notifiedCount: cnt, noise: isNoise ? isNoise[1] : undefined };
+      state.issues[i.id] = { shortId: i.shortId, title: scrub(i.title).slice(0, 160), firstSeen: i.firstSeen, notifiedCount: cnt, noise: isNoise ? isNoise[1] : undefined, skew: isSkew || undefined };
       if (isNoise) { noise++; continue; }
+      if (isSkew && cnt < SKEW_MIN) { state.issues[i.id].notifiedCount = 0; skew++; continue; }
       if (!state.first && !INIT) out.push(card(i, 'new'));
+    } else if (known.skew && known.notifiedCount === 0) {
+      // рассинхрон сборок, о котором ещё не сообщали: сообщаем один раз, когда событий стало много
+      if (cnt >= SKEW_MIN) { known.notifiedCount = cnt; out.push(card(i, 'new')); } else skew++;
     } else if (!known.noise && cnt >= known.notifiedCount * ESC_FACTOR && cnt - known.notifiedCount >= ESC_MIN) {
       known.notifiedCount = cnt; out.push(card(i, 'escalated'));
     }
   }
   const firstRun = state.first; state.first = false;
-  log(`ошибок в Sentry без решения: ${issues.length}; шум: ${noise}; к отправке: ${out.length}${firstRun || INIT ? ' (первый запуск: текущие ошибки запомнены, сообщений нет)' : ''}`);
+  log(`ошибок в Sentry без решения: ${issues.length}; шум: ${noise}; рассинхрон сборок, молчим: ${skew}; к отправке: ${out.length}${firstRun || INIT ? ' (первый запуск: текущие ошибки запомнены, сообщений нет)' : ''}`);
   for (const m of out) { if (APPLY) { try { await telegram(m); } catch (e) { log(e.message); } } else console.log('--- было бы отправлено ---\n' + m.replace(/<[^>]+>/g, '')); }
   if (APPLY || INIT) fs.writeFileSync(STATE, JSON.stringify(state, null, 1)); else log('сухой прогон: состояние не сохранено, в Telegram ничего не ушло');
 })().catch((e) => { log('сбой:', e.message); process.exit(1); });
