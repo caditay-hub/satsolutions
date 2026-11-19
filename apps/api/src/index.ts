@@ -21,6 +21,7 @@ import { publicRouter } from "./routes/public.js";
 import { chatUploadRouter } from "./routes/chatUpload.js";
 import { smartSearchRouter } from "./routes/smartSearch.js";
 import { telegramClickRouter, startTelegramClickPurge } from "./routes/telegramClick.js";
+import { asyncSafe } from "./lib/asyncSafe.js";
 import { createSocketServer } from "./chatSocket.js";
 
 const env = getEnv();
@@ -66,6 +67,9 @@ async function main() {
     })
   );
 
+  // Ошибка в любом async-обработчике должна давать ответ 500, а не зависший запрос (19.11.2026, lib/asyncSafe.ts)
+  for (const r of [healthRouter, authRouter, publicRouter, chatUploadRouter, smartSearchRouter, telegramClickRouter, adminRouter]) asyncSafe(r);
+
   app.use(healthRouter);
   app.use(authRouter);
   app.use(publicRouter);
@@ -89,10 +93,12 @@ async function main() {
 
   app.use((_req, res) => res.status(404).json({ error: "Not found" }));
 
-  app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  app.use((err: unknown, _req: express.Request, res: express.Response, next: express.NextFunction) => {
     Sentry.captureException(err);
     // eslint-disable-next-line no-console
     console.error(err);
+    // Ответ уже начат (например, ошибка после res.json) — второй раз отвечать нельзя, соединение закроет Express
+    if (res.headersSent) return next(err);
     res.status(500).json({ error: "Internal Server Error" });
   });
 

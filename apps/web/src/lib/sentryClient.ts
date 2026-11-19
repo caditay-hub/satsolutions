@@ -1,9 +1,20 @@
 // Грузится лениво из instrumentation-client.ts. Именованный импорт, а не `import("@sentry/nextjs")`
 // целиком: иначе в чанк уезжают Replay, Feedback и трейсинг (~300 КБ gzip вместо нужного минимума).
-import { init } from "@sentry/nextjs";
+import { captureException, init } from "@sentry/nextjs";
 import { SENTRY_DATA_COLLECTION, SENTRY_DSN, scrubEvent } from "./sentryShared";
 
+let started = false;
+
+// Ошибка, которую показала страница ошибки (app/[locale]/error.tsx, app/global-error.tsx):
+// до глобального обработчика она не доходит, поэтому отправляем сами.
+export function reportError(error: unknown) {
+  startSentry();
+  captureException(error, { tags: { boundary: "error-page" } });
+}
+
 export function startSentry() {
+  if (started) return;
+  started = true;
   init({
     dsn: SENTRY_DSN,
     environment: "production",

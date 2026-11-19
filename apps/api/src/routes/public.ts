@@ -1213,6 +1213,9 @@ publicRouter.post("/product-questions", formLimiter, async (req, res) => {
 publicRouter.get("/product-questions", async (req, res) => {
   const productId = typeof req.query.productId === "string" ? req.query.productId.slice(0, 40) : "";
   if (!productId) return res.status(400).json({ error: "productId required" });
+  // Столбец productId — uuid: на «1» или «5488» Postgres отвечает ошибкой (Sentry SATSOLUTIONS-API-2, 17.11.2026)
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(productId))
+    return res.status(400).json({ error: "Invalid productId" });
   const rows = await ProductQuestion.findAll({
     where: { productId, status: "APPROVED", answer: { [Op.ne]: null } } as any,
     order: [["createdAt", "DESC"]],

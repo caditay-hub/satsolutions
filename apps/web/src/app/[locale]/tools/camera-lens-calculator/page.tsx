@@ -134,7 +134,9 @@ export default async function CameraLensCalculatorPage({ params }: { params: Pro
         </header>
 
         {/* якоря режимов: браузер прокручивает к инструменту, вкладку переключает CameraDesignerTabs */}
-        <div id="cd-tool" className="relative mt-4">
+        {/* translate="no": автоперевод браузера переставляет узлы внутри инструмента, и React падает
+            при следующей перерисовке (Sentry SATSOLUTIONS-WEB-C, 19.11.2026). Инструмент уже на пяти языках. */}
+        <div id="cd-tool" className="notranslate relative mt-4" translate="no">
           <span id="camera" className="absolute -top-24" aria-hidden="true" />
           <span id="pick" className="absolute -top-24" aria-hidden="true" />
           <span id="plan" className="absolute -top-24" aria-hidden="true" />
