@@ -32,7 +32,10 @@ const ESC_FACTOR = 2, ESC_MIN = 10;
 // подгружает части новой (или наоборот). 19.11.2026 одна выкладка дала четыре таких «новых ошибки» от одного
 // посетителя; переходы по сайту при этом работали. О единичных событиях молчим, сообщаем, только если их
 // набралось SKEW_MIN — тогда это уже не момент выкладки, а неисправная сборка.
-const SKEW = /Cannot read properties of undefined \(reading 'call'\)|ChunkLoadError|Loading chunk [\w-]+ failed|Loading CSS chunk/i;
+// Одна и та же ошибка в разных браузерах: Chrome «reading 'call'», Firefox «can't access property "call"», Safari «evaluating '….call'».
+const SKEW = /Cannot read properties of undefined \(reading 'call'\)|can't access property "call"|undefined is not an object \(evaluating '[^']*\.call'\)|ChunkLoadError|Loading chunk [\w-]+ failed|Loading CSS chunk/i;
+// Повторное сообщение о рассинхроне — только когда событий стало в SKEW_FACTOR раз больше прежнего.
+const SKEW_FACTOR = 5;
 const SKEW_MIN = 15;
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -96,6 +99,8 @@ function card(i, kind) {
     } else if (known.skew && known.notifiedCount === 0) {
       // рассинхрон сборок, о котором ещё не сообщали: сообщаем один раз, когда событий стало много
       if (cnt >= SKEW_MIN) { known.notifiedCount = cnt; out.push(card(i, 'new')); } else skew++;
+    } else if (known.skew) {
+      if (cnt >= known.notifiedCount * SKEW_FACTOR) { known.notifiedCount = cnt; out.push(card(i, 'escalated')); } else skew++;
     } else if (!known.noise && cnt >= known.notifiedCount * ESC_FACTOR && cnt - known.notifiedCount >= ESC_MIN) {
       known.notifiedCount = cnt; out.push(card(i, 'escalated'));
     }
