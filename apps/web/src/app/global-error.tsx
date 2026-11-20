@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ERROR_PAGE_TEXT, errorLocaleFromPath, reportPageError } from "@/lib/errorPageTexts";
+import { isBuildSkewError, reloadOnceForBuildSkew } from "@/lib/buildSkew";
 
 // Последний рубеж: ошибка в самом макете (шапка, подвал, провайдеры). Здесь нет ни макета,
 // ни стилей сайта, ни переводов — свой <html>/<body> и встроенные стили, как в корневом not-found.tsx.
@@ -12,6 +13,8 @@ export default function GlobalError({ error }: { error: Error & { digest?: strin
 
   useEffect(() => {
     reportPageError(error);
+    // Рассинхрон сборок — одна автоматическая перезагрузка, см. lib/buildSkew.ts.
+    if (isBuildSkewError(error)) reloadOnceForBuildSkew();
   }, [error]);
 
   return (

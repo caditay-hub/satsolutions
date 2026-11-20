@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { ERROR_PAGE_TEXT, errorLocaleFromPath, reportPageError } from "@/lib/errorPageTexts";
+import { isBuildSkewError, reloadOnceForBuildSkew } from "@/lib/buildSkew";
 
 // Страница ошибки вместо пустого экрана (19.11.2026). Повод — Sentry SATSOLUTIONS-WEB-C:
 // автоперевод Яндекс Браузера переставил узлы страницы, React не смог удалить свой узел и
@@ -15,6 +16,9 @@ export default function LocaleError({ error }: { error: Error & { digest?: strin
 
   useEffect(() => {
     reportPageError(error);
+    // Рассинхрон сборок (Sentry WEB-K, 19.11.2026: React поймал «reading 'call'» и показал эту страницу) —
+    // страница перезагружается сама, один раз; посетителю нажимать ничего не нужно.
+    if (isBuildSkewError(error)) reloadOnceForBuildSkew();
   }, [error]);
 
   return (
